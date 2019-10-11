@@ -15,12 +15,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 25aa20472daec1e20113627b4cbd778dfa142002
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 93377a86d55086f2f3af501a962c6973f0d66234
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769332"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710736"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>在事务复制中发布存储过程执行
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio：[在事务发布中发布存储过程的执行 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   复制 Transact-SQL 编程：执行 [sp_addarticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 并为参数 **@type** 指定“serializable proc exec”（推荐）或“proc exec”值。 有关如何定义项目的详细信息，请参阅[定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
+-   复制 Transact-SQL 编程：执行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 并为参数 `@type` 指定“serializable proc exec”（推荐）或“proc exec”值。 有关如何定义项目的详细信息，请参阅[定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>在订阅服务器上修改过程  
  默认情况下，发布服务器上的存储过程定义会传播到每个订阅服务器。 但是，还可以在订阅服务器上修改存储过程。 这有助于在发布服务器和订阅服务器上执行不同的逻辑。 例如，假设发布服务器上的存储过程 **sp_big_delete**有两个作用：从复制的表 **big_table1** 中删除 1,000,000 行；更新未复制的表 **big_table2**。 为了减少对网络资源的需求，应通过发布 **sp_big_delete**将 1 百万行删除作为一个存储过程进行传播。 在订阅服务器上，您可以修改 **sp_big_delete** 只删除 1 百万行且不对 **big_table2**执行后续更新。  
@@ -90,7 +90,7 @@ COMMIT TRANSACTION T2
   
  在可序列化事务中执行过程时控制锁的时间将更长，并可能导致并发减少。  
   
-## <a name="the-xactabort-setting"></a>XACT_ABORT 设置  
+## <a name="the-xact_abort-setting"></a>XACT_ABORT 设置  
  在复制存储过程执行时，执行此存储过程的会话设置应将 XACT_ABORT 指定为 ON。 如果 XACT_ABORT 设置为 OFF，在发布服务器上执行此过程时将出现错误，并且订阅服务器上也会出现相同的错误，这将导致分发代理失败。 将 XACT_ABORT 指定为 ON 可确保在发布服务器上执行时遇到的任何错误会使整个执行回滚，从而避免分发代理失败。 有关如何设置 XACT_ABORT 的详细信息，请参阅 [SET XACT_ABORT (Transact-SQL)](../../../t-sql/statements/set-xact-abort-transact-sql.md)。  
   
  如果需要将 XACT_ABORT 设置为 OFF，请指定分发代理的 **-SkipErrors** 参数。 这使得代理即使在遇到错误的情况下也会继续在订阅服务器上应用更改。  

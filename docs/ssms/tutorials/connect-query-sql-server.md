@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 105bcea172a91496c664578befc33f022b5c8d9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256709"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708334"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>教程：使用 SQL Server Management Studio (SSMS) 连接和查询 SQL Server 实例
 
@@ -109,9 +109,10 @@ ms.locfileid: "68256709"
    ![更改数据库](media/connect-query-sql-server/changedb.png)
 
 2. 将以下 T-SQL 代码片段粘贴到查询窗口，选择它，再选择“执行”（或选择键盘上的 F5）。   
-   可在查询窗口中替换现有文本或将其追加到末尾。 若要在查询窗口中执行所有文本，请选择“执行”  。 若要执行部分文本，请突出显示该部分，然后选择“执行”  。  
+   可在查询窗口中替换现有文本或将其追加到末尾。 若要在查询窗口中执行所有文本，请选择“执行”  。 如果追加了文本，仅需执行部分文本，因此突出显示该部分，然后选择“执行”  。  
   
    ```sql
+   USE [TutorialDB]
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL

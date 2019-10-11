@@ -19,12 +19,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bec94a3aaa6faab3fa88d4cd2b0d21a2bdcfd29e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d5b1f22408ecffd2ec3250441239bb423e921b66
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768606"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710283"
 ---
 # <a name="disable-publishing-and-distribution"></a>禁用发布和分发
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68768606"
 7.  在分发服务器上，执行 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) 以从该服务器删除分发服务器指定。  
   
     > [!NOTE]  
-    >  如果在您执行 [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) 和 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)之前并未删除所有复制发布和分发对象，这些过程将返回错误。 若要在删除发布服务器或分发服务器时删除所有与复制相关的对象，必须将 **@no_checks** 参数设置为 **1**。 如果发布服务器或分发服务器脱机或无法访问，则可以将 **@ignore_distributor** 参数设置为 **1** ，以便能够删除它们；不过，必须手动删除任何保留的发布和分发对象。  
+    > 如果在您执行 [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) 和 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)之前并未删除所有复制发布和分发对象，这些过程将返回错误。 若要在删除发布服务器或分发服务器时删除所有与复制相关的对象，必须将 `@no_checks` 参数设置为 1  。 如果发布服务器或分发服务器脱机或无法访问，则可以将 `@ignore_distributor` 参数设置为 1  ，以便能够删除它们；不过，必须手动删除任何保留的发布和分发对象。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例脚本从订阅数据库删除复制对象。  

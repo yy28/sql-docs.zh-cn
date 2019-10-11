@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/18/2019
+ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63f1b415471e8793e66bd3e90acc6f6be987904e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889812"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823622"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -473,6 +473,9 @@ ALTER COLUMN
 column_name   
 要更改、添加或删除的列的名称。 column_name  最多为 128 个字符。 对于使用 timestamp  数据类型创建的新列，可以省略 column_name  。 如果没有为 timestamp  数据类型的列指定 column_name  ，便会使用名称 timestamp  。
 
+> [!NOTE]
+> 在更改表中的所有现有列之后，将添加新列。
+
 [ _type\_schema\_name_ **.** ] _type\_name_  
 更改后的列的新数据类型，或添加的列的数据类型。 无法为已分区表的现有列指定 type_name  。 type_name  可以是下列任一数据类型：
 
@@ -614,6 +617,9 @@ ALTER INDEX index_name
 
 ADD  
 指定添加一个或多个列定义、计算列定义或者表约束。 或者，添加系统用于系统版本控制的列。 对于内存优化表，可以添加索引。
+
+> [!NOTE]
+> 在更改表中的所有现有列之后，将添加新列。
 
 > [!IMPORTANT]
 > 如果不使用 ALTER TABLE 语句，内存优化表的索引不支持 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md) 和 [PAD_INDEX](alter-table-index-option-transact-sql.md) 语句。

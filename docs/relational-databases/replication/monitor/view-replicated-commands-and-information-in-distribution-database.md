@@ -18,12 +18,12 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1d1e0171082811e8f3f049b66b78da02bd12b601
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 16883d60e9c112141afa0a390555b06524bcf14c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766946"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711003"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>查看分发数据库中的复制命令和信息
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "68766946"
   
 ### <a name="to-view-replicated-commands-in-the-distribution-database-from-a-specific-article-or-from-a-specific-database-published-using-transactional-replication"></a>查看分发数据库中来自使用事务复制发布的某个特定项目或特定数据库的复制命令  
   
-1.  （可选）在发布服务器的发布数据库中，执行 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)。 指定 **@publication** 和 **@article** 。 请记录结果集中 **article id** 的值。  
+1.  （可选）在发布服务器的发布数据库中，执行 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)。 指定 `@publication` 和 `@article`。 请记录结果集中 **article id** 的值。  
   
-2.  在分发服务器的分发数据库中，执行 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)。 （可选）为 **@article_id** 。 （可选）为 **@publisher_database_id** 指定发布数据库的 ID，此 ID 可以从 **sys.databases** 目录视图的 [database_id](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列获得。  
+2.  在分发服务器的分发数据库中，执行 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)。 （可选）为 `@article_id` 指定从步骤 2 中得到的项目 ID。 （可选）为 `@publisher_database_id`指定发布数据库的 ID，此 ID 可以从 [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图的 database_id 列获得  。  
   
 ## <a name="see-also"></a>另请参阅  
  [以编程方式监视复制](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

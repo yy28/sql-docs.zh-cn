@@ -15,12 +15,12 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0129290734cfc374ab8b563fab14692a7b59fe6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1737524acd1397a30299e7c5147ae9a6cb10efc6
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893314"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173689"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>客户端连接中的服务主体名称 (SPN) 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "68893314"
  新的连接行为由客户端实现，因此这种行为不特定于某个版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="linked-servers-and-delegation"></a>链接服务器和委托  
- 创建链接服务器时，[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 的 @provstr 参数可用于指定服务器和故障转移伙伴的 SPN。 执行此操作的优点与在客户端连接字符串中指定 SPN 的优点相同：建立使用 Kerberos 身份验证的连接更简单且更可靠。  
+ 创建链接服务器时，可以使用[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) **@no__t 的 1provstr**参数来指定服务器和故障转移伙伴的 spn。 执行此操作的优点与在客户端连接字符串中指定 SPN 的优点相同：建立使用 Kerberos 身份验证的连接更简单且更可靠。  
   
  使用链接服务器的委托要求 Kerberos 身份验证。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "68893314"
   
 -   安全性：指定的 SPN 是否会泄露受保护的信息？  
   
--   可靠性若要启用默认 spn, 运行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的服务帐户必须具有足够的权限来更新 KDC 上的 Active Directory。  
+-   可靠性若要启用默认 Spn，运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务帐户必须具有足够的权限来更新 KDC 上的 Active Directory。  
   
--   便利性和位置透明性:如果应用程序的数据库移到其他[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例, 会如何影响该应用程序的 spn？ 如果使用数据库镜像，则这种情况适用于主体服务器及其故障转移伙伴。 如果服务器更改意味着必须更改 SPN，则这种情况将如何影响应用程序？ 是否将管理所有更改？  
+-   便利性和位置透明性：如果应用程序的数据库移动到不同的 @no__t 0 实例，将如何影响该应用程序的 Spn？ 如果使用数据库镜像，则这种情况适用于主体服务器及其故障转移伙伴。 如果服务器更改意味着必须更改 SPN，则这种情况将如何影响应用程序？ 是否将管理所有更改？  
   
 ## <a name="specifying-the-spn"></a>指定 SPN  
  您可以使用对话框和代码指定 SPN。 本节论述了可以指定 SPN 的方式。  

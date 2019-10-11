@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 31e3101499ff046d6741dbbc7b86fdf196deec3e
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096931"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713268"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>为 Always On 可用性组配置分布式事务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,8 @@ ms.locfileid: "71096931"
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 不能阻止可用性组中数据库的分布式事务 - 即使不为分布式事务配置可用性组也是如此。 但是，如果不为分布式事务配置可用性组，在某些情况下故障转移可能不会成功。 具体而言，新主要副本 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 实例可能无法从 DTC 获取事务结果。 若要启用 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 实例，以在故障转移后从 DTC 获取未决事务的结果，请为分布式事务配置可用性组。 
 
+除非数据库也是故障转移群集的成员，否则可用性组处理不会涉及 DTC。 在可用性组中，副本间的一致性由可用性组逻辑维持：主副本不会完成提交并向调用方确认提交，直到辅助副本确认已将日志记录保留在持久存储中。 此时主副本才声明该事务完成。 在异步模式下，我们不会等待辅助副本确认，此模式下明显有丢失少量数据的可能性。
+
 ## <a name="prerequisites"></a>必备条件
 
 将可用性组配置为支持分布式事务前，必须满足以下先决条件：
@@ -50,6 +52,8 @@ ms.locfileid: "71096931"
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>为分布式事务创建可用性组
 
 配置可用性组以支持分布式事务。 设置可用性组以允许所有数据库都注册为资源管理器。 本文介绍如何配置可用性组，以便所有数据库都可成为 DTC 中的资源管理器。
+
+
 
 可在 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 或更高版本上为分布式事务创建可用性组。 若要为分布式事务创建可用性组，请在可用性组定义中包含 `DTC_SUPPORT = PER_DB`。 以下脚本将为分布式事务创建可用性组。 
 

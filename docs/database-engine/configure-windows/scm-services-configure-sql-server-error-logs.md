@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a4da039e1fcc41570fcead275bbe4b2cb0be5797
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: 21737a329fdd6bf68f1bf7df5f4df4511b26cfd9
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731101"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688325"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM 服务 - 配置 SQL Server 错误日志
 
@@ -38,7 +38,7 @@ ms.locfileid: "68731101"
   
       **最大错误日志文件数**
 
-      指定错误日志文件回收前创建的最大错误日志文件数。 默认值为 6，即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在回收备份日志前保留的以前备份日志的数量。
+      指定错误日志文件回收前创建的最大错误日志文件数。 默认值为 6，表示 1 个当前备份日志和 5 个之前的备份日志，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在回收之前将一直保留这些日志。
 
     B. 日志文件大小
 

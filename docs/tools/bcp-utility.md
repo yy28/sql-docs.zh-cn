@@ -1,10 +1,7 @@
 ---
 title: bcp 实用工具 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,26 +24,29 @@ helpviewer_keywords:
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/14/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5267b5b02ce84d70feb4245fe75f62591409f39f
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: facd5fe78ae3dd20390e9510a47e914dd6d3945e
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68743006"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708712"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> 有关在 Linux 上使用 bcp 的详细情况, 请参阅[在 linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
+> 有关在 Linux 上使用 bcp 的详细情况，请参阅[在 linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 >
-> 有关将 bcp 与 Azure SQL 数据仓库配合使用的详细信息, 请参阅[使用 Bcp 加载数据](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
+> 有关将 bcp 与 Azure SQL 数据仓库配合使用的详细信息，请参阅[使用 Bcp 加载数据](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
 
-  大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据     。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
-  
- ![主题链接图标](../database-engine/configure-windows/media/topic-link.gif "主题链接图标")有关 bcp 语法中使用的语法约定，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  。  
-  
+大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据     。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
+
+![主题链接图标](../database-engine/configure-windows/media/topic-link.gif "主题链接图标")有关 bcp 语法中使用的语法约定，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  。  
+
 > [!NOTE]
 > 如果使用 **bcp** 备份数据，请创建一个格式化文件来记录数据格式。 **bcp** 数据文件 **不包括** 任何架构或格式信息，因此如果已删除表或视图并且不具备格式化文件，则可能无法导入数据。
 
@@ -55,7 +55,7 @@ ms.locfileid: "68743006"
 **[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15.0 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15.0 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
-命令行工具是公开发行版 (GA), 但它们与的安装程序包[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]一起发布。
+命令行工具是公开发行版（GA），但它们与安装程序包一起发布，用于 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
 
 ### <a name="version-information"></a>版本信息
 
@@ -63,8 +63,8 @@ ms.locfileid: "68743006"
 生成号：15.0.1000.34<br>
 发布日期：2018 年 10 月 18 日
 
-新版本的 SQLCMD 支持 Azure AD 身份验证, 包括 SQL 数据库、SQL 数据仓库和 Always Encrypted 功能的多重身份验证 (MFA) 支持。
-新的 BCP 支持 Azure AD 身份验证, 包括 SQL 数据库和 SQL 数据仓库的多重身份验证 (MFA) 支持。
+新版本的 SQLCMD 支持 Azure AD 身份验证，包括 SQL 数据库、SQL 数据仓库和 Always Encrypted 功能的多重身份验证（MFA）支持。
+新的 BCP 支持 Azure AD 身份验证，包括 SQL 数据库和 SQL 数据仓库的多重身份验证（MFA）支持。
 
 ### <a name="system-requirements"></a>系统要求
 
@@ -72,7 +72,7 @@ Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows
 
 此组件要求 SQL Server [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483)和[Microsoft ODBC Driver 17.3](https://www.microsoft.com/download/details.aspx?id=56567)。
 
-若要检查 BCP version execute `bcp /v`命令并确认15.0.1000.34 或更高版本正在使用中, 则为。
+若要查看 BCP 版本，请执行 `bcp /v` 命令并确认15.0.1000.34 或更高版本是否正在使用中。
 
 <table><th>语法</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -110,7 +110,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#V">-V (80 | 90 | 100 | 110 | 120 | 130 ) </a>]
     [<a href="#w">-w</a>]
     [<a href="#x">-x</a>]
-</pre></td></tr></table>  
+</pre></td></tr></table>
 
 ## <a name="arguments"></a>参数
 
@@ -147,7 +147,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  将数据复制到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**in**) 时为目标视图名称，从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中复制数据时 (**out**) 为源视图名称。 只有其中所有列都引用同一个表的视图才能用作目标视图。 有关将数据复制到视图的限制的详细信息，请参阅[《INSERT &#40;Transact-SQL&#41;》](../t-sql/statements/insert-transact-sql.md)。  
   
  **-a** _**packet\_size**_ <a name="a"></a>  
- 指定服务器发出或接收的每个网络数据包的字节数。 可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] （或 **sp_configure** 系统存储过程）来设置服务器配置选项。 但是，可以使用此选项逐个替代服务器配置选项。 *packet_size* 的取值范围为 4096 到 65535 字节，默认为 4096 字节。  
+ 指定服务器发出或接收的每个网络数据包的字节数。 可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] （或 **sp_configure** 系统存储过程）来设置服务器配置选项。 但是，可以使用此选项逐个替代服务器配置选项。 packet_size 的取值范围为 4096 到 65535 字节，默认为 4096 字节  。  
   
  增大数据包可以提高大容量复制操作的性能。 如果无法得到请求的较大数据包，则使用默认值。 **bcp** 实用工具生成的性能统计信息可以显示所用的数据包大小。  
   
@@ -175,7 +175,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|特定的代码页编号，例如 850。<br /><br /> 低于 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) 的版本不支持代码页 65001（UTF-8 编码）。 版本 13 和后续版本可将 UTF-8 编码导入以前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。|  
   
  **-d** _**database\_name**_ <a name="d"></a>   
- 指定要连接到的数据库。 默认情况下，bcp.exe 连接到用户的默认数据库。 如果指定了 **-d** database_name  和包含三部分的名称（database_name.schema.table  ，作为第一个参数传递给 bcp.exe），则将发生错误，因为不能两次指定数据库名称。如果 database_name  以连字符 (-) 或正斜杠 (/) 开头，则不会在 **-d** 和数据库名称之间添加空格。  
+ 指定要连接到的数据库。 默认情况下，bcp.exe 连接到用户的默认数据库。 如果指定了 * *-d database_name 和三部分名称（database_name，作为第一个参数传递到），则会发生错误，因为不能同时指定数据库名称。 如果 database_name 以连字符 (-) 或正斜杠 (/) 开头，则不要在 -d 与数据库名称之间添加空格   。  
   
  **-e** _**err\_file**_ <a name="e"></a>  
  指定错误文件的完整路径，此文件用于存储 **bcp** 实用工具无法从文件传输到数据库的所有行。 **bcp** 命令产生的错误消息将被发送到用户的工作站。 如果不使用此选项，则不会创建错误文件。  
@@ -207,42 +207,40 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* 可以是一个最大为 2^63-1 的正整数值。 **-F** first_row  的值从 1 开始。  
 
 **-G**<a name="G"></a>  
- 当连接到 Azure SQL 数据库或 Azure SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关需要[版本14.0.3008.27 或更高版本](https://go.microsoft.com/fwlink/?LinkID=825643)。 要确定你的版本，请执行 bcp -v。 有关详细信息, 请参阅[使用 Azure Active Directory 身份验证使用 Sql 数据库或 Sql 数据仓库进行身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
+ 当连接到 Azure SQL 数据库或 Azure SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关需要[版本14.0.3008.27 或更高版本](https://go.microsoft.com/fwlink/?LinkID=825643)。 要确定你的版本，请执行 bcp -v。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证使用 Sql 数据库或 Sql 数据仓库进行身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
 
 > [!IMPORTANT]
 > **-G** 选项仅适用于 Azure SQL 数据库 和 Azure 数据仓库。
 > Linux 或 macOS 目前不支持 AAD 集成和交互式身份验证。
 
 > [!TIP]
->  若要检查您的 bcp 版本是否包括对 Azure Active Directory Authentication (AAD) 类型为**bcp** (bcp\<space >\<破折号 >\<破折号 >) 的支持, 并验证在可用参数列表中是否显示了-G。
+>  若要检查你的 bcp 版本是否包括对 Azure Active Directory Authentication （AAD）类型**bcp** （bcp \<space > \<dash > \<dash >）的支持，并验证在可用参数列表中是否显示了-G。
 
 - **Azure Active Directory 用户名和密码：** 
 
     当你想要使用 Azure Active Directory 用户名和密码时，可以提供 **-G** 选项，也可以通过提供 **-U** 选项和 **-P** 选项来使用用户名和密码。 
 
-    下面的示例使用 Azure AD 用户名和密码导出数据, 其中 user 和 password 是 AAD 凭据。 该示例从 Azure `bcptest`服务器`aadserver.database.windows.net`的`testdb`数据库中导出表, 并将数据存储`c:\last\data1.dat`在文件中:
+    下面的示例使用 Azure AD 用户名和密码导出数据，其中 user 和 password 是 AAD 凭据。 该示例从 Azure 服务器 `aadserver.database.windows.net` 中的数据库 `testdb` `bcptest` 导出表，并将数据存储在文件 `c:\last\data1.dat`：
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    下面的示例使用 Azure AD 用户名和密码导入数据, 其中 user 和 password 是 AAD 凭据。 该示例使用 Azure AD 用户/ `c:\last\data1.dat`密码将数据从`testdb`文件导入`aadserver.database.windows.net`到 Azure 服务器上的数据库的表`bcptest`中:
+    下面的示例使用 Azure AD 用户名和密码导入数据，其中 user 和 password 是 AAD 凭据。 该示例将 `c:\last\data1.dat` 中的数据导入到 `bcptest` 表中，对于 Azure `aadserver.database.windows.net` 服务器上的数据库 `testdb`，使用 Azure AD 用户/密码：
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
+- **Azure Active Directory 集成**
 
+    要进行 Azure Active Directory 集成身份验证，可提供 -G 选项而无需用户名或密码  。 此配置假定当前的 Windows 用户帐户（运行 bcp 命令的帐户）与 Azure AD 联合： 
 
-- **Azure Active Directory 集成** 
- 
-    要进行 Azure Active Directory 集成身份验证，可提供 -G 选项而无需用户名或密码  。 此配置假定当前的 Windows 用户帐户 (运行 bcp 命令的帐户) 与 Azure AD 联合: 
-
-    以下示例使用 Azure AD 集成帐户导出数据。 该示例使用从`bcptest` Azure 服务器`testdb` `aadserver.database.windows.net`集成的 Azure AD 从数据库导出表, 并将数据存储`c:\last\data2.dat`在文件中:
+    下面的示例使用 Azure AD 集成帐户导出数据。 该示例使用从 Azure server `aadserver.database.windows.net` 集成的 Azure AD 从数据库 `testdb` `bcptest` 导出表，并将数据存储在文件 `c:\last\data2.dat`：
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    以下示例使用 Azure AD 集成身份验证导入数据。该示例使用 Azure AD 集成身份`c:\last\data2.txt`验证将数据从`testdb`文件导入`aadserver.database.windows.net`到 Azure 服务器上的数据库的表`bcptest`中:
+    以下示例使用 Azure AD 集成身份验证导入数据。该示例将 `c:\last\data2.txt` 中的数据导入到 `bcptest` 表中，在 Azure `aadserver.database.windows.net` 服务器上为数据库 `testdb` 使用 Azure AD 集成身份验证：
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -250,27 +248,27 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 交互式身份验证**  
 
-   使用 Azure SQL 数据库和 SQL 数据仓库 Azure AD 交互身份验证, 可以使用支持多重身份验证的交互式方法。 有关其他信息, 请参阅[Active Directory 交互身份验证](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。 
+   使用 Azure SQL 数据库和 SQL 数据仓库 Azure AD 交互身份验证，可以使用支持多重身份验证的交互式方法。 有关详细信息，请参阅[Active Directory 交互身份验证](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。 
 
    Azure AD interactive 需要**bcp** [版本 15.0.1000.34](#download-the-latest-version-of-bcp-utility)或更高版本以及[ODBC 版本17.2 或更高](https://www.microsoft.com/download/details.aspx?id=56567)版本。  
 
-   若要启用交互身份验证, 请仅在不使用密码的情况下提供-G 选项和用户名 (-U)。   
+   若要启用交互身份验证，请仅在不使用密码的情况下提供-G 选项和用户名（-U）。   
 
-   下面的示例使用 Azure AD 交互模式导出数据, 该模式指示用户表示 AAD 帐户的用户名。 这是上一节中使用的示例: *Azure Active Directory 用户名和密码*。  
+   下面的示例使用 Azure AD 交互模式导出数据，该模式指示用户表示 AAD 帐户的用户名。 这是上一节中使用的示例： *Azure Active Directory 用户名和密码*。  
 
-   交互模式需要手动输入密码, 或者对于启用了多重身份验证的帐户, 请完成配置的 MFA 身份验证方法。 
+   交互模式需要手动输入密码，或者对于启用了多重身份验证的帐户，请完成配置的 MFA 身份验证方法。 
 
    ``` 
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
    ``` 
 
-   如果 Azure AD 用户是使用 Windows 帐户的域联合身份验证, 则命令行中所需的用户名包含其域帐户 (例如, joe@contoso.com请参阅下文):   
+   如果 Azure AD 用户是使用 Windows 帐户联合的域，则命令行中所需的用户名包含其域帐户（例如，joe@contoso.com 见下文）：   
 
    ```
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
    ```
 
-   如果来宾用户在特定 Azure AD 中存在, 并且是存在于 SQL 数据库中且具有执行 bcp 命令的数据库权限的组的一部分, 则使用其来宾用户别名 (例如 *keith0@adventureworks.com* )。
+   如果来宾用户在特定 Azure AD 中存在，并且属于 SQL 数据库中存在的包含执行 bcp 命令的数据库权限的组，则将使用其来宾用户别名（例如， *keith0@adventureworks.com* ）。
   
 -h "load hints[ ,... n]"      <a name="h"></a> 指定向表或视图中批量导入数据时要用到的提示。  
   
@@ -278,13 +276,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 数据文件中的数据排序次序。 如果根据表中的聚集索引（如果有）对要导入的数据排序，则可提高批量导入的性能。 如果数据文件以不同的次序（即不同于聚集索引键的次序）排序，或者表中不存在任何聚集索引，则将忽略 ORDER 子句。 提供的列名必须是目标表中有效的列名。 默认情况下， **bcp** 假定数据文件没有排序。 对于经过优化的批量导入， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 还将验证导入的数据是否已排序。  
   
 * **ROWS_PER_BATCH** **=** _**bb**_  
-每批数据的行数（即 *bb*）。 在未指定 **-b** 时使用，这将导致整个数据文件作为单个事务发送到服务器。 服务器根据 *bb*值优化大容量加载。 默认情况下，ROWS_PER_BATCH 是未知的。  
+每批数据的行数（即 *bb*）。 在未指定 **-b** 时使用，这将导致整个数据文件作为单个事务发送到服务器。 服务器根据 bb值优化大容量加载  。 默认情况下，ROWS_PER_BATCH 是未知的。  
   
 * **KILOBYTES_PER_BATCH** **=** _**cc**_  
 每批的以千字节计数的近似数据量（即 *cc*）。 默认情况下，KILOBYTES_PER_BATCH 是未知的。  
   
 * **TABLOCK**  
-指定在大容量加载操作期间获取大容量更新表级别的锁；否则，获取行级别的锁。 由于在大容量复制操作期间拥有锁可以减少表中的锁争夺，所以此提示可显著提高性能。 如果表没有索引并且指定了 **TABLOCK** ，则该表可以同时由多个客户端加载。 默认情况下，锁定行为由表选项 **table lock on bulk load**决定。  
+指定在大容量加载操作期间获取大容量更新表级别的锁；否则，获取行级别的锁。 由于在大容量复制操作期间拥有锁可以减少表中的锁争夺，所以此提示可显著提高性能。 如果表没有索引并且指定了 **TABLOCK** ，则该表可以同时由多个客户端加载。 默认情况下，锁定行为由表选项 table lock on bulk load 决定  。  
   
   > [!NOTE]
   > 如果目标表是聚集列存储索引，则多个并发客户端不需要 TABLOCK 提示就能加载，因为将在索引中为每个并发线程分配单独的行组，并在该行组中加载数据。 有关详细信息，请参阅列存储索引概念主题，
@@ -300,7 +298,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   当输入数据包含违反约束的行时，您可能希望禁用约束（默认行为）。 如果禁用 CHECK 约束，您可以导入数据，然后使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句删除无效数据。  
   
   > [!NOTE]
-  > **bcp** 现在会强制执行数据验证和数据检查，这样，在对数据文件中的无效数据执行脚本时，可能会导致脚本失败。
+  > bcp  现在会强制执行数据验证和数据检查，这样，在对数据文件中的无效数据执行脚本时，可能会导致脚本失败。
   
   > [!NOTE]
   > **-m** *max_errors* 开关不适用于约束检查。
@@ -407,7 +405,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-v**<a name="v"></a>  
  报告 **bcp** 实用工具的版本号和版权信息。  
   
- **-V** (**80** | **90** | **100** | **110** | **120** | **130** )<a name="V"></a>  
+ **-V** (**80** | **90** | **100** | **110** | **120** | **130)<a name="V"></a>  
  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本中的数据类型执行大容量复制操作。 此选项并不提示输入每个字段，它将使用默认值。  
   
  **80** = [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]  
@@ -481,9 +479,9 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
 
 ## <a name="data-validation"></a>数据验证
 
- **bcp** 现在会强制执行数据验证和数据检查，这样，在对数据文件中的无效数据执行脚本时，可能会导致脚本失败。 例如， **bcp** 现在可以验证：  
+ bcp  现在会强制执行数据验证和数据检查，这样，在对数据文件中的无效数据执行脚本时，可能会导致脚本失败。 例如， **bcp** 现在可以验证：  
   
--   **float** 或 **real** 数据类型的本机表示形式是否有效。  
+-   float 或 real 数据类型的本机表示形式是否有效。  
   
 -   Unicode 数据的字节数是否为偶数。  
   
@@ -532,30 +530,31 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
 
 ## <a name="examples"></a>示例
 
- 本部分包含以下示例：  
- 
--   A. 标识 **bcp** 实用工具版本
-  
--   B. 将表行复制到数据文件中（使用可信连接）  
-  
--   [C.](#c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication) 将表行复制到数据文件中（使用混合模式身份验证）  
-  
--   D. 将文件中的数据复制到表中  
-  
--   E. 将特定的列复制到数据文件中  
-  
--   F. 将特定的行复制到数据文件中  
-  
--   G. 将查询中的数据复制到数据文件中  
-  
--   H. 创建格式化文件
-    
--   I. 使用格式化文件进行 **bcp**批量导入  
+本部分包含以下示例：
 
+A. 标识 **bcp** 实用工具版本
+
+B. 将表行复制到数据文件中（使用可信连接）
+
+C. 将表行复制到数据文件中（使用混合模式身份验证）
+
+D. 将文件中的数据复制到表中
+
+E. 将特定的列复制到数据文件中
+
+F. 将特定的行复制到数据文件中
+
+G. 将查询中的数据复制到数据文件中
+
+H. 创建格式化文件
+
+I. 使用格式化文件进行 **bcp**批量导入
+
+J. 指定代码页
 
 ### <a name="example-test-conditions"></a>**示例测试条件**
 
-以下示例使用 SQL Server（从 2016 开始）和 Azure SQL 数据库的 `WideWorldImporters` 示例数据库。  `WideWorldImporters`可以从[https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)下载。  有关用于还原示例数据库的语法，请参阅 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 。  除了另行指定的位置，该示例假定你使用 Windows 身份验证，并且与运行 **bcp** 命令所针对的服务器实例之间具有可信连接。  会在许多示例中使用一个名为 `D:\BCP` 的目录。
+以下示例使用 SQL Server（从 2016 开始）和 Azure SQL 数据库的 `WideWorldImporters` 示例数据库。  可以通过 [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) 下载 `WideWorldImporters` 。  有关用于还原示例数据库的语法，请参阅 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 。  除了另行指定的位置，该示例假定你使用 Windows 身份验证，并且与运行 **bcp** 命令所针对的服务器实例之间具有可信连接。  会在许多示例中使用一个名为 `D:\BCP` 的目录。
 
 下面的脚本创建 `WideWorldImporters.Warehouse.StockItemTransactions` 表的空副本，然后添加主键约束。  在 SQL Server Management Studio (SSMS) 中运行以下 T-SQL 脚本
 
@@ -583,93 +582,106 @@ END
 > TRUNCATE TABLE WideWorldImporters.Warehouse.StockItemTransactions_bcp;
 
 ### <a name="a--identify-bcp-utility-version"></a>A.  标识 **bcp** 实用工具版本
+
 在命令提示符处输入以下命令：
+
 ```
 bcp -v
 ```
   
-### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. 将表行复制到数据文件中（使用可信连接）  
-以下示例阐释了 **表中的** out `WideWorldImporters.Warehouse.StockItemTransactions` 选项。
+### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. 将表行复制到数据文件中（使用可信连接）
 
-- **基本**  
-此示例创建一个名为 `StockItemTransactions_character.bcp` 的数据文件，并使用 **字符** 格式将表数据复制到该文件中。
+以下示例阐释了 `WideWorldImporters.Warehouse.StockItemTransactions` 表中的 out 选项  。
+
+- **基本** 此示例创建一个名为 `StockItemTransactions_character.bcp` 的数据文件，并使用字符格式将表数据复制到该文件中  。
 
   在命令提示符处输入以下命令：
+
   ```
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
- 
+
  - **扩展**  
 此示例创建一个名为 `StockItemTransactions_native.bcp` 的数据文件，并使用 **本机** 格式将表数据复制到该文件中。  此示例还指定最大语法错误数、一个错误文件和一个输出文件。
 
     在命令提示符处输入以下命令：
     ```
     bcp WideWorldImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
-    ``` 
- 
+    ```
+
 查看 `Error_out.log` 和 `Output_out.log`。  `Error_out.log` 应为空白。  比较 `StockItemTransactions_character.bcp` 与 `StockItemTransactions_native.bcp`之间的文件大小。 
-   
-### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>C. 将表行复制到数据文件中（使用混合模式身份验证）  
+
+### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>C. 将表行复制到数据文件中（使用混合模式身份验证）
+
 以下示例阐释了 **表中的** out `WideWorldImporters.Warehouse.StockItemTransactions` 选项。  此示例创建一个名为 `StockItemTransactions_character.bcp` 的数据文件，并使用 **字符** 格式将表数据复制到该文件中。  
   
  该示例假定你使用混合模式身份验证，必须使用 **-U** 开关指定登录 ID。 并且，除非你连接到本地计算机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例，否则请使用 **-S** 开关指定系统名称和实例名称（可选）。  
 
 在命令提示符处，输入以下命令： \(系统将提示你输入密码。\)
-```  
+
+```
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
-```  
-  
-### <a name="d-copying-data-from-a-file-to-a-table"></a>D. 将文件中的数据复制到表中  
+```
+
+### <a name="d-copying-data-from-a-file-to-a-table"></a>D. 将文件中的数据复制到表中
+
 以下示例使用上面创建的文件说明 **表中的** in `WideWorldImporters.Warehouse.StockItemTransactions_bcp` 选项。
-  
-- **基本**  
-此示例使用以前创建的 `StockItemTransactions_character.bcp` 数据文件。
+
+- **基本** 此示例使用以前创建的 `StockItemTransactions_character.bcp` 数据文件。
 
   在命令提示符处输入以下命令：
-  ```  
-  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
-  ```  
 
-- **扩展**  
-此示例使用以前创建的 `StockItemTransactions_native.bcp` 数据文件。  此示例还使用提示 **TABLOCK**，指定最大语法错误数、一个错误文件和一个输出文件。
-  
-  在命令提示符处输入以下命令：
-  ```  
-  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
-  ```    
-  查看 `Error_in.log` 和 `Output_in.log`。
-   
-### <a name="e-copying-a-specific-column-into-a-data-file"></a>E. 将特定的列复制到数据文件中  
-若要复制特定列，可以使用 **queryout** 选项。  下面的示例仅将 `StockItemTransactionID` 表中的 `Warehouse.StockItemTransactions` 列复制到数据文件中。 
+  ```
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
+  ```
+
+- **展开** 此示例使用以前创建的 `StockItemTransactions_native.bcp` 数据文件。  此示例还使用提示 **TABLOCK**，指定最大语法错误数、一个错误文件和一个输出文件。
   
 在命令提示符处输入以下命令：
+
+```
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
+```
+
+  查看 `Error_in.log` 和 `Output_in.log`。
+
+### <a name="e-copying-a-specific-column-into-a-data-file"></a>E. 将特定的列复制到数据文件中
+
+若要复制特定列，可以使用 **queryout** 选项。  下面的示例仅将 `StockItemTransactionID` 表中的 `Warehouse.StockItemTransactions` 列复制到数据文件中。
   
-```  
+在命令提示符处输入以下命令：
+
+```
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
-```  
-  
-### <a name="f-copying-a-specific-row-into-a-data-file"></a>F. 将特定的行复制到数据文件中  
+```
+
+### <a name="f-copying-a-specific-row-into-a-data-file"></a>F. 将特定的行复制到数据文件中
+
 若要复制特定行，可以使用 **queryout** 选项。 以下示例仅将名为 `Amy Trefl` 的人员行从 `WideWorldImporters.Application.People` 表复制到数据文件 `Amy_Trefl_c.bcp` 中。  注意： **-d** 开关用于标识数据库。
   
-在命令提示符处输入以下命令： 
-```  
+在命令提示符处输入以下命令：
+
+```
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
-```  
-  
-### <a name="g-copying-data-from-a-query-to-a-data-file"></a>G. 将查询中的数据复制到数据文件中  
-若要将 Transact-SQL 语句的结果集复制到数据文件中，请使用 **queryout** 选项。  下面的示例将 `WideWorldImporters.Application.People` 表中的姓名复制到 `People.txt` 数据文件中；这些姓名按全名排序。  注意： **-t** 开关用于创建逗号分隔文件。
-  
+```
+
+### <a name="g-copying-data-from-a-query-to-a-data-file"></a>G. 将查询中的数据复制到数据文件中
+
+若要将 Transact-SQL 语句的结果集复制到数据文件中，请使用 **queryout** 选项。  下面的示例将 `WideWorldImporters.Application.People` 表中的姓名复制到 `People.txt` 数据文件中；这些姓名按全名排序。  注意：-t 开关用于创建逗号分隔文件  。
+
 在命令提示符处输入以下命令：
-```  
+
+```
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
-```  
-  
-### <a name="h-creating-format-files"></a>H. 创建格式化文件  
+```
+
+### <a name="h-creating-format-files"></a>H. 创建格式化文件
+
 下面的示例为 `Warehouse.StockItemTransactions` 数据库中的 `WideWorldImporters` 表创建三个不同格式文件。  查看创建的每个文件的内容。
-  
+
 在命令提示符处输入以下命令：
-  
-```  
+
+```
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -678,37 +690,33 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 REM XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
- 
-```  
+```
+
+> [!NOTE]
+> 若要使用 **-x** 开关，则必须使用 **bcp** 9.0 客户端。 有关如何使用 **bcp** 9.0 客户端的信息，请参阅“[备注](#remarks)”。
   
-> [!NOTE]  
->  若要使用 **-x** 开关，则必须使用 **bcp** 9.0 客户端。 有关如何使用 **bcp** 9.0 客户端的信息，请参阅“[备注](#remarks)”。  
+ 有关详细信息，请参阅[非 XML 格式化文件 (SQL Server)](../relational-databases/import-export/non-xml-format-files-sql-server.md) 和[XML 格式化文件 (SQL Server)](../relational-databases/import-export/xml-format-files-sql-server.md)。
   
- 有关详细信息，请参阅[非 XML 格式化文件 (SQL Server)](../relational-databases/import-export/non-xml-format-files-sql-server.md) 和[XML 格式化文件 (SQL Server)](../relational-databases/import-export/xml-format-files-sql-server.md)。  
-  
-### <a name="i-using-a-format-file-to-bulk-import-with-bcp"></a>I. 使用格式化文件进行 bcp 批量导入  
+### <a name="i-using-a-format-file-to-bulk-import-with-bcp"></a>I. 使用格式化文件进行 bcp 批量导入
+
 向 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例中导入数据时，若要使用以前创建的格式化文件，请同时使用 **-f** 开关和 **in** 选项。  例如，以下命令通过使用以前创建的格式化文件 ( `StockItemTransactions_character.bcp`)，将数据文件 `Warehouse.StockItemTransactions_bcp` 的内容大容量复制到 `StockItemTransactions_c.xml`表的副本中。  注意： **-L** 开关用于仅导入前 100 个记录。
-  
+
 在命令提示符处输入以下命令：
-```  
-bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
-```  
-  
+
+```
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
+```
+
 > [!NOTE]  
 >  如果数据文件字段和表中的列不同（例如，在编号、排序或数据类型方面），则可使用格式化文件。 有关详细信息，请参阅 [用来导入或导出数据的格式化文件 (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)知识。  
-  
-### <a name="j-specifying-a-code-page"></a>J. 指定代码页  
- 以下不完整的代码示例显示了指定代码页 65001 时使用的 bcp import 语句：  
-  
-```  
+
+### <a name="j-specifying-a-code-page"></a>J. 指定代码页
+
+以下不完整的代码示例显示了指定代码页 65001 时使用的 bcp import 语句：
+
+```
 bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...  
-```  
-  
- 以下不完整的代码示例显示了指定代码页 65001 时使用的 bcp export 语句：  
-  
-```  
-bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...  
-```  
+```
 
 ## <a name="additional-examples"></a>其他示例
 

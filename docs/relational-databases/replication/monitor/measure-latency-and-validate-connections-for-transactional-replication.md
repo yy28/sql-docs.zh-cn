@@ -17,12 +17,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c349569d2f0973a3085337eb171a17d9cee21c82
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: eef53dd48e960ac15e68e28e0be7265a8f25ba74
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69633404"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711025"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>为事务复制测量滞后时间和验证连接
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "69633404"
   
 1.  在发布服务器上，对发布数据库执行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，同时指定“\@publication”  。 这会返回发布到此发布的所有跟踪令牌的列表。 请记录结果集中要删除的跟踪令牌的 **tracer_id** 。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)，同时指定“\@publication”  ，以及第 2 步中“@tracer_id”  对应的要删除跟踪的 ID。  
+2.  在发布服务器的发布数据库中，执行 [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)，同时指定“publication”\@  ，并为 `@tracer_id` 指定第 2 步中要删除的跟踪 ID。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  本示例发送一个跟踪令牌记录并使用返回的已发送跟踪令牌的 ID 来查看滞后时间信息。  

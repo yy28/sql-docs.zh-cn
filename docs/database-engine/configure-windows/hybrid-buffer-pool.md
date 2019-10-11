@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 8bbc7670f3a4d6d8a017e7284c5a661d38594f08
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251060"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823573"
 ---
 # <a name="hybrid-buffer-pool"></a>混合缓冲池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,10 +76,8 @@ ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = OFF;
 以下示例返回 SQL Server 实例的混合缓冲池系统配置的当前状态。
 
 ```sql
-SELECT *
-FROM sys.configurations
-WHERE
-    name = 'hybrid_buffer_pool';
+SELECT * FROM
+sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
 以下示例返回两个表：
@@ -95,9 +93,9 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>混合缓冲池的最佳做法
 
-建议在 RAM 小于 16 GB 的实例上禁用混合缓冲池。
-
 在 Windows 上格式化 PMEM 设备时，使用可用于 NTFS 的最大分配单元大小（Windows Server 2019 中为 2 MB）并确保已为 DAX（直接访问）格式化该设备。
+
+为了获得最佳性能，请在 Windows 上启用[在内存中锁定页面](./enable-the-lock-pages-in-memory-option-windows.md)。
 
 文件大小应为 2 MB 的倍数（模数 2 MB 应等于零）。
 

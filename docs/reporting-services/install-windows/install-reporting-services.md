@@ -1,26 +1,34 @@
 ---
-title: 安装 SQL Server Reporting Services（2017 及更高版本）| Microsoft Docs
-ms.date: 12/20/2017
+title: 安装 SQL Server Reporting Services | Microsoft Docs
+ms.date: 10/02/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d636086c909d1d486040df6fc8d31cfea57c4f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502693"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952746"
 ---
-# <a name="install-sql-server-reporting-services-2017-and-later"></a>安装 SQL Server Reporting Services（2017 及更高版本）
+# <a name="install-sql-server-reporting-services"></a>安装 SQL Server Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 SQL Server Reporting Services 安装涉及到用于存储报表项、呈现报表以及处理订阅和其他报表服务的服务器组件。 
 
-要下载 SQL Server 2017 Reporting Services，请转到 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=55252)。
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+通过 Microsoft 下载中心下载 [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122)。
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+通过 Microsoft 下载中心下载 [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252)。
+
+::: moniker-end
 
 > [!NOTE]
 > 要查找 Power BI 报表服务器？ 请参阅[安装 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)。
@@ -38,40 +46,30 @@ SQL Server Reporting Services 安装涉及到用于存储报表项、呈现报�
 
 1. 查找 SQLServerReportingServices.exe 的位置并启动安装程序。
 
-2. 选择“安装 Reporting Services”  。
+2. 选择“安装 Reporting Services”。
 
-    ![安装 Reporting Services](media/install-reporting-services/report-server-install.png)
-
-3. 选择要安装的版本，然后选择“下一步”  。
-
-    ![选择版本](media/install-reporting-services/report-server-install-edition.png)
+3. 选择要安装的版本，然后选择“下一步”。
 
     对于免费版本，可从下拉列表中选择评估版或开发人员版。
 
     ![评估版或开发人员版](media/install-reporting-services/report-server-install-edition-select.png)
 
-    或者，输入产品密钥。 [查找 SQL Server 2017 Reporting Services 的产品密钥](find-reporting-services-product-key-ssrs.md)。
+    或者，输入产品密钥。 [查找 SQL Server Reporting Services 的产品密钥](find-reporting-services-product-key-ssrs.md)。
 
-4. 阅读并同意许可条款，然后选择“下一步”  。
+4. 阅读并同意许可条款，然后选择“下一步”。
 
-5. 需要有可用的数据库引擎才可存储报表服务器数据库。 选择“下一步”，仅安装报表服务器  。
+5. 需要有可用的数据库引擎才可存储报表服务器数据库。 选择“下一步”，仅安装报表服务器。
 
-    ![无需安装数据库](media/install-reporting-services/report-server-install-db-engine.png)
-
-6. 指定报表服务器的安装位置。 选择“安装”以继续操作  。
-
-    ![指定安装路径](media/install-reporting-services/report-server-install-file-path.png)
+6. 指定报表服务器的安装位置。 选择“安装”以继续操作。
 
     > [!NOTE]
     > 默认路径为 C:\Program Files\Microsoft SQL Server Reporting Services。
 
-7. 安装成功后，选择“配置报表服务器”，启动 Reporting Services 配置管理器  。
-
-    ![配置报表服务器](media/install-reporting-services/report-server-install-configure.png)
+7. 安装成功后，选择“配置报表服务器”，启动 Reporting Services 配置管理器。
 
 ## <a name="configuration-your-report-server"></a>配置报表服务器
 
-在安装程序中选择“配置报表服务器”后，可看到“报表服务器配置管理器”   。 有关详细信息，请参阅[报表服务器配置管理器](reporting-services-configuration-manager-native-mode.md)。
+在安装程序中选择“配置报表服务器”后，可看到“报表服务器配置管理器”。 有关详细信息，请参阅[报表服务器配置管理器](reporting-services-configuration-manager-native-mode.md)。
 
 需要[创建报表服务器数据库](ssrs-report-server-create-a-report-server-database.md)，以便完成 Reporting Services 的初始配置。 完成此步骤需要 SQL Server 数据库服务器。
 
@@ -89,7 +87,7 @@ SQL Server Reporting Services 安装涉及到用于存储报表项、呈现报�
 
 ## <a name="windows-service"></a>Windows 服务
 
-Windows 服务是在安装过程中创建的。 它显示为 SQL Server Reporting Services  。 服务名称为 SQLServerReportingServices  。
+Windows 服务是在安装过程中创建的。 它显示为 SQL Server Reporting Services。 服务名称为 SQLServerReportingServices。
 
 ## <a name="default-url-reservations"></a>默认 URL 预留
 
@@ -100,7 +98,7 @@ URL 预留由前缀、主机名、端口和虚拟目录组成：
 |Prefix|默认的前缀为 HTTP。 如果以前安装过安全套接字层 (SSL) 证书，则安装程序尝试创建使用 HTTPS 前缀的 URL 预留。|
 |主机名|默认主机名为强通配符 (+)。 它指定对于解析为计算机的任何主机名，报表服务器均会接受指定端口上的任何 HTTP 请求，包括 `https://<computername>/reportserver`、`https://localhost/reportserver` 或 `https://<IPAddress>/reportserver.`|
 |端口|默认端口为 80。 如果使用端口 80 以外的其他任何端口，则在浏览器窗口中打开 Web 门户时，必须将该端口显式添加至 URL 中。|
-|虚拟目录|默认情况下，虚拟目录创建时的格式为 ReportServer（适用于报表服务器 Web 服务）和 Reports（适用于 Web 门户）。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于 Web 门户，默认的虚拟目录为 reports  。|
+|虚拟目录|默认情况下，虚拟目录创建时的格式为 ReportServer（适用于报表服务器 Web 服务）和 Reports（适用于 Web 门户）。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于 Web 门户，默认的虚拟目录为 reports。|
 
 完整的 URL 字符串示例如下所示：
 

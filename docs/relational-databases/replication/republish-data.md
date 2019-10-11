@@ -15,12 +15,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c96a881443c03362f58fdfa857d6244789a7fe7e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9173073074957d448be8bd28cf92b16f18f4e2f3
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769632"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710778"
 ---
 # <a name="republish-data"></a>重新发布数据
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68769632"
 |合并发布|合并订阅/合并发布|合并订阅|  
 |合并发布|合并订阅/事务发布|事务订阅|  
   
- \*你应当为合并发布设置 **@published_in_tran_pub** 属性。 默认情况下，事务复制将订阅服务器上的表视为只读。 如果合并复制对事务订阅中的表进行了数据更改，则可能发生数据无法收敛的情况。 为避免这种风险，建议您在合并发布中将所有此类表都指定为仅供下载。 这样可以防止合并订阅服务器向表中上载数据更改。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
+ \*你应当在合并发布上设置 `@published_in_tran_pub` 属性。 默认情况下，事务复制将订阅服务器上的表视为只读。 如果合并复制对事务订阅中的表进行了数据更改，则可能发生数据无法收敛的情况。 为避免这种风险，建议您在合并发布中将所有此类表都指定为仅供下载。 这样可以防止合并订阅服务器向表中上载数据更改。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [“配置分发”](../../relational-databases/replication/configure-distribution.md)   

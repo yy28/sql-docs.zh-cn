@@ -1,10 +1,7 @@
 ---
 title: 使用 bcp 实用工具导入和导出批量数据 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 09/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,20 +9,25 @@ helpviewer_keywords:
 - bulk importing [SQL Server], bcp utility
 - bcp utility [SQL Server], about bcp utility
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 09/28/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0df035eaca45f10c8030e0ae30326035b304b2bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0a1a510e717ebb962f39c3b0bb1a342ef52751d
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035675"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707999"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>使用 bcp 实用工具导入和导出大容量数据 (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主题概述了如何使用 [bcp 实用工具](../../tools/bcp-utility.md) 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中可使用 SELECT 语句的任意位置（包括分区视图）导出数据。  
+本主题概述了如何使用 [bcp 实用工具](../../tools/bcp-utility.md) 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中可使用 SELECT 语句的任意位置（包括分区视图）导出数据。  
   
  bcp 实用工具 (Bcp.exe) 是一个使用大容量复制程序 (BCP) API 的命令行工具。 bcp 实用工具可执行以下任务：  
   
@@ -53,15 +55,20 @@ ms.locfileid: "68035675"
 |---|
 |[bcp Utility](../../tools/bcp-utility.md)<br /><br />用于批量导入或导出的数据格式 (SQL Server)<br />&emsp;&#9679;&emsp;[使用本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用字符格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 字符格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[批量导入数据时保留标识值 (SQL Server)](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />用于导入或导出数据的格式化文件 (SQL Server)）<br />&emsp;&#9679;&emsp;[创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件批量导入数据 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过表列 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过数据字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件将表列映射到数据文件字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[批量导入和导出 XML 文档的示例 (SQL Server)](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
 
-  
-## <a name="more-examples-and-information"></a>更多示例和信息  
- [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
- [SELECT 子句 (Transact-SQL)](../../t-sql/queries/select-clause-transact-sql.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
- [准备批量导入数据 (SQL Server)](../../relational-databases/import-export/prepare-to-bulk-import-data-sql-server.md)   
- [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
- [批量导入和导出数据 (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
- [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
-  
-  
+## <a name="more-examples-and-information"></a>更多示例和信息
+
+- [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+
+- [SELECT 子句 (Transact-SQL)](../../t-sql/queries/select-clause-transact-sql.md)
+
+- [bcp 实用工具](../../tools/bcp-utility.md)
+
+- [准备批量导入数据 (SQL Server)](../../relational-databases/import-export/prepare-to-bulk-import-data-sql-server.md)
+
+- [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)
+
+- [批量导入和导出数据 (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
+
+- [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
+
+- [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)

@@ -53,14 +53,14 @@ helpviewer_keywords:
 - USE HINT query hint
 - QUERY_PLAN_PROFILE query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-author: VanMSFT
+author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 559a39d1748835e422822fcef1c73e1b3113cb4a
-ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
+ms.openlocfilehash: 6c219db3dd5deda9201c0c629eb057b3162b0e49
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71207739"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713191"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -182,23 +182,23 @@ KEEP PLAN
 KEEPFIXED PLAN  
 强制查询优化器不因统计信息变化而重新编译查询。 指定 KEEPFIXED PLAN 可确保仅当更改基础表的架构或对这些表运行 sp_recompile  时才重新编译查询。  
   
-IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
   
 防止查询使用非聚集内存优化列存储索引。 如果查询包含避免使用列存储索引的查询提示，而又包含支持使用列存储索引的索引提示，那么这两个提示相互冲突，导致查询返回错误。  
   
-MAX_GRANT_PERCENT = percent   
+MAX_GRANT_PERCENT = percent      
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
+
 内存授予大小所占的最大百分比。 查询保证不会超过此限制。 如果 Resource Governor 设置低于此提示指定的值，则实际限制可能更低。 有效值介于 0.0 和 100.0 之间。  
   
-**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
-  
-MIN_GRANT_PERCENT = percent   
+MIN_GRANT_PERCENT = percent         
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。   
+
 内存授予大小所占的最小百分比 = 默认百分比限制。 查询保证会获取最大值（必需内存，最小授予），因为至少需要必需内存才能启动查询。 有效值介于 0.0 和 100.0 之间。  
-  
-**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
-  
-MAXDOP number   
-**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ 
+MAXDOP number       
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
 替代 sp_configure  的“最大并行度”  配置选项。 还会替代指定此选项的查询 Resource Governor。 MAXDOP 查询提示可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用 Resource Governor 配置的值，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用 Resource Governor MAXDOP 值（如 [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md) 中所述）。 使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用  。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
@@ -215,7 +215,7 @@ MAXRECURSION number
 有关详细信息，请参阅 [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)。     
   
 NO_PERFORMANCE_SPOOL    
- **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。   
   
 防止将 spool 运算符添加到查询计划（需要 spool 保证更新语义有效的计划除外）。 在某些情况下，spool 运算符可能会降低性能。 例如，如果有大量查询与 spool 操作并发运行，spool 将使用 tempdb 并会出现 tempdb 争用。  
   
@@ -269,13 +269,17 @@ ROBUST PLAN
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在为了进行关联而对筛选的 AND 谓词进行估值时使用最小选择性来生成计划。 与 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本的基数估计模型一起使用时，此提示名等效于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137；与 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更高版本的基数估计模型一起使用时，它等效于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471。
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
-   禁用批处理模式自适应联接。 有关详细信息，请参阅[批处理模式自适应联接](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)。 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。   
+   禁用批处理模式自适应联接。 有关详细信息，请参阅[批处理模式自适应联接](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)。     
+   适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。   
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   禁用批处理模式内存授予反馈。 有关详细信息，请参阅[批处理模式内存授予反馈](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback)。 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。   
+   禁用批处理模式内存授予反馈。 有关详细信息，请参阅[批处理模式内存授予反馈](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback)。     
+   适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
-  禁用表变量延迟编译。 有关详细信息，请参阅[表变量延迟编译](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)。 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。   
+  禁用表变量延迟编译。 有关详细信息，请参阅[表变量延迟编译](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)。     
+  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
-   对多语句表值函数禁用交错执行。 有关详细信息，请参阅[多语句表值函数的交错执行](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)。 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。   
+   对多语句表值函数禁用交错执行。 有关详细信息，请参阅[多语句表值函数的交错执行](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)。     
+   适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。   
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
    指示查询处理器在生成查询计划时不对优化的嵌套循环联接使用排序操作（批处理排序）。 此提示名与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340 等效。
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -290,11 +294,14 @@ ROBUST PLAN
 *  'DISABLE_PARAMETER_SNIFFING'      
    指示查询优化器在使用一个或多个参数编译查询时，使用平均数据分布。 此指令让查询计划独立于编译查询时首次使用的参数值。 此提示名与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 或[数据库作用域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 `PARAMETER_SNIFFING = OFF` 等效。
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
-  禁用行模式内存授予反馈。 有关详细信息，请参阅[模式内存授予反馈](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)。 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。     
+  禁用行模式内存授予反馈。 有关详细信息，请参阅[模式内存授予反馈](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)。      
+  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。     
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
-  禁用标量 UDF 内联。 有关详细信息，请参阅[标量 UDF 内联](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)。 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）  。    
+  禁用标量 UDF 内联。 有关详细信息，请参阅[标量 UDF 内联](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)。     
+  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）  。    
 * 'DISALLOW_BATCH_MODE'    
-  禁用批处理模式执行。 有关详细信息，请参阅[执行模式](../../relational-databases/query-processing-architecture-guide.md#execution-modes)。 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。     
+  禁用批处理模式执行。 有关详细信息，请参阅[执行模式](../../relational-databases/query-processing-architecture-guide.md#execution-modes)。     
+  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。     
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    针对需要对其执行基数估计的任何前导索引列，启用自动生成的快速统计信息（直方图修正）。 用于评估基数的直方图将在查询编译时针对此列的实际最大值或最小值进行调整。 此提示名与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 等效。 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
@@ -304,7 +311,8 @@ ROBUST PLAN
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
    强制查询优化器使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本的[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 此提示名与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 或[数据库作用域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 `LEGACY_CARDINALITY_ESTIMATION = ON` 等效。
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
- 强制查询优化器行为在查询级别发生。 此行为就像使用数据库兼容性级别 n  编译查询（其中，n  是受支持的数据库兼容性级别）。 请参阅 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，以了解目前对 n  支持的值。 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 起）。    
+ 强制查询优化器行为在查询级别发生。 此行为就像使用数据库兼容性级别 n  编译查询（其中，n  是受支持的数据库兼容性级别）。 请参阅 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，以了解目前对 n  支持的值。      
+   **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 起）。    
 
    > [!NOTE]
    > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不替代默认或旧版基数估计设置（如果它是通过数据库范围内配置、跟踪标志或 QUERYTRACEON 等其他查询提示强制执行的话）。   
@@ -312,7 +320,8 @@ ROBUST PLAN
    > 若要了解有关此提示的详细信息，请参阅[Developer's Choice:Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model)（开发人员的选择：提示查询执行模型）。
     
 *  'QUERY_PLAN_PROFILE'      
- 启用用于查询的轻型分析。 当包含此新提示的查询完成时，会触发一个新扩展事件：query_plan_profile。 此扩展事件公开执行统计信息和实际执行计划 XML，类似于 query_post_execution_showplan 扩展事件，但仅针对包含新提示的查询。  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 开始）。 
+ 启用用于查询的轻型分析。 当包含此新提示的查询完成时，会触发一个新扩展事件：query_plan_profile。 此扩展事件公开执行统计信息和实际执行计划 XML，类似于 query_post_execution_showplan 扩展事件，但仅针对包含新提示的查询。    
+    适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 开始）。 
 
    > [!NOTE]
    > 如果启用收集 query_post_execution_showplan 扩展事件，会向在服务器上运行的每个查询添加标准分析基础结构，因此可能会影响服务器的总体性能。      
@@ -453,8 +462,6 @@ GO
 ### <a name="f-using-maxdop"></a>F. 使用 MAXDOP  
  以下示例使用 MAXDOP 查询提示。 该示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库。  
   
-**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
-  
 ```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
@@ -582,8 +589,6 @@ GO
 ```  
 ### <a name="l-using-use-hint"></a>L. 使用 USE HINT  
  以下示例使用 RECOMPILE 和 USE HINT 查询提示。 该示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库。  
-  
-适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  。  
   
 ```sql  
 SELECT * FROM Person.Address  

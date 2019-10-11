@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f08360562112b23344543d2c63c28ebfa39bc88d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69766a9278b09f081bbfaaced90e45acd1cf91c5
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907824"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710983"
 ---
 # <a name="define-an-article"></a>定义项目
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "67907824"
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布定义项目  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 将 **@publication** 、 **@article** 和 **@source_object** 的值分别指定为项目所属发布的名称、项目的名称以及要发布的数据库对象，同时指定任何其他可选参数。 使用 **@source_owner** 指定对象的架构所有权（如果不是 **dbo**。 如果该项目不是基于日志的表项目，可将 **@type** 指定为该项目类型；有关详细信息，请参阅[指定项目类型（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 `@publication` 指定项目所属的发布名称，为 `@article` 指定项目的名称，并为 `@source_object` 指定要发布的数据库对象，同时指定任何其他可选参数。 如果不是 dbo，则使用 `@source_owner` 指定对象的架构所有权  。 如果该项目不是基于日志的表项目，可将 `@type` 指定为该项目类型；有关详细信息，请参阅[指定项目类型（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
   
 2.  若要水平筛选表中的行或查看项目，请使用 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 来定义筛选子句。 有关详细信息，请参阅 [定义和修改静态行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "67907824"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>为合并发布定义项目  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 将 **@publication** 、 **@article** 和 **@source_object** 。 若要水平筛选表行，请为 **@subset_filterclause** 。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 和 [定义和修改静态行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。 如果相应项目不是表项目，请将 **@type** 。 有关详细信息，请参阅[指定项目类型（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 为 `@publication` 指定发布的名称，为 `@article` 指定项目的名称，为 `@source_object` 指定要发布的对象。 若要水平筛选表行，请为 `@subset_filterclause` 指定一个值。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 和 [定义和修改静态行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。 如果相应项目不是表项目，请将 `@type` 指定为该项目类型。 有关详细信息，请参阅[指定项目类型（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
   
 2.  （可选）在发布服务器上，对发布数据库执行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 以在两个项目之间定义一个联接筛选器。 有关详细信息，请参阅 [定义和修改合并项目间的联接筛选器](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   

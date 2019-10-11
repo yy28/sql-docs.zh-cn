@@ -1,0 +1,82 @@
+---
+title: SQL Server 中弃用的数据库引擎功能 | Microsoft Docs
+ms.custom: ''
+ms.date: 02/02/2017
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
+ms.technology: release-landing
+ms.topic: conceptual
+helpviewer_keywords:
+- VIA protocol
+- unsupported features [SQL Server]
+- SQL Mail
+- discontinued functionality [SQL Server]
+- RESTORE WITH DBO_ONLY
+- BACKUP WITH PASSWORD
+- user instances enabled
+- BACKUP WITH MEDIAPASSWORD
+- AWE
+- SQL-DMO
+- '*= and =*'
+- 80 compatibility levels
+- COMPUTE BY
+- user instance timeout
+- sp_dropalias
+- COMPUTE
+- SSL
+- WITH APPEND
+- sys.database_principal_aliases
+- sp_dboption
+- DATABASEPROPERTY
+- FASTFIRSTROW hint
+- SET DISABLE_DEF_CNST_CHK
+ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
+author: MikeRayMSFT
+ms.author: mikeray
+monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a708aad1d483eaf28d559ff04424e515ec9f6aa7
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816662"
+---
+# <a name="discontinued-database-engine-functionality-in-sql-server"></a>SQL Server中弃用的数据库引擎功能
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+  本主题介绍 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)]功能。  
+
+## <a name="discontinued-features-in-includesssqlv15includessssqlv15-mdmd"></a>[!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)] 中弃用的功能  
+
+- 以下数据库范围的配置选项已停止使用：
+
+  - `DISABLE_BATCH_MODE_ADAPTIVE_JOIN`
+  - `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+  - `DISABLE_INTERLEAVED_EXECUTION_TVF`
+
+有关当前配置选项，请参阅[更改数据库范围配置 (Transact-SQL)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
+
+>[!NOTE]
+>[!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)] 中没有弃用的功能。
+
+## <a name="discontinued-features-in-includesssql15includessssql15-mdmd"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中弃用的功能
+
+- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 是 64 位应用程序。 32 位安装已停止使用，不过，某些元素仍以 32 位组件运行。  
+
+- 已不再使用兼容级别 90。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+
+- ActiveX 子系统已停止使用。 请改用命令行或 PowerShell 脚本。
+
+- 启动参数 -h  和 -g  。 有关详细信息，请参阅 [Database Engine Service Startup Options](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014)。
+
+- 安全套接字层 (SSL) 加密已中断。 请改用传输层安全性 (TLS)。 有关详细信息，请参阅[启用数据库引擎的加密连接](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。
+
+## <a name="previous-versions"></a>先前版本
+
+- [SQL Server 2014 中废止的数据库引擎功能](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+
+## <a name="see-also"></a>另请参阅
+
+- [SQL Server 2016 中不推荐使用的数据库引擎功能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
+- [SQL Server 复制中不推荐使用的功能](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)

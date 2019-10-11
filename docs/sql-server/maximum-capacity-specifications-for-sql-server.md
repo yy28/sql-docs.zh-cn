@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045641"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687370"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ ms.locfileid: "68045641"
 |GROUP BY、ORDER BY 中的列数||仅受字节数限制||  
 |GROUP BY WITH CUBE 或 WITH ROLLUP 语句中的列数或表达式数目||10||  
 |每个索引键的列数||32|如果表包含一个或多个 XML 索引，由于 XML 列被添加到主 XML 索引的聚集键，因此用户表的聚集键被限制为 31 列。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，可在非聚集索引中包括非键列以避免最多为 32 个键列的限制。 有关详细信息，请参阅 [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md)。|  
-|每个外键的列数||32||  
-|每个主键的列数||32||  
-|每个非宽表的列数||1,024||  
-|每个宽表的列数||30,000||  
-|每个 SELECT 语句的列数||4,096||  
-|每个 INSERT 语句的列数||4,096||  
+|每个外键或主键的列数||32||  
+|每个 `INSERT` 语句的列数||4,096||  
+|每个 `SELECT` 语句的列数||4,096||  
+|每个表的列数||1,024|包含稀疏列集的表最多包含 30,000 列。 请参阅[稀疏列集](../relational-databases/tables/use-column-sets.md)。|  
+|每个 `UPDATE` 语句的列数||4,096|[稀疏列集](../relational-databases/tables/use-column-sets.md)有不同的限制。|  
+|每个视图的列数||1,024||  
 |每个客户端的连接个数||已配置连接的最大值||  
 |数据库大小||524,272 TB||  
 |每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
@@ -99,7 +99,6 @@ ms.locfileid: "68045641"
 |非索引列的统计信息条数||30,000|| 
 |每个 SELECT 语句的表个数||仅受可用资源限制||  
 |每个表的触发器数||受数据库中对象数限制|数据库对象包括诸如表、视图、存储过程、用户定义函数、触发器、规则、默认值和约束等对象。 数据库中所有对象的数量总和不能超过 2,147,483,647。|  
-|每个 UPDATE 语句（宽表）的列数||4096||  
 |用户连接||32,767||  
 |XML 索引||249||  
   

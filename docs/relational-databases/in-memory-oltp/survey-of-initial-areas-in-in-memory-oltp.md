@@ -1,7 +1,7 @@
 ---
-title: 快速入门 1：用于提高 Transact-SQL 性能的内存中 OLTP 技术 | Microsoft Docs
+title: 快速调查 1：用于提高 Transact-SQL 性能的内存中 OLTP 技术 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cfa9f47e92852929bddb4e3aa3105d8dbf9508e
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: ebbf3c4bd5bbe4672734733fd8bd082954877e4b
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661473"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712937"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>内存中 OLTP 内的初始领域调查
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
@@ -211,7 +212,7 @@ ALTER DATABASE CURRENT
   
 在 Azure SQL 数据库中，无需且不能创建此类文件组。  
 
-下面的示例 T-SQL 脚本可为内存中 OLTP 启用数据库，并配置所有推荐设置。 它适用于 SQL Server 和 Azure SQL 数据库：[enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)。
+下面的示例 T-SQL 脚本可为内存中 OLTP 启用数据库，并配置所有推荐设置。 它适用于 SQL Server 和 Azure SQL 数据库：[enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)。
 
 请注意，具有 MEMORY_OPTIMIZED_DATA 文件组的数据库并非支持所有的 SQL Server 功能。 有关限制的详细信息，请参阅：[内存中 OLTP 不支持的 SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)
   

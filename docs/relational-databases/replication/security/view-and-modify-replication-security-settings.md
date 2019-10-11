@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 904ca2ccc3992ae6c4f03f03da8c70761ec5e907
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2e0407382f1a0986add69a4b47e9cbb2eebc4d34
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768401"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710743"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>查看和修改复制安全设置
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -252,10 +252,10 @@ ms.locfileid: "68768401"
   
 #### <a name="to-change-all-instances-of-a-stored-password-at-a-replication-server"></a>在复制服务器上更改存储密码的所有实例  
   
-1.  在复制拓扑中的服务器上，对 master 数据库执行 [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)。 为 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] @login [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Windows 帐户或 **@login** 登录名，并为 **@password** 。 连接到该拓扑中的其他服务器时，此操作会更改该服务器上所有代理使用的密码的每个实例。  
+1.  在复制拓扑中的服务器上，对 master 数据库执行 [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)。 指定要更改其 `@login` 密码的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Microsoft Windows 帐户或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名，以及该帐户的新密码或 `@password` 的登录名。 连接到该拓扑中的其他服务器时，此操作会更改该服务器上所有代理使用的密码的每个实例。  
   
     > [!NOTE]  
-    >  若要只更改该拓扑中特定服务器（如分发服务器或订阅服务器）的连接的登录名和密码，请为 **@server** 。  
+    >  若要只更改该拓扑中特定服务器（如分发服务器或订阅服务器）的连接的登录名和密码，请为 `@server` 指定此服务器的名称。  
   
 2.  在复制拓扑中必须更新密码的每台服务器上重复执行步骤 1。  
   
@@ -264,30 +264,30 @@ ms.locfileid: "68768401"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>更改快照代理的安全设置  
   
-1.  在发布服务器上，执行 [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)，并指定 **@publication** 。 此操作将返回快照代理的当前安全设置。  
+1.  在发布服务器上，执行 [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)，并指定 `@publication`。 此操作将返回快照代理的当前安全设置。  
   
-2.  在发布服务器上，执行 [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)，并指定 **@publication** 和下列要更改的一个或多个安全设置：  
+2.  在发布服务器上，执行 [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)，并指定 `@publication` 和下列要更改的一个或多个安全设置：  
   
-    -   若要更改代理运行时所用的 Windows 帐户或只更改此帐户的密码，请指定 **@job_login** 和 **@job_password** 。  
+    -   若要更改代理运行时所用的 Windows 帐户或只更改此帐户的密码，请指定 `@job_login` 和 `@job_password`。  
   
-    -   若要更改连接到发布服务器时所用的安全模式，请将 **@publisher_security_mode** 选项指定为 **1** 或 **@publisher_security_mode** 。  
+    -   若要更改连接到发布服务器时所用的安全模式，请将 `@publisher_security_mode` 的值指定为 **1** 或 **0**。  
   
-    -   将连接到发布服务器时所用的安全模式从 **@publisher_security_mode** 更改为 **1** 时，或者更改用于此连接的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名时，请指定 **@publisher_login** 和 **@publisher_password** 。  
+    -   将连接到发布服务器时所用的安全模式从 **1** 更改为 **0** 时，或者更改用于此连接的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名时，请指定 `@publisher_login` 和 `@publisher_password`。  
   
     > [!IMPORTANT]  
     >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>更改日志读取器代理的安全设置  
   
-1.  在发布服务器上，执行 [sp_helplogreader_agent](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)，并指定 **@publisher** 。 此操作将返回日志读取器代理的当前安全设置。  
+1.  在发布服务器上，执行 [sp_helplogreader_agent](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)，并指定 `@publisher`。 此操作将返回日志读取器代理的当前安全设置。  
   
-2.  在发布服务器上，执行 [sp_changelogreader_agent](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)，并指定 **@publication** 和下列要更改的一个或多个安全设置：  
+2.  在发布服务器上，执行 [sp_changelogreader_agent](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)，并指定 `@publication` 和下列要更改的一个或多个安全设置：  
   
-    -   若要更改代理运行时所用的 Windows 帐户或只更改此帐户的密码，请指定 **@job_login** 和 **@job_password** 。  
+    -   若要更改代理运行时所用的 Windows 帐户或只更改此帐户的密码，请指定 `@job_login` 和 `@job_password`。  
   
-    -   若要更改连接到发布服务器时所用的安全模式，请将 **@publisher_security_mode** 选项指定为 **1** 或 **@publisher_security_mode** 。  
+    -   若要更改连接到发布服务器时所用的安全模式，请将 `@publisher_security_mode` 的值指定为 **1** 或 **0**。  
   
-    -   将连接到发布服务器时所用的安全模式从 **@publisher_security_mode** 更改为 **1** 时，或者更改用于此连接的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名时，请指定 **@publisher_login** 和 **@publisher_password** 。  
+    -   将连接到发布服务器时所用的安全模式从 **1** 更改为 **0** 时，或者更改用于此连接的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名时，请指定 `@publisher_login` 和 `@publisher_password`。  
   
     > [!NOTE]  
     >  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
@@ -297,17 +297,17 @@ ms.locfileid: "68768401"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>更改推送订阅的分发代理的安全设置  
   
-1.  在发布服务器上，对发布数据库执行 [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)，并指定 **@publication** 和 **@subscriber** 。 此操作将返回订阅属性，包括运行在分发服务器上的分发代理的安全设置。  
+1.  在发布服务器上，对发布数据库执行 [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)，并指定 `@publication` 和 `@subscriber`。 此操作将返回订阅属性，包括运行在分发服务器上的分发代理的安全设置。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)，并指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 或复制管理对象 (RMO) 在 **@subscriber_db** ，将 **@article** 或 **@article** ，为 **@property** 指定安全属性的名称，并为 **@value** 。  
+2.  在发布服务器上，对发布数据库执行 [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)，并指定 `@publication`、`@subscriber`、`@subscriber_db**`，将 `@article` 的值指定为 `all`，为 `@property` 指定安全属性的名称，并为 `@value` 指定属性的新值。  
   
 3.  对下列每个要更改的安全属性重复步骤 2：  
   
-    -   若要更改代理运行时所用的 Windows 帐户或只更改此帐户的密码，请为 **@property** 或 **@property** 值，并为 **@value** 。 更改帐户本身时，请重复步骤 2，为 **@property** 或 **@property** 值，并为 **@value** 。  
+    -   若要更改代理运行时所用的 Windows 帐户或只更改此帐户的密码，请为 `@property` 指定 **distrib_job_password** 的值，并为 `@value` 指定新密码。 更改帐户本身时，请重复步骤 2，为 `@property` 指定 **distrib_job_login** 的值，并为 `@value` 指定新的 Windows 帐户。  
   
-    -   若要更改连接到订阅服务器时所用的安全模式，请为 **@property** 或 **@property** 值，并将 **@publisher_security_mode** 的值指定为 **1** （Windows 集成身份验证）或 **@value** 。  
+    -   若要更改连接到订阅服务器时所用的安全模式，请为 `@property` 指定 **subscriber_security_mode** 的值，并将 `@value` 的值指定为 **1**（Windows 集成身份验证）或 **0**（SQL Server 身份验证）。  
   
-    -   将订阅服务器的安全模式更改为 SQL Server 身份验证时，或者如果更改 SQL Server 身份验证的登录信息，请为 **@property** 或 **@property** 值，并为 **@value** 。 重复步骤 2，为 **@property** 或 **@property** 值，并为 **@value** 。  
+    -   将订阅服务器的安全模式更改为 SQL Server 身份验证时，或者如果更改 SQL Server 身份验证的登录信息，请为 `@property` 指定 **subscriber_password** 的值，并为 `@value` 指定新的密码。 重复步骤 2，为 `@property` 指定 **subscriber_login** 的值，并为 `@value` 指定新的登录名。  
   
     > [!NOTE]  
     >  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
@@ -317,38 +317,38 @@ ms.locfileid: "68768401"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>更改请求订阅的分发代理的安全设置  
   
-1.  在发布服务器上，执行 [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)，并指定 **@publication** 。 此操作将返回订阅属性，包括运行在订阅服务器上的分发代理的安全设置。  
+1.  在发布服务器上，执行 [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)，并指定 `@publication`。 此操作将返回订阅属性，包括运行在订阅服务器上的分发代理的安全设置。  
   
-2.  在订阅服务器上的订阅数据库中，执行 [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)，并指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 或复制管理对象 (RMO) 在 **@publication** ，为 **@property** 指定安全属性的名称，并为 **@value** 。  
+2.  在订阅服务器上的订阅数据库中，执行 [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)，并指定 `@publisher`、`@publisher_db`、`@publication`，为 `@property` 指定安全属性的名称，并为 `@value` 指定属性的新值。  
   
 3.  对下列每个要更改的安全属性重复步骤 2：  
   
-    -   若要更改代理运行时所用的 Windows 帐户或只更改此帐户的密码，请为 **@property** 或 **@property** 值，并为 **@value** 。 更改帐户本身时，请重复步骤 2，为 **@property** 或 **@property** 值，并为 **@value** 。  
+    -   若要更改代理运行时所用的 Windows 帐户或只更改此帐户的密码，请为 `@property` 指定 **distrib_job_password** 的值，并为 `@value` 指定新密码。 更改帐户本身时，请重复步骤 2，为 `@property` 指定 **distrib_job_login** 的值，并为 `@value` 指定新的 Windows 帐户。  
   
-    -   若要更改连接到分发服务器时所用的安全模式，请为 **@property** 或 **@property** 值，并将 **@publisher_security_mode** 的值指定为 **1** （Windows 集成身份验证）或 **@value** 。  
+    -   若要更改连接到分发服务器时所用的安全模式，请为 `@property` 指定 **distributor_security_mode** 的值，并将 `@value` 的值指定为 **1**（Windows 集成身份验证）或 **0**（SQL Server 身份验证）。  
   
-    -   将分发服务器的安全模式更改为 SQL Server 身份验证时，或者如果更改 SQL Server 身份验证的登录信息，请为 **@property** 或 **@property** 值，并为 **@value** 。 重复步骤 2，为 **@property** 或 **@property** 值，并为 **@value** 。  
+    -   将分发服务器的安全模式更改为 SQL Server 身份验证时，或者如果更改 SQL Server 身份验证的登录信息，请为 `@property` 指定 **distributor_password** 的值，并为 `@value` 指定新密码。 重复步骤 2，为 `@property` 指定 **distributor_login** 的值，并为 `@value` 指定新登录名。  
   
     > [!NOTE]  
     >  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription"></a>更改推送订阅的合并代理的安全设置  
   
-1.  在发布服务器上，对发布数据库执行 [sp_helpmergesubscription](../../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)，并指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 和 **@subscriber_db** 。 此操作将返回订阅属性，包括运行在分发服务器上的合并代理的安全设置。  
+1.  在发布服务器上，对发布数据库执行 [sp_helpmergesubscription](../../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)，并指定 `@publication`、`@subscriber,` 和 `@subscriber_db`。 此操作将返回订阅属性，包括运行在分发服务器上的合并代理的安全设置。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_changemergesubscription](../../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)，并指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 或复制管理对象 (RMO) 在 **@subscriber_db** ，为 **@property** 指定安全属性的名称，并为 **@value** 。  
+2.  在发布服务器上，对发布数据库执行 [sp_changemergesubscription](../../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)，并指定 `@publication`、`@subscriber`、`@subscriber_db`，为 `@property` 指定安全属性的名称，并为 `@value` 指定属性的新值。  
   
 3.  对下列每个要更改的安全属性重复步骤 2：  
   
-    -   若要更改代理运行时所用的 Windows 帐户或只更改此帐户的密码，请为 **@property** 或 **@property** 值，并为 **@value** 。 更改帐户本身时，请重复步骤 2，为 **@property** 或 **@property** 值，并为 **@value** 。  
+    -   若要更改代理运行时所用的 Windows 帐户或只更改此帐户的密码，请为 `@property` 指定 **merge_job_password** 的值，并为 `@value` 指定新密码。 更改帐户本身时，请重复步骤 2，为 `@property` 指定 **merge_job_login** 的值，并为 `@value` 指定新的 Windows 帐户。  
   
-    -   若要更改连接到订阅服务器时所用的安全模式，请为 **@property** 或 **@property** 值，并将 **@publisher_security_mode** 的值指定为 **1** （Windows 集成身份验证）或 **@value** 。  
+    -   若要更改连接到订阅服务器时所用的安全模式，请为 `@property` 指定 **subscriber_security_mode** 的值，并将 `@value` 的值指定为 **1**（Windows 集成身份验证）或 **0**（SQL Server 身份验证）。  
   
-    -   将订阅服务器的安全模式更改为 SQL Server 身份验证时，或者如果更改 SQL Server 身份验证的登录信息，请为 **@property** 或 **@property** 值，并为 **@value** 。 重复步骤 2，为 **@property** 或 **@property** 值，并为 **@value** 。  
+    -   将订阅服务器的安全模式更改为 SQL Server 身份验证时，或者如果更改 SQL Server 身份验证的登录信息，请为 `@property` 指定 **subscriber_password** 的值，并为 `@value` 指定新的密码。 重复步骤 2，为 `@property` 指定 **subscriber_login** 的值，并为 `@value` 指定新的登录名。  
   
-    -   若要更改连接到发布服务器时所用的安全模式，请将 **@property** 或 **@property** 值，并将 **@publisher_security_mode** 的值指定为 **1** （Windows 集成身份验证）或 **@value** 。  
+    -   若要更改连接到发布服务器时所用的安全模式，请为 `@property` 指定 **publisher_security_mode** 的值，并将 `@value` 的值指定为 **1**（Windows 集成身份验证）或 **0**（SQL Server 身份验证）。  
   
-    -   将发布服务器的安全模式更改为 SQL Server 身份验证时，或者如果更改 SQL Server 身份验证的登录信息，请为 **@property** 或 **@property** 值，并为 **@value** 。 重复步骤 2，为 **@property** 或 **@property** 值，并为 **@value** 。  
+    -   将发布服务器的安全模式更改为 SQL Server 身份验证时，或者如果更改 SQL Server 身份验证的登录信息，请为 `@property` 指定 **publisher_password** 的值，并为 `@value` 指定新密码。 重复步骤 2，为 `@property` 指定 **publisher_login** 的值，并为 `@value` 指定新登录名。  
   
     > [!NOTE]  
     >  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
@@ -358,30 +358,30 @@ ms.locfileid: "68768401"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>更改请求订阅的合并代理的安全设置  
   
-1.  在发布服务器上，执行 [sp_helpmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)，并指定 **@publication** 。 此操作将返回订阅属性，包括运行在订阅服务器上的合并代理的安全设置。  
+1.  在发布服务器上，执行 [sp_helpmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)，并指定 ``@publication``。 此操作将返回订阅属性，包括运行在订阅服务器上的合并代理的安全设置。  
   
-2.  在订阅服务器上的订阅数据库中，执行 [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)，并指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 或复制管理对象 (RMO) 在 **@publication** ，为 **@property** 指定安全属性的名称，并为 **@value** 。  
+2.  在订阅服务器上的订阅数据库中，执行 [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)，并指定 `@publisher`、`@publisher_db`、`@publication`，为 `@property` 指定安全属性的名称，并为 `@value` 指定属性的新值。  
   
 3.  对下列每个要更改的安全属性重复步骤 2：  
   
-    -   若要更改代理运行时所用的 Windows 帐户或只更改此帐户的密码，请为 **@property** 或 **@property** 值，并为 **@value** 。 When changing the account itself, repeat Step 2 specifying a value of **@property** 或 **@property** 值，并为 **@value** 。  
+    -   若要更改代理运行时所用的 Windows 帐户或只更改此帐户的密码，请为 `@property` 指定 **merge_job_password** 的值，并为 `@value` 指定新密码。 更改帐户本身时，请重复步骤 2，为 `@property` 指定 **merge_job_login** 的值，并为 `@value` 指定新的 Windows 帐户。  
   
-    -   若要更改连接到分发服务器时所用的安全模式，请为 **@property** 或 **@property** 值，并将 **@publisher_security_mode** 的值指定为 **1** （Windows 集成身份验证）或 **@value** 。  
+    -   若要更改连接到分发服务器时所用的安全模式，请为 `@property` 指定 **distributor_security_mode** 的值，并将 `@value` 的值指定为 **1**（Windows 集成身份验证）或 **0**（SQL Server 身份验证）。  
   
-    -   将分发服务器的安全模式更改为 SQL Server 身份验证时，或者如果更改 SQL Server 身份验证的登录信息，请为 **@property** 或 **@property** 值，并为 **@value** 。 重复步骤 2，为 **@property** 或 **@property** 值，并为 **@value** 。  
+    -   将分发服务器的安全模式更改为 SQL Server 身份验证时，或者如果更改 SQL Server 身份验证的登录信息，请为 `@property` 指定 **distributor_password** 的值，并为 `@value` 指定新密码。 重复步骤 2，为 `@property` 指定 **distributor_login** 的值，并为 `@value` 指定新登录名。  
   
-    -   若要更改连接到发布服务器时所用的安全模式，请将 **@property** 或 **@property** 值，并将 **@publisher_security_mode** 的值指定为 **1** （Windows 集成身份验证）或 **@value** 。  
+    -   若要更改连接到发布服务器时所用的安全模式，请为 `@property` 指定 **publisher_security_mode** 的值，并将 `@value` 的值指定为 **1**（Windows 集成身份验证）或 **0**（SQL Server 身份验证）。  
   
-    -   将发布服务器的安全模式更改为 SQL Server 身份验证时，或者如果更改 SQL Server 身份验证的登录信息，请为 **@property** 或 **@property** 值，并为 **@value** 。 重复步骤 2，为 **@property** 或 **@property** 值，并为 **@value** 。  
+    -   将发布服务器的安全模式更改为 SQL Server 身份验证时，或者如果更改 SQL Server 身份验证的登录信息，请为 `@property` 指定 **publisher_password** 的值，并为 `@value` 指定新密码。 重复步骤 2，为 `@property` 指定 **publisher_login** 的值，并为 `@value` 指定新登录名。  
   
     > [!NOTE]  
     >  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent-to-generate-a-filtered-snapshot-for-a-subscriber"></a>更改快照代理的安全设置以为订阅服务器生成筛选快照  
   
-1.  在发布服务器上，执行 [sp_helpdynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)，并指定 **@publication** 。 在结果集中，记下要更改的订阅服务器分区的 **job_name** 值。  
+1.  在发布服务器上，执行 [sp_helpdynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)，并指定 `@publication`。 在结果集中，记下要更改的订阅服务器分区的 **job_name** 值。  
   
-2.  在发布服务器上，执行 [sp_changedynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)，并指定 **@publication** ，为 **@dynamic_snapshot_jobname** 指定在步骤 1 中获取的值，为 **@job_password** 指定新密码，或者为 **@job_login** 和 **@job_password** 。  
+2.  在发布服务器上，执行 [sp_changedynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)，并指定 `@publication`，为 `dynamic_snapshot_jobname` 指定在步骤 1 中获取的值，为 `@job_password` 指定新密码或为 `@job_login` 和 `@job_password` 指定 代理运行时所用的 Windows 帐户的登录名和密码。  
   
     > [!IMPORTANT]  
     >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -390,7 +390,7 @@ ms.locfileid: "68768401"
   
 1.  在分发服务器上，执行 [sp_helpqreader_agent](../../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)。 此操作将返回队列读取器代理运行时所用的当前 Windows 帐户。  
   
-    -   在分发服务器上，执行 [sp_changeqreader_agent](../../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)，并为 **@job_login** 和 **@job_passwsord** 。  
+    -   在分发服务器上，执行 [sp_changeqreader_agent](../../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)，并为 `@job_login` 和 `@job_password` 指定 Windows 帐户设置。  
   
     > [!NOTE]  
     >  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。 每个分发数据库都有一个队列读取器代理。 更改代理的安全设置会影响使用此分发数据库的所有发布服务器上所有发布的设置。  
@@ -399,9 +399,9 @@ ms.locfileid: "68768401"
   
 #### <a name="to-change-security-mode-used-by-an-immediate-updating-subscriber-when-connecting-to-the-publisher"></a>更改立即更新订阅服务器连接到发布服务器时所用的安全模式  
   
-1.  在订阅服务器上的订阅数据库中，执行 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publication** ，为 **@publisher_db** 指定发布数据库的名称，并为 **@security_mode** 指定下列值之一：  
+1.  在订阅服务器上的订阅数据库中，执行 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)。 指定 `@publisher`、 `@publication`、发布数据库的名称 `@publisher_db`，以及为 `@security_mode`指定以下值之一：  
   
-    -   **0** ，表示在发布服务器上执行更新时使用 SQL Server 身份验证。 此选项需要为 **@login** 和 **@password** 。  
+    -   **0** ，表示在发布服务器上执行更新时使用 SQL Server 身份验证。 此选项需要为 `@login` 和 `@password`指定发布服务器上的一个有效登录名。  
   
     -   **1** ，表示连接到发布服务器时使用在订阅服务器上执行更改的用户的安全上下文。 请参阅 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) ，了解与此安全模式相关的限制。  
   
@@ -409,12 +409,12 @@ ms.locfileid: "68768401"
   
 #### <a name="to-change-the-password-for-a-remote-distributor"></a>更改远程分发服务器的密码  
   
-1.  在分发服务器上，对分发数据库执行 [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)，并为 **@password** 。  
+1.  在分发服务器上，对分发数据库执行 [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)，并为 `@password` 指定此登录名的新密码。  
   
     > [!IMPORTANT]  
     >  不要直接更改 **distributor_admin** 的密码。  
   
-2.  在使用此远程分发服务器的每个发布服务器上，执行 [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)，并为 **@password** 。  
+2.  在使用此远程分发服务器的每个发布服务器上，执行 [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)，并为 `@password` 指定步骤 1 中的密码。  
   
 ##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
   

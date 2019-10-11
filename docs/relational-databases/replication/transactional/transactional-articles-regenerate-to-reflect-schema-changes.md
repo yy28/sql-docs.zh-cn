@@ -15,12 +15,12 @@ ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ef3e6d3daae23e48feae3e1723326c990e427075
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ff1a4e5c9c185e97f3dd31c8c2ec96d10bceda42
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769322"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710699"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>事务项目 - 重新生成以反映架构更改
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,17 +30,17 @@ ms.locfileid: "68769322"
   
 -   第一种选择是使用自定义脚本过程替换复制使用的默认过程：  
   
-    1.  执行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 时，请确保 **@schema_option** 0x02 位为 **true**。  
+    1.  执行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 时，请确保 `@schema_option` 0x02 位为 true  。  
   
-    2.  执行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)，并为参数 **@type** 指定“insert”、“update”或“delete”中的一个值，为参数 **@value** 指定自定义脚本过程的名称。  
+    2.  执行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)，并为参数 `@type` 指定“insert”、“update”或“delete”中的一个值，为参数 `@value` 指定自定义脚本过程的名称。  
   
      下次进行架构更改时，复制会调用此存储过程为新用户定义的自定义存储过程编写定义脚本，然后将此过程传播到每个订阅服务器。  
   
 -   第二种选择是使用包含新自定义过程定义的脚本：  
   
-    1.  执行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 时，请将 **@schema_option** 0x02 位设置为 **false**，以便复制不会自动在订阅服务器上生成自定义过程。  
+    1.  执行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 时，请将 `@schema_option` 0x02 位设置为 false  ，以便复制不会自动在订阅服务器上生成自定义过程。  
   
-    2.  每次更改架构前，请执行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) 来创建新脚本文件并注册具有复制的脚本。 将参数 **@type** 指定为“custom_script”值，并将参数 **@value** 。  
+    2.  每次更改架构前，请执行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) 来创建新脚本文件并注册具有复制的脚本。 将参数 `@type` 指定为“custom_script”值，并将参数 `@value` 指定为发布服务器上脚本的路径。  
   
      下次进行相关的架构更改时，此脚本会在每个订阅服务器上、在 DDL 命令所在的事务内执行。 更改架构后，此脚本将撤消注册。 在后续架构更改后必须重新注册此脚本，使其执行。  
   

@@ -51,6 +51,8 @@
           href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
         - name: 处理数据类型和对象
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
+        - name: 写入 Python 函数
+          href: ../advanced-analytics/tutorials/quickstart-python-functions.md
         - name: 对模型进行训练和评分
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
     - name: R

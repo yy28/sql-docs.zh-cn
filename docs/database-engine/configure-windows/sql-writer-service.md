@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb5b16d81ce78b6dbd587b74730b84a6139f53e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037201"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816676"
 ---
 # <a name="sql-writer-service"></a>SQL 编写器服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68037201"
 > 若要使用 VSS 来备份托管基本可用性组的虚拟机，且虚拟机当前托管的数据库处于次要状态，那么自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 起，这些数据库*不会*与虚拟机一起备份。  这是因为，基本可用性组不支持在次要副本上备份数据库。  如果低于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这些版本，不仅无法备份，还会看到错误消息。
   
 ## <a name="virtual-backup-device-interface-vdi"></a>虚拟备份设备接口 (VDI)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供称为虚拟备份设备接口 (VDI) 的 API，使独立软件供应商能够将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 集成到他们的产品中来支持备份和还原操作。 这些 API 能够提供非常高的可靠性和极佳的性能，并支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有备份与还原功能，包括所有的热备份和快照备份功能。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供称为虚拟备份设备接口 (VDI) 的 API，使独立软件供应商能够将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 集成到他们的产品中来支持备份和还原操作。 这些 API 能够提供非常高的可靠性和极佳的性能，并支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有备份与还原功能，包括所有的热备份和快照备份功能。 如果第三方供应商应用程序请求快照 (VSS) 备份，则 SQL 编写器服务将调用 VDI API 函数以执行实际备份。 请注意，VDI API 独立于 VSS，并经常用于不使用 VSS API 的软件解决方案中。
   
 ## <a name="permissions"></a>权限  
  SQL 编写器服务必须以 **Local System** 帐户运行。 SQL 编写器服务使用 **NT Service\SQLWriter** 登录以连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用 **NT Service\SQLWriter** 登录可使 SQL 编写器进程以较低的特权等级（指定为 **no login**的帐户）运行，以提高安全性。 如果禁用 SQL 编写器服务，则依赖 VSS 快照的所有实用程序（如系统中心数据保护管理器，及某些其他的第三方产品）可能会出错，甚至更糟 — 获得的可能是不一致的数据库备份。 如果运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的系统及主机系统（在运行虚拟机的情况下）均无需使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 以外的任何备份，则可安全地禁用 SQL 编写器服务并移除其登录项。  注意：SQL 编写器服务可能会被系统或卷级备份（无论该备份是否直接基于快照）调用。 某些系统备份产品使用 VSS 来避免被已打开或已锁定的文件阻止访问。 需要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提升 SQL 编写器服务的权限，这是因为，在活动期间，它会简单地冻结 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的所有 I/O。  

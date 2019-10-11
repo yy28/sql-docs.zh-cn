@@ -11,12 +11,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dcef896bed81f094f1ab0e22f40ec5ac31bfb9d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b9e469cd522ecf28684a6e34ded51a41356fec5
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116969"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961795"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT（Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
       <distribution_option> -- required
       [ , <table_option> [ ,...n ] ]    
     )  
-    AS <select_statement>   
+    AS <select_statement>  
+    OPTION <query_hint> 
 [;]  
 
 <distribution_option> ::=
@@ -59,16 +60,21 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <table_option> ::= 
     {   
         CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column[,...n])
       | HEAP --default for Parallel Data Warehouse   
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) --default is ASC 
     }  
-    | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] --default is LEFT  
+      | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] --default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) ) 
   
 <select_statement> ::=  
     [ WITH <common_table_expression> [ ,...n ] ]  
     SELECT select_criteria  
 
+<query_hint> ::=
+    {
+        MAXDOP 
+    }
 ```  
 
 <a name="arguments-bk"></a>
@@ -102,7 +108,7 @@ CTAS 语句需要分布选项，并且没有默认值。 这就不同于具有�
 
 <a name="select-options-bk"></a>
 
-### <a name="select-options"></a>选择选项
+### <a name="select-statement"></a>Select 语句
 select 语句是 CTAS 和 CREATE TABLE 之间的根本区别。  
 
  `WITH` common_table_expression   
@@ -110,7 +116,11 @@ select 语句是 CTAS 和 CREATE TABLE 之间的根本区别。
   
  `SELECT` select_criteria   
  使用 SELECT 语句的结果填充新表。 select_criteria 是 SELECT 语句的主体，用于确定将哪些数据复制到新表中  。 有关 SELECT 语句的信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
-  
+ 
+### <a name="query-hint"></a>查询提示
+用户可以将 MAXDOP 设置为一个整数值，以控制最大并行度。  当 MAXDOP 设置为 1 时，由单线程执行查询。
+
+ 
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>权限  
@@ -139,7 +149,7 @@ Azure SQL 数据仓库尚不支持自动创建或自动更新统计信息。  �
  
 <a name="performance-bk"></a>
  
- ## <a name="performance"></a>“性能” 
+ ## <a name="performance"></a>性能 
 
 对于哈希分布式表，可使用 CTAS 选择其他分布列，提高联接和聚合性能。 如果目标不是选择其他分布列，那么指定相同的分布列可获得最佳 CTAS 性能，因为这样可以避免重新分布行。 
 
@@ -820,6 +830,14 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 ```
 
 因此，你会发现类型一致性和维持 CTAS 上的为 Null 性属性是优秀工程设计的最佳做法。 它有助于保持计算的完整性，而且还可确保实现分区切换。
+
+### <a name="n-create-an-ordered-clustered-columnstore-index-with-maxdop-1"></a>N. 创建有序聚集列存储索引，同时将 MAXDOP 设为 1  
+```sql
+CREATE TABLE Table1 WITH (DISTRIBUTION = HASH(c1), CLUSTERED COLUMNSTORE INDEX ORDER(c1) )
+AS SELECT * FROM ExampleTable
+OPTION (MAXDOP 1);
+```
+
  
 ## <a name="see-also"></a>另请参阅  
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d199fff8243584ee86dd97f97bcc3b8b68beb3dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063107"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710434"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>为非 SQL Server 订阅服务器创建订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,27 +156,27 @@ ms.locfileid: "68063107"
   
     -   如果 **enabled_for_het_sub** 的值为 1，则支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。  
   
-    -   如果 **enabled_for_het_sub** 的值为 0，则执行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，并将 **@property** 指定为 **enabled_for_het_sub**，将 **@value** 指定为 **true**。  
+    -   如果 **enabled_for_het_sub** 的值为 0，则执行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，并将 `@property` 指定为 enabled_for_het_sub  ，将 `@value` 指定为 true  。  
   
         > [!NOTE]  
         >  在将 **enabled_for_het_sub** 更改为 **true**之前，必须删除发布的任何现有订阅。 当发布还支持更新订阅时，无法将 **enabled_for_het_sub** 设置为 **true** 。 更改 **enabled_for_het_sub** 将影响其他发布属性。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
-3.  在发布服务器的发布数据库中，执行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 **@publication** 、 **@subscriber** 、 **“订阅数据库”** @property **@destination_db** 、 **@subscription_type** @property **@subscription_type** 和 **@subscriber_type** 的值 3（指定 OLE DB 访问接口）。  
+3.  在发布服务器的发布数据库中，执行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 `@publication`、`@subscriber`、指定 `@destination_db` 的 `(default destination)` 值、`@subscription_type` 的推送值、并将 `@subscriber_type` 的值指定为 3 （指定 OLE DB 提供程序）  。  
   
 4.  在发布服务器的发布数据库中，执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定下列各项：  
   
-    -   **@subscriber** 和 **@publication** 参数。  
+    -   `@subscriber` 和 `@publication` 参数。  
   
-    -   **@subscriber_db** 的值 **（默认目标）**  
+    -   `@subscriber_db` 的 **（默认目标）** 值，  
   
-    -   非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的属性 **@subscriber_provider** 、 **@subscriber_datasrc** 、 **@subscriber_location** 、 **@subscriber_provider_string** 和 **@subscriber_catalog** 。  
+    -   `@subscriber_provider`、`@subscriber_datasrc`、`@subscriber_location`、`@subscriber_provider_string`、`@subscriber_catalog` 的非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的属性。  
   
-    -   分发服务器中的分发代理运行时所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** ，将 **@job_password** 。  
+    -   分发服务器中的分发代理运行时所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 凭据：`@job_login` 和 `@job_password`。  
   
-        > [!NOTE]  
-        >  使用 Windows 集成身份验证进行的连接始终使用由 **@job_login** 和 **@job_password** 中为非 SQL Server 订阅服务器创建订阅。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
+       > [!NOTE]  
+       > 使用 Windows 集成身份验证进行的连接始终使用由 `@job_login` 和 `@job_password` 指定的 Windows 凭据。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
-    -   为 **@subscriber_security_mode** 指定值 **0**，并为 **@subscriber_login** 和 **@subscriber_password** 指定 OLE DB 提供程序登录信息。  
+    -   为 `@subscriber_security_mode` 指定值 **0**，并为 `@subscriber_login` 和 `@subscriber_password` 指定 OLE DB 提供程序登录信息。  
   
     -   该订阅的分发代理作业计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   

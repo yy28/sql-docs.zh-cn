@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25357798ed5a0340b46e787ad041ae6d9f19d7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b987fef5bfb36fc84f55f5058f956a691f446a2c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903102"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710309"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "67903102"
   
      有关代理所需权限的详细信息，请参阅 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
--   指定与合并代理在执行任务（在新建订阅向导的 **“Web 服务器信息”** 页中指定帐户和密码，或指定 **@internet_url** 和 **@internet_login** 和 [@internet_login](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 此帐户必须具有对快照共享的读取权限。  
+-   在“新建订阅向导”的“Web 服务器信息”  页面上指定一个帐户和密码，或者为 [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) 的 `@internet_url` 和 `@internet_login` 参数指定值时，请指定与合并代理使用的域帐户相同的域帐户。 此帐户必须具有对快照共享的读取权限。  
   
 -   每个发布都应对 IIS 使用一个单独的虚拟目录。  
   

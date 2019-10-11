@@ -1,10 +1,10 @@
 ---
 title: Integration Services (SSIS) 项目和解决方案 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/24/2016
+ms.date: 09/20/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d31bad0e0438ec331f674124e907fd098b2cefd7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296181"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680984"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) 项目和解决方案
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 用于开发 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包驻留在项目中。 若要创建和使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，必须安装 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 环境。 有关详细信息，请参阅 [安装 Integration Services](../integration-services/install-windows/install-integration-services.md)。  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包驻留在项目中。 若要创建和使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，必须安装 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。 有关详细信息，请参阅 [安装 Integration Services](../integration-services/install-windows/install-integration-services.md)。  
   
- 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建新的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目时， **“新建项目”** 对话框包含一个 **“Integration Services 项目”** 模板。 此项目模板创建包含一个包的新项目。  
+ 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建新的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目时， **“新建项目”** 对话框包含一个 **“Integration Services 项目”** 模板。 此项目模板创建包含一个包的新项目。
   
 ## <a name="projects-and-solutions"></a>“项目和解决方案”  
  项目存储在解决方案中。 可以先创建解决方案，然后向该解决方案添加 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 如果不存在解决方案， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将在您首次创建项目时自动创建解决方案。 解决方案可以包含多个不同类型的项目。  
@@ -65,40 +64,46 @@ ms.locfileid: "71296181"
 ## <a name="folders-in-integration-services-projects"></a>Integration Services 项目中的文件夹  
  下面的关系图显示 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中一个 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目中的文件夹。  
   
- ![Integration Services 项目中的文件夹](../integration-services/media/solutionexplorer.gif "Integration Services 项目中的文件夹")  
+![ssis-solution-explorer.png](media/ssis-solution-explorer.png)
   
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中出现的文件夹。  
   
 |文件夹|描述|  
-|------------|-----------------|  
+|------------|-----------------|
+|连接管理器|包含项目连接管理器。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../integration-services/connection-manager/integration-services-ssis-connections.md)。|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] 包|包含包。 有关详细信息，请参阅 [Integration Services (SSIS) 包](../integration-services/integration-services-ssis-packages.md)。|  
+|包部件|包含可重复使用或导入的包部件。 有关详细信息，请参阅[使用控制流包部件在包之间重用控制流](reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)
 |杂项|包含除包文件以外的文件。|  
   
 ## <a name="files-in-integration-services-projects"></a>Integration Services 项目中的文件  
- 向解决方案添加新的或现有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目时， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 创建具有扩展名 .dtproj 、.dtproj.user 和 .database 的项目文件。  
+ 向解决方案添加新的或现有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目时，[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 创建具有扩展名 .dtproj、.dtproj.user、.database、Project.params 的项目文件。 
   
 -   *.dtproj 文件包含有关项目配置以及像包这类项的信息。  
   
 -   *.dtproj.user 文件包含有关使用项目的首选项的信息。  
   
--   *.database 文件包含 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 打开 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目所需的信息。  
+-   *.database 文件包含 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 打开 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目所需的信息。
+
+-   Project.params 文件包含有关[项目参数](integration-services-ssis-package-and-project-parameters.md)的信息。
   
 ## <a name="version-targeting-in-integration-services-projects"></a>Integration Services 项目中面向的版本  
- 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，可以创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，可以创建、维护和运行面向 SQL Server 2017、SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。  
   
- 在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”  的“常规”  选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+ 在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”的“常规”选项卡上，选择“TargetServerVersion”属性，然后选择 SQL Server 2017、SQL Server 2016、SQL Server 2014 或 SQL Server 2012    。  
   
  ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
- 
+
 ## <a name="create-a-new-integration-services-project"></a>创建新的 Integration Services 项目  
   
 1.  打开 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
 2.  在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“项目”** 。  
   
-3.  在 **“新建项目”** 对话框中，从 **“模板”** 窗格选择 **“Integration Services 项目”** 模板。  
+3.  在“新建项目”对话框中，选择“商业智能”，然后选择“Integration Services 项目”模板    。  
   
-     **“Integration Services 项目”** 模板创建包含单个空包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
+     **“Integration Services 项目”** 模板创建包含单个空包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。
+
+  ![ssis-ssdt-new-project.png](media/ssis-ssdt-new-project.png)
   
 4.  （可选）编辑项目名称和位置。  
   
@@ -113,16 +118,6 @@ ms.locfileid: "71296181"
     > **注意：** 若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”  菜单上的“选项”  ，然后展开“源代码管理”  节点。  
   
 8.  单击“确定”  ，将解决方案添加到 **解决方案资源管理器** ，并将项目添加到解决方案。  
-  
-## <a name="choose-the-target-version-of-a-project-and-its-packages"></a>选择项目的目标版本及其包  
-  
-1.  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。  
-  
-2.  在“配置属性”  的“常规”  选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
-  
-     ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
-  
- 你可以创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。  
 
 ## <a name="import-an-existing-project-with-the-import-project-wizard"></a>使用导入项目向导导入现有项目
   
@@ -142,9 +137,9 @@ ms.locfileid: "71296181"
   
 8.  单击 **“下一步”** 切换到 **“选择源”** 页。  
   
-9. 如果要从 **.ispac** 文件导入，请在 **“路径”** 文本框中键入包含文件名的路径。 单击 **“浏览”** 导航到要存储解决方案的文件夹，在 **“文件名”** 文本框中键入文件名，然后单击 **“打开”** 。  
+9. 如果要从 .ispac 文件导入，请在“路径”文本框中键入包含文件名的路径   。 单击 **“浏览”** 导航到要存储解决方案的文件夹，在 **“文件名”** 文本框中键入文件名，然后单击 **“打开”** 。  
   
-     如果要从 **“Integration Services 目录”** 导入，请在 **“服务器名称”** 文本框中键入数据库实例名称，或者单击 **“浏览”** 选择包含该目录的数据库实例。  
+     如果要从“Integration Services 目录”导入，请在“服务器名称”文本框中键入数据库实例名称，或者单击“浏览”选择包含该目录的数据库实例    。  
   
      单击 **“路径”** 文本框旁边的 **“浏览”** ，展开目录中的文件夹，选择要导入的项目，然后单击 **“确定”** 。  
   
@@ -217,5 +212,9 @@ ms.locfileid: "71296181"
   
 4.  右键单击要复制到其中的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，然后单击“粘贴”  。  
   
-     这些项会自动复制到正确的文件夹中。 如果将项复制到不是包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中，则该项将复制到 **“杂项”** 文件夹中。  
-     
+     这些项会自动复制到正确的文件夹中。 如果将项复制到不是包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中，则该项将复制到“杂项”文件夹中  。  
+
+## <a name="next-steps"></a>后续步骤
+
+- 下载并安装 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。
+- [SSIS 如何创建 ETL 包](ssis-how-to-create-an-etl-package.md)

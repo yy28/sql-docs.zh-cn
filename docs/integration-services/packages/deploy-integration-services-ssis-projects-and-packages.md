@@ -1,10 +1,10 @@
 ---
 title: 部署 Integration Services (SSIS) 项目和包 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 09/26/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -18,31 +18,31 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f35fb523d95b47b64e10feab8d4caa2370b79b5f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71282635"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680966"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 项目和包
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持两种部署模型：项目部署模型和旧的包部署模型。 项目部署模型使您可以将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
 有关早期包部署模型的详细信息，请参阅[包部署 (SSIS)](../../integration-services/packages/legacy-package-deployment-ssis.md)。  
   
 > [!NOTE]  
->  项目部署模型是在 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]中引入的。 使用此部署模型时，不能在未部署整个项目的情况下部署一个或多个包。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引入的增量包部署功能能够让你部署一个或多个包，无需部署整个项目。  
+>  项目部署模型是在 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]中引入的。 使用此部署模型时，不能在未部署整个项目的情况下部署一个或多个包。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引入的增量包部署功能能够让你部署一个或多个包，无需部署整个项目。
 
 > [!NOTE]
 > 本文介绍如何在一般情况下部署 SSIS 包以及如何在本地部署包。 还可将 SSIS 包部署到以下平台：
 > - **Microsoft Azure 云**。 有关详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
 > - **Linux**。 有关详细信息，请参阅[使用 SSIS 在 Linux 上提取、转换和加载数据](../../linux/sql-server-linux-migrate-ssis.md)。
 
-## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>比较项目部署模型和旧的包部署模型  
+## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>比较项目部署模型和旧的包部署模型
+
  您为项目选择的部署模型的类型将决定可用于该项目的开发和管理选项。 下表显示使用项目部署模型和使用包部署模型之间的差异和相似之处。  
   
 |在使用项目部署模型时|使用旧的包部署模型时|  
@@ -58,9 +58,8 @@ ms.locfileid: "71282635"
 |在执行过程中，包生成的事件将自动捕获并保存到目录中。 您可以使用 TRANSACT-SQL 视图查询这些事件。|在执行过程中，包生成的事件不自动捕获。 日志提供程序必须添加到包以便捕获事件。|  
 |包在单独的 Windows 进程中运行。|包在单独的 Windows 进程中运行。|  
 |SQL Server 代理用于计划包执行。|SQL Server 代理用于计划包执行。|  
-  
- 项目部署模型是在 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]中引入的。 如果使用此模型，则不能在未部署整个项目的情况下部署一个或多个包。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引入的增量包部署功能能够让你部署一个或多个包，无需部署整个项目。   
-  
+
+
 ## <a name="features-of-project-deployment-model"></a>项目部署模型的功能  
  下表列出的功能仅可用于为项目部署模型开发的项目。  
   
@@ -79,9 +78,10 @@ ms.locfileid: "71282635"
 
 如果在默认情况下更改 SSIS 服务帐户，可能须向非默认服务账户授予其他权限，才能成功部署包。 如果非默认服务帐户不具有所需权限，可能会收到以下错误消息。
 
-*在执行用户定义例程或聚合 "deploy_project_internal" 期间出现 .NET Framework 错误：System.ComponentModel.Win32Exception：客户端没有所需的特权。*
+`A .NET Framework error occurred during execution of user-defined routine or aggregate "deploy_project_internal":
+System.ComponentModel.Win32Exception: A required privilege is not held by the client.`
 
-此错误通常是因为缺少 DCOM 权限造成的。 若要修复此错误，请执行以下操作。
+此错误通常是因为缺少 DCOM 权限造成的。 若要修复此错误，请执行以下操作：
 
 1.  打开“组件服务”  控制台（或运行 Dcomcnfg.exe）。
 2.  在“组件服务”  控制台中，展开“组件服务”   > “计算机”   > “我的电脑”   > “DCOM Config”  。
@@ -92,8 +92,9 @@ ms.locfileid: "71282635"
 7.  在“权限”  对话框中，添加非默认服务帐户并根据需要授予“允许”  权限。 通常来说，一个帐户具有“本地启动”  和“本地激活”  权限。
 8.  单击“确定”  两次，然后关闭“组件服务”  控制台。
 
-有关本部分中描述的错误和 SSIS 服务帐户所需权限的详细信息，请参阅以下博客文章。  
-[System.ComponentModel.Win32Exception：部署 SSIS 项目时，客户端没有所需权限](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+有关本部分中描述的错误和 SSIS 服务帐户所需权限的详细信息，请参阅以下博客文章：
+ 
+- [System.ComponentModel.Win32Exception：部署 SSIS 项目时，客户端没有所需权限](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，您可以将您的项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 通过 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器，您可以使用环境来管理包、运行包以及为包配置运行时值。  
@@ -105,7 +106,7 @@ ms.locfileid: "71282635"
   
 1.  创建一个 SSISDB 目录（如果尚未创建）。 有关详细信息，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
   
-2.  通过运行 **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。 有关详细信息，请参阅下面的说明：[将项目转换为项目部署模型](#convert)  
+2.  通过运行“Integration Services 项目转换向导”可以将项目转换为项目部署模型  。 有关详细信息，请参阅以下说明：[将项目转换为项目部署模型](#convert)  
   
     -   如果在 [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] 中或更高版本中创建了项目，则默认情况下该项目使用项目部署模型。  
   
@@ -144,17 +145,17 @@ ms.locfileid: "71282635"
   
 1.  在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]并打开项目，然后从 **“项目”** 菜单，选择 **“部署”** 以便启动 **“Integration Services 部署向导”** 。  
   
-     -或 -  
+     或多个  
   
      在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的对象资源管理器中，展开 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > SSISDB  节点，并查找想要部署的项目的项目文件夹。 右键单击“项目”  文件夹，然后单击“部署项目”  。  
   
-     -或 -  
+     或多个  
   
      在命令提示符下，从 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 运行 **isdeploymentwizard.exe**。 在 64 位计算机上， **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**中还有 32 位版本的工具。  
   
 2.  在 **“选择源”** 页上，单击 **“项目部署文件”** 以便选择项目的部署文件。  
   
-     -或-  
+     或多个  
   
      单击 **“Integration Services 目录”** 以便选择已部署到 SSISDB 目录的项目。  
   
@@ -266,8 +267,7 @@ static void Main()
 
 ## <a name="convert-to-package-deployment-model-dialog-box"></a>“转换为包部署模型”对话框
   使用 **“转换为包部署模型”** 命令可以在检查项目和项目中的每个包与包部署模型是否兼容后将包转换为该模型。 如果包使用项目部署模型特有的功能（如参数），则不能转换该包。  
-  
-### <a name="task-list"></a>任务列表  
+
  将包转换为包部署模型需要两个步骤。  
   
 1.  从 **“项目”** 菜单选择 **“转换为包部署模型”** 命令时，检查项目和其中的每个包是否与此模型兼容。 结果显示在 **“结果”** 表中。  
@@ -276,7 +276,8 @@ static void Main()
   
 2.  如果项目和所有包都通过了兼容测试，则单击 **“确定”** 以转换包。  
   
-> **注意：** 若要将项目转换为项目部署模型，请使用 **“Integration Services 项目转换向导”** 。 有关详细信息，请参阅 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)。  
+> [!NOTE]
+> 若要将项目转换为项目部署模型，请使用 **“Integration Services 项目转换向导”** 。 有关详细信息，请参阅 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)。  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 部署向导
   **Integration Services 部署向导** 支持两种部署模型：
@@ -287,14 +288,15 @@ static void Main()
  
  **包部署模型** 允许将已更新的包部署到 SSIS 目录中，而无需部署整个项目。 
  
- > **注意：** 向导默认部署是项目部署模型。  
+ > [!NOTE]
+ > 向导默认部署是项目部署模型。  
   
 ### <a name="launch-the-wizard"></a>启动向导
 通过以下方式之一启动向导：
 
  - 在 Windows Search 中键入 **“SQL Server 部署向导”** 
 
-**OR**
+ 或多个
 
  - 在 SQL Server 安装文件夹下搜索可执行文件 ISDeploymentWizard.exe；例如  ：“C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn”。 
  
@@ -304,41 +306,50 @@ static void Main()
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### <a name="select-source"></a>选择源  
+#### <a name="select-source"></a>选择源
+
  若要部署你所创建的项目部署文件，请选择“项目部署文件”  并输入 .ispac 文件的路径。 若要部署位于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中的项目，请选择 **“Integration Services 目录”** ，然后输入目录中指向该项目的服务器名称和路径。 单击“下一步”  以查看“选择目标”  页。  
   
-#### <a name="select-destination"></a>选择目标  
+#### <a name="select-destination"></a>选择目标
+
  若要在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中选择项目的目标文件夹，请输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或单击 **“浏览”** 从服务器列表中选择。 然后输入 SSISDB 中的项目路径或单击 **“浏览”** 以选择此路径。 单击“下一步”  以查看“检查”  页。  
   
-#### <a name="review-and-deploy"></a>查看（和部署）  
+#### <a name="review-and-deploy"></a>查看（和部署）
+
  该页使你能够查看你所选择的设置。 可以通过单击 **“上一步”** 或单击左窗格中的任意步骤来更改所做的选择。 单击“部署”  以启动部署过程。  
   
-#### <a name="results"></a>结果  
+#### <a name="results"></a>结果
+
  部署过程完成之后，将看到“结果”  页。 该页显示每个操作是成功了还是失败了。 如果操作失败，单击 **“结果”** 列中的 **“失败”** 可以显示错误说明。 单击“保存报表...”  以将结果保存到 XML 文件，或单击“关闭”  以退出向导。
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### <a name="select-source"></a>选择源  
+#### <a name="select-source"></a>选择源
+
  在“部署模型”  中选择“包部署”  选项后，“Integration Services 部署向导”  中的“选择源”  页会显示包部署模型的特定设置。  
   
  若要选择源包，请单击“浏览…”按钮以选择包含包的“文件夹”，或在“包文件夹路径”文本框中键入文件夹路径，然后单击页面底部的“刷新”按钮     。 现在，将可以在列表框中看见特定文件夹中的所有包。 默认情况下，所有的包都会被选中。 单击第一列中的“复选框”  以选择要部署到服务器的包。  
   
- 请参阅“状态”  和“消息”  列以验证包的状态。 如果将状态设置为“就绪”  或“警告”  ，部署向导则不会妨碍部署过程。 而如果将状态设置为“错误”  ，向导则无法进一步部署所选包。 若要查看详细的警告/错误消息，请单击“消息”列中的链接。   
+ 请参阅“状态”  和“消息”  列以验证包的状态。 如果将状态设置为“就绪”  或“警告”  ，部署向导则不会妨碍部署过程。 如果状态设置为“错误”  ，则向导将不会继续部署所选的包。 若要查看详细的警告或错误消息，请单击“消息”列中的链接  。  
   
- 如果使用密码加密敏感数据或包数据，请在“密码”  列中键入密码，然后单击“刷新”  按钮以验证是否接受此密码。 如果密码正确无误，状态将会更改为“就绪”  ，而且警告消息将会消失。 如果多个包都使用相同的密码，请选择具有相同加密密码的包，接着在“密码”  文本框中键入密码，然后单击“应用”  按钮。 该密码将应用到所选包。  
+ 如果使用密码加密敏感数据或包数据，请在“密码”  列中键入密码，然后单击“刷新”  按钮以验证是否接受此密码。 如果密码正确无误，状态将会更改为“就绪”  ，而且警告消息将会消失。 如果有多个包具有相同的密码，请选择具有相同加密密码的包，在“密码”文本框中输入密码，选择“应用”按钮   。 该密码将应用到所选包。  
   
  如果所有选定包的状态未设置为“错误”  ，则可使用“下一步”  按钮以继续进行包部署过程。  
   
-#### <a name="select-destination"></a>选择目标  
- 在选择包源后，单击“下一步”  按钮以切换到“选择目标”  页。 必须将包部署到 SSIS 目录 (SSISDB) 中的项目。 因此，在部署包之前，请确保 SSIS 目录中已存在该目标项目。 否则创建一个空项目。在“选择目标”页中的“服务器名称”文本框中键入服务器名称，或单击“浏览…”按钮以选择服务器实例    。 然后单击“路径”文本框旁的“浏览…”按钮以指定目标项目   。 如果项目不存在，请单击“新建项目…”以创建空项目作为目标项目  。 **必须** 在文件夹下创建项目。  
+#### <a name="select-destination"></a>选择目标
+
+ 在选择包源后，单击“下一步”  按钮以切换到“选择目标”  页。 必须将包部署到 SSIS 目录 (SSISDB) 中的项目。 在部署包之前，请确保 SSIS 目录中已存在该目标项目。 如果项目不存在，请创建一个空项目。 在“选择目标”页中的“服务器名称”文本框中键入服务器名称，或单击“浏览…”按钮以选择服务器实例    。 然后单击“路径”文本框旁的“浏览…”按钮以指定目标项目   。 如果项目不存在，请单击“新建项目…”按钮以创建空项目作为目标项目  。 必须在文件夹下创建项目。  
   
-#### <a name="review-and-deploy"></a>查看和部署  
+#### <a name="review-and-deploy"></a>查看和部署
+
  在“选择目标”  页上单击“下一步”  以切换到“Integration Services 部署向导”  中的“审阅”  页。 在审阅页中，审阅有关部署操作的摘要报表。 验证之后，单击“部署”  按钮以执行部署操作。  
   
-#### <a name="results"></a>结果  
- 部署完成之后，将看到“结果”  页。 在“结果”  页中，查看部署过程中每个步骤的结果。 在“结果”  页上，单击“保存报表”  以保存部署报表，或单击“关闭”  以关闭该向导。  
+#### <a name="results"></a>结果
+
+ 部署完成之后，将看到“结果”  页。 在“结果”  页中，查看部署过程中每个步骤的结果。 单击“保存报表”以保存部署报表，或单击“关闭”以关闭该向导   。  
 
 ## <a name="create-and-map-a-server-environment"></a>创建和映射服务器环境
+
   创建服务器环境来指定已部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的项目中所含包的运行时值。 您可以随后针对特定包、入口点包或给定项目中的所有包，将环境变量映射到参数。 入口点包通常是执行子包的父包。  
   
 > [!IMPORTANT]  
@@ -348,17 +359,17 @@ static void Main()
   
 ### <a name="to-create-and-use-a-server-environment"></a>创建和使用服务器环境  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，在对象资源管理器中依次展开“[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录”> **SSISDB** 节点，找到要为其创建环境的项目的“环境”文件夹  。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，在对象资源管理器中依次展开“[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录”> SSISDB  节点，找到要为其创建环境的项目的“环境”文件夹  。  
   
 2.  右键单击“环境”  文件夹，然后单击“创建环境”  。  
   
-3.  为环境键入名称和说明（可选），然后单击 **“确定”** 。  
+3.  为环境键入名称，并添加说明（可选）。 单击“确定”  。  
   
 4.  右键单击该新环境，然后单击“属性”  。  
   
 5.  在 **“变量”** 页上，执行以下操作以便添加变量。  
   
-    1.  选择变量的 **“类型”** 。 变量的名称 **无需** 匹配您将映射到该变量的项目参数的名称。  
+    1.  选择变量的 **“类型”** 。 变量的名称无需匹配你将映射到该变量的项目参数的名称。  
   
     2.  输入变量的可选 **“说明”** 。  
   
@@ -378,7 +389,7 @@ static void Main()
   
     2.  在 **“登录名或角色”** 区域中，选择您要为其授予或拒绝权限的用户或角色。  
   
-    3.  在 **“显式”** 区域中，单击每个权限旁边的 **“授予”** 或 **“拒绝”** 。  
+    3.  在“显式”区域中，选择每个权限旁边的“授予”或“拒绝”    。  
   
 7.  若要编写环境的脚本，请单击 **“脚本”** 。 默认情况下，该脚本显示在一个新的查询编辑器窗口中。  
   
@@ -393,7 +404,7 @@ static void Main()
   
 11. 再次右键单击该项目，然后单击“配置”  。  
   
-12. 若要将环境变量映射到在设计时添加到包的参数，或映射到将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目转换为项目部署模型时生成的参数，请执行以下操作。  
+12. 若要将环境变量映射到在设计时添加到包的参数，或映射到将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目转换为项目部署模型时生成的参数，请执行以下操作：
   
     1.  在 **“参数”** 页上的 **“参数”** 选项卡中，单击 **“值”** 字段旁边的浏览按钮。  
   
@@ -401,19 +412,20 @@ static void Main()
   
 13. 若要将环境变量映射到连接管理器属性，请执行以下操作。 将在 SSIS 服务器上为连接管理器属性自动生成参数。  
   
-    1.  在 **“参数”** 页上的 **“连接管理器”** 选项卡中，单击 **“值”** 字段旁边的浏览按钮。  
+    1.  在“参数”页上的“连接管理器”选项卡中，单击“值”字段旁边的浏览按钮     。  
   
     2.  单击 **“使用环境变量”** ，然后选择已创建的环境变量。  
   
 14. 单击 **“确定”** 两次以保存所做的更改。  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>使用存储过程部署和执行 SSIS 包
-  在您配置一个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目以便使用项目部署模型时，可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 目录中的存储过程部署该项目并且执行包。 有关项目部署模型的信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。  
+
+  在您配置一个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目以便使用项目部署模型时，可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 目录中的存储过程部署该项目并且执行包。 有关项目部署模型的信息，请参阅 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md#compare-project-deployment-model-and-legacy-package-deployment-model)。  
   
  您还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 部署项目和执行包。 有关详细信息，请参阅“另请参见”  部分中的主题。  
   
 > [!TIP]
->  您可以通过执行以下操作为下面的过程中列出的存储过程轻松地生成 Transact-SQL 语句，但 catalog.deploy_project 除外：  
+>  您可以通过执行以下操作为下面的过程中列出的存储过程轻松地生成 Transact-SQL 语句，但 catalog.deploy_project 除外：
 > 
 >  1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，在对象资源管理器中展开“Integration Services 目录”  节点，然后导航到您要执行的包。  
 > 2.  右键单击该包，然后单击“执行”  。  
@@ -426,9 +438,9 @@ static void Main()
   
 1.  调用 [catalog.deploy_project（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) 将包含包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
-     若要检索 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署文件的二进制内容，对于 *@project_stream* 参数，请将 SELECT 语句与 OPENROWSET 函数和 BULK 行集提供程序一起使用。 通过 BULK 行集提供程序，您可以从文件读取数据。 BULK 行集提供程序的 SINGLE_BLOB 参数将该数据文件的内容以 varbinary(max) 类型的单行、单列行集的形式返回。 有关详细信息，请参阅 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)。  
+     若要检索 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署文件的二进制内容，对于 \@project_stream  参数，请将 SELECT 语句与 OPENROWSET 函数和 BULK 行集提供程序一起使用。 通过 BULK 行集提供程序，您可以从文件读取数据。 BULK 行集提供程序的 SINGLE_BLOB 参数将该数据文件的内容以 varbinary(max) 类型的单行、单列行集的形式返回。 有关详细信息，请参阅 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)。  
   
-     在下面的示例中，SSISPackages_ProjectDeployment 项目将部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上的“SSIS 包”文件夹。 二进制数据从项目文件 (SSISPackage_ProjectDeployment.ispac) 读取并且存储于 varbinary(max) 类型的 *@ProjectBinary* 参数中。 将 *@ProjectBinary* 参数值赋给 *@project_stream* 参数。  
+     在下面的示例中，SSISPackages_ProjectDeployment 项目将部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上的“SSIS 包”文件夹。 二进制数据从项目文件 (SSISPackage_ProjectDeployment.ispac) 读取并且存储于 varbinary(max) 类型的 _\@ProjectBinary 参数中。 将 \@ProjectBinary 参数值赋给 \@project_stream 参数   。  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  
@@ -480,7 +492,8 @@ static void Main()
   
     ```  
   
-### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>使用存储过程将项目从一个服务器部署到另一个服务器  
+### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>使用存储过程将项目从一个服务器部署到另一个服务器
+
  可以通过使用 [catalog.get_project（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)和 [catalog.deploy_project（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md)存储过程在服务器之间部署项目。  
   
  在运行存储过程之前，您需要执行以下操作。  
@@ -547,7 +560,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中打开该项目，然后在解决方案资源管理器中，右键单击该项目并单击“转换为项目部署模型”  。  
   
--   从 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击“项目”  节点并选择“导入包”  。  
+-   从 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击“Integration Services 目录”中的“项目”节点，然后选择“导入包”    。  
   
  根据您是从 **还是从** 运行 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] “Integration Services 项目转换向导” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，该向导将执行不同的转换任务。   
   

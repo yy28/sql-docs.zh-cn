@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121325"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710724"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>对等事务复制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,19 @@ ms.locfileid: "68121325"
   
 -   分发代理参数 **-SubscriptionStreams** 和日志读取器代理参数 **-MaxCmdsInTran**。  
   
--   项目属性 **@destination_owner** 和 **@destination_table** ）上维护数据副本，提供了一种扩展的高可用性解决方案。
+-   项目属性 `@destination_owner` 和 `@destination_table`。
 
 -   对等事务复制不支持创建针对对等发布的单向事务订阅   
   
  以下属性具有特殊的注意事项：  
   
--   发布属性 **@allow_initialize_from_backup** 的值需要为 **true**）上维护数据副本，提供了一种扩展的高可用性解决方案。  
+-   发布属性 `@allow_initialize_from_backup` 需要 true 值  。  
   
--   项目属性 **@replicate_ddl** 的值需要为 **true**； **@identityrangemanagementoption** 的值需要为 **manual**；而 **@status** 需要设置选项 **24** 。  
+-   项目属性 `@replicate_ddl` 需要 true 值  ；`@identityrangemanagementoption` 需要 manual 值  ；`@status` 需要设置选项 24  。  
   
--   项目属性 **@ins_cmd** 、 **@del_cmd** 和 **@upd_cmd** 的值不能设置为 **SQL**）上维护数据副本，提供了一种扩展的高可用性解决方案。  
+-   项目属性 `@ins_cmd``@del_cmd` 和 `@upd_cmd` 的值不能设置为 SQL  。  
   
--   订阅属性 **@sync_type** 的值需要为 **none** 或 **automatic**）上维护数据副本，提供了一种扩展的高可用性解决方案。  
+-   订阅属性 `@sync_type` 的值需要为 none 或 automatic   。  
   
 ### <a name="maintenance-considerations"></a>维护注意事项  
  一些操作需要让系统静止。 也就是说，停止所有节点上已发布表中的活动，并确保每个节点都已收到来自所有其他节点的更改。  

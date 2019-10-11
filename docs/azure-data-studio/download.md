@@ -8,30 +8,30 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.custom: seodec18
-ms.date: 09/11/2019
+ms.date: 10/03/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 43a035b7be4cdd0f4f45549d4f9a7070aa173c15
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 8151b3853da3a19785de8dcaf8d31c2d6768c558
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874713"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816633"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、macOS 和 Linux 上运行。
 
 
-下载并安装最新版本 - 9 月版  ：
+下载并安装最新版本 - 10 月版  ：
 
 > [!NOTE]
 > 如果是从 SQL Operations Studio 进行更新且希望保留设置、键盘快捷方式或代码片段，请参阅[移动用户设置](#move-user-settings)。
 
 |平台|下载|发布日期| 版本 |
 |:---|:---|:---|:---|
-|Windows|[用户安装程序（推荐）](https://go.microsoft.com/fwlink/?linkid=2102927)<br>[系统安装程序](https://go.microsoft.com/fwlink/?linkid=2102926)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2102839)|2019 年 9 月 10 日 |1.11.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2102925)|2019 年 9 月 10 日 |1.11.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2103004)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2102924)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2102838)|2019 年 9 月 10 日 |1.11.0|
+|Windows|[用户安装程序（推荐）](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[系统安装程序](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|2019 年 10 月 2 日 |1.12.0|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|2019 年 10 月 2 日 |1.12.0|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2103004)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105131)|2019 年 10 月 2 日 |1.12.0|
 
 有关最新版本的详细信息，请参阅[发行说明](release-notes.md)。
 
@@ -43,24 +43,24 @@ ms.locfileid: "70874713"
 
 **用户安装程序**（推荐）
 
-1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 用户安装程序](https://go.microsoft.com/fwlink/?linkid=2102927)  。
+1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 用户安装程序](https://go.microsoft.com/fwlink/?linkid=2105135)  。
 2. 启动 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 应用。
 
 **系统安装程序**
 
-1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 系统安装程序](https://go.microsoft.com/fwlink/?linkid=2102926)  。
+1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 系统安装程序](https://go.microsoft.com/fwlink/?linkid=2105134)  。
 2. 启动 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 应用。
 
 **zip 文件**
 
-1. 下载[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2102839)。
+1. 下载[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2104938)。
 2. 浏览到下载文件并将其解压缩。
 3. `\azuredatastudio-windows\azuredatastudio.exe`运行
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>获取适用于 macOS 的 Azure Data Studio
 
-1. 下载[适用于 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2102925)。
+1. 下载[适用于 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2105133)。
 2. 若要展开 zip 的内容，请双击。
 3. 若要使 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 在启动板中可用，请将 Azure Data Studio.app 拖到“Applications”文件夹中    。
 
@@ -69,8 +69,8 @@ ms.locfileid: "70874713"
 
 1. 通过使用安装程序之一或 tar.gz 存档来下载适用于 Linux 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]：
     - [.deb](https://go.microsoft.com/fwlink/?linkid=2103004)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2102924)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2102838)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105131)
 1. 若要提取文件并启动 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，请打开一个新的终端窗口并键入以下命令：
 
    **Debian 安装：**

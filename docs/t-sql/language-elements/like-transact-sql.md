@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22748ad9b34292811c5c133dd02da9a4d734657c
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68122182"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816823"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -192,7 +192,7 @@ GO
 |LIKE 'abc[def]'|abcd、abce 和 abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>使用 ESCAPE 子句的模式匹配  
- 可搜索包含一个或多个特殊通配符的字符串。 例如，customers 数据库中的 discounts 表可能存储含百分号 (%) 的折扣值。 若要搜索作为字符而不是通配符的百分号，必须提供 ESCAPE 关键字和转义符。 例如，一个样本数据库包含名为 comment 的列，该列含文本 30%。 若要搜索在 comment 列中的任何位置包含字符串 30% 的任何行，请指定 `WHERE comment LIKE '%30!%%' ESCAPE '!'` 之类的 WHERE 子句。 如果未指定 ESCAPE 和转义字符，[!INCLUDE[ssDE](../../includes/ssde-md.md)]返回包含字符串 30 的所有行。  
+ 可搜索包含一个或多个特殊通配符的字符串。 例如，customers 数据库中的 discounts 表可能存储含百分号 (%) 的折扣值。 若要搜索作为字符而不是通配符的百分号，必须提供 ESCAPE 关键字和转义符。 例如，一个样本数据库包含名为 comment 的列，该列含文本 30%。 若要搜索在 comment 列中的任何位置包含字符串 30% 的任何行，请指定 `WHERE comment LIKE '%30!%%' ESCAPE '!'` 之类的 WHERE 子句。 如果未指定 ESCAPE 和转义字符，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 返回包含字符串 30! 的所有行。  
   
  如果 LIKE 模式中的转义字符后面没有字符，此模式无效，且 LIKE 返回 FALSE。 如果转义字符后面的字符不是通配符，转义字符会遭放弃，且后面的字符会被视为模式中的常规字符。 这些字符包括百分号 (%)、下划线 (_) 和左方括号 ([) 通配符（如果它们包含在双方括号 ([ ]) 中的话）。 可以在双方括号字符 ([ ]) 内使用转义字符，包括转义脱字号 (^)、连字符 (-) 或右方括号 (])。  
   

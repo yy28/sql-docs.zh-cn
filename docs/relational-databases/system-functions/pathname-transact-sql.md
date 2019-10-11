@@ -1,5 +1,5 @@
 ---
-title: 路径名 (Transact SQL) |Microsoft Docs
+title: PathName （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f79f9f94d56c900d879fce06646b401f735e0bd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140582"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251952"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回 FILESTREAM 二进制大型对象 (BLOB) 路径。 OpenSqlFilestream API 使用此路径来返回应用程序可用于通过使用 Win32 Api 处理 BLOB 数据的句柄。 PathName 是只读的。  
+  返回 FILESTREAM 二进制大型对象 (BLOB) 路径。 OpenSqlFilestream API 使用此路径返回应用程序可用于通过使用 Win32 Api 处理 BLOB 数据的句柄。 PathName 是只读的。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,26 +39,26 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- column_name   
- 列名称**varbinary （max)** FILESTREAM 列。 *column_name*必须是一个列名称。 它不能是表达式，也不能是 CAST 或 CONVERT 语句的结果。  
+ column_name  
+ **Varbinary （max）** FILESTREAM 列的列名称。 *column_name*必须是列名称。 它不能是表达式，也不能是 CAST 或 CONVERT 语句的结果。  
   
- 请求的任何其他数据类型或为的列的路径名**varbinary （max)** columnthat 不具有 FILESTREAM 存储属性将会导致查询编译时错误。  
+ 如果为任何其他数据类型的列或**varbinary （max）** Columnthat 请求路径名，则不会有 FILESTREAM 存储属性导致查询编译时错误。  
   
- *@option*  
- 一个整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用于定义应如何格式化路径的服务器组件。 *@option* 可以是下列值之一。 默认值为 0。  
+ *\@option*  
+ 一个整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，定义路径的服务器组件应如何进行格式化。 *\@option*可以是下列值之一。 默认值为 0。  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |0|返回转换为 BIOS 格式的服务器名称，例如：`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|返回未经转换的服务器名称，例如：`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
 |2|返回完整的服务器路径，例如：`\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
- 一个位值，该值定义如何在 Always On 可用性组中返回的服务器名称。  
+ 一个位值，用于定义在 Always On 可用性组中应如何返回服务器名称。  
   
- 当数据库不属于 Always On 可用性组时，将忽略此参数的值。 在路径中始终使用计算机名称。  
+ 如果数据库不属于 Always On 可用性组，则忽略此参数的值。 在路径中始终使用计算机名称。  
   
- 如果数据库所属的 Always On 可用性组时，值*use_replica_computer_name*具有以下效果的输出**路径名**函数：  
+ 当数据库属于 Always On 可用性组时， *use_replica_computer_name*的值对**PathName**函数的输出具有以下影响：  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
@@ -149,7 +149,7 @@ DROP DATABASE PathNameDB;
   
 ## <a name="see-also"></a>请参阅  
  [二进制大型对象 &#40;Blob&#41; 数据 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;transact-sql&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [使用 OpenSqlFilestream 访问 FILESTREAM 数据](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

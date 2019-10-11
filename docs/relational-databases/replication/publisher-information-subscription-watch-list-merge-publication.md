@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dca1dfc281ac4ea63c2c28b35dc93805f2c19b2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f6caf3862d42d4245e4b2657448b2d5beb22667
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021398"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710795"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>发布服务器信息，订阅监视列表（合并发布）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "68021398"
  每个订阅的名称，格式为：SubscriberName:  SubscriptionDatabaseName。  
   
  **友好名称**  
- 每个订阅的说明。 此说明是在 **“订阅属性”** 对话框中输入的，或是用 **@description** 或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 的 [@description](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 用户通常将说明用作订阅的“友好名称”或别名。  
+ 每个订阅的说明。 此说明是在“订阅属性”对话框中输入的，或是通过 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 的 `@description` 指定的  。 用户通常将说明用作订阅的“友好名称”或别名。  
   
  **发布**  
  与订阅同步的发布的名称，格式为：PublicationDatabaseName:  PublicationName。  

@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 09/24/2019
-ms.openlocfilehash: 776f251e574ae2fa8165e4dd4d4feee6a5cf9968
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.date: 10/03/2019
+ms.openlocfilehash: eedec59438b13f9a2e9ac92562921ef0504b8f58
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326082"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816794"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -41,23 +41,23 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## <a name="ssms-183"></a>SSMS 18.3 
+## <a name="ssms-1831"></a>SSMS 18.3.1
 
-下载：[下载 SSMS 18.3](download-sql-server-management-studio-ssms.md)  
-生成号：15.0.18178.0  
-发布日期：2019 年 9 月 23 日
+下载：[下载 SSMS 18.3.1](download-sql-server-management-studio-ssms.md)  
+生成号：15.0.18183.0  
+发布日期：2019 年 10 月 2日
 
-SSMS 18.3 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早期版本，请参阅 [SSMS 的早期版本](release-notes-ssms.md#previous-ssms-releases)。
+SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早期版本，请参阅 [SSMS 的早期版本](release-notes-ssms.md#previous-ssms-releases)。
 
-18.3 是对 18.2 的更新，添加了以下新项并修复了以下 bug。
+18.3.1 是对 18.2 的更新，添加了以下新项并修复了以下 bug。
 
-## <a name="whats-new-in-183"></a>18.3 的新增功能
+## <a name="whats-new-in-1831"></a>18.3 1 的新增功能
 
 | 新建项 | 详细信息 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 数据分类 | 向列属性 UI 添加数据分类信息（*信息类型*、*信息类型 ID*、*敏感度标签*和*敏感度标签 ID* 未在 SSMS UI 中公开）。 |
-| Intellisense/编辑器 | 更新了对最近添加到 SQL Server 2019 中的功能的支持（例如，“ALTER SERVER CONFIGURATION”）。 | 
-| Integration Services | 添加新的选择菜单项 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，该菜单项将在Azure-SSIS Integration Runtime 上将 SSIS 包执行作为 ADF 管道中的“执行 SSIS 包”活动调用。 |
+| Intellisense/编辑器 | 更新了对最近添加到 SQL Server 2019 中的功能的支持（例如，“ALTER SERVER CONFIGURATION”）。 |
+| Integration Services | 添加新的选择菜单项 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，该菜单项将 Azure-SSIS Integration Runtime 上的 SSIS 包执行作为 ADF 管道中的“执行 SSIS 包”活动调用。 |
 | SMO/脚本 | 添加了对 Azure SQL DW 唯一约束的支持脚本的支持。 |
 | SMO/脚本 | 数据分类 </br> 添加了对 SQL 版本 10 (SQL 2008) 及更高版本的支持。 </br> - 为 SQL 版本 15 (SQL 2019) 和更高版本以及 Azure SQL DB 添加了新的敏感度属性“rank”。 |
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 向规则集格式添加了版本控制。 |
@@ -65,7 +65,7 @@ SSMS 18.3 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了对 Azure SQL 数据库托管实例的支持。 |
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了 cmdlet 的默认视图，将结果作为表格显示。 |
 
-## <a name="bug-fixes-in-183"></a>18.3 中的 bug 修复
+## <a name="bug-fixes-in-1831"></a>18.3.1 中的 bug 修复
 
 | 新项 | 详细信息 |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -82,11 +82,12 @@ SSMS 18.3 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 常规 SSMS | 修复了 XEvent UI 中将鼠标悬停在网格上导致行被选中的问题。 </br></br> 有关更多详细信息，请参阅 UserVoice 项目：[SSMS 扩展事件 UI 在鼠标悬停时选择操作](https://feedback.azure.com/forums/908035/suggestions/38262124)。 |
 | 导入平面文件 | 通过让用户在简单或丰富数据类型检测之间进行选择，修复了“导入平面文件”未导入所有数据的问题。</br></br> 有关更多详细信息，请参阅 UserVoice 项目：[SSMS“导入平面文件”未能导入所有数据](https://feedback.azure.com/forums/908035/suggestions/38096989)。 |
 | Integration Services | 为 SSIS 操作报表添加新的操作类型 *StartNonCatalogExecution*。|
+| Integration Services | 修复了 Azure 数据工厂管道中由 Azure 启用的实用工具 `DTExec` 导致的问题，以使用正确参数类型。 （18.3.1 明确了这一点） |
 | SMO/脚本 | 修复了使用 **SMO.Server.SetDefaultInitFields(true)** 时导致 SMO 在提取属性时引发错误的问题。|
 | 查询存储 UI | 修复了在“跟踪查询”视图中选择“执行计数”指标时 Y 轴无法缩放的问题   。 |
 | 漏洞评估 | 禁用了 Azure SQL DB 的清除和批准基线。|
 
-### <a name="known-issues-183"></a>已知问题 (18.3)
+### <a name="known-issues-1831"></a>已知问题 (18.3.1)
 
 - 无法从计算机 B 修改通过在计算机 A 上运行的 SSMS 创建的数据库关系图（SSMS 崩溃）。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
 

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa0ec88e64c317c2106a4a6a2a4d204e7192f114
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174293"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974403"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,10 +76,10 @@ FETCH
  cursor_name   
  要从中进行提取的开放游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 指全局游标，如果未指定 GLOBAL，则指局部游标   。  
   
- @cursor_variable_name   
+ \@cursor_variable_name   
  游标变量名，引用要从中进行提取操作的打开的游标。  
   
- INTO @variable_name[ ,...n]    
+ INTO \@variable_name[ ,...n]    
  允许将提取操作的列数据放到局部变量中。 列表中的各个变量从左到右与游标结果集中的相应列相关联。 各变量的数据类型必须与相应的结果集列的数据类型匹配，或是结果集列数据类型所支持的隐式转换。 变量的数目必须与游标选择列表中的列数一致。  
   
 ## <a name="remarks"></a>Remarks  

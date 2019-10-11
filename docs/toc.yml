@@ -8368,6 +8368,8 @@
               href: azure-data-studio/schema-compare-extension.md
             - name: PowerShell 扩展
               href: azure-data-studio/powershell-extension.md
+            - name: 托管实例扩展（预览版）
+              href: azure-data-studio/azure-sql-managed-instance-extension.md
             - name: SandDance 扩展（预览版）
               href: azure-data-studio/sanddance-extension.md
         - name: 扩展构建

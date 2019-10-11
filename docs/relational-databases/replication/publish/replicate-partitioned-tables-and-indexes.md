@@ -17,12 +17,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9750e85aefab0db07978cbba6a98a845888cec3d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b12d35d27fd4c90603cce6d798d8011ad1e65b81
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769787"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710834"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>复制已分区表和索引
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,9 +72,9 @@ ms.locfileid: "68769787"
 ### <a name="enabling-partition-switching"></a>启用分区切换  
  使用事务发布的下列属性，用户可以控制已复制环境中分区切换的行为。  
   
--   **@allow_partition_switch** ，设置为 **“复制表分区方案”** 时，可以对发布数据库执行 SWITCH PARTITION。  
+-   当 `@allow_partition_switch` 设置为 `true` 时，可以对发布数据库执行 SWITCH PARTITION。  
   
--   **@replicate_partition_switch** 确定 SWITCH PARTITION DDL 语句是否应复制到订阅服务器。 仅当 **@allow_partition_switch** 设置为 **“复制表分区方案”** 。  
+-   `@replicate_partition_switch` 确定 SWITCH PARTITION DDL 语句是否应复制到订阅服务器。 仅当 `@allow_partition_switch` 设置为 `true` 时才有效。  
   
  创建发布时可以使用 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 设置这些属性，或在创建发布后使用 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 设置这些属性。 如上所述，合并复制不支持分区切换。 若要对已启用合并复制的表执行 SWITCH PARTITION，请从发布中删除该表。  
   

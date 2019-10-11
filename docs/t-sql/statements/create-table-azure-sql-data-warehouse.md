@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419609"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961793"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
 
@@ -51,7 +51,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 <table_option> ::=
     {
-        <cci_option> --default for Azure SQL Data Warehouse
+       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
@@ -63,8 +64,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) )
 
-<cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
-  
 <data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
@@ -165,7 +164,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>有序聚集列存储索引选项（Azure SQL 数据仓库预览版）
 
-聚集列存储索引是用于在 Azure SQL 数据仓库中创建表的默认索引。  ORDER 规范默认采用 COMPOUND 键。  排序始终为升序。 如果没有指定 ORDER 子句，则不会对列存储进行排序。 由于排序过程的原因，与具有无序聚集列存储索引的表相比，具有有序聚集列存储索引的表的数据加载时间可能更长。 如果加载数据时需要更多的 tempdb 空间，你可以减少每个插入的数据量。
+聚集列存储索引 (CCI) 是用于在 Azure SQL 数据仓库中创建表的默认索引。  在将 CCI 中的数据在压缩到列存储段之前，不会对其进行排序。  使用 ORDER 创建 CCI 时，先对数据进行排序，然后再将其添加到索引段中，这样可以提高查询性能。 有关详细信息，请查看[使用有序聚集列存储索引进行性能调整](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci)。  
 
 由于表中的列按顺序排列，用户可以在 sys.index_columns 中查询 column_store_order_ordinal 列。  
 
@@ -379,17 +378,6 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> C. 创建有序聚集列存储索引
-
-下面的示例展示了如何创建有序聚集列存储索引。 索引按 SHIPDATE 进行排序。
-
-```sql
-CREATE TABLE Lineitem  
-WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
-AS  
-SELECT * FROM ext_Lineitem
-```
-
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>临时表的示例
 
@@ -432,11 +420,22 @@ WITH
   )  
 ;  
 ```  
- 
+
+### <a name="OrderedClusteredColumnstoreIndex"></a> E. 创建有序聚集列存储索引
+
+下面的示例展示了如何创建有序聚集列存储索引。 索引按 SHIPDATE 进行排序。
+
+```sql
+CREATE TABLE Lineitem  
+WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
+AS  
+SELECT * FROM ext_Lineitem
+```
+
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>表分发的示例
 
-### <a name="RoundRobin"></a> E. 创建 ROUND_ROBIN 表  
+### <a name="RoundRobin"></a> F. 创建 ROUND_ROBIN 表  
  以下示例创建 ROUND_ROBIN 表，其中包含三列并且没有分区。 数据分布在所有分发中。 该表是使用 CLUSTERED COLUMNSTORE INDEX 创建的，它能提供比堆或行存储聚集索引更好的性能和数据压缩。  
   
 ```sql
@@ -449,7 +448,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> F. 创建哈希分布式表
+### <a name="HashDistributed"></a> G. 创建哈希分布式表
 
  以下示例创建与上面的示例相同的表。 但对于此表，分发行（位于 `id` 列），而不是像 ROUND_ROBIN 表一样随机分发。 该表是使用 CLUSTERED COLUMNSTORE INDEX 创建的，它能提供比堆或行存储聚集索引更好的性能和数据压缩。  
   
@@ -467,7 +466,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> G. 创建已复制的表  
+### <a name="Replicated"></a> H. 创建已复制的表  
  以下示例创建一个类似于前面示例的已复制表。 将已复制表全部复制到每个 Compute 节点。 通过每个 Compute 节点上的副本，可以减少查询的数据移动。 此示例是使用 CLUSTERED INDEX 进行创建，可实现比堆更好的数据压缩。 堆可能包含的行不够，无法实现理想的 CLUSTERED COLUMNSTORE INDEX 压缩。  
   
 ```sql
@@ -487,7 +486,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>表分区的示例
 
-###  <a name="PartitionedTable"></a> H. 创建已分区表
+###  <a name="PartitionedTable"></a> I. 创建已分区表
 
  以下示例创建与示例 A 中所示相同的表，并在 `id` 列上添加 RANGE LEFT 分区。 它指定了四个分区边界值，所以有五个分区。  
   
@@ -522,7 +521,7 @@ WITH
 - 分区 4：30 < = 列 < 40
 - 分区 5：40 < = 列  
   
-### <a name="OnePartition"></a> I. 使用一个分区创建已分区表
+### <a name="OnePartition"></a> J. 使用一个分区创建已分区表
 
  以下示例使用一个分区创建已分区表。 它不指定任何边界值，所以有一个分区。  
   
@@ -539,7 +538,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> J. 创建具有日期分区的表
+### <a name="DatePartition"></a> K. 创建具有日期分区的表
 
  以下示例创建一个名为 `myTable` 的新表，并在 `date` 列上进行分区。 使用 RANGE RIGHT 和日期作为边界值，它将在每个分区中放置一个月的数据。  
   

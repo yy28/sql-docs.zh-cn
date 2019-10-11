@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2f339210-4d85-4843-bd94-e86f7100d3ef
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 38076ebad44e59d6004ac852486788a4b22c32f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9696e02e91a28420ce66e21226e322ea7845ab4d
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939096"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710335"
 ---
 # <a name="perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming"></a>执行合并项目的虚更新（复制 Transact-SQL 编程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67939096"
   
 1.  请对需要虚更新的合并发布表中的行执行操作（例如，UPDATETEXT）。  
   
-2.  在服务器（发布服务器或订阅服务器）的进行了更改的数据库中，执行 [sp_mergedummyupdate (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql.md)。 为 **@source_object** 指定进行了更改的表，并为 **@rowguid** 。  
+2.  在服务器（发布服务器或订阅服务器）的进行了更改的数据库中，执行 [sp_mergedummyupdate (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql.md)。 为 `@source_object` 指定进行了更改的表，并为 `@rowguid` 指定发生了更改的行的唯一标识符。  
   
 3.  同步此订阅以复制更改行。  
   

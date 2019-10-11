@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/11/2019
-ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.date: 10/03/2019
+ms.openlocfilehash: 58efc144832fb97a3a32c764299c3ee83373976b
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878623"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816645"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](download.md)**
+
+## <a name="october-2019"></a>2019 年 10 月
+
+2019 年 10 月 2 日&nbsp; / &nbsp;版本：1.12.0
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| Query History 扩展的发布 | SQL History 扩展保存过去在 Azure Data Studio 会话中执行的所有查询，并按执行顺序列出它们。 用户可以查看打开查询、执行查询、删除查询、暂停查询历史记录或删除所有查询历史记录项。 |
+| 新建复制/粘贴结果 | 我们添加了从结果网格复制/粘贴结果的其他方法。 |
+| PowerShell 扩展更新 |  |
+| 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/milestone/42?closed=1)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知问题
+- 笔记本
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 罕见情况，错误序列化笔记本时出现
 
 ## <a name="september-2019"></a>2019 年 9 月
 

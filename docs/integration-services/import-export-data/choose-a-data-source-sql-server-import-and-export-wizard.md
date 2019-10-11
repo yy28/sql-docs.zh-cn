@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 275ac725c0bde283fa45feccd4479c95cc71126b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b707b2b31c15c565353f0ff581ca1f4d7308a25b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296400"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951944"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>选择数据源（SQL Server 导入和导出向导）
 
@@ -28,7 +28,7 @@ ms.locfileid: "71296400"
 有关可以使用的数据源的信息，请参阅 [我可以使用哪些数据源和目标？](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导使用 SQL Server Integration Services (SSIS)。 因此，适用于 SSIS 的限制也同样适用于该向导。  例如，已按[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)中所述默认添加了 ErrorCode 和 ErrorColumn 列。
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的导入和导出向导使用 SQL Server Integration Services (SSIS)。 因此，适用于 SSIS 的限制也同样适用于该向导。  例如，已按[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)中所述默认添加了 ErrorCode 和 ErrorColumn 列。
 
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>“选择数据源”页面的屏幕截图 
 下图显示了该向导“选择数据源”  页的第一部分。 此页的其余部分含有数量不定的选项，具体取决于此处选择的数据源。

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: decb69879ca80e599fa90f1eb1aa150ccf7f49a5
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227190"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713213"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -91,6 +91,12 @@ ALTER DATABASE SCOPED CONFIGURATION
 }
 ```
 
+> [!IMPORTANT]
+> 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，某些选项名称已更改：      
+> -  `DISABLE_INTERLEAVED_EXECUTION_TVF` 更改为 `INTERLEAVED_EXECUTION_TVF`
+> -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` 更改为 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+> -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 更改为 `BATCH_MODE_ADAPTIVE_JOINS`
+
 ## <a name="arguments"></a>参数
 
 FOR SECONDARY
@@ -113,6 +119,9 @@ MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 您可以使用 max degree of parallelism 选项来限制并行计划执行时所用的处理器数。 SQL Server 考虑为查询、索引数据定义语言 (DDL) 操作、并行插入、联机更改列、并行统计信息集合以及静态的和由键集驱动的游标填充实施并行执行计划。
 
 要在实例级别设置此选项，请参阅[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+
+> [!NOTE]
+> 在 Azure SQL 数据库中，服务器级别的“最大并行度”配置始终设为 0  。 可以为每个数据库配置 MAXDOP，如当前文章中所述。 有关最佳配置 MAXDOP 的建议，请参阅[其他资源](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources)部分。
 
 > [!TIP]
 > 要在查询级别完成此操作，请添加 MAXDOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。 
@@ -351,6 +360,11 @@ LAST_QUERY_PLAN_STATS = { ON | OFF}
 `ALTER_DATABASE_SCOPED_CONFIGURATION` 事件添加为可用于触发 DDL 触发器的 DDL 事件，并且是 `ALTER_DATABASE_EVENTS` 触发器组的子元素。
 
 将对数据库执行数据库范围的配置设置，这意味着还原或附加一个给定数据库时，将保留现有的配置设置。
+
+从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，某些选项名称已更改：      
+-  `DISABLE_INTERLEAVED_EXECUTION_TVF` 更改为 `INTERLEAVED_EXECUTION_TVF`
+-  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` 更改为 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+-  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 更改为 `BATCH_MODE_ADAPTIVE_JOINS`
 
 ## <a name="limitations-and-restrictions"></a>限制和局限
 

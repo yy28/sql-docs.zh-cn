@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3d39fcd8df1f62bd089361a9a32ef7a59aa113a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6ec9ac5c4e868a9022a11cc153c9638cab737dc
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907693"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710989"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>通过 FTP 传递快照
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,87 +76,87 @@ ms.locfileid: "67907693"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布启用 FTP 快照传递  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 指定 **@publication** ，将值 **true** 指定给 **@enabled_for_internet** ，并将相应值指定给以下参数：  
+1.  在发布服务器上，对发布数据库执行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 指定 `@publication`，为 `@enabled_for_internet` 指定值 true，并为以下参数指定适当的值  ：  
   
-    -   **@ftp_address** - 用于传递快照的 FTP 服务器的地址。  
+    -   `@ftp_address` - 用于传递快照的 FTP 服务器的地址。  
   
-    -   （可选） **@ftp_port** - FTP 服务器所使用的端口。  
+    -   （可选）`@ftp_port` - FTP 服务器所使用的端口。  
   
-    -   （可选） **@ftp_subdirectory** - 分配给 FTP 登录名的默认 FTP 目录的子目录。 例如，如果 FTP 服务器根目录是 \\\ftpserver\home 并要将快照存储在 \\\ftpserver\home\snapshots 下，则将 **\snapshots\ftp** 指定给 **@ftp_subdirectory** （复制在创建快照文件时将“ftp”追加到快照文件夹路径中）。  
+    -   （可选）`@ftp_subdirectory` - 分配给 FTP 登录名的默认 FTP 目录的子目录。 例如，如果 FTP 服务器根目录是 \\\ftpserver\home 并要将快照存储在 \\\ftpserver\home\snapshots 下，则将 **\snapshots\ftp** 指定给 `@ftp_subdirectory`（复制在创建快照文件时将“ftp”追加到快照文件夹路径中）。  
   
-    -   （可选） **@ftp_login** - 连接到 FTP 服务器时使用的登录帐户。  
+    -   （可选）`@ftp_login` - 连接到 FTP 服务器时使用的登录帐户。  
   
-    -   （可选） **@ftp_password** - FTP 登录名的密码。  
+    -   （可选）`@ftp_password` - FTP 登录名的密码。  
   
      此操作将创建一个使用 FTP 的发布。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>为合并发布启用 FTP 快照传递  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 指定 **@publication** ，将值 **true** 指定给 **@enabled_for_internet** ，并将相应的值指定给以下参数：  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 指定 `@publication`，为 `@enabled_for_internet` 指定值 true，并为以下参数指定适当的值  ：  
   
-    -   **@ftp_address** - 用于传递快照的 FTP 服务器的地址。  
+    -   `@ftp_address` - 用于传递快照的 FTP 服务器的地址。  
   
-    -   （可选） **@ftp_port** - FTP 服务器所使用的端口。  
+    -   （可选）`@ftp_port` - FTP 服务器所使用的端口。  
   
-    -   （可选） **@ftp_subdirectory** - 分配给 FTP 登录名的默认 FTP 目录的子目录。 例如，如果 FTP 服务器根目录是 \\\ftpserver\home 并要将快照存储在 \\\ftpserver\home\snapshots 下，则将 **\snapshots\ftp** 指定给 **@ftp_subdirectory** （复制在创建快照文件时将“ftp”追加到快照文件夹路径中）。  
+    -   （可选）`@ftp_subdirectory` - 分配给 FTP 登录名的默认 FTP 目录的子目录。 例如，如果 FTP 服务器根目录是 \\\ftpserver\home 并要将快照存储在 \\\ftpserver\home\snapshots 下，则将 \snapshots\ftp  指定给 `@ftp_subdirectory`（复制在创建快照文件时将“ftp”追加到快照文件夹路径中）。  
   
-    -   （可选） **@ftp_login** - 连接到 FTP 服务器时使用的登录帐户。  
+    -   （可选）`@ftp_login` - 连接到 FTP 服务器时使用的登录帐户。  
   
-    -   （可选） **@ftp_password** - FTP 登录名的密码。  
+    -   （可选）`@ftp_password` - FTP 登录名的密码。  
   
      此操作将创建一个使用 FTP 的发布。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>创建对使用 FTP 快照传递的快照发布或事务发布的请求订阅  
   
-1.  在订阅服务器上，对订阅数据库执行 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)。 指定 **@publisher** 和 **@publication** 中通过 FTP 传递快照。  
+1.  在订阅服务器上，对订阅数据库执行 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)。 指定 `@publisher` 和 `@publication`。  
   
-    -   在订阅服务器上，对订阅数据库执行 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 **@publisher** 、 **@publisher_db** 、 **@publication** ，将用于运行订阅服务器上的分发代理的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 凭据指定给 **@job_login** 和 **@job_password** ，并将值 **true** 指定给 **@use_ftp** 中通过 FTP 传递快照。  
+    -   在订阅服务器上，对订阅数据库执行 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 `@publisher`、`@publisher_db`、`@publication`，将用于运行订阅服务器上的分发代理的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 凭据指定给 `@job_login` 和 `@job_password`，并将值 true  指定给 `@use_ftp`。  
   
 2.  在发布服务器上，对发布数据库执行 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 以注册请求订阅。 有关详细信息，请参阅 [创建请求订阅](../../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>创建对使用 FTP 快照传递的合并发布的请求订阅  
   
-1.  在订阅服务器上，对订阅数据库执行 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 指定 **@publisher** 和 **@publication** 中通过 FTP 传递快照。  
+1.  在订阅服务器上，对订阅数据库执行 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 指定 `@publisher` 和 `@publication`。  
   
-2.  在订阅服务器上，对订阅数据库执行 [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)。 指定 **@publisher** 、 **@publisher_db** 、 **@publication** ，将用于运行订阅服务器上的分发代理的 Windows 凭据指定给 **@job_login** 和 **@job_password** ，并将值 **true** 指定给 **@use_ftp** 中通过 FTP 传递快照。  
+2.  在订阅服务器上，对订阅数据库执行 [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)。 指定 `@publisher`、`@publisher_db`、`@publication`，将用于运行订阅服务器上的分发代理的 Windows 凭据指定给 `@job_login` 和 `@job_password`，并将值 `true` 指定给 `@use_ftp`。  
   
 3.  在发布服务器上，对发布数据库执行 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 以注册请求订阅。 有关详细信息，请参阅 [创建请求订阅](../../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布更改一个或多个 FTP 快照传递设置  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 将下列值之一指定给 **@property** ，将该设置的新值指定给 **@value** ：  
+1.  在发布服务器上，对发布数据库执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 将下列值之一指定给 `@property`，将该设置的新值指定给 `@value`：  
   
-    -   **ftp_address** - 用于传递快照的 FTP 服务器的地址。  
+    -   `ftp_address ` - 用于传递快照的 FTP 服务器的地址。  
   
-    -   **ftp_port** - FTP 服务器所使用的端口。  
+    -   `ftp_port` - FTP 服务器所使用的端口。  
   
-    -   **ftp_subdirectory** - 用于 FTP 快照的默认 FTP 目录的子目录。  
+    -   `ftp_subdirectory` - 用于 FTP 快照的默认 FTP 目录的子目录。  
   
-    -   **ftp_login** - 用于连接到 FTP 服务器的登录名。  
+    -   `ftp_login` - 用于连接到 FTP 服务器的登录名。  
   
-    -   **ftp_password** - FTP 登录名的密码。  
+    -   `ftp_password` - FTP 登录名的密码。  
   
 2.  （可选）对更改的每个 FTP 设置重复步骤 1。  
   
-3.  （可选）若要禁用 FTP 快照传递，请在发布服务器上对发布数据库执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 。 将值 **enabled_for_internet** 指定给 **@property** ，将值 **false** 指定给 **@value** 中通过 FTP 传递快照。  
+3.  （可选）若要禁用 FTP 快照传递，请在发布服务器上对发布数据库执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 。 将值 `enabled_for_internet` 指定给 `@property`，将值 `false` 指定给 `@value`。  
   
 #### <a name="to-change-ftp-snapshot-delivery-settings-for-a-merge-publication"></a>为合并发布更改 FTP 快照传递的设置  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 将下列值之一指定给 **@property** ，将该设置的新值指定给 **@value** ：  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 将下列值之一指定给 `@property`，将该设置的新值指定给 `@value`：  
   
-    -   **ftp_address** - 用于传递快照的 FTP 服务器的地址。  
+    -   `ftp_address` - 用于传递快照的 FTP 服务器的地址。  
   
-    -   **ftp_port** - FTP 服务器所使用的端口。  
+    -   `ftp_port` - FTP 服务器所使用的端口。  
   
-    -   **ftp_subdirectory** - 用于 FTP 快照的默认 FTP 目录的子目录。  
+    -   `ftp_subdirectory` - 用于 FTP 快照的默认 FTP 目录的子目录。  
   
-    -   **ftp_login** - 用于连接到 FTP 服务器的登录名。  
+    -   `ftp_login` - 用于连接到 FTP 服务器的登录名。  
   
-    -   **ftp_password** - FTP 登录名的密码。  
+    -   `ftp_password` - FTP 登录名的密码。  
   
 2.  （可选）对更改的每个 FTP 设置重复步骤 1。  
   
-3.  （可选）若要禁用 FTP 快照传递，请在发布服务器上对发布数据库执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 。 将值 **enabled_for_internet** 指定给 **@property** ，将值 **false** 指定给 **@value** 中通过 FTP 传递快照。  
+3.  （可选）若要禁用 FTP 快照传递，请在发布服务器上对发布数据库执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 。 将值 `enabled_for_internet` 指定给 `@property`，将值 `false` 指定给 `@value`。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例创建一个合并发布，该发布允许订阅服务器通过使用 FTP 访问快照数据。 访问 FTP 共享区时，订阅服务器应使用安全的 VPN 连接。 **sqlcmd** 脚本变量用于提供登录名和密码值。 有关详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  

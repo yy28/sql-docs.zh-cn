@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c0168db6a35606f3495d66eae87a0671672a6e99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140127"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711059"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>参数化筛选器 - 参数化行筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "68140127"
   
      也可以使用非订阅服务器名称或分发服务器名称的值来覆盖此函数。 应用程序通常会用更有意义的值来覆盖此函数，如销售人员姓名或销售人员 ID。 有关详细信息，请参阅本主题中的“覆盖 HOST_NAME() 值”部分。  
   
- 将系统函数返回的值与在要筛选的表中指定的列进行比较，并将相应的数据下载到订阅服务器。 此比较是在初始化订阅时（因此初始快照中仅包含相应的数据）和每次同步订阅时进行的。 默认情况下，如果发布服务器上的更改导致行移出分区，则该行将从订阅服务器上删除（可以使用 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 **@allow_partition_realignment** 参数控制此行为）。  
+ 将系统函数返回的值与在要筛选的表中指定的列进行比较，并将相应的数据下载到订阅服务器。 此比较是在初始化订阅时（因此初始快照中仅包含相应的数据）和每次同步订阅时进行的。 默认情况下，如果发布服务器上的更改导致行移出分区，则该行将从订阅服务器中删除（可以使用 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@allow_partition_realignment` 参数控制此行为）。  
   
 > [!NOTE]  
 >  对参数化筛选器进行比较时，将始终使用数据库排序规则。 例如，如果数据库排序规则不区分大小写，而表或列排序规则区分大小写，那么该比较将不区分大小写。  
   
-### <a name="filtering-with-susersname"></a>使用 SUSER_SNAME() 进行筛选  
+### <a name="filtering-with-suser_sname"></a>使用 SUSER_SNAME() 进行筛选  
  下面以 **示例数据库中的** Employee 表 [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] 为例进行说明。 此表包含 **LoginID**列，该列中每个雇员的登录名的格式为“*domain\login*”。 若要筛选此表以便雇员仅接收与之相关的数据，请指定筛选子句：  
   
 ```  
@@ -62,7 +62,7 @@ LoginID = SUSER_SNAME()
   
  例如，其中一个雇员的值为“adventure-works\john5”。 合并代理连接到发布服务器时，使用创建订阅时指定的登录名（此例中为“adventure-works\john5”）。 然后，合并代理将 SUSER_SNAME() 返回的值与表中的值进行比较，并仅下载 **LoginID** 列中值为“adventure-works\john5”的行。  
   
-### <a name="filtering-with-hostname"></a>使用 HOST_NAME() 进行筛选  
+### <a name="filtering-with-host_name"></a>使用 HOST_NAME() 进行筛选  
  下面以 **HumanResources.Employee** 表为例进行说明。 假定此表包含列 **ComputerName** ，该列中每个雇员的计算机名称的格式为“*name_computertype*”。 若要筛选此表以便雇员仅接收与之相关的数据，请指定筛选子句：  
   
 ```  
@@ -82,7 +82,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 > [!IMPORTANT]  
 >  函数 HOST_NAME() 的值可以覆盖；因此不能使用包含 HOST_NAME() 的筛选器来控制对数据分区的访问。 若要控制对数据分区的访问，请将 SUSER_SNAME()、SUSER_SNAME() 和 HOST_NAME() 结合使用，或者使用静态行筛选器。  
   
-#### <a name="overriding-the-hostname-value"></a>覆盖 HOST_NAME() 值  
+#### <a name="overriding-the-host_name-value"></a>覆盖 HOST_NAME() 值  
  如前所述，HOST_NAME() 在默认情况下会返回连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的计算机的名称。 使用参数化筛选器时，通常通过在创建订阅时提供值来覆盖此值。 这样，HOST_NAME() 函数将返回指定的值而非计算机的名称。  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  例如，为雇员 Pamela Ansman-Wolfe 分配的雇员 ID 为 280。 为此雇员创建订阅时，为 HOST_NAME() 值指定雇员 ID 值（在此例中为 280）。 合并代理连接到发布服务器时，会将 HOST_NAME() 返回的值与表中的值进行比较，并仅下载 **EmployeeID** 列中值为 280 的行。  
   
 > [!IMPORTANT]
->  HOST_NAME() 函数会返回 **nchar** 值，因此如果筛选子句中的列为数值数据类型（如前面示例所示），则必须使用 CONVERT。 出于性能方面的考虑，建议您不要对参数化行筛选器子句（如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`）中的列名应用函数。 建议改为使用示例中所示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用于 **@subset_filterclause** @allow_partition_realignment [@subset_filterclause](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)参数，但通常不能在新建发布向导中使用（该向导会执行筛选子句以对其进行验证，而此验证会失败，因为计算机名称无法转换为 **int**中，参数化筛选器称为“动态筛选器”）。 如果使用的是新建发布向导，建议在向导中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然后在为发布创建快照之前，使用 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 将子句更改为 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
+>  HOST_NAME() 函数会返回 **nchar** 值，因此如果筛选子句中的列为数值数据类型（如前面示例所示），则必须使用 CONVERT。 出于性能方面的考虑，建议您不要对参数化行筛选器子句（如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`）中的列名应用函数。 建议改为使用示例中所示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用于 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 `@subset_filterclause` 参数，但通常不能在新建发布向导中使用（该向导会执行筛选子句以对其进行验证，而此验证会失败，因为计算机名称无法转换为 int中，参数化筛选器称为“动态筛选器”）  。 如果使用的是新建发布向导，建议在向导中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然后在为发布创建快照之前，使用 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 将子句更改为 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
   
  **覆盖 HOST_NAME() 值**  
   
@@ -103,7 +103,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在新建订阅向导的“HOST\_NAME\(\) 值”  页中，指定一个值。 有关创建订阅的详细信息，请参阅[订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)。  
   
--   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：为 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)（对于推送订阅）或 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)（对于请求订阅）的 **@hostname** 参数指定一个值。  
+-   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：为 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)（对于推送订阅）或 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)（对于请求订阅）的 `@hostname` 参数指定一个值。  
   
 -   合并代理：在命令行中或通过代理配置文件指定 **-Hostname** 参数的值。 有关合并代理的详细信息，请参阅 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)。 有关代理配置文件的详细信息，请参阅 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   

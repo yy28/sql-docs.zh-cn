@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 159a2f0b75371aa24661d3e33f3e2108dc93432b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2bf159b42298a2b1fc031383dffe7218f55aabd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901097"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710929"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 发布服务器的设计注意事项和限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ ms.locfileid: "67901097"
   
 -   标准事务发布支持表的最大列数为 1000。 Oracle 事务发布支持 995 列（进行复制时，将向每个已发布表中添加 5 列）。  
   
--   在 CREATE TABLE 语句中添加了 Collate 子句，以启用区分大小写的比较，这对主键和唯一约束非常重要。 此行为通过架构选项 0x1000 控制，该选项使用 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 的 **@schema_option** 参数指定。  
+-   在 CREATE TABLE 语句中添加了 Collate 子句，以启用区分大小写的比较，这对主键和唯一约束非常重要。 此行为通过架构选项 0x1000 控制，该选项使用 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 的 `@schema_option` 参数指定。  
   
 -   如果使用存储过程来配置或维护 Oracle 发布服务器，请不要将存储过程放到显式事务中。 用于连接 Oracle 发布服务器的链接服务器不支持这一操作。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "67901097"
   
 -   通过下列方法之一指定快照代理和日志读取器代理在分发服务器和发布服务器之间建立连接时使用的帐户：  
   
-    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) 的 **@security_mode** 参数（如果使用 Oracle 身份验证，则也请指定 **@login** 和 **@password** 的值）  
+    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) 的 `@security_mode` 参数（如果使用 Oracle 身份验证，则也请指定 `@login` 和 `@password` 的值）  
   
     -   在 SQL Server Management Studio 的 **“连接到服务器”** 对话框中，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上配置 Oracle 发布服务器时就使用这种方法。  
   
@@ -158,11 +158,11 @@ ms.locfileid: "67901097"
   
 -   不能使用 [sp_changedistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) 或通过属性表来更改快照代理和日志读取器代理建立连接时使用的帐户，但可以更改密码。  
   
--   如果将 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) 的 **@security_mode** 参数值指定为 1（Windows 集成身份验证）：  
+-   如果将 [sp_adddistpublisher &#40;Transact-SQL&#41;`@security_mode` 的 ](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)参数值指定为 1（Windows 集成身份验证）：  
   
-    -   快照代理和日志读取器代理使用的进程帐户和密码（[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) 和 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) 的 **@job_login** 和 **@job_password** 参数）必须与连接 Oracle 发布服务器时使用的帐户和密码相同。  
+    -   快照代理和日志读取器代理使用的进程帐户和密码（[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) 和 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) 的 `@job_login` 和 `@job_password` 参数）必须与连接 Oracle 发布服务器时使用的帐户和密码相同。  
   
-    -   不能通过 [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) 或 [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) 更改 **@job_login** 参数，但可以更改密码。  
+    -   不能通过 [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) 或 [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) 更改 `@job_login` 参数，但可以更改密码。  
   
  有关复制安全性的详细信息，请参阅[查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   

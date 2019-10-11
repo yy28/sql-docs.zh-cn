@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dcf95ea2aaab71771f90bc861265bb19e2f9d0ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcb11ef0f2c6216b26957f732e5ed34fb233cc05
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073558"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710883"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>设置合并发布的兼容级别
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "68073558"
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>设置合并发布的发布兼容级别  
   
-1.  在发布服务器上，执行 [sp_addmergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)，并为 **@publication_compatibility_level** 指定值，以使该发布与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的早期版本兼容。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
+1.  在发布服务器上，执行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)，并为 `@publication_compatibility_level` 指定一个值，以使该发布与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的早期版本兼容。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>更改合并发布的发布兼容级别  
   
-1.  执行 [sp_changemergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，并为 **@property** 指定 **publication_compatibility_level**，为 **@value** 指定相应的发布兼容级别。  
+1.  执行 [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，并为 `@property` 指定 **publication_compatibility_level**，为 `@value` 指定相应的发布兼容级别。  
   
 #### <a name="to-determine-the-publication-compatibility-level-of-a-merge-publication"></a>确定合并发布的发布兼容级别  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68073558"
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  该示例创建合并发布并设置发布兼容级别。  
   
-```  
+```sql  
 -- To avoid storing the login and password in the script file, the values   
 -- are passed into SQLCMD as scripting variables. For information about   
 -- how to use scripting variables on the command line and in SQL Server  
@@ -106,7 +106,7 @@ GO
 > [!NOTE]  
 >  如果发布使用任何要求采用特定兼容级别的功能，则可能不允许更改发布兼容级别。 有关详细信息，请参阅[复制的向后兼容性](../../../relational-databases/replication/replication-backward-compatibility.md)。  
   
-```  
+```sql  
 DECLARE @publication AS sysname;  
 SET @publication = N'AdvWorksSalesOrdersMerge' ;  
   
@@ -122,7 +122,7 @@ GO
   
  该示例返回合并发布的当前发布兼容级别。  
   
-```  
+```sql  
 DECLARE @publication AS sysname;  
 SET @publication = N'AdvWorksSalesOrdersMerge' ;  
 EXEC sp_helpmergepublication   

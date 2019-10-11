@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e454850de56674a594b23585aaf1f5af1f3549a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1171d30f7b21b99a3d4a396937b1e94c58787859
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002682"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710898"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>通过参数化筛选器为合并发布管理分区
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,25 +103,25 @@ ms.locfileid: "68002682"
   
 #### <a name="to-view-information-on-existing-partitions"></a>查看有关现有分区的信息  
   
-1.  在发布服务器上，对发布数据库执行 [sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)。 为 **@publication** 指定发布名称。 （可选）指定 **@suser_sname** 或 **@host_name** 以根据单个筛选条件返回信息。  
+1.  在发布服务器上，对发布数据库执行 [sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)。 为 `@publication` 指定发布名称。 （可选）指定 `@suser_sname` 或 `@host_name` 以仅根据单个筛选条件返回信息。  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>定义新分区并生成新分区快照  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)。 为 **@publication** 指定发布的名称，并为以下某个参数指定用于定义分区的参数化值：  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)。 为 `@publication` 指定发布名称，并为以下某个参数指定用于定义分区的参数化值：  
   
-    -   **@suser_sname** - 当参数化筛选器由 [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) 返回的值进行定义时。  
+    -   `@suser_sname` - 当参数化筛选器由 [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) 返回的值进行定义时。  
   
-    -   **@host_name** - 当参数化筛选器由 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) 返回的值进行定义时。  
+    -   `@host_name` - 当参数化筛选器由 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) 返回的值进行定义时。  
   
 2.  创建并初始化此新分区的参数化快照。 有关详细信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 #### <a name="to-delete-a-partition"></a>删除分区  
   
-1.  在发布服务器上，对发布数据库执行 [sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)。 为 **@publication** 指定发布的名称，并为以下某个参数指定用于定义分区的参数化值：  
+1.  在发布服务器上，对发布数据库执行 [sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)。 为 `@publication` 指定发布的名称，并为以下某个参数指定用于定义分区的参数化值：  
   
-    -   **@suser_sname** - 当参数化筛选器由 [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) 返回的值进行定义时。  
+    -   `@suser_sname` - 当参数化筛选器由 [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) 返回的值进行定义时。  
   
-    -   **@host_name** - 当参数化筛选器由 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) 返回的值进行定义时。  
+    -   `@host_name` - 当参数化筛选器由 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) 返回的值进行定义时。  
   
      此操作还将删除快照作业以及该分区的任何快照文件。  
   
@@ -165,5 +165,6 @@ ms.locfileid: "68002682"
 ## <a name="see-also"></a>另请参阅  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+  
   
   

@@ -18,17 +18,17 @@ ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3818c2ff4689605ff03660d6ae66bf4d579cb443
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c579d8d31daff1b03db4c82bcd33642c02f85c5
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037312"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251275"
 ---
-# <a name="spxtpflushtemporalhistory-transact-sql"></a>sp_xtp_flush_temporal_history (Transact SQL)
+# <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  调用数据刷新任务以将所有已提交的行从内存中临时表移到基于磁盘的历史记录表。  
+  调用数据刷新任务，将所有提交的行从内存中的临时表移到基于磁盘的历史记录表。  
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,14 +41,14 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *@schema_name*  
- 当前或临时表的架构名称  
+ *\@schema_name*  
+ 当前表或临时表的架构名称  
   
- *@object_name*  
- 当前或临时表的名称  
+ *object_name\@*  
+ 当前表或临时表的名称  
   
 ## <a name="return-code-values"></a>返回代码值  
- 0 （成功） 或 > 0 （失败）  
+ 0（成功）或 > 0 （失败）  
   
 ## <a name="permissions"></a>权限  
  需要 db_owner 权限。  

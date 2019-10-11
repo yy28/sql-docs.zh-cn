@@ -1,5 +1,5 @@
 ---
-title: sp_check_for_sync_trigger (Transact-sql) |Microsoft Docs
+title: sp_check_for_sync_trigger （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7af80b51c651bd98fd2ac143ac0631901828b6fb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771285"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251243"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
   
 ## <a name="arguments"></a>参数  
  [ **@tabid =** ] '*tabid*'  
- 正对检查即时更新触发器的表的对象 ID。 *tabid*的值为**int** , 无默认值。  
+ 正对检查即时更新触发器的表的对象 ID。 *tabid*的值为**int** ，无默认值。  
   
  [ **@trigger_op =** ] '*trigger_output_parameters*' OUTPUT  
- 指定输出参数是否返回正在调用它的触发器的类型。 *trigger_output_parameters*为**char (10)** , 可以是下列值之一。  
+ 指定输出参数是否返回正在调用它的触发器的类型。 *trigger_output_parameters*为**char （10）** ，可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -52,15 +52,15 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**Del**|DELETE 触发器|  
 |NULL（默认值）||  
   
-`[ @fonpublisher = ] fonpublisher`指定执行存储过程的位置。 *fonpublisher*的值为**bit**, 默认值为0。 如果为 0，则在订阅服务器上执行；如果为 1，则在发布服务器上执行。  
+@no__t 指定执行存储过程的位置。 *fonpublisher*的值为**bit**，默认值为0。 如果为 0，则在订阅服务器上执行；如果为 1，则在发布服务器上执行。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 0 指示在即时更新触发器的上下文中未调用此存储过程。 1指示正在即时更新触发器的上下文中调用该触发器, 它是在中 *@trigger_op* 返回的触发器的类型。  
+ 0 指示在即时更新触发器的上下文中未调用此存储过程。 1指示正在即时更新触发器的上下文中调用该触发器，该触发器的类型为 *\@trigger_op*中返回的触发器的类型。  
   
 ## <a name="remarks"></a>备注  
  **sp_check_for_sync_trigger**用于快照复制和事务复制。  
   
- **sp_check_for_sync_trigger**用于在复制和用户定义的触发器之间进行协调。 此存储过程确定它是否正在复制触发器的上下文中被调用。 例如, 可以在用户定义的触发器的正文中调用过程**sp_check_for_sync_trigger** 。 如果**sp_check_for_sync_trigger**返回**0**, 则用户定义的触发器将继续进行处理。 如果**sp_check_for_sync_trigger**返回**1**, 则用户定义的触发器将退出。 这将确保当复制触发器更新表时不会激发用户定义触发器。  
+ **sp_check_for_sync_trigger**用于在复制和用户定义的触发器之间进行协调。 此存储过程确定它是否正在复制触发器的上下文中被调用。 例如，可以在用户定义的触发器的正文中调用过程**sp_check_for_sync_trigger** 。 如果**sp_check_for_sync_trigger**返回**0**，则用户定义的触发器将继续进行处理。 如果**sp_check_for_sync_trigger**返回**1**，则用户定义的触发器将退出。 这将确保当复制触发器更新表时不会激发用户定义触发器。  
   
 ## <a name="example"></a>示例  
  以下示例说明了可在订阅服务器表的触发器中使用的代码。  
@@ -74,7 +74,7 @@ RETURN
 ```  
   
 ## <a name="example"></a>示例  
- 还可以将代码添加到发布服务器上的表中的触发器;此代码类似, 但对**sp_check_for_sync_trigger**的调用包含附加参数。  
+ 还可以将代码添加到发布服务器上的表中的触发器;此代码类似，但对**sp_check_for_sync_trigger**的调用包含附加参数。  
   
 ```  
 DECLARE @retcode int, @trigger_op char(10), @table_id int, @fonpublisher int  

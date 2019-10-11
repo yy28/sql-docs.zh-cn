@@ -1,7 +1,7 @@
 ---
 title: 层次结构数据 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/03/2017
+ms.date: 10/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 018866c81a84455bd3480a523dbdc2fffaa538c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36fea2a22bddcf130725e6092314e00fbb0b6a8f
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035855"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974252"
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
 
@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>使用可序列化事务的示例  
- 该 **Org_BreadthFirst** 索引可确保确定 **@last_child** 使用范围查找。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 ID 的多个雇员，因此必须重新计算 **@last_child** 。 下面的代码使用可序列化事务和广度优先索引来计算新节点的值：  
+ 该 **Org_BreadthFirst** 索引可确保确定 **@last_child** 使用范围查找。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 ID 的多个雇员，因此必须重新计算 **@last_child** 。 以下代码计算可序列化事务中的新节点值：  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -343,9 +343,12 @@ DECLARE @last_child hierarchyid
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  
 BEGIN TRANSACTION   
   
-UPDATE Org_T2   
-SET @last_child = LastChild = EmployeeId.GetDescendant(LastChild,NULL)  
-WHERE EmployeeId = @mgrid  
+SELECT @last_child  =  EmployeeId.GetDescendant(LastChild,NULL)
+FROM Org_T2
+WHERE EmployeeId = @mgrid
+
+UPDATE Org_T2 SET LastChild = @last_child  WHERE EmployeeId = @mgrid
+
 INSERT Org_T2 (EmployeeId, EmployeeName)   
     VALUES(@last_child, @EmpName)  
 COMMIT  

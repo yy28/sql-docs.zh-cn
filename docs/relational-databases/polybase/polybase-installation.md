@@ -8,14 +8,14 @@ helpviewer_keywords:
 - PolyBase, installation
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 8416a144a6b7c0e34526af3111ab6b4aad343652
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 7823f9e76207802b7f05a21ccd11b5de1fa9d18d
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326179"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961969"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安装 PolyBase
 
@@ -155,7 +155,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 
 ## <a id="enable"></a> 启用 PolyBase
 
-安装完成后，必须启用 PolyBase 来获取其功能。 若要连接到 SQL Server 2019 CTP 2.0，必须在安装后启用 PolyBase。 使用以下 Transact-SQL 命令。
+安装完成后，必须启用 PolyBase 来获取其功能。 使用以下 Transact-SQL 命令。 在大数据群集安装过程中部署的 SQL 2019 实例默认启用此设置。
 
 
 ```sql

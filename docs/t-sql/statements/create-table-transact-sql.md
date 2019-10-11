@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8be2e837ff71237cf6d39f8593e8b852cc08ed2e
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 22a2009b4728cfd0e1fdf9eb1623a3fb43b74904
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653377"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680917"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -67,7 +67,7 @@ ms.locfileid: "69653377"
 ## <a name="simple-syntax"></a>简单语法
 
 ```
---Simple CREATE TABLE Syntax (common if not using options)
+-- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
     { database_name.schema_name.table_name. | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
@@ -77,7 +77,7 @@ CREATE TABLE
 ## <a name="full-syntax"></a>完整语法
 
 ```
---Disk-Based CREATE TABLE Syntax
+-- Disk-Based CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
@@ -265,7 +265,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```
 
 ```
---Memory optimized CREATE TABLE Syntax
+-- Memory optimized CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition>
@@ -345,43 +345,36 @@ column_name <data_type>
 
 ## <a name="arguments"></a>参数
 
-database_name       
-要在其中创建表的数据库的名称。 database_name 须指定现有数据库的名称  。 如果未指定，则 database_name 默认为当前数据库  。 当前连接的登录名必须与 database_name 所指定数据库中的一个现有用户 ID 关联，并且该用户 ID 必须具有 CREATE TABLE 权限  。
+database_name  要在其中创建表的数据库的名称。 database_name 须指定现有数据库的名称  。 如果未指定，则 database_name 默认为当前数据库  。 当前连接的登录名必须与 database_name 所指定数据库中的一个现有用户 ID 关联，并且该用户 ID 必须具有 CREATE TABLE 权限  。
 
-schema_name      
-新表所属架构的名称。
+schema_name  新表所属架构的名称。
 
-*table_name*    
-新表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。 除了本地临时表名（以单个数字符号 (#) 为前缀的名称）不能超过 116 个字符外，table_name 最多可包含 128 个字符  。
+table_name  新表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。 除了本地临时表名（以单个数字符号 (#) 为前缀的名称）不能超过 116 个字符外，table_name 最多可包含 128 个字符  。
 
-AS FileTable    
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。
+AS FileTable 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）  。
 
 将新表创建为 FileTable。 您无需指定列，因为 FileTable 具有固定架构。 有关详细信息，请参阅 [FileTables](../../relational-databases/blob/filetables-sql-server.md)。
 
-column_name        
-computed_column_expression      
-定义计算列的值的表达式。 计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 该列由同一表中的其他列通过表达式计算得到。 例如，计算列可以定义为 cost AS price \* qty    。表达式可以是非计算列的名称、常量、函数、变量以及通过一个或多个运算符连接的上述元素的任意组合。 表达式不能是子查询，也不能包含别名数据类型。
+column_name  
+computed_column_expression  定义计算列的值的表达式。 计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 该列由同一表中的其他列通过表达式计算得到。 例如，计算列可以定义为 cost AS price \* qty    。表达式可以是非计算列的名称、常量、函数、变量以及通过一个或多个运算符连接的上述元素的任意组合。 表达式不能是子查询，也不能包含别名数据类型。
 
 计算列可用于选择列表、WHERE 子句、ORDER BY 子句或任何可使用正则表达式的其他位置，但下列情况除外：
 
--  计算列必须标记为 PERSISTED，才能参与 FOREIGN KEY 或 CHECK 约束。
--  如果计算列的值由具有确定性的表达式定义，并且索引列中可使用计算结果的数据类型，则可将该列用作索引中的键列，或者用作 PRIMARY KEY 或 UNIQUE 约束的一部分。
+- 计算列必须标记为 PERSISTED，才能参与 FOREIGN KEY 或 CHECK 约束。
+- 如果计算列的值由具有确定性的表达式定义，并且索引列中可使用计算结果的数据类型，则可将该列用作索引中的键列，或者用作 PRIMARY KEY 或 UNIQUE 约束的一部分。
 
    例如，如果表中含有整数列 a 和 b，则可以对计算列 a+b 创建索引，但不能对计算列 a+DATEPART(dd, GETDATE()) 创建索引，因为在以后的调用中，其值可能发生改变     。
 
--  计算列不能作为 INSERT 或 UPDATE 语句的目标。
+- 计算列不能作为 INSERT 或 UPDATE 语句的目标。
 
 > [!NOTE]
 > 表中计算列所使用的列值因行而异，因此计算列的每一行可能有不同的值。
 
 计算列的为 Null 性是由[!INCLUDE[ssDE](../../includes/ssde-md.md)]根据使用的表达式自动确定的。 即使只有不可为空的列，大多数表达式的结果也认为是可为空的，因为可能的下溢或溢出也将生成 NULL 结果。 使用带 AllowsNull 属性的 `COLUMNPROPERTY` 函数以调查表中任何计算列的为 Null 性  。 通过使用 check_expression 常量指定 `ISNULL`（常量是替换所有 NULL 结果的非空值），可以将可为 Null 的表达式转换为不可为 Null 的表达式  。 对于基于公共语言运行时 (CLR) 用户定义类型表达式的计算列，需要对此类型有 REFERENCES 权限。
 
-PERSISTED    
-指定[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]将在表中物理存储计算值，并在计算列依赖的任何其他列发生更新时对这些计算值进行更新。 将计算列标记为 `PERSISTED`可以对具有确定性但不精确的计算列创建索引。 有关详细信息，请参阅 [计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。 必须将用作已分区表的分区依据列的任何计算列显式标记为 `PERSISTED`。 指定 `PERSISTED` 时，computed_column_expression 必须具有确定性  。
+PERSISTED 指定[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]将在表中物理存储计算值，并在计算列依赖的任何其他列发生更新时对这些计算值进行更新。 将计算列标记为 `PERSISTED`可以对具有确定性但不精确的计算列创建索引。 有关详细信息，请参阅 [计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。 必须将用作已分区表的分区依据列的任何计算列显式标记为 `PERSISTED`。 指定 `PERSISTED` 时，computed_column_expression 必须具有确定性  。
 
-ON { partition_scheme | filegroup | "default"    }     
-指定存储表的分区架构或文件组。 如果指定了 partition_scheme，则该表将成为已分区表，其分区存储在 partition_scheme 所指定的一个或多个文件组的集合中   。 如果指定了 filegroup，则该表将存储在已命名文件组中  。 数据库中必须存在该文件组。 如果指定了 "default"，或者根本未指定 ON，表则存储在默认文件组中  。 CREATE TABLE 中指定的表的存储机制以后不能进行更改。
+ON { partition_scheme | filegroup | "default" } 指定存储表的分区架构或文件组    。 如果指定了 partition_scheme，则该表将成为已分区表，其分区存储在 partition_scheme 所指定的一个或多个文件组的集合中   。 如果指定了 filegroup，则该表将存储在已命名文件组中  。 数据库中必须存在该文件组。 如果指定了 "default"，或者根本未指定 ON，表则存储在默认文件组中  。 CREATE TABLE 中指定的表的存储机制以后不能进行更改。
 
 ON {partition_scheme | filegroup | "default"} 也可以在 PRIMARY KEY 约束或 UNIQUE 约束中指定    。 这些约束会创建索引。 如果 filegroup 未指定，则索引会存储在已命名文件组中  。 如果指定了 "default"，或者根本未指定 ON，索引则将与表存储在同一文件组中  。 如果 `PRIMARY KEY` 或 `UNIQUE` 约束创建聚集索引，则表的数据页将与索引存储在同一文件组中。 如果指定了 `CLUSTERED` 或约束另外创建了聚集索引，并且指定的 partition_scheme 不同于表定义的 partition_scheme 或 filegroup 或相反，则只接受约束定义，而忽略其他定义    。
 
@@ -390,8 +383,7 @@ ON {partition_scheme | filegroup | "default"} 也可以在 PRIMARY KEY 约束或
 >
 > 在创建分区表后，请考虑将表的 `LOCK_ESCALATION` 选项设置为 `AUTO`。 这可通过将锁升级到分区 (HoBT) 级而不是表级来改善并发性。 有关详细信息，请参阅 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)。
 
-TEXTIMAGE_ON { filegroup| "default"   }    
-指示 text、ntext、image、xml、varchar(max)、nvarchar(max)、varbinary(max) 和 CLR 用户定义类型的列（包括几何图形和地理）存储在指定文件组        。
+TEXTIMAGE_ON { filegroup"default" } 指示 text、ntext、image、xml、varchar(max)、nvarchar(max)、varbinary(max) 和 CLR 用户定义类型的列（包括几何图形和地理）存储在指定文件组  |          。
 
 如果表中没有较大值列，则不允许使用 `TEXTIMAGE_ON`。 如果指定了 partition_scheme，则不能指定 `TEXTIMAGE_ON`  。 如果指定了 "default"，或者根本未指定 `TEXTIMAGE_ON`，较大值列则将存储在默认文件组中  。 以后不能对 `CREATE TABLE` 中指定的任何较大值列数据的存储进行更改。
 
@@ -935,10 +927,10 @@ HASH
 
 ```sql
 CREATE TABLE #MyTempTable (
-  col1 INT PRIMARY KEY
+    col1 INT PRIMARY KEY
 );
 
-INSERT INTO #MyTempTable 
+INSERT INTO #MyTempTable
 VALUES (1);
 ```
 
@@ -959,17 +951,17 @@ VALUES (1);
 ```sql
 CREATE PROCEDURE dbo.Test2
 AS
-    CREATE TABLE #t(x INT PRIMARY KEY);
+    CREATE TABLE #t (x INT PRIMARY KEY);
     INSERT INTO #t VALUES (2);
     SELECT Test2Col = x FROM #t;
 GO
 
 CREATE PROCEDURE dbo.Test1
 AS
-    CREATE TABLE #t(x INT PRIMARY KEY);
+    CREATE TABLE #t (x INT PRIMARY KEY);
     INSERT INTO #t VALUES (1);
     SELECT Test1Col = x FROM #t;
- EXEC Test2;
+    EXEC Test2;
 GO
 
 CREATE TABLE #t(x INT PRIMARY KEY);
@@ -1131,16 +1123,16 @@ Test1Col
 以下示例显示对 `EmployeeID` 表的 `Employee` 列具有聚集索引的 PRIMARY KEY 约束的列定义。 因为未指定约束名称，所以系统提供了约束名称。
 
 ```sql
-CREATE TABLE dbo.Employee (EmployeeID int
-PRIMARY KEY CLUSTERED);
+CREATE TABLE dbo.Employee (
+    EmployeeID INT PRIMARY KEY CLUSTERED
+);
 ```
 
 ### <a name="b-using-foreign-key-constraints"></a>B. 使用 FOREIGN KEY 约束
 FOREIGN KEY 约束用于引用其他表。 FOREIGN KEY 可以是单列键或多列键。 以下示例显示 `SalesOrderHeader` 表上引用 `SalesPerson` 表的单列 FOREIGN KEY 约束。 对于单列 FOREIGN KEY 约束，只需要 REFERENCES 子句。
 
 ```sql
-SalesPersonID int NULL
-REFERENCES SalesPerson(SalesPersonID)
+SalesPersonID INT NULL REFERENCES SalesPerson(SalesPersonID)
 ```
 
 也可以显式使用 FOREIGN KEY 子句并复述列特性。 请注意，在这两个表中列名不必相同。
@@ -1152,16 +1144,16 @@ FOREIGN KEY (SalesPersonID) REFERENCES SalesPerson(SalesPersonID)
 多列键约束作为表约束创建。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，`SpecialOfferProduct` 表包含多列 PRIMARY KEY。 以下示例显示如何从其他表中引用此键（可选择显式约束名）。
 
 ```sql
-CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail FOREIGN KEY
- (ProductID, SpecialOfferID)
-REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
+CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail
+    FOREIGN KEY (ProductID, SpecialOfferID)
+    REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
 ```
 
 ### <a name="c-using-unique-constraints"></a>C. 使用 UNIQUE 约束
 UNIQUE 约束用于强制非主键列的唯一性。 以下示例强制的限制是，`Name` 表的 `Product` 列必须唯一。
 
 ```sql
-Name nvarchar(100) NOT NULL
+Name NVARCHAR(100) NOT NULL
 UNIQUE NONCLUSTERED
 ```
 
@@ -1175,7 +1167,7 @@ DEFAULT 'New Position - title not formalized yet'
 除了常量以外，DEFAULT 定义还可以包含函数。 使用以下示例获取输入项的当前日期。
 
 ```sql
-DEFAULT (getdate())
+DEFAULT (GETDATE())
 ```
 
 niladic 函数扫描也可改善数据完整性。 若要跟踪插入行的用户，请使用 USER 的 niladic 函数。 不要用括号将 niladic 函数括起来。
@@ -1194,16 +1186,19 @@ CHECK (CreditRating >= 1 and CreditRating <= 5)
 此示例显示一个命名约束，它对于在表的列中输入的字符数据有模式限制。
 
 ```sql
-CONSTRAINT CK_emp_id CHECK (emp_id LIKE
-'[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
-OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]')
+CONSTRAINT CK_emp_id CHECK (
+    emp_id LIKE '[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
+    OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
+)
 ```
 
 此示例指定这些值必须在特定的列表中或遵循指定的模式。
 
 ```sql
-CHECK (emp_id IN ('1389', '0736', '0877', '1622', '1756')
-OR emp_id LIKE '99[0-9][0-9]')
+CHECK (
+    emp_id IN ('1389', '0736', '0877', '1622', '1756')
+    OR emp_id LIKE '99[0-9][0-9]'
+)
 ```
 
 ### <a name="f-showing-the-complete-table-definition"></a>F. 显示完整的表定义
@@ -1223,9 +1218,9 @@ CREATE TABLE dbo.PurchaseOrderDetail
     RejectedQty float NULL,
     DueDate datetime NULL,
     rowguid uniqueidentifier ROWGUIDCOL NOT NULL
-        CONSTRAINT DF_PurchaseOrderDetail_rowguid DEFAULT (newid()),
+        CONSTRAINT DF_PurchaseOrderDetail_rowguid DEFAULT (NEWID()),
     ModifiedDate datetime NOT NULL
-        CONSTRAINT DF_PurchaseOrderDetail_ModifiedDate DEFAULT (getdate()),
+        CONSTRAINT DF_PurchaseOrderDetail_ModifiedDate DEFAULT (GETDATE()),
     LineTotal AS ((UnitPrice*OrderQty)),
     StockedQty AS ((ReceivedQty-RejectedQty)),
     CONSTRAINT PK_PurchaseOrderDetail_PurchaseOrderID_LineNumber
@@ -1240,8 +1235,11 @@ ON PRIMARY;
 
 ```sql
 CREATE TABLE HumanResources.EmployeeResumes
-   (LName nvarchar(25), FName nvarchar(25),
-    Resume xml( DOCUMENT HumanResources.HRResumeSchemaCollection) );
+(
+    LName nvarchar(25),
+    FName nvarchar(25),
+    Resume xml(DOCUMENT HumanResources.HRResumeSchemaCollection)
+);
 ```
 
 ### <a name="h-creating-a-partitioned-table"></a>H. 创建已分区表
@@ -1249,16 +1247,16 @@ CREATE TABLE HumanResources.EmployeeResumes
 
 ```sql
 CREATE PARTITION FUNCTION myRangePF1 (int)
-    AS RANGE LEFT FOR VALUES (1, 100, 1000) ;
+    AS RANGE LEFT FOR VALUES (1, 100, 1000);
 GO
 
 CREATE PARTITION SCHEME myRangePS1
     AS PARTITION myRangePF1
-    TO (test1fg, test2fg, test3fg, test4fg) ;
+    TO (test1fg, test2fg, test3fg, test4fg);
 GO  
   
 CREATE TABLE PartitionTable (col1 int, col2 char(10))
-    ON myRangePS1 (col1) ;
+    ON myRangePS1 (col1);
 GO
 ```
 
@@ -1274,11 +1272,13 @@ GO
 
 ```sql
 CREATE TABLE dbo.Globally_Unique_Data
-    (guid uniqueidentifier
+(
+    GUID UNIQUEIDENTIFIER
         CONSTRAINT Guid_Default DEFAULT
         NEWSEQUENTIALID() ROWGUIDCOL,
-    Employee_Name varchar(60)
-    CONSTRAINT Guid_PK PRIMARY KEY (guid) );
+    Employee_Name VARCHAR(60)
+    CONSTRAINT Guid_PK PRIMARY KEY (GUID)
+);
 ```
 
 ### <a name="j-using-an-expression-for-a-computed-column"></a>J. 对计算列使用表达式
@@ -1286,7 +1286,11 @@ CREATE TABLE dbo.Globally_Unique_Data
 
 ```sql
 CREATE TABLE dbo.mytable
-    ( low int, high int, myavg AS (low + high)/2 ) ;
+(
+    low INT,
+    high INT,
+    myavg AS (low + high)/2
+);
 ```
 
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>K. 基于用户定义类型列创建计算列
@@ -1294,7 +1298,10 @@ CREATE TABLE dbo.mytable
 
 ```sql
 CREATE TABLE UDTypeTable
-    ( u utf8string, ustr AS u.ToString() PERSISTED ) ;
+(
+    u UTF8STRING,
+    ustr AS u.ToString() PERSISTED
+);
 ```
 
 ### <a name="l-using-the-user_name-function-for-a-computed-column"></a>L. 对计算列使用 USER_NAME 函数
@@ -1302,7 +1309,11 @@ CREATE TABLE UDTypeTable
 
 ```sql
 CREATE TABLE dbo.mylogintable
-    ( date_in datetime, user_id int, myuser_name AS USER_NAME() ) ;
+(
+    date_in DATETIME,
+    user_id INT,
+    myuser_name AS USER_NAME()
+);
 ```
 
 ### <a name="m-creating-a-table-that-has-a-filestream-column"></a>M. 创建具有 FILESTREAM 列的表
@@ -1310,12 +1321,11 @@ CREATE TABLE dbo.mylogintable
 
 ```sql
 CREATE TABLE dbo.EmployeePhoto
-    (
-     EmployeeId int NOT NULL PRIMARY KEY
-    ,Photo varbinary(max) FILESTREAM NULL
-    ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL
-        UNIQUE DEFAULT NEWID()
-    );
+(
+    EmployeeId INT NOT NULL PRIMARY KEY,
+    Photo VARBINARY(MAX) FILESTREAM NULL,
+    MyRowGuidColumn UNIQUEIDENTIFIER NOT NULL ROWGUIDCOL UNIQUE DEFAULT NEWID()
+);
 ```
 
 ### <a name="n-creating-a-table-that-uses-row-compression"></a>N. 创建使用行压缩的表
@@ -1323,7 +1333,10 @@ CREATE TABLE dbo.EmployeePhoto
 
 ```sql
 CREATE TABLE dbo.T1
-(c1 int, c2 nvarchar(200) )
+(
+    c1 INT,
+    c2 NVARCHAR(200)
+)
 WITH (DATA_COMPRESSION = ROW);
 ```
 
@@ -1336,18 +1349,22 @@ WITH (DATA_COMPRESSION = ROW);
 
 ```sql
 CREATE TABLE dbo.T1
-    (c1 int PRIMARY KEY,
-    c2 varchar(50) SPARSE NULL ) ;
+(
+    c1 INT PRIMARY KEY,
+    c2 VARCHAR(50) SPARSE NULL
+);
 ```
 
 此示例创建一个表，该表具有两个稀疏列和一个名 `CSet` 的列集。
 
 ```sql
 CREATE TABLE T1
-    (c1 int PRIMARY KEY,
-    c2 varchar(50) SPARSE NULL,
-    c3 int SPARSE NULL,
-    CSet XML COLUMN_SET FOR ALL_SPARSE_COLUMNS ) ;
+(
+    c1 INT PRIMARY KEY,
+    c2 VARCHAR(50) SPARSE NULL,
+    c3 INT SPARSE NULL,
+    CSet XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
+);
 ```
 
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>P. 创建由系统版本控制的、基于磁盘的临时表
@@ -1360,13 +1377,13 @@ CREATE TABLE T1
 ```sql
 CREATE TABLE Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY CLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH (SYSTEM_VERSIONING = ON);
 ```
@@ -1374,31 +1391,29 @@ WITH (SYSTEM_VERSIONING = ON);
 此例表示创建链接到现有历史记录表的新临时表。
 
 ```sql
---Existing table
+-- Existing table
 CREATE TABLE Department_History
 (
-    DepartmentNumber char(10) NOT NULL,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 NOT NULL,
-    SysEndTime datetime2 NOT NULL
+    DepartmentNumber CHAR(10) NOT NULL,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 NOT NULL,
+    SysEndTime DATETIME2 NOT NULL
 );
---Temporal table
+
+-- Temporal table
 CREATE TABLE Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY CLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
-WITH
-    (SYSTEM_VERSIONING = ON
-        (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON )
-    );
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON));
 ```
 
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>Q. 创建系统版本控制的内存优化临时表
@@ -1409,53 +1424,56 @@ WITH
 此例表示创建链接到新历史记录表的新临时表。
 
 ```sql
-CREATE SCHEMA History
+CREATE SCHEMA History;
 GO
+
 CREATE TABLE dbo.Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY NONCLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY NONCLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH
-    (
-        MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA,
-            SYSTEM_VERSIONING = ON ( HISTORY_TABLE = History.DepartmentHistory )
-    );
+(
+    MEMORY_OPTIMIZED = ON,
+    DURABILITY = SCHEMA_AND_DATA,
+    SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.DepartmentHistory)
+);
 ```
 
 此例表示创建链接到现有历史记录表的新临时表。
 
 ```sql
---Existing table
+-- Existing table
 CREATE TABLE Department_History
 (
-    DepartmentNumber char(10) NOT NULL,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 NOT NULL,
-    SysEndTime datetime2 NOT NULL
+    DepartmentNumber CHAR(10) NOT NULL,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 NOT NULL,
+    SysEndTime DATETIME2 NOT NULL
 );
---Temporal table
+
+-- Temporal table
 CREATE TABLE Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY CLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH
-    (SYSTEM_VERSIONING = ON
-        (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON )
-    );
+(
+    SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON)
+);
 ```
 
 ### <a name="r-creating-a-table-with-encrypted-columns"></a>R. 创建具有加密列的表
@@ -1463,21 +1481,19 @@ WITH
 
 ```sql
 CREATE TABLE Customers (
-    CustName nvarchar(60)
-        ENCRYPTED WITH
-            (
-             COLUMN_ENCRYPTION_KEY = MyCEK,
-             ENCRYPTION_TYPE = RANDOMIZED,
-             ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
-            ),
-    SSN varchar(11) COLLATE Latin1_General_BIN2
-        ENCRYPTED WITH
-            (
-             COLUMN_ENCRYPTION_KEY = MyCEK,
-             ENCRYPTION_TYPE = DETERMINISTIC ,
-             ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
-            ),
-    Age int NULL
+    CustName NVARCHAR(60)
+        ENCRYPTED WITH (
+            COLUMN_ENCRYPTION_KEY = MyCEK,
+            ENCRYPTION_TYPE = RANDOMIZED,
+            ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
+        ),
+    SSN VARCHAR(11) COLLATE Latin1_General_BIN2
+        ENCRYPTED WITH (
+            COLUMN_ENCRYPTION_KEY = MyCEK,
+            ENCRYPTION_TYPE = DETERMINISTIC ,
+            ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
+        ),
+    Age INT NULL
 );
 ```
 
@@ -1487,7 +1503,7 @@ CREATE TABLE Customers (
 ```sql
 CREATE TABLE t1
 (
-    c1 int,
+    c1 INT,
     index IX1 (c1) WHERE c1 > 0
 );
 ```
@@ -1496,22 +1512,22 @@ CREATE TABLE t1
 下面演示如何为基于磁盘的表使用 NONCLUSTERED 内联：
 
 ```sql
-CREATE TABLE t1 
+CREATE TABLE t1
 (
-    c1 int, 
+    c1 INT,
     INDEX ix_1 NONCLUSTERED (c1)
 );
 
-CREATE TABLE t2 
+CREATE TABLE t2
 (
-    c1 int, 
-    c2 int INDEX ix_1 NONCLUSTERED
+    c1 INT,
+    c2 INT INDEX ix_1 NONCLUSTERED
 );
 
-CREATE TABLE t3 
+CREATE TABLE t3
 (
-    c1 int, 
-    c2 int, 
+    c1 INT,
+    c2 INT,
     INDEX ix_1 NONCLUSTERED (c1,c2)
 );
 ```
@@ -1522,8 +1538,8 @@ CREATE TABLE t3
 ```sql
 CREATE TABLE #tmp
 (
-    c1 int,
-    c2 int,
+    c1 INT,
+    c2 INT,
     PRIMARY KEY CLUSTERED ([c1], [c2])
 );
 GO
@@ -1545,13 +1561,14 @@ Could not create constraint or index. See previous errors.
 
 ```sql
 CREATE TABLE ##test (
-    a int, 
-    b int
+    a INT,
+    b INT
 );
-INSERT INTO ##test 
-VALUES (1,1);
 
---Obtain object ID for temp table ##test
+INSERT INTO ##test
+VALUES (1, 1);
+
+-- Obtain object ID for temp table ##test
 SELECT OBJECT_ID('tempdb.dbo.##test') AS 'Object ID';
 ```
 
@@ -1562,26 +1579,27 @@ SELECT OBJECT_ID('tempdb.dbo.##test') AS 'Object ID';
 ```
 
 获取 tempdb (2) 中给定对象 ID 1253579504 的全局临时表名称
+
 ```sql
-SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
+SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504;
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
-```
+```sql
 ##test
 ```
 
 会话 B 连接到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1，并能访问会话 A 创建的 ##test 表
 
 ```sql
-SELECT * FROM ##test
+SELECT * FROM ##test;
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
-```
-1,1
+```sql
+1, 1
 ```
 
 会话 C 连接到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb2 中的另一个数据库，并希望访问在 testdb1 中创建的 ##test 表。 此选择因全局临时表的数据库作用域而失败
@@ -1589,6 +1607,7 @@ SELECT * FROM ##test
 ```sql
 SELECT * FROM ##test
 ```
+
 这将生成以下错误：
 
 ```
@@ -1599,26 +1618,26 @@ Invalid object name '##test'
 从当前用户数据库 testdb1 寻址 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tempdb 中的系统对象
 
 ```sql
-SELECT * FROM tempdb.sys.objects
-SELECT * FROM tempdb.sys.columns
-SELECT * FROM tempdb.sys.database_files
+SELECT * FROM tempdb.sys.objects;
+SELECT * FROM tempdb.sys.columns;
+SELECT * FROM tempdb.sys.database_files;
 ```
 
 ## <a name="see-also"></a>另请参阅
-[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)    
-[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)    
-[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)    
-[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)    
-[数据类型](../../t-sql/data-types/data-types-transact-sql.md)    
-[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)    
-[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)    
-[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)    
-[DROP TABLE](../../t-sql/statements/drop-table-transact-sql.md)    
-[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)    
-[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)    
-[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)    
-[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)    
-[sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)    
-[sp_helpconstraint](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)    
-[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)    
-[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
+[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
+[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)
+[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
+[Data Types](../../t-sql/data-types/data-types-transact-sql.md)
+[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)
+[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)
+[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)
+[DROP TABLE](../../t-sql/statements/drop-table-transact-sql.md)
+[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)
+[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)
+[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
+[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
+[sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
+[sp_helpconstraint](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)
+[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)

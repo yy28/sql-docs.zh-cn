@@ -20,19 +20,19 @@ ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.openlocfilehash: dbd8e8898bf6453e456156e7c6c070a4867761b9
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923777"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261556"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回有关在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中正在执行的每个请求的信息。  
-  
+返回有关在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行的每个请求的信息。 有关请求的详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。
+   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|与此请求相关的会话的 ID。 不可为 null。|  
@@ -94,17 +94,17 @@ ms.locfileid: "71923777"
 |parallel_worker_count |**int** |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 如果这是并行查询，则为保留的并行工作线程数。  |  
 |external_script_request_id |**uniqueidentifier** |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 与当前请求关联的外部脚本请求 ID。 |  
 |is_resumable |**bit** |**适用范围**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示请求是否为可恢复索引操作。 |  
-|page_resource |**binary(8)** |适用于：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果`wait_resource`列包含页，则为页资源的8字节的十六进制表示形式。 有关详细信息，请参阅[fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
+|page_resource |**binary(8)** |适用于：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果 @no__t 0 列包含页，则为页资源的8字节的十六进制表示形式。 有关详细信息，请参阅[fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
 |page_server_reads|**bigint**|**适用对象**：Azure SQL Database 超大规模<br /><br /> 此请求执行的页服务器读取次数。 不可为 null。|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>备注 
 若要执行在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的代码（例如，扩展存储过程和分布式查询），则必须在非抢先计划程序的控制范围以外执行该线程。 若要这样做，工作线程将切换到抢先模式。 由此动态管理视图返回的时间值不包括在抢先模式下花费的时间。
 
-在[行模式下](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)执行并行请求时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，会分配一个工作线程来协调负责完成分配给它们的任务的工作线程。 在此 DMV 中，只有协调器线程对该请求可见。 **不**会为协调器线程更新列**读取**、**写入**、 **logical_reads**和**row_count** 。 **仅**为协调器线程更新列**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**和**granted_query_memory** 。 有关详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。
+在[行模式](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)下执行并行请求时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配一个工作线程来协调负责完成分配给它们的任务的工作线程。 在此 DMV 中，只有协调器线程对该请求可见。 **不**会为协调器线程更新列**读取**、**写入**、 **logical_reads**和**row_count** 。 **仅**为协调器线程更新列**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**和**granted_query_memory** 。 有关详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。
 
 ## <a name="permissions"></a>权限
-如果用户对服务器`VIEW SERVER STATE`具有权限，则用户将看到该实例上的所有正在执行的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会话; 否则，用户将只看到当前会话。 `VIEW SERVER STATE`不能在中[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]授予`sys.dm_exec_requests` ，因此始终限制为当前连接。
+如果用户对服务器具有 @no__t 的权限，则该用户将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例上看到所有正在执行的会话;否则，用户将只看到当前会话。 无法在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 中授予 @no__t，因此 `sys.dm_exec_requests` 始终限制为当前连接。
   
 ## <a name="examples"></a>示例  
   
@@ -184,11 +184,12 @@ GO
 ```
 
 ## <a name="see-also"></a>请参阅
-
-- [动态管理视图和函数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [与执行相关的动态管理视图和函数](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
-- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
-- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
-- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
-- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+[动态管理视图和函数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)    
+[与执行相关的动态管理视图和函数](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)     
+[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)    
+[sys.databases _os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)    
+[sys.databases _os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)    
+[sys.databases _exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
+[sys.databases _exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      

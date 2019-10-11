@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aaf2c556af354cf9b928cf9f2cb945e1ab6737a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6444a2a91a17f4f24ff9b70c713c22c7c894435
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126624"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952193"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>设置跟踪筛选器 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68126624"
   
 ### <a name="to-set-a-trace-filter"></a>设置跟踪筛选器  
   
-1.  如果跟踪已在运行，请在执行 **sp_trace_setstatus** 时通过指定 **@status = 0** 停止跟踪。  
+1.  如果跟踪已在运行，请通过指定 `@status = 0` 执行 sp_trace_setstatus  来停止跟踪。  
   
 2.  执行 **sp_trace_setfilter** 以配置有关检索跟踪事件信息的类型。  
 

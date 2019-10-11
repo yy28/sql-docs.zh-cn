@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: fffd79a18ca839816105242c054e74031828274f
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326023"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961962"
 ---
 # <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>适用于 Azure Data Studio 的 SQL Server 2019 扩展（预览版）
 
-适用于 Azure Data Studio 的 SQL Server 2019 扩展（预览版）为支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供对新功能和工具的预览支持。 这包括 [SQL Server 2019 大数据群集](../big-data-cluster/big-data-cluster-overview.md)的预览支持，集成的[笔记本体验](../big-data-cluster/notebooks-guidance.md)和 PolyBase 的[“创建外部表”向导](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)。
+适用于 Azure Data Studio 的 SQL Server 2019 扩展（预览版）为支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供对新功能和工具的预览支持。 支持包括 [SQL Server 2019 大数据群集](../big-data-cluster/big-data-cluster-overview.md)的预览支持、集成的[笔记本体验](../big-data-cluster/notebooks-guidance.md)和 PolyBase 的[“创建外部表”向导](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)。
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>安装 SQL Server 2019 扩展（预览版）
 
@@ -82,15 +82,15 @@ ms.locfileid: "71326023"
 
 ## <a name="release-notes-v0102"></a>发行说明 (v 0.10.2)
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 支持
-对 SQL Server 2019 的支持已更新。 在连接到 SQL Server 大数据群集实例时，资源管理器树中会显示一个新的“数据服务”文件夹  。 其中包含一些操作的启动点，这些操作包括针对连接打开新 Notebook、提交 Spark 作业以及使用 HDFS 等。 请注意，对于某些操作，例如通过 HDFS 文件/文件夹创建外部数据，需要安装 SQL Server 2019（预览版）扩展   。
+对 SQL Server 2019 的支持已更新。 在连接到 SQL Server 大数据群集实例后，资源管理器树中会显示一个新的“数据服务”文件夹  。 该文件夹包含一些操作的启动点，这些操作包括针对连接打开新 Notebook、提交 Spark 作业以及使用 HDFS 等。 对于某些操作，例如通过 HDFS 文件/文件夹创建外部数据，需要安装 SQL Server 2019（预览版）扩展   。
 
 ### <a name="notebook-support"></a>Notebook 支持
 我们对此版本中的 Notebook 用户界面进行了较大程度的更新。 我们的目标是使用户能够轻松读取与之共享的 Notebook。 这意味着删除单元格周围的所有边框（已选中或鼠标悬停的单元格除外）、添加悬停支持以便于无需选择单元格即可轻松实施单元格级操作、通过添加执行计数和一个动态“停止运行”按钮等内容来明确执行状态  。 我们还为后列操作添加了键盘快捷方式：新建笔记本 (`Ctrl+Shift+N`)、运行单元 (`F5`)、新代码单元 (`Ctrl+Shift+C`)、新文本单元 (`Ctrl+Shift+T`)     。 展望未来，我们的目标是通过快捷方式实现所有关键操作，你只需告诉我们还缺少哪些快捷方式！
 
 其他改进和修复包括：
-* SQL Server 2019（预览版）扩展现会提示用户为 Python 依赖项选取安装目录  。 它也不再在 `.vsix file` 中包含 Python，从而减少了整体扩展大小。 需要 Python 依赖项来支持 Spark 和 Python3 内核，因此需要安装此扩展以使用这些内核。
+* SQL Server 2019（预览版）扩展现会提示用户为 Python 依赖项选取安装目录  。 它也不再在 `.vsix file` 中包含 Python，从而减少了整体扩展大小。 Python 依赖项支持 Spark 和 Python3 内核。
 * 新增对后列操作的支持：从命令行启动新笔记本。 使用参数 `--command=notebook.command.new --server=myservername` 启动时应会打开一个新笔记本并连接到此服务器。
-* 对单元格中代码长度较长的笔记本进行了性能修复。 如果代码单元格超过 250 行，会添加一个滚动条。
+* 对单元格中代码长度较长的笔记本进行了性能修复。 如果代码单元格超过 250 行，则会添加一个滚动条。
 * 改进了 .ipynb 文件支持。 现在支持版本 3 或更高版本。 请注意，保存的文件将更新为版本 4 或更高版本。
 * 由于内置的 Notebook 查看器稳定，因此删除了 `notebook.enabled` 用户设置
 * 现在支持高对比度主题，并在此前提下对对象布局进行了一些修复。

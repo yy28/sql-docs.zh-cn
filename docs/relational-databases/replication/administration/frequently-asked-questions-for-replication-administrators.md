@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 8641b1466a4f836c32259ac4f46022d43f8fe216
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 7553b584a37685fd7fb9455423e55c27c8343e72
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174249"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710393"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>复制管理员常见问题
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "71174249"
   
 -   指定重新初始化订阅时不应删除对象。 重新初始化之前，进行以下两项操作之一：  
   
-    -   执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 或 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将参数 \@property 的值指定为“pre_creation_cmd”(sp_changearticle) 或“pre_creation_command”( sp_changemergearticle)，并将参数 \@value 的值指定为“none”、“delete”或“truncate”     。  
+    -   执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 或 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将参数 `@property` 的值指定为“pre_creation_cmd”(sp_changearticle) 或“pre_creation_command”(sp_changemergearticle)，并将参数 `@value` 的值指定为“none”、“delete”或“truncate”   。  
   
     -   在“项目属性- \<项目>”对话框的“目标对象”部分中，选择“保留现有对象保持不变”和“删除数据”。    **如果项目有行筛选器，则仅删除与该筛选器匹配的数据。** 或者为“名称已被使用时的操作”选择“截断现有对象中的所有数据”。   有关访问此对话框的详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   

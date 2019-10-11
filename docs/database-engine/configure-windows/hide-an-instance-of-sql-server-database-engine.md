@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3ac7c2a6cd6b1f714e4dd1aad2c04ef32854c4f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28d7a01ce3c11ce332de7e7af70ff0c57746e840
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998072"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682090"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隐藏 SQL Server 数据库引擎的实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,10 @@ ms.locfileid: "67998072"
   有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
 ### <a name="clustering"></a>群集  
- 如果你隐藏群集命名实例，则群集服务可能无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这将导致群集实例的“IsAlive”检查失败，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将进入离线状态  。 我们建议在群集实例的所有节点中创建别名，以反映你为该实例配置的静态端口。  
+ 如果隐藏群集实例或可用性组名称，则群集服务可能无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这将导致群集实例的“IsAlive”检查失败，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将进入离线状态  。 
+ 
+若要避免此情况发生，建议在群集实例的所有节点或承载可用性组副本的所有实例中创建别名，以反映你为该实例配置的静态端口。  例如，在具有两个副本的可用性组上，在节点 1 上为节点 2 实例创建一个别名，如 `node-two\instancename`。 在节点 2 上，创建一个名为 `node-one\instancename` 的别名。 成功故障转移需要别名。 
+ 
  有关详细信息，请参阅[创建或删除供客户端使用的服务器别名（SQL Server 配置管理器）](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)。  
   
  如果隐藏群集命名实例，当 **LastConnect** 注册表项 (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) 具有的端口与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在侦听的端口不同时，群集服务可能无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果群集服务无法建立与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的连接，则你可能会看到类似于以下内容的错误：  

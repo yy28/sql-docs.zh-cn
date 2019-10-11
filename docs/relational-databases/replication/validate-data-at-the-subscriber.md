@@ -17,12 +17,12 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769290"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710768"
 ---
 # <a name="validate-replicated-data"></a>验证已复制的数据
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "68769290"
 
 #### <a name="all-articles"></a>所有项目 
   
-1.  在发布服务器上，对发布数据库执行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 指定 **@publication** 并为 **@rowcount_only** 指定以下值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 指定 `@publication`并为 `@rowcount_only` 指定以下值之一：  
   
     -   **1** - 只检查行计数（默认值）    
     -   **2** - 行计数和二进制校验和。  
@@ -120,7 +120,7 @@ ms.locfileid: "68769290"
   
 #### <a name="single-article"></a>单个项目  
   
-1.  在发布服务器上，对发布数据库执行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication** 、为 **@article** 指定项目名称并为 **@rowcount_only** 指定以下值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 `@publication`，为 `@article` 指定项目名称，并为 `@rowcount_only` 指定以下值之一：  
   
     -   **1** - 只检查行计数（默认值）    
     -   **2** - 行计数和二进制校验和。  
@@ -134,9 +134,9 @@ ms.locfileid: "68769290"
 #### <a name="single-subscriber"></a>单个订阅服务器 
   
 1.  在发布服务器的发布数据库中，使用 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md) 打开一个显式事务。    
-2.  在发布服务器上，对发布数据库执行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)。 为 **@publication** 指定发布，为 **@subscriber** 指定订阅服务器的名称，并为 **@destination_db** 。    
+2.  在发布服务器上，对发布数据库执行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)。 为 `@publication` 指定发布，为 `@subscriber` 指定订阅服务器的名称，并为 `@destination_db` 指定订阅数据库的名称。    
 3.  （可选）对每个要验证的订阅都重复步骤 2。    
-4.  在发布服务器上，对发布数据库执行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication** 、为 **@article** 指定项目名称并为 **@rowcount_only** 指定以下值之一：    
+4.  在发布服务器上，对发布数据库执行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 `@publication`，为 `@article` 指定项目名称，并为 `@rowcount_only` 指定以下值之一：    
     -   **1** - 只检查行计数（默认值）    
     -   **2** - 行计数和二进制校验和。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "68769290"
     3.  查看 **“同步历史记录”** 选项卡 **“所选会话的最后消息”** 文本区域中的信息。  
 
 ### <a name="using-transact-sql"></a>使用 Transact-SQL
-1.  在发布服务器上，对发布数据库执行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)。 指定 **@publication** 指定发布，为 **@subscriber** 指定订阅服务器的名称，为 **@subscriber_db** 指定项目名称并为 **@level** 指定以下值之一：   
+1.  在发布服务器上，对发布数据库执行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)。 指定 `@publication`，为 `@subscriber` 指定订阅服务器的名称，为 `@subscriber_db` 指定订阅数据库的名称，并为 `@level` 指定以下值之一：   
     -   **1** - 只验证行计数。    
     -   **3** - 行计数二进制校验和验证。  
   
@@ -241,7 +241,7 @@ ms.locfileid: "68769290"
     3.  查看 **“同步历史记录”** 选项卡 **“所选会话的最后消息”** 文本区域中的信息。 
   
 ### <a name="using-transact-sql"></a>使用 Transact-SQL
-1.  在发布服务器上，对发布数据库执行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 指定 **@publication** 并为 **@level** 指定以下值之一：    
+1.  在发布服务器上，对发布数据库执行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 指定 `@publication`并为 `@level` 指定以下值之一：    
     -   **1** - 只验证行计数。   
     -   **3** - 行计数二进制校验和验证。  
   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6585b6a50701ac4583bdbb02d9bd2529ee08f01
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653359"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680832"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -223,8 +223,8 @@ WHEN MATCHED THEN \<merge_matched>
 MERGE 语句最多可以有两个 WHEN MATCHED 子句。 如果指定了两个子句，第一个子句必须随附 AND \<search_condition> 子句。 对于任何给定行，只有在未应用第一个 WHEN MATCHED 子句时，才会应用第二个 WHEN MATCHED 子句。 如果有两个 WHEN MATCHED 子句，一个必须指定 UPDATE 操作，另一个必须指定 DELETE 操作。 如果 \<merge_matched> 子句中指定的是 UPDATE，且根据 \<merge_search_condition> \<table_source> 中有多行与 target_table  中的一行匹配，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 便会返回错误。 MERGE 语句无法多次更新同一行，也无法更新和删除同一行。  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-指定针对 \<table_source> ON \<merge_search_condition> 返回且不与 target_table  中的行匹配、但满足其他搜索条件（若有）的所有行，将一行插入 target_table  中。 要插入的值是由 \<merge_not_matched> 子句指定的。 MERGE 语句只能有一个 WHEN NOT MATCHED 子句。  
-  
+指定针对 \<table_source> ON \<merge_search_condition> 返回且不与 target_table  中的行匹配、但满足其他搜索条件（若有）的所有行，将一行插入 target_table  中。 要插入的值是由 \<merge_not_matched> 子句指定的。 MERGE 语句只能有一个 WHEN NOT MATCHED [ BY TARGET ] 子句。
+
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 指定根据 \<merge_matched> 子句更新或删除 *target_table 中所有不与 \<table_source> ON \<merge_search_condition> 返回的行匹配、但满足其他所有搜索条件的行。  
   

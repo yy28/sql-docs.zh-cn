@@ -17,12 +17,12 @@ ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cfc7873669eb49d3fc3e160ff33f56371517e6c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d7311d16a888b0adfbb2952c6f6027cdcf08fa00
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768112"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710271"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>在同步期间执行脚本（复制 Transact-SQL 编程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68768112"
   
 2.  将此脚本文件保存到此发布的快照代理能访问的位置。  
   
-3.  在发布服务器上，对发布数据库执行 [sp_addscriptexec (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md)。 指定 **@publication** ，为 **@scriptfile** 指定步骤 2 中创建的具有完整 UNC 路径的脚本文件名称，并为 **@skiperror** 指定下列值之一：  
+3.  在发布服务器上，对发布数据库执行 [sp_addscriptexec (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md)。 指定 `@publication`，为 `@scriptfile` 指定步骤 2 中创建的具有完整 UNC 路径的脚本文件名称，并为 `@skiperror` 指定下列值之一：  
   
     -   **0** - 如果遇到错误，代理将停止执行脚本。  
   

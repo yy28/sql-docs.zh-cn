@@ -14,12 +14,12 @@ ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b0a8e8280db176c66e25ff97e1cc86f153286fa9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9a2b5eda749329e405a1d5d2aff1af6a6e0bb3fe
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769820"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710856"
 ---
 # <a name="replicate-schema-changes"></a>复制架构更改
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,27 +73,27 @@ ms.locfileid: "68769820"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>创建不复制架构更改的快照发布或事务发布  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)，并将 **@replicate_ddl** 的值指定为 **0**。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)，并将 `@replicate_ddl` 的值指定为 `0`。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>创建不复制架构更改的合并发布  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)，并将 **@replicate_ddl** 的值指定为 **0**。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)，并将 `@replicate_ddl` 的值指定为 `0`。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布暂时禁用复制架构更改  
   
-1.  对于包含架构更改复制的发布，执行 [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，将 **@property** 的值指定为 **replicate_ddl** 并将 **@value** 的值指定为 **0**。  
+1.  对于包含架构更改复制的发布，执行 [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，将 `@property` 的值指定为 `replicate_ddl` 并将 `@value` 的值指定为 `0`。  
   
 2.  对已发布对象执行 DDL 命令。  
   
-3.  （可选）通过执行 [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 并将 **@property** 的值指定为 **replicate_ddl** 且将 **@value** 的值指定为 **1** 来重新启用架构更改复制。  
+3.  （可选）通过执行 [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)将 `@property` 的值指定为 `replicate_ddl` 并将 `@value` 的值指定为 `1` 来重新启用架构更改复制。  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-merge-publication"></a>为合并发布暂时禁用复制架构更改  
   
-1.  对于包含架构更改复制的发布，执行 [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，将 **@property** 的值指定为 **replicate_ddl** 并将 **@value** 的值指定为 **0**。  
+1.  对于包含架构更改复制的发布，执行 [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，将 `@property` 的值指定为 `replicate_ddl` 并将 `@value` 的值指定为 `0`。  
   
 2.  对已发布对象执行 DDL 命令。  
   
-3.  （可选）通过执行 [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 并将 **@property** 的值指定为 **replicate_ddl** 且将 **@value** 的值指定为 **1** 来重新启用架构更改复制。  
+3.  （可选）通过执行 [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，将 `@property` 的值指定为 `replicate_ddl` 并将 `@value` 的值指定为 `1` 来重新启用架构更改复制。  
   
 ## <a name="see-also"></a>另请参阅  
  [对发布数据库进行架构更改](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)   

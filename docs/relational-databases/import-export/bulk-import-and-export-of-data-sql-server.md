@@ -1,7 +1,7 @@
 ---
 title: 大容量导入和导出数据 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/20/2017
+ms.date: 09/25/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,47 +25,52 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35ea6c3e64329f005d6ef97b23699b2dda43ed56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 462df4c5acf09d5de57a237c8fd68e5a394fb0dc
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035839"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680808"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>大容量导入和导出数据 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表大容量导出数据（“大容量数据”  ）以及将大容量数据导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或未分区的视图。 
-  
--   “大容量导出”  是指将数据从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表复制到数据文件。
 
--   “大容量导入”  是指将数据从数据文件加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。 例如，您可以将数据从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 应用程序导出到数据文件，然后将这些数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
- 
-##  <a name="MethodsForBuliIE"></a> 批量导入和导出数据的方法  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表大容量导出数据以及将数据大容量导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或未分区的视图。 可以使用下列基本方法：  
- 
-  
-|方法|描述|导入数据|导出数据|  
-|------------|-----------------|------------------|------------------|  
-|[bcp 实用工具](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|大容量导出数据和大容量导入数据并生成格式化文件的命令行实用工具 (Bcp.exe)。|是|是|  
-|[BULK INSERT 语句](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|将数据直接从数据文件导入数据库表或未分区视图的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|是|否|  
-|[INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|通过在 INSERT 语句中指定 OPENROWSET(BULK…) 函数来选择数据，从而使用 OPENROWSET 大容量行集提供程序将数据大容量导入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句。|是|否| 
-|[SQL Server 导入和导出向导](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|此向导可创建简单包，以便导入和导出介于多种常用数据格式（包括数据库、电子表格和文本文件）的数据。|是|是|  
-  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表大容量导出数据（“大容量数据”  ）以及将大容量数据导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或未分区的视图。
+
+- “大容量导出”  是指将数据从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表复制到数据文件。
+- “大容量导入”  是指将数据从数据文件加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。 例如，您可以将数据从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 应用程序导出到数据文件，然后将这些数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。
+
+## <a name="MethodsForBuliIE"></a> 批量导入和导出数据的方法
+
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表大容量导出数据以及将数据大容量导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或未分区的视图。 可以使用下列基本方法：
+
+|方法|描述|导入数据|导出数据|
+|------------|-----------------|------------------|------------------|
+|[bcp 实用工具](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|大容量导出数据和大容量导入数据并生成格式化文件的命令行实用工具 (Bcp.exe)。|是|是|
+|[BULK INSERT 语句](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|将数据直接从数据文件导入数据库表或未分区视图的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|是|否|
+|[INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|通过在 INSERT 语句中指定 OPENROWSET(BULK…) 函数来选择数据，从而使用 OPENROWSET 大容量行集提供程序将数据大容量导入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句。|是|否|
+|[SQL Server 导入和导出向导](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|此向导可创建简单包，以便导入和导出介于多种常用数据格式（包括数据库、电子表格和文本文件）的数据。|是|是|
+
 > [!IMPORTANT]
-> SQL Server 大容量导入操作不支持逗号分隔值 (CSV) 文件。 但是，在某些情况下，CSV 文件可在将数据批量导入 SQL Server 时用作数据文件。 请注意，CSV 文件的字段终止符不一定是逗号。 有关详细信息，请参阅 [准备用于批量导出或导入的数据 (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。
+> 有关将逗号分隔值 (CSV) 文件用作将数据批量导入到 SQL Server 的数据文件的规则，请参阅[准备用于批量导出或导入的数据 (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。
 
 > [!NOTE]
-> Azure SQL 数据库和 Azure SQL DW 仅支持使用 bcp 实用工具导入和导出带分隔符的文件。
-  
-##  <a name="FFs"></a> 格式化文件  
- [bcp 实用工具](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 以及 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 都支持使用专门的“格式化文件”  来存储数据文件中每个字段的格式信息。 格式化文件还可以包含相应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表的有关信息。 格式化文件可以用于提供从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例大容量导出数据和向其中大容量导入数据时所需的所有格式信息。  
-  
- 格式化文件提供了一种解释导入期间数据文件中数据的格式以及设置导出期间数据文件中数据格式的灵活方式。 这种灵活性使得解释数据时无需编写专用代码，也无需为满足 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或外部应用程序的特殊需要而重新设置数据的格式。 例如，如果将要加载的数据大容量导出到某个需要逗号分隔值的应用程序，则可以使用格式化文件将逗号作为字段终止符插入导出的数据中。  
-  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持两种格式化文件类型：XML 格式化文件和非 XML 格式化文件。  
-  
- [bcp 实用工具](../../tools/bcp-utility.md) 是唯一能够生成格式化文件的工具。 有关详细信息，请参阅 [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)。 有关格式化文件的详细信息，请参阅[导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
-  
+> Azure SQL DW 仅支持使用 bcp 实用工具导入和导出带分隔符的文件。
+
+## <a name="FFs"></a> 格式化文件
+
+[bcp 实用工具](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 以及 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 都支持使用专门的“格式化文件”  来存储数据文件中每个字段的格式信息。 格式化文件还可以包含相应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表的有关信息。 格式化文件可以用于提供从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例大容量导出数据和向其中大容量导入数据时所需的所有格式信息。
+
+> [!IMPORTANT]
+> 不能使用 BCP 将数据从 Azure blob 存储导入，也不能将数据从 Azure blob 存储导出到 Azure SQL 数据库。 使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 从 Azure blob 存储导入数据或将数据导出到 Azure blob 存储。
+
+格式化文件提供了一种解释导入期间数据文件中数据的格式以及设置导出期间数据文件中数据格式的灵活方式。 这种灵活性使得解释数据时无需编写专用代码，也无需为满足 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或外部应用程序的特殊需要而重新设置数据的格式。 例如，如果将要加载的数据大容量导出到某个需要逗号分隔值的应用程序，则可以使用格式化文件将逗号作为字段终止符插入导出的数据中。
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持两种格式化文件类型：XML 格式化文件和非 XML 格式化文件。
+
+[bcp 实用工具](../../tools/bcp-utility.md) 是唯一能够生成格式化文件的工具。 有关详细信息，请参阅 [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)。 有关格式化文件的详细信息，请参阅[导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。
+
 > [!NOTE]
 > 如果在大容量导出或导入操作期间未提供格式化文件，您可以在命令行处覆盖默认格式。
 
@@ -77,15 +82,12 @@ ms.locfileid: "68035839"
 |[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)|
 |[大容量导入数据时保留标识值 (SQL Server)](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)|
 |[用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)<br />&emsp;&#9679;&emsp;[创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件批量导入数据 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过表列 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过数据字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件将表列映射到数据文件字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)|
- 
-  
-## <a name="more-information"></a>详细信息  
- [在大容量导入中按最小方式记录日志的前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
- [批量导入和导出 XML 文档的示例 (SQL Server)](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)   
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)   
- [将数据库复制到其他服务器](../../relational-databases/databases/copy-databases-to-other-servers.md)   
- [对 XML 数据执行大容量加载 (SQLXML 4.0)](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)   
- [执行大容量复制操作](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)   
 
-  
-  
+## <a name="more-information"></a>详细信息
+
+- [在批量导入中按最小方式记录日志的前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)
+- [批量导入和导出 XML 文档的示例 (SQL Server)](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)
+- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)
+- [将数据库复制到其他服务器](../../relational-databases/databases/copy-databases-to-other-servers.md)
+- [对 XML 数据执行大容量加载 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)
+- [执行大容量复制操作](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)

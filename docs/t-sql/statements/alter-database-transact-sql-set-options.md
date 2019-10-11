@@ -1,6 +1,6 @@
 ---
 title: ALTER DATABASE SET 选项 (Transact-SQL) | Microsoft Docs
-description: 了解如何在 SQL Server 和 Azure SQL 数据库中设置自动优化、加密和查询存储等数据库选项
+description: 了解如何在 SQL Server 和 Azure SQL 数据库中设置自动优化、加密和查询存储等数据库选项。
 ms.custom: ''
 ms.date: 09/19/2019
 ms.prod: sql
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - offline database state [SQL Server]
 - snapshot isolation framework option
 - checksums [SQL Server]
-- Automatic Tuning
+- Automatic tuning
 - query plan regression correction
 - auto_create_statistics
 - auto_update_statistics
@@ -30,24 +30,24 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: dc330893a5857062161c45fc6775d6f26140ee11
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: 9f1aefd6b05e5bace4bfc296c14c881645030f5e
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227181"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952753"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
 设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的数据库选项。 有关其他 ALTER DATABASE 选项，请参阅 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。
 
-单击以下选项卡之一，了解所使用的特定 SQL 版本的语法、参数、注解、权限和示例。
+选择以下选项卡之一，了解所使用的特定 SQL 版本的语法、参数、注解、权限和示例。
 
 有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
-## <a name="click-a-product"></a>单击一个产品！
+## <a name="select-a-product"></a>选择一个产品
 
-在下一行中，单击你感兴趣的产品名称。 单击时此网页上的此位置会显示适合你单击的任何产品的不同内容。
+在下一行中，选择你感兴趣的产品名称。 这样做会在此网页上的此位置显示适合你所选择的任何产品的不同内容。
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -63,7 +63,7 @@ ms.locfileid: "71227181"
 数据库范围配置用于在单个数据库级别设置多个数据库配置。 有关详细信息，请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
 
 > [!NOTE]
-> 可以使用 [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) 来为当前会话配置很多数据库 SET 选项，当它们连接时通常通过应用程序来配置。 会话级 SET 选项覆盖 **ALTER DATABASE SET** 值。 下面所述的数据库选项是可以为未明确提供其他 SET 选项值的会话设置的值。
+> 可以使用 [SET 语句](../../t-sql/statements/set-statements-transact-sql.md) 来为当前会话配置很多数据库 SET 选项，当它们连接时通常通过应用程序来配置。 会话级 SET 选项覆盖 ALTER DATABASE SET 值  。 下面各节中所述的数据库选项是你可以为未明确提供其他 SET 选项值的会话设置的值。
 
 ## <a name="syntax"></a>语法
 
@@ -303,7 +303,7 @@ CURRENT
 \<accelerated_database_recovery> ::=         
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
 
-按数据库启用[加速数据库恢复](../../relational-databases/accelerated-database-recovery-management.md) (ADR)。 默认情况下，[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中的 ADR 为“OFF”  。 使用此语法，可选择为永久版本存储数据 (PVS) 指定特定的文件组。 如果未指定文件组，则 PVS 将存储在 PRIMARY 文件组中。 有关示例和详细信息，请参阅[加速数据库恢复](../../relational-databases/accelerated-database-recovery-management.md)。
+按数据库启用[加速数据库恢复](../../relational-databases/accelerated-database-recovery-management.md) (ADR)。 默认情况下，[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中的 ADR 设置为 OFF。 通过使用此语法，可选择为永久版本存储 (PVS) 数据指定特定的文件组。 如果未指定文件组，则 PVS 将存储在 PRIMARY 文件组中。 有关示例和详细信息，请参阅[加速数据库恢复](../../relational-databases/accelerated-database-recovery-management.md)。
 
 **\<auto_option> ::=**        
 
@@ -313,18 +313,18 @@ CURRENT
 ON        
 在最后一个用户退出后，数据库完全关闭，其资源得到释放。
 
-当用户尝试再次使用该数据库时，该数据库将自动重新打开。 例如，当用户通过发出 `USE database_name` 语句尝试使用该数据库时就是如此。 在 AUTO_CLOSE 设置为 ON 时，数据库可以完全关闭。 如果是这样，则直到用户在下次 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 重启时尝试使用数据库，该数据库才会重新打开。
+当用户尝试再次使用该数据库时，该数据库将自动重新打开。 例如，用户发出 `USE database_name` 语句时，就会发生这种重新打开行为。 在 AUTO_CLOSE 设置为 ON 时，数据库可以完全关闭。 如果是这样，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 下次重新启动时，数据库在用户尝试使用数据库之前不会重新打开。
 
 OFF        
 在最后一个用户退出后，数据库仍然保持打开状态。
 
-AUTO_CLOSE 选项允许将数据库文件作为常规文件进行管理，因此，该选项对于桌面数据库很有用。 它们可以移动、复制以制作备份，或者甚至通过电子邮件发送给其他用户。 AUTO_CLOSE 进程为异步进程；反复打开和关闭数据库不会降低性能。
+AUTO_CLOSE 选项允许将数据库文件作为常规文件进行管理，因此，该选项对于桌面数据库很有用。 它们可以移动、复制以制作备份，甚至可以通过电子邮件发送给其他用户。 AUTO_CLOSE 进程为异步进程；反复打开和关闭数据库不会降低性能。
 
 > [!NOTE]
 > AUTO_CLOSE 选项在包含的数据库或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中不可用。
 > 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_auto_close_on` 列或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsAutoClose` 属性来确定此选项的状态。
 >
-> 当 AUTO_CLOSE 为 ON 时，由于该数据库不可用于检索数据，因此 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的某些列和 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数将返回 NULL。 若要解决此问题，请执行 USE 语句打开数据库。
+> 当 AUTO_CLOSE 设置为 ON 时，由于该数据库不可用于检索数据，因此 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的某些列和 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数将返回 NULL。 若要解决此问题，请运行 USE 语句打开数据库。
 >
 > 数据库镜像要求将 AUTO_CLOSE 设置为 OFF。
 
@@ -334,10 +334,10 @@ AUTO_CLOSE 选项允许将数据库文件作为常规文件进行管理，因此
 ON        
 查询优化器根据需要在查询谓词中的单列上创建统计信息，以便改进查询计划和查询性能。 在查询优化器编译查询时创建这些单列统计信息。 这些单列统计信息只在尚不是现有统计信息对象的第一列的列上创建。
 
-默认值为 ON  。 建议您对于大多数数据库使用默认设置。
+默认设置为 ON。 建议您对于大多数数据库使用默认设置。
 
 OFF        
-查询优化器在编译查询时不会在查询谓词中的单列上创建统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
+查询优化器在编译查询时不在查询谓词中的单列上创建统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
 
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_auto_create_stats_on` 列来确定此选项的状态。 还可通过查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsAutoCreateStatistics` 属性来确定状态。
 
@@ -346,14 +346,14 @@ OFF
 INCREMENTAL = ON | OFF         
 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-将 AUTO_CREATE_STATISTICS 设置为 ON，并将 INCREMENTAL 设置为 ON。 只要支持增量统计信息，此设置便会自动创建增量统计信息。 默认值为 OFF  。 有关详细信息，请参阅 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)。
+将 AUTO_CREATE_STATISTICS 设置为 ON，并将 INCREMENTAL 设置为 ON。 只要支持增量统计信息，就会将自动创建的统计信息设置为增量统计信息。 默认值为 OFF。 有关详细信息，请参阅 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)。
 
 <a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF } ON         
 数据库文件是定期收缩的候选项。
 
-数据文件和日志文件都可以自动收缩。 只有在将数据库设置为 SIMPLE 恢复模式时，或备份事务日志时，AUTO_SHRINK 才可减小事务日志的大小。 当设置为 OFF 时，在定期检查未使用空间的过程中，数据库文件不自动收缩。
+数据文件和日志文件都可以自动收缩。 只有在将数据库设置为 SIMPLE 恢复模式时，或备份事务日志时，AUTO_SHRINK 才可减小事务日志的大小。 将 AUTO_SHRINK 设置为 OFF 时，在定期检查未使用空间的过程中，数据库文件不自动收缩。
 
-当文件中超过百分之二十五的部分包含未使用的空间时，AUTO_SHRINK 选项将导致收缩文件。 该选项会导致文件收缩为两种大小之一。 它会收缩为其中较大的大小：
+当文件中超过百分之二十五的部分包含未使用的空间时，AUTO_SHRINK 选项将导致收缩文件。 它将文件缩小为两个大小之一（以较大者为准）：
 
 - 其中 25% 的文件不包含任何内容时的大小
 - 文件创建时的大小
@@ -372,16 +372,16 @@ OFF
 ON        
 指定在统计信息由查询使用并且可能过期时，查询优化器更新统计信息。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。
 
-查询优化器在编译查询和运行缓存查询计划前，检查是否存在过期的统计信息。 查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 查询优化器在编译查询之前确定此信息。 在执行缓存查询计划前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。
+查询优化器在编译查询和运行缓存查询计划前，检查是否存在过期的统计信息。 查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 查询优化器在编译查询之前确定此信息。 在运行缓存查询计划前，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。
 
 AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。 此选项也适用于筛选的统计信息。
 
-默认值为 ON  。 建议您对于大多数数据库使用默认设置。
+默认值为 ON。 建议您对于大多数数据库使用默认设置。
 
 使用 AUTO_UPDATE_STATISTICS_ASYNC 选项可以指定统计信息是同步更新还是异步更新。
 
 OFF        
-指定在统计信息由查询使用时，查询优化器不更新统计信息。 查询优化器在统计信息可能过期时，也不会更新统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
+指定在查询使用统计信息时，查询优化器不更新统计信息。 查询优化器在统计信息可能过期时，也不会更新统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
 
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_auto_update_stats_on` 列来确定此选项的状态。 还可通过查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsAutoUpdateStatistics` 属性来确定状态。
 
@@ -393,7 +393,7 @@ ON
 
 除非已将 AUTO_UPDATE_STATISTICS 设置为 ON，否则将此选项设置为 ON 不会产生任何影响。
 
-默认情况下，AUTO_UPDATE_STATISTICS_ASYNC 选项设置为 OFF，并且查询优化器以同步方式更新统计信息  。
+默认情况下，AUTO_UPDATE_STATISTICS_ASYNC 选项为 OFF，并且查询优化器以同步方式更新统计信息。
 
 OFF        
 指定针对 AUTO_UPDATE_STATISTICS 选项的统计信息更新是同步的。 查询优化器在编译查询前等待统计信息更新完成。
@@ -408,16 +408,16 @@ OFF
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始）
 
-启用或禁用`FORCE_LAST_GOOD_PLAN` [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)选项。
+启用或禁用 `FORCE_LAST_GOOD_PLAN` [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)选项。
 
 FORCE_LAST_GOOD_PLAN = { ON | OFF }         
 ON        
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在新查询计划导致性能回归的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查询中自动强制执行上一个已知完好的计划。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]通过该强制计划持续监视 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查询的查询性能。
 
-如果性能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将继续使用上一个已知完好的计划。 如果未检测到性能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将生成新的查询计划。 如果查询存储未启用或查询存储未处于读写模式，该语句将失败  。
+如果性能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将继续使用上一个已知完好的计划。 如果未检测到性能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将生成新的查询计划。 如果查询存储未启用或者查询存储不处于读写模式，该语句将失败  。
 
 OFF        
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]报告由 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 视图中的查询计划更改引起的潜在查询性能回归。 但是，不会自动应用这些建议。 用户可以通过应用视图中显示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 脚本来监视正在应用的建议和修复已识别的问题。 默认值为 OFF  。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]报告由 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 视图中的查询计划更改引起的潜在查询性能回归。 但是，不会自动应用这些建议。 用户可以通过应用视图中显示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 脚本来监视正在应用的建议和修复已识别的问题。 默认值为 OFF。
 
 **\<change_tracking_option> ::=**         
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
@@ -505,7 +505,7 @@ ON
 OFF        
 不维护相关性统计信息。
 
-若要将 DATE_CORRELATION_OPTIMIZATION 设置为 ON，则除了执行 ALTER DATABASE 语句的连接以外，该数据库必须没有其他活动连接。 以后会支持多个连接。
+若要将 DATE_CORRELATION_OPTIMIZATION 设置为 ON，则除执行 ALTER DATABASE 语句的连接以外，该数据库还必须没有其他活动连接。 以后会支持多个连接。
 
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_date_correlation_on` 列确定此选项的当前设置。
 
@@ -530,7 +530,7 @@ RESUME
 
 有关数据加密的详细信息，请参阅[透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption.md)和[借助 Azure SQL 数据库实现透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。
 
-在数据库级别启用加密时，所有文件组都将进行加密。 任何新的文件组都将继承加密的属性。 如果数据库中的任何文件组设置为 **READ ONLY**，则数据库加密操作将失败。
+在数据库级别启用加密时，所有文件组都将进行加密。 任何新的文件组都将继承加密的属性。 如果数据库中的任何文件组设置为 READ ONLY，则数据库加密操作将失败。
 
 可以通过使用 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 动态管理视图来查看数据库的加密状态和加密扫描的状态。
 
@@ -540,7 +540,7 @@ RESUME
 控制数据库的状态。
 
 OFFLINE        
-数据库已关闭、完全关闭并标记为脱机。 数据库脱机时，不能对其进行修改。
+数据库已关闭、完全关闭并标记为脱机。 数据库脱机时，不能进行修改。
 
 ONLINE        
 该数据库已打开且可用。
@@ -582,7 +582,7 @@ SINGLE_USER 适用范围  ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 
 即使设置此选项的用户已注销，数据库仍保持 SINGLE_USER 模式。这时，其他用户（但只能是一个）可以连接到数据库。
 
-在将数据库设置为 SINGLE_USER 之前，应验证 AUTO_UPDATE_STATISTICS_ASYNC 选项是否设置为 OFF。 设置为 ON 时，用于更新统计信息的后台线程将与数据库建立连接，您将无法以单用户模式访问数据库。 若要查看此选项的状态，请查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_auto_update_stats_async_on` 列。 如果此选项设置为 ON，请执行以下任务：
+在将数据库设置为 SINGLE_USER 之前，应验证 AUTO_UPDATE_STATISTICS_ASYNC 选项是否设置为 OFF。 设置为 ON 时，用于更新统计信息的后台线程将与数据库建立连接，你将无法以单用户模式访问数据库。 若要查看此选项的状态，请查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_auto_update_stats_async_on` 列。 如果此选项设置为 ON，请执行以下任务：
 
 1. 将 AUTO_UPDATE_STATISTICS_ASYNC 设置为 OFF。
 
@@ -711,7 +711,7 @@ OFF
 ON        
 数据库可以使用混合区创建初始页面。
 
-对于所有系统数据库，此设置均为 ON  。 **tempdb** 是唯一支持 OFF 的系统数据库。
+对于所有系统数据库，此设置均为 ON。 **tempdb** 是唯一支持 OFF 的系统数据库。
 
 **\<PARAMETERIZATION_option> ::=**        
 
@@ -736,7 +736,7 @@ ON
 启用查询存储。
 
 OFF        
-禁用查询存储。 默认值为 OFF  。
+禁用查询存储。 OFF 是默认值。
 
 CLEAR        
 删除查询存储的内容。
@@ -759,6 +759,10 @@ DATA_FLUSH_INTERVAL_SECONDS
 MAX_STORAGE_SIZE_MB        
 确定分配给查询存储的空间。 MAX_STORAGE_SIZE_MB 的类型为 **bigint**。
 
+> [!NOTE]
+> 没有严格强制执行 MAX_STORAGE_SIZE_MB 限制。 仅当查询存储将数据写入磁盘时才检查存储大小。 此间隔由 DATA_FLUSH_INTERVAL_SECONDS 选项或 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查询存储对话框选项“数据刷新时间间隔”设置  。 间隔时间默认值为 900 秒（或 15 分钟）。       
+> 如果查询存储已违反存储大小检查之间的 MAX_STORAGE_SIZE_MB，则它将转换为只读模式。 如果启用了“SIZE_BASED_CLEANUP_MODE”，则也会触发强制实施 MAX_STORAGE_SIZE_MB 清理机制。 
+
 INTERVAL_LENGTH_MINUTES        
 确定运行时执行统计数据聚合到查询存储中的时间间隔。 为了优化空间使用情况，将在固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 此固定时间窗口使用 INTERVAL_LENGTH_MINUTES 参数进行配置。 INTERVAL_LENGTH_MINUTES 的类型为 bigint  。
 
@@ -766,7 +770,7 @@ SIZE_BASED_CLEANUP_MODE { AUTO | OFF }
 控制当数据总量接近最大大小时是否自动激活清除。
 
 AUTO        
-AUTO 当磁盘上的大小达到 max_storage_size_mb 的 90% 时，将自动激活基于大小的清除  。 基于大小的清除首先会删除成本最低和最旧的查询。 它在达到 max_storage_size_mb  的大约 80% 时停止。此值是默认配置值。
+当磁盘上的大小达到 MAX_STORAGE_SIZE_MB 的 90% 时，将自动激活基于大小的清除  。 基于大小的清除首先会删除成本最低和最旧的查询。 它在达到 MAX_STORAGE_SIZE_MB 的大约 80% 时停止。此值是默认配置值  。
 
 OFF        
 不自动激活基于大小的清除。
@@ -841,7 +845,7 @@ ON
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以检测不完整页。
 
 OFF        
-[!INCLUDE[ssDE](../../includes/ssde-md.md)] 无法检测不完整页。
+[!INCLUDE[ssDE](../../includes/ssde-md.md)] 不能检测不完整页。
 
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除语法结构 TORN_PAGE_DETECTION ON | OFF。 请避免在新的开发工作中使用此语法结构，并计划修改当前使用此语法结构的应用程序。 请改用 PAGE_VERIFY 选项。
@@ -909,7 +913,7 @@ FEDERATED_SERVICE_ACCOUNT = { ON | OFF }
 - 远程 Azure 服务器已配置为支持 Azure Active Directory 身份验证。
 - 用来运行 SQL Server 实例的服务帐户在远程 Azure 服务器上必须配置为 `dbmanager` 或 `sysadmin` 帐户。
 
-如果指定联合服务帐户为 ON，则不能同时指定 CREDENTIAL 参数。 如果指定 OFF，则提供 CREDENTIAL 参数。
+如果将联合服务帐户指定为“ON”，则不能同时指定 CREDENTIAL 参数。 如果指定 OFF，则提供 CREDENTIAL 参数。
 
 OFF        
 为数据库禁用 Stretch Database。 有关详细信息，请参阅 [禁用 Stretch Database 并恢复远程数据](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。
@@ -974,12 +978,12 @@ OFF
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }        
 ON        
-在数据库级别启用已提交读快照选项。 启用该选项后，DML 语句将开始生成行版本，即使没有事务使用快照隔离也是如此。 一旦启用此选项，指定已提交读隔离级别的事务将使用行版本控制而不是锁定。 当事务在已提交读隔离级别运行时，所有的语句都将数据快照视为位于语句的开头。
+在数据库级别启用已提交读快照选项。 启用该选项后，DML 语句将开始生成行版本，即使没有事务使用快照隔离也是如此。 一旦启用此选项，指定已提交读隔离级别的事务将使用行版本控制而不是锁定。 当事务在 READ COMMITTED 隔离级别运行时，所有的语句都将数据快照视为位于语句的开头。
 
 OFF        
 在数据库级别禁用已提交读快照选项。 指定 READ COMMITTED 隔离级别的事务使用锁定。
 
-若要将 READ_COMMITTED_SNAPSHOT 设置为 ON 或 OFF，不应存在任何活动的数据库连接，执行 ALTER DATABASE 命令的连接除外。 但是，数据库不必一定要处于单用户模式下。 当数据库处于 OFFLINE 状态时，不能更改此选项的状态。
+若要将 READ_COMMITTED_SNAPSHOT 设置为 ON 或 OFF，不应存在任何活动的数据库连接，运行 ALTER DATABASE 命令的连接除外。 但是，数据库不必一定要处于单用户模式下。 当数据库处于 OFFLINE 状态时，不能更改此选项的状态。
 
 如果在 READ_ONLY 数据库中设置 READ_COMMITTED_SNAPSHOT，则以后将数据库设置为 READ_WRITE 时，仍将保留该设置。
 
@@ -997,11 +1001,11 @@ ON
 当事务隔离级别设置为任何低于 SNAPSHOT 的隔离级别时，内存优化表中所有经过解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作将在 SNAPSHOT 隔离下运行。 低于快照的隔离级别示例有 READ COMMITTED 或 READ UNCOMMITTED。 无论是在会话级别显式设置事务隔离级别还是隐式使用默认值，这些操作都会运行。
 
 OFF        
-请勿提升内存优化表中经过解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作的事务隔离级别。
+不提升内存优化表中经过解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作的事务隔离级别。
 
 如果数据库处于 OFFLINE 状态，不能更改 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 的状态。
 
-默认选项为 OFF  。
+默认选项为 OFF。
 
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_memory_optimized_elevate_to_snapshot_on` 列确定此选项的当前设置。
 
@@ -1090,7 +1094,7 @@ COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 CONCAT_NULL_YIELDS_NULL { ON | OFF }         
 ON        
-当串联运算的两个操作数中任意一个为 NULL 时，结果也为 NULL。 例如，将字符串“This is”和 NULL 串联将得到 NULL 值，而不是值“This is”。
+当串联运算的两个操作数中任意一个为 NULL 时，结果也为 NULL。 例如，将字符串“This is”和 NULL 串联将返回 NULL 值，而不是“This is”值。
 
 OFF        
 Null 值被视为空字符串进行处理。
@@ -1098,7 +1102,7 @@ Null 值被视为空字符串进行处理。
 > [重要] 创建或更改计算列或索引视图的索引时，CONCAT_NULL_YIELDS_NULL 必须设置为 ON。
 
 > [!IMPORTANT]
-> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，CONCAT_NULL_YIELDS_NULL 将始终为 ON，而且将该选项显式设置为 OFF 的任何应用程序都将产生一个错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。
+> 在即将推出的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，CONCAT_NULL_YIELDS_NULL 将始终为 ON，而且将该选项显式设置为 OFF 的任何应用程序都将触发错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。
 
 连接级设置（使用 SET 语句设置）覆盖 CONCAT_NULL_YIELDS_NULL 的默认数据库设置。 默认情况下，当连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，ODBC 和 OLE DB 客户端发出连接级别 SET 语句，将会话的 CONCAT_NULL_YIELDS_NULL 设置为 ON。 有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。
 
@@ -1126,7 +1130,7 @@ ON
 当表达式中发生精度损失时生成错误。
 
 OFF        
-精度的降低不会生成错误消息，结果将根据存储结果的列或变量的精度进行舍入。
+精度的降低不会生成错误消息，会根据存储结果的列或变量的精度，将结果舍入。
 
 > [!IMPORTANT]
 > 创建或更改计算列或索引视图的索引时，NUMERIC_ROUNDABORT 必须设置为 OFF。
@@ -1167,19 +1171,19 @@ MINUTES
 指定当数据库从一种状态转换到另一种状态时，何时回滚未完成的事务。 如果终止子句被忽略，则当数据库中存在任何锁时，ALTER DATABASE 语句将无限期等待。 只能指定一条终止子句，而且该子句应跟在 SET 子句后面。
 
 > [!NOTE]
-> 并非所有数据库选项都使用 WITH \<termination> 子句。 有关详细信息，请参阅本文的“备注”部分中的[“设置选项”](#SettingOptions)下面的表。
+> 并非所有数据库选项都使用 WITH \<termination> 子句。 有关详细信息，请参阅本文的“备注”部分中的[设置选项](#SettingOptions)下面的表。
 
 ROLLBACK AFTER *number* [SECONDS] | ROLLBACK IMMEDIATE        
 
 指定是在指定秒数之后回滚还是立即回滚。 number 的类型为 int   。
 
 NO_WAIT        
-指定如果请求的数据库状态或选项更改无法立即完成，则请求失败。 立即完成意味着不会等待事务自己提交或回滚。
+指定：如果请求的数据库状态或选项更改无法立即完成，则请求失败。 立即完成意味着不会等待事务自己提交或回滚。
 
 ## <a name="SettingOptions"></a> 设置选项
 若要检索数据库选项的当前设置，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
-设置数据库选项后，修改将立即生效。
+设置数据库选项后，新的设置将立即生效。
 
 可以为所有新建数据库更改任意一个数据库选项的默认值。 为此，请更改 model 数据库中的相应数据库选项。
 
@@ -1243,7 +1247,7 @@ GO
 ```
 
 ### <a name="b-setting-the-database-to-read_only"></a>B. 将数据库设置为 READ_ONLY
-将数据库或文件组的状态改为 READ_ONLY 或 READ_WRITE 需要具有数据库的独占访问权。 下面的示例将数据库设置为 `SINGLE_USER` 模式，以获得独占访问权。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY` ，并将对数据库的访问权返回给所有用户。
+将数据库或文件组的状态改为 READ_ONLY 或 READ_WRITE 需要具有数据库的专有访问权限。 下面的示例将数据库设置为 `SINGLE_USER` 模式，以获得独占访问权。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY` ，并将对数据库的访问权返回给所有用户。
 
 > [!NOTE]
 > 此示例在第一个 `WITH ROLLBACK IMMEDIATE` 语句中使用终止选项 `ALTER DATABASE` 。 所有未完成事务都将被回滚，并将立刻断开 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的所有其他连接。
@@ -1409,7 +1413,7 @@ SET QUERY_STORE = ON
 兼容性级别是 `SET` 选项，但在 [ALTER DATABASE 兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)中进行了说明。
 
 > [!NOTE]
-> 可以使用 [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) 来为当前会话配置很多数据库 SET 选项，当它们连接时通常通过应用程序来配置。 会话级 SET 选项覆盖 **ALTER DATABASE SET** 值。 下面所述的数据库选项是可以为未明确提供其他 SET 选项值的会话设置的值。
+> 可以使用 [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) 来为当前会话配置很多数据库 SET 选项，当它们连接时通常通过应用程序来配置。 会话级 SET 选项覆盖 ALTER DATABASE SET 值  。 下面各节中所述的数据库选项是你可以为未明确提供其他 SET 选项值的会话设置的值。
 
 ## <a name="syntax"></a>语法
 
@@ -1562,11 +1566,11 @@ ON
 默认值为 ON。 建议您对于大多数数据库使用默认设置。
 
 OFF        
-查询优化器在编译查询时不会在查询谓词中的单列上创建统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
+查询优化器在编译查询时不在查询谓词中的单列上创建统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
 
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_auto_create_stats_on` 列来确定此选项的状态。 还可通过查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsAutoCreateStatistics` 属性来确定状态。
 
-有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md#statistics-options)中的统计信息选项部分。
+有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md#statistics-options)中的“统计信息选项”部分。
 
 INCREMENTAL = ON | OFF         
 将 AUTO_CREATE_STATISTICS 设置为 ON，并将 INCREMENTAL 设置为 ON。 只要支持增量统计信息，此设置便会自动创建增量统计信息。 默认值为 OFF。 有关详细信息，请参阅 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)。
@@ -1590,13 +1594,13 @@ OFF
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_auto_shrink_on` 列来确定此选项的状态。 还可通过查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsAutoShrink` 属性来确定状态。
 
 > [!NOTE]
-> AUTO_SHRINK 选项在包含数据库中不可用。
+> AUTO_SHRINK 选项在包含的数据库中不可用。
 
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }         
 ON        
 指定在统计信息由查询使用并且可能过期时，查询优化器更新统计信息。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。
 
-查询优化器在编译查询和运行缓存查询计划前，检查是否存在过期的统计信息。 查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 查询优化器在编译查询之前确定此信息。 在执行缓存查询计划前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。
+查询优化器在编译查询和运行缓存查询计划前，检查是否存在过期的统计信息。 查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 查询优化器在编译查询之前确定此信息。 在运行缓存查询计划前，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。
 
 AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。 此选项也适用于筛选的统计信息。
 
@@ -1605,11 +1609,11 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息、查询谓
 使用 AUTO_UPDATE_STATISTICS_ASYNC 选项可以指定统计信息是同步更新还是异步更新。
 
 OFF        
-指定在统计信息由查询使用时，查询优化器不更新统计信息。 查询优化器在统计信息可能过期时，也不会更新统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
+指定在查询使用统计信息时，查询优化器不更新统计信息。 查询优化器在统计信息可能过期时，也不会更新统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
 
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_auto_update_stats_on` 列来确定此选项的状态。 还可通过查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsAutoUpdateStatistics` 属性来确定状态。
 
-有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md#statistics-options)中的统计信息选项部分。
+有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md#statistics-options)中的“统计信息选项”部分。
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
 ON        
@@ -1638,43 +1642,43 @@ AUTO
 将自动优化值设置为 AUTO，将应用 Azure 配置默认值进行自动优化。
 
 INHERIT        
-使用值 INHERIT 将从父服务器继承默认配置。 如果想要在父服务器上自定义自动优化配置，并让该服务器上的所有数据库继承这些自定义设置，则这特别有用。 请注意，为了使继承顺利完成，需要在数据库上将三个单独优化选项 FORCE_LAST_GOOD_PLAN、CREATE_INDEX 和 DROP_INDEX 设置为 DEFAULT。
+使用 INHERIT 值将从父服务器继承默认配置。 如果想要在父服务器上自定义自动优化配置，并让该服务器上的所有数据库继承这些自定义设置，则这特别有用。 请注意，为了使继承顺利完成，需要在数据库上将三个单独优化选项 FORCE_LAST_GOOD_PLAN、CREATE_INDEX 和 DROP_INDEX 设置为 DEFAULT。
 
 CUSTOM        
-使用值 CUSTOM，需要手动自定义配置数据库上可用的每个自动优化选项。
+使用 CUSTOM 值，需要自定义配置数据库上可用的每个自动优化选项。
 
 启用或禁用[自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)的自动索引管理 `CREATE_INDEX` 选项。
 
 CREATE_INDEX = { DEFAULT | ON | OFF }        
 DEFAULT        
-从服务器继承默认设置。 本例中，在服务器级别定义了启用或禁用单个自动优化功能的选项。
+从服务器继承默认设置。 本例中，在服务器级别定义了启用或禁用单个“自动优化”功能的选项。
 
 ON        
 启用时，将自动生成数据库上缺失的索引。 在索引创建之后，已验证工作负荷的性能提升。 此类创建的索引不再能够提升工作负荷性能时，会自动将其还原。 自动创建的索引将标记为系统生成的索引。
 
 OFF        
-不会自动生成数据库上缺失的索引。
+不自动生成数据库上缺失的索引。
 
 启用或禁用[自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)的自动索引管理 `DROP_INDEX` 选项。
 
 DROP_INDEX = { DEFAULT | ON | OFF }        
 DEFAULT        
-从服务器继承默认设置。 本例中，在服务器级别定义了启用或禁用单个自动优化功能的选项。
+从服务器继承默认设置。 本例中，在服务器级别定义了启用或禁用单个“自动优化”功能的选项。
 
 ON        
 自动删除重复或对性能工作负荷而言不再有用的索引。
 
 OFF        
-不会自动删除数据库上缺失的索引。
+不自动删除数据库上缺失的索引。
 
 启用或禁用[自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)的自动计划校正 `FORCE_LAST_GOOD_PLAN` 选项。
 
 FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }        
 DEFAULT        
-从服务器继承默认设置。 本例中，在服务器级别定义了启用或禁用单个自动优化功能的选项。
+从服务器继承默认设置。 本例中，在服务器级别定义了启用或禁用单个“自动优化”功能的选项。
 
 ON        
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在新查询计划导致性能回归的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查询中自动强制执行上一个已知完好的计划。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]通过该强制计划持续监视 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查询的查询性能。 如果性能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将继续使用上一个已知完好的计划。 如果未检测到性能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将生成新的查询计划。 如果查询存储未启用或者不处于*读写*模式，该语句将失败。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在新查询计划导致性能回归的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查询中自动强制执行上一个已知完好的计划。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]通过该强制计划持续监视 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查询的查询性能。 如果性能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将继续使用上一个已知完好的计划。 如果未检测到性能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将生成新的查询计划。 如果查询存储未启用或者不处于读写模式，该语句将失败  。
 
 OFF        
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]报告由 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 视图中的查询计划更改引起的潜在查询性能回归。 但是，不会自动应用这些建议。 用户可以通过应用视图中显示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 脚本来监视正在应用的建议和修复已识别的问题。 这是默认值。
@@ -1725,7 +1729,7 @@ OFF
 ENCRYPTION { ON | OFF }        
 将数据库设置为加密的 (ON) 或未加密的 (OFF)。 有关数据加密的详细信息，请参阅[透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption.md)和[借助 Azure SQL 数据库实现透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。
 
-在数据库级别启用加密时，所有文件组都将进行加密。 任何新的文件组都将继承加密的属性。 如果数据库中的任何文件组设置为 **READ ONLY**，则数据库加密操作将失败。
+在数据库级别启用加密时，所有文件组都将进行加密。 任何新的文件组都将继承加密的属性。 如果数据库中的任何文件组设置为 READ ONLY，则数据库加密操作将失败。
 
 可以使用 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 动态管理视图来查看数据库的加密状态。
 
@@ -1815,13 +1819,13 @@ INTERVAL_LENGTH_MINUTES
 确定运行时执行统计数据聚合到查询存储中的时间间隔。 为了优化空间使用情况，将在固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 此固定时间窗口使用 INTERVAL_LENGTH_MINUTES 参数进行配置。 INTERVAL_LENGTH_MINUTES 的类型为 bigint  。
 
 SIZE_BASED_CLEANUP_MODE        
-控制当数据总量接近最大大小时是否自动激活清除：
+控制当数据总量接近最大大小时是否自动激活清除。
 
 OFF        
 不自动激活基于大小的清除。
 
 AUTO        
-当磁盘上的大小达到 **max_storage_size_mb** 的 90% 时，将自动激活基于大小的清除。 基于大小的清除首先会删除成本最低和最旧的查询。 它在达到 **max_storage_size_mb** 的大约 80% 时停止。 这是默认的配置值。
+AUTO 当磁盘上的大小达到 max_storage_size_mb 的 90% 时，将自动激活基于大小的清除  。 基于大小的清除首先会删除成本最低和最旧的查询。 它在达到 **max_storage_size_mb** 的大约 80% 时停止。 这是默认的配置值。
 
 SIZE_BASED_CLEANUP_MODE 的类型为 **nvarchar**。
 
@@ -1867,12 +1871,12 @@ OFF
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }        
 ON        
-在数据库级别启用已提交读快照选项。 启用该选项后，DML 语句将开始生成行版本，即使没有事务使用快照隔离也是如此。 一旦启用此选项，指定已提交读隔离级别的事务将使用行版本控制而不是锁定。 当事务在已提交读隔离级别运行时，所有的语句都将数据快照视为位于语句的开头。
+在数据库级别启用已提交读快照选项。 启用该选项后，DML 语句将开始生成行版本，即使没有事务使用快照隔离也是如此。 启用此选项后，指定 READ COMMITTED 隔离级别的事务将使用行版本控制而不是锁定。 当事务在 READ COMMITTED 隔离级别运行时，所有的语句都将数据快照视为位于语句的开头。
 
 OFF        
 在数据库级别禁用已提交读快照选项。 指定 READ COMMITTED 隔离级别的事务使用锁定。
 
-若要将 READ_COMMITTED_SNAPSHOT 设置为 ON 或 OFF，不应存在任何活动的数据库连接，执行 ALTER DATABASE 命令的连接除外。 但是，数据库不必一定要处于单用户模式下。 当数据库处于 OFFLINE 状态时，不能更改此选项的状态。
+若要将 READ_COMMITTED_SNAPSHOT 设置为 ON 或 OFF，不应存在任何活动的数据库连接，运行 ALTER DATABASE 命令的连接除外。 但是，数据库不必一定要处于单用户模式下。 当数据库处于 OFFLINE 状态时，不能更改此选项的状态。
 
 如果在 READ_ONLY 数据库中设置 READ_COMMITTED_SNAPSHOT，则以后将数据库设置为 READ_WRITE 时，仍将保留该设置。
 
@@ -1888,7 +1892,7 @@ ON
 当事务隔离级别设置为任何低于 SNAPSHOT 的隔离级别时，内存优化表中所有经过解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作将在 SNAPSHOT 隔离下运行。 低于快照的隔离级别示例有 READ COMMITTED 或 READ UNCOMMITTED。 无论是在会话级别显式设置事务隔离级别还是隐式使用默认值，这些操作都会运行。
 
 OFF        
-请勿提升内存优化表中经过解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作的事务隔离级别。
+不提升内存优化表中经过解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作的事务隔离级别。
 
 如果数据库处于 OFFLINE 状态，不能更改 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 的状态。
 
@@ -2058,19 +2062,19 @@ MINUTES
 指定当数据库从一种状态转换到另一种状态时，何时回滚未完成的事务。 如果终止子句被忽略，则当数据库中存在任何锁时，ALTER DATABASE 语句将无限期等待。 只能指定一条终止子句，而且该子句应跟在 SET 子句后面。
 
 > [!NOTE]
-> 并非所有数据库选项都使用 WITH \<termination> 子句。 有关详细信息，请参阅本文的“备注”部分中的[“设置选项”](#SettingOptions)下面的表。
+> 并非所有数据库选项都使用 WITH \<termination> 子句。 有关详细信息，请参阅本文的“备注”部分中的[设置选项](#SettingOptions)下面的表。
 
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE        
 指定是在指定秒数之后回滚还是立即回滚。
 
 NO_WAIT        
-指定如果请求的数据库状态或选项更改无法立即完成，则请求失败。 立即完成意味着不会等待事务自己提交或回滚。
+指定：如果请求的数据库状态或选项更改无法立即完成，则请求失败。 立即完成意味着不会等待事务自己提交或回滚。
 
 ## <a name="SettingOptions"></a> 设置选项
 
 若要检索数据库选项的当前设置，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
-设置数据库选项后，修改将立即生效。
+设置数据库选项后，新的设置将立即生效。
 
 可以为所有新建数据库更改任意一个数据库选项的默认值。 为此，请更改 model 数据库中的相应数据库选项。
 
@@ -2096,7 +2100,7 @@ NO_WAIT
 ## <a name="examples"></a>示例
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. 将数据库设置为 READ_ONLY
-将数据库或文件组的状态改为 READ_ONLY 或 READ_WRITE 需要具有数据库的独占访问权。 下面的示例将数据库设置为 `RESTRICTED_USER` 模式，以限制访问。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY` ，并将对数据库的访问权返回给所有用户。
+将数据库或文件组的状态改为 READ_ONLY 或 READ_WRITE 需要具有数据库的专有访问权限。 下面的示例将数据库设置为 `RESTRICTED_USER` 模式，以限制访问。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY` ，并将对数据库的访问权返回给所有用户。
 
 ```sql
 USE master;
@@ -2205,7 +2209,7 @@ SET QUERY_STORE = ON
 兼容性级别是 `SET` 选项，但在 [ALTER DATABASE 兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)中进行了说明。
 
 > [!NOTE]
-> 可以使用 [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) 来为当前会话配置很多数据库 SET 选项，当它们连接时通常通过应用程序来配置。 会话级 SET 选项覆盖 **ALTER DATABASE SET** 值。 下面所述的数据库选项是可以为未明确提供其他 SET 选项值的会话设置的值。
+> 可以使用 [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) 来为当前会话配置很多数据库 SET 选项，当它们连接时通常通过应用程序来配置。 会话级 SET 选项覆盖 ALTER DATABASE SET 值  。 下面各节中所述的数据库选项是你可以为未明确提供其他 SET 选项值的会话设置的值。
 
 ## <a name="syntax"></a>语法
 
@@ -2337,14 +2341,14 @@ CURRENT
 ON        
 查询优化器根据需要在查询谓词中的单列上创建统计信息，以便改进查询计划和查询性能。 在查询优化器编译查询时创建这些单列统计信息。 这些单列统计信息只在尚不是现有统计信息对象的第一列的列上创建。
 
-默认值为 ON  。 建议您对于大多数数据库使用默认设置。
+默认值为 ON。 建议您对于大多数数据库使用默认设置。
 
 OFF        
-查询优化器在编译查询时不会在查询谓词中的单列上创建统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
+查询优化器在编译查询时不在查询谓词中的单列上创建统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
 
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_auto_create_stats_on` 列来确定此选项的状态。 还可通过查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsAutoCreateStatistics` 属性来确定状态。
 
-有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md#statistics-options)中的统计信息选项部分。
+有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md#statistics-options)中的“统计信息选项”部分。
 
 INCREMENTAL = ON | OFF         
 将 AUTO_CREATE_STATISTICS 设置为 ON，并将 INCREMENTAL 设置为 ON。 只要支持增量统计信息，此设置便会自动创建增量统计信息。 默认值为 OFF。 有关详细信息，请参阅 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)。
@@ -2374,7 +2378,7 @@ OFF
 ON        
 指定在统计信息由查询使用并且可能过期时，查询优化器更新统计信息。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。
 
-查询优化器在编译查询和运行缓存查询计划前，检查是否存在过期的统计信息。 查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 查询优化器在编译查询之前确定此信息。 在执行缓存查询计划前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。
+查询优化器在编译查询和运行缓存查询计划前，检查是否存在过期的统计信息。 查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 查询优化器在编译查询之前确定此信息。 在运行缓存查询计划前，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。
 
 AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。 此选项也适用于筛选的统计信息。
 
@@ -2383,7 +2387,7 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息、查询谓
 使用 AUTO_UPDATE_STATISTICS_ASYNC 选项可以指定统计信息是同步更新还是异步更新。
 
 OFF        
-指定在统计信息由查询使用时，查询优化器不更新统计信息。 查询优化器在统计信息可能过期时，也不会更新统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
+指定在查询使用统计信息时，查询优化器不更新统计信息。 查询优化器在统计信息可能过期时，也不会更新统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
 
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 is_auto_update_stats_on 列来确定此选项的状态。 还可通过查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsAutoUpdateStatistics` 属性来确定状态。
 
@@ -2409,11 +2413,11 @@ OFF
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
 适用于  ：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-启用或禁用`FORCE_LAST_GOOD_PLAN` [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)选项。
+启用或禁用 `FORCE_LAST_GOOD_PLAN` [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)选项。
 
 FORCE_LAST_GOOD_PLAN = { ON | OFF }         
 ON        
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在新查询计划导致性能回归的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查询中自动强制执行上一个已知完好的计划。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]通过该强制计划持续监视 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查询的查询性能。 如果性能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将继续使用上一个已知完好的计划。 如果未检测到性能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将生成新的查询计划。 如果查询存储未启用或者不处于*读写*模式，该语句将失败。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在新查询计划导致性能回归的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查询中自动强制执行上一个已知完好的计划。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]通过该强制计划持续监视 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查询的查询性能。 如果性能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将继续使用上一个已知完好的计划。 如果未检测到性能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将生成新的查询计划。 如果查询存储未启用或者不处于读写模式，该语句将失败  。
 
 OFF        
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]报告由 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 视图中的查询计划更改引起的潜在查询性能回归。 但是，不会自动应用这些建议。 用户可以通过应用视图中显示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 脚本来监视正在应用的建议和修复已识别的问题。 这是默认值。
@@ -2464,7 +2468,7 @@ OFF
 ENCRYPTION { ON | OFF }         
 将数据库设置为加密的 (ON) 或未加密的 (OFF)。 有关数据加密的详细信息，请参阅[透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption.md)和[借助 Azure SQL 数据库实现透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。
 
-在数据库级别启用加密时，所有文件组都将进行加密。 任何新的文件组都将继承加密的属性。 如果数据库中的任何文件组设置为 **READ ONLY**，则数据库加密操作将失败。
+在数据库级别启用加密时，所有文件组都将进行加密。 任何新的文件组都将继承加密的属性。 如果数据库中的任何文件组设置为 READ ONLY，则数据库加密操作将失败。
 
 可以使用 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 动态管理视图来查看数据库的加密状态。
 
@@ -2550,13 +2554,13 @@ INTERVAL_LENGTH_MINUTES
 确定运行时执行统计数据聚合到查询存储中的时间间隔。 为了优化空间使用情况，将在固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 此固定时间窗口使用 INTERVAL_LENGTH_MINUTES 参数进行配置。 INTERVAL_LENGTH_MINUTES 的类型为 bigint  。
 
 SIZE_BASED_CLEANUP_MODE        
-控制当数据总量接近最大大小时是否自动激活清除：
+控制当数据总量接近最大大小时是否自动激活清除。
 
 OFF        
 不自动激活基于大小的清除。
 
 AUTO        
-当磁盘上的大小达到 **max_storage_size_mb** 的 90% 时，将自动激活基于大小的清除。 基于大小的清除首先会删除成本最低和最旧的查询。 它在达到 **max_storage_size_mb** 的大约 80% 时停止。 这是默认的配置值。
+AUTO 当磁盘上的大小达到 max_storage_size_mb 的 90% 时，将自动激活基于大小的清除  。 基于大小的清除首先会删除成本最低和最旧的查询。 它在达到 **max_storage_size_mb** 的大约 80% 时停止。 这是默认的配置值。
 
 SIZE_BASED_CLEANUP_MODE 的类型为 **nvarchar**。
 
@@ -2583,7 +2587,7 @@ max_plans_per_query
 
 ALLOW_SNAPSHOT_ISOLATION { ON | OFF }        
 ON        
-在数据库级别启用快照选项。 启用该选项后，DML 语句将开始生成行版本，即使没有事务使用快照隔离也是如此。 一旦启用此选项，事务即可指定 SNAPSHOT 事务隔离级别。 当事务在 SNAPSHOT 隔离级别运行时，所有的语句都将数据快照视为位于事务的开头。 如果在 SNAPSHOT 隔离级别运行的事务要访问多个数据库中的数据，则必须将所有数据库中的 ALLOW_SNAPSHOT_ISOLATION 都设置为 ON，或者事务中的每个语句都必须对 FROM 子句中的所有引用（引用 ALLOW_SNAPSHOT_ISOLATION 设置为 OFF 的数据库中的表）使用锁提示。
+在数据库级别启用快照选项。 启用该选项后，DML 语句将开始生成行版本，即使没有事务使用快照隔离也是如此。 启用此选项后，事务即可指定 SNAPSHOT 事务隔离级别。 当事务在 SNAPSHOT 隔离级别运行时，所有的语句都将数据快照视为位于事务的开头。 如果在 SNAPSHOT 隔离级别运行的事务要访问多个数据库中的数据，则必须将所有数据库中的 ALLOW_SNAPSHOT_ISOLATION 都设置为 ON，或者事务中的每个语句都必须对 FROM 子句中的所有引用（引用 ALLOW_SNAPSHOT_ISOLATION 设置为 OFF 的数据库中的表）使用锁提示。
 
 OFF        
 在数据库级别禁用快照选项。 事务不能指定 SNAPSHOT 事务隔离级别。
@@ -2602,12 +2606,12 @@ OFF
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }         
 ON        
-在数据库级别启用已提交读快照选项。 启用该选项后，DML 语句将开始生成行版本，即使没有事务使用快照隔离也是如此。 一旦启用此选项，指定已提交读隔离级别的事务将使用行版本控制而不是锁定。 当事务在已提交读隔离级别运行时，所有的语句都将数据快照视为位于语句的开头。
+在数据库级别启用 Read-Committed Snapshot 选项。 启用该选项后，DML 语句将开始生成行版本，即使没有事务使用快照隔离也是如此。 启用此选项后，指定 READ COMMITTED 隔离级别的事务将使用行版本控制而不是锁定。 当事务在 READ COMMITTED 隔离级别运行时，所有的语句都将数据快照视为位于语句的开头。
 
 OFF        
-在数据库级别禁用已提交读快照选项。 指定 READ COMMITTED 隔离级别的事务使用锁定。
+在数据库级别禁用 Read-Committed Snapshot 选项。 指定 READ COMMITTED 隔离级别的事务使用锁定。
 
-若要将 READ_COMMITTED_SNAPSHOT 设置为 ON 或 OFF，不应存在任何活动的数据库连接，执行 ALTER DATABASE 命令的连接除外。 但是，数据库不必一定要处于单用户模式下。 当数据库处于 OFFLINE 状态时，不能更改此选项的状态。
+若要将 READ_COMMITTED_SNAPSHOT 设置为 ON 或 OFF，不应存在任何活动的数据库连接，运行 ALTER DATABASE 命令的连接除外。 但是，数据库不必一定要处于单用户模式下。 当数据库处于 OFFLINE 状态时，不能更改此选项的状态。
 
 如果在 READ_ONLY 数据库中设置 READ_COMMITTED_SNAPSHOT，则以后将数据库设置为 READ_WRITE 时，仍将保留该设置。
 
@@ -2623,7 +2627,7 @@ ON
 当事务隔离级别设置为任何低于 SNAPSHOT 的隔离级别时，内存优化表中所有经过解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作将在 SNAPSHOT 隔离下运行。 低于快照的隔离级别示例有 READ COMMITTED 或 READ UNCOMMITTED。 无论是在会话级别显式设置事务隔离级别还是隐式使用默认值，这些操作都会运行。
 
 OFF        
-请勿提升内存优化表中经过解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作的事务隔离级别。
+不提升内存优化表中经过解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作的事务隔离级别。
 
 如果数据库处于 OFFLINE 状态，不能更改 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 的状态。
 
@@ -2792,20 +2796,20 @@ ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE
 指定是在指定秒数之后回滚还是立即回滚。
 
 NO_WAIT        
-指定如果请求的数据库状态或选项更改无法立即完成，则请求失败。 立即完成意味着不会等待事务自己提交或回滚。
+指定：如果请求的数据库状态或选项更改无法立即完成，则请求失败。 立即完成意味着不会等待事务自己提交或回滚。
 
 ## <a name="SettingOptions"></a> 设置选项
 
 若要检索数据库选项的当前设置，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
-设置数据库选项后，修改将立即生效。
+设置数据库选项后，新的设置将立即生效。
 
 可以为所有新建数据库更改任意一个数据库选项的默认值。 为此，请更改 model 数据库中的相应数据库选项。
 
 ## <a name="examples"></a>示例
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. 将数据库设置为 READ_ONLY
-将数据库或文件组的状态改为 READ_ONLY 或 READ_WRITE 需要具有数据库的独占访问权。 下面的示例将数据库设置为 `RESTRICTED_USER` 模式，以限制访问。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY` ，并将对数据库的访问权返回给所有用户。
+将数据库或文件组的状态改为 READ_ONLY 或 READ_WRITE 需要具有数据库的专有访问权限。 下面的示例将数据库设置为 `RESTRICTED_USER` 模式，以限制访问。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY` ，并将对数据库的访问权返回给所有用户。
 
 ```sql
 USE master;
@@ -2942,24 +2946,18 @@ SET
 
 <query_store_option> ::=
 {
-    QUERY_STORE
-    {
- = OFF
-        | = ON
-    }
+    QUERY_STORE { OFF |  ON }
 }
 
 <result_set_caching_option> ::=
 {
-    RESULT_SET_CACHING { ON | OFF }
+    RESULT_SET_CACHING {ON | OFF}
 }
 
 <snapshot_option> ::=
 {
     READ_COMMITTED_SNAPSHOT {ON | OFF }
 }
-
-
 
 ```
 
@@ -2973,13 +2971,14 @@ database_name
 控制自动选项。
 
 AUTO_CREATE_STATISTICS { ON | OFF }         
+
 ON        
 查询优化器根据需要在查询谓词中的单列上创建统计信息，以便改进查询计划和查询性能。 在查询优化器编译查询时创建这些单列统计信息。 这些单列统计信息只在尚不是现有统计信息对象的第一列的列上创建。
 
-默认值为 ON  。 建议您对于大多数数据库使用默认设置。
+默认值为 ON。 建议您对于大多数数据库使用默认设置。
 
 OFF        
-查询优化器在编译查询时不会在查询谓词中的单列上创建统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
+查询优化器在编译查询时不在查询谓词中的单列上创建统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
 
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 i`s_auto_create_stats_on` 列来确定此选项的状态。 还可通过查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsAutoCreateStatistics` 属性来确定状态。
 
@@ -2990,6 +2989,7 @@ OFF
 控制数据库加密状态。
 
 ENCRYPTION { ON | OFF }        
+
 ON        
 设置要加密的数据库。
 
@@ -2999,26 +2999,31 @@ OFF
 有关数据加密的详细信息，请参阅“透明数据加密”和“借助 Azure SQL 数据库实现透明数据加密”。
 
 在数据库级别启用加密时，所有文件组都将进行加密。 任何新的文件组都将继承加密的属性。 如果数据库中的任何文件组设置为 READ ONLY，则数据库加密操作将失败。
+
 可以通过使用 sys.dm_database_encryption_keys 动态管理视图来查看数据库的加密状态和加密扫描的状态。
 
-**\<query_store_option> ::=**        
+**<query_store_option> ::=**        
 
-ON | OFF         
 控制是否在此数据仓库中启用查询存储。
+
+QUERY_STORE { ON |  OFF  } 
 
 ON        
 启用查询存储。
 
 OFF        
+
 禁用查询存储。 OFF 是默认值。
 
 > [!NOTE]
 > 对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，必须在用户数据库中执行 `ALTER DATABASE SET QUERY_STORE`。 不支持从另一个数据仓库实例中执行该语句。
 
-**\<result_set_caching_option> ::=**         
+**<result_set_caching_option> ::=**         
 **适用对象**：Azure SQL 数据仓库（预览）
 
-连接到 `master` 数据库时，必须运行此命令。  对此数据库设置的更改立即生效。  缓存查询结果集会产生存储成本。 在你为数据库禁用结果缓存后，以前保留的结果缓存会立即从 Azure SQL 数据仓库存储中删除。 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 中引入了新列 is_result_set_caching_on，用于显示数据库的结果缓存设置。  
+控制查询结果是否缓存在数据库中。
+
+RESULT_SET_CACHING {ON | OFF}
 
 ON        
 指定要在 Azure SQL 数据仓库存储中缓存从此数据库返回的查询结果集。
@@ -3035,9 +3040,11 @@ command|Like|%DWResultCacheDb%|
 | | |
 
 ### <a name="remarks"></a>Remarks
+连接到 `master` 数据库时，必须运行此命令。  对此数据库设置的更改立即生效。  缓存查询结果集会产生存储成本。 在你为数据库禁用结果缓存后，以前保留的结果缓存会立即从 Azure SQL 数据仓库存储中删除。 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 中引入了新列 is_result_set_caching_on，用于显示数据库的结果缓存设置。  
+
 如果满足以下所有要求，则会为查询重用缓存的结果集：
 
-1. 执行查询的用户可以访问该查询中引用的所有表。
+1. 运行查询的用户可以访问该查询中引用的所有表。
 1. 新查询与生成结果集缓存的上一个查询之间存在完全匹配。
 1. 生成缓存结果集的表中没有任何数据或架构更改。  
 
@@ -3045,81 +3052,59 @@ command|Like|%DWResultCacheDb%|
 
 在创建结果缓存时，具有大型结果集（例如，大于 1 百万行）的查询在第一次运行期间可能会遇到性能降低。
 
-**<snapshot_option> ::=**        
+**<snapshot_option> ::=**         
+**适用对象**：Azure SQL 数据仓库（预览）
 
-计算事务隔离级别。
+控制数据库的事务隔离级别。
 
 READ_COMMITTED_SNAPSHOT  { ON | OFF }         
-**适用对象**：Azure SQL 数据仓库（预览）
 
 ON        
 在数据库级别启用 READ_COMMITTED_SNAPSHOT 选项。
 
 OFF        
-在数据库级别禁用 READ_COMMITTED_SNAPSHOT 选项。
+在数据库级别关闭 READ_COMMITTED_SNAPSHOT 选项。
 
-为数据库启用和禁用 READ_COMMITTED_SNAPSHOT 将终止与该数据库的所有活跃连接。 你可能希望在数据库维护时段进行此更改，也可能等到除了执行 ALTER DATABSE 命令的连接之外与数据库没有任何活跃的连接后再进行。  数据库不必处于单用户模式。  不支持在会话级别更改 READ_COMMITTED_SNAPSHOT 设置。  要验证数据库的此设置，请检查 sys.databases 中的 is_read_committed_snapshot_on 列。
+### <a name="remarks"></a>Remarks
+连接到 `master` 数据库时，必须运行此命令。 为用户数据库启用和禁用 READ_COMMITTED_SNAPSHOT 将终止与该数据库的所有活跃连接。 建议在数据库维护时段进行此更改，也可等到除了运行 ALTER DATABSE 命令的连接之外与数据库没有任何活跃的连接后再进行更改。  数据库不必处于单用户模式。 不支持在会话级别更改 READ_COMMITTED_SNAPSHOT 设置。  要验证数据库的此设置，请检查 sys.databases 中的 is_read_committed_snapshot_on 列。
 
-在启用了 READ_COMMITTED_SNAPSHOT 的数据库中，如果存在多个数据版本，则由于扫描版本，查询的性能可能会降低。 如果长时间打开的事务进行的数据更改因事务长时间打开而无法清理版本，则这些事务也会导致数据库大小增加。  
+在启用了 READ_COMMITTED_SNAPSHOT 的数据库中，如果存在多个数据版本，则由于扫描版本，查询的性能可能会降低。 长时间打开的事务也会导致数据库的大小增加。 如果这些事务进行的数据更改会阻止版本清理，则会发生此问题。  
 
 ## <a name="permissions"></a>权限
 
-要设置 RESULT_SET_CACHING 选项，用户需要服务器级别主体登录名（在预配过程中创建的登录名）或者是 `dbmanager` 数据库角色的成员。  
+要设置 RESULT_SET_CACHING 选项，用户需要服务器级别主体登录名（在预配过程中创建的登录名）或者成为 `dbmanager` 数据库角色的成员。  
 
 要设置 READ_COMMITTED_SNAPSHOT 选项，用户需要对数据库具有 ALTER 权限。
 
 ## <a name="examples"></a>示例
 
-### <a name="a-enabling-the-query-store"></a>A. 启用查询存储
-以下示例启用查询存储。
+### <a name="check-statistics-setting-for-a-database"></a>检查数据库的统计信息设置
+
+```sql
+SELECT name, is_auto_create_stats_on FROM sys.databases
+```
+### <a name="enable-query-store-for-a-database"></a>为数据库启用查询存储
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON;
 ```
 
-### <a name="b-enable-result-set-caching-for-a-database"></a>B. 为数据库启用结果集缓存
+### <a name="enable-result-set-caching-for-a-database"></a>为数据库启用结果集缓存
 
 ```sql
 ALTER DATABASE [database_name]
 SET RESULT_SET_CACHING ON;
 ```
 
-### <a name="c-disable-result-set-caching-for-a-database"></a>C. 为数据库禁用结果集缓存
-
-```sql
-ALTER DATABASE [database_name]  
-SET RESULT_SET_CACHING OFF;
-```
-
-### <a name="d-check-result-set-caching-setting-for-a-database"></a>D. 检查数据库的结果集缓存设置
+### <a name="check-result-set-caching-setting-for-a-database"></a>检查数据库的结果集缓存设置
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="e-check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>E. 检查结果集是缓存命中和缓存失误的查询数
-
-```sql
-SELECT  
-Queries=CacheHits+CacheMisses,
-CacheHits,
-CacheMisses
-CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
-FROM  
-(SELECT  
-CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
-r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
-s.step_index = 0 then s.request_id else null end) ,
-CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
-s.request_id else null end)
-     FROM sys.dm_pdw_request_steps s  
-     JOIN sys.dm_pdw_exec_requests r  
-     ON s.request_id = r.request_id) A;
-```
-
-### <a name="f-check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>F. 检查查询的结果集是缓存命中还是缓存失误
+### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>检查查询的结果集是缓存命中还是缓存失误
 
 ```sql
 If
@@ -3131,7 +3116,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### <a name="g-check-for-all-queries-with-result-set-cache-hits"></a>G. 检查结果集是缓存命中的所有查询
+### <a name="check-for-all-queries-with-result-set-cache-hits"></a>检查结果集是缓存命中的所有查询
 
 ```sql
 SELECT *  
@@ -3139,7 +3124,7 @@ FROM sys.dm_pdw_request_steps
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
-### <a name="h-enable-read_committed_snapshot-option-for-a-database"></a>H. 为数据库启用 Read_Committed_Snapshot 选项
+### <a name="enable-the-read_committed_snapshot-option-for-a-database"></a>为数据库启用 Read_Committed_Snapshot 选项
 
 ```sql
 ALTER DATABASE MyDatabase  

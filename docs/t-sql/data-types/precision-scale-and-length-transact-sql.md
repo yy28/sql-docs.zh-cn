@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f3689bdad636d7df4281975167984425a8049aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65154f6e4ffd67a207db9a3b6c5044710249c1eb
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000623"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682053"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>精度、小数位数和长度 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "68000623"
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，numeric 和 decimal 数据类型的默认最大精度为 38   。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中，默认最大精度为 28。
   
-数字数据类型的长度是存储此数所占用的字节数。 字符串或 Unicode 数据类型的长度是字符个数。 binary、varbinary 和 image 数据类型的长度是字节数    。 例如，int 数据类型可以有 10 位数，用 4 个字节存储，不接受小数点  。 int 数据类型的精度是 10，长度是 4，小数位数是 0  。
+数字数据类型的长度是存储此数所占用的字节数。 对于 varchar 和 char，字符串的长度是指字节数。 对于 nvarchar 和 nchar，字符串的长度是指字节对数。 binary、varbinary 和 image 数据类型的长度是字节数    。 例如，int 数据类型可以有 10 位数，用 4 个字节存储，不接受小数点  。 int 数据类型的精度是 10，长度是 4，小数位数是 0  。
   
-当 char、varchar、binary 和 varbinary 表达式中的两种相串联时，所生成表达式的长度是两个源表达式长度之和（不超过 8,000 个字符）     。
+如果 char、varchar、binary 和 varbinary 表达式中的两种相串联，所生成表达式的长度是两个源表达式长度之和（不超过 8,000 个字节）     。
   
-当两个 nchar 或 nvarchar 表达式相串联时，所生成表达式的长度是两个源表达式长度之和（不超过 4,000 个字符）   。
+如果两个 nchar 或 nvarchar 表达式相串联，所生成表达式的长度是两个源表达式长度之和（不超过 4,000 个字节对）   。
   
 使用 UNION、EXCEPT 或 INTERSECT 对数据类型相同但长度不同的两个表达式进行比较时，得到的长度为两个表达式中较大的长度。
   

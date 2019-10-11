@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6776cea91288d22ed6765e8c4651266c0bcffa7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943706"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710359"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新订阅的登录名
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67943706"
   
 -   复制创建的链接服务器；用在订阅服务器上做更改的用户的凭据建立连接。  
   
- 可以在此向导中指定前两个选项。 最后一个选项只能使用 [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 指定；将参数 **@security_mode** 的值指定为 **1**。  
+ 可以在此向导中指定前两个选项。 最后一个选项只能使用 [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 指定；将参数 `@security_mode` 的值指定为 1  。  
   
 ## <a name="options"></a>选项  
  **创建使用以下 SQL Server 身份验证登录名进行连接的链接服务器：**  

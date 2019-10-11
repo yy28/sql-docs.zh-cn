@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfc88ea17f78aaad42d585490a4776db65824d92
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 702b0423e54258f8afe49f5c7a39734d5570f8df
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742934"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974380"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组概述 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68742934"
   
  有三种故障转移形式：自动、手动和强制（可能造成数据丢失）。 给定辅助副本支持的故障转移形式取决于其可用性模式，对于同步提交模式来说，取决于主副本和目标辅助副本的故障转移模式，如下所示。  
   
--   同步提交模式支持两种故障转移形式：“计划的手动故障转移”和“自动故障转移”（如果目标次要副本当前与 avt1 同步）   。 对这些故障转移形式的支持取决于故障转移伙伴上的“故障转移模式属性”  的设置。 如果在主副本或辅助副本上将故障转移模式设置为“手动”，则对于该辅助副本仅支持手动故障转移。 如果同时在主副本和辅助副本上将故障转移模式设置为“自动”，则该辅助副本同时支持自动故障转移和手动故障转移。  
+-   同步提交模式支持两种故障转移形式：“计划的手动故障转移”和“自动故障转移”（如果目标次要副本当前与主副本同步）   。 对这些故障转移形式的支持取决于故障转移伙伴上的“故障转移模式属性”  的设置。 如果在主副本或辅助副本上将故障转移模式设置为“手动”，则对于该辅助副本仅支持手动故障转移。 如果同时在主副本和辅助副本上将故障转移模式设置为“自动”，则该辅助副本同时支持自动故障转移和手动故障转移。  
   
     -   **计划的手动故障转移** （无数据丢失）  
   

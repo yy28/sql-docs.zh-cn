@@ -21,12 +21,12 @@ ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b3d561e331cae739514b2e38c5c885653c44ce46
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 87c3a091e4a6ce3ef9462e6e0d730bcea56c18bc
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768346"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710715"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>订阅过期和停用
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68768346"
  若要设置保持期，请参阅[设置订阅的过期期限](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)、[设置事务发布的分发保持期 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) 以及[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)。  
   
 ## <a name="transactional-replication"></a>事务复制  
- 事务复制使用最大的分发保持期（[sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) 的 **@max_distretention** 参数）和发布保持期（[sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 的 **@retention** 参数）：  
+ 事务复制使用最大的分发保持期（[sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) 的 `@max_distretention` 参数）和发布保持期（[sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 的 `@retention` 参数）：  
   
 -   如果订阅未能在最大分发保持期（默认为 72 小时）内同步，而且分发数据库中还存在尚未传递到订阅服务器的更改，则订阅将会被分发服务器上运行的 **“清除分发”** 作业标记为停用。 必须重新初始化订阅。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68768346"
      如果推送订阅过期，则会彻底删除该订阅，但是请求订阅则不同。 您必须清除订阅服务器上的请求订阅。 有关详细信息，请参阅 [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)。  
   
 ## <a name="merge-replication"></a>合并复制  
- 合并复制使用发布保持期（[sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 **@retention** 和 **@retention_period_unit** 参数）。 订阅过期后必须将其重新初始化，因为订阅的元数据已被删除。 未重新初始化的订阅将由运行在发布服务器上的 **“过期的订阅清除”** 作业删除。 默认情况下，此作业每天运行；它删除在两倍的发布保持期内尚未同步的所有推送订阅。 例如：  
+ 合并复制使用发布保持期（[sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@retention` 和 `@retention_period_unit` 参数）。 订阅过期后必须将其重新初始化，因为订阅的元数据已被删除。 未重新初始化的订阅将由运行在发布服务器上的 **“过期的订阅清除”** 作业删除。 默认情况下，此作业每天运行；它删除在两倍的发布保持期内尚未同步的所有推送订阅。 例如：  
   
 -   如果某发布的保持期为 14 天，则订阅如果在 14 天内尚未同步就会过期。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68768346"
   
     -   在到达保持期之前，复制无法清除发布数据库和订阅数据库中的元数据。 在为保持期指定较大值时务必谨慎，因为这可能对复制性能产生负面影响。 如果能很有把握地预测出所有订阅服务器都将在该时间段内定期同步，则建议使用较低的设置。  
   
-    -   可以指定订阅永不过期（ **@retention** 的值为 0），但是极力建议您不要使用此值，因为这将无法清除元数据。  
+    -   可以指定订阅永不过期（`@retention` 的值为 0），但是极力建议不要使用此值，因为这将无法清除元数据。  
   
 -   任何重新发布服务器的保持期都必须设置为等于或小于在原始发布服务器上设置的保持期。 对于所有发布服务器和它们的备用同步伙伴，应该使用相同的发布保持期。 使用不同的值可能会导致无法收敛。 如果需要更改发布保持期的值，请重新初始化订阅服务器，以免数据无法收敛。  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_audit_write (TRANSACT-SQL) |Microsoft Docs
+title: sp_audit_write （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 60dbabcadaf5108572eaba6361fab28eaf0f49b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046138"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251970"
 ---
-# <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
+# <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  添加到用户定义的审核事件**USER_DEFINED_AUDIT_GROUP**。 如果**USER_DEFINED_AUDIT_GROUP**未启用，则**sp_audit_write**将被忽略。  
+  向**USER_DEFINED_AUDIT_GROUP**添加用户定义的审核事件。 如果未启用**USER_DEFINED_AUDIT_GROUP** ，则将忽略**sp_audit_write** 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>参数  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- 参数由用户定义并且记录在**user_defined_event_id**审核日志的列。 *@user_defined_event_id* 是类型**smallint**。  
+ 用户定义并记录在审核日志的**user_defined_event_id**列中的参数。 *@no__t 的*类型为**smallint**。  
   
  `[ @succeeded = ] succeeded`  
- 用户为指示事件是否成功而传递的参数。 它将出现在审核日志的成功列中。 `@succeeded` 是**位**。  
+ 用户为指示事件是否成功而传递的参数。 它将出现在审核日志的成功列中。 @no__t 为**bit**。  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- 由用户定义的文本，并且该文本将记录在审核日志的新的 user_defined_event_id 列中。 `@user_defined_information` 是**nvarchar(4000)** 。  
+ 由用户定义的文本，并且该文本将记录在审核日志的新的 user_defined_event_id 列中。 @no__t 为**nvarchar （4000）** 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -56,10 +56,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  失败是由不正确的输入参数或者未能写入目标审核日志导致的。  
   
 ## <a name="remarks"></a>备注  
- 当**USER_DEFINED_AUDIT_GROUP**添加到服务器审核规范或数据库审核规范，触发的事件**sp_audit_write**将包含在审核日志。  
+ 将**USER_DEFINED_AUDIT_GROUP**添加到服务器审核规范或数据库审核规范时，由**sp_audit_write**触发的事件将包括在审核日志中。  
   
 ## <a name="permissions"></a>权限  
- 要求的成员身份**公共**数据库角色。  
+ 需要**公共**数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
   

@@ -1,7 +1,7 @@
 ---
 title: decimal 和 numeric (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48080db61a91a13cd04d436784ce74a7e45e3135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086742"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682109"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 和 numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ s（小数位数）
   
 默认情况下，将数字转换为精度和小数位数较低的 decimal 或 numeric 值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会进行舍入   。 反过来说，如果 SET ARITHABORT 选项为 ON，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在发生溢出时抛出错误。 如果仅降低精度和确定位数，不足以抛出错误。
   
-在将 float 值或实数值转换为 decimal 或 numeric 类型时，decimal 值不会超过 17 位小数。 任何小于 5E-18 的 float 值总是会转换为 0。
+在进行 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 之前，浮点值到 decimal 或 numeric 的转换仅限于精度为 17 位数字的值    。 小于 5E-18 的任何浮点  值（使用 5E-18 的科学计数法或 0.0000000000000000050000000000000005 十进制表示法设置时）都舍入为 0。 从 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 起，不再具有该限制。
   
 ## <a name="examples"></a>示例  
 下面的示例使用 decimal 和 numeric 数据类型创建一个表   。  值插入每个列中。 结果使用 SELECT 语句返回。

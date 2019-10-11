@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: f75bbb285ea99eba41accc76851db997c54d1027
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326120"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708258"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
 
@@ -219,7 +219,7 @@ GO
 
 ## <a name="memory-optimized-tempdb-metadata"></a>内存优化 TempDB 元数据
 
-对于 SQL Server 上运行的许多工作负载，TempDB 元数据争用历来是可伸缩性的瓶颈。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了一个新功能，该功能属于[内存数据库](../in-memory-database.md)功能内存优化 tempdb 元数据，它可有效消除此瓶颈，并为 tempdb 繁重的工作负载解锁新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了一个新功能，该功能属于[内存数据库](../in-memory-database.md)功能内存优化 tempdb 元数据，它可有效消除此瓶颈，并为 tempdb 繁重的工作负载解锁新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移到无闩锁的非持久内存优化表中。若要选择启用此新功能，请使用以下脚本：
+对于 SQL Server 上运行的许多工作负载，TempDB 元数据争用历来是可伸缩性的瓶颈。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了一个新功能，该功能属于[内存数据库](../in-memory-database.md)功能内存优化 tempdb 元数据，它可有效消除此瓶颈，并为 tempdb 繁重的工作负载解锁新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。 要选择加入此新功能，请使用以下脚本：
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -244,7 +244,8 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     COMMIT TRAN
     ```
 3. 针对内存优化表的查询不支持锁定和隔离提示，因此针对内存优化 TempDB 目录视图的查询将不会遵循锁定和隔离提示。 与 SQL Server 中的其他系统目录视图一样，针对系统视图的所有事务都将处于 READ COMMITTED（或在本例中为 READ COMMITTED SNAPSHOT）隔离。
-4. 如果启用内存优化的 tempdb 元数据，则无法在临时表上创建[列存储索引](../indexes/columnstore-indexes-overview.md)。
+4. 如果启用内存优化的 TempDB 元数据，则无法在临时表上创建[列存储索引](../indexes/columnstore-indexes-overview.md)。
+5. 由于对列存储索引的限制，启用内存优化 TempDB 元数据时，不支持将 sp_estimate_data_compression_savings 系统存储过程与 COLUMNSTORE 或 COLUMNSTORE_ARCHIVE 数据压缩参数一起使用。
 
 > [!NOTE] 
 > 这些限制仅适用于引用 TempDB 系统视图的情况，如果需要，可在访问用户数据库中内存优化表的同一事务中创建临时表。

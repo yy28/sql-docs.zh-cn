@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4f79bab916e955dfced1fc5bd01df65f98473c54
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768278"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710353"
 ---
 # <a name="replication-snapshot-agent"></a>复制快照代理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ snapshot [ -?]
  是否将无关删除操作发送到订阅服务器。 无关删除操作是针对不属于订阅服务器分区的行发送到订阅服务器的 DELETE 命令。 无关删除操作不会影响数据的完整性或收敛，但它们会导致不必要的网络通信。 **MaxNetworkOptimization** 的默认值是 **0**。 将 **MaxNetworkOptimization** 设置为 **1** 可将不相关的删除操作发生的机会减至最小，从而减少网络通信，并最大程度地优化网络。 如果存在多个级别的联接筛选器和复杂子集筛选器，则将此参数设置为 **1** 还会增加元数据的存储并导致发布服务器性能下降。 您应仔细评估您的复制拓扑，仅当无关删除操作导致的网络通信高到无法接受时才应将 **MaxNetworkOptimization** 设置为 **1** 。  
   
 > [!NOTE]
->  仅当合并发布的同步优化选项（[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 **@keep_partition_changes** 参数）设置为 **true** 时，将此参数设置为 **1** 才是有用的。  
+>  仅当合并发布的同步优化选项（[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@keep_partition_changes**` 参数）设置为 true 时，将此参数设置为 1 才是有用的   。  
   
  **-Output** _output_path_and_file_name_  
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
@@ -250,7 +250,7 @@ snapshot [ -?]
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量复制数据文件中用于标记行尾的字符或字符序列。 默认值为 \n\<,@g>\n。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 当运行的并发动态快照进程数达到由 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 **@max_concurrent_dynamic_snapshots** 属性设置的限制值时，快照代理等待的最大秒数。 如果在经过最大秒数之后快照代理仍在等待，快照代理将退出。 值 0 表示代理将无限期地等待，尽管可以将其取消。  
+ 当运行的并发动态快照进程数达到由 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@max_concurrent_dynamic_snapshots` 属性设置的限制值时，快照代理等待的最大秒数。 如果在经过最大秒数之后快照代理仍在等待，快照代理将退出。 值 0 表示代理将无限期地等待，尽管可以将其取消。  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  已不推荐使用此参数，支持它是为了能够向后兼容。  
