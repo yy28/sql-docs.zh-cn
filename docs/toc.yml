@@ -4286,6 +4286,8 @@
               href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
             - name: 使用查询优化助手更改数据库兼容性模式
               href: relational-databases/performance/upgrade-dbcompat-using-qta.md
+            - name: SQL Server 的最新更新
+              href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
     - name: 配置
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -5064,10 +5066,6 @@
                   href: relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
                 - name: 定义逻辑记录关系
                   href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
-                - name: 配置 Web 同步
-                  href: relational-databases/replication/configure-web-synchronization.md
-                - name: 配置 IIS 以实现 Web 同步
-                  href: relational-databases/replication/configure-iis-for-web-synchronization.md
                 - name: 配置 IIS 7 以实现 Web 同步
                   href: relational-databases/replication/configure-iis-7-for-web-synchronization.md
                 - name: 解决数据冲突

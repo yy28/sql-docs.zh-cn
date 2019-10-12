@@ -1,5 +1,5 @@
 ---
-title: 重命名与固定的服务器角色名称匹配的登录名 |Microsoft Docs
+title: 重命名与固定服务器角色名称匹配的登录名 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d983f514f7cc0185021de40f153d78fd6e4dd112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092881"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278213"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>重命名与固定服务器角色名称匹配的登录名
   升级顾问检测到有一个或多个用户定义的登录名与固定服务器角色的名称匹配。 固定服务器角色名称是保留名称。 请在升级前重命名相应登录名。  
@@ -28,7 +28,7 @@ ms.locfileid: "66092881"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  以下固定服务器角色名称是保留名称，因此不能用作用户定义的登录名。  
   
 -   **sysadmin**  
@@ -60,10 +60,10 @@ ms.locfileid: "66092881"
   
 2.  删除登录名。  
   
-3.  使用**sp_addlogin**系统过程来创建新的登录名。 指定在步骤 1 中返回的 SID **@sid** 参数为每个相应登录名。  
+3.  使用**sp_addlogin**系统过程创建新登录名。 为每个相应的登录名指定在步骤 1 @no__t 中为每个**1sid**参数返回的 SID。  
   
 ## <a name="see-also"></a>请参阅  
- [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ @No__t[数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)-1  
  [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   
