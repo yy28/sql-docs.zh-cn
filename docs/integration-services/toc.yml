@@ -122,598 +122,608 @@
       href: ../integration-services/ssis-package-upgrade-wizard-f1-help.md
     - name: 包和项目参数
       href: ../integration-services/integration-services-ssis-package-and-project-parameters.md
-- name: 概述
-  href: ../integration-services/connection-manager/integration-services-ssis-connections.md
-- name: “数据源”
-  href: ../integration-services/connection-manager/data-sources.md
-- name: ADO 连接管理器
-  href: ../integration-services/connection-manager/ado-connection-manager.md
-- name: ADO.NET 连接管理器
-  href: ../integration-services/connection-manager/ado-net-connection-manager.md
-- name: Analysis Services 连接管理器
-  href: ../integration-services/connection-manager/analysis-services-connection-manager.md
+- name: 连接管理器
   items:
-    - name: “添加 Analysis Services 连接管理器”对话框 UI 参考
-      href: ../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md
-- name: Azure Data Lake Analytics 连接管理器
-  href: ../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md
-- name: Azure Data Lake Store 连接管理器
-  href: ../integration-services/connection-manager/azure-data-lake-store-connection-manager.md
-- name: Azure HDInsight 连接管理器
-  href: ../integration-services/connection-manager/azure-hdinsight-connection-manager.md
-- name: Azure 资源管理器连接管理器
-  href: ../integration-services/connection-manager/azure-resource-manager-connection-manager.md
-- name: Azure 存储连接管理器
-  href: ../integration-services/connection-manager/azure-storage-connection-manager.md
-- name: Azure 订阅连接管理器
-  href: ../integration-services/connection-manager/azure-subscription-connection-manager.md
-- name: Excel 连接管理器
-  href: ../integration-services/connection-manager/excel-connection-manager.md
-- name: 文件连接管理器
-  href: ../integration-services/connection-manager/file-connection-manager.md
-  items:
-    - name: “添加文件连接管理器”对话框 UI 参考
-      href: ../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md
-    - name: “提供列类型建议”对话框 UI 参考
-      href: ../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md
-- name: 平面文件连接管理器
-  href: ../integration-services/connection-manager/flat-file-connection-manager.md
-- name: FTP 连接管理器
-  href: ../integration-services/connection-manager/ftp-connection-manager.md
-- name: Hadoop 连接管理器
-  href: ../integration-services/connection-manager/hadoop-connection-manager.md
-- name: HTTP 连接管理器
-  href: ../integration-services/connection-manager/http-connection-manager.md
-- name: MSMQ 连接管理器
-  href: ../integration-services/connection-manager/msmq-connection-manager.md
-- name: 多文件连接管理器
-  href: ../integration-services/connection-manager/multiple-files-connection-manager.md
-- name: 多平面文件连接管理器
-  href: ../integration-services/connection-manager/multiple-flat-files-connection-manager.md
-- name: OData 连接管理器
-  href: ../integration-services/connection-manager/odata-connection-manager.md
-- name: ODBC 连接管理器
-  href: ../integration-services/connection-manager/odbc-connection-manager.md
-- name: OLE DB 连接管理器
-  href: ../integration-services/connection-manager/ole-db-connection-manager.md
-- name: SAP BW 连接管理器
-  href: ../integration-services/connection-manager/sap-bw-connection-manager.md
-- name: SMTP 连接管理器
-  href: ../integration-services/connection-manager/smtp-connection-manager.md
-- name: SMO 连接管理器
-  href: ../integration-services/connection-manager/smo-connection-manager.md
-- name: SQL Server Compact Edition 连接管理器
-  href: ../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md
-- name: WMI 连接管理器
-  href: ../integration-services/connection-manager/wmi-connection-manager.md
-- name: 概述
-  href: ../integration-services/control-flow/control-flow.md
-- name: 在控制流中添加或删除任务或容器
-  href: ../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md
-- name: Integration Services 容器
-  href: ../integration-services/control-flow/integration-services-containers.md
-  items:
-    - name: Foreach 循环容器
-      href: ../integration-services/control-flow/foreach-loop-container.md
-    - name: 使用 Foreach 循环容器，循环遍历 Excel 文件和表
-      href: ../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md
-    - name: For 循环容器
-      href: ../integration-services/control-flow/for-loop-container.md
-    - name: 序列容器
-      href: ../integration-services/control-flow/sequence-container.md
-    - name: 任务宿主容器
-      href: ../integration-services/control-flow/task-host-container.md
-- name: Integration Services 任务
-  href: ../integration-services/control-flow/integration-services-tasks.md
-  items:
-    - name: Analysis Services 执行 DDL 任务
-      href: ../integration-services/control-flow/analysis-services-execute-ddl-task.md
-    - name: Analysis Services 处理任务
-      href: ../integration-services/control-flow/analysis-services-processing-task.md
-    - name: Azure Blob 下载任务
-      href: ../integration-services/control-flow/azure-blob-download-task.md
-    - name: Azure blob 上载任务
-      href: ../integration-services/control-flow/azure-blob-upload-task.md
-    - name: Azure Data Lake Analytics 任务
-      href: ../integration-services/control-flow/azure-data-lake-analytics-task.md
-    - name: Azure Data Lake Store 文件系统任务
-      href: ../integration-services/control-flow/azure-data-lake-store-file-system-task.md
-    - name: Azure HDInsight 创建群集任务
-      href: ../integration-services/control-flow/azure-hdinsight-create-cluster-task.md
-    - name: Azure HDInsight 删除群集任务
-      href: ../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md
-    - name: Azure HDInsight Hive 任务
-      href: ../integration-services/control-flow/azure-hdinsight-hive-task.md
-    - name: Azure HDInsight Pig 任务
-      href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
-    - name: Azure SQL DW 上传任务
-      href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
-    - name: 灵活的文件任务
-      href: ../integration-services/control-flow/flexible-file-task.md
-    - name: “备份数据库”任务
-      href: ../integration-services/control-flow/back-up-database-task.md
-    - name: 大容量插入任务
-      href: ../integration-services/control-flow/bulk-insert-task.md
-    - name: CDC 控制任务
-      href: ../integration-services/control-flow/cdc-control-task.md
+    - name: 概述
+      href: ../integration-services/connection-manager/integration-services-ssis-connections.md
+    - name: “数据源”
+      href: ../integration-services/connection-manager/data-sources.md
+    - name: ADO 连接管理器
+      href: ../integration-services/connection-manager/ado-connection-manager.md
+    - name: ADO.NET 连接管理器
+      href: ../integration-services/connection-manager/ado-net-connection-manager.md
+    - name: Analysis Services 连接管理器
+      href: ../integration-services/connection-manager/analysis-services-connection-manager.md
       items:
-        - name: CDC 控制任务自定义属性
-          href: ../integration-services/control-flow/cdc-control-task-custom-properties.md
-    - name: “检查数据库完整性”任务
-      href: ../integration-services/control-flow/check-database-integrity-task.md
-    - name: 数据流任务
-      href: ../integration-services/control-flow/data-flow-task.md
-    - name: 数据挖掘查询任务
-      href: ../integration-services/control-flow/data-mining-query-task.md
+        - name: “添加 Analysis Services 连接管理器”对话框 UI 参考
+          href: ../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md
+    - name: Azure Data Lake Analytics 连接管理器
+      href: ../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md
+    - name: Azure Data Lake Store 连接管理器
+      href: ../integration-services/connection-manager/azure-data-lake-store-connection-manager.md
+    - name: Azure HDInsight 连接管理器
+      href: ../integration-services/connection-manager/azure-hdinsight-connection-manager.md
+    - name: Azure 资源管理器连接管理器
+      href: ../integration-services/connection-manager/azure-resource-manager-connection-manager.md
+    - name: Azure 存储连接管理器
+      href: ../integration-services/connection-manager/azure-storage-connection-manager.md
+    - name: Azure 订阅连接管理器
+      href: ../integration-services/connection-manager/azure-subscription-connection-manager.md
+    - name: Excel 连接管理器
+      href: ../integration-services/connection-manager/excel-connection-manager.md
+    - name: 文件连接管理器
+      href: ../integration-services/connection-manager/file-connection-manager.md
       items:
-        - name: 数据挖掘查询
-          href: ../integration-services/control-flow/data-mining-query.md
-    - name: 数据事件探查任务和查看器
-      href: ../integration-services/control-flow/data-profiling-task-and-viewer.md
+        - name: “添加文件连接管理器”对话框 UI 参考
+          href: ../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md
+        - name: “提供列类型建议”对话框 UI 参考
+          href: ../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md
+    - name: 平面文件连接管理器
+      href: ../integration-services/connection-manager/flat-file-connection-manager.md
+    - name: FTP 连接管理器
+      href: ../integration-services/connection-manager/ftp-connection-manager.md
+    - name: Hadoop 连接管理器
+      href: ../integration-services/connection-manager/hadoop-connection-manager.md
+    - name: HTTP 连接管理器
+      href: ../integration-services/connection-manager/http-connection-manager.md
+    - name: MSMQ 连接管理器
+      href: ../integration-services/connection-manager/msmq-connection-manager.md
+    - name: 多文件连接管理器
+      href: ../integration-services/connection-manager/multiple-files-connection-manager.md
+    - name: 多平面文件连接管理器
+      href: ../integration-services/connection-manager/multiple-flat-files-connection-manager.md
+    - name: OData 连接管理器
+      href: ../integration-services/connection-manager/odata-connection-manager.md
+    - name: ODBC 连接管理器
+      href: ../integration-services/connection-manager/odbc-connection-manager.md
+    - name: OLE DB 连接管理器
+      href: ../integration-services/connection-manager/ole-db-connection-manager.md
+    - name: SAP BW 连接管理器
+      href: ../integration-services/connection-manager/sap-bw-connection-manager.md
+    - name: SMTP 连接管理器
+      href: ../integration-services/connection-manager/smtp-connection-manager.md
+    - name: SMO 连接管理器
+      href: ../integration-services/connection-manager/smo-connection-manager.md
+    - name: SQL Server Compact Edition 连接管理器
+      href: ../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md
+    - name: WMI 连接管理器
+      href: ../integration-services/connection-manager/wmi-connection-manager.md
+- name: “控制流”
+  items:
+    - name: 概述
+      href: ../integration-services/control-flow/control-flow.md
+    - name: 在控制流中添加或删除任务或容器
+      href: ../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md
+    - name: Integration Services 容器
+      href: ../integration-services/control-flow/integration-services-containers.md
       items:
-        - name: 设置数据事件探查任务
-          href: ../integration-services/control-flow/setup-of-the-data-profiling-task.md
-        - name: 数据配置文件查看器 (Data Profile Viewer)
-          href: ../integration-services/control-flow/data-profile-viewer.md
-        - name: 数据事件探查任务
-          href: ../integration-services/control-flow/data-profiling-task.md
+        - name: Foreach 循环容器
+          href: ../integration-services/control-flow/foreach-loop-container.md
+        - name: 使用 Foreach 循环容器，循环遍历 Excel 文件和表
+          href: ../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md
+        - name: For 循环容器
+          href: ../integration-services/control-flow/for-loop-container.md
+        - name: 序列容器
+          href: ../integration-services/control-flow/sequence-container.md
+        - name: 任务宿主容器
+          href: ../integration-services/control-flow/task-host-container.md
+    - name: Integration Services 任务
+      href: ../integration-services/control-flow/integration-services-tasks.md
+      items:
+        - name: Analysis Services 执行 DDL 任务
+          href: ../integration-services/control-flow/analysis-services-execute-ddl-task.md
+        - name: Analysis Services 处理任务
+          href: ../integration-services/control-flow/analysis-services-processing-task.md
+        - name: Azure Blob 下载任务
+          href: ../integration-services/control-flow/azure-blob-download-task.md
+        - name: Azure blob 上载任务
+          href: ../integration-services/control-flow/azure-blob-upload-task.md
+        - name: Azure Data Lake Analytics 任务
+          href: ../integration-services/control-flow/azure-data-lake-analytics-task.md
+        - name: Azure Data Lake Store 文件系统任务
+          href: ../integration-services/control-flow/azure-data-lake-store-file-system-task.md
+        - name: Azure HDInsight 创建群集任务
+          href: ../integration-services/control-flow/azure-hdinsight-create-cluster-task.md
+        - name: Azure HDInsight 删除群集任务
+          href: ../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md
+        - name: Azure HDInsight Hive 任务
+          href: ../integration-services/control-flow/azure-hdinsight-hive-task.md
+        - name: Azure HDInsight Pig 任务
+          href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
+        - name: Azure SQL DW 上传任务
+          href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
+        - name: 灵活的文件任务
+          href: ../integration-services/control-flow/flexible-file-task.md
+        - name: “备份数据库”任务
+          href: ../integration-services/control-flow/back-up-database-task.md
+        - name: 大容量插入任务
+          href: ../integration-services/control-flow/bulk-insert-task.md
+        - name: CDC 控制任务
+          href: ../integration-services/control-flow/cdc-control-task.md
           items:
-            - name: 单个表快速配置文件窗体（数据事件探查任务）
-              href: ../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md
-            - name: 数据事件探查任务编辑器（“配置文件请求”页）
-              href: ../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md
+            - name: CDC 控制任务自定义属性
+              href: ../integration-services/control-flow/cdc-control-task-custom-properties.md
+        - name: “检查数据库完整性”任务
+          href: ../integration-services/control-flow/check-database-integrity-task.md
+        - name: 数据流任务
+          href: ../integration-services/control-flow/data-flow-task.md
+        - name: 数据挖掘查询任务
+          href: ../integration-services/control-flow/data-mining-query-task.md
+          items:
+            - name: 数据挖掘查询
+              href: ../integration-services/control-flow/data-mining-query.md
+        - name: 数据事件探查任务和查看器
+          href: ../integration-services/control-flow/data-profiling-task-and-viewer.md
+          items:
+            - name: 设置数据事件探查任务
+              href: ../integration-services/control-flow/setup-of-the-data-profiling-task.md
+            - name: 数据配置文件查看器 (Data Profile Viewer)
+              href: ../integration-services/control-flow/data-profile-viewer.md
+            - name: 数据事件探查任务
+              href: ../integration-services/control-flow/data-profiling-task.md
               items:
-                - name: 候选键配置文件请求选项（数据事件探查任务）
-                  href: ../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md
-                - name: 列长度分布配置文件请求选项（数据事件探查任务）
-                  href: ../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md
-                - name: 列 Null 比率配置文件请求选项（数据事件探查任务）
-                  href: ../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md
-                - name: 列模式信息配置文件请求选项（数据事件探查任务）
-                  href: ../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md
-                - name: 列统计信息配置文件请求选项（数据事件探查任务）
-                  href: ../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md
-                - name: 列值分布配置文件请求选项（数据事件探查任务）
-                  href: ../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md
-                - name: 函数依赖关系配置文件请求选项（数据事件探查任务）
-                  href: ../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md
-                - name: 值包含配置文件请求选项（数据事件探查任务）
-                  href: ../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md
-            - name: 数据事件探查任务编辑器（常规页）
-              href: ../integration-services/control-flow/data-profiling-task-editor-general-page.md
-            - name: 合并包工作流中的数据事件探查任务
-              href: ../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md
-    - name: 执行包任务
-      href: ../integration-services/control-flow/execute-package-task.md
-    - name: 执行进程任务
-      href: ../integration-services/control-flow/execute-process-task.md
-    - name: “执行 SQL Server 代理作业”任务
-      href: ../integration-services/control-flow/execute-sql-server-agent-job-task.md
-    - name: 执行 SQL 任务
-      href: ../integration-services/control-flow/execute-sql-task.md
+                - name: 单个表快速配置文件窗体（数据事件探查任务）
+                  href: ../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md
+                - name: 数据事件探查任务编辑器（“配置文件请求”页）
+                  href: ../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md
+                  items:
+                    - name: 候选键配置文件请求选项（数据事件探查任务）
+                      href: ../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md
+                    - name: 列长度分布配置文件请求选项（数据事件探查任务）
+                      href: ../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md
+                    - name: 列 Null 比率配置文件请求选项（数据事件探查任务）
+                      href: ../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md
+                    - name: 列模式信息配置文件请求选项（数据事件探查任务）
+                      href: ../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md
+                    - name: 列统计信息配置文件请求选项（数据事件探查任务）
+                      href: ../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md
+                    - name: 列值分布配置文件请求选项（数据事件探查任务）
+                      href: ../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md
+                    - name: 函数依赖关系配置文件请求选项（数据事件探查任务）
+                      href: ../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md
+                    - name: 值包含配置文件请求选项（数据事件探查任务）
+                      href: ../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md
+                - name: 数据事件探查任务编辑器（常规页）
+                  href: ../integration-services/control-flow/data-profiling-task-editor-general-page.md
+                - name: 合并包工作流中的数据事件探查任务
+                  href: ../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md
+        - name: 执行包任务
+          href: ../integration-services/control-flow/execute-package-task.md
+        - name: 执行进程任务
+          href: ../integration-services/control-flow/execute-process-task.md
+        - name: “执行 SQL Server 代理作业”任务
+          href: ../integration-services/control-flow/execute-sql-server-agent-job-task.md
+        - name: 执行 SQL 任务
+          href: ../integration-services/control-flow/execute-sql-task.md
+          items:
+            - name: 在 Integration Services 包中执行 MERGE
+              href: ../integration-services/control-flow/merge-in-integration-services-packages.md
+        - name: 执行 T-SQL 语句任务
+          href: ../integration-services/control-flow/execute-t-sql-statement-task.md
+        - name: 表达式任务
+          href: ../integration-services/control-flow/expression-task.md
+        - name: 文件系统任务
+          href: ../integration-services/control-flow/file-system-task.md
+        - name: FTP 任务
+          href: ../integration-services/control-flow/ftp-task.md
+        - name: Hadoop 文件系统任务
+          href: ../integration-services/control-flow/hadoop-file-system-task.md
+        - name: Hadoop 配置单元任务
+          href: ../integration-services/control-flow/hadoop-hive-task.md
+        - name: Hadoop Pig 任务
+          href: ../integration-services/control-flow/hadoop-pig-task.md
+        - name: “清除历史记录”任务
+          href: ../integration-services/control-flow/history-cleanup-task.md
+        - name: “清除维护”任务
+          href: ../integration-services/control-flow/maintenance-cleanup-task.md
+        - name: Message Queue Task
+          href: ../integration-services/control-flow/message-queue-task.md
+          items:
+            - name: 选择变量
+              href: ../integration-services/control-flow/select-variables.md
+            - name: 选择包
+              href: ../integration-services/control-flow/select-a-package.md
+        - name: “通知操作员”任务
+          href: ../integration-services/control-flow/notify-operator-task.md
+        - name: “重新生成索引”任务
+          href: ../integration-services/control-flow/rebuild-index-task.md
+        - name: “重新组织索引”任务
+          href: ../integration-services/control-flow/reorganize-index-task.md
+        - name: 脚本任务
+          href: ../integration-services/control-flow/script-task.md
+          items:
+            - name: “选择变量”页
+              href: ../integration-services/control-flow/select-variables-page.md
+        - name: 发送邮件任务
+          href: ../integration-services/control-flow/send-mail-task.md
+        - name: 收缩数据库任务
+          href: ../integration-services/control-flow/shrink-database-task.md
+        - name: 传输数据库任务
+          href: ../integration-services/control-flow/transfer-database-task.md
+        - name: 传输错误消息任务
+          href: ../integration-services/control-flow/transfer-error-messages-task.md
+        - name: 传输作业任务
+          href: ../integration-services/control-flow/transfer-jobs-task.md
+        - name: 传输登录名任务
+          href: ../integration-services/control-flow/transfer-logins-task.md
+        - name: 传输主存储过程任务
+          href: ../integration-services/control-flow/transfer-master-stored-procedures-task.md
+        - name: 传输 SQL Server 对象任务
+          href: ../integration-services/control-flow/transfer-sql-server-objects-task.md
+        - name: 选择要传输的对象
+          href: ../integration-services/control-flow/select-objects-to-transfer.md
+        - name: “更新统计信息”任务
+          href: ../integration-services/control-flow/update-statistics-task.md
+        - name: Web 服务任务
+          href: ../integration-services/control-flow/web-service-task.md
+        - name: WMI 数据读取器任务
+          href: ../integration-services/control-flow/wmi-data-reader-task.md
+        - name: WMI 事件观察器任务
+          href: ../integration-services/control-flow/wmi-event-watcher-task.md
+        - name: XML 任务
+          href: ../integration-services/control-flow/xml-task.md
+          items:
+            - name: Validate XML with the XML Task
+              href: ../integration-services/control-flow/validate-xml-with-the-xml-task.md
+    - name: 优先约束
+      href: ../integration-services/control-flow/precedence-constraints.md
+- name: 数据流
+  items:
+    - name: 概述
+      href: ../integration-services/data-flow/data-flow.md
+    - name: 数据流中的数据
+      href: ../integration-services/data-flow/data-in-data-flows.md
       items:
-        - name: 在 Integration Services 包中执行 MERGE
-          href: ../integration-services/control-flow/merge-in-integration-services-packages.md
-    - name: 执行 T-SQL 语句任务
-      href: ../integration-services/control-flow/execute-t-sql-statement-task.md
-    - name: 表达式任务
-      href: ../integration-services/control-flow/expression-task.md
-    - name: 文件系统任务
-      href: ../integration-services/control-flow/file-system-task.md
-    - name: FTP 任务
-      href: ../integration-services/control-flow/ftp-task.md
-    - name: Hadoop 文件系统任务
-      href: ../integration-services/control-flow/hadoop-file-system-task.md
-    - name: Hadoop 配置单元任务
-      href: ../integration-services/control-flow/hadoop-hive-task.md
-    - name: Hadoop Pig 任务
-      href: ../integration-services/control-flow/hadoop-pig-task.md
-    - name: “清除历史记录”任务
-      href: ../integration-services/control-flow/history-cleanup-task.md
-    - name: “清除维护”任务
-      href: ../integration-services/control-flow/maintenance-cleanup-task.md
-    - name: Message Queue Task
-      href: ../integration-services/control-flow/message-queue-task.md
+        - name: Integration Services 数据类型
+          href: ../integration-services/data-flow/integration-services-data-types.md
+        - name: 分析数据
+          href: ../integration-services/data-flow/parsing-data.md
+        - name: 比较字符串数据
+          href: ../integration-services/data-flow/comparing-string-data.md
+    - name: 在数据流中添加或删除组件
+      href: ../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md
+    - name: 设置数据流组件的属性
+      href: ../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md
+    - name: 连接数据流中的组件
+      href: ../integration-services/data-flow/connect-components-in-a-data-flow.md
+    - name: Integration Services 路径
+      href: ../integration-services/data-flow/integration-services-paths.md
+    - name: 解析列引用编辑器
+      href: ../integration-services/data-flow/resolve-column-reference-editor.md
+    - name: 数据查看器
+      href: ../integration-services/data-flow/data-viewer.md
+    - name: 数据中的错误处理
+      href: ../integration-services/data-flow/error-handling-in-data.md
+    - name: 数据流性能特点
+      href: ../integration-services/data-flow/data-flow-performance-features.md
+    - name: 源助手
+      href: ../integration-services/data-flow/source-assistant.md
+    - name: 目标助手
+      href: ../integration-services/data-flow/destination-assistant.md
+    - name: 源和目标
       items:
-        - name: 选择变量
-          href: ../integration-services/control-flow/select-variables.md
-        - name: 选择包
-          href: ../integration-services/control-flow/select-a-package.md
-    - name: “通知操作员”任务
-      href: ../integration-services/control-flow/notify-operator-task.md
-    - name: “重新生成索引”任务
-      href: ../integration-services/control-flow/rebuild-index-task.md
-    - name: “重新组织索引”任务
-      href: ../integration-services/control-flow/reorganize-index-task.md
-    - name: 脚本任务
-      href: ../integration-services/control-flow/script-task.md
+        - name: ADO NET 源
+          href: ../integration-services/data-flow/ado-net-source.md
+        - name: ADO NET 目标
+          href: ../integration-services/data-flow/ado-net-destination.md
+        - name: ADO NET 自定义属性
+          href: ../integration-services/data-flow/ado-net-custom-properties.md
+        - name: Azure blob 源
+          href: ../integration-services/data-flow/azure-blob-source.md
+        - name: Azure blob 目标
+          href: ../integration-services/data-flow/azure-blob-destination.md
+        - name: Azure Data Lake Store 源
+          href: ../integration-services/data-flow/azure-data-lake-store-source.md
+        - name: Azure Data Lake Store 目标
+          href: ../integration-services/data-flow/azure-data-lake-store-destination.md
+        - name: 灵活的文件源
+          href: ../integration-services/data-flow/flexible-file-source.md
+        - name: 灵活的文件目标
+          href: ../integration-services/data-flow/flexible-file-destination.md
+        - name: CDC 流组件
+          href: ../integration-services/data-flow/cdc-flow-components.md
+          items:
+            - name: CDC 源
+              href: ../integration-services/data-flow/cdc-source.md
+              items:
+                - name: CDC 源自定义属性
+                  href: ../integration-services/data-flow/cdc-source-custom-properties.md
+                - name: 使用 CDC 源提取更改数据
+                  href: ../integration-services/data-flow/extract-change-data-using-the-cdc-source.md
+            - name: CDC 拆分器
+              href: ../integration-services/data-flow/cdc-splitter.md
+            - name: 根据更改的类型定向 CDC 流
+              href: ../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md
+            - name: 定义状态变量
+              href: ../integration-services/data-flow/define-a-state-variable.md
+        - name: 数据挖掘模型定型目标
+          href: ../integration-services/data-flow/data-mining-model-training-destination.md
+          items:
+            - name: 数据挖掘模型定型目标自定义属性
+              href: ../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md
+        - name: 数据流目标
+          href: ../integration-services/data-flow/data-streaming-destination.md
+          items:
+            - name: 演练：将 SSIS 包作为 SQL 视图发布
+              href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
+        - name: DataReader 目标
+          href: ../integration-services/data-flow/datareader-destination.md
+          items:
+            - name: DataReader 目标自定义属性
+              href: ../integration-services/data-flow/datareader-destination-custom-properties.md
+        - name: 维度处理目标
+          href: ../integration-services/data-flow/dimension-processing-destination.md
+          items:
+            - name: 维度处理目标自定义属性
+              href: ../integration-services/data-flow/dimension-processing-destination-custom-properies.md
+        - name: Excel 源
+          href: ../integration-services/data-flow/excel-source.md
+        - name: Excel 目标
+          href: ../integration-services/data-flow/excel-destination.md
+        - name: Excel 自定义属性
+          href: ../integration-services/data-flow/excel-custom-properties.md
+        - name: 平面文件源
+          href: ../integration-services/data-flow/flat-file-source.md
+        - name: 平面文件目标
+          href: ../integration-services/data-flow/flat-file-destination.md
+        - name: HDFS 文件源
+          href: ../integration-services/data-flow/hdfs-file-source.md
+        - name: HDFS 文件目标
+          href: ../integration-services/data-flow/hdfs-file-destination.md
+        - name: 平面文件自定义属性
+          href: ../integration-services/data-flow/flat-file-custom-properties.md
+        - name: OData 源
+          href: ../integration-services/data-flow/odata-source.md
+          items:
+            - name: 教程：使用 OData 源
+              href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
+            - name: 在运行时提供 OData 源查询
+              href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
+            - name: OData 源属性
+              href: ../integration-services/data-flow/odata-source-properties.md
+        - name: ODBC 流组件
+          href: ../integration-services/data-flow/odbc-flow-components.md
+          items:
+            - name: ODBC 目标
+              href: ../integration-services/data-flow/odbc-destination.md
+              items:
+                - name: 通过使用 ODBC 目标来加载数据
+                  href: ../integration-services/data-flow/load-data-by-using-the-odbc-destination.md
+                - name: ODBC Destination Custom Properties
+                  href: ../integration-services/data-flow/odbc-destination-custom-properties.md
+            - name: ODBC 源
+              href: ../integration-services/data-flow/odbc-source.md
+              items:
+                - name: 使用 ODBC 源提取数据
+                  href: ../integration-services/data-flow/extract-data-by-using-the-odbc-source.md
+                - name: ODBC Source Custom Properties
+                  href: ../integration-services/data-flow/odbc-source-custom-properties.md
+        - name: OLE DB 源
+          href: ../integration-services/data-flow/ole-db-source.md
+          items:
+            - name: 将查询参数映射到数据流组件中的变量
+              href: ../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md
+            - name: 使用 OLE DB 源提取数据
+              href: ../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md
+        - name: OLE DB 目标
+          href: ../integration-services/data-flow/ole-db-destination.md
+          items:
+            - name: 通过使用 OLE DB 目标来加载数据
+              href: ../integration-services/data-flow/load-data-by-using-the-ole-db-destination.md
+        - name: OLE DB 自定义属性
+          href: ../integration-services/data-flow/ole-db-custom-properties.md
+        - name: 分区处理目标
+          href: ../integration-services/data-flow/partition-processing-destination.md
+          items:
+            - name: 分区处理目标自定义属性
+              href: ../integration-services/data-flow/partition-processing-destination-custom-properties.md
+        - name: Power Query 源
+          href: ../integration-services/data-flow/power-query-source.md
+        - name: 原始文件源
+          href: ../integration-services/data-flow/raw-file-source.md
+        - name: Raw File Destination
+          href: ../integration-services/data-flow/raw-file-destination.md
+        - name: 原始文件自定义属性
+          href: ../integration-services/data-flow/raw-file-custom-properties.md
+        - name: 记录集目标
+          href: ../integration-services/data-flow/recordset-destination.md
+          items:
+            - name: 使用记录集目标
+              href: ../integration-services/data-flow/use-a-recordset-destination.md
+            - name: 记录集目标自定义属性
+              href: ../integration-services/data-flow/recordset-destination-custom-properties.md
+        - name: SAP BW 源
+          href: ../integration-services/data-flow/sap-bw-source.md
+          items:
+            - name: SAP BW 源编辑器（“连接管理器”页）
+              href: ../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md
+            - name: SAP BW 源编辑器（“列”页）
+              href: ../integration-services/data-flow/sap-bw-source-editor-columns-page.md
+            - name: SAP BW 源编辑器（“错误输出”页）
+              href: ../integration-services/data-flow/sap-bw-source-editor-error-output-page.md
+            - name: SAP BW 源编辑器（“高级”页）
+              href: ../integration-services/data-flow/sap-bw-source-editor-advanced-page.md
+            - name: 查找 RFC 目标
+              href: ../integration-services/data-flow/look-up-rfc-destination.md
+            - name: 查找进程链
+              href: ../integration-services/data-flow/look-up-process-chain.md
+            - name: 请求日志
+              href: ../integration-services/data-flow/request-log.md
+            - name: 预览
+              href: ../integration-services/data-flow/preview.md
+        - name: SAP BW 目标
+          href: ../integration-services/data-flow/sap-bw-destination.md
+          items:
+            - name: SAP BW 目标编辑器（“连接管理器”页）
+              href: ../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md
+            - name: SAP BW 目标编辑器（“映射”页）
+              href: ../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md
+            - name: SAP BW 目标编辑器（“错误输出”页）
+              href: ../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md
+            - name: SAP BW 目标编辑器（“高级”页）
+              href: ../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md
+            - name: 查找 InfoPackage
+              href: ../integration-services/data-flow/look-up-infopackage.md
+            - name: 新建 InfoObject
+              href: ../integration-services/data-flow/create-new-infoobject.md
+            - name: 创建事务数据的 InfoCube
+              href: ../integration-services/data-flow/create-infocube-for-transaction-data.md
+            - name: 查找 InfoObject
+              href: ../integration-services/data-flow/look-up-infoobject.md
+            - name: “创建 InfoSource”
+              href: ../integration-services/data-flow/create-infosource.md
+            - name: “创建事务数据的 InfoSource”
+              href: ../integration-services/data-flow/create-infosource-for-transaction-data.md
+            - name: “创建主数据的 InfoSource”
+              href: ../integration-services/data-flow/create-infosource-for-master-data.md
+            - name: 创建 InfoPackage
+              href: ../integration-services/data-flow/create-infopackage.md
+        - name: SQL Server Compact Edition 目标
+          href: ../integration-services/data-flow/sql-server-compact-edition-destination.md
+          items:
+            - name: SQL Server Compact Edition 目标自定义属性
+              href: ../integration-services/data-flow/sql-server-compact-edition-destination-custom-properties.md
+        - name: SQL Server 目标
+          href: ../integration-services/data-flow/sql-server-destination.md
+          items:
+            - name: 使用 SQL Server 目标大容量加载数据
+              href: ../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md
+            - name: SQL Server 目标自定义属性
+              href: ../integration-services/data-flow/sql-server-destination-custom-properties.md
+- name: 转换
+  items:
+    - name: 概述
+      href: ../integration-services/data-flow/transformations/integration-services-transformations.md
+    - name: 聚合转换
+      href: ../integration-services/data-flow/transformations/aggregate-transformation.md
       items:
-        - name: “选择变量”页
-          href: ../integration-services/control-flow/select-variables-page.md
-    - name: 发送邮件任务
-      href: ../integration-services/control-flow/send-mail-task.md
-    - name: 收缩数据库任务
-      href: ../integration-services/control-flow/shrink-database-task.md
-    - name: 传输数据库任务
-      href: ../integration-services/control-flow/transfer-database-task.md
-    - name: 传输错误消息任务
-      href: ../integration-services/control-flow/transfer-error-messages-task.md
-    - name: 传输作业任务
-      href: ../integration-services/control-flow/transfer-jobs-task.md
-    - name: 传输登录名任务
-      href: ../integration-services/control-flow/transfer-logins-task.md
-    - name: 传输主存储过程任务
-      href: ../integration-services/control-flow/transfer-master-stored-procedures-task.md
-    - name: 传输 SQL Server 对象任务
-      href: ../integration-services/control-flow/transfer-sql-server-objects-task.md
-    - name: 选择要传输的对象
-      href: ../integration-services/control-flow/select-objects-to-transfer.md
-    - name: “更新统计信息”任务
-      href: ../integration-services/control-flow/update-statistics-task.md
-    - name: Web 服务任务
-      href: ../integration-services/control-flow/web-service-task.md
-    - name: WMI 数据读取器任务
-      href: ../integration-services/control-flow/wmi-data-reader-task.md
-    - name: WMI 事件观察器任务
-      href: ../integration-services/control-flow/wmi-event-watcher-task.md
-    - name: XML 任务
-      href: ../integration-services/control-flow/xml-task.md
+        - name: 使用聚合转换来聚合数据集中的值
+          href: ../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
+    - name: 审核转换
+      href: ../integration-services/data-flow/transformations/audit-transformation.md
+    - name: 平衡的数据分发服务器转换
+      href: ../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md
+    - name: 字符映射表转换
+      href: ../integration-services/data-flow/transformations/character-map-transformation.md
+    - name: 有条件拆分转换
+      href: ../integration-services/data-flow/transformations/conditional-split-transformation.md
       items:
-        - name: Validate XML with the XML Task
-          href: ../integration-services/control-flow/validate-xml-with-the-xml-task.md
-- name: 优先约束
-  href: ../integration-services/control-flow/precedence-constraints.md
-- name: 概述
-  href: ../integration-services/data-flow/data-flow.md
-- name: 数据流中的数据
-  href: ../integration-services/data-flow/data-in-data-flows.md
-  items:
-    - name: Integration Services 数据类型
-      href: ../integration-services/data-flow/integration-services-data-types.md
-    - name: 分析数据
-      href: ../integration-services/data-flow/parsing-data.md
-    - name: 比较字符串数据
-      href: ../integration-services/data-flow/comparing-string-data.md
-- name: 在数据流中添加或删除组件
-  href: ../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md
-- name: 设置数据流组件的属性
-  href: ../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md
-- name: 连接数据流中的组件
-  href: ../integration-services/data-flow/connect-components-in-a-data-flow.md
-- name: Integration Services 路径
-  href: ../integration-services/data-flow/integration-services-paths.md
-- name: 解析列引用编辑器
-  href: ../integration-services/data-flow/resolve-column-reference-editor.md
-- name: 数据查看器
-  href: ../integration-services/data-flow/data-viewer.md
-- name: 数据中的错误处理
-  href: ../integration-services/data-flow/error-handling-in-data.md
-- name: 数据流性能特点
-  href: ../integration-services/data-flow/data-flow-performance-features.md
-- name: 源助手
-  href: ../integration-services/data-flow/source-assistant.md
-- name: 目标助手
-  href: ../integration-services/data-flow/destination-assistant.md
-- name: ADO NET 源
-  href: ../integration-services/data-flow/ado-net-source.md
-- name: ADO NET 目标
-  href: ../integration-services/data-flow/ado-net-destination.md
-- name: ADO NET 自定义属性
-  href: ../integration-services/data-flow/ado-net-custom-properties.md
-- name: Azure blob 源
-  href: ../integration-services/data-flow/azure-blob-source.md
-- name: Azure blob 目标
-  href: ../integration-services/data-flow/azure-blob-destination.md
-- name: Azure Data Lake Store 源
-  href: ../integration-services/data-flow/azure-data-lake-store-source.md
-- name: Azure Data Lake Store 目标
-  href: ../integration-services/data-flow/azure-data-lake-store-destination.md
-- name: 灵活的文件源
-  href: ../integration-services/data-flow/flexible-file-source.md
-- name: 灵活的文件目标
-  href: ../integration-services/data-flow/flexible-file-destination.md
-- name: CDC 流组件
-  href: ../integration-services/data-flow/cdc-flow-components.md
-  items:
-    - name: CDC 源
-      href: ../integration-services/data-flow/cdc-source.md
+        - name: 使用有条件拆分转换拆分数据集
+          href: ../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md
+    - name: 复制列转换
+      href: ../integration-services/data-flow/transformations/copy-column-transformation.md
+    - name: 数据转换
+      href: ../integration-services/data-flow/transformations/data-conversion-transformation.md
       items:
-        - name: CDC 源自定义属性
-          href: ../integration-services/data-flow/cdc-source-custom-properties.md
-        - name: 使用 CDC 源提取更改数据
-          href: ../integration-services/data-flow/extract-change-data-using-the-cdc-source.md
-    - name: CDC 拆分器
-      href: ../integration-services/data-flow/cdc-splitter.md
-    - name: 根据更改的类型定向 CDC 流
-      href: ../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md
-    - name: 定义状态变量
-      href: ../integration-services/data-flow/define-a-state-variable.md
-- name: 数据挖掘模型定型目标
-  href: ../integration-services/data-flow/data-mining-model-training-destination.md
-  items:
-    - name: 数据挖掘模型定型目标自定义属性
-      href: ../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md
-- name: 数据流目标
-  href: ../integration-services/data-flow/data-streaming-destination.md
-  items:
-    - name: 演练：将 SSIS 包作为 SQL 视图发布
-      href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
-- name: DataReader 目标
-  href: ../integration-services/data-flow/datareader-destination.md
-  items:
-    - name: DataReader 目标自定义属性
-      href: ../integration-services/data-flow/datareader-destination-custom-properties.md
-- name: 维度处理目标
-  href: ../integration-services/data-flow/dimension-processing-destination.md
-  items:
-    - name: 维度处理目标自定义属性
-      href: ../integration-services/data-flow/dimension-processing-destination-custom-properies.md
-- name: Excel 源
-  href: ../integration-services/data-flow/excel-source.md
-- name: Excel 目标
-  href: ../integration-services/data-flow/excel-destination.md
-- name: Excel 自定义属性
-  href: ../integration-services/data-flow/excel-custom-properties.md
-- name: 平面文件源
-  href: ../integration-services/data-flow/flat-file-source.md
-- name: 平面文件目标
-  href: ../integration-services/data-flow/flat-file-destination.md
-- name: HDFS 文件源
-  href: ../integration-services/data-flow/hdfs-file-source.md
-- name: HDFS 文件目标
-  href: ../integration-services/data-flow/hdfs-file-destination.md
-- name: 平面文件自定义属性
-  href: ../integration-services/data-flow/flat-file-custom-properties.md
-- name: OData 源
-  href: ../integration-services/data-flow/odata-source.md
-  items:
-    - name: 教程：使用 OData 源
-      href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
-    - name: 在运行时提供 OData 源查询
-      href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
-    - name: OData 源属性
-      href: ../integration-services/data-flow/odata-source-properties.md
-- name: ODBC 流组件
-  href: ../integration-services/data-flow/odbc-flow-components.md
-  items:
-    - name: ODBC 目标
-      href: ../integration-services/data-flow/odbc-destination.md
+        - name: 使用数据转换将数据转换为其他数据类型
+          href: ../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md
+    - name: 数据挖掘查询转换
+      href: ../integration-services/data-flow/transformations/data-mining-query-transformation.md
+    - name: DQS 清除转换
+      href: ../integration-services/data-flow/transformations/dqs-cleansing-transformation.md
       items:
-        - name: 通过使用 ODBC 目标来加载数据
-          href: ../integration-services/data-flow/load-data-by-using-the-odbc-destination.md
-        - name: ODBC Destination Custom Properties
-          href: ../integration-services/data-flow/odbc-destination-custom-properties.md
-    - name: ODBC 源
-      href: ../integration-services/data-flow/odbc-source.md
+        - name: DQS 清理连接管理器
+          href: ../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md
+        - name: 将数据质量规则应用于数据源
+          href: ../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md
+        - name: 将列映射到复合域
+          href: ../integration-services/data-flow/transformations/map-columns-to-composite-domains.md
+    - name: 派生列转换
+      href: ../integration-services/data-flow/transformations/derived-column-transformation.md
       items:
-        - name: 使用 ODBC 源提取数据
-          href: ../integration-services/data-flow/extract-data-by-using-the-odbc-source.md
-        - name: ODBC Source Custom Properties
-          href: ../integration-services/data-flow/odbc-source-custom-properties.md
-- name: OLE DB 源
-  href: ../integration-services/data-flow/ole-db-source.md
-  items:
-    - name: 将查询参数映射到数据流组件中的变量
-      href: ../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md
-    - name: 使用 OLE DB 源提取数据
-      href: ../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md
-- name: OLE DB 目标
-  href: ../integration-services/data-flow/ole-db-destination.md
-  items:
-    - name: 通过使用 OLE DB 目标来加载数据
-      href: ../integration-services/data-flow/load-data-by-using-the-ole-db-destination.md
-- name: OLE DB 自定义属性
-  href: ../integration-services/data-flow/ole-db-custom-properties.md
-- name: 分区处理目标
-  href: ../integration-services/data-flow/partition-processing-destination.md
-  items:
-    - name: 分区处理目标自定义属性
-      href: ../integration-services/data-flow/partition-processing-destination-custom-properties.md
-- name: Power Query 源
-  href: ../integration-services/data-flow/power-query-source.md
-- name: 原始文件源
-  href: ../integration-services/data-flow/raw-file-source.md
-- name: Raw File Destination
-  href: ../integration-services/data-flow/raw-file-destination.md
-- name: 原始文件自定义属性
-  href: ../integration-services/data-flow/raw-file-custom-properties.md
-- name: 记录集目标
-  href: ../integration-services/data-flow/recordset-destination.md
-  items:
-    - name: 使用记录集目标
-      href: ../integration-services/data-flow/use-a-recordset-destination.md
-    - name: 记录集目标自定义属性
-      href: ../integration-services/data-flow/recordset-destination-custom-properties.md
-- name: SAP BW 源
-  href: ../integration-services/data-flow/sap-bw-source.md
-  items:
-    - name: SAP BW 源编辑器（“连接管理器”页）
-      href: ../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md
-    - name: SAP BW 源编辑器（“列”页）
-      href: ../integration-services/data-flow/sap-bw-source-editor-columns-page.md
-    - name: SAP BW 源编辑器（“错误输出”页）
-      href: ../integration-services/data-flow/sap-bw-source-editor-error-output-page.md
-    - name: SAP BW 源编辑器（“高级”页）
-      href: ../integration-services/data-flow/sap-bw-source-editor-advanced-page.md
-    - name: 查找 RFC 目标
-      href: ../integration-services/data-flow/look-up-rfc-destination.md
-    - name: 查找进程链
-      href: ../integration-services/data-flow/look-up-process-chain.md
-    - name: 请求日志
-      href: ../integration-services/data-flow/request-log.md
-    - name: 预览
-      href: ../integration-services/data-flow/preview.md
-- name: SAP BW 目标
-  href: ../integration-services/data-flow/sap-bw-destination.md
-  items:
-    - name: SAP BW 目标编辑器（“连接管理器”页）
-      href: ../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md
-    - name: SAP BW 目标编辑器（“映射”页）
-      href: ../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md
-    - name: SAP BW 目标编辑器（“错误输出”页）
-      href: ../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md
-    - name: SAP BW 目标编辑器（“高级”页）
-      href: ../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md
-    - name: 查找 InfoPackage
-      href: ../integration-services/data-flow/look-up-infopackage.md
-    - name: 新建 InfoObject
-      href: ../integration-services/data-flow/create-new-infoobject.md
-    - name: 创建事务数据的 InfoCube
-      href: ../integration-services/data-flow/create-infocube-for-transaction-data.md
-    - name: 查找 InfoObject
-      href: ../integration-services/data-flow/look-up-infoobject.md
-    - name: “创建 InfoSource”
-      href: ../integration-services/data-flow/create-infosource.md
-    - name: “创建事务数据的 InfoSource”
-      href: ../integration-services/data-flow/create-infosource-for-transaction-data.md
-    - name: “创建主数据的 InfoSource”
-      href: ../integration-services/data-flow/create-infosource-for-master-data.md
-    - name: 创建 InfoPackage
-      href: ../integration-services/data-flow/create-infopackage.md
-- name: SQL Server Compact Edition 目标
-  href: ../integration-services/data-flow/sql-server-compact-edition-destination.md
-  items:
-    - name: SQL Server Compact Edition 目标自定义属性
-      href: ../integration-services/data-flow/sql-server-compact-edition-destination-custom-properties.md
-- name: SQL Server 目标
-  href: ../integration-services/data-flow/sql-server-destination.md
-  items:
-    - name: 使用 SQL Server 目标大容量加载数据
-      href: ../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md
-    - name: SQL Server 目标自定义属性
-      href: ../integration-services/data-flow/sql-server-destination-custom-properties.md
-- name: 概述
-  href: ../integration-services/data-flow/transformations/integration-services-transformations.md
-- name: 聚合转换
-  href: ../integration-services/data-flow/transformations/aggregate-transformation.md
-  items:
-    - name: 使用聚合转换来聚合数据集中的值
-      href: ../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
-- name: 审核转换
-  href: ../integration-services/data-flow/transformations/audit-transformation.md
-- name: 平衡的数据分发服务器转换
-  href: ../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md
-- name: 字符映射表转换
-  href: ../integration-services/data-flow/transformations/character-map-transformation.md
-- name: 有条件拆分转换
-  href: ../integration-services/data-flow/transformations/conditional-split-transformation.md
-  items:
-    - name: 使用有条件拆分转换拆分数据集
-      href: ../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md
-- name: 复制列转换
-  href: ../integration-services/data-flow/transformations/copy-column-transformation.md
-- name: 数据转换
-  href: ../integration-services/data-flow/transformations/data-conversion-transformation.md
-  items:
-    - name: 使用数据转换将数据转换为其他数据类型
-      href: ../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md
-- name: 数据挖掘查询转换
-  href: ../integration-services/data-flow/transformations/data-mining-query-transformation.md
-- name: DQS 清除转换
-  href: ../integration-services/data-flow/transformations/dqs-cleansing-transformation.md
-  items:
-    - name: DQS 清理连接管理器
-      href: ../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md
-    - name: 将数据质量规则应用于数据源
-      href: ../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md
-    - name: 将列映射到复合域
-      href: ../integration-services/data-flow/transformations/map-columns-to-composite-domains.md
-- name: 派生列转换
-  href: ../integration-services/data-flow/transformations/derived-column-transformation.md
-  items:
-    - name: 使用派生列转换派生列值
-      href: ../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md
-- name: 导出列转换
-  href: ../integration-services/data-flow/transformations/export-column-transformation.md
-- name: 模糊分组转换
-  href: ../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md
-  items:
-    - name: 使用模糊分组转换标识相似数据行
-      href: ../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
-- name: 模糊查找转换
-  href: ../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md
-- name: 导入列转换
-  href: ../integration-services/data-flow/transformations/import-column-transformation.md
-- name: 查找转换
-  href: ../integration-services/data-flow/transformations/lookup-transformation.md
-  items:
-    - name: 在不缓存模式或部分缓存模式下实现查找
-      href: ../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md
-    - name: 在完全缓存模式下使用缓存连接管理器实现查找转换
-      href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md
-    - name: 在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换
-      href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
-    - name: 为查找转换创建和部署缓存
-      href: ../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md
-    - name: 创建关系
-      href: ../integration-services/data-flow/transformations/create-relationships.md
-    - name: 缓存转换
-      href: ../integration-services/data-flow/transformations/cache-transform.md
+        - name: 使用派生列转换派生列值
+          href: ../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md
+    - name: 导出列转换
+      href: ../integration-services/data-flow/transformations/export-column-transformation.md
+    - name: 模糊分组转换
+      href: ../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md
       items:
-        - name: 缓存连接管理器
-          href: ../integration-services/data-flow/transformations/cache-connection-manager.md
-- name: 合并转换
-  href: ../integration-services/data-flow/transformations/merge-transformation.md
-- name: Merge Join Transformation
-  href: ../integration-services/data-flow/transformations/merge-join-transformation.md
-  items:
-    - name: 使用合并联接转换扩展数据集
-      href: ../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md
-    - name: 为合并转换和合并联接转换排序数据
-      href: ../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md
-- name: 多播转换
-  href: ../integration-services/data-flow/transformations/multicast-transformation.md
-- name: OLE DB 命令转换
-  href: ../integration-services/data-flow/transformations/ole-db-command-transformation.md
-- name: 百分比抽样转换
-  href: ../integration-services/data-flow/transformations/percentage-sampling-transformation.md
-- name: 透视转换
-  href: ../integration-services/data-flow/transformations/pivot-transformation.md
-- name: 行计数转换
-  href: ../integration-services/data-flow/transformations/row-count-transformation.md
-- name: 行抽样转换
-  href: ../integration-services/data-flow/transformations/row-sampling-transformation.md
-- name: 脚本组件
-  href: ../integration-services/data-flow/transformations/script-component.md
-- name: 渐变维度转换
-  href: ../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md
-  items:
-    - name: 使用渐变维度向导配置输出
-      href: ../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md
-    - name: 渐变维度向导的 F1 帮助
-      href: ../integration-services/data-flow/transformations/slowly-changing-dimension-wizard-f1-help.md
+        - name: 使用模糊分组转换标识相似数据行
+          href: ../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
+    - name: 模糊查找转换
+      href: ../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md
+    - name: 导入列转换
+      href: ../integration-services/data-flow/transformations/import-column-transformation.md
+    - name: 查找转换
+      href: ../integration-services/data-flow/transformations/lookup-transformation.md
       items:
-        - name: 欢迎使用渐变维度向导
-          href: ../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md
-        - name: 选择维度表和键（渐变维度向导）
-          href: ../integration-services/data-flow/transformations/select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
-        - name: 渐变维度列（渐变维度向导）
-          href: ../integration-services/data-flow/transformations/slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
-        - name: 固定的属性选项和变化的属性选项（渐变维度向导）
-          href: ../integration-services/data-flow/transformations/fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
-        - name: 历史属性选项（渐变维度向导）
-          href: ../integration-services/data-flow/transformations/historical-attribute-options-slowly-changing-dimension-wizard.md
-        - name: 推断维度成员（渐变维度向导）
-          href: ../integration-services/data-flow/transformations/inferred-dimension-members-slowly-changing-dimension-wizard.md
-        - name: 完成渐变维度向导
-          href: ../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md
-- name: 排序转换
-  href: ../integration-services/data-flow/transformations/sort-transformation.md
-- name: 字词提取转换
-  href: ../integration-services/data-flow/transformations/term-extraction-transformation.md
-- name: 字词查找转换
-  href: ../integration-services/data-flow/transformations/term-lookup-transformation.md
-- name: Union All 转换
-  href: ../integration-services/data-flow/transformations/union-all-transformation.md
-  items:
-    - name: 通过使用 Union All 转换来合并数据
-      href: ../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md
-- name: 逆透视转换
-  href: ../integration-services/data-flow/transformations/unpivot-transformation.md
-- name: 使用转换对数据进行转换
-  href: ../integration-services/data-flow/transformations/transform-data-with-transformations.md
-- name: Transformation Custom Properties
-  href: ../integration-services/data-flow/transformations/transformation-custom-properties.md
+        - name: 在不缓存模式或部分缓存模式下实现查找
+          href: ../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md
+        - name: 在完全缓存模式下使用缓存连接管理器实现查找转换
+          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md
+        - name: 在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换
+          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+        - name: 为查找转换创建和部署缓存
+          href: ../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md
+        - name: 创建关系
+          href: ../integration-services/data-flow/transformations/create-relationships.md
+        - name: 缓存转换
+          href: ../integration-services/data-flow/transformations/cache-transform.md
+          items:
+            - name: 缓存连接管理器
+              href: ../integration-services/data-flow/transformations/cache-connection-manager.md
+    - name: 合并转换
+      href: ../integration-services/data-flow/transformations/merge-transformation.md
+    - name: Merge Join Transformation
+      href: ../integration-services/data-flow/transformations/merge-join-transformation.md
+      items:
+        - name: 使用合并联接转换扩展数据集
+          href: ../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md
+        - name: 为合并转换和合并联接转换排序数据
+          href: ../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md
+    - name: 多播转换
+      href: ../integration-services/data-flow/transformations/multicast-transformation.md
+    - name: OLE DB 命令转换
+      href: ../integration-services/data-flow/transformations/ole-db-command-transformation.md
+    - name: 百分比抽样转换
+      href: ../integration-services/data-flow/transformations/percentage-sampling-transformation.md
+    - name: 透视转换
+      href: ../integration-services/data-flow/transformations/pivot-transformation.md
+    - name: 行计数转换
+      href: ../integration-services/data-flow/transformations/row-count-transformation.md
+    - name: 行抽样转换
+      href: ../integration-services/data-flow/transformations/row-sampling-transformation.md
+    - name: 脚本组件
+      href: ../integration-services/data-flow/transformations/script-component.md
+    - name: 渐变维度转换
+      href: ../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md
+      items:
+        - name: 使用渐变维度向导配置输出
+          href: ../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md
+        - name: 渐变维度向导的 F1 帮助
+          href: ../integration-services/data-flow/transformations/slowly-changing-dimension-wizard-f1-help.md
+          items:
+            - name: 欢迎使用渐变维度向导
+              href: ../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md
+            - name: 选择维度表和键（渐变维度向导）
+              href: ../integration-services/data-flow/transformations/select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
+            - name: 渐变维度列（渐变维度向导）
+              href: ../integration-services/data-flow/transformations/slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
+            - name: 固定的属性选项和变化的属性选项（渐变维度向导）
+              href: ../integration-services/data-flow/transformations/fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
+            - name: 历史属性选项（渐变维度向导）
+              href: ../integration-services/data-flow/transformations/historical-attribute-options-slowly-changing-dimension-wizard.md
+            - name: 推断维度成员（渐变维度向导）
+              href: ../integration-services/data-flow/transformations/inferred-dimension-members-slowly-changing-dimension-wizard.md
+            - name: 完成渐变维度向导
+              href: ../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md
+    - name: 排序转换
+      href: ../integration-services/data-flow/transformations/sort-transformation.md
+    - name: 字词提取转换
+      href: ../integration-services/data-flow/transformations/term-extraction-transformation.md
+    - name: 字词查找转换
+      href: ../integration-services/data-flow/transformations/term-lookup-transformation.md
+    - name: Union All 转换
+      href: ../integration-services/data-flow/transformations/union-all-transformation.md
+      items:
+        - name: 通过使用 Union All 转换来合并数据
+          href: ../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md
+    - name: 逆透视转换
+      href: ../integration-services/data-flow/transformations/unpivot-transformation.md
+    - name: 使用转换对数据进行转换
+      href: ../integration-services/data-flow/transformations/transform-data-with-transformations.md
+    - name: Transformation Custom Properties
+      href: ../integration-services/data-flow/transformations/transformation-custom-properties.md
 - name: XML 源
   href: ../integration-services/data-flow/xml-source.md
   items:
@@ -728,168 +738,170 @@
       href: ../integration-services/variables-window.md
     - name: 系统变量
       href: ../integration-services/system-variables.md
-- name: 概述
-  href: ../integration-services/expressions/integration-services-ssis-expressions.md
-- name: 高级 Integration Services 表达式的示例
-  href: ../integration-services/expressions/examples-of-advanced-integration-services-expressions.md
-- name: 在包中使用属性表达式
-  href: ../integration-services/expressions/use-property-expressions-in-packages.md
+- name: 表达式
   items:
-    - name: 属性表达式中的枚举常量
-      href: ../integration-services/expressions/enumerated-constants-in-property-expressions.md
-    - name: 添加或更改属性表达式
-      href: ../integration-services/expressions/add-or-change-a-property-expression.md
+    - name: 概述
+      href: ../integration-services/expressions/integration-services-ssis-expressions.md
+    - name: 高级 Integration Services 表达式的示例
+      href: ../integration-services/expressions/examples-of-advanced-integration-services-expressions.md
+    - name: 在包中使用属性表达式
+      href: ../integration-services/expressions/use-property-expressions-in-packages.md
       items:
-        - name: “表达式”页
-          href: ../integration-services/expressions/expressions-page.md
-        - name: 属性表达式编辑器
-          href: ../integration-services/expressions/property-expressions-editor.md
-        - name: 表达式生成器
-          href: ../integration-services/expressions/expression-builder.md
-- name: 表达式中的 Integration Services 数据类型
-  href: ../integration-services/expressions/integration-services-data-types-in-expressions.md
-- name: 数据截断 (SSIS)
-  href: ../integration-services/expressions/data-truncation-ssis.md
-- name: 字符串填充 (SSIS)
-  href: ../integration-services/expressions/string-padding-ssis.md
-- name: 语法 (SSIS)
-  href: ../integration-services/expressions/syntax-ssis.md
-- name: 标识符 (SSIS)
-  href: ../integration-services/expressions/identifiers-ssis.md
-- name: 文字 (SSIS)
-  href: ../integration-services/expressions/numeric-string-and-boolean-literals.md
-- name: 运算符（SSIS 表达式）
-  href: ../integration-services/expressions/operators-ssis-expression.md
-  items:
-    - name: 运算符优先级和结合性
-      href: ../integration-services/expressions/operator-precedence-and-associativity.md
-    - name: Cast（SSIS 表达式）
-      href: ../integration-services/expressions/cast-ssis-expression.md
-    - name: ()（括号）（SSIS 表达式）
-      href: ../integration-services/expressions/parentheses-ssis-expression.md
-    - name: + （加）(SSIS)
-      href: ../integration-services/expressions/add-ssis.md
-    - name: + （连接）（SSIS 表达式）
-      href: ../integration-services/expressions/concatenate-ssis-expression.md
-    - name: '- （减）（SSIS 表达式）'
-      href: ../integration-services/expressions/subtract-ssis-expression.md
-    - name: '- （负号）（SSIS 表达式）'
-      href: ../integration-services/expressions/negate-ssis-expression.md
-    - name: '* （乘）（SSIS 表达式）'
-      href: ../integration-services/expressions/multiply-ssis-expression.md
-    - name: 除（SSIS 表达式）
-      href: ../integration-services/expressions/divide-ssis-expression.md
-    - name: （取模）（SSIS 表达式）
-      href: ../integration-services/expressions/modulo-ssis-expression.md
-    - name: '||（逻辑或）（SSIS 表达式）'
-      href: ../integration-services/expressions/logical-or-ssis-expression.md
-    - name: '&&（逻辑与）（SSIS 表达式）'
-      href: ../integration-services/expressions/logical-and-ssis-expression.md
-    - name: '! （逻辑非）（SSIS 表达式）'
-      href: ../integration-services/expressions/logical-not-ssis-expression.md
-    - name: '|（位或）（SSIS 表达式）'
-      href: ../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md
-    - name: ^（位异或）（SSIS 表达式）
-      href: ../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md
-    - name: '&（位与）（SSIS 表达式）'
-      href: ../integration-services/expressions/bitwise-and-ssis-expression.md
-    - name: ~ （位非）（SSIS 表达式）
-      href: ../integration-services/expressions/bitwise-not-ssis-expression.md
-    - name: ==（等于）（SSIS 表达式）
-      href: ../integration-services/expressions/equal-ssis-expression.md
-    - name: '!=（不等于）（SSIS 表达式）'
-      href: ../integration-services/expressions/unequal-ssis-expression.md
-    - name: '> （大于）（SSIS 表达式）'
-      href: ../integration-services/expressions/greater-than-ssis-expression.md
-    - name: <（小于）（SSIS 表达式）
-      href: ../integration-services/expressions/less-than-ssis-expression.md
-    - name: '>=（大于或等于）（SSIS 表达式）'
-      href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
-    - name: <=（小于或等于）（SSIS 表达式）
-      href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
-    - name: '? 解码的字符：（条件）（SSIS 表达式）'
-      href: ../integration-services/expressions/conditional-ssis-expression.md
-- name: 函数（SSIS 表达式）
-  href: ../integration-services/expressions/functions-ssis-expression.md
-  items:
-    - name: ABS（SSIS 表达式）
-      href: ../integration-services/expressions/abs-ssis-expression.md
-    - name: CEILING（SSIS 表达式）
-      href: ../integration-services/expressions/ceiling-ssis-expression.md
-    - name: CODEPOINT（SSIS 表达式）
-      href: ../integration-services/expressions/codepoint-ssis-expression.md
-    - name: DATEADD（SSIS 表达式）
-      href: ../integration-services/expressions/dateadd-ssis-expression.md
-    - name: DATEDIFF（SSIS 表达式）
-      href: ../integration-services/expressions/datediff-ssis-expression.md
-    - name: DATEPART（SSIS 表达式）
-      href: ../integration-services/expressions/datepart-ssis-expression.md
-    - name: DAY（SSIS 表达式）
-      href: ../integration-services/expressions/day-ssis-expression.md
-    - name: EXP（SSIS 表达式）
-      href: ../integration-services/expressions/exp-ssis-expression.md
-    - name: FINDSTRING（SSIS 表达式）
-      href: ../integration-services/expressions/findstring-ssis-expression.md
-    - name: FLOOR（SSIS 表达式）
-      href: ../integration-services/expressions/floor-ssis-expression.md
-    - name: GETDATE（SSIS 表达式）
-      href: ../integration-services/expressions/getdate-ssis-expression.md
-    - name: GETUTCDATE（SSIS 表达式）
-      href: ../integration-services/expressions/getutcdate-ssis-expression.md
-    - name: HEX（SSIS 表达式）
-      href: ../integration-services/expressions/hex-ssis-expression.md
-    - name: ISNULL（SSIS 表达式）
-      href: ../integration-services/expressions/isnull-ssis-expression.md
-    - name: LEFT（SSIS 表达式）
-      href: ../integration-services/expressions/left-ssis-expression.md
-    - name: LEN（SSIS 表达式）
-      href: ../integration-services/expressions/len-ssis-expression.md
-    - name: LN（SSIS 表达式）
-      href: ../integration-services/expressions/ln-ssis-expression.md
-    - name: LOG（SSIS 表达式）
-      href: ../integration-services/expressions/log-ssis-expression.md
-    - name: LOWER（SSIS 表达式）
-      href: ../integration-services/expressions/lower-ssis-expression.md
-    - name: LTRIM（SSIS 表达式）
-      href: ../integration-services/expressions/ltrim-ssis-expression.md
-    - name: MONTH（SSIS 表达式）
-      href: ../integration-services/expressions/month-ssis-expression.md
-    - name: NULL（SSIS 表达式）
-      href: ../integration-services/expressions/null-ssis-expression.md
-    - name: POWER（SSIS 表达式）
-      href: ../integration-services/expressions/power-ssis-expression.md
-    - name: REPLACE（SSIS 表达式）
-      href: ../integration-services/expressions/replace-ssis-expression.md
-    - name: REPLACENULL（SSIS 表达式）
-      href: ../integration-services/expressions/replacenull-ssis-expression.md
-    - name: REPLICATE（SSIS 表达式）
-      href: ../integration-services/expressions/replicate-ssis-expression.md
-    - name: REVERSE（SSIS 表达式）
-      href: ../integration-services/expressions/reverse-ssis-expression.md
-    - name: RIGHT（SSIS 表达式）
-      href: ../integration-services/expressions/right-ssis-expression.md
-    - name: ROUND（SSIS 表达式）
-      href: ../integration-services/expressions/round-ssis-expression.md
-    - name: RTRIM（SSIS 表达式）
-      href: ../integration-services/expressions/rtrim-ssis-expression.md
-    - name: SIGN（SSIS 表达式）
-      href: ../integration-services/expressions/sign-ssis-expression.md
-    - name: SQRT（SSIS 表达式）
-      href: ../integration-services/expressions/sqrt-ssis-expression.md
-    - name: SQUARE（SSIS 表达式）
-      href: ../integration-services/expressions/square-ssis-expression.md
-    - name: SUBSTRING（SSIS 表达式）
-      href: ../integration-services/expressions/substring-ssis-expression.md
-    - name: TOKEN（SSIS 表达式）
-      href: ../integration-services/expressions/token-ssis-expression.md
-    - name: TOKENCOUNT（SSIS 表达式）
-      href: ../integration-services/expressions/tokencount-ssis-expression.md
-    - name: TRIM（SSIS 表达式）
-      href: ../integration-services/expressions/trim-ssis-expression.md
-    - name: UPPER（SSIS 表达式）
-      href: ../integration-services/expressions/upper-ssis-expression.md
-    - name: YEAR（SSIS 表达式）
-      href: ../integration-services/expressions/year-ssis-expression.md
+        - name: 属性表达式中的枚举常量
+          href: ../integration-services/expressions/enumerated-constants-in-property-expressions.md
+        - name: 添加或更改属性表达式
+          href: ../integration-services/expressions/add-or-change-a-property-expression.md
+          items:
+            - name: “表达式”页
+              href: ../integration-services/expressions/expressions-page.md
+            - name: 属性表达式编辑器
+              href: ../integration-services/expressions/property-expressions-editor.md
+            - name: 表达式生成器
+              href: ../integration-services/expressions/expression-builder.md
+    - name: 表达式中的 Integration Services 数据类型
+      href: ../integration-services/expressions/integration-services-data-types-in-expressions.md
+    - name: 数据截断 (SSIS)
+      href: ../integration-services/expressions/data-truncation-ssis.md
+    - name: 字符串填充 (SSIS)
+      href: ../integration-services/expressions/string-padding-ssis.md
+    - name: 语法 (SSIS)
+      href: ../integration-services/expressions/syntax-ssis.md
+    - name: 标识符 (SSIS)
+      href: ../integration-services/expressions/identifiers-ssis.md
+    - name: 文字 (SSIS)
+      href: ../integration-services/expressions/numeric-string-and-boolean-literals.md
+    - name: 运算符（SSIS 表达式）
+      href: ../integration-services/expressions/operators-ssis-expression.md
+      items:
+        - name: 运算符优先级和结合性
+          href: ../integration-services/expressions/operator-precedence-and-associativity.md
+        - name: Cast（SSIS 表达式）
+          href: ../integration-services/expressions/cast-ssis-expression.md
+        - name: ()（括号）（SSIS 表达式）
+          href: ../integration-services/expressions/parentheses-ssis-expression.md
+        - name: + （加）(SSIS)
+          href: ../integration-services/expressions/add-ssis.md
+        - name: + （连接）（SSIS 表达式）
+          href: ../integration-services/expressions/concatenate-ssis-expression.md
+        - name: '- （减）（SSIS 表达式）'
+          href: ../integration-services/expressions/subtract-ssis-expression.md
+        - name: '- （负号）（SSIS 表达式）'
+          href: ../integration-services/expressions/negate-ssis-expression.md
+        - name: '* （乘）（SSIS 表达式）'
+          href: ../integration-services/expressions/multiply-ssis-expression.md
+        - name: 除（SSIS 表达式）
+          href: ../integration-services/expressions/divide-ssis-expression.md
+        - name: （取模）（SSIS 表达式）
+          href: ../integration-services/expressions/modulo-ssis-expression.md
+        - name: '||（逻辑或）（SSIS 表达式）'
+          href: ../integration-services/expressions/logical-or-ssis-expression.md
+        - name: '&&（逻辑与）（SSIS 表达式）'
+          href: ../integration-services/expressions/logical-and-ssis-expression.md
+        - name: '! （逻辑非）（SSIS 表达式）'
+          href: ../integration-services/expressions/logical-not-ssis-expression.md
+        - name: '|（位或）（SSIS 表达式）'
+          href: ../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md
+        - name: ^（位异或）（SSIS 表达式）
+          href: ../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md
+        - name: '&（位与）（SSIS 表达式）'
+          href: ../integration-services/expressions/bitwise-and-ssis-expression.md
+        - name: ~ （位非）（SSIS 表达式）
+          href: ../integration-services/expressions/bitwise-not-ssis-expression.md
+        - name: ==（等于）（SSIS 表达式）
+          href: ../integration-services/expressions/equal-ssis-expression.md
+        - name: '!=（不等于）（SSIS 表达式）'
+          href: ../integration-services/expressions/unequal-ssis-expression.md
+        - name: '> （大于）（SSIS 表达式）'
+          href: ../integration-services/expressions/greater-than-ssis-expression.md
+        - name: <（小于）（SSIS 表达式）
+          href: ../integration-services/expressions/less-than-ssis-expression.md
+        - name: '>=（大于或等于）（SSIS 表达式）'
+          href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
+        - name: <=（小于或等于）（SSIS 表达式）
+          href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
+        - name: '? 解码的字符：（条件）（SSIS 表达式）'
+          href: ../integration-services/expressions/conditional-ssis-expression.md
+    - name: 函数（SSIS 表达式）
+      href: ../integration-services/expressions/functions-ssis-expression.md
+      items:
+        - name: ABS（SSIS 表达式）
+          href: ../integration-services/expressions/abs-ssis-expression.md
+        - name: CEILING（SSIS 表达式）
+          href: ../integration-services/expressions/ceiling-ssis-expression.md
+        - name: CODEPOINT（SSIS 表达式）
+          href: ../integration-services/expressions/codepoint-ssis-expression.md
+        - name: DATEADD（SSIS 表达式）
+          href: ../integration-services/expressions/dateadd-ssis-expression.md
+        - name: DATEDIFF（SSIS 表达式）
+          href: ../integration-services/expressions/datediff-ssis-expression.md
+        - name: DATEPART（SSIS 表达式）
+          href: ../integration-services/expressions/datepart-ssis-expression.md
+        - name: DAY（SSIS 表达式）
+          href: ../integration-services/expressions/day-ssis-expression.md
+        - name: EXP（SSIS 表达式）
+          href: ../integration-services/expressions/exp-ssis-expression.md
+        - name: FINDSTRING（SSIS 表达式）
+          href: ../integration-services/expressions/findstring-ssis-expression.md
+        - name: FLOOR（SSIS 表达式）
+          href: ../integration-services/expressions/floor-ssis-expression.md
+        - name: GETDATE（SSIS 表达式）
+          href: ../integration-services/expressions/getdate-ssis-expression.md
+        - name: GETUTCDATE（SSIS 表达式）
+          href: ../integration-services/expressions/getutcdate-ssis-expression.md
+        - name: HEX（SSIS 表达式）
+          href: ../integration-services/expressions/hex-ssis-expression.md
+        - name: ISNULL（SSIS 表达式）
+          href: ../integration-services/expressions/isnull-ssis-expression.md
+        - name: LEFT（SSIS 表达式）
+          href: ../integration-services/expressions/left-ssis-expression.md
+        - name: LEN（SSIS 表达式）
+          href: ../integration-services/expressions/len-ssis-expression.md
+        - name: LN（SSIS 表达式）
+          href: ../integration-services/expressions/ln-ssis-expression.md
+        - name: LOG（SSIS 表达式）
+          href: ../integration-services/expressions/log-ssis-expression.md
+        - name: LOWER（SSIS 表达式）
+          href: ../integration-services/expressions/lower-ssis-expression.md
+        - name: LTRIM（SSIS 表达式）
+          href: ../integration-services/expressions/ltrim-ssis-expression.md
+        - name: MONTH（SSIS 表达式）
+          href: ../integration-services/expressions/month-ssis-expression.md
+        - name: NULL（SSIS 表达式）
+          href: ../integration-services/expressions/null-ssis-expression.md
+        - name: POWER（SSIS 表达式）
+          href: ../integration-services/expressions/power-ssis-expression.md
+        - name: REPLACE（SSIS 表达式）
+          href: ../integration-services/expressions/replace-ssis-expression.md
+        - name: REPLACENULL（SSIS 表达式）
+          href: ../integration-services/expressions/replacenull-ssis-expression.md
+        - name: REPLICATE（SSIS 表达式）
+          href: ../integration-services/expressions/replicate-ssis-expression.md
+        - name: REVERSE（SSIS 表达式）
+          href: ../integration-services/expressions/reverse-ssis-expression.md
+        - name: RIGHT（SSIS 表达式）
+          href: ../integration-services/expressions/right-ssis-expression.md
+        - name: ROUND（SSIS 表达式）
+          href: ../integration-services/expressions/round-ssis-expression.md
+        - name: RTRIM（SSIS 表达式）
+          href: ../integration-services/expressions/rtrim-ssis-expression.md
+        - name: SIGN（SSIS 表达式）
+          href: ../integration-services/expressions/sign-ssis-expression.md
+        - name: SQRT（SSIS 表达式）
+          href: ../integration-services/expressions/sqrt-ssis-expression.md
+        - name: SQUARE（SSIS 表达式）
+          href: ../integration-services/expressions/square-ssis-expression.md
+        - name: SUBSTRING（SSIS 表达式）
+          href: ../integration-services/expressions/substring-ssis-expression.md
+        - name: TOKEN（SSIS 表达式）
+          href: ../integration-services/expressions/token-ssis-expression.md
+        - name: TOKENCOUNT（SSIS 表达式）
+          href: ../integration-services/expressions/tokencount-ssis-expression.md
+        - name: TRIM（SSIS 表达式）
+          href: ../integration-services/expressions/trim-ssis-expression.md
+        - name: UPPER（SSIS 表达式）
+          href: ../integration-services/expressions/upper-ssis-expression.md
+        - name: YEAR（SSIS 表达式）
+          href: ../integration-services/expressions/year-ssis-expression.md
 - name: 事件处理程序
   href: ../integration-services/integration-services-ssis-event-handlers.md
 - name: 查询
@@ -913,32 +925,34 @@
       href: ../integration-services/packages/sql-server-agent-jobs-for-packages.md
     - name: 使用 SQL Server 代理在远程服务器上平衡包的负载
       href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
-- name: 概述
-  href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
-- name: 在单台计算机上开始使用 SSIS Scale Out
-  href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-- name: 演练：设置 Integration Services Scale Out
-  href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
-- name: 在 Scale Out 中运行包
-  href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
-- name: 使用 Scale Out Manager 添加 Scale Out Worker
-  href: ../integration-services/scale-out/add-scale-out-worker.md
-- name: Scale Out 主要角色
-  href: ../integration-services/scale-out/integration-services-ssis-scale-out-master.md
-- name: Scale Out 辅助角色
-  href: ../integration-services/scale-out/integration-services-ssis-scale-out-worker.md
-- name: Scale Out Manager
-  href: ../integration-services/scale-out/integration-services-ssis-scale-out-manager.md
-- name: 更改 Scale Out 日志记录的帐户
-  href: ../integration-services/scale-out/change-logdb-account.md
-- name: 管理 Scale Out 证书
-  href: ../integration-services/scale-out/deal-with-certificates-in-ssis-scale-out.md
-- name: Scale Out 的高可用性
-  href: ../integration-services/scale-out/scale-out-support-for-high-availability.md
-- name: 通过 SQL Server 故障转移群集实例实现高可用性
-  href: ../integration-services/scale-out/scale-out-failover-cluster-instance.md
-- name: Scale Out 故障排除
-  href: ../integration-services/scale-out/troubleshooting-scale-out.md
+- name: 扩展
+  items:
+    - name: 概述
+      href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
+    - name: 在单台计算机上开始使用 SSIS Scale Out
+      href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
+    - name: 演练：设置 Integration Services Scale Out
+      href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
+    - name: 在 Scale Out 中运行包
+      href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
+    - name: 使用 Scale Out Manager 添加 Scale Out Worker
+      href: ../integration-services/scale-out/add-scale-out-worker.md
+    - name: Scale Out 主要角色
+      href: ../integration-services/scale-out/integration-services-ssis-scale-out-master.md
+    - name: Scale Out 辅助角色
+      href: ../integration-services/scale-out/integration-services-ssis-scale-out-worker.md
+    - name: Scale Out Manager
+      href: ../integration-services/scale-out/integration-services-ssis-scale-out-manager.md
+    - name: 更改 Scale Out 日志记录的帐户
+      href: ../integration-services/scale-out/change-logdb-account.md
+    - name: 管理 Scale Out 证书
+      href: ../integration-services/scale-out/deal-with-certificates-in-ssis-scale-out.md
+    - name: Scale Out 的高可用性
+      href: ../integration-services/scale-out/scale-out-support-for-high-availability.md
+    - name: 通过 SQL Server 故障转移群集实例实现高可用性
+      href: ../integration-services/scale-out/scale-out-failover-cluster-instance.md
+    - name: Scale Out 故障排除
+      href: ../integration-services/scale-out/troubleshooting-scale-out.md
 - name: 目录和服务器
   href: ../integration-services/catalog/integration-services-ssis-server-and-catalog.md
 - name: SSIS 目录
@@ -973,236 +987,244 @@
   href: ../integration-services/service/events-logged-by-the-integration-services-service.md
 - name: 群集中的 Integration Services (SSIS)
   href: ../integration-services/service/integration-services-ssis-in-a-cluster.md
-- name: 概述
-  href: ../integration-services/security/security-overview-integration-services.md
-- name: 对包中敏感数据的访问控制
-  href: ../integration-services/security/access-control-for-sensitive-data-in-packages.md
-- name: 使用数字签名标识包的源
-  href: ../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md
-- name: Integration Services 角色（SSIS 服务）
-  href: ../integration-services/security/integration-services-roles-ssis-service.md
-- name: 监视运行包和其他操作
-  href: ../integration-services/performance/monitor-running-packages-and-other-operations.md
-- name: Integration Services 包记录的事件
-  href: ../integration-services/performance/events-logged-by-an-integration-services-package.md
-- name: Integration Services (SSIS) 日志记录
-  href: ../integration-services/performance/integration-services-ssis-logging.md
-- name: 性能计数器
-  href: ../integration-services/performance/performance-counters.md
-- name: 概述
-  href: ../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md
-- name: 对包开发进行故障排除和调试
+- name: 包
   items:
-    - name: 包开发的故障排除工具
-      href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md
-    - name: 调试控制流
-      href: ../integration-services/troubleshooting/debugging-control-flow.md
-    - name: 调试脚本
-      href: ../integration-services/troubleshooting/debugging-script.md
-    - name: 调试数据流
-      href: ../integration-services/troubleshooting/debugging-data-flow.md
-- name: 包连接故障排除工具
-  href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity.md
-- name: 对包执行进行故障排除的工具
-  href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md
-- name: 对包执行进行故障排除的报告
-  href: ../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md
-- name: 生成包执行的转储文件
-  href: ../integration-services/troubleshooting/generating-dump-files-for-package-execution.md
-- name: 概述
-  href: ../integration-services/system-views/views-integration-services-catalog.md
-- name: catalog.catalog_properties
-  href: ../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md
-- name: catalog.effective_object_permissions
-  href: ../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md
-- name: catalog.environment_variables
-  href: ../integration-services/system-views/catalog-environment-variables-ssisdb-database.md
-- name: catalog.environment_references
-  href: ../integration-services/system-views/catalog-environment-references-ssisdb-database.md
-- name: catalog.environments
-  href: ../integration-services/system-views/catalog-environments-ssisdb-database.md
-- name: catalog.event_message_context
-  href: ../integration-services/system-views/catalog-event-message-context.md
-- name: catalog.event_messages
-  href: ../integration-services/system-views/catalog-event-messages.md
-- name: catalog.executable_statistics
-  href: ../integration-services/system-views/catalog-executable-statistics.md
-- name: catalog.executables
-  href: ../integration-services/system-views/catalog-executables.md
-- name: catalog.execution_component_phases
-  href: ../integration-services/system-views/catalog-execution-component-phases.md
-- name: catalog.execution_data_statistics
-  href: ../integration-services/system-views/catalog-execution-data-statistics.md
-- name: catalog.execution_data_taps
-  href: ../integration-services/system-views/catalog-execution-data-taps.md
-- name: catalog.execution_parameter_values
-  href: ../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md
-- name: catalog.execution_property_override_values
-  href: ../integration-services/system-views/catalog-execution-property-override-values.md
-- name: catalog.executions
-  href: ../integration-services/system-views/catalog-executions-ssisdb-database.md
-- name: catalog.explicit_object_permissions
-  href: ../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md
-- name: catalog.extended_operation_info
-  href: ../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md
-- name: catalog.folders
-  href: ../integration-services/system-views/catalog-folders-ssisdb-database.md
-- name: catalog.object_parameters
-  href: ../integration-services/system-views/catalog-object-parameters-ssisdb-database.md
-- name: catalog.object_versions
-  href: ../integration-services/system-views/catalog-object-versions-ssisdb-database.md
-- name: catalog.operation_messages
-  href: ../integration-services/system-views/catalog-operation-messages-ssisdb-database.md
-- name: catalog.operations
-  href: ../integration-services/system-views/catalog-operations-ssisdb-database.md
-- name: catalog.packages
-  href: ../integration-services/system-views/catalog-packages-ssisdb-database.md
-- name: catalog.projects
-  href: ../integration-services/system-views/catalog-projects-ssisdb-database.md
-- name: catalog.validations
-  href: ../integration-services/system-views/catalog-validations-ssisdb-database.md
-- name: catalog.master_properties
-  href: ../integration-services/system-views/catalog-master-properties-ssisdb-database.md
-- name: catalog.worker_agents
-  href: ../integration-services/system-views/catalog-worker-agents-ssisdb-database.md
-- name: 概述
-  href: ../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md
-- name: 添加
+    - name: 概述
+      href: ../integration-services/security/security-overview-integration-services.md
+    - name: 对包中敏感数据的访问控制
+      href: ../integration-services/security/access-control-for-sensitive-data-in-packages.md
+    - name: 使用数字签名标识包的源
+      href: ../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md
+    - name: Integration Services 角色（SSIS 服务）
+      href: ../integration-services/security/integration-services-roles-ssis-service.md
+    - name: 监视运行包和其他操作
+      href: ../integration-services/performance/monitor-running-packages-and-other-operations.md
+    - name: Integration Services 包记录的事件
+      href: ../integration-services/performance/events-logged-by-an-integration-services-package.md
+    - name: Integration Services (SSIS) 日志记录
+      href: ../integration-services/performance/integration-services-ssis-logging.md
+    - name: 性能计数器
+      href: ../integration-services/performance/performance-counters.md
+- name: 故障排除
   items:
-    - name: catalog.add_data_tap
-      href: ../integration-services/system-stored-procedures/catalog-add-data-tap.md
-    - name: catalog.add_data_tap_by_guid
-      href: ../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md
-    - name: catalog.add_execution_worker
-      href: ../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md
-- name: catalog.check_schema_version
-  href: ../integration-services/system-stored-procedures/catalog-check-schema-version.md
-- name: catalog.clear_object_parameter_value
-  href: ../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md
-- name: catalog.configure_catalog
-  href: ../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md
-- name: 创建
+    - name: 概述
+      href: ../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md
+    - name: 对包开发进行故障排除和调试
+      items:
+        - name: 包开发的故障排除工具
+          href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md
+        - name: 调试控制流
+          href: ../integration-services/troubleshooting/debugging-control-flow.md
+        - name: 调试脚本
+          href: ../integration-services/troubleshooting/debugging-script.md
+        - name: 调试数据流
+          href: ../integration-services/troubleshooting/debugging-data-flow.md
+    - name: 包连接故障排除工具
+      href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity.md
+    - name: 对包执行进行故障排除的工具
+      href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md
+    - name: 对包执行进行故障排除的报告
+      href: ../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md
+    - name: 生成包执行的转储文件
+      href: ../integration-services/troubleshooting/generating-dump-files-for-package-execution.md
+- name: 目录引用
   items:
-    - name: catalog.create_customized_logging_level
-      href: ../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md
-    - name: catalog.create_environment
-      href: ../integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database.md
-    - name: catalog.create_environment_reference
-      href: ../integration-services/system-stored-procedures/catalog-create-environment-reference-ssisdb-database.md
-    - name: catalog.create_environment_variable
-      href: ../integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database.md
-    - name: catalog.create_execution
-      href: ../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md
-    - name: catalog.create_execution_dump
-      href: ../integration-services/system-stored-procedures/catalog-create-execution-dump.md
-    - name: catalog.create_folder
-      href: ../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md
-- name: DELETE
+    - name: 概述
+      href: ../integration-services/system-views/views-integration-services-catalog.md
+    - name: catalog.catalog_properties
+      href: ../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md
+    - name: catalog.effective_object_permissions
+      href: ../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md
+    - name: catalog.environment_variables
+      href: ../integration-services/system-views/catalog-environment-variables-ssisdb-database.md
+    - name: catalog.environment_references
+      href: ../integration-services/system-views/catalog-environment-references-ssisdb-database.md
+    - name: catalog.environments
+      href: ../integration-services/system-views/catalog-environments-ssisdb-database.md
+    - name: catalog.event_message_context
+      href: ../integration-services/system-views/catalog-event-message-context.md
+    - name: catalog.event_messages
+      href: ../integration-services/system-views/catalog-event-messages.md
+    - name: catalog.executable_statistics
+      href: ../integration-services/system-views/catalog-executable-statistics.md
+    - name: catalog.executables
+      href: ../integration-services/system-views/catalog-executables.md
+    - name: catalog.execution_component_phases
+      href: ../integration-services/system-views/catalog-execution-component-phases.md
+    - name: catalog.execution_data_statistics
+      href: ../integration-services/system-views/catalog-execution-data-statistics.md
+    - name: catalog.execution_data_taps
+      href: ../integration-services/system-views/catalog-execution-data-taps.md
+    - name: catalog.execution_parameter_values
+      href: ../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md
+    - name: catalog.execution_property_override_values
+      href: ../integration-services/system-views/catalog-execution-property-override-values.md
+    - name: catalog.executions
+      href: ../integration-services/system-views/catalog-executions-ssisdb-database.md
+    - name: catalog.explicit_object_permissions
+      href: ../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md
+    - name: catalog.extended_operation_info
+      href: ../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md
+    - name: catalog.folders
+      href: ../integration-services/system-views/catalog-folders-ssisdb-database.md
+    - name: catalog.object_parameters
+      href: ../integration-services/system-views/catalog-object-parameters-ssisdb-database.md
+    - name: catalog.object_versions
+      href: ../integration-services/system-views/catalog-object-versions-ssisdb-database.md
+    - name: catalog.operation_messages
+      href: ../integration-services/system-views/catalog-operation-messages-ssisdb-database.md
+    - name: catalog.operations
+      href: ../integration-services/system-views/catalog-operations-ssisdb-database.md
+    - name: catalog.packages
+      href: ../integration-services/system-views/catalog-packages-ssisdb-database.md
+    - name: catalog.projects
+      href: ../integration-services/system-views/catalog-projects-ssisdb-database.md
+    - name: catalog.validations
+      href: ../integration-services/system-views/catalog-validations-ssisdb-database.md
+    - name: catalog.master_properties
+      href: ../integration-services/system-views/catalog-master-properties-ssisdb-database.md
+    - name: catalog.worker_agents
+      href: ../integration-services/system-views/catalog-worker-agents-ssisdb-database.md
+- name: 存储过程
   items:
-    - name: catalog.delete_customized_logging_level
-      href: ../integration-services/system-stored-procedures/catalog-delete-customized-logging-level.md
-    - name: catalog.delete_environment
-      href: ../integration-services/system-stored-procedures/catalog-delete-environment-ssisdb-database.md
-    - name: catalog.delete_environment_reference
-      href: ../integration-services/system-stored-procedures/catalog-delete-environment-reference-ssisdb-database.md
-    - name: catalog.delete_environment_variable
-      href: ../integration-services/system-stored-procedures/catalog-delete-environment-variable-ssisdb-database.md
-    - name: catalog.delete_folder
-      href: ../integration-services/system-stored-procedures/catalog-delete-folder-ssisdb-database.md
-    - name: catalog.delete_project
-      href: ../integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md
-- name: catalog.deny_permission
-  href: ../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md
-- name: 部署
-  items:
-    - name: catalog.deploy_packages
-      href: ../integration-services/system-stored-procedures/catalog-deploy-packages.md
-    - name: catalog.deploy_project
-      href: ../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md
-- name: catalog.disable_worker_agent
-  href: ../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md
-- name: catalog.enable_worker_agent
-  href: ../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md
-- name: 获取
-  items:
-    - name: catalog.get_parameter_values
-      href: ../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md
-    - name: catalog.get_project
-      href: ../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md
-- name: catalog.grant_permission
-  href: ../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md
-- name: “移动”
-  items:
-    - name: catalog.move_environment
-      href: ../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md
-    - name: catalog.move_project
-      href: ../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md
-- name: catalog.remove_data_tap
-  href: ../integration-services/system-stored-procedures/catalog-remove-data-tap.md
-- name: Rename
-  items:
-    - name: catalog.rename_customized_logging_level
-      href: ../integration-services/system-stored-procedures/catalog-rename-customized-logging-level.md
-    - name: catalog.rename_environment
-      href: ../integration-services/system-stored-procedures/catalog-rename-environment-ssisdb-database.md
-    - name: catalog.rename_folder
-      href: ../integration-services/system-stored-procedures/catalog-rename-folder-ssisdb-database.md
-- name: catalog.restore_project
-  href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
-- name: catalog.revoke_permission
-  href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
-- name: 将
-  items:
-    - name: catalog.set_customized_logging_level_description
-      href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md
-    - name: catalog.set_customized_logging_level_value
-      href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-value.md
-    - name: catalog.set_environment_property
-      href: ../integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database.md
-    - name: catalog.set_environment_reference_type
-      href: ../integration-services/system-stored-procedures/catalog-set-environment-reference-type-ssisdb-database.md
-    - name: catalog.set_environment_variable_property
-      href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database.md
-    - name: catalog.set_environment_variable_protection
-      href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md
-    - name: catalog.set_environment_variable_value
-      href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database.md
-    - name: catalog.set_execution_parameter_value
-      href: ../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md
-    - name: catalog.set_execution_property_override_value
-      href: ../integration-services/system-stored-procedures/catalog-set-execution-property-override-value.md
-    - name: catalog.set_folder_description
-      href: ../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md
-    - name: catalog.set_object_parameter_value
-      href: ../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md
-    - name: catalog.set_worker_agent_property
-      href: ../integration-services/system-stored-procedures/catalog-set-worker-agent-property-ssisdb-database.md
-- name: catalog.startup
-  href: ../integration-services/system-stored-procedures/catalog-startup.md
-- name: catalog.start_execution
-  href: ../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md
-- name: catalog.stop_operation
-  href: ../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md
-- name: Update
-  items:
-    - name: catalog.update_logdb_info（SSISDB 数据库）
-      href: ../integration-services/system-stored-procedures/catalog-update-logdb-info.md
-    - name: catalog.update_master_address（SSISDB 数据库）
-      href: ../integration-services/system-stored-procedures/catalog-update-master-address.md
-- name: 验证
-  items:
-    - name: catalog.validate_package
-      href: ../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md
-    - name: catalog.validate_project
-      href: ../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md
-- name: 清理
-  items:
-    - name: catalog.cleanup_server_execution_keys
-      href: ../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md
-    - name: catalog.cleanup_server_log
-      href: ../integration-services/system-stored-procedures/catalog-cleanup-server-log.md
-- name: 系统函数 - dm_execution_performance_counters
-  href: ../integration-services/functions-dm-execution-performance-counters.md
+    - name: 概述
+      href: ../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md
+    - name: 添加
+      items:
+        - name: catalog.add_data_tap
+          href: ../integration-services/system-stored-procedures/catalog-add-data-tap.md
+        - name: catalog.add_data_tap_by_guid
+          href: ../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md
+        - name: catalog.add_execution_worker
+          href: ../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md
+    - name: catalog.check_schema_version
+      href: ../integration-services/system-stored-procedures/catalog-check-schema-version.md
+    - name: catalog.clear_object_parameter_value
+      href: ../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md
+    - name: catalog.configure_catalog
+      href: ../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md
+    - name: 创建
+      items:
+        - name: catalog.create_customized_logging_level
+          href: ../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md
+        - name: catalog.create_environment
+          href: ../integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database.md
+        - name: catalog.create_environment_reference
+          href: ../integration-services/system-stored-procedures/catalog-create-environment-reference-ssisdb-database.md
+        - name: catalog.create_environment_variable
+          href: ../integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database.md
+        - name: catalog.create_execution
+          href: ../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md
+        - name: catalog.create_execution_dump
+          href: ../integration-services/system-stored-procedures/catalog-create-execution-dump.md
+        - name: catalog.create_folder
+          href: ../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md
+    - name: DELETE
+      items:
+        - name: catalog.delete_customized_logging_level
+          href: ../integration-services/system-stored-procedures/catalog-delete-customized-logging-level.md
+        - name: catalog.delete_environment
+          href: ../integration-services/system-stored-procedures/catalog-delete-environment-ssisdb-database.md
+        - name: catalog.delete_environment_reference
+          href: ../integration-services/system-stored-procedures/catalog-delete-environment-reference-ssisdb-database.md
+        - name: catalog.delete_environment_variable
+          href: ../integration-services/system-stored-procedures/catalog-delete-environment-variable-ssisdb-database.md
+        - name: catalog.delete_folder
+          href: ../integration-services/system-stored-procedures/catalog-delete-folder-ssisdb-database.md
+        - name: catalog.delete_project
+          href: ../integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md
+    - name: catalog.deny_permission
+      href: ../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md
+    - name: 部署
+      items:
+        - name: catalog.deploy_packages
+          href: ../integration-services/system-stored-procedures/catalog-deploy-packages.md
+        - name: catalog.deploy_project
+          href: ../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md
+    - name: catalog.disable_worker_agent
+      href: ../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md
+    - name: catalog.enable_worker_agent
+      href: ../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md
+    - name: 获取
+      items:
+        - name: catalog.get_parameter_values
+          href: ../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md
+        - name: catalog.get_project
+          href: ../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md
+    - name: catalog.grant_permission
+      href: ../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md
+    - name: “移动”
+      items:
+        - name: catalog.move_environment
+          href: ../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md
+        - name: catalog.move_project
+          href: ../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md
+    - name: catalog.remove_data_tap
+      href: ../integration-services/system-stored-procedures/catalog-remove-data-tap.md
+    - name: Rename
+      items:
+        - name: catalog.rename_customized_logging_level
+          href: ../integration-services/system-stored-procedures/catalog-rename-customized-logging-level.md
+        - name: catalog.rename_environment
+          href: ../integration-services/system-stored-procedures/catalog-rename-environment-ssisdb-database.md
+        - name: catalog.rename_folder
+          href: ../integration-services/system-stored-procedures/catalog-rename-folder-ssisdb-database.md
+    - name: catalog.restore_project
+      href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
+    - name: catalog.revoke_permission
+      href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
+    - name: 将
+      items:
+        - name: catalog.set_customized_logging_level_description
+          href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md
+        - name: catalog.set_customized_logging_level_value
+          href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-value.md
+        - name: catalog.set_environment_property
+          href: ../integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database.md
+        - name: catalog.set_environment_reference_type
+          href: ../integration-services/system-stored-procedures/catalog-set-environment-reference-type-ssisdb-database.md
+        - name: catalog.set_environment_variable_property
+          href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database.md
+        - name: catalog.set_environment_variable_protection
+          href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md
+        - name: catalog.set_environment_variable_value
+          href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database.md
+        - name: catalog.set_execution_parameter_value
+          href: ../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md
+        - name: catalog.set_execution_property_override_value
+          href: ../integration-services/system-stored-procedures/catalog-set-execution-property-override-value.md
+        - name: catalog.set_folder_description
+          href: ../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md
+        - name: catalog.set_object_parameter_value
+          href: ../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md
+        - name: catalog.set_worker_agent_property
+          href: ../integration-services/system-stored-procedures/catalog-set-worker-agent-property-ssisdb-database.md
+    - name: catalog.startup
+      href: ../integration-services/system-stored-procedures/catalog-startup.md
+    - name: catalog.start_execution
+      href: ../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md
+    - name: catalog.stop_operation
+      href: ../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md
+    - name: Update
+      items:
+        - name: catalog.update_logdb_info（SSISDB 数据库）
+          href: ../integration-services/system-stored-procedures/catalog-update-logdb-info.md
+        - name: catalog.update_master_address（SSISDB 数据库）
+          href: ../integration-services/system-stored-procedures/catalog-update-master-address.md
+    - name: 验证
+      items:
+        - name: catalog.validate_package
+          href: ../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md
+        - name: catalog.validate_project
+          href: ../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md
+    - name: 清理
+      items:
+        - name: catalog.cleanup_server_execution_keys
+          href: ../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md
+        - name: catalog.cleanup_server_log
+          href: ../integration-services/system-stored-procedures/catalog-cleanup-server-log.md
+    - name: 系统函数 - dm_execution_performance_counters
+      href: ../integration-services/functions-dm-execution-performance-counters.md
 - name: 错误和事件参考
   href: ../integration-services/errors-and-events-reference-integration-services.md
   items:
@@ -1525,157 +1547,159 @@
   href: ../integration-services/load-data-to-sql-database-with-ssis.md
 - name: 将数据加载到 SQL 数据仓库
   href: ../integration-services/load-data-to-sql-data-warehouse.md
-- name: 概述
-  href: ../integration-services/change-data-capture/change-data-capture-ssis.md
-- name: 指定变更数据的间隔
-  href: ../integration-services/change-data-capture/specify-an-interval-of-change-data.md
-- name: 确定变更数据是否已准备就绪
-  href: ../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md
-- name: 准备查询变更数据
-  href: ../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md
-- name: 创建函数以检索变更数据
-  href: ../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md
-- name: 检索和了解变更数据
-  href: ../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md
-- name: 处理插入、更新和删除
-  href: ../integration-services/change-data-capture/process-inserts-updates-and-deletes.md
-- name: 将变更应用到目标
-  href: ../integration-services/change-data-capture/apply-the-changes-to-the-destination.md
-- name: 执行多个表的增量加载
-  href: ../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md
-- name: Change Data Capture for Oracle by Attunity
-  href: ../integration-services/change-data-capture/change-data-capture-for-oracle-by-attunity.md
-- name: Change Data Capture Designer for Oracle by Attunity
-  href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md
+- name: 变更数据捕获
   items:
-    - name: CDC 设计器控制台简介
-      href: ../integration-services/change-data-capture/the-cdc-designer-console-introduction.md
-    - name: Oracle CDC 实例数据类型
-      href: ../integration-services/change-data-capture/oracle-cdc-instance-data-types.md
-    - name: 错误处理
-      href: ../integration-services/change-data-capture/error-handling.md
-    - name: Oracle CDC 实例
-      href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
-    - name: Oracle CDC 数据库
-      href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
-    - name: 故障排除
-      href: ../integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity.md
-    - name: Change Data Capture Designer for Oracle by Attunity F1 帮助参考
-      href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
+    - name: 概述
+      href: ../integration-services/change-data-capture/change-data-capture-ssis.md
+    - name: 指定变更数据的间隔
+      href: ../integration-services/change-data-capture/specify-an-interval-of-change-data.md
+    - name: 确定变更数据是否已准备就绪
+      href: ../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md
+    - name: 准备查询变更数据
+      href: ../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md
+    - name: 创建函数以检索变更数据
+      href: ../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md
+    - name: 检索和了解变更数据
+      href: ../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md
+    - name: 处理插入、更新和删除
+      href: ../integration-services/change-data-capture/process-inserts-updates-and-deletes.md
+    - name: 将变更应用到目标
+      href: ../integration-services/change-data-capture/apply-the-changes-to-the-destination.md
+    - name: 执行多个表的增量加载
+      href: ../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md
+    - name: Change Data Capture for Oracle by Attunity
+      href: ../integration-services/change-data-capture/change-data-capture-for-oracle-by-attunity.md
+    - name: Change Data Capture Designer for Oracle by Attunity
+      href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md
       items:
-        - name: 访问 CDC 设计器控制台
-          href: ../integration-services/change-data-capture/access-the-cdc-designer-console.md
-        - name: 管理 CDC 服务
-          href: ../integration-services/change-data-capture/manage-a-cdc-service.md
-        - name: 管理 CDC 实例
-          href: ../integration-services/change-data-capture/manage-a-cdc-instance.md
-        - name: 使用新建实例向导
-          href: ../integration-services/change-data-capture/use-the-new-instance-wizard.md
+        - name: CDC 设计器控制台简介
+          href: ../integration-services/change-data-capture/the-cdc-designer-console-introduction.md
+        - name: Oracle CDC 实例数据类型
+          href: ../integration-services/change-data-capture/oracle-cdc-instance-data-types.md
+        - name: 错误处理
+          href: ../integration-services/change-data-capture/error-handling.md
+        - name: Oracle CDC 实例
+          href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
+        - name: Oracle CDC 数据库
+          href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
+        - name: 故障排除
+          href: ../integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity.md
+        - name: Change Data Capture Designer for Oracle by Attunity F1 帮助参考
+          href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
           items:
-            - name: 创建 SQL Server 更改数据库
-              href: ../integration-services/change-data-capture/create-the-sql-server-change-database.md
-            - name: 连接到 Oracle 源数据库
-              href: ../integration-services/change-data-capture/connect-to-an-oracle-source-database.md
-            - name: 连接到 Oracle
-              href: ../integration-services/change-data-capture/connect-to-oracle.md
-            - name: 选择 Oracle 表和列
-              href: ../integration-services/change-data-capture/select-oracle-tables-and-columns.md
-            - name: 为捕获更改选择 Oracle 表
-              href: ../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md
-            - name: 对为捕获更改选择的表进行更改
-              href: ../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md
-            - name: 生成和运行补充日志记录脚本
-              href: ../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md
-            - name: 生成镜像表和 CDC 捕获实例
-              href: ../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md
-            - name: “完成”
-              href: ../integration-services/change-data-capture/finish.md
-        - name: 编辑实例属性
-          href: ../integration-services/change-data-capture/edit-instance-properties.md
+            - name: 访问 CDC 设计器控制台
+              href: ../integration-services/change-data-capture/access-the-cdc-designer-console.md
+            - name: 管理 CDC 服务
+              href: ../integration-services/change-data-capture/manage-a-cdc-service.md
+            - name: 管理 CDC 实例
+              href: ../integration-services/change-data-capture/manage-a-cdc-instance.md
+            - name: 使用新建实例向导
+              href: ../integration-services/change-data-capture/use-the-new-instance-wizard.md
+              items:
+                - name: 创建 SQL Server 更改数据库
+                  href: ../integration-services/change-data-capture/create-the-sql-server-change-database.md
+                - name: 连接到 Oracle 源数据库
+                  href: ../integration-services/change-data-capture/connect-to-an-oracle-source-database.md
+                - name: 连接到 Oracle
+                  href: ../integration-services/change-data-capture/connect-to-oracle.md
+                - name: 选择 Oracle 表和列
+                  href: ../integration-services/change-data-capture/select-oracle-tables-and-columns.md
+                - name: 为捕获更改选择 Oracle 表
+                  href: ../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md
+                - name: 对为捕获更改选择的表进行更改
+                  href: ../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md
+                - name: 生成和运行补充日志记录脚本
+                  href: ../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md
+                - name: 生成镜像表和 CDC 捕获实例
+                  href: ../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md
+                - name: “完成”
+                  href: ../integration-services/change-data-capture/finish.md
+            - name: 编辑实例属性
+              href: ../integration-services/change-data-capture/edit-instance-properties.md
+              items:
+                - name: 编辑 Oracle 数据库属性
+                  href: ../integration-services/change-data-capture/edit-the-oracle-database-properties.md
+                - name: 编辑表
+                  href: ../integration-services/change-data-capture/edit-tables.md
+                - name: 将表添加到 CDC 实例
+                  href: ../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md
+                - name: 编辑表属性
+                  href: ../integration-services/change-data-capture/edit-the-table-properties.md
+                - name: 查看和生成补充日志记录脚本
+                  href: ../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md
+                - name: 编辑高级属性
+                  href: ../integration-services/change-data-capture/edit-the-advanced-properties.md
+        - name: Change Data Capture Designer for Oracle by Attunity 操作指南
+          href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md
           items:
-            - name: 编辑 Oracle 数据库属性
-              href: ../integration-services/change-data-capture/edit-the-oracle-database-properties.md
-            - name: 编辑表
-              href: ../integration-services/change-data-capture/edit-tables.md
-            - name: 将表添加到 CDC 实例
-              href: ../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md
-            - name: 编辑表属性
-              href: ../integration-services/change-data-capture/edit-the-table-properties.md
-            - name: 查看和生成补充日志记录脚本
-              href: ../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md
-            - name: 编辑高级属性
-              href: ../integration-services/change-data-capture/edit-the-advanced-properties.md
-    - name: Change Data Capture Designer for Oracle by Attunity 操作指南
-      href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md
+            - name: 如何从 CDC 设计器控制台管理 CDC 服务
+              href: ../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
+            - name: 如何创建 SQL Server 更改数据库实例
+              href: ../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md
+            - name: 如何管理 CDC 实例
+              href: ../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md
+            - name: 如何编辑 CDC 实例属性
+              href: ../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md
+            - name: 如何查看 CDC 实例属性
+              href: ../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md
+        - name: 用于实例创建的 SQL Server 连接
+          href: ../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md
+        - name: 高级连接属性
+          href: ../integration-services/change-data-capture/advanced-connection-properties.md
+        - name: 用于运行脚本的 Oracle 凭据
+          href: ../integration-services/change-data-capture/oracle-credentials-for-running-script.md
+        - name: Oracle 补充日志记录脚本
+          href: ../integration-services/change-data-capture/oracle-supplemental-logging-script.md
+        - name: CDC 实例部署脚本
+          href: ../integration-services/change-data-capture/cdc-instance-deployment-script.md
+        - name: 针对 CDC 设计器的 SQL Server 连接所需权限
+          href: ../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md
+    - name: Change Data Capture Service for Oracle by Attunity
+      href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity.md
       items:
-        - name: 如何从 CDC 设计器控制台管理 CDC 服务
-          href: ../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
-        - name: 如何创建 SQL Server 更改数据库实例
-          href: ../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md
-        - name: 如何管理 CDC 实例
-          href: ../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md
-        - name: 如何编辑 CDC 实例属性
-          href: ../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md
-        - name: 如何查看 CDC 实例属性
-          href: ../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md
-    - name: 用于实例创建的 SQL Server 连接
-      href: ../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md
-    - name: 高级连接属性
-      href: ../integration-services/change-data-capture/advanced-connection-properties.md
-    - name: 用于运行脚本的 Oracle 凭据
-      href: ../integration-services/change-data-capture/oracle-credentials-for-running-script.md
-    - name: Oracle 补充日志记录脚本
-      href: ../integration-services/change-data-capture/oracle-supplemental-logging-script.md
-    - name: CDC 实例部署脚本
-      href: ../integration-services/change-data-capture/cdc-instance-deployment-script.md
-    - name: 针对 CDC 设计器的 SQL Server 连接所需权限
-      href: ../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md
-- name: Change Data Capture Service for Oracle by Attunity
-  href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity.md
-  items:
-    - name: Change Data Capture Service for Oracle by Attunity 系统体系结构
-      href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-system-architecture.md
-    - name: Oracle CDC 服务
-      href: ../integration-services/change-data-capture/the-oracle-cdc-service.md
-      items:
-        - name: 高可用性支持
-          href: ../integration-services/change-data-capture/high-availability-support.md
-        - name: 针对 CDC 服务的 SQL Server 连接所需权限
-          href: ../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md
-        - name: 用户角色
-          href: ../integration-services/change-data-capture/user-roles.md
-        - name: 使用 Oracle CDC 服务
-          href: ../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md
-    - name: Change Data Capture Service for Oracle by Attunity F1 帮助
-      href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md
-      items:
-        - name: 连接到 SQL Server
-          href: ../integration-services/change-data-capture/connection-to-sql-server.md
-        - name: 删除与 SQL Server 的连接
-          href: ../integration-services/change-data-capture/connection-to-sql-server-for-delete.md
-        - name: 创建和编辑 Oracle CDC 服务
-          href: ../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md
-        - name: 管理 Oracle CDC 服务
-          href: ../integration-services/change-data-capture/manage-an-oracle-cdc-service.md
-        - name: 为 CDC 准备 SQL Server
-          href: ../integration-services/change-data-capture/prepare-sql-server-for-cdc.md
-        - name: 为 Oracle CDC 视图脚本准备 SQL Server
-          href: ../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md
-        - name: 使用 CDC 服务
-          href: ../integration-services/change-data-capture/work-with-cdc-services.md
-    - name: Change Data Capture Service for Oracle by Attunity 操作指南
-      href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md
-      items:
-        - name: 如何创建和编辑 CDC 服务
-          href: ../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md
-        - name: 如何管理本地 CDC 服务
-          href: ../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md
-        - name: 如何为 CDC 准备 SQL Server
-          href: ../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md
-        - name: 如何使用 CDC 服务命令行界面
-          href: ../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md
-        - name: 如何使用 CDC 服务
-          href: ../integration-services/change-data-capture/how-to-work-with-cdc-services.md
+        - name: Change Data Capture Service for Oracle by Attunity 系统体系结构
+          href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-system-architecture.md
+        - name: Oracle CDC 服务
+          href: ../integration-services/change-data-capture/the-oracle-cdc-service.md
+          items:
+            - name: 高可用性支持
+              href: ../integration-services/change-data-capture/high-availability-support.md
+            - name: 针对 CDC 服务的 SQL Server 连接所需权限
+              href: ../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md
+            - name: 用户角色
+              href: ../integration-services/change-data-capture/user-roles.md
+            - name: 使用 Oracle CDC 服务
+              href: ../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md
+        - name: Change Data Capture Service for Oracle by Attunity F1 帮助
+          href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md
+          items:
+            - name: 连接到 SQL Server
+              href: ../integration-services/change-data-capture/connection-to-sql-server.md
+            - name: 删除与 SQL Server 的连接
+              href: ../integration-services/change-data-capture/connection-to-sql-server-for-delete.md
+            - name: 创建和编辑 Oracle CDC 服务
+              href: ../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md
+            - name: 管理 Oracle CDC 服务
+              href: ../integration-services/change-data-capture/manage-an-oracle-cdc-service.md
+            - name: 为 CDC 准备 SQL Server
+              href: ../integration-services/change-data-capture/prepare-sql-server-for-cdc.md
+            - name: 为 Oracle CDC 视图脚本准备 SQL Server
+              href: ../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md
+            - name: 使用 CDC 服务
+              href: ../integration-services/change-data-capture/work-with-cdc-services.md
+        - name: Change Data Capture Service for Oracle by Attunity 操作指南
+          href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md
+          items:
+            - name: 如何创建和编辑 CDC 服务
+              href: ../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md
+            - name: 如何管理本地 CDC 服务
+              href: ../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md
+            - name: 如何为 CDC 准备 SQL Server
+              href: ../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md
+            - name: 如何使用 CDC 服务命令行界面
+              href: ../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md
+            - name: 如何使用 CDC 服务
+              href: ../integration-services/change-data-capture/how-to-work-with-cdc-services.md
 - name: Microsoft Connector for SAP BW
   href: ../integration-services/microsoft-connector-for-sap-bw.md
   items:
