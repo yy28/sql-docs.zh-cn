@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 560e752e5559b0e79a4f123443d200ca70532ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3966d681b9001b2bded09c6c92aa665eec7a2d9
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63221968"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041057"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>使用 PowerShell Desired State Configuration 安装 SQL Server
 
@@ -28,7 +28,7 @@ ms.locfileid: "63221968"
 
 更糟糕的是，现在你会对整个安装过程产生怀疑。 “我还忘记了什么？” 你可能会问自己。
 
-请阅读 [PowerShell Desired State Configuration (DSC)](https://docs.microsoft.com/powershell/dsc/overview)。 通过使用 DSC，可以构建一个能在成百上千个服务器上重复使用的配置模板。 根据构建，可能需要调整几个安装参数。 但这并不是最重要的问题，因为你可以保持所有标准设置不变。 这消除了忘记输入重要参数的可能性。
+请阅读 [PowerShell Desired State Configuration (DSC)](/powershell/scripting/dsc/overview/overview)。 通过使用 DSC，可以构建一个能在成百上千个服务器上重复使用的配置模板。 根据构建，可能需要调整几个安装参数。 但这并不是最重要的问题，因为你可以保持所有标准设置不变。 这消除了忘记输入重要参数的可能性。
 
 本文将使用 SqlServerDsc DSC 资源探索 Windows Server 2016 上 SQL Server 2017 独立实例的初始设置  。 预先了解一些有关 DSC 的知识大有好处，因为我们不会探索 DSC 的工作原理。
 
@@ -213,7 +213,7 @@ PS C:\> & sqlcmd -S $env:COMPUTERNAME
 
 ## <a name="see-also"></a>另请参阅
 
-[Windows PowerShell Desired State Configuration 概述](https://docs.microsoft.com/powershell/dsc/overview)
+[Windows PowerShell Desired State Configuration 概述](/powershell/scripting/dsc/overview/overview)
 
 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 

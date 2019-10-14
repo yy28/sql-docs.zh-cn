@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 678c987e2297c7345dd347957e395b9c4c81544e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7639cd7ce7cd33f59fbc65116264a8b887879b77
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284598"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278293"
 ---
 # <a name="report-server-namespace-management-methods"></a>报表服务器命名空间管理方法
   报表服务器管理 Web 服务包含可用于管理报表服务器数据库中的报表、文件夹和资源的方法。  
@@ -28,7 +28,7 @@ ms.locfileid: "63284598"
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|取消某一作业的执行。|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|将文件夹添加到报表服务器数据库或 SharePoint 库。|  
 |<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|将新项添加到报表服务器数据库或 SharePoint 库。 此方法适用于 Report、Model、Dataset、Component、Resource 和 DataSource 项类型       。|  
-|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[],ReportService2010.Warning[]@)|创建新的报表编辑会话。|  
+|M:ReportService2010.ReportingService2010.CreateReportEditSession （System.string，system.string，System.string []，ReportService2010 [] @）|创建新的报表编辑会话。|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|从报表服务器数据库或 SharePoint 库删除项。|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|返回报表服务器数据库或 SharePoint 库中与指定的搜索条件匹配的项。|  
 |<xref:ReportService2010.ReportingService2010.FireEvent%2A>|基于提供的参数触发事件。|  

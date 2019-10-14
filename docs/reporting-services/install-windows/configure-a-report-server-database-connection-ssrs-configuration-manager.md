@@ -7,13 +7,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 04/26/2019
-ms.openlocfilehash: 86f3d1834212ff17125abc9a124eb10d3f7e9be5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 10/09/2019
+ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
+ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264985"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72239370"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>配置报表服务器数据库连接（SSRS 配置管理器）
 
@@ -105,6 +105,13 @@ ms.locfileid: "68264985"
 #### <a name="using-a-sql-server-login"></a>使用 SQL Server 登录名
 
 可以指定使用一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名连接到报表服务器数据库。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证并且报表服务器数据库位于远程计算机上，则可以使用 IPSec 来协助保护服务器之间的数据传输。 如果使用数据库登录名，则每次更改密码或帐户时，必须更新报表服务器数据库连接。  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> 使用 Azure SQL 托管实例托管 Reporting Services 2019 数据库时，支持仅限于使用连接 SQL Server 登录凭据。
+
+::: moniker-end
 
 ### <a name="database-permissions"></a>数据库权限
 
