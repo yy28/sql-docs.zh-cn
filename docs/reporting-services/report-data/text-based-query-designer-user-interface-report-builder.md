@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 318f1bae413dad632f5cd93ebefde0cc7cfd4d29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd76ce7d20349301d3bfeb70b4ed1c24325cbdc
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500123"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251202"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>基于文本的查询设计器用户界面（报表生成器）
   使用基于文本的查询设计器可以用数据源支持的查询语言来指定查询，还可以运行查询并在运行时查看结果。 您可以指定多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，为自定义数据处理扩展插件指定查询或命令语法，还可以指定指定为表达式的查询。 因为基于文本的查询设计器不会对查询进行预处理，并且能适应任何类型的查询语法，所以成为了众多数据源类型的默认查询设计器工具。  
@@ -87,8 +87,8 @@ uspGetWhereUsedProductID
   
 |||  
 |-|-|  
-|*@StartProductID*|820|  
-|*@CheckDate*|20010115|  
+|*\@StartProductID*|820|  
+|*\@CheckDate*|20010115|  
   
  对于指定日期，结果集显示使用指定组件号的 13 个产品标识符列表。  
   

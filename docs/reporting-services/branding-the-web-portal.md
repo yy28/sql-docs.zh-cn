@@ -8,12 +8,12 @@ description: 本文介绍了如何通过品牌包根据业务设置 Web 门户�
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65429cd58796d27025a929e95c6682449e456425
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199414"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251909"
 ---
 # <a name="branding-the-web-portal"></a>设置 Web 门户的品牌
 
@@ -75,7 +75,7 @@ LESS 样式表中包含了引用预定义 LESS 变量的块，如下所示。
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-经过处理的输出会查看 **@primaryButtonBg** LESS 变量，并确保它映射到了名为 **primary**的 json 属性（在此示例中是 #009900）。 这样才能输出正确的 CSS。  
+经过处理的输出会查看“\@primaryButtonBg  变量，并确保它映射到了名为“primary”  的 json 属性（在此示例中是 #009900）。 这样才能输出正确的 CSS。  
   
     .btn-primary {   
         color:#ffffff;   

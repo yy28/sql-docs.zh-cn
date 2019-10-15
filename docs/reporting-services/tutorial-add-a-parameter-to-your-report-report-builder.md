@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63041687"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252137"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
 在本教程中，将参数添加到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表，使报表读者可以筛选报表数据的一个或多个值。 
@@ -142,9 +142,9 @@ ms.locfileid: "63041687"
     WHERE StoreID = (@StoreID)  
     ```  
   
-    WHERE 子句将检索的数据限制为由查询参数 @StoreID 指定的商店标识符   。  
+    WHERE  子句将检索的数据限制为由查询参数“\@StoreID”指定的商店标识符  。  
   
-4.  在查询设计器工具栏中，单击“运行”  ( **!** )。 此时将打开“定义查询参数”对话框，提示用户为查询参数 @StoreID 输入值   。  
+4.  在查询设计器工具栏中，单击“运行”  ( **!** )。 此时将打开“定义查询参数”对话框，提示为查询参数“\@StoreID”输入值。    
   
 5.  在“参数值”  中，键入 **200**。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "63041687"
   
 8.  在“报表数据”窗格中，展开“参数”  文件夹。  
   
-请注意，现在有一个名为 @StoreID 的报表参数，一个可在其中排放报表参数的“参数”窗格  。   
+请注意，现在有一个名为“\@StoreID”的报表参数，一个可在其中排放报表参数的“参数”窗格。    
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -169,7 +169,7 @@ ms.locfileid: "63041687"
   
 默认情况下，创建的参数数据类型为 **Text**。 由于商店标识符是一个整数，因此可将数据类型更改为 Integer。  
   
-1.  在“报表数据”窗格的“参数”节点中，右键单击 @StoreID，然后单击“参数属性”    。  
+1.  在“报表数据”窗格的“参数”  节点中，右键单击“\@StoreID”  ，然后单击“参数属性”  。  
   
 2.  在“提示符”  下，键入 **Store identifier?** 当您运行报表时，此文本出现在报表查看器工具栏上。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "63041687"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  单击 **“运行”** 以预览报表。 报表查看器将显示 @StoreID 的提示“Store Identifier?”   。  
+6.  单击 **“运行”** 以预览报表。 报表查看器将显示“\@StoreID”的提示“Store Identifier?”。    
   
 7.  在报表查看器工具栏上，在 Store ID 的旁边键入 **200**，然后单击“查看报表”  。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "63041687"
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>为参数提供数据集中的可用值  
   
-1.  在“报表数据”窗格中，右键单击参数 @StoreID，然后单击“参数属性”   。  
+1.  在“报表数据”窗格中，右键单击参数“\@StoreID”，然后单击“参数属性”。    
   
 2.  单击“可用值”  ，然后单击“从查询中获取值”  。  
   
@@ -253,7 +253,7 @@ ms.locfileid: "63041687"
   
 1.  切换到“设计”视图。  
   
-2.  在“报表数据”窗格中，右键单击 @StoreID，然后单击“参数属性”   。  
+2.  在“报表数据”窗格中，右键单击“\@StoreID”，然后单击“参数属性”。    
   
 3.  单击“默认值”  ，然后单击“从查询中获取值”  。  
   
@@ -265,13 +265,13 @@ ms.locfileid: "63041687"
   
 7.  预览报表。  
   
-对于 @StoreID，报表查看器显示值“Contoso North America Online Store”，因为它是数据集“Stores”的结果集的第一个值   。 报表显示了标识符为 **199**的商店销售的数码相机数量。  
+对于 \@StoreID，报表查看器显示值“Contoso North America Online Store”，因为它是数据集“Stores”的结果集的第一个值。   报表显示了标识符为 **199**的商店销售的数码相机数量。  
   
 ### <a name="to-specify-a-custom-default-value"></a>指定自定义默认值  
   
 1.  切换到“设计”视图。  
   
-2.  在“报表数据”窗格中，右键单击 @StoreID，然后单击“参数属性”   。  
+2.  在“报表数据”窗格中，右键单击“\@StoreID”，然后单击“参数属性”。    
   
 3.  单击“默认值”   > “指定值”   > “添加”  。 此时将添加一个新的值行。  
   
@@ -281,7 +281,7 @@ ms.locfileid: "63041687"
   
 6.  预览报表。  
   
-对于 @StoreID，报表查看器显示“Contoso Catalog Store”，因为它是标识符为 200 的商店的显示名称   。 报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
+对于 \@StoreID，报表查看器显示“Contoso Catalog Store”，因为它是标识符为 200 的商店的显示名称。   报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
 ## <a name="NameValue"></a>4d. 查找名称/值对  
 数据集可以同时包含标识符和对应的名称字段。 若只有一个标识符，则可以在创建的包含名称/值对的数据集中查找对应的名称。  
@@ -323,7 +323,7 @@ ms.locfileid: "63041687"
   
 2.  右键单击“页脚” > 单击“插入” > “文本框”   。 拖动带时间戳的文本框旁边的文本框。 抓住该文本框的侧手柄并扩展宽度。  
   
-3.  从“报表数据”窗格中，将参数 @StoreID 拖到文本框  。 文本框显示 `[@StoreID]`。  
+3.  从“报表数据”窗格中，将参数“\@StoreID”拖到文本框。  文本框显示 `[@StoreID]`。  
   
 4.  若要显示参数标签，请在文本框中单击，直到插入游标出现在现有表达式之后，键入一个空格，然后从“报表数据”窗格将参数的另一个副本拖到文本框。 文本框显示 `[@StoreID] [@StoreID]`。  
   
@@ -371,7 +371,7 @@ ms.locfileid: "63041687"
   
 1.  切换到“设计”视图。  
   
-2.  在“报表数据”窗格中，右键单击 @StoreID，然后单击“参数属性”   。  
+2.  在“报表数据”窗格中，右键单击“\@StoreID”，然后单击“参数属性”。    
   
 3.  选择“允许多个值”  。  
   

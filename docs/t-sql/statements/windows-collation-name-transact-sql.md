@@ -146,8 +146,8 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |波斯尼亚语（波斯尼亚和黑塞哥维那，西里尔文）|Bosnian_Cyrillic_100_|不可用|
 |波斯尼亚语（波斯尼亚和黑塞哥维那，拉丁语）|Bosnian_Latin_100_|不可用|
 |布列塔尼语（法国）|Breton_100_|不可用|
-|中文（中国澳门特别行政区）|Chinese_Traditional_Pinyin_100_|不可用|
-|中文（中国澳门特别行政区）|Chinese_Traditional_Stroke_Order_100_|不可用|
+|中文（澳门特别行政区）|Chinese_Traditional_Pinyin_100_|不可用|
+|中文（澳门特别行政区）|Chinese_Traditional_Stroke_Order_100_|不可用|
 |中文（新加坡）|Chinese_Simplified_Stroke_Order_100_|不可用|
 |科西嘉语（法国）|Corsican_100_|不可用|
 |克罗地亚语（波斯尼亚和黑塞哥维那，拉丁语）|Croatian_100_|不可用|
@@ -237,7 +237,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 
 <sup>1</sup> 仅 Unicode 的 Windows 排序规则只能应用于列级或表达式级数据。 它们不能用作服务器或数据库排序规则。
 
-<sup>2</sup> 与中文（中国台湾）排序规则类似，中文（澳门特别行政区）也使用简体中文的规则；与中文（中国台湾）不同，它使用代码页 950。
+<sup>2</sup> 与中文（台湾）排序规则类似，中文（澳门特别行政区）也使用简体中文的规则；与中文（台湾）不同，它使用代码页 950。
 
 ## <a name="see-also"></a>另请参阅
 

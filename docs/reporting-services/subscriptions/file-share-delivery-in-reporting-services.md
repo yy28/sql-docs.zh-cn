@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575992"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278237"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的文件共享传递
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含文件共享传递扩展插件，以便你可以将报表传递到文件夹。 默认情况下会提供文件共享传递扩展插件，并且不需要进行其他配置。 为了成功传递文件，必须设置对共享文件夹的写访问权限。 需要编写器权限的帐户可以是订阅中配置的凭据，也可以是为报表服务器配置的“文件共享帐户”  。 有关文件共享帐户的详细信息，请参阅 [订阅设置和文件共享帐户（配置管理器）](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 此外，需要访问报表的用户还必须对共享文件夹具有读取权限。  
@@ -72,7 +72,7 @@ ms.locfileid: "65575992"
   
  **覆盖：** 你可以指定覆盖选项，从而在每次报表传递时重复使用相同的文件名，或者创建新的文件。 若要覆盖文件，必须使用相同的文件名和扩展名。  
   
- 为每个传递创建唯一的文件的另一种方法是在文件名中包含时间戳。 若要执行此操作，请将“@timestamp”  变量添加到文件名中（例如，CompanySales@timestamp  ）。 采用这种方法，文件名的定义是唯一的，因此永远不会被覆盖。  
+ 为每个传递创建唯一的文件的另一种方法是在文件名中包含时间戳。 若要执行此操作，请将“\@timestamp”变量添加到文件名中（例如，CompanySales@timestamp）。   采用这种方法，文件名的定义是唯一的，因此永远不会被覆盖。  
   
  下图是为文件共享传递配置的订阅设置示例。  
   

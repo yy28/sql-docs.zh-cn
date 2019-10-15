@@ -11,12 +11,12 @@ ms.reviewer: v-jizho2, v-chojas, genemi
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: d6eebce61ede6e1e3dd76028a653a00ffa06990e
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702757"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041158"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>适用于 Windows 上 SQL Server 的 ODBC 的发行说明
 
@@ -43,6 +43,16 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## <a name="1742-october-2019"></a>2019 年 10 月 17.4.2 版
+
+| 新增功能 | 详细信息 |
+| :------------ | :------ |
+| 支持其他 Azure Key Vault 终结点 | 请参阅[对 ODBC 驱动程序使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| 支持设置数据分类版本 | 请参阅[数据分类](../data-classification.md#bkmk-version)。 |
+| 现在，驱动程序将安装用于对 Azure 进行身份验证的 Azure Active Drirectory Authentication 库（adal） | |
+| bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="174-july-2019"></a>17.4 版，2019 年 7 月
 

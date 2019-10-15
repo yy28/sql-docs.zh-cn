@@ -44,7 +44,7 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
 
 通常，我们建议你将独立服务器和数据库引擎实例识别安装视为互斥安装以避免资源争用，但如果你有足够的资源，则不禁止在同一台物理计算机上进行这两种安装。
 
-计算机上只能有一台独立服务器： SQL Server Machine Learning Server （独立）或 SQL Server R Server （独立版）。 请确保在添加新版本之前卸载一个版本。
+计算机上只能有一个独立服务器： SQL Server Machine Learning Server （独立）或 SQL Server R Server （独立版）。 请确保在添加新版本之前卸载一个版本。
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 

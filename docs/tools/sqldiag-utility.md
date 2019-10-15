@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5df0001449d5ec1d2fded885fb932436a313bbfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eadacbf0e3137cf22c9a870783da41a046c86fb
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986294"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251365"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,10 +112,10 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** 在启动时不会将输出追加到当前输出文件夹。 它只能覆盖默认的输出文件夹（选项 1）或重命名该文件夹（选项 2），然后将输出写入名为 SQLDIAG 的新默认输出文件夹。  
   
- **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
+ /M machine1 [ machine2 machineN] | \@machinelistfile       
  覆盖在配置文件中指定的计算机。 默认情况下，配置文件为 SQLDiag.Xml，也可以使用 **/I** 参数进行设置。 如果指定多台计算机，请用空格分隔各个计算机名称。  
   
- 使用 *@machinelistfile* 可指定要存储在配置文件中的计算机列表文件名。  
+ 使用“\@machinelistfile”可指定要存储在配置文件中的计算机列表文件名。   
   
  **/C** _file_compression_type_  
  设置 **SQLdiag** 输出文件夹文件所用的文件压缩类型。 可用选项包括：  

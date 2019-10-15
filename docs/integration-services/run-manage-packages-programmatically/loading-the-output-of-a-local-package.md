@@ -61,7 +61,7 @@ ms.locfileid: "71295750"
 6.  根据需要重复调用 DataReader 的 Read  方法以遍历输出数据的各行。 使用这些数据，或将这些数据保存在客户端应用程序，以供将来使用。  
   
     > [!IMPORTANT]  
-    >  读取最后一行数据后，此 DataReader 实现的 Read  方法将再返回一次 true  。 因此在 Read  返回 true  时很难使用遍历 DataReader 的常规代码。 如果代码在读取预期行数后尝试关闭 DataReader 或连接，而不对 Read  方法进行附加的最终调用时，该代码将引发未处理的异常。 但是，如果代码尝试在此循环的最后一轮操作中读取数据，在 Read  仍返回 true  而最后一行已传递时，该代码将引发未处理的 ApplicationException  并包含消息“SSIS IDataReader 已到达结果集末尾”。 此行为与其他 DataReader 实现的行为不同。 因此，使用循环读取 DataReader 中的各行，而 Read  返回 true  时，需要针对上次成功调用 Read  方法编写代码以捕获、测试和放弃此预期的 ApplicationException  。 或者，如果事先知道应读取的行数，则可以处理这些行，然后在关闭 DataReader 和连接之前再调用一次 Read  方法。  
+    >  读取最后一行数据后，此 DataReader 实现的 Read  方法将再返回一次 true  。 因此在 Read  返回 true  时很难使用遍历 DataReader 的常规代码。 如果代码在读取预期行数后尝试关闭 DataReader 或连接，而不对 Read  方法进行附加的最终调用时，该代码将引发未处理的异常。 但是，如果代码尝试在此循环的最后一轮的操作中读取数据，在 Read  仍返回 true  而最后一行已传递时，该代码将引发未处理的 ApplicationException  并包含消息“SSIS IDataReader 已到达结果集末尾”。 此行为与其他 DataReader 实现的行为不同。 因此，使用循环读取 DataReader 中的各行，而 Read  返回 true  时，需要针对上次成功调用 Read  方法编写代码以捕获、测试和放弃此预期的 ApplicationException  。 或者，如果事先知道应读取的行数，则可以处理这些行，然后在关闭 DataReader 和连接之前再调用一次 Read  方法。  
   
 7.  调用 DtsCommand  对象的 Dispose  方法。 如果已使用任何 DtsDataParameter  对象，这样做尤其重要。  
   
