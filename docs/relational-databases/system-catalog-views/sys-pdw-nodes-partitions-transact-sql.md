@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_partitions (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases _nodes_partitions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,48 +12,48 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 00ce680a0648b7641249d5fba6b7d0fa493deebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001144"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305225"
 ---
-# <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
+# <a name="syspdw_nodes_partitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  包含所有表和索引中的大多数类型的每个分区行[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]数据库。 所有表和索引都包含至少一个分区，无论它们显式分区。  
+  所有表的每个分区和 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 数据库中的大多数类型的索引在表中各占一行。 所有表和索引都至少包含一个分区，无论它们是否已明确分区。  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|partition_id|`bigint`|分区的 id。 是在数据库中唯一。|  
-|object_id|`int`|此分区所属的对象的 id。 每个表或视图都至少包含一个分区。|  
-|index_id|`int`|此分区所属的对象中的索引的 id。|  
-|partition_number|`int`|所属索引或堆中的基于 1 的分区号。 有关[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，此列的值为 1。|  
-|hobt_id|`bigint`|包含此分区的行的数据堆或 B 树的 ID。|  
-|rows|`bigint`|此分区中的大约行数。 |  
-|data_compression|`int`|指示每个分区的压缩状态：<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|`nvarchar(60)`|指示每个分区的压缩状态。 可能的值为 NONE、ROW 和 PAGE。|  
-|pdw_node_id|`int`|唯一标识符[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点。|  
+|partition_id|**bigint**|分区的 id。 在数据库中是唯一的。|  
+|object_id|**int**|此分区所属的对象的 id。 每个表或视图都至少包含一个分区。|  
+|index_id|**int**|此分区所属的对象内的索引的 id。|  
+|partition_number|**int**|拥有的索引或堆中从1开始的分区号。 对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，此列的值为1。|  
+|hobt_id|**bigint**|包含此分区的行的数据堆或B 树（HoBT）的 ID。|  
+|rows|**bigint**|此分区中的大约行数。 |  
+|data_compression|**int**|指示每个分区的压缩状态：<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
+|data_compression_desc|**nvarchar(60)**|指示每个分区的压缩状态。 可能的值为 NONE、ROW 和 PAGE。|  
+|pdw_node_id|**int**|@No__t-0 节点的唯一标识符。|  
   
 ## <a name="permissions"></a>权限  
- 需要 CONTROL SERVER 权限。  
+ 需要 `CONTROL SERVER` 权限。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>示例 A：每个分区中每个分布区中显示行 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>示例 A：显示每个分布区中每个分区的行 
 
-适用范围：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**适用于：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
-若要显示每个分发中的每个分区中的行数，请使用[DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) 。
+若要显示每个分布区中每个分区的行数，请使用[DBCC PDW_SHOWPARTITIONSTATS （SQL Server PDW）](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) 。
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>示例 B：使用系统视图来查看每个分区的表的每个分布区中的行
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>示例 B：使用系统视图查看每个表的每个分区中的行
 
 适用范围：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
-此查询返回的行数，每个分区的表的每个分布区`myTable`。  
+此查询将返回表的每个分布 `myTable` 的每个分区中的行数。  
  
-```  
+```sql  
 SELECT o.name, pnp.index_id, pnp.partition_id, pnp.rows,   
     pnp.data_compression_desc, pnp.pdw_node_id  
 FROM sys.pdw_nodes_partitions AS pnp  

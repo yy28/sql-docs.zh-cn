@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geometry_index_xml (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_spatial_geometry_index_xml （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 823cd652537cbba486ffd4e432f9413b43f05b12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e7eb2e007191088a0259360924b2f5f931dec0a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085106"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304895"
 ---
-# <a name="sphelpspatialgeometryindexxml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
+# <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  名称和值的一组指定的属性将返回有关**几何图形**空间索引。 可以选择是返回索引的一组核心属性还是返回索引的所有属性。  
+  返回关于**几何图形**空间索引的一组指定属性的名称和值。 可以选择是返回索引的一组核心属性还是返回索引的所有属性。  
   
  在一个显示了所选属性的名称和值的 XML 片段中返回结果。  
   
@@ -45,21 +45,21 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>参数  
- 请参阅[空间索引的参数和属性存储过程](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+ 请参阅[空间索引存储过程的参数和属性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
-## <a name="properties"></a>properties  
- 请参阅[空间索引的参数和属性存储过程](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+## <a name="properties"></a>属性  
+ 请参阅[空间索引存储过程的参数和属性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
 ## <a name="permissions"></a>权限  
- 用户必须是属于**公共**角色。 需要服务器和对象的 READ ACCESS 权限。  
+ 用户必须是**公共**角色的成员。 需要服务器和对象的 READ ACCESS 权限。  
   
 ## <a name="remarks"></a>备注  
  包含 NULL 值的属性未包含在 XML 返回集中。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`sp_help_spatial_geometry_index_xml`若要调查的空间索引**SIndx_SpatialTable_geometry_col2**表上定义**geometry_col**中的给定的查询示例 **@qs** . 此示例在一个显示了所选属性的名称和值的 XML 片段中返回指定索引的核心属性。  
+ 下面的示例使用 `sp_help_spatial_geometry_index_xml` 来调查 **\@qs**中给定查询示例的表**geometry_col**上定义的空间索引**SIndx_SpatialTable_geometry_col2** 。 此示例在一个显示了所选属性的名称和值的 XML 片段中返回指定索引的核心属性。  
   
- [XQuery](../../xquery/xquery-basics.md)然后返回特定属性的结果集上运行。  
+ 然后，对结果集运行[XQuery](../../xquery/xquery-basics.md) ，返回特定属性。  
   
 ```  
 DECLARE @qs geometry  
@@ -69,12 +69,12 @@ EXEC sp_help_spatial_geometry_index_xml 'geometry_col', 'SIndx_SpatialTable_geom
 SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- 类似于[sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)，此存储的过程提供了空间索引的属性的更简单编程访问，并报告结果集的 XML 中。  
+ 与[sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)类似，此存储过程提供了对空间索引属性的更简单编程访问，并在 XML 中报告结果集。  
   
 ## <a name="requirements"></a>要求  
   
 ## <a name="see-also"></a>请参阅  
- [参数和属性的空间索引存储的过程](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
+ [空间索引存储过程的参数和属性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
  [空间索引存储过程](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_help_category (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_category （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c297578fabca3c20781c6227307f25dbece1bbfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055230"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304806"
 ---
-# <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
+# <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   提供有关作业、警报或操作员的指定类的信息。  
@@ -42,31 +42,31 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @class = ] 'class'` 有关哪些请求信息的类。 *类*是**varchar(8)** ，默认值为**作业**。 *类*可以是下列值之一。  
+`[ @class = ] 'class'` 关于请求信息的类。 *类*为**varchar （8）** ，默认值为**JOB**。 *类*可以是下列值之一。  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
 |**JOB**|提供有关作业类别的信息。|  
-|**发出警报**|提供有关警报类别的信息。|  
-|**运算符**|提供有关操作员类别的信息。|  
+|**发出**|提供有关警报类别的信息。|  
+|**操作员**|提供有关操作员类别的信息。|  
   
-`[ @type = ] 'type'` 为其请求信息的类别的类型。 *类型*是**varchar(12)** ，默认值为 NULL，并且可以是下列值之一。  
+`[ @type = ] 'type'` 请求其信息的类别的类型。 *类型*为**varchar （12）** ，默认值为 NULL，可以是下列值之一。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**LOCAL**|本地作业类别。|  
 |**MULTI -SERVER**|多服务器作业类别。|  
-|**NONE**|以外的其他类的类别**作业**。|  
+|**NONE**|**作业**之外的类的类别。|  
   
-`[ @name = ] 'name'` 为其请求信息的类别的名称。 *名称*是**sysname**，默认值为 NULL。  
+`[ @name = ] 'name'` 请求其信息的类别的名称。 *名称*为**sysname**，默认值为 NULL。  
   
-`[ @suffix = ] suffix` 指定是否**category_type**结果集中的列是 ID 还是名称。 *后缀*是**位**，默认值为**0**。 **1**显示了**category_type**作为名称，并**0**显示为一个 id。  
+@no__t 指定结果集中的**category_type**列是 ID 还是名称。 *后缀*为**bit**，默认值为**0**。 **1**以名称的形式显示**category_type** ， **0**将其显示为 ID。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 当 **@suffix** 是**0**， **sp_help_category**返回以下结果集：  
+ 如果 **@no__t 1suffix**为**0**， **sp_help_category**将返回以下结果集：  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
@@ -74,16 +74,16 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|类别的类型：<br /><br /> **1** = 本地<br /><br /> **2** = 多服务器<br /><br /> **3** = 无|  
 |**name**|**sysname**|类别名称|  
   
- 当 **@suffix** 是**1**， **sp_help_category**返回以下结果集：  
+ 当 **\@suffix**为**1**时， **sp_help_category**将返回以下结果集：  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|类别 ID|  
-|**category_type**|**sysname**|类别的类型。 之一**本地**，**多服务器**，或**NONE**|  
+|**category_type**|**sysname**|类别的类型。 **本地**、**多服务器**或**无**|  
 |**name**|**sysname**|类别名称|  
   
 ## <a name="remarks"></a>备注  
- **sp_help_category**必须从运行**msdb**数据库。  
+ 必须从**msdb**数据库运行**sp_help_category** 。  
   
  如果未指定参数，则结果集将提供有关所有作业类别的信息。  
   
@@ -128,7 +128,7 @@ GO
 ## <a name="see-also"></a>请参阅  
  [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_update_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

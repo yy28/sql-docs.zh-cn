@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geography_index_xml (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_spatial_geography_index_xml （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dce44e2045b7d3031058ffd976b01bdd53801c48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2503e5d3b94b5bc73d9bf2427e0162ba2eda2fe
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085146"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304909"
 ---
-# <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
+# <a name="sp_help_spatial_geography_index_xml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  名称和值的一组指定的属性将返回有关**geography**空间索引。 可以选择是返回索引的一组核心属性还是返回索引的所有属性。  
+  返回有关**地理**空间索引的一组指定属性的名称和值。 可以选择是返回索引的一组核心属性还是返回索引的所有属性。  
   
  在一个显示了所选属性的名称和值的 XML 片段中返回结果。  
   
@@ -45,10 +45,10 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>参数  
- 请参阅[空间索引的参数和属性存储过程](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+ 请参阅[空间索引存储过程的参数和属性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
-## <a name="properties"></a>properties  
- 请参阅[空间索引的参数和属性存储过程](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+## <a name="properties"></a>属性  
+ 请参阅[空间索引存储过程的参数和属性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
 ## <a name="permissions"></a>权限  
  必须为用户分配一个 PUBLIC 角色以便能够访问该过程。 需要服务器和对象的 READ ACCESS 权限。  
@@ -57,9 +57,9 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
  包含 NULL 值的属性未包含在返回集中。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`sp_help_spatial_geography_index_xml`若要调查的空间索引**SIndx_SpatialTable_geography_col2**表上定义**geography_col**中的给定的查询示例 **@qs** . 此示例在一个显示了所选属性的名称和值的 XML 片段中返回指定索引的核心属性。  
+ 下面的示例使用 `sp_help_spatial_geography_index_xml` 来调查 **\@qs**中给定查询示例的表**geography_col**上定义的空间索引**SIndx_SpatialTable_geography_col2** 。 此示例在一个显示了所选属性的名称和值的 XML 片段中返回指定索引的核心属性。  
   
- [XQuery](../../xquery/xquery-basics.md)然后返回特定属性的结果集上运行。  
+ 然后，对结果集运行[XQuery](../../xquery/xquery-basics.md) ，返回特定属性。  
   
 ```  
 declare @qs geography  
@@ -69,9 +69,9 @@ exec sp_help_spatial_geography_index_xml 'geography_col', 'SIndx_SpatialTable_ge
 select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- 类似于[sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)，此存储的过程提供了更简单编程访问的属性**geography**空间索引和报表中 XML 的结果集。  
+ 与[sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)类似，此存储过程提供了对**地理**空间索引的属性进行更简单的编程访问，并在 XML 中报告结果集。  
   
- 边界框**geography**是整个地球。  
+ **地理**的边界框是整个地球。  
   
 ## <a name="requirements"></a>要求  
   

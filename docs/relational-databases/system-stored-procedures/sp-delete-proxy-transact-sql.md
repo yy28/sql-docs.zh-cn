@@ -1,5 +1,5 @@
 ---
-title: sp_delete_proxy (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_proxy （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a5750e7a2346f55d97e19ba58db548f726b38cd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd717f645b9e53d08f6dabbfc1ea5779c373056e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009189"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305104"
 ---
-# <a name="spdeleteproxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
+# <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   删除指定代理。  
@@ -40,23 +40,23 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @proxy_id = ] id` 要删除的代理代理标识号。 *Proxy_id*是**int**，默认值为 NULL。  
+`[ @proxy_id = ] id` 要删除的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。  
   
-`[ @proxy_name = ] 'proxy_name'` 要删除的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。  
+`[ @proxy_name = ] 'proxy_name'` 要删除的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="remarks"></a>备注  
- 任一 **@proxy_name** 或 **@proxy_id** 必须指定。 如果同时指定这两个参数，这两个参数必须引用相同的代理，否则存储过程会失败。  
+ 必须指定 **@no__t 1proxy_name** **@no__t 或 3proxy_id** 。 如果同时指定这两个参数，这两个参数必须引用相同的代理，否则存储过程会失败。  
   
  如果作业步骤引用了指定代理，则无法删除此代理，存储过程也将失败。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有的成员**sysadmin**固定的服务器角色可以执行**sp_delete_proxy**。  
+ 默认情况下，只有**sysadmin**固定服务器角色的成员才能执行**sp_delete_proxy**。  
   
 ## <a name="examples"></a>示例  
  以下是删除代理 `Catalog application proxy` 的示例。  

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_job （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 94b77b30d96b5361967398a35335f6aa96587f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085332"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306270"
 ---
-# <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
+# <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   删除作业。  
@@ -42,31 +42,31 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_id = ] job_id` 是要删除作业的标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 是要删除的作业的标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
   
-`[ @job_name = ] 'job_name'` 是要删除的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 是要删除的作业的名称。 *job_name*的值为**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  任一*job_id*或*job_name*必须指定; 不能同时指定两者。  
+>  必须指定*job_id*或*job_name*;不能同时指定两者。  
   
 `[ @originating_server = ] 'server'` 供内部使用。  
   
-`[ @delete_history = ] delete_history` 指定是否删除作业的历史记录。 *delete_history*是**位**，默认值为**1**。 当*delete_history*是**1**，删除该作业的作业历史记录。 当*delete_history*是**0**，不删除作业历史记录。  
+@no__t 指定是否删除作业的历史记录。 *delete_history*的值为**bit**，默认值为**1**。 当*delete_history*为**1**时，将删除该作业的作业历史记录。 当*delete_history*为**0**时，将不删除作业历史记录。  
   
- 请注意，如果删除某个作业，不会删除历史记录作业的历史信息将不显示在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理图形用户界面作业历史记录，但信息仍可以驻留在**sysjobhistory**表中**msdb**数据库。  
+ 请注意，当删除作业并且未删除历史记录时，作业的历史信息将不会显示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理图形用户界面作业历史记录中，但该信息仍驻留在 msdb 的**sysjobhistory**表中数据库。  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` 指定是否要删除计划附加到此作业是否它们未附加到任何其他作业。 *delete_unused_schedule*是**位**，默认值为**1**。 当*delete_unused_schedule*是**1**，如果没有其他作业引用计划，则删除附加到该作业的计划。 当*delete_unused_schedule*是**0**，将不删除计划。  
+@no__t 指定是否删除附加到该作业的计划（如果它们未附加到任何其他作业）。 *delete_unused_schedule*的值为**bit**，默认值为**1**。 当*delete_unused_schedule*为**1**时，如果没有其他作业引用该计划，则将删除附加到此作业的计划。 当*delete_unused_schedule*为**0**时，不会删除计划。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
- **@originating_server** 参数保留供内部使用。  
+ **@No__t 1originating_server**参数保留供内部使用。  
   
- **@delete_unused_schedule** 参数通过自动删除未附加到任何作业的计划来提供与早期版本的 SQL Server 的向后兼容性。 请注意，此参数默认为向后兼容行为。 若要保留未附加到作业的计划，必须提供值**0**作为 **@delete_unused_schedule** 参数。  
+ **@No__t-1delete_unused_schedule**参数通过自动删除未附加到任何作业的计划，提供与以前版本的 SQL Server 的向后兼容性。 请注意，此参数默认为向后兼容行为。 若要保留未附加到作业的计划，则必须提供值**0** **@no__t 作为 2delete_unused_schedule**参数。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   

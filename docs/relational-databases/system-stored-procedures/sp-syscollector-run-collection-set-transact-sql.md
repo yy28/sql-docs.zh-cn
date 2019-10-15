@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_run_collection_set (TRANSACT-SQL) |Microsoft Docs
+title: sp_syscollector_run_collection_set （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 337697ec5a0ce842d3ade808db885a671b6adcc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3807a53921572bbe20b4c459bff34958cbb42001
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010697"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304993"
 ---
-# <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
+# <a name="sp_syscollector_run_collection_set-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   如果已启用收集器并将收集组配置为非缓存收集模式，则启动收集组。  
@@ -46,22 +46,22 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @collection_set_id = ] collection_set_id` 是收集组的唯一本地标识符。 *collection_set_id*是**int**并且必须具有一个值，如果*名称*为 NULL。  
+@no__t 是收集组的唯一本地标识符。 *collection_set_id*为**int** ，如果*name*为 NULL，则必须具有值。  
   
-`[ @name = ] 'name'` 是收集组的名称。 *名称*是**sysname**并且必须具有一个值，如果*collection_set_id*为 NULL。  
+@no__t 是收集组的名称。 *名称*为**sysname** ，如果*collection_set_id*为 NULL，则必须具有值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- 任一*collection_set_id*或*名称*必须有一个值，都不能为 NULL。  
+ *Collection_set_id*或*name*必须具有值，两者都不能为 NULL。  
   
- 此过程将开始收集和上载作业指定的集合设置，并将立即启动收集代理作业，如果收集组具有其 **@collection_mode** 设置为非缓存 (1)。 有关详细信息，请参阅[sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
+ 此过程将为指定的收集组启动收集和上载作业，如果收集组将其 **@no__t 1collection_mode**设置为非缓存（1），则会立即启动收集代理作业。 有关详细信息，请[参阅&#40;sp_syscollector_create_collection_set transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
   
  sp_sycollector_run_collection_set 还可用于运行没有计划的收集组。  
   
 ## <a name="permissions"></a>权限  
- 要求的成员身份**dc_operator** （拥有 EXECUTE 权限） 固定的数据库角色来执行此过程。  
+ 要求具有**dc_operator** （带有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="example"></a>示例  
  使用收集组的标识符启动收集组。  

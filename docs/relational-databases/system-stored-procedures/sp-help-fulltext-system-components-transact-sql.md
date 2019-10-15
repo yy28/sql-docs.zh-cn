@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_system_components (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_fulltext_system_components （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +18,17 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 949d22b0acdd4cc6d1e9d865f4f65e847d87aa46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055047"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304881"
 ---
-# <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
+# <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  返回注册的断字符、筛选器和协议处理程序的信息。 **sp_help_fulltext_system_components**也会返回一组数据库和全文目录的使用过指定的组件的标识符。  
+  返回注册的断字符、筛选器和协议处理程序的信息。 **sp_help_fulltext_system_components**还返回已使用指定组件的数据库和全文目录的标识符列表。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ sp_help_fulltext_system_components
  'all'  
  返回所有全文组件的信息。  
   
-`[ @component_type = ] component_type` 指定的组件的类型。 *component_type*可以是以下之一：  
+@no__t 指定组件的类型。 *component_type*可以是下列其中一项：  
   
 -   **wordbreaker**  
   
@@ -55,9 +55,9 @@ sp_help_fulltext_system_components
   
 -   **fullpath**  
   
- 如果指定完整路径，则*param*还必须使用组件 DLL 的完整路径来指定或返回错误消息。  
+ 如果指定了完整路径，则还必须使用组件 DLL 的完整路径指定*param* ，否则会返回错误消息。  
   
-`[ @param = ] param` 根据组件类型，这是以下值之一： 区域设置标识符 (LCID)、 文件扩展名与"。"前缀的协议处理程序或组件 DLL 的完整路径的完整组件名称。  
+`[ @param = ] param` 根据组件类型，这是以下内容之一：区域设置标识符（LCID）、带 "." 前缀的文件扩展名、协议处理程序的完整组件名称或组件 DLL 的完整路径。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -70,11 +70,11 @@ sp_help_fulltext_system_components
 |**componenttype**|**sysname**|组件的类型。 可以是以下类型之一：<br /><br /> filter<br /><br /> 协议处理程序<br /><br /> 断字符|  
 |**componentname**|**sysname**|组件的名称。|  
 |**clsid**|**uniqueidentifier**|组件的类标识符。|  
-|**fullpath**|**nvarchar(256)**|指向组件位置的路径。<br /><br /> NULL = 不是成员的调用方**serveradmin**固定的服务器角色。|  
+|**fullpath**|**nvarchar(256)**|指向组件位置的路径。<br /><br /> NULL = 调用方不是**serveradmin**固定服务器角色的成员。|  
 |**version**|**nvarchar(30)**|组件的版本。|  
 |**manufacturer**|**sysname**|组件制造商的名称。|  
   
- 返回以下结果集仅当一个或多个全文目录存在，则使用*component_type*。  
+ 仅当存在使用*component_type*的一个或多个全文目录时，才返回下面的结果集。  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
@@ -82,7 +82,7 @@ sp_help_fulltext_system_components
 |**ftcatid**|**int**|全文目录的 ID。|  
   
 ## <a name="permissions"></a>权限  
- 要求的成员身份**公共**角色; 但是，用户只能看到他们具有 VIEW DEFINITION 权限的全文目录有关的信息。 只有的成员**serveradmin**固定的服务器角色可以看到中的值**fullpath**列。  
+ 要求具有**public**角色的成员身份;但是，用户只能查看其具有 VIEW DEFINITION 权限的全文目录的相关信息。 只有**serveradmin**固定服务器角色的成员才能查看**fullpath**列中的值。  
   
 ## <a name="remarks"></a>备注  
  此方法在准备升级时尤为重要。 执行特定数据库中的存储过程，然后使用输出确定升级是否将影响特定目录。  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. 确定特定断字符是否已注册。  
- 下面的示例列出了土耳其语 (LCID = 1055) 的断字符（如果已经在系统上安装该语言并已在服务实例上注册）。 此示例指定参数名称， **@component_type** 并 **@param** 。  
+ 下面的示例列出了土耳其语 (LCID = 1055) 的断字符（如果已经在系统上安装该语言并已在服务实例上注册）。 此示例指定参数名， **@no__t 1component_type**和 **\@param**。  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -139,6 +139,6 @@ GO
  [查看或更改注册的筛选器和断字符](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [全文搜索和语义搜索存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [全文搜索和语义搜索存储过程&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

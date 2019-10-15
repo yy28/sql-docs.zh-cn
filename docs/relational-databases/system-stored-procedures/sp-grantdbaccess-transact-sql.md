@@ -1,5 +1,5 @@
 ---
-title: sp_grantdbaccess (TRANSACT-SQL) |Microsoft Docs
+title: sp_grantdbaccess （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 184ebbde266ab21c0fa94ebff0e2be0aca61988b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b88badb8b1852617d9edd8acd31f2c19258cca7
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123795"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304862"
 ---
-# <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
+# <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   将数据库用户添加到当前数据库。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)相反。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改为使用[CREATE USER](../../t-sql/statements/create-user-transact-sql.md) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,23 +43,23 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @loginame = ] 'login_ '` 是 Windows 组，Windows 登录名的名称或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名映射到新的数据库用户。 Windows 组和 Windows 登录名的名称必须用在窗体中的 Windows 域名限定*域*\\*登录名*; 例如， **LONDON\Joeb**。 登录名不能已映射到数据库中的用户。 *登录名*是**sysname**，无默认值。  
+`[ @loginame = ] 'login_ '` 是要映射到新数据库用户的 Windows 组、Windows 登录名或 @no__t 1 登录名。 Windows 组和 Windows 登录名的名称必须用*域*\\*登录*名的 windows 域名限定;例如， **LONDON\Joeb**。 登录名不能已映射到数据库中的用户。 *login*是**sysname**，无默认值。  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` 是新的数据库用户的名称。 *name_in_db*是输出变量，其数据类型为**sysname**，和默认值为 NULL。 如果未指定，否则*登录名*使用。 如果指定为 OUTPUT 变量，其值为 NULL， **@name_in_db** 设置为*登录*。 *name_in_db*必须已存在当前数据库中。  
+@no__t 为新数据库用户的名称。 *name_in_db*是一种输出变量，其数据类型为**sysname**，默认值为 NULL。 如果未指定，则使用*登录名*。 如果指定为值为 NULL 的输出变量，则 **@no__t 1name_in_db**设置为*login*。 *name_in_db*不得存在于当前数据库中。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_grantdbaccess**调用 CREATE USER，后者支持其他选项。 有关创建数据库用户的信息，请参阅[CREATE USER &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)。 若要从数据库中删除的数据库用户，请使用[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)。  
+ **sp_grantdbaccess**调用 CREATE USER，后者支持其他选项。 有关创建数据库用户的信息，请参阅[CREATE &#40;USER transact-sql&#41;](../../t-sql/statements/create-user-transact-sql.md)。 若要从数据库中删除数据库用户，请使用[DROP user](../../t-sql/statements/drop-user-transact-sql.md)。  
   
- **sp_grantdbaccess**不能在用户定义的事务内执行。  
+ 不能在用户定义的事务中执行**sp_grantdbaccess** 。  
   
 ## <a name="permissions"></a>权限  
- 要求的成员身份**db_owner**固定的数据库角色或**db_accessadmin**固定的数据库角色。  
+ 要求具有**db_owner**固定数据库角色或**db_accessadmin**固定数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用`CREATE USER`若要添加的 Windows 登录名的数据库用户`Edmonds\LolanSo`到当前数据库。 新用户名为 `Lolan`。 这是创建数据库用户的首选方法。  
+ 下面的示例使用 `CREATE USER` 将 Windows 登录名 `Edmonds\LolanSo` 的数据库用户添加到当前数据库。 新用户名为 `Lolan`。 这是创建数据库用户的首选方法。  
   
 ```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  
