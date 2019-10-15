@@ -28,7 +28,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68220498"
 ---
-# <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
+# <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册了断字符的每种语言在此目录视图中均存在对应的一行。 每行显示的 LCID 和语言的名称。 断字符的一种语言、 其他语言的资源词干分析器、 干扰词 （非索引字） 和同义词库文件变得的注册时提供给全文索引/查询操作。 值**名称**或**lcid**可以对全文查询和全文索引中指定[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。  
@@ -49,7 +49,7 @@ ms.locfileid: "68220498"
 |保加利亚语|1026|  
 |加泰罗尼亚语|1027|  
 |中文（中华人民共和国香港特别行政区）|3076|  
-|中文（中国澳门特别行政区）|5124|  
+|中文（澳门特别行政区）|5124|  
 |中文（新加坡）|4100|  
 |克罗地亚语|1050|  
 |捷克语|1029|  

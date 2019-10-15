@@ -500,7 +500,7 @@ EXECUTE Production.usp_UpdateInventory '20030501'
   
 ### <a name="c-using-merge-to-do-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. 借助派生的源表，使用 MERGE 对目标表执行 UPDATE 和 INSERT 操作
 
-下面的示例使用 MERGE 以更新或插入行的方式来修改 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `SalesReason` 表。 当源表中的 `NewName` 值与目标表 (`Name`) 的 `SalesReason` 列中的值匹配时，就会更新此目标表中的 `ReasonType` 列。 如果 `NewName` 的值不匹配，源行就会被插入目标表中。 此源表是一个派生表，它使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值构造函数指定源表的多个行。 有关在派生表中使用表值构造函数的详细信息，请参阅[表值构造函数 (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md)。 下面的示例还展示了如何在表变量中存储 OUTPUT 子句的结果。 然后，通过运行返回已插入行数和已更新行数的简单选择操作，汇总 MERGE 语句的结果。  
+下面的示例使用 MERGE 以更新或插入行的方式来修改 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `SalesReason` 表。 当源表中的 `NewName` 值与目标表 (`Name`) 的 `SalesReason` 列中的值匹配时，就会更新此目标表中的 `ReasonType` 列。 如果 `NewName` 的值不匹配，就会将源行插入目标表中。 此源表是一个派生表，它使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值构造函数指定源表的多个行。 有关在派生表中使用表值构造函数的详细信息，请参阅[表值构造函数 (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md)。 下面的示例还展示了如何在表变量中存储 OUTPUT 子句的结果。 然后，通过运行返回已插入行数和已更新行数的简单选择操作，汇总 MERGE 语句的结果。  
   
 ```sql  
 -- Create a temporary table variable to hold the output actions.  
