@@ -1,5 +1,5 @@
 ---
-title: sp_purge_jobhistory (TRANSACT-SQL) |Microsoft Docs
+title: sp_purge_jobhistory （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ce9b0972bc95a927729f55e10e329cddb2993c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896461"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313757"
 ---
-# <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
+# <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   删除作业的历史记录。  
@@ -43,30 +43,30 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_name = ] 'job_name'` 若要删除的历史记录的作业的名称。 *job_name*是**sysname**，默认值为 NULL。 任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
+`[ @job_name = ] 'job_name'` 要删除其历史记录的作业的名称。 *job_name*的值为**sysname**，默认值为 NULL。 必须指定*job_id*或*job_name* ，但不能同时指定两者。  
   
 > [!NOTE]  
->  成员**sysadmin**固定服务器角色或成员**SQLAgentOperatorRole**固定的数据库角色可以执行**sp_purge_jobhistory**而无需指定*job_name*或*job_id*。 当**sysadmin**用户未指定这些参数，在指定的时间内删除所有本地和多服务器作业的作业历史记录*oldest_date*。 当**SQLAgentOperatorRole**用户未指定这些参数，在指定的时间内删除所有本地作业的作业历史记录*oldest_date*。  
+>  **Sysadmin**固定服务器角色的成员或**SQLAgentOperatorRole**固定数据库角色的成员可以执行**sp_purge_jobhistory** ，而无需指定*job_name*或*job_id*。 如果**sysadmin**用户未指定这些参数，则所有本地作业和多服务器作业的作业历史记录将在*oldest_date*指定的时间内删除。 如果**SQLAgentOperatorRole**用户未指定这些参数，则所有本地作业的作业历史记录将在*oldest_date*指定的时间内被删除。  
   
-`[ @job_id = ] job_id` 要删除的记录作业作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。 任一*job_id*或*job_name*必须指定，但不能同时指定两者。 请参阅中的说明备注 **@job_name** 了解如何**sysadmin**或**SQLAgentOperatorRole**用户可以使用此参数。  
+`[ @job_id = ] job_id` 要删除的记录的作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。 必须指定*job_id*或*job_name* ，但不能同时指定两者。 请参阅 **\@job_name**说明中的说明，了解有关**sysadmin**或**SQLAgentOperatorRole**用户如何使用此参数的信息。  
   
-`[ @oldest_date = ] oldest_date` 历史记录中保留的最早记录。 *oldest_date*是**datetime**，默认值为 NULL。 当*oldest_date*指定，则**sp_purge_jobhistory**只会删除早于指定的值的记录。  
+@no__t 在历史记录中保留的最早记录。 *oldest_date*的值为**datetime**，默认值为 NULL。 如果指定了*oldest_date* ，则**sp_purge_jobhistory**仅删除早于指定值的记录。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="remarks"></a>备注  
- 当**sp_purge_jobhistory**成功完成后，返回一条消息。  
+ **Sp_purge_jobhistory**成功完成后，将返回一条消息。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有的成员**sysadmin**固定的服务器角色或**SQLAgentOperatorRole**固定的数据库角色可以执行此存储的过程。 成员**sysadmin**可以清除所有本地和多服务器作业的作业历史记录。 成员**SQLAgentOperatorRole**可以清除仅所有本地作业的作业历史记录。  
+ 默认情况下，只有**sysadmin**固定服务器角色的成员或**SQLAgentOperatorRole**固定数据库角色的成员才可以执行此存储过程。 **Sysadmin**的成员可以清除所有本地和多服务器作业的作业历史记录。 **SQLAgentOperatorRole**的成员只能清除所有本地作业的作业历史记录。  
   
- 其他用户，包括的成员**SQLAgentUserRole**和的成员**SQLAgentReaderRole**，必须显式授予 EXECUTE 权限上**sp_purge_jobhistory**. 当被授予对此存储过程的 EXECUTE 权限之后，这些成员只可以清除其所拥有作业的历史记录。  
+ 其他用户（包括**SQLAgentUserRole**和**SQLAgentReaderRole**的成员）必须显式授予对**sp_purge_jobhistory**的 EXECUTE 权限。 当被授予对此存储过程的 EXECUTE 权限之后，这些成员只可以清除其所拥有作业的历史记录。  
   
- **SQLAgentUserRole**， **SQLAgentReaderRole**，并**SQLAgentOperatorRole**固定的数据库角色位于**msdb**数据库。 其权限的详细信息，请参阅[SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
+ **SQLAgentUserRole**、 **SQLAgentReaderRole**和**SQLAgentOperatorRole**固定数据库角色在**msdb**数据库中。 有关其权限的详细信息，请参阅[SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -85,7 +85,7 @@ GO
 ### <a name="b-remove-history-for-all-jobs"></a>B. 删除所有作业的历史记录  
   
 > [!NOTE]  
->  只有的成员**sysadmin**固定服务器角色的成员以及**SQLAgentOperatorRole**可以删除所有作业的历史记录。 当**sysadmin**用户执行此存储的过程不带任何参数，清除所有本地和多服务器作业的作业历史记录。 当**SQLAgentOperatorRole**用户执行此存储的过程不带任何参数，清除所有本地作业的作业历史记录的仅。  
+>  只有**sysadmin**固定服务器角色的成员和**SQLAgentOperatorRole**的成员才能删除所有作业的历史记录。 当**sysadmin**用户在没有参数的情况下执行此存储过程时，将清除所有本地作业和多服务器作业的历史记录。 当**SQLAgentOperatorRole**用户在没有参数的情况下执行此存储过程时，只会清除所有本地作业的作业历史记录。  
   
  以下示例将不带参数执行此过程以删除所有的历史记录。  
   
