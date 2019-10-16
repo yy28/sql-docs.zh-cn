@@ -13,25 +13,25 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 75688cc1e5155c83501204f1634d320b9ae7d8be
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263996"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041131"
 ---
 # <a name="data-classification"></a>数据分类
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>概述
-为了管理敏感数据, SQL Server 和 Azure SQL Server 引入了向数据库列提供敏感度元数据的功能, 使客户端应用程序可以处理不同类型的敏感数据 (例如运行状况、财务等)。) (根据数据保护策略)。
+为了管理敏感数据，SQL Server 和 Azure SQL Server 引入了向数据库列提供敏感度元数据的功能，使客户端应用程序可以处理不同类型的敏感数据（例如运行状况、财务等）。）（根据数据保护策略）。
 
-有关如何将分类分配到列的详细信息, 请参阅[SQL 数据发现和分类](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017)。
+有关如何将分类分配到列的详细信息，请参阅[SQL 数据发现和分类](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017)。
 
 Microsoft ODBC Driver 17.2 允许使用 SQL_CA_SS_DATA_CLASSIFICATION 字段标识符通过 SQLGetDescField 检索此元数据。
 
 ## <a name="format"></a>“格式”
-SQLGetDescField 具有以下语法:
+SQLGetDescField 具有以下语法：
 
 ```  
 SQLRETURN SQLGetDescField(  
@@ -43,7 +43,7 @@ SQLRETURN SQLGetDescField(
      SQLINTEGER *    StringLengthPtr);  
 ```
 *DescriptorHandle*  
- 送IRD (实现行描述符) 句柄。 可以通过使用 SQL_ATTR_IMP_ROW_DESC 语句特性调用 SQLGetStmtAttr 来检索
+ 送IRD （实现行描述符）句柄。 可以通过使用 SQL_ATTR_IMP_ROW_DESC 语句特性调用 SQLGetStmtAttr 来检索
   
  *RecNumber*  
  [输入] 0
@@ -55,23 +55,23 @@ SQLRETURN SQLGetDescField(
  输出输出缓冲区
   
  *BufferLength*  
- 送输出缓冲区的长度 (以字节为单位)
+ 送输出缓冲区的长度（以字节为单位）
 
- *StringLengthPtr*输出指向缓冲区的指针, 该缓冲区用于返回可在*将 valueptr*中返回的总字节数。
+ *StringLengthPtr* [Output] 指向缓冲区的指针，该缓冲区用于返回可在*将 valueptr*中返回的总字节数。
  
 > [!NOTE]
-> 如果缓冲区的大小未知, 则可以通过调用 SQLGetDescField 并将*将 valueptr*作为 NULL 并检查*StringLengthPtr*的值来确定。
+> 如果缓冲区的大小未知，则可以通过调用 SQLGetDescField 并将*将 valueptr*作为 NULL 并检查*StringLengthPtr*的值来确定。
  
-如果数据分类信息不可用, 将返回*无效的描述符字段*错误。
+如果数据分类信息不可用，将返回*无效的描述符字段*错误。
 
-成功调用 SQLGetDescField 时,*将 valueptr*指向的缓冲区将包含以下数据:
+成功调用 SQLGetDescField 时，*将 valueptr*指向的缓冲区将包含以下数据：
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`、 `tt tt`和`cc cc`是多字节整数, 它们存储在最低地址的最小有效字节。
+> `nn nn`，`tt tt`，`cc cc` 是多字节整数，它们存储在最低地址的最小有效字节。
 
-*`sensitivitylabel`* 和 *`informationtype`* 均为形式
+*`sensitivitylabel`* 和 *@no__t*均为窗体
 
  `nn [n bytes name] ii [i bytes id]`
 
@@ -79,17 +79,17 @@ SQLRETURN SQLGetDescField(
 
  `nn nn [n sensitivityprops]`
 
-对于每个列 *(c)* , 都有*n*个4字节 *`sensitivityprops`* :
+对于每个列 *（c）* ，都存在*n* 4 字节 *@no__t* ：
 
  `ss ss tt tt`
 
-s-数组中的 *`sensitivitylabels`* 索引 ( `FF FF`如果未标记)
+s-索引到 *`sensitivitylabels`* 数组，如果未标记，则 `FF FF`
 
-如果未标记, *`informationtypes`* `FF FF`则为数组的 t 索引
+t-索引到 *`informationtypes`* 数组，如果未标记，则 `FF FF`
 
 
 <br><br>
-数据的格式可以表示为以下伪结构:
+数据的格式可以表示为以下伪结构：
 
 ```
 struct IDnamePair {
@@ -117,7 +117,7 @@ struct {
 
 
 ## <a name="code-sample"></a>代码示例
-演示如何读取数据分类元数据的测试应用程序。 在 Windows 上, 可以使用`cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib`并使用连接字符串来运行它, 并使用 SQL 查询 (返回已分类的列) 作为参数:
+演示如何读取数据分类元数据的测试应用程序。 在 Windows 上，可以使用 `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` 进行编译，并使用连接字符串运行，并使用 SQL 查询（返回已分类的列）作为参数：
 
 ```
 #ifdef _WIN32
@@ -241,5 +241,26 @@ int main(int argc, char **argv)
     }
     return 0;
 }
+```
+
+## <a name="bkmk-version"></a>支持的版本
+如果 `FieldIdentifier` 设置为 `SQL_CA_SS_DATA_CLASSIFICATION` （1237），Microsoft ODBC Driver 17.2 允许通过 @no__t 检索数据分类信息。 
+
+从 Microsoft ODBC Driver 17.4.1.1 开始，可以通过使用 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` （1238）字段标识符 `SQLGetDescField` 检索服务器支持的数据分类版本。 在17.4.1.1 中，支持的数据分类版本设置为 "2"。
+
+ 
+
+从17.4.2.1 开始引入了默认版本的数据分类（设置为 "1"），版本驱动程序将报告为 SQL Server 如受支持。 新的连接属性 `SQL_COPT_SS_DATACLASSIFICATION_VERSION` （1400）可以允许应用程序将支持的数据分类版本从 "1" 更改为最大支持。  
+
+例如： 
+
+若要设置此调用的版本，应在 SQLConnect 或 SQLDriverConnect 调用之前进行：
+```
+ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
+```
+
+当前支持的数据分类版本的值可以通过 SQLGetConnectAttr 调用 retirved： 
+```
+ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```
 
