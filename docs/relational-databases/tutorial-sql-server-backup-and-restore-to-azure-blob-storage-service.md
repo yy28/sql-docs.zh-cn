@@ -1,69 +1,71 @@
 ---
-title: 快速入门：将 SQL Server 备份和还原到 Azure Blob 存储服务 | Microsoft Docs
+title: 快速入门：将 SQL 备份和还原到 Azure Blob 存储服务 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: performance
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae4d9cd9333e8dd42582f972a0d19260b2c9a3ee
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 7d04c2fb2fd405a582cb6c94b59bdca83ba3dbb5
+ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155712"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72239465"
 ---
-# <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>快速入门：将 SQL Server 备份和还原到 Azure Blob 存储服务
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本快速入门可帮助你了解如何将备份写入 Azure Blob 存储服务以及如何从中还原。  本快速入门介绍了如何创建 Azure Blob 容器、这些凭据可用于访问存储帐户、将备份写入 Blob 服务，然后执行简单还原。
+# <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>快速入门：将 SQL 备份和还原到 Azure Blob 存储服务
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+本快速入门可帮助你了解如何将备份写入 Azure Blob 存储服务以及如何从中还原。  本文介绍如何创建 Azure Blob 容器，将备份写入 Blob 服务，然后执行还原。
   
-### <a name="prerequisites"></a>必备条件  
-要完成本快速入门，必须熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原概念以及 T-SQL 语法。 要使用本快速入门，需要 Azure 存储帐户、SQL Server Management Studio (SSMS)、针对运行 SQL Server 的服务器的访问权限以及 AdventureWorks 数据库。 此外，用于发出 BACKUP 和 RESTORE 命令的帐户应属于具有“更改任意凭据”  权限的 db_backupoperator  数据库角色。 
+## <a name="prerequisites"></a>必备条件  
+要完成本快速入门，必须熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原概念以及 T-SQL 语法。  需要 Azure 存储帐户、SQL Server Management Studio (SSMS)、针对运行 SQL Server 的服务器或 Azure SQL 数据库托管实例的访问权限。 此外，用于发出 BACKUP 和 RESTORE 命令的帐户应属于具有“更改任意凭据”权限的 db_backupoperator数据库角色。 
 
 - 获取免费的 [Azure 帐户](https://azure.microsoft.com/offers/ms-azr-0044p/)。
 - 创建 [Azure 存储帐户](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)。
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
-- 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- 使用通过 [Azure SQL 虚拟机](/azure/sql-database/sql-database-managed-instance-configure-vm)或[点到站点](/azure/sql-database/sql-database-managed-instance-configure-p2s)建立的连接安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) 或部署[托管实例](/azure/sql-database/sql-database-managed-instance-get-started)。
 - 将用户帐户分配到 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 角色，并授予[更改任意凭据](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql)权限。 
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 
 ## <a name="create-azure-blob-container"></a>创建 Azure Blob 容器
-容器对 Blob 集进行分组。 所有 Blob 必须都在一个容器中。 一个帐户可以包含无限数量的容器，但必须至少具有一个容器。 一个容器可以存储无限数量的 Blob。 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+容器对 Blob 集进行分组。 所有 Blob 必须都在一个容器中。 一个存储帐户可含有无限数量的容器，但必须至少有一个容器。 一个容器可以存储无限数量的 Blob。 
 
 若要创建容器，请执行下列步骤：
 
 1. 打开 Azure 门户。 
 1. 导航到你的存储帐户。 
-1. 选择该存储帐户，向下滚动到“Blob 服务”  。
-1. 选择“Blob”  ，然后选择“+容器”  以添加一个新容器。 
+1. 选择该存储帐户，向下滚动到“Blob 服务”。
+1. 选择“Blob”，然后选择“+ 容器”以添加一个新容器。 
 1. 输入容器名称并记下指定的容器名称。 此信息在本快速入门稍后部分的 T-SQL 语句的 URL（备份文件的路径）中使用。 
-1. 选择“确定”  。 
+1. 选择“确定”。 
     
     ![新建容器](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
-
 
   > [!NOTE]
   > 即使选择创建公共容器，SQL Server 备份和还原仍需要对存储帐户进行身份验证。 还可以使用 REST API 以编程方式创建容器。 有关详细信息，请参阅[创建容器](https://docs.microsoft.com/rest/api/storageservices/Create-Container)
 
 ## <a name="create-a-test-database"></a>创建测试数据库 
+在此步骤中，使用 SQL Server Management Studio (SSMS) 创建测试数据库。 
 
 1. 启动 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 并连接到 SQL Server 实例。
-1. 打开“新建查询”窗口  。 
-1. 运行以下 TRANSACT-SQL (T-SQL) 代码来创建测试数据库。 刷新对象资源管理器中的“数据库”节点，查看新数据库   。 
+1. 打开“新建查询”窗口。 
+1. 运行以下 TRANSACT-SQL (T-SQL) 代码来创建测试数据库。 刷新对象资源管理器中的“数据库”节点，查看新数据库。 Azure SQL 数据库托管实例上新建的数据库会自动启用 TDE，因此需要禁用它才能继续。 
 
 ```sql
 USE [master]
 GO
 
+-- Create database
 CREATE DATABASE [SQLTestDB]
 GO
 
+-- Create table in database
 USE [SQLTestDB]
 GO
 CREATE TABLE SQLTest (
@@ -73,7 +75,7 @@ CREATE TABLE SQLTest (
 )
 GO
 
-
+-- Populate table 
 USE [SQLTestDB]
 GO
 
@@ -86,72 +88,149 @@ GO
 
 SELECT * FROM SQLTest
 GO
+
+-- Disable TDE for newly-created databases on a managed instance 
+USE [SQLTestDB];
+GO
+ALTER DATABASE [SQLTestDB] SET ENCRYPTION OFF;
+GO
 ```
 
+## <a name="create-credential"></a>创建凭据
 
-## <a name="create-a-sql-server-credential"></a>创建 SQL Server 凭据
-SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源所需的身份验证信息。 在此处，SQL Server 备份和还原进程使用凭据对 Azure Blob 存储服务进行身份验证。 凭据存储着存储帐户的名称和存储帐户的 **access key** 值。 创建凭据后，在发出 BACKUP/RESTORE 命令时必须在 WITH CREDENTIAL 选项中指定它。 有关凭据的详细信息，请参阅[凭据](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine)。 
+通过执行以下步骤，在 SQL Server Management Studio 中使用 GUI 创建凭据。 或者，也可以[以编程方式](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature)创建凭据。 
 
-  > [!IMPORTANT]
-  > 创建下文描述的 SQL Server 凭据的要求特定于 SQL Server 的备份过程（[SQL Server 备份到 URL](backup-restore/sql-server-backup-to-url.md) 和 [Microsoft Azure 的 SQL Server 托管备份](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)）。 SQL Server 在访问 Azure 存储来读写备份时，使用存储帐户名称和访问密钥信息。
+1. 展开 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 的对象资源管理器中的“数据库”节点。
+1. 右键单击新的 `SQLTestDB` 数据库，将鼠标悬停在“任务”上，然后选择“备份...”以启动“备份数据库”向导。 
+1. 从“备份到”目标下拉列表中选择“URL”，然后选择“添加”以启动“选择备份目标”对话框。 
 
-### <a name="access-keys"></a>访问密钥
-需要存储帐户的访问密钥才可创建凭据。 
+   ![备份到 URL](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
-1. 导航到 Azure 门户中的存储帐户  。 
-1. 选择“设置”下的“访问密钥”   。 
-1. 保存密钥和连接字符串以在本快速入门后面使用。 
+1. 选择“选择备份目标”对话框上的“新建容器”以启动“连接到 Microsoft 订阅”窗口。 
 
-   ![访问密钥](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/access-keys.png)
+   ![备份目标](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
-### <a name="create-a-sql-server-credential"></a>创建 SQL Server 凭据
-使用保存的访问密钥，按照以下步骤创建 SQL Server 凭据。 
+1. 通过选择“登录...”登录到 Azure 门户，然后完成登录过程。 
+1. 从下拉列表中选择你的订阅。 
+1. 从下拉列表中选择你的存储帐户。 
+1. 从下拉列表中选择以前创建的容器。 
+1. 选择“创建凭据”以生成共享访问签名 (SAS)。  **保存此值以供还原使用。**
 
-1. 使用 SQL Server Management Studio 连接到 SQL Server。 
-1. 选择 SQLTestDB 数据库，并打开“新建查询”窗口   。 
-1. 将以下示例复制、粘贴到查询窗口并在其中执行，根据需要进行修改： 
+   ![创建凭据](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
 
-   ```sql
-   CREATE CREDENTIAL mycredential   
-   WITH IDENTITY= 'msftutorialstorage', -- this is the name of the storage account you specified when creating a storage account   
-   SECRET = '<storage account access key>' -- this should be either the Primary or Secondary Access Key for the storage account 
-   ```
+1. 选择“确定”以关闭“连接到 Microsoft 订阅”窗口。 这会填充“选择备份目标”对话框上的“Azure 存储容器”值。 选择“确定”以选择所选存储容器，然后关闭对话框。 
+1. 此时，可以跳到下一部分中的步骤 4 以执行数据库的备份，如果要继续使用 Transact-SQL 备份数据库，则可以关闭“备份数据库”向导。 
 
-1. 执行该语句以创建凭据。 
 
-## <a name="back-up-database-to-the-azure-blob-storage-service"></a>将数据库备份到 Azure Blob 存储服务
-在本部分中，将使用 T-SQL 语句执行到 Azure Blob 存储服务的完整数据库备份。 
+## <a name="back-up-database"></a>备份数据库
+在此步骤中，使用 SQL Server Management Studio 中的 GUI 或 Transact-SQL (T-SQL) 将数据库 `SQLTestDB` 备份到 Azure Blob 存储帐户。 
 
-1. 使用 SQL Server Management Studio 连接到 SQL Server。 
-1. 选择 SQLTestDB 数据库，并打开“新建查询”窗口   。 
-1. 将以下示例复制并粘贴到查询窗口中，根据需要进行修改： 
+# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
 
-     ```sql
-     BACKUP DATABASE [SQLTestDB] 
-     TO URL = 'https://msftutorialstorage.blob.core.windows.net/sql-backup/SQLTestDB.bak' 
-     /* URL includes the endpoint for the BLOB service, followed by the container name, and the name of the backup file*/ 
-     WITH CREDENTIAL = 'mycredential';
-     /* name of the credential you created in the previous step */ 
-     GO
-     ```
+1. 如果“备份数据库”向导尚未打开，则展开 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 的对象资源管理器中的“数据库”节点。
+1. 右键单击新的 `SQLTestDB` 数据库，将鼠标悬停在“任务”上，然后选择“备份...”以启动“备份数据库”向导。 
+1. 从“备份到”下拉列表中选择“URL”，然后选择“添加”以启动“选择备份目标”对话框。 
 
-1. 执行该语句，将 SQLTestDB 数据库备份到 URL。 
+   ![备份到 URL](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
- 
-## <a name="restore-database-from-azure-blob-storage-service"></a>从 Azure Blob 存储服务还原数据库
-在本部分中，将使用 T-SQL 语句以还原完整数据库备份。 
+1. 在“Azure 存储容器”下拉列表中选择上一步中创建的容器。 
 
-1. 使用 SQL Server Management Studio 连接到 SQL Server。 
-1. 打开“新建查询”窗口  。 
-1. 将以下示例复制并粘贴到查询窗口中，根据需要进行修改： 
+   ![Azure 存储容器](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/azure-storage-container.png)
 
- ```sql
- RESTORE DATABASE [SQLTestDB] 
- FROM URL = 'https://msftutorialstorage.blob.core.windows.net/sql-backup/SQLTestDB.bak' 
- WITH CREDENTIAL = 'mycredential',
- STATS = 5 -- use this to see monitor the progress
- GO
- ``` 
+1. 选择“备份数据库”向导上的“确定”以备份数据库。 
+1. 成功备份数据库后，选择“确定”以关闭所有与备份相关的窗口。 
+
+   > [!TIP]
+   > 可以通过选择“备份数据库”向导顶部的“脚本”来编写此命令后面的 Transact-SQL 的脚本：![脚本命令](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
+
+
+# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+
+通过运行以下命令，使用 Transact-SQL 备份数据库： 
+
+
+```sql
+USE [master]
+
+BACKUP DATABASE [SQLTestDB] 
+TO  URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2020_01_01_000001.bak' 
+WITH  COPY_ONLY, CHECKSUM
+GO
+```
+
+---
+
+## <a name="delete-database"></a>删除数据库
+在此步骤中，先删除数据库再执行还原。 此步骤仅适用于本教程，但不太可能用于普通的数据库管理过程。 可以跳过此步骤，但之后将需要在托管实例上的还原过程中更改数据库的名称，或运行还原命令 `WITH REPLACE` 以便在本地成功还原数据库。 
+
+# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+
+1. 展开对象资源管理器中的“数据库”节点，右键单击 `SQLTestDB` 数据库，然后选择“删除”以启动“删除对象”向导。 
+1. 在托管实例上，选择“确定”以删除数据库。 在本地，选中“关闭现有连接”旁边的复选框，然后选择“确定”以删除数据库。 
+
+# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+
+通过运行以下 Transact-SQL 命令，删除数据库：
+
+```sql
+USE [master]
+GO
+DROP DATABASE [SQLTestDB]
+GO
+
+-- If connections currently exist on-premises, you'll need to set the database into single user mode first
+USE [master]
+GO
+ALTER DATABASE [SQLTestDB] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE
+GO
+USE [master]
+GO
+DROP DATABASE [SQLTestDB]
+GO
+```
+
+---
+
+
+## <a name="restore-database"></a>对话框的 
+在此步骤中，使用 SQL Server Management Studio 中的 GUI 或 Transact-SQL 还原数据库。 
+
+# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+
+1. 在 SQL Server Management Studio 的对象资源管理器中右键单击“数据库”节点，然后选择“还原数据库”。 
+1. 选择“设备”，然后选择省略号 (...) 以选择设备。 
+
+   ![选择还原设备](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-device.png)
+
+1. 从“备份介质类型”下拉列表中选择“URL”，然后选择“添加”以添加设备。 
+
+   ![添加备份设备](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/add-backup-device.png)
+
+1. 从下拉列表中选择容器，然后将其粘贴在创建凭据时保存的共享访问签名 (SAS) 中。 
+
+   ![备份目标](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
+
+1. 选择“确定”以选择备份文件位置。 
+1. 展开“容器”，然后选择备份文件所在的容器。 
+1. 选择要还原的备份文件，然后选择“确定”。 如果未显示任何文件，则可能是使用了错误的 SAS 密钥。 可以按照上述步骤重新生成 SAS 密钥，以便添加容器。 
+
+   ![选择还原文件](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-file.png)
+
+1. 选择“确定”，关闭“选择备份设备”对话框。 
+1. 选择“确定”以还原数据库。 
+
+# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+
+若要从 Azure Blob 存储还原本地数据库，请修改以下 Transact-SQL 命令以使用自己的存储帐户，然后在新的查询窗口中运行该命令。 
+
+```sql
+USE [master]
+RESTORE DATABASE [SQLTestDB] FROM 
+URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2020_01_01_000001.bak'
+```
+
+---
+
 
 ## <a name="see-also"></a>另请参阅 
 以下是一些建议阅读的主题，便于了解概念以及在将 Azure Blob 存储服务用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份时的最佳做法。  

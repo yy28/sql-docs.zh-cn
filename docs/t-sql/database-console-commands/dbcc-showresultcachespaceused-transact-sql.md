@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476308"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174650"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -42,7 +42,12 @@ DBCC SHOWRESULTCACHESPACEUSED
 - 尚未使用结果集（每 48 小时执行一次）。
 - 结果集缓存达到最大大小。
 
-用户可以关闭结果集缓存功能或使用 `DBCC DROPRESULTSETCACHE` 命令，来手动清空数据库的结果集缓存。   暂停数据库无法将结果集缓存清空。  
+若要手动清空数据库的结果集缓存，用户可以使用以下选项之一：
+
+- 关闭数据库的结果集缓存功能
+- 连接到数据库时运行 `DBCC DROPRESULTSETCACHE` 
+
+暂停数据库无法将结果集缓存清空。  
 
 ## <a name="permissions"></a>权限
 

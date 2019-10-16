@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06237e28f9ba75e798da1af57964cc8b251d0b26
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974411"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006064"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ NUMANODE = \<NUMA_node_range_spec>
   
 **\<diagnostic_log> ::=**  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）  。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）。  
 
   
 DIAGNOSTICS LOG  
@@ -163,7 +163,7 @@ MAX_FILES = { 'max_file_count' | DEFAULT }
   
 **\<failover_cluster_property> ::=**  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）  。    
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）。    
   
 FAILOVER CLUSTER PROPERTY  
 修改 SQL Server 资源专用的故障转移群集属性。  
@@ -194,10 +194,10 @@ HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }
   
 **\<hadr_cluster_context> ::=**  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）  。   
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）。   
   
-HADR CLUSTER CONTEXT = { 'remote\_windows\_cluster' | LOCAL }      
-将服务器实例的 HADR 群集上下文切换到指定的 Windows Server 故障转移群集 (WSFC)。  “HADR 群集上下文”用于确定什么 WSFC 管理由服务器实例承载的可用性副本的元数据。 仅在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 跨群集迁移到新 WSFC r 上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更高版本实例的过程中，才使用 SET HADR CLUSTER CONTEXT 选项。  
+HADR CLUSTER CONTEXT = { 'remote\_windows\_cluster' | LOCAL }  
+将服务器实例的 HADR 群集上下文切换到指定的 Windows Server 故障转移群集 (WSFC)。 “HADR 群集上下文”用于确定什么 WSFC 管理由服务器实例承载的可用性副本的元数据。 仅在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 跨群集迁移到新 WSFC r 上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更高版本实例的过程中，才使用 SET HADR CLUSTER CONTEXT 选项。  
   
 只能将 HADR 群集上下文从本地 WSFC 切换到远程 WSFC。 然后可以选择从远程 WSFC 切换回本地 WSFC。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不托管任何可用性副本时，才能将 HADR 群集上下文切换到远程群集。  
   
@@ -218,7 +218,7 @@ LOCAL
   
 **\<buffer_pool_extension>::=**  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）  。    
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）。    
   
 ON  
 启用缓冲池扩展选项。 此选项通过使用永久性存储扩展缓冲池的大小。 诸如固态硬盘 (SSD) 之类的永久性存储可使池中的数据页面保持干净。 有关此功能的详细信息，请参阅[缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)。不是所有 SQL Server 版本都提供缓冲池扩展。 有关详细信息，请参阅 [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -239,7 +239,7 @@ OFF
   
 **\<soft_numa>**  
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）  。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）。  
   
 ON  
 启用自动分区，将大型 NUMA 硬件节点拆分为较小的 NUMA 节点。 更改当前使用的值需要重新启动数据库引擎。  
@@ -258,7 +258,7 @@ OFF
 
 **\<memory_optimized> ::=**
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始  ）
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）。
 
 ON <br>
 启用属于[内存数据库](../../relational-databases/in-memory-database.md)功能的所有实例级功能。 当前这些功能包括[内存优化的 tempdb 元数据](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)和[混合缓冲池](../../database-engine/configure-windows/hybrid-buffer-pool.md)。 需要重启才能生效。
@@ -284,9 +284,11 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 此语句不支持 DDL 触发器。  
   
 ## <a name="permissions"></a>权限  
-对于进程关联选项需要 ALTER SETTINGS 权限。 对于诊断日志和故障转移群集属性选项需要 ALTER SETTINGS 和 VIEW SERVER STATE 权限，对于 HADR 群集上下文选项需要 CONTROL SERVER 权限。  
-  
-需要拥有针对缓冲池扩展选项的 ALTER SERVER STATE 权限。  
+需要：
+- `ALTER SETTINGS` 权限（对于进程关联选项）。
+- `ALTER SETTINGS` 和 `VIEW SERVER STATE` 权限（对于诊断日志和故障转移群集属性选项）。
+- `CONTROL SERVER` 权限（对于 HADR 群集上下文选项）。  
+- `ALTER SERVER STATE` 权限（对于缓冲池扩展选项）。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 资源 DLL 以本地系统帐户身份运行。 因此，本地系统帐户必须对诊断日志选项中的指定路径具有读写访问权限。  
   
@@ -337,21 +339,21 @@ SET PROCESS AFFINITY CPU=60 TO 200;
 #### <a name="d-setting-affinity-to-cpu-0-on-a-system-that-has-two-cpus"></a>D. 设置与具有两个 CPU 的系统上的 CPU 0 的关联  
 下面的示例设置与具有两个 CPU 的计算机上的 `CPU=0` 的关联。 在执行以下语句前，内部关联位掩码为 00。  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET PROCESS AFFINITY CPU=0;  
 ```  
   
 #### <a name="e-setting-affinity-to-auto"></a>E. 设置与 AUTO 的关联  
 下面的示例将关联设置为 `AUTO`。  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION  
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  
   
 ###  <a name="Diagnostic"></a> Setting diagnostic log options  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）  。    
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）。    
   
 本节中的示例说明如何设置诊断日志选项的值。  
   
@@ -387,7 +389,7 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
   
 ###  <a name="Failover"></a> 设置故障转移群集属性  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）  。   
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）。   
   
 下面的示例说明如何设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集资源属性的值。  
   
@@ -410,7 +412,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ####  <a name="BufferPoolExtension"></a> A. 设置缓冲池扩展选项  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）  。    
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）。    
   
 下面的示例启用缓冲池扩展选项并指定文件名和大小。  
   
@@ -439,7 +441,7 @@ GO
 
 ### <a name="MemoryOptimized"></a> 设置内存数据库选项
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）  。
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）。
 
 #### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. 使用默认选项启用所有内存数据库功能
 

@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 549b8d9e18db73cb91c9707ac51f2db52d368d0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ab78eab73526568736dea8c4aef1525b2607c93
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073727"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72162557"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 课：连接到数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68073727"
 1.  以 Administrators 组成员身份登录到 Windows，然后打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
 2.  在 **“连接到服务器”** 对话框中，单击 **“取消”**。  
 3.  如果未显示“已注册的服务器”，请在“视图”菜单中，单击“已注册的服务器”。
-4.  在“已注册的服务器”工具栏中选择“数据库引擎”后，展开“数据库引擎”，右键单击“本地服务器组”，指向“任务”，然后单击“注册本地服务器”。 将显示计算机上安装的所有[!INCLUDE[ssDE](../includes/ssde-md.md)]实例。 默认实例未命名，并显示为计算机名称。 命名实例显示为计算机名称，后跟反斜杠 (\\)，然后是实例名。 对于 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，除非在安装过程中更改了名称，否则实例将命名为 *<computer_name>* \sqlexpress。  
+4.  在“已注册的服务器”工具栏中选择“数据库引擎”后，展开“数据库引擎”，右键单击“本地服务器组”，指向“任务”，然后单击“注册本地服务器”。 展开“本地服务器组”以查看所显示计算机上安装的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的所有实例。 默认实例未命名，并显示为计算机名称。 命名实例显示为计算机名称，后跟反斜杠 (\\)，然后是实例名。 对于 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，除非在安装过程中更改了名称，否则实例将命名为 *<computer_name>* \sqlexpress。  
 
 [!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

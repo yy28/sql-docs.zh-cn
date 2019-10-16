@@ -1,7 +1,7 @@
 ---
 title: Point（geography 数据类型）| Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2017
+ms.date: 10/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3d1859da2743171bd3d3e314455918b361c4f50b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 665497328238fbaa88d666fb214af336531e93c7
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025670"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72260167"
 ---
 # <a name="point-geography-data-type"></a>Point（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Point ( Lat, Long, SRID )
  一个 float 表达式，表示正在生成的 Point 的 Y 坐标。 有关有效的纬度值和经度值的详细信息，请参阅 [Point](../../relational-databases/spatial/point.md)。  
   
  SRID  
- 一个 int 表达式，表示希望返回的 geography 实例的 SRID。  
+ 一个 int 表达式，表示希望返回的 geography 实例的[空间引用标识符](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids)。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  

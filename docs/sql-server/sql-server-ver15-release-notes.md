@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 发行说明 | Microsoft Docs
-ms.date: 08/21/2019
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: c7efb49870e148b6a854547d39d4a01139829a89
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 9b6895abfa0b09459911eba03b52837379f2d162
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326129"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041186"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 预览版发行说明
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "71326129"
 
 ## <a name="documentation"></a>文档
 
-- **问题及其对客户的影响**：SQL Server 2019 (15.x) 的文档受到限制，且其内容包含在 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 文档集中。 文章中特定于 SQL Server 2019 (15.x) 的内容通过“适用于”进行标注  。
+- **问题及其对客户的影响**：SQL Server 2019 (15.x) 的文档受到限制，且其内容包含在 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 文档集中。 文章中特定于 SQL Server 2019 (15.x) 的内容通过“适用于”进行标注。
 
-- 问题和对客户的影响  ：可按版本筛选 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 文档。 使用每个文档页左上角的控件来筛选你的要求。
+- 问题和对客户的影响：可按版本筛选 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 文档。 使用每个文档页左上角的控件来筛选你的要求。
 
 - **问题及其对客户的影响**：SQL Server 2019 (15.x) 没有可用的脱机内容。
 
@@ -59,6 +59,22 @@ Windows、Linux 和容器上 SQL Server 2019 RC 的生成号是 `15.0.1900.25`�
     - Windows Server 2016 或更高版本。 有关其他要求，请参阅[安装 SQL Server 的要求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
     - Microsoft .NET Framework 4.6.2。 可从[下载中心](https://www.microsoft.com/download/details.aspx?id=53344)获取。
     - 对于 Linux，请参阅 [Linux - 受支持的平台](../linux/sql-server-linux-setup.md#supportedplatforms)
+
+## <a name="sql-server-installation-may-fail-if-ssms-18x-is-installed"></a>如果已安装 SSMS 18.x，SQL Server 安装可能会失败
+
+- **问题及其对客户的影响**：如果按以下顺序进行以下安装，[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 安装将失败：
+  1. 在服务器上安装了 SQL Server Management Studio (SSMS) 版本 18.0、18.1、18.2 或 18.3。
+  1. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 安装是从可移动介质尝试进行的。 例如，安装介质是 DVD。
+
+- **解决方法**：
+  1. 卸载早于 SSMS 18.3.1 的任何 SSMS 版本。
+  1. 安装更新版本的 SSMS（18.3.1 或更高版本）。 对于最新版本，请参阅[下载 SSMS](../ssms/download-sql-server-management-studio-ssms.md)。
+  1. 正常安装 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]。
+
+  >[!NOTE]
+  >需要卸载。
+
+- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 候选发布。
 
 ## <a name="updated-compiler"></a>更新后的编译器
 
@@ -111,7 +127,7 @@ Windows、Linux 和容器上 SQL Server 2019 RC 的生成号是 `15.0.1900.25`�
 - **解决方法**：安装最新的 VC 运行时 2013 (x86)：
 
   - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
-  - [直接](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+  - [直接](https://support.microsoft.com/help/4032938/update-for-visual-c-2013-redistributable-package)
 
 - **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1、CTP 3.0、CTP 2.5。
 
@@ -132,6 +148,10 @@ Windows、Linux 和容器上 SQL Server 2019 RC 的生成号是 `15.0.1900.25`�
 - **解决方法**：打开 MDS 门户，并手动转到资源。
 
 - **适用对象**：SQL Server 2019 候选发布。
+
+## <a name="machine-learning-services"></a>机器学习服务
+
+有关 SQL Server 机器学习服务中的问题，请参阅 [SQL Server 机器学习服务中的已知问题](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)。
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

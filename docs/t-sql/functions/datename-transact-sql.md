@@ -25,12 +25,12 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 669ed425772a311a1eb35531a4c80c785430ef12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24d03b268abe381e8a1ad3308f630626f5a3d455
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119153"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278344"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,7 +115,7 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-如果将 date 指定为变量或表列，并且该变量或列的数据类型没有指定的 datepart，`DATENAME` 将返回错误 9810。 在此示例中，变量 @t 具有 time 数据类型。 示例失败，因为日期部分年份对于 time 数据类型无效：
+如果将 date 指定为变量或表列，并且该变量或列的数据类型没有指定的 datepart，`DATENAME` 将返回错误 9810。 在此示例中，变量 \@t 具有 time 数据类型。 示例失败，因为日期部分年份对于 time 数据类型无效：
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

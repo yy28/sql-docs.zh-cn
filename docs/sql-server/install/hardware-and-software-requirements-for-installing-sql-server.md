@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 54f2bdb3d844a8e5aab947f19f7905173b2cb04f
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 79818fa5cb41b27a15d531f22a21b86c10cb018a
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419568"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008467"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安装 SQL Server 的硬件和软件要求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "68419568"
   
 -   从 [**评估中心**下载 SQL Server。](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 
   
--   加速已安装有 [SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) 的虚拟机  。  
+-   加速已安装有 [SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) 的虚拟机。  
   
 **以下注意事项适用于所有版本：**  
   
@@ -107,7 +107,7 @@ ms.locfileid: "68419568"
 |组件|要求|  
 |---------------|-----------------|  
 |内存\*|**最低要求：**<br/><br/> Express Edition：512 MB<br/><br/> 所有其他版本：1 GB<br/><br/> **建议：**<br/><br/> Express Edition：1 GB<br/><br/> 所有其他版本：至少 4 GB，并且应随着数据库大小的增加而增加来确保最佳性能。|  
-|处理器速度|最低要求：x64 处理器：  1.4 GHz<br/><br/> **建议：** 2.0 GHz 或更快|  
+|处理器速度|最低要求：x64 处理器：1.4 GHz<br/><br/> **建议：** 2.0 GHz 或更快|  
 |处理器类型|x64 处理器：AMD Opteron、AMD Athlon 64、支持 Intel EM64T 的 Intel Xeon，以及支持 EM64T 的 Intel Pentium IV|  
   
 > [!NOTE]  
@@ -274,7 +274,14 @@ ms.locfileid: "68419568"
 -   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装到计算机上之后，无法将此计算机从域控制器更改为域成员。 必须先卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然后才能将主机计算机更改为域成员。   
 -   在群集节点用作域控制器的情况下，不支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例。   
 - 只读域控制器不支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序不能在只读域控制器上创建安全组或设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 在这种情况下，安装将失败。 
+
+  > [!NOTE]
+  > 此限制也适用于域成员节点上的安装。
+
 - 在仅可以访问只读域控制器的环境中不支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例。 
+
+  > [!NOTE]
+  > 此限制也适用于域成员节点上的安装。
   
 ## <a name="see-also"></a>另请参阅  
  [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)   

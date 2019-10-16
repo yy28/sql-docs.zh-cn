@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2532e7c2a173441cf804cdc5bdcd9be8e69bb135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988460"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251930"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>使用 AlwaysOn 可用性组配置复制
 
@@ -32,7 +32,7 @@ ms.locfileid: "67988460"
   
  无法使用 SQL Server 2012 和 SQL Server 2014 将分发数据库置于可用性组中。 SQL 2016 及更高版本支持将分发数据库置于可用性组中。 有关详细信息，请参阅[配置可用性组中的分发数据库](../../../relational-databases/replication/configure-distribution-availability-group.md)。
   
-1.  在分发服务器上配置分发。 如果要使用存储过程来进行配置，则运行 **sp_adddistributor**。 使用 *@password* 参数来标识在远程发布服务器连接到分发服务器时将使用的密码。 在设置远程分发服务器时，每台远程发布服务器上也将需要密码。  
+1.  在分发服务器上配置分发。 如果要使用存储过程来进行配置，则运行 **sp_adddistributor**。 使用 \@password 参数来标识在远程发布服务器连接到分发服务器时将使用的密码。 在设置远程分发服务器时，每台远程发布服务器上也将需要密码。  
   
     ```  
     USE master;  
@@ -52,7 +52,7 @@ ms.locfileid: "67988460"
         @security_mode = 1;  
     ```  
   
-3.  配置远程发布服务器。 如果要使用存储过程来配置分发服务器，则运行 **sp_adddistpublisher**。 @security_mode 参数可用于确定如何将从复制代理运行的发布服务器验证存储过程连接到当前主要副本  。 如果设置为 1，则使用 Windows 身份验证来连接到当前主副本。 如果设置为 0，则将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证与指定的 *@login* 和 *@password* 值一起使用。 指定的登录名和密码必须在每个辅助副本上均有效才能让验证存储过程成功地连接到相应的副本。  
+3.  配置远程发布服务器。 如果要使用存储过程来配置分发服务器，则运行 **sp_adddistpublisher**。 @security_mode 参数可用于确定如何将从复制代理运行的发布服务器验证存储过程连接到当前主要副本。 如果设置为 1，则使用 Windows 身份验证来连接到当前主副本。 如果设置为 0，则将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证与指定的 *@login* 和 *@password* 值一起使用。 指定的登录名和密码必须在每个辅助副本上均有效才能让验证存储过程成功地连接到相应的副本。  
   
     > [!NOTE]  
     >  如果任何已修改的复制代理在分发服务器之外的计算机上运行，则使用 Windows 身份验证连接到主副本的方法将要求为副本主机之间的通信配置 Kerberos 身份验证。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名连接到当前主副本的方法无需 Kerberos 身份验证。  

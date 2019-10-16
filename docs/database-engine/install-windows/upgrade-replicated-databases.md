@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5426210ad558e776dd2ad92246bc526ebf37c2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934768"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008463"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>升级或修补复制的数据库
 
@@ -104,7 +104,7 @@ SQL Server 的升级路径因部署模式而异。 SQL Server 一般情况下提
 
 
 ## <a name="steps-for-side-by-side-migration-of-the-distributor-to-windows-server-2012-r2"></a>分发服务器并行迁移到 Windows Server 2012 R2 的步骤
-如果计划将 SQL Server 实例升级到 SQL 2016（或更高版本），且当前的 OS 是 Windows 2008（或 2008 R2），则需要将 OS 并行升级到 Windows Server 2012 R2 或更高版本。 该中间 OS 升级的原因是 SQL Server 2016 不能安装在 Windows Server 2008/2008 R2 上，并且 Windows Server 2008/2008 R2 不允许为故障转移群集使用就地升级。 可以在一个独立的 SQL Server 实例上或 Always On 故障转移群集实例 (FCI) 中的某个 SQL Server 实例上执行以下步骤。
+如果计划将 SQL Server 实例升级到 SQL Server 2016（或更高版本），且当前的 OS 是 Windows 2008（或 2008 R2），则需要将 OS 并行升级到 Windows Server R2 或更高版本。 该中间 OS 升级的原因是 SQL Server 2016 不能安装在 Windows Server 2008/2008 R2 上，并且 Windows Server 2008/2008 R2 不允许直接就地升级到 Windows Server 2016。 尽管可以从 Windows Server 2008/2008 R2 就地升级到 Windows Server 2012，然后再升级到 Windows Server 2016，但通常不建议这样做，因为停机和增加的复杂性会阻止简单的回滚路径。 并行升级是可用于参与故障转移群集的 SQL Server 实例的唯一升级路径。  可以在一个独立的 SQL Server 实例上或 Always On 故障转移群集实例 (FCI) 中的某个 SQL Server 实例上执行以下步骤。
 
 1. 将新的 SQL Server 实例（独立版或 Always On 故障转移群集）、版次和版本设置为 Windows Server 2012 R2/2016 上具有不同 Windows 群集和 SQL Server FCI 名称或独立主机名的分发服务器。 你需要使目录结构与旧分发服务器保持一致，以确保可在新环境的同一路径下找到复制代理可执行文件、复制文件夹和数据库文件路径。 这会减少迁移/升级后所需的步骤。
 1. 确保同步了复制，然后关闭所有复制代理。 
@@ -120,7 +120,7 @@ SQL Server 的升级路径因部署模式而异。 SQL Server 一般情况下提
 
 
   >[!NOTE]
-  > 为了减少停机时间，我们建议将分发服务器的“并行迁移”作为一个活动执行，将“就地升级到 SQL Server 2016”作为另一个活动执行   。 这样，可通过分阶段方法来降低风险和尽量减少停机时间。
+  > 为了减少停机时间，我们建议将分发服务器的“并行迁移”作为一个活动执行，将“就地升级到 SQL Server 2016”作为另一个活动执行。 这样，可通过分阶段方法来降低风险和尽量减少停机时间。
 
 ## <a name="web-synchronization-for-merge-replication"></a>合并复制的 Web 同步  
  合并复制的 Web 同步选项要求将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (replisapi.dll) 复制到用于同步的 Internet Information Services (IIS) 服务器上的虚拟目录中。 配置 Web 同步时，该文件被配置 Web 同步向导复制到虚拟目录中。 若要升级安装在 IIS 服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，必须将 replisapi.dll 从 COM 目录手动复制到 IIS 服务器上的虚拟目录。 有关配置 Web 同步的详细信息，请参阅 [配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)。  

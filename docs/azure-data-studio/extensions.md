@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: e114c4991d5f3df10537e459263b49152c466f99
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.date: 10/03/2019
+ms.openlocfilehash: 6f0a2ab021873a2a9414bfbcdb7aed63c2d31056
+ms.sourcegitcommit: cf268c4e39edf00a8552466e9440e79e6a5d0084
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70274832"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72166713"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>扩展 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 功能
 
@@ -26,16 +26,20 @@ ms.locfileid: "70274832"
 
 ## <a name="add-azure-data-studio-extensions"></a>添加 Azure Data Studio 扩展
 
-1. 若要打开扩展管理器并访问可用扩展，请选择扩展图标，或在“视图”菜单中选择“扩展”   。\
-    还可通过按 `Ctrl+Shift+X` (Windows/Linux) 或 `Command+Shift+X` (Mac) 来快速访问扩展管理器。\
+1. 通过选择扩展图标或选择“视图”菜单中的“扩展”来访问可用扩展。
+
     ![扩展管理器图标](media/extensions/extension-manager-icon.png)
+
+    还可通过按 `Ctrl+Shift+X` (Windows/Linux) 或 `Command+Shift+X` (Mac) 来快速访问扩展管理器。
 
 2. 选择某个可用扩展以查看其详细信息。
     ![扩展详细信息](media/extensions/extension-details.png)
 
-3. 选择所需的扩展并“安装”它  。
+3. 选择所需的扩展并“安装”它。
 
-4. 安装后，重载以启用 Azure Data Studio 中的扩展（仅在第一次安装扩展时需要进行此操作）  。
+4. 安装后，重载以启用 Azure Data Studio 中的扩展（仅在第一次安装扩展时需要进行此操作）。
+
+如果访问 Azure Data Studio 上的扩展管理器时遇到问题，则可以在 [GitHub Wiki](https://github.com/microsoft/azuredatastudio/wiki/List-of-Extensions) 上下载所需的扩展。
 
 
 ## <a name="access-installed-azure-data-studio-extensions"></a>访问已安装的 Azure Data Studio 扩展

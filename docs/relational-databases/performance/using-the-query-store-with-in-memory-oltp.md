@@ -13,12 +13,12 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fa2f5a4694b8f8f9f59a5663d996777d0c78df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986655"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251293"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>通过内存中 OLTP 使用查询存储
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67986655"
   
 -   启用查询存储后，将按默认方式收集查询、计划和编译时统计信息。 但是，不会激活运行时统计信息收集，除非你使用 [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 显式启用它。  
   
--   当你将 *@new_collection_value* 设置为 0 时，查询存储将停止为受影响的过程或整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例收集运行时统计信息。  
+-   当你将 \@new_collection_value 设置为 0 时，查询存储将停止为受影响的过程或整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例收集运行时统计信息。  
   
 -   不会保留使用 [sys.sp_xtp_control_query_exec_stats (Transact SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 配置的值。 请确保重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后再次检查和配置统计信息收集。  
   

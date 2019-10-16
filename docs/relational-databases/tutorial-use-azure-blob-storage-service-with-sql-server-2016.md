@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 246f450a1782a6f00e32ce725c244915dc95054c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e40e69691834faffa2a112d81d9006e8cc602845
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138356"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041208"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教程：将 Azure Blob 存储服务用于 SQL Server 2016
 
@@ -32,7 +32,7 @@ Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server
   
 ## <a name="prerequisites"></a>必备条件
 
-若要完成本教程，你必须熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原概念以及 T-SQL 语法。 若要使用本教程，你需要一个 Azure 存储帐户、SQL Server Management Studio (SSMS)、本地 SQL Server 实例的访问权限、运行 SQL Server 2016 的 Azure 虚拟机 (VM) 的访问权限和一个 AdventureWorks2016 数据库。 此外，用于发出 BACKUP 和 RESTORE 命令的帐户应属于具有“更改任意凭据”  权限的 db_backupoperator  数据库角色。 
+若要完成本教程，你必须熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原概念以及 T-SQL 语法。 若要使用本教程，你需要一个 Azure 存储帐户、SQL Server Management Studio (SSMS)、本地 SQL Server 实例的访问权限、运行 SQL Server 2016 的 Azure 虚拟机 (VM) 的访问权限和一个 AdventureWorks2016 数据库。 此外，用于发出 BACKUP 和 RESTORE 命令的帐户应属于具有“更改任意凭据”权限的 db_backupoperator数据库角色。 
 
 - 获取免费的 [Azure 帐户](https://azure.microsoft.com/offers/ms-azr-0044p/)。
 - 创建 [Azure 存储帐户](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)。
@@ -78,7 +78,7 @@ Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server
     ```powershell
     # Define global variables for the script  
     $prefixName = '<a prefix name>'  # used as the prefix for the name for various objects  
-    $subscriptionID=='<your subscription ID>'   # the ID  of subscription name you will use  
+    $subscriptionID = '<your subscription ID>'   # the ID  of subscription name you will use  
     $locationName = '<a data center location>'  # the data center region you will use  
     $storageAccountName= $prefixName + 'storage' # the storage account name you will create or use  
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  

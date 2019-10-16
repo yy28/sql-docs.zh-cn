@@ -17,20 +17,22 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e5a258436c521eec380114a42e68c3f20b75fd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d06c62167071f8044d6c732efbbb5c4590e3a37
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024997"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289310"
 ---
 # <a name="configure-parallel-index-operations"></a>配置并行索引操作
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  本主题通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定义最大并行度 (max degree of parallelism) 并说明如何修改此设置。 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 或更高版本的多处理器计算机上，索引语句可能会像其他查询那样，使用多个处理器来执行与索引语句关联的扫描、排序和索引操作。 用于运行单个索引语句的处理器数由 [最大并行度](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 配置选项、当前工作负荷以及索引统计信息决定。 max degree of parallelism 选项决定了执行并行计划时使用的最大处理器数。 如果 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 检测到系统忙，索引操作的并行度将自动降低，然后再开始执行语句。 如果非分区索引的第一个键列包含有限数量的非重复值，或者每个非重复值的出现频率变化较大， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 也可能会降低并行度。  
+本主题通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定义最大并行度 (max degree of parallelism) 并说明如何修改此设置。 
+
+在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 或更高版本的多处理器系统上，索引语句可能会像其他查询那样，使用多个处理器 (CPU) 来执行与索引语句关联的扫描、排序和索引操作。 用于运行单个索引语句的 CPU 数由[最大并行度](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)服务器配置选项、当前工作负荷以及索引统计信息决定。 max degree of parallelism 选项决定了执行并行计划时使用的最大处理器数。 如果 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 检测到系统忙，索引操作的并行度将自动降低，然后再开始执行语句。 如果非分区索引的第一个键列包含有限数量的非重复值，或者每个非重复值的出现频率变化较大， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 也可能会降低并行度。 有关详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。 
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供并行索引操作。 有关详细信息，请参阅“SQL Server 2016 各个版本支持的功能”  
+> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供并行索引操作。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
  **本主题内容**  
   
@@ -62,24 +64,22 @@ ms.locfileid: "68024997"
   
 -   并行索引执行和 MAXDOP 索引选项适用于下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
-    -   CREATE INDEX  
+    -   [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)  
   
-    -   ALTER INDEX REBUILD  
+    -   [ALTER INDEX (...)REBUILD](../../t-sql/statements/alter-index-transact-sql.md)  
   
-    -   DROP INDEX（只适用于聚集索引。）  
+    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)（只适用于聚集索引。）  
   
-    -   ALTER TABLE ADD (索引) CONSTRAINT  
+    -   [ALTER TABLE ADD (索引) CONSTRAINT](../../t-sql/statements/alter-table-table-constraint-transact-sql.md) 
   
-    -   ALTER TABLE DROP (聚集索引) CONSTRAINT  
+    -   [ALTER TABLE DROP (聚集索引) CONSTRAINT](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)   
   
--   不能在 ALTER INDEX REORGANIZE 语句中指定 MAXDOP 索引选项。  
+-   不能在 `ALTER INDEX (...) REORGANIZE` 语句中指定 MAXDOP 索引选项。  
   
 -   如果查询优化器将并行度应用于生成操作，则需要排序的已分区索引操作的内存需求可能会很大。 并行度越高，内存需求就越大。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> 权限  
- 要求对表或视图具有 ALTER 权限。  
+###  <a name="Security"></a> <a name="Permissions"></a> Permissions  
+ 要求具有对表或视图的 `ALTER` 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68024997"
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     /*Alters the IX_ProductVendor_VendorID index on the Purchasing.ProductVendor table so that, if the server has eight or more processors, the Database Engine will limit the execution of the index operation to eight or fewer processors.  
@@ -133,7 +133,7 @@ ms.locfileid: "68024997"
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE INDEX IX_ProductVendor_NewVendorID   
@@ -141,7 +141,12 @@ ms.locfileid: "68024997"
     WITH (MAXDOP=8);  
     GO  
     ```  
-  
- 有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
-  
-  
+ 
+## <a name="see-also"></a>另请参阅
+[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)    
+[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)     
+[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)     
+[DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)      
+[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)      
+[ALTER TABLE table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)       
+[ALTER TABLE index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md)    

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae7aa810e58cf7e21a4045e0c408c76e8754a620
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298829"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251982"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>创建函数以检索变更数据
 
@@ -80,7 +80,7 @@ ms.locfileid: "71298829"
 > [!NOTE]  
 >  有关此存储过程的语法及其参数的详细信息，请参阅 [sys.sp_cdc_generate_wrapper_function (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)。  
   
- 该存储过程会始终生成从每个捕获实例返回所有变更的包装函数。 如果 *@supports_net_changes* 参数在创建捕获实例时设置，则该存储过程还将生成从每个适用的捕获实例返回净变更的包装参数。  
+ 该存储过程会始终生成从每个捕获实例返回所有变更的包装函数。 如果 \@supports_net_changes 参数在创建捕获实例时设置，则该存储过程还将生成从每个适用的捕获实例返回净变更的包装参数。  
   
  该存储过程返回带有两列的结果集：  
   
@@ -112,7 +112,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>了解和使用存储过程创建的函数  
- 为了系统地遍历捕获的变更数据的时间线，生成的包装函数要求一个时间间隔的 *@end_time* 参数作为下一个时间间隔的 *@start_time* 参数。 遵循此约定时，生成的包装函数可执行以下任务：  
+ 为了系统地遍历捕获的变更数据的时间线，生成的包装函数要求一个时间间隔的 \@end_time 参数作为下一个时间间隔的 \@start_time 参数。 遵循此约定时，生成的包装函数可执行以下任务：  
   
 -   将日期/时间值映射为内部使用的 LSN 值。  
   
@@ -130,7 +130,7 @@ deallocate #hfunctions
   
 -   时间间隔的起始日期/时间值和结束日期/时间值。 包装函数使用日期/时间值作为查询间隔的端点，而变更数据捕获函数使用两个 LSN 值作为端点。  
   
--   行筛选器。 对于包装函数和变更数据捕获函数， *@row_filter_option* 参数是相同的。 有关详细信息，请参阅 [cdc.fn_cdc_get_all_changes_<capture_instance> (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 和 [cdc.fn_cdc_get_net_changes_<capture_instance> (Transact SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
+-   行筛选器。 对于包装函数和变更数据捕获函数，\@row_filter_option 参数是相同的。 有关详细信息，请参阅 [cdc.fn_cdc_get_all_changes_<capture_instance> (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 和 [cdc.fn_cdc_get_net_changes_<capture_instance> (Transact SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
   
  包装函数返回的结果集包含以下数据：  
   
@@ -138,7 +138,7 @@ deallocate #hfunctions
   
 -   名为 __CDC_OPERATION 的列，该列使用单字符或双字符字段来标识与该行关联的操作。 此字段的有效值如下：“I”表示插入，“D”表示删除，“UO”表示更新旧值，“UN”表示更新新值。  
   
--   更新标志，当你请求这些标志时，它们作为位列显示在操作代码后，并以在 *@update_flag_list* 参数中指定的顺序显示。 这些列的命名方式是在关联的列名后追加“_uflag”。  
+-   更新标志，当你请求这些标志时，它们作为位列显示在操作代码后，并以在 \@update_flag_list 参数中指定的顺序显示。 这些列的命名方式是在关联的列名后追加“_uflag”。  
   
  如果你的包调用查询所有变更的包装函数，该包装函数还将返回列 __CDC_STARTLSN 和 \__CDC_SEQVAL。 这两列分别成为结果集的第一列和第二列。 包装函数还将基于这两列对结果集进行排序。  
   
@@ -216,13 +216,13 @@ go
 |**__$seqval**|**binary(10)**|用于对事务中的行更改进行排序的序列值。|  
 |**__$operation**|**int**|与更改关联的数据操作语言 (DML) 操作。 可以为以下各项之一：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 3 = 更新（执行更新操作前的值。）<br /><br /> 4 = 更新（执行更新操作后的值。）|  
 |**__$update_mask**|**varbinary(128)**|基于变更表的列序号的位掩码，用于标识那些发生了变更的列。 如果需要确定哪些列发生了更改，则可检查此值。|  
-|\<捕获的源表列> |不定|函数返回的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中最初未指定任何列，则将返回源表中的所有列。|  
+|\<捕获的源表列>|不定|函数返回的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中最初未指定任何列，则将返回源表中的所有列。|  
   
  有关详细信息，请参阅[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
   
 ## <a name="next-step"></a>下一步  
  在创建了用于查询变更数据的表值函数之后，下一步就是开始设计包中的数据流。  
   
- **下一个主题：** [检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+ **下一个主题：**[检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   

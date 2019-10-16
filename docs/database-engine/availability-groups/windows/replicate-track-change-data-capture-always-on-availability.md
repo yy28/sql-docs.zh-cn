@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8eef8241d5c8413f3722f11854074d415399165b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014338"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251961"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>复制、更改跟踪和更改数据捕获 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "68014338"
     ```  
   
     > [!NOTE]  
-    >  在故障转移之前，您应在所有可能的故障转移目标上创建作业，并将其标记为禁用，直到主机上的可用性副本成为新的主副本。 当本地数据库变为辅助数据库时，还应禁用旧的主数据库上运行的 CDC 作业。 若要禁用和启用作业，请使用 [sp_update_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 的 @enabled 选项。 有关创建 CDC 作业的详细信息，请参阅 [sys.sp_cdc_add_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
+    >  在故障转移之前，您应在所有可能的故障转移目标上创建作业，并将其标记为禁用，直到主机上的可用性副本成为新的主副本。 当本地数据库变为辅助数据库时，还应禁用旧的主数据库上运行的 CDC 作业。 若要禁用和启用作业，请使用 [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 的 \@enabled 选项。 有关创建 CDC 作业的详细信息，请参阅 [sys.sp_cdc_add_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
   
 -   **向 AlwaysOn 主数据库副本中添加 CDC 角色**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "68014338"
   
      可用性组侦听器名称或显式节点名称都可用来查找辅助副本。 如果使用可用性组侦听器名称，则会将访问定向到任何合适的辅助副本。  
   
-     当使用 **sp_addlinkedserver** 来创建链接服务器以访问次要副本时，将 *@datasrc* 参数用于可用性组侦听程序名称或显式服务器名称，并且将 *@provstr* 参数用于指定只读意向。  
+     当使用 sp_addlinkedserver 来创建链接服务器以访问次要副本时，将 \@datasrc 参数用于可用性组侦听器名称或显式服务器名称，并且将 \@provstr 参数用于指定只读意向。  
   
     ```sql  
     EXEC sp_addlinkedserver   

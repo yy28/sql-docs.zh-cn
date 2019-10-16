@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: be32b0412b71f4f6e6ca2044bfdd6ead682572c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9da0204a19161b918c1a19d5babe28f707f3af52
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087167"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173660"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>第 2 课：创建并应用命名标准策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68087167"
   
 2.  在“创建新条件”对话框的“名称”框中，键入 **Finance Tables**。  
     1. 在“Facet”列表中，选择“多部分名称”。 
-    1. 在“表达式”区域中，在“字段”框中选择 **@Name**，在“运算符”框中选择“Like”，然后在“值”框中键入 ```'fintbl%'``` 以强制要求所有表名称以字母 fintbl 开头。
+    1. 在“表达式”区域中，在“字段”框中选择“\@Name”，在“运算符”框中选择“Like”，然后在“值”框中键入 ```'fintbl%'``` 以强制要求所有表名称以字母 fintbl 开头。
     1. 在“说明”页中，键入 **Finance table names must begin with fintbl**，然后单击“确定”以创建条件。  
 
     ![Finance 表条件](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)

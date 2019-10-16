@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d1263cec8cf59826357388a148e0bb19bc332bdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7924bc8d7dfc8a3460ca4beb989fd0daf0e85a8
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057920"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008445"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>交换主日志传送服务器和辅助日志传送服务器的角色 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,19 +40,19 @@ ms.locfileid: "68057920"
   
     2.  添加辅助数据库时，在 **“辅助数据库设置”** 对话框的 **“辅助数据库”** 框中输入原来的主数据库的名称。  
   
-    3.  在 **“辅助数据库设置”** 对话框中，选中 **“否，辅助数据库已初始化”** 。  
+    3.  在 **“辅助数据库设置”** 对话框中，选中 **“否，辅助数据库已初始化”**。  
   
-4.  如果对于您之前的日志传送配置启用了日志传送监视，则重新配置日志传送监视以便监视新的日志传送配置。  执行以下命令，将 *database_name* 替换为你的数据库的名称：  
+4.  如果对于您之前的日志传送配置启用了日志传送监视，则重新配置日志传送监视以便监视新的日志传送配置。  将 threshold_alert_enabled 设置为 1 指定在超过 restore_threshold 时将引发警报。 执行以下命令，将 *database_name* 替换为你的数据库的名称：  
   
     1.  **在新的主服务器上**  
   
          执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new primary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   
@@ -60,11 +60,11 @@ ms.locfileid: "68057920"
   
          执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new secondary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   

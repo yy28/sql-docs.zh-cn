@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 50f62a2b8253ee517dba48e982ecce2eaee58c2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e3722a6860fea48f32fd2528435b9929cc3bd689
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987354"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278220"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>使用计划指南指定查询参数化行为
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
   
 2.  请指定 PARAMETERIZATION FORCED 查询提示以对查询的参数化表单创建计划指南。  
 
+    > [!IMPORTANT]  
+    >  作为参数化查询的一部分， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据文字的值和大小，将数据类型分配给替换文字值的参数。 传递给 sp_get_query_template 的 \@stmt 输出参数的常量文字值也发生同样的过程。 由于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数化查询时，sp_create_plan_guide 的 \@params 参数中指定的数据类型必须与此查询中的数据类型匹配，因此可能必须要创建多个计划指南以涵盖全部可能的查询参数值。  
+
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-    > [!IMPORTANT]  
-    >  As part of parameterizing a query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a data type to the parameters that replace the literal values, depending on the value and size of the literal. The same process occurs to the value of the constant literals passed to the **@stmt** output parameter of **sp_get_query_template**. Because the data type specified in the **@params** argument of **sp_create_plan_guide** must match that of the query as it is parameterized by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you may have to create more than one plan guide to cover the complete range of possible parameter values for the query.  
-  
- 以下脚本既可用于获取参数化查询也可用于之后对其创建计划指南：  
+以下脚本既可用于获取参数化查询也可用于之后对其创建计划指南：  
   
 ```  
 DECLARE @stmt nvarchar(max);  
@@ -80,9 +80,7 @@ EXEC sp_create_plan_guide
     N'OPTION(PARAMETERIZATION FORCED)';  
 ```  
   
- 同样，在已启用强制参数化的数据库中，可以确保按照简单参数化规则对示例查询以及其他语法相同但常量文字值不同的查询进行参数化。 若要实现此目的，请在 OPTION 子句中指定 PARAMETERIZATION SIMPLE 而不指定 PARAMETERIZATION FORCED。  
+同样，在已启用强制参数化的数据库中，可以确保按照简单参数化规则对示例查询以及其他语法相同但常量文字值不同的查询进行参数化。 若要实现此目的，请在 OPTION 子句中指定 PARAMETERIZATION SIMPLE 而不指定 PARAMETERIZATION FORCED。  
   
 > [!NOTE]  
->  TEMPLATE 计划指南使语句与在仅包含单个语句的批处理中提交的查询匹配。 多语句批处理中的语句通过 TEMPLATE 计划指南进行匹配是不合格的。  
-  
-  
+>  TEMPLATE 计划指南使语句与在仅包含单个语句的批处理中提交的查询匹配。 多语句批处理中的语句通过 TEMPLATE 计划指南进行匹配是不合格的。

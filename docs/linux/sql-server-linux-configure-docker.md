@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: c70ba17073030f4fbbe4851fffb84a4c4a30fbbc
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 817367c20c2495f29e5d889cc64e5c13a43e9b1e
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988140"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278251"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上配置 SQL Server 容器映像
 
@@ -25,6 +25,9 @@ ms.locfileid: "70988140"
 
 > [!NOTE]
 > 本文专门重点介绍 mssql-server-linux 映像的使用。 虽然没有介绍 Windows 映像，但可在 [mssql-server-windows Docker Hub 页](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)上找到关于它的详细信息。
+
+> [!IMPORTANT]
+> 在选择运行 SQL Server 容器以用于生产用例之前，请查看 [SQL Server 容器的支持策略](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server)，以确保在支持的配置上运行。
 
 ## <a name="pull-and-run-the-container-image"></a>拉取并运行容器映像
 
@@ -446,7 +449,7 @@ docker exec -it <Container ID or name> /opt/mssql-tools/bin/sqlcmd `
    -Q 'SELECT @@VERSION'
 ```
 
-还可以标识目标 docker 容器映像的 SQL Server 版本和生成号。 以下命令显示 mcr.microsoft.com/mssql/server:2017-latest 映像的 SQL Server 版本和生成信息  。 它通过运行具有环境变量 **PAL_PROGRAM_INFO=1** 的新容器来实现此目的。 生成的容器会立即退出，且 `docker rm` 命令会将其删除。
+还可以标识目标 docker 容器映像的 SQL Server 版本和生成号。 以下命令显示 mcr.microsoft.com/mssql/server:2017-latest 映像的 SQL Server 版本和生成信息。 它通过运行具有环境变量 **PAL_PROGRAM_INFO=1** 的新容器来实现此目的。 生成的容器会立即退出，且 `docker rm` 命令会将其删除。
 
 ```bash
 sudo docker run -e PAL_PROGRAM_INFO=1 --name sqlver \
@@ -605,9 +608,9 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 如果无法连接到在容器中运行的 SQL Server 实例，请尝试以下测试：
 
-- 通过查看 `docker ps -a` 输出的“状态”列，确保 SQL Server 容器正在运行  。 如果未在运行，则使用 `docker start <Container ID>` 启动它。
+- 通过查看 `docker ps -a` 输出的“状态”列，确保 SQL Server 容器正在运行。 如果未在运行，则使用 `docker start <Container ID>` 启动它。
 
-- 如果映射到非默认主机端口（非 1433），请确保在连接字符串中指定端口。 可在 `docker ps -a` 输出的“端口”列中查看端口映射  。 例如，以下命令将 sqlcmd 连接至正在侦听端口 1401 的容器：
+- 如果映射到非默认主机端口（非 1433），请确保在连接字符串中指定端口。 可在 `docker ps -a` 输出的“端口”列中查看端口映射。 例如，以下命令将 sqlcmd 连接至正在侦听端口 1401 的容器：
 
     ```bash
     sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'

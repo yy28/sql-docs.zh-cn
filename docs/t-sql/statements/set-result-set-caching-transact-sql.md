@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 0f92c1a492ff23c8d783927c6e462c2147b72b9c
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 095680b9ff4fcfd58c1d655acaba7e07f70fcffb
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809765"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251996"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT_SET_CACHING (Transact-SQL) 
 
@@ -38,6 +38,8 @@ SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
 ## <a name="remarks"></a>Remarks  
+
+连接到要为其配置 result_set_caching 设置的用户数据库时，请运行此命令。
 
 **ON**   
 启用当前客户端会话的结果集缓存。  如果已在数据库级别将结果集缓存设置为“OFF”，就无法为会话将它设置为“ON”。

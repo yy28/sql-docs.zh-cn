@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: 3f5b4cbe56d395b88dc756d823b526b05b2fde74
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: b3fa70eb83ddd46c0901cfe5d5499a0a12f33db8
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816806"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251392"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -44,9 +44,9 @@ SSMS 是免费的！
 
 **SSMS 18.3.1 现已推出，它是为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供支持的 *SQL Server Management Studio* 的最新通用版 (GA)！**
 
-**[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
+**[下载 SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
 
-SSMS 18.3.1 是 SSMS 的最新通用版 (GA)。 如果安装了以前的 SSMS 18 通用版，则安装 SSMS 18.3.1 会将其升级到 18.3.1。如果安装的是旧版 SSMS 18.x 预览版，则必须先将其卸载，然后再安装 SSMS 18.3.1  。
+SSMS 18.3.1 是 SSMS 的最新通用版 (GA)。 如果安装了以前的 SSMS 18 通用版，则安装 SSMS 18.3.1 会将其升级到 18.3.1。如果安装的是旧版 SSMS 18.x 预览版，则必须先将其卸载，然后再安装 SSMS 18.3.1。
 
 **版本信息**
 
@@ -58,7 +58,7 @@ SSMS 18.3.1 是 SSMS 的最新通用版 (GA)。 如果安装了以前的 SSMS 18
 
 SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与以前的版本并行安装，因此，这两个版本均可供使用。
 
-如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18 
+如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18
 
 ## <a name="available-languages-ssms-1831"></a>可用语言 (SSMS 18.3.1)
 
@@ -74,9 +74,9 @@ SQL Server Management Studio 18.3.1：
 
 | 新建项 | 详细信息 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 数据分类 | 向列属性 UI 添加数据分类信息（*信息类型*、*信息类型 ID*、*敏感度标签*和*敏感度标签 ID* 未在 SSMS UI 中公开）。 |
+| 数据分类 | 向列属性 UI 添加数据分类信息（信息类型、信息类型 ID、敏感度标签和敏感度标签 ID 未在 SSMS UI 中公开）。 |
 | Intellisense/编辑器 | 更新了对最近添加到 SQL Server 2019 中的功能的支持（例如，“ALTER SERVER CONFIGURATION”）。 |
-| Integration Services | 添加新的选择菜单项 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，该菜单项将在Azure-SSIS Integration Runtime 上将 SSIS 包执行作为 ADF 管道中的“执行 SSIS 包”活动调用。 |
+| Integration Services | 添加新的选择菜单项 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，该菜单项将 Azure-SSIS Integration Runtime 上的 SSIS 包执行作为 ADF 管道中的“执行 SSIS 包”活动调用。 |
 | SMO/脚本 | 添加了对 Azure SQL DW 唯一约束的支持脚本的支持。 |
 | SMO/脚本 | 数据分类 - 添加了对 SQL 版本 10 (SQL 2008) 及更高版本的支持。  - 为 SQL 版本 15 (SQL 2019) 和更高版本以及 Azure SQL DB 添加了新的敏感度属性“rank”。 |
 

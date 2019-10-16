@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bf4f3d11eeb9975bb399fc58a0fd52d0d56dc5a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9621d6be1c309930f6104d2193d6127a3167cd7a
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051314"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278155"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 方法（xml 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ select @f;
   
 -   代码 `cast as xs:date?` 用于将值强制转换为 xs:date 类型，以进行比较。  
   
--   @Somedate 属性的值是非类型化的。 进行比较时，此值将隐式强制转换为比较右侧的类型（xs:date 类型）。  
+-   \@Somedate 属性的值是非类型化的。 进行比较时，此值将隐式强制转换为比较右侧的类型（xs:date 类型）。  
   
 -   可使用 xs:date() 构造函数，而非 cast as xs:date()。 有关详细信息，请参阅[构造函数 (XQuery)](../../xquery/constructor-functions-xquery.md)。  
   

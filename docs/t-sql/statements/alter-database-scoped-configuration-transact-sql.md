@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713213"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261015"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-此语句在单个数据库级别启用多个数据库配置设置。  此语句可用于 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 以及 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这些设置包括：
+此语句在单个数据库级别启用多个数据库配置设置。 此语句可用于 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 以及 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这些设置包括：
 
 - 清除过程缓存。
 - 根据最适合特定主数据库的情况，将 MAXDOP 参数设置为该数据库的任意值（1、2、…），为使用的所有辅助数据库（例如，针对报告查询）设置不同的值（例如 0）。
@@ -114,68 +114,73 @@ CLEAR PROCEDURE_CACHE [plan_handle]
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
-指定应用于该语句的默认 MAXDOP 设置。 0 是默认值，表示将改用服务器配置。 数据库范围的 MAXDOP 会替代（除非设置为 0）通过 sp_configure 在服务器级别设置“max degree of parallelism”。  查询提示仍然可以替代 DB 作用域内 MAXDOP，以调整需要不同设置的特定查询。 所有这些设置都受为工作负荷组设置的 MAXDOP 限制。
+指定应用于该语句的默认最大并行度 (MAXDOP) 设置。 0 是默认值，表示将改用服务器配置。 数据库范围的 MAXDOP 会替代（除非设置为 0）通过 sp_configure 在服务器级别设置“max degree of parallelism”。 查询提示仍然可以替代数据库作用域内 MAXDOP，以调整需要不同设置的特定查询。 所有这些设置都受为[工作负荷组]()设置的 MAXDOP 限制。
 
-您可以使用 max degree of parallelism 选项来限制并行计划执行时所用的处理器数。 SQL Server 考虑为查询、索引数据定义语言 (DDL) 操作、并行插入、联机更改列、并行统计信息集合以及静态的和由键集驱动的游标填充实施并行执行计划。
+你可以使用 MAXDOP 选项来限制执行并行计划时所用的处理器数量。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 考虑为查询、索引数据定义语言 (DDL) 操作、并行插入、联机更改列、并行统计信息集合以及静态的和由键集驱动的游标填充实施并行执行计划。
+
+> [!NOTE]
+> 将按[任务](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)设置最大并行度 (MAXDOP) 限制。 它不是按[请求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)限制或按查询限制。 这意味着，在并行查询期间，单个请求可以生成多个任务，然后将它们分配给[计划程序](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 有关详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。 
 
 要在实例级别设置此选项，请参阅[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
 > [!NOTE]
-> 在 Azure SQL 数据库中，服务器级别的“最大并行度”配置始终设为 0  。 可以为每个数据库配置 MAXDOP，如当前文章中所述。 有关最佳配置 MAXDOP 的建议，请参阅[其他资源](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources)部分。
+> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，服务器级别的“最大并行度”配置始终设为 0。 可以为每个数据库配置 MAXDOP，如当前文章中所述。 有关最佳配置 MAXDOP 的建议，请参阅[其他资源](#additional-resources)部分。
 
 > [!TIP]
-> 要在查询级别完成此操作，请添加 MAXDOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。 
+> 若要在查询级别完成此操作，请使用 MAXDOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。    
+> 若要在服务器级别完成此操作，请使用最大并行度 (MAXDOP) [服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。     
+> 若要在工作负荷级别完成此操作，请使用 MAX_DOP [资源调控器工作负荷组配置选项](../../t-sql/statements/create-workload-group-transact-sql.md)。    
 
 PRIMARY
 
-仅可为辅助数据库（该数据库位于主数据库上）设置，表示其配置是为主数据库设置的配置。 如果主数据库的配置更改，辅助数据库上的值也会相应地更改，不需要再显式设置辅助数据库值。 PRIMARY 是辅助数据库的默认设置。 
+仅可为辅助数据库（该数据库位于主数据库上）设置，表示其配置是为主数据库设置的配置。 如果主数据库的配置更改，辅助数据库上的值也会相应地更改，不需要再显式设置辅助数据库值。 PRIMARY 是辅助数据库的默认设置。
 
-LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY }  
+LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY }
 
-可用于独立于数据库兼容性级别将查询优化器基数估计模型设置为 SQL Server 2012 或更低版本。 默认值为 OFF，可根据数据库兼容性级别设置查询优化器基数估计模型。  将 LEGACY_CARDINALITY_ESTIMATION 设置为 ON 等效于启用[跟踪标志 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  。
+可用于独立于数据库兼容性级别将查询优化器基数估计模型设置为 SQL Server 2012 或更低版本。 默认值为 OFF，可根据数据库兼容性级别设置查询优化器基数估计模型。 将 LEGACY_CARDINALITY_ESTIMATION 设置为 ON 等效于启用[跟踪标志 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 > [!TIP]
-> 要在查询级别完成此操作，请添加 QUERYTRACEON [查询提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  。
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，要在查询级别完成此操作，请添加 USE HINT [查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，而不是使用跟踪标志  。
+> 要在查询级别完成此操作，请添加 QUERYTRACEON [查询提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，要在查询级别完成此操作，请添加 USE HINT [查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，而不是使用跟踪标志。
 
 PRIMARY
 
-此值仅对辅助数据库（该数据库位于主数据库上）有效，指定所有辅助数据库上的查询优化器基数估计模型设置都是为主数据库设置的值。 如果主数据库上查询优化器基数估计模型的配置发生更改，则辅助数据上的值也会相应地更改。 PRIMARY 是辅助数据库的默认设置。 
+此值仅对辅助数据库（该数据库位于主数据库上）有效，指定所有辅助数据库上的查询优化器基数估计模型设置都是为主数据库设置的值。 如果主数据库上查询优化器基数估计模型的配置发生更改，则辅助数据上的值也会相应地更改。 PRIMARY 是辅助数据库的默认设置。
 
-PARAMETER_SNIFFING = { ON | OFF | PRIMARY}  
+PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
 
 启用或禁用[参数截取](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。 默认值为 ON。 将 PARAMETER_SNIFFING 设置为 OFF 等效于启用[跟踪标志 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 > [!TIP]
-> 要在查询级别完成此操作，请参阅 OPTIMIZE FOR UNKNOWN [查询提示](../../t-sql/queries/hints-transact-sql-query.md)  。
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，要在查询级别完成此操作，也可使用 USE HINT [查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)  。
+> 要在查询级别完成此操作，请参阅 OPTIMIZE FOR UNKNOWN [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，要在查询级别完成此操作，也可使用 USE HINT [查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)。
 
 PRIMARY
 
 此值仅对辅助数据库（该数据库位于主数据库上）有效，指定所有辅助数据库上此设置的值都是为主数据库设置的值。 如果主数据库上用于使用[参数截取](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)的配置更改，则辅助数据库上的值也会相应地更改，不需要再显式设置辅助数据库值。 PRIMARY 是辅助数据库的默认设置。
 
-<a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY }  
+<a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY }
 
-启用或禁用查询优化修补程序，而无论数据库兼容性级别。 默认值为 OFF，可禁用在为特定版本 (post-RTM) 引入可用度最高的兼容性级别后发布的查询优化修补程序  。 将此值设置为 ON 等效于启用[跟踪标志 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 
+启用或禁用查询优化修补程序，而无论数据库兼容性级别。 默认值为 OFF，可禁用在为特定版本 (post-RTM) 引入可用度最高的兼容性级别后发布的查询优化修补程序。 将此值设置为 ON 等效于启用[跟踪标志 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 > [!TIP]
-> 要在查询级别完成此操作，请添加 QUERYTRACEON [查询提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  。
+> 要在查询级别完成此操作，请添加 QUERYTRACEON [查询提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 > 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，要在查询级别完成此操作，请添加 USE HINT [查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，而不是使用跟踪标志。
 
 PRIMARY
 
 此值仅对辅助数据库（该数据库位于主数据库上）有效，指定所有辅助数据库上此设置的值都是为主数据库设置的值。 如果主数据库的配置更改，辅助数据库上的值也会相应地更改，不需要再显式设置辅助数据库值。 PRIMARY 是辅助数据库的默认设置。
 
-IDENTITY_CACHE = { ON | OFF }        
+IDENTITY_CACHE = { ON | OFF }      
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-在数据库级别启用或禁用标识缓存。 默认值为 ON  。 标识缓存用于提高具有标识列的表的 INSERT 性能。 为了避免服务器意外重启或故障转移到辅助服务器时出现标识列值的差值，请禁用 IDENTITY_CACHE 选项。 该选项与现有[跟踪标志 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 类似，但前者可在数据库级别设置，而不只是可在服务器级别设置。
+在数据库级别启用或禁用标识缓存。 默认值为 ON。 标识缓存用于提高具有标识列的表的 INSERT 性能。 为了避免服务器意外重启或故障转移到辅助服务器时出现标识列值的差值，请禁用 IDENTITY_CACHE 选项。 该选项与现有[跟踪标志 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 类似，但前者可在数据库级别设置，而不只是可在服务器级别设置。
 
 > [!NOTE]
 > 仅可为 PRIMARY 设置此选项。 有关详细信息，请参阅[标识列](create-table-transact-sql-identity-property.md)。
 
-INTERLEAVED_EXECUTION_TVF = { ON | OFF }     
+INTERLEAVED_EXECUTION_TVF = { ON | OFF }   
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -184,9 +189,9 @@ INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 > [!NOTE]
 > 对于数据库兼容性级别 130 或更低级别，此数据库范围配置无效。
 >
-> 仅在 SQL Server 2017 (14.x) 中，选项 INTERLEAVED_EXECUTION_TVF 具有旧名称 DISABLE_INTERLEAVED_EXECUTION_TVF  。
+> 仅在 SQL Server 2017 (14.x) 中，选项 INTERLEAVED_EXECUTION_TVF 具有旧名称 DISABLE_INTERLEAVED_EXECUTION_TVF。
 
-BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}      
+BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}    
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -195,7 +200,7 @@ BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 > [!NOTE]
 > 对于数据库兼容性级别 130 或更低级别，此数据库范围配置无效。
 
-BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}     
+BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}   
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -204,7 +209,7 @@ BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
 > [!NOTE]
 > 对于数据库兼容性级别 130 或更低级别，此数据库范围配置无效。
 
-TSQL_SCALAR_UDF_INLINING = { ON | OFF }  
+TSQL_SCALAR_UDF_INLINING = { ON | OFF }
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
 
@@ -247,23 +252,23 @@ WHEN_SUPPORTED
 > [!NOTE]
 > 通过提交指定了 RESUMABLE 选项的语句，可替代默认设置。
 
-OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }  
+OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
 
-适用于  ：[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
+适用于：[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
 
 第一次编译批处理时，启用或禁用要存储在缓存中的已编译计划存根。 默认为 OFF。 为数据库启用了数据库作用域内配置 OPTIMIZE_FOR_AD_HOC_WORKLOADS 后，已编译计划存根可在第一次编译批处理时存储在缓存中。 与完全编译的计划大小相比，计划存根的内存占用空间更小。 如果编译或再次执行批处理，则会删除已编译计划存根，并将其替换为完全编译的计划。
 
-XTP_PROCEDURE_EXECUTION_STATISTICS =  { ON | OFF  }
+XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
 
-适用于  ：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+适用于：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 启用或禁用对当前数据库的本机编译的 T-SQL 模块在模块级别的执行统计信息收集。 默认为 OFF。 执行统计信息反映在 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 中。
 
 如果该选项为“开”，或通过 [sp_xtp_control_proc_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 启用了统计信息收集，则收集对本机编译的 T-SQL 模块的模块级别执行统计信息。
 
-XTP_QUERY_EXECUTION_STATISTICS =  { ON |OFF  }
+XTP_QUERY_EXECUTION_STATISTICS = { ON |OFF  }
 
-适用于  ：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+适用于：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 启用或禁用对当前数据库的本机编译的 T-SQL 模块语句级别的执行统计信息收集。 默认为 OFF。 执行统计信息反映在 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 和[查询存储](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)中。
 
@@ -271,7 +276,7 @@ XTP_QUERY_EXECUTION_STATISTICS =  { ON |OFF  }
 
 有关本机编译的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块的性能监视的详细信息，请参阅[监视本机编译的存储过程的性能](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)。
 
-ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}  
+ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
 
@@ -280,7 +285,7 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 > [!NOTE]
 > 对于数据库兼容级别 140 或更低级别，此数据库范围配置无效。
 
-BATCH_MODE_ON_ROWSTORE = { ON | OFF}  
+BATCH_MODE_ON_ROWSTORE = { ON | OFF}
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
 
@@ -289,7 +294,7 @@ BATCH_MODE_ON_ROWSTORE = { ON | OFF}
 > [!NOTE]
 > 对于数据库兼容级别 140 或更低级别，此数据库范围配置无效。
 
-DEFERRED_COMPILATION_TV = { ON | OFF}  
+DEFERRED_COMPILATION_TV = { ON | OFF}
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
 
@@ -307,7 +312,7 @@ ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
 > [!NOTE]
 > 不建议禁用加速计划强制实施。
 
-GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }  
+GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 **适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
 
@@ -318,7 +323,7 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 <a name="lqp"></a>
 
-LIGHTWEIGHT_QUERY_PROFILING = { ON |OFF}  
+LIGHTWEIGHT_QUERY_PROFILING = { ON |OFF}
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -340,7 +345,7 @@ VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
 对于数据库兼容性级别 140 或更低级别，错误消息 2628 仍然是要求启用[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 的“选择加入”错误消息，并且此数据库范围的配置无效。
 
-LAST_QUERY_PLAN_STATS = { ON | OFF}  
+LAST_QUERY_PLAN_STATS = { ON | OFF}
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）（此功能为公开预览版）
 
@@ -485,7 +490,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
 ### <a name="h-set-optimize_for_ad_hoc_workloads"></a>H. 设置 OPTIMIZE_FOR_AD_HOC_WORKLOADS
-适用于  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 本示例可在第一次编译批处理时启用要存储在缓存中的已编译计划存根。
 
@@ -550,13 +555,13 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 
 [联机索引操作准则](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-## <a name="more-information"></a>详细信息
-
-- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)
-- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
-- [数据库和文件目录视图](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
-- [服务器配置选项](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
-- [联机索引操作的工作方式](../../relational-databases/indexes/how-online-index-operations-work.md)
-- [联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)
-- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
+## <a name="more-information"></a>详细信息   
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
+ [SQL Server 中“最大并行度”配置选项的建议和指南](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
+ [数据库和文件目录视图](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
+ [服务器配置选项](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    
+ [联机索引操作的工作方式](../../relational-databases/indexes/how-online-index-operations-work.md)    
+ [联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)    
+ [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)    
+ [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)    
