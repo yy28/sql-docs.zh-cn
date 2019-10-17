@@ -117,7 +117,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **无关**  
   
- 如果使用具有已禁用堆的表，则会引发以下错误。 若要重新启用这些对象, 请在升级后通过**调用 ALTER INDEX ALL ON .。。REBUILD** 来更改选项。  
+ 如果使用具有已禁用堆的表，则会引发以下错误。 若要重新启用这些对象, 请在升级后通过**调用 ALTER INDEX ALL ON ...REBUILD** 来更改选项。  
   
 ```  
 // ErrorNumber: 8674  
