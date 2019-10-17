@@ -95,7 +95,7 @@ ms.locfileid: "71299087"
   
 ## <a name="external-resources"></a>外部资源  
   
--   www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=131204)  
+-    [www.codeplex.com/MSFTISProdSamples](www.codeplex.com/MSFTISProdSamples) 上的 CodePlex 示例 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
 -   blogs.msdn.com 上的博客文章[自定义扩展插件性能探查](https://go.microsoft.com/fwlink/?LinkId=238831)  
 
