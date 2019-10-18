@@ -10,19 +10,19 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb564d7dc8564b31a90a09f53aedaba953519f76
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: cfaf672abd7c68e396b5049ced2d812a43d27d48
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313667"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542130"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>快速入门：使用 SQL Server 机器学习服务在 Python 中创建和评分预测模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本快速入门中，你将使用 Python 创建和训练预测模型，将该模型保存到 SQL Server 实例中的表，然后使用该模型从使用[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)的新数据中预测值。
 
-您将创建并执行在 SQL 中运行的两个存储过程。 第一种模式使用经典 Iris 花卉数据集，并生成一个简单的 Bayes 模型，用于根据花朵特征预测 Iris 物种。 第二个过程用于评分-它调用在第一个过程中生成的模型，以便基于新数据输出一组预测。 通过在存储过程中放置代码，其他存储过程和客户端应用程序可以对操作进行包含、重复使用和调用。
+您将创建并执行在 SQL 中运行的两个存储过程。 第一种模式使用经典 Iris 花卉数据集，并生成一个简单的 Bayes 模型，用于根据花朵特征预测 Iris 物种。 第二个过程用于评分-它调用在第一个过程中生成的模型，以便基于新数据输出一组预测。 通过将 Python 代码放在 SQL 存储过程中，操作包含在 SQL 中，可重复使用，并可由其他存储过程和客户端应用程序调用。
 
 完成本快速入门后，你将了解：
 
@@ -31,7 +31,7 @@ ms.locfileid: "72313667"
 > - 如何通过存储过程的输入将输入传递到代码
 > - 如何使用存储过程操作模型
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - 此快速入门要求使用安装了 Python 语言的[SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)访问 SQL Server 的实例。
 
@@ -43,7 +43,9 @@ ms.locfileid: "72313667"
 
 在此步骤中，你将创建一个存储过程，用于生成预测结果的模型。
 
-1. 在 SSMS 中打开一个连接到**irissql**数据库的新查询窗口。 
+1. 打开 SSMS，连接到 SQL Server 实例，然后打开一个新的查询窗口。
+
+1. 连接到 irissql 数据库。
 
     ```sql
     USE irissql
@@ -89,7 +91,7 @@ ms.locfileid: "72313667"
 
 为在 SQL Server 中重复使用而存储的模型将被序列化为字节流，并存储在数据库表中的 VARBINARY （MAX）列中。 创建、训练、序列化模型并将其保存到数据库后，可通过其他过程或在评分工作负荷中[预测 t-sql](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)函数调用它。
 
-1. 运行以下脚本以执行该过程。 用于执行存储过程的特定语句在第四行 @no__t 为0。
+1. 运行以下脚本以执行该过程。 第四行 `EXECUTE` 了用于执行存储过程的特定语句。
 
    此特定脚本删除同一名称（"Naive Bayes"）的现有模型，为通过重新运行同一过程创建的新模型腾出空间。 如果不删除模型，则会出现一个错误，指出该对象已存在。 模型存储在名为**iris_models** **的表**中。
 
@@ -109,17 +111,17 @@ ms.locfileid: "72313667"
     SELECT * FROM dbo.iris_models
     ```
 
-    **结果**
+    结果
 
-    | model_name  | 模型 |
+    | model_name  | model |
     |---|-----------------|
     | Naive Bayes | 0x800363736B6C6561726E2E6E616976655F62617965730A... | 
 
 ## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>创建和执行存储过程以生成预测
 
-现在，您已创建、训练并保存了一个模型，接下来请转到下一步：创建用于生成预测的存储过程。 要执行此操作，需要调用 `sp_execute_external_script` 来运行一个 Python 脚本，该脚本将加载序列化模型并将新的数据输入提供给分数。
+现在，您已创建、训练并保存了一个模型，接下来请转到下一步：创建用于生成预测的存储过程。 要执行此操作，需要调用 `sp_execute_external_script` 运行一个 Python 脚本，该脚本将加载序列化模型并向其提供新的数据输入。
 
-1. 运行以下代码以创建执行计分的存储过程。 在运行时，此过程将加载二进制模型，使用列 `[1,2,3,4]` 作为输入，并将 @no__t 列指定为-1 作为输出。
+1. 运行以下代码以创建执行计分的存储过程。 在运行时，此过程将加载一个二进制模型，使用 `[1,2,3,4]` 作为输入的列，并指定 `[0,5,6]` 为输出的列。
 
    ```sql
    CREATE PROCEDURE predict_species (@model VARCHAR(100))
@@ -166,11 +168,11 @@ ms.locfileid: "72313667"
 
    使用花卉特征作为输入，结果为150的物种预测。 对于大多数观察，预测的物种与实际物种匹配。
 
-   通过使用 Python iris 数据集进行定型和评分，此示例已变得简单。 更典型的方法是运行 SQL 查询以获取新数据，并将其作为 @no__t 传递到 Python。
+   通过使用 Python iris 数据集进行定型和评分，此示例已变得简单。 更典型的方法是运行 SQL 查询以获取新数据，并将该查询作为 `InputDataSet` 传递到 Python。
 
-## <a name="conclusion"></a>结束语
+## <a name="conclusion"></a>结语
 
-在此练习中，您学习了如何创建专用于不同任务的存储过程，其中每个存储过程使用系统存储过程 `sp_execute_external_script` 来启动 Python 进程。 Python 进程的输入将作为参数传递到 `sp_execute_external`。 Python 脚本本身和 SQL Server 数据库中的数据变量都作为输入传递。
+在此练习中，您学习了如何创建专用于不同任务的存储过程，其中每个存储过程使用系统存储过程 `sp_execute_external_script` 来启动 Python 进程。 Python 进程的输入作为参数传递给 `sp_execute_external`。 Python 脚本本身和 SQL Server 数据库中的数据变量都作为输入传递。
 
 通常，只应计划将 SSMS 与精美的 Python 代码一起使用，或者使用简单的 Python 代码来返回基于行的输出。 SSMS 支持查询语言（例如 T-sql）并返回平展行集。 如果你的代码生成类似于散点图或直方图的视觉输出，则需要可以呈现图像的工具或最终用户应用程序。
 

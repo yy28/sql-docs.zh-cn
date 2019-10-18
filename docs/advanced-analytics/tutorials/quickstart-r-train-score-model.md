@@ -10,24 +10,31 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: 9acfe1e546c332801e9a5c1a7d97758053d9a0f4
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005976"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542121"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>快速入门：使用 SQL Server 机器学习服务创建和评分预测模型
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>快速入门：在 R 中使用 SQL Server 机器学习服务创建和评分预测模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本快速入门中，你将使用 R 创建和训练预测模型，将该模型保存到 SQL Server 实例中的表，然后使用该模型从使用[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)的新数据中预测值。
 
-您将在本快速入门中使用的模型是一个简单的通用线性模型（GLM），该模型预测车辆经过手动传输的概率。 你将使用 R 附带的**mtcars**数据集。
+您将创建并执行在 SQL 中运行的两个存储过程。 第一种方式是使用 R 中包含的**mtcars**数据集，并生成一个简单的通用线性模型（GLM），该模型预测车辆经过手动传输的概率。 第二个过程用于评分-它调用在第一个过程中生成的模型，以便基于新数据输出一组预测。 通过将 R 代码置于 SQL 存储过程中，操作包含在 SQL 中，可重用，并可由其他存储过程和客户端应用程序调用。
 
 > [!TIP]
-> 如果需要针对线性模型的刷新器，请尝试本教程，其中介绍了使用 rxLinMod 对模型进行调整的过程：[Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model)（拟合线性模型）
+> 如果需要针对[线性模型的](/machine-learning-server/r/how-to-revoscaler-linear-model)刷新器，请尝试本教程，其中介绍了如何使用 rxLinMod 将模型与模型拟合：
 
-## <a name="prerequisites"></a>先决条件
+完成本快速入门后，你将了解：
+
+> [!div class="checklist"]
+> - 如何在存储过程中嵌入 R 代码
+> - 如何通过存储过程的输入将输入传递到代码
+> - 如何使用存储过程操作模型
+
+## <a name="prerequisites"></a>必备条件
 
 - 此快速入门要求使用安装 R 语言的[SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)SQL Server 的实例。
 
@@ -41,7 +48,7 @@ ms.locfileid: "72005976"
 
 ### <a name="create-the-source-data"></a>创建源数据
 
-1. 打开**SQL Server Management Studio** ，然后连接到 SQL Server 实例。
+1. 打开 SSMS，连接到 SQL Server 实例，然后打开一个新的查询窗口。
 
 1. 创建一个表以保存训练数据。
 
@@ -61,7 +68,7 @@ ms.locfileid: "72005976"
    );
    ```
 
-1. 插入内置数据集中的数据 `mtcars`。
+1. @No__t_0 中插入数据。
 
    ```SQL
    INSERT INTO dbo.MTCars
@@ -76,7 +83,7 @@ ms.locfileid: "72005976"
 
 ### <a name="create-and-train-the-model"></a>创建和训练模型
 
-Car 速度数据包含两列：数字：动力（`hp`）和权重（`wt`）。 在此数据中，你将创建一个通用线性模型（GLM），该模型会估算车辆已调整为手动传输的概率。
+Car 速度数据包含两列：数值：动力（`hp`）和权重（`wt`）。 在此数据中，你将创建一个通用线性模型（GLM），该模型会估算车辆已调整为手动传输的概率。
 
 若要生成模型，请在 R 代码中定义公式，并将数据作为输入参数传递。
 
@@ -98,7 +105,7 @@ END;
 GO
 ```
 
-- @No__t 的第一个参数是*公式*参数，它将 `am` 定义为依赖于 @no__t 3。
+- @No__t_0 的第一个参数是*公式*参数，该参数定义 `am` `hp + wt` 依赖于。
 - 输入数据存储在 SQL 查询填充的变量 `MTCarsData` 中。 如果未将特定的名称分配到输入数据，默认变量名称将是 _InputDataSet_。
 
 ### <a name="store-the-model-in-the-sql-database"></a>在 SQL 数据库中存储模型
@@ -124,7 +131,7 @@ GO
    ```
 
    > [!TIP]
-   > 如果第二次运行此代码，将收到此错误："PRIMARY KEY 约束冲突 ...无法在对象 stopping_distance_models "中插入重复键。 避免此错误的一种做法是更新每个新模型的名称。 例如，可将该名称更改为更具描述性的名称，并包含模型类型、创建日期，等等。
+   > 如果你第二次运行此代码，将收到此错误： "PRIMARY KEY 约束冲突 .。。无法在对象 stopping_distance_models "中插入重复键。 避免此错误的一种做法是更新每个新模型的名称。 例如，可将该名称更改为更具描述性的名称，并包含模型类型、创建日期，等等。
 
      ```sql
      UPDATE GLM_models
@@ -205,7 +212,7 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 >
 > R 脚本中使用的列名不必传递到存储过程输出。 此处使用 WITH RESULTS 子句来定义一些新的列名。
 
-**结果**
+结果
 
 ![用于预测手动传输 properbility 的结果集](./media/r-predict-am-resultset.png)
 

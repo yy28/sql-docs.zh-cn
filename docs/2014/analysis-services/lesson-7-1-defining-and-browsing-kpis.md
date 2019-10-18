@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493796"
 ---
 # <a name="defining-and-browsing-kpis"></a>定义和浏览 KPI
@@ -39,7 +39,7 @@ ms.locfileid: "69493796"
  除了为 KPI 定义的这些元素以外，还要为 KPI 定义几个属性。 这些属性包括显示文件夹、父 KPI（如果 KPI 是从其他 KPI 计算得到的）、当前时间成员（如果有）、KPI 的权重（如果有）和 KPI 的说明。  
   
 > [!NOTE]  
->  有关 KPI 的更多示例，请参阅“计算工具”窗格中“模板”选项卡上或 **Adventure Works DW 2012** 示例数据仓库示例中的 KPI 示例。 有关如何安装此数据库的详细信息，请参阅[安装 Analysis Services 多维建模教程的示例数据和项目](install-sample-data-and-projects.md)。  
+>  有关 KPI 的更多示例，请参阅“计算工具”窗格中“模板”选项卡上或 **Adventure Works DW 2012** 示例数据仓库示例中的 KPI 示例。 有关如何安装此数据库的详细信息，请参阅 [安装 Analysis Services 多维建模教程的示例数据和项目](install-sample-data-and-projects.md)。  
   
  在本主题的任务中，您将在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目中定义 KPI，然后使用这些 KPI 来浏览 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集。 将定义下列 KPI：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "69493796"
   
      下图显示了多维数据集设计器的“KPI”选项卡。  
   
-     ![多维数据集设计器的 "kpi" 选项卡](../../2014/tutorials/media/l7-kpi-1.gif "多维数据集设计器的 \"kpi\" 选项卡")  
+     ![多维数据集设计器的 "Kpi" 选项卡](../../2014/tutorials/media/l7-kpi-1.gif "多维数据集设计器的 "Kpi" 选项卡")  
   
 2.  在“KPI”选项卡的工具栏上，单击“新建 KPI”按钮。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "69493796"
   
      ![显示窗格中的空白 KPI 模板](../../2014/tutorials/media/l7-kpi-2.gif "显示窗格中的空白 KPI 模板")  
   
-3.  在 "**名称**" 框中`Reseller Revenue`，键入，然后选择 "关联的**度量值组**" 列表中的 "**分销商销售额**"。  
+3.  在 "**名称**" 框中，键入 `Reseller Revenue`，然后在 "关联的**度量值组**" 列表中选择 "**分销商销售额**"。  
   
 4.  在“计算工具”窗格中的“元数据”选项卡上，展开“度量值”，再展开“分销商销售”，然后将“分销商销售额”度量值拖到“值表达式”框中。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "69493796"
   
 1.  在“KPI”选项卡的工具栏上单击“窗体视图”按钮，然后单击“新建 KPI”按钮。  
   
-2.  在 "**名称**" 框中`Product Gross Profit Margin`，键入，然后验证 **\<"所有 > 都**显示在"**关联的度量值组**"列表中。  
+2.  在 "**名称**" 框中，键入 `Product Gross Profit Margin`，然后验证 **\<All >** 出现在 "**关联的度量值组**" 列表中。  
   
 3.  在“计算工具”窗格内的“元数据”选项卡中，将“总 GPM”度量值拖到“值表达式”框中。  
   
@@ -261,7 +261,7 @@ ms.locfileid: "69493796"
   
 2.  成功完成部署后，在“KPI”选项卡的工具栏上单击“重新连接”，然后单击“浏览器视图”。  
   
-     此时将显示 kpi，并显示Q3CY2007和北美销售区域`Product Gross Profit Margin`的 KPI 值。  
+     此时将显示 `Product Gross Profit Margin` KPI，并显示**Q3 CY 2007**和**北美**销售区域的 KPI 值。  
   
 3.  在“筛选器”窗格中，依次选择“维度”列表中的“产品”、“层次结构”列表中的“类别”、“运算符”列表中的“等于”和“筛选表达式”列表中的“自行车”，然后单击“确定”。  
   

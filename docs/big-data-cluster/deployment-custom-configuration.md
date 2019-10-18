@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 699e4260368d3467e68df9ba6b86e961959a8192
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 31c745a585adf26b521054cbcd0234fd4087a114
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682032"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542171"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>为群集资源和服务配置部署设置
 
@@ -151,11 +151,11 @@ ms.locfileid: "71682032"
 
 要自定义集群部署配置文件，可以使用任何 JSON 格式编辑器，例如 VSCode。 如果需要出于自动化目的为这些编辑内容编写脚本，请使用“azdata bdc config”命令。 本文介绍如何通过修改部署配置文件来配置大数据群集部署。 它提供了为不同方案更改配置的示例。 有关如何在部署中使用配置文件的详细信息，请参阅[部署指南](deployment-guidance.md#configfile)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - [安装 azdata](deploy-install-azdata.md)。
 
-- 本部分中的每个示例都假定已创建一个标准配置的副本。 有关详细信息，请参阅[创建自定义配置](deployment-guidance.md#customconfig)。 例如 **，下面**的命令创建一个名`custom`为的**目录，其中**包含两个基于默认**aks**配置的 json 部署配置文件：
+- 本部分中的每个示例都假定已创建一个标准配置的副本。 有关详细信息，请参阅[创建自定义配置](deployment-guidance.md#customconfig)。 例如，下面的命令创建一个名为 `custom` 的**目录，该** **目录中包含**两个基于默认**aks**配置的 json 部署配置文件：
 
    ```bash
    azdata bdc config init --source aks-dev-test --target custom
@@ -539,18 +539,8 @@ JSON 修补程序文件一次配置多个设置。 有关 JSON 修补程序的�
       "op": "add",
       "path": "spec.services.hdfs.resources/-",
       "value": "spark-0"
-    },
-    {
-      "op": "add",
-      "path": "spec.services.spark.settings",
-      "value": {
-        "DriverMemory": "2g",
-        "DriverCores": "1",
-        "ExecutorInstances": "2",
-        "ExecutorMemory": "2g",
-        "ExecutorCores": "1"
-      }
     }
+   }
   ]
 }
 ```
@@ -635,4 +625,4 @@ azdata bdc config patch --config-file control.json --patch-file elasticsearch-pa
 > 建议在 Kubernetes 群集中的每个主机上手动手动更新**max_map_count**设置，如[本文](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)中的说明。
 ## <a name="next-steps"></a>后续步骤
 
-有关在大数据群集部署中使用配置文件的详细信息，请参阅[如何[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]在 Kubernetes 上部署](deployment-guidance.md#configfile)。
+有关在大数据群集部署中使用配置文件的详细信息，请参阅[如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md#configfile)。

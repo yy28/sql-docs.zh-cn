@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493864"
 ---
 # <a name="defining-a-fact-relationship"></a>定义事实关系
@@ -51,7 +51,7 @@ ms.locfileid: "69493864"
   
 7.  在“名称列”列表中，选择“SalesOrderLineNumber”。  
   
-8.  单击“下一步”。  
+8.  在“欢迎”页上，单击 **“下一步”** 。  
   
 9. 在“选择相关表”页面上，清除所有表旁边的复选框，然后单击“下一步”。  
   
@@ -63,15 +63,15 @@ ms.locfileid: "69493864"
   
 13. 在“文件” 菜单上，单击“全部保存”。  
   
-14. 在 " **Internet 销售订单详细信息**" 维度的 "维度设计器" 的 "**属性**" 窗格中，选择 "**销售订单号**"，然后将 "属性窗口中的"**名称**"属性更改为`Item Description.`  
+14. 在 " **Internet 销售订单详细信息**" 维度的 "维度设计器" 的 "**属性**" 窗格中，选择 "**销售订单号**"，然后将属性窗口中的 "**名称**" 属性更改为 "`Item Description.`  
   
-15. 在**NameColumn**属性单元中，单击浏览按钮 **（...）** 。在“名称列”对话框中，从“源表”列表中选择“产品”，为“源列”选择“EnglishProductName”，然后单击“确定”。  
+15. 在**NameColumn**属性单元中，单击浏览按钮 **（...）** 。在 "**名称列**" 对话框中，从 "**源表**" 列表中选择 "**产品**"，选择 " **EnglishProductName** " 作为 "**源" 列**，然后单击 **"确定"** 。  
   
 16. 将“数据源视图”窗格中“InternetSales”表内的“SalesOrderNumber”列拖到“特性”窗格，以将“销售订单编号”属性添加到维度中。  
   
-17. 将新的 "**销售订单编号**" 属性`Order Number`的 "**名称**" 属性更改为，并将 " **OrderBy** " 属性更改为 "**键**"。  
+17. 将新的 "**销售订单编号**" 属性的 "**名称**" 属性更改为 "`Order Number`"，并将 " **OrderBy** " 属性更改为 "**键**"。  
   
-18. 在 "**层次结构**" 窗格中，按顺序创建包含和**项说明**级别的 " `Order Number` **Internet 销售订单**" 用户层次结构。  
+18. 在 "**层次结构**" 窗格中，创建一个 " **Internet 销售订单**" 用户层次结构，该层次结构包含 "`Order Number`" 和 "**项说明**" 级别。  
   
 19. 在“特性”窗格中，选择“Internet 销售订单详细信息”，然后查看“属性”窗口中“StorageMode”属性的值。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493864"
   
      下图显示了“定义关系”对话框中的事实关系属性。  
   
-     !["定义关系" 对话框](../../2014/tutorials/media/l5-factrelationship-2.gif "\"定义关系\" 对话框")  
+     !["定义关系" 对话框](../../2014/tutorials/media/l5-factrelationship-2.gif "“定义关系”对话框")  
   
 3.  单击“取消”。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "69493864"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [定义多对多关系](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [定义事实关系和事实关系属性](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69890838"
 ---
 # <a name="automatically-grouping-attribute-members"></a>自动将属性成员分组
@@ -28,7 +28,7 @@ ms.locfileid: "69890838"
  **Clusters**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用 K-Means 聚类分析方法和高斯分布，对输入值执行单一维度聚类分析，以此创建分组。 此选项只对数值列有效。  
   
- 指定了一种分组方法后，必须使用 **DiscretizationBucketCount** 属性指定分组的数量。 有关详细信息，请参阅[对属性成员进行分组（离散化）](multidimensional-models/attribute-properties-group-attribute-members.md)。  
+ 指定了一种分组方法后，必须使用 **DiscretizationBucketCount** 属性指定分组的数量。 有关详细信息，请参阅 [对属性成员进行分组（离散化）](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
  在本主题的任务中，将对以下对象启用不同类型的分组： **客户** 维度中的年度收入值； **雇员** 维度中的雇员病假时数； **雇员** 维度中的雇员休假时数。 然后，处理并浏览 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集，以此查看各成员组的情况。 最后，修改成员组的参数，查看组类型更改的效果。  
   
@@ -38,13 +38,13 @@ ms.locfileid: "69890838"
   
 2.  在“数据源视图”窗格中，右键单击 Customer 表，再单击“浏览数据”。  
   
-     注意，**YearlyIncome** 列的值的范围。 如果未启用成员分组，这些值将成为**年收入**属性层次结构的成员。  
+     注意， **YearlyIncome** 列的值的范围。 如果未启用成员分组，这些值将成为 **年收入** 属性层次结构的成员。  
   
 3.  关闭“浏览 Customer 表”选项卡。  
   
 4.  在“属性”窗格中，选择“年收入”。  
   
-5.  在属性窗口中，将**DiscretizationMethod**属性的值更改为 "**自动**"，并将 " **DiscretizationBucketCount** " 属性的`5`值更改为。  
+5.  在属性窗口中，将**DiscretizationMethod**属性的值更改为 "**自动**"，并将 " **DiscretizationBucketCount** " 属性的值更改为 "`5`"。  
   
      下图显示了修改后的“年收入”属性。  
   
@@ -62,11 +62,11 @@ ms.locfileid: "69890838"
   
 4.  在“属性”窗格中，选择“病假时间”。  
   
-5.  在属性窗口中，将**DiscretizationMethod**属性的值更改为 "**分类**"，并将 " **DiscretizationBucketCount** " 属性的`5`值更改为 ""。  
+5.  在属性窗口中，将**DiscretizationMethod**属性的值更改为 "**分类**"，并将 " **DiscretizationBucketCount** " 属性的值更改为 "`5`"。  
   
 6.  在“属性”窗格中，选择“休假时间”。  
   
-7.  在属性窗口中，将**DiscretizationMethod**属性的值更改为**相等的区域**，并将**DiscretizationBucketCount**属性的值更改为`5`。  
+7.  在属性窗口中，将**DiscretizationMethod**属性的值更改为**相等的区域**，并将**DiscretizationBucketCount**属性的值更改为 "`5`"。  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>浏览已修改的属性层次结构  
   
@@ -125,7 +125,7 @@ ms.locfileid: "69890838"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [隐藏和禁用属性层次结构](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对属性成员进行分组（离散化）](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

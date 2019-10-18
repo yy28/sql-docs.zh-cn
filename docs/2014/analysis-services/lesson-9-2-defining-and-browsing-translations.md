@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493778"
 ---
 # <a name="defining-and-browsing-translations"></a>定义和浏览翻译
@@ -40,9 +40,9 @@ ms.locfileid: "69493778"
   
      将出现另一个语言列，您将在其中定义法语翻译。  
   
-5.  在 "**日期**" 维度的 "**标题**" 对象行中， `Fecha`在`Temps` "**西班牙语（西班牙**）" 翻译列中键入，在 "**法语（法国）** " 翻译列中键入。  
+5.  在 "**日期**" 维度的 "**标题**" 对象行中，在 "**西班牙语（西班牙**）" 翻译列中键入 `Fecha`，并在 "**法语（法国）** " 翻译列中 `Temps`。  
   
-6.  在 "**月份名称**" 属性的 "**标题**" 对象行中， `Mes del Año`在`Mois d'Année` "**西班牙语（西班牙**）" 翻译列中键入，在 "**法语（法国）** " 翻译列中键入。  
+6.  在 "**月份名称**" 属性的 "**标题**" 对象行中，在 "**西班牙语（西班牙**）" 翻译列中键入 `Mes del Año`，并在 "**法语（法国）** " 翻译列中 `Mois d'Année`。  
   
      请注意，输入这些翻译时，会显示省略号（ **...** ）。 单击此省略号可以指定为属性层次结构的每个成员提供翻译的基础表中的列。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69493778"
   
 8.  在“翻译列”列表中，选择“SpanishMonthName”，如下图所示。  
   
-     !["属性数据转换" 对话框](../../2014/tutorials/media/l9-translations-4.gif "\"属性数据转换\" 对话框")  
+     !["属性数据转换" 对话框](../../2014/tutorials/media/l9-translations-4.gif "“翻译属性数据”对话框")  
   
 9. 单击 **"确定**"，然后单击 "**月份名称**" 属性的 "**法语（法国）** 翻译" 的省略号（ **...** ）。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69493778"
   
      每个多维数据集对象的元数据将以默认语言显示，如下图所示。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集中的默认语言为英语。  
   
-     !["翻译" 选项卡中的默认语言](../../2014/tutorials/media/l9-translations-5.gif "\"翻译\" 选项卡中的默认语言")  
+     !["翻译" 选项卡中的默认语言](../../2014/tutorials/media/l9-translations-5.gif ""翻译" 选项卡中的默认语言")  
   
 2.  在“翻译”选项卡的工具栏上，单击“新建翻译”按钮。  
   
@@ -80,11 +80,11 @@ ms.locfileid: "69493778"
   
      将出现另一个语言列，您将在其中定义法语翻译。  
   
-5.  在 "**日期**" 维度的 "**标题**" 对象行中， `Fecha`在`Temps` "**西班牙语（西班牙**）" 翻译列中键入，在 "**法语（法国）** " 翻译列中键入。  
+5.  在 "**日期**" 维度的 "**标题**" 对象行中，在 "**西班牙语（西班牙**）" 翻译列中键入 `Fecha`，并在 "**法语（法国）** " 翻译列中 `Temps`。  
   
-6.  在 " **Internet 销售**" 度量值组的 "**标题**" 对象行中`Ventas del lnternet` ，在 " `Ventes D'Internet`西班牙语（西班牙）" 翻译列中键入，在 "**法语（法国）** " 翻译列中键入。  
+6.  在 " **Internet 销售**" 度量值组的 "**标题**" 对象行中，在 "**西班牙语（西班牙**）" 翻译列中键入 `Ventas del lnternet`，并在 "**法语（法国）** " 翻译列中 `Ventes D'Internet`。  
   
-7.  在 "Internet 销售-销售额" 度量值的 "**标题**" 对象行中， `Cantidad de las Ventas del Internet`在 "**西班牙语**（ `Quantité de Ventes d'Internet`西班牙）" 翻译列中键入，在 "**法语（法国）** " 翻译列中键入。  
+7.  在 "Internet 销售-销售额" 度量值的 "**标题**" 对象行中，在 "**西班牙语（西班牙**）" 翻译列中键入 `Cantidad de las Ventas del Internet`，并在 "**法语（法国）** " 翻译列中 `Quantité de Ventes d'Internet`。  
   
      此过程中的步骤阐释了为多维数据集对象定义元数据翻译的过程。  
   
@@ -102,13 +102,13 @@ ms.locfileid: "69493778"
   
 5.  在工具栏上，选择“语言”列表中的“西班牙语(西班牙)”。  
   
-     注意，“元数据”窗格中的项将重新填充。 重新填充“元数据”窗格中的项之后，注意“Internet 销售额”度量值将不再出现在“Internet 销售”显示文件夹中。 相反，它将在名为`Ventas del lnternet`的新显示文件夹中以西班牙语显示，如下图所示。  
+     注意，“元数据”窗格中的项将重新填充。 重新填充“元数据”窗格中的项之后，注意“Internet 销售额”度量值将不再出现在“Internet 销售”显示文件夹中。 相反，它会在名为 `Ventas del lnternet` 的新显示文件夹中以西班牙语显示，如下图所示。  
   
-     重新![填充元数据窗格](../../2014/tutorials/media/l9-translations-6.gif "重新填充元数据窗格")  
+     ![重新填充元数据窗格](../../2014/tutorials/media/l9-translations-6.gif "重新填充元数据窗格")  
   
-6.  在 "元数据" 窗格中， `Cantidad de las Ventas del Internet`右键单击，然后选择 "**添加到查询**"。  
+6.  在 "元数据" 窗格中，右键单击 `Cantidad de las Ventas del Internet`，然后选择 "**添加到查询**"。  
   
-7.  在 "元数据" 窗格`Fecha`中，展开 " **Fecha 日期**"，右键单击 " **Fecha 日期**"，然后选择 "**添加到筛选器**"。  
+7.  在 "元数据" 窗格中，展开 "`Fecha`"，展开 " **Fecha 日期**"，右键单击 " **Fecha 日期**"，然后选择 "**添加到筛选器**"。  
   
 8.  在“筛选器”窗格中，选择“CY 2007”作为筛选表达式。  
   
@@ -123,10 +123,10 @@ ms.locfileid: "69493778"
      注意，月份名称现在将以法语显示，并且度量值名称现在也以法语显示。  
   
 ## <a name="next-lesson"></a>下一课  
- [第10课：定义管理角色](lesson-10-defining-administrative-roles.md)  
+ [第 10 课：定义管理角色](lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>请参阅  
- [维度翻译](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
+## <a name="see-also"></a>另请参阅  
+ [维度转换](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [多维数据集翻译](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [翻译&#40;Analysis Services&#41;](translations-analysis-services.md)  
   

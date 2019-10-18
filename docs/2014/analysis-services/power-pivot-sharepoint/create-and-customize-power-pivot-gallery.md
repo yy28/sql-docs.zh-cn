@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 305ae31522a54a776c989f4b8f4b0c4ceabe6658
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "70874401"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>创建和自定义 PowerPivot 库
@@ -34,7 +34,7 @@ ms.locfileid: "70874401"
   
 -   [切换到影院视图或图库视图](#switch)  
   
-##  <a name="prereq"></a> 先决条件  
+##  <a name="prereq"></a> Prerequisites  
   
 -   您必须具有 Silverlight。 可以通过 Microsoft 更新来下载和安装 Silverlight。 如果使用不具备 Silverlight 的浏览器查看“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库”库，则单击该页上的链接可以安装它。 安装后，必须关闭再重新打开浏览器。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70874401"
     >  Power Pivot 库需要 Microsoft Silverlight。  Microsoft Edge 浏览器不支持 Silverlight。   
     > 若要在 Microsoft Edge 中查看库内容，请单击 Power Pivot 库中的 "**库**" 选项卡，然后将文档库视图更改为 "**所有文档**"。    
     > 若要更改默认视图，请单击“库” 选项卡，然后单击“修改视图”。 单击“使其成为默认视图”，然后单击“确定”保存默认视图。  
-    >  有关 Microsoft Edge 支持的功能的详细信息，请参阅 Windows 博客[，一段时间过去的一段时间，第2部分：说到 ActiveX、VBScript .。。](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  有关 Microsoft Edge 支持的内容的详细信息，请参阅 Windows 博客，一段时间[中断，第2部分：说：对 ActiveX、VBScript](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/) 。  
   
 -   您必须是网站所有者才能创建库。  
   
@@ -59,18 +59,18 @@ ms.locfileid: "70874401"
   
  预览图像基于 Excel Services 呈现工作簿的方式。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中的表示形式应该与在浏览器中查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿时看到的内容完全一致。 然而，预览的图面区域有限， 所以可能要对工作簿或报表各部分进行剪裁以适应可用空间。 您可能需要打开工作簿或报表才能查看完整的文档。  
   
- 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中完全支持从外部数据源刷新 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿数据，但它要求其他配置。 场或服务管理员必须将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为一个 Excel Services 可信位置。 有关详细信息，请参阅[在管理中心中创建受信任的位置为 PowerPivot 站点](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+ 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中完全支持从外部数据源刷新 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿数据，但它要求其他配置。 场或服务管理员必须将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为一个 Excel Services 可信位置。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ##  <a name="createlib"></a>创建 PowerPivot 库  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 时系统会为您创建 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 库。 如果已将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 添加到现有场或者您还需要其他库，则可为应用程序或网站新建一个库。  
   
-1.  1.  **SharePoint 2010**：单击网站主页左上角的 "**网站操作**"。  
+1.  1.  **SharePoint 2010**：单击位于网站主页左上角的 **“网站操作”** 。  
   
     2.  单击 **“其他选项”** 。  
   
     3.  在“库”下，单击 **“PowerPivot 库”** 。  
   
-    1.  **SharePoint 2013**：单击 "设置" 图标 " ![Sharepoint 设置]" "(../media/as-sharepoint2013-settings-gear.gif "sharepoint")设置"。 单击 **“网站内容”** 。  
+    1.  **Sharepoint 2013**：单击 "设置" 图标 " ![SharePoint 设置](../media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")"。 单击 **“网站内容”** 。  
   
     2.  单击 **“添加应用程序”** 。  
   
@@ -104,9 +104,9 @@ ms.locfileid: "70874401"
   
 2.  在功能区中，单击 **“库”** 。  
   
-3.  **SharePoint 2010：** 在 "自定义视图" 中，单击 "**修改此视图**"。  
+3.  **SharePoint 2010：** 在“自定义视图”中，单击 **“修改此视图”** 。  
   
-     **SharePoint 2013：** 在 "**管理视图**" 中，单击 "**修改视图**"。  
+     **SharePoint 2013：** 在 **“管理视图”** 中，单击 **“修改视图”** 。  
   
 4.  在“排序”中，指定将用来确定工作簿在列表中的显示方式的条件。 默认情况下，文档按添加的先后顺序列出。  
   
@@ -132,11 +132,11 @@ ms.locfileid: "70874401"
   
  下表介绍了使用不同的布局来显示每个预览网页的缩略图草图：  
   
-|“查看”|描述|  
+|“查看”|Description|  
 |----------|-----------------|  
 |图库视图（默认）|图库视图是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库的默认视图。 预览显示在左侧。 每个工作表的更小缩略图按从左至右的顺序显示在预览旁边。|  
 |所有文档|这是文档库的标准布局。 您可以选择此视图，以管理单独的文档或以列表格式查看库内容。<br /><br /> 使用此视图可以编辑属性、删除或移动各个文档。<br /><br /> 如果您启用了版本控制，您必须使用此视图向库中签入文档或从库中签出文档。|  
-|影院视图和传送视图|这些是专用视图，如果您展示数量较少的相关文档，则其效果最佳。 缩略图的完全轮换包括库中所有文档的所有页。 如果您有大量的文档，则对于需要查找或打开特定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的用户而言，这些视图可能不实用。<br /><br /> "地区" 视图：预览区域居中。 每个工作表的较小缩略图显示在页面任一侧的下方。<br /><br /> 轮播视图：预览区域居中。 紧接在当前缩略图之前和之后的缩略图与预览区域相邻。|  
+|影院视图和传送视图|这些是专用视图，如果您展示数量较少的相关文档，则其效果最佳。 缩略图的完全轮换包括库中所有文档的所有页。 如果您有大量的文档，则对于需要查找或打开特定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的用户而言，这些视图可能不实用。<br /><br /> 影院视图：预览区域处于中心位置。 每个工作表的较小缩略图显示在页面任一侧的下方。<br /><br /> 传送视图：预览区域处于中心位置。 紧接在当前缩略图之前和之后的缩略图与预览区域相邻。|  
   
 ### <a name="switch-to-a-different-view"></a>切换到其他视图  
   
@@ -146,7 +146,7 @@ ms.locfileid: "70874401"
   
 3.  在“管理视图”的“当前视图”中，从列表中选择您要使用的视图。 预先设计的视图包括图库视图、影院视图和传送视图。 或者，如果您要移动、删除或管理库中的文档，则可以选择“所有文档”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [排查 PowerPivot for SharePoint 安装问题](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
  [使用 PowerPivot 库](use-power-pivot-gallery.md)   
  [在管理中心中为 PowerPivot 站点创建受信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   

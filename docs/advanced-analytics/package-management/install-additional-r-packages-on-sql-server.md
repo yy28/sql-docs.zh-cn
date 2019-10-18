@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3b5a55ec16c7dfa2f16dbae62674a475fb39c5d7
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: f8ce5c7bcf12a2431c2de779912d2e309c628cb1
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70275669"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542143"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>通过 sqlmlutils 安装新的 R 包
 
@@ -23,9 +23,9 @@ ms.locfileid: "70275669"
 本文介绍如何使用[**sqlmlutils**](https://github.com/Microsoft/sqlmlutils)包中的函数将新的 R 包安装到 SQL Server 机器学习服务或 SQL Server R Services 的实例。 安装的包可用于在使用[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) t-sql 语句的数据库中运行的 R 脚本。
 
 > [!NOTE]
-> 不建议在`install.packages` SQL Server 上添加 R 包的标准 R 命令。 请改用本文中所述的**sqlmlutils** 。
+> 不建议在 SQL Server 上添加 R 包的标准 R `install.packages` 命令。 请改用本文中所述的**sqlmlutils** 。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - 在用于连接 SQL Server 的客户端计算机上安装[R](https://www.r-project.org)和[RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) 。 你可以使用任何 R IDE 来运行脚本，但本文假设 RStudio。
 
@@ -72,7 +72,7 @@ ms.locfileid: "70275669"
 
 1. 安装**miniCRAN**。 有关详细信息，请参阅[安装 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 。
 
-1. 在 RStudio 中，运行以下 R 脚本来创建包**RODBCext**的本地存储库。 此示例在文件夹`c:\downloads\rodbcext`中创建存储库。
+1. 在 RStudio 中，运行以下 R 脚本来创建包**RODBCext**的本地存储库。 此示例在 `c:\downloads\rodbcext` 的文件夹中创建存储库。
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
@@ -100,16 +100,16 @@ ms.locfileid: "70275669"
 
    ::: moniker-end
 
-   对于 " `Rversion`值"，请使用安装在 SQL Server 上的 R 版本。 若要验证已安装的版本，请使用以下 T-sql 命令。
+   对于 `Rversion` 值，请使用安装在 SQL Server 上的 R 版本。 若要验证已安装的版本，请使用以下 T-sql 命令。
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. 从 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist （不解压文件）下载最新的**sqlmlutils** zip 文件。 例如，将文件下载到`c:\downloads\sqlmlutils_0.7.1.zip`。
+1. 从 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 下载最新的**sqlmlutils** zip 文件（不要解压缩文件）。 例如，将文件下载到 `c:\downloads\sqlmlutils_0.7.1.zip`。
 
-1. 将整个**RODBCext**存储库文件夹（`c:\downloads\rodbcext`）和**sqlmlutils** zip 文件（`c:\downloads\sqlmlutils_0.7.1.zip`）复制到客户端计算机。 例如，将它们复制到客户端`c:\temp\packages`计算机上的文件夹。
+1. 将整个**RODBCext**存储库文件夹（`c:\downloads\rodbcext`）和**sqlmlutils** zip 文件（`c:\downloads\sqlmlutils_0.7.1.zip`）复制到客户端计算机。 例如，将它们复制到客户端计算机上 `c:\temp\packages` 的文件夹中。
 
 在用于连接到 SQL Server 的客户端计算机上，打开命令提示符并运行以下命令，安装**RODBCext** ，然后**sqlmlutils**。
 
@@ -128,15 +128,13 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
 1. 在客户端计算机上，打开 "RStudio" 并创建一个新的**R 脚本**文件。
 
-1. 使用以下 R 脚本通过**sqlmlutils**安装**粘合**包。 替换为您自己的 SQL Server 数据库连接信息。
+1. 使用以下 R 脚本通过**sqlmlutils**安装**粘合**包。 替换你自己的 SQL Server 数据库连接信息（如果不使用 Windows 身份验证，请添加 `uid` 和 `pwd` 参数）。
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -151,7 +149,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
 在具有 Internet 访问权限的计算机上：
 
-1. 运行以下 R 脚本，为**胶水**创建本地存储库。 此示例在中`c:\downloads\glue`创建存储库文件夹。
+1. 运行以下 R 脚本，为**胶水**创建本地存储库。 此示例在 `c:\downloads\glue` 中创建存储库文件夹。
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
@@ -180,28 +178,26 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
    ::: moniker-end
 
 
-   对于 " `Rversion`值"，请使用安装在 SQL Server 上的 R 版本。 若要验证已安装的版本，请使用以下 T-sql 命令。
+   对于 `Rversion` 值，请使用安装在 SQL Server 上的 R 版本。 若要验证已安装的版本，请使用以下 T-sql 命令。
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. 将整个 "**胶水**存储库"`c:\downloads\glue`文件夹（）复制到客户端计算机。 例如，将它复制到文件夹`c:\temp\packages\glue`。
+1. 将整个 "**胶水**存储库" 文件夹（`c:\downloads\glue`）复制到客户端计算机。 例如，将它复制到 `c:\temp\packages\glue` 文件夹。
 
 在客户端计算机上：
 
 1. 打开 RStudio 并创建一个新的**R 脚本**文件。
 
-1. 使用以下 R 脚本通过**sqlmlutils**安装**粘合**包。 替换为您自己的 SQL Server 数据库连接信息。
+1. 使用以下 R 脚本通过**sqlmlutils**安装**粘合**包。 替换你自己的 SQL Server 数据库连接信息（如果不使用 Windows 身份验证，请添加 `uid` 和 `pwd` 参数）。
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
    localRepo = "c:/temp/packages/glue"
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC", repos=paste0("file:///",localRepo))
@@ -216,7 +212,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
 1. 打开 Azure Data Studio 或 SSMS 并连接到 SQL Server 数据库。
 
-1. 运行下面的命令：
+1. 运行以下命令：
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
@@ -232,7 +228,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
          ';
    ```
 
-    **结果**
+    结果
 
     ```text
     My name is Fred and my birthday is Sunday, June 14, 2020.
