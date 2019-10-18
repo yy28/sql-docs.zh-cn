@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f7790c133ae9f686f2551de8744c6836ffc8ae25
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: cffb1bcf353932183703f810c876b6adacaa7bbf
+ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342027"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72359533"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什么是 @no__t？
+# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-从 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 开始，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 允许部署在 Kubernetes 上运行的 SQL Server、Spark 和 HDFS 容器的可缩放群集。 这些组件并行运行以确保可读取、写入和处理 Transact-SQL 或 Spark 中的大数据，这样你就可以借助大量大数据轻松合并并分析高价值关系数据。
+从 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 开始，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 使你可以部署在 Kubernetes 上运行的 SQL Server、Spark 和 HDFS 容器的可缩放群集。 这些组件并行运行以确保可读取、写入和处理 Transact-SQL 或 Spark 中的大数据，这样你就可以借助大量大数据轻松合并并分析高价值关系数据。
 
 有关最新版本的新功能和已知问题的详细信息，请参阅[发行说明](release-notes-big-data-cluster.md)。
 
@@ -28,7 +28,7 @@ ms.locfileid: "71342027"
 
 ## <a name="scenarios"></a>方案
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 使你可以灵活地处理大数据。 可查询外部数据源，存储通过 SQL Server 管理的 HDFS 中的大数据，或通过群集查询来自多个外部数据源的数据。 然后，可以将数据用于 AI，机器学习和其他分析任务。 下列各部分提供了有关这些方案的详细信息。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 在如何与大数据交互方面提供了灵活性。 可查询外部数据源，存储通过 SQL Server 管理的 HDFS 中的大数据，或通过群集查询来自多个外部数据源的数据。 然后，可以将数据用于 AI，机器学习和其他分析任务。 下列各部分提供了有关这些方案的详细信息。
 
 ### <a name="data-virtualization"></a>数据虚拟化
 
@@ -44,13 +44,13 @@ SQL Server 大数据群集包括可缩放的 HDFS 存储池。 这可用于存�
 
 ### <a name="scale-out-data-mart"></a>横向扩展数据市场
 
-@no__t 提供了向外扩展计算和存储，以提高分析任何数据的性能。 来自各种源的数据可作为缓存跨数据池节点进行引入和分布以供进一步分析。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 提供了向外扩展计算和存储，以提高分析任何数据的性能。 来自各种源的数据可作为缓存跨数据池节点进行引入和分布以供进一步分析。
 
 ![数据市场](media/big-data-cluster-overview/data-mart.png)
 
 ### <a name="integrated-ai-and-machine-learning"></a>集成的 AI 和机器学习
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可对 HDFS 存储池中存储的数据和数据池中的数据启用 AI 和机器学习任务。 使用 R、Python、Scala 或者 Java，可在 SQL Server 中使用 Spark 以及内置的 AI 工具。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 在 HDFS 存储池中存储的数据和数据池中启用 AI 和机器学习任务。 使用 R、Python、Scala 或者 Java，可在 SQL Server 中使用 Spark 以及内置的 AI 工具。
 
 ![AI 和 ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
@@ -80,7 +80,7 @@ Kubernetes 是一个开放源代码容器业务流程协调程序，可以根据
 | **Pod** | Pod 是 Kubernetes 的原子部署单元。 Pod 是运行应用程序所需的一个或多个容器和相关资源的逻辑组。 一个 Pod 只能在一个节点上运行；一个节点可以运行一个或多个 Pod。 Kubernetes 主节点自动将 Pod 分配给群集中的其余节点。 |
 | &nbsp; ||
 
-在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 中，Kubernetes 负责 @no__t 的状态;Kubernetes 构建和配置群集节点，将 pod 分配给节点，并监视群集的运行状况。
+在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 中，Kubernetes 负责 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的状态;Kubernetes 构建和配置群集节点，将 pod 分配给节点，并监视群集的运行状况。
 
 ### <a name="big-data-clusters-architecture"></a>大数据群集体系结构
 
@@ -90,7 +90,7 @@ Kubernetes 是一个开放源代码容器业务流程协调程序，可以根据
 
 ### <a id="controlplane"></a>控制器
 
-控制器为群集提供管理和安全性。 它包含控制服务、配置存储和其他群集级服务，例如 Kibana、Grafana 和 Elastic Search。
+控制器为群集提供管理和安全性。 它包含控制服务、配置存储和其他群集级服务，例如 Kibana、Grafana 和弹性搜索。
 
 ### <a id="computeplane"></a> 计算池
 
@@ -105,7 +105,7 @@ Kubernetes 是一个开放源代码容器业务流程协调程序，可以根据
 存储池由 Linux 上的 SQL Server、Spark 和 HDFS 组成的存储池 Pod 组成。 SQL Server 大数据群集中的所有存储节点都是 HDFS 群集的成员。
 
 > [!TIP]
-> 如需深入了解大数据群集体系结构和安装，请参阅[研讨会：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 体系结构 @ no__t。
+> 若要深入了解大数据群集体系结构和安装，请参阅[研讨会： Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)。
 
 ## <a name="next-steps"></a>后续步骤
 
