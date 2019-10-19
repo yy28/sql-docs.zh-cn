@@ -21,14 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1fe1521f2eebaa4413b49c315f17a6b1b6a5914
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68887938"
 ---
 # <a name="dimension-relationships"></a>维度关系
-  维度用法定义了多维数据集维度与多维数据集中的度量值组之间的关系。 多维数据集维度是在特定多维数据集中使用的数据库维度的实例。 多维数据集可以（并且通常）具有与度量值组不直接相关的多维数据集维度，但是这些维度可以通过另一个维度或度量值组与某度量值组间接相关。 向多维数据集添加数据库维度或度量值组时， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]将尝试通过检查多维数据集的数据源视图中的维度表和事实数据表之间的关系，并检查维度中的属性之间的关系。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可自动为其所检测到的关系设置维度用法设置。  
+  维度用法定义了多维数据集维度与多维数据集中的度量值组之间的关系。 多维数据集维度是在特定多维数据集中使用的数据库维度的实例。 多维数据集可以（并且通常）具有与度量值组不直接相关的多维数据集维度，但是这些维度可以通过另一个维度或度量值组与某度量值组间接相关。 向多维数据集添加数据库维度或度量值组时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 尝试通过检查多维数据集的数据源视图中的维度表和事实数据表之间的关系，并检查关系来确定维度用法维度中的属性之间。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可自动为其所检测到的关系设置维度用法设置。  
   
  维度与度量值组之间的关系包括参与该关系的维度和事实数据表以及一个指定特定度量值组中维度粒度的粒度属性。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68887938"
  有关引用关系的详细信息，请参阅[定义引用的关系和引用的关系属性](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
   
 ## <a name="fact-dimension-relationships"></a>事实维度关系  
- 事实维度（通常称为退化维度）是通过事实数据表而非维度表中的属性列构造的标准维度。 有用的维度数据有时存储在事实数据表中以减少重复。 例如，下面的关系图显示了 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]示例数据库中的 FactResellerSales 事实数据表。  
+ 事实维度（通常称为退化维度）是通过事实数据表而非维度表中的属性列构造的标准维度。 有用的维度数据有时存储在事实数据表中以减少重复。 例如，下面的关系图显示了 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 示例数据库中的**FactResellerSales**事实数据表。  
   
  ![事实数据表中的列可以支持维度](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-factdim.gif "事实数据表中的列可以支持维度")  
   
@@ -76,14 +76,14 @@ ms.locfileid: "68887938"
   
  ![逻辑架构/多对多维度关系](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-many-dimension1.gif "逻辑架构/多对多维度关系")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]允许您在维度和事实数据表之间定义多对多关系。  
+ 利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您可以定义维度和事实数据表之间的多对多关系。  
   
 > [!NOTE]  
 >  为了支持多对多维度关系，数据源视图必须在所涉及的所有表之间建立外键关系，如上面的关系图所示。 否则，在维度设计器的 "**维度用法**" 选项卡中建立关系时，将无法选择正确的中间度量值组。  
   
  有关多对多关系的详细信息，请参阅[定义多对多关系和多对多关系属性](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [维度（Analysis Services - 多维数据）](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

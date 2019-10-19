@@ -17,14 +17,14 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68811036"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  内存中列存储索引通过使用基于列的数据存储和基于列的查询处理来存储和管理数据。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列存储索引适合于主要执行大容量加载和只读查询的数据仓库工作负荷。 与传统面向行的存储方式相比，使用列存储索引存档可最多提高 **10 倍查询性能** ，与使用非压缩数据大小相比，可提供多达 **7 倍数据压缩率** 。  
+  @No__t_0*内存中*列存储索引通过使用基于列的数据存储和基于列的查询处理来存储和管理数据。 列存储索引适合于主要执行大容量加载和只读查询的数据仓库工作负荷。 与传统面向行的存储方式相比，使用列存储索引存档可最多提高 **10 倍查询性能**，与使用非压缩数据大小相比，可提供多达 **7 倍数据压缩率**。  
   
 > [!NOTE]  
 >  我们将聚集列存储索引视为存储大型数据仓库事实表的标准，希望它可在大多数数据仓库方案中使用。 由于聚集列存储索引是可更新的，因此工作负荷可执行大量插入、更新和删除操作。  
@@ -42,7 +42,7 @@ ms.locfileid: "68811036"
 ##  <a name="basics"></a> 基础知识  
  *columnstore index* 是使用列式数据格式（称为列存储）存储、检索和管理数据的技术。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。  
   
-###  <a name="benefits"></a> 优势  
+###  <a name="benefits"></a> 优点  
  列存储索引适合于对大型数据集执行分析的大多数只读查询。 通常，列存储索引是针对数据仓库工作负荷的查询。 列存储索引为使用全表扫描的查询带来很大的性能好处，但不适合于查找数据并且搜索特定值的查询。  
   
  列存储索引的优点：  
@@ -90,7 +90,7 @@ ms.locfileid: "68811036"
   
 -   需要附加的存储空间以存储索引中列的副本。  
   
--   通过重新生成索引或者切入和切出分区进行更新。不可以使用 DML 操作（例如插入、更新和删除）进行更新。  
+-   通过重新生成索引或切换入和移出分区来进行更新。不能使用 DML 操作（如 insert、update 和 delete）对其进行更新。  
   
 -   可以与表中的其他索引结合使用。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "68811036"
   
 -   每个列段一起压缩并且存储于物理介质上。  
   
- ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+ ![列段](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "列段")  
   
  非聚集列存储索引  
  *非聚集列存储索引*是在现有聚集索引或堆表上创建的只读索引。 它包含列子集的副本，最高可包含表中的所有列。 如果表包含非聚集列存储索引，则该表为只读。  
@@ -137,7 +137,7 @@ ms.locfileid: "68811036"
  聚集列存储索引  
  *聚集列存储索引*是整个表的物理存储，是该表的唯一索引。 聚集索引不可更新。 您可以对索引执行插入、删除和更新操作，并且可以将数据大容量加载到索引中。  
   
- ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
+ ![聚集列存储索引](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "聚集列存储索引")  
   
  若要减少列段的碎片和改进性能，列存储索引可能会将一些数据暂时存储于称作增量存储的行存储表中，同时还存储针对已删除行的 ID 的 B 树。 增量存储操作在后台处理。 若要返回正确的查询结果，聚集列存储索引将合并来自列存储和增量存储的查询结果。  
   
@@ -155,12 +155,12 @@ ms.locfileid: "68811036"
   
  ![将数据加载到列存储索引](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "将数据加载到列存储索引")  
   
- 具有非聚集列存储索引的表在该索引被删除或禁用前是只读的。 若要更新该表和非聚集列存储索引，您可以切入和切出分区。也可以禁用该索引，更新该表，然后重新生成该索引。  
+ 具有非聚集列存储索引的表在该索引被删除或禁用前是只读的。 若要更新表和非聚集列存储索引，您可以切换入和移出分区。您还可以禁用该索引，更新该表，然后重新生成索引。  
   
  有关详细信息，请参阅 [Using Nonclustered Columnstore Indexes](indexes.md)。  
   
 ###  <a name="dataload_cci"></a>将数据加载到聚集列存储索引  
- ![加载到聚集列存储索引](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "加载到聚集列存储索引")  
+ ![加载到聚集列存储索引中](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "加载到聚集列存储索引中")  
   
  按图中所建议的那样，为了将数据加载到聚集列存储索引， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
   
@@ -207,7 +207,7 @@ ms.locfileid: "68811036"
 ### <a name="clustered-columnstore-indexes"></a>聚集列存储索引  
  对于常见任务，请参阅 [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)。  
   
--   [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [CREATE 聚集列存储&#40;索引 transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
 -   [ALTER INDEX &#40;transact-sql&#41; ](/sql/t-sql/statements/alter-index-transact-sql) ，重新生成或重新组织。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68811036"
   
 -   [DELETE (Transact-SQL)](/sql/t-sql/statements/delete-transact-sql)  
   
-### <a name="metadata"></a>元数据  
+### <a name="metadata"></a>“浏览器”  
  列存储索引中的所有列在元数据中作为包含性列存储。 列存储索引中没有任何键列。  
   
 -   [sys.indexes (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  
