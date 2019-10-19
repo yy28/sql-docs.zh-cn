@@ -1,6 +1,6 @@
 ---
-title: 确定适当的 Azure SQL 数据库 SKU 的本地数据库 （数据迁移助手） |Microsoft Docs
-description: 了解如何使用数据迁移助手来识别你的本地数据库的权限 Azure SQL 数据库 SKU
+title: 确定适用于你的本地数据库的 Azure SQL 数据库 SKU （数据迁移助手） |Microsoft Docs
+description: 了解如何使用数据迁移助手为本地数据库标识正确的 Azure SQL 数据库 SKU
 ms.custom: ''
 ms.date: 05/06/2019
 ms.prod: sql
@@ -14,55 +14,55 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-ms.openlocfilehash: 7d87df240d4b83e53ef8f670609d2c896df7fe62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054669"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586739"
 ---
-# <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>标识你的本地数据库的权限 Azure SQL 数据库/托管实例 SKU
+# <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>确定本地数据库的正确的 Azure SQL 数据库/托管实例 SKU
 
-将数据库迁移到云中可能十分复杂，尤其是在尝试为数据库选择最佳的 Azure 数据库目标和 SKU。 我们的目标与数据库迁移助手 (DMA) 是可帮助解决这些问题，使体验更轻松通过提供用户友好输出这些 SKU 建议将数据库迁移。
+将数据库迁移到云可能会很复杂，尤其是在尝试为数据库选择最佳的 Azure 数据库目标和 SKU 时。 数据库迁移助手（DMA）的目标是通过在用户友好的输出中提供这些 SKU 建议，来帮助解决这些问题，并使你的数据库迁移体验更简单。
 
-本文重点介绍 DMA 的 Azure SQL 数据库 SKU 的建议功能。 Azure SQL 数据库具有多个部署选项，包括：
+本文重点介绍 DMA 的 Azure SQL 数据库 SKU 建议功能。 Azure SQL 数据库具有多个部署选项，包括：
 
 - 单一数据库
 - 弹性池
-- 托管的实例
+- 托管实例
 
-功能可用于确定这两个建议的 Azure SQL 数据库单一数据库的最小 SKU 建议或 SKU 基于从托管数据库的计算机收集性能计数器的托管的实例。 该功能提供了与定价层、 计算级别和最大数据大小，以及每月预计的成本相关的建议。 它还提供对大容量预配单一数据库和 Azure 中的所有建议的数据库的托管的实例的功能。
+使用 SKU 建议功能，可以根据从承载数据库的计算机收集的性能计数器，确定最小建议的 Azure SQL 数据库单一数据库或托管实例 SKU。 此功能提供与定价层、计算级别和最大数据大小相关的建议，以及每个月的预估成本。 它还提供在 Azure 中为所有推荐的数据库批量预配单一数据库和托管实例的功能。
 
 > [!NOTE]
-> 此功能目前仅通过命令行接口 (CLI)。
+> 目前只能通过命令行接口（CLI）使用此功能。
 
-以下是帮助您确定 Azure SQL 数据库 SKU 建议和预配相应的单一数据库或在 Azure 中使用 DMA 的托管的实例的说明。
+以下说明可帮助你在 Azure 中使用 DMA 来确定 Azure SQL 数据库 SKU 建议并设置相应的单一数据库或托管实例。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>必备条件
 
-- 下载并安装最新版[DMA](https://aka.ms/get-dma)。 如果已经有该工具的早期版本中，打开它，并将提示您升级 DMA。
-- 请确保您的计算机具有[PowerShell 版本 5.1](https://www.microsoft.com/download/details.aspx?id=54616)或更高版本，需要运行所有脚本。 有关 findoug 的您的计算机安装的 PowerShell 版本的信息，请参阅文章[下载并安装 Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)。
-- 请确保您的计算机具有安装 Azure Powershell 模块。 有关详细信息，请参阅文章[安装 Azure PowerShell 模块](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0)。
-- 验证 PowerShell 文件**SkuRecommendationDataCollectionScript.ps1**，需要收集的性能计数器，DMA 文件夹中安装。
-- 请确保将其执行此过程的计算机具有到托管数据库的计算机的管理员权限。
+- 下载并安装最新版本的[DMA](https://aka.ms/get-dma)。 如果你已经具有该工具的早期版本，请将其打开，系统会提示你升级 DMA。
+- 确保你的计算机具有[PowerShell 版本 5.1](https://www.microsoft.com/download/details.aspx?id=54616)或更高版本，以便运行所有脚本。 有关 findoug 安装在计算机上的 PowerShell 版本的信息，请参阅[下载并安装 Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)一文。
+- 确保计算机上已安装 Azure Powershell 模块。 有关详细信息，请参阅[安装 Azure PowerShell 模块](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0)一文。
+- 验证是否已将收集性能计数器所需的 PowerShell 文件**SkuRecommendationDataCollectionScript**安装在 DMA 文件夹中。
+- 确保你要在其上执行此过程的计算机对承载数据库的计算机具有管理员权限。
 
 ## <a name="collect-performance-counters"></a>收集性能计数器
 
-该过程的第一步是收集有关你数据库的性能计数器。 可以通过在承载您的数据库的计算机上运行 PowerShell 命令收集性能计数器。 DMA 为您提供一份此 PowerShell 文件，但也可以使用您自己的方法来从您的计算机捕获性能计数器。
+此过程的第一步是收集数据库的性能计数器。 可以通过在承载数据库的计算机上运行 PowerShell 命令来收集性能计数器。 DMA 提供此 PowerShell 文件的副本，但你也可以使用自己的方法来捕获计算机中的性能计数器。
 
-不需要单独为每个数据库执行此任务。 从计算机收集的性能计数器可以用于建议的计算机上承载的所有数据库的 SKU。
+不需要为每个数据库单独执行此任务。 从计算机收集的性能计数器可用于为计算机上托管的所有数据库推荐 SKU。
 
-1. 在 DMA 文件夹中，找到 PowerShell 文件 SkuRecommendationDataCollectionScript.ps1。 需要此文件以收集性能计数器。
+1. 在 DMA 文件夹中，找到 PowerShell 文件 SkuRecommendationDataCollectionScript。 收集性能计数器需要此文件。
 
-    ![DMA 文件夹中所示的 PowerShell 文件](../dma/media/dma-sku-recommend-data-collection-file.png)
+    ![DMA 文件夹中显示的 PowerShell 文件](../dma/media/dma-sku-recommend-data-collection-file.png)
 
-2. 使用以下参数运行 PowerShell 脚本：
-    - **ComputerName**:计算机承载数据库的名称。
-    - **OutputFilePath**:要保存所收集的计数器的输出文件路径。
-    - **CollectionTimeInSeconds**:在此期间你想要收集性能计数器数据的时间量。 捕获性能计数器至少 40 分钟，以便获取有意义的建议。 捕获，期越长越准确建议将。 此外请确保工作负荷在运行所需的数据库，以便更准确的建议。
-    - **DbConnectionString**:指向要从中收集性能计数器数据的计算机上承载的 master 数据库连接字符串。
+2. 运行具有以下参数的 PowerShell 脚本：
+    - **ComputerName**：托管数据库的计算机的名称。
+    - **OutputFilePath**：用于保存所收集计数器的输出文件路径。
+    - **CollectionTimeInSeconds**：要收集性能计数器数据的时间量。 捕获至少40分钟的性能计数器，以获得有意义的建议。 捕获持续时间越长，建议的准确性就越多。 还要确保工作负荷正在为所需的数据库运行，以实现更准确的建议。
+    - **DbConnectionString**：指向要从中收集性能计数器数据的计算机上承载的 master 数据库的连接字符串。
 
-    下面是示例调用：
+    下面是一个示例调用：
 
     ```
     .\SkuRecommendationDataCollectionScript.ps1
@@ -72,54 +72,54 @@ ms.locfileid: "68054669"
      -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
     ```
 
-    该命令执行后，该过程将输出文件包括到您指定的位置的性能计数器。 可以使用此文件作为输入的下一步部分的过程中，它将提供 SKU 建议为单一数据库和托管的实例选项。
+    执行命令后，进程会将包含性能计数器的文件输出到指定的位置。 您可以使用此文件作为过程下一部分的输入，这将为单数据库和托管实例选项提供 SKU 建议。
 
-## <a name="use-the-dma-cli-to-get-sku-recommendations"></a>使用 DMA CLI 来获取 SKU 建议
+## <a name="use-the-dma-cli-to-get-sku-recommendations"></a>使用 DMA CLI 获取 SKU 建议
 
-使用性能计数器作为此过程的输入创建输出文件。
+使用为此进程创建的性能计数器输出文件作为输入。
 
-对于单一数据库选项，DMA 将提供您的计算机上的定价层、 计算级别和每个数据库的最大数据大小的 Azure SQL 数据库单一数据库的建议。 如果您的计算机上有多个数据库，还可以指定想为其建议的数据库。 DMA 将还为您提供每月估计成本为每个数据库。
+对于单一数据库选项，DMA 将为计算机上的每个数据库提供 Azure SQL 数据库单一数据库定价层、计算级别和最大数据大小的建议。 如果你的计算机上有多个数据库，则还可以指定你想要获取其建议的数据库。 DMA 还将为您提供每个数据库的每月预估成本。
 
-对于托管实例，建议支持的提升和转移方案。 因此，DMA 将您提供有关您的计算机上的定价层、 计算级别和组数据库的最大数据大小的 Azure SQL 数据库托管实例的建议。 同样，如果您的计算机上有多个数据库，还可以指定想为其建议的数据库。 DMA 将还为你每月估计成本与托管实例。
+对于托管实例，建议支持提升和移动方案。 因此，DMA 将为你提供有关 Azure SQL 数据库托管实例定价层、计算级别以及计算机上数据库集的最大数据大小的建议。 同样，如果你的计算机上有多个数据库，则还可以指定你想要获取其建议的数据库。 DMA 还将为你提供托管实例的每月预估成本。
 
-若要使用 DMA CLI 获取 SKU 的建议，在命令提示符处，运行 dmacmd.exe 使用以下参数：
+若要使用 DMA CLI 获取 SKU 建议，请在命令提示符下，使用以下参数运行 dmacmd：
 
-- **/ 操作 = SkuRecommendation**:输入此参数，以执行 SKU 评估。
-- **/ SkuRecommendationInputDataFilePath**:在上一节中收集计数器文件的路径。
-- **/ SkuRecommendationTsvOutputResultsFilePath**:要写入的输出结果以 TSV 格式的路径。
-- **/ SkuRecommendationJsonOutputResultsFilePath**:要以 JSON 格式写入输出结果的路径。
-- **/ SkuRecommendationHtmlResultsFilePath**:若要以 HTML 格式写入输出结果的路径。
+- **/Action = SkuRecommendation**：输入此参数以执行 SKU 评估。
+- **/SkuRecommendationInputDataFilePath**：在上一节中收集到的计数器文件的路径。
+- **/SkuRecommendationTsvOutputResultsFilePath**：用 TSV 格式写入输出结果的路径。
+- **/SkuRecommendationJsonOutputResultsFilePath**：以 JSON 格式写入输出结果的路径。
+- **/SkuRecommendationHtmlResultsFilePath**：用于以 HTML 格式写入输出结果的路径。
 
-此外，选择下列参数之一：
+此外，选择以下参数之一：
 
 - 防止价格刷新
-  - **/ SkuRecommendationPreventPriceRefresh**:如果设置为 True，防止发生价格刷新并且假定默认价格。 如果在脱机模式下运行，请使用此选项。 如果不使用此参数，则必须指定以下以获得最新价格基于指定的区域参数。
-- 获取最新的价格
-  - **/ SkuRecommendationCurrencyCode**:要在其中显示的价格 （例如货币"美元"）。
-  - **/ SkuRecommendationOfferName**:产品/服务命名 （例如"MS-条-0003 P")。 有关详细信息，请参阅[Microsoft Azure 产品/服务详细信息](https://azure.microsoft.com/support/legal/offer-details/)页。
-    - **/ SkuRecommendationRegionName**:区域名称 (例如，"WestUS")。
-    - **/ SkuRecommendationSubscriptionId**:订阅的 ID。
-    - **/ AzureAuthenticationTenantId**:身份验证租户中。
-    - **/ AzureAuthenticationClientId**:用于身份验证的 AAD 应用客户端 ID。
+  - **/SkuRecommendationPreventPriceRefresh**：如果设置为 True，则防止发生价格刷新，并假定默认价格。 如果在脱机模式下运行，则使用。 如果不使用此参数，则必须指定以下参数以获取基于指定区域的最新价格。
+- 获取最新价格
+  - **/SkuRecommendationCurrencyCode**：显示价格的货币（例如 "USD"）。
+  - **/SkuRecommendationOfferName**：产品/服务名称（例如，"Bc-op-nt-azr-ms-azr-0003p"）。 有关详细信息，请参阅[Microsoft Azure 产品/服务详细](https://azure.microsoft.com/support/legal/offer-details/)信息页。
+    - **/SkuRecommendationRegionName**：区域名称（例如，"WestUS"）。
+    - **/SkuRecommendationSubscriptionId**：订阅 ID。
+    - **/AzureAuthenticationTenantId**：身份验证租户。
+    - **/AzureAuthenticationClientId**：用于身份验证的 AAD 应用的客户端 ID。
     - 以下身份验证选项之一：
       - 交互
-        - **AzureAuthenticationInteractiveAuthentication**:设置为 true 的身份验证弹出窗口。
+        - **AzureAuthenticationInteractiveAuthentication**：对于身份验证弹出窗口，将设置为 true。
       - 基于证书
-        - **AzureAuthenticationCertificateStoreLocation**:将设置为证书存储位置 (例如，"CurrentUser")。
-        - **AzureAuthenticationCertificateThumbprint**:将设置为证书指纹。
+        - **AzureAuthenticationCertificateStoreLocation**：设置为证书存储位置（例如，"CurrentUser"）。
+        - **AzureAuthenticationCertificateThumbprint**：设置为证书指纹。
       - 基于令牌
-        - **AzureAuthenticationToken**:将设置为证书令牌。
+        - **AzureAuthenticationToken**：设置为证书标记。
 
 > [!NOTE]
-> 若要获取的 ClientId 和 TenantId 进行交互式身份验证，您需要配置一个新的 AAD 应用程序。 有关详细信息身份验证和一文中获取这些凭据[Microsoft Azure 计费 API 代码示例：RateCard API](https://azure.microsoft.com/resources/samples/billing-python-ratecard-api/)，请按照下面的说明**步骤 1:在你的 AAD 租户中配置本机客户端应用程序**。
+> 若要获取 ClientId 和 TenantId 以便进行交互式身份验证，需要配置新的 AAD 应用程序。 有关身份验证和获取这些凭据的详细信息，请[参阅 Microsoft Azure 计费 Api 代码示例： RATECARD api](https://github.com/Azure-Samples/billing-dotnet-ratecard-api)中的**步骤1：配置 AAD 租户中的本机客户端应用程序中**的说明。
 
-最后，还有一个可选参数，可用于指定想为其建议的数据库： 
+最后，有一个可选参数，可用于指定要获取其建议的数据库： 
 
-- **/ SkuRecommendationDatabasesToRecommend**:要为其提供建议的数据库的列表。 输入.csv 中找到的数据库名称区分大小写，并且必须 (1)、 （2） 每个将括在双引号、 和 （3） 每个名称之间存在单个空格分隔 (例如 /SkuRecommendationDatabasesToRecommend ="Database1""数据库 2""Database3"). 忽略此参数确保为.csv 输入的文件中标识的所有用户数据库提供的建议。  
+- **/SkuRecommendationDatabasesToRecommend**：为其提出建议的数据库列表。 数据库名称区分大小写，并且必须（1）在输入 .csv 中找到，（2）每个都用双引号括起来，（3）每个名称之间用一个空格分隔（例如，/SkuRecommendationDatabasesToRecommend = "Database1" "Database2" "Database3"）. 省略此参数可确保为输入 .csv 文件中标识的所有用户数据库提供建议。  
 
-以下是一些示例调用：
+下面是一些示例调用：
 
-**示例 1:获取与默认的价格的建议。使用在脱机模式下运行时或您没有所需身份验证凭据。**
+**示例1：获取具有默认价格的建议。在脱机模式下运行或没有身份验证凭据时使用。**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -130,7 +130,7 @@ ms.locfileid: "68054669"
 /SkuRecommendationPreventPriceRefresh=true
 ```
 
-**示例 2:获取指定的区域 （例如，"ukwest") 与最新的价格的建议。**
+**示例2：获取指定区域最新价格的建议（例如 "UKWest"）。**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -147,7 +147,7 @@ ms.locfileid: "68054669"
 /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 ```
 
-**示例 3:获取为特定数据库的建议 （例如"TPCDS1G，EDW_3G，TPCDS10G")。**
+**示例3：获取特定数据库的建议（例如 "TPCDS1G，EDW_3G，TPCDS10G"）。**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation 
@@ -165,76 +165,76 @@ ms.locfileid: "68054669"
 /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 ```
 
-有关单一数据库的建议，TSV 输出文件看起来，如下所示：
+对于单一数据库建议，TSV 输出文件将如下所示：
 
-![DMA 文件夹中所示的 PowerShell 单数据库文件](../dma/media/dma-sku-recommend-single-db-recommendations.png)
+![DMA 文件夹中显示的 PowerShell 单一 db 文件](../dma/media/dma-sku-recommend-single-db-recommendations.png)
 
-有关托管的实例的建议，TSV 输出文件看起来，如下所示：
+对于托管实例建议，TSV 输出文件将如下所示：
 
-![DMA 文件夹中所示的 PowerShell 托管的实例文件](../dma/media/dma-sku-recommend-mi-recommendations.png)
+![DMA 文件夹中显示的 PowerShell 托管实例文件](../dma/media/dma-sku-recommend-mi-recommendations.png)
 
-后面的输出文件中每个列说明。
+下面是输出文件中每一列的说明。
 
 - **DatabaseName** -数据库的名称。
-- **MetricType** -建议使用 Azure SQL 数据库单一数据库/托管实例层。
-- **MetricValue** -建议使用 Azure SQL 数据库单一数据库/托管实例 SKU。
-- **PricePerMonth** – 对于相应的 SKU，每月估计的价格。
-- **RegionName** – 相应 SKU 的区域名称。 
-- **IsTierRecommended** -我们使每个层的最小 SKU 建议。 我们然后应用试探法来确定您的数据库的适当层。 这反映了数据库，建议的层。 
-- **ExclusionReasons** -此值为空白，如果一个层建议。 不建议将每个层，我们提供为什么它不选取的原因。
-- **AppliedRules** -已应用的规则的简短表示法。
+- **MetricType** -建议的 Azure SQL 数据库单一数据库/托管实例层。
+- **MetricValue** -建议的 Azure SQL 数据库单一数据库/托管实例 SKU。
+- **PricePerMonth** –对应 SKU 的每月估计价格。
+- **RegionName** –相应 SKU 的区域名称。 
+- **IsTierRecommended** -我们为每个层提供最低的 SKU 建议。 然后，应用试探法来确定数据库的正确层。 这会反映为数据库建议的层。 
+- **ExclusionReasons** -如果建议使用层，则此值为空。 对于不推荐的每个层，我们提供未选择它的原因。
+- **AppliedRules** -所应用规则的简短表示法。
 
-最终的建议的层 (即**MetricType**) 和值 (即**MetricValue**) 的位置找到**IsTierRecommended**列是 TRUE-反映了最小 SKU所需的查询以在 Azure 中运行使用类似于你的本地数据库的成功率。 对于托管实例，DMA 目前支持为 40vcore Sku 最常使用 8vcore 的建议。 例如，如果建议的最小 SKU 适用于标准层 S4 然后选择 S3 或下面将会导致查询超时或无法执行。
+最终建议的层（即**MetricType**）和值（即**MetricValue**）-如果**IsTierRecommended**列为 TRUE，则会在 Azure 中运行查询所需的最小 SKU，其成功率类似于本地数据库。 对于托管实例，DMA 目前支持最常用的8vcore 到 40vcore Sku 的建议。 例如，如果建议的最低 SKU 为标准层的 S4，则选择 "S3" 或以下将导致查询超时或执行失败。
 
-HTML 文件包含此信息以图形格式。 它提供了一种用户友好查看最终的建议和预配过程的下一步的一部分。 下一节中的 HTML 输出的详细信息。
+HTML 文件以图形格式包含这些信息。 它提供了一个用户友好的方法，用于查看最终建议并预配过程的下一部分。 有关 HTML 输出的详细信息，请在以下部分中进行。
 
-## <a name="provision-recommended-skus-to-azure"></a>预配到 Azure 中建议的 Sku
+## <a name="provision-recommended-skus-to-azure"></a>将推荐的 Sku 预配到 Azure
 
-只需几次单击，可以使用预配目标 Sku 中你可以将数据库迁移到 Azure 中的标识的建议。 可以使用 HTML 文件输入 Azure 订阅;选取定价层、 计算级别和最大数据大小的数据库;并生成一个脚本来预配数据库。 您可以执行此脚本使用 PowerShell。
+只需单击几下，即可使用标识的建议在 Azure 中预配目标 Sku，你可以将数据库迁移到该目标 Sku。 可以使用 HTML 文件输入 Azure 订阅;选择数据库的定价层、计算级别和最大数据大小;并生成用于设置数据库的脚本。 可以使用 PowerShell 执行此脚本。
 
-你可以在单台计算机上执行此过程，或可以确定在规模较大的 SKU 建议多台计算机上执行它。 DMA 目前可以简单且可缩放体验通过支持通过命令行界面的整个过程。
+可以在一台计算机上执行此过程，也可以在多台计算机上执行此过程，以确定大规模的 SKU 建议。 DMA 目前通过命令行界面支持整个过程，使其成为简单且可扩展的体验。
 
-若要输入预配信息并对建议进行更改，请按如下所示更新 HTML 文件。
+若要输入设置信息并对建议进行更改，请按如下所示更新 HTML 文件。
 
-**有关单一数据库的建议**
+**对于单一数据库建议**
 
 ![Azure SQL DB SKU 建议屏幕](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
 
-1. 打开 HTML 文件并输入以下信息：
-    - **订阅 ID** -你想要预配数据库的 Azure 订阅的订阅 ID。
-    - **资源组**-你想要将数据库部署的资源组。 输入存在的资源组。
-    - **区域**-在其中设置数据库的区域。 请确保你的订阅支持选择的区域。
-    - **服务器名称**-要部署的数据库的 Azure SQL 数据库服务器。 如果输入不存在的服务器名称，将创建它。
+1. 打开 HTML 文件，并输入以下信息：
+    - **订阅 id** -要预配数据库的 Azure 订阅的订阅 id。
+    - **资源组**-要将数据库部署到的资源组。 输入存在的资源组。
+    - **区域**-在其中预配数据库的区域。 请确保订阅支持选择区域。
+    - **服务器名称**-要将数据库部署到的 Azure SQL 数据库服务器。 如果输入的服务器名称不存在，则将创建该服务器名称。
     - **管理员用户名**-服务器管理员用户名。
-    - **管理员密码**-服务器管理员密码。 密码必须至少为八个字符且长度不能超过 128 个字符。 密码必须含以下类别中的三类 – 英文大写字母、 英文小写字母、 数字 (0-9) 和非字母数字字符 (！、 $、 #、 %等。)。 密码不能包含全部或部分 （3 + 连续字母） 从用户名。
+    - **管理员密码**-服务器管理员密码。 密码长度必须至少为八个字符，且长度不能超过128个字符。 密码必须包含以下类别中的三类：英文大写字母、英文小写字母、数字（0-9）以及非字母数字字符（！、$、#、% 等）。 密码不能包含用户名中的全部或部分（3 + 连续字母）。
 
-2. 查看每个数据库的建议和修改的定价层、 计算级别，并根据需要的最大数据大小。 请务必取消选中当前不预配到希望的任何数据库。
+2. 查看每个数据库的建议，并根据需要修改定价层、计算级别和最大数据大小。 请确保取消选择当前不想预配的任何数据库。
 
-3. 选择**生成预配脚本**和保存该脚本，然后在 PowerShell 中执行。
+3. 选择 "**生成设置脚本**"，保存脚本，然后在 PowerShell 中执行它。
 
-    此过程应创建 HTML 页中选择的所有数据库。
+    此过程应创建您在 HTML 页中选择的所有数据库。
 
-**有关托管的实例的建议**
+**对于托管实例建议**
 
 ![Azure SQL MI SKU 建议屏幕](../dma/media/dma-sku-recommend-mi-recommendations1.png)
 
-1. 打开 HTML 文件并输入以下信息：
-    - **订阅 ID** -你想要预配数据库的 Azure 订阅的订阅 ID。
-    - **资源组**-你想要将数据库部署的资源组。 输入存在的资源组。
-    - **区域**-在其中设置数据库的区域。 请确保你的订阅支持选择的区域。
-    - **实例名称**– Azure SQL 托管实例你想要迁移的数据库的实例。 实例名称可以包含仅小写字母、 数字和-，但它不能开始或结尾-或具有超过 63 个字符。
-    - **实例管理员用户名**– 实例管理员用户名。 请确保您的登录名满足以下要求-它是 SQL 标识符和不典型系统名称 （如管理员、 管理员、 sa、 根、 dbmanager、 loginmanager 等），或内置数据库用户或角色 （如 dbo、 guest、 public 等）。 请确保你的名称不包含空格、 Unicode 字符或非字母字符，并且它不以数字或符号开头。 
-    - **实例管理员密码**-实例管理员密码。 你的密码必须至少 16 个字符且长度不能超过 128 个字符。 密码必须含以下类别中的三类 – 英文大写字母、 英文小写字母、 数字 (0-9) 和非字母数字字符 (！、 $、 #、 %等。)。 密码不能包含全部或部分 （3 + 连续字母） 从用户名。
-    - **Vnet 名称**– 应在其下预配的托管的实例 VNet 名称。 输入现有的 VNet 名称。
-    - **子网名称**– 应在其下预配的托管的实例的子网名称。 输入现有的子网名称。
+1. 打开 HTML 文件，并输入以下信息：
+    - **订阅 id** -要预配数据库的 Azure 订阅的订阅 id。
+    - **资源组**-要将数据库部署到的资源组。 输入存在的资源组。
+    - **区域**-在其中预配数据库的区域。 请确保订阅支持选择区域。
+    - **实例名称**–要将数据库迁移到的 Azure SQL 托管实例的实例。 实例名称只能包含小写字母、数字和 "-"，但不能以 "-" 开头或结尾，也不能超过63个字符。
+    - **实例管理员用户名**–实例管理员用户名。 请确保登录名满足以下要求-它是 SQL 标识符，不是典型的系统名称（例如 admin、administrator、sa、root、dbmanager、loginmanager 等），也不是内置数据库用户或角色（如 dbo、guest、public 等）。 请确保名称中不包含空格、Unicode 字符或非字母字符，并且不以数字或符号开头。 
+    - **实例管理员密码**-实例管理员密码。 密码长度必须至少为16个字符，且长度不能超过128个字符。 密码必须包含以下类别中的三类：英文大写字母、英文小写字母、数字（0-9）以及非字母数字字符（！、$、#、% 等）。 密码不能包含用户名中的全部或部分（3 + 连续字母）。
+    - **Vnet 名称**–应在其下预配托管实例的 vnet 名称。 输入现有的 VNet 名称。
+    - **子网名称**–应在其下预配托管实例的子网名称。 输入现有子网名称。
 
-2. 查看建议对于每个实例，并修改的定价层、 计算级别和最大数据大小根据需要。 目前仅限于为 40vcore Sku 8vcore 建议时，就仍有设置 64vcore 和 80vcore Sku，如果所需的选项。 请务必取消选中当前不预配到希望的任何实例。
+2. 查看每个实例的建议，并根据需要修改定价层、计算级别和最大数据大小。 尽管建议当前限制为8vcore 到 40vcore Sku，但仍有必要提供64vcore 和 80vcore Sku 的选项。 请确保取消选择当前不想预配的任何实例。
 
-    此过程应创建 HTML 页中选择的所有数据库。
+    此过程应创建您在 HTML 页中选择的所有数据库。
 
     > [!NOTE]
-    > （尤其是为第一次） 在子网上创建托管的实例可能需要几个小时才能完成。 通过 PowerShell 运行预配脚本后，可以检查在 Azure 门户中部署的状态。
+    > 在子网中创建托管实例（尤其是第一次）可能需要几个小时才能完成。 通过 PowerShell 运行预配脚本后，可以在 Azure 门户上检查部署的状态。
 
 ## <a name="next-step"></a>下一步
 
-- 用于从 CLI 运行 DMA 命令的完整列表，请参阅文章[运行数据迁移助手从命令行](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017)。
+- 有关从 CLI 运行 DMA 的命令的完整列表，请参阅[从命令行运行数据迁移助手](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017)一文。
