@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809954"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586756"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>有关 Linux 部署的 SQL Server 可用性基础知识
 
@@ -76,7 +76,7 @@ Samba 是服务器消息块 (SMB) 的 Linux 变体，也可用于创建由 UNC �
 
 也可以使用基于 Windows 的 SMB 共享；SMB 共享不需要基于 Linux，只要在托管 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Linux 服务器上正确配置 Samba 的客户端部分，且共享具有正确的访问权限。 对于混合环境中的用户，通过这种方法可利用基于 Linux 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署的现有基础结构。
 
-重要的一点是，部署的 Samba 版本应符合 SMB 3.0 标准。 在 [!INCLUDE[sssql11-md](../includes/sssql11-md.md)] 中添加 SMB 支持时，它需要所有共享支持 SMB 3.0。 如果使用 Samba 作为共享而不是 Windows Server，则基于 Samba 的共享应使用 Samba 4.0 或更高版本，理想情况下应使用支持 SMB 3.1.1 的 4.3 或更高版本。 有个 SMB 和 Linux 的信息，请参阅 [Samba 中的 SMB3](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)。
+重要的一点是，部署的 Samba 版本应符合 SMB 3.0 标准。 在 [!INCLUDE[sssql11-md](../includes/sssql11-md.md)] 中添加 SMB 支持时，它需要所有共享支持 SMB 3.0。 如果使用 Samba 作为共享而不是 Windows Server，则基于 Samba 的共享应使用 Samba 4.0 或更高版本，理想情况下应使用支持 SMB 3.1.1 的 4.3 或更高版本。 有个 SMB 和 Linux 的信息，请参阅 [Samba 中的 SMB3](https://events.static.linuxfound.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)。
 
 最后，可选择使用网络文件系统 (NFS) 共享。 在基于 Windows 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署中，无法使用 NFS，只能在基于 Linux 的部署中使用 NFS。
 

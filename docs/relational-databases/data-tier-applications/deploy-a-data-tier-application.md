@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 23201d2c05e9bdb5196319fba49955bb67afd29a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7dcb81e48ddd4861e3f89547280b372df4c56ec3
+ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134815"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72359536"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署数据层应用程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "68134815"
  “保存报表”  - 选择此按钮可以将部署报表保存到某一 HTML 文件。 该文件报告每个操作的状态，并且包括任何操作生成的所有错误。 默认文件夹是您的 Windows 帐户的 Documents 文件夹中的 SQL Server Management Studio\DAC Packages 文件夹。  
   
   
-##  <a name="deploy-a-dac-using-powershell"></a>使用 PowerShell 部署 DAC  
+##  <a name="using-powershell"></a>使用 PowerShell  
   
 1.  创建一个 SMO Server 对象，并将该对象设置为要将 DAC 部署到的实例。  
   
@@ -144,19 +144,18 @@ ms.locfileid: "68134815"
 6.  使用 **DacStore.Install** 方法部署 DAC。  
   
 7.  关闭用于读取 DAC 包文件的文件流。  
+
+下面的示例使用来自 MyApplication.dacpac 包的 DAC 定义，将名为 MyApplication 的 DAC 部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的默认实例。  
   
-## <a name="powershell-examples"></a>PowerShell 示例  
- 下面的示例使用来自 MyApplication.dacpac 包的 DAC 定义，将名为 MyApplication 的 DAC 部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的默认实例。  
-  
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$server = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
-$serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
-$serverconnection.Connect()  
-$dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
+$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($server.ConnectionContext.SqlConnectionObject)  
+$serverConnection.Connect()  
+$dacStore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverConnection)  
   
 ## Load the DAC package file.  
 $dacpacPath = "C:\MyDACs\MyApplication.dacpac"  
@@ -164,14 +163,14 @@ $fileStream = [System.IO.File]::Open($dacpacPath,[System.IO.FileMode]::OpenOrCre
 $dacType = [Microsoft.SqlServer.Management.Dac.DacType]::Load($fileStream)  
   
 ## Subscribe to the DAC deployment events.  
-$dacstore.add_DacActionStarted({Write-Host `n`nStarting at $(get-date) :: $_.Description})  
-$dacstore.add_DacActionFinished({Write-Host Completed at $(get-date) :: $_.Description})  
+$dacStore.add_DacActionStarted({Write-Host `n`nStarting at $(Get-Date) :: $_.Description})  
+$dacStore.add_DacActionFinished({Write-Host Completed at $(Get-Date) :: $_.Description})  
   
 ## Deploy the DAC and create the database.  
 $dacName  = "MyApplication"  
 $evaluateTSPolicy = $true  
-$deployProperties = New-Object Microsoft.SqlServer.Management.Dac.DatabaseDeploymentProperties($serverconnection,$dacName)  
-$dacstore.Install($dacType, $deployProperties, $evaluateTSPolicy)  
+$deployProperties = New-Object Microsoft.SqlServer.Management.Dac.DatabaseDeploymentProperties($serverConnection,$dacName)  
+$dacStore.Install($dacType, $deployProperties, $evaluateTSPolicy)  
 $fileStream.Close()  
 ```  
   

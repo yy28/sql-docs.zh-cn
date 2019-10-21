@@ -63,7 +63,7 @@ ms.locfileid: "72008467"
   
 -   从 [**评估中心**下载 SQL Server。](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 
   
--   加速已安装有 [SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) 的虚拟机。  
+-   加速已安装有 [SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) 的虚拟机  。  
   
 **以下注意事项适用于所有版本：**  
   
@@ -88,7 +88,7 @@ ms.locfileid: "72008467"
   
 |组件|要求|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 和更高版本需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 才能运行数据库引擎、Master Data Services 或复制。 SQL Server 安装程序自动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 还可以从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 适用于 Windows 的 Microsoft .NET Framework 4.6（Web 安装程序） [中手动安装](https://support.microsoft.com/kb/3045560)。<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] 需要安装 .NET Framework 4.6.2。 可从[下载中心](https://www.microsoft.com/download/details.aspx?id=53344)获取<br/><br/> 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 的详细信息、建议和指南，请参阅 [面向开发人员的 .NET Framework 部署指南](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)。<br/><br/>在安装[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]4.6 之前， [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] 和 [需要](https://support.microsoft.com/kb/2919355) KB2919355 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 和更高版本需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 才能运行数据库引擎、Master Data Services 或复制。 SQL Server 安装程序自动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 还可以从[适用于 Windows 的 Microsoft .NET Framework 4.6（Web 安装程序）](https://support.microsoft.com/kb/3045560)手动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] 需要安装 .NET Framework 4.6.2。 可从[下载中心](https://www.microsoft.com/download/details.aspx?id=53344)获取<br/><br/> 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 的详细信息、建议和指南，请参阅 [面向开发人员的 .NET Framework 部署指南](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)。<br/><br/>在安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 之前，[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 和 [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] 需要 [KB2919355](https://support.microsoft.com/kb/2919355)。|  
 |网络软件|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 支持的操作系统具有内置网络软件。 独立安装项的命名实例和默认实例支持以下网络协议：共享内存、命名管道、TCP/IP 和 VIA。<br/><br/> **注意：** 故障转移群集不支持 VIA 协议。 与 SQL Server 实例在同一故障转移群集节点上运行的客户端或应用程序可以使用 Shared Memory 协议，通过其本地管道地址连接到 SQL Server。 不过，这种连接无法感知群集，因此会在实例故障转移后无法连接。 因此，不建议使用这种连接，只能用于极个别的方案。<br/><br/> **重要提示：** 不推荐使用 VIA 协议。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> 有关网络协议和网络库的详细信息，请参阅 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)。|  
 |硬盘|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 要求最少 6 GB 的可用硬盘空间。<br/><br/> 磁盘空间要求将随所安装的 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 组件不同而发生变化。 有关详细信息，请参阅本文后面部分的[硬盘空间要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) 。 有关支持的数据文件存储类型的信息，请参阅 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)。|  
 |驱动器|从磁盘进行安装时需要相应的 DVD 驱动器。|  
@@ -99,7 +99,7 @@ ms.locfileid: "72008467"
 > 在虚拟机上运行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的速度要慢于在本机上运行，因为虚拟化有开销。  
   
 > [!IMPORTANT]
-> 对于 PolyBase 功能没有附加的硬件和软件要求。 有关详细信息，请参阅 [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md)。  
+> 对于 PolyBase 功能还有其他硬件和软件要求。 有关详细信息，请参阅 [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md)。  
   
 ##  <a name="pmosr"></a> 处理器、内存和操作系统要求  
  以下内存和处理器要求适用于所有版本的 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]：  
@@ -107,13 +107,13 @@ ms.locfileid: "72008467"
 |组件|要求|  
 |---------------|-----------------|  
 |内存\*|**最低要求：**<br/><br/> Express Edition：512 MB<br/><br/> 所有其他版本：1 GB<br/><br/> **建议：**<br/><br/> Express Edition：1 GB<br/><br/> 所有其他版本：至少 4 GB，并且应随着数据库大小的增加而增加来确保最佳性能。|  
-|处理器速度|最低要求：x64 处理器：1.4 GHz<br/><br/> **建议：** 2.0 GHz 或更快|  
+|处理器速度|最低要求：x64 处理器：  1.4 GHz<br/><br/> **建议：** 2.0 GHz 或更快|  
 |处理器类型|x64 处理器：AMD Opteron、AMD Athlon 64、支持 Intel EM64T 的 Intel Xeon，以及支持 EM64T 的 Intel Pentium IV|  
   
 > [!NOTE]  
 > 仅 x64 处理器支持 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的安装。 x86 处理器不再支持此安装。  
   
- \*内存至少必须有 2GB RAM，才能在 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 中安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 组件。此要求不同于 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的最低内存要求。 有关安装 DQS 的信息，请参阅 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)。  
+ \*内存至少必须有 2GB RAM，才能在[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 中安装[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]组件。此要求不同于 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的最低内存要求。 有关安装 DQS 的信息，请参阅 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)。  
   
  **WOW64 支持：**  
   
@@ -174,7 +174,7 @@ ms.locfileid: "72008467"
 下表显示了与各版本的 Windows 兼容的 SQL Server 2019 版本：  
   
 
-| SQL Server 版本：               | Enterprise | 开发人员 | Standard | Web | Express |  
+| SQL Server 版本：               | Enterprise | Developer | Standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2019 Standard      |    是     |    是    |    是   | 是 |   是   |
@@ -189,7 +189,7 @@ ms.locfileid: "72008467"
 
 下表显示了与各版本的 Windows 兼容的 SQL Server 2016 和 2017 版本：  
   
-| SQL Server 版本：               | Enterprise | 开发人员 | Standard | Web | Express |  
+| SQL Server 版本：               | Enterprise | Developer | Standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2019 Standard      |    是     |    是    |    是   | 是 |   是   |
@@ -219,7 +219,7 @@ ms.locfileid: "72008467"
 > 此部分中所述操作系统支持的例外情况是，以下适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更低版本的商业智能功能，可以在 Windows Server 2008 R2 SP1 或更高版本上安装它们：  
 >  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
->-   用于 SharePoint 产品的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序  
+>-   用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序  
 ::: moniker-end
 
 
@@ -241,7 +241,7 @@ ms.locfileid: "72008467"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|967 MB|  
 |[!INCLUDE[rsql_platform](../../includes/rsql-platform-md.md)] （独立）|280 MB|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint|1203 MB|  
-|用于 SharePoint 产品的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products|325 MB|  
+|用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序|325 MB|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|121 MB|  
 |客户端工具连接|328 MB|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|306 MB|  
@@ -273,7 +273,7 @@ ms.locfileid: "72008467"
 -   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装到计算机上之后，无法将此计算机从域成员更改为域控制器。 必须先卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然后才能将主机计算机更改为域控制器。    
 -   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装到计算机上之后，无法将此计算机从域控制器更改为域成员。 必须先卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然后才能将主机计算机更改为域成员。   
 -   在群集节点用作域控制器的情况下，不支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例。   
-- 只读域控制器不支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序不能在只读域控制器上创建安全组或设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 在这种情况下，安装将失败。 
+- 只读域控制器不支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序不能在只读域控制器上创建安全组或设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 在这种情况下，安装将失败。 
 
   > [!NOTE]
   > 此限制也适用于域成员节点上的安装。

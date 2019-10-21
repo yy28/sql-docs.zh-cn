@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 948604fbd548a2fb614fd4a671f512c4a4890d52
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
+ms.openlocfilehash: 58ae65590f99d7fc330adca7f1db1898b8874571
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72245575"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586730"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Microsoft SQL Server 的最新更新
 
@@ -26,7 +26,7 @@ ms.locfileid: "72245575"
 
 ### <a name="latest-updates"></a>最新更新
 
-以下每个链接提供此页的“适用对象”部分中列出的所有适用产品和技术的信息。
+以下每个链接提供此页的“适用对象”部分中列出的所有适用产品和技术的信息  。
 
 |产品版本   | 最新 Service Pack |  最新 GDR | 最新累积更新 | CU 发布日期 | 通用指南  |
 |--|--|--|--|--|--|
@@ -49,7 +49,7 @@ ms.locfileid: "72245575"
 |SQL Server 2005 |SP4 [(KB 2463332)](http://support.microsoft.com/kb/2463332)|空值|空值|空值|[SQL Server 2005 安装](https://msdn.microsoft.com/en-us/library/ms143516(sql.90).aspx)|
 |SQL Server 2000|SP4 [(KB 290211)](http://support.microsoft.com/kb/290211)|空值|空值|空值|[SQL Server 2000 安装](https://technet.microsoft.com/en-us/library/aa197941(sql.80).aspx)|
 
-**了解如何测试更新：** [测试和开发 ISV 应用程序的可支持性路线 (PDF)](http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-85-48-files/0827.testing-and-developing-supportability-roadmaps-for-isv-applications.pdf)
+**了解如何测试更新：**  [测试和开发 ISV 应用程序的可支持性路线 (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 ### <a name="knowledge-base"></a>知识库
 
