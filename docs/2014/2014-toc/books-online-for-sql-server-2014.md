@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2014 的联机丛书 |Microsoft Docs
-ms.date: 05/25/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a66e558abcd1835674915955d0cda65eff58f8c0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a943685156ce9ec0ed3c94f4650c5a8222bff445
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887758"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688773"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014 联机丛书
 
@@ -33,7 +33,7 @@ ms.locfileid: "68887758"
 SQL Server 2016 及更高版本在[此处](https://docs.microsoft.com/sql/sql-server/index)有介绍。 [此处](#previous-versions-gm2014)记录了 SQL Server 2012 及更早版本。 <!-- ?view= defaults to the latest GA version, to resolve the https '/index' address ambiguity. So '2014' will always be too old to be the default. -->
 
  **进行试用：**  
- ![Azure 虚拟机小](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 是否拥有 Azure 帐户？  然后转到 **[此处](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 以启动已安装 SQL Server 2014 Service Pack 1 (SP1) 的虚拟机。 有关 SQL Server 2014 (SP1) 的详细信息, 请参阅[SQL Server 2014 Service Pack 1 版本信息](https://support.microsoft.com/en-us/kb/3058865)。 
+ ![Azure 虚拟机小](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 是否拥有 Azure 帐户？  然后转到 **[此处](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 以启动已安装 SQL Server 2014 Service Pack 1 （SP1）的虚拟机。 有关 SQL Server 2014 （SP1）的详细信息，请参阅[SQL Server 2014 Service Pack 1 版本信息](https://support.microsoft.com/en-us/kb/3058865)。 
   
 ## <a name="sql-server-technologies"></a>SQL Server 技术  
 
@@ -69,9 +69,9 @@ SQL Server 2016 及更高版本在[此处](https://docs.microsoft.com/sql/sql-se
 
 ## <a name="previous-versions-gm2014"></a>SQL Server 2005、2008、2012、2016 +
 
-[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+[!INCLUDE[previous versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 
  [SQL Server 配置管理器帮助](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   

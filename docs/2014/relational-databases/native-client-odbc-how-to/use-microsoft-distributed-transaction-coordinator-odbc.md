@@ -1,7 +1,7 @@
 ---
-title: 使用 Microsoft 分布式事务处理协调器 (ODBC) |Microsoft Docs
+title: 使用 Microsoft 分布式事务处理协调器（ODBC） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: native-client
@@ -12,12 +12,12 @@ ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 739d87c7a590489a2dd263535356b0b520a4a9b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 425f9fc0b7637aab1869130a2830c2f3c134fe7d
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200226"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688703"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>使用 Microsoft 分布式事务处理协调器 (ODBC)
     
@@ -25,7 +25,7 @@ ms.locfileid: "63200226"
   
 1.  使用 MS DTC OLE DtcGetTransactionManager 函数连接到 MS DTC。 有关 MS DTC 的信息，请参阅 Microsoft 分布式事务处理协调器。  
   
-2.  调用 SQL DriverConnect 一次为每个 Microsoft?? SQL Server??? 您想要建立的连接。  
+2.  对要建立的每个 Microsoft SQL Server 连接调用 SQL DriverConnect 一次。  
   
 3.  调用 MS DTC OLE ITransactionDispenser::BeginTransaction 函数以开始 MS DTC 事务，并获得代表事务的事务对象。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63200226"
 > [!NOTE]  
 >  还可以对每个 SQL Server 轮流调用 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 和 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)，而不是按照前面步骤 4 和 5 中的建议调用它们。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [执行事务&#40;ODBC&#41;](../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
   

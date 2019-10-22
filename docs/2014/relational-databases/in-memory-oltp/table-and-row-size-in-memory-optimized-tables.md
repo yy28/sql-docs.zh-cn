@@ -1,7 +1,7 @@
 ---
 title: 内存优化表中的表和行大小 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/27/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: in-memory-oltp
@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62466029"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688899"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>内存优化表中的表和行大小
   内存优化表由行和索引的集合组成，其中包含行的指针。 在一个内存优化表中，行不能长于 8,060 字节。 了解内存优化表的大小将帮助您了解计算机是否具有足够的内存。  
@@ -34,7 +34,7 @@ ms.locfileid: "62466029"
   
  下图是一个包含索引和行的表，因而也就有行标题和正文：  
   
- ![内存优化表。](../../database-engine/media/hekaton-guide-1.gif "Memory optimized table.")  
+ ![内存优化表。](../../database-engine/media/hekaton-guide-1.gif "内存优化表。")  
 内存优化表，由索引和行组成。  
   
  内存中的表大小（以字节为单位）计算如下：  
@@ -70,14 +70,14 @@ ms.locfileid: "62466029"
   
  下表介绍行正文大小的计算，公式为 [实际行正文大小] = SUM([浅表类型的大小]) + 2 + 2 * [深表类型列数]。  
   
-|部分|大小|注释|  
+|章节|Size|注释|  
 |-------------|----------|--------------|  
-|浅表类型列|SUM([浅表类型的大小])<br /><br /> **各类型的大小如下所示：**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (精度 < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
+|浅表类型列|SUM([浅表类型的大小])<br /><br /> **各类型的大小如下所示：**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric （精度 < = 18） &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric （精度 > 18） &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |浅表列填充|可能的值有：<br /><br /> 如果存在深表类型列并且浅表列的总数据大小是奇数，则为 1。<br /><br /> 否则为 0|深表类型为类型 (var)binary 和 (n)(var)char。|  
 |深表类型列的偏移数组|可能的值有：<br /><br /> 如果没有深表类型列，则为 0<br /><br /> 否则为 2 + 2 * [深表类型列数]|深表类型为类型 (var)binary 和 (n)(var)char。|  
 |NULL 数组|[可以为 Null 的列数] / 8，舍入为完整字节。|数组每个可以为 Null 的列有一位。 这舍入为完整字节。|  
 |NULL 数组填充|可能的值有：<br /><br /> 如果存在深表类型列并且 NULL 数组的大小为奇数字节，则为 1。<br /><br /> 否则为 0|深表类型为类型 (var)binary 和 (n)(var)char。|  
-|填充|如果没有深表类型列：0<br /><br /> 如果有深表类型列，则根据浅表列需要的最大对齐添加 0-7 个填充字节。 每个浅表列都需要与上述大小相等的对齐，而 GUID 列需要 1（而不是 16）字节的对齐，数值列始终需要 8（而不是 16）字节的对齐。 所有浅表列间使用最大的对齐要求，添加了 0-7 个字节，现在总大小（不带深表类型列）是所需对齐的数倍。|深表类型为类型 (var)binary 和 (n)(var)char。|  
+|填充|如果没有深表类型列，则为 0<br /><br /> 如果有深表类型列，则根据浅表列需要的最大对齐添加 0-7 个填充字节。 每个浅表列都需要与上述大小相等的对齐，而 GUID 列需要 1（而不是 16）字节的对齐，数值列始终需要 8（而不是 16）字节的对齐。 所有浅表列间使用最大的对齐要求，添加了 0-7 个字节，现在总大小（不带深表类型列）是所需对齐的数倍。|深表类型为类型 (var)binary 和 (n)(var)char。|  
 |固定长度的深表类型列|SUM([固定长度深表类型列的大小])<br /><br /> 各列大小如下：<br /><br /> 对于 char(i) 和 binary(i)，为 i。<br /><br /> 对于 nchar(i)，为 2 * i|固定长度深表类型列是类型为 char(i)、nchar(i) 或 binary(i) 的列。|  
 |可变长度深表类型列 [计算大小]|SUM([可变长度深表类型列的计算大小])<br /><br /> 各列的计算大小如下：<br /><br /> 对于 varchar(i) 和 varbinary(i)，为 i<br /><br /> 对于 nvarchar(i)，为 2 * i|此行仅适用于 [计算行正文大小]。<br /><br /> 可变长度的深表类型列是类型为 varchar(i)、nvarchar(i) 或 varbinary(i) 的列。 计算大小由列的最大长度 (i) 决定。|  
 |可变长度深表类型列 [实际大小]|SUM([可变长度深表类型列的实际大小])<br /><br /> 各列的实际大小如下：<br /><br /> 对于 varchar(i) 为 n，其中 n 是列中存储的字符数。<br /><br /> 对于 nvarchar(i) 为 2 * n，其中 n 是列中存储的字符数。<br /><br /> 对于 varbinary(i) 为 n，其中 n 是列中存储的字节数。|此行仅适用于 [实际行正文大小]。<br /><br /> 实际大小由相应行中各列存储的数据决定。|  
@@ -103,28 +103,28 @@ ms.locfileid: "62466029"
   
  因此，针对姓名的哈希索引的链如下所示：  
   
--   第一个存储桶：(John，Beijing);(John，Paris);(Jane，Prague)  
+-   第一个 Bucket：(John, Beijing); (John, Paris); (Jane, Prague)  
   
--   第二个存储桶：(Susan，Bogota)  
+-   第二个 Bucket：(Susan, Bogota)  
   
  针对城市的索引的链如下所示：  
   
--   第一个存储桶：（John，Beijing），（Susan，Bogota）  
+-   第一个 Bucket：(John, Beijing), (Susan, Bogota)  
   
--   第二个存储桶：（John，Paris），（Jane，Prague）  
+-   第二个 Bucket：(John, Paris), (Jane, Prague)  
   
- 结束时间戳??? （无穷） 指示这是当前有效的版本的行。 该行自该行版本写入以来尚未更新或删除。  
+ 结束时间戳&#x221e; （无限大）指示这是行的当前有效版本。 该行自该行版本写入以来尚未更新或删除。  
   
  对于大于 200 的时间，该表包含以下行：  
   
-|“属性”|City|  
+|NAME|City|  
 |----------|----------|  
 |John|Beijing|  
 |Jane|Prague|  
   
  但是，开始时间为 100 的任意活动事务都将看到该表的以下版本：  
   
-|“属性”|City|  
+|NAME|City|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prague|  
@@ -147,9 +147,9 @@ CREATE TABLE dbo.Orders (
 GO  
 ```  
   
- 请注意，此表有一个哈希索引和一个非聚集索引（主键）。 它还有三个固定长度列和一个可变长度列，其中一列可以为 NULL (OrderDescription)。 我们假设 Orders 表有 8379 行，OrderDescription 列中的值的平均长度为 78 个字符。  
+ 请注意，此表有一个哈希索引和一个非聚集索引（主键）。 它还有三个固定长度列和一个可变长度列，其中一列可以为 NULL (OrderDescription)。 假设 Orders 表有8379行，OrderDescription 列中的值的平均长度为78个字符。  
   
- 要确定表大小，首先需要确定索引大小。 两个索引的 bucket_count 都指定为 10000。 这舍入为最近的 2 次幂：16384. 因此，Orders 表的索引的总大小为：  
+ 要确定表大小，首先需要确定索引大小。 两个索引的 bucket_count 都指定为 10000。 这舍入为最近的 2 次幂：16384。 因此，Orders 表的索引的总大小为：  
   
 ```  
 8 * 16384 = 131072 bytes  
@@ -198,7 +198,7 @@ GO
   
     -   总填充为 24 – 22 = 2 字节。  
   
--   没有固定长度深表类型列 (固定长度深表类型列：0.).  
+-   没有固定长度深表类型列（固定长度深表类型列：0）。  
   
 -   深表类型列的实际大小为 2 * 78 = 156。 唯一的深表类型列 OrderDescription 的类型为 nvarchar。  
   
@@ -222,7 +222,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [内存优化表](memory-optimized-tables.md)  
+## <a name="see-also"></a>另请参阅  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

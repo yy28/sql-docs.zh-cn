@@ -1,7 +1,7 @@
 ---
 title: 排序规则和 Unicode 支持 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
@@ -27,14 +27,14 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918960"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688727"
 ---
-# <a name="collation-and-unicode-support"></a>Collation and Unicode Support
+# <a name="collation-and-unicode-support"></a>排序规则和 Unicode 支持
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排序规则可为您的数据提供排序规则、区分大小写属性和区分重音属性。 与诸如 `char` 和 `varchar` 等字符数据类型一起使用的排序规则规定可表示该数据类型的代码页和对应字符。 无论您是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的新实例，还原数据库备份，还是将服务器连接到客户端数据库，都必须了解您要处理的数据的区域设置要求、排序顺序以及是否区分大小写和重音。 若要列出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上可用的排序规则，请参阅 [sys。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)。  
   
  在为您的服务器、数据库、列或表达式选择排序规则时，也在向您的数据分配某些特征，这些特征将会影响数据库中许多操作的结果。 例如，使用 ORDER BY 构造查询时，结果集的排序顺序可能取决于应用于该数据库的排序规则或 COLLATE 子句中在查询的表达式级别规定的排序规则。  
@@ -49,10 +49,10 @@ ms.locfileid: "62918960"
   
  与排序规则关联的选项是区分大小写、区分重音、区分假名以及区分全半角。 指定这些选项的方法是将它们追加到排序规则名称。 例如，排序规则 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` 区分大小写、区分重音、区分假名以及区分全半角。 下表描述了与这些选项关联的行为。  
   
-|Option|Description|  
+|选项|Description|  
 |------------|-----------------|  
 |区分大小写 (_CS)|区分大写字母和小写字母。 如果选择此项，排序时小写字母将在其对应的大写字母之前。 如果不选择此选项，则排序规则将不区分大小写。 即 SQL Server 在排序时将大写字母和小写字母视为相同。 通过指定 _CI，可以显式选择不区分大小写。|  
-|区分重音 (_AS)|区分重音字符和非重音字符。 例如，a 不等于???。 如果未选择此选项，则排序规则将不区分重音。 即 SQL Server 在排序时将重音字符和非重音字符视为相同。 通过指定 _AI，可以显式选择不区分重音。|  
+|区分重音 (_AS)|区分重音字符和非重音字符。 例如，"a" 不等于 "&#x1EA5;"。 如果未选择此选项，则排序规则将不区分重音。 即 SQL Server 在排序时将重音字符和非重音字符视为相同。 通过指定 _AI，可以显式选择不区分重音。|  
 |区分假名 (_KS)|区分日语中的两种假名字符类型：平假名和片假名。 如果未选择此选项，则排序规则将不区分假名。 即 SQL Server 在排序时将平假名字符和片假名字符视为相同。 省略此选项是指定不区分假名的唯一方法。|  
 |区分全半角 (_WS)|区分全角字符和半角字符。 如果未选择此选项，SQL Server 在排序时将把同一字符的全角和半角形式视为相同。 省略此选项是指定不区分全半角的唯一方法。|  
   
@@ -105,7 +105,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ###  <a name="Code_Page_Defn"></a> Code Page  
- 代码页是给定脚本的有序字符集，其中数值索引（即码位值）与每个字符相关联。 Windows 代码页通常被称为“字符集”   。 代码页用于支持不同的 Windows 系统区域设置所使用的字符集和键盘布局。  
+ 代码页是给定脚本的有序字符集，其中数值索引（即码位值）与每个字符相关联。 Windows 代码页通常被称为“字符集”。 代码页用于支持不同的 Windows 系统区域设置所使用的字符集和键盘布局。  
   
   
 ###  <a name="Sort_Order_Defn"></a> Sort Order  
@@ -144,7 +144,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Supplementary_Characters"></a> 增补字符  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的数据类型，例如`nchar`和`nvarchar`来存储 Unicode 数据。 这些数据类型使用名为 *UTF-16*的格式对文本进行编码。 Unicode 协会为每个字符分配一个唯一码位，码位是一个介于 0x0000 和 0x10FFFF 之间的值。 最常用字符的码位值在内存和磁盘上的 16 位字的范围内，但码位值大于 0xFFFF 的字符需要使用两个连续的 16 位字。 这些字符称为“增补字符”  ，两个连续的 16 位字称为“代理项对”  。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了数据类型，如用于存储 Unicode 数据的 `nchar` 和 `nvarchar`。 这些数据类型使用名为 *UTF-16*的格式对文本进行编码。 Unicode 协会为每个字符分配一个唯一码位，码位是一个介于 0x0000 和 0x10FFFF 之间的值。 最常用字符的码位值在内存和磁盘上的 16 位字的范围内，但码位值大于 0xFFFF 的字符需要使用两个连续的 16 位字。 这些字符称为“增补字符”，两个连续的 16 位字称为“代理项对”。  
   
  如果使用增补字符：  
   
@@ -197,7 +197,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交互的数据库应用程序必须使用支持复杂文种的控件。 在托管代码中创建的标准 Windows 窗体控件支持复杂文种。  
   
   
-##  <a name="Related_Tasks"></a> 相关任务  
+##  <a name="Related_Tasks"></a>相关任务  
   
 |任务|主题|  
 |----------|-----------|  
@@ -216,8 +216,8 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  [Unicode Consortium 网站](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
-## <a name="see-also"></a>请参阅  
- [包含数据库的排序规则](../databases/contained-database-collations.md)   
+## <a name="see-also"></a>另请参阅  
+ [Contained Database Collations](../databases/contained-database-collations.md)   
  [创建全文索引时选择语言](../search/choose-a-language-when-creating-a-full-text-index.md)   
  [sys.fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
   
