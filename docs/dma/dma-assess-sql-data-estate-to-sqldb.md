@@ -101,7 +101,7 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
 
     如果要将本地 SQL Server 实例升级到 SQL Server 的更高版本, 或在 Azure VM 上托管 SQL Server, 请将源和目标服务器类型设置为 " **SQL Server**"。 为 Azure SQL 数据库 (PaaS) 目标准备情况评估将目标服务器类型设置为**Azure SQL 数据库托管实例**。
 
-3. 选择“创建”  。
+3. 选择“创建”。
 
    ![Azure Migrate 数据迁移助手接口](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 

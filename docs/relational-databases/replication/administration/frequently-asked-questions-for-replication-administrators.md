@@ -90,7 +90,7 @@ ms.locfileid: "72041205"
 ### <a name="can-multiple-publications-use-the-same-distribution-database"></a>多个发布是否可以使用同一个分发数据库？  
  是。 对于可以使用同一分发数据库的发布的数量或类型没有任何限制。 来自给定发布服务器的所有发布都必须使用同一分发服务器和分发数据库。  
   
- 如果有多个发布，则可以在分发服务器上配置多个分发数据库，以确保通过每个分发数据库的数据流都来自单个发布。 使用“分发服务器属性”对话框或 [sp_adddistributiondb &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) 添加分发数据库。 有关访问该对话框的详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
+ 如果有多个发布，则可以在分发服务器上配置多个分发数据库，以确保通过每个分发数据库的数据流都来自单个发布。 使用“分发服务器属性”对话框或 [sp_adddistributiondb &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) 添加分发数据库。  有关访问该对话框的详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
   
 ### <a name="how-do-i-find-information-on-the-distributor-and-publisher-such-as-which-objects-in-a-database-are-published"></a>如何在分发服务器和发布服务器中查找信息，如已经发布了数据库中的哪些对象？  
  此信息可通过 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]和许多复制存储过程获得。 有关详细信息，请参阅 [Distributor and Publisher Information Script](../../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)。  
@@ -135,7 +135,7 @@ ms.locfileid: "72041205"
   
 -   对于使用字符模式快照（用于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器以及 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 订阅服务器）的发布中的项目：默认情况下，所有者保留为空。 所有者默认为与分发代理或合并代理连接到订阅服务器所使用的帐户关联的所有者。  
   
- 可通过“项目属性 - \<项目>” **** 对话框和以下存储过程更改对象所有者：sp_addarticle、sp_addmergearticle、sp_changearticle 和 sp_changemergearticle。 有关详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定义项目](../../../relational-databases/replication/publish/define-an-article.md)和[查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
+ 可通过“项目属性 - \<项目>” **** 对话框和以下存储过程更改对象所有者：sp_addarticle  、sp_addmergearticle  、sp_changearticle  和 sp_changemergearticle  。 有关详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定义项目](../../../relational-databases/replication/publish/define-an-article.md)和[查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>如何配置订阅数据库上的授权，以使其与发布数据库上的授权相匹配？  
  默认情况下，复制不在订阅数据库上执行 GRANT 语句。 如果希望订阅数据库上的权限与发布数据库上的权限相匹配，请使用下列方法之一：  
@@ -154,9 +154,9 @@ ms.locfileid: "72041205"
   
 -   指定重新初始化订阅时不应删除对象。 重新初始化之前，进行以下两项操作之一：  
   
-    -   执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 或 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将参数 `@property` 的值指定为“pre_creation_cmd”(sp_changearticle) 或“pre_creation_command”(sp_changemergearticle)，并将参数 `@value` 的值指定为“none”、“delete”或“truncate”。  
+    -   执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 或 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将参数 `@property` 的值指定为“pre_creation_cmd”(sp_changearticle) 或“pre_creation_command”(sp_changemergearticle)，并将参数 `@value` 的值指定为“none”、“delete”或“truncate”   。  
   
-    -   在“项目属性- \<项目>”对话框的“目标对象”部分中，选择“保留现有对象保持不变”和“删除数据”。**如果项目有行筛选器，则仅删除与该筛选器匹配的数据。** 或者为“名称已被使用时的操作”选择“截断现有对象中的所有数据”。 有关访问此对话框的详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+    -   在“项目属性- \<项目>”对话框的“目标对象”部分中，选择“保留现有对象保持不变”和“删除数据”。    **如果项目有行筛选器，则仅删除与该筛选器匹配的数据。** 或者为“名称已被使用时的操作”选择“截断现有对象中的所有数据”。   有关访问此对话框的详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ## <a name="database-maintenance"></a>数据库维护  
   
@@ -184,7 +184,7 @@ ms.locfileid: "72041205"
  在早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，移动或重命名数据库文件需要分离并重新附加数据库。 因为无法分离复制的数据库，所以必须首先从这些数据库中删除复制。 从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始，无需分离并重新附加数据库便可移动或重命名文件，且不会影响复制。 有关移动和重命名文件的详细信息，请参阅 [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)。  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>如何删除正在复制的表？  
- 首先使用 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)、[sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 或“发布属性 - \<发布>”对话框从发布中删除项目，然后使用 `DROP <Object>` 将其从数据库中删除。 在添加订阅后，就不能从快照发布或事务发布中删除项目，而必须先删除订阅。 有关详细信息，请参阅[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
+ 首先使用 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)、[sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 或“发布属性 - \<发布>”对话框从发布中删除项目，然后使用 `DROP <Object>` 将其从数据库中删除。  在添加订阅后，就不能从快照发布或事务发布中删除项目，而必须先删除订阅。 有关详细信息，请参阅[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>如何在已发布的表中添加或删除列？  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持对已发布对象进行各种架构更改，包括添加和删除列。 例如，在发布服务器上执行 `ALTER TABLE … DROP COLUMN`，该语句将复制到订阅服务器，然后执行以删除列。 运行早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的订阅服务器支持通过存储过程 [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 和 [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)添加和删除列。 有关详细信息，请参阅[对发布数据库进行架构更改](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
@@ -195,10 +195,10 @@ ms.locfileid: "72041205"
  使用验证。 验证报告给定订阅服务器是否与发布服务器同步。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-data-at-the-subscriber.md)。 验证不会提供与某些行是否未正确同步有关的信息，而 [tablediff 实用工具](../../../tools/tablediff-utility.md) 可以提供此信息。  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>如何向现有发布添加表？  
- 不必为了添加表（或另一个对象）而停止发布数据库或订阅数据库上的活动。 通过“发布属性 - \<发布>”对话框或存储过程 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 和 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 将表添加到发布。 有关详细信息，请参阅[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
+ 不必为了添加表（或另一个对象）而停止发布数据库或订阅数据库上的活动。 通过“发布属性 - \<发布>”对话框或存储过程 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 和 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 将表添加到发布。  有关详细信息，请参阅[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>如何从发布中删除表？  
- 使用 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)、[sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 或“发布属性 - \<发布>”对话框从发布中删除表。 在添加订阅后，就不能从快照发布或事务发布中删除项目，而必须先删除订阅。 有关详细信息，请参阅[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
+ 使用 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)、[sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 或“发布属性 - \<发布>”对话框从发布中删除表。  在添加订阅后，就不能从快照发布或事务发布中删除项目，而必须先删除订阅。 有关详细信息，请参阅[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>哪些操作需要重新初始化订阅？  
  许多项目和发布更改都需要重新初始化订阅。 有关详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  

@@ -95,7 +95,7 @@ ms.locfileid: "71711046"
   
 #### <a name="specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>指定订阅应使用交互式冲突解决方法  
   
-1.  在“订阅属性 - \<Subscriber>:**   \<SubscriptionDatabase>”对话框中，为“以交互方式解决冲突”选项指定“True”值。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。   
+1.  在“订阅属性 - \<Subscriber>:    \<SubscriptionDatabase>”对话框中，为“以交互方式解决冲突”选项指定“True”值。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ###  <a name="use-transact-sql"></a>使用 Transact-SQL  

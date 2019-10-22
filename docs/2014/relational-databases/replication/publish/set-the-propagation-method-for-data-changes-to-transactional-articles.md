@@ -118,7 +118,7 @@ ms.locfileid: "68941084"
   
     -   ins_cmd-指定值<strong>sp_MSins_*article_name*</strong>, 其中 **_article_name_** 是为 **\@项目**指定的值。  **\@**  
   
-    -   \@     **del_cmd-指定CALLsp_MSdel_article_name或XCALLsp_MSdel_article_name的值,其中article_name是为_*项目**\@** 指定的值。  
+    -   \@  **del_cmd-指定CALLsp_MSdel_article_name或XCALLsp_MSdel_article_name的值,其中article_name是为_*项目**\@** 指定的值。  
   
     -   upd_cmd-指定值<strong>SCALL sp_MSupd_*article_name*</strong>、 <strong>CALL sp_MSupd_*article_name*</strong>、 <strong>XCALL *</strong>sp_MSupd__article_name 或<strong>MCALL sp_MSupd_* article_name *</strong>, 其中 **\@** _**article_name**_ 是为 **\@项目**指定的值。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "68941084"
   
     -   ins_cmd-指定值<strong>sp_MSins_*article_name*</strong>, 其中 _**article_name**_ 是为 **\@项目**指定的值。  **\@**  
   
-    -   **\@**      **del_cmd-指定CALLsp_MSdel_article_name或XCALLsp_MSdel_article_name的值,其中article_name是为项目\@** 指定的值。  
+    -   **\@**  **del_cmd-指定CALLsp_MSdel_article_name或XCALLsp_MSdel_article_name的值,其中article_name是为项目\@** 指定的值。  
   
     -   upd_cmd-指定值<strong>SCALL sp_MSupd_*article_name*</strong>、 <strong>CALL sp_MSupd_*article_name*</strong>、 <strong>XCALL sp_MSupd_*article_name*</strong>、MCALL sp_MSupd_ article_name  **\@** , 其中 _**article_name**_ 是为 **\@项目**指定的值。  
   
