@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 4eab56329c2b51f792394ffc37921e8a1ed8e117
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/16/2019
 ms.locfileid: "71952255"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>安装 PowerPivot for SharePoint
@@ -26,9 +26,9 @@ ms.locfileid: "71952255"
   
  
   
- 有关如何在同一台服务器上安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的说明，请参阅 [Deployment 清单：Reporting Services、Power View 和 PowerPivot for SharePoint @ no__t。  
+ 有关如何在同一台服务器上安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的说明，请参阅 [Deployment 清单：Reporting Services、Power View 和 PowerPivot for SharePoint ](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
   
 1.  您必须是本地管理员才能运行 SQL Server 安装程序。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "71952255"
   
      对于 SQL Server Analysis Services，您必须指定一个域用户帐户。 不要指定内置帐户。 域帐户是在 SharePoint 管理中心中将 Analysis Services 服务帐户作为*托管帐户*进行管理所必需的。  
   
-     ![Ssas 服务器配置](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "ssas 服务器配置")  
+     ![SSAS 服务器配置](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS 服务器配置")  
   
      如果您添加了 SQL Server 数据库引擎和 SQL Server 代理，则可以将服务配置为在域用户帐户或者默认虚拟帐户下运行。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "71952255"
   
 -   [使用 Windows PowerShell 配置 Power Pivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
- **连接数据库引擎实例。** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]在安装  时，SQL Server 安装程序会为您提供用于向安装中添加数据库引擎实例的选项。 如果要设置新场，并且需要数据库服务器来运行该场的配置和内容数据库，则可能已将数据库引擎实例添加到了安装中。 如果添加了数据库引擎，则它已安装为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例。 每当需要指定与此实例的连接时（例如，在服务器场配置向导中，如果使用该向导配置场），请记住按以下格式输入数据库名称： < `servername` > \Powerpivot。  
+ **连接数据库引擎实例。** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]在安装  时，SQL Server 安装程序会为您提供用于向安装中添加数据库引擎实例的选项。 如果要设置新场，并且需要数据库服务器来运行该场的配置和内容数据库，则可能已将数据库引擎实例添加到了安装中。 如果添加了数据库引擎，则它已安装为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例。 每当需要指定与此实例的连接时（例如，在场配置向导中，如果使用该向导配置场），请记住按以下格式输入数据库名称： < `servername` > \Powerpivot。  
   
 ##  <a name="bkmk_redist"></a> 步骤 3：在 Excel Services 应用程序服务器上安装 Analysis Services OLE DB 提供程序  
  如果在单独的应用程序服务器上运行 Excel Calculation Services 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，则需要执行其他安装步骤。 在运行 Excel Calculation Services 的应用程序服务器上，安装适当版本的 Analysis Services OLE DB (MSOLAP) 访问接口。  
@@ -147,8 +147,8 @@ ms.locfileid: "71952255"
   
 ## <a name="see-also"></a>请参阅  
  [PowerPivot for SharePoint 2010 安装](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Deployment 清单：Reporting Services、Power View 和 PowerPivot for SharePoint @ no__t-0 @ no__t-1  
- [Deployment 清单：通过将 PowerPivot 服务器添加到 SharePoint 2010 场 @ no__t-0 @ no__t 来向外扩展  
- [Deployment 清单：PowerPivot for SharePoint 2010 @ no__t 的多服务器安装  
+ [Deployment 清单：Reporting Services、Power View 和 PowerPivot for SharePoint ](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)    
+ [Deployment 清单：通过将 PowerPivot 服务器添加到 SharePoint 2010 场来向外扩展 ](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)    
+ [Deployment 清单：PowerPivot for SharePoint 2010 ](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md) 的多服务器安装  
   
   
