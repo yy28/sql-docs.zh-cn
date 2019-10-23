@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3137bffef524faf061322224e92941687bb16046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 271e84ccefd43f2ce379a64435a9eb105553f606
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987270"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305086"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>使用 SQL Server Profiler 创建和测试计划指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  在记事本中打开该批处理文本文件，将文本复制到复制和粘贴缓冲区。  
   
-8.  创建计划指南，并将复制的文本粘贴到为 **@stmt**参数指定的引号 ( **@stmt** ) 内。 必须通过在前面再加上其他单引号来转义 **@stmt** 参数中的任何单引号。 插入这些单引号时务必小心，不要添加或删除任何其他字符。 例如，日期文本 **'** 20000101 **'** 必须分隔为 **''** 20000101 **''** 。  
+8.  创建计划指南，并将复制的文本粘贴到为 \@stmt参数指定的引号 ( '' ) 内   。 必须通过在前面再加上其他单引号来转义 \@stmt 参数中的任何单引号  。 插入这些单引号时务必小心，不要添加或删除任何其他字符。 例如，日期文本 **'** 20000101 **'** 必须分隔为 **''** 20000101 **''** 。  
   
  下面是该计划指南：  
   

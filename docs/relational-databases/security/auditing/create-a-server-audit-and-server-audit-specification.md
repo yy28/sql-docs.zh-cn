@@ -1,7 +1,7 @@
 ---
 title: 创建服务器审核和服务器审核规范 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5eefebaf1d68a29a654bb407c46ad5871164d2d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b237b2d5511ef1547687289e00b4a695375e3754
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095193"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517983"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "68095193"
      指定要创建的审核文件的数目，最高为 2,147,483,647。 只有取消选中 **“无限制”** 时，此选项才可用。  
   
      **最大文件大小**  
-     指定审核文件的最大大小，可以兆字节 (MB)、千兆字节 (GB) 或百万兆字节 (TB) 为单位。 您可以指定 1024 MB 至 2,147,483,647 TB 之间的值。 选中 **“无限制”** 复选框将不会对文件大小施加限制。 指定一个小于 1024 MB 的值将失败，并且返回错误。 默认情况下， **“无限制”** 复选框为选中状态。  
+     指定审核文件的最大大小，可以兆字节 (MB)、千兆字节 (GB) 或百万兆字节 (TB) 为单位。 可以指定的数字最大为 2,147,483,647 TB。 选中 **“无限制”** 复选框将不会对文件大小施加限制。 默认情况下， **“无限制”** 复选框为选中状态。  
   
      “保留磁盘空间”  复选框  
      指定在磁盘上预先分配与指定的最大文件大小相等的空间。 只有在 **“最大文件大小”** 下未选中 **“无限制”** 复选框的情况下，才能使用此设置。 默认情况下，不选中此复选框。  

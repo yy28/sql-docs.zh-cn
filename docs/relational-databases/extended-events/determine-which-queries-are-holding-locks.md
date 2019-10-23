@@ -1,7 +1,7 @@
 ---
 title: 确定持有锁的查询 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,26 +17,26 @@ ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 413e395a865245b4e4a6c3c7705e654e6855c245
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f6bdf2ed730330e03068473e5db9f82015caacc
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021916"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589982"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>确定持有锁的查询
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  数据库管理员通常需要识别影响数据库性能的锁定来源。  
+数据库管理员通常需要识别影响数据库性能的锁定来源。  
   
- 例如，您怀疑服务器的性能问题可能是由阻塞导致的。 查询 sys.dm_exec_requests 时，您发现处于挂起模式的若干会话具有等待类型，指示锁定就是等待的资源。  
+例如，您怀疑服务器的性能问题可能是由阻塞导致的。 查询 sys.dm_exec_requests 时，您发现处于挂起模式的若干会话具有等待类型，指示锁定就是等待的资源。  
   
- 查询 sys.dm_tran_locks 后，结果显示许多锁定处于未完成状态，但是已授予锁定的会话没有任何以 sys.dm_exec_requests 显示的活动请求。  
+查询 sys.dm_tran_locks 后，结果显示许多锁定处于未完成状态，但是已授予锁定的会话没有任何以 sys.dm_exec_requests 显示的活动请求。  
   
- 此示例说明如何确定占用锁定的查询、查询的计划以及占用锁定时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆栈。 本示例还说明了在扩展事件会话中如何使用配对目标。  
+此示例说明如何确定占用锁定的查询、查询的计划以及占用锁定时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆栈。 本示例还说明了在扩展事件会话中如何使用配对目标。  
   
- 若要完成此任务，需使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的查询编辑器执行以下过程。  
+若要完成此任务，需使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的查询编辑器执行以下过程。  
   
 > [!NOTE]  
 >  本示例使用 AdventureWorks 数据库。  
@@ -45,7 +45,7 @@ ms.locfileid: "68021916"
   
 1.  在查询编辑器中发出以下语句：  
   
-    ```  
+    ```sql
     -- Perform cleanup.   
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='FindBlockers')  
         DROP EVENT SESSION FindBlockers ON SERVER  
@@ -88,12 +88,11 @@ ms.locfileid: "68021916"
     --  
     ALTER EVENT SESSION FindBlockers ON SERVER  
     STATE = START  
-  
     ```  
   
 2.  在服务器上执行工作负荷后，在查询编辑器中发出以下语句来查找仍保持锁定的查询。  
   
-    ```  
+    ```sql
     --  
     -- The pair matching targets report current unpaired events using   
     -- the sys.dm_xe_session_targets dynamic management view (DMV)  
@@ -150,11 +149,17 @@ ms.locfileid: "68021916"
   
 3.  识别问题后，删除所有临时表和事件会话。  
   
-    ```  
+    ```sql
     DROP TABLE #unmatched_locks  
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
-  
+
+> [!NOTE]
+> 前面的 Transact-SQL 代码示例在 SQL Server 上本地运行，但可能_不太在 Azure SQL 数据库上运行_。 该示例的核心部分直接涉及事件，例如 `ADD EVENT sqlserver.lock_acquired` 也可在 Azure SQL 数据库上运行。 但要运行示例，必须先将一些初步项（如 `sys.server_event_sessions`）编辑为其 Azure SQL 数据库对应项，如 `sys.database_event_sessions`。
+> 若要详细了解本地 SQL Server 与 Azure SQL 数据库之间的细微差异，请参阅以下文章：
+> - [Azure SQL 数据库中的扩展事件](/azure/sql-database/sql-database-xevent-db-diff-from-svr#transact-sql-differences)
+> - [支持扩展事件的系统对象](xevents-references-system-objects.md)
+
 ## <a name="see-also"></a>另请参阅  
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)   

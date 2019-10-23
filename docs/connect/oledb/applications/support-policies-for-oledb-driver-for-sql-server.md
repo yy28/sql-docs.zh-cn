@@ -1,7 +1,7 @@
 ---
 title: 适用于 SQL Server 的 OLE DB 驱动程序的支持策略 | Microsoft Docs
 description: 适用于 SQL Server 的 OLE DB 驱动程序的支持策略
-ms.date: 02/12/2019
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 1ae0e332de1d1e673cfd4fff1e288acafa4a0619
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: b02789c787266a3370e3c5c9bfae50ea337d19db
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118150"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381863"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序的支持策略
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "71118150"
   本文介绍如何将各种数据访问组件与 SQL Server OLE DB 驱动程序一起使用。  
 
 ## <a name="server-support"></a>服务器支持  
- SQL Server OLE DB 驱动程序支持与[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]、 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)]、、和[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]的连接。
+ SQL Server OLE DB 驱动程序支持通过 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 连接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。
 
 ## <a name="supported-operating-system-versions"></a>支持的操作系统版本  
  下表列出了支持 SQL Server OLE DB 驱动程序的操作系统。  
@@ -38,10 +38,10 @@ ms.locfileid: "71118150"
 ## <a name="ado-support-policies"></a>ADO 支持策略  
  如果 ADO 应用程序不需要 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的任何功能，可以使用 Windows 附带的 SQLOLEDB OLE DB 提供程序。  
 
- ADO 应用程序可以使用 SQL Server 的 OLE DB 驱动程序, 但如果这样做, 则必须`DataTypeCompatibility=80`在连接字符串中指定。 如果连接字符串中包含 `DataTypeCompatibility=80`，则只能使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的功能。  
+ ADO 应用程序可以使用 SQL Server 的 OLE DB 驱动程序，但如果这样做，则必须在连接字符串中指定 `DataTypeCompatibility=80`。 如果连接字符串中包含 `DataTypeCompatibility=80`，则只能使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的功能。  
 
 ## <a name="ole-db-support-policies"></a>OLE DB 支持策略  
-应用程序可使用随 Windows 操作系统附带的 OLE DB 提供程序 (SQLOLEDB)。 但是, 这处于维护模式, 不再更新。 改为使用 OLE DB 驱动程序 SQL Server (MSOLEDBSQL)。
+应用程序可使用随 Windows 操作系统附带的 OLE DB 提供程序 (SQLOLEDB)。 但是，这处于维护模式，不再更新。 改为使用 OLE DB 驱动程序 SQL Server （MSOLEDBSQL）。
 
 ## <a name="see-also"></a>另请参阅  
  [使用适用于 SQL Server 的 OLE DB 驱动程序生成应用程序](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

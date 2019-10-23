@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7444c5710663eb601aa3c8ce2287869a8083f814
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553208"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545068"
 ---
 # <a name="oracle-source"></a>Oracle 源
 
@@ -54,7 +54,7 @@ Oracle 源的自定义属性如下所示。 所有属性均可读/写。
 |AccessMode|Integer（枚举）|用来访问数据库的模式。 可取值为“表名”  和“SQL 命令”  。 默认值为“表名”  。|
 |BatchSize|Integer|用于大容量加载的批处理的大小。 这是作为数组提取的记录数。 <br>此属性仅由高级编辑器  设置|
 |DefaultCodePage|Integer|当数据源没有代码页信息时，要使用的代码页。 <br>此属性仅由高级编辑器  设置。|
-|PreFetchCount|Integer|预提取（提前查看）的行数。 <br>此属性仅由高级编辑器  设置。|
+|PreFetchCount|Integer|预提取的行数。 <br>此属性仅由高级编辑器  设置。|
 |SqlCommand|String|在 AccessMode 设置为“SQL 命令”时要执行的 SQL 命令。|
 |TableName|String|当 AccessMode 设置为“表名”时，包含要使用的数据的表的名称。|
 

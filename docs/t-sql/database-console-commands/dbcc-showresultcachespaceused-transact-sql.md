@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: 0a8e9207e22a0e9bb4fbb75d872697fc9d2ff76e
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72174650"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452830"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -25,7 +25,7 @@ ms.locfileid: "72174650"
 
 显示 Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 数据库的结果集缓存所用的存储空间。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -36,18 +36,6 @@ DBCC SHOWRESULTCACHESPACEUSED
 ## <a name="remarks"></a>Remarks
 
 `DBCC SHOWRESULTCACHESPACEUSED` 命令不使用任何参数，并且会返回运行此命令的数据库所使用的空间。
-
-每个数据集的结果集缓存的最大大小为 1 TB。  在以下情况下，Azure SQL 数据仓库将自动逐出结果集缓存中的项：
-
-- 尚未使用结果集（每 48 小时执行一次）。
-- 结果集缓存达到最大大小。
-
-若要手动清空数据库的结果集缓存，用户可以使用以下选项之一：
-
-- 关闭数据库的结果集缓存功能
-- 连接到数据库时运行 `DBCC DROPRESULTSETCACHE` 
-
-暂停数据库无法将结果集缓存清空。  
 
 ## <a name="permissions"></a>权限
 
@@ -65,6 +53,7 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 ## <a name="see-also"></a>另请参阅
 
+[使用结果集缓存优化性能](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET 选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

@@ -14,12 +14,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08efd7847fba1ad0b4df10d3a761475c735ceca8
+ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
 ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289372"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305196"
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,26 +27,26 @@ ms.locfileid: "72289372"
 ## <a name="operating-system-task-scheduling"></a>操作系统任务计划
 线程是操作系统可以执行的最小处理单位，借助线程可以将应用程序逻辑分为多个并行执行路径。 当复杂应用程序包含可同时执行的多个任务时，线程非常有用。 
 
-操作系统执行应用程序实例时，它将创建一个单元（称为进程）来管理该实例。 此进程包含一个执行线程。 它是由应用程序代码执行的一系列编程指令。 例如，如果一个简单应用程序具有一组可串行执行的指令，则会将该组指令作为单个任务处理，并且整个应用程序只有一个执行路径（或线程）。 更复杂的应用程序可能有几个任务，这些任务可以并行执行，而不是串行执行。 应用程序可以通过以下方式实现此操作：启动各个任务的独立进程（这属于资源密集型操作），或启动独立的线程（相对而言它消耗资源较少）。 而且，可以独立于与某进程关联的其他线程来安排每个线程的执行。
+操作系统执行应用程序实例时，它将创建一个单元（称为进程）来管理该实例。 此进程包含一个执行线程。 它是由应用程序代码执行的一系列编程指令。 例如，如果一个简单应用程序具有一组可串行执行的指令，则会将该组指令作为单个任务处理，并且整个应用程序只有一个执行路径（或线程）。   更复杂的应用程序可能有几个任务，这些任务可以并行执行，而不是串行执行。  应用程序可以通过以下方式实现此操作：启动各个任务的独立进程（这属于资源密集型操作），或启动独立的线程（相对而言它消耗资源较少）。 而且，可以独立于与某进程关联的其他线程来安排每个线程的执行。
 
 线程使复杂的应用程序能够更有效地利用处理器 (CPU)，即使在只有一个 CPU 的计算机上也是如此。 如果只有一个 CPU，则每次只能执行一个线程。 如果一个线程执行不使用 CPU 的长时间运行的操作（如磁盘读/写操作），则第一个操作完成之前可以执行另一个线程。 通过在其他线程等待操作完成的同时执行线程，应用程序可以最大限度地利用 CPU。 对于大量占用磁盘 I/O 的多用户应用程序（如数据库服务器），这尤其有效。 具有多个 CPU 的计算机可以同时在每个 CPU 上执行一个线程。 例如，如果某计算机有八个 CPU，则它可以同时执行八个线程。
 
 ## <a name="sql-server-task-scheduling"></a>SQL Server 任务计划
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的作用域中，请求是查询或批处理的逻辑表示形式。 请求还表示系统线程所需的操作，如检查点或日志编写器。 请求在其整个生存期期间以不同状态存在，并且在执行请求所需的资源不可用时请求可以累积等待，如[锁](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks)或[闩锁](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches)。 有关请求状态的详细信息，请参阅 [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的作用域中，请求是查询或批处理的逻辑表示形式。  请求还表示系统线程所需的操作，如检查点或日志编写器。 请求在其整个生存期期间以不同状态存在，并且在执行请求所需的资源不可用时请求可以累积等待，如[锁](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks)或[闩锁](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches)。 有关请求状态的详细信息，请参阅 [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。
 
-任务表示满足请求所需完成的工作单元。 可以向单个请求分配一个或多个任务。 并行请求有多个并行执行（而非串行）的活动任务。 在任何给定的时间点，串行执行的请求均仅有一个活动任务。 任务在其整个生存期期间以不同状态存在。 有关任务状态的详细信息，请参阅 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 处于“挂起”状态的任务正在等待执行任务所需的资源可用。 有关正在等待的任务的详细信息，请参阅 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)。
+任务表示满足请求所需完成的工作单元。  可以向单个请求分配一个或多个任务。 并行请求有多个并行执行（而非串行）的活动任务。 在任何给定的时间点，串行执行的请求均仅有一个活动任务。 任务在其整个生存期期间以不同状态存在。 有关任务状态的详细信息，请参阅 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 处于“挂起”状态的任务正在等待执行任务所需的资源可用。 有关正在等待的任务的详细信息，请参阅 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程（又称为线程）是操作系统线程的逻辑表现形式。 执行串行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将生成线程，以执行活动任务。 在[行模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)下执行并行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将分配线程，来协调负责完成已向其分配的任务的子线程。 为每个任务生成的工作线程数取决于以下因素：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程（又称为线程）是操作系统线程的逻辑表现形式。  执行串行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将生成线程，以执行活动任务。 在[行模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)下执行并行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将分配线程，来协调负责完成已向其分配的任务的子线程。 为每个任务生成的工作线程数取决于以下因素：
 -   请求是否符合并行要求（由查询优化器确定）。
 -   根据当前负载，系统的实际可用的[并行度 (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) 是多少。 它可能不同于估计的 DOP，后者基于最大并行度 (MAXDOP) 的服务器配置。 例如，MAXDOP 的服务器配置可能是 8，但在运行时可用的 DOP 可能仅为 2，这样则会影响查询性能。 
 
 > [!NOTE]
-> 将按任务设置最大并行度 (MAXDOP) 限制，而非按请求限制。 这意味着，在并行查询执行期间，单个请求可以生成多个任务，并且每个任务可以使用多个工作线程（数目最多达 MAXDOP 限制）。 有关 MAXDOP 的详细信息，请参阅[配置最大并行度服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+> 将按任务设置最大并行度 (MAXDOP) 限制，而非按请求限制  。 这意味着，在并行查询执行期间，单个请求可以生成多个任务，并且每个任务可以使用多个工作线程（数目最多达 MAXDOP 限制）。 有关 MAXDOP 的详细信息，请参阅[配置最大并行度服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
-计划程序（又称为 SOS 计划程序）管理需要处理时间来代表任务执行工作的工作线程。 每个计划程序映射单个处理器 (CPU)。 线程可以在计划程序内活动的时间称为 OS 量程，最长为 4 毫秒。 量程时间到期后，线程将其时间转让给需要访问 CPU 资源的其他线程，并更改自己的状态。 用于将 CPU 资源访问最大化的线程之间的协作称为“协作计划”（又称为非抢先计划）。 反之，线程状态更改会传播到与该线程关联的任务，并会传播到与相应任务关联的请求。 有关线程状态的详细信息，请参阅 [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。 有关计划程序的详细信息，请参阅 [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。 
+计划程序（又称为 SOS 计划程序）管理需要处理时间来代表任务执行工作的工作线程。  每个计划程序映射单个处理器 (CPU)。 线程可以在计划程序内活动的时间称为 OS 量程，最长为 4 毫秒。 量程时间到期后，线程将其时间转让给需要访问 CPU 资源的其他线程，并更改自己的状态。 用于将 CPU 资源访问最大化的线程之间的协作称为“协作计划”（又称为非抢先计划）  。 反之，线程状态更改会传播到与该线程关联的任务，并会传播到与相应任务关联的请求。 有关线程状态的详细信息，请参阅 [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。 有关计划程序的详细信息，请参阅 [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。 
 
 ### <a name="allocating-threads-to-a-cpu"></a>为 CPU 分配线程
-默认情况下，每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例启动每个线程，操作系统根据负载从计算机上的处理器 (CPU) 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例分发线程。 如果已在操作系统级别启用了进程关联，则操作系统会将每个线程分配给特定的 CPU。 与之相反，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程分配给在 CPU 之间平均分发线程的计划程序。
+默认情况下，每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例启动每个线程，操作系统根据负载从计算机上的处理器 (CPU) 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例分发线程。 如果已在操作系统级别启用了进程关联，则操作系统会将每个线程分配给特定的 CPU。 与之相反，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程分配给在 CPU 之间平均分发线程的计划程序。  
     
 为了执行多任务处理，例如当多个应用程序访问同一组 CPU 时，操作系统有时会在不同 CPU 之间移动工作线程。 虽然从操作系统方面而言，这种活动是高效的，但是在高系统负荷的情况下，该活动会降低 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的性能，因为每个处理器缓存都会不断地重新加载数据。 如果将各个 CPU 分配给特定线程，则通过消除处理器的重新加载需要以及减少 CPU 之间的线程迁移（因而减少上下文切换），可以提高在这些条件下的性能；线程与处理器之间的这种关联称为“处理器关联”。 如果已经启用了关联，则操作系统会将每个线程分配给一个特定的 CPU。 
 
@@ -102,10 +102,10 @@ Microsoft Windows 使用从 1 到 31 的数值优先级系统计划线程的执�
 ### <a name="setting-max-degree-of-parallelism-for-index-operations"></a>设置索引操作的最大并行度
 可以通过暂时将数据库的恢复模式设置为大容量日志恢复模式或简单恢复模式，以在具有许多 CPU 的计算机上改进索引操作（如创建或重新创建索引）的性能。 这些索引操作可以导致重大的日志活动和日志争用，从而影响 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所做的最佳并行度 (DOP) 选择。
 
-除调整最大并行度 (MAXDOP) 服务器配置选项以外，请考虑使用 [MAXDOP 选项](../t-sql/statements/alter-index-transact-sql.md)调整索引操作的并行度。 有关详细信息，请参阅 [配置并行索引操作](../relational-databases/indexes/configure-parallel-index-operations.md)。 有关调整最大并行度服务器配置选项的详细信息和指南，请参阅[配置最大并行度服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+除调整最大并行度 (MAXDOP) 服务器配置选项以外，请考虑使用 [MAXDOP 选项](../t-sql/statements/alter-index-transact-sql.md)调整索引操作的并行度  。 有关详细信息，请参阅 [配置并行索引操作](../relational-databases/indexes/configure-parallel-index-operations.md)。 有关调整最大并行度服务器配置选项的详细信息和指南，请参阅[配置最大并行度服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>设置最大工作线程数
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将在启动时动态配置最大工作线程数服务器配置选项。 在启动时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用可用 CPU 数和系统体系结构通过经过证实的[公式](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md#Recommendations)确定此服务器配置。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将在启动时动态配置最大工作线程数服务器配置选项。  在启动时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用可用 CPU 数和系统体系结构通过经过证实的[公式](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md#Recommendations)确定此服务器配置。
 
 此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 SQL Server 专业人员更改。 如果怀疑存在性能问题，可能不是由于工作线程不可用。 很有可能是导致工作线程等待的因素造成的，例如 I/O。 在更改最大工作线程设置之前，最好找到导致性能问题的根本原因。 但是，如果需要手动设置最大工作线程数，必须始终将此配置值设置为至少为系统上存在的 CPU 数的七倍的值。 有关详细信息，请参阅[配置最大工作线程数](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)。
 
@@ -113,7 +113,7 @@ Microsoft Windows 使用从 1 到 31 的数值优先级系统计划线程的执�
 不建议在生产环境中使用 SQL 跟踪和 SQL Profiler。 运行这些工具的系统开销也会随着 CPU 的数目的增加而增加。 如果您必须在生产环境中使用 SQL 跟踪，请将跟踪事件的数目限制为最少。 请在负荷下仔细探查和测试每个跟踪事件，并且避免使用显著影响性能的事件组合。
 
 > [!IMPORTANT]
-> 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的“Microsoft.SqlServer.Management.Trace”命名空间也已遭弃用。 
+> 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的“Microsoft.SqlServer.Management.Trace”命名空间也已遭弃用  。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 
 > 请改用扩展事件。 有关[扩展事件](../relational-databases/extended-events/extended-events.md)的详细信息，请参阅[快速入门：SQL Server 中的扩展事件](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 探查器](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
 

@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eca3bed56e39330199d491836ac32fadabea1cce
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 4d829b32941ad1bc64df4e2e86cddb26d7468281
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941129"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313694"
 ---
 # <a name="extended-events-overview"></a>扩展事件概述
 
@@ -108,6 +108,23 @@ ms.locfileid: "68941129"
 |介绍如何将扩展事件和 Windows 事件跟踪配合使用来监视系统活动。|[使用扩展事件监视系统活动](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 |为扩展事件使用目录视图和动态管理视图 (DMV) | [SQL Server 中扩展事件系统视图中的 SELECT 和 JOIN](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 | &nbsp; | &nbsp; |
+
+使用以下 Transact-SQL (T-SQL) 查询列出所有可能的扩展事件及其说明：
+
+```sql
+SELECT
+     obj1.name as [XEvent-name],
+     col2.name as [XEvent-column],
+     obj1.description as [Descr-name],
+     col2.description as [Descr-column]
+  FROM
+               sys.dm_xe_objects        as obj1
+      JOIN sys.dm_xe_object_columns as col2 on col2.object_name = obj1.name
+  ORDER BY
+    obj1.name,
+    col2.name
+```
+
 
 ## <a name="code-examples-can-differ-for-azure-sql-database"></a>Azure SQL 数据库的代码示例可能有所不同
 

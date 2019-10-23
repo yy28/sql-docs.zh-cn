@@ -3,39 +3,72 @@ title: 架构比较扩展
 titleSuffix: Azure Data Studio
 description: 安装和使用 Azure Data Studio 的架构比较扩展（预览版）
 ms.custom: seodec18
-ms.date: 06/06/2019
+ms.date: 10/03/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a51d64202d3d906b3106092084628b0a961297ea
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 031bdc19762213ff2c85e6fe4612ded294fcaaa9
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959329"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381823"
 ---
 # <a name="schema-compare-extension-preview"></a>架构比较扩展（预览版）
-架构比较扩展提供了一种易于使用的体验来比较 .dacpac 文件和数据库，并将所做的更改应用于目标。
+架构比较扩展提供了一种易于使用的体验，以比较两个数据库定义，并将源的区别应用于目标。
 
 此体验目前处于初始预览版。 在[此处](https://github.com/microsoft/azuredatastudio/issues)报告问题和提出功能请求。
 
-## <a name="install-the-schema-compare-extension"></a>安装架构比较扩展
 
-1. 若要打开扩展管理器并访问可用扩展，请选择扩展图标，或在“视图”菜单中选择“扩展”   。
-2. 选择某个可用扩展以查看其详细信息。
-1. 选择所需的扩展（架构比较）并“安装”它  。
+## <a name="features"></a>功能
 
-## <a name="how-do-i-start-a-schema-comparison"></a>如何启动架构比较？
-* 架构比较的主入口点是右键单击对象资源管理器中的数据库，然后单击“架构比较”  。
-* 用户还可以通过搜索”架构比较“来从命令面板启动架构比较对话框 (Ctrl + Shift + P) 
+* 比较两个 .dacpac 文件或数据库的架构
+* 将结果视为一组要匹配源则必须针对目标执行的操作
+* 选择性地排除结果中列出的操作
+* 设置控制比较范围的选项
+* 将更改应用到目标，或生成具有相同效果的脚本
+* 保存比较
 
-## <a name="why-would-i-use-the-schema-compare"></a>为什么要使用架构比较？
-创建架构比较的目的是实现一项功能，即对 .dacpac 文件和数据库中的架构进行比较，并应用更改。
+![架构比较：示例比较](media/extensions/schema-compare-extension/schema-compare.png)
+
+
+## <a name="why-would-i-use-the-schema-compare-extension"></a>为什么要使用架构比较扩展？
+
+手动管理和同步不同的数据库版本可能比较繁琐。 架构比较扩展可以简化数据库比较过程，并在同步数据库时提供完全控制 &mdash; 可以在应用更改之前有选择地筛选特定差异和类别。 架构比较扩展是一个可节省时间和代码的可靠工具。
+
+![架构比较：“选项”对话框](media/extensions/schema-compare-extension/schema-compare-options.png)
+
+
+## <a name="install-the-extension"></a>安装扩展
+
+1. 选择“扩展”图标以查看可用扩展。
+
+    ![扩展管理器图标](media/extensions/extension-manager-icon.png)
+
+2. 搜索“架构比较”扩展并选择它以查看其详细信息  。 单击“安装”，以添加扩展  。
+
+3. 安装后，重载以启用 Azure Data Studio 中的扩展（仅在第一次安装扩展时需要进行此操作）  。
+
+
+## <a name="launch-a-schema-compare"></a>启动“架构比较”
+
+1. 要打开“架构比较”对话框，右键单击对象资源管理器中的数据库，然后单击“架构比较”   。 你选择的数据库将设置为要比较的源数据库。
+
+    ![“架构比较”启动菜单](media/extensions/schema-compare-extension/schema-compare-launch.png)
+
+
+2. 选择其中一个省略号 (...)，更改“架构比较”的源数据库和目标数据库，然后单击“确定”。
+
+    ![schema compare select source/target](media/extensions/schema-compare-extension/schema-compare-select-source-target.png)
+
+3. 要自定义比较，请在工具栏中单击“选项”按钮  。
+
+4. 单击“比较”以查看比较结果  。
+
 
 ## <a name="next-steps"></a>后续步骤
+
 若要了解有关架构比较的详细信息，[请查看我们的文档。](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions)
-
-

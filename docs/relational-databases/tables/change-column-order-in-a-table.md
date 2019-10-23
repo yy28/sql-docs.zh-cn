@@ -14,12 +14,12 @@ ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b792338b5576926f1012bed59ac60c4d88fb11f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d59f36bc315f6adf62d2ce8f09be4a1bb57bf428
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101380"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452888"
 ---
 # <a name="change-column-order-in-a-table"></a>更改表中的列顺序
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -50,6 +50,6 @@ ms.locfileid: "68101380"
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **更改列顺序**  
   
- 无法使用 Transact-SQL 语句执行此任务。  
+ 不支持使用 Transact-SQL 语句执行此任务。  
   
 ###  <a name="TsqlExample"></a>  

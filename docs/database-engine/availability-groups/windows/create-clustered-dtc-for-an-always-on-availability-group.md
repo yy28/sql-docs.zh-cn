@@ -11,12 +11,12 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fc5b7c3d5c8fd1ad1c050ea2f50c55d4a0d1120f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991130"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586767"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>为 AlwaysOn 可用性组创建群集 DTC 资源
 
@@ -26,7 +26,7 @@ ms.locfileid: "67991130"
 
 本演练将按照[为 SQL Server 可用性组群集化 DTC](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md) 中的要求，创建群集 DTC 资源和 SQL Server 可用性组。
 
-本演练使用 PowerShell 和 Transact-SQL (T-SQL) 脚本。  许多 T-SQL 脚本要求启用 **SQLCMD 模式** 。  有关 **SQLCMD 模式**的详细信息，请参阅 [在查询编辑器中启用 SQLCMD 脚本撰写](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)。  必须导入 PowerShell 模块 **FailoverClusters** 。  有关导入 PowerShell 模块的详细信息，请参阅 [导入 PowerShell 模块](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)。  本演练基于以下条件：
+本演练使用 PowerShell 和 Transact-SQL (T-SQL) 脚本。  许多 T-SQL 脚本要求启用 **SQLCMD 模式** 。  有关 **SQLCMD 模式**的详细信息，请参阅 [在查询编辑器中启用 SQLCMD 脚本撰写](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)。  必须导入 PowerShell 模块 **FailoverClusters** 。  有关导入 PowerShell 模块的详细信息，请参阅 [导入 PowerShell 模块](/powershell/scripting/developer/module/importing-a-powershell-module)。  本演练基于以下条件：
 - 已满足[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) 中的所有要求。  
 - 域为 `contoso.lab`。
 - 用户在将要创建 DTC 网络名称资源的 OU 中具有“创建计算机对象”权限。
@@ -115,8 +115,8 @@ foreach ($node in $nodes) {
     New-NetFirewallRule -CimSession $node -DisplayName 'SQL Server Mirroring' -Description 'Port 5022 for SQL Server Mirroring' -Action Allow -Direction Inbound -Protocol TCP -LocalPort 5022 -RemotePort Any -LocalAddress Any -RemoteAddress Any;
     };
 ```  
-## <a name="3--configure-in-doubt-xact-resolution"></a>3.配置“未决事务解析” 
-此脚本针对未决事务将“未决事务解析”服务器配置选项配置为“假设提交”。  在 SQL Server Management Studio (SSMS) 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
+## <a name="3--configure-in-doubt-xact-resolution"></a>3.配置“未决事务解析”  
+此脚本针对未决事务将“未决事务解析”服务器配置选项配置为“假设提交”  。  在 SQL Server Management Studio (SSMS) 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
 
 ```sql  
 /*******************************************************************

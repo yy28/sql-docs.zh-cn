@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 44c5a4c9a39f60616574a479637d3ab97230784c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823622"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304847"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -806,7 +806,7 @@ SET ( LOCK_ESCALATION = { AUTO | TABLE | DISABLE } )
 AUTO  
 借助此选项，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可选择适合于表架构的锁升级粒度。
 
-- 如果表已分区，锁升级到分区级别。 在锁升级到分区级别后，锁以后就不会升级到 TABLE 粒度。
+- 如果该表已分区，则允许锁升级到堆或 B 树 (HoBT) 粒度。 换句话说，将允许升级到分区级别。 锁升级到 HoBT 级别之后，该锁以后将不会升级到 TABLE 粒度。
 - 如果表未分区，锁升级到 TABLE 粒度。
 
 TABLE  

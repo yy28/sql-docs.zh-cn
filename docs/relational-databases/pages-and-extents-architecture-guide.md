@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ba569631723bc456ceae2429d7c0fa8acac9769
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031668"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586781"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>页和区体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,13 @@ ms.locfileid: "68031668"
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中数据存储的基本单位是页。 为数据库中的数据文件（.mdf 或 .ndf）分配的磁盘空间可以从逻辑上划分成页（从 0 到 n 连续编号）。 磁盘 I/O 操作在页级执行。 也就是说，SQL Server 读取或写入所有数据页。
 
-区是八个物理上连续的页的集合，用来有效地管理页。 所有页都存储在区中。
+区是八个物理上连续的页的集合，用来有效地管理页。 所有页面都组织为盘区。
 
 ### <a name="pages"></a>页
 
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，页的大小为 8-KB。 这意味着 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中每 MB 有 128 页。 每页的开头是 96 字节的标头，用于存储有关页的系统信息。 此信息包括页码、页类型、页的可用空间以及拥有该页的对象的分配单元 ID。
+与常规书籍做类比：常规书籍中的所有内容都是写在书页上的。 与书籍类似，SQL Server 所有数据行都写在页面上。 书中的所有页都具有相同的物理大小。 同样，SQL Server 所有数据页大小均相同 - 8 KB。 书中的大多数页都包含数据（书的主要内容），某些页面包含有关内容的元数据（例如目录和索引）。 SQL Server 也是如此：大多数页包含由用户存储的实际数据行；这些称为数据页面和文本/图像页面（在特殊情况下）。 索引页包含有关数据位置的索引引用，最后有一些系统页，它们存储有关数据组织的各种元数据（PFS、GAM、SGAM、IAM、DCM、BCM 页）。 请参阅下表了解页面类型及其说明。
+
+如前所述，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，页的大小为 8-KB。 这意味着 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中每 MB 有 128 页。 每页的开头是 96 字节的标头，用于存储有关页的系统信息。 此信息包括页码、页类型、页的可用空间以及拥有该页的对象的分配单元 ID。
 
 下表说明了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的数据文件中所使用的页类型。
 

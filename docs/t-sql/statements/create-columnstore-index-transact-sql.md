@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b17fe334b1261d463e8389564912e48b7553dc7f
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: ab49b1f0323e8582f573db1d611b7114cba6dcaf
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326105"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589757"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "71326105"
 -   [列存储索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)  
 -   [列存储索引功能摘要](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -109,8 +109,8 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
     [ORDER (column [,...n] ) ] -- in preview
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
+
 ```
-  
 ## <a name="arguments"></a>参数  
 
 某些选项并非在所有数据库引擎版本中均可用。 下表显示了聚集列存储索引和非聚集列存储索引中引入选项时的版本：

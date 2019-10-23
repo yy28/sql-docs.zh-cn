@@ -10,18 +10,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6cb2bdc652eb77908c044b640d315a90da8cf428
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: da38a5171694f1f563e67d4be6a852527fd0377b
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809817"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542188"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  返回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语句的查询计划，但不运行该语句。 使用 EXPLAIN 预览需要数据移动的操作和查看查询操作的预计成本  。 `WITH RECOMMENDATIONS` 适用于 Azure SQL 数据仓库（预览）
+  返回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语句的查询计划，但不运行该语句。 使用 EXPLAIN 预览需要数据移动的操作和查看查询操作的预计成本。 `WITH RECOMMENDATIONS` 适用于 Azure SQL 数据仓库（预览）
   
  有关查询计划的详细信息，请参阅 [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)] 中的“了解查询计划”。  
   
@@ -35,9 +35,12 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 ## <a name="arguments"></a>参数
 
  SQL_statement   
- EXPLAIN 将在其上运行的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语句  。 SQL_statement 可以是以下任何命令  ：SELECT、INSERT、UPDATE、DELETE、CREATE TABLE AS SELECT、CREATE REMOTE TABLE       。
 
-WITH_RECOMMENDATIONS  返回包含建议的查询计划以优化 SQL 语句性能。  
+ EXPLAIN 将在其上运行的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语句。 SQL_statement 可以是以下任何命令  ：SELECT、INSERT、UPDATE、DELETE、CREATE TABLE AS SELECT、CREATE REMOTE TABLE。
+
+WITH_RECOMMENDATIONS  （预览）
+
+返回包含建议的查询计划以优化 SQL 语句性能。  
   
 ## <a name="permissions"></a>权限
 
@@ -310,7 +313,7 @@ GO
 **提交 EXPLAIN 语句 WITH_RECOMMENDATIONS**
 
 ```sql
--- EXPLAIN WITH_RECOMMENDATIONS
+EXPLAIN WITH_RECOMMENDATIONS
 select count(*)
 from ((select distinct c_last_name, c_first_name, d_date
        from store_sales, date_dim, customer
@@ -326,7 +329,7 @@ from ((select distinct c_last_name, c_first_name, d_date
 ) top_customers
 ```
 
-**EXPLAIN WITH_RECOMMENDATIONS 的示例输出**（预览）
+**EXPLAIN WITH_RECOMMENDATIONS 的示例输出**  
 
 下面的输出包括创建一个名为视图 1 的推荐具体化视图。  
 

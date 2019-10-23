@@ -13,17 +13,17 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68065456"
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **sqllogship** 应用程序用于执行日志传送配置中的备份、复制或还原操作以及相关的清理任务。 这些操作是在特定的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上针对特定数据库执行的。  
   
- ![主题链接图标](../database-engine/configure-windows/media/topic-link.gif "主题链接图标")有关语法约定, 请参阅[命令提示实用工具参考&#40;数据库引擎&#41;](../tools/command-prompt-utility-reference-database-engine.md)。  
+ 关于语法约定，请参阅![命令提示实用工具参考（数据库引擎）](../database-engine/configure-windows/media/topic-link.gif "主题链接图标")。  
   
 ## <a name="syntax"></a>语法  
   

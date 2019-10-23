@@ -9,17 +9,28 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/08/2019
-ms.openlocfilehash: 991bc20600936ac61ab291db68d9e5f7728b96b5
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.date: 10/11/2019
+ms.openlocfilehash: c77d22b01b824906e4d5c32311bfe20258fa3c61
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041120"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313619"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](download.md)**
+
+## <a name="october-2019-hotfix-2"></a>2019 年 10 月（修补程序 2）
+
+2019 年 10 月11 日&nbsp; / &nbsp;版本：1.12.2
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 禁用在检查模式下自动启动 EH |  |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019-hotfix"></a>2019 年 10 月（修补程序）
 
@@ -157,7 +168,7 @@ ms.locfileid: "72041120"
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 将“服务器”选项卡重命名为“连接” | |
+| 将“服务器”选项卡重命名为“连接”   | |
 | 将 Azure 资源浏览器调整为“连接”下的 Azure viewlet | 用户现在可以在“连接”视图中通过 Azure viewlet 查看其 Azure SQL 实例，还可展开以查看每个服务器或数据库下的对象。|
 | SQL 笔记本改进 | &bull; &nbsp; 在工具栏添加了用于清除所有单元输出的按钮 <br/>&bull; &nbsp; 在工具栏添加了用于运行所有单元的按钮 <br/>&bull; &nbsp; 固定连接名称，而不是“附加到”下拉列表中的服务器名称（如果已设置） <br/>&bull; &nbsp; 修复在使用相对图像路径时 markdown 中不呈现图像的问题 <br/>&bull; &nbsp; 改进了笔记本网格中的功能 - 通过添加双击自动调整列尺寸功能和改进的鼠标滑轮支持 <br/>&bull; &nbsp; 改进通过笔记本安装 Python 时的错误处理和 Python 安装复原能力 <br/>&bull; &nbsp; 改进选择笔记本单元时的“全选”功能 <br/>&bull; &nbsp; 改进笔记本的连接，防止关闭笔记本和影响对象资源管理器连接 <br/>&bull; &nbsp; 改进笔记本体验，在笔记本断开连接时向用户显示消息，并且需要连接才能运行单元<br/>&bull; &nbsp; 改进对未保存笔记本的支持，使其在 ADS 再次启动时在 ADS 中解除冻结 |
 | 解决了 Bug 和问题。 | 请参阅 [GitHub 上的 Bug 和问题](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1)。 |
@@ -192,8 +203,8 @@ ms.locfileid: "72041120"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知问题
-- [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427)：在内核准备好启动 Spark 之前单击“在单元上运行”会导致灾难性错误 解决方法：先等待内核加载，再运行单元
-- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493)：从 SSMS 启动的 ADS 使用 SQL 身份验证，这会提示用户输入密码 解决方法：现在使用 Windows 身份验证。 
+- [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427)：在内核准备好启动 Spark 之前单击“在单元上运行”会导致灾难性错误 解决方法  ：先等待内核加载，再运行单元
+- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493)：从 SSMS 启动的 ADS 使用 SQL 身份验证，这会提示用户输入密码 解决方法  ：现在使用 Windows 身份验证。 
 - [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494)：无法安装 SQL 笔记本功能 <br/>
 **解决方法：** 请执行[此处](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832)的解决步骤。 
 - [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503)：无法直接从下载文件夹 (Mac) 打开 Azure Data Studio <br />
@@ -213,7 +224,7 @@ ms.locfileid: "72041120"
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 添加了“SQL Server 的管理包”扩展包。 | 这样更便于安装 SQL Server 管理相关的扩展。 这包括：<br/>&bull; &nbsp; [SQL Server 代理](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server 导入](sql-server-import-extension.md?view=sql-server-2017) |
+| 添加了“SQL Server 的管理包”扩展包  。 | 这样更便于安装 SQL Server 管理相关的扩展。 这包括：<br/>&bull; &nbsp; [SQL Server 代理](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server 导入](sql-server-import-extension.md?view=sql-server-2017) |
 | 在 Profiler 扩展中添加了筛选扩展事件支持。 | &nbsp; |
 | 添加了“另存为 XML”功能，可将 T-SQL 结果保存为 XML。 | &nbsp; |
 | 添加了数据层应用程序向导方面的改进。 | &bull; &nbsp; 添加了“生成脚本”按钮<br/>&bull; &nbsp; 添加了视图，用于在部署过程中针对潜在数据丢失发出警告。 |
@@ -342,9 +353,9 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 2018 年 8 月 30 日&nbsp; / &nbsp;版本：0.32.8&nbsp; / &nbsp;公共预览版
 
-8 月发布的公共预览版侧重于 Bug 修复、产品稳定性以及填补现有方案中的空白。
+8 月发布的公共预览版侧重于 Bug 修复、产品稳定性以及填补现有方案中的空白  。
 
-0.32.8 包含对 0.32.7 中发现的几个回归问题（[#1971](https://github.com/Microsoft/azuredatastudio/issues/1971) 和 [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372)）的修复
+0\.32.8 包含对 0.32.7 中发现的几个回归问题（[#1971](https://github.com/Microsoft/azuredatastudio/issues/1971) 和 [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372)）的修复 
 
 &nbsp;
 
@@ -397,7 +408,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 2018 年 7 月 19 日&nbsp; / &nbsp;版本：0.31.4&nbsp; / &nbsp;公共预览版
 
-7 月公共预览版侧重于以下内容：
+7 月公共预览版侧重于以下内容  ：
 
 - SQL Server 代理配置方案的初始版本。
 - SQL Server Profiler 会话和视图模板增强。
@@ -439,11 +450,11 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 适用于 SQL Operations Studio 的 SQL Server Profiler 预览版扩展初始版本。 | &nbsp; |
-| 新的 SQL 数据仓库扩展包含丰富的可自定义仪表板小组件，可为数据仓库提供见解。 | 这可以解锁关于数据仓库管理和优化的关键方案，以确保为获得一致的性能对其进行优化。 |
-| 编辑数据“筛选和排序”支持。 | &nbsp; |
-| 针对作业和作业历史记录视图，适用于 SQL Operations Studio 的 SQL Server 代理预览版扩展改进。 | &nbsp; |
-| 改进了“向导和对话框 UI 生成器框架”扩展性 API。 | &nbsp; |
+| 适用于 SQL Operations Studio 的 SQL Server Profiler 预览版扩展初始版本  。 | &nbsp; |
+| 新的 SQL 数据仓库扩展包含丰富的可自定义仪表板小组件，可为数据仓库提供见解  。 | 这可以解锁关于数据仓库管理和优化的关键方案，以确保为获得一致的性能对其进行优化。 |
+| 编辑数据“筛选和排序”支持  。 | &nbsp; |
+| 针对作业和作业历史记录视图，适用于 SQL Operations Studio 的 SQL Server 代理预览版扩展改进  。 | &nbsp; |
+| 改进了“向导和对话框 UI 生成器框架”扩展性 API  。 | &nbsp; |
 | 更新 VS Code 平台源代码。 | 集成了以下发布：<br/>&bull; &nbsp; [2018 年 3 月 (1.22)](https://code.visualstudio.com/updates/v1_22)<br/>&bull; &nbsp; [2018 年 4 月 (1.23)](https://code.visualstudio.com/updates/v1_23) |
 | &nbsp; | &nbsp; |
 
@@ -462,7 +473,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 2018 年 5 月 7 日&nbsp; / &nbsp;版本：0.29.3&nbsp; / &nbsp;公共预览版
 
-5 月公共预览版侧重于稳定性和 Bug 修复。
+5 月公共预览版侧重于稳定性和 Bug 修复  。
 
 &nbsp;
 
@@ -490,7 +501,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 2018 年 4 月 25 日&nbsp; / &nbsp;版本：0.28.6&nbsp; / &nbsp;公共预览版
 
-4 月公共预览版包含 Bug 修复和改进。
+4 月公共预览版包含 Bug 修复和改进  。
 
 &nbsp;
 
@@ -539,7 +550,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 | [资源管理器中的错误和警告](https://code.visualstudio.com/updates/v1_20#_error-indicators-in-the-explorer)。 | 快速导航到代码库中的错误。 |
 | [跨窗口进行拖放、复制和粘贴](https://code.visualstudio.com/updates/v1_21#_better-drag-and-drop-support)。 | 在打开的 SQL Operations Studio 窗口间移动文件。 |
 | [Git 子模块支持](https://code.visualstudio.com/updates/v1_20#_git-submodules)。 | 对嵌套的 Git 存储库执行 Git 操作。 |
-| [终端屏幕阅读器支持](https://code.visualstudio.com/updates/v1_20#_screen-reader-support)。 | 集成终端现在具备“屏幕阅读器优化”模式。 |
+| [终端屏幕阅读器支持](https://code.visualstudio.com/updates/v1_20#_screen-reader-support)。 | 集成终端现在具备“屏幕阅读器优化”模式  。 |
 | [居中式编辑器布局](https://code.visualstudio.com/updates/v1_21#_centered-editor-layout)。 | 将代码查看屏幕的空间最大化。 |
 | [水平搜索结果（预览版）](https://code.visualstudio.com/updates/v1_21#_horizontal-search)。 | 现在可以在水平面板中查看搜索结果。 |
 | &nbsp; | &nbsp; |
@@ -552,7 +563,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 2018 年 3月 28 日&nbsp; / &nbsp;版本：0.27.3&nbsp; / &nbsp;公共预览版
 
-3 月公开预览版继续处理最重要的 GitHub 问题，并侧重于改进扩展性。 专门启用扩展管理器、改进仪表板管理并提供 SQL 代理和见解扩展。 此版本包括以下增强功能：
+3 月公开预览版继续处理最重要的 GitHub 问题，并侧重于改进扩展性  。 专门启用扩展管理器、改进仪表板管理并提供 SQL 代理和见解扩展。 此版本包括以下增强功能：
 
 &nbsp;
 
@@ -567,14 +578,14 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 2018 年 2 月 15 日&nbsp; / &nbsp;版本：0.26.7&nbsp; / &nbsp;公共预览版
 
-2 月公共预览版包括一些功能建议和高优先级的 Bug 修复。 此版本包括以下增强功能：
+2 月公共预览版包括一些功能建议和高优先级的 Bug 修复  。 此版本包括以下增强功能：
 
 &nbsp;
 
 | 更改 | 详细信息 |
 | :----- | :------ |
 | 引入自动更新安装，在新版本可供下载时提供通知。 | &nbsp; |
-| 连接对话框的“数据库”字段现在为动态填充的下拉列表，将包括从指定服务器填充的数据库列表。 | &nbsp; |
+| 连接对话框的“数据库”字段现在为动态填充的下拉列表，将包括从指定服务器填充的数据库列表  。 | &nbsp; |
 | 引入连接扩展性 API。 | &nbsp; |
 | VS Code 编辑器 1.19 集成。 | &nbsp; |
 | 更新 JustinPealing/html-query-plan 组件，以获取多项查询计划查看器改进。 | &nbsp; |
@@ -597,7 +608,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 2018 年 1 月 17 日&nbsp; / &nbsp;版本：0.25.4&nbsp; / &nbsp;公共预览版
 
-1 月公共预览版包括一些功能建议和高优先级的 Bug 修复。 此版本包括以下增强功能：
+1 月公共预览版包括一些功能建议和高优先级的 Bug 修复  。 此版本包括以下增强功能：
 
 &nbsp;
 
@@ -606,8 +617,8 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 | 可以在“连接”对话框中使用已保存的服务器连接。 | &nbsp; |
 | 启用热退出。 热退出在默认情况下处于关闭状态，若要启用，请参阅[热退出设置](settings.md#hot-exit)。 | &nbsp; |
 | 基于服务器组进行选项卡着色。 选项卡着色在默认情况下处于关闭状态，若要启用，请参阅[选项卡颜色设置](settings.md#tab-color)。 | &nbsp; |
-| 将“连接”对话框中的“服务器名称”更改为“服务器”。 | &nbsp; |
-| 修复损坏的“运行当前查询”命令。 | &nbsp; |
+| 将“连接”对话框中的“服务器名称”更改为“服务器”   。 | &nbsp; |
+| 修复损坏的“运行当前查询”命令  。 | &nbsp; |
 | 修复拖放时会破坏脚本的 bug。 | &nbsp; |
 | 修复未正确固定的“开始”菜单图标。 | &nbsp; |
 | 修复缺少的 Azure 帐户品牌图标。 | &nbsp; |
@@ -617,7 +628,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 2017 年 12 月 19 日&nbsp; / &nbsp;版本：0.24.1&nbsp; / &nbsp;公共预览版
 
-12 月公共预览版包括涵盖所有功能区域的多项 Bug 修复，以及以下增强功能：
+12 月公共预览版包括涵盖所有功能区域的多项 Bug 修复，以及以下增强功能  ：
 
 &nbsp;
 
@@ -626,8 +637,8 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 | “创建防火墙规则”对话框现在可用于协助连接到 Azure SQL 数据库和 Azure SQL 数据仓库。 | &nbsp; |
 | 添加了 Windows 安装程序以及 Linux DEB 和 RPM 安装包。 | &nbsp; |
 | 管理仪表板视觉布局编辑器。 | &nbsp; |
-| “编写更改脚本”和“编写执行脚本”命令。 | &nbsp; |
-| “使用实际计划运行当前查询”命令。 | &nbsp; |
+| “编写更改脚本”和“编写执行脚本”命令   。 | &nbsp; |
+| “使用实际计划运行当前查询”命令  。 | &nbsp; |
 | 集成 VS Code 1.18.1 编辑器平台。 | &nbsp; |
 | 启用 VSIX 扩展文件的旁加载。 | &nbsp; |
 | 支持“GO N”批处理迭代语法。 | &nbsp; |

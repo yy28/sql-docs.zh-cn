@@ -10,12 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: fffd79a18ca839816105242c054e74031828274f
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 17a618fb10f234d839243b0523260d19d0a2b599
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961962"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381776"
 ---
 # <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>适用于 Azure Data Studio 的 SQL Server 2019 扩展（预览版）
 
@@ -32,6 +32,9 @@ ms.locfileid: "71961962"
    |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|2019 年 9 月 11 日 |0.16.0
    |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|2019 年 9 月 11 日 |0.16.0
    |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|2019 年 9 月 11 日 |0.16.0
+
+   > [!NOTE]
+   > Internet Explorer 存在以下已知问题：VSIX 将下载为 zip 文件。 使用 Microsoft Edge 或其他浏览器正确下载 VSIX。 
 
 1. 在 Azure Data Studio 中，从“文件”菜单中选择“从 VSIX 包安装扩展”，然后选择下载的 .vsix 文件   。
 

@@ -1,7 +1,7 @@
 ---
 title: 临时表安全性 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2016
+ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb721a010e53a0f642a3f045f9dc36ec2f104cad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b22210bdcabf1972e7fa76d7871ebd94e1f23ff5
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999425"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452900"
 ---
 # <a name="temporal-table-security"></a>临时表安全性
 
@@ -33,7 +33,7 @@ ms.locfileid: "67999425"
 |启用/禁用系统版本控制需要有对受影响对象的最高权限|启用和禁用 SYSTEM_VERSIONING 需要有对当前和历史记录表的 CONTROL 权限|
 |不能直接修改历史记录数据|当 SYSTEM_VERSIONING 为 ON 时，用户不能更改历史记录数据，不管他们对当前和历史记录表的实际权限是什么。 这包括数据和架构修改。|
 |查询历史记录数据需要有对历史记录表的 **SELECT** 权限。|仅仅因为用户具有对当前表的 **SELECT** 权限并不意味着他们有对历史记录表的 **SELECT** 权限。|
-|审核曲面操作会以特定方式影响历史记录表：|在历史记录表上定期审核将捕获所有对数据进行访问的直接尝试（不管它们是否成功）。<br /><br /> 具有临时查询扩展的**SELECT** 显示历史记录表受到了此操作的影响。<br /><br /> **CREATE/ALTER** 临时表也会公开历史记录表上的权限检查信息。 审核文件将包含历史记录表的其他记录。<br /><br /> 对当前表曲面进行 DML 操作，历史记录表受到了影响，但 additional_info 提供必要的上下文（DML 是 system_versioning 的结果）。|
+|审核曲面操作会以特定方式影响历史记录表：|当前表中的审核设置不会自动应用于历史记录表。 需要为历史记录表显式启用审核。<br /><br /> 启用后，对历史记录表的审核会定期捕获对访问数据的所有直接尝试（不管它们是否成功）。<br /><br /> 具有临时查询扩展的**SELECT** 显示历史记录表受到了此操作的影响。<br /><br /> **CREATE/ALTER** 临时表也会公开历史记录表上的权限检查信息。 审核文件将包含历史记录表的其他记录。<br /><br /> 对当前表曲面进行 DML 操作，历史记录表受到了影响，但 additional_info 提供必要的上下文（DML 是 system_versioning 的结果）。|
 
 ## <a name="performing-schema-operations"></a>执行架构操作
 
@@ -63,7 +63,7 @@ ms.locfileid: "67999425"
 |所需的权限|数据库中的**CREATE TABLE** 权限<br /><br /> 在其中创建当前和历史记录表的架构上的**ALTER** 权限|数据库中的**CREATE TABLE** 权限<br /><br /> 将在其中创建当前表的架构上的**ALTER** 权限<br /><br /> 指定其作为创建临时表的**CONTROL** 语句的一部分的历史记录表上的 **CONTROL** 权限|
 |审核|审核显示用户尝试创建两个对象。 操作可能由于缺少在数据库中创建表的权限或缺少改变任一表的架构的权限而失败。|审核显示临时表已创建。 操作可能由于缺少在数据库中创建表的权限、缺少改变临时表的架构的权限或缺少对历史记录表的权限而失败。|
 
-## <a name="security-of-the-alter-temporal-table-set-systemversioning-onoff-statement"></a>ALTER Temporal TABLE SET (SYSTEM_VERSIONING ON/OFF) 语句的安全性
+## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>ALTER Temporal TABLE SET (SYSTEM_VERSIONING ON/OFF) 语句的安全性
 
 ||创建新的历史记录表|重用现有的历史记录表|
 |-|------------------------------|----------------------------------|

@@ -1,18 +1,18 @@
 ---
 title: 数据连接、数据源和连接字符串 - 报表生成器 - SSRS | Microsoft Docs
-ms.date: 08/21/2018
+ms.date: 10/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d2e8eb3d2f20392c1884c79455e8c3bdfdacd949
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0f4ff968ae8d6090756cc5751fda2aadbec3f98a
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891962"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313766"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>数据连接、数据源和连接字符串（报表生成器和 SSRS）
 
@@ -88,9 +88,7 @@ ms.locfileid: "68891962"
 -   XML  
   
 -   ODBC  
-  
--   用于 Power View 的 Microsoft BI 语义模型：在配置用于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库和 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的 SharePoint 站点上，此数据源类型可用。 此数据源类型仅可用于 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 演示文稿。 有关详细信息，请参阅 [建立用于 Power View 的完美 BI 语义表格模型](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)。  
-  
+
  有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持的数据源和版本的完整列表，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
 ##  <a name="bkmk_connection_examples"></a> 常用连接字符串示例  
@@ -103,23 +101,21 @@ ms.locfileid: "68891962"
 |---------------------|-----------------|---------------------|  
 |本地服务器上的 SQL Server 数据库|`data source="(local)";initial catalog=AdventureWorks`|将数据源类型设置为 **Microsoft SQL Server**。 有关详细信息，请参阅 [SQL Server 连接类型 (SSRS)](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)。|  
 |SQL Server 实例<br /><br /> “数据库”|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|将数据源类型设置为 **Microsoft SQL Server**。|  
-|SQL Server Express 数据库|`Data Source=localhost\MSSQL13.SQLEXPRESS; Initial Catalog=AdventureWorks`|将数据源类型设置为 **Microsoft SQL Server**。|  
 |Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|将数据源类型设置为“Microsoft Azure SQL 数据库”  。 有关详细信息，请参阅 [SQL Azure 连接类型 (SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)。|  
 |SQL Server 并行数据仓库|`HOST=<IP address>;database= AdventureWorks; port=<port>`|将数据源类型设置为 **Microsoft SQL Server Parallel Data Warehouse**。 有关详细信息，请参阅 [SQL Server 并行数据仓库连接类型 (SSRS)](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)。|  
 |本地服务器上的 Analysis Services 数据库|`data source=localhost;initial catalog=Adventure Works DW`|将数据源类型设置为 **Microsoft SQL Server Analysis Services**。 有关详细信息，请参阅[针对 MDX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) 或[针对 DMX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)。|  
 |具有 Sales 透视的 Analysis Services 表格模型数据库|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|将数据源类型设置为 **Microsoft SQL Server Analysis Services**。 在 cube= 设置中指定透视名称。 有关详细信息，请参阅 [透视表（SSAS 表格）](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular)。|  
-|在本机模式下配置的报表服务器上的报表模型数据源|`Server=https://myreportservername/reportserver; datasource=/models/Adventure Works`|指定报表服务器或文档库 URL 以及报表服务器文件夹或文档库文件夹命名空间中已发布的模型的路径。
-|在 SharePoint 集成模式下配置的报表服务器上的报表模型数据源|`Server=https://server; datasource=https://server/site/documents/models/Adventure Works.smdl`|指定报表服务器或文档库 URL 以及报表服务器文件夹或文档库文件夹命名空间中已发布的模型的路径。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|将数据源类型设置为 **OLE DB Provider for OLAP Services 8.0**。<br /><br /> 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ConnectTo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 属性设置为 **8.0** ，则可以快速连接到 **2000**数据源。 若要设置此属性，请使用 **“连接属性”** 对话框中的 **“高级属性”** 选项卡。|  
 |Oracle 服务器|`data source=myserver`|将数据源类型设置为 **Oracle**。 此外，还必须在报表设计器计算机上和报表服务器上安装 Oracle 客户端工具。 有关详细信息，请参阅 [Oracle 连接类型 (SSRS)](../../reporting-services/report-data/oracle-connection-type-ssrs.md)。|  
 |SAP NetWeaver BI 数据源|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|将数据源类型设置为 **SAP NetWeaver BI**。 有关详细信息，请参阅 [SAP NetWeaver BI 连接类型 (SSRS)](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)。|  
 |Hyperion Essbase 数据源|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|将数据源类型设置为 **Hyperion Essbase**。 有关详细信息，请参阅 [Hyperion Essbase 连接类型 (SSRS)](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)。|  
 |Teradata 数据源|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|将数据源类型设置为 **Teradata**。 连接字符串是包含四个字段的 Internet 协议 (IP) 地址，其中每个字段可以包含一至三位数。 有关详细信息，请参阅 [Teradata 连接类型 (SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md)。|  
 |Teradata 数据源|`Database=` *\<database name>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN *>* `;Use X Views=False;Restrict to Default Database=True`|与前一示例类似，将数据源类型设置为 **Teradata**。 请仅使用在 Database 标记中指定的默认数据库，不要自动发现数据关系。|  
 |XML 数据源、Web 服务|`data source=https://adventure-works.com/results.aspx`|将数据源类型设置为 **XML**。 连接字符串是支持 Web 服务定义语言 (WSDL) 的 Web 服务的 URL。 有关详细信息，请参阅 [XML 连接类型 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)。|  
-|XML 数据源、XML 文档|`https://localhost/XML/Customers.xml`|将数据源类型设置为 **XML**。 其连接字符串是一个指向 XML 文档的 URL。|  
+|XML 数据源、XML 文档|`https://localhost/XML/Customers.xml`|将数据源类型设置为 **XML**。 其连接字符串是一个指向 XML 文档的 URL。 
 |XML 数据源、嵌入的 XML 文档|*Empty*|将数据源类型设置为 **XML**。 XML 数据嵌入在报表定义中。|  
 |SharePoint 列表|`data source=https://MySharePointWeb/MySharePointSite/`|将数据源类型设置为 **SharePoint List**。|  
+| Power BI Premium 数据集（从 Reporting Services 2019 开始） | Server = powerbi：//api.powerbi.com/v1.0/myorg/<workspacename>; 初始目录 = <YourDatasetName> | 将数据源类型设置为 **Microsoft SQL Server Analysis Services**。 |
+
   
  如果无法使用 **localhost**连接到报表服务器，请检查是否已启用网络协议 TCP/IP 协议。 有关详细信息，请参阅 [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)。  
   

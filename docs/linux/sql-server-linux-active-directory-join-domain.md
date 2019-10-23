@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027338"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305276"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>将 Linux 主机上的 SQL Server 加入 Active Directory 域
 
@@ -197,9 +197,9 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > - 如果 id user@contoso.com  返回 `No such user`，请通过运行命令 `sudo systemctl status sssd` 确保 SSSD 服务成功启动。 如果服务运行且仍显示该错误，请尝试为 SSSD 启用详细日志记录。 有关详细信息，请参阅 Red Hat 文档：[对 SSSD 进行故障排除](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)。
+   > - 如果 **id user\@contoso.com** 返回 `No such user`，请通过运行命令 `sudo systemctl status sssd` 确保 SSSD 服务成功启动。 如果服务运行且仍显示该错误，请尝试为 SSSD 启用详细日志记录。 有关详细信息，请参阅 Red Hat 文档：[对 SSSD 进行故障排除](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)。
    >
-   > - 如果 kinit user@CONTOSO.COM  返回 `KDC reply did not match expectations while getting initial credentials`，请确保用大写字母指定领域。
+   > - 如果 **kinit user\@CONTOSO.COM** 返回 `KDC reply did not match expectations while getting initial credentials`，请确保用大写字母指定领域。
 
 有关详细信息，请参阅 Red Hat 文档：[发现和加入标识域](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)。
 

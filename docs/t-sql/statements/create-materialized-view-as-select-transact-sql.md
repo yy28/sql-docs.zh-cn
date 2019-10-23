@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: d841f7aa8a5aacfa684b984791a15128b306ab1d
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: a0bf701395723b1d21efea38f969024a1921c3f6
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70109766"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545073"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)（预览）
 
@@ -52,7 +52,7 @@ ms.locfileid: "70109766"
 
 具体化视图将保留视图定义查询返回的数据，并自动随着基础表中的数据更改而更新。   它可以提高复杂查询的性能（通常指使用联接和聚合的查询），同时还提供简单的维护操作。   由于具体化视图具有执行计划自动匹配功能，因此无需在查询中引用它，优化器即会考虑将此视图作为替换项。  这样数据工程师即可以将具体化视图作为改进查询响应时间的机制来实现，而不必再更改查询。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -111,8 +111,8 @@ select_statement
 Azure 数据仓库的具体化视图与 SQL Server 的索引视图非常相似。  除了具体化视图支持聚合函数外，它与索引视图适用的限制几乎相同（请参阅[创建索引视图](/sql/relational-databases/views/create-indexed-views)了解详细信息）。   以下是关于具体化视图的其他注意事项。  
  
 具体化视图仅支持 CLUSTERED COLUMNSTORE INDEX。 
- 
-可以通过 DROP VIEW 删除具体化视图。  可以使用 ALTER MATERIALIZED VIEW 禁用或重新生成具体化视图。   
+
+具体化视图无法引用其他视图。  
  
 可以在已分区表上创建具体化视图。  具体化视图引用的表支持 SPLIT/MERGE 操作。  具体化视图引用的表不支持 SWITCH。 若尝试执行此操作，用户将看到错误 `Msg 106104, Level 16, State 1, Line 9`
  
@@ -129,6 +129,8 @@ Azure 数据仓库的具体化视图与 SQL Server 的索引视图非常相似�
 创建后，SQL Server Management Studio 中的 Azure SQL 数据仓库实例的视图文件夹将显示具体化实体。
 
 用户可以运行 [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) 和 [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) 来确定具体化视图占用的空间。  
+
+可以通过 DROP VIEW 删除具体化视图。  可以使用 ALTER MATERIALIZED VIEW 禁用或重新生成具体化视图。   
 
 SQL Server Management Studio 中的 EXPLAIN 计划和图形估计执行计划可以显示查询优化器是否考虑将具体化视图用于查询执行。 SQL Server Management Studio 中的图形估计执行计划可以显示查询优化器是否考虑将具体化视图用于查询执行。
 

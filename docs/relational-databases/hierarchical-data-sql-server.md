@@ -18,12 +18,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36fea2a22bddcf130725e6092314e00fbb0b6a8f
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974252"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304960"
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
 
@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>使用可序列化事务的示例  
- 该 **Org_BreadthFirst** 索引可确保确定 **@last_child** 使用范围查找。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 ID 的多个雇员，因此必须重新计算 **@last_child** 。 以下代码计算可序列化事务中的新节点值：  
+ Org_BreadthFirst 索引可确保确定 \@last_child 使用范围查找   。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 ID 的多个雇员，因此必须重新计算 \@last_child  。 以下代码计算可序列化事务中的新节点值：  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -512,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> 移动子树  
- 另一项常用操作是移动子树。 下面的过程采用 **@oldMgr** 的子树作为参数，使其（包括 **@oldMgr** ）成为 **@newMgr** 进行子树查询时速度明显加快。  
+ 另一项常用操作是移动子树。 下面的过程采用 \@oldMgr 的子树作为参数，使其（包括 \@oldMgr）成为 \@newMgr的子树    。  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

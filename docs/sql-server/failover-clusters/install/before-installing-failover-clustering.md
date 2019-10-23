@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e30bc0e3dd0402d4b62ac55a897268c021507560
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063993"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517944"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   安装 SQL Server 故障转移群集之前，必须选择运行 SQL Server 的硬件和操作系统。 还必须配置 Windows Server 故障转移群集 (WSFC)，检查网络和安全性，并了解将在故障转移群集上运行的其他软件的注意事项。  
   
- 如果 Windows 群集具有本地磁盘驱动器，且同一盘符还在一个或多个群集节点上作为共享驱动器使用，则不能在该驱动器上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 如果 Windows 群集具有本地磁盘驱动器，且同一盘符还在一个或多个群集节点上作为共享驱动器使用，则不能在该驱动器上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 此限制适用于属于 Windows 故障转移群集实例的服务器上的 SQL Server 故障转移群集实例和单独的实例。
   
  您还可能要查看以下主题以便了解与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集概念、功能和任务有关的更多信息。  
   
