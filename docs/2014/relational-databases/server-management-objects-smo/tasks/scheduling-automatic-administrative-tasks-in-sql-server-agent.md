@@ -1,5 +1,5 @@
 ---
-title: 计划 SQL Server 代理中的自动管理任务 |Microsoft Docs
+title: 在 SQL Server 代理中计划自动管理任务Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2f8da4d4178a411f71311f9b2aa62c78276863c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 715a60d4a6f4a138a71e7de6095234a9e0d2a461
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62519222"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782212"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>在 SQL Server 代理中计划自动管理任务
   在 SMO 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理由下列对象表示：  
@@ -35,7 +35,7 @@ ms.locfileid: "62519222"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理对象位于 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空间中。  
   
 ## <a name="examples"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 1.  对于使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的程序，必须包括 `Imports` 语句以限定该代理的命名空间。 请在应用程序的其他 `Imports` 语句之后、任何声明之前插入该语句，例如：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62519222"
 ## <a name="creating-a-job-with-steps-and-a-schedule-in-visual-c"></a>在 Visual C# 中创建包含步骤和计划的作业  
  此代码示例将创建包含步骤和计划的作业，然后通知操作员。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.  
             Server srv = new Server();  
@@ -112,7 +112,7 @@ ms.locfileid: "62519222"
 ## <a name="creating-a-job-with-steps-and-a-schedule-in-powershell"></a>在 PowerShell 中创建包含步骤和计划的作业  
  此代码示例将创建包含步骤和计划的作业，然后通知操作员。  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
@@ -145,7 +145,7 @@ $jbstp.OnFailAction =[Microsoft.SqlServer.Management.SMO.Agent.StepCompletionAct
 $jbstp.Create();   
   
 #Define a JobSchedule object variable by supplying the parent job and name arguments in the constructor.   
-$jbsch =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Agent.JobSchedule -argumentlist $jb, "Test_Job_Schedule"   
+$jbsch = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Agent.JobSchedule -argumentlist $jb, "Test_Job_Schedule"   
   
 #Set properties to define the schedule frequency, and duration.   
 $jbsch.FrequencyTypes =  [Microsoft.SqlServer.Management.SMO.Agent.FrequencyTypes]::Daily  
@@ -166,7 +166,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>在 Visual Basic 中创建警报  
  此代码示例将创建由性能条件触发的警报。 该条件必须以特定格式提供：  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
   
  对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 类型需要方括号，因为 `operator` 是一个 Visual Basic 关键字。  
   
@@ -175,11 +175,11 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>在 Visual C# 中创建警报  
  此代码示例将创建由性能条件触发的警报。 该条件必须以特定格式提供：  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
   
  对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 类型需要方括号，因为 `operator` 是一个 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 关键字。  
   
-```  
+```csharp
 {  
              //Connect to the local, default instance of SQL Server.   
             Server srv = new Server();  
@@ -208,11 +208,11 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>在 PowerShell 中创建警报  
  此代码示例将创建由性能条件触发的警报。 该条件必须以特定格式提供：  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
   
  对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 类型需要方括号，因为 `operator` 是一个 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 关键字。  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
@@ -251,7 +251,7 @@ $op.Drop()
 ## <a name="allowing-user-access-to-subsystem-by-using-a-proxy-account-in-visual-c"></a>在 Visual C# 中使用代理帐户允许用户访问子系统  
  此代码示例演示如何使用 <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount.AddSubSystem%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount> 方法来允许用户访问指定的子系统。  
   
-```  
+```csharp
 //Connect to the local, default instance of SQL Server.   
 {   
 Server srv = default(Server);   
@@ -280,8 +280,6 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 代理](../../../ssms/agent/sql-server-agent.md)   
  [执行作业](../../../ssms/agent/implement-jobs.md)  
-  
-  

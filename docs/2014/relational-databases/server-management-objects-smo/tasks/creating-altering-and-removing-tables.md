@@ -1,5 +1,5 @@
 ---
-title: 创建、 更改和删除表 |Microsoft Docs
+title: 创建、更改和删除表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acb2c3a5163bdb5e69d67b0f8c27d2c77d21a7be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a0d70b1748ddc597aa7a2676e5e2f938c235442
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63218256"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782384"
 ---
 # <a name="creating-altering-and-removing-tables"></a>创建、更改和删除表
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中，表通过 <xref:Microsoft.SqlServer.Management.Smo.Table> 对象来表示。 在 SMO 对象层次结构中，<xref:Microsoft.SqlServer.Management.Smo.Table> 对象位于 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象的下方。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、模板和语言。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、模板和语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除表  
  此代码示例创建了一个包含若干具有不同类型和用途的列的表。 此代码还提供了有关以下内容的示例：如何创建标识字段、如何创建主键以及如何更改表属性。  
@@ -35,7 +35,7 @@ ms.locfileid: "63218256"
 ## <a name="creating-altering-and-removing-a-table-in-visual-c"></a>在 Visual C# 中创建、更改和删除表  
  此代码示例创建了一个包含若干具有不同类型和用途的列的表。 此代码还提供了有关以下内容的示例：如何创建标识字段、如何创建主键以及如何更改表属性。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
         Server srv;   
@@ -82,7 +82,7 @@ ms.locfileid: "63218256"
 ## <a name="creating-altering-and-removing-a-table-in-powershell"></a>在 PowerShell 中创建、更改和删除表  
  此代码示例创建了一个包含若干具有不同类型和用途的列的表。 此代码还提供了有关以下内容的示例：如何创建标识字段、如何创建主键以及如何更改表属性。  
   
-```  
+```powershell
 #Load the assembly containing the objects used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.Types")  
   
@@ -90,7 +90,7 @@ ms.locfileid: "63218256"
 CD \sql\localhost\default\Databases\  
   
 #And the database object corresponding to AdventureWorks2012.  
-$db = get-item AdventureWorks2012  
+$db = Get-Item AdventureWorks2012  
   
 #Create a SMO Table  
 $tb = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Table -argumentlist $db, "Test_Table"  
@@ -107,16 +107,16 @@ $col2 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumen
 $col2.Identity = $true  
 $col2.IdentitySeed = 1  
 $col2.IdentityIncrement = 1  
-$tb.Columns.Add($col2)   
+$tb.Columns.Add($col2)
   
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::Real  
 $col3 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Value", $Type  
-$tb.Columns.Add($col3)   
+$tb.Columns.Add($col3)
   
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
 $col4 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Date", $Type  
 $col4.Nullable = $false  
-$tb.Columns.Add($col4)   
+$tb.Columns.Add($col4)
   
 #Create the table  
 $tb.Create()  
@@ -124,17 +124,14 @@ $tb.Create()
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
 $col5 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"ExpiryDate", $Type  
 $col5.Nullable = $false  
-$tb.Columns.Add($col5)   
+$tb.Columns.Add($col5)
   
-#Run the Alter method to make the change on the instance of SQL Server.   
+#Run the Alter method to make the change on the instance of SQL Server.
 $tb.Alter()  
   
-#Remove the table from the database.   
+#Remove the table from the database.
 $tb.Drop()  
-  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.SqlServer.Management.Smo.Table>  
-  
-  
+## <a name="see-also"></a>另请参阅  
+ <xref:Microsoft.SqlServer.Management.Smo.Table>

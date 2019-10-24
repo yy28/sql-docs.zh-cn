@@ -1,5 +1,5 @@
 ---
-title: 创建、 更改和删除规则 |Microsoft Docs
+title: 创建、更改和删除规则 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d201b20e0bdfd213c62c060250b5674589ab91cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30c5c1a0593c6287cca48b4e241854b4145f4518
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62519321"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782319"
 ---
 # <a name="creating-altering-and-removing-rules"></a>创建、更改和删除规则
   在 SMO 中，规则由 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象表示。 规则是由 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 属性进行定义的，该属性是包含使用运算符或谓词（如，IN、LIKE 或 BETWEEN）的条件表达式的文本字符串。 规则不能引用列或其他数据库对象。 可以包括不引用数据库对象的内置函数。  
   
- <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 属性中的定义必须包含引用输入的数据值的变量。 可以使用任何名称或符号表示值时创建规则，但第一个字符必须是\@符号。  
+ <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 属性中的定义必须包含引用输入的数据值的变量。 创建规则时，可以使用任何名称或符号表示值，但第一个字符必须是 \@ 符号。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除规则  
  此代码示例说明如何创建规则，将其附加到列，修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象的属性，从列中分离规则，以及删除规则。  
@@ -39,7 +39,7 @@ ms.locfileid: "62519321"
   
  使用完整的程序集路径指定 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象的 `Dim` 语句，以便在使用 System.Data 程序集中的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象时避免含糊歧义。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
@@ -72,32 +72,28 @@ ms.locfileid: "62519321"
   
  使用完整的程序集路径指定 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象的 `Dim` 语句，以便在使用 System.Data 程序集中的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象时避免含糊歧义。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
-# Define a Rule object variable by supplying the parent database, name and schema in the constructor.   
-$ru = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Rule `  
--argumentlist $db, "TestRule", "Production"  
+# Define a Rule object variable by supplying the parent database, name and schema in the constructor.
+$ru = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Rule -argumentlist $db, "TestRule", "Production"  
   
-#Set the TextHeader and TextBody properties to define the rule.   
+#Set the TextHeader and TextBody properties to define the rule.
 $ru.TextHeader = "CREATE RULE [Production].[TestRule] AS"  
 $ru.TextBody = "@value BETWEEN GETDATE() AND DATEADD(year,4,GETDATE())"  
   
-#Create the rule on the instance of SQL Server.   
+#Create the rule on the instance of SQL Server.
 $ru.Create()  
   
-# Bind the rule to a column in the Product table by supplying the table, schema, and   
-# column as arguments in the BindToColumn method.   
+# Bind the rule to a column in the Product table by supplying the table, schema, and column as arguments in the BindToColumn method.
 $ru.BindToColumn("Product", "SellEndDate", "Production")  
   
-#Unbind from the column before removing the rule from the database.   
+#Unbind from the column before removing the rule from the database.
 $ru.UnbindFromColumn("Product", "SellEndDate", "Production")  
 $ru.Drop()  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.SqlServer.Management.Smo.Rule>  
-  
-  

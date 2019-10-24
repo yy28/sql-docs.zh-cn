@@ -17,12 +17,12 @@ ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b85a2b6e7d574c1752eba84d1bfc2bce8dbafc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e6a5792c7e18013dba5cc4c0963dc6d045410f0
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788714"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782923"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>恢复可用性数据库 (SQL Server)
   您可以通过使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中恢复已挂起的可用性数据库。 恢复挂起的数据库会将数据库置于 SYNCHRONIZING 状态。 恢复主数据库还将恢复挂起主数据库时导致挂起的任何辅助数据库。 如果任何辅助数据库是从承载辅助副本的服务器实例中本地挂起的，则该辅助数据库必须进行本地恢复。 一旦给定的辅助数据库和相应的主数据库处于 SYNCHRONIZING 状态，则在辅助数据库上将恢复数据同步。  
@@ -36,7 +36,7 @@ ms.locfileid: "62788714"
   
      [先决条件](#Prerequisites)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要恢复辅助数据库，请使用：**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62788714"
 ###  <a name="Restrictions"></a> 限制和局限  
  RESUME 命令只要被承载目标数据库的副本接受后就返回，但是实际上继续数据库以异步方式发生。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a> Prerequisites  
   
 -   您必须连接到承载要恢复的数据库的服务器实例。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62788714"
   
 -   主数据库必须处于联机状态且可用。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
  需要对数据库拥有 ALTER 权限。  
@@ -77,7 +77,7 @@ ms.locfileid: "62788714"
   
 3.  展开该可用性组。  
   
-4.  展开“可用性数据库”  节点，右键单击该数据库，然后单击“恢复数据移动”  。  
+4.  展开“可用性数据库”节点，右键单击该数据库，然后单击“恢复数据移动”。  
   
 5.  在 **“恢复数据移动”** 对话框中，单击 **“确定”** 。  
   
@@ -94,7 +94,8 @@ ms.locfileid: "62788714"
      ALTER DATABASE *database_name* SET HADR RESUME  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
- **恢复辅助数据库**  
+
+### <a name="to-resume-a-secondary-database"></a>恢复辅助数据库
   
 1.  将目录 (`cd`) 更改为承载要恢复的数据库所在副本的服务器实例。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。  
   
@@ -102,9 +103,8 @@ ms.locfileid: "62788714"
   
      例如，下面的命令针对可用性组 `MyDb3` 中的可用性数据库 `MyAg`恢复数据同步。  
   
-    ```  
-    Resume-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
+    ```powershell
+    Resume-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
     ```  
   
     > [!NOTE]  
@@ -114,11 +114,9 @@ ms.locfileid: "62788714"
   
 -   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="RelatedTasks"></a>相关任务  
   
 -   [挂起可用性数据库 (SQL Server)](suspend-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组&#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)  

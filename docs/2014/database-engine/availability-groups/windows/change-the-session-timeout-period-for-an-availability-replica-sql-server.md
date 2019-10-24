@@ -14,12 +14,12 @@ ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce0b7de068162e98f4a5f768a8024459852c2d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1408d970093fde0e2efea9662b56b9f099d6b0b4
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62792067"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783031"
 ---
 # <a name="change-the-session-timeout-period-for-an-availability-replica-sql-server"></a>更改可用性副本的会话超时期限 (SQL Server)
   本主题介绍如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 来配置 AlwaysOn 可用性副本的会话超时期限。 会话超时期限是一个副本属性，用来控制可用性副本等待已连接副本的 ping 响应的时间（秒数），超过该期限则认为连接已失败。 默认情况下，副本等待 ping 响应的时长为 10 秒钟。 此副本属性仅适用于可用性组的给定辅助副本与主副本之间的连接。 有关会话超时期限的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)。  
@@ -30,7 +30,7 @@ ms.locfileid: "62792067"
   
      [建议](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要更改会话超时期限，可使用：**  
   
@@ -42,14 +42,14 @@ ms.locfileid: "62792067"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a> Prerequisites  
   
 -   您必须连接到承载主副本的服务器实例。  
   
 ###  <a name="Recommendations"></a> 建议  
  我们建议您将超时期限保持为 10 秒或更长。 如果将值设置为低于 10 秒，则可能使高负荷系统丢失 PING 并声明错误故障。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
@@ -88,7 +88,8 @@ ms.locfileid: "62792067"
     ```  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
- **更改可用性副本的会话超时期限**  
+
+### <a name="to-change-the-session-timeout-period-for-an-availability-replica"></a>更改可用性副本的会话超时期限
   
 1.  将目录 (`cd`) 更改为承载主副本的服务器实例。  
   
@@ -96,19 +97,14 @@ ms.locfileid: "62792067"
   
      例如，以下命令将会话超时期限设置为 15 秒。  
   
-    ```  
-    Set-SqlAvailabilityReplica -SessionTimeout 15 `   
-    -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
+    ```powershell
+    Set-SqlAvailabilityReplica -SessionTimeout 15 -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
   
     > [!NOTE]  
     >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **设置和使用 SQL Server PowerShell 提供程序**  
+若要设置并使用 SQL Server PowerShell 提供程序，请参阅[SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)。
   
--   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
-  
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组&#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)  

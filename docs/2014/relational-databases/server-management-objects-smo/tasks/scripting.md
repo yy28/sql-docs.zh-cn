@@ -1,5 +1,5 @@
 ---
-title: 脚本编写 |Microsoft Docs
+title: 脚本 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f10289e099a0c3b6400b71d972c6f749ffb76ff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63158780"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781932"
 ---
 # <a name="scripting"></a>脚本编写
-  SMO 中的脚本撰写由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象及其子对象控制，或由各个对象的 `Script` 方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>对象控制外的实例上的对象的依赖关系映射[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  SMO 中的脚本撰写由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象及其子对象控制，或由各个对象的 `Script` 方法控制。 @No__t_0 对象控制对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上对象的依赖关系的映射。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象及其子对象进行的高级脚本撰写是一个由三个阶段组成的过程：  
   
@@ -29,9 +29,9 @@ ms.locfileid: "63158780"
   
 2.  生成列表  
   
-3.  生成脚本  
+3.  脚本生成  
   
- 发现阶段使用 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 对象。 如果给定对象的 URN 列表，则 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 方法将为该 URN 列表中的对象返回 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 对象。 一个布尔值*fParents*参数用于选择父项或指定对象的子级是被发现。 在此阶段可以修改依赖关系树。  
+ 发现阶段使用 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 对象。 如果给定对象的 URN 列表，则 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 方法将为该 URN 列表中的对象返回 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 对象。 布尔*fParents*参数用于选择是要发现指定对象的父对象还是子对象。 在此阶段可以修改依赖关系树。  
   
  在生成列表阶段，会传入该树并返回生成的列表。 此对象列表是按脚本撰写顺序排列的，可以对其进行操作。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "63158780"
  第三阶段也是最后一个阶段，在此阶段中，使用指定的列表和脚本撰写选项生成脚本。 结果以 <xref:System.Collections.Specialized.StringCollection> 系统对象的形式返回。 在此阶段中，接下来会从 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 对象和属性（如 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> 和 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A>）的项集合中提取依赖对象的名称。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
  此代码示例需要对 System.Collections.Specialized 命名空间使用 `Imports` 语句。 请将此语句与其他 Imports 语句一同插入在应用程序中的任何声明代码前。  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.SqlServer.Management.Common  
 Imports System.Collections.Specialized  
@@ -53,7 +53,7 @@ Imports System.Collections.Specialized
 ## <a name="scripting-out-the-dependencies-for-a-database-in-visual-basic"></a>在 Visual Basic 中撰写数据库依赖项的脚本  
  此代码示例说明如何发现依赖项并循环访问列表以显示结果。  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.Smo.dll   
 ' /r:Microsoft.SqlServer.ConnectionInfo.dll   
@@ -101,7 +101,7 @@ End Class
 ## <a name="scripting-out-the-dependencies-for-a-database-in-visual-c"></a>在 Visual C# 中撰写数据库依赖项的脚本  
  此代码示例说明如何发现依赖项并循环访问列表以显示结果。  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.Smo.dll   
 // /r:Microsoft.SqlServer.ConnectionInfo.dll   
@@ -149,7 +149,7 @@ public class A {
 ## <a name="scripting-out-the-dependencies-for-a-database-in-powershell"></a>在 PowerShell 中撰写数据库依赖项的脚本  
  此代码示例说明如何发现依赖项并循环访问列表以显示结果。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\default  
   
@@ -160,7 +160,6 @@ $scrp.Options.WithDependencies = $true
 $scrp.Options.IncludeIfNotExists = $true  
   
 # Set the path context to the tables in AdventureWorks2012.  
-  
 CD Databases\AdventureWorks2012\Tables  
   
 foreach ($Item in Get-ChildItem)  
@@ -168,5 +167,3 @@ foreach ($Item in Get-ChildItem)
  $scrp.Script($Item)  
  }  
 ```  
-  
-  

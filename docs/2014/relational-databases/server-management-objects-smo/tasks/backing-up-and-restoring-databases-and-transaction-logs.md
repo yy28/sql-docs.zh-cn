@@ -19,27 +19,27 @@ ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fc7ff4dc3142fa6f6cd18fc7b00e691d3bf29df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62655692"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783053"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>备份和还原数据库和事务日志
-  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 类和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 类是为实现特定备份和还原任务提供工具的实用工具类。 一个<xref:Microsoft.SqlServer.Management.Smo.Backup>对象表示是而不是必需的特定备份任务[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务器实例上的对象。  
+  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 类和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 类是为实现特定备份和还原任务提供工具的实用工具类。 @No__t_0 对象表示所需的特定备份任务，而不是服务器实例上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对象。  
   
  如果发生数据丢失或损坏，则必须完全或部分还原备份。 部分还原使用 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 集合将要进行还原的数据分成段。 如果要对事务日志进行备份，则可以使用 <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Restore> 属性将数据还原到特定时间点。 还可以采用 <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> 方法来验证数据。 建议采用的备份过程是，通过定期进行还原操作并检查数据库中的数据来检查备份的完整性。  
   
  与 <xref:Microsoft.SqlServer.Management.Smo.Backup> 对象相同，无需采用 `Create` 方法创建 <xref:Microsoft.SqlServer.Management.Smo.Restore> 对象，因为该对象并不表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中的任何对象。 <xref:Microsoft.SqlServer.Management.Smo.Restore> 对象具有还原数据库所需的一组属性和方法。  
   
 ## <a name="examples"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>在 Visual Basic 中备份数据库和事务日志  
  此代码示例说明如何将现有数据库备份到某个文件，以及如何还原该数据库。  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Common  
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.VisualBasic.MyServices  
@@ -179,7 +179,7 @@ End Module
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-c"></a>在 Visual C# 中备份数据库和事务日志  
  此代码示例说明如何将现有数据库备份到某个文件，以及如何还原该数据库。  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Common;  
 using Microsoft.SqlServer.Management.Smo;  
   
@@ -317,9 +317,7 @@ class A {
 ## <a name="backing-up-databases-and-transaction-logs-in-powershell"></a>在 PowerShell 中备份数据库和事务日志  
  此代码示例说明如何将现有数据库备份到某个文件，以及如何还原该数据库。  
   
-```  
-#Backing up and restoring a Database from PowerShell  
-  
+```powershell
 #Connect to the local, default instance of SQL Server.  
   
 #Get a server object which corresponds to the default instance  
@@ -452,7 +450,7 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\Test
 > [!NOTE]  
 >  <xref:System.Collections.Specialized.StringCollection> 对象需要使用 `imports System.Collections.Specialized` 语句引用命名空间。  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.SqlServer.Management.Common  
 Imports System.Collections.Specialized  
@@ -482,7 +480,7 @@ End Module
 > [!NOTE]  
 >  <xref:System.Collections.Specialized.StringCollection> 对象需要使用 `imports System.Collections.Specialized` 语句引用命名空间。  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Common;  
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
@@ -514,16 +512,14 @@ class A {
 > [!NOTE]  
 >  <xref:System.Collections.Specialized.StringCollection> 对象需要使用 `imports System.Collections.Specialized` 语句引用命名空间。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
 $sc = $db.CheckTables([Microsoft.SqlServer.Management.SMO.RepairType]::None)  
-foreach ($c in $sc)  
+ForEach ($c In $sc)  
 {  
     $c  
- }  
+}  
 ```  
-  
-  
