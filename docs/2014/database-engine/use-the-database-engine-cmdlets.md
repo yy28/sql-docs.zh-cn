@@ -22,12 +22,12 @@ ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 190b8f0ec6ac647ee45a07181af1bd7094199dcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd5575c94c9a74623efaa80c9470c54982a41d0d
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088675"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783110"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>使用数据库引擎 cmdlet
   Windows PowerShell cmdlet 是单函数命令，通常采用“动词-名词”形式的命名约定，如 **Get-Help** 或 **Set-MachineName**。 用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序提供特定于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的 cmdlet。  
@@ -43,7 +43,7 @@ ms.locfileid: "66088675"
 ### <a name="partial-parameter-names"></a>部分参数名称  
  不需要指定 cmdlet 参数的完整名称。 您只需指定该名称的一部分，以便能够将其与 cmdlet 支持的其他参数区分开。 例如，这些示例说明指定 **Invoke-Sqlcmd -QueryTimeout** 参数的三种方式：  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryTimeout 3  
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryTime 3  
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3  
@@ -58,9 +58,9 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 |介绍使用 `Encode-Sqlname` 和 `Decode-Sqlname` 处理包含 Windows PowerShell 路径中不支持的字符的 SQL Server 标识符。|[对 SQL Server 标识符进行编码和解码](../powershell/encode-and-decode-sql-server-identifiers.md)|  
 |介绍使用 `Convert-UrnToPath` 将 SQL Server 可管理性对象统一资源名称 (URN) 转换为等价的 SQL Server 提供程序路径。|[将 URN 转换为 SQL Server 提供程序路径](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server PowerShell 提供程序](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
- [用于 AlwaysOn 可用性组的 PowerShell Cmdlet 概述&#40;SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [适用于 AlwaysOn 可用性组&#40;SQL Server 的 PowerShell cmdlet 概述&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

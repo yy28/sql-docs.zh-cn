@@ -14,12 +14,12 @@ ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06fee22dc02a543aa9ab8ff249ca26f4cfb4aa40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54995cc99aae2065112cbb510203b656c409dcac
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226164"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782128"
 ---
 # <a name="creating-and-updating-statistics"></a>创建和更新统计信息
   在 SMO 中，有关处理数据库中的查询的统计信息可以使用 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 对象进行收集。  
@@ -27,7 +27,7 @@ ms.locfileid: "63226164"
  可以使用 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 和 <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> 对象创建任何列的统计信息。 可以运行 <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> 方法以更新 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 对象中的统计信息。 可以在查询优化器中查看结果。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-and-update-statistics-in-visual-basic"></a>在 Visual Basic 中创建和更新统计信息  
  此代码示例将对为其创建 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 对象和 <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> 对象的现有数据库创建新表。  
@@ -37,7 +37,7 @@ ms.locfileid: "63226164"
 ## <a name="creating-and-update-statistics-in-visual-c"></a>在 Visual C# 中创建和更新统计信息  
  此代码示例将对为其创建 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 对象和 <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> 对象的现有数据库创建新表。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.  
             Server srv = new Server();  
@@ -64,7 +64,7 @@ ms.locfileid: "63226164"
 ## <a name="creating-and-update-statistics-in-powershell"></a>在 PowerShell 中创建和更新统计信息  
  此代码示例将对为其创建 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 对象和 <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> 对象的现有数据库创建新表。  
   
-```  
+```powershell
 # Example of implementing a full text search on the default instance.  
 # Set the path context to the local, default instance of SQL Server and database tables  
   
@@ -107,5 +107,3 @@ $fti.CatalogName = "Test_Catalog2"
 # Create the Full Text Search Index  
 $fti.Create()  
 ```  
-  
-  

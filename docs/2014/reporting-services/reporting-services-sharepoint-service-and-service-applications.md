@@ -1,5 +1,5 @@
 ---
-title: Reporting Services SharePoint 服务和服务应用程序 |Microsoft Docs
+title: SharePoint 服务和服务应用程序 Reporting Services |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 035cc8b8de493761b79ac391f2f543f96c941507
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93a8092dc9ed731349a1948a74e3950eb32f4f47
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66102872"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783162"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服务和服务应用程序
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式的体系结构以 SharePoint 体系结构为基础，并利用 SharePoint 服务和一对多服务应用程序。 创建服务应用程序将使该服务可用并生成服务应用程序数据库。 您可以创建多个 Reporting Services 服务应用程序，但一个服务应用程序已足以用于大多数部署方案。  
@@ -62,27 +62,25 @@ ms.locfileid: "66102872"
   
 1.  将应用程序池名称的应用程序池对象添加到要传递到“新建”操作的变量。  
   
-    ```  
-    $appPoolName = get-spserviceapplicationpool "<application pool name>"  
+    ```powershell
+    $appPoolName = Get-SPServiceApplicationPool "<application pool name>"  
     ```  
   
 2.  使用您提供的名称和应用程序池名称创建服务应用程序。  
   
-    ```  
+    ```powershell
     New-SPRSServiceApplication -Name 'MyServiceApplication' -ApplicationPool $appPoolName -DatabaseName 'MyServiceApplicationDatabase' -DatabaseServer '<Server Name>'  
     ```  
   
 3.  获取新的服务应用程序对象，并将此对象传送到新代理 cmdlet 的管道中。  
   
-    ```  
+    ```powershell
     Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
-##  <a name="bkmk_related"></a> 相关任务  
+##  <a name="bkmk_related"></a>相关任务  
   
 |任务|链接|  
 |----------|----------|  
 |管理您的服务应用程序的设置。|[管理 Reporting Services SharePoint 服务应用程序](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)|  
 |备份和还原服务应用程序及相关的组件，如加密密钥和代理。|[备份和还原 Reporting Services SharePoint 服务应用程序](../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
-  
-  
