@@ -12,12 +12,12 @@ ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 49459743e2eb8af64b1c41910c660f713dbdb2a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df13432a0b5f835690dd6371fd935198d7798b40
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035922"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783293"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>从 SQL Server 实用工具中删除 SQL Server 实例
   使用以下步骤从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例。 此过程从 UCP 列表视图中删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具数据收集将停止。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例不卸载。  
@@ -27,9 +27,9 @@ ms.locfileid: "63035922"
   
 1.  从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的实用工具资源管理器中，单击 **“托管实例”** 。 观察实用工具资源管理器内容窗格中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例的列表视图。  
   
-2.  在该列表视图的 **“SQL Server 实例名称”** 列中，选择要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 右键单击要删除的实例，然后选择“删除托管实例…”  。  
+2.  在该列表视图的 **“SQL Server 实例名称”** 列中，选择要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 右键单击要删除的实例，然后选择“删除托管实例…”。  
   
-3.  指定具有管理员特权的实例的凭据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:单击**连接...** ，验证中的信息**连接到服务器**对话框，然后单击**Connect**。 您将在 **“删除托管实例”** 对话框中看到登录信息。  
+3.  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例指定具有管理员权限的凭据：单击“连接…”，验证“连接到服务器”对话框中的信息，然后单击“连接”。 您将在 **“删除托管实例”** 对话框中看到登录信息。  
   
 4.  若要确认该操作，请单击 **“确定”** 。 若要退出该操作，请单击 **“取消”** 。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63035922"
   
 -   从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例。  
   
-```  
+```powershell
 # Get Ucp connection  
 $UcpServerInstanceName = "ComputerName\InstanceName";  
 $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server $UcpServerInstanceName;  
@@ -57,16 +57,16 @@ $ManagedInstance = $Utility.ManagedInstances[$ServerInstanceName];
 $ManagedInstance.Remove($InstanceConnection);  
 ```  
   
- 请注意，在引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称时，此名称务必与在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的名称完全相同。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的区分大小写的实例上，必须使用与 @@SERVERNAME 返回的完全一致的大小写来指定实例名称。 若要获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例的实例名称，请对该托管实例运行以下查询：  
+务必严格按 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称进行引用。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的区分大小写的实例上，必须使用与 @@SERVERNAME 返回的完全一致的大小写来指定实例名称。 
+
+若要获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例的实例名称，请对该托管实例运行以下查询：  
   
-```  
+```sql
 select @@SERVERNAME AS instance_name  
 ```  
   
  此时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例将从 UCP 完全删除。 在您下次刷新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的数据时，该托管实例将从列表视图中消失。 此状态完全等同于用户成功在 SSMS 用户界面中完成删除托管实例操作。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用实用工具资源管理器管理 SQL Server 实用工具](use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [SQL Server 实用工具故障排除](../../database-engine/troubleshoot-the-sql-server-utility.md)  
-  
-  

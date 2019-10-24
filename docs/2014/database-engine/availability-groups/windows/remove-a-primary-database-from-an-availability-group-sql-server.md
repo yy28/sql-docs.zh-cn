@@ -17,12 +17,12 @@ ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 593c065e9567c6b298e45d6130f944816325fbbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06b9dac5f9074b335afff7c6b71980618a3020ce
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62813961"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782870"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>从可用性组中删除主数据库 (SQL Server)
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 PowerShell，从 AlwaysOn 可用性组中删除主数据库和对应的辅助数据库。  
@@ -31,7 +31,7 @@ ms.locfileid: "62813961"
   
      [先决条件和限制](#Prerequisites)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要删除可用性数据库，请使用：**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62813961"
   
 -   只有主副本支持该任务。 您必须连接到承载主副本的服务器实例。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
@@ -69,7 +69,7 @@ ms.locfileid: "62813961"
   
     -   若要删除单个数据库，请在 **“对象资源管理器”** 窗格或 **“对象资源管理器详细信息”** 窗格中选中该数据库。  
   
-5.  右键单击选定的一个或多个数据库，然后在命令菜单中选择“从可用性组中删除数据库”  。  
+5.  右键单击选定的一个或多个数据库，然后在命令菜单中选择“从可用性组中删除数据库”。  
   
 6.  在 **“从可用性组中删除数据库”** 对话框中，删除所有列出的数据库，然后单击 **“确定”** 。 如果您不想全部删除这些数据库，请单击 **“取消”** 。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62813961"
   
      下面的示例将从 `Db6` 可用性组中删除名为 `MyAG` 的数据库。  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAG REMOVE DATABASE Db6;  
     ```  
   
@@ -99,9 +99,8 @@ ms.locfileid: "62813961"
   
      例如，下面的命令从名为 `MyDb9` 的可用性组中删除可用性数据库 `MyAg`。 因为此命令在承载主副本的服务器实例上执行，所以，主数据库及其对应的所有辅助数据库都将从可用性组中删除。 在任何辅助副本上都不会出现针对此数据库的数据同步。  
   
-    ```  
-    Remove-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\PrimaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb9  
+    ```powershell
+    Remove-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\PrimaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb9  
     ```  
   
     > [!NOTE]  
@@ -124,8 +123,6 @@ ms.locfileid: "62813961"
   
      有关详细信息，请参阅[恢复数据库而不还原数据 (Transact-SQL)](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)。  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
  [将辅助数据库从可用性组删除 (SQL Server)](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
-  
-  
