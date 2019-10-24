@@ -16,12 +16,12 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 183acf0bf1e6e92483989545a710769501fa946d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85cd7335290a619a7dd7b5e2cfcb729879bdaf6f
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62814132"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782944"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>从可用性组中删除辅助数据库 (SQL Server)
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 从 AlwaysOn 可用性组中删除辅助数据库。  
@@ -30,7 +30,7 @@ ms.locfileid: "62814132"
   
      [先决条件](#Prerequisites)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要删除辅助数据库，请使用：**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62814132"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **跟进：** [从可用性组中删除辅助数据库之后](#FollowUp)  
+-   **跟进：**  [从可用性组中删除辅助数据库之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62814132"
   
 -   只有辅助副本支持该任务。 您必须连接到承载要从中删除数据库的辅助副本的服务器实例。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
  需要对数据库拥有 ALTER 权限。  
@@ -69,7 +69,7 @@ ms.locfileid: "62814132"
   
     -   若要删除单个数据库，请在 **“对象资源管理器”** 窗格或 **“对象资源管理器详细信息”** 窗格中选中该数据库。  
   
-5.  右键单击选定的一个或多个数据库，然后在命令菜单中选择“删除辅助数据库”  。  
+5.  右键单击选定的一个或多个数据库，然后在命令菜单中选择“删除辅助数据库”。  
   
 6.  在 **“从可用性组删除数据库”** 对话框中，要删除所有列出的数据库，则单击 **“确定”** 。 如果您不想删除所有列出的数据库，请单击 **“取消”** 。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62814132"
   
      下面的示例将本地辅助数据库 *MyDb2* 从其可用性组中删除。  
   
-    ```  
+    ```sql
     ALTER DATABASE MyDb2 SET HADR OFF;  
     GO  
     ```  
@@ -100,9 +100,8 @@ ms.locfileid: "62814132"
   
      例如，下面的命令从名为 `MyDb8` 的服务器实例承载的次要副本中删除辅助数据库 `SecondaryComputer\Instance`。 与已删除的辅助数据库的数据同步将停止。 此命令将不会影响主数据库或任何其他辅助数据库。  
   
-    ```  
-    Remove-SqlAvailabilityDatabase `  
-    -Path SQLSERVER:\Sql\SecondaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb8  
+    ```powershell
+    Remove-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\SecondaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb8  
     ```  
   
     > [!NOTE]  
@@ -112,7 +111,7 @@ ms.locfileid: "62814132"
   
 -   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>跟进：从可用性组中删除辅助数据库之后  
+##  <a name="FollowUp"></a> 跟进：从可用性组中删除辅助数据库之后  
  删除辅助数据库之后，它不再加入到可用性组中，有关删除的辅助数据库的所有信息都会被可用性组丢弃。 删除的辅助数据库处于 RESTORING 状态。  
   
 > [!TIP]  
@@ -128,8 +127,6 @@ ms.locfileid: "62814132"
   
      有关详细信息，请参阅[恢复数据库而不还原数据 (Transact-SQL)](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)。  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
  [将主数据库从可用性组删除 (SQL Server)](remove-a-primary-database-from-an-availability-group-sql-server.md)  
-  
-  

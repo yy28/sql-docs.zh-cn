@@ -12,12 +12,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55e6f1788b5187d64f929070e93ab15b6fd7a8c9
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7f7f71e75d2afd12de9ff381bdc61b739eb192db
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810965"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782469"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>创建、更改和删除索引
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 层次结构中，索引由 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象表示。 索引列由 <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> 对象的集合表示，而该对象由 <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> 属性表示。  
@@ -25,12 +25,12 @@ ms.locfileid: "68810965"
  可以通过指定 <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Index> 属性对 XML 列创建索引。  
   
 ## <a name="examples"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息, 请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>在 Visual Basic 中创建非聚集组合索引  
  此代码示例演示如何创建组合的非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 对于非聚集索引，请将 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 属性设为 `False`。  
   
-```  
+```vb
 ' /r:Microsoft.SqlServer.Smo.dll  
 ' /r:Microsoft.SqlServer.ConnectionInfo.dll  
 ' /r:Microsoft.SqlServer.SqlEnum.dll  
@@ -80,14 +80,13 @@ Public Class A
         ' Remove the index from the table.   
         idx.Drop()  
     End Sub  
-End Class  
-  
+End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>在 Visual C# 中创建非聚集组合索引  
  此代码示例演示如何创建组合的非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 对于非聚集索引，请将 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 属性设为 `False`。  
   
-```  
+```csharp
 // /r:Microsoft.SqlServer.Smo.dll  
 // /r:Microsoft.SqlServer.ConnectionInfo.dll  
 // /r:Microsoft.SqlServer.SqlEnum.dll  
@@ -138,25 +137,24 @@ public class A {
       // Remove the index from the table.   
       idx.Drop();  
    }  
-}  
-  
+}
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>在 PowerShell 中创建非聚集组合索引  
  此代码示例演示如何创建组合的非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 对于非聚集索引，请将 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 属性设为 `False`。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
   
 #Get a reference to the table  
-$tb = get-item HumanResources.Employee  
+$tb = Get-Item HumanResources.Employee  
   
-#Define an Index object variable by providing the parent table and index name in the constructor.   
+#Define an Index object variable by providing the parent table and index name in the constructor.
 $idx = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "TestIndex"  
   
-#Add indexed columns to the index.   
+#Add indexed columns to the index.
 $icol1 = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `  
 -argumentlist $idx, "BusinessEntityId", $true  
 $idx.IndexedColumns.Add($icol1)  
@@ -165,28 +163,28 @@ $icol2 = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `
 -argumentlist $idx, "HireDate", $true  
 $idx.IndexedColumns.Add($icol2)  
   
-#Set the index properties.   
-$idx.IndexKeyType = [Microsoft.SqlServer.Management.SMO.IndexKeyType]::DriUniqueKey   
+#Set the index properties.
+$idx.IndexKeyType = [Microsoft.SqlServer.Management.SMO.IndexKeyType]::DriUniqueKey
 $idx.IsClustered = $false  
 $idx.FillFactor = 50  
   
-#Create the index on the instance of SQL Server.   
+#Create the index on the instance of SQL Server.
 $idx.Create()  
   
-#Modify the page locks property.   
-$idx.DisallowPageLocks = $true  
+#Modify the page locks property.
+$idx.DisallowPageLocks = $true
   
-#Run the Alter method to make the change on the instance of SQL Server.   
+#Run the Alter method to make the change on the instance of SQL Server.
 $idx.Alter()  
   
-#Remove the index from the table.   
+#Remove the index from the table.
 $idx.Drop();  
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>在 Visual Basic 中创建 XML 索引  
- 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是一个名为 MySampleCollection 的 XML 架构集合, 它是在[使用 XML 架构](using-xml-schemas.md)中创建的。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
+ 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是一个名为 MySampleCollection 的 XML 架构集合，它是在[使用 XML 架构](using-xml-schemas.md)中创建的。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
   
-```  
+```vb
 ' /r:Microsoft.SqlServer.Smo.dll  
 ' /r:Microsoft.SqlServer.ConnectionInfo.dll  
 ' /r:Microsoft.SqlServer.SqlEnum.dll  
@@ -242,14 +240,13 @@ Public Class A
         ' Create the XML index on the instance of SQL Server.   
         i.Create()  
     End Sub  
-End Class  
-  
+End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>在 Visual C# 中创建 XML 索引  
- 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是一个名为 MySampleCollection 的 XML 架构集合, 它是在[使用 XML 架构](using-xml-schemas.md)中创建的。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
+ 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是一个名为 MySampleCollection 的 XML 架构集合，它是在[使用 XML 架构](using-xml-schemas.md)中创建的。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
   
-```  
+```csharp
 // /r:Microsoft.SqlServer.Smo.dll  
 // /r:Microsoft.SqlServer.ConnectionInfo.dll  
 // /r:Microsoft.SqlServer.SqlEnum.dll  
@@ -305,61 +302,56 @@ public class A {
       // Create the XML index on the instance of SQL Server.   
       i.Create();  
    }  
-}  
-  
+}
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>在 PowerShell 中创建 XML 索引  
- 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是一个名为 MySampleCollection 的 XML 架构集合, 它是在[使用 XML 架构](using-xml-schemas.md)中创建的。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
+ 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是一个名为 MySampleCollection 的 XML 架构集合，它是在[使用 XML 架构](using-xml-schemas.md)中创建的。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
-#Define a Table object variable and add an XML type column.   
-#This sample requires that an XML schema type called MySampleCollection exists on the database.   
+#Define a Table object variable and add an XML type column.
+#This sample requires that an XML schema type called MySampleCollection exists on the database.
 #See sample on Creating an XML schema to do this  
 $tb = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Table -argumentlist $db, "XmlTable"  
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::Xml("MySampleCollection")  
 $col1 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"XMLValue", $Type  
 $tb.Columns.Add($col1)  
   
-#Add another integer column that can be made into a unique, primary key.   
+#Add another integer column that can be made into a unique, primary key.
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::Int  
 $col2 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Number", $Type  
 $col2.Nullable = $false  
 $tb.Columns.Add($col2)  
   
-#Create the table of the instance of SQL Server.   
+#Create the table of the instance of SQL Server.
 $tb.Create()  
   
-#Create a unique, clustered, primary key index on the integer column. This is required for an XML index.   
-#Define an Index object variable by providing the parent table and index name in the constructor.   
-$cp = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "clusprimindex"          
+#Create a unique, clustered, primary key index on the integer column. This is required for an XML index.
+#Define an Index object variable by providing the parent table and index name in the constructor.
+$cp = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "clusprimindex"
 $cp.IsClustered = $true;  
 $cp.IndexKeyType = [Microsoft.SqlServer.Management.SMO.IndexKeyType]::DriPrimaryKey;  
   
-#Create and add an indexed column to the index.   
-$cpcol = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `  
--argumentlist $cp, "Number", $true  
+#Create and add an indexed column to the index.
+$cpcol = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn -argumentlist $cp, "Number", $true  
 $cp.IndexedColumns.Add($cpcol)  
 $cp.Create()  
   
 #Define and XML Index object variable by supplying the parent table and  
-# the XML index name arguments in the constructor.   
-$i = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "xmlindex"   
+# the XML index name arguments in the constructor.
+$i = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "xmlindex"
   
-#Create and add an indexed column to the index.   
-$ic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `  
--argumentlist $i, "XMLValue", $true    
+#Create and add an indexed column to the index.
+$ic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn -argumentlist $i, "XMLValue", $true
 $i.IndexedColumns.Add($ic)  
   
 #Create the XML index on the instance of SQL Server  
 $i.Create()  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.SqlServer.Management.Smo.Index>  
-  
-  

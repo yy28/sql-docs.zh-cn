@@ -1,5 +1,5 @@
 ---
-title: MSRS 2014 Web Service 和 MSRS 2014 Windows Service 性能对象 （本机模式） 的性能计数器 |Microsoft Docs
+title: MSRS 2014 Web 服务和 MSRS 2014 Windows Service 性能对象的性能计数器（本机模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 248adc8dcbf3f3c016ff861be124ccde9e461db5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3acf02dff2d0d699a6d4dfe271d0aed8419683a
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66103705"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782819"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>MSRS 2014 Web Service 和 MSRS 2014 Windows Service 性能对象的性能计数器（本机模式）
   本主题介绍 `MSRS 2014 Web Service` 和 `MSRS 2014 Windows Service` 性能对象的性能计数器  
@@ -30,11 +30,11 @@ ms.locfileid: "66103705"
 > [!NOTE]  
 >  这些性能对象监视本地报表服务器上的事件。 如果是在扩展部署中运行报表服务器，则只对当前服务器（而不是扩展部署）进行计数。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 本机模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode  
   
  Windows 性能监视器 (**Perfmon.exe**) 中提供了性能对象。 有关详细信息，请参阅 Windows 文档，[运行时分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
- 有关与 SharePoint mode 性能计数器相关的信息，请参阅[MSRS 2014 Web Service SharePoint Mode 和 MSRS 2014 Windows Service SharePoint Mode 性能对象的性能计数器&#40;SharePoint 模式下&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
+ 有关 SharePoint 模式性能计数器的信息，请参阅[MSRS 2014 Web Service Sharepoint mode 和 MSRS 2014 Windows Service Sharepoint Mode 性能对象&#40;的性能计数器 sharepoint mode&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)。  
   
  **本主题内容：**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66103705"
   
 -   [使用 PowerShell Cmdlet 返回列表](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> MSRS 2014 Web Service 性能计数器  
+##  <a name="bkmk_webservice"></a>MSRS 2014 Web Service 性能计数器  
  `MSRS 2014 Web Service` 性能对象监视报表服务器性能。 此性能对象包括一系列用于跟踪报表服务器处理的计数器，这些处理通常通过交互式报表查看操作启动。 在设置计数器时，可将此计数器应用于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的全部实例，也可以选择特定实例。 只要 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，这些计数器就会重置。  
   
  下表列出了 `MSRS 2014 Web Service` 性能对象中包含的计数器。  
@@ -74,7 +74,7 @@ ms.locfileid: "66103705"
 |`Total Reports Executed`|服务启动后成功运行的报表的总数。 只要 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，此计数器就会重置。|  
 |`Total Requests`|服务启动后对报表服务器发出的全部请求的总数。 只要 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，此计数器就会重置。|  
   
-##  <a name="bkmk_windowsservice"></a> MSRS 2014 Windows Service 性能计数器  
+##  <a name="bkmk_windowsservice"></a>MSRS 2014 Windows Service 性能计数器  
  `MSRS 2014 Windows Service` 性能对象监视报表服务器 Windows 服务。 此性能对象包括一系列用于跟踪报表处理的计数器，这些处理通过计划操作启动。 计划操作可以包括订阅和传递、报表执行快照和报表历史记录。 在设置计数器时，可将此计数器应用于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的全部实例，也可以选择特定实例。  
   
  下表列出了 `MSRS 2014 Windows Service` 性能对象中包含的计数器。  
@@ -114,21 +114,19 @@ ms.locfileid: "66103705"
 |`Total Snapshot Updates`|报表执行快照更新的总数|  
   
 ##  <a name="bkmk_powershell"></a> 使用 PowerShell Cmdlet 返回列表  
- ![与 PowerShell 相关的内容](../media/rs-powershellicon.jpg "PowerShell related content")下面的 Windows PowerShell 脚本将返回 CounterSetName 以“msr”开头的计数器集：  
+ ![与 PowerShell 相关的内容](../media/rs-powershellicon.jpg "与 PowerShell 相关的内容")下面的 Windows PowerShell 脚本将返回 CounterSetName 以 "msr" 开头的计数器集：  
   
-```  
-get-counter -listset msr*  
+```powershell
+Get-Counter -ListSet msr*  
 ```  
   
  下面的 Windows PowerShell 脚本将返回 CounterSetName 的性能计数器列表。  
   
-```  
-(get-counter -listset "MSRS 2014 Windows Service").paths  
+```powershell
+(Get-Counter -ListSet "MSRS 2014 Windows Service").Paths  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视报表服务器性能](monitoring-report-server-performance.md)   
- [MSRS 2014 Windows Service SharePoint Mode 性能对象和 MSRS 2014 Web Service SharePoint Mode 性能计数器&#40;SharePoint 模式&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [MSRS 2014 Web service sharepoint mode 和 MSRS 2014 Windows service sharepoint mode 性能&#40;对象的性能计数器 sharepoint 模式&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)    
  [ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器](performance-counters-reportserver-service-performance-objects.md)  
-  
-  

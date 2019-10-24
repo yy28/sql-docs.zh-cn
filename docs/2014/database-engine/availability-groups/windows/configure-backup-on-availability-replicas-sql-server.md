@@ -18,18 +18,18 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 223bc3aa5e404f2723996073628e64906a60aa64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95f1e2cec530ee65dce60ceea1679281a9d3ba5c
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62815194"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782999"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>配置可用性副本备份 (SQL Server)
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 配置 AlwaysOn 可用性组的辅助副本的备份。  
   
 > [!NOTE]  
->  有关次要副本备份的介绍，请参阅[活动次要副本：在辅助副本 （AlwaysOn 可用性组） 上备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  有关辅助副本备份的介绍，请参阅[活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
  
   
@@ -37,14 +37,14 @@ ms.locfileid: "62815194"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a> Prerequisites  
  您必须连接到承载主副本的服务器实例。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
   
-|任务|权限|  
+|任务|Permissions|  
 |----------|-----------------|  
 |创建可用性组时配置辅助副本备份|需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
 |修改可用性组或可用性副本|对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
@@ -78,7 +78,7 @@ ms.locfileid: "62815194"
      指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
   
     > [!IMPORTANT]  
-    >  没有强制的自动备份首选项设置。 对此首选项的解释取决于您为给定可用性组中的数据库撰写备份作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅本主题后面部分的[跟进：配置次要副本备份之后](#FollowUp)。  
+    >  没有强制的自动备份首选项设置。 对此首选项的解释取决于您为给定可用性组中的数据库撰写备份作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅本主题后面的 [跟进：配置辅助副本备份之后](#FollowUp) 。  
   
 6.  使用 **“副本备份优先级”** 网格更改可用性副本的备份优先级。 此网格将显示每个承载可用性组的副本的服务器实例的当前备份优先级。 网格列如下所示：  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62815194"
      承载可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  
   
      **备份优先级(最低 = 1，最高 = 100)**  
-     指定相对于同一可用性组中的其他副本，在此副本上执行备份的优先级。 该值是范围 0..100 中的整数。 1 表示最低优先级，100 表示最高优先级。 如果“备份优先级”  = 1，则仅在当前没有更高优先级的可用性副本可用时，才选择此可用性副本来执行备份。  
+     指定相对于同一可用性组中的其他副本，在此副本上执行备份的优先级。 该值是范围 0..100 中的整数。 1 表示最低优先级，100 表示最高优先级。 如果“备份优先级”= 1，则仅在当前没有更高优先级的可用性副本可用时，才选择此可用性副本来执行备份。  
   
      **排除副本**  
      如果从不希望选择此可用性副本来执行备份，请选择此选项。 例如，这对于您永远不希望备份故障转移到的远程可用性副本十分有用。  
@@ -109,19 +109,19 @@ ms.locfileid: "62815194"
 2.  对于新的可用性组，请使用 [CREATE AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/create-availability-group-transact-sql) 语句。 如果要修改现有可用性组，请使用 [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql) 语句。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
- **配置辅助副本备份**  
+
+### <a name="to-configure-backup-on-secondary-replicas"></a>配置辅助副本备份
   
 1.  将默认的 (`cd`) 设置为承载主副本的服务器实例。  
   
 2.  （可选）配置要添加或修改的每个可用性副本的备份优先级。 此优先级由承载主副本的服务器实例用来确定哪一副本应该用于针对可用性组中某一数据库的自动备份请求（选择具有最高优先级的副本）。 该优先级可以是 0 和 100 之间（含 0 和 100）的任何数字。 优先级 0 指示副本不应视作支持备份请求的候选。  默认设置为 50。  
   
-     在将可用性副本添加到可用性组中时，请使用 `New-SqlAvailabilityReplica` cmdlet。 在修改现有可用性副本时，请使用 `Set-SqlAvailabilityReplica` cmdlet。 在任一情况下，指定`BackupPriority` *n*参数，其中*n*是从 0 到 100 的值。  
+     在将可用性副本添加到可用性组中时，请使用 `New-SqlAvailabilityReplica` cmdlet。 在修改现有可用性副本时，请使用 `Set-SqlAvailabilityReplica` cmdlet。 在任一情况下，指定 `BackupPriority`*n*参数，其中*n*是从0到100的值。  
   
      例如，以下命令会将可用性副本 `MyReplica` 的备份优先级设置为 `60`。  
   
-    ```  
-    Set-SqlAvailabilityReplica -BackupPriority 60 `  
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
+    ```powershell
+    Set-SqlAvailabilityReplica -BackupPriority 60 -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
   
 3.  （可选）配置要创建或修改的可用性组的自动备份首选项。 此首选项指示在选择执行备份的位置时备份作业应该如何评估主副本。 默认设置是首选辅助副本。  
@@ -146,26 +146,21 @@ ms.locfileid: "62815194"
      指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
   
     > [!IMPORTANT]  
-    >  没有强制的 `AutomatedBackupPreference`。 对此首选项的解释取决于您为给定可用性组中的数据库撰写备份作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅本主题后面部分的[跟进：配置次要副本备份之后](#FollowUp)。  
+    >  没有强制的 `AutomatedBackupPreference`。 对此首选项的解释取决于您为给定可用性组中的数据库撰写备份作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅本主题后面的 [跟进：配置辅助副本备份之后](#FollowUp) 。  
   
      例如，以下命令会将可用性组 `MyAg` 的 `AutomatedBackupPreference` 属性设置为 `SecondaryOnly`。 此可用性组中的数据库自动备份将永远不会在主副本上发生，但将重定向到具有最高备份优先级设置的辅助副本。  
   
-    ```  
-    Set-SqlAvailabilityGroup `  
-    -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg `  
-    -AutomatedBackupPreference SecondaryOnly  
+    ```powershell
+    Set-SqlAvailabilityGroup -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg `  
+     -AutomatedBackupPreference SecondaryOnly  
     ```  
   
 > [!NOTE]  
 >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **设置和使用 SQL Server PowerShell 提供程序**  
+若要设置并使用 SQL Server PowerShell 提供程序，请参阅[SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)，并[SQL Server PowerShell 获取帮助](../../../powershell/sql-server-powershell.md)。
   
--   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
-  
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
-  
-##  <a name="FollowUp"></a>跟进：配置次要副本备份之后  
+##  <a name="FollowUp"></a> 跟进：配置辅助副本备份之后  
  若要为某一给定可用性组考虑使用自动备份首选项，则对于承载备份优先级大于零 (>0) 的可用性副本的每个服务器实例，您需要为该可用性组中的数据库的备份作业编写脚本。 若要确定当前副本是否为首选备份副本，请在备份脚本中使用 [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 函数。 如果当前服务器实例承载的可用性副本是用于备份的首选副本，则此函数将返回 1。 否则，该函数返回 0。 通过对查询此函数的每个可用性副本运行简单的脚本，可以确定哪个副本应运行给定的备份作业。 例如，备份作业脚本的典型代码段如下所示：  
   
 ```  
@@ -195,12 +190,10 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解决方案指南以实现高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客：官方 SQL Server AlwaysOn 团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [活动次要副本：在辅助副本 （AlwaysOn 可用性组） 上的备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
-  
-  
+## <a name="see-also"></a>另请参阅  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 

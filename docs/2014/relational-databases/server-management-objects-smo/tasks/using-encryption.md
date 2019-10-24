@@ -19,12 +19,12 @@ ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09de7053de66d2d280c2bc6da61b8bf6b2ebf55b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233f5bc9decf5e8246f2aba6836ec5ecb650283b
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213498"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781847"
 ---
 # <a name="using-encryption"></a>使用加密
   在 SMO 中，服务主密钥由 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> 对象表示。 它是由 <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Server> 属性引用的。 可以通过使用 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> 方法重新生成服务主密钥。  
@@ -40,7 +40,7 @@ ms.locfileid: "63213498"
  在 SMO 中，证书由 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 对象表示。 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 对象具有指定公钥、主题名称、有效期以及有关颁发者的信息的属性。 可采用 `Grant`、`Revoke` 和 `Deny` 方法控制对证书的访问权限。  
   
 ## <a name="example"></a>示例  
- 对于下面的代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)并[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下面的代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)和[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="adding-a-certificate-in-visual-basic"></a>在 Visual Basic 中添加证书  
  该代码示例使用加密密码创建简单证书。 与其他对象不同，<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> 方法具有若干种重载。 该示例中所使用的重载将使用加密密码创建一个新证书。  
@@ -50,7 +50,7 @@ ms.locfileid: "63213498"
 ## <a name="adding-a-certificate-in-visual-c"></a>在 Visual C# 中添加证书  
  该代码示例使用加密密码创建简单证书。 与其他对象不同，<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> 方法具有若干种重载。 该示例中所使用的重载将使用加密密码创建一个新证书。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             {  
@@ -78,24 +78,20 @@ ms.locfileid: "63213498"
 ## <a name="adding-a-certificate-in-powershell"></a>在 PowerShell 中添加证书  
  该代码示例使用加密密码创建简单证书。 与其他对象不同，<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> 方法具有若干种重载。 该示例中所使用的重载将使用加密密码创建一个新证书。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
 $db = get-item AdventureWorks2012  
   
-#Create a certificate  
-  
-$c = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Certificate -argumentlist $db, "Test_Certificate"  
+#Create a certificate
+$c = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Certificate -ArgumentList $db, "Test_Certificate"  
 $c.StartDate = "January 01, 2010"  
 $c.Subject = "This is a test certificate."  
 $c.ExpirationDate = "January 01, 2015"  
   
 #Create the certificate on the instance of SQL Server by supplying the certificate password argument.  
-$c.Create("pGFD4bb925DGvbd2439587y")  
-  
+$c.Create("pGFD4bb925DGvbd2439587y")
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用加密密钥](using-encryption.md)  
-  
-  
