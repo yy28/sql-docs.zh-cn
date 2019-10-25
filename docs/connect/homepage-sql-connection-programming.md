@@ -1,6 +1,6 @@
 ---
-title: SQL 客户端编程的主页 |Microsoft Docs
-description: 使用带批注的链接下载和文档的语言和操作系统，用于连接到 SQL Server 或 Azure SQL 数据库的许多组合的中心页。
+title: SQL 客户端编程主页 |Microsoft Docs
+description: 包含带批注链接的中心页面，这些链接指向用于连接到 SQL Server 或 Azure SQL 数据库的多种语言和操作系统组合的下载和文档。
 author: MightyPen
 ms.date: 11/07/2018
 ms.prod: sql
@@ -10,58 +10,58 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: genemi
-ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6961f8c23b4acfd787958cc9a160faf88362b54c
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63182192"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72451850"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server 客户端编程的主页
 
 
-欢迎使用我们的主页有关客户端编程以使用 Microsoft SQL Server，以及与云中的 Azure SQL 数据库进行交互。 本文提供以下信息：
+欢迎在我们的主页上了解有关客户端编程的信息，以便与 Microsoft SQL Server 和云中的 Azure SQL 数据库交互。 本文提供了以下信息：
 
-- 列出并描述了可用的语言和驱动程序组合。
-    - 对于 Linux （Ubuntu 和其他人）、 MacOS 和 Windows 的操作系统提供信息。
-- 提供指向每个组合的详细文档。
-- 在适当的显示区域和某些语言的分层文档的子区域。
+- 列出并描述可用的语言和驱动程序组合。
+    - 提供适用于 Linux （Ubuntu 和其他）、MacOS 和 Windows 的操作系统的信息。
+- 提供每个组合的详细文档的链接。
+- 显示某些语言的分层文档的区域和子区域（如果适用）。
 
 
 #### <a name="azure-sql-database"></a>Azure SQL Database
 
-在任何给定语言中，连接到 SQL Server 的代码是与用于连接到 Azure SQL 数据库的代码几乎完全相同。
+在任何给定的语言中，连接到 SQL Server 的代码与用于连接到 Azure SQL 数据库的代码几乎完全相同。
 
 有关连接到 Azure SQL 数据库的连接字符串的详细信息，请参阅：
 
-- [使用.NET Core (C#) 来查询 Azure SQL 数据库](/azure/sql-database/sql-database-connect-query-dotnet-core)。
-- 附近的其他语言的内容，表中的上一篇文章是其他 Azure SQL 数据库。 例如，请参阅[使用 PHP 查询 Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)。
+- [使用 .Net Core （C#）查询 Azure SQL 数据库](/azure/sql-database/sql-database-connect-query-dotnet-core)。
+- 目录中上一篇附近的其他 Azure SQL 数据库，关于其他语言。 例如，请参阅[使用 PHP 查询 AZURE SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)。
 
 
-#### <a name="build-an-app-webpages"></a>生成一个应用网页
+#### <a name="build-an-app-webpages"></a>生成-应用网页
 
-我们*生成的应用*网页备用格式中存在的代码示例，以及配置信息。 有关详细信息，请参阅本文后面[标记为部分*生成的应用网站*](#an-204-aka-ms-sqldev)。
+我们的*生成-应用*网页以替代格式显示代码示例以及配置信息。 有关详细信息，请参阅本文后面的[标记为 "*生成-应用" 网站*的部分](#an-204-aka-ms-sqldev)。
 
 
 
 <a name="an-050-languages-clients" />
 
-## <a name="languages-and-drivers-for-client-programs"></a>语言和客户端程序的驱动程序
+## <a name="languages-and-drivers-for-client-programs"></a>客户端程序的语言和驱动程序
 
 
-下表中每个语言映像是语言中使用的 SQL Server 的详细信息的链接。 每个链接跳转到本文中后面的部分。
+在下表中，每个语言图像都是一个链接，指向有关将语言与 SQL Server 结合使用的详细信息。 每个链接可跳转到本文的后面部分。
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp; [![C# 徽标][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM 实体框架，.NET framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java 徽标][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Node.js 徽标][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [`ODBC for C++`  ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP 徽标][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![C#徽标][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM 实体框架，.NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java 徽标][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp; [![Node .js 徽标][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [`ODBC for C++`  ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP 徽标][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp; [![Python 徽标][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby 徽标][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
-#### <a name="downloads-and-installs"></a>下载并安装
+#### <a name="downloads-and-installs"></a>下载和安装
 
-以下文章专门介绍下载并安装各种 SQL 连接驱动程序，以供编程语言：
+以下文章专门介绍如何下载和安装各种 SQL 连接驱动程序，以供编程语言使用：
 
 - [SQL Server 驱动程序](sql-server-drivers.md)
 
@@ -69,60 +69,60 @@ ms.locfileid: "63182192"
 
 <a name="an-110-ado-net-docu" />
 
-## <a name="c-logoimage-ref-320-csharp-c-using-adonet"></a>![C# 徽标][image-ref-320-csharp] 使用 ADO.NET 通过 C#
+## <a name="c-logoimage-ref-320-csharp-c-using-adonet"></a>![C#徽标键][image-ref-320-csharp] C#使用 ADO.NET
 
-.NET 托管语言，如 C# 和 Visual Basic 中，是 ADO.NET 的最常见用户。 *ADO.NET*是.NET Framework 类的一个子集的临时名称。
+.NET 托管语言（例如C#和 Visual Basic）是最常见的 ADO.NET 用户。 *ADO.NET*是 .NET Framework 类的子集的随意名称。
 
 #### <a name="code-examples"></a>代码示例
 
 |||
 | :-- | :-- |
-| [使用 ADO.NET 连接到 SQL 的概念证明](./ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md) | 小代码示例侧重于连接和查询 SQL Server。 |
-| [使用 ADO.NET 实现对 SQL 的弹性连接](./ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md) | 重试逻辑中的代码示例，因为连接可能偶尔会遇到的连接丢失。<br /><br />重试逻辑适用于通过维护，internet 到任何云数据库中，如 Azure SQL 数据库的连接良好。 |
-| [Azure SQL 数据库： 演示如何在 Windows/Linux/macOS 上使用.NET Core 创建一个 C# 程序，来连接和查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL 数据库示例。 |
-| [生成的应用： C#，ADO.NET 中，Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | 配置信息，以及代码示例。 |
+| [使用 ADO.NET 连接到 SQL 的概念证明](./ado-net/step-3-connect-sql-ado-net.md) | 一个小代码示例，重点介绍如何连接和查询 SQL Server。 |
+| [使用 ADO.NET 实现对 SQL 的弹性连接](./ado-net/step-4-connect-resiliently-sql-ado-net.md) | 在代码示例中重试逻辑，因为连接有时会在连接丢失时出现。<br /><br />重试逻辑适用于通过 internet 维护的连接到任何云数据库（例如 Azure SQL 数据库）。 |
+| [Azure SQL 数据库：演示如何在 Windows/Linux/macOS 上使用 .NET Core 来创建C#程序、进行连接和查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL 数据库示例。 |
+| [生成-应用： C#、ADO.NET、Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | 配置信息和代码示例。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>文档
 
 |||
 | :-- | :-- |
-| [使用 ADO.NET 通过 C#](./ado-net/index.md)| 我们的文档的根。 |
-| [Namespace: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | 一组用于 ADO.NET 的类。 |
-| [命名空间：System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.SqlClient) | 最直接 ADO.NET center 的类的组。 |
+| [C#使用 ADO.NET](./ado-net/index.md)| 文档的根。 |
+| [命名空间： System.web](https://docs.microsoft.com/dotnet/api/system.data) | 用于 ADO.NET 的一组类。 |
+| [命名空间：System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.SqlClient) | 最直接位于 ADO.NET 中心的类集。 |
 | &nbsp; | <br /> |
 
 
 
 <a name="an-116-csharp-ef-orm" />
 
-## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![实体框架徽标][image-ref-333-ef] 实体框架 (EF) 和 C&#x23;
+## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![实体框架徽标][image-ref-333-ef] 实体框架（EF）与 C&#x23;
 
-实体框架 (EF) 提供了对象关系映射 (ORM)。 ORM 轻松面向对象编程 (OOP) 源代码来操作关系 SQL 数据库中检索到的数据。
+实体框架（EF）提供对象关系映射（ORM）。 通过 ORM，你可以更轻松地使用面向对象的编程（OOP）源代码来操作从关系 SQL 数据库中检索的数据。
 
-EF 有直接或间接关系具有以下技术：
+EF 具有与以下技术的直接或间接关系：
 
 - .NET Framework
-- [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)，或[LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- 语言语法增强功能，如 **=>** C# 中的运算符。
-- 便捷的程序，以便将映射到 SQL 数据库中表的类生成源代码。 例如， [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)。
+- [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)或[LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
+- 语言语法增强功能，例如中  C#的 => 运算符。
+- 为映射到 SQL 数据库中的表的类生成源代码的便利程序。 例如， [edmgen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)。
 
 
-#### <a name="original-ef-and-new-ef"></a>原始 EF 和新的 EF
+#### <a name="original-ef-and-new-ef"></a>原始 EF 和新 EF
 
-[实体框架的起始页](https://docs.microsoft.com/ef/)引入 EF 了类似于以下的说明：
+[实体框架的起始页](https://docs.microsoft.com/ef/)介绍了 EF，其中包含类似于以下内容的说明：
 
-- 实体框架是对象关系映射器 (O/RM)，.NET 开发人员可使用使用.NET 对象的数据库。 它不需要的大部分开发人员通常需要编写数据访问源代码。
+- 实体框架是一种对象关系映射程序（O/RM），它使 .NET 开发人员能够使用 .NET 对象处理数据库。 开发人员无需再像往常一样编写大部分数据访问源代码。
 
-*实体框架*是由两个单独的源代码分支共享的名称。 更早版本，一个 EF 分支，现在可以通过公共维护其源代码。 其他 EF 是新增的。 接下来介绍了两个 EFs:
+*实体框架*是由两个单独的源代码分支共享的名称。 一个 EF 分支更旧，其源代码现在可以由公共维护。 另一个 EF 是新的。 下面介绍了这两个 EFs：
 
 |     |     |
 | :-- | :-- |
-| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft 首次在 2008 年 8 月发布 EF。 在 2015 年 3 月 Microsoft 宣布推出的 EF 6.x 是 Microsoft 像开发的最终版本。 Microsoft 发布到公共域的源代码。<br /><br />最初 EF 是.NET Framework 的一部分。 但 EF 6.x 已从.NET Framework 中删除。<br /><br />[在 Github 存储库中的 EF 6.x 源代码*aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
-| [EF Core](https://docs.microsoft.com/ef/core/) | 2016 年 6 月，Microsoft 发布了新开发的 EF Core。 EF Core 专为更好的灵活性和可移植性。 EF Core 可以只是 Microsoft Windows 以外的操作系统上运行。 和 EF Core 可以与超出不仅仅是 Microsoft SQL Server 数据库和其他关系数据库进行交互。<br /><br />**C&#x23;代码示例：**<br />[使用 Entity Framework Core 入门](https://docs.microsoft.com/ef/core/get-started/index)<br />[开始使用 EF Core 与现有数据库的.NET Framework 上](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft 首次发布 EF 于2008年8月。 2015年3月，Microsoft 宣布 EF 1.x 是 Microsoft 要开发的最终版本。 Microsoft 已将源代码发布到公共域。<br /><br />最初 EF 是 .NET Framework 的一部分。 但已从 .NET Framework 中删除 EF 1.x。<br /><br />[Github 上的 EF 1.x 源代码（存储库中的*aspnet/EntityFramework6* ）](https://github.com/aspnet/EntityFramework6) |
+| [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft 在2016年6月发布了新开发的 EF Core。 EF Core 旨在提供更好的灵活性和可移植性。 EF Core 可以在仅 Microsoft Windows 以外的操作系统上运行。 除 Microsoft SQL Server 和其他关系数据库外，EF Core 可以与数据库进行交互。<br /><br />**C&#x23;代码示例：**<br />[Entity Framework Core 入门](https://docs.microsoft.com/ef/core/get-started/index)<br />[使用现有数据库的 .NET Framework 上的 EF Core 入门](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
-EF 和相关的技术功能强大，并且是为开发人员想要掌握的整个区域学到很多。
+EF 和相关技术非常强大，为想要掌握整个领域的开发人员了解这一点非常重要。
 
 &nbsp;
 
@@ -132,28 +132,28 @@ EF 和相关的技术功能强大，并且是为开发人员想要掌握的整�
 
 ## <a name="java-logoimage-ref-330-java-java-and-jdbc"></a>![Java 徽标][image-ref-330-java] Java 和 JDBC
 
-Microsoft 提供的 Java 数据库连接 (JDBC) 驱动程序使用与 SQL Server （或使用 Azure SQL 数据库，当然，）。 它是 Type 4 JDBC 驱动程序，通过标准 JDBC 应用程序编程接口 (API) 提供数据库连接。
+Microsoft 提供了一个 Java Database Connectivity （JDBC）驱动程序用于 SQL Server （当然，也可以与 Azure SQL 数据库配合使用）。 它是 Type 4 JDBC 驱动程序，通过标准 JDBC 应用程序编程接口 (API) 提供数据库连接。
 
 #### <a name="code-examples"></a>代码示例
 
 |||
 | :-- | :-- |
-| [代码示例](./jdbc/code-samples/index.md) | 介绍有关数据类型，结果集和大型数据的代码示例。 |
-| [连接 URL 示例](./jdbc/connection-url-sample.md) | 介绍如何使用连接 URL 来连接到 SQL Server。 然后使用它来使用 SQL 语句来检索数据。 |
-| [数据源示例](./jdbc/data-source-sample.md) | 介绍如何使用数据源连接到 SQL Server。 然后使用存储的过程来检索数据。 |
+| [代码示例](./jdbc/code-samples/index.md) | 介绍数据类型、结果集和大型数据的代码示例。 |
+| [连接 URL 示例](./jdbc/connection-url-sample.md) | 描述如何使用连接 URL 连接到 SQL Server。 然后使用它来使用 SQL 语句检索数据。 |
+| [数据源示例](./jdbc/data-source-sample.md) | 描述如何使用数据源连接到 SQL Server。 然后，使用存储过程检索数据。 |
 | [使用 Java 查询 Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL 数据库示例。 |
-| [创建在 Ubuntu 上使用 SQL Server 的 Java 应用](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | 配置信息，以及代码示例。 |
+| [使用 Ubuntu 上的 SQL Server 创建 Java 应用](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | 配置信息和代码示例。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>文档
 
-JDBC 文档包括以下主要方面：
+JDBC 文档包含以下主要方面：
 
 |||
 | :-- | :-- |
-| [Java 数据库连接 (JDBC)](./jdbc/index.md) | 我们的 JDBC 文档的根。 |
-| [参考](./jdbc/reference/index.md) | 接口、 类和成员。 |
-| [JDBC SQL 驱动程序编程指南](./jdbc/programming-guide-for-jdbc-sql-driver.md) | 配置信息，以及代码示例。 |
+| [Java Database Connectivity （JDBC）](./jdbc/index.md) | JDBC 文档的根。 |
+| [参考](./jdbc/reference/index.md) | 接口、类和成员。 |
+| [JDBC SQL 驱动程序编程指南](./jdbc/programming-guide-for-jdbc-sql-driver.md) | 配置信息和代码示例。 |
 | &nbsp; | <br /> |
 
 
@@ -162,32 +162,32 @@ JDBC 文档包括以下主要方面：
 
 ## <a name="nodejs-logoimage-ref-340-node-nodejs"></a>![Node.js 徽标][image-ref-340-node] Node.js
 
-与 Node.js 配合使用可以连接到 SQL Server 从 Windows、 Linux 或 mac。 我们的 Node.js 文档的根是[此处](./node-js/index.md)。
+利用 Node.js，你可以从 Windows、Linux 或 Mac 连接到 SQL Server。 [此处](./node-js/index.md)是 node.js 文档的根目录。
 
-SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱动程序使用支持的所有最新版本的 SQL Server 的 TDS 协议。 该驱动程序是一个开放源代码项目，[可在 Github 上](https://tediousjs.github.io/tedious/)。
+用于 SQL Server 的 node.js 连接驱动程序在 JavaScript 中实现。 驱动程序使用 TDS 协议，SQL Server 的所有新式版本都支持该协议。 该驱动程序是一个开源项目，[在 Github 上提供](https://tediousjs.github.io/tedious/)。
 
 #### <a name="code-examples"></a>代码示例
 
 |||
 | :-- | :-- |
-| [使用 Node.js 连接到 SQL 的概念证明](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | 基本源连接到 SQL Server 和执行查询的代码。 |
-| [Azure SQL 数据库： 使用 Node.js 查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | 在云中的 Azure SQL 数据库的示例。 |
-| [创建 Node.js 应用程序以在 macOS 上使用 SQL Server](https://www.microsoft.com/sql-server/developer-get-started/node/mac/) | 配置信息，以及代码示例。 |
+| [使用 Node.js 连接到 SQL 的概念证明](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | 用于连接到 SQL Server 和执行查询的 Bare 源代码。 |
+| [Azure SQL 数据库：使用 node.js 进行查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | 云中的 Azure SQL 数据库的示例。 |
+| [创建要在 macOS 上使用 SQL Server 的 node.js 应用](https://www.microsoft.com/sql-server/developer-get-started/node/mac/) | 配置信息和代码示例。 |
 | &nbsp; | <br /> |
 
 
 
 <a name="an-160-odbc-cpp-docu" />
 
-## <a name="odbc-for-c"></a>有关 ODBCC++ 
+## <a name="odbc-for-c"></a>ODBC forC++ 
 
 ![ODBC 徽标][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
-开放式数据库连接 (ODBC) 在 20 世纪 90 年代中, 开发的它早于.NET Framework。 ODBC 被设计为独立于任何特定的数据库系统，并独立于操作系统。
+开放式数据库连接（ODBC）是在二十世纪九十年代开发的，它早于 .NET Framework。 ODBC 旨在独立于任何特定的数据库系统，并且独立于操作系统。
 
-多年来许多 ODBC 驱动程序已创建并发布的 Microsoft 内外的组。 驱动程序的范围涉及多个客户端编程语言。 数据目标的列表将远远超出了 SQL Server。
+多年来，许多 ODBC 驱动程序已由 Microsoft 内部和外部的组创建和发布。 驱动程序的范围涉及多个客户端编程语言。 数据目标的列表在 SQL Server 的范围之外。
 
-某些其他连接驱动程序在内部使用 ODBC。
+其他一些连接驱动程序在内部使用 ODBC。
 
 #### <a name="code-example"></a>代码示例
 
@@ -195,22 +195,22 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 
 #### <a name="documentation-outline"></a>文档大纲
 
-在本部分中的 ODBC 内容重点介绍从访问 SQL Server 或 Azure SQL 数据库C++。 下表列出了适用于 ODBC 的主要文档的近似概述。
+本部分中的 ODBC 内容重点介绍如何从C++访问 SQL Server 或 Azure SQL 数据库。 下表列出了 ODBC 的主要文档的大致概述。
 
 
-| 区域 | 子区域 | 描述 |
+| 区域 | 区域 | 描述 |
 | :--- | :------ | :---------- |
-| [有关 ODBCC++](./odbc/index.md) | 我们的文档的根。 |
+| [ODBC forC++](./odbc/index.md) | 文档的根。 |
 | [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | 有关在 Linux 或 MacOS 操作系统上使用 ODBC 的信息。 |
-| [Windows](./odbc/windows/index.md)     | &nbsp; | 有关 Windows 操作系统上使用 ODBC 的信息。 |
+| [Windows](./odbc/windows/index.md)     | &nbsp; | 有关在 Windows 操作系统上使用 ODBC 的信息。 |
 | [管理](../odbc/admin/index.md) | &nbsp; | 用于管理 ODBC 数据源的管理工具。 |
-| [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | 各种 ODBC 驱动程序创建并由 Microsoft 提供的。 |
-| [概念和参考](../odbc/reference/index.md) | &nbsp; | 有关 ODBC 接口，除了传统的引用的概念信息。 |
-| &nbsp; " | [附录](../odbc/reference/appendixes/index.md)    | 状态转换表、 ODBC 游标库和的详细信息。 |
-| &nbsp; " | [开发应用程序](../odbc/reference/develop-app/index.md)  | 函数、 句柄，以及更多内容。 |
-| &nbsp; " | [开发驱动程序](../odbc/reference/develop-driver/index.md) | 如何开发您自己的 ODBC 驱动程序，如果您拥有专用的数据源。 |
-| &nbsp; " | [安装](../odbc/reference/install/index.md) | ODBC 安装、 子项和的详细信息。 |
-| &nbsp; " | [语法](../odbc/reference/syntax/index.md)   | 安装程序，安装程序、 转换和数据访问 Api。 |
+| [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Microsoft 创建和提供的各种 ODBC 驱动程序。 |
+| [概念和参考](../odbc/reference/index.md) | &nbsp; | 除传统引用外，有关 ODBC 接口的概念信息。 |
+| &nbsp; " | [附录](../odbc/reference/appendixes/index.md)    | 状态转换表、ODBC 游标库等。 |
+| &nbsp; " | [开发应用](../odbc/reference/develop-app/index.md)  | 函数、句柄和更多内容。 |
+| &nbsp; " | [开发驱动程序](../odbc/reference/develop-driver/index.md) | 如果有专用数据源，如何开发自己的 ODBC 驱动程序。 |
+| &nbsp; " | [安装](../odbc/reference/install/index.md) | ODBC 安装、子项等。 |
+| &nbsp; " | [语法](../odbc/reference/syntax/index.md)   | 用于安装、安装程序、转换和数据访问的 Api。 |
 | &nbsp; | &nbsp; | <br /> |
 
 
@@ -219,16 +219,16 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 
 ## <a name="php-logoimage-ref-360-php-php"></a>![PHP 徽标][image-ref-360-php] PHP
 
-可以使用 PHP 来与 SQL Server 进行交互。 PHP 文档的根是[此处](./php/index.md)。
+您可以使用 PHP 与 SQL Server 进行交互。 [本文介绍](./php/index.md)了 PHP 文档的根目录。
 
 #### <a name="code-examples"></a>代码示例
 
 |||
 | :-- | :-- |
-| [使用 PHP 连接到 SQL 的概念验证](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | 小代码示例侧重于连接和查询 SQL Server。 |
-| [使用 PHP 实现对 SQL 的弹性连接](./php/step-4-connect-resiliently-to-sql-with-php.md) | 重试逻辑中的代码示例，因为通过 Internet 和云的连接偶尔遇到的连接丢失。 |
-| [Azure SQL 数据库： 使用 PHP 查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL 数据库示例。 |
-| [创建要在 RHEL 上使用 SQL Server 的 PHP 应用程序](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | 配置信息，以及代码示例。 |
+| [使用 PHP 连接到 SQL 的概念验证](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | 一个小代码示例，重点介绍如何连接和查询 SQL Server。 |
+| [使用 PHP 实现对 SQL 的弹性连接](./php/step-4-connect-resiliently-to-sql-with-php.md) | 在代码示例中重试逻辑，因为通过 Internet 和云进行的连接有时会出现连接丢失的时间。 |
+| [Azure SQL 数据库：使用 PHP 进行查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL 数据库示例。 |
+| [创建 PHP 应用以在 RHEL 上使用 SQL Server](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | 配置信息和代码示例。 |
 | &nbsp; | <br /> |
 
 
@@ -244,18 +244,18 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 
 |||
 | :-- | :-- |
-| [连接到使用 pyodbc Python 与 SQL 的概念证明](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | 小代码示例侧重于连接和查询 SQL Server。 |
-| [Azure SQL 数据库： 使用 Python 查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL 数据库示例。 |
-| [创建 PHP 应用，在 SLES 上使用 SQL Server](https://www.microsoft.com/sql-server/developer-get-started/python/sles/) | 配置信息，以及代码示例。 |
+| [使用 pyodbc 通过 Python 连接到 SQL 的概念证明](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | 一个小代码示例，重点介绍如何连接和查询 SQL Server。 |
+| [Azure SQL 数据库：使用 Python 进行查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL 数据库示例。 |
+| [创建要在 SLES 上使用 SQL Server 的 PHP 应用](https://www.microsoft.com/sql-server/developer-get-started/python/sles/) | 配置信息和代码示例。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>文档
 
 | 区域 | 描述 |
 | :--- | :---------- |
-| [到 SQL Server 的 Python](./python/index.md) | 我们的文档的根。 |
-| [pymssql 驱动程序](./python/pymssql/index.md) | Microsoft 不会维护或测试 pymssql 驱动程序。<br /><br />Pymssql 连接驱动程序是 SQL 数据库，以便在 Python 程序中使用的简单界面。 Pymssql FreeTDS Python DB API (PEP 249) 接口提供对 Microsoft SQL Server 的基础上构建。 |
-| [pyodbc 驱动程序](./python/pyodbc/index.md)   | Pyodbc 连接驱动程序是一个开源 Python 模块，使访问 ODBC 数据库变得简单。 它实现 DB API 2.0 规范中，但提供了更多 Pythonic 方便起见。 |
+| [Python 到 SQL Server](./python/index.md) | 文档的根。 |
+| [pymssql 驱动程序](./python/pymssql/index.md) | Microsoft 不维护或测试 pymssql 驱动程序。<br /><br />Pymssql 连接驱动程序是一个简单的 SQL 数据库界面，可在 Python 程序中使用。 Pymssql 在 FreeTDS 的基础上构建，以提供用于 Microsoft SQL Server 的 Python DB API （PEP-249）接口。 |
+| [pyodbc 驱动程序](./python/pyodbc/index.md)   | Pyodbc 连接驱动程序是一种开放源代码 Python 模块，可简化对 ODBC 数据库的访问。 它实现 DB API 2.0 规范，但打包后更易于 Pythonic。 |
 | &nbsp; | <br /> |
 
 
@@ -263,77 +263,77 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 
 ## <a name="ruby-logoimage-ref-380-ruby-ruby"></a>![Ruby 徽标][image-ref-380-ruby] Ruby
 
-可以使用 Ruby 与 SQL Server 进行交互。 我们 Ruby 的文档的根是[此处](./ruby/index.md)。
+您可以使用 Ruby 与 SQL Server 进行交互。 [这里](./ruby/index.md)是 Ruby 文档的根目录。
 
 #### <a name="code-examples"></a>代码示例
 
 |||
 | :-- | :-- |
-| [使用 Ruby 连接到 SQL 的概念证明](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 小代码示例侧重于连接和查询 SQL Server。 |
-| [Azure SQL 数据库： 使用 Ruby 查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL 数据库示例。 |
-| [创建 Ruby 应用程序以在 MacOS 上使用 SQL Server](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 配置信息，以及代码示例。 |
+| [使用 Ruby 连接到 SQL 的概念证明](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 一个小代码示例，重点介绍如何连接和查询 SQL Server。 |
+| [Azure SQL 数据库：使用 Ruby 进行查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL 数据库示例。 |
+| [创建要在 MacOS 上使用 SQL Server 的 Ruby 应用](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 配置信息和代码示例。 |
 | &nbsp; | <br /> |
 
 
 
 <a name="an-204-aka-ms-sqldev" />
 
-## <a name="build-an-app-website-for-sql-client-developmenthttpswwwmicrosoftcomsql-serverdeveloper-get-started"></a>[生成的应用网站，用于 SQL 客户端开发](https://www.microsoft.com/sql-server/developer-get-started/)
+## <a name="build-an-app-website-for-sql-client-developmenthttpswwwmicrosoftcomsql-serverdeveloper-get-started"></a>[用于 SQL 客户端开发的生成-应用网站](https://www.microsoft.com/sql-server/developer-get-started/)
 
 
-在我们[*生成的应用*](https://www.microsoft.com/sql-server/developer-get-started/)网页可以选择从一长串的编程语言连接到 SQL Server。 和客户端程序可以运行各种操作系统。
+在我们的[*生成-应用*](https://www.microsoft.com/sql-server/developer-get-started/)网页上，你可以从用于连接到 SQL Server 的一系列编程语言中进行选择。 你的客户端程序可以运行各种操作系统。
 
-*生成一个应用*强调的开发人员刚开始的简单性和完整性。 步骤介绍了以下任务：
+对于刚开始使用的开发人员而言，*生成-应用*强调简单和完整性。 这些步骤说明了以下任务：
 
 1. 如何安装 Microsoft SQL Server
 2. 如何下载和安装工具和驱动程序。
-3. 如何进行任何必要的配置，根据所选操作系统。
+3. 如何根据所选操作系统做出必要的配置。
 4. 如何编译提供的源代码。
 5. 如何运行该程序。
 
-接下来是几个近似轮廓的网站上提供的详细信息：
+下面是网站上提供的详细信息的一些大致概述：
 
-#### <a name="java-on-ubuntu"></a>在 Ubuntu 上的 Java:
+#### <a name="java-on-ubuntu"></a>Ubuntu 上的 Java：
 
-1. 设置环境
+1. 设置你的环境
     - 步骤 1.1：安装 SQL Server
-    - 步骤 1.2 安装 Java
-    - 步骤 1.3 安装 Java 开发工具包 (JDK)
-    - 步骤 1.4 安装 Maven
-2. 使用 SQL Server 中创建 Java 应用程序
-    - 步骤 2.1 创建连接到 SQL Server 并执行查询的 Java 应用
-    - 步骤 2.2 创建连接到使用常用的框架，休眠的 SQL Server 的 Java 应用程序
-3. 更快地做出多达 100 倍的 Java 应用
-    - 步骤 3.1 创建 Java 应用程序来演示列存储索引
+    - 步骤1.2 安装 Java
+    - 步骤1.3 安装 Java 开发工具包（JDK）
+    - 步骤1.4 安装 Maven
+2. 创建具有 SQL Server 的 Java 应用程序
+    - 步骤2.1 创建连接到 SQL Server 并执行查询的 Java 应用
+    - 步骤2.2 创建一个 Java 应用程序，该应用程序使用常用框架休眠连接到 SQL Server
+3. 使 Java 应用程序更快100倍
+    - 步骤3.1 创建用于演示列存储索引的 Java 应用
 
-#### <a name="python-on-windows"></a>在 Windows 上的 Python:
+#### <a name="python-on-windows"></a>Windows 上的 Python：
 
-1. 设置环境
+1. 设置你的环境
     - 步骤 1.1：安装 SQL Server
-    - 步骤 1.2 安装 Python
-    - 步骤 1.3 安装用于 SQL Server 的 ODBC 驱动程序和 SQL 命令行实用程序
-2. 使用 SQL Server 创建 Python 应用程序
-    - 步骤 2.1 安装 Python driver for SQL Server
-    - 步骤 2.2 为创建的数据库应用程序
-    - 步骤 2.3 创建一个 Python 应用，连接到 SQL Server 并执行查询
-3. 更快地做出多达 100 倍将 Python 应用
-    - 步骤 3.1 使用 5 百万个使用 sqlcmd 创建一个新表
-    - 步骤 3.2 创建一个 Python 应用，将查询此表和度量值所用的时间
-    - 步骤 3.3 测量运行查询所需的时间长度
-    - 步骤 3.4 将添加到表的列存储索引
-    - 步骤 3.5 度量值具有列存储索引运行查询所需的时间长度
+    - 步骤1.2 安装 Python
+    - 步骤1.3 为 SQL Server 安装 ODBC 驱动程序和 SQL 命令行实用工具
+2. 创建具有 SQL Server 的 Python 应用程序
+    - 步骤2.1 安装适用于 SQL Server 的 Python 驱动程序
+    - 步骤2.2 为应用程序创建数据库
+    - 步骤2.3 创建连接到 SQL Server 并执行查询的 Python 应用
+3. 使你的 Python 应用程序更快100倍
+    - 步骤3.1 使用 sqlcmd 创建新表5000000
+    - 步骤3.2 创建查询此表并度量所用时间的 Python 应用
+    - 步骤3.3 度量运行查询所用的时间
+    - 步骤3.4 向表中添加列存储索引
+    - 步骤3.5 度量使用列存储索引运行查询所用的时间
 
-下面的屏幕截图让了解我们的 SQL 开发文档网站如下所示。
+以下屏幕截图提供了 SQL 开发文档网站的外观。
 
 #### <a name="choose-a-language"></a>选择语言：
 
-![SQL 开发人员网站入门][image-ref-390-aka-ms-sqldev-choose-language]
+![SQL 开发网站，入门][image-ref-390-aka-ms-sqldev-choose-language]
 
 &nbsp;
 
 #### <a name="choose-an-operating-system"></a>选择操作系统：
 
-![SQL 开发人员网站，Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
+![SQL 开发网站，Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
 
 &nbsp;
 
@@ -342,20 +342,20 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 ## <a name="other-development"></a>其他开发
 
 
-本部分提供有关其他开发选项的链接。 其中包括在一般情况下使用这些相同的语言进行 Azure 开发。 信息超出了目标只是 Azure SQL 数据库和 Microsoft SQL Server。
+本部分提供有关其他开发选项的链接。 这包括通常使用相同的 Azure 开发语言。 该信息不仅面向 Azure SQL 数据库和 Microsoft SQL Server。
 
 #### <a name="developer-hub-for-azure"></a>适用于 Azure 的开发人员中心
 
 - [适用于 Azure 的开发人员中心](https://docs.microsoft.com/azure/)
 - [面向 .NET 开发人员的 Azure](https://docs.microsoft.com/dotnet/azure/)
-- [面向 Java 开发人员的 azure](https://docs.microsoft.com/java/azure/)
-- [面向 Node.js 开发人员的 azure](https://docs.microsoft.com/nodejs/azure/)
-- [面向 Python 开发人员的 azure](https://docs.microsoft.com/python/azure/)
+- [面向 Java 开发人员的 Azure](https://docs.microsoft.com/java/azure/)
+- [面向 Node.js 开发人员的 Azure](https://docs.microsoft.com/nodejs/azure/)
+- [面向 Python 开发人员的 Azure](https://docs.microsoft.com/python/azure/)
 - [在 Azure 中创建 PHP web 应用](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
 
 #### <a name="other-languages"></a>其他语言
 
-- [创建使用 Windows 上的 SQL Server 的 Go 应用](https://www.microsoft.com/sql-server/developer-get-started/go/windows/)
+- [使用 Windows 上的 SQL Server 创建开始应用](https://www.microsoft.com/sql-server/developer-get-started/go/windows/)
 
 
 
