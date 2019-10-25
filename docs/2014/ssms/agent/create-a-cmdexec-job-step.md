@@ -12,12 +12,12 @@ ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 896a3d19345805d5468f3ec238ae5e75be34daba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ba283ef2ff426521c881f733bc29465eebc0c76
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211478"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798158"
 ---
 # <a name="create-a-cmdexec-job-step"></a>创建 CmdExec 作业步骤
   本主题说明如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建和定义使用可执行程序或操作系统命令的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理作业步骤。  
@@ -26,7 +26,7 @@ ms.locfileid: "68211478"
   
 -   **开始之前：**  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要创建 CmdExec 作业步骤，可使用：**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68211478"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员可以创建 CmdExec 作业步骤。 除非 **sysadmin** 用户创建一个代理帐户，否则这些作业步骤将在 SQL Server 代理服务帐户的上下文中运行。 如果不属于 **sysadmin** 角色成员的用户具有访问 CmdExec 代理帐户的权限，则也可以创建 CmdExec 作业步骤。  
   
 ####  <a name="Permissions"></a> Permissions  
@@ -68,15 +68,15 @@ ms.locfileid: "68211478"
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
-#### <a name="to-create-a-cmdexec-job-step"></a>创建 CmdExec 作业步骤  
+### <a name="to-create-a-cmdexec-job-step"></a>创建 CmdExec 作业步骤  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
-    ```  
+    ```sql
     -- creates a job step that uses CmdExec  
     USE msdb;  
     GO  
@@ -90,11 +90,10 @@ ms.locfileid: "68211478"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+ 有关详细信息，请[参阅&#40;sp_add_jobstep transact-sql&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
-##  <a name="SMO"></a> 使用 SQL Server 管理对象  
- **创建 CmdExec 作业步骤**  
+##  <a name="SMO"></a>使用 SQL Server 管理对象  
+
+### <a name="to-create-a-cmdexec-job-step"></a>创建 CmdExec 作业步骤
   
  通过使用所选的编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 `JobStep` 类。  
-  
-  

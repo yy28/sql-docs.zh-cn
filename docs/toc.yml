@@ -1,8 +1,8 @@
-- name: 欢迎使用 SQL Server
-  href: sql-server/sql-server-technical-documentation.md
-- name: SQL Docs 导航提示
+- name: SQL Server
+  href: sql-server/index.yml
+- name: Docs 导航提示
   href: sql-server/sql-docs-navigation-guide.md
-- name: 先前版本 2014-2005
+- name: 先前版本 2005-2014
   href: toc/previous-versions-sql-server.md
 - name: 概述
   items:
@@ -10376,18 +10376,18 @@
               href: linux/sql-server-linux-configure-mssql-conf.md
             - name: 环境变量
               href: linux/sql-server-linux-configure-environment-variables.md
-            - name: 配置 Docker 容器
-              href: linux/sql-server-linux-configure-docker.md
-            - name: MSDTC
-              items:
-                - name: 配置 MSDTC
-                  href: linux/sql-server-linux-configure-msdtc.md
-                - name: 配置适用于 MSDTC 的 Docker
-                  href: linux/sql-server-linux-configure-msdtc-docker.md
+            - name: 配置 MSDTC
+              href: linux/sql-server-linux-configure-msdtc.md
             - name: 配置永久性内存 PMEM
               href: linux/sql-server-linux-configure-pmem.md
             - name: 配置为向 Microsoft 发送使用情况和诊断数据
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
+        - name: “配置 SSIS 日志”
+          items:
+            - name: 配置 Docker 容器
+              href: linux/sql-server-linux-configure-docker.md
+            - name: 配置适用于 MSDTC 的 Docker
+              href: linux/sql-server-linux-configure-msdtc-docker.md
         - name: 开发
           href: linux/sql-server-linux-develop-overview.md
           items:

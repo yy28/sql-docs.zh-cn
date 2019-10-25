@@ -1,5 +1,5 @@
 ---
-title: 创建、 更改和删除外键 |Microsoft Docs
+title: 创建、更改和删除外键 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f8c7474d645de0ba8b8c94beed44ee7c02d33de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0462af67afbf5ac25c52ded8523ca26678699b9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021880"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796955"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>创建、更改和删除外键
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中，外键由 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 对象表示。  
@@ -27,7 +27,7 @@ ms.locfileid: "63021880"
  表示外键的列在 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 对象的 `Columns` 对象属性中列出。 外键引用的主键由在 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 属性中指定的表中的 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 属性表示。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除外键  
  此代码示例演示如何在一个表的一个或多个列与另一个表的主键列之间创建外键关系。  
@@ -37,7 +37,7 @@ ms.locfileid: "63021880"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-c"></a>在 Visual C# 中创建、更改和删除外键  
  此代码示例演示如何在一个表的一个或多个列与另一个表的主键列之间创建外键关系。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
@@ -66,7 +66,7 @@ ms.locfileid: "63021880"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-powershell"></a>在 PowerShell 中创建、更改和删除外键  
  此代码示例演示如何在一个表的一个或多个列与另一个表的主键列之间创建外键关系。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
@@ -92,7 +92,7 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>示例：外键、 主键和唯一约束列  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>示例：外键、主键和唯一约束列  
  本示例演示：  
   
 -   在现有对象上查找外键。  
@@ -103,7 +103,7 @@ $fk.Create()
   
  此示例的 C# 版本：  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.Smo.dll   
 // /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -198,7 +198,7 @@ public class A {
   
  此示例的 Visual Basic 版本：  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.Smo.dll   
 ' /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -291,5 +291,3 @@ Public Class A
    End Sub  
 End Class  
 ```  
-  
-  

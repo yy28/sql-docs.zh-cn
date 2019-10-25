@@ -10,17 +10,17 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8b8460927baa185233234baa2f6401fa600f3fff
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952134"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798328"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>从命令提示符安装 PowerPivot
   您可以从命令行运行安装程序以便安装 SQL Server PowerPivot for SharePoint。 您必须在命令中包含 `/ROLE` 参数并排除 `/FEATURES` 参数。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  必须安装 SharePoint Server 2010 Enterprise Edition Service Pack 1 (SP1)。  
   
  您必须使用域帐户来设置 Analysis Services。  
@@ -43,13 +43,13 @@ ms.locfileid: "71952134"
 ## <a name="example-commands"></a>示例命令  
  下列示例说明了每个选项的用法。 示例1显示 `SPI_AS_ExistingFarm`。  
   
-```  
+```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
  示例 2 演示 `SPI_AS_NewFarm`。 请注意，它包括用于设置数据库引擎的参数。  
   
-```  
+```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
@@ -58,7 +58,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 1.  将以下命令复制到记事本中：  
   
-    ```  
+    ```cmd
     Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
     ```  
   
@@ -77,14 +77,12 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
 2.  `PID` 参数从命令中省略，该参数将导致安装 Evaluation 版本。 如果您想要安装 Enterprise 版本，则将 PID 添加到您的安装程序命令中并且提供有效的产品密钥。  
   
     ```  
-  
     /PID=<product key for an Enterprise installation>  
-  
     ```  
   
-3.  将 @no__t > 的占位符替换为具有有效用户帐户和密码的 \<StrongPassword >。  
+3.  将 \<域 \ 用户名 > 和 \<StrongPassword > 的占位符替换为有效的用户帐户和密码。  
   
-     @No__t-0 和 **/assvcpassword**参数用于在应用程序服务器上配置 @no__t 2 实例。 请使用有效的帐户信息替换这些占位符。  
+     `/assvaccount` 和 **/assvcpassword**参数用于在应用程序服务器上配置 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例。 请使用有效的帐户信息替换这些占位符。  
   
      **/Assysadminaccounts**参数必须设置为运行 SQL Server 安装程序的用户的标识。 您必须至少指定一个系统管理员。 请注意，SQL Server 安装程序不再自动将 sysadmin 权限授予内置 Administrators 组的成员。  
   
@@ -104,8 +102,6 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 11. 配置服务器。 至少您必须部署解决方案，创建服务应用程序，并为各网站集启用功能。 有关详细信息，请参阅[配置或修复 PowerPivot for SharePoint &#40;2010 PowerPivot 配置&#41;工具](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)或[在管理中心中管理和配置 powerpivot 服务器](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 PowerPivot 服务帐户](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [PowerPivot for SharePoint 2010 安装](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
-  
-  

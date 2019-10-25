@@ -17,12 +17,12 @@ ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 268f75902f752551e33467e422b6f33ea6c4dcb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211357"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798200"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]中设置通知选项，以便 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可向操作员发送与作业相关的通知。  
@@ -31,7 +31,7 @@ ms.locfileid: "68211357"
   
 -   **开始之前：**  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要向操作员通知作业状态，可使用：**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68211357"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
@@ -52,11 +52,11 @@ ms.locfileid: "68211357"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”  ，展开“作业”  ，右键单击要编辑的作业，再选择“属性”  。  
+2.  展开“SQL Server 代理”，展开“作业”，右键单击要编辑的作业，再选择“属性”。  
   
 3.  在 **“作业属性”** 对话框中，选择 **“通知”** 页。  
   
-4.  如果想通过电子邮件通知操作员，请选中“电子邮件”  ，再从列表中选择操作员，然后选择下列选项之一：  
+4.  如果想通过电子邮件通知操作员，请选中“电子邮件”，再从列表中选择操作员，然后选择下列选项之一：  
   
     -   **当作业成功时** - 在作业成功完成后通知操作员。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "68211357"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
-    ```  
+    ```sql
     -- adds an e-mail notification for the specified alert (Test Alert).  
     -- This example assumes that Test Alert already exists and that Fran??ois Ajenstat is a valid operator name.  
     USE msdb ;  
@@ -102,11 +102,9 @@ ms.locfileid: "68211357"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)。  
+ 有关详细信息，请[参阅&#40;sp_add_notification transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)。  
   
-##  <a name="SMO"></a> 使用 SQL Server 管理对象  
+##  <a name="SMO"></a>使用 SQL Server 管理对象  
  **向操作员通知作业状态**  
   
  通过使用所选的编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 `Job` 类。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
-  
-  

@@ -20,12 +20,12 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1fe1521f2eebaa4413b49c315f17a6b1b6a5914
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68887938"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797618"
 ---
 # <a name="dimension-relationships"></a>维度关系
   维度用法定义了多维数据集维度与多维数据集中的度量值组之间的关系。 多维数据集维度是在特定多维数据集中使用的数据库维度的实例。 多维数据集可以（并且通常）具有与度量值组不直接相关的多维数据集维度，但是这些维度可以通过另一个维度或度量值组与某度量值组间接相关。 向多维数据集添加数据库维度或度量值组时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 尝试通过检查多维数据集的数据源视图中的维度表和事实数据表之间的关系，并检查关系来确定维度用法维度中的属性之间。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可自动为其所检测到的关系设置维度用法设置。  
@@ -38,11 +38,11 @@ ms.locfileid: "68887938"
 ## <a name="reference-dimension-relationships"></a>引用维度关系  
  当多维数据集维度的键列通过其他维度表中的键与事实数据表间接联接时，该维度与度量值组之间便会存在引用维度关系，如下图所示。  
   
- ![逻辑关系图，引用的维度关系](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension1.gif "逻辑关系图，引用的维度关系")  
+ ![逻辑关系图，引用的维度关系](../../analysis-services/dev-guide/media/as-refdimension1.gif "逻辑关系图，引用的维度关系")  
   
  引用维度关系表示雪花型架构设计中的维度表与事实数据表之间的关系。 当雪花型架构中的各维度表进行连接时，可以使用多个表中的列定义一个维度，也可以根据单独的维度表定义单独的维度，然后使用引用维度关系设置定义这些维度之间的链接。 下图在雪花型架构中显示一个名为**InternetSales**的事实数据表，以及两个称为**Customer**和**Geography**的维度表。  
   
- ![逻辑架构，引用的维度关系](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdim-schema1.gif "逻辑架构，引用的维度关系")  
+ ![逻辑架构，引用的维度关系](../../analysis-services/dev-guide/media/as-refdim-schema1.gif "逻辑架构，引用的维度关系")  
   
  您可以创建一个维度，其中包含**Customer**表作为维度主表和作为相关表包含的**Geography**表。 然后在维度与 InternetSales 度量值组之间定义常规关系。  
   
@@ -50,14 +50,14 @@ ms.locfileid: "68887938"
   
  对于可相互链接的引用维度的数量没有限制，如下图所示。  
   
- ![逻辑关系图，引用的维度关系](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension2.gif "逻辑关系图，引用的维度关系")  
+ ![逻辑关系图，引用的维度关系](../../analysis-services/dev-guide/media/as-refdimension2.gif "逻辑关系图，引用的维度关系")  
   
  有关引用关系的详细信息，请参阅[定义引用的关系和引用的关系属性](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
   
 ## <a name="fact-dimension-relationships"></a>事实维度关系  
  事实维度（通常称为退化维度）是通过事实数据表而非维度表中的属性列构造的标准维度。 有用的维度数据有时存储在事实数据表中以减少重复。 例如，下面的关系图显示了 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 示例数据库中的**FactResellerSales**事实数据表。  
   
- ![事实数据表中的列可以支持维度](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-factdim.gif "事实数据表中的列可以支持维度")  
+ ![事实数据表中的列可以支持维度](../../analysis-services/dev-guide/media/as-factdim.gif "事实数据表中的列可以支持维度")  
   
  该表不仅包含分销商所发出订单的每一行的属性信息，而且还包含有关订单本身的属性信息。 上图中带圆圈的属性标识**FactResellerSales**表中的信息，这些信息可用作维度中的属性。 在本例中，CarrierTrackingNumber 和 CustomerPONumber 属性列表示两条附加信息，即承运人跟踪号以及分销商发出的采购订单号。 此信息非常有趣-例如，用户对于在单个跟踪号下发运的所有订单，用户肯定会有兴趣查看聚合信息，如总产品成本。 但是，如果没有维度，则无法组织或聚合这两个属性的数据。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68887938"
 ## <a name="many-to-many-dimension-relationships"></a>多对多维度关系  
  在多数维度中，每个与一个且唯一的一个维度成员以及单个维度成员的事实联接都可以与多个事实数据进行关联。 在关系数据库术语中，这称为“一对多关系”。 但是，这种关系通常在将单个事实数据与多个维度成员联接时很有用。 例如，银行客户可能具有多个帐户（现金帐户、储蓄帐户、信用卡帐户以及投资帐户），并且一个帐户也可以有两个所有者或多个所有者。 基于此类关系构造的“客户”维度中，可能会有多个成员与一个帐户事务相关联。  
   
- ![逻辑架构/多对多维度关系](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-many-dimension1.gif "逻辑架构/多对多维度关系")  
+ ![逻辑架构/多对多维度关系](../../analysis-services/dev-guide/media/as-many-dimension1.gif "逻辑架构/多对多维度关系")  
   
  利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您可以定义维度和事实数据表之间的多对多关系。  
   

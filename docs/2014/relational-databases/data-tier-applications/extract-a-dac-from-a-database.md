@@ -21,22 +21,22 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37bb440288ccbc832d89180855566a969830e2ca
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872850"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797993"
 ---
 # <a name="extract-a-dac-from-a-database"></a>从数据库中提取 DAC
-  使用“提取数据层应用程序向导”  或 Windows PowerShell 脚本可以从现有 SQL Server 数据库提取数据层应用程序 (DAC) 包。 提取过程将创建一个 DAC 包文件，其中包含数据库对象及其相关实例级别元素的定义。 例如，一个 DAC 包文件包含数据库表、存储过程、视图、用户以及映射到数据库用户的登录名。  
+  使用“提取数据层应用程序向导”或 Windows PowerShell 脚本可以从现有 SQL Server 数据库提取数据层应用程序 (DAC) 包。 提取过程将创建一个 DAC 包文件，其中包含数据库对象及其相关实例级别元素的定义。 例如，一个 DAC 包文件包含数据库表、存储过程、视图、用户以及映射到数据库用户的登录名。  
   
--   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **若要提取 DAC，使用：** [提取数据层应用程序向导](#UsingDACExtractWizard)， [PowerShell](#ExtractDACPowerShell)  
+-   **若要提取 DAC，请使用：**  [提取数据层应用程序向导](#UsingDACExtractWizard)、 [PowerShell](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>开始之前  
- 您可以从驻留在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 或更高版本的实例上的数据库中提取 DAC。 如果对已从 DAC 部署的数据库运行提取进程，则仅提取数据库中对象的定义。 该进程不会引用中注册的 DAC `msdb` (**主**中[!INCLUDE[ssSDS](../../includes/sssds-md.md)])。 该提取进程不注册当前数据库引擎实例中的 DAC 定义。 有关注册 DAC 的详细信息，请参阅 [Register a Database As a DAC](register-a-database-as-a-dac.md)。  
+ 您可以从驻留在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 或更高版本的实例上的数据库中提取 DAC。 如果对已从 DAC 部署的数据库运行提取进程，则仅提取数据库中对象的定义。 该进程不引用在 `msdb` （[!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的**master** ）中注册的 DAC。 该提取进程不注册当前数据库引擎实例中的 DAC 定义。 有关注册 DAC 的详细信息，请参阅 [Register a Database As a DAC](register-a-database-as-a-dac.md)。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  只能从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本的数据库中提取 DAC。 如果数据库有 DAC 中不支持的对象或包含的用户，则不能提取 DAC。 有关 DAC 中支持的对象类型的详细信息，请参阅 [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "62872850"
   
 2.  展开 **“数据库”** 节点。  
   
-3.  右键单击要从其提取 DAC 的数据库的节点，指向“任务”，然后选择“提取数据层应用程序…”    
+3.  右键单击要从其提取 DAC 的数据库的节点，指向“任务”，然后选择“提取数据层应用程序…”  
   
 4.  完成向导对话框：  
   
@@ -70,11 +70,11 @@ ms.locfileid: "62872850"
   
  **不再显示此页。** - 选中该复选框可以停止在将来显示此页。  
   
- “下一步 >”  - 进入“选择方法”  页。  
+ “下一步 >” - 进入“选择方法”页。  
   
  **取消** - 结束向导且不从数据层提取数据层应用程序。  
   
-###  <a name="SelectData"></a> 选择数据页  
+###  <a name="SelectData"></a>选择数据页  
  使用向导的此页可以选择要包括在数据层应用程序 (DAC) 包文件中的引用数据。 在 DAC 包中包括数据是可选的。 DAC 包将已包括与数据库相关的所有受支持的数据库对象和实例对象的架构。  
   
  您可以在 DAC 包文件中包含多达 10 MB 的引用数据。 但是，对于要包含在该 DAC 中的表，它们可能不包含二进制大型对象 (BLOB) 数据类型（如 **image** 或 **varchar(max)** ）。 若要提取大量数据以转移到另一个数据库，应使用 SQL Server Integration Services、大容量复制实用工具或许多其他数据迁移方法之一。  
@@ -86,9 +86,9 @@ ms.locfileid: "62872850"
   
  **名称** - 此名称标识 DAC。 它可以不同于 DAC 包文件的名称，并且应描述您的应用程序。 例如，如果数据库用于财务应用程序，则可能要命名为“DAC Finance”。  
   
- **版本（使用 xx.xx.xx.xx，其中 x 是数字）** - 标识 DAC 版本的数值。 该 DAC 版本用于 Visual Studio 中，以便标识开发人员正在处理的 DAC 的版本。 在部署 DAC 时，该版本存储中`msdb`数据库和更高版本可以在查看**数据层应用程序**中的节点[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ **版本（使用 xx.xx.xx.xx，其中 x 是数字）** - 标识 DAC 版本的数值。 该 DAC 版本用于 Visual Studio 中，以便标识开发人员正在处理的 DAC 的版本。 部署 DAC 时，该版本存储在 `msdb` 数据库中，并且以后可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 "**数据层应用程序**" 节点下查看。  
   
- **说明：** - 可选。 说明该 DAC。 在部署 DAC 时，该描述存储在`msdb`数据库和更高版本可以在查看**数据层应用程序**中的节点[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+ **说明：** - 可选。 说明该 DAC。 在部署 DAC 时，该描述存储在 `msdb` 数据库中，并且以后可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的 "**数据层应用程序**" 节点下查看。  
   
  **保存到 DAC 包文件(文件名中包括 .dacpac 扩展名)：** - 将 DAC 保存到某一 DAC 包文件，并且具有 .dacpac 扩展名。 单击 **“浏览”** 按钮可以指定文件的名称和位置。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62872850"
 > [!NOTE]  
 >  如果 DAC 不支持一个或多个对象，则 **“下一步”** 按钮将被禁用，并且提取过程可能会停止。 在这样的情况下，建议删除不支持的对象，然后再次运行此向导。  
   
- **摘要** - 你已选择的选项的摘要在“DAC 属性”  下列出。 验证的结果在 **“DAC 对象”** 下列出。 有三种类型的验证结果：  
+ **摘要** - 你已选择的选项的摘要在“DAC 属性”下列出。 验证的结果在 **“DAC 对象”** 下列出。 有三种类型的验证结果：  
   
 -   **对象成功包括在 DAC 中**：支持这些对象及其依赖关系，并且它们可以成功包括在 DAC 中。  
   
@@ -112,18 +112,18 @@ ms.locfileid: "62872850"
   
  如果 DAC 不支持一个或多个对象，则 **“下一步”** 按钮将被禁用，并且提取过程将停止。 在这样的情况下，建议删除不支持的对象，然后再次运行此向导。  
   
- **保存报告** - 使你可以保存一个基于 HTML 的文件，该文件列出摘要中“DAC 对象”  节点下的所有对象。 当在 DAC 中不支持您的一些数据库对象时，此报表可能会非常有用。 使用此报表可以在尝试再次提取 DAC 前更改或删除不支持的对象。  
+ **保存报告** - 使你可以保存一个基于 HTML 的文件，该文件列出摘要中“DAC 对象”节点下的所有对象。 当在 DAC 中不支持您的一些数据库对象时，此报表可能会非常有用。 使用此报表可以在尝试再次提取 DAC 前更改或删除不支持的对象。  
   
-###  <a name="BuildPackage"></a> 生成包页  
+###  <a name="BuildPackage"></a>"生成包" 页  
  使用该页监视向导在提取数据层应用程序 (DAC) 时的进度。  
   
- **操作** - 在“创建并保存 DAC 包文件”  操作期间，向导从你的 SQL Server 数据库提取 DAC。 然后，一个 DAC 包将在内存中创建并保存到您指定的位置中。 单击 **“结果”** 列中的链接可以查看相应步骤的结果。  
+ **操作** - 在“创建并保存 DAC 包文件”操作期间，向导从你的 SQL Server 数据库提取 DAC。 然后，一个 DAC 包将在内存中创建并保存到您指定的位置中。 单击 **“结果”** 列中的链接可以查看相应步骤的结果。  
   
- “保存报告”  - 单击此项可将向导的进度结果保存到文件中。  
+ “保存报告” - 单击此项可将向导的进度结果保存到文件中。  
   
- “完成”  - 单击此项可在完成处理后或出错时关闭向导。  
+ “完成” - 单击此项可在完成处理后或出错时关闭向导。  
   
-##  <a name="ExtractDACPowerShell"></a> 使用 PowerShell 提取 DAC  
+##  <a name="ExtractDACPowerShell"></a>使用 PowerShell 提取 DAC  
  **使用 PowerShell 脚本中的 Extract() 方法从数据库提取 DAC**  
   
 1.  创建一个 SMO Server 对象，并且将其设置为包含要从其提取 DAC 的数据库的实例。  
@@ -139,10 +139,10 @@ ms.locfileid: "62872850"
 ### <a name="example-powershell"></a>示例 (PowerShell)  
  下面的示例从名为 MyDB 的数据库中提取名为 MyApplication 的 DAC。  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Specify the database to extract to a DAC.  
 $dbname = "MyDB"  
@@ -161,7 +161,5 @@ $extractionunit.Description = $description
 $extractionunit.Extract($dacpacPath)  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据层应用程序](data-tier-applications.md)  
-  
-  

@@ -10,12 +10,12 @@ ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762093"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797810"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>导航 SQL ServerPowerShell 路径
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell 提供程序在与文件路径相似的结构中公开 SQL Server 实例中的对象集。 您可以使用 Windows PowerShell cmdlet 导航提供程序路径，并且创建自定义驱动器以便缩短需键入的路径。  
@@ -25,7 +25,7 @@ ms.locfileid: "62762093"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序实现了提供程序 cmdlets 的一部分，如下表中所示。  
   
-|cmdlet|规范别名|cmd 别名|UNIX shell 别名|Description|  
+|Cmdlet|规范别名|cmd 别名|UNIX shell 别名|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|获取当前节点。|  
 |`Set-Location`|**sl**|**cd、chdir**|**cd、chdir**|更改当前节点。|  
@@ -61,7 +61,7 @@ ms.locfileid: "62762093"
 ### <a name="alias-example-powershell"></a>别名示例 (PowerShell)  
  例如，可以使用下面的其中一组 cmdlet 或别名，导航到 SQLSERVER:\SQL 文件夹并请求该文件夹的子项列表，从而检索可供使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的列表：  
   
-```  
+```powershell
 ## Shows using the full cmdet name.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
@@ -80,7 +80,8 @@ ls
 ```  
   
 ## <a name="use-get-childitem"></a>使用 Get-ChildItem  
- **通过使用 Get-Childitem 返回信息**  
+
+### <a name="return-information-by-using-get-childitem"></a>通过使用 Get-Childitem 返回信息
   
 1.  导航到要获取其子级的列表的节点  
   
@@ -89,14 +90,13 @@ ls
 ### <a name="get-childitem-example-powershell"></a>Get-ChildItem 示例 (PowerShell)  
  这些示例阐释 Get-Childitem 为 SQL Server 提供程序路径中的不同节点返回的信息。  
   
-```  
+```powershell
 ## Return the current computer and any computer  
 ## to which you have made a SQL or WMI connection.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
   
 ## List the instances of the Database Engine on the local computer.  
-  
 Set-Location SQLSERVER:\SQL\localhost  
 Get-ChildItem  
   
@@ -112,7 +112,8 @@ Get-ChildItem -force
 ```  
   
 ## <a name="create-a-custom-drive"></a>创建自定义驱动器  
- **创建和使用自定义驱动器**  
+
+### <a name="create-and-use-a-custom-drive"></a>创建和使用自定义驱动器
   
 1.  使用 `New-PSDrive` 可以定义自定义驱动器。 使用 `Root` 参数可以指定自定义驱动器名称表示的路径。  
   
@@ -121,7 +122,7 @@ Get-ChildItem -force
 ### <a name="custom-drive-example-powershell"></a>自定义驱动器示例 (PowerShell)  
  此示例创建一个名为 AWDB 的虚拟驱动器，该驱动器映射到 AdventureWorks2012 示例数据库的已部署副本的节点。 然后，使用该虚拟驱动器导航到数据库中的表。  
   
-```  
+```powershell
 ## Create a new virtual drive.  
 New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
   
@@ -129,10 +130,8 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server PowerShell 提供程序](sql-server-powershell-provider.md)   
  [使用 SQL ServerPowerShell 路径](work-with-sql-server-powershell-paths.md)   
  [将 URN 转换为 SQL Server 提供程序路径](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

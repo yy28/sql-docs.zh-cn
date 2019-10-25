@@ -10,12 +10,12 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b292805f0cf24a220223adc3a1996b3e5effe54c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e28c32f0d73d5ff06927e7629cd76f56eaa65d8
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66103162"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796414"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件
   从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]开始，SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务器可以将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 事件写入 SharePoint 统一日志记录服务 (ULS) 跟踪日志。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的类别在 SharePoint 管理中心的“监视”页上提供。  
@@ -39,11 +39,11 @@ ms.locfileid: "66103162"
 ##  <a name="bkmk_general"></a> 一般 ULS 日志建议  
  下表列出了监视 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 环境的推荐事件类别和级别。 记录事件时，每一项都包括记录事件的时间、进程名和线程 ID。  
   
-|Category|级别|Description|  
+|类别|level|Description|  
 |--------------|-----------|-----------------|  
 |“数据库”|“详细”|记录涉及数据库访问的事件。|  
 |常规|“详细”|记录涉及访问以下各项的事件：<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 网页<br /><br /> 报表查看器 HTTP 处理程序<br /><br /> 报表访问（.rdl 文件）<br /><br /> 数据源（.rsds 文件）<br /><br /> SharePoint 网站上的 URL（.smdl 文件）|  
-|Office Server 常规|异常|记录登录失败。|  
+|Office Server 常规|Exception|记录登录失败。|  
 |拓扑|“详细”|记录当前用户信息。|  
 |Web 部件|“详细”|记录涉及访问报表查看器 Web 部件的事件。|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66103162"
   
  您可以使用以下 PowerShell cmdlet 检查所有当前的场诊断日志设置：  
   
-```  
+```powershell
 Get-SPDiagnosticConfig  
 ```  
   
@@ -86,9 +86,9 @@ Get-SPDiagnosticConfig
   
 1.  **产品：SQL Server Reporting Services**  
   
-2.  **类别：** 与服务器相关的事件将名称的开头带有字符"Report Server"。 例如“Report Server Alerting Runtime”，这些事件还将记录到报表服务器日志文件。  
+2.  **类别：** 与服务器相关的事件将在名称的开头带有字符“Report Server”。 例如“Report Server Alerting Runtime”，这些事件还将记录到报表服务器日志文件。  
   
-3.  **类别：** 相关或从中 web 前端组件的事件不包含"Report Server"。 例如“服务应用程序代理”、“报表服务器警报运行时”。 WFE 条目包含 CorrelationID，而服务器条目不包含。  
+3.  **类别：** 与 Web 前端组件相关或从中进行通信的事件不包含“Report Server”。 例如“服务应用程序代理”、“报表服务器警报运行时”。 WFE 条目包含 CorrelationID，而服务器条目不包含。  
   
 ##  <a name="bkmk_list"></a> SQL Server Reporting Services 事件列表  
  下表是 SQL Server Reporting Services 类别中事件的列表：  
@@ -101,7 +101,7 @@ Get-SPDiagnosticConfig
 |本地模式呈现||  
 |SOAP 客户端代理||  
 |UI 页||  
-|Power View|写入 **LogClientTraceEvents** API 的日志条目。 这些条目源自客户端应用程序，包括 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]（用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 外接程序的一项功能）。<br /><br /> 来自 LogClientTraceEvents API 的所有日志条目将记录在“SQL Server Reporting Services”的“类别”和“Power View”的“区域”下   。<br /><br /> 使用“Power View”区域记录的条目内容由客户端应用程序决定。|  
+|Power View|写入 **LogClientTraceEvents** API 的日志条目。 这些条目源自客户端应用程序，包括 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]（用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 外接程序的一项功能）。<br /><br /> 来自 LogClientTraceEvents API 的所有日志条目将记录在“SQL Server Reporting Services”的“类别”和“Power View”的“区域”下。<br /><br /> 使用“Power View”区域记录的条目内容由客户端应用程序决定。|  
 |报表服务器警报运行时||  
 |报表服务器应用程序域管理器||  
 |报表服务器缓冲响应||  
@@ -125,7 +125,7 @@ Get-SPDiagnosticConfig
 |报表服务器提供程序||  
 |报表服务器呈现||  
 |报表服务器报表预览||  
-|报表服务器资源实用工具|示例条目：<br /><br /> MediumReporting Services 从开始 SKU:Evaluation<br /><br /> MediumEvaluation copy:剩余 180 天|  
+|报表服务器资源实用工具|示例条目：<br /><br /> MediumReporting Services starting SKU: Evaluation<br /><br /> MediumEvaluation copy: 180 days left|  
 |报表服务器运行作业||  
 |报表服务器运行请求||  
 |报表服务器计划||  
@@ -139,10 +139,10 @@ Get-SPDiagnosticConfig
 |共享服务|示例条目：<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting access to content databases.<br /><br /> MediumProvisioning instances for ReportingWebServiceApplication<br /><br /> MediumProcessing service account change for ReportingWebServiceApplication<br /><br /> MediumSetting database permissions.|  
   
 ##  <a name="bkmk_powershell"></a> 使用 PowerShell 查看日志文件  
- ![PowerShell 相关内容](../media/rs-powershellicon.jpg "PowerShell 相关内容")可以使用 PowerShell 从 ULS 日志文件中返回 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 相关事件列表。 从 SharePoint 2010 Management Shell 运行以下命令以便从该文件（ULS 日志文件 UESQL11SPOINT-20110606-1530.log）中返回包含“sql server reporting services”的行的筛选后列表  ：  
+ ![与 PowerShell 相关的内容](../media/rs-powershellicon.jpg "与 PowerShell 相关的内容")你可以使用 PowerShell 从 ULS 日志文件中返回 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 相关事件的列表。 从 SharePoint 2010 Management Shell 运行以下命令以便从该文件（ULS 日志文件 UESQL11SPOINT-20110606-1530.log）中返回包含“sql server reporting services”的行的筛选后列表：  
   
-```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
+```powershell
+Get-Content -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | Select-String "sql server reporting services"  
 ```  
   
  有许多可以下载的工具，通过这些工具可以读取 ULS 日志。 例如， [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) 或 [SharePoint ULS Log Viewer](http://ulsviewer.codeplex.com/workitem/list/basic)。 两者都在 CodePlex 上提供。  
@@ -153,5 +153,3 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
  跟踪日志文件通常位于文件夹 **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** 中，但您可以从 SharePoint 管理中心的 **“诊断日志记录”** 页中验证或更改此路径。  
   
  有关在 SharePoint 2010 管理中心配置 SharePoint 服务器上的诊断日志记录的详细信息和步骤，请参阅 [配置诊断日志记录设置 (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423)。  
-  
-  

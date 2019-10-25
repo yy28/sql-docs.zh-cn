@@ -14,12 +14,12 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88f1d38f1769659842757d535309c6e42d70a289
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 042bc1cfe2ccf09580d052b1a4bc045d03fc81ee
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63158741"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796835"
 ---
 # <a name="implementing-endpoints"></a>实现端点
   端点是一种可以本机方式侦听请求的服务。 SMO 通过使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 对象支持各种类型的端点。 您可以创建用于处理特定类型负载且使用特定协议的端点服务，方法是创建一个 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 对象的实例并设置其属性。  
@@ -49,7 +49,7 @@ ms.locfileid: "63158741"
  创建端点并完全定义之后，便可授予、撤消及拒绝数据库用户、组、角色和登录名的访问权限。  
   
 ## <a name="example"></a>示例  
- 对于下面的代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)并[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下面的代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)和[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-basic"></a>在 Visual Basic 中创建数据库镜像端点服务  
  代码示例演示了如何在 SMO 中创建数据库镜像端点。 这是创建数据库镜像之前的必要步骤。 请使用 <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> 和 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象上的其他属性创建数据库镜像。  
@@ -59,7 +59,7 @@ ms.locfileid: "63158741"
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-c"></a>在 Visual C# 中创建数据库镜像端点服务  
  代码示例演示了如何在 SMO 中创建数据库镜像端点。 这是创建数据库镜像之前的必要步骤。 请使用 <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> 和 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象上的其他属性创建数据库镜像。  
   
-```  
+```csharp
 {  
             //Set up a database mirroring endpoint on the server before   
         //setting up a database mirror.   
@@ -86,10 +86,10 @@ ms.locfileid: "63158741"
 ## <a name="creating-a-database-mirroring-endpoint-service-in-powershell"></a>在 PowerShell 中创建数据库镜像端点服务  
  代码示例演示了如何在 SMO 中创建数据库镜像端点。 这是创建数据库镜像之前的必要步骤。 请使用 <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> 和 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象上的其他属性创建数据库镜像。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
-$srv = get-item default  
+$srv = Get-Item default  
   
 #Get a new endpoint to congure and add  
 $ep = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Endpoint -argumentlist $srv,"Mirroring_Endpoint"  
@@ -111,7 +111,5 @@ $ep.Start()
 $ep.EndpointState;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像终结点 (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
-  
-  

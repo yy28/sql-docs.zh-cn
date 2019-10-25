@@ -14,20 +14,20 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 463b077fe6ac972f87dcf90773c07575e839bb14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aa5518ee9ebcaca287b76636d6eeea8af2f4ea5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63016044"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796419"
 ---
 # <a name="create-a-stored-procedure"></a>创建存储过程
   本主题介绍了如何通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 语句来创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。  
   
 ##  <a name="Top"></a>   
--   **开始之前：** [权限](#Permissions)  
+-   **Before you begin:**  [Permissions](#Permissions)  
   
--   **要创建该过程，请使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **要创建存储过程，请使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="Permissions"></a> Permissions  
  需要在数据库中有 CREATE PROCEDURE 权限，对在其中创建过程的架构有 ALTER 权限。  
@@ -46,7 +46,7 @@ ms.locfileid: "63016044"
   
 2.  依次展开 **“数据库”** 、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库和 **“可编程性”** 。  
   
-3.  右键单击“存储过程”  ，再单击“新建存储过程”  。  
+3.  右键单击“存储过程”，再单击“新建存储过程”。  
   
 4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”** 。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63016044"
     |@Datatype_For_Param2|`nvarchar`(50)|  
     |Default_Value_For_Param2|NULL|  
   
-6.  单击“确定”  。  
+6.  单击 **“确定”** 中创建非聚集索引。  
   
 7.  在 **“查询编辑器”** 中，使用以下语句替换 SELECT 语句：  
   
@@ -80,11 +80,11 @@ ms.locfileid: "63016044"
   
 9. 若要创建该过程，请在 **“查询”** 菜单上单击 **“执行”** 。 该过程作为数据库中的对象创建。  
   
-10. 若要查看在对象资源管理器中列出的过程，请右键单击“存储过程”  ，然后选择“刷新”  。  
+10. 若要查看在对象资源管理器中列出的过程，请右键单击“存储过程”，然后选择“刷新”。  
   
-11. 若要运行该过程，请在对象资源管理器中右键单击存储过程名称 **HumanResources.uspGetEmployeesTest**，然后选择“执行存储过程”  。  
+11. 若要运行该过程，请在对象资源管理器中右键单击存储过程名称 **HumanResources.uspGetEmployeesTest**，然后选择“执行存储过程”。  
   
-12. 在“执行过程”  窗口中，输入 Margheim 作为参数 @LastName 的值，并输入值 Diane 作为参数 @FirstName 的值。  
+12. 在“执行过程”窗口中，输入 Margheim 作为参数 @LastName 的值，并输入值 Diane 作为参数 @FirstName 的值。  
   
 > [!WARNING]  
 >  验证所有用户的输入。 验证前请勿连接用户输入。 绝对不要执行根据尚未验证的用户输入构造的命令。  
@@ -96,40 +96,36 @@ ms.locfileid: "63016044"
   
 2.  从 **“文件”** 菜单中，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将使用其他过程名称创建与上述相同的存储过程。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 该示例将使用其他过程名称创建与上述相同的存储过程。  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
     GO  
     CREATE PROCEDURE HumanResources.uspGetEmployeesTest2   
         @LastName nvarchar(50),   
         @FirstName nvarchar(50)   
-    AS   
+    AS
   
         SET NOCOUNT ON;  
         SELECT FirstName, LastName, Department  
         FROM HumanResources.vEmployeeDepartmentHistory  
         WHERE FirstName = @FirstName AND LastName = @LastName  
         AND EndDate IS NULL;  
-    GO  
-  
+    GO
     ```  
   
 4.  若要运行该过程，请将以下示例复制并粘贴到一个新的查询窗口中，然后单击 **“执行”** 。 请注意，将显示指定参数值的不同方法。  
   
-    ```  
+    ```sql
     EXECUTE HumanResources.uspGetEmployeesTest2 N'Ackerman', N'Pilar';  
     -- Or  
     EXEC HumanResources.uspGetEmployeesTest2 @LastName = N'Ackerman', @FirstName = N'Pilar';  
     GO  
     -- Or  
     EXECUTE HumanResources.uspGetEmployeesTest2 @FirstName = N'Pilar', @LastName = N'Ackerman';  
-    GO  
-  
+    GO
     ```  
   
-##  <a name="PowerShellProcedure"></a>   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)  
-  
   

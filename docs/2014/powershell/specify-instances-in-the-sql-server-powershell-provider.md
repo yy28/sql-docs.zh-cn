@@ -10,19 +10,19 @@ ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 595bd70b97b6586071177e2e93281e14ca62c32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 414d9135989c39ea183d14d2d6f5dfa6e84e6fe6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762354"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797762"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>在 SQL Server PowerShell 提供程序中指定实例
   为 SQL Server PowerShell 提供程序指定的路径必须标识它运行时所在的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例和计算机。 用于指定计算机和实例的语法必须同时符合 SQL Server 标识符和 Windows PowerShell 路径的规则。  
   
-1.  **开始之前：** [限制和局限](#LimitationsRestrictions)  
+1.  **开始之前：**  [限制和局限](#LimitationsRestrictions)  
   
-2.  **指定实例：** [示例](#Examples)  
+2.  **指定实例：**  [示例](#Examples)  
   
 ## <a name="before-you-begin"></a>开始之前  
  SQL Server 提供程序中的 SQLSERVER:\SQL 后的第一个节点是运行 [!INCLUDE[ssDE](../includes/ssde-md.md)]实例的计算机的名称；例如：  
@@ -51,33 +51,31 @@ SQLSERVER:\SQL\MyComputer\MyInstance
 ##  <a name="Examples"></a> 示例：计算机名称和实例名称  
  此示例使用 localhost 和 DEFAULT 来指定本地计算机上的默认实例：  
   
-```  
-Set-Location SQLSERVER:\SQL\localhost\DEFAULT   
+```powershell
+Set-Location SQLSERVER:\SQL\localhost\DEFAULT
 ```  
   
  Windows PowerShell 通常会将 (local) 中的括号字符作为命令处理。 您必须：  
   
 -   将路径字符串用引号引起来：  
   
-    ```  
+    ```powershell
     Set-Location "SQLSERVER:\SQL\(local)\DEFAULT"  
     ```  
   
 -   使用反引号字符 (`) 对括号进行转义：  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT  
     ```  
   
 -   使用十六进制表示形式对括号进行编码：  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [PowerShell 中的 SQL Server 标识符](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell 提供程序](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

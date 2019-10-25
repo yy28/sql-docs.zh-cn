@@ -10,19 +10,19 @@ ms.assetid: b29d0f45-0068-4c84-bd7e-5b8a9cd1b538
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1a249c7a6fa260d5800c81b33b7674a2affa4eb5
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 8874d4c57e2fb7b94e4efac44c90e93865d2b40f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952226"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798336"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>安装用于 SharePoint 2013 的 Reporting Services SharePoint 模式
   本主题中的过程将指导您完成以 SharePoint 模式在单台服务器上安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 管理中心的配置任务。 本主题还可用于更新现有安装的单独过程，例如创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; **说明：** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式不**支持 Sharepoint** Server 多租户。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Sharepoint 2013 &#124; **说明：** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]sharepoint 模式不**支持 sharepoint** Server 多租户。|  
   
  有关在现有场中添加更多 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器的信息，请参阅以下内容：  
   
@@ -38,13 +38,13 @@ ms.locfileid: "71952226"
   
 -   [设置帐户](#bkmk_setupaccounts)  
   
--   [步骤 1：在 SharePoint 模式下安装 Reporting Services 报表服务器 @ no__t-0  
+-   [步骤1：在 SharePoint 模式下安装 Reporting Services 报表服务器](#bkmk_install_SSRS)  
   
--   [步骤 2：注册并启动 Reporting Services SharePoint 服务 @ no__t-0  
+-   [步骤2：注册并启动 Reporting Services SharePoint 服务](#bkmk_install_SSRS_sharedservice)  
   
--   [步骤 3：创建 Reporting Services 服务应用程序 no__t-0  
+-   [步骤3：创建 Reporting Services 服务应用程序](#bkmk_create_serrviceapplication)  
   
--   [步骤 4：激活 Power View 网站集功能。 ](#bkmk_powerview)  
+-   [步骤4：激活 "Power View 网站集" 功能。](#bkmk_powerview)  
   
 -   [用于步骤1-4 的 Windows PowerShell 脚本](#bkmk_full_script)  
   
@@ -64,17 +64,17 @@ ms.locfileid: "71952226"
 |**(3)**|供 Power View 和 PowerPivot 使用的 Excel Service 应用程序。|  
 |**(4)**|PowerPivot 服务应用程序。|  
   
- ![SSRS SharePoint 模式单服务器部署](../../../2014/sql-server/install/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint Mode Single Server Deployment")  
+ ![SSRS SharePoint 模式单服务器部署](../../../2014/sql-server/install/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint 模式单服务器部署")  
   
 > [!TIP]  
->  有关更复杂的部署实例，请参阅 [SharePoint 中 SQL Server BI 功能的部署拓扑](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。  
+>  有关更复杂的部署示例，请参阅 [Deployment Topologies for SQL Server BI Features in SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。  
   
 ##  <a name="bkmk_setupaccounts"></a> 安装帐户  
  本部分介绍在 SharePoint 模式下用于主要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署步骤的帐户和权限。  
   
  **安装并注册 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务：**  
   
--   在 SharePoint 模式下，在安装过程中的当前帐户（称为 "安装" 帐户 @no__t），需要具有本地计算机的管理权限。 如果在安装 SharePoint 后安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，并且 "安装" 帐户也是 SharePoint 场管理员组的成员，则 @no__t 安装将为您注册 @no__t 2 服务。 如果在安装 SharePoint 之前安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或者 "安装" 帐户不是 "服务器场管理员" 组的成员，则手动注册该服务。 请参阅 [Step 2 部分：注册并启动 Reporting Services SharePoint 服务 @ no__t。  
+-   在 SharePoint 模式下，在安装过程中的当前帐户（称为 "安装" 帐户 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]），需要具有本地计算机的管理权限。 如果在安装 SharePoint 后安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 并且 "安装" 帐户也是 SharePoint 场管理员组的成员，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装将为您注册 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务。 如果在安装 SharePoint 之前安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或者 "安装" 帐户不是场管理员组的成员，则手动注册该服务。 请参见 [步骤 2：注册并启动 Reporting Services SharePoint 服务](#bkmk_install_SSRS_sharedservice)。  
   
  **创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序**  
   
@@ -103,17 +103,17 @@ ms.locfileid: "71952226"
   
 7.  如果看到“产品密钥”页，请键入密钥或接受 Enterprise Evaluation 版本的默认密钥。  
   
-     单击“下一步”。  
+     在“欢迎”页上，单击 **“下一步”** 。  
   
 8.  如果您看到许可条款页，则查看并接受许可条款。 对于您单击以同意发送功能使用情况数据来帮助改进产品功能和支持，Microsoft 深表感谢。  
   
-     单击“下一步”。  
+     在“欢迎”页上，单击 **“下一步”** 。  
   
 9. 如果您看到 **“安装角色”** 页，则选择 **“SQL Server 功能安装”** 。  
   
      单击 **“下一步”**  
   
-     ![安装角色的 SQL Server 功能安装](../../../2014/sql-server/install/media/rs-setuprole.gif "SQL Server Feature Installation for setup role")  
+     ![安装角色 SQL Server 功能安装](../../../2014/sql-server/install/media/rs-setuprole.gif "安装角色 SQL Server 功能安装")  
   
 10. 在 **“功能选择”** 页中，选择以下选项：  
   
@@ -121,25 +121,25 @@ ms.locfileid: "71952226"
   
     -   **用于 SharePoint 产品的 Reporting Services 外接程序**。  
   
-         ![注意](../../../2014/reporting-services/media/rs-fyinote.png "：")安装外接程序的安装向导选项是 @no__t 版本的新版本。  
+         ![注意](../../../2014/reporting-services/media/rs-fyinote.png "纪录")用于安装外接程序的安装向导选项是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的新版本。  
   
     -   如果您尚未安装 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则还可以选择 **“数据库引擎服务”** 和 **“管理工具 - 完整”** 以提供一个完整环境。  
   
-     单击“下一步”。  
+     在“欢迎”页上，单击 **“下一步”** 。  
   
-     用于 sharepoint 模式的![Ssrs 功能选择]用于(../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "sharepoint 模式的 ssrs 功能选择")  
+     ![用于 SharePoint 模式的 SSRS 功能选择](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "用于 SharePoint 模式的 SSRS 功能选择")  
   
 11. 如果您看到 **“安装规则”** 页。 查看任何警告或妨碍安装的问题。 再单击 **“下一步”** 。  
   
 12. 如果您已选择“数据库引擎服务”，请在 **“实例配置”** 页上接受 **MSSQLSERVER** 的默认实例，然后单击 **“下一步”** 。  
   
-     ![请注意](../../../2014/reporting-services/media/rs-fyinote.png "请注意") 与以前的 Reporting Services 体系结构一样，Reporting Services SharePoint 服务体系结构不基于 SQL Server“实例”。  
+     ![注意](../../../2014/reporting-services/media/rs-fyinote.png "纪录")Reporting Services SharePoint 服务体系结构不基于之前的 Reporting Services 体系结构 SQL Server "实例"。  
   
 13. 阅读 **“磁盘空间要求”** 页，然后单击 **“下一步”** 。  
   
 14. 如果您看到 **“服务器配置”** 页，则键入相应的凭据。 如果您要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报或订阅功能，则需要将 SQL Server 代理的 **“启动类型”** 更改为 **“自动”** 。 根据已在计算机上安装的项，您可能不会看到 **“服务器配置”** 页。  
   
-     单击“下一步”。  
+     在“欢迎”页上，单击 **“下一步”** 。  
   
 15. 如果您选择了“数据库引擎服务”，您将看到 **“数据库引擎配置”** 页。请将相应的帐户添加到 SQL 管理员列表，然后单击 **“下一步”** 。  
   
@@ -148,11 +148,11 @@ ms.locfileid: "71952226"
     > [!NOTE]  
     >  SQL Server 安装完成后，您需要按照本主题的其他章节的内容配置 SharePoint 环境。 这包括安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务和创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。  
   
-     ![SQL Server 安装向导-"Ssrs 配置" 页](../../../2014/sql-server/install/media/rs-2012sp1-setup-ssrs-configpage-with-circles.gif "SQL Server 安装向导-ssrs 配置页")  
+     ![SQL Server 安装向导-"SSRS 配置" 页](../../../2014/sql-server/install/media/rs-2012sp1-setup-ssrs-configpage-with-circles.gif "SQL Server 安装向导-"SSRS 配置" 页")  
   
 17. 请通过在 **“错误报告”** 页上单击用于发送错误报告的复选框，来帮助 Microsoft 改进 SQL Server 功能和服务。  
   
-     单击“下一步”。  
+     在“欢迎”页上，单击 **“下一步”** 。  
   
 18. 查看任何警告，然后在 **“安装配置规则”** 页上单击 **“下一步”** 。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "71952226"
 20. 安装将需要几分钟时间。 您将看到 **“完成”** 页，其中列出了功能以及各功能的状态。 您可能会看到一个信息对话框，指示计算机需要重新启动。  
   
 ##  <a name="bkmk_install_SSRS_sharedservice"></a> 步骤 2：注册并启动 Reporting Services SharePoint 服务  
- ![与 PowerShell 相关的内容](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content")  
+ ![与 PowerShell 相关的内容](../../../2014/reporting-services/media/rs-powershellicon.jpg "与 PowerShell 相关的内容")  
   
 > [!NOTE]  
 >  如果您要安装到现有 SharePoint 场，则不需要完成本节中的步骤。 当您在本文档的上一节中运行 SQL Server 安装向导时，就已经安装并启动了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服务。  
@@ -184,28 +184,28 @@ ms.locfileid: "71952226"
   
 4.  运行以下 PowerShell 命令以安装 SharePoint 服务。 命令成功完成后会在 Management Shell 中显示一个新行。 当命令成功完成时，**不会向 Management Shell 返回任何消息** ：  
   
-    ```  
+    ```powershell
     Install-SPRSService  
     ```  
   
     > [!IMPORTANT]  
     >  如果您看到与以下内容类似的错误消息：  
     >   
-    >  Install-sprsserviceinstall-sprsservice：术语 "Install-sprsserviceinstall-sprsservice"**未被识别**为  
+    >  Install-sprsserviceinstall-sprsservice：术语 "Install-Install-sprsserviceinstall-sprsservice"**未被识别**为  
     > cmdlet、函数、脚本文件或可运行程序的名称。 请检查  
     > 名称的拼写，如果包括路径，请确保路径正确，  
     > 然后重试。  
   
 5.  运行以下 PowerShell 命令以安装服务代理。 命令成功完成后会在 Management Shell 中显示一个新行。 当命令成功完成时，**不会向 Management Shell 返回任何消息** ：  
   
-    ```  
+    ```powershell
     Install-SPRSServiceProxy  
     ```  
   
 6.  运行以下 PowerShell 命令以启动服务，或者查看下面的注释以了解有关从 SharePoint 管理中心启动服务的说明：  
   
-    ```  
-    get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
+    ```powershell
+    Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
     ```  
   
  您在 Windows Powershell 中而不是 SharePoint Management Shell 中，或尚未安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和PowerShell 的详细信息，请参阅 [用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
@@ -231,7 +231,7 @@ ms.locfileid: "71952226"
 3.  在“新建”菜单中，单击 **“SQL Server Reporting Services 服务应用程序”** 。  
   
     > [!IMPORTANT]  
-    >  如果列表中未显示 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 选项，则**表明未安装 @no__t 2 共享服务**。 查看上一节，了解如何使用 PowerShell cmdlt 安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务。  
+    >  如果 "[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]" 选项未显示在列表中，则**表明未安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务**。 查看上一节，了解如何使用 PowerShell cmdlt 安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务。  
   
 4.  在 **“创建 SQL Server Reporting Services 服务应用程序”** 页中，输入应用程序的名称。 如果您要创建多个 Reporting Services 服务应用程序，则一个描述性名称或命名约定将帮助您组织管理操作。  
   
@@ -247,17 +247,17 @@ ms.locfileid: "71952226"
   
 9. 在 **“Web 应用程序关联”** 部分中，选择要设置为供当前 Reporting Services 服务应用程序访问的 Web 应用程序。 可以将一个 Reporting Services 服务应用程序与一个 Web 应用程序相关联。 如果所有当前 Web 应用程序均已与一个 Reporting Services 服务应用程序相关联，将显示警告消息。  
   
-10. 单击 **“确定”** 。  
+10. 单击 **“确定”** 中创建非聚集索引。  
   
 11. 用于创建服务应用程序的过程可能会需要几分钟才能完成。 当它完成时，将显示确认消息和一个指向 **“设置订阅和警报”** 页的链接。 如果您要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅功能或数据警报功能，则完成该设置步骤。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
- 与![powershell 相关的内容](../../../2014/reporting-services/media/rs-powershellicon.jpg "powershell 相关内容")有关使用 powershell 创建 @no__t 2 服务应用程序的信息，请参阅：  
+ ![与 PowerShell 相关的内容](../../../2014/reporting-services/media/rs-powershellicon.jpg "与 PowerShell 相关的内容")有关使用 PowerShell 创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的信息，请参阅：  
   
 -   请参阅下面的 [等同于步骤 1-4 的 Windows PowerShell 脚本](#bkmk_full_script)部分。  
   
 -   主题 [使用 PowerShell 创建 Reporting Services 服务应用程序](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp)。  
   
-##  <a name="bkmk_powerview"></a> 步骤 4：激活 "Power View 网站集" 功能。  
+##  <a name="bkmk_powerview"></a> 步骤 4：激活 Power View 网站集功能  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]（用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 产品的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的一个功能）是一个网站集功能。 自动为根网站集和安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序后创建的网站集激活该功能。 如果您计划使用 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，请验证已激活该功能。  
   
  如果在安装 SharePoint Server 后安装了用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序，则仅对根网站集激活报表服务器集成功能和 Power View 集成功能。 对于其他网站集，请手动激活这些功能。  
@@ -268,7 +268,7 @@ ms.locfileid: "71952226"
   
      打开浏览器找到所需的 SharePoint 网站。 例如 http://\<servername>/sites/bi  
   
-2.  单击 "**设置**" ![sharepoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint 设置")。  
+2.  单击 "**设置**" "![SharePoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")"。  
   
 3.  单击 **“网站设置”** 。  
   
@@ -287,7 +287,7 @@ ms.locfileid: "71952226"
   
 -   创建名为“Reporting Services”的服务代理。  
   
--   创建名为 "Reporting Services Application" 的 @no__t 0 服务应用程序。  
+-   创建名为 "Reporting Services Application" 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。  
   
 -   启用网站集的 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 功能。  
   
@@ -307,11 +307,11 @@ ms.locfileid: "71952226"
   
 3.  更新以上部分中描述的三个参数，然后运行该脚本。  
   
-```  
+```powershell
 #This script Configures SQL Server Reporting Services SharePoint mode  
   
-$starttime=Get-Date  
-write-host -foregroundcolor DarkGray StartTime>> $starttime   
+$starttime = Get-Date  
+Write-Host -foregroundcolor DarkGray StartTime>> $starttime   
   
 Write-Host -ForegroundColor Green "Import the SharePoint PowerShell snappin"  
 Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0  
@@ -339,9 +339,9 @@ Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         $Status = Get-SPServiceInstance $RS.Id.ToString()  
     }  
   
-$time=Get-Date  
-write-host -foregroundcolor DarkGray StartTime>> $starttime   
-write-host -foregroundcolor DarkGray $time  
+$time = Get-Date  
+Write-Host -foregroundcolor DarkGray StartTime>> $starttime   
+Write-Host -foregroundcolor DarkGray $time  
   
 Write-Host -ForegroundColor Green "Create a new application pool and Reporting Services service application"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
@@ -363,8 +363,8 @@ Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Get-SPServiceApplicationProxyGroup -default | Add-SPServiceApplicationProxyGroupMember -Member $rsServiceProxy  
   
 $time=Get-Date  
-write-host -foregroundcolor DarkGray StartTime>> $starttime   
-write-host -foregroundcolor DarkGray $time  
+Write-Host -foregroundcolor DarkGray StartTime>> $starttime   
+Write-Host -foregroundcolor DarkGray $time  
   
 Write-Host -ForegroundColor Green "Enable the PowerView and reportserver site features"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
@@ -375,8 +375,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
 ####To Verify, you can run the following:  
 #Get-SPRSServiceApplication  
 #Get-SPServiceApplicationPool | where {$_.name -like "reporting*"}  
-#Get-SPRSServiceApplicationProxy  
-  
+#Get-SPRSServiceApplicationProxy
 ```  
   
 ##  <a name="bkmk_additional_config"></a> 附加配置  
@@ -390,7 +389,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
 -   [管理 Excel Services 数据模型设置 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx)。  
   
 ###  <a name="bkmk_provision_agent"></a> 设置订阅和警报  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅和数据警报功能可能要求配置 SQL Server 代理权限。 如果您看到指示“需要 SQL Server 代理”的错误消息，而您已验证 SQL Server 代理正在运行，则应更新权限。 您可以在“创建服务应用程序成功”页上单击链接 **“设置订阅和警报”** ，以便转到其他页来设置 SQL Server 代理。 如果您的部署是跨计算机边界的部署（例如，当 SQL Server 数据库实例位于其他计算机上时），会需要此设置步骤。 有关详细信息，请参阅 [用于 SSRS 服务应用程序的设置订阅和警报](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅和数据警报功能可能要求配置 SQL Server 代理权限。 如果您看到指示“需要 SQL Server 代理”的错误消息，而您已验证 SQL Server 代理正在运行，则应更新权限。 您可以在“创建服务应用程序成功”页上单击链接 **“设置订阅和警报”** ，以便转到其他页来设置 SQL Server 代理。 如果您的部署是跨计算机边界的部署（例如，当 SQL Server 数据库实例位于其他计算机上时），会需要此设置步骤。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>为 SSRS 服务应用程序配置电子邮件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报功能会在电子邮件中发送警报。 若要发送电子邮件，您可能需要配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序，并可能需要修改该服务应用程序的电子邮件传递扩展插件。 如果您计划将电子邮件传递扩展插件用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅功能，则需要进行电子邮件设置。 有关详细信息，请参阅[为 Reporting Services 服务应用程序配置电子邮件（SharePoint 2010 和 SharePoint 2013）](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
@@ -408,13 +407,11 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 -   在 SharePoint 文档库中，创建一个仅包含文本框的基本 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表，例如标题。 该报表不包含任何数据源或数据集。 目标是确认您能打开报表生成器，生成基本报表，以及预览该报表。  
   
-     将报表保存到文档库并从库中运行该报表。 有关使用报表生成器创建报表的详细信息，请参阅[启动报表生成器（报表生成器）](https://technet.microsoft.com/library/ms159221.aspx)。  
+     将报表保存到文档库并从库中运行该报表。 有关使用报表生成器创建报表的详细信息，请参阅 [启动报表生成器（报表生成器）](https://technet.microsoft.com/library/ms159221.aspx)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Content 路线图：设置和配置 SharePoint Server，并 SQL Server BI @ no__t-0 @ no__t-1  
- [SQL Server 2012 @no__t 版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)-1  
- [Reporting Services SharePoint 服务和服务应用程序](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
-  
-  
+ [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [内容路线图：设置和配置 SharePoint Server 和 SQL SERVER BI](https://technet.microsoft.com/library/dn205112.aspx)   
+ [SQL Server 2012  的版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)  
+ [Reporting Services SharePoint 服务和服务应用程序](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)

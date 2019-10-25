@@ -1,7 +1,7 @@
 ---
 title: 什么是计算池？
 titleSuffix: SQL Server big data clusters
-description: 本文介绍中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的计算池。
+description: 本文介绍了 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]中的计算池。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6156d23fa55690224cd6df82e5f4bafe10e4d1ab
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 420c4705d86eb55b6b99a6cf432cb95f3b9a6694
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653087"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798243"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集中的计算池？
 
@@ -28,11 +28,11 @@ ms.locfileid: "69653087"
 
 ## <a name="scale-out-groups"></a>横向扩展组
 
-计算池可充当对不同数据源（例如 HDFS、Oracle、MongoDB 或 Terradata）进行的分布式查询的 PolyBase 横向扩展组。 通过使用 Kubernetes 中的计算 pod，大数据群集可以自动创建和配置 PolyBase 横向扩展组的计算 pod。
+计算池可充当针对不同数据源的分布式查询（例如 HDFS、Oracle、MongoDB 或 Teradata）的 PolyBase 横向扩展组。 通过使用 Kubernetes 中的计算 pod，大数据群集可以自动创建和配置 PolyBase 横向扩展组的计算 pod。
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]详细信息, 请参阅以下资源:
+若要了解有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的详细信息，请参阅以下资源：
 
-- [什么是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
-- [Workshop:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
+- [研讨会： Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

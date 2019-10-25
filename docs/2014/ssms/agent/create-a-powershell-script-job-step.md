@@ -15,12 +15,12 @@ ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08a27fd6edbfa93fd76ae99186e2425e5279e8aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6375229899c1bfe8f175771e55fdd821fc232166
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211468"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798300"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
   本主题介绍如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建和定义执行 PowerShell 脚本的 [!INCLUDE[tsql](../../includes/tsql-md.md)]代理作业步骤。  
@@ -29,7 +29,7 @@ ms.locfileid: "68211468"
   
 -   **开始之前：**  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要创建 PowerShell 脚本作业步骤，请使用：**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68211468"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
@@ -68,13 +68,13 @@ ms.locfileid: "68211468"
   
 #### <a name="to-create-a-powershell-script-job-step"></a>创建 PowerShell 脚本作业步骤  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
-    ```  
+    ```sql
     -- creates a PowerShell job step that finds the processes that use more than 1000 MB of memory and kills them  
     USE msdb;  
     GO  
@@ -88,11 +88,9 @@ ms.locfileid: "68211468"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
+ 有关详细信息，请[参阅&#40;sp_add_jobstep transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
-##  <a name="SMO"></a> 使用 SQL Server 管理对象  
+##  <a name="SMO"></a>使用 SQL Server 管理对象  
  **创建 PowerShell 脚本作业步骤**  
   
  通过使用所选的编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 `JobStep` 类。  
-  
-  

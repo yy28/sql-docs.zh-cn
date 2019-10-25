@@ -1,5 +1,5 @@
 ---
-title: 管理用户、 角色和登录名 |Microsoft Docs
+title: 管理用户、角色和登录名 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9bac188dcc6eb26c1bca77ec292a096f4eac2f35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86b67202537e650619f835e9c64d2c35a8e78fc2
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226182"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796614"
 ---
 # <a name="managing-users-roles-and-logins"></a>管理用户、角色和登录名
   在 SMO 中，登录名由 <xref:Microsoft.SqlServer.Management.Smo.Login> 对象表示。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中存在登录名时，可将其添加到服务器角色中。 服务器角色由 <xref:Microsoft.SqlServer.Management.Smo.ServerRole> 对象表示。 数据库角色由 <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> 对象表示，而应用程序角色由 <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> 对象表示。  
@@ -31,7 +31,7 @@ ms.locfileid: "63226182"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库还具有指定一组数据库级别特权的角色，用户可利用这些特权执行特定任务。 与服务器角色不同，数据库角色不是固定的。 可以创建、修改和删除数据库角色。 可以将特权和用户分配给数据库角色以进行大容量管理。  
   
 ## <a name="example"></a>示例  
- 对于下面的代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)并[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下面的代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)和[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-basic"></a>在 Visual Basic 中枚举登录名和关联的用户  
  数据库中的每个用户都与一个登录名相关联。 该登录名可以与多个数据库中的用户相关联。 此代码示例说明如何调用 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法以列出与登录名关联的所有数据库用户。 该示例将在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 数据库中创建一个登录名和用户以确保有要枚举的映射信息。  
@@ -41,7 +41,7 @@ ms.locfileid: "63226182"
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>在 Visual C# 中枚举登录名和关联的用户  
  数据库中的每个用户都与一个登录名相关联。 该登录名可以与多个数据库中的用户相关联。 此代码示例说明如何调用 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法以列出与登录名关联的所有数据库用户。 该示例将在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 数据库中创建一个登录名和用户以确保有要枚举的映射信息。  
   
-```  
+```csharp
 {   
 Server srv = new Server();   
 //Iterate through each database and display.   
@@ -67,7 +67,7 @@ foreach ( Database db in srv.Databases) {
 ## <a name="enumerating-logins-and-associated-users-in-powershell"></a>在 PowerShell 中枚举登录名和关联的用户  
  数据库中的每个用户都与一个登录名相关联。 该登录名可以与多个数据库中的用户相关联。 此代码示例说明如何调用 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法以列出与登录名关联的所有数据库用户。 该示例将在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 数据库中创建一个登录名和用户以确保有要枚举的映射信息。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\Default\Databases  
   
@@ -77,7 +77,7 @@ CD \sql\localhost\Default\Databases
  "====="  
  "Login Mappings for the database: "+ $db.Name  
   
- #get the datatable containing the mapping from the smo database oject  
+ #get the datatable containing the mapping from the smo database object  
  $dt = $db.EnumLoginMappings()  
   
  #display the results  
@@ -86,8 +86,7 @@ CD \sql\localhost\Default\Databases
         foreach($col in $row.Table.Columns)  
       {  
         $col.ColumnName + "=" + $row[$col]  
-       }  
-  
+       }
      }  
  }  
 ```  
@@ -103,7 +102,7 @@ CD \sql\localhost\Default\Databases
   
 -   Microsoft.SqlServer.SqlEnum.dll  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
   
@@ -171,7 +170,7 @@ public class A {
   
  这是 Visual Basic 版本：  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
   
 Public Class A  
@@ -235,5 +234,3 @@ Public Class A
    End Sub  
 End Class  
 ```  
-  
-  

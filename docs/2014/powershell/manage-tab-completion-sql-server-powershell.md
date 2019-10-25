@@ -10,12 +10,12 @@ ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e759e521d62def1f253ab5ef6423c29fb7fa2b4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922948"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797786"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>管理 Tab 填写功能 (SQL Server PowerShell)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元引入了三个变量（`$SqlServerMaximumTabCompletion`、`$SqlServerMaximumChildItems` 和 `$SqlServerIncludeSystemObjects`）来控制 Windows PowerShell 的 Tab 填写功能。 Tab 填写功能通过返回名称以您正在键入的字符串开头的项目的表，而减少了必须键入的内容量。  
@@ -42,14 +42,12 @@ ms.locfileid: "62922948"
 ### <a name="example-powershell"></a>示例 (PowerShell)  
  以下示例将对所有三个变量进行设置并列出其设置：  
   
-```  
+```powershell
 $SqlServerMaximumTabCompletion = 20  
 $SqlServerMaximumChildItems = 10  
 $SqlServerIncludeSystemObjects = $False  
 dir variable:sqlserver*  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

@@ -10,19 +10,19 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46dbf6654b557d612bac6dd2b2a79da114603414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775059"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797772"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>对 SQL Server 标识符进行编码和解码
   SQL Server 分隔标识符有时候包含 Windows PowerShell 路径名称中不支持的字符。 可以通过对其十六进制值进行编码来指定这些字符。  
   
-1.  **开始之前：** [限制和局限](#LimitationsRestrictions)  
+1.  **开始之前：**  [限制和局限](#LimitationsRestrictions)  
   
-2.  **处理特殊字符：** [对标识符进行编码](#EncodeIdent)，[对标识符进行解码](#DecodeIdent)  
+2.  **处理特殊字符：**  [对标识符进行编码](#EncodeIdent)、 [对标识符进行解码](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>开始之前  
  对于 Windows PowerShell 路径名称中不支持的字符，可以表示或编码为“%”字符后跟代表该字符的位模式的十六进制值（如“ **%** xx”）。 对于 Windows PowerShell 路径中不支持的字符，始终可以使用编码来处理字符。  
@@ -34,7 +34,7 @@ ms.locfileid: "64775059"
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
-|**字符**|\ |/|解码的字符：|%|\<|>|*|?|[|]|&#124;|  
+|**字符**|\ |/|解码的字符：|%|\<|>|*|?|[|]|||  
 |**十六进制编码**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
 ##  <a name="EncodeIdent"></a> 对标识符进行编码  
@@ -55,7 +55,7 @@ Set-Location Table%3ATest
   
  或者，可以使用 **Encode-SqlName** 生成受 Windows PowerShell 支持的名称：  
   
-```  
+```powershell
 Set-Location (Encode-SqlName "Table:Test")  
 ```  
   
@@ -67,13 +67,11 @@ Set-Location (Encode-SqlName "Table:Test")
 ### <a name="examples-decoding"></a>示例（解码）  
  下面的示例返回“Table:Test”：  
   
-```  
+```powershell
 Decode-SqlName "Table%3ATest"  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [PowerShell 中的 SQL Server 标识符](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell 提供程序](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

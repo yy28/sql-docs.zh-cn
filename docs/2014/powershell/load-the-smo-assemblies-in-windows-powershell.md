@@ -10,12 +10,12 @@ ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b559003c3ee58e1220c1714e4ab26403cfdf11f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb70ab2f2098b0857ba632a3b9501d596c0af864
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922958"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798050"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>在 Windows PowerShell 中加载 SMO 程序集
   本主题介绍如何在不使用 SQL Server PowerShell 提供程序的 Windows PowerShell 脚本中加载 SQL Server 管理对象 (SMO) 程序集。  
@@ -29,17 +29,15 @@ ms.locfileid: "62922958"
   
 -   您需要从不使用该提供程序或 cmdlet 的另一种语言（例如 C# 或 Visual Basic）移植 SMO 代码。  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>例如：加载 SQL Server 管理对象  
+## <a name="example-loading-the-sql-server-management-objects"></a>示例：加载 SQL Server 管理对象  
  下面的代码加载 SMO 程序集：  
   
-```  
-#  
+```powershell
 # Loads the SQL Server Management Objects (SMO)  
-#  
   
 $ErrorActionPreference = "Stop"  
   
-$sqlpsreg="HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
+$sqlpsreg = "HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
   
 if (Get-ChildItem $sqlpsreg -ErrorAction "SilentlyContinue")  
 {  
@@ -81,11 +79,9 @@ foreach ($asm in $assemblylist)
   
 Push-Location  
 cd $sqlpsPath  
-update-FormatData -prependpath SQLProvider.Format.ps1xml   
+Update-FormatData -PrependPath SQLProvider.Format.ps1xml
 Pop-Location  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

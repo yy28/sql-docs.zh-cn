@@ -1,5 +1,5 @@
 ---
-title: 创建、 更改和删除默认值 |Microsoft Docs
+title: 创建、更改和删除默认值 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: c30ac3b9-8150-4264-ba4c-c549f44261ab
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 410b038989430dd2462bdbb79df4e655f770981a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dcc29aa897674ae61d6bc5e8a53abe109661ebbc
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211919"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797162"
 ---
 # <a name="creating-altering-and-removing-defaults"></a>创建、更改和删除默认值
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中，默认约束由 <xref:Microsoft.SqlServer.Management.Smo.Default> 对象表示。  
@@ -25,7 +25,7 @@ ms.locfileid: "68211919"
  <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Default> 属性用于设置要插入的值。 此值可以是常量，也可以是返回常量值的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，例如 GETDATE()。 不能通过使用 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 方法修改 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 属性。 相反，必须删除并重新创建 <xref:Microsoft.SqlServer.Management.Smo.Default> 对象。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-default-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除默认值  
  此代码示例演示如何创建一个简单文本形式的默认值和另一个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句形式的默认值。 必须使用 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.BindToColumn%2A> 方法将默认值附加到列，然后使用 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.UnbindFromColumn%2A> 方法将其分离。  
@@ -35,9 +35,8 @@ ms.locfileid: "68211919"
 ## <a name="creating-altering-and-removing-a-default-in-visual-c"></a>在 Visual C# 中创建、更改和删除默认值  
  此代码示例演示如何创建一个简单文本形式的默认值和另一个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句形式的默认值。 必须使用 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.BindToColumn%2A> 方法将默认值附加到列，然后使用 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.UnbindFromColumn%2A> 方法将其分离。  
   
-```  
-{  
-  
+```csharp
+{
           Server srv = new Server();  
   
             //Reference the AdventureWorks2012 database.   
@@ -66,10 +65,10 @@ ms.locfileid: "68211919"
 ## <a name="creating-altering-and-removing-a-default-in-powershell"></a>在 PowerShell 中创建、更改和删除默认值  
  此代码示例演示如何创建一个简单文本形式的默认值和另一个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句形式的默认值。 必须使用 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.BindToColumn%2A> 方法将默认值附加到列，然后使用 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.UnbindFromColumn%2A> 方法将其分离。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
 #Define a Default object variable by supplying the parent database and the default name in the constructor.  
 $def = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Default `  
@@ -90,7 +89,5 @@ $def.UnbindFromColumn("SpecialOffer", "StartDate", "Sales")
 $def.Drop()  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.SqlServer.Management.Smo.Default>  
-  
-  

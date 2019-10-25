@@ -15,12 +15,12 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6c5a28cbac2c13d0662f744a12f3041458d9b0bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72400601ebb6b9a01b4db09ea9799b64e9c5e1c9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108706"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796401"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>备份和还原 Reporting Services 加密密钥
   报表服务器配置的一个重要部分是为用于加密敏感信息的对称密钥创建备份副本。 该密钥的备份副本对许多例程操作来说是必需的，通过使用备份副本，您可以在新的安装中重用现有报表服务器数据库。  
@@ -46,7 +46,7 @@ ms.locfileid: "66108706"
 ## <a name="backing-up-the-encryption-keys"></a>备份加密密钥  
  备份对称密钥是将密钥写入所指定的文件，然后使用所提供的密码对密钥进行加密的过程。 对称密钥绝对不能在未加密状态下存储，所以在将它保存到磁盘时，必须提供密码对密钥进行加密。 创建文件后，必须将其存储在安全的位置， **并记住文件的解锁密码** 。 若要备份对称密钥，可以使用以下工具：  
   
- **本机模式：** 任一 Reporting Services 配置管理器或**rskeymgmt**实用程序。  
+ **本机模式：** Reporting Services 配置管理器或 **rskeymgmt** 实用工具。  
   
  **SharePoint 模式：** SharePoint 管理中心页或 PowerShell。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66108706"
   
 1.  在承载报表服务器的计算机上本地运行 **rskeymgmt.exe** 。 必须使用 `-e` 提取参数复制密钥，提供文件名并指定密码。 下面的示例演示必须指定的参数：  
   
-    ```  
+    ```cmd
     rskeymgmt -e -f d:\rsdbkey.snk -p<password>  
     ```  
   
@@ -102,11 +102,9 @@ ms.locfileid: "66108706"
   
 1.  在承载报表服务器的计算机上本地运行 **rskeymgmt.exe** 。 使用 `-a` 参数还原密钥。 必须提供完全限定的文件名，并指定密码。 下面的示例演示必须指定的参数：  
   
-    ```  
+    ```cmd
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置和管理加密密钥（SSRS 配置管理器）](ssrs-encryption-keys-manage-encryption-keys.md)  
-  
-  

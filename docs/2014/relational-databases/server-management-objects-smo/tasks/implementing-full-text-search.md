@@ -12,12 +12,12 @@ ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b320f5a2b0ba1a7de4e348b3ba8877ef83714209
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ddc3521031f34f179cdfef08abf178f21f5f47e
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226232"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796722"
 ---
 # <a name="implementing-full-text-search"></a>实现全文搜索
   全文搜索对于每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例都可用且在 SMO 中由 <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> 对象来表示。 <xref:Microsoft.SqlServer.Management.Smo.FullTextService> 对象位于 `Server` 对象下。 它用于管理 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 全文搜索服务的配置选项。 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> 对象属于 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象，并且它是表示为数据库定义的全文目录的 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 对象的集合。 与普通索引不同，只能为每个表定义一个全文索引。 此索引由 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 对象中的 <xref:Microsoft.SqlServer.Management.Smo.Table> 对象表示。  
@@ -27,12 +27,12 @@ ms.locfileid: "63226232"
  首先，通过调用 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 构造函数并指定目录名称，为数据库创建全文目录。 其次，通过调用该构造函数并指定要为其创建全文索引的表，创建全文索引。 接着，通过使用 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 对象并提供表中列的名称，可以为全文索引添加索引列。 然后，为已创建的目录设置 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> 属性。 最后，调用 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> 方法并为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例创建全文索引。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>在 Visual Basic 中创建全文搜索服务  
  此代码示例为 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 示例数据库中的 `ProductCategory` 表创建全文搜索目录。 然后，它会为 `ProductCategory` 表中的 Name 列创建全文搜索索引。 全文搜索索引要求已为该列定义唯一索引。  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.SqlEnum.dll   
 ' /r:Microsoft.SqlServer.Smo.dll   
@@ -92,7 +92,7 @@ End Class
 ## <a name="creating-a-full-text-search-service-in-visual-c"></a>在 Visual C# 中创建全文搜索服务  
  此代码示例为 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 示例数据库中的 `ProductCategory` 表创建全文搜索目录。 然后，它会为 `ProductCategory` 表中的 Name 列创建全文搜索索引。 全文搜索索引要求已为该列定义唯一索引。  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.SqlEnum.dll   
 // /r:Microsoft.SqlServer.Smo.dll   
@@ -152,33 +152,33 @@ public class A {
 ## <a name="creating-a-full-text-search-service-in-powershell"></a>在 PowerShell 中创建全文搜索服务  
  此代码示例为 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 示例数据库中的 `ProductCategory` 表创建全文搜索目录。 然后，它会为 `ProductCategory` 表中的 Name 列创建全文搜索索引。 全文搜索索引要求已为该列定义唯一索引。  
   
-```  
+```powershell
 # Example of implementing a full text search on the default instance.  
 # Set the path context to the local, default instance of SQL Server and database tables  
   
 CD \sql\localhost\default\databases  
-$db = get-item AdventureWorks2012  
+$db = Get-Item AdventureWorks2012  
   
 CD AdventureWorks\tables  
   
 #Get a reference to the table  
-$tb = get-item Production.ProductCategory  
+$tb = Get-Item Production.ProductCategory  
   
 # Define a FullTextCatalog object variable by specifying the parent database and name arguments in the constructor.  
   
-$ftc = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextCatalog -argumentlist $db, "Test_Catalog2"  
+$ftc = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextCatalog -ArgumentList $db, "Test_Catalog2"  
 $ftc.IsDefault = $true  
   
 # Create the Full Text Search catalog on the instance of SQL Server.  
 $ftc.Create()  
   
 # Define a FullTextIndex object variable by supplying the parent table argument in the constructor.  
-$fti = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndex -argumentlist $tb  
+$fti = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndex -ArgumentList $tb  
   
-#  Define a FullTextIndexColumn object variable by supplying the parent index   
+#  Define a FullTextIndexColumn object variable by supplying the parent index
 #  and column name arguments in the constructor.  
   
-$ftic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndexColumn -argumentlist $fti, "Name"  
+$ftic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndexColumn -ArgumentList $fti, "Name"  
   
 # Add the indexed column to the index.  
 $fti.IndexedColumns.Add($ftic)  
@@ -195,5 +195,3 @@ $fti.CatalogName = "Test_Catalog2"
 # Create the Full Text Search Index  
 $fti.Create()  
 ```  
-  
-  

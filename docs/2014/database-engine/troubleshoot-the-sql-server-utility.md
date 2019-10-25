@@ -1,5 +1,5 @@
 ---
-title: SQL Server 实用工具故障排除 |Microsoft Docs
+title: 排查 SQL Server 实用工具问题 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62842523"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797776"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>SQL Server 实用工具故障排除
-  解决 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具问题可能包括解决向 UCP 注册 SQL Server 实例的失败的操作、排除导致 UCP 上托管实例列表视图中图标灰显的失败的数据收集故障、缓解性能瓶颈或者解决资源运行状况问题。 有关标识的资源运行状况问题的缓解[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]UCP，请参阅[进行故障排除 SQL Server 资源运行状况&#40;SQL Server 实用工具&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)。  
+  解决 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具问题可能包括解决向 UCP 注册 SQL Server 实例的失败的操作、排除导致 UCP 上托管实例列表视图中图标灰显的失败的数据收集故障、缓解性能瓶颈或者解决资源运行状况问题。 有关缓解 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP 标识的资源运行状况问题的详细信息，请参阅[SQL Server 资源运行状况&#40;SQL Server 实用工具&#41;故障排除](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)。  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>向 SQL Server 实用工具中注册 SQL Server 实例的失败的操作  
  如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证来连接到要注册的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，并且指定属于与 UCP 所在的域不同的其他 Active Directory 域的代理帐户，则实例验证将成功，但注册操作将失败并且具有以下错误消息：  
   
  执行 Transact-SQL 语句或批处理时发生了异常。 (Microsoft.SqlServer.ConnectionInfo)  
   
- 其他信息：无法获取有关 Windows NT 组/用户的信息\<DomainName\AccountName >，错误代码 0x5。 (Microsoft SQL Server，错误：15404)  
+ 其他信息: 无法获取有关 Windows NT 组/用户 '\<DomainName\AccountName>' 的信息，错误代码 0x5。 （Microsoft SQL Server，错误：15404）  
   
  在以下示例中将发生此问题：  
   
@@ -35,11 +35,11 @@ ms.locfileid: "62842523"
   
 3.  要注册到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例还是“Domain_1”的成员。  
   
-4.  在注册操作时，连接到的实例[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用"sa"进行注册。 指定来自“Domain_2”的一个代理帐户。  
+4.  在注册操作过程中，使用 "sa" 连接到要注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。 指定来自“Domain_2”的一个代理帐户。  
   
 5.  验证成功但注册失败。  
   
- 使用上述示例中，此问题的解决方法是连接到的实例[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]注册到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实用程序使用"sa"，并从"Domain_1"。 提供的代理帐户  
+ 此问题的解决方法是使用以上示例，使用 "sa" 连接到要注册到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，并提供 "Domain_1" 的代理帐户。  
   
 ## <a name="failed-wmi-validation"></a>失败的 WMI 验证  
  如果在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例上未正确配置 WMI，则“创建 UCP”和“注册托管实例”操作将显示一个警告，但不阻塞该操作。 此外，如果您更改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理帐户配置，以便 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理对于必需的 WMI 类没有权限，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的受影响的托管实例上的数据收集将无法上载到 UCP。 这将导致 UCP 中的灰色图标。  
@@ -48,9 +48,9 @@ ms.locfileid: "62842523"
   
  简化的错误消息如下：  
   
- 命令执行停止，因为 shell 变量"ErrorActionPreference"设置为 Stop:访问被拒绝。  
+ 命令执行已停止，因为 shell 变量 "ErrorActionPreference" 设置为 Stop: 拒绝访问。  
   
- 错误：\<日期-时间 （MM/DD/YYYY hh: mm:） >:收集 cpu 属性时捕获的异常。  WMI 查询可能已失败。  警告。  
+ 错误： \<日期时间（MM/DD/YYYY HH： MM： SS） >：收集 cpu 属性时捕获到异常。  WMI 查询可能已失败。  警告。  
   
  为了解决此问题，请验证以下配置设置：  
   
@@ -87,7 +87,7 @@ Get-WmiObject Win32_Volume -ErrorAction Stop | Out-Null
 Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null  
 ```  
   
- 有关 WMI 疑难解答的详细信息，请参阅[WMI 疑难解答](https://go.microsoft.com/fwlink/?LinkId=178250)。 请注意，这些 SQL Server 实用工具操作中的查询在本地运行，因此，DCOM 和远程故障排除内容不适用。  
+ 有关 WMI 疑难解答的详细信息，请参阅[Wmi 故障排除](https://go.microsoft.com/fwlink/?LinkId=178250)。 请注意，这些 SQL Server 实用工具操作中的查询在本地运行，因此，DCOM 和远程故障排除内容不适用。  
   
 ## <a name="failed-data-collection"></a>失败的数据收集  
  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具数据收集事件失败，请考虑以下可行方法：  
@@ -102,7 +102,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   如果数据收集或数据上载由于超时问题而失败，则更新 MSDB 数据库中的函数 dbo.fn_sysutility_mi_get_collect_script()。 具体而言，在函数“Invoke-BulkCopyCommand()”中添加行：  
   
-    ```  
+    ```
     $bulkCopy.BulkCopyTimeout=180  
     ```  
   
@@ -114,9 +114,9 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  在 SSMS 的 **“对象资源管理器”** 中，展开 **“安全性”** 节点，然后展开 **“凭据”** 节点。  
   
-    2.  右键单击**UtilityAgentProxyCredential_\<GUID >** ，然后选择**属性**。  
+    2.  右键单击**UtilityAgentProxyCredential_\<GUID >** 并选择 "**属性**"。  
   
-    3.  在凭据属性对话框中，更新所需的凭据**UtilityAgentProxyCredential_\<GUID >** 凭据。  
+    3.  在 "凭据属性" 对话框中，根据需要更新**UtilityAgentProxyCredential_\<GUID >** 凭据所需的凭据。  
   
     4.  单击 **“确定”** 以确认更改。  
   
@@ -124,13 +124,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   UCP 上的 SQL Server Browser 服务必须启动，并且它必须配置为自动启动。 如果您的组织禁止使用 SQL Server Browser 服务，则使用以下步骤可以允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的托管实例连接到 UCP：  
   
-    1.  在 Windows 任务栏上的托管实例上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，单击**启动**，然后单击**运行...** .  
+    1.  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的托管实例上的 Windows 任务栏上，单击 "**开始**"，然后单击 "**运行 ...** "。  
   
     2.  在提供的空间中键入“cliconfg.exe”，然后单击 **“确定”** 。  
   
     3.  如果提示允许“SQL 客户端配置实用工具 EXE”启动，则单击 **“继续”** 。  
   
-    4.  上**SQL Server 客户端网络实用工具**对话框中，选择**别名**选项卡，然后单击**添加...** .  
+    4.  在 " **SQL Server 客户端网络实用工具**" 对话框上，选择 "**别名**" 选项卡，然后单击 "**添加 ...** "。  
   
     5.  在 **“添加网络库配置”** 对话框上：  
   
@@ -158,14 +158,12 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     2.  右键单击 **“性能监视器用户”** ，然后选择 **“添加到组”** 。  
   
-    3.  单击 **“添加”** 。  
+    3.  单击“添加”。  
   
     4.  输入 SQL Server 代理服务正基于其运行的帐户，然后单击 **“确定”** 。  
   
     5.  如果在将用户添加到该组之前，该 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例已向 UCP 注册，则重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理服务。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 实用工具的功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [SQL Server 资源运行状况故障排除（SQL Server 实用工具）](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)  
-  
-  
+ [SQL Server 资源运行状况故障排除（SQL Server 实用工具）](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

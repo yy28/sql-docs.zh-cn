@@ -16,17 +16,17 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aaed1030d35fffb1b539339dc882cfb2d6676229
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d93f78c157d5551e805437f156b8972ca8616c2b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62815370"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797736"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>配置对可用性副本的只读访问 (SQL Server)
   默认情况下，允许对主副本进行读写和读意向访问，不允许连接到 AlwaysOn 可用性组的辅助副本。 本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 来配置 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 AlwaysOn 可用性组的可用性副本的连接访问。  
   
- 有关对次要副本允许只读访问的含义的信息以及有关对连接访问的介绍，请参阅[关于对可用性副本的客户端连接访问 (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md) 和[活动次要副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 有关对次要副本允许只读访问的含义的信息以及有关对连接访问的介绍，请参阅[关于对可用性副本的客户端连接访问 (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md) 和[活动次要副本：可读次要副本（AlwaysOn 可用性组）](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
   
   
@@ -36,11 +36,11 @@ ms.locfileid: "62815370"
   
 -   若要配置不同的连接访问，您必须连接到承载主副本的服务器实例。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
   
-|任务|权限|  
+|任务|Permissions|  
 |----------|-----------------|  
 |在创建可用性组时配置副本|需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
 |修改可用性副本|对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
@@ -61,7 +61,7 @@ ms.locfileid: "62815370"
   
     -   对于辅助角色，从 **“可读取辅助角色”** 下拉列表中选择一个新值，如下所示：  
   
-         **是**  
+         **“否”**  
          不允许与此副本的辅助数据库的用户连接。 它们不可用于读访问。 这是默认设置。  
   
          **仅限读意向**  
@@ -83,7 +83,7 @@ ms.locfileid: "62815370"
  **配置对可用性副本的访问**  
   
 > [!NOTE]  
->  有关此过程的示例，请参阅本节后面的 [示例 (Transact-SQL)](#TsqlExample)。  
+>  有关此过程的示例，请参阅本节后面的[示例 (Transact-SQL)](#TsqlExample)。  
   
 1.  连接到承载主副本的服务器实例。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62815370"
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例将辅助副本添加到名为 *AG2*的可用性组。 一个独立服务器实例 *COMPUTER03\HADR_INSTANCE*被指定为承载新的可用性副本。 将此副本配置为对主角色允许读写连接，对辅助角色仅允许读意向连接。  
   
-```  
+```sql
 ALTER AVAILABILITY GROUP AG2   
    ADD REPLICA ON   
       'COMPUTER03\HADR_INSTANCE' WITH   
@@ -133,16 +133,17 @@ GO
   
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
- **配置对可用性副本的访问**  
+
+### <a name="to-configure-access-on-an-availability-replica"></a>配置对可用性副本的访问
   
 > [!NOTE]  
->  有关代码示例，请参阅本节后面的 [示例 (PowerShell)](#PSExample)。  
+>  有关代码示例，请参阅本节后面的 PowerShell 示例。  
   
 1.  将目录 (`cd`) 更改为承载主副本的服务器实例。  
   
 2.  在将可用性副本添加到可用性组中时，请使用 `New-SqlAvailabilityReplica` cmdlet。 在修改现有可用性副本时，请使用 `Set-SqlAvailabilityReplica` cmdlet。 相关参数如下：  
   
-    -   若要配置辅助角色的连接访问，请指定`ConnectionModeInSecondaryRole` *secondary_role_keyword*参数，其中*secondary_role_keyword*等于以下值之一：  
+    -   若要配置辅助角色的连接访问，请指定 `ConnectionModeInSecondaryRole`*secondary_role_keyword*参数，其中*secondary_role_keyword*等于以下值之一：  
   
          `AllowNoConnections`  
          不允许直接连接到辅助副本中的数据库，且不支持读取这些数据库。 这是默认设置。  
@@ -153,7 +154,7 @@ GO
          `AllowAllConnections`  
          允许针对辅助副本中的数据库的所有连接进行只读访问。  
   
-    -   若要配置主角色的连接访问，请指定`ConnectionModeInPrimaryRole` *primary_role_keyword*，其中*primary_role_keyword*等于以下值之一：  
+    -   若要为主要角色配置连接访问，请指定 `ConnectionModeInPrimaryRole`*primary_role_keyword*，其中*primary_role_keyword*等于以下值之一：  
   
          `AllowReadWriteConnections`  
          不允许 Application Intent 连接属性设置为 ReadOnly 的连接。 在 Application Intent 属性设置为 ReadWrite 或者未设置 Application Intent 连接属性时，将允许连接。 有关 Application Intent 连接属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
@@ -164,35 +165,31 @@ GO
     > [!NOTE]  
     >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **设置和使用 SQL Server PowerShell 提供程序**  
+若要设置并使用 SQL Server PowerShell 提供程序，请参阅[SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)。
   
--   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
+下面的示例将 `ConnectionModeInSecondaryRole` 和 `ConnectionModeInPrimaryRole` 参数均设置为 `AllowAllConnections`。  
   
-###  <a name="PSExample"></a> 示例 (PowerShell)  
- 下面的示例将 `ConnectionModeInSecondaryRole` 和 `ConnectionModeInPrimaryRole` 参数均设置为 `AllowAllConnections`。  
-  
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\PrimaryServer\default\AvailabilityGroups\MyAg  
 $primaryReplica = Get-Item "AvailabilityReplicas\PrimaryServer"  
-Set-SqlAvailabilityReplica -ConnectionModeInSecondaryRole "AllowAllConnections" `   
--InputObject $primaryReplica  
-Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `   
--InputObject $primaryReplica  
-  
+
+Set-SqlAvailabilityReplica -ConnectionModeInSecondaryRole "AllowAllConnections" `
+ -InputObject $primaryReplica  
+Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
+-InputObject $primaryReplica
 ```  
-  
-  
+
 ##  <a name="FollowUp"></a> 跟进：为可用性副本配置只读访问后  
  **对可读取辅助副本的只读访问**  
   
--   使用时[bcp 实用工具](../../../tools/bcp-utility.md)或[sqlcmd 实用工具](../../../tools/sqlcmd-utility.md)，可以通过指定指定只读访问到启用了任何辅助副本的只读访问`-K ReadOnly`切换。  
+-   使用[Bcp 实用工具](../../../tools/bcp-utility.md)或[sqlcmd 实用工具](../../../tools/sqlcmd-utility.md)时，可以通过指定 `-K ReadOnly` 开关来指定对启用了只读访问权限的任何辅助副本的只读访问。  
   
 -   使客户端应用程序能够连接到可读取辅助副本：  
   
-    ||先决条件|链接|  
+    ||前提条件|链接|  
     |-|------------------|----------|  
-    |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保可用性组具有侦听器。|[创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|为可用性组配置只读路由。|[为可用性组配置只读路由 (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "旁边")|确保可用性组具有侦听器。|[创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "旁边")|为可用性组配置只读路由。|[为可用性组配置只读路由 (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **在故障转移后可能会影响触发器和作业的因素**  
   
@@ -205,7 +202,7 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
  若要标识读写数据库，请将 READ_WRITE 指定为值：  
   
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="RelatedTasks"></a>相关任务  
   
 -   [为可用性组配置只读路由 (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
@@ -214,30 +211,28 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [AlwaysOn:可读次要副本的价值主张](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
+-   [AlwaysOn：可读辅助副本的价值主张](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
   
--   [AlwaysOn:为什么存在两个选项用于为读取工作负荷启用辅助副本？](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
+-   [AlwaysOn：为什么存在两个选项来启用辅助副本以便读取工作负荷？](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
   
--   [AlwaysOn:设置可读次要副本](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
+-   [AlwaysOn：设置可读辅助副本](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
   
--   [AlwaysOn:我启用了可读次要副本，但我的查询却受阻？](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
+-   [AlwaysOn：我刚启用了可读辅助副本，但我的查询被阻止？](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   
--   [AlwaysOn:在可读次要副本、只读数据库和数据库快照上提供最新统计信息](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [AlwaysOn：在可读辅助副本、只读数据库和数据库快照上提供最新统计信息](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
   
--   [AlwaysOn:使用只读数据库、数据库快照和次要副本上的统计信息的挑战](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [AlwaysOn：有关只读数据库、数据库快照和辅助副本的统计信息的挑战](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
   
--   [AlwaysOn:在次要副本上运行报表工作负荷时对主工作负荷的影响](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [AlwaysOn：在辅助副本上运行报表工作负荷时对主工作负荷的影响](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
   
--   [AlwaysOn:将可读次要副本上的报表工作负荷映射到快照隔离的影响](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [AlwaysOn：在可读辅助副本到快照隔离的映射报告工作负荷的影响](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
   
--   [AlwaysOn:最大程度减少在次要副本上运行工作负荷时对 REDO 线程的阻止](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
+-   [AlwaysOn：在辅助副本上运行报表工作负荷时最大程度地阻止重做线程](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
   
--   [AlwaysOn:可读次要副本和数据延迟](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
+-   [AlwaysOn：可读辅助副本和数据延迟](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
   
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [活动次要副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
+## <a name="see-also"></a>另请参阅  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [活动辅助副本：可读&#40;辅助副本 AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
  [关于对可用性副本的客户端连接访问 (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md)  
-  
-  

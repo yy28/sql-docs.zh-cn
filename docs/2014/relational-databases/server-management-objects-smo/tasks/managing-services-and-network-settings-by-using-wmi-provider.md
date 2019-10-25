@@ -15,12 +15,12 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226214"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796627"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供程序管理服务和网络设置
   WMI 提供程序是可供 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 管理控制台 (MMC) 用来管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务和网络协议的已发布接口。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 对象表示 WMI 提供程序。  
@@ -30,7 +30,7 @@ ms.locfileid: "63226214"
 ## <a name="example"></a>示例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- 有关程序使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]WMI 提供程序必须包括`Imports`语句以限定 WMI 命名空间。 请在应用程序的其他 `Imports` 语句之后、任何声明之前插入该语句，例如：  
+ 对于使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI 提供程序的程序，必须包括 `Imports` 语句以限定 WMI 命名空间。 请在应用程序的其他 `Imports` 语句之后、任何声明之前插入该语句，例如：  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63226214"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-visual-basic"></a>在 Visual Basic 中使用 URN 字符串启用服务器协议  
  此代码示例演示如何使用 URN 对象标识服务器协议并启用该协议。  
   
-```  
+```vb
 'This program must run with administrator privileges.  
         'Declare the ManagedComputer WMI interface.  
         Dim mc As New ManagedComputer()  
@@ -68,7 +68,7 @@ ms.locfileid: "63226214"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-powershell"></a>在 PowerShell 中使用 URN 字符串启用服务器协议  
  此代码示例演示如何使用 URN 对象标识服务器协议并启用该协议。  
   
-```  
+```powershell
 #This example shows how to identify a server protocol using a URN object, and then enable the protocol  
 #This program must run with administrator privileges.  
   
@@ -95,7 +95,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-visual-c"></a>在 Visual C# 中停止和启动服务  
  该代码示例演示了如何停止和启动 SQL Server 实例。  
   
-```  
+```csharp
 {   
    //Declare and create an instance of the ManagedComputer   
    //object that represents the WMI Provider services.   
@@ -139,7 +139,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-powershell"></a>在 PowerShell 中停止和启动服务  
  该代码示例演示了如何停止和启动 SQL Server 实例。  
   
-```  
+```powershell
 #Load the assembly containing the objects used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.SqlWmiManagement")  
   
@@ -172,11 +172,8 @@ $svc.Refresh()
 $svc.ServiceState  
 }  
 $svc.ServiceState  
-"Service" + $svc.Name + "is now started"  
-  
+"Service" + $svc.Name + "is now started"
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [用于配置管理的 WMI 提供程序的概念](../../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
-  
-  

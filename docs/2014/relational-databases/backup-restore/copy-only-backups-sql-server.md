@@ -14,12 +14,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922128"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798006"
 ---
 # <a name="copy-only-backups-sql-server"></a>仅复制备份 (SQL Server)
   *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 通常，进行备份会更改数据库并影响其后备份的还原方式。 但是，有时在不影响数据库总体备份和还原过程的情况下，为特殊目的而进行备份还是有用的。 仅复制备份就是用于此目的。  
@@ -34,7 +34,7 @@ ms.locfileid: "62922128"
   
 -   仅复制日志备份（仅限于完整恢复模式和大容量日志恢复模式）  
   
-     仅复制日志备份保留当前日志存档点，因此，不影响常规日志备份的序列。 通常不必进行仅复制日志备份。 相反，您可以创建新的常规日志备份（使用 WITH NORECOVERY），然后将该备份与还原序列所需的任何以前的日志备份一起使用。 但是，仅复制日志备份有时可用于执行联机还原。 关于这方面的示例，请参阅[示例：读/写文件的联机还原（完整恢复模式）](example-online-restore-of-a-read-write-file-full-recovery-model.md)。  
+     仅复制日志备份保留当前日志存档点，因此，不影响常规日志备份的序列。 通常不必进行仅复制日志备份。 相反，您可以创建新的常规日志备份（使用 WITH NORECOVERY），然后将该备份与还原序列所需的任何以前的日志备份一起使用。 但是，仅复制日志备份有时可用于执行联机还原。 有关示例，请参阅[示例：读/写文件的联机还原（完整恢复模式）](example-online-restore-of-a-read-write-file-full-recovery-model.md)。  
   
      事务日志从不在仅复制备份后出现截断。  
   
@@ -52,40 +52,37 @@ ms.locfileid: "62922128"
   
 -   对于仅复制完整备份：  
   
-     BACKUP DATABASE *database_name* TO\<备份设备 *>*  ...使用 COPY_ONLY...  
+     BACKUP DATABASE *database_name* TO \<备份设备 *>* 。WITH COPY_ONLY 。  
   
     > [!NOTE]  
     >  使用 DIFFERENTIAL 选项指定时，COPY_ONLY 不起作用。  
   
 -   对于仅复制日志备份：  
   
-     BACKUP LOG *database_name* TO  *\<* 备份设备 *>*  ...使用 COPY_ONLY...  
+     BACKUP LOG *database_name* TO *\<* 备份设备 *>* 。WITH COPY_ONLY 。  
   
 ###  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   
-1.  将 `Backup-SqlDatabase` cmdlet 与 `-CopyOnly` 参数一起使用。  
+将 `Backup-SqlDatabase` cmdlet 与 `-CopyOnly` 参数一起使用。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
- **创建完整备份或日志备份**  
+##  <a name="RelatedTasks"></a>相关任务  
+
+### <a name="to-create-a-full-or-log-backup"></a>创建完整备份或日志备份
   
 -   [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)  
   
 -   [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)  
   
- **查看仅复制备份**  
+### <a name="to-view-copy-only-backups"></a>查看仅复制备份
   
 -   [backupset (Transact-SQL)](/sql/relational-databases/system-tables/backupset-transact-sql)  
   
- **设置和使用 SQL Server PowerShell 提供程序**  
+### <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a>设置和使用 SQL Server PowerShell 提供程序
   
 -   [SQL Server PowerShell 提供程序](../../powershell/sql-server-powershell-provider.md)  
-  
 
-  
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份概述 (SQL Server)](backup-overview-sql-server.md)   
  [恢复模式 (SQL Server)](recovery-models-sql-server.md)   
  [通过备份和还原来复制数据库](../databases/copy-databases-with-backup-and-restore.md)   
  [还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)  
-  
-  

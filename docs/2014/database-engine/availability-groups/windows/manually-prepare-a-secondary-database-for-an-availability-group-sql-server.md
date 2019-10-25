@@ -18,18 +18,18 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62792077"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797649"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>为可用性组手动准备辅助数据库 (SQL Server)
-  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中为 AlwaysOn 可用性组准备辅助数据库。 准备辅助数据库需要两个步骤：（1） 还原主数据库的最近数据库备份和后续日志备份应用到每个承载辅助副本的服务器实例、 使用 RESTORE WITH NORECOVERY，和 （2） 将还原的数据库联接到可用性组。  
+  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中为 AlwaysOn 可用性组准备辅助数据库。 准备辅助数据库需要两个步骤：(1) 使用 RESTORE WITH NORECOVERY 将主数据库的最近数据库备份和后续的日志备份还原到承载辅助副本的每个服务器实例；(2) 将还原的数据库联接到可用性组。  
   
 > [!TIP]  
->  如果您具有现有的日志传送配置，则可能能够将日志传送主数据库与其一个或多个辅助数据库一起转换为 AlwaysOn 主数据库和一个或多个 AlwaysOn 辅助数据库。 有关详细信息，请参阅[到 AlwaysOn 可用性组从日志传送先决条件迁移&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。  
+>  如果您具有现有的日志传送配置，则可能能够将日志传送主数据库与其一个或多个辅助数据库一起转换为 AlwaysOn 主数据库和一个或多个 AlwaysOn 辅助数据库。 有关详细信息，请参阅[从日志传送迁移到 AlwaysOn 可用性组&#40;SQL Server&#41;的先决条件](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。  
   
 -   **开始之前：**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62792077"
   
      [建议](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要准备辅助数据库，请使用：**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62792077"
   
 -   [相关备份和还原任务](#RelatedTasks)  
   
--   **跟进：**[准备辅助数据库之后](#FollowUp)  
+-   **跟进：** [准备辅助数据库之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -73,13 +73,13 @@ ms.locfileid: "62792077"
   
 -   准备辅助数据库之前，我们强烈建议您挂起针对可用性组中数据库的计划日志备份，直到完成辅助副本的初始化。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  备份数据库时， [TRUSTWORTHY 数据库属性](../../../relational-databases/security/trustworthy-database-property.md) 设置为 OFF。 因此，在新还原的数据库中，TRUSTWORTHY 始终为 OFF。  
   
 ####  <a name="Permissions"></a> Permissions  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)。  
   
- 如果服务器实例上不存在要还原的数据库，则 RESTORE 语句要求 CREATE DATABASE 权限。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)。  
+ 如果服务器实例上不存在要还原的数据库，则 RESTORE 语句要求 CREATE DATABASE 权限。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -94,14 +94,14 @@ ms.locfileid: "62792077"
   
 3.  在承载辅助副本的服务器实例上，依次还原主数据库的完整数据库备份（还可以选择还原差异备份）以及所有后续的日志备份。  
   
-     在“RESTORE DATABASEOptions”页上，选择 **“不对数据库执行任何操作，不回退未提交的事务”。可以还原其他事务日志。(RESTORE WITH NORECOVERY)**。  
+     在 "**还原 DATABASEOptions** " 页上，选择 "**使数据库保持不可操作状态，不回滚未提交的事务"。可以还原其他事务日志。（RESTORE WITH NORECOVERY）** 。  
   
      如果主数据库与辅助数据库的文件路径不同，例如，如果主数据库位于驱动器“F:”，但承载辅助副本的服务器实例缺少 F: 驱动器，请在 WITH 语句中包括 MOVE 选项。  
   
 4.  若要完成辅助数据库的配置，您需要将辅助数据库联接到可用性组。 有关详细信息，请参阅[将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 > [!NOTE]  
->  有关如何执行这些备份和还原操作的信息，请参阅本节后面的 [相关备份和还原任务](#RelatedTasks)。  
+>  有关如何执行这些备份和还原操作的信息，请参阅本节后面的[相关备份和还原任务](#RelatedTasks)。  
   
 ###  <a name="RelatedTasks"></a> 相关备份和还原任务  
  **创建数据库备份**  
@@ -151,7 +151,7 @@ ms.locfileid: "62792077"
   
 1.  若要使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 数据库，请改用完整恢复模式：  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     ALTER DATABASE MyDB1   
@@ -166,7 +166,7 @@ ms.locfileid: "62792077"
   
      在承载主副本的服务器实例 (`INSTANCE01`) 上，按如下方式创建主数据库的完整备份：  
   
-    ```  
+    ```sql
     BACKUP DATABASE MyDB1   
         TO DISK = 'C:\MyDB1.bak'   
         WITH FORMAT  
@@ -181,7 +181,7 @@ ms.locfileid: "62792077"
   
          在承载辅助副本的计算机上，按如下方式还原完整备份：  
   
-        ```  
+        ```sql
         RESTORE DATABASE MyDB1   
             FROM DISK = 'C:\MyDB1.bak'   
             WITH NORECOVERY  
@@ -195,9 +195,9 @@ ms.locfileid: "62792077"
         > [!IMPORTANT]  
         >  如果主数据库与辅助数据库的路径名称不同，则无法添加文件。 原因是在接收添加文件操作所需的日志时，承载辅助副本的服务器实例会尝试将新文件放在主数据库所用的路径中。  
   
-         例如，下面的命令可还原主数据库的备份，主数据库位于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]默认实例的数据目录 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA 中。 还原数据库操作必须将数据库移动到的远程实例的数据目录[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]名为 (*AlwaysOn1*)，另一个群集节点上的辅助副本。 该处，数据和日志文件还原到*C:\Program Files\Microsoft SQL Server\MSSQL12。ALWAYSON1\MSSQL\DATA*目录。 该还原操作使用 WITH NORECOVERY 令辅助数据库保持还原状态。  
+         例如，下面的命令可还原主数据库的备份，主数据库位于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]默认实例的数据目录 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA 中。 还原数据库操作必须将该数据库移到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 名为（*AlwaysOn1*）的远程实例的数据目录中，该实例承载另一个群集节点上的辅助副本。 在该处，数据和日志文件还原到*C:\Program FILES\MICROSOFT SQL Server\MSSQL12。ALWAYSON1\MSSQL\DATA*目录。 该还原操作使用 WITH NORECOVERY 令辅助数据库保持还原状态。  
   
-        ```  
+        ```sql
         RESTORE DATABASE MyDB1  
           FROM DISK='C:\MyDB1.bak'  
          WITH NORECOVERY,   
@@ -210,7 +210,7 @@ ms.locfileid: "62792077"
   
 5.  还原完整备份之后，必须在主数据库中创建日志备份。 例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句将日志备份到名为 *E:\MyDB1_log.bak*的备份文件：  
   
-    ```  
+    ```sql
     BACKUP LOG MyDB1   
       TO DISK = 'E:\MyDB1_log.bak'   
     GO  
@@ -220,7 +220,7 @@ ms.locfileid: "62792077"
   
      例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句还原 *C:\MyDB1.bak*中的第一个日志：  
   
-    ```  
+    ```sql
     RESTORE LOG MyDB1   
       FROM DISK = 'E:\MyDB1_log.bak'   
         WITH FILE=1, NORECOVERY  
@@ -231,7 +231,7 @@ ms.locfileid: "62792077"
   
      例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句还原 *E:\MyDB1_log.bak*中的其他两个日志：  
   
-    ```  
+    ```sql
     RESTORE LOG MyDB1   
       FROM DISK = 'E:\MyDB1_log.bak'   
         WITH FILE=2, NORECOVERY  
@@ -265,26 +265,23 @@ ms.locfileid: "62792077"
 ###  <a name="ExamplePSscript"></a> 备份和还原脚本和命令的示例  
  下面的 PowerShell 命令将完整的数据库备份和事务日志备份到网络共享，并自该共享位置还原这些备份。 此示例假定数据库还原到的文件路径与数据库备份到的文件路径相同。  
   
-```  
+```powershell
 # Create database backup  
 Backup-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -ServerInstance "SourceMachine\Instance"  
 # Create log backup  
 Backup-SqlDatabase -Database "MyDB1" -BackupAction "Log" -BackupFile "\\share\backups\MyDB1.trn" -ServerInstance "SourceMachine\Instance"  
-# Restore database backup   
+# Restore database backup
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
-# Restore log backup   
-Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
-  
+# Restore log backup
+Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
 ##  <a name="FollowUp"></a> 跟进：准备辅助数据库之后  
  若要完成辅助数据库的配置，您需要将新还原的数据库联接到可用性组。 有关详细信息，请参阅 [将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE 参数 (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [解决失败的添加文件操作问题&#40;AlwaysOn 可用性组&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
-  
-  
+ [排除失败的添加文件操作&#40;的故障 AlwaysOn 可用性组&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

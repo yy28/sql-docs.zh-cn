@@ -13,14 +13,14 @@ ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed3c7cf100d0105d393bb8c22bbc0d38d2e9de26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7126b01fcaee1a0ab3f7776cc54e6eb0dbe2774d
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63131529"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798306"
 ---
-# <a name="create-a-job"></a>创建作业
+# <a name="create-a-job"></a>Create a Job
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理对象 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建 SQL Server 代理作业。  
   
  若要添加可以发送到操作员的作业步骤、计划、警报和通知，请参阅“请参阅”部分中的主题的链接。  
@@ -29,7 +29,7 @@ ms.locfileid: "63131529"
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要创建作业，可使用：**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63131529"
   
 -   本地作业是由本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理进行缓存的。 因此，任何修改都会隐式强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理重新缓存该作业。 由于直到调用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_add_jobserver **时，** 代理才缓存作业，因此最后调用 **sp_add_jobserver** 将更为有效。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 -   您必须是系统管理员才可以更改作业的所有者。  
   
@@ -69,19 +69,19 @@ ms.locfileid: "63131529"
   
 2.  单击加号以展开 **“SQL Server 代理”** 。  
   
-3.  右键单击“作业”文件夹，然后选择“新建作业…”   。  
+3.  右键单击“作业”文件夹，然后选择“新建作业…”。  
   
-4.  在 **“新建作业”** 对话框的 **“常规”** 页上，修改作业的常规属性。 有关此页上的可用选项的详细信息，请参阅[作业属性和新的作业&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+4.  在 **“新建作业”** 对话框的 **“常规”** 页上，修改作业的常规属性。 有关此页上可用选项的详细信息，请参阅[作业属性和新建作业&#40;常规页&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  在 **“步骤”** 页上，组织作业步骤。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新建作业&#40;步骤页&#41;](job-properties-new-job-steps-page.md)  
+5.  在 **“步骤”** 页上，组织作业步骤。 有关此页上可用选项的详细信息，请参阅[作业属性：新建作业&#40;步骤页&#41; ](job-properties-new-job-steps-page.md)  
   
-6.  在 **“计划”** 页上，组织作业的计划。 有关此页上的可用选项的详细信息，请参阅[作业属性：新的作业&#40;计划页&#41;](job-properties-new-job-schedules-page.md)  
+6.  在 **“计划”** 页上，组织作业的计划。 有关此页上可用选项的详细信息，请参阅[作业属性：新建作业&#40;计划页&#41; ](job-properties-new-job-schedules-page.md)  
   
-7.  在 **“警报”** 页上，组织作业的警报。 有关此页上的可用选项的详细信息，请参阅[作业属性：新的作业&#40;警报页&#41;](job-properties-new-job-alerts-page.md)  
+7.  在 **“警报”** 页上，组织作业的警报。 有关此页上可用选项的详细信息，请参阅[作业属性：新建作业&#40;警报页&#41; ](job-properties-new-job-alerts-page.md)  
   
-8.  在 **“通知”** 页上，设置在作业完成时 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要执行的操作。 有关此页上的可用选项的详细信息，请参阅[作业属性：新的作业&#40;通知页&#41;](job-properties-new-job-notifications-page.md)。  
+8.  在 **“通知”** 页上，设置在作业完成时 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要执行的操作。 有关此页上可用选项的详细信息，请参阅[作业属性：新建作业&#40;通知页&#41;](job-properties-new-job-notifications-page.md)。  
   
-9. 在 **“目标”** 页上，管理作业的目标服务器。 有关此页上的可用选项的详细信息，请参阅[作业属性：新的作业&#40;以页为目标&#41;](job-properties-new-job-targets-page.md)。  
+9. 在 **“目标”** 页上，管理作业的目标服务器。 有关此页上可用选项的详细信息，请参阅[作业属性：新建作业&#40;目标页&#41;](job-properties-new-job-targets-page.md)。  
   
 10. 完成后，单击 **“确定”** 。  
   
@@ -93,9 +93,9 @@ ms.locfileid: "63131529"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
     EXEC dbo.sp_add_job  
@@ -134,9 +134,9 @@ ms.locfileid: "63131529"
   
 -   [sp_attach_schedule (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
+-   [sp_add_jobserver &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
-##  <a name="SMOProcedure"></a> 使用 SQL Server 管理对象  
+##  <a name="SMOProcedure"></a>使用 SQL Server 管理对象  
  **创建 SQL Server 代理作业**  
   
  通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来调用 `Create` 类的 `Job` 方法。 有关示例代码，请参阅 [在 SQL Server 代理中计划自动管理任务](sql-server-agent.md)。  

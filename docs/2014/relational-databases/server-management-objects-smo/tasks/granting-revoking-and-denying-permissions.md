@@ -1,5 +1,5 @@
 ---
-title: 授予、 撤消和拒绝的权限 |Microsoft Docs
+title: 授予、撤消和拒绝权限 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4be66faa119b4e89c05ffae149bc7a518323055c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c64c70965d00967e0cac254cf4d26f6ce25ec5f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226147"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796789"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>授予、撤消和拒绝权限
   <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> 对象用于将一组权限或单个服务器权限分配给 <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> 对象。 对于服务器级权限，被授权者指登录名。 由 Windows 进行身份验证的登录名以 Windows 用户名的形式列出。 当此代码示例运行时，它会撤消被授权者的权限并确认已使用 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> 方法删除该被授权者。  
@@ -28,12 +28,12 @@ ms.locfileid: "63226147"
  可以使用 <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> 对象和 <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> 对象以类似方式分配数据库权限和数据库对象权限。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>在 Visual Basic 中授予服务器权限  
  此代码示例将 Create Endpoint 和 Alter Any Endpoint 权限授予指定的登录名，然后枚举并显示权限。 将撤消其中一个权限，然后再次枚举权限。 此示例假定指定的登录名具有指定的起始操作权限。  
   
-```  
+```vb
 ' compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 ' /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -112,7 +112,7 @@ End Class
 ## <a name="granting-server-permissions-in-visual-c"></a>在 Visual C# 中授予服务器权限  
  此代码示例将 Create Endpoint 和 Alter Any Endpoint 权限授予指定的登录名，然后枚举并显示权限。 将撤消其中一个权限，然后再次枚举权限。 此示例假定指定的登录名具有指定的起始操作权限。  
   
-```  
+```csharp
 // compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 // /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 using System;  
@@ -192,7 +192,7 @@ public class A {
 ## <a name="granting-server-permissions-in-powershell"></a>在 PowerShell 中授予服务器权限  
  此代码示例将 Create Endpoint 和 Alter Any Endpoint 权限授予指定的登录名，然后枚举并显示权限。 将撤消其中一个权限，然后再次枚举权限。 此示例假定指定的登录名具有指定的起始操作权限。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
 $srv = get-item default  
@@ -251,7 +251,5 @@ foreach ( $spi in $spis)
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [权限层次结构（数据库引擎）](../../security/permissions-hierarchy-database-engine.md)  
-  
-  

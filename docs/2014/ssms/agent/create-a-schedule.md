@@ -15,19 +15,19 @@ ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b044fb7b3b8dd0cc0586cc9908daab8f0a2b6424
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a00b07bb54d30d4e1db49cf2db70dec8286b27e0
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189522"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798292"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
   可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建 [!INCLUDE[tsql](../../includes/tsql-md.md)]代理作业的计划。  
   
 -   **开始之前：**  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要创建计划，可使用：**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68189522"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
@@ -72,9 +72,9 @@ ms.locfileid: "68189522"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
-    ```  
+    ```sql
     -- creates a schedule named RunOnce.   
     -- The schedule runs one time, at 23:30 on the day that the schedule is created.  
     USE msdb ;  
@@ -88,11 +88,9 @@ ms.locfileid: "68189522"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_add_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)。  
+ 有关详细信息，请[参阅&#40;sp_add_schedule transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)。  
   
-##  <a name="SMO"></a> 使用 SQL Server 管理对象  
+##  <a name="SMO"></a>使用 SQL Server 管理对象  
  **创建计划**  
   
  通过使用所选的编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 `JobSchedule` 类。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
-  
-  

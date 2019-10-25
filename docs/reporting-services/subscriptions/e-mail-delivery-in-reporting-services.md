@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f21a974ee9beeeba8b50914092704f1879c5f501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575567"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305046"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的电子邮件传递
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中包含电子邮件传递扩展插件，该插件提供了通过电子邮件将报表发送到单个用户或组的方式。 若要通过电子邮件分发报表，你可以 1) 配置报表服务器以进行电子邮件传递，并 2) 定义标准订阅或数据驱动订阅。 一个订阅不能在一个电子邮件中传递多个报表。 但你可以创建多个订阅。  
@@ -41,9 +41,9 @@ ms.locfileid: "65575567"
   
 -   在电子邮件的“主题:”行中发送通知。 默认情况下，订阅定义中的“主题:”行包含以下变量（这些变量将在处理订阅时替换为报表特定的信息）：  
   
-     **@ReportName** 指定报表的名称。  
+     \@ReportName 指定报表的名称。  
   
-     **@ExecutionTime** 指定执行报表的时间。  
+     \@ExecutionTime 指定执行报表的时间。  
   
      您可以将这些变量与静态文本组合在一起，也可以修改每个订阅的“主题:”行中的文本。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65575567"
   
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不会检查附件或邮件的大小。 如果附件或邮件的大小超出邮件服务器允许的最大限制，则无法传递报表。 如果是大型报表，请选择其他传递选项（例如 URL 或通知）。  
   
- 在您创建订阅时，将设置确定报表传递方式的传递选项。 例如，如果选择在订阅中“包含链接”，电子邮件将包含一个指向该报表的超链接  。  
+ 在您创建订阅时，将设置确定报表传递方式的传递选项。 例如，如果选择在订阅中“包含链接”，电子邮件将包含一个指向该报表的超链接。  
   
 ## <a name="native-mode-role-based-e-mail-settings"></a>本机模式的基于角色的电子邮件设置  
  在本机模式的报表服务器环境中，所使用的电子邮件传递设置因角色是包含“管理单独的订阅”任务还是“管理所有订阅”任务而异。  

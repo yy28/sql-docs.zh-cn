@@ -12,12 +12,12 @@ ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e20e6f738e7dcfe4aab576cb042e2bf00107ce98
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 193805128ec3e557d219561bc29a93e9540fd5b1
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893389"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798249"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
   本主题说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建和定义通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Server 管理对象执行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Analysis Services 命令和查询的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理作业步骤。  
@@ -26,7 +26,7 @@ ms.locfileid: "68893389"
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要使用 Analysis Services 命令和/或查询创建 SQL Server 作业步骤，请使用：**  
   
@@ -42,9 +42,9 @@ ms.locfileid: "68893389"
   
 -   如果作业步骤使用 Analysis Services 命令，则命令语句必须是 XML for Analysis Services **Execute** 方法。 该语句可以不包含完整的简单对象访问协议 (SOAP) 信封和 XML for Analysis **Discover** 方法。 虽然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持完整的 SOAP 信封和 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤却不支持。 有关 XML for Analysis Services 的详细信息，请参阅 [XML for Analysis 概述 (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx)。  
   
--   如果作业步骤使用 Analysis Services 查询，则查询语句必须是多维表达式 (MDX) 查询。 有关 MDX 的详细信息, 请参阅[Mdx Query &#40;基础&#41;Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)。  
+-   如果作业步骤使用 Analysis Services 查询，则查询语句必须是多维表达式 (MDX) 查询。 有关 MDX 的详细信息，请参阅[Mdx Query &#40;基础&#41;Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68893389"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”，创建一个新作业或右键单击一个现有作业，再单击“属性”。 有关创建作业的详细信息，请参阅[创建作业](create-jobs.md)。  
+2.  展开 **“SQL Server 代理”** ，创建一个新作业或右键单击一个现有作业，再单击 **“属性”** 。 有关创建作业的详细信息，请参阅[创建作业](create-jobs.md)。  
   
 3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页面，再单击 **“新建”** 。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68893389"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”，创建一个新作业或右键单击一个现有作业，再单击“属性”。 有关创建作业的详细信息，请参阅 [创建作业](create-jobs.md)。  
+2.  展开 **“SQL Server 代理”** ，创建一个新作业或右键单击一个现有作业，再单击 **“属性”** 。 有关创建作业的详细信息，请参阅[创建作业](create-jobs.md)。  
   
 3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”** 。  
   
@@ -104,11 +104,10 @@ ms.locfileid: "68893389"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
-    ```  
-  
-              -- Creates a job step that uses XMLA to create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database  
+    ```sql
+    -- Creates a job step that uses XMLA to create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -135,7 +134,7 @@ ms.locfileid: "68893389"
     GO  
     ```  
   
- 有关详细信息, 请[参阅&#40;sp_add_jobstep transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
+ 有关详细信息，请[参阅&#40;sp_add_jobstep transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>创建 Analysis Services 查询作业步骤  
   
@@ -143,11 +142,10 @@ ms.locfileid: "68893389"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
-    ```  
-  
-              -- Creates a job step that uses MDX to return data  
+    ```sql
+    -- Creates a job step that uses MDX to return data  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -163,11 +161,9 @@ ms.locfileid: "68893389"
     GO  
     ```  
   
- 有关详细信息, 请[参阅&#40;sp_add_jobstep transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
+ 有关详细信息，请[参阅&#40;sp_add_jobstep transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
 ##  <a name="SMO"></a>使用 SQL Server 管理对象  
  **创建 PowerShell 脚本作业步骤**  
   
  通过使用所选的编程语言（如 XMLA 或 MDX）来使用 `JobStep` 类。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
-  
-  

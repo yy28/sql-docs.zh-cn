@@ -25,17 +25,17 @@ ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1192deaa556dd8546d0d9fbf17d5ff79335173a
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
+ms.sourcegitcommit: 6012f4ca7b287d0098a867233d6b511ac5278457
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "68887830"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811598"
 ---
 # <a name="user-hierarchies"></a>用户层次结构
-  用户定义的层次结构是用户定义的属性层次结构，用于[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]将维度的成员组织到层次结构中，并提供多维数据集中的导航路径。 例如，下表定义了时间维度的维度表。 维度表支持三个属性，即年份、季度和月份。  
+  用户定义的层次结构是用户定义的属性层次结构，用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将维度成员组织到分层结构中并在多维数据集中提供导航路径。 例如，下表定义了时间维度的维度表。 维度表支持三个属性，即年份、季度和月份。  
   
-|年|季度|月份|  
+|年|季度|Month|  
 |----------|-------------|-----------|  
 |1999|第1季度|一月|  
 |1999|第1季度|二月|  
@@ -52,7 +52,7 @@ ms.locfileid: "68887830"
   
  用年份、季度和月份属性来构造时间维度中由用户定义的层次结构（即日历）。 “日历”维度（常规维度）的级别和成员之间的关系如下面的关系图所示：  
   
- ![时间维度的级别和成员层次结构](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-levelconcepts.gif "时间维度的级别和成员层次结构")  
+ ![时间维度的级别和成员层次结构](../dev-guide/media/as-levelconcepts.gif "时间维度的级别和成员层次结构")  
   
 > [!NOTE]  
 >  默认的二级属性层次结构除外的其他任何层次结构都称为用户定义层次结构。 有关属性层次结构的详细信息，请参阅[属性和属性层次结构](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
@@ -80,9 +80,9 @@ ms.locfileid: "68887830"
  将与国家（地区）级别中的其他成员关联的成员填入省市自治区级别中，将市县级别中的成员与省市自治区级别中相应的成员建立关联。 但是，由于国家（地区）级别的 Vatican City 成员在省市自治区级别中没有相关联的成员，所以必须将市县级别的成员直接关联到国家（地区）级别的 Vatican City 成员。 因为这些更改，该维度的层次结构现在成为不规则层次结构。 城市 Vatican City 的父级是国家/地区 Vatican City，而它并不直接位于市县级别的 Vatican City 成员的上一级。 有关详细信息，请参阅 [不规则层次结构](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)。  
   
 ### <a name="parent-child-hierarchies"></a>父子层次结构  
- 维度的父子层次结构是通过使用特殊属性（称为父属性）来定义的，目的是为了确定成员之间的相互关系。 父属性用于说明维度主表内部的自引用关系或自联接。 父子层次结构是根据单个父属性构造的。 层次结构中出现的级别是通过与父属性关联的成员之间的父子关系形成的，因此只为一个父子层次结构分配一个级别。 父子层次结构的维度架构依赖于维度主表中提供的自引用关系。 例如，下面的关系图说明[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]了示例数据库中[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]的 DimOrganization 维度主表。  
+ 维度的父子层次结构是通过使用特殊属性（称为父属性）来定义的，目的是为了确定成员之间的相互关系。 父属性用于说明维度主表内部的自引用关系或自联接。 父子层次结构是根据单个父属性构造的。 层次结构中出现的级别是通过与父属性关联的成员之间的父子关系形成的，因此只为一个父子层次结构分配一个级别。 父子层次结构的维度架构依赖于维度主表中提供的自引用关系。 例如，下面的关系图说明了 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 示例数据库中的**DimOrganization**维度主表。  
   
- ![DimOrganization 表中的自引用联接](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/dimorganization.gif "DimOrganization 表中的自引用联接")  
+ ![DimOrganization 表中的自引用联接](../dev-guide/media/dimorganization.gif "DimOrganization 表中的自引用联接")  
   
  在该维度表中， **ParentOrganizationKey** 列与 **OrganizationKey** 主键列具有外键关系。 换言之，该表中的每个记录都可以通过父子关系与该表中的其他记录相关联。 这种自联接通常用于表示单位的实体数据，例如某个部门内部的雇员管理结构。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "68887830"
   
  在用户定义层次结构中，层次结构的级别数决定着最终用户所能看见的级别数，而与用户定义层次结构不同，父子层次结构是使用单个级别的属性层次结构定义的，并且此单个级别中的值将生成用户所能看见的多个级别。 存储成员键和父键的维度表列的内容将决定显示出的级别数目。 如果维度表中的数据发生更改，则级别数也会更改。 有关详细信息，请参阅父子[层次结构](../multidimensional-models/parent-child-dimension.md)和父子层次结构[中的属性](../multidimensional-models/parent-child-dimension-attributes.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建用户定义层次结构](../multidimensional-models/user-defined-hierarchies-create.md)   
  [用户层次结构属性](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
  [维度特性属性参考](../multidimensional-models/dimension-attribute-properties-reference.md)  

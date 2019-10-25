@@ -14,12 +14,12 @@ ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f334834ff1deecebbc719ec71fb8348c13e4f68e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b55ca5e8f2e57e85a75f610efe4115ced0dce365
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245808"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798151"
 ---
 # <a name="stop-a-job"></a>Stop a Job
   本主题说明如何停止 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 作业是 SQL Server 代理执行的一系列指定操作。  
@@ -28,7 +28,7 @@ ms.locfileid: "63245808"
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要停止作业，请使用：**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63245808"
   
 -   对于多服务器作业，针对该作业的 STOP 指令将发布到该作业的所有目标服务器中。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
@@ -61,15 +61,15 @@ ms.locfileid: "63245808"
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
-#### <a name="to-stop-a-job"></a>停止作业  
+### <a name="to-stop-a-job"></a>停止作业  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
-    ```  
+    ```sql
     -- stops a job named Weekly Sales Data Backup  
     USE msdb ;  
     GO  
@@ -79,11 +79,10 @@ ms.locfileid: "63245808"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_stop_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql)。  
+ 有关详细信息，请[参阅&#40;sp_stop_job transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql)。  
   
-##  <a name="SMO"></a> 使用 SQL Server 管理对象  
- **停止作业**  
+##  <a name="SMO"></a>使用 SQL Server 管理对象  
+
+### <a name="to-stop-a-job"></a>停止作业
   
  通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来调用 `Stop` 类的 `Job` 方法。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
-  
-  

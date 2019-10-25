@@ -1,5 +1,5 @@
 ---
-title: 指定终结点 URL 时添加或修改可用性副本 (SQL Server) |Microsoft Docs
+title: 在添加或修改可用性副本时指定端点 URL （SQL Server） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85f3fe4115f770f45df6dc226eac81e798514f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788458"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797965"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>在添加或修改可用性副本时指定端点 URL (SQL Server)
-  若要为某一可用性组承载可用性副本，服务器实例必须拥有数据库镜像端点。 该服务器实例使用此端点来侦听来自其他服务器实例承载的可用性副本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 消息。 若要为某一可用性组定义可用性副本，您必须指定将承载该副本的服务器实例的端点 URL。 “端点 URL”标识数据库镜像端点的传输协议 - TCP、服务器实例的系统地址以及与端点关联的端口号  。  
+  若要为某一可用性组承载可用性副本，服务器实例必须拥有数据库镜像端点。 该服务器实例使用此端点来侦听来自其他服务器实例承载的可用性副本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 消息。 若要为某一可用性组定义可用性副本，您必须指定将承载该副本的服务器实例的端点 URL。 “端点 URL”标识数据库镜像端点的传输协议 - TCP、服务器实例的系统地址以及与端点关联的端口号。  
   
 > [!NOTE]  
 >  “端点 URL”一词是“服务器网络地址”一词的同义词，由数据库镜像的用户界面和文档使用。  
@@ -39,11 +39,11 @@ ms.locfileid: "62788458"
 ##  <a name="SyntaxOfURL"></a> 端点 URL 的语法  
  端点 URL 的语法采用以下形式：  
   
- TCP<strong>://</strong> *\<system-address>* <strong>:<strong> *\<port>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  其中  
   
--   \<system-address> 是明确标识目标计算机系统的字符串  。 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
+-   \<system-address> 是明确标识目标计算机系统的字符串。 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
   
     -   因为 Windows Server 故障转移群集 (WSFC) 群集的节点处于相同的域，所以，您可以使用计算机系统的名称，例如 `SYSTEM46`。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62788458"
   
          在公司或组织内确定域段的内容和数量。 有关详细信息，请参阅本主题后面的 [查找完全限定域名](#Finding_FQDN)。  
   
--   \<port> 是合作伙伴服务器实例的镜像终结点所使用的端口号  。  
+-   \<port> 是合作伙伴服务器实例的镜像终结点所使用的端口号。  
   
      数据库镜像端点可以使用计算机系统上的任意可用端口。 每个端口号只能与一个端点相关联，而每个端点与一个服务器实例相关联；这样，同一服务器上的不同服务器实例便可使用不同端口来侦听各个端点。 因此，在您指定可用性副本时在端点 URL 中指定的端口会始终将传入消息定向到其端点与该端口关联的服务器实例。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62788458"
   
      若要标识当前与服务器实例的数据库镜像端点关联的端口，请使用以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句：  
   
-    ```  
+    ```sql
     SELECT type_desc, port FROM sys.TCP_endpoints  
     ```  
   
@@ -119,10 +119,10 @@ ms.locfileid: "62788458"
 > [!NOTE]  
 >  如果您需要与完全限定域名有关的详细信息，请与系统管理员联系。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="RelatedTasks"></a>相关任务  
  **配置数据库镜像端点**  
   
--   [创建数据库镜像端点的 AlwaysOn 可用性组&#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [为 AlwaysOn 可用性组&#40;创建数据库镜像端点 SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62788458"
   
 -   [指定服务器网络地址（数据库镜像）](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [解决 AlwaysOn 可用性组配置问题&#40;SQL Server&#41;删除](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [删除 SQL Server&#41;AlwaysOn 可用性组&#40;配置的疑难解答](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
  **查看有关数据库镜像端点的信息**  
   
@@ -148,11 +148,9 @@ ms.locfileid: "62788458"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解决方案指南以实现高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建和配置可用性组 (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
  [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)  
-  
-  

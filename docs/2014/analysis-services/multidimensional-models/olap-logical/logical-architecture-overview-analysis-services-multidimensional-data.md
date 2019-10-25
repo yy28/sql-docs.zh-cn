@@ -13,12 +13,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: b4eea3e75ed57dcf69c8d8c5bcaedf3aef1fa9f5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68889608"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797635"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>逻辑体系结构概述（Analysis Services - 多维数据）
   Analysis Services 在服务器部署模式下运行，该模式可确定不同 Analysis Services 模型类型使用的内存体系结构和运行时环境。 服务器模式在安装过程中确定。 **多维和数据挖掘模式**支持传统的 OLAP 和数据挖掘。 **表格模式**支持表格模型。 **SharePoint 集成模式**是指作为 PowerPivot for SharePoint 安装的 Analysis Services 实例，用于在工作簿中加载和查询 Excel 或 PowerPivot 数据模型。  
@@ -26,9 +26,9 @@ ms.locfileid: "68889608"
  本主题介绍 Analysis Services 在多维和数据挖掘模式下操作时的基本体系结构。 有关其他模式的详细信息，请参阅按[表格&#40;建模&#41; ssas 表格](../../tabular-models/tabular-models-ssas.md)和[比较表格和&#40;多维&#41;解决方案 ssas](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)。  
   
 ## <a name="basic-architecture"></a>基本体系结构  
- 一个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例可包含多个数据库，一个数据库中可同时包含 OLAP 对象和数据挖掘对象。 应用程序可以连接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例和指定的数据库。 一个服务器计算机可以承载多个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例。 @No__t_0 的实例被命名为 "\<ServerName > \\ < InstanceName \>"。 下图显示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象之间提到的所有关系。  
+ 一个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例可包含多个数据库，一个数据库中可同时包含 OLAP 对象和数据挖掘对象。 应用程序可以连接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例和指定的数据库。 一个服务器计算机可以承载多个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的实例被命名为 "\<ServerName >\\< InstanceName\>"。 下图显示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象之间提到的所有关系。  
   
- ![AMO 运行对象关系](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO 运行对象关系")  
+ ![AMO 运行对象关系](../../dev-guide/media/amo-runningobjects.gif "AMO 运行对象关系")  
   
  基本类是生成多维数据集所需的最小对象集。 此最小对象集可为一个维度、一个度量值组和一个分区。 聚合是可选的。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68889608"
 ## <a name="example"></a>示例  
  “进口”多维数据集包含“包”和“上一次”两个度量值以及“路线”、“源”和“时间”三个相关维度。  
   
- ![多维数据集示例1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "多维数据集示例1")  
+ ![多维数据集示例1](../../dev-guide/media/cubeintro1.gif "多维数据集示例1")  
   
  多维数据集周围更小的字母数字值是维度的成员。 示例成员为“陆地”（“路线”维度的成员）、“非洲”（“源”维度的成员）以及“第一季度”（“时间”维度的成员）。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68889608"
 ### <a name="aggregates"></a>聚合  
  多维数据集的业务用户可以确定每个维度的每个成员的所有度量值，而不用考虑该成员在维度中的级别，因为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将根据需要在更高级别聚合值。 例如，使用 "时间" 维度中的 "日历时间" 层次结构，通过使用 "时间" 维度中的日历时间层次结构，上图中的度量值可以聚合，如下图所示。  
   
- ![按时间维度组织的度量值示意图](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "按时间维度组织的度量值示意图")  
+ ![按时间维度组织的度量值示意图](../../dev-guide/media/cubeintro2.gif "按时间维度组织的度量值示意图")  
   
  除了使用单个维度来聚合度量值以外，还可以使用不同维度的成员的组合来聚合度量值。 这样业务用户就可以同时对多个维度中的度量值进行评估。 例如，如果业务用户要分析各个季度通过航空运输从东半球和西半球进口的货物，则该业务用户可以对多维数据集发出查询来检索以下数据集。  
   

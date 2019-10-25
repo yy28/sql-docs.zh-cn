@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624369"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797846"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation cmdlet
   **Invoke-PolicyEvaluation** 是一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet，它用于报告 SQL Server 对象的目标集是否符合一个或多个基于策略的管理策略中指定的条件。  
@@ -49,34 +49,34 @@ ms.locfileid: "67624369"
   
  如果策略存储在策略存储区中，则必须传递一组指向要评估的策略的 PSObject。 通常可以通过将 cmdlet（如 Get-Item）的输出用管道命令发送到 **Invoke-PolicyEvaluation**来完成此操作，并且不需要你指定 **-Policy** 参数。 例如，如果已将 Microsoft 最佳实践策略导入到数据库引擎的实例中，则此命令可评估 **数据库状态** 策略：  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 Get-Item "Database Status" | Invoke-PolicyEvaluation -TargetServerName "MYCOMPUTER"  
 ```  
   
  此示例显示如何使用 Where-Object 根据策略的 **PolicyCategory** 属性筛选策略存储区中的多个策略。 **Where-Object** 的管道输出中的对象由 **Invoke-PolicyEvaluation**使用。  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 gci | Where-Object {$_.PolicyCategory -eq "Microsoft Best Practices: Maintenance"} | Invoke-PolicyEvaluation -TargetServer "MYCOMPUTER"  
 ```  
   
  如果这些策略存储为 XML 文件，则必须使用 **-Policy** 参数为每个策略提供路径和名称。 如果在 **-Policy** 参数中未指定路径，那么 **Invoke-PolicyEvaulation** 将使用 **sqlps** 路径的当前设置。 例如，此命令根据您登录名的默认数据库评估随 SQL Server 安装的一个 Microsoft 最佳实践策略：  
   
-```  
+```powershell
 Invoke-PolicyEvaluation -Policy "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033\Database Status.xml" -TargetServerName "MYCOMPUTER"  
 ```  
   
  此命令执行同样的操作，唯一不同的是它使用当前 **sqlps** 路径来指定策略 XML 文件的位置：  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MYCOMPUTER"  
 ```  
   
  此示例显示如何使用 **Get-ChildItem** cmdlet 检索多个策略 XML 文件，并将这些对象用管道命令发送到 **Invoke-PolicyEvaluation**：  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation -TargetServer "MYCOMPUTER"  
 ```  
@@ -88,13 +88,13 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetObjects** 的取值为一个对象或对象数组，它们表示目标集中的 SQL Server 对象。 例如，你可以创建 <xref:Microsoft.SqlServer.Management.Smo.Database> 类对象数组，并将其传递到 **-TargetObjects**使用。  
   
--   **-TargetExpressions** 的取值为一个字符串，其中包含一个指定目标集中对象的查询表达式。 查询表达式的格式是以“/”字符隔开的节点。 每个节点的格式为 ObjectType[Filter]。 对象类型是 SQL Server 管理对象 (SMO) 对象层次结构中的对象。 Filter 是一个用于筛选该节点的对象的表达式。 有关详细信息，请参阅 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
+-   **-TargetExpressions** 的取值为一个字符串，其中包含一个指定目标集中对象的查询表达式。 查询表达式的格式是以“/”字符隔开的节点。 每个节点的格式为 ObjectType[Filter]。 对象类型是 SQL Server 管理对象（SMO）对象层次结构中的对象之一。 Filter 是一个用于筛选该节点的对象的表达式。 有关详细信息，请参阅 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
   
  指定 **-TargetObjects** 或 **-TargetExpression**，而不是两者。  
   
  此示例使用 Sfc.SqlStoreConnection 对象指定目标服务器：  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 $conn = New-Object Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection("server='MYCOMPUTER';Trusted_Connection=True")  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName $conn  
@@ -102,7 +102,7 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName $conn
   
  此示例使用 **-TargetExpression** 标识要评估的特定数据库：  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyComputer" -TargetExpression "Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']"  
 ```  
@@ -110,10 +110,10 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyCompu
 ## <a name="evaluating-analysis-services-policies"></a>评估 Analysis Services 策略  
  若要针对 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例评估策略，必须在 PowerShell 中加载和注册程序集，使用 Analysis Services 连接对象创建变量，并将该变量传递到 **-TargetObject** 参数。 此示例显示如何评估 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的最佳实践外围应用配置器策略。  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\AnalysisServices\1033"  
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.AnalysisServices")  
-$SSASsvr = new-object Microsoft.AnalysisServices.Server  
+$SSASsvr = New-Object Microsoft.AnalysisServices.Server  
 $SSASsvr.Connect("Data Source=Localhost")  
 Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Services Features.xml" -TargetObject $SSASsvr  
 ```  
@@ -121,7 +121,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Service
 ## <a name="evaluating-reporting-services-policies"></a>评估 Reporting Services 策略  
  若要评估 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 策略，必须在 PowerShell 中加载和注册程序集，使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 连接对象创建变量，并将该变量传递到 **-TargetObject** 参数中。 此示例显示如何评估 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的最佳实践外围应用配置器策略。  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\ReportingServices\1033"  
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Dmf.Adapters")  
 $SSRSsvr = new-object Microsoft.SqlServer.Management.Adapters.RSContainer('MyComputer')  
@@ -131,12 +131,10 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ## <a name="formatting-output"></a>设置输出的格式  
  默认情况下， **Invoke-PolicyEvaluation** 的输出通过简明报告形式，以可读格式显示在命令提示符窗口中。 可以使用 **-OutputXML** 参数来指定 cmdlet，而不是以 XML 文件形式生成详细报告。 **Invoke-PolicyEvaluation** 使用系统建模语言交换格式 (SML-IF) 架构，因此 SML-IF 读取器可以读取该文件。  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -OutputXML > C:\MyReports\DatabaseStatusReport.xml  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用数据库引擎 cmdlet](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
-  
-  
