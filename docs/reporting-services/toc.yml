@@ -1,7 +1,7 @@
 - name: 什么是 SQL Server Reporting Services (SSRS)？
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: 欢迎使用 SQL Server >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 - name: 概述
   items:
     - name: Reporting Services 中的新增功能
@@ -1672,7 +1672,7 @@
       href: ../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md
     - name: Reporting Services 的服务器和数据库连接问题疑难解答
       href: ../reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services.md
-- name: 开发人员
+- name: Developer
   items:
     - name: REST API
       href: ../reporting-services/developer/rest-api.md
