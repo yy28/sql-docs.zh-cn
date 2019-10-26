@@ -1,7 +1,7 @@
 ---
 title: 使用 Spark 作业引入数据
 titleSuffix: SQL Server big data clusters
-description: 本教程演示如何在 Azure Data Studio 中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]使用 Spark 作业将数据引入数据池。
+description: 本教程演示如何使用 Azure Data Studio 中的 Spark 作业将数据引入 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的数据池中。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -9,20 +9,20 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: e2390da93f9359c2f812bc93ec588490a218ad87
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653298"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916014"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教程：使用 Spark 作业将数据引入 SQL Server 数据池
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教程：使用 Spark 作业将数据引入到 SQL Server 的数据池中
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教程演示如何使用 Spark 作业将数据加载到的[数据池中](concept-data-pool.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。 
+本教程演示如何使用 Spark 作业将数据加载到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的[数据池中](concept-data-pool.md)。 
 
-在本教程中，你将了解如何执行以下操作：
+在本教程中，你将学习如何执行以下操作：
 
 > [!div class="checklist"]
 > * 在数据池中创建外部表。
@@ -32,7 +32,7 @@ ms.locfileid: "69653298"
 > [!TIP]
 > 如果需要，可以下载并运行本教程中的命令脚本。 有关说明，请参阅 GitHub 上的[数据池示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)。
 
-## <a id="prereqs"></a> 先决条件
+## <a id="prereqs"></a> Prerequisites
 
 - [大数据工具](deploy-big-data-tools.md)
    - **kubectl**
@@ -77,49 +77,54 @@ ms.locfileid: "69653298"
 
 ## <a name="start-a-spark-streaming-job"></a>启动 Spark 流式处理作业
 
-下一步是创建一个 Spark 流式处理作业，将 Web 点击流数据从存储池 (HDFS) 加载到你在数据池中创建的外部表。
+下一步是创建一个 Spark 流式处理作业，将 Web 点击流数据从存储池 (HDFS) 加载到你在数据池中创建的外部表。 在[将示例数据加载到大数据群集](tutorial-load-sample-data.md)中时，已将此数据添加到/clickstream_data 中。
 
 1. 在 Azure Data Studio 中，连接到大数据群集的主实例。 有关详细信息，请参阅[连接到大数据群集](connect-to-big-data-cluster.md)。
 
-1. 双击“服务器”窗口中的 HDFS/Spark 网关连接。 然后选择“新建 Spark 作业”。
+2. 创建新笔记本并选择 Spark |Scala 作为内核。
 
-   ![新建 Spark 作业](media/tutorial-data-pool-ingest-spark/hdfs-new-spark-job.png)
+3. 运行 Spark 引入作业
+   1. 配置 Spark-SQL 连接器参数
+      ```
+      import org.apache.spark.sql.types._
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
 
-1. 在“新建作业”窗口的“作业名称”字段中输入一个名称。
+      // Change per your installation
+      val user= "username"
+      val password= "****"
+      val database =  "MyTestDatabase"
+      val sourceDir = "/clickstream_data"
+      val datapool_table = "web_clickstreams_spark_results"
+      val datasource_name = "SqlDataPool"
+      val schema = StructType(Seq(
+      StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
+      StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
+      ))
 
-1. 在“Jar/py 文件”下拉列表中，选择“HDFS”。 然后输入以下 jar 文件路径：
+      val hostname = "master-0.master-svc"
+      val port = 1433
+      val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
+      ```
+   2. 定义并运行 Spark 作业
+      * 每个作业都有两部分： readStream 和 writeStream。 下面，我们使用上面定义的架构创建一个数据帧，然后将其写入到数据池中的外部表。
+      ```
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
+      
+      val df = spark.readStream.format("csv").schema(schema).option("header", true).load(sourceDir)
+      val query = df.writeStream.outputMode("append").foreachBatch{ (batchDF: DataFrame, batchId: Long) => 
+                batchDF.write
+                 .format("com.microsoft.sqlserver.jdbc.spark")
+                 .mode("append")
+                  .option("url", url)
+                  .option("dbtable", datapool_table)
+                  .option("user", user)
+                  .option("password", password)
+                  .option("dataPoolDataSource",datasource_name).save()
+               }.start()
 
-   ```text
-   /jar/mssql-spark-lib-assembly-1.0.jar
-   ```
-
-1. 在“主类”字段中，输入 `FileStreaming`。
-
-1. 在“参数”字段中，输入以下文本，并在 `<your_password>` 占位符中指定 SQL Server 主实例的密码。 
-
-   ```text
-   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
-   ```
-
-   下表对每个参数进行了说明：
-
-   | 参数 | 描述 |
-   |---|---|
-   | 服务器名称 (server name) | 用于读取表架构的 SQL Server |
-   | 端口号 | SQL Server 正在侦听的端口（默认为 1433） |
-   | username | SQL Server 登录用户名 |
-   | password | SQL Server 登录密码 |
-   | 数据库名称 | 目标数据库 |
-   | 外部表名 | 要用于结果的表 |
-   | 要流式处理的源目录 | 这必须是完整的 URI，例如“hdfs:///clickstream_data” |
-   | 输入格式 | 这可以是“csv”、“parquet”或“json” |
-   | 启用检查点 | True 或 False |
-   | timeout | 退出前运行作业的时间（以毫秒为单位） |
-
-1. 按“提交”提交作业。
-
-   ![Spark 作业提交](media/tutorial-data-pool-ingest-spark/spark-new-job-settings.png)
-
+      query.processAllAvailable()
+      query.awaitTermination(40000)
+      ```
 ## <a name="query-the-data"></a>查询数据
 
 以下步骤演示了 Spark 流式处理作业将数据从 HDFS 加载到数据池中。
@@ -138,7 +143,24 @@ ms.locfileid: "69653298"
    SELECT count(*) FROM [web_clickstreams_spark_results];
    SELECT TOP 10 * FROM [web_clickstreams_spark_results];
    ```
+1. 还可以在 Spark 中查询数据。 例如，下面的代码将打印表中的记录数：
+   ```
+   def df_read(dbtable: String,
+                url: String,
+                dataPoolDataSource: String=""): DataFrame = {
+        spark.read
+             .format("com.microsoft.sqlserver.jdbc.spark")
+             .option("url", url)
+             .option("dbtable", dbtable)
+             .option("user", user)
+             .option("password", password)
+             .option("dataPoolDataSource", dataPoolDataSource)
+             .load()
+             }
 
+   val new_df = df_read(datapool_table, url, dataPoolDataSource=datasource_name)
+   println("Number of rows is " +  new_df.count)
+   ```
 ## <a name="clean-up"></a>清除
 
 使用以下命令删除本教程中创建的数据库对象。
