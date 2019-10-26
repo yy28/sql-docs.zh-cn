@@ -1,5 +1,5 @@
 ---
-title: 在 XPath 查询 (SQLXML 4.0) 中指定算数运算符 |Microsoft Docs
+title: 在 XPath 查询中指定算术运算符（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,34 +16,34 @@ ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4594fadb7c12ac187219c16cf8505dd77fa0c479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fa1bf6dd7d5652e33eb5fa7c75a86268f31129a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119451"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907764"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定算数运算符 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  以下示例说明如何在 XPath 查询中指定算数运算符。 本示例中的 XPath 查询针对 SampleSchema1.xml 中包含的映射架构指定。 有关该示例架构的信息，请参阅[示例带批注的 XSD 架构的 XPath 示例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  以下示例说明如何在 XPath 查询中指定算数运算符。 本示例中的 XPath 查询针对 SampleSchema1.xml 中包含的映射架构指定。 有关此示例架构的信息，请参阅[XPath 示例&#40;SQLXML 4.0&#41;的批注示例 XSD 架构](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. 指定 * 算数运算符  
- 此 XPath 查询将返回 **\<OrderDetail >** 满足指定的谓词的元素：  
+ 此 XPath 查询返回满足指定谓词 **\<OrderDetail >** 元素：  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 在查询中，`child`是轴和`OrderDetail`是节点测试 (如果**OrderDetail**是 **\<元素节点 >** ，因为 **\<元素 >** 节点是主节点**子**轴)。 为所有 **\<OrderDetail >** 元素节点，在谓词中的测试应用，并返回满足条件的这些节点。  
+ 在查询中，`child` 是轴，`OrderDetail` 是节点测试（如果**OrderDetail**是 **\<元素 > 节点**，则为 TRUE; 因为 **\<元素 >** 节点是**子**轴的主节点）。 对于所有 **\<OrderDetail >** 元素节点，将应用谓词中的测试，并只返回满足条件的那些节点。  
   
 > [!NOTE]  
 >  XPath 中的数字是双精度浮点数，对本示例中的浮点数进行比较将导致舍入。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
-1.  复制[示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
+1.  复制[示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)，并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
   
 2.  创建以下模板 (ArithmeticOperatorA.xml)，并将它保存在保存 SampleSchema1.xml 的目录中。  
   
@@ -63,9 +63,7 @@ ms.locfileid: "68119451"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ```  
 Here is the partial result set of the template execution:    

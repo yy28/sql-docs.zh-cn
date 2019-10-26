@@ -1,5 +1,5 @@
 ---
-title: 执行 XPath 查询 （sqlxmloledb 访问接口） 的命名空间与 |Microsoft Docs
+title: 执行带有命名空间的 XPath 查询（SQLXMLOLEDB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,26 +18,26 @@ ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c72948e0497b65aed942bad9afa12d07fbd09e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3a77fc2ee8dd70b8ef8956b99d7412232cbcae0c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109595"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909338"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>执行带命名空间的 XPath 查询（SQLXMLOLEDB 访问接口）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XPath 查询可以包含命名空间。 如果架构元素为限定命名空间（即，包含目标命名空间），则针对该架构的 XPath 查询必须指定该命名空间。  
   
- 由于 SQLXML 4.0 中不支持使用通配符 (*)，因此必须使用命名空间前缀来指定 XPath 查询。 若要解决此前缀，使用命名空间属性指定命名空间绑定。  
+ 由于 SQLXML 4.0 中不支持使用通配符 (*)，因此必须使用命名空间前缀来指定 XPath 查询。 若要解析此前缀，请使用 namespace 属性来指定命名空间绑定。  
   
- 在以下示例中，XPath 查询指定命名空间使用通配符字符 (\*) 和 local-name （) and namespace-uri （) XPath 函数。 此 XPath 查询返回所有元素，其中的本地名称是**联系人**和命名空间 URI 为**urn: myschema:Contacts**。  
+ 在下面的示例中，XPath 查询使用通配符（\*）和命名空间 uri （） XPath 函数指定命名空间。 此 XPath 查询返回本地名称为**Contact**的所有元素，命名空间 URI 为**urn： myschema.xml： Contacts**。  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- 在 SQLXML 4.0 中，必须用命名空间前缀来指定此 XPath 查询。 例如， **x： 请联系**，其中**x**为命名空间前缀。 请看以下 XSD 架构：  
+ 在 SQLXML 4.0 中，必须用命名空间前缀来指定此 XPath 查询。 例如， **x:Contact**，其中**x**是命名空间前缀。 请看以下 XSD 架构：  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -55,7 +55,7 @@ ms.locfileid: "68109595"
   
  由于此架构定义了目标命名空间，因此针对此架构的 XPath 查询（如“Employee”）必须包含该命名空间。  
   
- 以下是一个 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 应用程序示例，针对前述 XSD 架构执行 XPath 查询 (x:Employee)。 若要解析此前缀，使用命名空间属性指定了命名空间绑定。  
+ 以下是一个 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 应用程序示例，针对前述 XSD 架构执行 XPath 查询 (x:Employee)。 若要解析此前缀，使用 namespace 属性指定命名空间绑定。  
   
 > [!NOTE]  
 >  在该代码中，必须在连接字符串中提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 此外，本示例还指定使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) 作为数据访问接口，该访问接口需要安装其他网络客户端软件。 有关详细信息，请参阅[SQL Server Native Client 的系统要求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  
@@ -95,8 +95,6 @@ End Sub
     ```  
   
 4.  执行应用程序。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  下面是部分结果：  
   

@@ -1,5 +1,5 @@
 ---
-title: '数据类型强制转换和 sql: datatype 批注 (SQLXML 4.0) |Microsoft Docs'
+title: 数据类型强制转换和 sql： datatype 批注（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,51 +22,51 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be710df7b54fa7019b5700a7789885ee10519d67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc7393d3f8f52dcbceeb9ef2ca295ef28a7b7222
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067194"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905980"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>数据类型强制和 sql:datatype 批注 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  在 XSD 架构中， **xsd: type**属性指定的元素或属性的 XSD 数据类型。 在 XSD 架构用于从数据库中提取数据时，指定的数据类型用于将数据格式化。  
+  在 XSD 架构中， **xsd： type**特性指定元素或属性的 XSD 数据类型。 在 XSD 架构用于从数据库中提取数据时，指定的数据类型用于将数据格式化。  
   
- 除了在架构中指定 XSD 类型，还可以指定 Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的数据类型**sql: datatype**批注。 **Xsd: type**并**sql: datatype**属性控制 XSD 数据类型之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
+ 除了在架构中指定 XSD 类型之外，还可以使用**sql： datatype**批注指定 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 **Xsd： type**和**sql： DATATYPE**特性控制 xsd 数据类型与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之间的映射。  
   
 ## <a name="xsdtype-attribute"></a>xsd:type 属性  
- 可以使用**xsd: type**属性指定的属性或映射到列的元素的 XML 数据类型。 **Xsd: type**影响从服务器以及执行的 XPath 查询返回的文档。 对包含的映射架构执行 XPath 查询时**xsd: type**，XPath 处理查询时使用指定的数据类型。 详细了解如何使用 XPath **xsd: type**，请参阅[映射 XSD 数据类型到 XPath 数据类型&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)。  
+ 您可以使用**xsd： type**特性来指定映射到列的属性或元素的 XML 数据类型。 **Xsd： type**会影响从服务器返回的文档以及执行的 XPath 查询。 对包含**xsd： type**的映射架构执行 xpath 查询时，xpath 在处理查询时使用指定的数据类型。 有关 XPath 如何使用**xsd： type**的详细信息，请参阅[将 Xsd 数据类型映射到 XPath &#40;数据类型&#41;SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)。  
   
- 在返回的文档中，所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型都转换为字符串表示形式。 某些数据类型需要其他转换。 下表列出了用于各种转换**xsd: type**值。  
+ 在返回的文档中，所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型都转换为字符串表示形式。 某些数据类型需要其他转换。 下表列出了用于各种**xsd： type**值的转换。  
   
 |XSD 数据类型|SQL Server 转换|  
 |-------------------|---------------------------|  
 |Boolean|CONVERT(bit, COLUMN)|  
-|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |其他|无其他转换|  
   
 > [!NOTE]  
->  返回的值的一些[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能不是通过使用指定的 XML 数据类型兼容**xsd: type**，而是因为不支持转换，则 (例如，将"XYZ"转换为**十进制**数据类型) 或是由于值超出了该数据类型的范围 (例如，将-100000 转换到**无符号 Short** XSD 类型)。 不兼容的类型转换可能导致无效的 XML 文档或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回的某些值可能与使用**xsd： type**指定的 XML 数据类型不兼容，这可能是因为转换不可行（例如，将 "XYZ" 转换为**decimal**数据类型），或者是因为值超出了该数据类型的范围（例如，将-100000 转换为**UnsignedShort** XSD 类型）。 不兼容的类型转换可能导致无效的 XML 文档或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误。  
   
 ## <a name="mapping-from-sql-server-data-types-to-xsd-data-types"></a>从 SQL Server 数据类型映射到 XSD 数据类型  
  下表显示从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型到 XSD 数据类型的显式映射。 如果您知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型，此表将提供可以在 XSD 架构中指定的相应 XSD 类型。  
   
 |SQL Server 数据类型|XSD 数据类型|  
 |--------------------------|-------------------|  
-|**bigint**|**long**|  
+|**bigint**|**漫长**|  
 |**binary**|**base64Binary**|  
 |**bit**|**boolean**|  
 |**char**|**string**|  
 |**datetime**|**dateTime**|  
 |**decimal**|**decimal**|  
 |**float**|**double**|  
-|**image**|**base64Binary**|  
-|**int**|**int**|  
+|**图像**|**base64Binary**|  
+|**smallint**|**smallint**|  
 |**money**|**decimal**|  
 |**nchar**|**string**|  
 |**ntext**|**string**|  
@@ -74,7 +74,7 @@ ms.locfileid: "68067194"
 |**numeric**|**decimal**|  
 |**real**|**float**|  
 |**smalldatetime**|**dateTime**|  
-|**smallint**|**short**|  
+|**int**|**short**|  
 |**smallmoney**|**decimal**|  
 |**sql_variant**|**string**|  
 |**sysname**|**string**|  
@@ -83,24 +83,24 @@ ms.locfileid: "68067194"
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
 |**varchar**|**string**|  
-|**uniqueidentifier**|**string**|  
+|**ssNoversion**|**string**|  
   
 ## <a name="sqldatatype-annotation"></a>sql:datatype 批注  
- **Sql: datatype**批注用于指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型; 此批注时，必须指定：  
+ **Sql： datatype**批注用于指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型;在以下情况下，必须指定此批注：  
   
--   进行大容量加载**dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列从 XSD **dateTime**，**日期**，或**时间**类型。 在这种情况下，必须标识[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列的数据类型使用**sql: datatype ="dateTime"** 。 此规则也适用于 updategram。  
+-   将从 XSD**日期时间**、**日期**或**时间**类型大容量加载到**dateTime**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列。 在这种情况下，必须使用**sql： datatype = "dateTime"** 标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列数据类型。 此规则也适用于 updategram。  
   
--   进行大容量加载的列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier**类型且 XSD 值是一个 GUID，包括大括号 （{和}）。 当指定**sql: datatype ="uniqueidentifier"** ，大括号之前插入列中删除的值。 如果**sql: datatype**未指定，则使用大括号和插入或更新失败，将发送的值。  
+-   要大容量加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier**类型的列中，并且 XSD 值是包含大括号（{和}）的 GUID。 指定**sql： datatype = "uniqueidentifier"** 时，会先从值中删除大括号，然后再将其插入列中。 如果未指定**sql： datatype** ，则用大括号发送该值，并且 insert 或 update 会失败。  
   
--   XML 数据类型**base64Binary**映射到各种[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型 (**二进制**，**映像**，或**varbinary**)。 若要将 XML 数据类型映射**base64Binary**为特定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，请使用**sql: datatype**批注。 此批注指定属性要映射到的列的显式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 当正在数据库中存储数据时，这很有用。 通过指定**sql: datatype**批注，您可以标识显式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
+-   XML 数据类型**base64Binary**映射到各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型（**binary**、 **image**或**varbinary**）。 若要将 XML 数据类型**base64Binary**映射到特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，请使用**sql： datatype**批注。 此批注指定属性要映射到的列的显式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 当正在数据库中存储数据时，这很有用。 通过指定**sql： datatype**批注，可以标识显式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
- 通常建议您指定**sql: datatype**架构中。  
+ 通常建议在架构中指定**sql： datatype** 。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-xsdtype"></a>A. 指定 xsd:type  
- 此示例演示如何 XSD**日期**通过使用指定的类型**xsd: type**架构中的属性影响生成的 XML 文档。 该架构提供 AdventureWorks 数据库中 Sales.SalesOrderHeader 表的 XML 视图。  
+ 此示例演示如何使用架构中的**xsd： type**特性指定的 xsd**日期**类型会影响生成的 XML 文档。 该架构提供 AdventureWorks 数据库中 Sales.SalesOrderHeader 表的 XML 视图。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -119,13 +119,13 @@ ms.locfileid: "68067194"
   
  在该 XSD 架构中，有三个从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回日期值的属性。 当该架构：  
   
--   指定**xsd: type = 日期**上**OrderDate**特性，返回的值的日期部分[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有关**订购日期**显示属性。  
+-   指定**日期时间属性的** **xsd： type = date** ，将显示 "**订货**日期" 属性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回的值的日期部分。  
   
--   指定**xsd: type = 时间**上**ShipDate**特性，返回的值的时间部分[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有关**ShipDate**显示属性。  
+-   指定**ShipDate**特性上的**xsd： type = time** ，将显示为**ShipDate**属性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回的值的时间部分。  
   
--   未指定**xsd: type**上**DueDate**特性，返回的相同值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]显示。  
+-   不在**DueDate**特性上指定**xsd： type** ，将显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回的相同值。  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将该文件另存为 xsdType.xml。  
   
@@ -147,9 +147,7 @@ ms.locfileid: "68067194"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是部分结果集：  
   
@@ -169,7 +167,7 @@ ms.locfileid: "68067194"
 </ROOT>  
 ```  
   
- 以下是等效的 XDR 架构：  
+ 这是等效的 XDR 架构：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -194,6 +192,6 @@ ms.locfileid: "68067194"
 ```  
   
 ### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. 使用 sql:datatype 指定 SQL 数据类型  
- 有关工作示例，请参阅中的示例 G [XML 大容量加载示例&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)。 在此示例中，大容量加载包含“{”和“}”的 GUID 值。 此示例中的架构指定**sql: datatype**来标识[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型作为**uniqueidentifier**。 此示例说明何时**sql: datatype**必须在架构中指定。  
+ 有关工作示例，请参阅[XML 大容量加载&#40;示例 SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)中的示例 G。 在此示例中，大容量加载包含“{”和“}”的 GUID 值。 此示例中的架构指定**sql： datatype** ，以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型标识为**uniqueidentifier**。 此示例阐释了在架构中必须指定**sql： datatype**的时间。  
   
   
