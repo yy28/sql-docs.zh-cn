@@ -1,5 +1,5 @@
 ---
-title: 将数据作为具有内存 (ODBC) 中的所有值的表值参数发送 |Microsoft Docs
+title: 使用内存中的所有值（ODBC）将数据作为表值参数发送 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf7d8b166a06d2b4c9973cf310b90f693ba1c6c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a95e676ff7d5d39358638727e317116aa05687f1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129130"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907353"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>所有值位于内存中时将数据作为表值参数发送 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  本主题描述当所有值都在内存中时，如何将数据作为表值参数发送到存储过程。 有关演示表值参数的另一个示例，请参阅[使用表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+  本主题描述当所有值都在内存中时，如何将数据作为表值参数发送到存储过程。 有关演示表值参数的另一个示例，请参阅[使用表值&#40;参数&#41;ODBC](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
-## <a name="prerequisite"></a>先决条件  
+## <a name="prerequisite"></a>前提条件  
  该过程假定已在服务器上执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
   
 ```  
@@ -90,7 +90,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  参数绑定的第二阶段是绑定表值参数的列。 首先将参数焦点设置为表值参数的序号。 然后将它们是参数的存储过程，但以列序号作为 ParameterNumber 相同的方式使用 SQLBindParameter 绑定表值的列。 如果有更多表值参数，我们会轮流将焦点设置为每个参数，并绑定它们的列。 最终，将参数焦点重置为 0。  
+3.  参数绑定的第二阶段是绑定表值参数的列。 首先将参数焦点设置为表值参数的序号。 然后使用 SQLBindParameter 来绑定表值的列，方法与它们是存储过程的参数相同，但使用 ParameterNumber 的列序号。 如果有更多表值参数，我们会轮流将焦点设置为每个参数，并绑定它们的列。 最终，将参数焦点重置为 0。  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -124,14 +124,12 @@ from @Items
   
 5.  调用该过程：  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```  
     // Call the procedure.  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC 表值参数编程示例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

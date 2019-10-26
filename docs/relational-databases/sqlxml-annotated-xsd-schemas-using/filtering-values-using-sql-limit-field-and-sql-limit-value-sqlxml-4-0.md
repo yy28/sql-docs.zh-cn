@@ -1,5 +1,5 @@
 ---
-title: 筛选值使用 sql:-字段和 sql:-值 (SQLXML 4.0) |Microsoft Docs
+title: 使用 sql 筛选值：限制字段和 sql：限制值（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,23 +19,23 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ac64cc0ff2f16b70000ff4bc33d0f5fd114f872
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65c26209ed058e5d93663bae9587f8cf5d59abdf
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067108"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906093"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 筛选值 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  可以基于某些限制值来限制从数据库查询返回的行。 **Sql:-字段**并**sql:-值**批注用于标识包含限制值的数据库列和指定要用于筛选的数据的特定限制值返回。  
+  可以基于某些限制值来限制从数据库查询返回的行。 **Sql： limit 字段**和**sql：限值**批注用于标识包含限制值的数据库列，并指定用于筛选返回的数据的特定限制值。  
   
- **Sql:-字段**批注用于标识包含限制值的列; 每个映射的元素或属性上允许使用它。  
+ **Sql： limit 字段**批注用于标识包含限制值的列;每个映射的元素或属性都允许使用此属性。  
   
- **Sql:-值**批注用于指定的限制的值中指定的列中**sql:-字段**批注。 **Sql:-值**批注是可选的。 如果**sql:-值**是未指定，则假定为 NULL 值。  
+ **Sql：限值**批注用于指定在**sql： limit 字段**注释中指定的列中的有限值。 **Sql：限值**批注是可选的。 如果未指定**sql： limit 值**，则假定为 NULL 值。  
   
 > [!NOTE]  
->  使用时**sql:-字段**类型的映射的 SQL 列所在**实际**，SQLXML 4.0 对执行转换**sql:-值**根据 XML 架构中的指定作为**nvarchar**指定的值。 这要求使用纯科学记数法指定小数限制值。 有关详细信息，请参阅下面的示例 B。  
+>  当使用**sql： limit-字段**（其中映射的 sql 列的类型为**real**）时，SQLXML 4.0 对 XML 架构中指定的**sql： limit 值**执行转换，作为**nvarchar**指定的值。 这要求使用纯科学记数法指定小数限制值。 有关详细信息，请参阅下面的示例 B。  
   
 ## <a name="examples"></a>示例  
  若要创建使用这些示例的工作示例，需要安装以下产品：  
@@ -55,7 +55,7 @@ ms.locfileid: "68067108"
   
  一个客户可以具有发货地址和/或开票地址。 AddressType 列值是 Shipping 和 Billing。  
   
- 这是在其中的映射架构**ShipTo**架构属性映射到 Addresses 关系中的 StreetAddress 列。 此属性的返回值被限制为仅通过指定发货地址**sql:-字段**并**sql:-值**批注。 同样， **BillTo**架构属性返回只客户的开票地址。  
+ 这是映射架构，其中**ShipTo**架构属性映射到地址关系中的 StreetAddress 列。 此属性返回的值仅限于通过指定**sql： limit 字段**和**sql： limit-value**批注来发送地址。 同样， **BillTo**架构特性仅返回客户的帐单地址。  
   
  以下是架构：  
   
@@ -99,9 +99,9 @@ ms.locfileid: "68067108"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
-1.  创建两个表中的**tempdb**数据库：  
+1.  在**tempdb**数据库中创建两个表：  
   
     ```  
     USE tempdb  
@@ -148,11 +148,9 @@ ms.locfileid: "68067108"
   
 5.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -174,7 +172,7 @@ ms.locfileid: "68067108"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- 这是在其中的映射架构**OrderID**订单详细信息属性映射到 orders 关系中的 OrderID 列。 此属性的返回值被限制为仅显示那些具有值 2.0000000e-001 (0.2) 为指定**折扣**属性使用**sql:-字段**并**sql:-值**批注。  
+ 这是订单详细信息中的 "订单**id** " 属性映射到订单关系中的 "订单 id" 列的映射架构。 为此属性返回的值仅限于使用 " **sql： limit-字段**" 和 " **sql：限值**" 批注为 "**折扣**" 属性指定的值为 "2.0000000 e-001 （0.2）" 的值。  
   
  以下是架构：  
   
@@ -218,9 +216,9 @@ ms.locfileid: "68067108"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
-1.  创建两个表中的**tempdb**数据库：  
+1.  在**tempdb**数据库中创建两个表：  
   
     ```  
     USE tempdb  
@@ -291,7 +289,7 @@ ms.locfileid: "68067108"
   
 5.  通过在 Windows 资源管理器中单击 TestQuery.vbs 文件来执行它。  
   
-     下面是结果：  
+     结果如下：  
   
     ```  
     <root>  
@@ -308,10 +306,10 @@ ms.locfileid: "68067108"
     </root>  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [float 和 real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar 和 nvarchar &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [nchar 和 nvarchar &#40;transact-sql&#41; ](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [使用带批注的 XSD 架构在查询中的&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [在查询&#40;中使用带批注的 XSD 架构 SQLXML 4。0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

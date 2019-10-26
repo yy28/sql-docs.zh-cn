@@ -1,5 +1,5 @@
 ---
-title: 检索未用完数据使用 sql:overflow 的字段 (SQLXML 4.0) |Microsoft Docs
+title: 使用 sql：溢出字段检索未用完的数据（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 292c07e1ab55313f0eedf7f4cb0c3f4a155aff30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6714940fe14e2f7a1182a24c37f0d7c58b4d3e72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067007"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907168"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>使用 sql:overflow-field 检索未用完的数据 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函数将 XML 文档中的记录插入数据库时，源 XML 文档中所有未用完的数据可以存储在列中。 在使用带批注的架构从数据库检索数据，可以指定**sql:overflow-字段**属性来标识在其中存储溢出数据的表中的列。 **Sql:overflow-字段**上，可以指定特性 **\<元素 >** 。  
+  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函数将 XML 文档中的记录插入数据库时，源 XML 文档中所有未用完的数据可以存储在列中。 使用带批注的架构从数据库中检索数据时，可以指定**sql：溢出字段**属性来标识在其中存储溢出数据的表中的列。 可以在 **\<元素 >** 上指定**sql：溢出字段**属性。  
   
  然后，可以通过以下方式检索此数据：  
   
--   在溢出列中存储的属性添加到包含的元素**sql:overflow-字段**批注。  
+-   在溢出列中存储的特性将添加到包含**sql：溢出字段**批注的元素中。  
   
 -   存储在数据库的溢出列中的子元素及其后代作为子元素添加在架构中显式指定的内容之后。 （顺序被打乱。）  
   
@@ -62,7 +62,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- 此外，必须创建 tempdb 数据库的虚拟目录-和模板虚拟名称的**模板**名为"模板"的类型。  
+ 此外，必须为 tempdb 数据库创建虚拟目录，并创建名为 "template" 的**模板**类型的模板虚拟名称。  
   
  在以下示例中，映射架构检索 Customers2 表的 AddressOverflow 列中存储的未用完数据：  
   
@@ -79,7 +79,7 @@ GO
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 Overflow.xml。  
   
@@ -101,9 +101,7 @@ GO
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是结果集：  
   

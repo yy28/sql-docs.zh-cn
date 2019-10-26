@@ -1,5 +1,5 @@
 ---
-title: sql： 映射 (SQLXML 4.0) |Microsoft Docs
+title: sql：已映射（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c639a9eaf7165bfc83b141235e1ce0b2ed9bb246
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7711386722d618b35a8d957b680244243b4de5d5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055410"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907140"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>批注解释 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 大容量加载进程**sql： 映射**批注，预期的 XSD 架构，则如果映射架构指定**sql： 映射 ="false"** XML 大容量加载不为任何元素或属性，尝试在相应列中存储相关联的数据。  
+  XML 大容量加载按预期处理 XSD 架构中的**sql：映射**批注，即，如果映射架构为任何元素或属性指定了**sql： mapping = "false"** ，则 xml 大容量加载不会尝试将关联的数据存储在对应的列。  
   
- XML 大容量加载忽略未映射的元素和属性 (因为它们不描述在架构中，或使用在 XSD 架构中批注**sql： 映射 ="false"** )。 未映射的所有数据都将进入溢出列中，如果这样的列通过使用指定**sql:overflow-字段**。  
+ XML 大容量加载将忽略未映射的元素和属性（因为未在架构中对其进行描述，或者在带有**sql：映射 = "false"** 的 XSD 架构中批注它们）。 如果使用**sql：溢出字段**指定了这样的列，则所有未映射的数据都将进入溢出列。  
   
  例如，请看此 XSD 架构：  
   
@@ -55,11 +55,11 @@ ms.locfileid: "68055410"
 </xsd:schema>  
 ```  
   
- 因为**HomePhone**特性指定**sql： 映射 ="false"** ，XML 大容量加载不映射到相应的列的此属性。 XSD 架构标识一个溢出列 (**OverflowColumn**) XML 大容量加载在其中存储此未用完的数据。  
+ 由于**HomePhone**属性指定**sql： map = "false"** ，XML 大容量加载不会将此属性映射到相应的列。 XSD 架构标识了一个溢出列（**OverflowColumn**），其中，XML 大容量加载将存储此未使用的数据。  
   
 ### <a name="to-test-a-working-sample"></a>测试工作示例  
   
-1.  创建下的表中**tempdb**数据库：  
+1.  在**tempdb**数据库中创建以下表：  
   
     ```  
     USE tempdb  
@@ -86,8 +86,6 @@ ms.locfileid: "68055410"
   
 4.  若要执行 XML 大容量加载，将此 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) 示例另存为 Sample.vbs 并执行该示例：  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
@@ -97,7 +95,7 @@ ms.locfileid: "68055410"
     set objBL=Nothing  
     ```  
   
- 以下是等效的 XDR 架构：  
+ 这是等效的 XDR 架构：  
   
 ```  
 <?xml version="1.0" ?>  
