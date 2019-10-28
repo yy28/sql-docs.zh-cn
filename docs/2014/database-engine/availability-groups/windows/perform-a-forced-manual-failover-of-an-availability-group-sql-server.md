@@ -15,12 +15,12 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 604eac1d089c488210db2d95ad92f2d23e09f373
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c751f6d7b56cc43c6a8548d4776ce4c2b4f390cb
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62789919"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782874"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的强制手动故障转移 (SQL Server)
   本主题说明如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。 强制故障转移是一种在不可能进行 [计划的手动故障转移](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 时严格限制用于灾难恢复的手动故障转移。 如果您强制故障转移到某一未同步的辅助副本，则可能会丢失一些数据。 因此，我们强烈建议您仅在以下情况下才强制故障转移：您必须立即将服务还原到可用性组并且您愿意承担丢失数据的风险。  
@@ -111,9 +111,9 @@ ms.locfileid: "62789919"
     > [!NOTE]  
     >  在您强制故障转移到辅助副本时，丢失的数据量将取决于故障转移目标落在主副本之后有多远。 但是，在 WSFC 群集缺少仲裁或者仲裁已被强制时，您不能评估可能的数据丢失量。 但请注意，一旦 WSFC 群集重新获得运行状况正常的仲裁后，您可以开始跟踪可能的数据丢失。 有关详细信息，请参阅[故障转移和故障转移模式（AlwaysOn 可用性组）](failover-and-failover-modes-always-on-availability-groups.md)中的“跟踪可能的数据丢失”。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -142,7 +142,7 @@ ms.locfileid: "62789919"
   
      下面的示例强制 `AccountsAG` 可用性组故障转移到本地辅助副本。  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
     ```  
   
@@ -151,7 +151,7 @@ ms.locfileid: "62789919"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **强制故障转移（可能丢失数据）**  
   
-1.  将目录更改 (`cd`) 到承载其角色处于 SECONDARY 或 RESOLVING 状态需要故障转移在可用性组中的副本的服务器实例。  
+1.  将目录（`cd`）更改为一个服务器实例，该服务器实例承载其角色处于需要进行故障转移的可用性组中的辅助或正在解析状态的副本。  
   
 2.  以下列形式之一使用 `Switch-SqlAvailabilityGroup` cmdlet 以及 `AllowDataLoss` 参数：  
   
@@ -161,10 +161,8 @@ ms.locfileid: "62789919"
   
          下面的示例对可用性组 `MyAg` 执行强制故障转移（可能会造成数据丢失），以将故障转移到名为 `SecondaryServer\InstanceName`服务器实例上的次要副本。 系统将提示您确认此操作。  
   
-        ```  
-        Switch-SqlAvailabilityGroup `  
-           -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg `  
-           -AllowDataLoss  
+        ```powershell
+        Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg -AllowDataLoss  
         ```  
   
     -   **-AllowDataLoss-Force**  
@@ -173,10 +171,8 @@ ms.locfileid: "62789919"
   
          下面的示例将对可用性组 `MyAg` 执行强制故障转移（可能造成数据丢失），以将故障转移到名为 `SecondaryServer\InstanceName`的服务器实例。 `-Force` 选项将取消确认此操作。  
   
-        ```  
-        Switch-SqlAvailabilityGroup `  
-           -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg `  
-           -AllowDataLoss -Force  
+        ```powershell
+        Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg -AllowDataLoss -Force  
         ```  
   
     > [!NOTE]  
@@ -263,7 +259,7 @@ ms.locfileid: "62789919"
 ###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  下图说明了为响应在主数据中心发生的灾难性故障而在远程数据中心执行的一系列操作。  
   
- ![主数据中心故障响应步骤](../../media/aoag-failurerecovery-actions-part1.gif "主数据中心故障响应步骤")  
+ ![用于应对主数据中心故障的步骤](../../media/aoag-failurerecovery-actions-part1.gif "用于应对主数据中心故障的步骤")  
   
  在此图中的步骤说明以下步骤：  
   
@@ -279,15 +275,15 @@ ms.locfileid: "62789919"
 > [!IMPORTANT]  
 >  如果已强制 WSFC 群集仲裁，则在脱机节点重新启动时，只要下列两个条件均成立，它们就可以构成新的仲裁：(a) 在强制仲裁集的任何节点之间没有网络连接，(b) 重新启动的节点是群集中的大多数节点。 这可能会导致“裂脑”情形，即可用性组将拥有两个独立的主副本，在各数据中心各有一个。 强制仲裁以创建少数仲裁集之前，请参阅 [通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。  
   
- ![将组返回至其原始拓扑的步骤](../../media/aoag-failurerecovery-actions-part2.gif "将组返回至其原始拓扑的步骤")  
+ ![将组返回到其原始拓扑的步骤](../../media/aoag-failurerecovery-actions-part2.gif "将组返回到其原始拓扑的步骤")  
   
  在此图中的步骤说明以下步骤：  
   
 ||步骤|链接|  
 |-|----------|-----------|  
 |**1.**|主数据中心中的节点返回到联机状态，并且重新建立与 WSFC 群集的通信。 其可用性副本将作为具有挂起的数据库的辅助副本进入联机状态，数据库管理员将需要手动尽快恢复这些数据库中的每个数据库。|[恢复可用性数据库 (SQL Server)](resume-an-availability-database-sql-server.md)<br /><br /> 提示：如果担心在故障转移后主数据库上可能会丢失数据，则应该尝试在同步提交辅助数据库上创建已挂起数据库的数据库快照。 请记住，在其任何辅助数据库被挂起时，事务日志截断在主数据库上被延迟。 此外，只要任何本地数据库保持挂起状态，则同步提交辅助副本的同步运行状况将无法转换到 HEALTHY。|  
-|**2.**|在恢复数据库后，数据库管理员暂时将新的主副本更改为同步提交模式。 这涉及两个步骤：<br /><br /> 1) 将一个脱机可用性副本更改为异步提交模式。 <br />2) 将新的主副本更改为同步提交模式。<br />注意：此步骤将使已恢复的同步提交辅助数据库能够成为 SYNCHRONIZED。|[更改可用性副本的可用性模式 (SQL Server)](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
-|**3.**|在 **节点 03** 上同步提交次要副本（原始主要副本）进入 HEALTHY 同步状态后，数据库管理员将执行到该副本的计划的手动故障转移，使其再次成为主要副本。 **节点 04** 上的副本将恢复成为辅助副本。|[sys.dm_hadr_database_replica_states (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)<br /><br /> [使用 AlwaysOn 策略查看可用性组的运行状况&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [执行可用性组的计划手动故障转移 (SQL Server)](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
+|**2.**|在恢复数据库后，数据库管理员暂时将新的主副本更改为同步提交模式。 这涉及两个步骤：<br /><br /> 1) 将一个脱机可用性副本更改为异步提交模式。 <br />2) 将新的主副本更改为同步提交模式。<br />注意:此步骤将使已恢复的同步提交辅助数据库能够成为 SYNCHRONIZED。|[更改可用性副本的可用性模式 (SQL Server)](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
+|**3.**|在 **节点 03** 上同步提交次要副本（原始主要副本）进入 HEALTHY 同步状态后，数据库管理员将执行到该副本的计划的手动故障转移，使其再次成为主要副本。 **节点 04** 上的副本将恢复成为辅助副本。|[sys.dm_hadr_database_replica_states (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)<br /><br /> [使用 AlwaysOn 策略查看可用性组&#40;的运行状况 SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [执行可用性组的计划手动故障转移 (SQL Server)](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|数据库管理员将连接到新的主副本，并且：<br /><br /> 1) 将以前的主副本（在远程中心中）更改回异步提交模式。<br />2) 将主数据中心中的异步提交辅助副本更改回同步提交模式。|[更改可用性副本的可用性模式 (SQL Server)](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
@@ -307,30 +303,30 @@ ms.locfileid: "62789919"
   
  **排除故障：**  
   
--   [解决 AlwaysOn 可用性组配置问题&#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
+-   [AlwaysOn 可用性组配置&#40;的疑难解答 SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
--   [解决失败的添加文件操作问题&#40;AlwaysOn 可用性组&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [排除失败的添加文件操作&#40;的故障 AlwaysOn 可用性组&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
 -   **博客：**  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：官方 SQL Server AlwaysOn 团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **白皮书：**  
   
-     [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 解决方案指南以实现高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性模式&#40;AlwaysOn 可用性组&#41;](availability-modes-always-on-availability-groups.md)   
- [故障转移和故障转移模式&#40;AlwaysOn 可用性组&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41; 概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [可用性模式&#40;AlwaysOn 可用性组&#41; ](availability-modes-always-on-availability-groups.md)   
+ [故障转移和故障&#40;转移&#41;模式 AlwaysOn 可用性组](failover-and-failover-modes-always-on-availability-groups.md)   
  [关于对可用性副本的客户端连接访问 &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
  [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

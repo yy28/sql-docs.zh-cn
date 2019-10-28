@@ -1,5 +1,5 @@
 ---
-title: 将数据传输 |Microsoft Docs
+title: 传输数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
@@ -15,19 +15,19 @@ ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49754be9b412f9cf6e7d660402527aed954a09fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a51364838173f70c4d5daac794176caa6ea01221
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62519172"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796535"
 ---
 # <a name="transferring-data"></a>传输数据
   <xref:Microsoft.SqlServer.Management.Smo.Transfer> 类是一个实用工具类，它提供用于传输对象和数据的工具。  
   
  通过在目标服务器上执行生成的脚本可以传输数据库架构中的对象。 使用动态创建的 DTS 包传输 <xref:Microsoft.SqlServer.Management.Smo.Table> 数据。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象除包含 DMO 中的 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象的所有功能之外，还包含其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。 但是，在中的 SMO [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，则<xref:Microsoft.SqlServer.Management.Smo.Transfer>对象使用[SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API 将数据传输。 同样，用于执行数据传输的方法和属性驻留在 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象中，而不是 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象中。 将功能从实例类移到实用工具类符合轻型对象模型，因为仅在需要特定任务的代码时才加载它们。  
+ <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象除包含 DMO 中的 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象的所有功能之外，还包含其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。 但是，在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象使用[SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API 来传输数据。 同样，用于执行数据传输的方法和属性驻留在 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象中，而不是 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象中。 将功能从实例类移到实用工具类符合轻型对象模型，因为仅在需要特定任务的代码时才加载它们。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象不支持向 <xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A> 低于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例版本的目标数据库传输数据。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62519172"
 ## <a name="transferring-schema-and-data-from-one-database-to-another-in-visual-basic"></a>在 Visual Basic 中于数据库之间传输架构和数据  
  此代码实例说明如何使用 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象在数据库之间传输架构和数据。  
   
-```VBNET
+```vb
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
@@ -65,7 +65,7 @@ xfr.ScriptTransfer()
 ## <a name="transferring-schema-and-data-from-one-database-to-another-in-visual-c"></a>在 Visual C# 中于数据库之间传输架构和数据  
  此代码实例说明如何使用 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象在数据库之间传输架构和数据。  
   
-```  
+```csharp
 {  
             Server srv;  
             srv = new Server();  
@@ -95,7 +95,7 @@ xfr.ScriptTransfer()
 ## <a name="transferring-schema-and-data-from-one-database-to-another-in-powershell"></a>在 PowerShell 中于数据库之间传输架构和数据  
  此代码实例说明如何使用 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象在数据库之间传输架构和数据。  
   
-```  
+```powershell
 #Connect to the local, default instance of SQL Server.  
   
 #Get a server object which corresponds to the default instance  
@@ -105,11 +105,11 @@ $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server
 $db = $srv.Databases["AdventureWorks2012"]  
   
 #Create a database to hold the copy of AdventureWorks  
-$dbCopy = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Database -argumentlist $srv, "AdventureWorksCopy"  
+$dbCopy = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Database -ArgumentList $srv, "AdventureWorksCopy"  
 $dbCopy.Create()  
   
 #Define a Transfer object and set the required options and properties.  
-$xfr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Transfer -argumentlist $db  
+$xfr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Transfer -ArgumentList $db  
   
 #Set this objects properties  
 $xfr.CopyAllTables = $true  
@@ -123,5 +123,3 @@ $xfr.CopySchema = $true
 #Script the transfer. Alternatively perform immediate data transfer with TransferData method.  
 $xfr.ScriptTransfer()  
 ```  
-  
-  
