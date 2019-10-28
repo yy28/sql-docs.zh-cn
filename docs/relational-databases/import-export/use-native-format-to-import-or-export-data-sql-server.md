@@ -14,12 +14,12 @@ ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca38f321fa06434429b78606d5962cf8623955c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62346249b427f7a6d6162d2c09e22ce54b8b87df
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091496"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908611"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用本机格式导入或导出数据 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,8 +33,6 @@ ms.locfileid: "68091496"
 1.  将源表中的数据批量导出到数据文件中  
   
 2.  将数据文件中的数据批量导入到目标表中  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 在相同的表之间使用本机格式避免了在各数据类型与字符格式之间进行不必要的转换，从而节省了时间和空间。 但是，若要获得最佳的传输速率，应执行几个有关数据格式的检查。 为了防止加载的数据出现问题，请参阅以下限制列表。  
 
@@ -92,7 +90,7 @@ ms.locfileid: "68091496"
 |-------------|------------|-----------------|  
 |bcp|**-n**|使 bcp 实用工具使用本机数据类型的数据。*|  
 |BULK INSERT|DATAFILETYPE **='native'**|使用本机数据类型或宽本机数据类型的数据。 注意，如果格式化文件指定了数据类型，则不需要 DATAFILETYPE。|  
-|OPENROWSET|N/A|必须使用格式化文件|
+|OPENROWSET|空值|必须使用格式化文件|
 
   
  \*若要将本机 ( **-n**) 数据加载到与早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端兼容的格式，请使用 **-V** 开关。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  

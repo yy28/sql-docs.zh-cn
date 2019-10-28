@@ -15,12 +15,12 @@ ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 791864168d216a3cb498b89c2e45ec4384fcdd27
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4a6e56932ab54bc489000c98a29150df984f5991
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769383"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907870"
 ---
 # <a name="synchronize-a-push-subscription"></a>同步推送订阅
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,6 @@ ms.locfileid: "68769383"
 5.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。   完成同步后，将显示消息 **“同步完成”** 。  
   
 6.  单击 **“关闭”** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>在 Management Studio 中按需同步推送订阅（在订阅服务器中）  
   

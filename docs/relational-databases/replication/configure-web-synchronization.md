@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b987fef5bfb36fc84f55f5058f956a691f446a2c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710309"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907237"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +51,6 @@ ms.locfileid: "71710309"
 3.  配置合并发布以允许使用 Web 同步。  
   
 4.  配置一个或多个订阅以使用 Web 同步。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
 >  如果您计划复制大量数据或者使用大型数据类型（如 **varchar(max)** ），请阅读本主题中的“复制大量数据”一节。  

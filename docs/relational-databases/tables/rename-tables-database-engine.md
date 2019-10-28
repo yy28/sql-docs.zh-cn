@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8a9fd43e62bda03b8f994e2a8639524b4bea645
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84aa56263ec926757871bfdf96661b101bc4dba4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016336"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909903"
 ---
 # <a name="rename-tables-database-engine"></a>重命名表（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -69,8 +69,6 @@ ms.locfileid: "68016336"
 4.  若要取消此操作，请在离开此字段前按 Esc 键。  
   
 5.  从“文件”  菜单中，选择“保存 table name”   。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

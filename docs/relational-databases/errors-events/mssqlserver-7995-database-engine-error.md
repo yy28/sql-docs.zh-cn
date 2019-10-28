@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: af6d6322-3cba-43d8-be97-e6ef15f8c933
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d8e8c1f982bfc912cac76207d81178037fb320f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16f2bebd761898fad44cd19c78c02470420b6d18
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007045"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906560"
 ---
-# <a name="mssqlserver7995"></a>MSSQLSERVER_7995
+# <a name="mssqlserver_7995"></a>MSSQLSERVER_7995
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -40,8 +40,6 @@ DBCC CHECKDB 进程包含以下三个阶段：
 2.  系统表一致性检查。 这等效于对所需系统基表的小列表运行 DBCC CHECKTABLE。  
   
 3.  完成数据库一致性检查。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 MSSQLEngine_7995 在第 2 阶段中引发，指示 DBCC CHECKDB 找到该命令无法修复的错误或者尚未指定 REPAIR。 DBCC CHECKDB 无法继续执行第 3 阶段，因为相关的系统基表存储数据库中所有对象的元数据，或者系统基表已损坏。  
   
