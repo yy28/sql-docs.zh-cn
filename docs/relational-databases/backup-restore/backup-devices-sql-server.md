@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f7ae7d1cddf05ce05c71c6a95f64266eae835aff
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152134"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909178"
 ---
 # <a name="backup-devices-sql-server"></a>备份设备 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -208,8 +208,6 @@ GO
 1.  删除原来的逻辑备份设备。  
   
 2.  定义新的逻辑备份设备，新设备使用原来的逻辑设备名称，但映射到不同的物理备份设备。 逻辑备份设备对于标识磁带备份设备尤为有用。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="MirroredMediaSets"></a> 镜像备份媒体集  
  镜像备份介质集可减小备份设备故障的影响。 由于备份是防止数据丢失的最后防线，因此备份设备出现故障的后果是非常严重的。 随着数据库不断增大，备份设备或介质发生故障致使备份不可还原的可能性也相应增加。 镜像备份介质通过提供物理备份设备冗余来提高备份的可靠性。 有关详细信息，请参阅本主题后面的 [镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)不熟悉的读者。  

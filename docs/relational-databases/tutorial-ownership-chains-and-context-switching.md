@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4795fd4ff2cc6c2c267e132062960ec492353cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f010b08f4e9bb7687d45175a70f8d619758e561
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138392"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906996"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>教程：所有权链和上下文切换
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,6 @@ ms.locfileid: "68138392"
 2.  创建存储过程以按采购订单访问数据。   
 3.  通过存储过程访问数据。  
 4.  重置环境。  
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 本示例中的每个代码块都将逐一加以说明。 若要复制完整的示例，请参阅本教程结尾部分的 [完整示例](#CompleteExample) 。
 

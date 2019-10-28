@@ -13,12 +13,12 @@ ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0f7cca09018f9486c831e3803aedb5c969c422d1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7a1be23bebd3055c6c8e40664d37d666a4f09467
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769505"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908363"
 ---
 # <a name="sort-columns"></a>列排序
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ ms.locfileid: "68769505"
 1.  在网格的第一行中，选择 **“列名”** 列中的 **“状态”** 并从 **“排序顺序”** 列中选择一个值。  
   
 2.  在网格的第二行中，选择 **“列名”** 列中的 **“连接类型”** 并从 **“排序顺序”** 列中选择一个值。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="options"></a>选项  
  **“状态”**  

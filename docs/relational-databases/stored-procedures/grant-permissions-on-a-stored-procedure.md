@@ -12,12 +12,12 @@ ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d662d90cf625921f2dc8eb9d1e7d45c14bb99406
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50a7df8f2c9479c957158e96f597655c72ac7b2c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934037"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909718"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>授予对存储过程的权限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,8 +67,6 @@ ms.locfileid: "67934037"
 7.  单击 **”浏览“** 以显示用户或角色列表。 选择应对其授予权限的用户或角色。  
   
 8.  在 **“显式权限”** 网格中，选择要为指定的用户或角色授予的权限。 有关权限的说明，请参阅[权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  选择 **“授予”** 指示要为被授权者授予指定的权限。 选择 **“具有授予权限”** 指示被授权者还可以将指定权限授予其他主体。  
   

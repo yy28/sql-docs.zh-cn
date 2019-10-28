@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: add1b0fc86c5e43bedd1e3ebbf7921fb1e9847c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f16d6cd8cbc27e675da9f8153555dcaf9c99749f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058057"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909930"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和监视变更数据捕获 (SQL Server)
 
@@ -174,8 +174,6 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 3. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开 **“管理”** ，然后展开 **“数据收集”** 。 右键单击“CDC 性能数据收集器”，然后单击“启动数据收集组”   。  
   
 4. 在步骤 1 配置的数据仓库中，找到表 custom_snapshots.cdc_log_scan_data。 该表提供日志扫描会话中的数据的历史快照。 此数据可以用于分析与时间有关的滞后时间、吞吐量和其他性能度量值。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="ScriptUpgrade"></a> 脚本升级模式
 

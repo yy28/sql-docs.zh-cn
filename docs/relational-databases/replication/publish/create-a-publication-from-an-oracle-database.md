@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0b62c9aa125bf249ed3dc895055030feb8e178b1
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 8b43b3b2f67554a59388ccd6a50485e4c71d9e1a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284019"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908601"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>从 Oracle 数据库创建发布
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +77,6 @@ ms.locfileid: "70284019"
     >  如果网络配置出现问题，则在此将收到一条错误。 如果连接 Oracle 数据库时遇到问题，请参阅 [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)中的“SQL Server 分发服务器无法连接到 Oracle 数据库实例”部分。  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-create-a-publication-from-an-oracle-database"></a>从 Oracle 数据库创建发布  
   

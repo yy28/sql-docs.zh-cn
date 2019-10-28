@@ -205,7 +205,7 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 |捷克语（捷克共和国）|0x0405|0x0405|Czech_CI_AS|
 |丹麦语（丹麦）|0x0406|0x0406|Danish_Norwegian_CI_AS|
 |达里语（阿富汗）|0x048c|0x048c|Latin1_General_CI_AI|
-|迪维西语（马尔代夫）|0x0465|0x0465|在服务器级别不可用|
+|迪维希语（马尔代夫）|0x0465|0x0465|在服务器级别不可用|
 |荷兰语（比利时）|0x0813|0x0409|Latin1_General_CI_AS|
 |荷兰语（荷兰）|0x0413|0x0409|Latin1_General_CI_AS|
 |英语（澳大利亚）|0x0c09|0x0409|Latin1_General_CI_AS|

@@ -11,12 +11,12 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 75cf54d5e52b708bf50d45ddefa7beaf1f3a8fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a97bac2561b7d022b2e5028d8f18410b206931b6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086275"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907461"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server Management Studio 支持
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,9 +36,7 @@ ms.locfileid: "68086275"
   
 4.  要向文件组添加文件（容器），请单击  “常规”页。 在 **“数据库文件”** 下，单击 **“添加”** 。 在  “文件类型”中选择  “FILESTREAM 数据”，指定容器的逻辑名称，选择内存优化文件组，并确保  “自动增长/最大大小”设置为  “无限制”。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Database](../../relational-databases/databases/create-a-database.md).  
+     有关如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建新数据库的更多信息，请参阅[创建数据库](../../relational-databases/databases/create-a-database.md)。  
   
 ### <a name="to-create-a-memory-optimized-table"></a>创建内存优化的表  
   

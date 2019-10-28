@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f302d5fec4c9089d764a99e1bb4798be82d8742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b381b8a980d1f50802d024ce377a7de0bfbc6e7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080003"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909460"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>修改现有跟踪 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,8 +29,6 @@ ms.locfileid: "68080003"
 1.  如果跟踪已在运行，请在执行 **sp_trace_setstatus** 时通过指定 **@status = 0** 停止跟踪。  
   
 2.  若要修改跟踪事件，请执行 **sp_trace_setevent** ，并通过参数指定更改。 下面按顺序列出了参数：  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   **@traceid** (Trace ID)  
   

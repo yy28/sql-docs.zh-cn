@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0240c3e4f9f58bfb453e2537695631d8be3aa793
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073715"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909704"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 课：从其他计算机进行连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "68073715"
   
     > [!NOTE]  
     > 对网络协议进行更改后，必须重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务；但此操作是在下一任务中完成的。  
-
-[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="port"></a>配置固定端口  
 为了增强安全性，Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]和 Windows 7 均打开了 Windows 防火墙。 在您从其他计算机连接到此实例时，必须打开防火墙中的通信端口。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的默认实例侦听端口 1433；因此，您不需要配置固定端口。 不过，包括 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 的命令实例会侦听动态端口。 打开防火墙的端口之前，必须首先将 [!INCLUDE[ssDE](../includes/ssde-md.md)] 配置为侦听特定端口（称为固定端口或静态端口）；否则， [!INCLUDE[ssDE](../includes/ssde-md.md)] 可能会在每次启动时侦听不同的端口。 有关防火墙、默认 Windows 防火墙设置的详细信息以及有关影响数据库引擎、Analysis Services、Reporting Services 和 Integration Services 的 TCP 端口的说明，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  

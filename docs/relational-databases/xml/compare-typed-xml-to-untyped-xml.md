@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 30b98cc763b1bfdd47a1d560639a9a6dff5cd49a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b71c6f867bcc03b220b99ac1e28e930dbe8ea89d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112880"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907200"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>类型化的 XML 与非类型化的 XML 的比较
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -153,8 +153,6 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
     3.  任何小于元年 1 月 1 日的 **xs:date** 或 **xs:dateTime** 值在重新生成索引或对包含该值的 XML 数据类型执行 XQuery 或 XML-DML 语句时都将导致运行时错误。  
   
 2.  **xs:date** 或 **xs:dateTime** 方面中的任何负年份或 XML 架构集合中的默认值都将自动更新为基 **xs:date** 或 **xs:dateTime** 类型允许的最小值（例如，对于 **xs:dateTime**，则更新为 0001-01-01T00:00:00.0000000Z）。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  请注意，即使 XML 数据类型包含负年份，仍可以使用简单的 SQL SELECT 语句来检索整个 XML 数据类型。 建议您用新的受支持范围内的年份替代负年份，或将相应元素或属性的类型更改为 **xs:string**。  
   

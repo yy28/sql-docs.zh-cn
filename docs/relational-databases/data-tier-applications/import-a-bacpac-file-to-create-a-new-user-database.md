@@ -25,12 +25,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e7a72be3cbf18cd2adf821f3310a1ea6801ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88f53ba0372b56fce72a23fe33790c822729d8d1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134770"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908488"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "68134770"
 1.  导入过程使用存储在导出文件中的 DAC 定义创建新的 DAC 和关联的数据库，同样，DAC 部署使用 DAC 包文件中的定义创建新的 DAC。  
   
 2.  导入过程将从导出文件中大容量复制数据。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="sql-server-utility"></a>SQL Server 实用工具  
  如果将 DAC 导入到数据库引擎的实例，则在下次将实用工具收集组从该实例发送到实用工具控制点时，导入的 DAC 将合并到 SQL Server 实用工具中。 然后，该 DAC 将出现 **中的** “实用工具资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **“已部署的数据层应用程序”** 节点下，并且在 **中的** 详细信息页中报告。  

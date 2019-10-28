@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1f0ae81c7b58fde86de13bc7cdd83451592183ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ebda9e472f2b276b66d393a808aaac3e8b595b1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946828"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907630"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>启用或禁用计划指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "67946828"
 3.  右键单击要禁用或启用的计划指南，然后选择“禁用”  或“启用”  。  
   
 4.  在 **“禁用计划指南”** 或 **“启用计划指南”** 对话框中，验证所选操作已经成功，然后单击 **“关闭”** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>禁用或启用数据库中的所有计划指南  
   

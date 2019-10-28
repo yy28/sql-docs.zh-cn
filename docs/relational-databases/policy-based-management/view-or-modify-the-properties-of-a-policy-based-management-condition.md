@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cf9e1f93298231ec05e645171ffe5b421075c8b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c904edf49ca2f07e2cb715821f9858ea25302311
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021439"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909806"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>查看或修改基于策略的管理条件的属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "68021439"
 5.  右键单击要查看或编辑的条件，然后选择“属性”  。 若要深入了解“打开条件 - condition_name”对话框中的可用选项，请参阅[“创建新条件”或“打开条件”对话框，“常规”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)、[“打开条件”对话框，“依赖策略”页](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md)、[“创建新条件”或“打开条件”对话框，“说明”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md)和[“高级编辑”（条件）对话框](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md)   。  
   
 6.  完成后，单击 **“确定”** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

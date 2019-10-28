@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 69c88ccf053037e67312374cdeec615b31c8cb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b1fa3ed90caa1e7791aff61ca5394a77d72b384
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041266"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908800"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>查看备份集中的数据文件和日志文件 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68041266"
 4.  在 **“选择页”** 窗格中，单击 **“文件”** 。  
   
 5.  在 **“数据库文件”** 网格查找数据和日志文件及其属性的列表。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

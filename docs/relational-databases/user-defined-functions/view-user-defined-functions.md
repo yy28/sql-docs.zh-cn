@@ -19,12 +19,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8390690ebbdef66d0a5c754e7a0e5db2f31437de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 076fd5f22fb7df7801ce0dacb08126a55a735d40
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123522"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905522"
 ---
 # <a name="view-user-defined-functions"></a>查看用户定义函数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,48 +70,46 @@ ms.locfileid: "68123522"
   
 4.  右键单击要查看其属性的函数，然后选择“属性”  。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
+     以下属性将显示在“函数属性 - function_name”对话框   。  
   
-     **Database**  
-     The name of the database containing this function.  
+     **“数据库”**  
+     包含此函数的数据库的名称。  
   
      **Server**  
-     The name of the current server instance.  
+     当前服务器实例的名称。  
   
-     **User**  
-     The name of the user of this connection.  
+     **用户**  
+     此连接的用户名。  
   
-     **Created date**  
-     Displays the date the function was created.  
+     **创建日期**  
+     显示函数的创建日期。  
   
-     **Execute As**  
-     Execution context for the function.  
+     **执行身份**  
+     执行该函数的上下文。  
   
-     **Name**  
-     The name of the current function.  
+     **名称**  
+     当前函数的名称。  
   
-     **Schema**  
-     Displays the schema that owns the function.  
+     **架构**  
+     显示函数所属的架构。  
   
-     **System object**  
-     Indicates whether the function is a system object. Values are True and False.  
+     **系统对象**  
+     指示该函数是否为系统对象。 值为 True 和 False。  
   
      **ANSI NULLs**  
-     Indicates if the object was created with the ANSI NULLs option.  
+     指示创建对象时是否选择了 ANSI NULLs 选项。  
   
-     **Encrypted**  
-     Indicates whether the function is encrypted. Values are True and False.  
+     **已加密**  
+     指示该函数是否已加密。 值为 True 和 False。  
   
-     **Function Type**  
-     The type of user defined function.  
+     **函数类型**  
+     用户定义函数的类型。  
   
-     **Quoted identifier**  
-     Indicates if the object was created with the quoted identifier option.  
+     **带引号的标识符**  
+     指示创建对象时是否选择了“带引号的标识符”选项。  
   
-     **Schema bound**  
-     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
+     **架构已绑定**  
+     指示该函数是否已绑定到架构。 值为 True 和 False。 有关绑定到架构的函数的信息，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 的 SCHEMABINDING 部分。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

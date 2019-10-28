@@ -16,12 +16,12 @@ ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e5ece02e70639ce91aeec72827838c9ad8d7ab8d
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 7fac24aec092ef65bb390d8df020999647f215c6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846701"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908269"
 ---
 # <a name="delete-a-push-subscription"></a>删除推送订阅
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,8 +51,6 @@ ms.locfileid: "70846701"
 4.  右键单击该订阅，再单击 **“删除”** 。  
   
 5.  在确认对话框中，选择是否连接到订阅服务器以删除订阅信息。 如果清除了 **“连接到订阅服务器”** 复选框，则应以后连接到订阅服务器删除信息。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-delete-a-push-subscription-at-the-subscriber"></a>删除订阅服务器上的推送订阅  
   

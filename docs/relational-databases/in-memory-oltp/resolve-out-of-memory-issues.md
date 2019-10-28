@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2dd428c7f035cf73e679bbd6c47e78f1f745457
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111822"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908443"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +77,6 @@ ms.locfileid: "68111822"
   
 2.  [采取纠正措施](#bkmk_takeCorrectiveAction)  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  <a name="bkmk_openDAC"></a> 打开 DAC（专用管理员连接）  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了专用管理员连接 (DAC)。 即使服务器对其他客户端连接停止响应，管理员也可以使用 DAC 访问正在运行的 SQL Server 数据库引擎实例来排除服务器上的故障。 `sqlcmd` 实用工具和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中都包含 DAC。  
   
@@ -101,7 +99,7 @@ ms.locfileid: "68111822"
   
 #### <a name="increase-available-memory"></a>增加可用内存  
   
-##### <a name="increase-value-of-maxmemorypercent-on-the-resource-pool"></a>增加资源池的 MAX_MEMORY_PERCENT 值  
+##### <a name="increase-value-of-max_memory_percent-on-the-resource-pool"></a>增加资源池的 MAX_MEMORY_PERCENT 值  
  如果尚未为内存中表创建命名资源池，应该创建一个，并将 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 数据库与其绑定。 有关如何创建并将 [数据库与资源池绑定的指南，请参阅主题](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) 将具有内存优化表的数据库绑定至资源池 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 。  
   
  如果 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 数据库绑定至资源池，可以增加资源池可访问的内存百分比。 有关如何更改资源池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 值的指南，请参阅子主题 [更改现有池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) 。  

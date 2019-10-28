@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9e3de9c6652de3ddd8d80bbc2d09b003acfe5220
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: db445d9c80c6a6e2552160dcff721c06d5c107e6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710679"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907789"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>合并复制的冲突解决
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,8 +72,6 @@ ms.locfileid: "71710679"
     -   选择 **“记录此冲突的详细信息”** 将冲突数据记录到一个文件中。 若要指定文件的位置，请指向 **“查看”** 菜单，然后单击 **“选项”** 。 输入一个值，或单击浏览按钮 ( **...** )，然后导航到相应文件。 单击 **“确定”** 可退出 **“选项”** 对话框。  
   
 6.  关闭复制冲突查看器。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="view-conflict-information"></a>查看冲突信息
 在合并复制中解决冲突后，落选行中的数据将写入冲突表中。 这些冲突数据可以使用复制存储过程以编程方式进行查看。 有关详细信息，请参阅 [高级合并复制冲突的检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  

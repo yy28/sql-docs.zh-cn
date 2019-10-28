@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a77c321f5ba63e7c6db3d1aac47b6ad4b0c2027a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020029"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907185"
 ---
 # <a name="configure-an-oracle-publisher"></a>配置 Oracle 发布服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ ms.locfileid: "68020029"
 3.  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上安装 Oracle 客户端软件和 OLE DB 访问接口，然后重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 如果分发服务器运行在 64 位平台上，则必须使用 64 位版本的 Oracle OLE DB 访问接口。  
   
 4.  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上将 Oracle 数据库配置为发布服务器。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持下列异类事务复制和快照复制方案：  
   

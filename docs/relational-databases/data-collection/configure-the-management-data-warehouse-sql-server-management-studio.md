@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 207f8816df5cc64240d91d389f7a662688123fc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1848be82d5ed1ddfbefd693303104ac4688eb59
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140765"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909670"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>配置管理数据仓库 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +58,6 @@ ms.locfileid: "68140765"
     -   右键单击“数据收集”  ，然后单击“属性”  。 在 **“常规”** 选项卡上，指定现有的管理数据仓库以及安装该管理数据仓库的服务器。  
   
 6.  重复步骤 5 直至将使用该数据收集的所有数据库实例均配置为将数据上载到共享的管理数据仓库。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ####  <a name="Wizard"></a> 配置管理数据仓库向导  
  **“欢迎”页**  

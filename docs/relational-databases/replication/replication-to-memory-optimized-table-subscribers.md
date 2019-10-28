@@ -11,12 +11,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b6ead290451c17499825f051158020b2b88b37b9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bf597d5a9be6a1e2e7fb3f045cd329f861379ad4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769660"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908299"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>复制到内存优化表订阅服务器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,8 +47,6 @@ ms.locfileid: "68769660"
 4.  启动快照代理作业以为此发布生成初始快照。 有关详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
 5.  此时，创建新订阅。 在“新建订阅向导”  中，将“内存优化订阅”  设置为“true”  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  内存优化表现在应该开始从发布服务器接收更新。  
   

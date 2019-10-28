@@ -15,12 +15,12 @@ ms.assetid: b0e57cb7-9b26-4b96-b76a-1f59f5f498c5
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f98435c4c8813d6cf5f9b9d3f451b9be0bb8f284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb42d6630d5dd4632a9674c2b783aa2059f80cda
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129532"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905797"
 ---
 # <a name="view-foreign-key-properties"></a>查看外键属性
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -53,8 +53,6 @@ ms.locfileid: "68129532"
 1.  对于包含要查看的外键的表，打开表设计器，在表设计器中单击右键，然后从快捷菜单中选择“关系”  。  
   
 2.  在 **“外键关系”** 对话框中，选择要查看其属性的关系。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  如果外键列与主键相关，则主键列在 **“表设计器”** 中将由行选择器中的主键符号进行标识。  
   

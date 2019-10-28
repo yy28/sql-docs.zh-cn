@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c6cf247d20cdc25fe18e5d263b62fd87b561b5b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69d5766b7431f1352b292306f595033a3070053b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055529"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909633"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>使用 SQL Server Profiler 创建 SQL 跟踪收集组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,8 +25,6 @@ ms.locfileid: "68055529"
 1.  创建并导出 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪。  
   
 2.  根据导出的跟踪编写新的收集组脚本。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  以下过程的应用场景包括收集任何存储过程的相关数据，此过程需要 80 毫秒或更长的时间才能完成。 若要完成这些过程，您应该能够：  
   

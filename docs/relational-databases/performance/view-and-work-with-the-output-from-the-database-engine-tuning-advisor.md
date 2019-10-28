@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 481a6a0a109683c94ef754ea679a801a92a8aabc
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811357"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907039"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>查看和使用数据库引擎优化顾问的输出
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68811357"
 5.  取消选中 **“建议”** 选项卡式页面底部的 **“显示现有对象”** 。 这将导致网格仅显示建议中引用的那些数据库对象。 使用底部滚动条来查看建议网格中最右侧的列，再单击“定义”  列中的某一项来查看或复制在数据库中创建该对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。  
   
 6.  若要将此建议中创建或删除所有数据库对象的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本另存为一个脚本文件，请单击 **“操作”** 菜单上的 **“保存建议”** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>使用数据库引擎优化顾问 GUI 查看优化摘要和报告  
   

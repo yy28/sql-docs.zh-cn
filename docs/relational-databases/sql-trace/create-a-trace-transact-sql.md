@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 22e393c2758342c0d4a48b8b03ed757d8f95d38c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c1641f0aad5758f709776322e7eb66f93fcca0f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073012"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909233"
 ---
 # <a name="create-a-trace-transact-sql"></a>创建跟踪 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +32,10 @@ ms.locfileid: "68073012"
   
 3.  也可以执行 **sp_trace_setfilter** 以设置任意筛选或筛选组合。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     **sp_trace_setevent** and **sp_trace_setfilter** can be executed only on existing traces that are stopped.  
+     **sp_trace_setevent** 和 **sp_trace_setfilter** 只能在已停止的现有跟踪上执行。  
   
     > [!IMPORTANT]  
-    >  Unlike regular stored procedures, parameters of all SQL Server Profiler stored procedures (<strong>sp_trace_*xx*</strong>) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
+    >  与常规存储过程不同的是，必须严格键入所有 SQL Server Profiler 存储过程的参数 (<strong>sp_trace_xx</strong>)，而且这些参数不支持数据类型自动转换  。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
 ## <a name="example"></a>示例  
  下面的代码演示如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建跟踪。 代码分为三部分：创建跟踪、填充跟踪文件以及停止跟踪。 通过添加要跟踪的事件来自定义跟踪。 有关事件和列的列表，请参阅 [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)创建跟踪。  

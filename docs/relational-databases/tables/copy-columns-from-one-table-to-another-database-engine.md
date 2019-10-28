@@ -14,12 +14,12 @@ ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f7d5fa8c7398f57cfc5272109b9efc0f24077cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75046ec1915de92a1319b273bd2cce8e718aac1b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085750"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909778"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>将列从一个表复制到另一个表 (数据库引擎)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "68085750"
 4.  单击要将列复制到的表的选项卡。  
   
 5.  选择要排在插入列之后的列，然后在 **“编辑”** 菜单中，单击 **“粘贴”** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-copy-data-from-one-table-to-another"></a>将数据从一个表复制到另一个表  
   

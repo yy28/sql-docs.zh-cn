@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7b55822e011b03044d9fafad4ff2b30884ea5ec2
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 11628e5b490c30ef64329f6b9d06aee1b6c10fa9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846708"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908285"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>创建并应用初始快照
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "70846708"
     >  快照代理必须对指定的目录具有写权限，而分发代理或合并代理必须具有读权限。 如果使用的是请求订阅，则必须指定一个共享目录作为通用命名约定 (UNC) 路径，如 \\\computername\snapshot。 有关详细信息，请参阅[保护快照文件夹](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-snapshot"></a>创建快照
 默认情况下，如果运行 SQL Server 代理，在使用“新建发布向导”创建发布后，快照代理将立即生成快照。 然后，默认情况下将由分发代理（对于快照复制和事务复制）或合并代理（对于合并订阅）把此快照应用于所有订阅。 还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和复制监视器生成快照。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
@@ -136,7 +134,7 @@ ms.locfileid: "70846708"
   
     -   **-DistributorLogin**    
     -   **-DistributorPassword**   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**    
+    -   **-DistributorSecurityMode** =  **\@publisher_security_mode**    
     -   **-PublisherLogin**    
     -   **-PublisherPassword**    
     -   **-PublisherSecurityMode** =  **@publisher_security_mode**  

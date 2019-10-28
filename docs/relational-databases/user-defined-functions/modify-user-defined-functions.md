@@ -11,12 +11,12 @@ ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60a013c1e0fb7bf13a25b444faa78060fd72f885
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 391c4f3013754e4b641241bacb025c63a68cb68e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123587"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906682"
 ---
 # <a name="modify-user-defined-functions"></a>修改用户定义函数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,8 +73,6 @@ ms.locfileid: "68123587"
 5.  在查询窗口中，对 ALTER FUNCTION 语句进行必要的更改。  
   
 6.  在“文件”  菜单上，点击“保存”  function_name  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

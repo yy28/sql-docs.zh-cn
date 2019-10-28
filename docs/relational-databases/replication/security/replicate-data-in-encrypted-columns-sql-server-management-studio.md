@@ -15,12 +15,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e311043882f88f7063a5709c761a88f84cb76066
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: cbaf7db0d5c0e4588f22d0048c96e1f7c88d87b0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769595"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907438"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>复制加密列中的数据 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,8 +41,6 @@ ms.locfileid: "68769595"
 6.  使用与步骤 1 中相同的 ALGORITHM、KEY_SOURCE 和 IDENTITY_VALUE 值在订阅服务器上重新创建对称密钥。  
   
 7.  访问加密列数据。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
 >  您应当使用对称密钥来加密列数据。 可以在发布服务器和订阅服务器上采取不同方式为对称密钥本身进行保护。  

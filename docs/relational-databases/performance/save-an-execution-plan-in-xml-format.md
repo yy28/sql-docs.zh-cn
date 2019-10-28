@@ -17,12 +17,12 @@ ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16625dea87649bde97a854a507ab89831b7681e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113388"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909787"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式保存执行计划
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68113388"
     ```  
   
      > [!NOTE] 
-     > SHOWPLAN_XML 将会为查询生成编译时查询执行计划信息，但是不会执行查询。 这也称为估计的执行计划。 STATISTICS XML 将会为查询生成运行时查询执行计划信息，而且会执行查询。 这也称为实际的执行计划。  
+     > SHOWPLAN_XML 将会为查询生成编译时查询执行计划信息，但是不会执行查询。 这也称为估计的执行计划  。 STATISTICS XML 将会为查询生成运行时查询执行计划信息，而且会执行查询。 这也称为实际的执行计划  。  
   
 3.  执行查询。 例如：  
   
@@ -66,33 +66,31 @@ ms.locfileid: "68113388"
     SET SHOWPLAN_XML OFF;  
     ```  
   
-4.  在“结果”窗格中，右键单击包含查询计划的“Microsoft SQL Server XML 显示计划”，然后单击“将结果另存为”。  
+4.  在“结果”  窗格中，右键单击包含查询计划的“Microsoft SQL Server XML 显示计划”  ，然后单击“将结果另存为”  。  
   
-5.  在“保存 \<网格或文本> 结果”对话框中的“保存类型”框中，单击“所有文件(\*.\*)”。  
+5.  在“保存 \<网格或文本> 结果”   对话框中的“保存类型”  框中，单击“所有文件(\*.\*)”  。  
   
-6.  在“文件名”框中，提供“\<名称>.sqlplan”格式的名称，然后单击“保存”。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+6.  在“文件名”框中，提供“\<名称>.sqlplan”格式的名称，然后单击“保存”    。  
 
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>使用 SQL Server Management Studio 选项保存执行计划  
   
 1.  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]生成估计的执行计划或实际的执行计划。 有关详细信息，请参阅[显示估计的执行计划](../../relational-databases/performance/display-the-estimated-execution-plan.md)和[显示实际的执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)。  
   
-2.  在“结果”窗格的“执行计划”选项卡上，右键单击图形执行计划，然后选择“将执行计划另存为”。  
+2.  在“结果”窗格的“执行计划”  选项卡上，右键单击图形执行计划，然后选择“将执行计划另存为”  。  
   
      此外，还可以在 **“文件”** 菜单上选择 **“将执行计划另存为”** 。  
   
-3.  在“另存为”对话框中，确保将“保存类型”设置为“执行计划文件(\*.sqlplan)”。  
+3.  在“另存为”  对话框中，确保将“保存类型”  设置为“执行计划文件(\*.sqlplan)”  。  
   
-4.  在“文件名”框中，提供“\<名称>.sqlplan”格式的名称，然后单击“保存”。  
+4.  在“文件名”框中，提供“\<名称>.sqlplan”格式的名称，然后单击“保存”    。  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中打开保存的 XML 查询计划  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“文件”** 菜单上，选择 **“打开”**，然后单击 **“文件”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“文件”** 菜单上，选择 **“打开”** ，然后单击 **“文件”** 。  
   
-2.  在“打开文件”对话框中，将“文件类型”设置为“执行计划文件(\*.sqlplan)”，以筛选出保存的 XML 查询计划文件的列表。  
+2.  在“打开文件”  对话框中，将“文件类型”  设置为“执行计划文件(\*.sqlplan)”  ，以筛选出保存的 XML 查询计划文件的列表。  
   
-3.  选择要查看的 XML 查询计划文件，然后单击 **“打开”**。  
+3.  选择要查看的 XML 查询计划文件，然后单击 **“打开”** 。  
   
      此外，还可以在 Windows 资源管理器中双击扩展名为 **.sqlplan**的文件。 该计划便会在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开。  
   

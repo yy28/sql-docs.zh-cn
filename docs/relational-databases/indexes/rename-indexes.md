@@ -15,12 +15,12 @@ ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02d60e0f6d3aab14f2aef73e63d0fdc0077534ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 83c53aa2e8c7700f5aa7b3c87dc0683f3c7ed447
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909627"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906308"
 ---
 # <a name="rename-indexes"></a>重命名索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,19 +59,17 @@ ms.locfileid: "67909627"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击你要重命名索引的表，然后选择“设计”。  
+3.  右键单击你要重命名索引的表，然后选择“设计”  。  
   
-4.  在“表设计器”菜单上，单击“索引/键”。  
+4.  在“表设计器”  菜单上，单击“索引/键”  。  
   
-5.  在“选定的主/唯一键或索引”文本框中，选择你要重命名的索引。  
+5.  在“选定的主/唯一键或索引”  文本框中，选择你要重命名的索引。  
   
 6.  在网格中，单击 **“名称”** 并在文本框中键入新名称。  
   
-7.  单击 **“关闭”**。  
+7.  单击 **“关闭”** 。  
   
-8.  在“文件”菜单上，单击“保存”以保存 _table_name_。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+8.  在“文件”  菜单上，单击“保存”  以保存 _table_name_。  
 
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>通过使用对象资源管理器重命名索引  
   
@@ -83,7 +81,7 @@ ms.locfileid: "67909627"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要重命名的索引，然后选择“重命名”。  
+5.  右键单击要重命名的索引，然后选择“重命名”  。  
   
 6.  键入索引的新名称，再按 Enter。  
   
@@ -93,9 +91,9 @@ ms.locfileid: "67909627"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

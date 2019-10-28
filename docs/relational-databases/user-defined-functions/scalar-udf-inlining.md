@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: cfc56126ae84cc8674e7316b45e855584fdabde7
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: c778894dbe532a64c4907c9e4281ecf076da70dc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517996"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909314"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
@@ -134,8 +134,6 @@ SQL Server 2017 （兼容级别 140 及更早版本）中此查询的执行计�
 1. SQL Server 推断出了 `CUSTOMER` 和 `ORDERS` 之间的隐式联接，并通过联接运算符将其显式化。
 2. SQL Server 也推断出了隐式 `GROUP BY O_CUSTKEY on ORDERS` 并使用 IndexSpool + StreamAggregate 实现了它。
 3. SQL Server 现在在所有运算符中都使用并行。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 根据 UDF 中逻辑的复杂性，所生成的查询计划也可能变得更大更复杂。 我们可以看到，UDF 中的操作现在不再是黑盒，因此查询优化器能够降低成本并优化这些操作。 此外，由于 UDF 不再在计划中，因此将用完全避免函数调用开销的计划来取代迭代 UDF 调用。
 

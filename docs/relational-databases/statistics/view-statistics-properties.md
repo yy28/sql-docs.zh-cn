@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6804d7df60b0d16445399c609b35addc0da5cb49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45c297ea29dbab974f72f4ecf69deb5c65f57bbb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934099"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908018"
 ---
 # <a name="view-statistics-properties"></a>查看统计信息属性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "67934099"
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
-5.  双击要查看其属性的统计信息对象，然后选择“属性”。  
+5.  双击要查看其属性的统计信息对象，然后选择“属性”  。  
   
-6.  在“统计信息属性 - statistics_name”对话框的“选择页”窗格中，选择“详细信息”。  
+6.  在“统计信息属性 -  statistics_name”  对话框的“选择页”  窗格中，选择“详细信息”  。  
   
-     以下属性将显示在“统计信息属性 - statistics_name”对话框的“详细信息”页上。  
+     以下属性将显示在“统计信息属性 -   statistics_name”对话框的“详细信息”  页上。  
   
      **表名**  
      显示统计信息中所涉及表的名称。  
@@ -90,13 +90,13 @@ ms.locfileid: "67934099"
      直方图中的梯级数。 每个梯级都跨越一个列值范围，后跟上限列值。 直方图梯级是根据统计信息中的第一个键列定义的。 最大梯级数为 200。  
   
      **Density**  
-     计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值。 查询优化器不使用此 Density 值，显示此值的目的是为了与 SQL Server 2008 之前的版本实现向后兼容。  
+     计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值  。 查询优化器不使用此 Density 值，显示此值的目的是为了与 SQL Server 2008 之前的版本实现向后兼容。  
   
      **Average Key Length**  
      统计信息对象中所有键列的每个值的平均字节数。  
   
      **String Index**  
-     Yes 指示统计信息对象包含字符串摘要统计信息，以改进对使用 LIKE 运算符的查询谓词的基数估计；例如 `WHERE ProductName LIKE '%Bike'`。 字符串摘要统计信息与直方图分开存储，如果统计信息对象为 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar(max)**、 **nvarchar(max)**、 **text**或 **ntext**类型，则基于其第一个键列创建字符串摘要统计信息。  
+     Yes 指示统计信息对象包含字符串摘要统计信息，以改进对使用 LIKE 运算符的查询谓词的基数估计；例如 `WHERE ProductName LIKE '%Bike'`。 字符串摘要统计信息与直方图分开存储，如果统计信息对象为 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar(max)** 、 **nvarchar(max)** 、 **text**或 **ntext**类型，则基于其第一个键列创建字符串摘要统计信息。  
   
      **筛选表达式**  
      包含在统计信息对象中的表行子集的谓词。 NULL = 未筛选的统计信息。  
@@ -107,7 +107,7 @@ ms.locfileid: "67934099"
      下面的信息介绍结果集中为密度向量返回的列。  
   
      **All Density**  
-     密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 和 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)。  
+     密度为 1/非重复值  。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 和 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)。  
   
      **Average Length**  
      存储列前缀的列值列表的平均长度（以字节为单位）。 例如，如果列表 (3, 5, 6) 中的每个值都需要 4 个字节，则长度为 12 个字节。  
@@ -132,9 +132,7 @@ ms.locfileid: "67934099"
      **AVG_RANGE_ROWS**  
      重复列值位于直方图梯级内（不包括上限）的平均行数（如果 DISTINCT_RANGE_ROWS > 0，则为 RANGE_ROWS / DISTINCT_RANGE_ROWS）。  
   
-7.  单击“确定” 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+7.  单击“确定”  。  
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -142,9 +140,9 @@ ms.locfileid: "67934099"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -160,9 +158,9 @@ ms.locfileid: "67934099"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;   

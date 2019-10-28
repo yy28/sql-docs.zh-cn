@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7b39b4391780a8133dae199e39638a6db77d73aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64427c005dca0e7a69dcc73b953260429b325332
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083906"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908540"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>创建维护计划（维护计划设计图面）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -231,50 +231,48 @@ ms.locfileid: "68083906"
   
 12. 若要在日志文件查看器中查看结果，请在“对象资源管理器”  中右键单击“维护计划”  文件夹或特定维护计划，然后选择“查看历史记录”  。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
+     “日志文件查看器 -server\_name”对话框中提供以下选项   。  
   
-     **Load Log**  
-     Open a dialog box where you can specify a log file to load.  
+     **加载日志**  
+     打开一个对话框，您可以在其中指定要加载的日志文件。  
   
-     **Export**  
-     Open a dialog box that lets you export the information that is shown in the **Log file summary** grid to a text file.  
+     **导出**  
+     打开一个对话框，你可以使用该对话框将“日志文件摘要”  网格中显示的信息导入到文本文件中。  
   
-     **Refresh**  
-     Refresh the view of the selected logs. The **Refresh** button rereads the selected logs from the target server while applying any filter settings.  
+     **“刷新”**  
+     刷新选定日志的视图。 在应用任何筛选器设置时， **“刷新”** 按钮重新从目标服务器中读取选定的日志。  
   
-     **Filter**  
-     Open a dialog box that lets you specify settings that are used to filter the log file, such as **Connection**, **Date**, or other **General** filter criteria.  
+     **筛选**  
+     打开一个对话框，你可以使用该对话框指定用于筛选日志文件的设置，例如“连接”  、“日期”  或其他“常规”  筛选条件。  
   
-     **Search**  
-     Search the log file for specific text. Searching with wildcard characters is not supported.  
+     **搜索**  
+     在日志文件中搜索特定文本。 不支持在搜索中使用通配符。  
   
-     **Stop**  
-     Stops loading the log file entries. For example, you can use this option if a remote or offline log file takes a long time to load, and you only want to view the most recent entries.  
+     **停止**  
+     停止加载日志文件条目。 例如，如果远程或脱机日志文件需要较长时间才能加载，并且您只想查看最新的条目，则可以使用此选项。  
   
-     **Log file summary**  
-     This information panel displays a summary of the log file filtering. If the file is not filtered, you will see the following text, **No filter applied**. If a filter is applied to the log, you will see the following text, **Filter log entries where:** \<filter criteria>.  
+     **日志文件摘要**  
+     此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”** 。 如果对日志应用了筛选器，你将看到以下文本： **“基于以下条件筛选日志条目:**  \<筛选条件>”。  
   
      **Date**  
-     Displays the date of the event.  
+     显示事件的日期。  
   
-     **Source**  
-     Displays the source feature from which the event is created, such as the name of the service (MSSQLSERVER, for example). This does not appear for all log types.  
+     **数据源**  
+     显示从其创建事件的源功能，例如服务的名称（如 MSSQLSERVER）。 并非对所有日志类型都显示此项。  
   
-     **Message**  
-     Displays any messages associated with the event.  
+     **消息**  
+     显示与事件相关联的任何消息。  
   
-     **Log Type**  
-     Displays the type of log to which the event belongs. All selected logs appear in the log file summary window.  
+     **日志类型**  
+     显示事件所属的日志类型。 所有选定的日志都显示在日志文件摘要窗口中。  
   
-     **Log Source**  
-     Displays a description of the source log in which the event is captured.  
+     **日志源**  
+     显示在其中捕获事件的源日志的说明。  
   
-     **Selected row details**  
-     Select a row to display additional details about the selected event row at the bottom of the page. The columns can be reordered by dragging them to new locations in the grid. The columns can be resized by dragging the column separator bars in the grid header to the left or right. Double-click the column separator bars in the grid header to automatically size the column to the content width.  
+     **所选行详细信息**  
+     选择一行可以在页面底部显示有关所选事件行的其他详细信息。 在网格中，通过将列拖动到的新位置可以重新排列各列的顺序。 通过将网格标题中的列分隔条向左或向右拖动，可以调列的大小。 双击网格标题中的列分隔条，可以按内容宽度自动调整列的大小。  
   
-     **Instance**  
-     The name of the instance on which the event occurred. This is displayed as *computer name*\\*instance name*.  
+     **实例**  
+     发生事件的实例的名称。 这显示为：计算机名称\\实例名称   。  
   
   

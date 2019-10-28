@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 4cc3498d-5449-4c4e-b1f9-3271831c725a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9e8341b3212229a29dec9291fd6d5206725b1788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01573bcf745efcdc1f4865ac9157c71ef65cb9bf
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132271"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907693"
 ---
-# <a name="mssqlserver8651"></a>MSSQLSERVER_8651
+# <a name="mssqlserver_8651"></a>MSSQLSERVER_8651
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -55,8 +55,6 @@ ms.locfileid: "68132271"
     注意不正常的设置。 根据需要更正它们。 SQL Server 联机丛书的“设置服务器配置选项”中列出了默认设置。  
   
 4.  检查工作负荷（例如，并发会话数，当前执行的查询）。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 以下操作可能会为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供更多内存：  
   

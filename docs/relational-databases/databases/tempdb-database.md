@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d901c19587db97532be101ff66af69a1808463f3
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: a7a1f692abdb5f9ce1b9fd69c494f719b9027c22
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289300"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909551"
 ---
 # <a name="tempdb-database"></a>TempDB 数据库
 
@@ -47,8 +47,6 @@ TempDB 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVers
   - 由数据修改事务为实现联机索引操作、多个活动的结果集 (MARS) 以及 AFTER 触发器等功能而生成的行版本。  
   
 TempDB  中的操作是最小日志记录操作，以便回滚事务。 每次启动 时都会重新创建 **TempDB**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，从而在系统启动时总是具有一个干净的数据库副本。 在断开联接时会自动删除临时表和存储过程，并且在系统关闭后没有活动连接。 因此 TempDB  中不会有什么内容从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话保存到另一个会话。 不允许对 TempDB  进行备份和还原操作。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server 中 TempDB 的物理属性
 

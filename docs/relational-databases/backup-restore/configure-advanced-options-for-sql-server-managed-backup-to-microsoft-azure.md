@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b9f63c9fed9be5a88c68c88938b77483a077df1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7487f89c6868555c6e3e27a217bce12123b16642
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081361"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908981"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>配置 SQL Server Managed Backup to Microsoft Azure 的高级选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ ms.locfileid: "68081361"
   
 ## <a name="configure-encryption"></a>配置加密  
  以下步骤说明了如何使用存储过程 [managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) 来指定加密设置。  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1.  **确定加密算法：** 首先，确定要使用的加密算法的名称。 选择以下算法之一：  
   

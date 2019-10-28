@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0d494427e4963dcd1a6afbde4195255ca4f3585d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1696860fd97d1622389cd7ac02ed96919663b5d6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768176"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908528"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -92,8 +92,6 @@ ms.locfileid: "68768176"
 9. 在 **“视图”** 菜单上，单击 **“代码”** 。  
   
 10. 在代码的命名空间语句前，键入以下 **using** 语句，限定 RMO 命名空间中的类型：  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     // These namespaces are required.  

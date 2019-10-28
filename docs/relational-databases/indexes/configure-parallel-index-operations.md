@@ -17,12 +17,12 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d06c62167071f8044d6c732efbbb5c4590e3a37
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 627fa6a19c88507034bfbd8a7236b94e17242851
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289310"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908130"
 ---
 # <a name="configure-parallel-index-operations"></a>配置并行索引操作
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,15 +93,13 @@ ms.locfileid: "72289310"
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要为其设置最大并行度的索引，然后选择“属性”。  
+5.  右键单击要为其设置最大并行度的索引，然后选择“属性”  。  
   
-6.  在 **“选择页”** 下，选择 **“选项”**。  
+6.  在 **“选择页”** 下，选择 **“选项”** 。  
   
-7.  选择 **“最大并行度”**，然后输入 1 和 64 之间的某个值。  
+7.  选择 **“最大并行度”** ，然后输入 1 和 64 之间的某个值。  
   
-8.  单击“确定” 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+8.  单击“确定”  。  
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -109,9 +107,9 @@ ms.locfileid: "72289310"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -129,9 +127,9 @@ ms.locfileid: "72289310"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql  
     USE AdventureWorks2012;  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f6a5bbb6b4315b0cdb6ed85bd592bb1d18c5c2eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbd4cd516985dcebd28a5fd2fa28e9d83a413b2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134704"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907781"
 ---
 # <a name="monitor-data-tier-applications"></a>监视数据层应用程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68134704"
 3.  选择“视图/实用工具资源管理器详细信息”  菜单。  
   
 4.  在“实用工具资源管理器”  中选择“已部署的数据层应用程序”  节点。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  “已部署的数据层应用程序”  详细信息页中的信息来自实用工具管理数据仓库中的数据，实用工具管理数据仓库默认为每 15 分钟收集数据。 还可以使用 **“实用工具管理”** 详细信息页定制该间隔。  
   

@@ -16,12 +16,12 @@ ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b427d9cdf471133d78db71159041b03f8cddebf8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: e2ac7116c1d7c402ac2b15e4168c64339da34998
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710843"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908114"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>为 SQL Server 复制指定架构选项
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,8 +75,6 @@ ms.locfileid: "71710843"
 4.  根据需要修改属性，然后单击 **“确定”** 。  
   
 5.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  架构选项指定为十六进制值，该值为一个或多个选项的 [|（位或）](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 结果。 有关详细信息，请参阅 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 和 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。  

@@ -19,12 +19,12 @@ ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 633ee52e9719631970b367ee8106e011cfa15e19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13c20f7fb8cd282251c734df1a4bb7b3adab3712
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127193"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909614"
 ---
 # <a name="shrink-a-database"></a>收缩数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68127193"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[收缩数据库](#FollowUp)  
+-   **跟进：** [收缩数据库](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -85,9 +85,9 @@ ms.locfileid: "68127193"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开“数据库”，再右键单击要收缩的数据库。  
+2.  展开  “数据库”，再右键单击要收缩的数据库。  
   
-3.  指向 **“任务”**，指向 **“收缩”**，然后单击 **“数据库”**。  
+3.  指向 **“任务”** ，指向 **“收缩”** ，然后单击 **“数据库”** 。  
   
      **“数据库”**  
      显示所选数据库的名称。  
@@ -104,9 +104,7 @@ ms.locfileid: "68127193"
      **收缩后文件中的最大可用空间**  
      输入在数据库收缩后数据库文件中剩余可用空间的最大百分比。 值可以介于 0 和 99 之间。  
   
-4.  单击“确定” 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4.  单击“确定”  。  
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -114,9 +112,9 @@ ms.locfileid: "68127193"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此实例使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 减少 `UserDB` 数据库中数据文件和日志文件的大小并允许数据库中有 `10` ％ 的可用空间。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此实例使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 减少 `UserDB` 数据库中数据文件和日志文件的大小并允许数据库中有 `10` ％ 的可用空间。  
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   

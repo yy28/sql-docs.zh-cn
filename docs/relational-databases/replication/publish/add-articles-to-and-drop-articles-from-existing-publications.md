@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c81a1c6c99a9756cfeb7c52bdef89aa907150e1b
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 5432d4456bf20f73a799726edd53e31f8707a067
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846625"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907799"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在现有发布中添加和删除项目
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,8 +50,6 @@ ms.locfileid: "70846625"
     -   若要为包含参数化筛选器的合并发布创建新快照，请参阅[为包含参数化筛选器的合并发布创建快照](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 3.  创建快照后，同步订阅以复制新项目的架构和数据。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   若要同步推送订阅，请参阅[同步推送订阅](../../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   

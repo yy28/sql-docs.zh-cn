@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769353"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907289"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>排除故障：查找 SQL Server 事务复制错误 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ ms.locfileid: "68769353"
 1. 事务发生在复制对象上，并在事务日志中将其标记为“用于复制”。 
 2. 日志读取器代理扫描事务日志并查找标记为“用于复制”的事务。 然后这些事务将保存到分发数据库。 
 3. 分发代理使用读取器线程扫描分发数据库。 然后，通过使用编写器线程，此代理连接到订阅服务器，将这些更改应用于订阅服务器。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 此过程的任何一步都可能发生错误。 查找这些错误可能是故障排除同步问题最具挑战性的方面。 还好可使用复制监视器简化此过程。 
 

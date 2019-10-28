@@ -13,14 +13,14 @@ ms.assetid: fdc744d5-530e-48c4-9420-cca032fd482b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c077342016a8da6c660a991c6ccd577a59a92640
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0853bc504655b5fe97bab28b300134c0f5aab289
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770491"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908616"
 ---
-# <a name="mssqleng014144"></a>MSSQL_ENG014144
+# <a name="mssql_eng014144"></a>MSSQL_ENG014144
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -43,8 +43,6 @@ ms.locfileid: "68770491"
 1.  在发布服务器的发布数据库中执行 [sp_helpsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)，以查找订阅。  
   
 2.  在发布数据库中执行 [sp_dropsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)，以删除订阅。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](../../relational-databases/replication/errors-and-events-reference-replication.md)   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 35bd9553376b7e8887271a0a51c023a0be95c4de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b626bb278025eb08cbbfdcc81724d8c82dd36ed
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986627"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907848"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>查看 SQL Server 错误日志 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,6 @@ ms.locfileid: "67986627"
     ![View_SQLServer_Log_SSMS](../../relational-databases/performance/media/view-sqlserver-log-ssms.png) 
  
 5. 将显示“日志文件查看器”  （可能需要等一段时间），其中包含可供查看的一个日志列表。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   ## <a name="see-also"></a>另请参阅
   有关详细信息，请参阅 [MSSQLTips.com](https://www.mssqltips.com/) 上的实用帖[确定 SQL Server 错误日志文件的位置](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/)。

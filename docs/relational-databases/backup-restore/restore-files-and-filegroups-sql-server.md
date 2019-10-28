@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 31f28bf80d03516051206f6e88de6f32de614bed
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 5398b371ea4c969fedf54502d160ebd183cc2bdb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278759"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908861"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>还原文件和文件组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,8 +137,6 @@ ms.locfileid: "70278759"
     |**还原为**|要还原的数据库文件的完整路径。 若要指定新的还原文件，请单击文本框，再编辑建议的路径和文件名。 更改 **“还原为”** 列中的路径或文件名等效于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 语句中使用 MOVE 选项。|  
   
 11. **“恢复状态”** 面板确定还原操作之后的数据库状态。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   **回退未提交的事务，使数据库处于可以使用的状态。无法还原其他事务日志。(RESTORE WITH RECOVERY)**  
   恢复数据库。 这是默认行为。 请仅在要还原所有必要的备份时选择此选项。 此选项等效于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 语句中指定 WITH RECOVERY。  

@@ -15,12 +15,12 @@ ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1eb75b2ce7b0674ad62a406e3a99d4782b61f3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b8a613f8842cc6f067261e941bab39858d1727bb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009593"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909859"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>查看或更改数据库的兼容级别
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68009593"
      当前兼容级别显示在 **“兼容级别”** 列表框中。  
   
 5.  若要更改兼容级别，请从列表中选择其他选项。 选项包括：SQL Server 2008 (100)、SQL Server 2012 (110)、SQL Server 2014 (120)、SQL Server 2016 (130) 和 SQL Server 2017 (140)      。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

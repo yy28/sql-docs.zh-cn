@@ -14,12 +14,12 @@ ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ef39b9e8834d83c564e7480e29c927f4aa194fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56286a2684f5b8b7f7af9915f3148c0a4c99771e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140131"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906091"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>使用扩展事件监视系统活动
 
@@ -107,8 +107,6 @@ ms.locfileid: "68140131"
     ```  
   
 8.  发出下列语句停止事件会话并将其从服务器上删除。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     ALTER EVENT SESSION test0  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8c7c50136b05c94bacda9d400bf8afd5d8640f0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4ca01f461d3013482ceca066a6ce141adf0aaae
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138762"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908932"
 ---
 # <a name="file-restores-full-recovery-model"></a>文件还原（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,8 +75,6 @@ ms.locfileid: "68138762"
      必须还原在文件备份后创建的事务日志备份才能使数据库处于一致状态。 事务日志备份可以快速前滚，因为仅应用了对还原文件所做的更改。 与还原整个数据库相比，更好的方式是还原单个文件，因为并不会复制并随后前滚未损坏的文件。 但是，仍需要读取整个日志备份链。  
   
 5.  恢复数据库。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
 >  文件备份可用于将数据库还原到早期时间点。 必须还原一组完整的文件备份，然后依次将事务日志备份还原到目标点（目标点是结束最近还原的文件备份后的时间点），才能执行此操作。 有关时点恢复的详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  

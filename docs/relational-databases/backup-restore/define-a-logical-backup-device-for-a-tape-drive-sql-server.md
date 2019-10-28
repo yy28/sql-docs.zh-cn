@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65cb5e39b8bda5d0f964a1586588c5f6e60bb89c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f260ee4737f1d493986e5cfa8e308d8882328140
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075923"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908959"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>为磁带机定义逻辑备份设备 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "68075923"
   
 1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开“服务器对象”，然后右键单击“备份设备”。  
+2.  展开“服务器对象”  ，然后右键单击“备份设备”  。  
   
 3.  单击 **“新建备份设备”** 打开 **“备份设备”** 对话框。  
   
@@ -73,11 +73,9 @@ ms.locfileid: "68075923"
   
 5.  为了确定要使用的备份设备，请单击 **“磁带”** ，然后选择一个未与其他备份设备相关联的磁带设备。 如果没有这种磁带机，则 **“磁带”** 选项处于非活动状态。  
   
-6.  若要定义新设备，请单击 **“确定”**。  
+6.  若要定义新设备，请单击 **“确定”** 。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- 若要备份至此新设备，请将该设备添加到“备份数据库”（“常规”）对话框中的“备份到：”字段。 有关详细信息，请参阅 [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中创建差异数据库备份。  
+ 若要备份至此新设备，请将该设备添加到“备份数据库”  （“常规”  ）对话框中的“备份到：”  字段。 有关详细信息，请参阅 [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中创建差异数据库备份。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -85,9 +83,9 @@ ms.locfileid: "68075923"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) 为磁带定义逻辑备份设备。 下面的示例以物理名称 `tapedump1`添加名为 `\\.\tape0`的磁带备份设备。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) 为磁带定义逻辑备份设备。 下面的示例以物理名称 `tapedump1`添加名为 `\\.\tape0`的磁带备份设备。  
   
 ```sql  
 USE AdventureWorks2012 ;  

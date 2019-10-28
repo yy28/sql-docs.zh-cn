@@ -14,12 +14,12 @@ ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5e1b61b44ffcdee0f7449984311f732368578d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fe8e498781f62d19edd8384e0252ad1b7df0202
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934067"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909098"
 ---
 # <a name="delete-a-stored-procedure"></a>删除存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,8 +61,6 @@ ms.locfileid: "67934067"
 5.  确认选择了正确的过程，再单击 **“确定”** 。  
   
 6.  从所有依赖对象和脚本中删除对该过程的引用。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查询编辑器中删除过程**  

@@ -15,12 +15,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: defa71e8650afc1ef96e750cbbeb7f7f52325272
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 67db54183f186ce5a116aada3e5f6b058abb9dc5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768676"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907117"
 ---
 # <a name="configure-publishing-and-distribution"></a>配置发布和分发
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,8 +41,6 @@ ms.locfileid: "68768676"
 2. 右键单击 **“复制”** 文件夹，然后单击 **“配置分发”** 。
 
 3. 随着配置分发向导执行下列操作： 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   - 选择分发服务器。 若要使用本地分发服务器，请选择“ServerName 将充当自己的分发服务器; SQL Server 将创建分发数据库和日志”  。 若要使用远程分发服务器，请选择 **“使用以下服务器作为分发服务器”** ，再选择一个服务器。 该服务器必须已配置为分发服务器，并且启用发布服务器使用此分发服务器。 有关详细信息，请参阅[在分发服务器上启用远程发布服务器 (SQL Server Management Studio)](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)。
 

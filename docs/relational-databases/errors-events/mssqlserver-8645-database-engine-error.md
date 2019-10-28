@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a00288d4aa7d98ac74be6703cc0754ea4bedb798
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d867839a68e3b6fc595f0753872b8224f3bf51fb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132298"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908319"
 ---
-# <a name="mssqlserver8645"></a>MSSQLSERVER_8645
+# <a name="mssqlserver_8645"></a>MSSQLSERVER_8645
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -57,8 +57,6 @@ ms.locfileid: "68132298"
 4.  在您看到这些错误消息时，观察 DBCC MEMORYSTATUS 输出及其变化情况。  
   
 5.  检查工作负荷（例如，并发会话数，当前执行的查询）。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 以下操作可能会为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供更多内存：  
   

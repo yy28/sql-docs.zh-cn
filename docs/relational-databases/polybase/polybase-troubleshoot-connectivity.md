@@ -10,12 +10,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: f937ba5ff6fe4d9c0837d861bf75253f24bbf33b
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823591"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909145"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 连接疑难解答
 
@@ -34,8 +34,6 @@ ms.locfileid: "71823591"
 
 1. 安装了 PolyBase 的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]RTM CU6 / [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3 / [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 或更高版本
 1. 受 Kerberos（Active Directory 或 MIT）保护的 Hadoop 群集（Cloudera 或 Hortonworks）
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="introduction"></a>简介
 这有助于先了解高级别的 Kerberos 协议。 涉及到三个执行组件：

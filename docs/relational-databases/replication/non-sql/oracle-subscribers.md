@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e7ee336c9f81c8d4258e16cf09aa9ffec177e0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110962"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907990"
 ---
 # <a name="oracle-subscribers"></a>Oracle 订阅服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +51,6 @@ ms.locfileid: "68110962"
   
 3.  创建快照发布或事务发布，为非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器启用该发布，然后为订阅服务器创建推送订阅。 有关详细信息，请参阅 [为非 SQL Server 订阅服务器创建订阅](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### <a name="setting-directory-permissions"></a>设置目录权限  
  分发服务器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务运行所用的帐户必须具有对 Oracle 客户端网络软件安装目录（以及所有子目录）的读取和执行权限。  
   
@@ -61,9 +59,9 @@ ms.locfileid: "68110962"
   
  成功连接到 Oracle 订阅服务器后，尝试使用为订阅的分发代理配置的同一帐户和密码登录到该数据库：  
   
-1.  单击 **“启动”**，再单击 **“运行”**。  
+1.  单击 **“启动”** ，再单击 **“运行”** 。  
   
-2.  键入 `cmd` ，然后单击 **“确定”**。  
+2.  键入 `cmd` ，然后单击 **“确定”** 。  
   
 3.  在命令提示符下，键入：  
   
@@ -88,7 +86,7 @@ ms.locfileid: "68110962"
   
     -   确保不要将空字符串作为列值插入到已发布表中。  
   
-    -   如果可以接受分发代理历史记录日志中的失败通知并继续处理，则可以对分发代理使用 -SkipErrors 参数。 指定 Oracle 错误代码 1400 (**-SkipErrors1400**)。  
+    -   如果可以接受分发代理历史记录日志中的失败通知并继续处理，则可以对分发代理使用 -SkipErrors 参数  。 指定 Oracle 错误代码 1400 ( **-SkipErrors1400**)。  
   
     -   修改生成的创建表脚本，从任何可能包含关联空字符串的字符列中删除 NOT NULL 属性，并使用 @creation_script sp_addarticle [的](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)参数将修改后的脚本作为项目的自定义创建脚本提供。  
   
@@ -130,7 +128,7 @@ ms.locfileid: "68110962"
 |**smalldatetime**|DATE|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  
-|**sql_variant**|N/A|  
+|**sql_variant**|空值|  
 |**sysname**|VARCHAR2(128)|  
 |**text**|CLOB|  
 |**time(0-7)**|VARCHAR(16)|  

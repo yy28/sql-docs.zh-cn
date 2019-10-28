@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f266a36b62577103aca0169acd420d2178a31a9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31d9f661908adc148fea48b020fa8b8b215c4755
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140791"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909702"
 ---
 # <a name="configure-data-collection-parameters-transact-sql"></a>配置数据收集参数 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ ms.locfileid: "68140791"
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接至要在其中创建自定义收集组的数据库。  
   
 2.  在查询编辑器中发出以下语句：  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql  
     USE msdb;  

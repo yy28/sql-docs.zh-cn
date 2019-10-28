@@ -16,12 +16,12 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 512a32fbbc57b960369b052615973b999f378a90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dfe3901465f1230de5eea3996adad499208f6619
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009379"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907422"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>使用 SSMS XEvent 探查器
 
@@ -50,8 +50,6 @@ XEvent 探查器是 SQL Server Management Studio (SSMS) 的功能，可显示扩
    ![XEProfiler 会话](media/xevents-xe-profiler-start-session.png)
 
 5. 现在可以查看扩展事件。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ![XEProfiler 查看器](media/xevents-xe-profiler-start-viewer.png)
 

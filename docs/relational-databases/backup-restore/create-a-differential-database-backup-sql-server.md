@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fffc95d74a90fc840a49f00563f4f626f755281f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: becdaa14d8876b9baed0b5f0a87ed2ccba098d82
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076152"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908993"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>创建差异数据库备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +68,6 @@ ms.locfileid: "68076152"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
 #### <a name="create-a-differential-database-backup"></a>创建差异数据库备份  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   

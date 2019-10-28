@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e40e69691834faffa2a112d81d9006e8cc602845
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: ea8d28fafe8b4812b3e2cfd55c03640e46cd7ab2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041208"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906970"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教程：将 Azure Blob 存储服务用于 SQL Server 2016
 
@@ -32,7 +32,7 @@ Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server
   
 ## <a name="prerequisites"></a>必备条件
 
-若要完成本教程，你必须熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原概念以及 T-SQL 语法。 若要使用本教程，你需要一个 Azure 存储帐户、SQL Server Management Studio (SSMS)、本地 SQL Server 实例的访问权限、运行 SQL Server 2016 的 Azure 虚拟机 (VM) 的访问权限和一个 AdventureWorks2016 数据库。 此外，用于发出 BACKUP 和 RESTORE 命令的帐户应属于具有“更改任意凭据”权限的 db_backupoperator数据库角色。 
+若要完成本教程，你必须熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原概念以及 T-SQL 语法。 若要使用本教程，你需要一个 Azure 存储帐户、SQL Server Management Studio (SSMS)、本地 SQL Server 实例的访问权限、运行 SQL Server 2016 的 Azure 虚拟机 (VM) 的访问权限和一个 AdventureWorks2016 数据库。 此外，用于发出 BACKUP 和 RESTORE 命令的帐户应属于具有“更改任意凭据”  权限的 db_backupoperator  数据库角色。 
 
 - 获取免费的 [Azure 帐户](https://azure.microsoft.com/offers/ms-azr-0044p/)。
 - 创建 [Azure 存储帐户](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)。
@@ -41,8 +41,6 @@ Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 - 下载 [AdventureWorks2016 示例数据库](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)。
 - 将用户帐户分配到 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 角色，并授予[更改任意凭据](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql)权限。 
-
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 创建存储访问策略和共享访问存储
 

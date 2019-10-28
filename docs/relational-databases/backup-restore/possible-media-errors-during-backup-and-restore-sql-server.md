@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ba9cba3a56a76fee51b6b21aec99f8019b59157
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79bfbeec5a22dd387b97977d12b95a0e232125aa
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033643"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908872"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>在备份和还原期间可能的介质错误 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,6 @@ ms.locfileid: "68033643"
 2.  无论是否存在页校验和，BACKUP 都会为备份流生成一个单独的备份校验和。 还原操作可使用（可选）备份校验和来验证该备份是否损坏。 备份校验和存储在备份介质上，而不是存储在数据库页上。 备份校验还可根据需要在还原时使用。  
   
 3.  备份集标记为包含备份校验和（在 **msdb..backupset** 的 **has_backup_checksums**列中）。 有关详细信息，请参阅 [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  在还原操作过程中，如果备份介质中存在备份校验和，则默认情况下，RESTORE 和 RESTORE VERIFYONLY 语句都将验证备份校验和及页校验和。 如果不存在备份校验和，则这两种还原操作直接执行，而不会进行验证；这是因为没有备份校验和，还原无法可靠地验证页校验和。  
   

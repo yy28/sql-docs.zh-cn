@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 44ffa35051be66b6a3156991240becd2c93b1013
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f101051d924c1fca0bfbcd131ea8544ea4781e12
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040639"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909111"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>对 XML 列使用全文搜索
 
@@ -35,8 +35,6 @@ ms.locfileid: "68040639"
 1.  首先，使用 SQL 全文搜索筛选感兴趣的 XML 值。  
   
 2.  然后，查询那些使用 XML 列的 XML 索引的 XML 值。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example-combining-full-text-search-with-xml-querying"></a>例如：将全文搜索和 XML 查询结合起来  
  对 XML 列创建了全文索引后，下面的查询将检查 XML 值是否在书的标题中包含“custom”一词：  

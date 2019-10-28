@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: be0f5865965ab419d1807783196e18a4e873c6a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8cdc8f15cedb170ae6c5aeab35c8f92a979d30d6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073766"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909058"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>删除数据库中的数据文件或日志文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +67,6 @@ ms.locfileid: "68073766"
 4.  在 **“数据库文件”** 网格中，选择要删除的文件，然后单击 **“删除”** 。  
   
 5.  单击“确定”  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

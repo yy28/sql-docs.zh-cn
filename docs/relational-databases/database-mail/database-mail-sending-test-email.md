@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d8412a87703577595f0408de3b9cf26520160fdf
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228451"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906063"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>使用数据库邮件发送测试电子邮件  
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "70228451"
     sent_status 列将指示是否已发送测试电子邮件。
 
 1. 如果发生错误，则执行以下语句以查看错误消息：
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 

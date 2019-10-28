@@ -17,12 +17,12 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e1aefc7661b21f6fc6b93e74239820020796151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64ad4f4ac71b88966f3ff9a963332619d7663917
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056076"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909291"
 ---
 # <a name="get-information-about-dml-triggers"></a>获取有关 DML 触发器的信息
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,27 +60,25 @@ ms.locfileid: "68056076"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要查看其定义的触发器的表。  
+2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要查看其定义的触发器的表。  
   
-3.  展开“触发器”，右键单击需要的触发器，然后单击“修改”。 将在查询窗口中显示 DML 触发器的定义。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+3.  展开“触发器”  ，右键单击需要的触发器，然后单击“修改”  。 将在查询窗口中显示 DML 触发器的定义。  
 
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>查看 DML 触发器的依赖关系  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要查看的触发器及其依赖关系的表。  
+2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要查看的触发器及其依赖关系的表。  
   
-3.  展开“触发器”，右键单击需要的触发器，然后单击“查看依赖关系”。  
+3.  展开“触发器”  ，右键单击需要的触发器，然后单击“查看依赖关系”  。  
   
-4.  在“对象依赖关系”窗口中，若要查看依赖于 DML 触发器的对象，请选择“依赖于 \<DML 触发器名称> 的对象”。 将在 **“依赖关系”** 区域显示这些对象。  
+4.  在“对象依赖关系”  窗口中，若要查看依赖于 DML 触发器的对象，请选择“依赖于 \<DML 触发器名称> 的对象”  。 将在 **“依赖关系”** 区域显示这些对象。  
   
-     若要查看 DML 所依赖的对象，请选择“\<DML 触发器名称> 所依赖的对象”。 将在 **“依赖关系”** 区域显示这些对象。 展开每个节点以查看所有对象。  
+     若要查看 DML 所依赖的对象，请选择“\<DML 触发器名称> 所依赖的对象”  。 将在 **“依赖关系”** 区域显示这些对象。 展开每个节点以查看所有对象。  
   
-5.  若要获取有关 **“依赖关系”** 区域中显示的对象的信息，请单击该对象。 在 **“所选对象”** 字段中，在 **“名称”**、 **“类型”** 和 **“依赖关系类型”** 框中提供信息。  
+5.  若要获取有关 **“依赖关系”** 区域中显示的对象的信息，请单击该对象。 在 **“所选对象”** 字段中，在 **“名称”** 、 **“类型”** 和 **“依赖关系类型”** 框中提供信息。  
   
-6.  若要关闭 **“对象依赖关系”** 窗口，请单击 **“确定”**。  
+6.  若要关闭 **“对象依赖关系”** 窗口，请单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -88,9 +86,9 @@ ms.locfileid: "68056076"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”**。 每个示例显示您如何查看 `iuPerson` 触发器的定义。  
+3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”** 。 每个示例显示您如何查看 `iuPerson` 触发器的定义。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -121,9 +119,9 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”**。 每个示例显示您如何查看 `iuPerson` 触发器的依赖关系。  
+3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”** 。 每个示例显示您如何查看 `iuPerson` 触发器的依赖关系。  
   
 ```  
 USE AdventureWorks2012;   
@@ -147,9 +145,9 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”**。 每个示例显示您如何查看数据库中有关 DML 触发器 (`TR`) 的信息。  
+3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”** 。 每个示例显示您如何查看数据库中有关 DML 触发器 (`TR`) 的信息。  
   
 ```  
 USE AdventureWorks2012;   
@@ -183,9 +181,9 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”**。 每个示例显示如何查看激发 `iuPerson` 触发器的事件。  
+3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”** 。 每个示例显示如何查看激发 `iuPerson` 触发器的事件。  
   
 ```sql  
 USE AdventureWorks2012;   

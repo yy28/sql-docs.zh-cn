@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f2589588a2caa0c8a4132954b7897a7c128110d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072901"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909488"
 ---
 # <a name="filter-a-trace"></a>筛选跟踪
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68072901"
 2.  标识包含所需信息的数据和数据列。  
   
 3.  标识所需数据的子集并基于该数据子集定义筛选器。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  例如，您可能只对超过一定时间长度的事件感兴趣。 您可以创建包括事件（其中 **Duration** 数据列超过 300 毫秒）的跟踪。 跟踪将不包括在 300 毫秒内完成的事件。  
   

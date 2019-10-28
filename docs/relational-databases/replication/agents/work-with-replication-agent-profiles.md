@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a1a0b084175de3e06eb69f245c3c634c12dd8364
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 93ee480a595178627f65613b502c10e44dffc8e3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846781"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907806"
 ---
 # <a name="work-with-replication-agent-profiles"></a>使用复制代理配置文件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,8 +70,6 @@ ms.locfileid: "70846781"
 ###  <a name="Access_SSMS"></a> 从 SQL Server Management Studio 访问“代理配置文件”对话框  
   
 1.  在“分发服务器属性 - \<分发服务器>”对话框的“常规”页上，单击“配置文件默认值”    。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-access-the-agent-profiles-dialog-box-from-replication-monitor"></a>从复制监视器访问“代理配置文件”对话框  
   

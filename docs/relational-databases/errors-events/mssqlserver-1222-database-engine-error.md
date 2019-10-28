@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: c5b1c2f4-f591-4cc1-aa17-204636a27f29
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f528c32dcaa0757802d9afe40dffb925a654d780
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99add77f12934928a72354e40e87b5025bdd6ec7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116019"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908638"
 ---
-# <a name="mssqlserver1222"></a>MSSQLSERVER_1222
+# <a name="mssqlserver_1222"></a>MSSQLSERVER_1222
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -43,8 +43,6 @@ ms.locfileid: "68116019"
 2.  如果事务仍持有该锁，请终止该事务（如何适合）。  
   
 3.  重新执行查询。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 如果频繁出现此错误，请更改锁超时期限，或者修改有问题的事务以便它们持有锁的时间减少。  
   

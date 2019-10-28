@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1ae8e8c1394372347f9e26bb7163f0e1cf0bf47e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: a803d848d12965f7e0c0b167bf3a2f20a235ecdc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846753"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907383"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>为包含参数化筛选器的合并发布创建快照
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,8 +65,6 @@ ms.locfileid: "70846753"
 1.  使用新建发布向导创建合并发布，并在该向导的 **“添加筛选器”** 页上指定一个或多个参数化行筛选器。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 2.  生成发布的架构快照。 默认情况下，架构快照在完成新建发布向导时生成；您也可以从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中生成架构快照。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-generate-a-schema-snapshot"></a>生成架构快照  
   

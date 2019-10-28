@@ -19,12 +19,12 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 566a160121f9fd370621706539358931aa2ec14f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed3026ae450e50bcb2d9debf93c4b90eab3afad0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056217"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905537"
 ---
 # <a name="create-dml-triggers"></a>创建 DML 触发器
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -98,8 +98,6 @@ ms.locfileid: "68056217"
 9. 若要创建 DML 触发器，请在 **“查询”** 菜单上单击 **“执行”** 。 该 DML 触发器作为数据库中的对象创建。  
   
 10. 若要查看在“对象资源管理器”中列出的 DML 触发器，请右键单击“触发器”，然后选择“刷新”   。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  [开始之前](#Top)  
   

@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 12fea405001214a3f380c204b27c9932b9e59470
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009361"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908002"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标
 
@@ -73,7 +73,7 @@ ms.locfileid: "68009361"
 
 <a name="h2_target_etw_classic_sync_target"></a>
 
-## <a name="etwclassicsynctarget-target"></a>etw_classic_sync_target 目标
+## <a name="etw_classic_sync_target-target"></a>etw_classic_sync_target 目标
 
 
 SQL Server 扩展事件可以和 Windows 事件跟踪 (ETW) 相互操作来监视系统活动。 有关详细信息，请参阅：
@@ -91,7 +91,7 @@ SQL Server 扩展事件可以和 Windows 事件跟踪 (ETW) 相互操作来监�
 
 <a name="h2_target_event_counter"></a>
 
-## <a name="eventcounter-target"></a>event_counter 目标
+## <a name="event_counter-target"></a>event_counter 目标
 
 
 event_counter 目标只是对每个指定事件发生的次数进行计数。
@@ -107,7 +107,7 @@ event_counter 目标只是对每个指定事件发生的次数进行计数。
     - 数据库引擎将断开与任何速度太慢而可能降低数据库引擎性能的目标的连接。 这就是大多数目标 *以异步方式*处理的原因。
 
 
-#### <a name="example-output-captured-by-eventcounter"></a>示例输入由 event_counter 捕获
+#### <a name="example-output-captured-by-event_counter"></a>示例输入由 event_counter 捕获
 
 
 ```
@@ -139,7 +139,7 @@ CREATE EVENT SESSION [event_counter_1]
 
 <a name="h2_target_event_file"></a>
 
-## <a name="eventfile-target"></a>event_file 目标
+## <a name="event_file-target"></a>event_file 目标
 
 
 **Event_file** 目标将缓冲区中的事件会话输出写入磁盘文件：
@@ -161,7 +161,7 @@ CREATE EVENT SESSION [event_counter_1]
 ::: moniker-end
 
 
-#### <a name="create-event-session-with-eventfile-target"></a>使用 **event_file** 目标的 CREATE EVENT SESSION
+#### <a name="create-event-session-with-event_file-target"></a>使用 **event_file** 目标的 CREATE EVENT SESSION
 
 
 接下来介绍用于测试的 CREATE EVENT SESSION。 ADD TARGET 子句之一指定 event_file。
@@ -213,7 +213,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 ```
 
 
-#### <a name="sysfnxefiletargetreadfile-function"></a>sys.fn_xe_file_target_read_file 函数
+#### <a name="sysfn_xe_file_target_read_file-function"></a>sys.fn_xe_file_target_read_file 函数
 
 
 Event_file 目标以二进制格式（不可人工读取）存储其接收的数据。 Transact SQL 可以通过从 [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) 函数进行选择来报告 .xel 文件的内容。
@@ -249,7 +249,7 @@ SELECT f.*
 当然，还可以手动使用 SSMS UI 来查看 .xel 数据：
 
 
-#### <a name="data-stored-in-the-eventfile-target"></a>event_file 目标中存储的数据
+#### <a name="data-stored-in-the-event_file-target"></a>event_file 目标中存储的数据
 
 
 接下来介绍从 SQL Server 2016 的 **sys.fn_xe_file_target_read_file**中进行选择所得的报告。
@@ -412,7 +412,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 <a name="h2_target_pair_matching"></a>
 
-## <a name="pairmatching-target"></a>pair_matching 目标
+## <a name="pair_matching-target"></a>pair_matching 目标
 
 
 pair_matching 目标可让你检测到没有对应结束事件发生的开始事件。 例如，lock_acquired 事件发生时，却没有匹配的 lock_released 事件随后及时发生，这就可能是个问题。
@@ -450,7 +450,7 @@ sqlserver   lock_acquired   resource_type            NULL
 ```
 
 
-### <a name="example-of-pairmatching"></a>pair_matching 的示例
+### <a name="example-of-pair_matching"></a>pair_matching 的示例
 
 
 下面的 CREATE EVENT SESSION 语句指定两个事件和两个目标。 pair_matching 目标指定字段的两个集来将事件匹配成对。 分配给 **begin_matching_columns =** 和 **end_matching_columns =** 的以逗号分隔的字段序列必须相同。 即使空格正确，但是以逗号分隔的值中所涉及的字段之间不允许有制表符或换行符。
@@ -520,8 +520,6 @@ CREATE EVENT SESSION [pair_matching_lock_a_r_33]
 3. 故意不发出 COMMIT TRANSACTION，直到我们检查完目标。
 4. 测试完成后，发出 COMMIT TRANSACTION。
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 简单的 **event_counter** 目标提供以下输出行。 因为 52-50=2，输出结果告诉我们，检查成对匹配目标中的输出时，应该会看到 2 个不成对的 lock_acquired 事件。
 
 
@@ -549,7 +547,7 @@ sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0  
 
 <a name="h2_target_ring_buffer"></a>
 
-## <a name="ringbuffer-target"></a>ring_buffer 目标
+## <a name="ring_buffer-target"></a>ring_buffer 目标
 
 
 ring_buffer 对快速和简单事件测试来说非常便利。 停止事件会话后，将弃用存储的输出。
@@ -557,7 +555,7 @@ ring_buffer 对快速和简单事件测试来说非常便利。 停止事件会�
 在 ring_buffer 部分中，我们还会介绍如何使用 XQuery 的 Transact-SQL 实现来将 ring_buffer 的 XML 内容复制到更可读的关系行中。
 
 
-#### <a name="create-event-session-with-ringbuffer"></a>使用 ring_buffer 的 CREATE EVENT SESSION
+#### <a name="create-event-session-with-ring_buffer"></a>使用 ring_buffer 的 CREATE EVENT SESSION
 
 
 使用 ring_buffer 目标的 CREATE EVENT SESSION 语句并没有什么特别之处。
@@ -591,7 +589,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ```
 
 
-### <a name="xml-output-received-for-lockacquired-by-ringbuffer"></a>由 ring_buffer 为 lock_acquired 接收的 XML 输出
+### <a name="xml-output-received-for-lock_acquired-by-ring_buffer"></a>由 ring_buffer 为 lock_acquired 接收的 XML 输出
 
 
 由 SELECT 语句检索时，内容以 XML 字符串的形式表示。 接下来介绍测试中由 ring_buffer 目标存储的 XML 字符串。 但是，为简洁显示以下 XML，除了两个 <event> 以外的所有元素都会被清除。 此外，每个 <event> 内的少部分外部 <data> 元素已被删除。

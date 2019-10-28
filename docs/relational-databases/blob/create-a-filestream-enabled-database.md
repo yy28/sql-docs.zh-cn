@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 45a26647502841a87f6ba525e0296903cf64ef6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 033e90cbccbb6db9a454183ae982ed2a898c2054
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085420"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908753"
 ---
 # <a name="create-a-filestream-enabled-database"></a>创建启用了 FILESTREAM 的数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,6 @@ ms.locfileid: "68085420"
     >  对于此脚本，C:\Data 目录必须存在。  
   
 3.  若要生成数据库，请单击 **“执行”** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>示例  
  下面的代码示例创建一个名为 `Archive`的数据库。 该数据库包含三个文件组： `PRIMARY`、 `Arch1`和 `FileStreamGroup1`。 `PRIMARY` 和 `Arch1` 是不能包含 FILESTREAM 数据的常规文件组。 `FileStreamGroup1` 是 `FILESTREAM` 文件组。  

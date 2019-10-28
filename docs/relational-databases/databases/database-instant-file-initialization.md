@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ea9ab84a59fd020a7dc5c67b6ad74630e113ee55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c36c745e6b54feb27da2ae4f36834a40c79cbfe5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037599"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909081"
 ---
 # <a name="database-file-initialization"></a>数据库文件初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68037599"
 5.  单击“应用”  ，然后关闭所有“本地安全策略”  对话框。  
 
 1. 重启 SQL Server 服务。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可在安装期间授予服务帐户此权限。 如果使用[命令提示符安装](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)，请添加 /SQLSVCINSTANTFILEINIT 参数，或选中[安装向导](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)中“授予 SQL Server 数据库引擎服务执行卷维护任务权限”  复选框。

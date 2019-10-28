@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: be669093b3899744f8019eeb7c965b48dc4665bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50cdd9031d309a1bbfd6f4229749b5cc5de56125
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009185"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906874"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>查看基于策略的管理方面的属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,4 @@ ms.locfileid: "68009185"
 5.  右键单击要查看其属性的方面，然后选择  “属性”。 有关“Facet 属性 -facet_name”对话框中可用选项的详细信息，请参阅[“Facet 属性”对话框、“常规”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)[“Facet 属性”对话框、“依赖策略”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)和[“Facet 属性”对话框、“依赖条件”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)   。  
   
 6.   完成后，单击“关闭”。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

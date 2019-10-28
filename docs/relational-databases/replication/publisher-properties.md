@@ -16,12 +16,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1bc6b8506244b16a1c9592ed59e91684494bfa1e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f157f541cae6fed5613f95df8d883044f8e09ff5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768555"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908308"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server 复制“发布服务器属性”对话框
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,8 +33,6 @@ ms.locfileid: "68768555"
   
 1.  禁用发布服务器上的发布。 有关详细信息，请参阅[禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)。    
 2.  重新配置发布和分发。 有关详细信息，请参阅 [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="distributor"></a>分发服务器 
 使用 **“发布服务器属性”** 对话框，可以查看和修改与发布服务器和其分发服务器之间的关系相关联的属性。  

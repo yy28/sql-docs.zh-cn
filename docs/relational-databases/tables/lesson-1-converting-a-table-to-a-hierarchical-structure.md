@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1a9217d42af6b361a02595abcb459102183494b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 05906db66c2bf4948e91dddafa2cdd54aaf936ec
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016337"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907300"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 课：将表转换为层次结构
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,6 @@ ms.locfileid: "68016337"
 ### <a name="copy-the-employee-table"></a>复制 Employee 表  
   
 1.  在查询编辑器窗口中，运行下列代码以将 **Employee** 表中的表结构和数据复制到名为 **EmployeeDemo**的新表中。 由于原始表已使用 hierarchyid，本次查询实质上合会并层次结构，以便检索 employee 的管理员。 在本课程的后续部分中，我们将重新构建该层次结构。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 
    ```sql  
    USE AdventureWorks2017;  

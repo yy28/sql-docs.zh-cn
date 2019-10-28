@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cc0fcbe1a04e9b49f47c30e9eae40abbd1dccfd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a3530d3796cf65dd66dd509e3f168183d4b274a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113371"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908077"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>单独保存 Showplan XML 事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68113371"
 10. 选择“单个文件中的所有 XML 显示计划批”  以将所有 Showplan XML  事件保存至一个 XML 文件中。 或者选择“不同文件中的每个 XML 显示计划批”  ，为每个 Showplan XML 事件创建一个新的 XML 文件  。  
   
 11. 若要在 SQL Server Management Studio 中查看 Showplan XML  事件文件，请在“文件”  菜单上指向“打开”  ，然后选择“文件”  。 浏览至保存 Showplan XML  事件文件的目录，选择一个文件并打开它。 **Showplan XML** 事件文件带有 .SQLPlan 文件扩展名。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>另请参阅  
  [在 SQL Server Profiler 中使用 Showplan 结果来分析查询](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  

@@ -11,12 +11,12 @@ ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 030635af78475eebfa63169b712528b8beeafa38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0070948697c7aaed76330da233bdf3739f5b3e3a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021927"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909415"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标数据的高级查看功能
 
@@ -164,7 +164,7 @@ SSMS 可以显示来自任何目标的数据。 但是对于不同的目标显�
 
 
 
-### <a name="b4-view-xel-with-sysfnxefiletargetreadfile-function"></a>B.4 使用 sys.fn_xe_file_target_read_file 函数查看 .XEL
+### <a name="b4-view-xel-with-sysfn_xe_file_target_read_file-function"></a>B.4 使用 sys.fn_xe_file_target_read_file 函数查看 .XEL
 
 
 对于批处理，以下系统函数可为 .XEL 文件中的记录生成 XML：
@@ -180,8 +180,6 @@ SSMS 可以显示来自任何目标的数据。 但是对于不同的目标显�
 
 
 1. 将焦点移至数据显示。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     - 此时将突然显示用于扩展事件的一个新工具栏和一个新菜单项。
 

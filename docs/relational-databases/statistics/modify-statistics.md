@@ -13,12 +13,12 @@ ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 593a30631eed27db108c79dd70840d1fee3f6964
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6f34bf5db992f1d7062f9def1805996701eda5f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134010"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906211"
 ---
 # <a name="modify-statistics"></a>修改统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,8 +64,6 @@ ms.locfileid: "68134010"
 6.  在  “统计信息属性 -”*statistics_name* 对话框中的  “常规页”上，单击  “添加”  “删除”  “上移”  “下移”或上述任意组合，以更改统计信息的属性。 请记住，某一列在“统计信息列”网格内的位置可能会显著影响统计信息的有用性  。  
   
 7.  单击“确定”  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改统计信息**  

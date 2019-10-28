@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac146dc20fbbf078a7f71dfdbe81b4489ea1849f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934115"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907080"
 ---
 # <a name="statistics"></a>统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "67934115"
 
 下面的关系图显示包含六个梯级的直方图。 第一个上限值左侧的区域是第一个梯级。
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "直方图") 
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
   
 对于以上每个直方图步骤：
 -   粗线表示上限值 (range_high_key  ) 和上限值的出现次数 (equal_rows  )  
@@ -104,7 +104,7 @@ WHERE s.name like '_WA%'
 ORDER BY s.name;  
 ```  
   
-#### <a name="autoupdatestatistics-option"></a>AUTO_UPDATE_STATISTICS 选项  
+#### <a name="auto_update_statistics-option"></a>AUTO_UPDATE_STATISTICS 选项  
  在自动更新统计信息选项 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 为 ON 时，查询优化器将确定统计信息何时可能过期，然后在查询使用这些统计信息时更新它们。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。  
   
 * 直到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于更改行的百分比使用阈值。 这与表中的行数无关。 阈值是：
@@ -122,7 +122,7 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
  
 有关控制 AUTO_UPDATE_STATISTICS 的详细信息，请参阅[控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行为](https://support.microsoft.com/help/2754171)。
   
-#### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
+#### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  异步统计信息更新选项 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) 将确定查询优化器是使用同步统计信息更新还是异步统计信息更新。 默认情况下，异步统计信息更新选项为 OFF 状态，并且查询优化器以同步方式更新统计信息。 AUTO_UPDATE_STATISTICS_ASYNC 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建的统计信息。  
  
  > [!NOTE]
@@ -161,8 +161,6 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
 1.  在创建索引时，查询优化器为表或视图上的索引创建统计信息。 这些统计信息将创建在索引的键列上。 如果索引是一个筛选索引，则查询优化器将在为该筛选索引指定的行的同一子集上创建筛选统计信息。 有关筛选索引的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)和 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
 2.  在 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 为 ON 时，查询优化器为查询谓词中的单列创建统计信息。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 对于大多数查询，用于创建统计信息的这两个方法就可以确保高质量的查询计划；但在很少的情况下，可以通过使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建附加的统计信息来改进查询计划。 这些附加的统计信息可以捕获查询优化器在为索引或单列创建统计信息时并未考虑的统计关联。 应用程序可能在表数据中具有附加的统计关联，如果在统计信息对象中计入这些关联，可能会令查询优化器改进查询计划。 例如，针对数据行子集的筛选统计信息或针对查询谓词列的多列统计信息可改进查询计划。  
   

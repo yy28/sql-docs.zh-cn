@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3edd60a47ac4cebcdea3f70a0658ce837e3d63ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095648"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907957"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>对 Oracle 发布服务器进行故障排除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,8 +78,6 @@ ms.locfileid: "68095648"
 2.  发出 SQL 命令 `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`。  
   
 3.  发出 SQL 命令 `DROP USER <replication_administrative_user_schema>``CASCADE;`。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>引发关于缺少主键的 SQL Server 错误 21663  
  事务发布中的项目必须具备有效的主键。 如果它们不具备有效的主键，则在尝试添加项目时会收到以下错误消息：  

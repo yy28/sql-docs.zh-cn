@@ -14,12 +14,12 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d25137348904fdf3eceb1cc0fceb2a147580f744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a392904b378514bb22816a3c325535fbe94cbacf
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092292"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907860"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,8 +122,6 @@ ms.locfileid: "68092292"
 3.  单击“下一步”  并确认任务列表列表与“配置清单生成选项”  页上的设置一致。  
   
 4.  单击“完成”  ，然后确认仅为选定的对象生成迁移清单报表。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  将这些报表与内存优化顾问工具和本机编译顾问工具生成的报表进行比较，验证这些报表的准确性。 有关详细信息，请参阅 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 和 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)。  
   

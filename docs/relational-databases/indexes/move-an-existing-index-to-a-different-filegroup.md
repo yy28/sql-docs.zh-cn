@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a06a36b601d20d67263c76ef87d5b25437d0fea3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2eaffb39868737c955224b3ccd3ba39366d6f92
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909608"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906374"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,8 +76,6 @@ ms.locfileid: "67909608"
 8.  单击 **“关闭”** 。  
   
 9. 在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>在“对象资源管理器”中将现有索引移到其他文件组  
   

@@ -13,12 +13,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b40ee44dbabf0d9476263e9b58d8ed007327d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db933c5382049767fcb205b8daa2356a497f3d43
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123495"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909478"
 ---
 # <a name="create-views"></a>创建视图
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,9 +76,7 @@ ms.locfileid: "68123495"
   
 8.  在 **“选择名称”** 对话框中，输入新视图的名称并单击 **“确定”** 。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information about the query and view designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
+     有关查询和视图设计器的详细信息，请参阅[查询和视图设计器工具（可视化数据库工具）](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

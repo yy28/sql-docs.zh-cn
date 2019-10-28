@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5e99f31afdef2ed6653cc7a508f2bb5fceebfdb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d7bccf89e8f2043413838e9f55fd8bd4e74dc5f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987396"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907230"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>打开活动监视器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,28 +37,26 @@ ms.locfileid: "67987396"
 ## <a name="open-activity-monitor"></a>打开活动监视器  
 
 ### <a name="keyboard-shortcut"></a>键盘快捷键  
- - 键入“Ctrl+Alt+A”可随时打开活动监视器。
+ - 键入“Ctrl+Alt+A”可随时打开活动监视器。 
 
  >**提示！** 将鼠标悬停在 SSMS 中的任何图标上方可了解该图标是什么，以及哪个键盘快捷键可激活它！
 
 ### <a name="toolbar"></a>工具栏
 
-在标准工具栏上，单击“活动监视器”图标。 该图标位于中间，就在“撤消/重做”按钮的右边。
+在标准工具栏上，单击“活动监视器”图标  。 该图标位于中间，就在“撤消/重做”按钮的右边。
 ![Activity_Monitor_icon](../../relational-databases/performance-monitor/media/activity-monitor-icon.png)  
   
-如果尚未连接到想要监视的 SQL Server 的实例，请完成“连接到服务器”对话框。
+如果尚未连接到想要监视的 SQL Server 的实例，请完成“连接到服务器”  对话框。
   
 ## <a name="launch-activity-monitor-and-object-explorer-on-startup"></a>在启动时启动活动监视器和对象资源管理器
   
-1.  从 **“工具”** 菜单中，单击 **“选项”**。  
+1.  从 **“工具”** 菜单中，单击 **“选项”** 。  
   
-2.  在“选项”对话框中，展开“环境”，再选择“启动”。  
+2.  在“选项”对话框中，展开“环境”，再选择“启动”。     
   
-3.  在“启动时”下拉列表中，选择“打开对象资源管理器和活动监视器”。  
+3.  在“启动时”下拉列表中，选择“打开对象资源管理器和活动监视器”。    
 
-4.  单击“确定” 。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4.  单击“确定”  。
 
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
@@ -67,6 +65,6 @@ ms.locfileid: "67987396"
   
 1.   打开活动监视器。  
   
-2.   右键单击“概述”，选择“刷新间隔”，然后选择活动监视器获取新实例信息所用的间隔。  
+2.   右键单击“概述”  ，选择“刷新间隔”  ，然后选择活动监视器获取新实例信息所用的间隔。  
   
   

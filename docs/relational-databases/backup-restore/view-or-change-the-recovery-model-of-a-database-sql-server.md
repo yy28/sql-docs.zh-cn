@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ff66ea5a2e66ddd1f416d21d32130aabce0e6507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbf6d7f547c0030512a00a46a335a32cfe95f994
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041294"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908808"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>查看或更改数据库的恢复模式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +71,6 @@ ms.locfileid: "68041294"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>查看恢复模式  
@@ -112,13 +110,13 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   在从大容量日志恢复模式切换回完整恢复模式后，备份日志。  
   
-        >**注意**：您的备份策略保持不变：继续执行定期数据库备份、日志备份和差异备份。  
+        >**注意：** 您的备份策略保持不变：继续执行定期数据库备份、日志备份和差异备份。  
   
 -   **从简单恢复模式切换之后**  
   
     -   切换到完整恢复模式或大容量日志恢复模式之后，立即进行完整数据库备份或差异数据库备份以启动日志链。  
   
-        >**注意**：到完整恢复模式或大容量日志恢复模式的切换仅在第一个数据备份之后才生效。  
+        >**注意：** 到完整恢复模式或大容量日志恢复模式的切换仅在第一个数据备份之后才生效。  
   
     -   计划安排定期日志备份并相应地更新还原计划。  
   

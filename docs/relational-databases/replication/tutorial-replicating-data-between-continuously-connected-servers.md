@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 379a7fe83694307c9f4d981d000dc8b9457fa6c9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769414"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907707"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教程：在两个完全连接的服务器之间配置复制（事务）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,8 +115,6 @@ ms.locfileid: "68769414"
     ![带发布名称的“完成向导”页](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. 创建发布后，选择“关闭”完成该向导  。 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 尝试创建发布时，如果未运行 SQL Server 代理，则可能会遇到以下错误。 此错误说明已成功创建发布，但快照代理无法启动。 如果发生这种情况，需要启动 SQL Server 代理，然后手动启动快照代理。 下一部分会提供说明。 
 

@@ -17,12 +17,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf9d9e38fdc41744e5dfb8e2550b9b9ff533bd3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a35a937411a83b9dd27f4ab1673c9a892cf615b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123691"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907920"
 ---
 # <a name="create-unique-constraints"></a>创建唯一约束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,8 +61,6 @@ ms.locfileid: "68123691"
 4.  在“常规”  下的网格中，单击“类型”  ，然后从该属性右侧的下拉列表框中选择“唯一键”  。  
   
 5.  在“文件”  菜单上，单击“保存”  以保存表名  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

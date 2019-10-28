@@ -16,12 +16,12 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c529a7f64fb3db9bdbe7d18cb5a5cb36ebdd9786
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037613"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909113"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,8 +109,6 @@ ms.locfileid: "68037613"
 6.  如果新数据类型别名允许 Null 值，请选中 **“允许 NULL”** 。  
   
 7.  如果希望为新数据类型别名绑定默认值或规则，请在 **“绑定”** 区域中，填写 **“默认值”** 框或 **“规则”** 框。 默认值和规则不能在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建。 改用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模板资源管理器中提供了创建默认值和规则的示例代码。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

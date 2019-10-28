@@ -14,12 +14,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e00c22ed3b7728d906ab2a143ca30f2eec8c7ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89b3ded4415983548402fa5ab955265b40a94f72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016277"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909874"
 ---
 # <a name="specify-default-values-for-columns"></a>指定列的默认值
 
@@ -65,8 +65,6 @@ ms.locfileid: "68016277"
    > 若要输入数值默认值，请输入该数字。 对于对象或函数，请输入其名称。 对于字母数字默认值，请输入该值，两边用单引号引起来。
 
 4. 在“文件”  菜单上，单击“保存”  表格名称  。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="TsqlProcedure"></a> 使用 Transact-SQL 指定默认值
 

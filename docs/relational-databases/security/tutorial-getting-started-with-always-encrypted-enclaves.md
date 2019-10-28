@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: de030c3982fb3e3ed64603707b7e6915779fb4d8
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 7012ae6863394e6895a192f9ec7df3d8ceea3ee0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028809"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909680"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "69028809"
 > [!NOTE]
 > 在开始之前，不应将 HGS 计算机加入域。
 
-## <a name="step-1-configure-the-hgs-computer"></a>第 1 步：配置 HGS 计算机
+## <a name="step-1-configure-the-hgs-computer"></a>步骤 1：配置 HGS 计算机
 
 在此步骤中，将配置 HGS 计算机，以运行支持主机密钥证明的主机保护者服务。
 
@@ -90,8 +90,6 @@ ms.locfileid: "69028809"
 
 4. 运行以下命令，找到 HGS 计算机的 IP 地址。 保存此 IP 地址，以供后续步骤使用。
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
    ```powershell
    Get-NetIPAddress  
    ```
@@ -99,7 +97,7 @@ ms.locfileid: "69028809"
 > [!NOTE]
 > 或者，如果想通过 DNS 名称来引用 HGS 计算机，可设置一个转发器，从公司 DNS 服务器指向新的 HGS 域控制器。  
 
-## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>第 2 步：将 SQL Server 计算机配置为受保护的主机
+## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>步骤 2：将 SQL Server 计算机配置为受保护的主机
 在此步骤中，需将 SQL Server 计算机配置为受保护的主机，并使用主机密钥证明向 HGS 注册。
 
 > [!WARNING]

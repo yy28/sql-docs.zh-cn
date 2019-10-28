@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf28fc78055a2650c1f2ffa6ab13485bf9a71c15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022489"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908743"
 ---
 # <a name="manage-filetables"></a>管理 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,8 +114,6 @@ GO
 2.  在数据库级别启用非事务性访问。  
   
 3.  在数据库级别指定了有效目录。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="BasicsEnabling"></a> 禁用和重新启用表级别 FileTable 命名空间  
  禁用 FileTable 命名空间将会禁用所有系统定义的约束并触发使用 FileTable 创建的约束。 在必须通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作大规模重新组织 FileTable 而不产生强制 FileTable 语义的开销时，这一点很有用。 但是，这些操作会将 FileTable 置于不一致的状态，会阻止重新启用 FileTable 命名空间。  
