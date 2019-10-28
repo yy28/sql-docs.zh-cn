@@ -15,12 +15,12 @@ ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: eff19816330eb512c48cc6a37237ecf6030d7e4f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 37aecafd3506d2cd47b7b4efd93a89f50ce4ec2d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768544"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905212"
 ---
 # <a name="initialize-a-subscription-manually"></a>手动初始化订阅
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,8 +43,6 @@ ms.locfileid: "68768544"
 1.  确保架构和数据已复制到订阅数据库。  
   
 2.  清除 **“初始化订阅”** 页中的 **“初始化”** 复选框。 对每个只要求复制对象和元数据的订阅执行此操作。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程手动初始化订阅。  

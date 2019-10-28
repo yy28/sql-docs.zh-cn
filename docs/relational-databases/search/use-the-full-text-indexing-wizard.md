@@ -23,12 +23,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1c5a46dda4c9b2c5793ff62aaf6eb8606efbe9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e82b1b58fb4ed880f288ae98148f6c16da1907fd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095284"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903813"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文索引向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,9 +47,7 @@ ms.locfileid: "68095284"
   
 5.  **类型列。** 选择存储作为全文索引列的文档类型的列名称。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-> **注意**：只有当“可用列”列中命名的列为“varbinary(max)”或“image”类型时，才会启用“类型列”     。  
+> **注意：** 只有当“可用列”列中命名的列为“varbinary(max)”或“image”类型时，才会启用“类型列”     。  
   
 6. **统计语义。** 选择是否为所选列启用语义索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md)。  
   

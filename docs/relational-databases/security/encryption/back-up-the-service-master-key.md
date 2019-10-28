@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 4a5b28fda96be3fce311abc159bbe8e94fc061ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ce0d7685c042e22e45cd85e05a8e7f779045ee6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024417"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903003"
 ---
 # <a name="back-up-the-service-master-key"></a>备份服务主密钥
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "68024417"
   
 5. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-6. 在标准菜单栏上，单击 **“新建查询”**。  
+6. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-7. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+7. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql
     -- Creates a backup of the service master key.
@@ -68,7 +68,5 @@ ms.locfileid: "68024417"
 8. 将文件复制到备份介质上并验证该副本是否完好。  
   
 9. 将备份存储在另外一个安全的位置。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../../t-sql/statements/open-master-key-transact-sql.md) 和 [BACKUP MASTER KEY (Transact-SQL)](../../../t-sql/statements/backup-master-key-transact-sql.md)。  

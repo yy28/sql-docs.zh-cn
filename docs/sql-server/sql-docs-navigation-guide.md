@@ -1,7 +1,7 @@
 ---
 title: SQL Server 文档导航提示
 description: SQL Server 技术文档导航提示和技巧 - 介绍了中心页、目录和标题等内容，以及如何使用痕迹导航和版本筛选器。
-ms.date: 07/11/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621736"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904314"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 文档导航指南 
 
@@ -93,6 +93,6 @@ SQL Server 技术文档为几种受支持的 SQL Server 版本和风格提供内
 
 ## <a name="next-steps"></a>后续步骤
 
-- 开始使用 [SQL Server 技术文档](sql-server-technical-documentation.md)。 
+- 开始使用 [SQL Server 技术文档](index.yml)。
 - 有关针对 SQL Server 提交反馈或获取帮助的详细信息，请参阅[获取帮助](sql-server-get-help.md)页面。 
 - 若要快速访问所有快速入门和教程，请访问 [SQL Server 教育中心](../lp/sql-server/sql-education-center.md)。
