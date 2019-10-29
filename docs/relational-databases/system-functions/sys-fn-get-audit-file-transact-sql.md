@@ -21,15 +21,15 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fa19a06d3743e91665ee2355eb5f6c380df413d
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: 358b08fe10f29d6a8aaec40f6a80e92c5950e7b7
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542232"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989505"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   从服务器审核在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建的审核文件返回信息。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
@@ -53,17 +53,17 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<path > \\ \*** 收集指定位置中的所有审核文件。  
   
-    -   **\<path > \LoginsAudit_{GUID}** -收集具有指定名称和 GUID 对的所有审核文件。  
+    -   **\<路径 > \LoginsAudit_{GUID}** -收集具有指定名称和 GUID 对的所有审核文件。  
   
-    -   **\<path > \LoginsAudit_{GUID}_00_29384.sqlaudit** -收集特定的审核文件。  
+    -   **\<路径 > \LoginsAudit_{GUID}_00_29384.sqlaudit** -收集特定的审核文件。  
   
- - **AZURE SQL 数据库**：
+ - **AZURE Sql 数据库或 AZURE Sql 数据仓库**：
  
     此参数用于指定 blob URL （包括存储终结点和容器）。 虽然它不支持星号通配符，但你可以使用部分文件（blob）名称前缀（而不是完整的 blob 名称）来收集以此前缀开头的多个文件（blob）。 例如：
  
-      - **\<Storage_endpoint \> / \<Container \> / \<ServerName \> / 0DatabaseName 1 2**收集特定数据库的所有审核文件（blob）。    
+      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\>** /收集特定数据库的所有审核文件（blob）。    
       
-      - **\<Storage_endpoint \> / \<Container \> / \<ServerName \> / 0DatabaseName 1 2 3AuditName 4 5 6CreationDate 7 89FileName 0 .xel** -收集特定的审核文件（blob）。
+      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\>/\<AuditName\>/\<CreationDate\>/\>\<.xel** -收集特定的审核文件（blob）。
   
 > [!NOTE]  
 >  在无文件名模式的情况下传递路径将生成错误。  
@@ -86,7 +86,7 @@ fn_get_audit_file ( file_pattern,
 | 列名 | “类型” | Description |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 操作的 ID。 不可为 Null。 |  
-| additional_information | **nvarchar(4000)** | 仅适用于单个事件的唯一信息，以 XML 的形式返回。 有少量的可审核操作包含此类信息。<br /><br /> 对于具有与操作相关联的 TSQL 堆栈的操作，将以 XML 格式显示一个级别的 TSQL 堆栈。 该 XML 格式如下：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 指示框架的当前嵌套级别。 模块名称表示为由三部分组成的格式（database_name、schema_name 和 object_name）。  将分析模块名称以转义无效的 xml 字符，如 `'\<'`、`'>'`、`'/'` `'_x'`。 它们将被转义为 `_xHHHH\_`。 HHHH 代表该字符对应的四位十六进制 UCS-2 代码。<br /><br /> 可以为 Null。 如果事件没有报告其他信息，则返回 NULL。 |
+| additional_information | **nvarchar(4000)** | 仅适用于单个事件的唯一信息，以 XML 的形式返回。 有少量的可审核操作包含此类信息。<br /><br /> 对于具有与操作相关联的 TSQL 堆栈的操作，将以 XML 格式显示一个级别的 TSQL 堆栈。 该 XML 格式如下：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 指示框架的当前嵌套级别。 模块名称表示为由三部分组成的格式（database_name、schema_name 和 object_name）。  将分析模块名称以转义无效的 xml 字符，如 `'\<'`、`'>'`、`'/'``'_x'`。 它们将被转义为 `_xHHHH\_`。 HHHH 代表该字符对应的四位十六进制 UCS-2 代码。<br /><br /> 可以为 Null。 如果事件没有报告其他信息，则返回 NULL。 |
 | affected_rows | **bigint** | **适用**于：仅限 AZURE SQL DB<br /><br /> 受执行语句影响的行数。 |  
 | application_name | **nvarchar(128)** | **适用于**： AZURE SQL DB + SQL Server （从2017开始）<br /><br /> 执行导致审核事件的语句的客户端应用程序的名称 |  
 | audit_file_offset | **bigint** | **适用**于：仅 SQL Server<br /><br /> 包含审核记录的文件中的缓冲区偏移量。 不可为 null。 |  
@@ -151,7 +151,7 @@ fn_get_audit_file ( file_pattern,
 
 - **Azure SQL 数据库**
 
-  此示例从名为 `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel` 的文件中读取：  
+  此示例从名为 `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`的文件中读取：  
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);

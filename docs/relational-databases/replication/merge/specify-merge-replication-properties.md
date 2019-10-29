@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 058e46441b22f5be5b0d63cf8e9a61dd6c75ef27
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711046"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908161"
 ---
 # <a name="specify-merge-replication-properties"></a>指定合并复制属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,6 @@ ms.locfileid: "71711046"
     -   **下载到订阅服务器，禁止订阅服务器更改**    
     -   **下载到订阅服务器，允许订阅服务器更改**    
 4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="use-transact-sql"></a>使用 Transact-SQL  
   
