@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: faa2d63e0d1104665768ea436986b8fd3a52c107
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 0e241d84ebc60acceafe09b1a9240711a72d2067
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251784"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798315"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步骤 3：使用 pyodbc 连接到 SQL 的概念验证
 
@@ -47,7 +47,7 @@ cursor = cnxn.cursor()
   
 ## <a name="step-2--execute-query"></a>步骤2：执行查询  
   
-Executefunction 可用于从针对 SQL 数据库的查询中检索结果集。 此函数实际上可接受任何查询，并返回可使用 cursor.fetchone （）循环访问的结果集。
+cursor.execute 函数可用于从针对 SQL 数据库的查询中检索结果集。 此函数实际上可接受任何查询，并返回可使用 cursor.fetchone() 循环访问的结果集
   
   
 ```python
@@ -55,7 +55,7 @@ Executefunction 可用于从针对 SQL 数据库的查询中检索结果集。 �
 cursor.execute("SELECT @@version;") 
 row = cursor.fetchone() 
 while row: 
-    print row[0] 
+    print(row[0])
     row = cursor.fetchone()
 
 ```  
@@ -96,4 +96,4 @@ pyODBC 使用 Microsoft ODBC Driver for SQL Server。
 
 ## <a name="next-steps"></a>后续步骤
   
-有关详细信息，请参阅[Python 开发人员中心](https://azure.microsoft.com/develop/python/)。
+有关详细信息，请参阅 [Python 开发人员中心](https://azure.microsoft.com/develop/python/)。
