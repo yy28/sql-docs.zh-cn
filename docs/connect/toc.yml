@@ -2507,8 +2507,6 @@
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: 部署 JDBC 驱动程序
           href: ../connect/jdbc/deploying-the-jdbc-driver.md
-        - name: 再分发 Microsoft JDBC 驱动程序
-          href: ../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md
         - name: 查找 JDBC 驱动程序的其他信息
           href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
         - name: Microsoft SQL Server JDBC 驱动程序支持矩阵
