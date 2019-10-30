@@ -21,12 +21,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8348f5d0f77006697abec72b084b36cb7b24e1b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dee3fbbeced09ca66c42ab873ad2545655a1b72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057943"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905552"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用更改跟踪 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68057943"
   
      下图说明了如何使用 CHANGETABLE(CHANGES …) 获取更改。  
   
-     ![更改跟踪查询输出的示例](../../relational-databases/track-changes/media/queryoutput.gif "更改跟踪查询输出的示例")  
+     ![变更跟踪查询输出的示例](../../relational-databases/track-changes/media/queryoutput.gif "更改跟踪查询输出的示例")  
   
  CHANGE_TRACKING_CURRENT_VERSION() 函数  
  用于获取当前版本，以供下次查询更改时使用。 该版本表示上次提交的事务的版本。  
@@ -207,8 +207,6 @@ ON
   
 4.  使用 CHANGETABLE(CHANGES …) 获取对 SalesOrders 表所做的更改。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  数据库中运行的两个进程可能会影响上述步骤返回的结果：  
   
 -   清除进程在后台运行，并删除早于指定保持期的更改跟踪信息。  
@@ -267,6 +265,10 @@ COMMIT TRAN
   
  有关快照事务的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
+#### <a name="cleanup-and-snapshot-isolation"></a>清除和快照隔离   
+启用了快照隔离的数据库中存在打开的事务时，对同一个数据库或同一个实例中的两个不同数据库启用快照隔离和更改跟踪可能导致清除进程将过期的行保留在 sys.syscommittab 中。 可能会发生这种情况，因为更改跟踪清除进程会在执行清除时考虑到实例范围内的低水印（即安全清除版本）。 这样做是为了确保更改跟踪自动清除进程不会删除启用了快照隔离的数据库中的打开事务可能需要的任何行。 尽可能使读取已提交的快照隔离和快照隔离事务保持简短，以确保 sys.syscommittab 中的过期行得到及时清除。 
+
+
 #### <a name="alternatives-to-using-snapshot-isolation"></a>使用快照隔离的替代方法  
  使用快照隔离有一些替代方法，但它们需要完成更多的工作以确保满足所有应用程序要求。 若要确保 *last_synchronization_version* 有效，并且清除进程在获取更改之前没有删除数据，请执行以下操作：  
   

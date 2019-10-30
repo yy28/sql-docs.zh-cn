@@ -1,7 +1,7 @@
 ---
 title: 事务日志 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb0aef082375ebc3c278e982232b7a69fe41d187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b9f57b15f1a46aefad2387eb63b0d2cb14dbe38
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083942"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916034"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,40 +39,42 @@ ms.locfileid: "68083942"
  事务日志支持以下操作：  
   
 -   恢复个别的事务。  
--   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时恢复所有未完成的事务。  
+-   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时恢复所有未完成的事务。 
 -   将还原的数据库、文件、文件组或页前滚至故障点。  
 -   支持事务复制。  
 -   支持高可用性和灾难恢复解决方案： [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、数据库镜像和日志传送。
 
 ### <a name="individual-transaction-recovery"></a>恢复个别的事务
-如果应用程序发出 `ROLLBACK` 语句，或者数据库引擎检测到错误（例如失去与客户端的通信），使用日志记录回退未完成的事务所做的修改。 
+如果应用程序发出 `ROLLBACK` 语句，或者 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 检测到错误（例如失去与客户端的通信），就使用日志记录回滚未完成的事务所做的修改。 
 
 ### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时恢复所有未完成的事务
-当服务器发生故障时，数据库可能处于这样的状态：还没有将某些修改从缓存写入数据文件，在数据文件内有未完成的事务所做的修改。 当启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，它对每个数据库执行恢复操作。 前滚日志中记录的、可能尚未写入数据文件的每个修改。 在事务日志中找到的每个未完成的事务都将回滚，以确保数据库的完整性。 
+当服务器发生故障时，数据库可能处于这样的状态：还没有将某些修改从缓存写入数据文件，在数据文件内有未完成的事务所做的修改。 当启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，它对每个数据库执行恢复操作。 前滚日志中记录的、可能尚未写入数据文件的每个修改。 在事务日志中找到的每个未完成的事务都将回滚，以确保数据库的完整性。 有关详细信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>将还原的数据库、文件、文件组或页前滚至故障点
 在硬件丢失或磁盘故障影响到数据库文件后，可以将数据库还原到故障点。 先还原上次完整数据库备份和上次差异数据库备份，然后将后续的事务日志备份序列还原到故障点。 
 
-还原每个日志备份时，数据库引擎将重新应用日志中记录的所有修改，前滚所有事务。 最后的日志备份还原后，数据库引擎将使用日志信息回退到该点上未完成的所有事务。 
+当还原每个日志备份时，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 重新应用日志中记录的所有修改，以前滚所有事务。 当最后的日志备份还原后，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 将使用日志信息回滚到该点未完成的所有事务。 有关详细信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
 
 ### <a name="supporting-transactional-replication"></a>支持事务复制
-日志读取器代理程序监视已为事务复制配置的每个数据库的事务日志，并将已设复制标记的事务从事务日志复制到分发数据库中。 有关详细信息，请参阅 [事务复制的工作原理](https://msdn.microsoft.com/library/ms151706.aspx)。
+日志读取器代理程序监视已为事务复制配置的每个数据库的事务日志，并将已设复制标记的事务从事务日志复制到分发数据库中。 有关详细信息，请参阅 [事务复制的工作原理](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105))。
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>支持高可用性和灾难恢复解决方案
 备用服务器解决方案、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]数据库镜像和日志传送极大程度地依赖于事务日志。 
 
-在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 方案中，数据库的每个更新（主要副本）在数据库的完整且独立的副本（次要副本）中直接再现。 主要副本直接将每个日志记录发送到次要副本，这可将传入日志记录应用到可用性组数据库，并不断前滚。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
+在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 方案中，数据库的每个更新（主要副本）在数据库的完整且独立的副本（次要副本）中直接再现  。 主要副本直接将每个日志记录发送到次要副本，这可将传入日志记录应用到可用性组数据库，并不断前滚。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
-在日志传送方案中，主服务器将主数据库的活动事务日志发送到一个或多个目标服务器。 每个辅助服务器将该日志还原为其本地的辅助数据库。 有关详细信息，请参阅 [关于日志传送](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。 
+在日志传送方案中，主服务器将主数据库的活动事务日志发送到一个或多个目标服务器  。 每个辅助服务器将该日志还原为其本地的辅助数据库。 有关详细信息，请参阅 [关于日志传送](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。 
 
-在数据库镜像方案中，数据库（主体数据库）的每次更新都在独立的、完整的数据库（镜像数据库）副本中立即重新生成。 主体服务器实例立即将每个日志记录发送到镜像服务器实例，镜像服务器实例将传入的日志记录应用于镜像数据库，从而将其继续前滚。 有关详细信息，请参阅 [数据库镜像](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。
+在数据库镜像方案中，数据库（主体数据库）的每次更新都在独立的、完整的数据库（镜像数据库）副本中立即重新生成  。 主体服务器实例立即将每个日志记录发送到镜像服务器实例，镜像服务器实例将传入的日志记录应用于镜像数据库，从而将其继续前滚。 有关详细信息，请参阅 [数据库镜像](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。
 
-##  <a name="Characteristics"></a>Transaction Log characteristics
-
+##  <a name="Characteristics"></a>事务日志特征
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 事务日志的特征： 
 -  事务日志是作为数据库中的单独的文件或一组文件实现的。 日志缓存与数据页的缓冲区高速缓存是分开管理的，因此可在[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中生成简单、快速和功能强大的代码。 有关详细信息，请参阅[事务日志物理体系结构](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。
+
 -  日志记录和页的格式不必遵守数据页的格式。
+
 -  事务日志可以在几个文件上实现。 通过设置日志的 `FILEGROWTH` 值可以将这些文件定义为自动扩展。 这样可减少事务日志内空间不足的可能性，同时减少管理开销。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL) 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
+
 -  重用日志文件中空间的机制速度快且对事务吞吐量影响最小。
 
 有关事务日志体系结构和内部组件的详细信息，请参阅 [SQL Server 事务日志体系结构和管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)。
@@ -120,7 +122,7 @@ ms.locfileid: "68083942"
 |14|OTHER_TRANSIENT|当前未使用此值。|  
   
 ##  <a name="MinimallyLogged"></a>可尽量减少日志量的操作  
-最小日志记录是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志 [恢复模式](../backup-restore/recovery-models-sql-server.md) 下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
+最小日志记录  是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志 [恢复模式](../backup-restore/recovery-models-sql-server.md) 下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
   
 > [!NOTE]
 > 内存优化表不支持最小日志记录。  
@@ -136,14 +138,14 @@ ms.locfileid: "68083942"
   
 -   [SELECT INTO](../../t-sql/queries/select-into-clause-transact-sql.md) 操作。  
   
-启用事务复制时，将完全记录 SELECT INTO 操作，即使处于大容量日志恢复模式下。  
+启用事务复制时，将完全记录 `SELECT INTO` 操作，即使处于大容量日志恢复模式下。  
   
 -   插入或追加新数据时，使用 [UPDATE](../../t-sql/queries/update-transact-sql.md) 语句中的 `.WRITE` 子句部分更新到大型值数据类型。 注意，在更新现有值时没有使用最小日志记录。 有关大型值数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
 -   在[UPDATETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [nUPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **UPDATETEXT**, **nUPDATETEXT**, 、 **UPDATETEXT** 语句。 注意，在更新现有值时没有使用最小日志记录。  
   
     > [!WARNING]
-    > `WRITETEXT` 和 `UPDATETEXT` 语句已被弃用；请避免在新的应用程序中使用它们。  
+    > `WRITETEXT` 和 `UPDATETEXT` 语句已被弃用；请避免在新的应用程序中使用它们  。  
   
 -   如果数据库设置为简单或大容量日志恢复模式，则无论是脱机还是联机执行操作，都会按最小方式记录一些索引 DDL 操作。 按最小方式记录的索引操作如下：  
   
@@ -152,9 +154,9 @@ ms.locfileid: "68083942"
     -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD 或 DBCC DBREINDEX 操作。  
   
         > [!WARNING]
-        > `DBCC DBREINDEX` 语句已被弃用；请勿在新的应用程序中使用该语句。  
+        > `DBCC DBREINDEX` 语句已被弃用；请勿在新的应用程序中使用该语句  。  
   
-    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 新堆重新生成（如果适用）。 `DROP INDEX` 操作期间将始终完整记录索引页的释放操作。
+    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 新堆重新生成（如果适用）。 `DROP INDEX` 操作期间将始终完整记录索引页的释放操作  。
   
 ##  <a name="RelatedTasks"></a> Related tasks  
 **管理事务日志**  
@@ -166,7 +168,9 @@ ms.locfileid: "68083942"
 **备份事务日志（完整恢复模式）**  
   
 -   [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
-  
+
+-   [在数据库损坏时备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)
+
 **还原事务日志（完整恢复模式）**  
   
 -   [还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
@@ -175,7 +179,8 @@ ms.locfileid: "68083942"
 [SQL Server 事务日志体系结构和管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)   
 [在批量导入中按最小方式记录日志的前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
-[SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+[SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
+[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)      
 [数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)   
 [查看或更改数据库的属性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
 [恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)  

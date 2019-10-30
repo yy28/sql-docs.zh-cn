@@ -15,12 +15,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 68c18f0be55716f668e47576b3abd041bfb1c076
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b8e9f5f6682b8d44785d9b2600f15013a2f615c
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990810"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717228"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>SQL Server 2017 支持的版本和版本升级
 
@@ -42,7 +42,7 @@ ms.locfileid: "67990810"
   
 ## <a name="unsupported-scenarios"></a>不受支持的方案  
   
--   不支持 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 的跨版本实例。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件的版本号在 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]实例中必须相同。  
+-   不支持 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 的跨版本实例。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 组件的版本号在 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 实例中必须相同。  
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 仅适用于 64 位平台。 不支持跨平台升级。 不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 32 位实例升级到本机 64 位。 但是，如果数据库未在复制过程中发布，则可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 32 位实例中备份或分离数据库，然后再将它们还原或附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例（64 位）。 必须在 master、msdb 和 model 系统数据库中重新创建任何登录名和其他用户对象。  
   

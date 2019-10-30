@@ -1,7 +1,7 @@
 ---
 title: 应用事务日志备份 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/14/2016
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 0b59c6973c8b1662d61a0ec022eba830558d51cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62d90931cdc1d7748f47edabb31e5f9404b1262d
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934540"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916200"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>应用事务日志备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,6 @@ ms.locfileid: "67934540"
   
  本主题介绍在还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库过程中应用事务日志备份。  
  
-  
 ##  <a name="Requirements"></a> 还原事务日志备份的要求  
  若要应用事务日志备份，必须满足下列要求：  
   
@@ -39,14 +38,16 @@ ms.locfileid: "67934540"
   
 -   **数据库尚未恢复：** 除非已应用最后的事务日志，否则无法恢复数据库。 如果要在还原其中一个中间事务日志备份之后恢复数据库，则在日志链结束之前，除非从完整数据库备份开始重新启动整个还原顺序，否则，将无法还原该点之前的数据库。  
   
-    > **提示！** 最佳方法是还原所有日志备份 (RESTORE LOG *database_name* WITH NORECOVERY)。 还原上一次日志备份后，用单独的操作恢复数据库 (RESTORE DATABASE *database_name* WITH RECOVERY)。  
+    > [!TIP]
+    > 最佳方法是还原所有日志备份 (`RESTORE LOG *database_name* WITH NORECOVERY`)。 还原上一次日志备份后，用单独的操作恢复数据库 (`RESTORE DATABASE *database_name* WITH RECOVERY`)。  
   
 ##  <a name="RecoveryAndTlogs"></a> 恢复和事务日志  
- 当您完成还原操作并恢复数据库后，恢复将回滚所有未完成的事务。 此步骤称为“撤消阶段”  。 回滚对还原数据库的完整性是必需的。 回滚后，数据库将进入联机状态，不能再将其他事务日志备份应用到数据库。  
+ 完成还原操作并恢复数据库后，将执行恢复过程，以确保数据库的完整性。 有关恢复过程的详细信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
+ 
+ 恢复过程完成后，数据库将进入联机状态，不能再将其他事务日志备份应用到数据库。 例如，一系列事务日志备份包含一个运行时间长的事务。 该事务的起点记录在第一个事务日志备份中，终点记录在第二个事务日志备份中。 第一个事务日志备份中没有任何关于提交或回滚操作的记录。 如果在应用第一个事务日志备份后运行恢复操作，则运行时间长的事务被视为未完成，并且将回滚事务的第一个事务日志备份中记录的数据修改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许在此点后应用第二个事务日志备份。  
   
- 例如，一系列事务日志备份包含一个运行时间长的事务。 该事务的起点记录在第一个事务日志备份中，终点记录在第二个事务日志备份中。 第一个事务日志备份中没有任何关于提交或回滚操作的记录。 如果在应用第一个事务日志备份后运行恢复操作，则运行时间长的事务被视为未完成，并且将回滚事务的第一个事务日志备份中记录的数据修改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许在此点后应用第二个事务日志备份。  
-  
-> **注意**：某些情况下可以在日志还原期间显式添加文件。  
+> [!NOTE]
+> 某些情况下可以在日志还原期间显式添加文件。  
   
 ##  <a name="PITrestore"></a> 使用日志备份来还原到故障点  
  假设有下列事件顺序。  
@@ -63,8 +64,6 @@ ms.locfileid: "67934540"
 > 有关此示例备份顺序的说明，请参阅[事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
  若要将数据库还原到晚上 9:45（故障点）时的状态， 可以使用以下两种备选过程：  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  **替换选项 1：使用最新的完整数据库备份还原数据库**  
   
@@ -106,6 +105,6 @@ ms.locfileid: "67934540"
 -   [恢复数据库但不还原数据 (Transact-SQL)](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)  
-  
+ [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)     
+ [SQL Server 事务日志体系结构和管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
   

@@ -14,12 +14,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1e1c469b7864ed9a454cd8f18fa81903865be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024981"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909258"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式化文件跳过表列 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +59,6 @@ GO
 
 2.   在文本编辑器中修改默认格式化文件。
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 修改后的格式化文件必须将每个现有字段映射到目标表中的相应列。 它还必须指示要跳过哪些列。 
 
 例如，若要将数据从 `myTestSkipCol2.dat` 批量导入 `myTestSkipCol` 表，则格式化文件必须将第一个数据字段映射到 `Col1`，跳过 `Col2`，并将第二个字段映射到 `Col3`。  
@@ -81,7 +79,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
  以下截图显示了此示例默认格式化文件中的值。 
   
- ![适用于 myTestSkipCol 的默认非 XML 格式化文件](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "适用于 myTestSkipCol 的默认非 XML 格式化文件")  
+ ![适用于 myTestSkipCol 的默认的非 XML 格式文件](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "适用于 myTestSkipCol 的默认的非 XML 格式文件")  
   
 > [!NOTE]  
 >  有关格式化文件字段的详细信息，请参阅[非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  

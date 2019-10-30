@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e85461ef0a6395904b0f80590a01f035eb51dc3a
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: bb83237e33f477468cd58ea8a692970268bf1d66
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952762"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807474"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -69,7 +69,7 @@ ms.locfileid: "71952762"
 |新增功能或更新 | 详细信息 |
 |:---|:---|
 |混合缓冲池| [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的新功能，可以在需要时直接访问位于永久性内存 (PMEM) 设备上数据库文件中的数据库页。 请参阅[混合缓冲池](../database-engine/configure-windows/hybrid-buffer-pool.md)。|
-|内存优化 `tempdb` 元数据| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了属于[内存数据库](../relational-databases/in-memory-database.md)功能系列的新功能，即内存优化 `tempdb` 元数据，它可有效消除此瓶颈，并为 `tempdb` 繁重的工作负荷解锁新的可伸缩性级别。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。 请参阅[内存优化 `tempdb` 元数据](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。|
+|内存优化 TempDB 元数据| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了一个新功能，该功能属于[内存数据库](../relational-databases/in-memory-database.md)功能系列内存优化 TempDB 元数据，它可有效消除此瓶颈，并为 TempDB 繁重的工作负荷解锁新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。 请参阅[内存优化 TempDB 元数据](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。|
 | 内存中 OLTP 对数据库快照的支持 | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了对创建包含内存优化文件组的数据库的[数据库快照](../relational-databases/databases/database-snapshots-sql-server.md)的支持。 |
 | &nbsp; | &nbsp; |
 
@@ -115,7 +115,7 @@ ms.locfileid: "71952762"
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
-|支持 UTF-8 字符编码 |支持使用 UTF-8 字符进行导入和导出编码，并用作字符串数据的数据库级别或列级别排序规则。 这支持将应用程序扩展到全球范围，其中提供全球多语言数据库应用程序和服务的要求对于满足客户需求和特定市场规范至关重要。 请参阅[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候选发布为 PolyBase 外部表和 Always Encrypted 启用 UTF-8 支持。|
+|支持 UTF-8 字符编码 |支持使用 UTF-8 字符进行导入和导出编码，并用作字符串数据的数据库级别或列级别排序规则。 这支持将应用程序扩展到全球范围，其中提供全球多语言数据库应用程序和服务的要求对于满足客户需求和特定市场规范至关重要。 请参阅[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候选发布为 PolyBase 外部表和 Always Encrypted（未用于 Enclave 时）启用 UTF-8 支持。|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>语言扩展
@@ -197,7 +197,7 @@ ms.locfileid: "71952762"
 |支持 Microsoft 分布式事务处理协调器 (MSDTC) |[如何在 Linux 上配置 MSDTC](../linux/sql-server-linux-configure-msdtc.md) |
 |OpenLDAP 支持第三方 AD 提供商 |[教程：对 Linux 上的 SQL Server 使用 Active Directory 身份验证](../linux/sql-server-linux-active-directory-authentication.md) |
 |Linux 上的机器学习 |[在 Linux 上配置机器学习](../linux/sql-server-linux-setup-machine-learning.md) |
-|`tempdb` 改进： | 默认情况下，Linux 上的 SQL Server 新安装会根据逻辑内核数创建多个 `tempdb` 数据文件（最多 8 个数据文件）。 这不适用于就地次要版本或主版本升级。 每个 `tempdb` 文件的大小为 8MB，且自动增长大小为 64MB。 此行为类似于 Windows 上的默认 SQL Server 安装。 |
+|TempDB 改进 | 默认情况下，Linux 上的 SQL Server 新安装会根据逻辑核心数创建多个 TempDB 数据文件（最多 8 个数据文件）。 这不适用于就地次要版本或主版本升级。 每个 TempDB 文件的大小为 8 MB，且自动增长大小为 64 MB。 此行为类似于 Windows 上的默认 SQL Server 安装。 |
 | Linux 上的 PolyBase | 在 Linux 上为非 Hadoop 连接器[安装 PolyBase](../relational-databases/polybase/polybase-linux-setup.md)。<br/><br/>[PolyBase 类型映射](../relational-databases/polybase/polybase-type-mapping.md)。 |
 | 变更数据捕获 (CDC) 支持 | Linux 上的 SQL Server 2019 现在支持变更数据捕获 (CDC)。 |
 | &nbsp; | &nbsp; |

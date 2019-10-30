@@ -1,7 +1,7 @@
 ---
 title: 段落还原 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8dfdfc8ea7d34975046545688cca3f34ed324311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033650"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916000"
 ---
 # <a name="piecemeal-restores-sql-server"></a>段落还原 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "68033650"
   
  段落还原适用于所有恢复模式，但在完整恢复模式和大容量日志恢复模式下比在简单恢复模式下更灵活。  
   
- 所有的段落还原都以称为“部分还原顺序”的初始还原顺序开始。 部分还原顺序至少还原和恢复主文件组，在简单恢复模式下还会还原和恢复所有读/写文件组。 在段落还原顺序中，整个数据库都必须脱机。 随后，数据库将处于联机状态，并且还原的文件组都处于可用状态。 但是，所有未还原的文件组都将保持脱机状态，无法访问。 不过，对于任何脱机文件组，都可以在以后通过文件还原进行还原并进入联机状态。  
+ 所有的段落还原都以称为“部分还原顺序”  的初始还原顺序开始。 部分还原顺序至少还原和恢复主文件组，在简单恢复模式下还会还原和恢复所有读/写文件组。 在段落还原顺序中，整个数据库都必须脱机。 随后，数据库将处于联机状态，并且还原的文件组都处于可用状态。 但是，所有未还原的文件组都将保持脱机状态，无法访问。 不过，对于任何脱机文件组，都可以在以后通过文件还原进行还原并进入联机状态。  
   
  无论数据库采用何种恢复模式，部分还原顺序都从 RESTORE DATABASE 语句开始，该语句将还原完整备份并指定 PARTIAL 选项。 PARTIAL 选项总是会启动一个新的段落还原；因此，在部分还原顺序的初始语句中，只能指定 PARTIAL 一次。 当部分还原顺序完成并且数据库联机后，由于余下文件的恢复被推迟，这些文件的状态将变为“恢复已挂起”。  
   
- 此后，段落还原通常包括一个或多个还原顺序，这些还原顺序称为“文件组还原顺序”。 您可以等待执行特定的文件组还原顺序，等待的时间长短由您决定。 每个文件组还原顺序将一个或多个脱机文件组还原并恢复到与数据库一致的点。 文件组还原顺序的时间安排和数量取决于您的恢复目标、您想要还原的脱机文件组数量以及每个文件组还原顺序中还原的脱机文件组的数量。  
+ 此后，段落还原通常包括一个或多个还原顺序，这些还原顺序称为“文件组还原顺序”  。 您可以等待执行特定的文件组还原顺序，等待的时间长短由您决定。 每个文件组还原顺序将一个或多个脱机文件组还原并恢复到与数据库一致的点。 文件组还原顺序的时间安排和数量取决于您的恢复目标、您想要还原的脱机文件组数量以及每个文件组还原顺序中还原的脱机文件组的数量。  
   
  执行段落还原的精确要求取决于数据库的恢复模式。 有关详细信息，请参阅本主题后面的“简单恢复模式下的段落还原”和“完整恢复模式下的段落还原”。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68033650"
      在 Enterprise Edition 中，当数据库保持联机状态时，可还原和恢复任何脱机辅助文件组。 如果特定只读文件未损坏且与数据库一致，则该文件无需还原。 有关详细信息，请参阅[恢复数据库而不还原数据 (Transact-SQL)](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)。  
   
 ### <a name="applying-log-backups"></a>应用日志备份  
- 如果在文件备份创建之前，只读文件组就已处于只读状态，则该文件组无需应用日志备份，并且文件还原会跳过日志备份的应用过程。 如果文件组是读/写文件组，则必须将未中断的日志备份链应用于上一次完整还原或差异还原，文件组才能前进到当前的日志文件。  
+ 如果在文件备份创建之前，只读文件组就已处于只读状态，则该文件组无需应用日志备份，并且文件还原会跳过日志备份的应用过程。 如果文件组是读/写文件组，则必须将未中断的日志备份链应用于上一次完整还原或差异还原，文件组才能前进到当前的日志文件。 有关恢复过程的详细信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
   
 ### <a name="examples"></a>示例  
   
@@ -173,13 +173,11 @@ ms.locfileid: "68033650"
   
 4.  后面跟有在原始段落还原顺序中还原的用于将数据还原到原始恢复点的任何其他备份的差异备份。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="see-also"></a>另请参阅  
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [计划和执行还原顺序（完整恢复模式）](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
-  
+ [计划和执行还原顺序（完整恢复模式）](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)    
+ [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)     
   

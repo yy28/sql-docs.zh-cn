@@ -14,12 +14,12 @@ ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ff36fb2d0a5ed84beae6a90f6058a7a66ab9f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43086213ec4c13e6849a40a4013a99ffc9df3903
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030487"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907090"
 ---
 # <a name="page-compression-implementation"></a>页压缩的实现
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,8 +35,6 @@ ms.locfileid: "68030487"
 2.  前缀压缩  
   
 3.  字典压缩  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  当使用页压缩时，将仅使用行压缩来压缩索引的非叶级别页。 有关行压缩的详细信息，请参阅 [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md)。  
   
@@ -73,6 +71,6 @@ ms.locfileid: "68030487"
   
 ## <a name="see-also"></a>另请参阅  
  [数据压缩](../../relational-databases/data-compression/data-compression.md)   
- [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md)  
+ [行压缩的实现](../../relational-databases/data-compression/row-compression-implementation.md)  
   
   

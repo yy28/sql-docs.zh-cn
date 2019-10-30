@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 568790caac848c0823c58bd004ffca8546650340
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278261"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930489"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 的发行说明
 
@@ -70,7 +70,7 @@ ms.locfileid: "72278261"
 
 ## <a id="cuinstall"></a> 如何安装更新
 
-如果已配置 CU 存储库 (mssql-server-2017)，则在执行新安装时将获得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 包的最新 CU。 CU 存储库是 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有包安装文章的默认库。 如果已配置 GDR 存储库 (mssql-server-2017-gdr)，将仅获得自 GA 以来发布的关键安全更新。 如果需要 Docker 容器 CU 或 GDR 更新，请参阅 [适用于 Docker 引擎的 Linux 上的 Microsoft SQL Server](https://hub.docker.com/r/microsoft/mssql-server)。 有关存储库配置的详细信息，请参阅[为 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
+如果已配置 CU 存储库 (mssql-server-2017)，则在执行新安装时将获得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 包的最新 CU  。 CU 存储库是 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有包安装文章的默认库。 如果已配置 GDR 存储库 (mssql-server-2017-gdr)，将仅获得自 GA 以来发布的关键安全更新  。 如果需要 Docker 容器 CU 或 GDR 更新，请参阅 [适用于 Docker 引擎的 Linux 上的 Microsoft SQL Server](https://hub.docker.com/r/microsoft/mssql-server)。 有关存储库配置的详细信息，请参阅[为 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 如果要更新现有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 包，请为每个包运行相应的更新命令以获取最新的 CU。 有关每个包的特定更新说明，请参阅以下安装指南：
 
@@ -101,7 +101,7 @@ ms.locfileid: "72278261"
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
-| MSDTC 支持 | 支持适用于 SQL Sever 2017 的 Microsoft 分布式事务处理协调器 (MSDTC)。 有关详细信息，请参阅[如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)](sql-server-linux-configure-msdtc.md)。 |
+| MSDTC 支持 | 支持适用于 SQL Server 2017 的 Microsoft 分布式事务处理协调器 (MSDTC)。 有关详细信息，请参阅[如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)](sql-server-linux-configure-msdtc.md)。 |
 
 ### <a name="package-details"></a>包详细信息
 
@@ -392,7 +392,7 @@ sudo systemctl start mssql-server
 
 ### <a name="package-details"></a>包详细信息
 
-下表列出了包的详细信息以及 RPM 和 Debian 包的下载位置。 请注意，如果使用以下安装指南中的步骤，则无需直接下载这些包：
+下表列出了包的详细信息以及 RPM 和 Debian 包的下载位置。 如果使用以下安装指南中的步骤，则无需直接下载这些包：
 
 - [安装 SQL Server 包](sql-server-linux-setup.md)
 - [安装全文搜索包](sql-server-linux-setup-full-text-search.md)
@@ -404,42 +404,6 @@ sudo systemctl start mssql-server
 | Red Hat RPM 包 | 14.0.1000.169-2 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server 代理 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[SSIS 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 包 | 14.0.1000.169-2 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server 代理 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 包 | 14.0.1000.169-2 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[SQL Server 代理 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[SSIS 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
-
-## <a name="Unsupported"></a> 不支持的功能和服务
-
-GA 发布时，Linux 不支持以下功能和服务。 随着时间的推移，对这些功能的支持将越来越多。
-
-| 区域 | 不支持的功能或服务 |
-|-----|-----|
-| **数据库引擎** | 事务复制 |
-| &nbsp; | 合并复制 |
-| &nbsp; | 更改数据捕获（请参阅 SQL Server 代理） |
-| &nbsp; | Stretch DB |
-| &nbsp; | PolyBase |
-| &nbsp; | 具有第三方连接的分布式查询 |
-| &nbsp; | 除 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之外的数据源的链接服务器  |
-| &nbsp; | 系统扩展存储过程（XP_CMDSHELL 等） |
-| &nbsp; | FileTable 和文件流 |
-| &nbsp; | 带有 EXTERNAL_ACCESS 或 UNSAFE 权限集的 CLR 程序集 |
-| &nbsp; | 缓冲池扩展 |
-| **SQL Server 代理** |  子系统：CmdExec、PowerShell、队列读取器、SSIS、SSAS、SSRS |
-| &nbsp; | Alerts |
-| &nbsp; | 日志读取器代理 |
-| &nbsp; | 变更数据捕获 (CDC) |
-| &nbsp; | 托管备份 |
-| **高可用性** | 数据库镜像  |
-| **安全性** | 可扩展的密钥管理 |
-| &nbsp; | 链接服务器的 AD 身份验证 | 
-| &nbsp; | 可用性组 (AG) 的 AD 身份验证 | 
-| &nbsp; | 第三方 AD 工具（Centrify、Vintela、Powerbroker） | 
-| **服务** | SQL Server Browser |
-| &nbsp; | SQL Server R Services |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | “数据库引擎服务” |
-| &nbsp; | Master Data Services |
-| &nbsp; | 分布式事务处理协调器 (DTC) |
 
 ## <a name="known-issues"></a>已知问题
 
@@ -461,21 +425,19 @@ GA 发布时，Linux 不支持以下功能和服务。 随着时间的推移，�
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager 无法连接到 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-- sa 登录名的默认语言是英语。
+- sa 登录名的默认语言是英语  。
 
-    - **解决方法**：使用 ALTER LOGIN 语句更改 sa 登录名的语言。
+    - **解决方法**：使用 ALTER LOGIN 语句更改 sa 登录名的语言   。
 
 #### <a name="databases"></a>数据库
 
 - 不能使用 mssql-conf 实用工具移动 master 数据库。 可以使用 mssql-conf 移动其他系统数据库。
 
-- 还原在 Windows 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中备份的数据库时，必须在 Transact-SQL 语句中使用 WITH MOVE 子句。
-
-- Linux 上运行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持需要 Microsoft 分布式事务处理协调器服务的分布式事务。 除非涉及 DTC，否则支持 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 链接服务器。 有关详细信息，请参阅 [Linux 上运行的 SQL Server 不支持需要 Microsoft 分布式事务处理协调器服务的分布式事务](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/)。
+- 还原在 Windows 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中备份的数据库时，必须在 Transact-SQL 语句中使用 WITH MOVE 子句  。
 
 - 传输层安全性 (TLS) 的某些算法（密码套件）无法在 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中正常运行。 这会在尝试连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时导致连接失败，以及在高可用性组中的副本之间建立连接时出现问题。
 
-   - **解决方法**：通过执行以下操作，修改 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 mssql.conf 配置脚本以禁用有问题的密码套件：
+   - **解决方法**：通过执行以下操作，修改 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 mssql.conf 配置脚本以禁用有问题的密码套件  ：
 
       1. 将以下项添加到 /var/opt/mssql/mssql.conf。
 
@@ -495,7 +457,7 @@ GA 发布时，Linux 不支持以下功能和服务。 随着时间的推移，�
 
 - Windows 上使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库无法在 Linux 上的 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 上进行还原。 要还原使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库，请首先将数据库升级到 Windows 上的 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]，然后再通过备份/还原或分离/附加将数据库移至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-- 目前 Linux 不支持用户权限 ADMINISTER BULK OPERATIONS。
+- 目前 Linux 不支持用户权限 ADMINISTER BULK OPERATIONS  。
 
 #### <a name="networking"></a>网络
 
@@ -518,10 +480,10 @@ GA 发布时，Linux 不支持以下功能和服务。 随着时间的推移，�
 1. 从引导 cmdline 中删除 `ipv6.disable=1`，在内核中启用 IPv6。 执行此操作的方法取决于 Linux 分发版和引导加载程序，例如 grub。 如果确实想要禁用 IPv6，仍可以通过在 `sysctl` 配置中设置 `net.ipv6.conf.all.disable_ipv6 = 1` 来禁用它（例如 `/etc/sysctl.conf`）。 这仍然会阻止系统的网络适配器获取 IPv6 地址，但允许 sqlservr 功能运行。
 
 #### <a name="network-file-system-nfs"></a>网络文件系统 (NFS)
-如果在生产中使用网络文件系统 (NFS) 远程共享，请注意以下支持要求：
+如果在生产中使用网络文件系统 (NFS) 远程共享，请注意以下支持要求  ：
 
-- 使用 NFS 版本 4.2 或更高版本。 较早版本的 NFS 不支持现代文件系统常用的必需功能，例如 fallocate 和稀疏文件创建。
-- 仅在 NFS 装载上查找 /var/opt/mssql 目录。 不支持其他文件，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系统二进制文件。
+- 使用 NFS 版本 4.2 或更高版本  。 较早版本的 NFS 不支持新式文件系统常用的必需功能，例如 fallocate 和稀疏文件创建。
+- 仅在 NFS 装载上查找 /var/opt/mssql 目录  。 不支持其他文件，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系统二进制文件。
 - 安装远程共享时，请确保 NFS 客户端使用“nolock”选项。
 
 #### <a name="localization"></a>本地化
@@ -546,7 +508,7 @@ GA 发布时，Linux 不支持以下功能和服务。 随着时间的推移，�
 
 #### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
-- 此版本中的 SUSE 不支持 mssql-server-is 包。 目前仅 Ubuntu 和 Red Hat Enterprise Linux (RHEL) 支持该包。
+- 此版本中的 SUSE 不支持 mssql-server-is 包  。 目前仅 Ubuntu 和 Red Hat Enterprise Linux (RHEL) 支持该包。
 
 - 由于 Linux CTP 2.1 刷新版和更高版本上有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，所以 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包可以使用 Linux 上的 ODBC 连接。 虽然已使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 MySQL ODBC 驱动程序测试过该功能，但也希望该功能可以与任何遵循 ODBC 规范的 Unicode ODBC 驱动程序搭配使用。 在设计阶段，可以提供 DSN 或连接字符串以连接到 ODBC 数据，还可以使用 Windows 身份验证。 有关详细信息，请参阅[宣布 Linux 上的 ODBC 支持的博客文章](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
 

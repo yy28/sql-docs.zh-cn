@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d1425b23b98ac0a81aaa0e6e848b405f06cc086
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 95e9d1139619f64aa9ff1be53711019fdbdf6637
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929823"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909302"
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -169,8 +169,6 @@ ms.locfileid: "70929823"
 2.  将两个棱锥图平展开。  
   
 3.  联接平展的棱锥图以形成非欧几里得平面。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  下图显示了此三步分解过程的示意图。 在棱锥图中，虚线表示每个棱锥图的四个面的边界。 步骤 1 和 2 显示测量椭圆体，使用一条绿色水平线表示赤道纬线，使用一系列绿色垂直线表示若干条经线。 步骤 1 显示要投影在两个半球上的棱锥图。 步骤 2 显示要平展的棱锥图。 步骤 3 显示平展的棱锥图，这些棱锥图已组合起来形成一个平面，显示出许多投影的经线。 请注意，这些投影线伸直后长度不一，具体取决于它们落在棱锥图上的位置。  
   

@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41cc9d68ad0ad9c39795f156a17291ce6cdeb33f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099790"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798406"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68099790"
   
 更新统计信息可确保查询使用最新的统计信息进行编译。 不过，更新统计信息会导致查询重新编译。 我们建议不要太频繁地更新统计信息，因为需要在改进查询计划和重新编译查询所用时间之间权衡性能。 具体的折衷方案取决于你的应用程序。 `UPDATE STATISTICS` 可以使用 tempdb 对行样本进行排序以生成统计信息。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -87,19 +87,19 @@ UPDATE STATISTICS [ schema_name . ] table_name
 ```  
   
 ## <a name="arguments"></a>参数  
- table_or_indexed_view_name  
+ table_or_indexed_view_name   
  包含统计信息对象的表或索引视图的名称。  
   
- index_or_statistics_name  
- 要更新其统计信息的索引的名称，或要更新的统计信息的名称。 如果不指定 index_or_statistics_name，则查询优化器将更新表或索引视图的所有统计信息。 这包括使用 CREATE STATISTICS 语句创建的统计信息、在 AUTO_CREATE_STATISTICS 为 ON 时创建的单列统计信息以及为索引创建的统计信息。  
+ index_or_statistics_name   
+ 要更新其统计信息的索引的名称，或要更新的统计信息的名称。 如果不指定 index_or_statistics_name，则查询优化器将更新表或索引视图的所有统计信息  。 这包括使用 CREATE STATISTICS 语句创建的统计信息、在 AUTO_CREATE_STATISTICS 为 ON 时创建的单列统计信息以及为索引创建的统计信息。  
   
  有关 AUTO_CREATE_STATISTICS 的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 若要查看某一表或视图的所有索引，可以使用 [sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)。  
   
  FULLSCAN  
  通过扫描表或索引视图中的所有行来计算统计信息。 FULLSCAN 和 SAMPLE 100 PERCENT 的结果相同。 FULLSCAN 不能与 SAMPLE 选项一起使用。  
   
- SAMPLE number { PERCENT | ROWS }  
- 指定当查询优化器更新统计信息时要为其使用的表或索引视图中近似的百分比或行数。 对于 PERCENT，number 可以介于 0 到 100 之间，对于 ROWS，number 可以介于 0 到总行数之间。 查询优化器抽样的实际行百分比或行数可能与指定的行百分比或行数不匹配。 例如，查询优化器扫描数据页上的所有行。  
+ SAMPLE number { PERCENT | ROWS }   
+ 指定当查询优化器更新统计信息时要为其使用的表或索引视图中近似的百分比或行数。 对于 PERCENT，number 可以介于 0 到 100 之间，对于 ROWS，number 可以介于 0 到总行数之间   。 查询优化器抽样的实际行百分比或行数可能与指定的行百分比或行数不匹配。 例如，查询优化器扫描数据页上的所有行。  
   
  对于基于默认抽样的查询计划并非最佳的特殊情况，SAMPLE 非常有用。 在大多数情况下，不必指定 SAMPLE，这是因为在默认情况下，查询优化器根据需要采用抽样，并以统计方式确定大量样本的大小，以便创建高质量的查询计划。 
  
@@ -119,20 +119,23 @@ UPDATE STATISTICS [ schema_name . ] table_name
  使用 RESAMPLE 会导致全表扫描。 例如，索引的统计信息使用全表扫描来获取其采样速率。 如果未指定采样选项（SAMPLE、FULLSCAN、RESAMPLE），则查询优化器默认将对数据进行抽样并计算样本大小。  
 
 PERSIST_SAMPLE_PERCENT = { ON | OFF }  
-为 ON 时，统计信息将保留设定的采样百分比，以用于未明确指定采样百分比的后续更新。 为 OFF 时，在未明确指定采样百分比的后续更新中，统计信息采样百分比将重置为默认采样。 默认为 **OFF**。 
+为 ON 时，统计信息将保留设定的采样百分比，以用于未明确指定采样百分比的后续更新  。 为 OFF 时，在未明确指定采样百分比的后续更新中，统计信息采样百分比将重置为默认采样  。 默认为 **OFF**。 
  
  > [!NOTE]
  > 如果执行 AUTO_UPDATE_STATISTICS，则在可用情况下使用持久采样百分比，否则使用默认采样百分比。
  > 此选项不影响 RESAMPLE 行为。
  
+ > [!NOTE]
+ > 如果该表被截断，则截断的 HoBT 上生成的所有统计信息将恢复为使用默认采样百分比。
+ 
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 和 [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) 公开选定统计信息的持久样本百分比值。
  
- 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 开始）到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 开始）。  
+ 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 开始）到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 开始）  。  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, …n] ) ] 强制重新计算涵盖在 ON PARTITIONS 子句中指定的分区的叶级统计信息，然后合并它们以生成全局统计信息。 需要 WITH RESAMPLE，因为使用不同抽样率生成的分区统计信息不能合并在一起。  
   
-适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
  ALL | COLUMNS | INDEX  
  更新所有现有统计信息、在一列或多列上创建的统计信息或为索引创建的统计信息。 如果未指定上述任何选项，则 UPDATE STATISTICS 语句将更新表或索引视图上的所有统计信息。  
@@ -140,7 +143,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  NORECOMPUTE  
  为指定统计信息禁用自动统计信息更新选项 AUTO_UPDATE_STATISTICS。 如果指定此选项，则查询优化器将完成此统计信息更新并禁用将来的更新。  
   
- 若要重新启用 AUTO_UPDATE_STATISTICS 选项行为，请不使用 NORECOMPUTE 选项再次运行 UPDATE STATISTICS，或运行 sp_autostats。  
+ 若要重新启用 AUTO_UPDATE_STATISTICS 选项行为，请不使用 NORECOMPUTE 选项再次运行 UPDATE STATISTICS，或运行 sp_autostats  。  
   
 > [!WARNING]  
 > 使用此选项可能会产生并非最佳的查询计划。 建议您尽量少用此选项，并且此选项只能由有资格的系统管理员使用。  
@@ -148,7 +151,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  有关 AUTO_STATISTICS_UPDATE 选项的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  INCREMENTAL = { ON | OFF }  
- 为 ON 时，根据分区统计信息重新创建统计信息。 为 OFF 时，删除统计信息树并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新计算统计信息。 默认为 **OFF**。  
+ 为 ON 时，根据分区统计信息重新创建统计信息  。 为 OFF 时，删除统计信息树并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新计算统计信息  。 默认为 **OFF**。  
   
  如果不支持每个分区统计信息，将生成错误。 对于以下统计信息类型，不支持增量统计信息：  
   
@@ -160,14 +163,14 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 -   对内部表创建的统计信息。  
 -   使用空间索引或 XML 索引创建的统计信息。  
   
-适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
 
-MAXDOP = max_degree_of_parallelism  
+MAXDOP = max_degree_of_parallelism   
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
   
- 在统计信息操作期间替代最大并行度配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
+ 在统计信息操作期间替代最大并行度配置选项  。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
- max_degree_of_parallelism 可以是：  
+ max_degree_of_parallelism 可以是  ：  
   
  1  
  取消生成并行计划。  
@@ -190,7 +193,7 @@ MAXDOP = max_degree_of_parallelism
 * `MAXDOP` 选项与 `STATS_STREAM`、`ROWCOUNT` 和 `PAGECOUNT` 选项不兼容。
 * 如果使用的话，`MAXDOP` 选项会受资源调控器工作负载组 `MAX_DOP` 设置的限制。
 
-### <a name="updating-all-statistics-with-spupdatestats"></a>使用 sp_updatestats 更新所有统计信息  
+### <a name="updating-all-statistics-with-sp_updatestats"></a>使用 sp_updatestats 更新所有统计信息  
 有关如何为数据库中的所有用户定义表和内部表更新统计信息的信息，请参阅存储过程 [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。 例如，以下命令调用 sp_updatestats 来更新数据库的所有统计信息。  
   
 ```sql  

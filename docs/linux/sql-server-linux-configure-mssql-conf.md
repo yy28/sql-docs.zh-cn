@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 19a2aab72c1e820e6d07af770a89196662c6fdd1
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995886"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783403"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -510,7 +510,7 @@ network.rpcport 和 distributedtransaction.servertcpport 设置用于配置 Micr
 | mssql-conf 设置 | 描述 |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Configure secure only RPC calls for distributed transactions |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Configure security only RPC calls for distributed |事务
+| distributedtransaction.fallbacktounsecurerpcifnecessary | 为分布式事务配置“仅安全”的 RPC 调用 |
 | distributedtransaction.maxlogsize | DTC 事务日志文件大小 (MB)。 默认为 64MB |
 | distributedtransaction.memorybuffersize | 存储跟踪的循环缓冲区大小。 此大小以 MB 为单位，默认为 10MB |
 | distributedtransaction.servertcpport | MSDTC rpc 服务器端口 |

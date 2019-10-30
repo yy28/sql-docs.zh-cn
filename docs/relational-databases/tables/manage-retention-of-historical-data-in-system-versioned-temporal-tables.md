@@ -11,12 +11,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e569d7676d363dc6526354ed6087a778fccce79d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9066f82c01dede49307cd38565f40f263d7ae76f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031628"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909570"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理版本由系统控制的临时表中历史数据的保留期
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "68031628"
 
  使用其中每种方法时，迁移或清理历史记录数据的逻辑将基于对应于当前表期末时间的列。 每行的期末时间值确定行版本“结束”（即放入历史记录表）的时刻。 例如，条件 `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` 指定超过一个月的历史数据需要删除并从历史记录表中移出。  
   
-> **注意**：本主题中的示例使用此[临时表实例](creating-a-system-versioned-temporal-table.md)。  
+> **注意：** 本主题中的示例使用此[临时表实例](creating-a-system-versioned-temporal-table.md)。  
   
 ## <a name="using-stretch-database-approach"></a>使用 Stretch Database 方法  
   
-> **注意**：Stretch Database 方法仅适用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 而不适用于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+> **注意：** Stretch Database 方法仅适用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 而不适用于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md) 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以透明方式将历史数据迁移到 Azure。 为了提高安全性，你可以使用 SQL Server 的 [始终加密](https://msdn.microsoft.com/library/mt163865.aspx) 功能来加密动态数据。 此外，你可以使用 [行级别安全性](../../relational-databases/security/row-level-security.md) 和其他高级 SQL Server 安全功能以及 Temporal 和 Stretch Database 来保护数据。  
   
@@ -61,36 +61,34 @@ ms.locfileid: "68031628"
     使用确定性谓词函数可将一部分历史记录保留在包含当前数据的同一数据库中，其余部分将迁移到 Azure。    
     有关示例和限制，请参阅 [使用筛选器函数选择要迁移的行 (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。 由于不确定性函数无效，如果你要滑动窗口的方式转移历史记录数据，需要定期更改内联谓词函数的定义，使本地保留的行窗口在期限内保持恒定。 滑动窗口可让你不断地将一个月以前的历史数据移到 Azure。 此方法的示例如下所示。  
   
-> **注意**：Stretch Database 会将数据迁移到 Azure。 因此，你必须拥有 Azure 帐户，以及计费的订阅。 若要获取免费试用的 Azure 帐户，请单击[免费试用一个月](https://azure.microsoft.com/pricing/free-trial/)。  
+> **注意：** Stretch Database 会将数据迁移到 Azure。 因此，你必须拥有 Azure 帐户，以及计费的订阅。 若要获取免费试用的 Azure 帐户，请单击[免费试用一个月](https://azure.microsoft.com/pricing/free-trial/)。  
   
- 你可以使用延伸向导或 Transact-SQL 来为延伸配置临时历史记录表，并且可以在版本由系统控制设置为“打开”时，为临时历史记录表启用延伸。 不允许延伸当前表，因为延伸当前表没有意义。  
+ 你可以使用延伸向导或 Transact-SQL 来为延伸配置临时历史记录表，并且可以在版本由系统控制设置为“打开”  时，为临时历史记录表启用延伸。 不允许延伸当前表，因为延伸当前表没有意义。  
   
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>使用延伸向导延伸整个历史记录表  
  适用于初学者的最简单方法是使用延伸向导为整个数据库启用延伸，然后在延伸向导中选择临时历史记录表（本示例假设你已将 Department 表配置为其他空数据库中的版本由系统控制的临时表）。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，你无法右键单击临时历史记录表本身和单击“延伸”。  
   
-1.  右键单击数据库，指向“任务”，指向“延伸”，然后单击“启用”以启动向导。  
+1.  右键单击数据库，指向“任务”  ，指向“延伸”  ，然后单击“启用”  以启动向导。  
   
-2.  在“选择表”窗口中，选择临时历史记录表的复选框，然后单击“下一步”。  
+2.  在“选择表”  窗口中，选择临时历史记录表的复选框，然后单击“下一步”。  
   
      ![在“选择表”页上选择历史记录表](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "在“选择表”页上选择历史记录表")  
   
-3.  在“配置 Azure” 窗口中提供你的登录凭据。 登录到 Microsoft Azure 或注册一个帐户。 选择要使用的订阅并选择 Azure 区域。 然后创建一个新的服务器或选择现有的服务器。 单击“下一步” 。  
+3.  在“配置 Azure”  窗口中提供你的登录凭据。 登录到 Microsoft Azure 或注册一个帐户。 选择要使用的订阅并选择 Azure 区域。 然后创建一个新的服务器或选择现有的服务器。 单击“下一步”  。  
   
-     ![新建 Azure 服务器 - Stretch Database 向导](../../relational-databases/tables/media/stretch-wizard-4.png "新建 Azure 服务器 - Stretch Database 向导")  
+     ![创建新的 Azure 服务器 - Stretch Database 向导](../../relational-databases/tables/media/stretch-wizard-4.png "创建新的 Azure 服务器 - Stretch Database 向导")  
   
-4.  在“安全凭据”窗口中，提供数据库主密钥密码来保护源 SQL Server 数据库凭据，然后单击“下一步”。  
+4.  在“安全凭据”  窗口中，提供数据库主密钥密码来保护源 SQL Server 数据库凭据，然后单击“下一步”。  
   
      ![Stretch Database 向导的“安全凭据”页](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 向导的“安全凭据”页")  
   
-5.  在“选择 IP 地址”窗口中，提供 SQL Server 的 IP 地址范围，以便 Azure 服务器能够与 SQL Server 通信（如果你选择已存在防火墙规则的现有服务器，则只需单击“下一步”即可使用现有的防火墙规则）。 单击“下一步”，然后单击“完成”以启用 Stretch Database 和延伸临时历史记录表。  
+5.  在“选择 IP 地址”  窗口中，提供 SQL Server 的 IP 地址范围，以便 Azure 服务器能够与 SQL Server 通信（如果你选择已存在防火墙规则的现有服务器，则只需单击“下一步”即可使用现有的防火墙规则）。 单击“下一步”  ，然后单击“完成”  以启用 Stretch Database 和延伸临时历史记录表。  
   
-     ![Stretch Database 向导的“选择 IP 地址”页](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 向导的“选择 IP 地址”页")  
+     ![选择 Stretch Database 向导的“IP 地址”页](../../relational-databases/tables/media/stretch-wizard-7.png "选择 Stretch Database 向导的“IP 地址”页")  
   
 6.  向导完成后，验证数据库已成功启用延伸。 请注意对象资源管理器中的图标指示数据库已延伸  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-> **注意**：如果“启用数据库延伸”失败，请查看错误日志。 一种常见的错误是防火墙规则配置不正确。  
+> **注意：** 如果“启用数据库延伸”失败，请查看错误日志。 一种常见的错误是防火墙规则配置不正确。  
   
  请参阅：  
   
@@ -167,7 +165,7 @@ COMMIT ;
   
  使用表分区，你可以实施滑动窗口方法，将最早的历史数据部分移出历史记录表，并使保留部分的大小在期限上保持恒定 - 根据所需的保留期来保留历史记录表中的数据。 当 SYSTEM_VERSIONING 为 ON 时，支持将数据换出历史记录表的操作，这意味着，你可以在不造成维护时段或阻碍常规工作负载的情况下清除一部分历史记录数据。  
   
-> **注意**：若要执行分区切换，历史记录表中的聚集索引必须与分区架构相符（必须包含 SysEndTime）。 系统创建的默认历史记录表包含一个聚集索引，其中包括 SysEndTime 和 SysStartTime 列，并且最适合于用于分区、插入新历史记录数据和典型的临时查询。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。  
+> **注意：** 若要执行分区切换，历史记录表中的聚集索引必须与分区架构相符（必须包含 SysEndTime）。 系统创建的默认历史记录表包含一个聚集索引，其中包括 SysEndTime 和 SysStartTime 列，并且最适合于用于分区、插入新历史记录数据和典型的临时查询。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。  
   
  使用滑动窗口方法时需要执行两组任务：  
   
@@ -183,14 +181,14 @@ COMMIT ;
   
  ![分区](../../relational-databases/tables/media/partitioning.png "分区")  
   
-> **注意**：有关配置分区时使用 RANGE LEFT 与 RANGE RIGHT 对性能产生的影响，请参阅下面的“表分区的性能注意事项”。  
+> **注意：** 有关配置分区时使用 RANGE LEFT 与 RANGE RIGHT 对性能产生的影响，请参阅下面的“表分区的性能注意事项”。  
   
  请注意，第一个和最后一个分区分别以下限和上限“打开”，以确保每个新行具有目标分区，而不管分区依据列中的值如何。   
 随着时间的推移，历史记录表中的新行将移入更高的分区。 当第 6 个分区被填满时，即表示达到了目标保留期。 这是首次开始执行重复性分区维护任务的时刻（需要将该任务计划为定期运行，在本示例中为每月运行一次）。  
   
  下图演示了重复性分区维护任务（参阅下面的详细步骤）。  
   
- ![分区2](../../relational-databases/tables/media/partitioning2.png "分区2")  
+ ![分区 2](../../relational-databases/tables/media/partitioning2.png "分区 2")  
   
  重复性分区维护任务的详细步骤如下：  
   
@@ -336,7 +334,7 @@ COMMIT TRANSACTION
   
  首先，让我们以直观的方式解释 RANGE LEFT 和 RANGE RIGHT 选项的含义：  
   
- ![分区3](../../relational-databases/tables/media/partitioning3.png "分区3")  
+ ![分区 3](../../relational-databases/tables/media/partitioning3.png "分区 3")  
   
  当你将某个分区函数定义为 RANGE LEFT 时，指定的值为分区的上限。 当你使用 RANGE RIGHT 时，指定的值为分区的下限。 当你使用 MERGE RANGE 操作从分区函数定义中删除边界时，底层实现也会删除包含边界的分区。 如果该分区不为空，则会因 MERGE RANGE 操作而将数据移到分区。  
   
@@ -434,7 +432,7 @@ COMMIT;
 ```  
 
 ## <a name="using-temporal-history-retention-policy-approach"></a>使用时态历史记录保持策略方法
-> **注意**：时态历史记录保留策略方法适用于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017（从 CTP 1.3 开始）。  
+> **注意：** 时态历史记录保留策略方法适用于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017（从 CTP 1.3 开始）。  
 
 可在单个表级别配置时态历史记录保留，这使用户可以创建灵活的期限策略。 应用时态保留很简单：仅需要在创建表或更改架构期间设置一个参数。
 
@@ -449,7 +447,7 @@ ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
 SELECT is_temporal_history_retention_enabled, name
 FROM sys.databases
 ```
-数据库标志 is_temporal_history_retention_enabled 默认设置为 ON，但用户可以使用 ALTER DATABASE 语句对其进行更改。 此标志还会在时间点还原操作后自动设置为 OFF。 若要为数据库启用时态历史记录保留清理，请执行以下语句：
+数据库标志 is_temporal_history_retention_enabled 默认设置为 ON，但用户可以使用 ALTER DATABASE 语句对其进行更改  。 此标志还会在时间点还原操作后自动设置为 OFF。 若要为数据库启用时态历史记录保留清理，请执行以下语句：
 ```
 ALTER DATABASE <myDB>
 SET TEMPORAL_HISTORY_RETENTION  ON
@@ -494,11 +492,11 @@ LEFT JOIN sys.tables T2
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```
 ### <a name="how-sql-database-deletes-aged-rows"></a>SQL 数据库如何删除过期的行？
-清理过程具体取决于历史记录表的索引布局。 请务必注意，仅具有聚集索引（B 树或列存储）的历史记录表可配置有限保留策略。 对于具有有限保留期的所有时态表，系统将创建后台任务对其执行过期数据清理。 行存储（B 树）聚集索引的清理逻辑会删除较小区块（最多 10K）的过期行，以减轻数据库日志和 I/O 子系统的压力。 虽然清理逻辑使用要求的 B 树索引，但无法完全保证删除超过保留期的行的顺序。 因此，请不要对应用程序中的清理顺序有任何期待。
+清理过程具体取决于历史记录表的索引布局。 请务必注意，仅具有聚集索引（B 树或列存储）的历史记录表可配置有限保留策略  。 对于具有有限保留期的所有时态表，系统将创建后台任务对其执行过期数据清理。 行存储（B 树）聚集索引的清理逻辑会删除较小区块（最多 10K）的过期行，以减轻数据库日志和 I/O 子系统的压力。 虽然清理逻辑使用要求的 B 树索引，但无法完全保证删除超过保留期的行的顺序。 因此，请不要对应用程序中的清理顺序有任何期待  。
 
 聚集列存储的清理任务可同时移除整个行组（每组通常包含 100 万行），效率非常高，高速生成历史数据时尤其如此。
 
-![聚集列存储保留期](../../relational-databases/tables/media/cciretention.png "聚集列存储保留期")
+![聚集列存储保留](../../relational-databases/tables/media/cciretention.png "聚集列存储保留")
 
 聚集列存储索引具有优秀的数据压缩和高效的保留清理能力，是工作负载快速生成大量历史数据时的最佳选择。 此模式尤其适用于密集型事务处理工作负载，此类工作负载使用时态表跟踪和审计更改、执行趋势分析或 IoT 数据引入。
 

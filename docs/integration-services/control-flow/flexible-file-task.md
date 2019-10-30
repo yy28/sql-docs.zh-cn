@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3aaa746be1453f874a77af6bbfdf318da0731623
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298277"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807419"
 ---
 # <a name="flexible-file-task"></a>灵活的文件任务
 
@@ -35,7 +35,9 @@ ms.locfileid: "71298277"
 要将灵活的文件任务添加到包，请将其从 SSIS 工具箱拖到设计器画布。 然后，双击该任务，或右键单击任务并选择“编辑”，以打开“灵活的文件任务编辑器”对话框   。
 
 “操作”属性指定要执行的文件操作  。
-目前仅支持“复制”操作  。
+当前支持的操作包括：
+- **复制**操作
+- **删除**操作
 
 以下属性可用于“复制”操作  。
 
@@ -49,7 +51,13 @@ ms.locfileid: "71298277"
 - **DestinationFolderPath：** 指定目标文件夹路径。
 - **DestinationFileName：** 指定目标文件名称。
 
-有关服务主体权限配置的说明
+以下属性可用于“删除”操作  。
+- **ConnectionType：** 指定连接管理器类型。
+- **Connection：** 指定连接管理器。
+- **FolderPath：** 指定文件夹路径。
+- **FileName：** 指定文件名。 如果留空，则将删除文件夹。 对于 Azure Blob 存储，不支持删除文件夹。
+
+***有关服务主体权限配置的说明***
 
 要使“测试连接”起作用（Blob 存储或 Data Lake Storage Gen2），应向服务主体分配至少存储帐户的“存储 Blob 数据读取器”角色   。
 可通过 [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 实现。

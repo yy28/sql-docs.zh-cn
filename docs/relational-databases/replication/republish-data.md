@@ -15,12 +15,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9173073074957d448be8bd28cf92b16f18f4e2f3
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c37a0b953177d0e3d978607982da54c613a3d2a2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710778"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908233"
 ---
 # <a name="republish-data"></a>重新发布数据
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "71710778"
   
 6.  初始化订阅。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  如果在重新发布拓扑中使用合并复制，则所有重新发布的订阅服务器都必须使用服务器订阅。 有关订阅类型的详细信息，请参阅[订阅发布](../../relational-databases/replication/subscribe-to-publications.md)。  
   
  在下图中，发布服务器和重新发布服务器都作为其自身的本地分发服务器。 如果将它们都设置为使用远程分发服务器，则各分发服务器需要与其发布服务器位于低速或昂贵的通信链接的同一端。 发布服务器必须通过可靠、高速的通信链接连接到远程分发服务器。  
   
- ![Republishing data](../../relational-databases/replication/media/repl-06a.gif "Republishing data")  
+ ![重新发布数据](../../relational-databases/replication/media/repl-06a.gif "重新发布数据")  
   
  任何服务器都既可用作发布服务器又可用作订阅服务器。 例如，请考虑下面这个关系图，其中表的发布位于伦敦，且必须分发到美国四个不同的城市：芝加哥、纽约、圣地亚哥和西雅图。 之所以选择位于纽约的服务器来订阅源于伦敦的已发布表，是因为纽约的站点满足下列条件：  
   

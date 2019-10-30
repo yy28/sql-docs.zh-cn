@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e72ba4eed90fbd8218b9f0ed3942744fd75fcd90
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163915"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909306"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "71163915"
 2.  在“数据库属性”  对话框中，选择“查询存储”  页。  
   
 3.  在“操作模式(要求)”  对话框中，选择“读写”  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 语句  
   
@@ -113,12 +111,12 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Regressed"></a> 使用回归查询功能  
 在启用查询存储后，刷新对象资源管理器窗格的数据库部分，以添加“查询存储”部分  。  
   
-![SSMS 对象资源管理器中的 SQL Server 2016 查询存储树](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016 Query Store tree in SSMS Object Explorer")   ![SSMS 对象资源管理器中的 SQL Server 2017 查询存储树](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017 Query Store tree in SSMS Object Explorer") 
+![SSMS 对象资源管理器中的 SQL Server 2016 查询存储树](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 对象资源管理器中的 SQL Server 2016 查询存储树")   ![SSMS 对象资源管理器中的 SQL Server 2017 查询存储树](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 对象资源管理器中的 SQL Server 2017 查询存储树") 
   
 选择“回归查询”  ，以在 **中打开“回归查询”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 使用顶部的下拉框根据各种条件筛选查询：持续时间（单位 ms，此为默认值）、CPU 时间 (ms)、逻辑读取 (KB)、逻辑写入 (KB)、物理读取 (KB)、CLR 时间 (ms)、DOP、内存使用量 (KB)、行计数、已用日志内存 (KB)、已用临时 DB 内存 (KB) 和等待时间 (ms)  。  
 选择某个计划以查看图形查询计划。 可以使用按钮查看源查询、强制执行和取消强制执行查询计划、在网格和图表格式之间进行切换、比较所选的计划（如果选择多个）及刷新显示。  
   
-![SSMS 对象资源管理器中的 SQL Server 2016 回归查询](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016 Regressed Queries in SSMS Object Explorer")  
+![SSMS 对象资源管理器中的 SQL Server 2016 回归查询](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SSMS 对象资源管理器中的 SQL Server 2016 回归查询")  
   
 若要强制执行某一计划，请选择查询和计划，然后单击“强制计划”  。 你只可以强制执行由查询计划功能保存且仍保留在查询计划缓存中的计划。
 
@@ -129,11 +127,11 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 或更高版本中，选择“查询等待统计信息”以打开“查询等待统计信息”窗格   。 “查询等待统计信息”窗格显示包含查询存储中排在前面的等待类别的条形图。 使用顶部的下拉框选择等待时间的聚合条件：平均值、最大值、最小值、标准偏差和总计（默认）  。
 
- ![SSMS 对象资源管理器中的 SQL Server 2017 查询等待统计信息](../../relational-databases/performance/media/query-store-waits.PNG "SQL Server 2017 Query Wait Statistics in SSMS Object Explorer")
+ ![SSMS 对象资源管理器中的 SQL Server 2017 查询等待统计信息](../../relational-databases/performance/media/query-store-waits.PNG "SSMS 对象资源管理器中的 SQL Server 2017 查询等待统计信息")
 
 通过单击条形图和所选等待类别展示的详细信息视图，选择等待类别。 这个新的条形图包含对该等待类别有贡献的查询。 
   
- ![SSMS 对象资源管理器中的 SQL Server 2017 查询等待统计信息的详细信息视图](../../relational-databases/performance/media/query-store-waits-detail.PNG "SQL Server 2017 Query Wait Statistics detail view in SSMS Object Explorer")
+ ![SSMS 对象资源管理器中的 SQL Server 2017 查询等待统计信息详细信息视图](../../relational-databases/performance/media/query-store-waits-detail.PNG "SSMS 对象资源管理器中的 SQL Server 2017 查询等待统计信息详细信息视图")
 
 使用顶部的下拉框根据各种等待时间条件为所选等待类别筛选查询：平均值、最大值、最小值、标准偏差和总计（默认）  。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
 

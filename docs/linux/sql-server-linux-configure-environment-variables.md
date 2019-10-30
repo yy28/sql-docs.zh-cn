@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f6e78603aee684a9db3dc89e94f331275d1cd0bf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 019878cd1dde4425ba69e0c69ce7a4a4a1d0dd62
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476219"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807467"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>在 Linux 上使用环境变量配置 SQL Server 设置
 
@@ -94,7 +94,7 @@ ms.locfileid: "68476219"
 此示例使用已配置的环境变量运行 `mssql-conf setup`。 指定了以下环境变量：
 
 - **ACCEPT_EULA** 接受最终用户许可协议。
-- **MSSSQL_PID** 指定用于非生产用途的免费许可的 SQL Server Developer Edition。
+- **MSSQL_PID** 指定用于非生产用途的免费许可的 SQL Server Developer Edition。
 - **MSSQL_SA_PASSWORD** 设置强密码。
 - **MSSQL_TCP_PORT** 将 SQL Server 侦听的 TCP 端口设置为 1234。
 
@@ -107,7 +107,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 此示例 docker 命令使用以下环境变量来创建新的 SQL Server 容器：
 
 - **ACCEPT_EULA** 接受最终用户许可协议。
-- **MSSSQL_PID** 指定用于非生产用途的免费许可的 SQL Server Developer Edition。
+- **MSSQL_PID** 指定用于非生产用途的免费许可的 SQL Server Developer Edition。
 - **MSSQL_SA_PASSWORD** 设置强密码。
 - **MSSQL_TCP_PORT** 将 SQL Server 侦听的 TCP 端口设置为 1234。 这意味着在此示例中，必须使用 `-p 1234:1234` 命令映射自定义 TCP 端口，而不是将端口 1433（默认）映射到主机端口。
 

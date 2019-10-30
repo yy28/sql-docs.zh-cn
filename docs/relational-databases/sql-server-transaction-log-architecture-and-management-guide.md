@@ -1,7 +1,7 @@
 ---
 title: SQL Server 事务日志体系结构和管理指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/05/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8626b9b1a00d62273165706bda5b742eebab3251
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 7444659676f6f8270b5cc8013c872e492e0cd8c8
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874200"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916060"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 事务日志体系结构和管理指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70874200"
 
   
 ##  <a name="Logical_Arch"></a> 事务日志逻辑体系结构  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事务日志按逻辑运行，就好像事务日志是一串日志记录一样。 每条日志记录由一个日志序列号 (LSN) 标识。 每条新日志记录均写入日志的逻辑结尾处，并使用一个比前面记录的 LSN 更高的 LSN。 日志记录按创建时的串行序列存储。 每条日志记录都包含其所属事务的 ID。 对于每个事务，与事务相关联的所有日志记录通过使用可提高事务回滚速度的向后指针挨个链接在一个链中。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事务日志按逻辑运行，就好像事务日志是一串日志记录一样。 每条日志记录由一个日志序列号 (LSN) 标识。 每条新日志记录均写入日志的逻辑结尾处，并使用一个比前面记录的 LSN 更高的 LSN。 日志记录按创建的顺序存储：如果 LSN2 大于 LSN1，则 LSN2 所标识的日志记录描述的更改发生在日志记录 LSN1 描述的更改之后。 每条日志记录都包含其所属事务的 ID。 对于每个事务，与事务相关联的所有日志记录通过使用可提高事务回滚速度的向后指针挨个链接在一个链中。  
   
  数据修改的日志记录或者记录所执行的逻辑操作，或者记录已修改数据的前像和后像。 前像是执行操作前的数据副本；后像是执行操作后的数据副本。  
   
@@ -65,7 +65,9 @@ ms.locfileid: "70874200"
   
  回滚操作也记录在日志中。 每个事务都在事务日志中保留空间，以确保存在足够的日志空间来支持由显式回滚语句或遇到错误引起的回滚。 保留的空间量取决于在事务中执行的操作，但通常等于用于记录每个操作的空间量。 事务完成后将释放此保留空间。  
   
-<a name="minlsn"></a> 日志文件中从必须存在以确保数据库范围内成功回滚的第一条日志记录到最后写入的日志记录之间的部分称为日志的活动部分，即“活动日志”  。 这是进行数据库完整恢复所需的日志部分。 永远不能截断活动日志的任何部分。 此第一条日志记录的日志序列号 (LSN)，称为最小恢复 LSN (MinLSN)  。  
+<a name="minlsn"></a> 日志文件中从必须存在以确保数据库范围内成功回滚的第一条日志记录到最后写入的日志记录之间的部分称为日志的活动部分，即“活动日志”或“日志尾部”   。 这是进行数据库完整[恢复](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)所需的日志部分。 永远不能截断活动日志的任何部分。 此第一条日志记录的日志序列号 (LSN)，称为最小恢复 LSN (MinLSN)  。 有关事务日志支持的操作的详细信息，请参阅[事务日志 (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md)。  
+
+差异和日志备份将还原的数据库推到稍后的时间，该时间与一个更高的 LSN 相对应。 
   
 ##  <a name="physical_arch"></a> 事务日志物理体系结构  
 数据库中的事务日志映射在一个或多个物理文件上。 从概念上讲，日志文件是一系列日志记录。 从物理上讲，日志记录序列被有效地存储在实现事务日志的物理文件集中。 每个数据库必须至少有一个日志文件。  
@@ -231,14 +233,14 @@ SQL Server 数据库引擎生成自动检查点。 自动检查点之间的间�
 LSN 148 是事务日志中的最后一条记录。 在处理 LSN 147 处记录的检查点时，Tran 1 已经提交，而 Tran 2 是唯一的活动事务。 这就使 Tran 2 的第一条日志记录成为执行最后一个检查点时处于活动状态的事务的最旧日志记录。 这使 LSN 142（Tran 2 的开始事务记录）成为 MinLSN。
 
 ### <a name="long-running-transactions"></a>长时间运行的事务
-
-活动日志必须包括所有未提交事务的每一部分。 如果应用程序开始执行一个事务但未提交或回滚，将会阻止数据库引擎推进 MinLSN。 这可能会导致两种问题：
+活动日志必须包括所有未提交事务的每一部分。 如果应用程序开始执行一个事务但未提交或回滚，将会阻止 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 推进 MinLSN。 这可能会导致两种问题：
 
 * 如果系统在事务执行了许多未提交的修改后关闭，以后重新启动时，恢复阶段所用的时间将比“恢复间隔”  选项指定的时间长得多。
 * 因为不能截断 MinLSN 之后的日志部分，日志可能变得很大。 即使数据库使用的是简单恢复模式，这种情况也有可能出现，在简单恢复模式下，每次执行自动检查点操作时通常都会截断事务日志。
 
-### <a name="replication-transactions"></a>复制事务
+从 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 开始，可以使用[加速数据库恢复](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)来避免恢复长时间运行的事务和上述问题。  
 
+### <a name="replication-transactions"></a>复制事务
 日志读取器代理监视已为事务复制配置的每个数据库的事务日志，并将已设复制标记的事务从事务日志复制到分发数据库中。 活动日志必须包含标记为要复制但尚未传递给分发数据库的所有事务。 如果不及时复制这些事务，它们可能会阻止截断日志。 有关详细信息，请参阅 [事务复制](../relational-databases/replication/transactional/transactional-replication.md)。
 
 ## <a name="see-also"></a>另请参阅 
@@ -249,6 +251,7 @@ LSN 148 是事务日志中的最后一条记录。 在处理 LSN 147 处记录�
 [事务日志备份 (SQL Server)](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
 [数据库检查点 (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md)   
 [配置恢复间隔服务器配置选项](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
+[加速数据库恢复](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)       
 [sys.dm_db_log_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
 [了解 SQL Server 中的日志记录和恢复（作者：Paul Randal）](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    

@@ -17,14 +17,22 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 259ff6d422788f302d05b435026839970b9f75db
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5dde30d826d5b6662a4f488aed7c3a1f21dd00b2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768660"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908423"
 ---
 # <a name="create-a-pull-subscription"></a>创建请求订阅
+
+<!--
+2019-10-24 , GeneMi:
+This article .md file exists in the so-called "2016+" section of repo 'sql-docs-pr'.
+No article in 2016+ should ever have the moniker 'sql-server-2014' on its metadata line 'monikerRange:', I think.
+Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation deserves further investigation.
+-->
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建请求订阅。  
   
@@ -64,8 +72,6 @@ ms.locfileid: "68768660"
 3.  右键单击要为其创建一个或多个订阅的发布，然后单击 **“新建订阅”** 。  
   
 4.  完成新建订阅向导中的页。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-create-a-pull-subscription-from-the-subscriber"></a>从订阅服务器创建请求订阅  
   
@@ -121,7 +127,7 @@ ms.locfileid: "68768660"
   
 2.  在订阅服务器上，执行 [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 指定 \@publisher  、\@publisher_db  、\@publication  以及下列参数：  
   
-    -   \@subscriber_type  – 对于客户端订阅指定 local  ，对于服务器订阅指定 global  。  
+    -   \@subscriber_type  - 对于客户端订阅指定 local  ，对于服务器订阅指定 global  。  
   
     -   \@subscription_priority  – 指定订阅的优先级（从 0.00  到 99.99  ）。 只有服务器订阅要求指定优先级。  
   

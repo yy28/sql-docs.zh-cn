@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2017 的各版本和支持的功能 ~ Linux
+title: SQL Server 2019 的各版本和支持的功能 - Linux
 ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: linux
@@ -21,33 +21,33 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.openlocfilehash: 661d74060d9bb6f7097a5fe50291bdde23e0a591
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: mikeray
+ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
 ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/25/2019
-ms.locfileid: "72928909"
+ms.locfileid: "72954989"
 ---
-# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上 SQL Server 2017 的各版本和支持的功能
+# <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的各版本和支持的功能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文详细介绍 Linux 上的 SQL Server 2017 的不同版本支持的功能。 有关 Windows 上 SQL Server 的版本和支持功能，请参阅 [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)。  
+本文详细介绍 Linux 上的 SQL Server 2019 的不同版本支持的功能。 有关 Windows 上 SQL Server 的版本和支持功能，请参阅 [SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)。  
   
 根据应用程序的需要，安装要求会有所不同。 不同版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 能够满足单位和个人独特的性能、运行时以及价格要求。 安装哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件还取决于您的具体需要。 下面各节将帮助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的不同版本和可用组件中做出最佳选择。  
 
 有关最新的发布说明和新增功能的信息，请参阅以下内容：
-- [Linux 上的 SQL Server 2017 发行说明](sql-server-linux-release-notes.md)
-- [Linux 上的 SQL Server 2017 的新增功能](sql-server-linux-whats-new.md)
+- [Linux 上的 SQL Server 2019 发行说明](sql-server-linux-release-notes-2019.md)
+- [Linux 上的 SQL Server 2019 的新增功能](sql-server-linux-whats-new-2019.md)
 
 有关 Linux 上不可用的 SQL Server 功能的列表，请参阅[不支持的功能和服务](#Unsupported)。
 
 ### <a name="try-sql-server"></a>试用 SQL Server！    
     
-[下载 SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
+[下载 SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 版本  
  下表介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的各个版本。 
@@ -66,7 +66,7 @@ ms.locfileid: "72928909"
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件  
 
-Linux 上的 SQL Server 2017 支持 SQL Server 数据库引擎。 下表介绍了数据库引擎中的功能。   
+Linux 上的 SQL Server 2019 支持 SQL Server 数据库引擎。 下表介绍了数据库引擎中的功能。   
   
 |服务器组件|描述|  
 |-----------------------|-----------------|  
@@ -209,17 +209,15 @@ Linux 上的 SQL Server 2017 支持 SQL Server 数据库引擎。 下表介绍�
 |平面和大地测量数据类型|是|是|是|是| 
 |高级空间库|是|是|是|是|   
 |导入/导出业界标准的空间数据格式|是|是|是|是|   
+
 ## <a name="Unsupported"></a> 不支持的功能和服务
 
-Linux 上的 SQL Server 2017 目前不支持以下功能和服务。 随着时间的推移，对这些功能的支持将越来越多。
+Linux 上的 SQL Server 2019 目前不支持以下功能和服务。 随着时间的推移，对这些功能的支持将越来越多。
 
 | 区域 | 不支持的功能或服务 |
 |-----|-----|
-| **数据库引擎** | 事务复制 |
-| &nbsp; | 合并复制 |
-| &nbsp; | 更改数据捕获（请参阅 SQL Server 代理） |
+| **数据库引擎** | 合并复制 |
 | &nbsp; | Stretch DB |
-| &nbsp; | PolyBase |
 | &nbsp; | 具有第三方连接的分布式查询 |
 | &nbsp; | 除 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之外的数据源的链接服务器  |
 | &nbsp; | 系统扩展存储过程（XP_CMDSHELL 等） |
@@ -228,25 +226,28 @@ Linux 上的 SQL Server 2017 目前不支持以下功能和服务。 随着时�
 | &nbsp; | 缓冲池扩展 |
 | **SQL Server 代理** |  子系统：CmdExec、PowerShell、队列读取器、SSIS、SSAS、SSRS |
 | &nbsp; | Alerts |
-| &nbsp; | 日志读取器代理 |
-| &nbsp; | 变更数据捕获 (CDC) |
 | &nbsp; | 托管备份 |
 | **高可用性** | 数据库镜像  |
 | **安全性** | 可扩展的密钥管理 |
 | &nbsp; | 链接服务器的 AD 身份验证 | 
 | &nbsp; | 可用性组 (AG) 的 AD 身份验证 | 
 | **服务** | SQL Server Browser |
-| &nbsp; | SQL Server R Services |
+| &nbsp; | SQL Server R services<sup>1</sup> |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
 | &nbsp; | “数据库引擎服务” |
 | &nbsp; | Master Data Services |
+
+<sup>1</sup> SQL Server 中支持 SQL Server R，但不支持作为单独包的 SQL Server R services。
   
 ## <a name="next-steps"></a>后续步骤
+ [SQL Server 2017 的各版本和支持的功能 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [SQL Server 2019 的各版本和支持的功能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 的各版本和支持的功能 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [SQL Server 2016 的各版本和支持的功能 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
  [SQL Server 2014 的各版本和支持的功能 - Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [安装 SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  [SQL Server 的产品规格](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+
+

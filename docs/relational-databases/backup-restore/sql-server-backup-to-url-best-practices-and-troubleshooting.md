@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d5ca430aa06e3f8a0072bff474e67e6f9defc74
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: a31d11a469411e13f357f87d1112d608c94f5aa4
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176362"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717232"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 备份到 URL 最佳实践和故障排除
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "70176362"
   
 -   并行备份到同一 blob 导致一个备份失败，发生 **“初始化失败”** 错误。  
   
--   使用以下错误日志帮助解决备份错误：  
+-   如果使用的是页 Blob（例如 `BACKUP... TO URL... WITH CREDENTIAL`），请使用以下错误日志帮助解决备份错误：  
   
     -   设置跟踪标志 3051 以启用记录到具有以下格式的特定错误日志：  
   

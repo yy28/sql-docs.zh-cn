@@ -13,12 +13,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a33a45be38ad49b2ecef68fe64be21b94c08f85
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123213"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909822"
 ---
 # <a name="query-store-usage-scenarios"></a>Query Store 使用方案
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -66,8 +66,6 @@ ms.locfileid: "70123213"
 4.  确保查询所使用的索引已进行碎片整理。  
   
 5.  考虑重新编写成本高的查询。 例如，可以充分利用查询参数化，减少动态 SQL 的使用。 在读取数据时实施最佳逻辑（在数据库端而非应用程序端应用数据筛选）。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="ab-testing"></a>A/B 测试  
  在计划引入应用程序更改之前和之后，使用 Query Store 来比较工作负荷性能。 在下表包含的多个示例中，你可以使用 Query Store 来评估环境或应用程序更改对工作负荷性能的影响：  

@@ -16,12 +16,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47d53f088089ed348e01ae380e0f21dcca420fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140321"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796637"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>使用表值参数（数据库引擎）
 
@@ -57,6 +57,9 @@ ms.locfileid: "68140321"
 - 是强类型。
 - 使客户端可以指定排序顺序和唯一键。
 - 在用于存储过程时像临时表一样被缓存。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，对于参数化查询，表值参数也被缓存。
+
+## <a name="Permissions"></a> 权限
+若要创建用户定义的表类型的实例或使用表值参数调用存储过程，用户必须对该类型或包含该类型的架构或数据库具有 EXECUTE 权限。
 
 ## <a name="Restrictions"></a> 限制
 

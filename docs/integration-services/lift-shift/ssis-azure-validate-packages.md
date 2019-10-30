@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: e0d552c02131bd630c4ca828050278cd7f3105cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd6c55f439b9d95473c5e36ea88cc7c5e1fb555e
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122855"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915985"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>验证部署到 Azure 的 SQL Server Integration Services (SSIS) 包
 

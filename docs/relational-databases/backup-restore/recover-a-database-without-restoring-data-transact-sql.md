@@ -1,7 +1,7 @@
 ---
 title: 恢复数据库但不还原数据 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e87e806b8af58c74bf4406d697a99f42d7f67c4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68cf8bc2412ff715d42ad22b2000f832d86b1f63
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033605"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916053"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>恢复数据库但不还原数据 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "68033605"
   
  仅恢复数据库还原的 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语法是：  
   
- RESTORE DATABASE *database_name* WITH RECOVERY  
+ `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
->  FROM =\<backup_device>   子句不用于仅恢复还原，因为不需要任何备份。  
+> FROM =\<backup_device>   子句不用于仅恢复还原，因为不需要任何备份。  
   
  **示例**  
   
  以下示例在还原操作中恢复 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库而不还原数据。  
   
-```  
+```sql  
 -- Restore database using WITH RECOVERY.  
 RESTORE DATABASE AdventureWorks2012  
    WITH RECOVERY  
@@ -60,17 +60,17 @@ RESTORE DATABASE AdventureWorks2012
   
  数据库按段落进行还原。 完成主文件组的还原之后，一个或多个未还原的文件变为与新数据库的状态一致，这也许是因为这些文件最近始终是只读的。 只需恢复这些文件即可；无需复制数据。  
   
- 仅恢复还原操作将脱机文件组中的数据变为联机状态；不会有数据复制、重做或撤消这些阶段。 有关还原阶段的信息，请参阅[还原和恢复概述 (SQL Server) ](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  
+ 仅恢复还原操作将脱机文件组中的数据变为联机状态；不会有数据复制、重做或撤消这些阶段。 有关还原阶段的信息，请参阅[还原和恢复概述 (SQL Server) ](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。  
   
  仅恢复文件还原的 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语法是：  
   
- RESTORE DATABASE *database_name* { FILE **=** _logical_file_name_ | FILEGROUP **=** _logical_filegroup_name_ }[ **,** ...*n* ] WITH RECOVERY  
+ `RESTORE DATABASE *database_name* { FILE **=**_logical_file_name_ | FILEGROUP **=**_logical_filegroup_name_ }[ **,**...*n* ] WITH RECOVERY`  
   
  **示例**  
   
  以下示例显示了 `SalesGroup2`数据库中辅助文件组 `Sales` 中文件的仅恢复文件还原。 已在段落还原的初始步骤中还原了主文件组，并且 `SalesGroup2` 与还原的主文件组一致。 只需一条语句即可恢复此文件组并使其变为联机状态。  
   
-```  
+```sql  
 RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;  
 ```  
   
@@ -95,5 +95,5 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
  [文件还原（简单恢复模式）](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [文件还原（完整恢复模式）](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
+ [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md) 
   

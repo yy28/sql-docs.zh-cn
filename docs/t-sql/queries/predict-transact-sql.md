@@ -1,11 +1,11 @@
 ---
 title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 10/24/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - PREDICT
@@ -14,20 +14,20 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - PREDICT clause
-author: VanMSFT
-ms.author: vanto
+author: dphansen
+ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c50bdedab94a2bd9dd1c6da6556fbd882412fe45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141309"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907261"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-基于存储模型生成预测值或评分。  
+基于存储模型生成预测值或评分。 有关详细信息，请参阅[使用 PREDICT T-SQL 函数本机计分](../../advanced-analytics/sql-native-scoring.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -60,7 +60,7 @@ MODEL = @model | model_literal
 
 可以通过使用 R 或 Python 或其他工具创建模型对象。
 
-data
+data 
 
 DATA 参数用于指定用于评分或预测的数据。 在查询中以表源的形式指定数据。 表源可以是表、表别名、CTE 别名、视图或表值函数.
 
@@ -70,7 +70,7 @@ PARAMETERS 参数用于指定用于评分或预测的可选用户定义参数。
 
 每个参数的名称特定于模型类型。 例如，RevoScaleR 中的 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 函数支持参数 `@computeResiduals`，指示在对逻辑回归模型评分时是否应计算残差。 如果正在调用兼容模型，无法将该参数名称和 TRUE 或 FALSE 值传递到 `PREDICT` 函数。
 
-WITH ( <result_set_definition> )
+WITH ( <result_set_definition> ) 
 
 WITH 子句用于指定 `PREDICT` 函数返回的输出的架构。
 
@@ -92,7 +92,7 @@ WITH 子句用于指定 `PREDICT` 函数返回的输出的架构。
 
 ## <a name="remarks"></a>Remarks
 
-所有版本的 SQL Server 2017 或更高版本都支持 `PREDICT` 功能。 此支持包括在 Linux 上的 SQL Server 2017。 云中的 Azure SQL 数据库也支持 `PREDICT`。 无论是否启用其他机器学习功能，所有这些支持均是活动的。
+Windows 和 Linux 上的所有版本的 SQL Server 2017 或更高版本都支持 `PREDICT` 功能。 云中的 Azure SQL 数据库也支持 `PREDICT`。 无论是否启用其他机器学习功能，所有这些支持均是活动的。
 
 不需要在服务器上安装 R、Python 或另一种机器学习语言就可以使用 `PREDICT` 函数。 可以在另一个环境中对模型进行训练，还可以将其保存到 SQL Server 表中以与 `PREDICT` 结合使用，或从另一个已保存该模型的 SQL Server 实例中调用该模型。
 
@@ -118,7 +118,7 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-`DATA` 参数中为表源指定的别名 d 用于引用属于 dbo.mytable 的列。 为 PREDICT 函数指定的别名 p 用于引用 PREDICT 函数返回的列。
+`DATA` 参数中为表源指定的别名 d 用于引用属于 dbo.mytable 的列  。 为 PREDICT 函数指定的别名 p 用于引用 PREDICT 函数返回的列   。
 
 ### <a name="combining-predict-with-an-insert-statement"></a>将 PREDICT 与 INSERT 语句相结合
 
@@ -179,3 +179,7 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
+
+## <a name="next-steps"></a>后续步骤
+
+- [使用 PREDICT T-SQL 函数本机计分](../../advanced-analytics/sql-native-scoring.md)

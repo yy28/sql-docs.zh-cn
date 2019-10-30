@@ -11,19 +11,19 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bad2f6cf7f36141b4f5a1d42f648c1631175d36
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: fe13d14db11b95812217725bb4207ee30b50d62b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251532"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798427"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>快速入门：SQL Server 中的扩展事件
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-本文旨在为不熟悉扩展事件以及想在几分钟内创建一个事件会话的 SQL 开发人员提供帮助。 通过使用扩展事件，你可以查看有关 SQL 系统和应用程序的内部操作的详细信息。 创建扩展事件会话时，需要告诉系统：
+扩展事件是一种轻型性能监视系统，它允许用户收集监视和解决 SQL Server 中的问题所需的数据。 若要了解有关扩展事件体系结构的详细信息，请参阅[扩展事件概述](extended-events.md)。  本文旨在为不熟悉扩展事件以及想在几分钟内创建一个事件会话的 SQL 开发人员提供帮助。 通过使用扩展事件，你可以查看有关 SQL 系统和应用程序的内部操作的详细信息。 创建扩展事件会话时，需要告诉系统：
 
 - 你感兴趣的事件实例。
 - 希望系统以哪种方式向你报告数据。
@@ -76,7 +76,7 @@ SSMS.exe 为扩展事件提供一个出色的用户界面 (UI)。 之所以出�
 ### <a name="steps-of-demo"></a>演示步骤
 
 
-即使你决定不执行这些操作，也可以试着了解一下。 此演示将启动“新建会话”对话框。 我们将处理其四个页面，分别为：
+即使你决定不执行这些操作，也可以试着了解一下。 此演示将启动“新建会话”  对话框。 我们将处理其四个页面，分别为：
 
 - 常规
 - 事件
@@ -89,54 +89,54 @@ SSMS.exe 为扩展事件提供一个出色的用户界面 (UI)。 之所以出�
 
 1. 与 SSMS 连接。
 
-2. 在对象资源管理器中，依次单击“管理” > “扩展事件” > “新建会话”。 “新建会话”对话框优于“新建会话向导”，虽然两者非常相似。
+2. 在对象资源管理器中，依次单击“管理”   > “扩展事件”   > “新建会话”  。 “新建会话”  对话框优于“新建会话向导”  ，虽然两者非常相似。
 
-3. 在左上角，单击“常规”页。 然后在“会话名称”文本框中，键入 *YourSession* 或者任何你喜欢的名称。 暂时*不要*按“确定”按钮，该按钮要在演示结束时按。
+3. 在左上角，单击“常规”  页。 然后在“会话名称”  文本框中，键入 *YourSession* 或者任何你喜欢的名称。 暂时*不要*按“确定”  按钮，该按钮要在演示结束时按。
 
     ![新建会话 > 常规 > 会话名称](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
-4. 在左上角，单击“事件”页，然后单击“选择”按钮。
+4. 在左上角，单击“事件”  页，然后单击“选择”  按钮。
 
     ![新建会话 > 事件 > 选择 > 事件库、所选事件](../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png)
 
-5. 在“事件库”区域的下拉列表中，选择“仅事件名称”。
-    - 在文本框中键入 **sql**，这可以通过使用“包含”运算符筛选并缩短可用事件长列表。
+5. 在“事件库”  区域的下拉列表中，选择“仅事件名称”  。
+    - 在文本框中键入 **sql**，这可以通过使用“包含”  运算符筛选并缩短可用事件长列表。
     - 滚动并单击名为 **sql_statement_completed** 的事件。
-    - 单击右箭头按钮 **>** 将该事件移到“所选事件”框中。
+    - 单击右箭头按钮 **>** 将该事件移到“所选事件”  框中。
 
-6. 继续留在“事件”页，单击最右边的“配置”按钮。
-    - 为方便显示，左边已被截掉，在下面的屏幕截图中，你可以看到“事件配置选项”区域。
+6. 继续留在“事件”  页，单击最右边的“配置”  按钮。
+    - 为方便显示，左边已被截掉，在下面的屏幕截图中，你可以看到“事件配置选项”  区域。
 
     ![新建会话 > 事件 > 配置 > 筛选器(谓词) > 字段](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. 单击“筛选器(谓词)”选项卡。接下来，单击“单击此处可添加子句”，以便捕获所有具有 HAVING 子句的 SQL SELECT 语句。
+7. 单击“筛选器(谓词)”  选项卡。接下来，单击“单击此处可添加子句”  ，以便捕获所有具有 HAVING 子句的 SQL SELECT 语句。
 
-8. 在“字段”下拉列表中，选择“sqlserver.sql_text”。
-   - 在“运算符”中，选择 LIKE 运算符。
-   - 在“值”中，键入 **%SELECT%HAVING%**。
+8. 在“字段”  下拉列表中，选择“sqlserver.sql_text”  。
+   - 在“运算符”  中，选择 LIKE 运算符。
+   - 在“值”  中，键入 **%SELECT%HAVING%** 。
 
     > [!NOTE]
     > 在这个由两部分组成的名称中，*sqlserver* 是包名称，*sql_text* 是字段名称。 我们之前选择的事件 *sql_statement_completed* 必须与我们选择的字段位于相同的包中。
 
-9. 在左上角，单击“数据存储”页。
+9. 在左上角，单击“数据存储”  页。
 
-10. 在“目标”区域中，单击“单击此处添加目标”。
-    - 在“类型”下拉列表中，选择“event_file”。
+10. 在“目标”区域中，单击“单击此处添加目标”   。
+    - 在“类型”  下拉列表中，选择“event_file”  。
     - 这意味着，事件数据将存储在我们可以查看的文件中。
 
     ![新建会话 > 数据存储 > 目标 > 类型 > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 
-11. 在“属性”区域的“服务器上的文件名”文本框中，键入完整路径和文件名。
+11. 在“属性”  区域的“服务器上的文件名”  文本框中，键入完整路径和文件名。
     - 文件扩展名必须为 *.xel*。
     - 我们的小测试需要小于 1 MB 的文件。
 
     ![新建会话 > 高级 > 最大调度滞后时间 > 确定](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
-12. 在左上角，单击“高级”页。
-    - 将“最大调度滞后时间”减少至 3 秒。
-    - 最后，单击底部的“确定”按钮。
+12. 在左上角，单击“高级”  页。
+    - 将“最大调度滞后时间”  减少至 3 秒。
+    - 最后，单击底部的“确定”  按钮。
 
-13. 返回到**对象资源管理器**，展开“管理” > “会话”，并查看 **YourSession** 的新节点。
+13. 返回到**对象资源管理器**，展开“管理”   > “会话”  ，并查看 **YourSession** 的新节点。
 
     ![名为 YourSession 的新*事件会话*的节点，在对象资源管理器中，在“管理”>“扩展事件”>“会话”下面](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
@@ -144,7 +144,7 @@ SSMS.exe 为扩展事件提供一个出色的用户界面 (UI)。 之所以出�
 #### <a name="edit-your-event-session"></a>编辑事件会话
 
 
-在 SSMS 的**对象资源管理器**中，可以通过右键单击事件会话的节点来编辑该会话，然后单击“属性”。 此时将显示相同的多页对话框。
+在 SSMS 的**对象资源管理器**中，可以通过右键单击事件会话的节点来编辑该会话，然后单击“属性”  。 此时将显示相同的多页对话框。
 
 
 ### <a name="corresponding-t-sql-for-your-event-session"></a>事件会话的相应 T-SQL
@@ -152,7 +152,7 @@ SSMS.exe 为扩展事件提供一个出色的用户界面 (UI)。 之所以出�
 
 你之前使用 SSMS UI 生成了一个创建事件会话的 T-SQL 脚本。 你可以看到生成的脚本，如下所示：
 
-- 右键单击会话节点，依次单击“编写会话脚本为” > “CREATE 到” > “剪贴板”。
+- 右键单击会话节点，依次单击“编写会话脚本为”   > “CREATE 到”   > “剪贴板”  。
 - 粘贴到任意文本编辑器中。
 
 
@@ -230,7 +230,7 @@ ALTER EVENT SESSION [YourSession]
 
 你可以选择指示事件会话在 SQL Server 实例启动时自动启动。 请参阅 CREATE EVENT SESSION 上的 **STARTUP STATE = ON** 关键字。
 
-- SSMS UI 在“新建会话” > “常规”页上提供相应的复选框。
+- SSMS UI 在“新建会话”   > “常规”  页上提供相应的复选框。
 
 
 ## <a name="test-your-event-session"></a>测试事件会话
@@ -238,10 +238,10 @@ ALTER EVENT SESSION [YourSession]
 
 通过执行以下这些简单步骤来测试事件会话：
 
-1. 在 SSMS 的**对象资源管理器**中，右键单击事件会话节点，然后单击“启动会话”。
+1. 在 SSMS 的**对象资源管理器**中，右键单击事件会话节点，然后单击“启动会话”  。
 2. 多次运行以下 `SELECT...HAVING` 语句。
     - 理想情况下，可能会在两次运行之间将 `HAVING Count` 值在 2 和 3 之间切换。 这样你就可以看到结果中的差异。
-3. 右键单击会话节点，然后单击“停止会话”。
+3. 右键单击会话节点，然后单击“停止会话”  。
 4. 有关[如何使用 SELECT 查看结果](#select-the-full-results-xml-37)，请阅读下一小节。
 
 
@@ -381,15 +381,15 @@ SELECT
 - [SQL Server 中扩展事件的目标数据的高级查看功能](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)
 
 
-先从基础的开始，即，标为“查看目标数据”和“查看实时数据”的上下文菜单选项。
+先从基础的开始，即，标为“查看目标数据”  和“查看实时数据”  的上下文菜单选项。
 
 
 ### <a name="view-target-data"></a>查看目标数据
 
 
-在 SSMS 的**对象资源管理器**中，可以右键单击事件会话节点下的目标节点。 在上下文菜单中单击“查看目标数据”。 SSMS 将显示数据。
+在 SSMS 的**对象资源管理器**中，可以右键单击事件会话节点下的目标节点。 在上下文菜单中单击“查看目标数据”  。 SSMS 将显示数据。
 
-事件报告新数据时，显示内容不会更新。 不过，你可以再次单击“查看目标数据”。
+事件报告新数据时，显示内容不会更新。 不过，你可以再次单击“查看目标数据”  。
 
 
 ![查看目标数据，在 SSMS 中，管理 > 扩展事件 > 会话 > YourSession > package0.event_file，右键单击](../../relational-databases/extended-events/media/xevents-viewtargetdata-ssms-targetnode-61.png)
@@ -398,7 +398,7 @@ SELECT
 ### <a name="watch-live-data"></a>查看实时数据
 
 
-在 SSMS 的**对象资源管理器**中，可以右键单击事件会话节点。 在上下文菜单中单击“查看实时数据”。 SSMS 将在传入数据持续实时到达时显示这些数据。
+在 SSMS 的**对象资源管理器**中，可以右键单击事件会话节点。 在上下文菜单中单击“查看实时数据”  。 SSMS 将在传入数据持续实时到达时显示这些数据。
 
 
 ![查看实时数据，在 SSMS 中，管理 > 扩展事件 > 会话 > YourSession，右键单击](../../relational-databases/extended-events/media/xevents-watchlivedata-ssms-yoursessionnode-63.png)
@@ -478,7 +478,7 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 #### <a name="ssms-ui-for-search"></a>使用 SSMS UI 进行搜索
 
 
-另一个搜索选项是使用 SSMS UI 的“新建会话” > “事件” > “事件库”对话框（如前面的屏幕截图所示）。
+另一个搜索选项是使用 SSMS UI 的“新建会话”   > “事件”   > “事件库”  对话框（如前面的屏幕截图所示）。
 
 
 
@@ -514,7 +514,7 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 
 SQL Server 附带了几个已创建的扩展事件。 它们都配置为每当 SQL 系统启动时启动。 这些事件会话收集的数据在发生系统错误时可能有用。 与所有扩展事件一样，它们占用的资源极少，因此，Microsoft 建议不干涉它们的运行。
 
-你可以在 SSMS 的**对象资源管理器**中的“管理” > “扩展事件” > “会话”下面看到这些事件会话。  从 2016 年 6 月起，已安装事件会话的列表如下：
+你可以在 SSMS 的**对象资源管理器**中的“管理”   > “扩展事件”   > “会话”  下面看到这些事件会话。  从 2016 年 6 月起，已安装事件会话的列表如下：
 
 - AlwaysOn_health
 - system_health

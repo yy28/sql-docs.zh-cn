@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 21cf6f634fd9caa40f3d5685372f24d09567ca2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006133"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909159"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>迁移后验证和优化指南
 
@@ -107,8 +107,6 @@ ms.locfileid: "68006133"
   -   这可能涉及将数据库中存储的任何用户定义的代码构造（如存储过程、用户定义函数或视图）与托管基础表中使用的数据类型信息的系统表（例如 [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)）进行比较。
 2. 如果无法将所有代码遍历到前一个点，则出于相同的目的，请更改表中的数据类型，使其匹配任何变量/参数声明。
 3. 了解以下结构的用途：
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   -   用作谓词的函数；
   -   通配符搜索；

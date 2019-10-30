@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 06a8737ee336579847efc6ba874e5de389538251
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.openlocfilehash: 05efb4fe4bc6d67c9642463675028d8fa29eb931
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71271934"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798398"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -116,7 +116,7 @@ ms.locfileid: "71271934"
 |**3051**|允许将“SQL Server 备份到 URL”记录到特定的错误日志文件中。 有关详细信息，请参阅 [SQL Server 备份到 URL 最佳实践和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。<br /><br />**作用域**：仅全局|  
 |**3205**|默认情况下，如果磁带机支持硬件压缩，则 DUMP 或 BACKUP 语句会使用该功能。 利用此跟踪标志，可以禁用磁带机的硬件压缩。 此选项在您需要与不支持压缩的其他站点或磁带机交换磁带时很有用。<br /><br />**作用域**：全局或会话|  
 |**3226**|默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 如果非常频繁地创建日志备份，这些成功消息会迅速累积，从而产生一个巨大的错误日志，使查找其他消息变得非常困难。<br /><br />使用这一跟踪标志，可以取消这些日志条目。 如果您频繁地运行日志备份，并且没有任何脚本依赖于这些条目，则这种做法非常有用。<br /><br />**作用域**：仅全局|   
-|**3427**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中，如果多个将数据插入临时表的连续事务占用的 CPU 比在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中时更多，则启用修复来解决问题。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/3216543)<br /><br />注意：  此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 及更高内部版本。 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，此跟踪标志不再有效。<br /><br />**作用域**：仅全局|  
+|**3427**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，如果多个将数据插入临时表的连续事务占用的 CPU 比在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中时更多，则启用修复来解决问题。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/3216543)<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，此跟踪标志不再有效。<br /><br />**作用域**：仅全局|  
 |**3459**|禁用并行重做。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/3200975)和 [Microsoft 支持文章](https://support.microsoft.com/help/4101554)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 及更高内部版本。<br /><br />**作用域**：仅全局| 
 |**3468**|禁用 TempDB 上的[间接检查点](../../relational-databases/logs/database-checkpoints-sql-server.md#IndirectChkpt)。<br /><br />注意：  此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 及更高内部版本。<br /><br />**作用域**：仅全局|  
 |**3608**|禁止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动启动和恢复除 **master** 数据库之外的任何数据库。 如果已启动要求使用 TempDB 的活动，则会恢复 model，并创建 TempDB    。 在访问数据库时将启动并恢复其他数据库。 可能无法运行某些功能，如快照隔离和读提交快照。 用于[移动系统数据库](../../relational-databases/databases/move-system-databases.md)和[移动用户数据库](../../relational-databases/databases/move-user-databases.md).<br /><br />注意：  请不要在正常操作中使用。<br /><br />**作用域**：仅全局|   

@@ -1,7 +1,7 @@
 ---
 title: 恢复到日志序列号 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5973311723ae336ba6c801bfbcf82da2ec0c3bfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46ab24ff86eb7a68e48f58e67f03a859d0c43aa7
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033557"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916036"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>恢复到日志序列号 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +35,11 @@ ms.locfileid: "68033557"
  您可以使用日志序列号 (LSN) 定义还原操作的恢复点。 但是，这是为工具供应商提供的专用功能，不太可能广泛使用。  
   
 ##  <a name="LSNs"></a> 日志序列号的概述  
- RESTORE 顺序期间，在内部使用 LSN 跟踪数据还原到的时间点。 还原备份后，数据被还原到与进行备份的时间点相对应的 LSN。 差异和日志备份将还原的数据库推到稍后的时间，该时间与一个更高的 LSN 相对应。  
-  
- 事务日志中的每个记录都由一个日志序列号 (LSN) 唯一标识。 LSN 是这样排序的：如果 LSN2 大于 LSN1，则 LSN2 所标识的日志记录描述的更改发生在日志记录 LSN1 描述的更改之后。  
-  
- 发生重大事件的日志记录的 LSN 对于构造正确的还原顺序可能很有用。 因为 LSN 是有顺序的，所以可以比较它们是否相等（即 **\<** 、 **>** 、 **=** 、 **\<=** 、 **>=** ）。 构造还原顺序时，这种比较很有用。  
+ RESTORE 顺序期间，在内部使用 LSN 跟踪数据还原到的时间点。 还原备份后，数据被还原到与进行备份的时间点相对应的 LSN。 差异和日志备份将还原的数据库推到稍后的时间，该时间与一个更高的 LSN 相对应。 有关 LSN 的详细信息，请参阅 [SQL Server 事务日志体系结构和管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。  
   
 > [!NOTE]  
->  LSN 是数据类型为 **numeric**的值 (25,0)。 算术运算（例如加法或减法）对 LSN 没有任何意义，请不要与 LSN 一起使用。  
-  
-  
+> LSN 是数据类型为 numeric(25,0) 的值  。 算术运算（例如加法或减法）对 LSN 没有任何意义，请不要与 LSN 一起使用。  
+ 
 ## <a name="viewing-lsns-used-by-backup-and-restore"></a>查看备份和还原使用的 LSN  
  使用下列一种或几种方法可以查看发生给定备份和还原事件的日志记录的 LSN：  
   
@@ -59,7 +54,7 @@ ms.locfileid: "68033557"
 -   [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 > [!NOTE]  
->  LSN 还显示在某些消息正文中。  
+>  LSN 还显示在错误日志的某些消息中。  
   
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>还原到 LSN 的 Transact-SQL 语法  
  通过使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句，可以在 LSN 处或刚好在 LSN 之前停止，如下所示：  
@@ -77,7 +72,7 @@ ms.locfileid: "68033557"
 ## <a name="examples"></a>示例  
  以下示例假定 `AdventureWorks` 数据库已更改为使用完整恢复模式。  
   
-```  
+```sql  
 RESTORE LOG AdventureWorks FROM DISK = 'c:\adventureworks_log.bak'   
 WITH STOPATMARK = 'lsn:15000000040000037'  
 GO  
@@ -99,7 +94,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
+ [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)     
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)     
+ [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)       
+ [SQL Server 事务日志体系结构和管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
   

@@ -13,12 +13,12 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfbe6343432453b26b3283959cf8dd15bfa7cf81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8522e65762e8c27ec65fb5fc4a56db0653b5f5c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048569"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907007"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,8 +64,6 @@ MultiPolygon 中的第二个实例是 LineString 实例，而不是接受的 Pol
 1.  组成 **MultiPolygon** 实例的所有实例是有效的 **Polygon** 实例。 对于有效的 **Polygon** 实例，请参阅 [Polygon](../../relational-databases/spatial/polygon.md)。  
   
 2.  组成 **Polygon** 实例的所有 **MultiPolygon** 实例都不会重叠。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 以下示例显示两个有效的 **MultiPolygon** 实例和一个无效的 **MultiPolygon** 实例。  
   

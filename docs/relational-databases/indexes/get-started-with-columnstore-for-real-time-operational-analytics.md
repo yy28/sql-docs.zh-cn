@@ -11,12 +11,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009494"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908028"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>开始使用列存储进行实时运营分析
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70009494"
   
 -   **数据滞后时间。** 实施 ETL 会增大运行分析的时间延迟。 例如，如果 ETL 作业在每个工作日结束时运行，分析查询会针对至少一天的数据运行。 对于许多企业来说，这种延迟不可接受，因为企业依赖于实时分析数据。 例如，欺诈检测需要实时分析操作数据。  
   
- ![实时运营分析概述](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "实时运营分析概述")  
+ ![实时运行分析概述](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "实时运行分析概述")  
   
  实时运行分析为这些难题提供了解决方案。   
         对同一个基础表运行分析和 OLTP 工作负载时不会出现时间延迟。   对于使用实时分析的方案，成本和复杂性将大大降低，因为不需要使用 ETL，并且不需要采购和维护独立的数据仓库。  
@@ -84,8 +84,6 @@ ms.locfileid: "70009494"
   
 3.  这就是要执行的所有操作！  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  现在，无需对应用程序进行任何更改，就能运行实时运营分析。  分析查询将针对列存储索引运行，OLTP 操作将针对 OLTP btree 索引不断运行。 OLTP 工作负载将继续执行，但维护列存储索引会产生更多的开销。 请参阅下一部分中有关性能优化的信息。  
   
 ## <a name="blog-posts"></a>博客文章  
@@ -122,7 +120,7 @@ ms.locfileid: "70009494"
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>示例 A：从 B 树索引访问热数据，从列存储索引访问温数据  
  此示例使用筛选条件 (accountkey > 0) 来确定要将哪些行放在列存储索引中。 目的是设计筛选条件和后续查询，以便从 btree 索引访问经常变化的“热”数据，从列存储索引访问更稳定的“暖”数据。  
   
- ![用于暖数据和热数据的组合索引](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "用于暖数据和热数据的组合索引")  
+ ![暖数据和热数据的组合索引](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "暖数据和热数据的组合索引")  
   
 > [!NOTE]  
 >  查询优化器将考虑但不是总是选择列存储索引用于查询计划。 当查询优化器选择筛选的列存储索引时，将以透明方式合并来自列存储索引的行以及不符合筛选条件的行，以便能够进行实时分析。 这不同于常规的非聚集筛选索引，后者只能在将自身限制为索引中存在的行的查询中使用。  
