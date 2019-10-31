@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5ffc2773144d2b1a170e2f087d7abf607af99ef6
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MT
+ms.openlocfilehash: 6ebcc95d48f894ff8cef9771946130fc67216a45
+ms.sourcegitcommit: c8b8101c62a6af3e4a7244683e3f34f7189c150f
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049862"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182629"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教程：使用 Spark 作业将数据引入到 SQL Server 的数据池中
 
@@ -131,9 +131,9 @@ ms.locfileid: "73049862"
 
 以下步骤演示了 Spark 流式处理作业将数据从 HDFS 加载到数据池中。
 
-1. 在查询引入的数据前，查看任务历史记录输出，了解作业是否已完成。
+1. 在查询引入数据之前，请查看 Spark 执行状态，包括 Yarn 应用 ID、Spark UI 和驱动程序日志。
 
-   ![Spark 作业历史记录](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
+   ![Spark 执行详细信息](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
 1. 返回到本教程开头部分打开的 SQL Server 主实例查询窗口。
 

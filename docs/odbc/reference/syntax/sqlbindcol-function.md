@@ -55,7 +55,7 @@ SQLRETURN SQLBindCol(
  送要绑定的结果集列的编号。 列按递增的列顺序编号，从0开始，其中列0是书签列。 如果未使用书签，即 SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_OFF，则列号从1开始。  
   
  *TargetType*  
- 送@No__t-0*TargetValuePtr*缓冲区的 C 数据类型的标识符。 当从具有**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**或**SQLSetPos**的数据源检索数据时，驱动程序会将数据转换为此类型;当它通过**SQLBulkOperations**或**SQLSetPos**将数据发送到数据源时，驱动程序将转换此类型的数据。 有关有效 C 数据类型和类型[标识符的列表](../../../odbc/reference/appendixes/c-data-types.md)，请参阅附录 D：数据类型。  
+ 送 \**TargetValuePtr* 缓冲区的 C 数据类型的标识符。 当从具有**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**或**SQLSetPos**的数据源检索数据时，驱动程序会将数据转换为此类型;当它通过**SQLBulkOperations**或**SQLSetPos**将数据发送到数据源时，驱动程序将转换此类型的数据。 有关有效 C 数据类型和类型[标识符的列表](../../../odbc/reference/appendixes/c-data-types.md)，请参阅附录 D：数据类型。  
   
  如果*TargetType*参数是 interval 数据类型，则为每个 ARD 的 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 字段中设置的默认间隔前导精度（2）和默认间隔秒精度（6）用于数据。 如果*TargetType*参数为 SQL_C_NUMERIC，则在 ARD 的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段中设置的默认精度（驱动程序定义）和默认刻度（0）将用于数据。 如果任何默认的精度或小数位数不合适，则应用程序应通过调用**SQLSetDescField**或**SQLSetDescRec**显式设置相应的描述符字段。  
   
@@ -64,10 +64,10 @@ SQLRETURN SQLBindCol(
  *TargetValuePtr*  
  [延迟的输入/输出]指向要绑定到列的数据缓冲区的指针。 **SQLFetch**和**SQLFetchScroll**返回此缓冲区中的数据。 当*操作*为 SQL_FETCH_BY_BOOKMARK 时， **SQLBulkOperations**返回此缓冲区中的数据;当*Operation*为 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK 时，它将从此缓冲区检索数据。 当*操作*为 SQL_REFRESH 时， **SQLSetPos**返回此缓冲区中的数据;当 SQL_UPDATE*操作*时，它将从此缓冲区检索数据。  
   
- 如果*TargetValuePtr*为 null 指针，则驱动程序将为列解除数据缓冲区的绑定。 应用程序可以通过使用 SQL_UNBIND 选项调用**SQLFreeStmt**来解除所有列的绑定。 如果对**SQLBindCol**的调用中的*TargetValuePtr*参数为 Null 指针，但*StrLen_or_IndPtr*参数是有效的，则应用程序可以解除列的数据缓冲区的绑定，但仍具有绑定到列的长度/指示器缓冲区负值.  
+ 如果 *TargetValuePtr* 为 null 指针，则驱动程序将为列解除数据缓冲区的绑定。 应用程序可以通过使用 SQL_UNBIND 选项调用**SQLFreeStmt**来解除所有列的绑定。 如果对**SQLBindCol**的调用中的 *TargetValuePtr* 参数为 Null 指针，但*StrLen_or_IndPtr*参数是有效的，则应用程序可以解除列的数据缓冲区的绑定，但仍具有绑定到列的长度/指示器缓冲区负值.  
   
  *BufferLength*  
- 送@No__t-0*TargetValuePtr*缓冲区的长度（以字节为单位）。  
+ 送 *TargetValuePtr* 缓冲区的长度（以字节为单位）。  
   
  当驱动程序返回长度可变的数据（如字符或二进制数据）时，驱动程序使用*BufferLength*来避免写入超过 \**TargetValuePtr*缓冲区的末尾。 请注意，当驱动程序将字符数据返回到 \**TargetValuePtr*时，驱动程序会对 null 终止字符进行计数。 \**TargetValuePtr*因此必须包含空间的 null 终止字符或驱动程序将截断数据。  
   
@@ -230,7 +230,7 @@ SQLRETURN SQLBindCol(
  有关如何使用此信息的详细信息，请参阅本部分后面的 "缓冲区地址"。 有关按列绑定的详细信息，请参阅按[行绑定](../../../odbc/reference/develop-app/row-wise-binding.md)。  
   
 ## <a name="buffer-addresses"></a>缓冲区地址  
- *缓冲区地址*是数据或长度/指示器缓冲区的实际地址。 驱动程序在写入缓冲区之前（例如在提取时）计算缓冲区地址。 它是通过下面的公式计算的，它使用*TargetValuePtr*和*StrLen_or_IndPtr*参数中指定的地址、绑定偏移量和行号：  
+ *缓冲区地址*是数据或长度/指示器缓冲区的实际地址。 驱动程序在写入缓冲区之前（例如在提取时）计算缓冲区地址。 它是通过下面的公式计算的，它使用 *TargetValuePtr* 和*StrLen_or_IndPtr*参数中指定的地址、绑定偏移量和行号：  
   
  *绑定地址* + *绑定偏移量*+ （（*行号*-1） x*元素大小*）  
   
@@ -238,7 +238,7 @@ SQLRETURN SQLBindCol(
   
 |变量|描述|  
 |--------------|-----------------|  
-|*绑定地址*|对于数据缓冲区，为**SQLBindCol**中的*TargetValuePtr*参数指定的地址。<br /><br /> 对于长度/指示器缓冲区，为**SQLBindCol**中的*StrLen_or_IndPtr*参数指定的地址。 有关详细信息，请参阅 "描述符和 SQLBindCol" 部分中的 "其他注释"。<br /><br /> 如果绑定地址是0，则不会返回任何数据值，即使之前公式计算的地址不为零。|  
+|*绑定地址*|对于数据缓冲区，为**SQLBindCol**中的 *TargetValuePtr* 参数指定的地址。<br /><br /> 对于长度/指示器缓冲区，为**SQLBindCol**中的*StrLen_or_IndPtr*参数指定的地址。 有关详细信息，请参阅 "描述符和 SQLBindCol" 部分中的 "其他注释"。<br /><br /> 如果绑定地址是0，则不会返回任何数据值，即使之前公式计算的地址不为零。|  
 |*绑定偏移量*|如果使用按行绑定，则值存储在使用 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句特性指定的地址上。<br /><br /> 如果使用按列绑定，或 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句特性的值为 null 指针，则*绑定偏移量*为0。|  
 |*行号*|行集中从1开始的行号。 对于单行读取（默认值），此值为1。|  
 |*元素大小*|绑定数组中元素的大小。<br /><br /> 如果使用按列绑定，则为长度/指示器缓冲区的**sizeof （SQLINTEGER）** 。 对于数据缓冲区，如果数据类型为可变长度，则为*BufferLength*参数的值 **; 如果数据**类型为固定长度，则为数据类型的大小。<br /><br /> 如果使用按行绑定，则这是数据和长度/指示器缓冲区的 SQL_ATTR_ROW_BIND_TYPE 语句特性的值。|  
