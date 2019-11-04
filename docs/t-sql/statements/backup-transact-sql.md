@@ -46,18 +46,18 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 867ad139d591827a2159e77bbcdd33dbb85c6b6d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028964"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142859"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
 备份 SQL 数据库。
 
-单击以下选项卡之一，了解所使用的特定 SQL 版本的语法、参数、注解、权限和示例。
+单击以下选项卡之一，了解所使用的特定 SQL 版本的语法、参数、备注、权限和示例。
 
 有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
@@ -608,7 +608,7 @@ DISK='Y:\SQLServerBackups\AdventureWorks2.bak',
 DISK='Z:\SQLServerBackups\AdventureWorks3.bak'
 WITH FORMAT,
   MEDIANAME = 'AdventureWorksStripedSet0',
-  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database;
+  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database';
 GO
 ```
 
@@ -1205,6 +1205,8 @@ BACKUP DATABASE 错误会在以下情况中发生：
 - 目标网络共享没有用于备份的足够空间。 BACKUP DATABASE 命令在启动备份前不会确认是否存在足够的磁盘空间，因而可能在运行 BACKUP DATABASE 时生成磁盘空间不足错误。 磁盘空间不足时，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 会回滚 BACKUP DATABASE 命令。 若要缩小数据库的大小，可运行 [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
 - 尝试在事务中启动备份。
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>一般备注
 
 执行数据库备份前，请使用 [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) 缩小数据库的大小。
@@ -1217,6 +1219,8 @@ BACKUP DATABASE 错误会在以下情况中发生：
 
 完整备份和差异备份存储在不同的目录中。 指定完整备份和差异备份拥有共同来源时，不强制使用命名约定。 可通过自己的命名约定进行跟踪。 或者，可使用 WITH DESCRIPTION 选项添加描述，然后使用 RESTORE HEADERONLY 语句检索该描述来进行跟踪。
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
 不能对 master 数据库执行差异备份。 仅支持对 master 数据库执行完整备份。
@@ -1245,7 +1249,7 @@ BACKUP DATABASE 错误会在以下情况中发生：
 - [sys.pdw_loader_backup_run_details](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)
 - [sys.pdw_loader_run_stages](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)
 
-## <a name="performance"></a>“性能”
+## <a name="performance"></a>性能
 
 若要执行备份，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 首先会备份元数据，然后对存储在计算节点上的数据库数据执行并行备份。 数据会直接从每个计算节点复制到备份目录。 若要在将数据从计算节点移至备份目录的过程中获得最佳性能，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 可控制要并发复制数据的计算节点的数量。
 

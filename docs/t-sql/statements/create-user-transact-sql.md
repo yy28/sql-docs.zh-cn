@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cc065dc6f7b8e5b3d7ac5e84867029c9bd50f0f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 7c3afcf1c27d0b146e2f8762bd073853cc21ce2f
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155838"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049934"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "70155838"
 -   基于证书的用户。 不能登录，但可以被授予权限，也可以对模块进行签名。 `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
 -   基于非对称密钥的用户。 不能登录，但可以被授予权限，也可以对模块进行签名。 `CREATE User TestProcess FROM ASYMMETRIC KEY PacificSales09;`   
  
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -468,7 +468,7 @@ WITH
 
  若要通过 Azure AD 登录名创建 Azure AD 用户，请使用以下语法。
 
- 使用授予 `sysadmin` 角色的 Azure AD 登录名登录托管实例。 以下代码可通过登录名 bob@contoso.com 创建 Azure AD 用户 bob@contoso.com。 此登录名是在 [CREATE LOGIN](create-login-transact-sql.md#examples) 示例中创建的。
+ 使用授予 `sysadmin` 角色的 Azure AD 登录名登录托管实例。 以下代码可通过登录名 bob@contoso.com 创建 Azure AD 用户 bob@contoso.com。 此登录名是在 [CREATE LOGIN](create-login-transact-sql.md#examples-4) 示例中创建的。
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];

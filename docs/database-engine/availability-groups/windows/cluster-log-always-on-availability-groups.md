@@ -10,18 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 288d96a116412eea133e881f2d13b6b4ce5fddb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991291"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240752"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>为 Always On 可用性组生成和分析 CLUSTER.LOG
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  作为故障转移群集资源，SQL Server、Windows Server 故障转移群集服务 (WSFC) 群集和 SQL Server 资源 DLL (hadrres.dll) 之间存在外部交互，SQL Server 中无法对其进行监视。 WSFC 日志（即 CLUSTER.LOG）可以诊断 WSFC 群集或 SQL Server 资源 DLL 中的问题。  
-  
- 下图演示了启动可用性组资源创建、析构或状态更改的应用程序（如 SQL Server 和 Windows 群集管理器）之间的关系。  
+  作为故障转移群集资源，SQL Server、Windows Server 故障转移群集服务 (WSFC) 群集和 SQL Server 资源 DLL (hadrres.dll) 之间存在外部交互，SQL Server 中无法对其进行监视。 WSFC 日志（即 CLUSTER.LOG）可以诊断 WSFC 群集或 SQL Server 资源 DLL 中的问题。 
   
 ## <a name="generate-cluster-log"></a>生成群集日志  
  可以通过两种方式来生成群集日志：  

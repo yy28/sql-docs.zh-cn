@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cc2237ff2f7e7e5610a88288c386359c57937f90
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0338675549b49dd5c50eff9a8996f7a3ee6ee329
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296805"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049953"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values（SSISDB 数据库）
 
@@ -44,7 +44,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  参数所在的项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
  [ @package_name = ] package_name   
- 包的名称。 指定包名称，以便从特定包中检索所有项目参数和参数。 使用 NULL 可以从所有包中检索所有项目参数和参数。 package_name  为 nvarchar(260)  。  
+ 包的名称。 指定包名称，以便从特定包中检索所有项目参数和参数。 package_name  为 nvarchar(260)  。  
   
  [ @reference_id = ] reference_id   
  环境引用的唯一标识符。 此参数可选。 reference_id 为 bigint   。  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: c6d5789092ea2bbfc6fd9a8bb20cc7d078eaf6de
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 0a7c16f508621297e39df5cd47bde891b7d8a140
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545043"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73033022"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 为 Linux 上的 SQL Server 创建数据库
 
@@ -29,7 +29,7 @@ SQL Server Data Tools (SSDT) 可将 Visual Studio 转变为一种强大的开发
 
 3. 依次选择“Microsoft SQL Server Data Tools”和“Git for Windows”，然后从功能选择列表中选择“适用于 Visual Studio 的 GitHub 扩展”    。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
 
 4. 继续完成 Visual Studio 安装。 这可能需要几分钟。
 
@@ -47,15 +47,15 @@ SSDT 版本 17.0 RC 及更高版本支持 Linux 上的 SQL Server。
 
 3. 在“连接”页的“本地 Git 存储库”部分，单击“新建”    。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. 单击 **“创建”** 。 创建本地 Git 存储库后，双击“SSDTRepo”  。
+4. 单击 **“创建”** 。 创建本地 Git 存储库后，双击“SSDTRepo”  。
 
-4. 单击“解决方案”部分的“新建”   。 选择“新建项目”对话框中“其他语言”节点下的“SQL Server”    。
+5. 单击“解决方案”部分的“新建”   。 选择“新建项目”对话框中“其他语言”节点下的“SQL Server”    。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
 
-5. 键入 TutorialDB 作为名称，单击“确定”创建新数据库项目   。
+6. 键入 TutorialDB 作为名称，单击“确定”创建新数据库项目   。
 
 ## <a name="create-a-new-table-in-the-database-project"></a>在数据库项目中创建新表
 
@@ -65,11 +65,11 @@ SSDT 版本 17.0 RC 及更高版本支持 Linux 上的 SQL Server。
 
 3. 选择“添加”中的“表”   。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
 
 4. 使用表设计器添加两列，即名称 `nvarchar(50)` 和位置 `nvarchar(50)`，如下图所示。 在设计器中添加列时，SSDT 将生成 `CREATE TABLE` 脚本。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
 
 5. 保存 Table1.sql 文件  。
 
@@ -77,7 +77,7 @@ SSDT 版本 17.0 RC 及更高版本支持 Linux 上的 SQL Server。
 
 1. 在“TutorialDB”中打开数据库项目菜单，并选择“生成”   。 SSDT 将在项目中编译 .sql 源代码文件，并生成数据层应用程序包 (dacpac) 文件。 这适用于将数据库发布到 Linux 上的 SQL Server 实例。 
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
 2. 在 Visual Studio 的“输出”窗口中检查生成成功的消息  。 
 
@@ -87,11 +87,11 @@ SSDT 版本 17.0 RC 及更高版本支持 Linux 上的 SQL Server。
 
 2. 单击“编辑”，选择 Linux 上的 SQL Server 实例  。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog" style="width: 480px;"/>
 
 3. 在“连接”对话框中，键入 IP 地址或 Linux 上的 SQL Server 实例的主机名、用户名和密码。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/connection-dialog.png" alt="connection dialog" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/connection-dialog.png" alt="connection dialog" style="width: 400px;"/>
 
 4. 单击“发布”对话框上的“发布”按钮  。
 
@@ -99,7 +99,7 @@ SSDT 版本 17.0 RC 及更高版本支持 Linux 上的 SQL Server。
 
 6. 单击“查看结果”或“查看脚本”，查看 Linux 上的 SQL Server 的数据库发布结果详细信息   。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
 你已成功在 Linux 上的 SQL Server 实例上创建新数据库，并了解了使用源代码管理的数据库项目进行数据库开发的基本知识。
 

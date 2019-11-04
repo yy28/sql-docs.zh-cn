@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d811d5d36b88024604d217f440911d0dabad2b14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e796155210017addb6801930903a5aa38df71e8
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141132"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064634"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   创建用户定义聚合函数，其实现是在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的程序集类中定义的。 对于要将聚合函数绑定到其实现的[!INCLUDE[ssDE](../../includes/ssde-md.md)]，必须首先使用 CREATE ASSEMBLY 语句将包含该实现的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集上载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -94,7 +94,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  该示例创建聚合函数 `Concatenate`。 在创建该聚合函数之前，在本地数据库中注册了程序集 `StringUtilities.dll`。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SamplesPath nvarchar(1024)  

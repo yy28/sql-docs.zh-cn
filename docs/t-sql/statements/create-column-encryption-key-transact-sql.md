@@ -28,19 +28,19 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed1fb6d31d22f04657288e2c924316b891841946
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3789e894f08c4e34cb5ea8861d699f850e365f3
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061084"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064571"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 创建有初始值集且使用指定的列主密钥 (CMK) 进行加密的列加密密钥 (CEK)。 此加密是元数据操作。 CEK 最多有两个值，且支持 CMK 轮换。 必须先创建 CEK，然后才能使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能来加密数据库中的任意列。 也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建 CEK。 创建 CEK 前，必须使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 语句定义 CMK。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,15 +61,15 @@ WITH VALUES
 ```  
   
 ## <a name="arguments"></a>参数  
-key\_name  
+key\_name   
 列加密密钥在数据库中所使用的名称。  
   
-column\_master\_key\_name 指定用于加密 CEK 的自定义 CMK 的名称。  
+column\_master\_key\_name  指定用于加密 CEK 的自定义 CMK 的名称。  
   
-algorithm\_name  
-用于对列加密密钥进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP。  
+algorithm\_name   
+用于对列加密密钥进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP  。  
   
-varbinary\_literal  
+varbinary\_literal   
 加密的 CEK 值 BLOB。  
   
 > [!WARNING]  
@@ -87,14 +87,14 @@ Always Encrypted 支持的加密算法要求纯文本值具有 256 位。
 可使用 [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 查看列加密密钥的相关信息。  
   
 ## <a name="permissions"></a>权限  
-需要 ALTER ANY COLUMN ENCRYPTION KEY 权限。  
+需要 ALTER ANY COLUMN ENCRYPTION KEY 权限  。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-column-encryption-key"></a>A. 创建列加密密钥  
 下面的示例创建名为 `MyCEK` 的列加密密钥。  
   
-```  
+```sql  
 CREATE COLUMN ENCRYPTION KEY MyCEK   
 WITH VALUES  
 (  
@@ -108,8 +108,8 @@ GO
 ### <a name="creating-a-column-encryption-key-with-two-values"></a>创建有两个值的列加密密钥  
 下面的示例创建名为 `TwoValueCEK` 且具有两个值的列加密密钥。  
   
-```  
-  
+```sql
+
 CREATE COLUMN ENCRYPTION KEY TwoValueCEK   
 WITH VALUES  
 (  

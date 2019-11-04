@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061058"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064566"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 在数据库中创建列主密钥元数据对象。 列主密钥元数据条目表示存储在外部密钥存储中的密钥。 使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能时，密钥保护（加密）列加密密钥。 多列主密钥允许定期密钥轮换，以增强安全性。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的对象资源管理器或 PowerShell 在密钥存储中创建列主密钥，并在数据库中创建其相关元数据对象。 有关详细信息，请参阅 [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 > [!IMPORTANT]
@@ -143,7 +143,7 @@ key_path
     *ProviderName*  
     列主密钥存储的密钥存储提供程序（KSP，用于实现下一代加密技术 [CNG] API）的名称。 如果使用 HSM 作为密钥存储，则提供程序名称必须是 HSM 供应商提供的 KSP 的名称。 提供程序必须安装在客户端计算机上。  
   
-    KeyIdentifier   
+    *KeyIdentifier*  
     密钥存储中的密钥标识符，用作列主密钥。  
   
     **示例：**  
@@ -192,7 +192,7 @@ WITH (
   
 为列主密钥创建列主密钥元数据条目。 客户端应用程序使用 MSSQL_CNG_STORE 提供程序访问列主密钥：  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'MSSQL_CNG_STORE',    
@@ -202,7 +202,7 @@ WITH (
   
 为列主密钥创建列主密钥元数据条目。 对于使用 AZURE_KEY_VAULT 提供程序访问列主密钥的客户端应用程序，列主密钥存储在 Azure Key Vault 中。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -212,7 +212,7 @@ WITH (
   
 为列主密钥创建列主密钥元数据条目。 列主密钥存储在自定义列主密钥存储中：  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
@@ -222,7 +222,7 @@ WITH (
 ### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. 创建已启用 enclave 的列主密钥  
 以下示例为已启用 enclave 的列主密钥创建列主密钥元数据条目。 对于使用 MSSQL_CERTIFICATE_STORE 提供程序访问列主密钥的客户端应用程序，已启用 enclave 的列主密钥存储在证书存储中：  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -233,7 +233,7 @@ WITH (
   
 为已启用 enclave 的列主密匙创建列主密钥元数据条目。 对于使用 AZURE_KEY_VAULT 提供程序访问列主密钥的客户端应用程序，已启用 enclave 的列主密钥存储在 Azure Key Vault 中。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
