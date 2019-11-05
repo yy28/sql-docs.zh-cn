@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_external_work (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases _exec_external_work （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,40 +22,41 @@ ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 049bf084381adaa0bf7e817eb7ae3bdb24feb118
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5afdfd4f9a5f66845ae6d3798910fc2c4bf5ab8a
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097748"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532954"
 ---
-# <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
+# <a name="sysdm_exec_external_work-transact-sql"></a>sys.databases _exec_external_work （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  返回每个计算节点上每个辅助角色，工作负荷的相关信息。  
+  返回有关每个计算节点上每个工作负荷的工作负荷的信息。  
   
- 查询 sys.dm_exec_external_work 来标识为与外部数据源 （例如 Hadoop 或外部 SQL Server） 进行通信的工作。  
+ 查询 sys.databases _exec_external_work，以确定与外部数据源（如 Hadoop 或外部 SQL Server）通信的工作。  
   
-|列名|数据类型|描述|范围|  
+|列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|关联的 PolyBase 查询的唯一标识符。|请参阅*request_ID*中[sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
-|step_index|**int**|此工作线程正在执行请求。|请参阅*step_index*中[sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
-|dms_step_index|**int**|执行此工作线程在 DMS 计划中的步骤。|请参阅[sys.dm_exec_dms_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)。|  
-|compute_node_id|**int**|辅助角色节点上运行。|请参阅[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
-|type|**nvarchar(60)**|外部工作的类型。|文件拆分|  
-|work_id|**int**|实际拆分的 ID。|大于或等于 0。|  
-|input_name|**nvarchar(4000)**|输入要读取的名称|使用 Hadoop 时文件的名称。|  
-|read_location|**bigint**|偏移量或读取位置。|要读取的文件偏移量。|  
-|bytes_processed|**bigint**|处理此工作线程的总字节数。|大于或等于 0。|  
-|长度|**bigint**|拆分或发生 Hadoop HDFS 块的长度|用户可定义。 默认值为 64 M|  
-|status|**nvarchar(32)**|辅助角色状态|挂起，处理、 完成、 失败、 已中止|  
-|start_time|**datetime**|从开始的工作||  
-|end_time|**datetime**|工作结束||  
-|total_elapsed_time|**int**|总时间 （毫秒）||  
-  
-## <a name="see-also"></a>请参阅  
- [PolyBase 使用动态管理视图进行故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+|execution_id|`nvarchar(32)`|关联的 PolyBase 查询的唯一标识符。|请参阅*request_ID*中的[_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
+|step_index|`int`|此工作线程正在执行的请求。|请参阅*step_index*中的[_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
+|dms_step_index|`int`|此工作线程正在执行的 DMS 计划的步骤。|请参阅[_exec_dms_workers &#40;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)。|  
+|compute_node_id|`int`|正在运行辅助角色的节点。|请参阅[_exec_compute_nodes &#40;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
+|类型|`nvarchar(60)`|外部工作的类型。|"文件拆分"|  
+|work_id|`int`|实际拆分的 ID。|大于或等于0。|  
+|input_name|`nvarchar(4000)`|要读取的输入的名称|使用 Hadoop 时的文件名。|  
+|read_location|`bigint`|偏移或读取位置。|要读取的文件的偏移量。|  
+|bytes_processed|`bigint`|此工作线程处理的总字节数。|大于或等于0。|  
+|长度|`bigint`|Hadoop 或 HDFS 块的长度（如果为 Hadoop）|用户可定义的。 默认值为 Ed-64m|  
+|status|`nvarchar(32)`|辅助进程的状态|挂起，处理，已完成，失败，已中止|  
+|start_time|`datetime`|工作开始||  
+|end_time|`datetime`|工作结束||  
+|total_elapsed_time|`int`|总时间（毫秒）||
+|compute_pool_id|`int`|池的唯一标识符。|
+
+## <a name="see-also"></a>另请参阅  
+ [通过动态管理视图进行 PolyBase 故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与数据库相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [与数据库相关的动态&#40;管理视图 transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

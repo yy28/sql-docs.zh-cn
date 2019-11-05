@@ -1,6 +1,6 @@
 ---
 title: 存储加密的报表服务器数据（SSRS 配置管理器）| Microsoft Docs
-ms.date: 05/31/2016
+ms.date: 10/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a83f5812347dfc827795de747f9c8119e3ba6245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513289"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988425"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密密钥 - 存储加密的报表服务器数据
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将加密值存储在报表服务器数据库和配置文件中。 大多数加密值都是用于访问向报表提供数据的外部数据源的凭据。 本主题介绍对哪些值进行了加密、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中使用的加密功能以及您应当了解的其他类型的已存储机密数据。  
@@ -51,6 +51,8 @@ ms.locfileid: "62513289"
  报表服务器数据库中的数据使用对称密钥进行加密。 每个报表服务器数据库只有一个对称密钥。 此对称密钥使用 Windows 生成的非对称密钥对的公钥进行自加密。 私钥由 Report Server Windows 服务帐户持有。  
   
  在多个报表服务器实例共享同一个报表服务器数据库的报表服务器扩展部署中，所有报表服务器节点都使用一个对称密钥。 每个节点必须具有一个共享对称密钥的副本。 配置扩展部署时，将为每个节点自动创建一个对称密钥副本。 每个节点都使用 Windows 服务帐户专有密钥对的公钥来加密对称密钥的副本。 若要详细了解如何为单个实例和扩展部署创建对称密钥，请参阅[初始化报表服务器（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
+ 
+ 此外，从2019开始，可以在 SQL Server 中透明数据加密配置 Report Server 数据库，以便为静态数据提供额外的保护。
   
 > [!NOTE]  
 >  如果更改 Report Server Windows 服务帐户，则非对称密钥将变为无效，从而中断服务器操作。 为了避免此类故障，请始终使用 Reporting Services 配置工具来修改服务帐户设置。 使用配置工具时，密钥会自动更新。 有关详细信息，请参阅 [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  

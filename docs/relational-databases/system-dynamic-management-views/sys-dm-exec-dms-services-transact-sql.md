@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_dms_services (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases _exec_dms_services （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,27 +22,28 @@ ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14abc2b77a042b104e47ff6cc578a7ba64cac44e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11e353af23c2331cd8f2bef5b439c967512e7323
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097775"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532925"
 ---
-# <a name="sysdmexecdmsservices-transact-sql"></a>sys.dm_exec_dms_services (Transact-SQL)
+# <a name="sysdm_exec_dms_services-transact-sql"></a>sys.databases _exec_dms_services （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  保存有关运行 PolyBase 计算节点上的 DMS 服务的所有信息。 它列出了每个服务实例的一个行。  
+  保存有关 PolyBase 计算节点上运行的所有 DMS 服务的信息。 每个服务实例在表中各占一行。  
   
-|列名|数据类型|描述|范围|  
+|列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|dms_core_id|**int**|使用 DMS core 相关联的唯一数字 id。 此视图的键。|唯一的 id。|  
-|compute_node_id|**int**|此 DMS 服务正在其运行的节点 ID|请参阅*compute_node_id*中[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
-|status|**nvarchar(32)**|DMS 服务的当前状态||  
-  
-## <a name="see-also"></a>请参阅  
- [PolyBase 使用动态管理视图进行故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+|dms_core_id|`int`|与 DMS 核心关联的唯一数字 id。 此视图的键。|唯一 ID。|  
+|compute_node_id|`int`|此 DMS 服务正在其上运行的节点的 ID|请参阅*compute_node_id*中的[_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
+|status|`nvarchar(32)`|DMS 服务的当前状态||
+|compute_pool_id|`int`|池的唯一标识符。|
+
+## <a name="see-also"></a>另请参阅  
+ [通过动态管理视图进行 PolyBase 故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与数据库相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [与数据库相关的动态&#40;管理视图 transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
