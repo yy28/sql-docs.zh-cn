@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
 ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958280"
@@ -50,7 +50,7 @@ ms.locfileid: "67958280"
 
 ### <a name="command-palette"></a>命令面板
 
-通过键入 Ctrl+Shift+P（在 Windows 中）或 Cmd+Shift+P（在 Mac 中），使用命令面板中的命令“File:Open”  。
+通过键入 Ctrl+Shift+P（在 Windows 中）或 Cmd+Shift+P（在 Mac 中），使用命令面板中的命令“File:Open”** 。
 
 ![通过在命令面板中输入“File:Open”，打开“打开文件”对话框](./media/notebooks-how-to-manage/open-file-3.png)
 
@@ -64,7 +64,7 @@ ms.locfileid: "67958280"
 > 以下方法目前不会保存对笔记本的更改：
 >
 > - “文件”菜单中的“文件保存”、“文件另存为...”和“文件全部保存”命令    。
-> - 在命令面板中输入的“File:Open”命令  。
+> - 在命令面板中输入的“File:Open”命令**。
 
 ## <a name="change-the-big-data-cluster"></a>更改大数据群集
 

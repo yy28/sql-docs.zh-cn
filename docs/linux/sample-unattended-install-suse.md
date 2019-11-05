@@ -4,16 +4,16 @@ titleSuffix: SQL Server
 description: SQL Server 脚本示例 - SUSE Linux Enterprise Server 上的无人参与安装
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/02/2017
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: eb19357b739dbc52b3eb19cf2390f225e4205d6e
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 392d8d477a2e136d54e6f0f06608eb0ebeda12a5
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67910455"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593517"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>示例：SUSE Linux Enterprise Server 的无人参与 SQL Server 安装脚本
 
@@ -159,7 +159,7 @@ echo Done!
 
 运行该脚本
 
-1. 将示例粘贴到你最喜爱的文本编辑器中，并使用便于记忆的名称保存，比如 `install_sql.sh`。
+1. 将示例粘贴到你最喜欢的文本编辑器中，并使用便于记忆的名称保存它，例如 `install_sql.sh`。
 
 1. 自定义 `MSSQL_SA_PASSWORD`、`MSSQL_PID` 和要更改的任何其他变量。
 
@@ -176,7 +176,7 @@ echo Done!
    ```
 
 ### <a name="understanding-the-script"></a>了解脚本
-Bash 脚本执行的第一件事是设置几个变量。 它们可以是脚本变量，如示例或环境变量。 `MSSQL_SA_PASSWORD` 变量是安装 SQL Server 所必需的变量，其余变量是为脚本创建的自定义变量  。 示例脚本执行以下步骤：
+Bash 脚本执行的第一件事是设置几个变量。 它们可以是脚本变量（例如本示例），也可以是环境变量。 `MSSQL_SA_PASSWORD` 变量是安装 SQL Server 所必需的变量，其余变量是为脚本创建的自定义变量  。 示例脚本执行以下步骤：
 
 1. 导入公共 Microsoft GPG 密钥。
 
@@ -196,19 +196,19 @@ Bash 脚本执行的第一件事是设置几个变量。 它们可以是脚本�
 
 1. 如果已设置 ```SQL_INSTALL_FULLTEXT``` 变量，则可以选择安装 SQL Server 全文搜索。
 
-1. 在系统防火墙上取消阻止 TCP 端口 1433，以连接到其他系统中的 SQL Server。
+1. 在系统防火墙上取消阻止 TCP 端口 1433，这是从另一个系统连接到 SQL Server 所必需的。
 
-1. （可选）设置跟踪标志以进行死锁跟踪。 （需要取消评论行）
+1. （可选）设置跟踪标志以进行死锁跟踪。 （需要取消注释行）
 
 1. SQL Server 现已安装，若要使其可操作，请重启该过程。
 
-1. 验证是否已正确安装 SQL Server，并隐藏任何错误消息。
+1. 验证是否已正确安装 SQL Server，并隐藏所有错误消息。
 
 1. 如果同时设置 ```SQL_INSTALL_USER``` 和 ```SQL_INSTALL_USER_PASSWORD```，则将创建新的服务器管理用户。
 
 ## <a name="next-steps"></a>后续步骤
 
-简化多个无人参与的安装，并创建独立的 Bash 脚本来设置适当的环境变量。 可删除该示例脚本使用的任何变量，并将其放入自己的 Bash 脚本。
+简化多个无人参与安装，并创建独立的 Bash 脚本来设置适当的环境变量。 可删除该示例脚本使用的任何变量，并将其放入自己的 Bash 脚本。
 
 ```bash
 #!/bin/bash

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,14 +19,16 @@ helpviewer_keywords:
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 528c9e96e8615224b6d081a4d953e95874fec766
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.openlocfilehash: 6492b85430ac29fe690de9c41cd7a1625e409b20
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266932"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532887"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自定义菜单和快捷键
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 借助于键盘快捷键，可以通过按 ALT+\<single letter> 来选择菜单命令或按钮  。 例如，若要打开“编辑”  菜单，请按 Alt+E。 使用“自定义”  对话框可以重排和修改工具栏按钮、菜单和菜单命令。 本文还针对使用鼠标和仅使用键盘更改设置提供了相关说明。  
   
