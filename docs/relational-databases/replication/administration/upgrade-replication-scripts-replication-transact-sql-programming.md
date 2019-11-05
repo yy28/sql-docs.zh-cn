@@ -71,12 +71,12 @@ ms.locfileid: "71710373"
   
 ### <a name="to-upgrade-scripts-that-configure-a-snapshot-or-transactional-publication"></a>升级用于配置快照发布或事务发布的脚本  
   
-1.  在现有脚本中的 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 前面，针对发布服务器上的发布数据库执行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 指定日志读取器代理用其作为 `@job_name` 和 `@job_password` 运行的 Windows 凭据。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，则还必须将 `@publisher_security_mode` 的值指定为 0  ，并为 `@publisher_login` 和 `@publisher_password` 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息。 这样，便为发布数据库创建了一个日志读取器代理作业。  
+1.  在现有脚本中的 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 前面，针对发布服务器上的发布数据库执行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 指定用于运行日志读取器代理的 Windows 凭据作为 `@job_name` 和 `@job_password`。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，则还必须将 `@publisher_security_mode` 的值指定为 0  ，并为 `@publisher_login` 和 `@publisher_password` 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息。 这样，便为发布数据库创建了一个日志读取器代理作业。  
   
     > [!NOTE]  
     >  此步骤仅针对事务发布，无需对快照发布执行该步骤。  
   
-2.  （可选）在 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 前面，针对分发服务器上的分发数据库执行 [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)。 指定队列读取器代理用其作为 `@job_name` 和 `@job_password` 运行的 Windows 凭据。 这样，便为分发服务器创建了一个队列读取器代理作业。  
+2.  （可选）在 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 前面，针对分发服务器上的分发数据库执行 [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)。 指定用于运行队列读取器代理的 Windows 凭据作为 `@job_name` 和 `@job_password` 运行。 这样，便为分发服务器创建了一个队列读取器代理作业。  
   
     > [!NOTE]  
     >  仅需要对支持排队更新订阅服务器的事务发布执行此步骤。  

@@ -34,7 +34,7 @@ SQL Server 查询存储的工作原理类似于飞行数据记录器，不断地
 |“查看”|描述|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|提供对数据库执行的唯一查询文本。 将忽略查询文本之前和之后的注释和空格。 不忽略文本内部的注释和空格。 批中每个语句都会生成单独的查询文本项。|  
-|**sys.query_context_settings**|显示执行查询所依据的影响计划设置的唯一组合。 由于 `context_settings_id` 是查询键的一部分，因此不同影响计划设置执行的相同查询文本将在查询存储中生成单独的查询条目。|  
+|**sys.query_context_settings**|显示执行查询所依据的影响计划的设置的非重复组合。 由于 `context_settings_id` 是查询键的一部分，因此采用影响计划的不同设置执行的相同查询文本将在查询存储中生成单独的查询条目。|  
 |**sys.query_store_query**|在查询存储中单独进行跟踪和强制执行的查询条目。 如果查询文本在不同的上下文设置下执行，或在不同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块（例如，存储过程和触发器等）内外执行，则可以产生多个查询条目。|  
 |**sys.query_store_plan**|显示具有编译时间统计信息的查询估计计划。 存储计划相当于一个可以通过使用 `SET SHOWPLAN_XML ON` 获取的计划。|  
 |**sys.query_store_runtime_stats_interval**|查询存储将时间划分为自动生成的时间窗口（间隔），并根据每个执行计划的间隔存储聚合的统计信息。 间隔大小由（位于 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中）的配置选项“统计信息收集间隔”或由使用 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 的 `INTERVAL_LENGTH_MINUTES` 进行控制  。|  
