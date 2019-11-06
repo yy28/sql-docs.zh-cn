@@ -1,7 +1,7 @@
 ---
 title: 部署 JDBC 驱动程序 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7e8b4655695d37db10d18fbaa6215587036017bf
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028112"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049837"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驱动程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,13 @@ ms.locfileid: "69028112"
  若要解压缩此 tar 文件，请将它移到您要安装驱动程序的目录中，然后键入以下命令：  
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
-  
+
+## <a name="legalities-of-driver-redistribution"></a>驱动程序重新分发的 Legalities
+
+JDBC 驱动程序版本6.0、6.2、6.4 和7.0 是可再发行的。 查看许可协议中的“可分发代码”子句  。
+
+JDBC Driver 版本4.x 为旧版本和过时版本。 支持在2018之前过期。
+
 ## <a name="see-also"></a>另请参阅  
  [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   

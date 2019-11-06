@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: ad2f4eaadfb2140facc5bebd8d1f70cf163d1380
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 11e10f4a29b15efbd2b0ee513080a2000ae7e2f1
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016881"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73033053"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的发行说明
 
@@ -35,6 +35,45 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## <a name="184-sqlpackage"></a>18.4 sqlpackage
+
+|平台|下载|发布日期|版本|生成
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 安装程序](https://go.microsoft.com/fwlink/?linkid=2108813)|2019 年 10 月 29 日|18.4|15.0.4573.2|
+|macOS .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2108815)|2019 年 10 月 29 日| 18.4|15.0.4573.2|
+|Linux .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2108814)|2019 年 10 月 29 日| 18.4|15.0.4573.2|
+|Windows .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2109019)|2019 年 10 月 29 日| 18.4|15.0.4573.2|
+
+### <a name="features"></a>功能
+
+| 功能 | 详细信息 |
+| :------ | :------ |
+| 部署 | 添加对部署到 Azure SQL 数据仓库（GA）的支持。 | 
+| 平台 | 适用于 macOS、Linux 和 Windows 的 sqlpackage .NET Core GA。 | 
+| Security | 删除 SHA1 代码签名。 |
+| 部署 | 添加对新 Azure 数据库版本的支持： GeneralPurpose、BusinessCritical、超大规模 |
+| 部署 | 添加 AAD 用户和组的托管实例支持。 |
+| 部署 | 支持 .NET Core 上的 sqlpackage 的/AccessToken 参数。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知问题 
+
+| 功能 | 详细信息 |
+| :------ | :------ |
+| ScriptDom |  ScriptDom 分析回归是在18.3.1 中引入的，其中 "重命名" 被错误地视为顶级标记，会导致分析失败。 这将在下一个 sqlpackage 版本中修复。 | 
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues-for-net-core"></a>.NET Core 的已知问题
+
+| 功能 | 详细信息 |
+| :------ | :------ |
+| Import |  对于压缩文件大小超过4GB 的 bacpac 文件，可能需要使用 sqlpackage 的 .NET Core 版本来执行导入。  此行为是由 .NET Core sqlpackage 的 .NET Framework 版本无法读取的，因为 .NET Core 生成的 zip 标头是无效的。 | 
+| 部署 | 不支持参数/p： Storage = File。 .NET Core 仅支持内存。 | 
+| Always Encrypted | sqlpackage .NET Core 不支持 Always Encrypted 列。 | 
+| Security | sqlpackage .NET Core 不支持多因素身份验证的/ua 参数。 | 
+| 部署 | 不支持使用 json 数据序列化的较旧 V2 .dacpac 和 .bacpac 文件。 |
+| &nbsp; | &nbsp; |
+
 ## <a name="1831-sqlpackage"></a>18.3.1 sqlpackage
 
 |平台|下载|发布日期|版本|生成
@@ -48,7 +87,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 功能 | 详细信息 |
 | :------ | :------ |
-| Azure SQL 数据仓库（预览） | 添加支持以部署到 Azure SQL 数据仓库。 | 
+| 部署 | 添加支持以部署到 Azure SQL 数据仓库（预览版）。 | 
 | 部署 | 将/p： DatabaseLockTimeout = （INT32 "60"）参数添加到 sqlpackage。 | 
 | 部署 | 将/p： LongRunningCommandTimeout = （INT32）参数添加到 sqlpackage。 |
 | 导出/提取 | 将/p： TempDirectoryForTableData = （STRING）参数添加到 sqlpackage。 |
@@ -83,19 +122,19 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 功能 | 详细信息 |
 | :------ | :------ |
-| 添加了对边缘约束和边缘约束子句的图形表支持。 | &nbsp; |
-| 启用了模型验证规则以支持 SQL Server 2016 及更高版本的索引键的 32 个列。 | &nbsp; |
+| 图形 | 添加了对边缘约束和边缘约束子句的图形表支持。 |
+| 部署 | 启用了模型验证规则以支持 SQL Server 2016 及更高版本的索引键的 32 个列。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>修复程序
 
 | Fix | 详细信息 |
 | :-- | :------ |
-| 由于使用的查询提示不受支持，因此修复了对 SQL Server 2016 RTM 数据库进行的反向工程。 | &nbsp; |
-| 修复了 create filegroup 语句之前出现的 auto close alter 语句的部署顺序。 | &nbsp; |
-| 修复了 ScriptDom 分析回归，其中“URL”字符串被解释为顶级令牌。 | &nbsp; |
-| 修复了分析 alter table add index 语句时出现的空引用异常。 | &nbsp; |
-| 修复了始终显示为不同的可为空的持久化计算列的架构比较。| &nbsp; |
+| 部署 | 由于使用的查询提示不受支持，因此修复了对 SQL Server 2016 RTM 数据库进行的反向工程。 |
+| 部署 | 修复了 create filegroup 语句之前出现的 auto close alter 语句的部署顺序。 |
+| ScriptDom | 修复了 ScriptDom 分析回归，其中“URL”字符串被解释为顶级令牌。 |
+| 部署 | 修复了分析 alter table add index 语句时出现的空引用异常。 | 
+| 架构比较 | 修复了始终显示为不同的可为空的持久化计算列的架构比较。|
 | &nbsp; | &nbsp; |
 
 ## <a name="181-sqlpackage"></a>18.1 sqlpackage
@@ -108,21 +147,21 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 功能 | 详细信息 |
 | :------ | :------ |
-| 添加了对 UTF8 排序规则的支持。 | &nbsp; |
-| 对索引视图启用了非聚集列存储索引。 | &nbsp; |
-| 已移动到 .NET Core 2.2。 | &nbsp; |
-| 将内存支持的存储用于在 .NET Core 上进行架构比较。 | &nbsp; |
+| 部署 | 添加了对 UTF8 排序规则的支持。 |
+| 部署 | 对索引视图启用了非聚集列存储索引。 |
+| 平台 | 已移动到 .NET Core 2.2。 | 
+| 架构比较 | 将内存支持的存储用于在 .NET Core 上进行架构比较。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>修复程序
 
 | Fix | 详细信息 |
 | :-- | :------ |
-| 修复了性能以使用旧版基数估计器进行反向工程查询。 | &nbsp; |
-| 修复了生成脚本时出现的重大架构比较性能问题。 | &nbsp; |
-| 修复了架构偏差检测逻辑以忽略特定扩展事件 (xevent) 会话。 | &nbsp; |
-| 修复了图形表的导入顺序。 | &nbsp; |
-| 修复了导出具有对象权限的外部表的问题。 | &nbsp; |
+| 性能 | 修复了性能以使用旧版基数估计器进行反向工程查询。 | 
+| 性能 | 修复了生成脚本时出现的重大架构比较性能问题。 | 
+| 架构比较 | 修复了架构偏差检测逻辑以忽略特定扩展事件 (xevent) 会话。 |
+| 图形 | 修复了图形表的导入顺序。 | 
+| Export | 修复了导出具有对象权限的外部表的问题。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知问题
@@ -131,9 +170,9 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 已知问题 | 详细信息 |
 | :---------- | :------ |
-| 不支持生成和部署参与者。 | &nbsp; |
-| 不支持使用 json 数据序列化的较旧 .dacpac 和 .bacpac 文件。 | &nbsp; |
-| 由于区分大小写的文件系统出现问题，因此可能无法解析引用的 .dacpacs（例如 master.dacpac）。 | 一种解决方法是大写引用文件的名称（例如 MASTER.BACPAC）。 |
+| 部署 | 对于 .NET Core，不支持生成和部署参与者。 | 
+| 部署 | 对于 .NET Core，不支持使用 json 数据序列化的较旧 .dacpac 和 .bacpac 文件。 | 
+| 部署 | 对于 .NET Core，由于区分大小写的文件系统出现问题，因此可能无法解析引用的 .dacpacs（例如 master.dacpac）。 | 一种解决方法是大写引用文件的名称（例如 MASTER.BACPAC）。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="180-sqlpackage"></a>18.0 sqlpackage
@@ -145,22 +184,22 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 功能 | 详细信息 |
 | :------ | :------ |
-| 添加了对数据库兼容级别 150 的支持。 | &nbsp; |
-| 添加了对托管实例的支持。 | &nbsp; |
-| 添加了 MaxParallelism 命令行参数以指定数据库操作的并行度。 | &nbsp; |
-| 添加了 AccessToken 命令行参数以在连接到 SQL Server 时指定身份验证令牌。 | &nbsp; |
-| 添加了对流式传输 BLOB/CLOB 数据类型以进行导入的支持。 | &nbsp; |
-| 添加了对标量 UDF“INLINE”选项的支持。 | &nbsp; |
-| 添加了对图形表“MERGE”语法的支持。 | &nbsp; |
+| 部署 | 添加了对数据库兼容级别 150 的支持。 | 
+| 部署 | 添加了对托管实例的支持。 | 
+| 性能 | 添加了 MaxParallelism 命令行参数以指定数据库操作的并行度。 | 
+| Security | 添加了 AccessToken 命令行参数以在连接到 SQL Server 时指定身份验证令牌。 | 
+| Import | 添加了对流式传输 BLOB/CLOB 数据类型以进行导入的支持。 | 
+| 部署 | 添加了对标量 UDF“INLINE”选项的支持。 | 
+| 图形 | 添加了对图形表“MERGE”语法的支持。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>修复程序
 
 | Fix | 详细信息 |
 | :-- | :------ |
-| 修复了图形表的未解析伪列。 | &nbsp; |
-| 修复了使用内存优化表时创建具有内存优化文件组的数据库的问题。 | &nbsp; |
-| 修复了将扩展属性包括在外部表中的问题。 | &nbsp; |
+| 图形 | 修复了图形表的未解析伪列。 |
+| 部署 | 修复了使用内存优化表时创建具有内存优化文件组的数据库的问题。 |
+| 部署 | 修复了将扩展属性包括在外部表中的问题。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="178-sqlpackage"></a>17.8 sqlpackage
@@ -172,16 +211,16 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 功能 | 详细信息 |
 | :------ | :------ |
-| 改进了连接失败的错误消息，包括 SqlClient 异常消息。 | &nbsp; |
-| 支持对单分区索引进行索引压缩以便导入/导出。 | &nbsp; |
+| 诊断 | 改进了连接失败的错误消息，包括 SqlClient 异常消息。 |
+| 部署 | 支持对单分区索引进行索引压缩以便导入/导出。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>修复程序
 
 | Fix | 详细信息 |
 | :-- | :------ |
-| 修复了 SQL 2017 及更高版本的 XML 列集的反向工程问题。 | &nbsp; |
-| 修复了对 Azure SQL 数据库忽略数据库兼容性级别 140 脚本编写的问题。 | &nbsp; |
+| 部署 | 修复了 SQL 2017 及更高版本的 XML 列集的反向工程问题。 | 
+| 部署 | 修复了对 Azure SQL 数据库忽略数据库兼容性级别 140 脚本编写的问题。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="1741-sqlpackage"></a>17.4.1 sqlpackage
@@ -193,17 +232,17 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 功能 | 详细信息 |
 | :------ | :------ |
-| 添加了 ThreadMaxStackSize 命令行参数以分析具有大量嵌套语句的 Transact-SQL。 | &nbsp; |
-| 数据库目录排序规则支持。 | &nbsp; |
+| 导入/导出 | 添加了 ThreadMaxStackSize 命令行参数以分析具有大量嵌套语句的 Transact-SQL。 |
+| 部署 | 数据库目录排序规则支持。 | 
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>修复程序
 
 | Fix | 详细信息 |
 | :-- | :------ |
-| 将 Azure SQL 数据库 .bacpac 导入到本地实例时，修复了由于此版本的 SQL Server 不支持没有密码的数据库主密钥  而出现的错误。 | &nbsp; |
-| 修复了图形表的未解析伪列错误。 | &nbsp; |
-| 修复了将 SchemaCompareDataModel 用于 SQL 身份验证来比较架构的问题。 | &nbsp; |
+| Import | 将 Azure SQL 数据库 .bacpac 导入到本地实例时，修复了由于“此版本的 SQL Server 不支持没有密码的数据库主密钥”  而出现的错误。 |
+| 图形 | 修复了图形表的未解析伪列错误。 |
+| 架构比较 | 修复了用于比较架构的 SQL 身份验证。 | 
 | &nbsp; | &nbsp; |
 
 ## <a name="1740-sqlpackage"></a>17.4.0 sqlpackage
@@ -215,14 +254,14 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 功能 | 详细信息 |
 | :------ | :------ |
-| 添加了对 SQL 2017+ 和 Azure SQL 数据库上的时态保留策略  的支持。 | &nbsp; |
-| 添加了 /DiagnosticsFile:"C:\Temp\sqlpackage.log" 命令行参数以指定用于保存诊断信息的文件路径。 | &nbsp; |
-| 添加了 /Diagnostics 命令行参数以将诊断信息记录到控制台。 | &nbsp; |
+| 部署 |  添加了对 SQL 2017+ 和 Azure SQL 数据库上的时态保留策略  的支持。 | 
+| 诊断 | 添加了 /DiagnosticsFile:"C:\Temp\sqlpackage.log" 命令行参数以指定用于保存诊断信息的文件路径。 | 
+| 诊断 | 添加了 /Diagnostics 命令行参数以将诊断信息记录到控制台。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>修复程序
 
 | Fix | 详细信息 |
 | :-- | :------ |
-| 遇到无法识别的数据库兼容性级别时不会进行阻止。 | 相反，将假定最新的 Azure SQL 数据库或本地平台。 |
+| 部署 | 遇到无法识别的数据库兼容性级别时不会进行阻止。 相反，将假定最新的 Azure SQL 数据库或本地平台。 |
 | &nbsp; | &nbsp; |

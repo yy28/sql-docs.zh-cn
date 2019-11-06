@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/14/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: facd5fe78ae3dd20390e9510a47e914dd6d3945e
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0f9081562a0cb0f8ddba663f04305c7bd2b387fe
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708712"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989566"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 
@@ -45,7 +45,7 @@ ms.locfileid: "71708712"
 
 大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据     。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
 
-![主题链接图标](../database-engine/configure-windows/media/topic-link.gif "主题链接图标")有关 bcp 语法中使用的语法约定，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  。  
+![主题链接图标](../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") 有关 bcp  语法中使用的语法约定，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
 
 > [!NOTE]
 > 如果使用 **bcp** 备份数据，请创建一个格式化文件来记录数据格式。 **bcp** 数据文件 **不包括** 任何架构或格式信息，因此如果已删除表或视图并且不具备格式化文件，则可能无法导入数据。
@@ -55,7 +55,7 @@ ms.locfileid: "71708712"
 **[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15.0 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15.0 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
-命令行工具是公开发行版（GA），但它们与安装程序包一起发布，用于 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
+命令行工具是公开发行版（GA），但与 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]的安装程序包一起发布。
 
 ### <a name="version-information"></a>版本信息
 
@@ -68,11 +68,11 @@ ms.locfileid: "71708712"
 
 ### <a name="system-requirements"></a>系统要求
 
-Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2
+Windows 10、Windows 7、Windows 8、Windows 8.1，Windows Server 2008，Windows Server 2008 R2，Windows Server 2008 R2 SP1，Windows Server 2012，Windows Server 2012 R2，Windows Server 2016
 
 此组件要求 SQL Server [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483)和[Microsoft ODBC Driver 17.3](https://www.microsoft.com/download/details.aspx?id=56567)。
 
-若要查看 BCP 版本，请执行 `bcp /v` 命令并确认15.0.1000.34 或更高版本是否正在使用中。
+若要检查 BCP version execute `bcp /v` 命令，并确认正在使用15.0.1000.34 或更高版本。
 
 <table><th>语法</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -214,18 +214,18 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > Linux 或 macOS 目前不支持 AAD 集成和交互式身份验证。
 
 > [!TIP]
->  若要检查你的 bcp 版本是否包括对 Azure Active Directory Authentication （AAD）类型**bcp** （bcp \<space > \<dash > \<dash >）的支持，并验证在可用参数列表中是否显示了-G。
+>  若要检查您的 bcp 版本是否包括对 Azure Active Directory Authentication （AAD）类型**bcp**的支持（bcp\<space >\<虚线 >\<虚线 >），并验证在可用参数列表中是否显示了-G。
 
 - **Azure Active Directory 用户名和密码：** 
 
     当你想要使用 Azure Active Directory 用户名和密码时，可以提供 **-G** 选项，也可以通过提供 **-U** 选项和 **-P** 选项来使用用户名和密码。 
 
-    下面的示例使用 Azure AD 用户名和密码导出数据，其中 user 和 password 是 AAD 凭据。 该示例从 Azure 服务器 `aadserver.database.windows.net` 中的数据库 `testdb` `bcptest` 导出表，并将数据存储在文件 `c:\last\data1.dat`：
+    下面的示例使用 Azure AD 用户名和密码导出数据，其中 user 和 password 是 AAD 凭据。 该示例从 Azure 服务器 `aadserver.database.windows.net` 的数据库 `testdb` 导出 `bcptest` 表，并将数据存储在文件 `c:\last\data1.dat`中：
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    下面的示例使用 Azure AD 用户名和密码导入数据，其中 user 和 password 是 AAD 凭据。 该示例将 `c:\last\data1.dat` 中的数据导入到 `bcptest` 表中，对于 Azure `aadserver.database.windows.net` 服务器上的数据库 `testdb`，使用 Azure AD 用户/密码：
+    下面的示例使用 Azure AD 用户名和密码导入数据，其中 user 和 password 是 AAD 凭据。 该示例使用 Azure AD 用户/密码将数据从文件 `c:\last\data1.dat` 导入到 Azure `aadserver.database.windows.net` 服务器上的数据库 `testdb` 的表 `bcptest` 中：
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -234,13 +234,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     要进行 Azure Active Directory 集成身份验证，可提供 -G 选项而无需用户名或密码  。 此配置假定当前的 Windows 用户帐户（运行 bcp 命令的帐户）与 Azure AD 联合： 
 
-    下面的示例使用 Azure AD 集成帐户导出数据。 该示例使用从 Azure server `aadserver.database.windows.net` 集成的 Azure AD 从数据库 `testdb` `bcptest` 导出表，并将数据存储在文件 `c:\last\data2.dat`：
+    下面的示例使用 Azure AD 集成帐户导出数据。 该示例使用从 Azure `aadserver.database.windows.net` 服务器集成的 Azure AD 从数据库 `testdb` 导出表 `bcptest`，并将数据存储在文件 `c:\last\data2.dat`中：
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    以下示例使用 Azure AD 集成身份验证导入数据。该示例将 `c:\last\data2.txt` 中的数据导入到 `bcptest` 表中，在 Azure `aadserver.database.windows.net` 服务器上为数据库 `testdb` 使用 Azure AD 集成身份验证：
+    以下示例使用 Azure AD 集成身份验证导入数据。该示例使用 Azure AD 集成身份验证，将数据从文件 `c:\last\data2.txt` 导入到 Azure `aadserver.database.windows.net` 服务器上的数据库 `testdb` `bcptest` 的表中：
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -262,7 +262,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
    ``` 
 
-   如果 Azure AD 用户是使用 Windows 帐户联合的域，则命令行中所需的用户名包含其域帐户（例如，joe@contoso.com 见下文）：   
+   如果 Azure AD 用户是使用 Windows 帐户的域联合的域，则命令行中所需的用户名包含其域帐户（例如，joe@contoso.com 见下文）：   
 
    ```
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
