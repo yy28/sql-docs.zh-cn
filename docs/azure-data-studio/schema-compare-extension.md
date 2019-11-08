@@ -1,31 +1,29 @@
 ---
 title: 架构比较扩展
 titleSuffix: Azure Data Studio
-description: 安装和使用 Azure Data Studio 的架构比较扩展（预览版）
+description: 安装和使用 Azure Data Studio 的架构比较扩展
 ms.custom: seodec18
-ms.date: 10/03/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 031bdc19762213ff2c85e6fe4612ded294fcaaa9
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.openlocfilehash: f93711983eb32a979e47941883e968b52e03459c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381823"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532535"
 ---
-# <a name="schema-compare-extension-preview"></a>架构比较扩展（预览版）
+# <a name="schema-compare-extension"></a>架构比较扩展
 架构比较扩展提供了一种易于使用的体验，以比较两个数据库定义，并将源的区别应用于目标。
-
-此体验目前处于初始预览版。 在[此处](https://github.com/microsoft/azuredatastudio/issues)报告问题和提出功能请求。
 
 
 ## <a name="features"></a>功能
 
-* 比较两个 .dacpac 文件或数据库的架构
+* 比较两个 dacpac 文件或数据库的架构
 * 将结果视为一组要匹配源则必须针对目标执行的操作
 * 选择性地排除结果中列出的操作
 * 设置控制比较范围的选项
@@ -72,3 +70,4 @@ ms.locfileid: "72381823"
 ## <a name="next-steps"></a>后续步骤
 
 若要了解有关架构比较的详细信息，[请查看我们的文档。](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions)
+在[此处](https://github.com/microsoft/azuredatastudio/issues)报告问题和提出功能请求。

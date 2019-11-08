@@ -4,17 +4,17 @@ titleSuffix: SQL Server
 description: 本快速入门介绍了如何在所选云端的 Linux 上运行 SQL Server。
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/25/2017
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 39cde4a4f3b4e970bfe1367432e986c48f55a975
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 402466ab44a5f3795c0031ecdaa33cb863279839
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910521"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594555"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>快速入门：在云中运行 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "67910521"
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  从市场中使用至少 2 GB 内存来创建 Linux AMI 
     * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
-    * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
+    * [SLES v12 SP2+](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  使用 ssh 连接到 AMI
 1.  按照所选的 Linux 分发的快速入门进行操作： 
@@ -53,7 +53,7 @@ ms.locfileid: "67910521"
 ## <a name="google-cloud-platform"></a>Google Cloud Platform
 1.  从云启动器中使用至少 2 GB 内存来创建 Linux 映像 
     * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
-    * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
+    * [SLES v12 SP4](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  使用 ssh 连接到映像
 1.  按照所选的 Linux 分发的快速入门进行操作： 

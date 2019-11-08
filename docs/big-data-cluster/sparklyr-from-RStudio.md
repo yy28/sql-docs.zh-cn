@@ -5,30 +5,30 @@ description: 在 RStudio 中使用 sparklyr 连接到大数据群集。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d23ce447f097d092059f7298ca5478ed6c3f19fc
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 375993e4fd9506c129e4f98d9ad2193472e03edb
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653326"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531619"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server 大数据群集中使用 Sparklyr
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr 为 Apache Spark 提供 R 接口。 Sparklyr 是 R 开发人员使用 Spark 的常用方法。 本文介绍如何在中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]使用 sparklyr RStudio。
+Sparklyr 为 Apache Spark 提供 R 接口。 Sparklyr 是 R 开发人员使用 Spark 的常用方法。 本文介绍如何使用 RStudio 在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 中使用 sparklyr。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - [部署 SQL Server 2019 大数据群集](quickstart-big-data-cluster-deploy.md)。
 
 ### <a name="install-rstudio-desktop"></a>安装 RStudio Desktop
 
-使用以下步骤安装和配置 RStudio Desktop：
+使用以下步骤安装和配置 RStudio Desktop  ：
 
 1. 如果在 Windows 客户端运行，请[下载并安装 R 3.4.4](https://cran.rstudio.com/bin/windows/base/old/3.4.4)。
 
@@ -49,7 +49,7 @@ Sparklyr 为 Apache Spark 提供 R 接口。 Sparklyr 是 R 开发人员使用 S
 在 RStudio 中，创建 R 脚本并连接到 Spark，如以下示例所示：
 
 > [!TIP]
-> 对于 `<USERNAME>` 和 `<PASSWORD>` 值，请使用在大数据群集部署过程中设置的用户名（如 root）和密码。 有关 `<IP>` 和 `<PORT>` 值，请参阅有关[连接到大数据群集](connect-to-big-data-cluster.md)的文档。
+> 对于 `<AZDATA_USERNAME>` 和 `<AZDATA_PASSWORD>` 值，请使用在大数据群集部署过程中设置的用户名（如 root）和密码。 有关 `<IP>` 和 `<PORT>` 值，请参阅有关[连接到大数据群集](connect-to-big-data-cluster.md)的文档。
 
 ```r
 library(sparklyr)
@@ -57,7 +57,7 @@ library(dplyr)
 library(DBI)
 
 #Specify the Knox username and password
-config <- livy_config(user = "<username>", password = "<password>")
+config <- livy_config(user = "<AZDATA_USERNAME>", password = "<AZDATA_PASSWORD>")
 
 httr::set_config(httr::config(ssl_verifypeer = 0L, ssl_verifyhost = 0L))
 
@@ -82,7 +82,7 @@ iris_count
 
 sparklyr 的一项功能是能够使用 [spark_apply](https://spark.rstudio.com/reference/spark_apply/) 来[分布 计算](https://spark.rstudio.com/guides/distributed-r/)。
 
-由于大数据群集使用 Livy 连接，因此必须在对“spark_apply”的调用中设置 `packages = FALSE`。 有关详细信息，请参阅关于分布式 R 计算的 sparklyr 文档的 [Livy 部分](https://spark.rstudio.com/guides/distributed-r/#livy)。 使用此设置，只能在传递给“spark_apply”的 R 代码中使用已安装在 Spark 群集上的 R 包。 下面的示例对此功能进行了演示：
+由于大数据群集使用 Livy 连接，因此必须在对“spark_apply”的调用中设置 `packages = FALSE`  。 有关详细信息，请参阅关于分布式 R 计算的 sparklyr 文档的 [Livy 部分](https://spark.rstudio.com/guides/distributed-r/#livy)。 使用此设置，只能在传递给“spark_apply”的 R 代码中使用已安装在 Spark 群集上的 R 包  。 下面的示例对此功能进行了演示：
 
 ```r
 iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Species", packages = FALSE)
@@ -90,4 +90,4 @@ iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Specie
 
 ## <a name="next-steps"></a>后续步骤
 
-有关大数据群集的详细信息, 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是](big-data-cluster-overview.md)。
+有关大数据群集的详细信息，请参阅[什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)。

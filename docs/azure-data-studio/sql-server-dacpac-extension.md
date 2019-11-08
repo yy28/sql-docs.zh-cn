@@ -1,27 +1,25 @@
 ---
 title: SQL Server dacpac 扩展
 titleSuffix: Azure Data Studio
-description: 安装和使用 Azure Data Studio 的 SQL Server dacpac 扩展（预览版）
+description: 安装和使用 Azure Data Studio 的 SQL Server dacpac 扩展
 ms.custom: seodec18
-ms.date: 10/21/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 769e6157e7d84702716dfce79d0217efeee83076
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783331"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532422"
 ---
-# <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac 扩展（预览版）
+# <a name="sql-server-dacpac-extension"></a>SQL Server dacpac 扩展
 
 “数据层应用程序向导”提供了一种易于使用的体验，可用于部署和提取 .dacpac 文件以及导入和导出 bacpac 文件   。
-
-此体验目前处于初始预览版。 请在[此处](https://github.com/microsoft/azuredatastudio/issues)报告问题和提出功能请求。
 
 
 ## <a name="features"></a>功能
@@ -60,3 +58,4 @@ ms.locfileid: "72783331"
 ## <a name="next-steps"></a>后续步骤
 
 若要了解有关 dacpac 的详细信息，[请查看我们的文档。](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
+请在[此处](https://github.com/microsoft/azuredatastudio/issues)报告问题和提出功能请求。

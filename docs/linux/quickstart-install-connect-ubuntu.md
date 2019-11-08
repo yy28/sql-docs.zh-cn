@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: 本快速入门介绍如何在 Ubuntu 上安装 SQL Server 2017 或 SQL Server 2019，然后使用 sqlcmd 创建和查询数据库。
 author: VanMSFT
 ms.author: vanto
-ms.date: 05/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: e21761c221ec83770be7c9aa19f8a4ec971617e2
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 17f73e7529fb8e74e9ff83de8d7e0ebd61783909
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030318"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531352"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入门：安装 SQL Server 并在 Ubuntu 上创建数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -24,13 +24,13 @@ ms.locfileid: "70030318"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-本快速入门介绍如何在 Ubuntu 16.04 上安装 SQL Server 2017 或 SQL Server 2019（预览版）。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
+本快速入门介绍如何在 Ubuntu 16.04 上安装 SQL Server 2017 或 SQL Server 2019。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-本快速入门介绍如何在 Ubuntu 16.04 上安装 SQL Server 2019（预览版）。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
+本快速入门介绍如何在 Ubuntu 16.04 上安装 SQL Server 2019。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
 
 ::: moniker-end
 
@@ -71,10 +71,10 @@ ms.locfileid: "70030318"
    ```
 
    > [!TIP]
-   > 如果想试用 SQL Server 2019，需改为注册预览版 (2019) 存储库  。 使用以下命令安装 SQL Server 2019：
+   > 如果想安装 SQL Server 2019，必须改为注册 SQL Server 2019 存储库。 使用以下命令安装 SQL Server 2019：
    >
    > ```bash
-   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
    > ```
 
 3. 运行以下命令以安装 SQL Server：
@@ -120,13 +120,13 @@ ms.locfileid: "70030318"
    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-2. 为 SQL Server 2019（预览版）注册 Microsoft SQL Server Ubuntu 存储库:
+2. 为 SQL Server 2019 注册 Microsoft SQL Server Ubuntu 存储库：
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
    ```
 
-3. 运行以下命令，安装 SQL Server：
+3. 运行以下命令以安装 SQL Server：
 
    ```bash
    sudo apt-get update
@@ -150,7 +150,7 @@ ms.locfileid: "70030318"
 
 6. 如果计划远程连接，可能还需要在防火墙上打开 SQL Server TCP 端口（默认值为 1433）。
 
-此时，SQL Server 2019（预览版）已在 Ubuntu 计算机上运行，随时可以使用！
+此时，SQL Server 2019 已在 Ubuntu 计算机上运行，随时可以使用！
 
 ::: moniker-end
 

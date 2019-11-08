@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b28cde8935c3a2c4b25f20ef727358b918e6680
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 6b67218c4b2d48b3a99ad896105a2069f5d8bcde
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155659"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594489"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -397,9 +397,6 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
     | DEFAULT_LANGUAGE = language
 ```
 
-> [!IMPORTANT]
-> SQL 数据库托管实例的 Azure AD 登录名当前为公共预览版  。 这是通过语法 FROM EXTERNAL PROVIDER 引入的  。
-
 ## <a name="arguments"></a>参数
 
 login_name  与 FROM EXTERNAL PROVIDER  子句一起使用时，登录名指定 Azure Active Directory (AD) 主体，可以是 Azure AD 用户、组或应用程序。 否则，登录名表示所创建 SQL 登录名的名称。
@@ -423,12 +420,6 @@ SID =  sid  用于重新创建登录名。 仅适用于 SQL Server 身份验证�
     - Azure AD 用户的 Azure AD 对象的 UserPrincipalName。
     - Azure AD 组和 Azure AD 应用程序的 Azure AD 对象的 DisplayName。
   - 不能使用 PASSWORD 选项  。
-  - 目前，第一个 Azure AD 登录名必须由标准 SQL Server 帐户（非 Azure AD）创建，该帐户是使用上述语法的 `sysadmin`。
-  - 使用 Azure AD 管理员为 SQL 数据库托管实例创建 Azure AD 登录名时，会出现以下错误：</br>
-      `Msg 15247, Level 16, State 1, Line 1
-      User does not have permission to perform this action.`
-  - 这是公共预览版的已知限制，将在以后得到修复  。
-  - 创建第一个 Azure AD 登录名，并获得必要权限后，此登录名便可以创建其他 Azure AD 登录名。
 - 默认情况下，忽略 FROM EXTERNAL PROVIDER 子句时，会创建一个常规 SQL 登录名  。
 - Azure AD 登录名会在 sys.server_principals 中显示，同时，对于映射到 Azure AD 用户的登录名，类型列值设置为“E”，type_desc 设置为“EXTERNAL_LOGIN”；对于映射到 Azure AD 组的登录名，类型列值设置为“X”，type_desc 设置为“EXTERNAL_GROUP”     。
 - 有关用于传输登录名的脚本，请参阅[如何在 SQL Server 2005 和 SQL Server 2008 的实例之间传输登录名和密码](https://support.microsoft.com/kb/918992)。
@@ -463,6 +454,7 @@ SID =  sid  用于重新创建登录名。 仅适用于 SQL Server 身份验证�
 - 只有属于 `sysadmin` 角色的 SQL 服务器级主体（登录名）可以针对 Azure AD 主体执行以下操作：
   - 作为用户执行
   - EXECUTE AS LOGIN
+- 从另一个 Azure AD 目录导入的外部（来宾）用户无法直接配置为托管实例的 Azure AD 管理员。 而是需将外部用户加入 Azure AD 启用安全机制的组，并将该组配置为实例管理员。
 
 ## <a name="examples"></a>示例
 

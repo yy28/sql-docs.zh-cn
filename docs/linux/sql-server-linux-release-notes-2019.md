@@ -3,17 +3,16 @@ title: Linux 上的 SQL Server 2019 的发行说明
 description: 本文包含 Linux 上运行的 SQL Server 2019 的发行说明和支持功能。 发行说明适用于最新版本和几个以前的版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: af3b6f82e3b76e2dd2b11403bccf4b3e0885912e
-ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
+ms.openlocfilehash: 8edcbf91c827ea2afafa0830aad5a26423102f17
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890901"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594542"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上的 SQL Server 2019 的发行说明
 
@@ -29,7 +28,7 @@ ms.locfileid: "69890901"
 | 平台 | 文件系统 | 安装指南 |
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.3、7.4、7.5 或7.6 服务器 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-suse.md) |
+| SUSE Enterprise Linux Server v12 SP2、SP3 或 SP4 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS 或 EXT4 | [安装指南](quickstart-install-connect-ubuntu.md) | 
 | 适用于 Windows、Mac 或 Linux 的 Docker 引擎 1.8 及更高版本 | 空值 | [安装指南](quickstart-install-connect-docker.md) | 
 
@@ -42,33 +41,39 @@ ms.locfileid: "69890901"
 
 ## <a name="release-history"></a>版本历史记录
 
-下表列出了 SQL Server 2019 预览版的发布历史记录。
+下表列出了 SQL Server 2019 版本的发布历史记录。
 
 | 发行版本                   | 版本       | 发布日期 |
 |---------------------------|---------------|--------------|
-| [候选发布](#rc)  | 15.0.1900.25  | 2019年 8 月 21 日    |
-| [CTP 3.2](#CTP32)         | 15.0.1800.32  | 2019 年 7 月 24 日    |
-| [CTP 3.1](#CTP31)         | 15.0.1700.37  | 2019 年 6 月 26日    |
-| [CTP 3.0](#CTP30)         | 15.0.1600.8   | 2019 年 5 月 22 日    |
-| [CTP 2.5](#CTP25)         | 15.0.1500.28  | 2019 年 4 月 24 日    |
-| [CTP 2.4](#CTP24)         | 15.0.1400.75  | 2019 年 3 月 27 日    |
-| [CTP 2.3](#CTP23)         | 15.0.1300.359 | 2019 年 3 月 1 日    |
-| [CTP 2.2](#CTP22)         | 15.0.1200.24  | 2018 年 12 月 11日   |
-| [CTP 2.1](#CTP21)         | 15.0.1100.94  | 2018 年 11 月 6 日   |
-| [CTP 2.0](#CTP20)         | 15.0.1000.34  | 2018 年 9 月 24 日   |
+| [GA](#ga)                 | 15.0.2000.5  | 2019-11-04    |
+| [候选发布](#rc)  | 15.0.1900.25  | 2019-08-21   |
 
 ## <a id="cuinstall"></a> 如何安装更新
 
-如果已配置预览存储库 (mssql-server preview)，则在执行新安装时将获得最新的 SQL Server CTP 包  。 如果需要 Docker 容器映像，请参阅[适用于 Docker 引擎的 Linux 上的 Microsoft SQL Server](https://hub.docker.com/r/microsoft/mssql-server/) 的官方映像。 有关存储库配置的详细信息，请参阅[在 Linux 上为 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
+如果已配置 CU 存储库 (mssql-server-2019)，则在执行新安装时将获得 SQL Server 包的最新 CU。 如果需要 Docker 容器映像，请参阅[适用于 Docker 引擎的 Linux 上的 Microsoft SQL Server](https://hub.docker.com/r/microsoft/mssql-server/) 的官方映像。 有关存储库配置的详细信息，请参阅[在 Linux 上为 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 如果要更新现有的 SQL Server 包，请为每个包运行相应的更新命令以获取最新的 CU。 有关每个包的特定更新说明，请参阅以下安装指南：
 
 - [安装 SQL Server 包](sql-server-linux-setup.md#upgrade)
 - [安装全文搜索包](sql-server-linux-setup-full-text-search.md)
 - [安装 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-- [在 Linux 上安装 SQL Server 2019 预览版的 Microsoft 机器学习服务 R 和 Python 支持](sql-server-linux-setup-machine-learning.md)
+- [在 Linux 上安装 SQL Server 2019 机器学习服务 R 和 Python 支持](sql-server-linux-setup-machine-learning.md)
 - [安装 PolyBase 包](../relational-databases/polybase/polybase-linux-setup.md)
 - [启用 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
+
+## <a id="ga"></a> GA（2019 年 11 月）
+
+这是 SQL Server 2019 (15.x) 的正式发布版 (GA)。 此次发布的 SQL Server 数据库引擎版本是 15.0.2000.5。
+
+### <a name="package-details"></a>包详细信息
+
+对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+
+| “包” | 包版本 | 下载 |
+|-----|-----|-----|
+| Red Hat RPM 包 | 15.0.2000.5-5 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
+| SLES RPM 包 | 15.0.2000.5-5 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
+| Ubuntu 16.04 Debian 包 | 15.0.2000.5-5 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.2000.5-5_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.2000.5-5_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.2000.5-5_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.2000.5-5_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.2000.5-5_amd64.deb)</br>[PolyBase RPM 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.2000.5-5_amd64.deb)|
 
 ## <a id="rc"></a> 候选发布（2019 年 8 月）
 
@@ -84,173 +89,142 @@ ms.locfileid: "69890901"
 | SLES RPM 包 | 15.0.1900.25-1 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
 | Ubuntu 16.04 Debian 包 | 15.0.1900.25-1 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1900.25-1_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1900.25-1_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1900.25-1_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1900.25-1_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1900.25-1_amd64.deb)</br>[PolyBase RPM 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1900.25-1_amd64.deb)|
 
-## <a id="CTP32"></a> CTP 3.2（2019 年 7 月）
+## <a name="known-issues"></a>已知问题
 
-以下各节提供了 CTP 3.2 版本的包位置和已知问题。 若要详细了解 SQL Server 2019 上 Linux 的新功能，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
+以下部分介绍了 Linux 上 SQL Server 2019 (15.x) 的正式发布版 (GA) 的已知问题。
 
-### <a name="package-details"></a>包详细信息
+#### <a name="general"></a>常规
 
-对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+- 安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主机名的长度不能超过 15 个字符。 
 
-| “包” | 包版本 | 下载 |
-|-----|-----|-----|
-| Red Hat RPM 包 | 15.0.1800.32-1 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1800.32-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1800.32-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1800.32-1.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1800.32-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1800.32-1.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1800.32-1.x86_64.rpm)|
-| SLES RPM 包 | 15.0.1800.32-1 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1800.32-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1800.32-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1800.32-1.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1800.32-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1800.32-1.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1800.32-1.x86_64.rpm)|
-| Ubuntu 16.04 Debian 包 | 15.0.1800.32-1 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1800.32-1_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1800.32-1_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1800.32-1_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1800.32-1_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1800.32-1_amd64.deb)</br>[PolyBase RPM 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1800.32-1_amd64.deb)|
+    - **解决方法**：更改 /etc/hostname 中的名称，使其不超过 15 个字符。
 
-## <a id="CTP31"></a> CTP 3.1（2019 年 6 月）
+- 手动将系统时间设置为时间倒移，会导致 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 停止更新 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的内部系统时间。
 
-以下各节提供了 CTP 3.1 版本的包位置和已知问题。 若要详细了解 SQL Server 2019 上 Linux 的新功能，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
+    - **解决方法**：重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-### <a name="package-details"></a>包详细信息
+- 仅支持单个实例安装。
 
-对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+    - **解决方法**：如果希望在给定主机上安装多个实例，请考虑使用 VM 或 Docker 容器。 
 
-| “包” | 包版本 | 下载 |
-|-----|-----|-----|
-| Red Hat RPM 包 | 15.0.1700.37-2 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1700.37-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1700.37-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1700.37-2.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1700.37-2.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1700.37-2.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1700.37-2.x86_64.rpm)|
-| SLES RPM 包 | 15.0.1700.37-2 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1700.37-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1700.37-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1700.37-2.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1700.37-2.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1700.37-2.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1700.37-2.x86_64.rpm)|
-| Ubuntu 16.04 Debian 包 | 15.0.1700.37-2 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1700.37-2_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1700.37-2_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1700.37-2_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1700.37-2_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1700.37-2_amd64.deb)</br>[PolyBase RPM 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1700.37-2_amd64.deb)|
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager 无法连接到 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-## <a id="CTP30"></a> CTP 3.0（2019 年 5 月）
+- sa 登录名的默认语言是英语  。
 
-以下各节提供了用于 CTP 3.0 版本的包位置和已知问题。 若要详细了解 SQL Server 2019 上 Linux 的新功能，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
+    - **解决方法**：使用 ALTER LOGIN 语句更改 sa 登录名的语言   。
 
-### <a name="package-details"></a>包详细信息
+#### <a name="databases"></a>数据库
 
-对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+- 不能使用 mssql-conf 实用工具移动 master 数据库。 可以使用 mssql-conf 移动其他系统数据库。
 
-| “包” | 包版本 | 下载 |
-|-----|-----|-----|
-| Red Hat RPM 包 | 15.0.1600.8-1 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1600.8-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1600.8-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1600.8-1.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1600.8-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1600.8-1.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1600.8-1.x86_64.rpm)|
-| SLES RPM 包 | 15.0.1600.8-1 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1600.8-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1600.8-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1600.8-1.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1600.8-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1600.8-1.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1600.8-1.x86_64.rpm)|
-| Ubuntu 16.04 Debian 包 | 15.0.1600.8-1 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1600.8-1_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1600.8-1_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1600.8-1_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1600.8-1_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1600.8-1_amd64.deb)</br>[PolyBase RPM 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1600.8-1_amd64.deb)|
+- 还原在 Windows 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中备份的数据库时，必须在 Transact-SQL 语句中使用 WITH MOVE 子句  。
 
-### <a name="known-issues"></a>已知问题
+- 传输层安全性 (TLS) 的某些算法（密码套件）无法在 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中正常运行。 这会在尝试连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时导致连接失败，以及在高可用性组中的副本之间建立连接时出现问题。
 
-#### <a id="msdtc"></a> Microsoft 分布式事务处理协调器
+   - **解决方法**：通过执行以下操作，修改 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 mssql.conf 配置脚本以禁用有问题的密码套件  ：
 
-目前，MSDTC 要求事务不经过身份验证。 例如，如果使用从 Windows 上的 SQL Server 到 Linux 上的 SQL Server 的链接服务器，或者使用 Windows 客户端应用程序针对 Linux 上的 SQL Server 启动某个分布式事务，则 Windows 服务器/客户端上的 MSDTC 需要使用“无需身份验证”选项。
+      1. 将以下项添加到 /var/opt/mssql/mssql.conf。
 
-## <a id="CTP25"></a> CTP 2.5（2019 年 5 月）
+      ```
+      [network]
+      tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
+      ```
 
-以下各节提供了 CTP 2.5 版本的包位置和已知问题。 若要详细了解 SQL Server 2019 上 Linux 的新功能，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
+         >[!NOTE]
+         >In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
 
-### <a name="package-details"></a>包详细信息
+      1. 使用以下命令重启 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+      ```bash
+      sudo systemctl restart mssql-server
+      ```
 
-| “包” | 包版本 | 下载 |
-|-----|-----|-----|
-| Red Hat RPM 包 | 15.0.1500.28-1 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1500.28-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1500.28-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1500.28-1.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1500.28-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1500.28-1.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1500.28-1.x86_64.rpm)|
-| SLES RPM 包 | 15.0.1500.28-1 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1500.28-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1500.28-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1500.28-1.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1500.28-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1500.28-1.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1500.28-1.x86_64.rpm)|
-| Ubuntu 16.04 Debian 包 | 15.0.1500.28-1 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1500.28-1_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1500.28-1_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1500.28-1_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1500.28-1_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1500.28-1_amd64.deb)</br>[PolyBase RPM 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1500.28-1_amd64.deb)|
+- Windows 上使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库无法在 Linux 上的 SQL Server 2019 (15.x) 上进行还原。 要还原使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库，请首先将数据库升级到 Windows 上的 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]、SQL Server 2017 或 SQL Server 2019，然后再通过备份/还原或分离/附加将数据库移至 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-### <a name="known-issues"></a>已知问题
+- 目前 Linux 不支持用户权限 ADMINISTER BULK OPERATIONS  。
 
-#### <a id="msdtc"></a> Microsoft 分布式事务处理协调器
+#### <a name="networking"></a>网络
 
-目前，MSDTC 要求事务不经过身份验证。 例如，如果使用从 Windows 上的 SQL Server 到 Linux 上的 SQL Server 的链接服务器，或者使用 Windows 客户端应用程序针对 Linux 上的 SQL Server 启动某个分布式事务，则 Windows 服务器/客户端上的 MSDTC 需要使用“无需身份验证”选项。
+如果满足以下两个条件，则涉及来自 sqlservr 进程的出站 TCP 连接（如链接服务器或可用性组）的功能可能不起作用：
 
-## <a id="CTP24"></a> CTP 2.4（2019 年 3 月）
+1. 目标服务器被指定为主机名而不是 IP 地址。
 
-以下各节提供了 CTP 2.4 版本的包位置和已知问题。 若要详细了解 SQL Server 2019 上 Linux 的新功能，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
+1. 源实例已在内核中禁用 IPv6。 要验证系统是否在内核中启用了 IPv6，以下所有测试都必须通过：
 
-### <a name="package-details"></a>包详细信息
+   - `cat /proc/cmdline` 将输出当前内核的引导 cmdline。 输出不得包含 `ipv6.disable=1`。
+   - /Proc/sys/net/ipv6/ 目录必须存在。
+   - 调用 `socket(AF_INET6, SOCK_STREAM, IPPROTO_IP)` 的 C 程序应成功，即系统调用必须返回一个 fd != -1 并且不会因 EAFNOSUPPORT 而失败。
 
-对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+确切的错误取决于该功能。 对于链接服务器，这表现为登录超时错误。 对于可用性组，辅助节点上的 `ALTER AVAILABILITY GROUP JOIN` DDL 将在 5 分钟后因下载配置超时错误而失败。
 
-| “包” | 包版本 | 下载 |
-|-----|-----|-----|
-| Red Hat RPM 包 | 15.0.1400.75-2 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1400.75-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1400.75-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1400.75-2.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1400.75-2.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1400.75-2.x86_64.rpm)|
-| SLES RPM 包 | 15.0.1400.75-2 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1400.75-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1400.75-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1400.75-2.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1400.75-2.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1400.75-2.x86_64.rpm)|
-| Ubuntu 16.04 Debian 包 | 15.0.1400.75-2 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1400.75-2_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1400.75-2_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1400.75-2_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1400.75-2_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1400.75-2_amd64.deb)|
+要解决此问题，请执行以下操作之一：
 
-### <a name="known-issues"></a>已知问题
+1. 使用 IP 而不是主机名来指定 TCP 连接的目标。
 
-#### <a id="msdtc"></a> Microsoft 分布式事务处理协调器
+1. 从引导 cmdline 中删除 `ipv6.disable=1`，在内核中启用 IPv6。 执行此操作的方法取决于 Linux 分发版和引导加载程序，例如 grub。 如果确实想要禁用 IPv6，仍可以通过在 `sysctl` 配置中设置 `net.ipv6.conf.all.disable_ipv6 = 1` 来禁用它（例如 `/etc/sysctl.conf`）。 这仍然会阻止系统的网络适配器获取 IPv6 地址，但允许 sqlservr 功能运行。
 
-目前，MSDTC 要求事务不经过身份验证。 例如，如果使用从 Windows 上的 SQL Server 到 Linux 上的 SQL Server 的链接服务器，或者使用 Windows 客户端应用程序针对 Linux 上的 SQL Server 启动某个分布式事务，则 Windows 服务器/客户端上的 MSDTC 需要使用“无需身份验证”选项。
+#### <a name="network-file-system-nfs"></a>网络文件系统 (NFS)
+如果在生产中使用网络文件系统 (NFS) 远程共享，请注意以下支持要求  ：
 
-## <a id="CTP23"></a> CTP 2.3（2019 年 2 月）
+- 使用 NFS 版本 4.2 或更高版本  。 较早版本的 NFS 不支持现代文件系统常用的必需功能，例如 fallocate 和稀疏文件创建。
+- 仅在 NFS 装载上查找 /var/opt/mssql 目录  。 不支持其他文件，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系统二进制文件。
+- 安装远程共享时，请确保 NFS 客户端使用“nolock”选项。
 
-以下各节提供了 CTP 2.3 版本的包位置和已知问题。 若要详细了解 SQL Server 2019 上 Linux 的新功能，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
+#### <a name="localization"></a>本地化
 
-### <a name="package-details"></a>包详细信息
+- 如果在安装过程中区域设置不是英语 (en_us)，则必须在 bash 会话/终端中使用 UTF-8 编码。 如果使用 ASCII 编码，可能会看到类似于以下内容的错误：
 
-对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+   ```
+   UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 8: ordinal not in range(128)
+   ```
 
-| “包” | 包版本 | 下载 |
-|-----|-----|-----|
-| Red Hat RPM 包 | 15.0.1300.359-1 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1300.359-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1300.359-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1300.359-1.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1300.359-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1300.359-1.x86_64.rpm)|
-| SLES RPM 包 | 15.0.1300.359-1 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1300.359-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1300.359-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1300.359-1.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1300.359-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1300.359-1.x86_64.rpm)|
-| Ubuntu 16.04 Debian 包 | 15.0.1300.359-1 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1300.359-1_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1300.359-1_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1300.359-1_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1300.359-1_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1300.359-1_amd64.deb)|
+   如果无法使用 UTF-8 编码，请使用 MSSQL_LCID 环境变量运行安装程序以指定语言选择。
 
-### <a name="known-issues"></a>已知问题
+   ```bash
+   sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
+   ```
 
-#### <a id="msdtc"></a> Microsoft 分布式事务处理协调器
+- 运行 mssql-conf 安装程序并执行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的非英语安装时，在本地化文本“配置 SQL Server...”之后会显示错误的扩展字符。 或者，对于非拉丁语的安装，句子可能完全丢失。 丢失的句子应显示以下本地化字符串：“已成功处理授权 PID。 新版本为 [\<名称\>版本]”。 输出此字符串仅供参考，下一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 累积更新将针对所有语言解决此问题。 这不会以任何方式影响 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的成功安装。 
 
-目前，MSDTC 要求事务不经过身份验证。 例如，如果使用从 Windows 上的 SQL Server 到 Linux 上的 SQL Server 的链接服务器，或者使用 Windows 客户端应用程序针对 Linux 上的 SQL Server 启动某个分布式事务，则 Windows 服务器/客户端上的 MSDTC 需要使用“无需身份验证”选项。
+#### <a name="full-text-search"></a>全文搜索
 
-## <a id="CTP22"></a> CTP 2.2（2018 年 12 月）
+- 并非所有筛选器都适用于此版本，包括 Office 文档筛选器。 有关支持的筛选器列表，请参阅[在 Linux 上安装 SQL Server 全文搜索](sql-server-linux-setup-full-text-search.md#filters)。
 
-以下各节提供了 CTP 2.2 版本的包位置和已知问题。 若要详细了解 SQL Server 2019 上 Linux 的新功能，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
+#### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
-### <a name="package-details"></a>包详细信息
+- 此版本中的 SUSE 不支持 mssql-server-is 包  。 目前仅 Ubuntu 和 Red Hat Enterprise Linux (RHEL) 支持该包。
 
-对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+- 由于 Linux CTP 2.1 刷新版和更高版本上有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，所以 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包可以使用 Linux 上的 ODBC 连接。 虽然已使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 MySQL ODBC 驱动程序测试过该功能，但也希望该功能可以与任何遵循 ODBC 规范的 Unicode ODBC 驱动程序搭配使用。 在设计阶段，可以提供 DSN 或连接字符串以连接到 ODBC 数据，还可以使用 Windows 身份验证。 有关详细信息，请参阅[宣布 Linux 上的 ODBC 支持的博客文章](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
 
-| “包” | 包版本 | 下载 |
-|-----|-----|-----|
-| Red Hat RPM 包 | 15.0.1200.24-2 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
-| SLES RPM 包 | 15.0.1200.24-2 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
-| Ubuntu 16.04 Debian 包 | 15.0.1200.24-2 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1200.24-2_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1200.24-2_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1200.24-2_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1200.24-2_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1200.24-2_amd64.deb)|
+- 在 Linux 上运行 SSIS 包时，此版本不支持以下功能：
+  - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目录数据库
+  - SQL 代理计划的包执行
+  - Windows 身份验证
+  - 第三方组件
+  - 变更数据捕获 (CDC)
+  - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 横向扩展
+  - 适用于 SSIS 的 Azure 功能包
+  - Hadoop 和 HDFS 支持
+  - Microsoft Connector for SAP BW
 
-### <a name="known-issues"></a>已知问题
+有关当前不受支持或提供有限支持的内置 SSIS 组件的列表，请参阅 [Linux 上的 SSIS 的限制和已知问题](sql-server-linux-ssis-known-issues.md#components)。
 
-#### <a id="msdtc"></a> Microsoft 分布式事务处理协调器
+有关 Linux 上的 SSIS 的详细信息，请参阅以下文章：
+-   [宣布对 Linux 的 SSIS 支持的博客文章](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)。
+-   [在 Linux 上安装 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [使用 SSIS 在 Linux 上提取、转换和加载数据](sql-server-linux-migrate-ssis.md)
 
-目前，MSDTC 要求事务不经过身份验证。 例如，如果使用从 Windows 上的 SQL Server 到 Linux 上的 SQL Server 的链接服务器，或者使用 Windows 客户端应用程序针对 Linux 上的 SQL Server 启动某个分布式事务，则 Windows 服务器/客户端上的 MSDTC 需要使用“无需身份验证”选项。
+#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
 
-## <a id="CTP21"></a> CTP 2.1（2018 年 11 月）
+以下限制适用于 Windows 中连接到 Linux 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。
 
-以下各节提供了 CTP 2.1 版本的包位置和已知问题。 若要详细了解 SQL Server 2019 上 Linux 的新功能，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
+- 不支持维护计划。
 
-### <a name="package-details"></a>包详细信息
+- 不支持管理数据仓库 (MDW) 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的数据收集器。 
 
-对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+- 具有 Windows 身份验证或 Windows 事件日志选项的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] UI 组件不适用于 Linux。 仍可通过其他选项（如 SQL 登录名）使用这些功能。 
 
-| “包” | 包版本 | 下载 |
-|-----|-----|-----|
-| Red Hat RPM 包 | 15.0.1100.94-1 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1100.94-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1100.94-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1100.94-1.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1100.94-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1100.94-1.x86_64.rpm)|
-| SLES RPM 包 | 15.0.1100.94-1 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1100.94-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1100.94-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1100.94-1.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1100.94-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1100.94-1.x86_64.rpm)|
-| Ubuntu 16.04 Debian 包 | 15.0.1100.94-1 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1100.94-1_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1100.94-1_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1100.94-1_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1100.94-1_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1100.94-1_amd64.deb)|
-
-### <a name="known-issues"></a>已知问题
-
-#### <a name="microsoft-distributed-transaction-coordinator"></a>Microsoft 分布式事务处理协调器
-
-目前，MSDTC 要求事务不经过身份验证。 例如，如果使用从 Windows 上的 SQL Server 到 Linux 上的 SQL Server 的链接服务器，或者使用 Windows 客户端应用程序针对 Linux 上的 SQL Server 启动某个分布式事务，则 Windows 服务器/客户端上的 MSDTC 需要使用“无需身份验证”选项。
-
-## <a id="CTP20"></a> CTP 2.0（2018 年 9 月）
-
-以下各节提供了 CTP 2.0 版本的包位置和已知问题。 若要详细了解 SQL Server 2019 上 Linux 的新功能，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
-
-### <a name="package-details"></a>包详细信息
-
-对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
-
-| “包” | 包版本 | 下载 |
-|-----|-----|-----|
-| Red Hat RPM 包 | 15.0.1000.34-2 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
-| SLES RPM 包 | 15.0.1000.34-2 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
-| Ubuntu 16.04 Debian 包 | 15.0.1000.34-2 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1000.34-2_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1000.34-2_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1000.34-2_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1000.34-2_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1000.34-2_amd64.deb)|
-
-### <a name="known-issues"></a>已知问题
-
-#### <a name="microsoft-distributed-transaction-coordinator"></a>Microsoft 分布式事务处理协调器
-
-目前，MSDTC 要求事务不经过身份验证。 例如，如果使用从 Windows 上的 SQL Server 到 Linux 上的 SQL Server 的链接服务器，或者使用 Windows 客户端应用程序针对 Linux 上的 SQL Server 启动某个分布式事务，则 Windows 服务器/客户端上的 MSDTC 需要使用“无需身份验证”选项。
+- 不能修改要保留的日志文件数。
 
 ## <a name="next-steps"></a>后续步骤
 

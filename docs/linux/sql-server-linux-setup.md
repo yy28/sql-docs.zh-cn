@@ -4,24 +4,30 @@ titleSuffix: SQL Server
 description: 安装、更新和卸载 Linux 上的 SQL Server。 本文介绍了联机、脱机和无人参与的方案。
 author: VanMSFT
 ms.author: vanto
-ms.date: 05/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 7f4b2aa37b20cceaa3269527c95bfa97a2daa311
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a6cd31b1f67d37f1316db9db5d4356bbb5e31d3b
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032427"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593667"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的安装指南
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文提供有关在 Linux 上安装、更新和卸载 SQL Server 2017 和 SQL Server 2019 预览版的指导。
+本文提供有关在 Linux 上安装、更新和卸载 SQL Server 2017 和 SQL Server 2019 的指导。
+
+有关其他部署方案，请参阅：
+
+- [Windows](../database-engine/install-windows/install-sql-server.md)
+- [Docker 容器](../linux/sql-server-linux-configure-docker.md)
+- [Kubernetes - 大数据群集](../big-data-cluster/deploy-get-started.md)
 
 > [!TIP]
 > 本指南涵盖了多种部署方案。 如果只是寻找逐步安装说明，请跳转到其中一个快速入门：
@@ -34,7 +40,10 @@ ms.locfileid: "68032427"
 
 ## <a id="supportedplatforms"></a> 支持的平台
 
-SQL Server 2017 在 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 和 Ubuntu 上受支持。 此外，它也可作为 Docker 映像提供，可在 Linux 上的 Docker 引擎或用于 Windows/Mac 的 Docker 上运行。
+SQL Server 在 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 和 Ubuntu 上受支持。 此外，它也可作为 Docker 映像提供，可在 Linux 上的 Docker 引擎或用于 Windows/Mac 的 Docker 上运行。
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 | 平台 | 支持的版本 | 获取
 |-----|-----|-----
@@ -43,6 +52,20 @@ SQL Server 2017 在 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Serv
 | **Ubuntu** | 16.04 | [获取 Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Docker 引擎** | 1.8+ | [获取 Docker](https://www.docker.com/get-started)
 
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+| 平台 | 支持的版本 | 获取
+|-----|-----|-----
+| **Red Hat Enterprise Linux** | 版本 7.3、7.4、7.5、7.6 | [获取 RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **SUSE Linux Enterprise Server** | v12 SP2、SP3、SP4 | [获取 SLES v12](https://www.suse.com/products/server)
+| **Ubuntu** | 16.04 | [获取 Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
+| **Docker 引擎** | 1.8+ | [获取 Docker](https://www.docker.com/get-started)
+
+::: moniker-end
+
 Microsoft 还支持使用 OpenShift 和 Kubernetes 部署和管理 SQL Server 容器。
 
 > [!NOTE]
@@ -50,7 +73,7 @@ Microsoft 还支持使用 OpenShift 和 Kubernetes 部署和管理 SQL Server �
 
 ## <a id="system"></a> 系统要求
 
-SQL Server 2017 对 Linux 具有以下系统要求：
+SQL Server 对 Linux 具有以下系统要求：
 
 |||
 |-----|-----|
@@ -69,25 +92,24 @@ SQL Server 2017 对 Linux 具有以下系统要求：
 
 ## <a id="repositories"></a> 配置源存储库
 
-安装或升级 SQL Server 时，从配置的 Microsoft 存储库中获取最新版本的 SQL Server。 快速入门使用 SQL Server 2017 累积更新 (CU) 存储库  。 但你可以改为配置 GDR 存储库或预览版 (vNext) 存储库   。 有关存储库以及如何配置存储库的详细信息，请参阅[为 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
+安装或升级 SQL Server 时，从配置的 Microsoft 存储库中获取最新版本的 SQL Server。 快速入门使用 SQL Server 的累积更新 (CU) 存储库  。 但是可以改为配置 GDR  存储库。 有关存储库以及如何配置存储库的详细信息，请参阅[为 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
-## <a id="platforms"></a> 安装 SQL Server 2017
+## <a id="platforms"></a> 安装 SQL Server
 
-可以从命令行安装 Linux 上的 SQL Server 2017。 有关分步说明，请参阅以下快速入门之一：
+可以从命令行在 Linux 上安装 SQL Server 2017 或 SQL Server 2019。 有关分步说明，请参阅以下快速入门之一：
 
-- [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md)
-- [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)
-- [在 Ubuntu 上安装](quickstart-install-connect-ubuntu.md)
-- [在 Docker 上运行](quickstart-install-connect-docker.md)
-- [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
+| 平台 | 安装快速入门 |
+|---|---|
+| Red Hat Enterprise Linux (RHEL) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15) |
+| SUSE Linux Enterprise Server (SLES) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15) |
+| Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15) |
+| Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15) |
+
+还可以在 Azure 虚拟机中运行 Linux 上的 SQL Server。 有关详细信息，请参阅[在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)。
 
 安装后，请考虑进行其他配置更改以实现最佳性能。 有关详细信息，请参阅 [Linux 上的 SQL Server 的性能最佳做法和配置指南](sql-server-linux-performance-best-practices.md)。
 
-## <a id="sqlvnext"></a> 安装 SQL Server 2019 预览版
-
-可使用上一节中相同的快速入门链接安装 Linux 上的 SQL Server 2019 预览版。 但必须注册“预览版 (vNext)”存储库而不是“CU”存储库   。 快速入门提供了有关如何执行此操作的说明。  
-
-## <a id="upgrade"></a> 更新 SQL Server
+## <a id="upgrade"></a> 更新或升级 SQL Server
 
 若要将“mssql-server”包更新到最新版本，请根据你的平台使用以下命令之一  ：
 
@@ -99,8 +121,7 @@ SQL Server 2017 对 Linux 具有以下系统要求：
 
 这些命令将下载最新包，并替换 `/opt/mssql/` 下的二进制文件。 此操作不会影响到用户生成的数据库和系统数据库。
 
-> [!TIP]
-> 如果首先[更改已配置的存储库](sql-server-linux-change-repo.md)，则可以使用“update”命令升级 SQL Server 版本  。 只有当两个存储库之间支持升级路径时，才会出现这种情况。
+若要升级 SQL Server，请首先[将配置的存储库更改](sql-server-linux-change-repo.md)为所需的 SQL Server 版本。 然后使用同一个 update  命令升级 SQL Server 版本。 这仅当两个存储库之间支持升级路径时才可行。
 
 ## <a id="rollback"></a> 回滚 SQL Server
 
@@ -117,7 +138,7 @@ SQL Server 2017 对 Linux 具有以下系统要求：
    | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
 
 > [!NOTE]
-> 只支持降级到相同主版本（如 SQL Server 2017）内的版本。
+> 只支持降级到相同主版本（如 SQL Server 2019）内的版本。
 
 ## <a id="versioncheck"></a> 检查已安装的 SQL Server 版本
 

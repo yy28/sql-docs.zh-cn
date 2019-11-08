@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5e48f3cf60f90e8ad9cdbad8dc9d588da91b48ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3517f4f3ff476277dbd49c82ce31eb7a6ff88125
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68160209"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73590340"
 ---
-<Token>**适用对象：** ![yes](media/yes.png)SQL Server![no](media/no.png)Azure SQL 数据库![yes](media/yes.png)Azure SQL 数据仓库![yes](media/yes.png)并行数据仓库</Token>
+<Token>**适用对象：** ![是](media/yes.png)SQL Server ![否](media/no.png)Azure SQL 数据库 ![是](media/yes.png)Azure Synapse Analytics (SQL DW) ![是](media/yes.png)并行数据仓库 </Token>
 

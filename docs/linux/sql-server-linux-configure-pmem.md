@@ -4,29 +4,29 @@ description: 本文提供在 Linux 上配置 PMEM 的教程。
 author: briancarrig
 ms.author: brcarrig
 ms.reviewer: vanto
-ms.date: 11/06/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f9a5d8c6b2db65bd237f0a3a267638a8cc16b68
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923828"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531304"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 配置持久性内存 (PMEM)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文介绍如何为 Linux 上的 SQL Server 配置持久性内存 (PMEM)。 SQL Server 2019 预览版引入了对 Linux 的 PMEM 支持。
+本文介绍如何为 Linux 上的 SQL Server 配置持久性内存 (PMEM)。 SQL Server 2019 引入了对 Linux 的 PMEM 支持。
 
 ## <a name="overview"></a>概述
 
 SQL Server 2016 引入了对非易失性 DIMM 的支持，以及称为[日志结尾在 NVDIMM 上缓存]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)的优化。 这些优化减少了将日志缓冲区强化为持久性存储所需的操作数量。 这利用了 Windows Server 对 DAX 模式下的持久性内存设备的直接访问权限。
 
-SQL Server 2019 预览版将对持久性内存 (PMEM) 设备的支持扩展到 Linux，对 PMEM 上放置的数据和事务日志文件提供完整 enlightenment。 Enlightenment 是指使用高效用户空间 `memcpy()` 操作访问存储设备的方法。 SQL Server 利用 Linux 上的 DAX 支持将数据直接放入设备中，而不是通过文件系统和存储堆栈，从而减少延迟。
+SQL Server 2019 将对持久性内存 (PMEM) 设备的支持扩展到 Linux，对 PMEM 上放置的数据和事务日志文件提供完整 enlightenment。 Enlightenment 是指使用高效用户空间 `memcpy()` 操作访问存储设备的方法。 SQL Server 利用 Linux 上的 DAX 支持将数据直接放入设备中，而不是通过文件系统和存储堆栈，从而减少延迟。
 
 ## <a name="enable-enlightenment-of-database-files"></a>对数据库文件启用 enlightenment
 若要对 Linux 上的 SQL Server 中的数据库文件启用 enlightenment，请执行以下步骤：

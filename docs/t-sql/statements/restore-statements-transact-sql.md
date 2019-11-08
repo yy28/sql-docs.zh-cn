@@ -1,7 +1,7 @@
 ---
 title: RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916178"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73530934"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 
@@ -345,7 +345,7 @@ RESTORE 在出现错误之后可以重新启动。 此外，你可以指示 REST
 
 还原已损坏的 master 数据库需要使用特殊的过程  。 有关详细信息，请参阅[备份和还原系统数据库](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。
 
-还原数据库将清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。
+还原数据库会清除要还原的数据库的计划缓存。 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 
 
 要还原可用性数据库，首先需要将数据库还原成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，然后再将数据库添加到可用性组。
 
@@ -373,6 +373,10 @@ RESTORE 语句也可用于对全文数据执行替代位置还原、差异还原
 
 > [!NOTE]
 > 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 导入的全文目录仍然被视为数据库文件。 对于这些目录，用于备份全文目录的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 过程仍然适用，只是在备份操作期间不再需要暂停和恢复。 有关详细信息，请参阅[备份和还原全文目录](https://go.microsoft.com/fwlink/?LinkId=107381)。
+
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## <a name="metadata"></a>元数据
 

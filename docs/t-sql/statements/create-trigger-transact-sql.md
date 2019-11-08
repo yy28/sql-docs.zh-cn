@@ -1,7 +1,7 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: mathoma
@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 245342ac9495e1e4331453f8869e2e6df46a1c1e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 48335017cd45e713001a22941875f30c51148b62
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190373"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73168759"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ DDL 触发器是为了响应各种数据定义语言 (DDL) 事件而运行。 �
 > [!NOTE]  
 >  本文介绍了将 .NET Framework CLR 集成到 SQL Server。 CLR 集成不适用于 Azure SQL 数据库。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -206,9 +206,7 @@ SCHEMABINDING
 对于内存优化表上的触发器，此为必需选项，但传统表上的触发器不支持此选项。  
   
 FOR | AFTER  
-AFTER 指定仅当触发 SQL 语句中指定的所有操作都已成功启动时，DML 触发器才触发。 所有引用级联操作和约束检查也必须在此触发器触发前成功启动。  
-  
-如果仅指定 FOR 关键字，则 AFTER 为默认值。  
+FOR 或 AFTER 指定仅当触发 SQL 语句中指定的所有操作都已成功启动时，DML 触发器才触发。 所有引用级联操作和约束检查也必须在此触发器触发前成功启动。  
   
 无法对视图定义 AFTER 触发器。  
   

@@ -3,16 +3,16 @@ title: 如何在 Docker 上使用 SQL Server 的分布式事务
 description: 本文介绍如何在 Docker 上的 SQL Server 容器中为分布式事务使用 Microsoft 分布式事务处理协调器 (MSDTC)。
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e4d9d52541b6f9c9ca87bcbe4dc1db3c4448725c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1e30b6d2426cfca4e776ca738e2dc7000fe936ab
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770836"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531306"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>如何在 Docker 上使用 SQL Server 的分布式事务
 
@@ -56,14 +56,14 @@ docker run `
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-以下示例演示如何使用这些环境变量来请求和运行为 MSDTC 配置的单个 SQL Server 2019 预览版容器。 通过此操作，该容器可以与任何主机上的任一应用程序通信。
+以下示例演示如何使用这些环境变量来拉取和运行为 MSDTC 配置的单个 SQL Server 2019 容器。 通过此操作，该容器可以与任何主机上的任一应用程序通信。
 
 ```bash
 docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
@@ -71,7 +71,7 @@ docker run `
    -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
    -p 51433:1433 -p 135:135 -p 51000:51000  `
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -107,9 +107,14 @@ sudo firewall-cmd --reload
 
 ## <a name="configure-port-routing-on-the-host"></a>在主机上配置端口路由
 
-在前一示例中，由于单个 Docker 容器将 RPC 135 端口映射到主机上的 135 端口，所以主机的分布式事务现在不应进行进一步的配置。 请注意，因为 SQL Server 在容器中使用提升的权限运行，所以可直接在容器中使用 135 端口。 对于容器外的 SQL Server，必须使用不同的临时端口，然后必须将进入 135 端口的流量路由到该端口。
+在前一示例中，由于单个 Docker 容器将 RPC 135 端口映射到主机上的 135 端口，所以主机的分布式事务现在不应进行进一步的配置。 请注意，由于 SQL Server 在这些容器中使用提升的权限运行，因此可直接在作为根运行的容器中使用 135 端口。 对于容器外的 SQL Server 或非根容器，必须在容器中使用不同的临时端口（如 13500），然后必须将进入 135 端口的流量路由到该端口。 还需要在容器内配置从容器端口 135 到临时端口的端口路由规则。
 
-但是，如果决定将容器的 135 端口映射到主机上的其他端口（如 13500 端口），则必须在主机上配置端口路由。 这样，Docker 容器便可参与主机和其他外部服务器的分布式事务。 有关详细信息，请参阅[配置端口路由](sql-server-linux-configure-msdtc.md#configure-port-routing)。
+但是，如果决定将容器的 135 端口映射到主机上的其他端口（如 13500 端口），则必须在主机上配置端口路由。 这样，Docker 容器便可参与主机和其他外部服务器的分布式事务。
+
+有关路由端口的详细信息，请参阅[配置端口路由](sql-server-linux-configure-msdtc.md#configure-port-routing)。
+
+> [!NOTE]
+> 默认情况下，SQL Server 2017 在根容器中运行，而 SQL Server 2019 容器以非根用户身份运行。
 
 ## <a name="next-steps"></a>后续步骤
 

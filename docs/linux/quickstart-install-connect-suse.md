@@ -4,17 +4,17 @@ titleSuffix: SQL Server
 description: 本快速入门介绍了如何在 SUSE Linux Enterprise Server 上安装 SQL Server 2017 或 SQL Server 2019，然后使用 sqlcmd 创建和查询数据库。
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/16/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: b878e76546642ee9b9792ece31029c0640eb8864
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 143ec74ea2941c25c23a41396dc9cdc40d445715
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910496"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594536"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入门：在 SUSE Linux Enterprise Server 上安装 SQL Server 并创建数据库
 
@@ -23,13 +23,16 @@ ms.locfileid: "67910496"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-在本快速入门中，将在 SUSE Linux Enterprise Server (SLES) v12 SP2 上安装 SQL Server 2017 或 SQL Server 2019（预览版）。 然后使用 sqlcmd 连进行接，以创建第一个数据库并运行查询  。
+在本快速入门中，将在 SUSE Linux Enterprise Server (SLES) v12 SP2 上安装 SQL Server 2017 或 SQL Server 2019。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-在本快速入门中，将在 SUSE Linux Enterprise Server (SLES) v12 SP2 上安装 SQL Server 2019（预览版）。 然后使用 sqlcmd 连进行接，以创建第一个数据库并运行查询  。
+在本快速入门中，将在 SUSE Linux Enterprise Server (SLES) v12 上安装 SQL Server 2019。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
+
+> [!IMPORTANT]
+> SUSE Enterprise Linux Server v12 SP2、SP3 或 SP4 支持 SQL Server 2019。
 
 ::: moniker-end
 
@@ -38,11 +41,23 @@ ms.locfileid: "67910496"
 
 ## <a name="prerequisites"></a>必备条件
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 必须拥有 SLES v12 SP2 计算机（内存至少为 2 GB）  。 文件系统必须是 XFS 或 EXT4   。 其他文件系统（如 BTRFS）均不受支持  。
+
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+必须拥有 SLES v12 SP2、SP3 或 SP4 计算机（内存至少为 2 GB）  。 文件系统必须是 XFS 或 EXT4   。 其他文件系统（如 BTRFS）均不受支持  。
+
+::: moniker-end
 
 若要在自己的计算机上安装 SUSE Linux Enterprise Server，请转到[https://www.suse.com/products/server](https://www.suse.com/products/server)。 也可以在 Azure 中创建 SLES 虚拟机。 请参阅 [使用 Azure CLI 创建和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)并在对 `az vm create` 的调用中使用 `--image SLES`。
 
-如果以前安装了 SQL Server 2017 的 CTP 或 RC 版本，则必须先删除旧存储库，然后再执行这些步骤。 有关详细信息，请参阅[为 SQL Server 2017 和 2019 配置 Linux 存储库](sql-server-linux-change-repo.md)。
+如果以前安装了 SQL Server 的 CTP 或 RC 版本，则必须先删除旧存储库，然后再执行这些步骤。 有关详细信息，请参阅[为 SQL Server 2017 和 2019 配置 Linux 存储库](sql-server-linux-change-repo.md)。
 
 > [!NOTE]
 > 目前，不支持适用于 Windows 10 的 [Linux 的 Windows 子系统](https://msdn.microsoft.com/commandline/wsl/about)作为安装目标。
@@ -63,10 +78,10 @@ ms.locfileid: "67910496"
    ```
 
    > [!TIP]
-   > 如果想试用 SQL Server 2019，必须改为注册预览版 (2019) 存储库  。 使用以下命令安装 SQL Server 2019：
+   > 如果想安装 SQL Server 2019，必须改为注册 SQL Server 2019 存储库。 使用以下命令安装 SQL Server 2019：
    >
    > ```bash
-   > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
+   > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
    > ```
 
 2. 刷新存储库。
@@ -81,14 +96,14 @@ ms.locfileid: "67910496"
    sudo zypper install -y mssql-server
    ```
 
-4. 包安装完成后，运行 mssql-conf setup，按照提示设置 SA 密码并选择版本  。
+4. 包安装完成后，运行 **mssql-conf setup**，按照提示设置 SA 密码并选择版本。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!TIP]
-   > 以下 SQL Server 2017 版本是免费许可的：Evaluation、Developer 和 Express 版。
+   > 以下 SQL Server 2017 版本是免费提供许可的：Evaluation、Developer 和 Express 版。
 
    > [!NOTE]
    > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
@@ -115,10 +130,10 @@ ms.locfileid: "67910496"
 
 若要在 SLES 上配置 SQL Server，请在终端中运行以下命令以安装 mssql-server 包  ：
 
-1. 下载 Microsoft SQL Server 2019（预览版）SLES 存储库配置文件：
+1. 下载 Microsoft SQL Server 2019 SLES 存储库配置文件：
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
    ```
 
 2. 刷新存储库。
@@ -133,7 +148,7 @@ ms.locfileid: "67910496"
    sudo zypper install -y mssql-server
    ```
 
-4. 包安装完成后，运行 mssql-conf setup，按照提示设置 SA 密码并选择版本  。
+4. 包安装完成后，运行 **mssql-conf setup**，按照提示设置 SA 密码并选择版本。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -154,7 +169,7 @@ ms.locfileid: "67910496"
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-此时，SQL Server 2019（预览版）在 SLES 计算机上运行，随时可以使用！
+此时，SQL Server 2019 在 SLES 计算机上运行，随时可以使用！
 
 ::: moniker-end
 

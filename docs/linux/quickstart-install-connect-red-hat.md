@@ -4,17 +4,17 @@ titleSuffix: SQL Server
 description: 本快速入门介绍如何在 Red Hat Enterprise Linux 上安装 SQL Server 2017 或 SQL Server 2019，然后使用 sqlcmd 创建和查询数据库。
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/16/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 38df65ffefbc0ed264d631214025059449d84b35
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b94ea0ef8956e7807f075da548ae817dc6a205df
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910498"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531365"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入门：在 Red Hat 上安装 SQL Server 并创建数据库
 
@@ -23,13 +23,13 @@ ms.locfileid: "67910498"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-在本快速入门中，将在 Red Hat Enterprise Linux (RHEL) 上安装 SQL Server 2017 或 SQL Server 2019。 然后使用 **sqlcmd** 进行连接，以创建第一个数据库并运行查询。
+在本快速入门中，将在 Red Hat Enterprise Linux (RHEL) 上安装 SQL Server 2017 或 SQL Server 2019。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-在本快速入门中，将在 Red Hat Enterprise Linux (RHEL) 7.3+ 上安装 SQL Server 2019 预览版。 然后使用 **sqlcmd** 进行连接，以创建第一个数据库并运行查询。
+在本快速入门中，将在 Red Hat Enterprise Linux (RHEL) 7.3+ 上安装 SQL Server 2019。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
 
 ::: moniker-end
 
@@ -40,9 +40,9 @@ ms.locfileid: "67910498"
 
 必须拥有 RHEL 7.3、7.4、7.5 或 7.6 计算机（具有**至少 2 GB** 内存）。
 
-若要在自己的计算机上安装 Red Hat Enterprise Linux，请转至 [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 也可以在 Azure 中创建 RHEL 虚拟机。 请参阅[使用 Azure CLI 创建和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，并在对 `az vm create` 的调用中使用 `--image RHEL`。
+若要在自己的计算机上安装 Red Hat Enterprise Linux，请转至 [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 也可以在 Azure 中创建 RHEL 虚拟机。 请参阅 [使用 Azure CLI 创建和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)并在对 `az vm create` 的调用中使用 `--image RHEL`。
 
-如果以前安装了 SQL Server 2017 的 CTP 或 RC 版本，则必须先删除旧存储库，然后再执行这些步骤。 有关详细信息，请参阅[为 SQL Server 2017 和 2019 配置 Linux 存储库](sql-server-linux-change-repo.md)。
+如果以前安装了 SQL Server 的 CTP 或 RC 版本，则必须先删除旧存储库，然后再执行这些步骤。 有关详细信息，请参阅[为 SQL Server 2017 和 2019 配置 Linux 存储库](sql-server-linux-change-repo.md)。
 
 有关其他系统要求，请参阅 [Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
 
@@ -60,10 +60,10 @@ ms.locfileid: "67910498"
    ```
 
    > [!TIP]
-   > 如果想试用 SQL Server 2019，则必须改为注册**预览版 (2019)** 存储库。 使用以下命令安装 SQL Server 2019：
+   > 如果想安装 SQL Server 2019，必须改为注册 SQL Server 2019 存储库。 使用以下命令安装 SQL Server 2019：
    >
    > ```bash
-   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
    > ```
 
 2. 运行以下命令以安装 SQL Server：
@@ -79,7 +79,7 @@ ms.locfileid: "67910498"
    ```
 
    > [!TIP]
-   > 以下 SQL Server 2017 版本是免费许可的：Evaluation、Developer 和 Express。
+   > 以下 SQL Server 2017 版本是免费提供许可的：Evaluation、Developer 和 Express 版。
 
    > [!NOTE]
    > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
@@ -107,10 +107,10 @@ ms.locfileid: "67910498"
 
 若要在 RHEL 上配置 SQL Server，请在终端中运行以下命令以安装 **mssql-server** 包：
 
-1. 下载 Microsoft SQL Server 2019 预览版 Red Hat 存储库配置文件：
+1. 下载 Microsoft SQL Server 2019 Red Hat 存储库配置文件：
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
    ```
 
 2. 运行以下命令以安装 SQL Server：
@@ -141,13 +141,13 @@ ms.locfileid: "67910498"
    sudo firewall-cmd --reload
    ```
 
-此时，SQL Server 2019 预览版正在 RHEL 计算机上运行，随时可以使用！
+此时，SQL Server 2019 正在 RHEL 计算机上运行，随时可以使用！
 
 ::: moniker-end
 
 ## <a id="tools"></a>安装 SQL Server 命令行工具
 
-若要创建数据库，需使用可在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤将安装 SQL Server 命令行工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
+若要创建数据库，则需要使用可在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤将安装 SQL Server 命令行工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
 
 1. 下载 Microsoft Red Hat 存储库配置文件。
 
@@ -167,7 +167,7 @@ ms.locfileid: "67910498"
    sudo yum install -y mssql-tools unixODBC-devel
    ```
 
-1. 为方便起见，向 **PATH** 环境变量添加 `/opt/mssql-tools/bin/`。 这样就可以在不指定完整路径的情况下运行工具。 运行以下命令，以修改登录会话和交互式/非登录会话的 **PATH**：
+1. 为方便起见，向 **PATH** 环境变量添加 `/opt/mssql-tools/bin/`。 这样可以在不指定完整路径的情况下运行这些工具。 运行以下命令以修改登录会话和交互式/非登录会话的路径  ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
