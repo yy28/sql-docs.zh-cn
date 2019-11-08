@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b9c8322507c78458110f47f579ec333c3e5e7a7
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: b998a11acd71175e8868b669d9491822f60d2b33
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142844"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632753"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +43,15 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="arguments"></a>参数  
 `[ @publisher = ] 'publisher'` 是参与此订阅服务器的更新的发布服务器的名称。 *发布服务器*的**sysname**，无默认值。 必须已为发布配置了发布服务器。  
   
-`[ @publisher_db = ] 'publisher_db'` 是发布数据库的名称。 *publisher_db*的值为**sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 是发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
   
 `[ @publication = ] 'publication'` 是参与此订阅服务器更新的发布的名称。 *发布*为**sysname**，无默认值。  
   
-`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` 返回故障转移模式的整数值，并且是**输出**参数。 *failover_mode_id*的值为**tinyint** ，默认值为**0**。 对于立即更新，它将返回**0** ; 对于排队更新，则返回**1** 。  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` 返回故障转移模式的整数值，并且是**输出**参数。 *failover_mode_id*为**tinyint** ，默认值为**0**。 对于立即更新，它将返回**0** ; 对于排队更新，则返回**1** 。  
   
- [ **\@failover_mode =** ] **"***failover_mode***" 输出**  
- 返回在订阅服务器中修改数据所用的模式。 *failover_mode*的值为**nvarchar （10）** ，默认值为 NULL。 为**输出**参数。  
+`[ @failover_mode = ] 'failover_mode' OUTPUT` 返回在订阅服务器上进行数据修改的模式。 *failover_mode*为**nvarchar （10）** ，默认值为 NULL。 为**输出**参数。  
   
-|ReplTest1|Description|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**版**|立即更新：使用两阶段提交协议 (2PC)，将订阅服务器中的更新立即传播到发布服务器。|  
 |**好**|排队更新：将订阅服务器中的更新存储在队列中。|  
@@ -63,7 +62,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="remarks"></a>注释  
  **sp_helpreplfailovermode**用于快照复制或事务复制，在出现故障的情况下，将使用排队更新为其启用立即更新，并将排队更新作为故障转移。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_helpreplfailovermode**。  
   
 ## <a name="see-also"></a>另请参阅  

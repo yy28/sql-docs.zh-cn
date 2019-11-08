@@ -1,6 +1,6 @@
 ---
-title: GetNextOrderValue 方法 （ClientNetworkProtocol 类） |Microsoft Docs
-ms.custom: ''
+title: GetNextOrderValue 方法（ClientNetworkProtocol）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d3ed7a5a6b55da9724fc9565a788bf908de6db9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f9b9a8d69dad76d2ec1d6e38f7151238d0e91c1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040974"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660750"
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>GetNextOrderValue 方法（ClientNetworkProtocol 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +35,16 @@ ms.locfileid: "68040974"
 object.GetNextOrderValue()  
 ```  
   
-## <a name="parts"></a>部件  
- *object*  
- 一个[ClientNetworkProtocol 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)对象，表示使用的网络协议[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端。  
+## <a name="parts"></a>组成部分  
+ 对象  
+ 表示 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端使用的网络协议的[ClientNetworkProtocol 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 **uint32** 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1；其他任何数字表示出现错误。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)   
  [配置客户端网络协议和网络库](https://technet.microsoft.com/library/ms181035.aspx)  
   

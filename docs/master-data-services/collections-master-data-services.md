@@ -1,5 +1,5 @@
 ---
-title: 集合 (Master Data Services) | Microsoft Docs
+title: 集合
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: da4ed587d3b77a4e2bc4eee782c6312eb2dc12ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19a9d925b07b83e5ed26b73484cea955773364c6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941127"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728601"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
 
@@ -43,7 +43,7 @@ ms.locfileid: "67941127"
   
  如果为集合中的特定成员设置了权重值，则这些值在相关订阅视图中可用。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

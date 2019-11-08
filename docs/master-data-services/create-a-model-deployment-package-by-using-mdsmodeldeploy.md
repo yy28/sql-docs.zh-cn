@@ -1,6 +1,6 @@
 ---
-title: 使用 MDSModelDeploy 创建模型部署包 | Microsoft Docs
-ms.custom: ''
+title: 创建模型部署包（MDSModelDeploy）
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b080e704abb4a187ad975f6b1b7b94334648f92b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47ae80a58f32aab4debb7cd4dde60a1ccf2cdb4a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906658"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728504"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 创建模型部署包
 
@@ -58,11 +58,11 @@ ms.locfileid: "67906658"
   
  模型对于您要创建的包必须存在。 有关详细信息，请参阅[创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md)。  
   
- 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+ 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 创建模型部署包  
   
-1.  打开管理员：命令提示符。  
+1.  打开一个管理员命令提示符。  
   
 2.  导航到 MDSModelDeploy.exe 所在的位置。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "67906658"
   
     -   若要显示所有可用选项，请键入 `MDSModelDeploy` ，然后按 Enter 键。  
   
-    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName  是该选项的名称：`MDSModelDeploy help OptionName`。  
+    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName 是该选项的名称：`MDSModelDeploy help OptionName`。  
   
 4.  可选。 如果您有多个 Web 应用程序，通过键入下面的命令并按 Enter 键，确定您要部署到的服务的名称：  
   
@@ -98,7 +98,7 @@ ms.locfileid: "67906658"
   
 -   [使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [模型部署选项 (Master Data Services)](../master-data-services/model-deployment-options-master-data-services.md)   
  [部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
   

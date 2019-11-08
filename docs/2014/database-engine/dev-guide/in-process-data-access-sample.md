@@ -10,12 +10,12 @@ ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9854218e66d3edfe10f4220a5ac662cccc6f481
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d44c980c7535b05d462d55e6f2aa1e87bf68c98
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781135"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637745"
 ---
 # <a name="in-process-data-access-sample"></a>进程内数据访问示例
   `InProcessDataAccess` 示例包含一些简单的函数，用于演示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 进程内数据访问提供程序的各种功能。  
@@ -23,7 +23,7 @@ ms.locfileid: "62781135"
 ## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62781135"
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
--   如果你不是管理员[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在使用的实例，必须让管理员授予您**CreateAssembly**权限，才能完成安装。  
+-   如果您不是所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的管理员，则必须让管理员授予您**CreateAssembly**权限，才能完成安装。  
   
 ## <a name="building-the-sample"></a>生成示例  
   
@@ -355,7 +355,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- 以下[!INCLUDE[tsql](../../includes/tsql-md.md)](`test.sql`) 通过执行存储的过程和函数定义在此示例中测试该示例。  
+ 下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] （`test.sql`）通过执行本示例中定义的存储过程和函数来测试该示例。  
   
 ```  
 USE AdventureWorks;  
@@ -410,7 +410,7 @@ IF EXISTS (SELECT * FROM sys.assemblies WHERE name = N'InProcDA') DROP ASSEMBLY 
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

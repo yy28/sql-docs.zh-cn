@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo | Microsoft Docs
+title: SQLGetInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,28 +14,27 @@ ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3703def58bf36d7aaf6fca839658c5fad096254
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d44abf68ac843eecf51f6a4595adb1baab18a0c8
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131438"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786325"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  表显示了返回的值**SQLGetInfo**。 这些值可能根据连接服务器的版本号而有所不同。  
+  该表显示**SQLGetInfo**返回的值。 这些值可能根据连接服务器的版本号而有所不同。  
   
- **SQLGetInfo**中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端不同于**SQLGetInfo**中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC 驱动程序 (SQLSRV32。DLL) 时**SQLGetInfo**使用 SQL_KEYWORDS 和 0 缓冲区长度调用。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驱动程序返回 SQL_SUCCESS，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序返回 SQL_SUCCESS_WITH_INFO。  但是，如果使用非零缓冲区长度小于输出关键字字符串，调用**SQLGetInfo**中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端返回 SQL_SUCCESS_WITH_INFO 以及 01004 的 SQLState。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的**SQLGetInfo**与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序中的**SQLGETINFO**不同（sqlsrv32.dll。DLL）的**SQLGetInfo**调用时，将使用 SQL_KEYWORDS 和0缓冲区长度。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驱动程序返回 SQL_SUCCESS，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序返回 SQL_SUCCESS_WITH_INFO。  但是，当使用小于 output 关键字字符串的非零缓冲区长度进行调用时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的**SQLGetInfo**返回 SQL_SUCCESS_WITH_INFO，SQLState 为01004。  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
-|SQL_ACTIVE_CONNECTIONS|连接数受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 限制。 驱动程序为此将返回 0 **SQLGetInfo**请求。|  
-|SQL_ACTIVE_ENVIRONMENTS|环境数不受驱动程序限制。 驱动程序为此将返回 0 **SQLGetInfo**请求。|  
-|SQL_ACTIVE_STATEMENTS|该驱动程序返回此 1 **SQLGetInfo**请求。 可用于应用程序的语句句柄数不受驱动程序限制，但默认执行某个语句句柄将阻止执行其他任何句柄。|  
+|SQL_ACTIVE_CONNECTIONS|连接数受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 限制。 对于此**SQLGetInfo**请求，驱动程序返回0。|  
+|SQL_ACTIVE_ENVIRONMENTS|环境数不受驱动程序限制。 对于此**SQLGetInfo**请求，驱动程序返回0。|  
+|SQL_ACTIVE_STATEMENTS|对于此**SQLGetInfo**请求，驱动程序返回1。 可用于应用程序的语句句柄数不受驱动程序限制，但默认执行某个语句句柄将阻止执行其他任何句柄。|  
 |SQL_ALTER_DOMAIN|FALSE|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN SQL_AT_ADD_COLUMN_DEFAULT SQL_AT_ADD_COLUMN_SINGLE SQL_AT_ADD_CONSTRAINT SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  
@@ -52,13 +51,13 @@ ms.locfileid: "68131438"
 |SQL_COLLATION_SEQ|当前为连接和服务器分配的排序规则顺序。|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|不支持转换 ODBC SQL_BIGINT 数据类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** 数据类型作为 ODBC 类型 SQL_DECIMAL。 请参阅下文中的 SQL_CONVERT_DECIMAL。|  
+|SQL_CONVERT_BIGINT|不支持转换 ODBC SQL_BIGINT 数据类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal （19，0）** 数据类型作为 ODBC 类型 SQL_DECIMAL。 请参阅下文中的 SQL_CONVERT_DECIMAL。|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DATE|不支持转换 ODBC SQL_TYPE_DATE 数据类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**数据类型作为 ODBC 类型 SQL_TYPE_TIMESTAMP。 请参阅下文中的 SQL_CONVERT_TIMESTAMP。|  
+|SQL_CONVERT_DATE|不支持转换 ODBC SQL_TYPE_DATE 数据类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**数据类型作为 ODBC 类型 SQL_TYPE_TIMESTAMP。 请参阅下文中的 SQL_CONVERT_TIMESTAMP。|  
 |SQL_CONVERT_DECIMAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DOUBLE|不支持转换 ODBC SQL_DOUBLE 数据类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持 ODBC SQL_DOUBLE 数据类型作为 SQL_FLOAT。 请参阅下文中的 SQL_CONVERT_FLOAT。|  
+|SQL_CONVERT_DOUBLE|不支持转换 ODBC SQL_DOUBLE 数据类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持 ODBC SQL_DOUBLE 数据类型为 SQL_FLOAT。 请参阅下文中的 SQL_CONVERT_FLOAT。|  
 |SQL_CONVERT_FLOAT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_FUNCTIONS|SQL_FN_CVT_CONVERT SQL_FN_CVT_CAST|  
 |SQL_CONVERT_INTEGER|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -69,7 +68,7 @@ ms.locfileid: "68131438"
 |SQL_CONVERT_NUMERIC|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_REAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_SMALLINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_TIME|不支持转换 ODBC SQL_TYPE_TIME 数据类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**数据类型作为 ODBC 类型 SQL_TYPE_TIMESTAMP。 请参阅下文中的 SQL_CONVERT_TIMESTAMP。|  
+|SQL_CONVERT_TIME|不支持转换 ODBC SQL_TYPE_TIME 数据类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**datetime**数据类型作为 ODBC 类型 SQL_TYPE_TIMESTAMP。 请参阅下文中的 SQL_CONVERT_TIMESTAMP。|  
 |SQL_CONVERT_TIMESTAMP|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TIMESTAMP SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_TINYINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_VARBINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -89,7 +88,7 @@ ms.locfileid: "68131438"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_SENSITIVE|  
-|SQL_DATA_SOURCE_NAME|当前数据源的名称。 设置指向值*StringLengthPtr*为 0，如果连接未指定数据源名称。|  
+|SQL_DATA_SOURCE_NAME|当前数据源的名称。 如果连接未指定数据源名称，则将*StringLengthPtr*的值设置为0。|  
 |SQL_DATA_SOURCE_READ_ONLY|取决于连接属性 SQL_ATTR_ACCESS_MODE 的设置。|  
 |SQL_DATABASE_NAME|连接的当前数据库。|  
 |SQL_DBMS_NAME|"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"|  
@@ -116,11 +115,11 @@ ms.locfileid: "68131438"
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY|  
 |SQL_GETDATA_EXTENSIONS|SQL_GD_BLOCK|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_MIXED，如果连接到用例 insenstive 排序顺序运行的服务器。<br /><br /> SQL_IC_SENSITIVE，如果连接到服务器区分大小写的排序顺序运行。|  
+|SQL_IDENTIFIER_CASE|SQL_IC_MIXED 连接到运行 insenstive 排序顺序的服务器。<br /><br /> 如果连接到运行区分大小写的排序顺序的服务器，SQL_IC_SENSITIVE。|  
 |SQL_IDENTIFIER_QUOTE_CHAR|"（双引号）|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|驱动程序不支持请求。|  
-|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的属性。 连接使用的网络库的名称。<br /><br /> 默认情况下，返回 DBNETLIB。  在这种情况下，DBNETLIB 指的是网络库，并与 dbnetlib.dll 无关。|  
+|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的属性。 连接使用的网络库的名称。<br /><br /> 默认情况下，将返回 DBNETLIB。  在这种情况下，DBNETLIB 引用网络库，与 DBNETLIB 无关。|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  
@@ -210,7 +209,7 @@ ms.locfileid: "68131438"
 |SQL_UNION|SQL_U_UNION SQL_U_UNION_ALL|  
 |SQL_USER_NAME|当前的用户名。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLGetInfo 函数](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

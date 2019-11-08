@@ -1,5 +1,5 @@
 ---
-title: 使用游标 (ODBC) |Microsoft Docs
+title: 使用游标（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e5ac9edd01981b7f9c483b2e8002a2f741b4502
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16124d582d5651462e0ba0fda657fe66097b9a63
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939547"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781623"
 ---
 # <a name="use-cursors-odbc"></a>使用游标 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-use-cursors"></a>使用游标  
@@ -41,7 +40,7 @@ ms.locfileid: "67939547"
   
 4.  执行 SQL 语句。  
   
-5.  或者，如果将通过使用 WHERE CURRENT OF 子句完成定位更新并且游标名称没有在第 3 步中随 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 提供，则调用 [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) 以获取游标名称。  
+5.  或者，如果将通过使用 WHERE CURRENT OF 子句完成定位更新并且游标名称没有在第 3 步中随 [SQLSetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) 提供，则调用 [SQLGetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 以获取游标名称。  
   
 6.  调用 [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) 以获取行集中的列数 (C)。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "67939547"
   
      通过设置 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY，或通过设置 SQL_ATTR_CURSOR_SENSITIVITY 和 SQL_ATTR_CURSOR_SCROLLABLE，可以控制所使用的游标类型。 不应将指定游标行为的两种方法混用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用游标操作指南主题&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   

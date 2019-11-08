@@ -1,5 +1,5 @@
 ---
-title: 集成 Kerberos 身份验证 (OLE DB) |Microsoft Docs
+title: 集成的 Kerberos 身份验证（OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +11,15 @@ ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea89096b386757f779e964aed6a468aff59ac7ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2773078b8e442b1cfed70ccb9f4a8518b108b678
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110112"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789909"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>集成的 Kerberos 身份验证 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   此示例显示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 获得 Kerberos 相互身份验证。 此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。  
   
@@ -31,7 +30,7 @@ ms.locfileid: "68110112"
   
  此外，还必须指定一个客户提供的 SPN。 在 .cpp 文件 中，将“CPSPN”更改为客户提供的 SPN。  
   
- 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。 使用 ole32.lib 和 oleaut32.lib 进行编译。  
+ 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。 使用 ole32.lib 和 oleaut32.lib 进行编译。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

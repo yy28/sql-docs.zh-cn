@@ -1,5 +1,5 @@
 ---
-title: SQLRowCount | Microsoft Docs
+title: SQLRowCount |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,26 +14,25 @@ ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65ccf01b8d4e98d068cd82f4729bb4f2442f3a80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 676e2cc86a6b41a1bc778160611a9a967336390f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131132"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785689"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  当参数值的数组绑定的语句执行**SQLRowCount**如果任何行的参数值在语句执行过程中生成错误条件，则返回 SQL_ERROR。 通过返回任何值*RowCountPtr*函数自变量。  
+  当参数值的数组绑定到语句执行时，如果参数值的任意行在语句执行中生成错误条件，则**SQLRowCount**将返回 SQL_ERROR。 不通过函数的*RowCountPtr*参数返回值。  
   
  应用程序可以利用 SQL_ATTR_PARAMS_PROCESSED_PTR 语句属性捕获在错误发生之前已处理的参数个数。  
   
  此外，应用程序还可以使用由状态值构成的数组（通过使用 SQL_ATTR_PARAM_STATUS_PTR 语句属性进行绑定），来捕获生成错误的参数行的数组偏移量。 应用程序可以遍历状态数组以确定已处理的实际行数。  
   
- 当[!INCLUDE[tsql](../../includes/tsql-md.md)]执行带有 OUTPUT 子句的 INSERT、 UPDATE、 DELETE 或 MERGE 语句、 SQLRowCount 不会返回受影响之前已使用中的 OUTPUT 子句生成的结果集的所有行的行计数。 若这些行，请使用 SQLFetch 或 SQLFetchScroll。 SQLResultCols 将返回-1，直到所有结果行都为止。 SQLFetch 或 SQLFetchScroll 返回 sql_no_data 指示到达后，应用程序必须调用 SQLRowCount 来确定调用 SQLMoreResults 移动到下一个结果之前受影响的行数。  
+ 当执行包含 OUTPUT 子句的 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT、UPDATE、DELETE 或 MERGE 语句时，SQLRowCount 将不会返回受影响的行数，直到输出子句生成的结果集中的所有行都已被使用。 若要要使用这些行，请调用 SQLFetch 或 SQLFetchScroll。 SQLResultCols 将返回-1，直到使用完所有结果行为止。 在 SQLFetch 或 SQLFetchScroll 返回 SQL_NO_DATA 之后，应用程序必须调用 SQLRowCount 来确定受影响的行数，然后再调用 SQLMoreResults 以移到下一个结果。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLRowCount 函数](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

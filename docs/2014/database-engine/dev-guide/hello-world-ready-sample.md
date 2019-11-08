@@ -10,17 +10,17 @@ ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 184e8a987455f181d2fe631abb6189e745bd95e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781168"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637658"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 示例
   Hello World Ready 示例说明了创建、部署和测试基于公共语言运行时 (CLR) 集成的简单且全球通用存储过程所涉及的基本操作。 不用更改全球通用组件的源代码就可以将它轻松地本地化为全世界各个市场的各种语言。 此示例还说明了如何通过输出参数和记录返回由存储过程动态构建并返回到客户端的数据。此示例与 Hello World 示例基本相同，只不过在对此应用程序进行本地化时，此示例更容易且更安全。 更改已本地化的文本需要执行下列操作：  
   
-1.  更改 XML 文件 (。`resx` 文件） 的资源目录中的特定区域性  
+1.  更改 XML 文件（`resx` 文件）中的特定区域性  
   
 2.  使用 `resgen` 生成该语言的资源文件  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62781168"
   
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
@@ -76,9 +76,9 @@ ms.locfileid: "62781168"
   
 3.  在 c:\MySample 中，创建 `HelloWorld.vb`（用于 Visual Basic 示例）或 `HelloWorld.cs`（用于 C# 示例），并将相应的 Visual Basic 或 C# 示例代码（如下所示）复制到该文件中。  
   
-4.  在 c:\MySample，创建文件`messages.resx`和示例代码复制到的文件。  
+4.  在 c:\MySample 中 `messages.resx` 创建文件，然后将示例代码复制到该文件中。  
   
-5.  在 c:\MySample，创建在文件`messages.de.resx`将文件保存`messages.resx`作为`messages.de.resx`后将行  
+5.  在 c:\MySample 中，通过将文件保存 `messages.resx` `messages.de.resx` 来创建文件，并在更改行之后 `messages.de.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62781168"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  在 c:\MySample，创建在文件`messages.es.resx`将文件保存`messages.resx`作为`messages.es.resx`后将行  
+6.  在 c:\MySample 中，通过将文件保存 `messages.resx` `messages.es.resx` 来创建文件，并在更改行之后 `messages.es.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62781168"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  在 c:\MySample，创建在文件`messages.fr.resx`将文件保存`messages.resx`作为`messages.fr.resx`后将行  
+7.  在 c:\MySample 中，通过将文件保存 `messages.resx` `messages.fr.resx` 来创建文件，并在更改行之后 `messages.fr.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62781168"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  在 c:\MySample，创建在文件`messages.fr-FR.resx`将文件保存`messages.resx`作为`messages.fr-FR.resx`后将行  
+8.  在 c:\MySample 中，通过将文件保存 `messages.resx` `messages.fr-FR.resx` 来创建文件，并在更改行之后 `messages.fr-FR.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62781168"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. 在 c:\MySample，创建在文件`messages.it.resx`将文件保存`messages.resx`作为`messages.it.resx`后将行  
+9. 在 c:\MySample 中，通过将文件保存 `messages.resx` `messages.it.resx` 来创建文件，并在更改行之后 `messages.it.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +118,7 @@ ms.locfileid: "62781168"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. 在 c:\MySample，创建在文件`messages.ja.resx`将文件保存`messages.resx`作为`messages.ja.resx`后将行  
+10. 在 c:\MySample 中，通过将文件保存 `messages.resx` `messages.ja.resx` 来创建文件，并在更改行之后 `messages.ja.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62781168"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-16. 复制[!INCLUDE[tsql](../../includes/tsql-md.md)]到一个文件测试命令脚本并将其保存为`test.sql`示例目录中。  
+16. 将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 测试命令脚本复制到一个文件中，并将其作为 `test.sql` 保存在示例目录中。  
   
 17. 使用以下命令执行测试脚本：  
   
@@ -450,7 +450,7 @@ USE master;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

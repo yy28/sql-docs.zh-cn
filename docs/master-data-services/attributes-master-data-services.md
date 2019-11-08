@@ -1,5 +1,5 @@
 ---
-title: 属性 (Master Data Services) | Microsoft Docs
+title: 属性
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4634ae8941b9acd0667b69974b3192109b81fff2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047577"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728750"
 ---
 # <a name="attributes-master-data-services"></a>属性 (Master Data Services)
 
@@ -33,9 +33,9 @@ ms.locfileid: "68047577"
 ## <a name="how-attributes-relate-to-other-model-objects"></a>属性如何与其他模型对象关联  
  您可以将属性视作实体表中的列。 属性值是用于描述特定成员的值。  
   
- ![表示为表的 Master Data Services 实体](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
+ ![表示为表的 Master Data Services 实体](../master-data-services/media/mds-conc-entity-table.gif "表示为表的 Master Data Services 实体")  
   
- 创建包含很多属性的实体时，可以将属性组织为属性组。 有关详细信息，请参阅 [属性组 (Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)。  
+ 创建包含很多属性的实体时，可以将属性组织为属性组。 有关详细信息，请参阅[属性组 (Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)。  
   
 ## <a name="required-attributes"></a>必需的属性  
  创建实体时，将自动创建 Name 和 Code 属性。 Code 需要一个值，并且必须在实体中是唯一的。 不能删除 Name 和 Code 属性。  
@@ -45,7 +45,7 @@ ms.locfileid: "68047577"
   
 -   自由格式的属性，允许针对文本、数字、日期或链接的自由格式的输入。  
   
--   基于域的属性，由实体填充。 有关详细信息，请参阅 [基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)。  
+-   基于域的属性，由实体填充。 有关详细信息，请参阅[基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)。  
   
 -   文件属性，用于存储文件、文档或图像。 文件属性旨在通过要求文件具有特定的扩展名，帮助确保数据的一致性。 文件属性不一定能够防止恶意用户上载不同类型的文件。  
   
@@ -58,12 +58,12 @@ ms.locfileid: "68047577"
   
 -   在使用小数时，使用浮点数的算术或比较运算不一定产生相同结果，因为浮点数可能无法精确表示小数。  
   
--   如果包含浮点数，值可能无法“往返转换”。  如果某一运算将原始浮点数转换为其他形式，而相反运算将已转换形式转换回浮点数，并且最终生成的浮点数与原始浮点数相等，则值被认为是往返转换。 因为在转换过程中一个或多个最小有效位缺失或更改，所以该往返转换可能失败。  
+-   如果包含浮点数，值可能无法“往返转换”。 如果某一运算将原始浮点数转换为其他形式，而相反运算将已转换形式转换回浮点数，并且最终生成的浮点数与原始浮点数相等，则值被认为是往返转换。 因为在转换过程中一个或多个最小有效位缺失或更改，所以该往返转换可能失败。  
   
 ## <a name="attribute-examples"></a>属性示例  
- 在以下示例中，该实体具有以下属性：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 这些属性描述成员。 每个成员由一行属性值表示。  
+ 在下面的示例中，实体具有 Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto 属性。 这些属性描述成员。 每个成员由一行属性值表示。  
   
- ![自行车产品实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
+ ![自行车产品实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "自行车产品实体表")  
   
  在下面的示例中，Product 实体包含：  
   
@@ -75,9 +75,9 @@ ms.locfileid: "68047577"
   
  Subcategory 是用作 Product 的基于域的属性的实体。 Category 是用作 Subcategory 的基于域的属性的实体。 与 Product 实体一样，Category 和 Subcategory 实体各自包含默认 Name 和 Code 属性。  
   
- ![产品实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "Product Entity Tree Structure")  
+ ![Product 实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "Product 实体树结构")  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

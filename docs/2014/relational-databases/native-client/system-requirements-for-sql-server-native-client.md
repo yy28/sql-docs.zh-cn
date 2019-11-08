@@ -15,12 +15,12 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b00f00e2c557f31a7343a99e1f2592741a6b59
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637822"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637799"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系统要求
   若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据访问功能（如 MARS），必须安装以下软件：  
@@ -29,13 +29,13 @@ ms.locfileid: "62637822"
   
 -   服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 要求使用 Windows Installer 3.0。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统上已经安装了 Windows Installer 3.0。 您需要将其显式安装到所有其他平台上。 有关详细信息，请参阅[Windows Installer 3.0 Redistributable](https://go.microsoft.com/fwlink/?LinkId=46459)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 要求使用 Windows Installer 3.0。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统上已经安装了 Windows Installer 3.0。 您需要将其显式安装到所有其他平台上。 有关详细信息，请参阅[Windows Installer 3.0 可再发行组件](https://www.microsoft.com/download/details.aspx?id=16821)。  
   
 > [!NOTE]  
 >  确保以管理员权限进行登录，然后再安装此软件。  
   
 ## <a name="operating-system-requirements"></a>操作系统要求  
- 有关支持的操作系统的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client，请参阅[SQL Server Native client 支持策略](applications/support-policies-for-sql-server-native-client.md)。  
+ 有关支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的操作系统的列表，请参阅[SQL Server Native Client 的支持策略](applications/support-policies-for-sql-server-native-client.md)。  
   
 ## <a name="sql-server-requirements"></a>SQL Server 要求  
  若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据，必须安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
@@ -62,22 +62,22 @@ ms.locfileid: "62637822"
   
  没有对 ODBC 进行 `DataTypeCompatibility` 控制。  
   
- IDBInfo::GetKeywords 将始终返回的关键字列表，在连接上的服务器版本相对应，不受`DataTypeCompatibility`。  
+ IDBInfo：： GetKeywords 将始终返回与连接上的服务器版本相对应的关键字列表，并不受 `DataTypeCompatibility`的影响。  
   
 |数据类型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows 数据访问组件、MDAC 及<br /><br /> SQL Server Native Client OLE DB 应用程序（其中 DataTypeCompatibility=80）|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|Image|  
+|varbinary(max)|varbinary|varbinary|图像|  
 |varchar(max)|varchar|varchar|Text|  
-|nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
-|xml|xml|xml|Ntext|  
-|CLR UDT (> 8 Kb)|udt|varbinary|Image|  
+|nvarchar(max)|nvarchar|nvarchar|Ntext|  
+|XML|XML|XML|Ntext|  
+|CLR UDT （> 8Kb）|udt|varbinary|图像|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 编程](sql-server-native-client-programming.md)   
  [安装 SQL Server Native Client](applications/installing-sql-server-native-client.md)  
   

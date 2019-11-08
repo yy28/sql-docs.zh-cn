@@ -1,5 +1,5 @@
 ---
-title: 删除订阅视图 (Master Data Services) | Microsoft Docs
+title: 删除订阅视图
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0e37b2b4f4f6dc101f553fe4a399e428d1580b42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2805e1c9faafa24b78b64a2fcc6082010099429f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094357"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729386"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>删除订阅视图 (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "68094357"
   
 -   您必须有权访问 **“集成管理”** 功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-a-subscription-view"></a>删除订阅视图  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68094357"
   
 5.  在确认对话框中，单击 **“确定”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建订阅视图以导出数据 (Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)   
  [概述：导出数据 (Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)  
   

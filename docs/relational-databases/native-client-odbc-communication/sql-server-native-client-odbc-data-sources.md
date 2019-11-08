@@ -19,22 +19,21 @@ ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa20711c59a2e6bdc901e0fe1b6287139103ddb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b8ae0fdf9c28ecb488a0b5f0aa285e8597d84072
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134197"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784988"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>SQL Server Native Client ODBC 数据源
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源名称 (DSN) 标识 ODBC 数据源，此数据源包含 ODBC 应用程序连接到特定服务器上的某个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库所需要的所有信息。 您可以通过两种方法定义 ODBC 数据源名称：  
   
--   在客户端计算机上管理工具中打开控制面板，然后双击**数据源 (ODBC)** 。 此时将打开 ODBC 数据源管理器，您可以用它来创建 DSN。  
+-   在客户端计算机上，打开 "控制面板" 中的 "管理工具"，然后双击 "**数据源（ODBC）** "。 此时将打开 ODBC 数据源管理器，您可以用它来创建 DSN。  
   
--   在 ODBC 应用程序，调用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)。  
+-   在 ODBC 应用程序中，调用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源包含：  
   
@@ -48,7 +47,7 @@ ms.locfileid: "68134197"
   
  不要求将 ODBC 应用程序连接到数据源。 然而，应用程序必须向 ODBC 连接函数提供适当的连接信息，否则驱动程序将在 DSN 中查找相同的连接信息。  
   
-## <a name="see-also"></a>请参阅  
- [与 SQL Server 通信&#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [与 SQL Server &#40;ODBC 通信&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

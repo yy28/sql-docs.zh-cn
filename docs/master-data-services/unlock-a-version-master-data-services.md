@@ -1,5 +1,5 @@
 ---
-title: 解锁版本 (Master Data Services) | Microsoft Docs
+title: 取消锁定版本
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2c81d52fadad91bb91ccf69af4b77627ef53846a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc3b79de19795ec13fd8720b68c827d9b964084e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102593"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727836"
 ---
 # <a name="unlock-a-version-master-data-services"></a>取消锁定版本 (Master Data Services)
 
@@ -26,12 +26,12 @@ ms.locfileid: "68102593"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，取消锁定某一模型的版本以便实现对该模型的成员及其属性的更改。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   版本的状态必须是 **“已锁定”** 。 有关详细信息，请参阅 [锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68102593"
   
 -   [锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
   
