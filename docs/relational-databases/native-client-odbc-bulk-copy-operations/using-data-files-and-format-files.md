@@ -18,20 +18,19 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ddd9e8d0fb8b5c22dc73d0a11b6257583be07a8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e7cf91baeb6771f0abb52fb5b8f4c4dc2bddafe0
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907513"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785279"
 ---
 # <a name="using-data-files-and-format-files"></a>使用数据文件和格式化文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   最简单的大容量复制程序执行以下操作：  
   
-1.  调用[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) ，以指定从表或视图向数据文件大容量复制（set BCP_OUT）。  
+1.  调用[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)指定从表或视图大容量复制到数据文件（将 BCP_OUT）。  
   
 2.  调用[bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)执行大容量复制操作。  
   
@@ -39,21 +38,21 @@ ms.locfileid: "72907513"
   
  若要大容量复制出 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的结果集，而非直接从表或视图复制：  
   
-1.  调用**bcp_init**可指定大容量复制，但为表名称指定 NULL 值。  
+1.  调用**bcp_init**以指定大容量复制，但为表名称指定 NULL。  
   
-2.  调用[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) ，并将*EOPTION*设置为 BCPHINTS，并将*IValue*设置为指向包含 transact-sql 语句的 SQLTCHAR 字符串的指针。  
+2.  调用[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)将*EOPTION*设置为 BCPHINTS，并将*IValue*设置为指向包含 transact-sql 语句的 SQLTCHAR 字符串的指针。  
   
 3.  调用**bcp_exec**执行大容量复制操作。  
 
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以是生成某一结果集的任何语句。 将创建包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的第一个结果集的数据文件。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句生成多个结果集，则大容量复制将忽略第一个结果集之后的所有结果集。  
   
- 若要创建一个数据文件，其中的列数据与表中的格式不同，请调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)以指定将更改的列数，然后对要更改其格式的每个列调用[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) 。 这是在调用**bcp_init**之后但在调用**bcp_exec**之前完成的。 **bcp_colfmt**指定列的数据存储在数据文件中的格式。 当大容量复制时，可以使用此方法。还可以使用**bcp_colfmt**设置行和列终止符。 例如，如果数据中不包含任何制表符，则可以通过使用**bcp_colfmt**将制表符设置为每列的终止符来创建制表符分隔文件。  
+ 若要创建一个数据文件，其中的列数据与表中的格式不同，请调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)以指定将更改的列数，然后为要更改其格式的每个列调用[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) 。 这是在调用**bcp_init**之后、调用**bcp_exec**之前完成的。 **bcp_colfmt**指定列数据在数据文件中的存储格式。 当大容量复制时，可以使用此方法。你还可以使用**bcp_colfmt**来设置行终止符和列终止符。 例如，如果您的数据中不包含制表符，则可以通过使用**bcp_colfmt**将制表符设置为每列的终止符来创建制表符分隔文件。  
   
- 大容量复制和使用**bcp_colfmt**时，你可以轻松地创建一个格式文件，用于描述你通过在上次调用**bcp_colfmt**后调用[bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)创建的数据文件。  
+ 大容量复制和使用**bcp_colfmt**时，可以轻松地创建一个格式文件，用于描述你通过在上一次调用**bcp_colfmt**后调用[bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)创建的数据文件。  
   
- 在从格式化文件描述的数据文件中大容量复制时，请通过在**bcp_init**之后或在**bcp_exec**之前调用[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)来读取格式化文件。  
+ 从格式化文件描述的数据文件中大容量复制时，请通过在**bcp_init**之后调用[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) ，然后在**bcp_exec**之前读取格式化文件。  
   
- **Bcp_control**函数控制从数据文件大容量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的几个选项。 **bcp_control**设置选项，如终止前的最大错误数、要开始大容量复制的文件中的行、要停止的行以及批大小。  
+ **Bcp_control**函数在从数据文件大容量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时控制多个选项。 **bcp_control**设置选项，如终止前的最大错误数、要开始大容量复制的文件中的行、要停止的行以及批大小。  
   
 ## <a name="see-also"></a>另请参阅  
  [正在执行大容量&#40;复制操作 ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  

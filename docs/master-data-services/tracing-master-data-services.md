@@ -1,5 +1,5 @@
 ---
-title: 跟踪 (Master Data Services) | Microsoft Docs
+title: 跟踪
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: d1c438eff7f3543b22fc2c0e4e2a7264cd1a91ee
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263976"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727843"
 ---
 # <a name="tracing-master-data-services"></a>跟踪 (Master Data Services)
 
@@ -60,13 +60,13 @@ ms.locfileid: "68263976"
   
 -   日志格式为 CSV。 下表介绍了日志格式。  
   
-    |元素|描述|  
+    |元素|说明|  
     |-------------|-----------------|  
     |Time|跟踪条目出现的时间。|  
     |CorrelationID|每个请求都分配有一个相关 ID。 此请求触发的所有跟踪都使用同一个相关 ID。<br /><br /> 当 UI 出错时，错误消息中会显示相关 ID。|  
-    |操作|请求操作名称。 如果是 Web UI 请求，则操作名称为 URL。 如果是 API 请求，则操作名称为服务名称。|  
+    |运算|请求操作名称。 如果是 Web UI 请求，则操作名称为 URL。 如果是 API 请求，则操作名称为服务名称。|  
     |级别|此跟踪条目的级别。|  
-    |Message|跟踪的消息正文|  
+    |消息|跟踪的消息正文|  
   
 ## <a name="external-resources"></a>外部资源  
  msdn.com 上的博文 [Troubleshooting Logging Improvement（日志记录故障排除改进）](https://go.microsoft.com/fwlink/p/?LinkId=615377)。  

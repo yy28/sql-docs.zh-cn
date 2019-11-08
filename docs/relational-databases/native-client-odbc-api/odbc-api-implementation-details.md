@@ -1,5 +1,5 @@
 ---
-title: ODBC API 实现的详细信息 |Microsoft Docs
+title: ODBC API 实现详细信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,22 +16,21 @@ ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 201068f313b7655c33dac31aa622a9be2965df29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb05bdc934fe8f42a4f0f6589d0f75d38ca621fc
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113674"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73787866"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 实现细节
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   开放式数据库连接 (ODBC) 是 Microsoft Win32 应用程序编程接口，应用程序使用该接口来访问 ODBC 数据源中的数据。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序参考未提供所有 ODBC 函数调用的文字说明。 只讨论那些与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起使用时具有特定于驱动程序的参数或行为的函数。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范。 有关 ODBC 3.51 的全面参考，下载 Microsoft 数据访问组件 SDK，从[数据访问和存储开发人员中心](https://go.microsoft.com/fwlink?linkid=4173)，或查看[ODBC 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)联机。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范。 若要全面了解 ODBC 3.51，请从[数据访问和存储开发人员中心](https://go.microsoft.com/fwlink?linkid=4173)下载 Microsoft 数据访问组件 SDK，或者联机查看[odbc 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -135,8 +134,8 @@ ms.locfileid: "68113674"
   
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 本机客户端&#40;ODBC&#41;引用](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Native Client &#40;ODBC&#41;引用](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [使用 SQL Server Native Client 生成应用程序](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

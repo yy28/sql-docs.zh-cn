@@ -1,5 +1,5 @@
 ---
-title: 分配模型对象权限 (Master Data Services) | Microsoft Docs
+title: 分配模型对象权限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21b3f21b33922a8967d800bf94db70e82a018e9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6c1dbc6be8ba8ddde53ea1ccdfa97fe7992a4b5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047605"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728738"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>分配模型对象权限 (Master Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "68047605"
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-assign-model-object-permissions"></a>分配模型对象权限  
   
@@ -54,15 +54,15 @@ ms.locfileid: "68047605"
   
 8.  在菜单中选择读取、创建、更新和删除或拒绝的组合操作。  
   
-9. 在顶层模型级别中，选择“管理员”（如果需要将用户设置为模型管理员）。   
+9. 在顶层模型级别中，选择“管理员”（如果需要将用户设置为模型管理员）。  
   
-10. 单击“保存”  。  
+10. 单击 **“保存”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
   
 -   （可选）[分配层次结构成员权限 (Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [删除模型对象权限 (Master Data Services)](../master-data-services/delete-model-object-permissions-master-data-services.md)   
  [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
  [创建模型管理员 (Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)  

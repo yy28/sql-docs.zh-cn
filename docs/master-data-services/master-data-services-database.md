@@ -1,5 +1,5 @@
 ---
-title: Master Data Services 数据库 | Microsoft Docs
+title: Master Data Services 数据库
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 159ab8c79be2cd27dba4db060b43a0e6b95290d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 897435f83591df84ec9a9b0a21d3eb4a2a9634a0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062744"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729036"
 ---
 # <a name="master-data-services-database"></a>Master Data Services 数据库
 
@@ -46,9 +46,9 @@ ms.locfileid: "68062744"
   
 -   [临时过程错误 (Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建 Master Data Services 数据库](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [数据库对象安全性 (Master Data Services)](../master-data-services/database-object-security-master-data-services.md)   
- [数据库登录名、用户和角色 &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  
+ [数据库登录名、用户和角色 (Master Data Services)](../master-data-services/database-logins-users-and-roles-master-data-services.md)  
   
   
