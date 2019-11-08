@@ -1,6 +1,6 @@
 ---
-title: Master Data Services 的高可用性和灾难恢复 | Microsoft Docs
-ms.custom: ''
+title: 高可用性和灾难恢复
+ms.custom: seo-lt-2019
 ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 517438d6ffe1b2c69969a0f149cfa4a0a9481a8d
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874775"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728102"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和灾难恢复
 
@@ -90,7 +90,7 @@ ms.locfileid: "70874775"
 
 WSFC 是一种用于提升应用程序服务高可用性的功能。 它由一组独立的 Windows Server 实例以及在这些实例上运行的 Microsoft 故障转移群集服务组成。 这些 Windows Server 实例（或有时被称为节点）彼此连接，以实现相互通信，这样就可以进行故障检测。 WSFC 提供故障检测和故障转移功能。 如果群集中的某个节点或服务出现故障，则会检测到该故障，并且另一个节点将自动或手动开始提供托管在故障节点上的服务。 因此，用户仅遇到最小程度的服务中断，服务可用性得以提升。  
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>必备条件
 
 所有实例都已安装 Windows Server 操作系统，并且所有更新都已修补。
 
@@ -207,7 +207,7 @@ AG 提供数据库级别的可用性。 AG（一组用户数据库）及其虚�
 
 Fci 提供实例级高可用性。 SQL Server 服务及其相关服务在 WSFC 中注册为资源。 此外，FCI 解决方案需要对称的共享磁盘存储（例如 SAN 或 SMB 文件共享），这些存储必须适用于 WFC 群集中的所有节点。
    
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>必备条件
 
 - 在所有节点上安装 SQL Server。 有关详细信息，请参阅[安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)。
 
@@ -385,7 +385,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
    有关 Master Data Service 的详细信息，请参阅 [Master Data Services](../master-data-services-overview-mds.md)。
 
-## <a name="conclusion"></a>结束语
+## <a name="conclusion"></a>结语
 
 在此白皮书中，我们已了解如何将 Master Data Services 后端数据库设置为 AG 的一部分并进行配置。 此配置在 Master Data Services 后端数据库上提供高可用性和灾难恢复。 若要实现此配置，需要安装和配置 Windows Server 故障转移群集、AG 和 Master Data Services。
 
