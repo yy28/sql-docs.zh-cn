@@ -5,27 +5,27 @@ description: azdata bdc hdfs 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d63d0cbd9d3d36d2d76d5b1fa01337d17084306d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: e20e7574109ccce4caa6b4d9fd84a4fef65cf0fa
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155225"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531778"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-本文是**azdata**的参考文章。 
+以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
-[azdata bdc hdfs 状态](reference-azdata-bdc-hdfs-status.md) | Hdfs 服务状态命令。
+[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | HDFS 服务状态命令。
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | HDFS shell 是用于 HDFS 文件系统的简单交互式命令 shell。
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | 列出给定文件或目录的状态。
 [azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | 确定文件或目录是否存在。  如果存在，则返回 True；否则返回 False。
@@ -37,6 +37,7 @@ ms.locfileid: "70155225"
 [azdata bdc hdfs rmr](#azdata-bdc-hdfs-rmr) | 以递归方式删除文件或目录。
 [azdata bdc hdfs chmod](#azdata-bdc-hdfs-chmod) | 更改对指定文件或目录的权限。
 [azdata bdc hdfs chown](#azdata-bdc-hdfs-chown) | 更改指定文件的所有者或组。
+[azdata bdc hdfs cp](#azdata-bdc-hdfs-cp) | 在本地计算机和 HDFS 间复制文件或目录。
 [azdata bdc hdfs mount](reference-azdata-bdc-hdfs-mount.md) | 在 HDFS 中管理远程存储的装载。
 ## <a name="azdata-bdc-hdfs-shell"></a>azdata bdc hdfs shell
 HDFS shell 是用于 HDFS 文件系统的简单交互式命令 shell。
@@ -56,15 +57,14 @@ azdata bdc hdfs shell
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-hdfs-ls"></a>azdata bdc hdfs ls
 列出给定文件或目录的状态。
 ```bash
 azdata bdc hdfs ls --path -p 
-                   
-```
+ ```
 ### <a name="examples"></a>示例
 列出状态
 ```bash
@@ -81,17 +81,16 @@ azdata bdc hdfs ls --path '/tmp'
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-hdfs-exists"></a>azdata bdc hdfs exists
 确定文件或目录是否存在。  如果存在，则返回 True；否则返回 False。
 ```bash
 azdata bdc hdfs exists --path -p 
-                       
-```
-### <a name="examples"></a>示例
-检查文件或目录是否存在。
+     ```
+### Examples
+Check for file or directory existance.
 ```bash
 azdata bdc hdfs exists --path '/tmp'
 ```
@@ -106,17 +105,16 @@ azdata bdc hdfs exists --path '/tmp'
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-hdfs-mkdir"></a>azdata bdc hdfs mkdir
 在指定的路径创建目录。
 ```bash
 azdata bdc hdfs mkdir --path -p 
-                      
-```
-### <a name="examples"></a>示例
-创建目录。
+    ```
+### Examples
+Make directory.
 ```bash
 azdata bdc hdfs mkdir --path '/tmp'
 ```
@@ -131,7 +129,7 @@ azdata bdc hdfs mkdir --path '/tmp'
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-hdfs-mv"></a>azdata bdc hdfs mv
@@ -158,7 +156,7 @@ azdata bdc hdfs mv --source-path '/tmp' --target-path '/dest'
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-hdfs-create"></a>azdata bdc hdfs create
@@ -185,7 +183,7 @@ azdata bdc hdfs create --path '/tmp/test.txt' --data "This is a test."
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-hdfs-cat"></a>azdata bdc hdfs cat
@@ -215,15 +213,14 @@ azdata bdc hdfs cat --path '/tmp/test.txt'
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-hdfs-rm"></a>azdata bdc hdfs rm
 删除文件或目录。
 ```bash
 azdata bdc hdfs rm --path -p 
-                   
-```
+ ```
 ### <a name="examples"></a>示例
 删除文件或目录。
 ```bash
@@ -240,15 +237,14 @@ azdata bdc hdfs rm --path '/tmp'
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-hdfs-rmr"></a>azdata bdc hdfs rmr
 以递归方式删除文件或目录。
 ```bash
 azdata bdc hdfs rmr --path -p 
-                    
-```
+  ```
 ### <a name="examples"></a>示例
 递归删除目录。
 ```bash
@@ -265,7 +261,7 @@ azdata bdc hdfs rmr --path '/tmp'
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-hdfs-chmod"></a>azdata bdc hdfs chmod
@@ -292,7 +288,7 @@ azdata bdc hdfs chmod --permission 775 --path '/tmp/test.txt'
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-hdfs-chown"></a>azdata bdc hdfs chown
@@ -322,12 +318,37 @@ azdata bdc hdfs chown --owner hdfs --group superusergroup --path '/tmp/test.txt'
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
+#### `--verbose`
+提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
+## <a name="azdata-bdc-hdfs-cp"></a>azdata bdc hdfs cp
+在本地计算机和 HDFS 间复制文件或目录。  如果输入是一个目录，则复制整个目录树。  如果目标文件或目录已存在，则该命令将失败。  要指定远程 HDFS 目录前缀，请将路径替换为“hdfs:”
+```bash
+azdata bdc hdfs cp --from-path -f 
+                   --to-path -t
+```
+### <a name="examples"></a>示例
+在本地计算机和 HDFS 间复制文件或目录。
+```bash
+azdata bdc hdfs cp --from_path '/tmp/test.txt --to-path 'hdfs:/user/me/test.txt'
+```
+### <a name="required-parameters"></a>必需的参数
+#### `--from-path -f`
+要从中进行复制的路径的名称。  为路径添加前缀“hdfs:”，表明其属于 HDFS 路径。
+#### `--to-path -t`
+要复制到的路径的名称。  为路径添加前缀“hdfs:”，表明其属于 HDFS 路径。
+### <a name="global-arguments"></a>全局参数
+#### `--debug`
+提高日志记录详细程度以显示所有调试日志。
+#### `--help -h`
+显示此帮助消息并退出。
+#### `--output -o`
+输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
+#### `--query -q`
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
-
-- 有关如何安装 **azdata** 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。
+有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装 `azdata` 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。

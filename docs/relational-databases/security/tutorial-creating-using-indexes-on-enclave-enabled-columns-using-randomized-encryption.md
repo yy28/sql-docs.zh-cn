@@ -1,7 +1,7 @@
 ---
 title: 教程：在使用随机加密且已启用 enclave 的列上创建并使用索引 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9865be1d006e10271295ae4dda731eb33331dbda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126800"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592330"
 ---
-# <a name="tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>教程：在使用随机加密且已启用 enclave 的列上创建并使用索引
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>教程：在使用随机加密且已启用 enclave 的列上创建并使用索引
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 本教程将介绍如何在使用[含安全 enclave 的 Always Encrypted](encryption/always-encrypted-enclaves.md) 中支持的随机加密且已启用 enclave 的列上创建和使用索引。 它将介绍：
 
@@ -31,7 +31,7 @@ ms.locfileid: "68126800"
 
 本教程是[教程：通过 SSMS 开始使用含安全 enclave 的 Always Encrypted](./tutorial-getting-started-with-always-encrypted-enclaves.md) 的延续。 请务必先完成上一教程，再执行以下步骤。
 
-## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>第 1 步：在数据库中启用加速数据库恢复 (ADR)
+## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>步骤 1：在数据库中启用加速数据库恢复 (ADR)
 
 Microsoft 强烈建议，先在数据库中启用 ADR，再在使用随机加密且已启用 enclave 的列上创建首个索引。 请参阅[含安全 enclave 的 Always Encrypted](./encryption/always-encrypted-enclaves.md) 中的[数据库恢复](./encryption/always-encrypted-enclaves.md##database-recovery)部分。
 
@@ -48,7 +48,7 @@ Microsoft 强烈建议，先在数据库中启用 ADR，再在使用随机加密
    ALTER DATABASE ContosoHR SET ACCELERATED_DATABASE_RECOVERY = ON;
    ```
 
-## <a name="step-2-create-and-test-an-index-without-role-separation"></a>第 2 步：在不使用角色分隔的情况下创建和测试索引
+## <a name="step-2-create-and-test-an-index-without-role-separation"></a>步骤 2：在不使用角色分隔的情况下创建和测试索引
 
 这一步将在加密列上创建和测试索引。 你将是一个同时具有以下两个角色的用户：管理数据库的 DBA 和有权访问保护数据的密钥的数据所有者。
 
@@ -172,5 +172,7 @@ Microsoft 强烈建议，先在数据库中启用 ADR，再在使用随机加密
    1. 在查询窗口底部的“实时查询统计信息”  中，观察查询是否使用索引。
 
 ## <a name="next-steps"></a>后续步骤
+- [教程：开发使用具有安全 enclave 的 Always Encrypted 的 .NET Framework 应用程序](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
-- 若要了解含安全 enclave 的 Always Encrypted 的其他用例，请参阅[配置含安全 enclave 的 Always Encrypted](encryption/configure-always-encrypted-enclaves.md)。
+## <a name="see-also"></a>另请参阅
+- [对使用具有安全 enclave 的 Always Encrypted 的列创建和使用索引](encryption/always-encrypted-enclaves-create-use-indexes.md)

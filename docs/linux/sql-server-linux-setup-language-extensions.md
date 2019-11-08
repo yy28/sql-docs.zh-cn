@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 3e86da652231a06cd28318096ada3ae3aed7526e
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653520"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531233"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>在 Linux 上安装 SQL Server 2019 语言扩展 (Java)
 
@@ -29,9 +29,11 @@ Java 扩展包位于 SQL Server Linux 源存储库中。 如果已为数据库�
 
 Linux 容器也支持语言扩展。 我们不提供带有语言扩展的预生成容器，但你可以使用 [GitHub 中提供的示例模板](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)通过 SQL Server 容器创建一个。
 
-## <a name="uninstall-previous-ctp-version"></a>卸载旧版 CTP
+默认情况下，语言扩展和[机器学习服务](../advanced-analytics/index.yml)安装在 SQL Server 大数据群集上。 如果使用大数据群集，则无需按照本文中的步骤进行操作。 有关详细信息，请参阅[在大数据群集上使用机器学习服务（Python 和 R）](../big-data-cluster/machine-learning-services.md)。
 
-包列表在最近几个 CTP 版本中发生了更改，因而包的数量有所减少。 建议先通过卸载 CTP 版本来删除所有旧包，再安装 RC 1。 不支持并行安装多个版本。
+## <a name="uninstall-preview-version"></a>卸载预览版
+
+如果安装了预览版本（社区技术预览版 (CTP) 或候选发布 (RC)），建议先卸载此版本以删除以前的所有包，然后再安装 SQL Server 2019。 不支持并行安装多个版本，并且包列表在最后几个预览版 (CTP/RC) 中进行了更改。
 
 ### <a name="1-confirm-package-installation"></a>1.确认包安装
 
@@ -41,7 +43,7 @@ Linux 容器也支持语言扩展。 我们不提供带有语言扩展的预生�
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-packages"></a>2.卸载旧 CTP 包
+### <a name="2-uninstall-previous-ctprc-packages"></a>2.卸载以前的 CTP/RC 包
 
 在最低包级别进行卸载。 依赖于较低级别包的所有上游包都会自动卸载。
 
@@ -55,7 +57,7 @@ ls /opt/microsoft/mssql/bin
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-install-release-candidate-1-rc-1"></a>3.安装候选发布 1 (RC 1)
+### <a name="3-install-sql-server-2019"></a>3.安装 SQL Server 2019
 
 使用本文中针对操作系统的说明在最高包级别进行安装。
 
@@ -286,12 +288,9 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-the-rc-1-release"></a>RC 1 版本中的限制
-
-Linux 上的语言扩展和 Java 扩展性仍处于积极开发阶段。 预览版本尚未启用以下功能。
+## <a name="limitations"></a>限制
 
 + 目前，Linux 中不提供隐式身份验证，这意味着无法从正在执行的 Java 连接回服务器来访问数据或其他资源。
-
 
 ### <a name="resource-governance"></a>资源调控
 

@@ -3,100 +3,101 @@ title: Python 编程语言扩展
 description: 了解 SQL Server 机器学习服务中的 Python 代码执行和内置 Python 库。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/30/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3825a2b5085bf5a6e144a602c36cb20ccaca430
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MT
+ms.openlocfilehash: b1ada7d78cdacb88356b2148475e07d559f4ecbb
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688285"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532639"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server 中的 Python 语言扩展
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Python 扩展是关系数据库引擎的 SQL Server 机器学习服务外接程序的一部分。 它添加了一个 Python 执行环境、Anaconda 分发和 Python 3.5 运行时和解释器、标准库和工具, 以及适用于 Python 的 Microsoft 产品库: 用于进行大规模分析的[revoscalepy](../python/ref-py-revoscalepy.md)和[microsoftml](../python/ref-py-microsoftml.md)机器学习算法。 
+Python 扩展是关系数据库引擎的 SQL Server 机器学习服务加载项的一部分。 它添加 Python 执行环境、带 Python 3.5 运行时和解释器的 Anaconda 发行版、标准库和工具，以及适用于 Python 的 Microsoft 产品库：[revoscalepy](../python/ref-py-revoscalepy.md) 用于大规模分析，[microsoftml](../python/ref-py-microsoftml.md) 用于机器学习算法。 
 
-Python 集成作为[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)安装。
+Python 集成作为 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)安装。
 
-安装 Python 3.5 运行时和解释器可确保与标准 Python 解决方案近乎完全兼容。 Python 在与 SQL Server 不同的进程中运行, 以确保不会危及数据库操作的安全。
+安装 Python 3.5 运行时和解释器可确保与标准 Python 解决方案近乎完全兼容。 Python 与 SQL Server 在不同的进程中运行，以保证数据库操作不受到影响。
 
 ## <a name="python-components"></a>Python 组件
 
-SQL Server 包括开源和专用包。 安装程序安装的 Python 运行时是使用 Python 3.5 的 Anaconda 4.2。 Python 运行时独立于 SQL 工具进行安装, 并在扩展框架的核心引擎进程之外执行。 作为机器学习服务与 Python 一起安装的一部分, 你必须同意 GNU 公共许可证的条款。 
+SQL Server 包含开源包和专有包。 安装程序安装的 Python 运行时为带 Python 3.5 的 Anaconda 4.2。 Python 运行时独立于 SQL 工具安装，并在扩展性框架中的核心引擎进程外部执行。 在使用 Python 安装机器学习服务的过程中，必须同意 GNU 公共许可证的条款。 
 
-SQL Server 不会修改 Python 可执行文件, 但必须使用安装程序安装的 Python 版本, 因为该版本是专用包的生成和测试版本。 有关 Anaconda 分布支持的程序包列表, 请参阅 Continuum analytics 网站:[Anaconda 包列表](https://docs.continuum.io/anaconda/packages/pkg-docs)。
+SQL Server 不会修改基本 Python 可执行文件，但必须使用安装程序安装的 Python 版本，因为该版本是用于生成和测试专有包的版本。 有关 Anaconda 发行版支持的包的列表，请参阅 Continuum 分析网站：[Anaconda 包列表](https://docs.continuum.io/anaconda/packages/pkg-docs)。
 
-与特定数据库引擎实例关联的 Anaconda 分发可在与该实例关联的文件夹中找到。 例如, 如果在默认实例上安装了包含机器学习服务和 Python SQL Server 2017 数据库引擎, 请参阅`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`。
+与特定数据库引擎实例关联的 Anaconda 发行版可在与实例关联的文件夹中找到。 例如，如果在默认实例上安装了带机器学习服务和 Python 的 SQL Server 2017 数据库引擎，请查看 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`。
 
 Microsoft 为并行和分布式工作负荷添加的 Python 包包含以下库。
 
 | 库 | 描述 |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 支持数据源对象和数据浏览、操作、转换和可视化。 它支持创建远程计算上下文, 以及各种可缩放的机器学习模型, 如**rxLinMod**。 有关详细信息, 请参阅[revoscalepy 模块与 SQL Server](../python/ref-py-revoscalepy.md)。  |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 包含经过优化以实现速度和准确性的机器学习算法, 以及用于处理文本和图像的行内转换。 有关详细信息, 请参阅[microsoftml 模块与 SQL Server](../python/ref-py-microsoftml.md)。 |
+| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 支持数据源对象以及数据浏览、操作、转换和可视化。 它支持创建远程计算上下文以及各种可缩放的机器学习模型，例如 **rxLinMod**。 有关详细信息，请参阅 [revoscalepy 模块与 SQL Server](../python/ref-py-revoscalepy.md)。  |
+| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 包含针对速度和准确性进行了优化的机器学习算法，以及用于处理文本和图像的内联转换。 有关详细信息，请参阅 [microsoftml 模块与 SQL Server](../python/ref-py-microsoftml.md)。 |
 
-Microsoftml 和 revoscalepy 紧密耦合;microsoftml 中使用的数据源定义为 revoscalepy 对象。 Revoscalepy 传输到 microsoftml 时的计算上下文限制。 也就是说, 所有功能都可用于本地操作, 但切换到远程计算上下文需要 RxInSqlServer。
+Microsoftml 和 revoscalepy 紧密耦合；microsoftml 中使用的数据源定义为 revoscalepy 对象。 Revoscalepy 中的计算上下文限制传递到 microsoftml。 即，所有功能都可用于本地操作，但切换到远程计算上下文需要 RxInSqlServer。
 
 ## <a name="using-python-in-sql-server"></a>在 SQL Server 中使用 Python
 
-将**revoscalepy**模块导入到 Python 代码, 然后从模块调用函数, 就像其他任何 Python 函数一样。
+将 **revoscalepy** 模块导入 Python 代码中，然后从该模块调用函数，就像调用任何其他 Python 函数一样。
 
-支持的数据源包括 ODBC 数据库、SQL Server 和 XDF 文件格式, 以便与其他源或通过 R 解决方案交换数据。 Python 的输入数据必须为表格格式。 所有 Python 结果必须以**pandas**数据帧的形式返回。
+支持的数据源包括 ODBC 数据库、SQL Server 和用于与其他源或通过 R 解决方案交换数据的 XDF 文件格式。 Python 的输入数据必须为表格格式。 所有 Python 结果都必须以 **pandas** 数据帧的形式返回。
 
-支持的计算上下文包括本地或远程 SQL Server 计算上下文。 远程计算上下文指的是在一台计算机 (如工作站) 上启动的代码执行, 但随后会将脚本执行切换到远程计算机。 切换计算上下文要求两个系统都具有相同的 revoscalepy 库。
+支持的计算上下文包括本地或远程 SQL Server 计算上下文。 远程计算上下文指在一台计算机（例如工作站）上开始，但随后将脚本执行切换到远程计算机的代码执行。 切换计算上下文要求两个系统具有同一 revoscalepy 库。
 
-如您所料, 本地计算上下文包括: 在与数据库引擎实例相同的服务器上执行 Python 代码, 并在 T-sql 中或在存储过程中嵌入代码。 还可以通过定义远程计算上下文, 从本地 Python IDE 运行代码, 并在 SQL Server 计算机上执行脚本。
+正如用户所预期的一样，本地计算上下文包括在与数据库引擎实例相同的服务器上执行 Python 代码，以及 T-SQL 内部或嵌入存储过程的代码。 还可以通过定义远程计算上下文，从本地 Python IDE 运行代码并使脚本在 SQL Server 计算机上执行。
 
 ## <a name="execution-architecture"></a>执行体系结构
 
-以下关系图说明了在每个支持的方案中 SQL Server 组件与 Python 运行时的交互: 通过使用 SQL Server 计算上下文从 Python 终端运行脚本和远程执行。
+以下关系图说明 SQL Server 组件与 Python 运行时在每种支持的方案中的交互：在数据库内运行脚本，以及使用 SQL Server 计算上下文从 Python 终端远程执行。
 
-### <a name="python-scripts-executed-in-database"></a>已在数据库中执行 Python 脚本
+### <a name="python-scripts-executed-in-database"></a>在数据库内执行 Python 脚本
 
-在 SQL Server 中运行 Python 时，必须将 Python 脚本封装在一个特殊的存储过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)中。
+在 SQL Server“内部”运行 Python 时，必须将 Python 脚本封装到特殊的存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中。
 
-在将脚本嵌入到存储过程中后, 任何可进行存储过程调用的应用程序都可以启动 Python 代码的执行。  之后 SQL Server 按下图所概括的方式管理代码执行。
+在将脚本嵌入存储过程后，可以进行存储过程调用的任何应用程序都可以启动 Python 代码的执行。  然后，SQL Server 按下图中概括的方式管理代码执行。
 
 ![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
-1. Python 运行时的请求通过传递给存储过程的`@language='Python'`参数来指示。 SQL Server 将此请求发送到快速启动板服务。
-2. 启动板服务会启动相应的启动程序;在本例中为 PythonLauncher。
+1. 对 Python 运行时发出的请求由传递给存储过程的参数 `@language='Python'` 指示。 SQL Server 将此请求发送到 Launchpad 服务。
+在 Linux 中，SQL 使用 Launchpad  服务与每个用户的独立 Launchpad 进程进行通信。 有关详细信息，请参阅[扩展性体系结构关系图](extensibility-framework.md#architecture-diagram)。
+2. Launchpad 服务启动相应的启动器（在本例中为 PythonLauncher）。
 3. PythonLauncher 启动外部 Python35 进程。
-4. BxlServer 协调使用 Python 运行时来管理数据的交换和工作结果的存储。
-5. SQL 附属项管理有关与 SQL Server 相关的任务和进程的通信。
-6. BxlServer 使用 SQL 附属项将状态和结果传递到 SQL Server。
+4. BxlServer 与 Python 运行时协同工作，管理数据交换并存储工作结果。
+5. SQL Satellite 管理相关任务和进程与 SQL Server 之间的通信。
+6. BxlServer 使用 SQL Satellite 向 SQL Server 传递状态和结果。
 7. SQL Server 获取结果并关闭相关任务和进程。
 
-### <a name="python-scripts-executed-from-a-remote-client"></a>从远程客户端执行的 Python 脚本
+### <a name="python-scripts-executed-from-a-remote-client"></a>从远程客户端执行 Python 脚本
 
-如果满足以下条件, 则可以从远程计算机 (如便携式计算机) 运行 Python 脚本, 并在 SQl Server 计算机的上下文中执行这些脚本:
+如果满足以下条件，则可以从远程计算机（例如笔记本电脑）运行 Python 脚本，并使它们在 SQl Server 计算机的上下文中执行：
 
-+ 适当地设计脚本
-+ 远程计算机已安装机器学习服务使用的扩展性库。 使用远程计算上下文需要[revoscalepy](../python/ref-py-revoscalepy.md)包。
++ 可以适当地设计脚本
++ 远程计算机已安装了机器学习服务使用的扩展性库。 使用远程计算上下文需要 [revoscalepy](../python/ref-py-revoscalepy.md) 包。
 
-下图汇总了从远程计算机发送脚本时的总体工作流。
+以下关系图概括了从远程计算机发送脚本时的总体工作流。
 
 ![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
-1. 对于在**revoscalepy**中支持的函数, Python 运行时将调用一个链接函数, 该函数反过来调用 BxlServer。
-2. BxlServer 包含在机器学习服务 (数据库内), 并在独立于 Python 运行时的进程中运行。
-3. BxlServer 确定连接目标, 并使用 ODBC 发起连接, 传递在 Python 脚本中作为连接字符串的一部分提供的凭据。
-4. BxlServer 将打开与 SQL Server 实例的连接。
-5. 调用外部脚本运行时, 将调用快速启动板服务, 后者会启动相应的启动程序: 在本例中为 PythonLauncher。 此后, 当从 T-sql 中的存储过程调用 Python 代码时, 将在工作流中处理 Python 代码处理。
-6. PythonLauncher 对安装在 SQL Server 计算机上的 Python 实例进行调用。
+1. 对于 **revoscalepy** 支持的函数，Python 运行时调用链接函数，后者接着调用 BxlServer。
+2. BxlServer 包含在机器学习服务（数据库内）中，与 Python 运行时在不同的进程中运行。
+3. BxlServer 确定连接目标并使用 ODBC 发起连接，传递 Python 脚本的连接字符串中提供的凭据。
+4. BxlServer 打开与 SQL Server 实例的连接。
+5. 如果调用外部脚本运行时，将调用 Launchpad 服务，这将启动相应的启动器：在本例中为 PythonLauncher.dll。 此后，处理 Python 代码的工作流与在 T-SQL 中从存储过程调用 Python 代码时工作流类似。
+6. PythonLauncher 调用 SQL Server 计算机上安装的 Python 实例。
 7. 将结果返回到 BxlServer。
-8. SQL 附属项管理与相关作业对象 SQL Server 和清理的通信。
-9. SQL Server 将结果传递回客户端。
+8. SQL Satellite 管理与 SQL Server 之间的通信并清理相关作业对象。
+9. SQL Server 将结果传回客户端。
 
 ## <a name="next-steps"></a>后续步骤
 
 + [SQL Server 中的 revoscalepy 模块](../python/ref-py-revoscalepy.md)
-+ [revoscalepy 函数引用](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
++ [revoscalepy 函数参考](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server 中的扩展性框架](extensibility-framework.md)
 + [SQL Server 中的 R 和机器学习扩展](extension-r.md)
 + [获取 Python 包信息](../package-management/python-package-information.md)
-+ [通过 sqlmlutils 安装 Python 包](../package-management/install-additional-python-packages-on-sql-server.md)
++ [使用 sqlmlutils 安装 Python 包](../package-management/install-additional-python-packages-on-sql-server.md)

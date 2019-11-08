@@ -5,42 +5,43 @@ description: azdata bdc 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 689b01b7798a5a1f4ec282343bfea0a1781e3437
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
-ms.translationtype: MT
+ms.openlocfilehash: a4b619396c2dcdad589deff3f9fc6a03fe37c1d5
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304736"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531688"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-本文是**azdata**的参考文章。 
+以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
 [azdata bdc create](#azdata-bdc-create) | 创建大数据群集。
 [azdata bdc delete](#azdata-bdc-delete) | 删除大数据群集。
+[azdata bdc upgrade](#azdata-bdc-upgrade) | 更新部署在 SQL Server 大数据群集各个容器中的映像。
 [azdata bdc config](reference-azdata-bdc-config.md) | 配置命令。
 [azdata bdc endpoint](reference-azdata-bdc-endpoint.md) | 终结点命令。
 [azdata bdc debug](reference-azdata-bdc-debug.md) | 调试命令。
 [azdata bdc status](reference-azdata-bdc-status.md) | BDC 状态命令。
 [azdata bdc control](reference-azdata-bdc-control.md) | 控制服务命令。
-[azdata bdc sql](reference-azdata-bdc-sql.md) | Sql 服务命令。
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Hdfs 服务命令。
+[azdata bdc sql](reference-azdata-bdc-sql.md) | SQL 服务命令。
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS 服务命令。
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 服务命令。
-[azdata bdc 网关](reference-azdata-bdc-gateway.md) | 网关服务命令。
-[azdata bdc 应用](reference-azdata-bdc-app.md) | 应用服务命令。
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS 模块提供用于访问 HDFS 文件系统的命令。
+[azdata bdc gateway](reference-azdata-bdc-gateway.md) | 网关服务命令。
+[azdata bdc app](reference-azdata-bdc-app.md) | 应用服务命令。
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 命令允许用户通过创建和管理会话、语句及批处理来与 Spark 系统交互。
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS 模块提供用于访问 HDFS 文件系统的命令。
 ## <a name="azdata-bdc-create"></a>azdata bdc create
-创建 SQL Server 大数据群集-在系统上需要 Kubernetes 配置，同时提供以下环境变量 [' CONTROLLER_USERNAME '、' CONTROLLER_PASSWORD '、' MSSQL_SA_PASSWORD '、' KNOX_PASSWORD ']。
+创建 SQL Server 大数据群集 - 系统中需要 Kubernetes 配置及以下环境变量 ['AZDATA_USERNAME', 'AZDATA_PASSWORD']。
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
@@ -69,9 +70,9 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 大数据群集名称，用于 kubernetes 命名空间。
 #### `--config-profile -c`
-大数据群集配置配置文件，用于部署群集： [' aks '、' kubeadm '、' minikube '、' kubeadm-开发-测试 ']
+大数据群集配置文件，用于部署群集：['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
 #### `--accept-eula -a`
-是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 可以在 https://go.microsoft.com/fwlink/?LinkId=2002534 查看此产品的许可条款。
+是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 可以在 https://aka.ms/eula-azdata-en 中查看 azdata 的许可条款，在 https://go.microsoft.com/fwlink/?linkid=2104292 （企业版）、 https://go.microsoft.com/fwlink/?linkid=2104294 （标准版）和 https://go.microsoft.com/fwlink/?linkid=2104079 （开发人员版）中查看大数据群集的许可条款。
 #### `--node-label -l`
 大数据群集节点标签，用于指定要部署到的节点。
 #### `--force -f`
@@ -84,11 +85,11 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-delete"></a>azdata bdc delete
-删除 SQL Server 大数据群集-系统上需要 Kubernetes 配置。
+删除 SQL Server 大数据群集 - 系统中需要 Kubernetes 配置。
 ```bash
 azdata bdc delete --name -n 
                   [--force -f]
@@ -112,12 +113,45 @@ azdata bdc delete --name <cluster_name>
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
+#### `--verbose`
+提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
+## <a name="azdata-bdc-upgrade"></a>azdata bdc upgrade
+更新部署在 SQL Server 大数据群集各个容器中的映像。 更新的映像基于传入的 docker 映像。 如果更新的映像来自与当前部署映像不同的 docker 映像存储库，则还需要“repository”参数。
+```bash
+azdata bdc upgrade --name -n 
+                   --tag -t  
+                   [--repository -r]
+```
+### <a name="examples"></a>示例
+BDC 升级到同一存储库中的新映像标记“cu2”。
+```bash
+azdata bdc upgrade -t cu2
+```
+BDC 升级到新存储库“foo/bar/baz”中带有标记“cu2”的新映像。
+```bash
+azdata bdc upgrade -t cu2 -r foo/bar/baz
+```
+### <a name="required-parameters"></a>必需的参数
+#### `--name -n`
+大数据群集名称，用于 kubernetes 命名空间。
+#### `--tag -t`
+要将群集中的所有容器升级到的目标 docker 映像标记。
+### <a name="optional-parameters"></a>可选参数
+#### `--repository -r`
+使群集中的所有容器都从中拉取其映像的 docker 存储库。
+### <a name="global-arguments"></a>全局参数
+#### `--debug`
+提高日志记录详细程度以显示所有调试日志。
+#### `--help -h`
+显示此帮助消息并退出。
+#### `--output -o`
+输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
+#### `--query -q`
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
-
-- 有关如何安装 **azdata** 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。
+有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装 `azdata` 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。

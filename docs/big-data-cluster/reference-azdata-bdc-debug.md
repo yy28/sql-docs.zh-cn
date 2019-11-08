@@ -5,22 +5,22 @@ description: Azdata bdc debug 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9e14528baf80d08841f6e9e17a0476dfa81fd48d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: dd6f6b81f7cd42e666459460a0f11c23b07d4b27
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153200"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531860"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-本文是**azdata**的参考文章。 
+以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -28,13 +28,15 @@ ms.locfileid: "70153200"
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | 复制日志。
 [azdata bdc debug dump](#azdata-bdc-debug-dump) | 触发日志记录转储。
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
-从大数据群集复制调试日志-Kubernetes 配置在您的系统上是必需的。
+从大数据群集复制调试日志 - 系统中需要 Kubernetes 配置。
 ```bash
 azdata bdc debug copy-logs --namespace -n 
                            [--container -c]  
                            [--target-folder -d]  
                            [--pod -p]  
-                           [--timeout -t]
+                           [--timeout -t]  
+                           [--skip-compress -sc]  
+                           [--exclude-dumps -ed]
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--namespace -n`
@@ -48,6 +50,10 @@ azdata bdc debug copy-logs --namespace -n
 复制具有相似名称的 Pod 的日志。 （可选）默认情况下会复制所有 Pod 的日志。 不能多次指定。 如果多次指定，则使用最后一个
 #### `--timeout -t`
 等待命令完成的秒数。 默认值为 0，表示无限制
+#### `--skip-compress -sc`
+是否跳过对结果文件夹的压缩。 默认值为 False，即压缩结果文件夹。
+#### `--exclude-dumps -ed`
+是否从结果文件夹中排除转储。 默认值为 False，即包含转储。
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 提高日志记录详细程度以显示所有调试日志。
@@ -56,11 +62,11 @@ azdata bdc debug copy-logs --namespace -n
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 - 调试获取完整的调试日志。
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
-触发器日志记录转储, 并将其从 Kubernetes 复制到系统上。
+触发日志记录转储，并从容器中复制 - 系统中需要 Kubernetes 配置。
 ```bash
 azdata bdc debug dump --namespace -n 
                       --container -c  
@@ -82,12 +88,10 @@ azdata bdc debug dump --namespace -n
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
-
-- 有关如何安装 **azdata** 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。
+有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装 `azdata` 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。

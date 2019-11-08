@@ -5,22 +5,22 @@ description: azdata notebook 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 97b8cbae68e16dbdde6e9662b18e37f222a1af80
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
-ms.translationtype: MT
+ms.openlocfilehash: 3d9b5538170e57b09a1cf8bc4360a68187595ac2
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118155"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531665"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-本文是**azdata**的参考文章。 
+以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -56,22 +56,19 @@ azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb' --stop-on-e
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-notebook-run"></a>azdata notebook run
 此命令会创建一个临时目录，并将该目录中的指定笔记本中作为工作目录执行。
-
->[!NOTE]
->验证 azdata v 15.0.1900：仅支持 Python 3 笔记本的运行命令。
-
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
                     [--output-html]  
                     [--arguments -a]  
                     [--interactive -i]  
-                    [--clear -c]
+                    [--clear -c]  
+                    [--timeout -t]
 ```
 ### <a name="examples"></a>示例
 运行笔记本。
@@ -85,13 +82,16 @@ azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 #### `--output-path`
 用于笔记本输出的目录路径。  含有输出数据的笔记本和任何笔记本生成的文件都是相对于此目录而生成的。
 #### `--output-html`
-可选标志，指示是否另外将输出笔记本转换为 HTML 格式。  创建第二个输出文件。
+可选标志指示是否另外将输出笔记本转换为 HTML 格式。  创建第二个输出文件。
 #### `--arguments -a`
-要注入到笔记本执行的笔记本参数的可选列表。  编码为 JSON 字典。  示例： "{" name "：" value "，" name2 "：" value2 "}"
+要注入到笔记本执行的笔记本参数的可选列表。  编码为 JSON 字典。  示例：'{"name":"value", "name2":"value2"}'
 #### `--interactive -i`
 在交互模式下运行笔记本。
 #### `--clear -c`
-在交互模式下，在呈现单元格之前清除控制台。
+在交互模式下，先清除控制台再呈现单元格。
+#### `--timeout -t`
+等待执行完成的秒数。 值为 -1 指示永远等待。
+`600`
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 提高日志记录详细程度以显示所有调试日志。
@@ -106,6 +106,4 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 
 ## <a name="next-steps"></a>后续步骤
 
-- 有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
-
-- 有关如何安装 **azdata** 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。
+有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装 `azdata` 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。

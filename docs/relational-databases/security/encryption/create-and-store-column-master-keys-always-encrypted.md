@@ -1,24 +1,24 @@
 ---
-title: 创建并存储列主密钥 (Always Encrypted) | Microsoft Docs
+title: 创建并存储 Always Encrypted 的列主密钥 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/01/2016
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8f9dbfc7f75d853232e0074d52735e9e38d68d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902966"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594437"
 ---
-# <a name="create-and-store-column-master-keys-always-encrypted"></a>创建并存储列主密钥 (Always Encrypted)
+# <a name="create-and-store-column-master-keys-for-always-encrypted"></a>创建并存储 Always Encrypted 的列主密钥
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 列主密钥是“始终加密”功能中使用的保护密钥的密钥，用于对列加密密钥进行加密。  列主密钥必须存储在受信任的密钥存储，并且这些密钥可供需要加密或解密数据的应用程序以及用于配置“始终加密”和管理“始终加密”密钥的工具访问。
@@ -35,28 +35,20 @@ ms.locfileid: "72902966"
 
 * **本地密钥存储** - 仅供包含本地密钥存储的计算机上的应用程序使用。 换而言之，需要将密钥存储和密钥复制到运行你的应用程序的每台计算机。 本地密钥存储的一个示例为 Windows 证书存储。 使用本地密钥存储时，需要确保密钥存储存在于托管应用程序的每台计算机上，并且计算机中包含应用程序访问使用“始终加密”功能保护的数据所需的列主密钥。 当你第一次预配列主密钥，或者当你更改（轮换）密钥时，需要确保密钥部署到托管你的应用程序的所有计算机。
 
-* **集中式密钥存储** - 为多台计算机上的应用程序服务。 集中式密钥存储的一个示例是 [Azure 密钥保管库](https://azure.microsoft.com/services/key-vault/)。 集中式密钥存储通常使密钥管理更简单，因为你无需维护多台计算机上的列主密钥的多个副本。 你需要确保将应用程序配置为连接到集中式密钥存储。
+* **集中式密钥存储** - 为多台计算机上的应用程序服务。 集中式密钥存储的一个示例是 [Azure 密钥保管库](https://azure.microsoft.com/services/key-vault/)。 集中式密钥存储通常使密钥管理更简单，因为你无需维护多台计算机上的列主密钥的多个副本。 确保将应用程序配置为连接到集中式密钥存储。
 
 ### <a name="which-key-stores-are-supported-in-always-encrypted-enabled-client-drivers"></a>在启用“始终加密”功能的客户端驱动程序中支持哪种密钥存储？
 
-启用“始终加密”功能的客户端驱动程序为内置了对将“始终加密”功能集成到客户端应用程序的支持的 SQL Server 客户端驱动程序。 启用“始终加密”的驱动程序包括几个内置的常用的密钥存储提供者。 请注意，某些驱动程序还允许你实施和注册自定义的列主密钥存储提供者，以便即使没有内置提供者，也可以使用任何密钥存储。 在决定使用内置提供者还是自定义提供者时，考虑如果使用内置提供者则通常意味着对应用程序的更改很少（在某些情况下，只需要更改数据库连接字符串）。
+启用“始终加密”功能的客户端驱动程序为内置了对将“始终加密”功能集成到客户端应用程序的支持的 SQL Server 客户端驱动程序。 启用“始终加密”的驱动程序包括几个内置的常用的密钥存储提供者。 通过某些驱动程序，你还可以实施和注册自定义的列主密钥存储提供程序，这样即使没有内置的提供程序，你也可以使用任何密钥存储。 在决定使用内置提供者还是自定义提供者时，考虑如果使用内置提供者则通常意味着对应用程序的更改很少（在某些情况下，只需要更改数据库连接字符串）。
 
-可用的内置提供者取决于选择哪些驱动程序、驱动程序版本和操作系统。  请参阅特定驱动程序的“始终加密”文档来确定支持哪些开箱即用的密钥存储，以及你的驱动程序是否支持自定义的密钥存储提供者。
+可用的内置提供者取决于选择哪些驱动程序、驱动程序版本和操作系统。  请参阅特定驱动程序的 Always Encrypted 文档来确定哪些现成的密钥存储受支持，以及驱动程序是否支持自定义的密钥存储提供程序 - [使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)。
 
-- [通过 SQL Server 的 .NET Framework 数据提供程序使用“始终加密”功能开发应用程序](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-
-
-### <a name="supported-tools"></a>支持的工具
-
-可以使用 [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) 和 [SqlServer PowerShell 模块](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) 来配置“始终加密”功能和管理“始终加密”密钥。 有关这些工具支持的密钥存储的列表，请参阅：
-
-- [使用 SQL Server Management Studio 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-- [使用 PowerShell 配置“始终加密”功能](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-
+### <a name="which-key-stores-are-supported-in-sql-tools"></a>SQL 工具中支持哪些密钥存储？
+SQL Server Management Studio 和 SqlServer PowerShell 模块仅支持位于 Azure Key Vault、Windows 证书存储以及提供下一代加密技术 (CNG) API 或加密 API (CAPI) 的密钥存储中的列主密钥。 
 
 ## <a name="creating-column-master-keys-in-windows-certificate-store"></a>创建 Windows 证书存储中的列主密钥    
 
-列主密钥可以是存储在 Windows 证书存储中的证书。 请注意，启用“始终加密”功能的驱动程序不会验证到期日期或证书颁发机构链。 证书仅用作包含公钥和私钥的密钥对。
+列主密钥可以是存储在 Windows 证书存储中的证书。 启用 Always Encrypted 的驱动程序不会验证到期日期或证书颁发机构链。 证书仅用作包含公钥和私钥的密钥对。
 
 若要成为有效的列主密钥，证书必须：
 * 是 X.509 证书。
@@ -82,7 +74,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 创建自签名证书
 
-有关详细信息，请参阅 [使用 SQL Server Management Studio 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)。
+有关详细信息，请参阅[使用 SQL Server Management Studio 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-ssms.md)。
 有关使用 SSMS 并在 Windows 证书存储中存储“始终加密”密钥的分布式教程，请参阅 [《Always Encrypted Wizard tutorial (Windows Certificate Store)》](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)（始终加密向导教程（Windows 证书存储））。
 
 
@@ -113,7 +105,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 Azure 密钥保管库有助于保护加密密钥和机密，是用于存储“始终加密”的列主密钥的便利选项，尤其是当你的应用程序在 Azure 中托管时。 若要在 [Azure 密钥保管库](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)中创建密钥，需要有 [Azure 订阅](https://azure.microsoft.com/free/) 和 Azure 密钥保管库。
 
-#### <a name="using-powershell"></a>使用 PowerShell
+### <a name="using-powershell"></a>使用 PowerShell
 
 以下示例将创建一个新的 Azure 密钥保管库和密钥，然后向所需用户授予权限。
 
@@ -132,8 +124,9 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
+### <a name="using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS)
 
+有关如何使用 SSMS 在 Azure Key Vault 中创建列主密钥的详细信息，请参阅[使用 SQL Server Management Studio 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-ssms.md)。
 有关使用 SSMS 并在 Azure 密钥保管库中存储“始终加密”密钥的分布式教程，请参阅 [《Always Encrypted Wizard tutorial (Azure Key Vault)》](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault)（始终加密向导教程（Azure 密钥保管库））。
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>使 Azure 密钥保管库密钥可用于应用程序和用户
@@ -144,7 +137,7 @@ $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destinatio
 
 #### <a name="using-powershell"></a>使用 PowerShell
 
-若要使用户和应用程序能够访问 Azure 密钥保管库中的实际密钥，必须设置保管库的访问策略 ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))：
+若要使用户和应用程序能够访问 Azure Key Vault 中的实际密钥，必须设置保管库访问策略 ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))：
 
 ```
 $vaultName = "<vault name>"
@@ -195,8 +188,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 #### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio
 
-请参阅 [《Provisioning Column Master using SQL Server Management Studio (SSMS)》](https://msdn.microsoft.com/library/mt757096.aspx#Anchor_2)（使用 SQL Server Management Studio (SSMS) 预配列主密钥）。
-
+请参阅[使用 SQL Server Management Studio 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-ssms.md)。
 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>使 CNG 密钥可用于应用程序和用户
 
@@ -206,7 +198,10 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 “始终加密”功能的列主密钥可以存储在实现加密 API (CAPI) 的密钥存储中。 通常，此类存储是一种硬件安全模块 (HSM) - 一种保护并管理数字密钥，以及提供加密处理的物理设备。 HSM 通常以插件卡或外部设备的形式直接连接到一台计算机（本地 HSM）或网络服务器。
 
-若要使 HSM 可用于指定计算机上的应用程序，必须在该计算机上安装并配置实现 CAPI 的加密服务提供程序 (CSP)。 始终加密客户端驱动程序（驱动程序内的列主密钥存储提供者）使用 CSP 加密和解密使用存储在密钥存储中的列主密钥保护的列加密密钥。 注意：CAPI 是一个旧的、已弃用的 API。 如果 HSM 可以使用 KSP，则应使用它，而不是 CSP/CAPI。
+若要使 HSM 可用于指定计算机上的应用程序，必须在该计算机上安装并配置实现 CAPI 的加密服务提供程序 (CSP)。 始终加密客户端驱动程序（驱动程序内的列主密钥存储提供者）使用 CSP 加密和解密使用存储在密钥存储中的列主密钥保护的列加密密钥。 
+
+> [!NOTE]
+> CAPI 是一个旧的、已弃用的 API。 如果 HSM 可以使用 KSP，则应使用它，而不是 CSP/CAPI。
 
 CSP 必须支持要用于“始终加密”功能的 RSA 算法。
 
@@ -220,25 +215,15 @@ Windows 包含以下基于软件的（不受 HSM 支持）CSP，它支持 RSA �
 请查阅 HSM 的文档。
 
 #### <a name="using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS)
-请参阅《Configuring Always Encrypted using SQL Server Management Studio》（使用 SQL Server Management Studio 配置“始终加密”功能）中的“Provisioning Column Master Keys”（预配列主密钥）部分。
+请参阅[使用 SQL Server Management Studio 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-ssms.md)。
 
- 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>使 CNG 密钥可用于应用程序和用户
-请参阅 HSM 和 CSP 文档，了解如何在计算机上配置 CSP，以及如何向应用程序和用户授予访问 HSM 的权限。
- 
+请参阅 HSM 和 CSP 的相关文档，了解如何在计算机上配置 CSP，以及如何向应用程序和用户授予访问 HSM 的权限。
  
 ## <a name="next-steps"></a>Next Steps  
+- [使用 SQL Server Management Studio 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-ssms.md)
+- [使用 PowerShell 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-powershell.md)
   
-- [使用 PowerShell 配置 Always Encrypted 密钥](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [使用 PowerShell 轮换 Always Encrypted 密钥](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [使用 SQL Server Management Studio 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-  
-## <a name="additional-resources"></a>其他资源  
-
-- [Always Encrypted 密钥管理概述](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Always Encrypted（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [通过 SQL Server 的 .NET Framework 数据提供程序使用“始终加密”功能开发应用程序](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted 博客](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
-    
-
+## <a name="see-also"></a>另请参阅 
+- [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted 密钥管理概述](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

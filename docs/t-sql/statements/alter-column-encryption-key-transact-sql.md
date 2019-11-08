@@ -1,7 +1,7 @@
 ---
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: cbfc9ffa9ba188506e887201ca17ef630f1d04ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: c06fb5b28e1c3ec5bd50b8922bcdf1e5d1b27ff7
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065940"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594395"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  在数据库中更改列加密密钥，添加或删除加密的值。 CEK 最多可具有两个值，以便相应的列主密钥进行轮换。 使用[始终加密（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能对列进行加密时会使用 CEK。 添加 CEK 值之前，必须使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 语句定义用于加密该值的列主密钥。  
+  在数据库中更改列加密密钥，添加或删除加密的值。 列加密密钥最多可具有两个值，这样使相应的列主密钥能够进行轮换。 使用 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 或[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 加密列时，会使用列加密密钥。 添加列加密密钥值之前，必须使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 语句定义用于加密该值的列主密钥。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY key_name   
     [ ADD | DROP ] VALUE   
     (  
@@ -62,13 +62,16 @@ ALTER COLUMN ENCRYPTION KEY key_name
 >  切勿在此语句中传递纯文本 CEK 值。 这样做不利于发挥此功能的优点。  
   
 ## <a name="remarks"></a>Remarks  
- 通常情况下，创建列加密密钥时，密钥只具有一个加密值。 列主密钥需要进行轮换（需要将当前的列主密钥替换为新的列主密钥）时，可以为列加密密钥添加一个新值，并使用新的列主密钥进行加密。 此工作流可以确保客户端应用程序能访问使用列加密密钥加密的数据，同时客户端应用程序将能使用新的列主密钥。 通过 Always Encrypted 功能，无权访问新主密钥的客户端应用程序中的驱动程序将能够通过列加密密钥值（使用旧的列主密钥进行加密）来访问敏感数据。 Always Encrypted 支持的加密算法要求纯文本值具有 256 位。 应使用密钥存储提供程序生成加密值，该提供程序封装了存储有列主密钥的密钥存储。  
+通常情况下，创建列加密密钥时，密钥只具有一个加密值。 列主密钥需要进行轮换（需要将当前的列主密钥替换为新的列主密钥）时，可以为列加密密钥添加一个新值，并使用新的列主密钥进行加密。 此工作流可以确保客户端应用程序能访问使用列加密密钥加密的数据，同时客户端应用程序将能使用新的列主密钥。 通过 Always Encrypted 功能，无权访问新主密钥的客户端应用程序中的驱动程序将能够通过列加密密钥值（使用旧的列主密钥进行加密）来访问敏感数据。 Always Encrypted 支持的加密算法要求纯文本值具有 256 位。 
+ 
+建议使用诸如 SQL Server Management Studio (SSMS) 或 PowerShell 等工具来轮换列主密钥。 请参阅[使用 SQL Server Management Studio 轮换 Always Encrypted 密钥](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md)和[使用 PowerShell 轮换 Always Encrypted 密钥](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)。
+
+应使用密钥存储提供程序生成加密值，该提供程序封装了存储有列主密钥的密钥存储。  
 
  轮换列主密钥，原因如下：
 - 法规遵从性要求可能要求定期轮换密钥。
 - 列主密匙遭到破坏，出于安全考虑，需对其进行轮换。
-- 若要启用或禁用与服务器端上的安全 enclave 共享列加密密钥。 例如，如果当前列主密钥不支持 enclave 计算（尚未使用 ENCLAVE_COMPUTATIONS 属性定义）并且你想要在使用列主密钥加密的列加密密钥进行保护的列上启用 enclave 计算，需要将列主密钥替换为具有 ENCLAVE_COMPUTATIONS 属性的新密钥。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
-
+- 若要启用或禁用与服务器端上的安全 enclave 共享列加密密钥。 例如，如果当前列主密钥不支持 enclave 计算（尚未使用 ENCLAVE_COMPUTATIONS 属性定义）并且你想要在使用列主密钥加密的列加密密钥进行保护的列上启用 enclave 计算，需要将列主密钥替换为具有 ENCLAVE_COMPUTATIONS 属性的新密钥。 [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)和[管理具有安全 enclave 的 Always Encrypted 的密钥](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)。
 
 可使用 [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 查看有关列加密密钥的相关信息。  
   
@@ -80,7 +83,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
 ### <a name="a-adding-a-column-encryption-key-value"></a>A. 添加列加密密钥值  
  下面的示例更改名为 `MyCEK` 的列加密密钥。  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
 ADD VALUE  
 (  
@@ -95,7 +98,7 @@ GO
 ### <a name="b-dropping-a-column-encryption-key-value"></a>B. 删除列加密密钥值  
  下面的示例删除了一个值，对名为 `MyCEK` 的列加密密钥进行了更改。  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
 DROP VALUE  
 (  
@@ -112,5 +115,8 @@ GO
  [sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
  [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [管理具有安全 enclave 的 Always Encrypted 的密钥](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

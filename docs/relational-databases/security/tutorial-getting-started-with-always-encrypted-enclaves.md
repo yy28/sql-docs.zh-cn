@@ -1,7 +1,7 @@
 ---
 title: 教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7012ae6863394e6895a192f9ec7df3d8ceea3ee0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909680"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592338"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 本教程介绍如何开始使用[具有安全 enclave 的 Always Encrypted](encryption/always-encrypted-enclaves.md)。 它将介绍：
 - 如何创建基本环境，以便测试和评估具有安全 enclave 的 Always Encrypted。
@@ -36,19 +36,16 @@ ms.locfileid: "72909680"
 ### <a name="sql-server-computer-requirements"></a>SQL Server 计算机要求
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 或更高版本。
-- Windows 10 企业版 1809 或 Windows Server 2019 Datacenter。
-- 如果 SQL Server 计算机是物理计算机，它必须满足 [Hyper-V 硬件要求](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)：
-   - 具有二级地址转换 (SLAT) 的 64 位处理器
-   - CPU 支持 VM 监视器模式扩展（Intel CPU 上的 VT-c）
-   - 启用了虚拟化支持（Intel VT-x 或 AMD-V）
-- 如果 SQL Server 计算机是虚拟机，必须将 VM 配置为支持基于虚拟化的安全性。
-   - 在 Hyper-V 2016 或更高版本中，在 VM 处理器上使用第 1 代 VM 并[启用嵌套虚拟化扩展](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)，或使用第 2 代 VM。 有关各代 VM 的详细信息，请参阅[是否应在 Hyper-V 中创建第 1 代或第 2 代虚拟机？](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v)。 
-   - 在 Azure 中，请确保正在运行的 VM 大小支持以下某一项：
-      - 嵌套虚拟化，例如 Dv3 和 Ev3 系列 VM。 请参阅[创建可嵌套的 Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)。
-      - 第 2 代 VM，例如 Dsv3 和 Esv3 系列 VM。 请参阅 [Azure 中对第 2 代 VM 的支持](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2)。
-   - 在 VMWare vSphere 6.7 或更高版本中，为 VM 启用基于虚拟化的安全支持，如 [VMware 文档](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)中所述。
-   - 只要向 VM 公开虚拟化扩展（有时亦称为“嵌套虚拟化”），其他虚拟机监控程序和公有云就可能支持对 VM 中的安全 enclave 使用 Always Encrypted。 有关兼容性和配置说明，请查看虚拟化解决方案的文档。
-- [SQL Server Management Studio (SSMS) 18.0 或更高版](../../ssms/download-sql-server-management-studio-ssms.md)。
+- Windows 10 企业版 1809 或更高版本；或是 Windows Server 2019 Datacenter 版本。 其他版本的 Windows 10 和 Windows Server 不支持通过 HGS 进行证明。
+- 针对虚拟化技术的 CPU 支持：
+  - 具有扩展页表的 Intel VT-x。
+  - 具有快速虚拟化索引的 AMD-V。
+  - 如果在 VM 中运行 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]，则虚拟机监控程序和物理 CPU 必须提供嵌套虚拟化功能。 
+    - 在 Hyper-V 2016 或更高版本中，[在 VM 处理器上启用嵌套虚拟化扩展](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
+    - 在 Azure 中，选择支持嵌套虚拟化的 VM 大小。 这包括所有 v3 系列 VM，例如 Dv3 和 Ev3。 请参阅[创建可嵌套的 Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)。
+    - 在 VMWare vSphere 6.7 或更高版本中，为 VM 启用基于虚拟化的安全支持，如 [VMware 文档](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)中所述。
+    - 其他虚拟机监控程序和公有云可能支持嵌套虚拟化功能，这些功能也实现具有 VBS Enclave 的 Always Encrypted。 有关兼容性和配置说明，请查看虚拟化解决方案的文档。
+- [SQL Server Management Studio (SSMS) 18.3 或更高版本](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 或者，可在另一台计算机上安装 SSMS。
 
@@ -158,7 +155,7 @@ ms.locfileid: "72909680"
 
 UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 5 和 6 以解决该错误。
 
-如果所有其他方法均失败，请运行 Clear-HgsClientHostKey 并重复步骤 4-7。
+如果所有其他方法均失败，请运行 Remove-HgsClientHostKey 并重复步骤 4-7。
 
 ## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>步骤 3：在 SQL Server 中启用具有安全 enclave 的 Always Encrypted
 
@@ -343,10 +340,12 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 3. 在未启用 Always Encrypted 的 SSMS 实例中重试同一查询，并记录发生的故障。
 
 ## <a name="next-steps"></a>Next Steps
-转到[教程：在使用随机加密且已启用 enclave 的列上创建并使用索引](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)，它是本教程的延续。
+完成本教程之后，可以继续学习以下教程之一：
+- [教程：开发使用具有安全 enclave 的 Always Encrypted 的 .NET Framework 应用程序](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- [教程：对使用随机加密的启用了 enclave 的列创建和使用索引](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
-若要了解含安全 enclave 的 Always Encrypted 的其他用例，请参阅[配置含安全 enclave 的 Always Encrypted](encryption/configure-always-encrypted-enclaves.md)。 例如：
-
-- [配置 TPM 证明。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [为 HGS 实例配置 HTTPS。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
-- 开发对加密列发出丰富查询的应用程序。
+## <a name="see-also"></a>另请参阅
+- [配置 Always Encrypted 的 enclave 类型服务器配置选项](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
+- [预配已启用 enclave 的密钥](encryption/always-encrypted-enclaves-provision-keys.md)
+- [使用 Transact-SQL 就地配置列加密](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
+- [查询使用具有安全 enclave 的 Always Encrypted 的列](encryption/always-encrypted-enclaves-query-columns.md)

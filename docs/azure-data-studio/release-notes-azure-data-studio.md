@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/11/2019
-ms.openlocfilehash: c77d22b01b824906e4d5c32311bfe20258fa3c61
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.date: 11/04/2019
+ms.openlocfilehash: 16e2a7568bb88dbf36576cf5a6d64a1b268621fa
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313619"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532531"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](download.md)**
+
+## <a name="november-2019"></a>2019 年 11 月
+
+2019 年 11 月 4 日&nbsp; / &nbsp; 版本：1.13.0 
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 新 SQL Server 2019 支持 | &bull; &nbsp; 使用 BDC 部署向导部署 SQL Server 2019 大数据群集 <br/>&bull; &nbsp; 使用控制器仪表板管理群集运行状况 <br/>&bull; &nbsp; 使用安全 ACL 对话框管理 HDFS 访问控制列表 <br/> &bull; &nbsp; 使用 HDFS 分层对话框添加装载 <br/> &bull; &nbsp; 使用内置 Jupyter Book、SQL Server 2019 指南进行排除故障 <br/> &bull; &nbsp; SQL vNext 扩展重命名为数据虚拟化扩展 <br/> &bull; &nbsp; 在外部表向导中添加了 Teradata 和 Mongo 支持|
+| 新笔记本功能 | &bull; &nbsp; 宣布推出 Powershell 笔记本 &bull; &nbsp; 宣布推出可折叠代码单元 <br/>&bull; &nbsp; 笔记本性能改进 <br/> &bull; &nbsp; 请在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22)查看完整的改进列表 |
+| 宣布推出 Jupyter Book  | Jupyter Book 是按目录整理的笔记本和 Markdown 文件的集合。 |
+| 新 SQL Server 部署向导  | 现在支持进行以下部署： <br/> &bull; &nbsp; Windows 上的 SQL Server 2019 <br/> &bull; &nbsp; 在 Windows 上部署 SQL Server 2017 <br/> &bull; &nbsp; 在 Docker 上部署 SQL Server 2019 <br/> &bull; &nbsp; 在 Docker 上部署 SQL Server 2017 |
+| 宣布正式发布架构比较扩展| &bull; &nbsp; SQLCMD 模式 <br/> &bull; &nbsp; 本地化支持 <br/> &bull; &nbsp; 辅助功能修补程序 <br/> &bull; &nbsp; 安全 bug  |
+| 宣布正式发布 SQL Server Dacpac 扩展| <br/> &bull; &nbsp; 本地化支持 <br/> &bull; &nbsp; 辅助功能修补程序 <br/> &bull; &nbsp; 安全 bug |
+| 宣布推出 Visual Studio IntelliCode 扩展 | Visual Studio IntelliCode 现在支持 SQL，可提供更加智能的保留关键字建议。 |
+| 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019-hotfix-2"></a>2019 年 10 月（修补程序 2）
 
@@ -228,7 +246,7 @@ ms.locfileid: "72313619"
 | 在 Profiler 扩展中添加了筛选扩展事件支持。 | &nbsp; |
 | 添加了“另存为 XML”功能，可将 T-SQL 结果保存为 XML。 | &nbsp; |
 | 添加了数据层应用程序向导方面的改进。 | &bull; &nbsp; 添加了“生成脚本”按钮<br/>&bull; &nbsp; 添加了视图，用于在部署过程中针对潜在数据丢失发出警告。 |
-| 更新 SQL Server 2019 预览版扩展。 | 请参阅 [SQL Server 2019 预览版扩展](sql-server-2019-extension.md?view=sql-server-ver15)。 |
+| 更新 SQL Server 2019 预览版扩展。 | 请参阅[数据虚拟化扩展](data-virtualization-extension.md?view=sql-server-ver15)。 |
 | 为长时间运行的查询默认启用结果流式处理。 | &nbsp; |
 | 解决了 Bug 和问题。 | 请参阅 [GitHub 上的 Bug 和问题](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1)。 |
 | &nbsp; | &nbsp; |
@@ -256,7 +274,7 @@ ms.locfileid: "72313619"
 | 添加了 Azure Active Directory 身份验证支持。 | &nbsp; |
 | 宣布推出 Idera SQL DM Performance Insight（预览版）。 | &nbsp; |
 | SQL Server 导入扩展中的数据层应用程序向导支持。 | &nbsp; |
-| 更新到 SQL Server 2019 预览版扩展。 | 请参阅 [SQL Server 2019 预览版扩展](sql-server-2019-extension.md?view=sql-server-ver15)。 |
+| 更新到 SQL Server 2019 预览版扩展。 | 请参阅[数据虚拟化扩展](data-virtualization-extension.md?view=sql-server-ver15)。 |
 | SQL Server Profiler 改进。 | &nbsp; |
 | 大型查询的结果流式处理（预览版）。 | &nbsp; |
 | Community 扩展：sp_executesql 到 sql 和新数据库。 | &nbsp; |
@@ -271,7 +289,7 @@ ms.locfileid: "72313619"
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 更新到 SQL Server 2019 预览版扩展。 | 请参阅 [SQL Server 2019 预览版扩展](sql-server-2019-extension.md?view=sql-server-ver15)。 |
+| 更新到 SQL Server 2019 预览版扩展。 | 请参阅[数据虚拟化扩展](data-virtualization-extension.md?view=sql-server-ver15)。 |
 | 引入“粘贴计划”扩展。 | &nbsp; |
 | 引入增强色查询扩展，包括 SSMS 编辑器主题。 | &nbsp; |
 | 修复 SQL Server 代理、Profiler 和导入扩展中的问题。 | &nbsp; |
@@ -301,7 +319,7 @@ ms.locfileid: "72313619"
 | 引入 Azure 资源浏览器以浏览 Azure SQL 数据库。 | &nbsp; |
 | 改进对象资源管理器和查询编辑器的连接稳定性。 | &nbsp; |
 | 改进 SQL 代理扩展。 | &nbsp; |
-| 更新到 SQL Server 2019 预览版扩展。 | 请参阅 [SQL Server 2019 预览版扩展](sql-server-2019-extension.md?view=sql-server-ver15)。 |
+| 更新到 SQL Server 2019 预览版扩展。 | 请参阅[数据虚拟化扩展](data-virtualization-extension.md?view=sql-server-ver15)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>Bug 修复，2018 年 10 月

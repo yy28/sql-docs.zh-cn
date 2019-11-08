@@ -1,56 +1,54 @@
 ---
 title: 什么是大数据群集？
 titleSuffix: SQL Server Big Data Clusters
-description: 了解 Kubernetes 上运行的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （预览版），并提供用于关系数据和 HDFS 数据的向外缩放选项。
+description: 了解在 Kubernetes 上运行并为关系数据和 HDFS 数据提供横向扩展选项的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]（预览版）。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cffb1bcf353932183703f810c876b6adacaa7bbf
-ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
-ms.translationtype: MT
+ms.openlocfilehash: 296a39a59521441a8f3cd5b95bd8e61710fa568a
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72359533"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532511"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-从 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 开始，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 使你可以部署在 Kubernetes 上运行的 SQL Server、Spark 和 HDFS 容器的可缩放群集。 这些组件并行运行以确保可读取、写入和处理 Transact-SQL 或 Spark 中的大数据，这样你就可以借助大量大数据轻松合并并分析高价值关系数据。
+从 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 开始，借助 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可部署在 Kubernetes 上运行的 SQL Server、Spark 和 HDFS 容器的可缩放群集。 这些组件并行运行以确保可读取、写入和处理 Transact-SQL 或 Spark 中的大数据，这样你就可以借助大量大数据轻松合并并分析高价值关系数据。
 
 有关最新版本的新功能和已知问题的详细信息，请参阅[发行说明](release-notes-big-data-cluster.md)。
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
 ## <a name="scenarios"></a>方案
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 在如何与大数据交互方面提供了灵活性。 可查询外部数据源，存储通过 SQL Server 管理的 HDFS 中的大数据，或通过群集查询来自多个外部数据源的数据。 然后，可以将数据用于 AI，机器学习和其他分析任务。 下列各部分提供了有关这些方案的详细信息。
+使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可灵活处理大数据。 可查询外部数据源，存储通过 SQL Server 管理的 HDFS 中的大数据，或通过群集查询来自多个外部数据源的数据。 然后，可以将数据用于 AI，机器学习和其他分析任务。 下列各部分提供了有关这些方案的详细信息。
 
 ### <a name="data-virtualization"></a>数据虚拟化
 
-通过利用[SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md)，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可以在不移动或复制数据的情况下查询外部数据源。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 引入了数据源的新连接器。
+通过利用 [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md)，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可以查询外部数据源，而无需移动或复制数据。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 引入了数据源的新连接器。
 
 ![数据虚拟化](media/big-data-cluster-overview/data-virtualization.png)
 
 ### <a name="data-lake"></a>Data Lake
 
-SQL Server 大数据群集包括可缩放的 HDFS 存储池。 这可用于存储可能来自多个外部源的大数据。 大数据存储在大数据群集中的 HDFS 中后，便可分析和查询数据并将其与关系数据相结合。
+SQL Server 大数据群集包括可缩放的 HDFS 存储池  。 这可用于存储可能来自多个外部源的大数据。 大数据存储在大数据群集中的 HDFS 中后，便可分析和查询数据并将其与关系数据相结合。
 
 ![Data Lake](media/big-data-cluster-overview/data-lake.png)
 
 ### <a name="scale-out-data-mart"></a>横向扩展数据市场
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 提供了向外扩展计算和存储，以提高分析任何数据的性能。 来自各种源的数据可作为缓存跨数据池节点进行引入和分布以供进一步分析。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 提供了横向扩展计算和存储以提高分析任何数据的性能。 来自各种源的数据可作为缓存跨数据池节点进行引入和分布以供进一步分析  。
 
 ![数据市场](media/big-data-cluster-overview/data-mart.png)
 
 ### <a name="integrated-ai-and-machine-learning"></a>集成的 AI 和机器学习
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 在 HDFS 存储池中存储的数据和数据池中启用 AI 和机器学习任务。 使用 R、Python、Scala 或者 Java，可在 SQL Server 中使用 Spark 以及内置的 AI 工具。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可对 HDFS 存储池和数据池中的数据启用 AI 和机器学习任务。 使用 R、Python、Scala 或者 Java，可在 SQL Server 中使用 Spark 以及内置的 AI 工具。
 
 ![AI 和 ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
@@ -58,7 +56,7 @@ SQL Server 大数据群集包括可缩放的 HDFS 存储池。 这可用于存�
 
 通过命令行工具、API、门户和动态管理视图的组合提供管理和监视。
 
-可以使用 Azure Data Studio 在大数据群集上执行各种任务。 这是由新的 SQL Server 2019 扩展（预览版）启用的。 此扩展提供：
+可以使用 Azure Data Studio 在大数据群集上执行各种任务。 这是由新的 SQL Server 2019 扩展（预览版）启用的  。 此扩展提供：
 
 - 用于常见管理任务的内置片段。
 - 浏览 HDFS、上传文件、预览文件和创建目录的能力。
@@ -80,7 +78,7 @@ Kubernetes 是一个开放源代码容器业务流程协调程序，可以根据
 | **Pod** | Pod 是 Kubernetes 的原子部署单元。 Pod 是运行应用程序所需的一个或多个容器和相关资源的逻辑组。 一个 Pod 只能在一个节点上运行；一个节点可以运行一个或多个 Pod。 Kubernetes 主节点自动将 Pod 分配给群集中的其余节点。 |
 | &nbsp; ||
 
-在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 中，Kubernetes 负责 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的状态;Kubernetes 构建和配置群集节点，将 pod 分配给节点，并监视群集的运行状况。
+在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 中，Kubernetes 负责 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的状态；Kubernetes 生成和配置群集节点、将 Pod 分配给节点，并监视群集的运行状况。
 
 ### <a name="big-data-clusters-architecture"></a>大数据群集体系结构
 
@@ -90,11 +88,11 @@ Kubernetes 是一个开放源代码容器业务流程协调程序，可以根据
 
 ### <a id="controlplane"></a>控制器
 
-控制器为群集提供管理和安全性。 它包含控制服务、配置存储和其他群集级服务，例如 Kibana、Grafana 和弹性搜索。
+控制器为群集提供管理和安全性。 它包含控制服务、配置存储和其他群集级服务，例如 Kibana、Grafana 和 Elastic Search。
 
 ### <a id="computeplane"></a> 计算池
 
-计算池为群集提供计算资源。 它包含在 Linux 上的 SQL Server Pod 上运行的节点。 计算池中的 Pod 分为用于特定处理任务的 SQL Compute实例。 
+计算池为群集提供计算资源。 它包含在 Linux 上的 SQL Server Pod 上运行的节点。 计算池中的 Pod 分为用于特定处理任务的 SQL Compute  实例。 
 
 ### <a id="dataplane"></a> 数据池
 
@@ -105,8 +103,8 @@ Kubernetes 是一个开放源代码容器业务流程协调程序，可以根据
 存储池由 Linux 上的 SQL Server、Spark 和 HDFS 组成的存储池 Pod 组成。 SQL Server 大数据群集中的所有存储节点都是 HDFS 群集的成员。
 
 > [!TIP]
-> 若要深入了解大数据群集体系结构和安装，请参阅[研讨会： Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)。
+> 如需深入了解大数据群集体系结构和安装，请参阅[研讨会：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关部署 SQL Server 大数据群集的详细信息，请参阅[SQL Server 大数据群集入门](deploy-get-started.md)。
+有关部署 SQL Server 大数据群集的详细信息，请参阅 [SQL Server 大数据群集入门](deploy-get-started.md)。

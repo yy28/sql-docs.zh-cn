@@ -1,32 +1,34 @@
 ---
 title: 使用 PowerShell 配置 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ad4a50d8aeca225ae0d00574a62cc428593ebb2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903007"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594417"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 配置 Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-SqlServer PowerShell 模块提供用于在 Azure SQL 数据库和 SQL Server 2016 中配置 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 的 cmdlet。
+SqlServer PowerShell 模块提供用于在 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中配置 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 的 cmdlet。
 
-SqlServer 模块中的 Always Encrypted cmdlet 适用于密钥或敏感数据，因此，必须在安全的计算机上运行这些 cmdlet。 管理 Always Encrypted 时，请不要在托管 SQL Server 实例的计算机上执行 cmdlet，而是在另一台计算机上执行。
+## <a name="security-considerations-when-using-powershell-to-configure-always-encrypted"></a>使用 PowerShell 配置 Always Encrypted 时的安全注意事项
 
 由于 Always Encrypted 的主要目的是确保加密敏感数据的安全（即使数据库系统遭到入侵），因此在 SQL Server 计算机上执行处理密钥或敏感数据的 PowerShell 脚本可减少或抵消该功能带来的益处。 有关其他安全相关的建议，请参阅 [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)（密钥管理的安全注意事项）。
 
-单个 cmdlet 文章的链接位于 [此页底部](#aecmdletreference)。
+你可以在分隔角色或不分隔角色的情况下使用 PowerShell 管理 Always Encrypted 密钥，从而控制可访问密钥存储中实际加密密钥的人员和可访问该数据库的人员。
+
+ 有关其他建议，请参阅 [密钥管理安全注意事项](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -50,14 +52,43 @@ Import-Module "SqlServer"
 ## <a name="connectingtodatabase"></a> 连接到数据库
 
 一些 Always Encrypted cmdlet 适用于数据库中的数据或元数据，并要求你首先应连接到数据库。 使用 SqlServer 模块配置 Always Encrypted 时，建议使用两种方法来连接到数据库： 
-1. 使用 SQL Server PowerShell 连接。
-2. 使用 SQL Server 管理对象 (SMO) 连接。
+1. 使用 Get-SqlDatabase cmdlet 进行连接  。
+2. 使用 SQL Server PowerShell 提供程序进行连接。
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+### <a name="using-get-sqldatabase"></a>使用 Get-SqlDatabase
+通过 Get-SqlDatabase cmdlet，可以连接到 SQL Server 或 Azure SQL 数据库中的数据库  。 它会返回一个数据库对象，随后你可以使用连接数据库的 cmdlet 的 InputObject 参数传递此对象  。 
 
 ### <a name="using-sql-server-powershell"></a>使用 SQL Server PowerShell
 
-此方法仅适用于 SQL Server（Azure SQL 数据库中不支持此方法）。
+```
+# Import the SqlServer module
+Import-Module "SqlServer"  
 
-通过 SQL Server PowerShell，你可以使用与你通常用于导航文件系统路径的命令相似的 Windows PowerShell 别名来导航路径。 导航到目标实例和数据库后，后续 cmdlet 将以该数据库为目标，如下面的示例所示：
+# Connect to your database
+# Set the valid server name, database name and authentication keywords in the connection string
+$serverName = "<Azure SQL server name>.database.windows.net"
+$databaseName = "<database name>"
+$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
+$database = Get-SqlDatabase -ConnectionString $connStr
+
+# List column master keys for the specified database.
+Get-SqlColumnMasterKey -InputObject $database
+```
+
+或者，你可使用管道传送：
+
+
+```
+$database | Get-SqlColumnMasterKey
+```
+
+### <a name="using-sql-server-powershell-provider"></a>使用 SQL Server PowerShell 提供程序
+[SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)用类似于文件系统路径的路径公开 SQL Server 对象的层次结构。 通过 SQL Server PowerShell，你可以使用与你通常用于导航文件系统路径的命令相似的 Windows PowerShell 别名来导航路径。 在你导航到目标实例和数据库后，后续 cmdlet 将以该数据库为目标，如下面的示例所示。 
+
+> [!NOTE]
+> 连接数据库的此方法仅适用于 SQL Server（Azure SQL 数据库中不支持此方法）。
 
 ```
 # Import the SqlServer module.
@@ -79,43 +110,11 @@ Import-Module "SqlServer"
 Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\yourdatabase
 ```
  
-### <a name="using-smo"></a>使用 SMO
-
-此方法同时适用于 Azure SQL 数据库和 SQL Server。
-使用 SMO，你可创建 [Database 类](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.database.aspx)的一个对象，然后使用用于连接到该数据库的 cmdlet 的 **InputObject** 参数传递此对象。
-
-
-```
-# Import the SqlServer module
-Import-Module "SqlServer"  
-
-# Connect to your database (Azure SQL database).
-$serverName = "<Azure SQL server name>.database.windows.net"
-$databaseName = "<database name>"
-$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName] 
-
-# List column master keys for the specified database.
-Get-SqlColumnMasterKey -InputObject $database
-```
-
-
-或者，你可使用管道传送：
-
-
-```
-$database | Get-SqlColumnMasterKey
-```
-
 ## <a name="always-encrypted-tasks-using-powershell"></a>使用 PowerShell 的 Always Encrypted 任务
 
-- [使用 PowerShell 配置 Always Encrypted 密钥](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md) 
+- [使用 PowerShell 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-powershell.md)
 - [使用 PowerShell 轮换 Always Encrypted 密钥](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [使用 PowerShell 配置列加密](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)
+- [通过 PowerShell 对使用 Always Encrypted 的列进行加密、重新加密或解密](configure-column-encryption-using-powershell.md)
 
 
 ##  <a name="aecmdletreference"></a> Always Encrypted Cmdlet 参考
@@ -145,11 +144,9 @@ $database | Get-SqlColumnMasterKey
 
 
 
-## <a name="additional-resources"></a>其他资源
+## <a name="see-also"></a>另请参阅
 
-- [Always Encrypted（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 密钥管理概述](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [对用于 SQL Server 的 .NET Framework 数据提供程序使用 Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [使用 SQL Server Management Studio 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-
+- [使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)

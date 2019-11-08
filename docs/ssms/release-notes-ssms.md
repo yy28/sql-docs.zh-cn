@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 10/03/2019
-ms.openlocfilehash: eedec59438b13f9a2e9ac92562921ef0504b8f58
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.date: 11/04/2019
+ms.openlocfilehash: 9d6e0484e5c3bdda9b46b381d574f84dd216c4f2
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816794"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593690"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -41,9 +41,69 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## <a name="ssms-1831"></a>SSMS 18.3.1
+## <a name="ssms-184"></a>SSMS 18.4
 
-下载：[下载 SSMS 18.3.1](download-sql-server-management-studio-ssms.md)  
+下载：[下载 SSMS 18.4](download-sql-server-management-studio-ssms.md)  
+生成号：15.0.18206.0  
+发布日期：2019 年 11 月 4 日
+
+SSMS 18.4 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早期版本，请参阅 [SSMS 的早期版本](release-notes-ssms.md#previous-ssms-releases)。
+
+18.4 是对 18.3.1 的更新，添加了以下新项并修复了以下 bug。
+
+## <a name="whats-new-in-184"></a>18.4 的新增功能
+
+| 新建项 | 详细信息 |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 数据分类 | 添加了对用于数据分类的自定义信息保护策略的支持。 |
+| 查询存储 | 在对话框属性中添加了“每个查询的最大计划数”值  。 |
+| 查询存储 | 添加了对新的自定义捕获策略的支持。 |
+| SMO/脚本 | SQL DW 中的具体化视图的支持脚本。 |
+| SMO/脚本 | 添加了对按需 SQL  的支持。 |
+| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了 50 条评估规则（请参阅 GitHub 上的详细信息）。 |
+| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了基本数学表达式以及与规则条件的比较。 |
+| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了对 RegisteredServer 对象的支持。 |
+| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了以 JSON 格式存储规则的方式，还更新了应用替代项/自定义项的机制。 |
+| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了规则以支持 Linux 上的 SQL。 |
+| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了规则集 JSON 格式并添加了架构版本。 |
+| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了 cmdlet 输出以提高建议的可读性。 |
+| XEvent 探查器 | 向 XEvent 探查器会话添加了 error_reported  事件。 |
+
+## <a name="bug-fixes-in-184"></a>18.4 中的 bug 修复
+
+| 新项 | 详细信息 |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Analysis Services | 修复了多维数据库的 DAX 脚本编辑器未在 IntelliSense 中显示表的问题。 |
+| Analysis Services | 使用 DAX 分析程序转换为引擎字符串。 这适用于国际分隔符、十进制和空白。 |
+| Always Encrypted | 修复了声明验证  不区分大小写  的问题。 |
+| Always Encrypted | 修复了错误/警告报告未正常工作的问题。 |
+| 复制数据库向导 | 修复了此对话框呈现中的各种截断和布局问题。 |
+| 常规 SSMS | 修复了一个长期未解决的问题，即当还指定了 SQL 文件时，SSMS 不遵从在命令行中传递的连接信息。 |
+| 常规 SSMS | 修复了尝试在“复制筛选器”对象上显示安全对象时 SSMS 中的故障。 |
+| 常规 SSMS | 通过让 SSMS 查看凭据缓存，减轻了 -P 命令行选项的删除：如果找到所需凭据，则会使用它建立连接。 |
+| 导入平面文件 | 修复了导入平面文件  功能未正确处理文本限定符的问题。 |
+| “对象资源管理器” | 修复了在对象资源管理器中删除 Azure SQL 数据库会显示错误消息的问题。 |
+| 查询结果 | 修复了在 SSMS 18.3.1 中引入的一个问题，即网格会稍微绘制得窄一点，并在每列中最长的字符串末尾显示 ...  。 |
+| 复制工具 | 修复了在尝试编辑 SQL 代理作业时导致应用程序引发错误（“无法加载文件或程序集...”）的问题。 |
+| SMO/脚本 | 修复了其排序规则是 Japanese_BIN2 的 SQL DW 的“编写表脚本为...”  未正常工作时的问题。|
+| SMO/脚本 | 修复了 ScriptAlter() 在服务器上结束语句执行的问题。|
+| SQL 代理 | 修复了代理操作员 UI 在操作员名称在 UI 中进行了更改时不更新名称，也不会对它编写脚本的问题。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/32897647)。|
+
+### <a name="known-issues-184"></a>已知问题 (18.4)
+
+* 无法从计算机 B 修改通过在计算机 A 上运行的 SSMS 创建的数据库关系图（SSMS 崩溃）。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
+
+* 在多个查询窗口之间切换时会出现重绘问题。 有关更多详细信息，请参阅 UserVoice。 此问题的解决方法是在“工具”>“选项”  下禁用硬件加速。
+
+可参考 [UserVoice](https://feedback.azure.com/forums/908035-sql-server) 了解其他已知问题，并向产品团队提供反馈。
+
+## <a name="previous-ssms-releases"></a>SSMS 的早期版本
+
+通过单击以下部分中的标题链接，下载 SSMS 的早期版本：
+
+## <a name="downloadssdtmediadownloadpng-ssms-1831httpsgomicrosoftcomfwlinklinkid2105412"></a>![](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
+
+版本号：18.3.1  
 生成号：15.0.18183.0  
 发布日期：2019 年 10 月 2日
 
@@ -55,7 +115,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 
 | 新建项 | 详细信息 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 数据分类 | 向列属性 UI 添加数据分类信息（*信息类型*、*信息类型 ID*、*敏感度标签*和*敏感度标签 ID* 未在 SSMS UI 中公开）。 |
+| 数据分类 | 向列属性 UI 添加数据分类信息（信息类型  、信息类型 ID  、敏感度标签  和敏感度标签 ID  未在 SSMS UI 中公开）。 |
 | Intellisense/编辑器 | 更新了对最近添加到 SQL Server 2019 中的功能的支持（例如，“ALTER SERVER CONFIGURATION”）。 |
 | Integration Services | 添加新的选择菜单项 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，该菜单项将 Azure-SSIS Integration Runtime 上的 SSIS 包执行作为 ADF 管道中的“执行 SSIS 包”活动调用。 |
 | SMO/脚本 | 添加了对 Azure SQL DW 唯一约束的支持脚本的支持。 |
@@ -73,7 +133,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 | Analysis Services | 修复了 XEvent UI 中阻止户创建新会话的问题。 |
 | 到 SQL Azure 的数据库部署 | 修复了导致此功能无法正常运行的问题（在 DacFx 中）。|
 | 常规 SSMS | 修复了导致 SSMS 在 XEvent 查看器使用排序功能时崩溃的问题。 |
-| 常规 SSMS | 修复了 SSMS 还原数据库可能无限期挂起的长期未解决的问题。 </br></br> 有关更多详细信息，请参阅 UserVoice 项目：  </br> [还原数据库 -“选择备份设备”加载缓慢](https://feedback.azure.com/forums/908035/suggestions/32899099/)。  </br> [SSMS 2016 在数据库还原对话框中运行缓慢](https://feedback.azure.com/forums/908035/suggestions/32900767/)。 </br> [还原数据库速度缓慢](https://feedback.azure.com/forums/908035/suggestions/32900224/)。  </br> [单击“...”还原数据库时设备挂起](https://feedback.azure.com/forums/908035/suggestions/34281658/)。  |
+| 常规 SSMS | 修复了 SSMS 还原数据库可能无限期挂起的长期未解决的问题。 </br></br> 有关更多详细信息，请参阅 UserVoice 项目： </br> [还原数据库 -“选择备份设备”加载缓慢](https://feedback.azure.com/forums/908035/suggestions/32899099/)。  </br> [SSMS 2016 在数据库还原对话框中运行缓慢](https://feedback.azure.com/forums/908035/suggestions/32900767/)。 </br> [还原数据库速度缓慢](https://feedback.azure.com/forums/908035/suggestions/32900224/)。  </br> [单击“...”还原数据库时设备挂起](https://feedback.azure.com/forums/908035/suggestions/34281658/)。  |
 | 常规 SSMS | 修复了所有登录名的默认语言显示为阿拉伯语的问题。 </br></br> 有关更多详细信息，请参阅 UserVoice 项目：[SSMS 18.2 默认语言显示错误](https://feedback.azure.com/forums/908035/suggestions/38236363)。 |
 | 常规 SSMS | 修复了难以看到“查询选项”对话框（当用户右键单击 T-SQL 编辑器窗口时）的问题  。|
 | 常规 SSMS | 现在可以在“工具”>“选项”>“查询执行”>“SQL Server”>“高级”>“显示完成时间”下配置“结果网格/文件”（在 SSMS 18.2 中引入）中显示的“完成时间”消息  。 |
@@ -94,10 +154,6 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 - 在多个查询窗口之间切换时会出现重绘问题。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此问题的解决方法是在“工具”>“选项”下禁用硬件加速。
 
 可参考 [UserVoice](https://feedback.azure.com/forums/908035-sql-server) 了解其他已知问题，并向产品团队提供反馈。
-
-## <a name="previous-ssms-releases"></a>SSMS 的早期版本
-
-通过单击以下部分中的标题链接，下载 SSMS 的早期版本：
 
 ## <a name="downloadssdtmediadownloadpng-ssms-182httpsgomicrosoftcomfwlinklinkid2099720"></a>![下载](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
 
@@ -396,7 +452,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 |平面文件导入向导|修复了“导入平面文件向导”未正确处理双引号（转义）的问题。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035/suggestions/32897998](https://feedback.azure.com/forums/908035/suggestions/32897998)。 |
 |平面文件导入向导|修复了（在使用不同浮点分隔符的区域设置上）错误处理浮点类型的问题。|
 |平面文件导入向导|修复了与值为 0 或 1 时的导入位数相关的问题。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535)。 |
-|平面文件导入向导|修复了浮点数  输入为 null  问题。|
+|平面文件导入向导|修复了浮点  数据类型输入为 null  问题。|
 |平面文件导入向导|修复了导入向导无法处理负十进制值的问题。|
 |平面文件导入向导|修复了向导无法从单列 CSV 文件导入的问题。|
 |平面文件导入向导|将在 SSMS 17.9 中提供] 修复了已存在目标表时平面文件导入不允许更改目标表的问题。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186)。 |
@@ -448,7 +504,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 |结果网格|修复了单击网格时导致出现“索引超出范围”异常的问题。|
 |结果网格|解决了网格结果背景色被忽略的问题。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035/suggestions/32895916](https://feedback.azure.com/forums/908035/suggestions/32895916)。 |
 |显示计划|有多个线程时，新的内存授予运算符属性显示错误。|
-|显示计划|在实际执行 xml 计划的 RunTimeCountersPerThread 中添加以下 4 个属性：HpcRowCount（由 hpc 设备处理的行数）、HpcKernelElapsedUs（正在使用的内核执行的运行时间等待）、HpcHostToDeviceBytes（已从主机传输到设备的字节数）和 HpcDeviceToHostBytes （已从设备传输到主机的字节数）。|
+|显示计划|在实际执行 xml 计划的 RunTimeCountersPerThread 中添加以下 4 个属性：HpcRowCount（由 hpc  设备处理的行数）、HpcKernelElapsedUs（正在使用的内核执行的运行时间等待）、HpcHostToDeviceBytes（已从主机传输到设备的字节数）和 HpcDeviceToHostBytes （已从设备传输到主机的字节数）。|
 |显示计划|修复了类似计划节点在错误位置突出显示的问题。|
 |SMO|修复了 SMO/ServerConnection 未正确处理基于 SqlCredential 的连接的问题。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941](https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941)。 |
 |SMO|修复了使用 SMO 编写的应用程序在多个线程上试图枚举来自同一服务器的数据库时遇到错误（即使在每个线程上使用单独的 SqlConnection 实例）的问题。|
@@ -551,7 +607,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 * 解决了 SQL 设计器滚动条的问题。 [连接 ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
 
 * 表的上下文菜单暂时挂起 
- 
+
 * SSMS 偶尔在活动监视器中引发异常和崩溃。 [连接 ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 
 * SSMS 2016 崩溃，显示错误“由于在 IP 71AF8579 (71AE0000) 的 .NET 运行时出现内部错误，进程终止，退出代码 80131506”
@@ -585,4 +641,4 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 
 有关所有 SQL Server Management Studio 下载的列表，请搜索 [Microsoft 下载中心](https://www.microsoft.com/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending)。  
   
-有关最新版本的 SQL Server Management Studio，请参阅 [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。  
+有关最新版本的 SQL Server Management Studio，请参阅 [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。

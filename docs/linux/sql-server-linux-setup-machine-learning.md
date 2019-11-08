@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 09/23/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b3d2fb6c05a078e222a68e8de8998d4edff3c1a8
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.openlocfilehash: 4f32f4219e438a3f6dc390d11b50e6487c47ee49
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71271967"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531252"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安装 SQL Server 机器学习服务（Python 和 R）
 
@@ -35,9 +35,11 @@ Python 和 R 扩展的包位于 SQL Server Linux 源存储库中。 如果已为
 
 Linux 容器也支持机器学习服务。 我们不提供带有机器学习服务的预构建容器，但你可以使用 [GitHub 中的示例模板](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)在 SQL Server 容器中创建一个容器。
 
-## <a name="uninstall-previous-ctp"></a>卸载以前的 CTP
+机器学习服务默认安装在 SQL Server 大数据群集上，用户无需按照此示例中的步骤执行操作。 有关详细信息，请参阅[在大数据群集上使用机器学习服务（Python 和 R）](../big-data-cluster/machine-learning-services.md)。
 
-包列表在最近几个 CTP 版本中发生了更改，因而包的数量有所减少。 我们建议先卸载 CTP 2.x 以删除所有以前的包，然后再安装 CTP 3.2。 不支持并行安装多个版本。
+## <a name="uninstall-preview-release"></a>卸载预览版
+
+如果安装了预览版本（社区技术预览版 (CTP) 或候选发布），建议先卸载此版本以删除以前的所有包，然后再安装 SQL Server 2019。 不支持并行安装多个版本，并且包列表在最后几个预览版 (CTP/RC) 中进行了更改。
 
 ### <a name="1-confirm-package-installation"></a>1.确认包安装
 
@@ -47,7 +49,7 @@ Linux 容器也支持机器学习服务。 我们不提供带有机器学习服�
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2.卸载以前的 CTP 2.x 包
+### <a name="2-uninstall-ctprc-packages"></a>2.卸载 CTP/RC 包
 
 在最低包级别进行卸载。 依赖于较低级别包的所有上游包都会自动卸载。
 
@@ -63,14 +65,14 @@ ls /opt/microsoft/mssql/bin
 | Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
-> Microsoft R Open 3.4.4 由两个或三个包组成，具体取决于之前安装的 CTP 版本。 （foreachiterators 包已合并到 CTP 2.2 中的主 mro 包中。）如果在删除 microsoft-r-open-mro-3.4.4 后，这些包中的任何包仍然存在，则应单独删除它们。
+> Microsoft R Open 3.4.4 由两个包组成，具体取决于之前安装的 CTP 版本。 （foreachiterators 包已合并到 CTP 2.2 中的主 mro 包中。）如果在删除 microsoft-r-open-mro-3.4.4 后，这些包中的任何包仍然存在，则应单独删除它们。
 > ```
 > microsoft-r-open-foreachiterators-3.4.4
 > microsoft-r-open-mkl-3.4.4
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-32-install"></a>3.继续进行 CTP 3.2 安装
+### <a name="3-proceed-with-install"></a>3.继续安装
 
 使用本文中针对操作系统的说明在最高包级别进行安装。
 
@@ -178,8 +180,6 @@ zypper update
 | [microsoft-r-open*](#mro) | R | 由三个包组成的 R 的开放源代码发行版。 |
 |mssql-mlservices-mlm-r  | R | 完全安装  。 提供用于图像特征化和文本情绪分析的 RevoScaleR、MicrosoftML、sqlRUtils、olapR、预先训练的模型。| 
 |mssql-mlservices-packages-r  | R | 最小安装  。 提供 RevoScaleR、sqlRUtils、MicrosoftML、olapR。 <br/>不包括预先训练的模型。 | 
-|mssql-mlservices-mml-py  | 仅限 CTP 2.0-2.1 | 由于 Python 包合并到 mssql-mslservices-python 中，因此在 CTP 2.2 中已过时。 提供 revoscalepy。 不包括预先训练的模型和 microsoftml。| 
-|mssql-mlservices-mml-r  | 仅限 CTP 2.0-2.1 | 由于 R 包合并到 mssql-mslservices-python 中，因此在 CTP 2.2 中已过时。 提供 RevoScaleR、sqlRUtils、olapR。 不包括预先训练的模型和 MicrosoftML。  |
 
 <a name="RHEL"></a>
 
@@ -420,7 +420,7 @@ EULA 接受的所有可能的排列方式都记录在[使用 mssql-conf 工具�
 
 #### <a name="download-site"></a>下载站点
 
-可以从 [https://packages.microsoft.com/](https://packages.microsoft.com/) 下载包。 R 和 Python 的所有 mlservices 包都与数据库引擎包位于相同位置。 mlservices 包的基本版本为 9.4.5（适用于 CTP 2.0）、9.4.6（适用于 CTP 2.1 及更高版本）。 回想一下，microsoft-r-open 包位于[其他存储库](#mro)中。
+可以从 [https://packages.microsoft.com/](https://packages.microsoft.com/) 下载包。 R 和 Python 的所有 mlservices 包都与数据库引擎包位于相同位置。 mlservices 包的基础版本为 9.4.6。 回想一下，microsoft-r-open 包位于[其他存储库](#mro)中。
 
 #### <a name="rhel7-paths"></a>RHEL/7 路径
 
@@ -515,24 +515,87 @@ mssql-mlservices-mlm-py-9.4.7.64
    @script = N'import httpie' 
    ```
 
-## <a name="limitations-in-ctp-releases"></a>CTP 版本的限制
+## <a name="run-in-a-container"></a>在容器中运行
 
-Linux 上的 R 和 Python 集成仍处于积极开发阶段。 预览版本中尚未启用以下功能。
+按照以下步骤在 Docker 容器中生成并运行 SQL Server 机器学习服务。 有关详细信息，请参阅 [在 Docker 上配置 SQL Server 容器映像](sql-server-linux-configure-docker.md)。
 
-+ 目前，Linux 上的机器学习服务中不提供隐式身份验证，这意味着无法从进程中的 R 或 Python 脚本连接回服务器以访问数据或其他资源。 
+### <a name="prerequisites"></a>必备条件
 
-### <a name="resource-governance"></a>资源调控
+- Git 命令行接口。
+- 任何受支持的 Linux 发行版本上的 Docker 引擎 1.8 及更高版本，或用于 Mac/Windows 的 Docker。 有关详细信息，请参阅 [Install Docker](https://docs.docker.com/engine/installation/)（安装 Docker）。
+- 至少 2GB 磁盘空间。
+- 至少 2 GB 的 RAM。
+- [Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
 
-Linux 和 Windows 之间存在供外部资源池进行[资源调控](../t-sql/statements/create-external-resource-pool-transact-sql.md)的奇偶校验，但 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 的统计信息目前在 Linux 上具有不同的单位。 单位将在即将推出的 CTP 中保持一致。
- 
-| 列名   | 描述 | Linux 上的值 | 
-|---------------|--------------|---------------|
-|peak_memory_kb | 资源池使用的最大内存量。 | 在 Linux 上，此统计信息来自 CGroups 内存子系统，其值为 memory.max_usage_in_bytes |
-|write_io_count | 自重置 Resource Governor 统计信息以来发出的写入 IO 总数。 | 在 Linux 上，此统计信息来自 CGroups blkio 子系统，其中写入行上的值为 blkio.throttle.io_serviced | 
-|read_io_count | 自重置 Resource Governor 统计信息以来发出的读取 IO 总数。 | 在 Linux 上，此统计信息来自 CGroups blkio 子系统，其中读取行上的值为 blkio.throttle.io_serviced | 
-|total_cpu_kernel_ms | 自重置 Resource Governor 统计信息以来的累计 CPU 用户内核时间（以毫秒为单位）。 | 在 Linux 上，此统计信息来自 CGroups cpuacct 子系统，其中用户行上的值为 cpuacct.stat |  
-|total_cpu_user_ms | 自重置 Resource Governor 统计信息以来的累计 CPU 用户时间（以毫秒为单位）。| 在 Linux 上，此统计信息来自 CGroups cpuacct 子系统，其中系统行值上的值为 cpuacct.stat | 
-|active_processes_count | 请求时运行的外部进程数。| 在 Linux 上，此统计信息来自 GGroups pids 子系统，其值为 pids.current | 
+### <a name="clone-the-mssql-docker-repository"></a>克隆 mssql-docker 存储库
+
+1. 在 Linux 或 Mac 上打开 Bash 终端，或在 Windows 上打开 WSL 终端。
+
+1. 创建本地目录，用于保留 mssql-docker 存储库的本地副本。
+
+1. 运行 git clone 命令，以克隆 mssql-docker 存储库：
+
+    ```bash
+    git clone https://github.com/microsoft/mssql-docker mssql-docker
+    ```
+
+### <a name="build-a-sql-server-linux-container-image-with-machine-learning-services"></a>使用机器学习服务生成 SQL Server Linux 容器映像
+
+1. 将目录更改为 mssql-mlservices 目录：
+
+    ```bash
+    cd mssql-docker/linux/preview/examples/mssql-mlservices
+    ```
+
+1. 运行 build.sh 脚本：
+
+   ```bash
+   ./build.sh
+   ```
+
+   > [!NOTE]
+   > 必须安装几个 GB 大小的包，才能生成 Docker 映像。 此脚本最长可能需要 20 分钟才能完成运行，具体视网络带宽而定。
+
+### <a name="run-the-sql-server-linux-container-image-with-machine-learning-services"></a>使用机器学习服务运行 SQL Server Linux 容器映像
+
+1. 先设置环境变量，再运行容器。 将 PATH_TO_MSSQL 环境变量设置为主机目录：
+
+   ```bash
+    export MSSQL_PID='Developer'
+    export ACCEPT_EULA='Y'
+    export ACCEPT_EULA_ML='Y'
+    export PATH_TO_MSSQL='/home/mssql/'
+   ```
+
+1. 运行 run.sh 脚本：
+
+   ```bash
+   ./run.sh
+   ```
+
+   此命令使用开发人员版（默认）机器学习服务创建 SQL Server 容器。 SQL Server 端口 1433 在主机上公开为端口 1401   。
+
+   > [!NOTE]
+   > 在容器中运行生产 SQL Server 版本的过程略有不同。 有关详细信息，请参阅 [在 Docker 上配置 SQL Server 容器映像](sql-server-linux-configure-docker.md)。 如果使用相同的容器名称和端口，本教程的其余部分仍适用于生产容器。
+
+1. 若要查看 Docker 容器，请运行 `docker ps` 命令：
+
+   ```bash
+   sudo docker ps -a
+   ```
+
+1. 如果“状态”  列显示“正常运行”  状态，表明 SQL Server 正在容器中运行，且正在侦听“端口”  列中指定的端口。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting)   。
+
+   ```bash
+   $ sudo docker ps -a
+   ```
+
+    输出： 
+    
+    ```
+    CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
+    941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour     0.0.0.0:1401->1433/tcp   sql1
+    ```
 
 ## <a name="next-steps"></a>后续步骤
 

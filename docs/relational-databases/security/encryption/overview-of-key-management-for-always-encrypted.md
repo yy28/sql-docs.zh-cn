@@ -1,28 +1,28 @@
 ---
 title: Always Encrypted 密钥管理概述 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 872c752355c12074ed90b525940fa3889726e662
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111644"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594101"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted 密钥管理概述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-[始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能使用两种类型的加密密钥来保护数据 - 一个密钥用于加密数据，另一个密钥对加密数据的密钥进行加密。 列加密密钥对数据进行加密，列主密钥对列加密密钥进行加密。 本文提供了有关管理这些加密密钥的详细概述。
+[始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 功能使用两种类型的加密密钥来保护数据 - 一个密钥用于加密数据，另一个密钥对加密数据的密钥进行加密。 列加密密钥对数据进行加密，列主密钥对列加密密钥进行加密。 本文提供了有关管理这些加密密钥的详细概述。  
 
 讨论“始终加密”密钥和密钥管理时，了解实际的加密密钥之间的区别和用于描述这些密钥的元数据对象很重要。  我们使用术语**列加密密钥**和**列主密钥**来指代实际的加密密钥，以及使用**列加密密钥元数据**和**列主密钥元数据**来指代数据库中的“始终加密”密钥说明  。
 
@@ -33,7 +33,7 @@ ms.locfileid: "68111644"
 
 需要注意的是，数据库系统中的密钥元数据不包含纯文本列主密钥或纯文本列加密密钥。 数据库仅包含有关列主密钥的类型和位置，以及列加密密钥的加密值的信息。 这意味着始终不会向数据库系统暴露纯文本密钥，这样可以确保即使数据库系统遭到入侵，使用“始终加密”功能保护的数据也是安全的。 若要确保数据库系统无法访问纯文本密钥，请务必在除托管数据库的计算机以外的其他计算机上运行密钥管理工具 - 请查看下面的 [密钥管理的安全注意事项](#security-considerations-for-key-management) 一节了解详细信息。
 
-因为数据库仅包含加密的数据（位于“始终加密”保护的列），并且不能访问纯文本密钥，因此无法解密数据。 这意味着查询“始终加密”列将只返回加密的值，因此，需要加密或解密受保护的数据的客户端应用程序必须能够访问列主密钥和相关的列加密密钥。 有关详细信息，请参阅 [《Always Encrypted (client development)》](../../../relational-databases/security/encryption/always-encrypted-client-development.md)（始终加密（客户端开发））。
+因为数据库仅包含加密的数据（位于“始终加密”保护的列），并且不能访问纯文本密钥，因此无法解密数据。 这意味着查询“始终加密”列将只返回加密的值，因此，需要加密或解密受保护的数据的客户端应用程序必须能够访问列主密钥和相关的列加密密钥。 有关详细信息，请参阅[使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)。
 
 
 
@@ -70,11 +70,8 @@ ms.locfileid: "68111644"
 可以使用 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) 和 [PowerShell](../../scripting/sql-server-powershell.md)管理“始终加密”密钥：
 
 - **SQL Server Management Studio (SSMS)** - 通过对话框和向导合并涉及密钥存储访问和数据库访问的任务，因此 SSMS 不支持角色分离，但是它会让你的密钥配置很轻松。 有关使用 SSMS 管理密钥的详细信息，请参阅：
-    - [预配列主密钥](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
-    - [预配列加密密钥](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
-    - [轮替列主密钥](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
-    - [轮替列加密密钥](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
-
+    - [使用 SQL Server Management Studio 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-ssms.md)
+    - [使用 SQL Server Management Studio 轮换 Always Encrypted 密钥](rotate-always-encrypted-keys-using-ssms.md)
 
 - **SQL Server PowerShell** - 包括使用和不使用角色分离管理“Always Encrypted”密钥的 cmdlet。 有关详细信息，请参阅：
     - [使用 PowerShell 配置 Always Encrypted 密钥](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
@@ -96,16 +93,13 @@ ms.locfileid: "68111644"
 - 为确保密钥管理过程不会无意中泄露列主密钥或列加密密钥，在定义并执行密钥管理过程之前识别潜在的攻击者和安全威胁很重要。 例如，如果你的目标是要确保 DBA 没有访问敏感数据的权限，那么 DBA 就不能负责生成密钥。 但是，DBA 可以  管理数据库中的密钥元数据，因为元数据不包含纯文本密钥。
 
 ## <a name="next-steps"></a>Next Steps
+- [使用 Always Encrypted 向导配置列加密](always-encrypted-wizard.md)
+- [创建并存储 Always Encrypted 的列主密钥](create-and-store-column-master-keys-always-encrypted.md)
+- [使用 SQL Server Management Studio 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-ssms.md)
+- [使用 PowerShell 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-powershell.md)
 
-- [创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
-- [使用 PowerShell 配置 Always Encrypted 密钥](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [使用 PowerShell 轮换 Always Encrypted 密钥](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [使用 SQL Server Management Studio 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-## <a name="additional-resources"></a>其他资源
-
-- [始终加密（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted (Client Development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+## <a name="see-also"></a>另请参阅
+- [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [始终加密向导教程（Azure 密钥保管库）](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [始终加密向导教程（Windows 证书存储）](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

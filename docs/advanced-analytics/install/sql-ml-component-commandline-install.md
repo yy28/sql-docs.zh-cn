@@ -1,90 +1,106 @@
 ---
-title: 命令提示符安装 R 和 Python 组件
-description: 运行 SQL Server 命令行安装程序, 将 R 语言和 Python 集成添加到 SQL Server 数据库引擎实例。
+title: 通过命令提示符安装 R 和 Python 组件
+description: 运行 SQL Server 命令行安装程序将 R 语言和 Python 集成添加到 SQL Server 数据库引擎实例。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f60aa3684778a7347b1ffd613a924c3bf0b7b94a
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
-ms.translationtype: MT
+ms.openlocfilehash: c89d1a0fb08e61cd6d42ac66339ccc6aa5eeef5b
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71271938"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594368"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>从命令行安装 SQL Server 机器学习 R 和 Python 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何从命令行安装 SQL Server 机器学习组件：
+本文提供从命令行安装 SQL Server 机器学习组件的说明：
 
-+ [数据库中的新实例](#indb)
++ [新的数据库内实例](#indb)
 + [添加到现有数据库引擎实例](#add-existing)
 + [无提示安装](#silent)
-+ [新建独立服务器](#shared-feature)
++ [新的独立服务器](#shared-feature)
 
-您可以指定与安装程序用户界面的 "无提示"、"基本" 或 "完全" 交互。 本文补充[了从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), 涵盖了 R 和 Python 机器学习组件独有的参数。
+可以指定与安装程序用户界面是进行无提示交互、基本交互还是完全交互。 本文对[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) 进行了补充，介绍了 R 和 Python 机器学习组件的唯一参数。
 
-## <a name="pre-install-checklist"></a>预安装清单
+## <a name="pre-install-checklist"></a>安装前清单
 
-+ 从提升权限的命令提示符运行命令。 
++ 从提升的命令提示符运行命令。 
 
-+ 数据库引擎实例是数据库内安装所必需的。 你不能仅安装 R 或 Python 功能, 但你可以[将它们增量添加到现有实例](#add-existing)。 如果只想要没有数据库引擎的 R 和 Python, 请安装[独立服务器](#shared-feature)。
++ 数据库内安装需要数据库引擎实例。 不能只安装 R 或 Python 功能，但可以[将它们逐渐添加到现有实例](#add-existing)。 如果只需要 R 和 Python，而不需要数据库引擎，请安装[独立服务器](#shared-feature)。
 
-+ 不要在故障转移群集上安装。 用于隔离 R 和 Python 进程的安全机制与 Windows Server 故障转移群集环境不兼容。
++ 请勿在故障转移群集上安装。 用于隔离 R 和 Python 进程的安全机制与 Windows Server 故障转移群集环境不兼容。
 
-+ 不要在域控制器上安装。 安装程序的机器学习服务部分将失败。
++ 请勿在域控制器上安装。 安装程序的机器学习服务部分将失败。
 
-+ 避免在同一台计算机上安装独立和数据库中的实例。 独立服务器将争夺相同的资源，从而损害两种安装的性能。
++ 避免在同一台计算机上安装独立实例和数据库内实例。 一个独立服务器将争夺相同的资源，从而降低这两个安装的性能。
 
 
 ## <a name="command-line-arguments"></a>命令行参数
 
-功能参数是必需的, 这与许可条款协议相同。 
+需要 FEATURES 参数，就如许可条款协议时一样。 
 
 通过命令提示符安装时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）。 /QS 开关仅显示进度，不接受任何输入，也不显示错误消息（如果遇到）。 仅当指定 /Action=install 时才支持 /QS 参数。
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | 参数 | 描述 |
 |-----------|-------------|
-| /FEATURES = AdvancedAnalytics | 安装数据库内版本:SQL Server R Services （数据库内）。  |
-| /FEATURES = SQL_SHARED_MR | 为独立版本安装 R 功能:SQL Server R Server （独立版）。 独立服务器是未绑定到数据库引擎实例的 "共享功能"。|
-| /IACCEPTROPENLICENSETERMS  | 指示已接受使用开源 R 组件的许可条款。 |
-| /IACCEPTPYTHONLICENSETERMS | 指示已接受使用 Python 组件的许可条款。 |
-| /IACCEPTSQLSERVERLICENSETERMS | 指示已接受使用 SQL Server 的许可条款。|
-| /MRCACHEDIRECTORY | 对于脱机安装程序, 设置包含 R 组件 CAB 文件的文件夹。 |
+| /FEATURES = AdvancedAnalytics | 安装数据库内版本：SQL Server R Services（数据库内）。  |
+| /FEATURES = SQL_SHARED_MR | 为独立版本安装 R 功能：SQL Server R Server（独立版）。 独立服务器是未绑定到数据库引擎实例的“共享功能”。|
+| /IACCEPTROPENLICENSETERMS  | 指示你已接受使用开放源代码 R 组件的许可条款。 |
+| /IACCEPTPYTHONLICENSETERMS | 指示你已接受使用 Python 组件的许可条款。 |
+| /IACCEPTSQLSERVERLICENSETERMS | 指示你已接受使用 SQL Server 的许可条款。|
+| /MRCACHEDIRECTORY | 对于脱机安装，设置包含 R 组件 CAB 文件的文件夹。 |
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 | 参数 | 描述 |
 |-----------|-------------|
-| /FEATURES = AdvancedAnalytics | 安装数据库内版本:SQL Server 机器学习服务（数据库内）。  |
-| /FEATURES = SQL_INST_MR | 将此与 AdvancedAnalytics 配对。 安装 (数据库中) R 功能, 包括 Microsoft R Open 和专用的 R 包。 |
-| /FEATURES = SQL_INST_MPY | 将此与 AdvancedAnalytics 配对。 安装 (数据库中) Python 功能, 包括 Anaconda 和专有 Python 包。 |
-| /FEATURES = SQL_SHARED_MR | 为独立版本安装 R 功能:SQL Server Machine Learning Server （独立）。 独立服务器是未绑定到数据库引擎实例的 "共享功能"。|
-| /FEATURES = SQL_SHARED_MPY | 为独立版本安装 Python 功能:SQL Server Machine Learning Server （独立）。 独立服务器是未绑定到数据库引擎实例的 "共享功能"。|
-| /IACCEPTROPENLICENSETERMS  | 指示已接受使用开源 R 组件的许可条款。 |
-| /IACCEPTPYTHONLICENSETERMS | 指示已接受使用 Python 组件的许可条款。 |
-| /IACCEPTSQLSERVERLICENSETERMS | 指示已接受使用 SQL Server 的许可条款。|
-| /MRCACHEDIRECTORY | 对于脱机安装程序, 设置包含 R 组件 CAB 文件的文件夹。 |
-| /MPYCACHEDIRECTORY | 留待将来使用。 使用% TEMP% 可在没有 internet 连接的计算机上存储 Python 组件 CAB 文件以供安装。 |
+| /FEATURES = AdvancedAnalytics | 安装数据库内版本：SQL Server 机器学习服务（数据库内）。  |
+| /FEATURES = SQL_INST_MR | 将此与 AdvancedAnalytics 配对。 安装（数据库内）R 功能，包括 Microsoft R Open 和专用 R 包。 |
+| /FEATURES = SQL_INST_MPY | 将此与 AdvancedAnalytics 配对。 安装（数据库内）Python 功能，包括 Anaconda 和专用 Python 包。 |
+| /FEATURES = SQL_SHARED_MR | 为独立版本安装 R 功能：SQL Server Machine Learning Server（独立版）。 独立服务器是未绑定到数据库引擎实例的“共享功能”。|
+| /FEATURES = SQL_SHARED_MPY | 为独立版本安装 Python 功能：SQL Server Machine Learning Server（独立版）。 独立服务器是未绑定到数据库引擎实例的“共享功能”。|
+| /IACCEPTROPENLICENSETERMS  | 指示你已接受使用开放源代码 R 组件的许可条款。 |
+| /IACCEPTPYTHONLICENSETERMS | 指示你已接受使用 Python 组件的许可条款。 |
+| /IACCEPTSQLSERVERLICENSETERMS | 指示你已接受使用 SQL Server 的许可条款。|
+| /MRCACHEDIRECTORY | 对于脱机安装，设置包含 R 组件 CAB 文件的文件夹。 |
+| /MPYCACHEDIRECTORY | 保留供将来使用。 使用 %TEMP% 存储 Python 组件 CAB 文件，以便在没有 Internet 连接的计算机上安装。 |
 ::: moniker-end
 
-## <a name="indb"></a>数据库内实例安装
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+| 参数 | 描述 |
+|-----------|-------------|
+| /FEATURES = AdvancedAnalytics | 安装数据库内版本：SQL Server 机器学习服务（数据库内）。  |
+| /FEATURES = SQL_INST_MR | 将此与 AdvancedAnalytics 配对。 安装（数据库内）R 功能，包括 Microsoft R Open 和专用 R 包。 |
+| /FEATURES = SQL_INST_MPY | 将此与 AdvancedAnalytics 配对。 安装（数据库内）Python 功能，包括 Anaconda 和专用 Python 包。 |
+| /FEATURES = SQL_INST_MJAVA | 将此与 AdvancedAnalytics 配对。 安装（数据库内）Java 功能，包括 Open JRE。 |
+| /FEATURES = SQL_SHARED_MR | 为独立版本安装 R 功能：SQL Server Machine Learning Server（独立版）。 独立服务器是未绑定到数据库引擎实例的“共享功能”。|
+| /FEATURES = SQL_SHARED_MPY | 为独立版本安装 Python 功能：SQL Server Machine Learning Server（独立版）。 独立服务器是未绑定到数据库引擎实例的“共享功能”。|
+| /IACCEPTROPENLICENSETERMS  | 指示你已接受使用开放源代码 R 组件的许可条款。 |
+| /IACCEPTPYTHONLICENSETERMS | 指示你已接受使用 Python 组件的许可条款。 |
+| /IACCEPTSQLSERVERLICENSETERMS | 指示你已接受使用 SQL Server 的许可条款。|
+| /MRCACHEDIRECTORY | 对于脱机安装，设置包含 R 组件 CAB 文件的文件夹。 |
+| /MPYCACHEDIRECTORY | 保留供将来使用。 使用 %TEMP% 存储 Python 组件 CAB 文件，以便在没有 Internet 连接的计算机上安装。 |
+::: moniker-end
 
-数据库内分析可用于数据库引擎实例, 这是将**AdvancedAnalytics**功能添加到安装所必需的。 您可以使用高级分析安装数据库引擎实例, 或[将其添加到现有实例](#add-existing)。 
+## <a name="indb"></a> 数据库内实例安装
 
-若要查看进度信息而不显示交互式屏幕提示, 请使用/qs 参数。
+数据库内分析可用于数据库引擎实例，这是向安装添加 AdvancedAnalytics 功能所需的  。 可以安装带有高级分析的数据库引擎实例，或[将它添加到现有实例](#add-existing)。 
+
+若要在不与屏幕提示交互的情况下查看进度信息，请使用 /qs 参数。
 
 > [!IMPORTANT]
-> 安装完成后, 将保留两个额外的配置步骤。 执行这些任务之前, 不会完成集成。 有关说明, 请参阅[安装后任务](#post-install)。
+> 安装完成后，还需要进行两个额外的配置步骤。 执行这些任务之后才能完成集成。 有关说明，请参阅[安装后任务](#post-install)。
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ### <a name="sql-server-machine-learning-services-database-engine-advanced-analytics-with-python-and-r"></a>SQL Server 机器学习服务：数据库引擎、具有 Python 和 R 的高级分析
 
-对于数据库引擎实例的并发安装, 请提供实例名称和管理员 (Windows) 登录名。 包括用于安装核心和语言组件的功能, 以及对所有许可条款的接受。
+对于数据库引擎实例的并发安装，请提供实例名称和管理员 (Windows) 登录名。 包括用于安装核心和语言组件的功能，以及接受所有许可条款。
 
 ```cmd
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY
@@ -92,7 +108,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
 ```
 
-这是相同的命令, 但在使用混合身份验证的数据库引擎上使用 SQL Server 登录名。
+这是相同的命令，但在使用混合身份验证的数据库引擎上使用了 SQL Server 登录。
 
 ```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY
@@ -100,7 +116,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
 ```
 
-此示例仅为 Python, 显示你可以通过省略功能添加一种语言。
+此示例仅限 Python，表示你可以通过省略一项功能来添加一种语言。
 
 ```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY 
@@ -110,9 +126,9 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-### <a name="sql-server-r-services-database-engine-and-advanced-analytics-with-r"></a>SQL Server R Services：数据库引擎和高级分析与 R
+### <a name="sql-server-r-services-database-engine-and-advanced-analytics-with-r"></a>SQL Server R Services：数据库引擎和具有 R 的高级分析
 
-对于数据库引擎实例的并发安装, 请提供实例名称和管理员 (Windows) 登录名。 包括用于安装核心和语言组件的功能, 以及对所有许可条款的接受。
+对于数据库引擎实例的并发安装，请提供实例名称和管理员 (Windows) 登录名。 包括用于安装核心和语言组件的功能，以及接受所有许可条款。
 
 ```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
@@ -121,39 +137,39 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ```
 ::: moniker-end
 
-## <a name="post-install"></a>安装后配置 (必需)
+## <a name="post-install"></a> 安装后配置（必需）
 
-仅适用于数据库中安装。
+仅适用于数据库内安装。
 
-安装完成后, 你将拥有一个具有 R 和 Python 的数据库引擎实例、Microsoft R 和 Python 包、Microsoft R Open、Anaconda、工具、示例以及作为分发的一部分的脚本。 
+安装完成后，你就有了一个具有 R 和 Python 的数据库引擎实例、Microsoft R 和 Python 包、Microsoft R Open、Anaconda、工具、示例以及作为分发一部分的脚本。 
 
-要完成安装, 需要执行两个任务:
+需要再执行两个任务才能完成安装：
 
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-1. 重新启动数据库引擎服务。
+1. 重启数据库引擎服务。
 
-1. SQL Server 机器学习服务：启用外部脚本, 然后才能使用该功能。 按照[安装 SQL Server 机器学习服务（数据库内）](sql-machine-learning-services-windows-install.md)中的说明进行下一步。 
+1. SQL Server 机器学习服务：启用外部脚本后才能使用此功能。 按照[安装 SQL Server 机器学习服务（数据库内）](sql-machine-learning-services-windows-install.md)中的说明执行下一步。 
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-1. 重新启动数据库引擎服务。
+1. 重启数据库引擎服务。
 
-1. SQL Server R Services：启用外部脚本, 然后才能使用该功能。 按照[安装 SQL Server R Services （数据库内）](sql-r-services-windows-install.md)中的说明进行下一步。 
+1. SQL Server R Services：启用外部脚本后才能使用此功能。 按照[安装 SQL Server R Services（数据库内）](sql-r-services-windows-install.md)中的说明执行下一步。 
 ::: moniker-end
 
-## <a name="add-existing"></a>向现有数据库引擎实例添加高级分析
+## <a name="add-existing"></a> 向现有数据库引擎实例添加高级分析
 
-向现有数据库引擎实例添加数据库中高级分析时, 请提供实例名称。 例如, 如果之前安装了 SQL Server 2017 数据库引擎和 Python, 则可以使用此命令添加 R。
+向现有数据库引擎实例添加数据库内高级分析时，请提供实例名称。 例如，如果之前安装了 SQL Server 2017 或更高版本的数据库引擎和 Python，则可以使用此命令添加 R。
 
 ```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
 
-## <a name="silent"></a>无提示安装
+## <a name="silent"></a> 无提示安装
 
-无提示安装会禁止检查 .cab 文件位置。 出于此原因, 必须指定要解压缩 .cab 文件的位置。 对于 Python，CAB 文件必须位于% TEMP * 中。 对于 R, 可以使用来设置文件夹路径。
+无提示安装会阻止检查 .cab 文件位置。 因此，必须指定要在其中解压缩 .cab 文件的位置。 对于 Python，CAB 文件必须位于 %TEMP* 中。 对于 R，你可以使用临时目录来设置文件夹路径。
  
 ```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
@@ -162,12 +178,12 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /MRCACHEDIRECTORY=%temp% 
 ```
 
-## <a name="shared-feature"></a>独立服务器安装
+## <a name="shared-feature"></a> 独立服务器安装
 
-独立服务器是未绑定到数据库引擎实例的 "共享功能"。 以下示例显示了用于安装独立服务器的有效语法。
+独立服务器是未绑定到数据库引擎实例的“共享功能”。 以下示例显示了用于安装独立服务器的有效语法。
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-SQL Server Machine Learning Server 支持在独立服务器上使用 Python 和 R：
+SQL Server Machine Learning Server 支持独立服务器上的 Python 和 R：
 
 ```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY  
@@ -175,7 +191,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY
 ```
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-SQL Server R Server 仅限 R：
+SQL Server R Server 仅适用于 R：
 
 ```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR 
@@ -183,21 +199,21 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 ```
 ::: moniker-end
 
-安装完成后, 你将拥有服务器、Microsoft 包、R 和 Python 的开源分发版、工具、示例以及作为分发的一部分的脚本。 
+安装完成后，你就有了一个服务器、Microsoft 包、开放源代码分发版的 R 和 Python、工具、示例以及作为分发一部分的脚本。 
 
-若要打开 R 控制台窗口，请参阅`\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` ，并双击 " **rgui.exe**"。 不熟悉 R？ 尝试学习本教程:[基本 R 命令和 RevoScaleR 函数:25个常见](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)示例。
+若要打开 R 控制台窗口，请转到 `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` 并双击“RGui.exe”  。 不熟悉 R？ 试用本教程：[基本 R 命令和 RevoScaleR 函数：25 个常见示例](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)。
 
-若要打开 python 命令，请参阅`\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64` ，并双击 " **python**"。
+若要打开 Python 命令，请转到 `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64` 并双击“python.exe”  。
 
 ## <a name="get-help"></a>获取帮助
 
-安装或升级需要帮助？ 有关常见问题的解答, 请参阅以下文章:
+需要安装或升级方面的帮助？ 有关常见问题和已知问题的解答，请参阅以下文章：
 
-* [升级和安装常见问题解答-机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+* [升级和安装常见问题解答 - 机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-若要检查实例的安装状态并解决常见问题, 请尝试这些自定义报表。
+若要检查实例的安装状态并解决常见问题，请尝试使用这些自定义报告。
 
-* [SQL Server 的自定义报表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
+* [SQL Server 的自定义报告](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
 ## <a name="next-steps"></a>后续步骤
 

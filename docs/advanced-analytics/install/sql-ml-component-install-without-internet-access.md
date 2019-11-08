@@ -1,6 +1,6 @@
 ---
-title: 在不访问 internet 的情况下安装 R 语言和 Python 组件
-description: 脱机或断开连接机器学习 R 和 Python 在网络防火墙后面的隔离 SQL Server 实例上安装。
+title: 在无 Internet 访问的情况下安装 R 语言和 Python 组件
+description: 脱机或断开连接的机器学习 R 和 Python 安装在网络防火墙后的独立 SQL Server 实例上。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 07/30/2019
@@ -8,51 +8,84 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ddeea99addae3229575ca581f344332587e85981
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: bd1db578d6f1b4900f559c51521d807d7e1ec271
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715827"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594351"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>在无 internet 访问权限的计算机上安装 SQL Server 机器学习 R 和 Python
+# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>在无 Internet 访问的情况下在计算机上安装 SQL Server 机器学习 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-默认情况下，安装程序连接到 Microsoft 下载站点以获取所需的和更新的组件，用于实现SQL Server 上的机器学习功能。 如果防火墙的限制会阻止安装程序访问这些站点，可以使用连接到 internet的设备下载文件，将文件传输到脱机的服务器，然后运行安装程序。
+默认情况下，安装程序会连接到 Microsoft 下载站点以获取在 SQL Server 上进行机器学习所需的组件和更新的组件。 如果防火墙约束阻止安装程序访问这些站点，你可以使用连接到 Internet 的设备下载文件、将文件传输到脱机服务器，然后进行安装设置。
 
-数据库内分析包括数据库引擎实例，以及用于R和Python集成的其他组件，具体取决于SQL Server的版本。 
+数据库内分析包含数据库引擎实例以及适用于 R 和 Python 集成的其他组件，具体因 SQL Server 的版本而异。 
 
-+ SQL Server 2017 及更高版本包括 R 和 Python 
-+ SQL Server 2016 仅限 R。
++ SQL Server 2019 包括 R、Python 和 Java
++ SQL Server 2017 包括 R 和 Python
++ SQL Server 2016 仅适用于 R
 
-在独立服务器上，通过CAB文件添加机器学习和特定于R/Python语言的功能。 
+在独立服务器上，已通过 CAB 文件添加了机器学习和 R/Python 特定语言功能。 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-## <a name="sql-server-2017-offline-install"></a>SQL Server 2017 脱机安装
+::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+## <a name="sql-server-2019-offline-install"></a>SQL Server 2019 脱机安装
 
-若要在独立服务器上安装 SQL Server 机器学习服务 (R 和 Python), 请首先下载 SQL Server 的初始版本以及适用于 R 和 Python 支持的相应 CAB 文件。 即使计划立即更新服务器以使用最新的累积更新，仍然需要先安装初始版本。
+若要在独立服务器上安装 SQL Server 机器学习服务（R 和 Python），首先下载 SQL Server 的初始版本以及用于支持 R 和 Python 的相应 CAB 文件。 即使你计划立即更新服务器以使用最新的累积更新，也必须先安装初始版本。
 
 > [!Note]
-> SQL Server 2017没有Service Pack。 这是SQL Server第一个将初始版本作为唯一基准的版本，且仅通过累积更新来进行维护。 
+> SQL Server 2019 没有服务包。 初始版本是唯一的基线，仅通过累积更新提供服务。
 
-### <a name="1---download-2017-cabs"></a>1-下载 2017 Cab
+### <a name="1---download-2019-cabs"></a>1 - 下载 2019 CAB
 
-在连接到Internet的计算机上，下载CAB文件，为初始版本和SQL Server 2017的安装媒体提供R和Python功能。 
+在连接到 Internet 的计算机上，下载提供 R 和 Python 功能的 CAB 文件以获取 SQL Server 2019 的初始版本和安装介质。
+
+发行版本  |下载链接  |
+---------|---------------|
+Microsoft R Open        | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085686) |
+Microsoft R Server      | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792) |
+Microsoft Python Open   | [SPO_4.5.12.120_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085793) |
+Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085685) |
+
+> [!NOTE]
+> Java 功能包含在 SQL Server 安装介质中，不需要单独的 CAB 文件。
+
+###  <a name="2---get-sql-server-2019-installation-media"></a>2 - 获取 SQL Server 2019 安装介质
+
+1. 在连接到 Internet 的计算机上，下载 [SQL Server 2019 安装程序](https://www.microsoft.com/sql-server/sql-server-downloads)。 
+
+2. 双击“安装”，然后选择“下载介质”安装类型  。 通过使用此选项，安装程序将创建包含安装介质的本地 .iso（或 .cab）文件。
+
+   ![选择“下载介质”安装类型](media/2019offline-download-tile.png "下载介质")
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+## <a name="sql-server-2017-offline-install"></a>SQL Server 2017 脱机安装
+
+若要在独立服务器上安装 SQL Server 机器学习服务（R 和 Python），首先下载 SQL Server 的初始版本以及用于支持 R 和 Python 的相应 CAB 文件。 即使你计划立即更新服务器以使用最新的累积更新，也必须先安装初始版本。
+
+> [!Note]
+> SQL Server 2017 没有服务包。 首次发布的 SQL Server 将初始版本用作唯一的基线，仅通过累积更新提供服务。 
+
+### <a name="1---download-2017-cabs"></a>1 - 下载 2017 CAB
+
+在连接到 Internet 的计算机上，下载提供 R 和 Python 功能的 CAB 文件以获取 SQL Server 2017 的初始版本和安装介质。 
 
 发行版本  |下载链接  |
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Microsoft Python 开放式     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
+Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
-###  <a name="2---get-sql-server-2017-installation-media"></a>2-获取 SQL Server 2017 安装介质
+###  <a name="2---get-sql-server-2017-installation-media"></a>2 - 获取 SQL Server 2017 安装介质
 
-1. 在具有 internet 连接的计算机上, 下载[SQL Server 2017 安装程序](https://www.microsoft.com/sql-server/sql-server-downloads)。 
+1. 在连接到 Internet 的计算机上，下载 [SQL Server 2017 安装程序](https://www.microsoft.com/sql-server/sql-server-downloads)。 
 
-2. 双击 "安装程序", 然后选择 "**下载媒体**" 安装类型。 使用此选项时, 安装程序将创建包含安装媒体的本地 .iso (或 .cab) 文件。
+2. 双击“安装”，然后选择“下载介质”安装类型  。 通过使用此选项，安装程序将创建包含安装介质的本地 .iso（或 .cab）文件。
 
-   ![选择 "下载媒体" 安装类型](media/offline-download-tile.png "下载媒体")
+   ![选择“下载介质”安装类型](media/offline-download-tile.png "下载介质")
 
 ::: moniker-end
 
@@ -60,11 +93,11 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 脱机安装
 
-SQL Server 2016数据库内分析仅限R，仅包含两个CAB文件，分别用于产品包和Microsoft开源R分发。 首先安装以下任一版本:RTM, SP 1, SP 2。 基础安装到位后，便可应用累积更新。
+SQL Server 2016 数据库内分析仅适用于 R，仅包含分别用于产品包和 Microsoft 的开放源代码 R 分发的两个 CAB 文件。 首先安装以下任一版本：RTM、SP 1 和 SP 2。 基本安装完成后，接下来即可应用累积更新。
 
-在连接到Internet的计算机上，下载安装程序使用的CAB文件，用于在SQL Server 2016上安装数据库内分析。 
+在连接到 Internet 的计算机上，下载由安装程序用于在 SQL Server 2016 上安装数据库内分析的 CAB 文件。 
 
-### <a name="1---download-2016-cabs"></a>1-下载 2016 Cab
+### <a name="1---download-2016-cabs"></a>1 - 下载 2016 CAB
 
 发行版本  | Microsoft R Open | Microsoft R Server |
 ---------|-----------------|---------------------|
@@ -72,39 +105,31 @@ SQL Server 2016数据库内分析仅限R，仅包含两个CAB文件，分别用�
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
 **SQL Server 2016 SP 2**  |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317) |
 
-### <a name="2---get-sql-server-2016-installation-media"></a>2-获取 SQL Server 2016 安装介质
+### <a name="2---get-sql-server-2016-installation-media"></a>2 - 获取 SQL Server 2016 安装介质
 
-首次安装时，可以在目标计算机上安装SQL Server 2016 RTM、SP 1或SP 2。 这些版本都可以接受累积更新。
+在目标计算机上进行首次安装时，可以安装 SQL Server 2016 RTM、SP 1 或 SP 2。 这些版本中的任何版本都可以接受累积更新。
 
-获取包含安装媒体的.iso文件的一种方式是通过[Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/)来实现。 登录，然后使用**下载**链接查找要安装的SQL Server 2016版本。 下载内容是一个.iso文件，可以将其复制到目标计算机进行脱机安装。
+获取包含安装介质的 .iso 文件的一种方法是通过 [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/) 获取。 登录后使用下载链接查找要安装的 SQL Server 2016 版本  。 下载内容采用的是 .iso 文件的形式，你可以将该文件复制到目标计算机以进行脱机安装。
 
 ::: moniker-end
 
 ## <a name="transfer-files"></a>传输文件
 
-将 SQL Server 安装媒体 (.iso 或 .cab) 和数据库内分析 CAB 文件复制到目标计算机。 将 CAB 文件和安装媒体文件放在目标计算机上的同一个文件夹中, 如安装程序用户的% TEMP * 文件夹。
+将 SQL Server 安装介质（.iso 或 .cab）和数据库内分析 CAB 文件复制到目标计算机。 将 CAB 文件和安装介质文件放置在目标计算机上的同一文件夹中，例如安装用户的 %TEMP% 文件夹。
 
-Python CAB 文件需要% TEMP% 文件夹。 对于 R, 可以使用% TEMP% 或将 myrcachedirectory 参数设置为 CAB 路径。
-
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-以下屏幕截图显示 SQL Server CAB 和 ISO 文件。 
-
-![要传输的文件的列表](media/offline-file-list.png "文件列表")
-::: moniker-end
+Python CAB 文件需要放置在 %TEMP% 文件夹中。 对于 R，你可以使用 %TEMP%，或将 `myrcachedirectory` 参数设置为 CAB 路径。
 
 ## <a name="run-setup"></a>运行安装程序
 
-当你在从 internet 断开连接的计算机上运行 SQL Server 安装程序时, 安装程序会将**脱机安装**页添加到向导中, 以便你可以指定你在上一步中复制的 CAB 文件的位置。
+在断开 Internet 连接的计算机上运行 SQL Server 安装程序时，安装程序会将“脱机安装”页面添加到向导，使你可以指定上一步中复制的 CAB 文件的位置  。
 
-1. 若要开始安装, 请双击 .iso 或 .cab 文件以访问安装介质。 应会看到 setup.exe文件。
+1. 若要开始安装，请双击 .iso 或 .cab 文件以访问安装介质。 随后你应会看到 setup.exe 文件  。
 
-2. 右键单击 " **setup.exe** " 并以管理员身份运行。
+2. 右键单击“setup.exe”并以管理员身份运行  。
 
-3. 当安装向导显示开源 R 或 Python 组件的许可页时, 请单击 "**接受**"。 接受许可条款后, 可继续执行下一步。
+3. 当安装向导显示开放源代码 R 或 Python 组件的许可页面时，请单击“接受”  。 接受许可条款后，可继续执行下一步。
 
-4. 转到 "**脱机安装**" 页时, 请在 "**安装路径**" 中指定包含之前复制的 CAB 文件的文件夹。
-
-   ![Cab 文件夹选择的向导页](media/screenshot-sql-offline-cab-page.png "CAB 文件夹")
+4. 在转至“脱机安装”页面后，在“安装路径”中指定包含之前复制的 CAB 文件的文件夹   。
 
 5. 继续按照屏幕上的提示完成安装。
 
@@ -112,75 +137,83 @@ Python CAB 文件需要% TEMP% 文件夹。 对于 R, 可以使用% TEMP% 或将
 
 ## <a name="apply-cumulative-updates"></a>应用累积更新
 
-建议将最新的累积更新应用于数据库引擎和机器学习组件。 累积更新是通过安装程序安装的。 
+建议将最新的累积更新应用于数据库引擎和机器学习组件。 累积更新通过安装程序进行安装。 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-1. 开始使用基线实例。 只能对 SQL Server 初始版本的现有安装应用累积更新。
+::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+1. 从基线实例开始。 只能将累积更新应用于初始版本的 SQL Server 的现有安装。
 
-2. 在连接 internet 的设备上, 中转到 SQL Server 版本的累积更新列表:
+2. 在连接到 Internet 的设备上，转到你的 SQL Server 版本的累积更新列表：
 
-  + [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
+   + SQL Server 2019 更新（更新目前尚不可用于 2019 版） 
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+1. 从基线实例开始。 只能将累积更新应用于初始版本的 SQL Server 的现有安装。
+
+2. 在连接到 Internet 的设备上，转到你的 SQL Server 版本的累积更新列表：
+
+   + [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-1. 开始使用基线实例。 你只能对 SQL Server 2016 初始版本 SQL Server 2016 SP 1 或 SQL Server 2016 SP 2 的现有安装应用累积更新。
+1. 从基线实例开始。 只能将累积更新应用于 SQL Server 2016 初始版本、SQL Server 2016 SP 1 或 SQL Server 2016 SP 2 的现有安装。
 
-2. 在连接 internet 的设备上, 中转到 SQL Server 版本的累积更新列表:
+2. 在连接到 Internet 的设备上，转到你的 SQL Server 版本的累积更新列表：
 
-  + [SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/)
+   + [SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/)
 ::: moniker-end
 
 3. 选择最新的累积更新以下载可执行文件。
 
-4. 获取 R 和 Python 对应的 CAB 文件。 有关下载链接, 请参阅[CAB 下载以了解 SQL Server 数据库内分析实例中的累积更新](sql-ml-cab-downloads.md)。
+4. 获取 R 和 Python 的相应 CAB 文件。 有关下载链接，请参阅 [SQL Server 数据库内分析实例上的累积更新的 CAB 下载](sql-ml-cab-downloads.md)。
 
-5. 将所有文件、可执行文件和 CAB 文件传输到脱机计算机上的同一个文件夹中。
+5. 将所有文件、可执行文件和 CAB 文件传输到脱机计算机上的同一文件夹中。
 
-6. 运行安装程序。 接受许可条款，然后在功能选择页面上，查看应用累积更新的功能。 应该会看到为当前实例安装的每个功能, 包括机器学习功能。
+6. 运行安装程序。 接受许可条款，然后在“功能选择”页上，查看应用了累积更新的功能。 应看到为当前实例安装的每个功能，包括机器学习功能。
 
-    ![从功能树中选择功能](media/cumulative-update-feature-selection.png "功能列表")
+   ![从功能树中选择功能](media/cumulative-update-feature-selection.png "功能列表")
 
-5. 继续执行向导, 接受 R 和 Python 分发的许可条款。 在安装过程中, 系统会提示您选择包含更新的 CAB 文件的文件夹位置。
+5. 继续执行向导，接受 R 和 Python 分发的许可条款。 在安装过程中，系统会提示你选择包含更新的 CAB 文件的文件夹位置。
 
 ## <a name="set-environment-variables"></a>设置环境变量
 
-仅适用于 R 功能集成, 应设置**MKL_CBWR**环境变量, 以[确保](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)从 Intel 数学内核库 (MKL) 计算中进行一致的输出。
+（仅适用于 R 功能集成）应设置“MKL_CBWR”环境变量，以确保从 Intel 数学核心函数库 (MKL) 计算得到[一致的输出结果](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)  。
 
-1. 在控制面板中, 单击 "**系统和安全** > **系统** > " "**高级系统设置** > " "**环境变量**"。
+1. 在“控制面板”中，单击“系统和安全” > “系统” > “高级系统设置” > “环境变量”     。
 
 2. 创建新的用户或系统变量。 
 
-  + 将变量名称设置为`MKL_CBWR`
-  + 将变量值设置为`AUTO`
+   + 将变量名称设置为 `MKL_CBWR`
+   + 将变量值设置为 `AUTO`
 
-此步骤需要重新启动服务器。 如果要启用脚本执行, 则可以在完成所有配置工作之前, 暂停重启。
+此步骤需要重启服务器。 如果要启用脚本执行，则可以在完成所有配置工作之前暂停重启。
 
 ## <a name="post-install-configuration"></a>安装后配置
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-安装完成后, 请重新启动服务, 然后将服务器配置为允许脚本执行:
+安装完成后，请重启服务，然后将服务器配置为启用脚本执行：
 
 + [启用外部脚本执行](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
 
-SQL Server 机器学习服务的初始脱机安装需要与联机安装相同的配置:
+SQL Server 机器学习服务的初始脱机安装需要与联机安装相同的配置：
 
 + [验证安装](sql-machine-learning-services-windows-install.md#verify-installation)
-+ [根据需要附加配置](sql-machine-learning-services-windows-install.md#additional-configuration)
++ [按需进行其他配置](sql-machine-learning-services-windows-install.md#additional-configuration)
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-安装完成后, 请重新启动服务, 然后将服务器配置为允许脚本执行:
+安装完成后，请重启服务，然后将服务器配置为启用脚本执行：
 
 + [启用外部脚本执行](sql-r-services-windows-install.md#bkmk_enableFeature)
 
-初始脱机安装 SQL Server R Services 需要与联机安装相同的配置:
+SQL Server R Services 的初始脱机安装需要与联机安装相同的配置：
 
 + [验证安装](sql-r-services-windows-install.md#verify-installation)
-+ [根据需要附加配置](sql-r-services-windows-install.md#bkmk_FollowUp)
++ [按需进行其他配置](sql-r-services-windows-install.md#bkmk_FollowUp)
 ::: moniker-end
 
 ## <a name="next-steps"></a>后续步骤
 
-若要检查实例的安装状态并解决常见问题, 请参阅[SQL Server 的自定义报表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)。
+若要检查实例的安装状态并解决常见问题，请参阅 [SQL Server 的自定义报告](../r/monitor-r-services-using-custom-reports-in-management-studio.md)。
 
-有关任何不熟悉的消息或日志项的帮助, 请参阅[升级和安装常见问题解答-机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
+有关任何不熟悉的消息和日志条目的帮助，请参阅[升级和安装常见问题解答 - 机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)。

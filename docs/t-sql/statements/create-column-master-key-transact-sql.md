@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,19 +24,19 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064566"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593896"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-在数据库中创建列主密钥元数据对象。 列主密钥元数据条目表示存储在外部密钥存储中的密钥。 使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能时，密钥保护（加密）列加密密钥。 多列主密钥允许定期密钥轮换，以增强安全性。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的对象资源管理器或 PowerShell 在密钥存储中创建列主密钥，并在数据库中创建其相关元数据对象。 有关详细信息，请参阅 [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。  
+在数据库中创建列主密钥元数据对象。 列主密钥元数据条目表示存储在外部密钥存储中的密钥。 使用 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 或[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 时，密钥会保护（加密）列加密密钥。 多列主密钥允许定期密钥轮换，以增强安全性。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的对象资源管理器或 PowerShell 在密钥存储中创建列主密钥，并在数据库中创建其相关元数据对象。 有关详细信息，请参阅 [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。  
   
 ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -46,7 +46,7 @@ ms.locfileid: "73064566"
 
 ## <a name="syntax"></a>语法  
 
-```  
+``` sql 
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
@@ -72,9 +72,7 @@ key_store_provider_name
   
 启用了 Always Encrypted 的客户端驱动程序库包括热门密钥存储的密钥存储提供程序。   
   
-可用的提供程序集取决于客户端驱动程序的类型和版本。 有关特定驱动程序的信息，请参阅 Always Encrypted 文档：
-
-[将 Always Encrypted 与用于 SQL Server 的 .NET Framework 提供程序配合使用来开发应用程序](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+可用的提供程序集取决于客户端驱动程序的类型和版本。 有关特定驱动程序的信息，请参阅 Always Encrypted 文档：[使用 Always Encrypted 开发应用程序](../../relational-databases/security/encryption/always-encrypted-client-development.md)。
 
 
 下表显示系统提供程序的名称：  
@@ -84,7 +82,8 @@ key_store_provider_name
     |'MSSQL_CERTIFICATE_STORE'|Windows 证书存储| 
     |'MSSQL_CSP_PROVIDER'|支持 Microsoft CryptoAPI 的存储，如硬件安全模块 (HSM)。|
     |'MSSQL_CNG_STORE'|支持下一代加密技术 API 的存储，如硬件安全模块 (HSM)。|  
-    |'Azure_Key_Vault'|请参阅 [Azure Key Vault 入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'AZURE_KEY_VAULT'|请参阅 [Azure Key Vault 入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'MSSQL_JAVA_KEYSTORE'| Java 密钥存储。}
   
 
 在启用了 Always Encrypted 的客户端驱动程序中，可以设置自定义密钥存储提供程序，存储没有任何内置密钥存储提供程序的列主密钥。 自定义密钥存储提供程序的名称不能以“MSSQL_”开头，因为它是为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 密钥存储提供程序保留的前缀。 
@@ -172,6 +171,7 @@ signature
 
 在数据库中创建列加密密钥元数据条目前，请先创建列主密钥元数据条目，然后才能使用 Always Encrypted 加密数据库中的任何列。 元数据中的列主密钥条目不包含实际列主密钥。 列主密钥必须存储在外部列密钥存储中（SQL Server 外部）。 元数据中的密钥存储提供程序名称和列主密钥路径对于客户端应用程序必须有效。 客户端应用程序需要使用列主密钥来解密列加密密钥。 列加密密钥使用列主密钥进行加密。 客户端应用程序还需要查询加密的列。
 
+建议使用诸如 SQL Server Management Studio (SSMS) 或 PowerShell 等工具来管理列主密钥。 此类工具会生成签名（在使用具有安全 enclave 的 Always Encrypted 的情况下）并自动发出 `CREATE COLUMN MASTER KEY` 语句来创建列加密密钥元数据对象。 请参阅[使用 SQL Server Management Studio 预配 Always Encrypted 密钥](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md)和[使用 PowerShell 预配 Always Encrypted 密钥](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)。 
 
   
 ## <a name="permissions"></a>权限  
@@ -182,7 +182,7 @@ signature
 ### <a name="a-creating-a-column-master-key"></a>A. 创建列主密钥  
 以下示例为列主密钥创建列主密钥元数据条目。 对于使用 MSSQL_CERTIFICATE_STORE 提供程序访问列主密钥的客户端应用程序，列主密钥存储在证书存储中：  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -247,6 +247,8 @@ WITH (
 * [DROP COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [创建列加密密钥 (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
-* [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+* [始终加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+* [具有安全 Enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+* [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+* [管理具有安全 enclave 的 Always Encrypted 的密钥](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
