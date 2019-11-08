@@ -1,5 +1,5 @@
 ---
-title: 验证状态 (Master Data Services) | Microsoft Docs
+title: 验证状态
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 27a205b5cf6775ea8d7486cbc6c3776fc5c9e825
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c434e2cdc64616b5abbdf07ca4df428fce2edca
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017382"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728858"
 ---
 # <a name="validation-statuses-master-data-services"></a>验证状态 (Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68017382"
 
   在 **“版本管理”** 功能区域中的 **“验证版本”** 页上，以下状态可能会出现。  
   
-|“登录属性”|描述|  
+|状态|说明|  
 |------------|-----------------|  
 |正在等待验证|正在等待验证的所有新创建的成员。|  
 |正在等待重新验证|正在等待验证的现有成员。|  
@@ -31,7 +31,7 @@ ms.locfileid: "68017382"
 |验证失败|未通过业务规则验证的成员。|  
 |正在等待关联成员重新验证|等待与子成员一起进行验证的已更新合并成员。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)  
   

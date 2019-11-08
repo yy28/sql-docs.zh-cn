@@ -1,5 +1,5 @@
 ---
-title: 具有显式顶端的派生层次结构 (Master Data Services) | Microsoft Docs
+title: 具有显式顶端的派生层次结构
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9d62f40807c4e7be3c2e585540dfd79ae85a6228
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c2d28ad9490e4bb9d9a8e30f1ba8356d4a6c7f4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084202"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729341"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>具有显式顶端的派生层次结构 (Master Data Services)
 
@@ -48,7 +48,7 @@ ms.locfileid: "68084202"
   
 -   不能将层次结构成员权限分配给具有显式顶端的派生层次结构。 如果您单独将权限分配给显式层次结构或派生层次结构，则这些权限将影响这两种层次结构。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

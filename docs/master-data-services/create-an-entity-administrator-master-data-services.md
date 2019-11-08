@@ -1,5 +1,5 @@
 ---
-title: 创建实体管理员 (Master Data Services) | Microsoft Docs
+title: 创建实体管理员
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 34b96a107f00e93ed2dfd0f09451aac4f1f58354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bca3fbbfe08969f27c26ab0ca6a66e76468acdc8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025076"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729532"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>创建实体管理员 (Master Data Services)
 
@@ -31,23 +31,23 @@ ms.locfileid: "68025076"
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ## <a name="to-create-an-entity-administrator"></a>创建实体管理员  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”** 。  
   
-2.  选择要编辑的用户或组所对应的行，然后单击“编辑所选用户”  。  
+2.  选择要编辑的用户或组所对应的行，然后单击“编辑所选用户”。  
   
-3.  单击  “模型”选项卡，（可选）从  “模型”列表中选择一个模型，然后单击“编辑”  。  
+3.  单击 “模型”选项卡，（可选）从 “模型”列表中选择一个模型，然后单击“编辑”。  
   
-4.  单击你想要授予权限的实体，然后单击菜单上的“管理员”  。  
+4.  单击你想要授予权限的实体，然后单击菜单上的“管理员” 。  
   
 5.  对希望组或用户成为其管理员的每个实体，完成步骤 4。  
   
-6.  单击“保存”  。  
+6.  单击 **“保存”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)   
  [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [分配层次结构成员权限 (Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

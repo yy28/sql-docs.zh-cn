@@ -1,5 +1,5 @@
 ---
-title: 自定义索引 (Master Data Services) | Microsoft Docs
+title: 自定义索引
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 88b94a0c476921d501bd4f456fa2d7e9077dee36
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 52ca3533dfb8c53e4bbf1cd9f431a290221f2d5e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810955"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729495"
 ---
 # <a name="custom-index-master-data-services"></a>自定义索引 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  自定义索引在实体中对一个属性 (单个索引) 或一系列属性 (组合索引) 创建非聚集索引。 通常索引可提高查询过程的性能。 有关 SQL Server 索引的详细信息，请参阅 [索引](../relational-databases/indexes/indexes.md)。  
+  自定义索引在实体中对一个属性（单个索引）或一系列属性（组合索引）创建非聚集索引。 通常索引可提高查询过程的性能。 有关 SQL Server 索引的详细信息，请参阅 [索引](../relational-databases/indexes/indexes.md)。  
   
 ## <a name="type-of-indexes"></a>索引类型  
  可以为每个实体创建以下类型的多个自定义索引。  
@@ -56,7 +56,7 @@ ms.locfileid: "68810955"
   
 -   不能更改自定义索引中包含的特性类型。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

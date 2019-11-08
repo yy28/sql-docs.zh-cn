@@ -1,5 +1,5 @@
 ---
-title: 数据类型为 ODBC 日期和时间改进的支持 |Microsoft Docs
+title: 对 ODBC 日期和时间改进的数据类型支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +14,15 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9979de414bb044e23aa01d5ce1be1be6daa83c62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed58bf3db95d9989bedf2826cdd722206bfb4d51
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030514"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784007"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>针对 ODBC 日期/时间改进的数据类型支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   本主题提供有关支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和时间数据类型的 ODBC 类型的信息。  
   
@@ -36,12 +35,12 @@ ms.locfileid: "68030514"
   
  下表显示完整的服务器类型映射。 注意，该表的某些单元格包含两个条目；在这些情况下，第一个是针对 ODBC 3.0 的值，第二个是针对 ODBC 2.0 的值。  
   
-|SQL Server 数据类型|SQL 数据类型|ReplTest1|  
+|SQL Server 数据类型|SQL 数据类型|“值”|  
 |--------------------------|-------------------|-----------|  
-|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|日期时间|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
-|Time|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
+|日期|SQL_TYPE_DATE<br /><br /> SQL_DATE|91（sql .h）<br /><br /> 9（sqltypes.h）|  
+|Time|SQL_SS_TIME2|-154 （SQLNCLI.MSI）|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
   
@@ -61,11 +60,11 @@ ms.locfileid: "68030514"
   
 |SQL Server 数据类型|ODBC 数据类型|客户端转换的字符串格式|  
 |--------------------------|--------------------|------------------------------------------|  
-|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
+|日期时间|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 此数据类型精确到 1 分钟。 秒部分在输出中将为零，在输入中由服务器进行四舍五入。|  
-|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
+|日期|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|年-月-日 hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|"yyyy-mm-dd hh： mm： ss [. 维]"<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
   
  日期/时间文字的 ODBC 转义序列没有更改。  
@@ -109,7 +108,7 @@ ms.locfileid: "68030514"
   
 -   SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
-### <a name="sqlsstime2struct"></a>SQL_SS_TIME2_STRUCT  
+### <a name="sql_ss_time2_struct"></a>SQL_SS_TIME2_STRUCT  
  此结构在 32 位和 64 位操作系统中都填充到 12 个字节。  
   
 ```  
@@ -121,7 +120,7 @@ typedef struct tagSS_TIME2_STRUCT {
 } SQL_SS_TIME2_STRUCT;  
 ```  
   
-### <a name="sqlsstimestampoffsetstruct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
+### <a name="sql_ss_timestampoffset_struct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
 ```  
 typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {  
@@ -137,9 +136,9 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- 如果**timezone_hour**为负， **timezone_minute**必须为负数或零。 如果**timezone_hour**为正， **timezone_minute**必须为正数或零。 如果**timezone_hour**为零， **timezone_minute** -59 到 + 59 范围内可能具有的任何值。  
+ 如果**timezone_hour**为负数，则**timezone_minute**必须为负数或零。 如果**timezone_hour**为正，则**timezone_minute**必须为正数或零。 如果**timezone_hour**为零，则**timezone_minute**的范围可以是从-59 到 + 59 的任何值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: 日期属性 （ClientNetLibInfo 类） |Microsoft Docs
-ms.custom: ''
+title: Date 属性（ClientNetLibInfo）
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa616acc636c40780925ea9966712a2d5cc6b3a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: afbbebcfb2d569479ba502e19564adf4df4a70f6
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995465"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659616"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Date 属性（ClientNetLibInfo 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +35,16 @@ ms.locfileid: "67995465"
 object.Date [= value]  
 ```  
   
-## <a name="parts"></a>部件  
- *object*  
+## <a name="parts"></a>组成部分  
+ 对象  
  一个表示有关客户端网络库的信息的 [ClientNetLibInfo 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定客户端网络库文件的日期的 uint32 值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

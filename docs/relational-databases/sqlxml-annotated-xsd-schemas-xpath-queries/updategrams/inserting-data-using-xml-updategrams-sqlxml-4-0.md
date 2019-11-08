@@ -1,5 +1,5 @@
 ---
-title: 使用 XML Updategram (SQLXML 4.0) 插入数据 |Microsoft Docs
+title: 使用 XML Updategram 插入数据（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -34,16 +34,16 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7526bd23d5b49160748eff653d0e2d9c1e07ce4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 87e63076b0c078484d3cfac9128459cb93b06098
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086841"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638065"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML updategram 插入数据 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  当记录实例出现在时，updategram 指示插入操作 **\<后 >** 块中但不是在相应 **\<之前 >** 块。 在这种情况下，updategram 中的记录插入 **\<后 >** 到数据库中的块。  
+  当记录实例出现在 **> 块\<** 中但不在 > 块之前的相应 **\<** 中时，updategram 指示插入操作。 在这种情况下，updategram 会将 > 块块 **\<** 中的记录插入到数据库中。  
   
  以下是 updategram 的插入操作格式：  
   
@@ -66,29 +66,29 @@ ms.locfileid: "68086841"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<之前 > 块  
- **\<之前 >** 块可省略了插入操作。 如果可选**映射架构**属性未指定，  **\<ElementName >** 中指定的 updategram 映射到数据库表和子元素或属性映射到表中的列。  
+## <a name="before-block"></a>> 块之前 \<  
+ 对于插入操作，可以省略 **> 块之前的\<** 。 如果未指定可选的**映射架构**特性，updategram 中指定的 **\<ElementName >** 映射到数据库表，并且子元素或属性映射到表中的列。  
   
-## <a name="after-block"></a>\<后 > 块  
- 您可以指定一个或多个记录中的 **\<后 >** 块。  
+## <a name="after-block"></a>> 块后 \<  
+ **> 块后**，可以指定\<中的一个或多个记录。  
   
- 如果 **\<后 >** 块不提供特定列的值，updategram 将使用 （如果已指定一个架构） 中带批注的架构指定的默认值。 如果架构未指定列的默认值，则 updategram 不指定到此列的任何显式值，并，时，将分配[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到此列的默认值 （如果指定）。 如果没有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认值并且此列接受 NULL 值，则 updategram 将此列的值设置为 NULL。 如果此列既没有默认值也不接受 NULL 值，则命令将失败并且 updategram 将返回一个错误。 可选**updg: returnid**属性用于返回在包含一个 IDENTITY 类型的列的表中添加一条记录时，由系统生成的标识值。  
+ 如果在 **> 块后\<** 没有为特定列提供值，则 updategram 将使用在带批注的架构中指定的默认值（如果指定了架构）。 如果架构未指定列的默认值，则 updategram 不会为该列指定任何显式值，而是将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认值（如果指定）分配给此列。 如果没有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认值并且此列接受 NULL 值，则 updategram 将此列的值设置为 NULL。 如果此列既没有默认值也不接受 NULL 值，则命令将失败并且 updategram 将返回一个错误。 当将记录添加到具有 IDENTITY 类型列的表中时，可选**updg： returnid**属性用于返回系统生成的标识值。  
   
 ## <a name="updgid-attribute"></a>updg:id 属性  
- 如果 updategram 插入仅记录，则 updategram 不需要**updg: id**属性。 有关详细信息**updg: id**，请参阅[使用 XML Updategram 更新数据&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)。  
+ 如果 updategram 只插入记录，则 updategram 不需要**updg： id**属性。 有关**updg： id**的详细信息，请参阅[使用 XML Updategram &#40;SQLXML 4.0&#41;更新数据](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)。  
   
 ## <a name="updgat-identity-attribute"></a>updg:at-identity 属性  
- Updategram 在 updategram 中包含一个 IDENTITY 类型的列的表中插入一条记录，可以使用可选的捕获系统分配的值**updg： 在标识**属性。 然后，updategram 可以在后续操作中使用此值。 可以在执行 updategram，返回由指定生成的标识值**updg: returnid**属性。  
+ 当 updategram 在具有 IDENTITY 类型列的表中插入一条记录时，updategram 可以通过使用可选的**updg： IDENTITY**特性来捕获系统赋值的值。 然后，updategram 可以在后续操作中使用此值。 执行 updategram 时，可以通过指定**updg： returnid**特性来返回生成的标识值。  
   
 ## <a name="updgguid-attribute"></a>updg:guid 属性  
- **Updg: guid**属性是一个可选属性，生成全局唯一标识符。 此值保持在范围内的整个 **\<同步 >** 块中指定它。 可以使用此值在任何地方 **\<同步 >** 块。 该属性调用**newguid （)** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]函数生成的唯一标识符。  
+ **Updg： guid**特性是一个可选的属性，该属性可生成全局唯一标识符。 此值保留在指定它的整个 **\<同步 >** 块的作用域中。 可以在 **\<sync >** 块的任何位置使用此值。 特性调用**NEWGUID （）** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 函数生成唯一标识符。  
   
 ## <a name="examples"></a>示例  
- 若要创建使用以下示例的工作示例，必须满足中指定的要求[运行 SQLXML 示例的要求](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足[运行 SQLXML 示例的要求](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)中指定的要求。  
   
  在使用 updategram 示例前，请注意以下事项：  
   
--   大多数示例使用默认映射（即，未在 updategram 中指定任何映射架构）。 有关使用映射架构的 updategram 的更多示例，请参阅[在 Updategram 中指定带批注的映射架构&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
+-   大多数示例使用默认映射（即，未在 updategram 中指定任何映射架构）。 有关使用映射架构的 updategram 的更多示例，请参阅[在&#40;Updategram SQLXML 4.0&#41;中指定带批注的映射架构](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 -   大多数示例使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 示例数据库。 已对该数据库中的表应用所有更新。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "68086841"
 </ROOT>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的 updategram，并将它粘贴到文本文件中。 将文件另存为 MyUpdategram.xml。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "68086841"
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. 使用 updategram 插入多个记录  
- 此 updategram 向 HumanResources.Shift 表添加两个新的轮班记录。 Updategram 不指定可选 **\<之前 >** 块。  
+ 此 updategram 向 HumanResources.Shift 表添加两个新的轮班记录。 Updategram 不会在 **> 块之前**指定可选\<。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -178,7 +178,7 @@ ms.locfileid: "68086841"
 </ROOT>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的 updategram，并将它粘贴到文本文件中。 将文件另存为 Updategram-AddShifts.xml。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "68086841"
   
      有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 此示例中的另一个版本是使用两个单独的 updategram **\<后 >** 块而不是一个块来插入两名员工。 这种做法是有效的，并且可以按照如下形式进行编码：  
+ 此示例的另一个版本是 updategram**在 >** 块（而不是一个块）后使用两个单独\<来插入这两个雇员。 这种做法是有效的，并且可以按照如下形式进行编码：  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -210,12 +210,12 @@ ms.locfileid: "68086841"
 ```  
   
 ### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. 使用在 XML 中无效的有效 SQL Server 字符  
- 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，表名可以包括空格，例如 Northwind 数据库中的 Order Details 表。 但是，这不是有效的 XML 字符中的有效[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]标识符，但不是有效 XML 标识符可以使用编码 __xHHHH\_\_作为编码值，其中 HHHH 代表四位十六进制 ucs-2 代码按最高有效位优先顺序排序的字符。  
+ 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，表名可以包括空格，例如 Northwind 数据库中的 Order Details 表。 但是，这在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 标识符有效的 XML 字符中无效，但不能使用 "__xHHHH\_\_" 编码为编码值，其中 HHHH 代表该字符的四位十六进制 UCS-2 代码最高有效位优先的顺序。  
   
 > [!NOTE]  
->  此示例使用 Northwind 数据库。 可以从此下载并使用一个 SQL 脚本来安装 Northwind 数据库[Microsoft 网站上](https://go.microsoft.com/fwlink/?LinkId=30196)。  
+>  此示例使用 Northwind 数据库。 可以通过使用可从[Microsoft 网站](https://www.microsoft.com/download/details.aspx?id=23654)下载的 SQL 脚本来安装 Northwind 数据库。  
   
- 此外，元素名称必须括在方括号 ([]) 内。 由于字符 [和] 在 XML 中无效，必须对它们编码为 _x005B\_和 _x005D\_分别。 （如果使用映射架构，可以提供不包含无效字符（如空格）的元素名。 映射架构会执行必要的映射；因此，无需对这些字符进行编码。）  
+ 此外，元素名称必须括在方括号（[]）内。 因为字符 [and] 在 XML 中无效，所以必须分别将它们编码为 _x005B\_ 和 _x005D\_。 （如果使用映射架构，可以提供不包含无效字符（如空格）的元素名。 映射架构会执行必要的映射；因此，无需对这些字符进行编码。）  
   
  此 updategram 向 Northwind 数据库中的 Order Details 表添加一条记录：  
   
@@ -235,11 +235,11 @@ ms.locfileid: "68086841"
 </ROOT>  
 ```  
   
- 订单详细信息表中的 UnitPrice 列属于**资金**类型。 要应用适当的类型转换 (从**字符串**键入到**资金**类型)，必须将美元符号 （$） 添加为值的一部分。 如果 updategram 未指定映射架构中，第一个字符**字符串**计算的值。 如果第一个字符为美元符号 ($)，则会应用适当的转换。  
+ "订单详细信息" 表中的 "单价" 列的类型为**money** 。 若要应用适当的类型转换（从**字符串**类型转换为**money**类型），必须将美元符号字符（$）添加为值的一部分。 如果 updategram 未指定映射架构，则将计算**字符串**值的第一个字符。 如果第一个字符为美元符号 ($)，则会应用适当的转换。  
   
- 如果针对该列相应地标记为映射架构指定 updategram **dt:type="fixed.14.4"** 或**sql: datatype ="money"** ，美元符号 （$） 不是必需的和映射就会处理转换。 建议采用这种方式以确保能够进行适当的类型转换。  
+ 如果针对映射架构指定了 updategram，其中列被适当地标记为**dt： type = "fixed. 14.4"** 或**sql： datatype = "money"** ，则不需要美元符号（$），并且该转换由映射进行处理。 建议采用这种方式以确保能够进行适当的类型转换。  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的 updategram，并将它粘贴到文本文件中。 将文件另存为 UpdategramSpacesInTableName.xml。  
   
@@ -250,7 +250,7 @@ ms.locfileid: "68086841"
 ### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. 使用 at-identity 属性检索已在 IDENTITY 类型的列中插入的值  
  以下 updategram 插入两条记录：在 Sales.SalesOrderHeader 表中插入一条记录而在 Sales.SalesOrderDetail 表中插入另一条记录。  
   
- 首先，updategram 向 Sales.SalesOrderHeader 表中添加一条记录。 在该表中，SalesOrderID 列为 IDENTITY 类型的列。 因此，当将此记录添加到表，则 updategram 将使用**在标识**属性捕获分配的 SalesOrderID 的值为"x"（占位符值）。 然后，updategam 指定这**在标识**变量中 SalesOrderID 属性的值作为\<Sales.SalesOrderDetail > 元素。  
+ 首先，updategram 向 Sales.SalesOrderHeader 表中添加一条记录。 在该表中，SalesOrderID 列为 IDENTITY 类型的列。 因此，当您将此记录添加到表中时，updategram 将使用 "**标识**" 属性来捕获指定的 SalesOrderID 值为 "x" （占位符值）。 然后，updategam 将此**at 标识**变量指定为 \<SalesOrderDetail > 元素中的 SalesOrderID 属性的值。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -287,7 +287,7 @@ ms.locfileid: "68086841"
 </ROOT>  
 ```  
   
- 如果你想要返回由生成的标识值**updg： 在标识**属性，可以使用**updg: returnid**属性。 以下是经过修改的返回此标识值的 updategram。 （此 updategram 添加两条订单记录和两条订单详细信息记录，目的在于让示例变得稍微复杂一点。）  
+ 如果要返回**updg： identity**属性生成的标识值，则可以使用**updg： returnid**特性。 以下是经过修改的返回此标识值的 updategram。 （此 updategram 添加两条订单记录和两条订单详细信息记录，目的在于让示例变得稍微复杂一点。）  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -319,7 +319,7 @@ ms.locfileid: "68086841"
 </ROOT>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的 updategram，并将它粘贴到文本文件中。 将文件另存为 Updategram-returnId.xml。  
   
@@ -328,7 +328,7 @@ ms.locfileid: "68086841"
      有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ### <a name="e-using-the-updgguid-attribute-to-generate-a-unique-value"></a>E. 使用 updg:guid 属性生成唯一值  
- 在本示例中，updategram 在 Cust 和 CustOrder 表中插入一条新记录。 此外，updategram 通过使用生成的 CustomerID 属性值是唯一**updg: guid**属性。  
+ 在本示例中，updategram 在 Cust 和 CustOrder 表中插入一条新记录。 此外，updategram 通过使用**updg： guid**特性为 CustomerID 属性生成唯一值。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -363,7 +363,7 @@ ms.locfileid: "68086841"
   
 1.  复制上面的 updategram，并将它粘贴到文本文件中。 将文件另存为 Updategram-GenerateGuid.xml。  
   
-2.  创建这些表：  
+2.  创建以下表：  
   
     ```  
     USE tempdb  
@@ -384,7 +384,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
  在此 updategram 中指定了一个 XSD 架构（即，updategram 元素和属性不存在任何默认映射）。 架构提供了元素和属性与数据库表和列之间的必要映射。  
   
- 以下架构 (CustOrderSchema.xml) 描述 **\<CustOrder >** 组成元素**OrderID**并**EmployeeID**属性。 若要使该架构更有趣，默认值分配给**EmployeeID**属性。 updategram 仅在执行插入操作以及仅在没有指定该属性时才使用属性的默认值。  
+ 以下架构（Custorderschema.xml）描述了包含 "**订单 id** " 和 "**雇员 id** " 属性的 **\<CustOrder >** 元素。 为了使该架构更有趣，将为 "**雇员 id** " 属性分配一个默认值。 updategram 仅在执行插入操作以及仅在没有指定该属性时才使用属性的默认值。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -412,11 +412,11 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- 指定映射架构的 updategram 的更多示例，请参阅[在 Updategram 中指定带批注的映射架构&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
+ 有关指定映射架构的 updategram 的更多示例，请参阅[在&#40;Updategram SQLXML 4.0&#41;中指定带批注的映射架构](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 ##### <a name="to-test-the-updategram"></a>测试 updategram  
   
-1.  创建此表中的**tempdb**数据库：  
+1.  在**tempdb**数据库中创建此表：  
   
     ```  
     USE tempdb  
@@ -434,7 +434,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 以下是等效的 XDR 架构：  
+ 这是等效的 XDR 架构：  
   
 ```  
 <Schema xmlns="urn:schemas-microsoft-com:xml-data"  
@@ -451,7 +451,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ```  
   
 ### <a name="g-using-the-xsinil-attribute-to-insert-null-values-in-a-column"></a>G. 使用 xsi:nil 属性在列中插入 null 值  
- 如果你想要在表中的相应列中插入 null 值，可以指定**xsi: nil** updategram 中的元素上的属性。 在相应的 XSD 架构，XSD **nillable**还必须指定特性。  
+ 如果要在表的相应列中插入 null 值，可以在 updategram 中的元素上指定**xsi： nil**特性。 在对应的 XSD 架构中，还必须指定 XSD **nillable**属性。  
   
  例如，请看此 XSD 架构：  
   
@@ -483,7 +483,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </xsd:schema>  
 ```  
   
- XSD 架构指定了**nillable ="true"** 有关 **\<fname >** 元素。 以下 updategram 使用此架构：  
+ XSD 架构为 **\<fname >** 元素指定**nillable = "true"** 。 以下 updategram 使用此架构：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
@@ -503,11 +503,11 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- Updategram 指定**xsi: nil**有关 **\<fname >** 中的元素 **\<后 >** 块。 因此，在执行此 updategram 时，会为表中的 first_name 列插入 NULL 值。  
+ Updategram 为 **> 块后面\<** 中的 **\<fname >** 元素指定**xsi： nil** 。 因此，在执行此 updategram 时，会为表中的 first_name 列插入 NULL 值。  
   
 ##### <a name="to-test-the-updategram"></a>测试 updategram  
   
-1.  创建下的表中**tempdb**数据库：  
+1.  在**tempdb**数据库中创建以下表：  
   
     ```  
     USE tempdb  
@@ -531,7 +531,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ### <a name="h-specifying-namespaces-in-an-updategram"></a>H. 在 updategram 中指定命名空间  
  在 updategram 中，元素所属的命名空间可以在 updategram 中的同一元素中进行声明。 在这种情况下，对应的架构也必须声明相同的命名空间，并且元素必须属于该目标命名空间。  
   
- 例如，在以下 updategram (Updategram-elementhavingnamespace.xml)， **\<顺序 >** 元素所属的元素中声明的命名空间。  
+ 例如，在以下 updategram （Updategram-elementhavingnamespace.xml）中， **\<Order >** 元素属于元素中声明的命名空间。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -612,13 +612,13 @@ CustOrder(OrderID, EmployeeID, OrderType)
      有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ### <a name="i-inserting-data-into-an-xml-data-type-column"></a>I. 将数据插入到 XML 数据类型列  
- **Xml**数据类型中引入了[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 可以使用 updategram 插入和更新数据存储在**xml**数据类型列中的以下规定：  
+ **Xml**数据类型是在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]中引入的。 您可以使用 updategram 来插入和更新存储在**xml**数据类型列中的数据，并提供以下规定：  
   
--   **Xml**列不能用于标识现有行。 因此，它不能包含在**updg： 之前**updategram 的部分。  
+-   **Xml**列不能用于标识现有行。 因此，它不能包含在 updategram 的**updg： before**部分。  
   
--   插入到 XML 片段的作用域中的命名空间**xml**列将被保留并将其命名空间声明添加到所插入片段的顶级元素。  
+-   将保留在插入到**xml**列中的 xml 片段范围内的命名空间，并将其命名空间声明添加到插入片段的顶层元素。  
   
- 例如，在以下 updategram (SampleUpdateGram.xml)  **\<Desc >** 元素更新在生产环境中的 ProductDescription 列 > 中的 productModel 表[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]示例数据库。 此 updategram 的结果是 ProductDescription 列的 XML 内容所包含的 XML 内容的 update  **\<Desc >** 元素。  
+ 例如，在以下 updategram （Sampleupdategram.xml）中， **\<Desc >** 元素更新 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 示例数据库的生产 > productModel 表中的 ProductDescription 列。 此 updategram 的结果是，ProductDescription 列的 XML 内容是更新 **\<Desc >** 元素的 xml 内容。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -719,7 +719,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 1.  复制上面的架构，并将它粘贴到文本文件中。 将文件另存为 XSD-SampleSchema.xml。  
   
     > [!NOTE]  
-    >  由于 updategram 支持默认映射，因此没有方法来确定开始和结束**xml**数据类型。 这实际上意味着插入或更新包含的表时是否需要映射架构**xml**数据类型列。 如果没有提供架构，SQLXML 将返回错误，指出表中缺少某一列。  
+    >  由于 updategram 支持默认映射，因此无法确定**xml**数据类型的开头和结尾。 这实际上意味着，当使用**xml**数据类型列插入或更新表时，需要使用映射架构。 如果没有提供架构，SQLXML 将返回错误，指出表中缺少某一列。  
   
 2.  复制上面的 updategram，并将它粘贴到文本文件中。 在用于保存 SampleSchema.xml 的同一文件夹中将文件另存为 SampleUpdategram.xml。  
   
@@ -727,7 +727,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>另请参阅  
+ [Updategram 安全注意事项&#40;SQLXML 4。0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

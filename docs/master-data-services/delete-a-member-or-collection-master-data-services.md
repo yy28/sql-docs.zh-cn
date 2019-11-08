@@ -1,5 +1,5 @@
 ---
-title: 删除成员或集合 (Master Data Services) | Microsoft Docs
+title: 删除成员或集合
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cb72f41278f356704b7abedba8e9e60cb00b8e60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 789b372660e7df5282c700f57654162288dabb78
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094375"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729376"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>删除成员或集合 (Master Data Services)
 
@@ -32,22 +32,22 @@ ms.locfileid: "68094375"
 > [!NOTE]  
 >  如果某一成员用作另一个成员的基于域的属性值，则不能删除该成员。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--    您必须有权访问“资源管理器”功能区域。  
+-   您必须有权访问“资源管理器”功能区域。  
   
--   如果要删除成员，你必须至少具有此成员所在的叶模型对象的  “删除”权限。  
+-   如果要删除成员，你必须至少具有此成员所在的叶模型对象的 “删除”权限。  
   
 -   对于集合，您必须对要删除的叶集合对象至少具有 **“更新”** 权限。  
   
 ### <a name="to-delete-a-member-or-collection"></a>删除成员或集合  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在  主页上，从“模型”列表中，选择模型。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在 主页上，从“模型”列表中，选择模型。  
   
-2.   从“版本”列表中，选择某一版本。  
+2.  从“版本”列表中，选择某一版本。  
   
-3.  单击 **“资源管理器”** 。  
+3.  单击“资源管理器”。  
   
 4.  若要删除：  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68094375"
   
 8.  在确认对话框中，单击 **“确定”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [重新激活成员或集合 (Master Data Services)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)  

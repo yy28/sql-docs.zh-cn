@@ -18,16 +18,15 @@ ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dcc08890a230155c4ffefc3cf4a20dd72dd746f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0bb4e1011448ef4ea98179c3de49c43e66b811e3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707714"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783010"
 ---
 # <a name="bcp_colptr"></a>bcp_colptr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   将当前副本的程序变量数据地址设置到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。  
   
@@ -48,7 +47,7 @@ RETCODE bcp_colptr (
  *pData*  
  指向要复制的数据的指针。 如果绑定数据类型是大值类型（如 SQLTEXT 或 SQLIMAGE），则*pData*可以为 NULL。 空*pData*表示长数据值将使用[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)发送到块 SQL Server。  
   
- 如果*pData*设置为 NULL，并且与绑定字段对应的列不是大值类型，则**bcp_colptr**失败。  
+ 如果将*pData*设置为 NULL，并且与绑定字段对应的列不是大值类型， **bcp_colptr**会失败。  
   
  有关大值类型的详细信息，请参阅[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) **。**  
   
@@ -58,14 +57,14 @@ RETCODE bcp_colptr (
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>备注  
- 使用**bcp_colptr**函数可以在将数据复制到带有[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)的 SQL Server 时，更改特定列的源数据地址。  
+## <a name="remarks"></a>注释  
+ 使用**bcp_colptr**函数，可以在将数据复制 SQL Server 到[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)时，更改特定列的源数据地址。  
   
- 最初，指向用户数据的指针通过调用**bcp_bind**设置。 如果程序变量数据地址在对**bcp_sendrow**的调用之间发生更改，则可以调用**bcp_colptr**来重置指向数据的指针。 对**bcp_sendrow**的下一次调用将通过对**bcp_colptr**的调用发送已寻址的数据。  
+ 最初，指向用户数据的指针通过调用**bcp_bind**设置。 如果程序变量数据地址在对**bcp_sendrow**的调用之间发生更改，则可以调用**bcp_colptr**来重置指向数据的指针。 对的下一次调用**bcp_sendrow**会将通过调用来寻址的数据发送到**bcp_colptr**。  
   
  对于要修改其数据地址的表中的每一列，都必须有单独的**bcp_colptr**调用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

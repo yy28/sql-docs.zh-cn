@@ -1,5 +1,5 @@
 ---
-title: 创建主数据管理器 Web 应用程序 (Master Data Services) | Microsoft Docs
+title: 创建主数据管理器 Web 应用程序
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3fa6834a853a82067418a2ea5270e59ebdaa7dc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 384cf7989f41dce541afcfdd44b2831c79fde31e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945037"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729457"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>创建主数据管理器 Web 应用程序 (Master Data Services)
 
@@ -55,7 +55,7 @@ ms.locfileid: "67945037"
   
 4.  在 **“创建网站”** 对话框中，指定新网站的信息。 有关对话框中的用户界面 (UI) 选项的详细信息，请参阅 [创建网站对话框（Master Data Services 配置管理器）](../../master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md)。  
   
-5.  单击 **“确定”** 。  
+5.  单击“确定”。  
   
 ## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>在现有网站中创建主数据管理器 Web 应用程序  
  在现有网站中创建 Web 应用程序时，您可以选择 Web 应用程序的虚拟路径和别名。 将该 Web 应用程序添加到新的应用程序池中。  
@@ -72,7 +72,7 @@ ms.locfileid: "67945037"
   
 5.  在 **“创建 Web 应用程序”** 对话框中，指定新 Web 应用程序的信息。 有关对话框中的用户界面 (UI) 选项的详细信息，请参阅 [创建 Web 应用程序对话框（Master Data Services 配置管理器）](../../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)。  
   
-6.  单击 **“确定”** 。  
+6.  单击“确定”。  
   
 ## <a name="next-steps"></a>后续步骤  
   
@@ -80,7 +80,7 @@ ms.locfileid: "67945037"
   
 -   如果你想要通过使用安全套接字层 (SSL) 对内容进行加密，还可以配置承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的网站以便使用 HTTPS 绑定。 您必须使用 IIS 管理器之类的 Internet Information Services (IIS) 工具为 Web 服务器配置服务器证书，以及为站点配置 HTTPS 绑定和 SSL 设置。 有关详细信息，请参阅 [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安装 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

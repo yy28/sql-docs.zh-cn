@@ -1,5 +1,5 @@
 ---
-title: 业务规则扩展 (Master Data Services) | Microsoft Docs
+title: 业务规则扩展
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5f490bd51ac31046e6daf3c1e90420b4efb84e03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047410"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728685"
 ---
 # <a name="business-rules-extension-master-data-services"></a>业务规则扩展 (Master Data Services)
 
@@ -65,12 +65,12 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**架构**|**Permissions**|  
+|**架构**|**权限**|  
 |mdm|SELECT|  
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   你必须有权访问“系统管理”功能区域。  
@@ -81,39 +81,39 @@ CREATE PROCEDURE [usr].[YourAction]
   
 ## <a name="create-a-business-rule-to-take-a-user-defined-script-as-a-condition-or-as-an-action"></a>创建业务规则，以将用户定义脚本用作条件或操作  
   
-1.  在主数据管理器中，单击“系统管理”  。  
+1.  在主数据管理器中，单击“系统管理”。  
   
-2.  在菜单栏中，指向“管理”  ，然后单击“业务规则”  。  
+2.  在菜单栏中，指向“管理” ，然后单击“业务规则”。  
   
-3.  在“业务规则”页上，从“模型”下拉列表中选择某一模型。    
+3.  在“业务规则”页上，从“模型”下拉列表中选择某一模型。  
   
-4.  从“实体”  下拉列表中选择一个实体。  
+4.  从“实体”下拉列表中选择一个实体。  
   
-5.  从“成员类型”  下拉列表中，选择要应用业务规则的成员类型。  
+5.  从“成员类型” 下拉列表中，选择要应用业务规则的成员类型。  
   
 6.  单击 **“添加”** 。  
   
 7.  执行以下操作以将用户定义脚本创建为条件。  
   
-    1.  在“If”  块下，单击“添加”按钮  。 此时将显示一个面板。  
+    1.  在“If” 块下，单击“添加”按钮 。 此时，系统会显示一个面板。  
   
-    2.  从“运算符”下拉列表中，选择“用户定义脚本”下的用户定义函数。    
+    2.  从“运算符”下拉列表中，选择“用户定义脚本”下的用户定义函数。  
   
     3.  将显示用户定义函数的所有参数。  
   
     4.  向每个参数赋值  
   
-    5.  单击“保存”  。  
+    5.  单击 **“保存”** 。  
   
 8.  执行以下操作以将用户定义脚本用作操作。  
   
-    1.  在“Then”  块下，单击“添加”按钮  。 此时将显示一个面板。  
+    1.  在“Then” 块下，单击“添加”按钮 。 此时，系统会显示一个面板。  
   
-    2.  从“运算符”下拉列表中，选择“用户定义脚本”下的用户定义函数。    
+    2.  从“运算符”下拉列表中，选择“用户定义脚本”下的用户定义函数。  
   
-    3.  单击“保存”  。  
+    3.  单击 **“保存”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
  [业务规则条件 (Master Data Services)](../master-data-services/business-rule-conditions-master-data-services.md)   
  [业务规则操作 (Master Data Services)](../master-data-services/business-rule-actions-master-data-services.md)  

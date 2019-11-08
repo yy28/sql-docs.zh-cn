@@ -16,18 +16,17 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6035e493a2ad08b80ed225c25332d86681787c94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0922ed161eb691386b1870f03a8597b6a4872f74
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128882"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73775505"
 ---
 # <a name="getting-large-data"></a>获取大型数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  一般情况下，使用者应将创建的代码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口存储对象处理数据未通过引用其他代码**ISequentialStream**接口指针。  
+  通常，使用者应该隔离用于创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序存储对象的代码，该代码用于处理未通过**ISequentialStream**接口指针引用的数据。  
   
  本主题涉及可用于以下函数的功能：  
   
@@ -37,9 +36,9 @@ ms.locfileid: "68128882"
   
 -   ICommand::Execute  
   
- 如果 DBPROP_ACCESSORDER 属性 （在行集属性组） 设置为值 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS，使用者应提取单个行中调用数据的**GetNextRows**方法由于不缓冲 BLOB 数据。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据  。  
+ 如果将 DBPROP_ACCESSORDER 属性（位于行集属性组中）设置为 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 的任一值，则使用者在调用**GetNextRows**方法时，只应提取一行数据因为 BLOB 数据未缓冲。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不会检索大型数据从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]请求之前要执行此操作由使用者。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序在通过使用者请求之前，不会从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检索大数据。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
   
 ## <a name="example"></a>示例  
  本示例从单一列中检索大型数据值：  
@@ -149,7 +148,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [BLOB 和 OLE 对象](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [使用大值类型](../../relational-databases/native-client/features/using-large-value-types.md)  
   

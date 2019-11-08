@@ -10,49 +10,49 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2d6d5bd9593c70ae09b042b8218bd8a2c7261a3
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: e3e244b2c4892d725e8e3ddf684b55a224138a50
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72797889"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637673"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>在 Server Core 上安装 SQL Server 2014
   您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安装上安装 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。 本主题提供用于在 Server Core 上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的特定于安装的详细信息。  
   
- [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 操作系统的 Server Core 安装选项提供了用于运行特定服务器角色的最小环境。 这将有助于减少维护和管理需求以及针对这些服务器角色的攻击面。 有关 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]上实现的服务器核心的详细信息，请参阅[Server core For Windows server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=202439) （ https://go.microsoft.com/fwlink/?LinkId=202439) 。 有关在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]上实现 Server Core 的详细信息，请参阅 [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx) 。  
+ [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 操作系统的 Server Core 安装选项提供了用于运行特定服务器角色的最小环境。 这将有助于减少维护和管理需求以及针对这些服务器角色的攻击面。 有关 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]上实现的服务器核心的详细信息，请参阅[Server core For Windows server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=202439) （ https://go.microsoft.com/fwlink/?LinkId=202439)。 有关在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]上实现 Server Core 的详细信息，请参阅 [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 |要求|如何安装|  
 |-----------------|--------------------|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|包含在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 Server Core 安装中。 如果未启用，则安装程序将在默认情况下启用它。<br /><br /> 无法在计算机上并行运行 2.0、3.0 和 3.5 版。 在安装 .NET Framework 3.5 SP1 时，将自动获得 2.0 和 3.0 层。|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 完整配置文件|包含在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 的 Server Core 安装中。 如果未启用，则安装程序将在默认情况下启用它。<br /><br /> 在安装有 Windows Server 操作系统的计算机上，您必须在运行安装程序前下载并安装 .NET Framework 3.5 SP1，以便安装依赖于 .NET 3.5 SP1 的组件。<br /><br /> 有关如何获取和启用 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]中的 .NET Framework 3.5 的建议和指南的详细信息，请参阅[Microsoft .NET Framework 3.5 部署注意事项](https://msdn.microsoft.com/library/windows/hardware/hh975396)（ https://msdn.microsoft.com/library/windows/hardware/hh975396) 。|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core 配置文件|除 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之外，所有 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本的安装程序均将 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core 配置文件作为必备组件进行安装。<br /><br /> 对于 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，请从[Server core Microsoft .NET Framework 4 （独立安装程序）](https://go.microsoft.com/fwlink/?LinkId=220467)下载 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core 配置文件（ https://go.microsoft.com/fwlink/?LinkId=220467) ），并在继续安装之前安装它。|  
-|Windows Installer 4.5|随 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 的 Server Core 一同提供。|  
-|Windows PowerShell 2.0|随 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 的 Server Core 一同提供。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 完整配置文件|包含在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 的 Server Core 安装中。 如果未启用，则安装程序将在默认情况下启用它。<br /><br /> 在安装有 Windows Server 操作系统的计算机上，您必须在运行安装程序前下载并安装 .NET Framework 3.5 SP1，以便安装依赖于 .NET 3.5 SP1 的组件。<br /><br /> 有关如何获取和启用 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]中的 .NET Framework 3.5 的建议和指南的详细信息，请参阅[Microsoft .NET Framework 3.5 部署注意事项](https://msdn.microsoft.com/library/windows/hardware/hh975396)（ https://msdn.microsoft.com/library/windows/hardware/hh975396)。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core 配置文件|除 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之外，所有 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本的安装程序均将 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core 配置文件作为必备组件进行安装。<br /><br /> 对于 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，请从[Server core Microsoft .NET Framework 4 （独立安装程序）](https://www.microsoft.com/download/details.aspx?id=17718)下载 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core 配置文件（ https://www.microsoft.com/download/details.aspx?id=17718)），并在继续安装之前安装它。|  
+|Windows Installer 4.5|随 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 Server Core 一同提供。|  
+|Windows PowerShell 2.0|随 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 Server Core 一同提供。|  
   
 ##  <a name="BK_SupportedFeatures"></a>支持的功能  
  使用下表可以查找 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 和 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安装上的 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]所支持的功能。  
   
-|功能|Supported|  
+|功能|是否支持|  
 |-------------|---------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|用户帐户控制|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication|用户帐户控制|  
-|全文搜索|用户帐户控制|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|用户帐户控制|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|是|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication|是|  
+|全文搜索|是|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|是|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|“否”|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|“否”|  
-|客户端工具连接|用户帐户控制|  
-|Integration Services Server<sup>[1]</sup>|用户帐户控制|  
+|客户端工具连接|是|  
+|Integration Services Server<sup>[1]</sup>|是|  
 |客户端工具向后兼容性|“否”|  
 |客户端工具 SDK|“否”|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书|“否”|  
 |管理工具 - 基本|仅限远程<sup>[2]</sup>|  
 |管理工具 - 完整|仅限远程<sup>[2]</sup>|  
 |Distributed Replay 控制器|“否”|  
-|Distributed Replay 客户端|仅限远程<sup>[2]</sup>|  
-|SQL 客户端连接 SDK|用户帐户控制|  
+|分布式重播客户端|仅限远程<sup>[2]</sup>|  
+|SQL 客户端连接 SDK|是|  
 |Microsoft Sync Framework|是<sup>[3]</sup>|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|“否”|  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|“否”|  
@@ -61,7 +61,7 @@ ms.locfileid: "72797889"
   
  <sup>[2]</sup>不支持在 Server Core 上安装这些功能。 可以在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core 之外的服务器上安装这些组件，然后将这些组件连接到 Server Core 上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。  
   
- <sup>[3]</sup>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装包中未包含 Microsoft Sync Framework。 你可以从该[Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=221788)（ https://go.microsoft.com/fwlink/?LinkId=221788) 页面）下载适当版本的 Sync Framework，并将其安装在运行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 的服务器核心安装的计算机上。  
+ <sup>[3]</sup>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装包中未包含 Microsoft Sync Framework。 你可以从该[Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=221788)（ https://go.microsoft.com/fwlink/?LinkId=221788) 页面）下载适当版本的 Sync Framework，并将其安装在运行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的服务器核心安装的计算机上。  
   
 ## <a name="supported-scenario-matrix"></a>支持的方案矩阵  
  下表显示在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安装上安装 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]时支持的方案矩阵。  
@@ -78,8 +78,8 @@ ms.locfileid: "72797889"
 ## <a name="upgrading"></a>升级  
  在 Server Core 安装上，支持从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 升级到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。  
   
-## <a name="installation"></a>Installation  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支持在 Server Core 操作系统上使用安装向导进行安装。 在 Server Core 上进行安装时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）。 有关详细信息，请参阅 [从命令提示符安装 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
+## <a name="installation"></a>安装  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支持在 Server Core 操作系统上使用安装向导进行安装。 在 Server Core 上进行安装时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）。 有关详细信息，请参阅 [从命令提示符安装 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不能在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Core SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core 的计算机上与早期版本的 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 一起并行安装。  
@@ -95,10 +95,10 @@ ms.locfileid: "72797889"
   
 ### <a name="feature-parameters"></a>功能参数  
   
-|功能参数|Description|  
+|功能参数|说明|  
 |-----------------------|-----------------|  
 |SQLENGINE|仅安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。|  
-|Replication|将复制组件与 [!INCLUDE[ssDE](../../includes/ssde-md.md)]一起安装。|  
+|REPLICATION|将复制组件与 [!INCLUDE[ssDE](../../includes/ssde-md.md)]一起安装。|  
 |FULLTEXT|将全文组件与 [!INCLUDE[ssDE](../../includes/ssde-md.md)]一起安装。|  
 |AS|安装所有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 组件。|  
 |IS|安装所有的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件。|  
@@ -106,12 +106,12 @@ ms.locfileid: "72797889"
   
  请参阅以下的功能参数用法示例：  
   
-|参数和值|Description|  
+|参数和值|说明|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|仅安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。|  
 |/FEATURES=SQLEngine,FullText|安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文组件。|  
 |/FEATURES=SQLEngine,Conn|安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和连接组件。|  
-|/FEATURES=SQLEngine,AS,IS,Conn|安装[!INCLUDE[ssDE](../../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和连接组件。|  
+|/FEATURES=SQLEngine,AS,IS,Conn|安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和连接组件。|  
   
 ### <a name="installation-options"></a>安装选项  
  在 Server Core 操作系统上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时，安装程序支持以下安装选项：  
@@ -265,7 +265,7 @@ ms.locfileid: "72797889"
 ## <a name="configuring-remote-access-of-includessnoversionincludesssnoversion-mdmd-running-on-server-core"></a>配置运行在 Server Core 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的远程访问  
  执行下述操作以配置运行在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安装上的 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]实例的远程访问。  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的远程连接  
  若要启用远程连接，请在本地使用 SQLCMD.exe 并对 Server Core 实例执行以下语句：  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -311,9 +311,9 @@ $Tcp
 ```  
   
 ## <a name="uninstallation"></a>卸载  
- 登录到运行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core 的计算机之后，您将拥有一个带有管理员命令提示符的受限制桌面环境。 您可以使用此命令提示符来启动 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例的卸载。 若要卸载 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例，请从命令提示符以完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）启动卸载。 /QS 参数将通过用户界面显示进度，但是不接受任何输入。 /Q 在没有任何用户界面的情况下以静默模式运行。  
+ 登录到运行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core 的计算机之后，您将拥有一个带有管理员命令提示符的受限制桌面环境。 您可以使用此命令提示符来启动 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例的卸载。 若要卸载 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例，请从命令提示符以完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）启动卸载。 /QS 参数将通过用户界面显示进度，但是不接受任何输入。 /Q 在没有任何用户界面的情况下以静默模式运行。  
   
- 卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的现有实例：  
+ 卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的现有实例：  
   
 ```cmd
 setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERVER  
@@ -331,8 +331,8 @@ setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 ## <a name="see-also"></a>另请参阅  
  [使用配置文件安装 SQL Server 2014](install-sql-server-using-a-configuration-file.md)   
  [从命令提示符安装 SQL Server 2014](install-sql-server-from-the-command-prompt.md)   
- [SQL Server 2014   的版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
- [Server Core Installation Option Getting Started Guide](https://go.microsoft.com/fwlink/?LinkId=221422)   
+ [SQL Server 2014  的版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ [Server Core Installation Option Getting Started Guide](https://go.microsoft.com/fwlink/?LinkId=221422) （Server Core 安装选项入门指南）  
  [Configuring a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=221423)   
  [Windows Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](https://go.microsoft.com/fwlink/?LinkId=221419)   
  [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](https://go.microsoft.com/fwlink/?LinkId=221421)  

@@ -1,5 +1,5 @@
 ---
-title: 识别增补字符的字符串操作示例 |Microsoft Docs
+title: 识别补充的字符串操作示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48017f32b5c010498dc089982900b60f03371830
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dbbcb468a4de093b6664c71e20716ea62e2b1fc3
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780487"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637719"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>能够识别增补字符的字符串操作示例
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这一示例说明能够识别增补字符的字符串处理。 此示例说明五个 Transact-SQL 字符串函数的实现。这些函数提供的字符串操作功能与内置函数的功能相同，但增加了增补字符识别功能，因此既能处理 Unicode 字符串，又能处理增补字符串。 五个函数是 lens （）、`lefts(), rights(), subs()`并`replace_s()`，分别等同于内置函数`LEN(), LEFT(), RIGHT(), SUBSTRING()`和`REPLACE()`字符串函数。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这一示例说明能够识别增补字符的字符串处理。 此示例说明五个 Transact-SQL 字符串函数的实现。这些函数提供的字符串操作功能与内置函数的功能相同，但增加了增补字符识别功能，因此既能处理 Unicode 字符串，又能处理增补字符串。 这五个函数是镜头（），`lefts(), rights(), subs()` 和 `replace_s()` 等效于内置函数 `LEN(), LEFT(), RIGHT(), SUBSTRING()` 和 `REPLACE()` 字符串函数。  
   
 ## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62780487"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  复制[!INCLUDE[tsql](../../includes/tsql-md.md)]到一个文件测试命令脚本并将其保存为`test.sql`示例目录中。  
+7.  将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 测试命令脚本复制到一个文件中，并将其作为 `test.sql` 保存在示例目录中。  
   
 8.  使用以下命令执行测试脚本：  
   
@@ -685,7 +685,7 @@ USE [AdventureWorks]
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 识别日历的日期和时间 UDT 示例 |Microsoft Docs
+title: 日历感知日期和时间 UDT 示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41115e764099540a5b4548986c7c4c912d562f5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bf2f4fd41ab67a0631fe5169a7904b571c842cc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753779"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637667"
 ---
-# <a name="calendar-aware-date-and-time-udt-sample"></a>识别日历的日期和时间 UDT 示例
+# <a name="calendar-aware-date-and-time-udt-sample"></a>日历感知日期和时间 UDT 示例
   将日期作为字符串存储会导致混乱，因为在不识别所使用日历系统的情况下日期毫无意义。`CADatetime` 示例定义两个用户定义数据类型（`CADatetime` 和 `CADate`），通过它们可以按日历方式对日期和时间进行处理。  
   
 ## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62753779"
   
 3.  在 c:\MySample 中，创建 `CalendarAware.cs` 并将 C# 示例代码（如下所示）复制到该文件中。  
   
-4.  在 c:\MySample，创建文件`calendars.txt`和示例代码复制到的文件。  
+4.  在 c:\MySample 中 `calendars.txt` 创建文件，然后将示例代码复制到该文件中。  
   
 5.  在 c:\MySample 中，创建文件 `calendars.ar-SA.txt` 并将以下代码复制到该文件中：  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62753779"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-14. 复制[!INCLUDE[tsql](../../includes/tsql-md.md)]到一个文件测试命令脚本并将其保存为`test.sql`示例目录中。  
+14. 将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 测试命令脚本复制到一个文件中，并将其作为 `test.sql` 保存在示例目录中。  
   
 15. 使用以下命令执行测试脚本：  
   
@@ -1724,7 +1724,7 @@ DROP ASSEMBLY [CADateTime.resources.zh-CN];
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

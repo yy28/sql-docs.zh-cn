@@ -13,17 +13,17 @@ ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5f07428a87b7a10640c50c73fc2b551fef66c70f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011324"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637896"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>查找搜索属性的属性集 GUID 和属性整数 ID
   本主题讨论在将属性添加到搜索属性列表且使其可由全文搜索进行搜索之前，如何获取所需的值。 这些值包括文档属性的属性集 GUID 和属性整数标识符。  
   
- 文档提取由 Ifilter 从二进制数据-即，从存储中的数据的属性`varbinary`， `varbinary(max)` (包括`FILESTREAM`)，或`image`可以进行数据类型列的可用于全文搜索。 若要使提取的属性可供搜索，必须手动将该属性添加到搜索属性列表。 搜索属性列表还必须与一个或多个全文索引相关联。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](search-document-properties-with-search-property-lists.md)。  
+ Ifilter 从二进制数据（即，从 `varbinary`中存储的数据、`varbinary(max)` （包括 `FILESTREAM`）或 `image` 数据类型列）提取的文档属性可用于全文搜索。 若要使提取的属性可供搜索，必须手动将该属性添加到搜索属性列表。 搜索属性列表还必须与一个或多个全文索引相关联。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](search-document-properties-with-search-property-lists.md)。  
   
  在向属性列表添加可用属性之前，必须找到有关该属性的 2 段信息：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66011324"
 ##  <a name="wellknown"></a> 查找广泛使用的、众所周知的 Microsoft 属性的信息  
  Microsoft 定义了数百个在多种上下文中使用的文档属性，但这只是每种文件格式使用的可用属性的一小部分。 在常用的 Windows 属性中包括一小部分泛型属性。 下表显示了众所周知的泛型属性的一些示例。 下表显示了已知名称、Windows 规范名称（来自 Microsoft 发布的属性说明）、属性集 GUID、属性整数标识符和简短说明。  
   
-|已知名称|Windows 规范名称|属性集 GUID|整数标识符|Description|  
+|已知名称|Windows 规范名称|属性集 GUID|整数标识符|说明|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|给定项的一个或多个创作者。|  
 |Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|分配给该项的一组关键字（也称为标记）。|  
@@ -60,7 +60,7 @@ ms.locfileid: "66011324"
   
  从命令提示符运行 **filtdump.exe** 并提供一个参数。 此参数是具有特定文件类型的单独文件的名称，该文件类型是安装 IFilter 所针对的目标文件类型。 该实用工具显示文档中由 IFilter 发现的所有属性的列表及其属性集 GUID、整数标识符以及其他信息。  
   
- 有关安装此软件的信息，请参阅 [Microsoft Windows SDK for Windows 7 and .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980)（用于 Windows 7 和 .NET Framework 4 的 Microsoft Windows SDK）。 在下载并安装该 SDK 后，请在下列文件夹中查找 filtdump.exe 实用工具。  
+ 有关安装此软件的信息，请参阅 [Microsoft Windows SDK for Windows 7 and .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=8279)（用于 Windows 7 和 .NET Framework 4 的 Microsoft Windows SDK）。 在下载并安装该 SDK 后，请在下列文件夹中查找 filtdump.exe 实用工具。  
   
 -   对于 64 位版本，请查看 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`。  
   
@@ -101,7 +101,7 @@ GO
   
  有关创建搜索属性列表并将其与全文索引相关联的详细信息，请参阅 [使用搜索属性列表搜索文档属性](search-document-properties-with-search-property-lists.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用搜索属性列表搜索文档属性](search-document-properties-with-search-property-lists.md)   
  [配置和管理搜索筛选器](configure-and-manage-filters-for-search.md)  
   

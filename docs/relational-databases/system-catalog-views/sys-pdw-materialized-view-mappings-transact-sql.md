@@ -1,5 +1,5 @@
 ---
-title: sys.databases _materialized_view_mappings (Transact-sql) |Microsoft Docs
+title: sys. pdw_materialized_view_mappings （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -12,32 +12,33 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 919b55fe869a77bf27acd8a14820c63dd82eb968
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: d548291653b589d973c9c21813690a61a0fdb7ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811500"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729824"
 ---
-# <a name="syspdw_materialized_view_mappings-transact-sql-preview"></a>sys.databases _materialized_view_mappings (Transact-sql) (预览版)
+# <a name="syspdw_materialized_view_mappings-transact-sql"></a>sys. pdw_materialized_view_mappings （Transact-sql）  
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 通过 object_id 将具体化视图与内部对象名称进行绑定。
 
-列 physical_name 和 object_id 构成此目录视图的键。
+Physical_name 和 object_id 的列构成此目录视图的键。
   
-|列名|数据类型|描述|  
+|列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar(36)**|具体化视图的物理名称。|  
-|object_id  |**int**|具体化视图的对象 ID。 请参阅[sys.databases (transact-sql)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)。| 
+|physical_name |**nvarchar （36）**|具体化视图的物理名称。|  
+|object_id  |**int**|具体化视图的对象 ID。 请参阅[sys.databases （transact-sql）](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)。| 
 
 ## <a name="permissions"></a>权限
 
 要求拥有 VIEW DATABASE STATE 权限。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
+ [的具体化视图的性能优化](/azure/sql-data-warehouse/performance-tuning-materialized-views)  
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

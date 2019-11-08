@@ -1,5 +1,5 @@
 ---
-title: 创建模型管理员 (Master Data Services) | Microsoft Docs
+title: 创建模型管理员
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a98aa3752259fe93fff7086c7918a31532a7d7e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba53fbbbb86f40a5b93c748fcd31bf5e8d7f823d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906697"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729566"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>创建模型管理员 (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "67906697"
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-a-model-administrator"></a>创建模型管理员  
   
@@ -51,13 +51,13 @@ ms.locfileid: "67906697"
   
 7.  单击要授予对其权限的模型。  
   
-8.  从菜单中选择“管理员”。   
+8.  从菜单中选择“管理员”。  
   
 9. 对希望组或用户成为其管理员的每个模型，完成步骤 7 和 8。  
   
-10. 单击“保存”  。  
+10. 单击 **“保存”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)   
  [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [分配层次结构成员权限 (Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

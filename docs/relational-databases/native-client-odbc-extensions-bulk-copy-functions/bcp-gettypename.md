@@ -1,5 +1,5 @@
 ---
-title: bcp_gettypename | Microsoft Docs
+title: bcp_gettypename |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e80c1703ece500e849a8c107d858222eea45f6f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707467"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782653"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   返回指定 BCP 类型标记的 SQL 类型名称。  
   
@@ -41,7 +40,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>参数  
- *token*  
+ *令牌*  
  指示 BCP 类型标记的值。  
   
  field  
@@ -50,33 +49,33 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>返回  
  一个字符串，其中包含与 BCP 类型对应的 SQL 类型名称。 如果指定了无效的 BCP 类型，则返回空字符串。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
  BCP 类型标记在 sqlncli.h 头文件和 sqlncli11.lib 库中定义。  
   
  下表指定了可能的 BCP 类型、这些类型是否是 max 类型以及预期的输出。  
   
-|BCP 类型名称|MaxType|Output|  
+|BCP 类型名称|MaxType|输出|  
 |-------------------|-------------|------------|  
 |**SQLDECIMAL**|之前或之后|**decimal**|  
 |**SQLNUMERIC**|之前或之后|**numeric**|  
 |**SQLINT1**|之前或之后|**tinyint**|  
-|**SQLINT2**|之前或之后|**smallint**|  
+|**SQLINT2**|之前或之后|**int**|  
 |**SQLINT4**|之前或之后|**int**|  
 |**SQLMONEY**|之前或之后|**money**|  
 |**SQLFLT8**|之前或之后|**float**|  
 |**SQLDATETIME**|之前或之后|**datetime**|  
-|**SQLBITN**|之前或之后|**bit-null**|  
+|**SQLBITN**|之前或之后|**位-null**|  
 |**SQLBIT**|之前或之后|**bit**|  
-|**SQLBIGCHAR**|否|**char**|  
-|**SQLCHARACTER**|否|**char**|  
-|**SQLBIGVARCHAR**|否|**varchar**|  
-|**SQLVARCHAR**|否|**varchar**|  
+|**SQLBIGCHAR**|“否”|**char**|  
+|**SQLCHARACTER**|“否”|**char**|  
+|**SQLBIGVARCHAR**|“否”|**varchar**|  
+|**SQLVARCHAR**|“否”|**varchar**|  
 |**SQLTEXT**|之前或之后|**text**|  
-|**SQLBIGBINARY**|否|**binary**|  
-|**SQLBINARY**|否|**Binary**|  
-|**SQLBIGVARBINARY**|否|**Varbinary**|  
-|**SQLVARBINARY**|否|**Varbinary**|  
-|**SQLIMAGE**|之前或之后|**Image**|  
+|**SQLBIGBINARY**|“否”|**binary**|  
+|**SQLBINARY**|“否”|**二进制**|  
+|**SQLBIGVARBINARY**|“否”|**Varbinary**|  
+|**SQLVARBINARY**|“否”|**Varbinary**|  
+|**SQLIMAGE**|之前或之后|**图像**|  
 |**SQLINTN**|之前或之后|**int-null**|  
 |**SQLDATETIMN**|之前或之后|**datetime-null**|  
 |**SQLMONEYN**|之前或之后|**money-null**|  
@@ -90,8 +89,8 @@ RETCODE bcp_gettypename (
 |**SQLMONEY4**|之前或之后|**Smallmoney**|  
 |**SQLFLT4**|之前或之后|**实际上**|  
 |**SQLUNIQUEID**|之前或之后|**uniqueidentifier**|  
-|**SQLNCHAR**|否|**Nchar**|  
-|**SQLNVARCHAR**|否|**Nvarchar**|  
+|**SQLNCHAR**|“否”|**Nchar**|  
+|**SQLNVARCHAR**|“否”|**Nvarchar**|  
 |**SQLNTEXT**|之前或之后|**Ntext**|  
 |**SQLVARIANT**|之前或之后|**sql_variant**|  
 |**SQLINT8**|之前或之后|**Bigint**|  
@@ -113,7 +112,7 @@ RETCODE bcp_gettypename (
   
  有关详细信息，请参阅[日期和时间&#40;改进&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

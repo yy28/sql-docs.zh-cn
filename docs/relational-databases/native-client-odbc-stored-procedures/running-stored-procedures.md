@@ -1,5 +1,5 @@
 ---
-title: 运行存储的过程 |Microsoft Docs
+title: 运行存储过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3239172c0d2c86447f117eadc6fe1496b83d70d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 05956ff9111fe9b296da0a35acba42e46e1a47a2
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020320"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73778080"
 ---
 # <a name="running-stored-procedures"></a>运行存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   存储过程是存储在数据库中的可执行对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持：  
   
@@ -59,7 +58,7 @@ ms.locfileid: "68020320"
   
      扩展存储过程可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所不具备的 C 和 C++ 功能。  
   
-     有关如何调用存储的过程的示例，请参阅[过程返回代码和输出参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
+     有关如何调用存储过程的示例，请参阅[处理返回代码和输出参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -69,8 +68,8 @@ ms.locfileid: "68020320"
   
 -   [处理存储过程结果](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 本机客户端&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [运行存储的过程操作指南主题&#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Native Client &#40;ODBC&#41; ](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [运行存储过程操作指南主题&#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

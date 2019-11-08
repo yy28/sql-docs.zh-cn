@@ -18,18 +18,17 @@ ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1dd7b42ba6fcf4ea5b45fb779d4e6c67cd3074a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: f435b0ba0d7474867af20aea1d59bd6118035623
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707734"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783230"
 ---
 # <a name="bcp_batch"></a>bcp_batch
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  提交以前从程序变量大容量复制的所有行，并将[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  提交之前从程序变量大容量复制并发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有行[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,12 +45,12 @@ DBINT bcp_batch (HDBC
 ## <a name="returns"></a>返回  
  在最后一次调用**bcp_batch**之后保存的行数; 如果出现错误，则为-1。  
   
-## <a name="remarks"></a>备注  
- 大容量复制批处理定义事务。 当应用程序使用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)和**bcp_sendrow**将行从程序变量大容量复制到 SQL Server 表时，只会在程序调用**bcp_batch**或[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)时提交行。  
+## <a name="remarks"></a>注释  
+ 大容量复制批处理定义事务。 当应用程序使用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)和**bcp_sendrow**将行从程序变量大容量复制到 SQL Server 表时，只在程序调用**bcp_batch**或[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)时才提交行。  
   
- 可以在每*n*行调用一次**bcp_batch** ，或在传入数据中出现趋缓时调用（如在遥测应用程序中）。 如果应用程序不调用**bcp_batch** ，则只有在调用**bcp_done**时，才会提交大容量复制的行。  
+ 可以在每*n*行调用一次**bcp_batch** ，或在传入数据中有趋缓时调用（如在遥测应用程序中）。 如果应用程序不调用**bcp_batch**仅当调用**bcp_done**时才提交大容量复制的行。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

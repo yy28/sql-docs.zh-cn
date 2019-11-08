@@ -1,6 +1,6 @@
 ---
-title: StartMode 属性 （SqlService 类） |Microsoft Docs
-ms.custom: ''
+title: StartMode 属性（SqlService）
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e1e8102591eef3976d893ddf0c218b71aa763914
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31d2a413aa606bc6b7065126668fdeabdfacd7b1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006853"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660869"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 属性（SqlService 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "68006853"
 object.StartMode [= value]  
 ```  
   
-## <a name="parts"></a>部件  
- *object*  
+## <a name="parts"></a>组成部分  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -48,20 +48,20 @@ object.StartMode [= value]
  值 = 0。 服务由操作系统加载程序启动。 此选项只对驱动程序服务有效。  
   
  系统  
- 值 = 1。 服务首先**IoInitSystem**方法。 此选项只对驱动程序服务有效。  
+ 值 = 1。 由**IoInitSystem**方法启动的服务。 此选项只对驱动程序服务有效。  
   
- 自动  
+ Automatic  
  值 = 2。 服务将在系统启动期间由服务控制管理器自动启动。  
   
  Manual  
- 值 = 3。 服务将由计算机管理器时将在进程调用**StartService**方法。  
+ 值 = 3。 要在进程调用**StartService**方法时由计算机管理器启动的服务。  
   
- 禁用  
+ Disabled  
  值 = 4。 无法启动服务。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

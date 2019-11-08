@@ -1,5 +1,5 @@
 ---
-title: 使用语句参数 |Microsoft Docs
+title: Using 语句参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1168c81d8eeb6a25b84f473858bc924f529a572
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e5cec08809ffbd0d51ce017bbd5ff09f45410f4
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058675"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73779538"
 ---
 # <a name="using-statement-parameters"></a>使用语句参数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   参数在 SQL 语句中是一种变量，它使 ODBC 应用程序能够：  
   
@@ -36,9 +35,9 @@ ms.locfileid: "68058675"
   
 -   在构造查询条件时增强用户交互。  
   
--   管理**文本**， **ntext**，并**图像**数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定的 C 数据类型。  
+-   管理**text**、 **ntext**和**image**数据以及特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 C 数据类型。  
   
- 例如，**部件**表中包含名为的列**PartID**，**说明**，以及**价格**。 若要添加不带参数的部分，需要构造 SQL 语句，例如：  
+ 例如， **part**表包含名为**PartID**、 **Description**和**Price**的列。 若要添加不带参数的部分，需要构造 SQL 语句，例如：  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -58,7 +57,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [绑定参数](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [执行查询&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

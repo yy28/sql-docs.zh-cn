@@ -1,5 +1,5 @@
 ---
-title: SQLGetData | Microsoft Docs
+title: SQLGetData |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,35 +14,34 @@ ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 576551308b2ad7cc195b5425a50f2764b3cf6ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 27b8fe304f26c60697e5d6fb147be20e30c86094
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135440"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786537"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLGetData**用于检索结果集数据，而无需绑定列的值。 **SQLGetData**可以从具有的列中检索大量的数据对同一列连续调用**文本**， **ntext**，或**映像**数据类型。  
+  **SQLGetData**用于检索结果集数据，而不绑定列值。 可以对同一列连续调用**SQLGetData** ，以从具有**text**、 **ntext**或**image**数据类型的列中检索大量数据。  
   
- 此时，不要求应用程序绑定变量来提取结果集数据。 可以从检索的任何列的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序通过使用**SQLGetData**。  
+ 此时，不要求应用程序绑定变量来提取结果集数据。 可以使用**SQLGetData**从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序检索任意列的数据。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持使用**SQLGetData**来检索随机列顺序中的数据。 使用处理所有未绑定的列**SQLGetData**必须具有在结果集中绑定列比更高版本的列序号。 应用程序必须按照从未绑定列的最小序号值到最大序号值的顺序处理数据。 尝试从较小序号的列中检索数据将导致错误。 如果某个应用程序使用服务器游标报告结果集行，则该应用程序可重新提取当前行，然后提取列值。 如果对默认只读的、 只进游标执行某个语句，必须重新执行该语句以备份**SQLGetData**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持使用**SQLGetData**以随机列顺序检索数据。 使用**SQLGetData**处理的所有未绑定列都必须具有比结果集中绑定列更高的列序号。 应用程序必须按照从未绑定列的最小序号值到最大序号值的顺序处理数据。 尝试从较小序号的列中检索数据将导致错误。 如果某个应用程序使用服务器游标报告结果集行，则该应用程序可重新提取当前行，然后提取列值。 如果对默认的只读、只进游标执行语句，则必须重新执行该语句来备份**SQLGetData**。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序可准确报告的长度**文本**， **ntext**，并且**映像**使用检索的数据**SQLGetData**. 应用程序可以很好地利用*StrLen_or_IndPtr*参数返回内容来快速检索长整型数据。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序准确报告使用**SQLGetData**检索到的**text**、 **ntext**和**image**数据的长度。 应用程序可以充分利用*StrLen_or_IndPtr*参数返回，以便快速检索长数据。  
   
 > [!NOTE]  
->  对于大值类型*StrLen_or_IndPtr*在数据截断的情况下将返回 SQL_NO_TOTAL。  
+>  对于大值类型，在数据截断的情况下*StrLen_or_IndPtr*将返回 SQL_NO_TOTAL。  
   
 ## <a name="sqlgetdata-support-for-enhanced-date-and-time-features"></a>SQLGetData 对日期和时间增强功能的支持  
- 结果列的日期/时间类型的值将转换中所述[从 SQL 到 C 转换](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)。  
+ 日期/时间类型的结果列值按[从 SQL 到 C 的转换](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)中所述进行转换。  
   
- 有关详细信息，请参阅[日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关详细信息，请参阅[日期和时间&#40;改进&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlgetdata-support-for-large-clr-udts"></a>SQLGetData 对大型 CLR UDT 的支持  
- **SQLGetData**支持大型 CLR 用户定义类型 (Udt)。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLGetData**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[大型 CLR 用户定义类型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -97,7 +96,7 @@ while (SQLFetch(hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLGetData 函数](https://go.microsoft.com/fwlink/?LinkId=59350)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 表值参数 (ODBC) |Microsoft Docs
+title: 表值参数（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,26 +14,25 @@ ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3af4180f248fe11087b7c60636336652652dc5a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f53e1780beaea56ba659c11771d469163a964971
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129014"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790467"
 ---
 # <a name="table-valued-parameters-odbc"></a>表值参数 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   针对表值参数的 ODBC 支持通过在一个调用中向服务器发送多个行，支持客户端应用程序更有效地向服务器发送参数化数据。  
   
- 有关表值参数在服务器上的信息，请参阅[使用表值参数&#40;数据库引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
+ 有关服务器上的表值参数的信息，请参阅[使用表值参数&#40;数据库引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
  在 ODBC 中，向服务器发送表值参数有两种方式：  
   
--   SQLExecDirect 或 SQLExecute 称为时，所有表值参数数据都可以在内存中。 如果表值中有多个行，此数据存储在数组中。  
+-   在调用 SQLExecDirect 或 SQLExecute 时，所有表值参数数据都可以在内存中。 如果表值中有多个行，此数据存储在数组中。  
   
--   SQLExecDirect 或 SQLExecute 调用时，应用程序可以指定为表值参数执行数据。 这种情况下，可以成批提供表值的各行数据，或者一次提供一行数据，以降低内存要求。  
+-   调用 SQLExecDirect 或 SQLExecute 时，应用程序可以为表值参数指定执行时数据。 这种情况下，可以成批提供表值的各行数据，或者一次提供一行数据，以降低内存要求。  
   
  第一个选项支持存储过程封装更多业务逻辑。 例如，将订单项作为表值参数传递时，单个存储过程可以封装整个订单输入事务。 由于只需与服务器往返一次，所以此选项非常有效。 或者，可以使用不同的过程分别处理订单头和订单项，这需要为客户端和服务器之间提供更多的代码和更复杂的合同。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "68129014"
  说明应用程序如何获取准备的过程调用的元数据。  
   
  [其他表值参数的元数据](../../relational-databases/native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata.md)  
- 介绍如何使用 SQLProcedureColumns、 SQLTables 和 SQLColumns 检索表值参数的元数据。  
+ 介绍如何使用 SQLProcedureColumns、SQLTables 和 SQLColumns 检索表值参数的元数据。  
   
  [表值参数数据转换及其他错误和警告](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  说明如何处理表值参数列值的错误。  
@@ -81,8 +80,8 @@ ms.locfileid: "68129014"
  [ODBC 表值参数编程示例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
  说明如何执行常见任务。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 本机客户端&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [表值参数&#40;SQL Server 本机客户端&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Native Client &#40;ODBC&#41; ](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [表值参数&#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

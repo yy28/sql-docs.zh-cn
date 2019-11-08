@@ -1,5 +1,5 @@
 ---
-title: 对高可用性和灾难恢复的 SQL Server Native Client 支持 |Microsoft Docs
+title: SQL Server Native Client 对高可用性、灾难恢复的支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a3b5c8d98b2c7bbfa62641b89b0bfcb031a6c02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7cf7313c127be38e72131c604c4880963242ed3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067256"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73788031"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>对高可用性、灾难恢复的 SQL Server Native Client 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的支持（[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 新增功能）。 有关详细信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[可用性组侦听器、 客户端连接和应用程序故障转移&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)，[创建和配置可用性组&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 AlwaysOn 可用性组&#40;SQL Server&#41;](~/database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，并且[活动次要副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](~/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+  本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的支持（[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 新增功能）。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](~/database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[活动次要副本：可读次要副本（AlwaysOn 可用性组）](~/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  您可以在连接字符串中指定给定可用性组的可用性组侦听器。 如果某一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 应用程序连接到故障转移的可用性组中的某个数据库，则原始连接将被断开，并且应用程序必须打开一个新连接，以便在故障转移后继续工作。  
   
@@ -31,9 +30,9 @@ ms.locfileid: "68067256"
 >  增大连接超时值和实现连接重试逻辑将增加应用程序连接到可用性组的概率。 此外，由于可用性组进行故障转移而可能使连接失败，您应实现连接重试逻辑，重试失败的连接，直至重新连接。  
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接  
- 在连接到 SQL Server 2012 可用性组侦听程序或 SQL Server 2012 故障转移群集实例时，应始终指定 **MultiSubnetFailover=Yes**。 **MultiSubnetFailover**支持更快故障转移进行所有可用性组和故障转移群集实例 SQL Server 2012 中，并且将显著缩短单子网和多子网 Alwayson 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行进行连接。 在子网故障转移过程中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将会主动重试 TCP 连接。  
+ 在连接到 SQL Server 2012 可用性组侦听程序或 SQL Server 2012 故障转移群集实例时，应始终指定 **MultiSubnetFailover=Yes**。 **MultiSubnetFailover**为 SQL Server 2012 中的所有可用性组和故障转移群集实例启用更快的故障转移，并且将显著缩短单个和多子网 Always On 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行进行连接。 在子网故障转移过程中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将会主动重试 TCP 连接。  
   
- **MultiSubnetFailover** 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将尝试通过连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据库。 如果为连接指定的是 MultiSubnetFailover=Yes  ，客户端重试 TCP 连接的时间短于操作系统的默认 TCP 重传间隔。 此支持的 Alwayson 可用性组或 Alwayson 故障转移群集实例，更快故障转移后的重新连接，同时适用于单-和多-subnet 可用性组和故障转移群集实例。  
+ **MultiSubnetFailover** 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将尝试通过连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据库。 如果为连接指定的是 MultiSubnetFailover=Yes，客户端重试 TCP 连接的时间短于操作系统的默认 TCP 重传间隔。 这样，在 Always On 可用性组或 Always On 故障转移群集实例进行故障转移后，就可以更快地重新连接，并且适用于单个和多子网可用性组和故障转移群集实例。  
   
  有关连接字符串关键字的详细信息，请参阅 [将连接字符串关键字用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "68067256"
   
 -   连接到配置有超过 64 个 IP 地址的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例将导致连接失败。  
   
--   使用的应用程序的行为**MultiSubnetFailover**连接属性不受影响的身份验证的类型：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证、 Kerberos 身份验证或 Windows 身份验证。  
+-   基于以下身份验证类型，使用 **MultiSubnetFailover** 连接属性的应用程序的行为不受影响：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证、Kerberos 身份验证或 Windows 身份验证。  
   
 -   你可以增加 **loginTimeout** 的值，以延长故障转移时间并减少应用程序连接重试次数。  
   
@@ -89,13 +88,13 @@ ms.locfileid: "68067256"
   
  有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 连接属性的详细信息，请参阅 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。  
   
- 从 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 开始，将在使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 驱动程序的 DSN 的 ODBC 数据源管理器中公开 **ApplicationIntent** 和 **MultiSubnetFailover** 关键字的功能。  
+ 从 **开始，将在使用** Native Client 驱动程序的 DSN 的 ODBC 数据源管理器中公开 **ApplicationIntent** 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]MultiSubnetFailover[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 关键字的功能。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 应用程序可以使用以下三个函数之一进行连接：  
   
-|函数|描述|  
+|函数|说明|  
 |--------------|-----------------|  
-|[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|**SQLBrowseConnect** 返回的服务器列表将不包括 VNN。 如果服务器是独立服务器，或是 Windows Server Failover Clustering (WSFC) 群集中的主服务器或辅助服务器，该群集包含已为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启用的两个或多个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例，您将只能看到不带任何指示信息的服务器列表。 如果连接到服务器失败，可能是因为你已连接到某服务器而 **ApplicationIntent** 设置与该服务器配置不兼容。<br /><br /> 由于 **SQLBrowseConnect** 无法识别 Windows Server Failover Clustering (WSFC) 群集（该群集包含已为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用的两个或多个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例）中的服务器，**SQLBrowseConnect** 将忽略 **MultiSubnetFailover** 连接字符串关键字。|  
+|[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|**SQLBrowseConnect** 返回的服务器列表将不包括 VNN。 如果服务器是独立服务器，或是 Windows Server Failover Clustering (WSFC) 群集中的主服务器或辅助服务器，该群集包含已为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启用的两个或多个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例，您将只能看到不带任何指示信息的服务器列表。 如果连接到服务器失败，可能是因为你已连接到某服务器而 **ApplicationIntent** 设置与该服务器配置不兼容。<br /><br /> 由于 **SQLBrowseConnect** 无法识别 Windows Server Failover Clustering (WSFC) 群集（该群集包含已为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启用的两个或多个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例）中的服务器，**SQLBrowseConnect** 将忽略 **MultiSubnetFailover** 连接字符串关键字。|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** 通过数据源名称 (DSN) 或连接属性同时支持 **ApplicationIntent** 和 **MultiSubnetFailover** 。|  
 |[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)|**SQLDriverConnect** 通过连接字符串关键字、连接属性或 DSN 支持 **ApplicationIntent** 和 **MultiSubnetFailover** 。|  
   
@@ -124,17 +123,17 @@ ms.locfileid: "68067256"
  **IDataInitialize::GetDataSource**  
  **IDataInitialize::GetDataSource** 使用可包含 **Application Intent** 关键字的输入连接字符串。  
   
- **IDBProperties::GetProperties**  
+ **IDBProperties：： GetProperties**  
  **IDBProperties::GetProperties** 检索当前为数据源设置的属性值。  可以通过 DBPROP_INIT_PROVIDERSTRING 属性和 SSPROP_INIT_APPLICATIONINTENT 属性检索 **Application Intent** 值。  
   
  **IDBProperties::SetProperties**  
  若要设置 **ApplicationIntent** 属性值，请调用在带有“**ReadWrite**”或“**ReadOnly**”值的 **SSPROP_INIT_APPLICATIONINTENT** 属性或含有“**ApplicationIntent=ReadOnly**”或“**ApplicationIntent=ReadWrite**”值的 **DBPROP_INIT_PROVIDERSTRING** 属性中传递的 **IDBProperties::SetProperties**。  
   
- 可以在“数据链接属性”  对话框的“全部”选项卡的“应用程序意向属性”字段中指定应用程序意向。  
+ 可以在“数据链接属性”对话框的“全部”选项卡的“应用程序意向属性”字段中指定应用程序意向。  
   
  建立隐式连接时，隐式连接将使用父连接的应用程序意向设置。 同样，从同一数据源创建的多个会话将继承数据源的应用程序意向设置。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [将连接字符串关键字用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   

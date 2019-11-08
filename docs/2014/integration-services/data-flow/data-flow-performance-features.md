@@ -23,12 +23,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828053"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637825"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
   本主题针对如何设计 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包提供建议，以避免出现常见性能问题。 本主题还提供有关可以用于对包的性能进行故障排除的功能和工具的信息。  
@@ -125,7 +125,7 @@ ms.locfileid: "62828053"
  使用本节中的建议可以改善聚合、模糊查找、模糊分组、查找、合并联接和渐变维度转换的性能。  
   
 #### <a name="aggregate-transformation"></a>聚合转换  
- 聚合转换包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 属性。 通过使用这些属性，使转换能够为转换缓存的数据预先分配转换所需的内存量，从而提高了性能。 如果知道从产生的组的准确或近似数量**分组依据**操作，设置`Keys`和`KeysScale`属性，分别。 如果知道从产生的非重复值的准确或近似数量**非重复计数**操作，设置`CountDistinctKeys`和`CountDistinctScale`属性，分别。  
+ 聚合转换包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 属性。 通过使用这些属性，使转换能够为转换缓存的数据预先分配转换所需的内存量，从而提高了性能。 如果知道**组按**操作得出的确切或近似组数，请分别设置 "`Keys`" 和 "`KeysScale`" 属性。 如果你知道预期从**distinct count**运算产生的非重复值的准确或近似数量，请分别设置 "`CountDistinctKeys`" 和 "`CountDistinctScale`" 属性。  
   
  如果需要在数据流中创建多个聚合，应考虑使用一个聚合转换而不是创建多个转换来创建多个聚合。 如果聚合是其他聚合的子集，这种方法能够提高性能，因为转换可以优化内部存储，并且只需扫描传入的数据一次。 例如，如果聚合使用 GROUP BY 子句和 AVG 聚合，将它们组合成一个转换可以提高性能。 但是，在一个聚合转换内执行多个聚合会序列化聚合操作，因此，当必须独立计算多个聚合时，这种方法可能不会改善性能。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62828053"
 #### <a name="lookup-transformation"></a>查找转换  
  通过输入仅查找所需列的 SELECT 语句，最小化内存中引用数据的大小。 这种方法优于选择整个表或视图，因为后者将返回大量不必要的数据。  
   
-#### <a name="merge-join-transformation"></a>Merge Join Transformation  
+#### <a name="merge-join-transformation"></a>合并联接转换  
  您不再必须配置 `MaxBuffersPerInput` 属性的值，因为 Microsoft 已进行了更改，减少了合并联接转换将占用过多内存的风险。 在合并联接的多个输入以不相等速率生成数据时，有时候可能会发生此问题。  
   
 #### <a name="slowly-changing-dimension-transformation"></a>渐变维度转换  
@@ -143,7 +143,7 @@ ms.locfileid: "62828053"
   
  通常，渐变维度转换中最慢的组件是一次对单行执行 UPDATE 的 OLE DB 命令转换。 因此，改善渐变维度转换性能最有效的方法是替换 OLE DB 命令转换。 可以用目标组件来替换这些转换，目标组件将要更新的所有行保存到一个临时表中。 然后，可以添加执行 SQL 任务，该任务同时对所有行执行基于单集的 Transact-SQL UPDATE。  
   
- 高级用户可以为渐变维度处理设计自定义数据流，此数据流将针对大型维度进行优化。 有关此方法的讨论和示例，请参阅白皮书 [Project REAL：Business Intelligence ETL 设计实践](https://go.microsoft.com/fwlink/?LinkId=96602)中的“唯一维度方案”一节。  
+ 高级用户可以为渐变维度处理设计自定义数据流，此数据流将针对大型维度进行优化。 有关此方法的讨论和示例，请参阅白皮书 [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)（Project REAL：Business Intelligence ETL 设计实践）中的章节 "Unique dimension scenario"（唯一维度方案）。  
   
 ### <a name="destinations"></a>目标  
  若要改善目标的性能，请考虑使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标并测试目标的性能。  
@@ -159,16 +159,16 @@ ms.locfileid: "62828053"
   
  若要允许或禁止在 **“进度”** 选项卡上显示消息，请在 **SSIS** 菜单上切换 **“调试进度报告”** 选项。 禁用进度报告有助于在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行复杂包时改进性能。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 -   [为合并转换和合并联接转换排序数据](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>相关内容  
  **文章和博客文章**  
   
--   technet.microsoft.com 上的技术文章：[SQL Server 2005 Integration Services:性能策略](https://go.microsoft.com/fwlink/?LinkId=98899)  
+-   technet.microsoft.com 上的技术文章 [SQL Server 2005 Integration Services：性能策略](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
--   technet.microsoft.com 上的技术文章：[Integration Services:性能优化技术](https://go.microsoft.com/fwlink/?LinkId=98900)  
+-   technet.microsoft.com 上的技术文章 [Integration Services：性能优化技术](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
 -   sqlcat.com 上的技术文章 [通过将同步转换拆分为多个任务来增加管道的吞吐量](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
   
@@ -196,7 +196,7 @@ ms.locfileid: "62828053"
   
 -   technet.microsoft.com 上的视频 [平衡的数据分发服务器](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [包开发的故障排除工具](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [对包执行进行故障排除的工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

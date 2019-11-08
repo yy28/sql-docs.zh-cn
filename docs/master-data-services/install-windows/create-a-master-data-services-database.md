@@ -1,5 +1,5 @@
 ---
-title: 创建 Master Data Services 数据库 | Microsoft Docs
+title: 创建 Master Data Services 数据库
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b94e7e34bb53d15bbb7466a5ff3e32df634e0f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bef34cdd61393e8aaf8ad312428e51affba892c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945045"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728117"
 ---
 # <a name="create-a-master-data-services-database"></a>创建 Master Data Services 数据库
 
@@ -45,7 +45,7 @@ ms.locfileid: "67945045"
   
 -   配置维护计划以备份数据库和事务日志。 有关详细信息，请参阅[数据库要求 (Master Data Services)](../../master-data-services/install-windows/database-requirements-master-data-services.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安装 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

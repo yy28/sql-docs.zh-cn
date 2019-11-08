@@ -1,5 +1,5 @@
 ---
-title: SQLGetDescField | Microsoft Docs
+title: SQLGetDescField |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,40 +14,39 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d88ec567d1afe3286df9e25535837178f9719f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08d6a42d7b078fce5e50c16712dfb97897148e23
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910826"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786535"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序公开实现行描述符 (IRD) 仅特定于驱动程序的描述符字段。 在 IRD 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过驱动程序特定的列属性引用描述符字段。 有关可用驱动程序特定的描述符字段的完整列表，请参阅[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序仅为实现行描述符（IRD）公开驱动程序特定的描述符字段。 在 IRD 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 描述符字段通过驱动程序特定的列属性进行引用。 有关可用驱动程序特定的描述符字段的完整列表的信息，请参阅[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)。  
   
  包含列标识符字符串的描述符字段通常是长度为零的字符串。 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有描述符字段值都是只读的。  
   
- 如使用 SQLColAttribute，检索报表行级属性 （如 SQL_CA_SS_COMPUTE_ID) 所报告的结果集中的所有列的描述符字段的特性。  
+ 与用 SQLColAttribute 检索到的属性一样，将为结果集中的所有列报告报表行级属性（如 SQL_CA_SS_COMPUTE_ID）的描述符字段。  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField 和表值参数  
- SQLGetDescField 可以用于获取表值参数和表值参数列的扩展属性的值。 有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ SQLGetDescField 可用于获取表值参数和表值参数列的扩展属性的值。 有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>SQLGetDescField 对日期和时间增强功能的支持  
- 有关可用的描述符字段与新的日期/时间类型的信息，请参阅[参数和结果元数据](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)。  
+ 有关新日期/时间类型提供的描述符字段的信息，请参阅[参数和结果元数据](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)。  
   
- 有关详细信息，请参阅[日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关详细信息，请参阅[日期和时间&#40;改进&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
- 从[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，可以返回 SQLGetDescField **SQL_C_SS_TIME2** (对于**时间**类型) 或**SQL_C_SS_TIMESTAMPOFFSET** (为**datetimeoffset**) 而不是**SQL_C_BINARY**，如果你的应用程序使用 ODBC 3.8。  
+ 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，如果应用程序使用 ODBC 3.8，SQLGetDescField 可以返回**SQL_C_SS_TIME2** （对于**时间**类型）或**SQL_C_SS_TIMESTAMPOFFSET** （对于**datetimeoffset**），而不是**SQL_C_BINARY**。  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField 对大型 CLR UDT 的支持  
- **SQLGetDescField**支持大型 CLR 用户定义类型 (Udt)。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLGetDescField**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[大型 CLR 用户定义类型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>SQLGetDescField 对稀疏列的支持  
- SQLGetDescField 可以用于查询新的 IRD 字段 SQL_CA_SS_IS_COLUMN_SET，以确定列是否**column_set**列。  
+ SQLGetDescField 可用于查询新的 IRD 字段 SQL_CA_SS_IS_COLUMN_SET 来确定列是否为**column_set**列。  
   
- 有关详细信息，请参阅[稀疏列支持&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
+ 有关详细信息，请参阅[稀疏列&#40;支持&#41;ODBC](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -154,7 +153,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLGetDescField 函数](https://go.microsoft.com/fwlink/?LinkId=59351)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

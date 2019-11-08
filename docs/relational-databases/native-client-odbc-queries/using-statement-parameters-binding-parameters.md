@@ -21,36 +21,35 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03903eedf9d1434ae7b1c20c2e6ddd57836b33cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 340a3a0f44201c81eafe8717962b2894709eb65d
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942787"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73779532"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>使用语句参数 - 绑定参数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  在执行 SQL 语句前，该语句中的每个参数标记都必须与应用程序中的某个变量关联或绑定到某个变量。 这是通过调用[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)函数。 **SQLBindParameter**描述程序变量 （地址、 C 数据类型等） 向驱动程序。 它还通过指示其序数值来标识参数标记，然后描述它所表示的 SQL 对象的特点（SQL 数据类型、精度等）。  
+  在执行 SQL 语句前，该语句中的每个参数标记都必须与应用程序中的某个变量关联或绑定到某个变量。 这是通过调用[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)函数来完成的。 **SQLBindParameter**描述驱动程序的程序变量（地址、C 数据类型等）。 它还通过指示其序数值来标识参数标记，然后描述它所表示的 SQL 对象的特点（SQL 数据类型、精度等）。  
   
  在执行语句前，可以随时绑定或重新绑定参数标记。 直到发生下列事件之一时，参数绑定才会失效：  
   
--   调用[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)与*选项*参数设置为 SQL_RESET_PARAMS 释放绑定到语句句柄的所有参数。  
+-   如果调用[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)并将*Option*参数设置为 SQL_RESET_PARAMS 将释放所有绑定到语句句柄的参数。  
   
--   调用**SQLBindParameter**与*ParameterNumber*设置为绑定的参数标记的序号自动释放以前的绑定。  
+-   如果调用**SQLBindParameter** ，并将*ParameterNumber*设置为绑定参数标记的序号，将自动释放以前的绑定。  
   
  应用程序还可以将参数绑定到程序变量数组以成批处理 SQL 语句。 数组绑定有两种不同的类型：  
   
 -   当每个参数绑定到自身的变量数组时，将完成按列绑定。  
   
-     指定按列绑定通过调用[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)与*特性*设置为 SQL_ATTR_PARAM_BIND_TYPE 和*ValuePtr*为 sql_param_bind_by_column，可以设置。  
+     通过调用 SQL_ATTR_PARAM_BIND_TYPE [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) *，并将* *将 valueptr*设置为 SQL_PARAM_BIND_BY_COLUMN 来指定按列绑定。  
   
 -   当 SQL 语句中的所有参数作为一个单元绑定到包含这些参数的各个变量的结构数组时，将完成按行绑定。  
   
-     指定按行绑定通过调用**SQLSetStmtAttr**与*特性*设置为 SQL_ATTR_PARAM_BIND_TYPE 和*ValuePtr*设置为结构持有锁的大小程序变量。  
+     通过调用**SQLSetStmtAttr**并将*属性*设置为 SQL_ATTR_PARAM_BIND_TYPE，并将*将 valueptr*设置为包含程序变量的结构的大小，可以指定按行绑定。  
   
- 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序将字符或二进制字符串参数发送到服务器，它将填充这些值中指定的长度与**SQLBindParameter** *ColumnSize*参数。 如果 ODBC 2.x 应用程序指定为 0 *ColumnSize*，驱动程序来填充到数据类型的精度的参数值。 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器时，精度为 8000；连接到早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，精度为 255。 *ColumnSize*以字节为单位的变体列。  
+ 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将字符或二进制字符串参数发送到服务器时，它会将值填充到在**SQLBindParameter** *ColumnSize*参数中指定的长度。 如果 ODBC 2.x 应用程序为*ColumnSize*指定0，则驱动程序将参数值填充到数据类型的精度。 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器时，精度为 8000；连接到早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，精度为 255。 变体列的*ColumnSize*以字节为单位。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持为存储过程参数定义名称。 ODBC 3.5 还支持在调用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程时使用的命名参数。 此支持可用于：  
   
@@ -58,11 +57,11 @@ ms.locfileid: "67942787"
   
 -   以不同于创建存储过程时指定的顺序指定应用程序中的参数。  
   
- 使用时才支持命名的参数[!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE**语句或 ODBC CALL 转义序列执行存储的过程。  
+ 仅当使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**执行**语句或 ODBC 调用转义序列执行存储过程时，才支持命名参数。  
   
- 如果**SQL_DESC_NAME**设置对于存储的过程参数，则在查询中的所有存储的过程参数还应设置**SQL_DESC_NAME**。  如果使用文字在存储的过程调用中，其中参数具有**SQL_DESC_NAME**设置，则这些文字应该使用格式*名称*=*值*，其中*名称*是存储的过程的参数名称 (例如， @p1)。 有关详细信息，请参阅[按名称 （命名参数） 绑定参数](https://go.microsoft.com/fwlink/?LinkId=167215)。  
+ 如果为存储过程参数设置**SQL_DESC_NAME** ，则查询中的所有存储过程参数也应该设置**SQL_DESC_NAME**。  如果在存储过程调用中使用了文本（其中参数**SQL_DESC_NAME**设置），则文本应使用格式 *"name*=*value*"，其中*NAME*是存储过程参数名称（例如，@p1). 有关详细信息，请参阅[按名称绑定参数（命名参数）](https://go.microsoft.com/fwlink/?LinkId=167215)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用语句参数](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
   
   
