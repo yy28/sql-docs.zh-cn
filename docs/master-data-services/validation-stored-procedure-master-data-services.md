@@ -1,5 +1,5 @@
 ---
-title: 验证存储过程 (Master Data Services) | Microsoft Docs
+title: 验证存储过程
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 332d3c86-4440-4f12-a6cb-ffbfbccde52c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7861b0fffa8c85f48ba3d95d417e31817c030ae9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a9210db5a2594f03b7916d06ed975d69882b513
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017355"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727812"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>验证存储过程 (Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68017355"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，对某一版本进行验证以便将业务规则应用于该模型版本中的所有成员。  
   
- 本主题说明如何使用 **mdm.udpValidateModel** 存储过程来验证数据。 如果您是 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的管理员，可以在 UI 中进行验证。 有关详细信息，请参阅 [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)。  
+ 本主题说明如何使用 **mdm.udpValidateModel** 存储过程来验证数据。 如果您是 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的管理员，可以在 UI 中进行验证。 有关详细信息，请参阅[针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)。  
   
 > [!NOTE]  
 >  如果在临时过程完成前调用验证，将不验证未完成暂存的成员。  
@@ -54,13 +54,13 @@ EXECUTE mdm.udpValidateModel @User_ID, @Model_ID, @Version_ID, 1
 ## <a name="parameters"></a>Parameters  
  此过程的参数如下所示：  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |UserID|用户 ID。|  
 |Model_ID|模型 ID。|  
 |Version_ID|版本 ID。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   

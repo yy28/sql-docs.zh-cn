@@ -1,5 +1,5 @@
 ---
-title: Master Data Services 开发人员文档 | Microsoft Docs
+title: 开发人员文档
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7544660fdcab3ef4caa8082d7096bbe343790fcb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 415e20eb08041780b8d20fb124151cc700cacbe6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006318"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728255"
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 开发人员文档
 
@@ -51,7 +51,7 @@ ms.locfileid: "68006318"
 ## <a name="web-server-namespaces"></a>Web 服务命名空间  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 在 Web 服务器计算机上安装一组程序集。 这些程序集包含可用于高级方案（用于自定义 Web 服务器计算机的行为）的命名空间。 下表介绍了这些命名空间。  
   
-|命名空间|描述|  
+|命名空间|说明|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|包含的类可用于从模型创建部署包或将包部署到 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库中。|  
 |<xref:Microsoft.MasterDataServices.Services>|包含的类用于接收和处理通过[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序对 Web 服务器计算机执行的 Web 服务操作。|  

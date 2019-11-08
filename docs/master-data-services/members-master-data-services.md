@@ -1,5 +1,5 @@
 ---
-title: 成员 (Master Data Services) | Microsoft Docs
+title: 成员
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 922ac93eed7235b560def2160b23da72a73a570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092596"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728004"
 ---
 # <a name="members-master-data-services"></a>成员 (Master Data Services)
 
@@ -35,7 +35,7 @@ ms.locfileid: "68092596"
   
  在此示例中，该表表示实体，表中的行表示成员，表中的列表示属性。 每个单元表示特定成员的属性值。  
   
- ![表示为表的 Master Data Services 实体](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
+ ![表示为表的 Master Data Services 实体](../master-data-services/media/mds-conc-entity-table.gif "表示为表的 Master Data Services 实体")  
   
 ## <a name="member-types"></a>成员类型  
  存在三种类型的成员：叶成员、合并成员和集合成员。  
@@ -58,9 +58,9 @@ ms.locfileid: "68092596"
 ## <a name="member-example"></a>成员示例  
  在下面的示例中，每个成员均包含 Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto 属性值。  
   
- ![自行车产品实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
+ ![自行车产品实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "自行车产品实体表")  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

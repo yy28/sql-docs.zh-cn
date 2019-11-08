@@ -1,5 +1,5 @@
 ---
-title: 编辑模型部署包 | Microsoft Docs
+title: 编辑模型部署包
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 651ddeeebe7cb6896c50486aed673e02bf47b0e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12cacedc8f195a965b7632760976008ba4b422b0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086471"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728232"
 ---
 # <a name="edit-a-model-deployment-package"></a>编辑模型部署包
 
@@ -30,23 +30,23 @@ ms.locfileid: "68086471"
 ## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   您要编辑的模型包必须存在。 有关详细信息，请参阅[部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)和[使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)或[使用 MDSModelDeploy 创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
 ### <a name="to-edit-a-model-deployment-package"></a>编辑模型部署包  
   
-1.  在 MDS 服务器上的 Windows 资源管理器中，移至驱动器  :\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
+1.  在 MDS 服务器上的 Windows 资源管理器中，移至驱动器:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
   
 2.  执行 ModelPackageEditor.exe。  
   
-3.  在模型编辑器向导中，单击 **“浏览”** ，移至包含您的包的文件夹，选择一个包，然后单击 **“打开”** 。 单击“下一步”  。  
+3.  在模型编辑器向导中，单击 **“浏览”** ，移至包含您的包的文件夹，选择一个包，然后单击 **“打开”** 。 单击 **“下一步”** 。  
   
-4.  选择要部署的实体、派生层次结构、订阅视图或业务规则。 取消选择不想部署的这类项。 单击“下一步”  。  
+4.  选择要部署的实体、派生层次结构、订阅视图或业务规则。 取消选择不想部署的这类项。 单击 **“下一步”** 。  
   
 5.  验证要部署的所选内容的列表。 若要更改，请单击 **“返回”** 并重复步骤 4。  
   
-6.  单击“浏览”  ，移至要保存部分包的文件夹，然后输入部分包的文件名（使用 .pkg 扩展名）。 单击“保存”  。  
+6.  单击“浏览”，移至要保存部分包的文件夹，然后输入部分包的文件名（使用 .pkg 扩展名）。 单击 **“保存”** 。  
   
 7.  单击 **“完成”** 。  
   

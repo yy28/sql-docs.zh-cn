@@ -1,5 +1,5 @@
 ---
-title: 从 SQL 到 C 转换 |Microsoft Docs
+title: 从 SQL 到 C 的转换 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b5813635c14f569703f186ebe2a55dd933b8427
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9795126f2cd7c39ebd23ed34fde73664388b235f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030403"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783843"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>由 SQL 到 C 的 datetime 数据类型转换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   下表列出了从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间类型转换为 C 类型时要注意的问题。  
   
@@ -31,12 +30,12 @@ ms.locfileid: "68030403"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|“确定”|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|“确定”|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|“确定”|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|“确定”|21|16|16|  
+|SQL_CHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
+|SQL_WCHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
+|SQL_TYPE_DATE|“确定”|12|13|12|13、23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|“确定”|10，23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7、8|“确定”|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18、22|7、8、20|20|7、20|“确定”|21|16|16|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
@@ -45,13 +44,13 @@ ms.locfileid: "68030403"
 |“确定”|无转换问题。|  
 |1|应用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的规则。|  
 |2|忽略前导空格和尾随空格。|  
-|3|字符串解析为日期、时间、时区或时区偏移量，且秒的小数部分允许多达 9 位。 如果解析时区偏移量，则时间将转换为客户端时区。 如果在此转换过程中发生错误，诊断记录生成具有 SQLSTATE 22018 和消息"日期时间字段溢出"。|  
+|3|字符串解析为日期、时间、时区或时区偏移量，且秒的小数部分允许多达 9 位。 如果解析时区偏移量，则时间将转换为客户端时区。 如果在此转换过程中出现错误，将生成包含 SQLSTATE 22018 和消息 "日期时间字段溢出" 的诊断记录。|  
 |4|如果该值不是有效的日期、时间戳或时间戳偏移量值，则生成具有 SQLSTATE 22018 和消息“为转换指定的字符值无效”的诊断记录。|  
 |5|如果时间为非零，则生成具有 SQLSTATE 01S07 和消息“截断小数部分”的诊断记录。|  
 |6|如果该值不是有效的时间、时间戳或时间戳偏移量值，则生成具有 SQLSTATE 22018 和消息“为转换指定的字符值无效”的诊断记录。|  
 |7|忽略日期部分。|  
 |8|如果秒的小数部分为非零，则生成具有 SQLSTATE 01S07 和消息“截断小数部分”的诊断记录。|  
-|9|如果值不是有效的日期、 时间、 时间戳或时间戳偏移量值，生成具有 SQLSTATE 22018 和消息"为转换指定的无效的字符值"生成的诊断记录。|  
+|9|如果该值不是有效的日期、时间、时间戳或 timestampoffset 值，则会生成包含 SQLSTATE 22018 的诊断记录和消息 "对于 cast 规范无效的字符值"。|  
 |10|如果该值是有效的时间，则日期部分设置为当前客户端的日期。|  
 |11|如果该值是有效的日期，则时间设置为零。|  
 |12|生成具有 SQLSTATE 07006 和消息“受限制的数据类型属性冲突”的诊断记录。|  
@@ -66,9 +65,9 @@ ms.locfileid: "68030403"
 |21|如果缓冲区足以容纳 SQL_SS_TIMESTAMPOFFSET_STRUCT，则按照 SQL_SS_TIMESTAMPOFFSET_STRUCT 返回值。 否则，生成具有 SQLSTATE 22003 和消息“数值超出了范围”的诊断记录。|  
 |22|在提取日期之前，将值转换为客户端时区。 这提供了与其他时间戳偏移量类型转换的一致性。 如果在此转换过程中发生错误，则生成具有 SQLSTATE 22008 和消息“日期时间字段溢出”的诊断记录。 这可能会导致日期与通过简单截断获得的值不同。|  
   
- 本主题中的表格列出了返回客户端的类型与绑定中的类型之间的转换。 对于输出参数，如果在指定服务器类型 SQLBindParameter 与服务器上的实际类型不匹配，将由服务器执行的隐式转换和返回到客户端的类型将匹配通过 SQLBindParameter 中指定的类型。 不同于上表中列出的内容服务器的转换规则时，这可能导致意外的转换结果。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是当前日期。  
+ 本主题中的表格列出了返回客户端的类型与绑定中的类型之间的转换。 对于输出参数，如果 SQLBindParameter 中指定的服务器类型与服务器上的实际类型不匹配，则服务器将执行隐式转换，并且返回给客户端的类型将与通过 SQLBindParameter 指定的类型匹配。 当服务器的转换规则与上表中列出的规则不同时，这可能会导致意外的转换结果。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是当前日期。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

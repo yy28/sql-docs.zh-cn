@@ -1,5 +1,5 @@
 ---
-title: 锁定版本 (Master Data Services) | Microsoft Docs
+title: 锁定版本
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6c57ba8b2a5639dc271eaa7cf1877ab3ccbba9ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 693eeda37e65dbf1d83fdf59eaf546e711827b7e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131853"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728055"
 ---
 # <a name="lock-a-version-master-data-services"></a>锁定版本 (Master Data Services)
 
@@ -29,10 +29,10 @@ ms.locfileid: "68131853"
 > [!NOTE]  
 >  在锁定某一版本后，超级用户和模型管理员可以继续添加、编辑和删除成员。 对模型具有权限的其他用户只能查看成员。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   版本的状态必须是 **“打开”** 。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68131853"
   
 -   [提交版本 (Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)   
  [取消锁定版本 (Master Data Services)](../master-data-services/unlock-a-version-master-data-services.md)  
   

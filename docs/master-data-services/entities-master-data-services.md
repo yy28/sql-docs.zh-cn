@@ -1,5 +1,5 @@
 ---
-title: 实体 (Master Data Services) | Microsoft Docs
+title: 实体
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 23e4773e96fbee408290684c8e9c5092c1d7ea40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052039"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728153"
 ---
 # <a name="entities-master-data-services"></a>实体 (Master Data Services)
 
@@ -34,11 +34,11 @@ ms.locfileid: "68052039"
 ## <a name="how-entities-relate-to-other-model-objects"></a>实体如何与其他模型对象关联  
  您可以将实体看作包含主数据的一个表，其中行表示成员，列表示属性。  
   
- ![表示为表的 Master Data Services 实体](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
+ ![表示为表的 Master Data Services 实体](../master-data-services/media/mds-conc-entity-table.gif "表示为表的 Master Data Services 实体")  
   
  使用要管理的主数据的列表填充该实体。  
   
- 实体可用于生成派生层次结构，它们是基于多个实体的基于级别的层次结构。 有关详细信息，请参阅 [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)。  
+ 实体可用于生成派生层次结构，它们是基于多个实体的基于级别的层次结构。 有关详细信息，请参阅[派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)。  
   
  还允许实体包含显示层次结构（基于单个实体的不规则结构）和集合（成员子集的一次性组合）。 有关详细信息，请参阅[显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md) 和[集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)。  
   
@@ -54,16 +54,16 @@ ms.locfileid: "68052039"
 ## <a name="entity-examples"></a>实体示例  
  在下面的示例中，显示具有以下属性的实体：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 这些属性描述成员。 每个成员由一行属性值表示。  
   
- ![自行车产品实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
+ ![自行车产品实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "自行车产品实体表")  
   
  在下面的示例中，Product 实体是中心实体。 Subcategory 实体是 Product 实体的基于域的属性。 Category 实体是 Subcategory 实体的基于域的属性。 StandardCost 和 ListPrice 是 Product 实体的自由格式的属性，FilePhoto 是 Product 实体的文件属性。  
   
- ![产品实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "Product Entity Tree Structure")  
+ ![Product 实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "Product 实体树结构")  
   
 > [!NOTE]  
 >  这是基于 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户界面 (UI) 的一个示例。 树状层次结构显示实体和基于域的属性之间的关系。 它旨在显示关系而不是表示重要性级别。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

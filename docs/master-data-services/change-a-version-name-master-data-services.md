@@ -1,5 +1,5 @@
 ---
-title: 更改版本名称 (Master Data Services) | Microsoft Docs
+title: 更改版本名称
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 20c12d6eceac9c68ad30486f7bb5b7fcf861eb07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d74ce56cb1289e218d65370cd6de8fef653e462a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047300"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729692"
 ---
 # <a name="change-a-version-name-master-data-services"></a>更改版本名称 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "68047300"
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   你必须有权访问“版本管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
@@ -38,16 +38,16 @@ ms.locfileid: "68047300"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”** 。  
   
-2.  在“管理版本”  页上的网格中，双击“名称”  列中的某一单元。  
+2.  在“管理版本”页上的网格中，双击“名称”列中的某一单元。  
   
 3.  键入新名称。  
   
 4.  按 Enter。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)   
- [提交版本 (Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)   
+ [锁定版本 &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)   
+ [提交版本 &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)   
  [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
   

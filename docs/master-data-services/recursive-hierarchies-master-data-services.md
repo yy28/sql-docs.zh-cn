@@ -1,5 +1,5 @@
 ---
-title: 递归层次结构 (Master Data Services) | Microsoft Docs
+title: 递归层次结构
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8c0f2770665a27db226b9da9f7253d602c90afd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac3df398e486f143b871c736e6f2fee643092b7f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910032"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728961"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>递归层次结构 (Master Data Services)
 
@@ -49,11 +49,11 @@ ms.locfileid: "67910032"
   
 -   派生层次结构不能包含多个递归关系。 但是，它可以具有其他派生关系（例如，包含“经理到雇员”递归关系的派生层次结构还可以具有“国家/地区到经理”关系和“雇员到商店”关系）。  
   
--   不能将成员权限（在“层次结构成员”  选项卡上）分配给递归层次结构中的成员。  
+-   不能将成员权限（在“层次结构成员”选项卡上）分配给递归层次结构中的成员。  
   
 -   递归层次结构不能包括循环关系。 例如，如果 Sandeep 是 Katherine 的经理，则 Katherine 不能是 Sandeep 的经理。 此外，Katherine 不能管理她自己。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

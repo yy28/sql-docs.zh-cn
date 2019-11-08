@@ -1,5 +1,5 @@
 ---
-title: 应用并更新变更集 (Master Data Services) | Microsoft Docs
+title: 应用并更新变更集
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 386bdbd2e7361567030a7d2a97e270172bdd21c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0e937ff9222553c42eacefc173dfec90bb6ebc6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047748"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728779"
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>应用并更新变更集 (Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68047748"
   
 ## <a name="prerequisites"></a>先决条件  
   
--    您必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   您必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
 -   你必须至少拥有实体或其属性之一的更新访问权限。  
   
@@ -35,11 +35,11 @@ ms.locfileid: "68047748"
   
 ## <a name="to-apply-and-update-a-changeset"></a>应用并更新变更集  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器”  。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器”。  
   
-2.  单击“实体”菜单中的某个实体  。  
+2.  单击“实体”菜单中的某个实体 。  
   
-3.  在右窗格中，选择“变更集”  ，然后双击你想要查看或更改的变更集。  
+3.  在右窗格中，选择“变更集”，然后双击你想要查看或更改的变更集。  
   
 4.  单击 **“应用”** 。  
   
@@ -47,12 +47,12 @@ ms.locfileid: "68047748"
   
      创建、删除和更新成员会导致变更集发生变化。  
   
-5.  若要还原挂起的更改，右键单击“变更集”  窗格中的网格，然后单击“还原”  。  
+5.  若要还原挂起的更改，右键单击“变更集”窗格中的网格，然后单击“还原”。  
   
 ## <a name="next-steps"></a>后续步骤  
  [确认或提交变更 (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建变更集 (Master Data Services)](../master-data-services/create-a-changeset-master-data-services.md)   
  [批准或拒绝变更集 (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   

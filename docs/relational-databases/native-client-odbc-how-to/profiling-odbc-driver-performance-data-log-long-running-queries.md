@@ -13,16 +13,15 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbcb19a3f5ad2d281306eb1cd22f3018d7f9e1c2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 05a8d7a7777731ba23cba08c8f8ba48489231d48
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908178"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780920"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>分析 ODBC 驱动程序性能数据 - 记录长时间运行的查询
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   此示例显示用于记录长时间运行查询的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的选项。 此示例在运行时将创建 Odbcqry.log，其中包含执行时间超过应用程序所设定间隔的查询的列表。 IA64 平台不支持此示例。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
@@ -47,15 +46,15 @@ ms.locfileid: "72908178"
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>以编程方式记录长时间运行的查询数据  
   
-1.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和 SQL_COPT_SS_PERF_QUERY_LOG 以及长时间运行的查询日志文件的完整路径和文件名。 例如：  
+1.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG 以及长时间运行的查询日志文件的完整路径和文件名。 例如：  
   
     ```  
     C:\\Odbcqry.log  
     ```  
   
-2.  通过 SQL_COPT_SS_PERF_QUERY_INTERVAL 调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)并将其设置为超时间隔（以毫秒为单位）。  
+2.  调用 SQL_COPT_SS_PERF_QUERY_INTERVAL [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)并将其设置为超时间隔（以毫秒为单位）。  
   
-3.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_START 开始记录长时间运行的查询。  
+3.  通过 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_START 调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，开始记录长时间运行的查询。  
   
 4.  通过 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_STOP 调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，以停止记录长时间运行的查询。  
   

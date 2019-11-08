@@ -1,5 +1,5 @@
 ---
-title: 针对业务规则验证版本 (Master Data Services) | Microsoft Docs
+title: 针对业务规则验证版本
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 57a78efbe6de9a4439846df69ac04e32d073fe3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2995a02e738b2c185edff26ee0d6a395df14f59f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102554"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727824"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>针对业务规则验证版本 (Master Data Services)
 
@@ -33,12 +33,12 @@ ms.locfileid: "68102554"
 > [!NOTE]  
 >  所有成员必须通过验证后，才能提交版本。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   版本的状态必须是 **“打开”** 或 **“已锁定”** 。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68102554"
   
 -   [锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [验证状态 (Master Data Services)](../master-data-services/validation-statuses-master-data-services.md)   
  [验证存储过程 (Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)   

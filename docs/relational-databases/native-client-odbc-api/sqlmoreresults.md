@@ -14,16 +14,15 @@ ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42e0135513fc84d96061864207d63487b5e65566
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3256e0e4862923138cdf035eb15926364bc8e0a5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131309"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786296"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   **SQLMoreResults**允许应用程序检索多个结果行集。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句包含 COMPUTE 子句，或是提交了一批 ODBC 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，将导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序生成多个结果集。 在任一种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都不允许通过创建服务器游标来处理结果。 因此，开发人员必须确保 ODBC 语句具有阻塞作用。 开发人员必须用完返回的数据或者取消 ODBC 语句，然后才能处理来自连接中其他活动语句的数据。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "68131309"
   
  开发人员可以确定由 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的 COMPUTE 子句生成的结果集行列的属性。 有关更多详细信息，请参阅[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)。  
   
- 当**SQLMoreResults**调用的结果集中存在的数据行，这些行都将丢失，并可从下一步的结果行集中的行数据。  
+ 当使用结果集中的 unfetched 数据行调用**SQLMoreResults**时，这些行将丢失，并使下一个结果行集中的行数据可用。  
   
 ## <a name="examples"></a>示例  
   
@@ -163,7 +162,7 @@ EXIT:
     }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLMoreResults 函数](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

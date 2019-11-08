@@ -1,5 +1,5 @@
 ---
-title: 弃用的 Master Data Services 功能 | Microsoft Docs
+title: 弃用的 Master Data Services 功能
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: b5212af4f19cdf26f6c332a83877880c80bc3741
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267033"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729344"
 ---
 # <a name="deprecated-master-data-services-features"></a>弃用的 Master Data Services 功能
 
@@ -33,7 +33,7 @@ ms.locfileid: "68267033"
   
 -   在资源管理器中，派生层次级别页面现在将显示每个层次结构级别的未分配（未使用）成员。 根据层次结构级别对未使用的节点进行分组。 通过拖放或剪切和粘贴操作可在“未使用”节点和“根”节点之间移动成员。  
   
-     在“系统管理”中，未使用的节点在“预览”  窗格中可见。 在“安全性”中，未使用的节点在“层次结构成员权限”  窗格中可见。 可以向“根”  节点下或“未使用”  节点下的任何成员分配权限。 也可以向“根”成员  、“未使用”成员  和“未使用伪”成员  分配权限。  
+     在“系统管理”中，未使用的节点在“预览” 窗格中可见。 在“安全性”中，未使用的节点在“层次结构成员权限” 窗格中可见。 可以向“根” 节点下或“未使用” 节点下的任何成员分配权限。 也可以向“根”成员、“未使用”成员和“未使用伪”成员 分配权限。  
   
 -   存储过程 (mdm.udpConvertCollectionAndConsolidatedMembersToLeaf) 会将显式层次结构转换为递归派生层次结构，并将合并成员和集合成员转换为叶成员。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "68267033"
 * [成员修订历史记录](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>外部资源  
- msdn.com 上的博客文章[Deprecated:Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)（已弃用：显式层次结构和集合）。  
+ msdn.com 上的博客文章 [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)（已弃用：显式层次结构和集合）。  
   
-## <a name="see-also"></a>请参阅  
- [弃用的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  
+## <a name="see-also"></a>另请参阅  
+ [废弃的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  
   
   

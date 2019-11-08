@@ -1,5 +1,5 @@
 ---
-title: 将成员添加到集合 (Master Data Services) | Microsoft Docs
+title: 将成员添加到集合
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0c750efb1570db2e8b1f6e2d521cdb24773f01da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aaedf62b9702d5cec44116cb906acdf9aa415c39
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047881"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729811"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>将成员添加到集合 (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68047881"
 ## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--    您必须有权访问“资源管理器”功能区域。  
+-   您必须有权访问“资源管理器”功能区域。  
   
 -   对于您要将成员添加到的集合模型对象，您必须至少具有 **“更新”** 权限。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "68047881"
   
 ### <a name="to-add-members-to-a-collection"></a>将成员添加到集合  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型”  列表中选择模型。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在 主页上，从“模型”列表中，选择模型。  
   
-2.   从“版本”列表中，选择某一版本。  
+2.  从“版本”列表中，选择某一版本。  
   
-3.  单击 **“资源管理器”** 。  
+3.  单击“资源管理器”。  
   
-4.  从菜单栏中，指向“集合”  ，然后单击“entity_name”  。  
+4.  从菜单栏中，指向“集合”，然后单击“entity_name”。  
   
 5.  在网格中，单击要将成员添加到的集合对应的行。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68047881"
   
 11. 或者，单击 **“权重”** 列中的值设置权重值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 实体同步关系 (Master Data Services) | Microsoft Docs
+title: 实体同步关系
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f0b989693c92bbecae3221f98a2ccc413700b994
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fde11c6b106a9e559d74504b77d975d096c1f3d0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915968"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729266"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>实体同步关系 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "67915968"
   
  一旦建立了同步关系，则目标实体只能通过同步进程修改。 可以随时删除同步关系以使目标实体可编辑。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建和执行实体同步关系 (Master Data Services)](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [编辑和删除实体同步关系 (Master Data Services)](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   

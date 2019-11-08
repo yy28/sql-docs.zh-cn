@@ -1,5 +1,5 @@
 ---
-title: 更改版本标志名称 (Master Data Services) | Microsoft Docs
+title: 更改版本标志名称
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8b92b93148d7baf1782820ccff6b033983bc6de5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8f5d441e7d129c7f39dc2d53c6b9ac4215aba9f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047319"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729716"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>更改版本标志名称 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "68047319"
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   你必须有权访问“版本管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "68047319"
   
 3.  在 **“管理版本标志”** 页的 **“模型”** 字段中，选择某一模型。  
   
-4.  在网格中的标志名称行中，双击“名称”  字段。  
+4.  在网格中的标志名称行中，双击“名称”字段。  
   
 5.  键入标志的新名称。  
   
 6.  按 Enter。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)   
  [向版本分配标志 (Master Data Services)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

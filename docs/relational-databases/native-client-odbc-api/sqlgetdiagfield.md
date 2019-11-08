@@ -1,5 +1,5 @@
 ---
-title: SQLGetDiagField | Microsoft Docs
+title: SQLGetDiagField |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,24 +14,23 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9a180c0ead9ece1345c011108249178fd36e837
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131454"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786470"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序指定的以下额外的诊断字段**SQLGetDiagField**。 这些字段支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序的大量错误报告功能，并且可以在连接的 ODBC 连接句柄和 ODBC 语句句柄上生成的所有诊断记录中使用。 这些字段在 sqlncli.h 中定义。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序为**SQLGetDiagField**指定以下附加诊断字段。 这些字段支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序的大量错误报告功能，并且可以在连接的 ODBC 连接句柄和 ODBC 语句句柄上生成的所有诊断记录中使用。 这些字段在 sqlncli.h 中定义。  
   
-|诊断记录字段|描述|  
+|诊断记录字段|说明|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|报告生成错误的存储过程的行号。 只有 SQL_DIAG_SS_PROCNAME 返回值时，SQL_DIAG_SS_LINE 的值才有意义。 该值作为无符号 16 位整数返回。|  
 |SQL_DIAG_SS_MSGSTATE|错误消息的状态。 有关错误消息状态的信息，请参阅[RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)。 该值作为有符号 32 位整数返回。|  
-|SQL_DIAG_SS_PROCNAME|根据需要生成错误的存储过程的名称。 该值作为字符串返回。 字符串的长度（以字符为单位）取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本。 可通过调用来确定[SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)请求 SQL_MAX_PROCEDURE_NAME_LEN 值。|  
+|SQL_DIAG_SS_PROCNAME|根据需要生成错误的存储过程的名称。 该值作为字符串返回。 字符串的长度（以字符为单位）取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本。 可以通过调用[SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)请求 SQL_MAX_PROCEDURE_NAME_LEN 的值来确定此值。|  
 |SQL_DIAG_SS_SEVERITY|关联错误消息的严重级别。 该值作为有符号 32 位整数返回。|  
 |SQL_DIAG_SS_SRVNAME|发生错误的服务器的名称。 该值作为字符串返回。 字符串的长度（以字符为单位）由 sqlncli.h 中的 SQL_MAX_SQLSERVERNAME 宏定义。|  
   
@@ -39,7 +38,7 @@ ms.locfileid: "68131454"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序报告标识最后尝试的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句的以下额外动态函数代码。 动态函数代码在诊断记录集的标头（记录 0）中返回，因此可在每次执行时（成功或失败）使用。  
   
-|动态函数代码|Source|  
+|动态函数代码|数据源|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE 语句|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT 语句|  
@@ -63,7 +62,7 @@ ms.locfileid: "68131454"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|DROP TRIGGER 语句|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|BACKUP 或 DUMP DATABASE 语句|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|DUMP TABLE 语句|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 或 DUMP TRANSACTION 语句。 如果还返回针对 CHECKPOINT 语句**trunc.log chkpt 上的。** 数据库选项，则。|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 或 DUMP TRANSACTION 语句。 如果**chkpt. 上的 trunc** ，则还会返回 CHECKPOINT 语句的。 数据库选项为 on。|  
 |SQL_DIAG_DFC_SS_GOTO|GOTO 控制流语句|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|INSERT BULK 语句|  
 |SQL_DIAG_DFC_SS_KILL|KILL 语句|  
@@ -98,11 +97,11 @@ ms.locfileid: "68131454"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT 语句|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField 和表值参数  
- SQLGetDiagField 可以用于检索两个诊断字段：SQL_DIAG_SS_TABLE_COLUMN_NUMBER 和 SQL_DIAG_SS_TABLE_ROW_NUMBER。 这些字段可帮助您确定哪个值导致了与诊断记录关联的错误或警告。  
+ SQLGetDiagField 可用于检索两个诊断字段： SQL_DIAG_SS_TABLE_COLUMN_NUMBER 和 SQL_DIAG_SS_TABLE_ROW_NUMBER。 这些字段可帮助您确定哪个值导致了与诊断记录关联的错误或警告。  
   
  有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLGetDiagField 函数](https://go.microsoft.com/fwlink/?LinkId=59352)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

@@ -25,16 +25,15 @@ ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdfea2ddff8b1e907cf3496595971a4c93efba53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d147e5c6fa257a6397635014d868d75e7c8833dd
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895819"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783479"
 ---
 # <a name="processing-statements-that-generate-messages"></a>处理生成消息的语句
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SET 语句选项 STATISTICS TIME 和 STATISTICS IO 用于获取有助于诊断长时间运行的查询的信息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本还支持用于分析查询计划的 SHOWPLAN 选项。 ODBC 应用程序可通过执行以下语句设置这些选项：  
   
@@ -45,7 +44,7 @@ SQLExecDirect(hstmt, "SET STATISTICS TIME ON", SQL_NTS90
 SQLExecDirect(hstmt, "SET STATISTICS IO ON", SQL_NTS);  
 ```  
   
- 当 SET STATISTICS TIME 或 SET SHOWPLAN 为 ON 时， **SQLExecute**并**SQLExecDirect**返回 SQL_SUCCESS_WITH_INFO，此时，应用程序中检索 SHOWPLAN 或统计信息时输出通过调用**SQLGetDiagRec**直到它返回 sql_no_data 为止。 SHOWPLAN 数据的每一行均按以下格式返回：  
+ 当 SET STATISTICS TIME 或 SET 显示计划处于开启状态时， **SQLExecute**和**SQLExecDirect**将返回 SQL_SUCCESS_WITH_INFO，此时，应用程序可以通过调用**SQLGetDiagRec**来检索显示计划或统计信息时间输出，直到它返回 SQL_NO_DATA。 SHOWPLAN 数据的每一行均按以下格式返回：  
   
 ```  
 szSqlState="01000", *pfNativeError=6223,  
@@ -63,7 +62,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
    SQL Server Parse and Compile Time: cpu time = 0 ms."  
 ```  
   
- 在到达结果集的末尾之前，SET STATISTICS IO 的输出不可用。 若要获取 STATISTICS IO 输出，应用程序调用**SQLGetDiagRec**次**SQLFetch**或[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)返回 sql_no_data 为止。 STATISTICS IO 的输出按以下格式返回：  
+ 在到达结果集的末尾之前，SET STATISTICS IO 的输出不可用。 若要获取统计信息 IO 输出，应用程序会在**SQLFetch**或[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)返回 SQL_NO_DATA 时调用**SQLGetDiagRec** 。 STATISTICS IO 的输出按以下格式返回：  
   
 ```  
 szSqlState="01000", *pfNativeError= 3615,  
@@ -73,7 +72,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-dbcc-statements"></a>使用 DBCC 语句  
- DBCC 语句将其数据作为消息（而不是结果集）返回。 **SQLExecDirect**或**SQLExecute**返回 SQL_SUCCESS_WITH_INFO，并且该应用程序中通过调用检索输出**SQLGetDiagRec**直到它返回 sql_no_data 为止。  
+ DBCC 语句将其数据作为消息（而不是结果集）返回。 **SQLExecDirect**或**SQLExecute**返回 SQL_SUCCESS_WITH_INFO，应用程序将通过调用**SQLGetDiagRec**来检索输出，直到返回 SQL_NO_DATA。  
   
  例如，下面的语句返回 SQL_SUCCESS_WITH_INFO：  
   
@@ -81,7 +80,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 SQLExecDirect(hstmt, "DBCC CHECKTABLE(Authors)", SQL_NTS);  
 ```  
   
- 调用**SQLGetDiagRec**返回：  
+ 对**SQLGetDiagRec**的调用返回：  
   
 ```  
 szSqlState = "01000", *pfNativeError = 2536,  
@@ -100,13 +99,13 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>使用 PRINT 和 RAISERROR 语句  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT 和 RAISERROR 语句也通过调用返回数据**SQLGetDiagRec**。 PRINT 语句使 SQL 语句执行后返回 SQL_SUCCESS_WITH_INFO，并且随后调用**SQLGetDiagRec**返回*SQLState*值为 01000。 严重性为 10 或更低的 RAISERROR 在行为上与 PRINT 相同。 严重性为 11 或更高的 RAISERROR 导致执行后返回 SQL_ERROR，并且随后调用**SQLGetDiagRec**返回*SQLState* 42000。 例如，下面的语句返回 SQL_SUCCESS_WITH_INFO：  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT 和 RAISERROR 语句还会通过调用**SQLGetDiagRec**返回数据。 PRINT 语句使 SQL 语句执行返回 SQL_SUCCESS_WITH_INFO，并对**SQLGetDiagRec**的后续调用返回*SQLState* 01000。 严重性为 10 或更低的 RAISERROR 在行为上与 PRINT 相同。 严重性为11或更高的 RAISERROR 导致 execute 返回 SQL_ERROR，对**SQLGetDiagRec**的后续调用会返回*SQLState* 42000。 例如，下面的语句返回 SQL_SUCCESS_WITH_INFO：  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  
 ```  
   
- 调用**SQLGetDiagRec**返回：  
+ 调用**SQLGetDiagRec**将返回：  
   
 ```  
 szSQLState = "01000", *pfNative Error = 0,  
@@ -121,7 +120,7 @@ SQLExecDirect (hstmt, "RAISERROR ('Sample error 1.', 10, -1)",
    SQL_NTS)  
 ```  
   
- 调用**SQLGetDiagRec**返回：  
+ 调用**SQLGetDiagRec**将返回：  
   
 ```  
 szSQLState = "01000", *pfNative Error = 50000,  
@@ -135,7 +134,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
 SQLExecDirect (hstmt, "RAISERROR ('Sample error 2.', 11, -1)", SQL_NTS)  
 ```  
   
- 调用**SQLGetDiagRec**返回：  
+ 调用**SQLGetDiagRec**将返回：  
   
 ```  
 szSQLState = "42000", *pfNative Error = 50000,  
@@ -143,13 +142,13 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
    Sample error 2."  
 ```  
   
- 调用的计时**SQLGetDiagRec**至关重要时从 PRINT 或 RAISERROR 语句的输出将包含在结果集中。 在调用**SQLGetDiagRec**来检索 PRINT 或 RAISERROR 输出必须进行接收 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 的语句之后立即。 当仅执行一个 SQL 语句时（如上述示例中所示），这非常简单。 在这些情况下，在调用**SQLExecDirect**或**SQLExecute**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 和**SQLGetDiagRec**然后，可以调用。 当编写循环代码以处理一批 SQL 语句的输出或者当执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程时，这要复杂一些。  
+ 在结果集中包含 PRINT 或 RAISERROR 语句的输出时，调用**SQLGetDiagRec**的时间是至关重要的。 若**要检索**PRINT 或 RAISERROR 输出，必须在接收 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 的语句之后立即调用。 当仅执行一个 SQL 语句时（如上述示例中所示），这非常简单。 在这些情况下，对**SQLExecDirect**或**SQLExecute**的调用将返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，然后可以调用**SQLGetDiagRec** 。 当编写循环代码以处理一批 SQL 语句的输出或者当执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程时，这要复杂一些。  
   
- 在这种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为在批处理或存储过程中执行的每个 SELECT 语句返回一个结果集。 如果批处理或过程包含 PRINT 或 RAISERROR 语句，它们的输出将与 SELECT 语句结果集交叉。 如果在批处理或过程的第一个语句为 PRINT 或 RAISERROR， **SQLExecute**或**SQLExecDirect**返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，并且该应用程序需要调用**SQLGetDiagRec**直到其返回 SQL_NO_DATA 来检索 PRINT 或 RAISERROR 信息。  
+ 在这种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为在批处理或存储过程中执行的每个 SELECT 语句返回一个结果集。 如果批处理或过程包含 PRINT 或 RAISERROR 语句，它们的输出将与 SELECT 语句结果集交叉。 如果批处理或过程中的第一个语句是 PRINT 或 RAISERROR，则**SQLExecute**或**SQLExecDirect**返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，应用程序需要调用**SQLGetDiagRec** ，直到它将 SQL_NO_DATA 返回到检索 PRINT 或 RAISERROR 信息。  
   
- 如果 PRINT 或 RAISERROR 语句之后的 SQL 语句 （如 SELECT 语句），则 PRINT 或 RAISERROR 信息情况时将返回[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)位置对结果集，其中包含错误。 **SQLMoreResults**返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，具体取决于消息的严重性。 通过调用检索的消息**SQLGetDiagRec**直到它返回 sql_no_data 为止。  
+ 如果 PRINT 或 RAISERROR 语句出现在 SQL 语句（如 SELECT 语句）之后，则当包含错误的结果集上的[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)位置时，将返回 PRINT 或 RAISERROR 信息。 **SQLMoreResults**根据消息的严重性返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR。 消息是通过调用**SQLGetDiagRec**来检索的，直到返回 SQL_NO_DATA。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [处理错误和消息](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

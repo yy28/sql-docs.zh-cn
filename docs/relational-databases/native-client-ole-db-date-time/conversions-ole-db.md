@@ -1,5 +1,5 @@
 ---
-title: 绑定和转换 (OLE DB) |Microsoft Docs
+title: 绑定和转换（OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,37 +15,36 @@ ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfefde49bb86833025fc14c2ea84782e8caa84a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bbc5b6f9c4cae1cef3a1052a8ce20c97057e3e5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107091"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73770760"
 ---
 # <a name="conversions-ole-db"></a>转换 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  本部分讨论如何之间进行转换**datetime**并**datetimeoffset**值。 本节中描述的这些转换或者已由 OLE DB 提供，或者是 OLE DB 的一致扩展。  
+  本部分讨论如何在**datetime**和**datetimeoffset**值之间进行转换。 本节中描述的这些转换或者已由 OLE DB 提供，或者是 OLE DB 的一致扩展。  
   
  OLE DB 中时间和日期的文字和字符串的格式通常遵循 ISO，并且不依赖于客户端区域性。 但 DBTYPE_DATE 是个例外，它遵循的标准是 OLE 自动化。 但是，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 只在数据从客户端传输或传输到客户端时在两个类型之间转换，所以，应用程序无法强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 在 DBTYPE_DATE 和字符串格式之间转换。 否则，字符串使用以下格式（括号中的文本指示某一可选元素）：  
   
--   格式**datetime**并**datetimeoffset**字符串是：  
+-   **Datetime**和**datetimeoffset**字符串的格式为：  
   
-     yyyy  -mm  -dd  [ hh  :mm  :ss  [.9999999  ][ ± hh  :mm  ]]  
+     yyyy-mm-dd[ hh:mm:ss[.9999999][ ± hh:mm]]  
   
--   时间字符串的格式为  ：  
+-   时间字符串的格式为：  
   
-     hh:mm:ss[.9999999]      
+     hh:mm:ss[.9999999]  
   
--   格式**日期**字符串是：  
+-   **日期**字符串的格式为：  
   
-     *yyyy*-*mm*-*dd*  
+     yyyy*mm*dd--  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 的早期版本实现了 OLE 转换，以防标准转换失败。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 和更高版本执行的某些转换不同于 OLE DB 规范。  
   
- 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅"数据格式：在字符串和文字"一节[OLE DB 日期和时间改进的数据类型支持](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
+ 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅[数据类型支持 OLE DB 日期和时间改进](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)中的 "数据格式：字符串和文字" 部分。  
   
  下面是一般的转换规则：  
   
@@ -72,7 +71,7 @@ ms.locfileid: "68107091"
  [在服务器和客户端之间执行的转换](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-server-to-client.md)  
  说明在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）与使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 编写的客户端应用程序之间执行的日期/时间转换。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [日期和时间改进 (OLE DB)](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

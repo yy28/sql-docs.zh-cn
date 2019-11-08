@@ -1,5 +1,5 @@
 ---
-title: bcp_readfmt | Microsoft Docs
+title: bcp_readfmt |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f26e0dfeab95d4ad524f888d8f68a5aa569d80b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 6e0277959c1776dfbe9bd088c639f243ad6a2f7d
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707451"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782518"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   从指定的格式文件中读取数据文件格式定义。  
   
@@ -44,14 +43,14 @@ RETCODE bcp_readfmt (
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
- *szFormatFile*  
+ *Szformatfile 所*  
  包含数据文件的格式值的文件的路径和文件名。  
   
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>备注  
- **Bcp_readfmt**读取格式值后，会对[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)和[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)进行适当的调用。 您无需分析格式文件和进行这些调用。  
+## <a name="remarks"></a>注释  
+ **Bcp_readfmt**读取格式值后，它将对[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)和[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)进行适当的调用。 您无需分析格式文件和进行这些调用。  
   
  若要保存格式化文件，请调用[bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)。 对**bcp_readfmt**的调用可以引用保存的格式。 有关详细信息，请参阅[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
   
@@ -107,7 +106,7 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 自动创建代码 (Master Data Services) | Microsoft Docs
+title: 自动创建代码
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7486928e85c05b5a87c16141db7fc42cffe8b135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abf900f8eea0e64ed8e541ee7cd94c63834fbb48
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047567"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729742"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>自动创建代码 (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "68047567"
   
  在相关工具之一中或使用临时过程向 MDS 中输入属性值时，可以保留属性值为空。 应用业务规则时，将以最大的现有值为基础增加值。 例如，如果规则是“属性默认为一个从 1 开始、增量为 4 的生成值”，并且属性当前的最大值是 700，则添加的下一个成员的值将是 704。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

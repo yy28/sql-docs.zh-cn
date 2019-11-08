@@ -1,5 +1,5 @@
 ---
-title: 集成管理功能区域（主数据管理器）| Microsoft Docs
+title: 集成管理功能区域
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2f12e6246ac08be29c673514ad7f35dbaa74a820
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3622c5bf25b049fbf7bcd2ad19d43bd31230459c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007207"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729101"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>集成管理功能区域（主数据管理器）
 
@@ -23,7 +23,7 @@ ms.locfileid: "68007207"
 
   在“集成管理”功能区域中，管理员可以从临时表导入数据，并且创建用于订阅系统的订阅视图。 有关管理员的详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-## <a name="import-data"></a>导入数据  
+## <a name="import-data"></a>“导入数据”  
  [概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
  [查看暂存过程中出现的错误 (Master Data Services)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "68007207"
   
  [删除订阅视图 (Master Data Services)](../master-data-services/delete-a-subscription-view-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [主数据管理器 Web 应用程序](../master-data-services/master-data-manager-web-application.md)  
   
   

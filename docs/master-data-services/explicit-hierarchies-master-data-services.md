@@ -1,5 +1,5 @@
 ---
-title: 显式层次结构 (Master Data Services) | Microsoft Docs
+title: 显式层次结构
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e54ac7b6329a678d2965f135dadf5870ca19010b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b80665b6a3b3167b362be7912c70f81ce2add2ef
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915953"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729255"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>显式层次结构 (Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "67915953"
  强制显式层次结构要求所有叶成员必须包含在层次结构树中。 默认情况下，所有成员都包含在该树的根上。 您可以根据需要重新排列成员。  
   
 ### <a name="non-mandatory-explicit-hierarchy"></a>非强制显式层次结构  
- 非强制显式层次结构是所有叶成员都处于系统创建的“未使用”  节点中的层次结构。 可以根据需要将成员移出此节点。 其余成员可以保留在 **“未使用”** 节点中。  
+ 非强制显式层次结构是所有叶成员都处于系统创建的“未使用”节点中的层次结构。 可以根据需要将成员移出此节点。 其余成员可以保留在 **“未使用”** 节点中。  
   
  使用非强制显式层次结构时，对层次结构所做的任何报告或分析可能与对强制层次结构所做的报告或分析不一致。  
   
@@ -75,15 +75,15 @@ ms.locfileid: "67915953"
 |可以是不规则的|始终包含一致的级别数|  
   
 ## <a name="explicit-hierarchy-example"></a>显式层次结构示例  
- 在以下示例中，Product 实体包含这些叶成员：BK-M101 {Mountain-100}、BK-M201 {Mountain-200}、BK-M301 {Mountain-300}、BK-R150 {Road-150}、BK-R450 {Road-450} 和 BK-R650 {Road-650}。  
+ 在下面的示例中，Product 实体包含以下叶成员：BK-M101 {Mountain-100}、BK-M201 {Mountain-200}、BK-M301 {Mountain-300}、BK-R150 {Road-150}、BK-R450 {Road-450} 和 BK-R650 {Road-650}。  
   
  若要在特定的合并点汇总这些叶成员，您可以在 Product 实体中创建合并成员。 在要汇总叶成员的层次结构树的级别中插入合并成员。 对插入合并成员的位置没有限制，但是每个成员（叶成员或合并成员）只能使用一次。  
   
- ![山地车显式层次结构示例](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Mountain Bike Explicit Hierarchy Example")  
+ ![山地自行车显式层次结构示例](../master-data-services/media/mds-conc-explicit-hierarchy.gif "山地自行车显式层次结构示例")  
   
  合并成员可用于将任何级别的成员分组，叶成员和合并成员按您确定的顺序排序。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

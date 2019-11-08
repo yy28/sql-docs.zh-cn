@@ -1,5 +1,5 @@
 ---
-title: SQLPutData | Microsoft Docs
+title: SQLPutData |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,37 +14,36 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f5b813a2e411d1b8b4dcf1069f656ed844f4e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89e694b18dc27a739a7e1f4d1e0950ef08a01570
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131215"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785744"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  使用 SQLPutData 发送 65,535 字节以上的数据时，以下限制适用 (对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本 4.21 a) 或 400 KB 的 sql_longvarchar （适用于 SQL Server 版本在 6.0 及更高版本) 的数据 (**文本**)、 SQL_WLONGVARCHAR(**ntext**) 或 SQL_LONGVARBINARY (**映像**) 列：  
+  当使用 SQLPutData 发送超过65535个字节的数据（对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本 4.21 a）或 400 KB 的数据（对于 SQL Server 版本6.0 及更高版本）用于 SQL_LONGVARCHAR （**文本**）、SQL_WLONGVARCHAR （**ntext**）或 SQL_ 时，以下限制将适用：LONGVARBINARY （**image**）列：  
   
--   引用的参数可以是*insert_value* INSERT 语句中。  
+-   引用的参数可以是 INSERT 语句中的*insert_value* 。  
   
--   引用的参数可以是*表达式*UPDATE 语句的 SET 子句中。  
+-   引用的参数可以是 UPDATE 语句的 SET 子句中的*表达式*。  
   
- 正在取消的一系列提供数据块的运行的服务器的 SQLPutData 调用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 6.5 或更早版本时将导致部分更新列的值。 **文本**， **ntext**，或**图像**调用 SQLCancel 时引用的列设置为中间占位符值。  
+ 当使用版本6.5 或更早版本时，取消将向运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器提供块数据的 SQLPutData 调用序列会导致列值的部分更新。 调用 SQLCancel 时引用的**text**、 **ntext**或**image**列被设置为中间占位符值。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 版和更低版本。  
   
 ## <a name="diagnostics"></a>诊断  
- 还有一个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLPutData 的本机客户端特定 SQLSTATE:  
+ 对于 SQLPutData，有一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 特定的 SQLSTATE：  
   
-|SQLSTATE|Error|描述|  
+|SQLSTATE|错误|说明|  
 |--------------|-----------|-----------------|  
-|22026|字符串数据，长度不匹配|如果以字节为单位发送数据的长度已指定应用程序，例如，使用 SQL_LEN_DATA_AT_EXEC (*n*) 其中*n*大于 0，由应用程序通过给定的字节总数SQLPutData 必须匹配指定的长度。|  
+|22026|字符串数据，长度不匹配|如果应用程序已指定要发送的数据的长度（以字节为单位），例如，使用 SQL_LEN_DATA_AT_EXEC （*n*），其中*n*大于0，则应用程序通过 SQLPutData 指定的字节总数必须与指定的长度匹配。|  
   
 ## <a name="sqlputdata-and-table-valued-parameters"></a>SQLPutData 和表值参数  
- 使用表值参数中使用可变行绑定时，应用程序使用 SQLPutData。 *StrLen_Or_Ind*参数指示它是驱动程序以收集数据的下一步的行的表值参数数据，或没有多个行均不可用：  
+ 使用带有表值参数的可变行绑定时，应用程序将使用 SQLPutData。 *StrLen_Or_Ind*参数指示它已准备好供驱动程序为表值参数数据的下一行或多行收集数据，或者没有更多的可用行：  
   
 -   大于 0 的值指示可以使用下一组行值。  
   
@@ -52,21 +51,21 @@ ms.locfileid: "68131215"
   
 -   任何小于 0 的值则会出错，导致记录一个诊断记录，该记录包含 SQLState HY090 和消息“字符串或缓冲区长度无效”。  
   
- *DataPtr*参数将被忽略，但是必须设置为非 NULL 值。 详细信息，请参阅部分中的可变 TVP 行绑定上[绑定和 Data Transfer of Table-Valued 参数和列值](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)。  
+ *DataPtr*参数将被忽略，但必须设置为非 NULL 值。 有关详细信息，请参阅有关[表值参数和列值的绑定和数据传输](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)中的变量 TVP 行绑定部分。  
   
- 如果*StrLen_Or_Ind*值不是 SQL_DEFAULT_PARAM 也介于 0 到 SQL_PARAMSET_SIZE (即*ColumnSize* SQLBindParameter 参数)，则返回错误。 此错误导致 SQLPutData 返回 SQL_ERROR:SQLSTATE = HY090，"字符串或缓冲区长度无效"。  
+ 如果*StrLen_Or_Ind*包含除 SQL_DEFAULT_PARAM 以外的任何值或介于0和 SQL_PARAMSET_SIZE 之间的数字（即，SQLBindParameter 的*ColumnSize*参数），则是错误的。 此错误导致 SQLPutData 返回 SQL_ERROR：SQLSTATE=HY090，“字符串或缓冲区长度无效”。  
   
  有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlputdata-support-for-enhanced-date-and-time-features"></a>SQLPutData 对增强的日期和时间功能的支持  
- 参数值的日期/时间类型转换中所述[从 C 到 SQL 转换](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)。  
+ 日期/时间类型的参数值按[从 C 转换到 SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)中所述的方式进行转换。  
   
- 有关详细信息，请参阅[日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关详细信息，请参阅[日期和时间&#40;改进&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>SQLPutData 对大型 CLR UDT 的支持  
- **SQLPutData**支持大型 CLR 用户定义类型 (Udt)。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLPutData**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[大型 CLR 用户定义类型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLPutData 函数](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: WMI Provider for Server Events 的概念 |Microsoft Docs
+title: WMI Provider for Server Events 的概念
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e5502c56c0435b73b4eb52446da2d692e3db72f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1acbe114258b0a7a5bee71656a0b6878f09fefc3
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095545"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73657338"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>WMI Provider for Server Events 的概念
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "68095545"
  [将 WQL 与 WMI Provider for Server Events 结合使用](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
  解释 WMI 查询语言 (WQL) 的语法以及如何使用它对提供程序进行编程。  
   
- [示例：通过使用 WMI Provider for Server Events 创建 SQL Server 代理警报](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [示例：使用服务器事件 WMI 提供程序创建 SQL Server 代理警报](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  提供一个示例，该示例使用 WMI 提供程序返回要对其创建 SQL Server 代理警报的跟踪事件信息。  
   
- [示例：.NET Framework 中使用 WMI 事件提供程序](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  
+ [示例：将 WMI 事件提供程序与 .NET Framework](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  提供一个示例，该示例使用 WMI 提供程序在一个 C# 应用程序中返回事件数据。  
   
  [服务器事件 WMI 提供程序类和属性](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)  

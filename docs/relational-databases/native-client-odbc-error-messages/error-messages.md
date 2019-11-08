@@ -16,18 +16,17 @@ ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6d41ee2d59e30c2e892f442f680930e535ccba1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 10308509004493ba68d23870a70bf878ae05b4a1
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062352"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783454"
 ---
 # <a name="error-messages"></a>错误消息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  返回的消息的文本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序放置在*MessageText*参数**SQLGetDiagRec**。 错误源由消息标头指示：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序返回的消息文本将放在**SQLGetDiagRec**的*MessageText*参数中。 错误源由消息标头指示：  
   
  [Microsoft][ODBC 驱动程序管理器]  
  这些错误由 ODBC 驱动程序管理器引发。  
@@ -36,15 +35,15 @@ ms.locfileid: "68062352"
  这些错误由 ODBC 游标库引发。  
   
  [Microsoft][SQL Server Native Client]  
- 这些错误引发的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序。 如果没有名为 Net-Library 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他节点，驱动程序就会发生该错误。  
+ 这些错误由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序引发。 如果没有名为 Net-Library 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他节点，驱动程序就会发生该错误。  
   
- [Microsoft][SQL Server Native Client][*Net-transportname*]  
- 这些错误会引发[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网络库，其中*Net-transportname*的显示名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端网络传输 （例如，Named Pipes、 Shared Memory、 TCP/IP 套接字或 VIA）。 错误消息的提醒内容含有调用的 Net-Library 函数以及 TDS 函数在基础网络 API 中调用的函数。 *PfNative*返回这些错误与错误代码是基础网络协议堆栈中的错误代码。  
+ 微软[SQL Server Native Client][*Net-transportname*]  
+ 这些错误由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的网络库引发，其中*net-transportname*是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端网络传输（例如，命名管道、共享内存、Tcp/ip 套接字或 VIA）的显示名称。 错误消息的提醒内容含有调用的 Net-Library 函数以及 TDS 函数在基础网络 API 中调用的函数。 返回的*pfNative*错误代码是基础网络协议堆栈中的错误代码。  
   
- [Microsoft][SQL Server Native Client][ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
- 这些错误由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引发。 错误消息中的提醒内容是来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的错误消息文本。 *PfNative*返回这些错误代码是从的错误号[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关可以返回的错误消息 （和其数字） 的列表详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅的说明和错误列**sysmessages**系统表中的**主**数据库中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 微软[SQL Server Native Client][[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
+ 这些错误由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引发。 错误消息中的提醒内容是来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的错误消息文本。 返回的*pfNative*代码是来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的错误号。 若要详细了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以返回的错误消息（及其数字）的列表，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中**master**数据库中**sysmessages**系统表的 "描述" 和 "错误" 列。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [处理错误和消息](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

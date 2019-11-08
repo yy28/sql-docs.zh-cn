@@ -1,5 +1,5 @@
 ---
-title: 需要审批 (Master Data Services) | Microsoft Docs
+title: 需要审批
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f8d15e06a9a832d28e9314f6dc0cb1c80daf3207
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61d03410e5217175335caf0ca37241b28c887989
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047758"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729755"
 ---
 # <a name="approval-required-master-data-services"></a>需要审批 (Master Data Services)
 
@@ -43,13 +43,13 @@ ms.locfileid: "68047758"
   
 1.  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体”  。  
+2.  在“管理模型” 页上，从网格中选择一个模型，然后单击“实体”。  
   
-3.  在“管理实体”  页上，从网格中选择要为其启用“需要审批”   的实体所在的行。  
+3.  在“管理实体” 页上，从网格中选择要为其启用“需要审批” 的实体所在的行。  
   
-4.  单击“编辑”  ，选择“需要审批”  ，然后单击“保存”  。  
+4.  单击“编辑”，选择“需要审批”，然后单击“保存”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [变更集 (Master Data Services)](../master-data-services/changesets-master-data-services.md)  
   
   

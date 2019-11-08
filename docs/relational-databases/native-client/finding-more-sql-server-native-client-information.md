@@ -1,5 +1,5 @@
 ---
-title: 查找 SQL Server 本机客户端的详细信息 |Microsoft Docs
+title: 查找更多 SQL Server Native Client 信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b025cad8d248c4a2e801010546e7443c42216a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 415e4817a7ed9b4fa8d3d9f8c24e9b6944cba8ef
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046759"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761174"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>查找更多 SQL Server Native Client 信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和其他类型的数据访问编程的详细信息，请参阅以下联机资源：  
   
@@ -38,7 +37,7 @@ ms.locfileid: "68046759"
  Windows DAC SDK 包括 ActiveX 数据对象 (ADO)、OLE DB 和开放式数据库连接 (ODBC) 的文档。  
   
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 编程](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

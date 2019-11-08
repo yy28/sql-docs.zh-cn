@@ -1,5 +1,5 @@
 ---
-title: Master Data Services (MDS) 中的新增功能 | Microsoft Docs
+title: 新增功能
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810500"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727787"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 中的新增功能
 
@@ -23,15 +23,15 @@ ms.locfileid: "68810500"
 
   本主题汇总了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]版本中的更改和更新。 
   
- 有关如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中组织数据的概述，请参阅 [Master Data Services 概述](../master-data-services/master-data-services-overview-mds.md)。 
+ 有关如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 中组织数据的概述，请参阅 [Master Data Services 概述](../master-data-services/master-data-services-overview-mds.md)。 
   
- **若要安装 Master Data Services，请设置数据库和网站，然后部署示例模型，请参阅** [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)版本中的更改和更新。  
+ **若要安装 Master Data Services，请设置数据库和网站，然后部署示例模型，请参阅** [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)。  
   
  **下载**  
   
 -   若要下载 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 。  
   
--   已经拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** ，以加速已安装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。  
+-   是否拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** ，以加速已安装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。  
   
 ##  <a name="improved-performance"></a>改进的性能  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68810500"
   
  现在，可以在模型级别显式为用户分配管理员权限。 这意味着，如果以后在模型子树（例如实体级别）中为该用户分配了权限，该用户不会失去此管理员权限。  
   
- 在此版本的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，我们通过引入以下新权限来提供更高级别的权限：“读取”、“创建”、“更新”和“删除”。 例如，只拥有“更新”权限的用户现在无需创建或删除数据，即可更新主数据。 当你向用户分配“创建”、“更新”或“删除”权限时，系统会自动为该用户分配“读取”权限。 你还可以组合“读取”、“创建”、“更新”和“删除”权限。  
+ 在此版本的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，我们通过引入以下新权限来提供等级更高的权限：“读取”、“创建”、“更新”和“删除”。 例如，只拥有“更新”权限的用户现在无需创建或删除数据，即可更新主数据。 当你向用户分配“创建”、“更新”或“删除”权限时，系统会自动为该用户分配“读取”权限。 你还可以组合“读取”、“创建”、“更新”和“删除”权限。  
   
  升级到 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，旧权限将转换为下表中所示的新权限。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68810500"
 |最初安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的用户拥有服务器管理员权限。|用户拥有超级用户功能权限|  
 |用户在模型级别拥有“更新”权限，但在模型子树中没有权限，因此也是隐式的模型管理员。|用户在模型级别拥有显式管理员权限。|  
 |用户拥有只读权限。|用户拥有“读取”访问权限。|  
-|用户拥有“更新”权限。|用户拥有以下四种访问权限：“创建”、“更新”、“删除”和“读取”。|  
+|用户拥有“更新”权限。|用户拥有所有四种访问权限：“创建”、“更新”、“删除”和“读取”。|  
 |用户拥有“拒绝”权限|用户拥有“拒绝”权限|  
   
  有关权限的详细信息，请参阅[安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)。  
@@ -177,7 +177,7 @@ ms.locfileid: "68810500"
     
  **自定义索引**  
   
- 您可以对实体中的一个属性 (单个索引) 或一系列属性 (组合索引) 创建非聚集索引, 以帮助提高查询性能。 有关详细信息，请参阅[自定义索引 (Master Data Services)](../master-data-services/custom-index-master-data-services.md)。  
+ 您可以对实体中的一个属性（单个索引）或一系列属性（组合索引）创建非聚集索引，以帮助提高查询性能。 有关详细信息，请参阅[自定义索引 (Master Data Services)](../master-data-services/custom-index-master-data-services.md)。  
  
   **属性筛选器**  
   
@@ -231,7 +231,7 @@ ms.locfileid: "68810500"
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 各个版本支持的 Master Data Services 和 Data Quality Services 功能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [弃用的 Master Data Services 功能](../master-data-services/deprecated-master-data-services-features.md)  
  [废弃的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)

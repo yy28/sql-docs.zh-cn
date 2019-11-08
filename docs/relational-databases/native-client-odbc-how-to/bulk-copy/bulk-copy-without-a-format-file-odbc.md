@@ -1,5 +1,5 @@
 ---
-title: 大容量复制不使用格式化文件 (ODBC) |Microsoft Docs
+title: 不使用格式化文件进行大容量复制（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d27eae0e6bf4bc5f5932bbf578f1162822516805
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f44c186029d2d566df6e7cb8aa81f100ff287d66
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987651"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783110"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>在不使用格式化文件的情况下进行大容量复制 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   此示例显示了如何使用大容量复制函数创建本机模式数据文件，而不带格式化文件。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "67987651"
   
 3.  连接到 SQL Server。  
   
-4.  调用[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)可设置的以下信息：  
+4.  调用[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)以设置以下信息：  
   
     -   作为大容量复制的源或目标的表或视图的名称。  
   
@@ -48,16 +47,16 @@ ms.locfileid: "67987651"
   
     -   接收任何大容量复制错误消息的数据文件的名称（如果您不需要消息文件，请指定 NULL）。  
   
-    -   复制方向：Db_in 表示从文件到视图或表或 DB_OUT 文件从表或视图。  
+    -   复制的方向：如果是从文件到视图或表则为 DB_IN，如果是从表或视图到文件则为 DB_OUT。  
   
-5.  调用[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)以执行大容量复制操作。  
+5.  调用[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)执行大容量复制操作。  
   
  用这些步骤设置 DB_OUT 时，将以本机格式创建该文件。 然后，可以通过执行上述相同步骤（不过设置的是 DB_OUT 而不是 DB_IN），将该文件大容量复制到服务器中。 只有在源表和目标表都具有完全相同的结构时，这一功能才适用。  
   
 ## <a name="example"></a>示例  
  IA64 平台不支持此示例。  
   
- 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （可以从 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384)（Microsoft SQL Server 示例和社区项目）主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（该驱动程序的名称为“SQL Server”）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
+ 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （您可以从 " [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)" 主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（驱动程序名称为 "SQL Server"）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
@@ -158,7 +157,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [大容量复制使用 SQL Server ODBC 驱动程序操作指南主题&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [利用 SQL Server ODBC 驱动程序的大容量复制操作指南&#40;主题 ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

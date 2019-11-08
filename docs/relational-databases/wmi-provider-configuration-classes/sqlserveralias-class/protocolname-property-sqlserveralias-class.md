@@ -1,6 +1,6 @@
 ---
-title: ProtocolName 属性 （SqlServerAlias 类） |Microsoft Docs
-ms.custom: ''
+title: ProtocolName 属性（SqlServerAlias）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 74c78cd8f90890814921d7b1ce78e65ab8c78a08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 957faa6c58c9149ec703fe9fa269e379d4e5b6f6
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052427"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660423"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>ProtocolName 属性（SqlServerAlias 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "68052427"
 object.ProtocolName [= value]  
 ```  
   
-## <a name="parts"></a>部件  
- *object*  
- 一个[SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)对象，表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]别名。  
+## <a name="parts"></a>组成部分  
+ 对象  
+ 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 别名的[SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定服务器连接别名使用的协议的名称的字符串值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
   

@@ -1,5 +1,5 @@
 ---
-title: 重叠的模型和成员权限 (Master Data Services) | Microsoft Docs
+title: 重叠的模型和成员权限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 06767cbc1550ed7c1e9146a69e5e0f3932db10c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e12489cc490c5b8ee9f363e329da9a057fac8f3f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904032"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728980"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重叠的模型和成员权限（主数据服务）
 
@@ -48,7 +48,7 @@ ms.locfileid: "67904032"
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别节点分配有 **“更新”** 权限。  
   
- 结果：在“资源管理器”中，用户对“山地车”节点中所有成员的所有属性值都具有“更新”权限   。 所有其他成员和属性均隐藏。  
+ 结果：在 **“资源管理器”** 中，用户对“山地车”节点中所有成员的所有属性值都具有 **“更新”** 权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67904032"
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别节点显式分配有 **“读取”** 权限。  
   
- 结果：在“资源管理器”中，用户对“山地车”节点中的成员的所有子类别属性值都具有“读取”权限   。 所有其他成员和属性均隐藏。  
+ 结果：在 **“资源管理器”** 中，用户对“山地车”节点中的成员的所有 Subcategory 属性值都具有 **“读取”** 权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -70,11 +70,11 @@ ms.locfileid: "67904032"
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别显式分配有 **“更新”** 权限。  
   
- 结果：在“资源管理器”中，用户对这些属性值具有“读取”权限   。 所有其他成员和属性均隐藏。  
+ 结果：在 **“资源管理器”** 中，用户对这些属性值具有 **“读取”** 权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [重叠的用户和组权限 &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   

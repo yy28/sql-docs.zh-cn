@@ -1,5 +1,5 @@
 ---
-title: 功能区域权限 (Master Data Services) | Microsoft Docs
+title: 功能区域权限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b40f4053633c7ef50d14004f2f5f045c23cae4cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f2d15e2a98f04d7481200dfea17cfe5ca852a84
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945252"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729209"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>功能区域权限 (Master Data Services)
 
@@ -41,14 +41,14 @@ ms.locfileid: "67945252"
   
  将权限分配给功能区域时，即使得 UI 的一个区域对用户或组可见。  
   
- 在 **“资源管理器”** 功能区域内，分配给模型对象和层次结构成员的附加权限可以确定用户可访问的数据。 在所有其他功能区域内，用户必须是模型管理员才能查看模型和对模型执行操作。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+ 在 **“资源管理器”** 功能区域内，分配给模型对象和层次结构成员的附加权限可以确定用户可访问的数据。 在所有其他功能区域内，用户必须是模型管理员才能查看模型和对模型执行操作。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 > [!IMPORTANT]  
 >  具有超级用户功能权限的用户可以对所有模型有效地行使管理员权限，并可行使所有其他功能权限。  
   
  在 **“模型”** 选项卡上，用户或组必须至少具有对一个功能区域和一个模型的权限，才能访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [分配功能区域权限 (Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
  [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
  [层次结构成员权限 (Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   

@@ -1,5 +1,5 @@
 ---
-title: 保护主数据管理器 Web 应用程序 | Microsoft Docs
+title: 保护主数据管理器 Web 应用程序
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 30b1f8addacb1c4502a50ab5d00e507aa4ca63cc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028804"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729181"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保护主数据管理器 Web 应用程序
 
@@ -46,7 +46,7 @@ ms.locfileid: "69028804"
   
 6.  选择 SSL 证书。  
   
-7.  单击 **“确定”** 。  
+7.  单击“确定”。  
   
 8.  可选。 若要删除 HTTP 以便用户只能使用 HTTPS 访问站点，请单击含有 **http**的行。 单击 **“删除”** ，然后在确认对话框上单击 **“是”** 。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "69028804"
 13. 保存并关闭该文件。 如果您遇到错误，可能是因为您已启用了 UAC。 用户现在应该能够使用 HTTPS 访问该站点了。  
 
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建主数据管理器 Web 应用程序 (Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

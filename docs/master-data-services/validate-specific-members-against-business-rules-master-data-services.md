@@ -1,5 +1,5 @@
 ---
-title: 针对业务规则验证特定成员 (Master Data Services) | Microsoft Docs
+title: 针对业务规则验证特定成员
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 867f56234801e7eb659128ebeb35c38dddd2742e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 885d0c1018c1d30fd4ea5d10276c971dbbf0a114
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085571"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728846"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>针对业务规则验证特定成员 (Master Data Services)
 
@@ -32,23 +32,23 @@ ms.locfileid: "68085571"
 ## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--    您必须有权访问“资源管理器”功能区域。  
+-   您必须有权访问“资源管理器”功能区域。  
   
 -   对于您要将业务规则应用于的模型对象，您必须至少具有 **“更新”** 权限。  
   
 ### <a name="to-apply-business-rules-selectively"></a>有选择地应用业务规则  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型”  下拉列表中，选择某一模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型”下拉列表中，选择某一模型。  
   
-2.  从“版本”  下拉列表中，选择某一版本。  
+2.  从“版本”下拉列表中，选择某一版本。  
   
-3.  单击“资源管理器”选项卡。   
+3.  单击“资源管理器”选项卡。  
   
 4.  从菜单栏中指向 **“实体”** ，然后单击包含要将规则应用于的成员的实体名称。  
   
-5.  单击“应用规则”。  业务规则仅应用于在网格中显示的成员。  
+5.  单击“应用规则”。 业务规则仅应用于在网格中显示的成员。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   

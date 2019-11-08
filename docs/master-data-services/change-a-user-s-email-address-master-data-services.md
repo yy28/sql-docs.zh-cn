@@ -1,5 +1,5 @@
 ---
-title: 更改用户的电子邮件地址 (Master Data Services) | Microsoft Docs
+title: 更改用户&#39;的电子邮件地址
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0cf7c9eb150ce54a9ec04c996c4c7e4d1f58b858
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b1941b6be24b926b870ad284b0aa8ce7242fba4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047340"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729690"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>更改用户的电子邮件地址 (Master Data Services)
 
@@ -42,13 +42,13 @@ ms.locfileid: "68047340"
   
 5.  更新电子邮件地址或电子邮件格式。  
   
-6.  单击“保存”  。  
+6.  单击 **“保存”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
   
 -   [分配功能区域权限 (Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   

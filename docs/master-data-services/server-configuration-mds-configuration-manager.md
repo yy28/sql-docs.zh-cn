@@ -1,5 +1,5 @@
 ---
-title: 服务器配置 (MDS Configuration Manager) | Microsoft Docs
+title: 服务器配置
 ms.custom: ''
 ms.date: 01/26/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 91386e4464f02b3ce03f6c09c4cba01ade6260ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 187c3ee9c649388b784b2a8c5c83b20af9ba3ce1
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085661"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727902"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>服务器配置 (MDS Configuration Manager)
 
@@ -25,9 +25,9 @@ ms.locfileid: "68085661"
 
   使用 **“服务器配置”** 页可以查看本地服务器计算机的配置信息。  
   
-## <a name="server-configuration"></a>“服务器配置”  
+## <a name="server-configuration"></a>服务器配置  
   
-|控件名称|描述|  
+|控件名称|说明|  
 |------------------|-----------------|  
 |**Internet Information Services**|显示在本地计算机上安装的 Internet Information Services (IIS) 的版本。 IIS 7.0 版或更高版本是使用主数据服务配置管理器所必需的。|  
 |**MDS 产品版本。**|显示 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的产品版本。|  

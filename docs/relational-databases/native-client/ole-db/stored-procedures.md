@@ -16,18 +16,17 @@ ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de206025249bb04fe35ced4f36213b8b8268ebaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 668d264d9be032c7886026e628921ead837d7879
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031790"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73758413"
 ---
 # <a name="stored-procedures"></a>存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  存储的过程 ([存储过程&#40;数据库引擎&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) 是存储在数据库中的可执行对象。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持：  
+  存储过程（[存储过程&#40;数据库引擎&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)）是存储在数据库中的可执行对象。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持：  
   
 -   存储过程  
   
@@ -43,7 +42,7 @@ ms.locfileid: "68031790"
   
 -   [调用存储过程 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-calling.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client (OLE DB)](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

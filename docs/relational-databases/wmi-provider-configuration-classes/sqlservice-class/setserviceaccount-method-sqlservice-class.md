@@ -1,6 +1,6 @@
 ---
-title: SetServiceAccount 方法 （SqlService 类） |Microsoft Docs
-ms.custom: ''
+title: SetServiceAccount 方法（SqlService）
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cbd2e80a4d5484368a63e0d3c92c638e1a6294c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b500ca0f879430f0e5655348bdeebda0e0921292
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119925"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660900"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount 方法（SqlService 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "68119925"
 object.SetServiceAccount(ServiceStartName , ServiceStartPassword)  
 ```  
   
-## <a name="parts"></a>部件  
- *object*  
+## <a name="parts"></a>组成部分  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 #### <a name="parameters"></a>Parameters  
@@ -45,19 +45,19 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
   
 -   如果帐户属于内置域，则可以指定“\用户名”。  
   
--   如果指定 NULL，则该服务将以登录**LocalSystem**帐户。  
+-   如果指定 NULL，则该服务将作为**LocalSystem**帐户登录。  
   
- 对于内核或系统级驱动程序*StartName*包含驱动程序对象名称 \FileSystem\Rdr 或 \Driver\Xns，I/O 系统用于加载设备驱动程序。 如果指定 NULL，驱动程序将以 I/O 系统基于服务名称创建的默认对象名称运行，例如 DWDOM\Admin。  
+ 对于内核或系统级驱动程序， *StartName*包含驱动程序对象名称（\FileSystem\Rdr 或 \Driver\Xns），i/o 系统使用该名称加载设备驱动程序。 如果指定 NULL，驱动程序将以 I/O 系统基于服务名称创建的默认对象名称运行，例如 DWDOM\Admin。  
   
  *ServiceStartPassword*  
- 一个字符串值，指定的密码中的帐户名称*StartName*参数。 如果不更改密码，请指定 NULL。 如果服务没有密码，请指定一个空字符串。  
+ 一个字符串值，该值指定*StartName*参数中的帐户名称的密码。 如果不更改密码，请指定 NULL。 如果服务没有密码，请指定一个空字符串。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 **uint32** 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1。 其他任何数字表示出现错误。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

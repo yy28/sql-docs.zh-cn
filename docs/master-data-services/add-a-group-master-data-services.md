@@ -1,5 +1,5 @@
 ---
-title: 添加组 (Master Data Services) | Microsoft Docs
+title: 添加组
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 725e43685f56c2a52c585acb7624064c85e01b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef07ebbaf787852b3902af158f4f515293aae7ff
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047930"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728816"
 ---
 # <a name="add-a-group-master-data-services"></a>添加组 (Master Data Services)
 
@@ -43,7 +43,7 @@ ms.locfileid: "68047930"
   
 5.  或者单击 **“检查名称”** 。  
   
-6.  单击 **“确定”** 。  
+6.  单击“确定”。  
   
     > [!NOTE]  
     >  当用户第一次访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]时，将用户的名称添加到 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户列表。  
@@ -52,7 +52,7 @@ ms.locfileid: "68047930"
   
 -   [分配功能区域权限 (Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   

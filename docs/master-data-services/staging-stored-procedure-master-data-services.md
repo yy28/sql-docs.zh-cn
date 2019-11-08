@@ -1,5 +1,5 @@
 ---
-title: 临时存储过程 (Master Data Services) | Microsoft Docs
+title: 临时存储过程
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db04bda1a2147c226fb33db12ba829350aac77a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 103c43f012f6cf7025139fd29656a42d00fc233f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085622"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727891"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>临时存储过程 (Master Data Services)
 
@@ -34,10 +34,10 @@ ms.locfileid: "68085622"
 ## <a name="staging-process-stored-procedure-parameters"></a>临时过程存储过程参数  
  下表列出了这些存储过程的参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
-|**VersionName**<br /><br /> 必填|版本的名称。 这可能区分大小写，也可能不区分，具体取决于您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 排序规则设置。|  
-|**LogFlag**<br /><br /> 必填|确定在临时过程中是否记录事务。 可能的值有：<br /><br /> **0**：不记录事务。<br /><br /> **1**：记录事务。<br /><br /> <br /><br /> 有关事务的详细信息，请参阅[事务 (Master Data Services)](../master-data-services/transactions-master-data-services.md)。|  
+|**VersionName**<br /><br /> 必需|版本的名称。 这可能区分大小写，也可能不区分，具体取决于您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 排序规则设置。|  
+|**LogFlag**<br /><br /> 必需|确定在临时过程中是否记录事务。 可能的值有：<br /><br /> **0**：不记录事务。<br /><br /> **1**：记录事务。<br /><br /> <br /><br /> 有关事务的详细信息，请参阅[事务 (Master Data Services)](../master-data-services/transactions-master-data-services.md)。|  
 |**BatchTag**<br /><br /> 必需，但是 Web 服务除外|在临时表中指定 **BatchTag** 值。|  
 |**Batch_ID**<br /><br /> 仅对 Web 服务为必需的|在临时表中指定的 **Batch_ID** 值。|  
 |**用户名**|可选参数|  
@@ -60,7 +60,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [验证存储过程 (Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [查看暂存过程中出现的错误 (Master Data Services)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)  
   

@@ -13,16 +13,15 @@ ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 714823ca585e85d8c1c3840da37630d975b9fdb6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f8e3b2f19d25374a592203cbd4b00f118385d980
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908217"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781676"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>配置 SQL Server ODBC 驱动程序 - 删除数据源
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   将 ODBC 应用程序用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本之前，必须了解如何升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本上的目录存储过程的版本，以及如何添加、删除和测试数据源。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "72908217"
 4.  单击 "**删除**"，然后确认删除。  
 
 ## <a name="example"></a>示例  
- 若要以编程方式删除数据源，请使用 ODBC_REMOVE_DSN 或 ODBC_REMOVE_SYS_DSN 作为第二个参数调用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) 。  
+ 若要以编程方式删除数据源，请使用 ODBC_REMOVE_DSN 或 ODBC_REMOVE_SYS_DSN 作为第二个参数来调用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) 。  
   
  以下示例显示如何以编程方式删除数据源。  
   

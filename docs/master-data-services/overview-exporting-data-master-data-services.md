@@ -1,5 +1,5 @@
 ---
-title: 概述：导出数据 (Master Data Services) | Microsoft Docs
+title: Exporting Data
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db511e86162ff841e9ec97d8f696a3f37c4c75f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0376e28c1d75585795b53373a10f4798347746a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903998"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728992"
 ---
 # <a name="overview-exporting-data-master-data-services"></a>概述：导出数据 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "67903998"
 
   本文介绍了订阅视图格式的类型，以及如何确定何时需要根据对模型对象的更改而编辑视图。  
   
- 创建订阅视图可将 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据导出到订阅系统，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 使用订阅系统可查看 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的数据。  有关如何创建订阅视图的信息，请参阅 [创建订阅视图以导出数据 (Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
+ 创建订阅视图可将 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据导出到订阅系统，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 使用订阅系统可查看 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的数据。  有关如何创建订阅视图的信息，请参阅 [Create a Subscription View to Export Data &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
  有关视图的详细信息，请参阅 [视图](../relational-databases/views/views.md)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67903998"
 ## <a name="subscription-views-can-become-out-of-date"></a>订阅视图可能会过期  
  在您创建针对某一实体或层次结构的订阅视图后，对关联的模型对象的更改不能自动反映在视图中。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 您可能需要在中重新生成一个订阅视图，以便反映对模型对象的更改。 在对象模型更改时， **“导出”** 页上的 **“已更改”** 列将更新为 **True** 。 **True** 指示您应该编辑订阅视图并且保存它，这将重新生成该视图。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

@@ -1,5 +1,5 @@
 ---
-title: 从表中导入数据 (Master Data Services) | Microsoft Docs
+title: 从表导入数据
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fd30e00cc489da89836bb0646b1b8c10385346af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945107"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729244"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>从表导入数据 (Master Data Services)
 
@@ -25,15 +25,15 @@ ms.locfileid: "67945107"
   
  **先决条件**  
   
--   必须有权将数据插入到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的 stg. \<name>_Leaf、stg. \<name>_Consolidated、stg. \<name>_Relationship 表。  
+-   必须有权将数据插入到 \< 数据库中的 stg. \<name>_Leaf、stg. \<name>_Consolidated、stg. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]name>_Relationship 表。  
   
--   必须有权执行 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的 stg.udp_\<name>_Leaf、stg.udp\_\<name>_Consolidated 或 \_\<name>_Relationship 存储过程。  
+-   必须有权执行 \< 数据库中的 stg.udp_\_name>_Leaf、stg.udp\<\_name>_Consolidated 或 \<[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]name>_Relationship 存储过程。  
   
--   模型的状态不能是“已提交”  。  
+-   模型的状态不能是“已提交”。  
   
  **添加、更新和删除 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的数据**  
   
-1.  准备要导入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中相应临时表的成员，包括必需字段的提供值。 有关临时表的概述，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+1.  准备要导入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中相应临时表的成员，包括必需字段的提供值。 有关临时表的概述，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
   
     -   叶成员的表为 stg.\<name>_Leaf，其中 \<name> 指代相应的实体。 有关所需字段的信息，请参阅[叶成员临时表 (Master Data Services)](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
@@ -61,19 +61,19 @@ ms.locfileid: "67945107"
   
          有关临时存储过程和临时表的概述，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。 有关临时存储过程参数以及代码示例的详细信息，请参阅[临时存储过程 (Master Data Services)](../master-data-services/staging-stored-procedure-master-data-services.md)。  
   
-    -   使用主数据管理的“集成管理”  功能区域。  
+    -   使用主数据管理的“集成管理” 功能区域。  
   
-         “临时批处理”  页上，在下拉列表中选择向其添加数据的模型，然后单击“开始批处理”  。 “状态”  字段将指示执行批处理的状态。 有关状态的详细信息，请参阅[导入状态 (Master Data Services)](../master-data-services/import-statuses-master-data-services.md)。  
+         “临时批处理” 页上，在下拉列表中选择向其添加数据的模型，然后单击“开始批处理”。 “状态” 字段将指示执行批处理的状态。 有关状态的详细信息，请参阅[导入状态 (Master Data Services)](../master-data-services/import-statuses-master-data-services.md)。  
   
-         ![主数据管理器中的“临时批处理”页](../master-data-services/media/mds-stagingbatchespage.png "Staging Batches Page in Master Data Manager")  
+         ![主数据管理器中的 "临时批处理" 页](../master-data-services/media/mds-stagingbatchespage.png "主数据管理器中的 "临时批处理" 页")  
   
-         按照 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的“临时批处理间隔”设置所确定的间隔启动临时过程。  有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
+         按照  **中的“临时批处理间隔”设置所确定的间隔启动临时过程。** [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
 5.  查看在临时过程中出现的错误。 有关详细信息，请参阅[查看临时过程中出现的错误 (Master Data Services)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)和[临时过程错误 (Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md)。  
   
 6.  根据业务规则对数据进行验证。  
   
-     在主数据管理器中，导航到模型的“资源管理器”  功能区域，然后应用业务规则以验证数据。 有关详细信息，请参阅[业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)。 同时可以使用存储过程来验证数据。 有关详细信息，请参阅 [验证存储过程 (Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md)。  
+     在主数据管理器中，导航到模型的“资源管理器” 功能区域，然后应用业务规则以验证数据。 有关详细信息，请参阅[业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)。 同时可以使用存储过程来验证数据。 有关详细信息，请参阅 [验证存储过程 (Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md)。  
   
      使用临时表加载数据时，不会自动根据业务规则验证数据。 有关执行何种验证以及何时执行的详细信息，请参阅[验证 (Master Data Services)](../master-data-services/validation-master-data-services.md)。  
   

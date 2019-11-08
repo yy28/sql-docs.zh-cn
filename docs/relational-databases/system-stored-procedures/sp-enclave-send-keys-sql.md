@@ -1,7 +1,7 @@
 ---
-title: sp_enclave_send_keys (Transact-sql) |Microsoft Docs
+title: sp_enclave_send_keys （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -19,17 +19,26 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4ced2feee2227ba1db492f721f57907069c5d99
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661352"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593752"
 ---
-# <a name="spenclavesendkeys----transact-sql"></a>sp_enclave_send_keys    (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys （Transact-sql）
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-将数据库中所有 enclave 启用的列加密密钥发送到[安全 enclaves &#40;数据库引擎&#41;Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)使用的 enclave。
+将数据库中定义的列加密密钥发送到与[安全 enclaves Always Encrypted](../security/encryption/always-encrypted-enclaves.md)一起使用的服务器端安全 enclave。
+
+`sp_enclave_send_keys` 仅只发送启用了 enclave 的密钥，并对使用随机加密的列进行加密并拥有索引。 对于常规用户查询，客户端驱动程序会向 enclave 提供查询中计算所需的键。 `sp_enclave_send_keys` 将发送在数据库中定义的所有列加密密钥，并将其用于索引加密列。 
+
+`sp_enclave_send_keys` 提供了一种简单的方法来将密钥发送到 enclave，并填充列加密密钥缓存，以便进行后续索引操作。 使用 `sp_enclave_send_keys` 启用：
+- 当 DBA 无权访问列主密钥时，用于重新生成或更改加密数据库列的索引或统计信息的 DBA。 请参阅[使用缓存的列加密密钥调用索引操作](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys)。
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] 完成对加密列的索引的恢复。 请参阅[数据库恢复](../security/encryption/always-encrypted-enclaves.md#database-recovery)。
+- 使用 SQL Server 的 .NET Framework 数据提供程序的应用程序将数据大容量加载到加密列。
+
+若要成功调用 `sp_enclave_send_keys`，需要连接到已为数据库连接启用了 Always Encrypted 和 enclave 计算的数据库。 还需要有权访问列主密钥，保护列加密密钥，要发送，并且您需要访问数据库中 Always Encrypted 密钥元数据的权限。 
 
 ## <a name="syntax"></a>语法  
   
@@ -50,16 +59,9 @@ sp_enclave_send_keys
 
 此存储过程没有结果集。
   
-## <a name="remarks"></a>备注
-
-如果满足以下所有条件, 则**sp_enclave_send_keys**会将启用 enclave 的列加密密钥发送到 enclave:
-
-- SQL Server 实例中启用了 enclave。
-- 已使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端驱动程序从应用程序中调用 sp_enclave_send_keys, 支持使用具有 enclaves 和 enclave 计算的数据库 Always Encrypted 连接的安全 Always Encrypted。
-
 ## <a name="permissions"></a>权限
 
- 需要**查看任意列加密密钥定义**, 并查看数据库中的**任何列主密钥定义**权限。  
+ 要求在数据库中具有 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 和 `VIEW ANY COLUMN MASTER KEY DEFINITION` 权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -67,10 +69,9 @@ sp_enclave_send_keys
 EXEC sp_enclave_send_keys;  
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
+- [具有安全 Enclave 的 Always Encrypted](../security/encryption/always-encrypted-enclaves.md) 
+ 
+- [使用带有 secure enclaves 的 Always Encrypted 在列上创建和使用索引](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
 
- [Always Encrypted 安全 enclaves &#40;数据库引擎&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
- [教程：使用随机加密为启用了 enclave 的列创建和使用索引](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
- [使用缓存的列加密密钥调用索引操作](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)   
- [使用随机加密的启用 Enclave 的列上的索引](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
- [AlwaysOn 和数据库迁移注意事项](../security/encryption/always-encrypted-enclaves.md#anchorname-1-considerations-availability-groups-db-migration)
+- [教程：使用随机加密在启用了 enclave 的列上创建和使用索引](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

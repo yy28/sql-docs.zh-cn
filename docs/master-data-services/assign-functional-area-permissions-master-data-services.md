@@ -1,5 +1,5 @@
 ---
-title: 分配功能区域权限 (Master Data Services) | Microsoft Docs
+title: 分配功能区域权限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c868e9f574e9c38cdac287fa57f842854bbf06ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41ab7567a1037c2f0f625cd977a80e38a591bcee
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047662"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728758"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>分配功能区域权限 (Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "68047662"
   
 -   [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建模型管理员 (Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  
   

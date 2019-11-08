@@ -12,16 +12,15 @@ ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0690c5ed27f2dd7a0b4bfae55af06e8ac5f0c2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987584"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781696"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>对具有稀疏列的表调用 SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   此示例显示如何针对包含使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 定义的稀疏列的表调用 SQLColumns。  
   
@@ -30,13 +29,13 @@ ms.locfileid: "67987584"
  有关稀疏列功能的详细信息，请参阅[SQL Server Native Client 中的稀疏列支持](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   
 ## <a name="example"></a>示例  
- 第一个代码列表是 C++ 源代码。 将“MyServer”更改为有效的服务器名称。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
+ 第一个代码列表是 C++ 源代码。 将“MyServer”更改为有效的服务器名称。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
  使用 /EHsc /D、"UNICODE" 和 odbc32.lib 进行编译。  
   
- 第二个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表删除此示例创建的表。  
+ 第二个（[!INCLUDE[tsql](../../includes/tsql-md.md)]）代码列表删除此示例创建的表。  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

@@ -1,5 +1,5 @@
 ---
-title: 保留字 (Master Data Services) | Microsoft Docs
+title: 保留字
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c33bf34a99addae8a94fb92222eb3265cc6a52a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085694"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727916"
 ---
 # <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
 
@@ -40,7 +40,7 @@ ms.locfileid: "68085694"
 -   [成员](../master-data-services/reserved-words-master-data-services.md#members)  
   
 ##  <a name="models"></a> Models  
- 如果你创建名称设置为 **Name** 或 **Code**的模型，则不要选择“使用与模型相同的名称创建实体”，因为 **Name** 或 **Code** 不能用于实体名称。   
+ 如果你创建名称设置为 **Name** 或 **Code**的模型，则不要选择“使用与模型相同的名称创建实体”，因为 **Name** 或 **Code** 不能用于实体名称。  
   
 ##  <a name="entities"></a> 实体  
  对于实体名称，不能使用 **Name** 或 **Code**。  
@@ -52,7 +52,7 @@ ms.locfileid: "68085694"
   
 -   **ID**  
   
--   **Code**  
+-   **代码**  
   
 -   **EnterUserName**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68085694"
 ##  <a name="members"></a> 成员  
  对于成员，不能对 **Code**属性值使用 **MDMMemberStatus**、 **MDMUnused** 或 **ROOT** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
   

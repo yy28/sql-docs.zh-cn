@@ -14,20 +14,19 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f950c85ec3aa8200fc160bff73eb722555f770c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 156fc0a443d7c5742f49e4d94de6be6a12154172
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908170"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780649"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>运行存储过程 - 处理返回代码和输出参数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序支持将存储过程作为远程存储过程执行。 通过将存储过程作为远程存储过程执行，可使驱动程序和服务器能够优化存储过程的执行性能。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数在服务器的最后一个数据包中发送，在[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)返回 SQL_NO_DATA 之前不能用于应用程序。 如果在存储过程中返回错误，请调用 SQLMoreResults 以转到下一个结果，直到返回 SQL_NO_DATA。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数在服务器的最后一个数据包中发送，在[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)返回 SQL_NO_DATA 之前，这些参数对应用程序不可用。 如果在存储过程中返回错误，请调用 SQLMoreResults 以转到下一个结果，直到返回 SQL_NO_DATA。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
@@ -40,7 +39,7 @@ ms.locfileid: "72908170"
   
 3.  用**SQLExecDirect**执行语句。  
   
-4.  处理结果集，直到**SQLFetch**或**SQLFetchScroll**在处理最后一个结果集时返回 SQL_NO_DATA，或直到**SQLMoreResults**返回 SQL_NO_DATA。 这时，将以返回的数据值填充绑定到返回代码和输出参数的变量。  
+4.  处理结果集，直到**SQLFetch**或**SQLFetchScroll**在处理最后一个结果集时或在**SQLMoreResults**返回 SQL_NO_DATA 之前返回 SQL_NO_DATA。 这时，将以返回的数据值填充绑定到返回代码和输出参数的变量。  
 
 ## <a name="example"></a>示例  
  此示例显示如何处理返回代码和输出参数。 IA64 平台不支持此示例。 此示例是面向 ODBC 3.0 版或更高版本开发的。  

@@ -1,5 +1,5 @@
 ---
-title: 层次结构 (Master Data Services) | Microsoft Docs
+title: 层次结构
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec9d1ce1e665abf0ce8f61218051e41e795b6441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6441012078592ba42c8449c794462b06bed845bb
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945234"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729231"
 ---
 # <a name="hierarchies-master-data-services"></a>层次结构 (Master Data Services)
 
@@ -40,7 +40,7 @@ ms.locfileid: "67945234"
   
 -   从单个实体创建不规则层次结构（称为显式层次结构）。 有关详细信息，请参阅 [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)。  
   
--   从多个实体创建基于级别的层次结构，该层次结构基于实体和其属性之间的现有关系（称为派生层次结构）。 有关详细信息，请参阅 [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)。  
+-   从多个实体创建基于级别的层次结构，该层次结构基于实体和其属性之间的现有关系（称为派生层次结构）。 有关详细信息，请参阅[派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)。  
   
 > [!NOTE]  
 >  层次结构中的所有成员都必须在同一模型中。  
@@ -53,9 +53,9 @@ ms.locfileid: "67945234"
 ## <a name="hierarchy-example"></a>层次结构示例  
  在下面的示例中，product 成员按 subcategory 成员进行分组。  
   
- ![按子类别分组的层次结构示例](../master-data-services/media/mds-conc-hierarchy.gif "Hierarchy Grouped by Subcategory Example")  
+ ![按子类别分组的层次结构示例](../master-data-services/media/mds-conc-hierarchy.gif "按子类别分组的层次结构示例")  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

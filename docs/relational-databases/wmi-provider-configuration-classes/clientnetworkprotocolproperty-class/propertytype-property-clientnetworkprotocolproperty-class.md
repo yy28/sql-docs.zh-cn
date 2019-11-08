@@ -1,6 +1,6 @@
 ---
-title: PropertyType 属性 （ClientNetworkProtocolProperty 类） |Microsoft Docs
-ms.custom: ''
+title: PropertyType 属性（ClientNetworkProtocolProperty）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34a27a6fe306eefe19938d124b1e32a4baf11042
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21cdfe10b918e474f3b2adcfe40d05e5c9eeb636
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67905314"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660742"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>PropertyType 属性（ClientNetworkProtocolProperty 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  获取引用属性的类型[PropertyIdx 属性 （ClientNetworkProtocolProperty 类）](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md)值。  
+  获取[PropertyIdx 属性（ClientNetworkProtocolProperty 类）](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md)值引用的属性的类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,16 +35,16 @@ ms.locfileid: "67905314"
 object.PropertyType [= value]  
 ```  
   
-## <a name="parts"></a>部件  
- *object*  
- 一个[ClientNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)对象，表示使用的网络协议的属性[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端。  
+## <a name="parts"></a>组成部分  
+ 对象  
+ 表示 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端使用的网络协议属性的[ClientNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- 一个**uint32**值，该值指定属性的类型。  
+ 指定属性类型的**uint32**值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置客户端协议](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

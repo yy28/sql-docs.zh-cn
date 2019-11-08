@@ -1,5 +1,5 @@
 ---
-title: 处理结果操作指南主题 (OLE DB) |Microsoft Docs
+title: 处理结果操作指南主题（OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b25dda01866157b66c5bdac62207e968ea6bb165
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bc0494bc85111f2220f95f83850a625e817e891
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908187"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789844"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>处理结果操作指南主题 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   OLE DB 应用程序中的处理结果包括首先确定结果集的特性，然后将数据检索至程序变量。 如果该命令执行存储过程，则还必须了解如何处理来自此存储过程的返回代码和输出参数。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "67908187"
   
 -   [从结果集中提取行 (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 操作指南主题](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

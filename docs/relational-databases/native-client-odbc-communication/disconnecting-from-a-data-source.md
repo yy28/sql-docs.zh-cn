@@ -24,22 +24,21 @@ ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f915a802236394cb732959c6fbf898e9d2b2e216
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5a7cb061c308508b0ab5d489dcabb4b25f93883
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134181"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784748"
 ---
 # <a name="disconnecting-from-a-data-source"></a>与数据源断开连接
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  当应用程序使用完数据源时，它将调用**SQLDisconnect**。 **SQLDisconnect**释放在连接分配任何语句，并与数据源断开连接，驱动程序。 断开连接后，应用程序可以调用[SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)以释放连接句柄。 退出之前，应用程序还调用**SQLFreeHandle**以释放环境句柄。  
+  当应用程序使用完数据源后，它将调用**SQLDisconnect**。 **SQLDisconnect**释放在连接上分配的所有语句，并断开驱动程序与数据源的连接。 断开连接后，应用程序可以调用[SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)来释放连接句柄。 在退出之前，应用程序还会调用**SQLFreeHandle**来释放环境句柄。  
   
  断开连接后，应用程序可以重用分配的连接句柄，以连接到其他数据源或重新连接到同一个数据源。 如果决定保持连接，而不是断开连接后重新连接，则要求应用程序编写人员考虑每种选择的相对成本。 连接到数据源并保持连接状态的开销可能相对较大，具体取决于连接介质。 权衡利弊时，应用程序还必须就同一数据源上存在其他操作的可能性以及这些操作的时间安排情况做出假设。 应用程序可能还必须使用多个连接。  
   
-## <a name="see-also"></a>请参阅  
- [与 SQL Server 通信&#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [与 SQL Server &#40;ODBC 通信&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

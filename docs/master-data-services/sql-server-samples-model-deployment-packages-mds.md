@@ -1,5 +1,5 @@
 ---
-title: SQL Server 示例：模型部署包 (MDS) | Microsoft Docs
+title: 模型部署包示例
 ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 411496c30f9b32d9c011252ce1d345e64a7d02c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085644"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727876"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 示例：模型部署包 (MDS)
 
@@ -29,7 +29,7 @@ ms.locfileid: "68085644"
  有关如何部署示例模型包的说明，请参阅 [部署示例模型和数据](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)。 可以使用 [MDSModelDeploy 工具](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)部署示例模型包。  
   
 > [!IMPORTANT]
->  **示例更新 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **中的示例更新[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 > 
 >  示例包已更新为支持以下新功能。  
 > 
@@ -54,7 +54,7 @@ ms.locfileid: "68085644"
  
  在 Master Data Services 中，包是包含可部署模型结构以及来自模型的数据（可选）的 XML 文件。 使用模型包可以将模型的副本从一个 MDS 环境移到另一个环境，或者在现有的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 环境中创建新模型。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

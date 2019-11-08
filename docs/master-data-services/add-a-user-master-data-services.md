@@ -1,5 +1,5 @@
 ---
-title: 添加用户 (Master Data Services) | Microsoft Docs
+title: 添加用户
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc478b6325e89801837828dbd90af1a7b6950665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047939"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729818"
 ---
 # <a name="add-a-user-master-data-services"></a>添加用户 (Master Data Services)
 
@@ -37,17 +37,17 @@ ms.locfileid: "68047939"
   
 2.  在 **“用户”** 页上，单击 **“添加用户”** 。  
   
-3.  输入该用户的名称，名称之前应放置 Active Directory 域名或服务器计算机的名称，例如 domain  \\user_name  或 computer\user_name  。  
+3.  输入该用户的名称，名称之前应放置 Active Directory 域名或服务器计算机的名称，例如 domain\\user_name 或 computer\user_name。  
   
 4.  或者单击 **“检查名称”** 。  
   
-5.  单击 **“确定”** 。  
+5.  单击“确定”。  
   
 ## <a name="next-steps"></a>后续步骤  
   
 -   [分配功能区域权限 (Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 清除版本成员 (Master Data Services) | Microsoft Docs
+title: 清除版本成员
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 571ac34ad836bf25ad98f973f9fc33c9de499ba9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94543ada58c5af829da6a7650e21f5f4e2deb9bb
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024653"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729006"
 ---
 # <a name="purge-version-members-master-data-services"></a>清除版本成员 (Master Data Services)
 
@@ -28,17 +28,17 @@ ms.locfileid: "68024653"
   
 -   你必须有权访问“版本管理”功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ## <a name="to-purge-soft-deleted-members"></a>清除软删除的成员  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”** 。  
   
-2.  在“管理版本”  页上，选择与要清除的版本对应的模型。 随后显示模型版本的列表。  
+2.  在“管理版本” 页上，选择与要清除的版本对应的模型。 随后显示模型版本的列表。  
   
 3.  选择与要清除的版本对应的行。  
   
-4.  单击“清除成员”  。  
+4.  单击“清除成员”。  
   
 5.  在确认提示中单击“确定”。  
   

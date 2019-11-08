@@ -16,12 +16,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7f2c5a0f655a258492866d934d20bd8573f38757
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd39b7315903335fe2370ae148579f3fe9d07abc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766232"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637802"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>对包执行进行故障排除的工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用于在包完成和部署以后的执行过程中进行故障排除的功能和工具。  
@@ -38,7 +38,7 @@ ms.locfileid: "62766232"
   
 -   **使用事务帮助确保数据的完整性**。 有关详细信息，请参阅 [Integration Services 事务](../integration-services-transactions.md)。  
   
--   **使用检查点从故障点重新启动包**。 有关详细信息，请参阅 [通过使用检查点重新启动包](../packages/restart-packages-by-using-checkpoints.md)。  
+-   **使用检查点从故障点重新启动包**。 有关详细信息，请参阅[使用检查点重启包](../packages/restart-packages-by-using-checkpoints.md)。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>使用事件处理程序捕获和处理包错误  
  通过使用事件处理程序，您可以响应许多由包和包中的对象引发的事件。  
@@ -52,18 +52,18 @@ ms.locfileid: "62766232"
   
 -   **向错误输出添加易于理解的信息**。 除了由错误输出提供的两个数字标识符外，您还可以添加说明性信息以便更容易分析错误输出。  
   
-     **添加错误说明**。 使用脚本组件查找错误说明是很容易的。 有关详细信息，请参阅[脚本组件增强错误输出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
+     **添加错误说明**。 使用脚本组件查找错误说明是很容易的。 有关详细信息，请参阅[增强脚本组件的错误输出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
-     **添加错误列的名称**。 在脚本组件中无法轻易查找与错误输出保存的列 ID 对应的列名，需要其他的步骤。 数据流中的每个列 ID 在该数据流任务中都是唯一的，并且设计时在包中保持不变。 建议采用下列方法向错误输出中添加列名。 有关如何使用此方法的示例，请参阅[到错误输出中添加错误列名](https://go.microsoft.com/fwlink/?LinkId=261546)dougbert.com 上的。  
+     **添加错误列的名称**。 在脚本组件中无法轻易查找与错误输出保存的列 ID 对应的列名，需要其他的步骤。 数据流中的每个列 ID 在该数据流任务中都是唯一的，并且设计时在包中保持不变。 建议采用下列方法向错误输出中添加列名。 有关如何使用此方法的示例，请参阅[将错误列名称添加到](https://go.microsoft.com/fwlink/?LinkId=261546)dougbert.com 上的错误输出。  
   
-    1.  **创建查找表的列名称的**。 创建另一个应用程序，该应用程序使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API 对每个已保存的包、包中的每个数据流、数据流中的每个对象以及数据流对象中的每个输入和输出进行迭代。 应用程序应当将每一列的列 ID 和名称以及父数据流任务的 ID 和包的 ID 持久化到查找表。  
+    1.  **创建列名称的查找表**。 创建另一个应用程序，该应用程序使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API 对每个已保存的包、包中的每个数据流、数据流中的每个对象以及数据流对象中的每个输入和输出进行迭代。 应用程序应当将每一列的列 ID 和名称以及父数据流任务的 ID 和包的 ID 持久化到查找表。  
   
     2.  **将列名称添加到输出**。 将查找转换添加到错误输出中，此错误输出在上述步骤创建的查找表中查找列名。 查找可以使用错误输出中的列 ID、包 ID（在系统变量 System::PackageID 中）以及数据流任务的 ID（在系统变量 System::TaskID 中）。  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>使用操作报告对包执行进行故障排除  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供标准操作报告，帮助您监视部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 这些包报告有助于您查看包状态和历史记录，并根据需要确定执行失败的原因。  
   
- 有关详细信息，请参阅 [Troubleshooting Reports for Package Execution](troubleshooting-reports-for-package-execution.md)。  
+ 有关详细信息，请参阅 [对包执行进行故障排除的报告](troubleshooting-reports-for-package-execution.md)。  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>使用 SSISDB 视图对包执行进行故障排除  
  提供了一些 SSISDB 数据库视图，您可以查询它们来监视包执行和其他操作信息。 有关详细信息，请参阅[监视包执行和其他操作](../performance/monitor-running-packages-and-other-operations.md)。  
@@ -81,14 +81,14 @@ ms.locfileid: "62766232"
   
     1.  **创建记录包的每次执行情况的父表**。 此父表只有一行用于包的每次执行，并使用 ExecutionID 链接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 日志记录表中的子记录。 您可以在每个包的开始使用一个执行 SQL 任务创建此新行并记录开始时间。 然后您可以在包的结尾使用另一个执行 SQL 任务，用结束时间、持续时间和状态来更新该行。  
   
-    2.  **将审核信息添加到数据流**。 您可以使用审核转换将有关创建或修改每一行的包执行的信息添加到数据流的行中。 审核转换可以提供九条信息，包括 PackageName 和 ExecutionInstanceGUID。 有关详细信息，请参阅 [Audit Transformation](../data-flow/transformations/audit-transformation.md)。 如果您希望在每一行中包括自定义信息以便审核，可以使用派生列转换将此信息添加到数据流的行中。 有关详细信息，请参阅 [派生列转换](../data-flow/transformations/derived-column-transformation.md)。  
+    2.  **将审核信息添加到数据流**。 您可以使用审核转换将有关创建或修改每一行的包执行的信息添加到数据流的行中。 审核转换可以提供九条信息，包括 PackageName 和 ExecutionInstanceGUID。 有关详细信息，请参阅 [Audit Transformation](../data-flow/transformations/audit-transformation.md)。 如果您希望在每一行中包括自定义信息以便审核，可以使用派生列转换将此信息添加到数据流的行中。 有关详细信息，请参阅 [Derived Column Transformation](../data-flow/transformations/derived-column-transformation.md)。  
   
     3.  **考虑捕获行计数数据**。 考虑另行创建一个表，用于存储行计数信息。其中，每个包执行实例均由其 ExecutionID 标识。 使用行计数转换在数据流的关键点将行计数保存到一系列变量中。 数据流结束后，请使用执行 SQL 任务将该系列值插入到表的行中，供以后分析和报告。  
   
-     有关此方法的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮书 [Project REAL：Business Intelligence ETL 设计实践](https://go.microsoft.com/fwlink/?LinkId=96602)中的“ETL 审核和日志记录”一节。  
+     有关此方法的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮书 [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)（Project REAL：Business Intelligence ETL 设计实践）中的 "ETL Auditing and Logging"（ETL 审核和日志记录）一节。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>使用调试转储文件对包执行进行故障排除  
- 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，可以创建提供包执行信息的调试转储文件。 有关详细信息，请参阅 [生成包执行的转储文件](generating-dump-files-for-package-execution.md)。  
+ 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，可以创建提供包执行信息的调试转储文件。 有关详细信息，请参阅 [Generating Dump Files for Package Execution](generating-dump-files-for-package-execution.md)。  
   
 ## <a name="troubleshoot-run-time-validation-issues"></a>针对运行时验证问题进行故障排除  
  有时在包中前一个任务执行完成之前，您也许不能连接到数据源，或者无法验证包的某些部分。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括以下功能，可帮助您避免由这些情况导致的验证错误：  
@@ -109,7 +109,7 @@ ms.locfileid: "62766232"
 ## <a name="troubleshoot-errors-without-a-description"></a>无说明错误的故障排除  
  如果遇到了没有附带说明的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误，您可以根据其错误号在 [Integration Services 错误和消息引用](../integration-services-error-and-message-reference.md) 中查找错误来找到说明。 目前该列表中不包括故障排除信息。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
  [在数据流组件中配置错误输出](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>相关内容  

@@ -1,5 +1,5 @@
 ---
-title: 删除显式层次结构 (Master Data Services) | Microsoft Docs
+title: 删除显式层次结构
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 92d655260b09869cd3c6c4fc33c346509eec5776
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74a2b9a825b9e589cba9416eb932bcb824f00373
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906306"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728328"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>删除显式层次结构 (Master Data Services)
 
@@ -34,25 +34,25 @@ ms.locfileid: "67906306"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-an-explicit-hierarchy"></a>删除显式层次结构  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体”  。  
+2.  在“管理模型” 页上，从网格中选择一个模型，然后单击“实体”。  
   
-3.  在“管理实体”  页上，从网格中选择包含要删除的显式层次结构的实体所在的行。  
+3.  在“管理实体” 页上，从网格中选择包含要删除的显式层次结构的实体所在的行。  
   
-4.  单击“显式层次结构”  。  
+4.  单击“显式层次结构”。  
   
-5.  在“管理显式层次结构”  页上，单击要删除的显式层次结构。  
+5.  在“管理显式层次结构” 页上，单击要删除的显式层次结构。  
   
 6.  单击 **“编辑”** 。  
   
 7.  在确认对话框中，单击 **“确定”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建显式层次结构 (Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)  
   

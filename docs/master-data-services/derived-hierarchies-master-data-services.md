@@ -1,5 +1,5 @@
 ---
-title: 派生层次结构 (Master Data Services) | Microsoft Docs
+title: 派生层次结构
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e75b76eda87580063dfdaea081a1b4f0efaa518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084211"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728274"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>派生层次结构 (Master Data Services)
 
@@ -58,20 +58,20 @@ ms.locfileid: "68084211"
   
  该层次结构显示如何对成员进行分组。 具有最多成员的实体位于底部。  
   
- ![从模型结构派生的层次结构](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Hierarchy Derived from Model Structure")  
+ ![从模型结构派生的层次结构](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "从模型结构派生的层次结构")  
   
  在派生层次结构中，可以突出显示 Product 和 Subcategory 之间的关系，然后突出显示 Subcategory 和 Category 之间的关系。 当您查看此层次结构中的成员时，在树的每个级别中包含同一实体中的成员。  
   
- ![山地自行车派生层次结构示例](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Mountain Bike Derived Hierarchy Example")  
+ ![山地自行车派生层次结构示例](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "山地自行车派生层次结构示例")  
   
  这种类型的层次结构防止将成员移到无效的级别。 例如，可以将 Road-650 自行车从子类别“公路自行车”移到另一个子类别“山地车”。 不能直接将 Road-650 移到某个类别下，如 1 {自行车}。 每次在层次结构树中移动成员时，将更改该成员基于域的属性值以反映移动。  
   
 ## <a name="notes"></a>说明  
- 派生层次结构树中的所有成员都按 ID 都排序。 不能更改排序顺序。  
+ 派生层次结构树中的所有成员都按 ID 排序。 不能更改排序顺序。  
   
  如果成员基于域的属性为空且该属性用于派生层次结构，则该成员不会显示在层次结构中。 创建业务规则来要求填充属性。 有关详细信息，请参阅[要求属性值 &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

@@ -1,6 +1,6 @@
 ---
-title: 显示派生层次结构中的多对多关系 (Master Data Services) | Microsoft Docs
-ms.custom: ''
+title: 显示派生层次结构中的多对多关系
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5d256603927a4c717b1f5d3203ea1ce3939771cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085656"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728952"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>显示派生层次结构中的多对多关系 (Master Data Services)
 
@@ -40,9 +40,9 @@ ms.locfileid: "68085656"
   
  ![mds_hierarchies_edit_derived_hierarchy_one](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-one.PNG "mds_hierarchies_edit_derived_hierarchy_one")  
   
- 请注意，在上面的屏幕截图中， **Employee** 实体显示在“当前级别”  下方的中间位置，作为唯一级别。 派生层次结构右侧的“预览”  只是显示了 **Employee** 实体的所有成员列表。 左侧的“可用级别”  部分将显示除当前顶部级别 (**Employee**) 外可能会添加的级别。 大多数这些级别都是 **Employee** 实体上基于域的属性 (DBA)，包括 **Department** DBA。  
+ 请注意，在上面的屏幕截图中， **Employee** 实体显示在“当前级别” 下方的中间位置，作为唯一级别。 派生层次结构右侧的“预览” 只是显示了 **Employee** 实体的所有成员列表。 左侧的“可用级别”部分将显示除当前顶部级别 (**Employee**) 外可能会添加的级别。 大多数这些级别都是 **Employee** 实体上基于域的属性 (DBA)，包括 **Department** DBA。  
   
- 从 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 开始，便提供了一种可用于创建 M2M 关系模型的新级别类型，例如：Class（通过 ClassRegistration.Student 映射）  。 级别名称比其他名称更为详细，用以反映明确描述映射关系所需的额外信息。 将此级别拖放到“当前级别”部分中的 **Employee** 级别  ：  
+ 从 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]开始，便提供了一种可用于创建 M2M 关系模型的新级别类型，例如 **Class（通过 ClassRegistration.Student 映射）** 。 级别名称比其他名称更为详细，用以反映明确描述映射关系所需的额外信息。 将此级别拖放到“当前级别”部分中的 **Employee** 级别 ：  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -56,11 +56,11 @@ ms.locfileid: "68085656"
   
  映射实体 **ClassRegistration** 的成员未在派生层次结构内的任何位置显示。 它们只用于定义层次结构中父级和子级成员之间的关系。  
   
- 可以通过修改映射实体成员来编辑 M2M 关系，具体做法是执行以下任一操作。 M2M 关系在“派生层次结构资源管理器”  页为只读。  
+ 可以通过修改映射实体成员来编辑 M2M 关系，具体做法是执行以下任一操作。 M2M 关系在“派生层次结构资源管理器”页为只读。  
   
--   使用 Excel 中的 Master Data Services 外接程序或通过使用数据暂存修改“实体资源管理器”  页上的映射实体成员。  
+-   使用 Excel 中的 Master Data Services 外接程序或通过使用数据暂存修改“实体资源管理器”页上的映射实体成员。  
   
--   拖放“派生层次结构资源管理器”  页中各父级之间的子节点。  
+-   拖放“派生层次结构资源管理器”页中各父级之间的子节点。  
   
      此方法可修改现有的成员（如可能）并根据需要添加新成员。 将不会删除现有成员。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "68085656"
 ## <a name="collections"></a>集合  
  已弃用集合和显式层次结构。 转换存储过程 (udpConvertCollectionAndConsolidatedMembersToLeaf) 可将集合成员转换为叶成员，并创建多对多派生层次结构以捕获集合成员信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

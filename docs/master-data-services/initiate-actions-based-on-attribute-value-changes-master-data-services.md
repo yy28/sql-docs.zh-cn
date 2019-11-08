@@ -1,5 +1,5 @@
 ---
-title: 基于属性值更改启动操作 (Master Data Services) | Microsoft Docs
+title: 基于属性值更改启动操作
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f7fbb2aa4449cc372b798ec75653cc9be36169ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a83b51479aadc92941da073e5bf9f0da394691ff
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945059"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729162"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>基于属性值更改启动操作 (Master Data Services)
 
@@ -26,14 +26,14 @@ ms.locfileid: "67945059"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建业务规则以便基于对属性值的更改启动操作。 例如，在某个特定的属性值发生更改时，您可能需要更改值、发送通知或启动外部工作流。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
--   您的属性必须处于更改跟踪组中。 有关详细信息，请参阅 [向更改跟踪组添加属性 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 。  
+-   您的属性必须处于更改跟踪组中。 有关详细信息，请参阅 [向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 。  
   
 ### <a name="to-create-a-business-rule-to-initiate-actions-based-on-attribute-value-changes"></a>创建业务规则以便基于属性值更改启动操作  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67945059"
   
 18. 单击 **“上一步”** 。  
   
-19. 或者，在“业务规则维护”  页上，对于包含业务规则的行，双击“名称”  、“说明”  或“通知”  列中的单元以便更新值。  
+19. 或者，在“业务规则维护”页上，对于包含业务规则的行，双击“名称”、“说明”或“通知”列中的单元以便更新值。  
   
     > [!NOTE]  
     >  仅针对包括验证操作的规则发送通知。  
@@ -90,7 +90,7 @@ ms.locfileid: "67945059"
   
     -   [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   

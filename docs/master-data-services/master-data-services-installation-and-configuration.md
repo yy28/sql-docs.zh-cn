@@ -1,5 +1,5 @@
 ---
-title: Master Data Services 的安装和配置 | Microsoft Docs
+title: 安装和配置
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6c1fc5dd3dd59ccde2a1d95ab0940cfdadde7198
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176293"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728067"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
 
@@ -27,15 +27,15 @@ ms.locfileid: "70176293"
 > 使用支持 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 的开发者版本时，可以在 Windows 10 系统的计算机安装 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]。 
 >>有关支持不同 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 版本的操作系统的详细信息，请参阅[安装 SQL Server 2016 的硬件和软件要求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 
 
-有关如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中组织数据的概述，请参阅 [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)。     
+有关如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 中组织数据的概述，请参阅 [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)。     
   
  有关 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中新增功能的信息，请参阅 [Master Data Services (MDS) 中的新增功能](../master-data-services/what-s-new-in-master-data-services-mds.md)。  
  
-有关可帮助你了解 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 的视频以及其他培训资源的链接，请参阅[了解 Master Data Services](../master-data-services/learn-sql-server-master-data-services.md)。 
+有关可帮助你了解 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的视频以及其他培训资源的链接，请参阅 [了解 Master Data Services](../master-data-services/learn-sql-server-master-data-services.md)。 
   
 > **下载**  
 > -   若要下载 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** 。  
-> -   已经拥有 Azure 帐户？  然后转到[此处](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)，启动已安装 SQL Server 的虚拟机。  
+> -   是否拥有 Azure 帐户？  然后转到**此处[，启动已安装 SQL Server 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 。  
 > 
 > **无法创建 MDS 网站？**
 > >请查看此 Microsoft 支持文章以获取有关如何解决此问题的说明。
@@ -43,10 +43,10 @@ ms.locfileid: "70176293"
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer 和 Silverlight
 - 在 Windows Server 2012 计算机上安装 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 时，可能必须配置 Internet Explorer 增强安全性以允许为 Web 应用程序站点编写脚本。 否则，浏览到服务器计算机上的站点将失败。
-- 在使用 Web 应用程序时，Silverlight 5 必须安装在客户端计算机上。 如果不具有所需版本的 Silverlight，则在导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示安装 Silverlight。 可以从[此处](https://www.microsoft.com/silverlight/)安装 Silverlight 5。
+- 在使用 Web 应用程序时，Silverlight 5 必须安装在客户端计算机上。 如果不具有所需版本的 Silverlight，则在导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示安装 Silverlight。 可以从**此处[安装 Silverlight 5](https://www.microsoft.com/silverlight/)** 。
 
 ## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>Azure 虚拟机上的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
-默认情况下, 当你使用[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]已安装的创建 Azure 虚拟机时, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]还将安装。 
+默认情况下，当你启动已安装 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 的 Azure 虚拟机时，还会安装 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]。 
 
 下一步是安装 Internet 信息服务 (IIS)。 请参阅[安装和配置 IIS](#InstallIIS) 部分。 
 
@@ -55,11 +55,11 @@ ms.locfileid: "70176293"
 ## <a name="InstallMDS"></a> 安装 Master Data Services  
  可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序安装向导或命令提示符来安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]。  
   
- **在 Windows Server 2012 R2 计算机上使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
+ **在 Windows Server 2012 R2 计算机上使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安装程序安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**  
   
 1.  双击 Setup.exe，然后按照安装向导中的步骤进行操作。  
   
-2.  在“功能选择”页的“共享功能”下，选择 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]。  
+2.  在“功能选择”[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**页的“共享功能”** **下，选择** 。  
   
      将安装 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]、程序集、Windows PowerShell 管理单元以及 Web 应用程序和服务的文件夹和文件。  
   
@@ -71,11 +71,11 @@ ms.locfileid: "70176293"
   
 1.  在 [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)] 中，单击“桌面”上任务栏上的“服务器管理器”图标。  
   
-     ![Windows Server 2012 任务栏中服务器管理器的图标](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Icon for the Server Manager in Windows Server 2012 taskbar")  
+     ![Windows Server 2012 任务栏中服务器管理器的图标](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Windows Server 2012 任务栏中服务器管理器的图标")  
   
 5.  在“服务器管理器”中，单击“管理”菜单中的“添加角色和功能”。  
    
-     ![服务器管理器中的“添加角色和功能”菜单命令](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "In Server Manage, the Add Roles and Features menu command")  
+     ![在服务器管理中，"添加角色和功能" 菜单命令](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "在服务器管理中，"添加角色和功能" 菜单命令")  
   
 6.  在“添加角色和功能向导”的“安装类型”页上，接受默认值（**基于角色或基于功能的安装**），然后单击“下一步”。  
   
@@ -87,14 +87,14 @@ ms.locfileid: "70176293"
 
    ![mds_AddRolesFeaturesWizard_ServerRolesPage](../master-data-services/media/mds-addrolesfeatureswizard-serverrolespage.png)
    
-9. 在“功能”页，确认选中以下功能，然后单击“下一步”。 [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] 上的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 需要这些功能。
+9. 在“功能”页，确认选中以下功能，然后单击“下一步”。 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 上的 [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] 需要这些功能。
   
     |功能|功能|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
 10. 在左侧窗格中，单击“Web 服务器角色 (IIS)”，然后单击“角色服务”。
-11. 在“角色服务”页，确认选中以下服务，然后单击“下一步”。 [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)] 上的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 需要这些服务。
+11. 在“角色服务”页，确认选中以下服务，然后单击“下一步”。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 上的 [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)] 需要这些服务。
 
     > [!WARNING]  
     >  不要安装 WebDAV 发布角色服务。 WebDAV 发布与 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]不兼容。  
@@ -109,16 +109,16 @@ ms.locfileid: "70176293"
   
  有关使用安装程序安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的详细信息，请参阅[使用安装向导安装 SQL Server 2016（安装程序）](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
   
- 有关使用命令提示符安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的详细信息，请参阅[从命令提示符安装 SQL Server 2016](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。 使用命令提示符时， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 作为功能参数提供。  
+ 有关使用命令提示符安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的详细信息，请参阅 [从命令提示符安装 SQL Server 2016](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。 使用命令提示符时， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 作为功能参数提供。  
   
- 有关链接到与预安装任务相关的其他信息的简要说明，请参阅 [安装 Master Data Services](../master-data-services/install-windows/install-master-data-services.md)。  
+ 有关链接到与预安装任务相关的其他信息的简要说明，请参阅[安装 Master Data Services](../master-data-services/install-windows/install-master-data-services.md)。  
   
 ##  <a name="SetUpWeb"></a> 设置数据库和网站  
  **使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 设置数据库和网站**  
 
  
 > [!WARNING]
->  启动 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 配置管理器之前，必须[安装 IIS](#InstallIIS)。 否则，Configuration Manager 将显示“Internet Information Services 错误”消息，不能创建 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 应用程序。  
+>  启动 [ 配置管理器之前，必须](#InstallIIS)安装 IIS[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]。 否则，Configuration Manager 将显示“Internet Information Services 错误”消息，不能创建 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 应用程序。  
 > 
 > 浏览器要求
 > >[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 应用程序仅适用于 Internet Explorer (IE) 9 或更高版本。 IE 8 及早期版本、Microsoft Edge 和 Chrome 均不受支持。    
@@ -127,25 +127,25 @@ ms.locfileid: "70176293"
   
 2.  单击“创建数据库”，然后在“创建数据库向导”中单击“下一步”。  
   
-3.  在 "**数据库服务器**" 页上, 指定 SQL Server 实例。 
+3.  在 "**数据库服务器**" 页上，指定 SQL Server 实例。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]添加对 SQL Server 托管实例的支持。 将**SQL Server 实例**的值设置为 Azure SQL 数据库托管实例的主机。 例如， `xxxxxx.xxxxxx.database.windows.net` 。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 增加了对 SQL Server 托管实例的支持。 将**SQL Server 实例**的值设置为 Azure SQL 数据库托管实例的主机。 例如， `xxxxxx.xxxxxx.database.windows.net`。
 
-4. 选择**身份验证类型**, 然后单击 "**测试连接**" 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击“下一步”。
+4. 选择**身份验证类型**，然后单击 "**测试连接**" 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击 **“下一步”** 。
 
-    >对于[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], 若要连接到 Azure SQL 数据库托管实例, 请使用以下身份验证类型之一:
+    >对于 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]，若要连接到 Azure SQL 数据库托管实例，请使用以下身份验证类型之一：
     >
-    >- Azure Active Directory 集成身份验证:**当前用户– Active Directory 集成**
-    >- SQL Server 身份验证:**SQL Server 帐户**。
+    >- Azure Active Directory 集成身份验证：**当前用户– Active Directory 集成**
+    >- SQL Server 身份验证： **SQL Server 帐户**。
     >
-    >在 Azure SQL 数据库托管实例中, 用户必须是`sysadmin`固定服务器角色的成员。
+    >在 Azure SQL 数据库托管实例中，用户必须是 `sysadmin` 固定服务器角色的成员。
 
     > [!NOTE]  
     >  选择“当前用户 - 集成安全性”作为身份验证类型时，“用户名”框为只读，并且显示登录到计算机的 Windows 用户帐户的名称。 如果在 Azure 虚拟计算机 (VM) 上运行 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，“用户名”框显示 VM 名称以及该 VM 上本地管理员帐户的用户名。 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  在“数据库名称”字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”。 单击“下一步”。
+4.  在“数据库名称”字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”。 单击 **“下一步”** 。
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -155,19 +155,19 @@ ms.locfileid: "70176293"
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_AdminPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-adminpage.png)  
   
-6.  单击“下一步”查看 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的设置摘要，然后再次单击“下一步”创建数据库。 出现“进度和完成”页。
+6.  单击“下一步”查看  **数据库的设置摘要，然后再次单击“下一步”创建数据库**[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]。 出现“进度和完成”页。
 
 7. 创建和配置数据库后，单击“完成”。  
   
      有关“创建数据库向导”中的设置的详细信息，请参阅[创建数据库向导（Master Data Services 配置管理器）](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)。  
   
-7.  在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的“数据库配置”页上，单击“选择数据库”。  
+7.  在  **中的“数据库配置”页上，单击“选择数据库”** [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]。  
   
-8.  单击“连接”，选择在步骤 7 中创建的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库，然后单击“确定”。 
+8.  单击“连接”，选择在步骤 7 中创建的  **数据库，然后单击“确定”** [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]。 
 
     ![mds_2016ConfigManager_SelectDatabaseButton_ConnectToDatabaseDialog](../master-data-services/media/mds-2016configmanager-selectdatabasebutton-connecttodatabasedialog.png)  
   
-     你已经完成了数据库的设置。 “数据库配置”页现在将显示为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]（创建的数据库和当前的数据库版本）连接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。  
+     你已经完成了数据库的设置。 “数据库配置”页现在将显示为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]（创建的数据库和当前的数据库版本）连接的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例。  
 
     ![mds_2016ConfigManager_DatabaseConfig_Completed](../master-data-services/media/mds-2016configmanager-databaseconfig-completed.png)   
   
@@ -203,7 +203,7 @@ ms.locfileid: "70176293"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. 单击 **“应用”** 。 显示“配置完成”消息框。 在消息框中单击“确定”，启动 Web 应用程序。 网站地址是 https://server name/web application/。 
+15. 单击 **“应用”** 。 显示“配置完成”消息框。 在消息框中单击“确定”，启动 Web 应用程序。 网站地址是 https://server name*web application/* /。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -212,7 +212,7 @@ ms.locfileid: "70176293"
   
  你还可以使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 指定与 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库相关联的 Web 应用程序和服务的其他设置。 例如，你可以指定加载数据的频率或发送验证电子邮件的频率。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
-##  <a name="deploySample"></a> 部署示例模型和数据  
+##  <a name="deploySample"></a>部署示例模型和数据  
  以下三个示例模型包都包含在  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中。   这些示例模型包括数据。 示例模型包的默认位置为 %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages
   
 -   chartofaccounts_en.pkg  
@@ -223,7 +223,7 @@ ms.locfileid: "70176293"
   
  可以使用 MDSModelDeploy 工具部署这些包。 MDSModelDeploy 工具的默认位置为 驱动器\Program Files\Microsoft SQL Server\ 140\Master Data Services\Configuration。  
   
- 有关运行此工具的先决条件的信息，请参阅 [使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
+ 有关运行此工具的先决条件的信息，请参阅[使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
  有关在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中更新数据以支持新功能的信息，请参阅 [SQL Server 示例：模型部署包 (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
   
@@ -240,7 +240,7 @@ ms.locfileid: "70176293"
 3.  通过运行以下每个命令将每个示例模型部署到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   
     > [!IMPORTANT]  
-    >  在下面的示例中，`MDS1` 服务值是指定的。 设置 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 网站时，如果选择了“默认网站”，则使用此值。  请参阅[设置数据库和网站](#SetUpWeb)部分。  
+    >  在下面的示例中， `MDS1` 服务值是指定的。 设置  **网站时，如果选择了“默认网站”** [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，则使用此值。  请参阅 [设置数据库和网站](#SetUpWeb) 部分。  
     >   
     >  如果创建了一个新的网站，或选择了另一个现有网站，首先运行以下命令以确定正确的服务值。  
     >   
@@ -275,24 +275,24 @@ ms.locfileid: "70176293"
   
      下图显示部署 product_en.pkg 示例模型的命令。  
   
-     ![用于部署产品示例模型的命令行](../master-data-services/media/mds-commandprompt-deployingsamplemodel-product.png "Command line for deploying the Product sample model")  
+     ![用于部署产品示例模型的命令行](../master-data-services/media/mds-commandprompt-deployingsamplemodel-product.png "用于部署产品示例模型的命令行")  
   
 4.  若要查看示例模型，执行以下操作。  
   
     1.  导航到你设置的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 网站。 请参阅 [设置数据库和网站](#SetUpWeb) 部分。  
   
-         网站地址是 https://server name/web application/。  
+         网站地址是 https://server name*web application/* /。  
   
     2.  从“模型”列表框中选择模型，然后单击“资源管理器”。  
   
-         ![MDS Web 站点，主页。](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "MDS Web site, home page.")  
+         ![MDS 网站、主页。](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "MDS 网站、主页。")  
   
 ## <a name="next-step"></a>下一步  
  为你的数据创建一个新的模型和实体。 请参阅[创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md) 和[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   
  有关如何使用模型和实体为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中的数据生成结构的概述，请参阅 [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
     
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Master Data Services 数据库](../master-data-services/master-data-services-database.md)   
  [主数据管理器 Web 应用程序](../master-data-services/master-data-manager-web-application.md)   
  [“数据库配置”页（Master Data Services 配置管理器）](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
