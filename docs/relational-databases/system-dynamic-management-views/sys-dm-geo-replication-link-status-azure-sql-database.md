@@ -1,6 +1,6 @@
 ---
-title: sys.dm_geo_replication_link_status （Azure SQL 数据库） |Microsoft Docs
-ms.custom: ''
+title: sys. dm_geo_replication_link_status
+titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.reviewer: ''
@@ -17,42 +17,43 @@ ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 author: mashamsft
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8302de76b45ca09e86c87c29ab99c30898168de5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: e642fada95ddf20e81f9fcb7da8b6267469ef0c9
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900886"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843890"
 ---
-# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status（Azure SQL 数据库）
+# <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status（Azure SQL 数据库）
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  包含每个异地复制合作关系中的主要和辅助数据库之间的复制链接的行。 这包括主和辅助数据库。 如果给定主数据库存在多个连续复制链接，此表为每个关系包含一行。 在所有数据库，包括逻辑 master 中创建视图。 但是，在主数据库中查询此视图将返回空集合。  
+  在异地复制合作关系中，主数据库和辅助数据库之间的每个复制链接都包含一行。 这包括主数据库和辅助数据库。 如果给定主数据库有多个连续复制链接，此表将针对每个关系包含一行。 将在所有数据库（包括逻辑 master）中创建视图。 但是，在主数据库中查询此视图将返回空集合。  
   
-|列名|数据类型|描述|  
+|列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|复制链接的唯一 ID。|  
-|partner_server|**sysname**|包含链接的数据库的 SQL 数据库服务器的名称。|  
+|partner_server|**sysname**|包含链接数据库的 SQL 数据库服务器的名称。|  
 |partner_database|**sysname**|链接 SQL Database 服务器上链接数据库的名称。|  
-|last_replication|**datetimeoffset**|最后一个事务由主数据库制辅助确认的时间戳。 此值是可在主数据库上。|  
-|replication_lag_sec|**int**|以秒为单位和之间的时差 last_replication 值的主数据库制在主计算机上的该事务的提交时间戳。  此值是可在主数据库上。|  
-|replication_state|**tinyint**|对于此数据库，其中一个异地复制的状态:。<br /><br /> 1 = 种子设定。 异地复制目标正在设定种子，但尚未同步两个数据库。 直到设定种子完毕后，您不能连接到辅助数据库。 从主数据库中删除辅助数据库将取消种子设定操作。<br /><br /> 2 = 弥补。 辅助数据库处于事务一致的状态，并且正在不断地与主数据库同步。<br /><br /> 4 = 已挂起。 这不是活动的连续复制关系。 此状态通常指示可用的互连带宽不足，无法满足主数据库上事务活动的水平。 但是，连续复制关系仍保持不变。|  
+|last_replication|**datetimeoffset**|根据主数据库时钟，辅助数据库的上次事务确认的时间戳。 此值仅在主数据库上可用。|  
+|replication_lag_sec|**int**|基于主数据库时钟，在主数据库上的 last_replication 值与该事务的提交时间戳之间的时间差（以秒为单位）。  此值仅在主数据库上可用。|  
+|replication_state|**tinyint**|此数据库的异地复制状态，其中之一为：。<br /><br /> 1 = 种子设定。 异地复制目标正在进行种子设定，但两个数据库尚未同步。 在完成种子设定之前，你无法连接到辅助数据库。 从主数据库中删除辅助数据库将取消播种操作。<br /><br /> 2 = 追赶。 辅助数据库处于事务一致的状态，并与主数据库保持同步。<br /><br /> 4 = 已挂起。 这不是活动的连续复制关系。 此状态通常指示可用的互连带宽不足，无法满足主数据库上事务活动的水平。 但是，连续复制关系仍保持不变。|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|角色 (role)|**tinyint**|异地复制角色，其中一个：<br /><br /> 0 = 主数据库。 Database_id 是指的异地复制合作关系中的主数据库。<br /><br /> 1 = 辅助数据库。  Database_id 是指的异地复制合作关系中的主数据库。|  
+|角色 (role)|**tinyint**|异地复制角色，如下所示：<br /><br /> 0 = 主要。 Database_id 指的是异地复制合作关系中的主数据库。<br /><br /> 1 = 辅助。  Database_id 指的是异地复制合作关系中的主数据库。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
-|secondary_allow_connections|**tinyint**|辅助数据库类型，其中一个：<br /><br /> 0 = 不能直接允许连接到辅助数据库并且数据库不是可用于读访问。<br /><br /> 2 = all 允许连接到辅助 repl; 中的数据库进行只读访问 ication。|  
-|secondary_allow_connections_desc|**nvarchar(256)**|否<br /><br /> All|  
-|last_commit|**datetimeoffset**|提交到数据库的最后一个事务的时间。 如果检索主数据库上，它指示在主数据库上的最后一个提交时间。 如果检索辅助数据库上，它指示在辅助数据库上的最后一个提交时间。 如果检索辅助数据库上的复制链接的主数据库出现故障时，它指示哪一点辅助数据库赶上之前。|
+|secondary_allow_connections|**tinyint**|辅助类型，为以下类型之一：<br /><br /> 0 = 不允许直接连接到辅助数据库，并且数据库不可用于读访问。<br /><br /> 2 = 允许对辅助复制中的数据库进行所有连接; i 用于只读访问。|  
+|secondary_allow_connections_desc|**nvarchar(256)**|“否”<br /><br /> 全部|  
+|last_commit|**datetimeoffset**|上次提交给数据库的事务的时间。 如果在主数据库上检索，它表示主数据库上的上次提交时间。 如果在辅助数据库上检索，它将指示辅助数据库上的上次提交时间。 如果在复制链接的主节点关闭时在辅助数据库上检索，它将指示辅助数据库在哪个位置上捕获。|
   
 > [!NOTE]  
->  如果通过删除辅助数据库 （部分 4.2） 中，该数据库中的行终止复制关系**sys.dm_geo_replication_link_status**视图将消失。  
+>  如果通过删除辅助数据库（第4.2 节）终止了复制关系，则**dm_geo_replication_link_status**视图中该数据库的行将会消失。  
   
 ## <a name="permissions"></a>权限  
- 任何具有 view_database_state 权限帐户可以查询**sys.dm_geo_replication_link_status**。  
+ 具有 view_database_state 权限的任何帐户都可以查询**dm_geo_replication_link_status**。  
   
 ## <a name="example"></a>示例  
- 显示复制延迟和我的辅助数据库的上次复制时间。  
+ 显示复制延迟和辅助数据库的上次复制时间。  
   
 ```  
 SELECT   
@@ -63,9 +64,9 @@ SELECT
 FROM sys.dm_geo_replication_link_status;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [ALTER DATABASE &#40;Azure SQL 数据库&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [sys.geo_replication_links &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [sys.dm_operation_status &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
+## <a name="see-also"></a>另请参阅  
+ [ALTER database &#40;Azure SQL database&#41; ](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [geo_replication_links &#40;Azure SQL 数据库&#41; ](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [dm_operation_status &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
   
   

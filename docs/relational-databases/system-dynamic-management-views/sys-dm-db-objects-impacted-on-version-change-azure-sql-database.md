@@ -1,6 +1,6 @@
 ---
-title: sys.dm_db_objects_impacted_on_version_change （Azure SQL 数据库） |Microsoft Docs
-ms.custom: ''
+title: sys. dm_db_objects_impacted_on_version_change
+titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
 ms.reviewer: ''
@@ -19,31 +19,32 @@ ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9934771b6a887f6ae0984e79ce11729145e3d410
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 0255f7260044ee5c09d020f3ba6310d24bc8cb74
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051544"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843862"
 ---
-# <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
+# <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   此数据库范围内的系统视图旨在提供一个早期警告系统，以确定 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的主要版本升级所影响的对象。 可以在升级之前或之后使用此视图以获得受影响对象的完整枚举。 您需要在每个数据库中查询此视图，以获取有关整个服务器的完整帐户信息。  
   
-|列名|数据类型|描述|  
+|列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|class|**int** NOT NULL|将受影响的对象的类：<br /><br /> **1** = 约束<br /><br /> **7** = 索引和堆|  
-|class_desc|**nvarchar(60)** NOT NULL|类的说明：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
-|major_id|**int** NOT NULL|约束的对象 ID，或包含索引或堆的表的对象 ID。|  
-|minor_id|**int** NULL|**NULL**约束<br /><br /> 索引和堆的 Index_id|  
-|dependency|**nvarchar(60)** NOT NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例：<br /><br /> **空间**(对于内部函数)<br /><br /> **geometry** （适用于系统 UDT）<br /><br /> **geography:: parse** （适用于系统 UDT 方法）|  
+|class|**int**NOT NULL|将受影响的对象的类：<br /><br /> **1** = 约束<br /><br /> **7** = 索引和堆|  
+|class_desc|**nvarchar （60）** NOT NULL|类的说明：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
+|major_id|**int**NOT NULL|约束的对象 ID，或包含索引或堆的表的对象 ID。|  
+|minor_id|**int**无效|对于约束为**NULL**<br /><br /> 索引和堆的 Index_id|  
+|dependency|**nvarchar （60）** NOT NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例：<br /><br /> **space** （适用于内部）<br /><br /> **geometry** （用于系统 UDT）<br /><br /> **geography：:P arse** （用于系统 UDT 方法）|  
   
 ## <a name="permissions"></a>权限  
  需要拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示上查询**sys.dm_db_objects_impacted_on_version_change**若要查找的下一步的主要服务器版本升级受影响的对象  
+ 下面的示例演示了对**sys.databases dm_db_objects_impacted_on_version_change**查找受升级到下一个主要服务器版本影响的对象的查询。  
   
 ```  
 SELECT * FROM sys.dm_db_objects_disabled_on_version_change;  
@@ -59,14 +60,14 @@ class  class_desc        major_id    minor_id    dependency
 1      OBJECT_OR_COLUMN  101575400   NULL        geometry     
 ```  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
   
 ### <a name="how-to-update-impacted-objects"></a>如何升级受影响的对象  
  以下有序步骤介绍将在六月份服务版本升级后要采取的纠正措施。  
   
 |订单|受影响的对象|纠正措施|  
 |-----------|---------------------|-----------------------|  
-|1|**“索引”**|重新生成标识的任何索引**sys.dm_db_objects_impacted_on_version_change**为例：  `ALTER INDEX ALL ON <table> REBUILD`<br />或<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Object**|通过标识的所有约束**sys.dm_db_objects_impacted_on_version_change**必须重新计算基础表中的几何图形和地理数据后重新验证。 对于约束，使用 ALTER TABLE 进行重新验证。 <br />例如： <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />或<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**索引**|重新生成由 sys.databases 标识的任何索引**dm_db_objects_impacted_on_version_change**例如： `ALTER INDEX ALL ON <table> REBUILD`<br />或<br />`ALTER TABLE <table> REBUILD`|  
+|2|**对象**|在重新计算基础表中的几何图形和地理数据后，必须重新验证由 sys.databases 标识的所有约束。 **dm_db_objects_impacted_on_version_change** 。 对于约束，使用 ALTER TABLE 进行重新验证。 <br />例如： <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />或<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

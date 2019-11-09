@@ -18,12 +18,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721451"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882375"
 ---
 # <a name="disable-publishing-and-distribution"></a>禁用发布和分发
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中禁用发布和分发。  
@@ -54,7 +54,7 @@ ms.locfileid: "62721451"
   
 ###  <a name="Prerequisites"></a> 先决条件  
   
--   若要禁用发布和分发，所有分发数据库和发布数据库都必须联机。 如果存在分发数据库或发布数据库的“数据库快照”  ，则在禁用发布和分发前，必须先删除这些数据库快照。 数据库快照是数据库的只读脱机副本，与复制快照无关。 有关详细信息，请参阅[数据库快照 (SQL Server)](../databases/database-snapshots-sql-server.md)。  
+-   若要禁用发布和分发，所有分发数据库和发布数据库都必须联机。 如果存在分发数据库或发布数据库的“数据库快照” ，则在禁用发布和分发前，必须先删除这些数据库快照。 数据库快照是数据库的只读脱机副本，与复制快照无关。 有关详细信息，请参阅[数据库快照 (SQL Server)](../databases/database-snapshots-sql-server.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  使用禁用发布和分发向导禁用发布和分发。  
@@ -87,7 +87,7 @@ ms.locfileid: "62721451"
 7.  在分发服务器上，执行 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) 以从该服务器删除分发服务器指定。  
   
     > [!NOTE]  
-    >  如果在您执行 [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) 和 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)之前并未删除所有复制发布和分发对象，这些过程将返回错误。 若要在删除发布服务器或分发服务器时删除所有与复制相关的对象，必须将 **@no_checks** 参数设置为 **1**。 如果发布服务器或分发服务器脱机或无法访问，则可以将 **@ignore_distributor** 参数设置为 **1** ，以便能够删除它们；不过，必须手动删除任何保留的发布和分发对象。  
+    >  如果在您执行 [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) 和 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)之前并未删除所有复制发布和分发对象，这些过程将返回错误。 若要在删除发布服务器或分发服务器时删除所有与复制相关的对象，必须将 **\@no_checks**参数设置为**1**。 如果发布服务器或分发服务器脱机或无法访问，则可以将 **\@ignore_distributor**参数设置为**1** ，以便可以将其删除;不过，必须手动删除任何保留的发布和分发对象。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例脚本从订阅数据库删除复制对象。  
@@ -112,11 +112,11 @@ ms.locfileid: "62721451"
   
 5.  （可选）调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以获取对象的属性，并验证发布服务器是否存在。 如果此方法返回 `false`，则步骤 4 中设置的发布服务器名称不正确，或者此分发服务器未使用该发布服务器。  
   
-6.  调用 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 方法。 传递的值`true`有关*强制*发布服务器和分发服务器位于不同的服务器是否以及何时应在不再存在发布而没有首先验证分发服务器上卸载发布服务器发布服务器。  
+6.  调用 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 方法。 如果发布服务器和分发服务器位于不同的服务器上，并且应在分发服务器上卸载发布服务器，而不首先验证发布服务器上是否不再存在发布，请为 "*强制*" 传递一个 `true` 值。  
   
 7.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 3 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
-8.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 传递的值`true`有关*强制*以删除所有复制对象而没有首先验证分发服务器上的所有本地发布数据库是否已禁用以及分发数据库是否已卸载。  
+8.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 传递值为 "force" 的 `true` 值，以*强制*删除分发服务器上的所有复制对象，而不首先验证所有本地发布数据库是否已禁用以及分发数据库是否已卸载。  
   
 ###  <a name="PShellExample"></a> 示例 (RMO)  
  此示例将删除分发服务器上的发布服务器注册，删除分发数据库并卸载分发服务器。  
@@ -131,8 +131,8 @@ ms.locfileid: "62721451"
   
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
-## <a name="see-also"></a>请参阅  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [复制系统存储过程概念](concepts/replication-system-stored-procedures-concepts.md)  
+## <a name="see-also"></a>另请参阅  
+ [复制管理对象概念](concepts/replication-management-objects-concepts.md)   
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
   
   
