@@ -167,7 +167,7 @@ GO
 
 ### <a name="d-resetting-the-identity-value-on-an-empty-table"></a>D. 重置空表上的标识值
 
- 以下示例在从表中删除所有记录后，强制将 `ErrorLog` 表中的 `ErrorLogID` 列中的当前标识值设置为 1。 因为该表有现有行，因此下一个插入行将使用 1 作为值，即当前标识值（而不会加上为该列定义的增量值）。  
+ 以下示例在从表中删除所有记录后，强制将 `ErrorLog` 表中的 `ErrorLogID` 列中的当前标识值设置为 1。 因为该表没有现有行，因此下一个插入行将使用 1 作为值，即当前标识值（而不会加上为该列定义的增量值）。  
   
 ```sql
 USE AdventureWorks2012;  
