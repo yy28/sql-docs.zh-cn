@@ -21,12 +21,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1cb8d3e14d7963bdcbad9bdc273f2adfaf11c0ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704759"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882358"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增强事务复制性能
   在考虑 [增强常规复制性能](enhance-general-replication-performance.md)中介绍的常规性能提示后，还需要考虑特定于事务复制的其他几个方面。  
@@ -65,22 +65,22 @@ ms.locfileid: "62704759"
   
      将代理设置为连续运行而不是创建频繁的计划（如每分钟）会提高复制性能，因为代理不必启动和停止。 将分发代理设置为连续运行后，以低滞后时间将更改传播到拓扑中连接的其他服务器。 有关详细信息，请参阅：  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[指定同步计划](../specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定同步计划](../specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>分发代理和日志读取器代理参数  
   
--   要解决意外、一次性瓶颈，请使用日志读取器代理的 -MaxCmdsInTran 参数  。  
+-   要解决意外、一次性瓶颈，请使用日志读取器代理的 -MaxCmdsInTran 参数。  
   
-     -MaxCmdsInTran 参数指定日志读取器向分发数据库写入命令时组成一个事务的语句的最大数量  。 使用此参数能够使日志读取器代理和分发代理在订阅服务器上应用命令时将发布服务器上的大事务（由许多命令组成）分成若干个较小的事务。 指定此参数可以减少分发服务器的争用问题并缩短发布服务器与订阅服务器之间的滞后时间。 由于初始事务是以较小的单元应用的，订阅服务器可以在初始事务结束之前访问一个较大的逻辑发布服务器事务的行，因而会破坏事务的原子性。 默认值为 0  ，这将保持发布服务器的事务边界。 此参数不适用于 Oracle 发布服务器。  
+     -MaxCmdsInTran 参数指定日志读取器向分发数据库写入命令时组成一个事务的语句的最大数量。 使用此参数能够使日志读取器代理和分发代理在订阅服务器上应用命令时将发布服务器上的大事务（由许多命令组成）分成若干个较小的事务。 指定此参数可以减少分发服务器的争用问题并缩短发布服务器与订阅服务器之间的滞后时间。 由于初始事务是以较小的单元应用的，订阅服务器可以在初始事务结束之前访问一个较大的逻辑发布服务器事务的行，因而会破坏事务的原子性。 默认值为 0，这将保持发布服务器的事务边界。 此参数不适用于 Oracle 发布服务器。  
   
     > [!WARNING]  
     >  `MaxCmdsInTran` 并非始终开启。 其之所以存在，是为了解决某人在单个事务中意外执行了大量 DML 操作（在整个事务进入分发数据库并持有锁之前，导致命令分发延迟等）的问题。 如果您经常遇到这种情况，则应审查应用程序并找到减少事务大小的方法。  
   
--   使用 **-SubscriptionStreams**分发代理参数。  
+-   对分发代理使用 **-SubscriptionStreams**参数。  
   
-     -SubscriptionStreams 参数可以显著提高聚合复制吞吐量  。 它使到一台订阅服务器的多个连接可以并行应用批量更改，同时在使用单线程时保持多个事务特征的存在。 如果有一个连接无法执行或提交，则所有连接将中止当前批处理，而且代理将用单独的流重试失败的批处理。 在重试阶段完成之前，订阅服务器上会存在临时事务不一致。 失败的批处理成功提交后，订阅服务器将恢复到事务一致状态。  
+     -SubscriptionStreams 参数可以显著提高聚合复制吞吐量。 它使到一台订阅服务器的多个连接可以并行应用批量更改，同时在使用单线程时保持多个事务特征的存在。 如果有一个连接无法执行或提交，则所有连接将中止当前批处理，而且代理将用单独的流重试失败的批处理。 在重试阶段完成之前，订阅服务器上会存在临时事务不一致。 失败的批处理成功提交后，订阅服务器将恢复到事务一致状态。  
   
-     可以使用 [sp_addsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) 的 **@subscriptionstreams** 来指定此代理参数的值。  
+     可以使用[sp_addsubscription &#40;&#41;transact-sql](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)的 **\@subscriptionstreams**指定此代理参数的值。  
   
 -   增大日志读取器代理的 **-ReadBatchSize** 参数的值。  
   
@@ -100,6 +100,6 @@ ms.locfileid: "62704759"
   
 -   [查看和修改复制代理命令提示符参数 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
+-   [复制代理可执行文件概念](../concepts/replication-agent-executables-concepts.md)  
   
   
