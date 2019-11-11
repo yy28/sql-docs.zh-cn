@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c21af6661a3854db731cbab82a8623c6e3e19855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb1a8021ca269cc5fde423ba9eb6903876f949fc
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500535"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593845"
 ---
 # <a name="security-report-builder"></a>安全性（报表生成器）
   报表生成器是一类设计用来与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器配合使用的报表创作客户端应用程序。 可以将报表服务器配置为在本机模式中作为独立服务器运行，也可以将报表服务器配置为在 SharePoint 集成模式中运行以支持 SharePoint 站点上的报表。  
@@ -43,7 +43,7 @@ ms.locfileid: "66500535"
   
      若要在报表服务器上查看或发布项，需将应用于与报表相关的项和操作的权限集组织到角色中。 报表服务器管理员为您分配了一个或多个角色。 例如，利用预定义的角色浏览器，可以查看报表、文件夹、模型和资源。  
   
-     如果您无法连接到或浏览到报表服务器，请与报表服务器管理员联系。 有关详细信息，请参阅 [Reporting Services Security and Protection](../../reporting-services/security/reporting-services-security-and-protection.md) 联机丛书 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
+     如果您无法连接到或浏览到报表服务器，请与报表服务器管理员联系。 有关详细信息，请参阅 [Reporting Services 安全性和保护](../../reporting-services/security/reporting-services-security-and-protection.md)。  
   
 -   在 SharePoint 集成模式中配置的报表服务器  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66500535"
   
  为了让其他人能够浏览并找到您已发布的共享项，您必须与报表服务器管理员协作，设置用于为您的用户提供访问权的文件夹组织。 创作报表和运行已发布的报表时必须具有访问权。  
   
- 有关详细信息，请参阅 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
+ 有关详细信息，请参阅以下主题：  
   
 -   [角色和权限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -88,11 +88,10 @@ ms.locfileid: "66500535"
   
  凭据不保存在报表定义中。 将从报表服务器或 SharePoint 站点和报表创作客户端上的报表中独立管理这些凭据。  
   
- 在报表设计时，凭据用于运行数据集查询和预览报表。 在运行时，凭据用于运行报表和缓存查询结果。 也可以单独缓存数据集查询结果。 设计时凭据和运行时凭据可能不同。 有关详细信息，请参阅 [在报表生成器中指定凭据](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 在报表设计时，凭据用于运行数据集查询和预览报表。 在运行时，凭据用于运行报表和缓存查询结果。 也可以单独缓存数据集查询结果。 设计时凭据和运行时凭据可能不同。 有关详细信息，请参阅 [在报表生成器中指定凭据](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
- 有关保护数据的详细信息，请参阅 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
+ 有关保护数据的详细信息，请参阅[SQL Server 数据库引擎和 AZURE SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。 
   
--   [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  有关数据源的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
@@ -108,9 +107,9 @@ ms.locfileid: "66500535"
   
 -   除非您提供了有效的值，否则不要使用基于查询参数且类型为 **Text** 的参数。 可用值列表可帮助用户只选择有效值。 如果不使用可用值列表，则无法限制用户可输入的值。  
   
--   不要使用全局 [&UserID] 来保护私有数据。 当此值作为报表参数时，可以使用 URL 访问语法在报表 URL 中指定此值。 在共享数据集的表达式中使用此值可防止数据集被缓存。 有关详细信息，请参阅 [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md) 联机丛书 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
+-   不要使用全局 [&UserID] 来保护私有数据。 当此值作为报表参数时，可以使用 URL 访问语法在报表 URL 中指定此值。 在共享数据集的表达式中使用此值可防止数据集被缓存。 有关详细信息，请参阅[URL 访问参数引用](../../reporting-services/url-access-parameter-reference.md)。  
   
- 在将项发布到报表服务器后，报表服务器管理员可通过分配基于角色的安全性或文件夹和项级别安全性来帮助保护这些项。 有关详细信息，请参阅 [Secure Reports and Resources](../../reporting-services/security/secure-reports-and-resources.md) 联机丛书 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
+ 在将项发布到报表服务器后，报表服务器管理员可通过分配基于角色的安全性或文件夹和项级别安全性来帮助保护这些项。 有关详细信息，请参阅 [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)。  
   
   
 ## <a name="see-also"></a>另请参阅  

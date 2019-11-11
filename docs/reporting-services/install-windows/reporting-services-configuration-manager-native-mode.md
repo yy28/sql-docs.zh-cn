@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6ea2a8ad189f5973b6fa3bb761be5c8596de761
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503631"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593783"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 配置管理器（本机节点）
 
@@ -60,7 +60,7 @@ ms.locfileid: "65503631"
 
 - Windows Management Instrumentation (WMI) 服务必须启用并在任何正在配置的报表服务器上运行。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器使用报表服务器 WMI 提供程序连接至本地和远程报表服务器。 如果您正在配置远程报表服务器，则计算机必须允许远程 WMI 访问。 有关详细信息，请参阅 [配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。  
 
-- 在可以连接到远程报表服务器实例并对其进行配置之前，必须使远程 Windows Management Instrumentation (WMI) 调用能够通过 Windows 防火墙。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) 配置报表服务器以进行远程管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
+- 在可以连接到远程报表服务器实例并对其进行配置之前，必须使远程 Windows Management Instrumentation (WMI) 调用能够通过 Windows 防火墙。 有关详细信息，请参阅 [配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。
 
 安装 SQL Server Reporting Services 时，将自动安装 Reporting Services 配置管理器。
 

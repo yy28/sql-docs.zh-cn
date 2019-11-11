@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58ed98edccbf1f9ccf83aef7321ffb6a3bcb442d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652335"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593558"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>创建本机模式报表服务器数据库
 
@@ -67,7 +67,7 @@ ms.locfileid: "62652335"
   
 6.  重新启动服务。  
   
-7.  打开防火墙软件并打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听的端口。 对于默认实例，此端口通常为用于 TCP/IP 连接的 1433 端口。 有关详细信息，请参阅 [联机丛书中的](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) 为数据库引擎访问配置 Windows 防火墙 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+7.  打开防火墙软件并打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听的端口。 对于默认实例，此端口通常为用于 TCP/IP 连接的 1433 端口。 有关详细信息，请参阅 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
   
 ### <a name="to-create-a-local-report-server-database"></a>创建本地报表服务器数据库  
   
@@ -111,7 +111,7 @@ ms.locfileid: "62652335"
   
 7.  检查“摘要”页上的信息以确保设置正确，然后选择“下一步”  。  
   
-8.  选择“报表服务器 URL”页上的 URL，验证连接。 必须定义这些 URL 才能进行此测试。 如果报表服务器数据库连接有效，将看到报表服务器文件夹层次结构。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 验证 Reporting Services 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+8.  选择“报表服务器 URL”页上的 URL，验证连接。 必须定义这些 URL 才能进行此测试。 如果报表服务器数据库连接有效，将看到报表服务器文件夹层次结构。 有关详细信息，请参阅 [验证 Reporting Services 安装](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
 
 ## <a name="change-database-credentials"></a>更改数据库凭据
 

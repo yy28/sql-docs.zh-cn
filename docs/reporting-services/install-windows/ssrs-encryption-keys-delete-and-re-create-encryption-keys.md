@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f2d3a496cbe2b8adda02b5d7425e49c09f44c77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513309"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593536"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 加密密钥 - 删除和重新创建加密密钥
   删除和重新创建加密密钥不属于加密密钥例行维护活动。 您可以为了响应对报表服务器的特定威胁来执行这些任务，或者当无法访问报表服务器数据库时作为最后一种解决手段来执行这些任务。  
@@ -106,7 +106,7 @@ ms.locfileid: "62513309"
   
 1.  对于每个共享数据源，必须重新键入连接字符串。  
   
-2.  对于每个使用存储的凭据的报表和共享数据源，必须重新键入用户名和密码，然后再保存。 有关详细信息，请参阅 [“联机丛书”中的](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 指定报表数据源的凭据和连接信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+2.  对于每个使用存储的凭据的报表和共享数据源，必须重新键入用户名和密码，然后再保存。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
 3.  对于每个数据驱动订阅，打开每个订阅，再重新键入订阅数据库的凭据。  
   

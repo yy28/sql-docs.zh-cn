@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5304a540e3f1af6930e982ceaff01063a7c0f432
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a2c548860065672147428c6a5b64bf4ac8be4b79
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155725"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593776"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自定义应用程序中使用 RSClientPrint 控件
   对于在 HTML 查看器中查看的报表，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控件 RSPrintClient 为其提供了客户端打印功能  。 通过该控件提供的“打印”对话框，用户可以启动打印作业、预览报表、指定要打印的页面以及更改边距  。 在客户端打印操作过程中，报表服务器通过图像 (EMF) 呈现扩展插件呈现报表，使用操作系统的打印功能创建打印作业并将作业发送到打印机。  
@@ -29,15 +29,14 @@ ms.locfileid: "70155725"
   
 -   使用该控件提高基于 Web 的报表的打印质量。 可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 兼容的任何编程语言或脚本指定对象。 该控件不用于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 窗体应用程序。  
   
--   从 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 程序文件复制 .cab 文件，并将其添加到自定义应用程序基本代码中。  
-  
+-   从 [!INCLUDE[ssRSNoVersion](../../../includes/ssrsnoversion-md.md)] 程序文件复制 .cab 文件，并将其添加到自定义应用程序基本代码中。  
+ 
 -   使用 \<OBJECT> 标记指定该控件。  
   
 -   在 OBJECT CODEBASE 属性中为 .cab 文件指定相对 URL 或完全限定的 URL。  
   
 -   为 .cab 文件指定您自己的应用程序版本信息，以跟踪在您的应用程序中使用的版本。  
-  
--   查阅有关图像 (EMF) 呈现的联机丛书主题，以了解如何呈现页面以供打印预览和输出。  
+    
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient 概述  
  该控件显示一个自定义打印对话框，它支持其他打印对话框常见的功能，包括打印预览、指定特定页和范围的页面选择、页边距和打印方向等功能。 该控件打包为 CAB 文件。 “打印”对话框中的文本已本地化为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中支持的所有语言  。 RSPrintClient ActiveX 控件使用图像呈现扩展插件 (EMF) 打印报表  。 使用的 EMF 设备信息包括：StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight 和 PageWidth。 不支持图像呈现的其他设备信息设置。  

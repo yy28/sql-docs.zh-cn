@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25c24bae55bb6d4defb2ef9330b80ddf875723e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62514416"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594077"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>配置报表服务器 URL（SSRS 配置管理器）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，URL 用于访问报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]。 在可以使用任一应用程序之前，必须分别为 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]至少配置一个 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为这两个应用程序 URL 提供了默认值，默认值在大多数部署方案中都能正常使用，包括与其他 Web 服务和应用程序的并行部署。  
@@ -33,7 +33,7 @@ ms.locfileid: "62514416"
 |主机名|TCP/IP 网络使用 IP 地址来唯一标识网络上的设备。 计算机中安装的每个网络适配器都有一个物理 IP 地址。 如果 IP 地址解析为主机标头，则可以指定主机标头。 如果要将报表服务器部署到企业网络上，则可以使用计算机的网络名称。|  
 |端口|TCP 端口是设备上的端点。 报表服务器将侦听指定端口上的请求。|  
 |虚拟目录|端口通常由多个 Web 服务或应用程序共享。 为此，报表服务器 URL 始终包括与获取请求的应用程序对应的虚拟目录。 您必须为侦听同一 IP 地址和端口的每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都指定唯一的虚拟目录名称。|  
-|SSL 设置|可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 配置为使用计算机中先前安装的现有 SSL 证书。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 配置本机模式报表服务器上的 SSL 连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|SSL 设置|可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 配置为使用计算机中先前安装的现有 SSL 证书。 有关详细信息，请参阅 [配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|  
   
 ## <a name="default-urls"></a>默认 URL  
  通过 URL 访问报表服务器或 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 时，该 URL 应包括主机名称而不是 IP 地址。 在 TCP/IP 网络上，IP 地址将解析为主机名称（或计算机的网络名称）。 如果使用了默认值配置 URL，则应可以使用将计算机名称或 localhost 指定为主机名的 URL 来访问报表服务器 Web 服务：  
@@ -57,7 +57,7 @@ ms.locfileid: "62514416"
  每个 URL 端点的权限都以独占方式授予报表服务器服务帐户。 只有此帐户有权接受定向到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的请求。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置服务标识时，创建并维护该帐户的随机访问控制列表 (DACL)。 如果更改服务帐户，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具将更新你创建的所有 URL 预留以拾取新的帐户信息。 有关详细信息，请参阅 [URL 预留语法（SSRS 配置管理器）](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)。  
   
 ## <a name="authenticating-client-requests-sent-to-a-report-server-url"></a>对发送到报表服务器 URL 的客户端请求进行身份验证  
- 默认情况下，URL 端点支持的身份验证类型为 Windows 身份验证。 这是默认的安全扩展插件。 如果要实现自定义或窗体身份验证提供程序，则必须修改报表服务器上的身份验证设置。 还可以选择更改 Windows 身份验证设置，使其与网络中使用的身份验证子系统匹配。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/security/authentication-with-the-report-server.md) 使用报表服务器进行身份验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 默认情况下，URL 端点支持的身份验证类型为 Windows 身份验证。 这是默认的安全扩展插件。 如果要实现自定义或窗体身份验证提供程序，则必须修改报表服务器上的身份验证设置。 还可以选择更改 Windows 身份验证设置，使其与网络中使用的身份验证子系统匹配。 有关详细信息，请参阅 [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
