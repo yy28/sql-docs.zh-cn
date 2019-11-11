@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f3784eb3a95b3da02dce2cdecc8c5db2faeaac8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94a7ad079b94d9bc34e5b0e7f7ad55393d8f5de5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082814"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638059"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>查找搜索属性的属性集 GUID 和属性整数 ID
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68082814"
 |Authors|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|给定项的一个或多个创作者。|  
 |Tags|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|分配给该项的一组关键字（也称为标记）。|  
 |类型|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|假设的文件类型，基于其规范类型。|  
-|Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|项的标题。 例如，文档的标题、邮件的主题、照片的题注或音乐曲目的名称。|  
+|标题|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|项的标题。 例如，文档的标题、邮件的主题、照片的题注或音乐曲目的名称。|  
   
  为了提倡在文件格式之间保持一致性，Microsoft 为几类文档确定了部分常用的高优先级文档属性。 其中包括通信、联系人、文档、音乐文件、图片和视频。 有关每个类别排名靠前的属性的详细信息，请参阅 Windows 搜索文档中的 [system-defined properties for custom file formats](https://go.microsoft.com/fwlink/?LinkId=144336) （自定义文件格式的系统定义属性）。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68082814"
   
  从命令提示符运行 **filtdump.exe** 并提供一个参数。 此参数是具有特定文件类型的单独文件的名称，该文件类型是安装 IFilter 所针对的目标文件类型。 该实用工具显示文档中由 IFilter 发现的所有属性的列表及其属性集 GUID、整数标识符以及其他信息。  
   
- 有关安装此软件的信息，请参阅 [Microsoft Windows SDK for Windows 7 and .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980)（用于 Windows 7 和 .NET Framework 4 的 Microsoft Windows SDK）。 在下载并安装该 SDK 后，请在下列文件夹中查找 filtdump.exe 实用工具。  
+ 有关安装此软件的信息，请参阅 [Microsoft Windows SDK for Windows 7 and .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=8279)（用于 Windows 7 和 .NET Framework 4 的 Microsoft Windows SDK）。 在下载并安装该 SDK 后，请在下列文件夹中查找 filtdump.exe 实用工具。  
   
 -   对于 64 位版本，请查看 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`。  
   

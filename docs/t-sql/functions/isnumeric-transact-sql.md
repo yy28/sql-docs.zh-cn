@@ -23,19 +23,19 @@ ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4771c6d611292157caf8247288f36648c8ad5179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75693068e1aa030f9027b1918becd27e8ec9cc5c
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109390"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843614"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   确定表达式是否为有效的数值类型。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -89,7 +89,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

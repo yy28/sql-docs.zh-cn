@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f7edcc2212ab54765d92cc119dfd86322ae0d523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e2f103303a90837a899330952b6f69544b4c496
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140944"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659542"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>有关创建适用于 SQL Server 的自定义静态代码分析规则程序集的演练
 此演练演示创建 SQL Server 代码分析规则的步骤。 在此演练中创建的规则用于避免存储过程、触发器和函数中的 WAITFOR DELAY 语句。  
@@ -67,7 +67,7 @@ ms.locfileid: "68140944"
 ## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>创建自定义代码分析规则支持类。  
 在创建规则本身的类之前，将为项目添加访问者类和属性类。 这些类对于创建其他自定义规则可能会很有用。  
   
-第一种必须定义的类为从 [TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) 派生的 WaitForDelayVisitor 类。 此类可访问模型中的 WAITFOR DELAY 语句。 访问者类使用 SQL Server 提供的 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API。 在此 API 中，Transact\-SQL 代码表示为抽象语法树 (AST)，如果希望查找特定语法对象（例如 WAITFORDELAY 语句），访问者类会很有用。 使用对象模型查找语法对象可能会很困难，因为它们没有与特定对象属性或关系关联，而使用访问者模式和 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API 查找它们就很容易。  
+第一种必须定义的类为从 [TSqlConcreteFragmentVisitor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor) 派生的 WaitForDelayVisitor 类。 此类可访问模型中的 WAITFOR DELAY 语句。 访问者类使用 SQL Server 提供的 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API。 在此 API 中，Transact\-SQL 代码表示为抽象语法树 (AST)，如果希望查找特定语法对象（例如 WAITFORDELAY 语句），访问者类会很有用。 使用对象模型查找语法对象可能会很困难，因为它们没有与特定对象属性或关系关联，而使用访问者模式和 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API 查找它们就很容易。  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>定义 WaitForDelayVisitor 类  
   

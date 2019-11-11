@@ -22,12 +22,12 @@ ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cca069fe3bb0aa0f489c13c022aeeebbd08db053
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 0ed31eae6817216a694337ed5bc606dcba52fb89
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653790"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844509"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "69653790"
 > [!NOTE]
 > 若要返回字符串表达式中的字符数，请使用 [LEN](../../t-sql/functions/len-transact-sql.md) 函数。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -85,4 +85,4 @@ GO
 [LEN (Transact-SQL)](../../t-sql/functions/len-transact-sql.md)  
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
-[系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)

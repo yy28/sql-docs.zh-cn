@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c8343a24f892c5b0058f1bd1a7c001221c8ff65f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c5c52edfde8a0cde06ec5a0f2f154df06b6b6c12
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940119"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843720"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回此会话的数据库的默认为 Null 性。  
   
- ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -79,6 +79,6 @@ GO
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

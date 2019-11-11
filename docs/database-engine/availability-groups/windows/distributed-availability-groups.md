@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ca8d93135a0034300bac4f5f5542350df25e866
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ee844af9f851d1dab1d77c54dfdd04fadd4d3c06
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049848"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706227"
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "73049848"
 
 ![分布式可用性组及其数据移动](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 
-使 AG 2 的主要副本接受插入、更新和删除的唯一方法是从 AG 1 手动故障转移分布式可用性组。 在前面的图中，因为 AG 1 包含数据库的可写入副本，所以发出故障转移将使 AG 2 成为可以处理插入、更新和删除的可用性组。 有关如何将一个分布式可用性组故障转移到另一个分布式可用性组的信息，请参阅[故障转移到次要可用性组]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)。
+使 AG 2 的主要副本接受插入、更新和删除的唯一方法是从 AG 1 手动故障转移分布式可用性组。 在前面的图中，因为 AG 1 包含数据库的可写入副本，所以发出故障转移将使 AG 2 成为可以处理插入、更新和删除的可用性组。 有关如何将一个分布式可用性组故障转移到另一个分布式可用性组的信息，请参阅[故障转移到次要可用性组](configure-distributed-availability-groups.md#failover)。
 
 > [!NOTE]
 > SQL Server 2016 中的分布式可用性组支持通过使用选项 FORCE_FAILOVER_ALLOW_DATA_LOSS 仅从一个可用性组故障转移到另一个可用性组。

@@ -1,6 +1,5 @@
 ---
-title: 在 Windows 上安装 SQL Server 机器学习服务（Python、R）
-titleSuffix: ''
+title: 在 Windows 上安装
 description: 本文介绍如何在 Windows 上安装 SQL Server 机器学习服务。 可使用机器学习服务在数据库中执行 Python 和 R 脚本。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 448bb460d3cb3d041fd44b582a383037fecb98d4
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 8d51c147cfe5895356f8af270f62443643caa8f1
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532634"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727652"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务（Python 和 R）
 

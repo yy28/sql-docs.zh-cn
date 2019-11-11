@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, workload group create
 - workload groups [SQL Server], create
-ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5b43793d8d43ca56d8001b986ecdb02af4b463e1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 237ec09347ab139aabcc9f475f5e3b64aba0f054
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903956"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73633005"
 ---
 # <a name="create-a-workload-group"></a>创建工作负荷组
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建工作负荷组。  
@@ -30,17 +30,20 @@ ms.locfileid: "72903956"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
+###  <a name="LimitationsRestrictions"></a> 限制和局限
+
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
  对非对齐的分区表创建索引所占用的内存与涉及的分区数成正比。 如果所需的内存总量超过工作负荷组设置为每个查询设定的限制 (REQUEST_MAX_MEMORY_GRANT_PERCENT)，则这种索引创建可能会失败。 由于默认工作负荷组允许查询超过每个查询的限制，并在开始时使用所需的最低内存以便与 SQL Server 2005 保持兼容，因此，如果默认资源池配置了足够多的内存总量以运行此类查询，则用户或许能够在默认工作负荷组中运行相同的索引创建。  
   
  允许索引创建操作使用比最初授予的工作区内存多的工作区内存，以便提高性能。 这个特别处理由资源调控器支持，然而，最初授予及任何其他内存授予都受工作负荷组和资源池设置的限制。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="Permissions"></a> 权限
+
  创建工作负荷组需要 CONTROL SERVER 权限。  
   
-##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 创建工作负荷组  
+##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 创建工作负荷组
+
  **使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至其中包含要修改的工作负荷组的资源池。  
@@ -64,10 +67,11 @@ ms.locfileid: "72903956"
   
 2.  运行 ALTER RESOURCE GOVERNOR RECONFIGURE 语句。  
   
-### <a name="example-transact-sql"></a>示例 (Transact-SQL)  
+### <a name="example-transact-sql"></a>示例 (Transact-SQL)
+
  以下示例创建一个名为 `groupAdhoc` 的工作负荷组，该组位于名为 `poolAdhoc`的资源池中。  
   
-```  
+```sql
 CREATE WORKLOAD GROUP groupAdhoc  
 USING poolAdhoc;  
 GO  
@@ -75,7 +79,8 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [创建资源池](../../relational-databases/resource-governor/create-a-resource-pool.md)   

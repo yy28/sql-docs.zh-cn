@@ -12,12 +12,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c6bfd48773c066ffc29600156475495c0c2a6521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cac6ecd59b270feecea3590c33c9dc8c41f1edcc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021141"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638031"
 ---
 # <a name="install-and-configure-semantic-search"></a>安装和配置语义搜索
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,6 +144,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>安装对较新文档类型的可选支持  
   
 ###  <a name="office"></a> 为 Microsoft Office 和其他 Microsoft 文档类型安装最新筛选器  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装最新的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 断字符和词干分析器，但是不为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 文档和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 文档类型安装最新的筛选器。 要为使用最新版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 应用程序创建的文档编制索引，必须安装这些筛选器。 若要下载最新的筛选器，请参阅 [Microsoft Office 2010 Filter Packs](https://go.microsoft.com/fwlink/?LinkId=218293)。 （对于 Office 2013 或 Office 2016，不会显示为筛选器包版本。）
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装最新的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 断字符和词干分析器，但是不为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 文档和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 文档类型安装最新的筛选器。 要为使用最新版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 应用程序创建的文档编制索引，必须安装这些筛选器。 若要下载最新的筛选器，请参阅 [Microsoft Office 2010 Filter Packs](https://www.microsoft.com/download/details.aspx?id=17062)。 （对于 Office 2013 或 Office 2016，不会显示为筛选器包版本。）
   
   

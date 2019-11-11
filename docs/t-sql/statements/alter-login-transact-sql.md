@@ -1,7 +1,7 @@
 ---
 title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 11/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,18 +24,18 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3fb9ce4696ffea2c345eeaeca769dda6548a9ebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 35fc3fb65347a7e7459df18495294a2491e270b4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071308"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660808"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
 更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的属性。
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="click-a-product"></a>单击一个产品！
 
@@ -468,8 +468,8 @@ ALTER LOGIN login_name
   | DROP CREDENTIAL credential_name
 ```
 
-> [!IMPORTANT]
-> SQL 数据库托管实例的 Azure AD 登录名当前为公共预览版  。
+> [!NOTE]
+> 创建之后用于托管实例的 Azure AD 管理员功能已更改。 有关详细信息，请参阅[用于 MI 的新 Azure AD 管理员功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 ```
 -- Syntax for Azure SQL Database managed instance using Azure AD logins

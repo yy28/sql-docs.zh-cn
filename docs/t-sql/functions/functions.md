@@ -20,12 +20,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cd604a4f25783e7621f348ea532677cda3da433
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940126"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843714"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 数据库函数有哪些？
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "67940126"
 |[元数据函数](metadata-functions-transact-sql.md)|返回有关数据库和数据库对象的信息。|  
 |[安全函数](security-functions-transact-sql.md)|返回有关用户和角色的信息。|  
 |[字符串函数](string-functions-transact-sql.md)|对字符串（char 或 varchar）输入值执行运算，然后返回一个字符串或数字值   。|  
-|[系统函数](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|执行运算后返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中有关值、对象和设置的信息。|  
+|[系统函数](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|执行运算后返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中有关值、对象和设置的信息。|  
 |[系统统计函数](system-statistical-functions-transact-sql.md)|返回系统的统计信息。|  
 |[文本和图像函数](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|对文本或图像输入值或列执行运算，然后返回有关值的信息。|  
   

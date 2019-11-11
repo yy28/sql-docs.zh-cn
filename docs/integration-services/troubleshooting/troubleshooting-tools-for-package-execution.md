@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2c2dc7aac7ae6eb86b66a6bbb371f11dc6372cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 660ac899b1cf649bcc431bf10e2f9b18ca12cbc4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295076"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637943"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>对包执行进行故障排除的工具
 
@@ -85,7 +85,7 @@ ms.locfileid: "71295076"
   
     3.  **考虑捕获行计数数据**。 考虑另行创建一个表，用于存储行计数信息。其中，每个包执行实例均由其 ExecutionID 标识。 使用行计数转换在数据流的关键点将行计数保存到一系列变量中。 数据流结束后，请使用执行 SQL 任务将该系列值插入到表的行中，供以后分析和报告。  
   
-     有关此方法的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮书 [Project REAL：Business Intelligence ETL 设计实践](https://go.microsoft.com/fwlink/?LinkId=96602)中的“ETL 审核和日志记录”一节。  
+     有关此方法的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮书 [Project REAL：Business Intelligence ETL 设计实践](https://www.microsoft.com/download/details.aspx?id=14582)中的“ETL 审核和日志记录”一节。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>使用调试转储文件对包执行进行故障排除  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，可以创建提供包执行信息的调试转储文件。 有关详细信息，请参阅 [生成包执行的转储文件](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  

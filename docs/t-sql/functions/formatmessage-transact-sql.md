@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4f5a70331df04e048eb0f472299621e89b432712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c9048efd86a7a4a993a9fff6bcab7f9058144f7e
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952301"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843756"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   根据 sys.messages 中现有的消息或提供的字符串构造一条消息。 FORMATMESSAGE 的功能与 RAISERROR 语句的功能类似。 但是，RAISERROR 会立即打印消息，而 FORMATMESSAGE 则返回供进一步处理的格式化消息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -120,6 +120,6 @@ SELECT FORMATMESSAGE('Hello %-20s!', 'TEST');
  [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
- [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
   
   

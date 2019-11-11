@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e9ad22c9490c04906dafcccb74d9dd16f9496852
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21b49eb9638b4651ff52c6515f6e5f62177fc504
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040368"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843444"
 ---
-# <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
+# <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函数返回当前会话的应用程序名称（如果应用程序设置了该名称值）。
@@ -36,7 +36,7 @@ ms.locfileid: "68040368"
 > [!IMPORTANT]  
 >  客户端提供了应用程序名称，且 `APP_NAME` 未通过任何方式验证应用程序名称值。 请不要使用 `APP_NAME` 作为安全检查的一部分。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ APP_NAME  ( )
 ## <a name="remarks"></a>Remarks  
 使用 `APP_NAME` 可区分不同的应用程序，这可作为对这些应用程序执行不同操作的一种方式。 例如，`APP_NAME` 可以区分不同的应用程序，允许每个应用程序使用不同的日期格式。 它还可允许向特定应用程序返回信息性消息。
   
-要在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中设置应用程序名称，请单击“连接到数据库引擎”对话框中的“选项”。 在“其他连接参数”选项卡上，提供 app 属性，格式为 `;app='application_name'`
+要在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中设置应用程序名称，请单击“连接到数据库引擎”对话框中的“选项”   。 在“其他连接参数”选项卡上，提供 app 属性，格式为 `;app='application_name'`  
   
 ## <a name="example"></a>示例  
 此示例检查启动此进程的客户端应用程序是否为 `SQL Server Management Studio` 会话。 然后，它提供 US 或 ANSI 格式的日期值。
@@ -67,7 +67,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
 [函数](../../t-sql/functions/functions.md)
   
   

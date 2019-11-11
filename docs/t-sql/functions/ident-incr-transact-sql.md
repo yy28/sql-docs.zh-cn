@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6edd1cb219f7250a6f9e5671efdb076c6e0a0349
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 24c4b8af65830f8cc3a4a4bb2c4084ed4718515b
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969471"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843678"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 返回在创建表或视图的标识列时指定的递增值。  
   
-![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -92,7 +92,7 @@ Production          BillOfMaterials                    1
   
 ## <a name="see-also"></a>另请参阅  
  [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
  [IDENT_SEED (Transact-SQL)](../../t-sql/functions/ident-seed-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   

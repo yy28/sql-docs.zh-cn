@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c39d56ec338be798f9e9dd5589d3a63a65b95d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99cb9cd17ff26308c2eeb96519dad9a95810e2d1
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024411"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843667"
 ---
-# <a name="hostname-transact-sql"></a>HOST_NAME (Transact-SQL)
+# <a name="host_name-transact-sql"></a>HOST_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   返回工作站名。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,6 +66,6 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
- [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

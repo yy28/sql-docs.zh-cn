@@ -24,14 +24,14 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e407ab5ac5e69c78d19a1022210ca8da5e470d64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2f8a3f4dbdbaa9cbd2cf1c99a86ad6f3573ab11
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927596"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844339"
 ---
-# <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
+# <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   根据指定的标识号返回数据库用户名。  
@@ -46,17 +46,17 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>参数  
  *id*  
- 与数据库用户关联的标识号。 id 的数据类型为 int。需要使用括号。  
+ 与数据库用户关联的标识号。 id 的数据类型为 int   。需要使用括号。  
   
 ## <a name="return-types"></a>返回类型  
- **nvarchar(256)**  
+ **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- 省略 id 时，则假定为当前上下文中的当前用户。 如果此参数包含词 NULL，将返回 NULL。 如果在 EXECUTE AS 语句之后调用 USER_NAME，但不指定 id，则 USER_NAME 将返回模拟用户的名称。 如果 Windows 主体通过某组中的成员身份访问数据库，则 USER_NAME 将返回 Windows 主体的名称，而不是该组的名称。  
+ 省略 id 时，则假定为当前上下文中的当前用户  。 如果此参数包含词 NULL，将返回 NULL。 如果在 EXECUTE AS 语句之后调用 USER_NAME，但不指定 id，则 USER_NAME 将返回模拟用户的名称  。 如果 Windows 主体通过某组中的成员身份访问数据库，则 USER_NAME 将返回 Windows 主体的名称，而不是该组的名称。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-username"></a>A. 使用 USER_NAME  
+### <a name="a-using-user_name"></a>A. 使用 USER_NAME  
  以下示例将返回用户 ID 为 `13` 的用户名。  
   
 ```  
@@ -64,7 +64,7 @@ SELECT USER_NAME(13);
 GO  
 ```  
   
-### <a name="b-using-username-without-an-id"></a>B. 使用不指定 ID 的 USER_NAME  
+### <a name="b-using-user_name-without-an-id"></a>B. 使用不指定 ID 的 USER_NAME  
  以下示例在不指定 ID 的情况下查找当前用户的名称。  
   
 ```  
@@ -81,7 +81,7 @@ dbo
 (1 row(s) affected)
 ```  
   
-### <a name="c-using-username-in-the-where-clause"></a>C. 在 WHERE 子句中使用 USER_NAME  
+### <a name="c-using-user_name-in-the-where-clause"></a>C. 在 WHERE 子句中使用 USER_NAME  
  以下示例在 `sysusers` 中查找行，该行的名称与将 `USER_NAME` 系统函数应用于用户标识号 `1` 而得出的结果相同。  
   
 ```  
@@ -99,7 +99,7 @@ dbo
 (1 row(s) affected)
 ```  
   
-### <a name="d-calling-username-during-impersonation-with-execute-as"></a>D. 在使用 EXECUTE AS 的模拟过程中调用 USER_NAME  
+### <a name="d-calling-user_name-during-impersonation-with-execute-as"></a>D. 在使用 EXECUTE AS 的模拟过程中调用 USER_NAME  
  以下示例显示模拟过程中 `USER_NAME` 的行为方式。  
   
 ```  
@@ -125,7 +125,7 @@ DBO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-username-without-an-id"></a>E. 使用不指定 ID 的 USER_NAME  
+### <a name="e-using-user_name-without-an-id"></a>E. 使用不指定 ID 的 USER_NAME  
  以下示例在不指定 ID 的情况下查找当前用户的名称。  
   
 ```  
@@ -139,7 +139,7 @@ SELECT USER_NAME();
 User7                              
 ```  
   
-### <a name="f-using-username-in-the-where-clause"></a>F. 在 WHERE 子句中使用 USER_NAME  
+### <a name="f-using-user_name-in-the-where-clause"></a>F. 在 WHERE 子句中使用 USER_NAME  
  以下示例在 `sysusers` 中查找行，该行的名称与将 `USER_NAME` 系统函数应用于用户标识号 `1` 而得出的结果相同。  
   
 ```  
@@ -160,6 +160,6 @@ User7
  [CURRENT_TIMESTAMP (Transact-SQL)](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER (Transact-SQL)](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER (Transact-SQL)](../../t-sql/functions/session-user-transact-sql.md)   
- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)  
   

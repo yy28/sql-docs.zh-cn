@@ -1,5 +1,5 @@
 ---
-title: 标识 Stretch Database 的数据库和表 | Microsoft Docs
+title: 标识数据库和表
 ms.date: 10/30/2017
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -12,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 304aba1c33dcfd46a2dbfb27e8eeefff8c0f6436
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091852"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843749"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>使用数据迁移助手标识 Stretch Database 的数据库和表
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

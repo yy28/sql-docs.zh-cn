@@ -23,19 +23,19 @@ ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0cdead9d5b6f84072dae454eced8301add4b3c31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46bb30958394b2196c5521620cf503f4558a6f82
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927612"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844322"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   当未指定默认值时，允许将系统为当前用户的数据库用户名提供的值插入表内。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ USER
 ```  
   
 ## <a name="return-types"></a>返回类型  
- **char**  
+ **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
  USER 提供与 USER_NAME 系统函数相同的功能。  

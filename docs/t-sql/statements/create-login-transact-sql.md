@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 11/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b67218c4b2d48b3a99ad896105a2069f5d8bcde
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4cda96435d1b6f3732446295d17b360033e4a17f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594489"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659361"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -438,6 +438,9 @@ SID =  sid  用于重新创建登录名。 仅适用于 SQL Server 身份验证�
 - 必须是用于 Azure SQL 托管实例的同一目录中的 Azure AD 成员。
 
 ## <a name="after-creating-a-login"></a>创建登录后
+
+> [!NOTE]
+> 创建之后用于托管实例的 Azure AD 管理员功能已更改。 有关详细信息，请参阅[用于 MI 的新 Azure AD 管理员功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 创建登录名后，该登录名可以连接到 SQL 数据库托管实例，但只具有授予 public  角色的权限。 考虑执行以下部分活动。
 

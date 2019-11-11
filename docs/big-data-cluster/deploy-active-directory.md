@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b2f2135c410e4884dbf45595ad022a668b6fd709
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: eab7fa5a123f6370686cae5feaf36d458748ea7a
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532341"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844313"
 ---
 # <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -155,7 +155,7 @@ BDC 域服务帐户 (DSA) 需要能够在 OU 中创建用户、组和计算机�
 
 ```bash
 export DOMAIN_SERVICE_ACCOUNT_USERNAME=<AD principal account name>
-export DOMAIN_SERVICE_ACCOUNT_USERNAME=<AD principal password>
+export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 ```
 
 ## <a name="provide-security-and-endpoint-parameters"></a>提供安全参数和终结点参数

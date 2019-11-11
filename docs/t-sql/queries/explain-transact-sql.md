@@ -10,12 +10,12 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: da38a5171694f1f563e67d4be6a852527fd0377b
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: af27b58b2e4dd1f5e5b743e4a905dfee8cebc497
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542188"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659421"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
@@ -80,7 +80,6 @@ WITH_RECOMMENDATIONS  （预览）
 |操作类型|内容|示例|  
 |--------------------|-------------|-------------|  
 |BROADCAST_MOVE、DISTRIBUTE_REPLICATED_TABLE_MOVE、MASTER_TABLE_MOVE、PARTITION_MOVE、SHUFFLE_MOVE 和 TRIM_MOVE|具有这些属性的 `<operation_cost>` 元素。 值仅反映本地操作：<br /><br /> -   cost 是本地运算符成本，显示要运行的操作的预估时间（以毫秒为单位）  。<br />-   accumulative_cost 是计划中看到的所有操作的总预估时间，包括并行操作的总值，以毫秒为单位  。<br />-   average_rowsize 是操作期间行检索和传递的预估平均行大小（以字节为单位）  。<br />-   output_rows 是输出（节点）基数，显示输出行数  。<br /><br /> `<location>`设置用户帐户 ：操作将在其中发生的节点或分发。 选项有：“Control”、“ComputeNode”、“AllComputeNodes”、“AllDistributions”、“SubsetDistributions”、“Distribution”和“SubsetNodes”。<br /><br /> `<source_statement>`设置用户帐户 ：随机移动的源数据。<br /><br /> `<destination_table>`设置用户帐户 ：数据将移至其中的内部临时表。<br /><br /> `<shuffle_columns>`设置用户帐户 ：（仅适用于 SHUFFLE_MOVE 操作）。 将用作临时表分布列的一个或多个列。|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
-|CopyOperation|`<operation_cost>`设置用户帐户 ：请参阅上文的 `<operation_cost>`。<br /><br /> `<DestinationCatalog>`设置用户帐户 ：目标节点。<br /><br /> `<DestinationSchema>`设置用户帐户 ：DestinationCatalog 中的目标架构。<br /><br /> `<DestinationTableName>`设置用户帐户 ：目标表的名称或“TableName”。<br /><br /> `<DestinationDatasource>`设置用户帐户 ：目标数据源的名称或连接信息。<br /><br /> `<Username>` 和 `<Password>`：这些字段表示可能需要目标的用户名和密码。<br /><br /> `<BatchSize>`设置用户帐户 ：复制操作批大小。<br /><br /> `<SelectStatement>`设置用户帐户 ：用于执行复制的 select 语句。<br /><br /> `<distribution>`设置用户帐户 ：在其中执行复制的分发。|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
 |MetaDataCreate_Operation|`<source_table>`设置用户帐户 ：用于操作的源表。<br /><br /> `<destination_table>`设置用户帐户 ：用于操作的目标表。|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
 |ON|`<location>`设置用户帐户 ：请参阅上文的 `<location>`。<br /><br /> `<sql_operation>`设置用户帐户 ：标识将在节点执行的 SQL 命令。|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
 |RemoteOnOperation|`<DestinationCatalog>`设置用户帐户 ：目标目录。<br /><br /> `<DestinationSchema>`设置用户帐户 ：DestinationCatalog 中的目标架构。<br /><br /> `<DestinationTableName>`设置用户帐户 ：目标表的名称或“TableName”。<br /><br /> `<DestinationDatasource>`设置用户帐户 ：目标数据源的名称。<br /><br /> `<Username>` 和 `<Password>`：这些字段表示可能需要目标的用户名和密码。<br /><br /> `<CreateStatement>`设置用户帐户 ：目标数据库的表创建语句。|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  

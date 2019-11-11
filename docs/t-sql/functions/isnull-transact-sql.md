@@ -22,19 +22,19 @@ ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 866c2eaadb8cd946fb7a7b9b2ffdd46a81ec9e27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b49310a633c822f8c57f66cc36951dfebe2c0707
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109432"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843638"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 使用指定的替换值替换 NULL。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -183,7 +183,7 @@ WHERE Weight IS NULL;
 ## <a name="see-also"></a>另请参阅  
  [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [IS NULL (Transact-SQL)](../../t-sql/queries/is-null-transact-sql.md)   
- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
  [COALESCE (Transact-SQL)](../../t-sql/language-elements/coalesce-transact-sql.md)  
   

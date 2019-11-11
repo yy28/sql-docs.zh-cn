@@ -20,19 +20,19 @@ ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 901203c7695add9fb06b03944ac0dbf1b5db90e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 83f9735ca8a40997e88430810cf4119c060f0c36
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040137"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844494"
 ---
 # <a name="ceiling-transact-sql"></a>CEILING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函数返回大于或等于指定数值表达式的最小整数。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -65,6 +65,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
   
   

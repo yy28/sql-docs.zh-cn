@@ -19,19 +19,19 @@ ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bf3ef8a31946379631dfb0ddc706235aa11bce8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f9324ee324188fd8cf70f97280b5e613ffd1178
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914921"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843645"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  创建 uniqueidentifier 类型的唯一值。  
+  创建 uniqueidentifier 类型的唯一值  。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ NEWID ( )
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. 对变量使用 NEWID 函数  
- 以下示例使用 `NEWID()` 对声明为 uniqueidentifier 数据类型的变量赋值。 在测试 uniqueidentifier 数据类型变量的值之前，先打印该值。  
+ 以下示例使用 `NEWID()` 对声明为 uniqueidentifier 数据类型的变量赋值  。 在测试 uniqueidentifier 数据类型变量的值之前，先打印该值  。  
   
 ```  
 -- Creating a local variable with DECLARE/SET syntax.  
@@ -69,9 +69,9 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>B. 在 CREATE TABLE 语句中使用 NEWID  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
- 以下示例创建数据类型为 uniqueidentifier 的 `cust` 表，并使用 NEWID 作为默认值填充该表。 为 `NEWID()` 赋予默认值时，每个新行和现有行均对 `CustomerID` 列具有唯一值。  
+ 以下示例创建数据类型为 uniqueidentifier 的 `cust` 表，并使用 NEWID 作为默认值填充该表  。 为 `NEWID()` 赋予默认值时，每个新行和现有行均对 `CustomerID` 列具有唯一值。  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  
@@ -109,7 +109,7 @@ GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>C. 使用 uniqueidentifier 和变量赋值  
- 以下示例将名为 `@myid` 的局部变量声明为 uniqueidentifier 数据类型的变量。 然后使用 `SET` 语句为该变量赋值。  
+ 以下示例将名为 `@myid` 的局部变量声明为 uniqueidentifier 数据类型的变量  。 然后使用 `SET` 语句为该变量赋值。  
   
 ```  
 DECLARE @myid uniqueidentifier ;  
@@ -124,7 +124,7 @@ GO
  [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [uniqueidentifier (Transact-SQL)](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
  [序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   

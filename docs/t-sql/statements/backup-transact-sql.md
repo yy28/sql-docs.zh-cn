@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142859"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659096"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1021,8 +1021,6 @@ COPY_ONLY 指定备份为“仅复制备份”  ，该备份不影响正常的�
 
 默认行为是不进行备份压缩。 但此默认设置可通过设置 [backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) 服务器配置选项进行更改。 有关查看此选项的当前值的信息，请参阅[查看或更改服务器属性面板](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)。
 
-有关对支持[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 的数据库使用备份压缩的信息，请参阅[备注](#general-remarks)部分。
-
 COMPRESSION 显式启用备份压缩。
 
 NO_COMPRESSION 显式禁用备份压缩。
@@ -1050,7 +1048,6 @@ MAXTRANSFERSIZE **=** { maxtransfersize   |  **@** maxtransfersize\_variable  } 
 
 > [!NOTE]
 > 对于具有单个数据文件且支持[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 的数据库，默认 `MAXTRANSFERSIZE` 为 65536 (64 KB)。 对于非 TDE 加密数据库，使用备份到 DISK 时，默认 `MAXTRANSFERSIZE` 为 1048576 (1 MB)，使用 VDI 或 TAPE.时为 65536 (64 KB)。
-> 有关对 TDE 加密数据库使用备份压缩的详细信息，请参阅[备注](#general-remarks)部分。
 
 **错误管理选项**
 

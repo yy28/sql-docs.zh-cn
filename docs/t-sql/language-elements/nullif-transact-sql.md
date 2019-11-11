@@ -21,19 +21,19 @@ ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8876fe591eadb0946b3f54cdf52644b39c040089
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28c331cd810e905a14fa17d6e212fee331da74f9
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121981"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844379"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   如果两个指定的表达式相等，则返回空值。 例如，`SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` 为第一列（4 和 4）返回 NULL，因为两个输入值相同。 第二列返回第一个值 (5)，因为两个输入值不同。 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,9 +46,9 @@ NULLIF ( expression , expression )
  为任意有效的标量[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 返回类型与第一个 expression 相同。  
+ 返回类型与第一个 expression 相同  。  
   
- 如果两个表达式不相等，则 NULLIF 返回第一个 expression 的值。 如果表达式相等，则 NULLIF 返回第一个 expression 类型的空值。  
+ 如果两个表达式不相等，则 NULLIF 返回第一个 expression 的值  。 如果表达式相等，则 NULLIF 返回第一个 expression 类型的空值  。  
   
 ## <a name="remarks"></a>Remarks  
  如果两个表达式相等且结果表达式为 NULL，则 NULLIF 等价于 CASE 搜索表达式。  
@@ -147,7 +147,7 @@ FROM budgets;
 ## <a name="see-also"></a>另请参阅  
  [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
  [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   
 

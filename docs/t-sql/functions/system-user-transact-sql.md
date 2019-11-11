@@ -26,19 +26,19 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 747ea38576b52b6a3011fd4f0b197a2b7222bcd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 188248ea2a09875e71905878a9d9f85c3ebfcd78
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117498"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843574"
 ---
-# <a name="systemuser-transact-sql"></a>SYSTEM_USER (Transact-SQL)
+# <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   当未指定默认值时，允许将系统为当前登录名提供的值插入表中。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ SYSTEM_USER
 ```  
   
 ## <a name="return-types"></a>返回类型  
- **nchar**  
+ **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
  您可以在 CREATE TABLE 和 ALTER TABLE 语句中将 SYSTEM_USER 函数与 DEFAULT 约束一起使用。 还可以将此函数用作任意标准函数。  
@@ -60,7 +60,7 @@ SYSTEM_USER
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-systemuser-to-return-the-current-system-user-name"></a>A. 使用 SYSTEM_USER 返回当前系统用户名  
+### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>A. 使用 SYSTEM_USER 返回当前系统用户名  
  以下示例声明变量 `char`，在该变量中存储 `SYSTEM_USER` 的当前值，然后打印该变量中存储的值。  
   
 ```  
@@ -79,7 +79,7 @@ The current system user is: WillisJo
 (1 row(s) affected)
  ```  
   
-### <a name="b-using-systemuser-with-default-constraints"></a>B. 将 SYSTEM_USER 与 DEFAULT 约束一起使用  
+### <a name="b-using-system_user-with-default-constraints"></a>B. 将 SYSTEM_USER 与 DEFAULT 约束一起使用  
  以下示例创建一个表，其中 `SYSTEM_USER` 作为 `DEFAULT` 列的 `SRep_tracking_user` 约束。  
   
 ```  
@@ -129,7 +129,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C:使用 SYSTEM_USER 返回当前系统用户名  
+### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C:使用 SYSTEM_USER 返回当前系统用户名  
  以下示例返回 `SYSTEM_USER` 的当前值。  
   
 ```  
@@ -142,7 +142,7 @@ SELECT SYSTEM_USER;
  [CURRENT_TIMESTAMP (Transact-SQL)](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER (Transact-SQL)](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER (Transact-SQL)](../../t-sql/functions/session-user-transact-sql.md)   
- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [USER (Transact-SQL)](../../t-sql/functions/user-transact-sql.md)  
   
   

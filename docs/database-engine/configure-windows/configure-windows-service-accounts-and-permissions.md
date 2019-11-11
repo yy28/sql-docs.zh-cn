@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e6215199f10eeec216d1a701755b49b12f576a69
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ed0565a9cf5a5eecaff143f9a4583a763910d3d8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893166"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660280"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>配置 Windows 服务帐户和权限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -282,7 +282,7 @@ ms.locfileid: "68893166"
  在安装或升级期间，系统可能会将服务或服务 SID 的服务帐户添加为服务组的成员，具体取决于服务配置。
   
 ###  <a name="Windows"></a> Windows 特权和权限  
- 为启动服务分配的帐户需要对于服务的 **启动、停止和暂停权限** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将自动分配此权限。  首先，安装远程服务器管理工具 (RSAT)。 请参阅 [Remote Server Administration Tools for Windows 7](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)（Windows 7 的远程服务器管理工具）。
+ 为启动服务分配的帐户需要对于服务的 **启动、停止和暂停权限** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将自动分配此权限。  首先，安装远程服务器管理工具 (RSAT)。 请参阅 [Remote Server Administration Tools for Windows 7](https://www.microsoft.com/download/details.aspx?id=7887)（Windows 7 的远程服务器管理工具）。
   
  下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用的 Per-service SID 或本地 Windows 组请求的权限。
   

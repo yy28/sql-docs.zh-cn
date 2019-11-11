@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 552d4b6094a4cc890124399039ee61ba775ec715
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71293133"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637958"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
 
@@ -151,7 +151,7 @@ ms.locfileid: "71293133"
   
  通常，渐变维度转换中最慢的组件是一次对单行执行 UPDATE 的 OLE DB 命令转换。 因此，改善渐变维度转换性能最有效的方法是替换 OLE DB 命令转换。 可以用目标组件来替换这些转换，目标组件将要更新的所有行保存到一个临时表中。 然后，可以添加执行 SQL 任务，该任务同时对所有行执行基于单集的 Transact-SQL UPDATE。  
   
- 高级用户可以为渐变维度处理设计自定义数据流，此数据流将针对大型维度进行优化。 有关此方法的讨论和示例，请参阅白皮书 [Project REAL：Business Intelligence ETL 设计实践](https://go.microsoft.com/fwlink/?LinkId=96602)中的“唯一维度方案”一节。  
+ 高级用户可以为渐变维度处理设计自定义数据流，此数据流将针对大型维度进行优化。 有关此方法的讨论和示例，请参阅白皮书 [Project REAL：Business Intelligence ETL 设计实践](https://www.microsoft.com/download/details.aspx?id=14582)中的“唯一维度方案”一节。  
   
 ### <a name="destinations"></a>目标  
  若要改善目标的性能，请考虑使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标并测试目标的性能。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 436945f79d862f50443455de1b74dcd927852e78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0984d0003f6a20c410b91f99dc6fd1b4ae3f545
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127035"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844329"
 ---
 # <a name="database-engine-error-severities"></a>数据库引擎错误严重性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "68127035"
 ## <a name="see-also"></a>另请参阅  
  [了解数据库引擎错误](../../relational-databases/errors-events/understanding-database-engine-errors.md)   
  [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)  
   
   
