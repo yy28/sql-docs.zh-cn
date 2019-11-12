@@ -19,12 +19,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 064b6e915b2b1fbc7de1ef9b280bc406d7fc92e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63020738"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882338"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在现有发布中添加和删除项目
   在创建发布后，可以添加和删除项目。 可以随时添加项目，但删除项目所需的操作取决于复制的类型和删除项目的时间。  
@@ -33,7 +33,7 @@ ms.locfileid: "63020738"
  添加项目涉及的操作有：将项目添加到发布、为发布创建新的快照、同步订阅以应用新项目的架构和数据。  
   
 > [!NOTE]
->  如果向合并发布中添加一个项目和一个依赖于此新项目的现有项目，则必须使用 **@processing_order** 和 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 [@processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)参数指定两个项目的处理顺序。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 **sp_addmergearticle** 的 **@processing_order** 的 **sp_changemergearticle**；为 **sp_changemergearticle** 的 **@processing_order** 的 **@processing_order**，为参数 **@article** 。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
+>  如果向合并发布中添加一个项目和一个依赖于此新项目的现有项目，则必须使用 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 和 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 的 \@processing_order 参数指定两个项目的处理顺序。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 sp_addmergearticle 的 \@processing_order 参数指定值 1；为 sp_changemergearticle 的 \@processing_order 参数指定值 2，为参数 \@article 指定表名称。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
   
 1.  用以下方法之一添加一个或多个项目：  
   
