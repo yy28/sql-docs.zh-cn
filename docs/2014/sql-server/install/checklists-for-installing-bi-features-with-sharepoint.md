@@ -21,12 +21,12 @@ ms.locfileid: "71952608"
   本节提供按不同组合或扩展拓扑安装 SQL Server BI 功能的核对清单。 如果您已经知道如何运行安装程序来安装 BI 功能，接下来就应该是使用核对清单了解建议的安装顺序，以及是否需要进行其他的配置更改以启用功能集成方案。  
   
 ## <a name="checklists-in-this-section"></a>本节中的核对清单  
- [Deployment 清单：Reporting Services、Power View 和 PowerPivot for SharePoint @ no__t-0  
+ [部署清单： Reporting Services、Power View 和 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)  
   
- [Deployment 清单：通过将 PowerPivot 服务器添加到 SharePoint 2010 场 @ no__t-0 来向外扩展  
+ [部署清单：通过将 PowerPivot 服务器添加到 SharePoint 2010 场进行扩展](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
   
- [Deployment 清单：PowerPivot for SharePoint 2010 @ no__t 的多服务器安装  
+ [部署清单： PowerPivot for SharePoint 2010 的多服务器安装](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
- [Deployment 清单：将 Reporting Services 安装到现有 SharePoint 场 @ no__t-0  
+ [部署核对清单：将 Reporting Services 安装到现有 SharePoint 场中](../../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
   

@@ -38,14 +38,14 @@ ms.locfileid: "71952262"
   
 -   Reporting Services 包括用于 SharePoint 产品的外接程序。 这里对该外接程序和报表服务器受支持的配置的说明还不够详细。 有关详细信息，请参阅[支持的 SharePoint 和 Reporting Services Server 和外接程序&#40;的组合&#41;SQL Server 2014](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)。  
   
--   SharePoint 开发人员工具仅支持 SharePoint 独立配置。  有关详细信息，请参阅 SharePoint 文档：[开发 SharePoint 解决方案的要求](https://msdn.microsoft.com/library/ee231582.aspx)。  
+-   SharePoint 开发人员工具仅支持 SharePoint 独立配置。  有关详细信息，请参阅 SharePoint 文档：[开发 Sharepoint 解决方案的要求](https://msdn.microsoft.com/library/ee231582.aspx)。  
   
 ##  <a name="bkmk_vers"></a>SharePoint 版本和 BI 功能支持  
  仅在特定的 SharePoint 产品版本上支持某些 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 商业智能功能。  
   
 |支持的功能|SharePoint 产品|  
 |------------------------|------------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，一项功能，适用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @ no__t Enterprise Edition 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] @ no__t-2 外接程序。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]。|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，一项功能 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]。|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。|  
 |与 SharePoint 集成的一般 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表查看和功能。|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard Edition 和 Enterprise Edition。<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]。|  
   
  有关详细信息，请参阅[SQL Server 2012 的各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)。  
@@ -57,7 +57,7 @@ ms.locfileid: "71952262"
   
 -   您要使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。  
   
- 使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 运行的 SharePoint 安装需要 SP1 的一个主要原因是，在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本中，已弃用的数据库引擎功能**sp_dboption**（已弃用）。 有关详细信息，请参阅[2014 中的废止数据库引擎功能 SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
+ 使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 运行的 SharePoint 安装需要 SP1 的一个主要原因是，在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本中已弃用已弃用的数据库引擎功能**sp_dboption**。 有关详细信息，请参阅[2014 中的废止数据库引擎功能 SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>SharePoint 2010 SP1 安装指南  
  [下载 SharePoint Server 2010 SP1](https://go.microsoft.com/fwlink/?LinkID=219697)并将其应用于场中的所有服务器。  
@@ -67,9 +67,9 @@ ms.locfileid: "71952262"
   
 -   **SharePoint 产品配置向导：** 运行向导以完成 SP1 升级和配置。  
   
--   **通过 psconfig 完成升级：** 运行命令 `psconfig -upgrade` 完成 SP1 升级  
+-   **通过 Psconfig 完成升级：** 运行命令 `psconfig -upgrade` 完成 SP1 升级  
   
- 有关详细信息，请参阅[（SharePoint Server 2010）](https://technet.microsoft.com/library/cc263093.aspx)和 [Resource center 中的 "升级" 部分：SharePoint 2010 产品 @ no__t 的更新  
+ 有关详细信息，请参阅[（Sharepoint Server 2010）](https://technet.microsoft.com/library/cc263093.aspx)和[资源中心： Sharepoint 2010 产品更新](https://technet.microsoft.com/sharepoint/ff800847.aspx)中的 "升级" 部分  
   
 ## <a name="sharepoint-installation-with-sql-server-bi-features"></a>SharePoint 安装与 SQL Server BI 功能  
   
@@ -78,7 +78,7 @@ ms.locfileid: "71952262"
   
 |组件|操作|  
 |---------------|------------|  
-|Reporting Services 外接程序|SharePoint 2010 产品准备工具安装 Reporting Services 外接程序的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能所需的外接程序的更高版本。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装该外接程序，也可以从 MSDN 下载它。 有关在何处获取外接程序的当前版本以及如何安装它的详细信息，请参阅在[何处查找用于 Sharepoint 产品的 Reporting Services 外](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)接程序和[安装或卸载用于 Sharepoint &#40;的 Reporting Services 外接程序SharePoint 2010 和 SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。|  
+|Reporting Services 外接程序|SharePoint 2010 产品准备工具安装 Reporting Services 外接程序的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能所需的外接程序的更高版本。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装该外接程序，也可以从 MSDN 下载它。 有关在何处获取外接程序的当前版本以及如何安装它的详细信息，请参阅在[何处查找用于 Sharepoint 产品的 Reporting Services 外](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)接程序和[安装或卸载用于 sharepoint &#40;sharepoint 2010 和 sharepoint 2013&#41;的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。|  
 |Analysis Services OLE DB 访问接口 (MSOLAP)|SharePoint 2010 会在 Excel Services 部署过程中安装 SQL Server 2008 版本的 OLE DB 访问接口。 此版本不支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问。 应该在支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据连接的 SharePoint 服务器上安装该访问接口的较新版本。 有关详细信息，请参阅[在 SharePoint 服务器上安装 Analysis Services OLE DB Provider](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)|  
 |ADO.NET Services|SharePoint 2010 在必备组件列表中列出了 ADO.NET Services，但必备组件安装程序不会安装它。 若要添加 ADO.NET Services，必须手动安装它。 如果想以数据馈送的形式将 SharePoint 列表导入到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或 Reporting Services 报表中，则必须安装 ADO.NET Services。 有关说明，请参阅[安装 ADO.NET Data Services 以支持 SharePoint 列表的数据馈送导出](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)。|  
   
@@ -103,8 +103,8 @@ ms.locfileid: "71952262"
   
  ![GMNI_SetupUI_DoNotConfigureMOSS](../../../2014/sql-server/install/media/gmni-setupui-donotconfiguremoss.gif "GMNI_SetupUI_DoNotConfigureMOSS")  
   
-## <a name="see-also"></a>请参阅  
- [安装和部署 SharePoint Server 2010](https://technet.microsoft.com/sharepoint/ee518643.aspx)   
+## <a name="see-also"></a>另请参阅  
+ [SharePoint Server 2010  安装和部署](https://technet.microsoft.com/sharepoint/ee518643.aspx)  
  [三层服务器场的多个服务器（SharePoint Server 2010）](https://go.microsoft.com/fwlink/?linkID=219834)  
   
   

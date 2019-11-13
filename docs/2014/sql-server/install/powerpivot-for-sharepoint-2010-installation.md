@@ -29,7 +29,7 @@ ms.locfileid: "71952054"
   
  若要安装 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，请使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安装介质。  
   
- 有关高级部署方案的说明，请参阅 [Deployment 清单：Reporting Services、Power View 和 PowerPivot for SharePoint @ no__t 和 [Deployment 清单：向外扩展，方法是将 PowerPivot 服务器添加到 SharePoint 2010 场 @ no__t-0。  
+ 有关高级部署方案的说明，请参阅[部署清单： Reporting Services、Power View 和 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)和[部署清单：通过将 PowerPivot 服务器添加到 SharePoint 2010 场进行扩展](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [安装 PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "71952054"
   
  [初始配置&#40;PowerPivot for SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在管理中心中管理和配置 PowerPivot 服务器](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
   
   

@@ -22,7 +22,7 @@ ms.locfileid: "71952640"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 | SharePoint 2010|  
   
  **本主题内容：**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "71952640"
 |**(6)**|在 SharePoint 模式下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 将 Excel Services 应用程序 **“数据模型设置”** 配置为使用此服务器。|  
 |**(7)**|SharePoint 内容、配置和服务应用程序数据库。|  
   
- ![SharePoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect （ https://connect.microsoft.com/SQLServer/Feedback) 来提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect （ https://connect.microsoft.com/SQLServer/Feedback)来提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)。  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_1server"></a>PowerPivot for SharePoint 2013 单一服务器部署  
  单服务器部署用于测试目的，不建议在生产部署中采用。  
@@ -153,9 +153,9 @@ ms.locfileid: "71952640"
  ![逻辑体系结构关系图](../../../2014/sql-server/install/media/sql11bisetup.gif "逻辑体系结构关系图")  
   
 ##  <a name="bkmk_sharepoint2010_1server"></a>单服务器部署  
- 您可以在一台计算机上安装所有服务器组件（包括数据层）。 如果您要评估软件或开发自定义应用程序（包含 SharePoint 模式下的 Reporting Services），则此部署配置会很有用。 这种部署最易于配置。 因为所有组件都安装在同一台计算机上，所以该部署使用的许可证也最少。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 和[!INCLUDE[ssDE](../../includes/ssde-md.md)]可作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一个许可副本进行安装。  
+ 您可以在一台计算机上安装所有服务器组件（包括数据层）。 如果您要评估软件或开发自定义应用程序（包含 SharePoint 模式下的 Reporting Services），则此部署配置会很有用。 这种部署最易于配置。 因为所有组件都安装在同一台计算机上，所以该部署使用的许可证也最少。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 和[!INCLUDE[ssDE](../../includes/ssde-md.md)]可作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一个许可副本进行安装。{5}  
   
- 若要在一台服务器上安装所有功能，请依次在同一物理服务器上安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。 有关独立服务器配置的说明，请参阅 [Deployment 清单：Reporting Services、Power View 和 PowerPivot for SharePoint ](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)。  
+ 若要在一台服务器上安装所有功能，请依次在同一物理服务器上安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。 有关独立服务器配置的说明，请参阅[部署清单： Reporting Services、Power View 和 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)。  
   
 ##  <a name="bkmk_sharepoint2010_2server"></a>双层部署  
  两层部署通常是指在一台计算机上安装 SharePoint Server 2010，而在第二台计算机上安装 SQL Server 数据库引擎。 将数据层移到专用服务器是由 2 台计算机组成的场的最常见配置。 在两层场中，您可以在 SharePoint 服务器上安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。 前端上的所有 Web 服务和应用程序层中的共享服务均在同一物理服务器上运行。 2 层部署的安装步骤与独立部署非常类似，都是在同一物理服务器上依次安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。  
@@ -168,12 +168,12 @@ ms.locfileid: "71952640"
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a>三层扩展部署  
  此拓扑说明了在多台服务器上运行同一共享服务的扩展部署，该部署为大量请求提供服务并为 PowerPivot 数据或 Reporting Services 报表提供更强大的处理能力。 下图中有三种应用程序服务器群集，每一种均运行不同组合的共享服务。 在 SharePoint 环境中，已将服务发现和可用性内置于场中。 运行同一共享服务应用程序的多台物理服务器之间的负载平衡是共享服务体系结构的一部分。  
   
- 部署多服务器场时，请务必按照以下 SharePoint 文章中的说明进行操作：[三层服务器场的多个服务器（SharePoint Server 2010）](https://go.microsoft.com/fwlink/?linkID=219834)。  
+ 部署多服务器场时，请务必按照以下 SharePoint 文章中的说明执行操作： [三层服务器场的多个服务器 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)。  
   
  ![5-服务器拓扑](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5-服务器拓扑")  
   
-## <a name="see-also"></a>请参阅  
- [Reporting Services sharepoint 模式安装&#40;sharepoint 2010 和 sharepoint 2013&#41; ](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)    
+## <a name="see-also"></a>另请参阅  
+ [Reporting Services sharepoint 模式安装&#40;sharepoint 2010 和 sharepoint 2013&#41; ](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
  [PowerPivot for SharePoint 2013 安装](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)   
  [PowerPivot for SharePoint 2010 安装](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   

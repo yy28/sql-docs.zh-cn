@@ -39,6 +39,6 @@ ms.locfileid: "71952002"
   
 4.  验证 "**网站集的 PowerPivot 功能集成**" 处于**活动状态**。  
   
- 有关此问题的其他原因，请参阅[PowerPivot 库显示图标的红色 X](https://support.microsoft.com/kb/2361559) （@no__t 为-1）。  
+ 有关此问题的其他原因，请参阅[PowerPivot 库显示图标的红色 X](https://support.microsoft.com/kb/2361559) （ https://support.microsoft.com/kb/2361559)。  
   
   
