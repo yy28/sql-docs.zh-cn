@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_database_transactions (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_tran_database_transactions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ ms.assetid: 82a44295-4cbc-4a5b-891a-8ebaf307b8f5
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd33a84393fb88e0a2a8cdf4d04df6da9883ba28
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a01dc7df9a8269190ae1c1c3cf05de3adaecc662
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262641"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982316"
 ---
-# <a name="sysdmtrandatabasetransactions-transact-sql"></a>sys.dm_tran_database_transactions (Transact-SQL)
+# <a name="sysdm_tran_database_transactions-transact-sql"></a>sys.dm_tran_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回有关数据库级事务的信息。  
   
 > [!NOTE]  
->  若要调用来自此 DMV[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_tran_database_transactions**。  
+>  若要从 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此 DMV，请使用名称**sys.databases. dm_pdw_nodes_tran_database_transactions**。  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
@@ -41,31 +41,31 @@ ms.locfileid: "68262641"
 |database_id|**int**|与事务关联的数据库的 ID。|  
 |database_transaction_begin_time|**datetime**|数据库参与事务的时间。 具体而言，它是事务的数据库中第一个日志记录的时间。|  
 |database_transaction_type|**int**|1 = 读/写事务<br /><br /> 2 = 只读事务<br /><br /> 3 = 系统事务|  
-|database_transaction_state|**int**|1 = 未初始化事务。<br /><br /> 3 = 已初始化事务，但未生成任何日志记录。<br /><br /> 4 = 事务已生成日志记录。<br /><br /> 5 = 事务已准备就绪。<br /><br /> 10 = 事务已提交。<br /><br /> 11 = 已回滚事务。<br /><br /> 12 = 正在提交事务。 （日志记录正在生成，但尚未具体化或持久化。）|  
+|database_transaction_state|**int**|1 = 未初始化事务。<br /><br /> 3 = 已初始化事务，但未生成任何日志记录。<br /><br /> 4 = 事务已生成日志记录。<br /><br /> 5 = 事务已准备就绪。<br /><br /> 10 = 事务已提交。<br /><br /> 11 = 已回滚事务。<br /><br /> 12 = 正在提交事务。 （正在生成日志记录，但尚未具体化或持久化。）|  
 |database_transaction_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |database_transaction_status2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|database_transaction_log_record_count|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 在事务的数据库中生成的日志记录数。|  
-|database_transaction_replicate_record_count|**int**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 为事务复制的数据库中生成的日志记录数。|  
-|database_transaction_log_bytes_used|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 到目前为止，在事务的数据库日志中使用的字节数。|  
-|database_transaction_log_bytes_reserved|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 为事务的数据库日志保留的字节数。|  
-|database_transaction_log_bytes_used_system|**int**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 到目前为止，在代表事务的系统事务的数据库日志中使用的字节数。|  
-|database_transaction_log_bytes_reserved_system|**int**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 为代表事务的系统事务的数据库日志保留的字节数。|  
-|database_transaction_begin_lsn|**numeric(25,0)**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 数据库日志中事务的起始记录的日志序列号 (LSN)。|  
-|database_transaction_last_lsn|**numeric(25,0)**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 数据库日志中最近记录的事务记录的 LSN。|  
-|database_transaction_most_recent_savepoint_lsn|**numeric(25,0)**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 数据库日志中事务的最近保存点的 LSN。|  
-|database_transaction_commit_lsn|**numeric(25,0)**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 数据库日志中事务的提交日志记录的 LSN。|  
-|database_transaction_last_rollback_lsn|**numeric(25,0)**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 最近回滚到的 LSN。 如果不会回滚已发生，值将为 MaxLSN。|  
-|database_transaction_next_undo_lsn|**numeric(25,0)**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 要撤消的下一个记录的 LSN。|  
-|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
+|database_transaction_log_record_count|**bigint**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 在事务的数据库中生成的日志记录数。|  
+|database_transaction_replicate_record_count|**int**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 已复制的事务在数据库中生成的日志记录数。|  
+|database_transaction_log_bytes_used|**bigint**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 到目前为止，在事务的数据库日志中使用的字节数。|  
+|database_transaction_log_bytes_reserved|**bigint**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 为事务的数据库日志保留的字节数。|  
+|database_transaction_log_bytes_used_system|**int**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 到目前为止，在代表事务的系统事务的数据库日志中使用的字节数。|  
+|database_transaction_log_bytes_reserved_system|**int**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 为代表事务的系统事务的数据库日志保留的字节数。|  
+|database_transaction_begin_lsn|**numeric(25,0)**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 数据库日志中事务的起始记录的日志序列号 (LSN)。|  
+|database_transaction_last_lsn|**numeric(25,0)**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 数据库日志中最近记录的事务记录的 LSN。|  
+|database_transaction_most_recent_savepoint_lsn|**numeric(25,0)**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 数据库日志中事务的最近保存点的 LSN。|  
+|database_transaction_commit_lsn|**numeric(25,0)**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 数据库日志中事务的提交日志记录的 LSN。|  
+|database_transaction_last_rollback_lsn|**numeric(25,0)**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 最近回滚到的 LSN。 如果未发生回滚，则值为 MaxLSN。|  
+|database_transaction_next_undo_lsn|**numeric(25,0)**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 要撤消的下一个记录的 LSN。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
-上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要数据库中的 `VIEW DATABASE STATE` 权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
-## <a name="see-also"></a>请参阅  
- [sys.dm_tran_active_transactions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-transactions-transact-sql.md)   
- [sys.dm_tran_session_transactions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sys. dm_tran_active_transactions &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-transactions-transact-sql.md)   
+ [sys. dm_tran_session_transactions &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与事务相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
