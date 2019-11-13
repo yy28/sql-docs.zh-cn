@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: v-mabarw
-ms.openlocfilehash: 08165bf0f60265e34f6b8022fd00e11dda47f672
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 60f4ee3839b91b60b950c1f3a6a351592a9581b2
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258642"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593629"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>在适用于 SQL Server 的 PHP 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,19 +31,19 @@ ms.locfileid: "68258642"
 ## <a name="prerequisites"></a>必备条件
 
  -   在数据库中配置始终加密。 此配置涉及为选定数据库列预配 Always Encrypted 密钥和设置加密。 如果还没有配置了始终加密的数据库，请按照 [始终加密入门](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)中的说明操作。 尤其要注意的是，数据库应包含列主密钥 (CMK)、列加密密钥 (CEK) 和包含一个或多个使用该 CEK 加密的表的元数据定义。
- -   请确保已在开发计算机上安装 SQL Server 版本17或更高版本的 ODBC 驱动程序。 有关详细信息, 请参阅[ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
+ -   请确保已在开发计算机上安装 SQL Server 版本17或更高版本的 ODBC 驱动程序。 有关详细信息，请参阅[ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
 
 ## <a name="enabling-always-encrypted-in-a-php-application"></a>在 PHP 应用程序中启用 Always Encrypted
 
-若要对面向加密列的参数启用加密，以及对查询结果启用解密，最简单的方法是将 `ColumnEncryption` 连接字符串关键字的值设置为 `Enabled`。 下面是在 SQLSRV 和 PDO_SQLSRV 驱动程序中启用 Always Encrypted 的示例:
+若要对面向加密列的参数启用加密，以及对查询结果启用解密，最简单的方法是将 `ColumnEncryption` 连接字符串关键字的值设置为 `Enabled`。 下面是在 SQLSRV 和 PDO_SQLSRV 驱动程序中启用 Always Encrypted 的示例：
 
-SQLSRV
+SQLSRV：
 ```
 $connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled");
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
-PDO_SQLSRV:
+PDO_SQLSRV：
 ```
 $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
@@ -55,7 +55,7 @@ $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>检索和修改加密列中的数据
 
-一旦启用了连接 Always Encrypted, 就可以使用标准 SQLSRV Api (请参阅[SQLSRV 驱动程序 Api 参考](../../connect/php/sqlsrv-driver-api-reference.md)) 或 PDO_SQLSRV api (请参阅[PDO_SQLSRV 驱动程序 api 参考](../../connect/php/pdo-sqlsrv-driver-reference.md)) 来检索或修改加密数据库列中的数据。 假设应用程序拥有必需的数据库权限，并能访问列主密钥，且驱动程序负责加密任何定目标到加密列的查询参数，并解密从加密列检索到的数据，对应用程序的行为方式透明，就像列未加密一样。
+一旦你启用了连接 Always Encrypted，就可以使用标准 SQLSRV Api （请参阅[SQLSRV 驱动程序 Api 参考](../../connect/php/sqlsrv-driver-api-reference.md)）或 PDO_SQLSRV api （请参阅[PDO_SQLSRV 驱动程序 api 参考](../../connect/php/pdo-sqlsrv-driver-reference.md)）来检索或修改加密数据库列中的数据。 假设应用程序拥有必需的数据库权限，并能访问列主密钥，且驱动程序负责加密任何定目标到加密列的查询参数，并解密从加密列检索到的数据，对应用程序的行为方式透明，就像列未加密一样。
 
 如果未启用 Always Encrypted，具有面向加密列的参数的查询将失败。 只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。 不过，驱动程序不会尝试进行任何解密，并且应用程序会收到二进制加密数据（字节数组形式）。
 
@@ -86,23 +86,23 @@ CREATE TABLE [dbo].[Patients](
 
 ### <a name="data-insertion-example"></a>数据插入示例
 
-下面的示例演示如何使用 SQLSRV 和 PDO_SQLSRV 驱动程序向患者表中插入行。 请注意以下几点:
+下面的示例演示如何使用 SQLSRV 和 PDO_SQLSRV 驱动程序向患者表中插入一行。 请注意以下几点：
  -   对于示例代码中的加密，没有什么特定的注意事项。 驱动程序自动检测并加密定目标到加密列的 SSN 和 BirthDate 参数的值。 该机制使得加密操作对应用程序而言是透明的。
  -   插入到数据库列（包括加密列）中的值将作为绑定参数传递。 在将值发送到非加密列时，可以选择使用参数（强烈建议使用它，因为它有助于防止 SQL 注入），而在发送面向加密列的值时，必须使用该参数。 若将插入 SSN 或 BirthDate 列的值传递为嵌入查询声明的文本，查询将失败，因为驱动程序不会尝试加密或处理查询中的文本。 因此，服务器会因为与加密列不兼容而拒绝它们。
- -   当使用绑定参数插入值时, 支持与目标列的数据类型或其转换为目标列的数据类型的 SQL 类型必须传递到数据库。 此要求是因为 Always Encrypted 支持很少的类型转换 (有关详细信息, 请参阅[Always Encrypted (数据库引擎)](../../relational-databases/security/encryption/always-encrypted-database-engine.md))。 这两个 PHP 驱动程序 (SQLSRV 和 PDO_SQLSRV) 都有一种机制, 可帮助用户确定值的 SQL 类型。 因此, 用户不必显式提供 SQL 类型。
-  -   对于 SQLSRV 驱动程序, 用户有两个选项:
-   -   依赖 PHP 驱动程序来确定和设置正确的 SQL 类型。 在这种情况下, 用户必须`sqlsrv_prepare`使用`sqlsrv_execute`和执行参数化查询。
+ -   当使用绑定参数插入值时，支持与目标列的数据类型或其转换为目标列的数据类型的 SQL 类型必须传递到数据库。 此要求是因为 Always Encrypted 支持很少的类型转换（有关详细信息，请参阅[Always Encrypted （数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)）。 这两个 PHP 驱动程序（SQLSRV 和 PDO_SQLSRV）都有一种机制，可帮助用户确定值的 SQL 类型。 因此，用户不必显式提供 SQL 类型。
+  -   对于 SQLSRV 驱动程序，用户有两个选项：
+   -   依赖 PHP 驱动程序来确定和设置正确的 SQL 类型。 在这种情况下，用户必须使用 `sqlsrv_prepare` 和 `sqlsrv_execute` 来执行参数化查询。
    -   显式设置 SQL 类型。
-  -   对于 PDO_SQLSRV 驱动程序, 用户不能选择显式设置参数的 SQL 类型。 PDO_SQLSRV 驱动程序自动帮助用户在绑定参数时确定 SQL 类型。
- -   为了使驱动程序确定 SQL 类型, 有一些限制适用:
+  -   对于 PDO_SQLSRV 驱动程序，用户不能选择显式设置参数的 SQL 类型。 PDO_SQLSRV 驱动程序会在绑定参数时自动帮助用户确定 SQL 类型。
+ -   为了使驱动程序确定 SQL 类型，有一些限制适用：
   -   SQLSRV 驱动程序：
-   -   如果用户希望驱动程序确定加密列的 SQL 类型, 则用户必须使用`sqlsrv_prepare`和。 `sqlsrv_execute`
-   -   如果`sqlsrv_query`首选, 则用户负责指定所有参数的 SQL 类型。 指定的 SQL 类型必须包含字符串类型的字符串长度以及十进制类型的小数位数和精度。
+   -   如果用户希望驱动程序确定加密列的 SQL 类型，则用户必须使用 `sqlsrv_prepare` 和 `sqlsrv_execute`。
+   -   如果 `sqlsrv_query` 首选，则用户负责指定所有参数的 SQL 类型。 指定的 SQL 类型必须包含字符串类型的字符串长度以及十进制类型的小数位数和精度。
   -   PDO_SQLSRV 驱动程序：
-   -   在参数化`PDO::SQLSRV_ATTR_DIRECT_QUERY`查询中不支持语句特性。
-   -   在参数化`PDO::ATTR_EMULATE_PREPARES`查询中不支持语句特性。
+   -   参数化查询中不支持语句特性 `PDO::SQLSRV_ATTR_DIRECT_QUERY`。
+   -   参数化查询中不支持语句特性 `PDO::ATTR_EMULATE_PREPARES`。
    
-SQLSRV 驱动程序和[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md):
+SQLSRV 驱动程序和[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)：
 ```
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
@@ -116,7 +116,7 @@ $stmt = sqlsrv_prepare($conn, $query, $params);
 sqlsrv_execute($stmt);
 ```
 
-SQLSRV 驱动程序和[sqlsrv_query](../../connect/php/sqlsrv-query.md):
+SQLSRV 驱动程序和[sqlsrv_query](../../connect/php/sqlsrv-query.md)：
 ```
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
@@ -133,7 +133,7 @@ $params = array(array(&$ssn, null, null, SQLSRV_SQLTYPE_CHAR(11)),
 sqlsrv_query($conn, $query, $params);
 ```
 
-PDO_SQLSRV 驱动程序和[PDO::p 准备](../../connect/php/pdo-prepare.md):
+PDO_SQLSRV 驱动程序和[PDO：:p 准备](../../connect/php/pdo-prepare.md)：
 ```
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
@@ -152,14 +152,14 @@ $stmt->execute();
 
 ### <a name="plaintext-data-retrieval-example"></a>纯文本数据检索示例
 
-下面的示例演示如何根据加密值筛选数据, 以及如何使用 SQLSRV 和 PDO_SQLSRV 驱动程序从加密列中检索纯文本数据。 请注意以下几点:
+下面的示例演示如何根据加密值筛选数据，以及如何使用 SQLSRV 和 PDO_SQLSRV 驱动程序从加密列中检索纯文本数据。 请注意以下几点：
  -   WHERE 子句中用于筛选 SSN 列的值需要使用 bind 参数进行传递，以便驱动程序可以在将其发送到数据库之前以透明方式对其加密。
- -   使用绑定参数执行查询时, PHP 驱动程序会自动确定用户的 SQL 类型, 除非用户在使用 SQLSRV 驱动程序时显式指定 SQL 类型。
+ -   使用绑定参数执行查询时，PHP 驱动程序会自动确定用户的 SQL 类型，除非用户在使用 SQLSRV 驱动程序时显式指定 SQL 类型。
  -   程序打印的所有值均为纯文本形式，因为驱动程序将以透明方式解密从 SSN 和 BirthDate 列中检索到的数据。
  
 注意：只有在加密是确定性的情况下，查询才能对加密列执行相等比较。 有关详细信息，请参阅[选择确定性加密或随机加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
 
-SQLSRV
+SQLSRV：
 ```
 // since SSN is an encrypted column, need to pass the value in the WHERE clause through bind parameter
 $query = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [SSN] = ?";
@@ -171,7 +171,7 @@ sqlsrv_execute($stmt);
 $row = sqlsrv_fetch_array($stmt);
 ```
 
-PDO_SQLSRV:
+PDO_SQLSRV：
 ```
 // since SSN is an encrypted column, need to pass the value in the WHERE clause through bind parameter
 $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [SSN] = ?";
@@ -188,11 +188,11 @@ $row = $stmt->fetch();
 
 如果未启用始终加密，只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。
 
-下面的示例演示如何使用 SQLSRV 和 PDO_SQLSRV 驱动程序从加密列中检索二进制加密数据。 请注意以下几点:
+下面的示例演示如何使用 SQLSRV 和 PDO_SQLSRV 驱动程序从加密列中检索二进制加密数据。 请注意以下几点：
  -   由于未在连接字符串中启用 Always Encrypted，因此，查询将以字节数组的形式返回 SSN 和 BirthDate 的加密值（程序会将值转换为字符串）。
  -   如果禁用始终加密，从加密列中检索数据的查询可以有参数，但前提是所有参数均不面向加密列。 以下查询按未在数据库中加密的 LastName 进行筛选。 如果查询按 SSN 或 BirthDate 进行筛选，则查询将失败。
  
-SQLSRV
+SQLSRV：
 ```
 $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [LastName] = ?";
 $lastName = "Abel";
@@ -201,7 +201,7 @@ sqlsrv_execute($stmt);
 $row = sqlsrv_fetch_array($stmt);
 ```
 
-PDO_SQLSRV:
+PDO_SQLSRV：
 ```
 $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [LastName] = ?";
 $lastName = "Abel";
@@ -218,19 +218,19 @@ $row = $stmt->fetch();
 #### <a name="unsupported-data-type-conversion-errors"></a>不支持的数据类型转换错误
 
 始终加密支持对加密数据类型进行若干种转换。 有关受支持类型转换的详细列表，请参阅 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。 执行以下操作可避免数据类型转换错误：
- -   将 SQLSRV 驱动程序与`sqlsrv_prepare`和`sqlsrv_execute` SQL 类型一起使用时, 会自动确定参数的列大小和小数位数。
- -   当使用 PDO_SQLSRV 驱动程序执行查询时, 还会自动确定具有列大小的 SQL 类型和参数的小数位数。
- -   使用 SQLSRV 驱动程序`sqlsrv_query`执行查询时:
+ -   将 SQLSRV 驱动程序与 `sqlsrv_prepare` 和 `sqlsrv_execute` SQL 类型一起使用时，会自动确定参数的列大小和小数位数。
+ -   使用 PDO_SQLSRV 驱动程序执行查询时，还会自动确定具有列大小的 SQL 类型和参数的小数位数。
+ -   将 SQLSRV 驱动程序与 `sqlsrv_query` 一起使用来执行查询时：
   -   此参数的 SQL 类型与目标列的类型完全相同，或支持从 SQL 列转换为此列的类型。
   -   对于面向列的 `decimal` 和 `numeric` SQL Server 数据类型的参数，其精度和小数位数与为目标列配置的精度和小数位数相同。
   -   在用于修改目标列的查询中，面向列的 `datetime2`、`datetimeoffset` 或 `time` SQL Server 数据类型的参数的精度不大于目标列的精度。
- -   不要在参数化查询中`PDO::SQLSRV_ATTR_DIRECT_QUERY`使用`PDO::ATTR_EMULATE_PREPARES` PDO_SQLSRV 语句特性或
+ -   不要在参数化查询中使用 PDO_SQLSRV 语句特性 `PDO::SQLSRV_ATTR_DIRECT_QUERY` 或 `PDO::ATTR_EMULATE_PREPARES`
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>由于传递纯文本而非加密值而发生的错误
 
 面向加密列的任何值都需要先完成加密，然后才能发送给服务器。 尝试插入、修改或者按纯文本值筛选加密列会导致错误。 为防止发生此类错误，请确保：
- -   启用 Always Encrypted (在连接字符串中, 将`ColumnEncryption`关键字设置为`Enabled`)。
- -   使用 bind 参数发送面向加密列的数据。 下面的示例演示了一个查询, 该查询在加密列 (SSN) 上不正确地筛选文本/常量:
+ -   启用 Always Encrypted （在连接字符串中，将 `ColumnEncryption` 关键字设置为 `Enabled`）。
+ -   使用 bind 参数发送面向加密列的数据。 下面的示例演示了一个查询，该查询在加密列（SSN）上不正确地筛选文本/常量：
 ```
 $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
 ```
@@ -245,11 +245,11 @@ Always Encrypted 是一种客户端加密技术，因此，大部分性能开销
 
 如果为连接启用了 Always Encrypted，默认情况下，ODBC 驱动程序将为每个参数化查询调用 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，并将查询语句（不带任何参数值）传递到 SQL Server。 此存储过程会分析查询语句，以了解是否有任何参数需要加密；如果有，则会针对每个参数返回加密相关信息，以便驱动程序对它们加密。
 
-由于 PHP 驱动程序允许用户绑定预定义语句中的参数而无需提供 SQL 类型, 因此, 在 Always Encrypted 启用的连接中绑定参数时, PHP 驱动程序会对参数调用[SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md)以获取 SQL 类型。列大小和十进制数字。 然后使用元数据调用[SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md)。 这些额外`SQLDescribeParam`的调用不需要对数据库进行额外的往返, 因为 ODBC 驱动程序已在调用时`sys.sp_describe_parameter_encryption`将信息存储在客户端。
+由于 PHP 驱动程序允许用户在未提供 SQL 类型的情况下绑定预定义语句中的参数，因此，在 Always Encrypted 启用的连接中绑定参数时，PHP 驱动程序会对参数调用[SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) ，以获取 SQL 类型、列大小和十进制数字。 然后使用元数据调用[SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md)。 这些额外的 `SQLDescribeParam` 调用不需要对数据库进行额外的往返，因为 ODBC 驱动程序已在调用 `sys.sp_describe_parameter_encryption` 时在客户端上存储了信息。
 
 上述行为可确保对客户端应用程序（和应用程序开发人员）高度透明，应用程序不需要知道哪些查询访问加密列，但前提是定目标到加密列的值在参数中传递到驱动程序。
 
-与 SQL Server 的 ODBC 驱动程序不同的是, 在语句/查询级别启用 Always Encrypted 尚不支持 PHP 驱动程序。 
+与 SQL Server 的 ODBC 驱动程序不同的是，在语句/查询级别启用 Always Encrypted 尚不支持 PHP 驱动程序。 
 
 ### <a name="column-encryption-key-caching"></a>列加密密钥缓存
 
@@ -263,7 +263,7 @@ Always Encrypted 是一种客户端加密技术，因此，大部分性能开销
 
 为了获取 ECEK 的纯文本值，驱动程序会先获取 CEK 及其相应 CMK 的元数据，再使用此信息联系包含 CMK 的密钥储存，并请求它解密 ECEK。 驱动程序使用密钥存储提供程序与密钥存储通信。
 
-为了 SQL Server 的 Microsoft Driver 5.3.0 for PHP, 只支持 Windows 证书存储提供程序和 Azure Key Vault。 尚不支持 ODBC 驱动程序支持的其他密钥存储提供程序 (自定义密钥存储提供程序)。
+为了 SQL Server 的 Microsoft Driver 5.3.0 for PHP，只支持 Windows 证书存储提供程序和 Azure Key Vault。 尚不支持 ODBC 驱动程序支持的其他密钥存储提供程序（自定义密钥存储提供程序）。
 
 ### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 证书存储提供程序
 
@@ -271,38 +271,38 @@ Always Encrypted 是一种客户端加密技术，因此，大部分性能开销
 
 ### <a name="using-azure-key-vault"></a>使用 Azure Key Vault
 
-Azure Key Vault 提供了一种使用 Azure 存储加密密钥、密码和其他机密, 并可用于存储 Always Encrypted 的密钥的方式。 ODBC Driver for SQL Server (版本17及更高版本) 包含用于 Azure Key Vault 的内置主密钥存储提供程序。 以下连接选项处理 Azure Key Vault 配置: `KeyStoreAuthentication`、 `KeyStorePrincipalId`和`KeyStoreSecret`。 
- -   `KeyStoreAuthentication`可以采用以下两个可能的字符串值`KeyVaultPassword`之一`KeyVaultClientSecret`: 和。 这些值控制与其他两个关键字一起使用的身份验证凭据类型。
- -   `KeyStorePrincipalId`获取一个字符串, 该字符串表示用于访问 Azure Key Vault 的帐户的标识符。 
-     -   如果`KeyStoreAuthentication`设置为`KeyVaultPassword`, 则`KeyStorePrincipalId`必须是 Azure ActiveDirectory 用户的名称。
-     -   如果`KeyStoreAuthentication`设置为`KeyVaultClientSecret`, 则`KeyStorePrincipalId`必须是应用程序客户端 ID。
- -   `KeyStoreSecret`采用表示凭据机密的字符串。 
-     -   如果`KeyStoreAuthentication`设置为`KeyVaultPassword`, 则`KeyStoreSecret`必须是用户的密码。 
+Azure Key Vault 提供了一种使用 Azure 存储加密密钥、密码和其他机密，并可用于存储 Always Encrypted 的密钥的方式。 ODBC Driver for SQL Server （版本17及更高版本）包含用于 Azure Key Vault 的内置主密钥存储提供程序。 以下连接选项处理 Azure Key Vault 配置： `KeyStoreAuthentication`、`KeyStorePrincipalId`和 `KeyStoreSecret`。 
+ -   `KeyStoreAuthentication` 可以采用两个可能的字符串值之一： `KeyVaultPassword` 和 `KeyVaultClientSecret`。 这些值控制与其他两个关键字一起使用的身份验证凭据类型。
+ -   `KeyStorePrincipalId` 获取一个字符串，该字符串表示用于访问 Azure Key Vault 的帐户的标识符。 
+     -   如果 `KeyStoreAuthentication` 设置为 `KeyVaultPassword`，则 `KeyStorePrincipalId` 必须是 Azure ActiveDirectory 用户的名称。
+     -   如果 `KeyStoreAuthentication` 设置为 `KeyVaultClientSecret`，则 `KeyStorePrincipalId` 必须是应用程序客户端 ID。
+ -   `KeyStoreSecret` 采用表示凭据机密的字符串。 
+     -   如果 `KeyStoreAuthentication` 设置为 `KeyVaultPassword`，则 `KeyStoreSecret` 必须为用户的密码。 
      -   如果 `KeyStoreAuthentication` 设置为 `KeyVaultClientSecret`，则 `KeyStoreSecret` 必须是与应用程序客户端 ID 相关联的应用程序机密。
 
-要使用 Azure Key Vault 的连接字符串中必须有所有三个选项。 此外, `ColumnEncryption`必须设置为`Enabled`。 如果`ColumnEncryption`设置为`Disabled` , 但 Azure Key Vault 选项存在, 则脚本将继续运行而不会出错, 但不会执行任何加密。
+要使用 Azure Key Vault 的连接字符串中必须有所有三个选项。 此外，`ColumnEncryption` 必须设置为 `Enabled`。 如果 `ColumnEncryption` 设置为 `Disabled` 但 Azure Key Vault 选项存在，则脚本将继续运行而不会出错，但不会执行任何加密。
 
 下面的示例演示如何使用 Azure Key Vault 连接到 SQL Server。
 
-SQLSRV
+SQLSRV：
 
-使用 Azure Active Directory 帐户:
+使用 Azure Active Directory 帐户：
 ```
 $connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreSecret"=>$AADPassword);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
-使用 Azure 应用程序客户端 ID 和机密:
+使用 Azure 应用程序客户端 ID 和机密：
 ```
 $connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreSecret"=>$applicationClientSecret);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
-PDO_SQLSRV: 使用 Azure Active Directory 帐户:
+PDO_SQLSRV：使用 Azure Active Directory 帐户：
 ```
 $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
-使用 Azure 应用程序客户端 ID 和机密:
+使用 Azure 应用程序客户端 ID 和机密：
 ```
 $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreSecret = $applicationClientSecret;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
@@ -310,22 +310,22 @@ $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 
 ## <a name="limitations-of-the-php-drivers-when-using-always-encrypted"></a>使用 Always Encrypted 时的 PHP 驱动程序限制
 
-SQLSRV 和 PDO_SQLSRV:
+SQLSRV 和 PDO_SQLSRV：
  -   Linux/macOS 不支持 Windows 证书存储提供程序
  -   强制实施参数加密
  -   在语句级别启用 Always Encrypted 
- -   使用 Linux 和 macOS 上的 Always Encrypted 功能和非 UTF8 区域设置 (如 "en_US" 时)。ISO-8859-1 "), 如果系统上已安装代码页 1252, 则将 null 数据或空字符串插入加密的 char (n) 列可能不起作用
+ -   使用 Linux 和 macOS 上的 Always Encrypted 功能和非 UTF8 区域设置时（例如 "en_US。ISO-8859-1 "），如果系统上已安装代码页1252，则将 null 数据或空字符串插入加密的 char （n）列可能不起作用
  
-仅 SQLSRV:
- -   不`sqlsrv_query`指定 SQL 类型就使用 for binding 参数
- -   在`sqlsrv_prepare`一批 SQL 语句中使用绑定参数  
+仅 SQLSRV：
+ -   不指定 SQL 类型就使用绑定参数 `sqlsrv_query`
+ -   使用 `sqlsrv_prepare` 在一批 SQL 语句中绑定参数  
  
-仅 PDO_SQLSRV:
- -   `PDO::SQLSRV_ATTR_DIRECT_QUERY`在参数化查询中指定的语句特性
- -   `PDO::ATTR_EMULATE_PREPARE`在参数化查询中指定的语句特性
+仅 PDO_SQLSRV：
+ -   在参数化查询中指定 `PDO::SQLSRV_ATTR_DIRECT_QUERY` 语句特性
+ -   在参数化查询中指定 `PDO::ATTR_EMULATE_PREPARE` 语句特性
  -   在一批 SQL 语句中绑定参数
  
-PHP 驱动程序还继承了 ODBC 驱动程序对 SQL Server 和数据库的限制。 使用 Always Encrypted 和[Always Encrypted 功能详细信息](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details)时, 请参阅[ODBC 驱动程序的限制](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)。  
+PHP 驱动程序还继承了 ODBC 驱动程序对 SQL Server 和数据库的限制。 使用 Always Encrypted 和[Always Encrypted 功能详细信息](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details)时，请参阅[ODBC 驱动程序的限制](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [PHP SQL 驱动程序的编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
