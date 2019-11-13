@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69f198696c434f53dfbef328bdbf3b9be832ca11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75da68330bcce06a4ffdaf152bb19811cffe1f99
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65370162"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593939"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>配置文件中的 URL（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在 RSReportServer.config 文件中存储应用程序设置。 在此文件内，有一些既用于 URL 又用于 URL 预留的配置设置。 这些配置设置的用途和修改规则大不相同。 如果您习惯于通过修改配置文件来优化部署，则本主题可帮助您了解每项 URL 设置的用法。  
@@ -25,7 +25,7 @@ ms.locfileid: "65370162"
 #### <a name="urls-for-application-access"></a>用于进行应用程序访问的 URL  
  URL 用于访问报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]。 若要配置 URL，必须使用 Reporting Services 配置工具。 该工具用于为 HTTP.SYS 中的每个应用程序创建 URL 预留，并为 RSReportServer.config 的 **URLReservations** 部分中的 URL 添加条目。  
   
--   若要查看 **URLReservations** 部分中每个元素的说明，请参阅 [联机丛书中的](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) RsReportServer.config 配置文件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+-   要查看 URLReservations 部分中每个元素的说明，请参阅 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  。  
   
 -   若要深入了解仅 UrlString 元素的语法信息，请参阅 [URL 预留语法 （SSRS 配置管理器）](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  。  
   

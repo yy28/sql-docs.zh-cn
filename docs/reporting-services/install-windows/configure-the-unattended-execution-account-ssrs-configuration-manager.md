@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502935"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593314"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>配置无人参与的执行帐户（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供一个特殊帐户，用于进行无人参与的报表处理和通过网络发送连接请求。 可以通过下列方式使用该帐户：  
   
--   通过网络为使用数据库身份验证的报表发送连接请求，或连接到不需要或不使用身份验证的外部报表数据源。 有关详细信息，请参阅 SQL Server 联机丛书中的 [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 。  
-  
+-   通过网络为使用数据库身份验证的报表发送连接请求，或连接到不需要或不使用身份验证的外部报表数据源。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)
+
 -   检索在报表中使用的外部图像文件。 如果您要使用图像文件并且无法通过匿名访问来访问该文件，则可以配置无人参与的报表处理帐户并授予该帐户访问该文件的权限。  
   
  无人参与的报表处理是指任何由事件（计划驱动事件或数据刷新事件）而不是用户请求触发的报表执行过程。 报表服务器使用无人参与的报表处理帐户来登录承载外部数据源的计算机。 由于报表服务器服务帐户从不用于连接到其他计算机，因此该帐户是必需的。  
@@ -56,8 +56,8 @@ ms.locfileid: "65502935"
   
      rsconfig -e -u\<域/用户名> -p\<密码>   
   
- **rsconfig -e** 支持其他参数。 若要获取有关语法的详细信息和查看命令示例，请参阅 SQL Server 联机丛书中的 [rsconfig 配置工具 (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md)。  
-  
+ **rsconfig -e** 支持其他参数。 要详细了解语法并查看命令示例，请参阅 [rsconfig 实用工具 &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
+ 
 ### <a name="how-account-information-is-stored"></a>帐户信息的存储方式  
  设置帐户后，将在本地或远程报表服务器实例上的 RSreportserver.config 文件中以加密值的形式指定以下设置：  
   
@@ -104,6 +104,6 @@ ms.locfileid: "65502935"
  将从 RSReportServer.config 文件中删除此帐户的信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 配置管理器（SSRS 本机模式）](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services 配置管理器（SSRS 本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

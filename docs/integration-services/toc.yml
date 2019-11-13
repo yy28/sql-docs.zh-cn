@@ -1466,7 +1466,7 @@
     - name: Oracle 连接管理器
       href: ../integration-services/data-flow/oracle-connection-manager.md
     - name: Oracle 源
-      ref: ../integration-services/data-flow/oracle-source.md
+      href: ../integration-services/data-flow/oracle-source.md
     - name: Oracle 目标
       href: ../integration-services/data-flow/oracle-destination.md
     - name: 数据类型支持

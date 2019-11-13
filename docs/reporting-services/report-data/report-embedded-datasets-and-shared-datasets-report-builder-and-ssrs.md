@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87686f4200acf4e4db1666a59b562482c76d0960
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500292"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592315"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>报表的嵌入数据集和共享数据集（报表生成器和 SSRS）
   数据集指定要从数据连接使用的数据。 数据集基于已作为嵌入数据源或对报表服务器上共享数据源的引用保存在报表中的数据连接。 数据集包括指定一组字段的查询。 在您将这些字段拖到设计图面上时，将创建在报表运行时对实际数据进行计算的表达式。  
@@ -73,7 +73,7 @@ ms.locfileid: "66500292"
   
 -   来自任何注册和配置的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的结果集。  
   
--   来自为特定数据源设计的报表模型的数据，这样的报表模型具有预定义实体、实体关系和字段。 有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“将报表模型用作数据源”。  
+-   来自为特定数据源设计的报表模型的数据，这样的报表模型具有预定义实体、实体关系和字段。 有关详细信息，请参阅[Reporting Services 文档](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)中的 "报表数据集"。  
   
  当在运行时处理报表时，查询返回的实际结果集可能有零行或更多行。 在查询中定义的列也有可能已从数据源中丢失。 来自数据源的 Null 值映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 值 **System.DBNull.Value**。  
   
@@ -124,11 +124,11 @@ ms.locfileid: "66500292"
   
 |描述|嵌入<br /><br /> 数据源|共享<br /><br /> 数据源|  
 |-----------------|------------------------------|----------------------------|  
-|数据连接嵌入在报表定义中。|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|指向报表服务器上的数据连接的指针嵌入在报表定义中。||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-|在报表服务器上管理|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-|对于共享数据集，要求这么做||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-|对于组件，要求这么做||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|  
+|数据连接嵌入在报表定义中。|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
+|指向报表服务器上的数据连接的指针嵌入在报表定义中。||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
+|在报表服务器上管理|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
+|对于共享数据集，要求这么做||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
+|对于组件，要求这么做||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
   
  在报表设计器中，您可以将共享数据集作为报表项目的一部分创建，并且控制是否将这些共享数据集部署到报表服务器。 您不能通过浏览报表服务器来选择某个共享数据集以添加到您的报表中。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66500292"
 |字段|来自查询命令的字段<br /><br /> 计算字段不是数据集定义的一部分|查看字段，但无法对其进行更改<br /><br /> 字段集合是静态的，它基于您向报表中添加共享数据集时所使用的查询。 若要进行更新，请单击 **“数据集属性”** 对话框中的 **“刷新字段”** 。 实际的字段集合可以是定义中当前查询返回的任何集合。<br /><br /> 添加计算字段|  
 |数据集|数据选项，如区分大小写|覆盖实例中的数据选项|  
   
- 有关创建数据集的详细信息，请参阅 SQL Server 联机丛书的 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)中的 [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
+ 要详细了解如何创建数据集，请参阅 [Reporting Services 文档](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)中的 [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
 ##  <a name="SortGroupFilter"></a> 对数据集中的数据进行筛选、排序和分组  
  数据集中的数据来自对外部数据源运行查询命令所获得的结果。 数据扩展插件的查询命令语法确定是否可以对数据进行排序或分组。 在为报表检索数据前，在查询中发生排序和分组。 在为报表检索数据后发生筛选。  

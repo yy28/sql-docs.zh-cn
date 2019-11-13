@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 43e2ae683bdd9dd22bdf3aac1e9c6e15cc7fed59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf30cee34e988f552a36fac1f7b9eb9ed14d83ef
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580744"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594009"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>使用浏览器查找和查看报表（报表生成器和 SSRS）
   通过与报表服务器直接连接，您可以使用支持的任何 Web 浏览器查看报表。 每个报表在报表服务器上都有一个 URL 地址。 无需使用 Web 应用程序，输入报表的 Web 地址即可在浏览器窗口中打开相应报表。 相应的报表会以 HTML 格式打开，并且包含报表工具栏，这样在此报表中您就可以在各页间导航或按数据值进行搜索。 您可以在 URL 中设置参数以隐藏报表工具栏或选择报表的输出格式。  
@@ -22,13 +22,13 @@ ms.locfileid: "65580744"
   
  如果不知道某一报表的 Web 地址，则可以打开相应报表服务器的 Web 地址，然后浏览报表服务器文件夹层次结构以选择要查看的报表。 下图显示了在浏览器窗口中显示的文件夹层次结构。  
   
- ![浏览器中的文件夹](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![浏览器中的文件夹](../../reporting-services/report-builder/media/rs-browserfolder.GIF "浏览器中的文件夹")  
 浏览器中的文件夹  
   
 > [!NOTE]  
 >  如果是通过手持设备访问报表，则必须使用浏览器打开报表。 报表管理器界面的大小不适于在手持设备上显示。  
   
- 有关可以使用的浏览器类型的详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“Reporting Services 支持的浏览器类型”。  
+ 有关可以使用的浏览器类型的详细信息，请参阅[Reporting Services 和 Power View 浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -53,6 +53,6 @@ ms.locfileid: "65580744"
   
  在 Internet Explorer 中对 URL 的最大长度限制为 2,083 个字符。 有关详细信息，请参阅 [Internet Explorer 中的最大 URL 长度](https://support.microsoft.com/kb/208427)。  
   
- 有关通过 URL 访问报表的详细信息，包括有关 URL 构造方式的信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“URL 访问”。  
+ 要详细了解如何通过 URL 访问报表（包括了解如何构造 URL），请参阅 [URL 访问](../../reporting-services/url-access-ssrs.md)。  
   
   

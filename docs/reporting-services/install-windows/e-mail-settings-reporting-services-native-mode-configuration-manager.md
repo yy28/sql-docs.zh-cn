@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c371558070ee6ef41afe167e3be2ed4adbd80cc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 872c7e4d501017627fcc64eca7ed48204c9d3533
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513599"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593810"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>电子邮件设置 - Reporting Services 本机模式（配置管理器）
 Reporting Services 包括电子邮件传递扩展插件，以便可以通过电子邮件分发报表。 根据定义电子邮件订阅的方式，传递可能由通知、链接、附件或嵌入报表组成。 电子邮件传递扩展插件可与现有的邮件服务器技术一起使用。 邮件服务器必须是 SMTP 服务器或转发器。 报表服务器通过操作系统提供的协作数据对象 (CDO) 库 (cdosys.dll) 连接到 SMTP 服务器。
@@ -41,7 +41,7 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
 
 - 如果要仅指定一个 SMTP 服务器和一个具有发送电子邮件权限的用户帐户，则使用 Reporting Services 配置管理器。 以下是配置报表服务器电子邮件传递扩展插件所需的最低设置。
 
-- （可选）使用文本编辑器在 RSreportserver.config 文件中指定其他设置。 此文件包含报表服务器电子邮件传递的所有配置设置。 如果要使用本地 SMTP 服务器或将电子邮件限定传递到特定主机，则需要在这些文件中指定其他设置。 有关查找和修改配置文件的详细信息，请参阅 SQL Server 联机丛书中的 [修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) 。
+- （可选）使用文本编辑器在 RSreportserver.config 文件中指定其他设置。 此文件包含报表服务器电子邮件传递的所有配置设置。 如果要使用本地 SMTP 服务器或将电子邮件限定传递到特定主机，则需要在这些文件中指定其他设置。 要详细了解如何查找和修改配置文件，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。
 
 > [!NOTE] 
 > 报表服务器电子邮件设置都是基于 CDO。 若要了解有关特定设置的更多详细信息，可以参考 CDO 产品文档。
@@ -77,7 +77,7 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
 6. 你可以在 rsreportserver.config 中对电子邮件配置选择性地调整附加字段。
 
 ## <a name="example-report-server-e-mail-configuration"></a>报表服务器电子邮件配置示例
-下面的示例说明了远程 SMTP 服务器的 RSreportserver.config 文件中的设置： 若要了解设置说明及有效值，请参阅 SQL Server 联机丛书中的 [Rsreportserver.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 。
+下面的示例说明了远程 SMTP 服务器的 RSreportserver.config 文件中的设置： 要了解设置说明及有效值，请参阅 [Rsreportserver.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。
 
 ```
 <RSEmailDPConfiguration>

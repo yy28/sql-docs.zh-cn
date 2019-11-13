@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988425"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593471"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密密钥 - 存储加密的报表服务器数据
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将加密值存储在报表服务器数据库和配置文件中。 大多数加密值都是用于访问向报表提供数据的外部数据源的凭据。 本主题介绍对哪些值进行了加密、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中使用的加密功能以及您应当了解的其他类型的已存储机密数据。  
@@ -33,7 +33,7 @@ ms.locfileid: "72988425"
   
 -   报表服务器用于连接到向报表提供数据的外部数据源的存储凭据。  
   
-     这些值是在您为报表配置数据源信息时定义的，随后会以加密值的形式存储在报表服务器数据库中。 报表服务器使用对称密钥对这些数据进行加密和解密。 有关存储的凭据的详细信息，请参阅 [联机丛书中的](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 为报表数据源指定凭据和连接信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+     这些值是在您为报表配置数据源信息时定义的，随后会以加密值的形式存储在报表服务器数据库中。 报表服务器使用对称密钥对这些数据进行加密和解密。 有关存储的凭据的详细信息，请参阅[指定报表数据源的凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
 -   报表服务器用于连接到其他计算机以检索报表中使用的外部图像文件或外部数据的无人参与用户帐户。  
   

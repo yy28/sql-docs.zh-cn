@@ -1,20 +1,20 @@
 ---
-title: 服务器属性（“高级”页）- Reporting Services | Microsoft Docs
+title: 服务器属性“高级”页 - Reporting Services | Microsoft Docs
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/15/2019
-ms.openlocfilehash: 079565c813e0b66f09881039ea3d6509bdf6cf54
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.date: 11/05/2019
+ms.openlocfilehash: defadad0d3a2545ba3d794d5d9c38c5734d3e9af
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908254"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638029"
 ---
-# <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
+# <a name="server-properties-advanced-page---reporting-services"></a>服务器属性“高级”页 - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -93,7 +93,7 @@ ms.locfileid: "70908254"
 
 **AccessControlMaxAge** 指定预备请求结果可缓存的秒数。 默认值为 600（10 分钟）。
 
-**AllowedResourceExtensionsForUpload（仅限 Power BI 报表服务器和 Reporting Services 2017 及更高版本）** 可上传到报表服务器的资源的扩展集。 不需要包含的内置文件类型的扩展名，如 &ast;.rdl 和 &ast;.pbix。 默认扩展名为“&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx”。
+**AllowedResourceExtensionsForUpload**（仅限 Power BI 报表服务器和 Reporting Services 2017 及更高版本）可上传到报表服务器的资源的扩展集。 不需要包含的内置文件类型的扩展名，如 &ast;.rdl 和 &ast;.pbix。 默认扩展名为“&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx”。
 
 **RestrictedResourceMimeTypeForUpload**不允许用户使用上传内容的 mime 类型集。 已存储为受限 mime 类型的任何资源只能作为应用程序/八进制流下载，而不能由浏览器打开/执行。  默认情况下，此列表中不包含受限制的项，但建议组织填充此项以提供最安全的体验。
 

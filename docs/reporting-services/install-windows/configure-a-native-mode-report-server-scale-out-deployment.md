@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500583"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593865"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>配置本机模式报表服务器扩展部署
 
@@ -93,9 +93,9 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具。  
   
-3.  配置报表服务器 Web 服务 URL、Web 门户 URL 和报表服务器数据库。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[配置报表服务器（Reporting Services 本机模式）](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)。  
+3.  配置报表服务器 Web 服务 URL、Web 门户 URL 和报表服务器数据库。 有关详细信息，请参阅[配置报表服务器（Reporting Services 本机模式）](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)。
   
-4.  验证报表服务器是否正常运行。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 验证 Reporting Services 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+4.  验证报表服务器是否正常运行。 有关详细信息，请参阅 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
 ## <a name="to-install-and-configure-the-second-report-server-instance"></a>安装并配置第二个报表服务器实例  
   
@@ -131,7 +131,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  单击“扩展部署”打开“扩展部署”页  。 您会看到两个条目，分别对应于连接到报表服务器数据库的两个报表服务器实例。 第一个报表服务器实例应已联接。 第二个报表服务器应在“等待联接”。 如果您在自己的部署中没有看到类似的条目，请确认您已连接到已配置和初始化为使用报表服务器数据库的第一个报表服务器。  
   
-     ![“扩展部署”页的部分屏幕快照](../../reporting-services/install-windows/media/scaloutscreen.gif "“扩展部署”页的部分屏幕快照")  
+     ![“扩展部署”页的局部屏幕快照](../../reporting-services/install-windows/media/scaloutscreen.gif "“扩展部署”页的局部屏幕快照")  
   
 3.  在“扩展部署”页上，选择等待联接部署的报表服务器实例，然后选择“添加服务器”  。  
   
@@ -146,8 +146,8 @@ An error occurred within the report server database.  This may be due to a conne
 
 ## <a name="next-steps"></a>后续步骤
 
-[配置服务帐户](configure-the-report-server-service-account-ssrs-configuration-manager.md)
-[配置 URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+
+[配置 URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)来[配置服务帐户](configure-the-report-server-service-account-ssrs-configuration-manager.md)   
 [创建本机模式报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [配置报表服务器 URL](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [配置报表服务器数据库连接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

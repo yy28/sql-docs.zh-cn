@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b4ac7074d89b0e187d18c6cee79840c2a6ab61e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499976"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593956"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 列表连接类型 (SSRS)
 
@@ -90,7 +90,7 @@ ms.locfileid: "66499976"
   
  不支持从多个列表中选择字段。 可以为每个列表创建一个数据集并从每个数据集中选择字段。 如果这些列表具有通用字段，则可以使用绑定到一个数据集的 Tablix 数据区域中的 Lookup 函数从另一个未绑定到数据区域的数据集中检索值。 有关详细信息，请参阅 [Lookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。  
   
--   **所选字段**  ：显示所选的字段。 此窗格中的字段名称是 SharePoint 用户指定的友好名称。 在您关闭查询设计器后，将会在“报表数据”窗格的数据集字段集合中看到这些名称。 [“数据集属性”对话框 ->“字段”（报表生成器）](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)页介绍了唯一名称和友好名称的关系。  
+-   **所选字段**  ：显示所选的字段。 此窗格中的字段名称是 SharePoint 用户指定的友好名称。 在您关闭查询设计器后，将会在“报表数据”窗格的数据集字段集合中看到这些名称。 [“数据集属性”对话框 ->“字段”（报表生成器）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)页介绍了唯一名称和友好名称的关系。  
   
 -   **应用的筛选器**  ：在数据返回到报表中之前，限制从 SharePoint 列表返回的数据。 选择用于限制在列表中检索的数据的字段名称、运算符和值。 根据所选值的数据类型的不同，运算符也会有所不同。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66499976"
   
 -   **查询结果**  ：显示查询运行时返回的示例行。 如果 SharePoint 列表值在 SharePoint 站点上频繁更改，则您在查询结果窗格中看到的值可能不同于在报表中看到的值。  
   
--   **所选字段**  ：显示所选的字段。 此窗格中的字段名称是 SharePoint 用户指定的友好名称。 在您关闭查询设计器后，将会在“报表数据”窗格的数据集字段集合中看到这些名称。 [“数据集属性”对话框 ->“字段”（报表生成器）](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)页介绍了唯一名称和友好名称的关系。  
+-   **所选字段**  ：显示所选的字段。 此窗格中的字段名称是 SharePoint 用户指定的友好名称。 在您关闭查询设计器后，将会在“报表数据”窗格的数据集字段集合中看到这些名称。 [“数据集属性”对话框 ->“字段”（报表生成器）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)页介绍了唯一名称和友好名称的关系。  
   
 -   **应用的筛选器**  ：在数据返回到报表中之前，限制从 SharePoint 列表返回的数据。 选择用于限制在列表中检索的数据的字段名称、运算符和值。 根据所选值的数据类型的不同，运算符也会有所不同。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66499976"
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关查询生成的数据集字段集合的信息。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ [Reporting Services 支持的数据源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
 
 ## <a name="see-also"></a>另请参阅
