@@ -10,22 +10,22 @@ ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 860d2f03018abae2b27367a1f41f87268affb328
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2baa2a28fb0805f92c27b7f8a237996ce4583db
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779831"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74054833"
 ---
 # <a name="user-defined-type"></a>用户定义类型
   用户定义数据类型示例介绍如何在 Transact-SQL 和使用 `System.Data.SqlClient` 的客户端应用程序中创建和使用简单的用户定义数据类型。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/download/details.aspx?id=42299) Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://archive.codeplex.com/?p=SqlServerSamples)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62779831"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-9. 复制[!INCLUDE[tsql](../../includes/tsql-md.md)]到一个文件测试命令脚本并将其保存为`test.sql`示例目录中。  
+9. 将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 测试命令脚本复制到一个文件中，并将其作为 `test.sql` 保存在示例目录中。  
   
 10. 使用以下命令执行测试脚本：  
   
@@ -987,7 +987,7 @@ DROP ASSEMBLY ComplexNumber;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: 对于 SQL Server 升级的命令提示符下运行数据库实验助手
+title: 在命令提示符下运行数据库实验助手
 description: 在命令提示符下运行数据库实验助手
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 475c3dc1366e69dbc164547bbf5dfc8c06515c56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3b87eafa460cfef69666a3837f56626dab81d47
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050467"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056573"
 ---
-# <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>在命令提示符下运行数据库实验助手
+# <a name="run-database-experimentation-assistant-at-a-command-prompt-sql-server"></a>在命令提示符下运行数据库实验助手（SQL Server）
 
-本文介绍如何使用命令提示符窗口中捕获的跟踪中数据库实验助手 (DEA)，然后分析结果。 
+本文介绍如何使用 "命令提示符" 窗口在数据库实验助手（DEA）中捕获跟踪，然后对结果进行分析。 
 
 ## <a name="start-a-new-workload-capture-by-using-the-dea-command"></a>使用 DEA 命令启动新的工作负荷捕获
 
@@ -36,35 +36,35 @@ ms.locfileid: "68050467"
 ## <a name="replay-a-workload"></a>重播工作负荷
 
 1.  登录到 Distributed Replay 控制器计算机。
-2.  将转换的工作负荷跟踪捕获到 IRF 文件使用 DEA 命令：
+2.  使用 DEA 命令将捕获的工作负载跟踪转换为 IRF 文件：
 
     `DReplay preprocess -m "dreplaycontroller" -i "Path to first trace file" -d "<Folder path on controller>\IrfFolder"`
 
-3.  通过使用 StartReplayCaptureTrace.sql 运行 SQL Server 的目标计算机上启动跟踪捕获。
+3.  使用 StartReplayCaptureTrace 在运行 SQL Server 的目标计算机上启动跟踪捕获。
        
-    a.  在 SQL Server Management Studio (SSMS)，打开 < Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql。
+    A.  在 SQL Server Management Studio （SSMS）中，打开 < Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql。
     
-    b.  运行`Set @durationInMins=0`，以便跟踪捕获不会在指定时间后自动停止。
+    b.  运行 `Set @durationInMins=0`，以使跟踪捕获不会在指定的时间后自动停止。
     
-    c.  若要设置每个跟踪文件的最大文件大小，请运行`Set @maxfilesize`。 建议的大小为 200 （以 mb 为单位）。
+    c.  若要设置每个跟踪文件的最大文件大小，请运行 `Set @maxfilesize`。 建议的大小为200（以 MB 为单位）。
     
-    d.  编辑`@Tracefile`设置跟踪文件的唯一名称。
+    d.  编辑 `@Tracefile` 以设置跟踪文件的唯一名称。
     
-    e.  编辑`@dbname`如果工作负荷必须捕获仅在特定数据库上指定的数据库名称。 默认情况下，捕获整个服务器上的工作负荷。 
-4.  重播目标 SQL Server 实例针对 IRF 文件：
+    e.  如果只能在特定数据库上捕获工作负荷，请编辑 `@dbname` 以指定数据库名称。 默认情况下，将捕获整个服务器上的工作负荷。 
+4.  针对目标 SQL Server 实例重播 IRF 文件：
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
         
-    a.  若要监视状态，请打开命令提示符窗口并运行`DReplay status -f 1`。
+    A.  若要监视状态，请打开命令提示符窗口并运行 `DReplay status -f 1`。
         
-    b.  若要停止重播，例如像您看到传递 %是低于预期，打开命令提示符窗口并运行`DReplay cancel`。
+    b.  若要停止重播（例如，如果发现 pass% 低于预期），请打开命令提示符窗口并运行 `DReplay cancel`。
 
-5.  目标 SQL Server 实例上停止跟踪捕获。
-6.  在 SSMS 中，打开`<Dea_InstallPath>\Scripts\StopCaptureTrace.sql`。
-7.  编辑`@Tracefile`以匹配在运行 SQL Server 的目标计算机上的跟踪文件路径。
-8.  对运行 SQL Server 的目标计算机运行该脚本。
+5.  停止目标 SQL Server 实例上的跟踪捕获。
+6.  在 SSMS 中，打开 `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql`。
+7.  编辑 `@Tracefile` 以匹配运行 SQL Server 的目标计算机上的跟踪文件路径。
+8.  针对运行 SQL Server 的目标计算机运行脚本。
 
-## <a name="analyze-traces-by-using-the-dea-command"></a>通过使用 DEA 命令分析跟踪
+## <a name="analyze-traces-by-using-the-dea-command"></a>使用 DEA 命令分析跟踪
 
 若要启动新的跟踪分析，请运行以下命令：
 
@@ -76,6 +76,6 @@ ms.locfileid: "68050467"
 
 ## <a name="next-steps"></a>后续步骤
 
-DEA 和演示的 19 分钟介绍，请观看以下视频：
+有关 DEA 和演示的19分钟简介，请观看以下视频：
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

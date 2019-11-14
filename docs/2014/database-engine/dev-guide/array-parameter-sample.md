@@ -10,12 +10,12 @@ ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753729"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055907"
 ---
 # <a name="array-parameter-sample"></a>数组参数示例
   有时需要创建、更新或删除数据库中的一组行。 实现的方法有多种。 其中一种是使用 CLR 集成用户定义数据类型将客户端上的数组信息传递到服务器上的公共语言运行时 (CLR) 集成存储过程。 这类用户定义数据类型的特性将提供给服务器的数据大小限制在 8000 个字节。 因此，此方法不适于大型数据或复杂数据。 如果操作的数据量小且简单，则此方法比为每行调用存储过程有效得多。 通过传递数组可以保留数据顺序，数据顺序对一些应用程序而言非常重要。此示例包含以下内容：  
@@ -26,12 +26,12 @@ ms.locfileid: "62753729"
   
 3.  `TestArrayParameter` 控制台应用程序。 它基于传入的命令行参数创建 `ContactTypeNames` 用户定义数据类型的实例，然后通过将用户定义数据类型实例作为参数进行传递来调用 `usp_EnsureContactTypeNames` 存储过程。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/download/details.aspx?id=42299) Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://archive.codeplex.com/?p=SqlServerSamples)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -714,7 +714,7 @@ DROP ASSEMBLY ContactTypeNames;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

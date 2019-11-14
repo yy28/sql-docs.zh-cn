@@ -1,7 +1,6 @@
 ---
-title: 将 SQL Server 登录名迁移数据迁移助手 |Microsoft Docs
+title: 将 SQL Server 登录名迁移数据迁移助手
 description: 了解如何迁移 SQL Server 登录名数据迁移助手
-ms.custom: ''
 ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-ms.openlocfilehash: 265ab37c47956400baa759b73838c7f2e66cc83e
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783264"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056483"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>将 SQL Server 登录名迁移数据迁移助手
 

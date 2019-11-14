@@ -1,7 +1,8 @@
 ---
-title: 分析合并的数据迁移助手的评估报告使用 Power BI (SQL Server) |Microsoft Docs
-description: 了解如何使用 Power BI 来分析您已导入和合并到 SQL Server 中的数据迁移评估报表
-ms.custom: ''
+title: 通过 Power BI 分析合并的评估报告
+titleSuffix: Data Migration Assistant
+description: 了解如何使用 Power BI 分析在 SQL Server 中导入和合并的数据迁移评估报表
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,56 +15,56 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b97ed315b8266c165a14a7f2b05912a7ae530b1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2385914fc97fa8e118d871ddac6e0cdc9d49247
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054682"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056497"
 ---
-# <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>分析创建的数据迁移助手使用 Power BI 的合并的评估报表
+# <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>使用 Power BI 分析数据迁移助手创建的合并评估报告
 
-本文介绍如何创建用于分析统一的迁移评估的 Power BI 报表。
+本文介绍如何创建 Power BI 报表来分析合并的迁移评估。
 
-有关合并的数据迁移助手中创建的迁移评估的信息，请参阅[合并评估报表](../dma/dma-consolidatereports.md)。
+有关合并数据迁移助手创建的迁移评估的详细信息，请参阅[合并评估报告](../dma/dma-consolidatereports.md)。
 
 ## <a name="sample-power-bi-reports"></a>示例 Power BI 报表
 
-可以从此下载的合并的迁移评估的 Power BI 报表示例[Github 存储库](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant)。
+可以从此[GitHub 存储库](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant)下载用于合并迁移评估的 Power BI 报表的示例。
 
-以下报表可以包含： 
+包含以下报表： 
 
-- [仪表板](#dashboard-report)
+- [板](#dashboard-report)
 
   包括快照统计信息和向下钻取报表。
 
-- [在本地升级就绪情况](#on-premises-upgrade-readiness-report)
+- [本地升级准备情况](#on-premises-upgrade-readiness-report)
 
-  数据源是 DMAReporting 数据库中的 UpgradeSuccessRanking 视图。  此报表显示您已评估的数据库的百分比升级成功。
+  数据源是 DMAReporting 数据库中的 UpgradeSuccessRanking 视图。  此报告显示评估的数据库的成功升级百分比。
 
-- [在本地功能奇偶一致性](#on-premises-feature-parity-report)
+- [本地功能奇偶校验](#on-premises-feature-parity-report)
 
   显示目标 SQL Server 版本的功能建议。
 
-- [Azure SQL DB 升级就绪情况](#azure-sql-db-upgrade-readiness-report)
+- [Azure SQL DB 升级准备情况](#azure-sql-db-upgrade-readiness-report)
 
-  数据源是 DMAReporting 数据库中的 UpgradeSuccessRanking 视图。  此报表显示针对 Azure SQL DB 迁移评估的数据库的百分比升级成功。
+  数据源是 DMAReporting 数据库中的 UpgradeSuccessRanking 视图。  此报告显示为 Azure SQL DB 迁移评估的数据库的成功升级百分比。
 
-- [Azure SQL 数据库不受支持的功能](#azure-sql-db-unsupported-features-report)
+- [Azure SQL DB 不支持的功能](#azure-sql-db-unsupported-features-report)
 
-  显示了 Azure SQL 数据库 (V12) 中不支持将现有数据库中的功能。
+  显示 Azure SQL 数据库（V12）不支持的现有数据库中的功能。
 
-您可以修改这些报表来处理您的环境的更改 Power BI 中的数据源。 
+通过在 Power BI 中更改数据源，可以修改这些报表以使用您的环境。 
 
-1. 选择向下箭头旁边**编辑查询**，然后选择**数据源设置**。
+1. 选择 "**编辑查询**" 旁边的向下箭头，然后选择 "**数据源设置**"。
 
-   ![编辑查询菜单上，数据源设置](../dma/media/DataSourceSettings.png)
+   ![编辑查询菜单，数据源设置](../dma/media/DataSourceSettings.png)
 
-1. 选择**更改源...** ，然后键入服务器和数据库的值。
+1. 选择 "**更改源 ...** "，然后输入服务器和数据库值。
 
-   ![更改源、 服务器和数据库](../dma/media/ChangeSource.png)
+   ![更改源、服务器和数据库](../dma/media/ChangeSource.png)
 
-1. 选择**确定**，然后选择**关闭**。
+1. 选择 **"确定"** ，然后选择 "**关闭**"。
 
 1. 刷新报表。
 
@@ -73,70 +74,70 @@ ms.locfileid: "68054682"
 
 ![仪表板报表](../dma/media/DashboardReport.png)
 
-仪表板会显示有关所有评估的详细信息。 可以使用左侧的切片器要作为筛选依据实例或数据库。 条形图可用于深化到特定的类别，若要查看存在问题的位置。
+该仪表板将显示有关你的所有评估的详细信息。 可以使用左侧的切片器按实例或数据库进行筛选。 您可以使用条形图向下钻取到特定类别，以查看问题所在的位置。
 
-若要向下钻取，请选择该圆形的条形图的右上角的向下箭头。
+若要向下钻取，请选择条形图右上角有向下箭头的圆圈。
 
-![类别向下钻取](../dma/media/CategoryDrillDown.png)
+![类别深化](../dma/media/CategoryDrillDown.png)
 
-下图中所示设置向下钻取序列 (下**轴**)。 若要更改顺序，请将列拖到所需的顺序。
+深化序列的设置如下图所示（在**轴**下）。 若要更改顺序，请将列拖至所需的顺序。
 
-![可视化效果，条形图坐标轴](../dma/media/VisualizationsAxis.png)
+![可视化效果，条形图轴](../dma/media/VisualizationsAxis.png)
 
-首先按特定的数据库筛选，然后深化到特定类别问题时，此视图将变得更强大的功能。 在以下示例中，例如选择 HR 数据库 **SQL01** 查看阻止迁移 （重大更改） 的所有对象。
+当你首次按特定数据库进行筛选，然后向下钻取到特定的类别问题时，此视图将变得更加强大。 在下面的示例中，为实例**sql01-win12**选择了 HR 数据库以查看阻止迁移的所有对象（重大更改）。
 
 ![HR 数据库的重大更改](../dma/media/BreakingChanges.png)
 
-### <a name="on-premises-upgrade-readiness-report"></a>在本地升级准备情况报告
+### <a name="on-premises-upgrade-readiness-report"></a>本地升级准备情况报表
 
-![在本地升级准备情况报告](../dma/media/OnPremisesUpgradeReadinessReport.png)
+![本地升级准备情况报表](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
-此报表显示已准备好你的数据库已经迁移到更高版本的 SQL Server 的快照。 此报表中的数据来自 dbo。UpgradeSuccessFactor\_DMAReporting 数据库中的本地视图。
+此报表显示数据库迁移到更高版本的 SQL Server 的准备情况的快照。 此报表中的数据来自 dbo。DMAReporting 数据库中的 UpgradeSuccessFactor\_OnPrem view。
 
-按实例和数据库名称筛选和使用顶部的分数卡，您可以查看哪些可能太迁移数据库的版本。 例如，如果通过 AdventureWorks 2012 数据库进行筛选，可以看到数据库现在可以将移动到报告中列出的所有 SQL Server 版本。 这确定通过确保该数据库和兼容性级别没有重大更改。
+按实例和数据库名称筛选，并使用顶部的 "评分" 卡，可以查看数据库可以迁移的版本。 例如，如果你按 AdventureWorks 2012 数据库进行筛选，则可以看到数据库已准备好移动到报表中列出的所有 SQL Server 版本。 这是通过确保该数据库和兼容性级别没有重大更改而确定的。
 
-![升级成功 AdventureWorks 数据库的因素](../dma/media/UpgradeSuccessFactor.png)
+![AdventureWorks 数据库的升级成功系数](../dma/media/UpgradeSuccessFactor.png)
 
-### <a name="on-premises-feature-parity-report"></a>在本地功能奇偶校验报表
+### <a name="on-premises-feature-parity-report"></a>本地功能奇偶校验报表
 
-![在本地功能奇偶校验报表](../dma/media/OnPremisesFeatureParityReport.png)
+![本地功能奇偶校验报表](../dma/media/OnPremisesFeatureParityReport.png)
 
 使用此报表突出显示可用于目标 SQL Server 版本中的数据库的新功能。
 
-在漏斗图中选择一项功能，突出显示了在底部的数据，该功能受影响的对象。 在以下示例中， **延伸数据库以节省存储空间** 选择功能，并列出表，可以利用此功能。
+在漏斗图中选择一项功能时，底部的数据将突出显示该功能影响的对象。 在下面的示例中，选择了**用于存储空间节约功能的 Stretch database** ，并列出了可从此功能获益的表。
 
-![Stretch Database 的功能建议](../dma/media/FeatureRecommend_StretchDatabase.png)
+![Stretch Database 功能建议](../dma/media/FeatureRecommend_StretchDatabase.png)
 
-### <a name="azure-sql-db-upgrade-readiness-report"></a>Azure SQL DB 升级准备情况报告
+### <a name="azure-sql-db-upgrade-readiness-report"></a>Azure SQL DB 升级准备情况报表
 
-![Azure SQL DB 升级准备情况报告](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
+![Azure SQL DB 升级准备情况报表](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
-此报表显示迁移到 Azure SQL 数据库 V12 的数据库准备情况。 此报表中的数据来自 dbo。UpgradeSuccessRanking DMAReporting 数据库中的视图。
+此报告显示要迁移到 Azure SQL 数据库 V12 的数据库就绪情况。 此报表中的数据来自 dbo。DMAReporting 数据库中的 UpgradeSuccessRanking 视图。
 
 ### <a name="azure-features-parity-report"></a>Azure 功能奇偶校验报表
 
 ![Azure 功能奇偶校验报表](../dma/media/AzureFeaturesParityReport.png)
 
-使用此报表突出显示*实例级别功能*不受 Azure SQL 数据库 V12。
+使用此报告突出显示 Azure SQL 数据库 V12 不支持的*实例级功能*。
 
-当在漏斗图中选择一项功能时，在底部的数据列出了实例和数据库功能不受支持的。 在以下示例中，选择此功能：**可用性组配置不支持始终在 Azure SQL 数据库中** 。  
+当您在漏斗图中选择某个功能时，底部的数据将列出不支持的实例和数据库功能。 在以下示例中，已选择此功能： **AZURE SQL 数据库中不支持 Always On 可用性组配置**。  
 
-![Alwayson 可用性组功能](../dma/media/Feature_AlwaysOnAvailability.png)
+![Always on 可用性组功能](../dma/media/Feature_AlwaysOnAvailability.png)
 
  
-### <a name="azure-sql-db-unsupported-features-report"></a>Azure SQL 数据库不受支持的功能报表
+### <a name="azure-sql-db-unsupported-features-report"></a>Azure SQL DB 不支持的功能报表
 
-![Azure SQL 数据库不受支持的功能报表](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
+![Azure SQL DB 不支持的功能报表](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
 
-此报表突出显示了哪些功能不支持为给定**数据库**当目标是 Azure SQL 数据库 (V12)。
+此报告突出显示了在目标为 Azure SQL Database （V12）的情况下给定**数据库**不支持的功能。
 
-通过漏斗图中的数据库名称和功能值筛选，您可以查看详细信息不受支持的功能。 详细信息包括受影响的对象和解决问题的建议。
+通过按漏斗图中的数据库名称和功能值进行筛选，可以查看有关不受支持的功能的详细信息。 详细信息包括哪个对象受到影响，以及解决问题的建议。
 
-例如，筛选由 DTC 数据库和**无法升级只读数据库**，可以查看受影响的对象的列表。
+例如，无法升级 DTC 数据库和**只读数据库**的筛选，您可以看到受影响的对象的列表。
 
-![只读数据库不能为升级问题](../dma/media/ReadOnlyDatabases.png)
+![无法升级只读数据库问题](../dma/media/ReadOnlyDatabases.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据迁移助手概述](../dma/dma-overview.md)
 

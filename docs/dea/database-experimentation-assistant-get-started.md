@@ -1,7 +1,6 @@
 ---
-title: 数据库实验助手 SQL Server 升级入门
-description: 数据库实验助手入门
-ms.custom: ''
+title: 数据库实验助手入门
+description: 数据库实验助手（DEA）是一种用于在 SQL Server 环境中进行更改的 A/B 测试解决方案，如升级或新索引。
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,14 +11,15 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 9fe162b2a9bc0db4a2a49648eecb76c5802f57c0
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 43f8c6bff909716bdd85a798dfd4e5a7431e31af
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381773"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056716"
 ---
-# <a name="get-started-with-database-experimentation-assistant"></a>数据库实验助手入门
+# <a name="get-started-with-database-experimentation-assistant-sql-server"></a>数据库实验助手（SQL Server）入门
 
 数据库实验助手（DEA）是一种用于在 SQL Server 环境中进行更改的 A/B 测试解决方案，如升级或新索引。 DEA 可帮助你评估源服务器上的工作负荷（在当前环境中）在你的新环境中将如何执行。 DEA 指导你完成三个步骤来运行 A/B 测试： 
 
@@ -48,7 +48,7 @@ SQL Server A/B 测试的第一步是在源服务器上捕获跟踪。 源服务�
 
 1. 输入或选择以下信息：
 
-   - **跟踪名称**：正在创建的新跟踪文件的文件名。 避免使用滚动更新文件命名约定的跟踪名称，例如，CaptureName \_NNN。
+   - **跟踪名称**：正在创建的新跟踪文件的文件名。 避免使用滚动更新文件命名约定的跟踪名称，例如，CaptureName\_NNN。
    - **持续**时间：捕获的持续时间。
    - **SQL Server 实例名称**：要从中捕获跟踪的 SQL Server 实例。
    - **数据库名称**：运行 SQL Server 的计算机上要捕获其跟踪的数据库的名称。 如果留空，将从服务器上的所有数据库中捕获跟踪。

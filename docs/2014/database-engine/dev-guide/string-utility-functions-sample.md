@@ -10,24 +10,24 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef98316982090d247c09ec887e0d00a5c895950b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780582"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74054849"
 ---
 # <a name="string-utility-functions-sample"></a>字符串实用工具函数示例
   字符串实用工具示例包含用 Visual C# 和 Visual Basic 编写的流式表值函数，该函数可以将逗号分隔的字符串拆分为具有一列的表。 它也包含一个将字符串列转换为逗号分隔的字符串的聚合函数。  同时实现的还有一个标量函数和一个表值函数，这些函数提供正则表达式替换和正则表达式搜索功能。  
   
  若要实现流式表值函数，请创建返回实现 `IEnumerable` 接口的对象的方法。 此 `IEnumerable` 方法必须通过某个属性链接至其他填充表值函数的行的方法。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/download/details.aspx?id=42299) Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://archive.codeplex.com/?p=SqlServerSamples)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62780582"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-    -   复制[!INCLUDE[tsql](../../includes/tsql-md.md)]到一个文件测试命令脚本并将其保存为`test.sql`示例目录中。  
+    -   将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 测试命令脚本复制到一个文件中，并将其作为 `test.sql` 保存在示例目录中。  
   
 8.  使用以下命令执行测试脚本：  
   
@@ -944,7 +944,7 @@ DROP ASSEMBLY StringUtils;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -1,7 +1,6 @@
 ---
-title: 执行 SQL Server Integration Service 迁移评估（数据迁移助手） |Microsoft Docs
-description: 了解如何使用数据迁移助手在迁移到 Azure SQL 数据库或 Azure SQL 数据库托管实例之前评估本地 SQL Server 集成服务
-ms.custom: ''
+title: 使用数据迁移助手创建 SSIS 迁移评估
+description: 了解如何使用数据迁移助手在迁移到 Azure SQL 数据库或 Azure SQL 数据库托管实例之前评估本地 SQL Server Integration Service （SSIS）
 ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84b498cbaf7a2f3d1118894157c17b8270259afa
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fa97cc647a194257441997032f2248a3ce9e5110
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632870"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056641"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>使用数据迁移助手执行 SQL Server Integration Service 迁移评估
 
