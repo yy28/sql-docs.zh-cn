@@ -1,6 +1,6 @@
 ---
-title: 编程特定任务 |Microsoft Docs
-ms.custom: ''
+title: 编程特定的任务
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f23b7844bcff234594db87875e89a89f0f073be9
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 0ba3ec14f7d94b493b5cc93e3b6b46f0565e38ab
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148397"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095201"
 ---
 # <a name="programming-specific-tasks"></a>编程特定的任务
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "70148397"
 |[在 SMO 中配置 SQL Server](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|介绍如何在 SMO 中查看和修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的配置设置。|  
 |[使用表和索引分区](../../../relational-databases/server-management-objects-smo/tasks/using-table-and-index-partitioning.md)|介绍如何在 SMO 中使用索引和表分区。|  
 |[使用文件组和文件存储数据](../../../relational-databases/server-management-objects-smo/tasks/using-filegroups-and-files-to-store-data.md)|介绍如何在 SMO 中使用文件组。|  
-|[使用 WMI 提供程序管理服务和网络设置](../../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)|介绍使用 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 对象（该对象表示配置管理的 WMI 提供程序）对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例保持跟踪的若干方法。|  
+|[使用 WMI 提供程序管理服务和网络设置](../../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)|介绍使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对象（该对象表示配置管理的 WMI 提供程序）对 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 的实例保持跟踪的若干方法。|  
 |[使用数据库对象](../../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md)|介绍如何创建表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中的对象的实例类。|  
-|[管理用户、角色和登录帐户](../../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)|介绍如何在 SMO 中使用安全角色。|  
+|[管理用户、角色和登录名](../../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)|介绍如何在 SMO 中使用安全角色。|  
 |[授予、撤消和拒绝权限](../../../relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md)|介绍如何使用 SMO 对用户或角色成员授予、撤消和拒绝权限。|  
 |[使用加密](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)|介绍如何在 SMO 中使用加密来保护数据。|  
 |[在 SQL Server 代理中计划自动管理任务](../../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md)|介绍如何在 SMO 中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理以监视、报告和安排作业。|  

@@ -1,7 +1,7 @@
 ---
 title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 444be64a8e512011bb20ee103ad0ea459fc413ed
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981858"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095870"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "73981858"
 |**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT 为 ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT 为 OFF|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT 为局部默认值<br /> 0 = CURSOR_DEFAULT 为全局默认值|  
 |**is_fulltext_enabled**|**bit**|1 = 针对数据库启用全文<br /> 0 = 针对数据库禁用全文|  
-|**is_trustworthy_on**|**bit**|1 = 数据库已标记为可信<br /> 0 = 数据库尚未标记为可信|  
+|**is_trustworthy_on**|**bit**|1 = 数据库已标记为可信<br /> 0 = 数据库尚未标记为可信<br /> 默认情况下，还原的数据库或附加的数据库都禁用了代理。 与此相关的例外是数据库镜像，其中 Broker 在故障转移后启用。|  
 |**is_db_chaining_on**|**bit**|1 = 跨数据库所有权链接为 ON<br /> 0 = 跨数据库所有权链接为 OFF|  
 |**is_parameterization_forced**|**bit**|1 = 参数化为 FORCED<br /> 0 = 参数化为 SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = 数据库具有加密的主密钥<br /> 0 = 数据库没有加密的主密钥|  
@@ -93,7 +93,7 @@ ms.locfileid: "73981858"
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION 为 ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION 为 OFF|  
 |**is_cdc_enabled**|**bit**|1 = 对数据库启用变更数据捕获。 有关详细信息，请参阅[sys. &#40;sp_cdc_enable_db transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)。|  
 |**is_encrypted**|**bit**|指示是否对数据库进行加密（反映上次使用 `ALTER DATABASE SET ENCRYPTION` 子句设置的状态）。 可以是下列值之一：<br /> 1 = 已加密<br /> 0 = 未加密<br /> 有关数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。<br /> 如果数据库正处于解密过程中，`is_encrypted` 将显示值0。 您可以使用[sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)动态管理视图来查看加密过程的状态。|  
-|**is_honor_broker_priority_on**|**bit**|指示数据库是否接受会话优先级（反映使用 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` 子句最后设置的状态）。 可以是下列值之一：<br /> 1 = HONOR_BROKER_PRIORITY 为 ON<br /> 0 = HONOR_BROKER_PRIORITY 为 OFF|  
+|**is_honor_broker_priority_on**|**bit**|指示数据库是否接受会话优先级（反映使用 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` 子句最后设置的状态）。 可以是下列值之一：<br /> 1 = HONOR_BROKER_PRIORITY 为 ON<br /> 0 = HONOR_BROKER_PRIORITY 为 OFF<br /> 默认情况下，还原的数据库或附加的数据库都禁用了代理。 与此相关的例外是数据库镜像，其中 Broker 在故障转移后启用。|  
 |**replica_id**|**ssNoversion**|数据库参与的可用性组（如果有）的本地 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]可用性副本的唯一标识符。<br /> NULL = 数据库不是可用性组中的可用性副本的一部分。<br /> **适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**ssNoversion**|数据库参与到 Always On 可用性组（如果有）内的数据库的唯一标识符。 对于主副本上的此数据库以及已将数据库联接到可用性组的每个辅助副本， **group_database_id**都是相同的。<br /> NULL = 数据库不是任何可用性组中的可用性副本的一部分。<br /> **适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|映射到此数据库的资源池的 ID。 此资源池控制对该数据库中的内存优化表可用的总内存。<br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本|  

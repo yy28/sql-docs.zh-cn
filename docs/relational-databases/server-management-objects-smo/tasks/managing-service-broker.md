@@ -1,6 +1,6 @@
 ---
-title: 管理 Service Broker |Microsoft Docs
-ms.custom: ''
+title: 管理 Service Broker
+ms.custom: seo-dt-2019
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,18 +13,18 @@ ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1759ec9e89f53a224abd73a742d4c7dbaaeffe61
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: e3fe187412a70956d1f4496b6c042e39edafd18c
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148431"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094401"
 ---
 # <a name="managing-service-broker"></a>管理 Service Broker
 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  在 SMO 中, [!INCLUDE[ssSB](../../../includes/sssb-md.md)]对象位于需要引用到 "" 的 "" 的 "" 中的 "."。 为支持类信息，还要求对 Microsoft.SqlServer.ServiceBrokerEnum.dll 的引用。  
+  在 SMO 中，[!INCLUDE[ssSB](../../../includes/sssb-md.md)] 对象位于 "...**管理**" 的命名空间中，该命名空间需要引用 ""。 为支持类信息，还要求对 Microsoft.SqlServer.ServiceBrokerEnum.dll 的引用。  
   
  SMO 提供一组 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 对象，这些对象允许以编程方式管理 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 的实现 (DDL)。 这包括定义消息类型、约定、队列和服务。 因为 SMO 是并不针对数据操作、发送和接收的管理工具，所以 SMO 不支持 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 消息。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "70148431"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> 对象表示 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 路由，它包含所定义的服务和数据库的位置信息。 路由是消息传递所必需的。 默认情况下，每个数据库都包含一个路由，该路由将位置指定为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的当前实例。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   

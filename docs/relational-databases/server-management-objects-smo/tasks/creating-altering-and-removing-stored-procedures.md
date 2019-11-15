@@ -1,6 +1,6 @@
 ---
-title: 创建、更改和删除存储过程 |Microsoft Docs
-ms.custom: ''
+title: 创建、更改和删除存储过程
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,22 +13,22 @@ ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 902f2a4b2dd60b96f26ed8d93eff28471baeb63c
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: ff489b218f783201d5ea3bd0a0165951f51ff4e9
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148502"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095495"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>创建、更改和删除存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中，存储过程由 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 对象表示。  
   
- 在 SMO 中创建 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 对象需要将 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> 属性设置为定义存储过程的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本。 参数需要\@前缀, 并且必须通过使用<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>对象并将其添加<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>到对象的集合中单独创建。  
+ 在 SMO 中创建 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 对象需要将 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> 属性设置为定义存储过程的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本。 参数需要 \@ 前缀，并且必须通过使用 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象并添加到 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 对象的 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 集合来单独创建。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息, 请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除存储过程  
  此代码示例说明如何为 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 数据库创建存储过程。 如果提供了雇员的 ID 号，则将返回该雇员的姓氏。 存储过程需要一个输入参数来指定雇员的 ID 号，需要一个输出参数来返回该雇员的姓氏。  
@@ -151,7 +151,7 @@ $sp.Alter()
 $sp.Drop()  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>  
   
   

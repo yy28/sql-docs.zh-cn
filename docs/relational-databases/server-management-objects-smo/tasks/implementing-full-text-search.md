@@ -1,6 +1,6 @@
 ---
-title: 实现全文搜索 |Microsoft Docs
-ms.custom: ''
+title: 实现全文搜索
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,27 +13,27 @@ ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bb4766adebba2ff593ef3f879fbabcb6dc26b22
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 94605728f89483048ad35b3ec3247810bff70c57
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148433"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095187"
 ---
 # <a name="implementing-full-text-search"></a>实现全文搜索
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  全文搜索对于每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例都可用且在 SMO 中由 <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> 对象来表示。 对象驻留在服务器对象下。 <xref:Microsoft.SqlServer.Management.Smo.FullTextService> 它用于管理 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 全文搜索服务的配置选项。 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> 对象属于 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象，并且它是表示为数据库定义的全文目录的 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 对象的集合。 与普通索引不同，只能为每个表定义一个全文索引。 此索引由 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 对象中的 <xref:Microsoft.SqlServer.Management.Smo.Table> 对象表示。  
+  全文搜索对于每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例都可用且在 SMO 中由 <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> 对象来表示。 <xref:Microsoft.SqlServer.Management.Smo.FullTextService> 对象位于**Server**对象下。 它用于管理 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 全文搜索服务的配置选项。 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> 对象属于 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象，并且它是表示为数据库定义的全文目录的 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 对象的集合。 与普通索引不同，只能为每个表定义一个全文索引。 此索引由 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 对象中的 <xref:Microsoft.SqlServer.Management.Smo.Table> 对象表示。  
   
  若要创建全文搜索服务，必须为数据库定义一个全文目录，并为数据库的其中一个表定义一个全文搜索索引。  
   
  首先，通过调用 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 构造函数并指定目录名称，为数据库创建全文目录。 其次，通过调用该构造函数并指定要为其创建全文索引的表，创建全文索引。 接着，通过使用 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 对象并提供表中列的名称，可以为全文索引添加索引列。 然后，为已创建的目录设置 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> 属性。 最后，调用 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> 方法并为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例创建全文索引。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息, 请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>在 Visual Basic 中创建全文搜索服务  
- 此代码示例为 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 示例数据库中的 `ProductCategory` 表创建全文搜索目录。 然后，它会为 `ProductCategory` 表中的 Name 列创建全文搜索索引。 全文搜索索引要求已为该列定义唯一索引。  
+ 此代码示例为 `ProductCategory` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 表创建全文搜索目录。 然后，它会为 `ProductCategory` 表中的 Name 列创建全文搜索索引。 全文搜索索引要求已为该列定义唯一索引。  
   
 ```  
 ' compile with:   
@@ -93,7 +93,7 @@ End Class
 ```  
   
 ## <a name="creating-a-full-text-search-service-in-visual-c"></a>在 Visual C# 中创建全文搜索服务  
- 此代码示例为 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 示例数据库中的 `ProductCategory` 表创建全文搜索目录。 然后，它会为 `ProductCategory` 表中的 Name 列创建全文搜索索引。 全文搜索索引要求已为该列定义唯一索引。  
+ 此代码示例为 `ProductCategory` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 表创建全文搜索目录。 然后，它会为 `ProductCategory` 表中的 Name 列创建全文搜索索引。 全文搜索索引要求已为该列定义唯一索引。  
   
 ```  
 // compile with:   
@@ -153,7 +153,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-full-text-search-service-in-powershell"></a>在 PowerShell 中创建全文搜索服务  
- 此代码示例为 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 示例数据库中的 `ProductCategory` 表创建全文搜索目录。 然后，它会为 `ProductCategory` 表中的 Name 列创建全文搜索索引。 全文搜索索引要求已为该列定义唯一索引。  
+ 此代码示例为 `ProductCategory` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 表创建全文搜索目录。 然后，它会为 `ProductCategory` 表中的 Name 列创建全文搜索索引。 全文搜索索引要求已为该列定义唯一索引。  
   
 ```  
 # Example of implementing a full text search on the default instance.  

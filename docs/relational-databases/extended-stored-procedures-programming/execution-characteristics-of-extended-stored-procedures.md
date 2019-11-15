@@ -1,6 +1,5 @@
 ---
-title: 扩展存储过程的执行特征 |Microsoft Docs
-ms.custom: ''
+title: 扩展存储过程的执行特征
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26a5653610f0c950c2d73af603bd95ccfeda4b76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 74ecd20f28e58e133b5710d3cbd9d18b27ca7756
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064352"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095990"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>扩展存储过程的执行特征
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68064352"
   
  执行扩展存储过程具有以下特征：  
   
--   扩展存储的过程函数执行的安全上下文[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   扩展存储过程函数在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的安全上下文下执行。  
   
 -   扩展存储过程函数在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的进程空间中运行。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68064352"
   
 -  
   
- 扩展存储的过程加载 DLL 后，该 DLL 中保持加载状态之前的服务器的地址空间[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已停止或管理员显式卸载该 DLL 使用 DBCC *DLL_name* （免费）。  
+ 加载扩展存储过程 DLL 后，DLL 将在服务器的地址空间中保持加载状态，直到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止或管理员使用 DBCC *DLL_name* （免费）显式卸载 DLL。  
   
  使用 EXECUTE 语句，可以通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 将扩展存储过程作为存储过程来执行：  
   
@@ -47,9 +47,9 @@ ms.locfileid: "68064352"
 EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>参数  
  \@ *retval*  
- 是返回值。  
+ 为返回值。  
   
  \@ *param1*  
  输入参数。  
@@ -60,8 +60,8 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 > [!CAUTION]  
 >  扩展存储过程提供性能增强功能，并扩展了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 但是，由于扩展存储过程 DLL 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享相同的地址空间，发生问题的过程可能反过来影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 运行。 虽然扩展存储过程 DLL 引发的异常是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理的，但是仍可能损坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据区域。 作为一种安全预防措施，只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员才能向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 添加扩展存储过程。 应彻底测试这些过程，然后才能进行安装。  
   
-## <a name="see-also"></a>请参阅  
- [编写扩展存储的过程](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)   
+## <a name="see-also"></a>另请参阅  
+ [编写扩展存储过程](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)   
  [查询 SQL Server 中安装的扩展存储过程](../../relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md)  
   
   

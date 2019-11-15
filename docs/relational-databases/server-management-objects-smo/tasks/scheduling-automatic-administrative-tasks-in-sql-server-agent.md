@@ -1,6 +1,6 @@
 ---
-title: 在 SQL Server 代理中计划自动管理任务Microsoft Docs
-ms.custom: ''
+title: 在 SQL Server 代理中计划自动管理任务
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +15,12 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b388074f569b5797eeac700bdd647477f56faeb2
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148331"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094388"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>在 SQL Server 代理中计划自动管理任务
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "70148331"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理对象位于 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空间中。  
   
 ## <a name="examples"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息, 请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
-对于使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理的程序, 必须包括**using**语句以限定代理命名空间。 在应用程序中的任何声明之前, 将语句插入到其他**using**语句之后, 例如:
+对于使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的程序，必须包括**using**语句以限定代理命名空间。 在应用程序中的任何声明之前，将语句插入到其他**using**语句之后，例如：
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -168,7 +168,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
   
- 对于警报通知，操作员是必需的。 类型需要方括号, 因为**运算符**是一个[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]关键字。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>  
+ 对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 类型需要方括号，因为**运算符**是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 关键字。  
   
 ```csharp  
 {  
@@ -201,7 +201,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
   
- 对于警报通知，操作员是必需的。 类型需要方括号, 因为**运算符**是一个[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]关键字。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>  
+ 对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 类型需要方括号，因为**运算符**是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 关键字。  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  
@@ -266,7 +266,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 代理](../../../ssms/agent/sql-server-agent.md)   
  [执行作业](../../../ssms/agent/implement-jobs.md)  
   

@@ -19,12 +19,12 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fd136eddc1aba4dc5a927d6ca027c17dfb38485
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 49311ac52d9dba7c31e48f68b4363ead5a2c0b2a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304765"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095340"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "72304765"
   
  有关序列号的详细信息，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,27 +51,27 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>参数  
-@no__t 序列对象的名称。 架构是可选的。 *sequence_name*是**nvarchar （776）** 。  
+`[ @sequence_name = ] N'sequence'` 序列对象的名称。 架构是可选的。 *sequence_name*为**nvarchar （776）** 。  
   
 `[ @range_size = ] range_size` 要从序列中提取的值的数目。 **\@range_size**为**bigint**。  
   
-`[ @range_first_value = ] range_first_value` Output 参数返回序列对象的第一个（最小值或最大值）值，该值用于计算请求的范围。 **\@range_first_value**是具有与请求中使用的序列对象相同的基类型的**sql_variant** 。  
+`[ @range_first_value = ] range_first_value` Output 参数返回序列对象的第一个（最小值或最大值）值，用于计算请求的范围。 **\@range_first_value** **sql_variant**与请求中使用的序列对象相同的基类型。  
   
-`[ @range_last_value = ] range_last_value` 可选输出参数返回请求范围的最后一个值。 **\@range_last_value**是具有与请求中使用的序列对象相同的基类型的**sql_variant** 。  
+`[ @range_last_value = ] range_last_value` 可选的输出参数将返回所请求的范围的最后一个值。 **\@range_last_value** **sql_variant**与请求中使用的序列对象相同的基类型。  
   
-`[ @range_cycle_count = ] range_cycle_count` 可选输出参数返回序列对象为了返回所请求的范围而循环的次数。 **\@range_cycle_count**为**int**。  
+`[ @range_cycle_count = ] range_cycle_count` 可选的输出参数将返回序列对象为了返回所请求的范围而循环的次数。 **\@range_cycle_count**为**int**。  
   
-`[ @sequence_increment = ] sequence_increment` 可选输出参数返回用于计算所请求范围的序列对象的增量。 **\@sequence_increment**是具有与请求中使用的序列对象相同的基类型的**sql_variant** 。  
+`[ @sequence_increment = ] sequence_increment` 可选 output 参数返回用于计算所请求范围的序列对象的增量。 **\@sequence_increment** **sql_variant**与请求中使用的序列对象相同的基类型。  
   
-`[ @sequence_min_value = ] sequence_min_value` 可选输出参数返回序列对象的最小值。 **\@sequence_min_value**是具有与请求中使用的序列对象相同的基类型的**sql_variant** 。  
+`[ @sequence_min_value = ] sequence_min_value` 可选的输出参数将返回序列对象的最小值。 **\@sequence_min_value** **sql_variant**与请求中使用的序列对象相同的基类型。  
   
-`[ @sequence_max_value = ] sequence_max_value` 可选输出参数返回序列对象的最大值。 **\@sequence_max_value**是具有与请求中使用的序列对象相同的基类型的**sql_variant** 。  
+`[ @sequence_max_value = ] sequence_max_value` 可选的输出参数将返回序列对象的最大值。 **\@sequence_max_value** **sql_variant**与请求中使用的序列对象相同的基类型。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>备注  
- sys 中的 sp_sequence_get_rangeis。 架构，可将其作为 sp_sequence_get_range 引用。  
+## <a name="remarks"></a>Remarks  
+ sys 中的 sp_sequence_get_rangeis。 架构，可将其作为 sys.databases 引用 sp_sequence_get_range。  
   
 ### <a name="cycling-sequences"></a>循环序列  
  如果需要，序列对象将循环相应的次数以处理请求的范围。 将通过 `@range_cycle_count` 参数向调用方返回循环次数。  
@@ -84,7 +84,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
   
  `The requested range for sequence object '%.*ls' exceeds the maximum or minimum limit. Retry with a smaller range.`  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对序列对象或序列对象架构具有 UPDATE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -109,8 +109,7 @@ CREATE SEQUENCE Test.RangeSeq
  以下语句从 RangeSeq 序列对象中获取四个序列号，并向用户返回第一个编号。  
   
 ```  
-DECLARE @range_first_value sql_variant ,   
-        @range_first_value_output sql_variant ;  
+DECLARE @range_first_value_output sql_variant ;  
   
 EXEC sp_sequence_get_range  
 @sequence_name = N'Test.RangeSeq'  
@@ -122,7 +121,7 @@ SELECT @range_first_value_output AS FirstNumber ;
 ```  
   
 ### <a name="b-returning-all-output-parameters"></a>B. 返回所有输出参数  
- 下面的示例从 sp_sequence_get_range 过程返回所有输出值。  
+ 下面的示例返回 sp_sequence_get_range 过程中的所有输出值。  
   
 ```  
 DECLARE    
@@ -180,7 +179,7 @@ Console.WriteLine(firstValueInRange.Value);
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)   
  [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [DROP SEQUENCE (Transact-SQL)](../../t-sql/statements/drop-sequence-transact-sql.md)   

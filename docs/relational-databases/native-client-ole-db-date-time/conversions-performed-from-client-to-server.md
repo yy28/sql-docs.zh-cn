@@ -1,6 +1,5 @@
 ---
-title: 从客户端到服务器执行的转换 |Microsoft Docs
-ms.custom: ''
+title: 在客户端和服务器之间执行的转换
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -12,13 +11,14 @@ helpviewer_keywords:
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0ab830283c09780791f2c82cbdda15fe1a28f6e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: f6195bc8bbe5dc36cf70337adec8f03eab67ca09
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73773044"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096002"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>在客户端和服务器之间执行的转换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,14 +26,14 @@ ms.locfileid: "73773044"
   本主题说明在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 编写的客户端应用程序与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）之间执行的日期/时间转换。  
   
 ## <a name="conversions"></a>转换  
- 本主题介绍在客户端上执行的转换。 如果客户端指定的参数的秒的小数部分精度不同于服务器上定义的精度，那么，客户端转换将在该服务器允许成功执行该操作时导致失败。 特别是，客户端将将秒的小数部分的任何截断视为错误，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将时间值舍入为最接近的整数秒数。  
+ 本主题介绍在客户端上执行的转换。 如果客户端指定的参数的秒的小数部分精度不同于服务器上定义的精度，那么，客户端转换将在该服务器允许成功执行该操作时导致失败。 特别是，客户端将对秒的小数部分的任何截断视为错误，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将时间值舍入为最接近的整数秒数。  
   
  如果未调用 ICommandWithParameters：： SetParameterInfo，则 DBTYPE_DBTIMESTAMP 绑定转换为**datetime2**。  
   
 |转换后 -><br /><br /> 从|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
-|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> date|  
+|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> DATE|  
 |DBTIME|-|1|1|1,7|1,7|1,7|1,5, 7|1,10|1,10|1<br /><br /> Time(0)|  
 |DBTIME2|-|1,3|1|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|1<br /><br /> Time(7)|  
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
@@ -65,13 +65,13 @@ ms.locfileid: "73773044"
 |11|秒的小数部分的位数（小数位数）根据下表的目标列的大小确定。 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许最高 9 位的秒的小数部分位数，这是 OLE DB 允许的最大位数。<br /><br /> 但是，如果源类型为 DBTIMESTAMP 且秒的小数部分为零，则不会生成秒的小数部分位数或小数点。 此行为确保使用早期 OLE DB 访问接口开发的应用程序的向后兼容性。<br /><br /> 列大小为 ~0 则表示 OLE DB 的大小不受限制（即 9 位数，除非应用 DBTIMESTAMP 的三位数规则）。|  
 |12|将保留 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的 DBTYPE_DATE 转换语义。 秒的小数部分被截断为零。|  
 |13|将保留 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的 DBTYPE_FILETIME 转换语义。 如果使用 Windows FileTimeToSystemTime API，秒的小数部分精度则限制为 1 毫秒。|  
-|14|将保留 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的 smalldatetime 转换语义。 秒设置为零。|  
-|15|将保留 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的 datetime 转换语义。 秒舍入为最接近的 1/300 秒。|  
+|14|将保留 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的 **smalldatetime** 转换语义。 秒设置为零。|  
+|15|将保留 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的 **datetime** 转换语义。 秒舍入为最接近的 1/300 秒。|  
 |16|嵌入 SSVARIANT 客户端结构的指定类型值的转换行为与未嵌入 SSVARIANT 客户端结构的相同类型和相同值的行为相同。|  
   
 ||||  
 |-|-|-|  
-|类型|长度（以字符为单位）|小数位数|  
+|sysobjects|长度（以字符为单位）|小数位数|  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

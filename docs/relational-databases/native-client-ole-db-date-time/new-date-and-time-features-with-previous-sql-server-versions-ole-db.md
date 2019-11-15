@@ -1,6 +1,5 @@
 ---
-title: 旧 SQL Server 版本的新日期和时间功能（OLE DB） |Microsoft Docs
-ms.custom: ''
+title: 以前 SQL Server 版本的日期和时间 OLE DB 功能
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -10,18 +9,19 @@ ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f12861b4bcd205263c54fae43e0a401b3219f33
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 100a0b6a96c9359e224e406928b03a2aa776511e
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73769377"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095456"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>SQL Server 早期版本的新日期和时间功能 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主题介绍了使用 "增强的日期和时间" 功能的客户端应用程序与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本通信时的预期行为，以及使用早于 @no__t_ 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 版本编译的客户端。3_ 向支持日期和时间增强功能的服务器发送命令。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+  本主题介绍了使用 "增强的日期和时间" 功能的客户端应用程序与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本通信时的预期行为，以及使用早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的版本编译的客户端向支持日期和时间增强功能的服务器发送命令时的预期行为。  
   
 ## <a name="down-level-client-behavior"></a>下级客户端行为  
  使用早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 版本的客户端应用程序将新的日期/时间类型作为**nvarchar**列来查看。 这些列内容是文字表示。 有关详细信息，请参阅[数据类型支持 OLE DB 日期和时间改进](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)的 "数据格式：字符串和文字" 部分。 列大小是为列指定的精度的最大文字长度。  
@@ -32,19 +32,19 @@ ms.locfileid: "73769377"
   
 |OLE DB 客户端类型|SQL Server 2005 类型|SQL Server 2008 （或更高版本）类型|结果转换（服务器到客户端）|参数转换（客户端到服务器）|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|日期时间|日期|“确定”|“确定”|  
+|DBTYPE_DBDATE|DATETIME|“日期”|确定|确定|  
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零，则 IRowsetChange 将因字符串截断而失败。|  
-|DBTYPE_DBTIME||Time(0)|“确定”|“确定”|  
+|DBTYPE_DBTIME||Time(0)|确定|确定|  
 |DBTYPE_DBTIMESTAMP|||日期字段设置为当前日期。|如果秒的小数部分为非零，IRowsetChange 将失败，原因是字符串截断。<br /><br /> 日期将被忽略。|  
-|DBTYPE_DBTIME||Time(7)|失败-时间文本无效。|“确定”|  
-|DBTYPE_DBTIMESTAMP|||失败-时间文本无效。|“确定”|  
-|DBTYPE_DBTIMESTAMP||Datetime2 （3）|“确定”|“确定”|  
-|DBTYPE_DBTIMESTAMP||Datetime2 （7）|“确定”|“确定”|  
-|DBTYPE_DBDATE|Smalldatetime|日期|“确定”|“确定”|  
+|DBTYPE_DBTIME||Time(7)|失败-时间文本无效。|确定|  
+|DBTYPE_DBTIMESTAMP|||失败-时间文本无效。|确定|  
+|DBTYPE_DBTIMESTAMP||Datetime2 （3）|确定|确定|  
+|DBTYPE_DBTIMESTAMP||Datetime2 （7）|确定|确定|  
+|DBTYPE_DBDATE|Smalldatetime|“日期”|确定|确定|  
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零，则 IRowsetChange 将因字符串截断而失败。|  
-|DBTYPE_DBTIME||Time(0)|“确定”|“确定”|  
+|DBTYPE_DBTIME||Time(0)|确定|确定|  
 |DBTYPE_DBTIMESTAMP|||日期字段设置为当前日期。|如果秒的小数部分为非零，IRowsetChange 将失败，原因是字符串截断。<br /><br /> 日期将被忽略。|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|“确定”|“确定”|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|确定|确定|  
   
  “可以”表示如果已适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，应继续适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）。  
   
@@ -66,12 +66,12 @@ ms.locfileid: "73769377"
   
 |参数类型|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|date|DBTYPE_WSTR|10|~0|~0|  
+|DATE|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19，21. 27|~0|~0|  
-|datetimeoffset|DBTYPE_WSTR|26，28. 34|~0|~0|  
+|日期时间|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
+|datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
  请注意，某些值范围不是连续的，例如，8,10..16 中缺少 9。 这是因为当小数精度大于零时添加了小数点。  
   
@@ -80,24 +80,24 @@ ms.locfileid: "73769377"
   
 |列类型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|date|DBTYPE_WSTR|10|NULL|NULL|  
+|DATE|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19，21. 27|NULL|NULL|  
-|datetimeoffset|DBTYPE_WSTR|26，28. 34|NULL|NULL|  
+|日期时间|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime2|DBTYPE_WSTR|19,21..27|NULL|NULL|  
+|datetimeoffset|DBTYPE_WSTR|26,28..34|NULL|NULL|  
   
 #### <a name="columnsinfogetcolumninfo"></a>ColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 结构返回以下信息：  
   
 |参数类型|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|date|DBTYPE_WSTR|10|~0|~0|  
+|DATE|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19，21. 27|~0|~0|  
-|datetimeoffset|DBTYPE_WSTR|26，28. 34|~0|~0|  
+|日期时间|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
+|datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>架构行集  
  本部分论述了新数据类型的参数、结果列以及架构行集的元数据。 此信息非常有用，因为你的客户端提供程序是使用早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的工具开发的。  
@@ -107,31 +107,31 @@ ms.locfileid: "73769377"
   
 |列类型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|date|DBTYPE_WSTR|10|20|NULL|  
-|time|DBTYPE_WSTR|8, 10..16|16，20. 32|NULL|  
+|DATE|DBTYPE_WSTR|10|20|NULL|  
+|time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
-|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
-|datetime2|DBTYPE_WSTR|19，21. 27|38，42。|NULL|  
-|datetimeoffset|DBTYPE_WSTR|26，28. 34|52，56。|NULL|  
+|日期时间|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
+|datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
+|datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|NULL|  
   
 #### <a name="procedure_parameters-rowset"></a>PROCEDURE_PARAMETERS 行集  
  对于日期/时间类型将返回以下列值：  
   
 |列类型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|date|DBTYPE_WSTR|10|20|date|  
-|time|DBTYPE_WSTR|8, 10..16|16，20. 32|time|  
+|DATE|DBTYPE_WSTR|10|20|DATE|  
+|time|DBTYPE_WSTR|8, 10..16|16,20..32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
-|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|datetime|  
-|datetime2|DBTYPE_WSTR|19，21. 27|38，42。|datetime2|  
-|datetimeoffset|DBTYPE_WSTR|26，28. 34|52，56。|datetimeoffset|  
+|日期时间|DBTYPE_DBTIMESTAMP|NULL|NULL|日期时间|  
+|datetime2|DBTYPE_WSTR|19,21..27|38,42..54|datetime2|  
+|datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|datetimeoffset|  
   
 #### <a name="provider_types-rowset"></a>PROVIDER_TYPES 行集  
  对于日期/时间类型将返回以下行：  
   
-|类型 -><br /><br /> 列|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|类型 -><br /><br /> Column|DATE|time|smalldatetime|日期时间|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|DATE|time|smalldatetime|日期时间|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -143,7 +143,7 @@ ms.locfileid: "73769377"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|DATE|time|smalldatetime|日期时间|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -161,7 +161,7 @@ ms.locfileid: "73769377"
  如果在连接时支持从缓冲区类型到服务器版本的服务器类型之间的客户端转换，则可以使用所有客户端缓冲区类型。 在此上下文中，如果未调用 ICommandWithParameters：： SetParameterInfo，则*服务器类型*表示由 ICommandWithParameters：： SetParameterInfo 指定的类型或由缓冲区类型隐含的类型。 这意味着 DBTYPE_DBTIME2 和 DBTYPE_DBTIMESTAMPOFFSET 可用于下级服务器，或在 DataTypeCompatibility=80 时，对支持的服务器类型的客户端转换成功的情况下，也可使用。 当然，如果服务器类型不正确，且该服务器类型不能执行对实际服务器类型的隐式转换，则服务器仍可能报告错误。  
   
 ## <a name="ssprop_init_datatypecompatibility-behavior"></a>SSPROP_INIT_DATATYPECOMPATIBILITY 行为  
- 将 SSPROP_INIT_DATATYPECOMPATIBILITY 设置为 SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000 时，新的日期/时间类型和关联的元数据将显示在客户端上，因为它们对于下级客户端显示，如对[增强日期的大容量复制更改中所述，时间类型&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
+ 将 SSPROP_INIT_DATATYPECOMPATIBILITY 设置为 SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000 时，新的日期/时间类型和关联的元数据将显示在客户端上，因为它们对于下级客户端显示，如在[大容量复制更改（ &#40;针对增强日期&#41;和时间类型 OLE DB 和 ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)）中所述。  
   
 ## <a name="comparability-for-irowsetfind"></a>IRowsetFind 的可比性  
  允许对新的日期/时间类型使用所有比较运算符，因为这些比较运算符显示为字符串类型，而不是显示为日期/时间类型。  

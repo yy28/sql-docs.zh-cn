@@ -1,6 +1,6 @@
 ---
-title: 实现终结点 |Microsoft Docs
-ms.custom: ''
+title: 实现端点
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f63ee89bf2b338ec6d9145eb7ca36f04a27f8cf0
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: cb20b6bf7275dea4f44b21aa9deb0c3f0310bfea
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148452"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095199"
 ---
 # <a name="implementing-endpoints"></a>实现端点
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "70148452"
  创建端点并完全定义之后，便可授予、撤消及拒绝数据库用户、组、角色和登录名的访问权限。  
   
 ## <a name="example"></a>示例  
- 对于下面的代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息, 请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下面的代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-basic"></a>在 Visual Basic 中创建数据库镜像端点服务  
  代码示例演示了如何在 SMO 中创建数据库镜像端点。 这是创建数据库镜像之前的必要步骤。 请使用 <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> 和 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象上的其他属性创建数据库镜像。  
@@ -132,7 +132,7 @@ $ep.Start()
 $ep.EndpointState;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像终结点 (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   
