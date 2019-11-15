@@ -1,7 +1,7 @@
 ---
 title: 为 HDFS 分层装入 S3
 titleSuffix: SQL Server big data clusters
-description: 本文介绍如何配置 HDFS 分层, 以将外部 S3 文件系统装载到上的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS 中。
+description: 本文介绍如何配置 HDFS 分层，以将外部 S3 文件系统装载到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上的 HDFS 中。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652308"
@@ -20,7 +20,7 @@ ms.locfileid: "69652308"
 
 以下部分提供了如何使用 S3 Storage 数据源配置 HDFS 分层的示例。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - [部署大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)
@@ -47,13 +47,13 @@ ms.locfileid: "69652308"
 
 准备好带有访问密钥的凭据文件后，接下来即可开始装载。 以下步骤说明了如何将 S3 中的远程 HDFS 存储装载到大数据群集的本地 HDFS 存储中。
 
-1. 使用 kubectl 查找大数据群集中终结点 controller-svc-external 服务的 IP 地址。 查找“外部 IP”。
+1. 使用 kubectl 查找大数据群集中终结点 controller-svc-external 服务的 IP 地址   。 查找“外部 IP”  。
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
-1. 使用 azdata，同时使用控制器终结点的外部 IP 地址和群集用户名及密码登录：
+1. 使用 azdata，同时使用控制器终结点的外部 IP 地址和群集用户名及密码登录  ：
 
    ```bash
    azdata login -e https://<IP-of-controller-svc-external>:30080/
@@ -61,7 +61,7 @@ ms.locfileid: "69652308"
    
 1. 按照上面的说明设置环境变量 MOUNT_CREDENTIALS
 
-1. 使用**azdata bdc hdfs mount create**在 Azure 中装载远程 HDFS 存储。 在运行以下命令之前替换占位符值：
+1. 使用 azdata bdc hdfs mount create 在 Azure 中装载远程 HDFS 存储  。 在运行以下命令之前替换占位符值：
 
    ```bash
    azdata bdc hdfs mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
@@ -96,7 +96,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> 删除装载
 
-若要删除装载, 请使用**azdata bdc hdfs mount delete**命令, 并在 hdfs 中指定装载路径:
+要删除装载，请使用 azdata bdc hdfs mount delete 命令，并在 HDFS 中指定装载路径  ：
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
@@ -104,4 +104,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>后续步骤
 
-有关的详细信息[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。
+有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的详细信息，请参阅[什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。

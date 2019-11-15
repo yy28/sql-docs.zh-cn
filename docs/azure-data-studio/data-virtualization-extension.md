@@ -2,20 +2,20 @@
 title: 数据虚拟化扩展
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 的数据虚拟化扩展
-ms.custom: seodec18
-ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
-ms.openlocfilehash: cb9fe5ddb9e6b84769c78b63cacffa50d270ecf6
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.custom: seodec18
+ms.date: 11/04/2019
+ms.openlocfilehash: 98a93895b8f552bf7506880a612ab2ae68c48afb
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532546"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801132"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>Azure Data Studio 的数据虚拟化扩展
 
@@ -70,13 +70,13 @@ Azure Data Studio 的数据虚拟化扩展为 PolyBase [“创建外部表”向
 
 ## <a name="release-notes-v0102"></a>发行说明 (v 0.10.2)
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 支持
-对 SQL Server 2019 的支持已更新。 在连接到 SQL Server 大数据群集实例后，资源管理器树中会显示一个新的“数据服务”文件夹  。 该文件夹包含一些操作的启动点，这些操作包括针对连接打开新 Notebook、提交 Spark 作业以及使用 HDFS 等。 对于某些操作，例如通过 HDFS 文件/文件夹创建外部数据，需要安装 SQL Server 2019（预览版）扩展   。
+对 SQL Server 2019 的支持已更新。 在连接到 SQL Server 大数据群集实例后，资源管理器树中会显示一个新的“数据服务”文件夹  。 该文件夹包含一些操作的启动点，这些操作包括针对连接打开新 Notebook、提交 Spark 作业以及使用 HDFS 等。 对于某些操作，例如通过 HDFS 文件/文件夹创建外部数据，必须安装 SQL Server 2019 扩展   。
 
 ### <a name="notebook-support"></a>Notebook 支持
 我们对此版本中的 Notebook 用户界面进行了较大程度的更新。 我们的目标是使用户能够轻松读取与之共享的 Notebook。 这意味着删除单元格周围的所有边框（已选中或鼠标悬停的单元格除外）、添加悬停支持以便于无需选择单元格即可轻松实施单元格级操作、通过添加执行计数和一个动态“停止运行”按钮等内容来明确执行状态  。 我们还为后列操作添加了键盘快捷方式：新建笔记本 (`Ctrl+Shift+N`)、运行单元 (`F5`)、新代码单元 (`Ctrl+Shift+C`)、新文本单元 (`Ctrl+Shift+T`)     。 展望未来，我们的目标是通过快捷方式实现所有关键操作，你只需告诉我们还缺少哪些快捷方式！
 
 其他改进和修复包括：
-* SQL Server 2019（预览版）扩展现会提示用户为 Python 依赖项选取安装目录  。 它也不再在 `.vsix file` 中包含 Python，从而减少了整体扩展大小。 Python 依赖项支持 Spark 和 Python3 内核。
+* SQL Server 2019 扩展现会提示用户为 Python 依赖项选取安装目录  。 它也不再在 `.vsix file` 中包含 Python，从而减少了整体扩展大小。 Python 依赖项支持 Spark 和 Python3 内核。
 * 新增对后列操作的支持：从命令行启动新笔记本。 使用参数 `--command=notebook.command.new --server=myservername` 启动时应会打开一个新笔记本并连接到此服务器。
 * 对单元格中代码长度较长的笔记本进行了性能修复。 如果代码单元格超过 250 行，则会添加一个滚动条。
 * 改进了 .ipynb 文件支持。 现在支持版本 3 或更高版本。 请注意，保存的文件将更新为版本 4 或更高版本。

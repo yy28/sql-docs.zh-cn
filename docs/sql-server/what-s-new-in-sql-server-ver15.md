@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a24d5e25bfbeb7aed32257b22dd3dac5d1c53f7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3aa251e7d31f21cf51f4f528b1f0ccd35c0afb2c
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593887"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844557"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -153,6 +153,7 @@ ms.locfileid: "73593887"
 |:---|:---|
 |具有安全 Enclave 的 Always Encrypted|通过对服务器端安全隔离区中的纯文本数据启用计算，使用就地加密和丰富计算扩展 Always Encrypted。 就地加密可提高加密列、旋转列、加密密钥等加密操作的性能和可靠性，因为这样可以避免将数据移出数据库。<br><br> 对丰富计算（模式匹配和比较操作）的支持可将 Always Encrypted 解锁到一组更广泛的方案和应用程序，这些方案和应用程序需要敏感数据保护，同时还需要在 Transact-SQL 查询中使用更丰富的功能。 请参阅[包含安全 Enclave 的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。|
 |SQL Server 配置管理器中的证书管理|请参阅[证书管理（SQL Server 配置管理器）](../database-engine/configure-windows/manage-certificates.md)。|
+|数据发现和分类|数据发现和分类提供了本机内置在 SQL Server 中的高级功能，用于对分类、标记和保护数据库中的敏感数据。 对最敏感的数据（如商业、金融、医疗和 PII 等）进行分类，这在组织的信息保护中起到关键作用。 它可以充当基础结构，用于：<ul><li>帮助满足数据隐私标准和法规遵从性要求</li><li>各种安全方案，如监视（审核），以及对敏感数据异常访问的警报</li><li>可以更轻松地识别企业中敏感数据所在的位置，以便管理员采取保护数据库的正确措施</li></ul>对[审核](../relational-databases/security/auditing/sql-server-audit-database-engine.md)进行了强化处理，在审核日志中包含了名为 `data_sensitivity_information` 的新字段，其中记录查询返回的实际数据的敏感度分类（标签）。 有关详细信息和示例，请参阅 [ADD SENSITIVITY CLASSIFICATION](../t-sql/statements/add-sensitivity-classification-transact-sql.md)。|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>高可用性
@@ -226,14 +227,6 @@ ms.locfileid: "73593887"
 |Windows Server 故障转移群集| 可在 Windows Server 故障转移群集上配置机器学习服务的高可用性。|
 | &nbsp; | &nbsp; |
 
-## [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
-
-| 新增功能或更新 | 详细信息 |
-|:---|:---|
-|对 Azure SQL 数据库托管实例数据库的支持| 在托管实例上承载 [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]。 请参阅[[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]安装和配置](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)。|
-|新 HTML 控件| HTML 控件替换了所有以前的 Silverlight 组件。 已删除 Silverlight 依赖项。|
-| &nbsp; | &nbsp; |
-
 ## <a name="sql-server-analysis-services"></a>SQL Server Analysis Services
 
 此版本引入了新功能和针对性能、资源管理和客户端支持的改进。
@@ -246,6 +239,23 @@ ms.locfileid: "73593887"
 |资源管理的属性设置| 此版本包含新的内存设置：针对资源管理的 Memory\QueryMemoryLimit、DbpropMsmdRequestMemoryLimit 和 OLAP\Query\RowsetSerializationLimit。 要了解详细信息，请参阅[内存设置](/analysis-services/server-properties/memory-properties)。|
 |Power BI 缓存刷新的调控设置 | 此版本引入了 ClientCacheRefreshPolicy 属性，该属性将替代缓存的仪表板磁贴数据以及 Power BI 服务初始加载 Live Connect 报表时的报表数据。 有关详细信息，请参阅[常规属性](/analysis-services/server-properties/general-properties)。 |
 | 联机附加  | 联机附加可用于本地查询横向扩展环境中只读副本的同步。 要了解详细信息，请参阅[联机附加](/analysis-services/what-s-new-in-sql-server-analysis-services#online-attach)。 |
+| &nbsp; | &nbsp; |
+
+## <a name="sql-server-integration-services"></a>SQL Server Integration Services
+
+此版本引入了改进文件操作的新功能。
+
+| 新增功能或更新 | 详细信息 |
+|:---|:---|
+|灵活的文件任务 |在本地文件系统、Azure Blob 存储和 Azure Data Lake Storage Gen2 上执行文件操作。 查看[灵活的文件任务](../integration-services/control-flow/flexible-file-task.md)。|
+|灵活的文件源和目标 |对 Azure Blob 存储和 Azure Data Lake Storage Gen2 读写数据。 请参阅[灵活的文件源](../integration-services/data-flow/flexible-file-source.md)和[灵活的文件目标](../integration-services/data-flow/flexible-file-destination.md)。 |
+
+## <a name="sql-server-includemaster-data-servicesincludesssmdsshort-mdmd"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| 新增功能或更新 | 详细信息 |
+|:---|:---|
+|对 Azure SQL 数据库托管实例数据库的支持| 在托管实例上承载 [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]。 请参阅[[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]安装和配置](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)。|
+|新 HTML 控件| HTML 控件替换了所有以前的 Silverlight 组件。 已删除 Silverlight 依赖项。|
 | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-reporting-services"></a>SQL Server Reporting Services

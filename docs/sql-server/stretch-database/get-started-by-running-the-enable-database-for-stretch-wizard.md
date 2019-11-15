@@ -1,5 +1,5 @@
 ---
-title: 通过运行“启用数据库延伸”向导开始 | Microsoft Docs
+title: 通过运行“启用数据库延伸向导”开始
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -20,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b4239a8f6aefc9160171c1a700aa37733a66de0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136131"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843804"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>通过运行“启用数据库延伸向导”开始
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -128,7 +129,7 @@ ms.locfileid: "68136131"
   
         2.  或者，使用 SQL Server 的联合服务帐户与远程 Azure 服务器进行通信。  
   
-         ![新建 Azure 服务器 - Stretch Database 向导](../../relational-databases/tables/media/stretch-wizard-4.png "新建 Azure 服务器 - Stretch Database 向导")  
+         ![创建新的 Azure 服务器 - Stretch Database 向导](../../relational-databases/tables/media/stretch-wizard-4.png "创建新的 Azure 服务器 - Stretch Database 向导")  
   
     -   **现有服务器**  
   
@@ -140,7 +141,7 @@ ms.locfileid: "68136131"
   
             -   选择“Active Directory 集成身份验证”  ，以使用 SQL Server 的联合服务帐户与远程 Azure 服务器进行通信。 如果所选服务器未与 Azure Active Directory 集成，则此选项不会出现。
   
-         ![选择现有 Azure 服务器 - Stretch Database 向导](../../sql-server/stretch-database/media/stretch-wizard-5.png "选择现有 Azure 服务器 - Stretch Database 向导")  
+         ![选择现有的 Azure 服务器 - Stretch Database 向导](../../sql-server/stretch-database/media/stretch-wizard-5.png "选择现有的 Azure 服务器 - Stretch Database 向导")  
   
 ##  <a name="Credentials"></a> 安全凭据  
  必须有一个数据库主密钥，以保护 Stretch Database 用于连接到远程数据库的凭据。  
@@ -160,7 +161,7 @@ ms.locfileid: "68136131"
   
  你在此页上提供的 IP 地址（一个或多个）将告知 Azure 服务器允许通过 Azure 防火墙传递由 SQL Server 启动的传入数据、查询和管理操作。 该向导不会更改 SQL Server 上的防火墙设置中的任何内容。  
   
- ![Stretch Database 向导的“选择 IP 地址”页](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 向导的“选择 IP 地址”页")  
+ ![选择 Stretch Database 向导的“IP 地址”页](../../relational-databases/tables/media/stretch-wizard-7.png "选择 Stretch Database 向导的“IP 地址”页")  
   
 ##  <a name="Summary"></a> 摘要  
  查看你输入的值和你在该向导中选择的选项以及 Azure 上的预估成本。 然后选择“完成”  以启用 Stretch。  

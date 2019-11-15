@@ -1,29 +1,28 @@
 ---
-title: 教程：在 Java 中使用正则表达式 (regex) 搜索字符串
-titleSuffix: SQL Server Language Extensions
-description: 本教程演示如何使用 SQL Server 语言扩展以及运行使用正则表达式搜索字符串的 Java 代码。
+title: 教程：Java 中的 regex 字符串搜索
+description: 本教程演示如何使用 SQL Server 语言扩展以及运行使用正则表达式 (regex) 搜索字符串的 Java 代码。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 746706c1ef1ee8f9ed393ac57497ffb570bef50c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589001"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658794"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>教程：在 Java 中使用正则表达式 (regex) 搜索字符串
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本教程演示如何使用 [SQL Server 语言扩展](../language-extensions-overview.md)以及创建一个 Java 类，该类接收来自 SQL Server 的两列（ID 和 text），并接收一个正则表达式作为输入参数。 该类会将两列返回到 SQL Server（ID 和 text）。
+本教程演示如何使用 [SQL Server 语言扩展](../language-extensions-overview.md)创建一个 Java 类，该类接收来自 SQL Server 的两列（ID 和 text），并接收一个正则表达式 (regex) 作为输入参数。 该类会将两列返回到 SQL Server（ID 和 text）。
 
 对于发送到 Java 类的 text 列中的给定文本，代码会检查是否满足给定正则表达式，并将该文本与原始 ID 一起返回。
 
-此特定示例使用检查文本是否包含单词“Java”或“java”的正则表达式。
+此示例代码使用检查文本是否包含单词“Java”或“java”的正则表达式。
 
 ## <a name="prerequisites"></a>必备条件
 

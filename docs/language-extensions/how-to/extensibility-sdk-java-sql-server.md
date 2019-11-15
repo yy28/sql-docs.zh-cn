@@ -1,25 +1,25 @@
 ---
-title: SQL Server 的用于 Java 的 Microsoft 扩展性 SDK
-description: 如何使用用于 Java 的 Microsoft 扩展性 SDK 为 SQL Server 实现 Java 程序。
+title: 用于 Java 的 Microsoft 扩展性 SDK
+description: 了解如何才能使用用于 Java 的 Microsoft 扩展性 SDK 为 SQL Server 实现 Java 程序。 SDK 是用于与 SQL Server 交换数据并从 SQL Server 执行 Java 代码的 Java 语言扩展的接口。
 ms.prod: sql
 ms.technology: language-extensions
-ms.date: 08/21/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f2c1e7eb5b5410ad0c12b8dec6f451b7572f0e36
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 66719e8a30b9e7f4e42eaba376c73af9eb9868b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "73588791"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658854"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>SQL Server 的用于 Java 的 Microsoft 扩展性 SDK
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文介绍如何使用用于 Java 的 Microsoft 扩展性 SDK 为 SQL Server 实现 Java 程序。 SDK 是用于与 SQL Server 交换数据并从 SQL Server 执行 Java 代码的 Java 语言扩展的接口。
+了解如何才能使用用于 Java 的 Microsoft 扩展性 SDK 为 SQL Server 实现 Java 程序。 SDK 是用于与 SQL Server 交换数据并从 SQL Server 执行 Java 代码的 Java 语言扩展的接口。
 
 SDK 作为 SQL Server 2019 候选发布版 1 的一部分安装在 Windows 和 Linux 上：
 

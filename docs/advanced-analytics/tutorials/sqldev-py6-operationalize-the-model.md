@@ -1,52 +1,53 @@
 ---
-title: 使用 Python 模型预测潜在结果
-description: 本教程介绍如何在 SQL Server 带有 T-sql 函数的存储过程中操作嵌入的 PYthon 脚本
+title: Python + T-SQL：运行预测
+description: 本教程介绍如何使用 T-SQL 函数在 SQL Server 存储过程中操作嵌入式 Python 脚本
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: be80892db818bafdb45da974a064a0c5cf1fdc3f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 6ac6abe2ea0f04ee0778b80b98bf28f3f12c2f6e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715354"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73724715"
 ---
-# <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>使用存储过程中嵌入的 Python 运行预测
+# <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>使用存储过程中嵌入的 Python 来运行预测
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文是[针对 SQL 开发人员的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)教程的一部分。 
+本文属于[适用于 SQL 开发者的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)这一教程。 
 
-在此步骤中, 你将学习如何*操作*你在上一步中训练和保存的模型。
+在此步骤中，你将了解如何操作在上一步中定型和保存的模型  。
 
-在这种情况下, 操作化意味着将模型部署到生产环境以进行评分。 与 SQL Server 的集成使得这一点非常简单, 因为你可以在存储过程中嵌入 Python 代码。 若要基于新输入从模型中获取预测, 只需从应用程序中调用存储过程并传递新的数据。
+在此方案中，操作意味着将模型部署到生产中以进行评分。 与 SQL Server 的集成使得此操作变得非常简单，因为可以在存储过程中嵌入 Python 代码。 若要基于新输入从模型中获取预测，只需从应用程序中调用存储过程并传递新的数据。
 
-本课程演示了两种基于 Python 模型创建预测的方法: 批处理评分, 并按行评分。
+本单元演示了两种基于 Python 模型创建预测的方法：批评分以及按行评分。
 
-- **批处理评分:** 若要提供多行输入数据, 请将 SELECT 查询作为参数传递给存储过程。 结果是对应于输入事例的观测值表。
-- **单个评分:** 作为输入传递一组单独的参数值。  存储过程将返回单个行或值。
+- **批评分：** 若要提供多行输入数据，请将 SELECT 查询作为参数传递给存储过程。 结果是与输入事例相对应的观察表。
+- **单个评分：** 传递一组单独的参数值作为输入。  存储过程将返回单个行或值。
 
-评分所需的所有 Python 代码都作为存储过程的一部分提供。
+评分所需的所有 Python 代码都作为存储过程的一部分进行提供。
 
-## <a name="batch-scoring"></a>批处理评分
+## <a name="batch-scoring"></a>批评分
 
-前两个存储过程演示了在存储过程中包装 Python 预测调用的基本语法。 这两个存储过程都需要数据表作为输入。
+前两个存储过程说明了在存储过程中包装 Python 预测调用的基本语法。 这两个存储过程都需要数据表作为输入。
 
-- 要使用的确切模型的名称作为输入参数提供给存储过程。 该存储过程从数据库表`nyc_taxi_models`中加载序列化模型。表中, 使用存储过程中的 SELECT 语句。
-- 序列化模型存储在 python 变量`mod`中以供使用 Python 进一步处理。
-- 需要评分的新案例是从中[!INCLUDE[tsql](../../includes/tsql-md.md)] `@input_data_1`指定的查询获取的。 读取查询数据时，行保存在默认数据帧 `InputDataSet`中。
-- 这两个存储过程都`sklearn`使用中的函数来计算准确性指标 AUC (曲线下的区域)。 仅当还提供目标标签 (带标签的列) 时, 才能生成 AUC 等准确性指标。 预测不需要目标标签 (变量`y`), 但准确性指标计算。
+- 提供要使用的确切模型的名称作为存储过程的输入参数。 该存储过程使用存储过程中的 SELECT 语句，从数据库表 `nyc_taxi_models` 中加载序列化模型。
+- 序列化模型存储在 Python 变量 `mod` 中，以便使用 Python 进行进一步处理。
+- 需要进行评分的新事例将从 `@input_data_1` 中指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询获得。 读取查询数据时，行保存在默认数据帧 `InputDataSet`中。
+- 两个存储过程都使用 `sklearn` 中的函数来计算准确度指标 AUC（曲线下面积）。 仅当同时提供目标标签（给小费的列）时，才能生成诸如 AUC 之类的准确度指标  。 预测不需要目标标签（变量 `y`），但准确度指标需要。
 
-    因此, 如果没有要评分的数据的目标标签, 则可以修改该存储过程以删除 AUC 计算, 并仅返回功能 (存储过程中的变量`X` ) 中的提示概率。
+    因此，如果没有要评分的数据的目标标签，则可以修改存储过程以删除 AUC 计算，并从特征中仅返回给小费的概率（存储过程中的变量 `X`）。
 
 ### <a name="predicttipscikitpy"></a>PredictTipSciKitPy
 
-Rrun 以下 T-sql 语句来创建存储过程。 此存储过程需要基于 scikit-learn 包的模型, 因为它使用特定于该包的函数:
+运行以下 T-SQL 语句以创建存储过程。 此存储过程需要基于 scikit-learn 包的模型，因为它使用特定于该包的函数：
 
-+ 包含输入的数据帧传递到逻辑回归`predict_proba` `mod`模型的函数。 函数 (`probArray = mod.predict_proba(X)`) 返回一个 float, 该对象表示给定 tip (任意数量) 的概率。 `predict_proba`
++ 包含输入的数据帧将传递到逻辑回归模型 `mod` 的 `predict_proba` 函数。 `predict_proba` 函数 (`probArray = mod.predict_proba(X)`) 返回一个 float，其表示将给小费（任意金额）的概率  。
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
@@ -90,7 +91,7 @@ GO
 
 ### <a name="predicttiprxpy"></a>PredictTipRxPy
 
-此存储过程使用相同的输入, 并与上一个存储过程创建相同的分数类型, 但使用 SQL Server 机器学习提供的**revoscalepy**包中的函数。
+此存储过程使用与先前存储过程相同的输入并创建相同的评分类型，但使用具有 SQL Server 机器学习的 revoscalepy 包中的函数  。
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
@@ -131,16 +132,16 @@ END
 GO
 ```
 
-## <a name="run-batch-scoring-using-a-select-query"></a>使用 SELECT 查询运行批处理评分
+## <a name="run-batch-scoring-using-a-select-query"></a>使用 SELECT 查询运行批评分
 
-存储过程**PredictTipSciKitPy**和**PredictTipRxPy**需要两个输入参数: 
+PredictTipSciKitPy 存储过程和 PredictTipRxPy 存储过程需要两个输入参数   ： 
 
-- 检索用于计分的数据的查询
-- 定型模型的名称
+- 检索用于评分的数据的查询
+- 已定型模型的名称
 
-通过将这些参数传递给存储过程, 您可以选择特定的模型或更改用于评分的数据。
+通过将这些参数传递给存储过程，可选择特定的模型或更改用于评分的数据。
 
-1. 若要使用**scikit-learn**模型进行评分, 请调用存储过程**PredictTipSciKitPy**, 并将模型名称和查询字符串作为输入传递。
+1. 若要使用 scikit-learn 模型进行评分，请调用存储过程 PredictTipSciKitPy，并将模型名称和查询字符串作为输入传递   。
 
     ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
@@ -151,11 +152,11 @@ GO
     EXEC [dbo].[PredictTipSciKitPy] 'SciKit_model', @query_string;
     ```
 
-    存储过程返回作为输入查询的一部分传入的每个行程的预测概率。 
+    存储过程返回作为输入查询的一部分传递的每个行程的预测概率。 
     
-    如果使用 SSMS (SQL Server Management Studio) 来运行查询, 则概率将显示为**结果**窗格中的表。 "**消息**" 窗格输出的准确性指标 (AUC 或 "曲线下") 的值为0.56。
+    如果使用 SSMS (SQL Server Management Studio) 来运行查询，则概率将在“结果”窗格中显示为表  。 “消息”窗格输出精度指标（AUC 或曲线下面积），值约 0.56  。
 
-2. 若要使用**revoscalepy**模型进行评分, 请调用存储过程**PredictTipRxPy**, 并将模型名称和查询字符串作为输入传递。
+2. 若要使用 revoscalepy 模型进行评分，请调用存储过程 PredictTipRxPy，并将模型名称和查询字符串作为输入传递   。
 
     ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
@@ -168,25 +169,25 @@ GO
 
 ## <a name="single-row-scoring"></a>单行评分
 
-有时, 你可能想要传入一个事例, 从应用程序中获取值, 并基于这些值返回一个结果, 而不是批处理评分。 例如, 您可以设置一个 Excel 工作表、web 应用程序或报表来调用存储过程, 并将其传递给用户键入或选择的输入。
+有时，你可能不想进行批评分，而是想要传递单个事例，从应用程序中获取值，并基于这些值返回单个结果。 例如，可以设置 Excel 工作表、Web 应用或报表来调用存储过程，并将其传递给用户键入或选择的输入。
 
-在本部分中, 你将了解如何通过调用两个存储过程来创建单个预测:
+在本节中，你将了解如何通过调用两个存储过程来创建单个预测：
 
-+ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy)是使用 scikit-learn 模型为单行评分设计的。
-+ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy)是使用 revoscalepy 模型为单行评分设计的。
-+ 如果尚未训练过模型, 请返回到[步骤 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) 旨在使用 scikit-learn 模型进行单行评分。
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) 旨在使用 revoscalepy 模型进行单行评分。
++ 如果尚未定型模型，请返回[步骤 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)！
 
-这两种模型都将一系列单个值作为输入, 例如乘客计数、行程距离等。 表值函数`fnEngineerFeatures`用于将纬度和经度值从输入转换为新特征的直接距离。 [第4课](sqldev-py4-create-data-features-using-t-sql.md)介绍了此表值函数。
+这两种模型都将一系列单个值作为输入，例如乘客人数、行程距离等。 表值函数 (`fnEngineerFeatures`) 用于将输入中的纬度和经度值转换为新特征和直接距离。 [第 4 课](sqldev-py4-create-data-features-using-t-sql.md) 包含对此表值函数的说明。
 
-这两个存储过程都基于 Python 模型创建分数。
+两个存储过程都基于 Python 模型创建分数。
 
 > [!NOTE]
 > 
-> 从外部应用程序调用存储过程时, 必须提供 Python 模型所需的所有输入功能, 这一点很重要。 若要避免错误, 除了验证数据类型和数据长度外, 还可能需要将输入数据强制转换或转换为 Python 数据类型。
+> 从外部应用程序调用存储过程时，必须提供 Python 模型所需的所有输入功能，这一点很重要。 为避免错误，除了验证数据类型和数据长度外，还可能需要将输入数据强制转换或转换为 Python 数据类型。
 
 ### <a name="predicttipsinglemodescikitpy"></a>PredictTipSingleModeSciKitPy
 
-花点时间查看存储过程的代码, 该代码使用**scikit-learn**模型执行评分。
+花一点时间查看使用 scikit-learn 模型执行评分的存储过程的代码  。
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
@@ -253,7 +254,7 @@ GO
 
 ### <a name="predicttipsinglemoderxpy"></a>PredictTipSingleModeRxPy
 
-以下存储过程使用**revoscalepy**模型执行评分。
+以下存储过程使用 revoscalepy 模型执行评分  。
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
@@ -324,7 +325,7 @@ GO
 
 ### <a name="generate-scores-from-models"></a>从模型生成分数
 
-创建存储过程后, 就可以轻松地根据每个模型生成分数。 只需打开一个新的**查询**窗口, 然后为每个特征列键入或粘贴参数。 这些功能列的七个必需值按顺序排列:
+创建存储过程后，就可以轻松地根据每个模型生成分数。 只需打开新的“查询”窗口，然后为每个特征列键入或粘贴参数  。 这些特征列的七个必需值依次为：
     
 + *passenger_count*
 + *trip_distance* v*trip_time_in_secs*
@@ -333,28 +334,28 @@ GO
 + *dropoff_latitude*
 + *dropoff_longitude*
 
-1. 若要使用**revoscalepy**模型生成预测, 请运行以下语句:
+1. 若要使用 revoscalepy 模型生成预测，请运行以下语句  ：
   
     ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-2. 若要使用**scikit-learn**模型生成分数, 请运行以下语句:
+2. 若要使用 scikit-learn 模型生成分数，请运行以下语句  ：
 
     ```sql
     EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-这两个过程的输出都是使用指定的参数或功能为出租车行程支付 tip 的概率。
+这两个过程的输出都是使用指定参数或特征预测出租车行程支付小费的概率。
 
 ## <a name="conclusions"></a>结论
 
-在本教程中, 已了解如何使用存储过程中嵌入的 Python 代码。 与[!INCLUDE[tsql](../../includes/tsql-md.md)]集成使你可以更轻松地部署用于预测的 Python 模型, 并将模型重新训练纳入企业数据工作流的一部分。
+在本教程中，你已了解如何使用存储过程中嵌入的 Python 代码。 借助与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成，可更轻松地部署 Python 模型进行预测，并合并重新定型为企业数据工作流一部分的模型。
 
 ## <a name="previous-step"></a>上一步
 
-[训练和保存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[定型和保存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [SQL Server 中的 Python 扩展](../concepts/extension-python.md)

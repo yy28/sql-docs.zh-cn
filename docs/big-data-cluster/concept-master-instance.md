@@ -1,7 +1,7 @@
 ---
 title: 什么是主实例？
 titleSuffix: SQL Server big data clusters
-description: 本文介绍了中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]SQL Server 的主实例。
+description: 本文介绍 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 中的 SQL Server 主实例。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652279"
@@ -20,7 +20,7 @@ ms.locfileid: "69652279"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍 SQL Server 2019 的大数据群集中*SQL Server 主实例*的角色。 Master 实例是在大数据群集中运行的 SQL Server 实例, 用于管理连接性、扩展查询、元数据和用户数据库以及机器学习服务。
+本文介绍 SQL Server 主实例在 SQL Server 2019 大数据群集中的角色  。 主实例是一个在大数据群集中运行的 SQL Server 实例，用于管理连接性、横向扩展查询、元数据和用户数据库以及机器学习服务。
 
 SQL Server 主实例提供以下功能：
 
@@ -53,7 +53,7 @@ SQL Server 机器学习服务是数据库引擎的附加功能，用于在 SQL S
 
 借助 SQL Server 2019，可将大数据轻松地联接到通常存储在企业数据库中的维度数据。 当大数据不仅仅由组织的各个部分掌握，而且还包含在报表、仪表板和应用程序中时，其价值会大幅增加。 与此同时，数据科学家可以继续使用 Spark/HDFS 生态系统工具，并轻松、实时地访问 SQL Server 主实例和外部数据源（可_通过_ SQL Server 主实例访问）中的数据。
 
-利用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], 你可以通过企业数据 lake 来执行更多操作。 SQL Server 开发人员和分析人员可以：
+使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]，可以通过企业数据湖实现更多操作。 SQL Server 开发人员和分析人员可以：
 
 * 生成使用企业数据湖中的数据的应用程序。
 * 使用 Transact-SQL 查询推断所有数据。
@@ -67,7 +67,7 @@ SQL Server 机器学习服务是数据库引擎的附加功能，用于在 SQL S
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]详细信息, 请参阅以下资源:
+若要了解有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的详细信息，请参阅以下资源：
 
-- [什么是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
-- [Workshop:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
+- [Workshop:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

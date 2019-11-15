@@ -10,15 +10,15 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 08/20/2019
+ms.date: 11/06/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903621"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727763"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>使用 Azure Key Vault 中的客户托管密钥进行透明数据加密的常见错误
 
@@ -26,14 +26,13 @@ ms.locfileid: "69903621"
 本文介绍了如何发现和解决 Azure Key Vault 密钥访问问题，这些问题导致配置为[结合使用透明数据加密 (TDE) 和 Azure Key Vault 中的客户托管密钥](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql)的数据库变得无法访问。
 
 ## <a name="introduction"></a>简介
-如果 TDE 配置为使用 Azure Key Vault 中的客户托管密钥，必须持续访问此 TDE 保护程序，才能让数据库保持联机状态。  如果逻辑 SQL Server 在 Azure Key Vault 中失去对客户托管 TDE 保护程序的访问权限，数据库就会拒绝所有连接，并在 Azure 门户中显示为无法访问。
+如果 TDE 配置为使用 Azure Key Vault 中的客户托管密钥，必须持续访问此 TDE 保护程序，才能让数据库保持联机状态。  如果逻辑 SQL Server 在 Azure Key Vault 中失去对客户托管 TDE 保护程序的访问权限，数据库就会开始拒绝所有带有相应错误消息的连接，并将其在 Azure 门户中的状态更改为“无法访问”  。
 
-在最初的 48 小时内，如果基础 Azure Key Vault 密钥访问问题得到解决，数据库就会自动恢复并自动联机。  也就是说，对于所有间歇性和临时网络故障情况，无需执行任何用户操作，数据库就会自动联机。  在大多数情况下，需要执行用户操作来解决基础密钥保管库密钥访问问题。 
+在最初的 8 小时内，如果基础 Azure Key Vault 密钥访问问题得到解决，数据库就会自动恢复并自动联机。 也就是说，对于所有间歇性和临时网络故障情况，无需执行任何用户操作，数据库就会自动联机。 在大多数情况下，需要执行用户操作来解决基础密钥保管库密钥访问问题。 
 
-如果不再需要无法访问的数据库，可以立即删除它，以停止产生成本。  在恢复对 Azure Key Vault 密钥的访问权限，且数据库恢复联机之前，不允许对数据库执行其他任何操作。   在无法访问使用客户托管密钥加密的数据库期间，也不支持在服务器上将 TDE 选项从客户托管密钥更改为服务托管密钥。 这是必要的，可以在对 TDE 保护程序的权限遭撤销期间保护数据免遭未经授权的访问。 
+如果不再需要无法访问的数据库，可以立即删除它，以停止产生成本。 在恢复对 Azure Key Vault 密钥的访问权限，且数据库恢复联机之前，不允许对数据库执行其他任何操作。 在无法访问使用客户托管密钥加密的数据库期间，也不可能在服务器上将 TDE 选项从客户托管密钥更改为服务托管密钥。 这是必要的，可以在对 TDE 保护程序的权限遭撤销期间保护数据免遭未经授权的访问。 
 
-如果数据库无法访问的时长超过 48 小时，便无法再自动恢复。  如果所需的 Azure Key Vault 密钥访问已恢复，必须手动重新验证访问，这样数据库才能恢复联机。  在无法访问的时长超过 48 小时后，让数据库恢复联机可能需要相当长的时间（具体视数据库大小而定），目前需要使用支持票证。 在数据库恢复联机后，以前配置的设置（如异地链接（如果已配置 Geo-DR 的话）、PITR 历史记录和标记）则会丢失。  因此，建议使用[操作组](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)实现通知系统，以便在 48 小时内解决基础密钥保管库问题。 
-
+如果数据库无法访问的时长超过 8 小时，便无法再自动恢复。 如果那期间之后所需的 Azure Key Vault 密钥访问已恢复，必须手动重新验证访问，这样数据库才能恢复联机。 在这种情况下让数据库恢复联机可能需要相当长的时间（具体视数据库大小而定），目前需要开具支持票证。 在数据库恢复联机后，以前配置的设置（如异地链接（如果已配置 Geo-DR 的话）、PITR 历史记录和标记）则会丢失。 因此，建议使用[操作组](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)实现通知系统，以便尽快了解并解决基础密钥保管库密钥访问问题。 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>导致数据库无法访问的常见错误
 
@@ -176,13 +175,13 @@ ms.locfileid: "69903621"
 
  
 
-**当自愈的 48 小时等待时间开始时发生的事件** 
+**当自愈的 8 小时等待时间开始时发生的事件** 
 
 事件名称：MakeDatabaseInaccessible 
 
 状态：正在进行 
 
-说明:数据库正在等待用户在 48 小时内重新建立 Azure Key Vault 密钥访问。   
+说明:数据库正在等待用户在 8 小时内重新建立 Azure Key Vault 密钥访问。   
 
  
 
@@ -196,7 +195,7 @@ ms.locfileid: "69903621"
 
  
 
-**当在 48 小时内未解决问题且必须手动验证 Azure Key Vault 密钥访问时发生的事件** 
+**当在 8 小时内未解决问题且必须手动验证 Azure Key Vault 密钥访问时发生的事件** 
 
 事件名称：MakeDatabaseInaccessible 
 

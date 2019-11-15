@@ -1,5 +1,5 @@
 ---
-title: 使用 R 和 SQL Server 函数创建数据特征
+title: R 教程：特征工程
 description: 本教程演示如何使用 SQL Server 函数创建数据特征用于数据库内分析。
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f12c20a54c0811e392eaa85684d7fac1a209c396
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 67d2c0bf73e24bc3f70e94cd6cf7ce94d13e5297
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714689"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73723855"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>使用 R 和 SQL Server 函数创建数据特征（演练）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

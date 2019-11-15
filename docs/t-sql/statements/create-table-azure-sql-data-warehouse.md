@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961793"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729862"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
 
@@ -162,11 +162,15 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
  请在“示例”部分中查看[创建已分区表](#PartitionedTable)。
 
-### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>有序聚集列存储索引选项（Azure SQL 数据仓库预览版）
+### <a name="ordered-clustered-columnstore-index-option"></a>有序聚集列存储索引选项 
 
-聚集列存储索引 (CCI) 是用于在 Azure SQL 数据仓库中创建表的默认索引。  在将 CCI 中的数据在压缩到列存储段之前，不会对其进行排序。  使用 ORDER 创建 CCI 时，先对数据进行排序，然后再将其添加到索引段中，这样可以提高查询性能。 有关详细信息，请查看[使用有序聚集列存储索引进行性能调整](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci)。  
+聚集列存储索引 (CCI) 是用于在 Azure SQL 数据仓库中创建表的默认索引。  在将 CCI 中的数据在压缩到列存储段之前，不会对其进行排序。  使用 ORDER 创建 CCI 时，先对数据进行排序，然后再将其添加到索引段中，这样可以提高查询性能。 有关详细信息，请查看[使用有序聚集列存储索引进行性能调整](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest)。  
 
-由于表中的列按顺序排列，用户可以在 sys.index_columns 中查询 column_store_order_ordinal 列。  
+可以在 Azure SQL 数据仓库支持的任何数据类型的列（字符串列除外）上创建有序的 CCI。  
+
+由于表中的列按顺序排列，用户可以在 sys.index_columns 中查询 column_store_order_ordinal 列   。  
+
+有关详细信息，请查看[使用有序聚集列存储索引进行性能调整](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci)。   
 
 ### <a name="DataTypes"></a> 数据类型
 

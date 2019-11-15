@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653733"
@@ -23,7 +23,7 @@ ms.locfileid: "69653733"
 Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包括 Windows、Linux 和 macOS。 下面介绍了不同平台的必备条件。
 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 完成本文中的步骤需要以下各项：
 
@@ -31,7 +31,7 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 - [Visual Studio Code](https://code.visualstudio.com/)。
 - [Mono](https://www.mono-project.com/docs/getting-started/install/)。 Mono 仅适用于 Linux 和 macOS。
 - [为 Visual Studio Code 设置 PySpark 交互式环境](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment)。
-- 名为**SQLBDCexample**的本地目录。  本文使用**C:\SQLBDC\SQLBDCexample**。
+- 名为“SQLBDCexample”的本地目录  。  本文使用“C:\SQLBDC\SQLBDCexample”  。
 
 ## <a name="install-spark--hive-tools"></a>安装 Spark & Hive Tools
 
@@ -39,11 +39,11 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 
 1. 打开 Visual Studio Code。
 
-2. 从菜单栏中，导航到“查看” > “扩展”。
+2. 从菜单栏中，导航到“查看” > “扩展”   。
 
-3. 在搜索框中，输入“Spark & Hive”。
+3. 在搜索框中，输入“Spark & Hive”  。
 
-4. 从搜索结果中选择“Spark & Hive Tools”，然后选择“安装”。  
+4. 从搜索结果中选择“Spark & Hive Tools”，然后选择“安装”   。  
 
    ![安装扩展](./media/spark-hive-tools-vscode/extension.png)
 
@@ -53,13 +53,13 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 
 完成以下步骤以打开工作文件夹，并在 Visual Studio Code 中创建一个文件：
 
-1. 从菜单栏中, 导航到 "**文件** > " "**打开文件夹 ...** "C:\SQLBDC\SQLBDCexample, 然后选择 "**选择文件夹**" 按钮。  >  该文件夹显示在左侧的“资源管理器”视图中。
+1. 从菜单栏中，导航到“文件” > “打开文件夹...” > “C:\SQLBDC\SQLBDCexample”，然后选择“选择文件夹”按钮     。 该文件夹显示在左侧的“资源管理器”视图中  。
 
-2. 在**资源管理器**视图中, 选择 " **SQLBDCexample**" 文件夹, 然后选择 "工作文件夹" 旁边的 "**新建文件**" 图标。
+2. 在“资源管理器”视图中，选择文件夹“SQLBDCexample”，然后选择工作文件夹旁边的“新建文件”图标    。
 
    ![新建文件](./media/spark-hive-tools-vscode/new-file.png)
 
-3. 使用 `.py`（Spark 脚本）文件扩展名命名新文件。  此示例使用 HelloWorld.py。
+3. 使用 `.py`（Spark 脚本）文件扩展名命名新文件。  此示例使用 HelloWorld.py  。
 4. 将以下代码复制并粘贴到脚本文件中：
    ```python
     import sys
@@ -90,11 +90,11 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 
 在从 Visual Studio Code 将脚本提交到群集之前，需要链接 SQL Server 大数据群集。
 
-1. 从菜单栏导航到“查看” > “命令面板…”，然后输入“Spark / Hive:Link a Cluster”。
+1. 从菜单栏导航到“查看” > “命令面板…”，然后输入“Spark / Hive:    Link a Cluster”。
 
    ![链接群集命令](./media/spark-hive-tools-vscode/link-cluster-command.png)
 
-2. 选择链接群集类型“SQL Server 大数据”。
+2. 选择链接群集类型“SQL Server 大数据”  。
 
 3. 输入 SQL Server 大数据终结点。
 
@@ -104,27 +104,27 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 
 6. 设置群集的显示名称（可选）。
 
-7. 列出群集，查看“输出”视图以进行验证。
+7. 列出群集，查看“输出”视图以进行验证  。
 
 ## <a name="list-clusters"></a>列出群集
 
-1. 从菜单栏导航到“查看” > “命令面板…”，然后输入“Spark / Hive:List Cluster”。
+1. 从菜单栏导航到“查看” > “命令面板…”，然后输入“Spark / Hive:    List Cluster”。
 
-2. 检查“输出”视图。  该视图将显示链接群集。
+2. 检查“输出”视图  。  该视图将显示链接群集。
 
     ![设置默认群集配置](./media/spark-hive-tools-vscode/list-cluster-result.png)
 
 ## <a name="set-default-cluster"></a>设置默认群集
 
-1. 重新打开[之前](#open-work-folder)创建的文件夹**SQLBDCexample** (如果已关闭)。  
+1. 如果已关闭，请重新打开[之前](#open-work-folder)创建的文件夹“SQLBDCexample”  。  
 
-2. 选择[之前](#open-work-folder)创建的文件“HelloWorld.py”，它将在脚本编辑器中打开。
+2. 选择[之前](#open-work-folder)创建的文件“HelloWorld.py”，它将在脚本编辑器中打开  。
 
 3. 如果尚未链接群集，请将其链接。
 
-4. 右键单击脚本编辑器，然后选择“Spark / Hive:Set Default Cluster”。   
+4. 右键单击脚本编辑器，然后选择“Spark / Hive:  Set Default Cluster”。   
 
-5. 选择一个群集作为当前脚本文件的默认群集。 这些工具会自动更新配置文件“.VSCode \ settings.json”。 
+5. 选择一个群集作为当前脚本文件的默认群集。 这些工具会自动更新配置文件“.VSCode \ settings.json”  。 
 
    ![设置默认群集配置](./media/spark-hive-tools-vscode/set-default-cluster-configuration.png)
 
@@ -132,56 +132,56 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 
 可以按照以下步骤提交交互式 PySpark 查询：
 
-1. 重新打开[之前](#open-work-folder)创建的文件夹**SQLBDCexample** (如果已关闭)。  
+1. 如果已关闭，请重新打开[之前](#open-work-folder)创建的文件夹“SQLBDCexample”  。  
 
-2. 选择[之前](#open-work-folder)创建的文件“HelloWorld.py”，它将在脚本编辑器中打开。
+2. 选择[之前](#open-work-folder)创建的文件“HelloWorld.py”，它将在脚本编辑器中打开  。
 
 3. 如果尚未链接群集，请将其链接。
 
-4. 选择所有代码并右键单击脚本编辑器，选择“Spark:PySpark Interactive”以提交查询，或使用快捷键 Ctrl+Alt+I。
+4. 选择所有代码并右键单击脚本编辑器，选择“Spark:  PySpark Interactive”以提交查询，或使用快捷键 Ctrl+Alt+I  。
 
    ![pyspark 交互式上下文菜单](./media/spark-hive-tools-vscode/pyspark-interactive-right-click.png)
 
-5. 如果尚未指定默认群集，请选择群集。 几分钟后，“Python Interactive”结果将显示在新选项卡中。利用这些工具可以使用上下文菜单提交代码块而不是整个脚本文件。 
+5. 如果尚未指定默认群集，请选择群集。 几分钟后，“Python Interactive”结果将显示在新选项卡中  。利用这些工具可以使用上下文菜单提交代码块而不是整个脚本文件。 
 
    ![pyspark 交互式 python 交互式窗口](./media/spark-hive-tools-vscode/pyspark-interactive-python-interactive-window.png) 
 
-6. 输入“%%info”，然后按 Shift+Enter 查看作业信息。 （可选）
+6. 输入“%%info”，然后按 Shift+Enter 查看作业信息   。 （可选）
 
    ![查看作业信息](./media/spark-hive-tools-vscode/pyspark-interactive-view-job-information.png)
 
    > [!NOTE] 
    >
-   > 如果在设置中取消选中“Python 扩展已启用”（选中默认设置），则提交的 pyspark 交互结果将使用旧窗口。
+   > 如果在设置中取消选中“Python 扩展已启用”（选中默认设置），则提交的 pyspark 交互结果将使用旧窗口  。
    >
    > ![pyspark 交互式 python 扩展已禁用](./media/spark-hive-tools-vscode/pyspark-interactive-python-extension-disabled.png)
 
 
 ## <a name="submit-pyspark-batch-job"></a>提交 PySpark 批处理作业
 
-1. 重新打开[之前](#open-work-folder)创建的文件夹**SQLBDCexample** (如果已关闭)。  
+1. 如果已关闭，请重新打开[之前](#open-work-folder)创建的文件夹“SQLBDCexample”  。  
 
-2. 选择[之前](#open-work-folder)创建的文件“HelloWorld.py”，它将在脚本编辑器中打开。
+2. 选择[之前](#open-work-folder)创建的文件“HelloWorld.py”，它将在脚本编辑器中打开  。
 
 3. 如果尚未链接群集，请将其链接。
 
-4. 右键单击脚本编辑器，然后选择“Spark:PySpark Batch”，或使用快捷方式 Ctrl+Alt+H。 
+4. 右键单击脚本编辑器，然后选择“Spark:  PySpark Batch”，或使用快捷方式 Ctrl+Alt+H  。 
 
-5. 如果尚未指定默认群集，请选择群集。 提交 Python 作业后，提交日志将显示在 Visual Studio Code 的“输出”窗口中。 还会显示“Spark UI URL”和“Yarn UI URL”。 你可以在 Web 浏览器中打开 URL 以跟踪作业状态。
+5. 如果尚未指定默认群集，请选择群集。 提交 Python 作业后，提交日志将显示在 Visual Studio Code 的“输出”窗口中  。 还会显示“Spark UI URL”和“Yarn UI URL”   。 你可以在 Web 浏览器中打开 URL 以跟踪作业状态。
 
    ![提交 Python 作业结果](./media/spark-hive-tools-vscode/submit-pythonjob-result.png) 
 
 ## <a name="apache-livy-configuration"></a>Apache Livy 配置
 
-支持 [Apache Livy](https://livy.incubator.apache.org/) 配置，在工作空间文件夹中的 .VSCode\settings.json 中可以设置该配置。 目前，Livy 配置仅支持 Python 脚本。 更多详细信息，请参阅 [Livy 自述文件](https://github.com/cloudera/livy/blob/master/README.rst )。
+支持 [Apache Livy](https://livy.incubator.apache.org/) 配置，在工作空间文件夹中的 .VSCode\settings.json 中可以设置该配置  。 目前，Livy 配置仅支持 Python 脚本。 更多详细信息，请参阅 [Livy 自述文件](https://github.com/cloudera/livy/blob/master/README.rst )。
 
-### <a id="triggerlivyconf"></a>如何触发 Livy 配置
+### <a id="triggerlivyconf"></a>如何触发 Livy 配置 
 
 #### <a name="method-1"></a>方法 1
 
-1. 从菜单栏中，导航到“文件” > “首选项” > “设置”。  
-2. 在“搜索设置”文本框中输入“HDInsight Job Sumission:Livy Conf”。  
-3. 选择“在 settings.json 中编辑”以获取相关搜索结果。
+1. 从菜单栏中，导航到“文件” > “首选项” > “设置”    。  
+2. 在“搜索设置”文本框中输入“HDInsight Job Sumission:   Livy Conf”。  
+3. 选择“在 settings.json 中编辑”以获取相关搜索结果  。
 
 #### <a name="method-2"></a>方法 2
 
@@ -192,7 +192,7 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
     ![Livy 配置](./media/spark-hive-tools-vscode/hdi-livyconfig.png)
 
 >[!NOTE]
->对于设置“driverMomory”和“executorMomry”，请使用单位设置值，例如 1g 或 1024m。 
+>对于设置“driverMomory”和“executorMomry”，请使用单位设置值，例如 1g 或 1024m   。 
 
 ### <a name="supported-livy-configurations"></a>支持的 Livy 配置
 
@@ -200,7 +200,7 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 
 **请求正文**
 
-| name | description | type |
+| NAME | description | type |
 | :- | :- | :- |
 | 文件 | 包含要执行的应用程序的文件 | 路径（必需） |
 | proxyUser | 运行作业时要模拟的用户 | string |
@@ -216,14 +216,14 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 | numExecutors | 为此会话启动的执行程序数 | INT |
 | archives | 将在本次会话中使用的存档 | 字符串列表 |
 | queue | 提交到的 YARN 队列的名称 | string |
-| name | 会话的名称 | string |
+| NAME | 会话的名称 | string |
 | conf | Spark 配置属性 | key=val 的映射 |
 
 #### <a name="response-body"></a>响应正文
 
 创建的批处理对象。
 
-| name | description | type |
+| NAME | description | type |
 | :- | :- | :- |
 | id | 会话 ID | INT |
 | appId | 此会话的应用程序 ID | String |
@@ -248,11 +248,11 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 
 ## <a name="unlink-cluster"></a>取消链接群集
 
-1. 从菜单栏导航到“查看” > “命令面板…”，然后输入“Spark / Hive:Unlink a Cluster”。  
+1. 从菜单栏导航到“查看” > “命令面板…”，然后输入“Spark / Hive:    Unlink a Cluster”。  
 
 2. 选择要取消链接的群集。  
 
-3. 查看“输出”视图以进行验证。  
+3. 查看“输出”视图以进行验证  。  
 
 ## <a name="next-steps"></a>后续步骤
-有关 SQL Server 大数据群集和相关方案的详细信息, 请[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)参阅。
+有关 SQL Server 大数据群集和相关方案的详细信息，请参阅 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)。

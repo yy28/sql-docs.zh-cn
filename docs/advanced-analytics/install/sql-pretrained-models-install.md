@@ -1,83 +1,84 @@
 ---
-title: 安装预先训练的机器学习模型
-description: 添加预先训练的模型, 以供情绪分析和 image 特征化 SQL Server 机器学习服务 (R 或 Python) 或 SQL Server R Services。
+title: 安装预先定型的模型
+description: 向 SQL Server 机器学习服务（R 或 Python）或 SQL Server R Services 添加预先定型的模型，这些模型用于情绪分析和图像特征化。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 87f75b8ef8f9f151eb548787da4c9791eb1437b9
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715162"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727558"
 ---
-# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>在 SQL Server 上安装预先训练的机器学习模型
+# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>在 SQL Server 上安装预先定型的机器学习模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文介绍如何使用 Powershell 将免费预先训练的机器学习模型添加到具有 R或 Python 集成的 SQL Server 实例中。 预先训练的模型由 Microsoft 生成并随时可用, 作为安装后任务添加到实例。 有关这些模型的更多信息，请参阅本文的[资源](#bkmk_resources)部分。
+本文介绍如何使用 Powershell 将用于情绪分析和图像特征化的免费预先定型的机器学习模型添加到具有 R 或 Python 集成的 SQL Server 实例   。 预先定型的模型由 Microsoft 生成并且可供使用，作为安装后任务添加到实例中。 有关这些模型的详细信息，请参阅本文的[资源](#bkmk_resources)部分。
 
-安装后，预先训练的模型将被视为 MicrosoftML (R) 和 microsoftml (Python) 库中支持特定功能的实现细节。 不应（也不能） 查看、自定义或重新训练模型，也不能将其视为自定义代码中的独立资源或视为配对的其他函数。 
+安装完成后，预先定型的模型将被视为一种实现细节，它支持 MicrosoftML (R) 和 MicrosoftML (Python) 库中的特定功能。 不应（并且不能）查看、自定义或重新定型模型，也不能在自定义代码或成对的其他函数中将它们视为独立的资源。 
 
-若要使用预先训练模型, 请调用下表中列出的函数。
+若要使用预先定型的模型，请调用下表中列出的函数。
 
 | R 函数 (MicrosoftML) | Python 函数 (microsoftml) | 用法 |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 在文本输入上生成情绪分数。 |
+| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 对文本输入生成正负情绪分数。 |
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 从图像文件输入中提取文本信息。 |
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-机器学习算法是计算密集型的。 对于低到中等工作符合，建议使用 16 GB RAM，包括使用所有示例数据完成教程演练。
+机器学习算法是计算密集型的。 对于低等到中等的工作负荷，包括使用所有示例数据来完成教程演练，我们建议使用 16 GB RAM。
 
-您必须拥有计算机的管理员权限, 并 SQL Server 添加预先训练的模型。
+必须具有计算机和 SQL Server 的管理员权限，才能添加预先定型的模型。
 
-必须启用外部脚本, 并且必须运行启动板服务 SQL Server。 安装说明提供了用于启用和验证这些功能的步骤。 
+必须启用外部脚本，并且必须运行 SQL Server LaunchPad 服务。 安装说明提供了启用和验证这些功能的步骤。 
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-[MicrosoftML R package](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)或[MicrosoftML Python package](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)包含预先训练的模型。
+[MicrosoftML R 包](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)或 [microsoftml Python 包](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)包含预先定型的模型。
 
-[SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)包括机器学习库的两种语言版本, 因此, 无需执行任何其他操作即可满足此先决条件。 由于存在库，因此可以使用本文介绍的 PowerShell 脚本将预先训练的模型添加到这些库中。
+[SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)包含机器学习库的两种语言版本，因此无需执行任何其他操作即可满足此必备条件。 由于存在这些库，所以能使用本文中所述的 PowerShell 脚本将预先定型的模型添加到这些库。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-[MicrosoftML R 包](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)包含预先训练的模型。
+[MicrosoftML R 包](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)包含预先定型的模型。
 
-[SQL Server R Services](sql-r-services-windows-install.md)仅限 R, 不包括现成的[MicrosoftML 包](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)。 要添加 MicrosoftML，必须执行[组件升级](../install/upgrade-r-and-python.md)。 组件升级的一个优点是你可以同时添加预先训练的模型，这使得无需运行 PowerShell 脚本。 但是，如果已经升级但是第一次升级时未添加预先训练的模型，则可以按照本文所述运行 PowerShell 脚本。 它适用于两个版本的 SQL Server。 在执行此操作之前, 请确认 MicrosoftML 库存在`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`于中。
+[SQL Server R Services](sql-r-services-windows-install.md)（仅 R）不包含现成的 [MicrosoftML 包](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)。 若要添加 MicrosoftML，必须执行[组件升级](../install/upgrade-r-and-python.md)。 组件升级的一个优点是可以同时添加预先定型的模型，所以无需运行 PowerShell 脚本。 不过如果已经升级，但第一次没有添加预先定型的模型，则可以按照本文所述的内容运行 PowerShell 脚本。 SQL Server 的两个版本都适用。 在执行此操作之前，请确认 MicrosoftML 库存在于 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`。
 ::: moniker-end
 
 <a name="file-location"></a>
 
-## <a name="check-whether-pre-trained-models-are-installed"></a>检查是否安装了预先训练的模型
+## <a name="check-whether-pre-trained-models-are-installed"></a>检查是否安装了预先定型的模型
 
-R 和 Python 模型的安装路径如下所示:
+R 和 Python 模型的安装路径如下所示：
 
-+ 对于 R:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
++ R 模型：`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ 对于 Python:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
++ Python 模型：`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
-下面列出了模型文件名:
+下面列出的是模型文件名：
 
 + AlexNet\_Updated.model
 + ImageNet1K\_mean.xml
 + pretrained.model
-+ ResNet\_101\_已更新。模型
-+ ResNet\_18\_已更新。模型
++ ResNet\_101\_Updated.model
++ ResNet\_18\_Updated.model
 + ResNet\_50\_Updated.model
 
-如果已安装这些模型, 请跳到[验证步骤](#verify)以确认可用性。
+如果已安装这些模型，请跳到[验证步骤](#verify)以确认可用性。
 
 ## <a name="download-the-installation-script"></a>下载安装脚本
 
-单击[https://aka.ms/mlm4sql](https://aka.ms/mlm4sql)下载**Install-MLModels**文件。
+单击 [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) 下载文件 Install-MLModels.ps1  。
 
-## <a name="execute-with-elevated-privileges"></a>以提升的权限执行
+## <a name="execute-with-elevated-privileges"></a>使用提升的权限执行
 
-1. 启动 PowerShell。 在任务栏上, 右键单击 PowerShell 程序图标, 然后选择 "以**管理员身份运行**"。
-2. 输入安装脚本文件的完全限定路径, 并包括实例名称。 假设下载文件夹和默认实例, 该命令可能如下所示:
+1. 启动 PowerShell。 在任务栏上，右键单击 PowerShell 程序图标，然后选择“以管理员身份运行”  。
+2. 输入安装脚本文件的完全限定路径，并且包含实例名称。 这里假定为“下载”文件夹和默认实例，该命令可能如下所示：
 
    ```powershell
    PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
@@ -85,7 +86,7 @@ R 和 Python 模型的安装路径如下所示:
 
 **输出**
 
-在连接 internet 的 SQL Server 机器学习服务带有 R 和 Python 的默认实例, 应会看到类似于以下内容的消息。
+在连接 Internet 的 SQL Server 机器学习服务默认实例（带有 R 和 Python）上，应会看到类似于以下内容的消息。
 
    ```powershell
    MSSQL14.MSSQLSERVER
@@ -101,13 +102,13 @@ R 和 Python 模型的安装路径如下所示:
 
 ## <a name="verify-installation"></a>验证安装
 
-首先, 检查[mxlibs 文件夹](#file-location)中的新文件。 接下来, 运行演示代码以确认模型已安装且正常工作。 
+首先，检查 [mxlibs 文件夹](#file-location)中的新文件。 接下来，运行演示代码以确认模型已安装且正常工作。 
 
 ### <a name="r-verification-steps"></a>R 验证步骤
 
-1. 启动**rgui.exe。EXE**在 C:\Program FILES\MICROSOFT SQL Server\MSSQL14。MSSQLSERVER\R_SERVICES\bin\x64.
+1. 启动 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64 处的 RGUI.EXE  。
 
-2. 在命令提示符下粘贴以下 R 脚本。
+2. 在命令提示符处粘贴以下 R 脚本。
 
     ```R
     # Create the data
@@ -129,7 +130,7 @@ R 和 Python 模型的安装路径如下所示:
     sentimentScores
     ```
 
-3. 按 Enter 查看情绪分数。 输出应如下所示:
+3. 按 Enter 查看情绪分数。 输出应如下所示：
 
     ```R
     > sentimentScores
@@ -145,9 +146,9 @@ R 和 Python 模型的安装路径如下所示:
 
 ### <a name="python-verification-steps"></a>Python 验证步骤
 
-1. 在 C:\Program Files\Microsoft SQL Server\MSSQL14. 启动**Python。** MSSQLSERVER\PYTHON_SERVICES.
+1. 启动 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES 处的 Python.exe  。
 
-2. 在命令提示符下粘贴以下 Python 脚本
+2. 在命令提示符处粘贴以下 Python 脚本
 
     ```python
     import numpy
@@ -171,7 +172,7 @@ R 和 Python 模型的安装路径如下所示:
     print(sentiment_scores)
     ```
 
-3. 按 Enter 打印分数。 输出应如下所示:
+3. 按 Enter 打印分数。 输出应如下所示：
 
     ```python
     >>> print(sentiment_scores)
@@ -183,36 +184,36 @@ R 和 Python 模型的安装路径如下所示:
     ```
 
 > [!NOTE]
-> 如果演示脚本失败, 请首先检查文件位置。 在具有多个 SQL Server 实例的系统上, 或对于与独立版本并行运行的实例, 安装脚本可能会错误地读取环境, 并将文件放在错误的位置。 通常, 手动将文件复制到正确的 mxlib 文件夹会解决此问题。
+> 如果演示脚本失败，请首先检查文件位置。 在具有多个 SQL Server 实例的系统上，或者对于与独立版本并行运行的实例，安装脚本可能会错误地读取环境，并将文件放在错误的位置。 一般情况下，手动将文件复制到正确的 mxlib 文件夹可以解决此问题。
 
-## <a name="examples-using-pre-trained-models"></a>使用预先训练的模型的示例
+## <a name="examples-using-pre-trained-models"></a>使用预先定型的模型的示例
 
-下面的链接包含调用预先训练模型的示例代码。
+下面的链接包含调用预先定型的模型的示例代码。
 
-+ [代码示例:使用文本特征化器情绪分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
++ [代码示例：使用文本特征化器进行情绪分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
 <a name="bkmk_resources"></a> 
 
 ## <a name="research-and-resources"></a>研究和资源
 
-目前可用的模型是用于情绪分析和图像分类的深层神经网络 (DNN) 模型。 所有预先训练的模型都使用 Microsoft[计算网络工具包](https://cntk.ai/Features/Index.html)或**CNTK**进行训练。
+目前可用的模型是用于情绪分析和图像分类的深度神经网络 (DNN) 模型。 所有预先定型的模型都通过 Microsoft 的 [Computation Network Toolkit](https://cntk.ai/Features/Index.html)（计算网络工具包）或 **CNTK** 进行定型。
 
-每个网络的配置都基于以下参考实现:
+每个网络的配置都基于以下引用实现：
 
 + ResNet-18
 + ResNet-50
 + ResNet-101
 + AlexNet
 
-有关这些深度学习模型中使用的算法的详细信息, 以及如何使用 CNTK 实现和定型它们的详细信息, 请参阅以下文章:
+有关这些深度学习模型中使用的算法的详细信息，以及如何使用 CNTK 将其实现和定型的详细信息，请参阅以下文章：
 
-+ [Microsoft 研究员的算法设置 ImageNet 质询里程碑](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
++ [Microsoft Researchers' Algorithm Sets ImageNet Challenge Milestone](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)（Microsoft 研究人员的算法成为 ImageNet 挑战中的里程碑）
 
-+ [Microsoft 计算网络工具包提供最有效的分布式深度学习计算性能](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
++ [Microsoft Computational Network Toolkit offers most efficient distributed deep learning computational performance](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)（Microsoft 计算网络工具包提供最有效的分布式深度学习计算性能）
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 + [SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)
 + [升级 SQL Server 实例中的 R 和 Python 组件](../install/upgrade-r-and-python.md)
 + [适用于 R 的 MicrosoftML 包](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
-+ [用于 Python 的 microsoftml 包](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ [适用于 Python 的 microsoftml 包](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

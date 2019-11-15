@@ -1,7 +1,7 @@
 ---
 title: 配置 HDFS 分层
 titleSuffix: SQL Server big data clusters
-description: 本文介绍如何配置 HDFS 分层, 以将外部 Azure Data Lake Storage 文件系统装载到上的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS 中。
+description: 本文介绍如何配置 HDFS 分层，以将外部 Azure Data Lake Storage 文件系统装载到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上的 HDFS 中。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7b24af0b0c6a22cbab1a9c280a0ba868ca2cd21
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 673b3eed760af4b36c494e2dd45cdfc8ed8e8dc8
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652329"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706051"
 ---
-# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>配置 HDFS 分层[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上配置 HDFS 分层
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-借助 HDFS 分层，可以在 HDFS 中装载与 HDFS 兼容的外部文件系统。 本文介绍如何为[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (预览版) 配置 HDFS 分层。 目前，我们支持连接到 Azure Data Lake Storage Gen2 和 Amazon S3。 
+借助 HDFS 分层，可以在 HDFS 中装载与 HDFS 兼容的外部文件系统。 本文介绍如何为 SQL Server 大数据群集配置 HDFS 分层。 目前，我们支持连接到 Azure Data Lake Storage Gen2 和 Amazon S3。 
 
 ## <a name="hdfs-tiering-overview"></a>HDFS 分层概述
 
@@ -38,7 +38,7 @@ ms.locfileid: "69652329"
 
 HDFS 分层支持刷新。 刷新现有装载可获取远程数据的最新快照。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - [部署大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)
@@ -54,7 +54,7 @@ HDFS 分层支持刷新。 刷新现有装载可获取远程数据的最新快�
 
 ## <a id="issues"></a> 已知问题和限制
 
-以下列表提供了在中使用 HDFS 分层时的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]已知问题和当前限制:
+以下列表提供了在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 中使用 HDFS 分层时的已知问题和当前限制：
 
 - 如果装载长时间处于 `CREATING` 状态，则很可能已失败。 在这种情况下，请取消命令并在必要时删除装载。 在重试之前，请验证参数和凭据是否正确。
 
@@ -76,4 +76,4 @@ HDFS 分层支持刷新。 刷新现有装载可获取远程数据的最新快�
 
 ## <a name="next-steps"></a>后续步骤
 
-有关的详细信息[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。
+有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的详细信息，请参阅[什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。

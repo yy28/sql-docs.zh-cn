@@ -1,113 +1,114 @@
 ---
-title: 使用机器学习模型生成预测和预测
-description: 使用 rxPredict 或 sp_rxPredict 实时评分，或预测 T-sql 以了解 SQL Server 机器学习中 R 和 Python 中的预测和预测的本机计分。
+title: 生成预告和预测
+description: 使用 rxPredict 或 sp_rxPredict 进行实时评分，或者使用 PREDICT T-SQL 进行本机评分以在 SQL Server 机器学习中使用 R 和 Python 进行预告和预测。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 14ccd4beb2186213cb3d94b10031ac732224f4d9
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
-ms.translationtype: MT
+ms.openlocfilehash: 7822cd56a52e47493fe175c293dbfe491a9524af
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71271904"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727433"
 ---
-# <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何使用中的机器学习模型生成预测和预测 SQL Server
+# <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何在 SQL Server 中使用机器学习模型生成预告和预测
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-使用现有模型预测或预测新数据输入的结果是机器学习中的核心任务。 本文枚举 SQL Server 中生成预测的方法。 在这些方法中, 这种方法是高速预测的内部处理方法, 其中速度基于运行时依赖项的增量缩减。 依赖关系越少, 预测越快。
+使用现有模型来对新数据输入的结果进行预告和预测是机器学习中的一项核心任务。 本文枚举了在 SQL Server 中生成预测的方法。 这些方法是用于进行高速预测的内部处理方法，预测速度基于运行时依赖项的增量减少。 依赖项越少，预测速度越快。
 
-使用内部处理基础结构 (实时评分或本机评分) 附带了库要求。 函数必须来自 Microsoft 库。 CLR 或C++扩展不支持调用开源或第三方函数的 R 或 Python 代码。
+使用内部处理基础结构（实时评分或本机评分）对库是有要求的。 函数必须来自 Microsoft 库。 CLR 或 C++ 扩展不支持调用开放源代码或第三方函数的 R 或 Python 代码。
 
-下表总结了用于预测和预测的计分框架。 
+下表总结了用于进行预告和预测的评分框架。 
 
 | 方法           | 接口         | 库要求 | 处理速度 |
 |-----------------------|-------------------|----------------------|----------------------|
-| 可扩展性框架 | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 无。 模型可以基于任何 R 或 Python 函数 | 数百毫秒。 <br/>在对任何新数据进行评分之前, 加载运行时环境的成本是固定的, 平均三到600毫秒。 |
-| [实时评分 CLR 扩展](../real-time-scoring.md) | 序列化模型上的[sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) | 迅驰RevoScaleR、MicrosoftML <br/>Python: revoscalepy、microsoftml | 平均为数十毫秒。 |
-| [本机计分C++扩展](../sql-native-scoring.md) | 预测序列化模型上的[t-sql 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) | 迅驰RevoScaleR <br/>Python: revoscalepy | 平均小于20毫秒。 | 
+| 可扩展性框架 | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 无。 模型可基于任何 R 或 Python 函数 | 数百毫秒。 <br/>加载运行时环境有一个固定成本，在任何新数据的评分出来之前，平均耗时三百到六百毫秒。 |
+| [实时评分 CLR 扩展](../real-time-scoring.md) | 序列化模型上的 [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) | R：RevoScaleR、MicrosoftML <br/>Python：revoscalepy、microsoftml | 平均数十毫秒。 |
+| [本机评分 C++ 扩展](../sql-native-scoring.md) | 序列化模型上的 [PREDICT T-SQL 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) | R：RevoScaleR <br/>Python：revoscalepy | 平均少于 20 毫秒。 | 
 
-处理的速度和不是输出的实质是一项与众不同的功能。 假设有相同的函数和输入, 评分的输出不应根据所使用的方法而变化。
+处理速度而非输出物质是区分特征。 假设函数和输入相同，已评分的输出不应根据你使用的方法而有所变化。
 
-必须使用支持的函数创建模型, 然后将其序列化为保存到磁盘的原始字节流, 或以二进制格式存储在数据库中。 使用存储过程或 T-sql, 你可以在不使用 R 或 Python 语言运行时的开销的情况下加载和使用二进制模型, 从而在为新输入生成预测评分时加快完成时间。
+模型必须是使用受支持的函数创建的，然后被序列化为保存到磁盘或以二进制格式存储在数据库中的原始字节流。 通过使用存储过程或 T-SQL，你可以加载和使用二进制模型，而不会产生 R 或 Python 语言运行时的开销，从而在生成新输入的预测分数时可缩短完成时间。
 
-CLR 和C++扩展的重要性与数据库引擎本身非常接近。 数据库引擎的本地语言是C++, 这意味着在C++运行时用更少的依赖项编写的扩展。 与此相反, CLR 扩展依赖于 .NET Core。 
+CLR 和 C++ 扩展的重要性接近于数据库引擎本身。 数据库引擎的本机语言是 C++，这意味着使用 C++ 编写的扩展使用更少的依赖项运行。 与此相反，CLR 扩展依赖于 .NET Core。 
 
-正如您所料, 平台支持受这些运行时环境的影响。 本地数据库引擎扩展在支持关系数据库的任何位置运行:Windows、Linux、Azure。 具有 .NET Core 要求的 CLR 扩展目前仅适用于 Windows。
+正如你所预期的，平台支持会受到这些运行时环境的影响。 本机数据库引擎扩展在支持关系数据库的任何环境中运行：Windows、Linux、Azure。 具有 .NET Core 要求的 CLR 扩展当前仅适用于 Windows。
 
 ## <a name="scoring-overview"></a>评分概述
 
-_评分_是一个两步过程。 首先, 指定已训练的模型以从表中加载。 其次, 将新的输入数据传递给函数, 以生成预测值 (或_评分_)。 输入通常是一种 T-sql 查询, 返回表格或单个行。 您可以选择输出表示概率的单个列值, 也可以将多个值 (如置信区间、错误或其他有用的补充) 输出到预测。
+评分过程分为两个步骤  。 第一步，指定要从表中加载的已定型的模型。 第二步，将新的输入数据传递给函数以生成预测值（或分数）  。 输入通常是一种 T-SQL 查询，会返回表格或各行。 你可以选择输出表示概率的单列值，也可以将多个值（例如置信区间、错误或其他有用的补充）输出到预测中。
 
-执行一步后, 准备该模型的整个过程, 然后生成分数, 就是这样总结:
+退一步看，可以通过以下方式总结准备模型并生成分数的整个过程：
 
-1. 使用受支持的算法创建模型。 支持因选择的评分方法而异。
-2. 训练模型。
+1. 使用受支持的算法创建模型。 支持因你选择的评分方法而有所不同。
+2. 定型模型。
 3. 使用特殊的二进制格式序列化模型。
-3. 将模型保存到 SQL Server。 通常, 这意味着将序列化模型存储在 SQL Server 的表中。
-4. 调用函数或存储过程, 并将模型和数据输入指定为参数。
+3. 将模型保存到 SQL Server。 通常，这意味着将序列化模型存储在 SQL Server 表中。
+4. 调用函数或存储过程，从而将模型和数据输入指定为参数。
 
-当输入包含多行数据时, 通常会将预测值作为评分过程的一部分插入到表中。 在从窗体或用户请求获取输入值并将评分返回给客户端应用程序的方案中, 生成单个分数更为典型。 为了在生成连续分数时提高性能, SQL Server 可能会缓存模型, 以便可以将其重新加载到内存中。
+当输入包含许多行数据时，通常可以更快地将预测值插入到表中，作为评分过程的一部分。 当你获取表单或用户请求中的输入值时，通常会生成一个分数，并且将此分数返回给客户端应用程序。 为了提高生成连续分数时的性能，SQL Server 可能会缓存模型，使它可以被重新加载到内存中。
 
 ## <a name="compare-methods"></a>比较方法
 
-为了保持核心数据库引擎进程的完整性, 对 R 和 Python 的支持在与 RDBMS 处理中的语言处理隔离的双重体系结构中启用。 从 SQL Server 2016 开始, Microsoft 添加了一个扩展性框架, 允许从 T-sql 执行 R 脚本。 SQL Server 2017 中添加了 Python 集成。 
+为了保持核心数据库引擎进程的完整性，在将语言处理与 RDBMS 处理分隔开来的双体系结构中启用了对 R 和 Python 的支持。 从 SQL Server 2016 起，Microsoft 添加了允许从 T-SQL 执行 R 脚本的扩展性框架。 在 SQL Server 2017 中，添加了 Python 集成。 
 
-扩展性框架支持在 R 或 Python 中执行的任何操作, 从简单的函数到定型复杂的机器学习模型。 但是, 无论操作的复杂性如何, 双处理体系结构都需要为每个调用调用外部 R 或 Python 进程。 当工作负荷需要从表中加载预先训练的模型, 并在已 SQL Server 的数据中进行评分时, 调用外部进程的开销会增加在某些情况下可能无法接受的延迟。 例如, 欺诈检测需要快速计分才能获得相关。
+扩展性框架支持你可能会在 R 或 Python 中执行的任何操作，从简单的功能到定型复杂的机器学习模型。 但是，双进程体系结构要求在每次调用时都调用一个外部 R 或 Python 进程，无论操作的复杂性如何。 当工作负荷需要从表中加载预定型的模型并根据 SQL Server 中已有的数据对它进行评分时，在某些情况下，调用外部进程的开销会增添无法接受的延迟。 例如，欺诈检测需要能够进行具有针对性的快速评分。
 
-为了增加欺诈检测等方案的评分速度, SQL Server 将内置计分库添加为C++和 CLR 扩展, 以消除 R 和 Python 启动过程的开销。
+为了提高欺诈检测等方案的评分速度，SQL Server 添加了内置的评分库作为 C++ 和 CLR 扩展，从而消除了 R 和 Python 启动进程的开销。
 
-[**实时评分**](../real-time-scoring.md)是实现高性能计分的第一个解决方案。 在早期版本的 SQL Server 2017 和更高版本的更新中引入了 SQL Server 2016, 而实时评分依赖于在 RevoScaleR、MicrosoftML (R)、revoscalepy 和microsoftml (Python)。 通过使用**sp_rxPredict**存储过程从任何支持的模型类型生成评分，而无需调用 R 或 Python 运行时。
+[实时评分](../real-time-scoring.md)是进行高性能评分的第一个解决方案  。 SQL Server 2017 的早期版本和 SQL Server 2016 的后续更新中引入的实时评分依赖于 CLR 库，这些库代替 R 和 Python 对 RevoScaleR、MicrosoftML (R)、revoscalepy 和 microsoftml (Python) 中 Microsoft 控制的函数进行处理。 使用 sp_rxPredict 存储过程调用 CLR 库以生成任何受支持模型类型的分数，而无需调用 R 或 Python 运行时  。
 
-[**本机计分**](../sql-native-scoring.md)是一项 SQL Server 2017 功能, 可作为本机C++库实现, 但仅适用于 RevoScaleR 和 revoscalepy 模型。 它是最快和更安全的方法, 但支持相对于其他方法的一组较小的函数。
+[本机评分](../sql-native-scoring.md)是一项 SQL Server 2017 功能，已作为本机 C++ 库实现，但仅适用于 RevoScaleR 和 revoscalepy 模型  。 这是速度最快且更加安全的方法，但是相对于其他方法，它支持的功能更少。
 
-## <a name="choose-a-scoring-method"></a>选择计分方法
+## <a name="choose-a-scoring-method"></a>选择评分方法
 
-平台要求通常规定要使用哪种评分方法。
+平台要求通常指示要使用的评分方法。
 
 | 产品版本和平台 | 方法 |
 |------------------------------|-------------|
-| Windows 上的 SQL Server 2017、SQL Server 2017 Linux 和 Azure SQL 数据库 | T-sql 预测的**本机计分** |
-| SQL Server 2017 (仅限 Windows), SQL Server SP1 或更高版本的 2016 R Services | Sp\_rxPredict 存储过程的**实时评分** |
+| Windows 版 SQL Server 2017、SQL Server 2017 Linux 和 Azure SQL 数据库 | 使用 T-SQL PREDICT 的本机评分  |
+| SQL Server 2017（仅限 Windows）、SP1 或更高版本的 SQL Server 2016 R Services | 使用 sp\_rxPredict 存储过程的实时评分  |
 
-建议通过函数进行本机评分。 使用 sp\_rxPredict 需要启用 SQLCLR 集成。 在启用此选项之前, 请考虑安全问题。
+我们建议使用 PREDICT 函数进行本机评分。 使用 sp\_rxPredict 要求启用 SQLCLR 集成。 在启用此选项之前请考虑安全隐患。
 
 ## <a name="serialization-and-storage"></a>序列化和存储
 
-若要将某一模型与任一快速计分选项一起使用, 请使用特殊的序列化格式保存该模型, 该格式已针对大小和评分效率进行了优化。
+若要将模型与任何一个快速评分选项结合使用，请使用特殊序列化格式保存模型，此格式已针对大小和评分效率进行了优化。
 
-+ 调用[rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) , 将支持的模型写入**raw**格式。
-+ 调用[rxUnserializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)"以重建模型以便在其他 R 代码中使用, 或查看模型。
++ 调用 [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) 将受支持的模型写入原始格式  。
++ 调用 [rxUnserializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)` 重构模型以用于其他 R 代码或查看模型。
 
 **使用 SQL**
 
-通过 SQL 代码，你可以使用[sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)来训练模型，并直接将定型模型插入表中的类型为**varbinary （max）** 的列。 有关简单示例, 请参阅[在 R 中创建 preditive 模型](../tutorials/quickstart-r-train-score-model.md)
+通过 SQL 代码，你可以使用 [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 定型模型，然后将已定型的模型直接插入表中类型为 varbinary(max) 的列中  。 有关简单示例，请参阅[使用 R 创建预测模型](../tutorials/quickstart-r-train-score-model.md)
 
 **使用 R**
 
-在 R 代码中, 从 RevoScaleR 包调用[rxWriteObject](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxwriteobject)函数, 以便将模型直接写入数据库。 **RxWriteObject ()** 函数可从 ODBC 数据源 (如 SQL Server) 中检索 R 对象, 或将对象写入 SQL Server。 API 在简单的键值存储区之后建模。
+在 R 代码中，从 RevoScaleR 包中调用 [rxWriteObject](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxwriteobject) 函数将模型直接写入数据库。 rxWriteObject() 函数可以从 ODBC 数据源（例如 SQL Server）中检索 R 对象，或将对象写入 SQL Server  。 此 API 是在简单的键值存储后建模的。
   
-如果使用此函数, 请确保先使用[rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)序列化模型。 然后, 将**rxWriteObject**中的*序列化*参数设置为 FALSE, 以避免重复序列化步骤。
+如果使用此函数，请确保首先使用 [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) 序列化模型。 然后，将 rxWriteObject 中的 serialize 参数设置为 FALSE，从而避免重复执行序列化步骤   。
 
-将模型序列化为二进制格式很有用, 但如果您使用的是可扩展性框架中的 R 和 Python 运行时环境的评分预测, 则不需要这样做。 可以将原始字节格式的模型保存到文件, 然后从文件读取到 SQL Server。 如果要在环境之间移动或复制模型, 此选项可能会很有用。
+虽然将模型序列化为二进制格式是很有用的，但如果要在扩展性框架中使用 R 和 Python 运行时环境对预测进行评分，则不需要这样做。 可以将模型以原始字节格式保存到文件中，然后从此文件中读取到 SQL Server 中。 如果要在环境之间移动或复制模型，此选项则可能有用。
 
-## <a name="scoring-in-related-products"></a>相关产品的评分
+## <a name="scoring-in-related-products"></a>对相关产品进行评分
 
-如果使用的是[独立服务器](r-server-standalone.md)或[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), 则除了存储过程和 t-sql 函数外, 还可以使用其他选项来快速生成预测。 独立服务器和 Machine Learning Server 都支持用于代码部署的*web 服务*的概念。 可以将 R 或 Python 预先训练的模型捆绑为 web 服务, 在运行时调用该模型来评估新的数据输入。 有关详细信息，请参阅以下文章：
+如果使用的是[独立服务器](r-server-standalone.md)或 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，除了存储过程和 T-SQL 函数外，还有其他选项可用于快速生成预测。 独立服务器和 Machine Learning Server 均支持用于代码部署的 Web 服务概念  。 可以将 R 或 Python 预定型的模型捆绑为 Web 服务，并在运行时调用以评估新数据输入。 有关详细信息，请参阅以下文章：
 
-+ [什么是 Machine Learning Server 的 web 服务？](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
++ [Machine Learning Server 中的 Web 服务是什么？](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [什么是操作化？](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
-+ [使用 azureml 模型管理-sdk 将 Python 模型部署为 web 服务](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
-+ [将 R 代码块或实时模型发布为新的 web 服务](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
++ [使用 azureml-model-management-sdk 将 Python 模型部署为 Web 服务](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
++ [发布 R 代码块或实时模型作为新的 Web 服务](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [适用于 R 的 mrsdeploy 包](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 + [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)  
 + [rxRealTimeScoring](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxrealtimescoring)
 + [sp-rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)
-+ [预测 T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)
++ [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)

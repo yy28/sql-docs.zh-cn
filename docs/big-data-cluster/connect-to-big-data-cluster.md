@@ -1,6 +1,6 @@
 ---
 title: 连接到主实例和 HDFS 大数据群集
-description: 了解如何连接到 SQL Server 主实例和 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的 HDFS/Spark 网关。
+description: 了解如何连接 SQL Server 主实例和 SQL Server 大数据群集的 HDFS/Spark 网关。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0717226ee785df568d4cea75511e65acb728c592
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532242"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882396"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>使用 Azure Data Studio 连接到 SQL Server 大数据群集
 
@@ -32,7 +32,7 @@ ms.locfileid: "73532242"
 
 ## <a id="master"></a> 连接到群集
 
-若要使用 Azure Data Studio 连接到大数据群集，请与群集中的 SQL Server 主实例建立新的连接。 以下步骤介绍如何使用 Azure Data Studio 连接到主实例。
+若要使用 Azure Data Studio 连接到大数据群集，请与群集中的 SQL Server 主实例建立新的连接。 以下是操作方法。
 
 1. 查找 SQL Server 主实例终结点：
 
@@ -51,10 +51,10 @@ ms.locfileid: "73532242"
 
 1. 选择身份验证类型。 对于在大数据群集中运行的 SQL Server 主实例，仅支持 Windows 身份验证和 SQL 登录   。 
 
-1. 输入 SQL 登录用户名和密码   。 如果使用的是 Windows 身份验证，则不需要这样做。
+1. 如果使用的是 SQL 登录，请输入 SQL 登录的用户名和密码   。
 
    > [!TIP]
-   > 默认情况下，用户名 SA 在大数据群集部署过程中处于禁用状态  。 在部署期间预配一个新的 sysadmin 用户，其名称对应于 AZDATA_USERNAME 环境变量，其密码对应于部署期间使用的 AZDATA_PASSWORD 环境变量   。
+   > 默认情况下，用户名 SA 在大数据群集部署过程中处于禁用状态  。 在部署期间预配一个新的 sysadmin 用户，其名称和密码分别对应于 AZDATA_USERNAME 和 AZDATA_PASSWORD 环境变量（这是在部署之前或部署期间设置）   。
 
 1. 将目标“数据库名称”更改为你的关系数据库之一  。
 
@@ -65,8 +65,8 @@ ms.locfileid: "73532242"
 借助 Azure Data Studio 2019 年 2 月版，连接到 SQL Server 主实例还使你可以与 HDFS/Spark 网关交互。 这意味着无需为下一部分介绍的 HDFS 和 Spark 使用单独的连接。
 
 - 对象资源管理器现在包含一个新的“数据服务”节点，其为大数据群集任务提供右键单击支持，例如新建笔记本或提交 spark 作业  。 
-- “数据服务”节点还包含一个“HDFS”文件夹，可用于 HDFS 探索和执行“创建外部表”或“在笔记本中进行分析”等操作   。
-- 安装扩展时，连接的“服务器仪表板”还包含“SQL Server 大数据群集”和“SQL Server 2019（预览版）”选项卡    。
+- “数据服务”节点还包含一个 HDFS 文件夹，通过该文件夹可浏览 HDFS 的内容并执行涉及 HDFS 的常见任务（例如，创建外部表或打开笔记本以分析 HDFS 内容）   。
+- 安装扩展时，连接的“服务器仪表板”还包含“SQL Server 大数据群集”和“SQL Server 2019”选项卡    。
 
    ![Azure Data Studio 数据服务节点](./media/connect-to-big-data-cluster/connect-data-services-node.png)
 

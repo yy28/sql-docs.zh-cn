@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ef351fc564f4d097cf4ae28c4ba890cb082eac0
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589995"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240696"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -50,6 +50,7 @@ ms.locfileid: "72589995"
 - 启用或禁用[轻型查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。
 - 启用或禁用新的 `String or binary data would be truncated` 错误消息。
 - 在 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 中启用或禁用最后一个实际执行计划的收集。
+- 指定暂停的可恢复索引操作在被 SQL Server 引擎自动中止之前暂停的分钟数。
 
 ![“链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -58,9 +59,9 @@ ms.locfileid: "72589995"
 ```
 ALTER DATABASE SCOPED CONFIGURATION
 {
-     {  [ FOR SECONDARY] SET <set_options>}
+    { [ FOR SECONDARY] SET <set_options>}
 }
-| CLEAR PROCEDURE_CACHE  [plan_handle]
+| CLEAR PROCEDURE_CACHE [plan_handle]
 | SET < set_options >
 [;]
 
@@ -88,6 +89,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
+    | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
 }
 ```
 
@@ -105,12 +107,11 @@ FOR SECONDARY
 
 CLEAR PROCEDURE_CACHE [plan_handle]
 
-清除数据库的过程（计划）缓存，可同时对主要和辅助数据库执行此操作。  
+清除数据库的过程（计划）缓存，可同时对主要和辅助数据库执行此操作。
 
 指定查询计划句柄，以从计划缓存中清除单个查询计划。
 
-> [!NOTE]
-> 指定查询计划句柄适用于 Azure SQL 数据库和 SQL Server 2019 或更高版本。
+适用范围：  指定查询计划句柄适用于 Azure SQL 数据库和 SQL Server 2019 或更高版本。
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -171,18 +172,18 @@ PRIMARY
 
 此值仅对辅助数据库（该数据库位于主数据库上）有效，指定所有辅助数据库上此设置的值都是为主数据库设置的值。 如果主数据库的配置更改，辅助数据库上的值也会相应地更改，不需要再显式设置辅助数据库值。 PRIMARY 是辅助数据库的默认设置。
 
-IDENTITY_CACHE = { ON | OFF }        
+IDENTITY_CACHE = { ON | OFF }  
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 在数据库级别启用或禁用标识缓存。 默认值为 ON  。 标识缓存用于提高具有标识列的表的 INSERT 性能。 为了避免服务器意外重启或故障转移到辅助服务器时出现标识列值的差值，请禁用 IDENTITY_CACHE 选项。 该选项与现有[跟踪标志 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 类似，但前者可在数据库级别设置，而不只是可在服务器级别设置。
 
 > [!NOTE]
 > 仅可为 PRIMARY 设置此选项。 有关详细信息，请参阅[标识列](create-table-transact-sql-identity-property.md)。
 
-INTERLEAVED_EXECUTION_TVF = { ON | OFF }     
+INTERLEAVED_EXECUTION_TVF = { ON | OFF }  
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 允许用户在数据库或语句范围内启用或禁用多语句表值函数的交错执行，同时将数据库兼容性级别维持在 140 或更高。 交错执行是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中自适应查询处理的一个功能。 有关详细信息，请参阅[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)。
 
@@ -191,18 +192,18 @@ INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 >
 > 仅在 SQL Server 2017 (14.x) 中，选项 INTERLEAVED_EXECUTION_TVF 具有旧名称 DISABLE_INTERLEAVED_EXECUTION_TVF  。
 
-BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}      
+BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}  
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 允许用户在数据库范围内启用或禁用批处理模式内存授予反馈，同时将数据库兼容级别维持在 140 或更高。 批处理模式内存授予反馈是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中推出的[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)的一个功能。
 
 > [!NOTE]
 > 对于数据库兼容性级别 130 或更低级别，此数据库范围配置无效。
 
-BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}     
+BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}  
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 允许用户在数据库范围内启用或禁用批处理模式自适应联接，同时将数据库兼容性级别维持在 140 或更高。 批处理模式自适应联接是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中推出的[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)的一个功能。
 
@@ -211,7 +212,7 @@ BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
 
 TSQL_SCALAR_UDF_INLINING = { ON | OFF }  
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
 
 允许用户在数据库范围启用或禁用 T-SQL 标量 UDF 内联，同时将数据库兼容性级别维持在 150 或更高。 T-SQL 标量 UDF 内联属于[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的一部分。
 
@@ -237,7 +238,7 @@ WHEN_SUPPORTED
 
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
 
 允许你选择选项，使引擎自动将支持的操作提升为可恢复。 默认值为 OFF，表示除非在语句中指定，否则操作不会提升为可恢复。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 反映 ELEVATE_RESUMABLE 的当前值。 这些选项只适用于支持可恢复的操作。
 
@@ -254,13 +255,13 @@ WHEN_SUPPORTED
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }  
 
-适用于  ：[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
 
 第一次编译批处理时，启用或禁用要存储在缓存中的已编译计划存根。 默认为 OFF。 为数据库启用了数据库作用域内配置 OPTIMIZE_FOR_AD_HOC_WORKLOADS 后，已编译计划存根可在第一次编译批处理时存储在缓存中。 与完全编译的计划大小相比，计划存根的内存占用空间更小。 如果编译或再次执行批处理，则会删除已编译计划存根，并将其替换为完全编译的计划。
 
 XTP_PROCEDURE_EXECUTION_STATISTICS =  { ON | OFF  }
 
-适用于  ：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 启用或禁用对当前数据库的本机编译的 T-SQL 模块在模块级别的执行统计信息收集。 默认为 OFF。 执行统计信息反映在 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 中。
 
@@ -268,7 +269,7 @@ XTP_PROCEDURE_EXECUTION_STATISTICS =  { ON | OFF  }
 
 XTP_QUERY_EXECUTION_STATISTICS =  { ON |OFF  }
 
-适用于  ：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 启用或禁用对当前数据库的本机编译的 T-SQL 模块语句级别的执行统计信息收集。 默认为 OFF。 执行统计信息反映在 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 和[查询存储](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)中。
 
@@ -278,7 +279,7 @@ XTP_QUERY_EXECUTION_STATISTICS =  { ON |OFF  }
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}  
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
 
 允许用户在数据库范围内启用或禁用行模式内存授予反馈，同时将数据库兼容性级别维持在 150 或更高。 行模式内存授予反馈是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中推出的[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)的一个功能（[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中支持行模式）。
 
@@ -287,7 +288,7 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 BATCH_MODE_ON_ROWSTORE = { ON | OFF}  
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
 
 允许用户在数据库范围内的行存储上启用或禁用批处理模式，同时将数据库兼容性级别维持在 150 或更高。 行存储上的批处理模式是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能系列中的一个功能。
 
@@ -296,7 +297,7 @@ BATCH_MODE_ON_ROWSTORE = { ON | OFF}
 
 DEFERRED_COMPILATION_TV = { ON | OFF}  
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
 
 允许用户在数据库范围内启用或禁用表变量延迟编译，同时将数据库兼容性级别维持在 150 或更高。 表变量延迟编译是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能系列中的一个功能。
 
@@ -325,7 +326,7 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 LIGHTWEIGHT_QUERY_PROFILING = { ON |OFF}  
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 允许启用或禁用[轻型查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。 轻型查询分析基础结构 (LWP) 比标准分析机制更有效地提供查询性能数据，并且默认启用。
 
@@ -333,9 +334,9 @@ LIGHTWEIGHT_QUERY_PROFILING = { ON |OFF}
 
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-允许启用或禁用新的 `String or binary data would be truncated` 错误消息。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 针对此情况引入了更具体的新错误消息 (2628)：  
+允许启用或禁用新的 `String or binary data would be truncated` 错误消息。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 针对此情况引入了更具体的新错误消息 (2628)：
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
@@ -347,15 +348,29 @@ VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
 LAST_QUERY_PLAN_STATS = { ON | OFF}  
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）（此功能为公开预览版）
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）（此功能为公开预览版）
 
 允许在 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 中启用或禁用最后一个查询计划统计信息（相当于实际执行计划）的收集。
+
+PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
+
+适用范围：  仅限 Azure SQL 数据库
+
+`PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` 选项确定可恢复索引在被引擎自动中止之前暂停的时间（以分钟为单位）。
+
+- 默认值设置为 1 天（1440 分钟）
+- 最短持续时间设置为 1 分钟
+- 最长持续时间为 71582 分钟
+- 当设置为 0 时，暂停的操作永远不会自动中止
+
+此选项的当前值显示在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 中。
 
 ## <a name="Permissions"></a> 权限
 
 需要数据库上的 `ALTER ANY DATABASE SCOPE CONFIGURATION`。 用户若具有针对数据库的 CONTROL 权限，便可授予此权限。
 
 ## <a name="general-remarks"></a>一般备注
+
 虽然可以为辅助数据库配置不同于主数据库的作用域内配置设置，但所有辅助数据库都使用相同的配置。 无法为各辅助数据库配置不同的设置。
 
 执行此语句会清除当前数据库中的过程缓存，这意味着需要重新编译所有查询。
@@ -374,6 +389,7 @@ LAST_QUERY_PLAN_STATS = { ON | OFF}
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
 ### <a name="maxdop"></a>MAXDOP
+
 精细设置可以替代全局设置，而资源调控器可以限制所有其他 MAXDOP 设置。 MAXDOP 设置的逻辑如下：
 
 - 查询提示替代 `sp_configure` 和数据库作用域内配置。 如果为工作负荷组设置了资源组 MAXDOP：
@@ -411,9 +427,11 @@ LAST_QUERY_PLAN_STATS = { ON | OFF}
 [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 系统视图提供有关数据库作用域内配置的信息。 数据库作用域内配置选项仅在 sys.database_scoped_configurations 中显示，因为它们是服务器范围内默认设置的替代项。 [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 系统视图仅显示服务器范围内的设置。
 
 ## <a name="examples"></a>示例
+
 以下示例演示 ALTER DATABASE SCOPED CONFIGURATION 的用法
 
 ### <a name="a-grant-permission"></a>A. 授予权限
+
 本示例为用户 Joe 授予执行 ALTER DATABASE SCOPED CONFIGURATION 所需的权限。
 
 ```sql
@@ -421,6 +439,7 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
 ### <a name="b-set-maxdop"></a>B. 设置 MAXDOP
+
 本示例在异地复制方案中为主数据库设置 MAXDOP = 1，为辅助数据库设置 MAXDOP = 4。
 
 ```sql
@@ -435,6 +454,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
 ### <a name="c-set-legacy_cardinality_estimation"></a>C. 设置 LEGACY_CARDINALITY_ESTIMATION
+
 本示例在异地复制方案中为辅助数据库将 LEGACY_CARDINALITY_ESTIMATION 设置为 ON。
 
 ```sql
@@ -448,6 +468,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ```
 
 ### <a name="d-set-parameter_sniffing"></a>D. 设置 PARAMETER_SNIFFING
+
 本示例在异地复制方案中为主数据库将 PARAMETER_SNIFFING 设置为 OFF。
 
 ```sql
@@ -467,6 +488,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMA
 ```
 
 ### <a name="e-set-query_optimizer_hotfixes"></a>E. 设置 QUERY_OPTIMIZER_HOTFIXES
+
 在异地复制方案中为主数据库将 QUERY_OPTIMIZER_HOTFIXES 设置为 ON。
 
 ```sql
@@ -474,6 +496,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>F. 清除过程缓存
+
 本示例清除了过程缓存（仅可用于主数据库）。
 
 ```sql
@@ -481,7 +504,8 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
 ### <a name="g-set-identity_cache"></a>G. 设置 IDENTITY_CACHE
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
+
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
 
 本示例禁用了标识缓存。
 
@@ -490,7 +514,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
 ### <a name="h-set-optimize_for_ad_hoc_workloads"></a>H. 设置 OPTIMIZE_FOR_AD_HOC_WORKLOADS
-适用于  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 本示例可在第一次编译批处理时启用要存储在缓存中的已编译计划存根。
 
@@ -499,6 +524,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevate_online"></a>I. 设置 ELEVATE_ONLINE
+
 **适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
 
 此示例将 ELEVATE_ONLINE 设置为 FAIL_UNSUPPORTED。
@@ -508,6 +534,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevate_resumable"></a>J. 设置 ELEVATE_RESUMABLE
+
 **适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
 
 此示例将 ELEVATE_RESUMABLE 设置为 WHEN_SUPPORTED。
@@ -517,12 +544,24 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
 ### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>K. 从计划缓存中清除查询计划
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-此示例从过程缓存中清除特定计划 
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+此示例从过程缓存中清除特定计划
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B7CD12C02000001000000000000000000000000000000000000000000000000000000;
+```
+
+### <a name="l-set-paused-duration"></a>L. 设置暂停的持续时间
+
+适用范围：  仅限 Azure SQL 数据库
+
+此示例将可恢复索引暂停持续时间设置为 60 分钟。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION
+SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 ```
 
 ## <a name="additional-resources"></a>其他资源

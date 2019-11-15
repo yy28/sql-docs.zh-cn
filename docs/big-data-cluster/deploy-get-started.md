@@ -1,7 +1,7 @@
 ---
 title: 入门
-titleSuffix: SQL Server big data clusters
-description: 了解部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]（预览版）的步骤和所需资源。
+titleSuffix: SQL Server Big Data Clusters
+description: 了解用于部署 SQL Server 大数据群集的步骤和资源。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: de20b8bea27f3b8003ab11941f044d4246155eeb
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2bbb4c05a6760709fcb873cd8c39f301c37aeb2b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532206"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706356"
 ---
 # <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 入门
 

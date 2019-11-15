@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bf26f336c2cbc90e3465fc20c21ebc548e947cf
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 5839bfa470bfc7a35c924f1710b1d78f86cb1245
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123197"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843426"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ CAST ( expression AS data_type [ ( length ) ] )
 CONVERT ( data_type [ ( length ) ] , expression [ , style ] )  
 ```  
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="arguments"></a>参数  
 *expression*  
@@ -173,7 +173,7 @@ style
 > [!TIP]  
 > 可从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=35834)将此图表下载为 PDF 文件。  
   
-![数据类型转换表](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
+![数据类型转换表](../../t-sql/data-types/media/lrdatahd.png "数据类型转换表")
   
 虽然上面的图表说明了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中允许的所有显式和隐式转换，但转换生成的数据类型取决于执行的操作：
 
@@ -854,7 +854,7 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 [格式 (Transact-SQL)](../../t-sql/functions/format-transact-sql.md)      
 [STR (Transact-SQL)](../../t-sql/functions/str-transact-sql.md)     
 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)      
-[System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)      
+[System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)      
 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)      
 [编写国际化 Transact-SQL 语句](../../relational-databases/collations/write-international-transact-sql-statements.md)       
   

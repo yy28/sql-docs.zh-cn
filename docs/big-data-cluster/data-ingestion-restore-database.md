@@ -1,7 +1,7 @@
 ---
 title: 还原数据库
 titleSuffix: SQL Server big data clusters
-description: 本文介绍如何将数据库还原到的主实例[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。
+description: 本文介绍如何将数据库还原到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的主实例中。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652236"
@@ -20,7 +20,7 @@ ms.locfileid: "69652236"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何将现有数据库还原到的主实例[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。 建议使用备份、复制和还原。
+本文介绍如何将现有数据库还原到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的主实例中。 建议使用备份、复制和还原。
 
 ## <a name="backup-your-existing-database"></a>备份现有数据库
 
@@ -112,6 +112,6 @@ GO
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]详细信息, 请参阅以下概述:
+若要了解有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的详细信息，请参阅以下概述：
 
-- [什么是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
+- [什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)

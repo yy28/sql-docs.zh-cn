@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 047dc16f8eeebe2547aef453a9a86e08be714ff6
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 4a0c105891577807920404267aa4a9b7c2613b18
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122986"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240672"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 
@@ -68,10 +68,10 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|10.5|100|100、90、80|
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|10|100|100、90、80|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90、80|
-|SQL Server 2000|8|80|80|
+|[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|8|80|80|
 
 ## <a name="remarks"></a>Remarks
-对于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，默认兼容级别都设置为[!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。 新数据库将设置为此级别，除非模型数据库的兼容性级别较低  。 对于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何早期版本附加或还原的数据库，如果数据库的兼容性级别是该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例允许的最低级别，则将保留其现有的兼容性级别。 移动兼容性级别低于 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 允许级别的数据库会自动将数据库设置为允许的最低兼容性级别。 这既适用于系统数据库也适用于用户数据库。
+对于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，默认兼容性级别都与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的版本相关联。 新数据库将设置为此级别，除非模型数据库的兼容性级别较低  。 对于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何早期版本附加或还原的数据库，如果数据库的兼容性级别是该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例允许的最低级别，则将保留其现有的兼容性级别。 移动兼容性级别低于 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 允许级别的数据库会自动将数据库设置为允许的最低兼容性级别。 这既适用于系统数据库也适用于用户数据库。
 
 附加或还原数据库时以及就地升级后，[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 应出现以下行为：
 
@@ -90,7 +90,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 > 从 2018 年 1 月起，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，新创建的数据库的默认兼容性级别为 140  。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不会更新现有数据库的数据库兼容性级别。 这是由客户自行决定的。        
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] 强烈建议客户计划升级到最新的兼容性级别，以充分利用最新的查询优化改进。        
 
-若要对整个数据库利用数据库兼容性级别 140，但选择启用映射到数据库兼容性级别 110 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [基数估计  ](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型，请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，尤其是它的关键字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
+若要对整个数据库利用数据库兼容性级别 120 或更高级别，但选择启用映射到数据库兼容性级别 110 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型，请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，尤其是它的关键字 `LEGACY_CARDINALITY_ESTIMATION = ON`  。
 
 要详细了解如何评估你最重要的查询在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上的两个不同兼容性级别的性能差异，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)（在 Azure SQL 数据库中使用兼容性级别 130 改进了查询性能）。 请注意，本文介绍兼容性级别 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中也可以使用相同的方法升级到 140。
 
@@ -120,10 +120,10 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="compatibility-levels-and-stored-procedures"></a>兼容性级别和存储过程
 执行某一存储过程时，该存储过程将使用定义它的数据库的当前兼容性级别。 在更改某一数据库的兼容性设置时，该数据库的所有存储过程都将随之自动重新编写。
 
-## <a name="using-compatibility-level-for-backward-compatibility"></a>使用兼容性级别实现后向兼容性
-[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)设置提供与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 早期版本的后向兼容性，在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和查询优化行为相关的方面，后向兼容性仅适用于指定的数据库，而不是整个服务器。  
+## <a name="backwardCompat"></a> 使用兼容性级别实现后向兼容性
+[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)设置提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的后向兼容性，在与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和查询优化行为相关的方面，后向兼容性仅适用于指定的数据库，而不是整个服务器。  
 
-从兼容性模式 130 开始，任何影响功能的新查询计划都有意仅添加到新兼容性级别中。 这样做是为了最大限度地减少在升级过程中由于以下原因而引发的风险：新查询优化行为可能引入的查询计划更改导致性能降低。      
+从兼容性模式 130 开始，任何影响修补程序和功能的新查询计划都被特意地仅添加到新兼容性级别中。 这样做是为了最大限度地减少在升级过程中由于以下原因而引发的风险：新查询优化行为可能引入的查询计划更改导致性能降低。      
 
 从应用程序的角度来看，在通过相关的兼容性级别设置控制的行为中，使用更低的兼容性级别作为更安全的迁移路径可解决版本差异。 目标仍应是在某个时间点升级到最新的兼容性级别，以便继承某些新功能（例如[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)），但此目标将以受控方式完成。 
 
@@ -131,14 +131,14 @@ SELECT name, compatibility_level FROM sys.databases;
 
 > [!IMPORTANT]
 > 给定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入的已停用功能不受兼容性级别保护   。 这指的是从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中删除的功能。
-> 例如，`FASTFIRSTROW` 提示在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中废止，并替换为 `OPTION (FAST n )` 提示。 将数据库兼容级别设置为 110 不会恢复废止的提示。  
+> 例如，`FASTFIRSTROW` 提示在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中废止，并替换为 `OPTION (FAST n )` 提示。 将数据库兼容性级别设置为 110 不会恢复废止的提示。  
 >  
 > 若要详细了解已中断的功能，请参阅 [SQL Server 2016 中已中断的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)、[SQL Server 2014 中已中断的数据库引擎功能](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)和 [SQL Server 2012 中已中断的数据库引擎功能](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)。    
 
 > [!IMPORTANT]
 > 给定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入的中断性变更可能不受兼容性级别保护   。 这指的是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本之间的行为变更。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为通常受兼容级别保护。 但是，已更改或删除的系统对象**不**受兼容级别保护。
 >
-> 受兼容级别**保护**的一个重大更改示例是从 datetime 到 datetime2 数据类型的隐式转换。 在数据库兼容级别 130 以下，通过考虑导致不同转换值的毫秒小数部分，这些转换显得更加准确。 若要还原以前的转换行为，请将数据库兼容级别设置为 120 或更低。
+> 受兼容级别**保护**的一个重大更改示例是从 datetime 到 datetime2 数据类型的隐式转换。 在数据库兼容性级别 130 以下，通过考虑导致不同转换值的毫秒小数部分，这些转换显得更加准确。 若要还原以前的转换行为，请将数据库兼容性级别设置为 120 或更低。
 >
 > 兼容级别**不保护**的重大更改示例有：
 >
@@ -147,7 +147,59 @@ SELECT name, compatibility_level FROM sys.databases;
 >
 > 若要详细了解重大更改，请参阅 [SQL Server 2017 中的数据库引擎功能重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中的数据库引擎功能重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)、[SQL Server 2014 中的数据库引擎功能重大更改](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)和 [SQL Server 2012 中的数据库引擎功能重大更改](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)。
 
-## <a name="differences-between-compatibility-level-140-and-level-150"></a>兼容性级别 140 和 150 的区别
+## <a name="differences-between-compatibility-levels"></a>兼容性级别之间的差异
+对于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，默认兼容性级别都与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本相关联，如[此表](#supported-dbcompats)中所示。 对于新的开发工作，请始终计划在最新的数据库兼容性级别上验证应用程序。
+
+但数据库兼容性级别还提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的向后兼容性，因为从任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本附加和还原的数据库会保留其现有的兼容性级别（如果等于或高于允许的最低兼容性级别）。 本文的[使用兼容性级别实现向后兼容性](#backwardCompat)部分对此进行了介绍。
+
+从数据库兼容性级别 130 开始，任何影响查询计划的新修补程序和功能仅会添加到可用的最新兼容性级别（也称为默认兼容性级别）。 这样做是为了最大限度地减少在升级过程中由于以下原因而引发的风险：新查询优化行为可能引入的查询计划更改导致性能降低。 
+
+以下是仅添加到新版本 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 默认兼容性级别、影响计划的基本更改：
+
+1.  针对跟踪标志 4199 下的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本发布的查询优化器修补程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 较新版本的默认兼容性级别中自动启用  。 **适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+
+    例如，发布 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 时，为使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 默认兼容性级别 (130) 的数据库自动启用了针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本（相应的兼容性级别为 100 至 120）发布的所有查询优化器修补程序。 只需显式启用后期 RTM 的查询优化器修补程序。
+    
+    > [!NOTE]
+    > 若要启用查询优化器修补程序，可以使用以下方法：    
+    >
+    > - 对于服务器级别，使用[跟踪标志 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)。
+    > - 对于数据库级别，使用 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 `QUERY_OPTIMIZER_HOTFIXES` 选项。
+    > - 对于查询级别，使用 `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'` [查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)。
+    
+    之后，发布 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 时，为使用 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 默认兼容性级别 (140) 的数据库自动启用了在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 之后发布的所有查询优化器修补程序。 这是一种累积行为，还会包括所有早期版本的修补程序。 同样，只需显式启用后期 RTM 的查询优化器修补程序。  
+    
+    下表对此行为进行了汇总：
+    
+    |数据库引擎 (DE) 版本|数据库兼容性级别|TF 4199|来自所有以前的数据库兼容性级别的 QO 更改|DE 版本后期 RTM 的 QO 更改|
+    |----------|----------|---|------------|--------|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 至 120<br /><br /><br />130|Off<br />On<br /><br />Off<br />On|**禁用**<br />已启用<br /><br />**已启用**<br />已启用|禁用<br />已启用<br /><br />禁用<br />已启用|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 至 120<br /><br /><br />130<br /><br /><br />140|Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On|**禁用**<br />已启用<br /><br />**已启用**<br />已启用<br /><br />**已启用**<br />已启用|禁用<br />已启用<br /><br />禁用<br />已启用<br /><br />禁用<br />已启用|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) 和 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 至 120<br /><br /><br />130 至 140<br /><br /><br />150|Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On|**禁用**<br />已启用<br /><br />**已启用**<br />已启用<br /><br />**已启用**<br />已启用|禁用<br />已启用<br /><br />禁用<br />已启用<br /><br />禁用<br />已启用|
+    
+    > [!IMPORTANT]
+    > 解决错误结果或访问冲突错误的查询优化器修补程序不受跟踪标志 4199 的保护。 这些修补程序并不被视为可选项。
+ 
+2.  对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上发布的[基数估算器](../../relational-databases/performance/cardinality-estimation-sql-server.md)的更改仅在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 新版本的默认兼容性级别中启用，未在之前的兼容性级别上启用  。 
+
+    例如，发布 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 时，对基数估算过程的更改仅对使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 默认兼容性级别 (130) 的数据库可用。 之前的兼容性级别保留了 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前可用的基数估算行为。 
+    
+    之后，发布 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 时，对基数估算过程的新更改仅对使用 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 默认兼容性级别 (140) 的数据库可用。 数据库兼容性级别 130 保留了 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 基数估算行为。
+    
+    下表对此行为进行了汇总：
+    
+    |数据库引擎版本|数据库兼容性级别|新版本 CE 更改|
+    |----------|--------|-------------|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|< 130<br />130|禁用<br />已启用|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|< 140<br />140|禁用<br />已启用|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|< 150<br />150|禁用<br />已启用|
+    
+    <sup>1</sup> 同样适用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+    
+> [!IMPORTANT]
+> 本文的后续部分会介绍特定兼容性级别之间的其他差异。
+
+## <a name="differences-between-compatibility-level-140-and-level-150"></a>兼容性级别 140 和兼容性级别 150 之间的差异
 此部分介绍了随兼容性级别 150 一起引入的新行为。
 
 对于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]，数据库兼容性级别 150 目前为公共预览版。 除了数据库兼容性级别 140 中引入的改进之外，此数据库兼容性级别还将与下一代查询处理改进相关联。
@@ -162,11 +214,11 @@ SELECT name, compatibility_level FROM sys.databases;
 
 有关数据库兼容性级别 150 中启用的查询处理功能的详细信息，请参阅 [SQL Server 2019 中的新增功能](../../sql-server/what-s-new-in-sql-server-ver15.md)和 [SQL 数据库中的智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)。
 
-## <a name="differences-between-compatibility-level-130-and-level-140"></a>兼容级别 130 与兼容级别 140 之间的差异
+## <a name="differences-between-compatibility-level-130-and-level-140"></a>兼容性级别 130 和兼容性级别 140 之间的差异
 
 本节介绍随兼容级别 140 引入的新行为。
 
-|兼容级别设置为 130 或更低|兼容级别设置为 140|
+|兼容性级别设置为 130 或更低|兼容性级别设置为 140|
 |--------------------------------------------------|-----------------------------------------|
 |引用多语句表值函数的语句的基数估计使用固定行猜测。|引用多语句表值函数的符合条件语句的基数估计会使用函数输出的实际基数。 这通过多语句表值函数的交错执行  来实现。|
 |请求会导致溢出到磁盘的不充足内存授予大小的批处理模式查询可能会继续对连续执行产生问题。|请求会导致溢出到磁盘的不充足内存授予大小的批处理模式查询可能会提高连续执行的性能。 这通过在对批处理模式运算符发生溢出时，会更新缓存计划内存授予大小的**批处理模式内存授予反馈**来实现。 |
@@ -178,11 +230,11 @@ SELECT name, compatibility_level FROM sys.databases;
 
 SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下的修补程序现在默认情况下会启用。 具有兼容性模式 140。 跟踪标志 4199 仍会适用于在 SQL Server 2017 之后发布的新查询优化器修补程序。 有关跟踪标志 4199 的信息，请参阅[跟踪标志 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)。
 
-## <a name="differences-between-compatibility-level-120-and-level-130"></a>兼容级别 120 和兼容级别 130 之间的差异
+## <a name="differences-between-compatibility-level-120-and-level-130"></a>兼容性级别 120 和兼容性级别 130 之间的差异
 
 本节介绍随兼容级别 130 引入的新行为。
 
-|兼容级别设置为 120 或更低|兼容级别设置为 130|
+|兼容性级别设置为 120 或更低|兼容性级别设置为 130|
 |--------------------------------------------------|-----------------------------------------|
 |INSERT-SELECT 语句中的 INSERT 是单线程。|INSERT-SELECT 语句中的 INSERT 是多线程，或者可以具有并行计划。|
 |内存优化表的查询执行单线程。|内存优化表的查询现在可以具有并行计划。|
@@ -190,11 +242,11 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |列存储索引的批处理模式与行模式更改：<br /><ul><li>具有列存储索引的表上的排序处于行模式 <li>开窗函数聚合在行模式（如 `LAG` 或 `LEAD`）下运行 <li>具有多个不同子句的列存储表的查询在行模式下运行 <li>在 MAXDOP 1 下运行或具有串行计划的查询在行模式下执行</li></ul>| 列存储索引的批处理模式与行模式更改：<br /><ul><li>具有列存储索引的表上的排序现在处于批处理模式 <li>开窗聚合现在在批处理模式（如 `LAG` 或 `LEAD`）下运行 <li>具有多个不同子句的列存储表的查询在批处理模式下运行 <li>在 MAXDOP 1 下运行或具有串行计划的查询在批处理模式下执行</li></ul>|
 |可以自动更新统计信息。 | 自动更新统计信息的逻辑对大型表更主动。 在实践中，这应减少以下情况：对于经常查询新插入的行，但是未更新统计信息以包括这些值的查询，客户遇到性能问题。 |
 |在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，跟踪 2371 默认情况下会关闭。 | 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，[Trace 2371（跟踪 2371）](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/)默认情况下会打开。 跟踪标志 2371 告知自动统计信息更新程序在具有许多行的表中采样更小但更智能的行子集。 <br/> <br/> 一个重要改进是在采样中包括更多最近插入的行。 <br/> <br/> 另一个改进是让查询在更新统计信息进程运行期间运行，而不阻塞查询。 |
-|对于级别 120，统计信息通过单  线程进程进行采样。|对于级别 130，统计信息通过多  线程进程进行采样。 |
+|对于级别 120，统计信息通过单线程进程进行采样。|对于级别 130，统计信息通过多线程进程进行采样（并行进程）。 |
 |253 传入外键是限制。| 给定表可以通过最多 10,000 个传入外键或类似引用进行引用。 有关限制，请参阅 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。 |
 |允许使用弃用的 MD2、MD4、MD5、SHA 和 SHA1 哈希算法。|只允许使用 SHA2_256 和 SHA2_512 哈希算法。|
 ||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 包括对某些数据类型转换和某些不常见操作的改进。 有关详细信息，请参阅 [SQL Server 2016 improvements in handling some data types and uncommon operations（SQL Server 2016 在处理某些数据类型和不常见操作方面所做的改进）](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)。|
-|STRING_SPLIT 函数不可用。|STRING_SPLIT 函数在兼容性级别 130 或更高级别下可用。 如果数据库兼容性级别低于 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将无法找到并执行 STRING_SPLIT 函数。|
+|`STRING_SPLIT` 函数不可用。|`STRING_SPLIT` 函数在兼容性级别 130 或更高级别下可用。 如果数据库兼容性级别低于 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将无法找到和执行 `STRING_SPLIT` 函数。|
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中处于跟踪标志 4199 下的修补程序现在默认情况下会启用。 具有兼容性模式 130。 跟踪标志 4199 仍会适用于在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之后发布的新查询优化器修补程序。 若要在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中使用较旧的查询优化器，必须选择兼容级别 110。 有关跟踪标志 4199 的信息，请参阅[跟踪标志 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)。
 
@@ -204,7 +256,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 
 |兼容性级别设置为 110 或更低|兼容性级别设置为 120|
 |--------------------------------------------------|-----------------------------------------|
-|使用旧版查询优化器。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括对创建和优化查询计划的组件的显著改进。 这个新的查询优化器功能依赖于使用数据库兼容性级别 120。 若要利用这些改进，应使用数据库兼容性级别 120 开发新的数据库应用程序。 应对从较早版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中迁移的应用程序进行仔细测试，以便确认保持或改进了好的性能。 如果性能下降，可以将数据库兼容性级别设置为 110 或更低，以便使用较早的查询优化器方法。<br /><br /> 数据库兼容级别 120 使用针对现代数据仓库和 OLTP 工作负荷进行优化的新基数估计器。 在因为性能问题将数据库兼容级别设置为 110 前，请参阅 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [数据库引擎中的新增功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主题的“查询计划”一节中的建议。|
+|使用旧版查询优化器。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括对创建和优化查询计划的组件的显著改进。 这个新的查询优化器功能依赖于使用数据库兼容性级别 120。 若要利用这些改进，应使用数据库兼容性级别 120 开发新的数据库应用程序。 应对从较早版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中迁移的应用程序进行仔细测试，以便确认保持或改进了好的性能。 如果性能下降，可以将数据库兼容性级别设置为 110 或更低，以便使用较早的查询优化器方法。<br /><br /> 数据库兼容级别 120 使用针对现代数据仓库和 OLTP 工作负荷进行优化的新基数估计器。 在因为性能问题将数据库兼容性级别设置为 110 前，请参阅 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [ 数据库引擎中的新增功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主题的“查询计划”一节中的建议  。|
 |如果兼容级别低于 120，则在将 **date** 值转换为字符串值时语言设置将被忽略。 请注意，此行为仅特定于 **date** 类型。 请参阅下面“示例”部分中的“示例 B”。|将 **date** 值转换为字符串值时，不忽略语言设置。|
 |`EXCEPT` 子句右侧的递归引用产生无限循环。 下面“示例”部分中的示例 C 演示此行为。|`EXCEPT` 子句中的递归引用产生遵从 ANSI SQL 标准的错误。|
 |递归公用表表达式 (CTE) 允许重复的列名。|递归 CTE 禁止列名重复。|
@@ -213,7 +265,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |将数据库包含设置为部分包含后，验证 `MERGE` 语句的 `OUTPUT` 子句中的 `$action` 字段可能会返回排序规则错误。|`MERGE` 语句的 `$action` 子句返回的值的排序规则是数据库排序规则而非服务器排序规则，因此不会返回排序规则冲突错误。|
 |`SELECT INTO` 语句始终创建单线程插入操作。|`SELECT INTO` 语句可创建并行插入操作。 插入大量行时，并行操作可能会提升性能。|
 
-## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>低兼容性级别与级别 100 和 110 的区别
+## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>低兼容性级别与级别 100 和 110 之间的差异
 
 本节介绍随兼容性级别 110 引入的新行为。 此部分还适用于大于 110 的兼容性级别。
 
@@ -263,15 +315,15 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |----------------------------------|-----------------------|
 |130|待定。|
 |120|无。|
-|110|WITHIN GROUP、TRY_CONVERT、SEMANTICKEYPHRASETABLE、SEMANTICSIMILARITYDETAILSTABLE、SEMANTICSIMILARITYTABLE|
-|100|CUBE、MERGE、ROLLUP|
-|90|EXTERNAL、PIVOT、UNPIVOT、REVERT、TABLESAMPLE|
+|110|`WITHIN GROUP`、`TRY_CONVERT`、`SEMANTICKEYPHRASETABLE`、`SEMANTICSIMILARITYDETAILSTABLE`、`SEMANTICSIMILARITYTABLE`|
+|100|`CUBE`、`MERGE`、`ROLLUP`|
+|90|`EXTERNAL`、`PIVOT`、`UNPIVOT`、`REVERT`、`TABLESAMPLE`|
 
 在给定兼容性级别，保留关键字包括在该级别或较低级别引入的所有关键字。 例如，对于兼容性级别为 110 的应用程序，将保留上表列出的所有关键字。 在较低的兼容性级别中，级别 100 的关键字仍保留有效的对象名，但与这些关键字相对应的级别 110 的语言功能将不可用。
 
 一旦引入，关键字便会保持为保留关键字。 例如，在兼容性级别 90 中引入的保留关键字 PIVOT 在级别 100、110 和 120 中也被保留。
 
-如果某一应用程序使用对其保留级别而言是关键字的标识符，则该应用程序将失败。 若要解决这一问题，请用方括号 ( **[]** ) 或引号 ( **""** ) 括起该标识符；例如，若要将使用标识符 **EXTERNAL** 的应用程序升级为兼容级别 90，可以将该标识符更改为 **[EXTERNAL]** 或 **"EXTERNAL"** 。
+如果某一应用程序使用对其保留级别而言是关键字的标识符，则该应用程序将失败。 若要解决这一问题，请用方括号 ([]) 或引号 ("") 括起该标识符；例如，若要将使用标识符 `EXTERNAL` 的应用程序升级为兼容性级别 90，可以将该标识符更改为 `[EXTERNAL]` 或 `"EXTERNAL"`   。
 
 有关详细信息，请参阅[保留关键字](../../t-sql/language-elements/reserved-keywords-transact-sql.md)。
 
@@ -283,7 +335,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 
 ### <a name="a-changing-the-compatibility-level"></a>A. 更改兼容性级别
 
-以下示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的兼容级别更改为 `110,`[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。
+以下示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的兼容性级别更改为 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的默认值 110。
 
 ```sql
 ALTER DATABASE AdventureWorks2012
@@ -301,7 +353,7 @@ WHERE name = db_name();
 
 ### <a name="b-ignoring-the-set-language-statement-except-under-compatibility-level-120"></a>B. 忽略 SET LANGUAGE 语句（除非低于兼容级别 120）
 
-只有兼容级别低于 120 时，以下查询才会忽略 SET LANGUAGE 语句。
+只有兼容级别低于 120 时，以下查询才会忽略 `SET LANGUAGE` 语句。
 
 ```sql
 SET DATEFORMAT dmy;
@@ -355,7 +407,6 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
 ```
 
 ### <a name="e-variable-assignment---top-level-union-operator"></a>E. 变量赋值 - 顶级 UNION 运算符
-
 在包含顶级 UNION 运算符的语句中，允许使用变量赋值，但会返回意外的结果。 例如，在以下语句中，将来自两个表的联合的 `@v` 列的值赋给局部变量 `BusinessEntityID`。 按照定义，如果 SELECT 语句返回多个值，则将返回的最后一个值赋给变量。 在这种情况下，会正确地将最后一个值赋给变量，但还会返回 SELECT UNION 语句的结果集。
 
 ```sql

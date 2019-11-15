@@ -5,28 +5,27 @@ description: 了解如何通过 Azure 资源浏览器浏览和管理 Azure SQL S
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
-ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.date: 09/24/2018
+ms.openlocfilehash: 2a1f62ed9266b0575f037dfe9541a026a4c1ed29
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959718"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801139"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>使用 Azure 资源浏览器浏览和管理 Azure SQL 资源
 
 在本文档中，将了解如何通过 [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] 中的 Azure 资源浏览器浏览和管理 Azure SQL Server、Azure SQL 数据库以及 Azure SQL 托管实例资源。
 
 >[!NOTE]
->今年 10 月，SQL Server 2019 预览版将支持 Azure 资源浏览器。 之后，便可通过[扩展管理器](extensions.md)或通过“文件” > “通过 VSIX 包安装包”安装预览扩展   。
-
+>SQL Server 2019 支持 Azure 资源浏览器。 之后，可通过[扩展管理器](extensions.md)或通过“文件” > “从 VSIX 包安装包”安装扩展   。
 
 ## <a name="connect-to-azure"></a>连接到 Azure
 
-安装 SQL 预览插件后，左侧菜单栏中会出现一个 Azure 图标。 单击该图标可打开 Azure 资源浏览器。 如果没有看到 Azure 图标，请右键单击左侧菜单栏，然后​​选择“Azure 资源浏览器”  。
+安装 SQL 插件后，左侧菜单栏中会出现一个 Azure 图标。 单击该图标可打开 Azure 资源浏览器。 如果没有看到 Azure 图标，请右键单击左侧菜单栏，然后​​选择“Azure 资源浏览器”  。
 
 ### <a name="add-an-azure-account"></a>添加 Azure 帐户
 
@@ -87,7 +86,7 @@ Azure 资源浏览器目前支持 Azure SQL Server、Azure SQL 数据库和 Azur
 
 ## <a name="connect-to-azure-sql-resources"></a>连接到 Azure SQL 资源
 
-Azure 资源浏览器提供快速访问，可帮助你连接到 SQL Server 和数据库以进行查询和管理。 
+Azure 资源浏览器提供快速访问，可帮助你连接到 SQL Server 和数据库以进行查询和管理。
 
 1. 从树状视图中浏览要连接的 SQL 资源。
 2. 右键单击资源并选择“连接”，也可以在资源右侧找到连接按钮  。

@@ -11,12 +11,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b9e469cd522ecf28684a6e34ded51a41356fec5
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961795"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660783"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT（Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ CREATE TABLE AS SELECT (CTAS) 是提供最重要的 T-SQL 功能之一。 它是
 > [!NOTE]  
 > 由于 CTAS 增加了创建表的功能，因此本主题尽量不重复 CREATE TABLE 主题。 而是描述 CTAS 和 CREATE TABLE 语句之间的差异。 有关 CREATE TABLE 的详细信息，请参阅 [CREATE TABLE（Azure SQL 数据仓库）](https://msdn.microsoft.com/library/mt203953/)语句。 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 <a name="syntax-bk"></a>
 
@@ -137,6 +137,8 @@ CTAS 需要 select_criteria 中引用的任何对象的 `SELECT` 权限  。
 
 ## <a name="limitations-and-restrictions"></a>限制和局限  
 Azure SQL 数据仓库尚不支持自动创建或自动更新统计信息。  为从查询中获取最佳性能，运行 CTAS 以及数据发生任何实质性更改之后，请务必创建关于所有表中所有列的统计信息。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。
+
+可以在 Azure SQL 数据仓库支持的任何数据类型的列（字符串列除外）上创建有序的聚集列存储索引。  
 
 [SET ROWCOUNT (Transact-SQL)](../../t-sql/statements/set-rowcount-transact-sql.md) 对 CTAS 没有影响。 要实现类似的行为，请使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
  

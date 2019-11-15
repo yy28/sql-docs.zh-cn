@@ -1,7 +1,7 @@
 ---
-title: 写入高级 Python 函数
+title: 快速入门：写入 Python 函数
 titleSuffix: SQL Server Machine Learning Services
-description: 在本快速入门教程中，了解如何使用 SQL Server 机器学习服务为高级统计计算编写 Python 函数。
+description: 在本快速入门中，学习如何使用 SQL Server 机器学习服务写入用于高级统计计算的 Python 函数。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/04/2019
@@ -9,38 +9,39 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e369e83c99543cc31287932a25949c2ddec98e89
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: MT
+ms.openlocfilehash: 08f43c6406d0ca2c95cc21a207cae63af6e86902
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72007717"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727009"
 ---
-# <a name="quickstart-write-advanced-python-functions-with-sql-server-machine-learning-services"></a>快速入门：通过 SQL Server 机器学习服务写入高级 Python 函数
+# <a name="quickstart-write-advanced-python-functions-with-sql-server-machine-learning-services"></a>快速入门：使用 SQL Server 机器学习服务编写高级 Python 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本快速入门介绍如何使用 SQL Server 机器学习服务在 SQL 存储过程中嵌入 Python 数学和实用函数。 对于在 T-sql 中实现复杂的高级统计函数，只需要一行代码即可在 Python 中完成。
+本快速入门介绍了如何使用 SQL Server 机器学习服务在 SQL 存储过程中嵌入 Python 数学和实用函数。 在 T-SQL 中难以实现的高级统计函数在 Python 中只需单个代码行就可以实现。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-- 此快速入门要求使用安装了 Python 语言的[SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)访问 SQL Server 的实例。
+- 本快速入门需要使用安装了 Python 语言的 [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)访问 SQL Server 实例。
 
-  SQL Server 实例可位于 Azure 虚拟机或本地。 请注意，默认情况下禁用外部脚本功能，因此在开始之前，您可能需要[启用外部脚本](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并验证**SQL Server Launchpad 服务**是否正在运行。
+  SQL Server 实例可以位于 Azure 虚拟机中，也可以位于本地。 请注意，默认情况下禁用外部脚本编写功能，因此可能需要在开始之前[启用外部脚本编写](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并验证 SQL Server Launchpad 服务是否正在运行  。
 
-- 还需要一个用于运行包含 Python 脚本的 SQL 查询的工具。 您可以使用任何数据库管理或查询工具运行这些脚本，只要它可以连接到 SQL Server 实例，然后运行 T-sql 查询或存储过程。 本快速入门使用[SQL Server Management Studio （SSMS）](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
+- 你还需要一个工具来运行包含 Python 脚本的 SQL 查询。 可使用任何数据库管理或查询工具运行这些脚本，只要它可以连接到 SQL Server 实例，并运行 T-SQL 查询或存储过程即可。 本快速入门使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>创建一个存储过程来生成随机数字
 
-为简单起见，我们将使用 Python `numpy` 包，默认情况下，该包安装并加载 SQL Server 安装了 Python 的机器学习服务中。 此包中包含数百个用于执行常用统计任务的函数，其中，`random.normal` 函数在给定了标准差和平均数的情况下使用正态分布生成指定数量的随机数字。
+为简单起见，使用 Python `numpy` 包，该包是在安装了 Python 的 SQL Server 机器学习服务的情况下默认安装和加载的。 此包中包含数百个用于执行常用统计任务的函数，其中，`random.normal` 函数在给定了标准差和平均数的情况下使用正态分布生成指定数量的随机数字。
 
-例如，在给定标准偏差为3的50情况下，以下 Python 代码将返回100的平均数。
+例如，以下 Python 代码在给定了标准差 3 的情况下返回平均数为 50 的 100 个数字。
 
 ```Python
 numpy.random.normal(size=100, loc=50, scale=3)
 ```
 
-若要从 T-sql 调用此 Python 行，请在 `sp_execute_external_script` 的 Python 脚本参数中添加 Python 函数。 输出需要一个数据帧，因此使用 `pandas` 来转换它。
+若要从 T-SQL 调用此行 Python，请在 `sp_execute_external_script` 的 Python 脚本参数中添加 Python 函数。 输出需要一个数据帧，因此使用 `pandas` 来转换它。
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'Python'
@@ -55,7 +56,7 @@ WITH RESULT SETS(([Density] FLOAT NOT NULL));
 
 如果你希望更轻松地生成不同的一组随机数字，那该怎么办？
 
-与 SQL Server 结合起来很简单。 定义从用户获取参数的存储过程，然后将这些参数作为变量传递到 Python 脚本。
+与 SQL Server 结合使用时操作非常简单。 定义一个存储过程，从用户那里获取参数，然后将这些参数作为变量传递给 Python 脚本。
 
 ```sql
 CREATE PROCEDURE MyPyNorm (
@@ -80,21 +81,21 @@ WITH RESULT SETS(([Density] FLOAT NOT NULL));
 
 - 第一行定义了在执行该存储过程时必需的每个 SQL 输入参数。
 
-- 以 `@params` 开头的行定义 Python 代码使用的所有变量，以及相应的 SQL 数据类型。
+- 以 `@params` 开头的行定义了 Python 代码使用的所有变量，以及对应的 SQL 数据类型。
 
-- 紧跟在后面的行将 SQL 参数名称映射到相应的 Python 变量名称。
+- 紧跟在后面的行将 SQL 参数名称映射到对应的 Python 变量名称。
 
-既然已将 Python 函数包装在存储过程中，就可以轻松地调用函数并传入不同的值，如下所示：
+现在，你已将 Python 函数包装在了一个存储过程中，轻松调用该函数并传入不同的值，如下所示：
 
 ```sql
 EXECUTE MyPyNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
 
-## <a name="use-python-utility-functions-for-troubleshooting"></a>使用 Python 实用程序功能进行故障排除
+## <a name="use-python-utility-functions-for-troubleshooting"></a>使用 Python 实用工具函数进行故障排除
 
-Python 包提供多种实用函数用于调查当前的 Python 环境。 如果在 SQL Server 和外部环境中查找 Python 代码的方式不一致，则这些函数会很有用。
+Python 包提供了多种实用函数来调查当前的 Python 环境。 如果你发现 Python 代码在 SQL Server 中执行时和在环境外执行时执行方式存在差异，则上述函数会比较有用。
 
-例如，你可能使用 `time` 包中的系统计时函数来度量 Python 进程使用的时间量并分析性能问题。
+例如，你可以使用 `time` 包中的系统计时函数来测量 Python 进程使用的时间量并分析性能问题。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -112,10 +113,10 @@ elapsed_time = time.time() - start_time
 
 ## <a name="next-steps"></a>后续步骤
 
-若要在 SQL Server 中使用 Python 创建机器学习模型，请按照以下快速入门：
+若要在 SQL Server 中使用 Python 创建机器学习模型，请遵循以下快速入门：
 
 > [!div class="nextstepaction"]
-> [快速入门：使用 SQL Server 机器学习服务 @ no__t 在 Python 中创建和评分预测模型
+> [快速入门：通过 SQL Server 机器学习服务在 Python 中创建预测模型并对其进行评分](quickstart-python-train-score-model.md)
 
 有关 SQL Server 机器学习服务的详细信息，请参阅：
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7b381b8a980d1f50802d024ce377a7de0bfbc6e7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2d1f0eeb0591bd4a51b79b8e83fbbd8d6023535f
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909460"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632998"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>修改现有跟踪 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +30,15 @@ ms.locfileid: "72909460"
   
 2.  若要修改跟踪事件，请执行 **sp_trace_setevent** ，并通过参数指定更改。 下面按顺序列出了参数：  
 
-    -   **@traceid** (Trace ID)  
+    -   **\@@traceid**（跟踪 ID）  
   
-    -   **@eventid** (Event ID)  
+    -   **\@eventid**（事件 ID）  
   
-    -   **@columnid** (Column ID)  
+    -   **\@columnid**（列 ID）  
   
-    -   **@on** (ON)  
+    -   **\@on**（启用）  
   
-     修改 **@on** 参数时，请记住它与 **@columnid** 参数是相互作用的：  
+     修改“\@on”参数时，请记住它与“\@columnid”参数是相互作用的   ：  
   
     |ON|列 ID|结果|  
     |--------|---------------|------------|  

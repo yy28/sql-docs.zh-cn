@@ -18,12 +18,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a133f41fb429a2cfe910020e1fefb768436888c4
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142784"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632936"
 ---
 # <a name="compatibility-certification"></a>兼容性认证
 
@@ -47,24 +47,31 @@ ms.locfileid: "73142784"
 
 -  在与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为相关的方面，任何更改都意味着需要重新认证应用程序的正确性。 然而，[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)设置提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的后向兼容性，但后向兼容性仅适用于指定的数据库，而不适用于整个服务器。 保持数据库兼容性级别不变可确保现有应用程序查询在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 升级之前和之后继续显示相同的行为。 有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为和兼容性级别的详细信息，请参阅[使用兼容性级别实现后向兼容性](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)。
 
--  在与性能相关的方面，由于每个版本都会引入查询优化器改进，因此，可能会遇到不同 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 版本之间的查询计划差异。 如果某些更改可能会对给定的查询或工作负载产生负面影响，则升级范围内的查询计划差异通常会转换为风险。 这种风险会促使进行重新认证，进而延迟升级并带来生命周期和支持挑战。 
-   由于需要降低升级风险，因此查询优化器改进被限制为新版本的默认兼容性级别。 兼容性认证包括查询计划形状保护。查询计划形状保护是指在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 升级后立即将数据库兼容性级别保持原样的概念，这意味着用于在新版本中创建查询计划的查询优化模型与升级之前的模型相同，并且查询计划形状不应更改  。 
+-  在与性能相关的方面，由于每个版本都会引入查询优化器改进，因此，可能会遇到不同 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 版本之间的查询计划差异。 如果某些更改可能会对给定查询或工作负荷产生负面影响，则升级范围内的查询计划差异通常会转换为风险。 这种风险会促使进行重新认证，进而延迟升级并带来生命周期和支持挑战。 
+   由于需要缓解升级风险，查询优化器改进被限制为新版本的默认兼容性级别（即，适用于任何新版本的最高兼容性级别）。 兼容性认证包括**查询计划形状保护**（在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 升级后使用新版本中的相同查询优化模型立即将数据库兼容性级别保持原样的概念），因为它在升级之前进行，并且查询计划形状不应更改。 
+   有关详细信息，请参阅本文的[为什么使用查询计划形状？](#queryplan_shape)部分。
    
-   > [!NOTE]
-   > 查询计划形状是指组成查询计划的各种运算符的视觉对象表示形式  。 其中包括查找、扫描、联接和排序等运算符，以及它们之间的指示数据流和操作顺序的连接。 查询计划形状由查询优化器确定。 有关详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)。
-   
-   有关详细信息，请参阅[使用兼容性级别实现后向兼容性](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)。
+有关兼容性级别的详细信息，请参阅[使用兼容性级别实现后向兼容性](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)。
    
 只要应用程序不需要使用仅在更高数据库兼容性级别中可用的增强功能，它就是升级 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和维护之前的数据库兼容性级别的有效方法，而无需重新认证应用程序。 有关详细信息，请参阅本文后面部分的[兼容性级别和数据库引擎升级](#compatibility-levels-and-database-engine-upgrades)。
 
-对于新的开发工作，或当现有应用程序需要使用新功能（如[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)）以及一些新的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 时，请计划将数据库兼容性级别升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的最新级别，并认证应用程序可与该兼容性级别一起使用。 有关升级数据库兼容性级别的更多详细信息，请参阅[升级数据库兼容性级别的最佳做法](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)。
+对于新的开发工作，或当现有应用程序需要使用新功能（如[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)）以及一些新的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 时，请计划将数据库兼容性级别升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的最新级别，并认证应用程序可与该兼容性级别一起使用。 有关升级数据库兼容性级别的详细信息，请参阅[升级数据库兼容性级别的最佳做法](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)。
+   
+### <a name="queryplan_shape"></a> 为什么使用查询计划形状？      
+查询计划形状是指组成查询计划的各种运算符的可视化表示形式。 其中包括查找、扫描、联接和排序等运算符，以及它们之间指示数据流和操作（必须执行这些操作才能生成指定的结果集）顺序的连接。 查询计划形状由查询优化器确定。
 
+若要在升级过程中保持查询性能的可预测性，其中一个基本目标是确保使用相同的查询计划形状。 这可通过在升级后不立即改变数据库兼容性级别来实现，即使基础 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 具有不同的版本。 如果查询执行生态系统中没有其他更改（例如可用资源的重大更改或基础数据中的数据分布），则查询的性能应保持不变。 
+
+但是，保留查询计划的形状并不是在升级后可能影响性能的唯一因素。 如果将数据库移到较新的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]，并同时进行环境更改，则可能引入会对查询性能产生即时影响的因素，即使查询计划在不同版本中保留了相同的形状。 这些环境更改可能包括新的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 具有更多或更少的可用内存和 CPU 资源、对服务器或数据库配置选项的更改，或影响查询计划创建方式的数据分布更改。 因此，请务必了解，维护数据库兼容性级别可防止查询计划**形状**更改，但不能针对影响查询性能的其他环境方面提供保护，其中一些环境更改为用户发起的更改。
+
+有关详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)。
+   
 ## <a name="compatibility-certification-benefits"></a>兼容性认证的好处
 数据库认证作为基于兼容性的方法而不是命名版本方法有几个直接好处：
 
 -  将应用程序认证从平台分离出来  。 由于其共享的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]，因此对于只需执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的应用程序，无需为 Azure 和本地维护单独的认证过程。
 -  降低升级风险，由于在数据库平台现代化期间，可以分离应用程序与数据库平台层升级周期，因此减少了中断，改进了变更管理  。
--  升级而不更改代码  。 升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 的新版本可以保持与源系统相同的兼容性级别，而无需对代码进行更改，并且不需要立即重新认证，直到应用程序需要使用仅在更高的数据库兼容性级别中可用的增强功能。
+-  升级而不更改代码  。 升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 的新版本可通过保持与源系统相同的兼容性级别，在无需对代码进行更改的情况下完成，并且不需要立即重新认证，直到应用程序需要使用仅在更高的数据库兼容性级别中可用的增强功能。
 - 提高可管理性和可伸缩性，无需更改应用程序并可使用不受数据库兼容性级别限制的增强功能  。 例如，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，这些功能包括： 
   - 丰富的监控和故障排除改进，并提供新的[系统动态管理视图](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)、[扩展事件](../../relational-databases/extended-events/extended-events.md)和[自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)。 
   - 更高的可伸缩性，例如，提供[自动 Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)。

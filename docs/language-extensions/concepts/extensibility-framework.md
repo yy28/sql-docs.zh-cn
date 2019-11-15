@@ -1,26 +1,26 @@
 ---
 title: SQL Server 语言扩展中的扩展性体系结构
-titleSuffix: SQL Server Language Extensions
-description: 对 SQL Server 数据库引擎的外部代码支持，其中包含用于对关系数据运行外部语言的双体系结构。
+titleSuffix: ''
+description: 了解用于 SQL Server 语言扩展的扩展性体系结构，该体系结构允许在 SQL Server 中运行外部代码。 SQL Server 2019 支持 Java。 代码在语言运行时环境中作为核心数据库引擎的扩展执行。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cefa617dc6068f07b2cc2b684ce0442d7a438e8
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589081"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658872"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 语言扩展中的扩展性体系结构
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server 语言扩展具有用于在服务器上运行外部代码（如 Java）的扩展性框架。 代码在语言运行时环境中作为核心数据库引擎的扩展执行。
+了解用于 SQL Server 语言扩展的扩展性体系结构，该体系结构允许在 SQL Server 中运行外部代码。 SQL Server 2019 支持 Java。 代码在语言运行时环境中作为核心数据库引擎的扩展执行。
 
 ## <a name="background"></a>背景
 

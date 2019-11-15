@@ -1,26 +1,27 @@
 ---
-title: 创建 R 模型 RevoScaleR 教程
-description: 有关如何使用 R 语言在 SQL Server 上构建模型的教程演练。
+title: 使用 RevoScaleR 创建 R 模型
+description: 有关如何在 SQL Server 上使用 R 语言构建模型的教程演练。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00c1c1ed13f1257267111c3bdf71277fa41d0bdc
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 9a23691e8ed4b5ec5290ae666455f789954fa95d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714877"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727269"
 ---
-# <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>创建 R 模型 (SQL Server 和 RevoScaleR 教程)
+# <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>创建 R 模型（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
+本课程属于 [RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)，该教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
-您已经丰富了定型数据。 现在可以使用回归建模来分析数据。 线性模型是预测分析领域的一项重要工具。 **RevoScaleR**包包含可细分工作负荷并并行运行的回归算法。
+你已经丰富了定型数据。 现在可以使用回归建模来分析这些数据了。 线性模型是预测分析领域中的一种重要工具。 RevoScaleR 包包含可以对工作负荷进行细分以及并行运行的回归算法  。
 
 > [!div class="checklist"]
 > * 创建线性回归模型
@@ -28,23 +29,23 @@ ms.locfileid: "68714877"
 
 ## <a name="create-a-linear-regression-model"></a>创建线性回归模型
 
-在此步骤中, 将创建一个简单的线性模型, 以便将客户使用的信用卡余额估算为 "*性别*" 和 " *creditLine* " 列中的值。
+在此步骤中，需要创建一个简单的线性模型，此模型通过将 gender 和 creditLine 列中的值用作独立变量来估计客户的信用卡余额   。
   
-为此, 请使用支持远程计算上下文的[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)函数。
+为此，请使用 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) 函数，它支持远程计算上下文。
   
-1. 创建 R 变量来存储已完成的模型, 并调用**rxLinMod**并传递适当的公式。
+1. 创建一个 R 变量来存储已完成的模型，然后调用 rxLinMod，从而传递相应的公式  。
   
     ```R
     linModObj <- rxLinMod(balance ~ gender + creditLine,  data = sqlFraudDS)
     ```
   
-2. 若要查看结果的摘要, 请对模型对象调用标准 R**汇总**函数。
+2. 若要查看结果的摘要，请对模型对象调用标准 R summary 函数  。
   
      ```R
      summary(linModObj)
      ```
 
-你可能会很奇怪一个普通的 R 函数（如 summary）会在此起作用，因为在上一步中，你将计算上下文设置为服务器。 但是，即使 **rxLinMod** 函数使用远程计算上下文创建模型，它也会返回包含本地工作站模型的对象并将其存储在共享目录中。
+你可能会很奇怪一个普通的 R 函数（如 summary  ）会在此起作用，因为在上一步中，你将计算上下文设置为服务器。 但是，即使 **rxLinMod** 函数使用远程计算上下文创建模型，它也会返回包含本地工作站模型的对象并将其存储在共享目录中。
 
 因此，你可以假定该模型是使用“本地”上下文创建的，然后对其运行标准 R 命令。
 
@@ -74,11 +75,11 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>创建逻辑回归模型
 
-接下来, 创建一个逻辑回归模型, 该模型指示特定客户是否是欺诈风险。 你将使用**RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)函数, 该函数支持在远程计算上下文中调整逻辑回归模型。
+接着，创建一个逻辑回归模型，它指示特定客户是否存在欺诈风险。 你将使用 RevoScaleR [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 函数，它支持在远程计算上下文中调整逻辑回归模型  。
 
-将计算上下文保持为原样。 还会继续使用相同的数据源。
+将计算上下文保持为原样。 你还将继续使用相同的数据源。
 
-1. 调用 rxLogit 函数并传递需用于定义模型的公式。
+1. 调用 rxLogit  函数并传递需用于定义模型的公式。
 
     ```R
     logitObj <- rxLogit(fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS, dropFirst = TRUE)
@@ -88,7 +89,7 @@ Condition number: 1.0184
     
     模型如此大的原因在于，在 R 中（以及在 **RevoScaleR** 包中），分类系数变量的每个级别都自动被视为单独的虚拟变量。
   
-2. 若要查看返回模型的摘要，请调用 summary 函数。
+2. 若要查看返回模型的摘要，请调用 summary  函数。
   
     ```R
     summary(logitObj)

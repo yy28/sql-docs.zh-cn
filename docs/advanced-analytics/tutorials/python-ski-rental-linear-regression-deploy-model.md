@@ -1,48 +1,49 @@
 ---
-title: Python 教程：部署模型（线性回归）
-description: 在本教程中，您将在 SQL Server 机器学习服务中使用 Python 和线性回归来预测滑雪租赁的数量。 使用机器学习服务将 Python 中开发的线性回归模型部署到 SQL Server 数据库中。
+title: Python 教程：部署模型
+description: 在本教程中，你将在 SQL Server 机器学习服务中使用 Python 和线性回归来预测雪橇租赁次数。 你将使用机器学习服务将在 Python 中开发的线性回归模型部署到 SQL Server 数据库中。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f5d19af93ab180c660a264d5aaabc538d527a5
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: 3b1dd5eba014a48f661833b1f955135ebacc48cc
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242515"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727068"
 ---
-# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Python 教程：将线性回归模型部署到 SQL Server 机器学习服务
+# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Python 教程：将线性回归模型部署到 SQL Server 机器学习服务中
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在此四部分的系列教程的第四部分中，你将使用机器学习服务将 Python 中开发的线性回归模型部署到 SQL Server 数据库中。
+本教程系列由四个部分组成，在第四部分中，你将使用机器学习服务将在 Python 中开发的线性回归模型部署到 SQL Server 数据库中。
 
-本文将介绍如何执行以下操作：
+本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
-> * 创建用于生成机器学习模型的存储过程
+> * 创建生成机器学习模型的存储过程
 > * 将模型存储在数据库表中
 > * 创建使用模型进行预测的存储过程
-> * 用新数据执行模型
+> * 使用新数据执行模型
 
-在[第一部分](python-ski-rental-linear-regression.md)中，您学习了如何还原示例数据库。
+在[第一部分](python-ski-rental-linear-regression.md)中，你了解了如何还原示例数据库。
 
-在[第二部分](python-ski-rental-linear-regression-prepare-data.md)中，您学习了如何将数据从 SQL Server 加载到 python 数据帧，并在 python 中准备数据。
+在[第二部分](python-ski-rental-linear-regression-prepare-data.md)中，你了解了如何将数据从 SQL Server 加载到 Python 数据框架，并在 Python 中准备数据。
 
-第[三部分](python-ski-rental-linear-regression-train-model.md)介绍了如何在 Python 中训练线性回归机器学习模型。
+在[第三部分](python-ski-rental-linear-regression-train-model.md)中，你了解了如何在 Python 中定型线性回归机器学习模型。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-* 本教程的第四部分假设你已完成[第一个部分](python-ski-rental-linear-regression.md)及其必备组件。
+* 本教程的第四部分假设你已完成了[第一部分](python-ski-rental-linear-regression.md)和其中的必备条件。
 
-## <a name="create-a-stored-procedure-that-generates-the-model"></a>创建用于生成模型的存储过程
+## <a name="create-a-stored-procedure-that-generates-the-model"></a>创建生成模型的存储过程
 
-现在，使用开发的 Python 脚本，创建一个**generate_rental_rx_model**的存储过程，该存储过程使用 LinearRegression from scikit-learn 生成线性回归模型。
+现在，通过使用开发的 Python 脚本来创建存储过程 generate_rental_rx_model，此存储过程会使用 scikit-learn 中的 LinearRegression 来定型和生成线性回归模型  。
 
-在 Azure Data Studio 中运行以下 T-sql 语句，以创建用于定型模型的存储过程。
+在 Azure Data Studio 中运行以下 T-SQL 语句，从而创建存储过程来定型模型。
 
 ```sql
 -- Stored procedure that trains and generates a Python model using the rental_data and a decision tree algorithm
@@ -84,9 +85,9 @@ GO
 
 ## <a name="store-the-model-in-a-database-table"></a>将模型存储在数据库表中
 
-在 TutorialDB 数据库中创建一个表，然后将该模型保存到表中。
+在 TutorialDB 数据库中创建一个表，然后将模型保存到表中。
 
-1. 在 Azure Data Studio 中运行以下 T-sql 语句，以创建一个名为**rental_py_models**的表，该表用于存储模型。
+1. 在 Azure Data Studio 中运行以下 T-SQL 语句来创建名为 dbo.rental_py_models 的表，用于存储模型  。
 
     ```sql
     USE TutorialDB;
@@ -99,7 +100,7 @@ GO
     GO
     ```
 
-1. 使用模型名称**linear_model**将模型另存为二进制对象。
+1. 将模型作为二进制对象保存到表中，模型名为 linear_model  。
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -110,7 +111,7 @@ GO
 
 ## <a name="create-a-stored-procedure-that-makes-predictions"></a>创建进行预测的存储过程
 
-1. 创建一个存储过程**py_predict_rentalcount** ，它使用训练的模型和一组新数据进行预测。 在 Azure Data Studio 中运行下面的 T-sql。
+1. 创建存储过程 py_predict_rentalcount，此过程会使用已定型的模型和一组新数据来进行预测  。 在 Azure Data Studio 中运行以下 T-SQL。
 
     ```sql
     DROP PROCEDURE IF EXISTS py_predict_rentalcount;
@@ -180,7 +181,7 @@ GO
     GO
     ```
 
-1. 执行存储过程以预测租赁计数
+1. 执行此存储过程来预测租赁计数
 
     ```sql
     --Insert the results of the predictions for test set into a table
@@ -191,17 +192,17 @@ GO
     SELECT * FROM py_rental_predictions;
     ```
 
-您已成功地在 SQL Server 机器学习服务中创建、训练和部署了一个模型。 然后，在存储过程中使用该模型基于新数据预测值。
+你已经成功地在 SQL Server 机器学习服务中创建、定型和部署了模型。 然后，你在存储过程中使用了该模型来基于新数据对值进行预测。
 
 ## <a name="next-steps"></a>后续步骤
 
-本系列教程的第四部分已完成以下步骤：
+在本教程系列的第四部分中，你完成了这些步骤：
 
-* 创建用于生成机器学习模型的存储过程
+* 创建生成机器学习模型的存储过程
 * 将模型存储在数据库表中
 * 创建使用模型进行预测的存储过程
-* 用新数据执行模型
+* 使用新数据执行模型
 
-若要了解有关在 SQL Server 机器学习服务中使用 Python 的详细信息，请参阅：
+若要了解关于在 SQL Server 机器学习服务中使用 Python 的详细信息，请参阅：
 
-+ [适用于 SQL Server 机器学习服务的 Python 教程](sql-server-python-tutorials.md)
++ [SQL Server 机器学习服务的 Python 教程](sql-server-python-tutorials.md)

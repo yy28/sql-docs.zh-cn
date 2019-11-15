@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653289"
@@ -20,12 +20,12 @@ ms.locfileid: "69653289"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教程介绍如何使用脚本将示例数据加载到中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。 文档中的许多其他教程也使用此示例数据。
+本教程介绍如何使用脚本将示例数据加载到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 中。 文档中的许多其他教程也使用此示例数据。
 
 > [!TIP]
-> 可以在[sql server 示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster)GitHub [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]存储库中找到的其他示例。 它们位于 **sql-server-samples/samples/features/sql-big-data-cluster/** 路径中。
+> 可在 [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub 存储库中找到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的其他示例。 它们位于 **sql-server-samples/samples/features/sql-big-data-cluster/** 路径中。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - [已部署的大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)

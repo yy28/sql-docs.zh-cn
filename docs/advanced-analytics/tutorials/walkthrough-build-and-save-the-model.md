@@ -1,5 +1,5 @@
 ---
-title: 生成 R 模型并保存到 SQL Server (演练)
+title: R 教程：生成并保存模型
 description: 介绍如何生成用于 SQL Server 数据库内分析的 R 语言模型的教程。
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,33 +7,34 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: af2b1bf8f619800737863ff955011b011f4819d0
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 4cb806c0a6286ec8a6608b346d12e666a8e9a09f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715390"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73724528"
 ---
-# <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>生成 R 模型并保存到 SQL Server (演练)
+# <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>生成 R 模型并保存到 SQL（演练）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在此步骤中, 将了解如何生成机器学习模型并将模型保存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 通过保存模型, 可以使用系统存储过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)或[!INCLUDE[tsql](../../includes/tsql-md.md)] [PREDICT (t-sql) 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)直接从代码调用它。
+在此步骤中，你将了解如何生成机器学习模型并将该模型保存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 通过保存模型，可以使用系统存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 或 [PREDICT (T-SQL) 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中直接调用模型。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-此步骤假设正在进行的 R 会话基于本演练中前面的步骤。 它使用在这些步骤中创建的连接字符串和数据源对象。 以下工具和包用于运行脚本。
+此步骤基于本演练之前的步骤假设一个正在进行的 R 会话。 它使用在这些步骤中创建的连接字符串和数据源对象。 以下工具和包用于运行脚本。
 
-+ Rgui.exe 运行 R 命令
-+ Management Studio 运行 T-sql
++ Rgui.exe 用于运行 R 命令
++ Management Studio 用于运行 T-SQL
 + ROCR 包
 + RODBC 包
 
 ### <a name="create-a-stored-procedure-to-save-models"></a>创建存储过程以保存模型
 
-此步骤使用存储过程将定型模型保存到 SQL Server。 创建存储过程来执行此操作可使任务更容易。
+此步骤使用存储过程将已定型的模型保存到 SQL Server。 创建存储过程来执行此操作可以使任务变得更加容易。
 
-在 Management Studio 中的查询窗口中运行以下 T-sql 代码, 以创建存储过程。
+在 Management Studio 中的查询窗口中运行以下 T-SQL 代码来创建存储过程。
 
 ```sql
 USE [NYCTaxi_Sample]
@@ -60,11 +61,11 @@ GO
 ```
 
 > [!NOTE]
-> 如果遇到错误, 请确保您的登录名具有创建对象的权限。 通过运行 T-sql 语句 (如下所示`exec sp_addrolemember 'db_owner', '<user_name>'`), 可以授予显式权限来创建对象。
+> 如果遇到错误，请确保你的登录名具有创建对象的权限。 可以通过运行与下面类似的 T-SQL 语句来授予创建对象的显式权限：`exec sp_addrolemember 'db_owner', '<user_name>'`。
 
 ## <a name="create-a-classification-model-using-rxlogit"></a>使用 rxLogit 创建分类模型
 
-该模型是一个二元分类器, 可预测出租车驱动程序是否可能在特定行程上获得提示。 您将使用在上一课中创建的数据源, 使用逻辑回归训练 tip 分类器。
+模型是一个二元分类器，可以预测出租车司机是否有可能在某次载客后获得小费。 你将使用在上一课中创建的数据源，通过逻辑回归来定型小费分类器。
 
 1. 调用包括在 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) 包中的 **rxLogit** 函数，创建逻辑回归模型。 
 
@@ -74,7 +75,7 @@ GO
 
     生成模型的调用封装在 system.time 函数中。 这样，你便可获得生成模型所需的时间。
 
-2. 生成模型后, 可以使用函数对`summary`其进行检查, 并查看系数。
+2. 生成模型后，你可以使用 `summary` 函数来检查模型，并查看系数。
 
     ```R
     summary(logitObj);
@@ -108,7 +109,7 @@ GO
 
 既然已生成模型，可以用其来预测出租车司机是否有可能在某次搭乘中获得小费。
 
-1. 首先, 使用[RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata)函数定义用于存储评分结果的数据源对象。
+1. 首先，使用 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 函数定义用于存储评分结果的数据源对象。
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -116,11 +117,11 @@ GO
       table = "taxiScoreOutput"  )
     ```
 
-    + 为了使此示例更简单, 逻辑回归模型的输入与用于训练模型的功能数据源`sql_feature_ds`() 相同。  更通常的情况下，可能具有一些新数据要进行评分，或者可能已留出一些数据用于测试或训练。
+    + 为了简化此示例，逻辑回归模型的输入与用于定型该模型的功能数据源 (`sql_feature_ds`) 是相同的。  更通常的情况下，可能具有一些新数据要进行评分，或者可能已留出一些数据用于测试或训练。
   
-    + 预测结果将保存在表_taxiscoreOutput_中。 请注意, 使用 rxSqlServerData 创建该表时, 未定义此表的架构。 该架构是从 rxPredict 输出获取的。
+    + 预测结果将保存在表 _taxiscoreOutput_ 中。 请注意，在你使用 rxSqlServerData 创建该表时，尚未定义此表的架构。 架构是从 rxPredict 输出中获取的。
   
-    + 若要创建存储预测值的表, 运行 rxSqlServer 数据函数的 SQL 登录名必须在数据库中具有 DDL 权限。 如果登录名不能创建表, 则语句将失败。
+    + 若要创建存储预测值的表，运行 rxSqlServer 数据函数的 SQL 登录名必须在数据库中具有 DDL 特权。 如果此登录名不能创建表，语句则将失败。
 
 2. 调用 [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) 函数以生成结果。
 
@@ -133,30 +134,30 @@ GO
         writeModelVars = TRUE, overwrite = TRUE)
     ```
     
-    如果语句成功, 将需要一段时间才能运行。 完成后, 您可以打开 SQL Server Management Studio 并验证该表是否已创建, 并且它包含计分列和其他预期输出。
+    如果语句成功，则需要花费一段时间才能运行。 完成后，你可以打开 SQL Server Management Studio 并验证已创建此表并且它包含 Score 列和其他预期输出。
 
-## <a name="plot-model-accuracy"></a>绘图模型准确性
+## <a name="plot-model-accuracy"></a>绘制模型准确性
 
-若要了解模型的准确性, 可以使用[rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc)函数来绘制接收方操作曲线。 因为 rxRoc 是支持远程计算上下文的 RevoScaleR 包提供的新函数之一, 所以有两个选项:
+若要了解模型的准确性，可以使用 [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 函数来绘制接受者操作曲线。 因为 rxRoc 是由 RevoScaleR 包提供的新函数之一，它支持远程计算上下文，因此你有以下两种选择：
 
-+ 您可以使用 rxRoc 函数来执行远程计算上下文中的绘图, 然后将该绘图返回到本地客户端。
++ 可以使用 rxRoc 函数在远程计算上下文中执行该绘图，然后将绘图返回到你的本地客户端。
 
 + 你还可以将数据导入 R 客户端计算机，并使用其他 R 绘图函数来创建性能图表。
 
-在本部分中, 你将尝试这两种方法。
+在本节中，你将使用这两种技术。
 
 ### <a name="execute-a-plot-in-the-remote-sql-server-compute-context"></a>在远程 (SQL Server) 计算上下文中执行绘图
 
-1. 调用函数 rxRoc, 并提供之前定义为输入的数据。
+1. 调用函数 rxRoc 并提供之前定义的数据作为输入。
 
     ```R
     scoredOutput = rxImport(scoredOutput);
     rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
-    此调用返回计算 ROC 图表时使用的值。 标签列是带标签的, 它具有您尝试预测的实际结果, 而_评分_列具有预测值。
+    此调用返回计算 ROC 图表时使用的值。 标签列是 tipped，它具有尝试要预测的实际结果，而 Score 列具有预测   。
 
-2. 若要实际绘制图表, 可以保存该 ROC 对象, 然后用绘图函数进行绘制。 在远程计算上下文上创建图形, 并返回到 R 环境。
+2. 若要实际绘制图表，你可以保存此 ROC 对象，然后用绘图函数绘制它。 此图形在远程计算上下文中创建，然后返回到你的 R 环境。
 
     ```R
     scoredOutput = rxImport(scoredOutput);
@@ -164,28 +165,28 @@ GO
     plot(rocObjectOut);
     ```
 
-    通过打开 R 图形设备, 或单击 RStudio 中的**绘图**窗口来查看图形。
+    可以通过打开 R 图形设备或在 RStudio 中单击“绘制”窗口来查看图形  。
 
     ![模型的 ROC 绘图](media/rsql-e2e-rocplot.png "模型的 ROC 绘图")
 
 ### <a name="create-the-plots-in-the-local-compute-context-using-data-from-sql-server"></a>使用 SQL Server 中的数据在本地计算上下文中创建绘图
 
-可以通过在命令提示符下运行`rxGetComputeContext()`来验证计算上下文是否为本地计算上下文。 返回值应为 "RxLocalSeq 计算上下文"。
+可以通过在命令提示符下运行 `rxGetComputeContext()` 来验证计算上下文是否为本地。 返回值应为“RxLocalSeq Compute Context”。
 
-1. 对于本地计算上下文, 此过程几乎相同。 使用[rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport)函数将指定的数据引入本地 R 环境。
+1. 对于本地计算上下文，此过程几乎是相同的。 使用 [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) 函数将指定数据引入本地 R 环境。
 
     ```R
     scoredOutput = rxImport(scoredOutput)
     ```
 
-2. 使用本地内存中的数据, 可以加载**ROCR**包, 并使用该包中的预测函数创建一些新的预测。
+2. 通过使用本地内存中的数据，你可以加载 ROCR 包，并使用该包中的预测函数来创建一些新的预测  。
 
     ```R
     library('ROCR');
     pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
     ```
 
-3. 基于输出变量`pred`中存储的值生成本地绘图。
+3. 根据输出变量 `pred` 中存储的值生成本地绘图。
 
     ```R
     acc.perf = performance(pred, measure = 'acc');
@@ -195,26 +196,26 @@ GO
     cutoff = slot(acc.perf, 'x.values')[[1]][ind];
     ```
 
-    ![使用 R 测绘模型性能](media/rsql-e2e-performanceplot.png "使用 R 测绘模型性能")
+    ![使用 R 绘制模型性能](media/rsql-e2e-performanceplot.png "使用 R 绘制模型性能")
 
 > [!NOTE]
-> 图表可能与这些不同, 具体取决于使用的数据点数量。
+> 你的图表可能与这些图表有所不同，具体因你使用的数据点数量而定。
 
 ## <a name="deploy-the-model"></a>部署模型
 
-构建模型并已确定其执行良好后, 你可能想要将其部署到你的组织中的用户或人员可以使用该模型的站点, 或者可能会定期重新训练和重新校准模型。 此过程有时称为*实现*。 在 SQL Server 中, 操作化是通过在存储过程中嵌入 R 代码来实现的。 由于代码位于过程中, 因此可以从任何可以连接到 SQL Server 的应用程序调用它。
+在构建模型并确定了它的性能良好后，你可能想将它部署到你的组织中的用户或人员可以使用此模型的站点，或者可能想定期重新定型和重新校准此模型。 此过程有时称为“操作”模型  。 在 SQL Server 中，操作化是通过在存储过程中嵌入 R 代码来实现的。 由于代码驻留在过程中，因此可以从任何可连接到 SQL Server 的应用程序对代码进行调用。
 
-您必须将模型保存到用于生产的数据库中, 然后才能从外部应用程序调用该模型。 训练的模型以二进制形式存储在**varbinary (max)** 类型的单个列中。
+从外部应用程序调用模型之前，必须将模型保存到用于生产的数据库中。 已定型的模型以二进制形式存储在 varbinary(max) 类型的单个列中  。
 
-典型的部署工作流包括以下步骤:
+典型的部署工作流包括以下步骤：
 
 1. 将模型序列化为十六进制字符串
 2. 将序列化的对象传输到数据库
-3. 将模型保存在 varbinary (max) 列中
+3. 将模型保存在 varbinary(max) 列中
 
-本部分介绍如何使用存储过程来持久保存模型并使其可用于预测。 本部分中使用的存储过程是 PersistModel。 PersistModel 的定义为[必备组件](#prerequisites)。
+本部分介绍如何使用存储过程来保留模型并使它可用于预测。 本部分中使用的存储过程为 PersistModel。 PersistModel 的定义位于[必备条件](#prerequisites)。
 
-1. 如果尚未使用本地 R 环境, 请将其重新序列化, 并将其保存在变量中。
+1. 切换回你的本地 R 环境（如果尚未使用），序列化模型，并将它保存在变量中。
 
     ```R
     rxSetComputeContext("local");
@@ -222,27 +223,27 @@ GO
     modelbinstr=paste(modelbin, collapse="");
     ```
 
-2. 使用**RODBC**打开 ODBC 连接。 如果已加载了包, 则可以省略对 RODBC 的调用。
+2. 使用 RODBC 打开 ODBC 连接  。 如果已加载了包，则可以省略对 RODBC 的调用。
 
     ```R
     library(RODBC);
     conn <- odbcDriverConnect(connStr);
     ```
 
-3. 调用 SQL Server 上的 PersistModel 存储过程, 将序列化的对象 transmite 到数据库, 并将模型的二进制表示形式存储在列中。 
+3. 针对 SQL Server 调用 PersistModel 存储过程，将序列化的对象传输到数据库，并将模型的二进制表示形式存储在列中。 
 
     ```R
     q <- paste("EXEC PersistModel @m='", modelbinstr,"'", sep="");
     sqlQuery (conn, q);
     ```
 
-4. 使用 Management Studio 验证模型是否存在。 在对象资源管理器中, 右键单击**nyc_taxi_models**表, 然后单击 "**选择前1000行**"。 在结果中, 你应在 "**模型**" 列中看到二进制表示形式。
+4. 使用 Management Studio 验证模型是否已存在。 在“对象资源管理器”中，右键单击 nyc_taxi_models 表，然后单击“选择前 1000 行”   。 在结果中，models 列中应会出现一个二进制表示形式  。
 
-将模型保存到表仅需要 INSERT 语句。 但是, 在存储过程 (如*PersistModel*) 中包装时, 通常会更容易。
+将模型保存到表仅需要 INSERT 语句。 但是，通常将模型包装在存储过程中会更轻松，例如 PersistModel  。
 
 ## <a name="next-steps"></a>后续步骤
 
-在下一课和最后一课中, 了解如何使用[!INCLUDE[tsql](../../includes/tsql-md.md)]对保存的模型进行评分。
+在下一课和最后一课中，你将了解如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 对已保存的模型进行评分。
 
 > [!div class="nextstepaction"]
 > [在 SQL 中部署 R 模型并使用](walkthrough-deploy-and-use-the-model.md)

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ccd2812261b4d71fb7553f3f1ab40216cc89016
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0f2d5a92fb3359f1c6d63d9ca1dee0f265a8aee1
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264063"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844527"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>选项（SQL Server 对象资源管理器 -“脚本”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,10 @@ ms.locfileid: "68264063"
 “编辑”  和“修改”  命令产生的结果可能与相同选项设置的“生成 <object> 脚本”  命令产生的结果不同。 “编辑”  和“修改”  命令用于在查询编辑器会话期间修改当前数据库中的对象。 “生成 <object> 脚本”  命令用于生成一个脚本，这样以后便可使用此脚本创建对象。  
   
 ## <a name="options"></a>选项  
-通过从每个选项右侧列表中的可用设置中进行选择，可以指定脚本选项。  
+通过从每个选项右侧列表中的可用设置中进行选择，可以指定脚本选项。
+
+> [!NOTE]
+> 列出的默认设置仅适用于“编写整个数据库及所有数据库对象的脚本”选项，并且在使用“选择特定数据库对象”选项时，此设置可能会有变化   。
   
 ### <a name="general-scripting-options"></a>常规脚本选项  
 **分隔各条语句**  
@@ -88,7 +91,7 @@ ms.locfileid: "68264063"
 将 SET ANSI_PADDING 语句添加在每条 CREATE TABLE 语句的前后。 默认值为 True。 有关详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](https://msdn.microsoft.com/92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0)。  
   
 **包含排序规则**  
-在列定义中包含排序规则。 默认值为 True。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+在列定义中包含排序规则。 默认值为 True。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 **包含 IDENTITY 属性**  
 包含 IDENTITY 种子和 IDENTITY 增量的定义。 默认值为 True。 有关详细信息，请参阅 [IDENTITY (Property) (Transact-SQL)](https://msdn.microsoft.com/8429134f-c821-4033-a07c-f782a48d501c)。  

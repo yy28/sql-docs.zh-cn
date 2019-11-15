@@ -1,35 +1,37 @@
 ---
-title: 使用 ODBC 保存和加载 SQL Server 中的 R 对象
+title: 使用 ODBC 保存和加载 R 对象
+description: RevoScaleR 包包括序列化和反序列化函数，可极大地改善性能，并且更简洁地存储对象。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3d7891098727c066b05bbd9f2f23c41bbdcca59
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 98a14848db4854c0bcb19167e7fcf7d43eca5f2e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714987"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727393"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>使用 ODBC 保存和加载 SQL Server 中的 R 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server R Services 可将序列化的 R 对象存储在表中，然后根据需要从表中加载对象，无需重新运行 R 代码或重新定型模型。 对于一些情况来说（例如，定型并保存模型，稍后用于评分或分析），将 R 对象保存到数据库这一功能十分关键。
 
-为了提高此关键步骤的性能， **RevoScaleR** 包现在包括新的序列化和反序列化函数，可极大地改善性能，并且更简洁地存储对象。 本文介绍了这些函数以及如何使用它们。
+为了提高此关键步骤的性能， **RevoScaleR** 包现在包括新的序列化和反序列化函数，可极大地改善性能，并且更简洁地存储对象。 本文介绍了这些函数及其用法。
 
 ## <a name="overview"></a>概述
 
-**RevoScaleR** 包现在包括新函数，让它可更加轻松地将 R 对象保存到 SQL Server，然后从 SQL Server 表中读取对象。 通常, 每个函数调用都使用简单键值存储, 其中键是对象的名称, 而与该键关联的值是要移入或移出表中的 varbinary R 对象。
+**RevoScaleR** 包现在包括新函数，让它可更加轻松地将 R 对象保存到 SQL Server，然后从 SQL Server 表中读取对象。 通常，每个函数调用都使用简单的键值存储，其中，键是对象的名称，与键关联的值是将移入或移出表的 varbinary R 对象。
 
-若要将 R 对象保存为直接从 R 环境中 SQL Server, 必须执行以下操作:
+若要直接从 R 环境中将 R 对象保存到 SQL Server，必须执行以下操作：
 
-+ 使用*RxOdbcData*数据源建立了与 SQL Server 的连接。
++ 使用 RxOdbcData 数据源建立与 SQL Server 的连接  。
 + 通过 ODBC 连接调用新函数
-+ 或者, 您可以指定不对对象进行序列化。 然后, 选择要使用的新压缩算法, 而不是默认的压缩算法。
++ 或者，可以指定不对对象进行序列化。 然后，选择要使用的新压缩算法，而不是默认的压缩算法。
 
 默认情况下，从 R 调用以移动到 SQL Server 的任何对象都将进行序列化和压缩。 相反，从 SQL Server 表加载某对象以便在 R 代码中使用时，该对象将进行反序列化和解压。
 
@@ -43,7 +45,7 @@ SQL Server R Services 可将序列化的 R 对象存储在表中，然后根据�
 
 - `rxListKeys` 以键/值对的方式列出所有可用对象。 这有助于确定 R 对象的名称和版本。
 
-有关每个函数语法的详细帮助，请使用 R 帮助。 [ScaleR 参考](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)中也提供了详细信息。
+有关每个函数语法的详细帮助，请使用 R 帮助。 [ScaleR 引用](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)中还提供了详细信息。
 
 ## <a name="how-to-store-r-objects-in-sql-server-using-odbc"></a>如何使用 ODBC 在 SQL Server 中存储 R 对象
 

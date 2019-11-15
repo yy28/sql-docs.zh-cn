@@ -1,20 +1,20 @@
 ---
-title: 有关使用 R 创建和训练分区模型并对其评分的教程
+title: 在 R 中创建基于分区的模型
 description: 了解如何对在使用 SQL Server 机器学习基于分区的建模功能时动态创建的分区数据进行建模、训练和使用。
-ms.custom: sqlseattle
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f73f45d2ac9830fed810746a5895554cded0691
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ee5d6cbf9b1d5430e431cf04fb3b86ae7fb5743b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532579"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73726227"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教程：在 SQL Server 中使用 R 创建基于分区的模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "73532579"
 
 + 具有 [NYCTaxi_Sample](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)，可以将其[下载并还原](demo-data-nyctaxi-in-sql.md)到本地数据库引擎实例。 文件大小约为 90 MB。
 
-+ SQL Server 2019 预览数据库引擎实例，集成了机器学习服务和 R。
++ SQL Server 2019 数据库引擎实例，集成了机器学习服务和 R。
 
 通过在查询工具中以 T-SQL 查询的形式执行 `SELECT @@Version` 来检查版本  。
 

@@ -10,7 +10,7 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c55f68a1134fee6477c52182ad66b8705e363296
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68715588"
@@ -22,22 +22,22 @@ ms.locfileid: "68715588"
 
 ## <a name="default-firewall-rules"></a>默认防火墙规则
 
-默认情况下, SQL Server 安装程序通过创建防火墙规则来禁用出站连接。
+默认情况下，SQL Server 安装程序通过创建防火墙规则来禁用出站连接。
 
-在 SQL Server 2016 和2017中, 这些规则基于本地用户帐户, 其中, 安装程序为拒绝对其成员的网络访问的**SQLRUserGroup**创建了一个出站规则 (每个辅助角色帐户作为规则的本地原则列出。 有关 SQLRUserGroup 的详细信息, 请参阅[SQL Server 机器学习服务中扩展性框架的安全性概述](../../advanced-analytics/concepts/security.md#sqlrusergroup)。
+在 SQL Server 2016 和 2017 中，这些规则基于本地用户帐户，其中安装程序为 SQLRUserGroup 创建了一个出站规则，该规则拒绝对其成员进行网络访问（每个工作线程帐户均作为受该规则约束的本地原则列出）  。 有关 SQLRUserGroup 的详细信息，请参阅 [SQL Server 机器学习服务中扩展性框架的安全性概述](../../advanced-analytics/concepts/security.md#sqlrusergroup)。
 
-作为 AppContainers 的一部分, 在 2019 SQL Server 中, 有新的防火墙规则基于 AppContainer Sid: SQL Server 安装程序创建的20个 AppContainers 中的一个。 防火墙规则名称的命名约定会**阻止 SQL Server 实例 MSSQLSERVER 中的 appcontainer-00 的网络访问**, 其中00是 appcontainer 的编号 (默认值为 00-20), 而 MSSQLSERVER 是 SQL Server 实例的名称。
+在 SQL Server 2019 中，作为迁移到 AppContainer 的一部分，有基于 AppContainer SID 的新防火墙规则：每个规则分别针对由 SQL Server 安装程序创建的 20 个 AppContainer。 防火墙规则名称的命名约定是阻止 SQL Server 实例 MSSQLSERVER 中的 AppContainer-00 的网络访问，其中 00 是 AppContainer 的编号（默认情况下为 00-20），MSSQLSERVER 是 SQL Server 实例的名称  。
 
 > [!Note]
-> 如果需要网络调用, 你可以在 Windows 防火墙中禁用出站规则。
+> 如果需要网络调用，可以禁用 Windows 防火墙中的出站规则。
 
 ## <a name="restrict-network-access"></a>限制网络访问
 
-在默认安装中, 使用 Windows 防火墙规则来阻止来自外部运行时进程的所有出站网络访问。 应创建防火墙规则, 以防止外部运行时进程下载程序包或进行其他可能是恶意的网络调用。
+在默认安装中，将使用 Windows 防火墙规则来阻止外部运行时进程的所有出站网络访问。 应创建防火墙规则来防止外部运行时进程下载程序包或进行其他可能有恶意目的的网络调用。
 
-如果你使用的是其他防火墙程序, 还可以通过为本地用户帐户或用户帐户池所代表的组设置规则来创建规则, 以阻止外部运行时的出站网络连接。
+如果使用的是其他防火墙程序，还可以通过为本地用户帐户或用户帐户池所代表的组设置规则来创建规则，以阻止外部运行时的出站网络连接。
 
-我们强烈建议你启用 Windows 防火墙 (或你选择的另一防火墙) 以阻止 R 或 Python 运行时进行不受限制的网络访问。
+强烈建议开启 Windows 防火墙（或你选择的另一种防火墙），防止 R 或 Python 运行时对网络的无限制访问。
 
 ## <a name="next-steps"></a>后续步骤
 

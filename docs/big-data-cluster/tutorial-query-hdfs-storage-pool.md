@@ -1,7 +1,7 @@
 ---
 title: 在存储池中查询 HDFS 数据
 titleSuffix: SQL Server big data clusters
-description: 本教程演示如何在中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]查询 HDFS 数据。 可以为存储池中的数据创建外部表，然后运行查询。
+description: 本教程演示如何在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 中查询 HDFS 数据。 可以为存储池中的数据创建外部表，然后运行查询。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652445"
@@ -20,7 +20,7 @@ ms.locfileid: "69652445"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教程演示如何在中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]查询 HDFS 数据。
+本教程演示如何在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 中查询 HDFS 数据。
 
 在本教程中，你将了解如何执行以下操作：
 
@@ -45,11 +45,11 @@ ms.locfileid: "69652445"
 
 1. 在 Azure Data Studio 中，连接到大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
-1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板。 选择“新建查询”。
+1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板  。 选择“新建查询”  。
 
    ![SQL Server 主实例查询](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-1. 运行以下 Transact-SQL 命令，将上下文更改为主实例中的 Sales 数据库。
+1. 运行以下 Transact-SQL 命令，将上下文更改为主实例中的 Sales 数据库  。
 
    ```sql
    USE Sales
@@ -80,7 +80,7 @@ ms.locfileid: "69652445"
    END
    ```
 
-1. 创建可以从存储池读取 `/clickstream_data` 的外部表。 可以从大数据群集的主实例访问 SqlStoragePool。
+1. 创建可以从存储池读取 `/clickstream_data` 的外部表。 可以从大数据群集的主实例访问 SqlStoragePool  。
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]

@@ -1,7 +1,7 @@
 ---
 title: SQL Server Data Tools (SSDT) 中的 Azure Active Directory | Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2018
+ms.date: 10/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssdt
@@ -9,18 +9,20 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4ea9e05d0a3f1c330fc24f52670384b2a3cd844d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 302345a2d7e8c1bd9192c91c6f88253c9a4668f2
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984685"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049900"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支持
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 SQL Server Data Tools (SSDT) 提供了多种 [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) 身份验证方法。
+
+在 Visual Studio 中，打开“SQL Server 对象资源管理器”（在“视图”菜单中），然后选择“添加 SQL Server”    ：
 
 ![SSDT 连接对话框](media/azure-active-directory/interactive.png)
 

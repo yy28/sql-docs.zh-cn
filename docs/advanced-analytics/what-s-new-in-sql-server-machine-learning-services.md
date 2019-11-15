@@ -1,6 +1,7 @@
 ---
-title: 新增功能
-description: SQL Server 2016 R Services、R Server、SQL Server 机器学习服务的每个版本的新功能公告。
+title: SQL Server 机器学习服务中的新增功能？
+titleSuffix: ''
+description: 各版本 SQL Server 机器学习服务和 SQL Server 2016 R Services 的新功能公告。
 ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
@@ -9,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 16c70e23df018a3bf403280fd6deb48b880c31ce
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532574"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73707440"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的新增功能
 
@@ -28,7 +29,7 @@ ms.locfileid: "73532574"
 此版本在 SQL Server 中添加了用于 Python 和 R 机器学习操作的需求最大的功能。 有关此版本中所有功能的详细信息，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)和 [SQL Server 2019 的发行说明](../sql-server/sql-server-ver15-release-notes.md)。
 
 > [!NOTE]
-> 有关 SQL Server 2019 中 Java 的新增功能文档，请参阅 [SQL Server 语言扩展中的新增功能](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
+> 有关 SQL Server 2019 中 Java 的新增功能文档，请参阅 [What's new in SQL Server Language Extensions?](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)（SQL Server 语言扩展中的新增功能？）
 
 以下是 SQL Server 机器学习服务的新增功能：
 

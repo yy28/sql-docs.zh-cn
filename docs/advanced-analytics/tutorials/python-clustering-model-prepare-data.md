@@ -1,6 +1,6 @@
 ---
-title: 教程：准备数据以对 Python 中的客户进行分类
-description: 在此四部分的系列教程的第二部分中，你将从 SQL Server 数据库中准备数据，以便在 Python 中使用 SQL Server 机器学习服务执行群集。
+title: Python 教程：准备群集数据
+description: 此教程包括四分部分，在第二部分中，你将准备 SQL Server 数据库中的数据，以便通过 SQL Server 机器学习服务在 Python 中执行聚类分析。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,44 +9,45 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d91f3b9f1e3d1abe53d677d9f9058058d321d985
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
-ms.translationtype: MT
+ms.openlocfilehash: 11c24d5403e6540da52ec3557c64e1dc8fa57c78
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294342"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727091"
 ---
-# <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>教程：准备数据以将 Python 中的客户分类 SQL Server 机器学习服务
+# <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>教程：准备数据以通过 SQL Server 机器学习服务在 Python 中对客户进行分类
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在此四部分的系列教程的第二部分中，将使用 Python 从 SQL 数据库还原和准备数据。 稍后在本系列中，你将使用此数据，通过 SQL Server 机器学习服务在 Python 中训练和部署群集模型。
+此教程包括四分部分，在第二部分中，你将使用 Python 还原和准备 SQL 数据库中的数据。 在本系列的后续部分中，使用这些数据在 Python 中通过 SQL Server 机器学习服务来定型和部署聚类分析模型。
 
-本文将介绍如何执行以下操作：
+本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
-> * 使用 Python 将不同维度中的客户隔开
-> * 将数据从 SQL 数据库加载到 Python 数据帧中
+> * 使用 Python 按不同维度对客户进行分隔
+> * 将 SQL 数据库中的数据加载到 Python 数据帧中
 
-在[第一部分](python-clustering-model.md)中，你安装了必备组件并还原了示例数据库。
+在[第一部分](python-clustering-model.md)中，你安装了必备条件并还原了示例数据库。
 
-在[第三部分](python-clustering-model-build.md)中，你将了解如何在 Python 中创建和训练 K 平均值聚类分析模型。
+[第三部分](python-clustering-model-build.md)介绍如何在 Python 中创建和定型 K-Means 群集模型。
 
-在[第四部分](python-clustering-model-deploy.md)中，你将了解如何在 SQL 数据库中创建一个存储过程，该存储过程可基于新数据在 Python 中执行群集操作。
+在[第四部分](python-clustering-model-deploy.md)中，你将了解如何在 SQL 数据库中创建存储过程，以便基于新数据在 Python 中执行聚类分析。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-* 本教程的第二部分假设已满足[**第一部分**](python-clustering-model.md)的先决条件。
+* 本教程的第二部分假设你已满足[第一部分](python-clustering-model.md)的必备条件  。
 
-## <a name="separate-customers"></a>单独的客户
+## <a name="separate-customers"></a>分隔客户
 
-若要为客户群集做好准备，首先要将客户划分为以下维度：
+若要准备对客户进行聚类分析，首先要将客户按以下维度进行分隔：
 
-* **orderRatio** = 返回订单比率（部分或全部返回的订单总数与订单总数相同）
-* **itemsRatio** = 返回项的比率（返回的项总数与购买的项数）
-* **monetaryRatio** = 返回金额比率（返回的项目的总货币金额与购买的金额）
-* **frequency** = 返回频率
+* orderRatio = 退单率（部分或全部退货的订单总数与订单总数的比率） 
+* itemsRatio = 退货率（退货总数与购买商品数量的比率） 
+* monetaryRatio = 退款率（退货的总货币金额与购买总金额的比率） 
+* frequency = 退货频率 
 
 在 Azure Data Studio 中打开一个新笔记本，然后输入以下脚本。
 
@@ -114,7 +115,7 @@ column_info = {
 
 ## <a name="load-the-data-into-a-data-frame"></a>将数据加载到数据帧中
 
-查询的结果将使用 revoscalepy **RxSqlServerData**函数返回到 Python。 在此过程中，您将使用在前面的脚本中定义的列信息。
+使用 revoscalepy RxSqlServerData 函数将查询结果返回到 Python  。 在此过程中，将使用在前面的脚本中定义的列信息。
 
 ```python
 data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
@@ -124,7 +125,7 @@ revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=Fa
 customer_data = pd.DataFrame(revoscale.rx_import(data_source))
 ```
 
-现在显示数据帧的开头，验证其外观是否正确。
+现在显示数据帧的开头，验证其是否正确。
 
 ```python
 print("Data frame:", customer_data.head(n=5))
@@ -146,12 +147,12 @@ Data frame:     customer  orderRatio  itemsRatio  monetaryRatio  frequency
 
 ## <a name="next-steps"></a>后续步骤
 
-在本系列教程的第二部分中，您完成了以下步骤：
+在本教程系列的第二部分中，你已完成这些步骤：
 
-* 使用 Python 将不同维度中的客户隔开
-* 将数据从 SQL 数据库加载到 Python 数据帧中
+* 使用 Python 按不同维度对客户进行分隔
+* 将 SQL 数据库中的数据加载到 Python 数据帧中
 
-若要创建使用此客户数据的机器学习模型，请遵循本教程系列的第三部分：
+若要创建使用此客户数据的机器学习模型，请按照本教程系列的第三部分进行操作：
 
 > [!div class="nextstepaction"]
 > [教程：使用 SQL Server 机器学习服务在 Python 中创建预测模型](python-clustering-model-build.md)

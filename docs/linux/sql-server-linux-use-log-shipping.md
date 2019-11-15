@@ -7,12 +7,12 @@ ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8bc7fa51eeb5d02400b15556a3bec06ce721c1de
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032198"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240708"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux 上的日志传送入门
 
@@ -305,6 +305,13 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     GO  
     EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
+    ```
+ - 通过执行以下命令验证日志传送故障转移是否正常运行
+ 
+    > [!WARNING]
+    > 此命令将使辅助数据库处于联机状态并中断日志传送配置。 运行此命令后，将需要重新配置日志传送。
+ 
+    ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
 

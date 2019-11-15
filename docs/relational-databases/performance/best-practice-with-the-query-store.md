@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0482182c9720054a85dfd21c264e0acde939b5b
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974278"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142782"
 ---
 # <a name="best-practices-with-query-store"></a>查询存储最佳做法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **数据刷新间隔（分钟）** ：定义将收集的运行时统计信息保存到磁盘的频率（以秒为单位）。 默认值为 900 秒，即 15 分钟。 如果工作负载不生成大量不同的查询和计划或者你能够接受在数据库关闭之前花更长的时间来保留数据，可考虑使用更大的值。
+ **数据刷新间隔（分钟）** ：它定义将收集的运行时统计信息保存到磁盘的频率。 它在图形用户界面 (GUI) 中以分钟为单位，但在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中以秒为单位。 默认值为 900 秒，在图形用户界面中为 15 分钟。 如果工作负载不生成大量不同的查询和计划或者你能够接受在数据库关闭之前花更长的时间来保留数据，可考虑使用更大的值。
  
 > [!NOTE]
 > 如果出现故障转移或关闭命令，使用跟踪标志 7745 会阻止查询存储数据写入磁盘。 有关详情，请查阅[在任务关键型服务器上使用跟踪标志改善灾难恢复](#Recovery)部分。
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **统计信息收集间隔**：定义已收集的运行时统计信息的粒度级别。 默认值为 60 分钟。 如果需要更细的粒度或更短的时间来检测和缓解问题，可考虑使用较小的值。 请记住，该值会直接影响查询存储数据的大小。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 为“统计信息收集间隔”设置不同的值  ：  
+ **统计信息收集间隔**：定义已收集的运行时统计信息的粒度级别（以分钟为单位）。 默认值为 60 分钟。 如果需要更细的粒度或更短的时间来检测和缓解问题，可考虑使用较小的值。 请记住，该值会直接影响查询存储数据的大小。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 为“统计信息收集间隔”设置不同的值  ：  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **过时查询阈值（天）** ：基于时间的清除策略，用于控制持久化运行时统计信息和非活动查询的保持期。 查询存储默认配置为将数据保留 30 天，这对于你的方案来说可能过长。  
+ **过时查询阈值（天）** ：基于时间的清除策略，用于控制持久化运行时统计信息和非活动查询的保持期（以天为单位）。 查询存储默认配置为将数据保留 30 天，这对于你的方案来说可能过长。  
   
  避免保留你并不打算使用的历史数据。 这样可以减少变为只读状态的次数。 查询存储数据的大小以及检测和解决问题的时间将会变得更可预测。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或以下脚本配置基于时间的清理策略：  
   
@@ -199,7 +199,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  下图显示了如何查找 Query Store 视图：  
   
-   ![查询存储视图](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Query Store views")  
+   ![查询存储视图](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "查询存储视图")  
   
  下表说明了何时使用每个 Query Store 视图：  
   

@@ -1,64 +1,65 @@
 ---
-title: Python 教程：滑雪租赁（线性回归）
-description: 在本教程中，您将在 SQL Server 机器学习服务中使用 Python 和线性回归来预测滑雪租赁的数量。
+title: Python 教程：雪橇租赁
+description: 在本教程中，你将在 SQL Server 机器学习服务中使用 Python 和线性回归来预测雪橇租赁次数。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 718487ba55b2b8db8f16b59df5785cf78ff501f1
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: 927816988be8882d4149115f6d4aee38dd3a8f3f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242505"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727034"
 ---
-# <a name="python-tutorial-predict-ski-rental-with-linear-regression-in-sql-server-machine-learning-services"></a>Python 教程：SQL Server 中的线性回归预测 ski 租赁机器学习服务
+# <a name="python-tutorial-predict-ski-rental-with-linear-regression-in-sql-server-machine-learning-services"></a>Python 教程：在 SQL Server 机器学习服务中使用线性回归来预测雪橇租赁
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在此四部分的系列教程中，你将在[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)中使用 Python 和线性回归来预测 ski 租金的数量。 本教程[在 Azure Data Studio 中使用 python 笔记本](../../azure-data-studio/sql-notebooks.md)，但你也可以使用自己的 python 集成开发环境（IDE）。
+在这个由四个部分组成的教程系列中，你将在 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)中使用 Python 和线性回归来预测雪橇租赁次数。 本教程使用 [Azure Data Studio 中的 Python Notebook](../../azure-data-studio/sql-notebooks.md)，你也可以使用自己的 Python 集成开发环境 (IDE)。
 
-假设您拥有一个 ski 租赁企业，并且您想要预测您将在将来的某个日期的租赁数量。 此信息可帮助你准备好股票、员工和设施。
+假设你有一家雪橇租赁公司，你希望预测未来某个日期的雪橇租赁次数。 此信息可帮助你准备好库存、人员和设施。
 
-在本系列文章的第一部分中，你将设置必备组件。 在第二和第三部分中，你将在 Jupyter 笔记本中开发一些 Python 脚本，以便准备你的数据和训练机器学习模型。 然后，在第三部分中，你将使用 T-sql 存储过程在 SQL Server 中运行这些 Python 脚本。
+在本系列的第一部分，你将设置必备组件。 在第二和第三部分，你将在 Jupyter Notebook 中开发一些 Python 脚本，以准备数据并定型机器学习模型。 然后，在第四部分，你将使用 T-SQL 存储过程在 SQL Server 中运行这些 Python 脚本。
 
-本文将介绍如何执行以下操作：
+本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
 > * 将示例数据库导入 SQL Server 
 
-在[第二部分](python-ski-rental-linear-regression-prepare-data.md)中，你将了解如何将数据从 SQL Server 加载到 python 数据帧中，以及如何在 python 中准备数据。
+[第二部分](python-ski-rental-linear-regression-prepare-data.md)介绍如何将数据从 SQL Server 加载到 Python 数据帧，并在 Python 中准备数据。
 
-在[第三部分](python-ski-rental-linear-regression-train-model.md)中，你将了解如何在 Python 中训练线性回归模型。
+[第三部分](python-ski-rental-linear-regression-train-model.md)介绍如何在 Python 中定型线性回归模型。
 
-在[第四部分](python-ski-rental-linear-regression-deploy-model.md)中，你将了解如何将模型存储到 SQL Server，然后从你在第二和第三部分中开发的 Python 脚本中创建存储过程。 存储过程将在 SQL Server 中运行，以便基于新数据进行预测。
+[第四部分](python-ski-rental-linear-regression-deploy-model.md)介绍如何将模型存储到 SQL Server，然后根据在第二和第三部分中开发的 Python 脚本来创建存储过程。 存储过程将在 SQL Server 中运行，以便基于新数据进行预测。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-* SQL Server 机器学习服务-有关如何安装机器学习服务的详细说明，请参阅[Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或[Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fadvanced-analytics%2Ftoc.json)。
+* SQL Server 机器学习服务 — 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fadvanced-analytics%2Ftoc.json)。
 
-* Python IDE-本教程使用[Azure Data Studio](../../azure-data-studio/what-is.md)中的 Python 笔记本。 有关详细信息，请参阅[如何在 Azure Data Studio 中使用笔记本](../../azure-data-studio/sql-notebooks.md)。 
+* Python IDE - 本教程在 [Azure Data Studio](../../azure-data-studio/what-is.md) 中使用 Python 笔记本。 有关详细信息，请参阅[如何使用 Azure Data Studio 中的笔记本](../../azure-data-studio/sql-notebooks.md)。 
 
-    你还可以使用自己的 Python IDE，例如 Jupyter 笔记本或使用[python 扩展](https://marketplace.visualstudio.com/items?itemName=ms-python.python)和[mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)的[Visual Studio Code](https://code.visualstudio.com/docs) 。 
+    还可以使用自己的 Python IDE，例如 Jupyter 笔记本或具有 [Python 扩展](https://marketplace.visualstudio.com/items?itemName=ms-python.python)和 [mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)的 [Visual Studio Code](https://code.visualstudio.com/docs)。 
 
-* [revoscalepy](../python/ref-py-revoscalepy.md)包- **revoscalepy**包包含在 SQL Server 机器学习服务中。 若要在客户端计算机上使用包，请参阅为[Python 开发设置数据科学客户端](../python/setup-python-client-tools-sql.md)，以便在本地安装此包。
+* [revoscalepy](../python/ref-py-revoscalepy.md) 包 - SQL Server 机器学习服务中包含 **revoscalepy** 包。 若要在客户端计算机上使用包，请参阅[设置用于 Python 开发的数据科学客户端](../python/setup-python-client-tools-sql.md)，了解用于在本地安装该包的选项。
 
-    如果在 Azure Data Studio 中使用 Python 笔记本，请按照以下附加步骤使用**revoscalepy**：
+    如果使用 Azure Data Studio 中的 Python 笔记本，请按照以下附加步骤使用 revoscalepy  ：
 
     1. 打开 Azure Data Studio
-    1. 从 "**文件**" 菜单中选择 "**首选项**"，然后选择 "**设置**"
-    1. 展开**扩展**并选择**笔记本配置**
-    1. 在 " **Python 路径**" 下，输入安装库的路径（例如`C:\path-to-python-for-mls`）
-    1. 请确保已选中 "**使用现有 Python** "
-    1. 重新启动 Azure Data Studio
+    1. 在“文件”菜单中，选择“首选项”，然后选择“设置”   
+    1. 展开“扩展”，然后选择“笔记本配置”  
+    1. 在“Python 路径”下方，输入库的安装路径（例如，`C:\path-to-python-for-mls`） 
+    1. 确保选中“使用现有 Python” 
+    1. 重启 Azure Data Studio
 
-    如果使用的是不同的 Python IDE，请对 IDE 执行类似的步骤。
+    如果使用其他 Python IDE，则对 IDE 执行类似步骤。
 
-* SQL 查询工具-本教程假定你使用的是[Azure Data Studio](../../azure-data-studio/what-is.md)。 你还可以使用[SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) （SSMS）。
+* SQL 查询工具 - 本教程假定使用的是 [Azure Data Studio](../../azure-data-studio/what-is.md)。 也可以使用 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS)。
 
-* 其他 Python 包-本系列教程中的示例使用了你可能已安装或可能未安装的 Python 包。 如有必要，请使用以下**pip**命令安装这些包。
+* 附加 Python 包 - 在本教程系列中的示例所使用的 Python 包中，有些可能是你已经安装了的，有些可能是你尚未安装的。 如有必要，可使用以下 **pip** 命令安装这些包。
 
     ```console
     pip install pandas
@@ -68,16 +69,16 @@ ms.locfileid: "70242505"
 
 ## <a name="restore-the-sample-database"></a>还原示例数据库
 
-本教程中使用的示例数据集已保存到 **.bak**数据库备份文件，供你下载和使用。
+本教程中使用的示例数据集已保存到 **.bak** 数据库备份文件，以供下载和使用。
 
-1. 下载文件[TutorialDB](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak)。
+1. 下载文件 [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak)。
 
-1. 使用以下详细信息，按照 Azure Data Studio 中的[备份文件还原数据库](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)中的说明操作：
+1. 使用以下详细信息，按 Azure Data Studio 中[从备份文件还原数据库](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)中的说明操作：
 
-   * 从下载的**TutorialDB**文件导入
-   * 将目标数据库命名为 "TutorialDB"
+   * 从下载的 **TutorialDB.bak** 文件中导入
+   * 将目标数据库命名为“TutorialDB”
 
-1. 您可以通过查询**rental_data**表来验证数据集是否存在。
+1. 还原数据库后，可以通过查询 **dbo.rental_data** 表来验证是否存在该数据集：
 
     ```sql
     USE TutorialDB;
@@ -88,10 +89,10 @@ ms.locfileid: "70242505"
 
 在本系列教程的第一部分中，你已完成以下步骤：
 
-* 已安装必备组件
+* 安装必备组件
 * 将示例数据库导入 SQL Server
 
-若要从 TutorialDB 数据库中准备数据，请遵循本教程系列的第二部分：
+若要从 TutorialDB 数据库中准备数据，请按照本教程系列的第二部分进行操作：
 
 > [!div class="nextstepaction"]
-> [Python 教程：准备数据以训练线性回归模型](python-ski-rental-linear-regression-prepare-data.md)
+> [Python 教程：准备数据以定型线性回归模型](python-ski-rental-linear-regression-prepare-data.md)

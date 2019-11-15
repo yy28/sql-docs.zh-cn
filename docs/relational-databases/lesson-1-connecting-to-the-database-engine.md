@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b61761ff30a32d6781e61e988325fbfc40b5762e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909760"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032999"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 课：连接到数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "72909760"
 现在，您已经以管理员身份连接到了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，您的首要任务之一是授权其他用户进行连接。 实现此任务的步骤是创建一个登录名，然后授权此登录名以用户身份访问数据库。 登录名可以是使用 Windows 凭据的 Windows 身份验证登录名；也可以是 SQL Server 身份验证登录名（这些登录名在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中存储身份验证信息并独立于 Windows 凭据）。 尽可能使用 Windows 身份验证。
 
 > [!TIP]
-> 大多数组织具有域用户，且将使用 Windows 身份验证。 可以通过在计算机上创建其他本地用户，自行进行试验。 计算机将对本地用户进行身份验证，因而域为计算机名称。 例如，如果计算机名为 `MyComputer` ，并且创建了一个名为 `Test`的用户，则 Windows 对用户的描述是 `Mycomputer\Test`。  
+> 大多数组织具有域用户，且将使用 Windows 身份验证。 可以通过在计算机上创建其他本地用户，自行进行试验。 计算机将对本地用户进行身份验证，因而域为计算机名称。 例如，如果计算机名为 `MyComputer`，并且创建了一个名为 `Test` 的用户，则 Windows 对用户的描述是 `Mycomputer\Test`。  
 
 ##### <a name="create-a-windows-authentication-login"></a>创建 Windows 身份验证登录名 
 

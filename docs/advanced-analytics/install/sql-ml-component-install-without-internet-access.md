@@ -1,19 +1,20 @@
 ---
-title: 在无 Internet 访问的情况下安装 R 语言和 Python 组件
-description: 脱机或断开连接的机器学习 R 和 Python 安装在网络防火墙后的独立 SQL Server 实例上。
+title: 没有 Internet 访问权限的安装
+description: 在隔离在网络防火墙之后的计算机上安装 SQL Server 机器学习 R 和 Python。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bd1db578d6f1b4900f559c51521d807d7e1ec271
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 9b37851e2becaeddb754339ed6fe850007e97a19
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594351"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727544"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>在无 Internet 访问的情况下在计算机上安装 SQL Server 机器学习 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

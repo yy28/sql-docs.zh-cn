@@ -1,48 +1,49 @@
 ---
-title: Python 教程：准备数据（线性回归）
-description: 在本教程中，您将在 SQL Server 机器学习服务中使用 Python 和线性回归来预测滑雪租赁的数量。 你将使用 Python 从 SQL Server 数据库准备数据。
+title: Python 教程：准备数据
+description: 在本教程中，你将在 SQL Server 机器学习服务中使用 Python 和线性回归来预测雪橇租赁次数。 你将使用 Python 准备 SQL Server 数据库中的数据。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c6c4d5fb4ffc5049f7e1325267b7623dc195e9d8
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: 6424a453bff2f0f6d62caa8c9870ccc2ec10d578
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242495"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727053"
 ---
-# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python 教程：准备数据以在 SQL Server 中训练线性回归模型机器学习服务
+# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python 教程：在 SQL Server 机器学习服务中准备数据以定型线性回归模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在此四部分的系列教程的第二部分中，你将使用 Python 从 SQL Server 数据库准备数据。 本系列稍后将使用此数据，通过 SQL Server 机器学习服务在 Python 中训练和部署线性回归模型。
+此教程包括四分部分，在第二部分中，你将使用 Python 准备 SQL Server 数据库中的数据。 在本系列的后面部分，你将通过 SQL Server 机器学习服务在 Python 中使用此数据定型和部署线性回归模型。
 
-本文将介绍如何执行以下操作：
+本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
-> * 将 SQL Server 数据库中的数据加载到**pandas**数据帧中
-> * 通过删除某些列在 Python 中准备数据
+> * 将 SQL 数据库中的数据加载到 pandas 数据帧中 
+> * 通过删除某些列，在 Python 中准备数据
 
-在[第一部分](python-ski-rental-linear-regression.md)中，您学习了如何还原示例数据库。
+在[第一部分](python-ski-rental-linear-regression.md)中，你了解了如何还原示例数据库。
 
-在[第三部分](python-ski-rental-linear-regression-train-model.md)中，你将了解如何在 Python 中训练线性回归机器学习模型。
+[第三部分](python-ski-rental-linear-regression-train-model.md)中已介绍如何在 Python 中定型线性回归机器学习模型。
 
-在[第四部分](python-ski-rental-linear-regression-deploy-model.md)中，你将了解如何将模型存储到 SQL Server，然后从你在第二和第三部分中开发的 Python 脚本中创建存储过程。 存储过程将在 SQL Server 中运行，以便基于新数据进行预测。
+[第四部分](python-ski-rental-linear-regression-deploy-model.md)介绍如何将模型存储到 SQL Server，然后根据在第二和第三部分中开发的 Python 脚本来创建存储过程。 存储过程将在 SQL Server 中运行，以便基于新数据进行预测。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-* 本教程的第二部分假设你已完成[第一个部分](python-ski-rental-linear-regression.md)及其必备组件。
+* 本教程的第二部分假设你已完成[第一部分](python-ski-rental-linear-regression.md)且满足其必备条件。
 
 ## <a name="explore-and-prepare-the-data"></a>浏览和准备数据
 
-若要在 Python 中使用数据，需将 SQL Server 数据库中的数据加载到 pandas 数据帧中。
+若要在 Python 中使用数据，请将 SQL 数据库中的数据加载到 pandas 数据帧中。
 
-在 Azure Data Studio 中创建新的 Python 笔记本，然后运行以下脚本。 将`<SQL Server>`替换为你自己的 SQL Server 名称。
+在 Azure Data Studio 中创建新的笔记本，并运行以下脚本。 将 `<SQL Server>` 替换为自己的 SQL Server 名称。
 
-下面的 Python 脚本将数据库中的**rental_data**表中的数据集导入到 pandas 数据帧**df**。
+下面的 Python 脚本将数据库中 dbo.rental_data 表中的数据集导入到 pandas 数据帧 df   。
 
 ```python
 import pandas as pd
@@ -96,7 +97,7 @@ columns = df.columns.tolist()
 columns = [c for c in columns if c not in ["Year"]]
 ```
 
-应会看到如下所示的结果。
+可得到类似于下面的结果。
 
 ```results
 Rows Processed: 453
@@ -114,12 +115,12 @@ Data frame:      Day  Holiday  Month  RentalCount  Snow  WeekDay  Year
 
 ## <a name="next-steps"></a>后续步骤
 
-在本系列教程的第二部分中，您完成了以下步骤：
+在本教程系列的第二部分中，你已完成这些步骤：
 
-* 将 SQL Server 数据库中的数据加载到**pandas**数据帧中
-* 通过删除某些列在 Python 中准备数据
+* 将 SQL 数据库中的数据加载到 pandas 数据帧中 
+* 通过删除某些列，在 Python 中准备数据
 
-若要训练使用 TutorialDB 数据库中的数据的机器学习模型，请遵循本教程系列中的第三部分：
+若要对使用 TutorialDB 数据库中数据的机器学习模型进行定型，请按照本教程系列的第三部分进行操作：
 
 > [!div class="nextstepaction"]
-> [Python 教程：为线性回归模型定型](python-ski-rental-linear-regression-train-model.md)
+> [Python 教程：定型线性回归模型](python-ski-rental-linear-regression-train-model.md)

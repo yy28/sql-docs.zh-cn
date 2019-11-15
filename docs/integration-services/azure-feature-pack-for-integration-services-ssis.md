@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cef051bcd3e7de6f381bba3f15f4e2e720f2a254
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 0e6531e05a3f800bbd4c1563c53c4b4d18eb0eea
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807431"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659590"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>用于 Azure 的 Integration Services (SSIS) 功能包
 
@@ -179,6 +179,12 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
 ## <a name="release-notes"></a>发行说明
+
+### <a name="version-1160"></a>版本 1.16.0
+
+#### <a name="bugfixes"></a>Bug 修复
+
+1. 在某些情况下，包执行报告“错误：无法加载文件或程序集‘Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed’ 或其依赖项之一。”
 
 ### <a name="version-1150"></a>版本 1.15.0
 

@@ -1,7 +1,7 @@
 ---
 title: 使用 kubeadm 配置 Kubernetes
-titleSuffix: SQL Server big data clusters
-description: 了解如何在多个 Ubuntu 16.04 或18.04 台计算机（物理或虚拟）上配置[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Kubernetes 以进行部署。
+titleSuffix: SQL Server Big Data Clusters
+description: 了解如何在多台 Ubuntu 16.04 或 18.04 计算机（物理或虚拟）上为 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 部署配置 Kubernetes。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,24 +9,24 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MT
+ms.openlocfilehash: 0bec68e81eab8557e86bfcbd5db78e19c0ce2175
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688302"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706366"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>在多台计算机上为 SQL Server 大数据群集部署配置 Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文提供了有关如何使用**kubeadm**在多台计算机上为[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]部署配置 Kubernetes 的示例。 在此示例中，目标为多台 Ubuntu 16.04 或 18.04 LTS 计算机（物理或虚拟）。 如果要部署到其他 Linux 平台，则必须更改部分命令以匹配你的系统。  
+本文提供示例，说明如何使用 kubeadm 在多台计算机上为 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 部署配置 Kubernetes  。 在此示例中，目标为多台 Ubuntu 16.04 或 18.04 LTS 计算机（物理或虚拟）。 如果要部署到其他 Linux 平台，则必须更改部分命令以匹配你的系统。  
 
 > [!TIP] 
 > 有关配置 Kubernetes 的示例脚本，请参阅[在 Ubuntu 16.04 LTS 或 18.04 LTS 上使用 Kubeadm 创建 Kubernetes 群集](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)。
 另请参阅[此](deployment-script-single-node-kubeadm.md)主题，以获取自动在 VM 上部署单节点 kubeadm 部署，然后在其上部署大数据群集默认配置的示例脚本。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - 至少 3 台 Linux 物理计算机或虚拟机
 - 每台计算机的建议配置：
@@ -35,7 +35,7 @@ ms.locfileid: "71688302"
    - 100 GB 存储
  
 > [!Important] 
-> 在开始大数据群集部署之前，请确保在部署面向的所有 Kubernetes 节点上同步时钟。 大数据群集具有适用于区分时间和时钟偏差的各种服务的内置运行状况属性，可能会导致不正确的状态。
+> 在启动大数据群集部署之前，请确保部署所针对的所有 Kubernetes 节点上的时钟同步。 大数据群集具有各种时间敏感型服务的内置运行状况属性，并且时钟偏差可能导致不正确的状态。
 
 ## <a name="prepare-the-machines"></a>准备计算机
 

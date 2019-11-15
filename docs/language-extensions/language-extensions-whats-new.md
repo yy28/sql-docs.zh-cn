@@ -1,22 +1,22 @@
 ---
-title: 语言扩展有哪些新增功能？
-titleSuffix: SQL Server Language Extensions
-description: 了解 SQL Server 2019 语言扩展的新增功能。
+title: SQL Server 语言扩展中有哪些新增功能？
+titleSuffix: ''
+description: 了解 SQL Server 语言扩展的新增功能。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 13a6a0181297fcb05274ba4be726c4e10a445064
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3bcf60c390b06695c4913bd1347045b807c1ae9d
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589011"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658806"
 ---
-# <a name="what-new-in-sql-server-language-extensions"></a>SQL Server 语言扩展中有哪些新增功能？
+# <a name="whats-new-in-sql-server-language-extensions"></a>SQL Server 语言扩展中有哪些新增功能？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 随着我们继续扩大、扩展和深化外部语言与数据平台之间的集成，每个版本的 SQL Server 中都将添加[语言扩展](language-extensions-overview.md)功能。 

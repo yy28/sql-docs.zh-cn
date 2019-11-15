@@ -1,7 +1,7 @@
 ---
 title: 什么是大数据群集？
 titleSuffix: SQL Server Big Data Clusters
-description: 了解在 Kubernetes 上运行并为关系数据和 HDFS 数据提供横向扩展选项的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]（预览版）。
+description: 了解在 Kubernetes 上运行并为关系数据和 HDFS 数据提供横向扩展选项的 SQL Server 大数据群集。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 296a39a59521441a8f3cd5b95bd8e61710fa568a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532511"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706660"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
@@ -56,7 +56,7 @@ SQL Server 大数据群集包括可缩放的 HDFS 存储池  。 这可用于存
 
 通过命令行工具、API、门户和动态管理视图的组合提供管理和监视。
 
-可以使用 Azure Data Studio 在大数据群集上执行各种任务。 这是由新的 SQL Server 2019 扩展（预览版）启用的  。 此扩展提供：
+可以使用 Azure Data Studio 在大数据群集上执行各种任务。 这是由新的 SQL Server 2019 扩展启用的  。 此扩展提供：
 
 - 用于常见管理任务的内置片段。
 - 浏览 HDFS、上传文件、预览文件和创建目录的能力。

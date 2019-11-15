@@ -1,36 +1,37 @@
 ---
-title: 用于 Python 和 R 教程的 Iris 演示数据集
-Description: 创建一个包含 Iris 数据集的数据库和一个用于存储模型的表。 此数据集用于演示如何在 SQL Server 存储过程中包装 R 语言或 Python 代码的练习。
+title: 用于教程的 Iris 演示数据集
+Description: 创建一个包含 Iris 数据集的数据库和一个用于存储模型的表。 练习中的该数据集用于演示如何在 SQL Server 存储过程中包装 R 语言或 Python 代码。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 78acdd0ef2eed808d8f974c38899282dc823436d
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: e580a4d3b8d0e294573cf19c0194cc9b8a103518
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715502"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727095"
 ---
-#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server 中的 Python 和 R 教程的 Iris 演示数据 
+#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server 中用于 Python 和 R 教程的 Iris 演示数据 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在此练习中, 将创建一个 SQL Server 数据库, 用于存储来自[Iris 花数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)的数据和基于相同数据的模型。 Iris 数据同时包含在 SQL Server 安装的 R 和 Python 分发版中, 用于 SQL Server 的机器学习教程。 
+在此练习中，创建一个 SQL Server 数据库，以存储来自 [Iris 数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)的数据以及基于相同数据的模型。 Iris 数据包含在由 SQL Server 安装的 R 和 Python 发行版中，并用于 SQL Server 的机器学习教程。 
 
-若要完成此练习, 您应该有[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)或可以运行 t-sql 查询的其他工具。
+若要完成此练习，应具有 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) 或其他可以运行 T-SQL 查询的工具。
 
-使用此数据集的教程和快速入门包括:
+使用此数据集的教程和快速入门包括以下内容：
 
-+  [起步使用中的存储过程创建、定型和使用 Python 模型 SQL Server](quickstart-python-train-score-in-tsql.md)
++  [快速入门：在 SQL Server 中创建、定型和使用带有存储过程的 Python 模型](quickstart-python-train-score-in-tsql.md)
 
 ## <a name="create-the-database"></a>创建数据库
 
-1. 开始 SQL Server Management Studio, 并打开一个新的**查询**窗口。  
+1. 启动 SQL Server Management Studio，并打开一个新的“查询”窗口  。  
 
-2. 为此项目创建一个新数据库, 然后更改**查询**窗口的上下文以使用新的数据库。
+2. 为此项目创建一个新数据库，并更改“查询”窗口的上下文以使用该新数据库  。
 
     ```sql
     CREATE DATABASE irissql
@@ -40,11 +41,11 @@ ms.locfileid: "68715502"
     ```
 
     > [!TIP] 
-    > 如果你不熟悉 SQL Server 或者正在使用自己的服务器, 则常见的错误是登录并开始工作, 而不会发现你在**master**数据库中。 若要确保使用正确的数据库, 请始终使用`USE <database name>`语句 (例如, `use irissql`) 指定上下文。
+    > 如果你不熟悉 SQL Server，或使用自己的服务器，一个常见的错误就是登录便开始操作，而没有注意到你在 master 数据库中  。 为确保使用正确的数据库，请始终使用 `USE <database name>` 语句（例如，`use irissql`）指定上下文。
 
-3. 添加一些空表: 一个用于存储数据, 另一个用于存储定型模型。 **Iris_models**表用于存储在其他练习中生成的序列化模型。
+3. 添加一些空表：一个用于存储数据，另一个用于存储已定型的模型。 “iris_models”表用于存储在其他练习中生成的序列化模型  。
 
-    下面的代码将为定型数据创建表。
+    以下代码创建用于定型数据的表。
 
     ```sql
     DROP TABLE IF EXISTS iris_data;
@@ -58,9 +59,9 @@ ms.locfileid: "68715502"
     ```
 
     > [!TIP] 
-    > 如果你不熟悉 t-sql, 则需要记住该`DROP...IF`语句。 当你尝试创建一个表并且一个已存在时, SQL Server 将返回错误:"数据库中已经有一个名为" iris_data "的对象。 避免此类错误的一种方法是在代码中删除任何现有的表或其他对象。
+    > 如果你不熟悉 T-SQL，则需要记住 `DROP...IF` 语句。 尝试创建表并已存在表时，SQL Server 返回错误：“数据库中已存在名为‘iris_dat’的对象。” 避免这类错误的一种方法是在代码中删除任何现有的表或其他对象。
 
-4. 运行以下代码以创建用于存储定型模型的表。 若要在 SQL Server 中保存 Python (或 R) 模型, 必须将其序列化并存储在**varbinary (max)** 类型的列中。 
+4. 运行以下代码以创建用于存储定型模型的表。 若要将 Python（或 R）模型保存在 SQL Server 中，必须将它们序列化并存储在 varbinary(max) 类型的列中  。 
 
     ```sql
     DROP TABLE IF EXISTS iris_models;
@@ -73,17 +74,17 @@ ms.locfileid: "68715502"
     GO
     ```
 
-    除了模型内容外, 通常还会添加其他有用元数据的列, 例如模型名称、训练日期、源算法和参数、源数据等。 现在, 我们将保持简单, 只使用模型名称。
+    除模型内容之外，通常还会为其他有用的元数据添加列，例如模型的名称、定型日期、源算法和参数、源数据等等。 但现在，为简便起见，我们将只使用模型名称。
 
 ## <a name="populate-the-table"></a>填充表
 
-可以从 R 或 Python 获取内置的 Iris 数据。 您可以使用 Python 或 R 将数据加载到数据帧中, 然后将其插入到数据库中的表中。 将定型数据从外部会话移动到 SQL Server 表是一个多步骤的过程:
+可以从 R 或 Python 获取内置 Iris 数据。 可以使用 Python 或 R 将数据加载到数据帧中，然后将其插入数据库中的表中。 将定型数据从外部会话移动到 SQL Server 表中包含以下几个步骤：
 
-+ 设计用于获取所需数据的存储过程。
-+ 执行存储过程以实际获取数据。
-+ 构造 INSERT 语句以指定应在何处保存检索的数据。
++ 设计一个用于获取所需数据的存储过程。
++ 执行该存储过程以实际获取数据。
++ 构造 INSERT 语句，以指定在何处保存检索到的数据。
 
-1. 在具有 Python 集成的系统上, 创建以下存储过程, 该存储过程使用 Python 代码来加载数据。
+1. 在具有 Python 集成的系统上，创建以下使用 Python 代码加载数据的存储过程。
 
     ```sql
     CREATE PROCEDURE get_iris_dataset
@@ -104,9 +105,9 @@ ms.locfileid: "68715502"
     GO
     ```
 
-    运行此代码时, 应收到消息 "命令已成功完成"。 也就是说, 该存储过程已根据您的规范创建。
+    运行此代码时，应收到消息“命令已成功完成。” 这意味着存储过程已根据你的规范创建。
 
-2. 或者, 在具有 R 集成的系统上, 创建使用 R 的过程。
+2. 或者，在具有 R 集成的系统上，创建一个使用 R 的过程。
 
     ```sql
     CREATE PROCEDURE get_iris_dataset
@@ -126,26 +127,26 @@ ms.locfileid: "68715502"
     GO
     ```
 
-3. 若要实际填充表, 请运行存储过程, 并指定应在其中写入数据的表。 运行时, 该存储过程将执行 Python 或 R 代码, 这将加载内置的 Iris 数据集, 然后将数据插入**iris_data**表中。
+3. 若要实际填充表，请运行存储过程并指定应在其中写入数据的表。 运行时，存储过程执行 Python 或 R 代码，该代码加载内置 Iris 数据集，然后将数据插入“iris_data”表  。
 
     ```sql
     INSERT INTO iris_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species", "SpeciesId")
     EXEC dbo.get_iris_dataset;
     ```
 
-    如果不熟悉 T-sql, 请注意 INSERT 语句仅添加新数据;它不会检查现有数据, 也不会删除和重新生成表。 若要避免在表中获取相同数据的多个副本, 可以先运行以下语句: `TRUNCATE TABLE iris_data`。 T-sql [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql)语句删除现有数据, 但保持表的结构保持不变。
+    如果不熟悉 T-SQL，请注意，INSERT 语句只添加新的数据；它不会检查现有的数据，也不会删除和重新生成表。 若要避免在表中获取相同数据的多个副本，可以先运行以下语句：`TRUNCATE TABLE iris_data`。 T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) 语句可删除现有数据，但保持表结构完整。
 
     > [!TIP]
-    > 若要在以后修改存储过程, 则无需删除并重新创建它。 使用[ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql)语句。 
+    > 若要在以后修改存储过程，则无需删除并重新创建。 使用 [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql) 语句。 
 
 
 ## <a name="query-the-data"></a>查询数据
 
-作为验证步骤, 运行查询以确认已上传数据。
+作为验证步骤，运行查询以确认已上传数据。
 
-1. 在对象资源管理器的 "数据库" 下, 右键单击**irissql**数据库, 然后启动一个新查询。
+1. 在“对象资源管理器”中的“数据库”下，右键单击“irissql”数据库，然后启动一个新查询  。
 
-2. 运行一些简单的查询:
+2. 运行一些简单的查询：
 
     ```sql
     SELECT TOP(10) * FROM iris_data;
@@ -154,6 +155,6 @@ ms.locfileid: "68715502"
 
 ## <a name="next-steps"></a>后续步骤
 
-在以下快速入门中, 你将创建机器学习模型, 并将其保存到表中, 然后使用该模型生成预测的结果。
+在下面的快速入门中，你将创建一个机器学习模型并将其保存到表中，然后使用该模型生成预测结果。
 
-+ [起步使用中的存储过程创建、定型和使用 Python 模型 SQL Server](quickstart-python-train-score-in-tsql.md)
++ [快速入门：在 SQL Server 中创建、定型和使用带有存储过程的 Python 模型](quickstart-python-train-score-in-tsql.md)

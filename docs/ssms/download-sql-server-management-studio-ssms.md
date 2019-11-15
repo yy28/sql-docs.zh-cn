@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 7597b0ef624958010981844969889b1c589c4883
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 5188b9a90a910ba94d73db48f5e0c1c527145e48
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594329"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843739"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -44,7 +44,7 @@ SSMS 是免费的！
 
 SSMS 18.4 是 SSMS 的最新正式发布 (GA) 版。 如果安装了之前的 SSMS 18 GA 版本，请安装 SSMS 18.4 将它升级到 18.4。 如果安装了较早的 SSMS 18.x 预览版，必须在安装 SSMS 18.4 前卸载预览版  。
 
-**版本信息**
+### <a name="version-information"></a>版本信息
 
 - 版本号：18.4  
 - 生成号：15.0.18206.0  
@@ -57,7 +57,7 @@ SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与
 如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18 
 
 > [!Note]
-> 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
+> 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本](https://aka.ms/downloadssmsusenglish)。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
 
 ## <a name="available-languages"></a>可用语言
 
@@ -114,7 +114,7 @@ SQL Server Management Studio 18.4：
 
 ## <a name="release-notes-ssms-184"></a>发行说明 (SSMS 18.4)
 
-此版本存在一些[已知问题](release-notes-ssms.md#known-issues-1831)。
+此版本存在一些[已知问题](release-notes-ssms.md#known-issues-184)。
 
 有关此版本的详细信息，请参阅 [SSMS 发行说明](release-notes-ssms.md)。
 

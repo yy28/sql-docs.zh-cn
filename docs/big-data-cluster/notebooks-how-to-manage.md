@@ -9,22 +9,22 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958280"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844265"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>如何管理 Azure Data Studio 中的笔记本
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何使用 SQL Server 2019 预览版在 Azure Data Studio 中打开和保存笔记本文件。 还演示了如何更改与 SQL Server 大数据群集的连接。
+本文介绍如何使用 SQL Server 在 Azure Data Studio 中打开和保存笔记本文件。 还演示了如何更改与 SQL Server 大数据群集的连接。
 
 ## <a name="prerequisites"></a>必备条件
 
-本文假定你已有一个要在 Azure Data Studio 中使用的笔记本。 若要创建笔记本，请参阅[如何在 SQL Server 2019 预览版中使用笔记本](notebooks-guidance.md)。 若要使用 Azure Data Studio 中的笔记本，则必须满足以下先决条件：
+本文假定你已有一个要在 Azure Data Studio 中使用的笔记本。 若要创建笔记本，请参阅[如何在 SQL Server 中使用笔记本](notebooks-guidance.md)。 若要使用 Azure Data Studio 中的笔记本，则必须满足以下先决条件：
 
 - [部署大数据群集](quickstart-big-data-cluster-deploy.md)。
 - [SQL Server 2019 大数据工具](deploy-big-data-tools.md)：
@@ -50,7 +50,7 @@ ms.locfileid: "67958280"
 
 ### <a name="command-palette"></a>命令面板
 
-通过键入 Ctrl+Shift+P（在 Windows 中）或 Cmd+Shift+P（在 Mac 中），使用命令面板中的命令“File:Open”** 。
+通过键入 Ctrl+Shift+P（在 Windows 中）或 Cmd+Shift+P（在 Mac 中），使用命令面板中的命令“File:Open”  。
 
 ![通过在命令面板中输入“File:Open”，打开“打开文件”对话框](./media/notebooks-how-to-manage/open-file-3.png)
 
@@ -64,7 +64,7 @@ ms.locfileid: "67958280"
 > 以下方法目前不会保存对笔记本的更改：
 >
 > - “文件”菜单中的“文件保存”、“文件另存为...”和“文件全部保存”命令    。
-> - 在命令面板中输入的“File:Open”命令**。
+> - 在命令面板中输入的“File:Open”命令  。
 
 ## <a name="change-the-big-data-cluster"></a>更改大数据群集
 
@@ -80,4 +80,4 @@ ms.locfileid: "67958280"
 
 ## <a name="next-steps"></a>后续步骤
 
-有关 Azure Data Studio 中的笔记本的详细信息，请参阅[如何使用 SQL Server 2019 预览版中的笔记本](notebooks-guidance.md)。
+有关 Azure Data Studio 中的笔记本的详细信息，请参阅[如何在 SQL Server 2019 中使用笔记本](notebooks-guidance.md)。

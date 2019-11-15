@@ -1,21 +1,23 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure 文档
-description: 了解如何使用 Microsoft Azure 云服务生成和管理功能强大的应用程序。 获取文档、示例代码、教程和更多信息。
+experimental: true
+experiment_id: 81ba5f65-59fb-4d
+title: SQL Server 教育中心
+description: 可用于了解 SQL Server 和 Azure SQL 数据库的资源摘要。 从快速入门和教程，到 Microsoft Learn 和 LinkedIn Learning。
 ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 12/15/2018
+ms.date: 11/05/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4430d76ac8e848127e9936bb6ecf8aa8b08e9982
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: b05ebcd71bed887d711705b3dffa99bf6ecf05fc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176274"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637925"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -49,7 +51,7 @@ ms.locfileid: "70176274"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">获取具有 SQL Server 的虚拟机</span>
+                                    <span class="likeAnH3">使用 SQL Server 获取虚拟机</span>
                                 </div>
                             </div>
                         </div>

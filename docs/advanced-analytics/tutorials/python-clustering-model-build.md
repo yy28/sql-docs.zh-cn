@@ -1,6 +1,6 @@
 ---
-title: 教程：在 Python 中生成模型以对客户进行分类
-description: 在这四个部分的系列教程的第三部分中，你将构建一个 K 平均值的模型，以便在 Python 中使用 SQL Server 机器学习服务执行群集。
+title: Python 教程：创建群集模型
+description: 在这个由四部分组成的教程系列的第三部分中，你将创建一个 K-Means 模型，以便通过 SQL Server 机器学习服务在 Python 中执行聚类分析。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,48 +9,49 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8707d14b1e332ae6ecebf83213ed53701343bcd3
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
-ms.translationtype: MT
+ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294402"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727111"
 ---
-# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教程：在 Python 中构建模型，使用 SQL Server 机器学习服务为客户分类
+# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教程：在 Python 中创建模型以通过 SQL Server 机器学习服务对客户进行分类
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在这四个部分的系列教程的第三部分中，你将在 Python 中构建一个 K 平均值的模型来执行聚类分析。 在本系列的下一部分中，你将在 SQL 数据库中使用 SQL Server 机器学习服务部署此模型。
+在这个由四部分组成的教程系列的第三部分中，你将在 Python 中创建一个 K-Means 模型来执行聚类分析。 在本系列的下一部分中，你将使用 SQL Server 机器学习服务在 SQL 数据库中部署此模型。
 
-本文将介绍如何执行以下操作：
+本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
-> * 定义 K 平均值算法的分类数
-> * 执行群集
+> * 定义 K-Means 算法的群集数
+> * 执行聚类分析
 > * 分析结果
 
-在[第一部分](python-clustering-model.md)中，你安装了必备组件并还原了示例数据库。
+在[第一部分](python-clustering-model.md)中，你安装了必备条件并还原了示例数据库。
 
-[第二部分](python-clustering-model-prepare-data.md)介绍了如何从 SQL 数据库准备要执行群集的数据。
+在[第二部分](python-clustering-model-prepare-data.md)中，你学习了如何从 SQL 数据库准备数据以执行聚类分析。
 
-在[第四部分](python-clustering-model-deploy.md)中，你将了解如何在 SQL 数据库中创建一个存储过程，该存储过程可基于新数据在 Python 中执行群集操作。
+在[第四部分](python-clustering-model-deploy.md)中，你将了解如何在 SQL 数据库中创建存储过程，以便基于新数据在 Python 中执行聚类分析。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-* 本教程的第三部分假设你满足了[**第一部分**](python-clustering-model.md)的先决条件，并完成了[**第二部分**](python-clustering-model-prepare-data.md)中的步骤。
+* 本教程的第三部分假设你已完成[第一部分](python-clustering-model.md)的必备条件，并完成了[第二部分](python-clustering-model-prepare-data.md)中的步骤   。
 
-## <a name="define-the-number-of-clusters"></a>定义群集数量
+## <a name="define-the-number-of-clusters"></a>定义群集数
 
-若要对你的客户数据进行分类，你将使用**K 平均值**聚类算法，这是对数据进行分组的最简单、最常见的方法之一。
-有关 k 平均值的详细信息，请参阅[k 平均值聚类分析算法](https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html)。
+若要对客户数据进行聚类分析，需要使用 K-Means 聚类分析算法，这是最简单、最常见的数据分组方法之一  。
+有关 K-Means 的详细信息，请参阅 [K-means 聚类分析算法的完整指南](https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html)。
 
-该算法接受两个输入：数据本身和预定义的数字 "*k*"，表示要生成的分类数。
-输出是*k*群集，其中输入数据已在群集中分区。
+该算法接受两个输入：数据本身，以及代表要生成的群集数的预定义数字“k”  。
+输出是 K 个群集，输入数据在群集之间进行分区  。
 
-K 平均值的目标是将各项分组到 k 个分类中，以便同一群集中的所有项彼此相似，并与其他群集中的项不同。
+K-Means 的目标是将项目分组为 K 个群集，以使同一群集中的所有项目彼此相似，并且与其他群集中的项目尽可能不同。
 
-若要确定要使用的算法的分类数，请使用中的组内方差，按提取的分类数。 要使用的相应分类数位于绘图的弯曲或 "肘形" 中。
+要确定要使用的算法的群集数，请使用组内平方和的图，并按提取的群集数进行绘制。 要使用的适当群集数是在曲线的折弯处或“肘形”处。
 
 ```python
 ################################################################################################
@@ -75,11 +76,11 @@ plt.show()
 
 ![肘形图](./media/python-tutorial-elbow-graph.png)
 
-根据图形，其外观类似于*k = 4* ，这是一个很好的尝试值。 这*k*值会将客户分组为四个分类。
+根据该图，看起来 k = 4 将是一个不错的尝试值  。 该 ķ 值将客户分组为四个群集  。
 
-## <a name="perform-clustering"></a>执行群集
+## <a name="perform-clustering"></a>执行聚类分析
 
-在下面的 Python 脚本中，你将使用 spark-sklearn 包中的 KMeans 函数。
+在以下 Python 脚本中，将使用 sklearn 包中的 KMeans 函数。
 
 ```python
 ################################################################################################
@@ -107,9 +108,9 @@ print(customer_data.groupby(['cluster']).mean())
 
 ## <a name="analyze-the-results"></a>分析结果
 
-现在，你已使用 K 平均值执行了聚类分析，下一步是分析结果，并查看是否可以找到任何可操作的信息。
+使用 K-Means 进行聚类分析后，接下来就是分析结果，了解是否可以找到任何可操作的信息。
 
-查看从上一脚本打印的聚类分析平均值和群集大小。
+查看从上一个脚本打印的群集平均值和群集大小。
 
 ```results
 Cluster0(n=31675):
@@ -129,20 +130,20 @@ cluster
 3        48516.023845    0.136277    0.078346       0.044497   4.271237
 ```
 
-这四个分类是使用[第一部分](python-clustering-model-prepare-data.md#separate-customers)中定义的变量指定的：
+使用[第一部分](python-clustering-model-prepare-data.md#separate-customers)中定义的变量给出四种群集平均值：
 
-* *orderRatio* = 返回订单比率（部分或全部返回的订单总数与订单总数相同）
-* *itemsRatio* = 返回项的比率（返回的项总数与购买的项数）
-* *monetaryRatio* = 返回金额比率（返回的项目的总货币金额与购买的金额）
-* *frequency* = 返回频率
+* orderRatio = 退单率（部分或全部退货的订单总数与订单总数的比率） 
+* itemsRatio = 退货率（退货总数与购买商品数量的比率） 
+* monetaryRatio = 退款率（退货的总货币金额与购买总金额的比率） 
+* frequency = 退货频率 
 
-使用 K 平均值的数据挖掘通常需要进一步分析结果，并执行更多步骤来更好地了解每个分类，但它可以提供一些优秀的潜在顾客。
-可以通过以下几种方法解释这些结果：
+使用 K-Means 进行数据挖掘通常需要对结果进行进一步的分析，并采取进一步的步骤以更好地理解每个群集，但是它可以提供一些优秀的潜在顾客。
+下面通过以下几种方法来解释这些结果：
 
-* 群集0似乎是一组未处于活动状态的客户（所有值均为零）。
-* 群集3似乎是一个在返回行为方面出现的组。
+* 群集 0 似乎是一组不活动的客户（所有值均为零）。
+* 群集 3 似乎是一个在返回行为方面出现的组。
 
-群集0是一组清晰不活跃的客户。 也许你可以将市场营销活动定向到此组，以触发对购买的兴趣。 在下一步中，你将在数据库中查询群集0中的客户的电子邮件地址，以便向他们发送市场营销电子邮件。
+群集 0 显然是一组不活跃的客户。 也许你可以针对该群体进行营销活动，以激发购买兴趣。 在下一步中，你将在数据库中查询群集 0 中客户的电子邮件地址，以便向他们发送市场营销电子邮件。
 
 ## <a name="clean-up-resources"></a>清理资源
 
@@ -152,11 +153,11 @@ cluster
 
 在本系列教程的第三部分中，你已完成以下步骤：
 
-* 定义 K 平均值算法的分类数
-* 执行群集
+* 定义 K-Means 算法的群集数
+* 执行聚类分析
 * 分析结果
 
-若要部署已创建的机器学习模型，请遵循本系列教程中的第四部分：
+若要部署已创建的机器学习模型，请按照本系列教程的第四部分进行操作：
 
 > [!div class="nextstepaction"]
-> [教程：使用 SQL Server 机器学习服务在 Python 中部署群集模型](python-clustering-model-deploy.md)
+> [教程：通过 SQL Server 机器学习服务在 Python 中部署群集模型](python-clustering-model-deploy.md)

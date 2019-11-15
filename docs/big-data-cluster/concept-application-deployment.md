@@ -1,7 +1,7 @@
 ---
 title: 什么是应用程序部署？
 titleSuffix: Big Data Clusters for SQL Server 2019
-description: 本文介绍 SQL Server 2019 的大数据群集上的应用程序部署。
+description: 本文介绍 SQL Server 2019 大数据群集上的应用程序部署。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653009"
@@ -61,12 +61,12 @@ output: #output parameter the app expects and the type
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关如何在上[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]创建和运行应用程序的详细信息, 请参阅以下内容:
+若要了解有关如何在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上创建和运行应用程序的详细信息，请参阅以下内容：
 
 - [使用 azdate 部署应用程序](big-data-cluster-create-apps.md)
 - [使用应用部署扩展部署应用程序](app-deployment-extension.md)
 - [在大数据群集上使用应用程序](big-data-cluster-consume-apps.md)
 
-若要了解有关的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]详细信息, 请参阅以下概述:
+若要了解有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的详细信息，请参阅以下概述：
 
-- [什么是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
+- [什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)

@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ca20922eb99354aa5f2a6bc97f238daf93724ff
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: 715541f066678807b5ef46b6697f32c5e1e233d2
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227151"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882386"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -580,9 +580,7 @@ WITH
 
 ## <a name="overview-azure-sql-database"></a>概述：Azure SQL Database
 
-在 Azure SQL 数据库中，针对[弹性查询](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)创建外部表，以用于 Azure SQL 数据库。
-
-使用外部表来创建一个外部表，以用于弹性查询。
+在 Azure SQL 数据库中，针对[弹性查询（预览版）](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)创建外部表。
 
 另请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
@@ -661,7 +659,7 @@ DISTRIBUTION（可选）。 只有 SHARD_MAP_MANAGER 类型的数据库才需要
 
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
-由于外部表的数据位于其他 SQL 数据库中，因此可以随时更改或删除它。 因此，针对外部表的查询结果不保证具有确定性。 相同查询可能会在每次针对外部表运行时返回不同结果。 同样，如果外部数据已移动或删除，则查询可能会失败。
+通过外部表访问数据不符合 SQL Server 中的隔离语义。 这意味着查询外部数据源不会施加任何锁定或快照隔离，因此，如果外部数据源中的数据更改，则返回的数据也可能更改。  相同查询可能会在每次针对外部表运行时返回不同结果。 同样，如果外部数据已移动或删除，则查询可能会失败。
 
 可以创建各自引用不同外部数据源的多个外部表。
 
@@ -674,6 +672,24 @@ DISTRIBUTION（可选）。 只有 SHARD_MAP_MANAGER 类型的数据库才需要
 
 - 外部表列上的 DEFAULT 约束
 - 删除、插入和更新的数据操作语言 (DML) 操作
+
+仅查询中定义的文本谓词才能下推到外部数据源。 这不同于链接服务器以及访问可使用在查询执行过程中确定的谓词的位置，即，在查询计划中与嵌套循环一起使用时。 这通常会导致在本地复制整个外部表并随后联接到外部表。    
+
+```sql
+  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ This query  will copy the whole of the external locally as the predicate needed
+  \\ to filter isn't known at compile time. Its only known during execution of the query
+  
+  SELECT Orders.OrderId, Orders.OrderTotal 
+    FROM External.Orders
+   WHERE CustomerId in (SELECT TOP 1 CustomerId 
+                          FROM Customer 
+                         WHERE CustomerName = 'MyCompany')
+```
+
+使用外部表可防止在查询计划中使用并行。
+
+外部表作为远程查询实现，因此，估计的返回行数通常为 1000 行，还有基于用于筛选外部表的谓词类型的其他规则。 它们是基于规则的估计，而不是基于外部表中的实际数据的估计。 优化器不会通过访问远程数据源来获取更准确的估计。
 
 ## <a name="locking"></a>锁定
 

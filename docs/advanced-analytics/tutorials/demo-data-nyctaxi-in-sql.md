@@ -1,92 +1,93 @@
 ---
-title: 下载适用于嵌入式 R 和 Python 的 NYC 出租车演示数据和脚本
-description: 下载纽约出租车示例数据和创建数据库的说明。 数据用于 SQL Server Python 和 R 语言教程, 这些教程显示了如何在 SQL Server 存储过程和 T-sql 函数中嵌入脚本。
+title: 教程适用的纽约市出租车演示数据
+description: 下载纽约市出租车示例数据和创建数据库的说明。 数据用于 SQL Server Python 和 R 语言教程，该教程演示了如何在 SQL Server 存储过程和 T-SQL 函数中嵌入脚本。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a5b60397bb3581ba2d210a6b4469184306145c8a
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 8413456563a85f9c126dd9981e3e6df548cd30c4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714858"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727155"
 ---
-# <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 教程的 NYC 出租车演示数据
+# <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>用于 SQL Server Python 和 R 教程的纽约市出租车演示数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文介绍如何设置一个示例数据库, 其中包含来自[纽约出租车和礼车委员会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)的公共数据。 此数据在多个 R 和 Python 教程中用于 SQL Server 上的数据库内分析。 为了使示例代码运行速度更快, 我们创建了一个代表性 1% 的数据采样。 在您的系统上, 数据库备份文件略微超过 90 MB, 在主数据表中提供1700000行。
+本文介绍了如何设置一个示例数据库，该数据库包含来自[纽约市出租车和轿车委员会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)的公共数据。 此数据用于多个 R 和 Python 教程，用于 SQL Server 上的数据库内分析。 为了使示例代码运行速度更快，我们创建了一个具有代表性的 1% 采样数据。 在你的系统上，数据库备份文件略大于 90 MB，在主数据表中提供 170 万行。
 
-若要完成此练习, 您应该有[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)或其他可还原数据库备份文件和运行 t-sql 查询的工具。
+若要完成此练习，你应该拥有 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) 或其他可以还原数据库备份文件并运行 T-SQL 查询的工具。
 
-使用此数据集的教程和快速入门包括:
+使用此数据集的教程和快速入门包括以下内容：
 
-+ [使用 SQL Server 中的 R 了解数据库内分析](sqldev-in-database-r-for-sql-developers.md)
-+ [使用 SQL Server 中的 Python 了解数据库内分析](sqldev-in-database-python-for-sql-developers.md)
++ [在 SQL Server 中使用 R 学习数据库内分析](sqldev-in-database-r-for-sql-developers.md)
++ [在 SQL Server 中使用 Python 学习数据库内分析](sqldev-in-database-python-for-sql-developers.md)
 
 ## <a name="download-files"></a>下载文件
 
-该示例数据库是 Microsoft 托管的 SQL Server 2016 .BAK 文件。 可以在2016和更高版本上还原 SQL Server。 单击链接时, 将立即开始下载文件。 
+示例数据库为 Microsoft 托管的 SQL Server 2016 BAK 文件。 可在 SQL Server 2016 及更高版本上还原它。 单击链接后，将立即开始文件下载。 
 
 文件大小约为 90 MB。
 
-1. 单击 " [NYCTaxi_Sample](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) " 下载数据库备份文件。
+1. 单击 [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) 下载数据库备份文件。
 
 2. 将该文件复制到 C:\Program files\Microsoft SQL Server\MSSQL-instance-name\MSSQL\Backup 文件夹。
 
-3. 在 Management Studio 中, 右键单击 "**数据库**", 然后选择 "**还原文件和文件组**"。
+3. 在 Management Studio 中，右键单击“数据库”，然后选择“还原文件和文件组”   。
 
-4. 输入*NYCTaxi_Sample*作为数据库名称。
+4. 输入“NYCTaxi_Sample”作为数据库名称  。
 
-5. 单击 "**来自设备**", 然后打开 "文件选择" 页以选择备份文件。 单击 "**添加**" 以选择 "NYCTaxi_Sample"。
+5. 单击“从设备”，然后打开文件选择页以选择备份文件  。 单击“添加”以选择 NYCTaxi_Sample.bak  。
 
-6. 选择 "**还原**" 复选框, 然后单击 **"确定"** 以还原数据库。
+6. 选中“还原”复选框，然后单击“确定”以还原数据库   。
 
 ## <a name="review-database-objects"></a>查看数据库对象
    
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]确认实例上存在数据库对象。 应会看到数据库、表、函数和存储过程。
+使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 确认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上存在数据库对象。 你可看到数据库、表、函数和存储过程。
   
    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")
 
-### <a name="objects-in-nyctaxisample-database"></a>NYCTaxi_Sample 数据库中的对象
+### <a name="objects-in-nyctaxi_sample-database"></a>NYCTaxi_Sample 数据库中的对象
 
-下表总结了 NYC 出租车 demo 数据库中创建的对象。
+下表总结了纽约市出租车演示数据库中创建的对象。
 
-|**对象名称**|**对象类型**|**说明**|
+|**对象名称**|**对象类型**|**Description**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | “数据库” | 创建一个数据库和两个表：<br /><br />nyctaxi_sample 表:包含主 NYC 出租车数据集。 将在表中添加一个聚集列存储索引，改善存储和查询性能。 NYC 出租车数据集的 1% 样本插入到此表中。<br /><br />nyc _taxi_models 表:用于保留训练的高级分析模型。|
-|**fnCalculateDistance** |标量值函数 (scalar-valued function) | 计算拾取和下车位置之间的直接距离。 此函数用于[创建数据功能](sqldev-create-data-features-using-t-sql.md)、[定型和保存模型](sqldev-train-and-save-a-model-using-t-sql.md)以及[操作 R 模型](sqldev-operationalize-the-model.md)。|
-|**fnEngineerFeatures** |表值函数 (table-valued function) | 为模型定型创建新的数据功能。 此函数用于[创建数据功能](sqldev-create-data-features-using-t-sql.md)和[操作 R 模型](sqldev-operationalize-the-model.md)。|
+|**NYCTaxi_Sample** | “数据库” | 创建一个数据库和两个表：<br /><br />dbo.nyctaxi_sample 表：包含纽约市出租车主数据集。 将在表中添加一个聚集列存储索引，改善存储和查询性能。 此表中插入了纽约市出租车数据集的 1% 采样。<br /><br />dbo.nyc_taxi_models 表：用于保留已定型的高级分析模型。|
+|**fnCalculateDistance** |标量值函数 (scalar-valued function) | 计算搭乘位置和下车位置之间的直接距离。 在[创建数据功能](sqldev-create-data-features-using-t-sql.md)、[定型和保存模型](sqldev-train-and-save-a-model-using-t-sql.md)以及[操作 R 模型](sqldev-operationalize-the-model.md)中使用此功能。|
+|**fnEngineerFeatures** |表值函数 (table-valued function) | 为模型定型创建新的数据功能。 在[创建数据功能](sqldev-create-data-features-using-t-sql.md)和[操作 R 模型](sqldev-operationalize-the-model.md)中使用此功能。|
 
 
-使用在各种教程中找到的 R 和 Python 脚本来创建存储过程。 下表总结了从不同课程运行脚本时, 可以选择添加到 NYC 出租车演示程序的存储过程。
+使用在各种教程中找到的 R 和 Python 脚本创建存储过程。 下表总结了从不同课程运行脚本时可以选择添加到纽约市出租车演示数据库的存储过程。
 
-|**存储过程**|**语言**|**说明**|
+|**存储过程**|**语言**|**Description**|
 |-------------------------|------------|---------------|
-|**RxPlotHistogram** |R | 调用 RevoScaleR rxHistogram 函数以绘制变量的直方图, 然后将该绘图作为二进制对象返回。 此存储过程用于[浏览和可视化数据](sqldev-explore-and-visualize-the-data.md)。|
-|**RPlotRHist** |R| 使用他函数创建图形, 并将输出保存为本地 PDF 文件。 此存储过程用于[浏览和可视化数据](sqldev-explore-and-visualize-the-data.md)。|
-|**RxTrainLogitModel**  |R| 通过调用 R 包训练逻辑回归模型。 该模型预测附属列的值，并使用随机选择的 70% 的数据进行定型。 存储过程的输出是定型模型，保存在表 nyc_taxi_models 中。 此存储过程用于[定型并保存模型](sqldev-train-and-save-a-model-using-t-sql.md)。|
-|**RxPredictBatchOutput**  |R | 调用定型模型来使用模型创建预测。 该存储过程接受查询作为其输入参数，并返回包含输入行分数的数值的列。 此存储过程用于[预测潜在的结果](sqldev-operationalize-the-model.md)。|
-|**RxPredictSingleRow**  |R| 调用定型模型来使用模型创建预测。 该存储过程接受一个新观察值作为输入，而传递的单个功能值作为嵌入式参数，并返回一个预测新观察值结果的值。 此存储过程用于[预测潜在的结果](sqldev-operationalize-the-model.md)。|
+|**RxPlotHistogram** |R | 调用 RevoScaleR rxHistogram 函数绘制变量的直方图，然后将绘图作为二进制对象返回。 在[浏览并可视化数据](sqldev-explore-and-visualize-the-data.md)中使用此存储过程。|
+|**RPlotRHist** |R| 使用 Hist 函数创建图形，然后将输出保存为本地 PDF 文件。 在[浏览并可视化数据](sqldev-explore-and-visualize-the-data.md)中使用此存储过程。|
+|**RxTrainLogitModel**  |R| 通过调用 R 程序包定型逻辑回归模型。 该模型预测附属列的值，并使用随机选择的 70% 的数据进行定型。 存储过程的输出是定型模型，保存在表 nyc_taxi_models 中。 在[定型和保存模型](sqldev-train-and-save-a-model-using-t-sql.md)中使用此存储过程。|
+|**RxPredictBatchOutput**  |R | 调用已定型模型以便使用模型创建预测。 该存储过程接受查询作为其输入参数，并返回包含输入行分数的数值的列。 在[预测潜在结果](sqldev-operationalize-the-model.md)中使用此存储过程。|
+|**RxPredictSingleRow**  |R| 调用已定型模型以便使用模型创建预测。 该存储过程接受一个新观察值作为输入，而传递的单个功能值作为嵌入式参数，并返回一个预测新观察值结果的值。 在[预测潜在结果](sqldev-operationalize-the-model.md)中使用此存储过程。|
 
 ## <a name="query-the-data"></a>查询数据
 
-作为验证步骤, 运行查询以确认已上传数据。
+作为验证步骤，运行查询以确认已上传数据。
 
-1. 在对象资源管理器的 "数据库" 下, 右键单击**NYCTaxi_Sample**数据库, 然后启动一个新查询。
+1. 在“对象资源管理器”中的“数据库”下，右键单击“NYCTaxi_Sample”数据库，然后启动一个新查询  。
 
-2. 运行一些简单的查询:
+2. 运行一些简单的查询：
 
     ```sql
     SELECT TOP(10) * FROM dbo.nyctaxi_sample;
     SELECT COUNT(*) FROM dbo.nyctaxi_sample;
     ```
-数据库包含1700000行。
+数据库包含 170 万行。
 
-3. 数据库中包含数据集的**nyctaxi_sample**表。 该表已针对基于集的计算进行了优化, 并添加了[列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。 运行此语句可生成表的快速摘要。
+3. 数据库内是一个包含数据集的 nyctaxi_sample 表  。 表已针对基于集的计算进行了优化，并且添加了[列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。 运行此语句，以生成表的快速摘要。
 
     ```sql
     SELECT DISTINCT [passenger_count]
@@ -102,7 +103,7 @@ ms.locfileid: "68714858"
 
 ## <a name="next-steps"></a>后续步骤
 
-NYC 出租车示例数据现在可用于实际操作。
+纽约市出租车示例数据现在可用于实践学习。
 
-+ [使用 SQL Server 中的 R 了解数据库内分析](sqldev-in-database-r-for-sql-developers.md)
-+ [使用 SQL Server 中的 Python 了解数据库内分析](sqldev-in-database-python-for-sql-developers.md)
++ [在 SQL Server 中使用 R 学习数据库内分析](sqldev-in-database-r-for-sql-developers.md)
++ [在 SQL Server 中使用 Python 学习数据库内分析](sqldev-in-database-python-for-sql-developers.md)

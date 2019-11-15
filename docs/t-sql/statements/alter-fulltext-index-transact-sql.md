@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4729caa9c90ae2ebc90ab3254b4222e0fb47ae46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23e08c74d0b41e24eb9677c59b52026e33c527f0
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067535"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049962"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中更改全文检索的属性。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -78,7 +78,7 @@ ALTER FULLTEXT INDEX ON table_name
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否会将对全文检索所覆盖的表列的更改（更新、删除或插入）传播到全文检索。 通过 WRITETEXT 和 UPDATETEXT 所做的数据更改不会反映到全文索引中，也不能使用更改跟踪方法拾取。  
   
 > [!NOTE]  
->  有关更改跟踪交互和 WITH NO POPULATION 的信息，请参阅本主题后面的“备注”。  
+>  有关详细信息，请参阅[更改跟踪和 NO POPULATION 参数的交互](#change-tracking-no-population)。
   
  MANUAL  
  指定跟踪的更改会手动传播，方法是调用 ALTER FULLTEXT INDEX ...START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（手动填充）  。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来定期调用此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
@@ -97,7 +97,7 @@ ALTER FULLTEXT INDEX ON table_name
  将 TYPE COLUMN 和 LANGUAGE 与 ADD 子句一起使用，以对 column_name 设置这些属性  。 添加列后，必须重新填充该表的全文索引，才能使针对此列进行的全文查询生效。  
   
 > [!NOTE]  
->  在全文索引中添加或删除某个列后，是否填充全文索引取决于是否启用了更改跟踪以及是否指定了 WITH NO POPULATION。 有关详细信息，请参阅本主题后面的“备注”。  
+>  在全文索引中添加或删除某个列后，是否填充全文索引取决于是否启用了更改跟踪以及是否指定了 WITH NO POPULATION。 有关详细信息，请参阅[更改跟踪和 NO POPULATION 参数的交互](#change-tracking-no-population)。
   
  TYPE COLUMN type_column_name   
  指定表列的名称 (type_column_name)，用于存储 varbinary、varbinary(max) 或 image 文档的文档类型     。 此列（称为类型列）包含用户提供的文件扩展名（.doc、.pdf、.xls 等）。 类型列必须是 **char**、 **nchar**、 **varchar**或 **nvarchar**类型。  
@@ -138,7 +138,7 @@ ALTER FULLTEXT INDEX ON table_name
  如果启用了 CHANGE_TRACKING 并指定了 WITH NO POPULATION，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个错误。 如果启用了 CHANGE_TRACKING，但未指定 WITH NO POPULATION，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对索引执行完全填充。  
   
 > [!NOTE]  
->  有关更改跟踪交互和 WITH NO POPULATION 的详细信息，请参阅本主题后面的“备注”。  
+>  有关详细信息，请参阅[更改跟踪和 NO POPULATION 参数的交互](#change-tracking-no-population)。
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -194,7 +194,7 @@ ALTER FULLTEXT INDEX ON table_name
  为全文索引添加搜索属性列表需要重新填充索引，以便对为关联的搜索属性列表注册的搜索属性编制索引。 如果在添加搜索属性列表时指定了 WITH NO POPULATION，则需要在适当的时候对索引运行填充。  
   
 > [!IMPORTANT]  
->  如果全文索引以前与不同的搜索相关联，则必须重新生成属性列表以使索引保持一致状态。 将立即截断索引，并在运行完全填充之前保留为空。 有关何时更改搜索属性列表导致重新生成索引的详细信息，请参阅本主题后面的“备注”。  
+>  如果全文索引以前与不同的搜索相关联，则必须重新生成属性列表以使索引保持一致状态。 将立即截断索引，并在运行完全填充之前保留为空。 有关详细信息，请参阅[更改搜索属性列表将导致重新生成索引](#change-search-property-rebuild-index)。 
   
 > [!NOTE]  
 >  您可以将给定的搜索属性列表与同一数据库中的多个全文索引相关联。  
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  有关搜索属性列表的详细信息，请参阅[使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
-## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>更改跟踪和 NO POPULATION 参数的交互  
+## <a name="change-tracking-no-population"></a> 更改跟踪和 NO POPULATION 参数的交互  
  是否填充全文索引取决于是否启用了更改跟踪以及在 ALTER FULLTEXT INDEX 语句中是否指定了 WITH NO POPULATION。 下表概述了其交互结果。  
   
 |更改跟踪|WITH NO POPULATION|结果|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  有关填充全文检索的详细信息，请参阅[填充全文检索](../../relational-databases/search/populate-full-text-indexes.md)。  
   
-## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a>更改搜索属性列表将导致重新生成索引  
+## <a name="change-search-property-rebuild-index"></a> 更改搜索属性列表将导致重新生成索引  
  第一次将全文索引与搜索属性列表相关联时，必须重新填充索引以便对属性特定的搜索词编制索引。 不会截断现有的索引数据。  
   
  但是，如果将全文索引与不同的属性列表相关联，则会重新生成索引。 立即重新生成索引将截断全文索引，从而删除所有现有的数据，并且必须重新填充索引。 在进行填充时，针对基表的全文查询仅搜索已通过填充编制索引的表行。 重新填充的索引数据将包括新添加的搜索属性列表的注册属性中的元数据。  

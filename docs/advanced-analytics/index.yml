@@ -2,7 +2,7 @@
 title: SQL Server 机器学习服务（Python 和 R）文档
 summary: 了解如何使用 SQL Server 机器学习服务在关系数据上运行 Python 和 R 脚本。 教程、代码示例、安装指南和其他文档介绍了如何操作。
 metadata:
-  title: SQL Server 机器学习服务（Python、R）文档-教程、快速入门和安装指南
+  title: SQL Server 机器学习服务（Python、R）文档 - 教程、快速入门和安装指南
   description: 了解如何使用 SQL Server 机器学习服务在关系数据上运行 Python 和 R 脚本。 教程、代码示例、安装指南和其他文档介绍了如何操作。
   ms.prod: sql
   ms.technology: machine-learning
@@ -12,7 +12,7 @@ metadata:
   ms.date: 09/12/2019
   ms.openlocfilehash: d46abc3b6e02f81db733df584ea95fbdc73777c0
   ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: zh-CN
   ms.lasthandoff: 09/23/2019
   ms.locfileid: "71199400"
@@ -25,17 +25,17 @@ landingContent:
       url: what-is-sql-server-machine-learning.md
   - linkListType: whats-new
     links:
-    - text: 机器学习服务中有哪些新功能？
+    - text: 机器学习服务中有哪些新增功能？
       url: what-s-new-in-sql-server-machine-learning-services.md
   - linkListType: video
     links:
-    - text: 如何在 SQL Server 中通过机器学习服务执行 R/Python
+    - text: 如何使用机器学习服务在 SQL Server 中执行 R/Python
       url: https://www.youtube.com/watch?v=ACejZ9optCQ
 - title: Python 入门
   linkLists:
   - linkListType: quickstart
     links:
-    - text: 在 SQL Server 上运行 "Hello world" Python 脚本
+    - text: 在 SQL Server 上运行“Hello world”Python 脚本
       url: tutorials/quickstart-python-create-script.md
     - text: 处理输入和输出
       url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
@@ -45,15 +45,15 @@ landingContent:
       url: tutorials/quickstart-python-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: 通过线性回归预测 ski 租赁
+    - text: 使用线性回归预测雪橇租赁
       url: tutorials/python-ski-rental-linear-regression.md
-    - text: 使用 k 平均值聚类分析客户
+    - text: 使用 k-means 聚类分析对客户进行分类
       url: tutorials/python-clustering-model.md
 - title: R 入门
   linkLists:
   - linkListType: quickstart
     links:
-    - text: 在 SQL Server 上运行 "Hello world" R 脚本
+    - text: 在 SQL Server 上运行“Hello world”R 脚本
       url: tutorials/quickstart-r-create-script.md
     - text: 处理输入和输出
       url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
@@ -65,7 +65,7 @@ landingContent:
     links:
     - text: 在 T-SQL 中使用 R
       url: tutorials/sqldev-in-database-r-for-sql-developers.md
-    - text: 使用 R 工具中的机器学习服务
+    - text: 在 R 工具中使用机器学习服务
       url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
 - title: 安装机器学习服务
   linkLists:
@@ -101,9 +101,9 @@ landingContent:
     links:
     - text: 获取 Python 包信息
       url: package-management/python-package-information.md
-    - text: 通过 sqlmlutils 安装 Python 包
+    - text: 使用 sqlmlutils 安装 Python 包
       url: package-management/install-additional-python-packages-on-sql-server.md
     - text: 获取 R 包信息
       url: package-management/r-package-information.md
-    - text: 通过 sqlmlutils 安装新的 R 包
+    - text: 使用 sqlmlutils 安装新的 R 包
       url: package-management/install-additional-r-packages-on-sql-server.md

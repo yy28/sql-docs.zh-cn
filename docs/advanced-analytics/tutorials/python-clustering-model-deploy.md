@@ -1,6 +1,6 @@
 ---
-title: 教程：在 Python 中部署模型以对客户进行分类
-description: 在此四部分的系列教程的第四部分中，你将在 Python 中使用 SQL Server 机器学习服务部署群集模型。
+title: Python 教程：部署群集模型
+description: 在这个由四部分组成的教程系列的第四部分中，你将通过 SQL Server 机器学习服务在 Python 中部署聚类分析模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,47 +9,48 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eef8a0f0f11e6d9085a1685145e4c6815979470d
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-ms.translationtype: MT
+ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199352"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727134"
 ---
-# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教程：在 Python 中部署模型，以便使用 SQL Server 机器学习服务对客户进行分类
+# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教程：在 Python 中部署模型以通过 SQL Server 机器学习服务对客户进行分类
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在此四部分的系列教程的第四部分中，你将使用 SQL Server 机器学习服务将 Python 中开发的聚类分析模型部署到 SQL 数据库。
+在这个由四个部分组成的教程系列的第四部分中，你将使用 SQL Server 机器学习服务将 Python 中开发的聚类分析模型部署到 SQL 数据库中。
 
-为了定期执行群集，在新客户注册时，需要能够从任何应用调用 Python 脚本。 为此，你可以通过将 Python 脚本放在数据库中的 SQL 存储过程中，在 SQL Server 中部署 Python 脚本。 因为模型在 SQL 数据库中执行，所以可以轻松地对数据库中存储的数据进行定型。
+为了定期执行聚类分析，在新客户注册时，你需要能够从任何应用调用 Python 脚本。 为此，可以通过将 Python 脚本置于数据库中的 SQL 存储过程中，在 SQL Server 中部署 Python 脚本。 由于模型在 SQL 数据库中执行，因此可以轻松地针对存储在数据库中的数据对其进行定型。
 
-在本部分中，你会将刚刚编写的 Python 代码移到 SQL Server 并通过 SQL Server 机器学习服务的帮助部署群集。
+在本部分中，你会将刚刚编写的 Python 代码移到 SQL Server，并借助 SQL Server 机器学习服务部署聚类分析。
 
-本文将介绍如何执行以下操作：
+本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
-> * 创建用于生成模型的存储过程
-> * 在 SQL Server 中执行群集
+> * 创建生成模型的存储过程
+> * 在 SQL Server 中执行聚类分析
 > * 使用聚类分析信息
 
-在[第一部分](python-clustering-model.md)中，你安装了必备组件并还原了示例数据库。
+在[第一部分](python-clustering-model.md)中，你安装了必备条件并还原了示例数据库。
 
-[第二部分](python-clustering-model-prepare-data.md)介绍了如何从 SQL 数据库准备要执行群集的数据。
+在[第二部分](python-clustering-model-prepare-data.md)中，你学习了如何从 SQL 数据库准备数据以执行聚类分析。
 
-第[三部分](python-clustering-model-build.md)介绍了如何在 Python 中创建和训练 K 平均值聚类分析模型。
+在[第三部分](python-clustering-model-build.md)中，你了解了如何在 Python 中创建和定型 K-Means 聚类分析模型。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-* 本系列教程的第四部分假设你满足了[**第一部分**](python-clustering-model.md)的先决条件，并完成了[**第二**](python-clustering-model-prepare-data.md)部分和[**第三**](python-clustering-model-build.md)部分中的步骤。
+* 本教程系列的第四部分假设你已完成[第一部分](python-clustering-model.md)的必备条件，并完成了[第二部分](python-clustering-model-prepare-data.md)和[第三部分](python-clustering-model-build.md)的步骤    。
 
-## <a name="create-a-stored-procedure-that-generates-the-model"></a>创建用于生成模型的存储过程
+## <a name="create-a-stored-procedure-that-generates-the-model"></a>创建生成模型的存储过程
 
-运行以下 T-sql 脚本来创建存储过程。 此过程将重新创建在本教程系列的第一部分和第二部分中开发的步骤：
+运行以下 T-SQL 脚本，以创建存储过程。 此过程会重建本教程系列的第一部分和第二部分中开发的步骤：
 
-* 根据客户的购买和返回历史记录对客户进行分类
-* 使用 K 平均值算法生成四个客户群集
+* 根据客户的购买和返回历史记录，对客户进行分类
+* 使用 K-Means 算法生成四个客户群集
 
 ```sql
 USE [tpcxbb_1gb]
@@ -124,9 +125,9 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>在 SQL 数据库中执行群集
+## <a name="perform-clustering-in-sql-database"></a>在 SQL 数据库中执行聚类分析
 
-现在，你已创建了存储过程，请执行以下脚本，以使用该过程执行群集操作。
+创建存储过程后，执行以下脚本，以使用该过程执行聚类分析。
 
 ```sql
 --Create a table to store the predictions in
@@ -155,9 +156,9 @@ SELECT * FROM py_customer_clusters;
 
 ## <a name="use-the-clustering-information"></a>使用聚类分析信息
 
-因为你在数据库中存储了聚类分析过程，所以它可以针对存储在同一数据库中的客户数据有效地执行群集操作。 每当更新客户数据并使用更新的群集信息时，就可以执行该过程。
+由于在数据库中存储了聚类分析过程，因此它可以针对存储在同一数据库中的客户数据高效执行聚类分析。 每次更新客户数据并使用更新的聚类分析信息时，都可以执行该过程。
 
-假设你想要向群集0中的客户发送促销电子邮件，此组处于非活动状态（你可以在本教程的第[三部分](python-clustering-model-build.md#analyze-the-results)中了解这四个分类的描述）。 以下代码选择群集0中的客户的电子邮件地址。
+假设你想要向群集 0 中的客户发送促销电子邮件，该群集处于非活动状态（你可以在本教程的[第三部分](python-clustering-model-build.md#analyze-the-results)中查看这四个群集的介绍）。 以下代码选择群集 0 中客户的电子邮件地址。
 
 ```sql
 USE [tpcxbb_1gb]
@@ -170,23 +171,23 @@ SELECT customer.[c_email_address], customer.c_customer_sk
   WHERE c.cluster = 0
 ```
 
-您可以更改**c 群集**值，以返回其他分类中的客户的电子邮件地址。
+你可以更改 c.cluster 值，以返回其他群集中客户的电子邮件地址  。
 
 ## <a name="clean-up-resources"></a>清理资源
 
-完成本教程后，可以从 SQL Server 中删除 tpcxbb_1gb 数据库。
+如果已学完本教程，可以从 SQL Server 中删除 tpcxbb_1gb 数据库。
 
 ## <a name="next-steps"></a>后续步骤
 
-本系列教程的第四部分已完成以下步骤：
+在本教程系列的第四部分中，你完成了这些步骤：
 
-* 创建用于生成模型的存储过程
-* 在 SQL Server 中执行群集
+* 创建生成模型的存储过程
+* 在 SQL Server 中执行聚类分析
 * 使用聚类分析信息
 
-若要了解有关在 SQL Server 机器学习服务中使用 Python 的详细信息，请参阅：
+若要了解关于在 SQL Server 机器学习服务中使用 Python 的详细信息，请参阅：
 
-* [快速入门：利用 SQL Server 机器学习服务创建和运行简单的 Python 脚本](quickstart-python-create-script.md)
-* [适用于 SQL Server 机器学习服务的其他 Python 教程](sql-server-python-tutorials.md)
-* [通过 sqlmlutils 安装 Python 包](../package-management/install-additional-python-packages-on-sql-server.md)
+* [快速入门：通过 SQL Server 机器学习服务创建和运行简单的 Python 脚本](quickstart-python-create-script.md)
+* [SQL Server 机器学习服务的其他 Python 教程](sql-server-python-tutorials.md)
+* [使用 sqlmlutils 安装 Python 包](../package-management/install-additional-python-packages-on-sql-server.md)
 

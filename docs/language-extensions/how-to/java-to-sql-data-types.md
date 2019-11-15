@@ -1,20 +1,20 @@
 ---
-title: SQL Server 2019 支持的 Java 数据类型
+title: Java 数据类型
 titleSuffix: SQL Server Language Extensions
 description: 针对输入和输出数据结构以及 sp_execute_external_script 上的输入参数，将数据类型从 Java 映射到 SQL Server。
 author: dphansen
 ms.author: davidph
-ms.date: 09/05/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9daca9c607befe077fcccec20385a36c82b04c6f
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: d1df57079acd79fc5370d0f2f198dc2d624d6983
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "73588831"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658837"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java 和 SQL Server 支持的数据类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

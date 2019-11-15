@@ -1,39 +1,40 @@
 ---
-title: 第1课使用 Python 和 T-sql 浏览和可视化数据
-description: 介绍如何在 SQL Server 存储过程和 T-sql 函数中嵌入 Python 的教程
+title: Python + T-SQL：浏览数据
+description: 教程演示如何在 SQL Server 存储过程和 T-SQL 函数中嵌入 Python
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6ee82de1431a6bc21596505dc4b008b817b35830
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: ba5f48b7788b6ebec63149175568777e6659017f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714706"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725072"
 ---
-# <a name="explore-and-visualize-the-data"></a>浏览和可视化数据
+# <a name="explore-and-visualize-the-data"></a>浏览并可视化数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文是[针对 SQL 开发人员的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)教程的一部分。 
+本文属于[适用于 SQL 开发者的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)这一教程。 
 
-在此步骤中, 将浏览示例数据并生成一些绘图。 稍后, 您将了解如何在 Python 中序列化图形对象, 然后对这些对象进行反序列化并制作绘图。
+在此步骤中，你可浏览示例数据并生成一些绘图。 之后，你可了解如何在 Python 中序列化图形对象，然后对这些对象进行反序列化并制作绘图。
 
 ## <a name="review-the-data"></a>查看数据
 
-首先, 请花点时间浏览数据架构, 因为我们做了一些更改, 以便更轻松地使用 NYC 出租车数据
+首先，请花一分钟时间浏览数据架构，因为我们做了一些更改，以便更轻松地使用 NYC 出租车数据
 
-+ 原始数据集对出租车标识符和行程记录使用了单独的文件。 我们已将两个原始数据集加入列_medallion_、 _hack_license_和_pickup_datetime_。  
-+ 原始数据集跨多个文件, 并且非常大。 我们 downsampled 只获取原始记录数的 1%。 当前数据表包含1703957行和23列。
++ 原始数据集对出租车标识符和行程记录使用了不同文件。 我们已将两个原始数据集加入列 medallion、hack_license 和 pickup_datetime    。  
++ 原始数据集跨多个文件，且非常庞大。 我们缩减了采样，仅获取 1% 的原始记录。 当前数据表包含 1,703,957 行和 23 列。
 
 **出租车标识符**
 
-_Medallion_列表示出租车的唯一 ID 号。
+其中的 medallion 列表示出租车的唯一 ID 号  。
 
-_Hack_license_列包含出租车驱动程序的许可证编号 (匿名)。
+其中的 hack_license 列包含出租车司机的驾照号码（匿名）  。
 
 **行程和费用记录**
 
@@ -41,41 +42,41 @@ _Hack_license_列包含出租车驱动程序的许可证编号 (匿名)。
 
 每条费用记录都包括付费信息，如付款类型、总付款和小费金额。
 
-最后三列可用于各种机器学习任务。  Tip_amount 列包含连续数值，并且可用作回归分析的 **label** 列。 tipped 列只有是/否值，用于二元分类。 Tip_class 列有多个**级别标签**，因此可以用作多级分类任务的标签。
+最后三列可用于各种机器学习任务。  Tip_amount 列包含连续数值，并且可用作回归分析的 **label** 列。  tipped 列只有是/否值，用于二元分类。  Tip_class 列有多个**级别标签**，因此可以用作多级分类任务的标签。 
 
-标签列使用的值都基于`tip_amount`列, 使用以下业务规则:
+标签列使用的值都基于 `tip_amount` 列，并使用以下业务规则：
 
-+ 标签列`tipped`的值可能为0和1
++ 标签列 `tipped` 可能的值包括 0 和 1
 
-    如果`tip_amount` > 0, `tipped` = 1, 则`tipped`为; 否则为0
+    如果 `tip_amount` > 0，则 `tipped` = 1；否则 `tipped` = 0
 
-+ 标签列`tip_class`具有可能的类值0-4
++ 标签列 `tip_class` 可能的类值包括 0-4
 
-    类 0: `tip_amount` = $0
+    类 0：`tip_amount` = $0
 
-    类 1: `tip_amount` > $0 和`tip_amount` < = $5
+    类 1：`tip_amount` > $0 且 `tip_amount` <= $5
     
-    类 2: `tip_amount` > $5 和`tip_amount` < = $10
+    类 2：`tip_amount` > $5 且 `tip_amount` <= $10
     
-    类 3: `tip_amount` > $10 和`tip_amount` < = $20
+    类 3：`tip_amount` > $10 且 `tip_amount` <= $20
     
-    类 4: `tip_amount` > $20
+    类 4：`tip_amount` > $20
 
-## <a name="create-plots-using-python-in-t-sql"></a>在 T-sql 中使用 Python 创建绘图
+## <a name="create-plots-using-python-in-t-sql"></a>使用 T-SQL 中的 Python 创建绘图
 
-开发数据科学解决方案通常包括深入的数据探索和数据可视化。 因为可视化效果是用于了解数据和离群值分布的强大工具, 所以 Python 提供了许多用于可视化数据的包。 **Matplotlib**模块是更常用的可视化库, 其中包含许多用于创建直方图、散点图、框图和其他数据浏览图的函数。
+开发数据科学解决方案通常包括深入的数据探索和数据可视化。 由于可视化是理解数据和离群值的分布的强大工具，因此 Python 提供了许多用于可视化数据的包。 Matplotlib 模块是最受欢迎的可视化库之一，其中包含许多用于创建直方图、散点图、箱线图和其他数据浏览图表的函数  。
 
-本部分介绍如何使用存储过程来处理图形。 不要在服务器上打开该映像, 而是将 Python 对象`plot`存储为**varbinary**数据, 然后将其写入到可在其他位置共享或查看的文件。
+在本部分中，你可了解如何使用存储过程处理各种绘图。 将 Python 对象 `plot` 存储为 varbinary 数据，然后将其写入可在其他位置共享或查看的文件，而不是在服务器上打开该图像  。
 
 ### <a name="create-a-plot-as-varbinary-data"></a>创建绘图作为 varbinary 数据
 
-存储过程将序列化的 Python `figure`对象作为**varbinary**数据的流返回。 您无法直接查看二进制数据, 但您可以在客户端上使用 Python 代码来反序列化和查看这些图形, 然后在客户端计算机上保存该图像文件。
+存储过程将序列化的 Python `figure` 对象作为 varbinary 数据流返回  。 无法直接查看二进制数据，但可以在客户端上使用 Python 代码来反序列化和查看这些图形，然后将该图像文件保存到客户端计算机上。
 
-1. 如果 PowerShell 脚本尚未这样做, 请创建存储过程**PyPlotMatplotlib**。
+1. 如果 PowerShell 脚本尚未创建存储过程 PyPlotMatplotlib，请执行此操作  。
 
-    - 变量`@query`定义查询文本, 该`SELECT tipped FROM nyctaxi_sample`文本作为脚本输入变量`@input_data_1`的参数传递到 Python 代码块。
-    - Python 脚本非常简单: **matplotlib** `figure`对象用于生成直方图和散点图, `pickle`然后使用库序列化这些对象。
-    - Python 图形对象被序列化到**pandas**数据帧以进行输出。
+    - 变量 `@query` 定义查询文本 `SELECT tipped FROM nyctaxi_sample`，该文本作为脚本输入变量 `@input_data_1` 的参数传递给 Python 代码块。
+    - Python 脚本非常简单：matplotlib `figure` 对象用于制作直方图和散点图，然后使用 `pickle` 库对这些对象进行序列化。 
+    - Python 图形对象序列化为 pandas 数据帧进行输出  。
   
     ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
@@ -133,7 +134,7 @@ _Hack_license_列包含出租车驱动程序的许可证编号 (匿名)。
     GO
     ```
 
-2. 现在, 请运行不带参数的存储过程, 以生成从硬编码为输入查询的数据的绘图。
+2. 现在，运行不含参数的存储过程，以通过硬编码为输入查询的数据生成绘图。
 
     ```sql
     EXEC [dbo].[PyPlotMatplotlib]
@@ -150,11 +151,11 @@ _Hack_license_列包含出租车驱动程序的许可证编号 (匿名)。
     ```
 
   
-4. 你现在可以从[Python 客户端](../python/setup-python-client-tools-sql.md)连接到生成了二进制绘图对象的 SQL Server 实例, 并查看图形。 
+4. 在 [Python 客户端](../python/setup-python-client-tools-sql.md)中，现在可以连接到生成二进制绘图对象的 SQL Server 实例，并查看绘图。 
 
-    为此, 请运行以下 Python 代码, 并根据需要替换服务器名称、数据库名称和凭据。 请确保在客户端和服务器上的 Python 版本相同。 此外, 请确保客户端上的 Python 库 (如 matplotlib) 与服务器上安装的库的版本相同或更高。
+    为此，请运行以下 Python 代码，根据需要替换服务器名称、数据库名称和凭据。 请确保客户端和服务器上的 Python 版本相同。 此外，请确保客户端上的 Python 库（如 matplotlib）与安装在服务器上的库具有相同版本或比后者的版本更高。
   
-    **使用 SQL Server 身份验证:**
+    使用 SQL Server 身份验证  ：
     
     ```python
     %matplotlib notebook
@@ -171,7 +172,7 @@ _Hack_license_列包含出租车驱动程序的许可证编号 (匿名)。
     print("The plots are saved in directory: ",os.getcwd())
     ```
 
-    **使用 Windows 身份验证:**
+    使用 Windows 身份验证  ：
 
     ```python
     %matplotlib notebook
@@ -188,13 +189,13 @@ _Hack_license_列包含出租车驱动程序的许可证编号 (匿名)。
     print("The plots are saved in directory: ",os.getcwd())
     ```
 
-5.  如果连接成功, 应会看到如下所示的消息:
+5.  如果连接成功，应看到如下所示的消息：
   
-    *绘图将保存在目录中: xxxx*
+    绘图已保存到目录: xxxx 
   
-6.  在 Python 工作目录中创建输出文件。 若要查看绘图, 请找到 Python 工作目录, 并打开文件。 下图显示了在客户端计算机上保存的绘图。
+6.  已在 Python 工作目录中创建输出文件。 要查看绘图，请查找 Python 工作目录，然后打开该文件。 下图显示了保存到客户端计算机上的绘图。
   
-    ![Tip 金额与费用金额](media/sqldev-python-sample-plot.png "Tip 金额与费用金额") 
+    ![小费金额与车费金额](media/sqldev-python-sample-plot.png "小费金额与车费金额") 
 
 ## <a name="next-step"></a>下一步
 

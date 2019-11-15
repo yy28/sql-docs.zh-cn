@@ -1,65 +1,66 @@
 ---
-title: 计算汇总统计信息 RevoScaleR 教程
-description: 本教程演示如何使用 R 语言在 SQL Server 上计算统计摘要统计信息。
+title: RevoScaleR 中的摘要统计信息
+description: 关于如何在 SQL Server 上使用 R 语言计算统计摘要统计的教程演练。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 90a674057845427fe60fd3c62268bf0fb3d18688
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 4ece8cdac4f39cfd5d4b93484f18b0d415cc2291
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715575"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727293"
 ---
-# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>R 中的计算汇总统计信息 (SQL Server 和 RevoScaleR 教程)
+# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>计算 R 中的摘要统计信息（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
+本课程属于 [RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)，该教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
-它使用在前面的课程中创建的已建立数据源和计算上下文来运行此脚本中的高功率 R 脚本。 在本课中, 您将使用本地和远程服务器计算上下文执行以下任务:
+它使用已建立的数据源和在前面的课程中创建的计算上下文来运行本课程中的高性能 R 脚本。 在本课程中，使用本地和远程服务器计算上下文来执行以下任务：
 
 > [!div class="checklist"]
 > * 将计算上下文切换到 SQL Server
 > * 获取有关远程数据对象的摘要统计信息
 > * 计算本地摘要
 
-如果已完成前面的课程, 应具有以下远程计算上下文: sqlCompute 和 sqlComputeTrace。 前进后, 在后续课程中, 你将使用 sqlCompute 和本地计算上下文。
+完成前面的课程后，应具有以下远程计算上下文：sqlCompute 和 sqlComputeTrace。 接下来，你将在后续课程中使用 sqlCompute 和本地计算上下文。
 
-在本课程中, 使用 R IDE 或**rgui.exe**运行 r 脚本。
+在本课程中，使用 R IDE 或 Rgui 运行 R 脚本  。
 
-## <a name="compute-summary-statistics-on-remote-data"></a>计算有关远程数据的汇总统计信息
+## <a name="compute-summary-statistics-on-remote-data"></a>计算有关远程数据的摘要统计信息
 
-你需要指定远程计算上下文, 然后才能远程运行任何 R 代码。 所有后续计算都在*sqlCompute*参数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中指定的计算机上进行。
+需要指定远程计算上下文，然后才能远程运行任何 R 代码。 所有后续计算都在 sqlCompute 参数中指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机上进行  。
 
-计算上下文将保持活动状态, 直到您对其进行更改。 但是,*不能*在远程服务器上下文中运行的任何 R 脚本都将在本地自动运行。
+在更改计算上下文前，它将保持活动状态。 但是，任何无法在远程服务器上下文中运行的 R 脚本都将自动在本地运行  。
 
-若要查看计算上下文的工作原理, 请在远程 SQL Server 上的 sqlFraudDS 数据源上生成汇总统计信息。 此数据源对象是在第[2 课](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)中创建的, 表示 RevoDeepDive 数据库中的 ccFraudSmall 表。 
+要查看计算上下文的工作原理，请在远程 SQL Server 上的 sqlFraudDS 数据源上生成摘要统计信息。 此数据源对象是在[第 2 课](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)中创建的，表示 RevoDeepDive 数据库中的 ccFraudSmall 表。 
 
-1. 将计算上下文切换为在上一课中创建的 sqlCompute:
+1. 将计算上下文切换到在上一课中创建的 sqlCompute：
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
 
-2. 调用[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary)函数并传递所需的参数, 如公式和数据源, 并将结果分配给变量`sumOut`。
+2. 调用 [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) 函数并传递所需的参数（如公式和数据源），并将结果分配给变量 `sumOut`。
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 语言提供了许多汇总功能, 但**RevoScaleR**中的**rxSummary**支持对各种远程计算上下文执行, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]其中包括。 有关类似函数的信息, 请参阅[使用 RevoScaleR 的数据摘要](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)。
+    R 语言提供了许多 summary 函数，但 RevoScaleR 中的 rxSummary 支持在各种远程计算上下文上执行，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   。 有关类似函数的信息，请参阅[使用 RevoScaleR 的数据摘要](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)。
   
-3. 将 sumOut 的内容打印到控制台。
+3. 将 sumOut 的内容打印至控制台。
   
     ```R
     sumOut
     ```
     > [!NOTE]
-    > 如果遇到错误, 请等待几分钟, 然后再重试命令。
+    > 如果遇到错误，请等待几分钟，等待执行完成后再重试命令。
 
 **结果**
 
@@ -92,7 +93,7 @@ Number of valid observations: 10000
     rxSetComputeContext ("local")
     ```
   
-2. 从 SQL Server 提取数据时, 可以通过增加为每个读取提取的行数来获得更好的性能, 假设内存中可以容纳增加的块大小。 运行以下命令, 增加数据源上的*rowsPerRead*参数的值。 之前，rowsPerRead 的值设置为 5000。
+2. 在从 SQL Server 提取数据时，通常可以通过增加为每次读取提取的行数来获得更好的性能（假定内存中可以容纳增加的块大小）。 运行以下命令以增加数据源上 rowsPerRead 参数的值  。 之前，rowsPerRead  的值设置为 5000。
   
     ```R
     sqlServerDS1 <- RxSqlServerData(
@@ -102,7 +103,7 @@ Number of valid observations: 10000
        rowsPerRead = 10000)
     ```
 
-3. 对新数据源调用**rxSummary** 。
+3. 调用新数据源上的 rxSummary  。
   
     ```R
     rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)
@@ -110,7 +111,7 @@ Number of valid observations: 10000
   
    实际结果应与在 **计算机的上下文中运行** rxSummary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的结果相同。 但是，该操作可能更快，也可能更慢。 因为正在将数据传输到本地计算机进行分析，因此操作很大程度取决于数据库的连接。
 
-4. 切换回远程计算上下文以进行后续几课。
+4. 切换回远程计算上下文，以进行后续几个课程。
 
     ```R
     rxSetComputeContext(sqlCompute)

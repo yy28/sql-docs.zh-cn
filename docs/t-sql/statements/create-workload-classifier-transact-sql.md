@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD Classifier (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,29 +20,37 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: b5566230f1739fd1d19d7ffa9dd34ce07caf1fa4
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 5ee3b24f1c2b85d2c4966b632257ac941c9776ee
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951653"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632898"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-创建工作负荷管理分类器。  分类器将传入请求分配给工作负荷组，并根据分类器语句定义中指定的参数分配重要性。  对提交的每个请求评估分类器。  如果请求与分类器不匹配，则将其分配给默认工作负荷组。  默认工作负载组是 smallrc 资源类。  
-  
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+创建用于工作负荷管理的分类器对象。  分类器根据分类器语句定义中指定的参数将传入请求分配给工作负荷组。  对提交的每个请求评估分类器。  如果请求与分类器不匹配，则将其分配给默认工作负荷组。  默认工作负荷组是 smallrc 资源类。
+
+> [!NOTE]
+> 工作负荷分类器取代 sp_addrolemember 资源类分配。  创建工作负荷分类器后，执行 sp_droprolemember 以删除任何冗余的资源类映射。
+
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法
 
 ```
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
-    ( WORKLOAD_GROUP = 'name'  
-     ,MEMBERNAME = 'security_account'
- [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL (default) | ABOVE_NORMAL | HIGH }])
+    (   WORKLOAD_GROUP = ‘name’  
+    ,   MEMBERNAME = ‘security_account’ 
+[ [ , ] WLM_LABEL = ‘label’ ]  
+[ [ , ] WLM_CONTEXT = ‘context’ ]  
+[ [ , ] START_TIME = ‘HH:MM’ ]  
+[ [ , ] END_TIME = ‘HH:MM’ ]  
+  
+[ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
 ```
 
@@ -51,24 +59,67 @@ WITH
  classifier_name   
  指定用于标识工作负荷分类器的名称。  classifier_name 为 sysname。  最长可为 128 个字符，并且在实例中必须是唯一的。
 
-WORKLOAD_GROUP = 'name' 当分类器规则满足条件时，名称将请求映射到工作负荷组  。  名称为 sysname。  它最多可以包含 128 个字符，并且在创建分类器时必须是有效的工作负荷组名称。
+ *WORKLOAD_GROUP* =  *'name'*    
+ 当分类器规则满足条件时，名称将请求映射到工作负荷组。  名称为 sysname。  它最多可以包含 128 个字符，并且在创建分类器时必须是有效的工作负荷组名称。
 
-WORKLOAD_GROUP 应映射到现有资源类：
+ 可用工作负荷组可在 [sys.workload_management_workload_groups](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest) 目录视图中找到。
 
-|静态资源类|动态资源类|
-|------------------------|-----------------------|
-|staticrc10|smallrc|
-|staticrc20|mediumrc|
-|staticrc30|largerc|
-|staticrc40|xlargerc|
-|staticrc50||
-|staticrc60||
-|staticrc70||
-|staticrc80||
+ *MEMBERNAME* ='security_account'*    
+ 这是要添加到该角色的安全帐户。  Security_account 为 sysname，没有默认值。 Security_account 可以是数据库用户、数据库角色、Azure Active Directory 登录名或 Azure Active Directory 组。
+ 
+ *WLM_LABEL*   
+ 指定可作为请求分类依据的标签值。  标签是类型为 nvarchar(255) 的可选参数。  使用请求中的 [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label) 来匹配分类器配置。
 
-MEMBERNAME = 'security_account' 这是添加到角色的安全帐户  。  Security_account 为 sysname，没有默认值。 Security_account 可以是数据库用户、数据库角色、Azure Active Directory 登录名或 Azure Active Directory 组。
+例如：
 
-IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } 指定请求的相对重要性。  重要性为以下值之一：
+```sql
+CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
+( WORKLOAD_GROUP = 'wgDataLoad'
+ ,MEMBERNAME     = 'ELTRole'  
+ ,WLM_LABEL      = 'dimension_loads' )
+
+SELECT COUNT(*) 
+  FROM DimCustomer
+  OPTION (LABEL = 'dimension_loads')
+```
+
+*WLM_CONTEXT*  
+指定可作为请求分类依据的会话上下文值。  上下文是类型为 nvarchar(255) 的可选参数。  在提交设置会话上下文的请求之前，请使用变量名称为 `wlm_context` 的 [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)。
+
+例如：
+
+```sql
+CREATE WORKLOAD CLASSIFIER wcDataLoad WITH  
+( WORKLOAD_GROUP = 'wgDataLoad'
+ ,MEMBERNAME     = 'ELTRole'
+ ,WLM_CONTEXT    = 'dim_load' )
+ 
+--set session context
+EXEC sys.sp_set_session_context @key = 'wlm_context', @value = 'dim_load'
+
+--run multiple statements using the wlm_context setting
+SELECT COUNT(*) FROM stg.daily_customer_load
+SELECT COUNT(*) FROM stg.daily_sales_load
+
+--turn off the wlm_context session setting
+EXEC sys.sp_set_session_context @key = 'wlm_context', @value = null
+```
+
+*START_TIME* 和 *END_TIME*  
+指定可作为请求分类依据的 start_time 和 end_time。  start_time 和 end_time 为采用 HH:MM 格式的 UTC 时区值。  start_time 和 end_time 必须一起指定。
+
+例如：
+
+```sql
+CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
+( WORKLOAD_GROUP = 'wgDataLoads'
+ ,MEMBERNAME     = 'ELTRole'  
+ ,START_TIME     = '22:00'
+ ,END_TIME       = '02:00' )
+```
+
+*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+指定请求的相对重要性。  重要性为以下值之一：
 
 - LOW
 - BELOW_NORMAL
@@ -76,9 +127,37 @@ IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } 指定请求�
 - ABOVE_NORMAL
 - HIGH  
 
-重要性会影响请求的顺序，导致首先访问资源和锁定。
+如果未指定重要性，则使用工作负荷组的重要性设置。  默认工作负荷组重要性为“普通”。  重要性会影响请求的安排顺序，导致首先访问资源和锁定。
 
-如果用户是具有在多个分类器中分配或匹配的不同资源类的多个角色的成员，则会授予此用户最高的资源类分配。 有关详细信息，请参阅[工作负荷分类](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)
+## <a name="classification-parameter-precedence"></a>分类参数优先级
+
+请求可以与多个分类器匹配。  分类器参数存在优先级。  优先级较高的匹配分类器会首先用于分配工作负荷组和重要性。  优先级如下：
+1. User
+2. ROLE
+3. WLM_LABEL
+4. WLM_SESSION
+5. START_TIME/END_TIME
+
+请考虑以下分类器配置。
+
+```sql
+CREATE WORKLOAD CLASSIFIER classiferA WITH  
+( WORKLOAD_GROUP = 'wgDashboards'  
+ ,MEMBERNAME     = 'userloginA'
+ ,IMPORTANCE     = HIGH
+ ,WLM_LABEL      = 'salereport' )
+
+CREATE WORKLOAD CLASSIFIER classiferB WITH  
+( WORKLOAD_GROUP = 'wgUserQueries'  
+ ,MEMBERNAME     = 'userloginA'
+ ,IMPORTANCE     = LOW
+ ,START_TIME     = '18:00')
+ ,END_TIME       = '07:00' )
+```
+
+两个分类器均配置了用户 `userloginA`。  如果 userloginA 在 UTC 时间下午 6 点到上午 7 点之间运行标签为 `salesreport` 的查询，则该请求会分类为具有“高”重要性的 wgDashboards 工作负荷组。  预期结果可能会是将请求分类为具有“低”重要性的 wgUserQueries 以用于非工作时间报告，但 WLM_LABEL 的优先级高于 START_TIME/END_TIME。  在这种情况下，可以将 START_TIME/END_TIME 添加到 classiferA。
+
+ 有关详细信息，请参阅[工作负荷分类](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)。
 
 ## <a name="permissions"></a>权限
 

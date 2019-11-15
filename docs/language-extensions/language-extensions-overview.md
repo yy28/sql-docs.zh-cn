@@ -1,22 +1,22 @@
 ---
-title: 什么是语言扩展？
-titleSuffix: SQL Server Language Extensions
-description: 了解在 SQL Server 中运行外部脚本的 SQL Server 2019 语言扩展（预览版）。
+title: 什么是 SQL Server 语言扩展？
+titleSuffix: ''
+description: 语言扩展是 SQL Server 的一项功能，用于执行外部代码。 SQL Server 2019 支持 Java。 可以使用扩展性框架在外部代码中使用关系数据。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15ff0339a487ecebdca23057bfce9053b5efca2e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589021"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658819"
 ---
-# <a name="what-is-sql-server-language-extensions-preview"></a>什么是 SQL Server 语言扩展（预览版）？
+# <a name="what-is-sql-server-language-extensions"></a>什么是 SQL Server 语言扩展？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 语言扩展是 SQL Server 的一项功能，用于执行外部代码。 可以使用[扩展性框架](concepts/extensibility-framework.md)在外部代码中使用关系数据。
