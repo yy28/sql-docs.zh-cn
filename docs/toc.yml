@@ -1702,7 +1702,7 @@
         - name: 临时表
           href: relational-databases/tables/temporal-tables.md
           items:
-            - name: 管理
+            - name: 创建和管理
               items:
                 - name: 入门
                   href: relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
@@ -1730,17 +1730,17 @@
                   href: relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
                 - name: 元数据视图和函数
                   href: relational-databases/tables/temporal-table-metadata-views-and-functions.md
-        - name: 内存优化表
-          href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
-          items:
-            - name: 创建
-              href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
-            - name: 使用
-              href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
-            - name: 监视器
-              href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
-            - name: 性能注意事项
-              href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
+            - name: 内存优化临时表
+              href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
+              items:
+                - name: 创建
+                  href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
+                - name: 使用
+                  href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
+                - name: 监视器
+                  href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
+                - name: 性能注意事项
+                  href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
         - name: 教程
           items:
             - name: 使用 hierarchyid 数据类型
