@@ -1,37 +1,38 @@
 ---
-title: 使用 RevoScaleR 和 rxPredict 对新数据进行评分
-description: 有关如何使用 R 语言对数据进行评分的教程演练 SQL Server。
+title: 使用 RevoScaleR 对数据进行评分
+description: 教程演练如何使用 SQL Server 上的 R 语言对数据进行评分。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ff3782fb760e4d3dd1059103bc835b94d9c7581f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: bf4198e4f8baa0c572f5da3d2b4cf457e695a4b7
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714833"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727174"
 ---
-# <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>对新数据进行评分 (SQL Server 和 RevoScaleR 教程)
+# <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>对新数据进行评分（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
+本课程属于 [RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)，该教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
-在此步骤中, 您将使用在上一课中创建的逻辑回归模型来对另一个使用与输入相同的独立变量的数据集进行评分。
+在这一步中，你将使用在上一课中创建的逻辑回归模型来对使用相同的独立变量作为输入的其他数据集进行评分。
 
 > [!div class="checklist"]
 > * 对新数据进行评分
-> * 创建评分的直方图
+> * 创建分数直方图
 
 > [!NOTE]
-> 对于其中一些步骤, 你需要 DDL 管理员权限。
+> 其中一些步骤需要具有 DDL 管理员权限。
 
 ## <a name="generate-and-save-scores"></a>生成并保存分数
   
-1. 更新 sqlScoreDS 数据源 (在第[2 课](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)中创建), 以使用在上一课中创建的列信息。
+1. 更新在[第二课](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)中创建的 sqlScoreDS 数据源，以使用在上一课中创建的列信息。
   
     ```R
     sqlScoreDS <- RxSqlServerData(
@@ -41,7 +42,7 @@ ms.locfileid: "68714833"
         rowsPerRead = sqlRowsPerRead)
     ```
   
-2. 若要确保不会丢失结果, 请创建新的数据源对象。 然后, 使用新的数据源对象在 RevoDeepDive 数据库中填充新表。
+2. 若要确保不会丢失结果，请创建一个新的数据源对象。 然后，使用新的数据源对象在 RevoDeepDive 数据库中填充新表。
   
     ```R
     sqlServerOutDS <- RxSqlServerData(table = "ccScoreOutput",
@@ -50,13 +51,13 @@ ms.locfileid: "68714833"
     ```
     此时尚未创建表。 此语句仅定义数据的容器。
      
-3. 如果需要, 请使用**rxGetComputeContext ()** 检查当前计算上下文, 并将计算上下文设置为服务器。
+3. 使用 rxGetComputeContext() 检查当前计算上下文，并将计算上下文设置为服务器（如果需要）。
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
   
-4. 作为预防措施, 请检查输出表是否存在。 如果已存在具有相同名称的, 则尝试写入新表时, 将会出现错误。
+4. 作为预防措施，请检查输出表是否存在。 如果已经存在具有相同名称的文件，则在尝试写入新表时会出现错误。
   
     若要执行此操作，请调用函数 [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) 和 [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)，传递表名称作为输入。
   
@@ -64,10 +65,10 @@ ms.locfileid: "68714833"
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
     ```
   
-    + **rxSqlServerTableExists**查询 ODBC 驱动程序, 如果表存在, 则返回 TRUE, 否则返回 FALSE。
-    + **rxSqlServerDropTable**执行 DDL, 如果成功删除表, 则返回 TRUE, 否则返回 FALSE。
+    + 函数 rxSqlServerTableExists 会查询 ODBC 驱动程序，如果表存在，则返回 TRUE，否则返回 FALSE。
+    + 函数 rxSqlServerDropTable 会执行 DDL，如果已成功删除表，则返回 TRUE，否则返回 FALSE。
 
-5. 执行[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)以创建评分, 并将其保存在数据源 sqlScoreDS 中定义的新表中。
+5. 执行 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 以创建评分，并将其保存在数据源 sqlScoreDS 中定义的新表中。
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -79,13 +80,13 @@ ms.locfileid: "68714833"
         overwrite = TRUE)
     ```
   
-    rxPredict 函数是另一种函数，支持在远程计算上下文中运行。 您可以使用**rxPredict**函数基于[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)、 [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)或[rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm)从模型创建分数。
+    rxPredict 函数是另一种函数，支持在远程计算上下文中运行。 可以使用 rxPredict 函数从基于 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)、[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 或 [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) 创建的模型创建评分。
   
     - 参数 *writeModelVars* 在此处设置为 **TRUE** 。 这意味着新表中将包含用于估计的变量。
   
-    - 参数 *predVarNames* 指定将在其中存储结果的变量。 在此, `ccFraudLogitScore`你要传递一个新变量。
+    - 参数 *predVarNames* 指定将在其中存储结果的变量。 此处需要传递一个新变量 `ccFraudLogitScore`。
   
-    - rxPredict 的 type 参数定义计算预测的方式。 指定关键字**响应**以根据响应变量的小数位数生成分数。 或者使用关键字**链接**基于基础链接函数生成分数, 在这种情况下, 将使用逻辑刻度创建预测。
+    - rxPredict 的 type 参数定义计算预测的方式。 指定关键字“响应”以根据响应变量的比例生成分数。 或者，使用关键字“链接”根据底层的链接函数生评分，在这种情况下，使用逻辑量表创建预测。
 
 6. 不久，可以在 Management Studio 中刷新表的列表，以查看新的表及其数据。
 
@@ -102,11 +103,11 @@ ms.locfileid: "68714833"
             overwrite = TRUE)
     ```
 
-## <a name="display-scores-in-a-histogram"></a>在直方图中显示分数
+## <a name="display-scores-in-a-histogram"></a>显示直方图中的评分
 
-创建新表后, 计算并显示10000预测分数的直方图。 如果指定下限值和上限值, 计算速度会更快, 因此从数据库获取这些值, 并将它们添加到工作数据。
+创建新表后，计算并显示具有 10,000 个预测评分的直方图。 如果指定下限值和上限值，计算速度会更快，可从数据库获得这些值将并它们添加到需要处理的数据中。
 
-1. 创建一个新的数据源 sqlMinMax, 该数据源查询数据库以获取低值和较高值。
+1. 创建新数据源 sqlMinMax，查询数据库以获取下限值和上限值。
   
     ```R
     sqlMinMax <- RxSqlServerData(
@@ -117,7 +118,7 @@ ms.locfileid: "68714833"
 
      从本示例中，可以看到使用 RxSqlServerData 数据源对象根据 SQL 查询、函数或存储过程定义任意数据集，然后将其用于 R 代码中非常容易。 变量不会存储实际值，只存储数据源定义；仅当在函数（如 rxImport）中使用此查询时，才会执行此查询以生成该值。
       
-2. 调用[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)函数以将值放置在可跨计算上下文共享的数据帧中。
+2. 调用 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 函数，将这些值放在能够跨计算上下文共享的数据框中。
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)
@@ -132,7 +133,7 @@ ms.locfileid: "68714833"
     [1] -23.970256   9.786345
     ```
 
-3. 由于最大值和最小值可用, 因此请使用这些值为生成的分数创建另一个数据源。
+3. 最大值和最小值现已可用，请使用这些值为生成的评分创建另一个数据源。
   
     ```R
     sqlOutScoreDS <- RxSqlServerData(sqlQuery = "SELECT ccFraudLogitScore FROM ccScoreOutput",
@@ -143,7 +144,7 @@ ms.locfileid: "68714833"
                         high = ceiling(minMaxVals[2]) ) ) )
     ```
 
-4. 使用数据源对象 sqlOutScoreDS 可获取分数, 计算并显示直方图。 添加代码以根据需要设置计算上下文。
+4. 使用数据源对象 sqlOutScoreDS 获取评分的数据，并计算和显示一个直方图。 添加代码以根据需要设置计算上下文。
   
     ```R
     # rxSetComputeContext(sqlCompute)
@@ -152,7 +153,7 @@ ms.locfileid: "68714833"
   
     **结果**
   
-    ![R 创建的复杂直方图](media/rsql-sue-complex-histogram.png "R 创建的复杂直方图")
+    ![由 R 创建的复杂直方图](media/rsql-sue-complex-histogram.png "由 R 创建的复杂直方图")
   
 ## <a name="next-steps"></a>后续步骤
 

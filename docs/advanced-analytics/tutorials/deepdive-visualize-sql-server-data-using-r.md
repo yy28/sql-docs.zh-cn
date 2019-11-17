@@ -1,37 +1,38 @@
 ---
-title: 使用 RevoScaleR rxHistogram 可视化 SQL Server 数据
-description: 有关如何使用 R 语言在 SQL Server 中实现数据可视化的教程演练。
+title: 使用 RevoScaleR 实现数据的可视化效果
+description: 有关如何在 SQL Server 中使用 R 语言实现数据的可视化效果的教程演练。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c7e837f9ed4392a8ecfc9e7c237b95f3fdde3d3
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: f64b42e69b1399e67211e82e26502c3fcec96254
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714853"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727118"
 ---
-#  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R 可视化 SQL Server 数据 (SQL Server 和 RevoScaleR 教程)
+#  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R 实现 SQL Server 数据的可视化效果（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
+本课程属于 [RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)，该教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
-在本课程中, 使用 R 函数查看按性别划分的*creditLine*列中值的分布。
+在本课中，使用 R 函数来查看 creditLine 列中值的分布（按性别）。
 
 > [!div class="checklist"]
-> * 创建直方图输入的最小值-最大值变量
-> * 使用**rxHistogram**从**RevoScaleR**直观显示直方图中的数据
-> * 使用**levelplot**从**点阵**中包含的散点图可视化
+> * 创建直方图输入的 min-max 变量
+> * 使用 RevoScaleR 中的 rxHistogram 以直方图的形式实现数据的可视化效果
+> * 通过使用基本 R 分发中包含的 lattice 中的 levelplot 以散点图的形式实现可视化效果
 
-如本课程所示, 可以在同一脚本中合并开源和 Microsoft 特定函数。
+如本课程所示，可以在同一脚本中合并开放源代码和 Microsoft 特定函数。
 
 ## <a name="add-maximum-and-minimum-values"></a>添加最大值和最小值
 
-根据上一课中计算得出的汇总统计信息, 您已经发现了一些有用的信息, 您可以将这些数据插入到数据源中以供进一步计算。 例如, 最小值和最大值可用于计算直方图。 在此练习中, 将高值和低值添加到**RxSqlServerData**数据源。
+根据上一课的计算摘要统计信息，你会发现一些有用的数据信息，可以将这些数据插入数据源以进行进一步的计算。 例如，最小值和最大值可用于计算直方图。 在此练习中，将高值和低值添加到 RxSqlServerData 数据源。
 
 1. 首先设置一些临时变量。
   
@@ -40,9 +41,9 @@ ms.locfileid: "68714853"
     var <- sumDF$Name
     ```
   
-2. 使用在上一课中创建的变量*ccColInfo*来定义数据源中的列。
+2. 使用上一课中创建的变量 ccColInfo 定义数据源中的列。
   
-   向重写原始定义的列集合添加新的计算列 (*numTrans*、 *numIntlTrans*和*creditLine*)。 下面的脚本根据从 sumOut 获取的最小值和最大值 (从**rxSummary**存储内存中输出) 来添加因子。 
+   将新的计算列（numTrans、numIntlTrans 和 creditLine）添加到替代原始定义的列集合中。 下面的脚本基于最小值和最大值添加了因子，这些值获取自 sumOut（它存储了 rxSummary 的内存中的输出）。 
   
     ```R 
     ccColInfo <- list(
@@ -64,7 +65,7 @@ ms.locfileid: "68714853"
             )
     ```
   
-3. 更新列集合后, 应用以下语句以创建之前定义的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源的更新版本。
+3. 更新列集合后，应用以下语句创建之前定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的更新版本。
   
     ```R
     sqlFraudDS <- RxSqlServerData(
@@ -74,14 +75,14 @@ ms.locfileid: "68714853"
         rowsPerRead = sqlRowsPerRead)
     ```
   
-    SqlFraudDS 数据源现在包括使用*ccColInfo*添加的新列。
+    现在，sqlFraudDS 数据源包括使用 ccColInfo 添加的新列。
   
-此时, 修改仅影响 R 中的数据源对象;尚未向数据库表写入新数据。 但是, 可以使用 sumOut 变量中捕获的数据创建可视化效果和摘要。 
+目前，修改仅影响 R 中的数据源对象；还未向数据库表写入任何新数据。 但是，你可以使用在 sumOut 变量中捕获的数据来创建可视化效果和摘要。 
 
 > [!TIP]
-> 如果忘记了正在使用的计算上下文, 请运行**rxGetComputeContext ()** 。 如果返回值为 "RxLocalSeq 计算上下文", 则表示您正在本地计算上下文中运行。
+> 如果忘记了使用的计算上下文，请运行 rxGetComputeContext()。 如果返回值为“RxLocalSeq Compute Context”，则表示你正在本地计算上下文中运行。
 
-## <a name="visualize-data-using-rxhistogram"></a>使用 rxHistogram 实现数据的可视化
+## <a name="visualize-data-using-rxhistogram"></a>使用 rxHistogram 实现数据的可视化效果
 
 1. 使用以下 R 代码来调用 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) 函数并传递公式和数据源。 可首先在本地运行，查看预期的结果以及需要的时间。
   
@@ -89,47 +90,47 @@ ms.locfileid: "68714853"
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    在内部，**rxHistogram** 调用 [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) 函数，它包含在 **RevoScaleR** 包中。 **rxCube**输出一个列表 (或数据帧), 其中包含在公式中指定的每个变量的一个列和一个计数列。
+    在内部，**rxHistogram** 调用 [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) 函数，它包含在 **RevoScaleR** 包中。 rxCube 输出一个列表（或数据框架），其中包括针对公式中指定的每个变量的一个列，以及一个计数列。
     
-2. 现在, 将计算上下文设置为远程 SQL Server 计算机, 然后再次运行**rxHistogram** 。
+2. 现在，将计算上下文设置为远程 SQL Server 计算机并再次运行 rxHistogram。
   
     ```R
     rxSetComputeContext(sqlCompute)
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-3. 结果完全相同, 因为你使用的是相同的数据源, 但在第二个步骤中, 将在远程服务器上执行计算。 结果将返回到本地工作站用于绘图。
+3. 因为你使用的是相同的数据源，所以结果是完全相同的；但在第二步中，计算是在远程服务器上执行的。 结果将返回到本地工作站用于绘图。
    
   ![直方图结果](media/rsql-sue-histogramresults.jpg "直方图结果")
 
 
-## <a name="visualize-with-scatter-plots"></a>用散点图可视化
+## <a name="visualize-with-scatter-plots"></a>使用散点图实现可视化效果
 
-散点图通常在数据浏览过程中用于比较两个变量之间的关系。 你可以使用内置 R 包实现此目的, 并使用**RevoScaleR**函数提供的输入。
+散点图通常在数据浏览过程中用于比较两个变量之间的关系。 为此，你可以采用 RevoScaleR 函数提供的输入来使用内置的 R 包。
 
-1. 调用[rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs)函数为*numTrans*和*numIntlTrans*的每个组合计算*fraudRisk*的平均值:
+1. 对于 numTrans 和 numIntlTrans 的每个组合，调用 [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) 函数来计算 fraudRisk 的平均值：
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
     ```
   
-    若要指定用于计算组均值的组，请使用 `F()` 表示法。 在此示例中`F(numTrans):F(numIntlTrans)` , 指示变量`numTrans`中的整数和`numIntlTrans`应视为分类变量, 并且每个整数值都有一个级别。
+    若要指定用于计算组均值的组，请使用 `F()` 表示法。 在本示例中，`F(numTrans):F(numIntlTrans)` 表明变量 `numTrans` 和 `numIntlTrans` 中的整数应视为类别变量，并且每个整数值都有一个级别。
   
-    **RxCube**的默认返回值是一个*rxCube 对象*, 该对象表示一个交叉表。 
+    rxCube 的默认返回值为表示交叉表的 rxCube object。 
   
-2. 调用[rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf)函数可将结果转换为一个数据帧, 该数据帧可轻松用于 R 的一个标准绘图函数。
+2. 调用 [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) 函数将结果转换为一个数据框架，可轻松将此数据框架用于 R 的一个标准绘图函数。
   
     ```R
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    **RxCube**函数包含一个可选参数*returnDataFrame* = **TRUE**, 可用于将结果直接转换为数据帧。 例如：
+    rxCube 函数包含一个可选参数，returnDataFrame = TRUE，可使用此参数将结果直接转换成数据框架。 例如：
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        
-    但是, **rxResultsDF**的输出为整洁, 并保留源列的名称。 您可以`head(cube1)` `head(cubePlot)`随后运行来比较输出。
+    但是，rxResultsDF 的输出更加清晰，并保留了源列的名称。 可以运行后跟 `head(cubePlot)` 的 `head(cube1)` 来比较输出。
   
-3. 使用**点阵**包中的**levelplot**函数创建热度地图, 其中包含所有 R 分发版。
+3. 使用来自所有 R 分发中包含的 lattice 包的 levelplot 函数创建热度地图。
   
     ```R
     levelplot(fraudRisk~numTrans*numIntlTrans, data = cubePlot)
@@ -139,9 +140,9 @@ ms.locfileid: "68714853"
   
     ![散点图结果](media/rsql-sue-scatterplotresults.jpg "散点图结果")
   
-在此快速分析中, 你可以看到, 诈骗风险增加, 同时增加了事务数和国际事务数。
+从此快速分析中可以看出欺诈风险随交易数量和国际交易数量的增加而增高。
 
-有关**rxCube**函数和交叉表的详细信息, 请参阅[使用 RevoScaleR 的数据摘要](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)。
+有关 rxCube 函数和常规交叉表的详细信息，请参阅[使用 RevoScaleR 的数据摘要](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)。
 
 ## <a name="next-steps"></a>后续步骤
 

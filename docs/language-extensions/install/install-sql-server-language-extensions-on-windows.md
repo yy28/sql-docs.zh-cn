@@ -1,26 +1,26 @@
 ---
 title: 在 Windows 上安装 SQL Server 语言扩展
-titleSuffix: SQL Server Language Extensions
-description: 适用于 Windows 中 SQL Server 2019 的语言扩展安装步骤。
+titleSuffix: ''
+description: 了解如何在 Windows 上安装 SQL Server 语言扩展。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc9baf6f5360c82ec27a3c243b840b2d38ed1d56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589061"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658845"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>在 Windows 上安装 SQL Server 语言扩展
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-从 SQL Server 2019 开始提供语言扩展和 Java 支持。 本文介绍如何通过运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导来安装语言扩展组件。
+了解如何通过运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导在 SQL Server 上安装语言扩展组件。
 
 > [!NOTE]
 > 本文适用于在 Windows 上安装 SQL Server 语言扩展。 对于 Linux，请参阅[在 Linux 上安装 SQL Server 2019 语言扩展 (Java)](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions)
@@ -61,18 +61,15 @@ ms.locfileid: "73589061"
     
 ## <a name="get-the-installation-media"></a>获取安装介质
 
-可在 [SQL Server 2019 安装网站](https://www.microsoft.com/sql-server/sql-server-2019#Install)获取预览版的 SQL Server 2019。
-
-<!-- We can use this include statement, once SQL Server 2019 is in GA
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
--->
+
 ## <a name="run-setup"></a>运行安装程序
 
 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。
 
 1. 启动 SQL Server 2019 的安装向导。 
   
-2. 在“安装”选项卡上，选择“全新 SQL Server 独立安装或向现有安装添加功能”。
+2. 在“安装”选项卡上，选择“全新 SQL Server 独立安装或向现有安装添加功能”   。
 
     ![SQL Server 2019 安装](../media/sql-install.png) 
 
@@ -86,24 +83,24 @@ ms.locfileid: "73589061"
   
         此选项将安装支持 Java 代码执行的语言扩展组件。
 
-        - 如果要安装默认的 Java 运行时 Zulu Open JRE 11.0.3，请选择“机器学习服务和语言扩展”和“Java”。
+        - 如果要安装默认的 Java 运行时 Zulu Open JRE 11.0.3，请选择“机器学习服务和语言扩展”和“Java”   。
 
-        - 如果要使用自己的 Java 运行时，请选择“机器学习服务和语言扩展”。 请勿选择 Java。
+        - 如果要使用自己的 Java 运行时，请选择“机器学习服务和语言扩展”  。 请勿选择 Java。
 
         如果要使用 R 和 Python，请参阅[在 Windows 上安装 SQL Server 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。
 
     ![语言扩展的功能选项](../media/sql-install-feature-selection.png)
 
-4. 如果在上一步中选择“Java”来安装默认的 Java 运行时，则会出现“Java 安装位置”页面。
+4. 如果在上一步中选择“Java”来安装默认的 Java 运行时，则会出现“Java 安装位置”页面   。
 
-    选择“安装此安装随附的 Open JRE 11.0.3”。
+    选择“安装此安装随附的 Open JRE 11.0.3”  。
 
     ![选择 Java 安装位置](../media/sql-install-openjdk.png)
 
     > [!NOTE]
-    > “提供已在此计算机上安装的其他版本的位置”不适用于语言扩展。
+    > “提供已在此计算机上安装的其他版本的位置”不适用于语言扩展  。
 
-5. 在“准备安装”页面上，验证是否已包括这些选择，然后选择“安装”。
+5. 在“准备安装”页面上，验证是否已包括这些选择，然后选择“安装”   。
   
     + 数据库引擎服务
     + 机器学习服务和语言扩展
@@ -122,9 +119,9 @@ ms.locfileid: "73589061"
 
     根据 SQL Server 安装路径，或者如果选择其他 Java 运行时，JDK 或 JRE 的位置可能不同于上述示例路径。 即使安装了 JDK，通常还会在安装过程中获得 JRE 子文件夹，因此，请在此情况下指向 JRE 文件夹。 Java 扩展将尝试从路径 `%JRE_HOME%\bin\server` 加载 `jvm.dll`。
 
-2. 在“控制面板”中，依次打开“系统和安全”、“系统”，然后单击“高级系统属性”。
+2. 在“控制面板”中，依次打开“系统和安全”、“系统”，然后单击“高级系统属性”    。
 
-3. 单击“环境变量”。
+3. 单击“环境变量”  。
 
 4. 使用 JDK/JRE 路径的值（见步骤 1）为 `JRE_HOME` 创建新的系统变量。
 
@@ -132,13 +129,13 @@ ms.locfileid: "73589061"
 
     1. 打开[“SQL Server 配置管理器”](../../relational-databases/sql-server-configuration-manager.md)。
 
-    2. 在“SQL Server 服务”下，右键单击“SQL Server Launchpad”，然后选择“重启”。
+    2. 在“SQL Server 服务”下，右键单击“SQL Server Launchpad”，然后选择“重启”  。
 
 <a name="perms-nonwindows"></a>
 
 ## <a name="grant-access-to-non-default-jre-folder"></a>授予非默认 JRE 文件夹的访问权限
 
-如果未安装 SQL Server 附带的默认 Zulu Open JRE，并且未在程序文件下安装 JDK 或 JRE，则需要执行以下步骤。 从提升的行运行 icacls 命令，以向 SQLRUsergroup 和 SQL Server 服务帐户（位于 ALL_APPLICATION_PACKAGES）授予访问 JRE 的权限。 这些命令将以递归方式授予给定目录路径下的所有文件和文件夹的访问权限。
+如果未安装 SQL Server 附带的默认 Zulu Open JRE，并且未在程序文件下安装 JDK 或 JRE，则需要执行以下步骤。 从提升的行运行 icacls 命令，以向 SQLRUsergroup 和 SQL Server 服务帐户（位于 ALL_APPLICATION_PACKAGES）授予访问 JRE 的权限     。 这些命令将以递归方式授予给定目录路径下的所有文件和文件夹的访问权限。
 
 1. 授予 SQLRUserGroup 权限
 
@@ -165,7 +162,7 @@ ms.locfileid: "73589061"
     > 
     > 还可以使用 [Azure Data Studio](../../azure-data-studio/what-is.md)，它支持管理任务和针对 SQL Server 的查询。
   
-2. 连接到已安装语言扩展的实例，单击“新建查询”以打开查询窗口，并运行以下命令：
+2. 连接到已安装语言扩展的实例，单击“新建查询”以打开查询窗口，并运行以下命令  ：
 
     ```sql
     sp_configure
@@ -188,7 +185,7 @@ ms.locfileid: "73589061"
 
 重启 SQL Server 服务也会自动重启相关的 SQL Server Launchpad 服务。
 
-可以使用右键单击 SSMS 中实例的“重启”命令、使用“控制面板”中的“服务”面板，或者使用 [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)来重启服务。
+可以使用右键单击 SSMS 中实例的“重启”命令、使用“控制面板”中的“服务”面板，或者使用 [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)来重启服务   。
 
 <a name="register_external_language"></a>
 
@@ -218,9 +215,9 @@ GO
     EXEC sp_configure  'external scripts enabled'
     ```
 
-    run_value 现已设置为 1。
+    run_value 现已设置为 1  。
     
-2. 打开“服务”面板或 SQL Server 配置管理器，并验证“SQL Server Launchpad”是否正在运行。 应有一项服务适用于已安装语言扩展的每个数据库引擎实例。 有关该服务的详细信息，请参阅[扩展性框架](../concepts/extensibility-framework.md)。 
+2. 打开“服务”面板或 SQL Server 配置管理器，并验证“SQL Server Launchpad”是否正在运行   。 应有一项服务适用于已安装语言扩展的每个数据库引擎实例。 有关该服务的详细信息，请参阅[扩展性框架](../concepts/extensibility-framework.md)。 
    
 ## <a name="additional-configuration"></a>其他配置
 

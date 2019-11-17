@@ -1,7 +1,7 @@
 ---
 title: 监视和故障排除
 titleSuffix: SQL Server big data clusters
-description: 本文提供了用于监视和解决问题[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的有用命令。
+description: 本文提供了用于监视 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 并对其进行故障排除的有用命令。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -11,22 +11,22 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
 ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/29/2019
 ms.locfileid: "70153635"
 ---
-# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>监视和故障排除[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>监视 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 并对其进行故障排除
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍可用于监视和排除故障的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]几个有用的 Kubernetes 命令。 其中介绍了如何深入了解位于大数据群集中的 Pod 或其他 Kubernetes 项目的详细信息。 本文也涵盖了一些常见任务，例如将文件复制到运行某个 SQL Server 大数据群集服务的容器中或从中进行复制。
+本文介绍了几个用于监视 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 并对其进行故障排除的实用 Kubernetes 命令。 其中介绍了如何深入了解位于大数据群集中的 Pod 或其他 Kubernetes 项目的详细信息。 本文也涵盖了一些常见任务，例如将文件复制到运行某个 SQL Server 大数据群集服务的容器中或从中进行复制。
 
 > [!TIP]
-> 若要监视大数据群集组件的状态, 可以使用 Azure Data Studio 附带的[**azdata bdc 状态**](deployment-guidance.md#status)命令或内置[故障排除笔记本](manage-notebooks.md)。
+> 为了监视大数据群集组件的状态，可以使用 [azdata bdc status](deployment-guidance.md#status) 命令或 Azure Data Studio 附带的内置[排除故障笔记本](manage-notebooks.md)  。
 
 > [!TIP]
-> 在 Windows（cmd 或 PS）或 Linux (bash) 客户端计算机上运行以下 kubectl 命令。 它们需要该群集中的上一身份验证以及一个用于运行该身份验证的群集上下文。 例如，对于先前创建的 AKS 群集，可以运行 `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` 以下载 Kubernetes 群集配置文件并设置群集上下文。
+> 在 Windows（cmd 或 PS）或 Linux (bash) 客户端计算机上运行以下 kubectl 命令  。 它们需要该群集中的上一身份验证以及一个用于运行该身份验证的群集上下文。 例如，对于先前创建的 AKS 群集，可以运行 `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` 以下载 Kubernetes 群集配置文件并设置群集上下文。
 
 ## <a name="get-status-of-pods"></a>获取 Pod 的状态
 
@@ -72,7 +72,7 @@ storage-0-1       7/7     Running   0          110m
 ```
 
 > [!NOTE]
-> 在部署期间，仍会出现状态为 ContainerCreating 的 Pod。 如果部署因任何原因而挂起，可通过此状态了解问题所在。 另请参阅“READY”列。 这将告诉你已在 Pod 中启动的容器数量。 请注意，部署可能需要 30 分钟或更长时间，具体取决于你的配置和网络。 大部分时间花在了下载不同组件的容器映像上。
+> 在部署期间，仍会出现状态为 ContainerCreating 的 Pod   。 如果部署因任何原因而挂起，可通过此状态了解问题所在。 另请参阅“READY”列  。 这将告诉你已在 Pod 中启动的容器数量。 请注意，部署可能需要 30 分钟或更长时间，具体取决于你的配置和网络。 大部分时间花在了下载不同组件的容器映像上。
 
 ## <a name="get-pod-details"></a>获取 Pod 详细信息
 
@@ -116,13 +116,13 @@ kubectl get svc -n mssql-cluster
 
 | 服务 | 描述 |
 |---|---|
-| **master-svc-external** | 提供对主实例的访问权限。<br/>（EXTERNAL-IP、31433 和 SA 用户） |
+| **master-svc-external** | 提供对主实例的访问权限。<br/>（EXTERNAL-IP、31433 和 SA 用户   ） |
 | **controller-svc-external** | 支持管理群集的工具和客户端。 |
-| **gateway-svc-external** | 提供对 HDFS/Spark 网关的访问权限。<br/>（EXTERNAL-IP 和根用户） |
+| **gateway-svc-external** | 提供对 HDFS/Spark 网关的访问权限。<br/>（EXTERNAL-IP 和根用户   ） |
 | **appproxy-svc-external** | 支持应用程序部署方案。 |
 
 > [!TIP]
-> 这是使用 kubectl 查看服务的一种方法，但也可以使用 `azdata bdc endpoint list` 命令查看这些终结点。 有关详细信息，请参阅[获取大数据群集终结点](deployment-guidance.md#endpoints)。
+> 这是使用 kubectl 查看服务的一种方法，但也可以使用 `azdata bdc endpoint list` 命令查看这些终结点  。 有关详细信息，请参阅[获取大数据群集终结点](deployment-guidance.md#endpoints)。
 
 ## <a name="get-service-details"></a>获取服务详细信息
 
@@ -132,7 +132,7 @@ kubectl get svc -n mssql-cluster
 kubectl describe service <service_name> -n <namespace_name>
 ```
 
-下面的示例检索 master-svc-external 服务的详细信息：
+下面的示例检索 master-svc-external 服务的详细信息  ：
 
 ```bash
 kubectl describe service master-svc-external -n mssql-cluster
@@ -162,7 +162,7 @@ kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sq
 
 ### <a id="copyinto"></a> 将文件复制到容器中
 
-下面的示例将“AdventureWorks2016CTP3.bak”文件从本地计算机复制到 `master-0` Pod 中的 SQL Server 主实例容器 (`mssql-server`)。 该文件将被复制到容器的 `/tmp` 目录中。 
+下面的示例将“AdventureWorks2016CTP3.bak”文件从本地计算机复制到 `master-0` Pod 中的 SQL Server 主实例容器 (`mssql-server`)  。 该文件将被复制到容器的 `/tmp` 目录中。 
 
 ```bash
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n mssql-cluster
@@ -209,9 +209,9 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> 如果收到以下错误信息：无法侦听端口 8001：由于以下错误，无法创建所有侦听器：无法创建侦听器：错误侦听 tcp4 127.0.0.1:8001:> 绑定：通常每个套接字地址只允许使用一次（协议/网络地址/端口）。无法创建侦听器：错误侦听 tcp6：地址 [[::1]]:8001：其中缺少端口 > 地址错误：无法侦听任何请求的端口 [{8001 9090}] *，* 请确保没有从其他窗口中启动该仪表板。
+> 如果收到以下错误信息：无法侦听端口 8001：由于以下错误，无法创建所有侦听器：无法创建侦听器：错误侦听 tcp4 127.0.0.1:8001:> 绑定：通常每个套接字地址只允许使用一次（协议/网络地址/端口）。无法创建侦听器：错误侦听 tcp6：地址 [[::1]]:8001：其中缺少端口 > 地址错误：无法侦听任何请求的端口 [{8001 9090}]，请确保没有从其他窗口中启动该仪表板*。
 
-在浏览器上启动仪表板时，由于默认情况下在 AKS 群集中启用 RBAC，因此你可能会收到权限警告，并且仪表板使用的服务帐户权限不足，无法访问所有资源（例如，已禁止 Pod：用户“system:serviceaccount:kube-system:kubernetes-dashboard”无法在命名空间“默认”中列出 Pod）。 运行以下命令，为 `kubernetes-dashboard` 提供所需的权限，然后重启仪表板：
+在浏览器上启动仪表板时，由于默认情况下在 AKS 群集中启用 RBAC，因此你可能会收到权限警告，并且仪表板使用的服务帐户权限不足，无法访问所有资源（例如，已禁止 Pod：  用户“system:serviceaccount:kube-system:kubernetes-dashboard”无法在命名空间“默认”中列出 Pod）。 运行以下命令，为 `kubernetes-dashboard` 提供所需的权限，然后重启仪表板：
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
@@ -227,4 +227,4 @@ kubectl proxy
 
 ## <a name="next-steps"></a>后续步骤
 
-有关大数据群集的详细信息, 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]是](big-data-cluster-overview.md)。
+有关大数据群集的详细信息，请参阅[什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md)。

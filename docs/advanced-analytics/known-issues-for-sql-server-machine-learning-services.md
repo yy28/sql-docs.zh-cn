@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b0374e6e6fe620c4f43e26aa9bd4494746da36e4
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532603"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706854"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的已知问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ R_SERVER 使用 Intel 数学内核库 (MKL)。 对于涉及 MKL 的计算，如�
 3. 重启 R_SERVER。 在 SQL Server 上，可以重启 SQL Server Launchpad 服务。
 
 > [!NOTE]
-> 如果要在 Linux 上运行 SQL Server 2019 预览版，请在用户主目录中编辑或创建 .bash_profile，添加 `export MKL_CBWR="AUTO"` 行  。 通过在 bash 命令提示符处键入 `source .bash_profile` 来执行此文件。 通过在 R 命令提示符处键入 `Sys.getenv()` 来重启 R_SERVER。
+> 如果要在 Linux 上运行 SQL Server 2019，请在用户主目录中编辑或创建 .bash_profile，添加 `export MKL_CBWR="AUTO"` 行  。 通过在 bash 命令提示符处键入 `source .bash_profile` 来执行此文件。 通过在 R 命令提示符处键入 `Sys.getenv()` 来重启 R_SERVER。
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2.R 脚本运行时错误（SQL Server 2017 CU5-CU7 回归）
 
