@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809709"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981806"
 ---
 # <a name="dta-utility"></a>dta 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ dta -d AdventureWorks2012 ...
 [数据引擎优化顾问 (DTA) 中的列存储索引建议](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)。
  ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
 
   
  **-fk** _keep_existing_option_  
@@ -219,7 +219,7 @@ dta -d AdventureWorks2012 ...
  指定将查询存储用作工作负荷。 分析显式选择的数据库的查询存储中的 top 1000 事件。 可使用 -n  选项更改此值。  有关详细信息，请参阅[查询存储](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查询存储中的工作负荷优化数据库](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
  ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
      
   
  **-if** _workload_file_  
@@ -266,14 +266,14 @@ dta -n number_of_events -A 0
  在此示例中，必须指定不受限制的优化时间 (`-A 0`)。 否则，数据库引擎优化顾问将采用默认的 8 小时优化时间。
  
  **-I** _time_window_in_hours_   
-   指定在使用 **-iq**选项 (工作负荷来自查询存储) 时, 必须执行查询的时间窗口 (以小时为单位), 以供 DTA 用于优化。 
+   指定在使用 **-iq**选项（工作负荷来自查询存储）时，必须执行查询的时间窗口（以小时为单位），以供 DTA 用于优化。 
 ```  
 dta -iq -I 48  
 ```  
-在这种情况下, DTA 将使用查询存储作为工作负荷源, 仅考虑在过去48小时内执行的查询。  
+在这种情况下，DTA 将使用查询存储作为工作负荷源，仅考虑在过去48小时内执行的查询。  
   ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
 
 
   
