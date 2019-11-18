@@ -1,7 +1,6 @@
 ---
-title: 在 SQL Server 或 SQL 数据库中存储 JSON 文档 | Microsoft Docs
+title: 在 SQL Server 或 SQL 数据库中存储 JSON 文档
 ms.description: This article describes why and how to store and index JSON documents in SQL Server or SQL Database, and how to optimize queries over the JSON documents.
-ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.reviewer: genemi
@@ -9,12 +8,13 @@ ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-ms.openlocfilehash: 7c389f6b7cb2df2d7f464dcc8fc5eeb110a7f4d5
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ea43d88fea017c723177e4b83c86b5c8165b734b
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957444"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096024"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>在 SQL Server 或 SQL 数据库中存储 JSON 文档
 SQL Server 和 Azure SQL 数据库包含可使用标准 SQL 语言分析 JSON 文档的本机 JSON 函数。 可以将 JSON 文档存储在 SQL Server 或 SQL 数据库中，并像在 NoSQL 数据库中一样查询 JSON 数据。 本文介绍在 SQL Server 或 SQL 数据库中存储 JSON 文档的相关选项。

@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b95fd77e973e918dda99ef4a1053b45d3f3f067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 57849c8d99700f61c251177c3c3195b2277163ae
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927197"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982085"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中现有资源调控器的资源池配置。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -74,7 +74,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
  指定在存在 CPU 争用时资源池中的所有请求将接收的最大平均 CPU 带宽。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。  
   
  CAP_CPU_PERCENT = value   
- **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  为资源池中的请求指定目标最大 CPU 容量。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。  
   
@@ -82,7 +82,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
 >  由于 CPU 治理的统计特性，你可能会注意到偶尔会出现超过 CAP_CPU_PERCENT 中指定值的峰值。  
   
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
- **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  将资源池附加到特定的计划程序。 默认值为 AUTO。  
   
@@ -105,12 +105,12 @@ INNER JOIN sys.dm_os_schedulers AS sc
  指定此资源池中的请求可使用的总服务器内存量。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。  
   
  MIN_IOPS_PER_VOLUME = value   
- **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
  指定为资源池保留的每个磁盘卷每秒的最小 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)  。 指定 0 表示池没有最小值阈值。  
   
  MAX_IOPS_PER_VOLUME = value   
- **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
  指定可用于该资源池的每个磁盘卷每秒的最大 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)  。 指定 0 表示为池设置无限制的阈值。 默认值为 0。  
   
@@ -151,7 +151,7 @@ GO
   
  在以下示例中，`CAP_CPU_PERCENT` 将硬性上限设置为 80%，并且 `AFFINITY SCHEDULER` 设置为单个值 8 以及 12 到 16 这个范围。  
   
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
 ```  
 ALTER RESOURCE POOL Pool25  

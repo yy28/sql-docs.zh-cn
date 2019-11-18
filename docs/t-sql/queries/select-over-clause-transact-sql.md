@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ac5c9ff7d2fbb5d32b559e6225dba4e7bbb7a48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948328"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981708"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "67948328"
   
 -   [NEXT VALUE FOR 函数](../../t-sql/functions/next-value-for-transact-sql.md)  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -121,13 +121,13 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  指定用于进行排序的列或表达式。 order_by_expression 只能引用可供 FROM 子句使用的列  。 不能将整数指定为表示列名或别名。  
   
  COLLATE collation_name   
- 指定应该根据在 collation_name 中指定的排序规则执行 ORDER BY 操作  。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称  。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 仅适用于 char、nchar、varchar 和 nvarchar 类型的列     。  
+ 指定应该根据在 collation_name 中指定的排序规则执行 ORDER BY 操作  。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称  。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 仅适用于 char、nchar、varchar 和 nvarchar 类型的列     。  
   
  **ASC** | DESC  
  指定按升序或降序排列指定列中的值。 ASC 是默认排序顺序。 Null 值被视为最低的可能值。  
   
  ROWS | RANGE  
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
  通过指定分区中的起点和终点，进一步限制分区中的行数。 这是通过按照逻辑关联或物理关联对当前行指定某一范围的行实现的。 物理关联通过使用 ROWS 子句实现。  
   
@@ -137,7 +137,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 >  ROWS 或 RANGE 要求指定 ORDER BY 子句。 如果 ORDER BY 包含多个顺序表达式，则 CURRENT ROW FOR RANGE 在确定当前行时将考虑 ORDER BY 列表中的所有列。  
   
  UNBOUNDED PRECEDING  
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  指定窗口在分区中的第一行开始。 UNBOUNDED PRECEDING 只能指定为窗口起点。  
   
@@ -145,17 +145,17 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  使用 \<无符号值指定> 指示要置于当前行之前的行或值的数目。 对于 RANGE 则不允许这样指定。  
   
  CURRENT ROW  
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
  在与 ROWS 一起使用时指定窗口在当前行开始或结束，或者在与 RANGE 一起使用时指定当前值。 CURRENT ROW 可指定为既是起点，又是终点。  
   
  BETWEEN \<窗口框架限定\< AND <窗口框架限定>  
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
  与 ROWS 或 RANGE 一起使用，以便指定窗口的下（开始）边界和上（结束）边界点。 \<窗口框架限定> 定义边界起点，\<窗口框架限定> 定义边界结点。 上限不能小于下限。  
   
  UNBOUNDED FOLLOWING  
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
  指定窗口在分区的最后一行结束。 UNBOUNDED FOLLOWING 只能指定为窗口终点。 例如，RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING 定义以当前行开始、以分区的最后一行结束的窗口。  
   
@@ -163,7 +163,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  使用 \<无符号值指定> 指示要置于当前行之后的行或值的数目。 在 \<无符号值指定> FOLLOWING 指定为窗口起点时，终点必须是 \<无符号值指定>FOLLOWING。 例如，ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING 定义一个窗口，该窗口以跟随在当前行之后的第二行开头、以跟随在当前行之后的第十行结尾。 对于 RANGE 则不允许这样指定。  
   
  无符号整数文字  
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  一个正整数文字（包括 0），它指定要置于当前行或值之前或之后的行或值的数目。 这一指定仅对于 ROWS 有效。  
   
@@ -188,7 +188,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. 将 OVER 子句与 ROW_NUMBER 函数结合使用  
+### <a name="a-using-the-over-clause-with-the-row_number-function"></a>A. 将 OVER 子句与 ROW_NUMBER 函数结合使用  
  下面的示例说明如何将 OVER 子句与 ROW_NUMBER 函数一起使用来显示分区内各行的行号。 在 OVER 子句中指定的 ORDER BY 子句按 `SalesYTD` 列对每个分区中的行进行排序。 SELECT 语句中的 ORDER BY 子句确定按其返回整个查询结果集的顺序。  
   
 ```sql  
@@ -390,7 +390,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ### <a name="d-specifying-the-rows-clause"></a>D. 指定 ROWS 子句  
   
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  以下示例使用 ROWS 子句定义其行将作为当前行以及后随的 N 行（在此示例中为 1 行）计算的窗口  。  
   
@@ -455,7 +455,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. 将 OVER 子句与 ROW_NUMBER 函数结合使用  
+### <a name="e-using-the-over-clause-with-the-row_number-function"></a>E. 将 OVER 子句与 ROW_NUMBER 函数结合使用  
  以下示例根据销售代表所分配的销售配额返回各自的 ROW_NUMBER。  
   
 ```sql  

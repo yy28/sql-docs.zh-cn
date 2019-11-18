@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f088f9340c0441b15eea7382ff49b1b87181479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902118"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982826"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "67902118"
   
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的全文搜索形式的信息，请参阅[使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)。  
  
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -151,7 +151,7 @@ CONTAINS (
  指定查询按给定的搜索条件在 FROM 子句中指定的表中搜索所有全文检索列。 CONTAINS 子句中的列必须来自包含全文索引的单个表。 除非指定 language_term，否则表的所有列的语言必须相同  。  
   
  PROPERTY ( column_name , 'property_name')    
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
  指定在其中搜索指定搜索条件的文档属性。  
   
@@ -246,7 +246,7 @@ WHERE CONTAINS(Description, @SearchWord);
  有关通用临近词的详细信息，请参阅[使用 NEAR 搜索与另一个词邻近的词](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)。  
   
  \<custom_proximity_term>  
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。
   
  指定词或短语的匹配项，并且可以选择指定搜索词之间允许的最大距离。 你还可以指定必须按你指定的确切顺序查找搜索词 (\<match_order>)。  
   
@@ -371,7 +371,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-contains-with-simpleterm"></a>A. 将 CONTAINS 与 \<simple_term> 一起使用  
+### <a name="a-using-contains-with-simple_term"></a>A. 将 CONTAINS 与 \<simple_term> 一起使用  
  下面的示例查找包含 `$80.99` 一词且价格为 `Mountain`的所有产品。  
   
 ```sql  
@@ -384,7 +384,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. 将 CONTAINS 和短语与 \<simple_term> 一起使用  
+### <a name="b-using-contains-and-phrase-with-simple_term"></a>B. 将 CONTAINS 和短语与 \<simple_term> 一起使用  
  以下示例返回包含短语 `Mountain` 或 `Road` 的所有产品。  
   
 ```sql  
@@ -396,7 +396,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefixterm"></a>C. 将 CONTAINS 与 \<prefix_term> 一起使用  
+### <a name="c-using-contains-with-prefix_term"></a>C. 将 CONTAINS 与 \<prefix_term> 一起使用  
  下面的示例返回的所有产品名称中，其 `Name` 列中至少有一个词以前辍 chain 开头。  
   
 ```sql  
@@ -408,7 +408,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefixterm"></a>D. 将 CONTAINS 和 OR 与 \<prefix_term> 一起使用  
+### <a name="d-using-contains-and-or-with-prefix_term"></a>D. 将 CONTAINS 和 OR 与 \<prefix_term> 一起使用  
  下面的示例将返回包含以 `chain` 或 `full` 为前缀的字符串的所有类别说明。  
   
 ```sql  
@@ -420,9 +420,9 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximityterm"></a>E. 将 CONTAINS 与 \<proximity_term> 一起使用  
+### <a name="e-using-contains-with-proximity_term"></a>E. 将 CONTAINS 与 \<proximity_term> 一起使用  
   
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
  以下示例在 `Production.ProductReview` 表中搜索包含 `bike` 一词、在“`control`”词的 10 个词范围内且使用指定顺序（即，“`bike`”排在“`control`”前面）的所有注释。  
   
@@ -435,7 +435,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generationterm"></a>F. 将 CONTAINS 与 \<generation_term> 一起使用  
+### <a name="f-using-contains-with-generation_term"></a>F. 将 CONTAINS 与 \<generation_term> 一起使用  
  下面的示例将搜索包含单词 `ride` 的各种形式（如 riding 和 ridden 等）的所有产品。  
   
 ```sql  
@@ -447,7 +447,7 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weightedterm"></a>G. 将 CONTAINS 与 \<weighted_term> 一起使用  
+### <a name="g-using-contains-with-weighted_term"></a>G. 将 CONTAINS 与 \<weighted_term> 一起使用  
  以下示例搜索包含 `performance`、`comfortable` 或 `smooth` 词并为每个词指定不同加权的所有产品名称。  
   
 ```sql  
@@ -519,7 +519,7 @@ GO
   
 ### <a name="k-querying-on-a-document-property"></a>K. 查询文档属性  
   
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
  以下查询在 `Title` 表的 `Document` 列中搜索索引属性 `Production.Document`。 该查询仅返回 `Title` 属性包含字符串 `Maintenance`   `Repair` 的文档。  
   

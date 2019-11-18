@@ -1,33 +1,36 @@
 ---
 title: Transact-SQL 断点 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoints
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2b5e9d6e47a71f8bc65d71e0fb6364e352e8045
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 989c2d7143d48a4817b7a69cf08e2845b51300e6
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263235"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097915"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 断点
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  断点指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器在特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句处暂停执行，这样您就可以查看该点的代码元素状态。  
-  
-## <a name="breakpoints"></a>断点  
- 在运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器时，您可以切换特定语句上的断点。 在执行到达具有断点的语句时，调试器将暂停执行，以便您可以查看调试信息，例如在变量和参数中存在的值。  
-  
- 您可以在编辑器窗口中单独管理断点，也可以使用 **“断点”** 窗口统一进行管理。 您可以编辑断点以便指定项，例如执行应暂停的特定条件，或者在执行断点时要执行的操作。  
-  
+
+断点指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器在特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句处暂停执行，这样您就可以查看该点的代码元素状态。
+
+## <a name="breakpoints"></a>断点
+
+在运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器时，您可以切换特定语句上的断点。 在执行到达具有断点的语句时，调试器将暂停执行，以便您可以查看调试信息，例如在变量和参数中存在的值。
+
+您可以在编辑器窗口中单独管理断点，也可以使用 **“断点”** 窗口统一进行管理。 您可以编辑断点以便指定项，例如执行应暂停的特定条件，或者在执行断点时要执行的操作。
+
 ## <a name="breakpoint-tasks"></a>断点任务  
   
 |任务说明|主题|  

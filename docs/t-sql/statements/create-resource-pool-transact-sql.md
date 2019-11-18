@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42e114c1d3f884c40ce47edca84261c2582d8576
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2830c7ae4166ee0b71b1ddfb9de953c57be2452d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117334"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982689"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建资源调控器资源池。 资源池表示数据库引擎实例的部分物理资源（内存、CPU 和 IO）。 数据库管理员可以使用资源调控器在多个资源池之间分发服务器资源，最多可为 64 个池。 资源调控器并非在每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中都提供。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法  
 ```  
@@ -72,12 +72,12 @@ MAX_CPU_PERCENT = value
 指定存在 CPU 争用时，资源池中的所有请求将接收的最大平均 CPU 带宽。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。  
   
 CAP_CPU_PERCENT =value     
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
 指定资源池中的所有请求都将收到的 CPU 带宽硬性上限。 将 CPU 最大带宽级别限制为与指定值相同。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。  
   
 AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}      
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
 将资源池附加到特定的计划程序。 默认值为 AUTO。  
   
@@ -100,12 +100,12 @@ MAX_MEMORY_PERCENT =value
 指定此资源池中的请求可使用的总服务器内存量。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。  
   
 MIN_IOPS_PER_VOLUME =value      
-**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
 指定为资源池保留的每个磁盘卷每秒的最小 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)  。 指定 0 表示池没有最小值阈值。 默认值为 0。  
   
 MAX_IOPS_PER_VOLUME =value      
-**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
 指定可用于该资源池的每个磁盘卷每秒的最大 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)  。 指定 0 表示为池设置无限制的阈值。 默认值为 0。  
   
@@ -135,11 +135,11 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-### <a name="2-set-the-capcpupercent-to-a-hard-cap-and-set-affinity-scheduler"></a>2.将 CAP_CPU_PERCENT 设置为硬上限并设置关联计划程序
+### <a name="2-set-the-cap_cpu_percent-to-a-hard-cap-and-set-affinity-scheduler"></a>2.将 CAP_CPU_PERCENT 设置为硬上限并设置关联计划程序
 
 将 CAP_CPU_PERCENT 设置为 30% 的硬上限，并将关联计划程序的范围设置为 0 到 63、128 到 191。 
   
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  
@@ -153,11 +153,11 @@ WITH (
       );  
 ```  
   
-### <a name="3-set-miniopspervolume-and-maxiopspervolume"></a>3.设置 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME   
+### <a name="3-set-min_iops_per_volume-and-max_iops_per_volume"></a>3.设置 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME   
 
 将 MIN_IOPS_PER_VOLUME 设置为 20，将 MAX_IOPS_PER_VOLUME 设置为 100。 这些值控制可用于资源池的物理 I/O 读取和写入操作。  
   
-**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  

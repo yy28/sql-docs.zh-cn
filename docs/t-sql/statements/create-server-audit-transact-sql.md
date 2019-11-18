@@ -22,19 +22,19 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117135"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983003"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 创建服务器审核对象。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -89,7 +89,7 @@ CREATE SERVER AUDIT audit_name
  指定要保留在文件系统中外加当前文件的最大文件数。 MAX_ROLLOVER_FILES 值必须是整数或 UNLIMITED  。 默认值为 UNLIMITED。 在审核重新启动（在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例重新启动或者在审核关闭后又打开时，可能会发生审核重新启动）或由于已达到 MAXSIZE 而需要新文件时，对此参数进行求值。 在对 MAX_ROLLOVER_FILES 进行求值时，如果文件的数目超出了 MAX_ROLLOVER_FILES 设置，则会删除最旧的文件   。 因此，如果 MAX_ROLLOVER_FILES 的设置为 0，则每次对 MAX_ROLLOVER_FILES 设置求值时都会创建新的文件   。 在对 MAX_ROLLOVER_FILES 设置求值时只会自动删除一个文件；因此，在降低 MAX_ROLLOVER_FILES 的值时，文件数目不会缩减，除非手动删除旧文件   。 可以指定的最大文件数为 2,147,483,647。  
   
  MAX_FILES = integer   
- **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  指定可创建的审核文件的最大数目。 当达到此限制时，不滚动更新到第一个文件。 在达到 MAX_FILES 限制时，导致生成附加审核事件的任何操作都会失败并报告错误。  
   
@@ -110,18 +110,18 @@ SHUTDOWN
   
  FAIL_OPERATION  
  如果数据库操作会导致审核的事件，则数据库操作将失败。 不会导致审核事件的操作可以继续，但也不会发生审核的事件。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后恢复。 在维护完整审核比对[!INCLUDE[ssDE](../../includes/ssde-md.md)]的完全访问权限更重要时，使用此选项。  
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。
 
  AUDIT_GUID = uniqueidentifier   
  为了支持数据库镜像之类的方案，审核功能需要一个与在镜像数据库中所找到的 GUID 相匹配的特定 GUID。 创建审核之后，即不能修改该 GUID。  
   
  predicate_expression  
- **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  指定用于确定是否应处理事件的谓词表达式。 谓词表达式限制在 3000 个字符，这限制了字符串参数。  
   
  event_field_name  
- **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  表示标识谓词源的事件字段的名称。 [ sys.fn_get_audit_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) 中描述审核字段。 除 `file_name`、`audit_file_offset` 和 `event_time` 之外的所有字段都可以进行筛选。  
 
@@ -136,12 +136,12 @@ SHUTDOWN
 
 
  number  
- **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  任何数值类型，包括 decimal  。 局限性在于缺少可用物理内存，或数值过大而无法用 64 位整数表示。  
   
  ' string '  
- **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  进行谓词比较所需的 ANSI 字符串或 Unicode 字符串。 不为谓词比较函数执行隐式字符串类型转换。 传递错误类型会导致出错。  
   

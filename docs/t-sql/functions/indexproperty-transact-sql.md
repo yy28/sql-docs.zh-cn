@@ -20,19 +20,19 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a2731f569ecf602c4aaa21e233ec671596e16ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024277"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982937"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   根据指定的表标识号、索引或统计信息名称以及属性名称，返回已命名的索引或统计信息属性值。 对于 XML 索引，返回 NULL。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,14 +61,14 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsAutoStatistics**|统计信息是由 ALTER DATABASE 的 AUTO_CREATE_STATISTICS 选项生成的。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsClustered**|索引是聚集的。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsDisabled**|索引被禁用。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 输入无效。|  
-|**IsFulltextKey**|索引是表的全文和语义索引键。|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False 或 XML 索引。<br /><br /> NULL = 输入无效。|  
+|**IsFulltextKey**|索引是表的全文和语义索引键。|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 1 = True<br /><br /> 0 = False 或 XML 索引。<br /><br /> NULL = 输入无效。|  
 |**IsHypothetical**|索引是假设的，不能直接用作数据访问路径。 假设索引包含列级统计信息，由数据库引擎优化顾问维护和使用。|1 = True<br /><br /> 0 = False 或 XML 索引<br /><br /> NULL = 输入无效。|  
-|**IsPadIndex**|索引指定每个内部节点上将要保持空闲的空间。|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False 或 XML 索引。|  
-|**IsPageLockDisallowed**|通过 ALTER INDEX 的 ALLOW_PAGE_LOCKS 选项设置的页锁定值。|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 不允许页锁定。<br /><br /> 0 = 允许页锁定。<br /><br /> NULL = 输入无效。|  
-|**IsRowLockDisallowed**|通过 ALTER INDEX 的 ALLOW_ROW_LOCKS 选项设置的行锁定值。|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 不允许行锁定。<br /><br /> 0 = 允许行锁定。<br /><br /> NULL = 输入无效。|  
+|**IsPadIndex**|索引指定每个内部节点上将要保持空闲的空间。|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 1 = True<br /><br /> 0 = False 或 XML 索引。|  
+|**IsPageLockDisallowed**|通过 ALTER INDEX 的 ALLOW_PAGE_LOCKS 选项设置的页锁定值。|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 1 = 不允许页锁定。<br /><br /> 0 = 允许页锁定。<br /><br /> NULL = 输入无效。|  
+|**IsRowLockDisallowed**|通过 ALTER INDEX 的 ALLOW_ROW_LOCKS 选项设置的行锁定值。|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 1 = 不允许行锁定。<br /><br /> 0 = 允许行锁定。<br /><br /> NULL = 输入无效。|  
 |**IsStatistics**|index_or_statistics_name 是通过 CREATE STATISTICS 语句或 ALTER DATABASE 的 AUTO_CREATE_STATISTICS 选项创建的统计信息  。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsUnique**|索引是唯一的。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
-|**IsColumnstore**|索引为 xVelocity 内存优化的列存储索引。|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsColumnstore**|索引为 xVelocity 内存优化的列存储索引。|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 1 = True<br /><br /> 0 = False| 
 |**IsOptimizedForSequentialKey**|索引是否已启用优化最后一页插入。|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。 <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>返回类型  
