@@ -1,6 +1,7 @@
 ---
-title: Stretch Database 扩展存储的过程 (Transact SQL) |Microsoft Docs
-ms.custom: ''
+title: 扩展存储过程（Transact-sql）
+titleSuffix: SQL Server Stretch Database
+ms.custom: seo-dt-2019
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,39 +14,39 @@ helpviewer_keywords:
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 675695ed3eef8fd5ddd29fa48aa64e30f8fd822c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d82b6cb9049bf5a41cfb987a55bb6d5a7147c9bd
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106646"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119271"
 ---
-# <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database 扩展存储的过程 (Transact SQL)
+# <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database 扩展存储过程（Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
- 本部分介绍与 Stretch Database 相关的扩展存储的过程。  
+ 本部分介绍与 Stretch Database 相关的扩展存储过程。  
   
 ## <a name="in-this-section"></a>本节内容  
-[sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)删除本地已启用延伸的数据库和远程 Azure 数据库之间的经过身份验证的连接。
+[sys. sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)删除启用了本地 Stretch 的数据库和远程 Azure 数据库之间经过身份验证的连接。
 
-[sys.sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)获取中临时表以帮助确保完整还原的远程 Azure 数据库，如果没有必要进行还原的 SQL Server 保留的已迁移数据的小时数。
+[sys. sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)获取 SQL Server 保留在临时表中的已迁移数据的小时数，以帮助确保远程 Azure 数据库完全还原（如果需要还原）。
   
- [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)还原启用了 Stretch 的本地数据库和远程数据库之间的经过身份验证的连接。
+ [sys. sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)还原已启用延伸的本地数据库与远程数据库之间经过身份验证的连接。
   
  [sys.sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md)  
- 协调与存储在远程 Azure 表中的批处理 ID 存储在最近迁移的数据的已启用延伸的 SQL Server 表中的批处理 ID。 
+ 通过存储在远程 Azure 表中的批 ID，协调已启用 Stretch 的 SQL Server 表中存储的批 ID。 
  
-[sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md)到已启用延伸的 SQL Server 表中的列来协调远程 Azure 表中的列。
+[sys. sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md)将远程 Azure 表中的列与启用 Stretch SQL Server 表中的列协调。
  
- [sys.sp_rda_reconcile_indexes](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-indexes-transact-sql.md)排队以对帐远程表的索引的架构任务。
+ [sys. sp_rda_reconcile_indexes](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-indexes-transact-sql.md)将架构任务排队以协调远程表上的索引。
  
- [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)指定针对当前已启用延伸的数据库和其表的查询返回本地和远程数据 （默认值） 或仅限本地数据。
+ [sys. sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)指定是否对当前启用 Stretch 的数据库及其表进行查询同时返回本地和远程数据（默认值）或本地数据。
  
- [sys.sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)设置的 SQL Server 保留的已迁移数据的小时数中临时表以帮助确保完整还原的远程 Azure 数据库，如果没有必要进行还原。
+ [sys. sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)设置 SQL Server 保留在临时表中的已迁移数据的小时数，以帮助确保远程 Azure 数据库完整还原（如果需要还原）。
  
- [sys.sp_rda_test_connection](../../relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md)测试从 SQL Server 与远程 Azure 服务器的连接，并报告可能会阻止数据迁移的问题。
+ [sys. sp_rda_test_connection](../../relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md)测试从 SQL Server 到远程 Azure 服务器的连接，并报告可能阻止数据迁移的问题。
  
-## <a name="see-also"></a>请参阅  
- [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
+## <a name="see-also"></a>另请参阅  
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   
