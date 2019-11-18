@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 23e08c74d0b41e24eb9677c59b52026e33c527f0
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049962"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981818"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ALTER FULLTEXT INDEX ON table_name
  对于包含多种语言的文本数据的非 BLOB 和非 XML 列，或者列中所存储文本的语言未知时，请使用非特定 (0x0) 语言资源。 对于存储在 XML 或 BLOB 类型列中的文档，在创建索引时，将使用文档内的语言编码。 例如，在 XML 列中，XML 文档中的 xml:lang 属性将标识语言。 在查询时，除非将 language_term 指定为全文查询的一部分，否则将使用以前在 language_term 中指定的值作为全文查询的默认语言   。  
   
  STATISTICAL_SEMANTICS  
- **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  创建作为统计语义索引一部分的附加关键短语和文档相似性索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md)。  
   
@@ -141,7 +141,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  有关详细信息，请参阅[更改跟踪和 NO POPULATION 参数的交互](#change-tracking-no-population)。
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
- **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  对指定列启用或禁用统计语义索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md)。  
   
@@ -179,7 +179,7 @@ ALTER FULLTEXT INDEX ON table_name
  有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
  SET SEARCH PROPERTY LIST { OFF | property_list_name } [ WITH NO POPULATION ]   
- **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  更改与索引（如果有）关联的搜索属性列表。  
   
@@ -307,7 +307,7 @@ GO
   
 ### <a name="b-associating-a-property-list-with-a-full-text-index"></a>B. 将属性列表与全文索引关联  
   
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  下面的示例将 `DocumentPropertyList` 属性列表与 `Production.Document` 表的全文检索相关联。 此 ALTER FULLTEXT INDEX 语句启动完全填充，这是 SET SEARCH PROPERTY LIST 子句的默认行为。  
   
@@ -324,7 +324,7 @@ GO
   
 ### <a name="c-removing-a-search-property-list"></a>C. 删除搜索属性列表  
   
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  下面的示例从 `DocumentPropertyList` 表的全文索引中删除 `Production.Document` 属性列表。 在此示例中，并不急于从索引中删除属性，因此指定了 WITH NO POPULATION 选项。 但是，不再允许针对此全文索引进行属性级别的搜索。  
   

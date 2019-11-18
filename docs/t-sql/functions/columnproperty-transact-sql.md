@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6551eb61d22f69307f6fe671ba22cd4de06cdb67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff96377eac69c1596e0d2e2661714f82dd2cae9a
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064667"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983015"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函数将返回列或参数的信息。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -54,13 +54,13 @@ property
 |**AllowsNull**|允许空值。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |**ColumnId**|对应于 sys.columns.column_id 的列 ID 值  。|列 ID<br /><br /> **注意：** 查询多列时，列 ID 值的序列中可能出现间隔。|  
 |**FullTextTypeColumn**|表中的 TYPE COLUMN，其中包含 column 的文档类型信息  。|列名称表达式的全文 TYPE COLUMN 的 ID，作为此函数的第二个参数传递。|  
-|**GeneratedAlwaysType**|系统生成的列值。 对应于 sys.columns.generated_always_type |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：有时生成<br /><br /> 1：始终在行首生成<br /><br /> 2:始终在行末生成|  
+|**GeneratedAlwaysType**|系统生成的列值。 对应于 sys.columns.generated_always_type |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 0：有时生成<br /><br /> 1：始终在行首生成<br /><br /> 2:始终在行末生成|  
 |**IsColumnSet**|列为列集。 有关详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |**IsComputed**|列是计算列。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |**IsCursorType**|过程参数类型为 CURSOR。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |**IsDeterministic**|列是确定性列。 此属性只适用于计算列和视图列。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。 非计算列或视图列。|  
 |**IsFulltextIndexed**|列已注册为全文检索。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
-|**IsHidden**|系统生成的列值。 对应于 sys.columns.is_hidden |**适用范围**： [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：不隐藏<br /><br /> 1：Hidden|  
+|**IsHidden**|系统生成的列值。 对应于 sys.columns.is_hidden |**适用于**：[!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 及更高版本。<br /><br /> 0：不隐藏<br /><br /> 1：Hidden|  
 |IsIdentity |列使用 IDENTITY 属性。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |IsIdNotForRepl |列检查 IDENTITY_INSERT 设置。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |**IsIndexable**|可以对列进行索引。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  

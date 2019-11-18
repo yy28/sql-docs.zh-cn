@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 97043c1232dd3003ff5c7101403c53425d75bca5
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843591"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981745"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="arguments"></a>参数  
  'login'     
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
  用户的登录名。 login 为 sysname   。 login 作为可选项，可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户或组  。 如果未指定 login，则返回有关当前安全上下文的信息  。 如果此参数包含词 NULL，将返回 NULL。  
   
  Param2   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
   
  指定是否验证登录名。 Param2 的类型为 int，并且可选   。 在 Param2 为 0 时，不验证登录名  。 在 Param2 未指定为 0 时，对 Windows 登录名进行验证，以便确认是否与在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的登录名完全相同  。  
   
@@ -80,7 +80,7 @@ SELECT SUSER_SID();
 ### <a name="b-using-suser_sid-with-a-specific-login"></a>B. 将 SUSER_SID 用于特定的登录名  
  下面的示例返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 登录名的安全标识号。  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -90,7 +90,7 @@ GO
 ### <a name="c-using-suser_sid-with-a-windows-user-name"></a>C. 对 Windows 用户名使用 SUSER_SID  
  以下示例返回 Windows 用户 `London\Workstation1` 的安全标识号。  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -118,7 +118,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. 将 Windows 登录名与在 SQL Server 中存储的登录名进行比较  
  下面的示例演示如何使用 Param2 从 Windows 获取 SID 并使用该 SID 作为对 `SUSER_SNAME` 函数的输入  。 该示例以在 Windows 中存储的格式 (`TestComputer\User`) 提供登录名，并且以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`TESTCOMPUTER\User`) 中存储的格式返回登录名。  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  

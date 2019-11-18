@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 5ee3b24f1c2b85d2c4966b632257ac941c9776ee
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632898"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056493"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -62,7 +62,7 @@ WITH
  *WORKLOAD_GROUP* =  *'name'*    
  当分类器规则满足条件时，名称将请求映射到工作负荷组。  名称为 sysname。  它最多可以包含 128 个字符，并且在创建分类器时必须是有效的工作负荷组名称。
 
- 可用工作负荷组可在 [sys.workload_management_workload_groups](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest) 目录视图中找到。
+ 可用工作负荷组可在 [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) 目录视图中找到。
 
  *MEMBERNAME* ='security_account'*    
  这是要添加到该角色的安全帐户。  Security_account 为 sysname，没有默认值。 Security_account 可以是数据库用户、数据库角色、Azure Active Directory 登录名或 Azure Active Directory 组。

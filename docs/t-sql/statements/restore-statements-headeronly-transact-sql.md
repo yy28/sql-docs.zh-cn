@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742974"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983034"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 语句 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -38,7 +38,7 @@ ms.locfileid: "68742974"
 > [!NOTE]  
 >  有关参数的说明，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -145,7 +145,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|字符串形式的备份类型有以下几种：<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|备份集的唯一标识号，可以根据此标识号在介质上标识备份集。|  
 |**CompressedBackupSize**|**bigint**|备份集的字节计数。 对于未压缩的备份，该值与 BackupSize 相同  。<br /><br /> 若要计算压缩率，请使用 CompressedBackupSize 和 BackupSize   。<br /><br /> 在 msdb 升级期间，将此值设置为与 BackupSize 列的值相匹配   。|  
-|**containment**|**tinyint** 非 NULL|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示数据库的包含状态。<br /><br /> 0 = 数据库包含状态为 OFF<br /><br /> 1 = 数据库处于部分包含状态|  
+|**containment**|**tinyint** 非 NULL|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指示数据库的包含状态。<br /><br /> 0 = 数据库包含状态为 OFF<br /><br /> 1 = 数据库处于部分包含状态|  
 |**KeyAlgorithm**|**nvarchar(32)**|适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 到当前版本）  。<br /><br /> 用于加密备份的加密算法。 NO_Encryption 指示备份未加密。 当无法确定正确的值时，此值应为 NULL。|  
 |**EncryptorThumbprint**|**varbinary(20)**|适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 到当前版本）  。<br /><br /> 可用于在数据库中查找证书或非对称密钥的加密程序的指纹。 当备份未加密时，此值为 NULL。|  
 |**EncryptorType**|**nvarchar(32)**|适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 到当前版本）  。<br /><br /> 使用的加密程序的类型：证书或非对称密钥。 当备份未加密时，此值为 NULL。|  

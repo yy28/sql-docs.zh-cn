@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149982"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962373"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
 
@@ -317,12 +317,6 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
      有关详细信息，请参阅[“数据库引擎配置 - 数据目录”页](../../sql-server/install/instance-configuration.md#datadir)。
 
      使用“数据库引擎配置 - TempDB”  页配置 tempdb  的文件大小、文件数、非默认安装目录和文件增长设置。 有关详细信息，请参阅[“数据库引擎配置 - TempDB”页](../../sql-server/install/instance-configuration.md#tempdb)。
-<<<<<<< HEAD
-  
-     使用“[!INCLUDE[ssDE](../../includes/ssde-md.md)]配置 - MaxDOP”页  指定最大并行度。 此设置决定了一个语句可以在执行期间使用多少个处理器。 系统自动在安装期间计算建议值。 仅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，才能在“设置”中使用此页。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)。 
-
-     使用“数据库引擎配置 - 内存”  页，指定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在启动后使用的“最小服务器内存  和“最大服务器内存”  值。 可以使用默认值、计算出的建议值，也可以在选择“推荐”  选项后手动指定你自己的值。 仅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，才能在“设置”中使用此页。 有关详细信息，请参阅[“数据库引擎配置 - 内存”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)。 
-=======
 
      使用“[!INCLUDE[ssDE](../../includes/ssde-md.md)]配置 - MaxDOP”页  指定最大并行度。 此设置决定了一个语句可以在执行期间使用多少个处理器。 系统自动在安装期间计算建议值。 
      
@@ -337,9 +331,8 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
     > 仅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，才能在“设置”中使用此页。 
     
     有关详细信息，请参阅[“数据库引擎配置 - 内存”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)。 
->>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
 
-     Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
+     使用“数据库引擎配置 - FILESTREAM”  页为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用 FILESTREAM。 有关详细信息，请参阅[“数据库引擎配置 - FILESTREAM”页](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page)。  
   
 1. 使用“Analysis Services - 帐户预配”  页指定服务器模式，以及对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 拥有管理员权限的用户或帐户。 服务器模式决定了哪些内存和存储子系统用于服务器。 不同的解决方案类型在不同的服务器模式下运行。 如果计划在服务器上运行多维数据集数据库，请选择默认服务器模式选项“多维和数据挖掘”  。
 

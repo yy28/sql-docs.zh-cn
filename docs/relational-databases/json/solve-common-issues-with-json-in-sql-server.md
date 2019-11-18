@@ -1,6 +1,5 @@
 ---
-title: 解决 SQL Server 中 JSON 的常见问题 | Microsoft Docs
-ms.custom: ''
+title: 解决 SQL Server 中 JSON 的常见问题
 ms.date: 07/07/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,13 +10,14 @@ helpviewer_keywords:
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 268ec12e297d6c8a3e5dd869d0d143877a81e505
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbf9f4614bd8e9212742072ceb8da5ddeaf8716f
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131459"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096102"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>解决 SQL Server 中 JSON 的常见问题
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ FOR JSON PATH
   
  没有可选次要参数的 JSON_QUERY 仅将第一个参数作为结果返回。 由于 JSON_QUERY 始终返回有效的 JSON，因此 FOR JSON 知道不需要对此结果进行转义。
 
-### <a name="json-generated-with-the-withoutarraywrapper-clause-is-escaped-in-for-json-output"></a>使用 WITHOUT_ARRAY_WRAPPER 子句生成的 JSON 在 FOR JSON 输出中被转义  
+### <a name="json-generated-with-the-without_array_wrapper-clause-is-escaped-in-for-json-output"></a>使用 WITHOUT_ARRAY_WRAPPER 子句生成的 JSON 在 FOR JSON 输出中被转义  
  **问题。** 我正尝试通过使用 FOR JSON 和 WITHOUT_ARRAY_WRAPPER 选项设置列表达式的格式。  
   
 ```sql  
@@ -110,7 +110,7 @@ FROM OPENJSON(@json)
         arr1 NVARCHAR(MAX) AS JSON)  
 ```  
 
-### <a name="return-long-text-value-with-openjson-instead-of-jsonvalue"></a>使用 OPENJSON 而不是 JSON_VALUE 返回长文本值
+### <a name="return-long-text-value-with-openjson-instead-of-json_value"></a>使用 OPENJSON 而不是 JSON_VALUE 返回长文本值
  **问题。** 我在包含长文本的 JSON 文本中拥有描述键。 `JSON_VALUE(@json, '$.description')` 返回 NULL，而不是一个值。  
   
  **答案。** JSON_VALUE 旨在返回小的标量值。 通常此函数返回 NULL，而不是溢出错误。 如果你想返回更长的值，请使用支持 NVARCHAR(MAX) 值的 OPENJSON，如下例所示。  
@@ -119,7 +119,7 @@ FROM OPENJSON(@json)
 SELECT myText FROM OPENJSON(@json) WITH (myText NVARCHAR(MAX) '$.description')  
 ```  
 
-### <a name="handle-duplicate-keys-with-openjson-instead-of-jsonvalue"></a>使用 OPENJSON 而不是 JSON_VALUE 处理重复键
+### <a name="handle-duplicate-keys-with-openjson-instead-of-json_value"></a>使用 OPENJSON 而不是 JSON_VALUE 处理重复键
  **问题。** 我的 JSON 文本中有重复的键。 JSON_VALUE 仅返回在该路径上找到的第一个键。 我如何返回名称相同的所有键？  
   
  **答案。** 内置的 JSON 标量函数仅返回引用对象的第一个匹配项。 如果需要多个键，请使用 OPENJSON 表值函数，如下例所示。  

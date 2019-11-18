@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 144a0391926bc695d3693bf6d04294e5a8eb101d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 5e8523831fd181c17bd8fcff1698d85f46c824e2
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155672"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983319"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   修改 CREATE TRIGGER 语句以前创建的 DML、DDL 或登录触发器的定义。 触发器是通过使用 CREATE TRIGGER 创建的。 这些触发器可以由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句直接创建，也可以由程序集方法创建，这些方法在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中创建并上传到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 有关 ALTER TRIGGER 语句中使用的参数的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -149,12 +149,12 @@ AS { sql_statement
  将 DDL 触发器的作用域应用于当前数据库。 如果指定了此参数，则只要当前数据库中出现 event_type 或 event_group，就会激发该触发器   。  
   
  ALL SERVER  
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  将 DDL 或登录触发器的作用域应用于当前服务器。 如果指定了此参数，则只要当前服务器中的任何位置出现 event_type 或 event_group，就会激发该触发器   。  
   
  WITH ENCRYPTION  
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  加密包含 ALTER TRIGGER 语句文本的 sys.syscomments 和 sys.sql_modules 项。 使用 WITH ENCRYPTION 可以防止将触发器作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的一部分进行发布。 不能为 CLR 触发器指定 WITH ENCRYPTION。  
   
@@ -202,7 +202,7 @@ AS { sql_statement
  预定义的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件分组的名称。 执行任何属于 event_group 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件之后，都将激发 DDL 触发器  。 [DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)中列出了 DDL 触发器的有效事件组。 ALTER TRIGGER 运行完成后，event_group 还将充当宏，将它涉及的事件类型添加到 sys.trigger_events 目录视图中  。  
   
  NOT FOR REPLICATION  
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  表示当复制代理修改触发器所涉及的表时，不应执行该触发器。  
   
@@ -212,7 +212,7 @@ AS { sql_statement
  对于内存优化表中的触发器，顶层允许的唯一 sql_statement 是 ATOMIC 块  。 ATOMIC 块内允许的 T-SQL 由本地进程内允许的 T-SQL 决定。  
   
  EXTERNAL NAME \<method_specifier>  
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定要与触发器绑定的程序集的方法。 该方法不能带有任何参数，并且必须返回空值。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且它必须作为类存在于可见程序集中  。 该类不能为嵌套类。  
   

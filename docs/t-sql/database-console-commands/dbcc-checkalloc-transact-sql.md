@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102128"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056354"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 检查指定数据库的磁盘空间分配结构的一致性。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -82,7 +82,7 @@ DBCC CHECKALLOC
  不适用。  
  仅将 REPAIR 选项作为最后手段使用。 若要修复错误，建议您通过备份进行还原。 修复操作不会考虑表本身或表之间可能存在的任何约束。 如果指定的表与一个或多个约束有关，建议您在修复操作后运行 DBCC CHECKCONSTRAINTS。 如果必须使用 REPAIR，则运行不带有修复选项的 DBCC CHECKDB 来查找要使用的修复级别。 如果使用 REPAIR_ALLOW_DATA_LOSS 级别，则建议您在运行带有此选项的 DBCC CHECKDB 之前备份数据库。
 
- 替换为  
+ WITH  
  启用要指定的选项。
 
  ALL_ERRORMSGS  
@@ -94,7 +94,7 @@ DBCC CHECKALLOC
  TABLOCK  
  使 DBCC 命令获取排他数据库锁。
 
- ESTIMATE ONLY  
+ ESTIMATEONLY  
  显示当指定所有其他选项时运行 DBCC CHECKALLOC 所需的估计 tempdb 空间大小。
   
 ## <a name="remarks"></a>Remarks  
@@ -113,7 +113,7 @@ DBCC CHECKALLOC 可使用内部数据库快照来提供执行这些检查所需�
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 错误消息  
 DBCC CHECKALLOC 命令完成后，会将一条消息写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志。 如果 DBCC 命令成功执行，则消息指示成功完成以及命令运行的时间。 如果 DBCC 命令在完成检查之前由于错误而停止，则消息将指示命令已终止，并指示状态值和命令运行的时间。 下表列出并说明了此消息中可包含的状态值。
   
-|State|描述|  
+|状态|描述|  
 |---|---|  
 |0|出现错误号 8930。 这指示导致 DBCC 命令终止的元数据损坏。|  
 |1|出现错误号 8967。 存在一个内部 DBCC 错误。|  

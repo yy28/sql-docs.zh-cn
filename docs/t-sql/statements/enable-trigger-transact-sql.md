@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 64dd9567588e3d3cc5dccf7ee1aef469a888c275
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.openlocfilehash: 369dd7ec16ee530d7612222ad7e77dd6faf66e14
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064554"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980944"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ DATABASE
 对于 DDL 触发器，指示所创建或修改的 *trigger_name* 将在数据库作用域内执行。  
   
 ALL SERVER  
-**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 对于 DDL 触发器，指示所创建或修改的 *trigger_name* 将在服务器作用域内执行。 ALL SERVER 也适用于登录触发器。  
   
@@ -107,7 +107,7 @@ GO
 ### <a name="c-enabling-all-triggers-that-were-defined-with-the-same-scope"></a>C. 启用以同一作用域定义的所有触发器  
 以下示例启用在服务器作用域级别创建的所有 DDL 触发器。  
   
-**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 ```sql  
 ENABLE Trigger ALL ON ALL SERVER;  

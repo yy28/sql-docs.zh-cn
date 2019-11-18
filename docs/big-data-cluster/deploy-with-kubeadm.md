@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0bec68e81eab8557e86bfcbd5db78e19c0ce2175
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 96479cfd42c8a08295a600ef3de4137b66aa106d
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706366"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119378"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>在多台计算机上为 SQL Server 大数据群集部署配置 Kubernetes
 
@@ -64,7 +64,7 @@ ms.locfileid: "73706366"
 1. 在计算机上配置 docker 和 Kubernetes 必备组件。
 
    ```bash
-   KUBE_DPKG_VERSION=1.15.0-00
+   KUBE_DPKG_VERSION=1.15.0-00 #or your other target K8s version, which should be at least 1.13.
    sudo apt-get update && \
    sudo apt-get install -y ebtables ethtool && \
    sudo apt-get install -y docker.io && \

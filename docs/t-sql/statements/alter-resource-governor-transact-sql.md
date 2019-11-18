@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 710604102132d3b50b328c80f12cf41cd66a1219
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2372b07e45e952003f18270995b52eb0f7338c64
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927214"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982024"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67927214"
   
 -   设置每个磁盘卷的最大 I/O 操作数。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -94,7 +94,7 @@ ALTER RESOURCE GOVERNOR
  重置有关所有工作负荷组和资源池的统计信息。 有关详细信息，请参阅 [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 和 [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  
   
  MAX_OUTSTANDING_IO_PER_VOLUME = value   
- **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
  设置每个磁盘卷的最大排队 I/O 操作数。 这些 I/O 操作可以是任何大小的读取或写入。  MAX_OUTSTANDING_IO_PER_VOLUME 的最大值为 100。 它不是百分比。 此设置用于将 IO 资源调控优化为磁盘卷的 IO 特性。 我们建议试验不同的值并考虑使用 IOMeter、[DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) 或 SQLIO（不推荐使用）等校准工具以找出存储子系统的最大值。 此设置进行系统级安全检查，它使 SQL Server 可满足资源池的最小 IOPS，即使其他池将 MAX_IOPS_PER_VOLUME 设置为无限也是如此。 有关 MAX_IOPS_PER_VOLUME 的详细信息，请参阅 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)。  
   
@@ -178,7 +178,7 @@ GO
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
-### <a name="e-setting-the-maxoutstandingiopervolume-option"></a>E. 设置 MAX_OUTSTANDING_IO_PER_VOLUME 选项  
+### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. 设置 MAX_OUTSTANDING_IO_PER_VOLUME 选项  
  以下示例将 MAX_OUTSTANDING_IO_PER_VOLUME 选项设置为 20。  
   
 ```  

@@ -22,19 +22,19 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8865d5c4331fc9414d4621f98d6b21f85561f15f
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: e319c3875adc616d6a855b7fdca0ff24ff880522
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702765"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982511"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回当前数据库中架构范围内的对象的相关信息。 有关架构范围内对象的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。 不能将此函数用于不属于架构范围内的对象，如数据定义语言 (DDL) 触发器和事件通知。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -78,7 +78,7 @@ OBJECTPROPERTY ( id , property )
 |ExecIsTriggerDisabled|触发器|禁用的触发器。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsTriggerNotForRepl|触发器|定义为 NOT FOR REPLICATION 的触发器。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsUpdateTrigger|触发器|UPDATE 触发器。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)] 过程|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 本机编译过程。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本数据类型：int |  
+|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)] 过程|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 本机编译过程。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本数据类型：int |  
 |HasAfterTrigger|表、视图|表或视图具有 AFTER 触发器。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasDeleteTrigger|表、视图|表或视图具有 DELETE 触发器。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasInsertTrigger|表、视图|表或视图具有 INSERT 触发器。<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -87,7 +87,7 @@ OBJECTPROPERTY ( id , property )
 |IsAnsiNullsOn|[!INCLUDE[tsql](../../includes/tsql-md.md)] 函数、[!INCLUDE[tsql](../../includes/tsql-md.md)] 过程、表、[!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器、视图|指定表的 ANSI NULLS 选项设置为 ON。 这表示所有对空值的比较都取值为 UNKNOWN。 只要表存在，此设置就会应用于表定义中的所有表达式，包括计算列和约束。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsCheckCnst|任何架构范围内的对象|CHECK 约束。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsConstraint|任何架构范围内的对象|列或表的单列 CHECK、DEFAULT 或 FOREIGN KEY 约束。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsDefault|任何架构范围内的对象|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 绑定的默认值。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsDefault|任何架构范围内的对象|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 绑定的默认值。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDefaultCnst|任何架构范围内的对象|DEFAULT 约束。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDeterministic|函数、视图|函数或视图的确定性属性。<br /><br /> 1 = 确定<br /><br /> 0 = 不确定|  
 |IsEncrypted|[!INCLUDE[tsql](../../includes/tsql-md.md)] 函数、[!INCLUDE[tsql](../../includes/tsql-md.md)] 过程、表、[!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器、视图|指示模块语句的原始文本已转换为模糊格式。 模糊代码的输出在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的任何目录视图中都不能直接显示。 对系统表或数据库文件没有访问权限的用户不能检索模糊文本。 但是，能通过 [DAC 端口](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)访问系统表的用户或能够直接访问数据库文件的用户可以使用此文本。 此外，能够向服务器进程附加调试器的用户可在运行时从内存中检索原始过程。<br /><br /> 1 = 已加密<br /><br /> 0 = 未加密<br /><br /> 基本数据类型：int |  
@@ -118,17 +118,17 @@ OBJECTPROPERTY ( id , property )
 |SchemaId|任何架构范围内的对象| 对象所属架构的架构 ID。| 
 |TableDeleteTrigger|表|表具有 DELETE 触发器。<br /><br /> >1 = 指定类型的第一个触发器的 ID。|  
 |TableDeleteTriggerCount|表|表具有指定数目的 DELETE 触发器。<br /><br /> >0 = DELETE 触发器数目。|  
-|TableFullTextMergeStatus|表|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 表所具有的全文检索当前是否正在合并。<br /><br /> 0 = 表没有全文检索，或者全文检索未在合并。<br /><br /> 1 = 全文检索正在合并。|  
-|TableFullTextBackgroundUpdateIndexOn|表|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 表已启用全文后台更新索引（自动更改跟踪）。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextCatalogId|表|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 表的全文检索数据所在的全文目录的 ID。<br /><br /> 非零 = 全文目录 ID，它与全文检索表中标识行的唯一索引相关。<br /><br /> 0 = 表没有全文检索。|  
-|TableFulltextChangeTrackingOn|表|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 表已启用全文更改跟踪。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|表|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 自开始全文检索以来所处理的行数。 在为进行全文搜索而正在编制索引的表中，将一个行的所有列视为要编制索引的文档的一部分。<br /><br /> 0 = 没有完成的活动爬网或全文检索。<br /><br /> > 0 = 以下项之一（A 或 B）：A) 自从开始完整、增量或手动更改跟踪填充以来，由插入或更新操作处理的文档数。 B) 自从执行以下操作以来由插入或更新操作处理的行数：启用具有后台更新索引填充功能的更改跟踪、更改全文检索架构、重建全文目录或重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例等。<br /><br /> NULL = 表没有全文索引。<br /><br /> 此属性不监视已删除行，也不对已删除行进行计数。|  
-|TableFulltextFailCount|表|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 全文搜索未编制索引的行数。<br /><br /> 0 = 填充已完成。<br /><br /> > 0 = 以下项之一（A 或 B）：A) 自从开始完整、增量和手动更新更改跟踪填充以来未编制索引的文档数。 B) 对于有后台更新索引的更改跟踪，则是自从填充开始以来未索引的行数，或重新启动填充。 这可能由架构更改、目录重建、服务器重新启动等引起。<br /><br /> NULL = 表没有全文索引。|  
-|TableFulltextItemCount|表|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 成功编制了全文索引的行数。|  
-|TableFulltextKeyColumn|表|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 与参与全文索引定义的单列唯一索引关联的列的 ID。<br /><br /> 0 = 表没有全文检索。|  
-|TableFulltextPendingChanges|表|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 要处理的挂起更改跟踪项的数目。<br /><br /> 0 = 不启用更改跟踪。<br /><br /> NULL = 表没有全文索引。|  
-|TableFulltextPopulateStatus|表|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0 = 空闲。<br /><br /> 1 = 完整填充正在进行中。<br /><br /> 2 = 增量填充正在进行中。<br /><br /> 3 = 跟踪更改的传播正在进行中。<br /><br /> 4 = 正在进行后台更新索引（例如，自动跟踪更改）。<br /><br /> 5 = 全文索引已中止或暂停。|  
-|TableHasActiveFulltextIndex|表|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 表具有活动全文检索。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableFullTextMergeStatus|表|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 表所具有的全文检索当前是否正在合并。<br /><br /> 0 = 表没有全文检索，或者全文检索未在合并。<br /><br /> 1 = 全文检索正在合并。|  
+|TableFullTextBackgroundUpdateIndexOn|表|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 表已启用全文后台更新索引（自动更改跟踪）。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
+|TableFulltextCatalogId|表|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 表的全文检索数据所在的全文目录的 ID。<br /><br /> 非零 = 全文目录 ID，它与全文检索表中标识行的唯一索引相关。<br /><br /> 0 = 表没有全文检索。|  
+|TableFulltextChangeTrackingOn|表|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 表已启用全文更改跟踪。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
+|TableFulltextDocsProcessed|表|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 自开始全文检索以来所处理的行数。 在为进行全文搜索而正在编制索引的表中，将一个行的所有列视为要编制索引的文档的一部分。<br /><br /> 0 = 没有完成的活动爬网或全文检索。<br /><br /> > 0 = 以下项之一（A 或 B）：A) 自从开始完整、增量或手动更改跟踪填充以来，由插入或更新操作处理的文档数。 B) 自从执行以下操作以来由插入或更新操作处理的行数：启用具有后台更新索引填充功能的更改跟踪、更改全文检索架构、重建全文目录或重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例等。<br /><br /> NULL = 表没有全文索引。<br /><br /> 此属性不监视已删除行，也不对已删除行进行计数。|  
+|TableFulltextFailCount|表|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 全文搜索未编制索引的行数。<br /><br /> 0 = 填充已完成。<br /><br /> > 0 = 以下项之一（A 或 B）：A) 自从开始完整、增量和手动更新更改跟踪填充以来未编制索引的文档数。 B) 对于有后台更新索引的更改跟踪，则是自从填充开始以来未索引的行数，或重新启动填充。 这可能由架构更改、目录重建、服务器重新启动等引起。<br /><br /> NULL = 表没有全文索引。|  
+|TableFulltextItemCount|表|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 成功编制了全文索引的行数。|  
+|TableFulltextKeyColumn|表|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 与参与全文索引定义的单列唯一索引关联的列的 ID。<br /><br /> 0 = 表没有全文检索。|  
+|TableFulltextPendingChanges|表|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 要处理的挂起更改跟踪项的数目。<br /><br /> 0 = 不启用更改跟踪。<br /><br /> NULL = 表没有全文索引。|  
+|TableFulltextPopulateStatus|表|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 0 = 空闲。<br /><br /> 1 = 完整填充正在进行中。<br /><br /> 2 = 增量填充正在进行中。<br /><br /> 3 = 跟踪更改的传播正在进行中。<br /><br /> 4 = 正在进行后台更新索引（例如，自动跟踪更改）。<br /><br /> 5 = 全文索引已中止或暂停。|  
+|TableHasActiveFulltextIndex|表|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 表具有活动全文检索。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasCheckCnst|表|表具有 CHECK 约束。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasClustIndex|表|表具有聚集索引。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasDefaultCnst|表|表具有 DEFAULT 约束。<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -150,13 +150,13 @@ OBJECTPROPERTY ( id , property )
 |TableInsertTriggerCount|表|表具有指定数目的 INSERT 触发器。<br /><br /> >0 = INSERT 触发器的数目。|  
 |TableIsFake|表|表不是真实的表。 它将由[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]根据需要在内部进行具体化。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableIsLockedOnBulkLoad|表|因 bcp 或 BULK INSERT 作业而导致表被锁定  。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableIsMemoryOptimized|表|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 表是内存优化表<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本数据类型：int <br /><br /> 有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。|  
+|TableIsMemoryOptimized|表|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 表是内存优化表<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本数据类型：int <br /><br /> 有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。|  
 |TableIsPinned|表|驻留表以将其保留在数据缓存中。<br /><br /> 0 = False<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本不支持此功能。|  
 |TableTextInRowLimit|表|text in row 允许的最大字节数。<br /><br /> 如果未设置 text in row 选项，则返回 0。|  
 |TableUpdateTrigger|表|表具有 UPDATE 触发器。<br /><br /> > 1 = 指定类型的第一个触发器的 ID。|  
 |TableUpdateTriggerCount|表|表具有指定数目的 UPDATE 触发器。<br /><br /> > 0 = UPDATE 触发器数目。|  
 |TableHasColumnSet|表|表具有列集。<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 有关详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。|  
-|TableTemporalType|表|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指定表的类型。<br /><br /> 0 = 非时态表<br /><br /> 1 = 系统版本控制表的历史记录表<br /><br /> 2 = 系统版本控制时态表|  
+|TableTemporalType|表|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 指定表的类型。<br /><br /> 0 = 非时态表<br /><br /> 1 = 系统版本控制表的历史记录表<br /><br /> 2 = 系统版本控制时态表|  
   
 ## <a name="return-types"></a>返回类型  
  **int**  

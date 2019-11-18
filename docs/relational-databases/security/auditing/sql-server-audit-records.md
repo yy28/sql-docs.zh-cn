@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3019dc90789ccf8cf43b07a15d5ff0ccc7fb50a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095125"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926025"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68095125"
 |**session_id**|发生该事件的会话的 ID。|**int**|是|  
 |**server_principal_id**|在其中执行操作的登录上下文 ID。|**int**|是|  
 |**database_principal_id**|在其中执行操作的数据库用户上下文 ID。|**int**|否|  
-|**object_ id**|发生审核的实体的主 ID。 此 ID 可以是：<br /><br /> 服务器对象<br /><br /> 数据库<br /><br /> 数据库对象<br /><br /> 架构对象|**int**|否|  
+|**object_id**|发生审核的实体的主 ID。 此 ID 可以是：<br /><br /> 服务器对象<br /><br /> 数据库<br /><br /> 数据库对象<br /><br /> 架构对象|**int**|否|  
 |**target_server_principal_id**|可审核操作适用的服务器主体。|**int**|是|  
 |**target_database_principal_id**|可审核操作适用的数据库主体。|**int**|否|  
 |**class_type**|发生审核的可审核实体的类型。|**varchar(2)**|是|  

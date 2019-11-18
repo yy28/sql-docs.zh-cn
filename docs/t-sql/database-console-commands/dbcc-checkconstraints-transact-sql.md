@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 8653b197e0fa16b4e939ab94865395d68bf1f852
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fb6bc14742d4aa25c47af59bc1be72ebfffa5a4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102124"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982399"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 检查当前数据库中指定表上的指定约束或所有约束的完整性。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +57,7 @@ DBCC CHECKCONSTRAINTS
  要检查的表或约束。 如果指定了 table_name 或 table_id，将对该表中所有启用的约束进行检查   。 如果指定了 constraint_name 或 constraint_id，则仅检查该约束   。 如果表标识符或约束标识符都未指定，则对当前数据库中所有表上的已启用约束进行检查。  
  约束名称唯一地标识其所属于的表。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
- 替换为  
+ WITH  
  启用要指定的选项。  
   
  ALL_CONSTRAINTS  
@@ -88,7 +88,7 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 查询数据存储在临时表中。 检查完所有请求的表和约束后，将返回结果集。
 DBCC CHECKCONSTRAINTS 检查 FOREIGN KEY 和 CHECK 约束的完整性，但并不检查表的磁盘上数据结构的完整性。 可使用 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 和 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) 执行这些数据结构检查。
   
-适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本
   
 如果已指定 table_name 或 table_id 并启用它用于系统版本控制，DBCC CHECKCONSTRAINTS 还会对指定表执行临时数据一致性检查   。 如果未指定 NO_INFOMSGS，此命令将在单独一行上在输出中返回每项一致性冲突  。 输出格式将为 ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...)AND \<时态表记录的问题>。
   
