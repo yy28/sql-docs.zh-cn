@@ -13,23 +13,23 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a548cfda44d40ba7ac37aaf4465c589c7256ffe7
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.openlocfilehash: da67f050eba24ecf040124533c9d98c3f3f6bfec
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70978062"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056733"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支持
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-从开始[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], SQL Server OLE DB 驱动程序支持增强的 FILESTREAM 功能。 有关示例, 请参阅[Filestream 和 OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md)。  
+从 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]开始，OLE DB 的 SQL Server 驱动程序支持增强的 FILESTREAM 功能。 有关示例，请参阅[Filestream 和 OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md)。  
 
-FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 有关增强的 FILESTREAM 支持的详细信息,[请&#40;参阅&#41;filestream SQL Server](../../../relational-databases/blob/filestream-sql-server.md)。  
+FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 有关增强的 FILESTREAM 支持的详细信息，[请&#40;参阅&#41;filestream SQL Server](../../../relational-databases/blob/filestream-sql-server.md)。  
   
-默认情况下，在打开数据库连接时，@@TEXTSIZE 将设置为 -1（“无限制”）  。  
+默认情况下，在打开数据库连接时，\@\@TEXTSIZE 将设置为 -1（表示“无限制”）  。  
   
 还可以使用 Windows 文件系统 API 访问和更新 FILESTREAM 列。  
   
@@ -54,16 +54,16 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下级兼容性  
-如果客户端是使用 SQL Server 的 OLE DB 驱动程序编译的, 并且应用程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]连接[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]到[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](到), 则**varbinary (max)** 行为将与引入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的行为兼容。中的[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Native Client。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。 
+如果客户端是使用 SQL Server OLE DB 驱动程序编译的，并且应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]），则**varbinary （max）** 行为将与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Native client 引入的行为兼容。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。 
   
 如果将数据类型兼容性设置为 80，则客户端行为将与下级客户端行为一致。  
   
 如果客户端使用 SQLOLEDB，或使用在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前发布的其他访问接口，则 varbinary(max) 将映射到映像  。  
   
 ## <a name="comments"></a>注释
-- 若要发送和接收大于 2 GB 的**varbinary （max）** 值，应用程序将在参数和结果绑定中使用**DBTYPE_IUNKNOWN** 。 对于参数, 提供程序必须为 ISequentialStream 调用 IUnknown:: QueryInterface, 并为返回 ISequentialStream 的结果调用。  
+- 若要发送和接收大于 2 GB 的**varbinary （max）** 值，应用程序使用参数和结果绑定中的**DBTYPE_IUNKNOWN** 。 对于参数，提供程序必须为 ISequentialStream 调用 IUnknown：： QueryInterface，并为返回 ISequentialStream 的结果调用。  
 
--  对于 OLE DB, 与 ISequentialStream 值相关的检查将被宽松。 **DBBINDING**结构中的*wType*为**DBTYPE_IUNKNOWN**时，可以通过省略*dwPart*中的**DBPART_LENGTH**或设置数据的长度（在数据中的偏移*obLength*处）来禁用长度检查。buffer）到 ~ 0。 在此情况下，提供程序将不检查值的长度，并且将请求和返回可通过流提供的所有数据。 这一更改将适用于所有大型对象 (LOB) 类型和 XML，但只在连接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]（或更高版本）服务器时才适用。 这将为开发人员提供更高的灵活性，同时为现有应用程序和下级服务器维护一致性和向下兼容性。  此更改会影响传输数据的所有接口, 主要 IRowset::, ICommand:: Execute 和 IRowsetFastLoad:: InsertRow。
+-  对于 OLE DB，与 ISequentialStream 值相关的检查将被宽松。 当*wType*在**DBBINDING**结构中**DBTYPE_IUNKNOWN**时，可以通过省略*dwPart*中的**DBPART_LENGTH**或通过将数据的长度（在数据缓冲区中的偏移量*obLength* ）设置为 ~ 0 来禁用长度检查。 在此情况下，提供程序将不检查值的长度，并且将请求和返回可通过流提供的所有数据。 这一更改将适用于所有大型对象 (LOB) 类型和 XML，但只在连接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]（或更高版本）服务器时才适用。 这将为开发人员提供更高的灵活性，同时为现有应用程序和下级服务器维护一致性和向下兼容性。  此更改会影响传输数据的所有接口，主要 IRowset：：，ICommand：： Execute 和 IRowsetFastLoad：： InsertRow。
  
 
 ## <a name="see-also"></a>另请参阅  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 37b9332410d0f75e743776cf3b2c3b4e62a6354d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7b61536b335d6cbbcdc78e77e0ebbeb18618a22
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988939"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056672"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>客户端连接中的服务主体名称 (SPN) 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "67988939"
  新的连接行为由客户端实现，因此这种行为不特定于某个版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="linked-servers-and-delegation"></a>链接服务器和委托  
- 创建链接服务器时，[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 的 @provstr 参数可用于指定服务器和故障转移伙伴的 SPN  。 这样做的好处与在客户端连接字符串中指定 SPN 相同：建立使用 Kerberos 身份验证的连接更简单、更可靠。  
+ 创建链接服务器时，[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 的 \@provstr 参数可用于指定服务器和故障转移合作伙伴 SPN  。 这样做的好处与在客户端连接字符串中指定 SPN 相同：建立使用 Kerberos 身份验证的连接更简单、更可靠。  
   
  使用链接服务器的委托要求 Kerberos 身份验证。  
   
