@@ -1,7 +1,7 @@
 ---
 title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/14/2019
+ms.date: 11/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: a307cf2fb9747e822cc48ca4b0723aed437d4af7
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095870"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165949"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的每个数据库都包含一行。  
@@ -76,7 +77,7 @@ ms.locfileid: "74095870"
 |**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT 为 ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT 为 OFF|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT 为局部默认值<br /> 0 = CURSOR_DEFAULT 为全局默认值|  
 |**is_fulltext_enabled**|**bit**|1 = 针对数据库启用全文<br /> 0 = 针对数据库禁用全文|  
-|**is_trustworthy_on**|**bit**|1 = 数据库已标记为可信<br /> 0 = 数据库尚未标记为可信<br /> 默认情况下，还原的数据库或附加的数据库都禁用了代理。 与此相关的例外是数据库镜像，其中 Broker 在故障转移后启用。|  
+|**is_trustworthy_on**|**bit**|1 = 数据库已标记为可信<br /> 0 = 数据库尚未标记为可信<br /> 默认情况下，还原的数据库或附加的数据库具有 "可信未启用"。|  
 |**is_db_chaining_on**|**bit**|1 = 跨数据库所有权链接为 ON<br /> 0 = 跨数据库所有权链接为 OFF|  
 |**is_parameterization_forced**|**bit**|1 = 参数化为 FORCED<br /> 0 = 参数化为 SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = 数据库具有加密的主密钥<br /> 0 = 数据库没有加密的主密钥|  
@@ -93,7 +94,7 @@ ms.locfileid: "74095870"
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION 为 ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION 为 OFF|  
 |**is_cdc_enabled**|**bit**|1 = 对数据库启用变更数据捕获。 有关详细信息，请参阅[sys. &#40;sp_cdc_enable_db transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)。|  
 |**is_encrypted**|**bit**|指示是否对数据库进行加密（反映上次使用 `ALTER DATABASE SET ENCRYPTION` 子句设置的状态）。 可以是下列值之一：<br /> 1 = 已加密<br /> 0 = 未加密<br /> 有关数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。<br /> 如果数据库正处于解密过程中，`is_encrypted` 将显示值0。 您可以使用[sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)动态管理视图来查看加密过程的状态。|  
-|**is_honor_broker_priority_on**|**bit**|指示数据库是否接受会话优先级（反映使用 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` 子句最后设置的状态）。 可以是下列值之一：<br /> 1 = HONOR_BROKER_PRIORITY 为 ON<br /> 0 = HONOR_BROKER_PRIORITY 为 OFF<br /> 默认情况下，还原的数据库或附加的数据库都禁用了代理。 与此相关的例外是数据库镜像，其中 Broker 在故障转移后启用。|  
+|**is_honor_broker_priority_on**|**bit**|指示数据库是否接受会话优先级（反映使用 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` 子句最后设置的状态）。 可以是下列值之一：<br /> 1 = HONOR_BROKER_PRIORITY 为 ON<br /> 0 = HONOR_BROKER_PRIORITY 为 OFF<br /> 默认情况下，还原的数据库或附加的数据库的 broker 优先级为 off。|  
 |**replica_id**|**ssNoversion**|数据库参与的可用性组（如果有）的本地 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]可用性副本的唯一标识符。<br /> NULL = 数据库不是可用性组中的可用性副本的一部分。<br /> **适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**ssNoversion**|数据库参与到 Always On 可用性组（如果有）内的数据库的唯一标识符。 对于主副本上的此数据库以及已将数据库联接到可用性组的每个辅助副本， **group_database_id**都是相同的。<br /> NULL = 数据库不是任何可用性组中的可用性副本的一部分。<br /> **适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|映射到此数据库的资源池的 ID。 此资源池控制对该数据库中的内存优化表可用的总内存。<br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本|  
@@ -118,41 +119,47 @@ ms.locfileid: "74095870"
 |**catalog_collation_type_desc**|**nvarchar(60)**|目录排序规则设置：<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on 为 on</br>0 = is_result_set_caching_on is off</br>**适用**于： Azure SQL 数据仓库 Gen2。 虽然此功能已推出到所有区域，但请查看部署到实例的版本，以及最新的[AZURE SQL DW 发行说明](/azure/sql-data-warehouse/release-notes-10-0-10106-0)，了解功能可用性。|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
  如果 `sys.databases` 的调用方不是数据库的所有者，并且数据库不 `master` 或 `tempdb`，则查看对应行所需的最小权限是 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 的服务器级权限，或者 `CREATE DATABASE` 数据库中 `master` 权限。 始终可以在 `sys.databases`中查看调用方连接到的数据库。  
   
 > [!IMPORTANT]  
 > 默认情况下，公共角色具有 "`VIEW ANY DATABASE`" 权限，允许所有登录名查看数据库信息。 若要阻止登录名能够检测数据库，请从 `public`中 `REVOKE` `VIEW ANY DATABASE` 权限，或 `DENY` 单个登录名的 `VIEW ANY DATABASE` 权限。  
   
-## <a name="azure-sql-database-remarks"></a>Azure SQL 数据库备注  
+## <a name="azure-sql-database-remarks"></a>Azure SQL 数据库备注
+
 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 此视图在 `master` 数据库和用户数据库中可用。 在 `master` 数据库中，此视图返回服务器上 `master` 数据库和所有用户数据库的信息。 在用户数据库中，该视图仅返回有关当前数据库及 master 数据库的信息。  
   
  使用正在其中创建新数据库的 `sys.databases` 服务器的 `master` 数据库中的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 视图。 数据库复制开始后，你可以从目标服务器的 `master` 数据库查询 `sys.databases` 和 `sys.dm_database_copies` 视图，以检索有关复制进度的详细信息。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-query-the-sysdatabases-view"></a>A. 查询 sys.databases 视图  
- 下面的示例返回 `sys.databases` 视图中可用的几个列。  
+### <a name="a-query-the-sysdatabases-view"></a>A. 查询 sys.databases 视图
+
+下面的示例返回 `sys.databases` 视图中可用的几个列。  
   
 ```sql  
 SELECT name, user_access_desc, is_read_only, state_desc, recovery_model_desc  
 FROM sys.databases;  
 ```  
   
-### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>B. 检查 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的复制状态  
- 下面的示例查询 `sys.databases` 和 `sys.dm_database_copies` 视图以返回有关数据库复制操作的信息。  
+### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>B. 检查 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的复制状态
+
+下面的示例查询 `sys.databases` 和 `sys.dm_database_copies` 视图以返回有关数据库复制操作的信息。  
   
 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
-```sql  
+```sql
 -- Execute from the master database.  
 SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percentage_complete  
 FROM sys.databases AS a  
 INNER JOIN sys.dm_database_copies AS b ON a.database_id = b.database_id  
 WHERE a.state = 7;  
-```  
-### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>C. 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中检查时态保留策略状态  
- 下面的示例查询 `sys.databases` 以返回有关是否已启用时态保留清理任务的信息。 请注意，还原操作后，默认情况下会禁用临时保留。 使用 `ALTER DATABASE` 显式启用它。
+```
+
+### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>C. 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中检查时态保留策略状态
+
+下面的示例查询 `sys.databases` 以返回有关是否已启用时态保留清理任务的信息。 请注意，还原操作后，默认情况下会禁用临时保留。 使用 `ALTER DATABASE` 显式启用它。
   
 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
@@ -162,11 +169,10 @@ SELECT a.name, a.is_temporal_history_retention_enabled
 FROM sys.databases AS a;
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [sys.database_mirroring_witnesses (Transact-SQL)](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [sys. database_recovery_status &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)   
- [数据库和文件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [sys.dm_database_copies（Azure SQL 数据库）](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  
-  
-  
+## <a name="next-steps"></a>后续步骤
+
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [sys.database_mirroring_witnesses (Transact-SQL)](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
+- [sys. database_recovery_status &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)
+- [数据库和文件目录视图&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
+- [sys.dm_database_copies（Azure SQL 数据库）](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  

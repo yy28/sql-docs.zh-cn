@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: bb942a7754235fe5e1bc3c72f60ffa1f2f0f61d1
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 79caf961208287e1482efe780d2d0e335bbdd16d
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127367"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165552"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>数据库实验助手概述
 
@@ -61,7 +61,7 @@ DEA 使用 Windows 身份验证连接到数据库服务器。 确保运行 DEA �
 
 捕获跟踪要求：
 
-- 运行 DEA 的用户可以通过使用 Windows 身份验证连接到源数据库服务器。
+- 运行 DEA 的用户可以使用 Windows 身份验证连接到源数据库服务器。
 - 运行 DEA 的用户在源数据库服务器上具有 sysadmin 权限。
 - 运行源数据库服务器的服务帐户具有对跟踪文件夹路径的写访问权限。
 
@@ -71,7 +71,7 @@ DEA 使用 Windows 身份验证连接到数据库服务器。 确保运行 DEA �
 
 重播跟踪要求：
 
-- 运行 DEA 的用户可以通过使用 Windows 身份验证连接到目标数据库服务器。
+- 运行 DEA 的用户可以使用 Windows 身份验证连接到目标数据库服务器。
 - 运行 DEA 的用户在目标数据库服务器上具有 sysadmin 权限。
 - 运行目标数据库服务器的服务帐户具有对跟踪文件夹路径的写访问权限。
 - 运行 Distributed Replay 客户端的服务帐户可以使用 Windows 身份验证连接到目标数据库服务器。
@@ -83,7 +83,7 @@ DEA 使用 Windows 身份验证连接到数据库服务器。 确保运行 DEA �
 
 执行此分析需要：
 
-- 运行 DEA 的用户可以通过使用 Windows 身份验证连接到分析数据库服务器。
+- 运行 DEA 的用户可以使用 Windows 身份验证连接到分析数据库服务器。
 - 运行 DEA 的用户在源数据库服务器上具有 sysadmin 权限。
 
 有关详细信息，请参阅[有关分析报表](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)的常见问题
@@ -102,13 +102,13 @@ DEA 具有支持 internet 的功能，该功能可将遥测信息发送给 Micro
 收集和发送遥测数据是可选的。 若要指定收集的事件以及收集的事件是否发送给 Microsoft，请执行以下步骤：
 
 1. 中转到安装 DEA 的位置（例如，C：\\Program Files （x86）\\Microsoft Corporation\\数据库实验助手）。
-2. 打开并修改两个 .config 文件**DEA** （适用于应用程序）和**DEACmd** （适用于 CLI），如下所示：
+2. 打开并修改 .config 文件**DEA** （适用于应用程序），并修改**DEACmd** （适用于 CLI）以根据需要处理方案：
     - 若要停止收集事件类型，请将*事件*（例如， **TraceEvent**）的值设置为**false**。 若要再次开始收集事件，请将值设置为**true**。
     - 若要停止保存事件的本地副本，请将**TraceLoggerEnabled**的值设置为**false**。 若要再次开始保存本地副本，请将值设置为**true**。
     - 若要停止向 Microsoft 发送事件，请将**AppInsightsLoggerEnabled**的值设置为**false**。 若要再次开始向 Microsoft 发送事件，请将值设置为**true**。
 
 DEA 由[Microsoft 隐私声明](https://aka.ms/dea-privacy)控制。
 
-## <a name="next-steps"></a>后续步骤
+## <a name="see-also"></a>另请参阅
 
-[入门](database-experimentation-assistant-get-started.md)指导完成捕获、重播和分析跟踪所需的步骤。
+[工作负载比较过程概述](database-experimentation-assistant-get-started.md)，其中介绍了在两个环境中比较工作负荷时所涉及的过程。
