@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 900a5b469fec529c351e290c76fd380dbb917710
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680782"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982824"
 ---
 # <a name="collation-and-unicode-support"></a>排序规则和 Unicode 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -458,7 +458,7 @@ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全�
 对于支持世界范围的读者所需的所有字符的字符数据类型，很难为其选择代码页。 在国际化数据库中，最简单的字符数据管理方法是始终使用支持 Unicode 的数据类型。 
 
 ### <a name="unicode-data-types"></a>Unicode 数据类型
-如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）中存储反映多种语言的字符数据，请使用 Unicode 数据类型（nchar  、nvarchar  和 ntext  ），而不是非 Unicode 数据类型（char  、varchar  和 text  ）。 
+如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本）中存储反映多种语言的字符数据，请使用 Unicode 数据类型（nchar、nvarchar 和 ntext），而不是非 Unicode 数据类型（char、varchar 和 text       ）。 
 
 > [!NOTE]
 > 对于 Unicode 数据类型，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]最多可以使用 UCS-2 表示 65,535 个字符；或者，如果使用了附属字符，可表示整个 Unicode 范围（‭1,114,111 个字符）。 如需详细了解如何启用增补字符，请参阅[字符](#Supplementary_Characters)。
@@ -473,7 +473,7 @@ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全�
 > [!TIP]
 > 还可以尝试针对服务器上的数据使用另一个排序规则。 选择一个映射到客户端上的代码页的排序规则。    
 >
-> 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）中提供的 UTF-16 排序规则来改进对一些 Unicode 字符的搜索和排序（仅 Windows 排序规则），可以选择增补字符 (\_SC) 排序规则之一，或版本 140 排序规则之一。    
+> 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）中提供的 UTF-16 排序规则来改进对一些 Unicode 字符的搜索和排序（仅 Windows 排序规则），可以选择增补字符 (\_SC) 排序规则之一，或版本 140 排序规则之一。    
  
 若要使用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中提供的 UTF-8 排序规则来改进对某些 Unicode 字符的搜索和排序（仅 Windows 排序规则），必须选择已启用 UTF-8 编码的排序规则 (\_UTF8)。
  

@@ -1,6 +1,6 @@
 ---
-title: 查看或更改收集组计划 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 查看或更改收集组计划
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c5aa31c50a4589c3ba5087333522955f8bd9110
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999908"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055323"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>查看或更改收集组计划 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "67999908"
   
  收集模式（缓存或非缓存）决定变更计划的方式。 缓存模式使用不同的计划进行收集和上载。 非缓存模式使用同一计划进行收集和上载。 每个系统数据收集组的收集模式类型如下：  
   
--   “磁盘使用情况”使用非缓存收集模式。  
+-    “磁盘使用情况”使用非缓存收集模式。  
   
 -   **“查询统计信息”** 使用缓存收集模式。  
   
@@ -39,19 +39,19 @@ ms.locfileid: "67999908"
   
 ### <a name="to-view-collection-set-schedules"></a>查看收集组计划  
   
-1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”**。  
+1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”** 。  
   
-2.  右键单击收集组名称，然后单击“属性”[以便打开](#CollectionSet)“数据收集组属性”对话框。  
+2.  右键单击收集组名称，然后单击“属性”[以便打开](#CollectionSet)“数据收集组属性”对话框。   
   
 ### <a name="to-change-the-schedules-for-a-cached-mode-collection-set"></a>更改缓存模式收集组的计划  
   
-1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”**。  
+1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”** 。  
   
-2.  右键单击使用缓存模式的收集组（如“查询统计信息”），然后单击“属性”以便打开“[数据收集组属性](#CollectionSet)”对话框。  
+2.  右键单击使用缓存模式的收集组（如“查询统计信息”），然后单击“属性”以便打开“[数据收集组属性](#CollectionSet)”对话框。    
   
 3.  可以在 **“常规”** 页上更改收集频率。 为此，请按照下列步骤进行操作：  
   
-    1.  在详细信息窗格中，双击“收集项”表中的**Collection items**“收集频率(秒)”列中显示的数字。  
+    1.  在详细信息窗格中，双击  “收集项”表中的**Collection items**“收集频率(秒)”列中显示的数字。  
   
     2.  若要提高或降低收集频率，请键入一个更小或更大的数字，然后按 Enter 存储这个新值。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67999908"
   
     1.  单击 **“上载”** 页。  
   
-    2.  在详细信息窗格中，单击 **“选取”**。  
+    2.  在详细信息窗格中，单击 **“选取”** 。  
   
          将打开 **“为作业选取计划”** 对话框。 可用的计划以表的形式出现。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "67999908"
         >   
         >  除了修改现有计划外，还可以通过单击 **“上载”** 页上的 **“新建”** 来创建新的上载计划。 此操作将打开 **“新建作业计划”** 对话框，可使用该对话框来创建自定义计划。  
   
-    4.  完成对该计划的配置后，请单击 **“确定”**。  
+    4.  完成对该计划的配置后，请单击 **“确定”** 。  
   
          您所做的更改将出现在 **“上载”** 页上。  
   
@@ -78,13 +78,13 @@ ms.locfileid: "67999908"
   
 ### <a name="to-change-the-schedule-for-a-non-cached-mode-collection-set"></a>更改非缓存模式收集组的计划  
   
-1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”**。  
+1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”** 。  
   
-2.  右键单击使用非缓存模式的收集组（如“磁盘使用情况”），然后单击“属性”以便打开[数据收集组属性](#CollectionSet)对话框。  
+2.  右键单击使用非缓存模式的收集组（如  “磁盘使用情况”），然后单击  “属性”以便打开[数据收集组属性](#CollectionSet)对话框。  
   
      **“数据收集组属性”** 对话框将显示收集组属性的分页视图。  
   
-3.  若要更改该收集组的计划，请单击 **“选取”**。  
+3.  若要更改该收集组的计划，请单击 **“选取”** 。  
   
      将打开 **“为作业选取计划”** 对话框。 可用的计划以表的形式显示。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "67999908"
     >   
     >  除了修改现有计划外，还可以通过单击 **“常规”** 页上的 **“新建”** 来创建新的收集和上载计划。 此操作将打开 **“新建作业计划”** 对话框。  
   
-5.  完成对该计划的配置后，请单击 **“确定”**。  
+5.  完成对该计划的配置后，请单击 **“确定”** 。  
   
 6.  单击 **“确定”** 保存更改并关闭 **“数据收集组属性”** 对话框。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "67999908"
  使用此页可以为由此收集组收集的数据配置上载计划。  
   
 > [!NOTE]  
->  仅当已为 “数据收集和上传”配置了“已缓存”选项时才启用此选项卡。  
+>  仅当已为  “数据收集和上传”配置了  “已缓存”选项时才启用此选项卡。  
   
  **Server**  
  显示承载管理数据仓库的服务器的名称。 有关详细信息。请参阅[配置管理数据仓库 (SQL Server Management Studio)](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)。  

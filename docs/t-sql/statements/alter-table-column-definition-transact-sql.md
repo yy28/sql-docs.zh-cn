@@ -21,19 +21,19 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb3802578b7eb500d6b5fd64725a1a03f86fb9c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68232146"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982070"
 ---
-# <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
+# <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 添加到表中的列的属性。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -119,7 +119,7 @@ DOCUMENT
  指定 column_name 中 xml 数据类型的每个实例只能包含一个顶级元素   。 DOCUMENT 仅适用于 xml 数据类型，并且只有在同时指定了 xml_schema_collection 时才能指定 DOCUMENT   。  
   
  xml_schema_collection   
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  仅适用于 xml 数据类型，用于将 XML 架构集合与该类型相关联  。 在架构中键入 xml 列之前，须先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 在数据库中创建该架构  。  
   
@@ -178,12 +178,12 @@ increment
  增加到上一个加载行的标识值的增量值。  
   
 NOT FOR REPLICATION  
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  可以为 IDENTITY 属性指定该子句。 如果为 IDENTITY 属性指定了该子句，则当复制代理执行插入操作时，标识列中的值不会增加。  
   
 ROWGUIDCOL  
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定该列是一个行全局唯一标识符列。 只能为 uniqueidentifier 列分配 ROWGUIDCOL，并且每个表中只有一个 uniqueidentifier 列能指定为 ROWGUIDCOL 列   。 不能为用户定义数据类型分配 ROWGUIDCOL。  
   
@@ -213,14 +213,14 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
  列必须是符合条件的数据类型。  
   
 ALGORITHM  
-适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  。  
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
 须是“AEAD_AES_256_CBC_HMAC_SHA_256”  。  
   
  有关包括功能约束在内的详细信息，请参阅 [Always Encrypted (Transact-SQL)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。  
   
    
 ADD MASKED WITH ( FUNCTION = ' mask_function ')   
- 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
+ **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定动态数据掩码。 mask_function 是具有相应参数的掩码函数的名称  。 可用函数包括：  
   

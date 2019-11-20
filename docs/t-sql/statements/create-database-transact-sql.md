@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a668b876e97f70ff0324f53689f0d5dfae8f225
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b1e761aded3b34942f5a49aa2b4c085fe1bd4225
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536262"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983220"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -172,7 +172,7 @@ database_name  是新数据库的名称。 数据库名称在 [!INCLUDE[ssNoVers
 
 CONTAINMENT = { NONE | PARTIAL }
 
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
 
 指定数据库的包含状态。 NONE = 非包含数据库。 PARTIAL = 部分包含的数据库。
 
@@ -202,7 +202,7 @@ COLLATE collation_name
 WITH \<option>      
 **\<filestream_options>**
 
-NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL } 适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]   。
+NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL } 适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本   。
 
 指定对数据库的非事务性 FILESTREAM 访问的级别。
 
@@ -213,7 +213,7 @@ NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL } 适用于：[!INCLUDE[ssSQL11
 |FULL|启用对 FILESTREAM FileTable 的完全非事务性访问。|
 
 DIRECTORY_NAME = \<directory_name>     
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
 
 与 Windows 兼容的目录名称。 此名称应在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有 Database_Directory 名称中唯一。 无论 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则设置如何，唯一性比较都不区分大小写。 在此数据库中创建 FileTable 之前，应设置此选项。
 
@@ -221,25 +221,25 @@ DIRECTORY_NAME = \<directory_name>
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
 
   有关此选项的完整说明，请参阅[配置“默认全文语言”服务器配置选项](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)。
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
 
   有关此选项的完整说明，请参阅[配置“默认语言”服务器配置选项](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)。
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
 
   有关此选项的完整说明，请参阅[配置“嵌套触发器”服务器配置选项](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)。
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
 
   有关此选项的完整说明，请参阅[“转换干扰词”服务器配置选项](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)。
 
@@ -428,7 +428,7 @@ CONTAINS FILESTREAM
 
 CONTAINS MEMORY_OPTIMIZED_DATA     
 
-适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本
 
 指定文件组在文件系统中存储内存优化数据。 有关详细信息，请参阅[内存中 OLTP - 内存中优化](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每个数据库只能有一个 MEMORY_OPTIMIZED_DATA 文件组。 有关通过创建文件组来存储内存优化数据的代码示例，请参阅[创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。
 

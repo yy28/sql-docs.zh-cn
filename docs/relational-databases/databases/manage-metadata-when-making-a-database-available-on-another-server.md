@@ -1,6 +1,6 @@
 ---
-title: 使数据库在其他服务器上可用时管理元数据 | Microsoft Docs
-ms.custom: ''
+title: 使数据库在其他服务器上可用时管理元数据
+ms.custom: seo-dt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d61d42a5b684032898a0eabc3dbc4a1b350653d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fad28919360caf2a37f410d1c3f3e122fd3dd803
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940729"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119453"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>使数据库在其他服务器上可用时管理元数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "67940729"
   
  有关此功能的详细信息，请参阅 [凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
-> **注意**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户使用凭据。 若要了解代理帐户的凭据 ID，请使用 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) 系统表。  
+> **注意：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户使用凭据。 若要了解代理帐户的凭据 ID，请使用 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) 系统表。  
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
@@ -157,7 +157,7 @@ ms.locfileid: "67940729"
 ### <a name="windows-management-instrumentation-wmi-events"></a>Windows Management Instrumentation (WMI) 事件  
  使用服务器事件的 WMI 提供程序，可以使用 Windows Management Instrumentation (WMI) 监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的事件。 必须在目标服务器实例所在的计算机上定义任何依赖于服务器级事件（此事件通过数据库所依赖的 WMI 提供程序显示）的应用程序。 WMI 事件提供程序使用在 **msdb**中定义的目标服务创建事件通知。  
   
-> **注意**：有关详细信息，请参阅 [WMI Provider for Server Events 的概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)。  
+> **注意：** 有关详细信息，请参阅 [WMI Provider for Server Events 的概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)。  
   
  **使用 SQL Server Management Studio 创建 WMI 警报**  
   
@@ -251,8 +251,6 @@ ms.locfileid: "67940729"
   
 -   [创建作业](../../ssms/agent/create-a-job.md)  
   
--   [创建作业](../../ssms/agent/create-a-job.md)  
-  
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>使用脚本重新创建作业的最佳实践  
  建议您首先编写简单作业的脚本，接下来在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务上重新创建此作业，然后运行此作业以查看它是否按预期方式工作。 这样便可确定不兼容性并尝试进行解决。 如果已编写脚本的作业在新环境中未按预期方式工作，则建议您创建可在此环境中正常工作的等价作业。  
   
@@ -262,7 +260,7 @@ ms.locfileid: "67940729"
   
  若要为数据库原始副本中的部分或全部对象生成脚本，可以使用生成脚本向导，并在 **“选择脚本选项”** 对话框中将 **“编写登录脚本”** 选项设置为 **True**。  
   
-> **注意**：有关如何为镜像数据库设置登录名的信息，请参阅[设置数据库镜像或 AlwaysOn 可用性组的登录帐户 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切换后登录名和作业的管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
+> **注意：** 有关如何为镜像数据库设置登录名的信息，请参阅[设置数据库镜像或 AlwaysOn 可用性组的登录帐户 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切换后登录名和作业的管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
   
 ##  <a name="permissions"></a> 权限  
@@ -290,7 +288,7 @@ ms.locfileid: "67940729"
 #### <a name="server-level-permissions-for-a-certificate-or-asymmetric-key"></a>证书或非对称密钥的服务器级权限  
  不能向证书或非对称密钥直接授予服务器级权限。 相反，可以向专门针对特定证书或非对称密钥创建的映射登录名授予服务器级权限。 因此，每个需要服务器级权限的证书或非对称密钥都需要自己的“证书映射登录名  ”或“非对称密钥映射登录名  ”。 若要为证书或非对称密钥授予服务器级权限，请向其映射登录名授予相应权限。  
   
-> **注意**：映射登录名仅用于对使用相应证书或非对称密钥签名的代码进行授权。 映射登录名不能用于身份验证。  
+> **注意：** 映射登录名仅用于对使用相应证书或非对称密钥签名的代码进行授权。 映射登录名不能用于身份验证。  
   
  映射登录名及其权限都位于 **master**中。 如果证书或非对称密钥位于 **master**之外的数据库中，则必须在 **master** 中重新创建证书或非对称密钥并将其映射到登录名。 如果将数据库移动、复制或还原到其他服务器实例，则必须在目标服务器实例的 **master** 数据库中重新创建其证书或非对称密钥，将证书或非对称密钥映射到登录名，并向此登录名授予必需的服务器级权限。  
   

@@ -1,6 +1,6 @@
 ---
-title: 使用分离和附加升级数据库 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 使用分离和附加来升级数据库 (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 11/26/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0df5b572fe7c26f250c2172e5fa87b9fd01da85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8e26f678ae13fac11c39569d15e26c0e79e46deb
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127131"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095540"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>使用分离和附加来升级数据库 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

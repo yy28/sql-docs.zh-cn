@@ -1,6 +1,5 @@
 ---
-title: 创建链接服务器提供程序（SQL Server 数据库引擎）| Microsoft Docs
-ms.custom: ''
+title: 创建链接服务器提供程序
 ms.date: 07/01/2019
 ms.prod: sql
 ms.technology: ''
@@ -10,12 +9,13 @@ ms.topic: conceptual
 author: pmasl
 ms.author: pelopes
 manager: rothj
-ms.openlocfilehash: 166b55c70cc9b7d1337128b12b78a8ec1f4a1032
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929653"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095995"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 分布式查询：OLE DB 连接
 

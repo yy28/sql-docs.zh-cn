@@ -39,12 +39,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c10388d5becdbcfbe32f3247855e3e421ea7eaa7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909499"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095703"
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,13 +195,13 @@ ms.locfileid: "72909499"
  查看或更新帐户的说明。 该说明为可选项。  
   
  **电子邮件地址**  
- 查看或更新帐户电子邮件地址的名称。 这是发送电子邮件的电子邮件地址。 例如，Microsoft SQL Server 代理的帐户可能会通过地址 **SqlAgent@Adventure-Works.com** 的计算机上的用户对应。  
+ 查看或更新帐户电子邮件地址的名称。 这是发送电子邮件的电子邮件地址。 例如，Microsoft SQL Server 代理的帐户可能会通过地址“SqlAgent\@Adventure-Works.com”发送电子邮件  。  
   
  **显示名称**  
  查看或更新由此帐户发送的电子邮件上显示的名称。 显示名称为可选项。 这是由此帐户发送的邮件上显示的名称。 例如，SQL Server 代理的帐户可能会在电子邮件上显示名称 **SQL Server Agent Automated Mailer** 。  
   
  **答复电子邮件**  
- 查看或更新电子邮件地址，该地址是答复由此帐户发送的电子邮件所用到的地址。 答复电子邮件为可选项。 例如，给 SQL Server 代理的帐户的回信可能会发送给数据库管理员 **danw@Adventure-Works.com** 的计算机上的用户对应。  
+ 查看或更新电子邮件地址，该地址是答复由此帐户发送的电子邮件所用到的地址。 答复电子邮件为可选项。 例如，给 SQL Server 代理的帐户的回信可能会发送给数据库管理员“danw\@Adventure-Works.com”  。  
   
  **服务器名称**  
  查看或更新该帐户发送电子邮件所用的 SMTP 服务器的名称。 通常此格式类似于 **smtp.<your_company>.com**。 如需相关帮助，请询问您的邮件管理员。  

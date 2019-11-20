@@ -26,19 +26,19 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0296995906f7f359a065d7ae4f61877a89a409b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948050"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983242"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的表或视图中删除一行或多行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -104,7 +104,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  在表示要从中删除行的表或视图的 FROM *table_source* 子句中指定的别名。  
   
  server_name   
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  表或视图所在服务器的名称（使用链接服务器名称或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数作为服务器名称）。 如果指定了 server_name，则需要 database_name 和 schema_name    。  
   
@@ -122,7 +122,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  table_or_view_name 引用的视图必须可更新，并且只在视图定义的 FROM 子句中引用一个基表  。 有关可更新视图的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
   
  rowset_function_limited   
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数，视提供程序的功能而定。  
   
@@ -248,7 +248,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- 下面的示例演示一个更复杂的 WHERE 子句。 WHERE 子句定义要确定删除的行而必须满足的两个条件。 `StandardCost` 列中的值必须介于 `12.00` 与 `14.00` 之间，而 `SellEndDate` 列中的值必须为 Null。 该示例还输出 **@@ROWCOUNT** 函数中的值，以返回已删除的行数。  
+ 下面的示例演示一个更复杂的 WHERE 子句。 WHERE 子句定义要确定删除的行而必须满足的两个条件。 `StandardCost` 列中的值必须介于 `12.00` 与 `14.00` 之间，而 `SellEndDate` 列中的值必须为 Null。 该示例还将打印“\@\@ROWCOUNT”函数中的值，以返回已删除的行数  。  
   
 ```sql
 DELETE Production.ProductCostHistory  
@@ -337,7 +337,7 @@ GO
 ###  <a name="RemoteTables"></a> 从远程表中删除行  
  本节中的示例说明如何使用[链接服务器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[行集函数](../../t-sql/functions/rowset-functions-transact-sql.md)引用一个远程表，以便从该表中删除行。 远程表存在于不同的服务器或 SQL Server 实例上。  
   
-**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. 通过使用链接服务器从远程表删除数据  
  下面的示例将删除远程表中的行。 该示例从使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 创建指向远程数据源的链接开始。 然后，将链接服务器名称 `MyLinkServer` 指定为 server.catalog.schema.object 形式的由四个部分组成的对象名称的一部分  。  
@@ -402,7 +402,7 @@ WHERE ShoppingCartID = 20621;
 GO  
 ```  
   
-#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. 在 DELETE 语句中同时使用 OUTPUT 与 <from_table_name>  
+#### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. 在 DELETE 语句中同时使用 OUTPUT 与 <from_table_name>  
  以下示例根据 `DELETE` 语句的 `FROM` 子句中定义的搜索条件，删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `ProductProductPhoto` 表中的行。 `OUTPUT` 子句返回所删除表中的列（ `DELETED.ProductID`、 `DELETED.ProductPhotoID`）以及 `Product` 表中的列。 在 `FROM` 子句中使用该项来指定要删除的行。  
   
 ```sql

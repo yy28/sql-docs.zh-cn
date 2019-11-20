@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11aac623d6648fb08e65cff12cdfcf3beaaa2499
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419638"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981714"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 
@@ -56,7 +56,7 @@ ms.locfileid: "68419638"
   
 -   确定将[排名函数](../../t-sql/functions/ranking-functions-transact-sql.md)值应用于结果集的顺序。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中的 SELECT/INTO 或 CREATE TABLE AS SELECT (CTAS) 语句中不支持 ORDER BY。
@@ -108,7 +108,7 @@ ORDER BY SchemaName + ''; -- wrong
 ```
   
  COLLATE collation_name   
- 指定应根据 collation_name 中指定的排序规则执行 ORDER BY 操作，而不是根据表或视图中所定义的列的排序规则  。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称  。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 仅适用于类型为 char、varchar、nchar 和 nvarchar 的列     。  
+ 指定应根据 collation_name 中指定的排序规则执行 ORDER BY 操作，而不是根据表或视图中所定义的列的排序规则  。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称  。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 仅适用于类型为 char、varchar、nchar 和 nvarchar 的列     。  
   
  **ASC** | DESC  
  指定按升序或降序排列指定列中的值。 ASC 按从最低值到最高值的顺序进行排序。 DESC 按从最高值到最低值的顺序进行排序。 ASC 是默认排序顺序。 Null 值被视为最低的可能值。  
@@ -116,7 +116,7 @@ ORDER BY SchemaName + ''; -- wrong
  OFFSET { integer_constant | offset_row_count_expression } { ROW | ROWS }    
  指定开始从查询表达式返回行之前跳过的行数。 该值可以是大于或等于零的整数常量或表达式。  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
   
  offset_row_count_expression 可以是变量、参数或常量标量子查询  。 在使用子查询时，它无法引用在外部查询范围中定义的任何列。 也就是说，它无法与外部查询相关联。  
   
@@ -127,7 +127,7 @@ ORDER BY SchemaName + ''; -- wrong
  FETCH { FIRST | NEXT } { integer_constant | fetch_row_count_expression } { ROW | ROWS } ONLY    
  指定在处理 OFFSET 子句后返回的行数。 该值可以是大于或等于 1 的整数常量或表达式。  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  fetch_row_count_expression 可以是变量、参数或常量标量子查询  。 在使用子查询时，它无法引用在外部查询范围中定义的任何列。 也就是说，它无法与外部查询相关联。  
   
@@ -364,7 +364,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a>限制返回的行数  
  以下示例使用 OFFSET 和 FETCH 限制查询返回的行数。  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. 指定整数常量以提供 OFFSET 和 FETCH 值  
  以下示例将一个整数常量指定为 OFFSET 和 FETCH 子句的值。 第一个查询返回所有按 `DepartmentID` 列排序的行。 将此查询返回的结果与后面的两个查询的结果进行比较。 下一个查询使用 `OFFSET 5 ROWS` 子句跳过前 5 行，然后返回所有其余行。 最终查询使用 `OFFSET 0 ROWS` 子句从第一行开始，然后使用 `FETCH NEXT 10 ROWS ONLY` 将返回的行限制为排序的结果集中的 10 行。  

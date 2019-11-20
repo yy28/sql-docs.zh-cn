@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901965"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981766"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "67901965"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -221,7 +221,7 @@ FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] *
 > [!CAUTION]  
 > 指定带参数的 FORCESEEK 限制优化器可以考虑的计划数大于指定不带参数的 FORCESEEK 时的计划数。 这可能导致更多情况下发生 `Plan cannot be generated` 错误。 在未来的版本中，对查询优化器进行内部修改后可允许考虑更多计划。  
   
-FORCESCAN 适用范围：  [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+FORCESCAN 适用范围：  [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 及更高版本。
 指定查询优化器仅使用索引扫描操作作为引用的表或视图的访问途经。 对于优化器低估受影响的行数并选择一个查找操作而非扫描操作的查询，FORCESCAN 提示很有用。 出现这样的情况时，授予该操作的内存量太小，查询性能将受影响。  
   
 指定 FORCESCAN 时有无 INDEX 提示均可。 与索引提示组合使用 (`INDEX = index_name, FORCESCAN`) 时，查询优化器在访问引用的表时仅考虑通过指定的索引扫描访问路径。 可以带索引提示 INDEX(0) 指定 FORCESCAN，以强制对基表执行表扫描操作。  
@@ -317,7 +317,7 @@ SERIALIZABLE
 等同于 HOLDLOCK。 保持共享锁直到事务完成，使共享锁更具有限制性；而不是无论事务是否完成，都在不再需要所需表或数据页时立即释放共享锁。 执行扫描时所用的语义与在 SERIALIZABLE 隔离级别运行的事务的语义相同。 有关隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
 SNAPSHOT  
-**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。 
   
 内存优化表在 SNAPSHOT 隔离下访问。 SNAPSHOT 只能用于内存优化表 (不能用于基于磁盘的表)。 有关详细信息，请参阅[内存优化表简介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)。  
   
@@ -329,7 +329,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
 SPATIAL_WINDOW_MAX_CELLS = *integer*  
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
 指定在分割 geometry 或 geography 对象时使用的最大单元格数。 *number* 是介于 1 和 8192 之间的值。  
   
 通过使用此选项，可以在主要和辅助筛选器执行时间之间权衡性能以微调查询执行时间。 较大的数字将减少辅助筛选器执行时间，但会增加主要筛选器执行时间，而较小的数字恰相反。 对于较密的空间数据，较大的数字通过为主要筛选器提供更好的近似值并减少辅助筛选器执行时间，从而缩短了执行时间。 对于较稀疏的数据，较小的数字将减少主要筛选器执行时间。  

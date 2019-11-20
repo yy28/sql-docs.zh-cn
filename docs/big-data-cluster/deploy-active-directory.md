@@ -5,16 +5,16 @@ description: 了解如何在 Active Directory 域中升级 SQL Server 大数据�
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eab7fa5a123f6370686cae5feaf36d458748ea7a
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844313"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127448"
 ---
 # <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -107,7 +107,7 @@ BDC 域服务帐户 (DSA) 需要能够在 OU 中创建用户、组和计算机�
        - “创建组对象” 
        - “删除组对象” 
        - “创建用户对象” 
-       - “创建用户对象” 
+       - “删除用户对象” 
 
     - 单击 **“确定”** 。
 
@@ -197,8 +197,8 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouD
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dnsIpAddresses=[\"10.100.10.100\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadmins\"]"
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusers1\,bdcusers2\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
 ```
 
 除了上述信息之外，还需要提供不同群集终结点的 DNS 名称。 在部署时，将自动在 DNS 服务器中创建使用提供的 DNS 名称的 DNS 条目。 在连接到不同群集终结点时，将使用这些名称。 例如，如果 SQL 主实例的 DNS 名称是 `mastersql`，则将使用 `mastersql.contoso.local,31433` 从工具连接到主实例。

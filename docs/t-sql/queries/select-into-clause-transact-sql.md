@@ -29,19 +29,19 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac9ba9a291b88b8fc1091ff72e3a7af782b1e618
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948414"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981720"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 SELECT…INTO 在默认文件组中创建一个新表，并将来自查询的结果行插入该表中。 要查看完整的 SELECT 语法，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,7 +63,7 @@ SELECT…INTO 在默认文件组中创建一个新表，并将来自查询的结
  filegroup     
  指定要在其中创建新表的文件组的名称。 指定的文件组应存在于数据库中，否则 SQL Server 引擎会引发错误。   
  
- **适用范围：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+ **适用范围：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和更高版本。
   
 ## <a name="data-types"></a>数据类型  
  FILESTREAM 属性不转移到新表。 FILESTREAM BLOB 作为 varbinary(max) BLOB 复制并存储在新表中  。 如果没有 FILESTREAM 属性，则 varbinary(max) 数据类型具有 2 GB 的限制  。 如果某个 FILESTREAM BLOB 超过该值，则会引发 7119 错误并停止该语句。  
@@ -171,7 +171,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. 通过指定来自远程数据源的列，创建一个表  
  下面的示例演示从远程数据源在本地服务器上创建新表的三个方法。 该示例从创建指向远程数据源的链接开始。 然后在第一个 SELECT...INTO 语句的 FROM 子句中和第二个 SELECT...INTO 语句的 OPENQUERY 函数中指定链接服务器名称 `MyLinkServer,`。 第三个 SELECT...INTO 语句使用 OPENDATASOURCE 函数，该函数直接指定远程数据源，而非使用链接的服务器名称。  
   
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 ```sql
 USE master;  
@@ -231,7 +231,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 创建一个新表作为另一个表的副本并将其加载到指定的文件组
 以下示例演示如何创建一个新表作为另一个表的副本，并将其加载到用户默认文件组之外的指定文件组。
 
- **适用范围：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+ **适用范围：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和更高版本。
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

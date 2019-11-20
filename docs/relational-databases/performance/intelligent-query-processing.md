@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的智能查询处理 | Microsoft Docs
 description: 智能查询处理功能，用于提高 SQL Server 和 Azure SQL 数据库中的查询性能。
 ms.custom: ''
-ms.date: 07/22/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be17617a400f760d0c5cd5eaa98124d066f19a4c
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: f18367446b3d36e4e95373f1789509e08082a403
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713219"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962422"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 
@@ -38,13 +38,13 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 | **IQP 功能** | **在 Azure SQL 数据库中是否受支持** | **在 SQL Server 中是否受支持** |**Description** |
 | --- | --- | --- |--- |
 | [自适应联接（批处理模式）](#batch-mode-adaptive-joins) | 是，兼容性级别为 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，兼容性级别为 140|自适应联接在运行时期间根据实际输入行自动选择联接类型。|
-| [非重复近似计数](#approximate-query-processing) | 是，公共预览版| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 起|由于高性能和低内存占用量，可针对大数据方案提供近似的 COUNT DISTINCT。 |
-| [行存储上的批处理模式](#batch-mode-on-rowstore) | 是，兼容性级别为 150，公共预览版| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 起，兼容性级别为 150，公共预览版|可为 CPU 绑定关系的 DW 工作负载提供批处理模式，无需列存储索引。  | 
+| [非重复近似计数](#approximate-query-processing) | 是| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起|由于高性能和低内存占用量，可针对大数据方案提供近似的 COUNT DISTINCT。 |
+| [行存储上的批处理模式](#batch-mode-on-rowstore) | 是，兼容性级别为 150| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，兼容性级别为 150|可为 CPU 绑定关系的 DW 工作负载提供批处理模式，无需列存储索引。  | 
 | [交错执行](#interleaved-execution-for-mstvfs) | 是，兼容性级别为 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，兼容性级别为 140|请使用在首次编译时遇到的多语句表值函数的实际基数，而不是一个固定猜测值。|
 | [内存授予反馈（批处理模式）](#batch-mode-memory-grant-feedback) | 是，兼容性级别为 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，兼容性级别为 140|如果批处理模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询浪费分配给它的超过 50% 内存，请对连续的执行减少内存授予。|
-| [内存授予反馈（行模式）](#row-mode-memory-grant-feedback) | 是，兼容性级别为 150，公共预览版| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 起，兼容性级别为 150，公共预览版|如果行模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询浪费分配给它的超过 50% 内存，请对连续的执行减少内存授予。|
-| [标量 UDF 内联](#scalar-udf-inlining) | 否 | 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 起，兼容性级别为 150，公共预览版|标量 UDF 转换为“内联”在调用查询中的等效关系表达式，这通常会大幅提升性能。|
-| [表变量延迟编译](#table-variable-deferred-compilation) | 是，兼容性级别为 150，公共预览版| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 起，兼容性级别为 150，公共预览版|请使用在首次编译时遇到的表变量的实际基数，而不是一个固定猜测值。|
+| [内存授予反馈（行模式）](#row-mode-memory-grant-feedback) | 是，兼容性级别为 150| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，兼容性级别为 150|如果行模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询浪费分配给它的超过 50% 内存，请对连续的执行减少内存授予。|
+| [标量 UDF 内联](#scalar-udf-inlining) | 否 | 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，兼容性级别为 150|标量 UDF 转换为“内联”在调用查询中的等效关系表达式，这通常会大幅提升性能。|
+| [表变量延迟编译](#table-variable-deferred-compilation) | 是，兼容性级别为 150| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，兼容性级别为 150|请使用在首次编译时遇到的表变量的实际基数，而不是一个固定猜测值。|
 
 ## <a name="batch-mode-adaptive-joins"></a>批处理模式自适应联接
 利用一个缓存计划，批处理模式自适应联接功能，可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，直到扫描第一个输入后  。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，计划可在执行期间动态切换到较好的联接策略。
@@ -123,14 +123,11 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 ## <a name="row-mode-memory-grant-feedback"></a>行模式内存授予反馈
 
-**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（公共预览版）
-
-> [!NOTE]
-> 行模式内存授予反馈是一项公共预览版功能。  
+**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 通过调整批处理模式和行模式运算符的内存授予大小，行模式内存授予反馈扩展了批处理模式内存授予反馈功能。  
 
-若要在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中启用行模式内存授予反馈的公共预览版，请为执行查询时连接到的数据库启用数据库兼容性级别 150。
+若要在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中启用行模式内存授予反馈，请为执行查询时连接到的数据库启用数据库兼容性级别 150。
 
 通过 memory_grant_updated_by_feedback  XEvent，可以查看行模式内存授予反馈活动。 
 
@@ -145,9 +142,6 @@ LastRequestedMemory 显示上一次查询执行中的授予内存（以千字节
 | No:Feedback disabled | 如果内存授予反馈不断触发，且在内存增加和内存减少操作之间波动，就会对语句禁用内存授予反馈。 |
 | Yes:Adjusting | 内存授予反馈已应用，并且可能会针对下一次执行进行进一步调整。 |
 | Yes:Stable | 内存授予反馈已应用，并且授予内存现在处于稳定状态。也就是说，为上一次执行最后授予的内存是为当前执行授予的内存。 |
-
-> [!NOTE]
-> 公共预览版行模式内存授予反馈计划特性在版本 17.9 及更高版本中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图形查询执行计划内可见。 
 
 ### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>在不更改兼容级别的情况下禁用行模式内存授予反馈
 可在数据库或语句范围内禁用行模式内存授予反馈，同时将数据库兼容级别维持在 150 或更高。 若要对源自数据库的所有查询执行禁用行模式内存授予反馈，请在对应数据库的上下文中执行以下命令：
@@ -280,19 +274,19 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 ## <a name="table-variable-deferred-compilation"></a>表变量延迟编译
 
-**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（公共预览版）
+**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 表变量延迟编译功能提升了引用表变量的查询的计划质量和整体性能。 在优化和初始编译期间，此功能传播基于实际表变量行计数的基数估计。 这种准确的行计数信息可优化下游计划操作。
 
 表变量延迟编译会延迟编译引用表变量的语句，直到首次实际运行语句为止。 此延迟编译行为与临时表的相同。 此更改导致使用实际基数，而不是原始单行猜测。 
 
-可以在 Azure SQL 数据库中启用表变量延迟编译的公共预览版。 为此，请为要在运行查询时连接到的数据库启用兼容性级别 150。
+可以在 Azure SQL 数据库中启用表变量延迟编译。 为此，请为要在运行查询时连接到的数据库启用兼容性级别 150。
 
 有关详细信息，请参阅[表变量延迟编译](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)。
 
 ## <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
-**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（公共预览版）
+**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
 
 标量 UDF 内联会自动将[标量 UDF](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) 转换为关系表达式， 并将它们嵌入正在调用的 SQL 查询中。 此转换提升了利用标量 UDF 的工作负载的性能。 标量 UDF 内联可便于实现 UDF 内部基于成本的操作优化。 生成的是高效、面向集、并行的（而不是低效、迭代、串行的）执行计划。 在数据库兼容性级别 150 下默认启用此功能。
 
@@ -300,7 +294,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 ## <a name="approximate-query-processing"></a>近似查询处理
 
-**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（公共预览版）
+**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 近似查询处理是新的功能系列。 它可以跨响应速度比绝对精度更为关键的大型数据集进行聚合。 例如，要跨 100 亿行计算 COUNT(DISTINCT())  ，以供显示在仪表板上。 在这种情况下，绝对精度并不重要，而响应速度则至关重要。 新增的 APPROX_COUNT_DISTINCT  聚合函数返回组中唯一非 NULL 值的近似数。
 
@@ -308,7 +302,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 ## <a name="batch-mode-on-rowstore"></a>行存储上的批处理模式 
 
-**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（公共预览版） 
+**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 行存储上的批处理模式可实现分析工作负载的批处理模式执行，而无需列存储索引。  此功能支持用于磁盘上堆和 B 树索引的批处理模式执行和位图筛选器。 行存储上的批处理模式可实现对所有现有支持批处理模式的运算符的支持。
 

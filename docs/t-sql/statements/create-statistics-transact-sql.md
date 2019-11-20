@@ -26,12 +26,12 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d232d3985a1a4ab27f5cc69e9fd9e486e41f8fe4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 7efc30e37b1242c66df856f79944de687650b99d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798375"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982569"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -168,7 +168,7 @@ CREATE STATISTICS statistics_name
  > [!NOTE]
  > 如果该表被截断，则截断的 HoBT 上生成的所有统计信息将恢复为使用默认采样百分比。
 
- 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 开始）到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 开始）  。    
+ **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 开始）及更高版本（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 开始）。    
   
  STATS_STREAM stats_stream **=**   
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -196,7 +196,7 @@ CREATE STATISTICS statistics_name
 -   对内部表创建的统计信息。  
 -   使用空间索引或 XML 索引创建的统计信息。  
   
-**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
 MAXDOP = max_degree_of_parallelism   
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  

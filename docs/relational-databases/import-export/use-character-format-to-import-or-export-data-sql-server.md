@@ -1,6 +1,5 @@
 ---
-title: 使用字符格式导入或导出数据 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 使用字符格式导入和导出数据
 ms.date: 09/29/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +13,13 @@ ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bf664a8171afabadc458cc9f4e24c8b77687e94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091513"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056328"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字符格式导入或导出数据 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,8 +49,8 @@ ms.locfileid: "68091513"
   
     |批量操作的方向|转换|  
     |---------------------------------|----------------|  
-    |导出|将数据转换为字符表示形式。 如果进行显式请求，字符列的数据将转换为所请求的代码页。 如果未指定代码页，将通过使用客户端计算机的 OEM 代码页对字符数据进行转换。|  
-    |导入|必要时将字符数据转换为本机表示形式，并将字符数据从客户端的代码页转换到目标列的代码页。|  
+    |Export|将数据转换为字符表示形式。 如果进行显式请求，字符列的数据将转换为所请求的代码页。 如果未指定代码页，将通过使用客户端计算机的 OEM 代码页对字符数据进行转换。|  
+    |Import|必要时将字符数据转换为本机表示形式，并将字符数据从客户端的代码页转换到目标列的代码页。|  
   
 -   为避免在转换期间丢失扩展字符，请使用 Unicode 字符格式或指定代码页。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68091513"
 |-------------|------------|-----------------|  
 |bcp|**-c**|让 bcp 实用工具使用字符数据。\*|  
 |BULK INSERT|DATAFILETYPE **='char'**|在批量导入数据时使用字符格式。|  
-|OPENROWSET|N/A|必须使用格式化文件|
+|OPENROWSET|空值|必须使用格式化文件|
   
  \*若要将字符 ( **-c**) 数据加载到与旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端兼容的格式中，请使用 **-V** 开关。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
    

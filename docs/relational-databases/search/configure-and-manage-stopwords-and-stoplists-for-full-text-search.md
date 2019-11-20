@@ -1,5 +1,5 @@
 ---
-title: 为全文搜索配置和管理非索引字和非索引字表 | Microsoft Docs
+title: 为全文搜索配置和管理非索引字和非索引字表
 ms.date: 02/02/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -17,20 +17,21 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c474a387002070534fe228b67e4ef1152fdbd64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 872f5207f673c5047475220b1da01a41678c1c6d
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093314"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056142"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>为全文搜索配置和管理非索引字和非索引字表
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  为了精简全文检索，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一种机制，用于去掉那些经常出现但对搜索无益的字符串。 这些去掉的字符串称为“非索引字” 。 在索引创建期间，全文引擎将忽略全文检索中的非索引字。 也就是说全文查询将不搜索非索引字。  
+  为了精简全文检索，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一种机制，用于去掉那些经常出现但对搜索无益的字符串。 这些去掉的字符串称为“非索引字”  。 在索引创建期间，全文引擎将忽略全文检索中的非索引字。 也就是说全文查询将不搜索非索引字。  
    
-**非索引字**。 非索引字可以是特定语言中具有含义的单词。 例如，在英语中，诸如“a”、“and”、“is”和“the”之类的词将被排除在全文检索之外，这是因为已经知道它们对搜索没有用处。 非索引字也可以是没有语言含义的“令牌”。  
+**非索引字**。 非索引字可以是特定语言中具有含义的单词。 例如，在英语中，诸如“a”、“and”、“is”和“the”之类的词将被排除在全文检索之外，这是因为已经知道它们对搜索没有用处。 非索引字也可以是没有语言含义的“令牌”  。  
 
-**非索引字表**。 使用称为“非索引字表”的对象在数据库中管理非索引字。 “非索引字表”是一个由非索引字组成的列表，这些非索引字在与全文检索关联时会应用于该索引的全文查询。
+**非索引字表**。 使用称为“非索引字表”的对象在数据库中管理非索引字。 “非索引字表”  是一个由非索引字组成的列表，这些非索引字在与全文检索关联时会应用于该索引的全文查询。
    
 ## <a name="use-an-existing-stoplist"></a>使用现有的非索引字表  
  可以通过以下方式使用现有的非索引字表：  
@@ -49,11 +50,11 @@ ms.locfileid: "68093314"
   
 1.  在对象资源管理器中，展开服务器。  
   
-2.  展开“数据库”，然后展开要在其中创建全文非索引字表的数据库。  
+2.  展开“数据库”  ，然后展开要在其中创建全文非索引字表的数据库。  
   
-3.  展开“存储”，然后右键单击“全文非索引字表”。  
+3.  展开“存储”  ，然后右键单击“全文非索引字表”  。  
   
-4.  选择“新建全文非索引字表”。  
+4.  选择“新建全文非索引字表”  。  
   
 5.  输入新的非索引字表的名称。  
   
@@ -88,19 +89,19 @@ ms.locfileid: "68093314"
   
 1.  在对象资源管理器中，展开服务器。  
   
-2.  展开 **“数据库”**，然后展开数据库。  
+2.  展开 **“数据库”** ，然后展开数据库。  
   
-3.  展开 **“存储”**，然后选择 **“全文非索引字表”**。  
+3.  展开 **“存储”** ，然后选择 **“全文非索引字表”** 。  
   
-4.  右键单击要更改其属性的非索引字表，然后选择“属性”。  
+4.  右键单击要更改其属性的非索引字表，然后选择“属性”。   
   
 5.  在“ [全文非索引字表属性](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) ”对话框中：  
   
-    1.  在“操作”列表框中，选择以下操作之一：“添加非索引字”、“删除非索引字”、“删除所有非索引字”或“清除非索引字表”。  
+    1.  在“操作”列表框中，选择以下操作之一  ：“添加非索引字”、“删除非索引字”、“删除所有非索引字”或“清除非索引字表”     。  
   
     2.  如果对选定的操作启用了 **“非索引字”** 文本框，请输入一个非索引字。 该非索引字必须是唯一的，也就是说，在针对所选语言的此非索引字表中还不存在该非索引字。  
   
-    3.  如果对选定的操作启用了“全文语言”列表框，请选择一种语言。  
+    3.  如果对选定的操作启用了“全文语言”  列表框，请选择一种语言。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf64036b88b6f29da0404b6e611ae891db93da70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912658"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982787"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "67912658"
 > [!NOTE]  
 > 有关 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，请参阅[CREATE FUNCTION（SQL 数据仓库）](../../t-sql/statements/create-function-sql-data-warehouse.md)。
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -269,7 +269,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>参数
 *OR ALTER*  
- **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  只有在函数已存在时才对其进行有条件地更改。 
  
@@ -341,7 +341,7 @@ RETURNS return_data_type
  ORDER (\<order_clause>) 指定从表值函数中返回结果的顺序。 有关详细信息，请参阅本主题后面的“[在 CLR 表值函数中使用排序顺序](#using-sort-order-in-clr-table-valued-functions)”部分。  
   
  EXTERNAL NAME \<method_specifier> assembly_name.class_name.method_name       
- **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP1 及更高版本）
   
  指定创建的函数名称应引用的程序集和方法。  
   
@@ -369,7 +369,7 @@ RETURNS return_data_type
  \<table_type_definition> ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...n ] ) 定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的表数据类型    。 表声明包含列定义和列约束（或表约束）。 表始终放在主文件组中。  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
- **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（[在某些区域以预览版提供](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。  
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（[在某些区域以预览版提供](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。  
   
  定义 CLR 函数的表数据类型。 表声明仅包含列名称和数据类型。 表始终放在主文件组中。  
   
@@ -393,7 +393,7 @@ RETURNS return_data_type
  指定函数将具有以下一个或多个选项：  
   
  ENCRYPTION  
- **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）  
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP1 及更高版本）  
   
  指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]会将 CREATE FUNCTION 语句的原始文本转换为模糊格式。 模糊代码的输出在任何目录视图中都不能直接显示。 对系统表或数据库文件没有访问权限的用户不能检索模糊文本。 但是，可以通过 [DAC 端口](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)访问系统表的特权用户或直接访问数据库文件的特权用户可以使用此文本。 此外，能够向服务器进程附加调试器的用户可在运行时从内存中检索原始过程。 有关如何访问系统元数据的详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
@@ -786,7 +786,7 @@ GO
 ### <a name="d-creating-a-clr-function"></a>D. 创建 CLR 函数  
  此示例会创建 CLR 函数 `len_s`。 在创建该函数之前，程序集 `SurrogateStringFunction.dll` 已在本地数据库中注册。  
   
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP1 及更高版本）  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  

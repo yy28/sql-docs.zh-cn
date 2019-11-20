@@ -1,17 +1,18 @@
 ---
-title: 使用服务 SID 授予对 SQL Server 中的服务的访问权限 | Microsoft Docs
+title: 使用服务 SID 授予服务的访问权限
+ms.custom: seo-dt-2019
 author: randomnote1
 ms.author: dareist
 ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: fa2051e7f21dccf749f4f8938ecfc98c13bc313d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 18ac490c514703d890f2a1075602494fff81749a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888584"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095592"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>使用服务 SID 授予对 SQL Server 中的服务的访问权限
 

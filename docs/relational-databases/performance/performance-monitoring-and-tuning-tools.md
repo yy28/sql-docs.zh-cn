@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42d3d78b68f84b5ab44658114094bde77cc1f844
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d900593848561bba17e186f48632bf299fe9a7cd
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113520"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962398"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>性能监视和优化工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68113520"
   
 |工具|描述|  
 |----------|-----------------|  
-|[内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)|内置函数可显示自启动服务器以来有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动的快照统计信息，这些统计信息存储在预定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计数器中。 例如， **@@CPU_BUSY** 包含 CPU 执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码所持续的时间； **@@CONNECTIONS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接或尝试连接的次数； **@@PACKET_ERRORS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接上出现的网络数据包数。|  
+|[内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)|内置函数可显示自启动服务器以来有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动的快照统计信息，这些统计信息存储在预定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计数器中。 例如，\@\@CPU_BUSY 包含 CPU 执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码所持续的时间；\@\@CONNECTIONS 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接或尝试连接的次数；\@\@PACKET_ERRORS 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接上出现的网络数据包数    。|  
 |[DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)|DBCC（数据库控制台命令）语句使您能够检查性能统计信息以及数据库的逻辑与物理一致性。|  
 |[数据库引擎优化顾问 (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md)|数据库引擎优化顾问可分析所执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句对要优化的数据库性能的影响。 数据库引擎优化顾问提供了添加、删除或修改索引、索引视图及分区的建议。|  
 |[数据库实验助手 (DEA)](https://www.microsoft.com/download/details.aspx?id=54090)|数据库实验助手 (DEA) 是 SQL Server 的新的 A/B 测试解决方案。 它会帮助评估给定工作负荷的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的目标版本。 从上一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本（以 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始）升级到任何更新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本时，DEA 将能够提供比较性的分析指标。|

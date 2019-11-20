@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 5188b9a90a910ba94d73db48f5e0c1c527145e48
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 38c594e235bf68c18ec493fd8ec43f585ea0378c
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843739"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097859"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -40,7 +40,9 @@ SQL Server Management Studio (SSMS) 是一种集成环境，用于管理从 SQL 
 
 SSMS 是免费的！
 
-## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[下载 SSMS](https://aka.ms/ssmsfullsetup)
+## <a name="download-ssms"></a>下载 SSMS
+
+**[![下载](media/download-icon.png)下载 SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
 SSMS 18.4 是 SSMS 的最新正式发布 (GA) 版。 如果安装了之前的 SSMS 18 GA 版本，请安装 SSMS 18.4 将它升级到 18.4。 如果安装了较早的 SSMS 18.x 预览版，必须在安装 SSMS 18.4 前卸载预览版  。
 
@@ -81,7 +83,7 @@ SQL Server Management Studio 18.4：
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了 50 条评估规则（请参阅 GitHub 上的详细信息）。 |
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了基本数学表达式以及与规则条件的比较。 |
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了对 RegisteredServer 对象的支持。 |
-| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了以 JSON 格式存储规则的方式，还更新了应用替代项/自定义项的机制。 |
+| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了以 JSON 格式存储规则，还更新了应用替代项/自定义项的机制。 |
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了规则以支持 Linux 上的 SQL。 |
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了规则集 JSON 格式并添加了架构版本。 |
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了 cmdlet 输出以提高建议的可读性。 |

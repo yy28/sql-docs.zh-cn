@@ -1,5 +1,6 @@
 ---
-title: 关于变更数据捕获 (SQL Server) | Microsoft Docs
+title: 关于变更数据捕获
+ms.custom: seo-dt-2019
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd94fae8b2e66cec1d82e8548f00c27455e4e737
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 876de84a811ad7b4eb5bad3260258acc4abd05fc
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058124"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095322"
 ---
 # <a name="about-change-data-capture-sql-server"></a>关于变更数据捕获 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -29,14 +30,14 @@ ms.locfileid: "68058124"
 ## <a name="change-data-capture-data-flow"></a>变更数据捕获数据流  
  下图说明了变更数据捕获的主体数据流。  
   
- ![Change data capture data flow](../../relational-databases/track-changes/media/cdcdataflow.gif "Change data capture data flow")  
+ ![变更数据捕获数据流](../../relational-databases/track-changes/media/cdcdataflow.gif "变更数据捕获数据流")  
   
  变更数据捕获的更改数据源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志。 在将插入、更新和删除应用于跟踪的源表时，将会在日志中添加说明这些更改的项。 日志用作捕获进程的输入来源。 它会读取日志，并在跟踪的表的关联更改表中添加有关更改的信息。 系统将提供一些函数，以枚举在更改表中指定范围内发生的更改，并以筛选的结果集的形式返回该值。 通常，应用程序进程使用筛选的结果集在某种外部环境中更新源表示形式。  
   
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>了解变更数据捕获和捕获实例  
  在跟踪对数据库中任何单个表进行的更改之前，必须为数据库显式启用变更数据捕获。 这是使用 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)存储过程完成的。 为数据库启用变更数据捕获后，可以使用 [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)存储过程将源表标识为跟踪的表。 为表启用变更数据捕获后，将创建一个关联的捕获实例以支持传播源表中的更改数据。 捕获实例由一个更改表和最多两个查询函数组成。 说明捕获实例配置详细信息的元数据保留在变更数据捕获元数据表 **cdc.change_tables**、 **cdc.index_columns**和 **cdc.captured_columns**中。 可以使用 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)存储过程来检索此信息。  
   
- 与捕获实例关联的所有对象都是在启用变更数据捕获的数据库的变更数据捕获架构中创建的。 捕获实例名称的要求是：必须是有效的对象名，并且在数据库捕获实例中是唯一的。 默认情况下，该名称是源表的 \<*架构名称*\_*表名*>。 它的关联更改表的命名方式为：在捕获实例名称后面追加 **_CT** 。 用于查询所有更改的函数的命名方式为：在捕获实例名称后面追加 **fn_cdc_get_all_changes_**。 如果将捕获实例配置为支持 **net changes**，则还会创建 **net_changes** 查询函数，并通过在捕获实例名称后面追加 **fn_cdc_get_net_changes\_** 来进行命名。  
+ 与捕获实例关联的所有对象都是在启用变更数据捕获的数据库的变更数据捕获架构中创建的。 捕获实例名称的要求是：必须是有效的对象名，并且在数据库捕获实例中是唯一的。 默认情况下，该名称是源表的 \<*架构名称*\_*表名*>。 它的关联更改表的命名方式为：在捕获实例名称后面追加 **_CT** 。 用于查询所有更改的函数的命名方式为：在捕获实例名称后面追加 **fn_cdc_get_all_changes_** 。 如果将捕获实例配置为支持 **net changes**，则还会创建 **net_changes** 查询函数，并通过在捕获实例名称后面追加 **fn_cdc_get_net_changes\_** 来进行命名。  
   
 ## <a name="change-table"></a>更改表  
  变更数据捕获更改表的前五列是元数据列。 这些列提供与记录的更改有关的附加信息。 其余列镜像源表中按名称标识的捕获列（通常还会按类型进行标识）。 这些列保存从源表中收集的捕获列数据。  

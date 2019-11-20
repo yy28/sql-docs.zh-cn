@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0437a637ef199fbef5b1914c65c6506533d906e9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532051"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127381"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -68,6 +68,12 @@ kubectl config view
 > 如果要在使用 `kubeadm` 启动的多节点 Kuberntes 群集上进行部署，在启动大数据群集部署之前，请确保部署所针对的所有 Kubernetes 节点上的时钟同步。 大数据群集具有各种时间敏感型服务的内置运行状况属性，并且时钟偏差可能导致不正确的状态。
 
 配置 Kubernetes 群集后，可以继续部署新的 SQL Server 大数据群集。 如果要从以前的版本升级，请参阅[如何升级 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md)。
+
+## <a name="ensure-you-have-storage-configured"></a>确保已配置存储
+
+使大多数大数据群集部署具有永久存储。 此时，需要在在部署 BDC 之前制定计划，确定如何在 Kubernetes 群集上提供永久存储。
+
+如果在 AKS 中进行部署，则无需进行任何存储设置。 AKS 通过动态预配提供内置的存储类。 可以在部署配置文件中自定义存储类（`default` 或 `managed-premium`）。 内置配置文件使用 `default` 存储类。 如果要在使用 `kubeadm` 部署的 Kubernetes 群集上进行部署，则需要确保有足够的存储来存储所需规模的群集，并对其进行配置以供使用。 如果想要自定义存储的使用方式，应该在继续操作之前执行此操作。 请参阅 [Kubernetes 上的 SQL Server 大数据群集的数据暂留](concept-data-persistence.md)。
 
 ## <a id="deploy"></a> 部署概述
 

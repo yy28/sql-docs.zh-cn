@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dad5124f08435532c1fd0cf299e54db66c5be05
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882430"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926050"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文介绍了标量 UDF 内联，这是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能套件下的一项功能。 此功能提高了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中调用标量 UDF 的查询性能。
+本文介绍了标量 UDF 内联，这是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能套件下的一项功能。 此功能提高了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中调用标量 UDF 的查询性能。
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL 标量用户定义函数
 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中实现并返回单个数据值的用户定义函数 (UDF) 称为 T-SQL 标量用户定义函数。 T-SQL UDF 是一种跨 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询实现代码重用和模块化的巧妙方法。 某些计算（如复杂的业务规则）在命令性 UDF 窗体中更易表示。 UDF 有助于构建复杂的逻辑，而无需编写复杂 SQL 查询的专业知识。
@@ -134,7 +134,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 根据 UDF 中逻辑的复杂性，所生成的查询计划也可能变得更大更复杂。 我们可以看到，UDF 中的操作现在不再是黑盒，因此查询优化器能够降低成本并优化这些操作。 此外，由于 UDF 不再在计划中，因此将用完全避免函数调用开销的计划来取代迭代 UDF 调用。
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>可内联标量 UDF 要求
-如果满足所有以下条件，则标量 T-SQL UDF 可以内联：
+<a name="requirements"></a>如果满足所有以下条件，则标量 T-SQL UDF 可以内联：
 
 - UDF 使用以下构造编写：
     - `DECLARE`、`SET`：变量声明和赋值。
@@ -165,7 +165,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 对于每个 T-SQL 标量 UDF，[sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) 目录视图都包含一个名为 `is_inlineable` 的属性，指示 UDF 是否可内联。 
 
 > [!NOTE]
-> `is_inlineable` 属性派生自 UDF 定义内的构造。 它不会在编译时检查 UDF 是否确实可内联。 有关详细信息，请参阅下面的内联条件。
+> `is_inlineable` 属性派生自 UDF 定义内的构造。 它不会在编译时检查 UDF 是否确实可内联。 有关详细信息，请参阅下面的[内联条件](#requirements)。
 
 值为 1 则表明可内联，0 则表示不可内联。 对于所有内联 TVF，此属性的值均为 1。 对于所有其他模块，此值都将为 0。
 
@@ -258,7 +258,7 @@ END
 1. 查询级别联接提示可能不再有效，因为内联可能会引入新联接。 必须改为使用本地联接提示。
 1. 无法索引引用内联标量UDF的视图。 如果需要在此类视图上创建索引，请禁用对引用的 UDF 的内联。
 1. [动态数据屏蔽](../security/dynamic-data-masking.md)与 UDF 内联的行为可能存在一些差异。 在某些情况下（取决于 UDF 中的逻辑），内联可能是更保守的 w.r.t 屏蔽输出列。 如果 UDF 中引用的列不是输出列，则它们不会被屏蔽。 
-1. 如果 UDF 引用内置函数（如 `SCOPE_IDENTITY()`），内置函数返回的值将随内联而变化。 这种行为上的更改是因为内联更改了 UDF 中语句的范围。
+1. 如果 UDF 引用内置函数（如 `SCOPE_IDENTITY()`、`@@ROWCOUNT` 或 `@@ERROR`），内置函数返回的值将随内联而变化。 这种行为上的更改是因为内联更改了 UDF 中语句的范围。
 
 ## <a name="see-also"></a>另请参阅
 [SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

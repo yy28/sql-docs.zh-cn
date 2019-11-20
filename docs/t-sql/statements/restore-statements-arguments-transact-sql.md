@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2b1dae2be81524bba3cf1e28d5e64736d4e9078b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141244"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982463"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 语句 - 参数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 本主题记录了在 RESTORE {DATABASE|LOG} 语句和如后所示的关联辅助语句的“语法”部分中说明的参数：RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 和 RESTORE VERIFYONLY。 大多数参数都仅由这六个语句中的一部分支持。 每个参数的说明中都指示了相应的支持信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
  有关语法，请参阅下列主题：  
@@ -218,7 +218,7 @@ LOADHISTORY
   
  指示还原操作将信息加载到 **msdb** 历史记录表中。 对于要验证的单个备份集，LOADHISTORY 选项将介质集上存储的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份相关信息加载到 **msdb** 数据库中的备份和还原历史记录表中。 有关历史记录表的详细信息，请参阅[系统表 (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)。  
   
-#### <a name="generalwithoptions--n-"></a>\<general_WITH_options> [ ,...n ]  
+#### <a name="general_with_options--n-"></a>\<general_WITH_options> [ ,...n ]  
  RESTORE DATABASE 和 RESTORE LOG 语句均支持常规 WITH 选项。 一个或多个辅助语句也支持其中某些选项，如下所示。  
   
 ##### <a name="restore-operation-options"></a>还原操作选项  
@@ -247,7 +247,7 @@ n 是指示可以指定其他 MOVE 语句的占位符  。 请为每个要从备
 CREDENTIAL  
  支持的语句  ：[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 和 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
-**适用对象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**适用对象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 及更高版本
   
  仅当从 Windows Azure Blob 存储服务还原备份时使用。  
   
@@ -394,7 +394,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
  支持的语句  ：[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 和 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
   
  与 Windows 兼容的目录名称。 此名称应在该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有数据库级 FILESTREAM 目录名称中保持唯一。 无论 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则如何设置，都应通过不区分大小写的形式进行唯一性比较。  
   
@@ -445,7 +445,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NOUNLOAD  
  指定在 RESTORE 操作之后磁带继续加载在磁带机中。  
   
-#### <a name="replicationwithoption"></a><replication_WITH_option>  
+#### <a name="replication_with_option"></a><replication_WITH_option>  
  此选项只适用于在创建备份时对数据库进行了复制的情况。  
   
  KEEP_REPLICATION  
@@ -457,7 +457,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
 -   必须重命名备用服务器，以使用与主服务器同样的名称。  
   
-#### <a name="changedatacapturewithoption"></a><change_data_capture_WITH_option>  
+#### <a name="change_data_capture_with_option"></a><change_data_capture_WITH_option>  
  此选项只适用于在创建备份时对数据库启用了变更数据捕获的情况。  
   
  KEEP_CDC  
@@ -469,7 +469,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
  有关将变更数据捕获与数据库镜像结合使用的信息，请参阅[变更数据捕获和其他 SQL Server 功能](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)。  
   
-#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options>  
+#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
  启用或禁用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息传递，或者设置新的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 标识符。 此选项只适用于在创建备份时为数据库启用（激活）了 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的情况。  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NEW_BROKER  
  指定为数据库分配新的 Service Broker 标识符。 由于该数据库被视为新的 Service Broker，因此将立即删除数据库中的现有会话，而不生成结束对话框消息。 必须使用新标识符重新创建任何引用旧 Service Broker 标识符的路由。  
   
-#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
+#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
  支持的语句  ：[RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) 并且仅限于完整或大容量日志恢复模式。  
   
  通过在 STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句中指定目标恢复点，可以将数据库还原到特定时间点或事务点。 指定的时间或事务始终从日志备份还原。 在还原序列的每个 RESTORE LOG 语句中，必须在相同的 STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句中指定目标时间或事务。  

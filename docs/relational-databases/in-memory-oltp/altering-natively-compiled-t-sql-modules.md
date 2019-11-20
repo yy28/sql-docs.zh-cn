@@ -11,17 +11,17 @@ ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03f7e4fd87068e31674e74dc81dd33dadba323cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6979d05d29b151a34edfe1c220c9d9a4d3046359
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951266"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983007"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，可以使用 `ALTER` 语句在本机编译的存储过程和其他本机编译的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块上（如标量 UDF 和触发器）执行 `ALTER` 操作。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，可以使用 `ALTER` 语句在本机编译的存储过程和其他本机编译的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块上（如标量 UDF 和触发器）执行 `ALTER` 操作。  
   
 在对本机编译的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块执行 `ALTER` 时，系统会使用新定义重新编译模块。 在重新编译期间，旧版模块仍可继续执行。 在编译完成后，系统将阻止旧版模块的运行，并安装新版模块。 在更改本机编译的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块时，你可以修改以下选项。  
   

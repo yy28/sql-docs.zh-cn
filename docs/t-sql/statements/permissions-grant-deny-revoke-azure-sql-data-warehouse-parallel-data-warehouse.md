@@ -13,12 +13,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e2245de7cf96e7635098fff57013010e143e6a9
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129369"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095588"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>权限：GRANT、DENY、REVOKE（Azure SQL 数据仓库、并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68129369"
   
 -   REVOKE  删除现有的 GRANT  或 DENY  权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -241,9 +241,9 @@ REVOKE
 ### <a name="chart-of-permissions"></a>权限的图表  
  所有权限均以图形方式呈现在此发布程序上。 这是查看权限的嵌套层次结构最简单的方法。 例如，ALTER ON LOGIN 权限可由其本身授予，但如果授予某一登录名对该登录名的 CONTROL 权限，或者授予某一登录名 ALTER ANY LOGIN 权限，它也包含在内    。  
   
- ![APS 安全性权限发布程序](../../t-sql/statements/media/aps-security-perms-poster.png "APS 安全性权限发布程序")  
+ ![APS 安全性权限发布者](../../t-sql/statements/media/aps-security-perms-poster.png "APS 安全性权限发布者")  
   
- 若要下载此发布程序的完整版本，请参阅 APS Yammer 站点文件部分中的 [SQL Server PDW 权限](https://go.microsoft.com/fwlink/?LinkId=244249)（或通过 apsdoc@microsoft.com 发送电子邮件请求  ）。  
+ 若要下载此发布程序的完整版本，请参阅 APS Yammer 站点文件部分中的 [SQL Server PDW 权限](https://go.microsoft.com/fwlink/?LinkId=244249)（或通过 apsdoc\@microsoft.com 发送电子邮件请求  ）。  
   
 ## <a name="default-permissions"></a>默认权限  
  以下列表对默认权限进行了说明：  

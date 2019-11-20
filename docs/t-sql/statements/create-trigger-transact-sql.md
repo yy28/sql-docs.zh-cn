@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48335017cd45e713001a22941875f30c51148b62
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73168759"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982702"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -179,12 +179,12 @@ DATABASE
 将 DDL 触发器的作用域应用于当前数据库。 如果指定了此参数，则只要当前数据库中出现 event_type 或 event_group，就会激发该触发器   。  
   
 ALL SERVER  
-**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 将 DDL 或登录触发器的作用域应用于当前服务器。 如果指定了此参数，则只要当前服务器中的任何位置出现 event_type 或 event_group，就会激发该触发器   。  
   
 WITH ENCRYPTION  
-**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 让 CREATE TRIGGER 语句的文本复杂难懂。 使用 WITH ENCRYPTION 可以防止将触发器作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的一部分进行发布。 无法为 CLR 触发器指定 WITH ENCRYPTION。  
   
@@ -236,7 +236,7 @@ event_group
 CREATE TRIGGER 运行完成后，*event_group* 还将充当宏，将它涉及的事件类型添加到 sys.trigger_events 目录视图中。  
   
 NOT FOR REPLICATION  
-**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 指明触发器不得在复制代理修改触发器涉及的表时运行。  
   
@@ -264,7 +264,7 @@ DDL 和登录触发器使用 [EVENTDATA (Transact-SQL)](../../t-sql/functions/ev
   
 对于内存优化表中的触发器，顶层允许的唯一 sql_statement 是 ATOMIC 块  。 ATOMIC 块内允许的 T-SQL 由本地进程内允许的 T-SQL 决定。  
   
-\< method_specifier > **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+\< method_specifier > **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 对于 CLR 触发器，指定程序集与触发器绑定的方法。 该方法不能带有任何参数，并且必须返回空值。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且它必须作为类存在于可见程序集中  。 如果该类有一个使用“.”来分隔命名空间部分的命名空间限定名称，则类名必须用 [] 或“ ”分隔符分隔。 此类不得为嵌套类。  
   
@@ -512,7 +512,7 @@ GO
 ### <a name="e-using-a-server-scoped-ddl-trigger"></a>E. 使用具有服务器范围的 DDL 触发器  
 在以下示例中，如果当前服务器实例上出现任何 CREATE DATABASE 事件，则使用 DDL 触发器输出一条消息，并使用 `EVENTDATA` 函数检索对应 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。 有关在 DDL 触发器中使用 EVENTDATA 的更多示例，请参阅[使用 EVENTDATA 函数](../../relational-databases/triggers/use-the-eventdata-function.md)。  
   
-**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 ```sql  
 CREATE TRIGGER ddl_trig_database   
@@ -530,7 +530,7 @@ GO
 ### <a name="f-using-a-logon-trigger"></a>F. 使用登录触发器  
 下面的登录触发器示例拒绝了作为 *login_test* 登录名的成员登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的尝试（如果在此登录名下已运行三个用户会话）。  
   
-**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 ```sql  
 USE master;  

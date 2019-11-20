@@ -1,5 +1,5 @@
 ---
-title: 备份和还原全文目录和索引 | Microsoft Docs
+title: 备份和还原全文目录和索引
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +16,13 @@ ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 51ab502a0b4aa1c0740a41fee15bee098bddfd5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 38eaba8bdf2772fe03690773881c67306a024b64
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024436"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056135"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>备份和还原全文目录和索引
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

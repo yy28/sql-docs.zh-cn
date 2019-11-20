@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c061360d6308e9fb6927e26f887d084ec6058134
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809818"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982719"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68809818"
 > [!NOTE]  
 >  本主题讨论 .NET Framework CLR 与 SQL Server 的集成。 CLR 集成不适用于 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -197,7 +197,7 @@ column_name <data_type>
  指定此类型是否可容纳空值。 如果未指定，则默认值为 NULL。  
   
  assembly_name   
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定可在公共语言运行时中引用用户定义类型的实现的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序集。 assembly_name 应与当前数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的现有程序集匹配  。  
   
@@ -205,7 +205,7 @@ column_name <data_type>
 >  EXTERNAL_NAME 在包含数据库中不可用。  
   
  [.  class_name  ]    
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定实现用户定义类型的程序集内的类。 class_name 必须是有效的标识符，并且它必须作为类存在于可见程序集中  。 class_name 区分大小写，不考虑数据库的排序规则，且必须与对应的程序集中的类名完全匹配  。 如果用于编写类的编程语言使用命名空间概念（例如 C#），则类名可以是用方括号 ([ ]) 括起来的限定命名空间的名称  。 如果未指定 class_name，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假定该名称与 type_name 相同   。  
   
@@ -229,7 +229,7 @@ column_name <data_type>
  
   `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
-适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定在表上创建索引。 这可以是聚集索引，也可以是非聚集索引。 该索引包含列出的列，并按照升序或降序对数据进行排序。
   
@@ -237,17 +237,17 @@ column_name <data_type>
  必须在 CREATE TABLE 语句中指定列索引和表索引。 内存优化表不支持 CREATE INDEX 和 DROP INDEX。  
   
  MEMORY_OPTIMIZED  
- 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
+ **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指示表类型是否为内存优化表。 默认情况下，此选项处于关闭状态；表（类型）不是内存优化表（类型）。 内存优化表类型是内存优化用户表，它保留在磁盘上的架构与其他用户表类似。  
   
  BUCKET_COUNT  
- 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
+ **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指示应在哈希索引中创建的存储桶数。 哈希索引中 BUCKET_COUNT 的最大值为 1,073,741,824。 有关桶计数的详细信息，请参阅[内存优化表索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。 bucket_count 是必需的参数  。  
   
  HASH  
- 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
+ **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指示创建哈希索引。 仅在内存优化表中支持哈希索引。  
   
@@ -297,7 +297,7 @@ FROM varchar(11) NOT NULL ;
 ### <a name="b-creating-a-user-defined-type"></a>B. 创建用户定义类型  
  以下示例创建类型 `Utf8String`，该类型在程序集 `utf8string` 中引用类 `utf8string`。 创建类型之前，应在本地数据库中注册程序集 `utf8string`。 将 CREATE ASSEMBLY 语句的二进制部分替换为有效描述。  
   
-**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 ```  
 CREATE ASSEMBLY utf8string  

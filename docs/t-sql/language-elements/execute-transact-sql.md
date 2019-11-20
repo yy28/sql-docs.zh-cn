@@ -31,12 +31,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80723d2288ce628d4c39d174eefc3bf868314886
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122318"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981957"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68122318"
 > [!IMPORTANT]  
 >  在使用字符串调用 EXECUTE 之前，请先验证该字符串。 永远不要执行由未经验证的用户输入构造的命令。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -208,7 +208,7 @@ Execute a character string
  用户可以执行在另一数据库中创建的模块，只要运行模块的用户拥有此模块或具有在该数据库中执行该模块的适当权限。 用户可以在另一台运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器中执行模块，只要该用户有相应的权限使用该服务器（远程访问），并能在数据库中执行该模块。 如果指定了服务器名称但没有指定数据库名称，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会在用户的默认数据库中查找该模块。  
   
  ;*number*  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
  是可选整数，用于对同名的过程分组。 该参数不能用于扩展存储过程。  
   
@@ -267,7 +267,7 @@ Execute a character string
  指定执行语句的上下文。  
   
  Login  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
  指定要模拟的上下文是登录名。 模拟范围为服务器。  
   
@@ -291,7 +291,7 @@ Execute a character string
  指示参数，其值在 EXEC('...', \<arg-list>) AT \<linkedsrv> 语句所使用的传递命令的 \<arg-list> 中提供。  
   
  AT *linked_server_name*  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
  指定对 *linked_server_name* 执行 *command_string*，并将结果（如果有）返回到客户端。 *linked_server_name* 必须引用本地服务器中的现有链接服务器定义。 链接服务器是使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 定义的。  
   
@@ -301,11 +301,11 @@ Execute a character string
 |术语|定义|  
 |----------|----------------|  
 |RECOMPILE|执行模块后，强制编译、使用和放弃新计划。 如果该模块存在现有查询计划，则该计划将保留在缓存中。<br /><br /> 如果所提供的参数为非典型参数或者数据有很大的改变，使用该选项。 该选项不能用于扩展存储过程。 建议尽量少使用该选项，因为它消耗较多系统资源。<br /><br /> **注意：** 在调用使用 OPENDATASOURCE 语法的存储过程时，不能使用 WITH RECOMPILE。 如果指定由四个部分组成的对象名，则忽略 WITH RECOMPILE 选项。<br /><br /> **注意：** 本机编译的标量用户定义函数不支持 RECOMPILE。 如需重新编译，请使用 [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)。|  
-|**RESULT SETS UNDEFINED**|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。<br /><br /> 此选项不保证将返回任何结果（如果有），并且不提供任何定义。 如果返回任何结果，则说明语句正常执行而没有发生错误，否则，不会返回任何结果。 如果未提供 result_sets_option，则 RESULT SETS UNDEFINED 是默认行为。<br /><br /> 对于已解释的标量用户定义函数和本机编译的标量用户定义函数，此选项不可操作，因为这些函数永远不会返回结果集。|  
-|RESULT SETS NONE|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。<br /><br /> 保证执行语句不返回任何结果。 如果返回任何结果，则会中止批处理。<br /><br /> 对于已解释的标量用户定义函数和本机编译的标量用户定义函数，此选项不可操作，因为这些函数永远不会返回结果集。|  
-|*\<result_sets_definition>*|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。<br /><br /> 保证返回 result_sets_definition 中指定的结果。 对于返回多个结果集的语句，请提供多个 *result_sets_definition* 部分。 将每个 *result_sets_definition* 用括号括上，并以逗号隔开。 有关详细信息，请参阅本主题后面的 \<result_sets_definition>。<br /><br /> 对于本机编译的标量用户定义函数，此选项总是会导致错误，因为这些函数永远不会返回结果集。|
+|**RESULT SETS UNDEFINED**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 此选项不保证将返回任何结果（如果有），并且不提供任何定义。 如果返回任何结果，则说明语句正常执行而没有发生错误，否则，不会返回任何结果。 如果未提供 result_sets_option，则 RESULT SETS UNDEFINED 是默认行为。<br /><br /> 对于已解释的标量用户定义函数和本机编译的标量用户定义函数，此选项不可操作，因为这些函数永远不会返回结果集。|  
+|RESULT SETS NONE|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保证执行语句不返回任何结果。 如果返回任何结果，则会中止批处理。<br /><br /> 对于已解释的标量用户定义函数和本机编译的标量用户定义函数，此选项不可操作，因为这些函数永远不会返回结果集。|  
+|*\<result_sets_definition>*|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保证返回 result_sets_definition 中指定的结果。 对于返回多个结果集的语句，请提供多个 *result_sets_definition* 部分。 将每个 *result_sets_definition* 用括号括上，并以逗号隔开。 有关详细信息，请参阅本主题后面的 \<result_sets_definition>。<br /><br /> 对于本机编译的标量用户定义函数，此选项总是会导致错误，因为这些函数永远不会返回结果集。|
   
-\<result_sets_definition> **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+\<result_sets_definition> **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  描述执行的语句所返回的结果集。 result_sets_definition 的子句具有以下含义  
   
@@ -426,7 +426,7 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
-### <a name="c-using-execute-tsqlstring-with-a-variable"></a>C. 使用带变量的 EXECUTE 'tsql_string' 语句  
+### <a name="c-using-execute-tsql_string-with-a-variable"></a>C. 使用带变量的 EXECUTE 'tsql_string' 语句  
  下面的示例说明了 `EXECUTE` 如何处理动态生成的包含变量的字符串。 该示例创建 `tables_cursor` 游标以保存 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中所有用户定义表的列表，然后使用该列表重新生成对表的全部索引。  
   
 ```  
@@ -455,7 +455,7 @@ GO
 ### <a name="d-using-execute-with-a-remote-stored-procedure"></a>D. 对远程存储过程使用 EXECUTE 语句  
  以下示例在远程服务器 `uspGetEmployeeManagers` 上执行 `SQLSERVER1` 存储过程，然后在 `@retstat` 中存储指示成功或失败的返回状态。  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
 ```  
 DECLARE @retstat int;  
@@ -511,10 +511,10 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
   
 ```  
   
-### <a name="g-using-execute-with-at-linkedservername"></a>G. 使用带 AT linked_server_name 的 EXECUTE  
+### <a name="g-using-execute-with-at-linked_server_name"></a>G. 使用带 AT linked_server_name 的 EXECUTE  
  以下示例将一个命令字符串传递给远程服务器。 先创建一个链接服务器 `SeattleSales`，它指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的另一个实例，然后对该链接服务器执行 DDL 语句 (`CREATE TABLE`)。  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -546,7 +546,7 @@ GO
 ### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>J. 使用 EXECUTE 查询链接服务器上的 Oracle 数据库  
  以下示例在远程 Oracle 服务器上执行几个 `SELECT` 语句。 示例开始时添加 Oracle 服务器作为链接服务器，并创建链接服务器登录。  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
 ```  
 -- Setup the linked server.  
@@ -586,10 +586,10 @@ AS USER = 'User1';
 GO  
 ```  
   
-### <a name="l-using-a-parameter-with-execute-and-at-linkedservername"></a>L. 以 EXECUTE 和 AT linked_server_name 使用参数  
+### <a name="l-using-a-parameter-with-execute-and-at-linked_server_name"></a>L. 以 EXECUTE 和 AT linked_server_name 使用参数  
  以下示例使用问号 (`?`) 占位符作为参数向远程服务器传递命令字符串。 该示例先创建一个链接服务器 `SeattleSales`，它指向另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，然后对该链接服务器执行 `SELECT` 语句。 `SELECT` 语句使用问号作为 `ProductID` 参数 (`952`)（该参数在语句后提供）的占位符。  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
 ```  
 -- Setup the linked server.  
@@ -605,7 +605,7 @@ GO
 ### <a name="m-using-execute-to-redefine-a-single-result-set"></a>M. 使用 EXECUTE 重新定义单个结果集  
  前面的一些示例执行 `EXEC dbo.uspGetEmployeeManagers 6;`，将返回 7 个列。 以下示例说明如何使用 `WITH RESULT SET` 语法更改返回的结果集的名称和数据类型。  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 EXEC uspGetEmployeeManagers 16  
@@ -625,7 +625,7 @@ WITH RESULT SETS
 ### <a name="n-using-execute-to-redefine-a-two-result-sets"></a>N. 使用 EXECUTE 重新定义两个结果集  
  在执行返回多个结果集的语句时，请定义每个预期结果集。 以下示例在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中创建一个返回两个结果集的过程。 然后使用 **WITH RESULT SETS** 子句执行该过程并指定两个结果集定义。  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 --Create the procedure  

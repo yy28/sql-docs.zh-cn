@@ -1,6 +1,5 @@
 ---
-title: 使用格式化文件批量导入数据 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 使用格式化文件批量导入数据
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,14 +13,15 @@ ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a64534cad9211bee7d10a1e6ef87d5d21b401f13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e81bf59912499310fc95afd29758d5be5f691118
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116859"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056358"
 ---
-# <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式化文件大容量导入数据 (SQL Server)
+# <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式化文件批量导入数据 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 本主题说明如何在大容量导入操作中使用格式化文件。  格式化文件可将数据文件的各字段映射到表的各列。  有关其他信息，请查看 [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 。

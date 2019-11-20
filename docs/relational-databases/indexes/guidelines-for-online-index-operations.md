@@ -1,7 +1,7 @@
 ---
 title: 联机索引操作准则 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2266a83d8fb041f4d18c5938e87bf31433b70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32f1363901d06e8e3551c8f161c38d48fc190921
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909792"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981790"
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
 
@@ -34,7 +34,7 @@ ms.locfileid: "67909792"
 - 如果基础表包含下列大型对象 (LOB) 数据类型： **image**、 **ntext**和 **text**，则必须脱机创建、重新生成或删除聚集索引。  
 - 如果表包含 LOB 数据类型，但索引定义中未使用这些列中的任何列作为键或非键（包含性）列，则可以联机创建非唯一的非聚集索引。  
 - 无法为本地临时表联机创建、重新生成或删除索引。 全局临时表的索引则没有此限制。
-- 发生意外故障、数据库故障转移或使用 PAUSE 命令后，索引可从其停止的位置继续执行。 请参阅[创建索引](../../t-sql/statements/create-index-transact-sql.md)和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。
+- 发生意外故障、数据库故障转移或使用 PAUSE 命令后，索引可从其停止的位置继续执行  。 请参阅[创建索引](../../t-sql/statements/create-index-transact-sql.md)和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。
 
 > [!NOTE]  
 > 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅[各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -93,7 +93,7 @@ ms.locfileid: "67909792"
 ## <a name="resumable-index-considerations"></a>可恢复索引注意事项
 
 > [!NOTE]
-> 可恢复索引选项适用于 SQL Server（从 SQL Server 2017 开始）（仅限索引重新生成）和 SQL 数据库（创建索引和索引重新生成）。 请参阅[创建索引](../../t-sql/statements/create-index-transact-sql.md)（目前对于 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 处于公共预览状态）和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。
+> 创建索引和索引重新生成的可恢复索引选项适用于 SQL Server （从 SQL Server 2017 开始支持索引重新生成，SQL Server 2019 中也支持创建索引）和 SQL 数据库。 请参阅[创建索引](../../t-sql/statements/create-index-transact-sql.md)和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。
 
 执行可恢复的联机索引创建或重新生成操作时，请参考下列准则：
 

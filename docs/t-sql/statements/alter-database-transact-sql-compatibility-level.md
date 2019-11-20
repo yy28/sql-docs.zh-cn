@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 兼容级别 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/27/2019
+ms.date: 11/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,18 +24,18 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a0c105891577807920404267aa4a9b7c2613b18
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 0d65bcb7db0bc0628d1c7b40d21e9b2089ad285c
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240672"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127698"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和查询处理行为设置为与指定版本的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]兼容。 有关其他 ALTER DATABASE 选项，请参阅 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。  
+将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和查询处理行为设置为与指定的 SQL 引擎版本兼容。 有关其他 ALTER DATABASE 选项，请参阅 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。  
 
 有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
@@ -48,11 +48,9 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 ## <a name="arguments"></a>参数
 
-database_name       
-要修改的数据库的名称。
+database_name  要修改的数据库的名称。
 
-COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }       
-要使数据库与之兼容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可以配置以下兼容级别值（并非所有版本都支持所有以上列出的兼容级别）：
+COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } 是使数据库与之兼容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可以配置以下兼容级别值（并非所有版本都支持所有以上列出的兼容级别）：
 
 <a name="supported-dbcompats"></a>
 
@@ -60,8 +58,8 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150、140、130、120、110、100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140、130、120、110、100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一数据库/弹性池|12|140|150、140、130、120、110、100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例|12|140|150、140、130、120、110、100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一数据库/弹性池|12|150|150、140、130、120、110、100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例|12|150|150、140、130、120、110、100|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130、120、110、100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120、110、100|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110、100、90|
@@ -70,7 +68,11 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90、80|
 |[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|8|80|80|
 
+> [!IMPORTANT]
+> SQL Server 和 Azure SQL 数据库的数据库引擎版本号之间没有可比性，它们分别是这两项产品的内部版本号。 适用于 Azure SQL 数据库的数据库引擎与 SQL Server 数据库引擎基于相同的代码基础映像。 最重要的是，Azure SQL 数据库中的数据库引擎始终具有 SQL 数据库引擎的最新功能。 Azure SQL 数据库版本 12 比 SQL Server 版本 15 更新。
+
 ## <a name="remarks"></a>Remarks
+
 对于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，默认兼容性级别都与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的版本相关联。 新数据库将设置为此级别，除非模型数据库的兼容性级别较低  。 对于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何早期版本附加或还原的数据库，如果数据库的兼容性级别是该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例允许的最低级别，则将保留其现有的兼容性级别。 移动兼容性级别低于 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 允许级别的数据库会自动将数据库设置为允许的最低兼容性级别。 这既适用于系统数据库也适用于用户数据库。
 
 附加或还原数据库时以及就地升级后，[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 应出现以下行为：
@@ -81,18 +83,18 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 - master 系统数据库保留它在升级之前的兼容性级别。
 
 使用 `ALTER DATABASE` 更改数据库的兼容性级别。 当发出 `USE <database>` 命令或使用该数据库作为默认数据库上下文来处理新登录时，数据库的新兼容性级别设置会生效。
-若要查看数据库的当前兼容级别，请查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 **compatibility_level** 列。
+若要查看数据库的当前兼容级别，请查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `compatibility_level` 列。
 
 > [!NOTE]
 > 在早期版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建并已升级到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 或 Service Pack 1 的[分发数据库](../../relational-databases/replication/distribution-database.md)采用兼容性级别 90，其他数据库不支持该级别。 这并不影响复制功能。 升级到更高版本的服务包和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本将导致分发数据库的兼容性级别增加到可与主数据库匹配  。
 
 > [!NOTE]
-> 从 2018 年 1 月起，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，新创建的数据库的默认兼容性级别为 140  。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不会更新现有数据库的数据库兼容性级别。 这是由客户自行决定的。        
+> 从 2019 年 11 月起，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，新创建的数据库的默认兼容性级别为 150  。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不会更新现有数据库的数据库兼容性级别。 这是由客户自行决定的。        
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] 强烈建议客户计划升级到最新的兼容性级别，以充分利用最新的查询优化改进。        
 
 若要对整个数据库利用数据库兼容性级别 120 或更高级别，但选择启用映射到数据库兼容性级别 110 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型，请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，尤其是它的关键字 `LEGACY_CARDINALITY_ESTIMATION = ON`  。
 
-要详细了解如何评估你最重要的查询在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上的两个不同兼容性级别的性能差异，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)（在 Azure SQL 数据库中使用兼容性级别 130 改进了查询性能）。 请注意，本文介绍兼容性级别 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中也可以使用相同的方法升级到 140。
+要详细了解如何评估你最重要的查询在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上的两个不同兼容性级别的性能差异，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)（在 Azure SQL 数据库中使用兼容性级别 130 改进了查询性能）。 请注意，本文介绍兼容性级别 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中也可以使用相同的方法升级到 140 或更高级别。
 
 若要确定连接到的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本，请执行以下查询。
 
@@ -201,8 +203,6 @@ SELECT name, compatibility_level FROM sys.databases;
 
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>兼容性级别 140 和兼容性级别 150 之间的差异
 此部分介绍了随兼容性级别 150 一起引入的新行为。
-
-对于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]，数据库兼容性级别 150 目前为公共预览版。 除了数据库兼容性级别 140 中引入的改进之外，此数据库兼容性级别还将与下一代查询处理改进相关联。
 
 |兼容性级别设置为 140 或更低|兼容性级别设置为 150|
 |--------------------------------------------------|-----------------------------------------|

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c36c745e6b54feb27da2ae4f36834a40c79cbfe5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 87257431940b527fda01bc1704a519b37b6d4e05
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909081"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982451"
 ---
 # <a name="database-file-initialization"></a>数据库文件初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "72909081"
 > 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可在安装期间授予服务帐户此权限。 如果使用[命令提示符安装](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)，请添加 /SQLSVCINSTANTFILEINIT 参数，或选中[安装向导](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)中“授予 SQL Server 数据库引擎服务执行卷维护任务权限”  复选框。
 
 > [!NOTE]
-> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 开始，[sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV 中的列 *instant_file_initialization_enabled* 可用来识别是否启用了即时文件初始化。
+> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本开始，[sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV 中的列 instant_file_initialization_enabled 可用来识别是否启用了即时文件初始化  。
 
 ## <a name="remarks"></a>Remarks
 如果授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户 SE_MANAGE_VOLUME_NAME，则会在启动时在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中记录类似以下内容的消息  ： 
@@ -78,7 +78,7 @@ ms.locfileid: "72909081"
 
 `Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
-**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 开始）
+**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本开始）
 
 ## <a name="security-considerations"></a>需要考虑的安全性因素  
 使用即时文件初始化 (IFI) 时，由于只有在新数据写入文件中时才覆盖删除的磁盘内容，因此，在数据文件的该特定区域中发生某些其他的数据写入前，未授权的主体可能会访问删除的内容。 当数据库文件连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之后，可以通过文件中的随机访问控制列表 (DACL) 来降低此信息泄露的风险。 此 DACL 仅允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和本地管理员访问文件。 但是，当文件分离以后，可以由不具有 SE_MANAGE_VOLUME_NAME 的用户或服务访问  。 备份数据库时，将需要以下类似考虑：如果未使用适当的 DACL 对备份文件进行保护，则未授权的用户或服务将可以使用删除的内容。  

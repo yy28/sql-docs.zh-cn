@@ -20,19 +20,19 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 021c6be6d772b9aa7efd3f72302e5ebb31e5e4f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 033756cb65cc217e6c9d915715f5740596694147
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026199"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982175"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定的数据库，此函数返回指定数据库选项或属性的当前设置。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -64,15 +64,15 @@ property
 |IsArithmeticAbortEnabled|如果执行查询时发生溢出或被零除错误，则将结束查询。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
 |IsAutoClose|在最后一个用户退出后，数据库完全关闭并释放资源。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
 |IsAutoCreateStatistics|查询优化器根据需要创建单列统计信息以提高查询性能。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
-|IsAutoCreateStatisticsIncremental|条件允许时，自动创建的单列统计信息递增。|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
+|IsAutoCreateStatisticsIncremental|条件允许时，自动创建的单列统计信息递增。|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
 |IsAutoShrink|可以定期自动收缩数据库文件。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
 |IsAutoUpdateStatistics|查询使用的现有统计信息可能已过期时，查询优化器更新这些统计信息。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效<br /><br /> 基本数据类型：int |
-|IsClone|数据库是使用 DBCC CLONEDATABASE 创建的用户数据库的仅限架构和仅限统计数据副本。 有关详细信息，请参阅 [Microsoft 支持文章](https://support.microsoft.com/help/3177838)。|**适用对象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int | 
+|IsClone|数据库是使用 DBCC CLONEDATABASE 创建的用户数据库的仅限架构和仅限统计数据副本。 有关详细信息，请参阅 [Microsoft 支持文章](https://support.microsoft.com/help/3177838)。|**适用对象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和更高版本。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int | 
 |IsCloseCursorsOnCommitEnabled|提交事务后，会关闭所有打开的游标。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
-|IsFulltextEnabled|支持对数据库进行全文和语义索引。|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效<br /><br /> 基本数据类型：int <br /><br /> **注意：** 此属性的值现在无效。 用户数据库始终启用全文搜索。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的后续版本会删除此属性。 请不要在新的开发工作中使用此属性，并尽快修改当前仍在使用此属性的应用程序。|  
+|IsFulltextEnabled|支持对数据库进行全文和语义索引。|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效<br /><br /> 基本数据类型：int <br /><br /> **注意：** 此属性的值现在无效。 用户数据库始终启用全文搜索。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的后续版本会删除此属性。 请不要在新的开发工作中使用此属性，并尽快修改当前仍在使用此属性的应用程序。|  
 |IsInStandBy|数据库以只读方式联机，并允许还原日志。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
 |IsLocalCursorsDefault|游标声明默认为 LOCAL。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
-|IsMemoryOptimizedElevateToSnapshotEnabled|在会话设置 TRANSACTION ISOLATION LEVEL 设置为 READ COMMITTED、READ UNCOMMITTED 或较低的隔离级别时，使用 SNAPSHOT 隔离访问内存优化表。|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> 基本数据类型：int |  
+|IsMemoryOptimizedElevateToSnapshotEnabled|在会话设置 TRANSACTION ISOLATION LEVEL 设置为 READ COMMITTED、READ UNCOMMITTED 或较低的隔离级别时，使用 SNAPSHOT 隔离访问内存优化表。|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> 基本数据类型：int |  
 |IsMergePublished|如果安装了复制，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持发布数据库表供合并复制使用。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
 |IsNullConcat|Null 串联操作数产生 NULL。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
 |IsNumericRoundAbortEnabled|表达式中缺少精度时将产生错误。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
@@ -84,7 +84,7 @@ property
 |IsSyncWithBackup|数据库为发布数据库或分发数据库，并且支持在不中断事务复制的情况下还原。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]检测到因电力故障或其他系统故障造成的不完全 I/O 操作。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int | 
 |IsVerifiedClone|数据库是使用 DBCC CLONEDATABASE 的 WITH VERIFY_CLONEDB 选项创建的用户数据库的仅限架构和仅限统计信息副本。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/3177838)。|**适用对象**：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int | 
-|IsXTPSupported|指示数据库是否支持内存中 OLTP，即创建和使用内存优化表和本机编译模块。<br /><br /> 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 与任何 MEMORY_OPTIMIZED_DATA 文件组的存在与否无关，创建内存中 OLTP 对象则需要该文件组。|**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效，出现错误或不适用<br /><br /> 基本数据类型：int |  
+|IsXTPSupported|指示数据库是否支持内存中 OLTP，即创建和使用内存优化表和本机编译模块。<br /><br /> 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 与任何 MEMORY_OPTIMIZED_DATA 文件组的存在与否无关，创建内存中 OLTP 对象则需要该文件组。|**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本），以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效，出现错误或不适用<br /><br /> 基本数据类型：int |  
 |LastGoodCheckDbTime|在指定数据库上运行的上一成功 DBCC CHECKDB 的日期和时间。<sup>1</sup> 如果 DBCC CHECKDB 未在数据库上运行，则返回 1900-01-01 00:00:00.000。|**适用对象**：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始。<br /><br /> 日期时间值。<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：datetime | 
 |LCID|排序规则的 Windows 区域设置标识符 (LCID)。|LCID 值（十进制格式）。<br /><br /> 基本数据类型：int |  
 |MaxSizeInBytes|最大数据库大小（以字节为单位）。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL：数据库未启动<br /><br /> 基本数据类型：bigint |  
@@ -115,7 +115,7 @@ property
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-retrieving-the-status-of-the-autoshrink-database-option"></a>A. 检索 AUTO_SHRINK 数据库选项的状态  
+### <a name="a-retrieving-the-status-of-the-auto_shrink-database-option"></a>A. 检索 AUTO_SHRINK 数据库选项的状态  
 以下示例返回 `AdventureWorks` 数据库的 AUTO_SHRINK 数据库选项的状态。
   
 ```sql

@@ -34,12 +34,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67aa3078746108b0a337d5bb4ef4eb28f40f8dc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902025"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981973"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句以及 JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -59,7 +59,7 @@ SELECT 语句通常需要使用 FROM 子句。 当没有列出表列以及列出
 - APPLY
 - PIVOT
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法  
   
@@ -199,7 +199,7 @@ FROM { <table_source> [ ,...n ] }
   
  rowset_function   
 
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  指定其中一个行集函数（如 OPENROWSET），该函数返回可用于替代表引用的对象。 有关行集函数的列表的详细信息，请参阅[行集函数 (Transact-SQL)](../../t-sql/functions/rowset-functions-transact-sql.md)。  
@@ -208,7 +208,7 @@ FROM { <table_source> [ ,...n ] }
   
  bulk_column_alias   
 
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  代替结果集内列名的可选别名。 只允许在使用 OPENROWSET 函数和 BULK 选项的 SELECT 语句中使用列别名。 使用 bulk_column_alias 时，为每个表列指定别名，顺序与这些列在文件中的顺序相同  。  
@@ -221,7 +221,7 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  通过 XML 文档提供行集视图。 有关详细信息，请参阅 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。  
@@ -236,7 +236,7 @@ FROM { <table_source> [ ,...n ] }
   
  table_or_view_name FOR SYSTEM_TIME \<system_time>   
 
-适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  指定从指定时态表及其链接的系统版本控制的历史记录表返回特定版本的数据  
@@ -381,27 +381,27 @@ ON (p.ProductID = v.ProductID);
   
  AS OF \<date_time>  
 
-适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  返回一个表，其中为包含过去指定时间点的实际（当前）值的每个行提供一条记录。 在内部，时态表及其历史记录表之间将进行联合，然后筛选结果以返回在 \<date_time> 参数指定的时间点有效的行中的值  。 如果 system_start_time_column_name 值小于或等于 \<date_time> 参数值，并且 system_end_time_column_name 值大于 \<date_time> 参数值，则此行的值视为有效     。   
   
  FROM \<start_date_time> TO \<end_date_time>
 
-适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
   
  返回一个表，其中包含在指定的时间范围内保持活动状态的所有记录版本的值，不管这些版本是在 FROM 自变量的 \<start_date_time> 参数之前开始活动，还是在 TO 自变量的 \<end_date_time> 参数值之后停止活动   。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果，以返回在指定时间范围内任意时间保持活动状态的所有行版本的值。 正好在 FROM 终结点定义的下限时间激活的行将包括在内，正好在 TO 终结点定义的上限时间激活的行将被排除。  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
-适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  与上面的 FROM \<start_date_time> TO \<end_date_time> 描述相同，不过，它包括 \<end_date_time> 终结点定义的上限时间激活的行  。  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  返回一个表，其中包含在 CONTAINED IN 参数的两个日期时间值定义的时间范围内打开和关闭的所有记录版本的值。 正好在下限时间激活的记录，或者在上限时间停止活动的行将包括在内。  
@@ -630,9 +630,9 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="m-using-for-systemtime"></a>M. 使用 FOR SYSTEM_TIME  
+### <a name="m-using-for-system_time"></a>M. 使用 FOR SYSTEM_TIME  
   
-适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  下面的示例使用 FOR SYSTEM_TIME AS OF date_time_literal_or_variable 参数返回自 2014 年 1 月 1 日起的活跃（最新）表行。  
   

@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b7657c1840bf204bb2f22de59a33548a6abc400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019731"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982951"
 ---
-# <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
+# <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   评估当前用户对安全对象的有效权限。 相关函数为 [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,27 +45,27 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 ```  
   
 ## <a name="arguments"></a>参数  
- securable  
- 安全对象的名称。 如果安全对象是服务器本身，则此值应设置为 NULL。 securable 是 sysname 类型的标量表达式。 没有默认值。  
+ securable   
+ 安全对象的名称。 如果安全对象是服务器本身，则此值应设置为 NULL。 securable 是 sysname 类型的标量表达式   。 没有默认值。  
   
  *securable_class*  
- 测试权限的安全对象的类名。 securable_class 是 nvarchar(60) 类型的标量表达式。  
+ 测试权限的安全对象的类名。 securable_class 是 nvarchar(60) 类型的标量表达式   。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，securable_class 参数必须设置为以下值之一：DATABASE、OBJECT、ROLE、SCHEMA 或 USER。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，securable_class 参数必须设置为以下值之一：DATABASE、OBJECT、ROLE、SCHEMA 或 USER      。  
   
- permission  
- 类型为 sysname 的非空标量表达式，表示要检查的权限名称。 没有默认值。 权限名称 ANY 是通配符。  
+ permission   
+ 类型为 sysname 的非空标量表达式，表示要检查的权限名称  。 没有默认值。 权限名称 ANY 是通配符。  
   
  *sub-securable*  
- 类型为 sysname 的可选标量表达式，表示测试权限的安全对象子实体的名称。 默认值为 NULL。  
+ 类型为 sysname 的可选标量表达式，表示测试权限的安全对象子实体的名称  。 默认值为 NULL。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 直到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的版本中，子安全对象不能使用 **'[**_sub name_**]'** 形式的括号。 请改用 **'**_sub name_**'**。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及更高版本中，子安全对象不能使用 '[sub name]' 形式的括号    。 请改用 **'** _sub name_ **'** 。  
   
  *sub-securable_class*  
- 类型为 nvarchar(60) 的可选标量表达式，表示测试权限的安全对象子实体的类。 默认值为 NULL。  
+ 类型为 nvarchar(60) 的可选标量表达式，表示测试权限的安全对象子实体的类  。 默认值为 NULL。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，只有在 securable_class 参数设置为 OBJECT 时 sub-securable_class 参数才有效。 如果 securable_class 参数设置为 OBJECT，则 sub-securable_class 参数必须设置为 COLUMN。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，只有在 securable_class 参数设置为 OBJECT 时 sub-securable_class 参数才有效  。 如果 securable_class 参数设置为 OBJECT，则 sub-securable_class 参数必须设置为 COLUMN   。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
@@ -105,7 +105,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. 我具有服务器级 VIEW SERVER STATE 权限吗？  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -113,7 +113,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. 我可以 IMPERSONATE 服务器主体 Ps 吗？  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  

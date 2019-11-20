@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809889"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982424"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "68809889"
 >     
 > 由于 DBCC 修复选项不可用于内存优化表，您必须定期备份数据库并测试备份。 如果内存优化表中出现数据完整性问题，必须从上次已知的正确备份中还原。    
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>语法    
     
@@ -161,7 +161,7 @@ DATA_PURITY
  无法使用 DBCC 修复选项来纠正该选项所报告的验证错误。 若要了解如何手动更正这些错误，请参阅知识库文章 923247：[解决 SQL Server 2005 及更高版本中的 DBCC 错误 2570](https://support.microsoft.com/kb/923247)。  
     
  MAXDOP  
- **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和更高版本）。  
     
  对于语句，替代 sp_configure 的“max degree of parallelism”配置选项   。 MAXDOP 可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用资源调控器配置的值，则 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] 会使用资源调控器 MAXDOP 值（如 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
  
@@ -213,7 +213,7 @@ DBCC CHECKDB 不检查禁用的索引。 有关禁用的索引的详细信息，
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 错误消息    
 DBCC CHECKDB 命令结束之后，便会将一个消息写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志。 如果 DBCC 命令成功执行，则消息指示成功以及命令的运行时间。 如果 DBCC 命令在完成检查之前由于错误而停止，则消息将指示命令已终止，并指示状态值和命令运行的时间。 下表列出并说明了此消息中可包含的状态值。
     
-|State|描述|    
+|状态|描述|    
 |-----------|-----------------|    
 |0|出现错误号 8930。 这表示元数据中存在的损坏终止了 DBCC 命令。|    
 |1|出现错误号 8967。 存在一个内部 DBCC 错误。|    

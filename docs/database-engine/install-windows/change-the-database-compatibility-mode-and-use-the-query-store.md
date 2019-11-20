@@ -14,18 +14,18 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e84d60b0d5390712639314d93ecfbe42852f5fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817665672668a8dcdafc84beaa7a93d10617eeec
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034511"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982137"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>更改数据库兼容性级别和使用查询存储
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，某些更改仅在[数据库兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)更改后才会启用。 执行此操作的原因如下：  
+从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本，某些更改仅在[数据库兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)更改后才会启用。 执行此操作的原因如下：  
   
 - 由于升级是单向操作（不可能降级文件格式），将新功能的启用分离为数据库内的单独操作有一定作用。 可以将一项设置还原到之前的数据库兼容级别。  新的模式可以减少中断期间必然发生的事件的数量。  
   

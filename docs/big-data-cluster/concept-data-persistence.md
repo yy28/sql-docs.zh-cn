@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 87f0e82d0e12656bb7a06be1951874b656dbf4b0
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 4671bc07dd21a769746257339ea7903e3dda4701
+ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532387"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74063968"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上的 SQL Server 大数据群集的数据暂留
 
@@ -87,8 +87,10 @@ AKS 附带[两个内置存储类](/azure/aks/azure-disks-dynamic-pv/)（`default
 
 使用 `kubeadm` 部署的 Kubernetes 群集没有内置的存储类。 必须使用本地存储或首选预配程序（如 [Rook](https://github.com/rook/rook)）创建自己的存储类和持久卷。 在这种情况下，可以将 `className` 设置为配置的存储类。 
 
-> [!NOTE]
->  在 kubeadm（`kubeadm-dev-test` 或 `kubeadm-prod`）的内置部署配置文件中，没有为数据和日志存储指定存储类名。 在部署之前，必须自定义配置文件并设置 className 的值，否则验证将失败。 部署还有一个验证步骤，用于检查存储类是否存在，但不是必需的持久卷。 必须确保根据群集的规模创建足够的卷。 对于默认的最小群集大小（默认规模，无高可用性），必须创建至少 24 个持久卷。 有关如何使用本地配置器创建持久卷的示例，请参阅[此处](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)。
+> [!IMPORTANT]
+>  在 kubeadm（`kubeadm-dev-test` 或 `kubeadm-prod`）的内置部署配置文件中，没有为数据和日志存储指定存储类名。 在部署之前，必须自定义配置文件并设置 `className` 的值，否则验证将失败。 部署还有一个验证步骤，用于检查存储类是否存在，但不是必需的持久卷。 必须确保根据群集的规模创建足够的卷。 对于默认的最小群集大小（默认规模，无高可用性），必须创建至少 24 个持久卷。
+>
+>[创建 Kubernetes 群集](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) 举例说明了如何使用本地配置程序创建永久性卷。 此示例介绍了 Kubernetes 存储。
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>自定义每个池的存储配置

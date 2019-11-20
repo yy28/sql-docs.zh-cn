@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80f97354c60d26cff6a10c29712b23bc1f6dfd84
-ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
+ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71038878"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982672"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "71038878"
   
 -   提供向后兼容接口来模拟架构已更改的表。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -142,7 +142,7 @@ OR ALTER
 >  即使指定了 CHECK OPTION，也不能依据视图来验证任何直接对视图的基础表执行的更新。  
   
  ENCRYPTION  
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  对 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 表中包含 CREATE VIEW 语句文本的项进行加密。 使用 WITH ENCRYPTION 可防止在 SQL Server 复制过程中发布视图。  
   
@@ -369,7 +369,7 @@ GO
 ### <a name="b-using-with-encryption"></a>B. 使用 WITH ENCRYPTION  
  以下示例使用 `WITH ENCRYPTION` 选项，并显示计算列、重命名列以及多个列。  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```  
 CREATE VIEW Purchasing.PurchaseOrderReject  
