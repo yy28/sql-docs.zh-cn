@@ -5808,7 +5808,7 @@
     - name: 数据库实验助手 (DEA)
       href: dea/database-experimentation-assistant-overview.md
       items:
-        - name: 入门
+        - name: 工作负荷比较概述
           href: dea/database-experimentation-assistant-get-started.md
         - name: 捕获跟踪
           href: dea/database-experimentation-assistant-capture-trace.md
