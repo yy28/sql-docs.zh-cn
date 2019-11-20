@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aff15237e3763818123e0f74febf8523cb6174d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298539"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096123"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 连接管理器
 
@@ -40,9 +40,9 @@ ms.locfileid: "71298539"
   
     3.  选择访问 WebHCat 服务的  “身份验证”方法。 可用值有“基本”  和 **Kerberos**。  
   
-         ![使用基本身份验证的 Hadoop 连接管理器编辑器的屏幕截图](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Hadoop connection manager editor with basic authentication")  
+         ![具有基本身份验证的 Hadoop 连接管理器编辑器的屏幕截图](../../integration-services/connection-manager/media/hadoop-cm-basic.png "具有基本身份验证的 Hadoop 连接管理器编辑器")  
   
-         ![使用 Kerberos 身份验证的 Hadoop 连接管理器编辑器的屏幕截图](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Hadoop connection manager editor with Kerberos authentication")  
+         ![具有 Kerberos 身份验证的 Hadoop 连接管理器编辑器的屏幕截图](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "具有 Kerberos 身份验证的 Hadoop 连接管理器编辑器")  
   
     4.  对于“WebHCat 用户”  ，请输入有权访问 WebHCat 的“用户”  。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "71298539"
 
     在配置后重新启动 KDC 服务。
 
-2.  在 KDC 服务器上准备名为 krbtgt/REALM.COM@AD.COM 的主体  。 使用以下命令：
+2.  在 KDC 服务器上准备名为“krbtgt/REALM\@AD.COM”的主体  。 使用以下命令：
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -167,7 +167,7 @@ ms.locfileid: "71298539"
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.  建立从 Windows 域到 Kerberos 领域的信任。 在下面的示例中，`[password]` 是主体 krbtgt/REALM.COM@AD.COM 的密码  。
+2.  建立从 Windows 域到 Kerberos 领域的信任。 在下面的示例中，`[password]` 是主体 krbtgt/REALM.COM\@AD.COM 的密码  。
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 
