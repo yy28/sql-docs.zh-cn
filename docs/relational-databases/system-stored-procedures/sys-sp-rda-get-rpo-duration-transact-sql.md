@@ -44,15 +44,15 @@ sp_rda_get_rpo_duration @durationinhours output
  *\@durationinhours*    
   为当前已启用延伸的数据库 SQL Server 保留的已迁移数据的小时数（非 null 整数值）。    
     
-## <a name="permissions"></a>权限    
+## <a name="permissions"></a>Permissions    
  需要 db_owner 权限。    
     
-## <a name="remarks"></a>备注    
- 通过运行[sp_rda_set_rpo_duration &#40;&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)来更改值。    
+## <a name="remarks"></a>Remarks    
+ 通过运行[sp_rda_set_rpo_duration &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)来更改值。    
     
-## <a name="see-also"></a>请参阅    
- [sp_rda_set_rpo_duration &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
+## <a name="see-also"></a>另请参阅    
+ [sys. sp_rda_set_rpo_duration &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
  [还原已启用延伸的数据库（Stretch Database）](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
- [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)    
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     
   

@@ -35,16 +35,16 @@ ms.locfileid: "71952537"
  您可以使用任何一个 Windows 用户帐户。 为获得最佳结果，请选择拥有读取权限和网络登录权限的帐户，以支持与其他计算机的连接。 对于您希望在报表中使用的任何外部图像或数据文件，它必须拥有对这些文件的读取权限。 切勿指定本地帐户，除非所有报表数据源和外部图像均存储在报表服务器计算机中。 只可将该帐户用于无人参与报表处理。  
   
 > [!NOTE]  
->  如果使用的是带高级服务的 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，则仅当在报表中引用外部图像并且访问该图像文件需要相应权限时才需要配置此帐户。 SQL Server Express 不支持到远程服务器的数据源连接。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如果使用的是带高级服务的 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，则仅当在报表中引用外部图像并且访问该图像文件需要相应权限时才需要配置此帐户。 SQL Server Express 不支持到远程服务器的数据源连接。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)。  
   
  若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，并在导航窗格中选择 **“执行帐户”** 。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **指定执行帐户**  
  选择此选项可指定一个帐户。  
   
  **帐户**  
- 输入一个 Windows 域用户帐户。 使用如下格式：\<domain>\\<user account\>。  
+ 输入一个 Windows 域用户帐户。 使用如下格式：*domain>\<<user account\\\>* 。  
   
  **密码**  
  键入密码。  
@@ -52,8 +52,8 @@ ms.locfileid: "71952537"
  **确认密码**  
  重新键入密码。  
   
-## <a name="see-also"></a>请参阅  
- [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+## <a name="see-also"></a>另请参阅  
+ [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41; ](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   

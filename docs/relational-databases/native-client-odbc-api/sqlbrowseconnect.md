@@ -28,24 +28,24 @@ ms.locfileid: "73787670"
   
 ## <a name="level-1"></a>级别 1  
   
-|关键字|是否返回列表？|是否可选？|说明|  
+|关键字|是否返回列表？|是否可选？|描述|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|N/A|“否”|**SQLDataSources**返回的数据源的名称。 如果使用 DRIVER 关键字，则无法使用 DSN 关键字。|  
-|DRIVER|N/A|“否”|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver name 为 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 关键字，则无法使用 DRIVER 关键字。|  
+|DSN|N/A|No|**SQLDataSources**返回的数据源的名称。 如果使用 DRIVER 关键字，则无法使用 DSN 关键字。|  
+|DRIVER|N/A|No|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver name 为 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 关键字，则无法使用 DRIVER 关键字。|  
   
 ## <a name="level-2"></a>级别 2  
   
-|关键字|是否返回列表？|是否可选？|说明|  
+|关键字|是否返回列表？|是否可选？|描述|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|是|“否”|数据源所驻留网络上的服务器名称。 可以输入术语 "(local)" 作为服务器，在此情况下，即使此为非联网版本，也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地副本。|  
-|UID|“否”|是|用户登录 ID。|  
-|PWD|“否”|是（取决于用户）|用户指定的密码。|  
-|APP|“否”|是|调用**SQLBrowseConnect**的应用程序的名称。|  
-|WSID|“否”|是|工作站 ID。 通常，这是运行应用程序的计算机的网络名称。|  
+|SERVER|是|No|数据源所驻留网络上的服务器名称。 可以输入术语 "(local)" 作为服务器，在此情况下，即使此为非联网版本，也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地副本。|  
+|UID|No|是|用户登录 ID。|  
+|PWD|No|是（取决于用户）|用户指定的密码。|  
+|APP|No|是|调用**SQLBrowseConnect**的应用程序的名称。|  
+|WSID|No|是|工作站 ID。 通常，这是运行应用程序的计算机的网络名称。|  
   
 ## <a name="level-3"></a>级别 3  
   
-|关键字|是否返回列表？|是否可选？|说明|  
+|关键字|是否返回列表？|是否可选？|描述|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的名称。|  
 |LANGUAGE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的区域语言。|  
@@ -54,7 +54,7 @@ ms.locfileid: "73787670"
   
  以下属性（通过调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)设置）确定由**SQLBrowseConnect**返回的结果集。  
   
-|Attribute|说明|  
+|attribute|描述|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|如果将其设置为 SQL_MORE_INFO_YES，则**SQLBrowseConnect**将返回服务器属性的扩展字符串。<br /><br /> 下面是**SQLBrowseConnect**返回的扩展字符串示例：<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> 在此字符串中，分号用于分隔与服务器有关的各部分信息， 逗号用于分隔不同的服务器实例。|  
 |SQL_COPT_SS_BROWSE_SERVER|如果指定了服务器名称，则**SQLBrowseConnect**将返回指定服务器的信息。 如果 SQL_COPT_SS_BROWSE_SERVER 设置为 NULL，则**SQLBrowseConnect**将返回域中所有服务器的信息。<br /><br /> <br /><br /> 请注意，由于网络问题， **SQLBrowseConnect**可能无法及时接收来自所有服务器的响应。 因此，每个请求所返回的服务器列表都可能不同。|  

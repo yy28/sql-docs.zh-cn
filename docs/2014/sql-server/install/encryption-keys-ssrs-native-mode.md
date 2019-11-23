@@ -44,11 +44,11 @@ ms.locfileid: "71952170"
   
  若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，然后在导航窗格中选择相应链接。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **备份**  
  将对称密钥复制到您指定的文件。 对称密钥决不能以纯文本形式存储。 您必须键入密码来保护该文件。  
   
- **Restore**  
+ **还原**  
  将以前保存的对称密钥的副本应用于报表服务器数据库。 您必须提供密码对文件进行解锁。  
   
  还原后的对称密钥副本将覆盖当前连接的报表服务器实例还原前的对称密钥副本。 还原对称密钥后，必须初始化使用该报表服务器数据库的所有报表服务器。 有关初始化报表服务器的详细信息，请参阅[初始化报表服务器&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
@@ -67,8 +67,8 @@ ms.locfileid: "71952170"
   
  此信息无法自动更新。 一次只能更新一个使用存储的凭据和连接字符串的报表、订阅和共享数据源。  
   
-## <a name="see-also"></a>请参阅  
- [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+## <a name="see-also"></a>另请参阅  
+ [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41; ](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [删除和重新创建加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [初始化 Report Server（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

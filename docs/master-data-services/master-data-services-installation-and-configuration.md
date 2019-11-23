@@ -27,7 +27,7 @@ ms.locfileid: "73728067"
 > 使用支持 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 的开发者版本时，可以在 Windows 10 系统的计算机安装 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]。 
 >>有关支持不同 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 版本的操作系统的详细信息，请参阅[安装 SQL Server 2016 的硬件和软件要求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 
 
-有关如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 中组织数据的概述，请参阅 [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)。     
+有关如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中组织数据的概述，请参阅 [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)。     
   
  有关 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中新增功能的信息，请参阅 [Master Data Services (MDS) 中的新增功能](../master-data-services/what-s-new-in-master-data-services-mds.md)。  
  
@@ -111,9 +111,9 @@ ms.locfileid: "73728067"
   
  有关使用命令提示符安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的详细信息，请参阅 [从命令提示符安装 SQL Server 2016](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。 使用命令提示符时， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 作为功能参数提供。  
   
- 有关链接到与预安装任务相关的其他信息的简要说明，请参阅[安装 Master Data Services](../master-data-services/install-windows/install-master-data-services.md)。  
+ 有关链接到与预安装任务相关的其他信息的简要说明，请参阅 [安装 Master Data Services](../master-data-services/install-windows/install-master-data-services.md)。  
   
-##  <a name="SetUpWeb"></a> 设置数据库和网站  
+##  <a name="SetUpWeb"></a>设置数据库和网站  
  **使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 设置数据库和网站**  
 
  
@@ -129,9 +129,9 @@ ms.locfileid: "73728067"
   
 3.  在 "**数据库服务器**" 页上，指定 SQL Server 实例。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 增加了对 SQL Server 托管实例的支持。 将**SQL Server 实例**的值设置为 Azure SQL 数据库托管实例的主机。 例如， `xxxxxx.xxxxxx.database.windows.net`。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 增加了对 SQL Server 托管实例的支持。 将**SQL Server 实例**的值设置为 Azure SQL 数据库托管实例的主机。 例如，`xxxxxx.xxxxxx.database.windows.net`。
 
-4. 选择**身份验证类型**，然后单击 "**测试连接**" 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击 **“下一步”** 。
+4. 选择**身份验证类型**，然后单击 "**测试连接**" 以确认你可以使用所选身份验证类型的凭据连接到数据库。 系统提示您启用数据连接时单击 **“下一步”** 。
 
     >对于 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]，若要连接到 Azure SQL 数据库托管实例，请使用以下身份验证类型之一：
     >
@@ -145,7 +145,7 @@ ms.locfileid: "73728067"
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  在“数据库名称”字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”。 单击 **“下一步”** 。
+4.  在“数据库名称”字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”。 系统提示您启用数据连接时单击 **“下一步”** 。
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -212,7 +212,7 @@ ms.locfileid: "73728067"
   
  你还可以使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 指定与 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库相关联的 Web 应用程序和服务的其他设置。 例如，你可以指定加载数据的频率或发送验证电子邮件的频率。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
-##  <a name="deploySample"></a>部署示例模型和数据  
+##  <a name="deploySample"></a> 部署示例模型和数据  
  以下三个示例模型包都包含在  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中。   这些示例模型包括数据。 示例模型包的默认位置为 %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages
   
 -   chartofaccounts_en.pkg  
@@ -223,7 +223,7 @@ ms.locfileid: "73728067"
   
  可以使用 MDSModelDeploy 工具部署这些包。 MDSModelDeploy 工具的默认位置为 驱动器\Program Files\Microsoft SQL Server\ 140\Master Data Services\Configuration。  
   
- 有关运行此工具的先决条件的信息，请参阅[使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
+ 有关运行此工具的先决条件的信息，请参阅 [使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
  有关在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中更新数据以支持新功能的信息，请参阅 [SQL Server 示例：模型部署包 (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
   

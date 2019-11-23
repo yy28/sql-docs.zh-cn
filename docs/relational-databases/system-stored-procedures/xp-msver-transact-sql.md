@@ -42,7 +42,7 @@ xp_msver [ optname ]
  *optname*  
  是选项名，可以是下列值之一。  
   
-|选项/列名|说明|  
+|选项/列名|描述|  
 |-------------------------|-----------------|  
 |ProductName|产品名称;例如，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |ProductVersion|产品版本。|  
@@ -71,7 +71,7 @@ xp_msver [ optname ]
 ## <a name="result-sets"></a>结果集  
  **xp_msver**没有任何参数的情况下，将返回一个由四列组成的结果集，其中列出了所有选项值。 **xp_msver**（对于任何参数），将返回四列结果集，其中包含该选项的值。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="see-also"></a>另请参阅  

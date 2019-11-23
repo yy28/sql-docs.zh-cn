@@ -44,10 +44,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  如果为任何其他数据类型的列或**varbinary （max）** Columnthat 请求路径名，则不会有 FILESTREAM 存储属性导致查询编译时错误。  
   
- *\@option*  
- 一个整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，定义路径的服务器组件应如何进行格式化。 *\@option*可以是下列值之一。 默认值为 0。  
+ *\@选项*  
+ 一个整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，定义路径的服务器组件应如何进行格式化。 *\@选项*可以是下列值之一。 默认值为 0。  
   
-|ReplTest1|Description|  
+|“值”|描述|  
 |-----------|-----------------|  
 |0|返回转换为 BIOS 格式的服务器名称，例如：`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|返回未经转换的服务器名称，例如：`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  当数据库属于 Always On 可用性组时， *use_replica_computer_name*的值对**PathName**函数的输出具有以下影响：  
   
-|ReplTest1|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |未指定。|函数返回路径中的虚拟网络名称 (VNN)。|  
 |0|函数返回路径中的虚拟网络名称 (VNN)。|  
@@ -72,7 +72,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>返回值  
  返回的值是 BLOB 的完全限定逻辑路径或 NETBIOS 路径。 PathName 不返回 IP 地址。 尚未创建 FILESTREAM BLOB 时返回 NULL。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
  ROWGUID 列必须在任何调用 PathName 的查询中可见。  
   
  只能使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来创建 FILESTREAM BLOB。  
@@ -147,9 +147,9 @@ GO
 DROP DATABASE PathNameDB;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [二进制大型对象 &#40;Blob&#41; 数据 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;transact-sql&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;transact-sql&#41; ](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [使用 OpenSqlFilestream 访问 FILESTREAM 数据](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

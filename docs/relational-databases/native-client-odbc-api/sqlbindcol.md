@@ -1,5 +1,5 @@
 ---
-title: SQLBindCol |Microsoft Docs
+title: SQLBindCol | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -35,7 +35,7 @@ ms.locfileid: "73787789"
  对于大值数据类型，如果用户提供的缓冲区不够大，无法保存列的整个值，则会返回**SQL_SUCCESS_WITH_INFO**和 "string data;发出右截断 "警告。 **StrLen_or_IndPtr**参数将包含缓冲区中存储的字符数/字节数。  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>SQLBindCol 对日期和时间增强功能的支持  
- 日期/时间类型的结果列值按[从 SQL 到 C 的转换](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)中所述进行转换。请注意，若要检索时间和 datetimeoffset 列作为其相应的结构（**SQL_SS_TIME2_STRUCT**和**SQL_SS_TIMESTAMPOFFSET_STRUCT**），必须将*TargetType*指定为**SQL_C_DEFAULT**或**SQL_C_BINARY**.  
+ 日期/时间类型的结果列值按[从 SQL 到 C 的转换](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)中所述进行转换。请注意，若要将 time 和 datetimeoffset 列检索为其相应的结构（**SQL_SS_TIME2_STRUCT**和**SQL_SS_TIMESTAMPOFFSET_STRUCT**），则必须将*TargetType*指定为**SQL_C_DEFAULT**或**SQL_C_BINARY**。  
   
  有关详细信息，请参阅[日期和时间&#40;改进&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   

@@ -28,12 +28,12 @@ ms.locfileid: "73729517"
   
  创建显式层次结构后，可以在 **“资源管理器”** 功能区域中为该层次结构添加成员。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   必须为显式层次结构和集合启用了实体。  
   
@@ -51,17 +51,17 @@ ms.locfileid: "73729517"
   
 6.  在“名称” 框中，键入层次结构的名称。  
   
-7.  也可以取消选中“强制的层次结构”复选框，以便将层次结构创建为非强制的层次结构。 有关层次结构类型的详细信息，请参阅[显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)。  
+7.  也可以取消选中“强制的层次结构”复选框，以便将层次结构创建为非强制的层次结构。 有关层次结构类型的详细信息，请参阅 [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)。  
   
 8.  单击 **“保存”** 。  
   
 ## <a name="grid-columns"></a>网格列  
  对于你创建的每个显式层次结构，系统都会在网格中添加一行（其中包含七列）。 下面介绍了这些列。  
   
-|名称|说明|  
+|NAME|描述|  
 |----------|-----------------|  
 |状态|实体状态。 单击“保存” 时，将显示下图，指示实体正在更新。<br /><br /> ![用于更新状态的图标](../master-data-services/media/mds-statusicon-updating.png "I用于更新状态的 con ")<br /><br /> 如果在创建或编辑实体时出错，将显示下面的图像。<br /><br /> ![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon "错误状态")<br /><br /> 如果状态为“确定”，系统会显示下面的图像。<br /><br /> !["正常" 状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon 状态 ")|  
-|名称|显式层次结构名称。|  
+|NAME|显式层次结构名称。|  
 |必需|指定显式层次结构是否必需。|  
 |创建者|创建显式层次结构的用户的用户名。|  
 |创建时间|创建显式层次结构的日期和时间。|  

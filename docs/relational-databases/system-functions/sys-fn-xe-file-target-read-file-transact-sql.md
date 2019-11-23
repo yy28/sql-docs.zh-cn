@@ -75,7 +75,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|XML 格式的事件内容。 不可为 null。|  
 |file_name|nvarchar(260)|包含事件的文件的名称。 不可为 null。|  
 |file_offset|**bigint**|包含事件的块在文件中的偏移位置。 不可为 null。|  
-|timestamp_utc|**datetime2**|**适用**于： [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />事件的日期和时间（UTC 时区）。 不可为 null。|  
+|timestamp_utc|**datetime2**|**适用于**：[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />事件的日期和时间（UTC 时区）。 不可为 null。|  
 
   
 ## <a name="remarks"></a>Remarks  

@@ -1,5 +1,5 @@
 ---
-title: 创建数据源 (SSAS 多维) |Microsoft Docs
+title: 创建数据源（SSAS 多维） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -54,7 +54,7 @@ ms.locfileid: "70175914"
  使用 Windows 身份验证的连接在数据源设计器的 **“模拟信息”** 选项卡上指定。 使用此选项卡选择在连接到外部数据源时 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 运行所基于的帐户。 并非在所有情况下都可以使用所有选项。 有关这些选项以及何时使用它们的详细信息，请参阅[设置模拟选项（SSAS - 多维）](set-impersonation-options-ssas-multidimensional.md)。  
   
 ### <a name="database-authentication"></a>数据库身份验证  
- 作为对 Windows 身份验证的替代方法，您可以指定使用数据库管理系统提供的身份验证服务的连接。 在某些情况下，需要使用数据库身份验证。 使用数据库身份验证的情况包括使用 SQL Server 身份验证连接到 Azure SQL 数据库, 或访问在不同的操作系统上或在不受信任的域中运行的关系数据源。  
+ 作为对 Windows 身份验证的替代方法，您可以指定使用数据库管理系统提供的身份验证服务的连接。 在某些情况下，需要使用数据库身份验证。 使用数据库身份验证的情况包括使用 SQL Server 身份验证连接到 Azure SQL 数据库，或访问在不同的操作系统上或在不受信任的域中运行的关系数据源。  
   
  对于使用数据库身份验证的数据源，在连接字符串上指定数据库登录名的用户名和密码。 当您在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模型中设置数据源连接时，如果您在连接管理器中输入某一用户名和密码，则凭据将添加到连接字符串中。 请记住，应指定对数据具有读取权限的用户标识。  
   
@@ -76,17 +76,17 @@ ms.locfileid: "70175914"
   
 3.  在 **“选择如何定义连接”** 页中，选择 **“基于现有连接或新连接创建数据源”** ，然后单击 **“新建”** 以便打开 **“连接管理器”** 。  
   
-     在连接管理器中创建新连接。 在连接管理器中，选择一个访问接口，然后指定由该访问接口用来连接到基础数据的连接字符串属性。 所需的确切信息取决于选定的访问接口，但通常此类信息包括某个服务器或服务实例、登录到该服务器或服务实例所用的信息、数据库或文件名以及访问接口的其他特定设置。 对于此过程的其余部分, 我们将采用 SQL Server 的数据库连接。  
+     在连接管理器中创建新连接。 在连接管理器中，选择一个访问接口，然后指定由该访问接口用来连接到基础数据的连接字符串属性。 所需的确切信息取决于选定的访问接口，但通常此类信息包括某个服务器或服务实例、登录到该服务器或服务实例所用的信息、数据库或文件名以及访问接口的其他特定设置。 对于此过程的其余部分，我们将采用 SQL Server 的数据库连接。  
   
 4.  选择要用于该连接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 或本机 OLE DB 访问接口。  
   
-     新连接的默认访问接口是“本机 OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client”访问接口。 此访问接口用于连接到使用 OLE DB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎实例。 要连接到 SQL Server 关系数据库，使用 Native OLE DB\SQL Server Native Client 11.0 通常要比使用备用访问接口要快。  
+     新连接的默认访问接口是“本机 OLE DB\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client”访问接口。 此访问接口用于连接到使用 OLE DB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎实例。 要连接到 SQL Server 关系数据库，使用 Native OLE DB\SQL Server Native Client 11.0 通常要比使用备用访问接口要快。  
   
      您可以选择一个不同的访问接口来访问其他数据源。 有关支持 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的提供程序和关系数据库的列表, 请参阅[支持&#40;SSAS 多维&#41;数据源](supported-data-sources-ssas-multidimensional.md)。  
   
 5.  输入选定访问接口连接到基础数据源所需的信息。 如果选中“本机 OLE DB\SQL Server Native Client”访问接口，请输入以下信息：  
   
-    1.  **“服务器名称”** 是数据库引擎实例的网络名称。 它可以指定为 IP 地址、计算机的 NETBIOS 名称或完全限定域名。 如果服务器作为命名实例安装, 则必须包括实例名称 (例如, \<computername >\\< instancename\>)。  
+    1.  **“服务器名称”** 是数据库引擎实例的网络名称。 它可以指定为 IP 地址、计算机的 NETBIOS 名称或完全限定域名。 如果服务器作为命名实例安装，则必须包含实例名称（例如 \<computername >\\< instancename\>）。  
   
     2.  **“登录到服务器”** 指定将对连接进行身份验证的方式。 **“使用 Windows 身份验证”** 使用 Windows 身份验证。 **使用 SQL Server 身份验证**为 Azure SQL 数据库或支持混合模式身份验证的 SQL Server 实例指定数据库用户登录名。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "70175914"
   
          将在数据源向导的 **“选择如何定义连接”** 页的 **“数据连接”** 窗格中显示新连接。  
   
-6.  单击“下一步”。  
+6.  系统提示您启用数据连接时单击 **“下一步”** 。  
   
 7.  在 **“模拟信息”** 中，指定在连接到外部数据源时 Analysis Services 将使用的 Windows 凭据或用户标识。 如果您正在使用数据库身份验证，则出于连接目的，这些设置将被忽略。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "70175914"
   
      您指定的帐户必须对数据源具有读取权限。  
   
-8.  单击“下一步”。  在 **“完成向导”** 中，输入数据源名称或使用默认名称。 默认名称是在连接中指定的数据库的名称。 **“预览”** 窗格将显示此新数据源的连接字符串。  
+8.  系统提示您启用数据连接时单击 **“下一步”** 。  在 **“完成向导”** 中，输入数据源名称或使用默认名称。 默认名称是在连接中指定的数据库的名称。 **“预览”** 窗格将显示此新数据源的连接字符串。  
   
 9. 单击 **“完成”** 。  此时，解决方案资源管理器的 **“数据源”** 文件夹中将出现新数据源。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "70175914"
  您可以创建多个数据源对象，以便支持与其他数据源的连接。 每个数据源都必须具有可以用来创建关系的列。  
   
 > [!NOTE]  
->  如果定义了多个数据源, 并且在单个查询中从多个源查询数据 (例如, 对于型维度), 则必须定义支持使用`OpenRowset`远程查询的数据源。 通常，此数据源将为 Microsoft SQL Server 数据源。  
+>  如果定义了多个数据源，并且在单个查询中从多个源查询数据（例如对于雪型维度），则必须使用 `OpenRowset`定义支持远程查询的数据源。 通常，此数据源将为 Microsoft SQL Server 数据源。  
   
  使用多个数据源的要求包括：  
   
@@ -171,8 +171,8 @@ ms.locfileid: "70175914"
   
 5.  查找并选择您所添加的表。 右键单击该表，然后选择“新建关系”。 选择包含匹配数据的源列和目标列。  
   
-## <a name="see-also"></a>请参阅  
- [数据源支持&#40;的 SSAS 多维&#41;](supported-data-sources-ssas-multidimensional.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据源支持&#40;的 SSAS&#41;多维](supported-data-sources-ssas-multidimensional.md)   
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)  
   
   

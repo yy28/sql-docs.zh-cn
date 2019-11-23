@@ -29,7 +29,7 @@ ms.locfileid: "72909688"
 
   为指定的主数据库设置主服务器信息，添加本地和远程监视器链接，并在辅助服务器上创建复制作业和还原作业。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,11 +55,11 @@ sp_add_log_shipping_secondary_primary
 ## <a name="arguments"></a>参数  
 在日志传送配置中 `[ @primary_server = ] 'primary_server'` [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 主实例的名称。 *primary_server*为**sysname** ，且不能为 NULL。  
   
-`[ @primary_database = ] 'primary_database'` 是主服务器上的数据库的名称。 *primary_database*的值为**sysname**，无默认值。  
+`[ @primary_database = ] 'primary_database'` 是主服务器上的数据库的名称。 *primary_database* **sysname**，无默认值。  
   
-`[ @backup_source_directory = ] 'backup_source_directory'` 存储主服务器中的事务日志备份文件的目录。 *backup_source_directory*的值为**nvarchar （500）** ，且不能为 NULL。  
+`[ @backup_source_directory = ] 'backup_source_directory'` 存储主服务器中的事务日志备份文件的目录。 *backup_source_directory*为**nvarchar （500）** ，且不能为 NULL。  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'` 辅助服务器上将备份文件复制到的目录。 *backup_destination_directory*的值为**nvarchar （500）** ，且不能为 NULL。  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` 辅助服务器上将备份文件复制到的目录。 *backup_destination_directory*为**nvarchar （500）** ，且不能为 NULL。  
   
 `[ @copy_job_name = ] 'copy_job_name'` 要创建的用于将事务日志备份复制到辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的名称。 *copy_job_name*为**sysname** ，且不能为 NULL。  
   
@@ -67,7 +67,7 @@ sp_add_log_shipping_secondary_primary
   
 `[ @file_retention_period = ] 'file_retention_period'` 在删除之前将备份文件保留在 @backup_destination_directory 参数指定的路径中的辅助服务器上的时间长度（分钟）。 *history_retention_period*的值为**int**，默认值为 NULL。 如果未指定值，则使用值 14420。  
   
-`[ @monitor_server = ] 'monitor_server'` 是监视服务器的名称。 *Monitor_server*的值为**sysname**，无默认值，且不能为 NULL。  
+`[ @monitor_server = ] 'monitor_server'` 是监视服务器的名称。 *Monitor_server* **sysname**，无默认值，且不能为 NULL。  
   
 `[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` 用于连接到监视服务器的安全模式。  
   
@@ -75,7 +75,7 @@ sp_add_log_shipping_secondary_primary
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。  
   
- *monitor_server_security_mode*为**bit** ，并且不能为 NULL。  
+ *monitor_server_security_mode*是**bit** ，并且不能为 NULL。  
   
 `[ @monitor_server_login = ] 'monitor_server_login'` 是用于访问监视服务器的帐户的用户名。  
   
@@ -93,14 +93,14 @@ sp_add_log_shipping_secondary_primary
 ## <a name="result-sets"></a>结果集  
  InclusionThresholdSetting  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  必须从辅助服务器上的**master**数据库运行**sp_add_log_shipping_secondary_primary** 。 此存储过程执行以下操作：  
   
 1.  为指定的主服务器和主数据库生成一个辅助 ID。  
   
 2.  执行以下操作：  
 
-    1.  使用提供的参数，在**log_shipping_secondary**中添加辅助 ID 的条目。  
+    1.  使用提供的参数在**log_shipping_secondary**中添加辅助 ID 的条目。  
   
     2.  为禁用的辅助 ID 创建一个复制作业。  
   

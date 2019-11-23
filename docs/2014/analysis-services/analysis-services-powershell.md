@@ -39,7 +39,7 @@ ms.locfileid: "72782644"
 
 有关语法和示例的详细信息，请参阅[Analysis Services PowerShell 参考](/sql/analysis-services/powershell/analysis-services-powershell-reference)。
 
-##  <a name="bkmk_prereq"></a> Prerequisites  
+##  <a name="bkmk_prereq"></a> 先决条件  
  必须安装有 Windows PowerShell 2.0。 该软件默认安装在 Windows 操作系统的较新版本上。 有关详细信息，请参阅[安装 Windows PowerShell 2.0](https://msdn.microsoft.com/library/ff637750.aspx)
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
@@ -61,7 +61,7 @@ ms.locfileid: "72782644"
 |表格实例和数据库|支持本地和远程管理。<br /><br /> 有关详细信息，请参阅8月2011博客，了解如何[使用 PowerShell 管理表格模型](https://go.microsoft.com/fwlink/?linkID=227685)。|  
 |PowerPivot for SharePoint 实例和数据库|有限支持。 您可以使用 HTTP 连接和 SQLAS 提供程序查看实例和数据库信息。<br /><br /> 但是，不支持使用 cmdlet。 切勿使用 Analysis Services PowerShell 备份和还原内存中 PowerPivot 数据库，也不应添加或删除角色、处理数据或运行任意 XMLA 脚本。<br /><br /> 出于配置目的，PowerPivot for SharePoint 具有单独提供的内置 PowerShell 支持。 有关详细信息，请参阅[PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。|  
 |与本地多维数据集的本机连接<br /><br /> "Data Source = c:\backup\test.cub"|不提供支持。|  
-|与 SharePoint 中的 BI 语义模型 (.bism) 连接文件的 HTTP 连接<br /><br /> "Data Source = http://server/shared_docs/name.bism"|不提供支持。|  
+|与 SharePoint 中的 BI 语义模型 (.bism) 连接文件的 HTTP 连接<br /><br /> "Data Source =http://server/shared_docs/name.bism"|不提供支持。|  
 |与 PowerPivot 数据库的嵌入式连接<br /><br /> "Data Source = $Embedded $"|不提供支持。|  
 |Analysis Services 存储过程中的本地服务器环境<br /><br /> "Data Source = *"|不提供支持。|  
   
@@ -76,7 +76,7 @@ ms.locfileid: "72782644"
   
  -Credential 参数使用指定用户名和密码的 PSCredential 对象。 在 Analysis Services PowerShell 中，-Credential 参数适用于发出连接 Analysis Services 请求的 cmdlet，而不是在现有连接的上下文中运行的 cmdlet。 发出连接请求的 cmdlet 包括 Invoke-ASCmd、Backup-ASDatabase 和 Restore-ASDatabase。 对于这些 cmdlet，可以使用-Credential 参数，假定满足以下条件：  
   
-1.  已配置服务器用于 HTTP 访问，这表示 IIS 在连接 Analysis Services 时会处理该连接、读取用户名和密码，并模拟用户身份。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
+1.  已配置服务器用于 HTTP 访问，这表示 IIS 在连接 Analysis Services 时会处理该连接、读取用户名和密码，并模拟用户身份。 有关详细信息，请参阅[在 Internet Information Services &#40;IIS&#41; 8.0 上配置对 Analysis Services 的 HTTP 访问](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
 2.  为 Analysis Services HTTP 访问创建的 IIS 虚拟目录配置用于“基本身份验证”。  
   
@@ -148,7 +148,7 @@ Remove-Variable -Name pwd
   
 1.  确认本地计算机和远程计算机都具有客户端和服务器工具的 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 版本。  
   
-2.  在承载 Analysis Services 实例的远程服务器上，在 Windows 防火墙中打开 TCP 端口 2383。 如果您已将 Analysis Services 作为命名实例安装或者正在使用自定义端口，则该端口号将不同。 有关详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+2.  在承载 Analysis Services 实例的远程服务器上，在 Windows 防火墙中打开 TCP 端口 2383。 如果您已将 Analysis Services 作为命名实例安装或者正在使用自定义端口，则该端口号将不同。 有关详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
 3.  在远程服务器上，确认启动了以下服务：远程过程调用 (RPC) 服务、TCP/IP NetBIOS Helper 服务、Windows Management Instrumentation (WMI) 服务、Windows Remote Management (WS-Management) 服务。  
   
@@ -201,7 +201,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  如果你使用本主题中的说明配置了用于 HTTP 访问的服务器，则 HTTP 连接很有用：在[IIS&#41; 8.0 Internet Information Services &#40;配置 http 访问 Analysis Services](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- 假设 http://localhost/olap/msmdpump.dll 的服务器 URL，连接可能如下所示：  
+ 假设 http://localhost/olap/msmdpump.dll的服务器 URL，连接可能如下所示：  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  
@@ -275,7 +275,7 @@ Restart-Service mssqlserverolapservice
   
 ## <a name="see-also"></a>另请参阅  
  [安装 SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
- [使用 PowerShell 管理表格模型（博客）](https://go.microsoft.com/fwlink/?linkID=227685)    
+ [使用 PowerShell 管理表格模型（博客）](https://go.microsoft.com/fwlink/?linkID=227685)   
  [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

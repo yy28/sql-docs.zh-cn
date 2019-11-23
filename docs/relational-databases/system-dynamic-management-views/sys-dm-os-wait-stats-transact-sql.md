@@ -22,7 +22,7 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e274375177859d456592a6e1879d7f528d1cb724
 ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73983085"
@@ -944,7 +944,7 @@ GO
 |WAIT_XTP_CKPT_CLOSE |等待检查点完成时出现。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |WAIT_XTP_CKPT_ENABLED |当检查点处于禁用状态，并且正在等待启用检查点操作时发生。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |WAIT_XTP_CKPT_STATE_LOCK |当同步检查点状态时出现。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|WAIT_XTP_COMPILE_WAIT |仅限内部使用。 <br /> **适用**于： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 
+|WAIT_XTP_COMPILE_WAIT |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 
 |WAIT_XTP_GUEST |当数据库内存分配器需要停止接收低内存通知时出现。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |WAIT_XTP_HOST_WAIT |当数据库引擎触发等待并由主机实现时发生。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 

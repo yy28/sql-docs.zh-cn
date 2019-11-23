@@ -29,13 +29,13 @@ ms.locfileid: "73728627"
   
      请遵循以下工作流。  
   
-    1.  创建变更集。 变更集处于打开状态。 请参阅 [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
+    1.  创建变更集。 变更集处于打开状态。 请参阅 [创建变更集 (Master Data Services)](../master-data-services/create-a-changeset-master-data-services.md)  
   
     2.  应用变更集，并向变更集中添加一些更改。 请参阅 [应用并更新变更集 (Master Data Services)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
     3.  将变更集提交给实体管理员进行批准。 变更集处于挂起状态。 请参阅 [确认或提交变更 (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-    4.  实体管理员收到变更集等待批准的电子邮件通知。 如果实体管理员批准变更集，则该变更集处于已批准状态。 请参阅 [Approve or Reject a Changeset &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
+    4.  实体管理员收到变更集等待批准的电子邮件通知。 如果实体管理员批准变更集，则该变更集处于已批准状态。 请参阅 [批准或拒绝变更集 (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
     5.  将自动提交已批准变更集。 如果已成功提交更改，则变更集处于已提交状态。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73728627"
   
      请遵循以下工作流。  
   
-    1.  创建变更集。 变更集处于打开状态。 请参阅 [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
+    1.  创建变更集。 变更集处于打开状态。 请参阅 [创建变更集 (Master Data Services)](../master-data-services/create-a-changeset-master-data-services.md)  
   
     2.  应用变更集，并向变更集中添加一些更改。 请参阅 [应用并更新变更集 (Master Data Services)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73728627"
   
 ## <a name="see-also"></a>另请参阅  
  [创建变更集 (Master Data Services)](../master-data-services/create-a-changeset-master-data-services.md)   
- [应用并更新变更集 &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
+ [应用并更新变更集 (Master Data Services)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [确认或提交变更 (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
  [批准或拒绝变更集 (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)   
  [管理变更集 (Master Data Services)](../master-data-services/manage-changesets-master-data-services.md)  

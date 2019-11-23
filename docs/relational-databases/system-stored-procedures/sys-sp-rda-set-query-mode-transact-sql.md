@@ -39,7 +39,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>参数  
- [@mode =] *\@mode*  
+ [@mode =] *\@模式*  
  是以下值之一。  
   
 -   **已禁用**针对启用 Stretch 的表的所有查询都将失败。  
@@ -48,32 +48,32 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_AND_REMOTE**针对启用 Stretch 的表的查询将返回本地和远程数据。 这是默认行为。  
   
- [@force =] *\@force*  
+ [@force =] *\@强制*  
  如果希望在不验证的情况下更改查询模式，则可以将此值设置为1。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 > 0 （失败）  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 db_owner 权限。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
  以下扩展存储过程还为已启用延伸的数据库设置查询模式。  
   
 -   **sp_rda_deauthorize_db**  
   
-     运行**sp_rda_deauthorize_db**之后，针对已启用延伸的数据库和表的所有查询都将失败。 也就是说，查询模式设置为 "已禁用"。 若要退出此模式，请执行以下操作之一。  
+     运行**sp_rda_deauthorize_db**后，针对已启用延伸的数据库和表的所有查询都将失败。 也就是说，查询模式设置为 "已禁用"。 若要退出此模式，请执行以下操作之一。  
   
-    -   运行[sp_rda_reauthorize_db &#40;&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)以重新连接到远程 Azure 数据库。 此操作会自动将查询模式重置为 LOCAL_AND_REMOTE，这是 Stretch Database 的默认行为。 也就是说，查询从本地和远程数据返回结果。  
+    -   运行[sys. sp_rda_reauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)重新连接到远程 Azure 数据库。 此操作会自动将查询模式重置为 LOCAL_AND_REMOTE，这是 Stretch Database 的默认行为。 也就是说，查询从本地和远程数据返回结果。  
   
-    -   运行带有 LOCAL_ONLY 参数的[sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) ，以允许查询继续针对本地数据运行。  
+    -   运行带有 LOCAL_ONLY 参数的 sys.databases，以使查询仅对本地数据运行[sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) 。  
   
 -   **sp_rda_reauthorize_db**  
   
-     运行[sp_rda_reauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)重新连接到远程 Azure 数据库时，此操作会自动将查询模式重置为 LOCAL_AND_REMOTE，这是 Stretch Database 的默认行为。 也就是说，查询从本地和远程数据返回结果。  
+     当你运行[sys. sp_rda_reauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)重新连接到远程 Azure 数据库时，此操作会自动将查询模式重置为 LOCAL_AND_REMOTE，这是 Stretch Database 的默认行为。 也就是说，查询从本地和远程数据返回结果。  
   
-## <a name="see-also"></a>请参阅  
- [sp_rda_deauthorize_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
- [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
+## <a name="see-also"></a>另请参阅  
+ [sys. sp_rda_deauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

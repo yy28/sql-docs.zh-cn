@@ -44,7 +44,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  承载 PolyBase 横向扩展组的 SQL Server 头节点的计算机名称。 *\@head_node_address*为 nvarchar （255）。  
   
  *\@dms_control_channel_port* = dms_control_channel_port  
- 头节点 PolyBase 数据移动服务的控制通道正在其上运行的端口。 *@no__t 1dms_control_channel_port*是一个无符号 __int16。 默认值为**16450**。  
+ 头节点 PolyBase 数据移动服务的控制通道正在其上运行的端口。 *\@dms_control_channel_port*是未签名 __int16。 默认值为**16450**。  
   
  *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
  在 PolyBase 横向扩展组中 SQL Server 实例的头节点的名称。 *\@head_node_sql_server_instance_name*为 nvarchar （16）。  
@@ -52,11 +52,11 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 权限。  
   
-## <a name="remarks"></a>备注  
- 运行存储过程后，关闭 PolyBase 引擎，然后在计算机上重新启动 PolyBase 数据移动服务。 验证在头节点上运行以下 DMV： **_exec_compute_nodes**。  
+## <a name="remarks"></a>Remarks  
+ 运行存储过程后，关闭 PolyBase 引擎，然后在计算机上重新启动 PolyBase 数据移动服务。 验证在头节点上运行以下 DMV： **sys. dm_exec_compute_nodes**。  
   
 ## <a name="example"></a>示例  
  该示例将当前计算机作为计算节点加入 PolyBase 组。  头节点的名称为**HST01** ，头节点上 SQL Server 实例的名称为**MSSQLSERVER**。  
@@ -65,7 +65,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

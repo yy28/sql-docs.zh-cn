@@ -42,13 +42,13 @@ sp_delete_firewall_rule [@name =] 'name'
 ## <a name="arguments"></a>参数  
  存储过程的参数为：  
   
- [@name =]"*name*"  
+ [@name =] '*name*'  
  将删除的服务器级防火墙设置的名称。 *name*为**nvarchar （128）** ，无默认值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中，对连接和服务器级别的防火墙规则进行身份验证时所需的登录数据会暂时缓存在每个数据库中。 此缓存定期刷新。 若要强制刷新身份验证缓存并确保数据库具有最新版本的登录名表，请执行 [DBCC FLUSHAUTHCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有由设置过程创建的服务器级主体登录名才可以删除服务器级防火墙规则。 用户必须连接到 master 数据库才能执行 sp_delete_firewall_rule。  
   
 ## <a name="example"></a>示例  

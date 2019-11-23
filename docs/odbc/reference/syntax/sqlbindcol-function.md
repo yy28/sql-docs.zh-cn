@@ -69,7 +69,7 @@ SQLRETURN SQLBindCol(
  *BufferLength*  
  送 \*TargetValuePtr* 缓冲区的长度（以字节为单位）。  
   
- 当驱动程序返回长度可变的数据（如字符或二进制数据）时，驱动程序使用*BufferLength*来避免写入超过 \**TargetValuePtr*缓冲区的末尾。 请注意，当驱动程序将字符数据返回到 \**TargetValuePtr*时，驱动程序会对 null 终止字符进行计数。 \*\*TargetValuePtr*因此必须包含空间的 null 终止字符或驱动程序将截断数据。  
+ 当驱动程序返回长度可变的数据（如字符或二进制数据）时，驱动程序使用*BufferLength*来避免写入超过 \**TargetValuePtr*缓冲区的末尾。 请注意，当驱动程序将字符数据返回到 \**TargetValuePtr*时，驱动程序会对 null 终止字符进行计数。 \**TargetValuePtr*因此必须包含空间的 null 终止字符或驱动程序将截断数据。  
   
  当驱动程序返回固定长度的数据（如整数或日期结构）时，驱动程序将忽略*BufferLength* ，并假定缓冲区足以容纳数据。 因此，应用程序必须为固定长度的数据分配足够大的缓冲区，否则驱动程序将写入超过缓冲区的末尾。  
   

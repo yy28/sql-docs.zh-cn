@@ -26,12 +26,12 @@ ms.locfileid: "73729451"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建业务规则以便确保您的主数据的精确性。 创建规则后，必须首先发布它，然后才能将该规则应用于数据。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>创建和发布业务规则  
   
@@ -41,11 +41,11 @@ ms.locfileid: "73729451"
   
 3.  在“业务规则”页上，从“模型”下拉列表中选择一个模型。  
   
-4.  从“实体”下拉列表中选择一个实体。  
+4.  从 “实体”下拉列表中选择一个实体。  
   
 5.  从“成员类型” 下拉列表中，选择要应用业务规则的成员类型。  
   
-6.  单击 **“添加”** 。  
+6.  单击“添加”。  
   
 7.  在“名称” 框中，键入业务规则的名称。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "73729451"
     > [!NOTE]  
     >  仅针对包括验证操作的规则发送通知。  
   
-10. 在“If” 块下，单击“添加”。 此时，系统会显示一个面板。  
+10. 在“If” 块下，单击“添加”。 将显示一个面板。  
   
-11. 从“属性”下拉列表中选择一个属性。  
+11. 从 “属性”下拉列表中选择一个属性。  
   
 12. 从“运算符”下拉列表中选择一个条件。  
   
@@ -69,11 +69,11 @@ ms.locfileid: "73729451"
     > [!TIP]  
     >  可以通过右键单击各项并选择“删除”，从业务规则中删除相应项。  
   
-15. 也可以向规则添加多个条件。 有关详细信息，请参阅[向业务规则添加多个条件 (Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)。  
+15. 也可以向规则添加多个条件。 有关详细信息，请参阅 [向业务规则添加多个条件 (Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)。  
   
-16. 在“Then” 块下，单击“添加” 。 此时，系统会显示一个面板。  
+16. 在“Then” 块下，单击“添加” 。 将显示一个面板。  
   
-17. 从“属性”下拉列表中选择一个属性。  
+17. 从 “属性”下拉列表中选择一个属性。  
   
 18. 从“运算符”下拉列表中，选择一个操作。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "73729451"
   
 21. （可选）若要添加“Else” 操作，请完成以下步骤。  
   
-    1.  在“Else” 块下，单击“添加”。 此时，系统会显示一个面板。  
+    1.  在“Else” 块下，单击“添加”。 将显示一个面板。  
   
-    2.  从“属性”下拉列表中选择一个属性。  
+    2.  从 “属性”下拉列表中选择一个属性。  
   
     3.  从“运算符”下拉列表中，选择一个操作。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "73729451"
 ## <a name="grid-columns"></a>网格列  
  对于你创建的每个业务规则，系统都会在网格中添加一行（其中包含六列）。 下面介绍了这些列。  
   
-|名称|说明|  
+|NAME|描述|  
 |----------|-----------------|  
 |状态|在你单击“保存” 后，系统会显示下面的图像，指明业务规则正在更新。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh ")<br /><br /> 如果在创建或编辑业务规则时出错，系统会显示下面的图像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error ")<br /><br /> 如果状态为“确定”，系统会显示下面的图像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success ")|  
-|名称|业务规则名称。|  
-|说明|业务规则描述。|  
+|NAME|业务规则名称。|  
+|描述|业务规则描述。|  
 |业务规则状态|以下业务规则状态之一：未定义规则、有效、已排除、待更改、待排除、待删除。|  
 |已排除|指定是否排除业务规则。|  
 |通知|指定要向其发送电子邮件通知的选定用户或组。|  
@@ -122,6 +122,6 @@ ms.locfileid: "73729451"
 ## <a name="see-also"></a>另请参阅  
  [配置业务规则以发送通知 (Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [更改业务规则名称 (Master Data Services)](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [向业务规则添加多个条件 &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
+ [向业务规则添加多个条件 (Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   

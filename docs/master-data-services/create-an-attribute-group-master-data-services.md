@@ -26,14 +26,14 @@ ms.locfileid: "73728440"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要在 **“资源管理器”** 网格中的单独选项卡上显示属性时，创建属性组。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
--   必须至少存在一个属性。 有关详细信息，请参阅[创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)。  
+-   必须至少存在一个属性。 有关详细信息，请参阅 [创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)。  
   
 ### <a name="to-create-an-attribute-group"></a>创建属性组  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73728440"
  [属性组 (Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)   
  [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)   
  [更改属性组名称 (Master Data Services)](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
- [删除属性组 &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
+ [删除属性组 (Master Data Services)](../master-data-services/delete-an-attribute-group-master-data-services.md)   
  [叶权限 (Master Data Services)](../master-data-services/leaf-permissions-master-data-services.md)   
    
   

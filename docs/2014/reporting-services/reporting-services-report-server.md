@@ -34,13 +34,13 @@ ms.locfileid: "70176182"
 # <a name="reporting-services-report-server"></a>Reporting Services 报表服务器
   本主题概述在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的中心组件。 报表服务器由一对处理引擎和一组具有特殊用途的扩展插件（用于处理身份验证、数据处理、呈现和传递操作）组成。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器在以下两种部署模式之一下运行：本机模式或 SharePoint 模式。 请参阅功能比较的 [SharePoint 模式和本机模式的功能比较](#bkmk_featuresupport) 部分。  
   
- **安装：** 有关[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]安装的信息, 请参阅以下内容:  
+ **安装：** 有关 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装的信息，请参阅以下内容：  
   
 -   [安装 Reporting Services 本机模式报表服务器](install-windows/install-reporting-services-native-mode-report-server.md)  
   
 -   [通过 SharePoint &#40;PowerPivot 和 Reporting Services 安装 SQL Server BI 功能&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
   
- **Azure**:有关使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Azure 虚拟机的信息, 请参阅以下内容:  
+ **Azure**：有关将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 与 Azure 虚拟机配合使用的信息，请参阅以下内容：  
   
 -   [SQL Server Azure 虚拟机中的商业智能](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx)。  
   
@@ -90,16 +90,16 @@ ms.locfileid: "70176182"
 |**配置管理器**|是|**\*\* 重要提示 \*\*** 配置管理器不能用于管理 SharePoint 模式报表服务器。 而是使用 SharePoint 管理中心。|  
 |**报表管理器**|是|配置管理器不能用于管理 SharePoint 模式。 请使用 SharePoint 应用程序页。 有关详细信息，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)。|  
 |**链接报表**|是|否。|  
-|**我的报表**|是|否|  
-|**我的订阅** 和批处理方法。|是|否|  
-|**数据警报**|否|是|  
-|**Power View**|否|是<br /><br /> 要求在客户端浏览器中具有 Silverlight。 有关浏览器要求的详细信息, 请参阅[规划 Reporting Services 和 Power View 浏览&#40;器支持&#41; Reporting Services 2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**我的报表**|是|No|  
+|**我的订阅** 和批处理方法。|是|No|  
+|**数据警报**|No|是|  
+|**Power View**|No|是<br /><br /> 要求在客户端浏览器中具有 Silverlight。 有关浏览器要求的详细信息，请参阅[规划 Reporting Services 和 Power View 浏览&#40;器支持&#41; Reporting Services 2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**.RDL 报表**|是|是<br /><br /> .RDL 报表可以在本机模式或 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上运行。|  
-|**.RDLX 报表**|否|是<br /><br /> Power View .RDLX 报表只能在 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上运行。|  
-|**用于 SharePoint 列表扩展的 SharePoint 用户标记凭据**|否|是|  
-|**用于面向 internet 的部署的 AAM 区域**|否|是|  
-|**SharePoint 备份和恢复**|否|是|  
-|**UL 日志支持**|否|是|  
+|**.RDLX 报表**|No|是<br /><br /> Power View .RDLX 报表只能在 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上运行。|  
+|**用于 SharePoint 列表扩展的 SharePoint 用户标记凭据**|No|是|  
+|**用于面向 internet 的部署的 AAM 区域**|No|是|  
+|**SharePoint 备份和恢复**|No|是|  
+|**UL 日志支持**|No|是|  
   
 ##  <a name="bkmk_nativemode"></a>本机模式  
  在本机模式中，报表服务器是独立的应用程序服务器，提供查看、管理、处理和传递报表及报表模型的所有功能。 这是报表服务器实例的默认模式。 可以安装在系统安装期间配置的本机模式的报表服务器，也可以在系统安装完成后配置报表服务器进行本机模式操作。  
@@ -113,7 +113,7 @@ ms.locfileid: "70176182"
  第三方开发人员可以创建其他扩展插件，以替代或扩展报表服务器的处理能力。 若要了解有关应用程序开发人员可以使用的编程接口的详细信息，请参阅 [技术参考](../../2014/reporting-services/technical-reference-ssrs.md)。  
   
 ###  <a name="bkmk_nativewithwebparts"></a>带有 SharePoint Web 部件的本机模式  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供两个 Web 部件, 你可以在[!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 或更高版本的实例上安装和注册, 也可以在 SharePoint Portal Server 2003 或更高版本上进行注册。 在 SharePoint 站点上，可以使用这些 Web 部件查找和查看在本机模式下运行的报表服务器上存储和处理的报表。 这些 Web 部件是在较早版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中引入的。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了两个可在 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 或更高版本2003或更高版本的实例上安装和注册的 Web 部件。 在 SharePoint 站点上，可以使用这些 Web 部件查找和查看在本机模式下运行的报表服务器上存储和处理的报表。 这些 Web 部件是在较早版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中引入的。  
   
 ##  <a name="bkmk_sharepointmode"></a> SharePoint 模式  
  在 SharePoint 模式下，报表服务器必须在 SharePoint 服务器场中运行。 报表服务器处理、呈现和管理功能由正在运行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务以及一个或多个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序的 SharePoint 应用程序服务器表示。 SharePoint 站点提供对报表服务器内容和操作的前端访问。  
@@ -150,7 +150,7 @@ ms.locfileid: "70176182"
   
  Reporting Services 提供了默认扩展插件，以便您无需开发自定义组件就可以使用所有服务器功能。 下表说明了有助于提供完整报表服务器实例的默认扩展插件，该实例将提供可供使用的功能：  
   
-|type|默认|  
+|sysobjects|Default|  
 |----------|-------------|  
 |身份验证|默认的报表服务器实例支持 Windows 身份验证，包括模拟和委托功能（如果在域中启用了这些功能）。|  
 |数据处理|默认报表服务器实例包括 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、Oracle、Hyperion Essbase、SAPBW、OLE DB、并行数据仓库和 ODBC 数据源的数据处理扩展插件。|  
@@ -172,14 +172,14 @@ ms.locfileid: "70176182"
 |说明如何为报表服务器 Web 服务和 Windows 服务优化内存设置。|[为报表服务器应用程序配置可用内存](report-server/configure-available-memory-for-report-server-applications.md)|  
 |说明为远程管理配置报表服务器的建议步骤。|[配置报表服务器以进行远程管理](report-server/configure-a-report-server-for-remote-administration.md)|  
 |提供有关在本机报表服务器实例上配置 **“我的报表”** 的可用性的说明。|[启用和禁用“我的报表”](report-server/enable-and-disable-my-reports.md)|  
-|提供有关设置 RSClientPrint 控件的说明，该控件在支持的浏览器中提供打印功能。 有关浏览器要求的详细信息, 请参阅[规划 Reporting Services 和 Power View 浏览&#40;器支持&#41;Reporting Services 2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)。|[启用和禁用 Reporting Services 的客户端打印](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
+|提供有关设置 RSClientPrint 控件的说明，该控件在支持的浏览器中提供打印功能。 有关浏览器要求的详细信息，请参阅[规划 Reporting Services 和 Power View 浏览&#40;器支持&#41;Reporting Services 2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)。|[启用和禁用 Reporting Services 的客户端打印](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 扩展插件](extensions/reporting-services-extensions.md)   
  [Reporting Services 工具](tools/reporting-services-tools.md)   
  [订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [报表服务器数据库（SSRS 本机模式）](report-server/report-server-database-ssrs-native-mode.md)   
- [实现安全扩展插件](extensions/security-extension/implementing-a-security-extension.md)   
+ [Implementing a Security Extension](extensions/security-extension/implementing-a-security-extension.md)   
  [实现数据处理扩展插件](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services 支持的数据源 (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [如何使用 PowerShell 管理 SSRS](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  

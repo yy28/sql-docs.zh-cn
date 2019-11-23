@@ -26,7 +26,7 @@ ms.locfileid: "69493897"
   
 ## <a name="defining-a-core-products-named-set"></a>定义“核心产品”命名集  
   
-1.  切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器的“计算”选项卡，再单击工具栏上的“窗体视图”。  
+1.  切换到  **教程多维数据集的多维数据集设计器的“计算”** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，再单击工具栏上的“窗体视图”。  
   
 2.  单击“脚本组织程序”窗格中的“[所有产品的总销售额比率]”，然后在“计算”选项卡的工具栏上单击“新建命名集”。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "69493897"
 4.  在 "**计算工具**" 窗格的 "**元数据**" 选项卡上，依次展开 "**产品**"、"**类别**" 和 "`Members`"，然后展开 "**所有产品**"  
   
     > [!NOTE]  
-    >  如果无法在“计算工具”窗格中查看任何元数据，请在工具栏上单击“重新连接”。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。  
+    >  如果无法在“计算工具”窗格中查看任何元数据，请在工具栏上单击“重新连接”。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。  
   
 5.  将“自行车”拖到“表达式”框中。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "69493897"
   
 9. 在属性窗口中，将 "`DiscretizationMethod`" 属性更改为 "**自动**"，然后将 "`DiscretizationBucketCount`" 属性更改为 "`5`"。 有关详细信息，请参阅[对属性成员分组（离散化）](multidimensional-models/attribute-properties-group-attribute-members.md)。  
   
-10. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”。  
+10. 在  **的“生成”菜单上，单击“部署 Analysis Services 教程”** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
 11. 成功完成部署后，切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，然后在“计算”选项卡的工具栏上单击“重新连接”。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69493897"
   
 ## <a name="browsing-the-cube-by-using-the-new-named-sets"></a>使用新的命名集浏览多维数据集  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”。  
+1.  在  **的“生成”菜单上，单击“部署 Analysis Services 教程”** [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]。  
   
 2.  已成功完成部署后，单击“浏览器”选项卡，再单击“重新连接”。  
   

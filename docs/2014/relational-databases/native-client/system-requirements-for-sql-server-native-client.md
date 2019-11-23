@@ -68,9 +68,9 @@ ms.locfileid: "73637799"
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|图像|  
-|varchar(max)|varchar|varchar|Text|  
+|varchar(max)|varchar|varchar|文本|  
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
-|XML|XML|XML|Ntext|  
+|xml|xml|xml|Ntext|  
 |CLR UDT （> 8Kb）|udt|varbinary|图像|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  

@@ -27,11 +27,11 @@ ms.locfileid: "71708214"
   
  bcp 实用工具 (Bcp.exe) 是一个使用大容量复制程序 (BCP) API 的命令行工具。 bcp 实用工具可执行以下任务：  
   
--   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据批量导出到数据文件中。  
+-   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据大容量导出到数据文件中。  
   
 -   从查询中批量导出数据。  
   
--   将数据文件中的数据批量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
+-   将数据文件中的数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
   
 -   生成格式化文件。  
   
@@ -72,10 +72,13 @@ ms.locfileid: "71708214"
   
 -   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[INSERT &#40;&#41;transact-sql](/sql/t-sql/statements/insert-transact-sql)
-[SELECT 子句&#40;&#41;transact-sql](/sql/t-sql/queries/select-clause-transact-sql)
+[INSERT &#40;&#41; transact-sql](/sql/t-sql/statements/insert-transact-sql)
+[SELECT 子句&#40;&#41; transact-sql](/sql/t-sql/queries/select-clause-transact-sql)
 [bcp 实用工具](../../tools/bcp-utility.md)   
-[准备大容量导入&#40;数据&#41;SQL Server](prepare-to-bulk-import-data-sql-server.md)@no__t-[3 &#40;BULK INSERT&#41;transact-sql](/sql/t-sql/statements/bulk-insert-transact-sql)
-[大容量导入和导出数据&#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)-11[OPENROWSET &#40;Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)5[创建格式化文件&#40;SQL Server&#41; ](create-a-format-file-sql-server.md)
+[准备大容量导入&#40;数据&#41; SQL Server](prepare-to-bulk-import-data-sql-server.md)
+[ &#40;BULK INSERT transact-sql&#41; ](/sql/t-sql/statements/bulk-insert-transact-sql)
+[大容量导入和导出数据&#40;SQL Server&#41; ](bulk-import-and-export-of-data-sql-server.md)
+[OPENROWSET &#40;transact-sql&#41; ](/sql/t-sql/functions/openrowset-transact-sql)
+[创建格式化文件&#40;SQL Server&#41; ](create-a-format-file-sql-server.md)

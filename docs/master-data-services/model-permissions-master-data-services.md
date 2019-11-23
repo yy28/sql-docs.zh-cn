@@ -27,9 +27,9 @@ ms.locfileid: "73728975"
   模型权限应用到模型中存在的所有实体、派生层次结构、显式层次结构和集合。 对于任何单个对象，可以覆盖分配给模型的权限。  
   
 > [!NOTE]  
->  如果用户是模型管理员，则在用户界面的所有功能区域显示该模型。 否则，仅在 **“资源管理器”** 功能区域显示该模型。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+>  如果用户是模型管理员，则在用户界面的所有功能区域显示该模型。 否则，仅在 **“资源管理器”** 功能区域显示该模型。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-|权限|说明|  
+|权限|描述|  
 |----------------|-----------------|  
 |**读取**|用户可以读取成员、属性、层次结构成员身份或集合成员身份。|  
 |**创建**|用户可以创建成员，并在创建过程中指定属性值。|  
@@ -44,6 +44,6 @@ ms.locfileid: "73728975"
  [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
  [实体权限 (Master Data Services)](../master-data-services/entity-permissions-master-data-services.md)   
- [集合权限 &#40;Master Data Services&#41;](../master-data-services/collection-permissions-master-data-services.md)  
+ [集合权限 (Master Data Services)](../master-data-services/collection-permissions-master-data-services.md)  
   
   

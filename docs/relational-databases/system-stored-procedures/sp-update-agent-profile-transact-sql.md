@@ -39,13 +39,13 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="arguments"></a>参数  
 `[ @agent_type = ] 'agent_type'` 是代理的类型。 *agent_type*是**int**，没有默认值，可以是下列值之一。  
   
-|“值”|说明|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**1**|快照代理。|  
 |**2**|日志读取器代理。|  
 |**3**|分发代理。|  
 |**4**|合并代理。|  
-|**900**|队列读取器代理。|  
+|**9**|队列读取器代理。|  
   
 `[ @agent_id = ] 'agent_id'` 是代理的 ID。 *agent_id*为**int**，没有默认值。  
   
@@ -54,18 +54,18 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_update_agent_profile**在所有类型的复制中使用。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有**sysadmin**固定服务器角色的成员才能**sp_update_agent_profile**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_change_agent_profile &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_profile &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
+ [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

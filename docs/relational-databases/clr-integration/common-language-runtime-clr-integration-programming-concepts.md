@@ -1,5 +1,5 @@
 ---
-title: 公共语言运行时 (CLR) 集成编程概念 |Microsoft Docs
+title: 公共语言运行时（CLR）集成编程概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -29,10 +29,10 @@ ms.locfileid: "70212388"
  Microsoft.SqlServer.Server 命名空间包括在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行 CLR 编程的核心功能。 但是，有关 Microsoft.SqlServer.Server 命名空间的文档位于 .NET Framework SDK。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书不包括该文档。  
   
 > [!IMPORTANT]  
->  默认情况下，.NET Framework 随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安装，但不安装 .NET Framework SDK。 如果未在计算机上安装 SDK，并且未将其包括在联机丛书集中，则本节中指向 SDK 内容的链接无效。 请安装 .NET Framework SDK。 安装后, 按照[安装 .NET FRAMEWORK sdk](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)中的说明, 将 SDK 添加到联机丛书集合和目录。  
+>  默认情况下，.NET Framework 随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安装，但不安装 .NET Framework SDK。 如果未在计算机上安装 SDK，并且未将其包括在联机丛书集中，则本节中指向 SDK 内容的链接无效。 请安装 .NET Framework SDK。 安装后，按照[安装 .NET FRAMEWORK sdk](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)中的说明，将 SDK 添加到联机丛书集合和目录。  
   
 > [!NOTE]  
->  Azure SQL 数据库*不*支持 clr 功能, 如 clr 用户函数。  
+>  Azure SQL 数据库*不*支持 clr 功能，如 clr 用户函数。  
   
  下表列出了本节的主题。  
   
@@ -66,8 +66,8 @@ ms.locfileid: "70212388"
  [公共语言运行时 (CLR) 集成的使用方案和示例](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  描述使用 CLR 对象的应用场景和代码示例。  
   
-## <a name="see-also"></a>请参阅  
- [程序&#40;集数据库引擎&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+## <a name="see-also"></a>另请参阅  
+ [程序&#40;集&#41;数据库引擎](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [安装 .NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

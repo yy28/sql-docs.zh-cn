@@ -28,12 +28,12 @@ ms.locfileid: "73729365"
   
 -   **注意** 存在属性组时，不属于属性组的属性将不在 **“资源管理器”** 中显示。 不存在属性组时，显示所有属性。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-an-attribute-group"></a>删除属性组  
   

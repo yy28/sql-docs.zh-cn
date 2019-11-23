@@ -40,11 +40,11 @@ ms.locfileid: "72252048"
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @original_publisher = ] 'original_publisher'` @no__t 实例的名称，该实例最初发布数据库。 *original_publisher*的值为**sysname**，无默认值。  
+`[ @original_publisher = ] 'original_publisher'` 最初发布数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 *original_publisher* **sysname**，无默认值。  
   
-`[ @publisher_db = ] 'publisher_db'` 要发布的数据库的名称。 *publisher_db*的值为**sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 要发布的数据库的名称。 *publisher_db* **sysname**，无默认值。  
   
-@no__t 为发布服务器/数据库对调用**sp_redirect_publisher**时指定的重定向的目标。 *redirected_publisher*的值为**sysname**，无默认值。  
+`[ @redirected_publisher = ] 'redirected_publisher'` 为发布服务器/数据库对调用**sp_redirect_publisher**时指定的重定向的目标。 *redirected_publisher* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
@@ -52,17 +52,17 @@ ms.locfileid: "72252048"
 ## <a name="result-sets"></a>结果集  
  无。  
   
-## <a name="remarks"></a>备注  
- 如果发布服务器和发布数据库没有条目，则**sp_validate_redirected_publisher**将在输出参数 *\@redirected_publisher*中返回 null。 如果存在条目，则在成功和失败的情况下都会在输出参数中返回条目。  
+## <a name="remarks"></a>Remarks  
+ 如果发布服务器和发布数据库中不存在任何条目，则**sp_validate_redirected_publisher** *\@redirected_publisher*的输出参数中返回 null。 如果存在条目，则在成功和失败的情况下都会在输出参数中返回条目。  
   
- 如果验证成功，则**sp_validate_redirected_publisher**将返回成功指示。  
+ 如果验证成功， **sp_validate_redirected_publisher**将返回成功指示。  
   
  如果验证失败，则会引发描述失败的错误。  
   
-## <a name="permissions"></a>权限  
- 调用方必须是**sysadmin**固定服务器角色的成员、分发数据库的**db_owner**固定数据库角色的成员，或者是与发布服务器数据库相关联的已定义发布的发布访问列表的成员。  
+## <a name="permissions"></a>Permissions  
+ 调用方必须是**sysadmin**固定服务器角色的成员、分发数据库**db_owner**固定数据库角色的成员，或者是与发布服务器数据库相关联的已定义发布的发布访问列表的成员。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   

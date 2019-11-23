@@ -29,7 +29,7 @@ ms.locfileid: "73728910"
 ## <a name="upgrade-review"></a>升级检查  
  检查此页上指定的信息。 如果该信息正确，则单击 **“下一步”** 升级指定数据库。  
   
-|控件名称|说明|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |**SQL Server 实例**|当前选择的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的名称。|  
 |**“主数据服务数据库”**|当前选择的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的名称。|  

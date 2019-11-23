@@ -1,5 +1,5 @@
 ---
-title: sys.databases _operation_status （Azure SQL 数据库） |Microsoft Docs
+title: sys. dm_operation_status （Azure SQL Database） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -32,9 +32,9 @@ ms.locfileid: "70911210"
 
   返回有关对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器中的数据库执行的操作的信息。  
   
-|列名|数据类型|描述|  
+|Column Name|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|session_activity_id|**uniqueidentifier**|操作的 ID。 不为 null。|  
+|session_activity_id|**ssNoversion**|操作的 ID。 不为 null。|  
 |resource_type|**int**|指示针对其执行操作的资源类型。 不为 null。 在当前版本中，此视图仅跟踪对 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 执行的操作，对应的整数值为 0。|  
 |resource_type_desc|**nvarchar(2048)**|针对其执行操作的资源类型的说明。 在当前版本中，此视图只跟踪对 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 执行的操作。|  
 |major_resource_id|**sql_variant**|对其执行操作的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的名称。 不为 Null。|  
@@ -50,11 +50,11 @@ ms.locfileid: "70911210"
 |start_time|**datetime**|开始操作的时间戳。|  
 |last_modify_time|**datetime**|上次修改长时间运行的操作的记录的时间戳。 在成功完成操作的情况下，此字段显示操作完成的时间戳。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此视图仅在**master**数据库中适用于服务器级主体登录名。  
   
-## <a name="remarks"></a>备注  
- 若要使用此视图，您必须连接到**master**数据库。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]使用服务器`sys.dm_operation_status`的**master**数据库中的视图跟踪对[!INCLUDE[ssSDS](../../includes/sssds-md.md)]执行的以下操作的状态：  
+## <a name="remarks"></a>Remarks  
+ 若要使用此视图，您必须连接到**master**数据库。 使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器的**master**数据库中的 `sys.dm_operation_status` 视图来跟踪对 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]执行的以下操作的状态：  
   
 -   创建数据库  
   
@@ -83,10 +83,10 @@ SELECT * FROM sys.dm_operation_status
    ORDER BY start_time DESC;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [异地复制动态管理视图和函数&#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [sys.databases _geo_replication_link_status &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [sys.databases _replication_links &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+## <a name="see-also"></a>另请参阅  
+ [异地复制动态管理视图和函数&#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+ [dm_geo_replication_link_status &#40;Azure SQL 数据库&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [geo_replication_links &#40;Azure SQL 数据库&#41; ](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-azure-sql-database.md)  
   
   

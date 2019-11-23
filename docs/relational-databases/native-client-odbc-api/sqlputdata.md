@@ -1,5 +1,5 @@
 ---
-title: SQLPutData |Microsoft Docs
+title: SQLPutData | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.locfileid: "73785744"
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  当使用 SQLPutData 发送超过65535个字节的数据（对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本 4.21 a）或 400 KB 的数据（对于 SQL Server 版本6.0 及更高版本）用于 SQL_LONGVARCHAR （**文本**）、SQL_WLONGVARCHAR （**ntext**）或 SQL_ 时，以下限制将适用：LONGVARBINARY （**image**）列：  
+  当使用 SQLPutData 发送超过65535个字节的数据（对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本 4.21 a）或 400 KB 的数据（对于 SQL Server 版本6.0 和更高版本 **）（对于**版本和更高**版本 SQL_LONGVARCHAR）** 时 SQL_LONGVARBINARY SQL_WLONGVARCHAR，以下限制将适用：  
   
 -   引用的参数可以是 INSERT 语句中的*insert_value* 。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785744"
 ## <a name="diagnostics"></a>诊断  
  对于 SQLPutData，有一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 特定的 SQLSTATE：  
   
-|SQLSTATE|错误|说明|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |22026|字符串数据，长度不匹配|如果应用程序已指定要发送的数据的长度（以字节为单位），例如，使用 SQL_LEN_DATA_AT_EXEC （*n*），其中*n*大于0，则应用程序通过 SQLPutData 指定的字节总数必须与指定的长度匹配。|  
   

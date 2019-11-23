@@ -60,13 +60,13 @@ sp_describe_parameter_encryption
   
  第一个结果集的每一行描述一对键;加密的列加密密钥及其对应的列主密钥。  
   
-|列名|数据类型|说明|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|结果集中的行的 Id。|  
 |database_id|**int**|数据库 id。|  
 |**column_encryption_key_id**|**int**|列加密密钥 id。注意：此 id 表示[sys.databases. column_encryption_keys &#40;&#41; transact-sql](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)目录视图中的行。|  
-|**column_encryption_key_version**|**int**|保留供将来使用。 当前，始终包含1。|  
-|**column_encryption_key_metadata_version**|**binary （8）**|表示列加密密钥的创建时间的时间戳。|  
+|**column_encryption_key_version**|**int**|留待将来使用。 当前，始终包含1。|  
+|**column_encryption_key_metadata_version**|**binary(8)**|表示列加密密钥的创建时间的时间戳。|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|列加密密钥的加密值。|  
 |**column_master_key_store_provider_name**|**sysname**|包含列主密钥的密钥存储的提供程序的名称，该列用于生成列加密密钥的加密值。|  
 |**column_master_key_path**|**nvarchar(4000)**|列主密钥的密钥路径，该密钥用于生成列加密密钥的加密值。|  
@@ -74,7 +74,7 @@ sp_describe_parameter_encryption
   
  第二个结果集的每一行都包含一个参数的加密元数据。  
   
-|列名|数据类型|说明|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|结果集中行的 Id。|  
 |**parameter_name**|**sysname**|在 *\@params*参数中指定的其中一个参数的名称。|  
@@ -83,10 +83,10 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|第一个结果集中的行的代码。 引用的行描述为列配置的列加密密钥，参数对应于。|  
 |**column_encryption_normalization_rule_version**|**tinyint**|类型规范化算法的版本号。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  支持 Always Encrypted 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端驱动程序将自动调用**sp_describe_parameter_encryption**来检索由应用程序发出的参数化查询的加密元数据。 随后，驱动程序使用加密元数据对与 Always Encrypted 保护的数据库列对应的参数值进行加密，并使用加密的参数值，然后将查询发送到数据库引擎。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要**查看任意列加密密钥定义**，并查看数据库中的**任何列主密钥定义**权限。  
   
 ## <a name="examples"></a>示例  

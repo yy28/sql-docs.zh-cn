@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics |Microsoft Docs
+title: SQLStatistics | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql

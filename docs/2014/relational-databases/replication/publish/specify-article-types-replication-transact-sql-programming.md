@@ -46,7 +46,7 @@ ms.locfileid: "73882119"
   
 2.  对于 **logbased manualboth** 和 **logbased manualfilter** 项目，请执行 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) 生成用于水平筛选项目的筛选存储过程。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  
   
-3.  对于 **logbased manualboth**、 **logbased manualview**和 **logbased manualfilter** 项目，请执行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 生成用于定义垂直筛选项目的视图。 有关详细信息，请参阅 [定义和修改列筛选器](define-and-modify-a-column-filter.md)。  
+3.  对于 **logbased manualboth**、 **logbased manualview**和 **logbased manualfilter** 项目，请执行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 生成用于定义垂直筛选项目的视图。 有关详细信息，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
   
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>在事务发布或快照发布中发布视图项目或索引视图项目  
   
@@ -68,7 +68,7 @@ ms.locfileid: "73882119"
   
 2.  对于 **logbased manualboth** 和 **logbased manualfilter** 项目，请执行 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) 生成用于水平筛选项目的筛选存储过程。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  
   
-3.  对于 **logbased manualboth**、 **logbased manualview**和 **logbased manualfilter** 项目，请执行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 生成用于定义垂直筛选项目的视图。 有关详细信息，请参阅 [定义和修改列筛选器](define-and-modify-a-column-filter.md)。  
+3.  对于 **logbased manualboth**、 **logbased manualview**和 **logbased manualfilter** 项目，请执行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 生成用于定义垂直筛选项目的视图。 有关详细信息，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
   
 ### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>在事务发布或快照发布中发布存储过程、存储过程执行或用户定义函数项目  
   
@@ -107,7 +107,7 @@ ms.locfileid: "73882119"
      这样便为发布定义了一个新项目。 有关详细信息，请参阅 [Define an Article](define-an-article.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [复制系统存储过程概念](../concepts/replication-system-stored-procedures-concepts.md)   
  [发布数据和数据库对象](publish-data-and-database-objects.md)  
   
   

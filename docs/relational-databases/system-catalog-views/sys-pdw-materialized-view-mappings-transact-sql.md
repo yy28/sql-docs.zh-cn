@@ -27,18 +27,18 @@ ms.locfileid: "73729824"
 
 Physical_name 和 object_id 的列构成此目录视图的键。
   
-|列名|数据类型|说明|  
+|Column Name|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar （36）**|具体化视图的物理名称。|  
+|physical_name |**nvarchar(36)**|具体化视图的物理名称。|  
 |object_id  |**int**|具体化视图的对象 ID。 请参阅[sys.databases （transact-sql）](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)。| 
 
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
 要求拥有 VIEW DATABASE STATE 权限。
   
 ## <a name="see-also"></a>另请参阅
 
- [的具体化视图的性能优化](/azure/sql-data-warehouse/performance-tuning-materialized-views)  
+[利用具体化视图进行性能优化](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

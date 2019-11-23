@@ -30,10 +30,10 @@ ms.locfileid: "73784065"
   
 |文件存储类型|宿主文件数据类型|响应提示：“请输入 <field_name> [\<default>] 字段的文件存储类型:”|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|日期时间|SQLDATETIME|d|  
+|DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|日期|SQLDATE|de|  
-|Time|SQLTIME|te|  
+|“日期”|SQLDATE|de|  
+|time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73784065"
   
 |文件存储类型|存储大小（以字节为单位）|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
 |date|3|  
 |time|6|  
@@ -94,10 +94,10 @@ ms.locfileid: "73784065"
   
 |文件存储类型|宿主文件数据类型|键入 sqlncli.msi 以用于 IBCPSession：： BCPColFmt|“值”|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|日期时间|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|日期|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|“日期”|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -106,12 +106,12 @@ ms.locfileid: "73784065"
   
  **OLE DB 说明** 以下转换由 IBCPSession 执行。 IRowsetFastLoad 使用[从客户端到服务器执行的转换](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)中定义的 OLE DB 转换。 请注意，日期时间值将舍入为 1 秒的 1/300，smalldatetime 值在执行下述客户端转换后将秒设置为零。 日期时间舍入将传播至小时和分钟，而非日期。  
   
-|转换后 -><br /><br /> 从|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|转换后 -><br /><br /> 从|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|日期|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Time|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|“日期”|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|time|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|日期时间|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
+|DATETIME|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/A|N/A|  

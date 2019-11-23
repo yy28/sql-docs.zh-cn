@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882168"
 ---
-# <a name="specify-schema-options"></a>指定架构选项
+# <a name="specify-schema-options"></a>Specify Schema Options
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定架构选项。 在发布表或视图时，可以控制为发布的对象复制的对象创建选项。 创建项目时可以设置这些选项，还可以在以后更改它们。 如果没有为某项目显式指定这些选项，将定义默认的选项集。  
   
 > [!NOTE]  
@@ -53,7 +53,7 @@ ms.locfileid: "73882168"
 -   有关架构选项的完整列表，请参阅[ &#40;sp_addarticle transact-sql&#41; ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)和[sp_addmergearticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)的 **\@schema_option**参数。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“项目属性 - **项目>”对话框的“属性”选项卡上指定架构选项，例如是否将约束和触发器复制到订阅服务器。** **\<** 此选项卡可在新建发布向导和“发布属性 - **发布>”对话框中获得。\<** 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。  
+ 在“项目属性 - **项目>”对话框的“属性”选项卡上指定架构选项，例如是否将约束和触发器复制到订阅服务器。** **\<** 此选项卡可在新建发布向导和“发布属性 - **发布>”对话框中获得。\<** 有关使用该向导和访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)以及[查看和修改发布属性](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-schema-options"></a>指定架构选项  
   

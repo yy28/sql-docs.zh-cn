@@ -40,7 +40,7 @@ ms.locfileid: "73982341"
   
 -   服务器级 DDL 触发器  
   
-**适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本），[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -101,7 +101,7 @@ sys.dm_sql_referencing_entities (
   
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
-|Table|是*|是|  
+|表|是*|是|  
 |视图|是|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
 |CLR 存储过程|No|是|  

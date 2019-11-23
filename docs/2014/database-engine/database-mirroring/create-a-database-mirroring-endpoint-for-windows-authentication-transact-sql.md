@@ -23,7 +23,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797926"
 ---
-# <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>创建使用 Windows 身份验证的数据库镜像端点 (Transact-SQL)
+# <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL)
   本主题介绍如何创建一个数据库镜像端点，该端点通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用 Windows 身份验证。 为了支持数据库镜像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个实例都需要一个数据库镜像端点。 一个服务器实例只能有一个数据库镜像端点，该端点有一个端口。 在创建端点时，数据库镜像端点可以使用本地系统上任何可用的端口。 服务器实例上的所有数据库镜像会话都侦听该端口，并且数据库镜像的所有传入连接都使用该端口。  
   
 > [!IMPORTANT]  
@@ -37,13 +37,13 @@ ms.locfileid: "72797926"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
  服务器实例的身份验证和加密方法由系统管理员建立。  
   
 > [!IMPORTANT]  
 >  不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 CREATE ENDPOINT 权限，或者具有 sysadmin 固定服务器角色的成员身份。 有关详细信息，请参阅 [GRANT 终结点权限 (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -65,37 +65,37 @@ ms.locfileid: "72797926"
   
 4.  若要使用 Transact-SQL 创建使用 Windows 身份验证的端点，请使用 CREATE ENDPOINT 语句。 该语句采用以下常规形式：  
   
-     CREATE ENDPOINT \<endpointName>  
+     CREATE ENDPOINT *endpointName>\<*  
   
      STATE=STARTED  
   
-     AS TCP ( LISTENER_PORT = \<listenerPortList> )  
+     AS TCP ( LISTENER_PORT = *listenerPortList>\<* )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [ AUTHENTICATION = WINDOWS [ \<authorizationMethod> ]  
+     [ AUTHENTICATION = WINDOWS [ *authorizationMethod>\<* ]  
   
      ]  
   
      [ [ **,** ] ENCRYPTION = **REQUIRED**  
   
-     [ ALGORITHM { \<algorithm> } ]  
+     [ ALGORITHM { *algorithm>\<* } ]  
   
      ]  
   
-     [,] ROLE = \<role>  
+     [,] ROLE = *role>\<*  
   
-     “应用程序适配器” 区域）  
+     ）  
   
      其中  
   
-    -   \<endpointName> 是服务器实例的数据库镜像终结点的唯一名称。  
+    -   *endpointName>\<* 是服务器实例的数据库镜像终结点的唯一名称。  
   
     -   STARTED 指定端点启动并开始侦听连接。 数据库镜像端点创建后通常处于 STARTED 状态。 另外，可以启动处于 STOPPED 状态（默认值）或 DISABLED 状态中的会话。  
   
-    -   \<listenerPortList> 是需要服务器在其上侦听数据库镜像消息的单一端口号 (nnnn)。 只允许使用 TCP，指定任何其他协议都会导致发生错误。  
+    -   *listenerPortList> 是需要服务器在其上侦听数据库镜像消息的单一端口号 (nnnn)\<* 。 只允许使用 TCP，指定任何其他协议都会导致发生错误。  
   
          每个计算机系统一次只能使用一个端口号。 在创建端点时，数据库镜像端点可以使用本地系统上任何可用的端口。 若要识别出系统上 TCP 端点当前使用的端口，请使用以下 Transact-SQL 语句：  
   
@@ -106,11 +106,11 @@ ms.locfileid: "72797926"
         > [!IMPORTANT]  
         >  每个服务器实例需要且只需要一个唯一的侦听器端口。  
   
-    -   对于 Windows 身份验证，AUTHENTICATION 选项是可选的，除非您只想让端点使用 NTLM 或 Kerberos 对连接进行身份验证。 \<authorizationMethod> 指定用于对连接进行身份验证的以下方法之一：NTLM、KERBEROS 或 NEGOTIATE。 默认方法 NEGOTIATE 会导致端点使用 Windows 协商协议来选择 NTLM 或 Kerberos。 根据另一侧端点的身份验证级别的不同，协商协议启用具有或没有身份验证的连接。  
+    -   对于 Windows 身份验证，AUTHENTICATION 选项是可选的，除非您只想让端点使用 NTLM 或 Kerberos 对连接进行身份验证。 *authorizationMethod>\<* 指定用于对连接进行身份验证的以下方法之一：NTLM、KERBEROS 或 NEGOTIATE。 默认方法 NEGOTIATE 会导致端点使用 Windows 协商协议来选择 NTLM 或 Kerberos。 根据另一侧端点的身份验证级别的不同，协商协议启用具有或没有身份验证的连接。  
   
     -   默认情况下，ENCRYPTION 设置为 REQUIRED。 这意味着此端点的所有连接都必须加密。 但您可以禁用加密，或对于端点可以选择禁用加密。 可以选择的选项如下：  
   
-        |ReplTest1|“定义”|  
+        |“值”|定义|  
         |-----------|----------------|  
         |DISABLED|指定不对通过连接发送的数据加密。|  
         |SUPPORTED|指定只有在对方端点指定了 SUPPORTED 或者 REQUIRED 时，才加密数据。|  
@@ -118,14 +118,14 @@ ms.locfileid: "72797926"
   
          如果端点要求加密，则对于其他端点，必须将 ENCRYPTION 设置为 SUPPORTED 或 REQUIRED。  
   
-    -   \<algorithm> 提供为终结点指定加密标准的选项。 \<algorithm> 的值可以是以下算法或这些算法的组合之一：RC4、AES、AES RC4 或 RC4 AES。  
+    -   *algorithm>\<* 提供为终结点指定加密标准的选项。 *algorithm>\<* 的值可以是以下算法或这些算法的组合之一：RC4、AES、AES RC4 或 RC4 AES。  
   
          AES RC4 指定此端点协商加密算法，但优先使用 AES 算法。 RC4 AES 指定此端点协商加密算法，但优先使用 RC4 算法。 如果两个端点都指定了这两种算法，但顺序不同，则接受连接的端点入选。  
   
         > [!NOTE]  
         >  不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。  
   
-    -   \<role> 定义服务器可以执行的一个或多个角色。 必须指定 ROLE。 不过，该端点的角色仅针对数据库镜像。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，该端点的角色将被忽略。  
+    -   *role>\<* 定义服务器可以执行的一个或多个角色。 必须指定 ROLE。 不过，该端点的角色仅针对数据库镜像。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，该端点的角色将被忽略。  
   
          若要让服务器实例对于一个数据库镜像会话执行一个角色，对于另一个会话执行另一个角色，请指定 ROLE = ALL。 若要让服务器实例限于执行伙伴角色或见证角色，请分别指定 ROLE = PARTNER 或 ROLE = WITNESS。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "72797926"
      有关 CREATE ENDPOINT 语法的完整说明，请参阅 [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)中使用 Windows 身份验证。  
   
     > [!NOTE]  
-    >  若要更改现有的端点，请使用 [ALTER ENDPOINT (Transact-SQL)](/sql/t-sql/statements/alter-endpoint-transact-sql)中使用 Windows 身份验证。  
+    >  若要更改现有的端点，请使用 [ALTER ENDPOINT (Transact SQL)](/sql/t-sql/statements/alter-endpoint-transact-sql)。  
   
 ###  <a name="TsqlExample"></a> 示例：创建端点以便支持数据库镜像 (Transact-SQL)  
  下面的示例为三个不同的计算机系统上的默认服务器实例创建数据库镜像端点：  
@@ -177,7 +177,7 @@ CREATE ENDPOINT endpoint_mirroring
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>配置数据库镜像端点
   

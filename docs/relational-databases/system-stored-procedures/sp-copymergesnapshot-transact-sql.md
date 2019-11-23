@@ -25,9 +25,9 @@ ms.locfileid: "72381711"
 # <a name="sp_copymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  将指定发布的快照文件夹复制到**\@destination_folder**中列出的文件夹。 此存储过程在发布服务器上对发布数据库执行。  
+  将指定发布的快照文件夹复制到 **\@destination_folder**中列出的文件夹。 此存储过程在发布服务器上对发布数据库执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +39,12 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'` 是要复制其快照内容的发布的名称。 *发布*为**sysname**，无默认值。  
   
-`[ @destination_folder = ] 'destination_folder'` 是要将发布快照内容复制到其中的文件夹的名称。 *destination_folder*的值为**nvarchar （255）**，无默认值。 *Destination_folder*可以是备用位置，如在其他服务器、网络驱动器或可移动介质（如 cd-rom 或可移动磁盘）上。  
+`[ @destination_folder = ] 'destination_folder'` 是要将发布快照内容复制到其中的文件夹的名称。 *destination_folder*为**nvarchar （255）** ，无默认值。 *Destination_folder*可以是备用位置，如在其他服务器、网络驱动器或可移动介质（如 cd-rom 或可移动磁盘）上。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_copymergesnapshot**用于合并复制。 运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本7.0 及更低版本的订阅服务器不能使用备用快照位置。  
   
 ## <a name="permissions"></a>Permissions  

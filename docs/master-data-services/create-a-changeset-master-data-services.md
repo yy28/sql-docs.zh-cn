@@ -23,11 +23,11 @@ ms.locfileid: "73729626"
 
   变更集是主数据的挂起更改的集合。 如果实体需要批准更改，则挂起的更改必须保存在变更集中，然后提交以供管理员批准。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   你必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)  
   
--   你必须至少拥有实体或其属性之一的读取访问权限。  
+-   你至少必须拥有对实体或其属性之一的读取访问权限。  
   
 ## <a name="to-create-a-local-changeset"></a>创建本地变更集  
   

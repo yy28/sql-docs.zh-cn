@@ -60,10 +60,10 @@ ms.locfileid: "72278213"
   
 2.  删除登录名。  
   
-3.  使用**sp_addlogin**系统过程创建新登录名。 为每个相应的登录名指定在步骤 1 @no__t 中为每个**1sid**参数返回的 SID。  
+3.  使用**sp_addlogin**系统过程创建新登录名。 为每个相应的登录名指定 **\@sid**参数的步骤1中返回的 sid。  
   
-## <a name="see-also"></a>请参阅  
- @No__t[数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)-1  
+## <a name="see-also"></a>另请参阅  
+ [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

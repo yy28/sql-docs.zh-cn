@@ -44,7 +44,7 @@ ms.locfileid: "70154555"
   
  要查看完整主题，请参阅 [数据库生命周期管理 (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Azure 主页](http://www.windowsazure.com/)   
  [Azure 开发人员中心](http://www.windowsazure.com/develop/overview/)   
  [Azure 管理中心](http://www.windowsazure.com/manage/overview/)   

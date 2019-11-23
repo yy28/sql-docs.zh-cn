@@ -1,5 +1,5 @@
 ---
-title: sys.databases _exec_compute_node_status （Transact-sql） |Microsoft Docs
+title: sys. dm_exec_compute_node_status （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -28,12 +28,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532748"
 ---
-# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys.databases _exec_compute_node_status （Transact-sql）
+# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys. dm_exec_compute_node_status （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   保存有关所有 PolyBase 节点的性能和状态的附加信息。 为每个节点列出一行。  
   
-|列名|数据类型|说明|范围|  
+|Column Name|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|`int`|与节点关联的唯一数字 id。|在扩展群集中唯一，而不考虑类型。|  
 |process_id|`int`|||  

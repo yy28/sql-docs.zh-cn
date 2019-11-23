@@ -72,18 +72,18 @@ ms.locfileid: "70154592"
   
 -   Teradata  
   
--   XML  
+-   “XML”  
   
 -   ODBC  
   
--   适用于 Power View 的 Microsoft BI 语义模型:在配置了 PowerPivot 库和[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]的 SharePoint 站点上, 此数据源类型可用。 此数据源类型仅可用于 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 演示文稿。 有关详细信息，请参阅 [建立用于 Power View 的完美 BI 语义表格模型](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)。  
+-   用于 Power View 的 Microsoft BI 语义模型：在配置用于 PowerPivot 库和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]的 SharePoint 站点上，此数据源类型可用。 此数据源类型仅可用于 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 演示文稿。 有关详细信息，请参阅 [建立用于 Power View 的完美 BI 语义表格模型](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)。  
   
  有关 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持的数据源和版本的完整列表，请参阅 [Reporting Services 支持的数据源 (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
 ##  <a name="bkmk_create_data_source"></a>创建数据源  
  若要创建数据源，必须具有以下信息：  
   
--   **数据源类型**连接类型, 例如[!INCLUDE[msCoName](../includes/msconame-md.md)]。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 请从连接类型的下拉列表中选择该值。  
+-   **数据源类型**连接类型（例如 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 请从连接类型的下拉列表中选择该值。  
   
 -   **连接信息** 连接信息包含数据源的名称和位置，以及特定于各数据提供程序的连接属性。 “连接字符串”是连接信息的文本表示形式。 例如，如果数据源为某一 SQL Server 数据库，则可以指定该数据库的名称。 对于嵌入数据源，还可以编写在运行时计算的基于表达式的连接字符串。 有关详细信息，请参阅本主题后面部分的 [基于表达式的连接字符串](#bkmk_Expressions_in_connection_strings) 。  
   
@@ -107,11 +107,11 @@ ms.locfileid: "70154592"
   
  在您将某一报表部署到报表服务器或 SharePoint 站点时，其嵌入数据源和共享数据源将独立进行管理。 从您的计算机访问数据所需要的数据源凭据可能不同于从报表服务器访问数据所需要的凭据。  
   
- ![注意](media/rs-fyinote.png "注意")一种很好的做法是在发布报表之后验证数据源连接是否继续成功连接。 如果需要更改凭据，则可以在报表服务器上直接修改。  
+ ![请](media/rs-fyinote.png "注意，")在发布报表后，最佳做法是验证数据源连接是否继续成功连接。 如果需要更改凭据，则可以在报表服务器上直接修改。  
   
- 若要更改报表使用的数据源, 可以在纯模式下修改报表属性, 报表管理器或在 SharePoint 模式下从文档库中修改报表属性。 有关详细信息，请参见以下内容：  
+ 若要更改报表使用的数据源，可以在纯模式下修改报表属性，报表管理器或在 SharePoint 模式下从文档库中修改报表属性。 有关详细信息，请参见以下内容：  
   
--   [在 Reporting Services 数据源中存储凭据](report-data/store-credentials-in-a-reporting-services-data-source.md)[在 Reporting Services 数据源中存储凭据](report-data/store-credentials-in-a-reporting-services-data-source.md)  
+-   在[Reporting Services 数据源](report-data/store-credentials-in-a-reporting-services-data-source.md)[的 Reporting Services 数据源存储凭据中存储凭据](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
 -   [为报表数据源指定凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
@@ -124,16 +124,16 @@ ms.locfileid: "70154592"
 ##  <a name="bkmk_connection_examples"></a> 常用连接字符串示例  
  连接字符串是数据访问接口的连接属性的文本表示形式。 下表列出了各种数据连接类型的连接字符串示例。  
   
-|**数据源**|**示例**|**说明**|  
+|**Data source**|**示例**|**说明**|  
 |---------------------|-----------------|---------------------|  
 |本地服务器上的 SQL Server 数据库|`data source="(local)";initial catalog=AdventureWorks`|将数据源类型设置为 `Microsoft SQL Server`。 有关详细信息，请参阅 [SQL Server 连接类型 (SSRS)](report-data/sql-server-connection-type-ssrs.md)。|  
 |本地服务器上的 SQL Server 数据库|`data source="(local)";initial catalog=AdventureWorks`|将数据源类型设置为 `Microsoft SQL Server`。|  
 |SQL Server 实例<br /><br /> database|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|将数据源类型设置为 `Microsoft SQL Server`。|  
 |SQL Server Express 数据库|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|将数据源类型设置为 `Microsoft SQL Server`。|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)]在云中|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|将数据源类型设置为 `Azure SQL Database`。 有关详细信息，请参阅 [SQL Azure 连接类型 (SSRS)](report-data/sql-azure-connection-type-ssrs.md)。|  
+|云中的 [!INCLUDE[ssSDS](../includes/sssds-md.md)]|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|将数据源类型设置为 `Azure SQL Database`。 有关详细信息，请参阅 [SQL Azure 连接类型 (SSRS)](report-data/sql-azure-connection-type-ssrs.md)。|  
 |SQL Server 并行数据仓库|`HOST=<IP address>;database= AdventureWorks; port=<port>`|将数据源类型设置为 `Microsoft SQL Server Parallel Data Warehouse`。 有关详细信息，请参阅 [SQL Server 并行数据仓库连接类型 (SSRS)](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)。|  
 |本地服务器上的 Analysis Services 数据库|`data source=localhost;initial catalog=Adventure Works DW`|将数据源类型设置为 `Microsoft SQL Server Analysis Services`。 有关详细信息，请参阅[针对 MDX 的 Analysis Services 连接类型 (SSRS)](report-data/analysis-services-connection-type-for-mdx-ssrs.md) 或[针对 DMX 的 Analysis Services 连接类型 (SSRS)](report-data/analysis-services-connection-type-for-dmx-ssrs.md)。|  
-|具有 Sales 透视的 Analysis Services 表格模型数据库|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|将数据源类型设置为 `Microsoft SQL Server Analysis Services`。 在 cube= 设置中指定透视名称。 有关详细信息，请参阅 [透视表（SSAS 表格）](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular)。|  
+|具有 Sales 透视的 Analysis Services 表格模型数据库|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|将数据源类型设置为 `Microsoft SQL Server Analysis Services`。 在 cube= 设置中指定透视名称。 有关详细信息，请参阅[透视表（SSAS 表格）](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular)。|  
 |在本机模式下配置的报表服务器上的报表模型数据源|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|指定报表服务器或文档库 URL 以及报表服务器文件夹或文档库文件夹命名空间中已发布的模型的路径。
 |在 SharePoint 集成模式下配置的报表服务器上的报表模型数据源|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|指定报表服务器或文档库 URL 以及报表服务器文件夹或文档库文件夹命名空间中已发布的模型的路径。|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|将数据源类型设置为 `OLE DB Provider for OLAP Services 8.0`。<br /><br /> 如果将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 属性设置为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，则可以快速连接到 `ConnectTo` 2000 `8.0` 数据源。 若要设置此属性，请使用 **“连接属性”** 对话框中的 **“高级属性”** 选项卡。|  
@@ -143,7 +143,7 @@ ms.locfileid: "70154592"
 |Teradata 数据源|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|将数据源类型设置为 `Teradata`。 连接字符串是包含四个字段的 Internet 协议 (IP) 地址，其中每个字段可以包含一至三位数。 有关详细信息，请参阅 [Teradata 连接类型 (SSRS)](report-data/teradata-connection-type-ssrs.md)。|  
 |XML 数据源、Web 服务|`data source=http://adventure-works.com/results.aspx`|将数据源类型设置为 `XML`。 连接字符串是支持 Web 服务定义语言 (WSDL) 的 Web 服务的 URL。 有关详细信息，请参阅 [XML 连接类型 (SSRS)](report-data/xml-connection-type-ssrs.md)。|  
 |XML 数据源、XML 文档|`http://localhost/XML/Customers.xml`|将数据源类型设置为 `XML`。 其连接字符串是一个指向 XML 文档的 URL。|  
-|XML 数据源、嵌入的 XML 文档|*Empty*|将数据源类型设置为 `XML`。 XML 数据嵌入在报表定义中。|  
+|XML 数据源、嵌入的 XML 文档|空|将数据源类型设置为 `XML`。 XML 数据嵌入在报表定义中。|  
   
 如果无法使用 `localhost` 连接到报表服务器，请检查是否已启用网络协议 TCP/IP 协议。 有关详细信息，请参阅 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)。  
   
@@ -173,11 +173,11 @@ ms.locfileid: "70154592"
   
 -   在发布报表之前，使用表达式替换静态连接字符串。 使用表达式替换静态连接字符串之前，必须保证已经完成了报表的设计。 一旦使用了表达式，就不能在报表设计器中执行查询。 此外，“报表数据”窗格中的字段列表以及“参数”列表将不会自动更新。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [管理报表数据源](report-data/manage-report-data-sources.md)   
- ["数据源属性" 对话框-> "凭据"](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
- ["共享数据源属性" 对话框-> "凭据"](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
+ ["数据源属性" 对话框-"凭据](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
+ ["共享数据源属性" 对话框-"凭据](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
  [创建、修改和删除共享数据源 (SSRS)](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [设置部署属性 (Reporting Services)](tools/set-deployment-properties-reporting-services.md)   
  [为报表数据源指定凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

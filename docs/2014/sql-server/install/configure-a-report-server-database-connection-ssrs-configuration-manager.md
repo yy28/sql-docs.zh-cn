@@ -44,7 +44,7 @@ ms.locfileid: "71952633"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 `System.Data.SqlClient` 连接到承载报表服务器数据库的[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 如果使用的是 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的本地实例，报表服务器将使用共享内存建立连接。 如果使用的是报表服务器数据库的远程数据库服务器，则可能必须根据所使用的版本启用远程连接。 如果使用的是 Enterprise Edition，则默认情况下会启用 TCP/IP 远程连接。  
   
- 若要验证实例是否接受远程连接，请依次单击“开始”、“所有程序”、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”、“SQL Server 配置管理器”，然后确认为每个服务启用了 TCP/IP 协议。  
+ 若要验证实例是否接受远程连接，请依次单击“开始”、“所有程序”、 **、“配置工具”、“SQL Server 配置管理器”，然后确认为每个服务启用了 TCP/IP 协议**[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]。  
   
  启用远程连接时，也会启用客户端协议和服务器协议。 若要确认协议已启用，请依次单击 **“开始”** 、 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** 、 **“SQL Server 配置管理器”** 、 **“SQL Server 网络配置”** ，再单击 **“MSSQLSERVER 协议”** 。 有关详细信息，请参阅 [联机丛书中的](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) 启用或禁用服务器网络协议 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71952633"
 ### <a name="storing-database-connection-information"></a>存储数据库连接信息  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在下列 RSreportserver.config 设置中存储和加密连接信息。 必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 rsconfig 实用工具为这些设置创建加密值。  
   
- 并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值配置连接（即使用服务帐户进行连接），则 < `LogonUser` >、< `LogonDomain` > 和 < @no__t > 将为空，如下所示：  
+ 并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值配置连接（即使用服务帐户进行连接），则 <`LogonUser`>、<`LogonDomain`> 和 <`LogonCred`> 将为空，如下所示：  
   
 ```  
 <Dsn></Dsn>  
@@ -116,12 +116,12 @@ ms.locfileid: "71952633"
  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具可以确定特定报表服务器实例所使用的报表服务器数据库。 若要查找该名称，请连接到该报表服务器实例并打开“数据库安装”页。  
   
 ## <a name="using-a-different-report-server-database-or-moving-a-report-server-database"></a>使用不同的报表服务器数据库或移动报表服务器数据库  
- 可以通过更改连接信息将报表服务器实例配置为使用不同的报表服务器数据库。 切换数据库的一个常见示例是部署生产报表服务器。 通常，生产服务器是通过从测试报表服务器数据库切换到生产报表服务器数据库来实现的。您还可以将报表服务器数据库移动到另一台计算机上。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) 升级和迁移 Reporting Services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 可以通过更改连接信息将报表服务器实例配置为使用不同的报表服务器数据库。 切换数据库的一个常见示例是部署生产报表服务器。 从测试 Report Server 数据库切换到生产 Report Server 数据库通常是生产服务器的推出方式。您还可以将 Report Server 数据库移到另一台计算机上。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) 升级和迁移 Reporting Services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>将多个报表服务器配置为使用同一个报表服务器数据库  
  可以将多个报表服务器配置为使用同一个报表服务器数据库。 此部署配置称为扩展部署。 如果要在服务器群集中运行多个报表服务器，则此配置为必备条件。 但是，如果要将服务应用程序分段，或者要测试新的报表服务器实例的安装和设置以将其与现有报表服务器安装进行比较，则也以可使用此配置。 有关详细信息，请参阅[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建报表服务器数据库（SSRS 配置管理器）](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  

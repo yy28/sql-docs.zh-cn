@@ -23,12 +23,12 @@ ms.locfileid: "73728234"
 
   实体同步是实体版本间的单向可重复同步。 它提供了一种在不同模型间共享实体数据的方法。 可以编辑和删除自己创建的同步关系。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  编辑实体同步关系的先决条件。  
   
 -   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   你必须是目标模型的模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   你必须是目标模型的模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   至少需要拥有对源实体及其所有属性和成员的读取访问权限。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73728234"
   
 -   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   你必须是目标模型的模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   你必须是目标模型的模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
  在编辑实体同步关系时，请注意以下事项。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73728234"
   
  **编辑实体同步关系**  
   
-1.  在主数据管理器中，单击“系统管理”。  
+1.  在“主数据管理器”中，单击“系统管理”。  
   
 2.  在“模型视图” 页上，从菜单栏中指向“管理” ，然后单击“实体同步”。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73728234"
   
  **删除实体同步关系**  
   
-1.  在主数据管理器中，单击“系统管理”。  
+1.  在“主数据管理器”中，单击“系统管理”。  
   
 2.  在“模型视图” 页上，从菜单栏中指向“管理” ，然后单击“实体同步”。  
   
@@ -86,6 +86,6 @@ ms.locfileid: "73728234"
   
 ## <a name="see-also"></a>另请参阅  
  [创建和执行实体同步关系 (Master Data Services)](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
- [实体同步关系 &#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
+ [实体同步关系 (Master Data Services)](../master-data-services/entity-sync-relationship-master-data-services.md)  
   
   

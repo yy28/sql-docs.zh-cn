@@ -37,7 +37,7 @@ ms.locfileid: "73729235"
   
  层次结构权限应用于您向其分配权限的模型版本，并应用于版本的任何将来副本。 它们不应用于比您向其分配权限的版本更早的版本。  
   
-|权限|说明|  
+|权限|描述|  
 |----------------|-----------------|  
 |**读取**|显示成员。<br /><br /> <br /><br /> 注意：如果仅将“读取”权限分配给“根”，则“根”下的成员为只读的；但是，在显式层次结构和集合中，用户可以将成员移到“根”并可以将新成员添加到“根”。|  
 |**创建**|层次结构成员权限中不提供创建权限。|  
@@ -45,7 +45,7 @@ ms.locfileid: "73729235"
 |**删除**|显示成员，用户可以删除它们。|  
 |**拒绝**|不显示成员。|  
   
- 在 **“层次结构成员”** 选项卡上，分配的权限不立即生效。 应用该权限的频率取决于 **数据库中“系统设置”表的** “成员安全处理间隔设置” [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。 可以按照[立即应用成员权限 & #40;Master Data Services & #41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)中的以下步骤立即应用成员权限。  
+ 在 **“层次结构成员”** 选项卡上，分配的权限不立即生效。 应用该权限的频率取决于 **数据库中“系统设置”表的** “成员安全处理间隔设置” [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。 可以按照 [立即应用成员权限 (Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)中的以下步骤立即应用成员权限。  
   
 > [!NOTE]  
 >  不能将层次结构成员权限分配给递归层次结构、具有显式顶端的派生层次结构和具有隐藏级别的层次结构。  
@@ -60,7 +60,7 @@ ms.locfileid: "73729235"
   
 -   如果给一个层次结构节点分配“更新” 和“创建” 权限，而给另一个节点分配“更新” 和“删除” 权限，则该节点中的成员可以更新。  
   
--   如果给一个层次结构节点分配**创建**/**读取**/**更新**/**删除**的任意权限组合，给另一个节点分配**拒绝**权限，则对该节点中的成员访问被拒绝。  
+-   如果给一个层次结构节点分配“创建” **创建**/**读取**/**Update**/**删除** 的任意权限组合，另一个节点分配“拒绝” **拒绝** 权限，则对节点中的成员访问被拒绝。  
   
 ## <a name="external-resources"></a>外部资源  
  msdn.com 上的博客文章 [安全性改进](https://go.microsoft.com/fwlink/p/?LinkId=615376)。  
@@ -68,7 +68,7 @@ ms.locfileid: "73729235"
 ## <a name="see-also"></a>另请参阅  
  [分配层次结构成员权限 (Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
+ [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)   
  [层次结构 (Master Data Services)](../master-data-services/hierarchies-master-data-services.md)   
  [立即应用成员权限 (Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   

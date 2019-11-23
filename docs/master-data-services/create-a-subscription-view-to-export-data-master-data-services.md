@@ -26,12 +26,12 @@ ms.locfileid: "73728478"
 
   创建订阅视图，以便将 Master Data Services 数据导出到订阅系统。 你打算在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中创建数据的视图。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“集成管理”** 功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>创建和编辑订阅视图  
   
@@ -63,19 +63,19 @@ ms.locfileid: "73728478"
 11. 单击 **“保存”** 。  
   
 ## <a name="view-information"></a>查看信息  
- 对于创建的每个视图，系统都会在网格中添加一行（其中包含十列）。 下表对这些列进行了说明。  
+ 对于创建的每个视图，系统都会在网格中添加一行（其中包含十列）。 下表介绍了这些列。  
   
-|列|说明|  
+|Column|描述|  
 |------------|-----------------|  
 |状态|视图状态。<br /><br /> 单击 "**保存**" 时，将显示![更新状态](../master-data-services/media/mds-statusicon-updating.png "I用于更新状态的 con ")图像的图标，指示该视图正在更新。<br /><br /> 如果在创建或编辑视图时出现错误，则显示 "![错误状态](../master-data-services/media/mds-statusicon-error.png "Icon "错误状态")" 图像图标。<br /><br /> 否则，状态为 "正常"，将显示!["确定状态](../master-data-services/media/mds-statusicon-ok.png "Icon 状态 ")" 图像的图标。|  
-|名称|订阅视图名称。|  
+|NAME|订阅视图名称。|  
 |模型|模型名称。|  
-|版本|版本名称。|  
+|Version|版本名称。|  
 |版本标志|版本标志名称。|  
 |派生层次结构|派生层次结构名称。|  
 |实体|实体名称。|  
-|格式|指定视图中数据的类型。|  
-|级别|在视图中指定级别数，它仅用于显式级别或派生级别视图格式。|  
+|“格式”|指定视图中数据的类型。|  
+|level|在视图中指定级别数，它仅用于显式级别或派生级别视图格式。|  
 |包括删除成员|指示视图中是否包括软删除的成员。|  
   
  单击视图后可看到以下信息：  

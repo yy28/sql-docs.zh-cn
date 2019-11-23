@@ -38,7 +38,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>参数  
- @credential = *\@credential*  
+ @credential = *\@凭据*  
  与启用 Stretch 的本地数据库关联的数据库范围凭据。  
   
  @with_copy = *\@with_copy*  
@@ -53,10 +53,10 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 > 0 （失败）  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 db_owner 权限。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
  当你运行[sp_rda_reauthorize_db （transact-sql）](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)以重新连接到远程 Azure 数据库时，此操作会自动将查询模式重置为 LOCAL_AND_REMOTE，这是 Stretch Database 的默认行为。 也就是说，查询从本地和远程数据返回结果。  
   
 ## <a name="example"></a>示例  
@@ -69,8 +69,8 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sp_rda_deauthorize_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
- [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
+## <a name="see-also"></a>另请参阅  
+ [sys. sp_rda_deauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

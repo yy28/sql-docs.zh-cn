@@ -21,7 +21,7 @@ ms.locfileid: "70874482"
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是一种专用的 SharePoint 文档库，它为包含 PowerPivot 数据的已发布 Excel 工作簿和 Reporting Services 报表提供丰富的预览和文档管理功能。  
   
 > [!NOTE]  
->  根据配置您的服务器的方式，您可能会在特定文档的预览区域中看到警告或错误消息。 在 Excel 工作簿设置为只要打开它就自动刷新其数据时，可能会显示消息。 如果 Excel Services 配置为显示“数据刷新时警告”错误消息，则数据刷新警告消息将以预览图像出现。 场或服务管理员可以修改配置设置，以允许显示实际工作表的预览。 有关详细信息，请参阅[在管理中心中创建受信任的位置为 PowerPivot 站点](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+>  根据配置您的服务器的方式，您可能会在特定文档的预览区域中看到警告或错误消息。 在 Excel 工作簿设置为只要打开它就自动刷新其数据时，可能会显示消息。 如果 Excel Services 配置为显示“数据刷新时警告”错误消息，则数据刷新警告消息将以预览图像出现。 场或服务管理员可以修改配置设置，以允许显示实际工作表的预览。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ##  <a name="bkmk_top"></a> 本主题内容  
   
@@ -49,7 +49,7 @@ ms.locfileid: "70874482"
 >  Power Pivot 库需要 Microsoft Silverlight。  Microsoft Edge 浏览器不支持 Silverlight。   
 > 若要在 Microsoft Edge 中查看库内容，请单击 Power Pivot 库中的 "**库**" 选项卡，然后将文档库视图更改为 "**所有文档**"。    
 > 若要更改默认视图，请单击“库” 选项卡，然后单击“修改视图”。 单击“使其成为默认视图”，然后单击“确定”保存默认视图。  
->  有关 Microsoft Edge 支持的功能的详细信息，请参阅 Windows 博客[，一段时间过去的一段时间，第2部分：说到 ActiveX、VBScript .。。](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  有关 Microsoft Edge 支持的内容的详细信息，请参阅 Windows 博客，一段时间[中断，第2部分：说：对 ActiveX、VBScript](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/) 。  
   
  有关先决条件的完整列表，请参阅[创建和自定义 PowerPivot 库](create-and-customize-power-pivot-gallery.md)。  
   
@@ -69,13 +69,13 @@ ms.locfileid: "70874482"
   
 1.  保存该文件。  
   
-2.  1.  **Excel 2010：** 在 "文件" 菜单中，单击 "**保存" & 发送**"。  
+2.  1.  **Excel 2010：** 在“文件”菜单中，单击“保存并发送”。  
   
     2.  单击 **“保存到 SharePoint”** 。  
   
     3.  如果希望使用“Excel Services 选项”选择要发布的各个工作表或参数，请单击 **“发布选项”** 。 例如，使用“Excel Services 选项”中的“参数”选项卡，可以选择在所发布的工作簿中显示哪些切片器。  
   
-    1.  **Excel 2013：** 在 "文件" 菜单中，单击 "**保存**"。  
+    1.  **Excel 2013：**  在“文件”菜单上，单击 **“保存”** 。  
   
     2.  如果希望使用“Excel Services 选项”选择要发布的各个工作表或参数，请单击 **“浏览器查看选项”** 。 例如，使用“Excel Services 选项”中的“参数”选项卡，可以选择在所发布的工作簿中显示哪些切片器。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "70874482"
   
 3.  单击右侧的向下箭头，然后选择 **“编辑属性”** 。  
   
-4.  单击“保存”。 保存文档将强制快照服务重新生成预览图像。  
+4.  单击 **“保存”** 。 保存文档将强制快照服务重新生成预览图像。  
   
 ##  <a name="bkmk_known_issues"></a> 已知问题  
   
@@ -160,7 +160,7 @@ ms.locfileid: "70874482"
   
  **“PowerPivot 库文档”** 内容类型不是自动添加到文档库的。除非您启用不支持的内容类型，否则不会遇到此问题。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在管理中心中为 PowerPivot 站点创建受信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [删除 PowerPivot 库](delete-power-pivot-gallery.md)   
  [创建和自定义 PowerPivot 库](create-and-customize-power-pivot-gallery.md)   

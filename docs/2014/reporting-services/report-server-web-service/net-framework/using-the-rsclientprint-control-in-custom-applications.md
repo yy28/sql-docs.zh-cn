@@ -42,7 +42,7 @@ ms.locfileid: "70154995"
 -   查阅有关图像 (EMF) 呈现的联机丛书主题，以了解如何呈现页面以供打印预览和输出。  
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient 概述  
- 该控件显示一个自定义打印对话框，它支持其他打印对话框常见的功能，包括打印预览、指定特定页和范围的页面选择、页边距和打印方向等功能。 该控件打包为 CAB 文件。 “打印”对话框中的文本已本地化为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中支持的所有语言。 RSPrintClient ActiveX 控件使用图像呈现扩展插件 (EMF) 打印报表。 使用以下 EMF 设备信息:StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight 和 PageWidth。 不支持图像呈现的其他设备信息设置。  
+ 该控件显示一个自定义打印对话框，它支持其他打印对话框常见的功能，包括打印预览、指定特定页和范围的页面选择、页边距和打印方向等功能。 该控件打包为 CAB 文件。 “打印”对话框中的文本已本地化为  **中支持的所有语言**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 RSPrintClient ActiveX 控件使用图像呈现扩展插件 (EMF) 打印报表。 使用的 EMF 设备信息包括：StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight 和 PageWidth。 不支持图像呈现的其他设备信息设置。  
   
 ### <a name="language-support"></a>语言支持  
  该打印控件可以提供不同语言的用户界面文本，接受符合不同度量系统标准的输入值。 所用的语言和度量系统由 Culture 和 UICulture 属性确定。 这两个属性都接受 LCID 值。 如果为所支持语言的变体语言指定 LCID，则会应用最接近的匹配语言。 如果不支持指定的 LCID，并且没有最接近的匹配 LCID，则会应用英语（美国）。  
@@ -65,16 +65,16 @@ ms.locfileid: "70154995"
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint 属性  
   
-|属性|type|RW|默认|描述|  
+|属性|sysobjects|RW|Default|描述|  
 |--------------|----------|--------|-------------|-----------------|  
-|MarginLeft|Double|RW|报表设置|获取或设置左边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
-|MarginRight|Double|RW|报表设置|获取或设置右边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
-|MarginTop|Double|RW|报表设置|获取或设置上边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
-|MarginBottom|Double|RW|报表设置|获取或设置下边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
-|PageWidth|Double|RW|报表设置|获取或设置页宽。 如果开发人员或报表定义中未进行设置，则默认值为 215.9 毫米。|  
-|PageHeight|Double|RW|报表设置|获取或设置页高。 如果开发人员或报表定义中未进行设置，则默认值为 279.4 毫米。|  
-|Culture|Int32|RW|浏览器区域设置|指定区域设置标识符 (LCID)。 此值将确定用户输入的度量单位。 例如, 如果用户键入`3`, 如果语言为英语 (美国), 则值将以毫米为单位进行度量。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
-|UICulture|String|RW|客户端区域性|指定对话框字符串的本地化语言。 "打印" 对话框中的文本已本地化为以下语言:简体中文、繁体中文、英语、法语、德语、意大利语、日语、韩语和西班牙语。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
+|MarginLeft|双精度|RW|报表设置|获取或设置左边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
+|MarginRight|双精度|RW|报表设置|获取或设置右边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
+|MarginTop|双精度|RW|报表设置|获取或设置上边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
+|MarginBottom|双精度|RW|报表设置|获取或设置下边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
+|PageWidth|双精度|RW|报表设置|获取或设置页宽。 如果开发人员或报表定义中未进行设置，则默认值为 215.9 毫米。|  
+|PageHeight|双精度|RW|报表设置|获取或设置页高。 如果开发人员或报表定义中未进行设置，则默认值为 279.4 毫米。|  
+|Culture|Int32|RW|浏览器区域设置|指定区域设置标识符 (LCID)。 此值将确定用户输入的度量单位。 例如，如果用户键入 `3`，则该值将用毫米计量（如果语言为英语（美国）。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
+|UICulture|String|RW|客户端区域性|指定对话框字符串的本地化语言。 “打印”对话框中的文本已本地化为以下语言：简体中文、繁体中文、英语、法语、德语、意大利语、日语、朝鲜语和西班牙语。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
 |Authenticate|Boolean|RW|False|指定控件是否向报表服务器发出 GET 命令，以启动无会话打印连接。|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>何时设置 Authenticate 属性  
@@ -93,7 +93,7 @@ ms.locfileid: "70154995"
   
 -   60677965-AB8B-464f-9B04-4BA871A2F17F  
   
- 在 Azure SQL Reporting 中运行报表时, 请使用以下 CLSID 值。  
+ 当在 Azure SQL 报告中运行报表时，使用以下 CLSID 值。  
   
 -   3DD32426-554D-48C0-A200-65D3BF880E38  
   
@@ -102,9 +102,9 @@ ms.locfileid: "70154995"
 ### <a name="rsprintclient-support-for-the-print-method"></a>RSPrintClient 对 Print 方法的支持  
  RSClientPrint 对象支持用于启动“打印”对话框的 Print 方法。 Print 方法具有以下参数。  
   
-|参数|I/O|类型|描述|  
+|参数|I/O|sysobjects|描述|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|String|指定 Report Server 虚拟目录 (例如, https://adventure-works/reportserver) 。|  
+|ServerPath|In|String|指定 Report Server 虚拟目录（例如 https://adventure-works/reportserver)。|  
 |ReportPathParameters|In|String|指定报表在报表服务器文件夹命名空间中的全名，包括参数。 对报表的检索是通过 URL 访问进行的。 例如：“/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234”|  
 |ReportName|In|String|报表的简称（在上面的示例中，简称为 Employee Sales Summary）。 它显示在“打印”对话框和打印队列中。|  
   
@@ -141,7 +141,7 @@ ms.locfileid: "70154995"
   
  `</BODY>`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用打印控件从浏览器中打印报表（报表生成器和 SSRS）](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [打印报表（报表生成器和 SSRS）](../../report-builder/print-reports-report-builder-and-ssrs.md)   
  [图像设备信息设置](../../image-device-information-settings.md)  

@@ -38,11 +38,11 @@ ms.locfileid: "73637896"
 ##  <a name="wellknown"></a> 查找广泛使用的、众所周知的 Microsoft 属性的信息  
  Microsoft 定义了数百个在多种上下文中使用的文档属性，但这只是每种文件格式使用的可用属性的一小部分。 在常用的 Windows 属性中包括一小部分泛型属性。 下表显示了众所周知的泛型属性的一些示例。 下表显示了已知名称、Windows 规范名称（来自 Microsoft 发布的属性说明）、属性集 GUID、属性整数标识符和简短说明。  
   
-|已知名称|Windows 规范名称|属性集 GUID|整数标识符|说明|  
+|已知名称|Windows 规范名称|属性集 GUID|整数标识符|描述|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|给定项的一个或多个创作者。|  
 |Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|分配给该项的一组关键字（也称为标记）。|  
-|类型|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|假设的文件类型，基于其规范类型。|  
+|sysobjects|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|假设的文件类型，基于其规范类型。|  
 |标题|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|项的标题。 例如，文档的标题、邮件的主题、照片的题注或音乐曲目的名称。|  
   
  为了提倡在文件格式之间保持一致性，Microsoft 为几类文档确定了部分常用的高优先级文档属性。 其中包括通信、联系人、文档、音乐文件、图片和视频。 有关每个类别排名靠前的属性的详细信息，请参阅 Windows 搜索文档中的 [system-defined properties for custom file formats](https://go.microsoft.com/fwlink/?LinkId=144336) （自定义文件格式的系统定义属性）。  

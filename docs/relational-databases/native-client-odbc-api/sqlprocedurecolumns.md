@@ -32,7 +32,7 @@ ms.locfileid: "73785965"
   
  下表列出了结果集返回的列以及这些列如何通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序进行扩展以处理**udt**和**xml**数据类型：  
   
-|列名|说明|  
+|列名|描述|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|返回包含 UDT（用户定义类型）的目录的名称。|  
 |SS_UDT_SCHEMA_NAME|返回包含 UDT 的架构的名称。|  

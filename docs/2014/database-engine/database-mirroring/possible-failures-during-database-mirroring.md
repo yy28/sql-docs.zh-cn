@@ -90,7 +90,7 @@ ms.locfileid: "70874500"
   
  为了使连接保持开放，服务器实例必须能够在超时期限内在该连接上接收到 ping，此期限为定义的镜像超时时间再加上再发送一个 ping 所需的时间。 在超时期限内收到 ping 指示连接仍是开放的，且服务器实例正在通过此连接进行通信。 接收到 ping 后，服务器实例将重置此连接上的超时计数器。  
   
- 如果未在超时期限内从此连接上收到 ping，则服务器实例认为此连接已超时。服务器实例将关闭超时连接，然后根据会话的状态和运行模式处理超时事件。  
+ 如果在超时期限内未收到连接的 ping，则服务器实例会将连接视为已超时。服务器实例将关闭超时连接，并根据会话的状态和运行模式处理超时事件。  
   
  即使其他服务器实际工作正常，超时也被认为是一个故障。 如果会话的超时值太短而不能使任一伙伴做出正常响应，则会产生虚假故障。 如果一个服务器实例成功地与另一个服务器实例实现通信，但后者的响应时间太短，以致于无法在超时期限过期之前接收到 ping，则会产生错误故障。  
   
@@ -107,9 +107,9 @@ ms.locfileid: "70874500"
 ## <a name="responding-to-an-error"></a>响应错误  
  无论出现何种错误类型，检测到错误的服务器都会根据实例的角色、会话运行模式以及会话中任何其他连接的状态做出相应的响应。 有关丢失伙伴后会发生的情况的信息，请参阅 [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [估计在角色切换期间服务的中断（数据库镜像）](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
+ [数据库镜像运行模式](database-mirroring-operating-modes.md)   
  [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)  
   

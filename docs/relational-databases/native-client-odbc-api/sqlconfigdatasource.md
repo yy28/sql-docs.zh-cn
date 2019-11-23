@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource |Microsoft Docs
+title: SQLConfigDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql

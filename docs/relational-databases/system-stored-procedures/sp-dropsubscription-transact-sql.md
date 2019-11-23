@@ -1,5 +1,5 @@
 ---
-title: sp_dropsubscription (Transact-sql) |Microsoft Docs
+title: sp_dropsubscription （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -42,13 +42,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`关联发布的名称。 *发布*为**sysname**, 默认值为 NULL。 如果为**all**, 则取消对指定订阅服务器的所有发布的所有订阅。 *发布*是必需的参数。  
+`[ @publication = ] 'publication'` 是关联发布的名称。 *发布*为**sysname**，默认值为 NULL。 如果为**all**，则取消对指定订阅服务器的所有发布的所有订阅。 *发布*是必需的参数。  
   
-`[ @article = ] 'article'`项目的名称。 *项目*的值为**sysname**, 默认值为 NULL。 如果为**all**, 则删除针对每个指定发布和订阅服务器的所有项目的订阅。 对于允许立即更新的发布, 请使用**all** 。  
+`[ @article = ] 'article'` 是项目的名称。 *项目*的值为**sysname**，默认值为 NULL。 如果为**all**，则删除针对每个指定发布和订阅服务器的所有项目的订阅。 对于允许立即更新的发布，请使用**all** 。  
   
-`[ @subscriber = ] 'subscriber'`将删除其订阅的订阅服务器的名称。 *订阅服务器*的**sysname**, 无默认值。 如果为**all**, 则删除所有订阅服务器的所有订阅。  
+`[ @subscriber = ] 'subscriber'` 是将删除其订阅的订阅服务器的名称。 *订阅服务器*的**sysname**，无默认值。 如果为**all**，则删除所有订阅服务器的所有订阅。  
   
-`[ @destination_db = ] 'destination_db'`目标数据库的名称。 *destination_db*的值为**sysname**, 默认值为 NULL。 如果为 NULL，则删除该订阅服务器中的所有订阅。  
+`[ @destination_db = ] 'destination_db'` 是目标数据库的名称。 *destination_db*的默认值为**sysname**，默认值为 NULL。 如果为 NULL，则删除该订阅服务器中的所有订阅。  
   
 `[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -57,9 +57,9 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** (成功) 或**1** (失败)  
+ **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
  **sp_dropsubscription**用于快照复制和事务复制。  
   
  如果删除即时同步发布中的一个项目上的订阅，则不能再对其进行重新添加，除非是删除发布中所有项目上的订阅并同时对它们进行重新添加。  
@@ -67,13 +67,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有**sysadmin**固定服务器角色的成员、 **db_owner**固定数据库角色的成员或创建订阅的用户才能执行**sp_dropsubscription**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_addsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_changesubstatus &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_addsubscription &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubstatus &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

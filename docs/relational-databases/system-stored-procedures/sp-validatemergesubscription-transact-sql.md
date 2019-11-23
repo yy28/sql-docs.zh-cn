@@ -48,7 +48,7 @@ sp_validatemergesubscription [@publication=] 'publication'
   
 `[ @level = ] 'level'` 是要执行的验证类型。 *级别*为**tinyint**，无默认值。 级别可以为下列值之一：  
   
-|级别值|说明|  
+|级别值|描述|  
 |-----------------|-----------------|  
 |**1**|只验证行计数。|  
 |**2**|验证行计数和校验和。|  
@@ -57,15 +57,15 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergesubscription**用于合并复制。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_validatemergesubscription**。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [验证复制的数据](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_validatemergepublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
+ [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
   
   

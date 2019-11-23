@@ -38,7 +38,7 @@ class SQLErrorLogEvent
 };  
 ```  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>“属性”  
  SQLErrorLogEvent 类定义以下属性。  
   
 |||  
@@ -49,13 +49,13 @@ class SQLErrorLogEvent
 |消息|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 事件消息。|  
 |ProcessInfo|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 与事件的源服务器进程 ID (SPID) 有关的信息。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 |||  
 |-|-|  
 |MOF|Sqlmgmproviderxpsp2up.mof|  
 |DLL|Sqlmgmprovider.dll|  
-|命名空间|\root\Microsoft\SqlServer\ComputerManagement10|  
+|Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>示例  
  下面的示例显示如何检索指定的日志文件中所有记录的事件的值。 若要运行该示例，请将 \<*Instance_Name*> 替换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称，例如 "Instance1"，并将 "File_Name" 替换为错误日志文件的名称，如 "错误日志"。  

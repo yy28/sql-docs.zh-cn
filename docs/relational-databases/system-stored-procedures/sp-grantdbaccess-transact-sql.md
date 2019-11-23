@@ -43,30 +43,30 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @loginame = ] 'login_ '` 是要映射到新数据库用户的 Windows 组、Windows 登录名或 @no__t 1 登录名。 Windows 组和 Windows 登录名的名称必须用*域*\\*登录*名的 windows 域名限定;例如， **LONDON\Joeb**。 登录名不能已映射到数据库中的用户。 *login*是**sysname**，无默认值。  
+`[ @loginame = ] 'login_ '` 是要映射到新数据库用户的 Windows 组、Windows 登录名或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 Windows 组和 Windows 登录名的名称必须以*域*中的 windows 域名限定\\*登录*名;例如， **LONDON\Joeb**。 登录名不能已映射到数据库中的用户。 *login*是**sysname**，无默认值。  
   
-@no__t 为新数据库用户的名称。 *name_in_db*是一种输出变量，其数据类型为**sysname**，默认值为 NULL。 如果未指定，则使用*登录名*。 如果指定为值为 NULL 的输出变量，则 **@no__t 1name_in_db**设置为*login*。 *name_in_db*不得存在于当前数据库中。  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` 是新数据库用户的名称。 *name_in_db*是数据类型为**sysname**的输出变量，默认值为 NULL。 如果未指定，则使用*登录名*。 如果指定为值为 NULL 的输出变量，则 **\@name_in_db**设置为*login*。 当前数据库中不能存在*name_in_db* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
  **sp_grantdbaccess**调用 CREATE USER，后者支持其他选项。 有关创建数据库用户的信息，请参阅[CREATE &#40;USER transact-sql&#41;](../../t-sql/statements/create-user-transact-sql.md)。 若要从数据库中删除数据库用户，请使用[DROP user](../../t-sql/statements/drop-user-transact-sql.md)。  
   
  不能在用户定义的事务中执行**sp_grantdbaccess** 。  
   
-## <a name="permissions"></a>权限  
- 要求具有**db_owner**固定数据库角色或**db_accessadmin**固定数据库角色的成员身份。  
+## <a name="permissions"></a>Permissions  
+ 需要**db_owner**固定数据库角色的成员身份或**db_accessadmin**固定数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用 `CREATE USER` 将 Windows 登录名 `Edmonds\LolanSo` 的数据库用户添加到当前数据库。 新用户名为 `Lolan`。 这是创建数据库用户的首选方法。  
+ 下面的示例使用 `CREATE USER` 将 Windows 登录 `Edmonds\LolanSo` 的数据库用户添加到当前数据库。 新用户名为 `Lolan`。 这是创建数据库用户的首选方法。  
   
 ```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
  [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)   

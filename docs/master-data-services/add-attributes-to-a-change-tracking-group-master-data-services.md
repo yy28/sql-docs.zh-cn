@@ -30,14 +30,14 @@ ms.locfileid: "73728814"
 > [!NOTE]  
 >  在您向更改跟踪组添加属性后，在属性值发生更改时，该属性在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中将标记为“已更改”。 创建业务规则以便基于更改执行操作。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
--   要添加到更改跟踪组的属性必须存在。 有关详细信息，请参阅[创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)。  
+-   要添加到更改跟踪组的属性必须存在。 有关详细信息，请参阅 [创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)。  
   
 ### <a name="to-add-attributes-to-a-change-tracking-group"></a>向更改跟踪组添加属性  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73728814"
   
 4.  单击 **“属性”** 。  
   
-5.  在“管理属性”页上，执行下列操作之一。  
+5.  在“管理属性” 页上，执行下列操作之一。  
   
     -   如果属性是针对叶成员，则从“成员类型” 列表框选择“叶” 。  
   

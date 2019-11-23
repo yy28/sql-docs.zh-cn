@@ -29,12 +29,12 @@ ms.locfileid: "73729790"
 > [!NOTE]  
 >  版本标志一次只能分配给一个版本。 如果您分配的标志已分配给另一个版本，则该标志将移到您选择的版本。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   您必须已创建要分配的版本标志。 有关详细信息，请参阅 [创建版本标志 (Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)。  
   

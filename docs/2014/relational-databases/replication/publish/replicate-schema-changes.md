@@ -20,7 +20,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882247"
 ---
-# <a name="replicate-schema-changes"></a>Replicate Schema Changes
+# <a name="replicate-schema-changes"></a>复制架构更改
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中复制架构更改。  
   
  如果对发布的项目进行以下架构更改，则会默认将其传播到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器：  

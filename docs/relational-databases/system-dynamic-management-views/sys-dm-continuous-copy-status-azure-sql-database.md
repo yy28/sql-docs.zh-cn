@@ -35,9 +35,9 @@ ms.locfileid: "73844504"
 如果使用的是 SQL 数据库 V12，则应使用[sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) （因为*dm_continuous_copy_status*仅适用于 V11）。
 
   
-|列名|数据类型|说明|  
+|Column Name|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**copy_guid**|**uniqueidentifier**|副本数据库的唯一 ID。|  
+|**copy_guid**|**ssNoversion**|副本数据库的唯一 ID。|  
 |**partner_server**|**sysname**|链接 SQL Database 服务器的名称。|  
 |**partner_database**|**sysname**|链接 SQL Database 服务器上链接数据库的名称。|  
 |**last_replication**|**datetimeoffset**|上次应用的复制事务的时间戳。|  
@@ -48,10 +48,10 @@ ms.locfileid: "73844504"
 |**is_target_role**|**bit**|0 = 复制关系源<br /><br /> 1 = 复制关系目标|  
 |**is_interlink_connected**|**bit**|1 = 互连已连接。<br /><br /> 0 = 互连已断开连接。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要检索数据，需要**db_owner**数据库角色的成员身份。 Dbo 用户、 **dbmanager**数据库角色的成员以及 sa 登录名也可以查询此视图。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **Sys. dm_continuous_copy_status**视图在**资源**数据库中创建，并在所有数据库（包括逻辑 master）中可见。 但是，在主数据库中查询此视图将返回空集合。  
   
  如果在数据库中终止了连续复制关系，则**sys.databases dm_continuous_copy_status**视图中该数据库的行将会消失。  

@@ -1,5 +1,5 @@
 ---
-title: 任务 4：管理和查看结果 |Microsoft Docs
+title: 任务4：管理和查看结果 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72313653"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>任务 4：管理和查看结果
+# <a name="task-4-manaing-and-viewing-results"></a>任务 4：管理和查看报表
   在该任务中，您查看计算机辅助清理的结果，还对供应商数据执行交互式清理。 有关更多详细信息，请参阅[交互式清理阶段](https://msdn.microsoft.com/library/hh213061.aspx#Interactive)。  
   
 1.  从域列表中选择 "**联系人电子邮件**域"。  
   
 2.  切换到右窗格中的 "**无效**" 选项卡。 请注意，末尾缺少字符 "" 的两个电子邮件地址。 通过域规则发现的这两封电子邮件都无效，要求所有电子邮件地址以 **\@adventure-works.com** （包含 ""）结尾。 在清理时，DQS 使用此域规则来确定电子邮件是否有效。 此选项卡显示在知识库中被标记为无效的域值或不符合域规则要求的值。 在这种情况下，这些值不符合域规则的要求（电子邮件验证）。  
   
-3.  在 "**更正为**" 列中，键入以 **\@adventure-works.com** （包含 ""）结尾的正确电子邮件地址。  
+3.  在 "**更正为**" 列中，键入以 **\@adventure-works.com** （包含 '）结尾的正确电子邮件地址。  
   
      ![从](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "电子")邮件验证规则更正电子邮件验证规则  
   
-4.  单击 "**批准**" 以同时批准两个更改。 当您批准后时，记录将移至 **已更正** 选项卡。而不是单独批准每个项，可使用一次的所有更改进行都审批 **都批准所有字词** 工具栏按钮。  
+4.  单击 "**批准**" 以同时批准两个更改。 批准后，记录将移到 "已**更正**" 选项卡。您可以使用 "**批准所有字词**" 工具栏按钮一次性批准所有更改，而不是单独批准每个项。  
   
 5.  切换到 **新建** 右窗格中的选项卡。 此选项卡上的值是 DQS 在知识库中尚未具有足够的信息来确定其是否正确的值。 因此，它无法更改域值，也无法建议对域值所做的更改。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72313653"
   
      ![更正了供应商名称](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "更正的供应商名称")  
   
-    1.  请注意， **a. Datum Corp.** 已更正为**Datum Corporation** ，**原因**设置为基于 @no__t 3Term 的关系。A. Datum Corporation @ no__t 是 DQS 的已知域值，因为它是在知识发现过程中发现的。 因此，DQS 对此更正的**100%** 。  
+    1.  请注意， **a. Datum Corp.** 已更正为**Datum Corporation** ，**原因**设置为 "**基于字词的关系"。A. Datum Corporation**是 DQS 的已知域值，因为它是在知识发现过程中发现的。 因此，DQS 对此更正的**100%** 。  
   
     2.  请注意 **，Lazy Country Storex**已更正为**lazy country Store**，**置信度**设置为**100%** ，**原因**设置为 "**域值**"。 在知识发现过程中，您将**懒惰的国家/地区 Storex**设置为 "**懒惰国家商店**" 的错误作为**更正**，因此 DQS 对于进行此更正是**100%** 。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "72313653"
   
 22. 请注意，已为列表中的此项选择了 "**批准**" 单选按钮。 这是 "已**更正**" 选项卡上的项的默认行为。  
   
-23. 切换到 "**建议**" 选项卡。查看**Melissa 数据-地址检查**服务建议的更改。  
+23. 切换到 "**建议**" 选项卡。查看**Melissa Data-Address 检查**服务建议的更改。  
   
 24. 单击工具栏按钮上的 "**批准所有字词**"，并在**确认**消息框中单击 **"确定"** 。  
   
@@ -87,6 +87,6 @@ ms.locfileid: "72313653"
 25. 单击 "**下一步**" 切换到 "**导出**" 页。  
   
 ## <a name="next-step"></a>下一步  
- [任务 5：将清理结果导出到 Excel 文件 @ no__t-0  
+ [任务 5：将清理结果导出到 Excel 文件](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

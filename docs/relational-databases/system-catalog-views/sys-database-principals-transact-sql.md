@@ -48,7 +48,7 @@ ms.locfileid: "73982705"
 |**authentication_type_desc**|**nvarchar(60)**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 身份验证类型说明。 下面是可能的值及其说明。<br /><br /> 无：无身份验证<br />实例：实例身份验证<br />数据库：数据库身份验证<br />WINDOWS： Windows 身份验证|  
 |**default_language_name**|**sysname**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指示此主体的默认语言。|  
 |**default_language_lcid**|**int**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指示此主体的默认 LCID。|  
-|**allow_encrypted_value_modifications**|**bit**|**适用**于： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 和更高版本，[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 取消在大容量复制操作期间对服务器进行加密元数据检查。 这样，用户便可以使用 Always Encrypted、在表或数据库之间对数据进行大容量复制，而无需解密数据。 默认为 OFF。 |      
+|**allow_encrypted_value_modifications**|**bit**|**适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 取消在大容量复制操作期间对服务器进行加密元数据检查。 这样，用户便可以使用 Always Encrypted、在表或数据库之间对数据进行大容量复制，而无需解密数据。 默认为 OFF。 |      
   
 ## <a name="remarks"></a>Remarks  
  *PasswordLastSetTime*属性可用于 SQL Server 的所有受支持的配置，但其他属性仅在 SQL Server 在 Windows Server 2003 或更高版本上运行并且启用了 CHECK_POLICY 和 CHECK_EXPIRATION 时才可用。 有关详细信息，请参阅[密码策略](../../relational-databases/security/password-policy.md)。  

@@ -19,11 +19,11 @@ ms.locfileid: "72252151"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>MySQL SQL Server 迁移助手（MySQLToSQL）
 
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-1 迁移助手（SSMA） for MySQL 是一种工具，用于将 MySQL 数据库迁移到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-3 2012，[!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-5 2014，[!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-7 2016 2017，Windows 和 Linux 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]0 @ no__t-11 2019或 Azure 2 数据库。 SSMA for MySQL 将 MySQL 数据库对象转换为 SQL Server 数据库对象，在 @no__t 中创建这些对象，然后将数据从 MySQL 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+MySQL [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手（SSMA）是一种工具，用于将 MySQL 数据库迁移到 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012，[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014，[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016，在 Windows 和 linux 上 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 2019，或 Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)]数据库。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame_md.md)] SSMA for MySQL 将 MySQL 数据库对象转换为 SQL Server 数据库对象，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中创建这些对象，然后将数据从 MySQL 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-本文档介绍 SSMA for MySQL，并提供将 MySQL 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的分步说明。 下表显示了可帮助你了解更多详细信息的文章：  
+本文档介绍 SSMA for MySQL，并提供有关将 MySQL 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的分步说明。 下表显示了可帮助你了解更多详细信息的文章：  
   
-## <a name="contents"></a>目录  
+## <a name="contents"></a>内容  
   
 |部分|描述|
 |-----------|---------------|

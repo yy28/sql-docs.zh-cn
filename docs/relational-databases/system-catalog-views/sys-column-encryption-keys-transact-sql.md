@@ -27,19 +27,19 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/05/2019
 ms.locfileid: "73593721"
 ---
-# <a name="syscolumn_encryption_keys--transact-sql"></a>sys. column_encryption_keys （Transact-sql）
+# <a name="syscolumn_encryption_keys--transact-sql"></a>sys.column_encryption_keys  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
   返回有关用[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)语句创建的列加密密钥（cek）的信息。 每行表示一个 CEK。  
   
-|列名|数据类型|说明|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**名称**|**sysname**|CMK 的名称。|  
 |**column_encryption_key_id**|**int**|CEK 的 ID。|  
 |**create_date**|**datetime**|CEK 的创建日期。|  
 |**modify_date**|**datetime**|上次修改 CEK 的日期。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要**VIEW ANY COLUMN ENCRYPTION KEY**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
@@ -52,9 +52,9 @@ ms.locfileid: "73593721"
  [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Always Encrypted 安全 enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
- [Always Encrypted  的密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
- [管理具有安全 enclaves 的 Always Encrypted 的密钥](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
+ [具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [管理具有安全 enclave 的 Always Encrypted 的密钥](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
 
   
   

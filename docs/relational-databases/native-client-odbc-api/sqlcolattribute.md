@@ -1,5 +1,5 @@
 ---
-title: SQLColAttribute |Microsoft Docs
+title: SQLColAttribute | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -29,7 +29,7 @@ ms.locfileid: "73787420"
 > [!NOTE]  
 >  ODBC 列标识符属性并非可用于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 结果集。  
   
-|字段标识符|说明|  
+|字段标识符|描述|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|可用于从生成服务器游标的语句检索的结果集，或从包含 FOR BROWSE 子句的已执行 SELECT 语句检索的结果集。|  
 |SQL_DESC_BASE_COLUMN_NAME|可用于从生成服务器游标的语句检索的结果集，或从包含 FOR BROWSE 子句的已执行 SELECT 语句检索的结果集。|  
@@ -78,7 +78,7 @@ ms.locfileid: "73787420"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了驱动程序特定的描述符字段，以提供额外的信息来分别表示 XML 架构集合名称、架构名称和目录名称。 如果这些属性包含非字母数字字符，则它们不需要引号或转义符。 下表列出这些新的描述符字段：  
   
-|列名|类型|说明|  
+|列名|sysobjects|描述|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|在其中定义 XML 架构集合名称的目录的名称。 如果找不到目录名称，则此变量包含空字符串。<br /><br /> 将从 IRD 的 SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME 记录字段（此字段是一个读写字段）中返回此信息。|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|在其中定义 XML 架构集合名称的架构的名称。 如果找不到架构名称，则此变量包含空字符串。<br /><br /> 将从 IRD 的 SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME 记录字段（此字段是一个读写字段）中返回此信息。|  
@@ -86,7 +86,7 @@ ms.locfileid: "73787420"
   
  此外，[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了新的驱动程序特定的描述符字段，以便为结果集的用户定义类型 (UDT) 列或为存储过程或参数化查询的 UDT 参数提供附加信息。 如果这些属性包含非字母数字字符，则它们不需要引号或转义符。 下表列出这些新的描述符字段：  
   
-|列名|类型|说明|  
+|Column Name|sysobjects|描述|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|包含 UDT 的目录的名称。|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|包含 UDT 的架构的名称。|  

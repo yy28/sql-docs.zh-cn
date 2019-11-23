@@ -23,7 +23,7 @@ ms.locfileid: "73728574"
 
   变更集是主数据的挂起更改的集合。 如果实体的更改不需要管理员审批，则可以提交变更集。 如果实体的更改需要管理员审批，则你可以提交变更集以供审批。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   您必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73728574"
   
 ## <a name="see-also"></a>另请参阅  
  [创建变更集 (Master Data Services)](../master-data-services/create-a-changeset-master-data-services.md)   
- [应用并更新变更集 &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
+ [应用并更新变更集 (Master Data Services)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [批准或拒绝变更集 (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
   

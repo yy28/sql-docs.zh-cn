@@ -29,12 +29,12 @@ ms.locfileid: "73728945"
 > [!NOTE]  
 >  缺少基于域的属性值的成员不显示在基于那些关系的派生层次结构中。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-require-attribute-values"></a>要求属性值  
   
@@ -44,21 +44,21 @@ ms.locfileid: "73728945"
   
 3.  在“业务规则” 页上，从“模型” 下拉列表中选择一个模型。  
   
-4.  从“实体”下拉列表中选择一个实体。  
+4.  从 “实体”下拉列表中选择一个实体。  
   
 5.  从“成员类型” 下拉列表中，选择要应用业务规则的成员类型。  
   
-6.  单击 **“添加”** 。  
+6.  单击“添加”。  
   
 7.  在“名称” 框中，键入业务规则的名称。  
   
 8.  （可选）在“说明” 字段中，键入业务规则描述。  
   
-9. 在“Then” 块下，单击“添加”。 此时，系统会显示一个面板。  
+9. 在“Then” 块下，单击“添加”。 将显示一个面板。  
   
 10. 从“运算符” 下拉列表中，选择“必要操作”。  
   
-11. 从“属性”下拉列表中选择一个属性。  
+11. 从 “属性”下拉列表中选择一个属性。  
   
 12. 单击 **“保存”** 。 此时，系统会在“Then” 网格中新添加一行。  
   

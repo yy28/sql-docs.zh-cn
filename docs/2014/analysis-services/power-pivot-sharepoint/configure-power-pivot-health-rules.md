@@ -26,7 +26,7 @@ ms.locfileid: "72797634"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 | SharePoint 2010|  
   
  **注意：** 将为 SQL Server Analysis Services 实例和 PowerPivot 服务应用程序单独配置运行状况规则设置。 请按照本主题中的说明配置每个服务的运行状况规则。 对于 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 仅使用服务应用程序。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 对不同版本的 SharePoint 安装不同的运行状况规则集。 请参阅主题[运行状况规则&#40;参考 PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)中的 "版本" 列，也可以运行以下 Windows PowerShell 命令来查看已安装的规则。  
   
@@ -42,7 +42,7 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  [配置用于评估应用程序稳定性的运行状况规则（PowerPivot 服务应用程序）](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>Prerequisites  
  您必须是服务应用程序管理员才能更改 Analysis Services 实例和 PowerPivot 服务应用程序的配置属性。  
   
 ##  <a name="bkmk_view"></a>查看 PowerPivot 运行状况规则  

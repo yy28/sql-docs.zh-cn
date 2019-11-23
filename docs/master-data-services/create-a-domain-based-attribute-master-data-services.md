@@ -25,28 +25,28 @@ ms.locfileid: "73728532"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，创建基于域的属性以便使用来自某一实体的成员填充属性值。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建基于域的属性以便使用来自某一实体的成员填充属性值。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   要用作属性值的源的实体必须存在。 例如，若要基于 Color 实体创建基于域的属性，您必须首先创建 Color 实体。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   
 -   要为其创建属性的实体必须存在。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   
 ## <a name="attribute-information"></a>属性信息  
- 对于创建的每个属性，系统都会在网格中添加一行（其中包含七列）。 下表对这些列进行了说明。  
+ 对于创建的每个属性，系统都会在网格中添加一行（其中包含七列）。 下表介绍了这些列。  
   
-|列|说明|  
+|Column|描述|  
 |------------|-----------------|  
 |状态|属性状态。<br /><br /> 单击 "保存" 时，将显示![更新状态](../master-data-services/media/mds-statusicon-updating.png "I用于更新状态的 con ")图像的图标，指示属性正在更新。<br /><br /> 如果在创建或编辑属性时出现错误，则会显示![错误状态图标图标](../master-data-services/media/mds-statusicon-error.png "Icon "错误状态")。<br /><br /> 否则，状态为 "正常"，将显示!["确定状态](../master-data-services/media/mds-statusicon-ok.png "Icon 状态 ")" 图像的图标。|  
-|名称|属性名称。|  
+|NAME|属性名称。|  
 |显示名称|属性显示名称。|  
-|说明|属性说明。|  
+|描述|属性说明。|  
 |显示像素宽度|属性宽度。|  
 |类型和属性|属性的类型和数据类型信息。|  
 |启用更改跟踪|指定是否启用该属性以进行更改跟踪，并在括号中显示组号。|  
@@ -59,7 +59,7 @@ ms.locfileid: "73728532"
   
 -   **更新者**：上次更新属性的用户的用户名。  
   
--   **创建时间**：上次更新属性的日期和时间。  
+-   “创建时间”：上次更新属性的日期和时间。  
   
 ### <a name="to-create-a-domain-based-attribute"></a>创建基于域的属性  
   
@@ -102,7 +102,7 @@ ms.locfileid: "73728532"
 ## <a name="see-also"></a>另请参阅  
  [基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)   
  [创建派生层次结构 (Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [更改属性名称和数据类型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [更改属性名称和数据类型 (Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [删除属性 (Master Data Services)](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   

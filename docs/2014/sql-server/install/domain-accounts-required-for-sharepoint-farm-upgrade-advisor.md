@@ -22,7 +22,7 @@ ms.locfileid: "71952512"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
+|SharePoint 模式[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **[!INCLUDE[applies](../../includes/applies-md.md)]** 。|  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRS](../../includes/ssrs.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "71952512"
  “报表服务器正在内置 NT AUTHORITY\NETWORK SERVICE 帐户下运行，而 SharePoint 场安装不支持它。 请将 Report Server 重新配置为在域帐户下运行。 "  
   
 ## <a name="corrective-action"></a>纠正措施  
- 对于 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] @no__t 和以前的版本，请使用 Reporting Services 配置管理器更改分配为 Report Server 服务帐户的帐户。  
+ 对于 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和以前的版本，请使用 Reporting Services 配置管理器更改分配为 Report Server 服务帐户的帐户。  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>从配置管理器中更改服务帐户  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71952512"
   
 5.  单击 **“应用”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   
   

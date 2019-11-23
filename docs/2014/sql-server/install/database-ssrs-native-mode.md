@@ -30,7 +30,7 @@ ms.locfileid: "71952312"
   
  若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，然后单击导航窗格中的 **“数据库”** 。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **SQL Server 名称**  
  在“当前报表服务器数据库”中， **“SQL Server 名称”** 指定运行报表服务器数据库的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的名称。 可以使用本地或远程计算机上的默认或命名实例。  
   
@@ -46,8 +46,8 @@ ms.locfileid: "71952312"
  **凭据类型**  
  指定报表服务器用来连接报表服务器数据库的凭据。 可以指定的凭据类型包括服务帐户、Windows 域用户、Windows 本地用户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库登录名。 有关选择凭据的详细信息，请参阅[配置报表服务器数据库连接&#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
- **用户名**  
- 如果使用的是 Windows 凭据，请指定域用户帐户；如果使用的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果你使用的是 Windows 凭据，请按以下格式指定： *\<domain > \\ < account @ no__t-3*。  
+ **“用户名”**  
+ 如果使用的是 Windows 凭据，请指定域用户帐户；如果使用的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果使用的是 Windows 凭据，请按以下格式指定： *\<域 >\\< 帐户\>* 。  
   
  **密码**  
  指定帐户的密码。  
@@ -55,9 +55,9 @@ ms.locfileid: "71952312"
  **更改凭据**  
  启动可指导您完成以下操作所需的所有步骤的向导，这些操作包括选择不同的帐户或更新用于连接到报表服务器数据库的帐户的密码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41; ](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [报表服务器数据库（SSRS 本机模式）](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [配置报表服务器数据库连接（SSRS 配置管理器）](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   

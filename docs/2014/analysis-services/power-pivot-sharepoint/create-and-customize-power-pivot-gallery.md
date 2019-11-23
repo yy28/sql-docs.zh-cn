@@ -34,7 +34,7 @@ ms.locfileid: "70874401"
   
 -   [切换到影院视图或图库视图](#switch)  
   
-##  <a name="prereq"></a> Prerequisites  
+##  <a name="prereq"></a> 先决条件  
   
 -   您必须具有 Silverlight。 可以通过 Microsoft 更新来下载和安装 Silverlight。 如果使用不具备 Silverlight 的浏览器查看“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库”库，则单击该页上的链接可以安装它。 安装后，必须关闭再重新打开浏览器。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "70874401"
   
  下表介绍了使用不同的布局来显示每个预览网页的缩略图草图：  
   
-|“查看”|Description|  
+|视图|描述|  
 |----------|-----------------|  
 |图库视图（默认）|图库视图是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库的默认视图。 预览显示在左侧。 每个工作表的更小缩略图按从左至右的顺序显示在预览旁边。|  
 |所有文档|这是文档库的标准布局。 您可以选择此视图，以管理单独的文档或以列表格式查看库内容。<br /><br /> 使用此视图可以编辑属性、删除或移动各个文档。<br /><br /> 如果您启用了版本控制，您必须使用此视图向库中签入文档或从库中签出文档。|  

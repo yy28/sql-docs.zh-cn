@@ -30,9 +30,9 @@ ms.locfileid: "72782819"
 > [!NOTE]  
 >  这些性能对象监视本地报表服务器上的事件。 如果是在扩展部署中运行报表服务器，则只对当前服务器（而不是扩展部署）进行计数。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 本机模式  
   
- Windows 性能监视器 (**Perfmon.exe**) 中提供了性能对象。 有关详细信息，请参阅 Windows 文档，[运行时分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
+ Windows 性能监视器 (**Perfmon.exe**) 中提供了性能对象。 有关详细信息，请参阅 Windows 文档，[运行时分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx)。  
   
  有关 SharePoint 模式性能计数器的信息，请参阅[MSRS 2014 Web Service Sharepoint mode 和 MSRS 2014 Windows Service Sharepoint Mode 性能对象&#40;的性能计数器 sharepoint mode&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72782819"
   
  下表列出了 `MSRS 2014 Web Service` 性能对象中包含的计数器。  
   
-|计数器|Description|  
+|计数器|描述|  
 |-------------|-----------------|  
 |`Active Sessions`|活动会话的数目。 此计数器提供报表执行生成的所有浏览器会话的累积数，而不管这些会话是否仍处于活动状态。<br /><br /> 删除会话记录后，此计数器的计数即会相应减少。 默认情况下，如果会话在 10 分钟之内无任何活动，就会被删除。|  
 |`Cache Hits/Sec`|每秒请求缓存报表的次数。 这些请求是对重新呈现的报表的请求，而不是对直接从缓存处理的报表的请求。 （请参阅本主题稍后部分中的 `Total Cache Hits`。）|  
@@ -79,7 +79,7 @@ ms.locfileid: "72782819"
   
  下表列出了 `MSRS 2014 Windows Service` 性能对象中包含的计数器。  
   
-|计数器|Description|  
+|计数器|描述|  
 |-------------|-----------------|  
 |`Active Sessions`|存储在报表服务器数据库中的活动会话数。 此计数器提供报表订阅生成的所有可用浏览器会话的累积数，而不管这些会话是否仍处于活动状态。|  
 |`Cache Flushes/Sec`|每秒刷新的缓存数。|  
@@ -128,5 +128,5 @@ Get-Counter -ListSet msr*
   
 ## <a name="see-also"></a>另请参阅  
  [监视报表服务器性能](monitoring-report-server-performance.md)   
- [MSRS 2014 Web service sharepoint mode 和 MSRS 2014 Windows service sharepoint mode 性能&#40;对象的性能计数器 sharepoint 模式&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)    
+ [MSRS 2014 Web service sharepoint mode 和 MSRS 2014 Windows service sharepoint mode 性能&#40;对象的性能计数器 sharepoint 模式&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器](performance-counters-reportserver-service-performance-objects.md)  

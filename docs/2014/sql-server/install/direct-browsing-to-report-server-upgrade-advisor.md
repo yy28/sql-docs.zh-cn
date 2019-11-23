@@ -18,17 +18,17 @@ ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952214"
 ---
 # <a name="direct-browsing-to-report-server-upgrade-advisor"></a>直接浏览到报表服务器（升级顾问）
-  升级顾问检测到 @no__t 的当前安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 正在直接浏览到 Report Server 虚拟目录。  
+  升级顾问检测到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的当前安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 正在直接浏览到 Report Server 虚拟目录。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
+|SharePoint 模式[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **[!INCLUDE[applies](../../includes/applies-md.md)]** 。|  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>描述  
- 升级顾问检测到 @no__t 的当前安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 正在直接浏览到 Report Server 虚拟目录，例如**http://\<server name >/ReportServer**。 在当前版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中不支持它。  
+ 升级顾问检测到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的当前安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 正在直接浏览到 Report Server 虚拟目录，例如**http://\<server name >/ReportServer**。 在当前版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中不支持它。  
   
 > [!NOTE]  
 >  此规则是一则警告，将不阻止升级。  

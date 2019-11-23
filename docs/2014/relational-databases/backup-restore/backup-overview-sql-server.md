@@ -29,7 +29,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70175984"
 ---
-# <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
+# <a name="backup-overview-sql-server"></a>备份概述 (SQL Server)
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份组件。 备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对于保护您的数据至关重要。 本讨论涵盖了备份类型和备份限制。 该主题还介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备和备份介质。  
   
  **本主题内容：**  
@@ -86,7 +86,7 @@ ms.locfileid: "70175984"
  **备份媒体术语和定义**  
   
  [备份设备](backup-devices-sql-server.md)  
- 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入其中以及可从其中还原的磁盘或磁带设备。 SQL Server 备份也可以写入 Azure Blob 存储服务, 并且使用**URL**格式来指定备份文件的目标和名称。 有关详细信息, 请参阅[SQL Server 与 Azure Blob 存储服务进行备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入其中以及可从其中还原的磁盘或磁带设备。 SQL Server 备份也可以写入 Azure Blob 存储服务，并且使用 URL 格式来指定备份文件的目标和名称。 有关详细信息，请参阅[SQL Server 与 Azure Blob 存储服务进行备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  [备份介质](media-sets-media-families-and-backup-sets-sql-server.md)  
  已写入一个或多个备份的一个或多个磁带或磁盘文件。  
@@ -133,7 +133,7 @@ ms.locfileid: "70175984"
   
 -   如果在进行备份操作时尝试创建或删除数据库文件，则创建或删除操作将失败。  
   
- 如果备份操作与文件管理操作或收缩操作重叠，则产生冲突。 无论哪个冲突操作首先开始，第二个操作总会等待第一个操作设置的锁超时。（超时期限由会话超时设置控制。）如果在超时期限内释放锁，第二个操作将继续执行。 如果锁超时，则第二个操作失败。  
+ 如果备份操作与文件管理操作或收缩操作重叠，则产生冲突。 无论哪个冲突操作首先开始，第二个操作都将等待第一个操作设置的锁超时。（超时期限由会话超时设置控制。）如果在超时期限内释放锁，第二个操作将继续。 如果锁超时，则第二个操作失败。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **使用备份设备和备份介质**  
@@ -156,7 +156,7 @@ ms.locfileid: "70175984"
   
 -   [从设备还原备份 (SQL Server)](restore-a-backup-from-a-device-sql-server.md)  
   
--   [教程：SQL Server 备份和还原到 Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教程： SQL Server 备份和还原到 Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **创建备份**  
   
@@ -179,9 +179,9 @@ ms.locfileid: "70175984"
   
 -   [使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [教程：SQL Server 备份和还原到 Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教程： SQL Server 备份和还原到 Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](back-up-and-restore-of-sql-server-databases.md)   
  [还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)   
  [维护计划](../maintenance-plans/maintenance-plans.md)   

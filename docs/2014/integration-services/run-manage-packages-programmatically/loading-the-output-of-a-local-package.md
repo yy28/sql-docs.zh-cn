@@ -24,24 +24,24 @@ ms.lasthandoff: 10/28/2019
 ms.locfileid: "72988214"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>加载本地包的输出
-  使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 将输出保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或使用 System.IO 命名空间中的类将输出保存到平面文件目标时，客户端应用程序即可读取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的输出。 但是，客户端应用程序也可以直接从内存读取包的输出，而无需中间步骤来持久化这些数据。 此解决方案的关键是 `Microsoft.SqlServer.Dts.DtsClient` 命名空间，该**命名空间包含 IDbDataParameter 命名空间中**`IDbConnection`、`IDbCommand`和接口的专用实现。 默认情况下，程序集 Microsoft.SqlServer.Dts.DtsClient.dll 安装在 %ProgramFiles%\Microsoft SQL Server\100\DTS\Binn 中。  
+  使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将输出保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或使用 System.IO[!INCLUDE[vstecado](../../includes/vstecado-md.md)]**命名空间中的类将输出保存到平面文件目标时，客户端应用程序即可读取** 包的输出。 但是，客户端应用程序也可以直接从内存读取包的输出，而无需中间步骤来持久化这些数据。 此解决方案的关键是 `Microsoft.SqlServer.Dts.DtsClient` 命名空间，该**命名空间包含 IDbDataParameter 命名空间中**`IDbConnection`、`IDbCommand`和接口的专用实现。 默认情况下，程序集 Microsoft.SqlServer.Dts.DtsClient.dll 安装在 %ProgramFiles%\Microsoft SQL Server\100\DTS\Binn 中。  
   
 > [!NOTE]  
 >  本主题介绍的过程要求数据流任务以及所有父对象的 DelayValidation 属性均设置为其默认值 False。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  本过程说明如何使用托管代码开发客户端应用程序，该应用程序使用 DataReader 目标直接从内存加载包的输出。 此处总结的步骤在随后的代码示例中演示。  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>将数据包输出加载到客户端应用程序中  
   
 1.  在包中，配置 DataReader 目标，以接收要读入到客户端应用程序中的输出。 使用说明性的名称为 DataReader 目标命名，因为您稍后将在客户端应用程序中使用此名称。 请记录 DataReader 目标的名称。  
   
-2.  在开发项目中，通过找到程序集**DtsClient**来设置对 `Microsoft.SqlServer.Dts.DtsClient` 命名空间的引用。 默认情况下，此程序集安装在 C:\Program Files\Microsoft SQL Server\100\DTS\Binn 中。 使用C#`Using`或[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`Imports`语句将命名空间导入到代码中。  
+2.  在开发项目中，通过找到程序集**DtsClient**来设置对 `Microsoft.SqlServer.Dts.DtsClient` 命名空间的引用。 默认情况下，此程序集安装在 C:\Program Files\Microsoft SQL Server\100\DTS\Binn 中。 使用C# `Using` 或 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` 语句将命名空间导入到代码中。  
   
 3.  在代码中，创建一个类型为 `DtsClient.DtsConnection` 的对象，其中包含一个连接字符串，其中包含**dtexec**运行包所需的命令行参数。 有关详细信息，请参阅 [dtexec Utility](../packages/dtexec-utility.md)。 然后，使用此连接字符串打开连接。 还可以使用 dtexecui 实用工具直观地创建所需的连接字符串。  
   
     > [!NOTE]  
-    >  该示例代码演示如何使用 `/FILE <path and filename>` 语法从文件系统加载包。 但您也可以使用 `/SQL <package name>` 语法从 MSDB 数据库加载包，或者使用 `/DTS \<folder name>\<package name>` 语法从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包存储区加载包。  
+    >  该示例代码演示如何使用 `/FILE <path and filename>` 语法从文件系统加载包。 但您也可以使用 `/SQL <package name>` 语法从 MSDB 数据库加载包，或者使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 语法从 `/DTS \<folder name>\<package name>` 包存储区加载包。  
   
 4.  创建类型为 `DtsClient.DtsCommand` 的对象，该对象使用先前创建的 `DtsConnection`，并将该对象的 `CommandText` 属性设置为包中 DataReader 目标的名称。 然后，调用命令对象的 `ExecuteReader` 方法以将包结果加载到新的 DataReader 中。  
   

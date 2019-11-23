@@ -1,5 +1,5 @@
 ---
-title: sys.databases _os_latch_stats （Transact-sql） |Microsoft Docs
+title: sys. dm_os_latch_stats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -31,7 +31,7 @@ ms.locfileid: "72289400"
 返回有关按类组织的所有闩锁等待的信息。 
   
 > [!NOTE]  
-> 若要从 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 调用此项，请使用名称 **_pdw_nodes_os_latch_stats**。  
+> 若要从 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中调用此名称，请使用名称**sys.databases. dm_pdw_nodes_os_latch_stats**。  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
@@ -41,11 +41,11 @@ ms.locfileid: "72289400"
 |max_wait_time_ms|**bigint**|内存对象已等待此闩锁的最大时间。 如果此值异常高，则可能指示有内部死锁。|  
 |pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
-## <a name="permissions"></a>权限  
-在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 上，需要 @no__t 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要数据库中的 @no__t 1 权限。 在 @no__t 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+## <a name="permissions"></a>Permissions  
+在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要数据库中的 `VIEW DATABASE STATE` 权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
  通过检查不同闩锁类的相对等待数和等待时间，sys.dm_os_latch_stats 可以用来标识闩锁争用源。 在某些情况中，可能能够解决或减少闩锁争用。 但是，在某些情况下可能需要与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系。  
   
 按如下所示使用 `DBCC SQLPERF`，可以重置 sys.dm_os_latch_stats 的内容：  
@@ -61,14 +61,14 @@ GO
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新启动，则这些统计信息不会持久化。 自从上次统计信息重置以来，或自从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动以来，所有数据都是累积的。  
   
 ## <a name="latches"></a>栓  
- 闩锁是类似于锁的内部轻型同步对象，由各种 @no__t 的组件使用。 闩锁主要用于在操作（如缓冲区或文件访问）期间同步数据库页。 每个闩锁与单个分配单元关联。 
+ 闩锁是类似于锁的内部轻型同步对象，由各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用。 闩锁主要用于在操作（如缓冲区或文件访问）期间同步数据库页。 每个闩锁与单个分配单元关联。 
   
  由于闩锁由冲突模式中的另一个线程持有，所以当无法立即满足闩锁请求时，就会发生闩锁等待。 与锁不同，在操作之后，甚至在写入操作中，会立即释放闩锁。  
   
  闩锁根据组件和用法划分为不同的类。 特定类的零个或更多个闩锁可以存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的任何时点上。  
   
 > [!NOTE]  
-> `sys.dm_os_latch_stats` 不跟踪立即授予的闩锁请求，或未等待的闩锁请求。  
+> `sys.dm_os_latch_stats` 不会跟踪立即授予的闩锁请求，也不会等待失败。  
   
  下表包含对各种闩锁类的简短说明。  
   
@@ -100,7 +100,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|用于同步用 DBCC 执行的差异备份操作。|  
 |BACKUP_OPERATION|用于备份操作（例如，数据库、日志或文件备份）中的内部数据结构同步。|  
 |BACKUP_FILE_HANDLE|用于同步在还原操作期间的文件打开操作。|  
-|BUFFER|用于同步对数据库页的短期访问。 读取或修改任何数据库页之前，必须使用缓冲区闩锁。 缓冲区闩锁争用可以指示出现了几个问题，包括热页和缓慢 I/O。<br /><br /> 此闩锁类覆盖所有可能的页闩锁使用。 sys. dm _os_wait_stats 使页面闩锁等待数与对页面上的 i/o 操作和读写操作导致的页闩锁等待的区别。|  
+|BUFFER|用于同步对数据库页的短期访问。 读取或修改任何数据库页之前，必须使用缓冲区闩锁。 缓冲区闩锁争用可以指示出现了几个问题，包括热页和缓慢 I/O。<br /><br /> 此闩锁类覆盖所有可能的页闩锁使用。 sys. dm_os_wait_stats 在页闩锁等待期间，在页上执行 i/o 操作和读写操作导致的页闩锁等待之间存在差异。|  
 |BUFFER_POOL_GROW|用于在缓冲区池增长操作期间的内部缓冲区管理器同步。|  
 |DATABASE_CHECKPOINT|用于序列化数据库中的检查点。|  
 |CLR_PROCEDURE_HASHTABLE|仅限内部使用。|  
@@ -164,7 +164,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|仅限内部使用。|  
 |SERVICE_BROKER_HOST_NAME|仅限内部使用。|  
 |SERVICE_BROKER_READ_CACHE|仅限内部使用。|  
-|SERVICE_BROKER_WAITFOR_MANAGER| 用于同步等待队列的实例级别映射。 每个数据库 ID、数据库版本和队列 ID 元组存在一个队列。 如果有多个连接，则可能会发生此类闩锁的争用：在 WAITFOR （接收）等待状态中为;调用 WAITFOR （RECEIVE）;超过 WAITFOR 超时;接收消息;提交或回滚包含 WAITFOR （RECEIVE）的事务;可以通过减少 WAITFOR （接收）等待状态中的线程数来减少争用。 |  
+|SERVICE_BROKER_WAITFOR_MANAGER| 用于同步等待队列的实例级别映射。 每个数据库 ID、数据库版本和队列 ID 元组存在一个队列。 当许多连接为时，可能会出现此类闩锁的争用（接收）等待状态;调用 WAITFOR （RECEIVE）;超过 WAITFOR 超时;接收消息;提交或回滚包含 WAITFOR （RECEIVE）的事务;可以通过减少 WAITFOR （接收）等待状态中的线程数来减少争用。 |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|仅限内部使用。|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|仅限内部使用。|  
 |SERVICE_BROKER_TRANSPORT|仅限内部使用。|  
@@ -193,7 +193,7 @@ GO
 |VERSIONING_STATE_CHANGE|仅限内部使用。|  
 |KTM_VIRTUAL_CLOCK|仅限内部使用。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[与操作系统相关的动态管理视图&#40;SQL Server transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[与操作系统相关的&#40;&#41;动态管理视图 SQL Server transact-sql](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [SQL Server - Latches 对象](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882326"
 ---
-# <a name="create-a-publication"></a>Create a Publication
+# <a name="create-a-publication"></a>创建发布
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建发布。  
   
  **本主题内容**  
@@ -65,11 +65,11 @@ ms.locfileid: "73882326"
   
     -   如果尚未在服务器上配置分发，请指定分发服务器。 有关如何配置分发的详细信息，请参阅[配置发布和分发](../configure-publishing-and-distribution.md)。  
   
-         如果在 **“分发服务器”** 页上指定将发布服务器用作其自己的分发服务器（本地分发服务器），而未将服务器配置为分发服务器，则新建发布向导将配置该服务器。 在 **“快照文件夹”** 页中指定分发服务器的快照文件夹。 快照文件夹只是指定共享的目录。向此文件夹中执行读写操作的代理必须对其具有足够的访问权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹](../security/secure-the-snapshot-folder.md)。  
+         如果在 **“分发服务器”** 页上指定将发布服务器用作其自己的分发服务器（本地分发服务器），而未将服务器配置为分发服务器，则新建发布向导将配置该服务器。 在 **“快照文件夹”** 页中指定分发服务器的快照文件夹。 快照文件夹只是指定共享的目录。向此文件夹中执行读写操作的代理必须对其具有足够的访问权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹的安全](../security/secure-the-snapshot-folder.md)。  
   
          如果指定另一台服务器作为分发服务器，则必须在 **“管理密码”** 页上输入密码来连接发布服务器和分发服务器。 此密码必须与在远程分发服务器上启用发布服务器时所指定的密码相匹配。  
   
-         有关详细信息，请参阅 [Configure Distribution](../configure-distribution.md)。  
+         有关详细信息，请参阅[配置分发](../configure-distribution.md)。  
   
     -   选择发布数据库。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "73882326"
     > [!NOTE]  
     >  发布名称不能包括下列字符：  
     >   
-    >  % * [ ] | : " ? \/\< >  
+    >  % * [ ] | : " ? \ / \< >  
   
 4.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 将 **publication 指定为步骤 3 中使用的发布名称，并为 \@snapshot_job_name 和** password 指定运行该快照代理时所使用的 Windows 凭据 **\@** **\@** 。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则还必须将 **publisher_security_mode 的值指定为 0 并为** publisher_login 和 **publisher_password 指定 \@ 登录信息**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **\@** **\@** 。 此操作将为发布创建一个快照代理作业。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "73882326"
     > [!NOTE]  
     >  发布名称不能包括下列字符：  
     >   
-    >  % * [ ] | : " ? \/\< >  
+    >  % * [ ] | : " ? \ / \< >  
   
 3.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 将 **publication 指定为步骤 2 中使用的发布名称，并为 \@snapshot_job_name 和** password 指定运行该快照代理时所使用的 Windows 凭据 **\@** **\@** 。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则还必须将 **publisher_security_mode 的值指定为 0 并为** publisher_login 和 **publisher_password 指定 \@ 登录信息**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **\@** **\@** 。 此操作将为发布创建一个快照代理作业。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "73882326"
   
     -   （可选）在使用 SQL Server 身份验证连接到发布服务器时设置 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 或 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> 字段。  
   
-    -   调用 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.CreateLogReaderAgent%2A> 方法，为数据库创建日志读取器代理作业。  
+    -   调用 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.CreateLogReaderAgent%2A> 方法，为该数据库创建日志读取器代理作业。  
   
 5.  创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例，并设置此对象的以下属性：  
   

@@ -36,7 +36,7 @@ ms.locfileid: "71952418"
   
  若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，然后在导航窗格中选择 **“扩展部署”** 。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **SQL Server 名称**  
  指定承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的名称。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "71952418"
  **服务器模式**  
  显示服务器和数据库的模式。 服务器模式为“本机”或“SharePoint 集成”。 这两种模式均支持扩展部署。  
   
- **服务**  
+ **“服务器”**  
  显示报表服务器名称。 在大多数情况下，此为安装报表服务器的计算机的名称。  
   
  **实例**  
  显示报表服务器实例名称。 报表服务器实例基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
- **“状态”**  
+ **状态**  
  指示报表服务器是已初始化还是正在等待联接扩展部署：  
   
 -   对于不属于扩展部署的独立报表服务器，此页说明此报表服务器实例已根据其专用报表服务器数据库进行初始化。 “状态”设置为 **“已联接”** 。  
@@ -75,7 +75,7 @@ ms.locfileid: "71952418"
   
  如果不再需要加密数据或者没有密钥的备份副本，则必须删除该加密数据。 有关详细信息，请参阅[加密&#40;密钥 SSRS 本机&#41;模式](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [初始化 Report Server（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  

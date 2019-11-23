@@ -25,7 +25,7 @@ ms.locfileid: "72797810"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序实现了提供程序 cmdlets 的一部分，如下表中所示。  
   
-|Cmdlet|规范别名|cmd 别名|UNIX shell 别名|Description|  
+|cmdlet|规范别名|cmd 别名|UNIX shell 别名|描述|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|获取当前节点。|  
 |`Set-Location`|**sl**|**cd、chdir**|**cd、chdir**|更改当前节点。|  

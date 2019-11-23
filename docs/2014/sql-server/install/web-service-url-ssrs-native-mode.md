@@ -34,7 +34,7 @@ ms.locfileid: "71952362"
   
  如果重新安装了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，但在试图使用“所有已分配的”的默认 IP 地址值和端口 80 时收到错误，则通常情况下，重新启动服务后重新创建该 URL 即可纠正此错误。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **虚拟目录**  
  指定报表服务器 Web 服务的虚拟目录名称。 在同一台计算机上，每个报表服务器 Web 服务实例只能有一个虚拟名称。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "71952362"
   
 -   **127.0.0.1** 用于访问本地主机。 它支持对报表服务器计算机进行本地管理。 如果仅选择此值，则只有在本地登录到报表服务器计算机的用户可以访问应用程序。  
   
--   *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 IPv4 地址。 如果你的网络使用 IPv6 寻址，IP 地址将为 8 4 字节字段的128位值，其格式类似于以下格式： \<header >：*nnnn： nnnn： nnnn： nnnn*  
+-   *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 IPv4 地址。 如果你的网络使用 IPv6 寻址，IP 地址将为 8 4 字节字段的128位值，格式如下： \<标头 >：*nnnn： nnnn： nnnn： nnnn* ： nnnn： nnnn： nnnn： nnnn  
   
      如果有多个网络适配器，您将看到每个网络适配器都有一个 IP 地址。 如果仅选择此值，它将限制对该 IP 地址（以及域名服务器映射到该地址的任何主机名）的应用程序访问。 您不能使用 localhost 访问报表服务器，也不能使用安装在报表服务器计算机上的其他网络适配器的 IP 地址。  
   
@@ -81,8 +81,8 @@ ms.locfileid: "71952362"
 > 
 >  为了解决此问题，请删除所有绑定，然后使用唯一设置创建新的绑定，或使用通配符配置 Reporting Services URL 注册。  
   
-## <a name="see-also"></a>请参阅  
- [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+## <a name="see-also"></a>另请参阅  
+ [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41; ](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

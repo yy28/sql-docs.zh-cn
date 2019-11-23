@@ -114,9 +114,9 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  在 SSMS 的 **“对象资源管理器”** 中，展开 **“安全性”** 节点，然后展开 **“凭据”** 节点。  
   
-    2.  右键单击**UtilityAgentProxyCredential_\<GUID >** 并选择 "**属性**"。  
+    2.  右键单击**UtilityAgentProxyCredential_\<GUID ">** 然后选择"**属性**"。  
   
-    3.  在 "凭据属性" 对话框中，根据需要更新**UtilityAgentProxyCredential_\<GUID >** 凭据所需的凭据。  
+    3.  在 "凭据属性" 对话框中，根据需要更新凭据**UtilityAgentProxyCredential_\<GUID >** 凭据。  
   
     4.  单击 **“确定”** 以确认更改。  
   
@@ -165,5 +165,5 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
     5.  如果在将用户添加到该组之前，该 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例已向 UCP 注册，则重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理服务。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 实用工具的功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+ [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [SQL Server 资源运行状况故障排除（SQL Server 实用工具）](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

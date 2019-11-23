@@ -23,16 +23,16 @@ ms.locfileid: "73728222"
 
   可以编辑和删除自己创建的有关属性的索引。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
  **编辑索引**  
   
-1.  在主数据管理器中，单击“系统管理”。  
+1.  在“主数据管理器”中，单击“系统管理”。  
   
 2.  在“管理模型” 页上，从网格中选择一个模型，然后单击“实体”。  
   

@@ -31,7 +31,7 @@ ms.locfileid: "71952414"
 > [!NOTE]  
 >  如果报表管理器未启用，则将无法设置此页上的选项。 有关启用报表管理器的详细信息，请[参阅&#40;Reporting Services 配置管理器本机&#41;模式](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **虚拟目录**  
  指定报表管理器的虚拟目录名称。 在同一台计算机上，每个报表管理器实例只能有一个虚拟目录名称。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "71952414"
  **高级**  
  为当前报表管理器实例添加附加 URL。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [配置文件&#40;中的 url SSRS&#41;Configuration Manager](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
+ [配置文件&#40;中的 url SSRS&#41; Configuration Manager](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
  [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

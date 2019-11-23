@@ -21,13 +21,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/07/2019
 ms.locfileid: "73729611"
 ---
-# <a name="create-a-consolidated-member-master-data-services"></a>创建合并成员 (Master Data Services)
+# <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]在中，在您想要显式层次结构的父节点时创建合并成员。 如果你要批量添加数据，请改用临时表。 有关详细信息，请参阅[导入表中数据 (Master Data Services)](../master-data-services/import-data-from-tables-master-data-services.md)  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问“资源管理器”功能区域。  
@@ -36,7 +36,7 @@ ms.locfileid: "73729611"
   
 ### <a name="to-create-a-consolidated-member"></a>创建合并成员  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在 主页上，从“模型”列表中，选择模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型” 列表中选择模型。  
   
 2.  从“版本”列表中，选择某一版本。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73729611"
   
 6.  在左侧窗格中，选择要在其下创建合并成员的根节点或合并成员。  
   
-7.  单击 **“添加”** 。  
+7.  单击“添加”。  
   
 8.  在右侧窗格中，填写字段。  
   
@@ -58,8 +58,8 @@ ms.locfileid: "73729611"
   
 ## <a name="see-also"></a>另请参阅  
  [创建显式层次结构 (Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [创建叶成员 &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
- [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
+ [创建叶成员 (Master Data Services)](../master-data-services/create-a-leaf-member-master-data-services.md)   
+ [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)   
  [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

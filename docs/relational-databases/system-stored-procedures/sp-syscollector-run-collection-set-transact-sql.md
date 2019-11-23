@@ -46,22 +46,22 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>参数  
-@no__t 是收集组的唯一本地标识符。 *collection_set_id*为**int** ，如果*name*为 NULL，则必须具有值。  
+`[ @collection_set_id = ] collection_set_id` 是收集组的唯一本地标识符。 *collection_set_id*为**int** ，并且*name*为 NULL 时必须具有值。  
   
-@no__t 是收集组的名称。 *名称*为**sysname** ，如果*collection_set_id*为 NULL，则必须具有值。  
+`[ @name = ] 'name'` 是收集组的名称。 *名称*为**sysname** ，并且*collection_set_id*为 NULL 时必须具有值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
  *Collection_set_id*或*name*必须具有值，两者都不能为 NULL。  
   
- 此过程将为指定的收集组启动收集和上载作业，如果收集组将其 **@no__t 1collection_mode**设置为非缓存（1），则会立即启动收集代理作业。 有关详细信息，请[参阅&#40;sp_syscollector_create_collection_set transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
+ 此过程将为指定的收集组启动收集和上载作业，如果收集组的 **\@collection_mode**设置为非缓存（1），则会立即启动收集代理作业。 有关详细信息，请[参阅&#40;sp_syscollector_create_collection_set transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
   
  sp_sycollector_run_collection_set 还可用于运行没有计划的收集组。  
   
-## <a name="permissions"></a>权限  
- 要求具有**dc_operator** （带有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
+## <a name="permissions"></a>Permissions  
+ 需要**dc_operator** （具有 execute 权限）的成员身份才能执行此过程。  
   
 ## <a name="example"></a>示例  
  使用收集组的标识符启动收集组。  
@@ -72,7 +72,7 @@ GO
 EXEC sp_syscollector_run_collection_set @collection_set_id = 1;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [“数据收集”](../../relational-databases/data-collection/data-collection.md)  
   

@@ -25,12 +25,12 @@ ms.locfileid: "73729066"
   
  创建属性组时，对除创建者之外的所有用户自动隐藏它。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   必须至少存在一个属性组。 有关详细信息，请参阅 [创建属性组 (Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md)。  
   

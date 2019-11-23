@@ -25,7 +25,7 @@ ms.locfileid: "73788626"
 
   本主题提供有关与表值参数行集对象相关联的 OLE DB 属性和属性集的信息。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>“属性”  
  下面列出了通过表值参数行集对象上的 IRowsetInfo::GetProperties 方法公开的属性。 请注意，所有表值参数行集属性都是只读的。 因此，尝试通过 IOpenRowset：： OpenRowset 或 ITableDefinitionWithConstraints：： CreateTableWithConstraints 方法将任何属性设置为其非默认值将导致错误，并且不会创建任何对象。  
   
  在此处未列出在表值参数行集对象中未实现的属性。 有关属性的完整列表，请参阅 Windows 数据访问组件中的 OLE DB 文档。  

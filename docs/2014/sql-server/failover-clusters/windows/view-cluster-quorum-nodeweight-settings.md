@@ -29,7 +29,7 @@ ms.locfileid: "72783354"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 先决条件  
  仅在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 或更高版本中支持此功能。  
   
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ ms.locfileid: "72783354"
 > [!TIP]  
 >  如果未安装此修补程序，本主题中的示例将为 NodeWeight 返回空或 NULL 值。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
  用户必须是一个域帐户，该帐户是每个 WSFC 群集节点上本地 Administrators 组的成员。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  

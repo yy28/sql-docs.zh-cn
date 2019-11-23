@@ -34,26 +34,26 @@ ms.locfileid: "73843873"
 |-|  
 |**适用**于： [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。|  
   
-|列名|数据类型|说明|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|指示15秒报告间隔的开始时间的 UTC 时间。|  
 |**end_time**|**datetime2**|指示15秒报表间隔结束时间的 UTC 时间。|  
 |**elastic_pool_name**|**nvarchar(128)**|弹性数据库池的名称。|  
-|**avg_cpu_percent**|**decimal （5，2）**|平均计算使用率（以池限制的百分比表示）。|  
-|**avg_data_io_percent**|**decimal （5，2）**|平均 i/o 利用率（以百分比表示），基于池的限制。|  
-|**avg_log_write_percent**|**decimal （5，2）**|平均写入资源使用率（以池限制的百分比表示）。|  
-|**avg_storage_percent**|**decimal （5，2）**|池的存储限制的平均存储利用率（以百分比表示）。|  
-|**max_worker_percent**|**decimal （5，2）**|以百分比表示的最大并发工作线程数（以百分比表示）。|  
-|**max_session_percent**|**decimal （5，2）**|基于池的限制的最大并发会话数（以百分比表示）。|  
+|**avg_cpu_percent**|**decimal(5,2)**|平均计算使用率（以池限制的百分比表示）。|  
+|**avg_data_io_percent**|**decimal(5,2)**|平均 i/o 利用率（以百分比表示），基于池的限制。|  
+|**avg_log_write_percent**|**decimal(5,2)**|平均写入资源使用率（以池限制的百分比表示）。|  
+|**avg_storage_percent**|**decimal(5,2)**|池的存储限制的平均存储利用率（以百分比表示）。|  
+|**max_worker_percent**|**decimal(5,2)**|以百分比表示的最大并发工作线程数（以百分比表示）。|  
+|**max_session_percent**|**decimal(5,2)**|基于池的限制的最大并发会话数（以百分比表示）。|  
 |**elastic_pool_dtu_limit**|**int**|此弹性池的当前最大弹性池 DTU 设置。|  
 |**elastic_pool_storage_limit_mb**|**bigint**|此弹性池的当前最大弹性池存储限制设置（以 mb 为单位）。|
-|**avg_allocated_storage_percent**|**decimal （5，2）**|弹性池中所有数据库分配的数据空间百分比。  这是为弹性池分配的数据空间与数据最大大小的比率。  有关详细信息，请参阅[SQL DB 中的文件空间管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**decimal(5,2)**|弹性池中所有数据库分配的数据空间百分比。  这是为弹性池分配的数据空间与数据最大大小的比率。  有关详细信息，请参阅[SQL DB 中的文件空间管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
 
  此视图存在于 SQL 数据库服务器的 master 数据库中。 您必须连接到 master 数据库才能查询**sys.databases elastic_pool_resource_stats**。  
   
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
  要求具有**dbmanager**角色的成员身份。  
   

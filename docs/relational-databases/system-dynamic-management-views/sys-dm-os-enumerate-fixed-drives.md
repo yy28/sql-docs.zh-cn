@@ -1,5 +1,5 @@
 ---
-title: sys.databases _os_enumerate_fixed_drives （Transact-sql） |Microsoft Docs
+title: sys. dm_os_enumerate_fixed_drives （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2019
 ms.prod: sql
@@ -23,13 +23,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71342512"
 ---
-# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys.databases _os_enumerate_fixed_drives （Transact-sql）
+# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives （Transact-sql）
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2019 中引入。
 
-枚举装载到驱动器号（例如 `C:\`）的卷。
+枚举装载到驱动器号的卷，如 `C:\`。
 
 |列名|数据类型|描述|
 |-----------------|---------------|-----------------|  
@@ -38,11 +38,11 @@ SQL Server 2019 中引入。
 |`drive_type_desc`|`nvarchar(512)`|驱动器类型的说明。 请参阅[`GetDriveTypeW` 函数](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)。|
 |`free_space_in_bytes`|`bigint`|磁盘可用空间（以字节为单位）。|
 
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
-用户必须对服务器拥有 `VIEW SERVER STATE` 权限。
+用户必须对服务器具有 `VIEW SERVER STATE` 权限。
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与 i/o 相关的动态管理视图和函数&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  

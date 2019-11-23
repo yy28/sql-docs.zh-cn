@@ -25,7 +25,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882320"
 ---
-# <a name="define-an-article"></a>定义项目
+# <a name="define-an-article"></a>Define an Article
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义项目。  
   
  **本主题内容**  
@@ -68,11 +68,11 @@ ms.locfileid: "73882320"
   
     -   如果尚未在服务器上配置分发，请指定分发服务器。 有关如何配置分发的详细信息，请参阅[配置发布和分发](../configure-publishing-and-distribution.md)。  
   
-         如果在 **“分发服务器”** 页上指定将发布服务器用作其自己的分发服务器（本地分发服务器），而未将服务器配置为分发服务器，则新建发布向导将配置该服务器。 在 **“快照文件夹”** 页中指定分发服务器的快照文件夹。 快照文件夹只是指定共享的目录。向此文件夹中执行读写操作的代理必须对其具有足够的访问权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹](../security/secure-the-snapshot-folder.md)。  
+         如果在 **“分发服务器”** 页上指定将发布服务器用作其自己的分发服务器（本地分发服务器），而未将服务器配置为分发服务器，则新建发布向导将配置该服务器。 在 **“快照文件夹”** 页中指定分发服务器的快照文件夹。 快照文件夹只是指定共享的目录。向此文件夹中执行读写操作的代理必须对其具有足够的访问权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹的安全](../security/secure-the-snapshot-folder.md)。  
   
          如果指定另一台服务器作为分发服务器，则必须在 **“管理密码”** 页上输入密码来连接发布服务器和分发服务器。 此密码必须与在远程分发服务器上启用发布服务器时所指定的密码相匹配。  
   
-         有关详细信息，请参阅 [Configure Distribution](../configure-distribution.md)。  
+         有关详细信息，请参阅[配置分发](../configure-distribution.md)。  
   
     -   选择发布数据库。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "73882320"
   
 2.  若要水平筛选表中的行或查看项目，请使用 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) 来定义筛选子句。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  
   
-3.  若要垂直筛选表中的列或查看项目，请使用 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)。 有关详细信息，请参阅 [定义和修改列筛选器](define-and-modify-a-column-filter.md)。  
+3.  若要垂直筛选表中的列或查看项目，请使用 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)。 有关详细信息，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
   
 4.  如果已经筛选出了项目，请执行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 。  
   
@@ -120,11 +120,11 @@ ms.locfileid: "73882320"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>为合并发布定义项目  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 为 **\@发布**指定发布的名称，为 **\@项目**指定项目名称的名称，并为 **\@source_object**指定要发布的对象的名称。 若要水平筛选表行，请为 **\@subset_filterclause**指定一个值。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 和 [定义和修改静态行筛选器](define-and-modify-a-static-row-filter.md)。 如果项目不是表项目，请为 **\@类型**指定项目类型。 有关详细信息，请参阅[指定项目类型（复制 Transact-SQL 编程）](specify-article-types-replication-transact-sql-programming.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 为 **\@发布**指定发布的名称，为 **\@项目**指定项目名称的名称，并为 **\@source_object**指定要发布的对象的名称。 若要水平筛选表行，请为 **\@subset_filterclause**指定一个值。 有关详细信息，请参阅 [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 和 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。 如果项目不是表项目，请为 **\@类型**指定项目类型。 有关详细信息，请参阅[指定项目类型（复制 Transact-SQL 编程）](specify-article-types-replication-transact-sql-programming.md)。  
   
-2.  （可选）在发布服务器上，对发布数据库执行 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) 以在两个项目之间定义一个联接筛选器。 有关详细信息，请参阅 [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md)。  
+2.  （可选）在发布服务器上，对发布数据库执行 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) 以在两个项目之间定义一个联接筛选器。 有关详细信息，请参阅 [定义和修改合并项目间的联接筛选器](define-and-modify-a-join-filter-between-merge-articles.md)。  
   
-3.  （可选）在发布服务器上的发布数据库中，执行 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 可筛选表列。 有关详细信息，请参阅 [定义和修改列筛选器](define-and-modify-a-column-filter.md)。  
+3.  （可选）在发布服务器上的发布数据库中，执行 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 可筛选表列。 有关详细信息，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  本例为某个事务发布定义了一个基于 `Product` 表的项目，其中项目在水平和垂直两个方向上进行了筛选。  
@@ -153,7 +153,7 @@ ms.locfileid: "73882320"
   
 ## <a name="see-also"></a>另请参阅  
  [创建发布](create-a-publication.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [复制系统存储过程概念](../concepts/replication-system-stored-procedures-concepts.md)   
  [向现有发布添加项目和从中删除项目](add-articles-to-and-drop-articles-from-existing-publications.md)   
  [筛选已发布数据](filter-published-data.md)   
  [发布数据和数据库对象](publish-data-and-database-objects.md)   

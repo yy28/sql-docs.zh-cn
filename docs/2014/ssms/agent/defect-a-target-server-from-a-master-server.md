@@ -24,13 +24,13 @@ ms.lasthandoff: 10/22/2019
 ms.locfileid: "72783222"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>将目标服务器从主服务器脱离
-  本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理对象 (SMO) 从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的主服务器脱离目标服务器。 从目标服务器运行此过程。  
+  本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理对象 (SMO) 从 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的主服务器脱离目标服务器。 从目标服务器运行此过程。  
   
  **本主题内容**  
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要脱离目标服务器，请使用：**  
   
@@ -42,9 +42,9 @@ ms.locfileid: "72783222"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  若要执行此存储过程，用户必须为 `sysadmin` 固定服务器角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -61,11 +61,11 @@ ms.locfileid: "72783222"
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>将目标服务器从主服务器脱离  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。  
   
 ```sql
 sp_msx_defect ;  
@@ -79,4 +79,4 @@ sp_msx_defect ;
 ## <a name="see-also"></a>另请参阅  
  [创建多服务器环境](create-a-multiserver-environment.md)   
  [企业范围的自动化管理](automated-administration-across-an-enterprise.md)   
- [将多台目标服务器从主服务器脱离](defect-multiple-target-servers-from-a-master-server.md)  
+ [使多台目标服务器脱离主服务器](defect-multiple-target-servers-from-a-master-server.md)  

@@ -63,7 +63,7 @@ ms.locfileid: "73983150"
 |logical_reads|**bigint**|已对该会话执行的逻辑读取数。 不可为 null。|  
 |is_user_process|**bit**|如果会话是系统会话，则为 0。 否则为 1。 不可为 null。|  
 |text_size|**int**|会话的 TEXTSIZE 设置。 不可为 null。|  
-|语言|**nvarchar(128)**|会话的 LANGUAGE 设置。 可以为 Null。|  
+|language|**nvarchar(128)**|会话的 LANGUAGE 设置。 可以为 Null。|  
 |date_format|**nvarchar(3)**|会话的 DATEFORMAT 设置。 可以为 Null。|  
 |date_first|**int**|会话的 DATEFIRST 设置。 不可为 null。|  
 |quoted_identifier|**bit**|会话的 QUOTED_IDENTIFIER 设置。 不可为 null。|  

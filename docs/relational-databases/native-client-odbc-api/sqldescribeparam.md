@@ -1,5 +1,5 @@
 ---
-title: SQLDescribeParam |Microsoft Docs
+title: SQLDescribeParam | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -28,7 +28,7 @@ ms.locfileid: "73787105"
   
  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，数据库引擎中的改进使 SQLDescribeParam 能够获得预期结果的更准确的说明。 这些更准确的结果可能与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以前版本的 SQLDescribeParam 返回的值不同。 有关详细信息，请参阅[元数据发现](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
- 另外，在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中， *ParameterSizePtr*现在将返回一个值，该值与[ODBC 规范](https://go.microsoft.com/fwlink/?LinkId=207044)中定义的相应参数标记的列或表达式的大小的定义一致。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中， *ParameterSizePtr*可以是类型的**SQL_DESC_OCTET_LENGTH**对应的值，或者是为某一类型提供给 SQLBindParameter 的不相关的列大小值，其值应忽略（例如**SQL_INTEGER**）。  
+ 另外，在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中， *ParameterSizePtr*现在将返回一个值，该值与[ODBC 规范](https://go.microsoft.com/fwlink/?LinkId=207044)中定义的相应参数标记的列或表达式的大小的定义一致。 在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中， *ParameterSizePtr*可以是类型的**SQL_DESC_OCTET_LENGTH**对应的值，也可以是为某一类型提供给 SQLBindParameter 的不相关的列大小值，应忽略该值（如**SQL_INTEGER**）。  
   
  在以下情况下，驱动程序不支持调用 SQLDescribeParam：  
   
@@ -77,7 +77,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
   
 ||*DataTypePtr*|*ParameterSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|------------------------|------------------------|  
-|datetime|SQL_TYPE_TIMESTAMP|23|3|  
+|DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  

@@ -28,7 +28,7 @@ ms.locfileid: "73982609"
 
   返回有关对每个会话执行的线程所遇到的所有等待的信息。 您可以使用此视图诊断 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话的性能问题以及特定查询和批处理。  此视图返回的会话与为[sys. dm_os_wait_stats &#40;&#41; transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)聚合的信息相同，但也提供**session_id**号。  
   
-**适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本）。  
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  

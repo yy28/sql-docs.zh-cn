@@ -1,5 +1,5 @@
 ---
-title: SQLConnect |Microsoft Docs
+title: SQLConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql

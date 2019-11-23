@@ -14,7 +14,7 @@ ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 508d34ec59252407b79bb9863d82a46c6ce8627f
 ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/07/2019
 ms.locfileid: "73729852"
@@ -25,19 +25,19 @@ ms.locfileid: "73729852"
 
 显示具体化视图中列的分布信息。  
   
-|列名|数据类型|说明|  
+|Column Name|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|列所属对象的 ID。 |  
 |column_id|**int**|列的 ID。|  
 |distribution_ordinal|**tinyint**|0 = 不是分布列。</br> 1 = SQL 数据仓库使用此列来分配具体化视图。|
  
-## <a name="permissions"></a>权限 
+## <a name="permissions"></a>Permissions 
 
 要求拥有 VIEW DATABASE STATE 权限。
 
 ## <a name="see-also"></a>另请参阅
 
- [的具体化视图的性能优化](/azure/sql-data-warehouse/performance-tuning-materialized-views)  
+[利用具体化视图进行性能优化](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

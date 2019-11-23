@@ -26,7 +26,7 @@ ms.locfileid: "73705296"
 ##  <a name="bkmk_Overview"></a> 创建数据挖掘项目  
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，使用模板 **“OLAP 和数据挖掘项目”** 生成数据挖掘项目。 还可以使用 AMO 以编程方式创建数据挖掘项目。 可以使用 Analysis Services 脚本语言 (ASSL) 编写单个数据挖掘对象的脚本。 有关详细信息，请参阅[多维模型数据访问（Analysis Services - 多维数据）](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
   
- 如果在现有解决方案中创建数据挖掘项目，则默认情况下，数据挖掘对象将部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，并具有与解决方案文件相同的名称。 您可以使用 **“项目属性”** 对话框更改此名称和目标服务器。 有关详细信息，请参阅[配置 Analysis Services 项目属性 (SSDT)](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
+ 如果在现有解决方案中创建数据挖掘项目，则默认情况下，数据挖掘对象将部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，并具有与解决方案文件相同的名称。 您可以使用 **“项目属性”** 对话框更改此名称和目标服务器。 有关详细信息，请参阅 [配置 Analysis Services 项目属性 (SSDT)](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
 > [!WARNING]  
 >  若要成功生成和部署您的项目，您必须对运行在 OLAP/数据挖掘模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例具有访问权限。 您不能在支持表格模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上开发或部署数据挖掘解决方案，也不能直接使用来自 PowerPivot 工作簿或来自使用内存中数据存储区的表格模型的数据。 若要确定你具有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例是否可支持数据挖掘，请参阅 [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
@@ -104,7 +104,7 @@ ms.locfileid: "73705296"
 > [!WARNING]  
 >  如果要筛选数据，则可以在数据源视图中执行此操作，但也可以在挖掘模型级别对数据创建筛选器。 因为筛选器定义存储在挖掘模型中，所以通过使用模型筛选器更便于确定用于对模型进行定型的数据。 此外，使用不同的筛选条件可以创建多个相关模型。 有关详细信息，请参阅[挖掘模型筛选器（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)。  
   
- 请注意，您创建的数据源视图可能包含不直接用于分析的其他数据。 例如，您可能添加用于测试、预测或钻取的数据源视图数据。 有关这些用法的详细信息，请参阅 [测试和验证（数据挖掘）](testing-and-validation-data-mining.md) 和 [钻取](drillthrough-queries-data-mining.md)生成数据挖掘项目。  
+ 请注意，您创建的数据源视图可能包含不直接用于分析的其他数据。 例如，您可能添加用于测试、预测或钻取的数据源视图数据。 有关这些用法的详细信息，请参阅[测试和验证（数据挖掘）](testing-and-validation-data-mining.md)和[钻取](drillthrough-queries-data-mining.md)。  
   
 
   
@@ -132,7 +132,7 @@ ms.locfileid: "73705296"
   
   
   
-###  <a name="bkmk_Models"></a> Mining Models  
+###  <a name="bkmk_Models"></a> 挖掘模型  
  挖掘模型定义将用于数据的算法或分析方法。 您可以为每个挖掘结构添加一个或多个挖掘模型。  
   
  根据您的需要，可以在单个项目中合并多个模型，或者为每个模型类型或分析任务创建单个项目。  
@@ -189,7 +189,7 @@ ms.locfileid: "73705296"
   
   
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  下面的主题介绍使用数据挖掘向导来创建数据挖掘项目及关联的对象。  
   
 |“任务”|主题|  
@@ -203,7 +203,7 @@ ms.locfileid: "73705296"
 |提供有关 Analysis Services 的详细信息|[多维模型数据库 (SSAS)](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘设计器](data-mining-designer.md)   
+ [Data Mining Designer](data-mining-designer.md)   
  [使用 SQL Server Data Tools 创建多维模型 (SSDT)](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [工作区数据库（SSAS 表格）](../tabular-models/workspace-database-ssas-tabular.md)  
   

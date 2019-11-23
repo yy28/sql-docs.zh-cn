@@ -38,7 +38,7 @@ ms.locfileid: "70154609"
  [教程：使用证书为存储过程签名](tutorial-signing-stored-procedures-with-a-certificate.md)  
  本教程说明了如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]生成的证书对存储过程进行签名。  
   
- [教程：所有权链和上下文切换](tutorial-ownership-chains-and-context-switching.md)  
+ [Tutorial: Ownership Chains and Context Switching](tutorial-ownership-chains-and-context-switching.md)  
  本教程使用一个应用场景说明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念，其中包括所有权链和用户上下文切换。  
   
  [教程：使用基于策略的管理来管理服务器](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
@@ -47,14 +47,14 @@ ms.locfileid: "70154609"
  [教程：使用基于策略的管理来评估最佳实践](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  本教程教授如何创建可用于针对已知问题分析[!INCLUDE[ssDE](../includes/ssde-md.md)]的实例的策略。  
   
- [教程：SQL Server 备份和还原到 Azure Blob 存储服务](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
- 本教程演示如何执行 SQL Server 备份和还原到 Azure Blob 存储服务。  
+ [教程： SQL Server 备份和还原到 Azure Blob 存储服务](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ 本教程说明如何将 SQL Server 备份和还原到 Azure Blob 存储服务。  
   
- [教程：SQL Server Azure 存储服务中的数据文件](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
- 本教程将帮助你了解如何将 SQL Server 数据文件直接存储在 Azure Blob 存储服务中。  
+ [教程：在 Azure 存储服务中 SQL Server 数据文件](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ 本教程有助于了解如何将 SQL Server 数据文件直接存储在 Azure Blob 存储服务中。  
   
-## <a name="see-also"></a>请参阅  
- [2014 SQL Server 教程](../tutorials/tutorials-for-sql-server-2014.md)   
- [：SQL Server 2012 示例](https://go.microsoft.com/fwlink/?linkID=220734)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server 2014  教程](../tutorials/tutorials-for-sql-server-2014.md)  
+ [TechNet WIKI：SQL Server 2012 示例](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

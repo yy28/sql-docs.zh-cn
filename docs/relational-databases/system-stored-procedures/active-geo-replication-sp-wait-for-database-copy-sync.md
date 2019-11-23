@@ -31,7 +31,7 @@ ms.locfileid: "73844395"
   
 ||  
 |-|  
-|**适用于**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
+|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,10 +41,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [@target_server =]"server_name"  
+ [ @target_server = ] 'server_name'  
  承载活动辅助数据库的 SQL Database 服务器的名称。 server_name 为 sysname，无默认值。  
   
- [@target_database =]"database_name"  
+ [ @target_database = ] 'database_name'  
  活动辅助数据库的名称。 database_name 为 sysname，没有默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -58,10 +58,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   失去互连连接。 **sp_wait_for_database_copy_sync**将在连接超时后返回。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  主数据库中的任何用户均可调用此系统存储过程。 登录名必须是主数据库和活动辅助数据库中的用户。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在**sp_wait_for_database_copy_sync**调用之前提交的所有事务都将发送到活动辅助数据库。  
   
 ## <a name="examples"></a>示例  

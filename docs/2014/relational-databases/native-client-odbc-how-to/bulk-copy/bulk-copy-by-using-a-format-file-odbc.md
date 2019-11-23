@@ -41,7 +41,7 @@ ms.locfileid: "72688907"
   
     -   复制方向：DB_IN 表示从文件复制到表或视图。  
   
-5.  调用[bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)可读取描述要由大容量复制操作使用的数据文件的格式化文件。  
+5.  调用[bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)读取用于描述大容量复制操作要使用的数据文件的格式化文件。  
   
 6.  调用[bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)执行大容量复制操作。  
   
@@ -184,7 +184,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [大容量复制 SQL Server odbc 驱动程序操作指南主题&#40;odbc&#41; ](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)    
+ [大容量复制 SQL Server odbc 驱动程序操作指南主题&#40;odbc&#41; ](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [使用数据文件和格式化文件](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

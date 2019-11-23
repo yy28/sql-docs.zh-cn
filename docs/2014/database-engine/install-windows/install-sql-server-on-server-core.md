@@ -22,40 +22,40 @@ ms.locfileid: "73637673"
   
  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 操作系统的 Server Core 安装选项提供了用于运行特定服务器角色的最小环境。 这将有助于减少维护和管理需求以及针对这些服务器角色的攻击面。 有关 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]上实现的服务器核心的详细信息，请参阅[Server core For Windows server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=202439) （ https://go.microsoft.com/fwlink/?LinkId=202439)。 有关在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]上实现 Server Core 的详细信息，请参阅 [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
   
 |要求|如何安装|  
 |-----------------|--------------------|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|包含在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 Server Core 安装中。 如果未启用，则安装程序将在默认情况下启用它。<br /><br /> 无法在计算机上并行运行 2.0、3.0 和 3.5 版。 在安装 .NET Framework 3.5 SP1 时，将自动获得 2.0 和 3.0 层。|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 完整配置文件|包含在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 的 Server Core 安装中。 如果未启用，则安装程序将在默认情况下启用它。<br /><br /> 在安装有 Windows Server 操作系统的计算机上，您必须在运行安装程序前下载并安装 .NET Framework 3.5 SP1，以便安装依赖于 .NET 3.5 SP1 的组件。<br /><br /> 有关如何获取和启用 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]中的 .NET Framework 3.5 的建议和指南的详细信息，请参阅[Microsoft .NET Framework 3.5 部署注意事项](https://msdn.microsoft.com/library/windows/hardware/hh975396)（ https://msdn.microsoft.com/library/windows/hardware/hh975396)。|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core 配置文件|除 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之外，所有 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本的安装程序均将 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core 配置文件作为必备组件进行安装。<br /><br /> 对于 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，请从[Server core Microsoft .NET Framework 4 （独立安装程序）](https://www.microsoft.com/download/details.aspx?id=17718)下载 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core 配置文件（ https://www.microsoft.com/download/details.aspx?id=17718)），并在继续安装之前安装它。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core 配置文件|除 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之外，所有 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]版本的安装程序均将 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core 配置文件作为必备组件进行安装。<br /><br /> 对于 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，请从[Server core Microsoft .NET Framework 4 （独立安装程序）](https://www.microsoft.com/download/details.aspx?id=17718)下载 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core 配置文件（ https://www.microsoft.com/download/details.aspx?id=17718)），并在继续安装之前安装它。|  
 |Windows Installer 4.5|随 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 Server Core 一同提供。|  
 |Windows PowerShell 2.0|随 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 Server Core 一同提供。|  
   
 ##  <a name="BK_SupportedFeatures"></a>支持的功能  
  使用下表可以查找 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 和 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安装上的 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]所支持的功能。  
   
-|功能|是否支持|  
+|功能|Supported|  
 |-------------|---------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|是|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication|是|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制|是|  
 |全文搜索|是|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|是|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|“否”|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|“否”|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|No|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|No|  
 |客户端工具连接|是|  
 |Integration Services Server<sup>[1]</sup>|是|  
-|客户端工具向后兼容性|“否”|  
-|客户端工具 SDK|“否”|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书|“否”|  
+|客户端工具向后兼容性|No|  
+|客户端工具 SDK|No|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书|No|  
 |管理工具 - 基本|仅限远程<sup>[2]</sup>|  
 |管理工具 - 完整|仅限远程<sup>[2]</sup>|  
-|Distributed Replay 控制器|“否”|  
+|Distributed Replay 控制器|No|  
 |分布式重播客户端|仅限远程<sup>[2]</sup>|  
 |SQL 客户端连接 SDK|是|  
 |Microsoft Sync Framework|是<sup>[3]</sup>|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|“否”|  
-|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|“否”|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|No|  
+|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|No|  
   
  <sup>[1]</sup>有关新 Integration Services 服务器及其在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的功能的详细信息，请[参阅&#40;Integration Services&#41; SSIS 服务器](../../integration-services/catalog/integration-services-ssis-server-and-catalog.md)。  
   
@@ -95,10 +95,10 @@ ms.locfileid: "73637673"
   
 ### <a name="feature-parameters"></a>功能参数  
   
-|功能参数|说明|  
+|功能参数|描述|  
 |-----------------------|-----------------|  
 |SQLENGINE|仅安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。|  
-|REPLICATION|将复制组件与 [!INCLUDE[ssDE](../../includes/ssde-md.md)]一起安装。|  
+|Replication|将复制组件与 [!INCLUDE[ssDE](../../includes/ssde-md.md)]一起安装。|  
 |FULLTEXT|将全文组件与 [!INCLUDE[ssDE](../../includes/ssde-md.md)]一起安装。|  
 |AS|安装所有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 组件。|  
 |IS|安装所有的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件。|  
@@ -106,7 +106,7 @@ ms.locfileid: "73637673"
   
  请参阅以下的功能参数用法示例：  
   
-|参数和值|说明|  
+|参数和值|描述|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|仅安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。|  
 |/FEATURES=SQLEngine,FullText|安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文组件。|  
@@ -265,7 +265,7 @@ ms.locfileid: "73637673"
 ## <a name="configuring-remote-access-of-includessnoversionincludesssnoversion-mdmd-running-on-server-core"></a>配置运行在 Server Core 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的远程访问  
  执行下述操作以配置运行在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安装上的 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]实例的远程访问。  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的远程连接  
+### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  若要启用远程连接，请在本地使用 SQLCMD.exe 并对 Server Core 实例执行以下语句：  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -286,7 +286,7 @@ ms.locfileid: "73637673"
  `net start SQLBROWSER`  
   
 ### <a name="create-exceptions-in-windows-firewall"></a>在 Windows 防火墙中创建例外  
- 若要在 Windows 防火墙中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问的例外，请执行 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)中指定的步骤。  
+ 若要在 Windows 防火墙中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问的例外，请执行[配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)中指定的步骤。  
   
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>在实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上启用 TCP/IP  
  可以在 Server Core 上通过 Windows PowerShell 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用 TCP/IP 协议。 请执行以下步骤：  
@@ -311,7 +311,7 @@ $Tcp
 ```  
   
 ## <a name="uninstallation"></a>卸载  
- 登录到运行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core 的计算机之后，您将拥有一个带有管理员命令提示符的受限制桌面环境。 您可以使用此命令提示符来启动 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例的卸载。 若要卸载 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例，请从命令提示符以完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）启动卸载。 /QS 参数将通过用户界面显示进度，但是不接受任何输入。 /Q 在没有任何用户界面的情况下以静默模式运行。  
+ 登录到运行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core 的计算机之后，您将拥有一个带有管理员命令提示符的受限制桌面环境。 您可以使用此命令提示符来启动 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例的卸载。 若要卸载 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例，请从命令提示符以完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）启动卸载。 /QS 参数将通过用户界面显示进度，但是不接受任何输入。 /Q 在没有任何用户界面的情况下以静默模式运行。  
   
  卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的现有实例：  
   
@@ -332,7 +332,7 @@ setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [使用配置文件安装 SQL Server 2014](install-sql-server-using-a-configuration-file.md)   
  [从命令提示符安装 SQL Server 2014](install-sql-server-from-the-command-prompt.md)   
  [SQL Server 2014  的版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
- [Server Core Installation Option Getting Started Guide](https://go.microsoft.com/fwlink/?LinkId=221422) （Server Core 安装选项入门指南）  
+ [Server Core Installation Option Getting Started Guide](https://go.microsoft.com/fwlink/?LinkId=221422)   
  [Configuring a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=221423)   
  [Windows Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](https://go.microsoft.com/fwlink/?LinkId=221419)   
  [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](https://go.microsoft.com/fwlink/?LinkId=221421)  

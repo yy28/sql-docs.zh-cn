@@ -1,5 +1,5 @@
 ---
-title: sys.databases _tran_locks （Transact-sql） |Microsoft Docs
+title: sys. dm_tran_locks （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -35,11 +35,11 @@ ms.locfileid: "72289361"
  结果集中的列大体分为两组：资源组和请求组。 资源组说明正在进行锁请求的资源，请求组说明锁请求。  
   
 > [!NOTE]  
-> 若要从 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 调用此项，请使用名称 **_pdw_nodes_tran_locks**。  
+> 若要从 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中调用此名称，请使用名称**sys.databases. dm_pdw_nodes_tran_locks**。  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**resource_type**|**nvarchar(60)**|表示资源类型。 该值可以是下列值之一：DATABASE、FILE、OBJECT、PAGE、KEY、片区、RID、APPLICATION、METADATA、HOBT 或 ALLOCATION_UNIT。|  
+|**resource_type**|**nvarchar(60)**|表示资源类型。 该值可以是下列值之一：DATABASE、FILE、OBJECT、PAGE、KEY、EXTENT、RID、APPLICATION、METADATA、HOBT 或 ALLOCATION_UNIT。|  
 |**resource_subtype**|**nvarchar(60)**|表示**resource_type**的子类型。 从技术角度而言，可以在未持有父类型的非子类型化锁的情况下获取子类型锁。 不同的子类型之间以及与非子类型化的父类型之间都不会发生冲突。 并非所有资源类型都有子类型。|  
 |**resource_database_id**|**int**|此资源位于其范围之内的数据库的 ID。 由锁管理器处理的所有资源均按该数据库 ID 划分范围。|  
 |**resource_description**|**nvarchar(256)**|资源的说明，其中只包含从其他资源列中无法获取的信息。|  
@@ -48,30 +48,30 @@ ms.locfileid: "72289361"
 |**request_mode**|**nvarchar(60)**|请求的模式。 对于已授予的请求，为已授予模式；对于等待请求，为正在请求的模式。|  
 |**request_type**|**nvarchar(60)**|请求类型。 该值为 LOCK。|  
 |**request_status**|**nvarchar(60)**|该请求的当前状态。 可能的值有 GRANTED、CONVERT、WAIT、LOW_PRIORITY_CONVERT、LOW_PRIORITY_WAIT 或 ABORT_BLOCKERS。 有关低优先级等待和中止阻塞程序的详细信息，请参阅[ALTER INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)的*low_priority_lock_wait*部分。|  
-|**request_reference_count**|**smallint**|返回同一请求程序已请求该资源的近似次数。|  
+|**request_reference_count**|**int**|返回同一请求程序已请求该资源的近似次数。|  
 |**request_lifetime**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**request_session_id**|**int**|当前拥有该请求的会话 ID。 对于分布式事务和绑定事务，拥有请求的会话 ID 可能不同。 该值为 -2 时，指示该请求属于孤立的分布式事务。 该值为 -3 时，指示请求属于延迟的恢复事务，例如因其回滚未能成功完成而延迟恢复该回滚的事务。|  
 |**request_exec_context_id**|**int**|当前拥有该请求的进程的执行上下文 ID。|  
 |**request_request_id**|**int**|当前拥有该请求的进程的请求 ID（批处理 ID）。 每当事务的多个活动的结果集 (MARS) 连接更改时，该值便会更改。|  
 |**request_owner_type**|**nvarchar(60)**|拥有请求的实体类型。 锁管理器请求可由各种实体所拥有。 可能的值有：<br /><br /> TRANSACTION = 请求由事务所有。<br /><br /> CURSOR = 请求由游标所有。<br /><br /> SESSION = 请求由用户会话所有。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 请求由事务工作区的共享部分所有。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 请求由事务工作区的排他部分所有。<br /><br /> NOTIFICATION_OBJECT = 请求由内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件所有。 此组件已经请求锁管理器在有其他组件等待获取锁时进行通知。 FileTable 功能是使用此值的一个组件。<br /><br /> **注意：** 工作空间在内部使用，用于持有登记的会话的锁。|  
-|**request_owner_id**|**bigint**|此请求的特定所有者的 ID。<br /><br /> 当事务是请求的所有者时，此值包含事务 ID。<br /><br /> 当 FileTable 是请求的所有者时， **request_owner_id**具有以下值之一。<br /><br /> <br /><br /> 4FileTable 已获取数据库锁。<br /><br /> 三维空间FileTable 已获取表锁。<br /><br /> 其他值：该值表示文件句柄。 此值还显示为动态管理视图[sys.databases _filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)中的**fcb_id** 。|  
-|**request_owner_guid**|**uniqueidentifier**|此请求的特定所有者的 GUID。 该值仅供分布式事务使用，在该事务中，该值与事务的 MS DTC GUID 相对应。|  
+|**request_owner_id**|**bigint**|此请求的特定所有者的 ID。<br /><br /> 当事务是请求的所有者时，此值包含事务 ID。<br /><br /> 当 FileTable 是请求的所有者时， **request_owner_id**具有以下值之一。<br /><br /> <br /><br /> -4： FileTable 已获取数据库锁。<br /><br /> -3： FileTable 已获取表锁。<br /><br /> 其他值：该值表示文件句柄。 此值还显示为动态管理视图[sys. dm_filestream_non_transacted_handles &#40;&#41;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)中的**fcb_id** 。|  
+|**request_owner_guid**|**ssNoversion**|此请求的特定所有者的 GUID。 该值仅供分布式事务使用，在该事务中，该值与事务的 MS DTC GUID 相对应。|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 该值表示请求程序的锁空间 ID。 锁空间 ID 确定两个请求程序是否相互兼容以及在两者冲突的模式下是否可以向其授予锁。|  
-|**lock_owner_address**|**varbinary(8)**|用于跟踪该请求的内部数据结构的内存地址。 此列可以与**sys.databases _os_waiting_tasks**中的**resource_address**列联接。|  
-|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> 此分发所在的节点的标识符。|  
+|**lock_owner_address**|**varbinary(8)**|用于跟踪该请求的内部数据结构的内存地址。 此列可以与 sys.databases 中的**resource_address**列联接。 **dm_os_waiting_tasks**。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> 此分发所在的节点的标识符。|  
   
-## <a name="permissions"></a>权限
-在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 上，需要 @no__t 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要数据库中的 @no__t 1 权限。 在 @no__t 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+## <a name="permissions"></a>Permissions
+在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要数据库中的 `VIEW DATABASE STATE` 权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
  
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
  已授予请求状态指示已将资源上的锁授予请求程序。 等待请求指示尚未授予请求。 **Request_status**列返回以下等待请求类型：  
   
 -   转换请求状态指示已向请求程序授予对资源的请求，并且请求程序当前正在等待升级到要授予的初始请求。  
   
 -   等待请求状态指示请求程序当前未持有对资源的已授予请求。  
   
- 由于**sys.databases _tran_locks**是从内部锁管理器数据结构中填充的，因此维护此信息不会给常规处理增加额外的开销。 具体化该视图需要访问锁管理器的内部数据结构。 这可能会略微影响服务器中的常规处理。 这些影响应该很难察觉，并且应该只会影响频繁使用的资源。 由于该视图中的数据与活动的锁管理器状态相对应，因此该数据可能会随时更改，并且在获取和释放锁时会相应地添加和删除行。 该视图不包含历史信息。  
+ 由于**dm_tran_locks**是从内部锁管理器数据结构中填充的，因此维护此信息不会给常规处理增加额外的开销。 具体化该视图需要访问锁管理器的内部数据结构。 这可能会略微影响服务器中的常规处理。 这些影响应该很难察觉，并且应该只会影响频繁使用的资源。 由于该视图中的数据与活动的锁管理器状态相对应，因此该数据可能会随时更改，并且在获取和释放锁时会相应地添加和删除行。 该视图不包含历史信息。  
   
  仅当所有资源组列都相等时，才对同一资源执行两个请求。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "72289361"
   
 -   锁定表提示用于指定在 FROM 子句中表的单个引用的锁定级别。 有关语法和限制，请参阅[表&#40;提示 transact-sql&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
- 使用一个会话 ID 运行的资源可以有多个已授予锁。 在一个会话下运行的不同实体每个都可以拥有同一资源的锁，并且信息将显示在由**sys.databases _tran_locks**返回的**request_owner_type**和**request_owner_id**列中。 如果存在相同**request_owner_type**的多个实例，则使用**request_owner_id**列来区分每个实例。 对于分布式事务， **request_owner_type**和**request_owner_guid**列将显示不同的实体信息。  
+ 使用一个会话 ID 运行的资源可以有多个已授予锁。 在一个会话下运行的不同实体每个都可以拥有同一资源的锁，该信息显示在**request_owner_type** ，并**request_owner_id** **dm_tran_locks**返回的列。 如果存在相同**request_owner_type**的多个实例，则使用**request_owner_id**列来区分每个实例。 对于分布式事务，" **request_owner_type** " 和 " **request_owner_guid** " 列将显示不同的实体信息。  
   
- 例如，会话 S1 拥有**Table1**上的共享锁;在 session S1 下运行的事务 T1 也拥有**Table1**上的共享锁。 在这种情况下， **sys.databases _tran_locks**返回的**resource_description**列将显示同一资源的两个实例。 **Request_owner_type**列会将一个实例显示为会话，将另一个实例显示为事务。 此外， **resource_owner_id**列将具有不同的值。  
+ 例如，会话 S1 拥有**Table1**上的共享锁;在 session S1 下运行的事务 T1 也拥有**Table1**上的共享锁。 在这种情况下， **dm_tran_locks sys.databases**返回的**resource_description**列将显示同一资源的两个实例。 " **Request_owner_type** " 列会将一个实例显示为会话，将另一个实例显示为事务。 此外， **resource_owner_id**列将具有不同的值。  
   
  在一个会话下运行的多个游标无法区分，被视为一个实体。  
   
@@ -100,14 +100,14 @@ ms.locfileid: "72289361"
 |DATABASE|表示数据库。|不适用|  
 |FILE|表示数据库文件。 此文件可以是数据文件，也可以是日志文件。|不适用|  
 |OBJECT|表示数据库对象。 此对象可以是数据表、视图、存储过程、扩展存储过程或任何具有对象 ID 的对象。|对象 ID|  
-|PAGE|表示数据文件中的单页。|HoBt ID。 此值对应于**hobt_id**。 PAGE 资源并不总是有 HoBt ID，因为 HoBt ID 是可由调用方提供的额外信息，而有些调用方不能提供该信息。|  
-|KEY|表示索引中的一行。|HoBt ID。 此值对应于**hobt_id**。|  
+|PAGE|表示数据文件中的单页。|HoBt ID。 此值对应于**sys.databases. hobt_id**。 PAGE 资源并不总是有 HoBt ID，因为 HoBt ID 是可由调用方提供的额外信息，而有些调用方不能提供该信息。|  
+|KEY|表示索引中的一行。|HoBt ID。 此值对应于**sys.databases. hobt_id**。|  
 |EXTENT|表示数据文件区。 区是由八个连续页构成的组。|不适用|  
-|RID|表示堆中的物理行。|HoBt ID。 此值对应于**hobt_id**。 RID 资源并不总是有 HoBt ID，因为 HoBt ID 是可由调用方提供的额外信息，而有些调用方不能提供该信息。|  
+|RID|表示堆中的物理行。|HoBt ID。 此值对应于**sys.databases. hobt_id**。 RID 资源并不总是有 HoBt ID，因为 HoBt ID 是可由调用方提供的额外信息，而有些调用方不能提供该信息。|  
 |APPLICATION|表示指定了应用程序的资源。|不适用|  
 |METADATA|表示元数据信息。|不适用|  
-|HOBT|表示堆或 B 树。 它们是基本访问路径结构。|HoBt ID。 此值对应于**hobt_id**。|  
-|ALLOCATION_UNIT|表示一组相关页，如索引分区。 每个分配单元都包含一个索引分配映射 (IAM) 链。|分配单元 ID。 此值对应于**allocation_units. allocation_unit_id**。|  
+|HOBT|表示堆或 B 树。 它们是基本访问路径结构。|HoBt ID。 此值对应于**sys.databases. hobt_id**。|  
+|ALLOCATION_UNIT|表示一组相关页，如索引分区。 每个分配单元都包含一个索引分配映射 (IAM) 链。|分配单元 ID。 此值对应于**allocation_units allocation_unit_id**。|  
   
  下表列出了与每个资源类型相关联的子类型。  
   
@@ -197,18 +197,18 @@ ms.locfileid: "72289361"
   
  下表提供了每种资源类型的**resource_description**列的格式。  
   
-|Resource|格式|描述|  
+|资源|“格式”|描述|  
 |--------------|------------|-----------------|  
-|DATABASE|不适用|**Resource_database_id**列中已提供数据库 ID。|  
+|DATABASE|不适用|" **Resource_database_id** " 列中已提供数据库 ID。|  
 |FILE|<file_id>|此资源所表示的文件 ID。|  
 |OBJECT|<object_id>|此资源所表示的对象 ID。 此对象可以是**sys.databases**中列出的任何对象，不仅仅是表。|  
 |PAGE|< file_id >： < page_in_file >|表示此资源所表示的页的文件和页 ID。|  
 |KEY|<hash_value>|表示行中由此资源表示的键列的哈希。|  
 |EXTENT|< file_id >： < page_in_files >|表示此资源所表示的区的文件和页 ID。 区 ID 与区中的第一页的页 ID 相同。|  
 |RID|< file_id >： < page_in_file >： < row_on_page >|表示此资源所表示的行的页 ID 和行 ID。 请注意，如果关联的对象 ID 为 99，则此资源表示 IAM 链的第一个 IAM 页上的八个混合页槽之一。|  
-|APPLICATION|\<DbPrincipalId >： \<upto 32 字符 >:(< hash_value >）|表示用于划分此应用程序锁资源范围的数据库主体的 ID。 还包含与此应用程序锁资源相对应的资源字符串，最多包含其中的 32 个字符。 在某些情况下，因不再提供完整字符串而只能显示 2 个字符。 只有在恢复过程中重新获取的应用程序锁处于数据库恢复期间才会发生此行为。 哈希值表示与此应用程序锁资源相对应的完整资源字符串的哈希。|  
-|HOBT|不适用|HoBt ID 包含在**resource_associated_entity_id**中。|  
-|ALLOCATION_UNIT|不适用|分配单元 ID 包含为**resource_associated_entity_id**。|  
+|APPLICATION|\<Characters> >：\<最多32个字符 >:(< hash_value >）|表示用于划分此应用程序锁资源范围的数据库主体的 ID。 还包含与此应用程序锁资源相对应的资源字符串，最多包含其中的 32 个字符。 在某些情况下，因不再提供完整字符串而只能显示 2 个字符。 只有在恢复过程中重新获取的应用程序锁处于数据库恢复期间才会发生此行为。 哈希值表示与此应用程序锁资源相对应的完整资源字符串的哈希。|  
+|HOBT|不适用|HoBt ID 作为**resource_associated_entity_id**包含在内。|  
+|ALLOCATION_UNIT|不适用|分配单元 ID 作为**resource_associated_entity_id**包含在内。|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -283,12 +283,12 @@ ms.locfileid: "72289361"
   
 -   ddl_with_wait_at_low_priority  
   
- 现有 XEvent **progress_report_online_index_operation** for online 索引操作通过添加**partition_number**和**partition_id**进行扩展。  
+ 通过添加**partition_number**和**partition_id**扩展了联机索引操作的现有 XEvent **progress_report_online_index_operation** 。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-sysdm_tran_locks-with-other-tools"></a>A. 将 sys.dm_tran_locks 与其他工具一起使用  
- 以下示例处理更新操作被另一个事务阻塞的情况。 通过使用 **_tran_locks**和其他工具，将提供有关锁定资源的信息。  
+ 以下示例处理更新操作被另一个事务阻塞的情况。 使用**sys. dm_tran_locks**和其他工具时，将提供有关锁定资源的信息。  
   
 ```sql  
 USE tempdb;  
@@ -326,7 +326,7 @@ BEGIN TRAN
     UPDATE t_lock SET c1 = 10  
 ```  
   
- 下面的查询将显示锁信息。 应将 `<dbid>` 的值替换为**database_id** **中的值。**  
+ 下面的查询将显示锁信息。 应将 `<dbid>` 的值替换为**sys.databases**中的**database_id** 。  
   
 ```sql  
 SELECT resource_type, resource_associated_entity_id,  
@@ -384,8 +384,8 @@ SELECT STasks.session_id, SThreads.os_thread_id
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
-[sys.databases _tran_database_transactions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
+## <a name="see-also"></a>另请参阅  
+[sys. dm_tran_database_transactions &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
 [动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
-[与事务相关的动态管理视图&#40;和函数 transact-sql&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      
-[SQL Server - Locks 对象](../../relational-databases/performance-monitor/sql-server-locks-object.md)      
+[与事务相关的&#40;&#41;动态管理视图和函数 transact-sql](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      
+[SQL Server Locks 对象](../../relational-databases/performance-monitor/sql-server-locks-object.md)      

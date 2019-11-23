@@ -26,12 +26,12 @@ ms.locfileid: "73728338"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您希望永久删除某个属性以及所有关联的属性值时，可以删除此属性。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-an-attribute"></a>删除属性  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73728338"
   
 4.  单击 **“属性”** 。  
   
-5.  在“管理属性”页上，执行下列操作之一。  
+5.  在“管理属性” 页上，执行下列操作之一。  
   
     -   如果属性是针对叶成员，则从“成员类型” 列表框选择“叶” 。  
   

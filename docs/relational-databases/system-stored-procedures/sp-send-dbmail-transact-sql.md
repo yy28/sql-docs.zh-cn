@@ -91,7 +91,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   Low  
   
--   一般  
+-   Normal  
   
 -   High  
   
@@ -99,7 +99,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @sensitivity = ] 'sensitivity'` 是邮件的敏感度。 参数的类型为**varchar （12）** 。 该参数可能包含下列值之一：  
   
--   一般  
+-   Normal  
   
 -   Personal  
   

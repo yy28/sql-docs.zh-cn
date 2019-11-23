@@ -132,7 +132,7 @@ ms.locfileid: "73637825"
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>模糊查找和模糊分组转换  
  有关如何优化模糊查找和模糊分组转换的性能的信息，请参阅白皮书： [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组转换）。  
   
-#### <a name="lookup-transformation"></a>查找转换  
+#### <a name="lookup-transformation"></a>Lookup Transformation  
  通过输入仅查找所需列的 SELECT 语句，最小化内存中引用数据的大小。 这种方法优于选择整个表或视图，因为后者将返回大量不必要的数据。  
   
 #### <a name="merge-join-transformation"></a>合并联接转换  
@@ -159,7 +159,7 @@ ms.locfileid: "73637825"
   
  若要允许或禁止在 **“进度”** 选项卡上显示消息，请在 **SSIS** 菜单上切换 **“调试进度报告”** 选项。 禁用进度报告有助于在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行复杂包时改进性能。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [为合并转换和合并联接转换排序数据](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   

@@ -42,9 +42,9 @@ ms.locfileid: "71952155"
   
 3.  单击 **“版本”** 。  
   
-4.  验证版本是否包含 12.00 @no__t 号 > 并且说明为 AdomdClient。  
+4.  验证版本是否包含12.00。>\<内部版本号，并且说明为是否为 microsoft.analysisservice.adomdclient. AdomdClient。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [PowerPivot 管理仪表板和使用情况数据](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)  
   
   

@@ -98,7 +98,7 @@ ms.locfileid: "73882179"
 3.  （可选）在发布服务器上，执行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 为 **property 指定 retention_period_unit，并为** value 指定新的订阅过期时间单位 **\@** **\@** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [复制系统存储过程概念](../concepts/replication-system-stored-procedures-concepts.md)   
  [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
   
   

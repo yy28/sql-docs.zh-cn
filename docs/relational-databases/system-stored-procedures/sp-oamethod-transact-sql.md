@@ -50,7 +50,7 @@ sp_OAMethod objecttoken , methodname
  _returnvalue_ **输出**  
  OLE 对象的方法的返回值。 如果指定此参数，则必须是相应数据类型的局部变量。  
   
- 如果该方法返回单个值，请为*returnvalue*指定一个局部变量，该局部变量返回局部变量中的方法返回值，或不指定*returnvalue*，这会将方法返回值返回到客户端单列单行结果集。  
+ 如果该方法返回单个值，请为*returnvalue*指定一个局部变量，该局部变量返回局部变量中的方法返回值，或不指定*returnvalue*，这会将方法返回值作为单列单行结果集返回给客户端。  
   
  如果方法返回值是 OLE 对象，则*returnvalue*必须是数据类型为**int**的局部变量。对象标记存储在局部变量中，此对象标记可用于其他 OLE 自动化存储过程。  
   
@@ -64,17 +64,17 @@ sp_OAMethod objecttoken , methodname
   
 -   方法返回一个数组作为输出参数。  
   
-@no__t 为方法参数。 如果已指定，则*参数*必须为适当数据类型的值。  
+`[ _@parametername = ] parameter[ OUTPUT ]` 是方法参数。 如果已指定，则*参数*必须为适当数据类型的值。  
   
  若要获取 output 参数的返回值，*参数*必须是相应数据类型的局部变量，并且必须指定**output** 。 如果指定了常量参数，或未指定**output** ，则将忽略输出参数的任何返回值。  
   
- 如果指定，则*parametername*必须为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 命名参数的名称。 请注意， **@** _parametername_is 不是 @no__t 本地变量。 删除 at 符号（ **@** ），并将*parametername*作为参数名传递给 OLE 对象。 指定了所有位置参数后，才能指定命名参数。  
+ 如果指定，则*parametername*必须是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 命名参数的名称。 请注意， **@** _parametername_is 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的局部变量。 删除 at 符号（ **@** ），并将*parametername*作为参数名传递给 OLE 对象。 指定了所有位置参数后，才能指定命名参数。  
   
  *n*  
  指示可以指定多个参数的占位符。  
   
 > [!NOTE]
->  *\@parametername*可以是一个命名参数，因为它是指定方法的一部分并且传递给对象。 此存储过程的其他参数是按位置（而不是名称）指定的。  
+>  *\@parametername*可以是命名参数，因为它是指定方法的一部分并且传递给对象。 此存储过程的其他参数是按位置（而不是名称）指定的。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败），是由 OLE 自动化对象返回的 HRESULT 整数值。  
@@ -88,11 +88,11 @@ sp_OAMethod objecttoken , methodname
   
 -   二维数组作为结果集返回给客户端，其中的列数与数组第一维中的元素数相同，行数与数组第二维中的元素数相同。 换言之，该数组以（列、行）的形式返回。  
   
- 当属性返回值或方法返回值为数组时， **sp_OAGetProperty**或**sp_OAMethod**将结果集返回到客户端。 （方法输出参数不能是数组。这些过程可扫描数组中的所有数据值，以确定用于结果集中各列的相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型和数据长度。 对于某个特定的列，这些过程将使用显示该列中的所有数据值所需要的数据类型和长度。  
+ 当属性返回值或方法返回值为数组时， **sp_OAGetProperty**或**sp_OAMethod**会向客户端返回结果集。 （方法输出参数不能是数组。这些过程可扫描数组中的所有数据值，以确定用于结果集中各列的相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型和数据长度。 对于某个特定的列，这些过程将使用显示该列中的所有数据值所需要的数据类型和长度。  
   
  如果一列中的所有数据值具有相同的数据类型，此数据类型将用于整个列。 当列中的数据值为其他数据类型时，将基于下表选择整个列的数据类型。  
   
-||INT|浮点数|money|DATETIME|varchar|NVARCHAR|  
+||smallint|Float|money|DATETIME|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -101,16 +101,16 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
  还可以使用**sp_OAMethod**获取属性值。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有**sysadmin**固定服务器角色的成员身份或直接对此存储过程执行权限。 必须**启用**`Ole Automation Procedures` 配置才能使用与 OLE 自动化相关的任何系统过程。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-calling-a-method"></a>A. 调用一个方法  
- 下面的示例调用以前创建的**SQLServer**对象的 @no__t 0 方法。  
+ 下面的示例调用以前创建的**SQLServer**对象的 `Connect` 方法。  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -123,7 +123,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. 获取一个属性  
- 下面的示例将获取 `HostName` 属性（对于先前创建的**SQLServer**对象），并将其存储在本地变量中。  
+ 下面的示例获取 `HostName` 属性（以前创建的**SQLServer**对象），并将其存储在本地变量中。  
   
 ```  
 DECLARE @property varchar(255);  
@@ -136,8 +136,8 @@ END;
 PRINT @property;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [OLE 自动化存储过程&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [OLE 自动化存储过程&#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 自动化脚本示例](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

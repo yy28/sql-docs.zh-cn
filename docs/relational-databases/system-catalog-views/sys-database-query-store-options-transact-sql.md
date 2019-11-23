@@ -33,7 +33,7 @@ ms.locfileid: "73983169"
 
   返回此数据库的查询存储选项。  
   
-**适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本），[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  

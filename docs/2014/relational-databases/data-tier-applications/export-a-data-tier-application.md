@@ -32,7 +32,7 @@ ms.lasthandoff: 08/30/2019
 ms.locfileid: "70175975"
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
-  导出部署的数据层应用程序 (DAC) 或数据库将创建一个导出文件，其中同时包括该数据库中的对象定义和表中包含的所有数据。 然后，可将该导出文件导入到[!INCLUDE[ssDE](../../includes/ssde-md.md)]的其他实例或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中。 可以将导出-导入操作组合起来以在实例之间迁移 DAC，或者创建一个逻辑备份，或者创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的数据库的本地副本。  
+  导出部署的数据层应用程序 (DAC) 或数据库将创建一个导出文件，其中同时包括该数据库中的对象定义和表中包含的所有数据。 然后，可将该导出文件导入到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的其他实例或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中。 可以将导出-导入操作组合起来以在实例之间迁移 DAC，或者创建一个逻辑备份，或者创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的数据库的本地副本。  
   
 ## <a name="before-you-begin"></a>开始之前  
  导出过程分两个阶段生成一个 DAC 导出文件。  
@@ -49,7 +49,7 @@ ms.locfileid: "70175975"
   
  如果数据库有 DAC 中不支持的对象或包含用户，则不能导出该数据库。 有关 DAC 中支持的对象类型的详细信息，请参阅 [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md)。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  导出 DAC 至少要求 ALTER ANY LOGIN 和数据库范围内的 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies**具有 SELECT 权限。 导出 DAC 可由 securityadmin 固定服务器角色的成员（也是从其导出 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以导出 DAC。  
   
 ##  <a name="UsingDeployDACWizard"></a> 使用“导出数据层应用程序向导”  
@@ -93,14 +93,14 @@ ms.locfileid: "70175975"
   
 -   **保存到本地磁盘** - 在本地计算机上的目录中创建 BACPAC 文件。 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径。 路径名必须包含文件名和 .bacpac 扩展名。  
   
--   **保存到 azure** -在 azure 容器中创建 BACPAC 文件。 若要验证此选项, 必须连接到 Azure 容器。 请注意，此选项还要求您为临时文件指定一个本地目录。 请注意，将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
+-   **保存到 Azure** - 在 Azure 容器中创建 BACPAC 文件。 若要验证此选项，则必须连接到 Azure 容器。 请注意，此选项还要求您为临时文件指定一个本地目录。 请注意，将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
   
  若要指定要导出的表的子集，请使用 **“高级”** 选项。  
   
 ##  <a name="Validation"></a> “验证”页  
  使用验证页可查看阻止操作的任何问题。 若要继续，请解决阻止问题，然后单击“重新运行验证”确保验证成功。  
   
- 若要继续，请单击 **“下一步”** 。  
+ 若要继续，请单击“下一步”。  
   
 ##  <a name="Summary"></a> 摘要页  
  使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成导出操作，请单击 **“完成”** 。 若要取消导出操作并退出向导，请单击 **“取消”** 。  
@@ -124,7 +124,7 @@ ms.locfileid: "70175975"
   
 3.  使用 `Export` 类型的 `Microsoft.SqlServer.Management.Dac.DacStore` 方法导出 DAC。 指定要导出的 DAC 的名称以及指向将用于放置导出文件的文件夹的路径。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据层应用程序](data-tier-applications.md)   
  [从数据库中提取 DAC](extract-a-dac-from-a-database.md)  
   

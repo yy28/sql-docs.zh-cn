@@ -22,7 +22,7 @@ ms.locfileid: "71952397"
   
  有关详细信息，请参阅[配置或修复 PowerPivot for SharePoint &#40;2010 PowerPivot 配置&#41;工具](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [删除 SQL Server 2014 安装](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   
  [安装 PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
  [卸载现有 SQL Server 实例（安装程序）](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   

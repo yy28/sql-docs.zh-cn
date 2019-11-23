@@ -48,10 +48,10 @@ ms.locfileid: "73882307"
   
 ###  <a name="Recommendations"></a> 建议  
   
--   由于这些筛选器是静态的，因此所有订阅服务器都将接收到相同的数据子集。 如果您需要在属于合并发布的表项目中动态筛选行，以使每一订阅服务器都能接收到不同的数据分区，请参阅 [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。 您还可使用合并复制基于现有的行筛选器筛选相关的行。 有关详细信息，请参阅 [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md)。  
+-   由于这些筛选器是静态的，因此所有订阅服务器都将接收到相同的数据子集。 如果您需要在属于合并发布的表项目中动态筛选行，以使每一订阅服务器都能接收到不同的数据分区，请参阅 [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。 您还可使用合并复制基于现有的行筛选器筛选相关的行。 有关详细信息，请参阅 [定义和修改合并项目间的联接筛选器](define-and-modify-a-join-filter-between-merge-articles.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在新建发布向导的“筛选表行”页或“发布属性 - **发布>”对话框的“筛选行”页上定义、修改和删除静态行筛选器。** **\<** 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。  
+ 可在新建发布向导的“筛选表行”页或“发布属性 - **发布>”对话框的“筛选行”页上定义、修改和删除静态行筛选器。** **\<** 有关使用该向导和访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)以及[查看和修改发布属性](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-static-row-filter"></a>定义静态行筛选器  
   
@@ -150,7 +150,7 @@ ms.locfileid: "73882307"
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
   
- 在此合并复制示例中，对项目进行水平筛选以仅返回属于指定销售人员的行。 其中还使用了联接筛选器。 有关详细信息，请参阅 [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md)。  
+ 在此合并复制示例中，对项目进行水平筛选以仅返回属于指定销售人员的行。 其中还使用了联接筛选器。 有关详细信息，请参阅 [定义和修改合并项目间的联接筛选器](define-and-modify-a-join-filter-between-merge-articles.md)。  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   

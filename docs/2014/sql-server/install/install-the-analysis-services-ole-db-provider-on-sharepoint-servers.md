@@ -12,7 +12,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a8068ae9f1e52b235ebec52bf8499ba8d2d3777e
 ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952534"
@@ -101,7 +101,7 @@ ms.locfileid: "71952534"
   
 3.  单击 **“详细信息”** 。  
   
-4.  查看文件版本信息。 版本应包括 11.00 > @no__t。  
+4.  查看文件版本信息。 版本应包含11.00。\<buildnumber >。  
   
 5.  在 Windows\assembly 文件夹中，验证 Microsoft.AnalysisServices.Xmla.dll 版本 11.0.0.0 已列出。  
   
@@ -135,9 +135,9 @@ ms.locfileid: "71952534"
   
 4.  如果您在场中有仅运行 Excel Services 的其他服务器（而没有在同一服务器上的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ），请重复以前的步骤以在 Excel Services 计算机上安装 2008 R2 版本的访问接口。  
   
-#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>步骤 2：注册 Microsoft.analysisservices.sharepoint.integration.dll. ChannelTransport 文件  
+#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>步骤 2：注册 Microsoft.AnalysisServices.ChannelTransport.dll 文件  
   
-1.  使用 regasm.exe 实用工具注册该文件。 如果之前未运行 regasm，请将其父文件夹 C:\Windows\Microsoft.NET\Framework64\v4.0.30319 @ no__t-0 添加到系统路径变量。  
+1.  使用 regasm.exe 实用工具注册该文件。 如果之前未运行 regasm，请将其父文件夹 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\添加到系统路径变量。  
   
 2.  使用管理员权限打开命令提示符。  
   
@@ -153,12 +153,12 @@ ms.locfileid: "71952534"
   
 2.  此外，您可以检查文件版本。  
   
-     转到  `C:\Program files\Microsoft Analysis Services\AS OLEDB\10` 。 右键单击 **msolap100.dll** 并选择 **“属性”** 。 单击 **“详细信息”** 。  
+     转到 `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`。 右键单击 **msolap100.dll** 并选择 **“属性”** 。 单击 **“详细信息”** 。  
   
-     查看文件版本信息。 版本应包括 10.50 > @no__t。  
+     查看文件版本信息。 版本应包含10.50。\<buildnumber >。  
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [PowerPivot for SharePoint 2010 安装](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

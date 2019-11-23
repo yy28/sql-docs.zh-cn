@@ -38,7 +38,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **\@publication =** ] **"***发布***"**  
+ [ **\@发布 =** ] **"***发布***"**  
  发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @level = ] level` 是要执行的验证类型。 *级别*为**tinyint**，无默认值。 级别可以为下列值之一：  
@@ -46,19 +46,19 @@ sp_validatemergepublication [@publication=] 'publication'
 |级别值|描述|  
 |-----------------|-----------------|  
 |**1**|只验证行计数。|  
-|**2**|验证行计数和校验和。 对于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Subscribers 自动设置为**3**。|  
+|**2**|验证行计数和校验和。 对于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]订阅服务器，此设置会自动设置为**3**。|  
 |**3**|此为建议值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergepublication**用于合并复制。  
   
-## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能执行**sp_validatemergepublication**。  
+## <a name="permissions"></a>Permissions  
+ 只有**sysadmin**固定服务器角色的成员才能**sp_validatemergepublication**执行。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [验证复制的数据](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  

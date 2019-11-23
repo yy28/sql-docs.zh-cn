@@ -35,7 +35,7 @@ ms.locfileid: "72041256"
 这是 SharedManagementObjects 的替代项，以前作为 SQL Server 的每个版本的 SQL 功能包的一部分发布。 应将使用 SMO 的应用程序更新为使用 NuGet 包，并负责确保二进制文件与正在开发的应用程序一起安装。
 
 >>[!Important]
->>如 "[文件和版本号](files-and-version-numbers.md)" 页中所述，不应将 SMO 程序集安装到 GAC 中。 这样做可能会导致其他应用程序出现问题，这些应用程序也使用这些版本的 SMO （例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio）。
+>>如 "[文件和版本号](files-and-version-numbers.md)" 页中所述，不应将 SMO 程序集安装到 GAC 中。 这样做可能会导致其他应用程序出现问题，这些应用程序也使用这些版本的 SMO （如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio）。
 
 ## <a name="installing-the-package"></a>安装包
 
@@ -43,5 +43,5 @@ ms.locfileid: "72041256"
   
 ## <a name="system-requirements"></a>系统要求
   
- SMO 需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 或 .NET Core 2.0 才能运行，因此使用它的任何应用程序都必须确保客户端计算机安装了该版本或更高版本。 随 NetFx SMO 库一起安装的某些本机二进制文件还需要安装 VC 2013 运行时;该包中不包含该运行时。 可以从 @no__t 下载适合目标体系结构的可再发行内容-0
+ SMO 需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 或 .NET Core 2.0 才能运行，因此使用它的任何应用程序都必须确保客户端计算机安装了该版本或更高版本。 随 NetFx SMO 库一起安装的某些本机二进制文件还需要安装 VC 2013 运行时;该包中不包含该运行时。 可以从 https://www.microsoft.com/download/details.aspx?id=40784 下载适合目标体系结构的可再发行内容。
   

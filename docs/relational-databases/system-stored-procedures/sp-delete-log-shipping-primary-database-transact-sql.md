@@ -29,7 +29,7 @@ ms.locfileid: "72909867"
 
   此存储过程删除主数据库的日志传送，包括备份作业、本地历史记录以及远程历史记录。 仅在使用**sp_delete_log_shipping_primary_secondary**删除辅助数据库后，才使用此存储过程。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ sp_delete_log_shipping_primary_database
 ## <a name="result-sets"></a>结果集  
  无。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  必须从主服务器上的**master**数据库运行**sp_delete_log_shipping_primary_database** 。 此存储过程执行以下操作：  
   
 1.  为指定的主数据库删除备份作业。  
@@ -57,13 +57,13 @@ sp_delete_log_shipping_primary_database
   
 3.  删除**log_shipping_monitor_history_detail**和**log_shipping_monitor_error_detail**中的相应条目。  
   
-4.  如果监视服务器不同于主服务器，则会删除监视服务器上**log_shipping_monitor_primary**中的监视记录。  
+4.  如果监视服务器不同于主服务器，则会在监视服务器**log_shipping_monitor_primary**上删除监视记录。  
   
-5.  删除监视服务器上的**log_shipping_monitor_history_detail**和**log_shipping_monitor_error_detail**中的相应条目。  
+5.  删除监视服务器**log_shipping_monitor_history_detail**和**log_shipping_monitor_error_detail**中的相应条目。  
   
-6.  删除此主数据库的**log_shipping_primary_databases**中的条目。  
+6.  删除此主数据库**log_shipping_primary_databases**中的条目。  
   
-7.  在监视服务器上调用**sp_delete_log_shipping_alert_job** 。  
+7.  调用监视服务器上**sp_delete_log_shipping_alert_job** 。  
 
 ## <a name="permissions"></a>Permissions  
  只有**sysadmin**固定服务器角色的成员才能运行此过程。  

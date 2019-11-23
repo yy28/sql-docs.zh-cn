@@ -37,7 +37,7 @@ ms.locfileid: "73594525"
 
   为使用[CREATE MASTER key](../../t-sql/statements/create-column-master-key-transact-sql.md)语句添加的每个数据库主密钥返回一行。 每一行代表一个列主密钥（CMK）。  
     
-|列名|数据类型|说明|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**名称**|**sysname**|CMK 的名称。|  
 |**column_master_key_id**|**int**|列主密钥的 ID。|  
@@ -50,7 +50,7 @@ ms.locfileid: "73594525"
 
 
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要**VIEW ANY COLUMN MASTER KEY**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
@@ -60,8 +60,8 @@ ms.locfileid: "73594525"
  [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Always Encrypted  的密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
- [管理具有安全 enclaves 的 Always Encrypted 的密钥](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [管理具有安全 enclave 的 Always Encrypted 的密钥](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
  
   
   

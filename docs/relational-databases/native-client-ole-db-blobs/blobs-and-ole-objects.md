@@ -45,7 +45,7 @@ ms.locfileid: "73790637"
   
 -   绑定为 DBTYPE_IUNKNOWN 并使用流处理。  
   
- 如果绑定为 DBTYPE_IUNKNOWN，则使用 ISequentialStream 流功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持将输出参数绑定为大值数据类型的 DBTYPE_IUNKNOWN，以便于这样的方案：存储过程将这些数据类型作为返回值返回，并将作为 DBTYPE_IUNKNOWN 公开给机.  
+ 如果绑定为 DBTYPE_IUNKNOWN，则使用 ISequentialStream 流功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持将输出参数绑定为大值数据类型的 DBTYPE_IUNKNOWN，以便于在某些情况下，存储过程将这些数据类型作为返回值返回，并将其作为 DBTYPE_IUNKNOWN 公开给客户端。  
   
 ## <a name="storage-object-limitations"></a>存储对象限制  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73790637"
   
 -   当创建引用存储对象的行访问器时，必须将由使用者实现的存储对象提供的数据的长度识别为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序。 使用者必须在用于创建取值函数的 DBBINDING 结构中绑定一个长度指示符。  
   
--   如果行包含多个大数据值且未 DBPROPVAL_AO_RANDOM DBPROP_ACCESSORDER，则使用者必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序游标支持的行集来检索行数据或处理所有大数据值，然后再检索其他行值。 如果 DBPROPVAL_AO_RANDOM DBPROP_ACCESSORDER，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将所有 xml 数据类型缓存为二进制大型对象（Blob），以便可以按任意顺序访问该数据类型。  
+-   如果行包含多个大数据值且未 DBPROPVAL_AO_RANDOM DBPROP_ACCESSORDER，则使用者必须在检索行数据或处理所有大数据值之前，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持游标的行集。 如果 DBPROPVAL_AO_RANDOM DBPROP_ACCESSORDER，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将所有 xml 数据类型缓存为二进制大型对象（Blob），以便可以按任意顺序访问该数据类型。  
   
 ## <a name="in-this-section"></a>本节内容  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLFreeStmt |Microsoft Docs
+title: SQLFreeStmt | Microsoft Docs
 ms.custom: ''
 ms.date: 11/23/2015
 ms.prod: sql

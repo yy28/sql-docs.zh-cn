@@ -62,9 +62,9 @@ ms.locfileid: "73637529"
 ### <a name="scoring-methods-and-feature-selection"></a>计分方法和功能选择  
  Microsoft 决策树算法提供了三种信息获取计分公式：Shannon 平均信息量、使用 K2 先验的 Bayesian 网络和使用先验统一 Dirichlet 分布的 Bayesian 网络。 这三种都是数据挖掘领域中已经确立的方法。 建议您利用不同的参数，分别试用这些方法，以确定哪种方法结果最佳。 有关这些计分方法的详细信息，请参阅 [Feature Selection](../../sql-server/install/feature-selection.md)。  
   
- 所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法都会自动使用功能选择来改善分析效果以及减轻处理工作量。 用于功能选择的方法取决于生成模型所用的算法。 控制决策树模型的功能选择的算法参数为 MAXIMUM_INPUT_ATTRIBUTES 和 MAXIMUM_OUTPUT。  
+ 所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法都会自动使用功能选择来改善分析效果和减轻处理工作量。 用于功能选择的方法取决于生成模型所用的算法。 控制决策树模型的功能选择的算法参数为 MAXIMUM_INPUT_ATTRIBUTES 和 MAXIMUM_OUTPUT。  
   
-|算法|分析方法|注释|  
+|Algorithm|分析方法|注释|  
 |---------------|------------------------|--------------|  
 |决策树|兴趣性分数<br /><br /> Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|如果任何列包含非二进制连续值，则兴趣性分数将用于所有列，以确保一致性。 否则，将使用默认方法或指定的方法。|  
 |线性回归|兴趣性分数|线形回归仅使用兴趣性分数，原因是它仅支持连续列。|  
@@ -147,9 +147,9 @@ ms.locfileid: "73637529"
  如果数据集非常大，则可能需要增大此值，以避免过度定型。  
   
  *SCORE_METHOD*  
- 确定用于计算拆分分数的方法。 可用选项包括：  
+ 确定用于计算拆分分数的方法。 你可使用以下选项：  
   
-|ID|名称|  
+|ID|NAME|  
 |--------|----------|  
 |1|Entropy|  
 |3|Bayesian with K2 Prior|  
@@ -160,9 +160,9 @@ ms.locfileid: "73637529"
  有关这些计分方法的说明，请参阅 [Feature Selection](../../sql-server/install/feature-selection.md)。  
   
  *SPLIT_METHOD*  
- 确定用于拆分节点的方法。 可用选项包括：  
+ 确定用于拆分节点的方法。 你可使用以下选项：  
   
-|ID|名称|  
+|ID|NAME|  
 |--------|----------|  
 |1|**Binary:** 指示无论属性值的实际数量是多少，树都拆分为两个分支。|  
 |2|**Complete:** 指示树可以创建与属性值数目相同的分叉。|  
@@ -173,7 +173,7 @@ ms.locfileid: "73637529"
 ### <a name="modeling-flags"></a>建模标志  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](modeling-flags-data-mining.md)。  
   
-|建模标志|说明|  
+|建模标志|描述|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|表示列将被视为具有两个可能状态：`Missing` 和 `Existing`。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
 |NOT NULL|指示该列不能包含 Null。 如果 Analysis Services 在模型定型过程中遇到 Null 值，将会导致错误。<br /><br /> 适用于挖掘结构列。|  
@@ -193,7 +193,7 @@ ms.locfileid: "73637529"
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
   
-|列|内容类型|  
+|Column|内容类型|  
 |------------|-------------------|  
 |输入属性|Continuous、Cyclical、Discrete、Discretized、Key、Ordered 和 Table|  
 |可预测属性|Continuous、Cyclical、Discrete、Discretized、Ordered 和 Table|  

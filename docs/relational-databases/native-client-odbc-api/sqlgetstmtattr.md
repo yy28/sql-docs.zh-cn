@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtAttr |Microsoft Docs
+title: SQLGetStmtAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -34,7 +34,7 @@ ms.locfileid: "73786286"
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  SQL_SOPT_SS_NOCOUNT_STATUS 特性指示 NOCOUNT 选项的当前设置，该选项控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在调用[SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)时是否报告受语句影响的行数。 *将 valueptr*值的类型为 SQLLEN。  
   
-|“值”|说明|  
+|“值”|描述|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT 为 OFF。 SQLRowCount 返回受影响的行数。|  
 |SQL_NC_ON|NOCOUNT 为 ON。 SQLRowCount 不返回受影响的行数，返回值为0。|  

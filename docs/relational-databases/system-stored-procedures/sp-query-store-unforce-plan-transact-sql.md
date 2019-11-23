@@ -42,16 +42,16 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @query_id = ] query_id`查询的 id。 *query_id*是**bigint**，无默认值。  
+`[ @query_id = ] query_id` 是查询的 id。 *query_id*是**bigint**，无默认值。  
   
-`[ @plan_id = ] plan_id`将不再强制执行的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
+`[ @plan_id = ] plan_id` 是将不再强制执行的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对数据库具有**ALTER**权限。
   
 ## <a name="examples"></a>示例  
@@ -66,19 +66,19 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- 确定要取消强制执行的 query_id 和 plan_id 后，请使用以下示例取消强制执行该计划。  
+ 确定要取消强制执行的 query_id 和 plan_id 后，请使用以下示例取消强制执行计划。  
   
 ```sql  
 EXEC sp_query_store_unforce_plan 3, 3;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+ [sp_query_store_flush_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [使用查询存储    监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [Query Store 最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)     
   

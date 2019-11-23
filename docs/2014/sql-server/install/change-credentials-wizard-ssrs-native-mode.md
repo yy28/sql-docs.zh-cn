@@ -29,7 +29,7 @@ ms.locfileid: "71952319"
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **数据库服务器**  
  指定运行报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的名称。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "71952319"
  您不能指定其他 Windows 凭据。 如果您希望以其他 Windows 用户身份连接，请以该用户身份登录，然后启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。  
   
  **凭据**  
- 指定用于将报表服务器连接到报表服务器数据库的帐户。 有效值包括报表服务器 Web 服务的服务帐户、在您要用来承载报表服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上定义的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 数据库登录名，或 Windows 帐户。 如果使用的是 Windows 帐户，则可以指定本地帐户（如果 Report Server 和数据库位于同一台计算机上，则可以指定本地帐户（ *\<computername > \\ < 用户名 @ no__t*），或域用户帐户（ *\<domain > @no__t用户名 @ no__t）（* 如果它们位于同一个域中的不同计算机上）。  
+ 指定用于将报表服务器连接到报表服务器数据库的帐户。 有效值包括报表服务器 Web 服务的服务帐户、在您要用来承载报表服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上定义的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 数据库登录名，或 Windows 帐户。 如果你使用的是 Windows 帐户，则如果\>和数据库位于同一台计算机上，则可以指定本地帐户（ *\<computername >\\< username Report Server* ），或者如果域用户帐户位于同一域中的不同计算机上，则可以指定域用户帐户（ *\<域 >\\< 用户名\>* ）。  
   
  报表服务器将创建一个数据库登录名，并为您指定的帐户分配数据库权限。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "71952319"
  **进度和完成**  
  监视每个任务的进度。  
   
-## <a name="see-also"></a>请参阅  
- [数据库&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
- [更改数据库向导&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据库&#40;SSRS 本机模式&#41; ](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
+ [更改数据库向导&#40;SSRS 本机模式&#41; ](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41; ](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [配置报表服务器数据库连接（SSRS 配置管理器）](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

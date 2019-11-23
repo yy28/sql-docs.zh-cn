@@ -37,7 +37,7 @@ ms.locfileid: "73727933"
   
 -   访问权限是一个组中所有有效权限的联合。 如果对象权限在一个组中是“创建” ，在其他组中是“更新” ，则有效权限是“创建” 和“更新”。  
   
- 这些规则应用到 **“模型”** 和 **“层次结构成员”** 选项卡。 先为每个选项卡确定权限，再将权限进行组合。 有关详细信息，请参阅[如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ 这些规则应用到 **“模型”** 和 **“层次结构成员”** 选项卡。 先为每个选项卡确定权限，再将权限进行组合。 有关详细信息，请参阅 [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)。  
   
 > [!NOTE]  
 >  可以在用户界面中查看用户和组的重叠权限的解决方法。 “模型”和“层次结构成员”选项卡都具有下拉列表，可以从中选择“有效”，查看有效权限。  

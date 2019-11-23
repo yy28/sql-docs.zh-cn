@@ -35,7 +35,7 @@ ms.locfileid: "72782908"
   
  您可以浏览 XEvent 文件夹树以查看现有的扩展事件会话及其关联的事件、目标和谓词。 例如，从 PS SQLSERVER： \ XEvent\\*ServerName*\\*InstanceName*> 路径，如果键入 `cd sessions`，请按 enter，键入 `dir`，然后按 enter，可以看到存储在该实例上的会话的列表。 您还可以查看会话是否正在运行（如果正在运行，那么可以查看运行了多长时间），以及会话是否配置为在实例启动时启动。  
   
- 若要查看与会话关联的事件、它们的谓词以及目标，您可以将目录更改为该会话的名称，然后查看事件或目标文件夹。 例如，若要查看与默认系统运行状况会话关联的事件及其谓词，请从 PS SQLSERVER： \ XEvent\\*ServerName*\\*InstanceName*\Sessions > 路径，键入 `cd system_health\events,` 按 enter，键入`dir`，然后按 ENTER。  
+ 若要查看与会话关联的事件、它们的谓词以及目标，您可以将目录更改为该会话的名称，然后查看事件或目标文件夹。 例如，若要查看与默认系统运行状况会话关联的事件及其谓词，请在 PS SQLSERVER： \ XEvent\\*ServerName*\\*InstanceName*\Sessions > 路径中键入 `cd system_health\events,` 按 enter，键入 `dir`，然后按 enter。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序是一种非常强大的工具，您可以用其创建、更改和管理扩展事件会话。 下面一节提供将 PowerShell 脚本与扩展事件结合使用的一些基本示例。  
   
@@ -106,7 +106,7 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  若要创建、更改或删除扩展事件会话，您必须拥有 ALTER ANY EVENT SESSION 权限。  
   
 ## <a name="see-also"></a>另请参阅  

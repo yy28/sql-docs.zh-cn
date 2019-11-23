@@ -31,7 +31,7 @@ ms.locfileid: "69493864"
 > [!NOTE]  
 >  在每次对事实关系所引用的度量值组进行更新后，事实维度必须进行增量更新。  
   
- 有关详细信息，请参阅[维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和[定义事实关系和事实关系属性](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)。  
+ 有关详细信息，请参阅 [维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和 [定义事实关系和事实关系属性](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)。  
   
  在本主题的各任务中，你将根据“CustomerPONumber”列在“FactInternetSales”事实数据表中添加新的多维数据集维度。 然后将此新增多维数据集维度和“Internet 销售”度量值组之间的关系定义为事实关系。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "69493864"
   
 7.  在“名称列”列表中，选择“SalesOrderLineNumber”。  
   
-8.  在“欢迎”页上，单击 **“下一步”** 。  
+8.  系统提示您启用数据连接时单击 **“下一步”** 。  
   
 9. 在“选择相关表”页面上，清除所有表旁边的复选框，然后单击“下一步”。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "69493864"
   
 1.  在“生成”菜单上，单击“部署 Analysis Services 教程”，以将更改部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的实例中，并处理数据库。  
   
-2.  在部署成功完成时，在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器中单击“浏览器”选项卡，再单击“重新连接”按钮。  
+2.  在部署成功完成时，在  **教程多维数据集的多维数据集设计器中单击“浏览器”** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，再单击“重新连接”按钮。  
   
 3.  清除“数据”窗格中的所有度量值和层次结构，然后将“Internet 销售-销售额”度量值添加到“数据”窗格的数据区域。  
   

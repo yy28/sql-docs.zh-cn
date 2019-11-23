@@ -45,7 +45,7 @@ sp_help_fulltext_system_components
  'all'  
  返回所有全文组件的信息。  
   
-@no__t 指定组件的类型。 *component_type*可以是下列其中一项：  
+`[ @component_type = ] component_type` 指定组件的类型。 *component_type*可以是以下项之一：  
   
 -   **wordbreaker**  
   
@@ -57,7 +57,7 @@ sp_help_fulltext_system_components
   
  如果指定了完整路径，则还必须使用组件 DLL 的完整路径指定*param* ，否则会返回错误消息。  
   
-`[ @param = ] param` 根据组件类型，这是以下内容之一：区域设置标识符（LCID）、带 "." 前缀的文件扩展名、协议处理程序的完整组件名称或组件 DLL 的完整路径。  
+`[ @param = ] param` 具体取决于组件类型，这是以下内容之一：区域设置标识符（LCID）、带 "." 前缀的文件扩展名、协议处理程序的完整组件名称或组件 DLL 的完整路径。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -69,7 +69,7 @@ sp_help_fulltext_system_components
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|组件的类型。 可以是以下类型之一：<br /><br /> filter<br /><br /> 协议处理程序<br /><br /> 断字符|  
 |**componentname**|**sysname**|组件的名称。|  
-|**clsid**|**uniqueidentifier**|组件的类标识符。|  
+|**clsid**|**ssNoversion**|组件的类标识符。|  
 |**fullpath**|**nvarchar(256)**|指向组件位置的路径。<br /><br /> NULL = 调用方不是**serveradmin**固定服务器角色的成员。|  
 |**version**|**nvarchar(30)**|组件的版本。|  
 |**manufacturer**|**sysname**|组件制造商的名称。|  
@@ -81,10 +81,10 @@ sp_help_fulltext_system_components
 |**dbid**|**int**|数据库 ID。|  
 |**ftcatid**|**int**|全文目录的 ID。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有**public**角色的成员身份;但是，用户只能查看其具有 VIEW DEFINITION 权限的全文目录的相关信息。 只有**serveradmin**固定服务器角色的成员才能查看**fullpath**列中的值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
  此方法在准备升级时尤为重要。 执行特定数据库中的存储过程，然后使用输出确定升级是否将影响特定目录。  
   
 ## <a name="examples"></a>示例  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. 确定特定断字符是否已注册。  
- 下面的示例列出了土耳其语 (LCID = 1055) 的断字符（如果已经在系统上安装该语言并已在服务实例上注册）。 此示例指定参数名， **@no__t 1component_type**和 **\@param**。  
+ 下面的示例列出了土耳其语 (LCID = 1055) 的断字符（如果已经在系统上安装该语言并已在服务实例上注册）。 此示例指定参数名称 **\@component_type**和 **\@** 参数。  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -126,7 +126,7 @@ GO
  默认情况下，未安装此筛选器，所以结果集为空。  
   
 ### <a name="e-listing-a-specific-dll-file"></a>E. 列出特定 .dll 文件  
- `nlhtml.dll`下面的示例列出了特定的 .ddl 文件 ，默认情况下会安装该文件。  
+ `nlhtml.dll`下面的示例列出了特定的 .ddl 文件 {2}，默认情况下会安装该文件。{3}  
   
 ```  
 EXEC sp_help_fulltext_system_components 'fullpath',   
@@ -135,7 +135,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [查看或更改注册的筛选器和断字符](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)   

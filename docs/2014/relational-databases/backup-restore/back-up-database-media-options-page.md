@@ -30,25 +30,25 @@ ms.locfileid: "70154830"
 -   [创建差异数据库备份 (SQL Server)](create-a-differential-database-backup-sql-server.md)  
   
 > [!IMPORTANT]  
->  可以定义用于创建数据库备份的数据库维护计划。 有关详细信息，请参阅[维护计划](../maintenance-plans/maintenance-plans.md)和[使用维护计划向导](../maintenance-plans/use-the-maintenance-plan-wizard.md)。  
+>  可以定义用于创建数据库备份的数据库维护计划。 有关详细信息，请参阅 [维护计划](../maintenance-plans/maintenance-plans.md) 和 [使用维护计划向导](../maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 脚本。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”[!INCLUDE[tsql](../../includes/tsql-md.md)][按钮，再为脚本选择一个目标，生成对应的 ](/sql/t-sql/statements/backup-transact-sql)**BACKUP** 脚本。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 ### <a name="overwrite-media"></a>覆盖介质  
- **“覆盖介质”** 面板中的选项可以控制如何将备份写入介质。 如果在 "备份数据库" 对话框的 "常规" 页上选择了 URL (Azure 存储) 作为备份目标, 则会禁用 "覆盖媒体" 部分下的选项。 可使用 `BACKUP TO URL.. WITH FORMAT` Transact-SQL 语句覆盖备份。 有关详细信息，请参阅 [SQL Server Backup to URL](sql-server-backup-to-url.md)。  
+ **“覆盖介质”** 面板中的选项可以控制如何将备份写入介质。 如果在“备份数据库”对话框的“常规”页上选择了 URL（Azure 存储）作为备份目标，则禁用“覆盖介质”部分下的选项。 可使用 `BACKUP TO URL.. WITH FORMAT` Transact-SQL 语句覆盖备份。 有关详细信息，请参阅 [SQL Server Backup to URL](sql-server-backup-to-url.md)。  
   
  仅支持选项 **“备份到新介质集并清除所有现有备份集”** 与加密选项一起使用。 如果选择 **“备份到现有介质”** 部分下的选项，则将禁用 **“备份选项”** 页上的加密选项。  
   
 > [!NOTE]  
->  有关媒体集的信息，请参阅 [媒体集、媒体簇和备份集 (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)实例的计算机附连有磁带机时，此选项才可用。  
+>  有关媒体集的信息，请参阅 [媒体集、媒体簇和备份集 (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)。  
   
  **备份到现有介质集**  
  将数据库备份到现有介质集。 选择此选项按钮将激活三个选项。  
   
- 选择下列选项之一：  
+ 选择以下选项之一：  
   
  **追加到现有备份集**  
  将备份集追加到现有介质集，并保留以前的所有备份。  
@@ -85,7 +85,7 @@ ms.locfileid: "70154830"
  **出错时继续**  
  备份操作继续进行，即使在遇到一个或多个错误后。  
   
-### <a name="transaction-log"></a>“事务日志”  
+### <a name="transaction-log"></a>事务日志  
  **“事务日志”** 面板中的选项可以控制事务日志备份的行为。 这些选项只在完整恢复模式或大容量日志恢复模式下相关。 仅在 **“备份数据库”** 对话框的 **“常规”** 页上的 [“备份类型”](../../integration-services/general-page-of-integration-services-designers-options.md) 字段中选中了 **“事务日志”** 时，才会激活这些选项。  
   
 > [!NOTE]  
@@ -111,7 +111,7 @@ ms.locfileid: "70154830"
  **卸载前倒带**  
  在卸载磁带前，释放并进行倒带。 仅在选中了 **“备份后卸载磁带”** 的时候，才会启用该选项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)   
  [备份文件和文件组 (SQL Server)](back-up-files-and-filegroups-sql-server.md)   

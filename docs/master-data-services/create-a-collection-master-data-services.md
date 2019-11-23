@@ -26,7 +26,7 @@ ms.locfileid: "73728520"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要创建叶成员和合并成员的平面列表时，可以创建集合。 集合无需包括来自实体的所有成员。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问“资源管理器”功能区域。  
@@ -35,7 +35,7 @@ ms.locfileid: "73728520"
   
 ### <a name="to-create-a-collection"></a>创建集合  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在 主页上，从“模型”列表中，选择模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型” 列表中选择模型。  
   
 2.  从“版本”列表中，选择某一版本。  
   

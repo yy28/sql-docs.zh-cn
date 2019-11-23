@@ -56,7 +56,7 @@ ms.locfileid: "73882291"
   
 5.  如果在步骤 4 中选择了 **“自动”** 或 **True** ，请输入下表中列出的选项值。 有关如何使用这些设置的详细信息，请参阅[复制标识列](replicate-identity-columns.md)中的“指定标识范围”部分。  
   
-    |选项|“值”|说明|  
+    |选项|“值”|描述|  
     |------------|-----------|-----------------|  
     |**发布服务器范围大小**|表示范围大小的整数值（例如 20000）。|请参阅[复制标识列](replicate-identity-columns.md)中的“指定标识范围”部分。|  
     |**订阅服务器范围大小**|表示范围大小的整数值（例如 10000）。|请参阅[复制标识列](replicate-identity-columns.md)中的“指定标识范围”部分。|  
@@ -138,7 +138,7 @@ ms.locfileid: "73882291"
   
 ## <a name="see-also"></a>另请参阅  
  [对等事务复制](../transactional/peer-to-peer-transactional-replication.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [复制系统存储过程概念](../concepts/replication-system-stored-procedures-concepts.md)   
  [复制标识列](replicate-identity-columns.md)  
   
   

@@ -30,15 +30,15 @@ ms.locfileid: "72251312"
 > 3.  根据需要，设置参数值、连接管理器属性和 **“高级”** 选项卡中的选项（例如，日志记录级别）。  
 > 
 >      有关日志记录级别的详细信息，请参阅 [启用日志记录在 SSIS 服务器上的包执行的](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md)。  
-> 4.  在单击 **“确定”** 以便执行该包之前，单击 **“脚本”** 。 Transact-SQL 将出现在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的“查询编辑器”窗口中。  
+> 4.  在单击 **“确定”** 以便执行该包之前，单击 **“脚本”** 。 Transact-SQL 将出现在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的“查询编辑器”窗口中。  
   
 ## <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>使用存储过程部署和执行包  
   
 1.  调用 [catalog.deploy_project（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) 将包含包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。  
   
-     若要检索 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署文件的二进制内容，对于 *@no__t 2project_stream*参数，请将 SELECT 语句与 OPENROWSET 函数和 BULK 行集提供程序一起使用。 通过 BULK 行集提供程序，您可以从文件读取数据。 BULK 行集提供程序的 SINGLE_BLOB 参数将该数据文件的内容以 varbinary(max) 类型的单行、单列行集的形式返回。 有关详细信息，请参阅 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
+     若要检索 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署文件的二进制内容，对于 *\@project_stream*参数，请将 SELECT 语句与 OPENROWSET 函数和 BULK 行集提供程序一起使用。 通过 BULK 行集提供程序，您可以从文件读取数据。 BULK 行集提供程序的 SINGLE_BLOB 参数将该数据文件的内容以 varbinary(max) 类型的单行、单列行集的形式返回。 有关详细信息，请参阅 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
   
-     在下面的示例中，SSISPackages_ProjectDeployment 项目将部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上的“SSIS 包”文件夹。 将从项目文件（SSISPackage_ProjectDeployment. .ispac）中读取二进制数据，并将其存储在 varbinary （max）类型的 *\@ProjectBinary*参数中。 将 *\@ProjectBinary*参数值分配给 *\@project_stream*参数。  
+     在下面的示例中，SSISPackages_ProjectDeployment 项目将部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上的“SSIS 包”文件夹。 将从项目文件 SSISPackage_ProjectDeployment （.ispac）中读取二进制数据，并将其存储在 varbinary （max）类型的 *\@ProjectBinary*参数中。 将 *ProjectBinary 参数值赋给 \@project_stream 参数* *\@* 。  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  
@@ -122,7 +122,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将项目部署到 Integration Services 服务器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [在 SQL Server Data Tools 中运行包](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
  [使用 SQL Server Management Studio 在 SSIS 服务器上运行包](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  

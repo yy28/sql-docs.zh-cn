@@ -1,5 +1,5 @@
 ---
-title: SQLSetDescRec |Microsoft Docs
+title: SQLSetDescRec | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -32,8 +32,8 @@ ms.locfileid: "73785733"
   
 |参数|非表值参数类型的相关属性，包括表值参数列|表值参数的相关属性|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
-|*类型*|SQL_DESC_TYPE|SQL_SS_TABLE|  
-|*类型*|忽略|对于 SQL_DATETIME 或 SQL_INTERVAL 类型的记录，请将它设置为 SQL_DESC_DATETIME_INTERVAL_CODE。|  
+|*“类型”*|SQL_DESC_TYPE|SQL_SS_TABLE|  
+|*SubType*|忽略|对于 SQL_DATETIME 或 SQL_INTERVAL 类型的记录，请将它设置为 SQL_DESC_DATETIME_INTERVAL_CODE。|  
 |*长度*|SQL_DESC_OCTET_LENGTH|表值参数类型名称的长度。 如果类型名称是以 null 结束，则它可为 SQL_NTS；如果不需要表值参数类型名称，则为零。|  
 |*精度*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
 |*小数位数*|SQL_DESC_SCALE|未使用。 此参数应为零。|  
@@ -46,9 +46,9 @@ ms.locfileid: "73785733"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>SQLSetDescRec 对日期和时间增强功能的支持  
  日期/时间类型所允许的值如下所示：  
   
-||*类型*|*类型*|*长度*|*精度*|*小数位数*|  
+||*“类型”*|*SubType*|*长度*|*精度*|*小数位数*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
-|datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
+|DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
 |date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  

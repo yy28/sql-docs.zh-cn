@@ -38,13 +38,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @no_checks = ] no_checks` 指示在删除分发服务器之前是否检查依赖对象。 *no_checks*的值为**bit**，默认值为0。  
+`[ @no_checks = ] no_checks` 指示在删除分发服务器之前是否检查依赖对象。 *no_checks*为**bit**，默认值为0。  
   
- 如果为**0**，则**sp_dropdistributor**将进行检查以确保除分发服务器外，所有发布和分发对象均已删除。  
+ 如果为**0**，则**sp_dropdistributor**检查以确保除分发服务器以外的所有发布和分发对象均已删除。  
   
- 如果为**1**，则在卸载分发服务器之前， **sp_dropdistributor**删除所有发布和分发对象。  
+ 如果为**1**，则在卸载分发服务器之前**sp_dropdistributor**删除所有发布和分发对象。  
   
-`[ @ignore_distributor = ] ignore_distributor` 指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor*的值为**bit**，默认值为**0**。  
+`[ @ignore_distributor = ] ignore_distributor` 指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor*为**bit**，默认值为**0**。  
   
  如果为**0**，则**Sp_dropdistributor**连接到分发服务器并删除所有复制对象。 如果**sp_dropdistributor**无法连接到分发服务器，则存储过程将失败。  
   
@@ -53,23 +53,23 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>备注  
- **sp_dropdistributor**用于所有类型的复制。  
+## <a name="remarks"></a>Remarks  
+ **sp_dropdistributor**在所有类型的复制中使用。  
   
- 如果服务器上存在其他发布服务器或分发对象， **sp_dropdistributor**将失败，除非将 **\@no_checks**设置为**1**。  
+ 如果服务器上存在其他发布服务器或分发对象， **sp_dropdistributor**将失败，除非 **\@no_checks**设置为**1**。  
   
  在通过执行**sp_dropdistributiondb**删除分发数据库后，必须执行此存储过程。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  
   
-## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能执行**sp_dropdistributor**。  
+## <a name="permissions"></a>Permissions  
+ 只有**sysadmin**固定服务器角色的成员才能**sp_dropdistributor**执行。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributor &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_changedistributor_property &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_adddistributor &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

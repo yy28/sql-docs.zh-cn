@@ -1,5 +1,5 @@
 ---
-title: SQLGetData |Microsoft Docs
+title: SQLGetData | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql

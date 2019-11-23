@@ -26,12 +26,12 @@ ms.locfileid: "73728481"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建模型以便包含模型对象。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-a-model"></a>创建模型  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73728481"
   
  对于创建的每个模型，系统都会在网格中添加一行（其中包含八列）。 八个列是：  
   
--   状态：模型状态。 单击 "**保存模型**" 按钮后，将显示 "![更新](../master-data-services/media/mds-model-status-updating.png "端更新")" 图像，指示模型正在更新。 如果在创建或编辑模型时出现错误，则会显示![错误](../master-data-services/media/mds-model-status-error.png "错误")映像。 如果状态为“正常”，系统会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "“确定”") 图像。  
+-   状态：模型状态。 单击 "**保存模型**" 按钮后，将显示 "![更新](../master-data-services/media/mds-model-status-updating.png "端更新")" 图像，指示模型正在更新。 如果在创建或编辑模型时出现错误，则会显示![错误](../master-data-services/media/mds-model-status-error.png "Error")映像。 如果状态为“正常”，系统会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "确定") 图像。  
   
 -   名称：模型名称。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73728481"
  [模型 (Master Data Services)](../master-data-services/models-master-data-services.md)   
  [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)   
  [删除模型 (Master Data Services)](../master-data-services/delete-a-model-master-data-services.md)   
- [编辑模型 &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
+ [编辑模型 (Master Data Services)](../master-data-services/edit-model-master-data-services.md)   
  [事务 (Master Data Services)](../master-data-services/transactions-master-data-services.md)  
   
   

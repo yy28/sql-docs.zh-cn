@@ -110,7 +110,7 @@ DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-compoundcurve"></a>C. 使用 CompoundCurve 实例化一个地域实例  
- 下面的示例演示如何使用 `CompoundCurve` 声明和初始化 `geography` 实例：  
+ 下面的示例演示如何使用 `geography` 声明和初始化 `CompoundCurve` 实例：  
   
 ```sql  
 DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -193,6 +193,6 @@ Circle Two12.566370...
  [LineString](linestring.md)   
  [CircularString](circularstring.md)   
  [空间数据类型概述](spatial-data-types-overview.md)   
- [Point](point.md)  
+ [点](point.md)  
   
   

@@ -166,7 +166,7 @@ ms.locfileid: "73882256"
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改分发服务器和发布服务器属性](view-and-modify-distributor-and-publisher-properties.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [复制系统存储过程概念](concepts/replication-system-stored-procedures-concepts.md)   
  [“配置分发”](configure-distribution.md)   
  [复制管理对象概念](concepts/replication-management-objects-concepts.md)   
  [为 AlwaysOn 可用性组&#40;配置复制 SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 

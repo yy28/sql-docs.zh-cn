@@ -29,12 +29,12 @@ ms.locfileid: "73728363"
 > [!NOTE]  
 >  删除派生层次结构对于该层次结构所基于的属性关系没有影响。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-a-derived-hierarchy"></a>删除派生层次结构  
   

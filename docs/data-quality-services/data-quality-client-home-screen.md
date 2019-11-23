@@ -25,7 +25,7 @@ ms.locfileid: "70152576"
 
   使用此屏幕可以访问 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的三组主要任务的用户界面：知识库管理、数据质量项目和管理。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 ### <a name="knowledge-base-management"></a>知识库管理  
  DQS 知识库是 DQS 用来提高数据质量的元数据储存库。 该元数据在两个过程中创建：在计算机辅助的知识发现过程中由 DQS 平台创建，以及在交互式的域管理过程中由数据专员创建。  
@@ -41,7 +41,7 @@ ms.locfileid: "70152576"
   
  您可以打开锁定的知识库并仅在您锁定它的情况下进行编辑。 如果这样，知识库将以它关闭时的状态打开，该状态在括号中标明。 如果知识库已锁定但是不是您锁定的，则只能以只读方式打开它。  
   
-### <a name="data-quality-projects"></a>数据质量项目  
+### <a name="data-quality-projects"></a>Data Quality Projects  
  数据质量项目是 DQS 同时通过计算机辅助数据更正和交互式数据清理来执行数据清理或数据匹配的过程。  
   
  **新建数据质量项目**  
@@ -59,10 +59,10 @@ ms.locfileid: "70152576"
  **活动监视**  
  显示与所连接的 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]相关的所有活动（当前和历史活动）的状态的视图。 监视的活动类型包括知识管理、数据质量项目和基于 SSIS 的数据更正。  
   
- **Configuration**  
- 显示引用数据服务帐户的配置属性 (包括通过 Azure Marketplace 和直接到引用数据服务)、常规设置 (交互式清理、匹配和分析) 和日志严重性设置。  
+ **配置**  
+ 显示引用数据服务帐户的配置属性（包括通过 Azure Marketplace 和直接到引用数据服务）、常规设置（交互式清理、匹配和分析）和日志严重性设置。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [数据质量项目 (DQS)](../data-quality-services/data-quality-projects-dqs.md)   
  [DQS 管理](../data-quality-services/dqs-administration.md)  

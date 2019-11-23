@@ -137,7 +137,7 @@ ms.locfileid: "73761281"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>COLUMNS 和 PROCEDURE_PARAMETERS 架构行集  
  COLUMNS 和 PROCEDURE_PARAMETERS 架构行集添加了以下列。  
   
-|列名|类型|说明|  
+|列名|sysobjects|描述|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|在其中定义 XML 架构集合的目录的名称。 对于非 XML 列或非类型化 XML 列，为 NULL。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|在其中定义 XML 架构集合的架构的名称。 对于非 XML 列或非类型化 XML 列，为 NULL。|  
@@ -149,7 +149,7 @@ ms.locfileid: "73761281"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>SS_XMLSCHEMA 架构行集  
  所引入的新的架构行集 SS_XMLSCHEMA 可供客户端检索 XML 架构信息。 SS_XMLSCHEMA 行集包含以下列。  
   
-|列名|类型|说明|  
+|列名|sysobjects|描述|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 集合所属的目录。|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 集合所属的架构。|  
@@ -169,7 +169,7 @@ ms.locfileid: "73761281"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 属性集  
  为了通过 OLE DB 支持**xml**数据类型，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 实现了新的 DBPROPSET_SQLSERVERPARAMETER 属性集，该属性集包含以下值。  
   
-|名称|类型|说明|  
+|NAME|sysobjects|描述|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|在其中定义 XML 架构集合的目录（数据库）的名称。 由三部分组成的 SQL 名称标识符的一部分。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|架构集合内 XML 架构的名称。 由三部分组成的 SQL 名称标识符的一部分。|  
@@ -178,7 +178,7 @@ ms.locfileid: "73761281"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 属性集  
  为了支持在**ITableDefinition**接口中创建表，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 向 DBPROPSET_SQLSERVERCOLUMN 属性集添加了三个新列。  
   
-|名称|类型|说明|  
+|NAME|sysobjects|描述|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定在其中存储 XML 架构的目录的名称。 对于其他列类型，此属性返回空字符串。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定定义此列的 XML 架构的名称。|  
@@ -198,7 +198,7 @@ ms.locfileid: "73761281"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 接口  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将以下特定于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的列添加到**IColumnRowset：： GetColumnsRowset**方法返回的行集。 这些列包含 XML 架构集合的由三个部分组成的名称。 对于非 XML 列或非类型化 XML 列，所有这三列均取默认值 NULL。  
   
-|列名|类型|说明|  
+|列名|sysobjects|描述|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 架构集合所属的目录，<br /><br /> 否则为 Null。|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 架构集合所属的架构。 否则为 Null。|  
@@ -218,7 +218,7 @@ ms.locfileid: "73761281"
   
  对于 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，访问接口将位于使用者缓冲区中的 XML 实例存储到适当的列中。  
   
- 在 DBTYPE_IUNKNOWN/ISequentialStream 的情况下，如果使用者未指定任何存储对象，则使用者必须事先创建**ISequentialStream**对象，将 XML 文档与对象绑定，然后将该对象传递给提供程序通过**IRowsetChange：： SetData**方法。 使用者还可以创建存储对象，将 pObject 参数设置为 IID_ISequentialStream，创建 ISequentialStream 对象，然后将 ISequentialStream 对象传递给 IRowsetChange::SetData 方法。 在这两种情况下，提供程序都可以通过 ISequentialStream 对象检索 XML 对象，然后将其插入适当的列中。  
+ 在 DBTYPE_IUNKNOWN/ISequentialStream 的情况下，如果使用者未指定任何存储对象，则使用者必须事先创建**ISequentialStream**对象，将 XML 文档与对象绑定，然后通过**IRowsetChange：： SetData**方法将该对象传递给提供程序。 使用者还可以创建存储对象，将 pObject 参数设置为 IID_ISequentialStream，创建 ISequentialStream 对象，然后将 ISequentialStream 对象传递给 IRowsetChange::SetData 方法。 在这两种情况下，提供程序都可以通过 ISequentialStream 对象检索 XML 对象，然后将其插入适当的列中。  
   
 #### <a name="the-irowsetupdate-interface"></a>IRowsetUpdate 接口  
  IRowsetUpdate 接口提供了用于延迟更新的功能。 在使用者调用**IRowsetUpdate： Update**方法之前，对行集可用的数据不会提供给其他事务。  

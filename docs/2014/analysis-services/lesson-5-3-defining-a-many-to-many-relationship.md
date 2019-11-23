@@ -27,7 +27,7 @@ ms.locfileid: "69493869"
 > [!NOTE]  
 >  为了支持多对多维度关系，必须在所涉及的所有表之间的数据源视图中定义主键-外键关系。 否则，在“多维数据集设计器”的“维度用法”选项卡中建立关系时，无法选择正确的中间度量值组。  
   
- 有关详细信息，请参阅[维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和[定义多对多关系和多对多关系属性](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
+ 有关详细信息，请参阅 [维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和 [定义多对多关系和多对多关系属性](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
   
  在本主题的任务中，将定义“销售原因”维度和“销售原因”度量值组，并通过“销售原因”度量值组定义“销售原因”维度与“Internet 销售”度量值组之间的多对多关系。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "69493869"
   
 1.  切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的“多维数据集设计器”，再单击“多维数据集结构”选项卡。  
   
-2.  右键单击“度量值”窗格中的任意位置，然后单击“新建度量值组”。 有关详细信息。请参阅[在多维模型中创建度量值和度量值组](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
+2.  右键单击“度量值”窗格中的任意位置，然后单击“新建度量值组”。 有关详细信息。请参阅 [在多维模型中创建度量值和度量值组](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
   
 3.  在 "**新建度量值组**" 对话框的 "**从数据源视图中选择一个表**" 列表中，选择 "`InternetSalesReason`"，然后单击 **"确定"** 。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "69493869"
   
 5.  选择“Internet 销售原因记数”，然后在“属性”窗口中查看此度量值的属性。  
   
-     请注意，此度量值的“AggregateFunction”属性定义为“Count”，而不是“Sum”。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 选择**计数**，因为基础数据类型是字符串数据类型。 由于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将基础事实数据表中的其他两列检测为数字键而非实际度量值，因此未将这两列选作度量值。 有关详细信息，请参阅[定义半累加行为](multidimensional-models/define-semiadditive-behavior.md)。  
+     请注意，此度量值的“AggregateFunction”属性定义为“Count”，而不是“Sum”。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 选择**计数**，因为基础数据类型是字符串数据类型。 由于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将基础事实数据表中的其他两列检测为数字键而非实际度量值，因此未将这两列选作度量值。 有关详细信息，请参阅 [定义半累加行为](multidimensional-models/define-semiadditive-behavior.md)。  
   
 6.  在“属性”窗口中，将“Internet Sales Reason Count”度量值的“Visible”属性更改为“False”。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "69493869"
   
 7.  在“名称列”列表中，选择“SalesReasonName”。  
   
-8.  在“欢迎”页上，单击 **“下一步”** 。  
+8.  系统提示您启用数据连接时单击 **“下一步”** 。  
   
 9. 在“选择维度属性”页上，由于“销售原因键”属性是键属性，因此它将自动处于选中状态。 选中 "**销售原因原因类型**" 属性旁边的复选框，将其名称更改为 "`Sales Reason Type`"，然后单击 "**下一步**"。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "69493869"
   
      !["定义关系" 对话框](../../2014/tutorials/media/l5-many-to-many-3.gif "“定义关系”对话框")  
   
-5.  单击 **“确定”** 中创建非聚集索引。  
+5.  单击“确定”。  
   
      您将看到表示“销售原因”维度和“Internet 销售”度量值组之间关系的多对多图标。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "69493869"
   
 1.  在“生成”菜单上，单击“部署 Analysis Services 教程”。  
   
-2.  成功完成部署后，切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的“多维数据集设计器”中的“浏览器”选项卡，然后单击“重新连接”。  
+2.  成功完成部署后，切换到  **教程多维数据集的“多维数据集设计器”中的“浏览器”** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，然后单击“重新连接”。  
   
 3.  将“Internet 销售-销售额”度量值添加到数据窗格的数据区域。  
   

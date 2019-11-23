@@ -94,7 +94,7 @@ ms.locfileid: "69493778"
   
 2.  成功完成部署后，请切换到“浏览器”选项卡，然后单击“重新连接”。  
   
-3.  从“数据”窗格中删除所有层次结构和度量值，然后从“透视”列表中选择“[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial”。  
+3.  从“数据”窗格中删除所有层次结构和度量值，然后从“透视”[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]**列表中选择“** Tutorial”。  
   
 4.  在“元数据”窗格中，展开“度量值”，然后展开“Internet Sales”。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "69493778"
   
 5.  在工具栏上，选择“语言”列表中的“西班牙语(西班牙)”。  
   
-     注意，“元数据”窗格中的项将重新填充。 重新填充“元数据”窗格中的项之后，注意“Internet 销售额”度量值将不再出现在“Internet 销售”显示文件夹中。 相反，它会在名为 `Ventas del lnternet` 的新显示文件夹中以西班牙语显示，如下图所示。  
+     注意，“元数据”窗格中的项将重新填充。 重新填充“元数据”窗格中的项之后，注意“Internet 销售额”度量值将不再出现在“Internet 销售”显示文件夹中。 相反，它会在名为 `Ventas del lnternet`的新显示文件夹中以西班牙语显示，如下图所示。  
   
      ![重新填充元数据窗格](../../2014/tutorials/media/l9-translations-6.gif "重新填充元数据窗格")  
   

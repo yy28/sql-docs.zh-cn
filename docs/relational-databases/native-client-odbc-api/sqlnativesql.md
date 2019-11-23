@@ -1,5 +1,5 @@
 ---
-title: SQLNativeSql |Microsoft Docs
+title: SQLNativeSql | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql

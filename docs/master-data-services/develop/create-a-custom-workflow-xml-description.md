@@ -65,7 +65,7 @@ ms.locfileid: "73729302"
   
  下表描述此 XML 所包含的一些标记：  
   
-|标记|说明|  
+|标记|描述|  
 |---------|-----------------|  
 |\<Type>|在  **的“工作流类型”文本框中输入的文本，用于标识要加载的自定义工作流程序集**[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。|  
 |\<SendData>|由  **中的“消息中包括成员数据”复选框控制的一个布尔值**[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。 值 1 表示发送 \<MemberData> 部分；否则表示未发送 \<MemberData> 部分。|  

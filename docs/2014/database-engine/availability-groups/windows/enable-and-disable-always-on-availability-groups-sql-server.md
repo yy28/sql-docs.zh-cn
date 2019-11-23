@@ -32,7 +32,7 @@ ms.locfileid: "72782979"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **如何：**  
   
@@ -54,10 +54,10 @@ ms.locfileid: "72782979"
   
  有关创建和配置可用性组的其他先决条件的信息，请参阅[ &#40;AlwaysOn 可用性组 SQL Server&#41;的先决条件、限制和建议](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上启用 AlwaysOn 可用性组时，服务器实例具有对 WSFC 群集的完全控制权限。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求本地计算机上 **Administrator** 组中的成员身份以及对 WSFC 群集的完全控制。 使用 PowerShell 启用 AlwaysOn 时，使用 **“以管理员身份运行”** 选项打开命令提示符窗口。  
   
  要求 Active Directory 创建对象和管理对象权限。  
@@ -102,7 +102,7 @@ ms.locfileid: "72782979"
 ###  <a name="PowerShell1Procedure"></a> 使用 PowerShell  
  **确定是否已启用 AlwaysOn 可用性组**  
   
-1.  将默认值（`cd`）设置为服务器实例（例如 `\SQL\NODE1\DEFAULT`），您要在其上确定是否启用了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。  
+1.  设置要在其上确定是否启用了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的服务器实例（如 `\SQL\NODE1\DEFAULT`）的默认（`cd`）。  
   
 2.  输入以下 PowerShell `Get-Item` 命令：  
   
@@ -131,7 +131,7 @@ ms.locfileid: "72782979"
   
 2.  在“开始” 菜单上，依次指向“所有程序”、 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、“配置工具”，然后单击“SQL Server 配置管理器”。  
   
-3.  在**SQL Server 配置管理器**中，单击 " **SQL Server 服务**"，右键单击 SQL Server （ **< *`instance name`* >）** ，其中 **< *`instance name`***  0 是本地服务器实例的名称，你要启用 AlwaysOn 可用性组，然后单击 "**属性"。**  
+3.  在**SQL Server 配置管理器**中，单击 " **SQL Server 服务**"，右键单击 SQL Server （ **< *`instance name`* >）** ，其中 **< *`instance name`*** >是要为其启用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击 "**属性"。**  
   
 4.  选择 **“AlwaysOn 高可用性”** 选项卡。  
   
@@ -195,7 +195,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-3.  在**SQL Server 配置管理器**中，单击 " **SQL Server 服务**"，右键单击 SQL Server （ **< *`instance name`* >）** ，其中 **< *`instance name`***  0 是本地服务器实例的名称，你要禁用 AlwaysOn 可用性组，然后单击 "**属性**"。  
+3.  在**SQL Server 配置管理器**中，单击 " **SQL Server 服务**"，右键单击 SQL Server （ **< *`instance name`* >）** ，其中 **< *`instance name`*** >是要禁用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击 "**属性**"。  
   
 4.  在“AlwaysOn 高可用性”选项卡上，取消选中“启用 AlwaysOn 可用性组” 复选框，然后单击“确定”。  
   
@@ -251,11 +251,11 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 |指定了 -NoServiceRestart 参数|指定了 -Force 参数|重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务？|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  
-|“否”|“否”|默认情况。 但是 cmdlet 提示您以下信息：<br /><br /> **若要完成此操作，必须重新启动服务器实例 "< instance_name >" 的 SQL Server 服务。是否要继续？**<br /><br /> **[Y] 是 [N] 否 [S] 挂起 [?] 帮助（默认值为“Y”）：**<br /><br /> 如果指定 **N** 或 **S**，则不重新启动该服务。|  
-|“否”|用户帐户控制|重新启动服务。|  
-|用户帐户控制|“否”|不重新启动服务。|  
-|用户帐户控制|用户帐户控制|不重新启动服务。|  
+|No|No|默认情况。 但是 cmdlet 提示您以下信息：<br /><br /> **若要完成此操作，必须重新启动服务器实例 "< instance_name >" 的 SQL Server 服务。是否要继续？**<br /><br /> **[Y] 是 [N] 否 [S] 挂起 [?] 帮助（默认值为“Y”）：**<br /><br /> 如果指定 **N** 或 **S**，则不重新启动该服务。|  
+|No|是|重新启动服务。|  
+|是|No|不重新启动服务。|  
+|是|是|不重新启动服务。|  
   
 ## <a name="see-also"></a>另请参阅  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
  [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql)  

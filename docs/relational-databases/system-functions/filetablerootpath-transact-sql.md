@@ -38,12 +38,12 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
 ## <a name="arguments"></a>参数  
  *FileTable_name*  
- FileTable 的名称。 *FileTable_name*的类型为**nvarchar**。 这是一个可选参数。 默认值为当前数据库。 指定*schema_name*也是可选的。 可以为*FileTable_name*传递 NULL 以使用默认参数值  
+ FileTable 的名称。 *FileTable_name*的类型为**nvarchar**。 这是一个可选参数。 默认值为当前数据库。 指定*schema_name*也是可选的。 可以将 NULL 传递给*FileTable_name*以使用默认参数值  
   
- *\@option*  
- 一个整数表达式，定义路径的服务器组件应如何进行格式化。 *@no__t 1option*可以具有以下值之一：  
+ *\@选项*  
+ 一个整数表达式，定义路径的服务器组件应如何进行格式化。 *\@选项*可以具有以下值之一：  
   
-|ReplTest1|Description|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 这是默认值。|  
 |**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -82,12 +82,12 @@ WHERE Name = N'document.docx';
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  **FileTableRootPath**函数需要：  
   
 -   拥有 FileTable 的 SELECT 权限以获取特定 FileTable 的根路径。  
   
--   用于获取当前数据库的根路径的**db_datareader**或更高权限。  
+-   **db_datareader**或更高权限以获取当前数据库的根路径。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何调用**FileTableRootPath**函数。  
@@ -104,7 +104,7 @@ SELECT FileTableRootPath(N'dbo.MyFileTable');
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 FileTable 中使用目录和路径](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

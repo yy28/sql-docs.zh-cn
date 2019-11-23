@@ -28,12 +28,12 @@ ms.locfileid: "73728796"
 > [!NOTE]  
 >  如果您创建使用 **OR** 运算符的业务规则，则考虑为可以独立进行计算的每个条件语句都创建单独的规则。 然后，您可以根据需要排除规则，提供更高的灵活性以及更便于排除故障。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   业务规则必须存在。 有关详细信息，请参阅[创建和发布业务规则 (Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73728796"
   
 3.  在“业务规则”页上，从“模型”下拉列表中选择一个模型。  
   
-4.  从“实体”下拉列表中选择一个实体。  
+4.  从 “实体”下拉列表中选择一个实体。  
   
 5.  从“成员类型”列表中选择一个成员类型。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "73728796"
   
 8.  在左侧的 **If** 块中，从逻辑运算符下拉列表中选择 **AND/OR/NOT**。  
   
-9. 单击 **“添加”** 。 此时，系统会显示一个面板。  
+9. 单击“添加”。 将显示一个面板。  
   
-10. 从“属性”下拉列表中选择一个属性。  
+10. 从 “属性”下拉列表中选择一个属性。  
   
 11. 从“运算符”下拉列表中选择一个条件。  
   

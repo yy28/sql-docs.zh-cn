@@ -107,7 +107,7 @@ ms.locfileid: "71952336"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a>用于将设置为的配置选项：消息中的字段  
+##  <a name="bkmk_setting_TO_field"></a>用于在消息中设置 "到：" 字段的配置选项  
  根据“管理单独的订阅” 任务授予的权限而创建的用户定义订阅包含基于域用户帐户的预设用户名。 用户创建订阅时，“收件人:” 字段中的收件人姓名会使用创建该订阅的人员的域用户帐户自行转换为地址。  
   
  如果您所用的 SMTP 服务器或转发器使用了不同于域用户帐户的电子邮件帐户，则 SMTP 服务器尝试将报表传递给该用户时，报表传递会失败。  
@@ -148,12 +148,12 @@ ms.locfileid: "71952336"
   
  报表服务器与本地 SMTP 服务器或转发器之间的连接是由下列配置设置决定的：  
   
--   @no__t 设置为**1**。  
+-   `SendUsing` 设置为**1**。  
   
 -   将**SMTPServerPickupDirectory** 设置为本地驱动器中的文件夹。  
   
     > [!NOTE]  
-    >  如果你使用的是本地 SMTP 服务器，请确保未将 @no__t 设置为-0。  
+    >  如果使用的是本地 SMTP 服务器，请确保不要设置 `SMTPServer`。  
   
 -   `From` 设置显示在电子邮件的“发件人：”行中的值。 此值是必需的。  
   
@@ -179,15 +179,15 @@ ms.locfileid: "71952336"
   
 2.  在文本编辑器中打开 RSReportServer.config 文件。  
   
-3.  验证 < @no__t > 设置为 Report Server URL 地址。 此值是在您配置报表服务器时设置的，应该已经填写。 如果未设置此值，则请键入报表服务器 URL 地址。  
+3.  验证 <`UrlRoot`> 是否设置为 Report Server URL 地址。 此值是在您配置报表服务器时设置的，应该已经填写。 如果未设置此值，则请键入报表服务器 URL 地址。  
   
-4.  在 "传递" 部分中，查找 < @no__t >。  
+4.  在 "传递" 部分中，查找 <`ReportServerEmail`>。  
   
-5.  在 < @no__t > 中，键入 SMTP 服务器的名称。 此值可以是 IP 地址、企业 Intranet 上计算机的 UNC 名称或者完全限定域名。  
+5.  在 <`SMTPServer`> 中，键入 SMTP 服务器的名称。 此值可以是 IP 地址、企业 Intranet 上计算机的 UNC 名称或者完全限定域名。  
   
-6.  验证 "< > @no__t" 设置为 "2"。 如果将其设置为其他值，则报表服务器无法配置为使用远程 SMTP 服务。  
+6.  验证 <`SendUsing`> 设置为2。 如果将其设置为其他值，则报表服务器无法配置为使用远程 SMTP 服务。  
   
-7.  在 < @no__t > 中，键入有权从 SMTP 服务器发送电子邮件的帐户的名称。  
+7.  在 <`From`> 中，键入有权从 SMTP 服务器发送电子邮件的帐户的名称。  
   
 8.  保存该文件。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "71952336"
   
 8.  在文本编辑器中打开 **RSReportServer.config** 文件。  
   
-9. 验证 `<UrlRoot>` 已设置为报表服务器 URL 地址。 此值是在您配置报表服务器时设置的，应该已经填写。 如果未设置此值，则请键入报表服务器 URL 地址。  
+9. 请验证是否将 `<UrlRoot>` 设置为报表服务器 URL 地址。 此值是在您配置报表服务器时设置的，应该已经填写。 如果未设置此值，则请键入报表服务器 URL 地址。  
   
 10. 在“传递”部分中，查找 `<ReportServerEmail>.`。  
   
@@ -229,7 +229,7 @@ ms.locfileid: "71952336"
   
  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

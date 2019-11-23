@@ -32,7 +32,7 @@ ms.locfileid: "73729376"
 > [!NOTE]  
 >  如果某一成员用作另一个成员的基于域的属性值，则不能删除该成员。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问“资源管理器”功能区域。  
@@ -43,7 +43,7 @@ ms.locfileid: "73729376"
   
 ### <a name="to-delete-a-member-or-collection"></a>删除成员或集合  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在 主页上，从“模型”列表中，选择模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型” 列表中选择模型。  
   
 2.  从“版本”列表中，选择某一版本。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "73729376"
   
 ## <a name="see-also"></a>另请参阅  
  [重新激活成员或集合 (Master Data Services)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
+ [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)   
  [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
   

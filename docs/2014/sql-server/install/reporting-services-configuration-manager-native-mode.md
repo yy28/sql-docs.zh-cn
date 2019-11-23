@@ -128,7 +128,7 @@ ms.locfileid: "71952496"
   
 6.  单击 **“连接”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表管理器（SSRS 本机模式）](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
  [配置报表服务器数据库连接（SSRS 配置管理器）](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

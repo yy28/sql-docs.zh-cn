@@ -1,5 +1,5 @@
 ---
-title: SQLBindParameter |Microsoft Docs
+title: SQLBindParameter | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -50,7 +50,7 @@ ms.locfileid: "73787768"
  有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>SQLBindParameter 对日期和时间增强功能的支持  
- 日期/时间类型的参数值按[从 C 转换到 SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)中所述的方式进行转换。 请注意，如果其相应的结构（**SQL_SS_TIME2_STRUCT**和 SQL_SS_，则类型为**time**和**Datetimeoffset**的参数必须将*ValueType*指定为**SQL_C_DEFAULT**或**SQL_C_BINARY** 。 **使用 TIMESTAMPOFFSET_STRUCT**）。  
+ 日期/时间类型的参数值按[从 C 转换到 SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)中所述的方式进行转换。 请注意， **SQL_SS_TIMESTAMPOFFSET_STRUCT** **SQL_SS_TIME2_STRUCT**如果使用了类型为**time**和**Datetimeoffset**的参数，则必须将*ValueType*指定为**SQL_C_DEFAULT**或**SQL_C_BINARY** 。  
   
  有关详细信息，请参阅[日期和时间&#40;改进&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   

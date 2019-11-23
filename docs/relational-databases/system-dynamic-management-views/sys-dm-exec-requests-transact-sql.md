@@ -22,7 +22,7 @@ ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 88ce0a3899bc637de6d94cce7dad71e47247a67f
 ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73982632"
@@ -66,7 +66,7 @@ ms.locfileid: "73982632"
 |Writes|**bigint**|此请求执行的写入数。 不可为 null。|  
 |logical_reads|**bigint**|此请求已经执行的逻辑读取数。 不可为 null。|  
 |text_size|**int**|此请求的 TEXTSIZE 设置。 不可为 null。|  
-|语言|**nvarchar(128)**|该请求的语言设置。 可以为 Null。|  
+|language|**nvarchar(128)**|该请求的语言设置。 可以为 Null。|  
 |date_format|**nvarchar(3)**|该请求的 DATEFORMAT 设置。 可以为 Null。|  
 |date_first|**int**|该请求的 DATEFIRST 设置。 不可为 null。|  
 |quoted_identifier|**bit**|1 = QUOTED_IDENTIFIER 对于该请求是 ON。 否则，为0。<br /><br /> 不可为 null。|  

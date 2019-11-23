@@ -1,5 +1,5 @@
 ---
-title: SQLGetDiagField |Microsoft Docs
+title: SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "73786470"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序为**SQLGetDiagField**指定以下附加诊断字段。 这些字段支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序的大量错误报告功能，并且可以在连接的 ODBC 连接句柄和 ODBC 语句句柄上生成的所有诊断记录中使用。 这些字段在 sqlncli.h 中定义。  
   
-|诊断记录字段|说明|  
+|诊断记录字段|描述|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|报告生成错误的存储过程的行号。 只有 SQL_DIAG_SS_PROCNAME 返回值时，SQL_DIAG_SS_LINE 的值才有意义。 该值作为无符号 16 位整数返回。|  
 |SQL_DIAG_SS_MSGSTATE|错误消息的状态。 有关错误消息状态的信息，请参阅[RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)。 该值作为有符号 32 位整数返回。|  
@@ -38,7 +38,7 @@ ms.locfileid: "73786470"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序报告标识最后尝试的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句的以下额外动态函数代码。 动态函数代码在诊断记录集的标头（记录 0）中返回，因此可在每次执行时（成功或失败）使用。  
   
-|动态函数代码|数据源|  
+|动态函数代码|Source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE 语句|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT 语句|  

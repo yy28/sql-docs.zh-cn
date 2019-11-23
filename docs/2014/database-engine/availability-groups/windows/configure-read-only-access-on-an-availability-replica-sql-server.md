@@ -36,9 +36,9 @@ ms.locfileid: "72797736"
   
 -   若要配置不同的连接访问，您必须连接到承载主副本的服务器实例。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 |任务|Permissions|  
 |----------|-----------------|  
@@ -83,7 +83,7 @@ ms.locfileid: "72797736"
  **配置对可用性副本的访问**  
   
 > [!NOTE]  
->  有关此过程的示例，请参阅本节后面的[示例 (Transact-SQL)](#TsqlExample)。  
+>  有关此过程的示例，请参阅本节后面的 [示例 (Transact-SQL)](#TsqlExample)。  
   
 1.  连接到承载主副本的服务器实例。  
   
@@ -188,8 +188,8 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
     ||前提条件|链接|  
     |-|------------------|----------|  
-    |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "旁边")|确保可用性组具有侦听器。|[创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "旁边")|为可用性组配置只读路由。|[为可用性组配置只读路由 (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|确保可用性组具有侦听器。|[创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|为可用性组配置只读路由。|[为可用性组配置只读路由 (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **在故障转移后可能会影响触发器和作业的因素**  
   
@@ -202,7 +202,7 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
  若要标识读写数据库，请将 READ_WRITE 指定为值：  
   
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
   
 -   [为可用性组配置只读路由 (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
@@ -233,6 +233,6 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
   
   
 ## <a name="see-also"></a>另请参阅  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
  [活动辅助副本：可读&#40;辅助副本 AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
  [关于对可用性副本的客户端连接访问 (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md)  

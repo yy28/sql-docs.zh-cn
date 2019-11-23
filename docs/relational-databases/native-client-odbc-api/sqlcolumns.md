@@ -37,7 +37,7 @@ ms.locfileid: "73787414"
   
  下表列出了结果集返回的列：  
   
-|列名|说明|  
+|列名|描述|  
 |-----------------|-----------------|  
 |DATA_TYPE|为**VARCHAR （max）** 数据类型返回 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
 |TYPE_NAME|对于**varchar （max）** 、 **varbinary （max）** 和**nvarchar （max）** 数据类型，返回 "varchar"、"varbinary" 或 "nvarchar"。|  
@@ -61,7 +61,7 @@ ms.locfileid: "73787414"
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns 和表值参数  
  SQLColumns 返回的结果集取决于 SQL_SOPT_SS_NAME_SCOPE 的设置。 有关详细信息，请参阅[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。 已针对表值参数添加以下列：  
   
-|列名|数据类型|目录|  
+|列名|数据类型|内容|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|对于 TABLE_TYPE 中的列，如果该列是一个计算列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
 |SS_IS_IDENTITY|Smallint|如果该列为标识列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
@@ -79,7 +79,7 @@ ms.locfileid: "73787414"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns 对稀疏列的支持  
  已将两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定列添加到 SQLColumns 的结果集中：  
   
-|列名|数据类型|说明|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|如果该列为稀疏列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
 |SS_IS_COLUMN_SET|**Smallint**|如果该列是**column_set**列，则 SQL_TRUE;否则，SQL_FALSE。|  

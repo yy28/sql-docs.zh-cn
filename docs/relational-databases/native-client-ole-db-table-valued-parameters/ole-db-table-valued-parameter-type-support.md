@@ -59,7 +59,7 @@ CoType RowsetTVP
 ## <a name="methods"></a>方法  
  有关支持表值参数的 OLE DB 方法的信息，请参阅[OLE DB 表值参数类型支持&#40;方法&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>“属性”  
  有关支持表值参数的 OLE DB 属性的信息，请参阅[OLE DB 表值参数类型支持&#40;属性&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  

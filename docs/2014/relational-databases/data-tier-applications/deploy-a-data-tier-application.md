@@ -30,7 +30,7 @@ ms.lasthandoff: 10/22/2019
 ms.locfileid: "72783073"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署数据层应用程序
-  您可使用向导或 PowerShell 脚本将数据层应用程序 (DAC) 从 DAC 包部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的现有实例。 该部署过程通过在 **msdb** 系统数据库（在**中为** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]）中存储 DAC 定义来注册一个 DAC 实例，创建一个数据库，然后使用在该 DAC 中定义的所有数据库对象来填充该数据库。  
+  您可使用向导或 PowerShell 脚本将数据层应用程序 (DAC) 从 DAC 包部署到[!INCLUDE[ssDE](../../includes/ssde-md.md)]或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的现有实例。 该部署过程通过在 **msdb** 系统数据库（在**中为** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]）中存储 DAC 定义来注册一个 DAC 实例，创建一个数据库，然后使用在该 DAC 中定义的所有数据库对象来填充该数据库。  
   
 -   **开始之前：**  [SQL Server 实用工具](#SQLUtility)、 [数据库选项和设置](#DBOptSettings)、 [限制和局限](#LimitationsRestrictions)、 [先决条件](#Prerequisites)、 [安全性](#Security)、 [权限](#Permissions)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72783073"
  同一 DAC 包可以多次部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的单个实例上，但必须一次一个执行这些部署。 为每个部署指定的 DAC 实例名称在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中必须唯一。  
   
 ###  <a name="SQLUtility"></a>SQL Server 实用工具  
- 如果您将 DAC 部署到数据库引擎的托管实例，在下次将实用工具收集组从该实例发送到实用工具控制点时，部署的 DAC 将合并到 SQL Server 实用工具中。 然后，该 DAC 将出现在[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]“实用工具资源管理器”的“已部署的数据层应用程序”节点下，并且在“已部署的数据层应用程序”详细信息页中报告。  
+ 如果您将 DAC 部署到数据库引擎的托管实例，在下次将实用工具收集组从该实例发送到实用工具控制点时，部署的 DAC 将合并到 SQL Server 实用工具中。 然后，该 DAC 将出现在 **“实用工具资源管理器”** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的“已部署的数据层应用程序”节点下，并且在“已部署的数据层应用程序”详细信息页中报告。  
   
 ###  <a name="DBOptSettings"></a> 数据库选项和设置  
  默认情况下，在部署过程中创建的数据库将具有来自 CREATE DATABASE 语句的几乎所有默认设置，只有以下方面除外：  
@@ -54,13 +54,13 @@ ms.locfileid: "72783073"
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  可以将 DAC 部署到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 或更高版本的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例。 如果使用更高版本创建 DAC，则 DAC 可能包含 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]不支持的对象。 您不能将这些 DAC 部署到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]实例。  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 先决条件  
  建议您不要从未知或不可信源部署 DAC 包。 此类包可能包含恶意代码，这些代码可能会执行非预期的 Transact-SQL 代码，或者通过修改架构导致错误。 在使用来自未知或不可信源的包之前，请解压缩该 DAC 并检查代码，例如存储过程或者其他用户定义的代码。 有关如何执行这些检查的详细信息，请参阅 [Validate a DAC Package](validate-a-dac-package.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
  为了提高安全性，SQL Server 身份验证登录名存储在 DAC 包中且没有密码。 在部署或升级该包时，登录名将作为含有生成的密码的已禁用登录名创建。 若要启用这些登录名，请使用具有 ALTER ANY LOGIN 权限的登录名登录，并且使用 ALTER LOGIN 来启用该登录名并且分配可以传达给用户的新密码。 对于 Windows 身份验证登录名则无需执行此操作，因为其密码不是由 SQL Server 管理的。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  DAC 只能由 **sysadmin** 或 **serveradmin** 固定服务器角色的成员部署，或者由属于 **dbcreator** 固定服务器角色并具有 ALTER ANY LOGIN 权限的登录名部署。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以部署 DAC。 将具有登录名的 DAC 部署到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 loginmanager 或 serveradmin 角色的成员身份。 将不带登录名的 DAC 部署到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 dbmanager 或 serveradmin 角色的成员身份。  
   
 ##  <a name="UsingDeployDACWizard"></a>使用 "部署数据层应用程序向导"  
@@ -125,11 +125,11 @@ ms.locfileid: "72783073"
  “取消”- 终止向导且不部署 DAC。  
   
 ##  <a name="Review_policy"></a> “查看策略”页  
- 使用此页可查看评估 DAC 服务器选择策略的结果（如果该 DAC 具有策略）。 该 DAC 服务器选择策略是可选的，并在 Visual Studio 中创建它时分配给该 DAC。 该策略使用该服务器选择策略方面指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例为承载该 DAC 而必须满足的条件。  
+ 使用此页可查看评估 DAC 服务器选择策略的结果（如果该 DAC 具有策略）。 该 DAC 服务器选择策略是可选的，并在 Visual Studio 中创建它时分配给该 DAC。 该策略使用该服务器选择策略方面指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例为承载该 DAC 而必须满足的条件。  
   
  “策略条件的评估结果”- 一个只读报告，显示 DAC 部署策略的条件是否成功。 将在单独的行上报告对每个条件进行评估的结果。  
   
- 在将 DAC 部署到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 时以下服务器选择策略的计算结果始终为 false：操作系统版本、语言、启用的命名管道、平台和启用的 tcp。  
+ 在将 DAC 部署到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时以下服务器选择策略的计算结果始终为 false：操作系统版本、语言、启用的命名管道、平台和启用的 tcp。  
   
  “忽略违反策略情况”- 使用此复选框可以在未能满足一个或多个策略条件的情况下继续进行部署。 只有在您确保未满足的所有条件都不会阻碍 DAC 操作成功条件的情况下，才选择此选项。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "72783073"
   
  该数据库名称还用作 DAC 实例的名称。 该实例名称显示在“对象资源管理器”中“数据层应用程序”节点下的 DAC 的节点上，或者显示在“实用工具资源管理器”中“已部署的数据层应用程序”节点下的 DAC 的节点上。  
   
- 以下选项不应用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，并且在部署到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 时不显示。  
+ 以下选项不应用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，并且在部署到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时不显示。  
   
  “使用默认数据库位置”- 选择此选项可在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的默认位置中创建数据库数据和日志文件。 将使用数据库名称生成文件名。  
   

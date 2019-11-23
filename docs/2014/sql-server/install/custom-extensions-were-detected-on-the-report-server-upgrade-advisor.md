@@ -28,13 +28,13 @@ ms.locfileid: "71952587"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>描述  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] @no__t 提供一个可扩展的体系结构，使开发人员可以创建自定义扩展插件，以便进行数据处理、传递、呈现、安全和身份验证。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一个可扩展的体系结构，使开发人员可以创建自定义扩展插件，用于数据处理、传递、呈现、安全和身份验证。  
   
  如果在您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中使用自定义扩展插件或程序集，则可以使用安装程序执行升级，但可能需要在升级完成之后将扩展插件移动到新的安装位置，否则可能需要在升级之前执行相应步骤。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71952587"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>自定义数据处理或传递扩展插件的升级后步骤  
   
-1.  将扩展插件文件移动到报表服务器的新程序文件夹。 默认情况下，Report Server 程序文件夹位于 \Program Files\Microsoft SQL Server\MSRS10_50. \<*instance_name*> \report 服务器。  
+1.  将扩展插件文件移动到报表服务器的新程序文件夹。 默认情况下，Report Server 程序文件夹位于 \Program Files\Microsoft SQL Server \ MSRS10_50 中。\<*instance_name*> \report 服务器。  
   
  有关详细信息，请参阅 SQL Server 联机丛书中的“部署数据处理扩展插件”和“实现传递扩展插件”。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71952587"
   
 3.  在新实例上配置扩展插件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 升级问题&#40;升级顾问&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

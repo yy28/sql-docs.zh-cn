@@ -26,12 +26,12 @@ ms.locfileid: "73729386"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当不再需要某订阅视图时，可以删除它。 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中删除订阅视图后，将从 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中删除此视图。 你还可以编辑订阅视图。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“集成管理”** 功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-a-subscription-view"></a>删除订阅视图  
   

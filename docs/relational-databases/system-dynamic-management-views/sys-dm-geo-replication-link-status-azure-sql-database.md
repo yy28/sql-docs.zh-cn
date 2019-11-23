@@ -31,9 +31,9 @@ ms.locfileid: "73843890"
 
   在异地复制合作关系中，主数据库和辅助数据库之间的每个复制链接都包含一行。 这包括主数据库和辅助数据库。 如果给定主数据库有多个连续复制链接，此表将针对每个关系包含一行。 将在所有数据库（包括逻辑 master）中创建视图。 但是，在主数据库中查询此视图将返回空集合。  
   
-|列名|数据类型|说明|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|link_guid|**uniqueidentifier**|复制链接的唯一 ID。|  
+|link_guid|**ssNoversion**|复制链接的唯一 ID。|  
 |partner_server|**sysname**|包含链接数据库的 SQL 数据库服务器的名称。|  
 |partner_database|**sysname**|链接 SQL Database 服务器上链接数据库的名称。|  
 |last_replication|**datetimeoffset**|根据主数据库时钟，辅助数据库的上次事务确认的时间戳。 此值仅在主数据库上可用。|  
@@ -43,13 +43,13 @@ ms.locfileid: "73843890"
 |角色 (role)|**tinyint**|异地复制角色，如下所示：<br /><br /> 0 = 主要。 Database_id 指的是异地复制合作关系中的主数据库。<br /><br /> 1 = 辅助。  Database_id 指的是异地复制合作关系中的主数据库。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|辅助类型，为以下类型之一：<br /><br /> 0 = 不允许直接连接到辅助数据库，并且数据库不可用于读访问。<br /><br /> 2 = 允许对辅助复制中的数据库进行所有连接; i 用于只读访问。|  
-|secondary_allow_connections_desc|**nvarchar(256)**|“否”<br /><br /> 全部|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> “全部”|  
 |last_commit|**datetimeoffset**|上次提交给数据库的事务的时间。 如果在主数据库上检索，它表示主数据库上的上次提交时间。 如果在辅助数据库上检索，它将指示辅助数据库上的上次提交时间。 如果在复制链接的主节点关闭时在辅助数据库上检索，它将指示辅助数据库在哪个位置上捕获。|
   
 > [!NOTE]  
 >  如果通过删除辅助数据库（第4.2 节）终止了复制关系，则**dm_geo_replication_link_status**视图中该数据库的行将会消失。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  具有 view_database_state 权限的任何帐户都可以查询**dm_geo_replication_link_status**。  
   
 ## <a name="example"></a>示例  

@@ -83,7 +83,7 @@ WHERE where_condition
   
  只能将 `=` 操作数与**DatabaseName**、 **SchemaName**和**ObjectName**一起使用。 其他表达式不能与这些事件属性一起使用。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  "用于服务器事件的 WMI 提供程序" 语法的*where_condition*确定以下各项：  
   
 -   提供程序尝试检索指定*event_type*的作用域：服务器级别、数据库级别或对象级别（当前唯一支持的对象是队列）。 最后，此范围用于确定在目标数据库中创建的事件通知的类型。 这个过程称为事件通知注册。  

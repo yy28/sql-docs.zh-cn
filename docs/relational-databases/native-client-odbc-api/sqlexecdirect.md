@@ -1,5 +1,5 @@
 ---
-title: SQLExecDirect |Microsoft Docs
+title: SQLExecDirect | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql

@@ -39,7 +39,7 @@ HRESULT BCPInit(
       int eDirection);  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在调用任何其他大容量复制方法之前，应先调用 BCPInit 方法。 BCPInit 方法将对工作站和  **之间的大容量数据复制执行必要的初始化**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  BCPInit 方法将检查数据库源表或目标表的结构，而不检查数据文件。 该方法将基于数据库表、视图或 SELECT 结果集中的每一列为数据文件指定数据格式值。 此指定包括每一列的数据类型、数据中是否存在长度或 Null 指示符和终止符字节字符串以及固定长度的数据类型的宽度。 BCPInit 方法按如下方式设置这些值：  
