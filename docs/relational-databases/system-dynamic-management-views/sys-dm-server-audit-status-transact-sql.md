@@ -1,5 +1,5 @@
 ---
-title: sys.databases _server_audit_status （Transact-sql） |Microsoft Docs
+title: sys. dm_server_audit_status （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
@@ -33,20 +33,20 @@ ms.locfileid: "72313690"
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|审核的 ID。 映射到**sys.databases**目录视图中的**audit_id**字段。|  
-|**name**|**sysname**|审核的名称。 与**server_audits**目录视图中的**name**字段相同。|  
-|**status**|**smallint**|服务器审核的数值状态：<br /><br /> 0 = 未启动<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      运行时失败<br /><br /> 3 = 目标创建失败<br /><br /> 4 = 正在关闭|  
+|**名称**|**sysname**|审核的名称。 与**server_audits sys.databases**目录视图中的**name**字段相同。|  
+|**status**|**int**|服务器审核的数值状态：<br /><br /> 0 = 未启动<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      运行时失败<br /><br /> 3 = 目标创建失败<br /><br /> 4 = 正在关闭|  
 |**status_desc**|**nvarchar(256)**|显示服务器审核状态的字符串：<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|审核的最后状态更改的时间戳（UTC 格式）。|  
-|**event_session_address**|**varbinary(8)**|与审核关联的扩展事件会话的地址。 与**sys.databases _xe_sessions**目录视图相关。|  
+|**event_session_address**|**varbinary(8)**|与审核关联的扩展事件会话的地址。 与**dm_xe_sessions sys.databases**目录视图相关的。|  
 |**audit_file_path**|**nvarchar(256)**|当前使用的审核文件目标的完整路径名和文件名。 仅对文件审核填充。|  
 |**audit_file_size**|**bigint**|审核文件的近似大小（字节数）。 仅对文件审核填充。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  主体必须具有**VIEW SERVER STATE**和**SELECT**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   
@@ -65,7 +65,7 @@ ms.locfileid: "72313690"
  [sys.database_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
  [sys.database_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
  [sys.dm_server_audit_status](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [sys.dm_audit_actions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [创建服务器审核和服务器审核规范](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   

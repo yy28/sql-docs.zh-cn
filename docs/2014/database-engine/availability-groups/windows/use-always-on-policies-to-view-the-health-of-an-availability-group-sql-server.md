@@ -29,15 +29,15 @@ ms.locfileid: "72782851"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要 CONNECT、VIEW SERVER STATE 和 VIEW ANY DEFINITION 权限。  
   
 ##  <a name="SSMSProcedure"></a>使用 AlwaysOn 仪表板  
  **打开 AlwaysOn 仪表板**  
   
-1.  在对象资源管理器中，连接到承载可用性副本之一的服务器实例。 若要查看有关可用性组中所有可用性副本的信息，请使用承载主副本的服务器实例。  
+1.  在对象资源管理器中，连接到承载可用性副本之一的服务器实例。 若要查看有关可用性组中的所有可用性副本的信息，请使用承载主副本的服务器实例。  
   
 2.  单击服务器名称以展开服务器树。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "72782851"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **使用 AlwaysOn 策略查看可用性组的运行状况**  
   
-1.  将默认值 (`cd`) 设置为承载其中一个可用性副本的服务器实例。 若要查看有关可用性组中所有可用性副本的信息，请使用承载主副本的服务器实例。  
+1.  将默认值 (`cd`) 设置为承载其中一个可用性副本的服务器实例。 若要查看有关可用性组中的所有可用性副本的信息，请使用承载主副本的服务器实例。  
   
 2.  使用以下 cmdlet：  
   
@@ -88,7 +88,7 @@ ms.locfileid: "72782851"
   
      这些 cmdlet 接受以下选项：  
   
-    |选项|Description|  
+    |选项|描述|  
     |------------|-----------------|  
     |`AllowUserPolicies`|运行在 AlwaysOn 策略类别中找到的用户策略。|  
     |`InputObject`|对象的集合，表示可用性组、可用性副本或可用性数据库状态（取决于正在使用的 cmdlet）。 此 cmdlet 将计算指定对象的运行状况。|  
@@ -109,7 +109,7 @@ ms.locfileid: "72782851"
   
 -   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
   
--   [获取 SQL Server PowerShell 帮助](../../../powershell/sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> 相关内容  
  **SQL Server AlwaysOn 团队博客-通过 PowerShell 监视 AlwaysOn 运行状况：**  
@@ -123,7 +123,7 @@ ms.locfileid: "72782851"
 -   [第四部分：与 SQL Server 代理集成](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
  [管理可用性组 (SQL Server)](administration-of-an-availability-group-sql-server.md)   
  [监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组（SQL Server）的操作问题的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md) 

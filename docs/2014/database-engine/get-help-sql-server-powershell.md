@@ -21,7 +21,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797884"
 ---
-# <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
+# <a name="get-help-sql-server-powershell"></a>获取 SQL Server PowerShell 帮助
   有关使用 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序和 cmdlet 的信息有多个来源， 这包括 Windows PowerShell 环境中提供的帮助。  
   
 ## <a name="before-you-begin"></a>开始之前  

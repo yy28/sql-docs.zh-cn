@@ -43,9 +43,9 @@ ms.locfileid: "72798064"
 -   [示例 C：通过使用 Key Vault 中的非对称密钥进行列级加密](#ExampleC)  
   
 ##  <a name="Uses"></a>使用 EKM  
- 组织可使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密来保护敏感数据。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密包括[透明数据加密&#40;TDE&#41;](transparent-data-encryption.md)、[列级加密](/sql/t-sql/functions/cryptographic-functions-transact-sql)（CLE）和[备份加密](../../backup-restore/backup-encryption.md)。 在这几种情况下，均使用对称数据加密密钥对数据进行加密。 通过使用存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的密钥层次结构对对称数据加密密钥进行加密而使其获得进一步的保护。 或者，借助 EKM 提供程序体系结构， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可通过使用存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外的一个外部加密提供程序中的非对称密钥来保护数据加密密钥。 使用 EKM 提供程序体系结构会额外提供一层安全保护，使组织可分开管理密钥和数据。  
+ 组织可使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密来保护敏感数据。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密包括[透明数据加密&#40;TDE&#41;](transparent-data-encryption.md)、[列级加密](/sql/t-sql/functions/cryptographic-functions-transact-sql)（CLE）和[备份加密](../../backup-restore/backup-encryption.md)。 在这几种情况下，均使用对称数据加密密钥对数据进行加密。 通过使用存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的密钥层次结构对对称数据加密密钥进行加密而使其获得进一步的保护。 或者，借助 EKM 提供程序体系结构， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可通过使用存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外的一个外部加密提供程序中的非对称密钥来保护数据加密密钥。 使用 EKM 提供程序体系结构会额外提供一层安全保护，使组织可分开管理密钥和数据。  
   
- 借助适用于 Azure Key Vault 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以将此可扩展、高性能和高度可用的密钥保管库服务用作 EKM 提供程序以实现加密密钥保护。 密钥保管库服务可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 虚拟机和本地服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 安装。 Key Vault 服务还提供一种选择，即使用受到严格控制和监视的硬件安全模块 (HSM) 来实现对非对称加密密钥的更高级别的保护。 有关密钥保管库的详细信息，请参阅 [Azure 密钥保管库](https://go.microsoft.com/fwlink/?LinkId=521401)。  
+ 借助适用于 Azure Key Vault 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以将此可扩展、高性能和高度可用的密钥保管库服务用作 EKM 提供程序以实现加密密钥保护。 密钥保管库服务可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 虚拟机和本地服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 安装。 Key Vault 服务还提供一种选择，即使用受到严格控制和监视的硬件安全模块 (HSM) 来实现对非对称加密密钥的更高级别的保护。 有关 Key Vault 的详细信息，请参阅 [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401)。  
   
  下图总结了使用密钥保管库的 EKM 处理流程。 图中的处理步骤数与以下的设置步骤数并不一致。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "72798064"
   
 2.  **在保管库中生成非对称密钥：** 密钥保管库中的非对称密钥用于保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密密钥。 仅非对称密钥的公共部分会离开保管库，其私有部分绝不会由保管库导出。 使用非对称密钥的所有加密操作都委托给了 Azure Key Vault，并受到 Key Vault 安全性的保护。  
   
-     你可通过若干方法生成不对称密钥并将其存储在保管库中。 你可在外部生成密钥，然后将其作为 .pfx 文件导入保管库。 或者使用密钥保管库 API 直接在保管库中创建密钥。  
+     你可通过若干方法生成不对称密钥并将其存储在保管库中。 你可在外部生成密钥，然后将其作为 .pfx 文件导入保管库。 或者使用密钥保管库 API 在保管库中创建密钥。  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器要求非对称密钥为 2048 位 RSA，且密钥名称只能使用字符“a-z”、“A-Z”、“0-9”和“-”。 在本文档中，非对称密钥名称被称为 **ContosoMasterKey**。 将名称替换为你用于密钥的唯一名称。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "72798064"
     > [!IMPORTANT]  
     >  用户至少必须拥有用于 Key Vault 的 **wrapKey** 和 **unwrapKey** 操作。  
   
-     有关授予对保管库的权限的详细内容，请参阅 **Azure Key Vault 入门**[中的授权应用程序使用密钥或机密](https://go.microsoft.com/fwlink/?LinkId=521402)部分。  
+     有关授予对保管库的权限的详细内容，请参阅 **Azure Key Vault 入门** 中的 [授权应用程序使用密钥或机密](https://go.microsoft.com/fwlink/?LinkId=521402)部分。  
   
      链接至 Azure Key Vault 文档  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72798064"
   
  安装完成时，以下内容将安装到计算机：  
   
--   **Microsoft.AzureKeyVaultService.EKM.dll**:这是加密 EKM 提供程序 DLL，需要通过使用 CREATE CRYPTOGRAPHIC PROVIDER 语句与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起注册。  
+-   **Microsoft.AzureKeyVaultService.EKM.dll**：这是加密 EKM 提供程序 DLL，需要通过使用 CREATE CRYPTOGRAPHIC PROVIDER 语句与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起注册。  
   
 -   **Azure Key Vault SQL Server Connector**：这是一个 Windows 服务，使加密 EKM 提供程序可以与 Key Vault 进行通信。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "72798064"
   
 ##  <a name="Step3"></a>步骤3：将 SQL Server 配置为对 Key Vault 使用 EKM 提供程序  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  若要完成整个流程，需要具备 CONTROL SERVER 权限或 **sysadmin** 固定服务器角色的成员身份。 特定操作要求具有以下权限：  
   
 -   若要创建加密提供程序，需要具备 CONTROL SERVER 权限或 **sysadmin** 固定服务器角色的成员身份。  
@@ -196,11 +196,11 @@ ms.locfileid: "72798064"
     ```  
   
 > [!TIP]  
->  用户收到错误 **无法从提供程序中导出公钥。提供程序错误代码：2053。** 应在密钥保管库中检查它们的 **get**、 **list**、 **wrapKey**、 and **unwrapKey** 权限。  
+>  用户收到错误 **无法从提供程序中导出公钥。提供程序错误代码：2053。** 应检查它们在密钥保管库中的 **get**、 **list**、 **wrapKey**、 and **unwrapKey** 权限。  
   
  有关详细信息，请参见以下内容：  
   
--   [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
 -   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   

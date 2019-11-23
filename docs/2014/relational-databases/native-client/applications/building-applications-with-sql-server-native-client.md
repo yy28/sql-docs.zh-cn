@@ -53,9 +53,9 @@ ms.locfileid: "70175412"
  [使用 SQL Server Native Client 连接到 Azure SQL 数据库](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  讨论如何使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client 连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 编程](../sql-server-native-client-programming.md)   
- [ODBC 操作指南主题](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)操作指南主题   
  [OLE DB 操作指南主题](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

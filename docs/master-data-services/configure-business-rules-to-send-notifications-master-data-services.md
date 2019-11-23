@@ -27,12 +27,12 @@ ms.locfileid: "73728563"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您要向用户通知有关属性值更改时，请配置业务规则以发送通知。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>Prerequisites  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“用户和组权限”** 功能区域。 如果您对 **“用户和组权限”** 功能区域没有权限，则无法查看要向其发送通知的用户和组的列表。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   使用验证操作的业务规则必须已经存在。 有关详细信息，请参阅[创建和发布业务规则 (Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73728563"
   
 3.  在“业务规则” 页上，从“模型” 列表中选择一个模型。  
   
-4.  从“实体”下拉列表中选择一个实体。  
+4.  从 “实体”下拉列表中选择一个实体。  
   
 5.  从“成员类型”列表中选择一个成员类型。  
   

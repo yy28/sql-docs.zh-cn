@@ -37,12 +37,12 @@ ms.locfileid: "72782999"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 先决条件  
  您必须连接到承载主副本的服务器实例。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 |任务|Permissions|  
 |----------|-----------------|  
@@ -148,7 +148,7 @@ ms.locfileid: "72782999"
     > [!IMPORTANT]  
     >  没有强制的 `AutomatedBackupPreference`。 对此首选项的解释取决于您为给定可用性组中的数据库撰写备份作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅本主题后面的 [跟进：配置辅助副本备份之后](#FollowUp) 。  
   
-     例如，以下命令会将可用性组 `MyAg` 的 `AutomatedBackupPreference` 属性设置为 `SecondaryOnly`。 此可用性组中的数据库自动备份将永远不会在主副本上发生，但将重定向到具有最高备份优先级设置的辅助副本。  
+     例如，以下命令会将可用性组 `AutomatedBackupPreference` 的 `MyAg` 属性设置为 `SecondaryOnly`。 此可用性组中的数据库自动备份将永远不会在主副本上发生，但将重定向到具有最高备份优先级设置的辅助副本。  
   
     ```powershell
     Set-SqlAvailabilityGroup -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg `  
@@ -181,7 +181,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 ##  <a name="ForInfoAboutBuPref"></a> 获取有关备份首选项设置的信息  
  以下内容对于获取辅助副本备份的相关信息很有用。  
   
-|“查看”|信息|相关列|  
+|视图|信息|相关列|  
 |----------|-----------------|----------------------|  
 |[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|当前副本是否为首选备份副本？|不适用。|  
 |[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|自动备份首选项|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
@@ -195,5 +195,5 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 -   [SQL Server AlwaysOn 团队博客：官方 SQL Server AlwaysOn 团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
  [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 

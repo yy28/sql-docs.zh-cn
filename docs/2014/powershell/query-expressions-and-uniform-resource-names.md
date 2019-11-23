@@ -63,7 +63,7 @@ ms.locfileid: "72782754"
  例如，为 **ServerCollection** 类指定“服务器”，为 **DatabaseCollection** 类指定“数据库”。  
   
  \@*PropertyName*  
- 指定与“对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database 类的 IsAnsiNull 属性指定 \@IsAnsiNull。  
+ 指定与“对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database\@ **类的 IsAnsiNull** **属性指定**IsAnsiNull。  
   
  \@*BooleanPropertyName*=true()  
  枚举指定的布尔属性设置为 TRUE 的所有对象。  
@@ -83,7 +83,7 @@ ms.locfileid: "72782754"
 |||  
 |-|-|  
 |yyyy|四位数年份。|  
-|MM|两位数月份（01 到 12）。|  
+|mm|两位数月份（01 到 12）。|  
 |dd|两位数日期（01 到 31）。|  
 |hh|24 小时制的两位数小时（01 到 23）。|  
 |mi|两位数分钟（01 到 59）。|  
@@ -96,9 +96,9 @@ ms.locfileid: "72782754"
  枚举指定属性的值为 NULL 的所有对象。  
   
  not(\<*PropertyExpression*>)  
- 对 *PropertyExpression* 的计算值求反，枚举与 *PropertyExpression* 中指定的条件不匹配的所有对象。 例如，not(contains(\@Name, 'xyz')) 枚举名称中不含字符串 xyz 的所有对象。  
+ 对 *PropertyExpression*的计算值求反，枚举与 *PropertyExpression*中指定的条件不匹配的所有对象。 例如，not(contains(\@Name, 'xyz')) 枚举名称中不含字符串 xyz 的所有对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  查询表达式是一些字符串，用于枚举 SMO 模型层次结构中的节点。 每个节点有一个筛选表达式，指定用于确定要枚举该节点的哪些对象的条件。 查询表达式在 XPath 表达式语言上建模。 查询表达式实现了 XPath 支持的一小部分表达式，还具有 XPath 中不提供的一些扩展。 XPath 表达式是一些字符串，指定用于枚举 XML 文档中的一个或多个标记的一组条件。 有关 XPath 的详细信息，请参阅 [W3C XPath Language](http://www.w3.org/TR/xpath20/)（W3C Xpath 语言）。  
   
  查询表达式必须以对服务器对象的绝对引用开头。 不允许使用以 / 开头的相对表达式。 查询表达式中指定的对象的顺序必须遵循相关对象模型中集合对象的层次结构。 例如，引用 Microsoft.SqlServer.Management.Smo 命令空间中对象的查询表达式必须从服务器节点开始，接下来才是数据库节点等。  

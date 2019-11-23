@@ -51,7 +51,7 @@ ms.locfileid: "70874598"
 > [!NOTE]  
 >  可以升级其备份和还原历史记录表大于 10,000 行的数据库。 但在更改很大的表时，升级可能会出现停顿。 表越大，完成安装程序所需的时间就越长。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   

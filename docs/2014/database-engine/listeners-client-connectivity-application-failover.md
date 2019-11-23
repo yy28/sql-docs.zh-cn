@@ -39,7 +39,7 @@ ms.locfileid: "72797841"
   
  如果为一个或多个[可读次要副本](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)配置了只读路由，则将主要副本的读意向客户端连接重定向到可读次要副本。 此外，如果主副本在某个 SQL Server 实例上脱机，且新的主副本在另一个 SQL Server 实例上联机，则可用性组侦听器允许客户端连接到新的主副本。  
   
- 有关可用性组侦听程序的基本信息，请参阅 [创建或配置可用性组侦听程序 (SQL Server)](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
+ 有关可用性组侦听程序的基本信息，请参阅[创建或配置可用性组侦听程序 (SQL Server)](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
  
   
@@ -101,7 +101,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 2.  对于上述每个副本，必须为主角色指定一个只读路由列表。 将一个或多个服务器名称指定为路由目标。  
   
-####  <a name="RelatedTasksROR"></a>相关任务  
+####  <a name="RelatedTasksROR"></a> 相关任务  
   
 -   [配置对可用性副本的只读访问 (SQL Server)](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -126,7 +126,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  通过不将应用程序意向连接属性设置为 `ReadOnly`（不指定时，在登录过程中默认为 `ReadWrite`），或通过直接连接到 SQL Server 实例的主副本而不使用可用性组侦听器名称，可以跳过只读路由。  如果您直接连接到只读副本，也不会发生只读路由。  
   
-####  <a name="RelatedTasksApps"></a>相关任务  
+####  <a name="RelatedTasksApps"></a> 相关任务  
   
 -   [对高可用性、灾难恢复的 SQL Server Native Client 支持](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
@@ -144,7 +144,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  在使用数据库镜像连接字符串时，客户端可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 或用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的 .NET Framework 数据访问接口。 客户端提供的连接字符串必须至少提供一个服务器实例的名称，即“初始伙伴名称”，以便标识最初承载您想要连接到的可用性副本的服务器实例。 此外，连接字符串还可以提供另一个服务器实例的名称，即“故障转移伙伴名称”，以便标识最初将辅助副本作为故障转移伙伴名称承载的服务器实例。  
   
- 有关数据库镜像连接字符串详细信息，请参阅 [将客户端连接到数据库镜像会话 (SQL Server)](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
+ 有关数据库镜像连接字符串详细信息，请参阅[将客户端连接到数据库镜像会话 (SQL Server)](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
 ##  <a name="CCBehaviorOnFailover"></a> 有关故障转移的客户端连接行为  
  当发生可用性组故障转移时，到可用性组的现有持久连接都将终止，并且客户端必须建立新连接才能继续使用相同的主数据库或只读辅助数据库。  当服务器端发生故障转移时，到可用性组的连接可能会失败，这就强制客户端应用程序重试连接，直至主副本完全回到联机状态。  
@@ -188,9 +188,9 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- 有关为 SQL Server 手动注册 SPN 的详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。  
+ 有关为 SQL Server 手动注册 SPN 的详细信息，请参阅 [Register a Service Principal Name for Kerberos Connections](configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。  
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
   
 -   [AlwaysOn 客户端&#40;连接 SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
@@ -213,7 +213,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
 -   [SQL Server AlwaysOn 团队博客：官方 SQL Server AlwaysOn 团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
  [AlwaysOn 客户端&#40;连接 SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [关于对可用性副本的客户端连接访问 (SQL Server)](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [活动辅助副本：可读&#40;辅助&#41;副本 AlwaysOn 可用性组](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   

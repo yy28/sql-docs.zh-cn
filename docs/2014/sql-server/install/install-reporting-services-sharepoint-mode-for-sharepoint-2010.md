@@ -31,7 +31,7 @@ ms.locfileid: "72798345"
   
 
   
-##  <a name="bkmk_prereq"></a> Prerequisites  
+##  <a name="bkmk_prereq"></a> 先决条件  
   
 -   > [!IMPORTANT]  
     >  配置和管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式不再需要或支持 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 使用 SharePoint 管理中心在 SharePoint 模式中配置报表服务器。 有关详细信息，请参阅[管理 Reporting Services SharePoint 服务应用程序](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)。  
@@ -76,11 +76,11 @@ ms.locfileid: "72798345"
   
 6.  在 "**产品密钥**" 页上，键入密钥或接受默认的 "企业评估版"。  
   
-     在“欢迎”页上，单击 **“下一步”** 。  
+     系统提示您启用数据连接时单击 **“下一步”** 。  
   
 7.  阅读并接受许可条款。 对于您单击以同意发送功能使用情况数据来帮助改进产品功能和支持，Microsoft 深表感谢。  
   
-     在“欢迎”页上，单击 **“下一步”** 。  
+     系统提示您启用数据连接时单击 **“下一步”** 。  
   
 8.  选择 "**安装角色**" 页上的 " **SQL Server 功能安装**"。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "72798345"
   
     -   如果您尚未安装 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则还可以选择 **“数据库引擎服务”** 和 **“管理工具 - 完整”** 以提供一个完整环境。  
   
-     在“欢迎”页上，单击 **“下一步”** 。  
+     系统提示您启用数据连接时单击 **“下一步”** 。  
   
      ![用于 SharePoint 模式的 SSRS 功能选择](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "用于 SharePoint 模式的 SSRS 功能选择")  
   
@@ -108,7 +108,7 @@ ms.locfileid: "72798345"
   
 13. 在 "**服务器配置**" 页上，键入相应的凭据。 如果您要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报或订阅功能，则需要将 SQL Server 代理的 **“启动类型”** 更改为 **“自动”** 。  
   
-     在“欢迎”页上，单击 **“下一步”** 。  
+     系统提示您启用数据连接时单击 **“下一步”** 。  
   
 14. 如果您选择了“数据库引擎服务”，您将看到 **“数据库引擎配置”** 页。请将相应的帐户添加到 SQL 管理员列表，然后单击 **“下一步”** 。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "72798345"
   
 16. 请通过在 **“错误报告”** 页上单击用于发送错误报告的复选框，来帮助 Microsoft 改进 SQL Server 功能和服务。  
   
-     在“欢迎”页上，单击 **“下一步”** 。  
+     系统提示您启用数据连接时单击 **“下一步”** 。  
   
 17. 查看任何警告，然后在 **“安装配置规则”** 页上单击 **“下一步”** 。  
   
@@ -195,9 +195,9 @@ ms.locfileid: "72798345"
   
 9. 在 **“Web 应用程序关联”** 部分中，选择要设置为供当前 Reporting Services 服务应用程序访问的 Web 应用程序。 可以将一个 Reporting Services 服务应用程序与一个 Web 应用程序相关联。 如果所有当前 Web 应用程序均已与一个 Reporting Services 服务应用程序相关联，将显示警告消息。  
   
-10. 单击 **“确定”** 中创建非聚集索引。  
+10. 单击“确定”。  
   
-11. 用于创建服务应用程序的过程可能会需要几分钟才能完成。 当它完成时，将显示确认消息和一个指向 **“设置订阅和警报”** 页的链接。 如果您要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅和警报功能，请完成该设置步骤。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
+11. 用于创建服务应用程序的过程可能会需要几分钟才能完成。 当它完成时，将显示确认消息和一个指向 **“设置订阅和警报”** 页的链接。 如果您要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅和警报功能，请完成该设置步骤。 有关详细信息，请参阅 [Provision Subscriptions and Alerts for SSRS Service Applications](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
  ![与 PowerShell 相关的内容](../../../2014/reporting-services/media/rs-powershellicon.jpg "与 PowerShell 相关的内容")有关使用 PowerShell 创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的信息，请参阅[使用 powershell 创建 Reporting Services 服务应用程序](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp)。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "72798345"
 ##  <a name="bkmk_additional_config"></a> 附加配置  
  本部分介绍在大多数 SharePoint 部署中很重要的其他配置步骤。  
   
-###  <a name="bkmk_provision_agent"></a> 设置订阅和警报  
+###  <a name="bkmk_provision_agent"></a> “设置订阅和警报”  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅和数据警报功能可能要求配置 SQL Server 代理权限。 如果您看到指示“需要 SQL Server 代理”的错误消息，而您已验证 SQL Server 代理正在运行，则应更新权限。 您可以在“创建服务应用程序成功”页上单击链接 **“设置订阅和警报”** ，以便转到其他页来设置 SQL Server 代理。 如果您的部署是跨计算机边界的部署（例如，当 SQL Server 数据库实例位于其他计算机上时），会需要此设置步骤。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
 
@@ -243,7 +243,7 @@ ms.locfileid: "72798345"
 
   
 ### <a name="activate-the-file-sync-feature"></a>激活文件同步功能  
- 如果用户经常直接将已发布的报表项上载到 SharePoint 文档库，则报表服务器文件同步功能将很有用。 文件同步功能将更频繁地将报表服务器目录与文档库中的项进行同步。 有关详细信息，请参阅 [在 SharePoint 管理中心中激活报表服务器文件同步功能](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)。  
+ 如果用户经常直接将已发布的报表项上载到 SharePoint 文档库，则报表服务器文件同步功能将很有用。 文件同步功能将更频繁地将报表服务器目录与文档库中的项进行同步。 有关详细信息，请参阅 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   

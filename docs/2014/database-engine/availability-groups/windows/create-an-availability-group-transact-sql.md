@@ -19,7 +19,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797675"
 ---
-# <a name="create-an-availability-group-transact-sql"></a>创建可用性组 (Transact-SQL)
+# <a name="create-an-availability-group-transact-sql"></a>Create an Availability Group (Transact-SQL)
   本主题介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在启用了 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 功能的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例上创建和配置可用性组。 “可用性组” 定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本”）的形式进行故障转移。  
   
 > [!NOTE]  
@@ -33,11 +33,11 @@ ms.locfileid: "72797675"
   
 ###  <a name="PrerequisitesRestrictions"></a> 先决条件、限制和建议  
   
--   创建可用性组之前，请先验证承载可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例位于同一 WSFC 故障转移群集内的不同 Windows Server 故障转移群集 (WSFC) 节点上。 此外，还请验证每个服务器实例是否都满足所有其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]先决条件。 有关详细信息，我们强烈建议你参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md)。  
+-   创建可用性组之前，请先验证承载可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例位于同一 WSFC 故障转移群集内的不同 Windows Server 故障转移群集 (WSFC) 节点上。 此外，还请验证每个服务器实例是否都满足所有其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 先决条件。 有关详细信息，我们强烈建议你参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
 ###  <a name="SummaryTsqlStatements"></a> 任务和相应 Transact-SQL 语句摘要  
@@ -62,11 +62,11 @@ ms.locfileid: "72797675"
   
 2.  通过使用 [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句创建可用性组。  
   
-3.  将新的辅助副本联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)中的 PowerShell 将次要副本添加到现有的 AlwaysOn 可用性组。  
+3.  将新的辅助副本联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)中通过 PowerShell 创建和配置 AlwaysOn 可用性组。  
   
 4.  对于可用性组中的每个数据库，通过使用 RESTORE WITH NORECOVERY 还原主数据库的最近的备份，创建辅助数据库。 有关详细信息，请参阅 [示例：使用 Windows 身份验证设置可用性组 (Transact-SQL)](create-an-availability-group-transact-sql.md)，从还原数据库备份的步骤开始。  
   
-5.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)中的 PowerShell 将次要副本添加到现有的 AlwaysOn 可用性组。  
+5.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)中通过 PowerShell 创建和配置 AlwaysOn 可用性组。  
   
 ##  <a name="ExampleConfigAGWinAuth"></a> 示例：配置使用 Windows 身份验证的可用性组  
  此示例创建一个示例 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 配置过程，该过程使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 设置使用 Windows 身份验证的数据库镜像端点并且创建和配置一个可用性组及其辅助数据库。  
@@ -285,7 +285,7 @@ ms.locfileid: "72797675"
 ###  <a name="CompleteCodeExample"></a> 示例配置过程的完整代码示例  
  下面的示例合并了示例配置过程的所有步骤中的代码示例。 下表总结了此代码示例中使用的占位符值。 有关此代码示例中的步骤的详细信息，请参阅本主题中前面的 [使用示例配置过程的先决条件](#PrerequisitesForExample) 和 [示例配置过程](#SampleProcedure)。  
   
-|占位符|Description|  
+|占位符|描述|  
 |-----------------|-----------------|  
 |\\\\*FILESERVER*\\*SQLbackups*|虚构的备份共享。|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|MyDb1 的备份文件。|  
@@ -437,7 +437,7 @@ ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;
 GO
 ```  
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
  **配置可用性组和副本属性**  
   
 -   [更改可用性副本的可用性模式 (SQL Server)](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -522,6 +522,6 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [数据库镜像终结点 (SQL Server)](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
- [可用性组侦听程序、客户端连接以及应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)   
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 可用性组&#40;的先决条件、限制和建议 SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  

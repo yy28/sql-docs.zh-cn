@@ -20,7 +20,7 @@ ms.locfileid: "72890528"
 
   下表列出了数据挖掘扩展插件 (DMX) 中属于数据挖掘数据定义语言 (DDL) 的语句。  
   
-|。|Description|  
+|声明专用纸|描述|  
 |---------------|-----------------|  
 |[CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md)|在数据库中创建新挖掘结构。|  
 |[更改挖掘结构&#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)|向现有挖掘结构中添加挖掘模型。|  

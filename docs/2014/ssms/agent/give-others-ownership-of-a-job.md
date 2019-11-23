@@ -43,14 +43,14 @@ ms.locfileid: "72798228"
   
  将作业指派给另一个登录名并不保证新所有者有足够的权限来成功运行该作业。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
  为了安全起见，仅作业所有者或 **sysadmin** 角色的成员可以更改作业的定义。 只有 **sysadmin** 固定服务器角色的成员才可以将作业所有权分配给其他用户，并且他们可以运行任何作业，而不管作业所有者是谁。  
   
 > [!NOTE]  
 >  如果将作业所有权重新指派到的用户不是 **sysadmin** 固定服务器角色的成员，而执行作业的步骤需要代理帐户（例如， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包执行），则请确保该用户可以访问该代理帐户，否则作业将失败。  
   
-####  <a name="Permissions"></a> Permissions  
- 有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
+####  <a name="Permissions"></a> 权限  
+ 有关详细信息，请参阅 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMSProc2"></a> 使用 SQL Server Management Studio  
  **将作业所有权授予其他人**  
@@ -70,7 +70,7 @@ ms.locfileid: "72798228"
   
 2.  在工具栏上，单击 **“新建查询”** 。  
   
-3.  在查询窗口中，输入以下使用[sp_manage_jobs_by_login &#40;transact-sql&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)系统存储过程的语句。 以下示例将所有作业从 `danw` 重新分配给 `fran??oisa`。  
+3.  在查询窗口中，输入以下语句，这些语句使用[sp_manage_jobs_by_login &#40;transact-sql&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)系统存储过程。 以下示例将所有作业从 `danw` 重新分配给 `fran??oisa`。  
   
     ```sql
     USE msdb ;  
@@ -87,7 +87,7 @@ ms.locfileid: "72798228"
 
 ### <a name="to-give-others-ownership-of-a-job"></a>将作业所有权授予其他人
   
-1.  通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来调用 `Job` 类。 有关示例代码，请参阅 [在 SQL Server 代理中计划自动管理任务](sql-server-agent.md)。  
+1.  通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来调用 `Job` 类。 有关示例代码，请参阅 [Scheduling Automatic Administrative Tasks in SQL Server Agent](sql-server-agent.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [执行作业](implement-jobs.md)   

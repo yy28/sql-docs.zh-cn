@@ -49,7 +49,7 @@ ms.locfileid: "72797700"
         @security_mode = 1;  
     ```  
   
-3.  配置远程发布服务器。 如果要使用存储过程来配置分发服务器，则运行 `sp_adddistpublisher`。 @security_mode 参数可用于确定如何将从复制代理运行的发布服务器验证存储过程连接到当前主要副本。 如果设置为 1，则使用 Windows 身份验证来连接到当前主副本。 如果设置为 0，则将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证与指定的 *@login* 和 *@password* 值一起使用。 指定的登录名和密码必须在每个辅助副本上均有效才能让验证存储过程成功地连接到相应的副本。  
+3.  配置远程发布服务器。 如果要使用存储过程来配置分发服务器，则运行 `sp_adddistpublisher`。 *参数可用于确定如何将从复制代理运行的发布服务器验证存储过程连接到当前主要副本@security_mode* 。 如果设置为 1，则使用 Windows 身份验证来连接到当前主副本。 如果设置为 0，则将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证与指定的 *@login* 和 *@password* 值一起使用。 指定的登录名和密码必须在每个辅助副本上均有效才能让验证存储过程成功地连接到相应的副本。  
   
     > [!NOTE]  
     >  如果任何已修改的复制代理在分发服务器之外的计算机上运行，则使用 Windows 身份验证连接到主副本的方法将要求为副本主机之间的通信配置 Kerberos 身份验证。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名连接到当前主副本的方法无需 Kerberos 身份验证。  
@@ -98,7 +98,7 @@ ms.locfileid: "72797700"
 ##  <a name="step2"></a>2. 配置 AlwaysOn 可用性组  
  在目标主副本上，创建包含已发布的（或即将要发布的）数据库作为成员数据库的可用性组。 如果使用可用性组向导，则您可允许该向导最初同步辅助副本数据库，或者您可以使用备份和还原手动执行初始化。  
   
- 为可用性组创建一个 DNS 侦听器，复制代理将使用它连接到当前主副本。 指定的侦听器名称将用作原始发布服务器/已发布数据库对的重定向的目标。 例如，如果您使用 DDL 来配置可用性组，则可使用以下代码示例为名为 `MyAG` 的现有可用性组指定可用性组侦听器：  
+ 为可用性组创建一个 DNS 侦听器，复制代理将使用它连接到当前主副本。 指定的侦听器名称将用作原始发布服务器/已发布数据库对的重定向的目标。 例如，如果您使用 DDL 来配置可用性组，则可使用以下代码示例为名为 `MyAG`的现有可用性组指定可用性组侦听器：  
   
 ```sql
 ALTER AVAILABILITY GROUP 'MyAG'   
@@ -179,7 +179,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  消息 21899，级别 11，状态 1，过程 `sp_hadr_verify_subscribers_at_publisher`，第 109 行  
 >   
->  重定向的发布服务器“MyReplicaHostName”处的查询失败，该查询用于确定是否有原始发布服务器“MyOriginalPublisher”的订阅服务器的 sysserver 条目，出现错误“976”，错误消息“错误 976，级别 14，状态 1，消息：目标数据库‘MyPublishedDB’正参与某个可用性组，查询当前无法访问该数据库。 数据移动被挂起，或者未启用可用性副本以便用于读访问。 若要允许对该可用性组中的这一数据库和其他数据库进行只读访问，请对组中一个或多个辅助可用性副本启用只读访问权限。  有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的 `ALTER AVAILABILITY GROUP` 语句。”。  
+>  重定向的发布服务器“MyReplicaHostName”处的查询失败，该查询用于确定是否有原始发布服务器“MyOriginalPublisher”的订阅服务器的 sysserver 条目，出现错误“976”，错误消息“错误 976，级别 14，状态 1，消息：目标数据库‘MyPublishedDB’正参与某个可用性组，查询当前无法访问该数据库。 数据移动被挂起，或者未启用可用性副本以便用于读访问。 若要允许对该可用性组中的这一数据库和其他数据库进行只读访问，请对组中一个或多个辅助可用性副本启用只读访问权限。  有关详细信息，请参阅 `ALTER AVAILABILITY GROUP` 联机丛书中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 语句。”。  
 >   
 >  副本主机“MyReplicaHostName”遇到了一个或多个发布服务器验证错误。  
   
@@ -188,7 +188,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 ##  <a name="step7"></a> 7.向复制监视器添加原始发布服务器  
  在每个可用性组副本上，向复制监视器添加原始发布服务器。  
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
  **复制**  
   
 -   [维护 AlwaysOn 发布数据库&#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
@@ -221,6 +221,6 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 ## <a name="see-also"></a>另请参阅  
  [ &#40;AlwaysOn 可用性组 SQL Server&#41;的先决条件、限制和建议](prereqs-restrictions-recommendations-always-on-availability.md)   
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
  [AlwaysOn 可用性组：互操作性（SQL Server）](always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)  

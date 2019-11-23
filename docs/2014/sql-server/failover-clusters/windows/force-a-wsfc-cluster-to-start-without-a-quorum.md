@@ -34,7 +34,7 @@ ms.locfileid: "72797473"
 ###  <a name="Recommendations"></a> 建议  
  除了明确指出的情况外，从 WSFC 群集中的任意节点执行时，本主题中的步骤都应适用。  但是，通过从要在无仲裁情况下强制启动的节点执行这些步骤，可能获得更好的效果并避免网络问题。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
  用户必须是一个域帐户，该帐户是每个 WSFC 群集节点上本地 Administrators 组的成员。  
   
 ##  <a name="FailoverClusterManagerProcedure"></a> 使用故障转移群集管理器  

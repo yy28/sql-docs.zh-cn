@@ -43,7 +43,7 @@ ms.locfileid: "72797965"
   
  其中  
   
--   \<system-address> 是明确标识目标计算机系统的字符串。 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
+-   *system-address> 是明确标识目标计算机系统的字符串\<* 。 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
   
     -   因为 Windows Server 故障转移群集 (WSFC) 群集的节点处于相同的域，所以，您可以使用计算机系统的名称，例如 `SYSTEM46`。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "72797965"
   
          在公司或组织内确定域段的内容和数量。 有关详细信息，请参阅本主题后面的 [查找完全限定域名](#Finding_FQDN)。  
   
--   \<port> 是合作伙伴服务器实例的镜像终结点所使用的端口号。  
+-   *port> 是合作伙伴服务器实例的镜像终结点所使用的端口号\<* 。  
   
      数据库镜像端点可以使用计算机系统上的任意可用端口。 每个端口号只能与一个端点相关联，而每个端点与一个服务器实例相关联；这样，同一服务器上的不同服务器实例便可使用不同端口来侦听各个端点。 因此，在您指定可用性副本时在端点 URL 中指定的端口会始终将传入消息定向到其端点与该端口关联的服务器实例。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "72797965"
 > [!NOTE]  
 >  如果您需要与完全限定域名有关的详细信息，请与系统管理员联系。  
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
  **配置数据库镜像端点**  
   
 -   [为 AlwaysOn 可用性组&#40;创建数据库镜像端点 SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
@@ -152,5 +152,5 @@ ms.locfileid: "72797965"
   
 ## <a name="see-also"></a>另请参阅  
  [创建和配置可用性组 (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
  [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)  

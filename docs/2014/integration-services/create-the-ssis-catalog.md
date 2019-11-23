@@ -28,7 +28,7 @@ ms.locfileid: "72798016"
   
 2.  连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎。  
   
-3.  在“对象资源管理器”中，展开服务器节点，右键单击“Integration Services 目录”节点，然后单击“创建目录”。  
+3.  在“对象资源管理器”中，展开服务器节点，右键单击“Integration Services 目录” 节点，然后单击“创建目录”。  
   
 4.  单击 **“启用 CLR 集成”** 。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72798016"
   
 6.  输入密码，然后单击 **“确定”** 。  
   
-     该密码保护用于对目录数据进行加密的数据库主密钥。 将该密码保存在安全的位置。 同时建议您也备份数据库主密钥。 有关详细信息，请参阅 [备份数据库主密钥](../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
+     该密码保护用于对目录数据进行加密的数据库主密钥。 将该密码保存在安全的位置。 同时建议您也备份数据库主密钥。 有关详细信息，请参阅 [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   
 ### <a name="to-create-the-ssisdb-catalog-programmatically"></a>以编程方式创建 SSISDB 目录  
   

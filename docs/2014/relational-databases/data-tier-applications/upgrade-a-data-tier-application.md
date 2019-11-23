@@ -34,7 +34,7 @@ ms.locfileid: "72797978"
 # <a name="upgrade-a-data-tier-application"></a>升级数据层应用程序
   使用“升级数据层应用程序向导”或 Windows PowerShell 脚本可以更改当前部署的数据层应用程序 (DAC) 的架构和属性，以便匹配在 DAC 的新版本中定义的架构和属性。  
   
--   **Before you begin:**  [Choosing DAC Upgrade Options](#ChoseDACUpgOptions), [Limitations and Restrictions](#LimitationsRestrictions), [Prerequisites](#Prerequisites), [Security](#Security), [Permissions](#Permissions)  
+-   **准备工作：**  [选择 DAC 升级选项](#ChoseDACUpgOptions)、 [限制和局限](#LimitationsRestrictions)、 [先决条件](#Prerequisites)、 [安全性](#Security)、 [权限](#Permissions)  
   
 -   **若要升级 DAC，请使用：** [升级数据层应用程序向导](#UsingDACUpgradeWizard)、[PowerShell](#UpgradeDACPowerShell)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "72797978"
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  DAC 升级只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本中执行。  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 先决条件  
  出于谨慎起见，在开始升级前应生成完整数据库备份。 如果升级遇到了错误并且无法回滚其所有更改，可能需要还原该备份。  
   
  在开始升级前，您应该采取若干操作以便验证 DAC 包和升级操作。 有关如何执行这些检查的详细信息，请参阅 [Validate a DAC Package](validate-a-dac-package.md)。  
@@ -70,10 +70,10 @@ ms.locfileid: "72797978"
   
  请确保有足够事务日志空间可用于记录所有修改。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
  为了提高安全性，SQL Server 身份验证登录名存储在 DAC 包中且没有密码。 在部署或升级该包时，登录名将作为含有生成的密码的已禁用登录名创建。 若要启用这些登录名，请使用具有 ALTER ANY LOGIN 权限的登录名登录，并且使用 ALTER LOGIN 来启用该登录名并且分配可以传达给用户的新密码。 对于 Windows 身份验证登录名则无需执行此操作，因为其密码不是由 SQL Server 管理的。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  DAC 只能由 **sysadmin** 或 **serveradmin** 固定服务器角色的成员升级，或者由 **dbcreator** 固定服务器角色中具有 ALTER ANY LOGIN 权限的登录名升级。 该登录名必须是现有数据库的所有者。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以升级 DAC。  
   
 ##  <a name="UsingDACUpgradeWizard"></a> 使用“升级数据层应用程序向导”  
@@ -142,7 +142,7 @@ ms.locfileid: "72797978"
  “取消”- 终止向导且不部署 DAC。  
   
 ##  <a name="Review_policy"></a> “查看策略”页  
- 使用此页可查看评估 DAC 服务器选择策略的结果（如果该 DAC 具有策略）。 该 DAC 服务器选择策略是可选的，并分配给在 Microsoft Visual Studio 中创作的 DAC。 该策略使用该服务器选择策略方面指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例为承载该 DAC 而必须满足的条件。  
+ 使用此页可查看评估 DAC 服务器选择策略的结果（如果该 DAC 具有策略）。 该 DAC 服务器选择策略是可选的，并分配给在 Microsoft Visual Studio 中创作的 DAC。 该策略使用该服务器选择策略方面指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例为承载该 DAC 而必须满足的条件。  
   
  **策略条件的评估结果** - 一个只读报告，显示 DAC 服务器选择策略中的条件评估是否成功。 将在单独的行上报告对每个条件进行评估的结果。  
   

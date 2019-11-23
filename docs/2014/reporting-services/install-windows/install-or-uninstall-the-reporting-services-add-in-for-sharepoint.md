@@ -22,7 +22,7 @@ ms.locfileid: "72796428"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 | SharePoint 2010|  
   
  **本主题内容：**  
   
@@ -44,9 +44,9 @@ ms.locfileid: "72796428"
   
 -   [升级](#bkmk_upgrade)  
   
--   [Rscustomaction.exe](#bkmk_rscustomaction)  
+-   [RsCustomAction.exe](#bkmk_rscustomaction)  
   
-##  <a name="bkmk_prereq"></a> Prerequisites  
+##  <a name="bkmk_prereq"></a> 先决条件  
  将报表服务器与 SharePoint 产品的实例集成需要若干步骤，安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是其中的一步。 有关针对使用 SharePoint 模式全套要求的详细信息，请参阅 [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)。 有关安装和配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的详细信息，请参阅[Install Reporting Services Sharepoint Mode For sharepoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)。  
   
 -   如果将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 与具有多个 Web 前端应用程序的 SharePoint 场集成，则将该外接程序安装到场中每台具有 Web 服务器前端的计算机上。 仅对将要用于访问报表服务器内容的 Web 前端执行此操作。  
@@ -89,7 +89,7 @@ ms.locfileid: "72796428"
 ##  <a name="bkmk_3ways_to_install"></a> 安装方法概述  
  使用以下两种方法之一可以安装用于 SharePoint 产品的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序：  
   
--   **安装向导：** ![注意](../../../2014/reporting-services/media/rs-fyinote.png "纪录")"[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]" 中的 "新建"，该外接程序可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导进行安装。 在向导的“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”。  
+-   **安装向导：** ![注意](../../../2014/reporting-services/media/rs-fyinote.png "备注")"[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]" 中的 "新建"，该外接程序可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导进行安装。 在向导的“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”。  
   
 -   **rsSharepoint.msi：** 外接程序可从安装介质直接安装，也可以通过下载安装。 rsSharepoint.msi 同时支持图形用户界面和命令行安装。 您必须以管理员权限来运行 .msi：首先使用提升权限打开命令提示符，然后从命令行运行 rsSharepoint.msi。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
@@ -111,11 +111,11 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\14\`  
   
-     或多个  
+     或  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\`  
   
-3.  在 SharePoint 管理中心配置报表服务器设置和功能激活。 的 COLLATE 子句。 有关安装和配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的详细信息，请参阅 [安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
+3.  在 SharePoint 管理中心配置报表服务器设置和功能激活。 . 有关安装和配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的详细信息，请参阅 [安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
   
 ###  <a name="bkmk_files_only_installation"></a> “仅文件”安装  
  若要安装文件但跳过自定义操作安装阶段，则可以从命令行中使用 SKIPCA 选项来运行 rssharepoint.msi：  
@@ -249,7 +249,7 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="bkmk_logfiles"></a> 安装日志文件  
- 安装程序在运行期间，会为安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的用户将相应信息记录到 **%temp%** 文件夹下的一个日志文件中。 例如，**c:\Users\\<用户名\>\AppData\Local\Temp**。此文件名为 **RS_SP_\<number>.log**，例如，**RS_SP_0.log**。 日志中的每个错误都以字符串“SSRSCustomActionError”开头。  
+ 安装程序在运行期间，会为安装 **外接程序的用户将相应信息记录到**%temp%[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件夹下的一个日志文件中。 例如，**c:\Users\\<用户名\>\AppData\Local\Temp**。此文件名为 **RS_SP_\<number>.log**，例如，**RS_SP_0.log**。 日志中的每个错误都以字符串“SSRSCustomActionError”开头。  
   
 > [!NOTE]  
 >  AppData 是 Windows 操作系统中隐藏的文件夹。 您可能需要修改您的 Windows 资源管理器的文件夹设置，以便可以看到隐藏的文件和文件夹。  
@@ -280,7 +280,7 @@ Rssharepoint.msi /?
   
 2.  输出将类似于以下内容：  
   
-     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured` 列中的一个值匹配。  
+     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`。  
   
 ##  <a name="bkmk_upgrade"></a> 升级  
  如果具有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的现有安装，则可以升级到当前版本。 外接程序安装程序将检测现有版本并提示您确认是否更新。 将显示如下的消息：  
@@ -294,7 +294,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  下表概述了 rscustomaction.exe 的各个开关：  
   
-|开关|Description|  
+|开关|描述|  
 |------------|-----------------|  
 |i|安装自定义操作。 这将在 SharePoint 中注册 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。 并且将重新启动 W3SVCservice。|  
 |r|Repair|  

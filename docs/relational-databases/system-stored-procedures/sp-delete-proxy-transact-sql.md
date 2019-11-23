@@ -48,15 +48,15 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="remarks"></a>备注  
- 必须指定 **@no__t 1proxy_name** **@no__t 或 3proxy_id** 。 如果同时指定这两个参数，这两个参数必须引用相同的代理，否则存储过程会失败。  
+## <a name="remarks"></a>Remarks  
+ 必须指定 **\@proxy_name**或 **\@proxy_id** 。 如果同时指定这两个参数，这两个参数必须引用相同的代理，否则存储过程会失败。  
   
  如果作业步骤引用了指定代理，则无法删除此代理，存储过程也将失败。  
   
-## <a name="permissions"></a>权限  
- 默认情况下，只有**sysadmin**固定服务器角色的成员才能执行**sp_delete_proxy**。  
+## <a name="permissions"></a>Permissions  
+ 默认情况下，只有**sysadmin**固定服务器角色的成员才能**sp_delete_proxy**执行。  
   
 ## <a name="examples"></a>示例  
  以下是删除代理 `Catalog application proxy` 的示例。  
@@ -70,7 +70,7 @@ EXEC dbo.sp_delete_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
   
   

@@ -31,7 +31,7 @@ ms.locfileid: "72783128"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看或更改服务器属性，请使用：**  
   
@@ -54,9 +54,9 @@ ms.locfileid: "72783128"
   
 -   有些属性页会显示通过 Windows Management Instrumentation (WMI) 获得的信息。 若要显示这些页，WMI 必须安装在运行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的计算机上。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  有关详细信息，请参阅 [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)。  
   
  默认情况下，在没有参数或仅使用第一个参数的 `sp_configure` 上执行权限。 若要执行 `sp_configure` 同时使用两个参数来更改配置选项或运行重新配置语句，必须向用户授予 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
@@ -73,11 +73,11 @@ ms.locfileid: "72783128"
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>通过使用 SERVERPROPERTY 内置函数查看服务器属性  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 此示例在 [语句中使用](/sql/t-sql/functions/serverproperty-transact-sql) SERVERPROPERTY `SELECT` 内置函数，以返回有关当前服务器的信息。 如果基于 Windows 的服务器上安装了多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，而且客户端必须打开另一个到当前连接所使用的同一实例连接，则此方案很有用。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。 此示例在 [语句中使用](/sql/t-sql/functions/serverproperty-transact-sql) SERVERPROPERTY `SELECT` 内置函数，以返回有关当前服务器的信息。 如果基于 Windows 的服务器上安装了多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，而且客户端必须打开另一个到当前连接所使用的同一实例连接，则此方案很有用。  
   
     ```sql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
@@ -86,11 +86,11 @@ ms.locfileid: "72783128"
   
 #### <a name="to-view-server-properties-by-using-the-sysservers-catalog-view"></a>通过使用 sys.servers 目录视图查看服务器属性  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 此示例查询 [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) 目录视图，以返回当前服务器的名称 (`name`) 和 ID (`server_id`)，以及用于连接到链接服务器的 OLE DB 访问接口 (`provider`) 的名称。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。 此示例查询 [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) 目录视图，以返回当前服务器的名称 (`name`) 和 ID (`server_id`)，以及用于连接到链接服务器的 OLE DB 访问接口 (`provider`) 的名称。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -102,11 +102,11 @@ ms.locfileid: "72783128"
   
 #### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>通过使用 sys.configurations 目录视图查看服务器属性  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 此示例查询 [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) 目录视图，以返回有关当前服务器上的各个服务器配置选项的信息。 该示例返回选项的名称 (`name`) 和说明 (`description`)，以及该选项是否为高级选项 (`is_advanced`)。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。 此示例查询 [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) 目录视图，以返回有关当前服务器上的各个服务器配置选项的信息。 该示例返回选项的名称 (`name`) 和说明 (`description`)，以及该选项是否为高级选项 (`is_advanced`)。  
   
     ```sql
     USE AdventureWorks2012;
@@ -118,11 +118,11 @@ ms.locfileid: "72783128"
   
 #### <a name="to-change-a-server-property-by-using-sp_configure"></a>通过使用 sp_configure 更改服务器属性  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 此示例显示如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 更改服务器属性。 本示例将 `fill factor` 选项的值更改为 `100`。 必须重新启动服务器，更改才会生效。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。 此示例显示如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 更改服务器属性。 本示例将 `fill factor` 选项的值更改为 `100`。 必须重新启动服务器，更改才会生效。  
   
 ```sql  
 Use AdventureWorks2012;  
@@ -144,13 +144,13 @@ GO
   
 #### <a name="to-view-or-change-server-properties"></a>查看或更改服务器属性  
   
-1.  在“开始” 菜单上，依次指向“所有程序”、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”，然后单击“SQL Server 配置管理器”。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
 2.  在 **“SQL Server 配置管理器”** 中，单击 **“SQL Server 服务”** 。  
   
-3.  在详细信息窗格中，右键单击“SQL Server (\<instancename>)”，然后单击“属性”。  
+3.  在详细信息窗格中，右键单击“SQL Server (**instancename>)”\<** ，然后单击“属性”。  
   
-4.  在“SQL Server (\<instancename>) 属性”对话框中，更改“服务”选项卡或“高级”选项卡上的服务器属性，然后单击“确定”。  
+4.  在“SQL Server (**instancename>) 属性”\<** 对话框中，更改“服务”选项卡或“高级”选项卡上的服务器属性，然后单击“确定”。  
   
 ##  <a name="FollowUp"></a> 跟进：更改服务器属性之后  
  对于某些属性，可能必须重新启动服务器，才能使更改生效。  
@@ -159,7 +159,7 @@ GO
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)   
  [SET 语句 (Transact-SQL)](/sql/t-sql/statements/set-statements-transact-sql)   
  [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql)   
- [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
+ [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
  [在 SQL Server 工具中将 WMI 配置为显示服务器状态](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)   

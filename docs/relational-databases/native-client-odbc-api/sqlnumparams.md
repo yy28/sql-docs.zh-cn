@@ -1,5 +1,5 @@
 ---
-title: SQLNumParams |Microsoft Docs
+title: SQLNumParams | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql

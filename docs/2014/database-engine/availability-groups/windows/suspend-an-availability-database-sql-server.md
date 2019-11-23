@@ -45,7 +45,7 @@ ms.locfileid: "72797959"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **挂起数据库，使用：**  
   
@@ -64,15 +64,15 @@ ms.locfileid: "72797959"
 ###  <a name="Restrictions"></a> 限制和局限  
  SUSPEND 命令只要被承载目标数据库的副本接受后就返回，但是实际上挂起数据库以异步方式发生。  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 先决条件  
  您必须连接到承载要挂起的数据库的服务器实例。 若要挂起主数据库和相应的辅助数据库，请连接到承载主副本的服务器实例。 若要挂起辅助数据库但保持主数据库可用，请连接到辅助副本。  
   
 ###  <a name="Recommendations"></a> 建议  
  出现瓶颈时，短暂挂起一个或多个辅助数据库可能有助于暂时提高主副本的性能。 只要有一个辅助数据库仍挂起，就无法截断相应的主数据库的事务日志。 这将导致日志记录在主数据库上累积。 因此，我们建议您快速恢复或删除挂起的辅助数据库。 有关详细信息，请参阅本主题后面的 [跟进：避免出现已满事务日志](#FollowUp)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
@@ -139,10 +139,10 @@ ms.locfileid: "72797959"
   
 -   [解决事务日志已满的问题（SQL Server 错误 9002）](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
   
 -   [恢复可用性数据库 (SQL Server)](resume-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
  [恢复可用性数据库 (SQL Server)](resume-an-availability-database-sql-server.md)  

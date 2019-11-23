@@ -1,5 +1,5 @@
 ---
-title: sys.databases _nodes_column_store_dictionaries （Transact-sql） |Microsoft Docs
+title: sys. pdw_nodes_column_store_dictionaries （Transact-sql） |Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -14,7 +14,7 @@ ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 618a92cfd0f1602753b9fcfd61ac232eff5cecd4
 ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/14/2019
 ms.locfileid: "72305181"
@@ -28,19 +28,19 @@ ms.locfileid: "72305181"
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|指示分区 ID。 在数据库中是唯一的。|  
 |**hobt_id**|**bigint**|具有此列存储索引的表的堆或B 树索引（HoBT）的 ID。|  
-|**column_id**|**int**|列存储列的 ID。|  
+|column_id|**int**|列存储列的 ID。|  
 |**dictionary_id**|**int**|字典的 ID。|  
 |**version**|**int**|字典格式的版本。|  
 |**type**|**int**|字典类型：<br /><br /> 1-包含**int**值的哈希字典<br /><br /> 2-未使用<br /><br /> 3-包含字符串值的哈希字典<br /><br /> 包含**浮点**值的4哈希字典|  
 |**last_id**|**int**|字典中的最后一个数据 ID。|  
 |**entry_count**|**bigint**|字典中的条目数。|  
 |**on_disc_size**|**bigint**|字典大小（以字节为单位）。|  
-|**pdw_node_id**|**int**|@No__t-0 节点的唯一标识符。|  
+|pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 节点的唯一标识符。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 `VIEW SERVER STATE` 权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   

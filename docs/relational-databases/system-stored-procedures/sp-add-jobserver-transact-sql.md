@@ -42,25 +42,25 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ## <a name="arguments"></a>参数  
 `[ @job_id = ] job_id` 作业的标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
   
-`[ @job_name = ] 'job_name'` 作业的名称。 *job_name*的值为**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  必须指定*job_id*或*job_name* ，但不能同时指定两者。  
   
-`[ @server_name = ] 'server'` 要以其为目标的服务器的名称。 *服务器*为**nvarchar （30）** ，默认值为 N ' （LOCAL） '。 *服务器*可以是本地服务器的 **（local）** ，也可以是现有目标服务器的名称。  
+`[ @server_name = ] 'server'` 作业的目标服务器的名称。 *服务器*为**nvarchar （30）** ，默认值为 N ' （LOCAL） '。 *服务器*可以是本地服务器的 **（local）** ，也可以是现有目标服务器的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="remarks"></a>备注  
- **1automatic_post**存在于**sp_add_jobserver**中，但未在 "参数" 下列出。 @no__t **1automatic_post**已保留供内部使用。 @no__t  
+## <a name="remarks"></a>Remarks  
+ **sp_add_jobserver** **\@automatic_post**存在，但未在 "参数" 下列出。 保留 **\@automatic_post**供内部使用。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -79,7 +79,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  以下示例将要运行的作业 `NightlyBackups` 指派给本地服务器。  
   
 > [!NOTE]  
->  此示例假定 @no__t 的作业已存在。  
+>  此示例假定 `NightlyBackups` 作业已存在。  
   
 ```  
 USE msdb ;  
@@ -106,7 +106,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

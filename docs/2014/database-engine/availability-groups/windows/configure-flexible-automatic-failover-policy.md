@@ -35,15 +35,15 @@ ms.locfileid: "72797749"
   
 -   要执行自动故障转移，当前主副本和一个辅助副本必须配置为使用自动故障转移的同步提交可用性模式，而且辅助副本必须与主副本同步。  
   
--   如果某个可用性组超过其 WSFC 故障阈值，则该 WSFC 群集不会尝试为该可用性组执行自动故障转移。 此外，该可用性组的 WSFC 资源组始终保持失败状态，直到群集管理员手动将该失败的资源组联机，或是数据库管理员对该可用性组执行手动故障转移。 WSFC 故障阈值 定义为给定时间段中可用性组所支持的最大故障数。 默认时间段为六个小时，此时间段中最大故障数的默认值为 *n*-1，其中*n* 是 WSFC 节点的数目。 若要更改给定的可用性组的故障阈值，请使用 WSFC 故障转移管理器控制台。  
+-   如果某个可用性组超过其 WSFC 故障阈值，则该 WSFC 群集不会尝试为该可用性组执行自动故障转移。 此外，该可用性组的 WSFC 资源组始终保持失败状态，直到群集管理员手动将该失败的资源组联机，或是数据库管理员对该可用性组执行手动故障转移。 WSFC 故障阈值 定义为给定时间段中可用性组所支持的最大故障数。 默认时间段为六个小时，此时间段中最大故障数的默认值为 *n*-1，其中 *n* 是 WSFC 节点的数目。 若要更改给定的可用性组的故障阈值，请使用 WSFC 故障转移管理器控制台。  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 先决条件  
   
 -   您必须连接到承载主副本的服务器实例。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 |任务|Permissions|  
 |----------|-----------------|  
@@ -69,7 +69,7 @@ ms.locfileid: "72797749"
   
         |[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|level|当出现以下情况时，自动启动故障转移…|  
         |------------------------------|-----------|-------------------------------------------|  
-        |@shouldalert|一级|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
+        |1|一级|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
         |2|二级|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  
         |3|三级|出现严重服务器错误时。 满足任何下限值条件或发生严重的内部服务器错误。<br /><br /> 这是默认级别。|  
         |4|四级|出现严重服务器错误时。 满足任何下限值条件或发生中度的服务器错误。|  
@@ -77,7 +77,7 @@ ms.locfileid: "72797749"
   
          有关故障转移条件级别的更多信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](flexible-automatic-failover-policy-availability-group.md)。  
   
-    -   若要配置运行状况检查超时阈值，请使用 HEALTH_CHECK_TIMEOUT = *n* 选项，其中，*n* 是一个从 15000 毫秒（15 秒）到 4294967295 毫秒的整数。 默认值为 30000 毫秒（30 秒）  
+    -   若要配置运行状况检查超时阈值，请使用 HEALTH_CHECK_TIMEOUT = *n* 选项，其中， *n* 是一个从 15000 毫秒（15 秒）到 4294967295 毫秒的整数。 默认值为 30000 毫秒（30 秒）  
   
          例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句会将现有可用性组 `AG1`的运行状况检查超时阈值更改为 60,000 毫秒（1 分钟）。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "72797749"
   
     -   若要设置故障转移条件级别，请使用 `FailureConditionLevel`*级别*参数，其中， *level*是以下值之一：  
   
-        |ReplTest1|level|当出现以下情况时，自动启动故障转移…|  
+        |“值”|level|当出现以下情况时，自动启动故障转移…|  
         |-----------|-----------|-------------------------------------------|  
         |`OnServerDown`|一级|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
         |`OnServerUnresponsive`|二级|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  
@@ -105,7 +105,7 @@ ms.locfileid: "72797749"
   
          有关故障转移条件级别的更多信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](flexible-automatic-failover-policy-availability-group.md)。  
   
-         例如，以下命令会将现有可用性组 `AG1`的故障条件级别更改为一级。  
+         例如，以下命令会将现有可用性组 `AG1` 的故障条件级别更改为一级。  
   
         ```powershell
         Set-SqlAvailabilityGroup `
@@ -130,11 +130,11 @@ ms.locfileid: "72797749"
   
 -   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
   
--   [获取 SQL Server PowerShell 帮助](../../../powershell/sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
- [可用性模式（AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)    
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [可用性模式（AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)   
  [故障转移和故障&#40;转移&#41;模式 AlwaysOn 可用性组](failover-and-failover-modes-always-on-availability-groups.md)   
  [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [故障转移群集实例的故障转移策略](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   

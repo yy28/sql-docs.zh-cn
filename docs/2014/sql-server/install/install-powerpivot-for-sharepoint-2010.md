@@ -76,7 +76,7 @@ ms.locfileid: "71952255"
   
 8.  在 **“设置角色”** 页中，选择 **“SQL Server PowerPivot for SharePoint”** 。  
   
-9. 或者，您可以向您的安装添加数据库引擎的实例。 如果要设置新场，并且需要数据库服务器来运行该场的配置和内容数据库，则可以执行此操作。 如果添加数据库引擎，它将作为 PowerPivot 命名实例安装。 每当需要指定与此实例的连接时（例如，在场配置向导中，如果使用该向导配置场），请按以下格式输入数据库名称： < `servername` > \Powerpivot。  
+9. 或者，您可以向您的安装添加数据库引擎的实例。 如果要设置新场，并且需要数据库服务器来运行该场的配置和内容数据库，则可以执行此操作。 如果添加数据库引擎，它将作为 PowerPivot 命名实例安装。 每当需要指定与此实例的连接时（例如，在场配置向导中，如果使用该向导配置场），请按以下格式输入数据库名称： <`servername`> \Powerpivot。  
   
      ![GMNI_SetupUI_FeatureRole](../../../2014/sql-server/install/media/gmni-setupui-featurerole.gif "GMNI_SetupUI_FeatureRole")  
   
@@ -128,7 +128,7 @@ ms.locfileid: "71952255"
   
 -   [使用 Windows PowerShell 配置 Power Pivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
- **连接数据库引擎实例。** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]在安装 {2} 时，SQL Server 安装程序会为您提供用于向安装中添加数据库引擎实例的选项。{3} 如果要设置新场，并且需要数据库服务器来运行该场的配置和内容数据库，则可能已将数据库引擎实例添加到了安装中。 如果添加了数据库引擎，则它已安装为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例。 每当需要指定与此实例的连接时（例如，在场配置向导中，如果使用该向导配置场），请记住按以下格式输入数据库名称： < `servername` > \Powerpivot。  
+ **连接数据库引擎实例。** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]在安装 {2} 时，SQL Server 安装程序会为您提供用于向安装中添加数据库引擎实例的选项。{3} 如果要设置新场，并且需要数据库服务器来运行该场的配置和内容数据库，则可能已将数据库引擎实例添加到了安装中。 如果添加了数据库引擎，则它已安装为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例。 每当需要指定与此实例的连接时（例如，在场配置向导中，如果使用该向导配置场），请记住按以下格式输入数据库名称： <`servername`> \Powerpivot。  
   
 ##  <a name="bkmk_redist"></a>步骤3：在 Excel Services 应用程序服务器上安装 Analysis Services OLE DB 提供程序  
  如果在单独的应用程序服务器上运行 Excel Calculation Services 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，则需要执行其他安装步骤。 在运行 Excel Calculation Services 的应用程序服务器上，安装适当版本的 Analysis Services OLE DB (MSOLAP) 访问接口。  

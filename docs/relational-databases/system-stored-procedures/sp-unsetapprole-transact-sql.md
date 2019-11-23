@@ -48,12 +48,12 @@ sp_unsetapprole @cookie
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）和1（失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
  使用**sp_setapprole**激活应用程序角色后，该角色将保持活动状态，直到用户从服务器断开连接或执行**sp_unsetapprole**。  
   
  有关应用程序角色的概述，请参阅[应用程序角色](../../relational-databases/security/authentication-access/application-roles.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求**公共**的成员身份以及在激活应用程序角色时保存的 cookie 的知识。  
   
 ## <a name="examples"></a>示例  
@@ -77,7 +77,7 @@ SELECT USER_NAME();
 GO   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_setapprole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   

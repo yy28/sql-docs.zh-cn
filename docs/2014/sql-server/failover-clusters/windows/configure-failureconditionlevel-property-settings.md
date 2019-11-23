@@ -20,7 +20,7 @@ ms.locfileid: "72797498"
 # <a name="configure-failureconditionlevel-property-settings"></a>配置 FailureConditionLevel 属性设置
   使用 FailureConditionLevel 属性可以设置 AlwaysOn 故障转移群集实例 (FCI) 进行故障转移或重新启动的条件。 对此属性的更改会立即应用，而无需重新启动 Windows Server 故障转移群集 (WSFC) 服务或 FCI 资源。  
   
--   **开始之前：**  [FailureConditionLevel 属性设置](#Restrictions)， [安全性](#Security)  
+-   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
   
 -   **若要配置 FailureConditionLevel 属性设置，请使用** [PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、[Transact-SQL](#TsqlProcedure)  
   
@@ -29,9 +29,9 @@ ms.locfileid: "72797498"
 ###  <a name="Restrictions"></a> FailureConditionLevel 属性设置  
  针对递增的级别设置故障条件。 对于级别 1-5，每个级别除了自己的条件外，还包括之前级别的所有条件。 这意味着，每个级别越大，故障转移或重新启动的几率不断加大。  有关详细信息，请参阅 [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md) 主题的“确定故障”一节。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要 ALTER SETTINGS 和 VIEW SERVER STATE 权限。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
@@ -91,4 +91,4 @@ ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY FailureConditionLevel =
   
 ## <a name="see-also"></a>另请参阅  
  [sp_server_diagnostics (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)   
- [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
+ [故障转移群集实例的故障转移策略](failover-policy-for-failover-cluster-instances.md)  

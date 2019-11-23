@@ -25,13 +25,13 @@ ms.locfileid: "72797606"
   
 -   **准备工作：** [先决条件](#Prerequisites)、[安全性](#Security)  
   
--   **若要查看仲裁 NodeWeight 设置，请使用：** [使用 Powershell](#PowerShellProcedure)、[使用 Cluster.exe](#CommandPromptProcedure)  
+-   **使用** [使用 PowerShell](#PowerShellProcedure)、 [使用 cluster.exe](#CommandPromptProcedure)  
   
 -   [相关内容](#RelatedContent)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 先决条件  
  仅在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 或更高版本中支持此功能。  
   
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ ms.locfileid: "72797606"
 > [!TIP]  
 >  如果未安装此修补程序，本主题中的示例将为 NodeWeight 返回空或 NULL 值。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
  用户必须是一个域帐户，该帐户是每个 WSFC 群集节点上本地 Administrators 组的成员。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  

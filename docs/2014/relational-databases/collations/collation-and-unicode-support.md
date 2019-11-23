@@ -35,7 +35,7 @@ ms.lasthandoff: 10/21/2019
 ms.locfileid: "72688727"
 ---
 # <a name="collation-and-unicode-support"></a>排序规则和 Unicode 支持
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排序规则可为您的数据提供排序规则、区分大小写属性和区分重音属性。 与诸如 `char` 和 `varchar` 等字符数据类型一起使用的排序规则规定可表示该数据类型的代码页和对应字符。 无论您是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的新实例，还原数据库备份，还是将服务器连接到客户端数据库，都必须了解您要处理的数据的区域设置要求、排序顺序以及是否区分大小写和重音。 若要列出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上可用的排序规则，请参阅 [sys。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排序规则可为你的数据提供排序规则、区分大小写属性和区分重音属性。 与诸如 `char` 和 `varchar` 等字符数据类型一起使用的排序规则规定可表示该数据类型的代码页和对应字符。 无论您是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的新实例，还原数据库备份，还是将服务器连接到客户端数据库，都必须了解您要处理的数据的区域设置要求、排序顺序以及是否区分大小写和重音。 若要列出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上可用的排序规则，请参阅 [sys。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)。  
   
  在为您的服务器、数据库、列或表达式选择排序规则时，也在向您的数据分配某些特征，这些特征将会影响数据库中许多操作的结果。 例如，使用 ORDER BY 构造查询时，结果集的排序顺序可能取决于应用于该数据库的排序规则或 COLLATE 子句中在查询的表达式级别规定的排序规则。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72688727"
   
  与排序规则关联的选项是区分大小写、区分重音、区分假名以及区分全半角。 指定这些选项的方法是将它们追加到排序规则名称。 例如，排序规则 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` 区分大小写、区分重音、区分假名以及区分全半角。 下表描述了与这些选项关联的行为。  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |区分大小写 (_CS)|区分大写字母和小写字母。 如果选择此项，排序时小写字母将在其对应的大写字母之前。 如果不选择此选项，则排序规则将不区分大小写。 即 SQL Server 在排序时将大写字母和小写字母视为相同。 通过指定 _CI，可以显式选择不区分大小写。|  
 |区分重音 (_AS)|区分重音字符和非重音字符。 例如，"a" 不等于 "&#x1EA5;"。 如果未选择此选项，则排序规则将不区分重音。 即 SQL Server 在排序时将重音字符和非重音字符视为相同。 通过指定 _AI，可以显式选择不区分重音。|  
@@ -59,7 +59,7 @@ ms.locfileid: "72688727"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下排序规则集：  
   
  Windows 排序规则  
- Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数据的存储规则。 在 Windows 排序规则中，使用与 Unicode 数据相同的算法实现非 Unicode 数据的比较。 Windows 基本排序规则指定应用字典排序时所用的字母表或语言，以及用于存储非 Unicode 字符数据的代码页。 Unicode 排序和非 Unicode 排序都与特定 Windows 版本中的字符串比较相兼容。 这保证了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所有数据类型的一致性，还使开发人员能够使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的相同规则对应用程序中的字符串排序。 有关详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql)。  
+ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数据的存储规则。 在 Windows 排序规则中，使用与 Unicode 数据相同的算法实现非 Unicode 数据的比较。 Windows 基本排序规则指定应用字典排序时所用的字母表或语言，以及用于存储非 Unicode 字符数据的代码页。 Unicode 排序和非 Unicode 排序都与特定 Windows 版本中的字符串比较相兼容。 这保证了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中所有数据类型的一致性，还使开发人员能够使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的相同规则对应用程序中的字符串排序。 有关详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql)。  
   
  二进制排序规则  
  二进制排序规则基于区域设置和数据类型定义的编码值顺序来对数据进行排序。 它们是区分大小写的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的二进制排序规则定义了将使用的区域设置和 ANSI 代码页。 这将强制使用二进制排序顺序。 由于它们相对简单，因此二进制排序规则有助于提高应用程序性能。 对于非 Unicode 数据类型，数据比较将基于 ANSI 代码页中定义的码位。 对于 Unicode 数据类型，数据比较将基于 Unicode 码位。 对于 Unicode 数据类型的二进制排序规则，数据排序将不考虑区域设置。 例如，对 Unicode 数据应用 Latin_1_General_BIN 和 Japanese_BIN，会得到完全相同的排序结果。  
@@ -70,7 +70,7 @@ ms.locfileid: "72688727"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则 (SQL_*) 提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本兼容的排序顺序。 非 Unicode 数据的字典排序规则与 Windows 操作系统提供的任何排序例程都不兼容。 但是，Unicode 数据的排序与特定版本的 Windows 排序规则兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则对非 Unicode 数据和 Unicode 数据使用不同的比较规则，因此对于相同数据的比较将会看到不同的结果，具体取决于基本数据类型。 有关详细信息，请参阅 [SQL Server 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql)。  
   
 > [!NOTE]
->  升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的英文实例时可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则 (SQL_*)，以便与现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则是在安装过程中定义的，因此在以下情况下确保慎重指定排序规则设置：  
+>  升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的英文实例时可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则 (SQL_*)，以便与现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则是在安装过程中定义的，因此在以下情况下确保慎重指定排序规则设置：  
 > 
 >  -   应用程序代码依赖早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则的行为。  
 > -   必须存储反映多种语言的字符数据。  
@@ -197,7 +197,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交互的数据库应用程序必须使用支持复杂文种的控件。 在托管代码中创建的标准 Windows 窗体控件支持复杂文种。  
   
   
-##  <a name="Related_Tasks"></a>相关任务  
+##  <a name="Related_Tasks"></a> 相关任务  
   
 |任务|主题|  
 |----------|-----------|  

@@ -76,9 +76,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中创建**EXTERNAL_ACCESS**或**UNSAFE**程序集，必须满足以下两个条件之一：  
   
-1.  程序集经过了强名称签名或使用证书进行了 Authenticode 签名。 此强名称（或证书）在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中创建为非对称密钥（或证书），并且具有具有**外部访问程序集**权限（对于外部访问程序集）或**UNSAFE assembly**权限的相应登录名（对于不安全程序集）。  
+1.  程序集经过了强名称签名或使用证书进行了 Authenticode 签名。 此强名称（或证书）在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中创建为非对称密钥（或证书），并且具有具有**外部访问程序集**权限（对于外部访问程序集）或**unsafe assembly**权限（对于不安全的程序集）的相应登录名。  
   
-2.  数据库所有者（DBO）具有**外部访问程序集**（对于**外部访问**程序集）或**Unsafe 程序集**（对于**不安全**程序集）权限，并且数据库的 "[可信数据库" 属性](../../../relational-databases/security/trustworthy-database-property.md)设置为**打开**。  
+2.  数据库所有者（DBO）具有**外部访问程序集**（对于**外部访问**程序集）或**不安全程序集**（对于**不安全**程序集），并且数据库的 "[可信数据库" 属性](../../../relational-databases/security/trustworthy-database-property.md)设置为 **"开**"。  
 
  在加载程序集（包括执行）时，也将检查上面所列的两个条件。 至少必须满足这些条件之一才能加载程序集。  
   

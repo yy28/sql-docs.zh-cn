@@ -20,7 +20,7 @@ ms.locfileid: "72798328"
 # <a name="install-powerpivot-from-the-command-prompt"></a>从命令提示符安装 PowerPivot
   您可以从命令行运行安装程序以便安装 SQL Server PowerPivot for SharePoint。 您必须在命令中包含 `/ROLE` 参数并排除 `/FEATURES` 参数。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>Prerequisites  
  必须安装 SharePoint Server 2010 Enterprise Edition Service Pack 1 (SP1)。  
   
  您必须使用域帐户来设置 Analysis Services。  

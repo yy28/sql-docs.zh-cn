@@ -190,7 +190,7 @@ Set oServer = nothing
   
 -   添加或修改命令行选项。  
   
- 请注意，如果将包部署到 SSIS 目录并且指定 **SSIS 目录** 作为包的来源，则会自动获取包中的大多数此类配置信息。 在“配置”选项卡下，可以指定环境、参数值、连接管理器值、属性重写以及包是否在 32 位运行时环境下运行。  
+ 请注意，如果将包部署到 SSIS 目录并且指定 **SSIS 目录**作为包的来源，则会自动获取包中的大多数此类配置信息。 在“配置”选项卡下，可以指定环境、参数值、连接管理器值、属性重写以及包是否在 32 位运行时环境下运行。  
   
  有关创建运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的作业步骤的详细信息，请参阅[包的 SQL Server 代理作业](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
   
@@ -198,14 +198,14 @@ Set oServer = nothing
   
 |||  
 |-|-|  
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |描述如何创建带有可执行程序的作业步骤。|[创建 CmdExec 作业步骤](create-a-cmdexec-job-step.md)|  
 |介绍如何重置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理权限。|[配置帐户以创建和管理 SQL Server 代理作业](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
-|介绍如何创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤。|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
+|介绍如何创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤。|[创建 Transact-SQL 作业步骤](create-a-transact-sql-job-step.md)|  
 |说明如何定义 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 Transact-SQL 作业步骤的选项。|[定义 Transact-SQL 作业步骤选项](define-transact-sql-job-step-options.md)|  
-|介绍如何创建 ActiveX 脚本作业步骤。|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
+|介绍如何创建 ActiveX 脚本作业步骤。|[创建 ActiveX 脚本作业步骤](create-an-activex-script-job-step.md)|  
 |介绍如何创建和定义用于执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 命令和查询的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤。|[创建 Analysis Services 作业步骤](create-an-analysis-services-job-step.md)|  
-|介绍在作业执行期间失败时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应执行什么操作。|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
+|介绍在作业执行期间失败时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应执行什么操作。|[设置作业步骤的成功流或失败流](set-job-step-success-or-failure-flow.md)|  
 |说明如何在“作业步骤属性”对话框中查看作业步骤的详细信息。|[查看作业步骤信息](view-job-step-information.md)|  
 |说明如何删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤日志。|[删除作业步骤日志](delete-a-job-step-log.md)|  
   

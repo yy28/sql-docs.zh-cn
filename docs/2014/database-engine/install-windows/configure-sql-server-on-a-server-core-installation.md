@@ -67,9 +67,9 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
 ```  
   
 ### <a name="installing-updates-after-installation"></a>安装后安装更新 
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的已安装实例上，我们建议您应用最新的安全更新和关键更新，包括常规分发发布 (GDR) 和 Service Pack (SP)。 单独的累积更新和安全更新应该根据需要逐案例采用。 评估更新；如果需要，则应用该更新。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的已安装实例上，我们建议您应用最新的安全更新和关键更新，包括常规分发发布 (GDR) 和 Service Pack (SP)。 单独的累积更新和安全更新应该根据需要逐案例采用。 评估更新；如果需要，则应用该更新。  
   
- 在命令提示符下应用更新，将 <包名称> 替换为更新包的名称：  
+ 在命令提示符下应用更新，从而将 <package_name> 替换为更新包的名称：  
   
 -   更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单个实例和所有共享组件。 您可以通过使用 InstanceName 参数或 InstanceID 参数指定实例。  
   
@@ -122,7 +122,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 5.  双击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
-6.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 中，单击 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务"，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （\<实例名称 >），其中 \<实例名称 > 是要为其启用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击属性.  
+6.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 中，单击 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务"，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （\<实例名称 >），其中 \<实例名称 > 是要为其启用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击 "属性"。  
   
 7.  选择“AlwaysOn 高可用性”选项卡。  
   
@@ -186,7 +186,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
  `net start SQLBROWSER`  
   
 ### <a name="create-exceptions-in-windows-firewall"></a>在 Windows 防火墙中创建例外  
- 若要在 Windows 防火墙中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问的例外，请执行 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)中指定的步骤。  
+ 若要在 Windows 防火墙中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问的例外，请执行[配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)中指定的步骤。  
   
 ### <a name="enable-tcpip-on-an-instance-of-sql-server"></a>在 SQL Server 的实例上启用 TCP/IP
  可以在 Server Core 上通过 Windows PowerShell 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用 TCP/IP 协议。 请执行以下步骤：  
@@ -210,12 +210,12 @@ $Tcp.Alter()
 $Tcp  
 ```  
   
-##  <a name="sql-server-profiler"></a>SQL Server 事件探查器  
+##  <a name="sql-server-profiler"></a>SQL Server Profiler  
  在远程计算机上，启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 并从“文件”菜单中选择“新建跟踪”，应用程序将显示“连接到服务器”对话框，在此对话框您可以指定要连接的、位于 Server Core 计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅 [Start SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)。  
   
  有关运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]需要哪些权限的信息，请参阅 [运行 SQL Server Profiler 所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)。  
   
- 有关 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]的其他详细信息，请参阅 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)。  
+ 有关 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的其他详细信息，请参阅 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)。  
   
 ##  <a name="sql-server-auditing"></a>SQL Server 审核  
  可以远程使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义审核。 在创建并启用审核后，目标将接收各项。 有关创建和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核的详细信息，请参阅 [SQL Server 审核（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
@@ -223,18 +223,18 @@ $Tcp
 ##  <a name="sql-servevr-command-prompt-utilities"></a>SQL Servevr 命令提示实用工具  
  可以使用以下命令提示实用工具，它们允许您在 Server Core 计算机上为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作编写脚本。 下表包含了随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的用于 Server Core 的命令提示实用工具列表：  
   
-|**实用工具**|**Description**|**安装位置**|  
+|**实用工具**|**说明**|**安装位置**|  
 |-----------------|---------------------|----------------------|  
-|[bcp 实用工具](../../tools/bcp-utility.md)|用于在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件之间复制数据。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[bcp Utility](../../tools/bcp-utility.md)|用于在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件之间复制数据。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[dtexec 实用工具](../../integration-services/packages/dtexec-utility.md)|用于配置和执行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
-|[dtutil 实用工具](../../integration-services/dtutil-utility.md)|用于管理 SSIS 包。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
+|[Encrypt](../../integration-services/dtutil-utility.md)|用于管理 SSIS 包。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[osql 实用工具](../../tools/osql-utility.md)|您可以在命令提示符下输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、系统过程和脚本文件。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqlagent90 应用程序](../../tools/sqlagent90-application.md)|用于在命令提示符下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。|\<驱动器>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<instance_name>\MSSQL\Binn|  
-|[sqlcmd Utility](../../tools/sqlcmd-utility.md)|您可以在命令提示符下输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、系统过程和脚本文件。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)|您可以在命令提示符下输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、系统过程和脚本文件。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[SQLdiag 实用工具](../../tools/sqldiag-utility.md)|用于为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户服务和支持部门收集诊断信息。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqlmaint 实用工具](../../tools/sqlmaint-utility.md)|用于执行在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建的数据库维护计划。|\<驱动器 >： \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。MSSQLSERVER\MSSQL\Binn|  
 |[sqlps 实用工具](../../tools/sqlps-utility.md)|用于运行 PowerShell 命令和脚本。 加载和注册 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlservr 应用程序](../../tools/sqlservr-application.md)|用于在命令提示符下启动和停止[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例以进行故障排除。|\<驱动器 >： \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr 应用程序](../../tools/sqlservr-application.md)|用于在命令提示符下启动和停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例以进行故障排除。|\<驱动器 >： \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。MSSQLSERVER\MSSQL\Binn|  
   
 ##  <a name="use-troubleshooting-tools"></a>使用故障排除工具  
  可以使用 [SQLdiag 实用工具](../../tools/sqldiag-utility.md) 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他类型的服务器中收集日志和数据文件，同时还可将其用于一直监视服务器或对服务器的特定问题进行故障排除。 SQLdiag 用于加快和简化为 Microsoft 客户支持服务部门收集诊断信息的过程。  

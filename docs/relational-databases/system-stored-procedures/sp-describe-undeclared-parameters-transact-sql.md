@@ -30,7 +30,7 @@ ms.locfileid: "72908327"
 
   返回一个结果集，其中包含有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理中未声明的参数的元数据。 考虑在 **\@tsql**批处理中使用但未在 **\@参数**中声明的每个参数。 每个此类参数在返回的结果集中各占一行，并包含推断的参数类型信息。 如果 **\@tsql**输入批处理没有参数（在 **\@参数**中声明的参数除外），则该过程返回一个空结果集。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ \@tsql = ] 'Transact-SQL\_batch'` 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *SQL_batch*可以是**nvarchar （** _n_ **）** 或**nvarchar （max）** 。  
+`[ \@tsql = ] 'Transact-SQL\_batch'` 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact-sql SQL_batch*可以是**nvarchar （** _n_ **）** 或**nvarchar （max）** 。  
   
 `[ \@params = ] N'parameters'` \@参数为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理的参数提供声明字符串，类似于 sp_executesql 的工作方式。 *参数*可以为**nvarchar （** _n_ **）** 或**nvarchar （max）** 。  
   
@@ -52,12 +52,12 @@ sp_describe_undeclared_parameters
  参数的数据类型。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 如果成功， **sp_describe_undeclared_parameters**始终返回零返回状态。 如果该过程引发错误并且该过程称为 RPC，则返回状态将由 _exec_describe_first_result_set 的 error_type 列中所述的错误类型填充。 如果该过程是从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中调用的，则返回值始终为零，甚至在出现错误情况时也不例外。  
+ **sp_describe_undeclared_parameters**始终在成功时返回零返回状态。 如果该过程引发错误并且该过程作为 RPC 调用，则返回状态将按 dm_exec_describe_first_result_set 的 error_type 列中所述的错误类型填充。 如果该过程是从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中调用的，则返回值始终为零，甚至在出现错误情况时也不例外。  
   
 ## <a name="result-sets"></a>结果集  
- **sp_describe_undeclared_parameters**返回以下结果集。  
+ **sp_describe_undeclared_parameters**返回下面的结果集。  
   
-|列名|“名称”|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|在结果集中包含参数的序号位置。 第一个参数的位置将指定为 1。|  
 |**名称**|**sysname 不为 NULL**|包含参数的名称。|  
@@ -84,14 +84,14 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|供内部使用。|  
 |**suggested_tds_length**|**int NOT NULL**|供内部使用。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_describe_undeclared_parameters**始终返回零的返回状态。  
   
  最常见的用途是，为应用程序提供的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可能包含一些参数，并且必须以某种方式处理这些参数。 例如，用户界面（如 ODBCTest 或 RowsetViewer），其中用户使用 ODBC 参数语法提供查询。 应用程序必须动态查找参数数目，并提示用户输入每个参数。  
   
  另一个例子是，在没有用户输入时，应用程序必须循环访问这些参数，并从某个其他位置（例如，表）获取这些参数的数据。 在这种情况下，应用程序不必同时传递所有参数信息。 相反，应用程序可以从提供程序中获取所有参数信息，并从表中获取数据本身。 使用**sp_describe_undeclared_parameters**的代码更通用，如果数据结构稍后发生更改，则不太可能需要修改。  
   
- 在以下任何情况下， **sp_describe_undeclared_parameters**将返回错误。  
+ 在以下任何情况下， **sp_describe_undeclared_parameters**都将返回错误。  
   
 -   如果输入 \@tsql 不是有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理。 有效性由分析和分析 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批决定。 确定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理是否有效时，不会考虑批处理在查询优化期间或执行期间引发的任何错误。  
   
@@ -158,7 +158,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  例如，请考虑 `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)` 查询。 Then E （\@p1） = \@p1，E （\@p2） = \@p2 + c1，TT （\@p1）是声明的返回数据类型 dbo.tbl，TT （\@p2）是 dbo.tbl 的声明的参数数据类型。  
   
- 如果在步骤2的开头列出的任何表达式中都不包含 \@p，则类型推导算法将确定 E （\@p）是包含 \@p 的最大标量表达式，而类型推导算法不会计算目标数据为 E （\@p）键入 TT （\@p）。 例如，如果查询为 SELECT `@p + 2` 则 E （\@p） = \@p + 2，并且没有 TT （\@p）。  
+ 如果在步骤2的开头列出的任何表达式中都不包含 \@p，则类型推导算法将确定 E （\@p）是包含 \@p 的最大标量表达式，而类型推导算法不会计算 E （\@p）的目标数据类型 TT （\@p）。 例如，如果查询为 SELECT `@p + 2` 则 E （\@p） = \@p + 2，并且没有 TT （\@p）。  
   
  **步骤3**  
   
@@ -220,7 +220,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
-     在这种情况下，E （\@p）为 Col_Int + \@p，TT （\@p）为**Int**。为 \@p 选择**int** ，因为它不产生隐式转换。 选择任何其他数据类型都会产生至少一次隐式转换。  
+     在这种情况下，E （\@p） Col_Int + \@p 和 TT （\@p）为**Int**。为 \@p 选择**int** ，因为它不产生隐式转换。 选择任何其他数据类型都会产生至少一次隐式转换。  
   
 2.  如果多种数据类型都产生次数最少的转换，则使用具有较高优先级的数据类型。 例如：  
   
@@ -274,6 +274,6 @@ WHERE object_id = @id OR NAME = @name',
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_describe_first_result_set &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys.databases _exec_describe_first_result_set &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.databases _exec_describe_first_result_set_for_object &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

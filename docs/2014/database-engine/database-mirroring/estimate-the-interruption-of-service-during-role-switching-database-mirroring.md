@@ -37,7 +37,7 @@ ms.locfileid: "70874446"
 -   对于手动故障转移，中断时间仅指在发出故障转移命令后，数据库故障转移所需的时间。  
   
 ## <a name="error-detection"></a>错误检测  
- 系统发现错误的时间取决于错误类型;例如，网络错误几乎立刻就会被发现，同时注意到没有响应的服务器将占用10秒（默认超时）。  
+ 系统发现错误的时间取决于错误类型；例如，网络错误几乎可以被立即注意到，而注意到没有响应的服务器需要 10 秒（默认超时）。  
   
  有关可在数据库镜像会话期间导致失败以及在具有自动故障转移功能的高安全性模式下导致超时检测的错误的信息，请参阅 [数据库镜像期间可能出现的故障](possible-failures-during-database-mirroring.md))。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "70874446"
  故障转移时间主要包括前一个镜像服务器前滚其重做队列中剩余的任意日志所需的时间，以及一小段额外时间（有关镜像服务器如何处理日志记录的详细信息，请参阅[数据库镜像 (SQL Server)](database-mirroring-sql-server.md)。 有关估计故障转移时间的信息，请参阅本主题后面的“估计故障转移重做速度”。  
   
 > [!IMPORTANT]  
->  如果在先创建，后更改索引或表的事务中发生故障转移，则故障转移占用的时间可能长于通常所需的时间。  例如，在以下一系列操作过程中进行故障转移可能会延长故障转移时间：BEGIN TRANSACTION、在表上创建索引和选中表。 在通过 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句完成事务之前，该事务中故障转移时间延长的可能性一直存在。  
+>  如果在先创建，后更改索引或表的事务中发生故障转移，则故障转移占用的时间可能长于通常所需的时间。  例如，在执行某些操作期间，进行故障转移可能会延长故障转移的时间，这些操作包括：BEGIN TRANSACTION，对表执行的 CREATE INDEX 以及 SELECT INTO。 在通过 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句完成事务之前，该事务中故障转移时间延长的可能性一直存在。  
   
 ### <a name="the-redo-queue"></a>重做队列  
  前滚数据库涉及应用镜像服务器上的重做队列中当前存在的任何日志记录。 “重做队列” 包括已写入镜像服务器的磁盘上、但尚未在镜像数据库中前滚的日志记录。  
@@ -59,7 +59,7 @@ ms.locfileid: "70874446"
   
 -   在 [!INCLUDE[ssStandard](../../includes/ssstandard-md.md)]中，镜像服务器始终使用单个线程来前滚数据库。  
   
--   在 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 中，当作为镜像服务器的计算机使用的 CPU 少于五个时，也只使用单线程。 如果 CPU 的数量为五个或更多时，镜像服务器便会在故障转移过程中在多个线程之间分配其前滚操作（这称为“并行重做”）。 并行重做被优化为针对每四个 CPU 使用一个线程。  
+-   在 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]中，当作为镜像服务器的计算机使用的 CPU 少于五个时，也只使用单线程。 如果 CPU 的数量为五个或更多时，镜像服务器便会在故障转移过程中在多个线程之间分配其前滚操作（这称为“并行重做”）。 并行重做被优化为针对每四个 CPU 使用一个线程。  
   
 #### <a name="estimating-the-single-threaded-redo-rate"></a>估计单线程重做速度  
  对于单线程重做，在故障转移过程中，镜像数据库前滚所占用的时间与还原日志备份前滚相同量的日志所占用的时间大致相当。 若要估计故障转移时间，请在您要执行镜像的环境中创建一个测试数据库。 然后从生产数据库进行日志备份。 若要度量该日志备份的重做速度，请记录您将日志备份使用 WITH NORECOVERY 选项还原到测试数据库中所需的时间。  
@@ -74,7 +74,7 @@ ms.locfileid: "70874446"
   
  ![错误检测和故障转移时间](../media/dbm-failovauto-time.gif "错误检测和故障转移时间")  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像运行模式](database-mirroring-operating-modes.md)   
  [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [监视数据库镜像 (SQL Server)](monitoring-database-mirroring-sql-server.md)  

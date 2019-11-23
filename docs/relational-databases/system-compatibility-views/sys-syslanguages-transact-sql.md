@@ -35,17 +35,17 @@ ms.locfileid: "70874868"
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|langid|**smallint**|唯一语言 ID。|  
+|langid|**int**|唯一语言 ID。|  
 |dateformat|**nchar(3)**|日期顺序，如 DMY。|  
-|datefirst|**tinyint**|每周的第一天：1代表星期一，2代表星期二，依此类推，直到7代表星期日。|  
+|datefirst|**tinyint**|每周的第一天：1 代表星期一，2 代表星期二，依此类推，直到 7 代表星期日。|  
 |upgrade|**int**|预留给系统使用。|  
-|name|**sysname**|官方语言名称，例如，结算。|  
+|NAME|**sysname**|官方语言名称，例如，结算。|  
 |alias|**sysname**|代替语言名称，如 French。|  
 |months|**nvarchar(372)**|以逗号分隔的月份名全称列表，按一月到十二月的顺序排列，每个名称最多可有 20 个字符。|  
 |shortmonths|**nvarchar(132)**|以逗号分隔的月份名简称列表，按一月到十二月的顺序排列，每个名称最多可有 9 个字符。|  
 |days|**nvarchar(217)**|以逗号分隔的星期名称，按星期一到星期日的顺序排列，每个名称最多可有 30 个字符。|  
 |lcid|**int**|语言的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 区域设置 ID。|  
-|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]消息组 ID。|  
+|msglangid|**int**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]消息组 ID。|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]包含下列已安装的语言。  
   
@@ -85,8 +85,8 @@ ms.locfileid: "70874868"
 |阿拉伯语|1025|1025|  
 |泰语|1054|1054|  
   
-## <a name="see-also"></a>请参阅  
- [兼容性&#40;视图 transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [兼容性&#40;视图 transact-sql&#41; ](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [将系统表映射到系统&#40;视图 transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

@@ -78,7 +78,7 @@ ON
 > [!IMPORTANT]
 > 如果当前存在任何对容器中数据文件的引用，则尝试删除相应的 SQL Server 凭据会失败。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
  以下是在 Azure 存储中存储 SQL Server 数据文件时的安全注意事项和要求。  
   
 -   为 Azure Blob 存储服务创建容器时，建议将访问权限设置为“私有”。 将访问权限设置为“私有”后，只有 Azure 帐户所有者才可读取容器和 Blob 数据。  
@@ -148,7 +148,7 @@ ON
      解决方案：确保已在容器上正确创建了共享访问签名。 查看[教程： SQL Server Azure 存储服务中的数据文件](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)中的第2课中提供的说明。  
   
 -   *尚未正确创建 SQL Server 凭据。*    
-    解决方案：确保已对 **Identity** 字段使用了“共享访问签名”，并正确创建了密钥。 查看[教程： SQL Server Azure 存储服务中的数据文件](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)中的第3课中提供的说明。  
+    解决方案：确保已对**Identity**字段使用了“共享访问签名”，并正确创建了密钥。 查看[教程： SQL Server Azure 存储服务中的数据文件](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)中的第3课中提供的说明。  
   
  **租赁 Blob 错误：**  
   

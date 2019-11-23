@@ -70,7 +70,7 @@ ms.locfileid: "72797901"
      没有使用证书来配置数据库镜像安全性的任何自动方法。 您将需要使用 CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或 `New-SqlHadrEndpoint` PowerShell cmdlet。 有关详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)的信息。 有关在服务器实例上启用证书身份验证的信息，请参阅[将证书用于数据库镜像&#40;终结点 transact-sql&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>配置数据库镜像端点
   
@@ -96,5 +96,5 @@ ms.locfileid: "72797901"
 ## <a name="see-also"></a>另请参阅  
  [用于数据库镜像和 AlwaysOn 可用性组&#40;SQL Server&#41;的传输安全](transport-security-database-mirroring-always-on-availability.md)   
  [数据库镜像配置故障排除 (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [sys.databases _hadr_availability_replica_states &#40;transact-sql&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [sys.databases _db_mirroring_connections &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [sys. dm_hadr_availability_replica_states &#40;transact-sql&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

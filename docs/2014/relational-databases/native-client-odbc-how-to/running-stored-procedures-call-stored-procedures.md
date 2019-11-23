@@ -40,7 +40,7 @@ ms.locfileid: "72688666"
 >  如果应用程序使用 Transact-SQL EXECUTE 语法提交过程（这与 ODBC CALL 转义序列相反），SQL Server ODBC 驱动程序会将过程调用作为 SQL 语句（而非 RPC）传递给 SQL Server。 此外，如果未使用 Transact-SQL EXECUTE 语句，则不会返回输出参数。  
   
 ## <a name="see-also"></a>另请参阅  
- [运行存储过程操作指南&#40;主题 ODBC&#41; ](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)    
+ [运行存储过程操作指南&#40;主题 ODBC&#41; ](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
  [批处理存储过程调用](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [运行存储过程](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [调用存储过程](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   

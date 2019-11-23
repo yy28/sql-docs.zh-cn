@@ -35,7 +35,7 @@ ms.locfileid: "72811598"
 # <a name="user-hierarchies"></a>用户层次结构
   用户定义的层次结构是用户定义的属性层次结构，用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将维度成员组织到分层结构中并在多维数据集中提供导航路径。 例如，下表定义了时间维度的维度表。 维度表支持三个属性，即年份、季度和月份。  
   
-|年|季度|Month|  
+|Year|季度|月份|  
 |----------|-------------|-----------|  
 |1999|第1季度|一月|  
 |1999|第1季度|二月|  

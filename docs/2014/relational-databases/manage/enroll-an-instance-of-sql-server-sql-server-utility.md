@@ -89,12 +89,12 @@ ms.locfileid: "72798079"
 ##  <a name="Welcome"></a> 注册实例向导简介  
  若要启动该向导，请展开实用工具控制点上的实用工具资源管理器树，右键单击“托管实例”，然后选择“添加托管实例…”。  
   
- 若要继续，请单击 **“下一步”** 。  
+ 若要继续，请单击“下一步”。  
   
 ##  <a name="Instance_name"></a> 指定 SQL Server 的实例  
  若要从连接对话框中选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，请单击 "**连接 ...** "。以 Computername\instancename 格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 有关详细信息，请参阅[连接到服务器（数据库引擎）](../../ssms/f1-help/connect-to-server-database-engine.md)。  
   
- 若要继续，请单击 **“下一步”** 。  
+ 若要继续，请单击“下一步”。  
   
 ##  <a name="Connection_dialog"></a> 连接对话框  
  在“连接到服务器”对话框中，验证服务器类型、计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称信息。 有关详细信息，请参阅[连接到服务器（数据库引擎）](../../ssms/f1-help/connect-to-server-database-engine.md)。  
@@ -102,7 +102,7 @@ ms.locfileid: "72798079"
 > [!NOTE]  
 >  如果连接是加密的，则使用加密连接。 如果连接未加密，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具将使用加密连接重新进行连接。  
   
- 若要继续，请单击“连接...”。  
+ 若要继续，请单击“连接…”。  
   
 ##  <a name="Proxy_configuration"></a> 实用工具收集组帐户  
  指定要运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 Windows 域帐户。 此帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户。 此外，也可以使用现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户。 若要满足验证要求，请使用以下准则来指定帐户。  
@@ -111,7 +111,7 @@ ms.locfileid: "72798079"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户必须是 Windows 域帐户，且不是 LocalSystem、NetworkService 或 LocalService 之类的内置帐户。  
   
- 若要继续，请单击 **“下一步”** 。  
+ 若要继续，请单击“下一步”。  
   
 ##  <a name="Validation_rules"></a> SQL Server 实例验证  
  在此版本中，在要注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上，必须满足以下条件：  
@@ -138,7 +138,7 @@ ms.locfileid: "72798079"
   
  若要保存验证报表，请单击 **“保存报表”** ，然后指定文件的位置。  
   
- 若要继续，请单击 **“下一步”** 。  
+ 若要继续，请单击“下一步”。  
   
 ##  <a name="Summary"></a> 实例注册摘要  
  摘要页列出与要添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例有关的信息。  
@@ -149,7 +149,7 @@ ms.locfileid: "72798079"
   
 -   实用工具收集组帐户：DomainName\UserName  
   
- 若要继续，请单击 **“下一步”** 。  
+ 若要继续，请单击“下一步”。  
   
 ##  <a name="Enrolling"></a> 注册 SQL Server 的实例  
  “注册”页提供操作的状态：  
@@ -178,9 +178,9 @@ ms.locfileid: "72798079"
   
  在完成注册实例向导后，在 SSMS 的 **“实用工具资源管理器导航”** 窗格中单击 **“托管实例”** 节点。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已注册实例将显示在 **“实用工具资源管理器内容”** 窗格的列表视图中。  
   
- 数据收集过程将立即开始，但可能需要最长 30 分钟的时间，数据才会首次出现在实用工具资源管理器内容窗格的面板和视点中。 数据收集将以每 15 分钟一次的频率继续执行。 若要刷新数据，请右键单击“实用工具资源管理器导航”窗格的“托管实例”节点，然后选择“刷新”，或者在列表视图中右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称，然后选择“刷新”。  
+ 数据收集过程将立即开始，但可能需要最长 30 分钟的时间，数据才会首次出现在实用工具资源管理器内容窗格的面板和视点中。 数据收集将以每 15 分钟一次的频率继续执行。 若要刷新数据，请右键单击“实用工具资源管理器导航”窗格的“托管实例”节点，然后选择“刷新”，或者在列表视图中右键单击  **实例名称，然后选择“刷新”。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- 若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中删除托管实例，请在“实用工具资源管理器导航”窗格中选择“托管实例”以便填充托管实例的列表视图，在“实用工具资源管理器内容”列表视图中右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称，然后选择“取消实例托管”。  
+ 若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中删除托管实例，请在“实用工具资源管理器导航”窗格中选择“托管实例”以便填充托管实例的列表视图，在“实用工具资源管理器内容”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**列表视图中右键单击**  实例名称，然后选择“取消实例托管”。  
   
 ##  <a name="PowerShell_enroll"></a> 使用 PowerShell 注册 SQL Server 的实例  
  使用下面的示例将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例注册到现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中：  
@@ -195,7 +195,7 @@ $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", 
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 实用工具的功能和任务](sql-server-utility-features-and-tasks.md)   
+ [SQL Server 实用工具功能和任务](sql-server-utility-features-and-tasks.md)   
  [在 SQL Server 实用工具中监视 SQL Server 的实例](monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [SQL Server 实用工具故障排除](../../database-engine/troubleshoot-the-sql-server-utility.md)  
   

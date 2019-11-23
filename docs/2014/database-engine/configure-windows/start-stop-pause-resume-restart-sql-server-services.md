@@ -47,8 +47,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797952"
 ---
-# <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务
-  本主题介绍了如何通过从命令提示符使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 **net**命令来启动、停止、暂停、恢复或重新启动 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务，[!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell。  
+# <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service
+  本主题介绍了如何通过从命令提示符、Configuration Manager 或 PowerShell 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、 **net**命令来启动、停止、暂停、恢复或重新启动 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。  
   
 -   **开始之前：**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "72797952"
   
     -   [其他信息](#MoreInformation)  
   
-    -   [Security](#Security)  
+    -   [安全性](#Security)  
   
 -   **相关说明：**  
   
@@ -112,9 +112,9 @@ ms.locfileid: "72797952"
   
 -   在群集上运行时， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务最好使用群集管理器来管理。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，只有本地管理员组的成员能够启动、停止、暂停、继续或重新启动服务。 若要向管理员之外的用户授予管理服务的权限，请参阅 [如何授予用户管理 Windows Server 2003 中的服务的权限](https://support.microsoft.com/kb/325349)。 （此过程在其他 Windows 版本上是类似的。）  
   
  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]`SHUTDOWN` 命令停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 需要**sysadmin**或**serveradmin**固定服务器角色的成员身份，并且不可转让。  
@@ -123,7 +123,7 @@ ms.locfileid: "72797952"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>启动、停止、暂停、继续或重新启动 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
-1.  在“开始” 菜单上，依次指向“所有程序”、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”，然后单击“SQL Server 配置管理器”。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
 2.  如果此时出现 **“用户帐户控制”** 对话框，请单击 **“是”** 。  
   
@@ -138,13 +138,13 @@ ms.locfileid: "72797952"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-includessnoversionincludesssnoversion-mdmd-browser-or-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>启动、停止、暂停、继续或重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实例  
   
-1.  在“开始” 菜单上，依次指向“所有程序”、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”，然后单击“SQL Server 配置管理器”。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
 2.  如果此时出现 **“用户帐户控制”** 对话框，请单击 **“是”** 。  
   
 3.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的左窗格中，单击 **“SQL Server 服务”** 。  
   
-4.  在结果窗格中，右键单击命名实例的 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“浏览器”** 或者“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (MSSQLServer)”或“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (<instance_name>)”，然后单击“开始”、“停止”、“暂停”、“恢复”或“重启”。  
+4.  在结果窗格中，右键单击命名实例的 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“浏览器”** 或者“**代理 (MSSQLServer)”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 或“**代理 (<instance_name>)”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，然后单击“开始”、“停止”、“暂停”、“恢复”或“重启”。  
   
 5.  单击 **“确定”** 关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
@@ -180,17 +180,17 @@ ms.locfileid: "72797952"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     -或 -  
+     -或-  
   
      **net start MSSQLSERVER**  
   
 ###  <a name="dbNamed"></a> 启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   在命令提示符下，输入下列命令之一。 将 \<instancename> 替换为要管理的实例的名称。  
+-   在命令提示符下，输入下列命令之一。 将 *instancename> 替换为要管理的实例的名称\<* 。  
   
      **net start "SQL Server (** instancename **)"**  
   
-     -或 -  
+     -或-  
   
      **net start MSSQL$** instancename  
   
@@ -200,7 +200,7 @@ ms.locfileid: "72797952"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     -或 -  
+     -或-  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -213,7 +213,7 @@ ms.locfileid: "72797952"
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     -或 -  
+     -或-  
   
      **net start SQLSERVERAGENT**  
   
@@ -223,7 +223,7 @@ ms.locfileid: "72797952"
   
      **net start “SQL Server 代理(** instancename **)”**  
   
-     -或 -  
+     -或-  
   
      **net start SQLAgent$** *instancename*  
   
@@ -235,7 +235,7 @@ ms.locfileid: "72797952"
   
      **net start "SQL Server Browser"**  
   
-     -或 -  
+     -或-  
   
      **net start SQLBrowser**  
   
@@ -245,10 +245,10 @@ ms.locfileid: "72797952"
   
     -   若要暂停服务，请将 **net start** 替换为 **net pause**。  
   
-    -   若要停止服务，请将 **net start** 替换为 **net stop**。  
+    -   要停止服务，请用 **net start** 替换 **net stop**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 可以使用 `SHUTDOWN` 语句停止[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+ 可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 语句停止`SHUTDOWN`。  
   
 #### <a name="to-stop-the-includessdeincludesssde-mdmd-using-includetsqlincludestsql-mdmd"></a>使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 停止 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
@@ -258,7 +258,7 @@ ms.locfileid: "72797952"
     SHUTDOWN;   
     ```  
   
--   要立即停止[!INCLUDE[ssDE](../../includes/ssde-md.md)]，请执行以下语句：  
+-   要立即停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，请执行以下语句：  
   
     ```sql  
     SHUTDOWN WITH NOWAIT;   

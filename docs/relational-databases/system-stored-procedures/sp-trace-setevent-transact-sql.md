@@ -45,9 +45,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>参数  
-@no__t 为要修改的跟踪的 ID。 *trace_id*的值为**int**，无默认值。 用户使用此*trace_id*值标识、修改和控制跟踪。  
+`[ @traceid = ] trace_id` 是要修改的跟踪的 ID。 *trace_id*为**int**，没有默认值。 用户使用此*trace_id*值标识、修改和控制跟踪。  
   
-@no__t 为要打开的事件的 ID。 *event_id*的值为**int**，无默认值。  
+`[ @eventid = ] event_id` 是要打开的事件的 ID。 *event_id*为**int**，没有默认值。  
   
  下表列出了可以在跟踪中添加或删除的事件。  
   
@@ -71,7 +71,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |24|Lock:Acquired|指示获取了某个资源（如数据页）的锁。|  
 |25|Lock:Deadlock|指示两个并发事务由于试图获得对方事务拥有的资源的不兼容锁而发生了相互死锁。|  
 |26|Lock:Cancel|指示已取消获取资源锁（例如，由于死锁）。|  
-|27|Lock:Timeout|指示由于其他事务持有所需资源的阻塞锁而使对资源（例如页）锁的请求超时。 超时由 @ @LOCK_TIMEOUT 函数确定，可使用 SET LOCK_TIMEOUT 语句进行设置。|  
+|27|Lock:Timeout|指示由于其他事务持有所需资源的阻塞锁而使对资源（例如页）锁的请求超时。 超时由 @@LOCK_TIMEOUT 函数确定，可使用 SET LOCK_TIMEOUT 语句进行设置。|  
 |28|Degree of Parallelism Event（7.0 插入）|在执行 SELECT、INSERT 或 UPDATE 语句之前发生。|  
 |29-31|保留|改用事件 28。|  
 |32|保留|保留|  
@@ -81,7 +81,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |36|SP:CacheRemove|指示从过程缓存中删除了某个项。|  
 |37|SP:Recompile|指示已重新编译存储过程。|  
 |38|SP:CacheHit|指示在过程缓存中找到了存储过程。|  
-|39|已弃用|已弃用|  
+|39|不推荐使用|不推荐使用|  
 |40|SQL:StmtStarting|在启动了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时发生。|  
 |41|SQL:StmtCompleted|在完成了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时发生。|  
 |42|SP:Starting|指示启动了存储过程。|  
@@ -205,18 +205,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|创建、更改或删除了服务器主体时发生。|  
 |178|Audit Database Operation Event|发生数据库操作（如检查或订阅查询通知）时发生。|  
 |180|Audit Database Object Access Event|访问数据库对象（如架构）时发生。|  
-|181|TM:开始事务开始|BEGIN TRANSACTION 请求开始时发生。|  
-|182|TM:开始事务已完成|BEGIN TRANSACTION 请求完成时发生。|  
-|183|TM:开始提升事务|PROMOTE TRANSACTION 请求开始时发生。|  
-|184|TM:升级事务已完成|PROMOTE TRANSACTION 请求完成时发生。|  
-|185|TM:正在启动提交事务|COMMIT TRANSACTION 请求开始时发生。|  
-|186|TM:已完成提交事务|COMMIT TRANSACTION 请求完成时发生。|  
-|187|TM:开始回滚事务|ROLLBACK TRANSACTION 请求开始时发生。|  
-|188|TM:已完成回滚事务|ROLLBACK TRANSACTION 请求完成时发生。|  
+|181|TM: Begin Tran starting|BEGIN TRANSACTION 请求开始时发生。|  
+|182|TM: Begin Tran completed|BEGIN TRANSACTION 请求完成时发生。|  
+|183|TM: Promote Tran starting|PROMOTE TRANSACTION 请求开始时发生。|  
+|184|TM: Promote Tran completed|PROMOTE TRANSACTION 请求完成时发生。|  
+|185|TM: Commit Tran starting|COMMIT TRANSACTION 请求开始时发生。|  
+|186|TM: Commit Tran completed|COMMIT TRANSACTION 请求完成时发生。|  
+|187|TM: Rollback Tran starting|ROLLBACK TRANSACTION 请求开始时发生。|  
+|188|TM: Rollback Tran completed|ROLLBACK TRANSACTION 请求完成时发生。|  
 |189|Lock： Timeout （timeout > 0）|对资源（如页）的锁请求超时时发生。|  
-|190|Progress Report:联机索引操作|报告生成进程正在运行时，联机索引生成操作的进度。|  
-|191|TM:开始保存事务|SAVE TRANSACTION 请求开始时发生。|  
-|192|TM:保存事务已完成|SAVE TRANSACTION 请求完成时发生。|  
+|190|Progress Report: Online Index Operation|报告生成进程正在运行时，联机索引生成操作的进度。|  
+|191|TM: Save Tran starting|SAVE TRANSACTION 请求开始时发生。|  
+|192|TM: Save Tran completed|SAVE TRANSACTION 请求完成时发生。|  
 |193|Background Job Error|后台作业不正常终止时发生。|  
 |194|OLEDB Provider Information|分布式查询运行并收集对应于提供程序连接的信息时发生。|  
 |195|Mount Tape|收到磁带装入请求时发生。|  
@@ -236,7 +236,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|指示 SQL Server 无法为包含计划指南的查询或批处理生成执行计划。 SQL Server 已尝试在不应用计划指南的情况下为此查询或批生成执行计划。 导致此问题的原因可能是计划指南无效。 您可以通过使用 sys.fn_validate_plan_guide 系统函数验证该计划指南。|  
 |235|审核全文||  
   
-`[ @columnid = ] column_id` 是要为事件添加的列的 ID。 *column_id*的值为**int**，无默认值。  
+`[ @columnid = ] column_id` 是要为事件添加的列的 ID。 *column_id*为**int**，没有默认值。  
   
  下表列出了可以为事件添加的列。  
   
@@ -253,7 +253,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |9|**ClientProcessID**|客户端计算机分配给正在运行客户端应用程序的进程的 ID。|  
 |10|**ApplicationName**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|  
 |11|**LoginName**|客户端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。|  
-|12|**SPID**|@No__t 分配给与客户端关联的进程的服务器进程 ID。|  
+|12|**SPID**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配给与客户端关联的进程的服务器进程 ID。|  
 |13|**Duration**|事件所花费的实耗时间（以微秒为单位）。 Hash Warning 事件不填充该数据列。|  
 |14|**StartTime**|事件开始的时间（如果可用）。|  
 |15|**EndTime**|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。 **哈希警告**事件也不会填充它。|  
@@ -263,14 +263,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |19|**权限**|显示权限的位图；由安全审核使用。|  
 |20|**Severity**|异常的严重级别。|  
 |21|**EventSubClass**|事件子类的类型。 所有事件类都不填充此数据列。|  
-|22|**Exchange Spill**|系统分配的对象 ID。|  
+|22|**ObjectID**|系统分配的对象 ID。|  
 |23|**成功**|尝试使用权限的成功情况；审核时使用。<br /><br /> **1** = 成功**0** = 失败|  
 |24|**IndexID**|受事件影响的对象的索引的 ID。 若要确定对象的索引的 ID，请使用 **sysindexes** 系统表的 **indid** 列。|  
 |25|**IntegerData**|与在跟踪中捕获的事件类相关的整型值。|  
-|26|**ServerName**|正在跟踪的实例的名称，@no__t 为 servername\instancename （ *servername*或）。|  
+|26|**ServerName**|正在跟踪的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的名称（ *servername*或*servername\instancename*）。|  
 |27|**EventClass**|被记录的事件类的类型。|  
 |28|**ObjectType**|对象（如表、函数或存储过程）的类型。|  
-|29|**NestLevel**|执行此存储过程所处的嵌套级。 请参阅[@ @no__t- &#40;1 transact-sql&#41;](../../t-sql/functions/nestlevel-transact-sql.md)。|  
+|29|**NestLevel**|执行此存储过程所处的嵌套级。 请参阅[@ &#40;@NESTLEVEL transact-sql&#41;](../../t-sql/functions/nestlevel-transact-sql.md)。|  
 |30|**状态**|发生错误时的服务器状态。|  
 |31|**错误**|错误号。|  
 |32|**模式**|获取的锁的锁模式。 此列不由**Lock：已发布**事件填充。|  
@@ -298,7 +298,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|GUID 值，与跟踪中捕获的事件类相关。|  
 |55|**IntegerData2**|整数值，与跟踪中捕获的事件类相关。|  
 |56|**ObjectID2**|相关的对象或实体的 ID（如果可用）。|  
-|57|类型|整数值，与跟踪中捕获的事件类相关。|  
+|57|**“类型”**|整数值，与跟踪中捕获的事件类相关。|  
 |58|**OwnerID**|拥有锁的对象的类型。 仅限于锁事件。|  
 |59|**ParentName**|对象所在架构的名称。|  
 |60|**IsSystem**|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> **1** = 系统<br /><br /> **0** = 用户。|  
@@ -307,14 +307,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 可以将该值传递到 **sys.dm_exec_sql_text()** 以检索关联的 SQL 文本。|  
 |64|**SessionLoginName**|发起会话的用户的登录名。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **连接到** 并以 **Login2**身份执行语句，则 **SessionLoginName** 将显示 **Login1**，而 **LoginName** 将显示 **Login2**。 此数据列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|  
   
- **[@on =]** *on*  
+ *上的* **[@on=]**  
  指定将事件设置为 ON (1) 还是 OFF (0)。 *on*为**bit**，无默认值。  
   
- 如果*on*设置为**1**，并且*column_id*为 NULL，则将事件设置为 on，并清除所有列。 如果*column_id*不为 null，则该事件的列设置为 ON。  
+ 如果*将设置为* **1**，并且*column_id*为 NULL，则将事件设置为 on，并清除所有列。 如果*column_id*不为 null，则该事件的列设置为 ON。  
   
- 如果*将设置为* **0**，并且*column_id*为 NULL，则会关闭事件并清除所有列。 如果*column_id*不为 null，则关闭列。  
+ 如果*将设置为* **0**，并且*column_id*为 NULL，则将关闭事件，并清除所有列。 如果*column_id*不为 null，则将关闭列。  
   
- 下表说明了 **\@on**与 **\@columnid**之间的交互。  
+ 下表说明了 **\@** 和 **\@columnid**之间的交互。  
   
 |@on|@columnid|结果|  
 |---------|---------------|------------|  
@@ -338,8 +338,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|内存不足。 在没有足够内存执行指定的操作时返回此代码。|  
 |16|该函数对此跟踪无效。|  
   
-## <a name="remarks"></a>备注  
- **sp_trace_setevent**执行以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的扩展存储过程执行的许多操作。 使用**sp_trace_setevent**而不是以下内容：  
+## <a name="remarks"></a>Remarks  
+ **sp_trace_setevent**将执行以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本中提供的扩展存储过程执行的许多操作。 使用**sp_trace_setevent**而不是以下内容：  
   
 -   **xp_trace_addnewqueue**  
   
@@ -347,19 +347,19 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 对于每个事件添加的每个列，用户必须执行**sp_trace_setevent** 。 在每次执行期间，如果 **@no__t 1on**设置为**1**，则**sp_trace_setevent**会将指定的事件添加到跟踪的事件列表中。 如果 **@no__t 1on**设置为**0**，则**sp_trace_setevent**将从列表中删除指定的事件。  
+ 用户必须对为每个事件添加的每个列执行**sp_trace_setevent** 。 在每次执行期间，如果 **\@** 设置为**1**， **sp_trace_setevent**会将指定的事件添加到跟踪的事件列表中。 如果 **\@** 设置为**0**，则**sp_trace_setevent**从列表中删除指定的事件。  
   
- 所有 SQL 跟踪存储过程（**sp_trace_xx**）的参数都是严格类型化的。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
+ 所有 SQL 跟踪存储过程的参数（**sp_trace_xx**）都是严格类型化的。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
   
  有关使用跟踪存储过程的示例，请参阅[创建跟踪 (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  用户必须拥有 ALTER TRACE 权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server 事件类参考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  
   

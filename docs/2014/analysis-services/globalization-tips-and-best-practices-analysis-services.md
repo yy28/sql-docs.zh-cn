@@ -68,9 +68,9 @@ ms.locfileid: "70874413"
   
      在中国和新加坡，Microsoft 技术支持部门通常见到的是简体中文，简体中文以拼音作为首选的排序方式。 建议使用的排序规则是 Chinese_PRC（用于 SQL Server 2000）、Chinese_PRC_90（用于 SQL Server 2005）或 Chinese_Simplified_Pinyin_100（用于 SQL Server 2008 和更高版本）。  
   
-     在台湾，更常见的情况是，使用建议的排序顺序基于笔画数更常见：Chinese_Taiwan_Stroke （适用于 SQL Server 2000）、Chinese_Taiwan_Stroke_90 （适用于 SQL Server 2005）或 Chinese_Traditional_Stroke_Count_100 （适用于 SQL Server 2008 及更高版本）。  
+     在中国台湾地区，更常见的是繁体中文，建议使用的是基于笔画数的排序方式：Chinese_Taiwan_Stroke（用于 SQL Server 2000）、Chinese_Taiwan_Stroke_90（用于 SQL Server 2005）或 Chinese_Traditional_Stroke_Count_100（用于 SQL Server 2008 和更高版本）。  
   
-     其他区域（如中国香港和中国澳门）也使用繁体中文。 在中国香港，就排序规则而言，Chinese_Hong_Kong_Stroke_90（在 SQL Server 2005 上）的使用较为常见。 在澳门特别行政区，Chinese_Traditional_Stroke_Count_100 （SQL Server 在2008和更高版本上）使用相当频繁。  
+     其他区域（如中国香港和中国澳门）也使用繁体中文。 在中国香港，就排序规则而言，Chinese_Hong_Kong_Stroke_90（在 SQL Server 2005 上）的使用较为常见。 在澳门特别行政区，Chinese_Traditional_Stroke_Count_100 （SQL Server 2008 及更高版本）的使用非常频繁。  
   
 -   对于日语，最常使用的排序规则是 Japanese_CI_AS。 Japanese_XJIS_100 用于支持 [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)的安装。 Japanese_BIN2 的使用通常见于数据迁移项目，用于由非 Windows 平台或数据源而非 SQL Server 关系数据引擎发出的数据。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "70874413"
   
 |语言脚本|区分大小写|  
 |---------------------|----------------------|  
-|**基本拉丁字母表**|以拉丁语脚本表示的对象标识符（任意 26 个英语大写或小写字母）将视为区分大小写，无论排序规则如何。 例如，以下对象 Id 被认为是相同的：54321**abcdef**、54321**Abcdef**、54321**abcdef**。 在内部，Analysis Services 将字符串中的字符都视作是大写，然后执行与语言无关的简单字节比较。<br /><br /> 请注意，只有这 26 个字符会受到影响。 如果语言是西欧语言，但使用斯堪的纳维亚语言字符，则其他字符将不为大写。|  
+|**基本拉丁字母表**|以拉丁语脚本表示的对象标识符（任意 26 个英语大写或小写字母）将视为区分大小写，无论排序规则如何。 例如，以下对象 ID 被认为是相同的：54321**abcdef**、54321**ABCDEF**、54321**AbCdEf**。 在内部，Analysis Services 将字符串中的字符都视作是大写，然后执行与语言无关的简单字节比较。<br /><br /> 请注意，只有这 26 个字符会受到影响。 如果语言是西欧语言，但使用斯堪的纳维亚语言字符，则其他字符将不为大写。|  
 |**西里尔语，希腊语，科普特语，亚美尼亚语**|非拉丁语双脚本中的对象标识符（如西里尔语）总是区分大小写。 例如，Измерение 和 измерение 被视为两个不同值，尽管唯一的区别是首字母的大小写。|  
   
  **对象标识符区分大小写的意义**  
@@ -106,7 +106,7 @@ ms.locfileid: "70874413"
   
      你会看到 Adventure Works 示例数据库的法语翻译。  
   
-     ![带有法语翻译的 Excel 数据透视表](media/ssas-localetest-excel.png "带有法语翻译的 Excel 数据透视表")  
+     ![Excel 数据透视表（]带有法语翻译的法语翻译(media/ssas-localetest-excel.png "Excel 数据透视表")）  
   
  作为后续步骤，可以使用 Server Profiler 来确认区域设置。 单击一个 `Session Initialize` 事件，然后查看下方文本区域中的属性列表以找到 `<localeidentifier>1036</localeidentifier>`。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "70874413"
   
 -   对 Adventure Works 数据库执行 MDX 查询。 查询结果应为法语翻译。  
   
-     ![SSMS 中包含法语翻译的 MDX 查询](media/ssas-localetest-ssms.png "SSMS 中包含法语翻译的 MDX 查询")  
+     在 ssms 中通过法语(media/ssas-localetest-ssms.png "翻译")进行![法语翻译的 MDX 查询]  
   
 ##  <a name="bkmk_mdx"></a> 在包含翻译的解决方案中撰写 MDX 查询  
  翻译提供 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象名称的显示信息，但是不翻译相同对象的标识符。 尽可能使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的标识符和键，而不使用翻译后的标题和名称。 例如，使用多维表达式 (MDX) 语句和脚本的成员键而不是成员名称以确保多种语言之间的可移植性。  
@@ -139,13 +139,13 @@ ms.locfileid: "70874413"
   
 3.  **使用 ISO 日期格式表示通用日期和时间信息**  
   
-     一[Analysis Services 专家](http://geekswithblogs.net/darrengosbell/Default.aspx)提供此建议："对于传入到 SQL 或 MDX 中的查询的任何日期字符串，我始终将 ISO 日期格式设置为 yyyy-mm-dd，因为它是明确的，无论客户端或服务器的区域设置如何都有效。 我同意在分析不明确的日期格式时服务器应遵从其区域设置，但是我也认为如果你已有不对解释开放的选项，总之最好选择那个选项。”  
+     一个 [Analysis Services 专家](http://geekswithblogs.net/darrengosbell/Default.aspx) 提出了这一建议：“我一直对传递到 SQL 或 MDX 中的查询的任何日期字符串使用 ISO 日期格式 yyyy-mm-dd，因为它很明确而且无论客户端或服务器的区域设置如何都将正常工作。 我同意在分析不明确的日期格式时服务器应遵从其区域设置，但是我也认为如果你已有不对解释开放的选项，总之最好选择那个选项。”  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   
      以下 MDX 查询（借用自一个论坛帖子）演示了如何使用 Format 以指定格式返回日期，不管基础区域设置如何。  
   
-     请参阅 [SSAS 2012 generates invalid dates](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2) （SSAS 2012 生成无效日期）（Network Steve 上的论坛帖子）查看原始帖子内容。  
+     请参阅 [SSAS 2012 生成无效日期（Network Steve 上的论坛帖子）](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2) 查看原始帖子内容。  
   
     ```  
     WITH MEMBER [LinkTimeAdd11Date_Manual] as Format(dateadd("d",15,"2014-12-11"), "mm/dd/yyyy")  
@@ -159,8 +159,8 @@ ms.locfileid: "70874413"
   
     ```  
   
-## <a name="see-also"></a>请参阅  
- [Analysis Services Multidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+## <a name="see-also"></a>另请参阅  
+ [Analysis Services multidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [编写国际化 Transact-SQL 语句](../relational-databases/collations/write-international-transact-sql-statements.md)  
   
   

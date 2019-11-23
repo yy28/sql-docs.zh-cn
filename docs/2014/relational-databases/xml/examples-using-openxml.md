@@ -1,5 +1,5 @@
 ---
-title: 例如：使用 OPENXML | Microsoft Docs
+title: 示例：使用 OPENXML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,7 +33,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 09/10/2019
 ms.locfileid: "70874690"
 ---
-# <a name="examples-using-openxml"></a>例如：使用 OPENXML
+# <a name="examples-using-openxml"></a>示例：使用 OPENXML
   本主题中的示例说明如何使用 OPENXML 创建 XML 文档的行集视图。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)。 这些示例说明了 OPENXML 的各个方面，但不包括在 OPENXML 中指定元属性。 有关如何在 OPENXML 中指定元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](specify-metaproperties-in-openxml.md)。  
   
 ## <a name="examples"></a>示例  
@@ -84,7 +84,7 @@ FROM OPENXML (@DocHandle, '/ROOT/Customer',1)
 EXEC sp_xml_removedocument @DocHandle  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 CustomerID ContactName            
@@ -129,7 +129,7 @@ FROM      OPENXML (@XmlDocumentHandle, '/ROOT/Customer',2)
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 CustomerID ContactName            
@@ -155,7 +155,7 @@ LILAS      Carlos Gonzlez
   
  在 WITH 子句内的 *SchemaDeclaration*中，也可以用 *ColName* 和 *ColType* 参数指定 *ColPattern* 。 可选的 *ColPattern* 是指定的 XPath 模式，表示以下内容：  
   
--   行集中的 **OrderID**、 **CustomerID** 和 **OrderDate** 列映射到 *rowpattern* 所标识节点的父节点的属性，同时，*rowpattern* 还标识 <`OrderDetail`> 节点。 因此，**CustomerID** 和 **OrderDate** 列映射到 <`Order`> 元素的**CustomerID** 和 **OrderDate** 属性。  
+-   行集中的 **OrderID**、 **CustomerID** 和 **OrderDate** 列映射到 *rowpattern* 所标识节点的父节点的属性，同时，*rowpattern* 还标识 <`OrderDetail`> 节点。 因此，**CustomerID** 和 **OrderDate** 列映射到 < **> 元素的**CustomerID**和**OrderDate`Order` 属性。  
   
 -   行集中的 **ProdID** 和 **Qty** 列映射到 **rowpattern** 所标识节点的 **ProductID** 和 *Quantity*属性。  
   
@@ -192,7 +192,7 @@ WITH (OrderID     int         '../@OrderID',
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 OrderID CustomerID        OrderDate          ProdID    Qty  
@@ -281,10 +281,10 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- 以属性为中心的映射应用于 **CustomerID**。 在 <`Customer`> 元素中不存在 **ContactName** 属性。 因此，应用以元素为中心的映射。  
+ 以属性为中心的映射应用于 **CustomerID**。 在 < **> 元素中不存在** ContactName`Customer` 属性。 因此，应用以元素为中心的映射。  
   
 ### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. 指定 text() XPath 函数作为 ColPattern  
- 此示例中的 XML 文档由 <`Customer`> 和 <`Order`> 元素组成。 OPENXML 语句从 <`Order`> 元素、*rowpattern* 所标识节点的父节点 ID 和元素内容的叶值字符串中检索由 **oid** 属性组成的行集。  
+ 此示例中的 XML 文档由 <`Customer`> 和 <`Order`> 元素组成。 OPENXML 语句从 < **> 元素、** rowpattern`Order` 所标识节点的父节点 ID 和元素内容的叶值字符串中检索由 *oid* 属性组成的行集。  
   
  首先调用 **sp_xml_preparedocument** 存储过程以获得文档句柄。 此文档句柄传递给 OPENXML。  
   
@@ -292,7 +292,7 @@ LILAS      Carlos Gonzlez
   
 -   *rowpattern* (/root/Customer/Order) 标识要处理的 <`Order`> 节点。  
   
--   *flags* 参数值设置为 **1**，表示以属性为中心的映射。 因此，XML 属性映射到 *SchemaDeclaration*中定义的行集列。  
+-   *flags* 参数值设置为 **1** ，表示以属性为中心的映射。 因此，XML 属性映射到 *SchemaDeclaration*中定义的行集列。  
   
 -   在 WITH 子句的 *SchemaDeclaration* 中， **oid** 和 **amount** 行集列名与相应的 XML 属性名称相匹配。 因此，没有指定 *ColPattern* 参数。 对于行集中的 **comment** 列，XPath 函数 **text()** 将被指定为 *ColPattern*。 这将覆盖在 *flags*参数中指定的以属性为中心的映射，而且列将包含元素内容的叶值字符串。  
   
@@ -329,7 +329,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 oid   amount        comment  
@@ -389,7 +389,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 oid   date                        amount  
@@ -474,11 +474,11 @@ EXEC sp_xml_removedocument @docHandle
   
  在 WITH 子句的 *SchemaDeclaration* 中，还可以用 *ColName* 和 *ColType* 参数指定 *ColPattern* 。 可选的 *ColPattern* 是指定的 XPath 模式，用以表示以下内容：  
   
--   在行集中为 **ProdID** 列指定为 *ColPattern* 的 XPath 模式 ( **.** ) 将标识上下文节点（当前节点）。 按照指定的 *rowpattern*，它是 <`OrderDetail`> 元素的 **ProductID** 属性。  
+-   在行集中为 **ProdID** 列指定为 *ColPattern* 的 XPath 模式 ( **.** ) 将标识上下文节点（当前节点）。 按照指定的 *rowpattern*，它是 < **> 元素的** ProductID`OrderDetail` 属性。  
   
--   为行集中的 Qty 列指定的 ColPattern（即 ../\@Quantity）标识上下文节点 \<ProductID> 的父节点 <`OrderDetail`> 的 Quantity 属性。  
+-   为行集中的 Qty 列指定的 ColPattern **\@（即 ../** Quantity）标识上下文节点 **ProductID> 的父节点 <** > 的 Quantity`OrderDetail`\< 属性。  
   
--   同样，为行集中的 OID 列指定的 ColPattern（即 ../../\@OrderID）标识上下文节点的父节点的父级 <`Order`> 的 OrderID 属性。 该父节点是 <`OrderDetail`>，上下文节点是 <`ProductID`>。  
+-   同样，为行集中的 OID 列指定的 ColPattern **\@（即 ../../** OrderID）标识上下文节点的父节点的父级 < **> 的 OrderID**`Order` 属性。 该父节点是 <`OrderDetail`>，上下文节点是 <`ProductID`>。  
   
  SELECT 语句随后将检索 OPENXML 所提供的行集中的所有列。  
   
@@ -512,7 +512,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer/Order/OrderDetail/@ProductID')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 ProdID      Qty         OID  
@@ -578,7 +578,7 @@ EXEC sp_xml_removedocument @h
   
  具体而言，是将 xml 类型变量 (\@x) 传递给 sp_xml_preparedocument() 函数。  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 id  lname   xmlname                   OverFlow  
@@ -604,19 +604,19 @@ id  lname   xmlname                   OverFlow
 -   如果 WITH 子句中的列是类型化的 XML 列并且 XML 实例不符合架构，将返回错误。  
   
 ### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. 从多值属性中检索单值  
- XML 文档会含有多值属性。 例如， **IDREFS** 属性可以是多值属性。 在 XML 文档内，多值属性值被指定为一个字符串，并用空格分隔值。 在以下 XML 文档中，\<Student> 元素的 **attends** 属性与 \<Class> 的 **attendedBy** 属性都是多值属性。 从多值 XML 属性中检索单值并将每个值存储到数据库中的不同行中，这要求额外的工作。 下例显示了此过程。  
+ XML 文档会含有多值属性。 例如， **IDREFS** 属性可以是多值属性。 在 XML 文档内，多值属性值被指定为一个字符串，并用空格分隔值。 在以下 XML 文档中，**Student> 元素的** attends\< 属性与 **Class> 的** attendedBy\< 属性都是多值属性。 从多值 XML 属性中检索单值并将每个值存储到数据库中的不同行中，这要求额外的工作。 下例显示了此过程。  
   
  此示例 XML 文档由以下元素组成：  
   
 -   \<Student>  
   
-     **id** （学生 ID）、 **name**和 **attends** 属性。 **attends** 属性是多值属性。  
+     **id**（学生 ID）、**name** 和 **attends**属性。 **attends** 属性是多值属性。  
   
 -   \<Class>  
   
-     **id** （班级 ID）、 **name**和 **attendedBy** 属性。 **attendedBy** 属性是多值属性。  
+     **id**（班级 ID）、**name** 和 **attendedBy** 属性。 **attendedBy** 属性是多值属性。  
   
- \<Student> 中的 **attends** 属性和 \<Class> 中的 **attendedBy** 属性表示 Student 表与 Class 表之间的 **m:n** 关系。 一个学生可在很多班上课，而一个班也可有很多学生。  
+ **Student> 中的** attends\< 属性和 **Class> 中的** attendedBy\< 属性表示 Student 表与 Class 表之间的 **m:n** 关系。 一个学生可在很多班上课，而一个班也可有很多学生。  
   
  假设希望拆分此文档，并将它保存到下列数据库中：  
   
@@ -800,7 +800,7 @@ Col1        BinaryCol
 1           0x1234567890  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_xml_preparedocument (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
  [sp_xml_removedocument (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
  [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)   

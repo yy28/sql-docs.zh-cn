@@ -22,7 +22,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798006"
 ---
 # <a name="copy-only-backups-sql-server"></a>仅复制备份 (SQL Server)
-  *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 通常，进行备份会更改数据库并影响其后备份的还原方式。 但是，有时在不影响数据库总体备份和还原过程的情况下，为特殊目的而进行备份还是有用的。 仅复制备份就是用于此目的。  
+  *仅复制备份* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立于常规备份序列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的备份。 通常，进行备份会更改数据库并影响其后备份的还原方式。 但是，有时在不影响数据库总体备份和还原过程的情况下，为特殊目的而进行备份还是有用的。 仅复制备份就是用于此目的。  
   
  仅复制备份的类型如下所示：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72798006"
  仅复制备份记录在 **backupset** 表的 [is_copy_only](/sql/relational-databases/system-tables/backupset-transact-sql) 列中。  
   
 ## <a name="to-create-a-copy-only-backup"></a>创建仅复制备份  
- 您可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 PowerShell 创建仅复制备份。  
+ 您可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 创建仅复制备份。  
   
 ###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -52,20 +52,20 @@ ms.locfileid: "72798006"
   
 -   对于仅复制完整备份：  
   
-     BACKUP DATABASE *database_name* TO \<备份设备 *>* 。WITH COPY_ONLY 。  
+     备份数据库*database_name*到 \<backup_device *>* 。COPY_ONLY 。  
   
     > [!NOTE]  
     >  使用 DIFFERENTIAL 选项指定时，COPY_ONLY 不起作用。  
   
 -   对于仅复制日志备份：  
   
-     BACKUP LOG *database_name* TO *\<* 备份设备 *>* 。WITH COPY_ONLY 。  
+     备份日志*database_name*到 *\<* backup_device *>* 。COPY_ONLY 。  
   
 ###  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   
 将 `Backup-SqlDatabase` cmdlet 与 `-CopyOnly` 参数一起使用。  
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
 
 ### <a name="to-create-a-full-or-log-backup"></a>创建完整备份或日志备份
   

@@ -48,9 +48,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  Azure 服务器的完全限定的地址。  
   
--   如果为 **@no__t**提供了一个值，但指定的数据库未启用 Stretch，则必须提供 **\@server_address**的值。  
+-   如果为 **\@database_name**提供值，但指定的数据库未启用 Stretch，则必须为 **\@server_address**提供值。  
   
--   如果为 **@no__t**提供了一个值，并且指定的数据库已启用 Stretch，则无需为 **\@server_address**提供值。 如果为 **\@server_address**提供了值，则存储过程会将其忽略，并使用已与已启用延伸的数据库相关联的现有 Azure 服务器。  
+-   如果为 **\@database_name**提供值，并且指定的数据库已启用 Stretch，则无需为 **\@server_address**提供值。 如果为 **\@server_address**提供值，存储过程将忽略它，并使用已与已启用延伸的数据库相关联的现有 Azure 服务器。  
   
  @azure_username = N'*azure_username*  
  远程 Azure 服务器的用户名。  
@@ -64,18 +64,18 @@ EXECUTE sys.sp_rda_test_connection
 ## <a name="return-code-values"></a>返回代码值  
  如果**成功**，sp_rda_test_connection 将返回错误14855（STRETCH_MAJOR，STRETCH_CONNECTION_TEST_PROC_SUCCEEDED），其中包含严重性 EX_INFO 和成功返回代码。  
   
- 如果**失败**，sp_rda_test_connection 将返回错误14856（STRETCH_MAJOR，STRETCH_CONNECTION_TEST_PROC_FAILED），其中包含严重性 EX_USER 和错误返回代码。  
+ 如果**出现故障**，sp_rda_test_connection 将返回错误14856（STRETCH_MAJOR，STRETCH_CONNECTION_TEST_PROC_FAILED），其严重性为 EX_USER 并返回错误。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|link_state|INT|以下值之一，对应于**link_state_desc**的值。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|以下值之一，对应于**link_state**的前面的值。<br /><br /> -正常<br />     SQL Server 与远程 Azure 服务器之间的状况良好。<br />-   ERROR_AZURE_FIREWALL<br />     Azure 防火墙阻止 SQL Server 与远程 Azure 服务器之间的链接。<br />- ERROR_NO_CONNECTION<br />     SQL Server 无法建立与远程 Azure 服务器的连接。<br />-   ERROR_AUTH_FAILURE<br />     身份验证失败会阻止 SQL Server 与远程 Azure 服务器之间的链接。<br />-错误<br />     不是身份验证问题、连接问题或防火墙问题的错误正在阻止 SQL Server 与远程 Azure 服务器之间的链接。|  
-|error_number|INT|错误的数目。 如果没有错误，则此字段为 NULL。|  
+|link_state|smallint|以下值之一，对应于**link_state_desc**的值。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|link_state_desc|varchar(32)|以下值之一，对应于**link_state**前面的值。<br /><br /> -正常<br />     SQL Server 与远程 Azure 服务器之间的状况良好。<br />-   ERROR_AZURE_FIREWALL<br />     Azure 防火墙阻止 SQL Server 与远程 Azure 服务器之间的链接。<br />-ERROR_NO_CONNECTION<br />     SQL Server 无法建立与远程 Azure 服务器的连接。<br />-   ERROR_AUTH_FAILURE<br />     身份验证失败会阻止 SQL Server 与远程 Azure 服务器之间的链接。<br />-错误<br />     不是身份验证问题、连接问题或防火墙问题的错误正在阻止 SQL Server 与远程 Azure 服务器之间的链接。|  
+|error_number|smallint|错误的数目。 如果没有错误，则此字段为 NULL。|  
 |error_message|nvarchar(1024)|错误消息。 如果没有错误，则此字段为 NULL。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 db_owner 权限。  
   
 ## <a name="examples"></a>示例  
@@ -92,7 +92,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*与 @no__t 相关的错误号 >*|*与 @no__t 相关的错误消息 >*|  
+|2|ERROR_NO_CONNECTION|*与连接相关的错误号 > \<*|*与连接相关的错误消息 > \<*|  
   
 ### <a name="check-the-azure-firewall"></a>检查 Azure 防火墙  
   
@@ -108,7 +108,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*与 @no__t 相关的错误号 >*|*与 @no__t 相关的错误消息 >*|  
+|1|ERROR_AZURE_FIREWALL|*\<防火墙相关错误号 >*|*\<防火墙相关错误消息 >*|  
   
 ### <a name="check-authentication-credentials"></a>检查身份验证凭据  
   
@@ -124,7 +124,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*与 @no__t 相关的错误号 >*|*与 @no__t 相关的错误消息 >*|  
+|3|ERROR_AUTH_FAILURE|*与身份验证相关的错误号 > \<*|*与身份验证相关的错误消息 > \<*|  
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>检查远程 Azure 服务器的状态  
   
