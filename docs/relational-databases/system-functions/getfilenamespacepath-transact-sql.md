@@ -45,15 +45,15 @@ ms.locfileid: "72278330"
  *is_full_path*  
  整数表达式，指定是返回相对路径还是绝对路径。 *is_full_path*可以具有以下值之一：  
   
-|ReplTest1|Description|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**0**|返回数据库级目录内的相对路径。<br /><br /> 此为默认值。|  
 |**1**|返回以 `\\computer_name` 开头的完整 UNC 路径。|  
   
- *\@option*  
- 一个整数表达式，定义路径的服务器组件应如何进行格式化。 *@no__t 1option*可以具有以下值之一：  
+ *\@选项*  
+ 一个整数表达式，定义路径的服务器组件应如何进行格式化。 *\@选项*可以具有以下值之一：  
   
-|ReplTest1|Description|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 这是默认值。|  
 |**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -86,7 +86,7 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何调用**GetFileNamespacePath**函数以获取 FileTable 中文件或目录的 UNC 路径。  
@@ -101,7 +101,7 @@ SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 FileTable 中使用目录和路径](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

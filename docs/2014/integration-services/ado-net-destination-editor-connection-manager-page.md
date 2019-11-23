@@ -1,5 +1,5 @@
 ---
-title: ADO NET 目标编辑器 ("连接管理器" 页) |Microsoft Docs
+title: ADO NET 目标编辑器（"连接管理器" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -33,7 +33,7 @@ ms.locfileid: "70154021"
 3.  在 **“ADO NET 目标编辑器”** 中，单击 **“连接管理器”** 。  
   
 ## <a name="static-options"></a>静态选项  
- **“ODBC 目标编辑器”**  
+ **连接管理器**  
  从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
   
  **新建**  
@@ -61,14 +61,14 @@ ms.locfileid: "70154021"
  如果选择“可用时使用大容量插入”并将“错误”选项设置为“重定向该行”，则目标重定向到错误输出的数据批次可能包含正确的行。有关以大容量操作方式处理错误的详细信息，请参阅[数据中的错误处理](data-flow/error-handling-in-data.md)。 有关“错误”选项的详细信息，请参阅 [ADO NET 目标编辑器（“错误输出”页）](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)。  
   
 > [!NOTE]  
->  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 Sybase 源表包含一个标识列，则必须在 ADO NET 目标前后使用执行 SQL 任务来运行 SET IDENTITY_INSERT 语句。 标识列属性为列指定一个增量值。 SET IDENTITY_INSERT 语句启用要插入到标识列的显式值。 若要基于同一个数据库连接运行 CREATE TABLE 和 SET IDENTITY 语句，请将 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器的 `RetainSameConnection` 属性设置为 `True`。 此外，还要对执行 SQL 任务和 ADO NET 目标使用相同的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器。  
+>  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 Sybase 源表包含一个标识列，则必须在 ADO NET 目标前后使用执行 SQL 任务来运行 SET IDENTITY_INSERT 语句。 标识列属性为列指定一个增量值。 SET IDENTITY_INSERT 语句启用要插入到标识列的显式值。 若要基于同一个数据库连接运行 CREATE TABLE 和 SET IDENTITY 语句，请将 `RetainSameConnection` 连接管理器的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 属性设置为 `True`。 此外，还要对执行 SQL 任务和 ADO NET 目标使用相同的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器。  
 >   
 >  有关详细信息，请参阅 [SET IDENTITY_INSERT (Transact SQL)](/sql/t-sql/statements/set-identity-insert-transact-sql) 和 [IDENTITY（属性）(Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql-identity-property)。  
   
 ## <a name="external-resources"></a>外部资源  
- Sqlcat.com 上的技术文章[快速将数据加载到 AZURE SQL 数据库](https://go.microsoft.com/fwlink/?LinkId=244333)  
+ sqlcat.com 上的技术文章 [快速将数据加载到 Azure SQL 数据库中](https://go.microsoft.com/fwlink/?LinkId=244333)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ADO NET 目标编辑器（“映射”页）](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
  [ADO NET 目标编辑器（“错误输出”页）](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)   

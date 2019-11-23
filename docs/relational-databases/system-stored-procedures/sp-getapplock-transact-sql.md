@@ -31,7 +31,7 @@ ms.locfileid: "72717252"
 
   对应用程序资源设置锁。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,39 +46,39 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [@Resource =]'*resource_name*'  
- 指定标识锁资源的名称的字符串。 应用程序必须确保该资源名称是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name*的值为**nvarchar （255）** ，无默认值。 如果资源字符串的长度超过**nvarchar （255）** ，则它将被截断为**nvarchar （255）** 。  
+ [@Resource=]"*resource_name*"  
+ 指定标识锁资源的名称的字符串。 应用程序必须确保该资源名称是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name*为**nvarchar （255）** ，无默认值。 如果资源字符串的长度超过**nvarchar （255）** ，则它将被截断为**nvarchar （255）** 。  
   
- *resource_name*是二进制比较的，因此无论当前数据库的排序规则设置如何，都是区分大小写的。  
+ 比较了二进制*resource_name* ，因此无论当前数据库的排序规则设置如何，都是区分大小写的。  
   
 > [!NOTE]  
 >  一旦获取应用程序锁之后，则只能检索纯文本中的前 32 个字符；对剩余的字符执行哈希运算。  
   
- [@LockMode =]'*lock_mode*'  
+ [@LockMode=]"*lock_mode*"  
  要为特定资源获取的锁模式。 lock_mode 是 nvarchar(32)，且无默认值。 该值可以是下列任意值： **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive**或**Exclusive**。 有关详细信息，请参阅[锁模式](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)。
   
- [@LockOwner =]'*lock_owner*'  
- 锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 是 nvarchar(32)。 该值可以是 Transaction（默认值）或 Session。 如果*lock_owner*值为**Transaction**，则默认情况下或显式指定了 sp_getapplock，则必须从事务中执行。  
+ [@LockOwner=]"*lock_owner*"  
+ 锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 是 nvarchar(32)。 该值可以是 Transaction（默认值）或 Session。 默认情况下， *lock_owner*值为**transaction**时，sp_getapplock 必须从事务内执行。  
   
- [@LockTimeout =]"*value*"  
- 锁超时值（毫秒）。 默认值与 @ @LOCK_TIMEOUT 返回的值相同。 若要指示锁请求应返回的返回代码为-1，而不是在不能立即授予请求时等待锁，请指定0。  
+ [@LockTimeout=]"*value*"  
+ 锁超时值（毫秒）。 默认值与 @@LOCK_TIMEOUT返回的值相同。 若要指示锁请求应返回的返回代码为-1，而不是在不能立即授予请求时等待锁，请指定0。  
   
- [@DbPrincipal =]'*database_principal*'  
+ [@DbPrincipal=]"*database_principal*"  
  对数据库中的对象具有权限的用户、角色或应用程序角色。 函数的调用方必须是*database_principal*、dbo 或 db_owner 固定数据库角色的成员，才能成功调用该函数。 默认值为 public。  
   
 ## <a name="return-code-values"></a>返回代码值  
- \> = 0 （成功）或 < 0 （失败）  
+ \>= 0 （成功）或 < 0 （失败）  
   
-|ReplTest1|结果|  
+|“值”|结果|  
 |-----------|------------|  
 |0|锁已同时成功授予。|  
-|@shouldalert|在等待释放其他不兼容锁后成功授予锁。|  
+|1|在等待释放其他不兼容锁后成功授予锁。|  
 |-1|锁请求超时。|  
 |-2|锁请求被取消。|  
 |-3|选择锁请求作为死锁牺牲品。|  
 |-999|指示参数验证或其他调用错误。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  对资源设置的锁与当前事务或当前会话相关联。 当事务提交或回滚时，将释放与当前事务相关联的锁。 当会话注销时，将释放与会话关联的锁。当服务器出于任何原因而关闭时，将释放所有锁定。  
   
  sp_getapplock 创建的锁资源在会话的当前数据库中创建。 每个锁资源都由下列值的组合值进行标识：  
@@ -164,8 +164,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [APPLOCK_MODE &#40;transact-sql&#41; ](../../t-sql/functions/applock-mode-transact-sql.md)    
- [APPLOCK_TEST &#40;transact-sql&#41; ](../../t-sql/functions/applock-test-transact-sql.md)    
+ [APPLOCK_MODE &#40;transact-sql&#41; ](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;transact-sql&#41; ](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_releaseapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

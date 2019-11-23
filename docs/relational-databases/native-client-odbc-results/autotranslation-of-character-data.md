@@ -43,11 +43,11 @@ ms.locfileid: "73779178"
   
  如果将 AutoTranslate 设置为 "no"，则不会对客户端上的 SQL_C_CHAR 变量和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的**CHAR**、 **varchar**或**text**列、变量或参数之间移动的数据进行转换。 如果数据包含扩展字符并且客户端和服务器计算机使用不同的代码页，则位模式在这两台计算机上会得到不同的解释。 如果这两台计算机使用相同的代码页，则数据将得到相同的解释。  
   
- 当 AutoTranslate 设置为 "yes" 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将使用 Unicode 来转换客户端上 SQL_C_CHAR 变量之间移动的数据，并使用**CHAR**、 **varchar**或**text**列、变量或参数在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据  
+ 当 AutoTranslate 设置为 "yes" 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序使用 Unicode 来转换客户端上 SQL_C_CHAR 变量和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的**CHAR**、 **varchar**或**text**列、变量或参数之间移动的数据：  
   
--   将数据从客户端上的 SQL_C_CHAR 变量发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的**CHAR**、 **varchar**或**text**列、变量或参数时，ODBC 驱动程序将首先使用客户端的 ACP 从 SQL_C_CHAR 转换为 Unicode，然后使用服务器的 ACP 从 Unicode 返回到字符。  
+-   将数据从客户端上的 SQL_C_CHAR 变量发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的**CHAR**、 **varchar**或**text**列、变量或参数时，ODBC 驱动程序首先使用客户端的 ACP 从 SQL_C_CHAR 转换为 UNICODE，然后使用服务器的 ACP 将 unicode 转换回字符。  
   
--   如果将数据从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的**char**、 **varchar**或**text**列、变量或参数发送到客户端上的 SQL_C_CHAR 变量，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client ODBC 驱动程序将首先使用 ACP 将字符转换为 Unicode，然后使用客户端的 ACP 从 Unicode 返回到 SQL_C_CHAR。  
+-   将数据从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的**char**、 **varchar**或**text**列、变量或参数发送到客户端上的 SQL_C_CHAR 变量时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client ODBC 驱动程序首先使用服务器的 ACP 将字符转换为 unicode，然后使用客户端的 ACP 从 unicode 转换回 SQL_C_CHAR。  
   
  由于所有这些转换都是通过在客户端上执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序来完成的，因此服务器 ACP 必须是客户端计算机上安装的代码页之一。  
   

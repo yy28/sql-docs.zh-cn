@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect |Microsoft Docs
+title: SQLDriverConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -42,7 +42,7 @@ ms.locfileid: "73787095"
   
  如果*DriverCompletion*参数值为 SQL_DRIVER_NOPROMPT 或 SQL_DRIVER_COMPLETE_REQUIRED 并且语言或数据库来自连接字符串，并且两者都无效，则**SQLDriverConnect**返回 SQL_ERROR。  
   
- 如果*DriverCompletion*参数值为 SQL_DRIVER_NOPROMPT 或 SQL_DRIVER_COMPLETE_REQUIRED，并且语言或数据库来自 ODBC 数据源定义并且要么无效，则**SQLDriverConnect**将使用默认语言或指定用户 ID 的数据库并返回 SQL_SUCCESS_WITH_INFO。  
+ 如果*DriverCompletion*参数值为 SQL_DRIVER_NOPROMPT 或 SQL_DRIVER_COMPLETE_REQUIRED 并且语言或数据库来自 ODBC 数据源定义，并且两者都无效，则**SQLDriverConnect**将使用默认语言或数据库作为指定用户 ID 并返回 SQL_SUCCESS_WITH_INFO。  
   
  如果*DriverCompletion*参数值为 SQL_DRIVER_COMPLETE 或 SQL_DRIVER_PROMPT 并且语言或数据库无效，则**SQLDriverConnect**将重新将对话框。  
   
@@ -84,6 +84,6 @@ SQLDriverConnect(hdbc, hwnd,
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [设置 ANSI_WARNINGS &#40;transact-sql&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

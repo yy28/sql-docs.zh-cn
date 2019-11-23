@@ -30,7 +30,7 @@ ms.locfileid: "72782735"
 # <a name="delete-a-data-tier-application"></a>删除数据层应用程序
   您可以通过使用“删除数据层应用程序向导”或 Windows PowerShell 脚本，删除数据层应用程序。 您可以指定是保留、分离还是删除关联数据库。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
   
 -   **若要升级 DAC，请使用：** [注册数据层应用程序向导](#UsingDeleteDACWizard)、[PowerShell](#DeleteDACPowerShell)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "72782735"
 > [!WARNING]  
 >  通过从还原或重新连接的数据库注册 DAC 重新生成一个 DAC 实例时，将不会重新创建该原始 DAC 的某些部分，例如服务器选择策略。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  只能由 **sysadmin** 或 **serveradmin** 固定服务器角色的成员删除 DAC，或者由数据库所有者删除。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以启动该向导。  
   
 ##  <a name="UsingDeleteDACWizard"></a> 使用“删除数据层应用程序向导”  
@@ -65,7 +65,7 @@ ms.locfileid: "72782735"
   
 2.  展开 **“管理”** 节点。  
   
-3.  展开 **数据层应用程序** 节点。  
+3.  展开“数据层应用程序”节点。  
   
 4.  右键单击要删除的 DAC，然后选择“删除数据层应用程序…”  
   
