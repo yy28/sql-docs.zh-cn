@@ -30,7 +30,7 @@ ms.locfileid: "73632998"
   
 2.  若要修改跟踪事件，请执行 **sp_trace_setevent** ，并通过参数指定更改。 下面按顺序列出了参数：  
 
-    -   **\@@traceid** （跟踪 ID）  
+    -   **\@traceid** （跟踪 ID）  
   
     -   **\@eventid**（事件 ID）  
   
