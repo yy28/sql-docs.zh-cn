@@ -67,7 +67,7 @@ ms.locfileid: "72782973"
   
 3.  右键单击要进行故障转移的可用性组，然后选择“故障转移”命令。  
   
-4.  这将启动“故障转移可用性组向导”。 有关详细信息，请参阅[使用故障转移可用性组向导 (SQL Server Management Studio)](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)。  
+4.  这将启动“故障转移可用性组向导”。 有关详细信息，请参阅本主题后面的 [使用故障转移可用性组向导 (SQL Server Management Studio)](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **对可用性组执行手动故障转移**  
@@ -106,12 +106,12 @@ ms.locfileid: "72782973"
   
 -   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
   
--   [获取 SQL Server PowerShell 帮助](../../../powershell/sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="FollowUp"></a> 跟进：在对可用性组进行手动故障转移后  
  如果您故障转移到可用性组的 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 之外，则调整 WSFC 节点的仲裁投票以反映新的可用性组配置。 有关详细信息，请参阅 [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;   概述](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>请参阅  
+ [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
  [故障转移和故障&#40;转移&#41;模式 AlwaysOn 可用性组](failover-and-failover-modes-always-on-availability-groups.md)   
  [执行可用性组的强制手动故障转移 (SQL Server)](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
