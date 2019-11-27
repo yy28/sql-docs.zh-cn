@@ -30,7 +30,7 @@ ms.locfileid: "71952672"
   
  单击 **“确定”** 保存所做的更改。 如果添加或删除 URL 后，没有先单击 **“确定”** 就关闭了对话框，所做的更改将丢失。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **IP 地址**  
  标识 TCP/IP 网络上的报表服务器计算机。 有效值包括：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71952672"
   
 -   **127.0.0.1** 用于访问本地主机。 它支持对报表服务器计算机进行本地管理。 如果仅选择此值，则只有在本地登录到报表服务器计算机的用户可以访问应用程序。  
   
--   *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 IPv4 地址。 如果你的网络使用 IPv6 寻址，IP 地址将为 8 4 字节字段的128位值，其格式类似于以下格式： \<header >：*nnnn： nnnn： nnnn： nnnn*。  
+-   *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 IPv4 地址。 如果你的网络使用 IPv6 寻址，IP 地址将为 8 4 字节字段的128位值，其格式类似于以下格式： \<标头 >：*nnnn： nnnn： nnnn： nnnn*。  
   
      如果有多个网络适配器，您将看到每个网络适配器都有一个 IP 地址。 如果仅选择此值，它将限制对该 IP 地址（以及域名服务器映射到该地址的任何主机名）的应用程序访问。 您不能使用 localhost 访问报表服务器，也不能使用安装在报表服务器计算机上的其他网络适配器的 IP 地址。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71952672"
  **颁发给**  
  显示为其创建证书的计算机的名称。  
   
- **“添加”**  
+ **添加**  
  定义附加 URL。  
   
  **编辑**  
@@ -74,7 +74,7 @@ ms.locfileid: "71952672"
  **删除**  
  从列表中清除 URL 项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
