@@ -59,7 +59,7 @@ Always Encrypted 向导是一个功能强大的工具，可让你为所选数据
 - **密钥存储提供程序(CNG)** - 使用密钥存储或密钥时可能提示你提供必要的权限和凭据，具体取决于存储和 KSP 配置。
 - **加密服务提供程序(CAPI)** - 使用密钥存储或密钥时可能提示你提供必要的权限和凭据，具体取决于存储和 CSP 配置。
 
-此外，如果使用该向导创建新密钥，则必须拥有在[使用“新建列主密钥”对话框预配列主密钥](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)和[使用“新建列加密密钥”对话框预配列加密密钥](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)。
+此外，如果使用该向导创建新密钥，则必须拥有在[使用“新建列主密钥”对话框预配列主密钥](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)和[使用“新建列加密密钥”对话框预配列加密密钥](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)中列出的其他权限。
 
 ## <a name="open-the-always-encrypted-wizard"></a>打开 Always Encrypted 向导
 可以在三个不同的级别启动该向导： 
