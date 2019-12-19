@@ -123,7 +123,7 @@ HRESULT GetStatus(
   
  对已初始化的数据源对象或已填充的行集调用 ISSAsynchStatus::GetStatus，或者传递除 DBASYNCHOP_OPEN 以外的 eOperation 值将返回 S_OK，并将 pulProgress 和 pulProgressMax 设置为相同的值。 如果对通过执行用于更新、删除或插入行的命令而创建的对象调用**ISSAsynchStatus：： GetStatus** ，则*pulProgress*和*pulProgressMax*都指示受该命令影响的总行数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [执行异步操作](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   

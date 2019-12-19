@@ -57,7 +57,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |bClass|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息的严重性。|  
 |wLineNumber|如果适用，则为发生错误的存储过程的行号。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误](../../relational-databases/native-client-ole-db-errors/errors.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   

@@ -69,7 +69,7 @@ HRESULT BCPExec(
  DB_S_ERRORSOCCURRED  
  在大容量复制操作期间出现错误，可能尚未复制某些行。 错误数仍然小于允许的最大错误数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [执行大容量复制操作](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   

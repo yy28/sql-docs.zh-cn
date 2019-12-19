@@ -20,7 +20,7 @@ ms.lasthandoff: 10/10/2019
 ms.locfileid: "72251218"
 ---
 # <a name="relational-query-designer-ssas"></a>关系查询设计器 (SSAS)
-  关系查询设计器可帮助你创建一个查询，以便指定要从 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 关系数据库以及 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]中检索的数据。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。  使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
+  关系查询设计器可帮助您创建一个查询，以便指定要从 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] relational databases 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]中检索的数据。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。  使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
   
  如果您愿意，也可以使用基于文本的编辑器以 SQL 语言形式编写查询。 若要切换到基于文本的查询设计器，请在工具栏中单击“编辑为文本”。 在基于文本的查询设计器中编辑查询之后，就不能再使用图形查询设计器了。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72251218"
   
  下表介绍了每个窗格的功能。  
   
-|Pane|Functions|  
+|窗格|Functions|  
 |----------|--------------|  
 |[数据库视图](#DatabaseView)|显示按数据库架构组织的表、视图、存储过程和表值函数的层次结构视图。|  
 |[所选字段](#SelectedFields)|在“数据库视图”窗格中显示选定项中的数据库字段名称列表。 这些字段将成为数据集的字段集合。|  
@@ -95,7 +95,7 @@ ms.locfileid: "72251218"
 |Max|返回组中的最大值。 实现 SQL MAX 聚合。|  
 |StDev|返回组中所有值的统计标准偏差。 实现 SQL STDEV 聚合。|  
 |StDevP|返回指定组中所有值的总体标准偏差。 实现 SQL STDEVP 聚合。|  
-|Sum|返回组中所有值的总和。 实现 SQL SUM 聚合。|  
+|SUM|返回组中所有值的总和。 实现 SQL SUM 聚合。|  
 |Var|返回组中所有值的方差。 实现 SQL VAR 聚合。|  
 |VarP|返回组中所有值的总体方差。 实现 SQL VARP 聚合。|  
 |Avg Distinct|返回唯一项的均值。 实现 AVG 聚合和 DISTINCT 关键字的组合。|  
@@ -175,7 +175,7 @@ ms.locfileid: "72251218"
 ### <a name="graphical-query-designer-toolbar"></a>图形查询设计器工具栏  
  图形查询设计器工具栏提供了以下按钮，帮助您指定或查看查询结果。  
   
-|Button|描述|  
+|按钮|描述|  
 |------------|-----------------|  
 |**编辑为文本**|切换到基于文本的查询设计器，可查看自动生成的查询，也可以修改查询。|  
 |**导入**|从文件或报表中导入现有的查询。 支持 .sql 和 .rdl 文件类型。|  
@@ -198,7 +198,7 @@ ms.locfileid: "72251218"
 ### <a name="text-based-query-designer-toolbar"></a>基于文本的查询设计器工具栏  
  基于文本的查询设计器为所有命令类型都提供一个单一工具栏。 下表列出了该工具栏中的每个按钮及其功能。  
   
-|Button|描述|  
+|按钮|描述|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 并非所有的数据源类型都支持图形查询设计器。|  
 |**导入**|从文件或报表中导入现有的查询。 仅支持 .sql 和 .rdl 文件类型。|  
@@ -212,9 +212,9 @@ ms.locfileid: "72251218"
   
  下表介绍了每个窗格的功能。  
   
-|Pane|Functions|  
+|窗格|Functions|  
 |----------|--------------|  
-|查询|显示 SQL 查询文本。 使用此窗格可以编写或编辑 SQL 查询。|  
+|DesignAggregations|显示 SQL 查询文本。 使用此窗格可以编写或编辑 SQL 查询。|  
 |结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮。|  
   
 #### <a name="example"></a>示例  
@@ -235,9 +235,9 @@ SELECT Name FROM ContactType
   
  下表介绍了每个窗格的功能。  
   
-|Pane|Functions|  
+|窗格|Functions|  
 |----------|--------------|  
-|查询|显示存储过程的名称和所有输入参数。|  
+|DesignAggregations|显示存储过程的名称和所有输入参数。|  
 |结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮。|  
   
 #### <a name="example"></a>示例  
@@ -247,7 +247,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- 单击“运行”( **!** ) 按钮。 下表提供了在 "**定义查询参数**" 对话框中提供值的 @no__t 0 参数的示例。  
+ 单击“运行”( **!** ) 按钮。 下表提供了 `uspGetWhereUsedProductID` 参数的示例，你可以在 "**定义查询参数**" 对话框中提供值。  
   
 |||  
 |-|-|  

@@ -62,7 +62,7 @@ HRESULT BCPReadFmt(
  E_UNEXPECTED  
  意外调用了该方法。 例如，在调用该方法之前，未调用 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [执行大容量复制操作](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   

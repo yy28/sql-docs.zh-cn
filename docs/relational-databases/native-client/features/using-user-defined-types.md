@@ -53,7 +53,7 @@ ms.locfileid: "73761347"
 |DBTYPE_STR|支持<sup>3、6</sup>|不适用<sup>2</sup>|支持<sup>4、6</sup>|不适用<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|不支持|不适用<sup>2</sup>|不支持|不适用<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持<sup>6</sup>|不适用<sup>2</sup>|支持<sup>4</sup>|不适用<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|支持<sup>3、6</sup>|不适用<sup>2</sup>|空值|不适用<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|支持<sup>3、6</sup>|不适用<sup>2</sup>|N/A|不适用<sup>2</sup>|  
   
  <sup>1</sup>如果使用 ICommandWithParameters::SetParameterInfo 指定 DBTYPE_UDT 之外的服务器类型，而取值函数类型为 DBTYPE_UDT，则执行该语句时将出错（DB_E_ERRORSOCCURRED；参数状态为 DBSTATUS_E_BADACCESSOR）。 否则，数据发送到服务器，但服务器会返回错误，指明不存在将 UDT 转换为参数的数据类型的隐式转换。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "73761347"
 #### <a name="the-procedure_parameters-schema-rowset"></a>PROCEDURE_PARAMETERS 架构行集  
  在 PROCEDURE_PARAMETERS 架构行集中添加了以下内容。  
   
-|列名|类型|描述|  
+|列名|sysobjects|描述|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|由三部分组成的名称标识符。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|由三部分组成的名称标识符。|  
@@ -94,7 +94,7 @@ ms.locfileid: "73761347"
 #### <a name="the-sql_assemblies-schema-rowset"></a>SQL_ASSEMBLIES 架构行集  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开用于描述已注册 Udt 的特定于提供程序的特定架构行集。 可以将 ASSEMBLY 服务器指定为 DBTYPE_WSTR，但它在行集中不存在。 如果未指定，行集将默认使用当前服务器。 下表中定义了 SQL_ASSEMBLIES 架构行集。  
   
-|列名|类型|描述|  
+|列名|sysobjects|描述|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|包含该类型的程序集的目录名称。|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|包含该类型的程序集的架构名称或所有者名称。 尽管程序集的作用域为数据库而不是架构，但它们仍具有在此所反映的所有者。|  
@@ -106,7 +106,7 @@ ms.locfileid: "73761347"
 #### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES 架构行集  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开了特定于提供程序的特定架构行集，用于描述指定服务器的程序集依赖项。 ASSEMBLY_SERVER 可由调用方指定为 DBTYPE_WSTR，但在该行集中不存在。 如果未指定，行集将默认使用当前服务器。 SQL_ASSEMBLY_DEPENDENCIES 架构行集在下表中定义。  
   
-|列名|类型|描述|  
+|列名|sysobjects|描述|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|包含该类型的程序集的目录名称。|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|包含该类型的程序集的架构名称或所有者名称。 尽管程序集的作用域为数据库而不是架构，但它们仍具有在此所反映的所有者。|  
@@ -116,7 +116,7 @@ ms.locfileid: "73761347"
 #### <a name="the-sql_user_types-schema-rowset"></a>SQL_USER_TYPES 架构行集  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开新的架构行集，SQL_USER_TYPES，用于描述何时添加指定服务器的注册 Udt。 UDT_SERVER 必须由调用方指定为 DBTYPE_WSTR，但它在该行集中不存在。 在下表中定义 SQL_USER_TYPES 架构行集。  
   
-|列名|type|描述|  
+|列名|sysobjects|描述|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|对于 UDT 列，此属性是一个字符串，它指定定义 UDT 的目录的名称。|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|对于 UDT 列，此属性是一个字符串，它指定定义 UDT 的架构的名称。|  
@@ -126,7 +126,7 @@ ms.locfileid: "73761347"
 #### <a name="the-columns-schema-rowset"></a>COLUMNS 架构行集  
  COLUMNS 架构行集添加了以下列。  
   
-|列名|type|描述|  
+|列名|sysobjects|描述|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|对于 UDT 列，此属性是一个字符串，它指定定义 UDT 的目录的名称。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|对于 UDT 列，此属性是一个字符串，它指定定义 UDT 的架构的名称。|  
@@ -139,7 +139,7 @@ ms.locfileid: "73761347"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 属性集  
  为了通过 OLE DB 支持 Udt，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 实现了新的 DBPROPSET_SQLSERVERPARAMETER 属性集，该属性集包含以下值。  
   
-|“属性”|类型|描述|  
+|NAME|sysobjects|描述|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|由三部分组成的名称标识符。<br /><br /> 对于 UDT 参数，此属性是一个字符串，它指定定义用户定义类型的目录的名称。|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|由三部分组成的名称标识符。<br /><br /> 对于 UDT 参数，此属性是一个字符串，它指定定义用户定义类型的架构的名称。|  
@@ -150,7 +150,7 @@ ms.locfileid: "73761347"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 属性集  
  为了支持在**ITableDefinition**接口中创建表，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将以下三个新列添加到 DBPROPSET_SQLSERVERCOLUMN 属性集。  
   
-|“属性”|描述|type|描述|  
+|NAME|描述|sysobjects|描述|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|对于 DBTYPE_UDT 类型的列，此属性是一个字符串，它指定定义 UDT 的目录的名称。|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|对于 DBTYPE_UDT 类型的列，此属性是一个字符串，它指定定义 UDT 的架构的名称。|  
@@ -181,7 +181,7 @@ ms.locfileid: "73761347"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 接口  
  除了**ISSCommandWithParameters**接口外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 还向从调用**IColumnsRowset：： GetColumnRowset**方法返回的行集添加新值，包括以下内容。  
   
-|列名|type|描述|  
+|Column Name|sysobjects|描述|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 目录名称标识符。|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 架构名称标识符。|  
@@ -206,7 +206,7 @@ ms.locfileid: "73761347"
   
  从 C 转换为 SQL 数据类型时，SQL_C_WCHAR、SQL_C_BINARY 和 SQL_C_CHAR 可全部转换为 SQL_SS_UDT。 但请注意，从 SQL_C_WCHAR 和 SQL_C_CHAR SQL 数据类型转换时，二进制数据会转换为十六进制字符串。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
