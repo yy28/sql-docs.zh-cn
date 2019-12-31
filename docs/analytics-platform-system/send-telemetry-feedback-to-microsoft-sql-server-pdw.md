@@ -1,6 +1,6 @@
 ---
-title: 遥测数据的反馈-分析平台系统 |Microsoft Docs
-description: Analytics Platform system 向 Microsoft 发送遥测反馈。
+title: 遥测反馈
+description: 针对分析平台系统将遥测反馈发送到 Microsoft。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,40 +8,41 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 347879cd468d67b3feee0c92dcd154334df4c237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960097"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400364"
 ---
-# <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Analytics Platform system 向 Microsoft 发送遥测反馈
-分析平台系统具有一个可选的遥测功能，将管理控制台数据发送到 Microsoft。 
+# <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>将遥测反馈发送给 Microsoft for Analytics 平台系统
+分析平台系统具有可向 Microsoft 发送管理员控制台数据的可选遥测功能。 
   
 > [!NOTE]  
-> 在此版本中，Microsoft 不主动监视遥测数据。 是仅用于分析所收集的数据。  
+> 在此版本中，Microsoft 不主动监视遥测数据。 出于分析目的，将收集数据。  
   
 ## <a name="privacy"></a>隐私  
-若要提供最大的隐私保护，AP 提供而不启用遥测。 启用此功能前，首先请查看[Microsoft 分析平台系统隐私声明](https://go.microsoft.com/fwlink/?LinkId=400902)。 若要选择加入，请运行如下所述的 PowerShell 脚本。  
+为了提供最大的隐私保护，不启用遥测就提供了 AP。 在启用此功能之前，请先查看[Microsoft Analytics Platform System 隐私声明](https://go.microsoft.com/fwlink/?LinkId=400902)。 若要选择加入，请运行下面所述的 PowerShell 脚本。  
   
 ## <a name="enable"></a>启用遥测  
-**DNS 转发：** 向 Microsoft 发送遥测数据需要 Analytics Platform System 能够连接到 DNS 转发器通过 internet 进行访问。 若要启用此功能，必须启用 DNS 转发所有主机和工作负荷 Vm 上。 调用`Enable-RemoteMonitoring`命令与`SetupDnsForwarder`选项来正确配置 DNS 转发并启用遥测。 调用`Enable-RemoteMonitoring`命令而无需`SetupDnsForwarder`选项已配置 DNS 转发并且只想要启用检测信号监视时。  
+**DNS 转发：** 向 Microsoft 发送遥测数据需要分析平台系统通过 DNS 转发器连接到 internet。 若要启用此功能，必须在所有主机和工作负荷 Vm 上启用 DNS 转发。 使用`SetupDnsForwarder`选项`Enable-RemoteMonitoring`调用命令以正确配置 DNS 转发并启用遥测。 如果已`Enable-RemoteMonitoring`配置 DNS 转发`SetupDnsForwarder`并且你只希望启用检测信号监视，请在不使用选项的情况下调用命令。  
   
 > [!IMPORTANT]  
-> 启用 DNS 转发打开所有主机和工作负荷 Vm 的 internet 的连接。  
+> 启用 DNS 转发会打开适用于所有主机和工作负荷 Vm 的 internet 连接。  
   
-#### <a name="to-enable-feedback"></a>若要启用的反馈  
+#### <a name="to-enable-feedback"></a>启用反馈  
   
-1.  使用设备的域管理员帐户，连接到控制节点 (<strong>*appliance_domain*-CTL01</strong>)，然后打开命令提示符下使用你的 Windows 管理员凭据。  
+1.  使用设备域管理员帐户连接到控制节点（<strong>*appliance_domain*CTL01</strong>），并使用您的 Windows 管理员凭据打开命令提示符。  
   
 2.  导航到以下目录： `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
   
-3.  导入模块 `Configure-RemoteMonitoring.ps1`  
+3.  导入模块`Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
-    > 若要导入你必须在命令中使用两个句点。  
+    > 若要导入，必须在命令中使用两个句点。  
   
-    **示例：**  
+    **实例**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -50,69 +51,69 @@ ms.locfileid: "67960097"
 4.  调用`Enable-RemoteMonitoring`命令。  
   
     > [!NOTE]  
-    > 该脚本假设 internet 连接工作正常，并且不会验证 internet 连接。  
+    > 此脚本假定 internet 连接正常工作，并且不会验证 internet 连接。  
   
-    1.  首次启用遥测数据，使用以下命令以确保正确配置所有 DNS 转发器。 在此示例中的 DNS 转发 IP 地址替换`xx.xx.xx.xx`与您的环境中的 DNS 转发器 IP 地址。  
+    1.  第一次启用遥测时，请使用以下命令确保正确配置所有 DNS 转发器。 在此示例中，将 DNS 转发 IP `xx.xx.xx.xx`地址替换为你的环境中的 Dns 转发器 ip 地址。  
   
         ```  
         PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Enable-RemoteMonitoring -SetupDnsForwarder -DnsForwarderIp xx.xx.xx.xx  
         ```  
   
-    2.  当已配置 DNS 转发器，如重新启用以前禁用的遥测数据时，使用以下命令来启用遥测数据，而配置 DNS 转发时可用。  
+    2.  配置 DNS 转发器后，如重新启用以前禁用的遥测，请使用以下命令启用遥测，而不配置 DNS 转发。  
   
         ```  
         PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Enable-RemoteMonitoring  
         ```  
   
-5.  系统将提示您阅读并认可 APS 将收集有关设备信息。 将 AP 隐私声明可以复制并粘贴到查看任何 internet 浏览器的链接。  
+5.  系统将提示你阅读并确认 AP 将收集有关设备的信息。 此时会出现一个指向 AP 隐私声明的链接，你可以将其复制并粘贴到任何 internet 浏览器中进行查看。  
   
-6.  输入**Y**以接受和反馈中选择或输入**N**不接受。  
+6.  输入**Y**接受并选择加入反馈，或输入**N**以不接受。  
   
-7.  如果您输入**Y**将有一系列的命令将运行，这将启用遥测数据 （和可选 DNS 转发器） 在你的设备上的功能。 如果看到任何错误或让你相信该命令未成功的信息联系 CSS 寻求帮助。  
+7.  如果输入**Y** ，将会出现一系列命令，它们将在设备上启用遥测（也可以选择 DNS 转发器）功能。 如果看到任何错误或信息，导致您认为该命令不能成功联系 CSS 以获得帮助。  
   
-如果您输入**N**、 将运行任何命令并将不会启用该功能和不包含任何内容，以便执行操作。  
+如果输入了 " **N**"，则不会运行任何命令，并且不会启用该功能，也不会对此进行任何其他操作。  
   
-不没有运行任何危害`Enable-RemoteMonitoring`命令多次。 如果已设置 DNS 转发器，则将获取一条警告消息，指示这种情况。  
+多次运行此`Enable-RemoteMonitoring`命令不会有任何损害。 如果已设置 DNS 转发器，将收到一条警告消息，指示这种情况。  
   
 ## <a name="disable"></a>禁用遥测  
-禁用遥测数据将停止所有操作用于传达有关监视云服务的 AP 到设备的状态信息。  
+禁用遥测将停止所有操作，这些操作将有关设备状态的信息传递到云中的 "AP 监视" 服务。  
   
 > [!IMPORTANT]  
-> 执行此操作不会禁用你的 DNS 转发器或 internet 连接，这可能正在使用的设备中的其他功能。  
+> 执行此操作将不会禁用你的 DNS 转发器或 internet 连接，因为设备中的其他功能可能正在使用该转发器或 internet 连接。  
   
-#### <a name="to-disable-telemetry"></a>若要禁用遥测  
+#### <a name="to-disable-telemetry"></a>禁用遥测  
   
-1.  使用设备的域管理员帐户，连接到控制节点 (<strong>*appliance_domain*-CTL01</strong>)，并使用管理员权限打开 PowerShell 窗口。  
+1.  使用设备域管理员帐户连接到控制节点（<strong>*appliance_domain*-CTL01</strong>），并使用管理员权限打开 PowerShell 窗口。  
   
 2.  导航到以下目录： `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
   
-3.  导入模块 `Configure-RemoteMonitoring.ps1`  
+3.  导入模块`Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
-    > 若要导入你必须在命令中使用两个句点。  
+    > 若要导入，必须在命令中使用两个句点。  
   
-    **示例：**  
+    **实例**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
     ```  
   
-4.  调用`Disable-RemoteMonitoring`不带参数的命令。 此命令将停止发送反馈。 （这不会影响本地监视。）但是，该命令将不禁用 DNS 转发器和/或禁用任何 internet 连接。 这必须手动完成后已成功禁用反馈。  
+4.  调用不`Disable-RemoteMonitoring`带参数的命令。 此命令将停止发送反馈。 （这不会影响本地监视。）但是，该命令不会禁用 DNS 转发器和/或禁用任何 internet 连接。 成功禁用反馈后必须手动完成此操作。  
   
-    **示例：**  
+    **实例**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  
     ```  
   
-如果看到任何错误或让你相信该命令未成功的信息联系 CSS 寻求帮助。  
+如果看到任何错误或信息，导致您认为该命令不能成功联系 CSS 以获得帮助。  
   
-不没有运行任何危害`Disable-RemoteMonitoring`命令多次。  
+多次运行此`Disable-RemoteMonitoring`命令不会有任何损害。  
   
 ## <a name="next-steps"></a>后续步骤
-有关详细信息，请参阅：
-- [通过使用管理控制台监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-- [使用系统视图监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-system-views.md)  
-- [使用 System Center Operations Manager 监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-- [使用 DNS 转发器解析非设备 DNS 名称&#40;分析平台系统&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+有关更多信息，请参阅：
+- [使用管理控制台 &#40;分析平台系统来监视设备&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+- [使用系统视图 &#40;分析平台系统来监视设备&#41;](monitor-the-appliance-by-using-system-views.md)  
+- [使用 System Center Operations Manager &#40;Analytics 平台系统来监视设备&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+- [使用 DNS 转发器解析非设备 DNS 名称 &#40;分析平台系统&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: '在分析平台系统中配置 TLS 1.2 |Microsoft Docs '
-description: 建议在 AP 中配置 TLS 1.2
+title: 配置 TLS 1。2
+description: 在 AP 中配置 TLS 1.2 的建议
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,22 +8,22 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e77e1de7ccc3894d9356821a95139835ceb52caa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 988cac765a596b541d128b0b6190f6f228d95ee7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961182"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401256"
 ---
-# <a name="configure-tls-12-in-aps"></a>在 AP 中配置 TLS 1.2
+# <a name="configure-tls-12-in-aps"></a>在 AP 中配置 TLS 1。2
 
-若要保护 APS 为仅使用 TLS 1.2，必须要明确禁用所有物理和虚拟的主机上的其他协议。 禁用协议需要进行注册表设置更改。 注册表更改需要重新启动的虚拟和物理主机。
+若要保护仅使用 TLS 1.2 的 AP，必须在所有物理主机和虚拟主机上显式禁用其他协议。 禁用协议需要更改注册表设置。 注册表更改需要重新启动虚拟主机和物理主机。
 
 > [!WARNING]
-> 本节、方法或任务所含的步骤告知您如何修改注册表。 但是，如果修改了注册表不正确，可能会导致数据丢失并需要重新安装操作系统的则可能会出现严重问题。 我们强烈建议备份注册表之前对其进行修改。 如果发生问题，以后可还原注册表。 有关如何备份和还原注册表的详细信息，请单击下面的文章编号，以查看 Microsoft 知识库中相应的文章：<br>
-[322756](https://support.microsoft.com/help/322756)如何备份和还原 Windows 中的注册表
+> 本节、方法或任务所含的步骤告知您如何修改注册表。 但是，如果错误地修改了可能会导致数据丢失并要求重新安装操作系统的注册表，则可能会出现严重问题。 我们强烈建议在修改注册表之前对其进行备份。 如果发生问题，以后可还原注册表。 有关如何备份和还原注册表的详细信息，请单击以下文章编号以查看 Microsoft 知识库中的文章：<br>
+[322756](https://support.microsoft.com/help/322756)如何在 Windows 中备份和还原注册表
 
-**禁用：**
+**禁用**
 ```
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0]
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client]
@@ -41,7 +41,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\P
 "DisabledByDefault"=dword:00000001
 ```
 
-此外设置以下项在你的客户端上机 APS SSIS 目标适配器之类的工具的安装位置。
+还应在客户端计算机上设置以下密钥，其中安装了与 AP SSIS 目标适配器类似的工具。
 ```
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319]
 "SystemDefaultTlsVersions"=dword:00000001

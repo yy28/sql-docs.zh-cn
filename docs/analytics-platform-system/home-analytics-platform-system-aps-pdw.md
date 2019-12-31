@@ -1,5 +1,5 @@
 ---
-title: Analytics Platform System 文档 | Microsoft Docs
+title: 文档
 description: Microsoft Analytics Platform System (APS) 是一种设计用于数据仓库和大数据分析的数据平台，它可为端到端商业智能解决方案提供深度数据集成、高速查询处理、高度可伸缩存储，以及简单维护。
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 08f70ff74c5743f202867ae2a57adc1c6b9d677d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4285cbe15659bde63655fc61141d4df7abdbba09
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153362"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401093"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 
@@ -23,7 +24,7 @@ Microsoft Analytics Platform System (APS) 是一种设计用于数据仓库和�
 
 Analytics Platform System 承载的 SQL Server 并行数据仓库 (PDW) 是运行大规模并行处理 (MPP) 数据仓库的软件。
 
-PolyBase 技术将关系 PDW 数据与来自多个源的 Hadoop 数据组合在一起, 包括 Hortonworks on Windows Server、Hortonworks on Linux、Cloudera on Linux and HDInsight Azure blob 存储。 这些高级数据集成功能，加上与商业智能工具的深度集成，让 Analytics Platform System 能够返回集成分析，使业务决策人能够做出更好、有更深入见解的业务决策。
+PolyBase 技术将关系 PDW 数据与来自多个源的 Hadoop 数据组合在一起，包括 Hortonworks on Windows Server、Hortonworks on Linux、Cloudera on Linux and HDInsight Azure blob 存储。 这些高级数据集成功能，加上与商业智能工具的深度集成，让 Analytics Platform System 能够返回集成分析，使业务决策人能够做出更好、有更深入见解的业务决策。
 
 Analytics Platform System 可作为预安装和预配了硬件和软件的设备发送到你的数据中心，以运行多个工作负荷。 购买 Analytics Platform System 时，会根据业务需求为 PDW 购买计算节点。
 
@@ -38,13 +39,13 @@ Analytics Platform System 不仅运行速度块，而且可缩放，其采用高
 
 除了实现突破性的查询性能外，PDW 还易于：
 
-- 通过向现有系统添加 "缩放单位", 将数据仓库增长到单个设备中从数 tb 到超过 6 pb 的数据。
+- 通过向现有系统添加 "缩放单位"，将数据仓库增长到单个设备中从数 tb 到超过 6 pb 的数据。
 
-- 由于内置的高冗余和高可用性, 需要信任你的数据。
+- 由于内置的高冗余和高可用性，需要信任你的数据。
 
 - 解决加载和合并数据的新式数据难题。
 
-- 使用 PDW 的高度并行的 PolyBase 技术, 将 Hadoop 数据与关系数据集成, 以便快速进行分析。
+- 使用 PDW 的高度并行的 PolyBase 技术，将 Hadoop 数据与关系数据集成，以便快速进行分析。
 
 - 使用商业智能工具构建全面的端到端解决方案。
 

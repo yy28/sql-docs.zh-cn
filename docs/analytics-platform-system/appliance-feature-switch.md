@@ -1,6 +1,6 @@
 ---
-title: 功能开关 (Analytics Platform System)
-description: 有关在分析平台系统 AU7 中引入的两个功能开关的显示信息。
+title: 功能切换
+description: 显示有关分析平台系统 AU7 中引入的两个功能开关的信息。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,38 +9,38 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e9929d4729cc1027c82b61c9fab6ebfcddbd54d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8642f27a329da8819acf0ab99a648c4979ed40d0
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961515"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401454"
 ---
-# <a name="appliance-feature-switches"></a>设备功能开关
+# <a name="appliance-feature-switches"></a>设备功能切换
 
-**功能开关**页将显示有关分析平台系统 AU7 及更高版本引入了功能开关的信息。 使用此配置页来更新或启用/禁用功能和分析平台系统中的设置。
+**功能切换**页面显示有关分析平台系统 AU7 和更高版本中引入的功能开关的信息。 使用此配置页可以更新或启用/禁用分析平台系统中的功能和设置。
 
 > [!NOTE]
-> 对功能开关值的更改需要重新启动服务。
+> 更改功能开关值需要重启服务。
 
 ![DWConfig 设备功能开关](media/feature-switch/SQL_Server_PDW_DWConfig_feature_switch.png "DWConfig 设备功能开关")
 
 ## <a name="autostatsenabled"></a>AutoStatsEnabled
 
-控制自动统计信息功能。 此功能开关设置为默认情况下升级到 AU7 之后，则返回 true。 在升级后创建的任何数据库将继承自动创建和异步更新统计信息。 对于现有数据库，数据库管理员可以启用自动统计信息与[ALTER DATABASE （并行数据仓库）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)。 有关统计信息的详细信息，请参阅[统计信息](../relational-databases/statistics/statistics.md)。
+控制自动统计信息功能。 升级到 AU7 后，此功能开关默认设置为 true。 升级后创建的任何数据库将继承统计信息的自动创建和异步更新。 对于现有数据库，数据库管理员可以使用[ALTER database （并行数据仓库）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)启用自动统计信息。 有关统计信息的详细信息，请参阅[统计](../relational-databases/statistics/statistics.md)信息。
 
 ## <a name="maxdopforinsertqueries"></a>MaxDOPForInsertQueries
 
-可以选取大于 1 的插入/选择操作的 maxdop 设置。 为此设置的选项是 0、 1、 2 和 4 中的，默认值为 1。
+允许你为插入/选择操作选取大于1的 maxdop 设置。 此设置的选项有0、1、2和4，默认值为1。
 
 ## <a name="optimizecommonsubexpressions"></a>OptimizeCommonSubExpressions
 
-在 SQL 查询优化器的公共子表达式的数据移动，从而可以提高查询性能。 可以找到此功能的详细的说明[此处](common-sub-expression-elimination.md)。
+通过消除 SQL 查询优化器中常见子表达式的数据移动，提高查询性能。 可在[此处](common-sub-expression-elimination.md)找到有关此功能的详细说明。
 
 ## <a name="usecatalogqueries"></a>UseCatalogQueries
 
-使用目录对象，而不是使用 SMO 一些元数据的调用具有显示性能改进。 设置为 true CU7.1，此开关在默认情况下控制该行为。
+对某些元数据调用使用目录对象，而不是使用 SMO 会提高性能。 默认情况下，在 CU 7.1 中设置为 true，此开关控制该行为。
 
 ## <a name="dmsprocessstopmessagetimeoutinseconds"></a>DmsProcessStopMessageTimeoutInSeconds
 
-控制同步繁忙的系统上，取消涉及数据移动的查询时，数据移动服务 (DMS) 等待的时间。 更新到 AU7 设置此值为 900 秒 （15 分钟） 默认情况下。 有效范围是 0-3600 秒。
+控制在取消涉及数据移动的查询时，数据移动服务（DMS）等待同步到繁忙系统上的时间。 默认情况下，更新到 AU7 会将此值设置为900秒（15分钟）。 有效范围为 0-3600 秒。

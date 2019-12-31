@@ -1,6 +1,6 @@
 ---
-title: 设备拓扑-分析平台系统 |Microsoft Docs
-description: 在整个分析平台系统上显示的摘要信息。
+title: 设备拓扑
+description: 显示整个分析平台系统的摘要信息。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,20 +8,20 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 54754aa1f90bd4b69e49b2d080c96f0b2e6effb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e16e1cd972b6374a5b3d17eef5a406b57b1d3c41
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961439"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401385"
 ---
 # <a name="appliance-topology---analytics-platform-system"></a>设备拓扑-分析平台系统
-在整个分析平台系统上显示的摘要信息。  
+显示整个分析平台系统的摘要信息。  
   
-页列出了所有主机和当前的设备包括其以太网和 Infiniband IP 地址中的 fabric 节点的只读版本。  
+此页列出了当前设备中所有主机和构造节点的只读版本，包括其以太网和未使用的 IP 地址。  
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/appliance-topology/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## <a name="see-also"></a>请参阅  
-[启动配置管理器&#40;分析平台系统&#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>另请参阅  
+[启动 Configuration Manager &#40;Analytics 平台系统&#41;](launch-the-configuration-manager.md)  
   

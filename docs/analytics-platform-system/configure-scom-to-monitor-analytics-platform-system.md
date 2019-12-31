@@ -1,6 +1,6 @@
 ---
-title: 配置 SCOM 以监视 Analytics Platform System |Microsoft Docs
-description: 按照以下步骤来为分析平台系统配置 System Center Operations Manager (SCOM) 管理包。 监视 SCOM 中的分析平台系统所需的管理包。
+title: 用 SCOM 监视
+description: 按照以下步骤配置用于分析平台系统的 System Center Operations Manager （SCOM）管理包。 管理包是从 SCOM 监视分析平台系统所需的。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,110 +8,111 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ec495b3dd321f712aed54fb3b337efe85719be5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961238"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401301"
 ---
-# <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>配置 System Center Operations Manager (SCOM) 以监视 Analytics Platform System
-按照以下步骤来为分析平台系统配置 System Center Operations Manager (SCOM) 管理包。 监视 SCOM 中的分析平台系统所需的管理包。  
+# <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>配置 System Center Operations Manager （SCOM）以监视分析平台系统
+按照以下步骤配置用于分析平台系统的 System Center Operations Manager （SCOM）管理包。 管理包是从 SCOM 监视分析平台系统所需的。  
   
 ## <a name="BeforeBegin"></a>开始之前  
-**先决条件**  
+**必备条件**  
   
-System Center Operations Manager 2007 R2 必须安装并正在运行。  
+必须安装并运行 System Center Operations Manager 2007 R2。  
   
-必须安装和配置管理包。 请参阅[安装的 SCOM 管理包&#40;分析平台系统&#41;](install-the-scom-management-packs.md)并[导入 SCOM 管理包为 PDW&#40;分析平台系统&#41;](import-the-scom-management-pack-for-pdw.md)。  
+必须安装和配置管理包。 请参阅[安装 Scom 管理包 &#40;Analytics Platform system&#41;](install-the-scom-management-packs.md)并[导入用于 PDW &#40;Analytics 平台系统&#41;的 scom 管理包](import-the-scom-management-pack-for-pdw.md)。  
   
-## <a name="ConfigureRunAsProfile"></a>在 System Center 配置运行方式配置文件  
-若要配置 System Center，您必须执行以下步骤：  
+## <a name="ConfigureRunAsProfile"></a>在 System Center 中配置运行方式配置文件  
+若要配置 System Center，必须执行以下步骤：  
   
--   创建运行方式帐户用于**APS 观察程序**域用户并将其映射到**APS 观察程序的 Microsoft 帐户。**  
+-   为**Ap 观察**程序域用户创建运行方式帐户，并将其映射到**Microsoft Ap 观察程序帐户。**  
   
--   创建运行方式帐户用于**monitoring_user** APS 用户并将其映射到**Microsoft APS 操作帐户**。  
+-   为**monitoring_user**的 ap 用户创建运行方式帐户，并将其映射到**Microsoft ap 操作帐户**。  
   
-下面是如何执行任务的详细的说明：  
+下面是有关如何执行这些任务的详细说明：  
   
-1.  创建**APS 观察程序**与运行方式帐户**Windows**账户类型**APS 观察程序**域用户。  
+1.  为**Ap 观察**程序域用户创建包含**Windows**帐户类型的**ap 观察**程序运行方式帐户。  
   
-    1.  导航到**Administration**窗格中，右键单击**运行方式配置** -> **帐户**，然后选择**创建运行方式帐户...**  
+    1.  导航到 "**管理**" 窗格，右键单击 "**运行方式配置** -> **帐户**"，然后选择 "**创建运行方式帐户 ...** "  
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
-    2.  **创建运行方式帐户向导**对话框将打开。 上**简介**页上，单击**下一步**。  
+    2.  将打开 "**创建运行方式帐户向导**" 对话框。 在 "**简介**" 页上，单击 "**下一步**"。  
   
-    3.  上**常规属性**页上，选择**Windows**从**运行方式帐户类型**和"AP 观察程序"指定为**显示名称**。  
+    3.  在 "**常规属性**" 页上，从 "**运行方式帐户类型**" 中选择 " **Windows** "，然后指定 "ap 观察程序" 作为**显示名称**。  
   
         ![CreateRunAsAccountWizardGeneralProperties](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties.png "CreateRunAsAccountWizardGeneralProperties")  
   
-    4.  上**凭据**页上， ![CreateRunAsAccountWizardCredentials](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials.png "CreateRunAsAccountWizardCredentials")  
+    4.  在 "**凭据**" 页上， ![CreateRunAsAccountWizardCredentials](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials.png "CreateRunAsAccountWizardCredentials")  
   
-    5.  上**分发安全**页上，选择**安全级别较低**然后单击**创建**按钮即可完成。  
+    5.  在 "**分发安全性**" 页上，选择 "**不安全**"，然后单击 "**创建**" 按钮完成操作。  
   
         ![CreateRunAsAccountWizardDistributionSecurity](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardDistributionSecurity.png "CreateRunAsAccountWizardDistributionSecurity")  
   
-        1.  如果您决定使用**更安全**选项，则必须手动指定凭据将分发到计算机。 为此，请在创建运行方式帐户后，右键单击它并选择**属性**。  
+        1.  如果你决定使用 "**更安全**" 选项，则必须手动指定将向其分发凭据的计算机。 为此，请在创建运行方式帐户后，右键单击它并选择 "**属性**"。  
   
-        2.  导航到**分发**选项卡和**添加**所需的计算机。  
+        2.  导航到 "**分发**" 选项卡并**添加**所需的计算机。  
   
             ![RunAsAccountProperties](./media/configure-scom-to-monitor-analytics-platform-system/RunAsAccountProperties.png "RunAsAccountProperties")  
   
-2.  设置**APS 观察程序的 Microsoft 帐户**配置文件以使用**APS 观察程序**运行方式帐户。  
+2.  设置**MICROSOFT ap**观察程序帐户配置文件以使用**ap 观察**程序运行方式帐户。  
   
-    1.  导航到**Administration** -> **运行方式配置** -> **配置文件**。  
+    1.  导航到 "**管理** -> " "**运行方式配置** -> " 配置**文件**。  
   
         ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
-    2.  右键单击**APS 观察程序的 Microsoft 帐户**从该列表，然后选择**属性**。  
+    2.  右键单击列表中的 " **MICROSOFT Ap 观察程序帐户**"，然后选择 "**属性**"。  
   
         ![MicrosoftApsWatcherAccountProperties](./media/configure-scom-to-monitor-analytics-platform-system/MicrosoftApsWatcherAccountProperties.png "MicrosoftApsWatcherAccountProperties")  
   
-    3.  **运行方式配置文件向导**对话框将打开。 跳过**简介**通过单击页面**下一步**。  
+    3.  将打开 "**运行方式配置文件向导**" 对话框。 单击 "**下一步**"，跳过 "**简介**" 页。  
   
-    4.  上**常规属性**页上，单击**下一步**。  
+    4.  在 "**常规属性**" 页上，单击 "**下一步**"。  
   
-    5.  上**运行方式帐户**页上，单击**添加...** 按钮，然后选择以前创建**APS 观察程序**运行方式帐户。  
+    5.  在 "**运行方式帐户**" 页上，单击 "**添加 ...** " 按钮，然后选择以前创建的 " **Ap 观察**程序" 运行方式帐户。  
   
         ![RunAsProfileWizardAdd](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd.png "RunAsProfileWizardAdd")  
   
-    6.  单击**保存**完成分配配置文件。  
+    6.  单击 "**保存**" 完成配置文件分配。  
   
-3.  等到发现完成 APS 设备。  
+3.  等待 AP 设备发现完成。  
   
-    1.  导航到**监视**窗格，然后打开**SQL Server 设备** -> **Microsoft Analytics Platform System**  ->  **设备**状态视图。  
+    1.  导航到 "**监视**" 窗格，打开 " **SQL Server 设备** -> "**Microsoft Analytics Platform System** -> **设备**状态 "视图。  
   
         ![SqlServerApplianceMicrosoftApsAppliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "SqlServerApplianceMicrosoftApsAppliances")  
   
-    2.  等待，直到该设备将显示在列表中。 设备的名称应为等于 1 在注册表中指定。 发现完成后，你应看到列出，但不是受监视的所有设备。 若要启用监视，请执行后续步骤。  
+    2.  等待设备显示在列表中。 设备的名称应等于在注册表中指定的名称。 发现完成后，应会看到所有已列出但未被监视的设备。 若要启用监视，请执行后续步骤。  
   
     > [!NOTE]  
-    > 在等待初始设备发现完成时，可以并行完成后续步骤。  
+    > 当你等待初始设备发现完成时，可以并行完成后续步骤。  
   
-4.  创建查询 AP 的运行状况数据检索到的另一个新运行方式帐户。  
+4.  创建另一个新的运行方式帐户以查询用于运行状况数据检索的接入点。  
   
-    1.  开始创建新的运行方式帐户，在步骤 1 中所述。  
+    1.  开始创建新的运行方式帐户，如步骤1中所述。  
   
-    2.  上**常规属性**页上，选择**基本身份验证**帐户类型。  
+    2.  在 "**常规属性**" 页上，选择 "**基本身份验证**帐户类型"。  
   
         ![CreateRunAsAccountWizardGeneralProperties2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties2.png "CreateRunAsAccountWizardGeneralProperties2")  
   
-    3.  上**凭据**页上，提供有效凭据访问 APS 运行状况状态 Dmv。  
+    3.  在 "**凭据**" 页上，提供有效的凭据以访问 ap 健康状况状态 dmv。  
   
         ![CreateRunAsAccountWizardCredentials2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials2.png "CreateRunAsAccountWizardCredentials2")  
   
-5.  配置**Microsoft APS 操作帐户**新创建的运行方式帐户用于 APS 实例配置文件。  
+5.  配置**MICROSOFT Ap 操作帐户**配置文件，以对该 ap 实例使用新创建的运行方式帐户。  
   
-    1.  导航到**Microsoft APS 操作帐户**属性在步骤 2 中所述。  
+    1.  根据步骤2中的说明导航到**MICROSOFT Ap 操作帐户**属性。  
   
-    2.  上**运行方式帐户**页上，单击**添加...** 和 
+    2.  在 "**运行方式帐户**" 页上，单击 "**添加 ...** "，然后 
     3.  选择新创建的运行方式帐户。  
   
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
-## <a name="next-step"></a>下一步  
-现在，已配置的管理包，已准备好开始监视该设备。 有关详细信息，请参阅[监视使用 System Center Operations Manager 通过设备&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)。  
+## <a name="next-step"></a>后续步骤  
+配置管理包后，便可以开始监视设备了。 有关详细信息，请参阅[使用 &#40;分析平台系统&#41;监视设备 System Center Operations Manager ](monitor-the-appliance-by-using-system-center-operations-manager.md)。  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

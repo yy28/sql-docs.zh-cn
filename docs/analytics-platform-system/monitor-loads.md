@@ -1,6 +1,6 @@
 ---
-title: 有关并行数据仓库中监视加载 |Microsoft Docs
-description: 使用 Analytics Platform System (APS) 管理员控制台或并行数据仓库 (PDW) 系统视图监视活动和最新的加载。"
+title: 监视加载
+description: 使用分析平台系统（AP）管理控制台或并行数据仓库（PDW）系统视图来监视活动和最近负载。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,64 +8,65 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1eadf20e036c6c76cd3bece7c404fde2af4a7d70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960606"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400967"
 ---
-# <a name="monitor-loads-into-parallel-data-warehouse"></a>监视器将加载到并行数据仓库
-监视活动和最新[dwloader](dwloader.md)通过使用 Analytics Platform System (APS) 管理员控制台或并行数据仓库 (PDW) 加载[系统视图](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)。 
+# <a name="monitor-loads-into-parallel-data-warehouse"></a>监视负载到并行数据仓库
+使用分析平台系统（AP）管理控制台或并行数据仓库（PDW）[系统视图](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)监视活动和最近的[dwloader](dwloader.md)加载。 
   
 > [!TIP]  
-> 通过使用 INSERT 语句或商业智能工具，可使用 SQL 语句来执行加载启动某些负载。 
+> 某些负载使用 INSERT 语句或商业智能工具启动，这些工具使用 SQL 语句来执行负载。 
 
 <!-- MISSING LINKS
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>系统必备  
-无论哪种方法，用于监视负载，该登录名必须有权访问基础数据源。 
+## <a name="prerequisites"></a>必备条件  
+无论使用哪种方法来监视负载，登录名都必须有权访问基础数据源。 
 
 <!-- MISSING LINKS
 For the permissions to grant, see "Use All of the Admin Console" in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
 
 --> 
   
-## <a name="monitoring-loads"></a>监视加载  
+## <a name="monitoring-loads"></a>监视负载  
 以下部分介绍如何监视负载。  
   
-### <a name="to-monitor-loads-by-using-the-admin-console"></a>若要通过使用管理控制台中监视加载  
+### <a name="to-monitor-loads-by-using-the-admin-console"></a>使用管理控制台监视负载  
   
-1.  登录到管理员控制台。 <!-- MISSING LINKS See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md) for instructions. --> 
+1.  登录到管理控制台。 <!-- MISSING LINKS See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md) for instructions. --> 
   
-2.  在顶部菜单中，单击**加载**。 你将看到一个显示所有最近的可排序表和活动负载和其他信息，如负载是否已完成或仍处于活动状态。 单击列标题来对行进行排序。  
+2.  在顶部菜单中，单击 "**加载**"。 你将看到一个可排序的表，其中显示了所有最近和活动的负载以及其他信息，例如负载是已完成还是仍处于活动状态。 单击列标题可对行进行排序。  
   
-3.  若要查看在特定的负载的其他详细信息，请单击负载**ID**左侧列中。 在详细视图中，可以在加载的每个步骤来查看进度。  
+3.  若要查看特定负载的其他详细信息，请单击左栏中的负载**ID** 。 在详细视图中，可以查看每个负载步骤的进度。  
   
-有关在管理员控制台中显示的负载的相关元数据，请参阅这些系统视图的信息：  
+请参阅以下系统视图，了解有关管理控制台中显示的负载的元数据的信息：  
   
--   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
+-   [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
 -   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
--   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys. pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
-### <a name="to-monitor-loads-by-using-system-views"></a>若要通过使用系统视图监视加载  
-若要通过使用 SQL Server PDW 视图监视活动和最新的加载，请执行以下步骤。 使用每个系统视图，请参阅上的列和可能的值由视图返回的该视图的信息的文档。  
+### <a name="to-monitor-loads-by-using-system-views"></a>使用系统视图监视负载  
+若要使用 SQL Server PDW 视图监视活动和最近的负载，请按照以下步骤进行操作。 对于使用的每个系统视图，请参阅该视图的文档，以获取有关视图返回的列和可能值的信息。  
   
-1.  查找`request_id`用于在负载[sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)视图中查找中的加载程序命令行`command`此视图的列。  
+1.  通过在此视图的`command`列中找到加载程序命令行来查找[sys.databases dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)视图中的负载。 `request_id`  
   
-    例如，以下命令将返回的命令文本和当前状态，再加上`request_id`。  
+    例如，以下命令将返回命令文本和当前状态以及`request_id`。  
   
     ```sql  
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  使用`request_id`负载的其他信息以便使用来检索[sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) ，和[sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)视图。 例如，下面的查询返回`run_id`和上开始、 结束时间和持续时间的负载，以及任何错误的信息以及处理的行数的信息：  
+2.  使用`request_id`可通过使用[sys. pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)和[pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)视图检索负载的其他信息。 例如，下面的查询将返回`run_id`有关加载的开始时间、结束时间和持续时间以及所有错误的信息，以及有关处理的行数的信息：  
   
     ```sql  
     SELECT lbr.run_id,   

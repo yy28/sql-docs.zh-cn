@@ -1,5 +1,5 @@
 ---
-title: 使用 SSIS PDW 目标适配器创建一个脚本任务 |Microsoft Docs
+title: 使用 SSIS PDW 目标适配器创建脚本任务
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 ms.prod: sql
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c8781a84bd3a96364930618db83f6900009540be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961069"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401223"
 ---
-# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>创建一个脚本任务，使用 SSIS 并行数据仓库目标适配器
-此 SSIS 包脚本代码是使用 SSIS PDW 目标适配器的代码示例。  Integration Services 脚本任务可以在.Net 应用程序上下文中的 SSIS 控制流中执行可以完成几乎任何操作。 
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>创建使用 SSIS 并行数据仓库目标适配器的脚本任务
+此 SSIS 包脚本代码是使用 SSIS PDW 目标适配器的代码示例。  Integration Services 脚本任务使你可以执行几乎所有可在 SSIS 控制流上下文内的 .Net 应用程序中完成的操作。 
   
-## <a name="sample-code"></a>示例代码  
+## <a name="sample-code"></a>代码示例  
   
 1.  在 SSIS 中创建空白脚本任务。  
   
-2.  打开中的任务**脚本任务编辑器**，然后单击**编辑脚本**。  
+2.  在 "**脚本任务编辑器**" 中打开任务，然后单击 "**编辑脚本**"。  
   
-3.  编辑脚本以使用下面提供的代码。 通过进行以下更改自定义脚本保存到您的环境：  
+3.  编辑脚本以使用下面提供的代码。 通过进行以下更改，将脚本自定义到环境：  
   
-    -   必须保留的命名空间的脚本任务创建的脚本。 请记下命名空间的名称`namespace ST_<GUID>`和编辑下面的脚本，更改*ST_<GUID>* 到原始*GUID*的脚本任务。  
+    -   必须保留由脚本任务创建的脚本的命名空间。 记下命名空间`namespace ST_<GUID>`的名称并编辑下面的脚本，将*ST_<GUID> *更改为脚本任务的原始*GUID* 。  
   
-    -   四个匹配项的占位符值替换为*XXXXXXXX*使用适合你的环境和预期的操作的值。  
+    -   将占位符值为*xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx*的四个匹配项替换为适用于你的环境和预期操作的值。  
   
     ```c#  
     #region Help:  Introduction to the script task  
@@ -263,8 +264,8 @@ ms.locfileid: "67961069"
     }  
     ```  
   
-## <a name="see-also"></a>请参阅  
-[使用 Integration Services 加载数据](load-with-ssis.md)  
+## <a name="see-also"></a>另请参阅  
+[用 Integration Services 加载数据](load-with-ssis.md)  
 
 <!-- MISSING LINK
 [Install Integration Services Destination Adapters](install-integration-services-destination-adapters-sql-server-pdw.md)

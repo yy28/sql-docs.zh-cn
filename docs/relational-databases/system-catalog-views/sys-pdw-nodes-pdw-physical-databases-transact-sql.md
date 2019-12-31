@@ -1,6 +1,6 @@
 ---
-title: sys.pdw_nodes_pdw_physical_databases (TRANSACT-SQL) |Microsoft Docs
-ms.custom: ''
+title: sys. pdw_nodes_pdw_physical_databases （Transact-sql）
+ms.custom: seo-dt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,28 +12,28 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3dd4551d2dac629912eb4fe799d6a9e58ec1792b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001131"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399910"
 ---
-# <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
+# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  包含在计算节点上每个物理数据库的行。 若要获取有关数据库的详细的信息的聚合的物理数据库信息。 若要组合的信息，请加入`sys.pdw_nodes_pdw_physical_databases`到`sys.pdw_database_mappings`和`sys.databases`表。  
+  计算节点上的每个物理数据库在各占一行。 聚合物理数据库信息以获取有关数据库的详细信息。 若要合并信息，请`sys.pdw_nodes_pdw_physical_databases`将联接`sys.pdw_database_mappings`到`sys.databases`和表。  
   
-|列名|数据类型|描述|  
+|列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|数据库的对象 ID。 请注意，此值不相同中 database_id [sys.databases &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)视图。|  
-|physical_name|**sysname**|Shell/计算节点上数据库的物理名称。 此值是与 physical_name 列中的值相同[sys.pdw_database_mappings &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)视图。|  
-|pdw_node_id|**int**|与节点关联的唯一数字 id。|  
+|database_id|**整形**|数据库的对象 ID。 请注意，此值与[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)视图中的 database_id 不相同。|  
+|physical_name|**sysname**|Shell/计算节点上数据库的物理名称。 此值与[pdw_database_mappings sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)视图中 physical_name 列的值相同。|  
+|pdw_node_id|**整形**|与节点关联的唯一数字 id。|  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-returning"></a>A. 返回  
- 以下查询返回的名称和每个数据库的 ID 中 master 和相应的数据库名称在每个计算节点上。  
+### <a name="a-returning"></a>A. 正在  
+ 下面的查询返回 master 数据库中每个数据库的名称和 ID 以及每个计算节点上相应的数据库名称。  
   
 ```  
 SELECT D.database_id AS DBID_in_master, D.name AS UserDatabaseName,   
@@ -46,8 +46,8 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>B. 使用 sys.pdw_nodes_pdw_physical_databases 来收集详细的对象的信息  
- 以下查询显示有关索引的信息，其中包括有关数据库对象属于数据库中的对象的有用信息。  
+### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. 使用 sys. pdw_nodes_pdw_physical_databases 收集详细的对象信息  
+ 下面的查询显示有关索引的信息，并包括有关对象属于数据库中对象的数据库的有用信息。  
   
 ```  
 SELECT D.name AS UserDatabaseName, D.database_id AS DBIDinMaster,  
@@ -63,8 +63,8 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdwnodespdwphysicaldatabases-to-determine-the-encryption-state"></a>C. 使用 sys.pdw_nodes_pdw_physical_databases 来确定的加密状态  
- 下面的查询提供 AdventureWorksPDW2012 数据库加密状态。  
+### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. 使用 sys. pdw_nodes_pdw_physical_databases 确定加密状态  
+ 以下查询提供 AdventureWorksPDW2012 数据库的加密状态。  
   
 ```  
 WITH dek_encryption_state AS   
@@ -85,10 +85,10 @@ SELECT TOP 1 encryption_state
        ORDER BY (CASE encryption_state WHEN 3 THEN -1 ELSE encryption_state END) DESC;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys. pdw_database_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   
 

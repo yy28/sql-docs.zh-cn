@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 连接类型 (SSRS) |Microsoft Docs
+title: PowerPivot 连接类型（SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,31 +10,31 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6afaa65d5d0a9c368b35cc410a1753838c8a5480
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107193"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200418"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 连接类型 (SSRS)
   可以使用 SQL Server Analysis Services 数据处理扩展插件从在 SharePoint PowerPivot 库中发布的 PowerPivot 工作簿检索数据。  
   
- 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接或数据源 &#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  PowerPivot 数据源必须发布在 SharePoint 站点上的 PowerPivot 库中。  
   
- 为了支持从报表生成器到 PowerPivot 工作簿的连接，您在工作站计算机上必须具有 SQL Server 2008 R2 ADOMD.NET。 此客户端库与 PowerPivot for Excel 一起安装，但如果使用不具有此应用程序的计算机，必须下载并安装从 ADOMD.NET [SQL Server 2008 R2 功能包](https://go.microsoft.com/fwlink/?LinkId=192565)。  
+ 为了支持从报表生成器到 PowerPivot 工作簿的连接，您在工作站计算机上必须具有 SQL Server 2008 R2 ADOMD.NET。 此客户端库与 PowerPivot for Excel 一起安装，但如果您使用的计算机没有此应用程序，则必须从[SQL Server 2008 R2 功能包](https://www.microsoft.com/download/details.aspx?id=16978)下载和安装 ADOMD.NET。  
   
 ## <a name="data-source-type"></a>数据源类型  
  使用报表数据源类型： **Microsoft SQL Server Analysis Services**。  
   
 ## <a name="connection-string"></a>连接字符串  
- 连接字符串是指向 PowerPivot 库或其他库，例如，在 SharePoint 上发布的 PowerPivot 工作簿的 URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx 。  
+ 连接字符串是在 PowerPivot 库或其他库中的 SharePoint 上发布的 PowerPivot 工作簿的 URL，例如http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx。  
   
 ## <a name="credentials"></a>凭据  
- 指定您访问 PowerPivot 工作簿和 SharePoint 站点所需的凭据，例如 Windows 身份验证（集成安全性）。 有关详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。  
+ 指定您访问 PowerPivot 工作簿和 SharePoint 站点所需的凭据，例如 Windows 身份验证（集成安全性）。 有关详细信息，请参阅[Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。  
   
 ## <a name="queries"></a>查询  
  在连接到 PowerPivot 数据源之后，使用 MDX 图形查询，通过从基础数据结构中浏览并进行选择来生成查询。 生成查询后，运行该查询在“结果”窗格中查看示例数据。  
@@ -44,7 +44,7 @@ ms.locfileid: "66107193"
 ## <a name="filters"></a>筛选器  
  在“筛选器”窗格中，指定要在查询结果中排除或包含的维度和成员。  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>参数  
  在“筛选器”窗格中，针对某个筛选器选择 **“参数”** 选项，以便自动使用与所选筛选器对应的可用值创建报表参数。  
   
 ## <a name="remarks"></a>备注  
@@ -62,8 +62,8 @@ ms.locfileid: "66107193"
   
 -   报表仅包含来自 PowerPivot 数据源的 PowerPivot 数据。  
   
-## <a name="see-also"></a>请参阅  
- [Analysis Services MDX 查询设计器用户界面（报表生成器）](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
- [表达式（报表生成器和 SSRS）](../report-design/expressions-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另请参阅  
+ [Analysis Services MDX 查询设计器用户界面 &#40;报表生成器&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [表达式 &#40;报表生成器和 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

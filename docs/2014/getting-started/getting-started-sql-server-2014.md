@@ -1,7 +1,7 @@
 ---
-title: 入门 (SQL Server 2014) |Microsoft Docs
+title: 入门（SQL Server 2014） |Microsoft Docs
 ms.custom: ''
-ms.date: 05/25/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: database-engine
@@ -10,12 +10,12 @@ ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b571739fc268547e944dfe26672735a2520ff943
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb81724c8feb5ca34736b16aeb8f8d65b1018300
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62772373"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683492"
 ---
 # <a name="getting-started-sql-server-2014"></a>入门 (SQL Server 2014)
   查找 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 信息、系统要求、安装说明和其他内容的来源。  
@@ -26,11 +26,11 @@ ms.locfileid: "62772373"
   
  [SQL Server 2014 混合云简介](introduction-to-sql-server-2014-hybrid-cloud.md)  
   
- [SQL Server 2014 安装快速入门](quick-start-installation-of-sql-server-2014.md)  
+ [快速开始安装 SQL Server 2014](quick-start-installation-of-sql-server-2014.md)  
   
- [开始使用 SQL Server 的产品文档](../2014-toc/books-online-for-sql-server-2014.md)  
+ [SQL Server 的产品文档入门](../2014-toc/index.yml)  
   
- [获取帮助&#40;SQL Server 2014&#41;](getting-assistance-sql-server-2014.md)  
+ [获取帮助 &#40;SQL Server 2014&#41;](getting-assistance-sql-server-2014.md)  
   
  [向后兼容性](backward-compatibility.md)  
   

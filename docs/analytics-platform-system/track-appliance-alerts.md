@@ -1,6 +1,6 @@
 ---
-title: 跟踪设备警报-分析平台系统 |Microsoft Docs
-description: 跟踪分析平台系统中的设备警报。
+title: 跟踪设备警报
+description: 在分析平台系统中跟踪设备警报。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,38 +8,39 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 62f116b8e45512d5a6fc5ce50c0fbc76344103be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 03568666367bf6273f197994f572bbbbd62bb42e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960025"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399945"
 ---
-# <a name="track-appliance-alerts-in-analytics-platform-system"></a>跟踪分析平台系统中的设备警报
+# <a name="track-appliance-alerts-in-analytics-platform-system"></a>在分析平台系统中跟踪设备警报
 本主题说明如何使用管理控制台和系统视图来跟踪 SQL Server PDW 设备中的警报。  
   
-## <a name="to-track-appliance-alerts"></a>若要跟踪设备警报  
-SQL Server PDW 创建需要注意的硬件和软件问题的警报。 每个警报包含标题和问题的说明。  
+## <a name="to-track-appliance-alerts"></a>跟踪设备警报  
+SQL Server PDW 会为需要注意的硬件和软件问题创建警报。 每个警报都包含问题的标题和描述。  
   
-SQL Server PDW 中日志警报[sys.dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) DMV。 系统保留的限制为 10,000 的警报，并当超出限制时，首先删除最旧的警报。  
+SQL Server PDW 在[sys. dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) DMV 中记录警报。 系统将保留超过10000个警报的限制，并在超出限制时首先删除最早的警报。  
   
-### <a name="view-alerts-by-using-the-admin-console"></a>通过使用管理控制台查看警报  
-没有**警报**选项卡的 PDW 区域以及设备的 fabric 区域。 发生故障转移后，故障转移事件将包括在页面上的警报数量。 没有页面的 PDW 区域以及设备的 fabric 区域。 每个运行状况页都有一个选项卡。若要了解有关警报的详细信息，请单击**运行状况**页上，**警报**卡，并单击警报。  
+### <a name="view-alerts-by-using-the-admin-console"></a>使用管理控制台查看警报  
+对于 PDW 区域和设备的结构区域，有一个 "**警报**" 选项卡。 发生故障转移后，故障转移事件包含在页面上的警报数中。 对于该设备，有一个适用于 PDW 区域和结构区域的页面。 每个运行状况页面都有一个选项卡。若要了解有关警报的详细信息，请单击 "**运行状况**" 页和 "**警报**" 选项卡，然后单击 "警报"。  
   
 ![PDW 管理控制台警报](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
-上**警报**页：  
+在 "**警报**" 页上：  
   
--   若要查看警报历史记录，请单击**查看警报历史记录**链接。  
+-   若要查看警报历史记录，请单击 "**查看警报历史记录**" 链接。  
   
--   若要查看警报的组件和它的当前属性值，请单击警报的行。  
+-   若要查看警报组件及其当前属性值，请单击 "警报" 行。  
   
 -   若要查看有关引发警报的节点的详细信息，请单击节点名称。  
   
-### <a name="view-alerts-by-using-the-system-views"></a>通过使用系统视图查看警报  
-若要使用系统视图查看警报，请查询[sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)。 此 DMV 显示未更正的警报。 会审警报和错误的帮助，请使用[sys.dm_pdw_errors](../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) DMV。  
+### <a name="view-alerts-by-using-the-system-views"></a>使用系统视图查看警报  
+若要通过使用系统视图查看警报，请查询[sys.databases. dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)。 此 DMV 显示尚未更正的警报。 有关会审警报和错误的帮助，请使用[sys. dm_pdw_errors](../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) DMV。  
   
-下面的示例是用于查看当前警报的常用查询。  
+下面的示例是一个查看当前警报的常见查询。  
   
 ```sql  
 SELECT   
@@ -69,7 +70,7 @@ ORDER BY
     aa.[pdw_node_id];  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[设备监视&#40;分析平台系统&#41;](appliance-monitoring.md)  
+[设备监视 &#40;分析平台系统&#41;](appliance-monitoring.md)  
   

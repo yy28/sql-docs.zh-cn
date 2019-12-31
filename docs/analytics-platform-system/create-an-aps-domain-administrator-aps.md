@@ -1,6 +1,6 @@
 ---
-title: 创建的域管理员的分析平台系统 |Microsoft Docs
-description: 某些操作需要分析平台系统域管理员权限。 这解释了如何创建其他设备域管理员。
+title: 创建域管理员
+description: 某些操作需要分析平台系统域管理员特权。 这说明了如何创建其他设备管理员。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,44 +8,45 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 51ed729cda33b5d68a4d115c71f712e2b81d1a65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 1a0d50e485f0e8f48de11b2e5a3c27c9f9be047e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961095"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401235"
 ---
-# <a name="create-an-aps-domain-administrator"></a>创建 APS 域管理员
-某些操作需要分析平台系统域管理员权限。 这解释了如何创建其他设备域管理员。  
+# <a name="create-an-aps-domain-administrator"></a>创建 AP 域管理员
+某些操作需要分析平台系统域管理员特权。 这说明了如何创建其他设备管理员。  
   
 ## <a name="create-a-domain-administrator"></a>创建域管理员  
-拥有足够的权限来配置 AP 的所有节点，运行的用户**APS Configuration Manager** (`dwconfig.exe`) 必须是属于**Domain Admins**组。 若要启动和停止 APS 服务，用户必须是的成员**PdwControlNodeAccess**组。  
+要拥有足够的权限来配置所有的 ap 节点，运行**ap Configuration Manager** （`dwconfig.exe`）的用户必须是**Domain Admins**组的成员。 若要启动和停止 AP 服务，用户必须是**PdwControlNodeAccess**组的成员。  
   
-#### <a name="to-add-a-user-to-the-domain-admins-group"></a>若要将用户添加到 Domain Admins 组  
+#### <a name="to-add-a-user-to-the-domain-admins-group"></a>将用户添加到域管理员组  
   
-1.  登录到 active AD 节点 **(_装置\_域_-AD01**或 **_设备\_域_-AD02**)使用现有的设备域管理员帐户。  
+1.  使用现有的设备域管理员帐户登录到活动 AD 节点 **（_设备\_域_-AD01**或**_设备\_域_-AD02**）。  
   
-2.  在“开始”菜单上，单击“运行”  。 在中**开放**框中，键入**dsa.msc**。 单击 **“确定”** 。  
+2.  在 “开始” 菜单上，单击 **“运行”**。 在 "**打开**" 框中，键入**dsa.msc**。 单击“确定”****。  
   
-3.  在中**Active Directory 用户和计算机**程序中，右键单击**用户**，指向**新建**，然后单击**用户**。  
+3.  在**Active Directory 用户和计算机**"程序中，右键单击 **" 用户**"，指向"**新建**"，然后单击"**用户**"。  
   
-4.  在中**新建对象-用户**对话框中，填写新用户的说明，再单击**下一步**。  
+4.  在 "**新建对象-用户**" 对话框中，完成新用户的说明，然后单击 "**下一步**"。  
   
-    填写密码对话框，再单击**下一步**。  
+    填写 "密码" 对话框，然后单击 "**下一步**"。  
   
     > [!WARNING]  
-    > SQL Server PDW 不支持在域管理员或本地管理员密码的美元符号 （$）。 包含美元符号的密码将有效，可使用，但可以阻止升级和维护活动  
+    > SQL Server PDW 不支持域管理员或本地管理员密码中的美元符号字符（$）。 包含美元符号的密码将有效并且可用，但可阻止升级和维护活动  
   
-    确认新的用户说明，然后依次**完成**。  
+    确认新用户说明，然后单击 "**完成**"。  
   
-5.  在用户列表中，双击以打开用户属性对话框中的新用户。  
+5.  在用户列表中，双击新用户以打开 "用户属性" 对话框。  
   
-6.  上**隶属**选项卡上，单击**添加**。  
+6.  在 **“隶属于”** 选项卡上，单击 **“添加”**。  
   
-    类型**域管理员;PdwControlNodeAccess** ，然后单击**检查名称**。 单击 **“确定”** 。  
+    键入**Domain Admins;PdwControlNodeAccess** ，然后单击 "**检查名称**"。 单击“确定”****。  
   
-    这会添加新用户添加到**Domain Admins**组和**PdwControlNodeAccess**组。 单击 **“确定”** 。  
+    这会将新用户添加到**Domain Admins**组和**PdwControlNodeAccess**组。 单击“确定”****。  
   
-## <a name="see-also"></a>请参阅  
-[启动配置管理器&#40;分析平台系统&#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>另请参阅  
+[启动 Configuration Manager &#40;Analytics 平台系统&#41;](launch-the-configuration-manager.md)  
   

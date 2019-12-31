@@ -1,6 +1,6 @@
 ---
-title: 配置时区的分析平台系统 |Microsoft Docs
-description: 时区页上，可在 Analytics Platform System (APS) 设备上设置的所有节点的时区。
+title: 配置时区
+description: "\"时区\" 页面使你可以为分析平台系统（AP）设备上的所有节点设置时区。"
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f9997ed26cea5c63d69a7be84b25c247add9b692
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1da16790d011a628bc2536de051eb1181f06b8cf
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961445"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401394"
 ---
-# <a name="appliance-time-zone-configuration---analytics-platform-system"></a>设备时区配置的分析平台系统
-**时区**页，可在 Analytics Platform System (APS) 设备上设置的所有节点的时区。  
+# <a name="appliance-time-zone-configuration---analytics-platform-system"></a>设备时区配置-分析平台系统
+"**时区**" 页面使你可以为分析平台系统（ap）设备上的所有节点设置时区。  
   
-## <a name="to-set-the-time-zone"></a>若要设置时区  
+## <a name="to-set-the-time-zone"></a>设置时区  
   
-1.  启动配置管理器。 有关详细信息，请参阅[启动配置管理器&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。  
+1.  启动 Configuration Manager。 有关详细信息，请参阅[启动 Configuration Manager &#40;Analytics 平台系统&#41;](launch-the-configuration-manager.md)。  
   
-2.  使用停止设备服务**服务状态**页中配置管理器。 请参阅[PDW 服务状态&#40;Analytics Platform System&#41; ](pdw-services-status.md)有关的说明。  
+2.  使用 Configuration Manager 中的 "**服务状态**" 页停止设备服务。 有关说明，请参阅[PDW 服务状态 &#40;分析平台系统&#41;](pdw-services-status.md) 。  
   
-3.  在配置管理器的左窗格中，单击**时区**。 选择从所需的时区**时区**下拉列表菜单。 具体取决于你的位置，您还可选择选中的框旁边**自动调整夏令时时钟**。  
+3.  在 Configuration Manager 的左窗格中 **，单击 "时区"**。 从 **"时区**" 下拉菜单中选择所需的时区。 根据您的位置，您还可以选择 "**自动调整夏令时的时钟**" 旁边的复选框。  
   
-4.  单击**应用**以保存所做的更改。  
+4.  单击 "**应用**" 以保存所做的更改。  
   
-5.  使用重新启动设备服务**服务状态**页中配置管理器。 如果还想要更改的权限，则可以重新启动设备之前执行。  
+5.  使用 Configuration Manager 中的 "**服务状态**" 页重新启动设备服务。 如果还计划更改权限，可以在重新启动设备之前执行此操作。  
   
 ![DWConfig 工具时间](./media/appliance-time-zone-configuration/SQL_Server_PDW_DWConfig_ApplTopTime.png "SQL_Server_PDW_DWConfig_ApplTopTime")  
   
-## <a name="see-also"></a>请参阅  
-[启动配置管理器&#40;分析平台系统&#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>另请参阅  
+[启动 Configuration Manager &#40;Analytics 平台系统&#41;](launch-the-configuration-manager.md)  
   

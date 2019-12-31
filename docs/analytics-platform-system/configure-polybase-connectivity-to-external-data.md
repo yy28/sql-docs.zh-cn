@@ -1,6 +1,6 @@
 ---
-title: 配置 PolyBase 连接-分析平台系统 |Microsoft Docs
-description: 介绍如何在并行数据仓库，若要连接到外部 Hadoop 或 Microsoft Azure 存储 blob 数据源中配置 PolyBase。 使用 PolyBase 将运行集成来自多个源，包括 Hadoop、 Azure blob 存储和并行数据仓库的数据的查询。
+title: 配置 PolyBase 连接
+description: 介绍如何将 PolyBase 配置为并行数据仓库以连接到外部 Hadoop 或 Microsoft Azure 存储 blob 数据源。 使用 PolyBase 运行可集成多个源（包括 Hadoop、Azure blob 存储和并行数据仓库）中的数据的查询。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,31 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c218d686951e8855dd0687e35c1b777b0ae29617
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961252"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401275"
 ---
 # <a name="what-is-polybase"></a>什么是 PolyBase？
-PolyBase 使可以处理可以从中读取数据并将数据写入到外部数据源的 TRANSACT-SQL 查询在 Analytics Platform System (APS)。 访问外部数据的相同查询还可以在您的 AP 中包含的关系表。 这样即可将数据从外部源与高价值 APS 数据库中的关系数据合并。
+PolyBase 允许分析平台系统（AP）处理可从外部数据源读取数据并将数据写入外部数据源的 Transact-sql 查询。 访问外部数据的相同查询也可以在你的 AP 中包含关系表。 这样，你便可以将外部源中的数据与你的 AP 数据库中的高价值关系数据组合在一起。
 
 ![PolyBase 逻辑](media/polybase/polybase-logical.png)
 
-AP 上的 PolyBase 支持读取和写入到 Hadoop (HDFS) 文件系统和 Azure Blob 存储。 PolyBase 还能够将某些计算推送到 Hadoop 节点，作为 mapreduce 作业，以优化总体查询性能。 PolyBase AP 上的可以对分隔的文本、 ORC 和 Parquet 文件。 请参阅[什么是 PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide)实现的完整说明和其功能。
+在 AP 上，PolyBase 支持对 Hadoop （HDFS）文件系统和 Azure Blob 存储进行读取和写入。 PolyBase 还能够将某些计算作为 mapreduce 作业推送到 Hadoop 节点，以优化整体查询性能。 接入点上的 PolyBase 可对分隔文本、ORC 和 Parquet 文件进行操作。 请参阅[什么是 PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide) ，了解完整说明及其功能。
 
 > [!NOTE]
-> APS 目前仅支持标准常规用途 v1 本地冗余 (LRS) Azure Blob 存储。
+> AP 目前仅支持标准常规用途 v1 本地冗余（LRS） Azure Blob 存储。
 
 ## <a name="features-and-limitations"></a>功能和限制
-请参阅[功能和限制](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-versioned-feature-summary)的 PolyBase 摘要特色 APS 和其他 SQL Server 产品的可用和已知限制的。
+请参阅[功能和限制](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-versioned-feature-summary)，获取 PolyBase 功能的摘要和有关 ap 和其他 SQL Server 产品的已知限制。
 
 > [!NOTE] 
-> 在 PolyBase 的其余部分相关的文章介绍如何配置 PolyBase APS 2016 (AU6) 及更高版本。
+> PolyBase 相关文章的其余部分介绍了如何在 AP 2016 （AU6）和更高版本上配置 PolyBase。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob 存储](polybase-configure-azure-blob-storage.md)
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  

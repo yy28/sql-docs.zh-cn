@@ -1,6 +1,6 @@
 ---
-title: 使用管理控制台的分析平台系统监视 |Microsoft Docs
-description: Analytics Platform system 管理员控制台是一个 web 应用程序，它会显示设备状态、 运行状况和性能信息。 用户连接到 internet 浏览器通过在管理控制台。
+title: 用管理控制台监视
+description: 对于分析平台系统，管理控制台是一个 web 应用程序，用于显示设备状态、运行状况和性能信息。 用户通过 internet 浏览器连接到管理控制台。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,88 +8,89 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7fb3bf769d3145118359af0e33e3cf01a0b6d325
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960480"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400946"
 ---
-# <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>监视设备，但在管理控制台的分析平台系统
-在管理控制台是一个 SQL Server PDW web 应用程序，它会显示设备状态、 运行状况和性能信息。 用户连接到 Internet 资源管理器通过在管理控制台。  
+# <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>用管理控制台分析平台系统监视设备
+管理控制台是一个 SQL Server PDW web 应用程序，用于显示设备状态、运行状况和性能信息。 用户通过 Internet Explorer 连接到管理控制台。  
   
-## <a name="About"></a>有关在管理控制台  
+## <a name="About"></a>关于管理控制台  
 ![工具控制台主页](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**设备**  
+**本**  
 主页  
-提供的设备状态的快速摘要。  
+提供设备状态的快速摘要。  
   
 运行状况  
-显示的指示器，显示每个节点中每个受监视组件的运行状况工具拓扑。 可以查看各个节点的当前状态和节点组件的属性。  
+显示设备拓扑，其中显示每个节点内每个受监视组件的运行状况。 允许你查看节点组件的各个节点和属性的当前状态。  
   
-显示硬件和软件的警报。  
+显示硬件和软件警报。  
   
-性能监视器  
-显示性能监视器关系图。  
+性能监视  
+显示性能监视器图。  
   
 **并行数据仓库**  
 主页  
-提供的 PDW 状态的快速摘要。  
+提供 PDW 状态的快速摘要。  
   
 会话  
-显示活动 PDW 用户会话。 这可以帮助进行监视的资源争用。  
+显示活动 PDW 用户会话。 这有助于监视资源争用。  
   
 查询  
-显示正在运行的查询和最近完成的查询的列表。 如果有的话，它会显示相关的错误。 此外提供了查看查询执行计划和节点执行信息的详细信息的能力。  
+显示正在运行的查询和最近完成的查询的列表。 它显示相关错误（如果有）。 还可以查看查询执行计划和节点执行信息的详细信息。  
   
 加载  
-如果有，显示加载计划、 PDW 加载和相关的错误的当前状态。  
+显示加载计划、PDW 加载的当前状态以及相关错误（如果有）。  
   
-Backups/Restores  
-显示日志的 PDW 备份和还原操作。  
+备份/还原  
+显示 PDW 备份和还原操作的日志。  
   
 运行状况  
-显示的指示器，显示每个节点中每个受监视组件的运行状况 PDW 拓扑。 可以查看各个节点的当前状态和节点组件的属性。  
+显示 PDW 拓扑，其中显示每个节点内每个受监视组件的运行状况。 允许你查看节点组件的各个节点和属性的当前状态。  
   
-显示硬件和软件的警报。  
+显示硬件和软件警报。  
   
 资源  
 显示 PDW 资源锁及其当前状态的列表。  
   
 存储  
-总结了 PDW 存储使用率。  
+总结了 PDW 的存储利用率。  
   
-性能监视器  
-显示 PDW 性能监视器关系图。  
+性能监视  
+显示 PDW 性能监视器图。  
  
 > [!NOTE]  
-> 管理员控制台具有 1024 x 768 屏幕分辨率。 管理员控制台会显示最适合于的屏幕分辨率 1280 X 1024 或更高版本。  
+> 管理控制台的屏幕分辨率为1024x768。 使用 1280 X 1024 或更高版本的屏幕分辨率时，管理控制台显示最佳。  
   
-## <a name="Connect"></a>连接到管理员控制台  
-若要连接到管理控制台中，需要：  
+## <a name="Connect"></a>连接到管理控制台  
+若要连接到管理控制台，需要：  
   
--   在最低 Internet Explorer 版本 10。  
+-   至少为 Internet Explorer 版本10。  
   
--   若要访问管理控制台的权限。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
+-   访问管理控制台的权限。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   控制节点群集的 IP 地址。  从 SQL Server PDW 管理员处获取这。  
+-   控制节点群集的 IP 地址。  请从 SQL Server PDW 管理员那里获取此。  
   
-若要连接到管理控制台，使用 Internet Explorer 和 https，以浏览到控制节点群集的 IP 地址。 例如，如果是群集的控制节点的 IP 地址`10.192.63.102`，输入`https://10.192.63.102`在浏览器地址栏中。 第一个屏幕将请求你**登录名**并**密码**。 提供的 SQL Server 身份验证登录名和密码，或 Windows 身份验证登录名和 Windows 密码。 如果使用 Windows 身份验证登录名，在管理控制台将使用模拟。  
+若要连接到管理控制台，请使用 Internet Explorer 和 https 浏览到控件节点群集的 IP 地址。 例如，如果控制节点群集的 IP 地址为`10.192.63.102`，则在浏览器`https://10.192.63.102`地址栏中输入。 第一个屏幕将请求您的**登录名**和**密码**。 提供 SQL Server 身份验证登录名和密码，或 Windows 身份验证登录名和 Windows 密码。 如果使用 Windows 身份验证登录名，管理控制台将使用模拟。  
   
-## <a name="RelatedTasks"></a>管理员控制台任务  
-在管理控制台提供了监视以下功能：  
+## <a name="RelatedTasks"></a>管理控制台任务  
+管理员控制台提供了以下功能：  
   
 |||  
 |-|-|  
-|**信息类型**|**如何在管理控制台中的访问权限**|  
-|设备的总体状态|单击**设备状态**在顶部菜单中，或**主页**。|  
-|警报|单击**警报**。 有关详细信息，请参阅[了解管理员控制台警报&#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)。|  
-|设备组件和它们的状态|单击**设备状态**在顶部菜单中，或**主页**。|  
-|监视器请求 （包括查询、 加载、 备份和还原）|单击**会话**若要查看当前活动会话或新会话。<br /><br />单击**查询**若要查看当前活动或最新的查询。 显示查询的信息包括加载、 备份和还原。<br /><br />单击**锁**若要查看活动锁。|  
-|监视负载、 备份和还原的其他信息。|单击**负载**或**备份/还原**。|  
-|性能信息|单击**性能监视器**。|  
+|**信息类型**|**如何在管理员控制台中访问**|  
+|设备的总体状态|单击顶部菜单中的 "**设备状态**" 或 "**主页**"。|  
+|警报|单击 "**警报**"。 有关详细信息，请参阅[了解 &#40;Analytics Platform System&#41;的管理控制台警报](understanding-admin-console-alerts.md)。|  
+|设备组件及其状态|单击顶部菜单中的 "**设备状态**" 或 "**主页**"。|  
+|监视请求（包括查询、加载、备份和还原）|单击 "**会话**" 以查看当前活动或最新的会话。<br /><br />单击 "**查询**" 以查看当前活动或最近的查询。 为查询显示的信息包括负载、备份和还原。<br /><br />单击 "**锁定**" 查看活动锁。|  
+|监视有关加载、备份和还原的其他信息。|单击 "**加载**" 或 "**备份/还原**"。|  
+|性能信息|单击 "**性能监视器**"。|  
   
-## <a name="see-also"></a>请参阅  
-[设备监视&#40;分析平台系统&#41;](appliance-monitoring.md)  
+## <a name="see-also"></a>另请参阅  
+[设备监视 &#40;分析平台系统&#41;](appliance-monitoring.md)  
   

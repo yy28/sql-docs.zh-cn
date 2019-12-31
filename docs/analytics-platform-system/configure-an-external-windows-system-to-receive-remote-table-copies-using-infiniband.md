@@ -1,6 +1,6 @@
 ---
-title: 配置 Windows 以接收远程表副本的并行数据仓库 |Microsoft Docs
-description: 介绍如何购买和配置用于远程表复制功能在并行数据仓库中使用 InfiniBand 网络连接的非设备 Windows 系统。 Windows 系统将承载 SQL Server 数据库从 SQL Server PDW 数据库接收远程表副本。 它是独立于设备购买并连接到设备 InfiniBand 网络。
+title: 将 Windows 配置为接收远程表副本
+description: 介绍如何购买和配置使用 "不使用" 网络连接的非设备 Windows 系统，以便与并行数据仓库中的远程表复制功能一起使用。 Windows 系统将承载从 SQL Server PDW 数据库接收远程表复制的 SQL Server 数据库。 它与设备单独购买，并已连接到设备的 "无线网络"。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,58 +8,59 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 428dc5b4edda91f60a09a52c0326f881f257b32c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 837d41cc929d90b2494682645127f985b5768546
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961300"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401316"
 ---
-# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>配置外部 Windows 系统以接收远程表副本使用 InfiniBand 的并行数据仓库
-介绍如何购买和配置用于远程表复制功能在 SQL Server PDW 中使用 InfiniBand 网络连接的非设备 Windows 系统。 Windows 系统将承载 SQL Server 数据库从 SQL Server PDW 数据库接收远程表副本。 它是独立于设备购买并连接到设备 InfiniBand 网络。  
+# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>将外部 Windows 系统配置为使用 "无带宽并行" 数据仓库接收远程表副本
+介绍如何购买和配置使用 "未占用网络" 连接的非设备 Windows 系统，以便与 SQL Server PDW 中的 "远程表复制" 功能配合使用。 Windows 系统将承载从 SQL Server PDW 数据库接收远程表复制的 SQL Server 数据库。 它与设备单独购买，并已连接到设备的 "无线网络"。  
   
 > [!NOTE]  
-> 通过 InfiniBand 网络连接不需要使用远程表副本。 如果以太网带宽满足你的需求，可以完成通过以太网网络进行连接。  
+> 使用远程表复制不需要通过无带宽网络进行连接。 如果以太网带宽满足你的需求，则可以通过以太网连接。  
   
-本主题介绍配置远程表复制的配置步骤之一。 所有配置步骤的列表，请参阅[远程表复制](remote-table-copy.md)  
+本主题介绍配置远程表复制的配置步骤之一。 有关所有配置步骤的列表，请参阅[远程表复制](remote-table-copy.md)  
   
 ## <a name="before-you-begin"></a>开始之前  
-配置外部 Windows 系统之前，你必须：  
+在配置外部 Windows 系统之前，必须执行以下操作：  
   
-1.  购买或提供一个 Windows 系统，将收到远程副本。  
+1.  购买或提供将接收远程副本的 Windows 系统。  
   
-2.  机架控件机架中的 Windows 系统 （如果没有足够的空间） 或关闭足够到设备，以便可以将其连接到设备 InfiniBand 网络。  
+2.  将 Windows 系统置于控制机架（如果有足够的空间）或接近于设备，以便可以将其连接到设备的无线网络。  
   
-3.  从你的设备硬件供应商购买 InfiniBand 电缆和 InfiniBand 网络适配器。 我们建议购买具有容错能力的两个端口的网络适配器，接收导出的数据时。 两个端口网络适配器建议，但不是一项要求。  
+3.  从你的设备硬件供应商处购买无工作电缆和不受阻止的网络适配器。 在接收导出的数据时，我们建议购买包含两个端口的网络适配器以实现容错。 建议使用两个端口网络适配器，但这不是必需的。  
   
 ## <a name="HowToWindows"></a>配置外部 Windows 系统以接收远程表副本  
-若要配置外部 Windows 系统，请使用以下步骤：  
+若要配置外部 Windows 系统，请执行以下步骤：  
   
-1.  InfiniBand 网络适配器安装到您的 Windows 系统。  
+1.  将 "无线网络适配器" 安装到 Windows 系统。  
   
-2.  InfiniBand 网络适配器连接到主 InfiniBand 开关使用 InfiniBand 电缆在控件机架中。  
+2.  使用不带缆线将无线网络适配器连接到控制机架中的主要未被控制交换机。  
   
-3.  安装和配置 InfiniBand 网络适配器的相应 Windows 驱动程序。  
+3.  为未被配置的网络适配器安装和配置适当的 Windows 驱动程序。  
   
-    Windows 的 InfiniBand 驱动程序开发的 OpenFabrics 联盟的 InfiniBand 供应商。  使用 InfiniBand 适配器中，可能已分发的正确驱动程序。 如果没有，可以从 www.openfabrics.org 下载驱动程序。  
+    适用于 Windows 的不受使用的驱动程序由 OpenFabrics 联盟（一种行业协会，这是一家不受人  正确的驱动程序可能已随你的未使用适配器一起分发。 否则，可以从 www.openfabrics.org 下载该驱动程序。  
   
-4.  在适配器上配置的每个端口的 IP 地址。 SMP 系统需要通过一系列保留的地址的静态 IP 地址用于此目的。 配置根据以下参数的第一个端口：  
+4.  为适配器上的每个端口配置 IP 地址。 SMP 系统需要使用为此目的而保留的地址范围中的静态 IP 地址。 根据以下参数配置第一个端口：  
   
-    -   IP 网络地址：172.16.132.x  
+    -   IP 网络地址： 172.16.132. x  
   
-    -   IP 子网掩码：255.255.128.0  
+    -   IP 子网掩码：255.255.128。0  
   
-    -   主机的 IP 范围：1-254  
+    -   IP 主机范围：1-254  
   
-    对于具有两个端口的 InfiniBand 网络适配器，配置以下参数根据第二个端口：  
+    对于具有两个端口的无限网络适配器，请根据以下参数配置第二个端口：  
   
-    -   IP 网络地址：172.16.132.x  
+    -   IP 网络地址： 172.16.132. x  
   
-    -   IP 子网掩码：255.255.128.0  
+    -   IP 子网掩码：255.255.128。0  
   
-    -   主机的 IP 范围：1-254  
+    -   IP 主机范围：1-254  
   
-5.  如果使用两个端口适配器，或多个外部 Windows 系统的连接到设备，将每个系统分配每个 IP 子网内不同的主机数。  
+5.  如果使用了两个端口适配器，或多个外部 Windows 系统连接到设备，则为每个系统分配不同的主机号，每个 IP 子网。  
   
 <!-- MISSING LINKS 
 ## See Also  

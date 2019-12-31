@@ -1,6 +1,6 @@
 ---
-title: 常见子表达式分析平台系统中所述 |Microsoft Docs
-description: 在分析平台系统 CU7.3 中引入的显示示例查询改进
+title: Common 子表达式
+description: 显示在分析平台系统 CU 7.3 中引入的示例查询改进
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,17 +8,18 @@ ms.topic: conceptual
 ms.date: 12/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 604f95e42cee59fb17f73b8f9e242c6466e60e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d05314f4d100e469c621d42a10ed89671b2bdd9c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961316"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401337"
 ---
-# <a name="common-subexpression-elimination-explained"></a>所述的公用子表达式消除
+# <a name="common-subexpression-elimination-explained"></a>介绍的常见子表达式消除
 
-APS CU7.3 可以提高查询性能与在 SQL 查询优化器的公用子表达式消除。 改进提高了两种方法中的查询。 第一个好处是可以识别并消除此类表达式帮助减少 SQL 编译时间。 第二个和更重要的好处是这些冗余的子表达式的数据移动操作将消除因此执行时间的查询变得更快。
+通过在 SQL 查询优化器中消除常见子表达式，可以通过 AP CU 7.3 提高查询性能。 改进通过两种方式改进了查询。 第一项优势是能够识别和消除此类表达式，有助于减少 SQL 编译时间。 第二个和更重要的优点是，这些冗余子表达式的数据移动操作被消除，因此查询的执行时间更快。
 
 ```sql
 select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_name worst_performing
@@ -54,14 +55,14 @@ select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_nam
   order by asceding.rnk
   ;
 ```
-请考虑上述查询从 TPC-DS 基准测试工具。  在上面的查询中，子查询是相同的但两个不同的方式排序的 order by 子句与 rank() 过程函数。 上一步 CU7.3，此子查询将获取评估和升序和一次按降序排序顺序，不会产生两个数据移动操作执行两次，一次。 在安装后 APS CU7.3，子查询的一部分进行计算一次，从而可减少数据移动并完成更快的查询。
+请考虑以下从 TPC-DS 基准工具进行的查询。  在上面的查询中，子查询是相同的，但 with rank （） over 函数的 order by 子句以两种不同的方式进行排序。 在 CU 7.3 之前，此子查询将被评估并执行两次，一次针对升序，一次用于降序，产生两个数据移动操作。 安装了 AP CU 7.3 后，子查询部分将被计算一次，从而减少数据移动并更快地完成查询。
 
-我们引入了[功能开关](appliance-feature-switch.md)名为 OptimizeCommonSubExpressions，将允许即使已经升级到 AP CU7.3 测试此功能。 该功能默认情况下，但可关闭。 
+我们引入了一个名为 "OptimizeCommonSubExpressions" 的[功能开关](appliance-feature-switch.md)，该开关可用于在升级到 ap cu 7.3 后测试该功能。 此功能在默认情况下处于打开状态，但可以关闭。 
 
 > [!NOTE] 
-> 对功能开关值的更改需要重新启动服务。
+> 更改功能开关值需要重启服务。
 
-你可以通过在测试环境中创建以下表和评估上述查询的 explain 计划尝试示例查询。 
+您可以尝试通过在测试环境中创建以下各表，并为上述查询评估说明计划。 
 
 ```sql
 CREATE TABLE [dbo].[store_sales] (
@@ -117,6 +118,6 @@ CREATE TABLE [dbo].[item] (
 )
 WITH (CLUSTERED INDEX ( [i_item_sk] ASC ), DISTRIBUTION = REPLICATE);
 ```
-如果看一看的 explain 计划的查询，你将看到之前 CU7.3 （），或功能开关处于关闭状态时该查询具有 17 总数的操作和 CU7.3 后 （或带功能开关开启） 相同的查询显示了 9 操作的总数。 如果您只是要计算的数据移动操作，您将看到前面的计划新的计划中具有与两个移动操作的四个移动操作。 新查询优化器就能够通过重复使用它已经使用的新计划，从而减少查询运行时创建的临时表来减少两个数据移动操作。 
+如果你查看查询的解释计划，你将看到在 CU 7.3 之前（或者当功能开关关闭时），查询具有17个操作总数，在 CU 7.3 之后（或在打开功能开关的情况下），同一查询显示了9个操作的总数。 如果只是对数据移动操作进行计数，则会看到，在新计划中，上一计划具有四个移动操作和两个移动操作。 新的查询优化器可以通过重复使用已创建的临时表来减少两个数据移动操作，从而减少查询运行时。 
 
 

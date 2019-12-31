@@ -1,6 +1,6 @@
 ---
-title: 启动分析平台系统的配置管理器-|Microsoft Docs
-description: 启动分析平台系统设备的配置管理器工具的说明。
+title: 启动 Configuration Manager
+description: 有关为分析平台系统设备启动 Configuration Manager 工具的说明。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,44 +8,45 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7aef9ada4a93605460cf2759dbe9deeddfc9e0d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960728"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401057"
 ---
-# <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>在分析平台系统中启动配置管理器
-本主题说明用于启动**Configuration Manager**的分析平台系统 appliance。  
+# <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>在分析平台系统中启动 Configuration Manager
+本主题提供有关为分析平台系统设备启动**Configuration Manager**的说明。  
   
 ## <a name="before-you-begin"></a>开始之前  
   
-### <a name="prerequisites"></a>先决条件  
-Analytics Platform System**Configuration Manager**只能由设备域管理员运行。 若要运行此工具时，需要设备域管理员密码。 若要创建 AP 的其他管理员，请参阅[创建 APS 域管理员&#40;APS&#41;](create-an-aps-domain-administrator-aps.md)。  
+### <a name="prerequisites"></a>必备条件  
+分析平台系统**Configuration Manager**只能由设备域管理员运行。 若要运行此工具，需要设备管理员的密码。 若要创建其他的 AP 管理员，请参阅[创建 Ap 域管理员 &#40;ap&#41;](create-an-aps-domain-administrator-aps.md)。  
   
-## <a name="Accessing"></a>启动配置管理器工具  
-若要运行 Configuration Manager，使用远程桌面连接到 PDW 控制节点 ( **_PDW_region_-CTL01**) 节点，并作为登录_appliance_domain_ **\Administrator**。 启动时**Configuration Manager**程序中，使用**以管理员身份运行**选项以确保使用你的管理员凭据。  
+## <a name="Accessing"></a>启动 Configuration Manager 工具  
+若要运行 Configuration Manager，请使用远程桌面连接到 PDW 控制节点（**_PDW_region_CTL01**）节点，并以_appliance_domain_**\Administrator**身份登录。 启动**Configuration Manager**程序时，请使用 "以**管理员身份运行**" 选项，以确保使用您的管理员凭据。  
   
-#### <a name="to-launch-from-a-browser-window"></a>若要在浏览器窗口中启动  
+#### <a name="to-launch-from-a-browser-window"></a>从浏览器窗口启动  
   
-1.  打开浏览器并导航到目录`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
+1.  打开浏览器并导航到该目录`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
   
-2.  右键单击`dwconfig.exe`，然后单击**以管理员身份运行**。  
+2.  右键单击`dwconfig.exe` ，然后单击 "以**管理员身份运行**"。  
   
-#### <a name="to-launch-from-a-command-prompt"></a>若要在命令提示符下启动  
+#### <a name="to-launch-from-a-command-prompt"></a>在命令提示符下启动  
   
-1.  在桌面上，打开**启动**菜单上，单击**程序**，单击**附件**，右键单击**命令提示符下**，然后单击**以管理员身份运行**。  
+1.  在桌面上，打开 "**开始**" 菜单，单击 "**程序**"，单击 "**附件**"，右键单击 "**命令提示符**"，然后单击 "以**管理员身份运行**"。  
   
-2.  在命令提示符处，输入以下命令，将目录更改： `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`。  
+2.  在命令提示符下，输入以下命令以更改目录： `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`。  
   
 3.  在命令提示符处，输入`dwconfig.exe`。  
   
-之后**Configuration Manager**是开始，你将看到在左窗格中所列的所有可用功能。 本部分的其余部分讨论如何执行该工具中提供每个操作。  
+开始**Configuration Manager**后，你将看到左窗格中列出的所有可用功能。 本部分的其余部分讨论如何执行工具中的每个可用操作。  
   
-若要关闭并退出**Configuration Manager**，单击**退出**任何屏幕的右下角。  
+若要关闭并退出**Configuration Manager**，请单击任何屏幕右下角的 "**退出**"。  
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## <a name="see-also"></a>请参阅  
-[通过使用管理控制台监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+## <a name="see-also"></a>另请参阅  
+[使用管理控制台 &#40;分析平台系统来监视设备&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

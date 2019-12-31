@@ -1,6 +1,6 @@
 ---
-title: 防病毒软件分析平台系统 (AP) |Microsoft Docs
-description: 如果你的数据中心需要防病毒软件, 请使用以下准则在分析平台系统 (AP) 上安装防病毒软件。 除非您的数据中心要求, 否则我们建议不要安装防病毒软件。
+title: 防病毒软件
+description: 如果你的数据中心需要防病毒软件，请使用以下准则在分析平台系统（AP）上安装防病毒软件。 除非您的数据中心要求，否则我们建议不要安装防病毒软件。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 92a34405e75c37cd0347b15aa445b98d84ebcc2a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c3687b839e52e64350591402c3aa19e9c2c54ac7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176052"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401475"
 ---
-# <a name="antivirus-software-for-analytics-platform-system-aps"></a>用于分析平台系统 (AP) 的防病毒软件
-如果你的数据中心需要防病毒软件, 请使用以下准则在分析平台系统上安装防病毒软件。 除非您的数据中心要求, 否则我们建议不要安装防病毒软件。  
+# <a name="antivirus-software-for-analytics-platform-system-aps"></a>用于分析平台系统（AP）的防病毒软件
+如果你的数据中心需要防病毒软件，请使用以下准则在分析平台系统上安装防病毒软件。 除非您的数据中心要求，否则我们建议不要安装防病毒软件。  
   
 > [!WARNING]  
-> 我们强烈建议你分别为每台计算机和分析平台系统单独评估安全风险, 并选择适用于每台计算机的安全风险级别的工具。 此外, 我们建议在推出任何病毒保护项目之前, 在完全负载下测试整个系统, 以衡量稳定性和性能方面的变化。  
+> 我们强烈建议你分别为每台计算机和分析平台系统单独评估安全风险，并选择适用于每台计算机的安全风险级别的工具。 此外，我们建议在推出任何病毒保护项目之前，在完全负载下测试整个系统，以衡量稳定性和性能方面的变化。  
 >   
-> 病毒防护软件需要执行一些系统资源。 你必须在安装防病毒软件之前和之后执行测试, 以确定对分析平台系统是否有任何性能影响。  
+> 病毒防护软件需要执行一些系统资源。 你必须在安装防病毒软件之前和之后执行测试，以确定对分析平台系统是否有任何性能影响。  
   
 本主题基于[如何选择要在运行 SQL Server 的计算机上运行的防病毒软件](https://support.microsoft.com/kb/309422)和[知识库文章 961804](https://support.microsoft.com/kb/961804/en-us)中的指南。  
   
 ## <a name="exclusion-list-for-physical-hosts"></a>物理主机的排除列表  
-若要在物理主机上安装防病毒软件, 请排除以下目录和进程列表。 防病毒软件不应对它们进行扫描。  
+若要在物理主机上安装防病毒软件，请排除以下目录和进程列表。 防病毒软件不应对它们进行扫描。  
   
-**排除以下目录:**  
+**排除以下目录：**  
   
 -   C:\ProgramData\Microsoft\Windows\Hyper-V-虚拟机配置目录  
   
@@ -36,14 +37,14 @@ ms.locfileid: "70176052"
   
 -   C:\clusterStorage-虚拟硬盘驱动器目录  
   
-**排除这些进程:**  
+**排除这些进程：**  
   
--   虚拟机管理 (Vmms)  
+-   虚拟机管理（Vmms）  
   
--   虚拟机工作进程 (Vmwp)  
+-   虚拟机工作进程（Vmwp）  
   
-## <a name="exclusion-list-for-virtual-machines-vms"></a>虚拟机 (Vm) 的排除列表  
-若要在 Vm 上安装防病毒软件, 请排除以下目录和文件列表。 防病毒软件不应对它们进行扫描。  
+## <a name="exclusion-list-for-virtual-machines-vms"></a>虚拟机（Vm）的排除列表  
+若要在 Vm 上安装防病毒软件，请排除以下目录和文件列表。 防病毒软件不应对它们进行扫描。  
   
 **_PDW_region_-CTL01**  
   
@@ -51,7 +52,7 @@ ms.locfileid: "70176052"
   
 -   G:\  
   
-**_appliance_domain_** 和 **_appliance_domain_-AD02**  
+**_appliance_domain_-AD01**和** _appliance_domain_-AD02**  
   
 -   无限制  
   
@@ -73,6 +74,6 @@ ms.locfileid: "70176052"
   
 -   C:\iscsitarget  
   
-## <a name="see-also"></a>请参阅  
-[设备管理任务&#40;分析平台系统&#41;](appliance-management-tasks.md)  
+## <a name="see-also"></a>另请参阅  
+[&#40;Analytics Platform System&#41;的设备管理任务](appliance-management-tasks.md)  
   

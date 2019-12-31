@@ -1,6 +1,6 @@
 ---
-title: 使用 Integration Services-并行数据仓库加载数据 |Microsoft Docs
-description: 提供用于使用 SQL Server Integration Services (SSIS) 包来加载数据到并行数据仓库 (PDW) 的引用和部署信息。
+title: 使用 Integration Services 加载
+description: 提供使用 SQL Server Integration Services （SSIS）包将数据加载到并行数据仓库（PDW）的参考和部署信息。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,15 +8,16 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 90d9f7422a3073df79a93949b3b7ed2e94208412
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960671"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401015"
 ---
-# <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>使用 Integration Services 并行数据仓库加载数据
-提供了数据加载到 SQL Server 并行数据仓库，通过使用 SQL Server Integration Services (SSIS) 包的引用和部署信息。  
+# <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>将 Integration Services 中的数据加载到并行数据仓库
+提供使用 SQL Server Integration Services （SSIS）包将数据加载到 SQL Server 并行数据仓库的参考和部署信息。  
   
 <!-- MISSING LINKS
 
@@ -32,45 +33,45 @@ For general information about developing Integration Services packages, see [Des
 
 -->
   
-## <a name="Basics"></a>基础知识  
-Integration Services 是高性能提取、 转换和加载 (ETL) 的数据，SQL Server 组件和通常用于填充和更新数据仓库。  
+## <a name="Basics"></a>传授  
+Integration Services 是对数据进行高性能提取、转换和加载（ETL）的 SQL Server 组件，通常用于填充和更新数据仓库。  
   
-PDW 目标适配器是可让您通过使用 Integration Services dtsx 包将数据加载到 PDW 的 Integration Services 组件。 中的 SQL ServerPDW 包工作流，可以加载并合并来自多个源的数据和将数据加载到多个目标。 加载将在包内和同时运行的多个包中并行发生，直到在同一工具上并行运行最多 10 个加载。  
+PDW 目标适配器是 Integration Services 组件，可让你使用 Integration Services .dtsx 包将数据加载到 PDW。 在 SQL ServerPDW 的包工作流中，可以从多个源加载和合并数据，并将数据加载到多个目标。 加载将在包内和同时运行的多个包中并行发生，直到在同一工具上并行运行最多 10 个加载。  
   
-除了本主题中所述的任务，可以使用的 Integration Services 的其他功能来筛选、 转换、 分析并加载到数据仓库之前清理您的数据。 还可以通过运行 SQL 语句、运行子包或发送电子邮件，增强包的工作流。  
+除了本主题中所述的任务之外，还可以使用 Integration Services 的其他功能在将数据加载到数据仓库中之前，对数据进行筛选、转换、分析和清理操作。 还可以通过运行 SQL 语句、运行子包或发送电子邮件，增强包的工作流。  
   
-Integration Services 的完整文档，请参阅[SQL Server Integration Services](../integration-services/sql-server-integration-services.md)。  
+有关 Integration Services 的完整文档，请参阅[SQL Server Integration Services](../integration-services/sql-server-integration-services.md)。  
   
 ## <a name="HowToDeployPackage"></a>用于运行 Integration Services 包的方法  
-使用下列方法之一运行 Integration Services 包。  
+使用以下方法之一运行 Integration Services 包。  
   
-### <a name="run-from-sql-server-2008-r2-business-intelligence-development-studio-bids"></a>从 SQL Server 2008 R2 Business Intelligence Development Studio (BIDS) 中运行  
-若要运行中的包在 BIDS 中，右键单击包，然后选择**执行包**。  
+### <a name="run-from-sql-server-2008-r2-business-intelligence-development-studio-bids"></a>从 SQL Server 2008 R2 Business Intelligence Development Studio （投标）运行  
+若要从投标内运行包，请右键单击包，然后选择 "**执行包**"。  
   
-默认情况下，BIDS 运行使用 64 位二进制文件的包。 这由**Run64BitRuntime**包属性。 若要设置此属性，请转到**解决方案资源管理器**，右键单击项目，然后选择**属性**。 上**Integration Services 属性页**，请转到**配置属性**，然后选择**调试**。 你将看到**Run64BitRuntime**下的属性**调试选项**。 若要使用 32 位运行时，请将此设置为**False**。 若要使用 64 位运行时，请将此设置为 **，则返回 True**。  
+默认情况下，投标使用64位二进制文件运行包。 这是由**Run64BitRuntime** package 属性决定的。 若要设置此属性，请跳到**解决方案资源管理器**，右键单击项目，然后选择 "**属性**"。 在**Integration Services 属性页**上，中转到 "**配置属性**"，然后选择 "**调试**"。 你将在 "**调试" 选项**下看到 " **Run64BitRuntime** " 属性。 若要使用32位运行时，请将此项设置为**False**。 若要使用64位运行时，请将此值设置为**True**。  
   
-### <a name="run-from-sql-server-2012-sql-server-data-tools"></a>运行从 SQL Server 2012 SQL Server 数据工具  
-若要运行 SQL Server Data Tools 中的包，右键单击您的包，然后选择**执行包**。  
+### <a name="run-from-sql-server-2012-sql-server-data-tools"></a>从 SQL Server 2012 SQL Server Data Tools 运行  
+若要从 SQL Server Data Tools 中运行包，请右键单击包，然后选择 "**执行包**"。  
   
 ### <a name="run-from-powershell"></a>从 PowerShell 运行  
-若要从 Windows PowerShell 中运行包使用**dtexec**实用程序： `dtexec /FILE <packagePath>`  
+若要从 Windows PowerShell 使用**dtexec**实用工具运行包，请执行以下操作：`dtexec /FILE <packagePath>`  
   
-例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+例如，`dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
-### <a name="run-from-a-windows-command-prompt"></a>运行从 Windows 命令提示符 
-若要从 Windows 命令提示符处，运行包使用**dtexec**实用程序： `dtexec /FILE <packagePath>`  
+### <a name="run-from-a-windows-command-prompt"></a>从 Windows 命令提示符运行 
+若要从 Windows 命令提示符运行包，请使用**dtexec**实用工具：`dtexec /FILE <packagePath>`  
   
-例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+例如：`dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>数据类型  
-当使用 Integration Services 将数据从数据源加载到 SQL Server PDW 数据库，数据首先映射源数据中到 Integration Services 数据类型。 这允许来自多个数据源的数据映射到一组通用的数据类型。  
+使用 Integration Services 将数据从数据源加载到 SQL Server PDW 数据库时，会首先将数据从源数据映射到 Integration Services 数据类型。 这允许来自多个数据源的数据映射到一组通用的数据类型。  
   
-然后将数据从 Integration Services 映射到 SQL Server PDW 数据类型。 对于每个 SQL Server PDW 数据类型下, 表列出了可以转换为 SQL Server PDW 数据类型的 Integration Services 数据类型。  
+然后，将数据从 Integration Services 映射到 SQL Server PDW 数据类型。 对于每个 SQL Server PDW 数据类型，下表列出了可转换为 SQL Server PDW 数据类型的 Integration Services 数据类型。  
   
-|PDW 数据类型|映射到 PDW 数据类型的 integration Services 数据类型 (s)|  
+|PDW 数据类型|映射到 PDW 数据类型的 Integration Services 数据类型|  
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|  
 |BIT|DT_BOOL|  
-|bigint|DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4|  
+|BIGINT|DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4|  
 |CHAR|DT_STR|  
 |DATE|DT_DBDATE|  
 |DATETIME|DT_DATE、DT_DBDATE、DT_DBTIMESTAMP、DT_DBTIMESTAMP2|  
@@ -83,7 +84,7 @@ Integration Services 的完整文档，请参阅[SQL Server Integration Services
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL、DT_I1、DT_I2、DT_I4、DT_I8、DT_NUMERIC、DT_UI1、DT_UI2、DT_UI4、DT_UI8|  
 |NVARCHAR|DT_WSTR、DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1、DT_I2、DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -92,9 +93,9 @@ Integration Services 的完整文档，请参阅[SQL Server Integration Services
 |VARBINARY|DT_BYTES|  
 |VARCHAR|DT_STR|  
   
-**对数据类型精度的有限的支持**  
+**对数据类型精度的有限支持**  
   
-PDW 生成验证错误，如果映射包含的值的精度大于 28 的 DT_NUMERIC 或 DT_DECIMAL 输入的列。  
+PDW 如果映射的 DT_NUMERIC 或 DT_DECIMAL 输入列中包含的值的精度大于28，则会生成验证错误。  
   
 **不支持的数据类型**  
   
@@ -112,48 +113,48 @@ SQL Server PDW 不支持以下 Integration Services 数据类型：
   
 -   DT_TEXT  
   
-若要加载到 SQL Server PDW 中包含这些类型的数据的列，必须将数据转换为兼容的数据类型的数据流中添加数据转换上游组件。  
+若要将包含这些类型数据的列加载到 SQL Server PDW 中，必须在数据流中添加一个上游数据转换，以将数据转换为兼容的数据类型。  
   
 ## <a name="permissions"></a>权限  
 若要运行 Integration Services 加载包，需要：  
   
--   加载数据库的权限。  
+-   对数据库的 LOAD 权限。  
   
--   适用的插入、 更新和删除目标表的权限。  
+-   针对目标表的相应的 INSERT、UPDATE、DELETE 权限。  
   
--   如果使用临时数据库，则将在临时数据库创建权限。 这是用于创建临时表。  
+-   如果使用临时数据库，则对临时数据库具有 CREATE 权限。 这适用于创建临时表。  
   
--   如果不使用任何临时数据库，则在目标数据库上的创建权限。 这是用于创建临时表。  
+-   如果未使用任何临时数据库，则在目标数据库上创建权限。 这适用于创建临时表。  
   
 ## <a name="GenRemarks"></a>一般备注  
-当 Integration Services 包具有多个运行的 SQL Server PDW 目标，并且其中一个连接将终止时，则将停止 Integration Services 将数据推送到每个 SQL Server PDW 目标。  
+如果 Integration Services 包具有多个正在运行的 SQL Server PDW 目标，其中一个连接被终止，Integration Services 将停止向所有 SQL Server PDW 目标推送数据。  
   
-## <a name="Limits"></a>限制和局限  
-为 Integration Services 包，相同的数据源的 SQL Server PDW 目标数受 active 加载的最大数目。 该最大值是预先配置的，用户不可配置。 
+## <a name="Limits"></a>局限和限制  
+对于 Integration Services 包，相同数据源的 SQL Server PDW 目标数受最大活动负载的数目的限制。 该最大值是预先配置的，用户不可配置。 
 
 <!-- MISSING LINKS
 For the maximum number of loads and queued loads per appliance, see [Minimum and maximum values](minimum-and-maximum-values.md).  
 -->
   
-运行包时，相同的数据源每个 Integration Services 包目标将计为一个负载。 例如，假定处于活动状态的加载的最大数目为 10。 如果该包尝试为相同数据源打开 11 个或更多的目标，则该包将不运行。  
+同一数据源的每个 Integration Services 包目标将计入包运行时的一个负载。 例如，假定处于活动状态的加载的最大数目为 10。 如果该包尝试为相同数据源打开 11 个或更多的目标，则该包将不运行。  
   
 多个包可以同时运行，只要每个包所使用的处于活动状态的加载数目未超过该最大数目。 例如，如果处于活动状态的加载的最大数目为 10，则您可以同时运行两个包，每个包使用 10 个目标。 在一个包运行时，另一个包在加载队列中等待。  
   
-如果加载队列中加载的数目超过排队的最大加载数，则该包将不运行。 例如，如果加载的最大数目为 10，每个设备，并且排队的加载的最大数目为 40，每个设备，你可以同时运行五个 Integration Services 包的每个打开 10 个目标。 如果您尝试运行第 6 个包，该包将不会运行。  
+如果加载队列中加载的数目超过排队的最大加载数，则该包将不运行。 例如，如果最大负载数为每个设备10个，并且每个设备的最大排队负载数为40，则可以并发运行每个打开的10个目标的五个 Integration Services 包。 如果您尝试运行第 6 个包，该包将不会运行。  
 
 > [!IMPORTANT]
-> 如果源表包含 char 和 varchar 列的 SQL 排序规则，则使用 PDW 目标适配器在 SSIS 中的 OLE DB 数据源，可能导致数据损坏。 我们建议使用 ADO.NET 源，如果源表包含 char 或 varchar 列的 SQL 排序规则。 
+> 如果源表包含带有 SQL 排序规则的 char 和 varchar 列，则在 SSIS 中使用 OLE DB 数据源与 PDW 目标适配器，可能会导致数据损坏。 如果源表包含带有 SQL 排序规则的 char 或 varchar 列，我们建议使用 ADO.NET 源。 
 
   
 ## <a name="Locks"></a>锁定行为  
-在加载时使用 Integration Services 的数据，SQL ServerPDW 使用行级锁更新目标表中的数据。 这意味着，在更新每一行时，对于读取和写入操作，将锁定每一行。 在数据加载到临时表中时，将不锁定目标表中的行。  
+使用 Integration Services 加载数据时，SQL ServerPDW 使用行级锁来更新目标表中的数据。 这意味着，在更新每一行时，对于读取和写入操作，将锁定每一行。 在数据加载到临时表中时，将不锁定目标表中的行。  
   
 ## <a name="Examples"></a>示例  
   
-### <a name="Walkthrough"></a>A. 从平面文件的简单负载  
-下面的演练演示如何将 Integration Services 将平面文件数据加载到 SQL Server PDW 设备使用简单的数据负载。  此示例假定已在客户端计算机上安装集成服务，并且已安装 SQL Server PDW 目标，如上文所述。  
+### <a name="Walkthrough"></a>的. 平面文件的简单加载  
+以下演练演示了使用 Integration Services 将平面文件数据加载到 SQL Server PDW 设备的简单数据加载。  此示例假设已在客户端计算机上安装了 Integration Services，并且已安装了 SQL Server PDW 目标，如上所述。  
   
-在此示例中我们将加载到`Orders`表，该表具有以下 DDL。 `Orders`表属于`LoadExampleDB`数据库。  
+在此示例中，我们将加载`Orders`到表中，该表具有以下 DDL。 `Orders`该表是`LoadExampleDB`数据库的一部分。  
   
 ```sql  
 CREATE TABLE LoadExampleDB.dbo.Orders (  
@@ -173,7 +174,7 @@ id        city           lastUpdateDate     orderdate
 2         Denver         2002-06-25         1999-01-02  
 ```  
   
-在负载的准备，创建平面文件`exampleLoad.txt`，其中包含加载数据：  
+为实现负载准备，请创建包含负载数据`exampleLoad.txt`的平面文件：  
   
 ```  
 id,city,lastUpdateDate,orderDate  
@@ -181,79 +182,79 @@ id,city,lastUpdateDate,orderDate
 2,Denver,2002-06-25,1999-01-02  
 ```  
   
-首先，创建 Integration Services 包通过执行下列步骤：  
+首先，通过执行以下步骤创建 Integration Services 包：  
   
-1.  在 SQL Server Data Tools \(SSDT\)，选择**文件**，**新建**，然后**项目**。 选择**Integration Services 项目**从列出的选项。 此项目命名为`ExampleLoad`，然后单击**确定**。  
+1.  在 SQL Server Data Tools \(SSDT\)中，依次选择 "**文件**"、"**新建**" 和 "**项目**"。 从列出的选项中选择 " **Integration Services 项目**"。 为此项目`ExampleLoad`命名，然后单击 **"确定"**。  
   
-2.  单击**控制流**选项卡，然后将**数据流任务**从**工具箱**到**控制流**窗格。  
+2.  单击 "**控制流**" 选项卡，然后将 "数据流**任务**" 从 "**工具箱**" 拖动到 "**控制流**" 窗格。  
   
-3.  单击**Data Flow**选项卡，然后将**平面文件源**从**工具箱**到**数据流**窗格。 双击打开刚刚创建的框**平面文件源编辑器**。  
+3.  单击 "**数据流" 选项卡**，然后将 "**平面文件源**" 从**工具箱**拖到 **"数据流" 窗格。** 双击刚创建的框以打开 "**平面文件源编辑器**"。  
   
-4.  单击**连接管理器**，然后单击**新建**。  
+4.  单击 "**连接管理器**"，然后单击 "**新建**"。  
   
-5.  在中**连接管理器名称**框中，输入连接的友好名称。 此示例中，为`Example Load Flat File CM`。  
+5.  在 "**连接管理器名称**" 框中，为连接输入一个友好名称。 对于本示例， `Example Load Flat File CM`为。  
   
-6.  单击**浏览**，然后选择`ExampleLoad.txt`文件从本地计算机。  
+6.  单击 "**浏览**" 并`ExampleLoad.txt`从本地计算机中选择文件。  
   
-7.  由于平面文件包含具有列名称的行，请单击**中第一个数据行的列名称**框。  
+7.  由于平面文件包含具有列名称的行，因此请**在第一个数据行框中单击列名称**。  
   
-8.  单击**列**左侧的列和预览中的数据将加载以确保列名称和数据已正确解释。  
+8.  单击左栏中的 "**列**"，并预览将加载的数据，以确保正确解释列名和数据。  
   
-9. 单击**高级**左侧列中。 单击每个列名称，若要查看已与数据关联的数据类型。 在框中键入更改，以便加载的数据的数据类型将与目标列类型兼容。  
+9. 在左列中单击 "**高级**"。 单击每个列名，查看与数据关联的数据类型。 在框中键入更改，以使所加载数据的数据类型与目标列类型兼容。  
   
-10. 单击**确定**保存连接管理器。  
+10. 单击 **"确定"** 以保存连接管理器。  
   
-11. 单击**确定**退出**平面文件源编辑器**。  
+11. 单击 **"确定"** 退出 "**平面文件源编辑器**"。  
   
 指定数据流的目标。  
   
-1.  拖动**SQL Server PDW 目标**从**工具箱**到**数据流**窗格。  
+1.  将**SQL Server PDW 目标**从 "**工具箱**" 拖动到 **"数据流" 窗格。**  
   
-2.  双击刚创建要加载的框**SQL Server PDW 目标编辑器**。  
+2.  双击刚创建的框以加载 " **SQL Server PDW 目标编辑器**"。  
   
-3.  单击向下箭头旁边**连接管理器**。  
+3.  单击 "**连接管理器**" 旁的向下箭头。  
   
-4.  选择**创建新的连接**。  
+4.  选择 "**创建新连接**"。  
   
-5.  填写 server、 用户、 密码和目标数据库的信息特定于你的设备的信息。 （示例所示）。 再单击 **“确定”** 。  
+5.  为服务器、用户、密码和目标数据库填写信息，其中包含特定于设备的信息。 （示例如下所示）。 然后单击 **“确定”**。  
   
-    对于 InfiniBand 连接，请**服务器名称**:输入 < 设备名称 >-SQLCTL01，17001。  
+    对于 "未实现连接"，**服务器名称**：输入 <设备名称>-SQLCTL01、17001。  
   
-    为以太网连接**服务器名称**:输入控制节点的群集、 逗号、 端口 17001 的 IP 的地址。 例如，10.192.63.134,17001。  
+    对于 "以太网连接"，**服务器名称**：输入控制节点群集的 IP 地址，逗号，端口17001。 例如，10.192.63.134、17001。  
   
-    **用户：** `user1`  
+    **用户**`user1`  
   
-    **密码：** `password1`  
+    **权限**`password1`  
   
-    **目标数据库：** `LoadExampleDB`  
+    **目标数据库：**`LoadExampleDB`  
   
 6.  选择目标表： `Orders`。  
   
-7.  选择**追加**作为加载模式，然后单击**确定**。  
+7.  选择 "**追加**" 作为加载模式，然后单击 **"确定"**。  
   
-指定数据流从源到目标。  
+指定从源到目标的数据流。  
   
-1.  上**Data Flow**窗格中，将从绿色箭头拖动**平面文件源**框**SQL Server PDW 目标**框。  
+1.  在 "**数据流" 窗格上**，将绿色箭头从 "**平面文件源**" 框拖到 " **SQL Server PDW 目标**" 框。  
   
-2.  双击**SQL Server PDW 目标**框，以便看到**SQL Server PDW 目标编辑器**试。 您应看到在左侧，平面文件中的列名称下**未映射的输入列**。 您应查看目标表中的列名称在右侧，在**未映射的目标列**。 通过拖动或双击中的匹配列名称映射的列**未映射的输入列**并**未映射的目标列**还列出了**映射的列**框。 单击**确定**以保存设置。  
+2.  双击 " **SQL Server PDW 目标**" 框，以便再次看到 " **SQL Server PDW 目标编辑器**"。 你应在 "未**映射的输入列**" 下的左侧平面文件中看到列名。 应会在右侧的 "未**映射的目标列**" 下看到目标表中的列名称。 拖动或双击 "未**映射的输入列**"**和 "未**映射的**目标列**" 列表中的匹配列名称，以映射列。 单击 **"确定"** 以保存设置。  
   
-3.  通过单击保存包**保存**中**文件**菜单。  
+3.  通过单击 "**文件**" 菜单中的 "**保存**" 来保存包。  
   
-Integration Services 在计算机上运行包。  
+在计算机上运行包 Integration Services。  
   
-1.  在 Integration Services**解决方案资源管理器**（右列） 中，右键单击`Package.dtsx`，然后选择**Execute**。  
+1.  在 Integration Services**解决方案资源管理器**（右列）中，右键单击`Package.dtsx`并选择 "**执行**"。  
   
-2.  包的运行时间以及上将显示进度以及任何错误**进度**窗格。 使用 SQL 客户端确认负载，或监视 SQL Server PDW 管理控制台通过负载。  
+2.  将运行包，**进度窗格上将显示进度以及**任何错误。 使用 SQL 客户端确认负载，或通过 SQL Server PDW 管理控制台监视负载。  
   
-## <a name="see-also"></a>请参阅  
-[创建一个脚本任务，使用 SSIS PDW 目标适配器](create-ssis-script-task-using-pdw-destination-adapter.md)  
+## <a name="see-also"></a>另请参阅  
+[创建使用 SSIS PDW 目标适配器的脚本任务](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
 [设计和实现包 (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[教程：创建基本包使用向导](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
-[入门 (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
-[动态程序包生成示例](https://go.microsoft.com/fwlink/?LinkId=202413)  
-[设计 SSIS 包以实现并发性 （SQL Server 视频）](https://msdn.microsoft.com/library/dd795221.aspx)  
-[Microsoft SQL Server 社区示例：集成服务](https://go.microsoft.com/fwlink/?LinkId=202415)  
+[教程：使用向导创建基本包](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[入门（Integration Services）](https://go.microsoft.com/fwlink/?LinkId=202412)  
+[动态包生成示例](https://go.microsoft.com/fwlink/?LinkId=202413)  
+[设计 SSIS 包以实现并发性（SQL Server 视频）](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Microsoft SQL Server 社区示例： Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [通过变更数据捕获改善增量加载](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [渐变维度转换](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [大容量插入任务](../integration-services/control-flow/bulk-insert-task.md)  

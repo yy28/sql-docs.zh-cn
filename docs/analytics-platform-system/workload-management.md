@@ -1,5 +1,5 @@
 ---
-title: 分析平台系统中的工作负荷管理 |Microsoft Docs
+title: 工作负荷管理
 description: 分析平台系统中的工作负荷管理。
 author: mzaman1
 ms.prod: sql
@@ -8,151 +8,152 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: adc3928e1b7464d93970d280af6acf303ebc6d16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959741"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399447"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>分析平台系统中的工作负荷管理
 
-SQL Server PDW 工作负荷管理功能可让用户和管理员可以分配预设置配置的内存和并发的请求。 使用工作负荷管理请求能够相应的资源而无需永久耗尽的任何请求，从而提高工作负荷，一致或混合的性能。  
+SQL Server PDW 的工作负荷管理功能，用户和管理员可以将请求分配给预先设置的内存配置和并发性。 使用工作负荷管理，通过允许请求拥有适当的资源，而无需从而使任何请求，从而提高工作负荷的性能。  
   
-例如，使用 SQL Server PDW 中的工作负荷管理技术，你可以：  
+例如，通过 SQL Server PDW 中的工作负荷管理技术，可以：  
   
--   分配大量的资源添加到加载作业。  
+-   向加载作业分配大量资源。  
   
--   指定用于生成列存储索引的更多资源。  
+-   指定更多用于生成列存储索引的资源。  
   
--   解决遇到缓慢执行哈希联接以查看是否需要更多内存，以及将它提供更多的内存。  
+-   排查速度较慢的哈希联接的问题，以查看它是否需要更多内存，并为其分配更多内存。  
   
 ## <a name="Basics"></a>工作负荷管理基础知识  
   
 ### <a name="key-terms"></a>主要术语  
 工作负荷管理  
-*工作负荷管理*是了解和调整系统资源使用状况，以便实现最佳性能，并发请求的能力。  
+*工作负荷管理*是了解和调整系统资源利用率以便实现并发请求的最佳性能的能力。  
   
 资源类  
-在 SQL Server PDW*资源类*是具有预先分配的内存和并发限制的内置服务器角色。 SQL Server PDW 分配根据资源类服务器角色成员身份的提交请求的登录名的请求的资源。  
+在 SQL Server PDW 中，*资源类*是具有预先分配的内存和并发限制的内置服务器角色。 SQL Server PDW 根据提交请求的登录名的资源类服务器角色成员身份，将资源分配给请求。  
   
-在计算节点上的资源类的实现在 SQL Server 中使用资源调控器功能。 有关资源调控器的详细信息，请参阅[资源调控器](../relational-databases/resource-governor/resource-governor.md)MSDN 上。  
+在计算节点上，资源类的实现使用 SQL Server 中的 Resource Governor 功能。 有关 Resource Governor 的详细信息，请参阅 MSDN 上的[Resource Governor](../relational-databases/resource-governor/resource-governor.md) 。  
   
 ### <a name="understand-current-resource-utilization"></a>了解当前资源利用率  
-若要了解当前正在运行的请求的系统资源利用率，使用 SQL Server PDW 的动态管理视图。 例如，您可以使用 Dmv 来了解运行速度缓慢的大型哈希联接可以方面获益： 有更多的内存。  
+若要了解当前正在运行的请求的系统资源使用情况，请使用 SQL Server PDW 动态管理视图。 例如，你可以使用 Dmv 来了解运行速度较慢的大型哈希联接是否可以通过具有更多内存来受益。  
   
 <!-- MISSING LINKS
 For examples, see [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md).  
 -->
   
 ### <a name="adjust-resource-allocations"></a>调整资源分配  
-若要调整资源利用率，更改正在提交请求的登录名的资源类成员。 资源类服务器角色名为**mediumrc**， **largerc**，并**xlargerc**。 它们分别表示中型、 大型和超大型资源分配。  
+若要调整资源利用率，请更改正在提交请求的登录名的资源类成员身份。 资源类服务器角色命名为**mediumrc**、 **largerc**和**xlargerc**。 它们分别表示中等、大和超大的大型资源分配。  
   
-例如，若要分配大量的系统资源的请求，添加提交到请求的登录名**largerc**服务器角色。 下面的 ALTER SERVER ROLE 语句将 Anna 的登录名添加到 largerc 服务器角色。  
+例如，若要将大量系统资源分配给请求，请将提交请求的登录名添加到**largerc**服务器角色。 以下 ALTER SERVER ROLE 语句将 login Anna 添加到 largerc 服务器角色。  
   
 ```sql  
 ALTER SERVER ROLE largerc ADD MEMBER Anna;  
 ```  
   
 ## <a name="RC"></a>资源类说明  
-下表描述了资源类和其系统资源分配。  
+下表描述了资源类及其系统资源分配。  
   
-|资源类|请求重要性|最大内存使用情况 *|并发槽数 (最大 = 32)|描述|  
+|资源类|请求重要性|最大内存使用量 *|并发槽（最大 = 32）|说明|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|默认值|Medium|400 MB|1|默认情况下，每个登录名被允许的少量内存和并发为其请求的资源。<br /><br />当一个登录名添加到资源类时，新类将优先。 当所有资源类中删除的登录名时，该登录名会还原为默认资源分配。|  
-|MediumRC|Medium|1200 MB|3|可能需要中等资源类的请求的示例：<br /><br />CTAS 操作具有大型的哈希联接。<br /><br />选择需要更多内存来避免缓存到磁盘的操作。<br /><br />将数据加载到聚集列存储索引。<br /><br />生成、 重新生成和重新组织聚集列存储索引的较小的表具有 10-15 列。|  
-|Largerc|High|2.8 GB|7|可能需要大型资源类的请求的示例：<br /><br />具有巨大的哈希联接或包含大型的聚合，如大型的 ORDER BY 或 GROUP BY 子句的非常大 CTAS 操作。<br /><br />选择需要的内存量非常大的操作，如哈希联接或 ORDER BY 或 GROUP BY 子句之类的聚合的操作<br /><br />将数据加载到聚集列存储索引。<br /><br />生成、 重新生成和重新组织聚集列存储索引的较小的表具有 10-15 列。|  
-|xlargerc|High|8.4 GB|22|特大资源类是对于可能需要在运行时的特大资源消耗的请求。|  
+|default|中型|400 MB|1|默认情况下，每个登录名都允许使用少量的内存和并发资源来处理其请求。<br /><br />将登录名添加到资源类后，新类优先。 从所有资源类中删除某个登录名后，该登录名将恢复为默认的资源分配。|  
+|MediumRC|中型|1200 MB|3|可能需要中型资源类的请求示例：<br /><br />具有大型哈希联接的 CTAS 操作。<br /><br />选择需要更多内存以避免缓存到磁盘的操作。<br /><br />将数据加载到聚集列存储索引。<br /><br />为包含10-15 列的较小表生成、重新生成和重新组织聚集列存储索引。|  
+|Largerc|高|2.8 GB|7|可能需要大型资源类的请求示例：<br /><br />非常大的 CTAS 操作，这些操作具有巨大的哈希联接，或包含大型聚合，如大的 ORDER BY 或 GROUP BY 子句。<br /><br />选择需要大量内存来执行哈希联接或聚合（如 ORDER BY 或 GROUP BY 子句）的操作<br /><br />将数据加载到聚集列存储索引。<br /><br />为包含10-15 列的较小表生成、重新生成和重新组织聚集列存储索引。|  
+|xlargerc|高|8.4 GB|22|特大资源类适用于在运行时可能需要额外大资源消耗的请求。|  
   
-<sup>*</sup>最大内存使用情况是一个近似值。  
+<sup>*</sup>最大内存使用率是近似值。  
   
 ### <a name="request-importance"></a>请求重要性  
-请求重要性映射到计算节点上运行的 SQL Server 将为请求提供的 CPU 时间量。  具有较高优先级请求接收更多的 CPU 时间。  
+请求重要性映射到计算节点上运行的 SQL Server CPU 时间，将为请求分配。  优先级较高的请求接收更多的 CPU 时间。  
   
 ### <a name="maximum-memory-usage"></a>最大内存使用情况  
-最大内存使用量是最大请求可使用每个处理空间内的可用内存量。 例如 mediumrc 请求可以使用最多为 1200 MB，每个分布区中进行处理。 它是以确保数据不为了避免需要执行的大部分工作的几个分布区倾斜仍然很重要。  
+最大内存使用率是请求可在每个处理空间内使用的最大可用内存量。 例如，mediumrc 请求最多可使用 1200 MB 来处理每个分布。 务必要确保数据不会歪斜，以避免几个分发执行大部分工作。  
   
-### <a name="concurrency-slots"></a>并发槽数  
-分配 1、 3、 7 和 22 并发槽的目标是让大型和小型进程运行在同一时间，而不会阻止小进程运行大型的进程时。  例如，SQL Server PDW 可以分配最多 32 个并发槽在同一时间运行 1 个特大规模请求 （22 槽）、 1 个大型请求 （7 个插槽） 和 1 个中型请求 （3 个槽）。  
+### <a name="concurrency-slots"></a>并发槽  
+分配1、3、7和22并发槽的目标是允许同时运行大型和小型进程，而不会在运行大型进程时阻止小型进程。  例如，SQL Server PDW 可以分配最多32并发槽，以运行1个特大请求（22个槽）、1个大型请求（7个槽）和1个中型请求（3个槽）。  
   
-分配对并发请求最多 32 个并发槽的示例：  
+将最多32并发槽分配给并发请求的示例：  
   
--   28 槽 = 4 大  
+-   28个槽 = 4 个大  
   
--   30 槽 = 10 中  
+-   30个槽 = 10 个中等  
   
--   32 个槽 = 32 的默认值  
+-   32插槽 = 32 默认值  
   
--   32 个槽 = 1 特大规模 + 1 的大型 + 1 中  
+-   32槽 = 1 个特大 + 1 大 + 1 中型  
   
--   32 个槽 = 2 的大 + 4 中等 + 6 的默认值  
+-   32插槽 = 2 大 + 4 中等 + 6 默认  
   
-假设 6 大型请求提交到 SQL Server PDW，然后提交 10 个默认请求。 SQL Server PDW 将处理按优先顺序的请求，如下所示：  
+假设有6个大请求提交到 SQL Server PDW，然后提交10个默认请求。 SQL Server PDW 将按优先级顺序处理请求，如下所示：  
   
--   分配 28 并发槽，以开始处理 4 个大型请求，因为可用内存增多，并在队列中保留 2 个大型请求。  
+-   分配28个并发槽，以便在内存可用时开始处理4个大型请求，并将两个大型请求保存在队列中。  
   
--   分配 4 个并发槽，若要开始处理 4 默认请求并等待队列中保留 6 默认请求。  
+-   分配4个并发槽，开始处理4个默认请求并在等待队列中保留6个默认请求。  
   
-在请求完成和并发槽可用时，SQL Server PDW 会分配剩余的请求根据可用资源和优先级。 例如，当存在 7 并发槽打开时，等待大型请求将具有 7 槽的优先级高于处于等待状态中的请求。  如果打开了 6 个插槽，SQL Server PDW 将分配 6 默认大小的更多请求。 但是，内存和并发槽所有之前必须可用 SQL Server PDW 允许运行的请求。  
+当请求完成并且并发槽可用时，SQL Server PDW 会根据可用资源和优先级分配剩余请求。 例如，当打开7个并发槽时，等待大请求的优先级比等待中型请求的优先级高。  如果打开了6个槽，则 SQL Server PDW 将分配其他6个默认大小的请求。 但是，在 SQL Server PDW 允许运行请求之前，内存和并发槽必须全部可用。  
   
-在每个资源类中，请求在先进先出 (FIFO) 顺序运行。  
+在每个资源类中，请求先以先进先出（FIFO）的顺序运行。  
   
 ## <a name="GeneralRemarks"></a>一般备注  
-如果登录名是多个资源类的成员，具有最多的资源类优先。  
+如果登录名是多个资源类的成员，则具有最多资源的类优先。  
   
-在添加到或从资源类中删除登录名，更改将立即为所有将来的请求; 生效不会影响正在运行或等待当前请求。 该登录名不需要断开连接并重新连接在发生更改的顺序。  
+当向资源类添加登录名或从中删除登录名时，更改会立即对所有将来的请求生效;当前正在运行或等待的请求不受影响。 登录无需断开连接和重新连接才能发生更改。  
   
-对于每个登录名，资源类设置将应用于各个语句和操作，而不适用于该会话。  
+对于每个登录名，资源类设置将应用于单个语句和操作，而不是应用于会话。  
   
-SQL Server PDW 运行语句之前，它将尝试获取所需的请求的并发槽。 如果它无法获取足够的并发槽位，SQL Server PDW 会将请求移动到要执行的等待状态。 已分配给请求的所有资源系统都返回给系统中。  
+在 SQL Server PDW 运行某个语句之前，它会尝试获取该请求所需的并发槽。 如果无法获取足够的并发槽，SQL Server PDW 会将请求移到等待执行的状态。 已分配给请求的所有资源系统都将返回到系统。  
   
-大多数 SQL 语句始终需要默认的资源分配，并因此不由资源类控制。 例如，创建登录名仅需要少量的资源，而分配的默认资源，即使调用创建登录名的登录名是资源类的成员。  例如，如果 Anna 是 largerc 资源类的成员，她将提交的 CREATE LOGIN 语句 CREATE LOGIN 语句将用默认数量的资源运行。  
+大多数 SQL 语句始终需要默认资源分配，因此不受资源类控制。 例如，CREATE LOGIN 只需要少量的资源，并且即使登录名调用 CREATE LOGIN 是资源类的成员，也会分配默认资源。  例如，如果 Anna 是 largerc 资源类的成员，而她提交了 CREATE LOGIN 语句，则 CREATE LOGIN 语句将使用默认的资源数来运行。  
   
-SQL 语句和资源类控制的操作：  
+由资源类控制的 SQL 语句和操作：  
   
 -   ALTER INDEX REBUILD  
   
 -   ALTER INDEX REORGANIZE  
   
--   ALTER 表重新生成  
+-   ALTER TABLE REBUILD  
   
--   创建聚集的索引  
+-   创建聚集索引  
   
 -   CREATE CLUSTERED COLUMNSTORE INDEX  
   
 -   CREATE TABLE AS SELECT  
   
--   CREATE REMOTE TABLE AS SELECT  
+-   创建远程表为 SELECT  
   
--   使用加载数据**dwloader**。  
+-   用**dwloader**加载数据。  
   
--   INSERT SELECT  
+-   INSERT-SELECT  
   
 -   UPDATE  
   
--   DELETE  
+-   删除  
   
--   还原时在设备中具有多个计算节点还原的数据库。  
+-   还原到具有更多计算节点的设备时还原数据库。  
   
--   选择，不包括仅限 DMV 的查询  
+-   选择，排除仅 DMV 查询  
   
-## <a name="Limits"></a>限制和局限  
-资源类控制内存和并发性分配。  不控制输入/输出操作。  
+## <a name="Limits"></a>限制和限制  
+资源类控制内存和并发分配。  它们不管理输入/输出操作。  
   
-## <a name="Metadata"></a>元数据  
-包含有关资源类和资源类成员的信息的 Dmv。  
+## <a name="Metadata"></a>新元  
+Dmv，其中包含有关资源类和资源类成员的信息。  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
   
 -   [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   
-包含有关请求和所需的资源的状态信息的 Dmv:  
+Dmv，其中包含请求的状态及其所需资源的信息：  
   
--   [sys.dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
+-   [sys. dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
   
--   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
+-   [sys. dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
-从 SQL Server Dmv 计算节点上公开的相关的系统视图。 请参阅[动态管理视图的 SQL Server](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)有关这些 Dmv MSDN 上的链接。  
+从计算节点上 SQL Server Dmv 公开的相关系统视图。 请参阅 MSDN 上的[SQL Server 动态管理视图](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)以获取这些 dmv 的链接。  
   
 -   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
@@ -160,7 +161,7 @@ SQL 语句和资源类控制的操作：
   
 -   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
--   sys.dm_pdw_nodws_resource_governor_workload_groups  
+-   sys. dm_pdw_nodws_resource_governor_workload_groups  
   
 -   sys.dm_pdw_nodes_exec_sessions  
   
@@ -176,7 +177,7 @@ SQL 语句和资源类控制的操作：
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="RelatedTasks"></a>相关的任务  
+## <a name="RelatedTasks"></a>Related Tasks  
 [工作负荷管理任务](workload-management-tasks.md)  
   
 <!-- MISSING LINKS

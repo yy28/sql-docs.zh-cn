@@ -41,12 +41,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
+ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199386"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74479325"
 ---
 # <a name="publish-data-and-database-objects"></a>发布数据和数据库对象
   创建发布时，可以选择希望发布的表和其他数据库对象。 您可以使用复制来发布下列数据库对象。  
@@ -57,13 +57,13 @@ ms.locfileid: "68199386"
 |已分区表|X|X|  
 |存储过程 - 定义（[!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR）|X|X|  
 |存储过程 - 执行（[!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR）|X|否|  
-|Views|X|X|  
+|视图|X|X|  
 |索引视图|X|X|  
 |作为表的索引视图|X|否|  
 |用户定义类型 (CLR)|X|X|  
 |用户定义函数（[!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR）|X|X|  
 |别名数据类型|X|X|  
-|全文检索|X|X|  
+|全文索引|X|X|  
 |架构对象（约束、索引、用户 DML 触发器、扩展属性和排序规则）|X|X|  
   
 ## <a name="creating-publications"></a>创建发布  
@@ -89,7 +89,7 @@ ms.locfileid: "68199386"
   
  有关如何使用发布的信息，请参阅下列主题：  
   
--   [Create a Publication](create-a-publication.md)  
+-   [创建发布](create-a-publication.md)  
   
 -   [定义项目](define-an-article.md)  
   
@@ -109,9 +109,9 @@ ms.locfileid: "68199386"
   
 -   [筛选已发布数据](filter-published-data.md)  
   
--   [Article Options for Transactional Replication](../transactional/article-options-for-transactional-replication.md)  
+-   [事务复制的项目选项](../transactional/article-options-for-transactional-replication.md)  
   
--   [Article Options for Merge Replication](../merge/article-options-for-merge-replication.md)  
+-   [用于合并复制的项目选项](../merge/article-options-for-merge-replication.md)  
   
 -   [复制标识列](replicate-identity-columns.md)  
   
@@ -119,7 +119,7 @@ ms.locfileid: "68199386"
   
  若要指定架构选项，请参阅[指定架构选项](specify-schema-options.md)或 <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>。  
   
-### <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引  
+### <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes  
  复制支持发布已分区表和已分区索引。 支持级别取决于使用的复制类型，以及您为发布指定的选项以及与已分区表相关联的项目。 有关详细信息，请参阅[复制已分区表和索引](replicate-partitioned-tables-and-indexes.md)。  
   
 ## <a name="publishing-stored-procedures"></a>发布存储过程  
@@ -130,7 +130,7 @@ ms.locfileid: "68199386"
 ## <a name="publishing-views"></a>发布视图  
  各种类型的复制都允许复制视图。 可以将视图（若是索引视图，要连同其所附索引）复制到订阅服务器，同时还必须复制基表。  
   
- 对于索引视图，事务复制还允许将其作为表而非视图进行复制，这样就无需再复制基表。 为此，请为 [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 的 *@type* 参数指定“indexed view logbased”选项之一。 有关使用 **sp_addarticle** 的详细信息，请参阅[定义项目](define-an-article.md)。  
+ 对于索引视图，事务复制还允许将其作为表而非视图进行复制，这样就无需再复制基表。 为此，请为[sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)的* \@type*参数指定 "indexed view logbased" 选项之一。 有关使用 **sp_addarticle** 的详细信息，请参阅[定义项目](define-an-article.md)。  
   
 ## <a name="publishing-user-defined-functions"></a>发布用户定义函数  
  将 CLR 函数和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数的 CREATE FUNCTION 语句复制到每个订阅服务器。 对于 CLR 函数，还要复制关联程序集。 函数的更改将复制到订阅服务器，关联程序集的更改则不然。  
@@ -168,9 +168,9 @@ ms.locfileid: "68199386"
 -   如果发布的数据库对象依赖于一个或多个其他数据库对象，则必须发布所有被引用对象。 例如，如果要发布的视图依赖于一个表，则也必须发布该表。  
   
     > [!NOTE]  
-    >  如果向合并发布中添加一个项目和一个依赖于此新项目的现有项目，则必须使用 **@processing_order** 的 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 [@processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 **sp_addmergearticle** 的 **@processing_order** 的 **sp_changemergearticle**；为 **sp_changemergearticle** 的 **@processing_order** 的 **@processing_order**，为参数 **@article** 。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
+    >  如果向合并发布中添加项目，而现有项目依赖于新项目，必须使用[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)和[sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)的** \@processing_order**参数指定两个项目的处理顺序。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 sp_addmergearticle**** 的 **processing_order\@** 参数指定值 1****；为 sp_changemergearticle**** 的 **processing_order\@** 参数指定值 2****，为参数 **article\@** 指定表名称。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
   
--   发布名称中不能包含以下字符：% * [ ] | : " ? \ / \< >。  
+-   发布名称中不能包含以下字符：% * [ ] | : " ? \/ \< >。  
   
 ### <a name="limitations-on-publishing-objects"></a>对发布对象的限制  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68199386"
   
 -   通过 [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) 创建的绑定默认值（绑定默认值会对用 ALTER TABLE 或 CREATE TABLE 的关键字 DEFAULT 创建的默认值不利）将不复制。  
   
--   由于分发代理传递它们时所采用的顺序，包含针对索引视图的 `NOEXPAND` 提示的函数不能在与引用的表和索引视图相同的发布中发布。 若要解决此问题，请将创建的表和索引视图放置于第一个发布中，并且将包含针对索引视图的 `NOEXPAND` 提示的函数添加到在第一个发布完成后发布的第二个发布中。 或者，为这些函数创建脚本并使用提供该脚本 *@post_snapshot_script* 参数的`sp_addpublication`。  
+-   由于分发代理传递它们时所采用的顺序，包含针对索引视图的 `NOEXPAND` 提示的函数不能在与引用的表和索引视图相同的发布中发布。 若要解决此问题，请将创建的表和索引视图放置于第一个发布中，并且将包含针对索引视图的 `NOEXPAND` 提示的函数添加到在第一个发布完成后发布的第二个发布中。 或者，为这些函数创建脚本，并使用的* \@post_snapshot_script*参数传递该脚本`sp_addpublication`。  
   
 ### <a name="schemas-and-object-ownership"></a>架构和对象所有权  
  在新建发布向导中，复制在架构和对象所有权方面具有以下默认行为：  
@@ -197,7 +197,7 @@ ms.locfileid: "68199386"
   
 -   对于使用字符模式快照（用于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器以及 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 订阅服务器）的发布中的项目：默认情况下，所有者保留为空。 所有者默认为与分发代理或合并代理连接到订阅服务器所使用的帐户关联的所有者。  
   
- 可通过“项目属性 - \<项目>” **** 对话框和以下存储过程更改对象所有者：sp_addarticle  、sp_addmergearticle  、sp_changearticle  和 sp_changemergearticle  。 有关详细信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)、[定义项目](define-an-article.md)和[查看和修改项目属性](view-and-modify-article-properties.md)。  
+ 可通过“项目属性 - **项目\<” ******>** 对话框和以下存储过程更改对象所有者：sp_addarticle****、sp_addmergearticle****、sp_changearticle**** 和 sp_changemergearticle****。 有关详细信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)、[定义项目](define-an-article.md)和[查看和修改项目属性](view-and-modify-article-properties.md)。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>将数据发布到运行 SQL Server 早期版本的订阅服务器  
   
@@ -208,9 +208,9 @@ ms.locfileid: "68199386"
 ### <a name="publishing-tables-in-more-than-one-publication"></a>在多个发布中发布表  
  复制支持按照下列限制在多个发布中发布项目（包括重新发布数据）：  
   
--   如果在事务发布和合并发布中发布项目，请确保将合并项目的 *@published_in_tran_pub* 属性设置为 TRUE。 有关设置属性的详细信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)和[查看和修改项目属性](view-and-modify-article-properties.md)。  
+-   如果在事务发布和合并发布中发布项目，请确保将合并项目的* \@published_in_tran_pub*属性设置为 TRUE。 有关设置属性的详细信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)和[查看和修改项目属性](view-and-modify-article-properties.md)。  
   
-     如果项目是事务订阅的一部分并且包括在合并发布中，还应该设置 *@published_in_tran_pub* 属性。 如果是这种情况，注意，默认情况下事务复制期望表在订阅服务器中被视为只读表；如果合并复制对事务订阅中的表进行数据更改，则无法实现数据收敛。 为了避免这种情况，建议您在合并发布中将所有此类表都指定为仅供下载。 这样可以防止合并订阅服务器向表中上载数据更改。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
+     如果项目是事务订阅的一部分并且包括在合并发布中，则还应设置 " * \@published_in_tran_pub* " 属性。 如果是这种情况，注意，默认情况下事务复制期望表在订阅服务器中被视为只读表；如果合并复制对事务订阅中的表进行数据更改，则无法实现数据收敛。 为了避免这种情况，建议您在合并发布中将所有此类表都指定为仅供下载。 这样可以防止合并订阅服务器向表中上载数据更改。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
   
 -   不能在合并发布和事务发布中同时发布带有排队更新订阅的项目。  
   
@@ -220,10 +220,10 @@ ms.locfileid: "68199386"
   
     |属性|sp_addarticle 中的参数|  
     |--------------|---------------------------------|  
-    |标识范围管理|**@auto_identity_range** （已弃用）和 **@identityrangemangementoption**|  
-    |发布服务器标识范围|**@pub_identity_range**|  
-    |标识范围|**@identity_range**|  
-    |标识范围阈值|**@threshold**|  
+    |标识范围管理|auto_identity_range （已弃用）和 identityrangemangementoption ** \@** ** \@**|  
+    |发布服务器标识范围|**\@pub_identity_range**|  
+    |标识范围|**\@identity_range**|  
+    |标识范围阈值|**\@阀**|  
   
      有关这些参数的详细信息，请参阅 [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)。  
   
@@ -231,29 +231,29 @@ ms.locfileid: "68199386"
   
     |属性|sp_addmergearticle 中的参数|  
     |--------------|--------------------------------------|  
-    |列跟踪|**@column_tracking**|  
-    |架构选项|**@schema_option**|  
-    |列筛选|**@vertical_partition**|  
-    |订阅服务器中载选项|**@subscriber_upload_options**|  
-    |条件性删除跟踪|**@delete_tracking**|  
-    |错误补偿|**@compensate_for_errors**|  
-    |标识范围管理|**@auto_identity_range** （已弃用）和 **@identityrangemangementoption**|  
-    |发布服务器标识范围|**@pub_identity_range**|  
-    |标识范围|**@identity_range**|  
-    |标识范围阈值|**@threshold**|  
-    |分区选项|**@partition_options**|  
-    |Blob 列流|**@stream_blob_columns**|  
-    |筛选器类型|**@filter_type** （ **sp_addmergefilter**中的参数）|  
+    |列跟踪|**\@column_tracking**|  
+    |架构选项|**\@schema_option**|  
+    |列筛选|**\@vertical_partition**|  
+    |订阅服务器中载选项|**\@subscriber_upload_options**|  
+    |条件性删除跟踪|**\@delete_tracking**|  
+    |错误补偿|**\@compensate_for_errors**|  
+    |标识范围管理|auto_identity_range （已弃用）和 identityrangemangementoption ** \@** ** \@**|  
+    |发布服务器标识范围|**\@pub_identity_range**|  
+    |标识范围|**\@identity_range**|  
+    |标识范围阈值|**\@阀**|  
+    |分区选项|**\@partition_options**|  
+    |Blob 列流|**\@stream_blob_columns**|  
+    |筛选器类型|filter_type （ **sp_addmergefilter**中的参数） ** \@**|  
   
      有关这些参数的详细信息，请参阅 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 和 [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)。  
   
 -   事务复制和未筛选的合并复制支持在多个发布中发布表，然后在订阅数据库中的单个表内进行订阅（通常称为“汇总方案”）。 汇总常用于在中央订阅服务器中的一个表中聚合来自多个位置的数据子集。 已筛选的合并发布不支持中央订阅服务器方案。 对于合并复制，通常通过带有参数化行筛选器的单个发布实现汇总。 有关详细信息，请参阅 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [向现有发布添加项目和从中删除项目](add-articles-to-and-drop-articles-from-existing-publications.md)   
- [“配置分发”](../configure-distribution.md)   
+ [配置分发](../configure-distribution.md)   
  [初始化订阅](../initialize-a-subscription.md)   
- [编写复制脚本](../scripting-replication.md)   
+ [脚本复制](../scripting-replication.md)   
  [保护发布服务器](../security/secure-the-publisher.md)   
  [订阅发布](../subscribe-to-publications.md)  
   

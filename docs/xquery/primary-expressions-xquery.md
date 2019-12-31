@@ -1,5 +1,5 @@
 ---
-title: 主表达式 (XQuery) |Microsoft Docs
+title: 主表达式（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,33 +19,34 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946383"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200517"
 ---
 # <a name="primary-expressions-xquery"></a>主表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery 主表达式包含文字、变量引用、上下文项表达式、构造函数和函数调用。  
   
-## <a name="literals"></a>文字  
+## <a name="literals"></a>文本  
  XQuery 文字可以是数字或字符串。 字符串可包括预定义的实体引用，实体引用就是字符序列。 这种序列以“and”符为开头，此符号表示单个字符，如果不加此符号则可能具有语法意义。 以下是 XQuery 中的预定义的实体引用。  
   
 |实体引用|表示|  
 |----------------------|----------------|  
-|&lt;|\<|  
-|&gt;|>|  
-|&amp;|&|  
-|&quot;|"|  
-|&apos;|”启用|  
+|`&lt;`|\<|  
+|`&gt;`|>|  
+|`&amp;`|&|  
+|`&quot;`|"|  
+|`&apos;`|'|  
   
- 字符串还可以包含字符引用，对 Unicode 字符（由其十进制或十六进制码位标识）的 XML 样式的引用。 例如，可以由字符引用，表示欧元符号"&\#8364;"。  
+ 字符串还可以包含字符引用，对 Unicode 字符（由其十进制或十六进制码位标识）的 XML 样式的引用。 例如，欧元符号可以用字符引用 "&\#8364;" 表示。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 XML 1.0 版作为分析基础。  
+>  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 XML 1.0 版作为分析基础。  
   
 ### <a name="examples"></a>示例  
  以下示例说明了文字、实体引用以及字符引用的用法。  
@@ -64,7 +65,7 @@ GO
 ```  
 DECLARE @var XML  
 SET @var = ''  
-SELECT @var.query(' <SalaryRange>Salary > 50000 and < 100000</SalaryRange>')  
+SELECT @var.query(' <SalaryRange>Salary &gt; 50000 and &lt; 100000</SalaryRange>')  
 GO  
 ```  
   
@@ -93,7 +94,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 内置布尔函数**true （)** 并**false （)** ，可以用于表示布尔值，如下面的示例中所示。  
+ 内置布尔函数**true （）** 和**false （）** 可用于表示布尔值，如下面的示例中所示。  
   
 ```  
 DECLARE @var XML  
@@ -130,7 +131,7 @@ for $x:i in /root return data($x:i)')
 GO  
 ```  
   
- 可以使用 sql:variable() 扩展函数来引用 SQL 变量，如下面的查询中所示。  
+ 您可以使用 sql： variable （）扩展函数引用 SQL 变量，如下面的查询所示。  
   
 ```  
 DECLARE @price money  
@@ -151,12 +152,12 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   不支持模块导入。  
   
--   不支持外部变量声明。 此解决方案是使用[sql:variable() 函数](../xquery/xquery-extension-functions-sql-variable.md)。  
+-   不支持外部变量声明。 此操作的一种方法是使用[sql： variable （）函数](../xquery/xquery-extension-functions-sql-variable.md)。  
   
 ## <a name="context-item-expressions"></a>上下文项表达式  
- 上下文项是路径表达式的上下文中当前正在处理的项。 该项在带有文档节点的非空 XML 数据类型实例中进行初始化。 此外可以更改由 nodes （） 方法，在 XPath 表达式的上下文或 [] 谓词。  
+ 上下文项是路径表达式的上下文中当前正在处理的项。 该项在带有文档节点的非空 XML 数据类型实例中进行初始化。 它也可以在 XPath 表达式或 [] 谓词的上下文中通过节点（）方法进行更改。  
   
- 上下文项由包含点 (.) 的表达式返回。 例如，以下查询计算每个元素 <`a`> 的属性是否存在`attr`。 如果存在此属性，则返回该元素。 请注意，谓词中的条件指定使用单个句点指定上下文节点。  
+ 上下文项由包含点 (.) 的表达式返回。 例如，下面的查询将评估每个元素`a` <> 是否存在属性`attr`。 如果存在此属性，则返回该元素。 请注意，谓词中的条件指定使用单个句点指定上下文节点。  
   
 ```  
 DECLARE @var XML  
@@ -172,7 +173,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>函数调用  
- 可以调用内置 XQuery 函数和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sql:variable() 和 sql: column 函数。 有关实现的函数列表，请参阅[针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)。  
+ 可以调用内置 XQuery 函数和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql： variable （）和 sql： column （）函数。 有关已实现函数的列表，请参阅[针对 Xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)。  
   
 #### <a name="implementation-limitations"></a>实现限制  
  实现限制如下：  
@@ -181,7 +182,6 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
   
 -   不支持函数导入。  
   
-## <a name="see-also"></a>请参阅  
- [XML 构造&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
-  
-  
+## <a name="see-also"></a>另请参阅  
+ [XML 构造 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)
+ 

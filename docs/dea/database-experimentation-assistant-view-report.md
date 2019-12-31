@@ -2,7 +2,7 @@
 title: 查看 SQL Server 升级的分析报告
 description: 在数据库实验助手中查看分析报表
 ms.custom: seo-lt-2019
-ms.date: 10/22/2018
+ms.date: 11/22/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,28 +10,28 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: fddc71bf7cdf7686154b4f9b5612cf671ca64fce
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: b72d49e691311104481637ff49d6c1e09ae0c230
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056664"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317745"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>在数据库实验助手中查看分析报表
 
-在数据库实验助手（DEA）中[创建分析报表](database-experimentation-assistant-create-report.md)后，请完成本文中所述的步骤以查看报表并获得 A/B 测试提供的性能见解。
+使用数据库实验助手（DEA）[创建分析报表](database-experimentation-assistant-create-report.md)后，请使用以下步骤查看基于 A/B 测试的性能见解的报表。
 
 ## <a name="select-a-server"></a>选择服务器
 
 在 DEA 中，选择菜单图标。 在展开的菜单中，选择 "清单" 图标旁边的 "**分析报表**" 以打开 "分析报表" 窗口。
 
-在 "**分析报表**" 下，输入运行包含分析数据库 SQL Server 的计算机的名称。 选择“连接”。 
+在 "**分析报表**" 下，输入运行包含分析数据库 SQL Server 的计算机的名称，然后选择 "**连接**"。
 
 ![连接到现有报表](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-如果缺少任何依赖项，则 "**先决条件**" 页将提示你提供用于安装这些依赖项的链接。 安装必备组件，然后选择 "**重试**"。
+如果缺少任何依赖项，则 "**先决条件**" 页将提示你提供用于安装这些依赖项的链接。 如有必要，请安装必备组件，然后选择 "**重试**"。
 
 ![必备页](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 
@@ -78,16 +78,13 @@ ms.locfileid: "74056664"
 "比较摘要" 报表包含可扩充的**错误信息**和**查询计划信息**部分。 部分显示了两个实例的错误和计划信息。
 
 选择错误（红色）饼图以显示以下类型的错误：
+
 - **现有错误**：中的错误。
 - **新错误**： B 中的错误。
 - **已解决的错误**：在中但不在 B 中的错误。
 
 ![错误图表](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
 
-## <a name="next-steps"></a>后续步骤
+## <a name="see-also"></a>另请参阅
 
 - 若要了解如何在命令提示符下生成分析报告，请参阅[在命令提示符下运行](database-experimentation-assistant-run-command-prompt.md)。
-
-- 有关 DEA 和演示的19分钟简介，请观看以下视频：
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

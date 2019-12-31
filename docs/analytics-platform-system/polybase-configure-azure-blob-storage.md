@@ -1,6 +1,6 @@
 ---
-title: 配置 PolyBase 以访问 Azure Blob 存储中的外部数据 |Microsoft Docs
-description: 介绍如何在并行数据仓库，若要将连接到外部 Hadoop 配置 PolyBase。
+title: 使用 PolyBase 访问 Azure Blob 存储中的外部数据
+description: 介绍如何将 PolyBase 配置为并行数据仓库以连接到外部 Hadoop。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,31 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 82c57ef57a01cabf2786c71fc53aed3660289451
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960281"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400718"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>配置 PolyBase 以访问 Azure Blob 存储中的外部数据
 
-本文介绍如何使用 PolyBase 来查询 Azure Blob 存储中的外部数据的 SQL Server 实例上。
+本文介绍如何在 SQL Server 实例上使用 PolyBase 查询 Azure Blob 存储中的外部数据。
 
 > [!NOTE]
-> APS 目前仅支持本地冗余 (LRS) Azure Blob 存储的标准常规用途 v1。
+> AP 目前仅支持标准常规用途 v1 本地冗余（LRS） Azure Blob 存储。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
- - 在订阅中的 azure Blob 存储。
- - 在 Azure Blob 存储中创建一个容器。
+ - 订阅中的 Azure Blob 存储。
+ - 在 Azure Blob 存储中创建的容器。
 
 ### <a name="configure-azure-blob-storage-connectivity"></a>配置 Azure Blob 存储连接
 
-首先，配置 AP 以使用 Azure Blob 存储。
+首先，将 AP 配置为使用 Azure Blob 存储。
 
-1. 运行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity' 设置为 Azure Blob 存储提供程序使用。 若要查找提供程序的值，请参阅 [PolyBase 连接配置](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
+1. 运行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)并将 "hadoop 连接" 设置为 Azure Blob 存储提供程序。 若要查找提供程序的值，请参阅 [PolyBase 连接配置](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
 
    ```sql  
    -- Values map to various external data sources.  
@@ -44,19 +45,19 @@ ms.locfileid: "67960281"
    GO
    ```  
 
-2. 重新启动 APS 区域上，使用服务状态页[设备配置管理器](launch-the-configuration-manager.md)。
+2. 使用[设备 Configuration Manager](launch-the-configuration-manager.md)上的 "服务状态" 页重新启动 ap 区域。
   
 ## <a name="configure-an-external-table"></a>配置外部表
 
-若要查询 Azure Blob 存储中的数据，必须定义外部表在 TRANSACT-SQL 查询中使用。 以下步骤介绍如何配置外部表。
+若要查询 Azure Blob 存储中的数据，必须定义要在 Transact-sql 查询中使用的外部表。 以下步骤介绍如何配置外部表。
 
-1. 在数据库上创建主密钥。 需要加密的凭据机密。
+1. 在数据库上创建主密钥。 需要加密凭据机密。
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-1. 创建 Azure Blob 存储的数据库范围凭据。
+1. 为 Azure Blob 存储创建数据库作用域凭据。
 
    ```sql
    -- IDENTITY: any string (this is not used for authentication to Azure storage).  
@@ -65,7 +66,7 @@ ms.locfileid: "67960281"
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. 使用 [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) 创建外部数据源。
+1. 使用[CREATE EXTERNAL DATA source](../t-sql/statements/create-external-data-source-transact-sql.md)创建外部数据源。
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -123,7 +124,7 @@ PolyBase 适用于三个函数：
 
 ### <a name="ad-hoc-queries"></a>即席查询  
 
-以下即席查询联接关系数据与在 Azure Blob 存储中。 它将选择快 35 mph，联接结构化的客户数据存储在 SQL Server 中使用 Azure Blob 存储中存储的汽车传感器数据驱动器的客户。  
+以下即席查询联接了与 Azure Blob 存储中的数据的关系。 它选择 mph 于35的客户，将存储在 SQL Server 中的结构化客户数据与存储在 Azure Blob 存储中的汽车传感器数据相连接。  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -135,7 +136,7 @@ ORDER BY CarSensor_Data.Speed DESC
 
 ### <a name="importing-data"></a>导入数据  
 
-下面的查询外部数据导入 APS。 此示例数据快速驱动程序导入 APS 进行更加深入的分析。 若要提高性能，它利用 AP 中的列存储技术。  
+以下查询将外部数据导入到 AP。 此示例将快速驱动程序的数据导入到 AP，以执行更深入的分析。 为了提高性能，它利用了接入点中的列存储技术。  
 
 ```sql
 CREATE TABLE Fast_Customers
@@ -154,7 +155,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### <a name="exporting-data"></a>导出数据  
 
-以下查询将从 AP 数据导出到 Azure Blob 存储。 它可用于关系数据存档到 Azure Blob 存储，同时仍能对其进行查询。
+以下查询将数据从 AP 导出到 Azure Blob 存储。 它可用于将关系数据存档到 Azure Blob 存储，同时仍然能够对其进行查询。
 
 ```sql
 -- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
@@ -170,11 +171,11 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
-## <a name="view-polybase-objects-in-ssdt"></a>在 SSDT 中查看 PolyBase 对象  
+## <a name="view-polybase-objects-in-ssdt"></a>查看 SSDT 中的 PolyBase 对象  
 
-在 SQL Server Data Tools，可以在单独的文件夹中显示外部表**外部表**。 外部数据源和外部文件格式位于“外部资源”  下的子文件夹中。  
+在 SQL Server Data Tools 中，外部表在单独的文件夹**外部表**中显示。 外部数据源和外部文件格式位于“外部资源” **** 下的子文件夹中。  
   
-![在 SSDT 中的 PolyBase 对象](media/polybase/external-tables-datasource.png)  
+![SSDT 中的 PolyBase 对象](media/polybase/external-tables-datasource.png)  
 
 ## <a name="next-steps"></a>后续步骤
 

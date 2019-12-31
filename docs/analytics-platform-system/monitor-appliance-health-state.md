@@ -1,6 +1,6 @@
 ---
-title: 监视设备运行状况-分析平台系统
-description: 如何通过使用管理控制台中，或通过直接查询的并行数据仓库动态管理视图监视 Analytics Platform System 设备的状态。
+title: 监视设备运行状况
+description: 如何使用管理控制台或直接查询并行数据仓库动态管理视图来监视分析平台系统设备的状态。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,32 +8,33 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c69e46ad6a37a17a12c37f83625b5c7f6eaf8078
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960616"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400990"
 ---
-# <a name="monitor-appliance-health-state"></a>监视设备运行状况
-本文介绍如何通过使用管理控制台中，或通过直接查询的并行数据仓库动态管理视图监视 Analytics Platform System 设备的状态。 
+# <a name="monitor-appliance-health-state"></a>监视设备运行状况状态
+本文介绍如何使用管理控制台或直接查询并行数据仓库动态管理视图来监视分析平台系统设备的状态。 
   
-## <a name="to-monitor-the-appliance-state"></a>若要监视的设备状态  
-系统管理员可以使用管理控制台或 SQL Server PDW 动态管理视图 (Dmv) 来检索节点、 组件和软件的完整层次结构。 下图提供了 SQL Server PDW 监视的组件较高级别的了解。  
+## <a name="to-monitor-the-appliance-state"></a>监视设备状态  
+系统管理员可以使用管理控制台或 SQL Server PDW 动态管理视图（Dmv）来检索节点、组件和软件的完整层次结构。 下图简要了解了 SQL Server PDW 监视的组件。  
   
 ![监视概述](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
   
-### <a name="monitor-component-status-by-using-the-admin-console"></a>通过使用管理控制台的监视组件状态  
-若要通过使用管理控制台检索组件状态：  
+### <a name="monitor-component-status-by-using-the-admin-console"></a>使用管理控制台监视组件状态  
+使用管理控制台检索组件状态：  
   
-1.  单击**装置状态更改为**选项卡。  
+1.  单击 "**设备状态**" 选项卡。  
   
-2.  在设备状态页上，单击要查看的节点详细信息的特定节点。  
+2.  在 "设备状态" 页上，单击特定节点以查看节点详细信息。  
   
     ![PDW 管理控制台状态](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
-### <a name="monitor-component-status-by-using-system-views"></a>通过使用系统视图监视组件状态  
-若要通过使用系统视图中检索组件状态，请使用[sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md)。 例如，以下查询检索的所有组件的状态。  
+### <a name="monitor-component-status-by-using-system-views"></a>使用系统视图监视组件状态  
+若要使用系统视图检索组件状态，请使用[sys. dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md)。 例如，以下查询将检索所有组件的状态。  
   
 ```sql  
 SELECT   
@@ -66,11 +67,11 @@ ORDER BY
    p.[property_name];  
 ```  
   
-可能的状态属性返回的值为：  
+为 Status 属性返回的可能值为：  
   
--   还行  
+-   正常  
   
--   NonCritical  
+-   非关键  
   
 -   严重  
   
@@ -78,18 +79,18 @@ ORDER BY
   
 -   不支持  
   
--   无法访问  
+-   不可访问  
   
--   无法恢复  
+-   Mmpc  
   
 若要查看所有组件的所有属性，请删除`WHERE  p.property_name = 'Status'`子句。  
   
-**[Update_time]** 列将显示该组件轮询 SQL Server PDW 运行状况代理的最后一个时间。  
+**[Update_time]** 列显示 SQL Server PDW health 代理上次轮询组件的时间。  
   
 > [!CAUTION]  
-> 确保要调查此问题，当一个组件，5 分钟或更长时间; 不被对轮询可能表示软件的检测信号出现了问题的警报。  
+> 请务必调查组件未轮询5分钟或更长时间时的问题;可能会出现指示软件检测信号问题的警报。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[设备监视&#40;分析平台系统&#41;](appliance-monitoring.md)  
+[设备监视 &#40;分析平台系统&#41;](appliance-monitoring.md)  
   

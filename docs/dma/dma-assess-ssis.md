@@ -14,14 +14,25 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fa97cc647a194257441997032f2248a3ce9e5110
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056641"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687161"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>使用数据迁移助手执行 SQL Server Integration Service 迁移评估
+
+## <a name="prerequisites"></a>必备条件
+
+若要评估 SQL Server Integration Service （SSIS）包，需要通过数据迁移助手安装以下组件：
+
+- SQL Server 集成服务，该服务具有与 SSIS 包相同的版本，以便进行评估。
+- Azure 功能包或其他第三方组件。  
+
+DMA 需要使用**管理员**访问权限来评估包存储区中的 SSIS 包。
+
+## <a name="performance-assessments"></a>性能评估
 
 下面的分步说明将帮助你使用数据迁移助手执行将 SQL Server Integration Service （SSIS）包迁移到 Azure SQL 数据库或 Azure SQL 数据库托管实例的第一个评估。
 
@@ -33,7 +44,7 @@ ms.locfileid: "74056641"
 
     选择 "源" 作为 " **SQL Server**"，并将 "目标服务器类型" 设置为 " **azure sql 数据库**" 或 " **azure sql 数据库托管实例**"。
 
-1. 单击 **“创建”** 。
+1. 单击 **“创建”**。
 
     ![创建评估](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
@@ -51,7 +62,7 @@ ms.locfileid: "74056641"
 1. 选择要评估的 SSIS 包存储类型，然后选择 "**添加**"。
 ![添加源](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. 如果需要评估多个文件夹，请选择 "**添加源**" 以打开 "连接" 弹出菜单。
-1. 单击 "**启动评估**"。
+1. 单击“启动评估”****。
   ![开始评估](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 
 ## <a name="view-results"></a>查看结果

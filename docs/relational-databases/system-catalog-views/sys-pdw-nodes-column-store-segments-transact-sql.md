@@ -1,6 +1,6 @@
 ---
-title: sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: sys. pdw_nodes_column_store_segments （Transact-sql）
+ms.custom: seo-dt-2019
 ms.date: 03/28/2018
 ms.prod: sql
 ms.technology: data-warehouse
@@ -13,43 +13,43 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 399f08e0ebf09ea90c358ae5667b5031ef0cb099
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822517"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401673"
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
+# <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments （Transact-sql）
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 对于 columnstore 索引中的每列包括一行。
 
-| 列名                 | 数据类型  | Description                                                  |
+| 列名称                 | 数据类型  | 说明                                                  |
 | :-------------------------- | :--------- | :----------------------------------------------------------- |
-| **partition_id**            | **bigint** | 指示分区 ID。 是在数据库中唯一。     |
+| **partition_id**            | **bigint** | 指示分区 ID。 在数据库中是唯一的。     |
 | **hobt_id**                 | **bigint** | 具有此 columnstore 索引的表的堆或 B 树 (hobt) 的 ID。 |
-| **column_id**               | **int**    | 列存储列的 ID。                                |
-| **segment_id**              | **int**    | 列段的 ID。 对于向后兼容性，列名称会继续调用 segment_id 即使这是行组 id。 可唯一地标识段使用 < hobt_id、 partition_id、 column_id >，< segment_id >。 |
-| **version**                 | **int**    | 列段格式的版本。                        |
-| **encoding_type**           | **int**    | 使用该时间段的编码类型：<br /><br /> 1 = VALUE_BASED-非字符串/二进制与没有字典 （类似于具有某些内部变体 4）<br /><br /> 2 = VALUE_HASH_BASED-包含字典中的常见值字符串/二进制列<br /><br /> 3 = STRING_HASH_BASED-与字典中的常见值字符串/二进制列<br /><br /> 4 = STORE_BY_VALUE_BASED-非字符串/二进制与没有字典<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-带有没有字典字符串/二进制文件<br /><br /> 所有编码都充分利用位打包和运行长度编码在可能的情况。 |
-| **row_count**               | **int**    | 行组中的行数。                             |
-| **has_nulls**               | **int**    | 1 如果列段具有 Null 值。                     |
-| **base_id**                 | **bigint** | 如果使用的编码类型 1 的基值 ID。  如果未正在使用的编码类型 1，则 base_id 设置为 1。 |
-| **magnitude**               | **float**  | 如果使用的编码类型 1 的量值。  如果未正在使用的编码类型 1，则将量值设置为 1。 |
-| **primary__dictionary_id**  | **int**    | 主字典的 ID。 一个非零值将指向此列将在当前段 （即行组） 的本地字典。 值为-1 指示存在此段没有本地字典。 |
-| **secondary_dictionary_id** | **int**    | 辅助字典的 ID。 一个非零值将指向此列将在当前段 （即行组） 的本地字典。 值为-1 指示存在此段没有本地字典。 |
+| **column_id**               | **整形**    | 列存储列的 ID。                                |
+| **segment_id**              | **整形**    | 列段的 ID。 为实现向后兼容性，即使这是行组 ID，列名仍将继续 segment_id 调用。 您可以使用 <hobt_id，partition_id column_id> <segment_id> 来唯一标识段。 |
+| **版本**                 | **整形**    | 列段格式的版本。                        |
+| **encoding_type**           | **整形**    | 用于该段的编码类型：<br /><br /> 1 = 不带字典的 VALUE_BASED 非字符串/二进制（类似于4，具有一些内部变体）<br /><br /> 2 = 在字典中具有通用值的 VALUE_HASH_BASED 非字符串/二进制列<br /><br /> 3 = STRING_HASH_BASED 字典中包含通用值的字符串/二进制列<br /><br /> 4 = 不带字典的 STORE_BY_VALUE_BASED 非字符串/二进制<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED 字符串/二进制，无字典<br /><br /> 如果可能，所有编码都利用位打包和长度为长度的编码。 |
+| **row_count**               | **整形**    | 行组中的行数。                             |
+| **has_nulls**               | **整形**    | 1 如果列段具有 Null 值。                     |
+| **base_id**                 | **bigint** | 如果正在使用编码类型1，则为基值 ID。  如果未使用编码类型1，则 base_id 设置为1。 |
+| **magnitude**               | **float**  | 如果正在使用编码类型1，则为数量级。  如果未使用编码类型1，则数量级设置为1。 |
+| **primary__dictionary_id**  | **整形**    | 主字典的 ID。 如果为非零值，则指向当前段（即行组）中此列的本地字典。 值-1 指示此段没有本地字典。 |
+| **secondary_dictionary_id** | **整形**    | 辅助字典的 ID。 如果为非零值，则指向当前段（即行组）中此列的本地字典。 值-1 指示此段没有本地字典。 |
 | **min_data_id**             | **bigint** | 列段中的最小数据 ID。                       |
 | **max_data_id**             | **bigint** | 列段中的最大数据 ID。                       |
 | **null_value**              | **bigint** | 用于表示 Null 的值。                               |
 | **on_disk_size**            | **bigint** | 段大小（字节）。                                    |
-| **pdw_node_id**             | **int**    | 唯一标识符[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点。 |
+| **pdw_node_id**             | **整形**    | [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点的唯一标识符。 |
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-加入 sys.pdw_nodes_column_store_segments 和其他系统表来确定每个逻辑表的列存储段的数目。
+与其他系统表联接 pdw_nodes_column_store_segments sys.databases，以确定每个逻辑表的列存储段的数量。
 
 ```sql
 SELECT  sm.name           as schema_nm
@@ -82,11 +82,11 @@ ORDER BY    table_nm
 
 ## <a name="permissions"></a>权限
 
-需要 VIEW SERVER STATE 权限  。
+需要**VIEW SERVER STATE**权限。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
-[sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
-[sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)
+[&#40;Transact-sql&#41;创建列存储索引](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
+[sys. pdw_nodes_column_store_row_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
+[sys. pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)
