@@ -1,6 +1,5 @@
 ---
-title: 创建域 | Microsoft Docs
-ms.custom: ''
+title: 创建域
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 83de355138f694c6c0414362f41676012817d497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d39f86d2efa18c385f2aafd8b3e4cb7de9975b06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992310"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252263"
 ---
 # <a name="create-a-domain"></a>创建域
 
@@ -27,17 +26,17 @@ ms.locfileid: "67992310"
   
  可以通过两种方法创建新的域。 第一种方法是在知识发现活动的“映射”步骤期间，当您正在分析数据示例以便将知识添加到新的或现有的知识库中时。 第二种方法是在域管理活动中，当您创建新域（而非更改现有域）时。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="BeforeYouBegin"></a>开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  若要创建域，您必须已创建并打开了知识库。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a>安全  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>访问  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建域。  
   
-##  <a name="Discovery"></a> 在知识发现活动中创建域  
+##  <a name="Discovery"></a>在知识发现活动中创建域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "67992310"
   
 5.  在 **“映射”** 表中，从某个空行的 **“源列”** 列的下拉列表中选择一个源列。 如果相应的域不存在，请单击 **“创建域”** 图标。  
   
-##  <a name="DomainManagement"></a> 在域管理活动中创建域  
+##  <a name="DomainManagement"></a>在域管理活动中创建域  
   
 1.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“打开知识库”** ，然后选择知识库；或单击 **“新建知识库”** 并输入新知识库的属性。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "67992310"
   
 3.  在 **“域管理”** 页上，单击域列表上方的 **“创建域”** 图标。  
   
-##  <a name="Properties"></a> 设置域属性  
+##  <a name="Properties"></a>设置域属性  
   
 1.  在 **“创建域”** 对话框中，输入名称（对知识库唯一）以及说明（可多达 256 个字符）。  
   
@@ -88,11 +87,11 @@ ms.locfileid: "67992310"
   
 8.  如果数据类型为 **String**，则选择 **“禁用语法错误算法”** 可填充域而不会检查字符串值是否存在语法错误。  
   
-9. 单击 **“确定”** 。  
+9. 单击“确定”****。  
   
 10. 单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
-##  <a name="FollowUp"></a> 跟进：创建域后  
+##  <a name="FollowUp"></a>跟进：在创建域后  
  在创建域后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
   

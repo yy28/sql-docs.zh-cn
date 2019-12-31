@@ -1,6 +1,5 @@
 ---
-title: 服务器端 XML 格式化 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 服务器端 XML 格式（SQLXML）
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,13 +12,14 @@ helpviewer_keywords:
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70771bcb9256b53f4bb8ca459bd7e3836dfcea5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec84fdfad468124f59cefde73486d5b19a5a4110
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005210"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255903"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>服务器端 XML 格式 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68005210"
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，可以将 XML 文档存储到数据库表中，或者从数据库表中检索 XML 文档。 若要检索某一 XML 文档，请在 SELECT 查询中使用 FOR XML 查询扩展插件。  
   
- 例如，假定客户端应用程序执行对执行命令[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，它包含以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询：  
+ 例如，假设客户端应用程序执行一个命令[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，该命令包含以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询：  
   
 ```  
 SELECT FirstName, LastName  
@@ -52,11 +52,11 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- 有关 FOR XML 子句的详细信息，请参阅[使用 FOR XML 构造 XML](../../../relational-databases/xml/for-xml-sql-server.md)。  
+ 有关 FOR XML 子句的详细信息，请参阅[使用 FOR Xml 构造 XML](../../../relational-databases/xml/for-xml-sql-server.md)。  
   
-## <a name="see-also"></a>请参阅  
- [客户端和服务器端 XML 格式的体系结构&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
- [客户端 XML 格式设置&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
- [FOR XML (SQL Server)](../../../relational-databases/xml/for-xml-sql-server.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SQLXML 4.0&#41;的客户端和服务器端 XML 格式的体系结构](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [&#40;SQLXML 4.0&#41;的客户端 XML 格式](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
+ [FOR XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)  
   
   

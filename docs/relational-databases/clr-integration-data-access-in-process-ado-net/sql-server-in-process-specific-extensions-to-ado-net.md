@@ -1,6 +1,7 @@
 ---
-title: SQL Server 进程内特定扩展 ADO.NET |Microsoft Docs
-ms.custom: ''
+title: SQL Server ADO.NET 中的进程内扩展
+description: 链接到 ADO.NET 的四个主要功能扩展，这些扩展专门用于进程内使用。
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1ed0cf58c34506ce12dd04bf529a80d44a03d2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3c1729d216a1456551da3699c286385694e558a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951680"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258170"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>SQL Server 进程内专用的 ADO.NET 扩展
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

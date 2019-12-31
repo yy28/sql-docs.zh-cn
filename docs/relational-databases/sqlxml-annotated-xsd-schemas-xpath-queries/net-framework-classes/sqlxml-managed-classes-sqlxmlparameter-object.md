@@ -1,6 +1,5 @@
 ---
-title: SqlXmlParameter 对象 （SQLXML 托管类） |Microsoft Docs
-ms.custom: ''
+title: SqlXmlParameter 对象（SQLXML）
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,27 +15,28 @@ helpviewer_keywords:
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 338d0161a18c31510f6be0b637f888fafbd99255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d86e6d3a6e910dbd18f2038f127ba99bfd65369
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088782"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252618"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>SQLXML 托管类 - SqlXmlParameter 对象
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   SqlXmlParameter 对象支持以下属性：  
   
  名称  
- 参数名。 命令可以是传递的参数。 调用 CreateParameter 方法 SqlXmlCommand 对象的创建参数对象。  
+ 参数的名称。 命令可以是传递的参数。 调用 SqlXmlCommand 对象的 CreateParameter 方法会创建参数对象。  
   
- ReplTest1  
- 参数的值。 有关工作示例，请参阅[执行 SQL 查询&#40;SQLXML 托管类&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)。  
+ 值  
+ 参数值。 有关工作示例，请参阅[执行 SQL 查询 &#40;SQLXML 托管类&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)。  
   
-## <a name="see-also"></a>请参阅  
- [SqlXmlCommand 对象&#40;SQLXML 托管类&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
- [SqlXmlAdapter 对象&#40;SQLXML 托管类&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)   
+## <a name="see-also"></a>另请参阅  
+ [SQLXML 托管类 &#40;的 SqlXmlCommand 对象&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
+ [SQLXML 托管类 &#40;的 SqlXmlAdapter 对象&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)   
  [在 .NET 环境中访问 SQLXML 功能](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)  
   
   

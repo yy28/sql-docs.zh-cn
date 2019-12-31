@@ -1,6 +1,5 @@
 ---
-title: 使用 sql 筛选值：限制字段和 sql：限制值（SQLXML 4.0） |Microsoft Docs
-ms.custom: ''
+title: 筛选 sql： limit 字段和 sql： limit-值（SQLXML）
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65c26209ed058e5d93663bae9587f8cf5d59abdf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0304b2113e6112f5c2777478ae03436d9f24cfb1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906093"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257412"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 筛选值 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -307,9 +307,9 @@ ms.locfileid: "72906093"
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [float 和 real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar 和 nvarchar &#40;transact-sql&#41; ](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [float 和 real &#40;Transact-sql&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [nchar 和 nvarchar &#40;Transact-sql&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [在查询&#40;中使用带批注的 XSD 架构 SQLXML 4。0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [在查询中使用带批注的 XSD 架构 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: 访问 DQS 操作数据 | Microsoft Docs
-ms.custom: ''
+title: 访问 DQS 操作数据
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 846eec4cb8ac678b5636bc436acce62dc7e2ecf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 2eae5415e6f6bb93501dfc7989fe180e581ae387
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935235"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254793"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>访问 DQS 操作数据
 
@@ -27,23 +26,23 @@ ms.locfileid: "67935235"
   
 -   使用您自己的数据库作为 DQS 操作的源数据，以及导出已处理的数据的目标。 为此，请确保你的数据库与数据质量服务器数据库在同一个 SQL Server 实例中。 否则，该数据库将无法在数据质量客户端中用于 DQS 操作。 此外，为导出匹配结果，必须向你的 Windows 用户帐户授予对 DQS_STAGING_DATA 数据库的访问权限，因为匹配结果分为两个阶段进行导出：首先，匹配结果导出到 DQS_STAGING_DATA 数据库的临时表中，然后移到你的目标数据库的表中。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
   
 -   您必须已通过运行 DQSInstaller.exe 文件完成了 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装。 有关详细信息，请参阅 [运行 DQSInstaller.exe 以便完成数据质量服务器安装](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
   
 -   为授予/修改对数据库上 SQL 登录名的访问权限，您的 Windows 用户帐户必须是数据库引擎实例中相应固定服务器角色（例如 securityadmin、serveradmin 或 sysadmin）的成员。  
   
-### <a name="to-grant-readwrite-access-to-a-user-on-the-dqsstagingdata-database"></a>向用户授予对 DQS_STAGING_DATA 数据库的读/写访问权限  
+### <a name="to-grant-readwrite-access-to-a-user-on-the-dqs_staging_data-database"></a>向用户授予对 DQS_STAGING_DATA 数据库的读/写访问权限  
   
 1.  启动 Microsoft SQL Server Management Studio。  
   
-2.  在 Microsoft SQL Server Management Studio 中，依次展开您的 SQL Server 实例、 **“安全性”** 和 **“登录名”** 。  
+2.  在 Microsoft SQL Server Management Studio 中，依次展开您的 SQL Server 实例、 **“安全性”** 和 **“登录名”**。  
   
-3.  右键单击某一 SQL 登录名，然后单击 **“属性”** 。  
+3.  右键单击某一 SQL 登录名，然后单击 **“属性”**。  
   
 4.  在 **“登录属性”** 对话框的左侧窗格中，单击 **“用户映射”** 页。  
   
-5.  在右侧窗格中，选中“**DQS_STAGING_DATA**”数据库的“**映射**”列下的复选框，然后在“**数据库角色成员身份:DQS_STAGING_DATA**”窗格中选择以下角色：  
+5.  在右侧窗格中，选中 **DQS_STAGING_DATA** 数据库的 **“映射”** 列下的复选框，然后在 **“数据库角色成员身份: DQS_STAGING_DATA”** 窗格中选择以下角色：  
   
     -   **db_datareader**：从表/视图中读取数据。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "67935235"
 ## <a name="next-steps"></a>后续步骤  
  尝试执行 DQS 操作，这些操作访问数据库来作为 DQS 操作的数据源，然后将处理后的数据导出到数据库。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安装 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   

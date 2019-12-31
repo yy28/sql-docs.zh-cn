@@ -10,27 +10,29 @@ ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8cb603eebc75c03420300757bd09cae25fce3c52
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: 79fe1380a38ab9b2d309f0fc6419261e4f13ef8b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783307"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253257"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>用于 Reporting Services SharePoint 模式的 PowerShell cmdlet
-  在安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式时，会安装 PowerShell cmdlet，以便支持 SharePoint 模式下的报表服务器。 这些 cmdlet 涵盖三个功能类别。  
+  安装[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sharepoint 模式时，会安装 PowerShell cmdlet 以支持 SharePoint 模式下的报表服务器。 这些 cmdlet 涵盖三个功能类别。  
   
--   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务和代理的安装。  
+-   
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务和代理的安装。  
   
--   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序和关联代理的设置和管理。  
+-   
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序和关联代理的设置和管理。  
   
 -   管理 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能，例如扩展插件和加密密钥。  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式|  
+|[!INCLUDE[applies](../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式|  
   
- **本主题包含以下内容：**  
+ **本主题包括以下内容：**  
   
 -   [Cmdlet 摘要](#bkmk_cmdlet_sum)  
   
@@ -46,27 +48,27 @@ ms.locfileid: "72783307"
   
     -   [创建 Reporting Services 服务应用程序和代理](#bkmk_example_create_service_application)  
   
-    -   [查看并更新 Reporting Services 传递扩展插件](#bkmk_example_delivery_extension)  
+    -   [查看和更新 Reporting Services 传递扩展插件](#bkmk_example_delivery_extension)  
   
-    -   [获取和设置 Reporting Servicea 应用程序数据库的属性，例如数据库超时](#bkmk_example_db_properties)  
+    -   [获取和设置 Reporting Service 应用程序数据库的属性，例如，数据库超时值](#bkmk_example_db_properties)  
   
     -   [列出 reporting services 数据扩展插件-SharePoint 模式](#bkmk_example_list_data_extensions)  
   
     -   [更改并列出订阅所有者](#bkmk_change_subscription_owner)  
   
-##  <a name="bkmk_cmdlet_sum"></a> Cmdlet 摘要  
+##  <a name="bkmk_cmdlet_sum"></a>Cmdlet 摘要  
 
- 若要运行 cmdlet，您需要打开 SharePoint Management Shell。 还可以使用 Microsoft Windows 附带的图形用户界面编辑器 **Windows PowerShell 集成脚本环境 (ISE)** 。 有关详细信息，请参阅 [在 Windows Server 上启动 Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)。 在以下 cmdlet 摘要中，对服务应用程序 "数据库" 的引用指的是 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序创建并使用的所有数据库。 这包括配置、警报和 temp 数据库。  
+ 若要运行 cmdlet，您需要打开 SharePoint Management Shell。 还可以使用 Microsoft Windows 附带的图形用户界面编辑器 **Windows PowerShell 集成脚本环境 (ISE)**。 有关详细信息，请参阅 [在 Windows Server 上启动 Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)。 在以下 cmdlet 摘要中，对服务应用程序 "数据库" 的引用是指由[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序创建并使用的所有数据库。 这包括配置、警报和 temp 数据库。  
 
   
  如果您在键入 PowerShell 示例时看到类似以下内容的错误消息：  
   
 -   Install-SPRSService：无法将项“Install-SPRSService”识别为  
-    cmdlet、函数、脚本文件或可运行程序的名称。 检查名称的拼写，如果包括路径，请验证路径是否正确并重试。  
+    cmdlet、函数、脚本文件或可运行程序的名称。 检查名称的拼写，如果包含路径，请验证该路径是否正确，并重试。  
   
  出现以下问题之一：  
   
--   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式，因此未安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] cmdlet。  
+-   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]未安装 SharePoint 模式，因此未安装[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] cmdlet。  
   
 -   您在 Windows PowerShell 或 Windows PowerShell ISE 而非 SharePoint Management Shell 中运行了 PowerShell 命令。 使用 SharePoint Management shell 或使用以下命令将 SharePoint 管理单元添加到 Windows PowerShell 窗口：  
   
@@ -74,37 +76,37 @@ ms.locfileid: "72783307"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 有关详细信息，请参阅[使用 Windows PowerShell 管理 SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx) （ https://technet.microsoft.com/library/ee806878.aspx)。  
+ 有关详细信息，请参阅[使用 Windows PowerShell 管理 SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx) （https://technet.microsoft.com/library/ee806878.aspx)。  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>打开 SharePoint Management Shell 并运行 cmdlet  
   
-1.  单击 **“开始”** 按钮  
+1.  单击 "**开始**" 按钮  
   
 2.  单击 **“Microsoft SharePoint 产品”** 组。  
   
-3.  单击 **“SharePoint Management Shell”** 。  
+3.  单击 **“SharePoint Management Shell”**。  
   
  若要查看针对 cmdlet 的命令行帮助，请在 PowerShell 命令提示符处使用 PowerShell“Get-Help”命令。 例如：  
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
-###  <a name="bkmk_sharedservice_cmdlets"></a> 共享服务和代理 Cmdlet  
+###  <a name="bkmk_sharedservice_cmdlets"></a>共享服务和代理 Cmdlet  
  下表包含用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务的 PowerShell cmdlet。  
   
-|Cmdlet|描述|  
+|Cmdlet|说明|  
 |------------|-----------------|  
-|Install-SPRSService|安装并注册或卸载 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共享服务。 这只能在 SharePoint 模式下具有 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装的计算机上进行。 对于安装，将发生两个操作：<br /><br /> 1） [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务安装在场中。<br /><br /> 2） [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务实例安装到当前计算机上。<br /><br /> 对于卸载，将发生两个操作：<br />1）从当前计算机上卸载 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务。<br />2）从场中卸载 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务。<br /><br /> <br /><br /> 注意：如果在场中存在安装了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务的任何其他计算机，或者场中仍有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序在运行，将显示一条警告消息。|  
+|Install-SPRSService|安装并注册或卸载 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共享服务。 这只能在 SharePoint 模式下具有 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装的计算机上进行。 对于安装，将发生两个操作：<br /><br /> 1）该[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务安装在场中。<br /><br /> 2） [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务实例安装在当前计算机上。<br /><br /> 对于卸载，将发生两个操作：<br />1）从[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]当前计算机上卸载服务。<br />2）从[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]场中卸载服务。<br /><br /> <br /><br /> 注意：如果场中存在安装了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务的任何其他计算机，或者场中仍有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序在运行，将显示一条警告消息。|  
 |Install-SPRSServiceProxy|安装并注册（或卸载）SharePoint 场中的 Reporting Services 服务代理。|  
 |Get-SPRSProxyUrl|获取用于访问 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务的 URL。|  
 |Get-SPRSServiceApplicationServers|获取本地 SharePoint 场中包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共享服务安装的所有服务器。 此 cmdlet 可用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 升级，以确定运行共享服务并因此需要升级的服务器。|  
   
-###  <a name="bkmk_serviceapp_cmdlets"></a> 服务应用程序和代理 Cmdlet  
+###  <a name="bkmk_serviceapp_cmdlets"></a>服务应用程序和代理 Cmdlet  
  下表包含用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序及其关联代理的 PowerShell cmdlet。  
   
-|cmdlet|描述|  
+|cmdlet|说明|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|获取一个或多个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序对象。|  
-|New-SPRSServiceApplication|创建一个新的 Reporting Services 服务应用程序及关联的数据库。<br /><br /> LogonType 参数:指定报表服务器是否使用 SSRS 应用程序池帐户或 SQL Server 登录名来访问报表服务器数据库。 该参数可以是下列值之一：<br /><br /> 0 Windows 身份验证<br /><br /> 1 SQL Server<br /><br /> 2 应用程序池帐户（默认值）|  
+|New-SPRSServiceApplication|创建一个新的 Reporting Services 服务应用程序及关联的数据库。<br /><br /> LogonType 参数：指定报表服务器是否使用 SSRS 应用程序池帐户或 SQL Server 登录名来访问报表服务器数据库。 该参数可以是下列值之一：<br /><br /> 0 Windows 身份验证<br /><br /> 1 SQL Server<br /><br /> 2 应用程序池帐户（默认值）|  
 |Remove-SPRSServiceApplication|删除指定的 Reporting Services 服务应用程序。 此操作也将删除关联的数据库。|  
 |Set-SPRSServiceApplication|编辑现有 Reporting Services 服务应用程序的属性。|  
 |New-SPRSServiceApplicationProxy|创建新的 Reporting Services 服务应用程序代理。|  
@@ -119,9 +121,9 @@ ms.locfileid: "72783307"
 |Get-SPRSDatabaseRightsScript|将数据库权限脚本输出到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序的屏幕。 系统会提示所需的用户和数据库，然后返回您可以运行以修改权限的 Transact SQL。 然后，您可以在 SQL Server Management Studio 中运行此脚本。|  
 |Get-SPRSDatabaseUpgradeScript|将数据库升级脚本输出到此屏幕。 该脚本将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序数据库升级到当前 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装的数据库版本。|  
   
-###  <a name="bkmk_ssrsfeatures_cmdlets"></a> Reporting Services 自定义功能 Cmdlet  
+###  <a name="bkmk_ssrsfeatures_cmdlets"></a>Reporting Services 自定义功能 Cmdlet  
   
-|Cmdlet|描述|  
+|Cmdlet|说明|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|为指定的 Reporting Services 服务应用程序更新加密密钥并且重新加密其数据。|  
 |Restore-SPRSEncryptionKey|还原以前为 Reporting Services 服务应用程序备份的加密密钥。|  
@@ -130,7 +132,7 @@ ms.locfileid: "72783307"
 |New-SPRSExtension|向 Reporting Services 服务应用程序注册新的扩展插件。|  
 |Set-SPRSExtension|设置现有 Reporting Services 扩展插件的属性。|  
 |Remove-SPRSExtension|从 Reporting Services 服务应用程序删除扩展插件。|  
-|Get-SPRSExtension|获取一个或多个用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 扩展插件。<br /><br /> 有效值为：<br /><br /> **传递**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **数据**<br /><br /> **安全性**<br /><br /> **身份验证**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
+|Get-SPRSExtension|获取一个或多个用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 扩展插件。<br /><br /> 有效值包括：<br /><br /> **交付**<br /><br /> **DeliveryUI**<br /><br /> **呈现**<br /><br /> **数据**<br /><br /> **安全**<br /><br /> **验证**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **设计器**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|基于是否启用了“ReportingService”功能来获取 SharePoint 站点。 默认情况下，将返回启用“ReportingService”功能的站点。|  
   
 ##  <a name="bkmk_basic_samples"></a>基本示例  
@@ -215,7 +217,7 @@ Set-SPRSExtension -Identity $app -ExtensionType "Delivery" -Name "Report Server 
 $app = Get-SPRSServiceApplication | Where {$_.name -like " ssrs_testapp *"}  
 ```  
   
- 下列脚本将返回名为“Reporting Services Application”的服务应用程序的报表服务器电子邮件传递扩展插件的当前配置值。 第一步将变量 $app 的值设置为名为“My RS Service App”的服务应用程序的对象。  
+ 下列脚本将返回名为“Reporting Services Application”的服务应用程序的报表服务器电子邮件传递扩展插件的当前配置值。 第一步将变量 $app 的值设置为具有“My RS Service App”名称的服务应用程序的对象。  
   
  第二个语句将获取变量 $app 中的服务应用程序对象的“报表服务器电子邮件”传递扩展插件，并选择配置 XML  
   
@@ -231,7 +233,7 @@ Get-SPRSServiceApplication -Name "Reporting Services Application" | Get-SPRSExte
 ```  
   
 ###  <a name="bkmk_example_db_properties"></a>获取和设置 Reporting Servicea 应用程序数据库的属性，例如数据库超时  
- 下面的示例首先返回数据库和属性列表，这样你可以确定你接下来为设置命令提供的数据库 GUID (ID)。 使用 `Get-SPRSDatabase | format-list`来获取完整的属性列表。  
+ 以下示例首先返回数据库和属性的列表，因此可以确定随后提供给 set 命令的数据库 GUID (ID)。 使用 `Get-SPRSDatabase | format-list`来获取完整的属性列表。  
   
 ```powershell
 Get-SPRSDatabase | Select id, querytimeout,connectiontimeout, status, server, ServiceInstance
@@ -255,7 +257,7 @@ Get-SPRSDatabase | Select id, querytimeout,connectiontimeout, status, server, Se
 Set-SPRSDatabase -Identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
 ```  
   
- 若要验证值是否已设置，请再次运行 GET cmdlet。  
+ 若要验证是否已设置该值，请再次运行 GET cmdlet。  
   
 ```powershell
 Get-SPRSDatabase -Identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | Select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
@@ -298,10 +300,9 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name, extensiont
      `SHAREPOINTLIST          Data`  
   
 ###  <a name="bkmk_change_subscription_owner"></a>更改并列出订阅所有者  
- 请参阅 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
+ 请参阅[使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [清单：使用 PowerShell 验证 PowerPivot for SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
- [CodePlex SharePoint Management PowerShell 脚本](http://sharepointpsscripts.codeplex.com/)   
- [如何使用 PowerShell 管理 SSRS](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
+ [CodePlex SharePoint Management PowerShell 脚本](https://sharepointpsscripts.codeplex.com/)   

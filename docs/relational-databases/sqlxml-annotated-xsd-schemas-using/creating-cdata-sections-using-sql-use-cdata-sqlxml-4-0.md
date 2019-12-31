@@ -1,6 +1,5 @@
 ---
-title: '创建 CDATA 部分使用 sql: use-(SQLXML 4.0) |Microsoft Docs'
-ms.custom: ''
+title: 使用 sql： use-cdata 创建 CDATA 节（SQLXML）
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,32 +18,33 @@ ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2c0e81c6a497f9377d04adc94f3a9e221758f81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 289e0e7ecb720afc4440283a97bcb7d55ccee8b8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126573"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257487"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>使用 sql:use-cdata 创建 CDATA 节 (SQLXML 4.0)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   在 XML 中，CDATA 节用于对那些所含字符不转义则会识别为标记字符的特定文本块进行转义。  
   
- Microsoft 中的数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有时会包含被 XML 分析器视为标记字符; 例如，尖括号方括号 （< 和 >），小于-比-或者-等于符号的字符 (< =)，并与号 (&) 都视为标记字符。 但是，可以在 CDATA 节中对这类特殊字符进行包装，使它们不被视为标记字符。 XML 语法分析程序将 CDATA 节中的文本视为纯文本。  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的数据库有时可能包含由 XML 分析器视为标记字符的字符;例如，尖括号（< 和 >）、小于号或等于符号（<=）以及与号（&）都被视为标记字符。 但是，可以在 CDATA 节中对这类特殊字符进行包装，使它们不被视为标记字符。 XML 语法分析程序将 CDATA 节中的文本视为纯文本。  
   
- **Sql: use-cdata**批注用于指定返回的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应包装在 CDATA 节 (即，它指示列中的值是否由指定**sql: field**应括在 CDATA 节)。 **Sql: use-cdata**可以仅在将映射到数据库列的元素上指定批注。  
+ **Sql： use-cdata**批注用于指定由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回的数据应包装在 cdata 部分中（也就是说，它指示由**sql： field**指定的列中的值是否应包含在 cdata 节中）。 只能在映射到数据库列的元素上指定**sql： use-cdata**批注。  
   
- **Sql: use-cdata**批注接受布尔值 (0 = false,1 = true)。 可接受的值为 0、1、true 和 false。  
+ **Sql： use-cdata**批注采用布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。  
   
- 不能用于此批注**sql:url-编码**或 ID、 IDREF、 IDREFS、 NMTOKEN 和 NMTOKENS 属性类型。  
+ 此批注不能与**sql： url 编码**或 ID、IDREF、IDREFS、NMTOKEN 和 NMTOKENS 属性类型一起使用。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 在元素上指定 sql:use-cdata  
- 在以下架构中， **sql: use-cdata**设置为 1 (True)  **\<AddressLine1 >** 内 **\<地址 >** 元素。 结果，将在 CDATA 节中返回数据。  
+ 在下面的架构中，对于** \<地址>** 元素中的** \<AddressLine1>** ， **sql： use-cdata**设置为1（True）。 结果，将在 CDATA 节中返回数据。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -63,7 +63,7 @@ ms.locfileid: "68126573"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 UseCData.xml。  
   

@@ -1,6 +1,5 @@
 ---
-title: 使用 sql：溢出字段检索未用完的数据（SQLXML 4.0） |Microsoft Docs
-ms.custom: ''
+title: 通过 sql：溢出字段（SQLXML）获取未用完的数据
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +16,18 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6714940fe14e2f7a1182a24c37f0d7c58b4d3e72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 35abd64e0c7e492f114164447ec3e258242d3765
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907168"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257398"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>使用 sql:overflow-field 检索未用完的数据 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函数将 XML 文档中的记录插入数据库时，源 XML 文档中所有未用完的数据可以存储在列中。 使用带批注的架构从数据库中检索数据时，可以指定**sql：溢出字段**属性来标识在其中存储溢出数据的表中的列。 可以在 **\<元素 >** 上指定**sql：溢出字段**属性。  
+  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函数将 XML 文档中的记录插入数据库时，源 XML 文档中所有未用完的数据可以存储在列中。 使用带批注的架构从数据库中检索数据时，可以指定**sql：溢出字段**属性来标识在其中存储溢出数据的表中的列。 可以在** \<元素>** 上指定**sql：溢出字段**属性。  
   
  然后，可以通过以下方式检索此数据：  
   

@@ -1,6 +1,5 @@
 ---
-title: 数据清理 | Microsoft Docs
-ms.custom: ''
+title: Data Cleansing
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,20 +7,21 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 18bda14c90441375d59f6057f1cdfedac85bdaa0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 46ca0fe453548cab780d1e2b32c6a8d98a32de11
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935447"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251767"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  数据清理是在数据源中分析数据质量的过程，在其中手动批准/拒绝系统的建议并将对数据进行更改。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据清理包括计算机辅助的过程和交互式过程，前者分析数据与知识库中知识的符合程度，后者允许数据专员查看和修改计算机辅助过程的结果，确保数据清理符合自己的要求。  
+  数据清理是在数据源中分析数据质量的过程，在其中手动批准/拒绝系统的建议并将对数据进行更改。 
+  [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据清理包括计算机辅助的过程和交互式过程，前者分析数据与知识库中知识的符合程度，后者允许数据专员查看和修改计算机辅助过程的结果，确保数据清理符合自己的要求。  
   
  数据专员还可以在 Integration Services 包装过程中执行数据清理。 在这种情况下，数据专员将通过 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 使用现有的知识库来自动执行数据清理。 有关详细信息，请参阅 [DQS 清除转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "67935447"
   
  下图显示如何在 DQS 中执行数据清理：  
   
- ![DQS 中的数据清除过程](../data-quality-services/media/dqs-cleansingprocess.gif "Data Cleansing Process in DQS")  
+ ![DQS 中的数据清除过程](../data-quality-services/media/dqs-cleansingprocess.gif "DQS 中的数据清除过程")  
   
-##  <a name="ComputerAssisted"></a> 计算机辅助的清理  
+##  <a name="ComputerAssisted"></a>计算机辅助清理  
  DQS 数据清理过程会对要清理的数据应用知识库，随后提出数据更改建议。 数据专员有权访问每个建议的更改，从而得以评估并更正建议的更改。 若要进行数据清理，数据专员需继续执行以下操作：  
   
 1.  创建数据质量项目，选择要针对其分析和清理源数据的知识库，然后选择 **“清理”** 活动。 多个数据质量项目可以使用同一知识库。  
@@ -55,29 +55,32 @@ ms.locfileid: "67935447"
   
  数据清理过程查找与已知数据域值最匹配的数据实例。 该过程将数据质量知识应用于所有源数据，而不像知识发现过程，后者仅对一定百分比的样本数据运行。  
   
- 计算机辅助过程在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中显示要用于交互式清理过程的数据质量信息。  除了遵守语法错误规则，DQS 还使用引用数据和高级算法通过“置信度”对数据分类。 置信度指示 DQS 对更正或建议的确信程度。 置信度基于以下阈值：  
+ 计算机辅助过程在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中显示要用于交互式清理过程的数据质量信息。 
+  *
+  *除了遵守语法错误规则，DQS 还使用引用数据和高级算法通过“置信度”对数据分类。 置信度指示 DQS 对更正或建议的确信程度。 置信度基于以下阈值：  
   
--   *自动更正阈值* ，超出该阈值后 DQS 将建议并执行更改，除非数据专员拒绝更改。 可以在 **“配置”** 屏幕的 **“常规设置”** 选项卡中指定自动更正阈值。 有关详细信息，请参阅 [配置清理和匹配活动的阈值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
+-   
+  *自动更正阈值* ，超出该阈值后 DQS 将建议并执行更改，除非数据专员拒绝更改。 可以在 **“配置”** 屏幕的 **“常规设置”** 选项卡中指定自动更正阈值。 有关详细信息，请参阅 [配置清理和匹配活动的阈值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
 -   自动更正阈值之下的 *自动建议阈值* ，超出该阈值后 DQS 将建议更改，并在经过数据专员批准后执行更改。 可以在 **“配置”** 屏幕的 **“常规设置”** 选项卡中指定自动建议阈值。 有关详细信息，请参阅 [配置清理和匹配活动的阈值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
  对于置信度低于自动建议阈值的任何值，DQS 会原样保留，除非数据专员指定进行更改。  
   
-##  <a name="Interactive"></a> 交互式清理  
+##  <a name="Interactive"></a>交互式清理  
  基于计算机辅助的清理过程，DQS 为数据专员提供了做出数据更改决策所需的信息。 DQS 用以下五个选项卡对数据分类：  
   
--   **建议**:用于 DQS 查找建议的值，这些值的置信度高于“自动建议阈值”，但是低于“自动更正阈值”   。 您应该检查这些值，并按需批准或拒绝它们。  
+-   **建议**： DQS 发现建议的值，其置信度高于*自动建议阈值*但低于*自动更正阈值*。 您应该检查这些值，并按需批准或拒绝它们。  
   
--   **新建**：有效的值用于 DQS 没有足够信息 （建议），并因此不能映射到任何其他选项卡。此外，此选项卡还包含这样的值：它们的置信度低于 *自动建议阈值* ，但是足以被标记为有效。  
+-   **新增**： DQS 没有足够信息（建议）的有效值，因此不能映射到任何其他选项卡。此外，此选项卡还包含置信度小于*自动建议阈值*的值，但足以标记为有效。  
   
--   **无效**：在域中的知识库或符合域规则或引用数据的值被标记为无效的值。 此选项卡还包含在交互式清理过程中被用户在任何其他四个选项卡中拒绝的值。  
+-   **无效**：在知识库的域中被标记为无效的值或未通过域规则或引用数据的值。 此选项卡还包含在交互式清理过程中被用户在任何其他四个选项卡中拒绝的值。  
   
--   **更正**：当 DQS 以高于自动更正阈值的置信度找到值的更正时，DQS 在自动化清理过程中更正的值  。 此选项卡还包含这样的值：用户在交互式清理期间在 **“更正为”** 列中指定了正确值，然后通过单击任何其他四个选项卡中 **“批准”** 列中的单选按钮批准了它。  
+-   已**更正**：在自动清除过程中由 dqs 更正的值，因为 DQS 在*自动更正阈值*上方发现对值的更正。 此选项卡还包含这样的值：用户在交互式清理期间在 **“更正为”** 列中指定了正确值，然后通过单击任何其他四个选项卡中 **“批准”** 列中的单选按钮批准了它。  
   
--   **更正**：未找到正确的值。 例如，与域值匹配的值。 根据需要，您可以通过拒绝此选项卡中的值，或通过指定 **“更正为”** 列中的替代字词，然后单击 **“接受”** 列中的单选按钮来覆盖 DQS 清理。 此选项卡还包含这样的值：用户在交互式清理期间通过单击 **“新建”** 或 **“无效”** 选项卡中 **“批准”** 列中的单选按钮批准了该值。  
+-   **正确**：找到正确的值。 例如，与域值匹配的值。 根据需要，您可以通过拒绝此选项卡中的值，或通过指定 **“更正为”** 列中的替代字词，然后单击 **“接受”** 列中的单选按钮来覆盖 DQS 清理。 此选项卡还包含这样的值：用户在交互式清理期间通过单击 **“新建”** 或 **“无效”** 选项卡中 **“批准”** 列中的单选按钮批准了该值。  
   
 > [!NOTE]  
->  在 **“建议的”** 、 **“已更正”** 和 **“正确”** 选项卡中，DQS 针对相应域值在 **“更正为”** 列中显示域的前导值（如果适用）。  
+>  在 **“建议的”**、 **“已更正”** 和 **“正确”** 选项卡中，DQS 针对相应域值在 **“更正为”** 列中显示域的前导值（如果适用）。  
   
  数据专员使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 来查看 DQS 建议的更改并决定是否实施这些更改。 他们可以验证 DQS 指定为正确的值实际上是否正确； 验证是否确实应该更改 DQS 已经执行的具有高置信度的更改； 可以决定是否批准自动建议的更改； 可以检查尚未更改的值，以便执行他们想要执行但计算机辅助过程中未找到的更改。  
   
@@ -87,27 +90,27 @@ ms.locfileid: "67935447"
   
  下图显示如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序执行数据清理：  
   
- ![Data Quality Client 中的数据清理](../data-quality-services/media/dqs-cleansingindqsclient.gif "Data Cleansing in Data Quality Client")  
+ ![数据质量客户端中的数据清除](../data-quality-services/media/dqs-cleansingindqsclient.gif "数据质量客户端中的数据清除")  
   
-##  <a name="Leading"></a> 前导值更正  
+##  <a name="Leading"></a>前导值更正  
  前导值更正适用于具有同义词的域值，用户想使用其中的某个同义词作为前导值替代其他值以使值的表示方式一致。 例如，“New York”、“NYC”和“big apple”是同义词，用户想使用“New York”作为前导值替代“NYC”和“Big Apple”。 DQS 在清理过程中支持前导值更正，以帮助您将数据标准化。 仅当创建域时为域启用了前导值更正时才执行前导值更正。 默认情况下，为所有域启用前导值更正，除非您在创建域时取消选中了 **“使用前导值”** 复选框。 有关此复选框的详细信息，请参阅 [Set Domain Properties](../data-quality-services/set-domain-properties.md)。  
   
-##  <a name="Standardize"></a> 将已清理的数据标准化  
+##  <a name="Standardize"></a>标准化清理数据  
  您可以基于为域定义的输出格式选择是否要以标准化格式导出已清理的数据。 创建域时，可以选择在输出域中的数据值时要采用的格式。 有关指定域的输出格式的详细信息，请参阅 **Set Domain Properties** 中的 [“将输出格式设置为”](../data-quality-services/set-domain-properties.md)列表。  
   
  在清理数据质量项目向导的 **“导出”** 页中导出已清理的数据时，您通过选中 **“标准化输出”** 复选框来指定是否要以标准化格式导出已清理的数据。 默认情况下，以标准化格式导出已清理的数据，即选中该复选框。 有关导出已清理的数据的详细信息，请参阅[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)。  
   
-##  <a name="Related"></a> 相关任务  
+##  <a name="Related"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|说明如何配置清理活动的阈值。|[Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
-|说明如何使用 DQS 中内置的知识清理数据。|[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
-|说明如何使用引用数据服务中的知识清理数据。|[使用引用数据（外部）知识清理数据](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
+|说明如何配置清理活动的阈值。|[配置清理和匹配的阈值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|说明如何使用 DQS 中内置的知识清理数据。|[使用 DQS &#40;内部&#41; 知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
+|说明如何使用引用数据服务中的知识清理数据。|[使用引用数据清理数据 &#40;外部&#41; 知识](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |说明如何清理复合域。|[清理复合域中的数据](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>请参阅  
- [数据质量项目 (DQS)](../data-quality-services/data-quality-projects-dqs.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;DQS&#41;的数据质量项目](../data-quality-services/data-quality-projects-dqs.md)   
  [数据匹配](../data-quality-services/data-matching.md)  
   
   

@@ -1,9 +1,8 @@
 ---
-title: dbo.syssessions (Transact SQL) |Microsoft Docs
+title: dbo. syssessions （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/30/2019
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -19,29 +18,31 @@ helpviewer_keywords:
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 35b23525dc9762d012948e6eba0b41156b45ac69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 566445a3680dc54382a7e3e66bf77dbcbddca2e8
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056278"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548287"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理时，该代理都会创建一个新会话。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务意外重新启动或停止时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将使用该会话来保留作业的状态。 每一行**syssessions**表包含有关某一会话的信息。 使用**sysjobactivity**表，以每个会话结束时查看作业状态。  
+每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理时，该代理都会创建一个新会话。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务意外重新启动或停止时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将使用该会话来保留作业的状态。 **Syssessions**表中的每一行都包含一个会话的相关信息。 使用**sysjobactivity**表可以查看每个会话结束时的作业状态。  
   
- 此表存储中**msdb**数据库。  
+ 该表存储在**msdb**数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会话的 ID。|  
-|**agent_start_date**|**datetime**|为此会话启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的日期和时间。|  
+|**session_id**|**整形**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会话的 ID。 此 session_id 不是会话的 SPID，而是此系统表中的标识值。|  
+|**agent_start_date**|**型**|为此会话启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的日期和时间。|  
   
 ## <a name="remarks"></a>备注  
- 作为成员的用户的**sysadmin**固定的服务器角色才能访问此表。  
+ 只有作为**sysadmin**固定服务器角色成员的用户才能访问此表。  
   
-## <a name="see-also"></a>请参阅  
- [dbo.sysjobactivity &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [sysjobactivity &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
   
   

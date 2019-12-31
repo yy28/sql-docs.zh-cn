@@ -1,6 +1,5 @@
 ---
-title: 使用 XML Updategram (SQLXML 4.0) 删除数据 |Microsoft Docs
-ms.custom: ''
+title: 使用 XML Updategram 删除数据（SQLXML）
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f99df8f47b50649f46e4acc0aeecb040bf214806
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad537d8b2ce247d45e8e7a94216006023373c13c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220403"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252431"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML updategram 删除数据 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  当记录实例出现在时，updategram 指示删除操作 **\<之前 >** 块中没有相应记录 **\<后 >** 块。 在这种情况下，updategram 删除记录，在 **\<之前 >** 从数据库的块。  
+  当记录实例出现在** \<>** 块中没有相应记录的** \<之前>** 块中时，updategram 指示删除操作。 在这种情况下，updategram 将从数据库中删除** \<之前>** 块中的记录。  
   
  下面是 updategram 的删除操作格式：  
   
@@ -43,21 +43,21 @@ ms.locfileid: "68220403"
 </ROOT>  
 ```  
   
- 可以省略 **\<后 >** 标记如果 updategram 执行的删除操作。 如果未指定可选**映射架构**属性中，  **\<ElementName >** updategram 映射到数据库表和子元素或属性映射到中指定表中的列。  
+ 如果 updategram 仅执行删除操作，则可以省略** \<>标记后**。 如果未指定可选的**映射架构**属性，则 updategram 中指定的** \<ElementName>** 映射到数据库表，并且子元素或属性映射到表中的列。  
   
- 如果在 updategram 中指定的元素与表中的多个行的匹配，或与任何行不匹配，则 updategram 返回错误，并取消整个 **\<同步 >** 块。 updategram 中的元素每次只能删除一个记录。  
+ 如果 updategram 中指定的元素与表中的多行匹配或与任何行都不匹配，则 updategram 将返回错误，并取消整个** \<同步>** 块。 updategram 中的元素每次只能删除一个记录。  
   
 ## <a name="examples"></a>示例  
- 本节中的示例使用默认映射（即未在 updategram 中指定映射架构）。 有关使用映射架构的 updategram 的更多示例，请参阅[在 Updategram 中指定带批注的映射架构&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
+ 本节中的示例使用默认映射（即未在 updategram 中指定映射架构）。 有关使用映射架构的 updategram 的更多示例，请参阅[在 Updategram &#40;SQLXML 4.0&#41;中指定带批注的映射架构](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
- 若要创建使用以下示例的工作示例，必须满足中指定的要求[运行 SQLXML 示例的要求](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足[运行 SQLXML 示例的要求](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)中指定的要求。  
   
 ### <a name="a-deleting-a-record-by-using-an-updategram"></a>A. 使用 updategram 删除记录  
  以下 updategram 将从 HumanResources.Shift 表中删除两个记录。  
   
  在这些示例中，updategram 不指定映射架构。 因此，updategram 使用默认映射，其中元素名称映射到表名称，而属性或子元素映射到列。  
   
- 此第一个 updategram 是以属性为中心，并在标识两个轮班 （Day-evening 和 Evening-night） **\<之前 >** 块。 因为在没有对应记录 **\<后 >** 块中，这是删除操作。  
+ 此第一个 updategram 是以属性为中心的，它标识** \<之前>** 块中的两个倒班（Day-晚上和晚上夜）。 由于** \<>块后**，这是一个删除操作。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -82,15 +82,15 @@ ms.locfileid: "68220403"
   
 ##### <a name="to-test-the-updategram"></a>测试 updategram  
   
-1.  完成示例 （"插入多个记录使用 updategram"） 中的 B[使用 XML Updategram 插入数据&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。  
+1.  [使用 XML updategram &#40;SQLXML 4.0&#41;在插入数据](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)中完成示例 B （"使用 updategram 插入多个记录"）。  
   
-2.  将上面的 updategram 复制到记事本并将其保存为 Updategram-removeshifts.xml 同一文件夹中，如用来完成 （"插入多个记录使用 updategram"） 中[使用 XML Updategram 插入数据&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+2.  将上面的 updategram 复制到记事本，并将其另存为使用 XML Updategram 在插入数据时使用 updategram 的 "插入多个记录" 的 Updategram-RemoveShifts 中的 ""） [&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。  
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 以执行 updategram。  
   
      有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SQLXML 4.0&#41;的 Updategram 安全注意事项](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

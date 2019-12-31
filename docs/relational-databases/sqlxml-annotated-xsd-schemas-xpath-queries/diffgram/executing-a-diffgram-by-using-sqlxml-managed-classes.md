@@ -1,5 +1,5 @@
 ---
-title: 执行 DiffGram 使用 SQLXML 托管类 |Microsoft Docs
+title: 使用 SQLXML 托管类执行 DiffGram
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 429538b93bc4b25b68dc8867c90462e9c43a164e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c92072290b8f0115470bccae46ab0e5fe111a0b3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073461"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257267"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>使用 SQLXML 托管类执行 DiffGram
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  此示例演示如何执行 DiffGram 文件中的[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 环境来应用数据更新为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表使用 SQLXML 托管类 (Microsoft.Data.SqlXml)。  
+  此示例演示如何使用 SQLXML 托管类（node.js） [!INCLUDE[msCoName](../../../includes/msconame-md.md)]在 .NET Framework 环境中执行 DiffGram 文件[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，以将数据更新应用到表。  
   
  在本示例中，DiffGram 更新客户 ALFKI 的客户信息（CompanyName 和 ContactName）。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "68073461"
 </ROOT>  
 ```  
   
- **\<之前 >** 块包括 **\<客户 >** 元素 (**diffgr: id ="Customer1"** )。 **\<DataInstance >** 块包括相应 **\<客户 >** 元素具有相同 **id**。 **\<客户 >** 中的元素 **\<NewDataSet >** 还指定了 **diffgr: haschanges ="modified"** 。 这指示一个更新操作，而且 Cust 表中的客户记录也会相应地更新。 请注意，如果**diffgr: haschanges**属性未指定，DiffGram 处理逻辑将忽略此元素，则不执行任何更新。  
+ Before>块包含** \<Customer>** 元素（**diffgr： id = "Customer1"**）。 ** \<** DataInstance>块包含具有相同**id**的相应** \<Customer>** 元素。 ** \<**** \<NewDataSet>** 中的** \<customer>** 元素还指定了**diffgr： hasChanges = "modified"**。 这指示一个更新操作，而且 Cust 表中的客户记录也会相应地更新。 请注意，如果未指定**diffgr： hasChanges**属性，DiffGram 处理逻辑将忽略此元素，并且不执行任何更新。  
   
- 以下是 C# 教程应用程序代码演示如何使用 SQLXML 托管类执行上面的 DiffGram 和更新两个表 (Cust、 Ord) 还将创建在**tempdb**数据库。  
+ 下面是 c # 教程应用程序的代码，该应用程序演示如何使用 SQLXML 托管类来执行上述 DiffGram，并更新两个表（用户、Ord），你还将在**tempdb**数据库中创建该应用程序。  
   
 ```  
 using System;  
@@ -130,7 +130,7 @@ class Test
     </xsd:schema>  
     ```  
   
-3.  创建这些表中的**tempdb**数据库。  
+3.  在**tempdb**数据库中创建这些表。  
   
     ```  
     CREATE TABLE Cust(  
@@ -179,7 +179,7 @@ class Test
   
 8.  在命令提示符下，执行 DiffgramSample.exe。  
   
-## <a name="see-also"></a>请参阅  
- [DiffGram 示例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SQLXML 4.0&#41;的 DiffGram 示例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
   
   

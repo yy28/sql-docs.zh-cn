@@ -1,6 +1,5 @@
 ---
-title: 大容量加载安全性注意事项 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 大容量加载安全注意事项（SQLXML）
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0087a8846935905574a8666186de5e025a16494e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817c8c4d0ff2a140033e99879c0720a63f81e5f4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026997"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252529"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>大容量加载安全性注意事项 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   下面是使用 XML 大容量加载的安全准则：  
   
--   当指定大容量加载操作是作为事务执行，使用**TempFilePath**属性以指定要在其中创建临时文件的文件夹。  
+-   当指定大容量加载操作作为事务执行时，可以使用**TempFilePath**属性指定用于创建临时文件的文件夹。  
   
      大容量加载进程用以下权限创建这些临时文件：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68026997"
   
 -   如果用户设置错误日志文件以便让 SQLXML 将错误写入其中，则在每次执行大容量加载时将以来自最后一个大容量加载进程的数据覆盖该文件。  
   
-## <a name="see-also"></a>请参阅  
- [执行大容量加载 XML 数据的&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SQLXML 4.0&#41;执行 XML 数据的大容量加载](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

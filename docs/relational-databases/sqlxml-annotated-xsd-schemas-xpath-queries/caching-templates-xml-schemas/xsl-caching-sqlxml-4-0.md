@@ -1,6 +1,5 @@
 ---
-title: XSL 缓存 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: XSL 缓存（SQLXML）
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46c11054b4f3681a6bd0184ff77c2353b2201f57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 265ce1db6f57f378dfaa7c0818914edd121b7d30
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093235"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257335"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>XSL 缓存 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,14 +35,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\XSLCacheSize
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- 应根据可用内存和要使用的 XSL 样式表的个数来设置 XSL 缓存大小。 默认值为**XSLCacheSize**大小为 31。 如果 XSL 访问看起来较慢，您可以增加缓存大小；如果内存较少，则可以降低缓存大小。  
+ 应根据可用内存和要使用的 XSL 样式表的个数来设置 XSL 缓存大小。 **XSLCacheSize**大小的默认值为31。 如果 XSL 访问看起来较慢，您可以增加缓存大小；如果内存较少，则可以降低缓存大小。  
   
- 为了提高性能，建议您设置**XSLCacheSize**大于您通常使用的 XSL 样式表的数。 如果**XSLCacheSize**是小于的数字 XSL 样式的表的有，则性能会数目的 XSL 样式表增加。 **XSLCacheSize**可以设置为最多为 128。  
+ 为了获得更好的性能，建议您将**XSLCacheSize**设置为大于您通常使用的 XSL 样式表的数量。 如果**XSLCacheSize**小于您拥有的 xsl 样式表的数目，则会随着 xsl 样式表的数量的增加而降低性能。 **XSLCacheSize**最大可以设置为128。  
   
  每次使用缓存的 XSL 样式表时，都将检查 XSL 文件的修改时间以确定是否需要刷新该样式表。 其原因在于磁盘副本新于缓存副本。  
   
-## <a name="see-also"></a>请参阅  
- [模板缓存&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
- [架构缓存&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQLXML 4.0 &#40;模板缓存&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
+ [&#40;SQLXML 4.0&#41;的架构缓存](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)  
   
   

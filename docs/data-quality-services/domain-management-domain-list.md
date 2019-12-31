@@ -1,6 +1,5 @@
 ---
-title: 域管理：域列表 | Microsoft Docs
-ms.custom: ''
+title: 域管理：域列表
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: bc5c1c283055655b84a70ec040861fce7fcca182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935334"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251657"
 ---
 # <a name="domain-management-domain-list"></a>域管理：域列表
 
@@ -28,8 +27,8 @@ ms.locfileid: "67935334"
 ## <a name="options"></a>选项  
   
 ### <a name="domains-list"></a>域列表  
- **域**  
- 此列表显示了知识库中的所有域。 将针对在该列表中选择的域执行您在右侧窗格的选项卡式页中执行的操作。 有关详细信息，请参阅  
+ **域名**  
+ 此列表显示了知识库中的所有域。 将针对在该列表中选择的域执行您在右侧窗格的选项卡式页中执行的操作。 有关详细信息，请参阅本主题后面的  
   
  **创建复合域**  
  在知识库中创建一个新的复合域。 此命令将显示 **“创建复合域”** 对话框。 通过右键单击某个域或单击域列表上方的图标可以使用此命令。 有关详细信息，请参阅 [创建复合域](../data-quality-services/create-a-composite-domain.md)。  
@@ -38,13 +37,13 @@ ms.locfileid: "67935334"
  在知识库中创建一个新域。 此命令将显示 **“创建域”** 对话框。 通过右键单击某个域或单击域列表上方的图标可以使用此命令。 有关详细信息，请参阅 [创建域](../data-quality-services/create-a-domain.md)。  
   
  **创建所选域的副本**  
- 创建所选域的精确副本，并将其添加到知识库。 其名称将为从中创建该副本的域的名称，并在此名称之后追加“ - Copy”。 通过右键单击某个域，然后单击 **“创建副本”** ，或者单击域列表上方的图标，可以使用此命令。 此命令不适用于复合域。  
+ 创建所选域的精确副本，并将其添加到知识库。 其名称将为从中创建该副本的域的名称，并在此名称之后追加“ - Copy”。 通过右键单击某个域，然后单击 **“创建副本”**，或者单击域列表上方的图标，可以使用此命令。 此命令不适用于复合域。  
   
  **从数据文件导入域**  
  从 .dqs 文件导入域。 此命令将显示 **“从数据文件导入”** 对话框，该对话框用于浏览文件系统并为单一域或复合域选择 .dqs 文件。 通过单击域列表上方的图标可以使用此命令。 有关详细信息，请参阅 [从 .dqs 文件导入域](../data-quality-services/import-a-domain-from-a-dqs-file.md)。  
   
  **删除域**  
- 从知识库中删除所选域。 此命令将显示 **SQL Server Data Quality Services** 对话框。 如果您单击 **“是”** ，该域及其所有数据将被永久删除。 通过右键单击某个域或单击域列表上方的图标可以使用此命令。  
+ 从知识库中删除所选域。 此命令将显示 **SQL Server Data Quality Services** 对话框。 如果您单击 **“是”**，该域及其所有数据将被永久删除。 通过右键单击某个域或单击域列表上方的图标可以使用此命令。  
   
  **创建链接域**  
  创建一个链接到所选域的域。 此命令将显示 **“创建域”** 对话框。 通过右键单击某个域，然后单击 **“创建链接域”** （该域链接到所选域），可以使用此命令。 所链接到的域显示在“创建域”对话框中。 该命令不适用于复合域。 没有可用于取消两个域链接的命令；若要执行此操作，请删除链接域。 无法对链接域创建链接域。 有关详细信息，请参阅 [创建链接域](../data-quality-services/create-a-linked-domain.md)。  

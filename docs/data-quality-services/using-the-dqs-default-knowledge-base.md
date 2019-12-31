@@ -1,5 +1,5 @@
 ---
-title: 使用 DQS 默认知识库 | Microsoft Docs
+title: 使用 DQS 默认知识库
 ms.custom: ''
 ms.date: 07/31/2012
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: a07b2c32c205af10c65e42b290dc7187376871ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 2696a911edeefecc1dc34efeb77351acbaafc0d8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991720"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257737"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>使用 DQS 默认知识库
 
@@ -23,21 +23,21 @@ ms.locfileid: "67991720"
 
   本主题介绍随 **(DQS) 一起安装的默认知识库**DQS 数据 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 。 这是包含以下域的预先生成的默认知识库：  
   
--   **国家/地区**：对于每个地点，包含常规的长名称（国家/地区指定的官方名称）和短名称（列表、地图等使用的通用名称）、两字母缩写形式、三字母缩写形式和三位代码。  将前导值设置为国家/地区长名称。  
+-   **国家/地区**：包含常规长名称（国家/地区指定的官方名称）和短名称（列表、地图等中使用的通用名称）、两字母缩写形式、三字母缩写形式和三位代码。  将前导值设置为国家/地区长名称。  
   
--   **国家/地区（三字母前导）** ：对于每个地点包含常规长名称（国家/地区指定的官方名称）和短名称（列表、地图等中使用的通用名称）、两字母缩写形式、三字母缩写形式和三位代码。  将前导值设置为国家/地区三字母缩写形式。  
+-   **国家/地区（三字母前导）**：包含常规长名称（国家/地区指定的官方名称）和短名称（列表、地图等中使用的通用名称）、两字母缩写形式、三字母缩写形式和三位代码。  将前导值设置为国家/地区三字母缩写形式。  
   
--   **国家/地区（两字母前导）** ：对于每个地点，包含常规的长名称（国家/地区指定的官方名称）和短名称（列表、地图等使用的通用名称）、两字母缩写形式、三字母缩写形式和三位代码。  将前导值设置为国家/地区两字母缩写形式。  
+-   **国家/地区（两字母前导）**：包含常规长名称（国家/地区指定的官方名称）和短名称（列表、地图等中使用的通用名称）、两字母缩写形式、三字母缩写形式和三位代码。  将前导值设置为国家/地区两字母缩写形式。  
   
--   **美国 - 郡县**：包含美国郡县的列表。  
+-   **美国-县**：包含美国县的列表。  
   
--   **美国 - 姓氏**：包含 2000 年人口普查中出现 100 或更多次的姓氏列表。  
+-   **US**姓：包含在人口普查2000中出现100或更多次的姓氏（姓氏）的列表。  
   
--   **美国 - 地方**：包含 2010 年人口普查中抽取的 50 个州、哥伦比亚特区和波多黎各的地方名称列表。  
+-   **US**：包含50州、哥伦比亚特区和从人口普查2010中提取的波多黎各的位置列表。  
   
--   **美国 - 州**：包含美国每个州的常规长（官方）名称和两字母缩写形式。 将前导值设置为常规州名称。  
+-   **美国-州**：包含美国每个州的常规长（官方）名称和两字母缩写形式。 将前导值设置为常规州名称。  
   
--   **美国 - 州（两字母标头）** ：包含美国每个州的常规长（官方）名称和两字母缩写形式。 将前导值设置为两字母缩写形式的州名称。  
+-   **美国-州（2-字母标题）**：包含美国每个州的常规长（官方）名称和两字母缩写形式。 将前导值设置为两字母缩写形式的州名称。  
   
 ## <a name="using-the-default-knowledge-base"></a>使用默认知识库  
  您可以通过以下方式使用默认 DQS 知识库（DQS 数据）。  
@@ -50,7 +50,7 @@ ms.locfileid: "67991720"
   
 -   在 [Integration Services 中的 DQS 清理组件](https://go.microsoft.com/fwlink/?LinkId=238830) 和 [Master Data Services Excel 外接程序](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)中使用它。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: 在 XPath 查询中指定关系运算符（SQLXML 4.0） |Microsoft Docs
-ms.custom: ''
+title: 在 XPath 查询中使用关系运算符（SQLXML）
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 180962ac5afae577625415d94cb9beda65f9537a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1961cc90c303e789c4bfbb847cea5e0eb80049ff
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909441"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252544"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定关系运算符 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  以下示例显示如何在 XPath 查询中指定关系运算符。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关此示例架构的信息，请参阅[XPath 示例&#40;SQLXML 4.0&#41;的批注示例 XSD 架构](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  以下示例显示如何在 XPath 查询中指定关系运算符。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关此示例架构的信息，请参阅[&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-relational-operator"></a>A. 指定关系运算符  
- 此 XPath 查询返回 **\<Customer >** 元素的子元素，其中**CustomerID**属性值为 "1"，任何子 **\<顺序 >** 元素包含 **\<OrderDetail >** 子元素具有值大于3的**OrderQty**特性：  
+ 此 XPath 查询返回** \<Customer>** 元素的子元素，其中**CustomerID**属性值为 "1"，其中任何子** \<顺序>** 元素包含具有值大于3的**OrderQty**特性的** \<OrderDetail>** 子元素：  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 方括号中指定的谓词筛选 **\<Customer >** 元素。 仅返回 **\<的客户 >** 元素，这些元素至少具有一个\<为 OrderQty 特性值大于3的**OrderDetail >** 孙。  
+ 方括号中指定的谓词用于筛选** \<Customer>** 元素。 仅返回** \<客户>** 元素，这些元素至少具有一个** \<OrderDetail**为 OrderQty 特性值大于3的>孙。  
   
  **子**轴是默认值。 因此，可以将该查询指定为：  
   
@@ -81,7 +81,7 @@ ms.locfileid: "72909441"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. 在 XPath 查询中指定关系运算符并使用布尔函数比较该结果  
- 此查询将返回**SalesPersonID**属性值小于270的上下文节点的所有 **\<顺序 >** 元素子级：  
+ 此查询将返回**SalesPersonID**属性值小于270的上下文节点>元素子级的所有** \<顺序**：  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -94,7 +94,7 @@ ms.locfileid: "72909441"
 ```  
   
 > [!NOTE]  
->  在模板中指定该查询时，必须对 < 字符进行实体编码，因为 < 字符在 XML 文档中具有特殊含义。 在模板中，使用 `<` 指定 < 字符。  
+>  在模板中指定该查询时，必须对 < 字符进行实体编码，因为 < 字符在 XML 文档中具有特殊含义。 在模板中，使用`<`指定 < 字符。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   

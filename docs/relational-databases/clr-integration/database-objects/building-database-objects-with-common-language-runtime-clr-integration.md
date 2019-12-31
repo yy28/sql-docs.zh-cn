@@ -1,6 +1,7 @@
 ---
-title: 生成使用公共语言运行时 (CLR) 集成的数据库对象 |Microsoft Docs
-ms.custom: ''
+title: 公共语言运行时（CLR）生成数据库对象
+description: 使用与 .NET Framework 公共语言运行时（CLR）的 SQL Server 集成来生成数据库对象。
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7037105391425632dba0af3646635305e510f207
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 902685dcf1f8c743453285820faa67bb70830614
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138670"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258356"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>使用公共语言运行时 (CLR) 集成生成数据库对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  可以将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与 .NET Framework 公共语言运行时 (CLR) 集成来生成数据库对象。 托管代码的内部运行的[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]被称为"CLR 例程"。 这些例程包括：  
+  可以将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与 .NET Framework 公共语言运行时 (CLR) 集成来生成数据库对象。 在内运行的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]托管代码称为 "CLR 例程"。 这些例程包括：  
   
 -   标量值用户定义函数（标量 UDF）  
   
@@ -71,7 +72,7 @@ ms.locfileid: "68138670"
  [CLR 触发器](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
  说明如何实现和使用 CLR 触发器。  
   
-## <a name="see-also"></a>请参阅  
- [公共语言运行时&#40;CLR&#41;集成概述](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+## <a name="see-also"></a>另请参阅  
+ [公共语言运行时 &#40;CLR&#41; 集成概述](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

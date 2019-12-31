@@ -1,6 +1,7 @@
 ---
-title: sp_validate_replica_hosts_as_publishers （Transact-sql） |Microsoft Docs
-ms.custom: ''
+title: sp_validate_replica_hosts_as_publishers （T-sql）
+description: 描述允许验证所有辅助副本的 sp_validate_replica_hosts_as_publishers 存储过程。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8df9c4fcc88f568c920f0a5959338f195d79d925
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252106"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319990"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   **sp_validate_replica_hosts_as_publishers**是**sp_validate_redirected_publisher**的扩展，它允许验证所有辅助副本，而不只是当前的主副本。 **sp_validate_replicat_hosts_as_publisher**验证整个 Always On 复制拓扑。 必须通过使用远程桌面会话直接在分发服务器上执行**sp_validate_replica_hosts_as_publishers** ，以避免双跃点安全错误（21892）。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,11 +41,11 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @original_publisher = ] 'original_publisher'` 最初发布数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 *original_publisher* **sysname**，无默认值。  
+`[ @original_publisher = ] 'original_publisher'`最初发布数据库的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的名称。 *original_publisher* **sysname**，无默认值。  
   
-`[ @publisher_db = ] 'publisher_db'` 要发布的数据库的名称。 *publisher_db* **sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'`要发布的数据库的名称。 *publisher_db* **sysname**，无默认值。  
   
-在为原始发布服务器/已发布数据库对调用**sp_redirect_publisher**时，`[ @redirected_publisher = ] 'redirected_publisher'` 重定向的目标。 *redirected_publisher* **sysname**，无默认值。  
+`[ @redirected_publisher = ] 'redirected_publisher'`在为原始发布服务器/已发布数据库对调用**sp_redirect_publisher**时，为重定向的目标。 *redirected_publisher* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
@@ -52,15 +53,15 @@ sp_validate_replica_hosts_as_publishers
 ## <a name="result-sets"></a>结果集  
  无。  
   
-## <a name="remarks"></a>Remarks  
- 如果发布服务器和发布数据库中不存在任何条目，则**sp_validate_redirected_publisher** *\@redirected_publisher*的输出参数返回 null。 否则，在成功和失败的情况下都将返回关联的重定向发布服务器。  
+## <a name="remarks"></a>备注  
+ 如果发布服务器和发布数据库中不存在任何项， **sp_validate_redirected_publisher**为输出参数* \@redirected_publisher*返回 null。 否则，在成功和失败的情况下都将返回关联的重定向发布服务器。  
   
  如果验证成功， **sp_validate_redirected_publisher**将返回成功指示。  
   
  如果验证失败，则会引发相应的错误。  **sp_validate_redirected_publisher**尽力提高所有问题，而不只是遇到第一次遇到的问题。  
   
 > [!NOTE]  
->  在验证不允许读取访问或要求指定读取意图的次要副本主机时，**sp_validate_replica_hosts_as_publishers** 将失败，并显示以下错误。  
+>  当验证不允许读取访问或要求指定读取意图的辅助副本主机时， **sp_validate_replica_hosts_as_publishers**将失败并显示以下错误。  
 >   
 >  消息 21899，级别 11，状态 1，过程 **sp_hadr_verify_subscribers_at_publisher**，第 109 行  
 >   
@@ -68,13 +69,13 @@ sp_validate_replica_hosts_as_publishers
 >   
 >  副本主机“MyReplicaHostName”遇到了一个或多个发布服务器验证错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  调用方必须是**sysadmin**固定服务器角色的成员、分发数据库**db_owner**固定数据库角色的成员，或者是与发布服务器数据库相关联的已定义发布的发布访问列表的成员。  
   
 ## <a name="see-also"></a>另请参阅  
- [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  
+ [复制存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [sp_get_redirected_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_redirected_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  
   
   

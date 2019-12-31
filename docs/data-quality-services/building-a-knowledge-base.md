@@ -1,6 +1,5 @@
 ---
-title: 生成知识库 | Microsoft Docs
-ms.custom: ''
+title: 生成知识库
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,19 +7,20 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: eaa57e58b05b1a5d68355d71cbd6fa6c2ca47ee0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: b718cd04b5c6133d931a9bea03de0a78ebc7a886
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014787"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258844"
 ---
 # <a name="building-a-knowledge-base"></a>生成知识库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知识库是有关数据的知识的存储库，通过它您可以了解自己的数据并维护其完整性。 知识库由域构成，每个域都表示一个数据字段中的数据。 DQS 使用知识库来对数据库执行数据清理和消除重复。 若要为数据清理对知识库进行准备，您可以对数据示例运行计算机辅助分析，并且以交互方式管理域中的值。 通过 DQS，您可以导入知识、创建规则和关系、直接更改数据值以及利用默认数据库。  
   
 ## <a name="in-this-section"></a>本节内容  

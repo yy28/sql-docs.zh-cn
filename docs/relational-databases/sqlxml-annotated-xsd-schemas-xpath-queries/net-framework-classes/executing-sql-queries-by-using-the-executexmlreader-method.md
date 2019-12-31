@@ -1,6 +1,5 @@
 ---
-title: 使用 ExecuteXMLReader 方法执行 SQL 查询 |Microsoft Docs
-ms.custom: ''
+title: 用 ExecuteXMLReader 方法运行 SQL 查询
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99f3ae8c26af7d3aa3dd876cbf0f81d4fa269ff0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23b28209db43753b7185a87311ec6d338bcaccbd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934298"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251531"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>使用 ExecuteXMLReader 方法执行 SQL 查询
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  而不是使用 ExecuteToStream 方法，可以使用 SqlXmlCommand 对象 ExecuteXmlReader 方法执行命令。 此方法返回可用于进一步处理结果 （在此示例中打印元素或属性名称和值） 的 XmlReader 对象。  
+  您可以使用 SqlXmlCommand 对象的 ExecuteXmlReader 方法来执行命令，而不是使用 ExecuteToStream 方法。 此方法返回一个 XmlReader 对象，该对象可用于进一步处理结果（在本示例中，打印元素或属性名称和值）。  
   
 > [!NOTE]  
 >  在代码中，必须在连接字符串中提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  
@@ -71,7 +71,7 @@ using System.Xml;
   
 1.  确保已在计算机上安装了 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework。  
   
-2.  在此主题中的文件夹中保存的 C# 代码 (DocSample.cs) 提供。  
+2.  将本主题中提供的 c # 代码（DocSample.cs）保存在文件夹中。  
   
 3.  编译代码。 若要在命令提示符下编译此代码，请使用：  
   

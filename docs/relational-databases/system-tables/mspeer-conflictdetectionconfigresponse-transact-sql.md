@@ -1,6 +1,7 @@
 ---
-title: MSpeer_conflictdetectionconfigresponse (Transact SQL) |Microsoft Docs
-ms.custom: ''
+title: MSpeer_conflictdetectionconfigresponse （T-sql）
+description: 描述在对等复制中使用的 MSPeer_conflictdetectionconfigureresponse 存储过程，用于存储每个节点对拓扑范围配置 requestion 的响应。
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,35 +18,35 @@ helpviewer_keywords:
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 430008b1a689c413bf69c9907a60f4129dc8e5b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ed3a127d2527b35c301ab7f3d05305c4f8d2ced
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006875"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322119"
 ---
-# <a name="mspeerconflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
+# <a name="mspeer_conflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   用于在对等复制中存储每个节点对拓扑范围内配置请求的响应。 该表存储在发布数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|request_id|**int**|标识中的冲突配置请求项[MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md)表。|  
+|request_id|**整形**|标识[MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md)表中的冲突配置请求条目。|  
 |peer_node|**sysname**|生成响应的服务器实例的名称。|  
 |peer_db|**sysname**|生成响应的对等方的订阅数据库。|  
 |peer_version|**sysname**|指定发布服务器的版本号。|  
 |peer_db_version|**sysname**|指定对等数据库的版本号。|  
-|is_peer|**bit**|指示节点是否为只读订阅服务器。 值为**0**指示只读订阅服务器。|  
+|is_peer|**小段**|指示节点是否为只读订阅服务器。 值**0**表示只读订阅服务器。|  
 |conflict_detection_enabled|**bit**|指示是否为拓扑启用了冲突检测。|  
-|originator_id|**varbinary(16)**|标识拓扑中的每个节点以进行冲突检测。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
-|peer_conflict_retention|**int**|在冲突表中存储元数据的时间段（以天为单位）。|  
+|originator_id|**varbinary （16）**|标识拓扑中的每个节点以进行冲突检测。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
+|peer_conflict_retention|**整形**|在冲突表中存储元数据的时间段（以天为单位）。|  
 |peer_subscriptions|**XML**|有关响应请求的节点的信息。|  
-|progress_phase|**nvarchar(32)**|使用下列值之一标识当前处理阶段：<br /><br /> Started<br /><br /> 已收集对等方版本<br /><br /> 已收集状态|  
-|modified_date|**datetime**|阶段的完成日期和时间。|  
+|progress_phase|**nvarchar （32）**|使用下列值之一标识当前处理阶段：<br /><br /> 已启动<br /><br /> 已收集对等方版本<br /><br /> 已收集状态|  
+|modified_date|**型**|阶段的完成日期和时间。|  
   
-## <a name="see-also"></a>请参阅  
- [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制视图](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: 在 XPath 查询中指定算术运算符（SQLXML 4.0） |Microsoft Docs
-ms.custom: ''
+title: 在 XPath 查询中使用算术运算符（SQLXML）
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fa1bf6dd7d5652e33eb5fa7c75a86268f31129a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907764"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252626"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定算数运算符 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  以下示例说明如何在 XPath 查询中指定算数运算符。 本示例中的 XPath 查询针对 SampleSchema1.xml 中包含的映射架构指定。 有关此示例架构的信息，请参阅[XPath 示例&#40;SQLXML 4.0&#41;的批注示例 XSD 架构](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  以下示例说明如何在 XPath 查询中指定算数运算符。 本示例中的 XPath 查询针对 SampleSchema1.xml 中包含的映射架构指定。 有关此示例架构的信息，请参阅[&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. 指定 * 算数运算符  
- 此 XPath 查询返回满足指定谓词 **\<OrderDetail >** 元素：  
+ 此 XPath 查询返回** \<** 满足指定谓词的 OrderDetail>元素：  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 在查询中，`child` 是轴，`OrderDetail` 是节点测试（如果**OrderDetail**是 **\<元素 > 节点**，则为 TRUE; 因为 **\<元素 >** 节点是**子**轴的主节点）。 对于所有 **\<OrderDetail >** 元素节点，将应用谓词中的测试，并只返回满足条件的那些节点。  
+ 在查询中， `child` `OrderDetail`是轴，是节点测试（如果**OrderDetail**是** \<元素节点>**，则为 TRUE，因为>节点的** \<元素**是**子**轴的主节点）。 对于所有** \<OrderDetail>** 元素节点，将应用谓词中的测试，并只返回满足条件的那些节点。  
   
 > [!NOTE]  
 >  XPath 中的数字是双精度浮点数，对本示例中的浮点数进行比较将导致舍入。  

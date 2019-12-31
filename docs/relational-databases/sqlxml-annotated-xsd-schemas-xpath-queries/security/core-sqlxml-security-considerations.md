@@ -1,5 +1,5 @@
 ---
-title: 核心 SQLXML 的安全注意事项 |Microsoft Docs
+title: SQLXML 核心安全性注意事项
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d739eb3d4a9a1466a9eef441d683aa0acd81d0a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d897d81f0f2079e06c481d62f069e4626126da1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026932"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252521"
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML 核心安全性注意事项
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   以下是使用 SQLXML 进行数据访问的安全性准则。  
   
--   Sqlxmloledb 访问接口公开**StreamFlags**属性，它允许您设置标志，指示应启用或已为每个特定实例禁用哪些 SQLXML 功能。 您可以使用此属性自定义对 SQLXML 的使用，并确保只启用所需组件。 有关详细信息，请参阅[sqlxmloledb 访问接口&#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)。  
+-   SQLXMLOLEDB 提供程序公开**StreamFlags**属性，该属性允许您设置标志，以指示应为每个特定实例启用或禁用的 SQLXML 功能。 您可以使用此属性自定义对 SQLXML 的使用，并确保只启用所需组件。 有关详细信息，请参阅[SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)。  
   
 -   当出现 SQLXML 错误并返回这些错误时，它们可以包含有关数据库架构的信息，如表名、列名或类型信息。 处理这些错误时应非常小心，以使用户无法轻易发现不打算使用或不需要使用的有关您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装的信息。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68026932"
   
 -   当接收查询结果时，SQLXML 不会根据收到的数据内容执行任何操作。 不会根据数据类型或内容执行额外的处理。 该数据永远不会作为执行操作所使用的代码处理。  
   
--   执行 XML 模板时，SQLXML 将提交的模板内包含的 XPath 和 DBObject 查询转换为 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 命令，再针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 执行这些命令。 这些命令仅影响现有数据。 SQLXML 生成的命令永远不会更改数据库的结构。 用户必须执行显式命令才能更改数据库结构。 例如，通过包括在**sql:query**块的模板。  
+-   执行 XML 模板时，SQLXML 将提交的模板内包含的 XPath 和 DBObject 查询转换为 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 命令，再针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 执行这些命令。 这些命令仅影响现有数据。 SQLXML 生成的命令永远不会更改数据库的结构。 用户必须执行显式命令才能更改数据库结构。 例如，在模板的**sql：查询**块中包含它们。  
   
 -   当通过映射文件执行 DBObject 查询和 XPath 语句时，SQLXML 不会以任何方式更改数据库中的数据。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "68026932"
   
 -   SQLXML 允许用户对数据库执行所需的任何 SQL 查询。 此功能决不能向不安全或不受控制的源公开，因为这实质上是公开 SQL 数据库，而不限定任何用户。  
   
--   执行 Updategram 时，SQLXML 将转换**updg:sync**针对 DELETE、 UPDATE 和 INSERT 命令块[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例。 这些命令仅影响现有数据。 SQLXML 生成的命令永远不会更改数据库。 用户必须执行显式命令才能更改数据库结构。 例如，通过包括在**sql:query**块的模板。  
+-   执行 Updategram 时，SQLXML 将**updg： sync**块转换为针对实例的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] DELETE、UPDATE 和 INSERT 命令。 这些命令仅影响现有数据。 SQLXML 生成的命令永远不会更改数据库。 用户必须执行显式命令才能更改数据库结构。 例如，在模板的**sql：查询**块中包含它们。  
   
--   执行 DiffGram 时，SQLXML 根据 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例将 DiffGram 转换为 DELETE、UPDATE 和 INSERT 命令。 这些命令仅影响现有数据。 SQLXML 生成的命令永远不会更改数据库。 用户必须执行显式命令才能更改数据库结构。 例如，通过包括在**sql:query**块的模板。  
+-   执行 DiffGram 时，SQLXML 根据 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例将 DiffGram 转换为 DELETE、UPDATE 和 INSERT 命令。 这些命令仅影响现有数据。 SQLXML 生成的命令永远不会更改数据库。 用户必须执行显式命令才能更改数据库结构。 例如，在模板的**sql：查询**块中包含它们。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLXML 4.0 安全注意事项](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
   
   

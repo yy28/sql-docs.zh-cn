@@ -1,6 +1,5 @@
 ---
-title: DQS 中的数据事件探查和通知 | Microsoft Docs
-ms.custom: ''
+title: DQS 中的数据事件探查和通知
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,19 +7,20 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 6d331065c8e5d44cd2abeed9c85ce55d146006e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: bb763d2212bd8dcb09b6088467e97aa702d15012
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935471"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251742"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS 中的数据事件探查和通知
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据事件探查是一个分析现有数据源中的数据并显示有关 DQS 活动中的数据统计信息的过程。 它为您提供了数据质量的自动测量。 DQS 事件探查已集成到 DQS 知识管理和数据质量项目中。 它是动态和可调的。 事件探查具有两个主要目的：第一，引导您完成数据质量过程和支持您做出决策；第二，评估过程的效用。 DQS 事件探查具有下列优点：  
   
 -   事件探查可让您深入了解源数据的质量，并帮助您确定数据质量问题。  
@@ -33,7 +33,7 @@ ms.locfileid: "67935471"
   
  通过事件探查，您不仅可以使用 Data Quality Services 来进行知识发现、清理和匹配，还可以用作分析工具。 您可能需要创建一个知识库来进行分析，并使用该知识库来运行知识发现，以便通过事件探查统计信息来确定知识库是否满足发现、清理和匹配的需要。  
   
-##  <a name="How"></a> 事件探查的工作原理  
+##  <a name="How"></a>事件探查的工作原理  
  事件探查不衡量知识库的质量。 它衡量源数据的质量。 事件探查提供的统计信息指示您正在源数据的知识管理或数据质量项目中执行的特定操作的效果。 事件探查始终处于您正在执行的特定活动的上下文中。 您可以单击屏幕中的“事件探查”选项卡以显示事件探查数据，而不必离开您正执行的活动所处的阶段。 事件探查表随着过程的执行而实时填充数据，使您可以在执行数据访问任务时评估这些任务。 您可以确定源数据在清除或消除重复数据后是否更好以及改善的程度。  
   
  所有事件探查数字都表示某个值的出现次数，在许多情况下是总数的百分比，但唯一性度量指标除外。 唯一性度量指标指的是值的绝对数字，而不考虑这些值的出现次数。  
@@ -50,7 +50,7 @@ ms.locfileid: "67935471"
   
  DQS 不为“域管理”活动提供事件探查的统计信息。  
   
-##  <a name="Activity"></a> 按活动的事件探查数据  
+##  <a name="Activity"></a>按活动分析数据  
  DQS 事件探查使用标准数据质量维度来表示数据的质量：完整性（提供数据的范围）、准确性（数据可用于目标用途的程度）以及唯一性（不同值表示不同实体的程度）。 默认情况下，NULL 值和空值被视为缺失或降低完整性百分比；但是，也可以将其他值定义为与 NULL 等效，在这种情况下，它们也将被视为缺失。  
   
  事件探查为您提供评估您的过程所需的统计信息，但您必须解释这些统计信息。 通过逐列查看统计信息，可以了解事件探查可为您提供什么信息。  
@@ -69,21 +69,21 @@ ms.locfileid: "67935471"
   
 -   [执行知识发现](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [使用 DQS &#40;内部&#41; 知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [创建匹配策略](../data-quality-services/create-a-matching-policy.md)  
   
 -   [运行匹配项目](../data-quality-services/run-a-matching-project.md)  
   
-##  <a name="Monitoring"></a> 活动监视中的事件探查数据  
+##  <a name="Monitoring"></a>活动监视中的事件探查数据  
  知识发现、匹配策略、匹配和清除活动的事件探查信息不仅可用于数据质量客户端中的活动页，也可用于活动监视中。 活动监视向您提供当前和过去活动的概述。 除了活动的属性和相关的计算过程之外，您还可以查看针对一个位置的每个活动生成的事件探查信息。 您可以在活动表中选择一个活动，以便在下表中显示事件探查结果。 此外，还可以导出事件探查结果。 有关详细信息，请参阅 [DQS Administration](../data-quality-services/dqs-administration.md)。  
   
-##  <a name="Notifications"></a> 通知  
+##  <a name="Notifications"></a>报警  
  除了通过事件探查收集和显示重要统计信息和度量指标之外，DQS 还将生成通知（如果已启用），以指示您根据所显示的事件探查统计信息，何时可能需要采取措施。 DQS 使用通知来强调有关数据源的重要事实，并显示当前活动相对于它所要实现的目标的效用。 通知提供相关的提示和建议，这些信息指示某种条件并建议您如何改进知识发现、数据清除或数据匹配活动。  
   
  DQS 通知用于提出您可能感兴趣的问题或解决潜在的问题。 您得到通知后是否采取措施取决于通知是否与您的目标有关。 例如，假设当完整性和准确性均为 100% 时，如果数据清理没有生成任何更正值或建议值，则 DQS 会发布一个通知。 此通知将表明可能不需要运行该活动。 是否选择运行此活动取决于您。  
   
- 通知由 **“事件探查”** 选项卡中带感叹号的工具提示指示。与通知关联的统计信息会标为红色，以指示通知的统计理由。  
+ 通知由 "**分析**" 选项卡中带感叹号的工具提示指示。与通知关联的统计信息为红色，以指示通知的统计理由。  
   
  您可以在数据质量客户端主页中 **“管理”** 部分的 **“常规设置”** 选项卡上启用（默认）或禁用通知。 当禁用通知时，不显示工具提示且统计数字不会显示为红色。 禁用通知不会对性能有明显改善。 如果您禁用通知，事件探查仍会进行。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "67935471"
   
 -   [执行知识发现](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [使用 DQS &#40;内部&#41; 知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [创建匹配策略](../data-quality-services/create-a-matching-policy.md)  
   

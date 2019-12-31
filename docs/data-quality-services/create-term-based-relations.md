@@ -1,6 +1,5 @@
 ---
-title: 创建基于字词的关系 | Microsoft Docs
-ms.custom: ''
+title: 创建基于字词的关系
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: e0bec04d00222ca0dd11854b41c5ec6b4bf705a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: a982279e06a1968cf80335cd16dd9eb74e458c3e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992247"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251780"
 ---
 # <a name="create-term-based-relations"></a>创建基于字词的关系
 
@@ -53,21 +52,21 @@ ms.locfileid: "67992247"
   
  如果您将在清理过程中收集的数据质量知识导入到域中，TBR 所更改的值将作为正确值导入。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="BeforeYouBegin"></a>开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  若要创建基于字词的关系，您必须具有在域管理活动中打开的知识库。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a>安全  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>访问  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建基于字词的关系。  
   
-##  <a name="Create"></a> 创建基于字词的关系  
+##  <a name="Create"></a>创建基于字词的关系  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”** 。 有关详细信息，请参阅 [创建知识库](../data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [创建知识库](../data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../data-quality-services/open-a-knowledge-base.md)。  
   
     > [!NOTE]  
     >  域管理在 Data Quality Service 客户端页面中执行，该页面包含用于单独域管理操作的五个选项卡。 它不是一个向导驱动的过程；任何管理操作都可以单独执行。  
@@ -93,7 +92,7 @@ ms.locfileid: "67992247"
   
     6.  通过在 **“查找”** 文本框中输入一个或多个数字，可以在“关系”表中查找一个值。 该字符串的匹配项将会突出显示。 使用向上箭头和向下箭头可以移到表中该字符串的不同实例。  
   
-    7.  **拼写检查器**：如果“值”或“更正为”列中的值有红色的波浪下划线，则表示拼写检查器建议更正该值   。 右键单击带下划线的值，然后选择由拼写检查器提供的建议值之一。 或者，您可以单击快捷菜单中的 **“添加”** ，以继续使用原始值。 有关详细信息，请参阅 [使用 DQS 拼写检查器](../data-quality-services/use-the-dqs-speller.md) 和 [设置域属性](../data-quality-services/set-domain-properties.md)。  
+    7.  **拼写检查**器：如果 "**值**" 或 "**更正为**" 列中的值有红色的波浪下划线，则拼写检查器建议对该值进行更正。 右键单击带下划线的值，然后选择由拼写检查器提供的建议值之一。 或者，您可以单击快捷菜单中的 **“添加”** ，以继续使用原始值。 有关详细信息，请参阅 [使用 DQS 拼写检查器](../data-quality-services/use-the-dqs-speller.md) 和 [设置域属性](../data-quality-services/set-domain-properties.md)。  
   
         > [!NOTE]  
         >  若要使用拼写检查器，您或者可以在 **“域属性”** 页中启用它，或者如果已在 **“域属性”** 页中禁用它，则可以在 **“基于字词的关系”** 页中单击 **“启用/禁用拼写检查器”** 图标以便在该页上启用它。  
@@ -102,7 +101,7 @@ ms.locfileid: "67992247"
   
 7.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
-##  <a name="FollowUp"></a> 跟进：在创建基于字词的关系后  
+##  <a name="FollowUp"></a>跟进：在创建基于字词的关系后  
  在创建基于字词的关系后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
   

@@ -1,6 +1,5 @@
 ---
-title: 使用 sql 创建常量元素：是常量（SQLXML 4.0） |Microsoft Docs
-ms.custom: ''
+title: 在 sql 中创建常量元素：是常量（SQLXML）
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cb1223c7c72aa091a3dd15da3beacaf65c4b21b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 45ab0c13ad2c631a438e2a8637e36d192165094b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906047"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257481"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 创建常量元素 (SQLXML 4.0)
 
@@ -35,17 +35,17 @@ ms.locfileid: "72906047"
   
 -   将顶级元素添加到 XML 文档。 XML 要求为文档提供一个顶级元素（根元素）。  
   
--   创建容器元素（例如 **\<订单 >** 元素包装所有订单。  
+-   创建容器元素，例如** \<>** 包装所有订单的元素。  
   
- 可以将**sql： is 常量**批注添加到 **\<complexType >** 元素。  
+ 可以将**sql： is 常量**批注添加到** \<complexType>** 元素。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 指定 sql:is-constant 以添加容器元素  
- 在此带批注的 XSD 架构中，通过指定值为1的**sql： is 常量**属性， **\<CustomerOrders >** 定义为常量元素。 因此， **\<CustomerOrders >** 不会映射到任何数据库表或列。 此常量元素由 **\<顺序 >** 子元素组成。  
+ 在这个带批注的 XSD 架构中，通过指定** \<>CustomerOrders**属性，其值为 1 **，将其**定义为常量元素。 因此， ** \<CustomerOrders>** 不会映射到任何数据库表或列。 此常量元素由** \<Order>** 子元素组成。  
   
- 尽管 **\<CustomerOrders >** 不映射到任何数据库表或列，但它仍显示在生成的 XML 中，作为包含 **\<Order >** 子元素的容器元素。  
+ 尽管** \<CustomerOrders>** 未映射到任何数据库表或列，但它仍显示在生成的 XML 中，该元素包含>子元素的** \<顺序**。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

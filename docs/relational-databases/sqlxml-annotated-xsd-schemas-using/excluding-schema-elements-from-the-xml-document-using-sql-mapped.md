@@ -1,6 +1,5 @@
 ---
-title: 使用 sql：映射的 XML 文档中排除架构元素 |Microsoft Docs
-ms.custom: ''
+title: 从具有 sql 的 XML 文档中排除架构元素：已映射
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,13 +21,14 @@ ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d466ad57d7644f73d7fdd44df62aac6a0c2a1b0b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6cf2f3302d4e609975ebb993e5388cbd6561c2bc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905965"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257445"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>使用 sql:mapped 从 XML 文档中排除架构元素
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "72905965"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. 指定 sql:mapped 批注  
- 假定您有来自其他源的 XSD 架构。 此 XSD 架构由 **\<人员组成。请联系 >** 元素与**ContactID**、 **FirstName**、 **LastName**和**HomeAddress**属性。  
+ 假定您有来自其他源的 XSD 架构。 此 XSD 架构由一个** \<人员组成。请联系>** 元素与**ContactID**、 **FirstName**、 **LastName**和**HomeAddress**属性。  
   
  在将此 XSD 架构映射到 AdventureWorks 数据库中的 Contact 表时，将在**HomeAddress**属性中指定**sql：** mapping，因为 employees 表不会存储员工的家庭地址。 因此，在针对映射架构指定 XPath 查询时，此属性不会映射到数据库，并且不会在生成的 XML 文档中返回此属性。  
   
- 为架构的其余部分进行默认映射。 **\<person. contact >** 元素映射到 person 表，所有属性都映射到 person 表中具有相同名称的列。  
+ 为架构的其余部分进行默认映射。 Person>元素映射到 person 表，所有属性都映射到 person 表中具有相同名称的列。 ** \<**  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -106,6 +106,6 @@ ms.locfileid: "72905965"
  请注意，ContactID、FirstName 和 LastName 存在，但 HomeAddress 不是因为为**sql：** mapping 特性指定了0的映射架构。  
   
 ## <a name="see-also"></a>另请参阅  
- [XSD 元素和属性到表和列&#40;的默认映射 SQLXML 4。0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [XSD 元素和属性到表和列的默认映射 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

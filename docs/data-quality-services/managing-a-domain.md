@@ -1,6 +1,5 @@
 ---
-title: 管理域 | Microsoft Docs
-ms.custom: ''
+title: 管理域
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 4fff10431e020ad7092a82ff18ae55e3c85ab2df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991921"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258444"
 ---
 # <a name="managing-a-domain"></a>管理域
 
@@ -52,14 +51,14 @@ ms.locfileid: "67991921"
 |将引用数据服务附加到单一域或复合域|[将域或复合域附加到引用数据](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |更改或增加知识库中的值|[更改域值](../data-quality-services/change-domain-values.md)|  
 |使用验证和标准化规则|[创建域规则](../data-quality-services/create-a-domain-rule.md)|  
-|使用关系更正作为域中值的一部分的字词|[创建基于术语的关系](../data-quality-services/create-term-based-relations.md)|  
+|使用关系更正作为域中值的一部分的字词|[创建基于字词的关系](../data-quality-services/create-term-based-relations.md)|  
 |完成、关闭或取消域管理活动|[结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|通过运行知识发现并以交互方式管理知识来生成知识库|[生成知识库](../data-quality-services/building-a-knowledge-base.md)|  
+|通过运行知识发现并以交互方式管理知识来生成知识库|[构建知识库](../data-quality-services/building-a-knowledge-base.md)|  
 |将知识导入知识库，或从知识库中导出知识。|[导入和导出知识](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |创建一个复合域，并将知识添加到该域中。|[管理复合域](../data-quality-services/managing-a-composite-domain.md)|  
   

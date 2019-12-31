@@ -1,6 +1,5 @@
 ---
-title: Data Quality Services 概念 | Microsoft Docs
-ms.custom: ''
+title: Data Quality Services 概念
 ms.date: 01/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: d5996eea620d61eb9ca6ccd0f499398492bad591
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152541"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251714"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
 
@@ -23,7 +22,7 @@ ms.locfileid: "70152541"
 
   本文简要概括知识管理、数据质量项目和数据质量管理中的 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 概念。  
   
-##  <a name="Knowledge"></a> 知识管理概念  
+##  <a name="Knowledge"></a>知识管理概念  
  DQS 知识库是一种元数据存储库，它由数据专员或 IT 专业人员创建，旨在通过数据清理或数据匹配提高数据质量。 DQS 知识管理包括用于在计算机辅助方式和交互式方式中创建和管理知识库的过程。  
   
  **知识发现**  
@@ -36,22 +35,22 @@ ms.locfileid: "70152541"
   
  **匹配策略**  
   
- 匹配策略包含用于消除数据重复的匹配规则。 通过匹配策略过程，您可以创建匹配规则、基于匹配结果和事件探查数据优化规则，并将策略添加到知识库。 有关详细信息，请参阅 [数据匹配](../data-quality-services/data-matching.md)。  
+ 匹配策略包含用于消除数据重复的匹配规则。 通过匹配策略过程，您可以创建匹配规则、基于匹配结果和事件探查数据优化规则，并将策略添加到知识库。 有关详细信息，请参阅 [Data Matching](../data-quality-services/data-matching.md)。  
   
  **Reference Data Services**  
   
- 可以使用引用数据来验证、更正和丰富您的数据，同时利用可保证其引用数据质量的公司所提供的服务。 可以使用 Azure Marketplace 的服务连接到引用数据提供程序, 也可以使用与提供程序的直接连接。 有关详细信息，请参阅 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)。  
+ 可以使用引用数据来验证、更正和丰富您的数据，同时利用可保证其引用数据质量的公司所提供的服务。 可以使用 Azure Marketplace 的服务连接到引用数据提供程序，也可以使用与提供程序的直接连接。 有关详细信息，请参阅 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)。  
   
  有关 DQS 中的知识管理的详细信息，请参阅 [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)。  
   
-##  <a name="Projects"></a> 数据质量项目概念  
+##  <a name="Projects"></a>数据质量项目概念  
  数据专员在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中使用数据质量项目来执行数据质量操作（清理和匹配）。  
   
  **数据清理**  
   
  DQS 中的数据清理需要根据 DQS 知识库中的知识来执行。 DQS 中的数据清理是一个两步过程：  
   
--   **计算机辅助清理**：DQS 对清理项目使用所选知识库中的知识，从而对数据源中的值提出更正/建议。  
+-   **计算机辅助清理**： DQS 对清理项目使用所选知识库中的知识来向数据源中的值提出更正/建议。  
   
 -   **交互式清理**：数据专员可以执行交互式清理过程，以更改或增强由计算机辅助数据清理过程提出的数据更正。 为此，数据专员将使用由数据清理过程确定的置信度和统计信息，或在项目中手动输入自己的更改。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "70152541"
   
  有关 DQS 中的数据质量项目的详细信息，请参阅[数据质量项目 (DQS)](../data-quality-services/data-quality-projects-dqs.md)。  
   
-##  <a name="Admin"></a> 数据质量管理概念  
+##  <a name="Admin"></a>数据质量管理概念  
  DQS 管理员可以使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序执行各种管理任务。  
   
  **活动监视**  
@@ -92,7 +91,7 @@ ms.locfileid: "70152541"
   
  有关 DQS 管理的详细信息，请参阅 [DQS Administration](../data-quality-services/dqs-administration.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

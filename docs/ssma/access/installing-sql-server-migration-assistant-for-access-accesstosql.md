@@ -22,35 +22,36 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 860f4601e7ea3946ec3f8847033116864d7ed170
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 80fc19b17ac1c01f0c57d828a3bc4821050f761d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632685"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257890"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安装访问 SQL Server 迁移助手（AccessToSQL）
-用于访问的 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手（SSMA）使用基于 Windows Installer 的向导进行安装。 本主题提供了有关安装先决条件的信息、SSMA 的最新版本的链接，以及安装、授权、卸载和升级 SSMA 的说明。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用基于 Windows Installer 的向导安装访问的迁移助手（SSMA）。 本主题提供了有关安装先决条件的信息、SSMA 的最新版本的链接，以及安装、授权、卸载和升级 SSMA 的说明。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
 安装 SSMA 之前，请确保你的系统满足以下要求：  
   
 -   Windows 7 或更高版本，或者 Windows Server 2008 或更高版本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。  
+-   
+  [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework 版本4.0 或更高版本。 .NET Framework 版本4.0 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品光盘上提供，并使用[Microsoft .NET 指南](https://docs.microsoft.com/dotnet/framework/)中的信息。
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework 版本4.0 或更高版本。 .NET Framework 版本4.0 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]产品光盘上提供，并使用[Microsoft .NET 指南](https://docs.microsoft.com/dotnet/framework/)中的信息。
   
--   在承载要将数据库对象和数据迁移到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure DB 的目标实例的计算机上，访问和足够的权限。  
+-   在承载要将数据库对象和数据迁移到的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure DB 目标实例的计算机上，访问和足够的权限。  
   
 -   Microsoft 数据访问对象（DAO）提供程序版本12.0 或14.0。 可以从 Microsoft Office 2010/2007 产品安装 DAO 提供程序，也可以从 Microsoft 网站下载。  
   
--   SQL Server 的本机访问客户端（SNAC）版本10.5 及更高版本，以便迁移到 SQL Azure。 你可以从[Microsoft® SQL Server® 2008 R2 功能包](https://www.microsoft.com/en-us/download/details.aspx?id=16978)获取最新版本的 SNAC  
+-   SQL Server 的本机访问客户端（SNAC）版本10.5 及更高版本，以便迁移到 SQL Azure。 你可以从[Microsoft® SQL Server® 2008 R2 功能包](https://www.microsoft.com/download/details.aspx?id=16978)获取最新版本的 SNAC  
   
 -   4 GB RAM （建议使用）。  
   
 ## <a name="installing-ssma"></a>安装 SSMA  
-SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server 迁移助手下载 "页](https://aka.ms/ssmaforaccess)。  
+SSMA 是一款可以从 Web 下载的工具。 若要下载最新版本，请参阅[SQL Server 迁移助手下载 "页](https://aka.ms/ssmaforaccess)。  
   
 下载最新版本后，必须从中提取安装文件，然后才能安装 SSMA。
 
@@ -61,7 +62,7 @@ SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server 迁
   
 1.  双击 "SSMA" 以访问 " *n*"，其中*n*是生成号。  
   
-2.  在欢迎页上，单击 "**下一步**"。  
+2.  在“欢迎”页面上，单击“**下一步**”。  
   
     如果未安装必备组件，则会出现一条消息，指示必须首先安装所需的组件。 请确保已安装所有必备组件，然后再次运行安装程序。  
   
@@ -69,7 +70,7 @@ SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server 迁
   
 4.  在 "选择安装类型" 页上，单击 "**典型**"。  
   
-5.  单击 **“安装”** 。  
+5.  单击 **“安装”**。  
   
 默认安装位置为 C:\Program Files\Microsoft SQL Server 迁移助手用于访问。  
   
@@ -78,7 +79,7 @@ SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server 迁
   
 **卸载 SSMA**  
   
-1.  单击 "**开始**"，再单击 "**控制面板**"，然后单击 "**添加或删除程序**"。  
+1.  依次单击“开始”****、“控制面板”****，然后单击“添加或删除程序”****。  
   
 2.  选择 " **Microsoft SQL Server 迁移助手进行访问**"，然后单击 "**删除**"。  
   
@@ -88,7 +89,7 @@ SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server 迁
 如果你打开在 SSMA for Access 的早期版本中创建的项目，则 SSMA 会询问你是否要将该项目转换为较新的版本。 单击 **"是"** 以使用 SSMA 的较新版本中的项目。  
   
 ## <a name="see-also"></a>另请参阅  
-[准备要迁移的 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
+[为迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
 [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [将访问应用程序链接到 SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  
   

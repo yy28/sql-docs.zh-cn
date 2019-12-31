@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 安全注意事项 |Microsoft Docs
+title: SQLXML 4.0 安全注意事项
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9580aaa9bad8285f6cf61300a84cf6362dc12774
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bacd3ecf628d6f79eb1bd74e7159b0e158175743
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896609"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252461"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 安全注意事项
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,16 +29,16 @@ ms.locfileid: "67896609"
  [SQLXML 核心安全性注意事项](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/core-sqlxml-security-considerations.md)  
  提供使用 SQLXML 进行数据访问的安全性准则。  
   
- [Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的 Updategram 安全注意事项](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
  提供配合使用 updategram 和 SQLXML 4.0 的安全性准则。  
   
- [带批注的架构的安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0 的批注的架构安全注意事项&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
  提供配合使用带批注的架构和 SQLXML 4.0 的安全性准则。  
   
- [FOR XML 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)  
+ [有关 &#40;SQLXML 4.0 的 XML 安全注意事项&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)  
  提供配合使用 FOR XML 和 SQLXML 4.0 的安全性准则。  
   
- [大容量加载安全性注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/bulk-load-security-considerations-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的大容量加载安全注意事项](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/bulk-load-security-considerations-sqlxml-4-0.md)  
  提供配合使用 XML 大容量加载和 SQLXML 4.0 的安全性准则。  
   
   

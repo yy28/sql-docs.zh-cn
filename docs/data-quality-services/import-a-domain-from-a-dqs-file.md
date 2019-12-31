@@ -1,6 +1,5 @@
 ---
-title: 从 .dqs 文件导入域 | Microsoft Docs
-ms.custom: ''
+title: 从 .dqs 文件导入域
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 73d733cd120e7ce991e092328d1a84a219472c6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: f0a79169b3ee192af278aeb4465fb13d7a311783
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992064"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251590"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>从 .dqs 文件导入域
 
@@ -27,17 +26,17 @@ ms.locfileid: "67992064"
   
  在导入域时，域名称仍保持与最初导出的域的名称相同，除非域名称已经存在，在此情况下 DQS 将在此名称之后追加“_1”。 如果导入的复合域包含与现有域同名的单个域，则上述命名规则也适用。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="BeforeYouBegin"></a>开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  若要从 .dqs 文件导入域，必须已将一个单一域或一个复合域（包含多个单一域）导出到 .dqs 文件。 .dqs 文件必须只包含一个域。 您还必须已创建并打开了要将域导入到其中的知识库。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a>安全  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>访问  
  您必须具有 DQS_MAIN 数据库的 dqs_kb_editor 或 dqs_administrator 角色，才能从 .dqs 数据文件导入域。  
   
-##  <a name="Import"></a> Import a domain from a .dqs file  
+##  <a name="Import"></a>从 dqs 文件导入域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -45,16 +44,16 @@ ms.locfileid: "67992064"
   
 3.  单击 **“从数据文件导入域”** 图标。  
   
-4.  在 **“从数据文件导入”** 对话框中，转到要从中导入文件的文件夹，选中该文件（DQS 文件类型），然后单击 **“打开”** 。  
+4.  在 **“从数据文件导入”** 对话框中，转到要从中导入文件的文件夹，选中该文件（DQS 文件类型），然后单击 **“打开”**。  
   
-5.  在 **“导入域”** 对话框中，单击 **“确定”** 。  
+5.  在 **“导入域”** 对话框中，单击 **“确定”**。  
   
     > [!NOTE]  
     >  仅当您要从中导入的 .dqs 文件仅包含一个单一域或一个复合域（包含多个单个域）时，导入操作才会成功。  
   
 6.  确认您导入的域显示在 **“域”** 列表中。 如果您导入复合域，请验证此复合域以及复合域中包含的单一域均出现在 **“域”** 列表中。  
   
-##  <a name="FollowUp"></a> 跟进：从 .dqs 文件导入域后  
+##  <a name="FollowUp"></a>跟进：从 dqs 文件导入域后  
  在从 .dqs 文件导入域之后，可以将知识添加到域中或在清理或匹配项目中使用域，具体取决于域的内容。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)、[管理复合域](../data-quality-services/managing-a-composite-domain.md)、[创建匹配策略](../data-quality-services/create-a-matching-policy.md)、[数据清理](../data-quality-services/data-cleansing.md)或[数据匹配](../data-quality-services/data-matching.md)。  
   
   
