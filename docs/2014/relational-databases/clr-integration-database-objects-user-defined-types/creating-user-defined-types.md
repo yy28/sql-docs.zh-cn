@@ -15,12 +15,12 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06418c7fd1a9b465a78d01a8739912565b1459f5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62919615"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232220"
 ---
 # <a name="creating-a-user-defined-type"></a>Creating a User-Defined Type（创建用户定义类型）
   若要创建能够在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中安装的用户定义类型 (UDT)，必须首先用一种支持的 .NET Framework 编程语言（例如 Visual C# 或 Visual Basic，该语言符合创建 UDT 的规范）创建一个类。 然后，可以将该类编译为可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中加载的动态链接库 (DLL)。 还可以使用 Visual Studio 创建和部署 UDT。  
@@ -40,9 +40,9 @@ Reconfigure
  演示在创建用户定义类型的过程中涉及的编码方法。  
   
 ## <a name="example"></a>示例  
- 以下代码列表定义了 Point UDT 中的详细信息中所述[类型](creating-user-defined-types-coding.md)。  
+ 下面的代码列表定义了 Point UDT，详细介绍了如何[编码用户定义类型](creating-user-defined-types-coding.md)。  
   
- 通过安装 CLR 示例，可以获得在本节中讨论的其他示例的完整代码列表。 有关安装这些示例的说明，请参阅[SQL Server 数据库引擎示例](http://msftengprodsamples.codeplex.com/)。  
+ 通过安装 CLR 示例，可以获得在本节中讨论的其他示例的完整代码列表。 有关安装这些示例的说明，请参阅[SQL Server 数据库引擎示例](https://msftengprodsamples.codeplex.com/)。  
   
  C#  
   
@@ -330,7 +330,6 @@ Imports System.Text
 End Structure  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CLR 用户定义类型](clr-user-defined-types.md)  
-  
   

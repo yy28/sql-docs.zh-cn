@@ -1,5 +1,5 @@
 ---
-title: 实现或本机编译存储过程中的运算符 |Microsoft Docs
+title: 在本机编译的存储过程中实现 OR 运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64de082cd12c967f3f3c90ca3cb99c51985ed41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62778908"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228211"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>在本机编译存储过程中实现 OR 运算符
   本机编译存储过程内的查询谓词中不支持 OR 运算符。 本机编译存储过程中的查询谓词也不支持 NOT 运算符，因而无法通过单独使用等同的逻辑运算符来模拟 OR 运算符的效果。 但是，借助内存优化表变量，也许能够模拟 OR 运算符的效果。  
@@ -46,7 +46,7 @@ ms.locfileid: "62778908"
   
 5.  使用内存优化表变量的内容作为查询的结果。  
   
- 下面的示例使用来自 AdventureWorks2012 数据库（已针对 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 更新）的表。 若要下载此示例中，转到的文件[AdventureWorks 数据库-2012 年，2008R2 和 2008年](http://msftdbprodsamples.codeplex.com/releases/view/93587)。 若要将应用[!INCLUDE[hek_2](../includes/hek-2-md.md)]代码示例对 AdventureWorks2012，请转到[SQL Server 2014 内存中 OLTP 示例](https://msftdbprodsamples.codeplex.com/releases/view/114491)。  
+ 下面的示例使用来自 AdventureWorks2012 数据库（已针对 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 更新）的表。 若要下载此示例的文件，请转到[AdventureWorks 数据库-2012、2008R2 和 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587)。 若要[!INCLUDE[hek_2](../includes/hek-2-md.md)]将代码示例应用于 AdventureWorks2012，请参阅[SQL Server 2014 内存中 OLTP 示例](https://msftdbprodsamples.codeplex.com/releases/view/114491)。  
   
  将以下存储过程添加至数据库。 我们将把此存储过程转换为本机编译存储过程。  
   
@@ -161,7 +161,7 @@ GO
   
 5.  使用内存优化表变量的内容作为查询的结果。  
   
- 下面的示例使用来自 AdventureWorks2012 数据库（已针对 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 更新）的表。 若要下载此示例中，转到的文件[AdventureWorks 数据库-2012 年，2008R2 和 2008年](http://msftdbprodsamples.codeplex.com/releases/view/93587)。 若要将应用[!INCLUDE[hek_2](../includes/hek-2-md.md)]代码示例对 AdventureWorks2012，请转到[SQL Server 2014 内存中 OLTP 示例](https://msftdbprodsamples.codeplex.com/releases/view/114491)。  
+ 下面的示例使用来自 AdventureWorks2012 数据库（已针对 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 更新）的表。 若要下载此示例的文件，请转到[AdventureWorks 数据库-2012、2008R2 和 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587)。 若要[!INCLUDE[hek_2](../includes/hek-2-md.md)]将代码示例应用于 AdventureWorks2012，请参阅[SQL Server 2014 内存中 OLTP 示例](https://msftdbprodsamples.codeplex.com/releases/view/114491)。  
   
  将以下存储过程添加至数据库。 我们将把此存储过程转换为本机编译存储过程。 此示例使用 INNER JOIN 条件。  
   
@@ -245,7 +245,6 @@ GO
 ## <a name="side-effects"></a>副作用  
  如果 WHERE 子句或 JOIN 条件中包含多个 OR 运算符，则模拟此行为所需执行的查询数将呈指数增加。 这可能会降低查询性能，并增加内存使用量（因为需要用到内存优化表变量）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [本机编译存储过程的迁移问题](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-  
   

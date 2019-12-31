@@ -12,20 +12,20 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 853e85ea84b84f1ed0af040be5d8614feab193b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d133a9ed99cc270c9a2f7826f231086e3eb141c3
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011383"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957251"
 ---
 # <a name="choose-an-encryption-algorithm"></a>选择加密算法
   加密是希望保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例安全的管理员可以采用的多种深度防御方法之一。  
   
- 加密算法定义了未经授权的用户无法轻易逆转的数据转换。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允许管理员和开发人员从多种算法中进行选择，其中包括 DES、Triple DES、TRIPLE_DES_3KEY、RC2、RC4、128 位 RC4、DESX、128 位 AES、192 位 AES 和 256 位 AES。  
+ 加密算法定义了未经授权的用户无法轻松逆转的数据转换。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]允许管理员和开发人员从多种算法中进行选择，其中包括 DES、三重 DES、TRIPLE_DES_3KEY、RC2、RC4、128位 RC4、DESX、128位 AES、192位 AES 和256位 AES。  
   
  没有一种算法能够解决所有问题，有关每种算法的优势的说明不属于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书的讨论范畴。 但是，下列一般原则适应于：  
   
@@ -62,13 +62,13 @@ ms.locfileid: "63011383"
   
 |||  
 |-|-|  
-|使用对称密钥加密。|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
-|使用非对称密钥加密。|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
-|使用证书加密。|[CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)|  
-|使用透明数据加密对数据库文件进行加密。|[透明数据加密 (TDE)](transparent-data-encryption.md)|  
+|使用对称密钥加密。|[&#40;Transact-sql&#41;创建对称密钥](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
+|使用非对称密钥加密。|[创建非对称密钥 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
+|使用证书加密。|[&#40;Transact-sql&#41;创建证书](/sql/t-sql/statements/create-certificate-transact-sql)|  
+|使用透明数据加密对数据库文件进行加密。|[透明数据加密 &#40;TDE&#41;](transparent-data-encryption.md)|  
 |如何加密表中的列。|[加密数据列](encrypt-a-column-of-data.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 加密](sql-server-encryption.md)   
  [加密层次结构](encryption-hierarchy.md)  
   

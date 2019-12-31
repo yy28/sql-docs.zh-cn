@@ -1,5 +1,5 @@
 ---
-title: 监视和故障排除合并数据和差异文件对 |Microsoft Docs
+title: 监视数据和差异文件对的合并以及排除其故障Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61a9b1697b705e56c73a0b610ae426deb288901e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7a13345da45d7e6c31a53bc51371306da444a96
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62844085"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228184"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>监视数据与差异文件对的合并以及排除其故障
   内存中 OLTP 使用合并策略自动合并相邻数据和差异文件对。 无法禁用合并活动。  
@@ -24,10 +24,10 @@ ms.locfileid: "62844085"
   
 -   将内存中存储的大小与存储的总大小进行比较。 如果存储大得不成比例，则可能未触发合并。 有关信息  
   
--   查看使用的数据和差异文件中的已用空间[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)若要查看是否时它应不获取触发合并。  
+-   使用[sys. dm_db_xtp_checkpoint_files &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)查看数据和差异文件中的已用空间，以查看是否在其应该触发 merge。  
   
 ## <a name="performing-a-manual-merge"></a>执行手动合并  
- 可以使用[sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)若要执行手动合并。  
+ 您可以使用[sys. sp_xtp_merge_checkpoint_files &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)执行手动合并。  
   
  使用以下查询检索有关数据和差异文件的信息，  
   
@@ -39,7 +39,7 @@ where state = 1
 order by file_type_desc, upper_bound_tsn  
 ```  
   
- 假定找到三个尚未合并的数据文件。 可使用第一个数据文件的 `lower_bound_tsn` 值和最后一个数据文件的 `upper_bound_tsn` 发出以下命令：  
+ 假设您找到了三个未合并的数据文件。 可使用第一个数据文件的 `lower_bound_tsn` 值和最后一个数据文件的 `upper_bound_tsn` 发出以下命令：  
   
 ```sql  
 exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890  
@@ -47,9 +47,8 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  假定三个数据和差异文件对的每一对都有 15836 行，并且其中删除了 5279 行。 合并后，新数据文件有 31872 行，未删除行。 新数据文件的大小可远远大于初始分配的 128MB 大小。 这是因为手动合并优先于合并策略，强制合并所请求的文件。  
   
- 博客[状态转换的检查点文件中具有内存优化表的数据库](http://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx)描述状态转换的数据和差异文件对从开始到垃圾回收。  
+ [具有内存优化表的数据库中检查点文件的博客状态转换](https://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx)说明数据和差异文件对从开始到垃圾回收的状态转换。  
   
-## <a name="see-also"></a>请参阅  
- [创建和管理用于内存优化的对象的存储](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
+## <a name="see-also"></a>另请参阅  
+ [创建和管理内存优化对象的存储](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   

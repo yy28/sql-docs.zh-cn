@@ -1,6 +1,7 @@
 ---
-title: 允许网络访问到数据库镜像端点使用 Windows 身份验证 (SQL Server) |Microsoft Docs
-ms.custom: ''
+title: 对数据库镜像端点进行网络访问
+description: 了解如何允许 windows authenticatino 网络访问数据库镜像端点 SQL Server。
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,19 +14,19 @@ ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d561c3939a8f13767faf9195102080cc7b73af0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e40a1eead54fe9d00eaf099410260023229796d0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62807481"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228568"
 ---
 # <a name="allow-network-access-to-a-database-mirroring-endpoint-using-windows-authentication-sql-server"></a>允许使用 Windows 身份验证对数据库镜像端点进行网络访问 (SQL Server)
   将 Windows 身份验证用于连接两个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的数据库镜像端点在以下条件下要求手动配置登录帐户：  
   
 -   如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例基于不同的域帐户（在相同的域或受信任的域中）作为服务运行，则必须在每个远程服务器实例上的 **master** 中创建各帐户的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。  
   
--   如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例作为网络服务帐户运行，则必须在每个远程服务器实例上的 master  中创建各主机帐户 (DomainName\\ComputerName$)  的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。 其原因在于，基于网络服务帐户运行的服务器实例使用主机的域帐户进行身份验证。  
+-   如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例作为网络服务帐户运行，则必须在每个远程服务器实例上的 master**** 中创建各主机帐户 (DomainName\\ComputerName$)******** 的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。 其原因在于，基于网络服务帐户运行的服务器实例使用主机的域帐户进行身份验证。  
   
 > [!NOTE]  
 >  确保每个服务器实例都有一个端点。 有关详细信息，请参阅[为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
@@ -52,10 +53,10 @@ GRANT CONNECT on ENDPOINT::Mirroring_Endpoint TO [Adomain\Otheruser];
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [数据库镜像 (SQL Server)](database-mirroring/database-mirroring-sql-server.md)   
- [传输安全模式的数据库镜像和 AlwaysOn 可用性组&#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [数据库镜像终结点 (SQL Server)](database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [数据库镜像 &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [用于数据库镜像和 AlwaysOn 可用性组 &#40;SQL Server 的传输安全&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [数据库镜像端点 &#40;SQL Server&#41;](database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

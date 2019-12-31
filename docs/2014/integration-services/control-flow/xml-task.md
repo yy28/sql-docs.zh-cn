@@ -15,12 +15,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a878a61678fcad2fe15ac71d8ed7d29f24057852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62829362"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232730"
 ---
 # <a name="xml-task"></a>XML 任务
   XML 任务用于与 XML 数据配合使用。 使用此任务，包可以检索 XML 文档，使用可扩展样式表语言转换 (XSLT) 样式表和 XPath 表达式对文档应用运算，合并多个文档，还可以验证、比较更新的文档并将其保存到文件和变量。  
@@ -46,18 +46,18 @@ ms.locfileid: "62829362"
   
  如果源是变量，则该指定的变量包含 XML 文档的路径。  
   
- 如果源是文件连接管理器，则该指定的文件连接管理器提供源信息。 文件连接管理器与 XML 任务分开配置，并在 XML 任务中被引用。 文件连接管理器的连接字符串可指定 XML 文件的路径。 有关详细信息，请参阅 [File Connection Manager](../connection-manager/file-connection-manager.md)。  
+ 如果源是文件连接管理器，则该指定的文件连接管理器提供源信息。 文件连接管理器与 XML 任务分开配置，并在 XML 任务中被引用。 文件连接管理器的连接字符串可指定 XML 文件的路径。 有关详细信息，请参阅[文件连接管理器](../connection-manager/file-connection-manager.md)。  
   
  XML 任务可以设置为将运算结果保存到变量或文件。 如果要保存到文件中，XML 任务将使用文件连接管理器访问该文件。 您也可以将 Diff 运算生成的 Diffgram 结果保存到文件和变量中。  
   
 ## <a name="predefined-xml-operations"></a>预定义的 XML 运算  
  XML 任务包含一组用来处理 XML 文档的预定义运算。 下表介绍了这些运算。  
   
-|操作|Description|  
+|操作|说明|  
 |---------------|-----------------|  
 |差异|比较两个 XML 文档。 Diff 运算把源 XML 文档作为基准文档，将其与另一个 XML 文档进行比较，检测二者间的差异，并将差异写入 XML Diffgram 文档。 此运算包含用来自定义比较的属性。|  
 |合并|合并两个 XML 文档。 Merge 运算使用源 XML 文档作为基文档，将第二个文档的内容添加到其中。 此运算可以在基文档内指定合并位置。|  
-|Patch|将 Diff 运算的输出（称为 Diffgram 文档）应用到 XML 文档，以创建包含该 Diffgram 文档内容的新的父文档。|  
+|修补程序|将 Diff 运算的输出（称为 Diffgram 文档）应用到 XML 文档，以创建包含该 Diffgram 文档内容的新的父文档。|  
 |验证|根据文档类型定义 (DTD) 或 XML 架构定义 (XSD) 架构验证 XML 文档。|  
 |XPath|执行 XPath 查询和计算。|  
 |XSLT|对 XML 文档执行 XSL 转换。|  
@@ -67,7 +67,7 @@ ms.locfileid: "62829362"
   
  Diff 运算中包含一组用于自定义 XML 比较的选项。 下表对这些选项进行说明：  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
 |**IgnoreComments**|该值用于指定是否比较注释节点。|  
 |**IgnoreNamespaces**|该值用于指定是否将元素的命名空间统一资源标识符 (URI) 与其属性名称相比较。 如果将此选项设置为 `true`，则名称部分相同但命名空间不同的两个元素将被视为相同元素。|  
@@ -84,11 +84,11 @@ ms.locfileid: "62829362"
 ### <a name="xpath-operation"></a>XPath 运算  
  可将 XPath 运算配置为使用不同类型的 XPath 功能。  
   
--   选择“计算”  选项，以实现各种 XPath 函数，如 sum()。  
+-   选择“计算”**** 选项，以实现各种 XPath 函数，如 sum()。  
   
 -   选择 **“结点列表”** 选项，将选定节点以 XML 片段方式返回。  
   
--   选择“值”  选项，以返回所有选定节点的内部文本值，这些值串联为一个字符串。  
+-   选择“值” **** 选项，以返回所有选定节点的内部文本值，这些值串联为一个字符串。  
   
 ### <a name="validation-operation"></a>Validation 运算  
  可以将 Validation 运算配置为使用文档类型定义 (DTD) 架构或 XML 架构定义 (XSD) 架构。  
@@ -110,7 +110,7 @@ ms.locfileid: "62829362"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>XML 任务可用的自定义日志记录消息  
  下表介绍了 XML 任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志项|Description|  
+|日志条目|说明|  
 |---------------|-----------------|  
 |`XMLOperation`|提供任务所执行的操作的相关信息|  
   
@@ -119,9 +119,9 @@ ms.locfileid: "62829362"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [XML 任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [XML 任务编辑器 &#40;常规 "页面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Validate XML with the XML Task](xml-task.md)  
+-   [用 XML 任务验证 XML](xml-task.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   
@@ -141,6 +141,5 @@ ms.locfileid: "62829362"
   
 -   agilebi.com 上的博客文章 [XML 目标脚本组件](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)  
   
--   www.codeplex.com 上的 CodePlex 示例 [处理 XML 数据包示例](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
-  
+-   [www.codeplex.com](www.codeplex.com) 上的 CodePlex 示例 [处理 XML 数据包示例](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
   

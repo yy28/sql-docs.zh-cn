@@ -18,12 +18,12 @@ ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0fa6b877b0c4f9dd2754301c9b2e47964b1ad9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7dfd3db3a8193e92f9670213c602d55dc45f5c7f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874550"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232293"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 表值函数
   表值函数是返回表的用户定义函数。  
@@ -34,18 +34,20 @@ ms.locfileid: "62874550"
 >  对于表值函数，返回表类型的列不能包含时间戳列或非 Unicode 字符串数据类型列（例如，`char`、`varchar` 和 `text`）。 不支持 NOT NULL 约束。  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Transact-SQL 与 CLR 表值函数之间的差异  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值函数将调用此函数的结果具体化到某个中间表中。 由于它们使用中间表，因此它们可以对于结果支持约束和唯一索引。 当返回大型结果时，这些功能极其有用。  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值函数将调用此函数的结果具体化到某个中间表中。 由于它们使用中间表，因此它们可以对于结果支持约束和唯一索引。 当返回大型结果时，这些功能极其有用。  
   
  相比较而言，CLR 表值函数表示一种流替代方法。 此时，不要求在单个表中具体化整个结果集。 调用表值函数的查询的执行计划直接调用由托管函数返回的 `IEnumerable` 对象，并且结果将以递增方式使用。 这种流模型可确保在第一行可用之后立即使用结果，而不是等待填充整个表。 如果返回的行非常多，则这还是一个更好的替代方法，因为它们不必在内存中作为一个整体进行具体化。 例如，可以使用托管表值函数分析文本文件并将其中的每行作为一行返回。  
   
 ## <a name="implementing-table-valued-functions"></a>实现表值函数  
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集中将表值函数作为类的方法实现。 表值函数代码必须实现 `IEnumerable` 接口。 `IEnumerable` 接口在 .NET Framework 中定义。 在 .NET Framework 中表示数组和集合的类型已经实现 `IEnumerable` 接口。 这样，就可以轻松地编写将集合或数组转换为结果集的表值函数。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集中将表值函数作为类的方法实现。 表值函数代码必须实现 `IEnumerable` 接口。 
+  `IEnumerable` 接口在 .NET Framework 中定义。 在 .NET Framework 中表示数组和集合的类型已经实现 `IEnumerable` 接口。 这样，就可以轻松地编写将集合或数组转换为结果集的表值函数。  
   
 ## <a name="table-valued-parameters"></a>表值参数  
  表值参数即传递到某一过程或函数的用户定义表类型，它提供了一种将多行数据传递到服务器的高效方法。 表值参数提供与参数数组类似的功能，但灵活性更高并且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 它们还提供提升性能的潜力。 表值参数还有助于减少到服务器的往返次数。 可以将数据作为表值参数发送到服务器，而不是向服务器发送多个请求（例如，对于标量参数列表）。 用户定义表类型不能作为表值参数传递到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中执行的托管存储过程或函数，也不能从这些存储过程或函数中返回。 有关表值参数的详细信息，请参阅[使用表值参数（数据引擎）](../tables/use-table-valued-parameters-database-engine.md)。  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>输出参数和表值函数  
- 通过使用输出参数，可以从表值函数返回信息。 在实现代码表值函数中的相应参数应将按引用传递参数用作参数。 请注意，Visual Basic 不支持采用与 Visual C# 的相同方法输出参数。 你必须按引用指定参数并应用\<out （) > 属性以表示输出参数，如以下所示：  
+ 通过使用输出参数，可以从表值函数返回信息。 在实现代码表值函数中的相应参数应将按引用传递参数用作参数。 请注意，Visual Basic 不支持采用与 Visual C# 的相同方法输出参数。 必须按引用指定参数，并应用\<Out （） > 特性来表示 output 参数，如下所示：  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -76,12 +78,12 @@ select * from table t cross apply function(t.column);
   
 -   当从外部数据生成表值函数时。 例如，读取事件日志并将其显示为表的表值函数。  
   
- **请注意**的表值函数只能执行数据访问通过[!INCLUDE[tsql](../../includes/tsql-md.md)]查询中的`InitMethod`方法，而不是在`FillRow`方法。 如果执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，则应使用 `InitMethod` 属性标记 `SqlFunction.DataAccess.Read`。  
+ **注意**表值函数只能通过[!INCLUDE[tsql](../../includes/tsql-md.md)] `InitMethod`方法（而不是`FillRow`方法）中的查询来执行数据访问。 如果执行 `InitMethod` 查询，则应使用 `SqlFunction.DataAccess.Read` 属性标记 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
 ## <a name="a-sample-table-valued-function"></a>示例表值函数  
  下面的表值函数返回系统事件日志中的信息。 此函数采用单个字符串参数，其中包含要读取的事件日志的名称。  
   
-###### <a name="sample-code"></a>示例代码  
+###### <a name="sample-code"></a>代码示例  
   
 ```csharp  
 using System;  
@@ -157,7 +159,8 @@ EXTERNAL NAME tvfEventLog.TabularEventLog.InitMethod;
 GO  
 ```  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中不再支持执行使用 /clr:pure 编译的 Visual C++ 数据库对象。 例如，此类数据库对象包含表值函数。  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中不再支持执行使用 /clr:pure 编译的 Visual C++ 数据库对象。 例如，此类数据库对象包含表值函数。  
   
  若要测试此示例，请尝试以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码：  
   
@@ -175,7 +178,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>示例：返回 SQL Server 查询的结果  
- 以下示例演示查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表值函数。 本示例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中的 AdventureWorks 轻型数据库。 请参阅[ http://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843)有关下载 AdventureWorks 的详细信息。  
+ 以下示例演示查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表值函数。 本示例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中的 AdventureWorks 轻型数据库。 有关[https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843)下载 AdventureWorks 的详细信息，请参阅。  
   
  将源代码文件命名为 FindInvalidEmails.cs 或 FindInvalidEmails.vb。  
   
@@ -414,5 +417,4 @@ go
 SELECT * FROM FindInvalidEmails('2000-01-01');  
 go  
 ```  
-  
   

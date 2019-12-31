@@ -1,5 +1,5 @@
 ---
-title: 理解传递次序和求解次序 (MDX) |Microsoft Docs
+title: 了解传递顺序和求解次序（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,12 +18,12 @@ ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 39e1c4ae6de01be55bf94f60e06c7979765f1b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074241"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75229433"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>理解传递次序和求解次序 (MDX)
   当某个多维数据集是 MDX 脚本的计算结果时，该多维数据集可能会经历许多计算阶段，具体取决于与计算有关的各种功能的使用情况。 每个阶段称为一个计算传递。  
@@ -37,9 +37,10 @@ ms.locfileid: "66074241"
 ## <a name="solve-order"></a>求解次序  
  求解次序决定了出现相互竞争的表达式时的计算优先级。 在一个传递中，求解次序决定了两点：  
   
--    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算维度、成员、计算成员、自定义汇总和计算单元的次序。  
+-   计算维度、成员[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 、计算成员、自定义汇总和计算单元的顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算自定义成员、计算成员、自定义汇总和计算单元的次序。  
+-   
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算自定义成员、计算成员、自定义汇总和计算单元的次序。  
   
  具有最高求解次序的成员优先。  
   
@@ -67,9 +68,9 @@ ms.locfileid: "66074241"
  为了说明求解次序可能具有的复杂性，下面的系列 MDX 查询将以两个本身没有求解次序问题的查询开始， 然后将这两个查询合并成一个需要求解次序的查询。  
   
 > [!NOTE]  
->  您可以针对 Adventure Works 示例多维数据库运行这些 MDX 查询。 可以从 codeplex 站点下载 [AdventureWorks 多维模型 SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) 示例。  
+>  您可以针对 Adventure Works 示例多维数据库运行这些 MDX 查询。 可以从 codeplex 站点下载 [AdventureWorks 多维模型 SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330) 示例。  
   
-### <a name="query-1-differences-in-income-and-expenses"></a>查询 1-收入与支出的差异  
+### <a name="query-1-differences-in-income-and-expenses"></a>查询 1-收入与支出之间的差异  
  对于第一个 MDX 查询，通过构造一个与以下示例类似的简单 MDX 查询，计算每年的销售与成本之间的差额：  
   
 ```  
@@ -92,7 +93,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
-|**Year Difference**|($20,160.56)|$2,878.06|  
+|**年份差异**|($20,160.56)|$2,878.06|  
   
 ### <a name="query-2-percentage-of-income-after-expenses"></a>查询 2-支出后的收益百分比  
  对于第二个查询，通过使用下面的 MDX 查询，计算每年扣除支出后的收益百分比：  
@@ -122,10 +123,12 @@ FROM [Adventure Works]
   
  第一个查询与第二个查询在结果集方面的差异来自计算成员位置的不同。 在第一个查询中，计算成员是 ROWS 轴的一部分，而在第二个查询中，计算成员是 COLUMNS 轴的一部分。 下一个查询将两个计算成员合并到一个 MDX 查询中，这种位置上的不同在这个查询中就会变得非常重要。  
   
-### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>查询 3 组合年差额和净收益计算  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>查询 3-组合年份差额和净收益计算  
  在最后这个查询中，将上面两个示例合并成一个 MDX 查询，此时由于要同时对列和行进行计算，因此求解次序变得重要起来。 为了确保按正确的顺序进行计算，请使用 `SOLVE_ORDER` 关键字定义进行计算的顺序。  
   
- `SOLVE_ORDER` 关键字指定 MDX 查询或 `CREATE MEMBER` 命令中计算成员的求解次序。 `SOLVE_ORDER` 关键字使用的整数值是相对的，不要求从零开始，也不要求是连续的。 该值只是告诉 MDX 基于通过计算具有较大求解次序值的成员得出的值来计算成员。 如果不使用 `SOLVE_ORDER` 关键字定义计算成员，计算成员的默认值将为零。  
+ 
+  `SOLVE_ORDER` 关键字指定 MDX 查询或 `CREATE MEMBER` 命令中计算成员的求解次序。 
+  `SOLVE_ORDER` 关键字使用的整数值是相对的，不要求从零开始，也不要求是连续的。 该值只是告诉 MDX 基于通过计算具有较大求解次序值的成员得出的值来计算成员。 如果不使用 `SOLVE_ORDER` 关键字定义计算成员，计算成员的默认值将为零。  
   
  例如，如果合并前面两个查询示例中使用的计算，则两个计算成员 `Year Difference` 和 `Profit Margin`将相交于 MDX 查询示例的结果数据集中的一个单元中。 确定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 如何计算此单元的唯一方式是通过求解次序。 根据两个计算成员的求解次序，用于构造此单元的公式将生成不同的结果。  
   
@@ -149,13 +152,13 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- 在这个合并的 MDX 查询示例中， `Profit Margin` 具有最高的求解次序，因此当两个表达式会相互影响时，它具有优先权。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 使用 `Profit Margin` 公式计算相关的单元。 此嵌套计算的结果如下表所示。  
+ 在这个合并的 MDX 查询示例中， `Profit Margin` 具有最高的求解次序，因此当两个表达式会相互影响时，它具有优先权。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]使用`Profit Margin`公式计算相关单元。 此嵌套计算的结果如下表所示。  
   
 ||Internet Sales Amount|Internet Total Product Cost|Profit Margin|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Year Difference**|($20,160.56)|$2,878.06|114.28%|  
+|**年份差异**|($20,160.56)|$2,878.06|114.28%|  
   
  共享单元中的结果基于 `Profit Margin`所用的公式。 也就是说， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 使用 `Year Difference` 数据计算共享单元中的结果，这样就会得到以下公式（为清楚起见，对结果进行了舍入）：  
   
@@ -195,7 +198,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Year Difference**|($20,160.56)|$2,878.06|(0.15%)|  
+|**年份差异**|($20,160.56)|$2,878.06|(0.15%)|  
   
  因为此查询对 `Year Difference` 数据使用 `Profit Margin` 公式，所以共享单元的公式与以下计算类似：  
   
@@ -212,10 +215,9 @@ FROM [Adventure Works]
 ## <a name="additional-considerations"></a>其他注意事项  
  求解次序可能会成为需要处理的非常复杂的问题，尤其是在具有很多维度而维度涉及计算成员、自定义汇总公式或计算单元的多维数据集中，更是如此。 当 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算 MDX 查询时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将考虑给定传递中涉及的所有内容的求解次序值，包括 MDX 查询中指定的多维数据集的维度。  
   
-## <a name="see-also"></a>请参阅  
- [CalculationCurrentPass (MDX)](/sql/mdx/calculationcurrentpass-mdx)   
- [CalculationPassValue (MDX)](/sql/mdx/calculationpassvalue-mdx)   
- [CREATE MEMBER 语句 (MDX)](/sql/mdx/mdx-data-definition-create-member)   
- [操作数据 (MDX)](mdx-data-manipulation-manipulating-data.md)  
-  
+## <a name="see-also"></a>另请参阅  
+ [CalculationCurrentPass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
+ [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
+ [CREATE MEMBER 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
+ [&#40;MDX&#41;操作数据](mdx-data-manipulation-manipulating-data.md)  
   

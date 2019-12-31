@@ -1,5 +1,5 @@
 ---
-title: 工具和 Analysis Services 中使用的应用程序 |Microsoft Docs
+title: Analysis Services 中使用的工具和应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 169ae399522f8de40b8a50dba0b98ccc4ddc57c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c04742d0e0a84dd35e300bace9107685685ef75b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065864"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228904"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>在 Analysis Services 中使用的工具和应用程序
   找到您将需要用于生成 Analysis Services 模型以及用于在 Analysis Services 实例上管理关联数据库的工具和应用程序。  
@@ -24,7 +24,8 @@ ms.locfileid: "66065864"
  表格和多维模型是从 Visual Studio shell 内部生成的一个解决方案中的项目模板创建。 项目模板提供用于创建模型、多维数据集、维度和包含 Analysis Services 解决方案的角色的设计器。  
   
 ### <a name="download-sql-server-data-tools-for-business-intelligence-ssdt-bi"></a>下载 SQL Server Data Tools for Business Intelligence (SSDT-BI)  
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] for Business Intelligence (SSDT-BI)（以前称为 Business Intelligence Development Studio (BIDS)）用于创建 Analysis Services 模型、Reporting Services 报表和 Integration Services 包。 您可以从以下位置下载 SSDT-BI：  
+ 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] for Business Intelligence (SSDT-BI)（以前称为 Business Intelligence Development Studio (BIDS)）用于创建 Analysis Services 模型、Reporting Services 报表和 Integration Services 包。 您可以从以下位置下载 SSDT-BI：  
   
 -   [下载 SSDT-BI for Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
@@ -33,9 +34,9 @@ ms.locfileid: "66065864"
  如果计算机上装有旧版 SSDT-BI 或 BIDS，则新版与旧版并行安装。 在一个工作站上同时运行新版和旧版的设计工具是很常见的，这样可以修改与特定服务器版本关联的项目和解决方案。  
   
 > [!NOTE]  
->  有多个下载站点可下载 SSDT 的 Visual Studio 2012 和 Visual Studio 2013 版本。 大多不含 BI 项目模板。 使用上面的链接可获得正确的版本。 就会知道没有正确版本的 SSDT BI，是否看到 Business Intelligence 项目模板文件夹。 此文件夹包含 Analysis Services、Reporting Services 和 Integration Services 的项目模板。 根据安装 SSDT-BI 的方式，可能还会看到一个 SQL Server 数据库项目模板。  
+>  有多个下载站点可下载 SSDT 的 Visual Studio 2012 和 Visual Studio 2013 版本。 大多不含 BI 项目模板。 使用上面的链接可获得正确的版本。 如果你看到 "商业智能项目模板" 文件夹，你将知道 SSDT-BI 的版本是否正确。 此文件夹包含 Analysis Services、Reporting Services 和 Integration Services 的项目模板。 根据安装 SSDT-BI 的方式，可能还会看到一个 SQL Server 数据库项目模板。  
   
- ![SSDT 中新的项目模板](media/ssdt-biprojects.png "New Project templates in SSDT")  
+ ![SSDT 中新的项目模板](media/ssdt-biprojects.png "SSDT 中新的项目模板")  
   
 ## <a name="administrative-tools"></a>管理工具  
   
@@ -49,6 +50,4 @@ ms.locfileid: "66065864"
  可以使用 PowerShell 命令执行许多管理任务。 有关详细信息，请参阅 [Analysis Services PowerShell](analysis-services-powershell.md) 。  
   
 ### <a name="community-and-third-party-tools"></a>社区和第三方工具  
- 检查 [Analysis Services codeplex 页面](http://sqlsrvanalysissrvcs.codeplex.com/) 是否具有社区代码示例。 当寻求对支持 Analysis Services 的第三方工具的推荐时，可在[论坛](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) 获得帮助。  
-  
-  
+ 检查 [Analysis Services codeplex 页面](https://sqlsrvanalysissrvcs.codeplex.com/) 是否具有社区代码示例。 为支持 Analysis Services 的第三方工具查找建议时，[论坛](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices)非常有用。  

@@ -13,18 +13,18 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c34eafe153c5361df1945b55094737fa529f617
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011463"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957205"
 ---
 # <a name="encryption-hierarchy"></a>加密层次结构
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用分层加密和密钥管理基础结构来加密数据。 每一层都使用证书、非对称密钥和对称密钥的组合对它下面的一层进行加密。 非对称密钥和对称密钥可以存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外的可扩展密钥管理 (EKM) 模块中。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用分层加密和密钥管理基础结构来加密数据。 每一层都使用证书、非对称密钥和对称密钥的组合对它下面的一层进行加密。 非对称密钥和对称密钥可以存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外的可扩展密钥管理 (EKM) 模块中。  
   
  下图说明了加密层次结构的每一层是如何对它下面的一层进行加密的，并且显示了最常用的加密配置。 对层次结构的开始进行的访问通常受密码保护。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "63011463"
 -   EKM 中的对称密钥和非对称密钥可以保护对存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的对称密钥和非对称密钥进行的访问。 与 EKM 有关的虚线表示 EKM 中的密钥可以替换存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的对称密钥和非对称密钥。  
   
 ## <a name="encryption-mechanisms"></a>加密机制  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了下列加密机制：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]提供了下列加密机制：  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)]函数  
   
 -   非对称密钥  
   
@@ -79,7 +79,7 @@ ms.locfileid: "63011463"
   
 -   有效期。 这是指证书被认为有效的时间长度。  
   
-     证书只有在指定的有效期内有效，每个证书都包含一个“有效期始于”  和“有效期至”  日期。 这两个日期设置了有效期的界限。 证书超过有效期后，必须由已过期证书的主体请求一个新证书。  
+     证书只有在指定的有效期内有效，每个证书都包含一个“有效期始于” **** 和“有效期至” **** 日期。 这两个日期设置了有效期的界限。 证书超过有效期后，必须由已过期证书的主体请求一个新证书。  
   
 -   颁发者标识符信息。  
   
@@ -107,10 +107,10 @@ ms.locfileid: "63011463"
 ## <a name="related-content"></a>相关内容  
  [保护 SQL Server](../securing-sql-server.md)  
   
- [安全函数 (Transact-SQL)](/sql/t-sql/functions/security-functions-transact-sql)  
+ [安全功能 &#40;Transact-sql&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
-## <a name="see-also"></a>请参阅  
- [权限层次结构（数据库引擎）](../permissions-hierarchy-database-engine.md)   
+## <a name="see-also"></a>另请参阅  
+ [权限层次结构 &#40;数据库引擎&#41;](../permissions-hierarchy-database-engine.md)   
  [安全对象](../securables.md)  
   
   

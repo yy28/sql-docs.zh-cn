@@ -15,40 +15,40 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: ee4581d91b9f57b48f22e66dc15ff03e6f7320d7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: e73098a63f193ab868854674d2e77c3ba372c29c
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028544"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957098"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明数据加密 (TDE)
-  *透明数据加密* (TDE) 加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 数据文件，称为加密空闲数据。 您可以采取一些预防措施来帮助保护数据库的安全，如设计一个安全系统、加密机密资产以及在数据库服务器的周围构建防火墙。 但是，如果遇到物理介质（如驱动器或备份磁带）被盗的情况，恶意破坏方只需还原或附加数据库即可浏览数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
+  *透明数据加密*（TDE）加密[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]数据文件，称为加密静态数据。 可以采取多种预防措施来帮助保护数据库，例如，设计安全系统、加密机密资产，以及围绕数据库服务器构建防火墙。 但是，如果物理媒体（如驱动器或备份磁带）失窃，恶意方可能会还原或附加数据库并浏览数据。 一种解决方法是加密数据库中的敏感数据，并使用证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
   
- TDE 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 DEK 是使用存储在服务器的 master 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。 TDE 保护“处于休眠状态”的数据，即数据和日志文件。 它提供了遵从许多法律、法规和各个行业建立的准则的能力。 软件开发人员籍此可以使用 AES 和 3DES 加密算法来加密数据，且无需更改现有的应用程序。  
+ TDE 针对数据和日志文件执行实时 I/O 加密和解密。 加密使用数据库加密密钥 (DEK)，它存储在数据库引导记录中，可在恢复时使用。 DEK 是使用存储在服务器的 master 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。 TDE 保护“静态数据”，包括数据文件和日志文件。 使用 TDE 能够符合各个行业制定的许多法律、法规和准则。 软件开发人员籍此可以使用 AES 和 3DES 加密算法来加密数据，且无需更改现有的应用程序。  
   
 > [!IMPORTANT]
 >  TDE 不提供跨通信信道加密。 有关如何跨通信信道加密数据，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
 > 
 >  **相关主题：**  
 > 
->  -   [借助 Azure SQL 数据库实现透明数据加密](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
-> -   [将受 TDE 保护的数据库移到其他 SQL Server](move-a-tde-protected-database-to-another-sql-server.md)  
+>  -   [透明数据加密 Azure SQL 数据库](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
+> -   [将受 TDE 保护的数据库移到另一个 SQL Server](move-a-tde-protected-database-to-another-sql-server.md)  
 > -   [使用 EKM 启用 TDE](enable-tde-on-sql-server-using-ekm.md)  
   
 ## <a name="about-tde"></a>关于 TDE  
- 数据库文件的加密在页级别执行。 已加密数据库中的页在写入磁盘之前会进行加密，在读入内存时会进行解密。 TDE 不会增加已加密数据库的大小。  
+ 数据库文件加密在页面级执行。 已加密数据库中的页在写入磁盘之前会进行加密，在读入内存时会进行解密。 TDE 不会增加已加密数据库的大小。  
   
- **适用于 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的信息**  
+ **适用于的信息[!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
  当将 TDE 与 [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12（[在某些区域是预览版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）一起使用时， [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]将为你自动创建存储在 master 数据库中的服务器级别的证书。 若要移动 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上的 TDE 数据库，必须解密该数据库、移动该数据库，然后在目标 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上重新启用 TDE。 有关 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上 TDE 的分步说明，请参阅 [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)。  
   
  即使在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的版本系列 V12 现在宣布为处于公开发布状态的部分地理区域中，TDE 的状态预览也适用。 在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 宣布将 TDE 从预览提升为 GA 之前， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 的 TDE 不适用于生产数据库。 有关 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 的详细信息，请参阅 [Azure SQL Database 中的新增功能](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)。  
   
- **适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的信息**  
+ **适用于的信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
  对数据库实施保护措施后，可以通过使用正确的证书还原此数据库。 有关证书的详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "69028544"
   
 ||  
 |-|  
-|**适用于**： [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。|  
+|**适用**于： [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。|  
   
 -   创建主密钥  
   
@@ -108,21 +108,21 @@ GO
   
  下表提供了 TDE 命令和函数的链接和说明。  
   
-|命令或函数|用途|  
+|命令或函数|目的|  
 |-------------------------|-------------|  
-|[CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|创建一个用于加密数据库的密钥。|  
-|[ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|更改用于加密数据库的密钥。|  
-|[DROP DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/drop-database-transact-sql)|删除用于加密数据库的密钥。|  
-|[ALTER DATABASE SET 选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)|介绍用来启用 TDE 的 `ALTER DATABASE` 选项。|  
+|[&#40;Transact-sql&#41;创建数据库加密密钥](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|创建一个用于加密数据库的密钥。|  
+|[ALTER DATABASE ENCRYPTION KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|更改用于加密数据库的密钥。|  
+|[DROP DATABASE ENCRYPTION KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-database-transact-sql)|删除用于加密数据库的密钥。|  
+|[ALTER DATABASE SET Options &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|介绍用来启用 TDE 的 `ALTER DATABASE` 选项。|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>目录视图和动态管理视图  
  下表显示了 TDE 目录视图和动态管理视图。  
   
-|目录视图或动态管理视图|用途|  
+|目录视图或动态管理视图|目的|  
 |---------------------------------------------|-------------|  
-|[sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|显示数据库信息的目录视图。|  
-|[sys.certificates (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|显示数据库中的证书的目录视图。|  
-|[sys.dm_database_encryption_keys (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|提供有关数据库中使用的加密密钥的信息以及数据库加密状态的动态管理视图。|  
+|[sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|显示数据库信息的目录视图。|  
+|[sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|显示数据库中的证书的目录视图。|  
+|[sys. dm_database_encryption_keys &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|提供有关数据库中使用的加密密钥的信息以及数据库加密状态的动态管理视图。|  
   
 ## <a name="permissions"></a>权限  
  如上表中所述，TDE 的每项功能和每个命令都有各自的权限要求。  
@@ -218,7 +218,7 @@ GO
  如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中的任何其他数据库是使用 TDE 加密的，则会加密 tempdb 系统数据库。 这可能会对同一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的未加密数据库产生性能影响。 有关 tempdb 系统数据库的详细信息，请参阅 [tempdb 数据库](../../databases/tempdb-database.md)。  
   
 ### <a name="transparent-data-encryption-and-replication"></a>透明数据加密和复制  
- 复制不会以加密形式从启用了 TDE 的数据库中自动复制数据。 如果您想保护分发和订阅服务器数据库，则必须单独启用 TDE。 快照复制以及用于事务和合并复制的初始数据分发，都能够在未加密的中间文件（例如 bcp 文件）中存储数据。  在事务或合并复制期间，可以启用加密来保护通信信道。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+ 复制不会以加密形式从启用了 TDE 的数据库中自动复制数据。 如果您想保护分发和订阅服务器数据库，则必须单独启用 TDE。 快照复制以及用于事务和合并复制的初始数据分发，都能够在未加密的中间文件（例如 bcp 文件）中存储数据。  在事务或合并复制期间，可以启用加密来保护通信信道。 有关详细信息，请参阅[启用到数据库引擎 &#40;的加密连接 SQL Server 配置管理器&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>透明数据加密和 FILESTREAM 数据  
  即使启用了 TDE，也不会加密 FILESTREAM 数据。  
@@ -229,13 +229,13 @@ GO
 ## <a name="transparent-data-encryption-and-in-memory-oltp"></a>透明数据加密和内存中 OLTP  
  可在拥有内存中 OLTP 对象的数据库上启用 TDE。 如果启用 TDE，则内存中 OLTP 日志记录会被加密。 如果启用了 TDE，则不对 MEMORY_OPTIMIZED_DATA 文件组中的数据进行加密。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将受 TDE 保护的数据库移到另一个 SQL Server](move-a-tde-protected-database-to-another-sql-server.md)   
  [使用 EKM 启用 TDE](enable-tde-on-sql-server-using-ekm.md)   
  [透明数据加密 Azure SQL 数据库](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [SQL Server 加密](sql-server-encryption.md)   
- [SQL Server 和数据库加密密钥（数据库引擎）](sql-server-and-database-encryption-keys-database-engine.md)   
- [SQL Server 数据库引擎和 Azure SQL 数据库的安全中心](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
- [FILESTREAM (SQL Server)](../../blob/filestream-sql-server.md)  
+ [SQL Server 和数据库加密密钥 &#40;数据库引擎&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)  
   
   

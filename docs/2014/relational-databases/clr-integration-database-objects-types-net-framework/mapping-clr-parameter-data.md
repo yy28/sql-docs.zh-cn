@@ -26,57 +26,59 @@ ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b297d329f11e05ed1b1995004150644e4b76ec9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874841"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232283"
 ---
 # <a name="mapping-clr-parameter-data"></a>映射 CLR 参数数据
-  下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，公共语言运行时 (CLR) 为中的等效项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中`System.Data.SqlTypes`命名空间，并在其本机 CLR 等效[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。  
+  下[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表列出了数据类型、它们在公共语言运行时（CLR）中 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in `System.Data.SqlTypes`命名空间中的等效项以及其在[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 中的本机 CLR 等效项。  
   
 ||||  
 |-|-|-|  
 |**SQL Server 数据类型**|类型（在 System.Data.SqlTypes 或 Microsoft.SqlServer.Types 中）|**CLR 数据类型 (.NET Framework)**|  
-|`bigint`|`SqlInt64`|**Int64，可以为 Null\<Int64 >**|  
+|`bigint`|`SqlInt64`|**Int64，可以\<为 null 的 int64>**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`bit`|`SqlBoolean`|**布尔值、 可以为 Null\<布尔 >**|  
-|`char`|None|None|  
-|`cursor`|None|None|  
-|`date`|`SqlDateTime`|**日期时间，可以为 Null\<日期时间 >**|  
-|`datetime`|`SqlDateTime`|**日期时间，可以为 Null\<日期时间 >**|  
-|`datetime2`|None|**日期时间，可以为 Null\<日期时间 >**|  
-|`DATETIMEOFFSET`|`None`|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
-|`decimal`|`SqlDecimal`|**Decimal、 可以为 Null\<十进制 >**|  
-|`float`|`SqlDouble`|**双精度，可以为 Null\<双精度 >**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/en-us/download/details.aspx?id=53164)。|None|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/en-us/download/details.aspx?id=53164)。|None|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/en-us/download/details.aspx?id=53164)。|None|  
-|`image`|None|None|  
-|`int`|`SqlInt32`|**Int32 类型，可以为 Null\<Int32 >**|  
-|`money`|`SqlMoney`|**Decimal、 可以为 Null\<十进制 >**|  
+|`bit`|`SqlBoolean`|**布尔值，\<可以为 null 的布尔>**|  
+|`char`|无|无|  
+|`cursor`|无|无|  
+|`date`|`SqlDateTime`|**DateTime、可以\<为 null 的 datetime>**|  
+|`datetime`|`SqlDateTime`|**DateTime、可以\<为 null 的 datetime>**|  
+|`datetime2`|无|**DateTime、可以\<为 null 的 datetime>**|  
+|`DATETIMEOFFSET`|`None`|**DateTimeOffset、可以\<为 null 的 datetimeoffset>**|  
+|`decimal`|`SqlDecimal`|**十进制，可以\<为 null 的十进制>**|  
+|`float`|`SqlDouble`|**Double，可以\<为 null 的双精度>**|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography`是在与 SQL Server 一起安装的中定义的，并且可以从[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/download/details.aspx?id=53164)下载。|无|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`是在与 SQL Server 一起安装的中定义的，并且可以从[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/download/details.aspx?id=53164)下载。|无|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`是在与 SQL Server 一起安装的中定义的，并且可以从[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/download/details.aspx?id=53164)下载。|无|  
+|`image`|无|无|  
+|`int`|`SqlInt32`|**Int32，可以\<为 null 的 int32>**|  
+|`money`|`SqlMoney`|**十进制，可以\<为 null 的十进制>**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
-|`ntext`|None|None|  
-|`numeric`|`SqlDecimal`|**Decimal、 可以为 Null\<十进制 >**|  
-|`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` 更适用于数据传输和访问，而 `SQLString` 更适用于执行字符串运算。|`String, Char[]`|  
-|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char、 字符串、 Char []，可以为 Null\<char >**|  
-|`real`|`SqlSingle`（`SqlSingle` 的范围，但大于 `real`）|**单一的可以为 Null\<单一 >**|  
-|`rowversion`|None|`Byte[]`|  
-|`smallint`|`SqlInt16`|**Int16，可以为 Null\<Int16 >**|  
-|`smallmoney`|`SqlMoney`|**Decimal、 可以为 Null\<十进制 >**|  
-|`sql_variant`|None|`Object`|  
-|`table`|None|None|  
-|`text`|None|None|  
-|`time`|None|**TimeSpan, Nullable\<TimeSpan>**|  
-|`timestamp`|None|None|  
-|`tinyint`|`SqlByte`|**字节，可以为 Null\<字节 >**|  
-|`uniqueidentifier`|`SqlGuid`|**Guid，可以为 Null\<Guid >**|  
-|`User-defined type(UDT)`|None|绑定到相同程序集或依赖程序集中的用户定义类型的相同类。|  
+|`ntext`|无|无|  
+|`numeric`|`SqlDecimal`|**十进制，可以\<为 null 的十进制>**|  
+|`nvarchar`|`SqlChars, SqlString`<br /><br /> 
+  `SQLChars` 更适用于数据传输和访问，而 `SQLString` 更适用于执行字符串运算。|`String, Char[]`|  
+|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char、String、Char []、可以\<为 null 的 char>**|  
+|`real`|
+  `SqlSingle`（`SqlSingle` 的范围，但大于 `real`）|**单个、可以\<为 null 的单一>**|  
+|`rowversion`|无|`Byte[]`|  
+|`smallint`|`SqlInt16`|**Int16，可\<为 null 的 int16>**|  
+|`smallmoney`|`SqlMoney`|**十进制，可以\<为 null 的十进制>**|  
+|`sql_variant`|无|`Object`|  
+|`table`|无|无|  
+|`text`|无|无|  
+|`time`|无|**TimeSpan，可\<为 null 的 timespan>**|  
+|`timestamp`|无|无|  
+|`tinyint`|`SqlByte`|**字节，可以\<为 null 的字节>**|  
+|`uniqueidentifier`|`SqlGuid`|**Guid，可\<为 null 的 guid>**|  
+|`User-defined type(UDT)`|无|绑定到相同程序集或依赖程序集中的用户定义类型的相同类。|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**字节、 Byte []，可以为 Null\<字节 >**|  
-|`varchar`|None|None|  
-|`xml`|`SqlXml`|None|  
+|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte、Byte []、可以\<为 null 的字节>**|  
+|`varchar`|无|无|  
+|`xml`|`SqlXml`|无|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>使用 Out 参数的自动数据类型转换  
  通过以 `out` 修饰符 (Microsoft Visual C#) 或 `<Out()> ByRef` (Microsoft Visual Basic) 来标记输入参数，CLR 方法可以将信息返回到发起调用的代码或程序。如果输入参数是 `System.Data.SqlTypes` 命名空间中的 CLR 数据类型，并且发起调用的程序指定其等效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型作为输入参数，则会在 CLR 方法返回数据类型时自动发生类型转换。  
@@ -110,8 +112,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR 数据类型 (SQL Server)**|**SQL Server 数据类型**|  
-|`Decimal`|SMALLMONEY|  
-|`SqlMoney`|SMALLMONEY|  
+|`Decimal`|smallmoney|  
+|`SqlMoney`|smallmoney|  
 |`Decimal`|money|  
 |`DateTime`|smalldatetime|  
 |`SQLDateTime`|smalldatetime|  
@@ -122,7 +124,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |---------------------|  
 |将 `SqlGeography`、`SqlGeometry` 和 `SqlHierarchyId` 类型添加到了映射表。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [.NET Framework 中的 SQL Server 数据类型](sql-server-data-types-in-the-net-framework.md)  
   
   
