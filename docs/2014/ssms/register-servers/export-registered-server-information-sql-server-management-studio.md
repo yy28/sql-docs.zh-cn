@@ -1,6 +1,6 @@
 ---
-title: 导出已注册的服务器信息 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 导出已注册的服务器信息
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - exporting registered server information
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67a5dce0e92f9d9b90f5af3b6e638112b92d450b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 2d5dcbaf6f478d3cb637c72ada8bee2bb2a088d2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298111"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244600"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>导出已注册服务器信息 (SQL Server Management Studio)
   本主题说明如何保存和导出 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的已注册服务器信息并将其分发到其他雇员或服务器。 您可以使用此导出功能在多台计算机上显示一致的用户界面。  
@@ -35,7 +35,7 @@ ms.locfileid: "63298111"
   
 #### <a name="to-export-registered-server-information"></a>导出已注册服务器信息  
   
-1.  在已注册的服务器上，右键单击服务器组，再单击“导出”  。  
+1.  在已注册的服务器上，右键单击服务器组，再单击“导出”****。  
   
     > [!NOTE]  
     >  您可以导出单个服务器、所有已注册服务器树或已注册服务器树的子集。  
@@ -48,15 +48,15 @@ ms.locfileid: "63298111"
      服务器组仅显示当前已注册服务器树的服务器组。  
   
      **导出文件**  
-     在文本框中键入导出文件的名称，或使用“浏览”按钮 ( **...** ) 定位到客户端计算机上的导出文件。 如果选择现有文件，则已注册服务器的信息将追加到文件末尾。 并使用 .regsrvr 扩展名。 如果希望其他用户或另一台计算机也可以使用已注册服务器信息，可以将文件保存在网络中。 其他用户就可以访问该文件并导入部分或全部已注册服务器信息。 如果选择现有文件作为导出文件，该文件的内容将被服务器注册信息覆盖。  
+     在文本框中键入导出文件的名称，或使用“浏览”按钮 (**...**) 定位到客户端计算机上的导出文件。 如果选择现有文件，则已注册服务器的信息将追加到文件末尾。 并使用 .regsrvr 扩展名。 如果希望其他用户或另一台计算机也可以使用已注册服务器信息，可以将文件保存在网络中。 其他用户就可以访问该文件并导入部分或全部已注册服务器信息。 如果选择现有文件作为导出文件，该文件的内容将被服务器注册信息覆盖。  
   
-     **不在导出文件中包括用户名和密码**  
+     **不要在导出文件中包括用户名和密码**  
      在导出文件时不包括用户名。  
   
     > [!IMPORTANT]  
     >  尽管导出文件已加密，但是，如果该文件中包括用户名和 SQL Server 身份验证密码，则应当仔细控制对该文件的访问。 因此，默认情况下，不在导出文件中包括用户名和密码。  
   
-## <a name="see-also"></a>请参阅  
- [导入已注册的服务器信息&#40;SQL Server Management Studio&#41; ](import-registered-server-information-sql-server-management-studio.md) [创建新的已注册的服务器&#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
+## <a name="see-also"></a>另请参阅  
+ [导入已注册的服务器信息 &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md) [创建新的已注册服务器 &#40;SQL Server Management Studio](create-a-new-registered-server-sql-server-management-studio.md)&#41;  
   
   

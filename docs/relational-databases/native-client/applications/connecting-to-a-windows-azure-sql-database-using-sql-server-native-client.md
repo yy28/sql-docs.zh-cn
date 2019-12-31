@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server Native Client 连接到 Azure SQL 数据库 |Microsoft Docs
+title: Native Client，连接到 Azure SQL DB
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -10,17 +10,17 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4aa573374b02b193e6b1dcf94f9ae86c1c232a00
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 67185f91fa89e84a8733299409b19b2a191fe9bf
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73761573"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244205"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>使用 SQL Server Native Client 连接到 Azure SQL 数据库
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  有关演示如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 连接到 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 的示例，请参阅[开发：操作指南主题（AZURE SQL Database）](https://msdn.microsoft.com/library/ee621787.aspx)。  
+  有关演示如何使用[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 连接到的示例，请参阅[开发：操作指南主题（Azure SQL Database）](https://msdn.microsoft.com/library/ee621787.aspx)。  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>连接到 SQL Database 时的已知问题  
  以下是使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client 连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时的一些已知问题：  
@@ -32,6 +32,6 @@ ms.locfileid: "73761573"
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 SQL Server Native Client 生成应用程序](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [构建具有 SQL Server Native Client 的应用程序](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

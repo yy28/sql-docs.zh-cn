@@ -1,5 +1,5 @@
 ---
-title: 表值参数和列值的绑定和数据传输 |Microsoft Docs
+title: 表值参数的数据传输
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a03beb8375384660b0e4a9ec18ce38f19db42d5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 1e966d63a2d357ad9b867e5e8bf66fbf731fc987
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73778076"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246524"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>表值参数和列值的绑定及数据传输
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "73778076"
   
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，只支持输入表值参数。 因此，任何将 SQL_DESC_PARAMETER_TYPE 设置为 SQL_PARAM_INPUT 之外的值的尝试，都将返回具有 SQLSTATE = HY105 和消息“参数类型无效”的 SQL_ERROR。  
   
- 可使用属性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 为整个表值参数列分配默认值。 但是，不能使用 SQLBindParameter 中*StrLen_or_IndPtr*的 SQL_DEFAULT_PARAM 为单独的表值参数列值分配默认值。 不能将表值参数设置为默认值，方法是使用*StrLen_or_IndPtr* with SQLBindParameter 中的 SQL_DEFAULT_PARAM。 如果未遵循这些规则，则 SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR。 将使用 SQLSTATE = 07S01 和消息 "\<p > 的参数使用默认参数无效" 生成诊断记录，其中 \<p > 是查询语句中的 TVP 序号。  
+ 可使用属性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 为整个表值参数列分配默认值。 但是，不能使用 SQLBindParameter 中*StrLen_or_IndPtr*的 SQL_DEFAULT_PARAM 为单独的表值参数列值分配默认值。 不能将表值参数设置为默认值，方法是使用*StrLen_or_IndPtr* with SQLBindParameter 中的 SQL_DEFAULT_PARAM。 如果未遵循这些规则，则 SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR。 将使用 SQLSTATE = 07S01 和消息 "参数\<p> 使用默认参数无效" 生成诊断记录，其中\<p> 是查询语句中 TVP 的序号。  
   
  绑定表值参数之后，应用程序随后必须绑定每个表值参数列。 为此，应用程序首先调用 SQLSetStmtAttr，将 SQL_SOPT_SS_PARAM_FOCUS 设置为表值参数的序号。 然后，应用程序通过调用以下例程来绑定表值参数的列： SQLBindParameter、SQLSetDescRec 和 SQLSetDescField。 如果将 SQL_SOPT_SS_PARAM_FOCUS 设置为0，则会在操作常规顶级参数时还原 SQLBindParameter、SQLSetDescRec 和 SQLSetDescField 的常见影响。
  
- 注意：对于使用 unixODBC 2.3.1 到2.3.4 的 Linux 和 Mac ODBC 驱动程序，当使用 SQL_CA_SS_TYPE_NAME 描述符字段将 TVP 名称设置为 SQLSetDescField 时，unixODBC 不会自动在 ANSI 和 Unicode 字符串之间转换，具体取决于具体的名为（SQLSetDescFieldA/SQLSetDescFieldW）的函数。 需要始终使用带有 Unicode （UTF-16）字符串的 SQLBindParameter 或 SQLSetDescFieldW 来设置 TVP 名称。
+ 注意：对于使用 unixODBC 2.3.1 到2.3.4 的 Linux 和 Mac ODBC 驱动程序，当使用 SQL_CA_SS_TYPE_NAME 描述符字段将 TVP 名称设置为 SQLSetDescField 时，unixODBC 不会根据调用的确切函数（SQLSetDescFieldA/SQLSetDescFieldW）自动在 ANSI 和 Unicode 字符串之间转换。 需要始终使用带有 Unicode （UTF-16）字符串的 SQLBindParameter 或 SQLSetDescFieldW 来设置 TVP 名称。
   
  对于表值参数本身而言，并未发送或接收实际数据，但对于表值参数的每个构成列而言，发送和接收了数据。 由于表值参数是一个伪列，因此 SQLBindParameter 的参数用于引用不同于其他数据类型的属性，如下所示：  
   
@@ -45,7 +45,8 @@ ms.locfileid: "73778076"
 |*ParameterValuePtr*|APD 中的 SQL_DESC_DATA_PTR。|SQL_CA_SS_TYPE_NAME。<br /><br /> 此属性对于存储过程调用为可选的，并且如果不需要可以指定为 NULL。 对于非过程调用的 SQL 语句，必须指定此属性。<br /><br /> 在使用可变行绑定时，此参数还可作为应用程序用于标识该表值参数的唯一值。 有关详细信息，请参阅本主题后面的“可变表值参数行绑定”部分。<br /><br /> 如果在对 SQLBindParameter 的调用上指定了表值参数类型名称，则它必须指定为 Unicode 值，即使是在作为 ANSI 应用程序生成的应用程序中。 用于参数*StrLen_or_IndPtr*的值应为 SQL_NTS 或名称的字符串长度乘以 SIZEOF （WCHAR）。|  
 |*BufferLength*|APD 中的 SQL_DESC_OCTET_LENGTH。|表值参数类型名称的长度（以字节为单位）。<br /><br /> 如果类型名称为以 NULL 值结束，则它可以是 SQL_NTS；如果不需要表值参数类型名称，则为 0。|  
 |*StrLen_or_IndPtr*|APD 中的 SQL_DESC_OCTET_LENGTH_PTR。|APD 中的 SQL_DESC_OCTET_LENGTH_PTR。<br /><br /> 对于表值参数，此属性为行计数，而非数据长度。|  
-  
+||||
+
  表值参数支持两种数据传输模式：固定行绑定和可变行绑定。  
   
 ## <a name="fixed-table-valued-parameter-row-binding"></a>固定表值参数行绑定  
@@ -63,7 +64,7 @@ ms.locfileid: "73778076"
   
 3.  调用 SQLSetStmtAttr，将 SQL_SOPT_SS_PARAM_FOCUS 设置为0。 此操作必须在调用 SQLExecute 或 SQLExecDirect 之前完成。 否则，将返回 SQL_ERROR，且生成具有 SQLSTATE=HY024 和消息“属性值 SQL_SOPT_SS_PARAM_FOCUS 无效(执行时必须为零)”的诊断记录。  
   
-4.  将*StrLen_or_IndPtr*或 SQL_DESC_OCTET_LENGTH_PTR 设置为无行的表值参数 SQL_DEFAULT_PARAM，或在下一次调用 SQLExecute 或 SQLExecDirect 时，如果表值参数包含行，则为要传输的行数。 由于表值参数不可为 null （尽管表值参数构成列可以为 null），因此不能将*StrLen_or_IndPtr*或 SQL_DESC_OCTET_LENGTH_PTR 设置为表值参数 SQL_NULL_DATA。 如果将此值设置为无效值，则 SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR，并使用 SQLSTATE = HY090 和消息 "\<参数的字符串或缓冲区长度无效" > "生成诊断记录，其中 p 是参数号。  
+4.  将*StrLen_or_IndPtr*或 SQL_DESC_OCTET_LENGTH_PTR 设置为无行的表值参数 SQL_DEFAULT_PARAM，或在下一次调用 SQLExecute 或 SQLExecDirect 时，如果表值参数包含行，则为要传输的行数。 由于表值参数不可为 null （尽管表值参数构成列可以为 null），因此不能将*StrLen_or_IndPtr*或 SQL_DESC_OCTET_LENGTH_PTR 设置为表值参数 SQL_NULL_DATA。 如果此值设置为无效值，则 SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR，并使用 SQLSTATE = HY090 和消息 "参数\<p> 的字符串或缓冲区长度无效" 生成诊断记录，其中 p 是参数号。  
   
 5.  调用 SQLExecute 或 SQLExecDirect。  
   
@@ -93,6 +94,6 @@ ms.locfileid: "73778076"
 6.  再次调用 SQLParamData。 如果表值参数列中有任何执行时数据参数，则这些参数将由 SQLParamData 返回的值*ValuePtrPtr*标识。 当所有列值都可用时，SQLParamData 将再次返回表值参数的*ParameterValuePtr*值，并且该应用程序将再次开始。  
   
 ## <a name="see-also"></a>另请参阅  
- [表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

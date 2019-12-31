@@ -1,25 +1,26 @@
 ---
-title: 配置 PolyBase 以访问 Hadoop 中的外部数据 | Microsoft Docs
+title: 访问外部数据： Hadoop-PolyBase
 description: 介绍如何将 PolyBase 配置为并行数据仓库以连接到外部 Hadoop。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ceaa1cbe04148443dd7a60b8d2b7936dc0a2cf55
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-dt-2019, seo-lt-2019
+ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227127"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245385"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
 
 本文介绍如何在 AP 设备上使用 PolyBase 查询 Hadoop 中的外部数据。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 Cloudera 分布式 Hadoop (CDH)。 Hadoop 遵循其新版本的“Major.Minor.Version”模式，且主要和次要版本中支持的所有版本均受支持。 支持以下 Hadoop 提供程序：
  - Linux/Windows Server 上的 Hortonworks HDP 1.3  
@@ -48,7 +49,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
 
 2. 使用[设备 Configuration Manager](launch-the-configuration-manager.md)上的 "服务状态" 页重新启动 ap 区域。
   
-## <a id="pushdown"></a> 启用下推计算  
+## <a id="pushdown"></a>启用下推计算  
 
 若要提高查询性能，请对 Hadoop 群集启用下推计算：  
   
@@ -335,7 +336,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssdt"></a>查看 SSDT 中的 PolyBase 对象  
 
-在 SQL Server Data Tools 中，外部表在单独的文件夹**外部表**中显示。 外部数据源和外部文件格式位于“外部资源”下的子文件夹中。  
+在 SQL Server Data Tools 中，外部表在单独的文件夹**外部表**中显示。 外部数据源和外部文件格式位于“外部资源” **** 下的子文件夹中。  
   
 ![SSDT 中的 PolyBase 对象](media/polybase/external-tables-datasource.png)  
 

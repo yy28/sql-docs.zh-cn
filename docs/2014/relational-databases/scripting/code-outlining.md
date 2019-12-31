@@ -1,6 +1,6 @@
 ---
-title: 代码大纲显示 | Microsoft Docs
-ms.custom: ''
+title: 代码大纲显示
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf35412efc66e971332b97ac2a0d77725a1d0cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ec36d2d6f38a1213a91d3c7f7aa1753d519ac5d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090631"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244974"
 ---
 # <a name="code-outlining"></a>代码大纲显示
   使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 查询编辑器中的大纲显示功能可在编辑查询时有选择地隐藏代码， 从而可以更加方便地查看您正在处理的代码，尤其是大型查询文件中的代码。  
@@ -32,28 +32,30 @@ ms.locfileid: "66090631"
  MDX 和 DMX 代码编辑器可为每个多行语句创建大纲区域。 这是以上编辑器支持的唯一大纲显示级别。  
   
 ### <a name="analysis-services-xmla-query-editor-regions"></a>Analysis Services XMLA 查询编辑器区域  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA 查询编辑器为每个多行 XML 属性生成大纲区域。 该编辑器可为嵌套标签嵌套大纲区域。 例如，XMLA 编辑器为以下文件创建三个大纲区域。  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA 查询编辑器为每个多行 XML 属性生成大纲区域。 该编辑器可为嵌套标签嵌套大纲区域。 例如，XMLA 编辑器为以下文件创建三个大纲区域。  
   
- ![XML 代码显示大纲显示](../../database-engine/media/editoutlinexmlfull.gif "XML 代码显示大纲显示")  
+ ![显示大纲的 XML 代码](../../database-engine/media/editoutlinexmlfull.gif "显示大纲的 XML 代码")  
   
  单击 \<InnerTag> 行上的减号时，只有 InnerTag 会折叠起来，如下图所示。  
   
- ![隐藏了内部节点的 XML 代码](../../database-engine/media/editoutlinexmlinnercol.gif "隐藏了内部节点的 XML 代码")  
+ ![隐藏内部节点的 XML 代码](../../database-engine/media/editoutlinexmlinnercol.gif "隐藏内部节点的 XML 代码")  
   
  将指针移动到含有三个句点 (...) 的框上方时，折叠区域中的代码将出现在工具提示中，如下图所示。  
   
- ![带有显示了隐藏代码的提示的 XML 代码](../../database-engine/media/editoutlinexmlmouse.gif "带有显示了隐藏代码的提示的 XML 代码")  
+ ![带有显示隐藏代码的工具提示的 XML 代码](../../database-engine/media/editoutlinexmlmouse.gif "带有显示隐藏代码的工具提示的 XML 代码")  
   
  单击 \<MiddleTag> 行上的减号时，MiddleTag 和 InnerTag 都会折叠起来，如下图所示。  
   
- ![隐藏了内部和中间标记的 XML 代码](../../database-engine/media/editoutlinexmlmiddlecol.gif "隐藏了内部和中间标记的 XML 代码")  
+ ![隐藏内部和中间标记的 XML 代码](../../database-engine/media/editoutlinexmlmiddlecol.gif "隐藏内部和中间标记的 XML 代码")  
   
  单击 \<OuterTag> 行上的减号时，所有三行均折叠起来，如下图所示。  
   
- ![显示了所有三个隐藏标记的 XML 代码](../../database-engine/media/editoutlinexmloutercol.gif "显示了所有三个隐藏标记的 XML 代码")  
+ ![显示所有三个隐藏标记的 XML 代码](../../database-engine/media/editoutlinexmloutercol.gif "显示所有三个隐藏标记的 XML 代码")  
   
 ### <a name="database-engine-query-editor-regions"></a>数据库引擎查询编辑器区域  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 查询编辑器为以下层次结构中的每个元素生成大纲区域：  
+ 
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 查询编辑器为以下层次结构中的每个元素生成大纲区域：  
   
 1.  批处理。 第一个批处理是从文件开头到第一个 GO 命令或没有 GO 命令时到文件结尾的代码。 在第一个 GO 命令后面，从每个 GO 命令到下一个 GO 命令或文件结尾均有一个批处理。  
   

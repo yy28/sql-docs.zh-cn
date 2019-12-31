@@ -1,6 +1,6 @@
 ---
-title: 书签的 F1 帮助 | Microsoft Docs
-ms.custom: ''
+title: 书签的 F1 帮助
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,16 +14,15 @@ ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9221781d921e1eae72c87bb5c1d211394fcd61c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7375b1fb5e76efae9feea1fa5f3a7384fc39b003
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090660"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244790"
 ---
 # <a name="bookmarks-f1-help"></a>书签的 F1 帮助
-  本节包含 **中** “书签” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]页的 F1 帮助。  
+
+ 本部分包含中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]"**书签**" 页的 F1 帮助。  
   
- [管理书签](manage-bookmarks.md)  
-  
-  
+ [管理书签](manage-bookmarks.md)

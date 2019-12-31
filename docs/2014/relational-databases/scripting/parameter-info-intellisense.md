@@ -1,6 +1,6 @@
 ---
-title: 参数信息 (IntelliSense) | Microsoft Docs
-ms.custom: ''
+title: 参数信息 (IntelliSense)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9605062317572bb89e5bd806f2d7babd9d3a09f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b842f35c2852ce6ed607e943199bb322823651b9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063919"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242010"
 ---
 # <a name="parameter-info-intellisense"></a>参数信息 (IntelliSense)
-  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 **“参数信息”** 选项可打开一个参数列表，其中提供了有关函数或存储过程所需的参数数目、参数名称和参数类型的信息。 以粗体显示的参数指示键入某个函数或存储过程时所需的下一个参数。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense**参数信息**选项打开一个参数列表，其中提供了有关函数或存储过程所需的参数的数量、名称和类型的信息。 以粗体显示的参数指示键入某个函数或存储过程时所需的下一个参数。  
   
  对于嵌套函数，也会显示这一参数列表。 如果将一个函数键入为另一个函数的参数，则参数列表将显示内部函数的参数。 内部函数参数列表完成后，参数列表会还原为显示外部函数参数。  
   
@@ -48,6 +48,6 @@ ms.locfileid: "66063919"
  有关详细信息，请参阅[配置 IntelliSense (SQL Server Management Studio)](configure-intellisense-sql-server-management-studio.md)。  
   
 > [!NOTE]  
->  “参数信息”选项仅可用于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器和 XML 查询编辑器。  
+>  “参数信息”**** 选项仅可用于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器和 XML 查询编辑器。  
   
   

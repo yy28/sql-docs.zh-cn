@@ -23,24 +23,24 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 3bdd11580e1a7e57b72d2d8fe0ce5f54299555db
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: c4e6d16645b8a7ecab9ed2e814ed345834e80f1b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632698"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245920"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>将访问应用程序链接到 SQL Server-Azure SQL DB （AccessToSQL）
-如果要将现有的 Access 应用程序用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则可以将原始访问表链接到已迁移的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 表。 链接会修改你的 Access 数据库，以便你的查询、窗体、报表和数据访问页使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据或 SQL Azure 数据库中的数据，而非 Access 数据库中的数据。  
+如果要将现有的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]access 应用程序用于，则可以将原始访问表链接到已迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的表。 链接会修改你的 Access 数据库，以便你的查询、窗体、报表和数据访问页使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库中的数据，而非 access 数据库中的数据。  
   
 > [!NOTE]  
-> 访问表仍在访问中，但不随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 更新一起更新。 链接表并验证功能后，您可能需要删除访问表。  
+> 访问表将保留在 Access 中，但不会随[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 更新一起更新。 链接表并验证功能后，您可能需要删除访问表。  
   
 ## <a name="linking-access-and-sql-server-tables"></a>链接访问和 SQL Server 表  
-当你将 Access 表链接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 表时，Jet 数据库引擎将存储连接信息和表元数据，但数据将存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中。 即使实际的表和数据位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中，此链接也允许你的访问应用程序对访问表进行操作。  
+当你将 Access 表链接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表时，Jet 数据库引擎将存储连接信息和表元数据，但数据存储在或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 中。 即使实际的表和数据位于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，此链接也允许访问应用程序对访问表进行操作。  
   
 > [!NOTE]  
-> 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则你的密码将以明文形式存储在链接的访问表中。 建议使用 Windows 身份验证。  
+> 如果使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证，你的密码将以明文形式存储在链接访问表上。 建议使用 Windows 身份验证。  
   
 **链接表**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73632698"
   
 2.  右键单击 "**表**"，然后选择 "**链接**"。  
   
-Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手（SSMA）备份原始访问表并创建链接表。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手（SSMA） for Access 备份原始访问表并创建链接表。  
   
 链接表后，SSMA 中的表将显示一个小链接图标。 在 Access 中，表以 "链接的" 图标显示，它是一个指向它的箭头。  
   
@@ -56,10 +56,10 @@ Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手（
   
 > [!IMPORTANT]  
 > 若要将 access 表链接到 Azure 数据库，需要 SQL Server Native Client （SNAC）版本10.5 或更高版本。   
-> 你可以从[Microsoft® SQL Server® 2008 R2 功能包](https://www.microsoft.com/en-us/download/details.aspx?id=16978)中获取 SNAC 的最新版本。  
+> 你可以从[Microsoft® SQL Server® 2008 R2 功能包](https://www.microsoft.com/download/details.aspx?id=16978)中获取 SNAC 的最新版本。  
   
 ## <a name="unlinking-access-tables"></a>取消链接访问表  
-从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 表取消链接访问表时，SSMA 将还原原始访问表及其数据。  
+在从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表中取消链接访问表时，SSMA 将还原原始访问表及其数据。  
   
 **取消表链接**  
   
@@ -78,14 +78,14 @@ Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手（
   
 3.  单击 "**重新连接到 SQL Server** " 按钮。  
   
-4.  连接到要将访问表链接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 的实例。  
+4.  连接到要将访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表链接到的实例或 SQL Azure。  
   
 5.  在 "Access 元数据资源管理器" 中，选择要链接的表。  
   
 6.  右键单击 "**表**"，然后选择 "**链接**"。  
   
 ## <a name="updating-linked-tables"></a>更新链接表  
-如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 表定义发生更改，则可以使用本主题前面所述的过程取消链接，然后重新链接 SSMA 中的表。 还可以通过使用 Access 来更新表。  
+如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表定义发生更改，则可以使用本主题前面所述的过程取消链接，然后重新链接 SSMA 中的表。 还可以通过使用 Access 来更新表。  
   
 **使用 Access 更新链接表**  
   
@@ -95,15 +95,15 @@ Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手（
   
 3.  右键单击链接表，然后选择 "**链接表管理器**"。  
   
-4.  选中要更新的每个链接表旁边的复选框，然后单击 **"确定"** 。  
+4.  选中要更新的每个链接表旁边的复选框，然后单击 **"确定"**。  
   
 ## <a name="possible-post-migration-issues"></a>可能的迁移后问题  
-以下各部分列出了在你将数据库从访问权限迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 然后链接表，并将它们与原因和解决方法一起迁移后，现有访问应用程序中可能会发生的问题。  
+以下各部分列出了在你将数据库从访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 之后，然后链接这些表以及原因和解决方法后，现有访问应用程序中可能会发生的问题。  
   
 ### <a name="slow-performance-with-linked-tables"></a>链接表性能较低  
 **原因：** 由于以下原因，某些查询可能会在升迁后缓慢：  
   
--   应用程序依赖于不存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中的函数，这会导致 Jet 在本地提取表以运行 SELECT 查询。  
+-   应用程序依赖于或 SQL Azure 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不存在的函数，这会导致 Jet 在本地提取表以运行选择的查询。  
   
 -   用于更新或删除多行的查询将由 Jet 作为每行的参数化查询发送。  
   
@@ -114,7 +114,7 @@ Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手（
 -   某些查询需要用户输入，但传递查询不支持用户输入。 用户输入可以由提示输入参数的 Visual Basic for Applications （VBA）代码获取，也可以通过用作输入控件的窗体来获取。 在这两种情况下，VBA 代码都会向服务器提交带有用户输入的查询。  
   
 ### <a name="auto-increment-columns-are-not-updated-until-the-record-is-updated"></a>只有在更新记录后，才能更新自动增量列  
-**原因：** 调用 RecordSet 后，在记录更新之前，"自动递增" 列可用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 不是如此。 标识列新值的新值仅在保存新记录之后才可用。  
+**原因：** 调用 RecordSet 后，在记录更新之前，"自动递增" 列可用。 在或 SQL Azure 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，这种情况并不成立。 标识列新值的新值仅在保存新记录之后才可用。  
   
 **解决方法：** 在访问标识字段之前，请运行以下 Visual Basic for Applications （VBA）代码：  
   
@@ -125,11 +125,11 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>新记录不可用  
-**原因：** 使用 VBA 将记录添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 表时，如果表的唯一索引字段具有默认值，并且您没有为该字段赋值，则直到您重新打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中的表后，才会显示新记录。 如果尝试从新记录中获取值，会收到以下错误消息：  
+**原因：** 使用 VBA 将记录添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表时，如果表的唯一索引字段具有默认值，并且您没有为该字段赋值，则在您重新打开或 SQL Azure 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的表之前，不会显示新记录。 如果尝试从新记录中获取值，会收到以下错误消息：  
   
 `Run-time error '3167' Record is deleted.`  
   
-**解决方法：** 使用 VBA 代码打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 表时，请包括 `dbSeeChanges` 选项，如以下示例中所示：  
+**解决方法：** 使用 VBA 代码打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表时，请包括`dbSeeChanges`选项，如以下示例中所示：  
   
 `Set rs = db.OpenRecordset("TestTable", dbOpenDynaset, dbSeeChanges)`  
   
@@ -141,7 +141,7 @@ Recordset.LastModified
 ### <a name="you-cannot-modify-a-linked-table-schema-with-access"></a>不能使用 Access 修改链接表架构  
 **原因：** 迁移数据和链接表后，用户无法在 Access 中修改表的架构。  
   
-**解决方法：** 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]修改表架构，然后在 Access 中更新链接。  
+**解决方法：** 使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]修改表架构，然后在 "访问" 中更新链接。  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>在迁移数据后，超链接功能丢失  
 **原因：** 迁移数据后，列中的超链接会丢失其功能，并成为简单的**nvarchar （max）** 列。  
@@ -149,7 +149,7 @@ Recordset.LastModified
 **解决方法：** 内容.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Access 不支持某些 SQL Server 数据类型  
-**原因：** 如果以后更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 表包含 Access 不支持的数据类型，则不能在 Access 中打开该表。  
+**原因：** 如果以后更新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表包含 access 不支持的数据类型，则不能在 access 中打开该表。  
   
 **解决方法：** 您可以定义只返回那些具有受支持数据类型的行的访问查询。  
   

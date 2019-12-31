@@ -1,6 +1,6 @@
 ---
-title: 代码和文本定位 | Microsoft Docs
-ms.custom: ''
+title: 代码和文本定位
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad05ca7d33e8c2d6d976ea57aace43ff2ab076f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b44319856c2604791290768516ab1eb4c190a66b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090371"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242004"
 ---
 # <a name="navigate-code-and-text"></a>代码和文本定位
   可以使用以下方法在整个文本中移动：  
@@ -37,7 +37,8 @@ ms.locfileid: "66090371"
   
 -   鼠标和导航键。  
   
--   **Go To** 命令。  
+-   
+  **Go To** 命令。  
   
 > [!NOTE]  
 >  有关键盘快捷键的完整列表，请参阅 [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)。  

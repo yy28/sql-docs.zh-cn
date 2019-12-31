@@ -1,6 +1,6 @@
 ---
-title: IntelliSense 故障排除 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: IntelliSense 故障排除
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a642fbe7dbd866baa01fe9db7163292bfda6db30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7088bee1d78efdc6051bf58d174b7ea503362831
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063259"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242984"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>IntelliSense 故障排除 (SQL Server Management Studio)
   在某些情况下，IntelliSense 选项可能无法按预期要求工作。  
@@ -49,9 +49,11 @@ ms.locfileid: "66063259"
      即使禁用了自动结束语句功能，仍可以使用 IntelliSense 功能。 有关详细信息，请参阅[配置 IntelliSense (SQL Server Management Studio)](configure-intellisense-sql-server-management-studio.md)。  
   
 ## <a name="database-engine-query-intellisense"></a>数据库引擎查询 IntelliSense  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 查询编辑器会出现以下问题：  
+ 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 查询编辑器会出现以下问题：  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的 IntelliSense 功能不支持所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法元素。 参数帮助不支持某些对象（例如扩展存储过程）中的参数。 有关详细信息，请参阅 [IntelliSense 支持的 Transact-SQL 语法](transact-sql-syntax-supported-by-intellisense.md)。  
+-   
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的 IntelliSense 功能不支持所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法元素。 参数帮助不支持某些对象（例如扩展存储过程）中的参数。 有关详细信息，请参阅 [IntelliSense 支持的 Transact-SQL 语法](transact-sql-syntax-supported-by-intellisense.md)。  
   
 -   仅当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或更高版本连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例时，才可以使用 IntelliSense。 如果查询编辑器连接到以前版本的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，将无法使用 Intellisense。  
   

@@ -1,6 +1,6 @@
 ---
-title: 管理编辑器和视图模式 | Microsoft Docs
-ms.custom: ''
+title: 管理编辑器和视图模式
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -20,26 +20,26 @@ ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3333b41a4ff1c341f0ae0290f838cd2c76c6254e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67ca649678fcc099a2abf1b50866263d6494bec7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063944"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242036"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理编辑器和视图模式
   利用编辑器，您可以通过多种方法来控制代码视图。  
   
 ## <a name="changing-the-view-mode"></a>更改视图模式  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种名为 **“选项卡式文档”** 的视图模式。通过这种视图模式，您可以同时打开多个编辑器和文档，并通过编辑器顶部的选项卡来对其进行访问。 另外，您也可以在多文档界面 (MDI) 模式下打开 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 环境，这种模式将不带选项卡的窗口联接起来，并允许对每个窗口执行平铺、最小化等操作。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]功能是一种名为 "**选项卡式文档**" 的视图模式，它允许您同时打开多个编辑器和文档，并通过编辑器顶部的选项卡进行访问。 另外，您也可以在多文档界面 (MDI) 模式下打开 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 环境，这种模式将不带选项卡的窗口联接起来，并允许对每个窗口执行平铺、最小化等操作。  
   
 #### <a name="to-switch-between-view-modes"></a>切换视图模式  
   
 1.  在 **“工具”** 菜单上单击 **“选项”** 。  
   
-2.  单击 **“环境”** 。 单击 **“常规”** 。  
+2.  单击 **“环境”**。 单击 **“常规”**。  
   
-3.  单击 **“选项卡式文档”** 或 **“MDI 环境”** 。  
+3.  单击 **“选项卡式文档”** 或 **“MDI 环境”**。  
   
     > [!NOTE]  
     >  直到重新启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 时，更改才会生效。  
@@ -64,11 +64,11 @@ ms.locfileid: "66063944"
   
 1.  在 **“工具”** 菜单上单击 **“选项”** 。  
   
-2.  单击 **“文本编辑器”** 。  
+2.  单击 **“文本编辑器”**。  
   
-3.  打开相应的语言文件夹（或打开“所有语言”  以使操作对所有语言生效）。  
+3.  打开相应的语言文件夹（或打开“所有语言”**** 以使操作对所有语言生效）。  
   
-4.  选择 **“自动换行”** 。  
+4.  选择 **“自动换行”**。  
   
 ## <a name="enabling-virtual-space-mode"></a>启用虚拟空间模式  
  在 **“虚拟空间”** 模式下，编辑器看起来就像在每行末尾都包含无数的空间，这样，代码行的长度就可以超出屏幕可视区域的范围。  
@@ -77,11 +77,11 @@ ms.locfileid: "66063944"
   
 1.  在 **“工具”** 菜单上单击 **“选项”** 。  
   
-2.  单击 **“文本编辑器”** 。  
+2.  单击 **“文本编辑器”**。  
   
-3.  打开相应的语言文件夹（或打开“所有语言”  以使操作对所有语言生效）。  
+3.  打开相应的语言文件夹（或打开“所有语言”**** 以使操作对所有语言生效）。  
   
-4.  选择 **“启用虚拟空间”** 。  
+4.  选择 **“启用虚拟空间”**。  
   
  如果未启用虚拟空间模式，则光标会在到达一行的结尾时转到下一行的第一个字符（或相反）。  
   
@@ -95,13 +95,13 @@ ms.locfileid: "66063944"
   
 1.  在 **“工具”** 菜单上单击 **“选项”** 。  
   
-2.  单击 **“文本编辑器”** 。  
+2.  单击 **“文本编辑器”**。  
   
-3.  单击 **“所有语言”** 。  
+3.  单击 **“所有语言”**。  
   
-4.  单击 **“常规”** 。  
+4.  单击 **“常规”**。  
   
-5.  选择 **“行号”** 。  
+5.  选择 **“行号”**。  
   
  若仅为某些编程语言指定编号，则可在相应文件夹中选择 **“行号”** 。  
   

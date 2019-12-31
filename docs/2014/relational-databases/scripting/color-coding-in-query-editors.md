@@ -1,6 +1,6 @@
 ---
-title: 查询编辑器中的颜色编码 | Microsoft Docs
-ms.custom: ''
+title: 查询编辑器中的颜色编码
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,28 +13,28 @@ ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e939270edd53189f9d8ba77411b8916e94a5ba8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e615a8e316cb5c8e15056eeaa111b5daf1ef5513
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064173"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244945"
 ---
 # <a name="color-coding-in-query-editors"></a>查询编辑器中的颜色编码
   在代码编辑器中输入的文本分配有一个类别；每个类别都由某种颜色来标识。 这些颜色有助于您在代码中快速查找文本。 例如，注释突出显示为深绿色。 下表列出了最常用的颜色。 在 **“工具”** 菜单的 **“选项”** 中，可以查看颜色及其类别的完整列表，并可配置自定义配色方案。 有关如何更改默认颜色的详细信息，请参阅 [Change Font Color, Size, and Style](change-font-color-size-and-style.md)。  
   
 ## <a name="default-code-colors"></a>默认代码颜色  
   
-|颜色|Category|  
+|Color|类别|  
 |-----------|--------------|  
-|Red|SQL 字符串|  
-|暗绿色|注释|  
+|红色|SQL 字符串|  
+|暗绿色|备注|  
 |黑色，银色背景|SQLCMD 命令|  
 |洋红色|系统函数|  
-|绿色|系统表、视图或表值函数。 此外，还包括系统架构 sys 和 INFORMATION_SCHEMA。|  
+|厚︹|系统表、视图或表值函数。 此外，还包括系统架构 sys 和 INFORMATION_SCHEMA。|  
 |蓝色|关键字|  
 |青色|行号或模板参数|  
-|褐紫红色|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程|  
+|褐紫红色|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程|  
 |深灰色|运算符|  
   
 ## <a name="status-bar"></a>状态栏  

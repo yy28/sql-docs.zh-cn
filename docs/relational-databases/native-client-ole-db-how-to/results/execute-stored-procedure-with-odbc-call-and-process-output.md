@@ -1,5 +1,5 @@
 ---
-title: 使用 ODBC CALL 执行存储过程并处理输出 | Microsoft Docs
+title: 存储过程、ODBC 调用、输出
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +14,18 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d82fa15999c56824f31fb4172969cdbc744a7bc8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: d0d61d50f7ff79da77dab15b654ec1720b1ee3b4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73789864"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244486"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>使用 ODBC CALL 执行存储过程并处理输出
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果命令返回多个结果，则输出参数数据在 IMultipleResults::GetResult 返回 DB_S_NORESULT 时或 IMultipleResults 接口完全释放时（以二者中最先发生的为准）可用。  
+  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果命令返回多个结果，则输出参数数据在 IMultipleResults::GetResult 返回 DB_S_NORESULT 时或 IMultipleResults 接口完全释放时（以二者中最先发生的为准）可用********。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 对它们加密。  
@@ -35,11 +36,11 @@ ms.locfileid: "73789864"
   
 2.  通过使用 DBBINDING 结构数组创建一组绑定（每个参数标记一个）。  
   
-3.  使用**IAccessor：： CreateAccessor**方法为定义的参数创建访问器。 CreateAccessor 从一组绑定创建取值函数。  
+3.  使用**IAccessor：： CreateAccessor**方法为定义的参数创建访问器。 **CreateAccessor**从一组绑定创建取值函数。  
   
 4.  填写 DBPARAMS 结构。  
   
-5.  调用 Execute 命令（在这种情况下是调用存储过程）。  
+5.  调用 Execute 命令（在这种情况下是调用存储过程）****。  
   
 6.  使用**IRowset：： release**方法处理行集并将其释放。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "73789864"
   
  执行第三个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以删除该应用程序使用的存储过程。  
   
-```  
+```sql
 USE AdventureWorks  
 if exists (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[myProc]'))  
    DROP PROCEDURE myProc  
@@ -78,7 +79,7 @@ ELSE
 GO  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 void InitializeAndEstablishConnection();  
   
@@ -350,13 +351,13 @@ void InitializeAndEstablishConnection() {
 }  
 ```  
   
-```  
+```sql
 USE AdventureWorks  
 DROP PROCEDURE myProc  
 GO  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [处理结果操作指南主题 (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [处理结果操作指南主题 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

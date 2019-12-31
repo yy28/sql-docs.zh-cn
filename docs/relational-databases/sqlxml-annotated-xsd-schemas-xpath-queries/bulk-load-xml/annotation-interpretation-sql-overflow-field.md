@@ -1,6 +1,5 @@
 ---
-title: sql:overflow 的字段 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: sql：溢出字段（SQLXML）
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,23 +14,24 @@ helpviewer_keywords:
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f82c80f2374b9d7cbbbe00b1b3cfe8202e382bb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5757ce66dd0905f6c381d05caa99c6bb664021e9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902234"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246809"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>批注解释 - sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  在架构中，可以将某列标识为溢出列，以接收 XML 文档中所有未用完的数据。 使用架构中指定该列**sql:overflow-字段**批注。 可能有多个溢出列。  
+  在架构中，可以将某列标识为溢出列，以接收 XML 文档中所有未用完的数据。 此列是使用**sql：溢出字段**批注在架构中指定的。 可能有多个溢出列。  
   
- 只要 XML 节点 （元素或属性） 存在**sql:overflow-字段**批注定义进入作用域，溢出列被激活并接收未用完的数据。 节点离开作用域时，溢出列将不再活动，XML 大容量加载将激活上一个溢出字段（如果有）。  
+ 每当有**sql：溢出字段**批注定义的 XML 节点（元素或属性）进入范围时，溢出列就会激活并接收未用完的数据。 节点离开作用域时，溢出列将不再活动，XML 大容量加载将激活上一个溢出字段（如果有）。  
   
- 因为它在溢出列中存储数据，XML 大容量加载还存储开始和结束标记的父元素为其**sql:overflow-字段**定义。  
+ 由于它在溢出列中存储数据，XML 大容量加载还会存储为其定义了**sql：溢出字段**的父元素的开始标记和结束标记。  
   
- 例如，以下架构描述 **\<客户 >** 并 **\<CustOrder >** 元素。 上述每个元素都标识一个溢出列：  
+ 例如，下面的架构描述>和** \<CustOrder>** 元素的** \<客户**。 上述每个元素都标识一个溢出列：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,15 +75,15 @@ ms.locfileid: "67902234"
 </xsd:schema>  
 ```  
   
- 在架构中， **\<客户 >** 元素映射到 Cust 表和 **\<顺序 >** 元素映射到 CustOrder 表。  
+ 在架构中， ** \<Customer>** 元素映射到 Customer 表， ** \<Order>** 元素映射到 CustOrder 表。  
   
- 这两个 **\<客户 >** 并 **\<顺序 >** 元素标识一个溢出列。 因此，XML 大容量加载会将所有未用完的子元素和属性的 **\<客户 >** Cust 表的溢出列中的元素和所有未用完的子元素和属性的 **\<顺序 >** CustOrder 表的溢出列中的元素。  
+ Customer>和** \<Order>** 元素都标识溢出列。 ** \<** 因此，XML 大容量加载将 Customer 表的 "溢出" 列中的** \<Customer>** 元素的所有未用子元素和属性，以及 CustOrder 表的溢出列中** \<Order>** 元素的所有未用子元素和属性。  
   
 ### <a name="to-test-a-working-sample"></a>测试工作示例  
   
 1.  将在该示例中提供的架构另存为 SampleSchema.xml。  
   
-2.  创建这些表：  
+2.  创建以下表：  
   
     ```  
     CREATE TABLE Cust (  

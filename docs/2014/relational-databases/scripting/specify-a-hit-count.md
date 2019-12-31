@@ -1,6 +1,6 @@
 ---
-title: 指定命中计数 | Microsoft Docs
-ms.custom: ''
+title: 指定命中计数
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e053de9abdb9806a3294a2904827cf9f29753686
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a049491513b826b2b050081b40cb5319ca74160f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063711"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243206"
 ---
 # <a name="specify-a-hit-count"></a>指定命中计数
   断点命中计数是每次到达断点时由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器递增的计数器。 如果达到指定的命中计数并满足所有指定的断点条件，则调试器将执行为断点指定的操作。  
@@ -43,11 +43,11 @@ ms.locfileid: "66063711"
   
 #### <a name="to-specify-a-hit-count"></a>指定命中计数  
   
-1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”  。  
+1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”****。  
   
-     -或-  
+     -或者-  
   
-     在“断点”  窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”  。  
+     在“断点”**** 窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”****。  
   
 2.  在 **“断点命中计数”** 对话框中，从 **“命中断点时”** 框中选择所需行为。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "66063711"
   
 #### <a name="to-view-or-reset-the-current-hit-count"></a>查看或重置当前命中计数  
   
-1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”  。  
+1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”****。  
   
-     -或-  
+     -或者-  
   
-     在“断点”  窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”  。  
+     在“断点”**** 窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”****。  
   
 2.  在 **“断点命中计数”** 对话框中， **“当前命中计数:”** 显示在 **“重置”** 按钮的正上方。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66063711"
   
 4.  单击 **“确定”** 或 **“取消”** 以退出对话框。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [指定断点条件](specify-a-breakpoint-condition.md)  
   
   

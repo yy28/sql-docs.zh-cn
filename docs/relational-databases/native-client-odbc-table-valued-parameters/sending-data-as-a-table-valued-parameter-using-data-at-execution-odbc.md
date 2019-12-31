@@ -1,5 +1,5 @@
 ---
-title: 使用执行时数据将数据作为表值参数发送（ODBC） |Microsoft Docs
+title: 表值参数，执行时数据（ODBC）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fa7998cf156adc94f13f22887a595408144fad8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: cea7295b67cd53844b29e876e8a0635de9cad46a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73775903"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246366"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用执行时数据将数据作为表值参数发送 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   这类似于 "[全部在内存中](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)" 过程，但对表值参数使用执行时数据。  
   
- 有关演示表值参数的另一个示例，请参阅[使用表值&#40;参数&#41;ODBC](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+ 有关演示表值参数的另一个示例，请参阅[将表值参数用于 ODBC&#41;&#40;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
  在此示例中，当调用 SQLExecute 或 SQLExecDirect 时，驱动程序将返回 SQL_NEED_DATA。 然后，应用程序将重复调用 SQLParamData，直到驱动程序返回 SQL_NEED_DATA 以外的值。 驱动程序将返回*ParameterValuePtr*以通知应用程序它为其请求数据的参数。 应用程序调用 SQLPutData 在下一次调用 SQLParamData 之前提供参数数据。 对于表值参数，对 SQLPutData 的调用指示它为驱动程序准备的行数（在本示例中，始终为1）。 在表值的所有行都传递到驱动程序时，将调用 SQLPutData 来指示0行可用。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73775903"
 ## <a name="prerequisite"></a>先决条件  
  该过程假定已在服务器上执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
   
-```  
+```sql
 create type TVParam as table(ProdCode integer, Qty integer)  
 create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
             @OrdNo integer output, @OrdDate datetime output)  
@@ -53,7 +53,7 @@ from @Items
   
 1.  声明 SQL 参数的变量。 在本示例中，表值参数的缓冲区不必为数组；本示例每次传递一行数据。  
   
-    ```  
+    ```cpp
     SQLRETURN r;  
   
     // Variables for SQL parameters:  
@@ -72,7 +72,7 @@ from @Items
   
 2.  绑定参数。 *ColumnSize*为1，表示一次最多传递一行。  
   
-    ```  
+    ```sql
     // Bind parameters for call to TVPOrderEntryByRow.  
     r = SQLBindParameter(hstmt, 1, SQL_C_CHAR, SQL_PARAM_INPUT,SQL_VARCHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
   
@@ -99,7 +99,7 @@ from @Items
   
 3.  绑定表值参数的列。  
   
-    ```  
+    ```cpp
     // Bind the table-valued parameter columns.  
     // First set focus on param 2  
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 2, SQL_IS_INTEGER);  
@@ -117,7 +117,7 @@ from @Items
   
 4.  初始化参数。 本示例将表值参数的大小设置为 SQL_DATA_AT_EXEC，而非行计数。  
   
-    ```  
+    ```cpp
     // Initialze the TVP for row streaming.  
     cbTVP = SQL_DATA_AT_EXEC;  
   
@@ -127,14 +127,14 @@ from @Items
   
 5.  调用该过程。 由于表值参数是一个执行时数据参数，SQLExecDirect 将返回 SQL_NEED_DATA。  
   
-    ```  
+    ```cpp
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
 6.  提供执行时数据参数的数据。 当 SQLParamData 返回表值参数的*ParameterValuePtr*时，应用程序必须为表值的下一行或多行准备列。 然后，应用程序调用 SQLPutData，并将*DataPtr*设置为可用的行数（在本例中为1）， *StrLen_or_IndPtr*设置为0。  
   
-    ```  
+    ```cpp
     // Check if parameter data is required, and get the first parameter ID token  
     if (r == SQL_NEED_DATA) {  
         r = SQLParamData(hstmt, &ParamId);  
@@ -193,7 +193,7 @@ from @Items
   
  此示例使用默认数据库。 在运行此示例之前，请在您将使用的数据库中运行以下命令：  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -216,7 +216,7 @@ go
   
 ### <a name="code"></a>代码  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  
@@ -381,7 +381,7 @@ EXIT:
   
  此示例使用默认数据库。 在运行此示例之前，请在您将使用的数据库中运行以下命令：  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -404,7 +404,7 @@ go
   
 ### <a name="code"></a>代码  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  

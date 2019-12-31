@@ -1,6 +1,5 @@
 ---
-title: 在知识发现中从 Excel 文件中导入域 | Microsoft Docs
-ms.custom: ''
+title: 在知识发现中从 Excel 文件中导入域
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 57d174bbd24dea36470c4b8ca3e29f77dc4111f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 38907f70b5da4d96028833c033a3c41724c47862
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935266"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241788"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>在知识发现中从 Excel 文件中导入域
 
@@ -23,31 +22,31 @@ ms.locfileid: "67935266"
 
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 知识发现活动中从某一 Excel 文件导入一个或多个域。 该导入过程简化了知识生成过程，并且可以节省时间和精力。 借助这一方法，在 Excel 文件或文本文件中具有数据的人士能够创建包含这些数据的知识库。 （有关将值导入到现有知识库的域中的详细信息，请参阅[将值从 Excel 文件导入到域](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。）不支持导出到 Excel 文件。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="BeforeYouBegin"></a>开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  若要从 Excel 文件导入域，Excel 必须安装在装有 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的计算机上；您必须使用域值创建了一个 Excel 文件（请参阅 [How the import works](#How)）；并且必须创建并打开了要将域导入其中的知识库。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a>安全  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>访问  
  您必须具有针对 DQS_MAIN 数据库的 dqs_kb_editor 或 dqs_administrator 角色，才能从 Excel 文件导入域。  
   
-##  <a name="Import"></a> 将域从 Excel 文件中导入到知识库中  
+##  <a name="Import"></a>将域从 Excel 文件导入到知识库中  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，执行以下操作之一：  
   
-    -   通过以下方式创建要导入的新知识库：单击 **“新建知识库”** ，为新知识库输入名称，为 **“创建知识库自”** 选择 **“无”** ，选择 **“知识发现”** 活动，然后单击 **“创建”** 。  
+    -   通过以下方式创建要导入的新知识库：单击 **“新建知识库”**，为新知识库输入名称，为 **“创建知识库自”** 选择 **“无”**，选择 **“知识发现”** 活动，然后单击 **“创建”**。  
   
-    -   通过以下方式打开要导入的现有知识库：单击 **“打开知识库”** ，选择知识库，选择 **“知识发现”** ，然后单击 **“下一步”** 。  
+    -   通过以下方式打开要导入的现有知识库：单击 **“打开知识库”**，选择知识库，选择 **“知识发现”**，然后单击 **“下一步”**。  
   
-3.  在“映射”  页中，为“数据源”  选择“Excel 文件”  。  
+3.  在“映射” **** 页中，为“数据源” **** 选择“Excel 文件” ****。  
   
 4.  在 **“Excel 文件”** 行中单击 **“浏览”** 。  
   
-5.  在 **“选择 Excel 文件”** 对话框中，移到包含您要从其导入的 Excel 文件的文件夹，选择该 Excel 文件，然后单击 **“打开”** 。  
+5.  在 **“选择 Excel 文件”** 对话框中，移到包含您要从其导入的 Excel 文件的文件夹，选择该 Excel 文件，然后单击 **“打开”**。  
   
 6.  从 **“工作表”** 下拉列表中，选择您要从其导入的 Excel 文件中的工作表。  
   
@@ -55,25 +54,25 @@ ms.locfileid: "67935266"
   
 8.  选择某一列，然后或者将某个现有域映射到该列，或者创建一个新域，方法是单击 **“创建域”** 图标，在 **“创建域”** 对话框中创建一个域，然后将该域映射到该列。 该域的数据类型必须与该列的数据类型匹配。 为电子表格的所有列重复上述步骤。  
   
-9. 单击“下一步”  。  
+9. 单击 **“下一步”**。  
   
 10. 在 **“发现”** 页中，单击 **“开始”** 以便分析 Excel 电子表格中的数据。  
   
     > [!NOTE]  
     >  如果在上载完数据前离开该页，则文件上载过程将终止。  
   
-11. 验证分析已成功完成，然后单击 **“下一步”** 。  
+11. 验证分析已成功完成，然后单击 **“下一步”**。  
   
 12. 在 **“管理域值”** 页中，验证在 **“域”** 列表中列出了正确的域并且在域表中输入了值。  
   
-13. 单击 **“完成”** ，然后单击 **“发布”** 以便发布知识库，或者单击 **“否”** 以便不发布。  
+13. 单击 **“完成”**，然后单击 **“发布”** 以便发布知识库，或者单击 **“否”** 以便不发布。  
   
-14. 验证知识库已发布，然后单击 **“确定”** 。  
+14. 验证知识库已发布，然后单击 **“确定”**。  
   
-##  <a name="FollowUp"></a> 跟进：从 Excel 文件导入域后  
+##  <a name="FollowUp"></a>跟进：在从 Excel 文件导入域后  
  在从 Excel 文件导入域之后，您可以将知识添加到域中，或在清理或匹配项目中使用域，具体取决于域的内容。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)、[管理复合域](../data-quality-services/managing-a-composite-domain.md)、[创建匹配策略](../data-quality-services/create-a-matching-policy.md)、[数据清理](../data-quality-services/data-cleansing.md)或[数据匹配](../data-quality-services/data-matching.md)。  
   
-##  <a name="How"></a> 导入的工作原理  
+##  <a name="How"></a>导入的工作方式  
  在导入操作中，DQS 按如下所示解释 Excel 文件：  
   
 -   列表示域  

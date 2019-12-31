@@ -1,6 +1,5 @@
 ---
-title: 应用 XSL 转换 （SQLXMLOLEDB 提供程序） |Microsoft Docs
-ms.custom: ''
+title: 应用 XSL 转换（SQLXMLOLEDB）
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c9d73330063cf3f051695c5fd25c689bb6c4c10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3040c337853a33748fe24a72892739664f8e8304
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061401"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246624"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>应用 XSL 转换（SQLXMLOLEDB 访问接口）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  在此示例 ADO 应用程序中，将执行 SQL 查询并将 XSL 转换应用到结果。 ClientSideXML 属性设置为 True，则强制实施客户端上的行集的处理。 将命令方言设置为 {5d531cb2-e6ed-11d2-b252-00c04f681b71}，因为在模板中指定 SQL 查询且在执行模板时必须指定此方言。 Xsl 属性指定要使用应用转换的 XSL 文件。 基路径属性的值用于搜索 XSL 文件。 如果 xsl 属性的值中指定的路径，路径是相对于基路径属性中指定的路径。  
+  在此示例 ADO 应用程序中，将执行 SQL 查询并将 XSL 转换应用到结果。 如果将 ClientSideXML 属性设置为 True，则会强制在客户端上处理行集。 将命令方言设置为 {5d531cb2-e6ed-11d2-b252-00c04f681b71}，因为在模板中指定 SQL 查询且在执行模板时必须指定此方言。 Xsl 属性指定用于应用转换的 XSL 文件。 "基路径" 属性的值用于搜索 XSL 文件。 如果指定 xsl 属性的值中的路径，则该路径相对于在 "基路径" 属性中指定的路径。  
   
  此示例显示如何使用以下 SQLXMLOLEDB 访问接口特定的属性：  
   
@@ -36,9 +36,9 @@ ms.locfileid: "68061401"
   
  在此客户端 ADO 示例应用程序中，在服务器上执行包含一个 SQL 查询的 XML 模板。  
   
- 因为 ClientSideXML 属性设置为 True，则将不带 FOR XML 子句的 SELECT 语句发送到服务器。 服务器执行该查询并将一个行集返回给客户端。 客户端然后将 FOR XML 转换应用到该行集并生成 XML 文档。  
+ 由于 ClientSideXML 属性设置为 True，因此将不带 FOR XML 子句的 SELECT 语句发送到服务器。 服务器执行该查询并将一个行集返回给客户端。 客户端然后将 FOR XML 转换应用到该行集并生成 XML 文档。  
   
- 在应用程序; 中指定的 xsl 属性因此，对在客户端生成的 XML 文档应用 XSL 转换，并且结果是两个列的表。  
+ 在应用程序中指定 xsl 属性;因此，将 XSL 转换应用于在客户端生成的 XML 文档，并且结果是一个两列的表。  
   
  若要执行模板命令，必须指定 XML 模板方言-{5d531cb2-e6ed-11d2-b252-00c04f681b71}。  
   

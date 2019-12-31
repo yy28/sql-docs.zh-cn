@@ -1,7 +1,7 @@
 ---
-title: 旧 SQL Server 版本的增强日期和时间类型行为（ODBC） |Microsoft Docs
+title: SQL 版本中的日期时间（ODBC）
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 500771f384d65f1181dc5a34efccafb677ba2183
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 7c25269ccf82749bd3b9260ff1fea6eec48361a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73783733"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243824"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>与 SQL Server 早期版本的增强日期和时间类型行为 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,31 +32,33 @@ ms.locfileid: "73783733"
   
  由 SQLDescribeCol、SQLDescribeParam、SQGetDescField 和 SQLColAttribute 返回的语句元数据将返回与所有方面的下级类型一致的元数据，包括类型名称。 此类下级类型的一个示例是**nvarchar**。  
   
- 当下级客户端应用程序针对已进行了日期/时间类型的架构更改的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）服务器运行时，预期的行为如下所示：  
+ 当下级客户端应用程序针对[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）服务器运行时，如果已对日期/时间类型进行架构更改，则预期行为如下所示：  
   
-|SQL Server 2005 类型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）类型|ODBC 客户端类型|结果转换（SQL 到 C）|参数转换（C 到 SQL）|  
+|SQL Server 2005 类型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）类型|ODBC 客户端类型|结果转换（SQL 到 C）|参数转换（C 到 SQL）|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|日期时间|日期|SQL_C_TYPE_DATE|“确定”|确定（1）|  
-|||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]一起工作。|  
-||Time(0)|SQL_C_TYPE_TIME|“确定”|确定（1）|  
-|||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则将失败。 与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]一起工作。|  
+|Datetime|Date|SQL_C_TYPE_DATE|OK|确定（1）|  
+|||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
+||Time(0)|SQL_C_TYPE_TIME|OK|确定（1）|  
+|||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则将失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(7)|SQL_C_TIME|失败-时间文本无效。|确定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|失败-时间文本无效。|确定（1）|  
-||Datetime2 （3）|SQL_C_TYPE_TIMESTAMP|“确定”|确定（1）|  
-||Datetime2 （7）|SQL_C_TYPE_TIMESTAMP|“确定”|由客户端转换将值舍入到 1/300 秒。|  
-|Smalldatetime|日期|SQL_C_TYPE_DATE|“确定”|“确定”|  
-|||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]一起工作。|  
-||Time(0)|SQL_C_TYPE_TIME|“确定”|“确定”|  
-|||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则失败。<br /><br /> 与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]一起工作。|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|“确定”|“确定”|  
-  
+||Datetime2 （3）|SQL_C_TYPE_TIMESTAMP|OK|确定（1）|  
+||Datetime2 （7）|SQL_C_TYPE_TIMESTAMP|OK|由客户端转换将值舍入到 1/300 秒。|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|OK|OK|  
+|||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
+||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
+|||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则失败。<br /><br /> 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
+|||||
+
 ## <a name="key-to-symbols"></a>符号含义  
   
 |符号|含义|  
 |------------|-------------|  
 |1|如果已适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，应继续适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更新版本。|  
 |2|已与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 一起使用的应用程序在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更新版本一起使用时，可能失败。|  
-  
+|||
+
  请注意只考虑了常见的架构更改。 以下是常见的更改：  
   
 -   使用新类型，这种情况下在逻辑上应用程序只需要一个日期或时间值。 但是，由于缺乏单独的日期和时间类型，会强制应用程序使用 datetime 或 smalldatetime。  
@@ -74,12 +76,13 @@ ms.locfileid: "73783733"
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |COLUMN_SIZE|10|8，10，16|16|23|19、21..27|26、28..34|  
 |BUFFER_LENGTH|20|16，20. 32|16|16|38，42，54|52，56。|  
-|DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
+|DECIMAL_DIGITS|Null|Null|0|3|Null|Null|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  
-|SQL_DATETIME_SUB|NULL|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|NULL|  
-|CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
+|SQL_DATETIME_SUB|Null|Null|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|Null|Null|  
+|CHAR_OCTET_LENGTH|Null|Null|Null|Null|Null|Null|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
-  
+||||||||
+
  SQLSpecialColumns 不返回 SQL_DATA_TYPE、SQL_DATETIME_SUB、CHAR_OCTET_LENGTH 或 SS_DATA_TYPE。  
   
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>SQLGetTypeInfo 返回的数据类型元数据  
@@ -92,26 +95,25 @@ ms.locfileid: "73783733"
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
 |LITERAL_SUFFIX|'|'|'|'|'|'|  
-|CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
+|CREATE_PARAMS|Null|Null|Null|Null|Null|Null|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
-|UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
+|UNSIGNED_ATTRIBUTE|Null|Null|Null|Null|Null|Null|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
-|AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
+|AUTO_UNIQUE_VALUE|Null|Null|Null|Null|Null|Null|  
 |LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
-|MINIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
-|MAXIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
+|MINIMUM_SCALE|Null|Null|0|3|Null|Null|  
+|MAXIMUM_SCALE|Null|Null|0|3|Null|Null|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  
-|SQL_DATETIME_SUB|NULL|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|NULL|  
-|NUM_PREC_RADIX|NULL|NULL|NULL|NULL|NULL|NULL|  
-|INTERVAL_PRECISION|NULL|NULL|NULL|NULL|NULL|NULL|  
+|SQL_DATETIME_SUB|Null|Null|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|Null|Null|  
+|NUM_PREC_RADIX|Null|Null|Null|Null|Null|Null|  
+|INTERVAL_PRECISION|Null|Null|Null|Null|Null|Null|  
 |USERTYPE|0|0|12|22|0|0|  
-  
+||||||||
+
 ## <a name="down-level-server-behavior"></a>下级服务器行为  
  连接到版本早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的服务器实例时，只要试图使用新的服务器类型或相关的元数据代码和描述符字段，都将导致返回 SQL_ERROR。 将生成以下诊断记录：具有 SQLSTATE HY004 和消息“SQL 数据类型对于连接的服务器版本无效”，或具有 07006 和消息“受限制的数据类型属性冲突”。  
   
 ## <a name="see-also"></a>另请参阅  
- [日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  
+ [ODBC&#41;&#40;的日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

@@ -1,6 +1,5 @@
 ---
-title: 批注解释 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 批注解释（SQLXML）
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,35 +15,36 @@ helpviewer_keywords:
 ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80db781d32c8d48f9df48c27baa1807eef5a9f7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dc5842487c0740386d97f3ec187dff144520a74
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054388"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246750"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>批注解释 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本节中的主题介绍 XML 大容量加载如何解释 XSD 架构中的批注。 这里描述的行为也适用于 XDR 架构中的批注。  
   
 > [!NOTE]  
->  这些主题中的信息仅说明了 XML 大容量加载在其处理过程中使用的批注。 批注的 XSD 架构支持的 SQLXML 4.0 的完整列表，请参阅[XSD 架构中使用批注&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)。 有关受支持的 XDR 架构批注的列表，请参阅[带批注的 XDR 架构&#40;在 SQLXML 4.0 中不推荐使用&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+>  这些主题中的信息仅说明了 XML 大容量加载在其处理过程中使用的批注。 有关 SQLXML 4.0 支持的 XSD 架构的完整批注列表，请参阅[在 Xsd 架构中使用批注 &#40;sqlxml 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)。 有关 XDR 架构支持的批注的列表，请参阅[SQLXML 4.0&#41;中 &#40;弃用的带批注 XDR 架构](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
- [sql: relationship 和键排序规则&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
- 介绍如何**sql: relationship**批注解释在 XML 大容量加载。  
+ [sql：关系和键排序规则 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
+ 说明如何在 XML 大容量加载中解释**sql： relationship**批注。  
   
- [sql： 映射&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-mapped.md)  
- 介绍如何**sql： 映射**批注解释在 XML 大容量加载。  
+ [sql：映射 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-mapped.md)  
+ 说明如何在 XML 大容量加载中解释**sql：映射**的批注。  
   
- [sql:-字段和 sql： 的值&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
- 介绍如何**sql:-字段**并**sql:-值**批注解释在 XML 大容量加载。  
+ [sql：限制字段和 sql： &#40;SQLXML 4.0&#41;的限制值](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
+ 说明如何在 XML 大容量加载中解释**sql： limit 字段**和**sql： limit 值**批注。  
   
- [sql:overflow-字段&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
- 介绍如何**sql:overflow**批注解释在 XML 大容量加载。  
+ [sql：溢出-字段 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
+ 说明如何在 XML 大容量加载中解释**sql：溢出**批注。  
   
- [其他批注&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-other-annotations.md)  
- 介绍 XML 大容量加载中如何解释以下批注： **sql:id-前缀**， **sql: use-cdata**， **sql:url-编码**， **sql:为映射架构**， **sql:key-字段**。  
+ [SQLXML 4.0&#41;的其他批注 &#40;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-other-annotations.md)  
+ 介绍 XML 大容量加载中如何解释以下批注： **sql： id-prefix**、 **sql： use-cdata**、 **sql： url 编码**、 **sql： is 映射-架构**、 **sql：键字段**。  
   
   

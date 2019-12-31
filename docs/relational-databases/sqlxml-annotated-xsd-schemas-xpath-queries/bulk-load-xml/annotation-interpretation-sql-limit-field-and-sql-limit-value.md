@@ -1,6 +1,5 @@
 ---
-title: sql:-字段和 sql:-值 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: sql： limit 字段和 sql： limit-值（SQLXML）
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a64ac0799aa218f0399539a00f943c99c5d6649d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3c33d097df97bb4cace9500b7aae79b5fd375ea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055421"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246787"
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>批注解释 - sql:limit-field 和 sql:limit-value
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 大容量加载进程**sql:-字段**并**sql:-值**按照定义的批注。 有关详细信息，请参阅[筛选值使用 sql:-字段和 sql： 的值&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)。  
+  XML 大容量加载按其定义处理**sql： limit 字段**和**sql： limit-值**注释。 有关详细信息，请参阅[使用 sql： limit 字段和 sql： limit-value &#40;SQLXML 4.0&#41;筛选值](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)。  
   
  例如，假定一个数据库包含以下各表：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "68055421"
   
 1.  将在该示例中提供的架构另存为 SampleSchema.xml。  
   
-2.  创建这些表：  
+2.  创建以下表：  
   
     ```  
     CREATE TABLE Customer(  
@@ -123,7 +123,7 @@ ms.locfileid: "68055421"
     set objBL=Nothing  
     ```  
   
- 以下是等效的 XDR 架构：  
+ 这是等效的 XDR 架构：  
   
 ```  
 <?xml version="1.0" ?>  

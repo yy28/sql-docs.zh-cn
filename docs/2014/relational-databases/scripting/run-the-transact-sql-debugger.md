@@ -1,6 +1,6 @@
 ---
-title: 运行 Transact-SQL 调试器 | Microsoft Docs
-ms.custom: ''
+title: 运行 Transact-SQL 调试器
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e53e2f756ad7161cc6df91b8146945e60b0c91c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 843bd1c4213b6cb50c843b846cd9f5d95529b4b1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090222"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243695"
 ---
 # <a name="run-the-transact-sql-debugger"></a>运行 Transact-SQL 调试器
   在打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器窗口之后，即可启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试器。 然后，您可在调试模式下运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，直到您停止调试器。 您可以设置选项以自定义调试器的运行方式。  
@@ -33,13 +33,16 @@ ms.locfileid: "66090222"
 ## <a name="starting-and-stopping-the-debugger"></a>启动和停止调试器  
  启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器的要求如下：  
   
--   如果您的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器连接到其他计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则必须配置调试器进行远程调试。 有关详细信息，请参阅[配置 TRANSACT-SQL 调试器](configure-firewall-rules-before-running-the-tsql-debugger.md)。  
+-   如果您的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器连接到其他计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则必须配置调试器进行远程调试。 有关详细信息，请参阅[配置 Transact-sql 调试器](configure-firewall-rules-before-running-the-tsql-debugger.md)。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 必须在作为 sysadmin 固定服务器角色成员的 Windows 帐户下运行。  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 必须在作为 sysadmin 固定服务器角色成员的 Windows 帐户下运行。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口必须使用 Windows 身份验证来连接，或使用作为 sysadmin 固定服务器角色成员的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名来连接。  
+-   
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口必须使用 Windows 身份验证来连接，或使用作为 sysadmin 固定服务器角色成员的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名来连接。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口必须从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 2 (SP2) 或更高版本连接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例。 如果查询编辑器窗口连接到处于单用户模式下的实例，您将无法运行调试器。  
+-   
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口必须从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 2 (SP2) 或更高版本连接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例。 如果查询编辑器窗口连接到处于单用户模式下的实例，您将无法运行调试器。  
   
  我们建议在测试服务器上调试 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，而不要在生产服务器上调试，原因如下：  
   
@@ -64,7 +67,8 @@ ms.locfileid: "66090222"
 ## <a name="controlling-the-debugger"></a>控制调试器  
  可以使用以下命令、工具栏和快捷方式控制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器的运行方式：  
   
--   **“调试”** 菜单和 **“调试”** 工具栏。 在焦点放到打开的查询编辑器窗口中之前， **“调试”** 菜单和 **“调试”** 工具栏处于不活动状态。 它们将保持活动状态，直到关闭当前项目。  
+-   
+  **“调试”** 菜单和 **“调试”** 工具栏。 在焦点放到打开的查询编辑器窗口中之前， **“调试”** 菜单和 **“调试”** 工具栏处于不活动状态。 它们将保持活动状态，直到关闭当前项目。  
   
 -   调试器键盘快捷键。  
   
@@ -76,36 +80,37 @@ ms.locfileid: "66090222"
   
 |调试菜单命令|编辑器快捷方式命令|工具栏按钮|键盘快捷键|操作|  
 |------------------------|-----------------------------|--------------------|-----------------------|------------|  
-|**窗口/断点**|不可用|**“断点”**|Ctrl+Alt+B|显示 **“断点”** 窗口，您可在其中查看和管理断点。|  
-|**窗口/监视/监视1**|不可用|**断点/监视/监视1**|CTRL+ALT+W, 1|显示 **“监视1”** 窗口。|  
-|**窗口/监视/监视2**|不可用|**断点/监视/监视2**|CTRL+ALT+W, 2|显示 **“监视2”** 窗口。|  
-|**窗口/监视/监视3**|不可用|**断点/监视/监视3**|CTRL+ALT+W, 3|显示 **“监视3”** 窗口。|  
-|**窗口/监视/监视4**|不可用|**断点/监视/监视4**|Ctrl+Alt+W，4|显示 **“监视4”** 窗口。|  
-|**窗口/局部变量**|不可用|**断点/局部变量**|Ctrl+Alt+V，L|显示 **“局部变量”** 窗口。|  
-|**窗口/调用堆栈**|不可用|**断点/调用堆栈**|Ctrl+Alt+C|显示 **“调用堆栈”** 窗口。|  
-|**窗口/线程**|不可用|**断点/线程**|Ctrl+Alt+H|显示 **“线程”** 窗口。|  
-|**Continue**|不可用|**Continue**|Alt+F5|运行到下一个断点。 在将焦点放在处于调试模式的查询编辑器窗口上之前，**“继续”** 处于不活动状态。|  
-|**“调试”**|不可用|**“调试”**|Alt+F5|将查询编辑器窗口置于调试模式，并运行到第一个断点。 如果将焦点放在处于调试模式的查询编辑器窗口上，则 **“启动调试”** 将由 **“继续”** 替代。|  
-|**全部中断**|不可用|**全部中断**|Ctrl+Alt+Break|[!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不使用此功能。|  
-|**停止调试**|不可用|**“停止调试”**|Shift+F5|使查询编辑器窗口脱离调试模式，并将其恢复到常规模式。|  
-|**菜单上单击**|不可用|不可用|不可用|停止调试模式，但在查询编辑器窗口中执行剩余的语句。|  
-|**逐语句**|不可用|**逐语句**|F11|运行下一个语句，如果下一个语句运行存储过程、触发器或函数，还将打开处于调试模式的新查询编辑器窗口。|  
+|**Windows/断点**|不可用|**处**|Ctrl+Alt+B|显示 **“断点”** 窗口，您可在其中查看和管理断点。|  
+|**Windows/Watch/监视1**|不可用|**断点/监视/监视1**|CTRL+ALT+W, 1|显示 **“监视1”** 窗口。|  
+|**Windows/Watch/监视2**|不可用|**断点/监视/监视2**|CTRL+ALT+W, 2|显示 **“监视2”** 窗口。|  
+|**Windows/Watch/监视3**|不可用|**断点/监视/监视3**|CTRL+ALT+W, 3|显示 **“监视3”** 窗口。|  
+|**Windows/Watch/监视4**|不可用|**断点/监视/监视4**|Ctrl+Alt+W，4|显示 **“监视4”** 窗口。|  
+|**Windows/本地**|不可用|**断点/局部变量**|Ctrl+Alt+V，L|显示 "**局部变量**" 窗口。|  
+|**Windows/调用堆栈**|不可用|**断点/调用堆栈**|Ctrl+Alt+C|显示 "**调用堆栈**" 窗口。|  
+|**Windows/线程**|不可用|**断点/线程**|Ctrl+Alt+H|显示 "**线程**" 窗口。|  
+|**仍**|不可用|**仍**|Alt+F5|运行到下一个断点。 在将焦点放在处于调试模式的查询编辑器窗口之前，"**继续**" 处于不活动状态。|  
+|**开始调试**|不可用|**开始调试**|Alt+F5|将查询编辑器窗口置于调试模式，并运行到第一个断点。 如果将焦点放在处于调试模式的查询编辑器窗口上，则 **“启动调试”** 将由 **“继续”** 替代。|  
+|**全部中断**|不可用|**全部中断**|Ctrl+Alt+Break|
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不使用此功能。|  
+|**停止调试**|不可用|**停止调试**|SHIFT+F5|使查询编辑器窗口脱离调试模式，并将其恢复到常规模式。|  
+|**全部分离**|不可用|不可用|不可用|停止调试模式，但在查询编辑器窗口中执行剩余的语句。|  
+|**单步执行**|不可用|**单步执行**|F11|运行下一个语句，如果下一个语句运行存储过程、触发器或函数，还将打开处于调试模式的新查询编辑器窗口。|  
 |**逐过程**|不可用|**逐过程**|F10|与 **“逐语句”** 相同，只不过它不会调试函数、存储过程或触发器。|  
-|**跳出**|不可用|**跳出**|Shift+F11|执行触发器、函数或存储过程中的剩余代码，而不在任何断点处暂停。 当控件返回到调用该模块的代码时，常规调试模式恢复。|  
-|不可用|**运行至光标处**|不可用|Ctrl+F10|从上次停止位置开始执行所有代码，一直到当前光标位置，在断点处不停止。|  
-|**快速监视**|**快速监视**|不可用|Ctrl+Alt+Q|显示 **“快速监视”** 窗口。|  
+|**跳出**|不可用|**跳出**|SHIFT+F11|执行触发器、函数或存储过程中的剩余代码，而不在任何断点处暂停。 当控件返回到调用该模块的代码时，常规调试模式恢复。|  
+|不可用|**运行到**游标|不可用|Ctrl+F10|从上次停止位置开始执行所有代码，一直到当前光标位置，在断点处不停止。|  
+|**@**|**@**|不可用|Ctrl+Alt+Q|显示 **“快速监视”** 窗口。|  
 |**切换断点**|**断点/插入断点**|不可用|F9|在当前或选定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句上设置一个断点。|  
 |不可用|**断点/删除断点**|不可用|不可用|从选定行上删除断点。|  
 |不可用|**断点/禁用断点**|不可用|不可用|禁用选定行上的断点。 断点在代码行中保留，但不会停止执行，直到重新启用断点。|  
 |不可用|**断点/启用断点**|不可用|不可用|启用选定行上的断点。|  
-|**删除全部断点**|不可用|不可用|Ctrl+Shift+F9|删除所有断点。|  
+|**删除全部断点**|不可用|不可用|CTRL+SHIFT+F9|删除所有断点。|  
 |**禁用所有断点**|不可用|不可用|不可用|禁用所有断点。|  
 |不可用|**添加监视**|不可用|不可用|将选定的表达式添加到 **“监视”** 窗口中。|  
   
-## <a name="see-also"></a>请参阅  
- [Transact-SQL 调试器](transact-sql-debugger.md)   
- [逐句通过 Transact-SQL 代码](step-through-transact-sql-code.md)   
- [Transact-SQL 调试器信息](transact-sql-debugger-information.md)   
- [数据库引擎查询编辑器 (SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)  
+## <a name="see-also"></a>另请参阅  
+ [Transact-sql 调试器](transact-sql-debugger.md)   
+ [单步执行 Transact-sql 代码](step-through-transact-sql-code.md)   
+ [Transact-sql 调试器信息](transact-sql-debugger-information.md)   
+ [数据库引擎查询编辑器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

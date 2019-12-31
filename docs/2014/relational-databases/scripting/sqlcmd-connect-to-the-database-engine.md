@@ -1,6 +1,6 @@
 ---
-title: 使用 sqlcmd 连接到数据库引擎 | Microsoft Docs
-ms.custom: ''
+title: 使用 sqlcmd 连接到数据库引擎
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -18,17 +18,18 @@ ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 441a2ebc1f147e71a0bfa3bce20daf9fd67d09f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94025942a6e06f4dfb7b0eeab43487e4a6308e4f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090102"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243262"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>使用 sqlcmd 连接到数据库引擎
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持客户端使用 TCP/IP 网络协议（默认）和命名管道协议进行通信。 如果客户端正在连接到同一计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则还可使用 Shared Memory 协议。 通常有三种选择协议的方法。 **sqlcmd** 实用工具使用的协议按下列顺序确定：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持客户端与 TCP/IP 网络协议（默认）和命名管道协议进行通信。 如果客户端正在连接到同一计算机上的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则还可使用 Shared Memory 协议。 通常有三种选择协议的方法。 
+  **sqlcmd** 实用工具使用的协议按下列顺序确定：  
   
--   **sqlcmd** 使用为连接字符串中指定的协议，如下所述。  
+-   **sqlcmd**使用指定为连接字符串的一部分的协议，如下所述。  
   
 -   如果连接字符串中未指定任何协议，则 **sqlcmd** 将使用连接到的别名中定义的协议。 若要将 **sqlcmd**配置为通过创建别名使用特定网络协议，请参阅[创建或删除供客户端使用的服务器别名 (SQL Server 配置管理器)](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)。  
   

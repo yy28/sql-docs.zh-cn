@@ -19,12 +19,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0c39d57e84e27f7449ebc8464691d2d8ad887848
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70911106"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246913"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -35,21 +35,21 @@ ms.locfileid: "70911106"
   
  下表介绍 v12 服务器中可用的列：  
   
-|“列”|数据类型|描述|  
+|列|数据类型|说明|  
 |----------------------------|---------------|-----------------|  
-|start_time|**datetime**|指示5分钟报告间隔的开始时间的 UTC 时间。|  
-|end_time|**datetime**|指示五分钟报告间隔结束时间的 UTC 时间。|  
+|start_time|**型**|指示5分钟报告间隔的开始时间的 UTC 时间。|  
+|end_time|**型**|指示五分钟报告间隔结束时间的 UTC 时间。|  
 |database_name|**nvarchar(128)**|用户数据库的名称。|  
-|sku|**nvarchar(128)**|数据库的服务层。 下面是可能的值：<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />常规用途<br /><br />业务关键型|  
+|sku|**nvarchar(128)**|数据库的服务层。 下面是可能的值：<br /><br /> 基本<br /><br /> 标准<br /><br /> 高级<br /><br />常规用途<br /><br />业务关键|  
 |storage_in_megabytes|**float**|时间段的最大存储大小（以 mb 为单位），包括数据库数据、索引、存储过程和元数据。|  
-|avg_cpu_percent|**decimal(5,2)**|平均计算使用率（以服务层限制的百分比表示）。|  
-|avg_data_io_percent|**decimal(5,2)**|平均 I/O 使用率（以基于服务层限制的百分比表示）。|  
-|avg_log_write_percent|**decimal(5,2)**|平均写入资源使用率（以服务层限制的百分比表示）。|  
-|max_worker_percent|**decimal(5,2)**|以百分比表示的最大并发工作线程数（以百分比表示）。<br /><br /> 最大值当前是根据并发辅助进程计数的15秒的时间间隔计算的五分钟间隔。|  
-|max_session_percent|**decimal(5,2)**|基于数据库服务层的限制的最大并发会话数（以百分比表示）。<br /><br /> 最大值当前根据并发会话计数的15秒的时间间隔计算出五分钟间隔。|  
-|dtu_limit|**int**|此数据库在此时间间隔内的当前最大数据库 DTU 设置。 |
+|avg_cpu_percent|**decimal （5，2）**|平均计算使用率（以服务层限制的百分比表示）。|  
+|avg_data_io_percent|**decimal （5，2）**|平均 I/O 使用率（以基于服务层限制的百分比表示）。 对于超大规模数据库，请参阅[资源利用率统计信息中的数据 IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)。|  
+|avg_log_write_percent|**decimal （5，2）**|平均写入资源使用率（以服务层限制的百分比表示）。|  
+|max_worker_percent|**decimal （5，2）**|以百分比表示的最大并发工作线程数（以百分比表示）。<br /><br /> 最大值当前是根据并发辅助进程计数的15秒的时间间隔计算的五分钟间隔。|  
+|max_session_percent|**decimal （5，2）**|基于数据库服务层的限制的最大并发会话数（以百分比表示）。<br /><br /> 最大值当前根据并发会话计数的15秒的时间间隔计算出五分钟间隔。|  
+|dtu_limit|**整形**|此数据库在此时间间隔内的当前最大数据库 DTU 设置。 |
 |xtp_storage_percent|**decimal （5，2）**|内存中 OLTP 的存储利用率，以服务层的限制（在报表间隔结束时）的百分比表示。 这包括用于存储以下内存中 OLTP 对象的内存：内存优化表、索引和表变量。 它还包括用于处理 ALTER TABLE 操作的内存。<br /><br /> 如果未在数据库中使用内存中 OLTP，则返回0。|
-|avg_login_rate_percent|**decimal （5，2）**|标识为仅供参考。 不提供支持。 不保证以后的兼容性。|
+|avg_login_rate_percent|**decimal （5，2）**|标识为仅供参考。 不支持。 不保证以后的兼容性。|
 |avg_instance_cpu_percent|**decimal （5，2）**|SQL 数据库进程的平均 CPU 使用率（以百分比表示）。|
 |avg_instance_memory_percent|**decimal （5，2）**|作为 SQL DB 进程百分比的平均数据库内存使用率。|
 |cpu_limit|**decimal （5，2）**|此数据库在此时间间隔内的 Vcore 的数目。 对于使用基于 DTU 的模型的数据库，此列为 NULL。|
@@ -58,15 +58,15 @@ ms.locfileid: "70911106"
 > [!TIP]  
 >  有关这些限制和服务层的详细信息，请参阅主题[服务层](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)。  
     
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图可用于具有连接到虚拟**master**数据库的权限的所有用户角色。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **Resource_stats sys.databases**返回的数据以所运行的服务层/性能级别所允许的最大限制的百分比表示。  
   
  如果数据库是弹性池的成员，则显示为百分比值的资源统计信息将表示为在弹性池配置中设置的数据库的最大限制百分比。  
   
- 若要更细致地查看此数据，请使用用户数据库中的**dm_db_resource_stats**动态管理视图。 此视图每 15 秒钟捕获一次数据，并将历史数据保留 1 个小时。  有关详细信息，请参阅[dm_db_resource_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)。  
+ 若要更细致地查看此数据，请使用用户数据库中的**dm_db_resource_stats**动态管理视图。 此视图每 15 秒钟捕获一次数据，并将历史数据保留 1 个小时。  有关详细信息，请参阅[AZURE SQL 数据库&#41;&#40;dm_db_resource_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)。  
 
 ## <a name="examples"></a>示例  
  以下示例返回与上周相比平均参与至少 80% 的计算使用率的所有数据库。  

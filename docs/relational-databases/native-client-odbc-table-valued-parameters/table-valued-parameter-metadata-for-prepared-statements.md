@@ -1,5 +1,5 @@
 ---
-title: 准备好的语句的表值参数元数据 |Microsoft Docs
+title: TVP 预定义语句的元数据
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17b96f9a18e2b076bda76550b8796301f815c9f5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 27ae8ffe9fc719e751511b9930889e1fc265d876
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790730"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241852"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>准备的语句的表值参数元数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,6 +32,6 @@ ms.locfileid: "73790730"
  无法获取非存储过程调用的准备的语句的表值参数元数据。 如果试图这样做，应用程序将返回错误代码为 SQLSTATE 42000 的 SQL_ERROR，以及消息“语法错误或访问冲突”。  
   
 ## <a name="see-also"></a>另请参阅  
- [表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

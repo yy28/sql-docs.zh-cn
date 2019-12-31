@@ -1,6 +1,5 @@
 ---
-title: XML Updategram (SQLXML 4.0) 的准则和限制 |Microsoft Docs
-ms.custom: ''
+title: Updategram 的准则和限制（SQLXML）
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,29 +11,30 @@ helpviewer_keywords:
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb8a2a978e70b5148b78f394cf0d8413d5769c64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9eb717968b191bb7d80f5d68542178bf32734b00
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086853"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241299"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML Updategram 的指导原则和限制 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   在使用 XML updategram 时，请记住以下事项：  
   
--   如果将 updategram 用于只具有单对的插入操作 **\<之前 >** 并 **\<后 >** 块 **\<之前>** 块可省略。 反之，在删除操作 **\<后 >** 块可省略。  
+-   如果使用 updategram 执行插入操作，并且** \<在>** 块** \<>之前**只有一对，则** \<可以省略前>** 块。 相反，如果是删除操作，则** \<可以省略 after>** 块。  
   
--   如果具有多个使用 updategram **\<之前 >** 并 **\<后 >** 中的块 **\<同步 >** 标记，同时 **\<之前 >** 块并 **\<后 >** 块都必须指定到窗体 **\<之前 >** 和 **\<后 >** 对。  
+-   如果你使用的 updategram 在** \<同步>** 标记中** \<>之前**和** \<之后>** 块，则必须在** \<>块之前**和** \<** 之后指定>块，以便在>** \<之前**和** \<之后**进行格式处理。  
   
 -   updategram 中的更新适用于 XML 架构提供的 XML 视图。 因此，为使默认映射成功，必须在 updategram 中指定架构文件名；或者，如果未提供文件名，则元素名称和属性名称必须匹配数据库中的表名和列名。  
   
--   SQLXML 4.0 要求 updategram 中的所有列值都必须显式映射在提供的架构（XDR 或 XSD）中，以便为其子元素编写 XML 视图。 此行为不同于早期版本的 SQLXML，这允许未映射架构中，如果它表示为作为中的外键的一部分的列的值**sql: relationship**批注。 请注意，这一变化并不影响主键值传播到子元素，如果没有为子元素显式指定值，则对于 SQLXML 4.0，主键值仍会传播到子元素。  
+-   SQLXML 4.0 要求 updategram 中的所有列值都必须显式映射在提供的架构（XDR 或 XSD）中，以便为其子元素编写 XML 视图。 此行为与 SQLXML 的早期版本不同，后者允许在**sql： relationship**批注中隐含为外键的一部分的列的值。 请注意，这一变化并不影响主键值传播到子元素，如果没有为子元素显式指定值，则对于 SQLXML 4.0，主键值仍会传播到子元素。  
   
--   如果使用 updategram 修改二进制列中的数据 (如[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**映像**数据类型)，必须提供映射架构[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型 (例如， **sql: datatype ="图像"** ) 和 XML 数据类型 (例如， **dt: type ="binhex"** 或**dt: type ="binbase64**) 必须指定。 必须在 updategram 中; 中指定二进制列的数据**sql:url-编码**updategram 将忽略在映射架构中指定的批注。  
+-   如果使用 updategram 修改二进制列中的数据（如[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **图像**数据类型），则必须提供一个映射架构[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，其中的数据类型（例如， **sql： datatype = "image"**）和 XML 数据类型（例如， **dt： type = "binhex"** 或**dt： type = "binbase64"**）必须指定。 必须在 updategram 中指定二进制列的数据;updategram 将忽略在映射架构中指定的**sql： url 编码**批注。  
   
--   在您撰写 XSD 架构中，如果为指定值**sql: relation**或**sql: field**批注包含一个特殊字符，例如空格字符 （例如，在"Order Details"表名称），此值必须括在括号内 （例如"[Order Details]"）。  
+-   编写 XSD 架构时，如果为**sql： relation**或**sql： field**批注指定的值包含特殊字符（如空格字符）（例如，在 "订单详细信息" 表名称中），则必须用方括号将此值括起来（例如，"[order details]"）。  
   
 -   在使用 updategram 时，不支持链关系。 例如，如果表 A 和 C 通过使用表 B 的链关系相关，则在尝试运行和执行 updategram 时将发生以下错误：  
   
@@ -44,17 +44,17 @@ ms.locfileid: "68086853"
   
      即使架构和 updategram 均正确并且有效建立，但如果存在某一链关系，此错误仍将发生。  
   
--   Updategram 不允许传递**图像**类型作为参数的数据，在更新过程。  
+-   Updategram 不允许在更新过程中将**图像**类型数据作为参数传递。  
   
--   二进制大型对象 (BLOB) 类型等**text/ntext**和映像不应在 **\<之前 >** 时阻止使用 updategram，因为这将使它们在中使用并发控制。 由于 BLOB 类型的比较限制，这可能导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 出现问题。 例如，LIKE 关键字用于在 WHERE 子句中的列之间的比较**文本**数据类型; 但是，比较将失败的数据大小大于 8k 的 BLOB 类型。  
+-   当使用 updategram 时，在中** \<>块之前**，不应在中使用二进制大型对象（BLOB）类型（如**text/ntext**和 images），因为这将包含它们以用于并发控制。 由于 BLOB 类型的比较限制，这可能导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 出现问题。 例如，在 WHERE 子句中使用 LIKE 关键字比较**文本**数据类型的列;但是，对于数据大小大于8K 的 BLOB 类型，比较将失败。  
   
--   中的特殊字符**ntext**数据可能由于 BLOB 类型的比较限制导致 SQLXML 4.0 出现问题。 例如，使用"[Serializable]"中的 **\<之前 >** 块中执行并发检查的列使用时，如果在 updategram **ntext**类型会因以下 SQLOLEDB错误说明：  
+-   由于 BLOB 类型的比较限制， **ntext**数据中的特殊字符可能导致 SQLXML 4.0 问题。 例如，在对**ntext**类型的列进行并发检查时，在 updategram 的** \<before>** 块中使用 "[Serializable]" 将失败，并出现以下 SQLOLEDB 错误说明：  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SQLXML 4.0&#41;的 Updategram 安全注意事项](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

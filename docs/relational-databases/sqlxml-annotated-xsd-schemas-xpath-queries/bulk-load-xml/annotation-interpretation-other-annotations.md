@@ -1,6 +1,5 @@
 ---
-title: 其他批注 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 其他批注（SQLXML）
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,13 +20,14 @@ helpviewer_keywords:
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9a965ee5772ea3c2855a08d838c1d89da343e9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eb01a084ec968adbd9fe8ff86623bcca5f9eb26
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066864"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246831"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>批注解释 - 其他批注
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68066864"
  XML 大容量加载不支持此批注。 例如，不能在 XML 数据输入中指定某一 URL 并期望大容量加载从该位置读取数据，以将其存储在数据库中。  
   
  **sql:is-mapping-schema**  
- XML 大容量加载不支持此批注，也不支持**sql:id**。  
+ XML 大容量加载不支持此批注，也不支持**sql： id**。  
   
 > [!NOTE]  
 >  XML 大容量加载不支持内联映射架构。  
@@ -51,7 +51,7 @@ ms.locfileid: "68066864"
  **sql:key-fields**  
  XML 大容量加载始终忽略此批注。  
   
-## <a name="see-also"></a>请参阅  
- [批注解释&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQLXML 4.0 &#40;的批注解释&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
   
   

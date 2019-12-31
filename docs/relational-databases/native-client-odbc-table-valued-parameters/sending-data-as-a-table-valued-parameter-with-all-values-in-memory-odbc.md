@@ -1,5 +1,5 @@
 ---
-title: 使用内存中的所有值（ODBC）将数据作为表值参数发送 |Microsoft Docs
+title: 表值参数，内存中的值（ODBC）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca993b0074f13c6a3c5cfd167f533a408cd21530
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: f6530c3b558f26e3f75f5cff63f33f2e58c119c6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790798"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246392"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>所有值位于内存中时将数据作为表值参数发送 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主题描述当所有值都在内存中时，如何将数据作为表值参数发送到存储过程。 有关演示表值参数的另一个示例，请参阅[使用表值&#40;参数&#41;ODBC](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+  本主题描述当所有值都在内存中时，如何将数据作为表值参数发送到存储过程。 有关演示表值参数的另一个示例，请参阅[将表值参数用于 ODBC&#41;&#40;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="prerequisite"></a>先决条件  
  该过程假定已在服务器上执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
   
-```  
+```sql
 create type TVParam as table(ProdCode integer, Qty integer)  
 create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
             @OrdNo integer output, @OrdDate datetime output)  
@@ -46,7 +46,7 @@ from @Items
   
 1.  声明 SQL 参数的变量。 这种情况下，表值全都在内存中，因此将表值的列值声明为数组。  
   
-    ```  
+    ```cpp
     SQLRETURN r;  
     // Variables for SQL parameters.  
     #define ITEM_ARRAY_SIZE 20  
@@ -63,7 +63,7 @@ from @Items
   
 2.  绑定参数。 使用表值参数时，绑定参数是两阶段进程。 在第一阶段，以正常方式绑定存储过程的步骤参数，如下所示。  
   
-    ```  
+    ```cpp
     // Bind parameters for call to TVPOrderEntryDirect.  
     // 1 - Custcode input  
     r = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT,SQL_VARCHAR, SQL_C_CHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
@@ -91,7 +91,7 @@ from @Items
   
 3.  参数绑定的第二阶段是绑定表值参数的列。 首先将参数焦点设置为表值参数的序号。 然后使用 SQLBindParameter 来绑定表值的列，方法与它们是存储过程的参数相同，但使用 ParameterNumber 的列序号。 如果有更多表值参数，我们会轮流将焦点设置为每个参数，并绑定它们的列。 最终，将参数焦点重置为 0。  
   
-    ```  
+    ```cpp
     // Bind columns for the table-valued parameter (param 2).  
     // First set focus on param 2.  
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 2, SQL_IS_INTEGER);  
@@ -105,9 +105,10 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  填充参数缓冲区。 `cbTVP` 将设置为要发送到服务器的行数。  
+4.  填充参数缓冲区。 
+  `cbTVP` 将设置为要发送到服务器的行数。  
   
-    ```  
+    ```cpp
     // Populate parameters.  
     cbTVP = 0; // Number of rows available for input.  
     strcpy_s((char *) CustCode, sizeof(CustCode), "CUST1"); cbCustCode = SQL_NTS;  
@@ -123,7 +124,7 @@ from @Items
   
 5.  调用该过程：  
 
-    ```  
+    ```cpp
     // Call the procedure.  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  

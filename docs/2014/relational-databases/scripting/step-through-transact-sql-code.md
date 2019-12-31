@@ -1,6 +1,6 @@
 ---
-title: 逐句通过 Transact-SQL 代码 | Microsoft Docs
-ms.custom: ''
+title: Transact-SQL 代码
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e79a92bc1756003341cbb9e0581ade42a2bcee8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66c7e777c2970677616bbd81ac4a9d7f633742a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090010"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243160"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 代码
   使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器，您可以控制在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器窗口中运行哪些 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 语句。 可在各个语句上暂停调试器，然后查看该位置的代码元素的状态。  
@@ -51,13 +51,13 @@ ms.locfileid: "66090010"
   
 |操作|过程|  
 |------------|---------------|  
-|运行当前语句到下一个断点之间的所有语句|上**调试**菜单上，单击**继续**。<br /><br /> 上**调试**工具栏上，单击**继续**按钮。|  
-|单步执行下一个语句或模块|上**调试**菜单上，单击**单步执行**。<br /><br /> 上**调试**工具栏上，单击**单步执行**按钮。<br /><br /> 按 F11。|  
-|逐过程执行下一个语句或模块|上**调试**菜单上，单击**单步跳过**。<br /><br /> 上**调试**工具栏上，单击**单步跳过**按钮。<br /><br /> 按 F10。|  
-|跳出模块|上**调试**菜单上，单击**单步跳出**。<br /><br /> 上**调试**工具栏上，单击**单步跳出**按钮。<br /><br /> 按 Shift+F11。|  
-|运行到当前光标位置|右键单击查询编辑器窗口，然后单击“运行至光标处”  。<br /><br /> 按 Ctrl+F10。|  
+|运行当前语句到下一个断点之间的所有语句|在 "**调试**" 菜单上单击 "**继续**"。<br /><br /> 在 "**调试**" 工具栏上，单击 "**继续**" 按钮。|  
+|单步执行下一个语句或模块|在 "**调试**" 菜单上单击 "**单步**执行"。<br /><br /> 在 "**调试**" 工具栏上，单击 "**单步**执行" 按钮。<br /><br /> 按 F11。|  
+|逐过程执行下一个语句或模块|在 "**调试**" 菜单上单击 "**逐过程**"。<br /><br /> 在 "**调试**" 工具栏上，单击 "**单步执行**" 按钮。<br /><br /> 按 F10。|  
+|跳出模块|在 "**调试**" 菜单上，单击 "**跳出**"。<br /><br /> 在 "**调试**" 工具栏上，单击 "**跳出**" 按钮。<br /><br /> 按 Shift+F11。|  
+|运行到当前光标位置|右键单击查询编辑器窗口，然后单击“运行至光标处”****。<br /><br /> 按 Ctrl+F10。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Transact-SQL 调试器信息](transact-sql-debugger-information.md)  
   
   

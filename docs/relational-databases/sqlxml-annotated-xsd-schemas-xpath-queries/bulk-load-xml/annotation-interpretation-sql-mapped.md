@@ -1,6 +1,5 @@
 ---
-title: sql：已映射（SQLXML 4.0） |Microsoft Docs
-ms.custom: ''
+title: sql：映射（SQLXML）
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7711386722d618b35a8d957b680244243b4de5d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 055b4d25b6c501e9cf3afdf99460cd54ca7e720c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907140"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246781"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>批注解释 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 大容量加载按预期处理 XSD 架构中的**sql：映射**批注，即，如果映射架构为任何元素或属性指定了**sql： mapping = "false"** ，则 xml 大容量加载不会尝试将关联的数据存储在对应的列。  
+  XML 大容量加载按预期处理 XSD 架构中的**sql：映射**批注，也就是说，如果映射架构为任何元素或属性指定了**sql： mapping = "false"** ，则 xml 大容量加载不会尝试将关联的数据存储在相应的列中。  
   
  XML 大容量加载将忽略未映射的元素和属性（因为未在架构中对其进行描述，或者在带有**sql：映射 = "false"** 的 XSD 架构中批注它们）。 如果使用**sql：溢出字段**指定了这样的列，则所有未映射的数据都将进入溢出列。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "72907140"
 </xsd:schema>  
 ```  
   
- 由于**HomePhone**属性指定**sql： map = "false"** ，XML 大容量加载不会将此属性映射到相应的列。 XSD 架构标识了一个溢出列（**OverflowColumn**），其中，XML 大容量加载将存储此未使用的数据。  
+ 由于**HomePhone**属性指定**sql： map = "false"**，XML 大容量加载不会将此属性映射到相应的列。 XSD 架构标识了一个溢出列（**OverflowColumn**），其中，XML 大容量加载将存储此未使用的数据。  
   
 ### <a name="to-test-a-working-sample"></a>测试工作示例  
   

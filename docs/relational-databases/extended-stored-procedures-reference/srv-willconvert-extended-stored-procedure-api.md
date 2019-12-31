@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec59e76cb90612a2a1dd8fd54f2ee71967a09606
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: f679300c1dbc6c8c0d0e2f3144035e99924d4dd5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68036017"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245060"
 ---
-# <a name="srvwillconvert-extended-stored-procedure-api"></a>srv_willconvert（扩展存储过程 API）
+# <a name="srv_willconvert-extended-stored-procedure-api"></a>srv_willconvert（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -48,22 +48,22 @@ desttype
 ```  
   
 ## <a name="arguments"></a>参数  
- srctype   
+ *srctype*  
  指示要转换的数据的数据类型。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
- desttype   
+ *desttype*  
  指示源数据要转换成的目标数据类型。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>Returns  
  如果支持数据类型转换，则为 TRUE；否则为 FALSE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  有关每种数据类型的说明，请参阅[数据类型（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://www.microsoft.com/en-us/msrc?rtc=1)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://www.microsoft.com/msrc?rtc=1)。  
   
 ## <a name="see-also"></a>另请参阅  
- [srv_convert（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/srv-convert-extended-stored-procedure-api.md)  
+ [扩展存储过程 API srv_convert &#40;&#41;](../../relational-databases/extended-stored-procedures-reference/srv-convert-extended-stored-procedure-api.md)  
   
   
