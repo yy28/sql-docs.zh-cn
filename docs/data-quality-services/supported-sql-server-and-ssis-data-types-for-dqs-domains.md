@@ -1,5 +1,7 @@
 ---
 title: DQS 域支持的 SQL Server 和 SSIS 数据类型
+description: 描述 SQL Server 中的数据质量服务（DQS）域（数据、十进制、整数和字符串）的四种数据类型。
+ms.custom: seo-lt-2019
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 57950290bdf2b7f83463fa6b950db90a4bdbb9f0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75257775"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558162"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>DQS 域支持的 SQL Server 和 SSIS 数据类型
 
@@ -25,7 +27,7 @@ ms.locfileid: "75257775"
 > [!NOTE]  
 >  在 .xlsx 和 .xls 文件中，源列的数据类型由前八行中最主要的数据类型确定。 如果某一单元不符合该数据类型，将向它提供 null 值。 同样，在 .csv 文件中，源列的数据类型由前八行中最主要的数据类型确定。  
   
-##  <a name="SQLServer"></a>支持的 SQL Server 数据类型  
+##  <a name="SQLServer"></a>支持的 SQL Server 数据类型 
  下表提供有关对于每种 DQS 域数据类型支持的 SQL Server 数据类型的信息：  
   
 |DQS 域数据类型|支持的 SQL Server 数据类型|  

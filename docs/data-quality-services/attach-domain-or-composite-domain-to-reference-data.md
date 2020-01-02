@@ -1,5 +1,7 @@
 ---
 title: 将域或复合域附加到引用数据
+description: 介绍如何在数据质量知识库中使用 SQL Server 上的 Data Quality Services （DQS）附加域或复合域。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,14 +14,14 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: dbd64575acaf5ddf2f57e99b010a8a3b1555780e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258876"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557912"
 ---
-# <a name="attach-domain-or-composite-domain-to-reference-data"></a>将域或复合域附加到引用数据
+# <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>将域或复合域附加到引用数据-Data Quality Services （DQS）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

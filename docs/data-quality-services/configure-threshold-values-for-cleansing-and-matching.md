@@ -1,5 +1,7 @@
 ---
-title: Configure Threshold Values for Cleansing and Matching
+title: 配置清理和匹配的阈值
+description: 了解如何在 SQL Server Data Quality Services （DQS）中配置在计算机辅助清理和匹配活动期间使用的阈值。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -15,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: d31066ff172b0677e83e7a5dbe68f5d70e7136c8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 4fcbc8e4e6d6a9c1df07d8e1b1aa68c08c162817
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75255626"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557888"
 ---
-# <a name="configure-threshold-values-for-cleansing-and-matching"></a>Configure Threshold Values for Cleansing and Matching
+# <a name="configure-threshold-values-for-cleansing-and-matching---data-quality-services-dqs"></a>配置清理和匹配的阈值-Data Quality Services （DQS）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

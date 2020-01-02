@@ -1,5 +1,7 @@
 ---
-title: 运行 DQSInstaller.exe 以便完成数据质量服务器安装
+title: 运行 Dqsinstaller.exe 以完成数据质量服务器安装
+description: 了解如何运行 Dqsinstaller.exe 来完成 SQL Server Data Quality Services （DQS）安装。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9921840e66adc166004143deca7f9310b6e242ca
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 19805b5c5d41b5b39217c88cf565d9bd64c1ed9c
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258596"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557993"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>运行 DQSInstaller.exe 以便完成数据质量服务器安装
 

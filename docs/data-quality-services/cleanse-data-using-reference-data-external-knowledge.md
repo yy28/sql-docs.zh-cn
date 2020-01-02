@@ -1,5 +1,7 @@
 ---
-title: 使用引用数据（外部）知识清理数据
+title: '使用（外部）知识引用数据清理数据 '
+description: 了解如何在 SQL Server 中使用 Data Quality Services （DQS）通过引用数据提供程序中的知识清理数据。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 30ef5c06ff9b528eaa46127f1c98b0f430a71f7d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: fc0135ed4e4956d6bd98fc0b467a5b6d0a25a013
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75255675"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557902"
 ---
-# <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用引用数据（外部）知识清理数据
+# <a name="cleanse-data-using-external-knowledge-reference-data---data-quality-services-dqs"></a>使用（外部）知识引用数据的清理数据-Data Quality Services （DQS）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
