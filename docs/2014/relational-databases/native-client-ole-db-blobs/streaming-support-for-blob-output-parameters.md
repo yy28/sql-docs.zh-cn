@@ -1,5 +1,5 @@
 ---
-title: BLOB 的流支持输出参数 |Microsoft Docs
+title: BLOB 输出参数的流支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -507,7 +507,7 @@ _Exit:
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [BLOB 和 OLE 对象](blobs-and-ole-objects.md)  
+## <a name="see-also"></a>另请参阅  
+ [Blob 和 OLE 对象](blobs-and-ole-objects.md)  
   
   
