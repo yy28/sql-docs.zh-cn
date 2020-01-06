@@ -1,6 +1,5 @@
 ---
-title: Windows 事件跟踪目标 | Microsoft Docs
-ms.custom: ''
+title: Windows 事件跟踪目标
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac1191d870d7fe745cdbed0e17892c5c2cf34435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8923769d3edb35b328c9b0351fd9700ff9168c6c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021862"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234655"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件跟踪目标
 
@@ -52,12 +51,12 @@ ms.locfileid: "68021862"
   
  下表介绍了配置 ETW 目标时可用的选项。  
   
-|选项|允许的值|描述|  
+|选项|允许的值|说明|  
 |------------|--------------------|-----------------|  
-|default_xe_session_name|任何不超过 256 个字符的字符串。 该值是可选的。|扩展事件会话名称。 默认情况下为 XE_DEFAULT_ETW_SESSION。|  
-|default_etw_session_logfile_path|任何不超过 256 个字符的字符串。 该值是可选的。|扩展事件会话日志文件的路径。 默认情况下为 %TEMP%\ XEEtw.etl。|  
-|default_etw_session_logfile_size_mb|任何无符号整数。 该值是可选的。|扩展事件会话日志文件的大小 (MB)。 默认值为 20 MB。|  
-|default_etw_session_buffer_size_kb|任何无符号整数。 该值是可选的。|扩展事件会话内存缓冲区的大小 (KB)。 默认值为 128 KB。|  
+|default_xe_session_name|任何不超过 256 个字符的字符串。 此值是可选的。|扩展事件会话名称。 默认情况下为 XE_DEFAULT_ETW_SESSION。|  
+|default_etw_session_logfile_path|任何不超过 256 个字符的字符串。 此值是可选的。|扩展事件会话日志文件的路径。 默认情况下为 %TEMP%\ XEEtw.etl。|  
+|default_etw_session_logfile_size_mb|任何无符号整数。 此值是可选的。|扩展事件会话日志文件的大小 (MB)。 默认值为 20 MB。|  
+|default_etw_session_buffer_size_kb|任何无符号整数。 此值是可选的。|扩展事件会话内存缓冲区的大小 (KB)。 默认值为 128 KB。|  
 |retries|任何无符号整数。|尝试将事件发布给 ETW 子系统的重试次数，在此次数之后将删除该事件。 默认值为 0。|  
 | &nbsp; | &nbsp; | &nbsp; |
 

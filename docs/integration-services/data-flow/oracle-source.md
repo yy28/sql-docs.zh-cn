@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545068"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542207"
 ---
 # <a name="oracle-source"></a>Oracle 源
 
@@ -49,7 +49,7 @@ Oracle 源在错误输出中返回在加载和提取过程中出现的错误。 
 
 Oracle 源的自定义属性如下所示。 所有属性均可读/写。
 
-|属性名称|数据类型|描述|
+|属性名称|数据类型|说明|
 |:-|:-|:-|
 |AccessMode|Integer（枚举）|用来访问数据库的模式。 可取值为“表名”  和“SQL 命令”  。 默认值为“表名”  。|
 |BatchSize|Integer|用于大容量加载的批处理的大小。 这是作为数组提取的记录数。 <br>此属性仅由高级编辑器  设置|
@@ -103,7 +103,7 @@ Oracle 源的自定义属性如下所示。 所有属性均可读/写。
 
 选择从源选择数据的方法。 选项显示在下表中：
 
-|选项|描述|
+|选项|说明|
 |:-|:-|
 |表或视图|从 Oracle 数据源中的表或视图检索数据。 选择此选项后，从“表名或视图名称”  列表中选择可用的表或视图。|
 |SQL 命令|使用 SQL 查询从 Oracle 数据源中检索数据。 选择此选项后，请使用下列方式之一输入查询： <br>在 **“SQL 命令文本”** 字段中，输入 SQL 查询的文本。 <br>单击 **“浏览”** 从文本文件加载 SQL 查询。 <br>单击 **“分析查询”** 验证查询文本的语法。|
@@ -161,7 +161,7 @@ Oracle 源的自定义属性如下所示。 所有属性均可读/写。
 **错误行为**
 
 选择 Oracle 源应如何处理流中的错误：忽略失败、重定向行或让组件失败。
-**相关部分**：[数据中的错误处理](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**相关部分**：[数据中的错误处理](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **截断**
 

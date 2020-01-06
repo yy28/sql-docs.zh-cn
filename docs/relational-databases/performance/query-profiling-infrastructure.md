@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 40c2c30ff3d44b41d4ddcac4cc9fe0954a06d72e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559463"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257676"
 ---
 # <a name="query-profiling-infrastructure"></a>查询分析基础结构
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,9 +121,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 包括一个新修订的轻型分析版本，用于收集所有执行的行计数信息。 默认情况下，[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中已启用轻型分析，跟踪标志 7412 无效。 可以使用 LIGHTWEIGHT_QUERY_PROFILING [数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;` 在数据库级别禁用轻量级分析。
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 包括一个新修订的轻型分析版本，用于收集所有执行的行计数信息。 默认情况下，[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中已启用轻型分析，跟踪标志 7412 无效。 可以使用 LIGHTWEIGHT_QUERY_PROFILING [数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;` 在数据库级别禁用轻量级分析。
 
-引入了新的 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 以返回大多数查询的最后已知实际执行计划的等效项，称为“最后查询计划统计信息”  。 可以使用 LAST_QUERY_PLAN_STATS [数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;` 在数据库级别启用最后查询计划统计信息。
+引入了新的 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 以返回大多数查询的最后已知实际执行计划的等效项，称为“最后查询计划统计信息”  。 可以使用 LAST_QUERY_PLAN_STATS [数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;` 在数据库级别启用最后查询计划统计信息。
 
 新的 query_post_execution_plan_profile 扩展事件基于轻型分析收集实际执行计划的等效项，与使用标准分析的 query_post_execution_showplan 不同   。 可以像如下所示对使用 query_post_execution_plan_profile 扩展事件的示例会话进行配置  ：
 
@@ -180,14 +180,14 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 |Global|包含 `query_post_execution_showplan` XE 的 xEvent 会话；从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始|跟踪标志 7412；从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始|
 |Global|包含 `Showplan XML` 跟踪事件的 SQL 跟踪和 SQL Server Profiler；从 SQL Server 2000 开始|包含 `query_thread_profile` XE 的 xEvent 会话；从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始|
 |Global|-|包含 `query_post_execution_plan_profile` XE 的 xEvent 会话；从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始|
-|Session|使用 `SET STATISTICS XML ON`；从 SQL Server 2000 开始|将 `QUERY_PLAN_PROFILE` 查询提示与包含 `query_plan_profile` XE 的 xEvent 会话一起使用；从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 开始|
-|Session|使用 `SET STATISTICS PROFILE ON`；从 SQL Server 2000 开始|-|
-|Session|单击 SSMS 中的[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)按钮；从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始|-|
+|会话|使用 `SET STATISTICS XML ON`；从 SQL Server 2000 开始|将 `QUERY_PLAN_PROFILE` 查询提示与包含 `query_plan_profile` XE 的 xEvent 会话一起使用；从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 开始|
+|会话|使用 `SET STATISTICS PROFILE ON`；从 SQL Server 2000 开始|-|
+|会话|单击 SSMS 中的[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)按钮；从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始|-|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 > [!IMPORTANT]
-> 由于在执行引用 [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) 的监视存储过程时可能存在随机 AV，因此请确保在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中安装了 [KB 4078596](http://support.microsoft.com/help/4078596)。
+> 由于在执行引用 [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) 的监视存储过程时可能存在随机 AV，因此请确保在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中安装了 [KB 4078596](https://support.microsoft.com/help/4078596)。
 
 从轻型分析 v2 开始，其开销很低，任何尚未受 CPU 限制的服务器都可连续运行轻型分析，并允许数据库专业人员随时使用任何正在运行的执行，例如使用活动监视器或直接查询 `sys.dm_exec_query_profiles`，并获取运行时统计信息的查询计划  。
 
@@ -209,4 +209,3 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
  [Showplan 逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice:Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004)（开发人员之选：随时随地查询进度）

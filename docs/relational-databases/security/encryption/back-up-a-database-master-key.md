@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 0a45b7977d19603387e51b9ed824d9e8a4d759b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 55db3923f26acaad667e444afb13ae0d86bcc59e
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997680"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957496"
 ---
 # <a name="back-up-a-database-master-key"></a>备份数据库主密钥
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67997680"
   
 - 我们建议您在创建主密钥之后立即对其进行备份，并存储于另外一个安全的位置中。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限
 要求对数据库具有 CONTROL 权限。  

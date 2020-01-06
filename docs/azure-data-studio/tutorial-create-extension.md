@@ -3,19 +3,19 @@ title: 教程：创建一个扩展
 titleSuffix: Azure Data Studio
 description: 本教程演示如何创建扩展以将自定义功能添加到 Azure Data Studio。
 ms.custom: seodec18
-ms.date: 09/24/2018
+ms.date: 12/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: kevcunnane
-ms.author: kcunnane
-ms.openlocfilehash: c7c247e739a9b983dd715844262794bd18fca9cf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a8a8481653f7161b39cc752878f4544f98751261
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959084"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241755"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>教程：创建 Azure Data Studio 扩展
 
@@ -163,7 +163,7 @@ Azure Data Studio 扩展市场尚未完全实现，但当前需要在某处托�
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，你已学习如何执行以下操作：
+在本教程中，你了解了如何执行以下操作：
 > [!div class="checklist"]
 > * 创建一个扩展项目
 > * 安装扩展生成器

@@ -12,12 +12,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbf9f4614bd8e9212742072ceb8da5ddeaf8716f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 8dd50c08035690fd932dc717ae08d179b89b4ed2
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74096102"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325409"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>解决 SQL Server 中 JSON 的常见问题
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "74096102"
  **答案。** 请使用 FOR JSON PATH。 尽管 JSON 输出没有任何区别，但 AUTO 模式采用一些其他的逻辑，可检查是否应嵌套列。 请将 PATH 作为默认选项。  
 
 ### <a name="create-a-nested-json-structure"></a>创建一个嵌套的 JSON 结构  
- **问题。** 我希望在同一级别上生成具有多个数组的复杂 JSON。 FOR JSON PATH 可以使用路径创建嵌套对象，FOR JSON AUTO 为每个表创建其他的嵌套级别。 这两个选项都不能够让我生成所需的输出。 我如何才能自定义现有选项不直接支持的 JSON 格式？  
+ **问题。** 我希望生成具有多个同级别数组的复杂 JSON。 FOR JSON PATH 可以使用路径创建嵌套对象，FOR JSON AUTO 为每个表创建其他的嵌套级别。 这两个选项都不能够让我生成所需的输出。 我如何才能自定义现有选项不直接支持的 JSON 格式？  
   
  **答案。** 通过将 FOR JSON 查询添加为返回 JSON 文本的列表达式，可创建任何数据结构。 还可以使用 JSON_QUERY 函数手动创建 JSON。 下面的示例演示了这些方法。  
   
@@ -41,7 +41,7 @@ SELECT col1, col2, col3,
      (SELECT col11, col12, col13 FROM t11 WHERE t11.FK = t1.PK FOR JSON PATH) as t11,  
      (SELECT col21, col22, col23 FROM t21 WHERE t21.FK = t1.PK FOR JSON PATH) as t21,  
      (SELECT col31, col32, col33 FROM t31 WHERE t31.FK = t1.PK FOR JSON PATH) as t31,  
-     JSON_QUERY('{"'+col4'":"'+col5+'"}' as t41  
+     JSON_QUERY('{"'+col4'":"'+col5+'"}') as t41  
 FROM t1  
 FOR JSON PATH  
 ```  
@@ -64,7 +64,7 @@ FOR JSON PATH
   
  我如何才能防止此行为？ 我想让 `{"day":23}` 作为 JSON 对象而不是转义文本返回。  
   
- **答案。** 存储在文本列中的 JSON 或文字被当做文本处理。 也就是说，它会括在双引号内并进行转义。 如果想返回未转义的 JSON 对象，请将此列作为参数传递给 JSON_QUERY 函数，如下例所示。  
+ **答案。** 存储在文本列中的 JSON 或文字被当做文本处理。 也就是说，它会括在双引号内并进行转义。 如果想返回未转义的 JSON 对象，请将 JSON 列作为参数传递给 JSON_QUERY 函数，如下例所示。  
   
 ```sql  
 SELECT col1, col2, col3, JSON_QUERY(jsoncol1) AS jsoncol1  
@@ -141,7 +141,7 @@ WHERE [key] = 'color'
 ### <a name="reference-keys-that-contain-non-alphanumeric-characters-in-json-text"></a>引用 JSON 文本中中包含非字母数字字符的键  
  **问题。** 我的 JSON 文本中有包含非字母数字字符的键。 我如何引用这些属性？  
   
- **答案。** 必须在 JSON 路径中用引号将它们括起来。 例如， `JSON_VALUE(@json, '$."$info"."First Name".value')`。
+ **答案。** 必须在 JSON 路径中用引号将它们括起来。 例如，`JSON_VALUE(@json, '$."$info"."First Name".value')` 。
  
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>详细了解 SQL Server 和 Azure SQL 数据库中的 JSON  
   

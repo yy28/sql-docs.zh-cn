@@ -13,22 +13,22 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84a68ecbdd5d48447b17bbfd256aec982614cb3c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 08899661d3638b03aaf848bd207625e168812e87
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902985"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957406"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密数据列
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   本文介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中通过对称加密对数据列进行加密。 这有时称为列级加密或单元级加密。  
 
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
  下面的权限是执行以下步骤所必需的：  
@@ -41,7 +41,7 @@ ms.locfileid: "72902985"
   
 - 针对密钥的某些权限，并且必须未被拒绝授予 VIEW DEFINITION 权限。  
   
-## <a name="using-transact-sql"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a>“使用 Transact-SQL”  
 
 要使用下面的示例，必须具有数据库主密钥。 如果数据库目前没有数据库主密钥，可通过执行以下语句并提供密码来创建主密钥：
 
@@ -166,7 +166,7 @@ PASSWORD = '<some strong password>';
     GO  
     ```  
   
- 有关详细信息，请参见以下内容：  
+ 有关详细信息，请参阅以下主题：  
   
 -   [CREATE CERTIFICATE (Transact-SQL)](../../../t-sql/statements/create-certificate-transact-sql.md)  
   

@@ -10,12 +10,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d4132db44bb52835e277733365321d85342e670
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 61c282e01a03a0b46de0c256025cb59c57304ddb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095846"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245600"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>在 PATH 模式下格式化嵌套 JSON 输出 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "74095846"
 
 FOR JSON PATH 子句使用列别名或列名来确定 JSON 输出中的键名称  。 如果别名中包含点，则 PATH 选项将创建嵌套对象。  
 
- **“数据集属性”**  
+ **查询**  
   
 ```sql  
 SELECT TOP 5   
@@ -86,13 +86,13 @@ SELECT TOP 5
 ## <a name="example---multiple-tables"></a>示例 - 多个表  
 如果查询中引用了多个表，FOR JSON PATH 将使用列别名嵌套每个列  。 以下查询将为查询中联接的每个（OrderHeader，OrderDetails）对创建一个 JSON 对象。 
   
- **“数据集属性”**  
+ **查询**  
   
 ```sql  
-SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  
-        OrderDate AS 'Order.Date',  
-        UnitPrice AS 'Product.Price',  
-        OrderQty AS 'Product.Quantity'  
+SELECT TOP 2 H.SalesOrderNumber AS 'Order.Number',  
+        H.OrderDate AS 'Order.Date',  
+        D.UnitPrice AS 'Product.Price',  
+        D.OrderQty AS 'Product.Quantity'  
 FROM Sales.SalesOrderHeader H  
    INNER JOIN Sales.SalesOrderDetail D  
      ON H.SalesOrderID = D.SalesOrderID  

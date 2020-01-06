@@ -1,6 +1,7 @@
 ---
-title: 单独保存 Showplan XML 事件 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
+title: 分别保存 Showplan XML 事件
+titleSuffix: SQL Server Profiler
+ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4a3530d3796cf65dd66dd509e3f168183d4b274a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 73a95255bcce173fa0ce2141b4f968d7efab7e57
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908077"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165585"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>单独保存 Showplan XML 事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "72908077"
   
 3. 在“使用模板”列表中，选择一个跟踪所基于的跟踪模板  。 如果不想使用模板，请选择“无”  。  
   
-4. 执行以下操作之一：  
+4. 执行下列操作之一：  
   
     -   要将跟踪内容捕获到文件，请选中“保存到文件”复选框  。 指定 **“设置最大文件大小”** 的值。 
     
@@ -53,7 +54,7 @@ ms.locfileid: "72908077"
   
 7. 在“Events”  数据列中，展开“Performance”  事件类别，然后选中“Showplan XML”  复选框。 如果“Performance”  事件类别不可用，请选中“显示所有事件”  以显示该类别。  
   
-     “事件提取设置”  选项卡将添加到“跟踪属性”  对话框中。  
+     “事件提取设置”选项卡将添加到“跟踪属性”对话框中   。  
   
 8. 在“事件提取设置”选项卡上，选择“单独保存 XML Showplan 事件”   。  
   

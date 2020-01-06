@@ -1,10 +1,8 @@
 ---
 title: 加速数据库恢复 (ADR) | Microsoft Docs
-ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: kfarlee
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +10,14 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 author: mashamsft
 ms.author: mathoma
+ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d825c7db4789ec1421cf43acd5897e932c7fa29a
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71130536"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245255"
 ---
 # <a name="manage-accelerated-database-recovery"></a>管理加速数据库恢复
 
@@ -84,10 +83,10 @@ GO
    为了能够打开具有永久版本存储新位置的 ADR，首先必须确保已从以前的 PVS 位置清除了所有版本信息。 若要强制执行清理操作，请运行以下命令：
 
    ```sql
-   EXEC sys.sp_persistent_version_store_cleanup [database name]
+   EXEC sys.sp_persistent_version_cleanup [database name]
    ```
 
-   `sys.sp_persistent_version_store_cleanup` 存储过程是同步的，这意味着该过程将一直持续到当前 PVS 中的所有版本信息清除完成。  完成后，通过查询 DMV `sys.dm_persistent_version_store_stats` 并检查 `persistent_version_store_size_kb` 的值，可验证版本信息是否确实已删除。
+   `sys.sp_persistent_version_cleanup` 存储过程是同步的，这意味着该过程将一直持续到当前 PVS 中的所有版本信息清除完成。  完成后，通过查询 DMV `sys.dm_persistent_version_store_stats` 并检查 `persistent_version_store_size_kb` 的值，可验证版本信息是否确实已删除。
 
    ```sql
    SELECT DB_Name(database_id), persistent_version_store_size_kb 

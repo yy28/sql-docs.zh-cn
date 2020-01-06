@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a175c38fb591dd5805ea3e8890cf9e60392178ce
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 9ee964e5c1c58ea54da3f3451c0ffdde29e71b23
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553220"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246942"
 ---
 # <a name="oracle-destination"></a>Oracle 目标
 
@@ -41,7 +41,7 @@ Oracle 目标有一个常规输入和一个错误输出。
 - 使用直接路径快速加载：此模式是使用驱动程序的直接路径模式来加载 Oracle 表。 使用此模式时需要遵循一些限制；有关详细信息，请参阅 Oracle 文档。  
 若要详细了解如何配置此模式，请参阅 [Oracle 目标编辑器（“连接管理器”页）](#oracle-destination-editor-connection-manager-page)和 [Oracle 目标的自定义属性](#oracle-destination-custom-properties)。
 
-## <a name="error-handling"></a>错误处理
+## <a name="error-handling"></a>错误处理。
 
 Oracle 目标有错误输出。 组件的错误输出包括以下输出列：
 
@@ -56,7 +56,7 @@ Oracle 目标有错误输出。 组件的错误输出包括以下输出列：
 
 “最大错误数(MaxErrors)”  属性设置可以出现的最大错误数。 达到最大错误数后，执行停止并返回错误。 只有在达到最大错误数之前的执行记录，才会包含在目标表中。 有关详细配置，请参阅 [Oracle 目标编辑器（“连接管理器”页）](#oracle-destination-editor-connection-manager-page)。
 
-## <a name="parallelism"></a>Parallelism
+## <a name="parallelism"></a>并行度
 
 在批量加载模式下，并行运行配置没有限制，但性能可能会受标准记录锁定机制影响。 性能损失量取决于数据和表组织。
 
@@ -79,16 +79,16 @@ Oracle 目标有错误输出。 组件的错误输出包括以下输出列：
 
 下表列出了 Oracle 目标的自定义属性。 所有属性均可读/写。
 
-|属性名称|数据类型|描述|加载模式|
+|属性名称|数据类型|说明|加载模式|
 |:-|:-|:-|:-|
 |BatchSize|Integer|用于大容量加载的批处理的大小。 这是作为批处理加载的行数。|仅用于批量模式。|
 |DefaultCodePage|Integer|当数据源没有代码页信息时，要使用的代码页。 <br>**注意**：此属性仅由高级编辑器  设置。|用于两种模式。|
 |FastLoad|Boolean|是否使用快速加载。 默认值是 **false**秒。 也可以在 [Oracle 目标编辑器（“连接管理器”页）](#oracle-destination-editor-connection-manager-page)中设置此模式。 |用于两种模式。|
 |MaxErrors|Integer|在数据流停止前可能发生的错误数。 默认值为 0  ，表示没有错误数限制。<br> 如果选择的是“错误处理”  页中的“重定向流”  。 在达到错误数限制前，所有错误都在错误输出中返回。 有关详细信息，请参阅[错误处理](#error-handling)。|仅用于快速加载模式。|
 |NoLogging|Boolean|是否禁用数据库日志记录。 默认值为 False  ，表示启用日志记录。|用于两种模式。|
-|Parallel|Boolean|是否允许并行加载。 True  表示允许其他加载会话针对同一个目标表运行。<br> 有关详细信息，请参阅[并行](#parallelism)。|仅用于快速加载模式。|
+|并行|Boolean|是否允许并行加载。 True  表示允许其他加载会话针对同一个目标表运行。<br> 有关详细信息，请参阅[并行](#parallelism)。|仅用于快速加载模式。|
 |TableName|String|包含正在使用的数据的表的名称。|用于两种模式。|
-|TableSubName|String|子名称或子分区。 该值是可选的。<br> **注意**：只能在高级编辑器  中设置此属性。|仅用于快速加载模式。|
+|TableSubName|String|子名称或子分区。 此值是可选的。<br> **注意**：只能在高级编辑器  中设置此属性。|仅用于快速加载模式。|
 |TransactionSize|Integer|可以在一个事务中进行的插入数。 默认值为 BatchSize  。|仅用于批量模式。|
 |TransferBufferSize|Integer|传输缓冲区大小。 默认值为 64 KB。|仅用于快速加载模式。|
 
@@ -139,9 +139,9 @@ Oracle 目标有错误输出。 组件的错误输出包括以下输出列：
 
 选择从源选择数据的方法。 选项显示在下表中：
 
-|选项|描述|
+|选项|说明|
 |:-|:-|
-|表名|将 Oracle 目标配置为，在批量模式下运行。 选项：<br><br> **表或视图的名称**：从数据库或列表中选择可用的表或视图。<br><br> **事务大小**：输入可以在一个事务中进行的插入数。 默认值为 BatchSize  。<br><br> **批大小**：键入用于批量加载的批大小（已加载的行数）。
+|表名称|将 Oracle 目标配置为，在批量模式下运行。 选项：<br><br> **表或视图的名称**：从数据库或列表中选择可用的表或视图。<br><br> **事务大小**：输入可以在一个事务中进行的插入数。 默认值为 BatchSize  。<br><br> **批大小**：键入用于批量加载的批大小（已加载的行数）。
 |表名 - 快速加载|将 Oracle 目标配置为，在快速（直接路径）加载模式下运行。 <br><br>可用选项如下：<br><br> **表或视图的名称**：从数据库或列表中选择可用的表或视图。<br><br> **并行加载**：是否启用并行加载。 有关详细信息，请参阅[并行](#parallelism)。<br><br> **无日志记录**：此复选框可禁用数据库日志记录。 此日志记录是用于恢复用途的 Oracle Database，与跟踪无关。<br><br> **最大错误数**：在数据流停止前可能发生的最大错误数。 默认值为 0，表示没有错误数限制。<br><br> 所有可能发生的错误都在错误输出中返回。<br><br> **传输缓冲区大小(KB)** ：输入传输缓冲区大小。 默认大小为 64KB。|
 
 **查看现有数据**
@@ -199,7 +199,7 @@ Oracle 目标有错误输出。 组件的错误输出包括以下输出列：
 **错误行为**
 
 选择 Oracle 源应如何处理流中的错误：忽略失败、重定向行或让组件失败。
-**相关部分**：[数据中的错误处理](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**相关部分**：[数据中的错误处理](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **截断**
 

@@ -12,12 +12,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98be5f404118ab217ae7700dbf6ec8f02012610f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907099"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190794"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 
 若要进一步了解导入平面文件向导的用户体验改进，请观看以下视频：
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>必备条件
 此功能仅在 SQL Server Management Studio (SSMS) v17.3 或更高版本中可用。 请确保使用最新版本。 可以在[此处](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
@@ -79,7 +79,7 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 
 ![向导修改](media/import-flat-file-wizard/importffmodify.png)
 
-### <a name="step-5-summary"></a>步骤 5：“摘要”
+### <a name="step-5-summary"></a>步骤 5：总结
 这只是一个显示当前配置的摘要页面。 如果出现问题，可以返回到上一部分。 或者，单击“完成”尝试导入过程。
 
 ![向导摘要](media/import-flat-file-wizard/importffsummary.png)

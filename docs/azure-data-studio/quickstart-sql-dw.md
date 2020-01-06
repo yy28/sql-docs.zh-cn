@@ -1,21 +1,21 @@
 ---
-title: 快速入门：连接并查询 Azure SQL 数据仓库
+title: 连接并查询 Azure SQL 数据仓库
 titleSuffix: Azure Data Studio
 description: 本快速入门演示如何使用 Azure Data Studio 连接到 Azure SQL 数据仓库并运行查询
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 810d03ab97fd584e1ddaab45e06a21377b81685d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; seo-lt-2019
+ms.date: 09/24/2018
+ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959409"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957104"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据仓库中的数据
 
@@ -41,14 +41,14 @@ ms.locfileid: "67959409"
 
 2. 本文使用 SQL 登录名，但也支持 Windows 身份验证   。 使用 Azure SQL 服务器的服务器名称、用户名和密码，按如下所示填写字段  ：
 
-   | 设置       | 建议的值 | 描述 |
+   | 设置       | 建议的值 | 说明 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器名称** | 完全限定的服务器名称 | 名称应类似于：sqldwsample.database.windows.net  |
    | **身份验证** | SQL 登录名| 在本教程中使用 SQL 身份验证。 |
-   | **User name** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
-   | **密码（SQL 登录名）** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
+   | **用户名** | 服务器管理员帐户 | 这是在创建服务器时指定的帐户。 |
+   | **密码(SQL 登录名)** | 服务器管理员帐户的密码 | 这是在创建服务器时指定的密码。 |
    | **是否保存密码？** | 是或否 | 如果不希望每次都输入密码，请选择“是”。 |
-   | **数据库名称** | 保留空白  | 要连接到的数据库的名称。 |
+   | **数据库名称** | *留空* | 要连接到的数据库的名称。 |
    | **服务器组** | 选择 <Default> | 如果已创建服务器组，则可以设置为特定服务器组。 | 
 
    ![“新建连接”图标](media/quickstart-sql-dw/new-connection-screen.png) 
@@ -62,7 +62,7 @@ ms.locfileid: "67959409"
 ## <a name="create-the-tutorial-data-warehouse"></a>创建教程数据仓库
 1. 在对象资源管理器中右键单击服务器，选择“新建查询”  。
 
-1. 将以下代码段粘贴到查询编辑器中，并单击“运行”  ：
+1. 将以下代码片段粘贴到查询编辑器中，并单击“运行”  ：
 
    ```sql
     IF NOT EXISTS (
@@ -87,7 +87,7 @@ ms.locfileid: "67959409"
    ![更改上下文](media/quickstart-sql-database/change-context.png)
 
 
-1. 将以下代码段粘贴到查询编辑器中，并单击“运行”  ：
+1. 将以下代码片段粘贴到查询编辑器中，并单击“运行”  ：
 
    > [!NOTE]
    > 可在编辑器中将此片段追加到或覆盖之前的查询。 请注意，单击“运行”仅执行选定的查询  。 如果未选择任何内容，单击“运行”将执行编辑器中所有的查询  。
@@ -112,7 +112,7 @@ ms.locfileid: "67959409"
 
 ## <a name="insert-rows"></a>插入行
 
-1. 将以下代码段粘贴到查询编辑器中，并单击“运行”  ：
+1. 将以下代码片段粘贴到查询编辑器中，并单击“运行”  ：
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -126,14 +126,14 @@ ms.locfileid: "67959409"
 
 
 ## <a name="view-the-result"></a>查看结果
-1. 将以下代码段粘贴到查询编辑器中，并单击“运行”  ：
+1. 将以下代码片段粘贴到查询编辑器中，并单击“运行”  ：
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. 显示查询结果：
+1. 将显示查询结果：
 
    ![选择结果](media/quickstart-sql-dw/select-results.png)
 

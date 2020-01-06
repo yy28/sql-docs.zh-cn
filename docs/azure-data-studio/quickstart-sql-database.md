@@ -1,21 +1,21 @@
 ---
-title: 快速入门：连接并查询 Azure SQL 数据库
+title: 连接并查询 Azure SQL 数据库
 titleSuffix: Azure Data Studio
 description: 本快速入门介绍如何使用 Azure Data Studio 连接到 SQL 数据库并运行查询
-ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
+ms.date: 05/14/2019
+ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959439"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957071"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据库
 
@@ -40,25 +40,25 @@ ms.locfileid: "67959439"
 
 1. 首次运行 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 时，应该会打开“欢迎”页  。 如果没有看到“欢迎”页，请选择“帮助” > “欢迎”    。 选择“新建连接”以打开“连接”窗格   ：
    
-   ![新建连接图标](media/quickstart-sql-database/new-connection-icon.png)
+   ![“新建连接”图标](media/quickstart-sql-database/new-connection-icon.png)
 
 2. 本文使用 SQL 登录名，但也支持 Windows 身份验证。 使用 Azure SQL Server 的服务器名称、用户名和密码填写以下字段：
 
-   | 设置       | 建议的值 | 描述 |
+   | 设置       | 建议的值 | 说明 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器名称** | 完全限定的服务器名称 | 类似于 **servername.database.windows.net**。 |
    | **身份验证** | SQL 登录名| 本教程使用 SQL 身份验证。 |
-   | **User name** | 服务器管理员帐户用户名 | 用于创建服务器的帐户的用户名。 |
-   | **密码（SQL 登录名）** | 服务器管理员帐户密码 | 用于创建服务器的帐户的密码。 |
+   | **用户名** | 服务器管理员帐户用户名 | 用于创建服务器的帐户的用户名。 |
+   | **密码(SQL 登录名)** | 服务器管理员帐户密码 | 用于创建服务器的帐户的密码。 |
    | **是否保存密码？** | 是或否 | 如果不想每次都输入密码，请选择“是”  。 |
    | **数据库名称** | *留空* | 仅连接到此处的服务器。 |
    | **服务器组** | 选择 <Default> | 可将此字段设置为创建的特定服务器组。 | 
 
-   ![新建连接图标](media/quickstart-sql-database/new-connection-screen.png)  
+   ![“新建连接”图标](media/quickstart-sql-database/new-connection-screen.png)  
 
 3. 选择“连接”  。
 
-4. 如果服务器没有允许 Azure Data Studio 连接的防火墙规则，则会打开“新建防火墙规则”表单  。 填写表单以新建防火墙规则。 有关详细信息，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+4. 如果服务器没有可允许 Azure Data Studio 连接的防火墙规则，则会打开“新建防火墙规则”窗体  。 填写窗体以新建防火墙规则。 有关详细信息，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
    ![新建防火墙规则](media/quickstart-sql-database/firewall.png)  
 

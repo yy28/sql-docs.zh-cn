@@ -1,6 +1,5 @@
 ---
-title: 对扩展事件使用 PowerShell 提供程序 | Microsoft Docs
-ms.custom: ''
+title: 对扩展事件使用 PowerShell 提供程序
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ce9869db83cd620ebade613f2582ff2adb9b19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c7fba3c0ad9ab6f004d001b1a8e04d86e27d1818
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009326"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242890"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>对扩展事件使用 PowerShell 提供程序
 
@@ -48,7 +47,7 @@ ms.locfileid: "68009326"
   
 -   脚本必须从 PS SQLSERVER:\\> 提示符（可在命令提示符下键入 **sqlps** 来打开该提示符）下运行。  
   
--   脚本使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例。  
+-   脚本使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例。  
   
 -   脚本必须使用 .ps1 扩展名保存。  
   
@@ -110,7 +109,7 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  若要创建、更改或删除扩展事件会话，您必须拥有 ALTER ANY EVENT SESSION 权限。  
   
 ## <a name="see-also"></a>另请参阅  

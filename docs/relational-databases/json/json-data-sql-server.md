@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b74463acd2c202dd0b14167b40a715308f16e787
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 80f6d40fd2c548135595fd96de6de4b967460a90
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095765"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190357"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 数据
 
@@ -60,7 +60,7 @@ SQL Server 中的 JSON 函数使用户能在同一数据库中将 NoSQL 和相�
 下一部分介绍 SQL Server 随其内置 JSON 支持一起提供的主要功能。 在以下视频中可看到如何使用 JSON 函数和运算符：
 
 *SQL Server 2016 和 JSON 支持*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player?WT.mc_id=dataexposed-c9-niner]
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>从 JSON 文本中提取值并在查询中使用这些值
 
@@ -403,7 +403,7 @@ FOR JSON AUTO;
 有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：
 
 *在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
 
 在 SQL Server 中使用 JSON 函数构建 REST API 
 > [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]

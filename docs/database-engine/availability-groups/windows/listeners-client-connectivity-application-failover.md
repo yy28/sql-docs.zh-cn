@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9ec10cd88bdaa5536674df78c9b73700575516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2116c0a587b82f289f5dba17968f3eb42e47c05
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020807"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228254"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>连接到 Always On 可用性组侦听器 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "68020807"
  若要使用可用性组侦听器连接到主副本以进行读写访问，连接字符串应指定可用性组侦听器 DNS 名称。  如果可用性组主副本变为新副本，则将断开使用可用性组侦听器的网络名称的现有连接。  然后，将到可用性组侦听器的新连接定向到新的主副本。 如下所示是针对 ADO.NET 访问接口 (System.Data.SqlClient) 的基本连接字符串的一个示例：  
   
 ```  
-Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI  
+Server=tcp: AGListener,1433;Database=MyDB;Integrated Security=SSPI  
 ```  
   
  您仍可选择直接引用主副本或辅助副本的 SQL Server 实例名称，而不使用可用性组侦听器服务器名称，但如果您选择这样做，将会丢失新连接（自动定向到当前主副本）的优势。  还将失去只读路由的优势。  
@@ -116,7 +116,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  如下所示是针对指定只读应用程序意向的 ADO.NET 访问接口 (System.Data.SqlClient) 的连接字符串的一个示例：  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
  在此连接字符串示例中，客户端尝试通过端口 1433 上名为 `AGListener` 的可用性组侦听程序（如果可用性组侦听程序正在侦听 1433，也可以忽略端口）连接到 AdventureWorks 数据库。  连接字符串将 **ApplicationIntent** 属性设置为 **ReadOnly**，从而使其成为 *读意向连接字符串*。  如果没有此设置，服务器将不会尝试该连接的只读路由。  
@@ -163,7 +163,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  如下所示是针对实现多子网故障转移的 ADO.NET 访问接口 (System.Data.SqlClient) 连接字符串的一个示例：  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; MultiSubnetFailover=True  
 ```  
   
  **MultiSubnetFailover** 连接选项应设置为 **True** ，即使可用性组仅跨单子网也不例外。  这允许您预先配置新的客户端以支持进一步跨多个子网，而无需进一步更改客户端连接字符串，还可以优化单子网故障转移的故障转移性能。  在不需要 **MultiSubnetFailover** 连接选项时，它将提供更快进行子网故障转移的优势。  这是因为，客户端驱动程序将尝试为每个与可用性组关联的 IP 地址并行打开 TCP 套接字。  客户端驱动程序将等待第一个 IP 响应成功，一旦成功，就将其用于连接。  

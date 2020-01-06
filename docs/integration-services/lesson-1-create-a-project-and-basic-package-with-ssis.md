@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7dbb0c4b512741f97dbce2794c83d3667142324
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296065"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257075"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 课：使用 SSIS 创建项目和基本包
 
@@ -35,7 +35,7 @@ ms.locfileid: "71296065"
   
 * 要下载本教程的所有课程包，请执行以下操作：
 
-    1.  导航到 [Integration Services 教程文件](https://www.microsoft.com/en-us/download/details.aspx?id=56827)。
+    1.  导航到 [Integration Services 教程文件](https://www.microsoft.com/download/details.aspx?id=56827)。
 
     2.  选择“下载”按钮  。
 
@@ -68,19 +68,19 @@ ms.locfileid: "71296065"
   
 |列名|数据类型|查找表|查找列|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|FLOAT|None|None|  
+|AverageRate|FLOAT|无|无|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
-|DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|FLOAT|None|None|  
+|日期键|int (FK)|DimDate|DateKey (PK)|  
+|EndOfDayRate|FLOAT|无|无|  
   
 ## <a name="map-the-source-data-to-the-destination"></a>源数据映射到目标  
 对源数据和目标数据格式的分析指出需要查找 CurrencyKey 和 DateKey 值   。 将执行这些查找的转换通过使用 DimCurrency 和 DimDate 维度表中的备用键来获取这些值   。  
   
-|平面文件列|表名|列名|数据类型|  
+|平面文件列|表名称|列名|数据类型|  
 |--------------------|--------------|---------------|-------------|  
-|0|FactCurrencyRate|AverageRate|float|  
+|0|FactCurrencyRate|AverageRate|FLOAT|  
 |1|DimCurrency|CurrencyAlternateKey|nchar(3)|  
-|2|DimDate|FullDateAlternateKey|日期|  
+|2|DimDate|FullDateAlternateKey|date|  
 |3|FactCurrencyRate|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>课程任务  

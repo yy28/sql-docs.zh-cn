@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f3f8ee0d5766214ed7dc111728c37d0d41f071
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632908"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257018"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>第 1 课：创建和查询数据库对象
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "73632908"
 有关数据类型的列表以及每种数据类型的说明链接，请参阅[数据类型 (Transact-SQL)](../t-sql/data-types/data-types-transact-sql.md)。  
   
 > [!NOTE]  
-> [!INCLUDE[ssDE](../includes/ssde-md.md)]可安装为区分大小写或不区分大小写。 如果 [!INCLUDE[ssDE](../includes/ssde-md.md)] 区分大小写进行安装，则对象名必须始终具有相同的大小写。 例如，名为 OrderData 的表与名为 ORDERDATA 的表是不同的表。 如果 [!INCLUDE[ssDE](../includes/ssde-md.md)] 按不区分大小写进行安装，则这两个表名被视为同一个表，而且该名称只能使用一次。  
+> [!INCLUDE[ssDE](../includes/ssde-md.md)] 可安装为区分大小写或不区分大小写。 如果 [!INCLUDE[ssDE](../includes/ssde-md.md)] 区分大小写进行安装，则对象名必须始终具有相同的大小写。 例如，名为 OrderData 的表与名为 ORDERDATA 的表是不同的表。 如果 [!INCLUDE[ssDE](../includes/ssde-md.md)] 按不区分大小写进行安装，则这两个表名被视为同一个表，而且该名称只能使用一次。  
   
   
 ### <a name="switch-the-query-editor-connection-to-the-testdata-database"></a>将查询编辑器连接切换到 TestData 数据库  
@@ -84,14 +84,14 @@ ms.locfileid: "73632908"
   ```  
   
 ### <a name="create-the-table"></a>创建表
-在查询编辑器窗口中，键入以下代码，并执行它以创建一个名为 `Products`的简单表。 该表中各列的名称为 `ProductID`、 `ProductName`、 `Price`和 `ProductDescription`。 `ProductID` 列是表的主键。 `int``varchar(25)`、 `money`和 `text` 都是数据类型。 当插入或更改行时，只有 `Price` 和 `ProductionDescription` 列可以不包含数据。 此语句包含称为架构的可选元素 (`dbo.`)。 架构是拥有表的数据库对象。 如果您是管理员，则 `dbo` 是默认架构。 `dbo` 代表数据库所有者。  
+在查询编辑器窗口中，键入以下代码，并执行它以创建一个名为 `Products`的简单表。 该表中各列的名称为 `ProductID`、 `ProductName`、 `Price`和 `ProductDescription`。 `ProductID` 列是表的主键。 `int``varchar(25)`、 `money`和 `varchar(max)` 都是数据类型。 当插入或更改行时，只有 `Price` 和 `ProductionDescription` 列可以不包含数据。 此语句包含称为架构的可选元素 (`dbo.`)。 架构是拥有表的数据库对象。 如果您是管理员，则 `dbo` 是默认架构。 `dbo` 代表数据库所有者。  
   
   ```sql  
   CREATE TABLE dbo.Products  
      (ProductID int PRIMARY KEY NOT NULL,  
      ProductName varchar(25) NOT NULL,  
      Price money NULL,  
-     ProductDescription text NULL)  
+     ProductDescription varchar(max) NULL)  
   GO  
  ```  
 
