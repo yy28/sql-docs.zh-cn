@@ -1,21 +1,20 @@
 ---
-title: Ubuntu 上的 SQL Server 入门
-titleSuffix: SQL Server
+title: Ubuntu：在 Linux 上安装 SQL Server
 description: 本快速入门介绍如何在 Ubuntu 上安装 SQL Server 2017 或 SQL Server 2019，然后使用 sqlcmd 创建和查询数据库。
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sqlfreshmay19
+ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 17f73e7529fb8e74e9ff83de8d7e0ebd61783909
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: df3609c5bf4f31ee8a32992127681d42609b9528
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531352"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558411"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入门：安装 SQL Server 并在 Ubuntu 上创建数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "73531352"
 ::: moniker-end
 
 > [!TIP]
-> 本教程需要用户输入和 internet 连接。 如果对无人参与或脱机安装过程感兴趣，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
+> 本教程需要用户输入和 Internet 连接。 如果对无人参与或脱机安装过程感兴趣，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -156,9 +155,9 @@ ms.locfileid: "73531352"
 
 ## <a id="tools"></a>安装 SQL Server 命令行工具
 
-若要创建数据库，则需要使用可在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤安装 SQL Server 命令行工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
+若要创建数据库，则需要使用可在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤将安装 SQL Server 命令行工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
 
-通过下列步骤在 Ubuntu 上安装 mssql-tools  。 
+通过以下步骤在 Ubuntu 上安装 **mssql-tools**。 
 
 1. 导入公共存储库 GPG 密钥。
 

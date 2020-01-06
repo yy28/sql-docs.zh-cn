@@ -1,6 +1,5 @@
 ---
-title: 扩展事件工具 | Microsoft Docs
-ms.custom: ''
+title: 扩展事件工具
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +13,12 @@ ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8daf9891191b79a2b5c37a37671fa8e38813cdeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 811542608a33777a5e44183f65e44d8321a65c63
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021876"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234633"
 ---
 # <a name="extended-events-tools"></a>扩展事件工具
 
@@ -35,14 +34,14 @@ ms.locfileid: "68021876"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序。 这是一个强大的工具，可用于创建、更改和管理扩展事件会话。 有关详细信息，请参阅 [对扩展事件使用 PowerShell 提供程序](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 该工具可用于创建和执行在扩展事件主题中提供的代码示例。 有关详细信息，请参阅 [对象资源管理器](../../ssms/object/object-explorer.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 列中的一个值匹配。 该工具可用于创建和执行在扩展事件主题中提供的代码示例。 有关详细信息，请参阅 [对象资源管理器](../../ssms/object/object-explorer.md)。  
   
  除了您创建的会话之外，在服务器上存在一个默认的系统运行状况会话。 该会话收集的系统数据可用于帮助解决性能问题。 有关详细信息，请参阅 [使用 system_health 会话](../../relational-databases/extended-events/use-the-system-health-session.md)。  
   
 ## <a name="ddl-statements"></a>DDL 语句  
  请以下 DDL 语句可以创建、更改和删除扩展事件会话。  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)|创建用于标识事件源、事件会话目标和事件会话参数的扩展事件会话对象。|  
 |[ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)|启动或停止事件会话，或更改事件会话配置。|  
@@ -51,13 +50,13 @@ ms.locfileid: "68021876"
 ## <a name="catalog-views"></a>目录视图  
  使用下面的目录视图可获取创建事件会话时所创建的元数据。  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[sys.server_event_sessions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)|列出所有事件会话定义。|  
-|[sys.server_event_session_actions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql.md)|对事件会话中每个事件的每个操作都返回一行。|  
-|[sys.server_event_session_events (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-events-transact-sql.md)|对事件会话中的每个事件都返回一行。|  
+|[sys.server_event_session_actions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql.md)|返回针对事件会话的每个事件执行的每个操作所对应的行。|  
+|[sys.server_event_session_events (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-events-transact-sql.md)|返回事件会话中每个事件所对应的行。|  
 |[sys.server_event_session_fields (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-fields-transact-sql.md)|对在事件和目标上显式设置的每个可自定义列都返回一行。|  
-|[sys.server_event_session_targets (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-targets-transact-sql.md)|对事件会话的每个事件目标都返回一行。|  
+|[sys.server_event_session_targets (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-targets-transact-sql.md)|返回事件会话的每个事件目标所对应的行。|  
   
 ## <a name="dynamic-management-views"></a>动态管理视图  
  使用下面的动态管理视图可以获取会话元数据和会话数据。 将从目录视图中获取元数据，当启动并运行事件会话时即创建会话数据。  
@@ -65,7 +64,7 @@ ms.locfileid: "68021876"
 > [!NOTE]  
 >  直到会话启动，这些视图中才会包含会话数据。  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md)|返回有关会话调度程序池的信息。|  
 |[sys.dm_xe_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)|对事件包显示的每个对象都返回一行。|  
@@ -81,7 +80,7 @@ ms.locfileid: "68021876"
 ## <a name="system-tables"></a>系统表  
  使用下面的系统表可以获取与 SQL 跟踪事件类和列的扩展事件等效项有关的信息。  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[trace_xe_event_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|映射到 SQL 跟踪事件类的每个扩展事件各占一行。|  
 |[trace_xe_action_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|映射到 SQL 跟踪列 ID 的每个扩展事件操作各占一行。|  

@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a0ad547d26c86c43b0009cdf20acae33ed7e8ab7
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: ee00232a1c1e64d31b7b6360666bdeebba756db9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553240"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246951"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -43,7 +43,7 @@ Microsoft Connector for Oracle 支持以下 Microsoft SQL Server 产品：
 
 ## <a name="installation"></a>安装
 
-如果需要在 SQL Server 中运行包，可以从[此处](https://www.microsoft.com/en-us/download/details.aspx?id=58228)获取 Microsoft Connector for Oracle Database 安装程序。 然后按照安装向导中的说明进行操作。
+如果需要在 SQL Server 中运行包，可以从[此处](https://www.microsoft.com/download/details.aspx?id=58228)获取 Microsoft Connector for Oracle Database 安装程序。 然后按照安装向导中的说明进行操作。
 
 安装连接器后，必须重启 SQL Server Integration Services，才能确保 Oracle 源和目标正常运行。
 
@@ -61,10 +61,10 @@ Microsoft Connector for Oracle 支持以下 Microsoft SQL Server 产品：
 
 **下载链接：**
 
-- [SQL Server 2017：适用于 Oracle 的 Attunity Microsoft Connector 版本 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=55179)
-- [SQL Server 2016：适用于 Oracle 的 Attunity Microsoft Connector 版本 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=52950)
-- [SQL Server 2014：适用于 Oracle 的 Attunity Microsoft Connector 版本 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=44582)
-- [SQL Server 2012：适用于 Oracle 的 Attunity Microsoft Connector 版本 2.0](https://www.microsoft.com/en-us/download/details.aspx?id=29283)
+- [SQL Server 2017：适用于 Oracle 的 Attunity Microsoft Connector 版本 5.0](https://www.microsoft.com/download/details.aspx?id=55179)
+- [SQL Server 2016：适用于 Oracle 的 Attunity Microsoft Connector 版本 4.0](https://www.microsoft.com/download/details.aspx?id=52950)
+- [SQL Server 2014：适用于 Oracle 的 Attunity Microsoft Connector 版本 3.0](https://www.microsoft.com/download/details.aspx?id=44582)
+- [SQL Server 2012：适用于 Oracle 的 Attunity Microsoft Connector 版本 2.0](https://www.microsoft.com/download/details.aspx?id=29283)
 
 ## <a name="next-steps"></a>后续步骤
 

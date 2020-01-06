@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809786"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252234"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南介绍如何在 Red Hat Enterprise Linux 上为 SQL Server 创建两节点的共享磁盘群集。 此群集层基于在 [Pacemaker](https://clusterlabs.org/) 的基础上构建的 Red Hat Enterprise Linux (RHEL) [HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)。 SQL Server 实例在一个节点或另一个节点上处于活动状态。
+本指南介绍如何在 Red Hat Enterprise Linux 上为 SQL Server 创建两节点的共享磁盘群集。 集群层基于在 [Pacemaker](https://clusterlabs.org/) 的基础上构建的 Red Hat Enterprise Linux (RHEL) [HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)。 SQL Server 实例在一个节点或另一个节点上处于活动状态。
 
 > [!NOTE] 
 > 需拥有订阅才能访问 Red Hat HA 加载项和文档。 
@@ -33,10 +33,10 @@ ms.locfileid: "70809786"
 
 
 > [!NOTE] 
-> 此时，SQL Server 与 Pacemaker 的集成不及与在 Windows 上与 WSFC 集成的耦合性高。 在 SQL 内部，无法了解到群集是否存在，所有业务流程都是由外至内，且 Pacemaker 将该服务作为一个独立实例控制。 另外，例如，群集 dmvs sys.dm_os_cluster_nodes 和 sys.dm_os_cluster_properties 不会有记录。
+> 此时，SQL Server 与 Pacemaker 的集成不及与在 Windows 上与 WSFC 集成的耦合性高。 在 SQL 内部，无法了解到群集是否存在，所有业务流程都是由外至内，并且 Pacemaker.将该服务作为一个独立实例控制。 另外，例如，群集 dmvs sys.dm_os_cluster_nodes 和 sys.dm_os_cluster_properties 不会有记录。
 为了使用指向字符串服务器名称的连接字符串，且不使用 IP，它们需要在其 DNS 服务器中注册用于创建使用选定服务器名称的虚拟 IP 资源的 IP（如以下部分所述）。
 
-以下各部分介绍了设置故障转移群集解决方案的步骤。 
+以下部分介绍了设置故障转移群集解决方案的步骤。 
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -46,7 +46,7 @@ ms.locfileid: "70809786"
 
 第一步是在群集节点上配置操作系统。 对于此演练，将通过 HA 加载项的有效订阅使用 RHEL。 
 
-## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>在每个群集节点上安装并配置 SQL Server
+## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>在每个群集节点上安装和配置 SQL Server
 
 1. 在两个节点上安装并设置 SQL Server。  有关详细说明，请参阅[安装 Linux 上的 SQL Server](sql-server-linux-setup.md)。
 
@@ -63,7 +63,7 @@ ms.locfileid: "70809786"
 > [!NOTE] 
 > 在设置时，为 SQL Server 实例生成服务器主密钥并将其置于 `/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，所以其标识不会在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。 
 
-1. 在主节点上，为 Pacemaker 创建 SQL Server 登录名并授予登录权限以运行 `sp_server_diagnostics`。 Pacemaker 使用此帐户验证哪个节点正在运行 SQL Server。 
+1. 在主节点上，为 Pacemaker 创建 SQL Server 登录名并授予登录权限以运行 `sp_server_diagnostics`。 Pacemaker 使用此帐户验证正在运行 SQL Server 的节点。 
 
    ```bash
    sudo systemctl start mssql-server
@@ -90,7 +90,7 @@ ms.locfileid: "70809786"
    sudo ip addr show
    ```
 
-   在每个节点上设置计算机名称。 为每个节点提供长度不超过 15 个字符的唯一名称。 通过将其添加到 `/etc/hosts` 来设置计算机名。 以下脚本可使用 `vi` 编辑 `/etc/hosts`。 
+   在每个节点上设置计算机名。 为每个节点提供长度不超过 15 个字符的唯一名称。 通过将计算机名添加到 `/etc/hosts` 来设置该名称。 以下脚本可使用 `vi` 编辑 `/etc/hosts`。 
 
    ```bash
    sudo vi /etc/hosts
@@ -104,14 +104,14 @@ ms.locfileid: "70809786"
    10.128.16.77 sqlfcivm2
    ```
 
-在下一节中，将配置共享存储并且会将数据库文件移到该存储。 
+在下一部分中，将配置共享存储并将数据库文件移到该存储。 
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>配置共享存储并移动数据库文件 
 
 有多种解决方案可用于提供共享存储。 本演练演示如何使用 NFS 配置共享存储。 建议按照最佳做法进行操作，并使用 Kerberos 保护 NFS（可在此处找到示例： https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/) ）。 
 
 >[!Warning]
->如果不保护 NFS，则可访问网络以及能够欺骗 SQL 节点 IP 地址的任何人均能访问你的数据文件。 与往常一样，请确保在将系统投入生产前对其进行威胁建模。 另一种存储方法是使用 SMB 文件共享。
+>如果不保护 NFS，则可访问网络以及能够欺骗 SQL 节点 IP 地址的任何人均能访问你的数据文件。 与往常一样，请确保在将系统投入生产前，针对系统建立威胁模型。 另一种存储方法是使用 SMB 文件共享。
 
 ### <a name="configure-shared-storage-with-nfs"></a>使用 NFS 配置共享存储
 
@@ -202,11 +202,11 @@ ms.locfileid: "70809786"
 
 * [NFS 服务器和 firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [装载 NFS 卷 | Linux 网络管理员指南](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [NFS 服务器配置 | Red Hat 客户门户](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [NFS 服务器配置 | Red Hat 客户门户](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>装载数据库文件目录，使其指向共享存储
 
-1.  仅在主节点上，将数据库文件保存到一个临时位置。以下脚本将创建一个新的临时目录，将数据库文件复制到新的目录中并删除旧的数据库文件  。 以本地用户 mssql 身份运行 SQL Server 时，需要确保将数据传输到装载的共享后，本地用户对共享具有读写权限。 
+1.  仅在主节点上，将数据库文件保存到一个临时位置。以下脚本将创建一个新的临时目录，将数据库文件复制到新的目录中并删除旧的数据库文件  。 SQL Server 以本地用户 mssql 的身份运行时，需要确保在将数据传输到已装载的共享后，本地用户对共享具有读写访问权限。 
 
    ``` 
    $ sudo su mssql

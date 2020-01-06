@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9e6ef9592f980cab3e379fc27083ed34b8e94798
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531304"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243598"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 配置持久性内存 (PMEM)
 
@@ -79,7 +79,7 @@ ndctl list
 
   使用 ndctl 配置设备，并将其格式化和装载后，可以将数据库文件放在其中。 还可以创建新的数据库 
 
-1. 由于 PMEM 设备是 O_DIRECT 安全的，因此请启用跟踪标志 3979来禁用强制刷新机制。 此跟踪标志为启动跟踪标志，因此需要使用 mssql-conf 实用工具来启用。 请注意，这是服务器范围的配置更改，如果有任何需要强制刷新机制以确保数据完整性的 O_DIRECT 不兼容设备，则不应使用此跟踪标志。 有关详细信息，请参阅 https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
+1. 由于 PMEM 设备是 O_DIRECT 安全的，因此请启用跟踪标志 3979来禁用强制刷新机制。 此跟踪标志为启动跟踪标志，因此需要使用 mssql-conf 实用工具来启用。 请注意，这是服务器范围的配置更改，如果有任何需要强制刷新机制以确保数据完整性的 O_DIRECT 不兼容设备，则不应使用此跟踪标志。 有关详细信息，请参阅 https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
 
 1. 请重新启动 SQL Server。
 

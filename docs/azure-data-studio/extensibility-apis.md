@@ -10,27 +10,27 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 10ebcf94c673df4e8016ae2d0c84d7a5bd89824f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8a4ebe26cbbf768222c7b97b95fa7df238faded3
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959627"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001892"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 扩展性 API
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] 提供了一个 API，扩展可以使用该 API 与 Azure Data Studio 的其他部分（例如对象资源管理器）进行交互。 这些 API 可从 [`src/sql/sqlops.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts) 文件中获得，如下所述。
+[!INCLUDE[name-sos](../includes/name-sos.md)] 提供了一个 API，扩展可以使用该 API 与 Azure Data Studio 的其他部分（例如对象资源管理器）进行交互。 这些 API 可从 [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.d.ts) 文件中获得，如下所述。
 
 ## <a name="connection-management"></a>连接管理
-`sqlops.connection`
+`azdata.connection`
 
 ### <a name="top-level-functions"></a>顶级函数
 
-- `getCurrentConnection(): Thenable<sqlops.connection.Connection>` 根据活动编辑器或对象资源管理器选择获取当前连接。
+- `getCurrentConnection(): Thenable<azdata.connection.Connection>` 根据活动编辑器或对象资源管理器选择获取当前连接。
 
-- `getActiveConnections(): Thenable<sqlops.connection.Connection[]>` 获取用户的所有活动连接的列表。 如果没有此类连接，则返回一个空列表。
+- `getActiveConnections(): Thenable<azdata.connection.Connection[]>` 获取用户的所有活动连接的列表。 如果没有此类连接，则返回一个空列表。
 
-- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` 获取一个字典，其中包含与连接关联的凭据。 如果不以字典的形式获取凭据，这些凭据将作为选项字典的一部分在 `sqlops.connection.Connection` 对象下返回，但会从该对象中去除。 
+- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` 获取一个字典，其中包含与连接关联的凭据。 如果不以字典的形式获取凭据，这些凭据将作为选项字典的一部分在 `azdata.connection.Connection` 对象下返回，但会从该对象中去除。 
 
 ### `Connection`
 - `options: { [name: string]: string }` 连接选项字典
@@ -39,7 +39,7 @@ ms.locfileid: "67959627"
 
 ### <a name="example-code"></a>示例代码
 ```
-> let connection = sqlops.connection.getCurrentConnection();
+> let connection = azdata.connection.getCurrentConnection();
 connection: {
     providerName: 'MSSQL',
     connectionId: 'd97bb63a-466e-4ef0-ab6f-00cd44721dcc',
@@ -51,7 +51,7 @@ connection: {
     },
     ...
 }
-> let credentials = sqlops.connection.getCredentials(connection.connectionId);
+> let credentials = azdata.connection.getCredentials(connection.connectionId);
 credentials: {
     password: 'abc123'
 }
@@ -60,15 +60,15 @@ credentials: {
 
 ## <a name="object-explorer"></a>“对象资源管理器”
 
-`sqlops.objectexplorer`
+`azdata.objectexplorer`
 
 
 ### <a name="top-level-functions"></a>顶级函数
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 获取与给定连接和路径对应的对象资源管理器节点。 如果未给定路径，则返回给定连接的顶级节点。 如果给定路径上没有节点，则返回 `undefined`。 注意：对象的 `nodePath` 由 SQL 工具服务后端生成，很难手动构造。 未来的 API 改进将允许根据你提供的有关节点的元数据来获取节点，例如名称、类型和架构。
+- `getNode(connectionId: string, nodePath?: string): Thenable<azdata.objectexplorer.ObjectExplorerNode>` 获取与给定连接和路径对应的对象资源管理器节点。 如果未给定路径，则返回给定连接的顶级节点。 如果给定路径上没有节点，则返回 `undefined`。 注意：对象的 `nodePath` 由 SQL 工具服务后端生成，很难手动构造。 未来的 API 改进将允许根据你提供的有关节点的元数据来获取节点，例如名称、类型和架构。
 
-- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 获取所有活动的对象资源管理器连接节点。
+- `getActiveConnectionNodes(): Thenable<azdata.objectexplorer.ObjectExplorerNode>` 获取所有活动的对象资源管理器连接节点。
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` 查找与给定元数据匹配的所有对象资源管理器节点。 `schema`、`database` 和 `parentObjectNames` 参数在不适用时应为 `undefined`。 `parentObjectNames` 是对象资源管理器中位于所需对象之上的非数据库父对象（从最高级别到最低级别）的列表。 例如，当使用连接 ID `connectionId` 搜索属于表“schema1.table1”和数据库“database1”的列“column1”时，请调用 `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`。 另请参阅 [Azure Data Studio 针对此 API 调用默认支持的类型的列表](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API)。
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<azdata.objectexplorer.ObjectExplorerNode[]>` 查找与给定元数据匹配的所有对象资源管理器节点。 `schema`、`database` 和 `parentObjectNames` 参数在不适用时应为 `undefined`。 `parentObjectNames` 是对象资源管理器中位于所需对象之上的非数据库父对象（从最高级别到最低级别）的列表。 例如，当使用连接 ID `connectionId` 搜索属于表“schema1.table1”和数据库“database1”的列“column1”时，请调用 `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`。 另请参阅 [Azure Data Studio 针对此 API 调用默认支持的类型的列表](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API)。
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
 - `connectionId: string` 节点所在的连接的 ID
@@ -85,7 +85,7 @@ credentials: {
 
 - `isLeaf: boolean` 节点是否为叶节点，因此没有任何子级
 
-- `metadata: sqlops.ObjectMetadata` 描述此节点表示的对象的元数据
+- `metadata: azdata.ObjectMetadata` 描述此节点表示的对象的元数据
 
 - `errorMessage: string` 节点处于错误状态时显示的消息
 
@@ -95,14 +95,14 @@ credentials: {
 
 - `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` 设置是否选择了节点。 如果 `clearOtherSelections` 为 true，则在进行新选择时清除所有其他选择。 如果为 false，则保留所有现有选择。 如果 `selected` 为 true，则 `clearOtherSelections` 默认为 true；如果 `selected` 为 false，则默认为 false。
 
-- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` 获取此节点的所有子节点。 如果没有子节点，则返回一个空列表。
+- `getChildren(): Thenable<azdata.objectexplorer.ObjectExplorerNode[]>` 获取此节点的所有子节点。 如果没有子节点，则返回一个空列表。
 
-- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 获取此节点的父节点。 如果没有父节点，则返回 undefined。
+- `getParent(): Thenable<azdata.objectexplorer.ObjectExplorerNode>` 获取此节点的父节点。 如果没有父节点，则返回 undefined。
 
 ### <a name="example-code"></a>示例代码
 
 ```cs
-private async interactWithOENode(selectedNode: sqlops.objectexplorer.ObjectExplorerNode): Promise<void> {
+private async interactWithOENode(selectedNode: azdata.objectexplorer.ObjectExplorerNode): Promise<void> {
     let choices = ['Expand', 'Collapse', 'Select', 'Select (multi)', 'Deselect', 'Deselect (multi)'];
     if (selectedNode.isLeaf) {
         choices[0] += ' (is leaf)';
@@ -122,7 +122,7 @@ private async interactWithOENode(selectedNode: sqlops.objectexplorer.ObjectExplo
     let children = await selectedNode.getChildren();
     children.forEach(child => choices.push(child.label));
     let choice = await vscode.window.showQuickPick(choices);
-    let nextNode: sqlops.objectexplorer.ObjectExplorerNode = undefined;
+    let nextNode: azdata.objectexplorer.ObjectExplorerNode = undefined;
     if (choice === choices[0]) {
         selectedNode.setExpandedState(vscode.TreeItemCollapsibleState.Expanded);
     } else if (choice === choices[1]) {
@@ -142,13 +142,13 @@ private async interactWithOENode(selectedNode: sqlops.objectexplorer.ObjectExplo
         nextNode = childNode;
     }
     if (nextNode) {
-        let updatedNode = await sqlops.objectexplorer.getNode(nextNode.connectionId, nextNode.nodePath);
+        let updatedNode = await azdata.objectexplorer.getNode(nextNode.connectionId, nextNode.nodePath);
         this.interactWithOENode(updatedNode);
     }
 }
 
 vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
-    sqlops.objectexplorer.getActiveConnectionNodes().then(activeConnections => {
+    azdata.objectexplorer.getActiveConnectionNodes().then(activeConnections => {
         vscode.window.showQuickPick(activeConnections.map(connection => connection.label + ' ' + connection.connectionId)).then(selection => {
             let selectedNode = activeConnections.find(connection => connection.label + ' ' + connection.connectionId === selection);
             this.interactWithOENode(selectedNode);
@@ -159,6 +159,6 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 
 ## <a name="proposed-apis"></a>建议的 API
 
-我们添加了建议的 API，以允许扩展在对话框、向导和文档选项卡中显示自定义 UI 以及其他功能。 有关更多文档，请参阅[建议的 API 类型文件](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts)，但请注意，这些 API 随时可能发生更改。 有关如何使用其中一些 API 的示例，请参阅[“sqlservices”示例扩展](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices)。
+我们添加了建议的 API，以允许扩展在对话框、向导和文档选项卡中显示自定义 UI 以及其他功能。 有关更多文档，请参阅[建议的 API 类型文件](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.proposed.d.ts)，但请注意，这些 API 随时可能发生更改。 有关如何使用其中一些 API 的示例，请参阅[“sqlservices”示例扩展](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices)。
 
 

@@ -1,6 +1,5 @@
 ---
-title: 快速入门：SQL Server 中的扩展事件 | Microsoft Docs
-ms.custom: ''
+title: 快速入门：SQL Server 中的扩展事件
 ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe13d14db11b95812217725bb4207ee30b50d62b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798427"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242924"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>快速入门：SQL Server 中的扩展事件
 
@@ -58,9 +57,9 @@ ms.locfileid: "72798427"
 
 1. [下载 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
   - 每个月应安装 SSMS 最新的每月更新。
-2. 登录到 Microsoft SQL Server 2014 或更高版本，或登录到 Azure SQL 数据库（`SELECT @@version` 将返回一个值，该值的第一个节点为 12 或更高版本）。
+2. 登录到 Microsoft SQL Server 2014 或更高版本，或登录到 Azure SQL 数据库（ `SELECT @@version` 将返回一个值，该值的第一个节点为 12 或更高版本）。
 3. 确保你的帐户具有**更改任意事件会话**[服务器权限](../../t-sql/statements/grant-server-permissions-transact-sql.md)。
-  - 如果有兴趣了解有关扩展事件的相关安全性和权限的更多详细信息，请参阅本文末尾的[附录](#appendix1)。
+  - 如果有兴趣了解有关扩展事件的相关安全性和权限的更多详细信息，请参阅本文末尾的 [附录](#appendix1)。
 
 
 
@@ -101,7 +100,7 @@ SSMS.exe 为扩展事件提供一个出色的用户界面 (UI)。 之所以出�
 
 5. 在“事件库”  区域的下拉列表中，选择“仅事件名称”  。
     - 在文本框中键入 **sql**，这可以通过使用“包含”  运算符筛选并缩短可用事件长列表。
-    - 滚动并单击名为 **sql_statement_completed** 的事件。
+    - 滚动并单击名为 **sql_statement_completed**的事件。
     - 单击右箭头按钮 **>** 将该事件移到“所选事件”  框中。
 
 6. 继续留在“事件”  页，单击最右边的“配置”  按钮。
@@ -242,7 +241,7 @@ ALTER EVENT SESSION [YourSession]
 2. 多次运行以下 `SELECT...HAVING` 语句。
     - 理想情况下，可能会在两次运行之间将 `HAVING Count` 值在 2 和 3 之间切换。 这样你就可以看到结果中的差异。
 3. 右键单击会话节点，然后单击“停止会话”  。
-4. 有关[如何使用 SELECT 查看结果](#select-the-full-results-xml-37)，请阅读下一小节。
+4. 有关 [如何使用 SELECT 查看结果](#select-the-full-results-xml-37)，请阅读下一小节。
 
 
 
@@ -387,7 +386,7 @@ SELECT
 ### <a name="view-target-data"></a>查看目标数据
 
 
-在 SSMS 的**对象资源管理器**中，可以右键单击事件会话节点下的目标节点。 在上下文菜单中单击“查看目标数据”  。 SSMS 将显示数据。
+在 SSMS 的 **对象资源管理器**中，可以右键单击事件会话节点下的目标节点。 在上下文菜单中单击“查看目标数据”  。 SSMS 将显示数据。
 
 事件报告新数据时，显示内容不会更新。 不过，你可以再次单击“查看目标数据”  。
 
@@ -398,7 +397,7 @@ SELECT
 ### <a name="watch-live-data"></a>查看实时数据
 
 
-在 SSMS 的**对象资源管理器**中，可以右键单击事件会话节点。 在上下文菜单中单击“查看实时数据”  。 SSMS 将在传入数据持续实时到达时显示这些数据。
+在 SSMS 的 **对象资源管理器**中，可以右键单击事件会话节点。 在上下文菜单中单击“查看实时数据”  。 SSMS 将在传入数据持续实时到达时显示这些数据。
 
 
 ![查看实时数据，在 SSMS 中，管理 > 扩展事件 > 会话 > YourSession，右键单击](../../relational-databases/extended-events/media/xevents-watchlivedata-ssms-yoursessionnode-63.png)
@@ -424,14 +423,14 @@ SELECT
 下表列出了用于扩展事件的术语，并描述了它们的含义。
 
 
-| 术语 | 描述 |
+| 术语 | 说明 |
 | :--- | :---------- |
 | 事件会话 | 一种构造，该构造以一个或多个事件为中心，再加上一些支持项（如操作或目标）。 CREATE EVENT SESSION 语句用于构造每个事件会话。 你可以随时使用 ALTER 来启动和停止事件会话。 <br/> <br/> 事件会话有时简称为 *会话*，但前提是上下文表明了它指的是 *事件会话*。 <br/> <br/> 有关事件会话的更多详细信息，请参阅：[SQL Server 扩展事件会话](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。 |
-| 事件 | 系统中发生的由活动事件会话监视的特定事件。 <br/> <br/> 例如， *sql_statement_completed* 事件表示任何给定 T-SQL 语句完成的那一刻。 该事件可以报告其持续时间和其他数据。 |
-| target | 从捕获的事件接收输出数据的项。 目标会向你显示数据。 <br/> <br/> 示例包括 *event_file*，以及它非常方便的轻量级同类 — 内存 *ring_buffer*。 更加高级的 *histogram* 目标可在显示数据之前对其进行一些处理。 <br/> <br/> 任何目标均可用于任何事件会话。 有关详细信息，请参阅 [SQL Server 中扩展事件的目标](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)。 |
+| event | 系统中发生的由活动事件会话监视的特定事件。 <br/> <br/> 例如， *sql_statement_completed* 事件表示任何给定 T-SQL 语句完成的那一刻。 该事件可以报告其持续时间和其他数据。 |
+| 目标 | 从捕获的事件接收输出数据的项。 目标会向你显示数据。 <br/> <br/> 示例包括 *event_file*，以及它非常方便的轻量级同类 — 内存 *ring_buffer*。 更加高级的 *histogram* 目标可在显示数据之前对其进行一些处理。 <br/> <br/> 任何目标均可用于任何事件会话。 有关详细信息，请参阅 [SQL Server 中扩展事件的目标](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)。 |
 | action | 事件已知的字段。 该字段中的数据将发送到目标。 操作字段与 *谓词筛选器*密切相关。 |
 | 谓词筛选器 | 对事件字段中数据的测试，通过使用该筛选器，可以仅将相关的一部分事件实例发送到目标。 <br/> <br/> 例如，筛选器可以只包含那些 T-SQL 语句含字符串 *HAVING* 的 *sql_statement_completed*事件实例。 |
-| 包 | 一种名称限定符，它附加到以事件核心为中心的一组项中的每个项。 <br/> <br/> 例如，包可能包含与 T-SQL 文本有关的事件。 一个事件可能与某个 GO 分隔批处理中的所有 T-SQL 有关。 同时，另一个更狭窄的事件与单个 T-SQL 语句有关。 此外，任何一个 T-SQL 语句都有开始事件和已完成事件。 <br/> <br/> 适用于事件的字段也位于事件所在的包中。 大多数目标位于 *package0* 中，可与其他许多包中的事件一起使用。 |
+| 程序包 | 一种名称限定符，它附加到以事件核心为中心的一组项中的每个项。 <br/> <br/> 例如，包可能包含与 T-SQL 文本有关的事件。 一个事件可能与某个 GO 分隔批处理中的所有 T-SQL 有关。 同时，另一个更狭窄的事件与单个 T-SQL 语句有关。 此外，任何一个 T-SQL 语句都有开始事件和已完成事件。 <br/> <br/> 适用于事件的字段也位于事件所在的包中。 大多数目标位于 *package0* 中，可与其他许多包中的事件一起使用。 |
 
 
 ## <a name="how-to-discover-the-available-events-in-packages"></a>如何发现包中的可用事件

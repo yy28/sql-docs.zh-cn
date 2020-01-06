@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586756"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243590"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>有关 Linux 部署的 SQL Server 可用性基础知识
 
@@ -57,7 +57,7 @@ ms.locfileid: "72586756"
 将文件从一台服务器复制到另一台服务器是一项任何人使用 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 都应该能够完成的任务。 此任务对 AG 配置非常重要。
 
 在 Linux 和基于 Windows 的安装上都可能存在权限等问题。 但是，那些熟悉如何在 Windows 上从服务器复制到服务器的人可能不熟悉在 Linux 上如何完成此操作。 常见方法是使用代表安全复制的命令行实用工具 `scp`。 在后台，`scp` 使用 OpenSSH。 SSH 代表安全外壳。 根据 Linux 分发版，可能未安装 OpenSSH 本身。 如果未安装，则需要先安装 OpenSSH。 有关配置 OpenSSH 的详细信息，请参阅以下链接中有关每个分发版的信息：
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -83,7 +83,7 @@ Samba 是服务器消息块 (SMB) 的 Linux 变体，也可用于创建由 UNC �
 ### <a name="configure-the-firewall"></a>配置防火墙
 与 Windows 类似，Linux 分发版也具有内置防火墙。 如果你的公司正在服务器上使用外部防火墙，那么在 Linux 中禁用防火墙可能是可以接受的。 但是，无论在何处启用防火墙，都需要打开端口。 下表列出了 Linux 上高可用性 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署所需的公共端口。
 
-| 端口号 | 类型     | 描述                                                                                                                 |
+| 端口号 | 类型     | 说明                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba（如果使用）- 终结点映射程序                                                                                          |
@@ -116,7 +116,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **防火墙文档：**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>安装 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 包以实现可用性

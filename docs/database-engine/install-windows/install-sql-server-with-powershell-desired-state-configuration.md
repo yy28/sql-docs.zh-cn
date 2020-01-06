@@ -1,8 +1,8 @@
 ---
-title: 使用 PowerShell Desired State Configuration 安装 SQL Server | Microsoft Docs
+title: 安装：PowerShell 所需状态配置
 description: 了解如何使用 PowerShell Desired State Configuration (DSC) 安装 SQL Server。
-ms.custom: ''
-ms.date: 10/26/2018
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.devlang: PowerShell
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3966d681b9001b2bded09c6c92aa665eec7a2d9
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: 7e7b3f2d8673972100e01413e5688353cb7c87a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041057"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258986"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>使用 PowerShell Desired State Configuration 安装 SQL Server
 
@@ -86,7 +86,7 @@ Configuration SQLInstall
 Import-DscResource -ModuleName SqlServerDsc
 ```
 
-### <a name="resources"></a>Resources
+### <a name="resources"></a>资源
 
 #### <a name="net-framework"></a>.NET Framework
 
@@ -143,7 +143,7 @@ Configuration SQLInstall
 }
 ```
 
-## <a name="build-and-deploy"></a>生成和部署
+## <a name="build-and-deploy"></a>生成并部署
 
 ### <a name="compile-the-configuration"></a>编译配置
 

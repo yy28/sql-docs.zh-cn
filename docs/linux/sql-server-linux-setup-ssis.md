@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 68f3497e9f3f47d7e43c2bda0083bc25632d8221
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0ee4c32568a52f5eb7664fa8f22250370f46f033
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032439"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325469"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>在 Linux 上安装 SQL Server Integration Services (SSIS)
 
@@ -36,11 +36,18 @@ ms.locfileid: "68032439"
    ```
 
 2. 注册 Microsoft SQL Server Ubuntu 存储库。
-
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   ```
+::: moniker-end
 3. 运行以下命令，安装 SQL Server Integration Services。
 
    ```bash
@@ -78,10 +85,18 @@ sudo apt-get remove mssql-server-is
 
 1. 下载 Microsoft SQL Server Red Hat 存储库配置文件。
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   ```
+::: moniker-end
 1. 运行以下命令，安装 SQL Server Integration Services。
 
    ```bash
@@ -131,10 +146,10 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>无人参与安装的环境变量
 
-| 环境变量 | 描述 |
+| 环境变量 | 说明 |
 |---|---|
 | **ACCEPT_EULA** | 在设置为任何值（例如 `Y`）时接受 SQL Server 许可协议。|
-| **SSIS_PID** | 设置 SQL Server 版本或产品密钥。 可能的值有：<br/>Evaluation<br/>开发人员<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>产品密钥<br/><br/>如果指定产品密钥，则产品密钥必须采用 `#####-#####-#####-#####-#####` 格式，其中 `#` 是字母或数字。  |
+| **SSIS_PID** | 设置 SQL Server 版本或产品密钥。 可能的值有：<br/>计算<br/>开发人员<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>产品密钥<br/><br/>如果指定产品密钥，则产品密钥必须采用 `#####-#####-#####-#####-#####` 格式，其中 `#` 是字母或数字。  |
 | | |
 
 ## <a name="next-steps"></a>后续步骤
@@ -143,8 +158,8 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 若要在 linux 上配置其他 SSIS 设置，请参阅[使用 ssis-conf 在 linux 上配置 SQL Server Integration Services](sql-server-linux-configure-ssis.md)。
 
-## <a name="related-content-about-ssis-on-linux"></a>有关 Linux 上 SSIS 的相关内容
+## <a name="related-content-about-ssis-on-linux"></a>有关 Linux 上的 SSIS 的相关内容
 -   [使用 SSIS 在 Linux 上提取、转换和加载数据](sql-server-linux-migrate-ssis.md)
 -   [使用 ssis-conf 在 Linux 上配置 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
--   [适用于 Linux 上 SSIS 的限制和已知问题](sql-server-linux-ssis-known-issues.md)
--   [使用 Cron 在 Linux 上计划 SQL Server Integration Services 包执行](sql-server-linux-schedule-ssis-packages.md)
+-   [适用于 Linux 上的 SSIS 的限制和已知问题](sql-server-linux-ssis-known-issues.md)
+-   [使用 cron 在 Linux 上计划 SQL Server Integration Services 包执行](sql-server-linux-schedule-ssis-packages.md)

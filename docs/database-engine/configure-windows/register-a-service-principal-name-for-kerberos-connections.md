@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f41567d5c27bfb1d77010d7e0d3fe187adf9a36c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892433"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257512"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>为 Kerberos 连接注册服务主体名称
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  当启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务时，它将尝试注册服务主体名称 (SPN)。 如果启动 SQL Server 的帐户没有在 Active Directory 域服务中注册 SPN 的权限，则此调用将失败，并将在应用程序事件日志以及 SQL Server 错误日志中记录一条警告消息。 若要注册 SPN，必须在内置帐户（如 Local System（建议不要使用）或 NETWORK SERVICE）或有权注册 SPN 的帐户（如域管理员帐户）下运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或  [!INCLUDE[win7](../../includes/win7-md.md)] 操作系统上运行  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 时，可以使用虚拟帐户或托管服务帐户 (MSA) 运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 虚拟帐户和 MSA 都可以注册 SPN。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不在上述任一帐户下运行，则启动时不会注册 SPN，此时，域管理员必须手动注册 SPN。  
   
 > [!NOTE]  
->  将 Windows 域配置为在低于 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2 功能级别的级别上运行时，托管服务帐户将不具有注册 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务的 SPN 所需的权限。 如果需要进行 Kerberos 身份验证，域管理员应手动在托管服务帐户上注册 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SPN。  
-  
- 知识库文章 [How to use Kerberos authentication in SQL Server](https://support.microsoft.com/kb/319723)（如何在 SQL Server 中使用 Kerberos 身份验证）包含有关如何向非域管理员帐户授予 SPN 读或写权限的信息。  
+>  将 Windows 域配置为在低于 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2 功能级别的级别上运行时，托管服务帐户将不具有注册 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务的 SPN 所需的权限。 如果需要进行 Kerberos 身份验证，域管理员应手动在托管服务帐户上注册 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SPN。
   
  有关其他信息，请参阅 [How to Implement Kerberos Constrained Delegation with SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)（如何使用 SQL Server 2008 实现 Kerberos 约束委派）  
   
@@ -159,7 +157,7 @@ WHERE session_id = @@SPID;
 ##  <a name="Defaults"></a> 身份验证默认值  
  下表说明根据 SPN 注册情况所使用的身份验证默认值。  
   
-|应用场景|身份验证方法|  
+|场景|身份验证方法|  
 |--------------|---------------------------|  
 |SPN 映射到正确的域帐户、虚拟帐户、MSA 或内置帐户。 例如 Local System 或 NETWORK SERVICE。|本地连接使用 NTLM，远程连接使用 Kerberos。|  
 |SPN 是正确的域帐户、虚拟帐户、MSA 或内置帐户。|本地连接使用 NTLM，远程连接使用 Kerberos。|  
