@@ -45,7 +45,7 @@ SQL Server 安装程序包含一个“共享功能”选项，用于安装在 SQ
 
 通常，我们建议将独立服务器和识别数据库引擎实例的安装视为互斥项，以免出现资源争用情况，但如果有足够的资源，则不禁止将它们安装在同一台物理计算机上。
 
-计算机上只能有一台独立服务器：SQL Server Machine Learning Server（独立版）或 SQL Server R Server（独立版）。 在添加新版本之前，请确保先卸载以前的版本。
+计算机上只能有一个独立服务器：SQL Server Machine Learning Server（独立版）或 SQL Server R Server（独立版）。 在添加新版本之前，请确保先卸载以前的版本。
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
