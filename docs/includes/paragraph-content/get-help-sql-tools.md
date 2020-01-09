@@ -11,7 +11,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/25/2019
 ms.locfileid: "68161803"
 ---
-## <a name="infotipmediainfo-tippng-get-help-for-sql-tools"></a>![info_tip](../media/info-tip.png) 获取 SQL 工具的帮助
+## <a name="info_tipmediainfo-tippng-get-help-for-sql-tools"></a>![info_tip](../media/info-tip.png) 获取 SQL 工具的帮助
 
 - [提交 Azure Data Studio Git 问题](https://github.com/Microsoft/azuredatastudio/issues)
 - [参与 Azure Data Studio](https://github.com/Microsoft/azuredatastudio)

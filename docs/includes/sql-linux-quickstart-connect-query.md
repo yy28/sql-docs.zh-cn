@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215636"
----
 ## <a name="connect-locally"></a>本地连接
 
 以下步骤使用 sqlcmd  本地连接到新的 SQL Server 实例。
@@ -92,7 +84,7 @@ ms.locfileid: "68215636"
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-1. 执行命令：
+1. 执行此命令：
 
    ```sql
    GO
