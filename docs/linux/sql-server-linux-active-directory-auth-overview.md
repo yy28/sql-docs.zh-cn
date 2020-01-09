@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 14cb6a377e6aeb0fbd24f9808a794d68633f4ce6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67834424"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329959"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的 Active Directory 身份验证
 
@@ -44,8 +44,8 @@ ms.locfileid: "67834424"
 1. [将 SQL Server 主机加入 Active Directory 域](sql-server-linux-active-directory-join-domain.md)。
 1. [为 SQL Server 创建 AD 用户并设置 ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser)。
 1. [配置 SQL Server 服务 keytab](sql-server-linux-active-directory-authentication.md#configurekeytab)。
-1. [保护 keytab 文件](sql-server-linux-active-directory-authentication.md#securekeytab)。
-1. [将 SQL Server 配置为使用 keytab 文件进行 Kerberos 身份验证](sql-server-linux-active-directory-authentication.md#keytabkerberos)。
+1. [保护 keytab 文件](sql-server-linux-active-directory-authentication.md#configurekeytab)。
+1. [将 SQL Server 配置为使用 keytab 文件进行 Kerberos 身份验证](sql-server-linux-active-directory-authentication.md#configurekeytab)。
 1. [在 Transact-SQL 中创建基于 AD 的 SQL Server 登录名](sql-server-linux-active-directory-authentication.md#createsqllogins)。
 1. [使用 AD 身份验证连接到 SQL Server](sql-server-linux-active-directory-authentication.md#connect)。
 
@@ -53,6 +53,6 @@ ms.locfileid: "67834424"
 
 - 目前，数据库镜像终结点支持的唯一身份验证方法是“证书”。 将来的版本中将启用 WINDOWS 身份验证方法。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 
 有关如何为 Linux 上的 SQL Server 实现 Active Directory 身份验证的详细信息，请参阅[教程：对 Linux 上的 SQL Server 使用 Active Directory 身份验证](sql-server-linux-active-directory-authentication.md)。
