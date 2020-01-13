@@ -1,5 +1,5 @@
 ---
-title: 教程：启用表空间使用情况示例见解小组件
+title: 启用表空间使用情况示例见解小组件
 titleSuffix: Azure Data Studio
 description: 本教程演示如何在 Azure Data Studio 数据库仪表板上启用表空间使用情况示例见解小组件。
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: 4b44fc9dbee773e7bc88daecf9142c1f826d65a0
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878657"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957011"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教程：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 启用表空间使用情况示例见解小组件
 
@@ -39,7 +39,7 @@ ms.locfileid: "70878657"
 
 1. 按“Ctrl+Shift+P”打开“命令面板”，以打开“用户设置”    。
 
-2. 在搜索框中键入“设置”，然后选择“首选项:打开用户设置”   。
+2. 在搜索框中键入“设置”，然后选择“首选项:打开用户设置” 。
 
 3. 在“设置搜索”输入框中键入“仪表板”，然后找到“dashboard.database.widgets”   。
 
@@ -88,7 +88,7 @@ ms.locfileid: "70878657"
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，你已学习如何执行以下操作：
+在本教程中，你了解了如何执行以下操作：
 > [!div class="checklist"]
 > * 使用内置见解小组件示例快速打开见解小组件。
 > * 查看表空间使用情况的详细信息。
