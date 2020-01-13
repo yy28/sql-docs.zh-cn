@@ -3,17 +3,17 @@ title: 配置适用于 SQL Server 2017 和 2019 的 Linux 存储库
 description: 检查并配置适用于 Linux 中 SQL Server 2019 和 SQL Server 2017 的源存储库。 源存储库会影响在安装和升级期间应用的 SQL Server 版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: b71078e0d1d6af9bd35f248e8bbc324ac5c0e570
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531332"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776386"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>配置存储库以便安装和升级 Linux 上的 SQL Server
 
@@ -38,7 +38,7 @@ ms.locfileid: "73531332"
 
 在 Linux 上安装 SQL Server 时，须配置 Microsoft 存储库。 此存储库用于获取数据库引擎包、mssql-server 以及相关 SQL Server 包  。 现有五个主要存储库：
 
-| 存储库 | “属性” | 描述 |
+| 存储库 | 名称 | 说明 |
 |---|---|---|
 | 2019  | mssql-server-2019  | SQL Server 2019 累积更新 (CU) 存储库。 |
 | 2019 GDR  | mssql-server-2019-gdr  | SQL Server 2019 GDR 存储库仅用于关键更新。 |
@@ -173,10 +173,15 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-rhel"
 配置要用于 SQL Server 安装和升级的新存储库。 使用以下命令之一配置所选存储库。
 
+> [!NOTE]
+> 以下用于 SQL Server 2019 的命令指向 RHEL 8 存储库。 RHEL 8 未预安装 SQL Server 所需的 python2。 有关详细信息，请参阅以下博客，了解如何安装 python2 并将其配置为默认解释器： https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
+>
+> 如果使用 RHEL 7，请将以下路径更改为 `/rhel/7` 而不是 `/rhel/8`。
+
 | 存储库 | 版本 | Command |
 |---|---|---|
-| 2019 CU  | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
-| 2019 GDR  | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| 2019 CU  | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
+| 2019 GDR  | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
 | 2017 CU  | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | 2017 GDR  | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 

@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 的各版本和支持的功能 - Linux
-ms.date: 10/23/2019
+ms.date: 01/08/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72954989"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776549"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的各版本和支持的功能
 
@@ -57,7 +57,7 @@ ms.locfileid: "72954989"
 |Enterprise|作为高级版本，[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise 版提供了全面的高端数据中心功能，性能极为快捷，可为关键任务工作负荷提供较高服务级别。|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard 版提供了基本数据管理，使部门和小型组织能够顺利运行其应用程序并支持将常用开发工具用于本地和云部署，有助于以最少的 IT 资源获得高效的数据库管理。|  
 |Web|对于为从小规模至大规模 Web 资产提供可伸缩性、经济性和可管理性功能的 Web 宿主和 Web VAP 来说，[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web 版本是一项总拥有成本较低的选择。|  
-|Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 版支持开发人员基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]构建任意类型的应用程序。 它包括 Enterprise 版的所有功能，但有许可限制，只能用作开发和测试系统，而不能用作生产服务器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是构建和测试应用程序的人员的理想之选。|  
+|开发人员|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 版支持开发人员基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]构建任意类型的应用程序。 它包括 Enterprise 版的所有功能，但有许可限制，只能用作开发和测试系统，而不能用作生产服务器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是构建和测试应用程序的人员的理想之选。|  
 |Express Edition|Express 版本是入门级的免费数据库，是学习和构建桌面及小型服务器数据驱动应用程序的理想选择。 它是独立软件供应商、开发人员和热衷于构建客户端应用程序的人员的最佳选择。 如果您需要使用更高级的数据库功能，则可以将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 无缝升级到其他更高端的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用于客户端/服务器应用程序  
@@ -68,7 +68,7 @@ ms.locfileid: "72954989"
 
 Linux 上的 SQL Server 2019 支持 SQL Server 数据库引擎。 下表介绍了数据库引擎中的功能。   
   
-|服务器组件|描述|  
+|服务器组件|说明|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包括 [!INCLUDE[ssDE](../includes/ssde-md.md)]（用于存储、处理和保护数据安全的核心服务）、复制、全文搜索、用于管理关系数据和 XML 数据以及数据库分析集成中的工具。|  
 
@@ -79,7 +79,7 @@ Linux 上的 SQL Server 2019 支持 SQL Server 数据库引擎。 下表介绍�
   
 ##  <a name="Cross-BoxScaleLimits"></a>规模限制  
   
-|功能|Enterprise|Standard|Web|Express| 
+|Feature|Enterprise|Standard|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
 |单个实例使用的最大计算能力 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|操作系统支持的最大值|限制为 4 个插槽或 24 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值| 
 |单个实例使用的最大计算能力 - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|操作系统支持的最大值|限制为 4 个插槽或 24 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|
@@ -92,7 +92,7 @@ Linux 上的 SQL Server 2019 支持 SQL Server 数据库引擎。 下表介绍�
  
 ##  <a name="RDBMSHA"></a>RDBMS 高可用性  
   
-|功能|Enterprise|Standard|Web|Express|  
+|Feature|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
 |日志传送|是|是|是|否|  
 |备份压缩|是|是|否|否| 
@@ -120,7 +120,7 @@ Linux 上的 SQL Server 2019 支持 SQL Server 数据库引擎。 下表介绍�
 
 ##  <a name="RDBMSSP"></a>RDBMS 可伸缩性和性能  
   
-|功能|Enterprise|Standard|Web|Express|  
+|Feature|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
 |列存储 <sup>1</sup>|是|是|是|是|  
 |聚集列存储索引中的大型对象二进制文件|是|是|是|是|  
@@ -145,11 +145,11 @@ Linux 上的 SQL Server 2019 支持 SQL Server 数据库引擎。 下表介绍�
 
 ##  <a name="RDBMSS"></a>RDBMS 安全性  
   
-|功能|Enterprise|Standard|Web|Express|
+|Feature|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
 |行级安全性|是|是|是|是|  
-|始终加密|是|是|是|是| 
-|动态数据屏蔽|是|是|是|是|   
+|Always Encrypted|是|是|是|是| 
+|动态数据掩码|是|是|是|是|   
 |基本审核|是|是|是|是| 
 |精细审核|是|是|是|是| 
 |透明数据库加密|是|否|否|否|   
@@ -159,7 +159,7 @@ Linux 上的 SQL Server 2019 支持 SQL Server 数据库引擎。 下表介绍�
 
 ##  <a name="RDBMSM"></a>RDBMS 可管理性  
   
-|功能|Enterprise|Standard|Web|Express|   
+|Feature|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
 |专用管理连接|是|是|是|支持（使用跟踪标志）|   
 |PowerShell 脚本支持|是|是|是|是| 
@@ -178,7 +178,7 @@ Linux 上的 SQL Server 2019 支持 SQL Server 数据库引擎。 下表介绍�
 
 ##  <a name="Programmability"></a> Programmability  
   
-|功能|Enterprise|Standard|Web|Express 
+|Feature|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
 |JSON|是|是|是|是|   
 |查询存储|是|是|是|是|   
@@ -225,7 +225,7 @@ Linux 上的 SQL Server 2019 目前不支持以下功能和服务。 随着时�
 | &nbsp; | 带有 EXTERNAL_ACCESS 或 UNSAFE 权限集的 CLR 程序集 |
 | &nbsp; | 缓冲池扩展 |
 | **SQL Server 代理** |  子系统：CmdExec、PowerShell、队列读取器、SSIS、SSAS、SSRS |
-| &nbsp; | Alerts |
+| &nbsp; | 警报 |
 | &nbsp; | 托管备份 |
 | **高可用性** | 数据库镜像  |
 | **安全性** | 可扩展的密钥管理 |

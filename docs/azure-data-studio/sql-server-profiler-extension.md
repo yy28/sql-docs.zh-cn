@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 26a448dc27ae2512256ffb1a2929dd8cacc3e31c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fcb16d2ec3c267dc2927f22a029709a434416c9
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959119"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776508"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler 扩展（预览版）
 
-SQL Server Profiler 扩展（预览版）提供类似于 SQL Server Management Studio (SSMS) Profiler 的简单 SQL Server 跟踪解决方案，不同之处是其使用 XEvents 进行构建。 SQL Server Profiler 非常易于使用，为最常见的跟踪配置设置了很合适的默认值。 UX 针对事件浏览和关联 Transact-SQL (T-SQL) 文本的查看性能进行了优化。 Azure Data Studio 的 SQL Server Profiler 还为实现后列操作设置了很合适的默认值：通过易于使用的 UX 收集 T-SQL 执行活动。 此扩展当前处于预览状态。
+SQL Server Profiler 扩展（预览版）提供类似于 SQL Server Management Studio (SSMS) Profiler 的简单 SQL Server 跟踪解决方案，但前者是使用扩展事件构建的。 SQL Server Profiler 非常易于使用，为最常见的跟踪配置设置了很合适的默认值。 UX 针对事件浏览和关联 Transact-SQL (T-SQL) 文本的查看性能进行了优化。 Azure Data Studio 的 SQL Server Profiler 还为实现后列操作设置了很合适的默认值：通过易于使用的 UX 收集 T-SQL 执行活动。 此扩展当前处于预览状态。
 
 **常见的 SQL Profiler 用例：**
 
@@ -33,7 +33,7 @@ SQL Server Profiler 扩展（预览版）提供类似于 SQL Server Management S
 ## <a name="install-the-sql-server-profiler-extension"></a>安装 SQL Server Profiler 扩展
 
 1. 若要打开扩展管理器并访问可用扩展，请选择扩展图标，或在“视图”菜单中选择“扩展”   。
-2. 选择可用的扩展以查看其详细信息。
+2. 选择某个可用扩展以查看其详细信息。
 
    ![Profiler 扩展管理器](media/extensions/sql-server-profiler-extension/profiler-extension.png)
 
