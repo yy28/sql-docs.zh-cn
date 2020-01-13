@@ -1,5 +1,5 @@
 ---
-title: 教程：启用五个最慢查询示例小组件
+title: 启用五个最慢查询示例小组件
 titleSuffix: Azure Data Studio
 description: 本教程演示如何在数据库仪表板上启用五个最慢查询示例小组件。
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
-ms.openlocfilehash: 576e175e8135808a4221e96085e39e9c0850190b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810872"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957041"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教程：将*五个最慢查询*示例小组件添加到数据库仪表板
 
@@ -55,7 +55,7 @@ ms.locfileid: "68810872"
 
 1. 按“Ctrl+Shift+P”打开“命令面板”，以打开“用户设置”    。
 
-2. 在搜索框中键入“设置”，然后选择“首选项:打开用户设置”   。
+2. 在搜索框中键入“设置”，然后选择“首选项:打开用户设置”。
 
    ![打开用户设置命令](./media/tutorial-qds-sql-server/open-user-settings.png)
 
@@ -143,7 +143,7 @@ ms.locfileid: "68810872"
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，你已学习如何执行以下操作：
+在本教程中，你了解了如何执行以下操作：
 > [!div class="checklist"]
 > * 在数据库上启用查询存储
 > * 向数据库仪表板添加见解小组件
