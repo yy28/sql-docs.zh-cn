@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ea6d737dcb45a1b300b53c0b232b2b6565e6e750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012526"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776425"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>配置 max worker threads 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "68012526"
     |CPU 数|32 位计算机|64 位计算机|  
     |------------|------------|------------| 
     |\<= 4 个处理器|256|512|
-    |\> 4 个处理器和 \< 64 个处理器|256 +（（逻辑 CPU 位数 - 4）* 8）|512 +（（逻辑 CPU 位数 - 4）* 16）|
+    |4 到 64 个（含）处理器|256 +（（逻辑 CPU 位数 - 4）* 8）|512 +（（逻辑 CPU 位数 - 4）* 16）|
     |\> 64 个处理器|256 + ((逻辑 CPU 位数 - 4) * 32)|512 + ((逻辑 CPU 位数 - 4) * 32)|
   
     > [!NOTE]  
