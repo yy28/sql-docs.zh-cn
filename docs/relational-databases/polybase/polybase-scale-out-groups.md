@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 06f3568ac1bf3305628583934549d4334c4eedc4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
+ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710473"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623241"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 横向扩展组
 
@@ -28,7 +28,7 @@ ms.locfileid: "71710473"
   
 请参阅 [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md) 和 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)。
   
-![PolyBase 横向扩展组](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase 横向扩展组")  
+![PolyBase 横向扩展组](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
   
 ## <a name="head-node"></a>头节点  
 
@@ -47,7 +47,7 @@ ms.locfileid: "71710473"
 > [!NOTE]
 >  这不同于通过 Hadoop 的横向扩展读取。 
 
-![PolyBase 横向扩展组](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase 横向扩展组")
+![PolyBase 横向扩展组](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
   
 ## <a name="distributed-query-processing"></a>分布式查询处理  
 
@@ -66,3 +66,10 @@ PolyBase 数据移动服务接收来自 PolyBase 引擎的指令，并在 HDFS �
 若要配置 PolyBase 横向扩展组，请参阅以下指南：
 
 [改进 Windows 上的 PolyBase 横向扩展组](configure-scale-out-groups-windows.md)
+
+## <a name="see-also"></a>另请参阅
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+
