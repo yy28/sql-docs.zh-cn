@@ -55,7 +55,7 @@ ms.locfileid: "74957041"
 
 1. 按“Ctrl+Shift+P”打开“命令面板”，以打开“用户设置”    。
 
-2. 在搜索框中键入“设置”，然后选择“首选项:打开用户设置”。
+2. 在搜索框中键入“设置”，然后选择“首选项:打开用户设置”   。
 
    ![打开用户设置命令](./media/tutorial-qds-sql-server/open-user-settings.png)
 
