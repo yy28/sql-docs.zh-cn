@@ -11,18 +11,18 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
-ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
+ms.openlocfilehash: 32ff23fe1ea7f0a892a19cc6be0eef8439ee907f
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "75329959"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831827"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的 Active Directory 身份验证
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文概述了 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Active Directory (AD) 身份验证。 AD 身份验证也称为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 上的集成身份验证。 
+本文概述了 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Active Directory (AD) 身份验证。 AD 身份验证也称为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 上的集成身份验证。
 
 ## <a name="ad-authentication-overview"></a>AD 身份验证概述
 
@@ -30,10 +30,10 @@ ms.locfileid: "75329959"
 
 与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证相比，AD 身份验证具有以下优势：
 
-- 用户通过单一登录进行身份验证，不会收到密码输入提示。   
+- 用户通过单一登录进行身份验证，不会收到密码输入提示。
 - 通过为 AD 组创建登录名，你可以使用 AD 组成员身份管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的访问和权限。  
 - 每个用户在你的组织中都有单个标识，因此你无需跟踪哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名对应哪些人员。   
-- AD 使你能够在整个组织中强制实施集中式密码策略。   
+- AD 使你能够在整个组织中强制实施集中式密码策略。
 
 ## <a name="configuration-steps"></a>配置步骤
 
