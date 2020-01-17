@@ -1,6 +1,8 @@
 ---
-title: 日期和时间数据类型及函数 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 日期和时间数据类型及函数
+description: 提供指向日期和时间数据类型及函数文章的链接。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -21,12 +23,12 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a478288ef82764c5dc6d044132fb66dc7e3f9bf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a7beec472b0f4b70662c364081641b6ea91be507
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982960"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256092"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日期和时间数据类型及函数 (Transact-SQL)
 
@@ -47,7 +49,7 @@ ms.locfileid: "73982960"
 ##  <a name="DateandTimeDataTypes"></a>日期和时间数据类型
 下表列出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的日期和时间数据类型：
   
-|数据类型|“格式”|范围|精确度|存储大小（字节）|用户定义的秒的小数部分精度|时区偏移量|  
+|数据类型|格式|范围|精确度|存储大小（字节）|用户定义的秒的小数部分精度|时区偏移量|  
 |---|---|---|---|---|---|---|
 |[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 到 23:59:59.9999999|100 纳秒|3 到 5|是|否|  
 |[date](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|0001-01-01 到 31.12.99|1 天|3|否|否|  
@@ -97,11 +99,11 @@ ms.locfileid: "73982960"
 |函数|语法|返回值|返回数据类型|确定性|  
 |---|---|---|---|---|
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( year, month, day )   |返回表示指定年、月、日的 date 值  。|**date**|具有确定性|  
-|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( year, month, day, hour, minute, seconds, fractions, precision)        |对指定的日期和时间返回 datetime2 值（具有指定精度）  。|**datetime2(** precision **)** |具有确定性|  
+|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( year, month, day, hour, minute, seconds, fractions, precision)        |对指定的日期和时间返回 datetime2 值（具有指定精度）  。|**datetime2(** _precision_ **)**|具有确定性|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( year, month, day, hour, minute, seconds, milliseconds)       |为指定的日期和时间返回 datetime 值  。|**datetime**|具有确定性|  
-|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( year, month, day, hour, minute, seconds, fractions, hour_offset, minute_offset, precision)          |对指定的日期和时间返回 datetimeoffset 值（具有指定的偏移量和精度）  。|**datetimeoffset(** precision  **)**|具有确定性|  
+|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( year, month, day, hour, minute, seconds, fractions, hour_offset, minute_offset, precision)          |对指定的日期和时间返回 datetimeoffset 值（具有指定的偏移量和精度）  。|**datetimeoffset(** _precision_ **)**|具有确定性|  
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( year, month, day, hour, minute )     |为指定的日期和时间返回 smalldatetime 值  。|**smalldatetime**|具有确定性|  
-|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( hour, minute, seconds, fractions, precision )     |对指定的时间返回 time 值（具有指定精度）  。|**time(** precision **)** |具有确定性|  
+|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( hour, minute, seconds, fractions, precision )     |对指定的时间返回 time 值（具有指定精度）  。|**time(** _precision_ **)**|具有确定性|  
   
 ###  <a name="GetDateandTimeDifference"></a>返回日期和时间差异值的函数
   
@@ -138,7 +140,7 @@ ms.locfileid: "73982960"
   
 ##  <a name="DateandTimeRelatedTopics"></a>日期和时间相关主题 
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)|提供有关在日期和时间值与字符串文字及其他日期和时间格式之间进行相互转换的信息。|  
 |[编写国际化 Transact-SQL 语句](../../relational-databases/collations/write-international-transact-sql-statements.md)|提供使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的数据库和数据库应用程序在不同语言之间的可移植性准则，或支持多种语言的数据库和数据库应用程序的可移植性准则。|  

@@ -1,6 +1,7 @@
 ---
-title: 具有安全 Enclave 的 Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: 具有安全 Enclave 的 Always Encrypted
+description: 了解 SQL Server 中具有安全 enclave 的 Always Encrypted 功能。
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d04dcc5aeeafcdc78dcc6dd401afc476fbf6555
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594045"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558022"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -86,13 +87,13 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 
 
 下表总结了可用于加密列的功能，具体取决于列是否使用已启用 enclave 的列加密密钥以及加密类型。
 
-| **运算**| **列未启用 enclave** |**列未启用 enclave**| **列已启用 enclave**  |**列已启用 enclave** |
+| **操作**| **列未启用 enclave** |**列未启用 enclave**| **列已启用 enclave**  |**列已启用 enclave** |
 |:---|:---|:---|:---|:---|
 | | **随机加密**  | **确定性加密**     | **随机加密**      | **确定性加密**     |
-| **就地加密** | 不支持  | 不支持   | 是否支持         | 是否支持    |
+| **就地加密** | 不支持  | 不支持   | 支持         | 支持    |
 | **相等比较**   | 不支持 | 支持（在 enclave 之外） | 支持（在 enclave 内） | 支持（在 enclave 之外） |
-| **超出相等的比较运算符** | 不支持  | 不支持   | 是否支持      | 不支持     |
-| **LIKE**    | 不支持      | 不支持    | 是否支持     | 不支持    |
+| **超出相等的比较运算符** | 不支持  | 不支持   | 支持      | 不支持     |
+| **LIKE**    | 不支持      | 不支持    | 支持     | 不支持    |
 
 就地加密包括对 enclave 内的以下操作的支持：
 
@@ -130,7 +131,7 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 
 
 使用确定性加密的列上的索引是根据已加密文本（而不是纯文本）进行排序，无论列是否已启用 enclave。
 
-## <a name="security-considerations"></a>需要考虑的安全性因素
+## <a name="security-considerations"></a>安全注意事项
 
 下面的安全注意事项适用于含安全 enclave 的 Always Encrypted。
 
@@ -148,7 +149,7 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 
 
 使用 bacpac 文件迁移数据库时，必须确保先删除使用随机加密且已启用 enclave 的列上的所有索引，再创建 bacpac 文件。
 
-## <a name="known-limitations"></a>已知的限制
+## <a name="known-limitations"></a>已知限制
 具有安全 enclave 的 Always Encrypted 通过实现以下操作来解决 Always Encrypted 的一些限制：
 
 - 就地加密操作。

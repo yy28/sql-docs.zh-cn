@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f265d2af5ad6fc30708d57f162c8d6395858673f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0478e345f388b3f4246bf33fdaba29a47a6ec0f6
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71284827"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491952"
 ---
 # <a name="install-integration-services-ssis"></a>安装 Integration Services (SSIS)
 
@@ -133,7 +133,7 @@ ms.locfileid: "71284827"
 
   - 适用于 Oracle 的 Attunity Microsoft Connector 5.0 和适用于 Teradata 的 Attunity Microsoft Connector 5.0。 要获取这些组件，请参阅 [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)（用于 Oracle 和 Teradata 的 Microsoft Connector v5.0）。
 
-## <a name="nest-steps"></a>后续步骤
+## <a name="next-steps"></a>后续步骤
 
 - [并行安装 Integration Services 版本](installing-integration-services-versions-side-by-side.md)
 

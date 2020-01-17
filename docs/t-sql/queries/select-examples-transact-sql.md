@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119212"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191085"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT 示例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "74119212"
 ## <a name="e-using-correlated-subqueries"></a>E. 使用相关子查询
 相关子查询依赖于外部查询来查询其值。 该查询能为外部查询可能选择的每一行各重复执行一次。
 
- 以下示例显示了语义等价的查询并说明了使用 `EXISTS` 关键字和 `IN` 关键字的区别。 两个都是有效子查询示例，用于检索产品型号为长袖标志运动衫且 `ProductModelID` 编号在 `Product` 和 `ProductModel` 两个表中相匹配的每种产品名称的实例。  
+第一个示例展示了语义等效的查询，以说明使用 `EXISTS` 关键字和 `IN` 关键字的区别。 两个都是有效子查询示例，用于检索产品型号为长袖标志运动衫且 `ProductModelID` 编号在 `Product` 和 `ProductModel` 两个表中相匹配的每种产品名称的实例。  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   

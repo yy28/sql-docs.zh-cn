@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2c74dff8b6e2f64c49f4092eb2c2f892f6c02c55
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d50c8c83ebba970a847c5a2db70ca0268637d3e8
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711069"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542278"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "71711069"
 
 `OPENROWSET` 还通过内置的 BULK 提供程序支持大容量操作，正是有了该提供程序，才能从文件读取数据并将数据作为行集返回。
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法
 
@@ -96,7 +96,7 @@ query 字符串常量，发送到提供程序并由提供程序执行  。 [!INC
 BULK 使用 OPENROWSET 的 BULK 行集提供程序读取文件中的数据。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，OPENROWSET 无需将数据文件中的数据加载到目标表，便可读取这些数据。 这样便可在单个 SELECT 语句中使用 OPENROWSET。
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取内容。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 BULK 选项的参数可对何时开始和结束数据读取、如何处理错误以及如何解释数据提供有效控制。 例如，可以指定以类型为 varbinary、varchar 或 nvarchar 的单行单列行集的形式读取数据文件    。 默认行为详见随后的参数说明。
 
@@ -108,11 +108,11 @@ BULK 选项的参数可对何时开始和结束数据读取、如何处理错误
 有关准备数据以进行批量导入的信息，请参阅 [准备用于批量导出或导入的数据 (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。
 
 'data_file' 数据文件的完整路径，该文件的数据将被复制到目标表中  。
-**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
 自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 起，data_file 可位于 Azure Blob 存储中。 例如，请参阅[批量访问 Azure Blob 存储中数据的示例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取内容。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 \<bulk_options> 指定 BULK 选项的一个或多个参数。
 
@@ -124,7 +124,7 @@ CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| 'code_page' } 指定数据文件中数据的�
 > [!NOTE]
 > 我们建议为格式文件中的每个列指定一个排序规则名称，除非你希望 65001 选项优先于排序规则/代码页规范。
 
-|CODEPAGE 值|描述|
+|CODEPAGE 值|说明|
 |--------------------|-----------------|
 |ACP|将数据类型为 char、varchar 或 text 的列由 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页    。|
 |OEM（默认值）|将数据类型为 char、varchar 或 text 的列由系统 OEM 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页    。|
@@ -134,7 +134,7 @@ CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| 'code_page' } 指定数据文件中数据的�
 ERRORFILE ='file_name' 指定用于收集格式有误且不能转换为 OLE DB 行集的行的文件  。 这些行将按原样从数据文件复制到此错误文件中。
 
 错误文件在开始执行命令时创建。 如果该文件已存在，将引发一个错误。 此外，还创建了一个扩展名为 .ERROR.txt 的控制文件。 此文件引用错误文件中的每一行并提供错误诊断。 纠正错误后即可加载数据。
-**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
+**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，`error_file_path` 可位于 Azure Blob 存储中。
 
 'errorfile_data_source_name' 适用范围  ：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
@@ -192,13 +192,13 @@ FORMATFILE ='format_file_path' 指定格式化文件的完整路径  。 [!INCLU
 
 有关格式化文件的信息，请参阅[使用格式化文件批量导入数据 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。
 
-**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
+**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，format_file_path 可位于 Azure Blob 存储中。 例如，请参阅[批量访问 Azure Blob 存储中数据的示例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
 
 FIELDQUOTE = 'field_quote' 适用范围   ：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
 指定将用作 CSV 文件引号字符的字符。 如果未指定，根据 [RFC 4180](https://tools.ietf.org/html/rfc4180) 标准中的定义，引号字符 (") 将用作引号字符。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 仅当 DisallowAdhocAccess 注册表选项针对指定的提供程序显式设置为 0，并且启用 Ad Hoc Distributed Queries 高级配置选项时，`OPENROWSET` 才可用于访问 OLE DB 数据源中的远程数据  。 如果未设置这些选项，则默认行为不允许即席访问。
 
@@ -283,11 +283,11 @@ SELECT CustomerID, CompanyName
 ```
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取内容。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 ### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>C. 使用 OPENROWSET 和 INNER JOIN 中的另一个表
 
-以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` 数据库的本地实例中的 `Customers` 表以及存储在同一计算机上的 Access `Northwind` 数据库中的 `Orders` 表中选择所有数据。
+以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` 数据库本地实例中的 `Customers` 表以及存储在同一计算机上的 Access `Northwind` 数据库中的 `Orders` 表中选择所有数据。
 
 > [!NOTE]
 > 此示例假定已经安装了 Access。 若要运行该示例，则必须安装 Northwind 数据库。
@@ -304,7 +304,7 @@ FROM Northwind.dbo.Customers AS c
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持从 Windows 文件进行读取。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 仅支持从 Azure blob 存储读取内容。
 
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. 使用 OPENROWSET 将文件数据大容量插入 varbinary(max) 列中
 
@@ -325,7 +325,7 @@ GO
 ```
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取内容。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. 将 OPENROWSET BULK 访问接口用于格式化文件以检索文本文件中的行
 
@@ -354,7 +354,7 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ```
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取内容。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. 指定格式文件和代码页
 
@@ -368,7 +368,7 @@ OPENROWSET (BULK N'D:\data.csv', FORMATFILE =
 
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. 访问有格式化文件的 CSV 文件的数据
 
-**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
+**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
 
 ```sql
 SELECT *
@@ -379,7 +379,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持从 Windows 文件进行读取。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 仅支持从 Azure blob 存储读取内容。
 
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. 访问没有格式文件的 CSV 文件的数据
 
@@ -401,11 +401,11 @@ from openrowset
 > [!IMPORTANT]
 >
 > - ODBC 驱动程序应为 64 位。 在 Windows 中打开 [OBDC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)应用程序的“驱动程序”选项卡来验证这一点  。 32 位的 `Microsoft Text Driver (*.txt, *.csv)` 无法用于 64 位版本的 sqlservr.exe。
-> - Azure SQL 数据库不支持从 Windows 文件读取内容。
+> - Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. 访问 Azure Blob 存储上存储的文件的数据
 
-**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
 下例使用外部数据源，该外部数据源指向 Azure 存储帐户中的容器和为共享访问签名创建的数据库范围的凭据。
 
 ```sql
@@ -451,7 +451,7 @@ SELECT * FROM OPENROWSET(
 ```
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取内容。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 ### <a name="additional-examples"></a>其他示例
 
@@ -474,7 +474,6 @@ SELECT * FROM OPENROWSET(
 - [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
 - [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)
 - [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)
-- [行集函数 &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)
 - [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
 - [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
 - [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)

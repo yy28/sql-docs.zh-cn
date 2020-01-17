@@ -1,6 +1,7 @@
 ---
-title: 适用于 Linux 上的 SQL Server 的 AlwaysOn 可用性组
-description: ''
+title: 适用于 Linux 上的 SQL Server 的可用性组
+description: 了解适用于 Linux 上的 SQL Server 的 Always On 可用性组的特征。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794990"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558622"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Linux 上的 Always On 可用性组
 
@@ -146,7 +147,7 @@ Linux 下的侦听器的配置方式不同，但其功能相同。 Pacemaker 中
 
 ![混合 None](./media/sql-server-linux-availability-group-overview/image1.png)
 
-分布式 AG 也可以跨越操作系统的界限。 基础 AG 按照其配置规则进行绑定，例如配置为 External 的只能用于 Linux，但它要加入的 AG 可以使用 WSFC 配置。 请参考如下示例：
+分布式 AG 也可以跨越操作系统的界限。 基础 AG 按照其配置规则进行绑定，例如配置为 External 的只能用于 Linux，但它要加入的 AG 可以使用 WSFC 配置。 请考虑以下示例：
 
 ![混合分发式 AG](./media/sql-server-linux-availability-group-overview/image2.png)
 

@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3972714722b800cdd4400739f40d8eb8c6c3eff7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298231"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546537"
 ---
 # <a name="odata-source"></a>OData 源
 
@@ -41,13 +41,15 @@ ms.locfileid: "71298231"
 
 OData 源包括对以下数据源的支持：
 -   Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online
--   SharePoint 列表。 要查看 SharePoint 服务器上的所有列表，请使用以下 URL： https://\<server>/_vti_bin/ListData.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](https://msdn.microsoft.com/library/ff521587.aspx)。
+-   SharePoint 列表。 要查看 SharePoint 服务器上的所有列表，请使用以下 URL：`https://<server>/_vti_bin/ListData.svc`。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](https://msdn.microsoft.com/library/ff521587.aspx)。
 
 ## <a name="supported-data-types"></a>支持的数据类型
 
 OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTime、DateTimeOffset、decimal、double、Guid、Int16、Int32、Int64、sbyte、float、string 和 TimeSpan。
 
 若要发现数据源中列的数据类型，请查看 `https://<OData feed endpoint>/$metadata` 页。
+
+对于十进制数据类型，精度和小数位数由源元数据决定  。 如果源元数据未指定“精度”和“小数位数”属性，则数据可能会被截断   。
 
 > [!IMPORTANT]
 > OData 源组件不支持 SharePoint 列表中的复杂类型，例如多选项。
@@ -83,7 +85,7 @@ OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTi
  **使用集合或资源路径**  
  指定从源选择数据的方法。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |集合|使用集合名称查询从 OData 源检索数据。|  
 |资源路径|使用资源路径查询从 OData 源检索数据。|  
@@ -138,7 +140,7 @@ OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTi
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **Description**  
+ **说明**  
  查看对错误的说明。  
   
  **将此值设置到选定的单元格**  

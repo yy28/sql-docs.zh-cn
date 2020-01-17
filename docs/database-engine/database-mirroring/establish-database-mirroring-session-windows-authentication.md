@@ -1,6 +1,7 @@
 ---
-title: 建立数据库镜像会话 - Windows 身份验证 | Microsoft Docs
-ms.custom: ''
+title: 设置数据库镜像（Windows 身份验证）
+description: 了解如何使用 SQL Server Management Studio 通过 Windows 身份验证建立数据库镜像会话。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6e778d9c02e9cc0a877ef0804b1e95772e5f51cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f59dc7745f63b208b1a2a55361913a6eb290e08e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997895"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253580"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>建立数据库镜像会话 - Windows 身份验证
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,23 +43,23 @@ ms.locfileid: "67997895"
   
 1.  连接到主体服务器实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**，再选择要镜像的数据库。  
+2.  展开 **“数据库”** ，再选择要镜像的数据库。  
   
-3.  右键单击数据库，选择 **“任务”**，再单击 **“镜像”**。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
+3.  右键单击数据库，选择 **“任务”** ，再单击 **“镜像”** 。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
   
 4.  若要开始配置镜像，请单击 **“配置安全性”** 按钮以启动配置数据库镜像安全向导。  
   
     > [!NOTE]  
     >  在数据库镜像会话期间，仅可使用此向导添加或更改见证服务器实例。  
   
-5.  配置数据库镜像安全向导将在每个服务器实例上自动创建数据库镜像端点（如果不存在任何端点），并在与服务器实例角色（**“主体”**、 **“镜像服务器”** 或 **“见证服务器”**）相对应的字段中输入服务器网络地址。  
+5.  配置数据库镜像安全向导将在每个服务器实例上自动创建数据库镜像端点（如果不存在任何端点），并在与服务器实例角色（ **“主体”** 、 **“镜像服务器”** 或 **“见证服务器”** ）相对应的字段中输入服务器网络地址。  
   
     > [!IMPORTANT]  
     >  创建端点时，配置数据库镜像安全向导始终使用 Windows 身份验证。 在将此向导与基于证书的身份验证配合使用之前，必须已在每个服务器实例上始终将镜像端点配置为使用证书。 此外，此向导的 **“服务帐户”** 对话框中的所有字段必须保持为空。 有关创建数据库镜像终结点以使用证书的信息，请参阅[ CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)。  
   
-6.  根据需要，可以选择更改运行模式。 某些运行模式的可用性取决于是否为见证服务器指定了 TCP 地址。 选项如下所示：  
+6.  根据需要，可以选择更改运行模式。 某些运行模式的可用性取决于是否为见证服务器指定了 TCP 地址。 选项如下：  
   
-    |选项|是否需要见证服务器？|解释|  
+    |选项|是否需要见证服务器？|说明|  
     |------------|--------------|-----------------|  
     |**高性能(异步)**|空(如果存在，尚未使用但会话需要仲裁)|为获得最佳性能，镜像数据库始终在某种程度上滞后于主体数据库，永远无法完全同步。 但是，数据库之间的异步间隔通常很小。 丢失伙伴会产生以下影响：<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> 如果主体服务器实例变为不可用，则镜像服务器实例会停止；但是，如果会话没有见证服务器（按建议）或见证服务器连接到镜像服务器，则镜像服务器可以作为备用；数据库所有者可以强制让镜像服务器实例来提供服务（可能造成数据丢失）。<br /><br /> <br /><br /> 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。|  
     |**不带自动故障转移功能的高安全(同步)**|否|保证将所有提交的事务都写入镜像服务器的磁盘上。<br /><br /> 只要伙伴相互连接并且数据库已同步，便可进行手动故障转移。<br /><br /> 丢失伙伴会产生以下影响：<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> 如果主体服务器实例变为不可用，则镜像服务器实例会停止但仍可以作为备用；数据库所有者可以强制让镜像服务器实例来提供服务（可能造成数据丢失）。<br /><br /> <br /><br /> 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。|  
@@ -72,12 +73,12 @@ ms.locfileid: "67997895"
   
     -   已指定主体服务器实例和镜像服务器实例的完全限定的 TCP 地址（在 **“服务器网络地址”** 部分）。  
   
-    -   如果运行模式设置为 **“带自动故障转移功能的高安全(同步)”**，则还需指定见证服务器实例的完全限定的 TCP 地址。  
+    -   如果运行模式设置为 **“带自动故障转移功能的高安全(同步)”** ，则还需指定见证服务器实例的完全限定的 TCP 地址。  
   
 8.  在镜像开始后，您可以更改运行模式，并可以通过单击 **“确定”** 来保存更改。 注意，仅当先指定了见证服务器地址时，才能利用自动故障转移切换到高安全模式。  
   
     > [!NOTE]  
-    >  若要删除见证服务器，请从 **“见证服务器”** 字段中删除它的服务器网络地址。 如果从具有自动故障转移功能的高安全性模式切换到高性能模式，则将自动清除“见证服务器”字段。  
+    >  若要删除见证服务器，请从 **“见证服务器”** 字段中删除它的服务器网络地址。 如果从具有自动故障转移功能的高安全性模式切换到高性能模式，则将自动清除“见证服务器”  字段。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   

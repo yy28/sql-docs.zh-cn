@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE 文件和文件组选项 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ALTER DATABASE 文件和文件组
+description: 使用 Transact-SQL 更新数据库的文件和文件组。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-database
@@ -42,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9c8c9e59e0234dc81fb9de9ded733d369dbdda4d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982838"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244430"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 文件和文件组选项
 
@@ -63,7 +65,7 @@ ms.locfileid: "73982838"
 
 |||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|\* SQL Server \*  &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -137,7 +139,7 @@ REMOVE FILE logical_file_name  从 [!INCLUDE[ssNoVersion](../../includes/ssnover
 logical_file_name  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中引用文件时所用的逻辑名称。
 
 > [!WARNING]
-> 删除具有与其关联的 `FILE_SNAPSHOT` 备份的数据库文件将会成功，但不会删除任何关联的快照，以免使引用该数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及更高版本（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
+> 删除具有与其关联的 `FILE_SNAPSHOT` 备份的数据库文件将会成功，但不会删除任何关联的快照，以免使引用该数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
 
 MODIFY FILE 指定应修改的文件。 一次只能更改一个 \<filespec> 属性。 必须始终在 \<filespec> 中指定 NAME，以标识要修改的文件。 如果指定了 SIZE，那么新大小必须比文件当前大小要大。
 
@@ -176,7 +178,7 @@ NEWNAME new_logical_file_name  指定文件的新逻辑名称。
 
 new_logical_file_name  用于替换现有逻辑文件名称的名称。 该名称在数据库中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 该名称可以是字符或 Unicode 常量、常规标识符或分隔标识符。
 
-FILENAME { '  os\_file\_name  '  | '  filestream\_path  '  | '  memory\_optimized\_data\_path  '  } 指定操作系统（物理）文件名。
+FILENAME { 'os\_file\_name' | '_filestream\_path' | 'memory\_optimized\_data\_path'} 指定操作系统（物理）文件名    _    
 
 ' os_file_name  ' 对于标准 (ROWS) 文件组，这是在创建文件时操作系统所使用的路径和文件名。 该文件必须驻留在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器上。 在执行 ALTER DATABASE 语句前，指定的路径必须已经存在。
 
@@ -189,12 +191,12 @@ FILENAME { '  os\_file\_name  '  | '  filestream\_path  '  | '  memory\_optimize
 
 如果文件位于原始分区上，则 *os_file_name* 必须仅指定现有原始分区的驱动器号。 每个原始分区上只能存放一个文件。
 
-' filestream_path '    对于 FILESTREAM 文件组，FILENAME 指向将存储 FILESTREAM 数据的路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 `C:\MyFiles\MyFilestreamData`，则 `C:\MyFiles` 必须存在才能运行 ALTER DATABASE，但 `MyFilestreamData` 文件夹不能存在。
+' filestream_path ' 对于 FILESTREAM 文件组，FILENAME 指向将存储 FILESTREAM 数据的路径    。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 `C:\MyFiles\MyFilestreamData`，则 `C:\MyFiles` 必须存在才能运行 ALTER DATABASE，但 `MyFilestreamData` 文件夹不能存在。
 
 > [!NOTE]
 > SIZE 和 FILEGROWTH 属性不适用于 FILESTREAM 文件组。
 
-'  memory_optimized_data_path  '  对于内存优化文件组，FILENAME 会引用将存储内存优化数据的路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 `C:\MyFiles\MyData`，则 `C:\MyFiles` 必须存在才能运行 ALTER DATABASE，但 `MyData` 文件夹不能存在。
+' memory_optimized_data_path ' 对于内存优化文件组，FILENAME 指向将存储内存优化数据的路径    。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 `C:\MyFiles\MyData`，则 `C:\MyFiles` 必须存在才能运行 ALTER DATABASE，但 `MyData` 文件夹不能存在。
 
 必须在同一语句中创建文件组和文件 (`<filespec>`)。
 
@@ -286,7 +288,7 @@ NAME = new_filegroup_name  将文件组名称改为 new_filegroup_name  。
 
 AUTOGROW_SINGLE_FILE 适用于  ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）
 
-当文件组中的某个文件达到自动增长阈值时，只有该文件会增长。 这是默认设置。
+当文件组中的某个文件达到自动增长阈值时，只有该文件会增长。 这是默认值。
 
 AUTOGROW_ALL_FILES
 
@@ -310,7 +312,7 @@ READ_ONLY | READONLY 指定文件组为只读。 不允许更新其中的对象�
 - 在只读数据库中不会进行锁定。 这可以加快查询速度。
 
 > [!NOTE]
-> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READONLY` 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 `READONLY` 的应用程序。 该工具将由 `READ_ONLY` 代替。
+> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READONLY` 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 `READONLY` 的应用程序。 请改用 `READ_ONLY`。
 
 READ_WRITE | READWRITE 指定组是 READ_WRITE。 允许更新文件组中的对象。 若要更改此状态，您必须对数据库有独占访问权限。 有关详细信息，请参阅 SINGLE_USER 子句。
 
@@ -319,7 +321,7 @@ READ_WRITE | READWRITE 指定组是 READ_WRITE。 允许更新文件组中的对
 > [!TIP]
 > 可通过查看 **sys.databases** 目录视图中的**is_read_only** 列，或者查看 `DATABASEPROPERTYEX` 函数的 **Updateability** 属性，来确定这些选项的状态。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 若要减小数据库的大小，请使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。
 
@@ -336,7 +338,7 @@ READ_WRITE | READWRITE 指定组是 READ_WRITE。 允许更新文件组中的对
 
 无法为内存优化文件组设置 SIZE 和 FILEGROWTH 参数。
 
-在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READONLY` 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 READONLY 的应用程序。 该工具将由 `READ_ONLY` 代替。
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READONLY` 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 READONLY 的应用程序。 请改用 `READ_ONLY`。
 
 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READWRITE` 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。
 
@@ -819,7 +821,7 @@ NAME = new_filegroup_name  将文件组名称改为 new_filegroup_name  。
 
 AUTOGROW_SINGLE_FILE
 
-当文件组中的某个文件达到自动增长阈值时，只有该文件会增长。 这是默认设置。
+当文件组中的某个文件达到自动增长阈值时，只有该文件会增长。 这是默认值。
 
 AUTOGROW_ALL_FILES
 
@@ -847,7 +849,7 @@ READ_WRITE | READWRITE 指定组是 READ_WRITE。 允许更新文件组中的对
 
 可通过查看 **sys.databases** 目录视图中的**is_read_only** 列，或者查看 `DATABASEPROPERTYEX` 函数的 **Updateability** 属性，来确定这些选项的状态。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 若要减小数据库的大小，请使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。
 

@@ -1,6 +1,7 @@
 ---
-title: 数据库镜像配置故障排除 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 配置数据库镜像时的常见问题
+description: 提供有关信息以帮助解决设置数据库镜像会话时遇到的问题。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f469d5afc1dc2f900deaddced2a9931a7bcdf7e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17eccc8ce90743e49ced2db863bc85e9d297a1a5
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049764"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822518"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>数据库镜像配置故障排除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68049764"
 > [!NOTE]  
 >  请确保满足所有 [数据库镜像的先决条件](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)。  
   
-|问题|“摘要”|  
+|问题|总结|  
 |-----------|-------------|  
 |错误消息 1418|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息指示无法到达服务器网络地址或该地址不存在，同时建议您确认网络地址名称并重新发出命令。 |  
 |[帐户](#Accounts)|介绍了正确配置运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的帐户的相关要求。|  
@@ -38,7 +39,7 @@ ms.locfileid: "68049764"
 |[网络访问](#NetworkAccess)|记录了允许每个服务器实例通过 TCP 访问其他一个或多个服务器实例的端口的要求。|  
 |[镜像数据库准备](#MirrorDbPrep)|概述了准备镜像数据库以开始镜像的要求。|  
 |[失败的创建文件操作](#FailedCreateFileOp)|说明如何响应失败的创建文件操作。|  
-|[使用 Transact-SQL 开始镜像](#StartDbm)|说明 ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** 语句所需的顺序。|  
+|[使用 Transact-SQL 开始镜像](#StartDbm)|说明 ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** 语句所需的顺序。|  
 |[跨数据库事务](#CrossDbTxns)|自动故障转移可能导致自动不正确地解决有疑问的事务。 因此，数据库镜像不支持跨数据库事务。|  
   
 ##  <a name="Accounts"></a> 帐户  
@@ -52,7 +53,7 @@ ms.locfileid: "68049764"
   
 2.  如果使用本地系统帐户将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为服务运行，则必须使用证书进行身份验证。 有关详细信息，请参阅[使用数据库镜像终结点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
-##  <a name="Endpoints"></a> 端点  
+##  <a name="Endpoints"></a> Endpoints  
  必须正确配置端点。  
   
 1.  确保每个服务器实例（主体服务器、镜像服务器和见证服务器，如果有的话）都有数据库镜像端点。 有关详细信息，请参阅 [sys.database_mirroring_endpoints (Transact SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)，并根据身份验证的形式，参阅[为 Windows 身份验证创建数据库镜像终结点 (Transact SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)或 [使用数据库镜像终结点证书 (Transact SQ)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
@@ -143,7 +144,7 @@ ms.locfileid: "68049764"
  有关详细信息，请参阅[删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)、[为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)、[使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)、[使用数据库镜像端点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)，或[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
 ##  <a name="StartDbm"></a> 使用 Transact-SQL 开始镜像  
- 发出 ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** 语句的顺序非常关键。  
+ 发出 ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** 语句的顺序非常关键。  
   
 1.  第一个语句必须在镜像服务器上运行。 发出此语句时，镜像服务器不会尝试联系任何其他服务器实例。 相反，镜像服务器指示其数据库先进行等待，直到主体服务器与镜像服务器建立联系。  
   

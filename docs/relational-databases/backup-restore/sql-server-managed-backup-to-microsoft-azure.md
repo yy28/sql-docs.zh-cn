@@ -1,5 +1,5 @@
 ---
-title: SQL Server Managed Backup to Microsoft Azure | Microsoft Docs
+title: 目标为 Microsoft Azure 的 SQL Server 托管备份 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -10,34 +10,34 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8fb8654f89b11b848028e3b35dd971d80cfd4138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041361"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245429"
 ---
-# <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure 的 SQL Server 托管备份
+# <a name="sql-server-managed-backup-to-microsoft-azure"></a>目标为 Microsoft Azure 的 SQL Server 托管备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 管理并自动执行将 SQL Server 备份到 Microsoft Azure Blob 存储。 你可以选择允许 SQL Server 基于你的数据库的事务工作负荷确定备份计划。 或者可以使用高级选项来定义计划。 保留期设置可确定备份存储在 Azure Blob 存储上的时间。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 支持指定保持期的时间点还原。  
   
- 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始， [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的过程和基础行为已更改。 有关详细信息，请参阅 [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)。  
+ 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始， [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的过程和基础行为已更改。 有关详细信息，请参阅[将 SQL Server 2014 托管备份设置迁移到 SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)。  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 建议用于在 Microsoft Azure 虚拟机上运行的 SQL Server 实例。  
   
-## <a name="benefits"></a>优势  
+## <a name="benefits"></a>优点  
  目前，自动备份多个数据库需要制定备份策略、编写自定义代码并安排备份。 使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，你可以通过仅指定保持期和存储位置来创建备份计划。 虽然可以使用高级设置，但并非必需。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 可安排、执行并维护备份。  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 可以在数据库级别或 SQL Server 实例级别进行配置。 在实例级别进行配置时，任何新数据库也将自动备份。 在数据库级别的设置可用于在个别情况下重写实例级别默认设置。  
   
  你还可以对备份进行加密以提高安全性，并且可以设置自定义计划以控制执行备份的时间。 有关使用用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的 Microsoft Azure Blob 存储的优势详细信息，请参阅 [Microsoft Azure Blob 存储服务的 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
-##  <a name="Prereqs"></a> 先决条件  
+##  <a name="Prereqs"></a>先决条件  
  Microsoft Azure 存储空间是 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 用于存储备份文件的存储区。 需要以下先决条件：  
   
-|先决条件|描述|  
+|先决条件|说明|  
 |------------------|-----------------|  
 |**Microsoft Azure 帐户**|可以在浏览 [购买选项](https://azure.microsoft.com/pricing/free-trial/) 之前，使用 [免费试用版](https://azure.microsoft.com/pricing/purchase-options/)开始使用 Azure。|  
 |**Azure 存储帐户**|备份存储在与 Azure 存储帐户相关的 Azure Blob 存储中。 有关创建存储帐户的分步说明，请参阅 [About Azure Storage Accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)（关于 Azure 存储帐户）。|  
@@ -52,7 +52,7 @@ ms.locfileid: "68041361"
   
 |||  
 |-|-|  
-|系统对象|描述|  
+|系统对象|说明|  
 |**MSDB**|存储由 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]创建的所有备份的元数据和备份历史记录。|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
 |[managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|为 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置高级设置，如加密。|  
@@ -128,9 +128,9 @@ ms.locfileid: "68041361"
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 可能有一些限制。  
   
 ## <a name="see-also"></a>另请参阅  
-- [对 Microsoft Azure 启用 SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
-- [配置 SQL Server Managed Backup to Microsoft Azure 的高级选项](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
-- [对 Microsoft Azure 禁用 SQL Server 托管备份](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
+- [启用目标为 Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
+- [为目标为 Microsoft Azure 的 SQL Server 托管备份配置高级选项](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
+- [禁用目标为 Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
 - [系统数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 - [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   

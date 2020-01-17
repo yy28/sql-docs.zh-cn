@@ -1,6 +1,7 @@
 ---
-title: 使用 Always Encrypted 将加密数据批量加载到列中 | Microsoft Docs
-ms.custom: ''
+title: 使用 Always Encrypted 将加密数据批量加载到列中
+description: 了解如何结合使用 Always Encrypted 和 SQL Server 将数据大容量加载到列。
+ms.custom: seo-lt-2019
 ms.date: 11/04/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594169"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558197"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>使用 Always Encrypted 将加密数据批量加载到列中
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "73594169"
  
 4.  相同或其他应用程序使用启用了始终加密的驱动程序连接到数据库，并且连接字符串包含 **column encryption setting=enabled** ，并检索了数据。 应用程序要求以透明方式解密数据。 但是，由于数据是错误的密文，因此驱动程序无法解密此数据。  
 
-## <a name="best-practice"></a>最佳实践  
+## <a name="best-practice"></a>最佳做法  
  
 针对使用此选项的长时间运行的工作负荷，使用指定的用户帐户。  
  
@@ -71,12 +72,12 @@ ms.locfileid: "73594169"
  
 不要使用此选项开发新应用程序。 请改用提供 API（用于阻止针对单个会话的加密元数据检查）的客户端驱动程序，例如用于 SQL Server 的 .NET Framework 数据提供程序中的 AllowEncryptedValueModifications 选项 - 请参阅[使用 SqlBulkCopy 复制加密数据](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy)。 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 - [通过 SQL Server Management Studio 查询使用 Always Encrypted 的列](always-encrypted-query-columns-ssms.md)
 - [使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>另请参阅  
-- [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [通过 SQL Server 导入和导出向导在使用 Always Encrypted 的列之间迁移数据](always-encrypted-migrate-using-import-export-wizard.md)
 - [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md)   
 - [ALTER USER (Transact-SQL)](../../../t-sql/statements/alter-user-transact-sql.md)   

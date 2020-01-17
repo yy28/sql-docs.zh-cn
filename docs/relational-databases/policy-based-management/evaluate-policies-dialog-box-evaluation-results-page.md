@@ -1,5 +1,6 @@
 ---
-title: “评估策略”对话框 -“评估结果”页 | Microsoft Docs
+title: “评估策略”对话框的“评估结果”页面
+description: 介绍 SQL Server Management Studio (SSMS) 中基于策略的管理的“评估策略”对话框的“评估结果”页面。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0e6d5c9d558b65e091dfb9ef0901d15ffb0ac282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36ff10e317259547c03e6ee9e939229d68569b2e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137801"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558246"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>“评估策略”对话框，“评估结果”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "68137801"
  针对此目标进行策略评估。  
   
  **目标详细信息：详细信息**  
- 链接到显示策略评估详细信息的“结果详细视图”对话框。  
+ 链接到显示策略评估详细信息的  “结果详细视图”对话框。  
   
  **目标详细信息：消息**  
  出现错误时可以链接到有关信息。  

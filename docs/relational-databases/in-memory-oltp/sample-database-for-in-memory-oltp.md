@@ -1,7 +1,7 @@
 ---
 title: 内存中 OLTP 的示例数据库 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/30/2018
+ms.date: 12/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2806522e0dcc0c9aa7badd099be28e11072b396e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111798"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258786"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>内存中 OLTP 的示例数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68111798"
 > [!NOTE]  
 >  若要查看关于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的此主题，请参阅 [演示内存中 OLTP 的 AdventureWorks 扩展](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx)。  
   
- 该示例将 AdventureWorks 数据库中的 5 个表迁移到内存优化表，并包括销售订单处理演示工作负荷。 可以使用此演示工作负荷了解在服务器上使用内存中 OLTP 的性能优势。  
+ 该示例将 AdventureWorks 数据库中的五个表迁移到内存优化表，并包括销售订单处理演示工作负荷。 可以使用此演示工作负荷了解在服务器上使用内存中 OLTP 的性能优势。  
   
  在示例说明中，我们讨论将表迁移到内存中 OLTP 时进行的权衡，以说明对内存优化表（尚）不支持的功能。  
   
@@ -39,15 +39,15 @@ ms.locfileid: "68111798"
   
 -   [示例表和过程的说明](#Descriptionofthesampletablesandprocedures) - 包括通过内存中 OLTP 示例添加到 AdventureWorks 的表和过程的说明，以及将一些原始 AdventureWorks 表迁移到内存优化表的注意事项  
   
--   执行[使用演示工作负荷执行度量](#PerformanceMeasurementsusingtheDemoWorkload)的说明 - 包括有关安装和运行 ostress（一种用于驱动工作负荷的工具）以及运行演示工作负荷本身的说明  
+-   有关[使用演示工作负荷执行性能衡量](#PerformanceMeasurementsusingtheDemoWorkload)的说明 - 包括有关安装和运行 ostress（一种用于驱动工作负荷的工具）以及运行演示工作负荷本身的说明  
   
 -   [示例中的内存和磁盘空间利用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a>先决条件  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16GB 内存可供 SQL Server 使用。 有关内存中 OLTP 硬件的一般指南，请参阅下面的博客文章：[SQL Server 2014 中的内存中 OLTP 的硬件注意事项](blog-hardware-in-memory-oltp.md)
+-   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16 GB 内存可供 SQL Server 使用。 有关内存中 OLTP 硬件的一般指南，请参阅下面的博客文章：[SQL Server 2014 中的内存中 OLTP 的硬件注意事项](blog-hardware-in-memory-oltp.md)
 
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>基于 AdventureWorks 安装内存中 OLTP 示例  
  请按照以下步骤安装示例：  
@@ -68,7 +68,7 @@ ms.locfileid: "68111798"
   
      示例 T-SQL 脚本：  
   
-    ```  
+    ```sql
     RESTORE DATABASE [AdventureWorks2016CTP3]   
       FROM DISK = N'C:\temp\AdventureWorks2016CTP3.bak'   
         WITH FILE = 1,    
@@ -85,7 +85,7 @@ ms.locfileid: "68111798"
   
  新的内存优化表带有后缀“_inmem”。 示例还包括带有后缀“_ondisk”的对应表 - 这些表可以用于在系统上进行内存优化表与基于磁盘的表性能之间的一对一比较。  
   
- 请注意，用于性能比较的工作负荷中使用的内存优化表具有完全持久性并且会完整记录。 这些表不会牺牲持久性或可靠性来获取性能提升。  
+ 性能比较工作负荷中使用的内存优化表具有完全持久性并且会完整记录。 这些表不会牺牲持久性或可靠性来获取性能提升。  
   
  此示例的目标工作负荷是销售订单处理，我们还考虑在其中包含产品和折扣信息。 为此，创建了表 SalesOrderHeader、SalesOrderDetail、Product、SpecialOffer 和 SpecialOfferProduct。  
   
@@ -141,13 +141,13 @@ ms.locfileid: "68111798"
   
 -   内存优化表支持*默认约束* ，大多数默认约束按原样迁移。 但是，原始表 Sales.SalesOrderHeader 包含两个为列 OrderDate 和 ModifiedDate 检索当前日期的默认约束。 在具有大量并发的高吞吐量订单处理工作负荷中，任何全局资源都可能成为争用点。 系统时间就是全局资源，我们观察到，它可能在运行插入销售订单的内存中 OLTP 工作负荷时成为瓶颈，特别是如果需要为销售订单表头中的多列以及销售订单详细信息检索系统时间。 此示例中解决问题的方式是仅为插入的每个销售订单检索系统时间一次，然后将该值用于 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的 datetime 列以及存储过程 Sales.usp_InsertSalesOrder_inmem。  
   
--   *别名 UDT* - 原始表将两个别名用户定义数据类型 (UDT) dbo.OrderNumber 和 dbo.AccountNumber 分别用于列 PurchaseOrderNumber 和 AccountNumber。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在内存优化表中不支持别名 UDT，因而新表分别使用系统数据类型 nvarchar(25) 和 nvarchar(15)。  
+-   别名用户定义数据类型 (UDT) - 原始表将两个别名 UDT dbo.OrderNumber 和 dbo.AccountNumber 分别用于列 PurchaseOrderNumber 和 AccountNumber  。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在内存优化表中不支持别名 UDT，因而新表分别使用系统数据类型 nvarchar(25) 和 nvarchar(15)。  
   
--   *索引键中可以为 Null 的列* - 在原始表中，列 SalesPersonID 可以为 Null，而在新表中，该列不可为 Null，并且默认约束值为 -1。 这是因为内存优化表中的索引不能在索引键中具有可以为 Null 的列；-1 是这种情况下 NULL 的代理项。  
+-   *索引键中可以为 Null 的列* - 在原始表中，列 SalesPersonID 可以为 Null，而在新表中，该列不可为 Null，并且默认约束值为 -1。 这种情况是因为内存优化表中的索引不能在索引键中具有可为 null 的列；-1 是这种情况下 NULL 的代理项。  
   
 -   计算列  - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
 
-    - **适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。  
+    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。  
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，内存优化表和索引中支持计算列。
 
   
@@ -159,7 +159,7 @@ ms.locfileid: "68111798"
   
 -   *默认约束* - 类似于 SalesOrderHeader，未迁移需要系统时间/时间的默认约束，而是由插入销售订单的存储过程负责在第一次插入时插入当前系统日期/时间。  
   
--   *计算列* - 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，内存优化表不支持未作为计算列迁移的计算列 LineTotal。 若要访问此列，请使用视图 Sales.vSalesOrderDetail_extended_inmem。  
+-   *计算列* - 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，内存优化表不支持未作为计算列迁移的计算列 LineTotal。 要访问此列，请使用视图 Sales.vSalesOrderDetail_extended_inmem。  
   
 -   *Rowguid* - 省略了 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
   
@@ -182,21 +182,26 @@ ms.locfileid: "68111798"
   
  HASH 索引可用于进一步优化工作负荷。 这些索引特别针对点查找和行插入进行了优化。 但是，必须考虑到这些索引不支持范围扫描、有序扫描或是对前导索引键列进行的搜索。 因此，使用这些索引时需要谨慎。 此外，还需要在创建时指定 bucket_count。 它通常应设置为索引键值的一到二倍之间，不过估计过高通常不是什么问题。  
   
- 有关 [索引指南](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) 和 [选择正确 bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)的指南的详细信息，请参阅联机丛书。  
-  
+有关详细信息，请参阅联机丛书以详细了解[索引指南](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx)和[选择正确 bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx) 的指南。  
+
+
+联机丛书提供有关以下主题的详细信息：
+- [索引指南](https://docs.microsoft.com/sql/database-engine/guidelines-for-using-indexes-on-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
+- [选择正确的 bucket_count](https://docs.microsoft.com/sql/database-engine/determining-the-correct-bucket-count-for-hash-indexes) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn494956 -->
+
  迁移的表中的索引针对演示销售订单处理工作负荷进行了优化。 该工作负荷依赖于表 Sales.SalesOrderHeader_inmem 和 Sales.SalesOrderDetail_inmem 中的插入和点查找，还依赖于对表 Production.Product_inmem 和 Sales.SpecialOffer_inmem 中的主键列进行的点查找。  
   
  Sales.SalesOrderHeader_inmem 有三个索引，因为性能原因，而且工作负荷无需有序或范围扫描，所以这些索引都是 HASH 索引。  
   
 -   (SalesOrderID) 上的 HASH 索引：bucket_count 大小为 1000 万（向上舍入为 1600 万），因为预期销售订单数为 1000 万  
   
--   (SalesPersonID) 上的 HASH 索引：bucket_count 为 1000 万。 提供的数据集不包含许多销售人员，但是允许将来增加，并且不会因 bucket_count 过大而影响点查找性能。  
+-   (SalesPersonID) 上的 HASH 索引：bucket_count 为 1000 万。 提供的数据集不包含许多销售人员。 但此大型 bucket_count 考虑了将来的增长。 此外，如果 bucket_count 过大，也不会造成点查找性能下降。  
   
 -   (CustomerID) 上的 HASH 索引：bucket_count 为 1 万。 提供的数据集不包含许多客户，但是允许将来增加。  
   
  Sales.SalesOrderDetail_inmem 有三个索引，因为性能原因，而且工作负荷无需有序或范围扫描，所以这些索引都是 HASH 索引。  
   
--   (SalesOrderID, SalesOrderDetailID) 上的 HASH 索引：这是主键索引，即使不会经常对 (SalesOrderID, SalesOrderDetailID) 进行查找，将哈希索引用于该键也可加快行插入速度。 bucket_count 大小为 5000 万（向上舍入为 6700 万）：预期销售订单数为 1000 万，这是针对平均每个订单 5 个项目确定的大小  
+-   (SalesOrderID, SalesOrderDetailID) 上的 HASH 索引：这是主键索引，即使不会经常对 (SalesOrderID, SalesOrderDetailID) 进行查找，将哈希索引用于该键也可加快行插入速度。 bucket_count 大小为 5000 万（向上舍入为 6700 万）：预期销售订单数为 1000 万，这是针对平均每个订单五个项目确定的大小  
   
 -   (SalesOrderID) 上的 HASH 索引：经常按销售订单进行查找：您要查找对应于单个订单的所有行项。  bucket_count 大小为 1000 万（向上舍入为 1600 万），因为预期销售订单数为 1000 万  
   
@@ -242,7 +247,7 @@ ms.locfileid: "68111798"
   
         -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 包含订单行项的 TVP  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 包含订单行项目的表值参数 (TVP)  
   
     -   输入参数（可选）：  
   
@@ -304,15 +309,15 @@ ms.locfileid: "68111798"
   
     -   它依赖于帮助器过程 dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck 和 dbo.GenerateUQCheck 来生成执行完整性检查所需的 T-SQL。  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Performance Measurements using the Demo Workload  
+##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> 使用演示工作负荷执行度量  
  Ostress 是 Microsoft CSS SQL Server 支持团队开发的命令行工具。 此工具可以用于并行执行查询或运行存储过程。 可以配置线程数来并行运行给定 T-SQL 语句，并且可以指定应对此线程执行语句的次数；Ostress 会加快线程，对所有线程并行执行语句。 对所有线程完成执行之后，Ostress 会报告所有线程完成执行所花费的时间。  
   
 ### <a name="installing-ostress"></a>安装 Ostress  
- Ostress 作为 RML 实用工具的一部分进行安装；Ostress 没有独立安装。  
+ ostress 作为报告标记语言 (RML) 实用工具的一部分进行安装；ostress 没有独立安装版本。  
   
  安装步骤：  
   
-1.  从以下页面下载并运行 RML 实用工具的 x64 安装包：[下载适用于 SQL Server 的报表标记语言 (RML)](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
+1.  从以下页面下载并运行 RML 实用工具的 x64 安装包：[下载用于 SQL Server 的 RML](https://www.microsoft.com/download/details.aspx?id=4511)
 
 2.  如果出现指示某些文件正在使用的对话框，请单击“继续”  
   
@@ -340,7 +345,7 @@ ms.locfileid: "68111798"
 -   -r 每个连接执行每个输入文件/查询的迭代数  
   
 ### <a name="demo-workload"></a>演示工作负荷  
- 演示工作负荷中使用的主要存储过程是 Sales.usp_InsertSalesOrder_inmem/ondisk。 下面的脚本使用示例数据构造一个表值参数 (TVP)，并调用该过程以插入包含 5 个行项的销售订单。  
+ 演示工作负荷中使用的主要存储过程是 Sales.usp_InsertSalesOrder_inmem/ondisk。 下面的脚本使用示例数据构造一个表值参数 (TVP)，并调用该过程以插入包含五个行项目的销售订单。  
   
  Ostress 工具用于并行执行存储过程调用，以模拟并发插入销售订单的客户端。  
   
@@ -348,7 +353,7 @@ ms.locfileid: "68111798"
   
  以下脚本并发执行，以模拟销售订单处理工作负荷：  
   
-```  
+```sql
 DECLARE   
       @i int = 0,   
       @od Sales.SalesOrderDetailType_inmem,   
@@ -368,8 +373,7 @@ WHILE (@i < 20)
 BEGIN;   
       EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od;   
       SET @i += 1   
-END  
-  
+END
 ```  
   
  借助此脚本，构造的每个示例订单会通过在 WHILE 循环中执行的 20 个存储过程插入 20 次。 因为数据库用于构造示例订单，所以使用该循环。 在典型生产环境中，中间层应用程序将构造要插入的销售订单。  
@@ -392,7 +396,7 @@ END
   
  单击“复制”按钮复制该命令，将其粘贴到 RML 实用工具命令提示符处。  
   
-```  
+```console
 ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
@@ -401,13 +405,13 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 
  在工作负荷运行期间观察 CPU 利用率（例如使用任务管理器）。 可以看到 CPU 利用率接近 100%。 如果不是这样，则存在日志 IO 瓶颈，另请参见 [运行缓慢的测试的故障排除](#Troubleshootingslow-runningtests)。  
   
 ##### <a name="disk-based-tables"></a>基于磁盘的表  
- 以下命令对基于磁盘的表运行工作负荷。 请注意，此工作负荷可能要花一些时间执行，这在很大程度上是由于系统中存在闩锁争用。 内存优化表没有闩锁，因而不会遇到这个问题。  
+ 以下命令对基于磁盘的表运行工作负荷。 此工作负荷可能需要一些时间来执行，这在很大程度上是由于系统中存在闩锁争用。 内存优化表没有闩锁，因而不会遇到这个问题。  
   
  打开 RML 命令提示符，执行以下命令：  
   
  单击“复制”按钮复制该命令，将其粘贴到 RML 实用工具命令提示符处。  
   
-```  
+```console
 ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
@@ -422,11 +426,11 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 
 #### <a name="resetting-the-demo"></a>重置演示  
  若要重置演示，请打开 RML 命令提示符，执行以下命令：  
   
-```  
+```console
 ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"  
 ```  
   
- 根据硬件情况，可能需要几分钟运行。  
+ 根据硬件情况，可能需要几分钟来运行。  
   
  我们建议在每次演示运行之后重置。 因为此工作负荷仅涉及插入，所以每次运行将占用更多内存，因而需要重置来防止内存不足。 运行之后占用的内存量在 [运行工作负荷之后的内存利用率](#Memoryutilizationafterrunningtheworkload)一节中进行了讨论。  
   
@@ -451,7 +455,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 #### <a name="overall-utilization-of-the-database"></a>数据库的总体利用率  
  以下查询可用于获取系统中内存中 OLTP 的总体内存利用率。  
   
-```  
+```sql
 SELECT type  
    , name  
 , pages_kb/1024 AS pages_MB   
@@ -462,18 +466,19 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**类型**|**名称**|**pages_MB**|  
-|MEMORYCLERK_XTP|，则“默认”|94|  
+|type |name |**pages_MB**|  
+|MEMORYCLERK_XTP|默认|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|，则“默认”|0|  
-|MEMORYCLERK_XTP|，则“默认”|0|  
+|MEMORYCLERK_XTP|默认|0|  
+|MEMORYCLERK_XTP|默认|0|  
+||||
   
- 默认内存分配器包含系统范围内存结构，相对较小。 用户数据库（在此例中是 ID 为 5 的数据库）的内存分配器大约为 900MB。  
+ 默认内存分配器包含系统范围内存结构，相对较小。 用户数据库（在此例中是 ID 为 5 的数据库）的内存分配器大约为 900 MB。  
   
 #### <a name="memory-utilization-per-table"></a>每个表的内存利用率  
  以下查询可用于深化到各个表及其索引的内存利用率：  
   
-```  
+```sql
 SELECT object_name(t.object_id) AS [Table Name]  
      , memory_allocated_for_table_kb  
  , memory_allocated_for_indexes_kb  
@@ -482,7 +487,7 @@ ON dms.object_id=t.object_id
 WHERE t.type='U'  
 ```  
   
- 下面显示此查询对于示例全新安装的结果：  
+ 下表显示此查询对于全新示例安装的结果：  
   
 ||||  
 |-|-|-|  
@@ -494,15 +499,16 @@ WHERE t.type='U'
 |SpecialOffer_inmem|3|8192|  
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
-  
- 可以看到，这些表相当小：SalesOrderHeader_inmem 的大小大约为 7 MB，SalesOrderDetail_inmem 的大小大约为 15 MB。  
+||||
+
+ 可以看到，这些表相当小：SalesOrderHeader_inmem 大约为 7 MB，SalesOrderDetail_inmem 大约为 15 MB。  
   
  此处比较显著的是为索引分配的内存大小（与表数据大小相比）。 这是因为示例中的哈希索引针对较大数据大小预设了大小。 请注意，哈希索引有固定大小，因而其大小不会随表中的数据大小而增大。  
   
 ####  <a name="Memoryutilizationafterrunningtheworkload"></a> 运行工作负荷之后的内存利用率  
  插入 1000 万个销售订单之后，总体内存利用率类似于下面这样：  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -511,17 +517,18 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**类型**|**名称**|**pages_MB**|  
-|MEMORYCLERK_XTP|，则“默认”|146|  
+|type |name |**pages_MB**|  
+|MEMORYCLERK_XTP|默认|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|，则“默认”|0|  
-|MEMORYCLERK_XTP|，则“默认”|0|  
-  
- 可以看到，SQL Server 将稍小于 8GB 的大小用于示例数据库中的内存优化表和索引。  
+|MEMORYCLERK_XTP|默认|0|  
+|MEMORYCLERK_XTP|默认|0|  
+||||
+
+ 可以看到，SQL Server 将稍小于 8 GB 的大小用于示例数据库中的内存优化表和索引。  
   
  在一次示例运行之后查看每个表的详细内存使用率：  
   
-```  
+```sql
 SELECT object_name(t.object_id) AS [Table Name]  
      , memory_allocated_for_table_kb  
  , memory_allocated_for_indexes_kb  
@@ -540,15 +547,16 @@ WHERE t.type='U'
 |Product_inmem|111|12032|  
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
-  
- 可以看到共有约 6.5GB 的数据。 请注意，表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上的索引大小与插入销售订单之前的索引大小相同。 索引大小未更改是因为这两个表都使用哈希索引，而哈希索引是静态的。  
+||||
+
+ 可以看到共有约 6.5 GB 的数据。 请注意，表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上的索引大小与插入销售订单之前的索引大小相同。 索引大小未更改是因为这两个表都使用哈希索引，而哈希索引是静态的。  
   
 #### <a name="after-demo-reset"></a>演示重置之后  
  存储过程 Demo.usp_DemoReset 可以用于重置演示。 它删除表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的数据，并对原始表 SalesOrderHeader 和 SalesOrderDetail 中的数据重设种子。  
   
  现在，即使表中的行已删除，这也不意味着会立即回收内存。 SQL Server 根据需要在后台从内存优化表中的已删除行回收内存。 可以看到，在演示重置之后（系统上没有事务工作负荷），尚未立即回收已删除行的内存：  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -557,17 +565,18 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**类型**|**名称**|**pages_MB**|  
-|MEMORYCLERK_XTP|，则“默认”|2261|  
+|type |name |**pages_MB**|  
+|MEMORYCLERK_XTP|默认|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|，则“默认”|0|  
-|MEMORYCLERK_XTP|，则“默认”|0|  
-  
+|MEMORYCLERK_XTP|默认|0|  
+|MEMORYCLERK_XTP|默认|0|  
+||||
+
  这是预期行为：事务工作负荷运行时将回收内存。  
   
  如果启动演示工作负荷的第二次运行，可以看到内存利用率在开始时下降，因为以前删除的行会进行清理。 在某一时刻，内存大小会再次增大，直至工作负荷完成。 演示重置之后插入 1000 万行之后，内存利用率非常类似于第一次运行之后的利用率。 例如：  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -576,16 +585,17 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**类型**|**名称**|**pages_MB**|  
-|MEMORYCLERK_XTP|，则“默认”|1863|  
+|type |name |**pages_MB**|  
+|MEMORYCLERK_XTP|默认|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|，则“默认”|0|  
-|MEMORYCLERK_XTP|，则“默认”|0|  
-  
+|MEMORYCLERK_XTP|默认|0|  
+|MEMORYCLERK_XTP|默认|0|  
+||||
+
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>内存优化表的磁盘利用率  
  可以使用查询获得数据库检查点文件在给定时间的总体磁盘上大小：  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -596,9 +606,9 @@ WHERE f.type=N'FX'
 #### <a name="initial-state"></a>初始状态  
  最初创建示例文件组和示例内存优化表时，会预先创建一些检查点文件，并且系统开始填充这些文件 - 预先创建的检查点文件数取决于系统中的逻辑处理器数。 因为示例最初非常小，所以预先创建的文件在初始创建之后大部分为空。  
   
- 下面是示例在有 16 个逻辑处理器的计算机上的初始磁盘上大小：  
+ 以下代码是示例在有 16 个逻辑处理器的计算机上的初始磁盘上大小：  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -609,12 +619,13 @@ WHERE f.type=N'FX'
 |-|  
 |**磁盘上大小 (MB)**|  
 |2312|  
-  
- 可以看到，检查点文件的磁盘上大小 (2.3GB) 与实际数据大小（接近 30MB）之间存在巨大差异。  
+||
+
+ 可以看到，检查点文件的磁盘上大小 (2.3 GB) 与实际数据大小（接近 30 MB）之间存在巨大差异。  
   
  可以使用以下查询更详细地查看磁盘空间利用率的来源。 此查询返回的磁盘上大小与处于状态 5 (REQUIRED FOR BACKUP/HA)、6 (IN TRANSITION TO TOMBSTONE) 或 7 (TOMBSTONE) 的文件的大小接近。  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -638,15 +649,16 @@ ORDER BY state, file_type
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-  
- 可以看到，大部分空间由预先创建的数据和差异文件使用。 SQL Server 为每个逻辑处理器预先创建一对（数据、差异）文件。 此外，数据文件的预设大小为 128MB，差异文件的预设大小为 8MB，以便更高效地向这些文件插入数据。  
+|||||
+
+ 可以看到，大部分空间由预先创建的数据和差异文件使用。 SQL Server 为每个逻辑处理器预先创建一对（数据、差异）文件。 此外，数据文件的预设大小为 128 MB，差异文件的预设大小为 8 MB，以便更高效地向这些文件插入数据。  
   
  内存优化表中的实际数据在单个数据文件中。  
   
 #### <a name="after-running-the-workload"></a>运行工作负荷之后  
  进行插入 1000 万个销售订单的单次测试运行之后，总体磁盘上大小类似于下面这样（对于 16 核测试服务器）：  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -656,13 +668,14 @@ WHERE f.type=N'FX'
 ||  
 |-|  
 |**磁盘上大小 (MB)**|  
-|8828|  
+|8828|
+||
   
- 磁盘上大小接近 9GB，这接近于数据的内存中大小。  
+ 磁盘上大小接近 9 GB，这接近于数据的内存中大小。  
   
  更详细地查看各种状态间的检查点文件大小：  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -684,17 +697,18 @@ ORDER BY state, file_type
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-  
+|||||
+
  我们仍有 16 对预先创建的文件，准备好在关闭检查点时执行。  
   
- 有一对尚在构造中，这一对会一直用到关闭当前检查点。 这一对与活动的检查点文件一起，对于内存中 6.5GB 的数据使用了 6.5GB 的磁盘。 请注意，索引不在磁盘上保存，因而在此例中，磁盘上的总体大小小于内存中的大小。  
+ 有一对尚在构造中，这一对会一直用到关闭当前检查点。 这一对与活动的检查点文件一起，对于内存中 6.5 GB 的数据使用了 6.5 GB 的磁盘。 请注意，索引不在磁盘上保存，因而在此例中，磁盘上的总体大小小于内存中的大小。  
   
 #### <a name="after-demo-reset"></a>演示重置之后  
  演示重置之后，如果系统上没有事务工作负荷，则不会立即回收磁盘空间，并且没有数据库检查点。 对于要在其各个阶段中移动并最终丢弃的检查点文件，需要发生一些检查点和日志截断事件，以启动检查点文件合并以及启动垃圾收集。 如果在系统中具有事务工作负荷 [并且在使用完整恢复模式时进行定期日志备份]，则这些事件会自动发生，但是在系统处于空闲时不会自动发生（如演示方案所示）。  
   
  在示例中，演示重置之后，可能会出现如下内容  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -704,11 +718,12 @@ WHERE f.type=N'FX'
 ||  
 |-|  
 |**磁盘上大小 (MB)**|  
-|11839|  
+|11839|
+||
   
- 差不多 12GB，这显著大于演示重置之前的 9GB。 这是因为某些检查点文件合并已启动，但是某些合并目标尚未安装，某些合并源文件尚未清理，如下所示：  
+ 差不多 12 GB，这显著大于演示重置之前的 9 GB。 这是因为某些检查点文件合并已启动，但是某些合并目标尚未安装，某些合并源文件尚未清理，如下所示：  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -734,14 +749,15 @@ ORDER BY state, file_type
 |MERGE TARGET|DELTA|7|56|  
 |MERGED SOURCE|DATA|13|1772|  
 |MERGED SOURCE|DELTA|13|455|  
-  
+|||||
+
  事务活动在系统中进行时，合并目标会进行安装，合并源会进行清理。  
   
  第二次运行演示工作负荷（演示重置之后插入 1000 万个销售订单）之后，可以看到在第一次运行工作负荷过程中构造的文件已清理。 如果在工作负荷运行期间多次运行以上查询，则可以查看检查点文件在各个阶段间移动。  
   
  第二次运行工作负荷（插入 1000 万个销售订单）之后，可以看到磁盘利用率非常类似于第一次运行之后的情况（不过不一定相同，因为系统在本质上是动态的）。 例如：  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -765,11 +781,10 @@ ORDER BY state, file_type
 |UNDER CONSTRUCTION|DELTA|2|16|  
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
-  
+|||||
+
  在此例中，有两个检查点文件对处于“尚在构造”状态，这意味着多个文件对已变为“尚在构造”状态（可能是因为工作负荷的并发级别较高）。 多个并发线程同时需要一个新文件对，因而将一对从“预先创建”变为“尚在构造”。  
   
-## <a name="see-also"></a>另请参阅  
- [内存中 OLTP（内存中优化）](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
-  
+## <a name="see-also"></a>另请参阅
 
+[内存中 OLTP（内存中优化）](in-memory-oltp-in-memory-optimization.md)  

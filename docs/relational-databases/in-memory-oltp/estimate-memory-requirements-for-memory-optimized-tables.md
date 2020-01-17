@@ -1,6 +1,6 @@
 ---
-title: 估算内存优化表的内存需求 | Microsoft Docs
-ms.custom: ''
+title: 内存要求 - 内存优化表
+ms.custom: seo-dt-2019
 ms.date: 12/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2597aa470eea7e69c649b7ce207dffadab81edc3
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: eb553ecf259e6733da143428cd6474debd8215f3
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811171"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412687"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估算内存优化表的内存需求
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -171,7 +171,7 @@ SELECT * FRON t_hk
   
 在任意时刻，内存中都可能存在一定数量的额外行等待垃圾回收周期释放其内存，因此，必须具有足够的内存来容纳这些额外的行。  
   
-可通过下面的公式估算额外行的数目：每秒行更新和行删除的高峰次数 执行事务所需的最长秒数（最少为 1）。  
+可以通过计算每秒的最大行更新数和最大删除数，然后将其乘以事务所用的最长秒数（最少为 1）来估算额外的行数。  
   
 再用该值乘以行大小即可获得行版本控制所需占用的字节数。  
   

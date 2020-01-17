@@ -27,19 +27,19 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a62fe54a6bbdd7287c46f103f9963302727a1077
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948080"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564815"
 ---
-# <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
+# <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 指定临时命名的结果集，这些结果集称为公用表表达式 (CTE)。 这派生自简单的查询，并在单个 SELECT、INSERT、UPDATE、DELETE 或 MERGE 语句的执行范围内定义。 该子句也可用在 CREATE VIEW 语句中，作为该语句的 SELECT 定义语句的一部分。 公用表表达式可以包括对自身的引用。 这种表达式称为递归公用表表达式。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "67948080"
   
  如果定义了多个 CTE_query_definition，则这些查询定义必须用下列一个集合运算符联接起来  ：UNION ALL、UNION、EXCEPT 或 INTERSECT。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>创建和使用公用表表达式的准则  
 下面的准则适用于非递归公用表表达式。 有关适用于递归公用表表达式的准则，请参阅后面的[定义和使用递归公用表表达式的准则](#guidelines-for-defining-and-using-recursive-common-table-expressions)。  
@@ -288,9 +288,7 @@ INSERT INTO dbo.MyEmployees VALUES
 ,(23,  N'Mary', N'Gibson', N'Marketing Specialist', 4, 16);  
 ```  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -307,12 +305,10 @@ FROM DirectReports
 ORDER BY ManagerID;   
 ```  
   
-### <a name="e-using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>E. 使用递归公用表表达式显示递归的两个级别  
+#### <a name="using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>使用递归公用表表达式显示递归的两个级别  
  以下示例显示经理以及向经理报告的雇员。 将返回的级别数目限制为两个。  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -329,12 +325,10 @@ FROM DirectReports
 WHERE EmployeeLevel <= 2 ;  
 ```  
   
-### <a name="f-using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>F. 使用递归公用表表达式显示层次列表  
- 以下示例在示例 D 的基础上添加经理和雇员的名称，以及他们各自的头衔。 通过缩进各个级别，突出显示经理和雇员的层次结构。  
+#### <a name="using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>使用递归公用表表达式显示层次列表  
+ 以下示例添加了经理和员工的姓名，以及他们各自的头衔。 通过缩进各个级别，突出显示经理和雇员的层次结构。  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(Name, Title, EmployeeID, EmployeeLevel, Sort)  
 AS (SELECT CONVERT(varchar(255), e.FirstName + ' ' + e.LastName),  
         e.Title,  
@@ -359,12 +353,10 @@ FROM DirectReports
 ORDER BY Sort;  
 ```  
   
-### <a name="g-using-maxrecursion-to-cancel-a-statement"></a>G. 使用 MAXRECURSION 取消一条语句  
+#### <a name="using-maxrecursion-to-cancel-a-statement"></a>使用 MAXRECURSION 取消一条语句  
  可以使用 `MAXRECURSION` 来防止不合理的递归 CTE 进入无限循环。 下面的示例特意创建了一个无限循环，然后使用 `MAXRECURSION` 提示将递归级别限制为两级。  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 --Creates an infinite loop  
 WITH cte (EmployeeID, ManagerID, Title) as  
 (  
@@ -385,9 +377,7 @@ OPTION (MAXRECURSION 2);
   
  在更正代码错误之后，就不再需要 MAXRECURSION。 以下示例显示了更正后的代码。  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH cte (EmployeeID, ManagerID, Title)  
 AS  
 (  
@@ -403,7 +393,7 @@ SELECT EmployeeID, ManagerID, Title
 FROM cte;  
 ```  
   
-### <a name="h-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>H. 使用公用表表达式来有选择地执行 SELECT 语句中的递归关系操作  
+### <a name="e-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>E. 使用公用表表达式来有选择地执行 SELECT 语句中的递归关系操作  
  以下示例显示了为 `ProductAssemblyID = 800` 生产自行车所需的产品装配和部件层次结构。  
   
 ```sql  
@@ -432,7 +422,7 @@ FROM Parts AS p
 ORDER BY ComponentLevel, AssemblyID, ComponentID;  
 ```  
   
-### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>I. 在 UPDATE 语句中使用递归 CTE  
+### <a name="f-using-a-recursive-cte-in-an-update-statement"></a>F. 在 UPDATE 语句中使用递归 CTE  
  下例更新用于生成产品‘Road-550-W Yellow, 44’ `(ProductAssemblyID``800` 的所有部件的 `PerAssemblyQty` 值。 公用表表达式将返回用于生成 `ProductAssemblyID 800` 的部件和用于生成这些部件的组件等的层次结构列表。 只修改公用表表达式所返回的行。  
   
 ```sql  
@@ -460,7 +450,7 @@ JOIN Parts AS d ON c.ProductAssemblyID = d.AssemblyID
 WHERE d.ComponentLevel = 0;  
 ```  
   
-### <a name="j-using-multiple-anchor-and-recursive-members"></a>J. 使用多个定位点和递归成员  
+### <a name="h-using-multiple-anchor-and-recursive-members"></a>H. 使用多个定位点和递归成员  
  以下示例使用多个定位点和递归成员来返回指定的人的所有祖先。 创建了一个表，并在表中插入值，以建立由递归 CTE 返回的宗谱。  
   
 ```sql  
@@ -507,7 +497,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. 在递归 CTE 中使用分析函数  
+###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> I. 在递归 CTE 中使用分析函数  
  以下示例显示在 CTE 的递归部分中使用分析或聚合函数时可能出现的问题。  
   
 ```sql  
@@ -580,7 +570,7 @@ Lvl  N
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. 在 CTAS 语句中使用公用表表达式  
+### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>J. 在 CTAS 语句中使用公用表表达式  
  下例创建一个新表，包括 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的每名销售代表每年的销售订单总数。  
   
 ```sql  
@@ -609,7 +599,7 @@ AS
 GO  
 ```  
   
-### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. 在 CETAS 语句中使用公用表表达式  
+### <a name="k-using-a-common-table-expression-within-a-cetas-statement"></a>K. 在 CETAS 语句中使用公用表表达式  
  下例创建一个新的外部表，包括 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的每名销售代表每年的销售订单总数。  
   
 ```sql  
@@ -639,7 +629,7 @@ AS
 GO  
 ```  
   
-### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. 在语句中使用由多个逗号分隔的 CTE  
+### <a name="l-using-multiple-comma-separated-ctes-in-a-statement"></a>L. 在语句中使用由多个逗号分隔的 CTE  
  下例演示在单个语句中包含两个 CTE。 CTE 不能嵌套（无递归）  
   
 ```sql  

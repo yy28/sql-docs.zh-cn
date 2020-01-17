@@ -1,6 +1,7 @@
 ---
-title: 使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 配置见证服务器
+description: '介绍如何使用 Transact-SQL 通过 Windows 身份验证配置数据库镜像见证服务器。 '
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: df8fe05e66c50b6bdee8e6bdfd792a2b481d1e02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4616e2c10657e1af8db9c706c518fdf690618303
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945650"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822307"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "67945650"
 > [!IMPORTANT]  
 >  我们建议您在非高峰时段配置数据库镜像，因为配置会影响性能。  
   
-### <a name="to-establish-a-witness"></a>建立见证服务器  
+## <a name="establish-a-witness"></a>建立见证服务器  
   
 1.  在见证服务器实例上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果只将该服务器实例用于数据库镜像会话中的见证服务器，你可以为终结点分配见证服务器角色 (ROLE **=** WITNESS)。 如果要将该服务器实例用于其他数据库镜像会话中的伙伴，请将端点的角色分配为 ALL。  
   

@@ -1,6 +1,5 @@
 ---
-title: SQL Server 中扩展事件系统视图中的 SELECT 和 JOIN | Microsoft Docs
-ms.custom: ''
+title: 扩展事件系统视图中的 SELECT 和 JOIN
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,20 +9,21 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903459"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242903"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件系统视图中的 SELECT 和 JOIN
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-本文介绍了与 Microsoft SQL Server 和 Azure SQL 数据库云服务中的扩展事件相关的两组系统视图。 本文阐释了：
+本文介绍了与 SQL Server 和 Azure SQL 数据库中的扩展事件相关的两组系统视图。 本文阐释了：
 
 - 如何联接各种系统视图。
 - 如何从系统视图中选择特定种类的信息。
@@ -55,7 +55,7 @@ ms.locfileid: "67903459"
 
 - 用于存储正在运行的事件会话的当前活动  信息。 但是这些 DMV 对会话定义知之甚少。
     - 即使所有事件会话当前已停止，针对视图 *sys.dm_xe_packages* 的 SELECT 语句仍将返回行，因为各种包已加载到服务器启动的活动内存。
-    - 出于同一原因，sys.dm_xe_objects sys.dm_xe_object_columns 也仍将返回行。  
+    - 出于同一原因，sys.dm_xe_objects sys.dm_xe_object_columns 也仍将返回行   。
 
 
 - 扩展事件的 DMV 的名称前缀为：
@@ -345,7 +345,7 @@ ORDER BY
 ```
 
 
-#### <a name="output"></a>“输出”
+#### <a name="output"></a>输出
 
 
 下面是运行上述 SELECT JOIN UNION 的实际输出结果。 输出参数名称和值与前面的 CREATE EVENT SESSION 语句中的平面文本格式的输出相对应。
@@ -419,7 +419,7 @@ SELECT  --C.1
 ```
 
 
-#### <a name="output"></a>“输出”
+#### <a name="output"></a>输出
 
 以下是包的列表。
 
@@ -532,7 +532,7 @@ SELECT  --C.3
 ```
 
 
-#### <a name="output"></a>“输出”
+#### <a name="output"></a>输出
 
 为了激发你的兴趣，下面是前面的 SELECT 语句返回的对象的任意采样。
 
@@ -605,12 +605,12 @@ SELECT  -- C.4
 ```
 
 
-#### <a name="output"></a>“输出”
+#### <a name="output"></a>输出
 
 以下行由前面的 SELECT 语句返回，其中 `o.name = 'lock_deadlock'`：
 
 - 每一行代表针对 sqlserver.lock_deadlock  事件的可选筛选器。
-- 以下显示中忽略了 \[Column-Description\]  列。 它的值通常为 NULL。
+- 以下显示中忽略了 *\[Column-Description\]* 列。 它的值通常为 NULL。
 
 
 ```
@@ -644,7 +644,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* 和事件字段
+### <a name="c5-sysdm_xe_map_values-and-event-fields"></a>C.5 *sys.dm_xe_map_values* 和事件字段
 
 
 下面的 SELECT 语句包括对名为 sys.dm_xe_map_values 的复杂视图的联接。 
@@ -693,7 +693,7 @@ SELECT  --C.5
 ```
 
 
-#### <a name="output"></a>“输出”
+#### <a name="output"></a>输出
 
 <a name="resource_type_dmv_actual_row"></a>
 
@@ -765,7 +765,7 @@ SELECT  --C.6
 ```
 
 
-#### <a name="output"></a>“输出”
+#### <a name="output"></a>输出
 
 以下参数行是由前面的 SQL Server 2016 中的 SELECT 语句所返回内容的子集。
 
@@ -786,7 +786,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 使用 DMV SELECT 语句将 target_data 列转换为 XML
+### <a name="c7-dmv-select-casting-target_data-column-to-xml"></a>C.7 使用 DMV SELECT 语句将 target_data 列转换为 XML
 
 
 此 DMV SELECT 语句将返回活动事件会话目标的数据行。 数据被转换为 XML 格式，使其返回的单元格可单击，从而可在 SSMS 中轻松显示。
@@ -854,7 +854,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 
 <a name="section_C_8_select_function_disk"></a>
 
-### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 针对函数执行 SELECT 语句，以检索磁盘驱动器中的 event_file 数据
+### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>C.8 针对函数执行 SELECT 语句，以检索磁盘驱动器中的 event_file 数据
 
 
 假设事件会话收集了一些数据，之后停止了。 如果会话定义为使用 event_file 目标，则仍可以通过调用函数 sys.fn_xe_target_read_file  来检索数据。

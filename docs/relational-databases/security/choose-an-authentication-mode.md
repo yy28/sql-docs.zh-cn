@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cfbd77901ab2a8a834fe5a9efc4c272845e02c87
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903146"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721352"
 ---
 # <a name="choose-an-authentication-mode"></a>选择身份验证模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "72903146"
   
 ### <a name="disadvantages-of-sql-server-authentication"></a>SQL Server 身份验证的缺点  
   
--   如果用户是具有 Windows 登录名和密码的 Windows 域用户，则还必须提供另一个用于连接的 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 登录名和密码。 记住多个登录名和密码对于许多用户而言都较为困难。 每次连接到数据库时都必须提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据也十分烦人。  
+-   如果用户是拥有 Windows 登录名和密码的 Windows 域用户，则还必须提供另一个 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 登录名和密码才能连接。 记住多个登录名和密码对于许多用户而言都较为困难。 每次连接到数据库时都必须提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据也十分烦人。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证无法使用 Kerberos 安全协议。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "72903146"
   
 -   允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持具有混合操作系统的环境，在这种环境中并不是所有用户均由 Windows 域进行验证。  
   
--   允许用户从未知的或不可信的域进行连接。 例如，既定客户使用指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名进行连接以接收其订单状态的应用程序。  
+-   可让用户从未知或不受信任的域进行连接。 例如，既定客户使用指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名进行连接以接收其订单状态的应用程序。  
   
 -   允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持基于 Web 的应用程序，在这些应用程序中用户可创建自己的标识。  
   

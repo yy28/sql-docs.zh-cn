@@ -1,20 +1,21 @@
 ---
-title: 虚拟化 SQL Server 2019 CTP 2.0 中的外部数据 | Microsoft Docs
+title: 虚拟化外部数据：逗号分隔值 (csv)
 description: 此页面详细介绍了为 CSV 文件使用“创建外部表”向导的步骤
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a8ce50e4e359c8ce8dc2b0015300f9a7afb88d1
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: b1bb5f2e807731e1020729e045c017b6f1524ae1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710599"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256171"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>将外部表向导与 CSV 文件一起使用
 
@@ -22,7 +23,7 @@ SQL Server 2019 还允许从 HDFS 中的 CSV 文件虚拟化数据。  此过程
 
 ## <a name="prerequisite"></a>先决条件
 
-自 CTP 2.4 起，数据池和存储池外部数据源默认不会再创建在大数据群集中。 在使用向导之前，请使用以下 Transact-SQL 查询在目标数据库中创建默认 SqlStoragePool 外部数据源  。 请确保首先将查询的上下文更改为目标数据库。
+数据池和存储池外部数据源默认不会创建在大数据群集中的数据库里。 在使用向导之前，请使用以下 Transact-SQL 查询在目标数据库中创建默认 SqlStoragePool 外部数据源  。 请确保首先将查询的上下文更改为目标数据库。
 
 ```sql
 -- Create default data sources for SQL Big Data Cluster
@@ -74,7 +75,7 @@ IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePo
 ![外部数据源凭据](media/data-virtualization/csv-modify-columns.png)
 
 
-## <a name="summary"></a>“摘要”
+## <a name="summary"></a>总结
 
 此步骤提供所选对象的摘要。 它提供 SQL 主实例和建议的外部表信息。 在此步骤中，可以选择“生成脚本”（这会在 T-SQL 中编写语法脚本以创建外部数据源）或“创建”（这会创建外部数据源对象）   。
 

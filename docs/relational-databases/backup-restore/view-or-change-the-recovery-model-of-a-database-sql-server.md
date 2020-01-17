@@ -1,7 +1,7 @@
 ---
-title: 查看或更改数据库的恢复模式 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 05/10/2019
+title: 设置数据库恢复模式
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbf6d7f547c0030512a00a46a335a32cfe95f994
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908808"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254053"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>查看或更改数据库的恢复模式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "72908808"
   有关更深入的说明，请参阅[恢复模式](recovery-models-sql-server.md)。
   
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="BeforeYouBegin"></a> 准备工作  
   
 
--   在从[完整恢复模式或大容量日志恢复模式](back-up-a-transaction-log-sql-server.md) **before** switching from the [full recovery or bulk-logged recovery model](recovery-models-sql-server.md).  
+-   在从[完整恢复模式或大容量日志恢复模式](recovery-models-sql-server.md)切换前，先[备份事务日志](back-up-a-transaction-log-sql-server.md)  。  
   
 -   时点恢复在大容量日志模式下不可能进行。 在需要事务日志还原的大容量日志恢复模式下运行事务可能会导致事务丢失数据。 若要在灾难恢复方案中最大程度地恢复数据，则仅在以下条件下切换到大容量日志恢复模式：  
   
@@ -136,7 +136,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [创建作业](../../ssms/agent/create-a-job.md)  
   
--   [启用或禁用作业](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> 相关内容  
   

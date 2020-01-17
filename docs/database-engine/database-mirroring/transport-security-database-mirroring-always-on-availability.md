@@ -1,6 +1,7 @@
 ---
-title: 传输安全性 - 数据库镜像 - AlwaysOn 可用性 | Microsoft Docs
-ms.custom: ''
+title: 传输安全性：可用性组和数据库镜像
+description: 了解如何安全传输参与 Always On 可用性组的数据库或托管在 SQL Server 上的数据库镜像会话之间交换的信息。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f360f60727e91407c1993c18d9548dbefd46a388
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047979"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252752"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>传输安全性 - 数据库镜像 - AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "68047979"
   
 -   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例基于不同的域帐户（在相同的域或受信任的域中）作为服务运行，则必须在其他每个服务器实例上的 **master** 中创建各帐户的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。  
   
--   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例作为网络服务帐户运行，则必须在其他每个服务器上的_master_**\\**_中创建各主机帐户 (_ DomainName **ComputerName$** ) 的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。 其原因在于，基于网络服务帐户运行的服务器实例使用主机的域帐户进行身份验证。  
+-   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例作为网络服务帐户运行，则必须在其他每个服务器上的_master_ **\\** _中创建各主机帐户 (_ DomainName **ComputerName$** ) 的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。 其原因在于，基于网络服务帐户运行的服务器实例使用主机的域帐户进行身份验证。  
   
 > [!NOTE]  
 >  有关使用 Windows 身份验证设置数据库镜像会话的示例，请参阅[示例：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)。  
@@ -71,9 +72,9 @@ ms.locfileid: "68047979"
   
  或者，您可以通过在 CREATE ENDPOINT 语句或 ALTER ENDPOINT 语句中为 ALGORITHM 选项指定下列值之一，控制端点所使用的加密算法：  
   
-|ALGORITHM 值|描述|  
+|ALGORITHM 值|说明|  
 |---------------------|-----------------|  
-|RC4|指定端点必须使用 RC4 算法。 这是默认设置。<br /><br /> <strong>\*\* 警告 \*\*</strong> 不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。|  
+|RC4|指定端点必须使用 RC4 算法。 这是默认值。<br /><br /> <strong>\*\* 警告 \*\*</strong> 不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。|  
 |AES|指定端点必须使用 AES 算法。|  
 |AES RC4|指定两个端点将与优先使用 AES 算法的此端点协商加密算法。|  
 |RC4 AES|指定两个端点将与优先使用 RC4 算法的此端点协商加密算法。|  

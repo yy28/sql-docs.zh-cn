@@ -10,17 +10,19 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edf98113b435cafd9f6552643e6a8a1ba4316982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2decc7e78b599ebcd0c16e3373a0b62401d09428
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014457"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720804"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>将读取缩放用于 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-可用性组是一种全面的解决方案，赋予了 SQL Server 高可用性功能，并提供集成缩放解决方案。 在典型的数据库应用程序中，有多个客户端运行多种类型的工作负荷。 有时会由于资源限制出现瓶颈。 可以释放资源并增加 OLTP 工作负荷的吞吐量。 还可以提高性能并缩放只读工作负荷。 利用 SQL Server 的最快复制技术，并创建一组复制数据库，分担对只读副本的报告和分析工作负荷。
+可用性组是一种全面的解决方案，赋予了 SQL Server 高可用性功能，并提供集成缩放解决方案。 在典型的数据库应用程序中，有多个客户端运行多种类型的工作负荷。 有时会由于资源限制出现瓶颈。 
+
+在可用性组的上下文中，读取扩展将读取工作负荷卸载到次要副本。 可以释放资源并增加 OLTP 工作负荷的吞吐量。 还可以提高性能并缩放只读工作负荷。 利用 SQL Server 的最快复制技术，并创建一组复制数据库，分担对只读副本的报告和分析工作负荷。
 
 利用可用性组，可将一个或多个次要副本配置为支持以只读方式访问辅助数据库。
 

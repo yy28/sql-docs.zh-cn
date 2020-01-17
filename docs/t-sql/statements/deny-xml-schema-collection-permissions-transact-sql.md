@@ -1,6 +1,8 @@
 ---
-title: DENY XML 架构集合权限 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DENY XML 架构集合权限
+description: 拒绝对 XML 架构集合的权限。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 811c9532486b8f9c9a910254185de69096be9c8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3996a89355ba9a3346c9751f011db24ae6757fb9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984343"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244542"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY XML 架构集合权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +32,7 @@ ms.locfileid: "67984343"
   拒绝对 XML 架构集合的权限。  
   
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -93,7 +95,7 @@ DENY permission  [ ,...n ] ON
  Database_user_with_no_login   
  指定无相应服务器级主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以在 [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) 目录视图中查看 XML 架构集合的有关信息。  
   
  XML 架构集合是架构级的安全对象，包含于权限层次结构中作为其父级的架构中。 下表列出了可拒绝的对 XML 架构集合最为具体的限定权限，以及隐含这些权限的更为通用的权限。  

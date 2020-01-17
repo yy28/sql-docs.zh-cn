@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 53ca4d2631e41e0a815dbf240fc0a7006ec8ce8b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708511"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252863"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>启用数据库引擎的加密连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "71708511"
 > [!IMPORTANT]
 > 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，安全套接字层 (SSL) 已停止使用。 请改用传输层安全性 (TLS)。
 
-## <a name="transport-layer-security-tls"></a>传输层安全性 (TLS)
+## <a name="transport-layer-security-tls"></a>传输层安全 (TLS) (Transport Layer Security) (TLS)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用传输层安全性 (TLS) 对通过网络在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例与客户端应用程序之间传输的数据进行加密。 TLS 加密在协议层执行，并可用于所有支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端。
 客户端连接请求加密时，TLS 可用于服务器验证。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在某个计算机上运行，该计算机已分配有一个由公共证书颁发机构颁发的证书，则计算机的标识和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例由受信任的根证书颁发机构的证书链担保。 这种服务器验证需要对运行客户端应用程序的计算机进行配置，使其信任服务器使用的证书的根证书颁发机构。 也可以使用带有自签名的证书进行加密，如下一部分所述，但是自签名证书只能提供有限的保护。
 TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数据库计算机上运行的 Microsoft Windows 操作系统版本。
@@ -47,14 +47,14 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
 > 使用 40 位加密级别被认为是不安全的。
 
 > [!WARNING]
-> 使用自签名证书加密的 TLS 连接不提供强安全性。 它们容易在传输中途受到攻击。 在生产环境中或在连接到 Internet 的服务器上，不应依赖使用自签名证书的 TLS。
+> 使用自签名证书加密的 TLS 连接不提供强安全性。 它们易遭受中间人攻击。 在生产环境中或在连接到 Internet 的服务器上，不应依赖使用自签名证书的 TLS。
 
 启用 TLS 加密将增强通过网络在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例与应用程序之间传输的数据的安全性。 但如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与客户端应用程序之间的所有通信流量都使用 TLS 加密，则还需要进行以下额外处理：
 -  连接时需要进行额外的网络通信。
 -  从应用程序发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据包必须由客户端 TLS 堆栈加密并由服务器 TLS 堆栈解密。
 -  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例发送到应用程序的数据包必须由服务器 TLS 堆栈加密并由客户端 TLS 堆栈解密。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
  必须颁发证书才能进行 **服务器身份验证**。 证书名称必须为计算机的完全限定域名 (FQDN)。  
   
  用户的证书存储在本地计算机上。 若要安装证书以供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用，必须使用具有本地管理员权限的帐户运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。
@@ -82,7 +82,7 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
 
 - 证书的“使用者”  属性必须指明，证书公用名称 (CN) 与服务器计算机的主机名或完全限定的域名 (FQDN) 相同。 使用主机名时，必须在证书中指定 DNS 后缀。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在故障转移群集中运行，则公用名称必须与虚拟服务器的主机名或 FQDN 相同，并且在故障转移群集的所有节点上都必须提供这些证书。
 
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) 支持通配符证书。 SNAC 已被弃用，并已替换为 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 和 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。 其他客户端可能不支持通配符证书。 有关详细信息，请参阅客户端文档和[知识库 (KB) 258858](http://support.microsoft.com/kb/258858)。       
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) 支持通配符证书。 SNAC 已被弃用，并已替换为 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 和 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。 其他客户端可能不支持通配符证书。 有关详细信息，请参阅客户端文档和[知识库 (KB) 258858](https://support.microsoft.com/kb/258858)。       
   无法使用 SQL Server 配置管理器选择通配符证书。 要使用通配符证书，必须编辑 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 注册表项，并为“证书”值输入证书的指纹（不留空格）  。  
 
   > [!WARNING]  
@@ -129,9 +129,9 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
 > [!IMPORTANT]
 > SQL Server 服务帐户必须具有用于在 SQL Server 上强制加密的证书的读取权限。 对于非特权服务帐户，需要将读取权限添加到证书中， 否则可能会导致 SQL Server 服务重启失败。
   
-1. 在“SQL Server 配置管理器”  中，展开“SQL Server 网络配置”  右键单击“\<server instance>  的协议”  ，然后选择“属性”  。  
+1. 在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”，右键单击“\<服务器实例> 协议”，然后选择“属性”      。  
   
-2. 在“\<instance name> 属性的协议”    对话框中的“证书”  选项卡上，从“证书”  框的下拉菜单中选择所需证书，然后单击“确定”  。  
+2. 在“\<实例名称> 协议属性”对话框中的“证书”选项卡上，从“证书”框的下拉菜单中选择所需证书，然后单击“确定”       。  
   
 3. 在 **“标志”** 选项卡的 **“ForceEncryption”** 框中，选择 **“是”** ，然后单击 **“确定”** 关闭该对话框。  
   
@@ -163,5 +163,4 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
 
 ## <a name="see-also"></a>另请参阅
 [针对 Microsoft SQL Server 的 TLS 1.2 支持](https://support.microsoft.com/kb/3135244)     
-[将 Windows 防火墙配置为允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-[SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)
+[配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     

@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: aliceku
-ms.openlocfilehash: af336d2946dbb0b96d3ebdc64c14ce9e1eb6012e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: jaszymas
+ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127209"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246129"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>针对包含数据库的安全性最佳方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68127209"
   包含的数据库面临着一些独有的威胁， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 管理员应该了解并缓解这些威胁。 大部分威胁与 **USER WITH PASSWORD** 身份验证过程相关，该过程会将身份验证的范围从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 级别转到数据库级别。  
   
 ## <a name="threats-related-to-users"></a>与用户相关的威胁  
- 包含的数据库中具有 **ALTER ANY USER** 权限的用户（例如 **db_owner** 和 **db_securityadmin** 固定数据库角色的成员）可以在不告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员或者得到其允许的情况下授予该数据库的访问权限。 授予用户对包含数据库的访问权限会增加整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例受到攻击的可能性。 管理员应了解访问控制的这种委托，而且在为包含数据库中的用户授予 **ALTER ANY USER** 权限时要非常谨慎。 所有数据库所有者都拥有 **ALTER ANY USER** 权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员应该定期审核包含数据库中的用户。  
+ 包含的数据库中具有 ALTER ANY USER 权限的用户（例如，db_owner 和 db_accessadmin 固定数据库角色的成员）可以在不告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员或者得到其允许的情况下授予该数据库的访问权限    。 授予用户对包含数据库的访问权限会增加整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例受到攻击的可能性。 管理员应了解访问控制的这种委托，而且在为包含数据库中的用户授予 **ALTER ANY USER** 权限时要非常谨慎。 所有数据库所有者都拥有 **ALTER ANY USER** 权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员应该定期审核包含数据库中的用户。  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>使用 guest 帐户访问其他数据库  
  数据库所有者和拥有 **ALTER ANY USER** 权限的数据库用户可以创建包含数据库用户。 在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上包含的数据库后，如果其他数据库启用了 [!INCLUDE[ssDE](../../includes/ssde-md.md)]guest **帐户，包含数据库的用户就可以访问** 上的其他数据库。  
@@ -65,7 +65,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 -   存在包含的数据库时，非包含数据库的用户应连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，但不要使用初始目录，或者将非包含数据库的数据库名称指定为初始目录。 这样就避免了连接到包含的数据库而导致 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 管理员的直接控制减弱。  
   
 ### <a name="increasing-access-by-changing-the-containment-status-of-a-database"></a>通过更改数据库的包含状态来增加访问  
- 具有 **ALTER ANY DATABASE** 权限的登录名（如 **dbcreator** 固定服务器角色的成员）以及非包含数据库中具有 **CONTROL DATABASE** 权限的用户（如 **db_owner** 固定数据库角色的成员）都可以更改数据库的包含设置。 如果数据库的包含设置从 **NONE** 更改为 **PARTIAL** 或 **FULL**，则可以通过创建有密码的包含数据库用户来授予用户访问权限。 这样就可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员不知情或不允许的情况下提供访问。 若要防止将任何数据库更改为包含的数据库，请将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] **contained database authentication** 选项设置为 0。 若要阻止有密码的包含数据库用户连接到选定的包含的数据库，请使用登录触发器取消有密码的包含数据库用户进行的登录尝试。  
+ 具有 **ALTER ANY DATABASE** 权限的登录名（如 **dbcreator** 固定服务器角色的成员）以及非包含数据库中具有 **CONTROL DATABASE** 权限的用户（如 **db_owner** 固定数据库角色的成员）都可以更改数据库的包含设置。 如果数据库的包含设置从 **NONE** 更改为 **PARTIAL** 或 **FULL**，则可以通过创建有密码的包含数据库用户来授予用户访问权限。 这样就可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员不知情或不允许的情况下提供访问。 若要防止将任何数据库更改为包含的数据库，请将 [!INCLUDE[ssDE](../../includes/ssde-md.md)]**contained database authentication** 选项设置为 0。 若要阻止有密码的包含数据库用户连接到选定的包含的数据库，请使用登录触发器取消有密码的包含数据库用户进行的登录尝试。  
   
 ### <a name="attaching-a-contained-database"></a>附加包含的数据库  
  通过附加包含的数据库，管理员会向用户授予针对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的不必要的访问权限。 担心这种风险的管理员可以使数据库以 **RESTRICTED_USER** 模式联机，这样会阻止对使用密码的包含数据库用户进行身份验证。 只有通过登录授权的主体才能够访问 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
@@ -84,7 +84,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="escaping-a-contained-database"></a>避免使用包含的数据库  
  如果某个数据库为部分包含，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员应该定期审核包含的数据库中用户和模块的能力。  
   
-## <a name="denial-of-service-through-autoclose"></a>通过 AUTO_CLOSE 拒绝服务  
+## <a name="denial-of-service-through-auto_close"></a>通过 AUTO_CLOSE 拒绝服务  
  不要将包含的数据库配置为自动关闭。 如果关闭，打开数据库对用户进行身份验证会消耗额外的资源，并可能导致拒绝服务攻击。  
   
 ## <a name="see-also"></a>另请参阅  

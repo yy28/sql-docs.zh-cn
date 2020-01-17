@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8fd8b9b94d809a304e2f9347edba67d5ff7d9b85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294460"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687195"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 存储连接管理器
 
@@ -64,6 +64,9 @@ ms.locfileid: "71294460"
 
 > [!NOTE]
 >  要在现有包上配置托管标识身份验证，首选方法是至少使用[最新 SSIS 设计器](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)重新生成一次 SSIS 项目。 将该 SSIS 项目重新部署到 Azure SSIS 集成运行时，这样新的连接管理器属性 `ConnectUsingManagedIdentity` 才会自动添加到 SSIS 项目中的所有 Azure 存储连接管理器。 另一种方法是，直接在运行时结合使用属性重写和属性路径 **\Package.Connections[{连接管理器名称}].Properties[ConnectUsingManagedIdentity]** 。
+
+## <a name="secure-network-traffic-to-your-storage-account"></a>保护流入存储帐户的网络流量
+Azure 数据工厂现在是 Azure 存储的[受信任 Microsoft 服务](https://docs.microsoft.com/azure/storage/common/storage-network-security#trusted-microsoft-services)。 使用托管标识身份验证时，可通过[限制对选定网络的访问权限](https://docs.microsoft.com/azure/storage/common/storage-network-security#change-the-default-network-access-rule)，同时仍允许数据工厂访问存储帐户来保护存储帐户。 有关说明，请参阅[管理异常](https://docs.microsoft.com/azure/storage/common/storage-network-security#managing-exceptions)。
 
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)

@@ -1,7 +1,8 @@
 ---
-title: 教程：在使用随机加密且已启用 enclave 的列上创建并使用索引 | Microsoft Docs
-ms.custom: ''
-ms.date: 10/15/2019
+title: 使用随机加密在已启用 enclave 的列上创建索引（教程）
+description: 本教程介绍如何在 SQL Server 中使用具有安全 enclave 的 Always Encrypted 所支持的随机加密在已启用 enclave 的列上创建和使用索引。
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592330"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557749"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>教程：在使用随机加密且已启用 enclave 的列上创建并使用索引
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "73592330"
 
 ## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>步骤 1：在数据库中启用加速数据库恢复 (ADR)
 
-Microsoft 强烈建议，先在数据库中启用 ADR，再在使用随机加密且已启用 enclave 的列上创建首个索引。 请参阅[含安全 enclave 的 Always Encrypted](./encryption/always-encrypted-enclaves.md) 中的[数据库恢复](./encryption/always-encrypted-enclaves.md##database-recovery)部分。
+Microsoft 强烈建议，先在数据库中启用 ADR，再在使用随机加密且已启用 enclave 的列上创建首个索引。 请参阅[含安全 enclave 的 Always Encrypted](./encryption/always-encrypted-enclaves.md) 中的[数据库恢复](./encryption/always-encrypted-enclaves.md#database-recovery)部分。
 
 1. 关闭在上一教程中使用的任何 SSMS 实例。 这会关闭已打开的数据库连接（启用 ADR 的必需操作）。
 1. 以 sysadmin 身份打开新 SSMS 实例，并连接到 SQL Server 实例，无需  为数据库连接启用 Always Encrypted。

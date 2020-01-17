@@ -1,6 +1,7 @@
 ---
-title: 在合并项目之间自动生成联接筛选器 | Microsoft Docs
-ms.custom: ''
+title: 自动生成联接筛选器（合并）
+description: 介绍如何在 SQL Server Management Studio (SSMS) 中合并发布的“新建发布向导”的“筛选表行”页面上自动生成一组联接筛选器。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b3d21e2dcecf965e82ea5a88a51d6eb64ebfb88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8bc0ae6764d96b03088cb05eb72dc5ab4f3a0d6
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907974"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321274"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>在合并项目之间自动生成联接筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "67907974"
   
     3.  指定筛选选项。  
   
-         选择指示订阅服务器之间如何共享数据的选项：“此表中的行将转到多个订阅”或“此表中的行将仅转到一个订阅”   。 如果选择 **“此表中的行将仅转到一个订阅”** ，则合并复制可以通过存储和处理较少的元数据来优化性能。 但是，必须确保在对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
+         选择指示订阅服务器之间如何共享数据的选项：“此表中的行将转到多个订阅”或“此表中的行将仅转到一个订阅”   。 如果选择 **“此表中的行将仅转到一个订阅”** ，则合并复制可以通过存储和处理较少的元数据来优化性能。 但是，必须确保在对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -82,6 +83,6 @@ ms.locfileid: "67907974"
   
 ## <a name="see-also"></a>另请参阅  
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

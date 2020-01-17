@@ -1,6 +1,7 @@
 ---
-title: 配置故障转移群集实例存储 iSCSI - Linux 上的 SQL Server
-description: ''
+title: 配置 iSCSI FCI 存储 - Linux 上的 SQL Server
+description: 了解如何使用 iSCSI 为 Linux 上的 SQL Server 配置故障转移群集实例 (FCI)。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032401"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558574"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>配置故障转移群集实例 - iSCSI - Linux 上的 SQL Server
 
@@ -235,7 +236,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
     ``` 
 
-   *    验证文件是否存在。
+   *    验证文件是否在那里。
 
     ```bash
     ls /var/opt/mssql/data
@@ -273,7 +274,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     mkdir <FolderName>
     ```
 
-    \< 为文件夹名称。 如果不在正确的位置，则需要指定文件夹的完整路径。 以下示例创建名为 /var/opt/mssql/userdata 的文件夹。
+    \< 为文件夹名称。 如果文件夹不在正确的位置，需要指定文件夹的完整路径。 以下示例创建名为 /var/opt/mssql/userdata 的文件夹。
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -297,7 +298,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     chown mssql <FolderName>
     ```
 
-    \<FolderName> 是已创建的文件夹的名称。 以下是一个示例。
+    \<FolderName> 是已创建的文件夹的名称。 下面显示了一个示例。
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -309,7 +310,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     chown mssql <FolderName>
     ```
 
-    \<FolderName> 是已创建的文件夹的名称。 以下是一个示例。
+    \<FolderName> 是已创建的文件夹的名称。 下面显示了一个示例。
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -317,7 +318,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
 
    *    键入 `exit` 以退出超级用户身份。
 
-   *    要进行测试，请在该文件夹中创建数据库。 以下示例使用 sqlcmd 创建数据库，将上下文切换到该数据库，验证操作系统级别是否存在文件，然后删除临时位置。 可以使用 SSMS。
+   *    若要进行测试，请在该文件夹中创建数据库。 以下示例使用 sqlcmd 创建数据库，将上下文切换到该数据库，验证操作系统级别是否存在文件，然后删除临时位置。 可以使用 SSMS。
   
     ![50-ExampleCreateSSMS][9]
 
@@ -351,7 +352,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker> 是步骤 20 的输出中 FCI不 使用的卷组列表。 将每个卷组括在引号中并用逗号分隔。 以下是一个示例。
+    \<ListOfVGsNotUsedByPacemaker> 是步骤 20 的输出中 FCI不 使用的卷组列表。 将每个卷组括在引号中并用逗号分隔。 下面显示了一个示例。
 
     ![55-ListOfVGs][11]
  
@@ -390,7 +391,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
 
 现在可以配置 FCI 了。
 
-|Distribution |主题 
+|分发 |主题 
 |----- |-----
 |**附带 HA 加载项的 Red Hat Enterprise Linux** |[配置](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**附带 HA 加载项的 SUSE Linux Enterprise Server** |[配置](sql-server-linux-shared-disk-cluster-sles-configure.md)

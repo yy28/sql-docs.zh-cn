@@ -22,12 +22,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d49f852c69af4335d3243fb84c921e11268669f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2adf7404e80a0a04932c14b598011c1799b5611
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927204"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546577"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67927204"
 > [!NOTE]  
 >  若要更改在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中添加或删除成员的角色，请使用 [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 和 [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,12 +65,12 @@ ALTER ROLE role_name
   
 ## <a name="arguments"></a>参数  
  role_name   
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 版开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
   
  指定要更改的数据库角色。  
   
- ADD MEMBER database_principal  l  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 版开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+ ADD MEMBER database_principal   
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
   
  指定向数据库角色的成员身份添加数据库主体。  
   
@@ -79,7 +79,7 @@ ALTER ROLE role_name
 -   database_principal 不能是固定的数据库角色或是服务器主体  。  
   
 DROP MEMBER database_principal   
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 版开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
   
  指定从数据库角色的成员身份删除数据库主体。  
   
@@ -88,7 +88,7 @@ DROP MEMBER database_principal
 -   database_principal 不能是固定的数据库角色或是服务器主体  。  
   
 WITH NAME = new_name   
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 版开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
   
  指定更改用户定义的数据库角色的名称。 数据库中必须尚未包含新名称。  
   
@@ -118,7 +118,7 @@ WITH NAME = new_name
 ## <a name="examples"></a>示例  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>A. 更改数据库角色的名称  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 版开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 开始）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
   
  以下示例将角色 `buyers` 的名称更改为 `purchasing`。   本示例可以在 [AdventureWorks](https://msftdbprodsamples.codeplex.com/) 示例数据库中执行。
   
@@ -127,7 +127,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. 添加或删除角色成员  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 版开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 开始）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
   
  此示例创建一个名为 `Sales` 的数据库角色。 示例向成员身份添加一个名为 Barry 的数据库用户，然后演示如何删除成员 Barry。   本示例可以在 [AdventureWorks](https://msftdbprodsamples.codeplex.com/) 示例数据库中执行。
   

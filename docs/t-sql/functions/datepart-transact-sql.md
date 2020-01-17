@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d3eda2a9f3f3756fd2fdc0095b999dcde189d83
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: ac0817f4dcbcefd3fc783d2cf0d0ae35afc0c546
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988432"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255807"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "72988432"
   
 有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -59,7 +59,7 @@ DATEPART ( datepart , date )
   
 |*datepart*|缩写形式|  
 |---|---|
-|year |yy, yyyy  |  
+|**year**|yy, yyyy  |  
 |quarter |qq, q  |  
 |month |mm, m  |  
 |dayofyear |dy, y  |  
@@ -72,8 +72,8 @@ DATEPART ( datepart , date )
 |millisecond |ms |  
 |microsecond |mcs |  
 |nanosecond |ns |  
-|**TZoffset**|**tz**|  
-|**ISO_WEEK**|**isowk**, **isoww**|  
+|**tzoffset**|**tz**|  
+|**iso_week**|**isowk**, **isoww**|  
   
 *date*  
 解析为下列某种数据类型的表达式： 
@@ -106,20 +106,21 @@ DATEPART ( datepart , date )
 |month, mm, m |10|  
 |**dayofyear, dy, y**|303|  
 |**day, dd, d**|30|  
-|**week, wk, ww**|45|  
-|**weekday, dw**|1|  
+|**week, wk, ww**|44|  
+|**weekday, dw**|3|  
 |hour, hh |12|  
 |minute, n |15|  
 |**second, ss, s**|32|  
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
+|**tzoffset, tz**|310|  
+|**iso_week, isowk, isoww**|44|  
   
 ## <a name="week-and-weekday-datepart-arguments"></a>周和工作日日期部分参数
 对于 week (wk, ww) 或 weekday (dw) datepart，`DATEPART` 返回值取决于 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) 设置的值       。
   
-任何年份的 1 月 1 日都可定义 week _datepart_ 的起始数字  。 例如：
+任何年份的 1 月 1 日都用来定义 week datepart 的起始数字   。 例如：
 
 DATEPART (wk, 'Jan 1, xxxx') = 1  
 
@@ -146,7 +147,7 @@ DATEPART (wk, 'Jan 1, xxxx') = 1
 ## <a name="year-month-and-day-datepart-arguments"></a>年、月和日日期部分参数  
 DATEPART (year, date)、DATEPART (month, date) 和 DATEPART (day, date) 的返回值分别与函数 [YEAR](../../t-sql/functions/year-transact-sql.md)、[MONTH](../../t-sql/functions/month-transact-sql.md) 和 [DAY](../../t-sql/functions/day-transact-sql.md) 的返回值相同       。
   
-## <a name="iso_week-datepart"></a>ISO_WEEK datepart  
+## <a name="iso_week-datepart"></a>iso_week datepart  
 ISO 8601 包括 ISO 周-日期系统，即周的编号系统。 每周都与该周内星期四所在的年份关联。 例如，2004 年的第一周 (2004W01) 包括 2003 年 12 月 29 日（星期一）到 2004 年 1 月 4 日（星期日）。 欧洲国家/地区通常使用此编号样式。 非欧洲国家/地区则通常不使用。
 
 注意：一年中的最多周数可能是 52 或 53。
@@ -162,14 +163,14 @@ ISO 8601 包括 ISO 周-日期系统，即周的编号系统。 每周都与该�
 |星期三|1 月 1 日，<br /><br /> 第一个星期二，<br /><br /> 其中有 1–7 天属于此年|是||  
 |星期六|1 月 1 日，<br /><br /> 第一个星期五，<br /><br /> 其中有 1–7 天属于此年|是||  
   
-## <a name="tzoffset"></a>TZoffset  
-`DATEPART` 返回以分钟数表示的 TZoffset (tz) 值（带有签名）   。 此语句返回了 310 分钟的时区偏移量：
+## <a name="tzoffset"></a>tzoffset  
+`DATEPART` 返回以分钟数表示的 tzoffset (tz) 值（带有签名）   。 此语句返回了 310 分钟的时区偏移量：
   
 ```sql
-SELECT DATEPART (TZoffset, '2007-05-10  00:00:01.1234567 +05:10');  
+SELECT DATEPART (tzoffset, '2007-05-10  00:00:01.1234567 +05:10');  
 ```  
-`DATEPART` 呈现的 TZoffset 值如下所示：
-- 对于 datetimeoffset 和 datetime2，TZoffset 返回的时间偏移量以分钟为单位，其中 datetime2 的偏移量始终为 0 分钟。
+`DATEPART` 呈现的 tzoffset 值如下所示：
+- 对于 datetimeoffset 和 datetime2，tzoffset 返回的时间偏移量以分钟为单位，其中 datetime2 的偏移量始终为 0 分钟。
 - 对于可隐式转换为 datetimeoffset 或 datetime2 的数据类型，`DATEPART` 返回以分钟数表示的时间偏移量   。 异常：其他 date/time 数据类型。
 - 所有其他类型的参数都会导致错误。
   
@@ -206,7 +207,7 @@ SELECT DATEPART(microsecond, '00:00:01.1234567'); -- Returns 123456
 SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `DATEPART` 可用在 select list、WHERE、HAVING、GROUP BY 和 ORDER BY 子句中。
   
 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，DATEPART 将字符串文字隐式强制转换为 datetime2 类型  。 这就意味着，日期在作为字符串传递时，DATENAME 不会支持 YDM 格式。 必须先将字符串显式转换为 datetime 或 smalldatetime 类型，然后才能使用 YDM 格式   。

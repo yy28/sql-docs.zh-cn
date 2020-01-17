@@ -1,7 +1,7 @@
 ---
-title: 确定更改在可用性组的辅助副本上不可见的原因 - SQL Server
+title: 可用性组次要副本上不会显示更改
 ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
-ms.custom: ag-guide,seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bed83c98489d1622e97dd84c9f5c1994715b60fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013678"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243012"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>确定对主要副本的更改在 Always On 可用性组的次要副本上未得到反映的原因
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68013678"
 ##  <a name="BKMK_OLDTRANS"></a>长时间运行的活动事务  
  主要副本上长时间运行的事务可阻止在次要副本上读取更新。  
   
-### <a name="explanation"></a>解释  
+### <a name="explanation"></a>说明  
  次要副本上的所有读取工作负荷都是快照隔离查询。 在快照隔离中，只读客户端在重做日志中最早的活动事务的开始点查看次要副本上的可用性数据库。 如果已数小时未提交事务，开放事务将阻止所有只读查询查看任何新更新。  
   
 ### <a name="diagnosis-and-resolution"></a>诊断和解决方法  
@@ -62,7 +62,7 @@ ms.locfileid: "68013678"
 ##  <a name="BKMK_LATENCY"></a>高网络延迟或低网络吞吐量导致主要副本上日志堆积  
  高网络延迟或低网络吞吐量可阻止日志以足够快的速度发送到次要副本。  
   
-### <a name="explanation"></a>解释  
+### <a name="explanation"></a>说明  
  如果日志发送包含的消息数超出了允许向次要副本发送的最大未确认消息数，主要副本将激活对日志发送的流控制。 在部分这些消息得到确认前，无法再向次要副本发送日志块。 这种情况可能对数据丢失的可能性有更严重的影响，可能会损害恢复点目标 (RPO)。  
   
 ### <a name="diagnosis-and-resolution"></a>诊断和解决方法  
@@ -95,7 +95,7 @@ ms.locfileid: "68013678"
 ##  <a name="BKMK_REDOBLOCK"></a>另一报告工作负荷阻止重做线程运行  
  一个长时间运行的只读查询阻止次要副本上的重做线程执行数据定义语言 (DDL) 更改。 必须先取消阻止重做线程，然后才可对读取工作负荷进行进一步更新。  
   
-### <a name="explanation"></a>解释  
+### <a name="explanation"></a>说明  
  在次要副本上，只读查询可获取架构稳定性 (`Sch-S`) 锁定。 这些 `Sch-S` 锁定可阻止重做线程获取架构修改 (`Sch-M`) 锁定并进行任何 DDL 修改。 必须先取消阻止重做线程才可应用日志记录。  
   
 ### <a name="diagnosis-and-resolution"></a>诊断和解决方法  
@@ -111,7 +111,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
 ##  <a name="BKMK_REDOBEHIND"></a>重做线程因资源争用而滞后  
  次要副本上的大型报告工作负荷降低了次要副本的性能，且重做线程已滞后。  
   
-### <a name="explanation"></a>解释  
+### <a name="explanation"></a>说明  
  如果对次要副本应用日志记录，重做线程将读取日志磁盘中的日志记录，然后对于每个日志记录，该线程将访问数据页，以应用日志记录。 如果页面并非已在缓冲池中，页面访问可能受到 I/O 限制（访问物理磁盘）。 如果存在受到 I/O 限制的报告工作负荷，该工作负荷将与重做线程争用 I/O 资源，可能会降低重做线程的速度。 这种情况不仅会影响其他报告工作负荷查看更新的数据，还会影响 RTO。  
   
 ### <a name="diagnosis-and-resolution"></a>诊断和解决方法  

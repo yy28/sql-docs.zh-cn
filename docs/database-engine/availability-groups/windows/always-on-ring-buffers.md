@@ -1,7 +1,7 @@
 ---
-title: 使用环形缓冲区获取有关可用性组的运行状况信息
+title: 可用性组上提供运行状况信息的环形缓冲区
 description: 使用 SQL Server 环形缓冲区获取有关 AlwaysOn 可用性组的特定诊断信息。
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef5213139271def9f2901f87fa150950bdeb513d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c52e0bcb34c93bb3c973caae53d3983db3660e24
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014725"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822112"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>使用环形缓冲区获取有关 AlwaysOn 可用性组的运行状况信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

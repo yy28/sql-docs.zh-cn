@@ -1,6 +1,7 @@
 ---
-title: 在数据库镜像会话中强制服务 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 强制数据库镜像服务
+description: 如果主体服务器在镜像服务器可用时出现故障，请强制将服务故障转移到镜像数据库（可能造成数据丢失），以使数据库可用
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8be517127e297fb72e8010cdad953c8a955d8815
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 970f399ab6227fdaf2672bf887c250b6be02de1e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997863"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822221"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>在数据库镜像会话中强制服务 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +42,12 @@ ms.locfileid: "67997863"
   
      ALTER DATABASE *<database_name>* SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS  
   
-     其中，*<database_name>* 为镜像数据库。  
+     其中， *<database_name>* 为镜像数据库。  
   
      镜像服务器将立即转换为主体服务器，并且镜像挂起。  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [数据库镜像运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   

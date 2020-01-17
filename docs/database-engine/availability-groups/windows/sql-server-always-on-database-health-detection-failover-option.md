@@ -1,6 +1,7 @@
 ---
-title: 数据库运行状况检测故障转移选项 | Microsoft Docs
-ms.custom: ''
+title: 数据库级别运行状况检测
+description: 了解适用于 SQL Server Always On 可用性组的数据库级别运行状况检测功能。
+ms.custom: seo-lt-2019
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 357d99a61f226162433f7d5fb1bbdfd41990cc8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013960"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251267"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性组数据库级别运行状况检测故障转移选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ select name, db_failover from sys.availability_groups
 
 dmv 输出示例：
 
-|NAME  |  db_failover|
+|name  |  db_failover|
 |---------|---------|
 | Contoso-ag | 1  |
 
@@ -115,7 +116,7 @@ dmv 输出示例：
 >
 >**2016-04-25 12:20:21.15 spid79      错误:41653，严重性:21，状态:1。**
 >
->**2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”遇到错误(错误类型:2 'DB_SHUTDOWN')，导致可用性组“Contoso-ag”发生故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。**
+>**2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”遇到错误(错误类型:2 'DB_SHUTDOWN')，导致可用性组“Contoso-ag”发生故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。 
 >
 >2016-04-25 12:20:21.17 spid79      数据库“AutoHa-Sample”的状态信息 - 强化的 Lsn:“(34:664:1)”    提交 LSN:“(34:656:1)”    提交时间:“Apr 25 2016 12:19PM”
 >
@@ -125,7 +126,7 @@ dmv 输出示例：
 >
 >2016-04-25 12:20:21.21 spid75      可用性组“ag”中本地可用性副本的状态已从“PRIMARY_NORMAL”更改为“RESOLVING_NORMAL”。  由于可用性组脱机，因此状态发生更改。  副本脱机的原因包括：已删除关联的可用性组，用户已将 Windows Server 故障转移群集 (WSFC) 管理控制台中的关联可用性组设置为离线，或可用性组正在故障转移到其他 SQL Server 实例。  有关详细信息，请参阅 SQL Server 错误日志、Windows Server 故障转移群集 (WSFC) 管理控制台或 WSFC 日志。
 
-### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>扩展事件 sqlserver.availability_replica_database_fault_reporting
+### <a name="extended-event-sqlserveravailability_replica_database_fault_reporting"></a>扩展事件 sqlserver.availability_replica_database_fault_reporting
 
 从 SQL Server 2016 开始，定义了一个新的扩展事件，该事件通过数据库级别运行状况检测触发。  事件名称为 sqlserver.availability_replica_database_fault_reporting 
 
@@ -151,7 +152,7 @@ GO
 
 字段说明：
 
-|列数据 | 描述|
+|列数据 | 说明|
 |---------|---------|
 |availability_group_id |可用性组的 ID。|
 |availability_group_name |可用性组的名称。|
@@ -166,7 +167,7 @@ GO
 
 在此示例输出中，fault_type 显示：由于名为 AutoHa-Sample2 的数据库出错（错误类型为 2- 关闭），SQLSERVER-1 副本上的可用性组 Contoso-ag 发生了严重事件。
 
-|字段  | ReplTest1|
+|字段  | 值|
 |---------|---------|
 |availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
 |availability_group_name | Contoso-ag|

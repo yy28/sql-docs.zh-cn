@@ -1,6 +1,7 @@
 ---
-title: 更改数据库镜像会话中的事务安全 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 更改事务安全性（镜像数据库）
+description: 使用 Transact-SQL 更改 SQL Server 数据库镜像会话的事务安全性属性。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d37d47983dd7c98338f20df1157cd45d88411b74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ba0b574fea1974ab93c5cecf4346942df6c4a2c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952067"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247485"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>更改数据库镜像会话中的事务安全 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

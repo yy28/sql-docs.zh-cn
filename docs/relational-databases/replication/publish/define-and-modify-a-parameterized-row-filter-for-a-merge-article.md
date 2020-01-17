@@ -1,6 +1,7 @@
 ---
-title: 定义和修改合并项目的参数化行筛选器 | Microsoft Docs
-ms.custom: ''
+title: 定义和修改参数化行筛选器（合并）
+description: 了解如何定义和修改 SQL Server 合并发布项目的参数化行筛选器。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d24b967821310876cfff00c257c1024dac512588
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 5ce5f0625cf4a57e974fe7faf9eac677a2c629db
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846756"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321201"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>定义和修改合并项目的参数化行筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +93,7 @@ ms.locfileid: "70846756"
   
 #### <a name="to-modify-a-parameterized-row-filter"></a>修改参数化行筛选器  
   
-1.  在新建发布向导的“筛选表行”  页或“发布属性 - \<发布>”  的“筛选行”  页上，在“筛选的表”  窗格中选择筛选器，然后单击“编辑”  。  
+1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。       
   
 2.  在 **“编辑筛选器”** 对话框中，修改筛选器。  
   
@@ -100,7 +101,7 @@ ms.locfileid: "70846756"
   
 #### <a name="to-delete-a-parameterized-row-filter"></a>删除参数化行筛选器  
   
-1.  在新建发布向导的“筛选表行”  页或“发布属性 - \<发布>”  的“筛选行”  页上，在“筛选的表”  窗格中选择筛选器，然后单击“删除”  。  
+1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。       
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式创建和修改参数化行筛选器。  
@@ -140,6 +141,6 @@ ms.locfileid: "70846756"
  [定义和修改合并项目间的联接筛选器](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

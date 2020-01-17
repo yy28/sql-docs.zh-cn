@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: c86ace5f903befc27e9348201332274e84877299
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982284"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002332"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "73982284"
 > [!CAUTION]  
 > 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器通常会为查询选择最佳执行计划，我们建议资深开发人员和数据库管理员仅在不得已时使用提示。  
   
-**适用范围：**  
+**适用于：**  
   
 [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -92,7 +92,8 @@ ms.locfileid: "73982284"
   | EXPAND VIEWS   
   | FAST number_rows   
   | FORCE ORDER   
-  | { FORCE | DISABLE } EXTERNALPUSHDOWN  
+  | { FORCE | DISABLE } EXTERNALPUSHDOWN
+  | { FORCE | DISABLE } SCALEOUTEXECUTION
   | IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
   | KEEP PLAN   
   | KEEPFIXED PLAN  
@@ -168,14 +169,16 @@ FORCE ORDER
   
 { FORCE | DISABLE } EXTERNALPUSHDOWN  
 强制或禁用向下推送 Hadoop 中符合条件的表达式的计算。 仅适用于使用 PolyBase 的查询。 不会向下推送到 Azure 存储。  
-  
+
+{ FORCE | DISABLE } SCALEOUTEXECUTION 强制或禁用 PolyBase 查询的横向扩展执行，这些查询使用 SQL Server 2019 大数据群集中的外部表。 仅使用 SQL 大数据群集的主实例的查询遵循此提示。 横向扩展将在大数据群集的计算池中进行。 
+
 KEEP PLAN  
 强制查询优化器对查询放宽估计的重新编译阈值。 通过运行以下语句之一对表进行了估计数目的索引列更改后，估计的重新编译阈值会开始自动重新编译查询：
 
 * UPDATE
-* 删除
+* DELETE
 * MERGE
-* Insert
+* INSERT
 
 指定 KEEP PLAN 可确保不会像表有多个更新一样频繁地重新编译查询。  
   
@@ -275,7 +278,7 @@ ROBUST PLAN
    禁用批处理模式内存授予反馈。 有关详细信息，请参阅[批处理模式内存授予反馈](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback)。     
    适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
-  禁用表变量延迟编译。 有关详细信息，请参阅[表变量延迟编译](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)。     
+  禁用表变量延迟编译。 有关详细信息，请参阅[表变量延迟编译](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)。     
   适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    对多语句表值函数禁用交错执行。 有关详细信息，请参阅[多语句表值函数的交错执行](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)。     
@@ -340,7 +343,7 @@ ROBUST PLAN
 <a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
  强制查询优化器为查询使用由 **'** _xml\_plan_ **'** 指定的现有查询计划。 不能使用 INSERT、UPDATE、MERGE 或 DELETE 语句来指定 USE PLAN。  
   
-TABLE HINT (  exposed\_object\_name  [ ,  \<table_hint> [ [,  ]...n  ] ] )  将指定表提示应用于与 exposed\_object\_name  对应的表或视图。 我们建议仅在[计划指南](../../relational-databases/performance/plan-guides.md)的上下文中将表提示用作查询提示。  
+TABLE HINT (exposed\_object\_name [ , \<table_hint> [ [, ]...n ] ] ) 将指定的表提示应用于与 exposed\_object\_name 对应的表或视图        。 我们建议仅在[计划指南](../../relational-databases/performance/plan-guides.md)的上下文中将表提示用作查询提示。  
   
  exposed\_object\_name  可以是下面的引用之一：  
   
@@ -357,7 +360,7 @@ TABLE HINT (  exposed\_object\_name  [ ,  \<table_hint> [ [,  ]...n  ] ] )  将�
 > [!CAUTION] 
 > 指定带参数的 FORCESEEK 限制优化器可以考虑的计划数大于指定不带参数的 FORCESEEK 时的计划数。 这可能导致在更多情况下出现“无法生成计划”错误。 在未来的版本中，对优化器进行内部修改后可允许考虑更多计划。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  只有在 INSERT 语句中使用了 SELECT 子句时，才能在该语句中指定查询提示。  
   
  只能在顶级查询中指定查询提示，不能在子查询指定。 将表提示指定为查询提示时，可以在顶级查询或子查询中指定提示。 不过，在 TABLE HINT 子句中为 exposed\_object\_name  指定的值必须与查询或子查询中的公开名称完全匹配。  

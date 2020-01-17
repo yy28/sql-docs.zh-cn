@@ -1,6 +1,5 @@
 ---
-title: 使用 system_health 会话 | Microsoft Docs
-ms.custom: ''
+title: 使用 system_health 会话
 ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,21 +15,21 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 262860781ba99abf8c4f6de783cd477db0e15d81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab31461888588ee54f1715f5e98ddb0f3b9aa23b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009347"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246142"
 ---
-# <a name="use-the-systemhealth-session"></a>使用 system_health 会话
+# <a name="use-the-system_health-session"></a>使用 system_health 会话
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 system_health 会话是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]默认包含的扩展事件会话。 该会话在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 启动时自动启动，并且运行时不会对性能造成任何明显影响。 该会话收集的系统数据可用于帮助对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的性能问题进行故障排除。 
 
 > [!IMPORTANT]
-> 建议不要停止、更改或删除系统运行状况会话。  
+> 建议不要停止、更改或删除 system_health 会话。 将来的产品更新可能会覆盖对 system_health 会话设置所做的任何更改。
   
 该会话收集的信息包括：  
   
@@ -82,7 +81,7 @@ WHERE xe.name = 'system_health'
   
 若要查看事件文件中的会话数据，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供的扩展事件用户界面。 有关详细信息，请参阅 [SQL Server 中扩展事件的目标数据的高级查看功能](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)。
   
-## <a name="restoring-the-systemhealth-session"></a>还原 system_health 会话  
+## <a name="restoring-the-system_health-session"></a>还原 system_health 会话  
 如果删除 system_health 会话，则可以通过在查询编辑器中执行 **u_tables.sql** 文件来还原该会话。 该文件位于下面的文件夹中，其中 C: 表示安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序文件的驱动器，MSSQL1x 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的主要版本   ：  
   
  `C:\Program Files\Microsoft SQL Server\MSSQL1x.\<*instanceid*>\MSSQL\Install`  

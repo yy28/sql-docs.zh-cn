@@ -1,24 +1,30 @@
 ---
-title: 虚拟化 SQL Server 2019 中的外部数据 | Microsoft Docs
+title: 虚拟化外部数据
 description: 此页面详细介绍了为关系数据源使用“创建外部表”向导的步骤
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 719584bda1a289694c6e5ff7483e320073323be4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710597"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75227505"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>对关系数据源使用“外部表”向导
 
 SQL Server 2019 的重要方案之一是能够虚拟化数据。 此过程允许将数据保留在其原始位置。 可以虚拟化 SQL Server 实例中的数据，以便可以对这些数据进行查询，如同 SQL Server 中的任何其他表一样  。 此过程可以最大限度地减少对 ETL 进程的需求。 此过程可通过使用 PolyBase 连接器来实现。 有关数据虚拟化的详细信息，请参阅 [PolyBase 入门](polybase-guide.md)。
+
+本视频介绍了数据虚拟化：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-Data-Virtualization/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="start-the-external-table-wizard"></a>启动外部表向导
 
@@ -66,7 +72,7 @@ SQL Server 2019 的重要方案之一是能够虚拟化数据。 此过程允许
 > [!IMPORTANT]
 >外部表工具不支持照片类型。 如果创建的外部视图中包含照片类型，则创建表后会出现错误。 但仍将创建此表。
 
-## <a name="summary"></a>“摘要”
+## <a name="summary"></a>总结
 
 此步骤显示所选对象的摘要。 它提供数据库作用域凭据的名称以及在目标数据库中创建的外部数据源对象。 选择“生成脚本”以在 T-SQL 中编写用于创建外部数据源的语法  。 选择“创建”，创建外部数据源对象  。
 

@@ -9,17 +9,55 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 11/04/2019
-ms.openlocfilehash: 16e2a7568bb88dbf36576cf5a6d64a1b268621fa
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.date: 12/26/2019
+ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
+ms.sourcegitcommit: 3c65b43ba5a00585be7840df300d9183dc6fb606
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532531"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75521727"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](download.md)**
+
+## <a name="december-2019-hotfix"></a>2019 年 12 月（修补程序）
+
+2019 年 12 月 26 日&nbsp; / &nbsp;版本：1.14.1
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 修补了 bug #8747“OE Expansion 失败” | [#8747](https://github.com/microsoft/azuredatastudio/issues/8747)  |
+| &nbsp; | &nbsp; |
+
+## <a name="december-2019"></a>2019 年 12 月
+
+2019 年 12 月 19 日&nbsp; / &nbsp;版本：1.14.0 
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 更改了 Notebooks 中的“附加到连接”下拉列表，以仅列出当前的活动连接 | [#8129](https://github.com/microsoft/azuredatastudio/issues/8129) |
+| 添加了 bigdatacluster.ignoreSslVerification 设置，以允许在连接到 BDC 时忽略 SSL 验证错误 | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
+| 允许更改脱机查询编辑器的默认语言风格 | [#8419](https://github.com/microsoft/azuredatastudio/pull/8419) |
+| 大数据群集/SQL 2019 功能的 GA 状态 | [#8269](https://github.com/microsoft/azuredatastudio/issues/8269) |
+| 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/milestone/44?closed=1)。 |
+| &nbsp; | &nbsp; |
+
+
+## <a name="november-2019-hotfix"></a>2019 年 11 月（修补程序）
+
+2019 年 11 月 15 日&nbsp; / &nbsp;版本：1.13.1
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 修复了 bug #8210“复制/粘贴结果顺序错乱” |  |
+| &nbsp; | &nbsp; |
 
 ## <a name="november-2019"></a>2019 年 11 月
 
@@ -30,9 +68,9 @@ ms.locfileid: "73532531"
 | 更改 | 详细信息 |
 | :----- | :------ |
 | 新 SQL Server 2019 支持 | &bull; &nbsp; 使用 BDC 部署向导部署 SQL Server 2019 大数据群集 <br/>&bull; &nbsp; 使用控制器仪表板管理群集运行状况 <br/>&bull; &nbsp; 使用安全 ACL 对话框管理 HDFS 访问控制列表 <br/> &bull; &nbsp; 使用 HDFS 分层对话框添加装载 <br/> &bull; &nbsp; 使用内置 Jupyter Book、SQL Server 2019 指南进行排除故障 <br/> &bull; &nbsp; SQL vNext 扩展重命名为数据虚拟化扩展 <br/> &bull; &nbsp; 在外部表向导中添加了 Teradata 和 Mongo 支持|
-| 新笔记本功能 | &bull; &nbsp; 宣布推出 Powershell 笔记本 &bull; &nbsp; 宣布推出可折叠代码单元 <br/>&bull; &nbsp; 笔记本性能改进 <br/> &bull; &nbsp; 请在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22)查看完整的改进列表 |
+| 新笔记本功能 | &bull; &nbsp; 宣布 Powershell 笔记本 <br/> &bull; &nbsp; 宣布可折叠代码单元 <br/>&bull; &nbsp; 笔记本性能改进 <br/> &bull; &nbsp; 请在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22)查看完整的改进列表 |
 | 宣布推出 Jupyter Book  | Jupyter Book 是按目录整理的笔记本和 Markdown 文件的集合。 |
-| 新 SQL Server 部署向导  | 现在支持进行以下部署： <br/> &bull; &nbsp; Windows 上的 SQL Server 2019 <br/> &bull; &nbsp; 在 Windows 上部署 SQL Server 2017 <br/> &bull; &nbsp; 在 Docker 上部署 SQL Server 2019 <br/> &bull; &nbsp; 在 Docker 上部署 SQL Server 2017 |
+| 新 SQL Server 部署向导  | 现在支持进行以下部署： <br/> &bull; &nbsp; Windows 上的 SQL Server 2019 <br/> &bull; &nbsp; Windows 上的 SQL Server 2017 <br/> &bull; &nbsp; Docker 上的 SQL Server 2019 <br/> &bull; &nbsp; Docker 上的 SQL Server 2017 |
 | 宣布正式发布架构比较扩展| &bull; &nbsp; SQLCMD 模式 <br/> &bull; &nbsp; 本地化支持 <br/> &bull; &nbsp; 辅助功能修补程序 <br/> &bull; &nbsp; 安全 bug  |
 | 宣布正式发布 SQL Server Dacpac 扩展| <br/> &bull; &nbsp; 本地化支持 <br/> &bull; &nbsp; 辅助功能修补程序 <br/> &bull; &nbsp; 安全 bug |
 | 宣布推出 Visual Studio IntelliCode 扩展 | Visual Studio IntelliCode 现在支持 SQL，可提供更加智能的保留关键字建议。 |
@@ -88,7 +126,7 @@ ms.locfileid: "73532531"
 | 更改 | 详细信息 |
 | :----- | :------ |
 | 启用 SQLCMD 模式 | 查询编辑器现支持切换 SQLCMD 模式，以将查询作为 SQLCMD 脚本写入和编辑 |
-| Community 扩展插件：查询编辑器增强 | 查询编辑器增强是一种开放源代码扩展插件，旨在为经常编写查询的用户增强 Azure Data Studio 查询编辑器。 &bull; &nbsp; 将当前查询作为代码片段保存 <br/>&bull; &nbsp; 使用 Ctrl+U 切换数据库 <br/> &bull; &nbsp; 通过模板新建查询 <br/> &bull; &nbsp; 请在[此处](https://github.com/dzsquared/query-editor-boost)查看完整的改进列表 |
+| Community 扩展插件：查询编辑器增强 | 查询编辑器增强是一种开放源代码扩展插件，旨在为经常编写查询的用户增强 Azure Data Studio 查询编辑器。 &bull; &nbsp; 将当前查询保存为代码片段 <br/>&bull; &nbsp; 使用 Ctrl+U 切换数据库 <br/> &bull; &nbsp; 通过模板新建查询 <br/> &bull; &nbsp; 请在[此处](https://github.com/dzsquared/query-editor-boost)查看完整的改进列表 |
 | 笔记本改进 | &bull; &nbsp; 为支持大型笔记本文件而进行的性能改进 <br/> &bull; &nbsp; 请在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed)查看完整的改进列表 |
 | Visual Studio Code 8 月发布合并 1.38 | 可在[此处](https://code.visualstudio.com/updates/v1_38)查看最新的改进内容。 |
 | 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)。 |
@@ -108,8 +146,8 @@ ms.locfileid: "73532531"
 | 更改 | 详细信息 |
 | :----- | :------ |
 | 发布 SandDance 1.3.1 扩展 | &bull; &nbsp; 智能图表检测 <br/>&bull; &nbsp; 3D 可视化效果 <br/> &bull; &nbsp; 数据筛选 |
-| 笔记本改进 | &bull; &nbsp; 在行中添加代码或文本单元 <br/>&bull; &nbsp; 新增了以下功能：右键单击 SQL 结果网格可以将结果另存为 CSV、JSON 等 <br/> &bull; &nbsp; 提升了笔记本加载性能，以便更快地加载 JSON <br/> &bull; &nbsp; 请在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed)查看完整的改进列表 |
-| SQL Server 2019 支持 |  此版本中包括对其他 SQL Server 2019 大数据群集功能的支持，包括： <br/> &bull; &nbsp; 缩短了加载“对象映射”页上的表和列信息所需的时间。 <br/> &bull; &nbsp; 修复了在“连接详细信息”页上加载现有数据库范围凭据时出现的 bug。 <br/> &bull; &nbsp; 增加了用于 PROSE 分析的默认样本大小。 | 
+| 笔记本改进 | &bull; &nbsp; 在行中添加代码或文本单元格 <br/>&bull; &nbsp; 新增了以下功能：右键单击 SQL 结果网格可以将结果另存为 CSV、JSON 等 <br/> &bull; &nbsp; 提升了笔记本加载性能，以便更快地加载 JSON <br/> &bull; &nbsp; 请在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed)查看完整的改进列表 |
+| SQL Server 2019 支持 |  此版本中包括对其他 SQL Server 2019 大数据群集功能的支持，包括： <br/> &bull; &nbsp; 缩短了加载“对象映射”页面上的表和列信息所需的时间。 <br/> &bull; &nbsp; 修复了在“连接详细信息”页面上加载现有数据库范围凭据时出现的 bug。 <br/> &bull; &nbsp; 增加了用于 PROSE 分析的默认样本大小。 | 
 | Dacpac 扩展现在支持 AAD | 
 | Visual Studio Code 7 月发布合并 1.37 | 可在[此处](https://code.visualstudio.com/updates/v1_37)查看最新的改进内容。 |
 | 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)。 |
@@ -125,8 +163,8 @@ ms.locfileid: "73532531"
 | :----- | :------ |
 | 发布 SentryOne Plan Explorer 扩展 | 我们重要的 Microsoft 合作伙伴 SentryOne 将推出[适用于 Azure Data Studio 的 SentryOne Plan Explorer 扩展](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio)。 <br> 这是一个免费扩展，可为 Azure Data Studio 中运行的查询提供强化的计划图表，具备优化的布局算法和直观的颜色编码，有助于快速识别可影响查询性能的资源消耗量最高的运算符。 若要详细了解该扩展，请查看[此处](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio)的 SentryOne 博客文章。 |
 | 即将针对架构比较推出的新功能 | &bull; &nbsp; 架构比较文件支持 (.SCMP) <br/>&bull; &nbsp; 取消架构比较支持 <br/>&bull; &nbsp; 可在[此处](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)查看完整的更改内容|
-| 笔记本改进 | &bull; &nbsp; Plotly Python 支持 <br/>&bull; &nbsp; 通过浏览器打开笔记本 <br/> &bull; &nbsp; Python 包管理对话框 <br/> &bull; &nbsp; 性能和 Markdown 增强功能 <br/> &bull; &nbsp; 键盘快捷方式更新 <br/>  &bull; &nbsp; 可在[此处](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+)查看 Bug 修复和次要功能 |
-| SQL Server 2019 支持 |  此版本中包括对其他 SQL Server 2019 大数据群集功能的支持，包括： <br/> &bull; &nbsp; 管理仪表板中的服务终结点表，其中列出了群集中的所有关键服务。 <br/> &bull; &nbsp; 群集状态笔记本显示如何可跨所有服务和 pod 查询群集状态以及对其进行故障排除。| 
+| 笔记本改进 | &bull; &nbsp; Plotly Python 支持 <br/>&bull; &nbsp; 通过浏览器打开 Notebook <br/> &bull; &nbsp; Python 包管理对话框 <br/> &bull; &nbsp; 性能和 Markdown 增强功能 <br/> &bull; &nbsp; 键盘快捷方式更新 <br/>  &bull; &nbsp; 可在[此处](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+)查看 bug 修复和次要功能 |
+| SQL Server 2019 支持 |  此版本中包括对其他 SQL Server 2019 大数据群集功能的支持，包括： <br/> &bull; &nbsp; 管理仪表板中的服务终结点表，其中列出了群集中的所有关键服务。 <br/> &bull; &nbsp; 群集状态 Notebook 显示如何跨所有服务和 pod 查询群集状态以及对其进行故障排除。| 
 | 提供更新的语言包| 扩展管理器商城中现提供 10 个语言包。 只需使用扩展商城搜索特定语言并进行安装。 安装所选语言后，Azure Data Studio 会提示重启以切换新的语言。 |
 | SQL Server Profiler 更新 | SQL Server 配置文件扩展已更新，增加了很多新功能，包括： <br/> &bull; &nbsp; 按数据库名称进行筛选 <br/> &bull; &nbsp; 复制和粘贴支持 <br/> &bull; &nbsp; 保存/加载筛选器 <br/>可以在[此处](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+)查看 SQL Server Profiler 扩展的完整改进列表。  |
 | Visual Studio Code 5 月发布合并 1.35 | 可在[此处](https://code.visualstudio.com/updates/v1_35)查看最新的改进内容。 |
@@ -144,7 +182,7 @@ ms.locfileid: "73532531"
 | :----- | :------ |
 | 发布中央管理服务器 (CMS) 扩展 | 中央管理服务器存储组织到一个或多个中央管理服务器组中的 SQL Server 实例列表。 用户可以连接到自己的现有 CMS 服务器并管理服务器，例如添加和删除服务器。 有关详细信息，请参阅[此处](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
 | 发布适用于 Windows 的数据库管理工具扩展 | 此扩展在 Azure Data Studio 中启用了 SQL Server Management Studio 中两个最常用的体验。 用户可以右键单击很多不同的对象（例如数据库、表、列、视图等等）并选择“属性”以查看该对象的 SSMS 属性对话框。 此外，用户可以右键单击数据库并选择“生成脚本”以启动广为人知的 SSMS 生成脚本向导。 
-| 架构比较改进 | &bull; &nbsp; 已添加排除/包含选项 <br/>&bull; &nbsp; “生成脚本”在脚本生成后打开脚本 <br/>&bull; &nbsp; 已删除双滚动条  <br/>&bull; &nbsp; 格式设置和布局改进 <br/>&bull; &nbsp; 可在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)查看完整的更改内容|
+| 架构比较改进 | &bull; &nbsp; 添加了排除/包含选项 <br/>&bull; &nbsp; “生成脚本”在脚本生成后打开脚本 <br/>&bull; &nbsp; 删除了双滚动条  <br/>&bull; &nbsp; 格式设置和布局改进 <br/>&bull; &nbsp; 可在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)查看完整的更改内容|
 | 将“消息”部分移动到专用选项卡 | 以前用户运行 SQL 查询时，结果和消息都在堆叠面板上。 现在它们会在面板中的单独选项卡上，例如在 SSMS 中。 |
 | SQL 笔记本改进 | &bull; &nbsp; 用户现在可以选择在笔记本上使用自己的 Python 3 或 Anaconda 安装 <br/>&bull; &nbsp; 多重稳定性 + 适应性/外观修复 <br/> &bull; &nbsp; 请在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)查看完整的改进列表|
 | Visual Studio Code 4 月发布合并 1.34 | 可在[此处](https://code.visualstudio.com/updates/v1_34)查看最新的改进内容 |
@@ -174,7 +212,7 @@ ms.locfileid: "73532531"
 | 发布架构比较扩展 | 架构比较是 SQL Server Data Tools (SSDT) 中广为人知的功能，其主要用例是比较并直观地显示数据库和 .dacpac 文件之间的差异，然后执行操作使它们相同。 |
 | 将“任务”视图移动到输出窗口 | 用户现在可以在“输出”窗口的“任务”视图中查看长时间运行的任务（如备份、还原和架构比较）的状态
 | 添加了欢迎页 | &bull; &nbsp; 指向常见操作（如新建查询、新建文件、新建笔记本）的链接 <br/>&bull; &nbsp; 指向文档和 GitHub 的链接 |
-| SQL 笔记本改进 | &bull; &nbsp; 用于呈现改进内容的 Markdown，包括对注释和表的优化支持 <br/>&bull; &nbsp; 对工具栏的可用性改进 <br/>&bull; &nbsp; 指向可信赖笔记本的 Markdown 链接不再需要 Cmd/Ctrl + 单击，可以直接单击 <br/>&bull; &nbsp; 在关闭笔记本后更好地清理 Jupyter 进程，并在同时启动多个笔记本时减少错误 <br/>&bull; &nbsp; 改进 SQL 笔记本的连接，确保在针对同一数据库运行 2 个笔记本时不会出错 <br/>&bull; &nbsp; 改进在单击工具栏中的“运行单元”时，笔记本自动会滚动到正在执行的单元的情况 <br/>&bull; &nbsp; 常规稳定性和性能改进 |
+| SQL 笔记本改进 | &bull; &nbsp; 用于呈现改进内容的 Markdown，包括对注释和表的优化支持 <br/>&bull; &nbsp; 对工具栏的可用性改进 <br/>&bull; &nbsp; 指向可信赖笔记本的 Markdown 链接不再需要 Cmd/Ctrl + 单击，可以直接单击 <br/>&bull; &nbsp; 在关闭笔记本后更好地清理 Jupyter 进程，并在同时启动多个笔记本时减少错误 <br/>&bull; &nbsp; 改进 SQL 笔记本的连接，确保在针对同一数据库运行 2 个笔记本时不会出错 <br/>&bull; &nbsp; 改进在单击工具栏中的“运行单元格”时，笔记本自动滚动到正在执行的单元格的情况 <br/>&bull; &nbsp; 常规稳定性和性能改进 |
 | 解决了 Bug 和问题。 | 请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1)。 |
 | &nbsp; | &nbsp; |
 
@@ -188,7 +226,7 @@ ms.locfileid: "73532531"
 | :----- | :------ |
 | 将“服务器”选项卡重命名为“连接”   | |
 | 将 Azure 资源浏览器调整为“连接”下的 Azure viewlet | 用户现在可以在“连接”视图中通过 Azure viewlet 查看其 Azure SQL 实例，还可展开以查看每个服务器或数据库下的对象。|
-| SQL 笔记本改进 | &bull; &nbsp; 在工具栏添加了用于清除所有单元输出的按钮 <br/>&bull; &nbsp; 在工具栏添加了用于运行所有单元的按钮 <br/>&bull; &nbsp; 固定连接名称，而不是“附加到”下拉列表中的服务器名称（如果已设置） <br/>&bull; &nbsp; 修复在使用相对图像路径时 markdown 中不呈现图像的问题 <br/>&bull; &nbsp; 改进了笔记本网格中的功能 - 通过添加双击自动调整列尺寸功能和改进的鼠标滑轮支持 <br/>&bull; &nbsp; 改进通过笔记本安装 Python 时的错误处理和 Python 安装复原能力 <br/>&bull; &nbsp; 改进选择笔记本单元时的“全选”功能 <br/>&bull; &nbsp; 改进笔记本的连接，防止关闭笔记本和影响对象资源管理器连接 <br/>&bull; &nbsp; 改进笔记本体验，在笔记本断开连接时向用户显示消息，并且需要连接才能运行单元<br/>&bull; &nbsp; 改进对未保存笔记本的支持，使其在 ADS 再次启动时在 ADS 中解除冻结 |
+| SQL 笔记本改进 | &bull; &nbsp; 在工具栏中添加了用于清除所有单元格输出的按钮 <br/>&bull; &nbsp; 在工具栏中添加了用于运行所有单元格的按钮 <br/>&bull; &nbsp; 固定连接名称，而不是“附加到”下拉列表中的服务器名称（如果已设置） <br/>&bull; &nbsp; 修复了在使用相对图像路径时 markdown 中不呈现图像的问题 <br/>&bull; &nbsp; 改进了笔记本网格中的功能 - 添加了双击自动调整列尺寸功能和改进了鼠标滑轮支持 <br/>&bull; &nbsp; 改进了通过笔记本安装 Python 时的错误处理和 Python 安装复原能力 <br/>&bull; &nbsp; 改进了选择笔记本单元时的“全选”功能 <br/>&bull; &nbsp; 改进了笔记本的连接，防止关闭笔记本和影响对象资源管理器连接 <br/>&bull; &nbsp; 改进了笔记本体验，在笔记本断开连接时向用户显示消息，并且需要连接才能运行单元<br/>&bull; &nbsp; 改进了对未保存笔记本的支持，使其在 ADS 再次启动时在 ADS 中解除冻结 |
 | 解决了 Bug 和问题。 | 请参阅 [GitHub 上的 Bug 和问题](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1)。 |
 | &nbsp; | &nbsp; |
 
@@ -200,7 +238,7 @@ ms.locfileid: "73532531"
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 修复了在 1.5.1 中发现的几个问题。 | 请参阅 [GitHub 上的 3 月修补程序版本](https://github.com/Microsoft/azuredatastudio/milestone/28)。<br/> <br/>&bull; &nbsp; 修复问题：用户无法关闭从仪表板中的“打开笔记本”任务打开的笔记本 <br/>&bull; &nbsp; 修复问题：笔记本 JSON 在保存后有多余的 } <br/>&bull; &nbsp; 修复问题：笔记本网格不响应主题更改 <br/>&bull; &nbsp; 修复问题：选项卡标题中显示完整的笔记本路径。 现在只显示文件名。 |
+| 修复了在 1.5.1 中发现的几个问题。 | 请参阅 [GitHub 上的 3 月修补程序版本](https://github.com/Microsoft/azuredatastudio/milestone/28)。<br/> <br/>&bull; &nbsp; 修复了以下问题：用户无法关闭从仪表板中的“打开 Notebook”任务打开的笔记本 <br/>&bull; &nbsp; 修复了以下问题：Notebook JSON 在保存后有多余的 } <br/>&bull; &nbsp; 修复了以下问题：笔记本网格不响应主题更改 <br/>&bull; &nbsp; 修复了以下问题：选项卡标题中显示完整的笔记本路径。 现在只显示文件名。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>2019 年 3 月
@@ -216,7 +254,7 @@ ms.locfileid: "73532531"
 | 添加了 PowerShell 扩展  | 通过 VS Code 引入了 [PowerShell 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)体验。  |
 | 添加了 SQL Server dacpac 扩展  | 从 SQL Server 导入扩展中删除数据层应用程序向导并移至新的扩展中。  |
 | 添加了 Community 扩展 QueryPlan.show | 添加了集成支持以可视化显示查询计划  |
-| 更新了 SQL Server 2019 预览版扩展 | &bull; &nbsp; Jupyter Notebook 支持（特别是 Python3 和 Spark 内核）已移动到核心 Azure Data Studio 工具中。 <br/>&bull; &nbsp; 对外部数据向导进行 Bug 修复  |
+| 更新了 SQL Server 2019 预览版扩展 | &bull; &nbsp; Jupyter Notebook 支持（特别是 Python3 和 Spark 内核）已移动到核心 Azure Data Studio 工具中。 <br/>&bull; &nbsp; 修复了外部数据向导中的 bug  |
 | 解决了 Bug 和问题。 | 请参阅 [GitHub 上的 Bug 和问题](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1)。 |
 | &nbsp; | &nbsp; |
 
@@ -527,7 +565,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 | :----- | :------ |
 | 改进 SQL 代理预览版扩展： | &nbsp; |
 | &nbsp; &nbsp; &nbsp; 改进了对文件的支持。 | &bull; &nbsp; 大型文件。<br/>&bull; &nbsp; 受保护的文件，可以保存受管理员保护的文件。<br/>&bull; &nbsp; 在 SQL Operations Studio 中存储 \>256 M 的文件。 |
-| &nbsp; &nbsp; &nbsp; 集成的终端拆分。 | 同时处理多个打开的终端。 |
+| &nbsp; &nbsp; &nbsp; 集成终端拆分。 | 同时处理多个打开的终端。 |
 | &nbsp; &nbsp; &nbsp; 加快安装和启动速度。 | 减少了磁盘上文件数页脚打印的安装。 |
 | &nbsp; | &nbsp; |
 
@@ -668,7 +706,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 - [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的初始版本。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 
 请参阅以下快速入门以开始使用：
 

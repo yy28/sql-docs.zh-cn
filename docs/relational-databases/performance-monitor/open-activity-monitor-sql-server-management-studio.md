@@ -1,6 +1,7 @@
 ---
-title: 打开活动监视器 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 打开活动监视器 (SSMS)
+description: 介绍如何打开 SQL Server Management Studio (SSMS) 中的活动监视器。
+ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9d7bccf89e8f2043413838e9f55fd8bd4e74dc5f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0af1ae6d145836a313df8ba6e77f965aa17e0e9a
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907230"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165536"
 ---
-# <a name="open-activity-monitor-sql-server-management-studio"></a>打开活动监视器 (SQL Server Management Studio)
+# <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>打开 SQL Server Management Studio (SSMS) 中的活动监视器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
    
  活动监视器将在被监视的实例上运行查询以获取有关活动监视器显示窗格的信息。 当刷新间隔设置为小于 10 秒时，运行这些查询所用的时间可能会对服务器性能产生影响。  
@@ -56,7 +57,7 @@ ms.locfileid: "72907230"
   
 3.  在“启动时”下拉列表中，选择“打开对象资源管理器和活动监视器”。    
 
-4.  单击“确定”  。
+4.  单击“确定”。 
 
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   

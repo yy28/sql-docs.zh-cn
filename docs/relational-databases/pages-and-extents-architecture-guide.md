@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586781"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325489"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>页和区体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "72586781"
 
 |页类型 | 目录 |
 |-------|-------|
-|Data |当行中的文本设置为 ON 时，具有除 text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 和 xml 数据以外的所有数据的数据行。 |
+|data |当行中的文本设置为 ON 时，具有除 text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 和 xml 数据以外的所有数据的数据行。 |
 |索引 |索引条目。 |
 |Text/Image |大型对象数据类型：（text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 和 xml 数据） <br> 数据行超过 8 KB 时为可变长度数据类型列：（varchar、nvarchar、varbinary 和 sql_variant） |
 |Global Allocation Map、Shared Global Allocation Map |有关区是否分配的信息。 |
@@ -54,7 +54,7 @@ ms.locfileid: "72586781"
 > [!NOTE]
 > 日志文件不包含页，而是包含一系列日志记录。
 
-在数据页上，数据行紧接着标头按顺序放置。 页的末尾是行偏移表，对于页中的每一行，每个行偏移表都包含一个条目。 每个条目记录对应行的第一个字节与页首的距离。 行偏移表中的条目的顺序与页中行的顺序相反。
+在数据页上，数据行紧接着标头按顺序放置。 页的末尾是行偏移表，对于页中的每一行，每个行偏移表都包含一个条目。 每个行偏移量条目记录对应行的第一个字节与页首的距离。 因此，行偏移量的功能有助于 SQL Server 快速在页面上定位行。 行偏移表中的条目的顺序与页中行的顺序相反。
 
 ![page_architecture](../relational-databases/media/page-architecture.gif)
 
@@ -68,7 +68,7 @@ ms.locfileid: "72586781"
 
 ##### <a name="row-overflow-considerations"></a>行溢出注意事项 
 
-合并每行超过 8,060 字节的 varchar、nvarchar、varbinary、sql_variant 或 CLR 用户定义类型的列时，请注意下列事项： 
+如前所述，如果可变长度数据类型字段的组合大小超过 8060 字节的限制，则行不能驻留在多个页面上并且可能溢出。 举例说明，可以使用两列创建一个表：一个 varchar(7000)，另一个 varchar(2000)。 每列都不会超过 8060 字节，但如果每列的整个宽度被填充，它们会合并在一起，这就超过了该限制。 SQL Server 可以将 varchar(7000) 可变长列动态移动到 ROW_OVERFLOW_DATA 分配单元中的页面。 合并每行超过 8,060 字节的 varchar、nvarchar、varbinary、sql_variant 或 CLR 用户定义类型的列时，请注意下列事项：
 -  如果更新操作使记录变长，大型记录将被动态移动到另一页。 如果更新操作使记录变短，记录可能会移回 IN_ROW_DATA 分配单元中的原始页。 执行查询和其他选择操作（例如，对包含行溢出数据的大型记录进行排序或合并）将延长处理时间，因为这些记录将同步处理，而不是异步处理。   
    因此，当要设计的表中包含多个 varchar、nvarchar、varbinary、sql_variant 或 CLR 用户定义类型的列时，请考虑可能溢出的行的百分比，以及可能查询这些溢出数据的频率。 如果可能需要经常查询行溢出数据中的许多行，请考虑对表格进行规范化处理，以使某些列移动到另一个表中。 然后可以在异步 JOIN 操作中执行查询。 
 -  对于 varchar、nvarchar、varbinary、sql_variant 或 CLR 用户定义类型的列，单个列的长度仍然必须在 8,000 字节的限制之内。 只有它们的合并长度可以超过表的 8,060 字节的行限制。
@@ -98,7 +98,7 @@ ms.locfileid: "72586781"
 
 ## <a name="managing-extent-allocations-and-free-space"></a>管理区分配和可用空间 
 
-用来管理盘区分配情况并跟踪可用空间的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据结构相对而言比较简单。 这有下列好处： 
+用来管理盘区分配情况并跟踪可用空间的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据结构相对而言比较简单。 该功能有以下优点： 
 
 * 可用空间信息被紧密压缩，因此包含此信息的页相对较少。   
   这样，可提高速度，因为它减少了检索分配信息时所需的磁盘读取量。 同时还可增加分配页保留在内存中的机会并且不需要更多的读操作。 
@@ -136,7 +136,7 @@ ms.locfileid: "72586781"
 
 将区分配给对象后，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将使用 PFS 页来记录区中的哪些页已分配或哪些页可用。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]必须分配新页时，将使用此信息。 保留的页中的可用空间量仅用于堆和 Text/Image 页。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]必须找到一个具有可用空间的页来保存新插入的行时，使用此信息。 索引不要求跟踪页的可用空间，因为插入新行的点是由索引键值设置的。
 
-在数据文件中，PFS 页是文件头页之后的第一页（页 ID 为 1）。 接着是 GAM 页（页 ID 为 2），然后是 SGAM 页（页 ID 为 3）。 在第一个 PFS 页后有一个新的 PFS 页（约 8,000 页），在后续的 8,000 页间隔区内还有其他 PFS 页。 在第 2 页的第一个 GAM 页之后还有另一个 GAM 页（包含 64,000 个区），在第 3 页的第一个 SGAM 页之后也有另一个 SGAM 页（包含 64,000 个区），并且在后续的 64,000 个区的间隔范围内还有其他 GAM 和 SGAM 页。 下图显示了[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]用来分配和管理区的页顺序。
+它将在数据文件中按各自的区域间隔添加一个新的 PFS、GAM 或 SGAM 页面。 因此，将出现一个新的 PFS 页面，在第一个 PFS 页面之后为 8,088 页，在间隔 8,088 页后为另一个 PFS 页面。 举例说明，第 1 页为 PFS 页面，第 8088 页为 PFS 页面，第 16176 页为 PFS 页面，以此类推。 也将出现一个新的 GAM 页面，在第一个 GAM 页面之后为 64,000 区，在间隔 64,000 区后为另一个 GAM 页面，以此类推。 同样，将出现一个新的 SGAM 页面，在第一个 SGAM 页面之后为 64,000 区，在间隔 64,000 区后为另一个 SGAM 页面。 下图显示了[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]用来分配和管理区的页顺序。
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
@@ -172,7 +172,7 @@ IAM 页根据需要分配给每个分配单元，在文件中的位置也是随�
 
 仅当 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]不能在现有的区中快速找到足以容纳插入行的页时，才将新区分配给分配单元。 
 
-<a name="ProportionalFill"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 使用“比例填充分配算法”从文件组的可用盘区中分配盘区  。 如果同一文件组内有两个文件，而一个文件的可用空间是另一个文件的两倍，那么每从后一个文件分配一页，就从前一个文件分配两页。 这意味着文件组内的每个文件应该有近似的空间使用百分比。 
+<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 使用“比例填充分配算法”从文件组的可用盘区中分配盘区  。 如果同一文件组内有两个文件，而一个文件的可用空间是另一个文件的两倍，那么每从后一个文件分配一页，就从前一个文件分配两页。 这意味着文件组内的每个文件应该有近似的空间使用百分比。 
 
 ## <a name="tracking-modified-extents"></a>跟踪已修改的区 
 

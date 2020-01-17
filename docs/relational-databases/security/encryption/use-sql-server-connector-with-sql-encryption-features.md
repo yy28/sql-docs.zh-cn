@@ -1,6 +1,7 @@
 ---
-title: 使用具有 SQL 加密功能的 SQL Server 连接器 | Microsoft Docs
-ms.custom: ''
+title: 结合使用 SQL Server 连接器加密和 Azure Key Vault
+description: 了解如何结合使用 SQL Server 连接器和 Azure Key Vault 实现常见的加密功能，如 TDE、加密备份和列级加密。
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929745"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558501"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>使用具有 SQL 加密功能的 SQL Server 连接器
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,7 +196,7 @@ ms.locfileid: "70929745"
   
 3.  **备份数据库**  
   
-     备份数据库，并使用密钥保管库中存储的非对称密钥指定加密。
+     备份数据库，同时使用密钥保管库中存储的非对称密钥指定加密。
      
      请注意，在下面的示例中，如果数据库已使用 TDE 加密，且非对称密钥 `CONTOSO_KEY_BACKUP` 不同于 TDE 非对称密钥，则会同时通过 TDE 非对称密钥和 `CONTOSO_KEY_BACKUP` 加密备份。 目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例将需要两个密钥才能解密备份。
   

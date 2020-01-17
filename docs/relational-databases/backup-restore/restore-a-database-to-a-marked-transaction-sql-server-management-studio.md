@@ -1,7 +1,7 @@
 ---
-title: 将数据库还原到标记的事务 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 将数据库还原到标记的事务 (SSMS)
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 066ca4d751e6d5d33f69bf284f5a35fb3aaa27e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e71815c79e626a1cebb60c7d5d50fda1cce132d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937588"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245075"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>将数据库还原到标记的事务 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,28 +32,28 @@ ms.locfileid: "67937588"
   
 ### <a name="to-restore-a-marked-transaction"></a>还原标记的事务  
   
-1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
+1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在“对象资源管理器”中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
+2.  展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-3.  右键单击数据库，指向“任务”，再单击“还原”。  
+3.  右键单击数据库，指向“任务”  ，再单击“还原”  。  
   
-4.  单击 **“事务日志”**，这将打开 **“还原事务日志”** 对话框。  
+4.  单击 **“事务日志”** ，这将打开 **“还原事务日志”** 对话框。  
   
-5.  在 **“常规”** 页上的 **“还原到”** 部分中，选择 **“标记的事务”**，将打开 **“选择标记的事务”** 对话框。 此对话框中将以网格列表的形式显示选择的事务日志备份中可用的标记的事务。  
+5.  在 **“常规”** 页上的 **“还原到”** 部分中，选择 **“标记的事务”** ，将打开 **“选择标记的事务”** 对话框。 此对话框中将以网格列表的形式显示选择的事务日志备份中可用的标记的事务。  
   
-     默认情况下，将一直还原到（但不包含）标记的事务为止。 若要同时还原标记的事务，请选择 **“包含标记的事务”**。  
+     默认情况下，将一直还原到（但不包含）标记的事务为止。 若要同时还原标记的事务，请选择 **“包含标记的事务”** 。  
   
      下表列出了网格的列标题并对列值进行了说明。  
   
-    |标题|ReplTest1|  
+    |标头|值|  
     |------------|-----------|  
     |\<blank>|显示一个用于选择标记的复选框。|  
     |**事务标记**|提交事务时，用户为标记的事务指定的名称。|  
     |**Date**|事务的提交日期及时间。 事务日期和时间显示为 **msdbgmarkhistory** 表中所记录的日期和时间，而非客户端计算机的日期和时间。|  
-    |**Description**|提交事务时，用户为标记的事务指定的说明（如果有的话）。|  
+    |**说明**|提交事务时，用户为标记的事务指定的说明（如果有的话）。|  
     |**LSN**|所标记事务的日志序列号。|  
-    |**“数据库”**|提交标记的事务时所在数据库的名称。|  
+    |**Database**|提交标记的事务时所在数据库的名称。|  
     |**用户名**|提交标记事务的数据库用户的名称。|  
   
 ## <a name="see-also"></a>另请参阅  

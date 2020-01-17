@@ -1,6 +1,7 @@
 ---
-title: 包含的数据库用户 - 使数据库可移植 | Microsoft Docs
-ms.custom: ''
+title: 所包含用户对所包含数据库的访问权限
+description: 了解如何配置所包含用户对所包含数据库的访问权限，以及传统登录/用户模型之间的差异。
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,14 +15,14 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f568d57f84397f0ebc4b636c4911cc51b197ebf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 028ab6917a8d41a2231e94253ff353910e65b865
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116740"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557882"
 ---
-# <a name="contained-database-users---making-your-database-portable"></a>包含的数据库用户 - 使你的数据库可移植
+# <a name="contained-database-users---making-your-database-portable"></a>包含的数据库用户 - 使数据库可移植
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
@@ -40,7 +41,7 @@ ms.locfileid: "68116740"
 
  在包含的数据库用户模型中，master 数据库中不存在登录名。 相反，身份验证过程发生在用户数据库中，并且用户数据库中的数据库用户在 master 数据库中没有关联的登录名。 包含的数据库用户模型支持 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，并且可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中使用。 若要作为包含的数据库用户进行连接，连接字符串必须始终包含用户数据库的参数，以便 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 知道哪个数据库负责管理身份验证过程。 包含的数据库用户的活动仅限于验证数据库，因此当作为包含的数据库用户进行连接时，必须在用户将需要的每个数据库中独立创建数据库用户帐户。 若要更改数据库， [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 用户必须创建一个新的连接。 如果另一个数据库中存在相同的用户， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的包含的数据库用户可以更改数据库。  
   
-**Azure：** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 支持将 Azure Active Directory 标识作为包含的数据库用户。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 支持包含的数据库用户使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 身份验证，而 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 不支持。 有关详细信息，请参阅 [使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 使用 Azure Active Directory 身份验证时，可以使用 Active Directory 通用身份验证建立来自 SSMS 的连接。  管理员将通用身份验证配置为需要多重身份验证，这会使用电话呼叫、短信、智能卡 pin 或移动应用通知来验证身份。 有关详细信息，请参阅 [SSMS 支持使用 SQL 数据库和 SQL 数据仓库的 Azure AD MFA](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。  
+**Azure：** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 支持将 Azure Active Directory 标识作为包含的数据库用户。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 支持包含的数据库用户使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 身份验证，而 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 不支持。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 使用 Azure Active Directory 身份验证时，可以使用 Active Directory 通用身份验证建立来自 SSMS 的连接。  管理员将通用身份验证配置为需要多重身份验证，这会使用电话呼叫、短信、智能卡 pin 或移动应用通知来验证身份。 有关详细信息，请参阅 [SQL 数据库和 SQL 数据仓库针对 Azure AD MFA 的 SSMS 支持](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。  
   
  对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，因为连接字符串中始终需要数据库名称，所以在从传统模型切换到包含的数据库用户模型时，无需更改连接字符串。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接，如果数据库名称尚不存在，它将必须添加到连接字符串。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "68116740"
  有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 防火墙规则的详细信息，请参阅以下主题：  
   
 - [Azure SQL Database 防火墙](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
-- [如何：配置防火墙设置 (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+- [如何：配置防火墙设置（Azure SQL 数据库）](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
 - [sp_set_firewall_rule（Azure SQL 数据库）](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule（Azure SQL 数据库）](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
@@ -74,7 +75,7 @@ ms.locfileid: "68116740"
 |-----------------------|-----------------------------------|  
 |要更改密码，在 master 数据库的上下文中：<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|要更改密码，在用户数据库的上下文中：<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例启用包含的数据库用户。 有关详细信息，请参阅 [contained database authentication Server Configuration Option](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)。  
 - 具有非重叠名称的包含的数据库用户和登录名可以在应用程序中共存。  

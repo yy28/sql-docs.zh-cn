@@ -1,7 +1,7 @@
 ---
-title: 对可用性组的操作问题的基于策略的管理
+title: 基于策略的管理：可用性组
 description: Always On 可用性组运行状况模型评估一组基于预定义策略的管理 (PBM) 策略。 可以使用这些策略查看 SQL Server 中可用性组以及副本和数据库的运行状况。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edb59eacc43d0563c8cd00372d27155f4100703f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac339e638377778065f158b4cbd20280d5d4bb65
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991550"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244064"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>对 Always On 可用性组的操作问题的基于策略的管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "67991550"
 |可用性副本连接状态|[断开可用性副本的连接](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md)。|严重|可用性副本|  
 |可用性副本联接状态|[可用性副本未联接](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md)。|警告|可用性副本|  
 |可用性副本数据同步状态|[一些可用性数据库的数据同步状态不正常](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)。|警告|可用性副本|  
-|可用性数据库挂起状态|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md)。|警告|可用性数据库|  
+|可用性数据库挂起状态|[可用性数据库挂起](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md)。|警告|可用性数据库|  
 |可用性数据库联接状态|[未联接辅助数据库](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)。|警告|可用性数据库|  
 |可用性数据库数据同步状态|[可用性数据库的数据同步状态不正常](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性数据库|  
   

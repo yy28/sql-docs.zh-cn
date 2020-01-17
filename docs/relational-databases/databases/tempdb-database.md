@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7a1f692abdb5f9ce1b9fd69c494f719b9027c22
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909551"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190153"
 ---
 # <a name="tempdb-database"></a>TempDB 数据库
 
@@ -111,7 +111,7 @@ TempDB  中的操作是最小日志记录操作，以便回滚事务。 每次�
 
 |SLO|最大 TempDB 数据文件大小 (GB)|TempDB 数据文件数|最大 TempDB 数据大小 (GB)|
 |---|---:|---:|---:|
-|“基本”|13|1|13|
+|基本|13|1|13|
 |S0|13|1|13|
 |S1|13|1|13|
 |S2|13|1|13|
@@ -214,7 +214,14 @@ GO
 [TEMPDB - 文件和跟踪标志以及更新，天哪！](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
 ## <a name="memory-optimized-tempdb-metadata"></a>内存优化 TempDB 元数据
-对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上运行的许多工作负荷，TempDB 元数据争用历来是可伸缩性的瓶颈。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了一个新功能，该功能属于[内存数据库](../in-memory-database.md)功能内存优化 TempDB 元数据，它可有效消除此瓶颈，并为 TempDB 繁重的工作负荷解锁新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。 要选择加入此新功能，请使用以下脚本：
+对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上运行的许多工作负荷，TempDB 元数据争用历来是可伸缩性的瓶颈。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了一个新功能，该功能属于[内存数据库](../in-memory-database.md)功能内存优化 TempDB 元数据，它可有效消除此瓶颈，并为 TempDB 繁重的工作负荷解锁新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。
+
+本视频时长 7 分钟，请观看本视频大致了解如何及何时使用经过内存优化的 TempDB 元数据：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
+
+
+要选择加入此新功能，请使用以下脚本：
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -232,7 +239,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
     ```
     
-    例如：
+    示例：
     
     ```sql
     BEGIN TRAN

@@ -1,6 +1,7 @@
 ---
-title: 配置 PolyBase 以访问 MongoDB 中的外部数据 | Microsoft Docs
-ms.date: 04/23/2019
+title: 访问外部数据：MongoDB - PolyBase
+ms.date: 12/13/2019
+ms.metadata: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9b343327b73a8e682a76b94757982f20fde81e7c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: aed736096918d121835149f8cbc9ba32399a3e80
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710617"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255434"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>配置 PolyBase 以访问 MongoDB 中的外部数据
 
@@ -113,10 +114,10 @@ JSON 嵌套/重复数据类型将按如下所示平展
 
 | grades_date | grades_grade  | games_score | 
 | ------------- | ------------------------- | -------------- |
-|1393804800000 |仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时， |2|
-|1378857600000|仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时， |6|
-|135898560000 |仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时， |10|
-|1322006400000|仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时， |9|
+|1393804800000 |A |2|
+|1378857600000|A |6|
+|135898560000 |A |10|
+|1322006400000|A |9|
 |1299715200000 |B |14|
 
 ## <a name="cosmos-db-connection"></a>Cosmos DB 连接

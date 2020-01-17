@@ -1,6 +1,7 @@
 ---
-title: Reporting Services 与 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Reporting Services 与可用性组
+description: 了解如何使用 Always On 可用性组配置 SQL Server Reporting Services (SSRS)。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252124"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243624"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68252124"
  有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的一般信息，请参阅[适用于 SQL Server 2012 的 Always On 的常见问题解答 https://msdn.microsoft.com/sqlserver/gg508768) (](https://msdn.microsoft.com/sqlserver/gg508768)。  
 
 ##  <a name="bkmk_requirements"></a> 使用 Reporting Services 和 AlwaysOn 可用性组的要求  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 Power BI 报表服务器使用 .Net framework 4.0 并支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性与数据源一起使用。  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 Power BI 报表服务器使用 .NET Framework 4.0，并支持将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性用于数据源。  
   
  若要结合使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 与  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 及更早版本，你需要下载并安装 .Net 3.5 SP1 的修补程序。 该修补程序添加对 SQL Client for AG 功能的支持以及对连接字符串属性 **ApplicationIntent** 和 **MultiSubnetFailover**的支持。 如果未在承载报表服务器的每台计算机上安装该修补程序，尝试预览报表的用户将看到类似以下内容的错误消息并将错误消息写入报表服务器跟踪日志：  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68252124"
   
 -   **SharePoint 模式：** 对于已发布到 SharePoint 服务器的报表，使用文档库内的 SharePoint 配置页。  
   
--   **报表设计：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new rep或ts. 有关详细信息，请参阅本主题中的“报表设计”部分。  
+-   **报表设计：** 创建新报表时，请使用 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。 有关详细信息，请参阅本主题中的“报表设计”部分。  
   
  **其他资源：**  
   
@@ -93,7 +94,7 @@ ms.locfileid: "68252124"
 ##  <a name="bkmk_reportdesign"></a> 报表设计和可用性组  
  在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 中设计报表或在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中创建报表项目时，用户可以配置报表数据源连接字符串以包含 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]提供的新连接属性。 对连接属性的支持取决于用户在何处预览报表。  
   
--   **本地预览：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 使用 .Net framework 4.0，并支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性。  
+-   **本地预览：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 使用 .NET Framework 4.0，并支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性。  
   
 -   **远程或服务器模式预览：** 在将报表发布到报表服务器后，或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 中使用预览后，你看到与以下内容相似的错误，指出你正在对报表服务器预览报表，且报表服务器上尚未安装用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 修补程序。  
   

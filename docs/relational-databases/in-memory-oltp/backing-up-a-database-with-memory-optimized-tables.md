@@ -1,6 +1,6 @@
 ---
-title: 使用内存优化表备份数据库 | Microsoft Docs
-ms.custom: ''
+title: 数据库备份与内存优化表
+ms.custom: seo-dt-2019
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22a1a5d0a4a1e3bc9e1b7afad1aafeaa01e63ac5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c08f3c1ba1c31b0f6a1d34faeb5c6e2f77e404f8
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951206"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412785"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>使用内存优化表备份数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "67951206"
 ## <a name="full-database-backup"></a>完整数据库备份  
  此讨论侧重于只有持久内存优化表的数据库的数据库备份，因为基于磁盘的表的备份过程是相同的。 内存优化文件组中的检查点文件对可能处于各种状态。 下表介绍备份的文件部分。  
   
-|检查点文件对状态|Backup|  
+|检查点文件对状态|备份|  
 |--------------------------------|------------|  
 |PRECREATED|仅文件元数据|  
 |UNDER CONSTRUCTION|仅文件元数据|  

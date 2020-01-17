@@ -1,6 +1,7 @@
 ---
-title: 教程：为复制准备 SQL Server（发布服务器、分发服务器、订阅服务器）| Microsoft Docs
-ms.custom: ''
+title: 教程：为复制做准备
+description: 在本教程中，你将了解如何通过创建 Windows 帐户、准备快照文件夹和配置分发来准备发布服务器、分发服务器和订阅服务器以进行复制。
+ms.custom: seo-lt-2019
 ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: beb0c68b86521ce9a5b3463e8c959970297519fe
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653823"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320384"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>教程：为复制准备 SQL Server（发布服务器、分发服务器、订阅服务器）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,13 +64,13 @@ ms.locfileid: "69653823"
   
 |代理|位置|帐户名|  
 |---------|------------|----------------|  
-|快照代理|发布服务器|<*machine_name*>\repl_snapshot|  
-|日志读取器代理|发布服务器|<*machine_name*>\repl_logreader|  
+|快照代理|发布者|<*machine_name*>\repl_snapshot|  
+|日志读取器代理|发布者|<*machine_name*>\repl_logreader|  
 |分发代理|发布服务器和订阅服务器|<*machine_name*>\repl_distribution|  
 |合并代理|发布服务器和订阅服务器|<*machine_name*>\repl_merge|  
   
 > [!NOTE]  
-> 在复制教程中，发布服务器和分发服务器共享同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例 (NODE1\SQL2016)。 订阅服务器实例 (NODE2\SQL2016) 是远程实例。 发布服务器和订阅服务器可以共享同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，但这不是必须的。 如果发布服务器和订阅服务器共享同一实例，则在订阅服务器上用于创建帐户的步骤不是必须的。  
+> 在复制教程中，发布服务器和分发服务器共享同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例 (NODE1\SQL2016)。 订阅服务器实例 (NODE2\SQL2016) 是远程实例。 发布服务器和订阅服务器可以共享同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，但这不是必需的。 如果发布服务器和订阅服务器共享同一实例，则在订阅服务器上用于创建帐户的步骤不是必须的。  
 
 ### <a name="create-local-windows-accounts-for-replication-agents-at-the-publisher"></a>在发布服务器上为复制代理创建本地 Windows 帐户
   
@@ -116,13 +117,13 @@ ms.locfileid: "69653823"
   
 3. 右键单击该文件夹并选择“属性”  。  
   
-   A. 在“repldata 属性”对话框的“共享”选项卡上，选择“共享”    。  
+   a. 在“repldata 属性”对话框的“共享”选项卡上，选择“共享”    。  
   
-   B. 在“高级共享”  对话框中，选择“共享此文件夹”  ，然后选择“权限”  。  
+   b. 在“高级共享”  对话框中，选择“共享此文件夹”  ，然后选择“权限”  。  
 
    ![用于共享 repldata 文件夹的选择](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6. 在“repldata 的权限”对话框中，选择“添加”   。 在“选择用户、计算机、服务帐户或组”  框中，键入以前创建的快照代理帐户的名称，例如 Publisher_Machine_Name  >\repl_snapshot  。 选择“检查名称”  ，然后选择“确定”  。  
+6. 在“repldata 的权限”对话框中，选择“添加”   。 在“选择用户、计算机、服务帐户或组”  框中，键入以前创建的快照代理帐户的名称，例如 Publisher_Machine_Name  >\repl_snapshot  。 选择“检查名称”，然后选择“确定”   。  
 
    ![添加共享权限的选择](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
@@ -141,7 +142,7 @@ ms.locfileid: "69653823"
 
     ![在“安全性”选项卡上的“编辑”按钮](media/tutorial-preparing-the-server-for-replication/editsecurity.png)   
 
-11. 在“repldata 的权限”对话框中，选择“添加”   。 在“选择用户、计算机、服务帐户或组”  框中，键入以前创建的快照代理帐户的名称，例如 Publisher_Machine_Name  >\repl_snapshot  。 选择“检查名称”  ，然后选择“确定”  。  
+11. 在“repldata 的权限”对话框中，选择“添加”   。 在“选择用户、计算机、服务帐户或组”  框中，键入以前创建的快照代理帐户的名称，例如 Publisher_Machine_Name  >\repl_snapshot  。 选择“检查名称”，然后选择“确定”   。  
 
     ![添加安全性权限的选择](media/tutorial-preparing-the-server-for-replication/addsecuritypermissions.png)
 
@@ -184,11 +185,11 @@ ms.locfileid: "69653823"
   
    此时分发配置向导启动。  
   
-3. 在“分发服务器”  页上，选择“<'ServerName'”  > “将充当自己的分发服务器；SQL Server 将创建分发数据库和日志”  。 然后选择“下一步”  。  
+3. 在“分发服务器”  页上，选择“<'ServerName'”  > “将充当自己的分发服务器；SQL Server 将创建分发数据库和日志”  。 然后，选择“下一步”  。  
 
    ![使服务器充当自己的分发服务器的选项](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
-4. 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理未运行，则在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“代理启动”  页上，选择“是，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为自动启动”  。 选择“下一步”  。  
+4. 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理未运行，则在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“代理启动”页面上，选择“是，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为自动启动”   。 选择“**下一页**”。  
 
      
 5. 在“快照文件夹”  框中输入路径 \\\\<Publisher_Machine_Name  >\repldata  ，然后选择“下一步”  。 此路径应匹配以前配置共享属性后，在 repldata 属性文件夹的“网络路径”  下看到的路径。 

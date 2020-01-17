@@ -1,7 +1,7 @@
 ---
 title: 排序规则和 Unicode 支持 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/18/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982824"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901945"
 ---
 # <a name="collation-and-unicode-support"></a>排序规则和 Unicode 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "73982824"
 
 下表描述了与这些不同选项关联的行为：    
     
-|选项|描述|    
+|选项|说明|    
 |------------|-----------------|    
 |区分大小写 (\_CS)|区分大写字母和小写字母。 如果选择此项，排序时小写字母将在其对应的大写字母之前。 如果未选择此选项，排序规则将不区分大小写。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将大写字母和小写字母视为相同。 通过指定 \_CI，可以显式选择不区分大小写。|   
 |区分重音 (\_AS)|区分重音字符和非重音字符。 例如，“a”和“ấ”视为不同字符。 如果未选择此选项，则排序规则将不区分重音。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将字母的重音形式和非重音形式视为相同。 通过指定 \_AI，可以显式选择不区分重音。|    
@@ -295,7 +295,7 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 |波斯语（伊朗）|0x0429|0x0429|Latin1_General_CI_AI|
 |波兰语（波兰）|0x0415|0x0415|Polish_CI_AS|
 |葡萄牙语（巴西）|0x0416|0x0409|Latin1_General_CI_AS|
-|葡萄牙语（葡萄牙）|0x0816|0x0409|Latin1_General_CI_AS|
+|葡萄牙语(葡萄牙)|0x0816|0x0409|Latin1_General_CI_AS|
 |旁遮普语（印度）|0x0446|0x0439|在服务器级别不可用|
 |克丘亚语（玻利维亚）|0x046b|0x0409|Latin1_General_CI_AS|
 |克丘亚语（厄瓜多尔）|0x086b|0x0409|Latin1_General_CI_AS|
@@ -338,7 +338,7 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 |西班牙语（巴拉圭）|0x3c0a|0x0c0a|Modern_Spanish_CI_AS|
 |西班牙语（秘鲁）|0x280a|0x0c0a|Modern_Spanish_CI_AS|
 |西班牙语（波多黎各）|0x500a|0x0c0a|Modern_Spanish_CI_AS|
-|西班牙语（西班牙）|0x0c0a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语(西班牙)|0x0c0a|0x0c0a|Modern_Spanish_CI_AS|
 |西班牙语（西班牙，传统风格）|0x040a|0x040a|Traditional_Spanish_CI_AS|
 |西班牙语（美国）|0x540a|0x0409|Latin1_General_CI_AS|
 |西班牙语（乌拉圭）|0x380a|0x0c0a|Modern_Spanish_CI_AS|
@@ -463,7 +463,7 @@ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全�
 > [!NOTE]
 > 对于 Unicode 数据类型，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]最多可以使用 UCS-2 表示 65,535 个字符；或者，如果使用了附属字符，可表示整个 Unicode 范围（‭1,114,111 个字符）。 如需详细了解如何启用增补字符，请参阅[字符](#Supplementary_Characters)。
 
-或者，从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，如果使用已启用 UTF-8 的排序规则 (\_UTF8)，则以前的非 Unicode 数据类型（char 和 varchar）将变为 Unicode (UTF-8) 数据类型   。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 不会更改以前存在的 Unicode (UTF-16) 数据类型（nchar、nvarchar 和 ntext）的行为    。 有关详细信息，请参阅 [UTF-8 与 UTF-16 的存储差异](#storage_differences)。
+或者，从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，如果使用支持 UTF-8 的排序规则 (\_UTF8)，则以前的非 Unicode 数据类型（char 和 varchar）将变为使用 UTF-8 编码的 Unicode 数据类型   。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 不会更改以前存在的 Unicode 数据类型（nchar、nvarchar 和 ntext）的行为，且继续使用 UCS-2 或 UTF-16 编码    。 有关详细信息，请参阅 [UTF-8 与 UTF-16 的存储差异](#storage_differences)。
 
 ### <a name="unicode-considerations"></a>Unicode 注意事项
 非 Unicode 数据类型有明显的局限性， 这是因为非 Unicode 计算机只能使用单个代码页。 使用 Unicode，你可能会体验到性能提升，因为这只需要较少的代码页转换。 必须在数据库级、列级或表达式级单独选择 Unicode 排序规则，因为在服务器级不支持 Unicode 排序规则。    
@@ -502,7 +502,7 @@ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全�
     
 下表提供有关以 Unicode 和非 Unicode 服务器的各种组合使用多语言数据的信息：    
     
-|“服务器”|客户端|优点或局限性|    
+|服务器|Client|优点或局限性|    
 |------------|------------|-----------------------------|    
 |Unicode|Unicode|因为 Unicode 数据在整个系统中使用，所以此方案可提供最佳的性能并可保护检索到的数据免受破坏。 ActiveX 数据对象 (ADO)、OLE DB 和 ODBC 3.7 版或更高版本都采用这样的配置。|    
 |Unicode|非 Unicode|在这种情况下，尤其对于正在运行新操作系统的服务器与正在运行旧版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或基于旧操作系统的客户端之间的连接，当向客户端计算机移动数据时，会受到限制或出现错误。 服务器上的 Unicode 数据尝试映射到非 Unicode 客户端的对应代码页，以转换数据。|    
@@ -605,7 +605,7 @@ Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 
 
 <sup>1</sup> 存储字节是指编码字节长度，而不是数据类型在磁盘上的存储大小  。 若要详细了解磁盘上的存储大小，请参阅 [nchar 和 nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)，以及 [char 和 varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)。
 
-<sup>2</sup> [增补字符](#Supplementary_Characters)的码位范围。
+<sup>2</sup>[增补字符](#Supplementary_Characters)的码位范围。
 
 > [!TIP]   
 > 通常认为，在 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 或在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 定义字符数      。 这是因为在示例 CHAR(10) 列中，可以使用排序规则（如 Latin1_General_100_CI_AI）存储在 0-127 范围内的 10 ASCII 字符，因为此范围内的每个字符仅使用 1 个字节  。
@@ -622,12 +622,23 @@ Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 
 
 有关其他注意事项，请参阅[编写国际化 Transact-SQL 语句](../../relational-databases/collations/write-international-transact-sql-statements.md)。
 
+### <a name="converting"></a> 转换为 UTF-8
+因为在 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 或在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 定义字节存储大小，而不定义可以存储的字符数，所以确定必须转换的数据类型大小很重要，这可以避免数据被截断      。 
+
+例如，考虑定义为 NVARCHAR(100) 的列，该列存储了 180 个字节的日语字符  。 在本示例中，当前使用 UCS-2 或 UTF-16 对列数据进行编码，每个字符使用 2 个字节。 将列类型转换为 VARCHAR(200) 不足以防止数据被截断，因为新的数据类型只能存储 200 个字节，而使用 UTF-8 编码时，日语字符需要 3 个字节  。 因此，必须将列定义为 VARCHAR(270)，以避免由于数据截断而丢失数据  。
+
+因此，在将现有数据转换为 UTF-8 之前，需要事先知道列定义的预计字节大小，并相应地调整新数据类型的大小。 请参阅[数据示例 GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/unicode) 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本或 SQL 笔记本，其中使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 函数和 [COLLATE](../../t-sql/statements/collations.md) 语句来确定现有数据库中 UTF-8 转换操作的正确数据长度要求。
+
+要更改现有表中的列排序规则和数据类型，请使用[设置或更改列排序规则](../../relational-databases/collations/set-or-change-the-column-collation.md)中所述的一种方法。
+
+要更改数据库排序规则（默认允许新对象继承数据库排序规则）或更改服务器排序规则（默认允许新数据库继承系统排序规则），请参阅本文的[相关任务](#Related_Tasks)部分。 
+
 ##  <a name="Related_Tasks"></a> Related tasks    
     
 |任务|主题|    
 |----------|-----------|    
-|介绍如何设置或更改 SQL Server 实例的排序规则|[设置或更改服务器排序规则](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
-|介绍如何设置或更改用户数据库的排序规则|[设置或更改数据库排序规则](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
+|介绍如何设置或更改 SQL Server 实例的排序规则。 请注意，更改服务器排序规则不会更改现有数据库的排序规则。|[设置或更改服务器排序规则](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
+|介绍如何设置或更改用户数据库的排序规则。 请注意，更改数据库排序规则不会更改现有表列的排序规则。|[设置或更改数据库排序规则](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
 |介绍如何设置或更改数据库中的列的排序规则|[设置或更改列排序规则](../../relational-databases/collations/set-or-change-the-column-collation.md)|    
 |介绍如何返回服务器级、数据库级或列级的排序规则信息|[查看排序规则信息](../../relational-databases/collations/view-collation-information.md)|    
 |介绍如何编写更易于在不同语言之间移植或更轻松地支持多种语言的 Transact-SQL 语句|[编写国际化 Transact-SQL 语句](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
@@ -649,6 +660,6 @@ Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 
 ## <a name="see-also"></a>另请参阅    
 [包含数据库的排序规则](../../relational-databases/databases/contained-database-collations.md)     
 [创建全文索引时选择语言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
-[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
-    
+[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
+[单字节和多字节字符集](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
  

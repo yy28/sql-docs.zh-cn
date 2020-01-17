@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 13c306c1fbd83b2fde5783daeba4201cf5d862d9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9da237047e7b42b83cc8aa039d6bd04aaca9549a
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532851"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191074"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -169,14 +169,14 @@ WITH ( LANGUAGE = 'R' )
 相反，可以将包内容作为变量以二进制格式进行传递。
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-**PLATFORM = WINDOWS**
+**平台 = WINDOWS**
 
 为库的内容指定平台。 在修改现有库以添加不同的平台时，此值是必需的。
 在 SQL Server 2017 中，Windows 是唯一受支持的平台。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-**PLATFORM**
+**平台**
 
 为库的内容指定平台。 在修改现有库以添加不同的平台时，此值是必需的。 
 在 SQL Server 2019 中，Windows 和 Linux 是受支持的平台。
@@ -200,7 +200,7 @@ WITH ( LANGUAGE = 'R' )
 指定包的语言。 该值可以是 R、Python 或外部语言的名称（请参阅[创建外部语言](create-external-language-transact-sql.md)）   。
 ::: moniker-end
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 对于 R 语言，准备包时，包的形式须为适用于 Windows 、扩展名为 .ZIP 的压缩存档文件。 在 SQL Server 2017 中，仅支持 Windows 平台。  

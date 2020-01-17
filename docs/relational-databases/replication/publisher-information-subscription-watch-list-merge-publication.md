@@ -1,6 +1,7 @@
 ---
-title: 发布服务器信息，订阅监视列表（合并发布）| Microsoft Docs
-ms.custom: ''
+title: 订阅监视列表（合并 - SSMS）
+description: 介绍 SQL Server Management Studio (SSMS) 中复制监视器的“订阅监视列表”选项卡。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0f6caf3862d42d4245e4b2657448b2d5beb22667
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 39c036c354716118fc4df791084f9838c6af5fea
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710795"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320612"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>发布服务器信息，订阅监视列表（合并发布）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +40,10 @@ ms.locfileid: "71710795"
  **显示合并订阅**  
  为所选发布服务器选择要显示的订阅类型（事务、快照或合并）。  
   
- **“显示”**  
+ **显示**  
  为所选订阅类型选择要显示的订阅状态。 例如，可以选择仅显示包含错误的订阅。  
   
- **“状态”**  
+ **Status**  
  每个订阅的状态，这取决于合并代理的状态。  
   
  默认情况下，包含订阅信息的网格按 **“状态”** 列排序（对于具有相同状态的订阅，再按 **“性能”** 列排序）。 下面的列表显示了可能的状态值以及这些值的排序顺序（例如，错误项始终显示在该网格的顶部）：  
@@ -63,7 +64,7 @@ ms.locfileid: "71710795"
   
 -   未同步  
   
- 如果给定的订阅处于多种状态，该排序顺序还决定将要显示哪个值。 例如，如果某个订阅包含错误并且即将过期，“状态”  列将显示“错误”  。  
+ 如果给定的订阅处于多种状态，该排序顺序还决定将要显示哪个值。 例如，如果某个订阅包含错误并且即将过期， **“状态”** 列将显示 **“错误”** 。  
   
  状态值 **“‘严重’状态下的性能”** 、 **“长时间运行的合并”** 、 **“即将过期/已过期”** 和 **“未初始化的订阅”** 都是警告。 当显示警告时， **“状态”** 列还可显示是否正在同步代理。 例如，状态可能为 **“同步，‘严重’状态下的性能”** 。  
   
@@ -105,7 +106,7 @@ ms.locfileid: "71710795"
  **Duration**  
  上次同步过程中合并代理运行所用的时间。 如果合并代理当前正在同步，该时间表示已运行的时间；如果合并代理之前已经同步，该时间则表示上次同步所用的总时间。  
   
- **“连接”**  
+ **Connection**  
  订阅服务器与发布服务器之间的连接类型。 可能的值包括 **LAN**、 **“拨号”** 和 **Internet**。 如果订阅使用 Web 同步，则会显示 **Internet** 值。  
   
 ## <a name="see-also"></a>另请参阅  

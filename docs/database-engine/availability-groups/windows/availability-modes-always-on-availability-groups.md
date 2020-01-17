@@ -1,7 +1,7 @@
 ---
-title: 可用性组的可用性模式之间的差异
+title: 可用性组的可用性模式
 description: 关于 AlwaysOn 可用性组的不同可用性模式的说明。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8764ffb829f684b996d22c6ea604fad970a1a30f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df39ac4151bb5860db970d423edcbe7064178a08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934847"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241781"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>AlwaysOn 可用性组的可用性模式之间的差异
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "67934847"
   
  下图显示具有五个可用性副本的可用性组。 主副本和一个辅助副本配置为使用同步提交模式以及自动故障转移。 另一个次要副本配置为仅使用计划手动故障转移的同步提交模式，并且两个次要副本配置为使用异步提交模式，其仅支持强制手动故障转移（一般称为“强制故障转移”  ）。  
   
- ![副本的可用性和故障转移模式](../../../database-engine/availability-groups/windows/media/aoag-availabilityandfailovermodes.gif "副本的可用性和故障转移模式")  
+ ![副本的可用性及故障转移模式](../../../database-engine/availability-groups/windows/media/aoag-availabilityandfailovermodes.gif "副本的可用性及故障转移模式")  
   
  两个可用性副本之间的同步和故障转移行为取决于这两个副本的可用性模式。 例如，为进行同步提交，当前主副本和有关的辅助副本必须都配置为同步提交。 同样，为进行自动故障转移，这两个副本需要都配置为自动故障转移。 因此，下表总结了上图阐释的部署方案的行为，它通过每个可能的主副本说明了该行为：  
   
@@ -119,7 +119,7 @@ ms.locfileid: "67934847"
  同步提交模式通过要求在两个位置之间同步数据来保护您的数据，但代价是使事务的滞后时间有所增加。  
   
 ### <a name="SyncCommitWithManual"></a> 仅使用手动故障转移的同步提交模式  
- 当这些副本连接在一起并且数据库已同步时，将支持手动故障转移。 如果辅助副本关闭，则主副本将不受影响。 如果不存在任何 SYNCHRONIZED 副本（即，不会将数据发送到任何辅助副本），则主副本将会暴露在风险之中。 如果主副本丢失，辅助副本将进入 RESOLVING 状态，但数据库所有者可强制故障转移到辅助副本（可能造成数据丢失）。 有关详细信息，请参阅本主题后面的 [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。  
+ 当这些副本连接在一起并且数据库已同步时，将支持手动故障转移。 如果辅助副本关闭，则主副本将不受影响。 如果不存在任何 SYNCHRONIZED 副本（即，不会将数据发送到任何辅助副本），则主副本将会暴露在风险之中。 如果主副本丢失，辅助副本将进入 RESOLVING 状态，但数据库所有者可强制故障转移到辅助副本（可能造成数据丢失）。 有关详细信息，请参阅 [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)概念。  
   
 ###  <a name="SyncCommitWithAuto"></a> 使用自动故障转移的同步提交模式  
  通过确保在丢失主副本之后快速使数据库再次变为可用，自动故障转移可提供高可用性。 若要为可用性组配置自动故障转移，你需要将当前的主要副本和至少一个次要副本设置为使用同步提交模式自动故障转移。 你最多可以有三个自动故障转移副本。  

@@ -1,6 +1,7 @@
 ---
-title: 定义合并表项目间的逻辑记录关系 | Microsoft Docs
-ms.custom: ''
+title: 定义合并表项目间的逻辑记录关系
+description: 了解如何定义用于合并复制项目的相关表之间的逻辑记录关系。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74d9d0bec559dbc618e5487fea647461bc967db3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846610"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321216"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>定义合并表项目间的逻辑记录关系
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "70846610"
   
     -   若要使用标准行级或列级冲突检测和解决方法，请将 \@logical_record_level_conflict_detection 和 \@logical_record_level_conflict_resolution 的值指定为 false，此为默认值    。  
   
-3.  为每个将包含逻辑记录的项目重复步骤 2。 您必须为逻辑记录中的每个项目使用相同的冲突检测和解决选项。 有关详细信息，请参阅 [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
+3.  为每个将包含逻辑记录的项目重复步骤 2。 您必须为逻辑记录中的每个项目使用相同的冲突检测和解决选项。 有关详细信息，请参阅 [检测并解决逻辑记录中的冲突](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
   
 4.  在发布服务器上，对发布数据库执行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)。 指定 \@publication，将 \@article 指定为该关系中一个项目的名称，将 \@join_articlename 指定为第二个项目的名称，将 \@filtername 指定为该关系的名称，将 \@join_filterclause 指定为定义两个项目之间关系的子句，将 \@join_unique_key 指定为联接的类型，并将 \@filter_type 指定为以下值之一        ：  
   

@@ -1,6 +1,6 @@
 ---
-title: 通过使用内存优化获得更快的临时表和表变量 | Microsoft Docs
-ms.custom: ''
+title: 使用内存优化获得更快的临时表和表变量
+ms.custom: seo-dt-2019
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713252"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412677"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>通过使用内存优化获得更快的临时表和表变量
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "71713252"
   
 如果使用临时表、表变量或表值参数，请考虑转换它们以使用内存优化的表和表变量，从而提高性能。 此代码的更改通常很小。  
   
-本文介绍以下内容：  
+本文介绍：  
   
 - 支持转换为内存对象的场景。  
 - 实现转换为内存对象的技术步骤。  
@@ -57,7 +57,7 @@ ms.locfileid: "71713252"
 - 内存优化表变量  
   - 必须在两个步骤中（而不是以内联的方式）声明：  
     - `CREATE TYPE my_type AS TABLE ...;` ，然后  
-    - `DECLARE @mytablevariable my_type;`（内存优化表的索引）。  
+    - `DECLARE @mytablevariable my_type;` 列中的一个值匹配。  
   
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 方案：替换全局 tempdb &#x23;&#x23; 表  
@@ -124,7 +124,7 @@ CREATE TABLE #tempSessionC
   
   
   
-首先，创建以下表值函数来筛选 **@@spid** 。 该函数可供所有从会话临时表转换而来的 SCHEMA_ONLY 表使用。  
+首先，创建以下表值函数来筛选 \@\@spid  。 该函数可供所有从会话临时表转换而来的 SCHEMA_ONLY 表使用。  
   
   
   

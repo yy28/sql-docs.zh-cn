@@ -1,22 +1,22 @@
 ---
-title: 调用本机编译存储过程的最佳做法 | Microsoft Docs
-ms.custom: ''
+title: 最佳做法 - 本机编译存储过程
+ms.custom: seo-dt-2019
 ms.date: 03/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
+ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b78fe54f7643421328f6d6a2ec61544db725488
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae3789c3f6afce4a54bede57d8fe3b805b94ff5c
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951153"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412778"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>调用本机编译存储过程的最佳做法
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

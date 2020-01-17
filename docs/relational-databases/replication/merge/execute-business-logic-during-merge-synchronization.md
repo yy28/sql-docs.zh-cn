@@ -1,6 +1,7 @@
 ---
-title: 在合并同步期间执行业务逻辑 | Microsoft Docs
-ms.custom: ''
+title: 用于合并同步的业务逻辑
+description: 了解如何编写托管程序集代码或用于同步合并复制的业务逻辑。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 713348f8b6370dfe9762cc1f3a7280b19dedee41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033312"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321475"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>在合并同步期间执行业务逻辑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "68033312"
      如果应用程序需要覆盖特定数据值或操作，这比较有用。 例如，应用程序可能将行删除操作转换为一个特殊的更新操作，将行中 **status** 列的值设置为“已删除”，然后跟踪执行删除操作的客户端的标识。 这对于审核或工作流可能比较有用。  
   
 ### <a name="custom-conflict-resolution"></a>自定义冲突解决  
- 合并复制提供了冲突检测和冲突解决选项，从而允许针对冲突接受默认的解决策略或选择自定义解决。 有关详细信息，请参阅 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)中指定合并项目冲突解决程序。 在处理冲突数据更改期间可以调用业务逻辑处理程序，它可以执行下列两种操作之一：  
+ 合并复制提供了冲突检测和冲突解决选项，从而允许针对冲突接受默认的解决策略或选择自定义解决。 有关详细信息，请参阅 [高级合并复制冲突的检测和解决](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。 在处理冲突数据更改期间可以调用业务逻辑处理程序，它可以执行下列两种操作之一：  
   
 -   接受默认解决  
   
@@ -94,6 +95,6 @@ ms.locfileid: "68033312"
  [合并复制](../../../relational-databases/replication/merge/merge-replication.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [同步数据](../../../relational-databases/replication/synchronize-data.md)   
- [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [合并复制的 Web 同步](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

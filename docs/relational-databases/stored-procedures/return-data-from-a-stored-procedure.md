@@ -13,20 +13,20 @@ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 013efa03767302144e7c54967b6aee8b9230d661
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f9ee8851ce00c429ba277dd6e0be3286284f548
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136656"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74307985"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>从存储过程中返回数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   可通过三种方法将数据从过程返回到调用程序：结果集、输出参数和返回代码。 本主题提供了有关这三种方法的信息。  
   
-  ## <a name="returning-data-using-result-sets"></a>使用结果集返回数据
- 如果存储过程的正文中包含 SELECT 语句（而不是 SELECT ...INTO 或 INSERT...SELECT），则 SELECT 语句指定的行将直接发送到客户端。  对于较大的结果集，在将结果集完全发送到客户端之前，存储过程不会继续执行下一个语句。  对于较小的结果集，存储过程将对结果进行后台处理以便返回给客户端，并继续执行。  如果在执行存储过程期间运行多个此类 SELECT 语句，则会将多个结果集发送到客户端。  此行为也适用于嵌套 TSQL 批处理、嵌套存储过程和顶级 TSQL 批处理。
+## <a name="returning-data-using-result-sets"></a>使用结果集返回数据
+如果存储过程的正文中包含 SELECT 语句（而不是 SELECT ...INTO 或 INSERT...SELECT），则 SELECT 语句指定的行将直接发送到客户端。  对于较大的结果集，在将结果集完全发送到客户端之前，存储过程不会继续执行下一个语句。  对于较小的结果集，存储过程将对结果进行后台处理以便返回给客户端，并继续执行。  如果在执行存储过程期间运行多个此类 SELECT 语句，则会将多个结果集发送到客户端。  此行为也适用于嵌套 TSQL 批处理、嵌套存储过程和顶级 TSQL 批处理。
  
  
  ### <a name="examples-of-returning-data-using-a-result-set"></a>使用结果集返回数据的示例 
@@ -133,7 +133,7 @@ GO
     >  关闭状态只有在返回时才有影响。 例如，可以在过程中关闭游标，稍后再打开游标，然后将该游标的结果集返回给调用批处理、过程或触发器。  
   
 ### <a name="examples-of-cursor-output-parameters"></a>cursor 输出参数的示例  
- 下例创建使用 cursor 数据类型指定输出参数 `@currency_cursor` 的过程。 然后在批处理中调用该过程。  
+ 下例创建使用 cursor  数据类型指定输出参数 `@currency_cursor` 的过程。 然后在批处理中调用该过程。  
  
  首先，创建以下过程，在 Currency 表上声明并打开一个游标。  
   

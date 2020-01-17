@@ -1,6 +1,7 @@
 ---
-title: 检测并解决逻辑记录中的冲突 | Microsoft Docs
-ms.custom: ''
+title: 检测和解决逻辑记录中的冲突（合并）
+description: 了解使用逻辑记录与合并复制时冲突检测和冲突解决方法的各种可能组合。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 62c862fdd67d7b4432595572175d87ae0bd44304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d222370b5e5ced1b2157a5f02f8eb4c7f44bb5e
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033317"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321574"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>高级合并复制冲突 - 在逻辑记录中解决
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

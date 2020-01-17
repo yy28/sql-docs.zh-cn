@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 28c2bbd60b5a1565e2920968e40bb1dc4e75db22
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531186"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721769"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中还原 SQL Server 数据库
 
@@ -84,8 +84,8 @@ ms.locfileid: "73531186"
 
    此命令使用开发人员版本创建 SQL Server 2017 容器（默认）。 SQL Server 端口 1433 在主机上公开为端口 1401   。 可选的 `-v sql1data:/var/opt/mssql` 参数创建名为 sql1ddata  的数据卷容器。 这用于保留 SQL Server 创建的数据。
 
-   > [!NOTE]
-   > 在容器中运行 SQL Server 生产版本的过程略有不同。 有关详细信息，请参阅[运行生产容器映像](sql-server-linux-configure-docker.md#production)。 如果使用相同的容器名称和端口，本教程的其余部分仍适用于生产容器。
+   > [!IMPORTANT]
+   > 该示例在 Docker 中使用数据卷容器。 如果改为选择映射主机目录，请注意，在用于 Mac 和 Windows 的 Docker 上此方法存在一些限制。 有关详细信息，请参阅 [在 Docker 上配置 SQL Server 容器映像](sql-server-linux-configure-docker.md#persist)。
 
 1. 要查看 Docker 容器，请使用 `docker ps` 命令。
 

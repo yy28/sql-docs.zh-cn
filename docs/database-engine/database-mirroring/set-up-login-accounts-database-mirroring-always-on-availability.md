@@ -1,6 +1,7 @@
 ---
-title: 设置登录帐户 - 数据库镜像 AlwaysOn 可用性 | Microsoft Docs
-ms.custom: ''
+title: 设置登录帐户（镜像和可用性组）
+description: 配置登录帐户以访问数据库镜像或 Always On 可用性组的数据库镜像终结点。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d3612f2ef5a736ed2d676b5336ecdd48bdd10de6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 851b2aa7dfb7a3c492182840d7d57045a5a72e8a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025221"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252782"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>设置登录帐户 - 数据库镜像 AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68025221"
  如果两个服务器实例作为不同的帐户运行，则系统管理员必须使用 CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句针对每个服务器实例为远程实例的启动服务帐户创建一个登录名。 有关详细信息，请参阅 [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)。  
   
 > [!IMPORTANT]  
->  如果使用非域帐户运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则必须使用证书。 有关详细信息，请参阅 [使用数据库镜像终结点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果使用非域帐户运行 ，则必须使用证书。 有关详细信息，请参阅[使用数据库镜像终结点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
  例如，若要使 loginA 下运行的服务器实例 sqlA 连接到在 loginB 下运行的服务器实例 sqlB，则 sqlB 上必须存在 loginA 且 sqlA 上必须存在 loginB。 此外，对于包含见证服务器实例 (sqlC) 且三个服务器实例运行在不同域帐户下的数据库镜像会话，必须创建下列登录帐户：  
   

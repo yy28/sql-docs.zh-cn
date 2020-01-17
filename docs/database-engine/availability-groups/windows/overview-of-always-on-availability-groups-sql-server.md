@@ -1,7 +1,7 @@
 ---
-title: AlwaysOn 可用性组概述
+title: 什么是 Always On 可用性组？
 description: 关于用于配置和管理 AlwaysOn 可用性组的核心概念的介绍。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 702b0423e54258f8afe49f5c7a39734d5570f8df
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 994d7f21df09f49329e7547c4330aa95b5745873
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974380"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75236302"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组概述 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "71974380"
   
  下图显示的是一个包含一个主要副本和四个次要副本的可用性组。 支持最多八个辅助副本，包括一个主副本和两个同步提交辅助副本。  
   
- ![具有五个副本的可用性组](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Availability group with five replicas")  
+ ![有五个副本的可用性组](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "有五个副本的可用性组")  
   
 ##  <a name="AvDbs"></a> 可用性数据库  
  若要将数据库添加到可用性组，该数据库必须是联机的读写数据库，它位于承载主副本的服务器实例上。 当您添加一个数据库时，它将作为主数据库加入可用性组，同时保持可用于客户端。 除非新的主数据库的备份还原到承载辅助副本（使用 RESTORE WITH NORECOVERY）的服务器实例，否则不存在对应的辅助数据库。 新的辅助数据库处于 RESTORING 状态，直至其加入可用性组。 有关详细信息，请参阅本主题后面的 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
@@ -84,7 +84,7 @@ ms.locfileid: "71974380"
   
      使用此可用性模式的可用性副本称为“同步提交副本”  。 在同步提交模式下，在提交事务之前，同步提交主副本要等待同步提交辅助副本确认它已完成硬化日志。 同步提交模式可确保在给定的辅助数据库与主数据库同步时，充分保护已提交的事务。 这种保护的代价是延长事务滞后时间。  
   
- 有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)概念。  
+ 有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
   
 ##  <a name="FormsOfFailover"></a> 故障转移类型  
  在主副本和辅助副本之间的对话上下文中，通过称为“故障转移”  的过程，主角色和辅助角色是潜在可互换的。 在故障转移期间，目标辅助副本转换为主角色，成为新的主副本。 新的主副本使其数据库作为主数据库联机，而客户端应用程序可以连接到这些数据库。 如果以前的主副本可用，则它将转换为辅助角色，成为辅助副本。 以前的主数据库成为辅助数据库，且数据同步恢复。  

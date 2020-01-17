@@ -1,22 +1,24 @@
 ---
-title: 在 Linux 上配置快照文件夹共享 SQL Server 复制
-description: 本文介绍如何在 Linux 上配置快照文件夹共享 SQL Server 复制。
+title: 配置复制快照文件夹（非默认端口）
+titleSuffix: SQL Server on Linux
+description: 了解如何在 Linux 上配置快照文件夹共享（非默认端口），以实现 SQL Server 复制。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikeray
+ms.author: mikerayW
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6959b2073871f70fb33823b50419c208a23df2dd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: cb715e2a0a056c18352361b58ce8ffd67e3da78e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68093183"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558586"
 ---
-# <a name="configure-replication-with-non-default-ports"></a>使用非默认端口配置复制
+# <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>使用非默认端口配置复制 (SQL Server Linux)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

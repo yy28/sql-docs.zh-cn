@@ -1,6 +1,7 @@
 ---
-title: 使用 DMV 来确定视图的使用情况统计信息和性能
+title: DMV - 视图的使用情况统计信息和性能
 description: 使用 DMV 来确定视图的使用情况统计信息和性能
+ms.custom: seo-dt-2019
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -8,17 +9,17 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 944ba06bc1ccf590e8d02a4fd6e44e6c57ec9001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e80ba0a8252881b7447dda721f02fc9c3e545917
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986670"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165885"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>使用 DMV 来确定视图的使用情况统计信息和性能
-本文介绍了一些方法和脚本，用于获取使用视图的查询的性能相关信息。 这些脚本的目的是提供在数据库中发现的各种视图的使用指标和性能指标。 
+本文介绍了一些方法和脚本，用于获取使用视图的查询的性能相关信息  。 这些脚本的目的是提供在数据库中发现的各种视图的使用指标和性能指标。 
 
-## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+## <a name="sysdm_exec_query_optimizer_info"></a>sys.dm_exec_query_optimizer_info
 DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) 公开有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器所执行的优化的统计信息。 这些值是累积的，并且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时开始记录。 有关查询优化器的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)。   
 
 下面的 common_table_expression (CTE) 使用此 DMV 来提供有关工作负荷的信息，例如引用视图的查询的百分比。 此查询返回的结果并不表明其本身存在性能问题，但可以在与用户的缓慢执行查询投诉结合使用时公开基本问题。 
@@ -164,7 +165,7 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+## <a name="sysdmv_exec_cached_plans"></a>sys.dmv_exec_cached_plans
 最终查询通过使用 DMV [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) 提供有关未使用视图的信息。 但是，执行计划缓存是动态的，并且结果可能会不同。 在这种情况下，随着时间的推移使用此查询来确定视图实际上是否正在使用。 
 
 ```sql

@@ -1,7 +1,7 @@
 ---
-title: 可用性副本不具有用于可用性组的运行状况良好的角色
-description: 确定在 Always On 可用性组中副本不具有运行状况良好的角色的可能原因。
-ms.custom: seodec18
+title: 副本不具有可用性组的运行状况良好角色
+description: 确定在 Always On 可用性组中可用性副本不具有运行状况良好角色的可能原因。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9454b48f17af904db87e0000b07651c1bc454362
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91b73682ffd7d626592193c5b729896ec3d593a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991381"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241766"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>可用性副本不具有用于 Always On 可用性组的运行状况良好的角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="introduction"></a>简介  
+## <a name="introduction"></a>介绍  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ ms.locfileid: "67991381"
 |**类别**|**严重**|  
 |**方面**|可用性副本|  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  此策略检查可用性副本的角色的状态。 在可用性副本的角色既不是主副本也不是辅助副本时，该策略将处于不正常状态。 否则，该策略处于正常状态。  
   
 > [!NOTE]  
@@ -42,7 +42,7 @@ ms.locfileid: "67991381"
 ## <a name="possible-causes"></a>可能的原因  
  此可用性副本的角色是不正常。 副本既没有主副本角色，也没有辅助副本角色。  
   
-## <a name="possible-solution-informationstilltocome"></a>可能的解决方法：Information_still_to_come  
+## <a name="possible-solution-information_still_to_come"></a>可能的解决方法：Information_still_to_come  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

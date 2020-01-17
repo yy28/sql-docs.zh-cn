@@ -1,8 +1,8 @@
 ---
-title: 可用性组属性：新建可用性组（“常规”页）
+title: “常规”页面（“新建可用性组和属性”对话框）
 titleSuffix: SQL Server
-description: SQL Server Management Studio 中“新建可用性组”向导的“常规”页上的各种属性的说明。
-ms.custom: seodec18
+description: 介绍 SQL Server Management Studio (SSMS) 中“新建可用性组”和“可用性组属性”对话框的“常规”页面上提供的各种属性。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0f5e7c7ad7fe916b2203b2d1815e50602d30e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f379d55d2728d19a3321e99b342d8597622a6fc0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934872"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254083"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>可用性组属性：新建可用性组（“常规”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67934872"
  **Database Name**  
  已添加到可用性组中的数据库的名称。  
   
- **“添加”**  
+ **添加**  
  单击此选项可将数据库添加到可用性组。  
   
  **删除**  
@@ -49,10 +49,10 @@ ms.locfileid: "67934872"
  承载此副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器名称；对于非默认实例，则为其实例名称。  
   
  **角色**  
- **主**  
+ **主要节点**  
  当前主副本。  
   
- **辅助副本**  
+ **辅助节点**  
  当前辅助副本。  
   
  **正在解析**  
@@ -75,7 +75,7 @@ ms.locfileid: "67934872"
  **自动**  
  自动故障转移。 副本为自动故障转移的目标。 仅当可用性模式设置为同步提交时，才选择此选项。  
   
- **Manual**  
+ **手动**  
  手动故障转移。 副本仅能由数据库管理员手动进行故障转移。  
   
  **主角色中的连接**  
@@ -105,7 +105,7 @@ ms.locfileid: "67934872"
  **端点 URL**  
  端点的 URL。 有关这些 URL 格式的信息，请参阅[在添加或修改可用性副本时指定终结点 URL (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)。  
   
- **“添加”**  
+ **添加**  
  单击此选项可将辅助副本添加到可用性组。  
   
  **删除**  

@@ -1,6 +1,7 @@
 ---
-title: 教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: 教程：使用 SSMS 的具有安全 Enclave 的 Always Encrypted
+description: 本教程介绍如何使用 SQL Server Management Studio (SSMS) 创建具有安全 enclave 的 Always Encrypted 基本环境，如何就地加密数据，以及如何对加密列发出各种查询。
+ms.custom: seo-lt-2019
 ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,14 +13,14 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592338"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557435"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted
+# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：使用 SSMS 的具有安全 Enclave 的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 本教程介绍如何开始使用[具有安全 enclave 的 Always Encrypted](encryption/always-encrypted-enclaves.md)。 它将介绍：
@@ -186,7 +187,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 
     该查询应返回以下结果：  
 
-    | NAME                           | 值 | value_in_use |
+    | name                           | 值 | value_in_use |
     | ------------------------------ | ----- | -------------- |
     | 列加密 enclave 类型 | 1     | 1              |
 
@@ -339,7 +340,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 
 3. 在未启用 Always Encrypted 的 SSMS 实例中重试同一查询，并记录发生的故障。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 完成本教程之后，可以继续学习以下教程之一：
 - [教程：开发使用具有安全 enclave 的 Always Encrypted 的 .NET Framework 应用程序](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [教程：对使用随机加密的启用了 enclave 的列创建和使用索引](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

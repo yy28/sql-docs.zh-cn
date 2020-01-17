@@ -1,7 +1,7 @@
 ---
-title: 可用性组的“输入密码”页（添加副本向导）
+title: 添加副本向导：可用性组的“输入密码”页面
 description: 关于在 SQL Server Management Studio 的“添加副本”向导中的“输入密码”页上找到的属性的说明。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e6198ca1183caf731a78026dfd1f2f7644979580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6277498bd66e2659e0a692d2e62d66501ca1fac8
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008438"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822217"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>AlwaysOn 可用性组的“输入密码”页（添加副本向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68008438"
  **大小**  
  显示数据库大小（如果在该向导中提供）。  
   
- **“状态”**  
+ **Status**  
  指示具有数据库主密钥的数据库“需要密码”  。 在“密码”  列中输入数据库主密钥的密码后，请单击“刷新”  。 如果你正确输入了密码，  “状态”列指示“输入的密码”  。  
   
  如果数据库没有数据库主密钥，  “状态”列指示  “不需要密码”。  

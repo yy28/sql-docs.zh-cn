@@ -1,7 +1,8 @@
 ---
-title: 配置 SQL Server Managed Backup to Microsoft Azure 的高级选项 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/05/2017
+title: 托管备份 - 配置高级选项
+titleSuffix: to Microsoft Azure
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7487f89c6868555c6e3e27a217bce12123b16642
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908981"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242574"
 ---
-# <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>配置 SQL Server Managed Backup to Microsoft Azure 的高级选项
+# <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>配置 Microsoft Azure SQL Server 托管备份的高级选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   以下教程介绍了如何设置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的高级选项。 仅当你需要提供的这些功能时，才需要这些步骤。 否则，可以启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 并依赖于默认行为。  
   
  在每个方案中，使用 `database_name` 参数指定备份。 当 `database_name` 为 NULL 或 * 时，这些更改会影响实例级别的默认设置。 实例级别的设置也会影响在更改后创建的新数据库。  
   
- 指定这些设置后，便可以使用系统存储过程 [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) 为数据库或实例启用托管备份。 有关详细信息，请参阅 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
+ 指定这些设置后，便可以使用系统存储过程 [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) 为数据库或实例启用托管备份。 有关详细信息，请参阅[启用 Microsoft Azure SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
   
 > [!WARNING]  
 >  在使用 [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) 启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 之前，应该始终配置高级选项和自定义计划选项。 否则，在启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 和配置这些设置之间的这一时间段中，可能会发生不需要的备份操作。  
@@ -110,10 +111,10 @@ ms.locfileid: "72908981"
   
     ```  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
  在配置高级选项和自定义计划后，必须在目标数据库或 SQL Server 实例上启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 有关详细信息，请参阅 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [目标为 Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

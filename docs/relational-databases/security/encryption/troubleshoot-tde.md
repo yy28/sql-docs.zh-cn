@@ -1,31 +1,32 @@
 ---
-title: 使用 Azure Key Vault 中的客户托管密钥进行透明数据加密的常见错误 | Microsoft Docs
-description: 使用 Azure Key Vault 配置来排除透明数据加密 (TDE) 故障。
+title: Azure Key Vault 中客户管理密钥的常见错误
+description: 对透明数据加密 (TDE) 和 Azure Key Vault 中客户管理密钥的常见错误进行故障排除。
+ms.custom: seo-lt-2019
 helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
 - tde troubleshooting
-author: aliceku
+author: jaszymas
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
-ms.author: aliceku
+ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727763"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558462"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>使用 Azure Key Vault 中的客户托管密钥进行透明数据加密的常见错误
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-本文介绍了如何发现和解决 Azure Key Vault 密钥访问问题，这些问题导致配置为[结合使用透明数据加密 (TDE) 和 Azure Key Vault 中的客户托管密钥](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql)的数据库变得无法访问。
+本文介绍了如何发现和解决 Azure Key Vault 密钥访问问题，这些问题导致配置为[结合使用透明数据加密 (TDE) 和 Azure Key Vault 中的客户托管密钥](/azure/sql-database/transparent-data-encryption-byok-azure-sql)的数据库变得无法访问。
 
-## <a name="introduction"></a>简介
+## <a name="introduction"></a>介绍
 如果 TDE 配置为使用 Azure Key Vault 中的客户托管密钥，必须持续访问此 TDE 保护程序，才能让数据库保持联机状态。  如果逻辑 SQL Server 在 Azure Key Vault 中失去对客户托管 TDE 保护程序的访问权限，数据库就会开始拒绝所有带有相应错误消息的连接，并将其在 Azure 门户中的状态更改为“无法访问”  。
 
 在最初的 8 小时内，如果基础 Azure Key Vault 密钥访问问题得到解决，数据库就会自动恢复并自动联机。 也就是说，对于所有间歇性和临时网络故障情况，无需执行任何用户操作，数据库就会自动联机。 在大多数情况下，需要执行用户操作来解决基础密钥保管库密钥访问问题。 
@@ -83,7 +84,7 @@ ms.locfileid: "73727763"
  1. 使用“新增”  按钮，为上一步中创建的服务器添加 AppId。 
  1. 分配以下密钥权限：获取、包装、解包 
 
-若要了解详细信息，请参阅[将 Azure AD 标识分配给服务器](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)。
+若要了解详细信息，请参阅[将 Azure AD 标识分配给服务器](/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure#assign-an-azure-ad-identity-to-your-server)。
 
 > [!IMPORTANT]
 > 如果在初始配置结合使用 TDE 和 Key Vault 后，逻辑 SQL Server 实例移到新租户中，请重复执行 Azure AD 标识配置步骤，以新建 AppId。 然后，将 AppId 添加到密钥保管库，并向它分配正确的密钥权限。 

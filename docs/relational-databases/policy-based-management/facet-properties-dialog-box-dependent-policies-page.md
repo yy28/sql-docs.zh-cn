@@ -1,6 +1,7 @@
 ---
-title: “方面属性”对话框 -“依赖策略”页 | Microsoft Docs
-ms.custom: ''
+title: “Facet 属性”对话框的“依赖策略”页面
+description: 介绍 SQL Server Management Studio (SSMS) 中基于策略的管理的“Facet 属性”对话框的“依赖策略”页面。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 538752d8752eb9cdba0adda94d03af498ccfbe05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 35fbe42c60a6e3455f53aab1a09624f9eff45c4d
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087304"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557982"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>“方面属性”对话框，“依赖策略”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68087304"
  **已启用**  
  选中标记指示当前启用了策略。 如果未启用策略，则为空。  
   
- **历史记录**  
+ **History**  
  单击“查看历史记录”  超链接可显示执行历史记录报表。  
   
  **创建时间**  

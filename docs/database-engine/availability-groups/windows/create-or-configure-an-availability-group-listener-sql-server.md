@@ -1,7 +1,7 @@
 ---
-title: 为可用性组配置侦听程序
+title: 配置可用性组侦听程序
 description: '介绍使用 PowerShell 或 SQL Server Management Studio 为 Always On 可用性组配置侦听器时要采取的步骤。 '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f97f9814192077dfbe8d361c34b3cf7424f19920
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 918619afd0b07c6d7b8e5d3ccef526da5f4d8fad
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264691"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822121"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>为 Always On 可用性组配置侦听程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68264691"
 ##  <a name="Recommendations"></a> 建议  
  建议对于多子网配置使用静态 IP 地址，尽管不是必需的。  
   
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载主副本的服务器实例。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "68264691"
   
  有关详细信息，请参阅本主题前面的 [可用性组侦听器的 DNS 名称的要求](#DNSnameReqs)。  
   
- **端口**  
+ 端口   
  该侦听器使用的 TCP 端口。  
   
  **网络模式**  
@@ -129,13 +129,13 @@ ms.locfileid: "68264691"
  **IP 地址**  
  显示给定子网的 IP 地址。  对于给定子网，静态 IP 地址可以是 IPv4 地址或 IPv6 地址。  
   
- **“添加”**  
+ **添加**  
  单击“添加”可将静态 IP 地址添加到所选子网，或添加到该侦听器的其他子网。 这将打开 **“添加 IP 地址”** 对话框。 有关详细信息，请参阅[添加 IP 地址对话框 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md) 帮助主题。  
   
  **删除**  
  单击此项可以从侦听器中移除所选子网。  
   
- **“确定”**  
+ **确定**  
  单击此选项可创建指定的可用性组侦听器。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  

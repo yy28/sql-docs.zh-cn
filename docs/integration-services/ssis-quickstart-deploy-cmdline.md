@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 182dcae5867cd05d508357160aecb5c46d1d5e82
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8fd6ed8e0831c6dc0699ddd1efa13ba1d46a3633
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281779"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947155"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>使用 ISDeploymentWizard.exe 从命令提示符部署 SSIS 项目
 
@@ -28,7 +28,7 @@ ms.locfileid: "71281779"
 
 本文中介绍的用于部署到 Azure SQL 数据库的验证需要 SQL Server Data Tools (SSDT) 版本 17.4 或更高版本。 要获取最新版 SSDT，请参阅[下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。
 
-Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
+Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
 
 ## <a name="supported-platforms"></a>支持的平台
 
@@ -49,11 +49,9 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
 3. 在数据库的“概述”  页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上  。 
 4. 如果忘记了 Azure SQL 数据库服务器登录信息，导航到 SQL 数据库服务器页以查看服务器管理员名称。 如有必要，可重置密码。
 
-## <a name="wizard_auth"></a> 部署向导中的身份验证方法
+## <a name="supported-authentication-method"></a>支持的身份验证方法
 
-如果要使用部署向导部署到 SQL Server，则必须使用 Windows 身份验证；不能使用 SQL Server 身份验证。
-
-如果要部署到 Azure SQL 数据库服务器，则必须使用 SQL Server 身份验证或 Azure Active Directory 身份验证；不能使用 Windows 身份验证。
+请参阅[用于部署的身份验证方法](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment)。
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>启动 Integration Services 部署向导
 1. 打开命令提示符窗口。
@@ -72,7 +70,7 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
   
 3.  在“选择目标”页上，选择项目的目标  。
     -   输入完全限定服务器名称。 如果目标服务器是 Azure SQL 数据库服务器，则名称采用以下格式：`<server_name>.database.windows.net`。
-    -   提供身份验证信息，然后选择“连接”  。 请参阅本文中的[部署向导中的身份验证方法](#wizard_auth)。
+    -   提供身份验证信息，然后选择“连接”  。 请参阅本文中的[用于部署的身份验证方法](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment)。
     -   然后选择“浏览”  ，在 SSISDB 中选择目标文件夹。
     -   再选择“下一步”打开“评审”页   。 （仅当选择“连接”后，才会启用“下一步”按钮   。）
 
@@ -85,7 +83,7 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
 6.  部署过程完成之后，“结果”页随即打开  。 该页显示每个操作是成功了还是失败了。
     -   如果操作失败，则单击“结果”列中的“失败”可显示错误说明   。
     -   （可选）单击“保存报告...”以将结果保存到某一 XML 文件  。
-    -   单击“关闭”以退出向导  。
+    -   单击“关闭”  退出向导。
 
 ## <a name="next-steps"></a>后续步骤
 - 考虑部署包的其他方式。
@@ -94,7 +92,7 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
     - [使用 Transact-SQL 部署 SSIS 包 (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
     - [使用 PowerShell 部署 SSIS 包](ssis-quickstart-deploy-powershell.md)
     - [使用 C# 部署 SSIS 包](./ssis-quickstart-deploy-dotnet.md) 
-- 运行已部署的包。 若要运行包，可以从多个工具和语言中进行选择。 有关详细信息，请参阅下文：
+- 运行已部署的包。 若要运行包，可以从多个工具和语言中进行选择。 有关详细信息，请参阅以下文章：
     - [使用 SSMS 运行 SSIS 包](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 运行 SSIS 包 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [使用 Transact-SQL 运行 SSIS 包 (VS Code)](ssis-quickstart-run-tsql-vscode.md)

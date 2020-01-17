@@ -1,6 +1,7 @@
 ---
-title: 自动将数据库迁移到 Linux 上的 SQL Server
-description: ''
+title: SSMA：自动迁移到 Linux 上的 SQL Server
+description: 使用 SQL Server 迁移助手 (SSMA) 自动将 Microsoft Access、DB2、MySQL、Oracle 和 Sybase 数据库迁移到 Linux 上的 SQL Server。
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 01/30/2018
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.openlocfilehash: 6120229f939fce8686e6414b5fa65141088396c3
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 86e56d998959b4cc425626de249d66597262b50a
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68129343"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558391"
 ---
-# <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>使用 SQL Server 迁移助手自动执行到 Linux 的数据库迁移
+# <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant-ssma"></a>使用 SQL Server 迁移助手 (SSMA) 自动将数据库迁移到 Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

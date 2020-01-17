@@ -13,12 +13,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0904966eb334b182646818b98449472122741f6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d452d0e342d9b8241ee79882970e65c74a26d77
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086131"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325475"
 ---
 # <a name="variables-transact-sql"></a>变量 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -30,7 +30,10 @@ Transact-SQL 局部变量是可以保存单个特定类型数据值的对象。 
 * 保存存储过程返回代码要返回的数据值或函数返回值。
 
 > [!NOTE]
-> 一些 Transact-SQL 系统函数的名称以两个 at 符号 (\@\@) 开头。 尽管在旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，\@\@函数称为全局变量，但它们不是变量，不具有等同于变量的行为。 \@\@函数是系统函数，语法遵循函数规则。
+> 一些 Transact-SQL 系统函数的名称以两个 at  符号 (\@\@) 开头。 尽管在旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，\@\@函数称为全局变量，但它们不是变量，不具有等同于变量的行为。 \@\@函数是系统函数，语法遵循函数规则。
+
+> [!NOTE]
+> 不能在视图中使用变量。
 
 以下脚本创建一个小的测试表并向其填充 26 行。 脚本使用变量来执行下列三个操作： 
 
@@ -85,13 +88,13 @@ DECLARE 语句通过以下操作初始化 Transact-SQL 变量：
 * 指定系统提供的或用户定义的数据类型和长度。 对于数值变量还指定精度和小数位数。 对于 XML 类型的变量，可以指定一个可选的架构集合。
 * 将值设置为 NULL。
 
-例如，下面的 DECLARE语句创建名为 \@mycounter 且数据类型为 int 的局部变量。  
+例如，下面的 DECLARE  语句创建名为 \@mycounter  且数据类型为 int 的局部变量。  
 ```sql
 DECLARE @MyCounter int;
 ```
 若要声明多个局部变量，请在定义的第一个局部变量后使用一个逗号，然后指定下一个局部变量名称和数据类型。
 
-例如，下面的 DECLARE 语句创建了三个局部变量，分别名为 \@LastName、\@FirstName 和 \@StateProvince，并将每个变量都初始化为 NULL：  
+例如，下面的 DECLARE  语句创建了三个局部变量，分别名为 \@LastName  、\@FirstName  和 \@StateProvince  ，并将每个变量都初始化为 NULL：  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
@@ -161,7 +164,7 @@ GO
 > [!WARNING]
 > 如果在单个 SELECT 语句中有多个赋值子句，则 SQL Server 不保证表达式求值的顺序。 请注意，只有当赋值之间有引用时才能看到影响。
 
-如果 SELECT 语句返回多行而且变量引用一个非标量表达式，则会将变量设置为结果集最后一行中表达式的返回值。 例如，在下面的批处理中，\@EmpIDVariable 设置为返回的最后一行的 BusinessEntityID 值，即为 1：  
+如果 SELECT 语句返回多行而且变量引用一个非标量表达式，则会将变量设置为结果集最后一行中表达式的返回值。 例如，在下面的批处理中，\@EmpIDVariable  设置为返回的最后一行的 BusinessEntityID  值，即为 1：  
 
 ```sql
 USE AdventureWorks2014;

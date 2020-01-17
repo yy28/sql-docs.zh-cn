@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性组系统对象参考 | Microsoft Docs
-ms.custom: ''
+title: 可用性组系统对象引用
+description: 介绍使用 Always On 可用性组时可使用的各种系统对象的引用。
+ms.custom: seo-lt-2019
 ms.date: 04/03/2010
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2014||=sqlallproducts-allversions'
-ms.openlocfilehash: b9bdf352a566917678294c6c63ac52bd0d27de8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 140953484006d33e7814c19b9eb5bd6abcd29009
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991390"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822465"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>AlwaysOn 可用性组系统对象参考
 
@@ -24,7 +25,7 @@ ms.locfileid: "67991390"
 
 ## <a name="system-catalog-views"></a>系统目录视图
 
-| 系统目录视图 | 描述|
+| 系统目录视图 | 说明|
 | :------ | :----------------------------- |
 | [监视可用性数据库](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)   | 为 SQL Server 实例上的每个可用性数据库都包含一行，实例在托管 Windows Server 故障转移群集 (WSFC) 中任何 AlwaysOn 可用性组的可用性副本，无论本地副本数据库是否已加入可用性组。 |
 | [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  | 为 Windows Server 故障转移群集 (WSFC) 中任何 AlwaysOn 可用性组侦听程序的每个关联 IP 地址都返回一行。 |
@@ -38,7 +39,7 @@ ms.locfileid: "67991390"
 ## <a name="system-dynamic-management-views"></a>系统动态管理视图
 
 
-| 系统动态管理视图 | 描述|
+| 系统动态管理视图 | 说明|
 | :------ | :----------------------------- |
 | [sys.dm_hadr_auto_page_repair](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)   | 为针对任何可用性数据库（位于服务器实例为任何可用性组承载的可用性副本上）的每一个自动页修复尝试都返回一行。  |
 | [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)    | 为在 SQL Server 的本地实例上拥有可用性副本的每个 AlwaysOn 可用性组都返回一行。 每行显示定义给定可用性组的运行状况的状态。 |
@@ -58,7 +59,7 @@ ms.locfileid: "67991390"
 ## <a name="system-functions"></a>系统函数
 
 
-| 系统函数 | 描述|
+| 系统函数 | 说明|
 | :------ | :----------------------------- |
 | [sys.fn_hadr_is_primary_replica](../../../relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md)  | 用于确定当前副本是否为主副本。 |
 | [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)    | 用于确定当前副本是否为首选备份副本。 |

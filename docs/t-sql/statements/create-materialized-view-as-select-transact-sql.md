@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 709a0060d948b4c2979c858a0d51bd9740eb0e28
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729846"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226737"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -52,7 +52,7 @@ ms.locfileid: "73729846"
 
 具体化视图将保留视图定义查询返回的数据，并自动随着基础表中的数据更改而更新。   它可以提高复杂查询的性能（通常指使用联接和聚合的查询），同时还提供简单的维护操作。   由于具体化视图具有执行计划自动匹配功能，因此无需在查询中引用它，优化器即会考虑将此视图作为替换项。  这样数据工程师即可以将具体化视图作为改进查询响应时间的机制来实现，而不必再更改查询。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -88,7 +88,7 @@ materialized_view_name
 select_statement     
 具体化视图定义中的 SELECT 列表需要至少满足以下两个条件之一：
 - SELECT 列表包含聚合函数。
-- 具体化视图定义使用了 GROUP BY，并且 SELECT 列表包括 GROUP BY 中的所有列。  
+- 具体化视图定义使用了 GROUP BY，并且 SELECT 列表包括 GROUP BY 中的所有列。  在 GROUP BY 子句中最多可以使用 32 列。
 
 具体化视图定义的 SELECT 列表必须包含聚合函数。  支持的聚合包括 MAX、MIN、AVG、COUNT、COUNT_BIG、SUM、VAR、STDEV。
 
@@ -106,7 +106,7 @@ select_statement
 
 - 引用的基表出现 UPDATE 或 DELETE 时，将禁用具体化视图。  此限制不适用于 INSERT。  若要重新启用具体化视图，请运行 ALTER MATERIALIZED INDEX 和 REBUILD。
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 Azure 数据仓库的具体化视图与 SQL Server 的索引视图非常相似。  除了具体化视图支持聚合函数外，它与索引视图适用的限制几乎相同（请参阅[创建索引视图](/sql/relational-databases/views/create-indexed-views)了解详细信息）。   以下是关于具体化视图的其他注意事项。  
  
@@ -118,7 +118,7 @@ Azure 数据仓库的具体化视图与 SQL Server 的索引视图非常相似�
  
 具体化视图引用的表不支持 ALTER TABLE SWITCH。 请先禁用或删除具体化视图，然后再使用 ALTER TABLE SWITCH。 在以下应用场景中，需要向具体化视图添加新列，才能创建具体化视图：
 
-|应用场景|要添加到具体化视图的新列|注释|  
+|场景|要添加到具体化视图的新列|注释|  
 |-----------------|---------------|-----------------|
 |具体化视图定义的 SELECT 列表缺少 COUNT_BIG()| COUNT_BIG (*) |通过具体化视图创建自动添加。  不需要任何用户操作。|
 |由用户在具体化视图定义的 SELECT 列表中指定 SUM(a)，其中“a”是可为 null 的表达式 |COUNT_BIG (a) |用户需要手动将表达式“a”添加到具体化视图定义中。|

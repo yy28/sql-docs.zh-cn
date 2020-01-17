@@ -1,6 +1,7 @@
 ---
-title: 配置故障转移群集实例 - Linux 上的 SQL Server (RHEL)
-description: ''
+title: 配置 FCI - Linux 上的 SQL Server (RHEL)
+description: 了解如何在 Red Hat Enterprise Linux (RHEL) 上为 SQL Server 配置故障转移群集实例 (FCI)。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 83c25db6f0915aae9cf210d2b749df970da40590
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032297"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558322"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>配置故障转移群集实例 - Linux 上的 SQL Server (RHEL)
 
@@ -46,10 +47,10 @@ SQL Server 双节点共享磁盘故障转移群集实例为实现高可用性提
 
 ## <a name="install-and-configure-sql-server"></a>安装和配置 SQL Server
 
-1. 在两个节点上安装和设置 SQL Server。  有关详细说明，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
-1. 出于配置目的，请将一个节点指定为主节点，而将另一个指定为辅助节点。 使用以下术语，按照此指南操作。  
+1. 在两个节点上安装和设置 SQL Server。  有关详细说明，请参阅[安装 Linux 上的 SQL Server](sql-server-linux-setup.md)。
+1. 出于配置目的，请将一个节点指定为主节点，而将另一个指定为辅助节点。 本指南使用这些术语。  
 1. 在辅助节点上，停止并禁用 SQL Server。
-    以下示例将停止并禁用 SQL Server： 
+    以下示例会停止并禁用 SQL Server： 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl disable mssql-server
@@ -58,7 +59,7 @@ SQL Server 双节点共享磁盘故障转移群集实例为实现高可用性提
     > [!NOTE] 
     > 在设置时，将为 SQL Server 实例生成一个服务器主密钥并放置在 `var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，所以其标识不会在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。 
 
-1.  在主节点上，为 Pacemaker 创建 SQL server 登录名并授予运行 `sp_server_diagnostics` 的登录权限。 Pacemaker 用此帐户验证哪个节点正在运行 SQL Server。 
+1.  在主节点上，为 Pacemaker 创建 SQL Server 登录名并授予登录权限以运行 `sp_server_diagnostics`。 Pacemaker 使用此帐户验证正在运行 SQL Server 的节点。 
 
     ```bash
     sudo systemctl start mssql-server
@@ -73,7 +74,7 @@ SQL Server 双节点共享磁盘故障转移群集实例为实现高可用性提
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
 
-   或者，可以在更精细的级别设置权限。 Pacemaker 登录需要 `VIEW SERVER STATE` 使用 sp_server_diagnostics 查询运行状况状态，需要 `setupadmin` 和 `ALTER ANY LINKED SERVER` 通过运行 sp_dropserver 和 sp_addserver 来更新 FCI 实例名称和资源名称。 
+   此外，也可以在更精细的级别设置权限。 Pacemaker 登录需要 `VIEW SERVER STATE` 使用 sp_server_diagnostics 查询运行状况状态，需要 `setupadmin` 和 `ALTER ANY LINKED SERVER` 通过运行 sp_dropserver 和 sp_addserver 来更新 FCI 实例名称和资源名称。 
 
 1. 在主节点上，停止并禁用 SQL Server。 
 
@@ -87,7 +88,7 @@ SQL Server 双节点共享磁盘故障转移群集实例为实现高可用性提
     sudo ip addr show
     ```
 
-1. 在每个节点上设置计算机名。 为每个节点提供长度不超过 15 个字符的唯一名称。 通过添加到 `/etc/hosts` 来设置计算机名。 以下脚本可使用 `vi` 编辑 `/etc/hosts`。 
+1. 在每个节点上设置计算机名。 为每个节点提供长度不超过 15 个字符的唯一名称。 通过将计算机名添加到 `/etc/hosts` 来设置该名称。 以下脚本可使用 `vi` 编辑 `/etc/hosts`。 
 
    ```bash
    sudo vi /etc/hosts
@@ -145,7 +146,7 @@ SQL Server 双节点共享磁盘故障转移群集实例为实现高可用性提
    ```bash
    sudo passwd hacluster
    ```
-1. 启用并启动 `pcsd` 服务和 Pacemaker。 这样，节点将可以在重新启动后重新加入群集。 在两个节点上运行以下命令。
+1. 启用并启动 `pcsd` 服务和 Pacemaker。 这样，节点将可以在重新启动后重新加入群集。 在这两个节点上运行以下命令。
 
    ```bash
    sudo systemctl enable pcsd
@@ -153,7 +154,7 @@ SQL Server 双节点共享磁盘故障转移群集实例为实现高可用性提
    sudo systemctl enable pacemaker
    ```
 
-1. 为 SQL Server 安装 FCI 资源代理。 在两个节点上运行以下命令。 
+1. 为 SQL Server 安装 FCI 资源代理。 在这两个节点上运行以下命令。 
 
    ```bash
    sudo yum install mssql-server-ha
@@ -278,7 +279,7 @@ SQL Server 双节点共享磁盘故障转移群集实例为实现高可用性提
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
 
 -->
-## <a name="summary"></a>“摘要”
+## <a name="summary"></a>总结
 
 在本教程中，已完成以下任务：
 

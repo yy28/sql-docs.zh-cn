@@ -1,6 +1,7 @@
 ---
-title: “指定副本”页（新建可用性组向导：添加副本向导）| Microsoft Docs
-ms.custom: ''
+title: 可用性组向导：“指定副本”页
+description: 介绍 SQL Server Management Studio (SSMS) 中“新建可用性组向导”的“指定副本”页面上提供的选项。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,18 +14,18 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 190ff2f2f7fe510722f73c03bdc4beba18273d2b
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176219"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822559"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>“指定副本”页（新建可用性组向导：添加副本向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍 **“指定副本”** 页的选项。 本页适用于 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** 的 **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** 。 使用 **“指定副本”** 页可以指定和配置一个或多个要添加到可用性组的可用性副本。 此页包含四个选项卡，下表将逐一介绍。 单击表中的选项卡名称可转到本主题后面的相应部分。  
   
-|选项卡|简短说明|  
+|选项卡|简要说明|  
 |---------|-----------------------|  
 |[副本](#ReplicasTab)|使用此选项卡可以指定将承载或当前承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 请注意，您当前连接的服务器实例必须承载主副本。<br /><br /> 请首先在 **“副本”** 选项卡上完成对所有副本的指定，再开始其他选项卡。<br/><br/> 请注意，如果群集类型为“NONE”，“自动故障转移”将处于禁用状态   。 可用性组不在群集中时，SQL Server 仅支持手动故障转移。 <br/><br/> 群集类型为 EXTERNAL 时，故障转移模式为“外部”  。 <br/><br/> 如果计划添加副本，则所有新副本都必须托管在与现有副本相同的操作系统类型上。 <br/><br/>添加副本时，如果主要副本在 WSFC 上，则次要副本必须位于同一群集。|
 |[端点](#EndpointsTab)|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。|  
@@ -66,7 +67,7 @@ ms.locfileid: "70176219"
  单击此选项可将辅助副本添加到可用性组。  
   
  **添加 Azure 副本**  
- 单击此项以创建在可用性组中运行辅助副本的 Azure 虚拟机。 此选项仅适用于混合 IT 中含有本地副本的可用性组。 有关详细信息，请参阅 [Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)。  
+ 单击此项以创建在可用性组中运行辅助副本的 Azure 虚拟机。 此选项仅适用于包含本地副本的混合 IT 中的可用性组。 有关详细信息，请参阅 [Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)。  
   
  **删除副本**  
  单击可从可用性组中删除选择的辅助副本。  
@@ -115,7 +116,7 @@ ms.locfileid: "70176219"
  **仅辅助**  
  指定备份应该永远不会在主副本上执行。 如果主副本是唯一的联机副本，则备份应不会发生。  
   
- **主**  
+ **主要节点**  
  指定备份应该始终在主副本上发生。 如果您需要在对辅助副本运行备份时不支持的备份功能，例如创建差异备份，此选项将很有用。  
   
  **任何副本**  
@@ -131,7 +132,7 @@ ms.locfileid: "70176219"
  显示承载可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  
   
  **备份优先级(最低 = 1，最高 = 100)**  
- 分配对此副本执行备份的优先级（相对于同一可用性组中的其他副本）。 默认值为 50。 您可以选择 0..100 范围内的任何整数。 1 表示最低优先级，100 表示最高优先级。 如果您将 **“备份优先级”** 设置为 1，则仅当当前没有更高优先级的可用性副本时，才选择对此可用性副本执行备份。  
+ 分配对此副本执行备份的优先级（相对于同一可用性组中的其他副本）。 默认值为 50。 您可以选择 0..100 范围内的任何整数。 1 表示最低优先级，100 表示最高优先级。 如果你将“备份优先级”设置为 1，则仅在当前没有具有更高优先级的可用性副本时，才选择对此可用性副本执行备份  。  
   
  **排除副本**  
  防止选择此可用性副本来执行备份。 例如，这对于您永远不希望备份故障转移到的远程可用性副本十分有用。  
@@ -151,7 +152,7 @@ ms.locfileid: "70176219"
 > [!IMPORTANT]  
 >  如果在“侦听程序”  选项卡上输入无效的 DNS 侦听程序名称（或端口号），则在“指定副本”  页上将禁用“下一步”  按钮。  
   
- **“端口”**  
+ 端口   
  指定该侦听器使用的 TPC 端口。  
   
 > [!NOTE]  
@@ -163,7 +164,7 @@ ms.locfileid: "70176219"
  **静态 IP**  
  如果您希望侦听器侦听多个子网，则选中此选项。 若要使用静态 IP 网络模式，可用性组侦听器必须侦听承载该可用性组的可用性副本的每个子网。 对于每个子网，请单击 **“添加”** ，以选择子网地址并指定 IP 地址。  
   
- 如果选择“静态 IP”  作为网络模式（这是默认选择），网格中将显示“子网”  和“IP 地址”  列，并显示关联的“添加”  按钮和“删除”  按钮。 请注意，在您添加第一个子网之前该网格为空。  
+ 如果选择“静态 IP”  作为网络模式（这是默认选择），网格中将显示“子网”  和“IP 地址”  列，并显示关联的“添加”  按钮和“删除”  按钮。 在添加第一个子网之前，网格为空。  
   
  “子网”  列  
  显示您为针对该侦听器添加的每个子网选择的子网地址。  
@@ -171,7 +172,7 @@ ms.locfileid: "70176219"
  “IP 地址”  列  
  显示您为给定子网指定的 IPv4 或 IPv6 地址。  
   
- **“添加”**  
+ **添加**  
  单击以将子网添加到此侦听器。 这将打开 **“添加 IP 地址”** 对话框。 有关详细信息，请参阅[添加 IP 地址对话框 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md) 帮助主题。  
   
  **删除**  

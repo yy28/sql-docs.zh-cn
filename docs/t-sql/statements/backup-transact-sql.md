@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c6385fc578bfa1f9d688e9819690e72a3090ce4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982852"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249732"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -69,7 +69,7 @@ ms.locfileid: "73982852"
 
 ||||
 |---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -190,7 +190,7 @@ DATABASE 指定一个完整数据库备份。 如果指定了一个文件和文�
 > [!NOTE]
 > 对 master  数据库，只能执行完整数据库备份。
 
-LOG
+日志
 
 指定仅备份事务日志。 该日志是从上一次成功执行的日志备份到当前日志的末尾。 必须创建完整备份，才能创建第一个日志备份。
 
@@ -206,7 +206,7 @@ LOG
 
 \<file_or_filegroup> [ ,  ...n  ] 只能与 BACKUP DATABASE 一起使用，用于指定某个数据库文件或文件组包含在文件备份中，或指定某个只读文件或文件组包含在部分备份中。
 
-FILE =  { logical_file_name  | @  logical\_file\_name\_var  } 文件或变量的逻辑名称，其值等于要包含在备份中的文件的逻辑名称。
+FILE = { logical_file_name | @logical\_file\_name\_var } 是文件或变量的逻辑名称，其值等于要包含在备份中的文件的逻辑名称     。
 
 FILEGROUP =  { logical\_filegroup\_name   | @  logical\_filegroup\_name\_var  } 文件组或变量的逻辑名称，其值等于要包含在备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。
 
@@ -347,7 +347,7 @@ DESCRIPTION =  { '  text  '   | @  text\_variable  } 指定说明备份集的自
 
 NAME =  { backup_set_name   | @  backup\_set\_var  } 指定备份集的名称。 名称最长可达 128 个字符。 如果未指定 NAME，它将为空。
 
-{ EXPIREDATE ='  date  '  | RETAINDAYS =  days  } 指定允许覆盖该备份的备份集的日期。 如果同时使用这两个选项，RETAINDAYS 的优先级别将高于 EXPIREDATE。
+{ EXPIREDATE ='date  ' | RETAINDAYS = days } 指定允许覆盖该备份的备份集的日期     。 如果同时使用这两个选项，RETAINDAYS 的优先级别将高于 EXPIREDATE。
 
 如果这两个选项均未指定，则过期日期由 mediaretention  配置设置确定。 有关详细信息，请参阅[服务器配置选项](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。
 
@@ -356,7 +356,7 @@ NAME =  { backup_set_name   | @  backup\_set\_var  } 指定备份集的名称。
 
 EXPIREDATE =  { '  date  '   | @  date\_var  } 指定备份集到期和允许被覆盖的日期。 如果作为变量 (@date\_var  ) 提供，则该日期必须采用已配置系统日期/时间  的格式，并指定为下列类型之一：
 
-- 字符串常量 (@date\_var  =  date)
+- 字符串常量 (@date\_var = date)  
 - 字符串数据类型（ntext  或 text  数据类型除外）的变量
 - smalldatetime 
 - datetime  变量
@@ -400,14 +400,14 @@ INIT 指定应覆盖所有备份集，但是保留媒体标头。 如果指定�
 > [!NOTE]
 > 有关 { **NOINIT** | INIT } and { **NOSKIP** | SKIP } 之间交互的信息，请参阅本主题后面的“备注”。
 
-NOSKIP 指示 BACKUP 语句在可以覆盖媒体上的所有备份集之前先检查它们的过期日期。 这是默认行为。
+NOSKIP 指示 BACKUP 语句在可以覆盖媒体上的所有备份集之前先检查它们的过期日期。 此选项为默认行为。
 
 SKIP 禁用备份集的过期和名称检查，这些检查一般由 BACKUP 语句执行以防覆盖备份集。 有关 { NOINIT | INIT } 和 { NOSKIP | SKIP } 之间交互的信息，请参阅本主题后面的“备注”。
 若要查看备份集的过期日期，请查询 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 历史记录表的 **expiration_date** 列。
 
 { NOFORMAT  | FORMAT } 指定是否应该在用于此备份操作的卷上写入媒体标头，以覆盖任何现有的媒体标头和备份集。
 
-NOFORMAT 指定备份操作在用于此备份操作的媒体卷上保留现的有媒体标头和备份集。 这是默认行为。
+NOFORMAT 指定备份操作在用于此备份操作的媒体卷上保留现的有媒体标头和备份集。 此选项为默认行为。
 
 FORMAT 指定创建新的媒体集。 FORMAT 将使备份操作在用于备份操作的所有介质卷上写入新的介质标头。 卷的现有内容将变为无效，因为覆盖了任何现有的介质标头和备份集。
 
@@ -416,7 +416,7 @@ FORMAT 指定创建新的媒体集。 FORMAT 将使备份操作在用于备份�
 
 指定 FORMAT 即表示 `SKIP`；`SKIP` 无需显式声明。
 
-MEDIADESCRIPTION =  { text  | @  text\_variable  } 指定媒体集的自由格式文本说明，最多为 255 个字符。
+MEDIADESCRIPTION = { text | @text\_variable } 指定媒体集的自由格式文本说明，最多为 255 个字符     。
 
 MEDIANAME =  { media_name   | @  media\_name\_variable  } 指定整个备份媒体集的媒体名称。 介质名称的长度不能多于 128 个字符，如果指定了 `MEDIANAME`，则该名称必须匹配备份卷上已存在的先前指定的介质名称。 如果未指定该选项或指定了 SKIP 选项，将不会对介质名称进行验证检查。
 
@@ -451,7 +451,7 @@ MAXTRANSFERSIZE **=** { maxtransfersize   |  **@** maxtransfersize\_variable  } 
 
 { NO_CHECKSUM  | CHECKSUM } 控制是否启用备份校验和。
 
-NO_CHECKSUM 显式禁用备份校验和的生成（以及页校验和的验证）。 这是默认行为。
+NO_CHECKSUM 显式禁用备份校验和的生成（以及页校验和的验证）。 此选项为默认行为。
 
 CHECKSUM 如果此选项已启用并且可用，则指定备份操作将验证每页的校验和及页残缺，并生成整个备份的校验和。
 
@@ -461,7 +461,7 @@ CHECKSUM 如果此选项已启用并且可用，则指定备份操作将验证�
 
 { STOP_ON_ERROR | CONTINUE_AFTER_ERROR  } 控制备份操作在遇到页校验和错误后是停止还是继续。
 
-STOP_ON_ERROR 如果未验证页校验和，则指示 BACKUP 失败。 这是默认行为。
+STOP_ON_ERROR 如果未验证页校验和，则指示 BACKUP 失败。 此选项为默认行为。
 
 CONTINUE_AFTER_ERROR 指示 BACKUP 继续执行，不管是否遇到无效校验和或页撕裂之类的错误。
 
@@ -475,7 +475,7 @@ RESTART 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始不起作�
 
 **监视选项**
 
-STATS [ =  percentage  ] 每当另一个百分比  完成时显示一条消息，并用于测量进度。 如果省略百分比  ，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每完成 10% 就显示一条消息。
+STATS [ = percentage ] 每当另一个 percentage 完成时显示一条消息，并用于测量进度    。 如果省略百分比  ，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每完成 10% 就显示一条消息。
 
 STATS 选项报告截止报告下一个间隔的阈值时的完成百分比。 这是指定百分比的近似值；例如，当 STATS=10 时，如果完成进度为 40%，则该选项可能显示 43%。 对于较大的备份集，这不是问题，因为完成百分比在已完成的 I/O 调用之间变化非常缓慢。
 
@@ -519,7 +519,7 @@ NOUNLOAD
 > [!NOTE]
 > 如果不想进行日志备份，则请使用简单恢复模式。 有关详细信息，请参阅[恢复模式](../../relational-databases/backup-restore/recovery-models-sql-server.md)。
 
-{ NORECOVERY | STANDBY **=** _undo_file_name_ }
+{ NORECOVERY | STANDBY = undo_file_name }  
 
 NORECOVERY
 
@@ -527,7 +527,7 @@ NORECOVERY
 
 若要执行最大程度的日志备份（跳过日志截断）并自动将数据库置于 RESTORING 状态，请同时使用 `NO_TRUNCATE` 和 `NORECOVERY` 选项。
 
-STANDBY **=** _standby_file_name_
+STANDBY = standby_file_name  
 
 备份日志的尾部并使数据库处于只读和 STANDBY 状态。 将 STANDBY 子句写入备用数据（执行回滚，但需带进一步还原选项）。 使用 STANDBY 选项等同于 BACKUP LOG WITH NORECOVERY 后跟 RESTORE WITH STANDBY。
 
@@ -655,7 +655,7 @@ BACKUP 语句的 `TO` 子句中指定的每个备份设备均对应于一个媒�
 
 ### <a name="Restoring_Backups"></a> 还原 SQL Server 备份
 
-若要还原数据库，选择联机恢复数据库或使其还原文件或文件组，请使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Restore** 任务。 有关详细信息，请参阅[还原和恢复](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。
+要还原数据库，选择联机恢复数据库或使其还原文件或文件组，请使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“还原”任务  。 有关详细信息，请参阅[还原和恢复](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。
 
 ## <a name="Additional_Considerations"></a> 有关 BACKUP 选项的其他注意事项
 
@@ -727,7 +727,7 @@ BACKUP 支持 `RESTART` 选项以提供与 [!INCLUDE[ssNoVersion](../../includes
 
 在执行还原操作时，如果尚未在 msdb  数据库中记录备份集，则可以修改备份历史记录表。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，`PASSWORD` 和 `MEDIAPASSWORD` 选项不可再用于创建备份。 仍可以还原使用密码创建的备份。
 
@@ -932,7 +932,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL 数据库<br />托管实例\*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|\* SQL 数据库<br />托管实例 \*   &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -1029,7 +1029,7 @@ DESCRIPTION =  { '  text  '   | @  text\_variable  } 指定说明备份集的自
 
 NAME =  { backup_set_name   | @  backup\_set\_var  } 指定备份集的名称。 名称最长可达 128 个字符。 如果未指定 NAME，它将为空。
 
-MEDIADESCRIPTION =  { text  | @  text\_variable  } 指定媒体集的自由格式文本说明，最多为 255 个字符。
+MEDIADESCRIPTION = { text | @text\_variable } 指定媒体集的自由格式文本说明，最多为 255 个字符     。
 
 MEDIANAME =  { media_name   | @  media\_name\_variable  } 指定整个备份媒体集的媒体名称。 介质名称的长度不能多于 128 个字符，如果指定了 `MEDIANAME`，则该名称必须匹配备份卷上已存在的先前指定的介质名称。 如果未指定该选项或指定了 SKIP 选项，将不会对介质名称进行验证检查。
 
@@ -1055,7 +1055,7 @@ MAXTRANSFERSIZE **=** { maxtransfersize   |  **@** maxtransfersize\_variable  } 
 
 { NO_CHECKSUM  | CHECKSUM } 控制是否启用备份校验和。
 
-NO_CHECKSUM 显式禁用备份校验和的生成（以及页校验和的验证）。 这是默认行为。
+NO_CHECKSUM 显式禁用备份校验和的生成（以及页校验和的验证）。 此选项为默认行为。
 
 CHECKSUM 如果此选项已启用并且可用，则指定备份操作将验证每页的校验和及页残缺，并生成整个备份的校验和。
 
@@ -1065,7 +1065,7 @@ CHECKSUM 如果此选项已启用并且可用，则指定备份操作将验证�
 
 { STOP_ON_ERROR | CONTINUE_AFTER_ERROR  } 控制备份操作在遇到页校验和错误后是停止还是继续。
 
-STOP_ON_ERROR 如果未验证页校验和，则指示 BACKUP 失败。 这是默认行为。
+STOP_ON_ERROR 如果未验证页校验和，则指示 BACKUP 失败。 此选项为默认行为。
 
 CONTINUE_AFTER_ERROR 指示 BACKUP 继续执行，不管是否遇到无效校验和或页撕裂之类的错误。
 
@@ -1079,7 +1079,7 @@ RESTART 不起作用。 此版本接受该选项，以便与以前版本的 SQL 
 
 **监视选项**
 
-STATS [ =  percentage  ] 每当另一个百分比  完成时显示一条消息，并用于测量进度。 如果省略百分比  ，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每完成 10% 就显示一条消息。
+STATS [ = percentage ] 每当另一个 percentage 完成时显示一条消息，并用于测量进度    。 如果省略百分比  ，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每完成 10% 就显示一条消息。
 
 STATS 选项报告截止报告下一个间隔的阈值时的完成百分比。 这是指定百分比的近似值；例如，当 STATS=10 时，如果完成进度为 40%，则该选项可能显示 43%。 对于较大的备份集，这不是问题，因为完成百分比在已完成的 I/O 调用之间变化非常缓慢。
 
@@ -1087,7 +1087,7 @@ STATS 选项报告截止报告下一个间隔的阈值时的完成百分比。 �
 
 最大备份带状线大小为 195 GB（最大 blob 大小）。 增加备份命令中的带状线数量以缩小单个带状线大小，将其保持在限制范围内。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 ### <a name="permissions"></a>权限
 
@@ -1114,7 +1114,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|\* Analytics<br />Platform System (PDW) \*   &nbsp;|
 
 &nbsp;
 
@@ -1260,7 +1260,7 @@ BACKUP DATABASE 错误会在以下情况中发生：
 
 **管理网络凭据**
 
-对备份目录的网络访问权限基于标准 Windows 文件共享安全。 在执行备份前，需要创建或指定用于向备份目录验证 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 身份的 Windows 帐户。 此 Windows 帐户必须有权访问、创建和写入备份目录。
+对备份目录的网络访问权限基于标准操作系统文件共享安全。 在执行备份前，需要创建或指定用于向备份目录验证 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 身份的 Windows 帐户。 此 Windows 帐户必须有权访问、创建和写入备份目录。
 
 > [!IMPORTANT]
 > 若要降低数据的安全风险，建议指定一个 Windows 帐户专门用于执行备份和还原操作。 仅允许此帐户访问备份位置，不要授予对其他位置的访问权限。

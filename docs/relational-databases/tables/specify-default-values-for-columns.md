@@ -14,18 +14,18 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b3ded4415983548402fa5ab955265b40a94f72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f9cf01e13bc1fe278af9d68897a71c99003b37fc
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909874"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200500"
 ---
 # <a name="specify-default-values-for-columns"></a>指定列的默认值
 
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定将在表列中输入的默认值。 可以使用用户界面中的对象资源管理器，或者可以使用用于提交 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的常规控件。
+可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定将在表列中输入的默认值。 可以通过使用用户界面的对象资源管理器或提交 [!INCLUDE[tsql](../../includes/tsql-md.md)] 设置默认值。
 
 如果没有分配默认值到列，并且用户将该列保留为空白，则：
 
@@ -64,7 +64,7 @@ ms.locfileid: "72909874"
    > [!NOTE]
    > 若要输入数值默认值，请输入该数字。 对于对象或函数，请输入其名称。 对于字母数字默认值，请输入该值，两边用单引号引起来。
 
-4. 在“文件”  菜单上，单击“保存”  表格名称  。
+4. 在“文件”菜单上，单击“保存表名称”    。
 
 ## <a name="TsqlProcedure"></a> 使用 Transact-SQL 指定默认值
 

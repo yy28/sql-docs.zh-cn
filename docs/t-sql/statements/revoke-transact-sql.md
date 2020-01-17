@@ -29,19 +29,19 @@ ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ef120c0899a14669d8f7f92f42da72d139599aa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 84271c14e5768728c877b78b63b599d5ef352ecd
+ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982894"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74909031"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   撤消以前授予或拒绝的权限。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -136,11 +136,11 @@ REVOKE
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
  AS principal   
- 使用 AS principal 子句指示将撤销由你以外的主体所授予的权限。 例如，假设用户 Mary 是 principal_id 12，用户 Raul 是主体 15。 Mary 和 Raul 为用户 Steven 授予相同权限。 Sys.database_permissions 表两次指示该权限，但分别具有不同的 grantor_prinicpal_id 值。 Mary 可以使用 `AS RAUL` 子句撤销权限以移除 Raul 授予的权限。
+ 使用 AS principal 子句指示将撤销由你以外的主体所授予的权限。 例如，假设用户 Mary 是 principal_id 12，用户 Raul 是 principal_id 15。 Mary 和 Raul 为用户 Steven 授予相同权限。 Sys.database_permissions 表两次指示该权限，但分别具有不同的 grantor_prinicpal_id 值。 Mary 可以使用 `AS RAUL` 子句撤销权限以移除 Raul 授予的权限。
  
 在此语句中使用 AS 并不意味着能够模拟其他用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  REVOKE 语句的完整语法非常复杂。 上面的语法关系图进行了简化以突出其结构。 本主题后面的[特定于安全对象的语法](#securable)部分中列出的主题介绍了用于撤销特定安全对象的权限的完整语句。  
   
  REVOKE 语句可用于删除已授予的权限，DENY 语句可用于防止主体通过 GRANT 获得特定权限。  
@@ -169,8 +169,8 @@ REVOKE
 |非对称密钥|[REVOKE 非对称密钥权限 (Transact-SQL)](../../t-sql/statements/revoke-asymmetric-key-permissions-transact-sql.md)|  
 |可用性组|[REVOKE 可用性组权限 (Transact-SQL)](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
 |证书|[REVOKE 证书权限 (Transact-SQL)](../../t-sql/statements/revoke-certificate-permissions-transact-sql.md)|  
-|约定|[REVOKE Service Broker 权限 (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|“数据库”|[REVOKE 数据库权限 (Transact-SQL)](../../t-sql/statements/revoke-database-permissions-transact-sql.md)|  
+|合约|[REVOKE Service Broker 权限 (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|数据库|[REVOKE 数据库权限 (Transact-SQL)](../../t-sql/statements/revoke-database-permissions-transact-sql.md)|  
 |端点|[REVOKE 终结点权限 (Transact-SQL)](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)|  
 |数据库作用域凭据|[REVOKE 数据库作用域凭据 (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
 |全文目录|[REVOKE 全文权限 (Transact-SQL)](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
@@ -185,7 +185,7 @@ REVOKE
 |路由|[REVOKE Service Broker 权限 (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |架构|[REVOKE 架构权限 (Transact-SQL)](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
 |搜索属性列表|[REVOKE 搜索属性列表权限 (Transact-SQL)](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
-|“服务器”|[REVOKE 服务器权限 (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
+|服务器|[REVOKE 服务器权限 (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
 |服务|[REVOKE Service Broker 权限 (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |存储过程|[REVOKE 对象权限 (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |对称密钥|[REVOKE 对称密钥权限 (Transact-SQL)](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
@@ -194,7 +194,7 @@ REVOKE
 |表|[REVOKE 对象权限 (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |类型|[REVOKE 类型权限 (Transact-SQL)](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
 |用户|[REVOKE 数据库主体权限 (Transact-SQL)](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|“查看”|[REVOKE 对象权限 (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|查看|[REVOKE 对象权限 (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |XML 架构集合|[REVOKE XML 架构集合权限 (Transact-SQL)](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -1,6 +1,7 @@
 ---
-title: 为合并项目实现自定义冲突解决程序 | Microsoft Docs
-ms.custom: ''
+title: 实现自定义冲突解决程序（合并）
+description: 了解如何在 SQL Server 中为合并发布实现自定义冲突解决程序。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905116"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322154"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>为合并项目实现自定义冲突解决程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "72905116"
   
 1.  在发布服务器的发布数据库或 **msdb** 数据库中，创建用于实现以下所需参数的新系统存储过程：  
   
-    |参数|数据类型|描述|  
+    |参数|数据类型|说明|  
     |---------------|---------------|-----------------|  
     |**\@tableowner**|**sysname**|冲突被解决的表的所有者名称。 这是发布数据库中的表的所有者。|  
     |**\@tablename**|**sysname**|冲突被解决的表的名称。|  
@@ -63,14 +64,14 @@ ms.locfileid: "72905116"
 #### <a name="use-a-custom-conflict-resolver-with-a-new-table-article"></a>将自定义冲突解决程序用于新的表项目  
   
 1. 执行 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 来定义项目。 
-1. 为 \@article_resolver  参数指定 Microsoft SQL  Server 存储过程冲突解决程序  值。 
+1. 为 \@article_resolver 参数指定 Microsoft SQL Server 存储过程冲突解决程序值    。 
 1. 为 \@resolver_info  参数指定用于实现冲突解决程序逻辑的存储过程的名称。 
 
    有关详细信息，请参阅[定义项目](../../relational-databases/replication/publish/define-an-article.md)。
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>将自定义冲突解决程序用于现有表项目  
   
-1.  执行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 \@publication  和 \@article  ，将 \@property  的值指定为 article_resolver  ，将 \@value  的值指定为 MicrosoftSQL Server Stored ProcedureResolver   r。  
+1.  执行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 \@publication 和 \@article，将 \@property 的值指定为 article_resolver，将 \@value 的值指定为 MicrosoftSQL Server Stored ProcedureResolver        。  
   
 2.  执行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 \@publication  、\@article  并指定 \@property  的值为 resolver_info  ，同时为 \@value  指定用于实现冲突解决程序逻辑的存储过程的名称。  
   

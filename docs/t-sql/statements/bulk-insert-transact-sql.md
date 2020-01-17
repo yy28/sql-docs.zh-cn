@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c48c045b65b554533a8824ec0ea967ed8fae884
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 6b6534e887f890700b69a11b4515d4cf1af4d86a
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252009"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249848"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "72252009"
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中以用户指定的格式将数据文件导入到数据库表或视图中
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法
 
@@ -87,7 +87,7 @@ schema_name 是表或视图架构的名称  。 如果用户执行批量导入�
 
 table_name 是要将数据批量导入其中的表或视图的名称  。 只能使用所有列均引用相同基表的视图。 有关将数据加载到视图中的限制的详细信息，请参阅 [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。
 
-data_file 是数据文件的完整路径，该数据文件包含要导入到指定表或视图中的数据    。 使用 BULK INSERT 可以从磁盘或 Azure Blob 存储（包括网络、软盘、硬盘等）导入数据。
+' data_file ' 是数据文件的完整路径，该数据文件包含要导入到指定表或视图的数据    。 使用 BULK INSERT 可以从磁盘或 Azure Blob 存储（包括网络、软盘、硬盘等）导入数据。
 
 *data_file* 必须基于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器指定一个有效路径。 如果 *data_file* 为远程文件，则指定通用命名约定 (UNC) 名称。 UNC 名称采用以下格式：\\\\*系统名称*\\*共享名称*\\*路径*\\*文件名*。 例如：
 
@@ -96,14 +96,14 @@ BULK INSERT Sales.Orders
 FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
-**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 和 Azure SQL 数据库。
+**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 和 Azure SQL 数据库。
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，data_file 可位于 Azure Blob 存储中。 在这种情况下，需要指定 data_source_name 选项  。 有关示例，请参阅[从 Azure Blob 存储中的文件导入数据](#f-importing-data-from-a-file-in-azure-blob-storage)。
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取内容。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
-data_source_name
-适用范围     ：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 和 Azure SQL 数据库。
+' data_source_name '
+ 适用对象：     ：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 和 Azure SQL 数据库。
 命名的外部数据源，指向将导入文件的 Azure Blob 存储位置。 外部数据源必须使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中添加的 `TYPE = BLOB_STORAGE` 选项创建。 有关详细信息，请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。 有关示例，请参阅[从 Azure Blob 存储中的文件导入数据](#f-importing-data-from-a-file-in-azure-blob-storage)。
 
 BATCHSIZE =batch_size 指定批中的行数   。 每个批处理作为一个事务复制到服务器。 如果复制操作失败，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将提交或回滚每个批处理的事务。 默认情况下，指定数据文件中的所有数据为一个批处理。 有关性能注意事项的信息，请参阅本主题后面的“备注”。
@@ -128,7 +128,7 @@ CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } 指定数据文件中数据�
 > [!NOTE]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议在[格式化文件](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)中为每个列指定一个排序规则名称。
 
-|CODEPAGE 值|描述|
+|CODEPAGE 值|说明|
 |--------------------|-----------------|
 |ACP|数据类型为 **char**、**varchar** 或 **text** 的列从 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|
 |OEM（默认值）|数据类型为 **char**、**varchar** 或 **text** 的列从系统 OEM 代码页转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|
@@ -151,7 +151,7 @@ DATAFILETYPE = { 'char''native' | 'widechar' | 'widenative' } 指定 BULK INSERT
 ERRORFILE ='file_name' 指定用于收集格式有误且不能转换为 OLE DB 行集的行的文件    。 这些行将按原样从数据文件复制到此错误文件中。
 
 错误文件是执行命令时创建的。 如果该文件已经存在，则会发生错误。 此外，还创建了一个扩展名为 .ERROR.txt 的控制文件。 此文件引用错误文件中的每一行并提供错误诊断。 纠正错误后即可加载数据。
-**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
+**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，`error_file_path` 可位于 Azure Blob 存储中。
 
 'errorfile_data_source_name' 适用范围  ：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
@@ -175,11 +175,11 @@ KEEPIDENTITY 指定导入数据文件中的标识值用于标识列。 如果没
 
 KEEPNULLS 指定空列在批量导入操作期间应保留 Null 值，而不插入列的任何默认值。 有关详细信息，请参阅[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。
 
-KILOBYTES_PER_BATCH = kilobytes_per_batch 将每个批中数据的近似千字节数 (KB) 指定为 kilobytes_per_batch    。 默认情况下，KILOBYTES_PER_BATCH 是未知的。 有关性能注意事项的信息，请参阅本主题后面的“备注”。
+KILOBYTES_PER_BATCH = kilobytes_per_batch 将每个批处理中数据的近似千字节数 (KB) 指定为 kilobytes_per_batch    。 默认情况下，KILOBYTES_PER_BATCH 是未知的。 有关性能注意事项的信息，请参阅本主题后面的“备注”。
 
-LASTROW =  last_row  指定要加载的最后一行的行号。 默认值为 0，表示指定数据文件中的最后一行。
+LASTROW = last_row 指定要加载的最后一行的行号 __ 。 默认值为 0，表示指定数据文件中的最后一行。
 
-MAXERRORS = max_errors 指定允许在数据中出现的最大语法错误数，超过该数量后将取消批量导入操作   。 大容量导入操作无法导入的每一行都将被忽略并且计为一个错误。 如果未指定 *max_errors*，则默认值为 10。
+MAXERRORS = max_errors 指定允许在数据中出现的最大语法错误数，超过该数量后将取消大容量导入操作   。 大容量导入操作无法导入的每一行都将被忽略并且计为一个错误。 如果未指定 *max_errors*，则默认值为 10。
 
 > [!NOTE]
 > MAX_ERRORS 选项不适用于约束检查，也不适用于转换 **money** 和 **bigint** 数据类型。
@@ -217,7 +217,7 @@ FORMATFILE = 'format_file_path' 指定格式化文件的完整路径   。 描�
 - 列分隔符不同。
 - 数据格式有其他更改。 格式化文件通常使用 **bcp** 实用工具创建，并可根据需要使用文本编辑器修改。 有关详细信息，请参阅 [bcp 实用工具](../../tools/bcp-utility.md)和[创建格式化文件](../../relational-databases/import-export/create-a-format-file-sql-server.md)。
 
-**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 和 Azure SQL 数据库。
+**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 和 Azure SQL 数据库。
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，format_file_path 可位于 Azure Blob 存储中。
 
 FIELDTERMINATOR ='field_terminator' 指定要用于 char 和 widechar 数据文件的字段终止符      。 默认字段终止符为 \t（制表符）。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。
@@ -278,7 +278,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 ```
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取数据，但可以从 Azure Blob 存储读取数据。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>用于大容量导出或导入 SQLXML 文档的数据类型
 
@@ -322,7 +322,7 @@ BULK INSERT 语句可在用户定义的事务内执行，以便将数据导入�
 
 使用 Azure SQL 数据库，如果要导入大量数据，请考虑在导入之前暂时提高数据库或实例的性能级别。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 ### <a name="security-account-delegation-impersonation"></a>安全帐户委托（模拟）
 
@@ -369,7 +369,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取内容。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 ### <a name="b-using-the-fire_triggers-argument"></a>B. 使用 FIRE_TRIGGER 参数
 
@@ -387,7 +387,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取内容。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. 使用换行符作为行终止符
 
@@ -405,7 +405,7 @@ EXEC(@bulk_cmd);
 > 由于 Microsoft Windows 处理文本文件的方式，（ **\n** 自动替换为 **\r\n**）。
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取内容。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 ### <a name="d-specifying-a-code-page"></a>D. 指定代码页
 
@@ -422,7 +422,7 @@ WITH
 ```
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取内容。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. 从 CSV 文件导入数据
 
@@ -439,7 +439,7 @@ WITH (FORMAT = 'CSV'
 ```
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取内容。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. 从 Azure Blob 存储中的文件导入数据
 
@@ -470,7 +470,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
 > [!IMPORTANT]
-> Azure SQL 数据库不支持从 Windows 文件读取内容。
+> Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. 从 Azure Blob 存储中的文件导入数据并指定错误文件
 

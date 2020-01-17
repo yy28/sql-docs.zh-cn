@@ -1,7 +1,7 @@
 ---
 title: 重新编译存储过程 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/28/2019
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 115516dec13c971d774d0848cf39f847f6db0d6c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909004"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564794"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新编译存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,69 +67,52 @@ ms.locfileid: "72909004"
  需要具有对指定过程的 ALTER 权限。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>使用 WITH RECOMPILE 选项重新编译存储过程  
-  
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
-  
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
-  
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建过程定义。  
 
-```  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
-    DROP PROCEDURE dbo.uspProductByVendor;  
-GO  
-CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
-WITH RECOMPILE  
-AS  
-    SET NOCOUNT ON;  
-    SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
-    FROM Purchasing.Vendor AS v   
-    JOIN Purchasing.ProductVendor AS pv   
-      ON v.BusinessEntityID = pv.BusinessEntityID   
-    JOIN Production.Product AS p   
-      ON pv.ProductID = p.ProductID  
-    WHERE v.Name LIKE @Name;  
+1. 连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-```  
+1. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>使用 WITH RECOMPILE 选项重新编译存储过程  
+1. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建过程定义。  
+
+   ```sql
+   USE AdventureWorks2012;  
+   GO  
+   IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
+       DROP PROCEDURE dbo.uspProductByVendor;  
+   GO  
+   CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
+   WITH RECOMPILE  
+   AS  
+       SET NOCOUNT ON;  
+       SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
+       FROM Purchasing.Vendor AS v   
+       JOIN Purchasing.ProductVendor AS pv   
+         ON v.BusinessEntityID = pv.BusinessEntityID   
+       JOIN Production.Product AS p   
+         ON pv.ProductID = p.ProductID  
+       WHERE v.Name LIKE @Name;  
+   ```  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>使用 WITH RECOMPILE 选项重新编译存储过程   
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
-  
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建一个简单过程，该过程将从视图中返回所有雇员（提供姓和名）、职务以及部门名称。  
-  
-     然后，将第二个代码示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 此操作将执行该过程，并重新编译过程的查询计划。  
-  
-```sql  
-USE AdventureWorks2012;  
-GO  
-EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
-GO  
-  
-```  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>使用 sp_recompile 重新编译存储过程  
-  
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
-  
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
-  
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建一个简单过程，该过程将从视图中返回所有雇员（提供姓和名）、职务以及部门名称。  
-  
-     然后，将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 这将不执行过程，但将该过程标记为重新编译，以便在下次执行该过程时更新其查询计划。  
+选择“新建查询”，将以下代码示例复制粘贴到查询窗口，然后单击“执行”   。 此操作将执行该过程，并重新编译过程的查询计划。  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
-GO  
+EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
+GO
+```  
   
+### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>使用 sp_recompile 重新编译存储过程  
+
+选择“新建查询”，将以下示例复制粘贴到查询窗口，然后单击“执行”   。 这将不执行过程，但将该过程标记为重新编译，以便在下次执行该过程时更新其查询计划。  
+
+```sql  
+USE AdventureWorks2012;  
+GO  
+EXEC sp_recompile N'dbo.uspProductByVendor';   
+GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  

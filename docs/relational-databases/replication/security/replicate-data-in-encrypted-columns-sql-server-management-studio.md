@@ -1,6 +1,7 @@
 ---
-title: 复制加密列中的数据 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 复制加密列 (SSMS)
+description: 了解如何使用 SQL Server Management Studio (SSMS) 复制加密列中的数据。
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: cbaf7db0d5c0e4588f22d0048c96e1f7c88d87b0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 740c66805b7f1e204604f3747882faa843e638b4
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907438"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321644"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>复制加密列中的数据 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "72907438"
   
 6.  订阅发布。 有关详细信息，请参阅[创建请求订阅](../../../relational-databases/replication/create-a-pull-subscription.md)或[创建推送订阅](../../../relational-databases/replication/create-a-push-subscription.md)。  
   
-7.  初始化订阅。 有关详细信息，请参阅 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+7.  初始化订阅。 有关详细信息，请参阅 [创建并应用初始快照](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
 8.  在订阅服务器上，使用与步骤 1 中相同的 ALGORITHM、KEY_SOURCE 和 IDENTITY_VALUE 值执行 [CREATE SYMMETRIC KEY](../../../t-sql/statements/create-symmetric-key-transact-sql.md) 。 您可以为 ENCRYPTION BY 指定不同的值。  
   

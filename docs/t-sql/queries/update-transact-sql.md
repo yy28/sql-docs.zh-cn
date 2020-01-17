@@ -1,7 +1,7 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -38,23 +38,23 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b856ee0218f7b4909ad9c62a42b95dfd96c93abc
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: a7bf485ec7f6295ed3ee0f9ca04e3f088e5d9cb5
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68317099"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687379"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中更改表或视图中的现有数据。 有关示例，请参阅[示例](#UpdateExamples)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
-```sql  
+```  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -120,7 +120,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  公用表表达式还可与 SELECT、INSERT、DELETE 和 CREATE VIEW 等语句一起使用。 有关详细信息，请参阅 [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- TOP **(** _expression_ **)** [ PERCENT ]  
+ TOP ( expression) [ PERCENT ]     
  指定更新的行数或行数百分比。 *expression* 可以是行数或行的百分比。  
   
  与 INSERT、UPDATE 或 DELETE 一起使用的 TOP 表达式中被引用行将不按任何顺序排列。  
@@ -145,7 +145,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  rowset_function_limited   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数，视提供程序的功能而定。  
   
- WITH ( \<Table_Hint_Limited> )    
+ WITH **(** \<Table_Hint_Limited> **)**  
  指定目标表允许的一个或多个表提示。 需要有 WITH 关键字和括号。 不允许 NOLOCK 和 READUNCOMMITTED。 有关表提示的信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  @table_variable   
@@ -191,11 +191,11 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  expression 是复制到 column_name 的值   。 expression 的计算结果必须为 column_name 类型或者 expression 必须能够隐式强制转换为此类型   。 如果 expression 设置为 NULL，则忽略 @Length，并将 column_name 中的值按指定的 @Offset 截断     。  
   
- @Offset 是 column_name 值中的起点，从该点开始编写 expression    。 @Offset 是基于零的序号位置，数据类型为 bigint，不能为负数   。 如果 @Offset 为 NULL，则更新操作将在现有 column_name 值的结尾追加 expression，并忽略 @Length     。 如果 @Offset 大于 column_name 值的长度，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将返回错误  。 如果 @Offset 加上 @Length 超出了列中基础值的限度，则将删除到值的最后一个字符   。 如果 @Offset 加上 LEN(expression) 大于声明的基础大小，则将出现错误   。  
+ @Offset 是存储在 column_name 中的值的起点，从该点开始编写 expression    。 @Offset 是从 0 开始的序号字节位置，数据类型为 bigint，不能为负数   。 如果 @Offset 为 NULL，则更新操作将在现有 column_name 值的结尾追加 expression，并忽略 @Length     。 如果 @Offset 大于 column_name 值的字节长度，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将返回错误   。 如果 @Offset 加上 @Length 超出了列中基础值的限度，则将删除到值的最后一个字符   。  
   
  @Length 是指列中某个部分的长度，从 @Offset 开始，该长度由 expression 替换    。 @Length 是 bigint 并且不能为负数   。 如果 @Length 为 NULL，则更新操作将删除从 @Offset 到 column_name 值的结尾的所有数据    。  
   
- 有关详细信息，请参阅“备注”。  
+ 有关详细信息，请参阅[更新大值数据类型](#updating-lobs)。  
   
  @ variable    
  已声明的变量，该变量将设置为 expression 所返回的值  。  
@@ -242,8 +242,8 @@ cursor_variable_name
 OPTION ( \<query_hint> [ ,... n ] )      
  指定优化器提示用于自定义[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理语句的方式。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
-## <a name="best-practices"></a>最佳实践  
- 使用 @@ROWCOUNT 函数返回插入到客户端应用程序的行数。 有关详细信息，请参阅 [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)。  
+## <a name="best-practices"></a>最佳做法  
+ 使用 `@@ROWCOUNT` 函数返回插入到客户端应用程序的行数。 有关详细信息，请参阅 [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)。  
   
  可以在 UPDATE 语句中使用变量名称来显示受影响的旧值和新值，但仅当 UPDATE 语句影响单个记录时才应使用变量名称。 如果 UPDATE 语句影响多个记录，若要返回每个记录的旧值和新值，请使用 [OUTPUT 子句](../../t-sql/queries/output-clause-transact-sql.md)。  
   
@@ -277,7 +277,7 @@ SELECT ColA, ColB
 FROM dbo.Table2;  
 ```  
   
- 当结合使用 FROM 和 WHERE CURRENT OF 子句时，可能发生同样的问题。 在以下示例中，`Table2` 中的全部两行都满足 `FROM` 语句中 `UPDATE` 子句的限定条件。 将使用 `Table2` 的哪一行来更新 `Table1` 中的行是不明确的。  
+ 当结合使用 `FROM` 和 `WHERE CURRENT OF` 子句时，可能发生同样的问题。 在以下示例中，`Table2` 中的全部两行都满足 `FROM` 语句中 `UPDATE` 子句的限定条件。 将使用 `Table2` 的哪一行来更新 `Table1` 中的行是不明确的。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -329,8 +329,10 @@ GO
 > [!IMPORTANT]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 ntext、text 和 image 数据类型    。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
-### <a name="updating-large-value-data-types"></a>更新大值数据类型  
- 使用 .WRITE (expression,@Offset,@Length) 子句执行 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型的部分或完整更新            。 例如，对 varchar(max) 列的部分更新可能只删除或修改该列的前 200 个字符，而完整更新则删除或修改该列中的所有数据  。 如果将数据库恢复模式设置为大容量日志模式或简单模式，则对插入或追加新数据的 .WRITE 更新进行最小日志记录  。 在更新现有值时，不使用最小日志记录。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+### <a name="updating-lobs"></a> 更新大值数据类型  
+ 使用 .WRITE (expression,@Offset,@Length) 子句执行 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型的部分或完整更新            。 
+ 
+ 例如，对 varchar(max) 列的部分更新可能只删除或修改该列的前 200 个字节（如果使用的是 ASCII 字符，则为前 200 个字符），而完整更新则删除或修改该列中的所有数据  。 如果将数据库恢复模式设置为大容量日志模式或简单模式，则对插入或追加新数据的 .WRITE 更新进行最小日志记录  。 在更新现有值时，不使用最小日志记录。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
  当 UPDATE 语句导致下列任一操作时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]便会将部分更新转换为完整更新：  
 -   更改分区视图或表的键列。  
@@ -338,7 +340,7 @@ GO
   
 不能使用 .WRITE 子句更新 NULL 列或将 column_name 的值设置为 NULL   。  
   
-对于 varbinary 和 varchar 数据类型，以字节为单位指定 @Offset 和 @Length；对于 nvarchar 数据类型，则以字符为单位进行指定      。 已针对双字节字符集 (DBCS) 排序规则计算了适当的偏移量。  
+对于 varbinary 和 varchar 数据类型，以字节为单位指定 @Offset 和 @Length；对于 nvarchar 数据类型，则以字节对为单位进行指定      。 有关字符串数据类型长度的详细信息，请参阅 [char 和 varchar (Transact-SQL)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 以及 [nchar 和 nvarchar (Transact-SQL)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)。
   
 为了获得最佳性能，建议按照块区大小为 8040 字节倍数的方式插入或更新数据。  
   
@@ -366,7 +368,7 @@ GO
     ```  
   
     > [!NOTE]  
-    >  如果对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Null 值调用赋值函数方法，或者赋值函数方法产生的新值为 Null，则 [!INCLUDE[tsql](../../includes/tsql-md.md)] 将返回错误。  
+    > 如果对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Null 值调用赋值函数方法，或者赋值函数方法产生的新值为 Null，则 [!INCLUDE[tsql](../../includes/tsql-md.md)] 将返回错误。  
   
 -   修改用户定义类型的已注册属性或公共数据成员的值。 提供值的表达式必须可隐式转换为属性的类型。 以下示例修改用户定义类型 `X` 的属性 `Point` 的值。  
   
@@ -381,7 +383,7 @@ GO
 ### <a name="updating-filestream-data"></a>更新 FILESTREAM 数据  
  您可以使用 UPDATE 语句将 FILESTREAM 字段更新为 null 值、空值或相对较小的内联数据量。 但是，使用 Win32 接口可以更有效地将大量数据以流的方式导入到文件中。 更新 FILESTREAM 字段时，即会修改文件系统中的基础 BLOB 数据。 将 FILESTREAM 字段设置为 NULL 即会删除与该字段相关联的 BLOB 数据。 不能使用 .WRITE(), 执行对 FILESTREAM 数据的部分更新。 有关详细信息，请参阅 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)。  
   
-## <a name="error-handling"></a>错误处理  
+## <a name="error-handling"></a>错误处理。  
  如果对行的更新违反了某个约束或规则，或违反了对列的 NULL 设置，或者新值是不兼容的数据类型，则取消该语句、返回错误并且不更新任何记录。  
   
  当 UPDATE 语句在表达式求值过程中遇到算术错误（溢出、被零除或域错误）时，则不进行更新。 批处理的剩余部分不再执行，并且返回错误消息。  
@@ -391,10 +393,10 @@ GO
 ## <a name="interoperability"></a>互操作性  
  仅当所修改的表是表变量时，才允许在用户定义函数的主体中使用 UPDATE 语句。  
   
- 当对表的 UPDATE 操作定义 INSTEAD OF 触发器时，将运行触发器而不运行 UPDATE 语句。 早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支持对 UPDATE 和其他数据修改语句定义 AFTER 触发器。 不能在直接或间接引用定义有 INSTEAD OF 触发器的视图的 UPDATE 语句中指定 FROM 子句。 有关 INSTEAD OF 触发器的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ 当对表的 UPDATE 操作定义 `INSTEAD OF` 触发器时，将运行触发器而不运行 UPDATE 语句。 早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支持对 UPDATE 和其他数据修改语句定义 AFTER 触发器。 不能在直接或间接引用定义有 `INSTEAD OF` 触发器的视图的 UPDATE 语句中指定 FROM 子句。 有关 INSTEAD OF 触发器的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
- 不能在直接或间接引用定义有 INSTEAD OF 触发器的视图的 UPDATE 语句中指定 FROM 子句。 有关 INSTEAD OF 触发器的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ 不能在直接或间接引用定义有 `INSTEAD OF` 触发器的视图的 UPDATE 语句中指定 FROM 子句。 有关 `INSTEAD OF` 触发器的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
  在公用表表达式 (CTE) 是 UPDATE 语句的目标时，在该语句中对 CTE 的所有引用都必须匹配。 例如，如果在 FROM 子句中向 CTE 分配了一个别名，则该别名必须用于对 CTE 的所有其他引用。 需要明确的 CTE 引用，因为 CTE 没有对象 ID，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用对象 ID 来识别对象与其别名之间的隐式关系。 如果没有这一关系，查询计划可能会产生意外的联接行为和意外的查询结果。 以下示例演示在 CTE 是更新操作的目标对象时指定 CTE 的正确和不正确的方法。  
   
@@ -427,6 +429,7 @@ GO
 ```  
 
 使用不正确匹配的 CTE 引用的 UPDATE 语句。  
+
 ```sql  
 USE tempdb;  
 GO  
@@ -460,12 +463,12 @@ ID     Value
 ## <a name="logging-behavior"></a>日志记录行为  
  UPDATE 语句将记入日志；但是，对使用 .WRITE 子句对较大值数据类型的部分更新进行最小日志记录  。 有关详细信息，请参阅上一节“数据类型”中的“更新大值数据类型”。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 要求对目标表具有 UPDATE 权限。 如果 UPDATE 语句包含 WHERE 子句，或 SET 子句中的 expression 使用了表中的某个列，则还要求要更新的表具有 SELECT 权限  。  
+ 要求对目标表具有 `UPDATE` 权限。 如果 UPDATE 语句包含 WHERE 子句，或者 SET 子句中的 expression 使用了表中的某个列，则还要求对要更新的表具有 `SELECT` 权限  。  
   
- UPDATE 权限默认授予 sysadmin 固定服务器角色的成员、db_owner 和 db_datawriter 固定数据库角色的成员以及表的所有者    。 sysadmin、db_owner 和 db_securityadmin 角色的成员和表所有者可以将权限传输给其他用户    。  
+ UPDATE 权限默认授予 `sysadmin` 固定服务器角色、`db_owner` 和 `db_datawriter` 固定数据库角色的成员以及表所有者。 `sysadmin`、`db_owner` 和 `db_securityadmin` 角色的成员以及表所有者可以将权限转让给其他用户。  
   
 ##  <a name="UpdateExamples"></a> 示例  
   
@@ -483,7 +486,7 @@ ID     Value
 |[捕获 UPDATE 语句的结果](#CaptureResults)|OUTPUT 子句|  
 |[在其他语句中使用 UPDATE](#Other)|存储过程 • TRY…CATCH|  
   
-###  <a name="BasicSyntax"></a> 基本语法  
+###  <a name="BasicSyntax"></a>基本语法  
  本节中的示例说明了使用最低要求的语法的 UPDATE 语句的基本功能。  
   
 #### <a name="a-using-a-simple-update-statement"></a>A. 使用简单 UPDATE 语句  
@@ -544,7 +547,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-#### <a name="e-using-the-with-commontableexpression-clause"></a>E. 使用 WITH common_table_expression 子句  
+#### <a name="e-using-the-with-common_table_expression-clause"></a>E. 使用 WITH common_table_expression 子句  
  以下示例为直接或间接用于创建 `PerAssemblyQty` 的所有部件和组件更新 `ProductAssemblyID 800` 值。 公用表表达式将返回用于直接生成 `ProductAssemblyID 800` 的部件和用于生成这些组件的部件等的层次结构列表。 只修改公用表表达式所返回的行。  
   
 ```sql  
@@ -953,7 +956,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-#### <a name="z-specifying-a-query-hint"></a>Z. 指定查询提示  
+#### <a name="z-specifying-a-query-hint"></a>的授权请求。 指定查询提示  
  以下示例在 UPDATE 语句中指定[查询提示](../../t-sql/queries/hints-transact-sql-query.md)`OPTIMIZE FOR (@variable)`。 此提示指示查询优化器在编译和优化查询时对局部变量使用特定值。 仅在查询优化期间使用该值，在查询执行期间不使用该值。  
   
 ```sql  
@@ -1221,5 +1224,6 @@ DROP TABLE CTAS_acs
  [文本与图像函数 (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)  
-  
-  
+ [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [单字节和多字节字符集](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  
+ 

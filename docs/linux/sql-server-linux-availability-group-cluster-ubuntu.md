@@ -1,7 +1,8 @@
 ---
-title: 为 SQL Server 可用性组配置 Ubuntu 群集
-titleSuffix: SQL Server
-description: 了解如何为 Ubuntu 创建可用性组群集
+title: 为可用性组配置 Ubuntu 群集
+titleSuffix: SQL Server on Linux
+description: 了解如何在 Ubuntu 上创建三节点群集，以及如何将先前创建的可用性组资源添加到该群集。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 85391418d74ac81b0857e705c1dc250add1143b4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8dd55f8cb9546c7ec91632d40d2eb6b46ffd4d90
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027308"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558482"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>配置 Ubuntu 群集和可用性组资源
 
@@ -42,8 +43,10 @@ ms.locfileid: "68027308"
 
    >[!IMPORTANT]
    >生产环境需要 STONITH 等隔离代理，以实现高可用性。 本文档中的演示不使用隔离代理。 演示仅用于测试和验证目的。 
-   
-   >Linux 群集使用隔离将群集恢复到已知状态。 配置隔离的方式取决于分发版和环境。 目前，隔离在某些云环境中不可用。 有关详细信息，请参阅 [RHEL 高可用性群集的支持策略 - 虚拟化平台](https://access.redhat.com/articles/29440)。
+   >
+   >Linux 群集使用隔离将群集返回到某个已知状态。 配置隔离的方式取决于分发版和环境。 目前，隔离在某些云环境中不可用。 有关详细信息，请参阅 [RHEL 高可用性群集的支持策略 - 虚拟化平台](https://access.redhat.com/articles/29440)。
+   >
+   >通常在操作系统上实现隔离，并取决于环境。 在操作系统分销商文档中查找有关隔离的说明。
 
 5.  [将可用性组添加为群集中的资源](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource)。 
 
@@ -143,7 +146,7 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->禁用 STONITH 仅出于测试目的。 如果计划在生产环境中使用 Pacemaker，则应根据环境来计划 STONITH 实现，并使其处于启用状态。 请注意，目前不对任何云环境（包括 Azure）或 Hyper-V 提供隔离代理。 因此，群集供应商不支持在这些环境中运行生产群集。 
+>禁用 STONITH 仅出于测试目的。 如果计划在生产环境中使用 Pacemaker，则应根据环境来计划 STONITH 实现，并使其处于启用状态。 有关针对任何特定分发隔离代理的详细信息，请与操作系统供应商联系。 
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>设置群集属性 cluster-recheck-interval
 
@@ -203,7 +206,7 @@ sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 
 Pacemaker 中不存在等效的虚拟服务器名称。 若要使用指向字符串服务器名称的连接字符串，而不是使用 IP 地址，请在 DNS 中注册 IP 资源地址和所需的虚拟服务器名称。 对于 DR 配置，请在主站点和 DR 站点上使用 DNS 服务器注册所需的虚拟服务器名称和 IP 地址。
 
-## <a name="add-colocation-constraint"></a>添加主机托管约束
+## <a name="add-colocation-constraint"></a>加主机托管约束
 
 Pacemaker 群集中的几乎所有决策（例如，选择资源运行的位置）都通过比较分数来完成。 分数按资源计算，群集资源管理器选择特定资源分数最高的节点。 （如果节点的某一资源分数为负，则该资源无法在此节点上运行。）使用约束来配置群集的决策。 约束具有一个分数。 如果约束的分数低于 INFINITY，则它仅作为建议项。 分数为 INFINITY 则表明它是必需项。 若要确保主要副本和虚拟 IP 资源位于同一主机上，请定义一个分数为 INFINITY 的主机托管约束。 若要添加主机托管约束，请在一个节点上运行以下命令。 
 

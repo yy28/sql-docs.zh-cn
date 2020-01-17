@@ -1,7 +1,7 @@
 ---
-title: 执行可用性组的强制手动故障转移
+title: 对可用性组强制执行手动故障转移
 description: 本主题介绍如何使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio 对 Always On 可用性组执行强制故障转移（可能会丢失数据）。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 167070809d552a40d57761b533fc7954fec76dc1
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: 8ff0280b7a3a071a87feb029e6e906eaeace8a2d
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388357"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822537"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>执行 Always On 可用性组的强制手动故障转移 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68388357"
     > [!NOTE]  
     >  对跨数据库和分布式事务的支持因 SQL Server 和操作系统版本而异。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
   
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a>先决条件  
   
 -   WSFC 群集具有仲裁。 如果群集缺乏仲裁，请参阅 [通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "68388357"
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>跟进：强制故障转移后的重要任务  
+##  <a name="FollowUp"></a> 跟进：强制故障转移后的重要任务  
   
 1.  执行强制故障转移之后，故障转移到的辅助副本将变成新的主副本。 但是，要使客户端可访问可用性副本，您可能需要重新配置 WSFC 仲裁或调整可用性组的可用性模式配置，如下所示：  
   
@@ -266,7 +266,7 @@ ms.locfileid: "68388357"
 ###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  下图说明了为响应在主数据中心发生的灾难性故障而在远程数据中心执行的一系列操作。  
   
- ![主数据中心故障响应步骤](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Steps for responding to failure of main data center")  
+ ![主数据中心故障响应步骤](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "主数据中心故障响应步骤")  
   
  在此图中的步骤说明以下步骤：  
   

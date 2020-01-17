@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44c8739327d84999456302bf2a21fd6858658d4c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 1cb9ca9739ca6f50a2424d9d68ee66263edf08f3
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71293998"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542300"
 ---
 # <a name="script-task"></a>脚本任务
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  脚本任务提供代码来执行内置任务中没有的函数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的转换。 脚本任务还可将函数组合到一个脚本中，而不必使用多个任务和转换。 脚本任务用于执行必须在包中一次完成（或每个枚举对象一次完成）、而不是每个数据行一次完成的工作。  
+  脚本任务提供代码来执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 内置任务和转换中不可用的函数。 脚本任务还可将函数组合到一个脚本中，而不必使用多个任务和转换。 脚本任务用于执行必须在包中一次完成（或每个枚举对象一次完成）、而不是每个数据行一次完成的工作。  
   
  可以将脚本任务用于下列目的：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71293998"
   
  VSTA 提供 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 环境的所有标准功能，如具有颜色编码的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 编辑器、IntelliSense 和“对象资源管理器”  。 VSTA 还可以使用与其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 开发工具使用的调试器。 脚本中的断点与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任务和容器上的断点可以无缝集合。 VSTA 支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 编程语言。  
   
- 若要运行脚本，运行包的计算机上必须安装有 VSTA。 运行包时，任务将加载脚本引擎并运行脚本。 可以通过向项目中的程序集添加引用的方式来访问脚本中的外部 .NET 程序集。  
+ 若要运行脚本，运行包的计算机上必须安装有 VSTA。 运行包时，任务将加载脚本引擎并运行脚本。 可以通过向项目中的程序集添加引用的方式来访问脚本中的外部 .NET 程序集。 目前，我们不支持 .NET Core 和 .NET 标准程序集引用。  
   
 > [!NOTE]  
 >  在早期版本中您可以指示是否对脚本进行预编译，而在 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 和更高版本中，不同的是，所有脚本都要预编译。 脚本进行预编译后，运行时将不加载语言引擎，因此包运行得更快。 但是，预编译二进制文件占用了大量的磁盘空间。  
@@ -72,7 +72,7 @@ ms.locfileid: "71293998"
 ### <a name="configuring-the-script-task-in-the-designer"></a>在设计器中配置脚本任务  
  下表描述可以为脚本任务进行记录的 **ScriptTaskLogEntry** 事件。 在 **“配置 SSIS 日志”** 对话框的 **“详细信息”** 选项卡上选择 **ScriptTaskLogEntry** 事件，以便进行日志记录。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|描述|  
+|日志项|说明|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|报告在脚本中实现日志记录的结果。 该任务在每次调用 **Log** 对象的 **Dts** 方法时都编写一个日志条目。 然后，在运行代码时编写这些条目。 有关详细信息，请参阅 [Logging in the Script Task](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)。|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "71293998"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入脚本任务的说明。  
   
 ## <a name="script-task-editor-script-page"></a>脚本任务编辑器（“脚本”页）
@@ -125,7 +125,7 @@ ms.locfileid: "71293998"
  若要设置脚本任务的默认脚本语言，请使用 **“选项”** 对话框的 **“常规”** 页上的 **“脚本语言”** 选项。 有关详细信息，请参阅 [General Page](../../integration-services/control-flow/script-task-editor-general-page.md)。  
   
  **EntryPoint**  
- 指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时作为脚本任务代码入口点调用的方法。 指定的方法必须在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 的 ScriptMain 类中。ScriptMain 类是脚本模板生成的默认类。  
+ 指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时作为脚本任务代码入口点调用的方法。 指定的方法必须在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 项目的 ScriptMain 类中。ScriptMain 类是脚本模板生成的默认类。  
   
  若要更改 VSTA 项目中方法的名称，则必须更改 **EntryPoint** 属性的值。  
   
@@ -146,6 +146,6 @@ ms.locfileid: "71293998"
   
 ## <a name="related-content"></a>相关内容  
   
--   shareourideas.com 上的技术文章 [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
+-   shareourideas.com 上的技术文章 [如何在 C# 中发送具有传递通知的电子邮件](https://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
   
   

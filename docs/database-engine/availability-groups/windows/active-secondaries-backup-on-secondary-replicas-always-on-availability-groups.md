@@ -1,7 +1,7 @@
 ---
-title: 卸载可用性组次要副本的支持备份
+title: 卸载次要可用性组副本的备份
 description: 了解卸载 Always On 可用性组次要副本时所支持的不同备份类型。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 19118cde56109895213a733127b202c49feb23c1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807425"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822411"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>卸载可用性组次要副本的支持备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持在辅助副本上执行备份操作。 备份操作可能会给 I/O 和 CPU 带来很大的压力（使用备份压缩）。 将备份负荷转移到已同步或正在同步的辅助副本后，您可以使用承载第一层工作负荷的主副本的服务器实例上的资源。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持在次要副本上进行备份。 备份操作可能会给 I/O 和 CPU 带来很大的压力（使用备份压缩）。 将备份负荷转移到已同步或正在同步的辅助副本后，您可以使用承载第一层工作负荷的主副本的服务器实例上的资源。  
 
 > [!NOTE]  
 >  在可用性组的主数据库或辅助数据库上不允许 RESTORE 语句。  
@@ -36,9 +36,9 @@ ms.locfileid: "72807425"
  
 ##  <a name="SupportedBuTypes"></a> 辅助副本上支持的备份类型  
   
--   **BACKUP DATABASE** 在次要副本上执行时仅支持数据库、文件或文件组的仅复制完整备份。 请注意，仅复制备份不影响日志链，也不清除差异位图。  
+-   在次要副本上执行 BACKUP DATABASE 时，仅支持数据库、文件或文件组的仅复制完整备份  。 仅复制备份不会影响日志链，也不会清除差异位图。  
   
--   辅助副本不支持差异备份。
+-   不支持在次要副本上执行差异备份。
 
 -   当前不支持并发备份，例如，在辅助副本上执行完整数据库备份的同时在主副本上执行事务日志备份。 
   

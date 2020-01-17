@@ -1,6 +1,5 @@
 ---
-title: SUSE Linux Enterprise Server 上的 SQL Server 入门
-titleSuffix: SQL Server
+title: SUSE：在 Linux 上安装 SQL Server
 description: 本快速入门介绍了如何在 SUSE Linux Enterprise Server 上安装 SQL Server 2017 或 SQL Server 2019，然后使用 sqlcmd 创建和查询数据库。
 author: VanMSFT
 ms.author: vanto
@@ -9,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 143ec74ea2941c25c23a41396dc9cdc40d445715
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594536"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558624"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入门：在 SUSE Linux Enterprise Server 上安装 SQL Server 并创建数据库
 
@@ -60,9 +59,9 @@ ms.locfileid: "73594536"
 如果以前安装了 SQL Server 的 CTP 或 RC 版本，则必须先删除旧存储库，然后再执行这些步骤。 有关详细信息，请参阅[为 SQL Server 2017 和 2019 配置 Linux 存储库](sql-server-linux-change-repo.md)。
 
 > [!NOTE]
-> 目前，不支持适用于 Windows 10 的 [Linux 的 Windows 子系统](https://msdn.microsoft.com/commandline/wsl/about)作为安装目标。
+> 目前，不支持将适用于 Windows 10 的 [Linux 的 Windows 子系统](https://msdn.microsoft.com/commandline/wsl/about)作为安装目标。
 
-有关其他系统要求，请参阅 [Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
+有关其他系统要求，请参阅 [Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -90,7 +89,7 @@ ms.locfileid: "73594536"
    sudo zypper --gpg-auto-import-keys refresh 
    ```
    
-3. 运行以下命令，安装 SQL Server：
+3. 运行以下命令以安装 SQL Server：
 
    ```bash
    sudo zypper install -y mssql-server
@@ -142,7 +141,7 @@ ms.locfileid: "73594536"
    sudo zypper --gpg-auto-import-keys refresh 
    ```
    
-3. 运行以下命令，安装 SQL Server：
+3. 运行以下命令以安装 SQL Server：
 
    ```bash
    sudo zypper install -y mssql-server
@@ -176,7 +175,7 @@ ms.locfileid: "73594536"
 
 ## <a id="tools"></a>安装 SQL Server 命令行工具
 
-若要创建数据库，则需要使用可在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤安装 SQL Server 命令行工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
+若要创建数据库，则需要使用可在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤将安装 SQL Server 命令行工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
 
 1. 将 Microsoft SQL Server 存储库添加到 Zypper。
 
@@ -185,7 +184,7 @@ ms.locfileid: "73594536"
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. 使用 unixODBC 开发人员包安装 mssql-tools  。
+1. 使用 unixODBC 开发人员包安装 **mssql-tools**。
 
    ```bash
    sudo zypper install -y mssql-tools unixODBC-devel

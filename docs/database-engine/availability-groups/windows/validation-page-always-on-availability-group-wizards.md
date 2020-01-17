@@ -1,6 +1,7 @@
 ---
-title: “验证”页（AlwaysOn 可用性组向导）| Microsoft Docs
-ms.custom: ''
+title: 可用性组向导：“验证”页
+description: 本主题介绍了 Always On 可用性组向导的“验证”页面上提供的选项。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 243109e2c9d93db71c59a852a594a411c40c47dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f22ac0e249e693b7bcd102f6d9242c601e14331f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013454"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821846"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>“验证”页（AlwaysOn 可用性组向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +38,11 @@ ms.locfileid: "68013454"
  **结果**  
  显示以下超链接文本之一。 有关给定验证步骤的结果的详细信息，请单击该超链接。  
   
-|结果|描述|  
+|结果|说明|  
 |------------|-----------------|  
 |**错误**|指示验证步骤失败。 单击该链接可以查看错误消息。|  
-|**已跳过**|指示已通过该验证步骤，因为您所做的选择不需要验证。 单击该链接可以查看跳过某步骤的原因。|  
-|**成功**|指示此验证步骤已成功完成。|  
+|已跳过 |指示已通过该验证步骤，因为您所做的选择不需要验证。 单击该链接可以查看跳过某步骤的原因。|  
+|**Success**|指示此验证步骤已成功完成。|  
 |**警告**|指示可用性组配置可能存在问题。  单击该链接可以查看警告消息。|  
   
  **重新运行验证**  

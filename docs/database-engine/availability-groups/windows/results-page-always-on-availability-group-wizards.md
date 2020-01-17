@@ -1,5 +1,6 @@
 ---
-title: “结果”页（AlwaysOn 可用性组向导）| Microsoft Docs
+title: “结果”页（AlwaysOn 可用性组向导）
+description: 介绍 SQL Server Management Studio GUI 中“Always on 可用性组向导”的“结果”页面上提供的选项。
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1d3a91ba05d58c2741d49c96bf108263caf899cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014237"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235450"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>“结果”页（AlwaysOn 可用性组向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +36,10 @@ ms.locfileid: "68014237"
  **结果**  
  对于每个已完成的步骤，显示下列超链接文本之一。  
   
-|结果|描述|  
+|结果|说明|  
 |------------|-----------------|  
 |**错误**|指示验证步骤失败。 单击该链接可以查看错误消息。|  
-|**成功**|指示此验证步骤已成功完成。|  
+|**Success**|指示此验证步骤已成功完成。|  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   

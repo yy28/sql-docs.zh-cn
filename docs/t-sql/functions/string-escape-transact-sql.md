@@ -18,20 +18,20 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: d845257313466caa21976feaf69598e404a03962
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e9b189d6b06aaf3b85815ed6d889756d466bff8
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906859"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325499"
 ---
-# <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
+# <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  对文本中的特殊字符进行转义并返回有转义字符的文本。 STRING_ESCAPE 是一个确定性的函数。  
+对文本中的特殊字符进行转义并返回有转义字符的文本。 STRING_ESCAPE 是 SQL Server 2016 中引入的一个确定性的函数  。 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,14 +42,14 @@ STRING_ESCAPE( text , type )
 ## <a name="arguments"></a>参数
 
  *text*  
- 表示应转义对象的 nvarchar [表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 表示应转义对象的 nvarchar  [表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- *类型*  
+ type   
  对将要应用的规则进行转义。 目前支持的值是 `'json'`。  
   
 ## <a name="return-types"></a>返回类型
 
- 带有已转义的特殊和控制字符的 nvarchar(max) 文本。 当前，STRING_ESCAPE 仅能对下表中的 JSON 特殊字符进行转义。  
+ 带有已转义的特殊和控制字符的 nvarchar(max) 文本  。 当前，STRING_ESCAPE 仅能对下表中的 JSON 特殊字符进行转义  。  
   
 |特殊字符|编码的序列|  
 |-----------------------|----------------------|  
@@ -58,7 +58,7 @@ STRING_ESCAPE( text , type )
 |斜线号 (/)|\\/|  
 |退格键|\b|  
 |换页符|\f|  
-|换行符|\n|  
+|新建行|\n|  
 |回车符|\r|  
 |水平制表符|\t|  
   
@@ -69,7 +69,7 @@ STRING_ESCAPE( text , type )
 |...|...|  
 |CHAR(31)|\u001f|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="examples"></a>示例  
   

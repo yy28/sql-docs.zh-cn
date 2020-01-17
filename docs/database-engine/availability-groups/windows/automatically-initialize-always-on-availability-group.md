@@ -1,7 +1,7 @@
 ---
 title: 使用自动种子设定初始化可用性组
-description: 使用自动种子设定为 Always On 可用性组中的每个数据库自动创建次要副本。
-ms.custom: seodec18
+description: 使用自动种子设定自动为 Always On 可用性组中的每个数据库创建次要副本，而无需手动备份和还原。
+ms.custom: seo-lt-2019
 ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fde90e8f64194265a74f866e27e4b2ef4a406d14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38bbab7ea9ae6aa7ddd70ede2161988c01431573
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991578"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254091"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>使用自动种子设定初始化 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -216,7 +216,7 @@ GO
 
 下表列出了与自动种子设定相关的扩展事件： 
 
-| “属性” | 描述|
+| 名称 | 说明|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  种子设定请求消息。
 |hadr_physical_seeding_backup_state_change |    物理种子设定备份端状态更改。
@@ -282,7 +282,7 @@ SQL Server 使用固定数目的线程进行自动种子设定。 在主实例�
 在某些情况下，自动种子设定可能不是初始化次要副本的最优选择。 自动种子设定过程中，SQL Server 通过网络执行备份以进行初始化。 如果数据库非常大或者次要副本是远程副本，此过程会很缓慢。 在备份过程中，无法截断这些数据库的事务日志，因此，如果繁忙的数据库初始化过程耗时冗长，则可能导致事务日志大幅增加。
 在将数据库添加到具有自动种子设定的可用性组之前，请先评估数据库大小、负载和副本之间的站点距离。
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>资源
 
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)（创建可用性组 (Transact-SQL)）
 

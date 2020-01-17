@@ -1,6 +1,7 @@
 ---
-title: 含 AlwaysOn 可用性组的 Service Broker (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Service Broker 与可用性组
+description: 包含有关使用 SQL Server Always On 可用性组配置 Service Broker 的信息。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: af4b4279ba9b4653e01f88daca5c2895597fa2f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8845f69e619c8cd2cc7a194b6f03a4dec5f592c1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014121"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822618"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "68014121"
     -   在所有主机服务器实例上，将 Service Broker PORT 设置为同一端口号。  
   
         > [!TIP]  
-        >  若要查看给定服务器实例上的 Service Broker 断点的端口号，请查询 [sys.tcp_endpoints](../../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) 目录视图的“端口”列，其中 **type_desc** = 'SERVICE_BROKER'。  
+        >  若要查看给定服务器实例上的 Service Broker 断点的端口号，请查询 [sys.tcp_endpoints](../../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) 目录视图的“端口”  列，其中 **type_desc** = 'SERVICE_BROKER'。  
   
      下面的示例创建经过 Windows 身份验证的 Service Broker 端点，该端点使用默认 Service Broker 端口 (4022) 并侦听所有有效的 IP 地址。  
   

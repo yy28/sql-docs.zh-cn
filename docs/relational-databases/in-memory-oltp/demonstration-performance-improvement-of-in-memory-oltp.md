@@ -1,6 +1,6 @@
 ---
-title: 演示：内存中 OLTP 的性能改进 | Microsoft Docs
-ms.custom: ''
+title: 性能改进 - 内存中 OLTP
+ms.custom: seo-dt-2019
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cec13fc9bcfe30aa34f46afb23c7f8755f0c477
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069644"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412727"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存 OLTP 的性能改进
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ go
   
  如果需要有关使用 Azure 门户来实现这一操作的说明，请参阅 [Azure SQL Database 入门](https://azure.microsoft.com/documentation/articles/sql-database-get-started)。  
   
-### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>第 2 步：创建内存优化表和 NCSProc  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>步骤 2：创建内存优化表和 NCSProc  
  此步骤创建内存优化表和本机编译的存储过程 (NCSProc)。 请执行以下操作：  
   
 1.  使用 SSMS.exe 连接到新的数据库。  

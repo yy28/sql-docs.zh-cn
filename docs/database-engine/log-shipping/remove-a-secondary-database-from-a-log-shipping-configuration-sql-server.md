@@ -1,6 +1,7 @@
 ---
-title: 从日志传送配置中删除辅助数据库 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 删除日志传送辅助数据库
+description: 了解如何删除日志传送辅助数据库伙伴。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e788f18084afb2d5897538b1f760c75a3de18a1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03a22206129b3f6002006f1fdcb74d5aad73308f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030693"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258992"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>从日志传送配置中删除辅助数据库 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +54,13 @@ ms.locfileid: "68030693"
   
 1.  连接到当前是日志传送主服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并展开该实例。  
   
-2.  展开“数据库”，右键单击日志传送主数据库，再单击“属性”。  
+2.  展开“数据库”  ，右键单击日志传送主数据库，再单击“属性”  。  
   
-3.  在 **“选择页”** 下，单击 **“事务日志传送”**。  
+3.  在 **“选择页”** 下，单击 **“事务日志传送”** 。  
   
 4.  在 **“辅助服务器实例和数据库”** 下，单击要删除的数据库。  
   
-5.  单击 **“删除”**。  
+5.  单击 **“删除”** 。  
   
 6.  单击 **“确定”** 更新配置。  
   

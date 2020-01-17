@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 20285fed8ca477eb95d04ee60b6a3283d2028b97
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b854e6c7db8bb042ced1c883e17fb4ac6d484fe7
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281493"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947089"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>使用 Transact-SQL 从 SSMS 部署 SSIS 项目
 
@@ -39,15 +39,19 @@ SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 
 
 无法使用此快速入门中的信息将 SSIS 包部署到 Linux 上的 SQL Server。 有关在 Linux 上运行包的详细信息，请参阅[使用 SSIS 在 Linux 上提取、转换和加载数据](../linux/sql-server-linux-migrate-ssis.md)。
 
+## <a name="supported-authentication-method"></a>支持的身份验证方法
+
+请参阅[用于部署的身份验证方法](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment)。
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>连接到 SSIS 目录数据库
 
 使用 SQL Server Management Studio 与 SSIS 目录建立连接。 
 
 1. 打开 SQL Server Management Studio。
 
-2. 在“连接到服务器”对话框中，输入以下信息  ：
+2. 在“连接到服务器”对话框中，输入以下信息： 
 
-   | 设置       | 建议的值 | 详细信息 | 
+   | 设置       | 建议的值 | 更多信息 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
    | **服务器名称** | 完全限定的服务器名称 |  |
@@ -55,12 +59,13 @@ SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 
    | **登录** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
 
-3. 单击 **“连接”** 。 对象资源管理器窗口在 SSMS 中打开。 
+3. 单击“连接”  。 对象资源管理器窗口在 SSMS 中打开。 
 
-4. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”查看 SSIS 目录数据库中的对象   。
+4. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”，查看 SSIS 目录数据库中的对象   。
+
 
 ## <a name="run-the-t-sql-code"></a>运行 T-SQL 代码
-运行下面的 Transact-SQL 代码以部署 SSIS 项目。
+运行下面的 TRANSACT-SQL 代码以部署 SSIS 项目。
 
 1.  在 SSMS 中，打开新的查询窗口并粘贴以下代码。
 
@@ -87,11 +92,11 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
 ## <a name="next-steps"></a>后续步骤
 - 考虑部署包的其他方式。
     - [使用 SSMS 部署 SSIS 包](./ssis-quickstart-deploy-ssms.md)
-    - [使用 Transact-SQL (VS Code) 部署 SSIS 包](ssis-quickstart-deploy-tsql-vscode.md)
+    - [使用 Transact-SQL 部署 SSIS 包 (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
     - [从命令提示符部署 SSIS 包](./ssis-quickstart-deploy-cmdline.md)
     - [使用 PowerShell 部署 SSIS 包](ssis-quickstart-deploy-powershell.md)
     - [使用 C# 部署 SSIS 包](./ssis-quickstart-deploy-dotnet.md) 
-- 运行已部署的包。 若要运行包，可以从多个工具和语言中进行选择。 有关详细信息，请参阅下文：
+- 运行已部署的包。 若要运行包，可以从多个工具和语言中进行选择。 有关详细信息，请参阅以下文章：
     - [使用 SSMS 运行 SSIS 包](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 运行 SSIS 包 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [使用 Transact-SQL 运行 SSIS 包 (VS Code)](ssis-quickstart-run-tsql-vscode.md)

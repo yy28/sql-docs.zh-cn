@@ -1,7 +1,7 @@
 ---
-title: 将 SQL Server 2014 托管备份设置迁移到 SQL Server 2016 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 迁移托管备份设置
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d8945b0e37185f5ec0433a9780aa876d4be526c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79cbc0a2fcd020cc1e4b59de6d4fc0a2c3320059
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033748"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258676"
 ---
-# <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>将 SQL Server 2014 托管备份设置迁移到 SQL Server 2016
+# <a name="migrate-managed-backup-settings"></a>迁移托管备份设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍从 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 升级到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 时 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]的迁移注意事项。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68033748"
 |**安全性：**|使用 Microsoft Azure 存储帐户和访问密钥的 SQL 凭据。|使用 Microsoft Azure 共享访问签名 (SAS) 令牌的 SQL 凭据。|  
 |**基础存储：**|使用页 blob 的 Microsoft Azure 存储。|使用块 blob 的 Microsoft Azure 存储。|  
   
-## <a name="benefits"></a>优势  
+## <a name="benefits"></a>优点  
  使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中的新功能具有多个好处。  
   
 -   块 blob 的存储成本较少。  
@@ -52,6 +52,6 @@ ms.locfileid: "68033748"
 -   在 **上，** 的任何新配置均不支持 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] smart_admin [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]过程。 必须使用新的 **managed_backup** 过程和功能。  
   
 ## <a name="see-also"></a>另请参阅  
- [Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [目标为 Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

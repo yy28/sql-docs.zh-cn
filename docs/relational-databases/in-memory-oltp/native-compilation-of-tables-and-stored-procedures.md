@@ -1,6 +1,6 @@
 ---
-title: 表和存储过程的本机编译 | Microsoft Docs
-ms.custom: ''
+title: 表和存储过程的本机编译
+ms.custom: seo-dt-2019
 ms.date: 04/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09e1e143f22c36e66670f9c02590e009e939a048
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f14ac7835bab80a15d1fffb3bb58bd9cdb4b44b0
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101446"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412631"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>表和存储过程的本机编译
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ GO
 
 ## <a name="native-compilation-of-stored-procedures"></a>存储过程的本机编译
 
-使用 NATIVE_COMPILATION 标记的存储过程将本机编译。 这意味着该过程中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句均被编译为本机代码，以便高效执行性能关键的业务逻辑。
+对使用 NATIVE_COMPILATION 来标记的存储过程执行本机编译。 这意味着该过程中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句均被编译为本机代码，以便高效执行性能关键的业务逻辑。
 
 有关本机编译的存储过程的详细信息，请参阅 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。
 
@@ -213,4 +213,4 @@ native_sp 的 DLL 可直接与 t1 的 DLL 以及内存中 OLTP 存储引擎交�
 
 [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
-[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)

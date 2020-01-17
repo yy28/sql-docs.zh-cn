@@ -1,6 +1,7 @@
 ---
-title: 创建使用 Windows 身份验证的数据库镜像终结点 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 创建数据库镜像终结点 (Transact-SQL)
+description: 使用 Transact-SQL 通过 Windows 身份验证创建数据库镜像终结点。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2fbe4c5188bc728b8b8b58872ca805e1460c3a04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11b3c1d06c74f8d5c19aa95ba8de20fbce67d3dd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952003"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259046"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>创建使用 Windows 身份验证的数据库镜像端点 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +112,7 @@ ms.locfileid: "67952003"
   
     -   默认情况下，ENCRYPTION 设置为 REQUIRED。 这意味着此端点的所有连接都必须加密。 但您可以禁用加密，或对于端点可以选择禁用加密。 可以选择的选项如下：  
   
-        |ReplTest1|定义|  
+        |值|定义|  
         |-----------|----------------|  
         |DISABLED|指定不对通过连接发送的数据加密。|  
         |SUPPORTED|指定只有在对方端点指定了 SUPPORTED 或者 REQUIRED 时，才加密数据。|  

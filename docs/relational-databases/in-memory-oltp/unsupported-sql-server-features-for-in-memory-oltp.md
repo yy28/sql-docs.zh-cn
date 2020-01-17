@@ -1,5 +1,5 @@
 ---
-title: 内存中 OLTP 不支持的 SQL Server 功能 | Microsoft Docs
+title: 不支持的功能 - 内存中 OLTP
 ms.custom: ''
 ms.date: 05/29/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 720b10e5f4cd7c7ba5676f9dddc2f64e632d64cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7427f7ccc70db68d1403cc1a92c7d7dafef82f5c
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912136"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412513"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>内存中 OLTP 不支持的 SQL Server 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "67912136"
 除若干例外情况，一般不支持跨数据库事务。 下表介绍支持的情况和相应的限制。 （另请参阅 [跨数据库查询](../../relational-databases/in-memory-oltp/cross-database-queries.md)。）  
 
 
-|数据库|Allowed|描述|  
+|数据库|允许|说明|  
 |---------------|-------------|-----------------|  
 | 用户数据库、模型和 msdb   。 | 否 | 多数情况下，不支持跨数据库查询和事务  。<br /><br />如果查询使用内存优化表或本机编译存储过程，则此查询无法访问其他数据库。 此限制适用于事务以及查询。<br /><br />tempdb 和 master 系统数据库除外   。 此时，master 数据库可进行只读访问  。 |
 | 资源数据库和 tempdb   | 是 | 在涉及内存中 OLTP 对象的事务中，可以使用资源和 tempdb 系统数据库，而无需添加限制   。
@@ -63,8 +63,8 @@ ms.locfileid: "67912136"
   
 - 访问内存优化表的查询上的键集和动态游标。 这些游标将降级为静态和只读的。  
   
-- 不支持使用 MERGE INTO 目标（其中目标是内存优化表）    。
-    - 内存优化表支持 MERGE USING 源   。  
+- 不支持使用 MERGE INTO target，其中 target 是内存优化表    。
+    - 内存优化表支持 MERGE USING source   。  
   
 - 不支持 ROWVERSION (TIMESTAMP) 数据类型。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。
   

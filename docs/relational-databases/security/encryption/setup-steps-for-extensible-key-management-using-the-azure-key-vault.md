@@ -1,6 +1,7 @@
 ---
-title: 使用 Azure Key Vault 的 SQL Server TDE 可扩展密钥管理 - 安装步骤 | Microsoft Docs
-ms.custom: ''
+title: 使用 Azure Key Vault 设置 TDE 可扩展密钥管理
+description: 介绍为 Azure Key Vault 安装和配置 SQL Server 连接器的步骤。
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -11,19 +12,19 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 5d767f8257395368cf3ceeba45b9b9d7cadcfa80
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929714"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557422"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>使用 Azure Key Vault 的 SQL Server TDE 可扩展密钥管理 - 安装步骤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  以下步骤演示了如何安装和配置 Azure Key Vault 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。  
+  以下步骤演示了如何为 Azure Key Vault 安装和配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。  
   
 ## <a name="before-you-start"></a>开始之前  
  要将 Azure 密钥保管库用于 SQL Server，有几个先决条件：  
@@ -41,15 +42,15 @@ ms.locfileid: "70929714"
 SQL Server 版本  |可再发行组件安装链接    
 ---------|--------- 
 2008、2008 R2、2012、2014 | [适用于 Visual Studio 2013 的 Visual C++ 可再发行组件包](https://www.microsoft.com/download/details.aspx?id=40784)    
-2016 | [适用于 Visual Studio 2015 的 Visual C++ 可再发行组件](https://www.microsoft.com/download/details.aspx?id=48145)    
+2016 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>第一部分：设置 Azure Active Directory 服务主体  
+## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>第 I 部分：设置 Azure Active Directory 服务主体  
  为了向 Azure 密钥保管库授予 SQL Server 访问权限，你需要在 Azure Active Directory (AAD) 中具有服务主体帐户。  
   
 1.  转到 [Azure 门户](https://ms.portal.azure.com/)，并登录。  
   
-2.  在 Azure Active Directory 中注册应用程序。 有关注册应用程序的详细步骤说明，请参阅 **Azure 密钥保管库博客** 中的 [获取应用程序的标识](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)部分。  
+2.  将应用程序注册到 Azure Active Directory。 有关注册应用程序的详细步骤说明，请参阅 **Azure 密钥保管库博客** 中的 [获取应用程序的标识](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)部分。  
   
 3.  复制 **客户端 ID** 和 **客户端密码** 用于后续步骤，即用于向密钥保管库授予 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 访问权限。  
   
@@ -57,7 +58,7 @@ SQL Server 版本  |可再发行组件安装链接
   
  ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
   
-## <a name="part-ii-create-a-key-vault-and-key"></a>第二部分：创建密钥保管库和密钥  
+## <a name="part-ii-create-a-key-vault-and-key"></a>第 II 部分：创建密钥保管库和密钥  
  此处创建的密钥保管库和密钥将供 SQL Server 数据库引擎使用，以实现加密密钥保护。  
   
 > [!IMPORTANT]  
@@ -84,7 +85,7 @@ SQL Server 版本  |可再发行组件安装链接
     > [!NOTE]  
     >  如果你有多个订阅并想要指定其中一个用于保管库，请使用 `Get-AzSubscription` 查看订阅，然后使用 `Select-AzSubscription` 选择适当的订阅。 否则，PowerShell 将默认为你选择一个订阅。  
   
-2.  **创建新资源组**  
+2.  **创建新的资源组**  
   
      资源组中必须包含通过 Azure 资源管理器创建的所有 Azure 资源。 创建资源组用于包含密钥保管库。 此示例使用 `ContosoDevRG`。 选择你自己的 **唯一** 资源组和密钥保管库名称，因为所有密钥保管库名称是全局唯一的。  
   
@@ -106,7 +107,7 @@ SQL Server 版本  |可再发行组件安装链接
     > [!NOTE]  
     >  对于 `-Location parameter`参数，请使用命令 `Get-AzureLocation` 来确定如何将备用位置指定为本示例中的位置之一。 如需详细信息，请键入： `Get-Help Get-AzureLocation`  
   
-3.  **创建密钥保管库**  
+3.  **创建 Key Vault**  
   
      `New-AzKeyVault` cmdlet 需要一个资源组名称、一个密钥保管库名称和一个地理位置。 例如，对于名为 `ContosoDevKeyVault`的密钥保管库，请键入：  
   
@@ -173,9 +174,9 @@ SQL Server 版本  |可再发行组件安装链接
     
     为了确保快速恢复密钥并能够访问 Azure 外的数据，建议采用以下最佳做法：
  
-    1. 在本地 HSM 设备上以本地方式创建加密密钥。 （确保此密钥是一个非对称的 RSA 2048 密钥，以便受 SQL Server 支持。）
+    1. 在本地 HSM 设备上创建加密密钥。 （确保此密钥是一个非对称的 RSA 2048 密钥，以便受 SQL Server 支持。）
     2. 将加密密钥导入到 Azure 密钥保管库。 请参阅以下步骤了解如何执行此操作。
-    3. 在首次使用 Azure 密钥保管库中的密钥之前，先进行 Azure 密钥保管库密钥备份。 了解有关 [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) 命令的详细信息。
+    3. 在首次使用 Azure 密钥保管库中的密钥之前，先进行 Azure 密钥保管库密钥备份。 详细了解 [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) 命令。
     4. 每次更改密钥（例如添加 ACL、添加标记、添加键属性）时，务必再进行一次 Azure Key Vault 密钥备份。
 
         > [!NOTE]  
@@ -212,8 +213,8 @@ SQL Server 版本  |可再发行组件安装链接
     > [!IMPORTANT]  
     > 强烈建议对生产情况导入非对称密钥，因为这样管理员就可以在密钥托管系统中托管密钥。 如果非对称密钥是在保管库中创建的，则无法托管，因为私有密钥无法离开保管库。 应托管用于保护关键数据的密钥。 丢失非对称密钥将导致永久性数据丢失。  
 
-    ### <a name="create-a-new-key"></a>创建新密钥
-    #### <a name="example"></a>例如：  
+    ### <a name="create-a-new-key"></a>新建密钥
+    #### <a name="example"></a>示例：  
     或者，可直接在 Azure Key Vault 中创建新的加密密钥，并使其受软件保护或受 HSM 保护。  在此示例中，让我们使用 `Add-AzureKeyVaultKey cmdlet` 创建受软件保护的密钥：  
 
     ``` powershell  

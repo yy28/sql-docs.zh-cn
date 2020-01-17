@@ -1,6 +1,6 @@
 ---
-title: 内存优化表的哈希索引疑难解答 | Microsoft Docs
-ms.custom: ''
+title: 对哈希索引进行故障排除 - 内存优化表
+ms.custom: seo-dt-2019
 ms.date: 12/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16e3ab81700ca9fed1870a6a98d0aab704b2c1db
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909280"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412657"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>内存优化表的哈希索引疑难解答
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,8 +113,8 @@ ORDER BY [table], [index];
   
 1. 创建包含一些哈希索引的内存优化表。  
 2. 在表中填充数千行。  
-    A. 取模运算符用于配置 StatusCode 列中的值重复率。  
-    B. 此循环在大约 1 分钟内插入 262,144 行。  
+    a. 取模运算符用于配置 StatusCode 列中的值重复率。  
+    b. 此循环在大约 1 分钟内插入 262,144 行。  
 3. 列显一条消息，要求你从 **sys.dm_db_xtp_hash_index_stats**运行上述 SELECT。  
 
 ```sql

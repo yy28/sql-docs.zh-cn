@@ -1,6 +1,8 @@
 ---
-title: REVOKE 搜索属性列表权限 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE 搜索属性列表权限
+description: 撤消对搜索属性列表的权限。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f9b69ec02d8f436ccaacf8f9fc75fbb01b429316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84d15026a188bd24522195d22e70707a8803fda8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914263"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255802"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>撤消搜索属性列表权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   撤消搜索属性列表的权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,13 +51,13 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- permission  
+ permission   
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- ON SEARCH PROPERTY LIST ::search_property_list_name  
- 指定要撤消权限的搜索属性列表。 需要使用作用域限定符 ::。  
+ ON SEARCH PROPERTY LIST ::search_property_list_name    
+ 指定要撤消权限的搜索属性列表。 需要使用作用域限定符 ::  。  
   
- database_principal  
+ database_principal   
  指定要从中撤消权限的主体。 可以是下列主体之一：  
   
 -   数据库用户  
@@ -80,7 +82,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS revoking_principal  
+ AS revoking_principal   
  指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 可以是下列主体之一：  
   
 -   数据库用户  
@@ -99,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="search-property-list-permissions"></a>SEARCH PROPERTY LIST（搜索属性列表权限）  
  搜索属性列表是一个数据库级安全对象，包含在权限层次结构中作为其父级的数据库中。 下面列出了可撤消的最具体的搜索属性列表限定权限，以及隐含这些权限的更一般的权限。  

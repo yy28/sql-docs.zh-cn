@@ -10,23 +10,22 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/15/2019
-ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545061"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241748"
 ---
 # <a name="what-is-azure-data-studio"></a>什么是 Azure Data Studio？
 
 Azure Data Studio 是跨平台的数据库工具，适合在 Windows、MacOS 和 Linux 上使用 Microsoft 系列的本地和云数据平台的数据专业人员。
 
-Azure Data Studio 以预览名称 SQL Operations Studio 发布，利用 IntelliSense、代码片段、源代码管理集成和集成终端提供新式编辑器体验。 它在设计时考虑了数据平台用户，带有内置查询结果集图表和可自定义的仪表板。
+Azure Data Studio 利用 IntelliSense、代码片段、源代码管理集成和集成终端提供新式编辑器体验。 它在设计时考虑了数据平台用户，带有内置查询结果集图表和可自定义的仪表板。
 
 可通过一个提供软件修改和使用权限的源代码 EULA 来获取 GitHub 上 Azure Data Studio 的源代码及其数据提供程序，但不能在云服务中重新分发或托管该源代码。 有关详细信息，请参阅 [Azure Data Studio 常见问题解答](faq.md)。
 
 **[下载并安装 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
-
 
 ## <a name="sql-code-editor-with-intellisense"></a>带有 IntelliSense 的 SQL 代码编辑器
 
@@ -37,7 +36,6 @@ Azure Data Studio 以预览名称 SQL Operations Studio 发布，利用 IntelliS
 SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图、存储过程、用户、登录名、角色等等，并更新现有的数据库对象。 使用智能代码片段快速创建数据库副本，以便进行开发或测试，并生成和执行 CREATE 和 INSERT 脚本。
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 还提供用于创建自定义 SQL 代码片段的功能。 若要了解详细信息，请参阅[创建和使用代码片段](code-snippets.md)。
-
 
 ## <a name="customizable-server-and-database-dashboards"></a>可自定义的服务器和数据库仪表板
 
@@ -60,7 +58,8 @@ SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图�
 
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>与 SQL Server Management Studio (SSMS) 的功能比较
 
-**在以下情况下使用 Azure Data Studio：**
+**如为以下情况，请使用 Azure Data Studio：**
+
 - 需要在 macOS 或 Linux 上运行
 - 要连接到 SQL Server 2019 大数据群集
 - 花费大量时间编辑或执行查询
@@ -68,9 +67,9 @@ SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图�
 - 可以通过集成终端，使用 sqlcmd 或 Powershell 执行大多数管理任务
 - 对向导体验的需求很少
 - 不需要进行深层管理配置
-- 想要 
 
 **如为以下情况，请使用 SQL Server Management Studio：**
+
 - 在数据库管理任务上花费大量时间
 - 要进行深层管理配置
 - 要进行安全管理，包括用户管理、漏洞评估和安全功能配置
@@ -81,10 +80,10 @@ SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图�
 
 ### <a name="shell"></a>Shell
 
-|功能|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Azure 登录|是|是|
-|面板|是||
+|仪表板|是||
 |扩展|是||
 |集成终端|是||
 |“对象资源管理器”|是|是|
@@ -101,10 +100,9 @@ SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图�
 |对象属性||是|
 |表设计器||是|
 
-
 ### <a name="query-editor"></a>查询编辑器
 
-|功能|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |图表查看器|是||
 |将结果导出为 CSV、JSON、XLSX|是||
@@ -123,7 +121,7 @@ SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图�
 
 ### <a name="operating-system-support"></a>操作系统支持
 
-|功能|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Linux|是||
 |macOS|是||
@@ -131,7 +129,7 @@ SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图�
 
 ### <a name="data-engineering"></a>数据工程
 
-|功能|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |创建外部表向导|预览||
 |HDFS 集成|预览||
@@ -139,7 +137,7 @@ SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图�
 
 ### <a name="database-administration"></a>数据库管理
 
-|功能|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |备份/还原|是|是|
 |大数据群集支持|是||
@@ -147,7 +145,7 @@ SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图�
 |SQL 代理|预览|是|
 |SQL Profiler|预览|是|
 |AlwaysOn||是|
-|始终加密||是|
+|Always Encrypted||是|
 |复制数据向导||是|
 |数据优化顾问||是|
 |错误日志查看器||是|
@@ -157,7 +155,7 @@ SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图�
 |PolyBase||是|
 |查询存储||是|
 |已注册的服务器||是|
-|Replication||是|
+|复制||是|
 |安全管理||是|
 |Service Broker||是|
 |SQL Mail||是|

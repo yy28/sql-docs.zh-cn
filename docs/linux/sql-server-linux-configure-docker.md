@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 18401bda78dcf50e4060f053fed604d0dc1bf9be
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531342"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721539"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上配置 SQL Server 容器映像
 
@@ -35,7 +35,12 @@ ms.locfileid: "73531342"
 > 本文专门重点介绍 mssql-server-linux 映像的使用。 虽然没有介绍 Windows 映像，但可在 [mssql-server-windows Docker Hub 页](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)上找到关于它的详细信息。
 
 > [!IMPORTANT]
-> 在选择运行 SQL Server 容器以用于生产用例之前，请查看 [SQL Server 容器的支持策略](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server)，以确保在支持的配置上运行。
+> 在选择运行 SQL Server 容器以用于生产用例之前，请查看 [SQL Server 容器的支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)，以确保在支持的配置上运行。
+
+本视频时长 6 分钟，介绍了如何在容器上运行 SQL Server：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2019-in-Containers/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="pull-and-run-the-container-image"></a>拉取并运行容器映像
 
@@ -257,7 +262,10 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 借助此方法，还能共享和查看 Docker 外部的主机上的文件。
 
 > [!IMPORTANT]
-> 目前不支持 Mac 上的 Docker 与 Linux 映像上的 SQL Server 之间的主机卷映射。 请改为使用数据卷容器。 此限制特定于 `/var/opt/mssql` 目录。 从已装载目录进行读取操作可正常运行。 例如，可在 Mac 上使用 –v 装载主机目录，并通过驻留在主机上的 .bak 文件还原备份。
+> Windows 上的 Docker 的主机卷映射当前不支持映射完整的 `/var/opt/mssql` 目录  。 但是，你可以将子目录（如 `/var/opt/mssql/data`）映射到主机。
+
+> [!IMPORTANT]
+> 目前不支持 Mac 上的 Docker 与 Linux 映像上的 SQL Server 之间的主机卷映射  。 请改为使用数据卷容器。 此限制特定于 `/var/opt/mssql` 目录。 从已装载目录进行读取操作可正常运行。 例如，可在 Mac 上使用 –v 装载主机目录，并通过驻留在主机上的 .bak 文件还原备份。
 
 ### <a name="use-data-volume-containers"></a>使用数据卷容器
 
@@ -615,7 +623,7 @@ ls -ll <database file dir>
 授予对以下目录的根组权限，使非根 SQL Server 容器有权访问数据库文件。
 
 ```bash
-chgroup -R 0 <database file dir>
+chgrp -R 0 <database file dir>
 chmod -R g=u <database file dir>
 ```
 

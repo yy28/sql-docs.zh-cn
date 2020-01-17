@@ -1,6 +1,5 @@
 ---
-title: 为选择性 XML 索引指定路径和优化提示 | Microsoft Docs
-ms.custom: ''
+title: 选择性 XML 索引的路径和优化提示 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +9,13 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: acea8d44048de35ecbc3214712f699217838e60d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e4ffb1cc9a2b63047c6ade58d82001a2e0ebea4c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905235"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257615"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>为选择性 XML 索引指定路径和优化提示
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ mypath03 = '/a/b/d'
   
  支持非类型化 XML 事例的 XQuery 类型包括：  
   
--   **xs:boolean**  
+-   **xs: boolean**  
   
 -   **xs:double**  
   
@@ -115,7 +115,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  对于返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型的路径，必须指定某一类型。 使用您要在 value() 方法中使用的相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型。  
   
- 请考虑以下查询：  
+ 请考虑下列查询：  
   
 ```sql  
 SELECT T.record,  
@@ -142,7 +142,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
 -   **xs:anyUri**  
   
--   **xs:boolean**  
+-   **xs: boolean**  
   
 -   **xs:date**  
   
@@ -355,7 +355,7 @@ WHERE T.xmldata.exist('
 ### <a name="benefits-of-optimization-hints"></a>优化提示的好处  
  下表标识支持更高效的存储或改进的性能的优化提示。  
   
-|优化提示|更高效的存储|改进的性能|  
+|优化提示|更高效的存储|提高了性能|  
 |-----------------------|----------------------------|--------------------------|  
 |**node()**|是|否|  
 |**SINGLETON**|否|是|  
@@ -373,11 +373,11 @@ WHERE T.xmldata.exist('
 |**MAXLENGTH**|是|否|  
   
 ### <a name="node-optimization-hint"></a>node() 优化提示  
- 适用范围：XQuery 数据类型  
+ 适用对象：XQuery 数据类型  
   
  您可以使用 node() 优化指定其值无需用于对典型查询进行求值的节点。 在典型查询仅需要为存在的节点进行求值时，此提示可降低存储要求。 （默认情况下，选择性 XML 查询将存储几乎所有提升的节点的值，只有复杂节点类型除外。）  
   
- 请参考如下示例：  
+ 请考虑以下示例：  
   
 ```sql  
 SELECT T.record FROM myXMLTable T  
@@ -391,7 +391,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  如果某个查询要求已使用 node() 提示建立索引的节点值，则不能使用选择性 XML 索引。  
   
 ### <a name="singleton-optimization-hint"></a>SINGLETON 优化提示  
- 适用范围：XQuery 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型  
+ 适用对象：XQuery 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型  
   
  SINGLETON 优化提示指定节点的基数。 此提示将改进查询性能，因为提前知道节点在其父节点或祖先节点内最多出现一次。  
   
@@ -402,14 +402,14 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  如果已指定 SINGLETON 提示，但某一节点在其父节点或祖先节点内出现多次，则在您创建索引（为现有数据）或运行查询（为新数据）时将引发错误。  
   
 ### <a name="data-type-optimization-hint"></a>DATA TYPE 优化提示  
- 适用范围：XQuery 数据类型  
+ 适用对象：XQuery 数据类型  
   
  通过 DATA TYPE 优化提示，您可以为已建立索引的节点指定 XQuery 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 该数据类型用于与选择性 XML 索引的数据表中与已建立索引的节点相对应的列。  
   
  在将现有值转换为指定的数据类型失败时，插入操作（插入到索引中）不会失败；但是，一个 null 值将插入到索引的数据表中。  
   
 ### <a name="maxlength-optimization-hint"></a>MAXLENGTH 优化提示  
- 适用范围：XQuery 数据类型  
+ 适用对象：XQuery 数据类型  
   
  通过 MAXLENGTH 优化提示，您可以限制 xs:string 数据的长度。 MAXLENGTH 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不相关，因为您在指定 VARCHAR 或 NVARCHAR 日期类型时指定长度。  
   

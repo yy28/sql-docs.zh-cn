@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: f5eebdbedb548c28db6a83038a6f6b84c5bad336
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 148b887497cf9411aad72936a201805000c717ec
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68025933"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558556"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>使用备份和还原将 SQL Server 数据库从 Windows 迁移到 Linux
 
@@ -33,7 +33,7 @@ ms.locfileid: "68025933"
 
 ## <a name="prerequisites"></a>必备条件
 
-若要完成本教程，需满足下列前提条件：
+若要完成本教程，需满足以下先决条件：
 
 * 安装了以下内容的 Windows 计算机：
   * [SQL Server](https://www.microsoft.com/sql-server/sql-server-2016-editions)。

@@ -1,6 +1,7 @@
 ---
-title: 使用环境变量配置 SQL Server 设置
+title: 为 Linux 上的 SQL Server 配置环境变量
 description: 本文介绍如何使用环境变量在 Linux 上配置特定的 SQL Server 2017 设置。
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 11f8926ede3c4bcd1f0350be79add16c5ae52249
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f768a79512059025ebd6dfe6a6f339175b6149f3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531323"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558367"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>在 Linux 上使用环境变量配置 SQL Server 设置
 
@@ -43,7 +44,7 @@ ms.locfileid: "73531323"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| 环境变量 | 描述 |
+| 环境变量 | 说明 |
 |-----|-----|
 | **ACCEPT_EULA** | 将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
 | **MSSQL_SA_PASSWORD** | 配置 SA 用户密码。 |
@@ -67,7 +68,7 @@ ms.locfileid: "73531323"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| 环境变量 | 描述 |
+| 环境变量 | 说明 |
 |-----|-----|
 | **ACCEPT_EULA** | 将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
 | **MSSQL_SA_PASSWORD** | 配置 SA 用户密码。 |

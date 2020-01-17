@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: c7a2dbdccf92a52d5733a04915acc3f76dc3f033
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 72c4d64cc93ab564b9b8b04a838f8226982890f0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "65105951"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257579"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio 的 PowerShell 编辑器支持
 
@@ -173,7 +173,7 @@ Mode Name
 -    localhost\SQL2017
 ```
 
-对于涉及数据库的多个操作或数据库中的对象，可以使用 `Get-SqlDatabase` cmdlet。  如果为 `-ServerInstance` 和 `-Database` 参数都提供值，则仅检索一个数据库对象。  但如果仅指定 `-ServerInstance` 参数，则将返回该实例上所有数据库的完整列表。
+对于涉及数据库或数据库中对象的许多操作，都可以使用 `Get-SqlDatabase` cmdlet。  如果为 `-ServerInstance` 和 `-Database` 参数都提供值，则仅检索一个数据库对象。  但如果仅指定 `-ServerInstance` 参数，则将返回该实例上所有数据库的完整列表。
 
 下面是输出的示例：
 
@@ -255,7 +255,7 @@ WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 - [Tyler Leonhardt](https://github.com/tylerl0706) - [@TylerLeonhardt](http://twitter.com/tylerleonhardt)
 - [Rob Holt](https://github.com/rjmholt)
 
-## <a name="license"></a>许可证
+## <a name="license"></a>许可
 
 此扩展[根据 MIT 许可证获得授权](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt)。 有关此项目的版本所包含的第三方二进制文件的详细信息，请参阅[第三方通知](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt)文件。
 
@@ -264,7 +264,6 @@ WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 此项目采用了 [Microsoft 开放源代码行为准则][conduct-code]。
 有关详细信息，请参阅[行为准则常见问题解答][conduct-FAQ]，如有任何其他问题或评论，请联系 [opencode@microsoft.com][conduct-email]。
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

@@ -1,7 +1,7 @@
 ---
-title: 可用性组的可用性副本属性（“常规”页）
+title: “常规”页面（可用性副本属性）
 description: SQL Server Management Studio 中“可用性副本属性”页的“常规”页上的各种属性说明。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9c2dceee5ebda0b6039a2614b3ae3d9b0dd356e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b708c987f1e9d0bbaf069a5d105e6feab57b9b9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988660"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241739"
 ---
 # <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Always On 可用性组的可用性副本属性（“常规”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "67988660"
  承载此副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器名称；对于非默认实例，则为其实例名称。  
   
  **角色**  
- **主**  
+ **主要节点**  
  当前主副本。  
   
- **辅助副本**  
+ **辅助节点**  
  当前辅助副本。  
   
  **正在解析**  
@@ -56,7 +56,7 @@ ms.locfileid: "67988660"
  **同步提交**  
  主副本等待提交给定的事务，直到辅助副本将事务写入磁盘。  
   
- 有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
+ 有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
   
  **Failover mode**  
  副本的故障转移模式，可为下列值之一：  
@@ -64,7 +64,7 @@ ms.locfileid: "67988660"
  **自动**  
  自动故障转移。 副本为自动故障转移的目标。 仅当可用性模式设置为同步提交时，才选择此选项。  
   
- **Manual**  
+ **手动**  
  手动故障转移。 副本仅能由数据库管理员手动进行故障转移。  
   
  **主角色中的连接**  

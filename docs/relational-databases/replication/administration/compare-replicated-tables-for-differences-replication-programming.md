@@ -1,6 +1,7 @@
 ---
-title: 比较所复制表的差异（复制编程）| Microsoft Docs
-ms.custom: ''
+title: 比较复制表之间的差异（复制 SP）
+description: 使用复制存储过程来比较发布服务器和订阅服务器上的复制表之间的差异。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,14 +17,14 @@ ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a36c825a01d9c205732636bbd91e40dc322e546d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 586b816282fff5586d3058cf9567a7d4c4466e29
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770813"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322126"
 ---
-# <a name="compare-replicated-tables-for-differences-replication-programming"></a>比较所复制表的差异（复制编程）
+# <a name="compare-differences-between-replicated-tables-replication-programming"></a>比较复制表之间的差异（复制编程）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   项目验证用于确定发布服务器和订阅服务器上的表项目的已发布数据是否不同，这可能表明无法收敛。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-data-at-the-subscriber.md)。 但是，验证仅返回通过或失败信息，而不会提供任何有关源表和目标表之间存在哪些差异的信息。 **tablediff** 命令提示实用工具返回两个表之间存在的详细差异信息，甚至可生成 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本，以使订阅与发布服务器上的数据实现收敛。  
   
@@ -75,6 +76,6 @@ ms.locfileid: "68770813"
     -   （可选）使用 **-strict** 以强制在源表和目标表之间执行严格的架构比较。  
   
 ## <a name="see-also"></a>另请参阅  
- [验证订阅服务器上的数据](../../../relational-databases/replication/validate-data-at-the-subscriber.md)  
+ [在订阅服务器上验证数据](../../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: 配置具有 NVDIMM-N 回写式缓存的存储空间 | Microsoft Docs
-ms.custom: ''
+title: 配置存储 - NVDIMM-N 回写式缓存
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 050182836ecaa013ffe45ff9d5f78d2cdd60a1a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e19b164b0efe6d92a9bae0e6f7362ac5fd56f202
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137990"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165994"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>配置具有 NVDIMM-N 回写式缓存的存储空间
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyNam
   
  现在你可查看服务器中可见的这一新卷。 现在你可对 SQL Server 事务日志使用此驱动器。  
   
- ![Log_Space 驱动器](../../relational-databases/performance/media/log-space-drive.png "Log_Space 驱动器")  
+ ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
 ## <a name="see-also"></a>另请参阅  
  [Windows 10 中的 Windows 存储空间](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   

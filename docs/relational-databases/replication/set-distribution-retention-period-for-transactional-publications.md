@@ -1,6 +1,7 @@
 ---
-title: 设置事务发布的分发保持期 | Microsoft Docs
-ms.custom: ''
+title: 设置分发保留期
+description: 在 SQL Server Management Studio (SSMS) 中设置数据在分发数据库中的保留期。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9092662f88410812bd6c1c2035e8d04cfa9dd434
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ebbf937388d19b36910bc0d1a029933f500d4715
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907940"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321706"
 ---
 # <a name="set-distribution-retention-period-for-transactional-publications"></a>设置事务发布的分发保持期
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

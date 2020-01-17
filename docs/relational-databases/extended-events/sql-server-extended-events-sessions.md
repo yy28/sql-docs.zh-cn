@@ -1,6 +1,5 @@
 ---
-title: SQL Server 扩展事件会话 | Microsoft Docs
-ms.custom: ''
+title: SQL Server Extended Events Sessions
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ea63b8d8b417f829bda722297d0c69a0b5c5fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0352441798ddffc96b057876768f66f0c9d4a10a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009330"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242914"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 
@@ -39,12 +38,12 @@ ms.locfileid: "68009330"
   
  对照前面的图，可以注意到在对事件会话发出不同的 DDL 命令时会话状态将发生更改。 下表说明了这些状态更改。  
   
-|图例标签|DDL 语句|描述|  
+|图例标签|DDL 语句|说明|  
 |------------------------|-------------------|-----------------|  
 |创建|CREATE EVENT SESSION|主机进程将创建一个会话对象，其中包含由 CREATE EVENT SESSION 提供的元数据。 主机进程将验证会话定义和用户权限级别，并将元数据存储在 master 数据库中。 此时该会话处于不活动状态。|  
-|Alter|ALTER EVENT SESSION, STATE=START|主机进程启动会话。 主机进程将读取存储的元数据、验证会话定义、验证用户权限级别并创建会话。 此操作还将载入会话对象（例如事件和目标），此时事件处理即处于活动状态。|  
-|Alter|ALTER EVENT SESSION, STATE=STOP|主机进程将停止活动会话，但会保留元数据。|  
-|Drop|删除事件会话|此“删除”(DROP SESSION) 操作将删除元数据并关闭活动会话，或仅删除会话元数据；具体取决于会话是否处于活动状态。|  
+|更改|ALTER EVENT SESSION, STATE=START|主机进程启动会话。 主机进程将读取存储的元数据、验证会话定义、验证用户权限级别并创建会话。 此操作还将载入会话对象（例如事件和目标），此时事件处理即处于活动状态。|  
+|更改|ALTER EVENT SESSION, STATE=STOP|主机进程将停止活动会话，但会保留元数据。|  
+|丢弃|删除事件会话|此“删除”(DROP SESSION) 操作将删除元数据并关闭活动会话，或仅删除会话元数据；具体取决于会话是否处于活动状态。|  
   
 > [!NOTE]  
 >  ALTER EVENT SESSION 和 DROP EVENT SESSION 均可应用于元数据或者应用于活动会话与元数据。  

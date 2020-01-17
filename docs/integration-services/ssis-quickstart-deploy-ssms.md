@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d22df5141535e5ebfdb8120161a1776db616aef1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 04f7231dc4781b3c7194a7a34002b67087c9eaf2
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281676"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947101"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 部署 SSIS 项目
 
@@ -30,7 +30,7 @@ SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 
 
 本文中介绍的用于部署到 Azure SQL 数据库的验证需要 SQL Server Data Tools (SSDT) 版本 17.4 或更高版本。 要获取最新版 SSDT，请参阅[下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。
 
-Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
+Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
 
 ## <a name="supported-platforms"></a>支持的平台
 
@@ -51,7 +51,7 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
 3. 在数据库的“概述”  页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上  。 
 4. 如果忘记了 Azure SQL 数据库服务器登录信息，导航到 SQL 数据库服务器页以查看服务器管理员名称。 如有必要，可重置密码。
 
-## <a name="wizard_auth"></a> 部署向导中的身份验证方法
+## <a name="authentication-methods-for-deployment"></a>用于部署的身份验证方法
 
 如果要使用部署向导部署到 SQL Server，则必须使用 Windows 身份验证；不能使用 SQL Server 身份验证。
 
@@ -63,17 +63,17 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
 
 1. 打开 SQL Server Management Studio。
 
-2. 在“连接到服务器”对话框中，输入以下信息  ：
+2. 在“连接到服务器”对话框中，输入以下信息： 
 
-   | 设置       | 建议的值 | 详细信息 | 
+   | 设置       | 建议的值 | 更多信息 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
    | **服务器名称** | 完全限定的服务器名称 | 如果要连接到 Azure SQL 数据库服务器，该名称为以下格式：`<server_name>.database.windows.net`。 |
-   | **身份验证** | SQL Server 身份验证 | 使用 SQL Server 身份验证，可连接到 SQL Server 或 Azure SQL 数据库。 请参阅本文中的[部署向导中的身份验证方法](#wizard_auth)。 |
+   | **身份验证** | SQL Server 身份验证 | 使用 SQL Server 身份验证，可连接到 SQL Server 或 Azure SQL 数据库。 请参阅本文中的[部署中的身份验证方法](#authentication-methods-for-deployment)。 |
    | **登录** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
 
-3. 单击 **“连接”** 。 对象资源管理器窗口在 SSMS 中打开。 
+3. 单击“连接”  。 对象资源管理器窗口在 SSMS 中打开。 
 
 4. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”，查看 SSIS 目录数据库中的对象   。
 
@@ -94,7 +94,7 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
   
 3.  在“选择目标”页上，选择项目的目标  。
     -   输入完全限定服务器名称。 如果目标服务器是 Azure SQL 数据库服务器，则名称采用以下格式：`<server_name>.database.windows.net`。
-    -   提供身份验证信息，然后选择“连接”  。 请参阅本文中的[部署向导中的身份验证方法](#wizard_auth)。
+    -   提供身份验证信息，然后选择“连接”  。 请参阅本文中的[部署中的身份验证方法](#authentication-methods-for-deployment)。
     -   然后选择“浏览”  ，在 SSISDB 中选择目标文件夹。
     -   再选择“下一步”打开“评审”页   。 （仅当选择“连接”后，才会启用“下一步”按钮   。）
   
@@ -107,7 +107,7 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
 6.  部署过程完成之后，“结果”页随即打开  。 该页显示每个操作是成功了还是失败了。
     -   如果操作失败，则单击“结果”列中的“失败”可显示错误说明   。
     -   （可选）单击“保存报告...”以将结果保存到某一 XML 文件  。
-    -   单击“关闭”以退出向导  。
+    -   单击“关闭”  退出向导。
 
 ## <a name="next-steps"></a>后续步骤
 - 考虑部署包的其他方式。
@@ -116,7 +116,7 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
     - [从命令提示符部署 SSIS 包](./ssis-quickstart-deploy-cmdline.md)
     - [使用 PowerShell 部署 SSIS 包](ssis-quickstart-deploy-powershell.md)
     - [使用 C# 部署 SSIS 包](./ssis-quickstart-deploy-dotnet.md) 
-- 运行已部署的包。 若要运行包，可以从多个工具和语言中进行选择。 有关详细信息，请参阅下文：
+- 运行已部署的包。 若要运行包，可以从多个工具和语言中进行选择。 有关详细信息，请参阅以下文章：
     - [使用 SSMS 运行 SSIS 包](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 运行 SSIS 包 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [使用 Transact-SQL 运行 SSIS 包 (VS Code)](ssis-quickstart-run-tsql-vscode.md)

@@ -1,6 +1,7 @@
 ---
-title: 手动故障转移数据库镜像会话 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 手动将数据库镜像故障转移到合作伙伴
+description: 说明如何使用 Transact-SQL (T-SQL) 手动将主数据库镜像故障转移到辅助数据库伙伴。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36218d61-b5f5-4194-905a-608e0e903db4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ddfaec9f9192af98f8b3580554f8c89d757af566
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92f9040cdc8181b1546d7a04e9b0eaf265fc7012
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041739"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822103"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-transact-sql"></a>手动故障转移数据库镜像会话 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68041739"
   
 3.  在主体服务器上执行下列语句：  
   
-     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET PARTNER FAILOVER，其中 *database_name* 是镜像数据库。  
+     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) database_name SET PARTNER FAILOVER，其中 database_name 是镜像数据库   。  
   
      此语句将立即启动从镜像服务器到主体角色的转换。  
   

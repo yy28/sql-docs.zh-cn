@@ -1,6 +1,7 @@
 ---
-title: 教程：在两个完全连接的服务器之间配置复制（事务）| Microsoft Docs
-ms.custom: ''
+title: 教程：配置事务复制
+description: 本教程介绍如何在两个完全连接的 SQL Server 之间配置事务复制。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907707"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321924"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教程：在两个完全连接的服务器之间配置复制（事务）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,13 +74,13 @@ ms.locfileid: "72907707"
    ![启动新建发布向导的选择](media/tutorial-replicating-data-between-continuously-connected-servers/newpublication.png)
   
   
-3. 在“发布数据库”  页上，选择 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]，然后选择“下一步”  。  
+3. 在“发布数据库”页上，选择 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]，然后选择“下一步”   。  
   
 4. 在“发布类型”  页上，选择“事务发布”  ，然后选择“下一步”  ：  
 
    ![选择发布类型的“发布类型”页](media/tutorial-replicating-data-between-continuously-connected-servers/tranrepl.png)
   
-5. 在“项目”  页上，展开“表”  节点，选中“Product”  复选框。 然后展开“Product”  ，并清除“ListPrice”  和“StandardCost”  旁边的复选框。 选择“下一步”  。  
+5. 在“项目”  页上，展开“表”  节点，选中“Product”  复选框。 然后展开“Product”  ，并清除“ListPrice”  和“StandardCost”  旁边的复选框。 选择“**下一页**”。  
 
    ![“项目”页和选中的要发布的项目](media/tutorial-replicating-data-between-continuously-connected-servers/replarticles.png)
   
@@ -101,11 +102,11 @@ ms.locfileid: "72907707"
   
 10. 在“代理安全性”  页上，清除“使用快照代理的安全设置”  复选框。   
   
-    选择快照代理的“安全设置”  。 在“进程帐户”  框中输入 <Publisher_Machine_Name  >\repl_snapshot  ，为此帐户提供密码，然后选择“确定”  。  
+    选择快照代理的“安全设置”  。 在“进程帐户”框中输入 <Publisher_Machine_Name>\repl_snapshot，为此帐户提供密码，然后选择“确定”     。  
 
     ![“代理安全性”页和“快照代理安全性”对话框](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
-12. 重复上一步，将 <Publisher_Machine_Name  >\repl_logreader  设置为日志读取器代理的进程帐户。 然后选择“确定”  。  
+12. 重复上一步，将 <Publisher_Machine_Name  >\repl_logreader  设置为日志读取器代理的进程帐户。 然后选择“确定”。   
 
     ![“日志读取器代理安全性”对话框和“代理安全性”页](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
 
@@ -144,8 +145,8 @@ ms.locfileid: "72907707"
   
 2. 在“本地发布”文件夹中，右键单击 AdvWorksProductTrans，然后选择“属性”    。  将显示“发布属性”  对话框。    
   
-   A. 选择“发布访问列表”页，选择“添加”   。  
-   B. 在“添加发布访问项”  对话框中，选择 <Publisher_Machine_Name  >\repl_distribution  ，然后选择“确定”  。
+   a. 选择“发布访问列表”页，选择“添加”   。  
+   b. 在“添加发布访问项”  对话框中，选择 <Publisher_Machine_Name  >\repl_distribution  ，然后选择“确定”  。
    
    ![将登录添加到发布访问列表的选择](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -161,7 +162,7 @@ ms.locfileid: "72907707"
   
 2. 在“本地发布”文件夹中，右键单击“AdvWorksProductTrans”发布，然后选择“新建订阅”    。 新建订阅向导将启动： 
  
-   ![启动新建订阅向导的选择](media/tutorial-replicating-data-between-continuously-connected-servers/newsub.png)     
+   ![用于启动新建订阅向导的选择](media/tutorial-replicating-data-between-continuously-connected-servers/newsub.png)     
   
 3. 在“发布”  页上，选择“AdvWorksProductTrans”  ，然后选择“下一步”  ：  
 
@@ -191,9 +192,9 @@ ms.locfileid: "72907707"
   
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到订阅服务器。 展开“安全性”，右键单击“登录名”，然后选择“新建登录名”    。     
   
-   A. 在“常规”  页的“登录名”  下，选择“搜索”  ，并添加 <Subscriber_Machine_Name  >\repl_distribution  的登录名。
+   a. 在“常规”  页的“登录名”  下，选择“搜索”  ，并添加 <Subscriber_Machine_Name  >\repl_distribution  的登录名。
 
-   B. 在“用户映射”  页上，将登录名“db_owner”  成员身份授予“ProductReplica”  数据库。 
+   b. 在“用户映射”  页上，将登录名“db_owner”  成员身份授予“ProductReplica”  数据库。 
 
    ![配置订阅服务器上的登录的选择](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
 
@@ -223,8 +224,8 @@ ms.locfileid: "72907707"
 
 2. 在左窗格中展开发布服务器组，展开发布服务器实例，然后选择“AdvWorksProductTrans”  发布。  
   
-   A. 选择“跟踪令牌”选项卡  。  
-   B. 选择“插入跟踪器”  。    
+   a. 选择“跟踪令牌”选项卡  。  
+   b. 选择“插入跟踪器”  。    
    c. 在以下各列中查看跟踪令牌的占用时间：“发布服务器到分发服务器”、“分发服务器到订阅服务器”、“总滞后时间”    。 值为“挂起”  表示令牌尚未到达指定点。
 
    ![跟踪令牌的信息](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)

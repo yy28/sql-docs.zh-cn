@@ -1,7 +1,7 @@
 ---
-title: 为 SQL Server 可用性组配置 SLES 群集
+title: SUSE：为 Linux 上的 SQL Server 配置可用性组
 titleSuffix: SQL Server
-description: 了解如何在 SUSE Linux Enterprise Server (SLES) 上为 SQL Server 创建可用性组群集
+description: 了解如何在 SUSE Linux Enterprise Server (SLES) 上为 SQL Server 创建可用性组群集。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,28 +10,28 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: a14ad2d77b21dba2fd14ea7856aa7199bc081bbe
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809826"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558437"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>为 SQL Server 可用性组配置 SLES 群集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南介绍如何在 SUSE Linux Enterprise Server (SLES) 12 SP2 上为 SQL Server 创建三节点群集。 要实现高可用性，Linux 上的可用性组需要三个节点，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 此群集层基于在 [Pacemaker](https://clusterlabs.org/) 上构建的 SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability)。 
+本指南介绍如何在 SUSE Linux Enterprise Server (SLES) 12 SP2 上为 SQL Server 创建三节点群集。 若要实现高可用性，Linux 上的可用性组需要三个节点，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 此群集层基于在 [Pacemaker](https://clusterlabs.org/) 之上生成的 SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability)。 
 
-有关群集配置、资源代理选项、管理、最佳做法和建议的更多信息，请参阅 [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
+有关群集配置、资源代理选项、管理、最佳实践和建议的详细信息，请参阅 [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)（SUSE Linux Enterprise 高可用性扩展 12 SP2）。
 
 >[!NOTE]
->此时，SQL Server 在 Linux 上与 Pacemaker 集成不及在 Windows 上与 WSFC 集成的耦合性高。 Linux 上的 SQL Server 服务无法识别群集。 Pacemaker 控制群集资源的所有业务流程，包括可用性组资源。 在 Linux 上，不应该依赖提供 sys.dm_hadr_cluster 等群集信息的 Always On 可用性组动态管理视图 (DMV)。 此外，虚拟网络名称特定于 WSFC，Pacemaker 中无相同的等效项。 仍可创建一个侦听器，将其用于故障转移后的透明重新连接，但需要使用创建虚拟 IP 资源所用的 IP 在 DNS 服务器中手动注册侦听器名称（如以下部分所述）。
+>目前，SQL Server 在 Linux 上与 Pacemaker 集成不及在 Windows 上与 WSFC 集成的耦合性高。 Linux 上的 SQL Server 服务无法识别群集。 Pacemaker 控制群集资源的所有业务流程，包括可用性组资源。 在 Linux 上，不应该依赖提供 sys.dm_hadr_cluster 等群集信息的 Always On 可用性组动态管理视图 (DMV)。 此外，虚拟网络名称特定于 WSFC，Pacemaker 中无相同的等效项。 仍可创建一个侦听器，将其用于故障转移后的透明重新连接，但需要使用创建虚拟 IP 资源所用的 IP 在 DNS 服务器中手动注册侦听器名称（如以下部分所述）。
 
 
 ## <a name="roadmap"></a>路线图
 
-为实现高可用性而创建可用性组的过程因 Linux 服务器和 Windows Server 故障转移群集而异。 下面的列表对高级别步骤进行了说明： 
+为实现高可用性而创建可用性组的过程因 Linux 服务器和 Windows Server 故障转移群集而异。 下面的列表对高级步骤进行了说明： 
 
 1. [在群集节点上配置 SQL Server](sql-server-linux-setup.md)。
 
@@ -44,7 +44,7 @@ ms.locfileid: "70809826"
    >[!IMPORTANT]
    >生产环境需要 STONITH 等隔离代理，以实现高可用性。 本文中的示例不使用隔离代理。 它们仅用于测试和验证目的。 
    
-   >Pacemaker 群集使用隔离将群集恢复到已知状态。 配置隔离的方式取决于发行版和环境。 此时，隔离在某些云环境中不可用。 请参阅 [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing)。
+   >Pacemaker 群集使用隔离将群集恢复到已知状态。 配置隔离的方式取决于分发版和环境。 目前，隔离在某些云环境中不可用。 请参阅 [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing)。
 
 5. [将可用性组添加为群集中的资源](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)。 
 
@@ -58,7 +58,7 @@ ms.locfileid: "70809826"
 
 ### <a name="install-and-configure-sql-server-service-on-each-cluster-node"></a>在每个群集节点上安装和配置 SQL Server 服务
 
-1. 在所有节点上安装和设置 SQL Server 服务。 有关详细说明，请参阅[在 Linux 上安装 SQL Server](sql-server-linux-setup.md)。
+1. 在所有节点上安装和设置 SQL Server 服务。 有关详细说明，请参阅[安装 Linux 上的 SQL Server](sql-server-linux-setup.md)。
 
 1. 将一个节点指定为主节点，将其他节点指定为辅助节点。 本指南中将使用这些术语。
 
@@ -118,9 +118,9 @@ ms.locfileid: "70809826"
 
 3. 配置群集通信层 (Corosync)： 
 
-   A. 输入要绑定到的网络地址。 默认情况下，该脚本建议使用 eth0 网络地址。 或者，输入其他网络地址（例如，bond0 地址）。 
+   a. 输入要绑定到的网络地址。 默认情况下，该脚本建议使用 eth0 网络地址。 或者，输入其他网络地址（例如，bond0 地址）。 
 
-   B. 输入一个多播地址。 该脚本建议使用可用作默认地址的随机地址。 
+   b. 输入一个多播地址。 该脚本建议使用可用作默认地址的随机地址。 
 
    c. 输入一个多播端口。 该脚本建议将 5405 用作默认端口。 
 
@@ -204,7 +204,7 @@ crm configure property cluster-recheck-interval=2min
 >crm configure property start-failure-is-fatal=true
 >```
 >
->将现有 AG 资源属性 `failure-timeout` 更新为 `60s` 运行（将 `ag1` 替换为可用性组资源的名称）： 
+>若要将现有 AG 资源属性 `failure-timeout` 更新为 `60s`，请运行以下命令（将 `ag1` 替换为你的可用性组资源的名称）： 
 >
 >```bash
 >crm configure edit ag1
@@ -295,7 +295,7 @@ primitive admin_addr \
       cidr_netmask=<**24**>
 ```
 
-### <a name="add-colocation-constraint"></a>添加主机托管约束
+### <a name="add-colocation-constraint"></a>加主机托管约束
 Pacemaker 群集中的几乎所有决策（例如，选择资源运行的位置）都通过比较分数来完成。 分数按资源计算，群集资源管理器选择特定资源分数最高的节点。 （如果节点的某一资源分数为负，则该资源无法在此节点上运行。）我们可以使用约束来控制群集的决策。 约束具有一个分数。 如果约束的分数低于 INFINITY，则它仅作为建议项。 分数为 INFINITY 则表明它是必需项。 我们需要确保可用性组主要副本和虚拟 IP 资源在同一主机上运行，因此我们定义一个分数为 INFINITY 的主机托管约束。 
 
 要将虚拟 IP 的主机托管约束设置为在与主节点相同的节点上运行，请在一个节点上运行以下命令：

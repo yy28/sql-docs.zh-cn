@@ -1,6 +1,7 @@
 ---
-title: 教程：在服务器和移动客户端之间配置复制（合并）| Microsoft Docs
-ms.custom: ''
+title: 教程：配置合并复制
+description: 本教程介绍如何在 SQL Server 和移动客户端之间配置合并复制。
+ms.custom: seo-lt-2019
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 062e84a5ff0874353a40236ea6ce56c325dfa6ab
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517974"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321847"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>教程：在服务器和移动客户端之间配置复制（合并）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "72517974"
     ![“发布类型”和“订阅服务器类型”页](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
   
    
-6. 在“项目”页上，展开“表”节点   。 请选择以下三个表：“Employee”、“SalesOrderHeader”和“SalesOrderDetail”    。 选择“下一步”  。  
+6. 在“项目”页上，展开“表”节点   。 请选择以下三个表：“Employee”、“SalesOrderHeader”和“SalesOrderDetail”    。 选择“**下一页**”。  
 
    ![“项目”页上的表选择](media/tutorial-replicating-data-with-mobile-clients/mergearticles.png)
 
@@ -109,28 +110,28 @@ ms.locfileid: "72517974"
   
 10. 在“筛选表行”页上，选择“Employee (Human Resources)”，选择“添加”，然后选择“添加联接以扩展所选筛选器”     。  
   
-    A. 在“添加联接”对话框的“联接的表”下，选择“Sales.SalesOrderHeader”    。 在“手动编写联接语句”框中，按如下所示完成联接语句  ：  
+    a. 在“添加联接”对话框的“联接的表”下，选择“Sales.SalesOrderHeader”    。 在“手动编写联接语句”框中，按如下所示完成联接语句  ：  
   
     ```sql  
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    B. 在“指定联接选项”中，选择“唯一键”，然后选择“确定”    。
+    b. 在“指定联接选项”中，选择“唯一键”，然后选择“确定”    。
 
     ![用于将联接添加到筛选器的选择](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
   
 13. 在“筛选表行”页上，选择“SalesOrderHeader”，选择“添加”，然后选择“添加联接以扩展所选筛选器”     。  
   
-    A. 在“添加联接”  对话框的“联接的表”  下，选择“Sales.SalesOrderDetail”  。    
-    B. 选择“使用生成器创建语句”  。  
+    a. 在“添加联接”  对话框的“联接的表”  下，选择“Sales.SalesOrderDetail”  。    
+    b. 选择“使用生成器创建语句”  。  
     c. 在“预览”框中，确认联接语句如下所示  ：  
   
     ```sql  
     ON [SalesOrderHeader].[SalesOrderID] = [SalesOrderDetail].[SalesOrderID] 
     ```  
   
-    d. 在“指定联接选项”中，选择“唯一键”，然后选择“确定”    。 选择“下一步”  。 
+    d. 在“指定联接选项”中，选择“唯一键”，然后选择“确定”    。 选择“**下一页**”。 
 
     ![用于为销售订单添加其他联接的选择](media/tutorial-replicating-data-with-mobile-clients/joinsalestables.png)
   
@@ -138,7 +139,7 @@ ms.locfileid: "72517974"
 
     ![用于立即创建快照的选择](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. 在“代理安全性”页上，选择“安全设置”   。 在“进程帐户”框中输入 <Publisher_Machine_Name>\repl_snapshot，为此帐户提供密码，然后选择“确定”     。 选择“下一步”  。  
+22. 在“代理安全性”页上，选择“安全设置”   。 在“进程帐户”框中输入 <Publisher_Machine_Name>\repl_snapshot，为此帐户提供密码，然后选择“确定”     。 选择“**下一页**”。  
 
     ![用于设置快照代理安全性的选择](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
@@ -164,9 +165,9 @@ ms.locfileid: "72517974"
   
 2. 在“本地发布”文件夹中，右键单击 AdvWorksSalesOrdersMerge，再选择“属性”    。  
   
-   A. 选择“发布访问列表”页，选择“添加”   。 
+   a. 选择“发布访问列表”页，选择“添加”   。 
   
-   B. 在“添加发布访问项”对话框中，选择“<Publisher_Machine_Name>\repl_merge”，然后选择“确定”     。 再一次选择“确定”  。 
+   b. 在“添加发布访问项”对话框中，选择“<Publisher_Machine_Name>\repl_merge”，然后选择“确定”     。 再一次选择“确定”  。 
 
    ![用于添加合并代理登录名的选择](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
@@ -208,7 +209,7 @@ ms.locfileid: "72517974"
 
    ![用于合并代理安全性的选择](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
-9. 在“同步计划”页上，将“代理计划”设置为“仅按需运行”    。 选择“下一步”  。  
+9. 在“同步计划”页上，将“代理计划”设置为“仅按需运行”    。 选择“**下一页**”。  
 
    ![用于代理的“仅按需运行”选择](media/tutorial-replicating-data-with-mobile-clients/mergesyncschedule.png)
   
@@ -240,8 +241,8 @@ ms.locfileid: "72517974"
   
 2. 在“本地发布”文件夹中，右键单击“AdvWorksSalesOrdersMerge”发布，然后选择“属性”    。  
    
-   A. 选择“数据分区”页，然后选择“添加”   。   
-   B. 在“添加数据分区”对话框的“HOST_NAME 值”框中，输入 adventure-works\pamela0，然后选择“确定”     。  
+   a. 选择“数据分区”页，然后选择“添加”   。   
+   b. 在“添加数据分区”对话框的“HOST_NAME 值”框中，输入 adventure-works\pamela0，然后选择“确定”     。  
    c. 选择新添加的分区，选择“立即生成所选快照”，然后选择“确定”   。 
 
    ![用于添加分区的选择](media/tutorial-replicating-data-with-mobile-clients/partition.png)

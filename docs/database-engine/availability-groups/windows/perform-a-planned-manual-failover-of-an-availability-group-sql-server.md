@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: daa68b80718903051fdb2cfd9dd8b15b64b68b23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014593"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822491"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>执行 Always On 可用性组的计划手动故障转移 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68014593"
 > [!NOTE]  
 >  如果次要副本和主要副本都配置为自动故障转移模式，那么同步次要副本后，该副本还可以用作自动故障转移的目标。 有关详细信息，请参阅[可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
    
-##  <a name="BeforeYouBegin"></a> 开始之前 
+##  <a name="BeforeYouBegin"></a> 准备工作 
 
 >[!IMPORTANT]
 >在没有群集管理器的情况下，需要通过一些特定过程对读取缩放可用性组进行故障转移。 当可用性组具有 CLUSTER_TYPE = NONE 时，请按照[故障转移读取缩放可用性组上的主要副本](#fail-over-the-primary-replica-on-a-read-scale-availability-group)中的过程进行操作。
@@ -50,7 +50,7 @@ ms.locfileid: "68014593"
 -   目标次要副本当前必须与主要副本同步。 此次要副本上的所有辅助数据库都必须已联接到可用性组。 它们还必须与自己对应的主数据库同步（即本地辅助数据库必须为 SYNCHRONIZED）。 
   
     > [!TIP] 
-    >  要确定次要副本的故障转移就绪状态，请查询 [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 动态管理视图中的 **is_failover_ready** 列。 或查看 [AlwaysOn 组仪表板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的“故障转移就绪”  列。 
+    >  要确定次要副本的故障转移就绪状态，请查询 [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 动态管理视图中的 is_failover_ready 列  。 或查看 [AlwaysOn 组仪表板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的“故障转移就绪”  列。 
 -   只有目标辅助副本支持该任务。 您必须连接到承载目标辅助副本的服务器实例。 
   
 ###  <a name="Security"></a> Security 

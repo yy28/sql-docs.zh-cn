@@ -1,6 +1,7 @@
 ---
-title: 合并复制的备份和还原策略 | Microsoft Docs
-ms.custom: ''
+title: 备份和还原策略（合并）
+description: 介绍合并复制中使用的数据备份和还原策略。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a965da708880fc3411dbdd33e372e197afc9dff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 448688a54a245cadffa4c0c916d146e7c3e7e115
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948757"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321984"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>合并复制的备份和还原策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "67948757"
   
 -   发布服务器、分发服务器和所有订阅服务器上的 **master** 和 **msdb** 系统数据库。 当备份这些数据库中的一个数据库或相关的复制数据库时，应同时备份这些数据库。 例如，应在备份发布数据库的同时备份发布服务器上的 **master** 和 **msdb** 数据库。 如果还原发布数据库，请确保 **master** 和 **msdb** 数据库在复制配置和设置方面与发布数据库保持一致。  
   
- 如果执行定期日志备份，则在日志备份中应捕获所有与复制相关的更改。 如果不执行日志备份，则当与复制相关的设置发生更改时，应执行备份。 有关详细信息，请参阅 [需要已更新备份的常用操作](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)。  
+ 如果执行定期日志备份，则在日志备份中应捕获所有与复制相关的更改。 如果不执行日志备份，则当与复制相关的设置发生更改时，应执行备份。 有关详细信息，请参阅 [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)。  
   
  选择以下一种方法来备份和还原发布数据库，然后遵循针对分发数据库和订阅数据库列出的建议。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "67948757"
 > [!IMPORTANT]  
 >  使发布数据库与订阅数据库同步可使已发布的表还原到一个时间点，该时间点比从备份还原的其他未发布表的时间点更近。  
   
- 如果要与运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 早期版本的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]的订阅服务器同步，则订阅不可匿名；它必须是客户端订阅或服务器订阅（在早期版本中分别称为本地订阅和全局订阅）。  
+ 如果与运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的订阅服务器同步，则订阅无法匿名；它必须是客户端订阅或服务器订阅（在早期版本中称为本地订阅和全局订阅）。  
   
  若要同步订阅，请参阅 [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) 和 [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
@@ -87,7 +88,7 @@ ms.locfileid: "67948757"
   
  若要设置发布保持期，请参阅[设置订阅的过期期限](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)。  
   
- 若要同步订阅，请参阅 [同步推送订阅](../../../relational-databases/replication/synchronize-a-push-subscription.md) 和 [同步请求订阅](../../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
+ 若要同步订阅，请参阅 [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) 和 [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>备份和还原重新发布的数据库  
  如果某个数据库从发布服务器订阅数据，并依次将同样的数据发布给其他订阅数据库，则称该数据库为重新发布数据库。 还原重新发布数据库时，请遵从此主题中“备份和还原发布数据库”和“备份和还原订阅数据库”两节所介绍的准则。  

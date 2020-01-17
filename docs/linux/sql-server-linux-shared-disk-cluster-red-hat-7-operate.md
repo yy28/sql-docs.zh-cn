@@ -1,6 +1,7 @@
 ---
-title: 对适用于 SQL Server 的 Red Hat Enterprise Linux 共享群集进行操作
-description: 通过配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集实现高可用性。
+title: 为 Linux 上的 SQL Server 运行 RHEL FCI
+description: 了解如何为 SQL Server 运行 Red Hat Enterprise Linux (RHEL) 共享磁盘故障转移群集实例 (FCI) 以实现高可用性，例如手动故障转移 FCI、向群集添加或删除节点。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032241"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558522"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>对适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集进行操作
+# <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>为 SQL Server 运行 RHEL 故障转移群集实例 (FCI)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -36,7 +37,7 @@ ms.locfileid: "68032241"
 
 ![Red Hat Enterprise Linux 7 共享磁盘 SQL 群集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-有关群集配置、资源代理选项和管理的更多信息，请访问 [RHEL 参考文档](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
+有关群集配置、资源代理选项和管理的详细信息，请访问 [RHEL 参考文档](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
 
 ## <a name = "failManual"></a>手动故障转移群集
 
@@ -141,7 +142,7 @@ sudo crm_mon
    ```
 
    > [!NOTE]
-   > 如果使用的是未内置高可用性配置的其他防火墙，则需要打开以下端口，以便 Pacemaker 能与群集中的其他节点进行通信
+   > 如果使用的是没有内置高可用性配置的其他防火墙，则需要打开以下端口，Pacemaker 才能与群集中的其他节点通信
    >
    > * TCP：端口 2224、3121、21064
    > * UDP：端口 5405
@@ -209,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 在对群集进行故障排除时，了解三个守护程序如何协同工作以管理群集资源可能会有所帮助。 
 
-| 守护程序 | 描述 
+| 守护程序 | 说明 
 | ----- | -----
 | Corosync | 提供仲裁成员身份并在群集节点之间传递消息。
 | Pacemaker | 位于 Corosync 之上，为资源提供状态机器。 

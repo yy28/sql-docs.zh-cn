@@ -1,20 +1,20 @@
 ---
-title: 使用 Azure Kubernetes 服务 (AKS) 在 Kubernetes 中部署 SQL Server 容器
+title: 使用 Azure Kubernetes 服务 (AKS) 部署 SQL Server 容器
 description: 本教程介绍如何在 Azure Kubernetes 服务上使用 Kubernetes 部署 SQL Server 高可用性解决方案。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: fbf13520696d75ec851949e4b4b0e56272881779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 91607fd8a7bc7b3b104de6d0ba3e6ce97cab8137
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653706"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558342"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>使用 Azure Kubernetes 服务 (AKS) 在 Kubernetes 中部署 SQL Server 容器
 
@@ -37,7 +37,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
 ![Kubernetes SQL Server 群集示意图](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-在上图中，`mssql-server`是 [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/) 中的容器。 Kubernetes 协调群集中的资源。 [副本集](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可确保在节点发生故障后自动恢复 Pod。 应用程序会连接到服务。 在这种情况下，该服务表示负载均衡器，该负载均衡器托管在 `mssql-server` 发生故障后保持不变的 IP 地址。
+在上图中，`mssql-server`是 [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/) 中的容器。 Kubernetes 协调群集中的资源。 [副本集](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可确保在节点发生故障后自动恢复 Pod。 应用程序会连接到服务。 在这种情况下，该服务表示负载均衡器，承载着 `mssql-server` 发生故障后保持不变的 IP 地址。
 
 在下图中，`mssql-server` 容器发生了故障。 作为业务流程协调程序，Kubernetes 可保证副本集中正常实例的计数正确，并根据配置启动新容器。 业务流程协调程序会在同一节点上启动新 Pod，并且 `mssql-server` 会重新连接到同一个永久性存储。 该服务会连接到重新创建的 `mssql-server`。
 
@@ -315,7 +315,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
 Kubernetes 会自动重新创建 Pod 以恢复 SQL Server 实例，并连接到永久性存储。 使用 `kubectl get pods` 验证是否部署了新的 Pod。 使用 `kubectl get services` 验证新容器的 IP 地址是否相同。 
 
-## <a name="summary"></a>“摘要”
+## <a name="summary"></a>总结
 
 本教程介绍了如何将 SQL Server 容器部署到 Kubernetes 群集以实现高可用性。 
 

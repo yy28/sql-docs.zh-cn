@@ -1,6 +1,7 @@
 ---
-title: 配置预定义的复制警报 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 配置预定义的复制警报 (SSMS)
+description: 了解如何使用 SQL Server Management Studio (SSMS) 配置预定义的复制警报。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d5ff652d5817242ad5e77ed42b5839d97389056c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 9bf49c5892dd22b417df7aeec50f20c0f81b410b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906822"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322064"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>配置预定义的复制警报 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "72906822"
   
 -   **复制：代理自定义关闭**  
   
- 在  中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. 有关访问此选项卡的详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+ 在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的“警报”文件夹或复制监视器的“警告”选项卡中配置这些警报   。 有关访问此选项卡的详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  除这些警报之外，复制监视器还提供了一组与状态和性能相关的警告和警报。 有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 您也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警报基础结构为其他复制事件定义警报。 有关详细信息，请参阅[创建用户定义事件](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "72906822"
   
     -   在 **“响应”** 页上，指定是否应发送电子邮件和/或是否应执行作业。  
   
-         如果警报是“复制：订阅服务器未通过数据验证”，可以指定复制为此警报提供的响应作业：** 选择“执行作业”，再单击浏览按钮（“...”）。   在 **“定位作业”** 对话框中，单击 **“浏览”** 。 在 **“查找对象”** 对话框中，选择 **“重新初始化未通过数据验证的订阅”** 。 在两个打开的对话框中，单击 **“确定”** 。 作业执行时，它将把远程过程调用 (RPC) 用于重新初始化订阅的存储过程。 如果发布服务器使用远程分发服务器，您必须在发布服务器上定义远程服务器登录名，以便可以从分发服务器到发布服务器进行 RPC。  
+         如果警报是“复制：订阅服务器未通过数据验证”，可以指定复制为此警报提供的响应作业：  选择“执行作业”，再单击浏览按钮（“...”）。   在 **“定位作业”** 对话框中，单击 **“浏览”** 。 在 **“查找对象”** 对话框中，选择 **“重新初始化未通过数据验证的订阅”** 。 在两个打开的对话框中，单击 **“确定”** 。 作业执行时，它将把远程过程调用 (RPC) 用于重新初始化订阅的存储过程。 如果发布服务器使用远程分发服务器，您必须在发布服务器上定义远程服务器登录名，以便可以从分发服务器到发布服务器进行 RPC。  
   
     -   在 **“选项”** 页上，自定义响应文本。  
   
@@ -77,13 +78,13 @@ ms.locfileid: "72906822"
   
     -   在 **“响应”** 页上，指定是否应发送电子邮件和/或是否应执行作业。  
   
-         如果警报是“复制：订阅服务器未通过数据验证”，可以指定复制为此警报提供的响应作业：** 选择“执行作业”，再单击浏览按钮（“...”）。   在 **“定位作业”** 对话框中，单击 **“浏览”** 。 在 **“查找对象”** 对话框中，选择 **“重新初始化未通过数据验证的订阅”** 。 在两个打开的对话框中，单击 **“确定”** 。 作业执行时，它将把远程过程调用 (RPC) 用于重新初始化订阅的存储过程。 如果发布服务器使用远程分发服务器，您必须在发布服务器上定义远程服务器登录名，以便可以从分发服务器到发布服务器进行 RPC。  
+         如果警报是“复制：订阅服务器未通过数据验证”，可以指定复制为此警报提供的响应作业：  选择“执行作业”，再单击浏览按钮（“...”）。   在 **“定位作业”** 对话框中，单击 **“浏览”** 。 在 **“查找对象”** 对话框中，选择 **“重新初始化未通过数据验证的订阅”** 。 在两个打开的对话框中，单击 **“确定”** 。 作业执行时，它将把远程过程调用 (RPC) 用于重新初始化订阅的存储过程。 如果发布服务器使用远程分发服务器，您必须在发布服务器上定义远程服务器登录名，以便可以从分发服务器到发布服务器进行 RPC。  
   
     -   在 **“选项”** 页上，自定义响应文本。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [对复制代理事件使用警报](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)  

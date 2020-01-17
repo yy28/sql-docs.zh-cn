@@ -18,16 +18,16 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f69d57fd4d81e150df3694386ebe44650a13a9a8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 3d0d6fd90b9ec4c933da13d2a3780213095de721
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769872"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542058"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>对发布数据库进行架构更改
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  复制支持对已发布对象进行多种架构更改。 对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器中相应的已发布对象进行以下任何架构更改时，默认情况下更改都将传播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器：  
+  复制支持对已发布对象进行多种架构更改。 对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器中相应的发布对象进行下列任何一种架构更改时，默认会将该更改传播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器：  
   
 -   ALTER TABLE  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68769872"
   
 -   添加外键时引用的订阅服务器中的所有对象必须与发布服务器中的相应对象具有相同的名称和所有者。  
   
--   不支持显式添加、删除或更改索引。 支持为约束（如主键约束）隐式创建的索引。  
+-   不会复制显式添加、删除或更改索引，并且涉及显式索引的任何更改都需要在每个副本集上单独运行。 支持为约束（如主键约束）隐式创建的索引。  
   
 -   不支持更改或删除由复制管理的标识列。 有关自动管理标识列的详细信息，请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)。  
   
@@ -161,11 +161,11 @@ ms.locfileid: "68769872"
 -   合并复制提供了在排除故障期间跳过架构更改的存储过程。 有关详细信息，请参阅 [sp_markpendingschemachange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) 和 [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
+ [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-view-transact-sql.md)   
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   
+ [ALTER PROCEDURE (Transact-SQL)](../../../t-sql/statements/alter-procedure-transact-sql.md)   
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-function-transact-sql.md)   
- [ALTER TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-trigger-transact-sql.md)   
+ [ALTER TRIGGER (Transact-SQL)](../../../t-sql/statements/alter-trigger-transact-sql.md)   
  [发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [重新生成自定义事务过程以反映架构更改](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)  
   

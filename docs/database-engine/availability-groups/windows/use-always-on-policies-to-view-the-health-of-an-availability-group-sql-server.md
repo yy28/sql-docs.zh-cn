@@ -1,6 +1,7 @@
 ---
-title: 使用 AlwaysOn 策略查看可用性组的运行状况 | Microsoft Docs
-ms.custom: ''
+title: 查看可用性组运行状况的策略
+description: 使用 Always On 策略或 PowerShell 确定 Always On 可用性组的运行状况。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a25f06a464fe8ba44347b4f1f117cbde64ceab76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13f43e5f66ca7700e9dd4732e9cf45ee1921548d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013644"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244736"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 Always On 策略查看可用性组的运行状况 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +39,9 @@ ms.locfileid: "68013644"
   
 2.  单击服务器名称以展开服务器树。  
   
-3.  展开“Always On 高可用性”节点。  
+3.  展开“Always On 高可用性”  节点。  
   
-     右键单击“可用性组”节点或展开此节点，然后右键单击特定的可用性组。  
+     右键单击“可用性组”  节点或展开此节点，然后右键单击特定的可用性组。  
   
 4.  选择 **“显示面板”** 命令。  
   
@@ -85,7 +86,7 @@ ms.locfileid: "68013644"
   
      这些 cmdlet 接受以下选项：  
   
-    |选项|描述|  
+    |选项|说明|  
     |------------|-----------------|  
     |**AllowUserPolicies**|运行在 Always On 策略类别中找到的用户策略。|  
     |**InputObject**|对象的集合，表示可用性组、可用性副本或可用性数据库状态（取决于正在使用的 cmdlet）。 此 cmdlet 将计算指定对象的运行状况。|  

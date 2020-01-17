@@ -1,7 +1,7 @@
 ---
 title: 表 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2018
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d4a36b287554332589f11a352233eaffe972ac06
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a3ff2605e0c872bd5e544d618c88dc179e3c3b43
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981734"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564802"
 ---
 # <a name="table-transact-sql"></a>表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73981734"
 
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
   
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -65,7 +65,7 @@ table_type_definition
 collation_definition   
 由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 区域设置和比较样式、Windows 区域设置和二进制表示法或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则组成的列的排序规则。 如果未指定 collation_definition，则此列将继承当前数据库的排序规则  。 另外，如果将此列定义为公共语言运行时 (CLR) 用户定义类型，则它将继承用户定义类型的排序规则。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 可以在批处理的 FROM 子句中按名称引用 table 变量，如下例所示  ：
   
 ```sql
@@ -100,6 +100,10 @@ Table 变量没有分发统计信息  。 它们不会触发重新编译。 在�
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 优化器基于成本的原因模型中，不支持 table 变量  。 因此，在需要基于成本的选择来实现高效的查询计划时，不应使用这些变量。 在需要基于成本的选择时，临时表是首选。 此计划通常包含具有联接、并行度决策和索引选择选项的查询。
   
 修改 table 变量的查询不会生成并行查询执行计划  。 修改大型 table 变量或复杂查询中的 table 变量时，可能会影响性能   。 在需要修改 table 变量的情况下，请改用临时表  。 有关详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。 还可以并行执行读取 table 变量而不对变量进行修改的查询  。
+
+> [!IMPORTANT]
+> 数据库兼容性级别 150 提高了表变量的性能，同时引入了表变量延迟编译  。  有关详细信息，请参阅[表变量延迟编译](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)。
+>
   
 不能显式创建 table 变量的索引，也不保留 table 变量的任何统计信息   。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，引入了新语法，允许你使用表定义创建特定索引类型内联。  使用这种新语法，你可以在  table 变量上创建索引，作为表定义的一部分。 在某些情况下，可以通过使用临时表来改进性能，这些表提供完整的索引支持和统计信息。 有关临时表的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。
 
@@ -110,61 +114,6 @@ table 类型声明中的 CHECK 约束、DEFAULT 值和计算列不能调用用�
 由于 table 变量作用域有限，并且不是持久数据库的一部分，因而事务回滚不会影响它们  。
   
 表变量在创建后就无法更改。
-
-## <a name="table-variable-deferred-compilation"></a>表变量延迟编译
-表变量延迟编译  功能提升了计划质量和引用表变量的查询的整体性能。 在优化和初始计划编译期间，此功能会传播基于实际表变量行计数的基数估计。 然后，这种准确的行计数信息将用于优化下游计划操作。
-
-> [!NOTE]
-> 表变量延迟编译是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中的公共预览版功能。
-
-使用“表变量延迟编译”，引用表变量的语句会延迟编译，直到首次实际执行语句后。 此延迟编译行为与临时表的行为相同。 此更改导致使用实际基数，而不是原始单行猜测。 
-
-若要启用“表变量延迟编译”的公共预览版，请为查询运行时连接到的数据库启用数据库兼容性级别 150。
-
-表变量延迟编译不会更改表变量的任何其他特性  。 例如，此功能不会向表变量添加列统计信息。
-
-表变量延迟编译不会增加重新编译频率  。 相反，它将转移初始编译出现的位置。 生成的缓存计划是基于初始延迟编译表变量行计数生成的。 缓存计划由连续查询重复使用。 会对计划重复使用，直至此计划已逐出或进行重新编译。 
-
-用于初始计划编译的表变量行计数表示典型值可能不同于固定的猜测行计数。 如果不同，下游操作会有优势。 如果表变量行计数在整个执行过程中差别很大，则可能无法通过此功能来提升性能。
-
-### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>在不更改兼容性级别的情况下禁用表变量延迟编译
-可在数据库或语句范围内禁用表变量延迟编译，同时将数据库兼容性级别维持在 150 或更高。 若要对源自数据库的所有查询禁用表变量延迟编译，请在对应数据库的上下文中执行以下示例：
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
-```
-
-若要对源自数据库的所有查询重新启用表变量延迟编译，请在对应数据库的上下文中执行以下示例：
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
-```
-
-此外，还可以通过将 DISABLE_DEFERRED_COMPILATION_TV 分配为 USE HINT 查询提示，为特定查询禁用表变量延迟编译。  例如：
-
-```sql
-DECLARE @LINEITEMS TABLE 
-    (L_OrderKey INT NOT NULL,
-     L_Quantity INT NOT NULL
-    );
-
-INSERT @LINEITEMS
-SELECT L_OrderKey, L_Quantity
-FROM dbo.lineitem
-WHERE L_Quantity = 5;
-
-SELECT  O_OrderKey,
-    O_CustKey,
-    O_OrderStatus,
-    L_QUANTITY
-FROM    
-    ORDERS,
-    @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
-    AND O_OrderStatus = 'O'
-OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
-```
-
   
 ## <a name="examples"></a>示例  
   

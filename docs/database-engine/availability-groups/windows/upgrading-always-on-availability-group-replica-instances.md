@@ -1,6 +1,7 @@
 ---
-title: 升级 Always On 可用性组副本实例 | Microsoft Docs
-ms.custom: ''
+title: 升级可用性组副本
+dsecription: Describes how to upgrade replicas that are participating in an Always On availability group.
+ms.custom: seo-lt-2019
 ms.date: 01/10/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910788"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822198"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ ms.locfileid: "70910788"
 ## <a name="rolling-upgrade-process"></a>滚动升级过程  
  实际上，确切的过程取决于一些因素，如 AG 的部署拓扑和每个副本的提交模式。 但在最简单的方案中，滚动升级是涉及以下步骤的多阶段过程：  
   
- ![HADR 方案中的 AG 升级](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "AG Upgrade in HADR Scenario")  
+ ![HADR 方案中的 AG 升级](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "HADR 方案中的 AG 升级")  
   
 1.  在所有同步提交的副本上删除自动故障转移  
   
@@ -100,7 +101,7 @@ ms.locfileid: "70910788"
 ## <a name="ag-with-one-remote-secondary-replica"></a>具有一个远程次要副本的 AG  
  如果仅为灾难恢复部署了一个 AG，可能需要将该 AG 故障转移到异步提交的次要副本。 这样的配置如下图所示：  
   
- ![DR 方案中的 AG 升级](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "AG Upgrade in DR Scenario")  
+ ![DR 方案中的 AG 升级](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "DR 方案中的 AG 升级")  
   
  在此情况下，在滚动升级期间必须将 AG 故障转移到异步提交的次要副本。 要防止数据丢失，请在故障转移 AG 前将提交模式更改为同步提交并等待次要副本同步。 因此，滚动升级过程可能如下所示：  
   
@@ -127,7 +128,7 @@ ms.locfileid: "70910788"
 ## <a name="ag-with-failover-cluster-instance-nodes"></a>具有故障转移群集实例节点的 AG  
  如果 AG 包含故障转移群集实例 (FCI) 节点，应先升级不活动的节点，再升级活动的节点。 下图显示一个常见的 AG 方案（它包含 FCI 用于本地高可用性且用于远程灾难恢复的 FCI 之间采用异步提交模式）和升级顺序。  
   
- ![包含 FCI 的 AG 升级](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "AG Upgrade with FCIs")  
+ ![包含 FCI 的 AG 升级](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "包含 FCI 的 AG 升级")  
   
 1.  升级或更新 REMOTE2  
   

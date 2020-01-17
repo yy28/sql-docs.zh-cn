@@ -18,19 +18,19 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37da86b825ee68be83d0aa653005a1ea12db5ed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56e1f566b5ac6addfab3811c8430ce9c19e61636
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050807"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74762652"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT 架构权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   授予对架构的权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
  指定将对其授予权限的架构。 需要使用作用域限定符 ::  。  
   
  database_principal   
- 指定要向其授予权限的主体。 可以是以下类型之一：  
+ 指定要向其授予权限的主体。 下列类型作之一：  
   
 -   数据库用户  
 -   数据库角色  
@@ -64,7 +64,7 @@ GRANT OPTION
  指示该主体还可以向其他主体授予所指定的权限。  
   
 AS granting_principal   
- 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 可以是以下类型之一：  
+ 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
 -   数据库角色  
@@ -75,7 +75,7 @@ AS granting_principal
 -   映射到非对称密钥的数据库用户  
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
 >  在某些情况下，如果同时拥有 ALTER 权限和 REFERENCE 权限，被授权者将可以查看数据或执行未经授权的函数。 例如：对表拥有 ALTER 权限和对函数拥有 REFERENCE 权限的用户可对函数创建计算列并执行该函数。 在此情况下，用户必须还对计算列具有 SELECT 权限。  
@@ -87,9 +87,9 @@ AS granting_principal
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|删除|CONTROL|删除|  
+|DELETE|CONTROL|DELETE|  
 |在运行 CREATE 语句前执行|CONTROL|在运行 CREATE 语句前执行|  
-|Insert|CONTROL|Insert|  
+|INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
 |SELECT|CONTROL|SELECT|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -106,9 +106,7 @@ AS granting_principal
   
  U1 用户对数据库拥有 CREATE SYNONYM 权限，并对 S1 架构拥有 SELECT 权限。 因此，U1 用户可以在 S1 架构中为被拒绝的对象 T1 创建同义词，然后使用该同义词访问被拒绝的对象 T1。  
   
- U1 用户对数据库拥有 CREATE VIEW 权限，并对 S1 架构拥有 SELECT 权限。 因此，U1 用户可以在 S1 架构中创建视图，以便从被拒绝的对象 T1 中查询数据，然后使用该视图访问被拒绝的对象 T1。  
-  
- 有关详细信息，请参阅 Microsoft 知识库中编号为 914847 的文章。  
+ U1 用户对数据库拥有 CREATE VIEW 权限，并对 S1 架构拥有 SELECT 权限。 因此，U1 用户可以在 S1 架构中创建视图，以便从被拒绝的对象 T1 中查询数据，然后使用该视图访问被拒绝的对象 T1。
   
 ## <a name="permissions"></a>权限  
  授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。  

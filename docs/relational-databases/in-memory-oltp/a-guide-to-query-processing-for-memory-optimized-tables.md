@@ -1,6 +1,6 @@
 ---
-title: 内存优化表查询处理指南 | Microsoft Docs
-ms.custom: ''
+title: 内存优化表的查询处理
+ms.custom: seo-dt-2019
 ms.date: 05/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fb248183abf1511ed535740838b890225691fd0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ef5c610cb71a0f638c2dfba8aad1fbdb77308dfa
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908728"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412817"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示的估计的执行计划如下  
   
- ![用于联接基于磁盘的表的查询计划。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "用于联接基于磁盘的表的查询计划。")  
+ ![用于联接基于磁盘的表的查询计划。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "|::ref1::|")  
 用于联接基于磁盘的表的查询计划。  
   
  关于此查询计划：  
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  此查询的估计的计划为：  
   
- ![哈希联接基于磁盘的表的查询计划。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "哈希联接基于磁盘的表的查询计划。")  
+ ![哈希联接基于磁盘的表的查询计划。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "|::ref2::|")  
 哈希联接基于磁盘的表的查询计划。  
   
  在此查询中，Order 表的行是使用聚集索引检索的。 **Hash Match** 物理运算符现在用于 **Inner Join**。 Order 的聚集索引不是按 CustomerID 排序的，因此 **Merge Join** 需要一个排序运算符，这会影响性能。 请注意 **Hash Match** 运算符的相对开销 (75%) 和上一示例中 **Merge Join** 运算符的开销 (46%) 之间的比较。 优化器在上一示例中也考虑了 **Hash Match** 运算符，但结论是 **Merge Join** 运算符可以提供更好的性能。  
@@ -100,10 +100,10 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于磁盘的表的查询处理  
  下图显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中针对即席查询的查询处理流程：  
   
- ![SQL Server 查询处理管道。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "SQL Server 查询处理管道。")  
+ ![SQL Server 查询处理管道。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "|::ref3::|")  
 SQL Server 查询处理管道。  
   
- 在此方案中：  
+ 在本方案中：  
   
 1.  用户发出查询。  
   
@@ -220,7 +220,7 @@ END
   
  本机编译存储过程的调用转换为对 DLL 中函数的调用。  
   
- ![本机编译存储过程的执行。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "本机编译存储过程的执行。")  
+ ![本机编译存储过程的执行。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "|::ref7::|")  
 本机编译存储过程的执行。  
   
  本机编译存储过程的调用如下所述：  
@@ -261,9 +261,9 @@ GO
 |操作员|示例查询|说明|  
 |--------------|------------------|-----------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
-|Insert|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
+|INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`||  
-|删除|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
+|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
 |Compute Scalar|`SELECT OrderID+1 FROM dbo.[Order]`|此运算符用于内部函数和类型转换。 不是所有函数和类型转换在本机编译存储过程中都受支持。|  
 |Nested Loops Join|`SELECT o.OrderID, c.CustomerID FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|Nested Loops 是本机编译存储过程内唯一支持的联接运算符。 所有包含联接的计划都将使用 Nested Loops 运算符，即使以解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 执行的同一查询计划包含哈希或合并联接也是如此。|  
 |排序|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
@@ -294,7 +294,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  删除 Customer 表中一行外的所有行后：  
   
- ![列统计信息和联接。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "列统计信息和联接。")  
+ ![列统计信息和联接。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "|::ref8::|")  
   
  关于此查询计划：  
   

@@ -1,6 +1,6 @@
 ---
-title: 使用 DTA 建议改进性能 | Microsoft Docs
-ms.custom: ''
+title: DTA 建议的性能改进
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 700deff13eba1ce6320a49f997c20a9b40769eee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48614ea63ab56974e3eafb55b0f43dd83436ec85
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915207"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164917"
 ---
-# <a name="performance-improvements-using-dta-recommendations"></a>使用 DTA 建议改进性能
+# <a name="performance-improvements-using-database-engine-tuning-advisor-dta-recommendations"></a>使用数据库引擎优化顾问 (DTA) 改进性能的建议
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
@@ -30,8 +30,8 @@ ms.locfileid: "67915207"
 为了演示 DTA 建议对工作负荷性能带来的好处，我们试验几个真实的客户工作负荷。 对于每个客户工作负荷，我们让 DTA 分析了单个查询以及整个查询工作负荷。 我们考虑了三种备选方案：
   
   1. **仅限列存储**：仅为所有表生成列存储索引且不使用 DTA。 
-  2. **DTA（仅限行存储）**：结合仅建议行存储索引的选项运行 DTA。
-  3. **DTA（行存储 + 列存储）**：结合同时建议行存储索引和列存储索引的选项运行 DTA。  
+  2. **DTA（仅限行存储）** ：结合仅建议行存储索引的选项运行 DTA。
+  3. **DTA（行存储 + 列存储）** ：结合同时建议行存储索引和列存储索引的选项运行 DTA。  
    
 然后，对于每种方案，我们实现了建议的索引。 我们报告了多次运行查询或工作负荷后的平均 CPU 时间（以毫秒为单位）。 下图描绘了两个不同客户数据库中工作负荷的 CPU 时间（以毫秒为单位）。 请注意，Y 轴（CPU 时间）使用对数刻度。   
 
@@ -54,7 +54,7 @@ ms.locfileid: "67915207"
 ---
 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)
 
-[数据引擎优化顾问 (DTA) 中的列存储索引建议](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
+[数据引擎优化顾问 (DAT) 中的列存储索引建议](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
 
 [列存储索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)
 

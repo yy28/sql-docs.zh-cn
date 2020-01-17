@@ -1,6 +1,7 @@
 ---
-title: 复制、更改跟踪和更改数据捕获 - 可用性组 | Microsoft Docs
-ms.custom: ''
+title: 复制、更改跟踪和更改数据捕获及可用性组
+description: 了解使用 SQL Server Always On 可用性组时复制、更改跟踪和更改数据捕获的互操作性。
+ms.custom: seo-lt-2019
 ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251961"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235393"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>复制、更改跟踪和更改数据捕获 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +109,7 @@ ms.locfileid: "72251961"
     ```  
   
     > [!NOTE]  
-    >  在故障转移之前，您应在所有可能的故障转移目标上创建作业，并将其标记为禁用，直到主机上的可用性副本成为新的主副本。 当本地数据库变为辅助数据库时，还应禁用旧的主数据库上运行的 CDC 作业。 若要禁用和启用作业，请使用 [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 的 \@enabled 选项。 有关创建 CDC 作业的详细信息，请参阅 [sys.sp_cdc_add_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
+    >  在故障转移之前，您应在所有可能的故障转移目标上创建作业，并将其标记为禁用，直到主机上的可用性副本成为新的主副本。 当本地数据库变为辅助数据库时，还应禁用旧的主数据库上运行的 CDC 作业。 若要禁用和启用作业，请使用 [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 的 \@enabled 选项  。 有关创建 CDC 作业的详细信息，请参阅 [sys.sp_cdc_add_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
   
 -   **向 AlwaysOn 主数据库副本中添加 CDC 角色**  
   
@@ -141,7 +142,7 @@ ms.locfileid: "72251961"
   
      虽然在许多情况下，客户端应用程序始终希望能够连接到当前主要副本，但这并非利用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的唯一方法。 如果将可用性组配置为支持可读的辅助副本，则还可从辅助节点中收集更改数据。  
   
-     在配置可用性组之后，可使用与 SECONDARY_ROLE 关联的 ALLOW_CONNECTIONS 属性来指定受支持的辅助访问的类型。 如果配置为 ALL，便会允许与辅助副本建立任何连接，前提是连接要求只读访问权限。 如果配置为 READ_ONLY，则在连接到辅助数据库时必须指定只读意向才能使连接成功。 有关详细信息，请参阅[配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+     在配置可用性组之后，可使用与 SECONDARY_ROLE 关联的 ALLOW_CONNECTIONS 属性来指定受支持的辅助访问的类型。 如果配置为 ALL，便会允许与辅助副本建立任何连接，前提是连接要求只读访问权限。 如果配置为 READ_ONLY，则在连接到辅助数据库时必须指定只读意向才能使连接成功。 有关详细信息，请参阅 [配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
      以下查询可用来确定是否需要只读意向才能连接到可读辅助副本。  
   
@@ -155,7 +156,7 @@ ms.locfileid: "72251961"
   
      可用性组侦听器名称或显式节点名称都可用来查找辅助副本。 如果使用可用性组侦听器名称，则会将访问定向到任何合适的辅助副本。  
   
-     当使用 sp_addlinkedserver 来创建链接服务器以访问次要副本时，将 \@datasrc 参数用于可用性组侦听器名称或显式服务器名称，并且将 \@provstr 参数用于指定只读意向。  
+     当使用 sp_addlinkedserver 来创建链接服务器以访问次要副本时，将 \@datasrc 参数用于可用性组侦听器名称或显式服务器名称，并且将 \@provstr 参数用于指定只读意向    。  
   
     ```sql  
     EXEC sp_addlinkedserver   
@@ -171,13 +172,13 @@ ms.locfileid: "72251961"
   
      一般情况下，你应使用域登录名来对驻留在作为 AlwaysOn 可用性组成员的数据库中的更改数据进行客户端访问。 若要确保在故障转移后能够继续访问变更数据，域用户需要具有对支持可用性组副本的所有主机的访问特权。 如果将一个数据库用户添加到主副本中的数据库，则会将该用户与一个域登录名关联，然后将该数据库用户传播到辅助数据库，并且继续与指定的域登录名关联。 如果将新数据库用户与一个 SQL Server 身份验证登录名关联，则将传播辅助数据库上的用户而不关联登录名。 尽管可以使用关联的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证登录名来访问最初定义数据库用户的主副本上的更改数据，但该节点是能够进行访问的唯一节点。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证登录名将无法访问任何辅助数据库中的数据，也无法访问除定义了数据库用户的原始数据库之外的任何新的主数据库中的数据。  
      
--   禁用变更数据捕获  
+-   禁用变更数据捕获   
 如果需要在属于 AlwaysOn 可用性组的数据库中禁用“更改数据捕获”，则需要执行其他步骤以确保不会影响日志截断。 需要执行以下步骤之一，防止禁用变更数据捕获后，变更数据捕获会阻止日志截断：
     - 重启每个次要副本实例上的 SQL Server 服务
     - 或者，从可用性组的所有次要副本实例中删除此数据库，并使用自动或手动种子设定将它添加到可用性组副本实例
   
 ###  <a name="CT"></a> 更改跟踪  
- 启用了更改跟踪 (CT) 的数据库可以成为 AlwaysOn 可用性组的一部分。 无需任何其他配置。 使用 CDC 表值函数 (TVF) 来访问更改数据的更改跟踪客户端应用程序将需要具备在故障转移后定位主副本的能力。 如果客户端应用程序通过可用性组侦听器名称进行连接，则连接请求将始终会适当地定向到当前主副本。  
+ 启用了更改跟踪 (CT) 的数据库可以成为 AlwaysOn 可用性组的一部分。 不需要任何其他配置。 使用 CDC 表值函数 (TVF) 来访问更改数据的更改跟踪客户端应用程序将需要具备在故障转移后定位主副本的能力。 如果客户端应用程序通过可用性组侦听器名称进行连接，则连接请求将始终会适当地定向到当前主副本。  
   
 > [!NOTE]  
 >  必须始终从主副本中获取更改跟踪数据。 尝试访问辅助副本中的更改数据将会导致以下错误：  
@@ -206,7 +207,7 @@ ms.locfileid: "72251961"
   
 |||||  
 |-|-|-|-|  
-||**发布服务器**|**分发服务器**|**订阅服务器**|  
+||**发布者**|**分发服务器**|**订阅服务器**|  
 |**事务性**|是<br /><br /> 注意：不包括对双向和相互事务复制的支持。|是|是| 
 |**P2P**|否|否|否|  
 |**合并**|是|否|否|  
@@ -216,7 +217,7 @@ ms.locfileid: "72251961"
   
 ### <a name="considerations"></a>注意事项  
   
--   不支持将分发数据库用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或数据库镜像。 复制配置与配置了分发服务器的 SQL Server 实例相关联，因此无法镜像或复制分发数据库。 为了让分发服务器提供高可用性，请使用 SQL Server 故障转移群集。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
+-   不支持将分发数据库用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或数据库镜像。 复制配置与配置了分发服务器的 SQL Server 实例相关联，因此无法镜像或复制分发数据库。 为了让分发服务器提供高可用性，请使用 SQL Server 故障转移群集。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 -   尽管支持订阅服务器故障转移到辅助数据库，但这是用于合并复制订阅服务器的手动过程。 该过程与故障转移镜像的订阅服务器数据库所用的方法基本相同。 事务复制订阅服务器在参与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]时不需要特殊处理。 订阅服务器必须运行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 或更高版本才能加入可用性组。  有关详细信息，请参阅 [复制订阅服务器和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)
   
@@ -231,7 +232,7 @@ ms.locfileid: "72251961"
   
 -   [复制管理常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
- **Change data capture**  
+ **更改数据捕获**  
   
 -   [启用和禁用变更数据捕获 (SQL Server)](../../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)  
   

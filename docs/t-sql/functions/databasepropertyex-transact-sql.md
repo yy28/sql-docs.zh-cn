@@ -20,19 +20,19 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 033756cb65cc217e6c9d915715f5740596694147
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982175"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256099"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定的数据库，此函数返回指定数据库选项或属性的当前设置。
   
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -46,17 +46,17 @@ DATABASEPROPERTYEX ( database , property )
 
 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，`DATABASEPROPERTYEX` 需要当前数据库的名称。 如果提供其他数据库的名称，所有属性都返回为 NULL。
   
-property   
+*property*  
 一个表达式，用于指定要返回的数据库属性的名称。 property 的数据类型为 varchar(128)，并支持下表中的某个值   ：
   
 > [!NOTE]  
 >  如果数据库尚未启动，`DATABASEPROPERTYEX` 通过直接访问数据库检索这些值（而不是从元数据检索）时，调用 `DATABASEPROPERTYEX` 会返回 NULL。 AUTO_CLOSE 设置为“开”或脱机的数据库即“未启动”。  
   
-|属性|描述|返回的值|  
+|properties|说明|返回的值|  
 |---|---|---|
 |排序规则|数据库的默认排序规则名称。|排序规则名称<br /><br /> NULL：数据库未启动。<br /><br /> 基本数据类型：nvarchar(128) |  
 |ComparisonStyle|排序规则的 Windows 比较样式。 使用以下样式值生成已完成 ComparisonStyle 值的位图：<br /><br /> 忽略大小写：1<br /><br /> 忽略重音：2<br /><br /> 忽略假名：65536<br /><br /> 忽略宽度：131072<br /><br /> <br /><br /> 例如，196609 的默认值是将忽略大小写、忽略假名和忽略宽度选项合并在一起的结果。|返回比较样式。<br /><br /> 对所有二进制排序规则均返回 0。<br /><br /> 基本数据类型：int |  
-|版本|数据库版本或服务层。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  。<br /><br /> <br /><br /> 常规用途<br /><br /> 业务关键型<br /><br /> “基本”<br /><br /> Standard<br /><br /> Premium<br /><br /> 系统（针对 master 数据库）<br /><br /> NULL：数据库未启动。<br /><br /> 基本数据类型：nvarchar(64) |  
+|版本|数据库版本或服务层。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  。<br /><br /> <br /><br /> 常规用途<br /><br /> 业务关键<br /><br /> 基本<br /><br /> Standard<br /><br /> Premium<br /><br /> 系统（针对 master 数据库）<br /><br /> NULL：数据库未启动。<br /><br /> 基本数据类型：nvarchar(64) |  
 |IsAnsiNullDefault|数据库遵循 ISO 规则，允许 Null 值。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
 |IsAnsiNullsEnabled|所有与 Null 的比较将取值为未知。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
 |IsAnsiPaddingEnabled|在比较或插入前，字符串将被填充到相同长度。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int |  
@@ -89,10 +89,10 @@ property
 |LCID|排序规则的 Windows 区域设置标识符 (LCID)。|LCID 值（十进制格式）。<br /><br /> 基本数据类型：int |  
 |MaxSizeInBytes|最大数据库大小（以字节为单位）。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL：数据库未启动<br /><br /> 基本数据类型：bigint |  
 |恢复|数据库恢复模式|FULL：完整恢复模式<br /><br /> BULK_LOGGED：大容量日志模型<br /><br /> SIMPLE：简单恢复模式<br /><br /> 基本数据类型：nvarchar(128) |  
-|ServiceObjective|描述 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]或 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的数据库的性能级别。|可以是以下类型之一：<br /><br /> NULL：数据库没有启动<br /><br /> 已共享（针对 Web/企业版本）<br /><br /> “基本”<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> 系统（针对主数据库）<br /><br /> 基本数据类型：nvarchar(32) |  
+|ServiceObjective|描述 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]或 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的数据库的性能级别。|下列类型作之一：<br /><br /> NULL：数据库没有启动<br /><br /> 已共享（针对 Web/企业版本）<br /><br /> 基本<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> 系统（针对主数据库）<br /><br /> 基本数据类型：nvarchar(32) |  
 |ServiceObjectiveId|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 中的服务器目标 ID。|uniqueidentifier 确定服务目标  。|  
 |SQLSortOrder|SQL Server 早期版本中支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序顺序 ID。|0：数据库使用的是 Windows 排序规则<br /><br /> >0：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序顺序 ID<br /><br /> NULL：输入无效或数据库未启动<br /><br /> 基本数据类型：tinyint |  
-|“登录属性”|数据库状态。|ONLINE：数据库可用于查询。<br /><br /> **注意：** 数据库处于打开状态但尚未恢复时，可能返回 ONLINE 状态。 要确定数据库何时可以接受连接，可以查询 DATABASEPROPERTYEX 的 Collation 属性  。 在数据库排序规则返回非 Null 值之后，数据库就可以接受连接了。 对于 Always On 数据库，可以查询 `sys.dm_hadr_database_replica_states` 的 database_state 或 database_state_desc 列。<br /><br /> OFFLINE：已将数据库显式置于脱机状态。<br /><br /> RESTORING：已启动数据库还原。<br /><br /> RECOVERING：已启动数据库还原，且数据库尚未准备好进行查询。<br /><br /> SUSPECT：数据库未恢复。<br /><br /> EMERGENCY：数据库处于紧急只读状态。 只有 sysadmin 成员可进行访问。<br /><br /> 基本数据类型：nvarchar(128) |  
+|状态|数据库状态。|ONLINE：数据库可用于查询。<br /><br /> **注意：** 当数据库打开但尚未恢复时，该函数可能返回 ONLINE 状态。 要确定 ONLINE 数据库是否可以接受连接，可以查询 DATABASEPROPERTYEX 的 Collation 属性  。 在数据库排序规则返回非 Null 值之后，ONLINE 数据库就可以接受连接了。 对于 Always On 数据库，可以查询 `sys.dm_hadr_database_replica_states` 的 database_state 或 database_state_desc 列。<br /><br /> OFFLINE：已将数据库显式置于脱机状态。<br /><br /> RESTORING：已启动数据库还原。<br /><br /> RECOVERING：已启动数据库还原，且数据库尚未准备好进行查询。<br /><br /> SUSPECT：数据库未恢复。<br /><br /> EMERGENCY：数据库处于紧急只读状态。 只有 sysadmin 成员可进行访问。<br /><br /> 基本数据类型：nvarchar(128) |  
 |Updateability|指示是否可以修改数据。|READ_ONLY：数据库支持数据读取，但不支持数据修改。<br /><br /> READ_WRITE：数据库支持数据读取和修改。<br /><br /> 基本数据类型：nvarchar(128) |  
 |UserAccess|指示哪些用户可以访问数据库。|SINGLE_USER：一次仅限一个 db_owner、dbcreator 或 sysadmin 用户<br /><br /> RESTRICTED_USER：仅限 db_owner、dbcreator 或 sysadmin 角色的成员<br /><br /> MULTI_USER：所有用户<br /><br /> 基本数据类型：nvarchar(128) |  
 |版本|用于创建数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码的内部版本号。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|版本号：数据库处于打开状态。<br /><br /> NULL：数据库尚未启动。<br /><br /> 基本数据类型：int | 
@@ -105,12 +105,12 @@ property
 ## <a name="return-types"></a>返回类型
 **sql_variant**
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
 出现错误时或调用方没有查看对象的权限时将返回 NULL。
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 这意味着，如果用户对该对象没有任何权限，那些发出元数据的内置函数（如 `OBJECT_ID`）可能会返回 NULL。 有关详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `DATABASEPROPERTYEX` 一次只返回一个属性设置。 若要显示多个属性设置，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。
   
 ## <a name="examples"></a>示例  

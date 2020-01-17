@@ -1,6 +1,7 @@
 ---
-title: 在现有发布中添加和删除项目 | Microsoft Docs
-ms.custom: ''
+title: 添加或删除项目（现有发布）
+description: 了解如何向 SQL Server 的现有发布添加项目和从中删除项目。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,14 +21,14 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5432d4456bf20f73a799726edd53e31f8707a067
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e996ccfd6f6930b4741f15b3da82c1f2856bd4db
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907799"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321316"
 ---
-# <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在现有发布中添加和删除项目
+# <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>向现有发布添加项目和从中删除项目
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   在创建发布后，可以添加和删除项目。 可以随时添加项目，但删除项目所需的操作取决于复制的类型和删除项目的时间。  
   
@@ -51,9 +52,9 @@ ms.locfileid: "72907799"
   
 3.  创建快照后，同步订阅以复制新项目的架构和数据。  
 
-    -   若要同步推送订阅，请参阅[同步推送订阅](../../../relational-databases/replication/synchronize-a-push-subscription.md)。  
+    -   若要同步推送订阅，请参阅 [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
-    -   若要同步请求订阅，请参阅[同步请求订阅](../../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
+    -   若要同步请求订阅，请参阅 [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
 ## <a name="dropping-articles"></a>删除项目  
  可以随时从发布中删除项目，但必须考虑以下行为：  

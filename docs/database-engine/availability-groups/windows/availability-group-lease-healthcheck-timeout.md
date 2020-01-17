@@ -1,7 +1,7 @@
 ---
-title: 可用性组租用运行状况检查超时机制
+title: 可用性组租用运行状况检查超时
 description: 针对 AlwaysOn 可用性组的租用、群集和运行状况检测时间的机制和指南。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd476cbcf375b4c54f7831908e43ea5872da8dcb
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 78db83e29b7fe8671d1cf048275f379592bd0d95
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874358"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254061"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的租用、群集和运行状况检测超时的机制和指南 
 
@@ -41,7 +41,7 @@ Always On 资源 DLL 监视内部 SQL Server 组件的状态。 `sp_server_diagn
 
 与其他故障转移机制不同，SQL Server 实例在租用机制中发挥着积极的作用。 租用机制用于充当群集资源主机与 SQL Server 进程之间的“表面活跃度”验证机制。 该机制用于确保双方（群集服务器和 SQL Server 服务）通信频繁，检查彼此的状态并最终避免出现裂脑情况。  使 AG 作为主副本联机时，SQL Server 实例会为 AG 生成一个专用的租用工作进程线程。 租用工作进程与包含续租和租用停止事件的资源主机共享一小块内存区域。 租用工作进程和资源主机以循环方式工作，发出信号通知各自的续租事件，然后休眠，等待另一方发出信号通知自己的续租事件或停止事件。 资源主机和 SQL Server 租用线程都会维护一个生存时间值，每次线程在由另一个线程发出信号后唤醒时都会更新这个值。 如果在等待信号时达到生存时间，则租约到期，然后将副本转换到该特定 AG 的解析状态。 如果发出信号通知租用停止事件，则副本将转换为解析角色。 
 
-![图像](media/availability-group-lease-healthcheck-timeout/image1.png) 
+![image](media/availability-group-lease-healthcheck-timeout/image1.png) 
 
 租用机制强制执行 SQL Server 和 Windows Server 故障转移群集之间的同步。 发出故障转移命令时，群集服务会对当前主副本的资源 DLL 进行脱机调用。 资源 DLL 首先尝试使用存储过程使 AG 脱机。 如果此存储过程失败或超时，则会将失败报告回群集服务，然后发出终止命令。 终止再次尝试执行相同的存储过程，但使 AG 在一个新副本上联机之前，群集这次不会等待资源 DLL 报告成功或失败。 如果第二个过程调用失败，那么资源主机将不得不依赖租用机制使实例脱机。 调用资源 DLL 使 AG 脱机时，资源 DLL 会发出租用停止事件的信号，唤醒 SQL Server 租用工作线程使 AG 脱机。 即使未发出停止事件的信号，租用也将过期，并且副本将转换为解析状态。 
 
@@ -153,7 +153,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetDelay \<= CrossSubnetDelay 
   
- | 超时设置 | 用途 | Between | 使用 | IsAlive 和 LooksAlive | 原因 | 结果 
+ | 超时设置 | 目的 | 出现在 | 使用 | IsAlive 和 LooksAlive | 原因 | 业务成效 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
  | 租用超时 </br> **默认值：20000** | 防止裂脑 | 主站点到群集 </br> (HADR) | [Windows 事件对象](/windows/desktop/Sync/event-objects)| 在两者中使用 | OS 无响应、虚拟内存不足、工作集分页、生成转储、限定 CPU、WSFC 故障（失去仲裁） | AG 资源脱机-联机、故障转移 |  
  | 会话超时 </br> **默认值：10000** | 就主副本和辅助副本之间的通信问题进行通知 | 辅助副本到主副本 </br> (HADR) | [TCP 套接字（通过 DBM 终结点发出的消息）](/windows/desktop/WinSock/windows-sockets-start-page-2) | 二者都不使用 | 网络通信， </br> 辅助副本的问题 - 故障、OS 无响应、资源争用 | 辅助副本 - 已断开连接 | 

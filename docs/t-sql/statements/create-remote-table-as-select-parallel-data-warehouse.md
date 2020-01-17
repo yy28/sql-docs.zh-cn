@@ -1,6 +1,6 @@
 ---
-title: CREATE REMOTE TABLE AS SELECT（并行数据仓库）| Microsoft Docs
-ms.custom: ''
+title: CREATE REMOTE TABLE AS SELECT（并行数据仓库）
+ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -10,12 +10,12 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbebdf4b35b10e584c023e0d34eb8a652d15c1cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117320"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401704"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT（并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68117320"
   
  要配置远程服务器，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“远程表复制”。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 ## <a name="arguments"></a>参数  
  *database_name*  
- 在其中创建远程表的数据库。 database_name 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 默认情况下，用户使用默认数据库登录到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+ 在其中创建远程表的数据库。 database_name 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库  。 默认情况下，用户使用默认数据库登录到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
  *schema_name*  
  新表的架构。 默认情况下，用户使用默认架构登录到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
@@ -53,9 +53,9 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  *table_name*  
  新表的名称。 有关允许的表名的详细信息，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“对象命名规则”。  
   
- 远程表已创建为堆。 没有 CHECK 约束或触发。 远程表列的排序规则与源表列的排序规则相同。 这适用于类型为 char、nchar、varchar 和 nvarchar 的列。  
+ 远程表已创建为堆。 没有 CHECK 约束或触发。 远程表列的排序规则与源表列的排序规则相同。 这适用于类型为 char、nchar、varchar 和 nvarchar 的列     。  
   
- connection_string  
+ connection_string   
  指定用于连接到远程服务器和数据库的 `Data Source`、`User ID` 和 `Password` 参数的字符串。  
   
  连接字符串是由分号分隔的键值对列表。 关键字不区分大小写。 忽略键值对之间的空格。 但是，值可能会区分大小写，具体取决于数据源。  
@@ -63,25 +63,25 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  *数据源*  
  指定名称或 IP 地址和远程 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 TCP 端口号的参数。  
   
- hostname 或 IP_address  
- 远程服务器计算机的名称或远程服务器的 IPv4 地址。 不支持 IPv6 地址。 可以在格式 Computer_Name\Instance_Name 或 IP_address\Instance_Name 中指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例。 服务器必须是远程的，因此才不会指定为（本地）。  
+ hostname 或 IP_address    
+ 远程服务器计算机的名称或远程服务器的 IPv4 地址。 不支持 IPv6 地址。 可以在格式 Computer_Name\Instance_Name 或 IP_address\Instance_Name 中指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例   。 服务器必须是远程的，因此才不会指定为（本地）。  
   
- TCP 端口号  
- 连接的 TCP 端口号。 对于没有在默认端口 1433 上侦听的 SQL Server 实例，可以将其 TCP 端口号指定为 0 到 65535 之间的数字。 例如：ServerA,1450 或 10.192.14.27,1435  
+ TCP 端口号   
+ 连接的 TCP 端口号。 对于没有在默认端口 1433 上侦听的 SQL Server 实例，可以将其 TCP 端口号指定为 0 到 65535 之间的数字。 例如：ServerA,1450 或 10.192.14.27,1435    
   
 > [!NOTE]  
 >  建议使用 IP 地址连接到远程服务器。 根据网络配置，使用计算机名称进行连接可能需要额外的步骤，才能使用非设备 DNS 服务器将名称解析为正确的服务器。 使用 IP 地址连接时，不需要此步骤。 有关详细信息，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“使用 DNS 转发器解析非设备 DNS 名称（分析平台系统）”。  
   
- user_name  
- 有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名。 最大字符数为 128。  
+ user_name   
+ 有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名。 最多包含 128 个字符。  
   
- password  
- 登录密码。 最大字符数为 128。  
+ password   
+ 登录密码。 最多包含 128 个字符。  
   
- batch_size  
- 每批的最大行数。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 将批处理中的行发送到目标服务器。 Batch_size 为一个大于或等于 0 的正整数。 默认为 0。  
+ batch_size   
+ 每批的最大行数。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 将批处理中的行发送到目标服务器。  Batch_size 为一个大于或等于 0 的正整数。 默认为 0。  
   
- WITH common_table_expression  
+ WITH common_table_expression   
  指定临时命名的结果集，这些结果集称为公用表表达式 (CTE)。 有关详细信息，请参阅 [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
  SELECT \<select_criteria> 指定哪些数据将填充新远程表的查询谓词。 有关 SELECT 语句的信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
@@ -123,7 +123,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ## <a name="metadata"></a>元数据  
  使用 [sys.dm_pdw_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md) 查看将所选数据复制到远程 SMP 服务器的进度。 PARALLEL_COPY_READER 类型的行包含此信息。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  CREATE REMOTE TABLE 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，而不使用 Windows 身份验证。  
   
  除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端口、管理端口和托管端口外，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 面向外部的网络必须启用防火墙。  
@@ -143,7 +143,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>B. 查询 sys.dm_pdw_dms_workers DMV 的远程表复制状态  
+### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>B. 查询 sys.dm_pdw_dms_workers DMV 的远程表复制状态  
  此查询显示了如何查看远程表复制的复制状态。  
   
 ```  

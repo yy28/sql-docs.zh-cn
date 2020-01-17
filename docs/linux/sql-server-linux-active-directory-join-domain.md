@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305276"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75224507"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>将 Linux 主机上的 SQL Server 加入 Active Directory 域
 
@@ -178,7 +178,7 @@ ping contoso.com
 
    SQL Server 使用 SSSD 和 NSS 将用户帐户和组映射到安全标识符 (SID)。 若要成功创建 AD 登录名，必须为 SQL Server 配置 SSSD 并运行它。 “realmd”通常会在加入域时自动执行此操作，但在某些情况下，你必须单独执行此操作  。
 
-   有关详细信息，请参阅如何[手动配置 SSSD](https://access.redhat.com/articles/3023951) 和[配置 NSS 以使用 SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
+   有关详细信息，请参阅如何[手动配置 SSSD](https://access.redhat.com/articles/3023951) 和[配置 NSS 以使用 SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
 
 1. 请确认自己现在是否可以从域中收集有关用户的信息，及是否可以该用户的身份获取 Kerberos 工单。 下面的示例使用 id  、[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 和 [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) 命令执行此操作。
 

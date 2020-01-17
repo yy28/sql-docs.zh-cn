@@ -1,7 +1,7 @@
 ---
-title: 备份和还原：互操作性和共存 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/05/2016
+title: 备份和还原：功能互操作性
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5af79e93104530b3027133ba68026cfd914f5fe5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940866"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247453"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>备份和还原：互操作性和共存 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "67940866"
  本节仅与包含多个文件组的完整模式数据库有关。  
   
 > [!NOTE]  
->  后续版本的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将删除数据库镜像功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 该工具将由 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 代替。  
+>  后续版本的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将删除数据库镜像功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
   
  “数据库镜像”是一种提高数据库可用性的解决方案。 镜像基于每个数据库实现，并且只适用于使用完整恢复模式的数据库。 有关详细信息，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67940866"
 >  若要分发数据库中部分文件组的副本，请使用复制：仅复制文件组中您要复制到其他服务器的那些对象。 有关复制的详细信息，请参阅 [SQL Server 复制](../../relational-databases/replication/sql-server-replication.md)。  
   
 ### <a name="creating-the-mirror-database"></a>创建镜像数据库  
- 镜像数据库是通过还原 (WITH NORECOVERY) 镜像服务器上主体数据库的备份创建的。 还原后的数据库必须保持相同的数据库名称。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)中若干功能的备份和还原注意事项。  
+ 镜像数据库是通过还原 (WITH NORECOVERY) 镜像服务器上主体数据库的备份创建的。 还原后的数据库必须保持相同的数据库名称。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  
   
  您可以使用段落还原顺序在支持镜像数据库的地方创建镜像数据库。 但是，在开始镜像之前，必须还原所有文件组后才能，通常还必须还原日志备份以保证镜像数据库的时间与原始数据库的时间足够接近。 有关详细信息，请参阅[段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)。  
   

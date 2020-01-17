@@ -1,6 +1,6 @@
 ---
-title: 策略评估结果页（Always On 仪表板）| Microsoft Docs
-description: 在 SQL Server Management Studio 的“Always On 仪表板”中的“策略评估结果页”的介绍。
+title: 策略评估结果页（Always On 仪表板）
+description: 介绍 SQL Server Management Studio (SSMS) 中“Always On 仪表板”上的“策略评估结果”页面。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6f13781e0d0820aaccf3a7fdc9e72145c08c6b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014545"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235440"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>策略评估结果页（Always On 仪表板）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,12 +29,12 @@ ms.locfileid: "68014545"
  **检测到的问题**  
  为每个检测到的问题显示一行。 与问题相关联的图标提供可视指示器，以便按如下所示指示这一问题的严重性：  
   
-|图标|Severity|  
+|图标|严重性|  
 |----------|--------------|  
 |![UI 图标：错误](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 图标：错误")|严重|  
 |![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|警告|  
   
- **Description**  
+ **说明**  
  此网格将显示所选问题的简短说明。  
   
  **详细信息**  

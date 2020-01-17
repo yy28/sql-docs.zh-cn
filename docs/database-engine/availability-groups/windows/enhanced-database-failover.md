@@ -1,5 +1,5 @@
 ---
-title: 为可用性组启用增强的数据库故障转移
+title: 可用性组的增强型故障转移
 description: 启用增强的数据库故障转移的步骤，如果 Always On 可用性组中的数据库不再能够写入事务，则会触发故障转移。
 ms.custom: seodec18
 ms.date: 09/25/2017
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 91246775b917cf7c56218482b5c7b0c86264d612
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acd444e1ded8ab0530f605280e7aaa5c5dec907
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947961"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822243"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>向 Always On 可用性组中的数据库启用增强的数据库故障转移
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ SQL Server 2016 引入了一个新的可选行为，名为“增强的数据库�
 
 在实例 A 和实例 B 之间配置一个可用性组，其中包含两个数据库：DB1 和 DB2。 可用性模式设置为随自动故障转移模式同步提交，同时启用增强的数据库故障转移。 无法访问包含 DB2 的数据和事务日志文件的磁盘。 检测到问题时，可用性组将自动故障转移到实例 B。
 
-## <a name="configure-and-view-the-enhanced-database-failover-option"></a>配置和查看增强的数据库故障转移选项
+## <a name="configure-enhanced-failover"></a>配置增强型故障转移
 
 可使用 SQL Server Management Studio 或 Transact-SQL 配置增强的数据库故障转移。 PowerShell cmdlet 当前不具有此功能。 默认情况下，增强的数据库故障转移处于禁用状态。
 

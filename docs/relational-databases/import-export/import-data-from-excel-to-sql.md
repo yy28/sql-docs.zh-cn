@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77572a417836683e10ba3c7736fe4cdd0db4e129
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708143"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245272"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>将 Excel 数据导入 SQL Server 或 Azure SQL 数据库
 
@@ -49,9 +49,9 @@ SSIS 或 Azure 数据工厂等复杂工具和服务的完整描述不属于本�
 
 通过单步执行 SQL Server 导入和导出向导各页面，直接从 Excel 文件导入数据。 （可选）将设置保存为可以稍后自定义和重用的 SQL Server Integration Services (SSIS) 包。
 
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。
+1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例。
 
-2.  展开“数据库”。
+2. 展开 **“数据库”** 。
 3. 右键单击某个数据库。
 4. 指向“任务”  。
 5. 单击以下选项之一。
@@ -275,7 +275,7 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 
 ### <a name="microsoftaceoledb120-has-not-been-registered"></a>Microsoft.ACE.OLEDB.12.0 尚未注册
 
-发生此错误的原因是未安装 OLEDB 提供程序。 请通过 [Microsoft Access 数据库引擎 2010 可再发行组件](https://www.microsoft.com/en-us/download/details.aspx?id=13255)进行安装。 如果 Windows 和 SQL Server 都是 64 位，请务必安装 64 位版本。
+发生此错误的原因是未安装 OLEDB 提供程序。 请通过 [Microsoft Access 数据库引擎 2010 可再发行组件](https://www.microsoft.com/download/details.aspx?id=13255)进行安装。 如果 Windows 和 SQL Server 都是 64 位，请务必安装 64 位版本。
 
 完整错误为：
 
@@ -284,7 +284,7 @@ Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>无法为链接服务器 "(null)" 创建 OLE DB 提供程序 "Microsoft.ACE.OLEDB.12.0" 的实例
+### <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>无法为链接服务器 "(null)" 创建 OLE DB 提供程序 "Microsoft.ACE.OLEDB.12.0" 的实例
 
 这表示 Microsoft OLEDB 配置错误。 运行以下 Transact-SQL 代码可解决此问题：
 

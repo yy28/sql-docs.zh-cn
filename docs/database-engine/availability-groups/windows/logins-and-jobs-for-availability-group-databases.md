@@ -1,7 +1,7 @@
 ---
-title: 在可用性组中管理使用数据库的作业的登录名
+title: 管理可用性组中数据库的作业登录名
 description: 关于如何管理使用参与 AlwaysOn 可用性组的数据库的作业登录名的说明。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 05645d3ce6bcccd006db72fefa9343153e3a0390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 840e34dcad069ccd6dc2c4102c6a2a85b7e4fbf5
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022586"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822232"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>在 AlwaysOn 可用性组中管理使用数据库的作业的登录名
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "68022586"
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
--   [创建一个登录名](../../../relational-databases/security/authentication-access/create-a-login.md)  
+-   [创建登录名](../../../relational-databases/security/authentication-access/create-a-login.md)  
   
 -   [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md)。  
   

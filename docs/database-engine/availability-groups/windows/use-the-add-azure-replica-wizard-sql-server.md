@@ -1,6 +1,7 @@
 ---
-title: 使用“添加 Azure 副本向导”(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 将 Azure VM 配置为可用性组中的次要副本
+description: 通过使用“添加 Azure 副本向导”，你可以在混合 IT 环境中创建新的 Azure VM，将它配置为新的或现有 Always On 可用性组的辅助副本。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ed09ad0f6325ab2ed8ee1d89d7c36f19584a3475
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 2eb45257f2641b1e4e9f94865784f8910ebf27fd
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176204"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822662"
 ---
-# <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用“添加 Azure 副本向导”(SQL Server)
+# <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>将 Azure VM 配置为可用性组中的次要副本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   通过使用“添加 Azure 副本向导”，你可以在混合 IT 环境中创建新的 Azure VM，将它配置为新的或现有 Always On 可用性组的辅助副本。  
   
@@ -26,7 +27,7 @@ ms.locfileid: "70176204"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果你从未向可用性组添加过任何可用性副本，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)中的“服务器实例”与“可用性组和副本”部分。  
   
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载当前主副本的服务器实例。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "70176204"
   
 4.  为将承载新辅助副本的 Azure 虚拟机指定设置：  
   
-     图像  
+     映像  
      要用于 Azure 虚拟机的 SQL Server 映像的名称  
   
      VM 大小  
@@ -89,7 +90,7 @@ ms.locfileid: "70176204"
      域用户名  
      用于将 Azure 虚拟机联接到域的 AD 用户名  
   
-     Password  
+     密码  
      用于将 Azure 虚拟机联接到域的密码  
   
 5.  单击 **“确定”** 提交设置并退出“添加 Azure 副本向导”。  

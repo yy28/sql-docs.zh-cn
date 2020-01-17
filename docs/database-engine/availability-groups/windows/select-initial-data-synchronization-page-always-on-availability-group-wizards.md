@@ -1,6 +1,7 @@
 ---
-title: “选择初始数据同步”页 - AlwaysOn 可用性组向导 | Microsoft Docs
-ms.custom: ''
+title: “选择初始数据同步”页面（可用性组向导）
+description: 介绍 SQL Server Management Studio (SSMS) 中“Always on 可用性组向导”的“选择初始数据同步”页面。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9521577c4fd6fac3f683ca69fabd6226944a6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014185"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235344"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>“选择初始数据同步”页（AlwaysOn 可用性组向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

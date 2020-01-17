@@ -1,6 +1,7 @@
 ---
-title: 创建服务器审核和服务器审核规范 | Microsoft Docs
-ms.custom: ''
+title: 创建服务器审核和服务器审核规范
+description: 了解如何使用 SQL Server Management Studio (SSMS) 或 Transact-SQL (T-SQL) 创建 SQL Server 审核和服务器审核规范。
+ms.custom: seo-lt-2019
 ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b237b2d5511ef1547687289e00b4a695375e3754
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 655adfa8cd08c0594b43d736bd2bf492d29278fc
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517983"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557852"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +78,7 @@ ms.locfileid: "72517983"
      指定在强制处理审核操作之前可以等待的时间（毫秒）。  值 0 指示同步传递。 默认的最小值为 **1000** （1 秒）。 最大值为 2,147,483,647（2,147,483.647 秒或者 24 天 20 小时 31 分钟 23.647 秒）。  
   
      **在审核日志失败时：**  
-     **Continue**  
+     **继续**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 操作将继续。 审核记录将不会保留。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后将恢复。 选择 **“继续”** 选项可以允许未经审核的活动，这可能违反了您的安全策略。 在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的继续操作比维护完整审核更重要时，选择此选项。 这是默认选项。  
   
      **关闭服务器**  
@@ -153,7 +154,7 @@ ms.locfileid: "72517983"
      **省略号 (...)**  
      打开 **“选择对象”** 对话框以基于指定的 **“对象名称”** 浏览和选择可用对象。  
   
-3.  在完成后，单击 **“确定”** 。  
+3.  完成后，单击“**确定**”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

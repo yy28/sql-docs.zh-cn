@@ -1,6 +1,7 @@
 ---
-title: 使用预计算分区优化参数化筛选器性能 | Microsoft Docs
-ms.custom: ''
+title: 使用预计算分区优化参数化筛选器（合并）
+description: 了解如何使用预计算分区优化合并发布的参数化筛选器性能。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d4c2062662e07e35366d5bdccbf544d893568ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ab9ed7c6c404f9e8f57dd658f20e9e5b8f0d34f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018695"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321452"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>参数化筛选器 - 针对预计算分区进行优化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68018695"
   
  订阅服务器与发布服务器同步时，发布服务器必须计算订阅服务器的筛选器，以确定哪些行属于该订阅服务器的分区或数据集。 我们将为接收已筛选数据集的每个订阅服务器确定发布服务器上的更改的分区成员身份这一过程称为“分区计算”  。 如果没有预计算分区，那么，自上次为特定订阅服务器运行合并代理之后，对发布服务器上已筛选列每进行一次更改都必须执行分区计算，而且对与该发布服务器同步的每个订阅服务器都要重复这一过程。  
   
- 但是，如果发布服务器和订阅服务器在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本上运行并且您使用了预计算分区，那么发布服务器上所有更改的分区成员身份在进行更改时即已预计算并持久化。 因此，当订阅服务器与发布服务器同步时，它可以立即开始下载与其分区相关的更改，而不必执行分区计算过程。 当发布中有大量更改、订阅服务器或项目时，这样可以显著提高性能。  
+ 但是，如果发布服务器和订阅服务器在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本上运行并且你使用了预计算分区，那么发布服务器上所有更改的分区成员身份在进行更改时即已预计算并持久化。 因此，当订阅服务器与发布服务器同步时，它可以立即开始下载与其分区相关的更改，而不必执行分区计算过程。 当发布中有大量更改、订阅服务器或项目时，这样可以显著提高性能。  
   
  除了使用预计算分区外，预先生成快照和/或允许订阅服务器在第一次同步时还请求生成快照和应用快照。 使用以上选项中的一个或两个可以为使用参数化筛选器的发布提供快照。 如果未指定任一选项，将使用一系列的 SELECT 和 INSERT 语句初始化订阅，而不是使用 **bcp** 实用工具；此过程的速度将更慢。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   

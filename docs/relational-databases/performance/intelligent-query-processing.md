@@ -1,8 +1,8 @@
 ---
-title: Microsoft SQL 数据库中的智能查询处理 | Microsoft Docs
+title: 智能查询处理
 description: 智能查询处理功能，用于提高 SQL Server 和 Azure SQL 数据库中的查询性能。
-ms.custom: ''
-ms.date: 11/12/2019
+ms.custom: seo-dt-2019
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f18367446b3d36e4e95373f1789509e08082a403
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: 65b88c890dc16adf1a1b626dd0ddc91ad359505b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962422"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821973"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 
@@ -27,6 +27,10 @@ ms.locfileid: "73962422"
 
 ![智能查询处理](./media/iqp-feature-family.png)
 
+本视频时长 6 分钟，请观看本视频大致了解智能查询处理：
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Intelligent-Query-processing-in-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
+
 可以通过对数据库启用适当的数据库兼容性级别使工作负荷自动符合只能查询处理条件。 可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行此设置。 例如：  
 
 ```sql
@@ -35,7 +39,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 下表详细列出了所有智能查询处理功能，以及针对数据库兼容性级别必须具备的任何要求。
 
-| **IQP 功能** | **在 Azure SQL 数据库中是否受支持** | **在 SQL Server 中是否受支持** |**Description** |
+| **IQP 功能** | **在 Azure SQL 数据库中是否受支持** | **在 SQL Server 中是否受支持** |**说明** |
 | --- | --- | --- |--- |
 | [自适应联接（批处理模式）](#batch-mode-adaptive-joins) | 是，兼容性级别为 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，兼容性级别为 140|自适应联接在运行时期间根据实际输入行自动选择联接类型。|
 | [非重复近似计数](#approximate-query-processing) | 是| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起|由于高性能和低内存占用量，可针对大数据方案提供近似的 COUNT DISTINCT。 |
@@ -123,7 +127,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 ## <a name="row-mode-memory-grant-feedback"></a>行模式内存授予反馈
 
-**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 通过调整批处理模式和行模式运算符的内存授予大小，行模式内存授予反馈扩展了批处理模式内存授予反馈功能。  
 
@@ -135,7 +139,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 LastRequestedMemory 显示上一次查询执行中的授予内存（以千字节 (KB) 为单位）  。 使用 IsMemoryGrantFeedbackAdjusted 属性，可以查看实际查询执行计划内语句的内存授予反馈状态  。 下面列出了此属性的可取值：
 
-| IsMemoryGrantFeedbackAdjusted 值 | 描述 |
+| IsMemoryGrantFeedbackAdjusted 值 | 说明 |
 |---|---|
 | No:First Execution | 内存授予反馈不调整用于首次编译和相关执行的内存。  |
 | No:Accurate Grant | 如果没有溢出到磁盘，且语句使用至少 50% 的授予内存，就不会触发内存授予反馈。 |
@@ -208,14 +212,14 @@ MSTVF 中简单的 `SELECT *` 不会获益于交错执行。
 ### <a name="tracking-interleaved-execution-activity"></a>跟踪交错执行活动
 可在实际查询执行计划中查看使用情况属性：
 
-| 执行计划属性 | 描述 |
+| 执行计划属性 | 说明 |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | 适用于 QueryPlan 节点  。 如果为“true”，表示计划包含交错执行候选项  。 |
 | IsInterleavedExecuted | TVF 节点的 RelOp 下的 RuntimeInformation 元素的属性  。 如果为“true”，表示该操作已具体化为交错执行操作的一部分  。 |
 
 还可以通过以下 xEvent 跟踪交错执行匹配项：
 
-| XEvent | 描述 |
+| XEvent | 说明 |
 | ---- | --- |
 | interleaved_exec_status | 发生交错执行时将引发此事件。 |
 | interleaved_exec_stats_update | 此事件介绍交错执行更新的基数估值。 |
@@ -274,19 +278,61 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 ## <a name="table-variable-deferred-compilation"></a>表变量延迟编译
 
-**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
-表变量延迟编译功能提升了引用表变量的查询的计划质量和整体性能。 在优化和初始编译期间，此功能传播基于实际表变量行计数的基数估计。 这种准确的行计数信息可优化下游计划操作。
+表变量延迟编译  功能提升了计划质量和引用表变量的查询的整体性能。 在优化和初始计划编译期间，此功能会传播基于实际表变量行计数的基数估计。 然后，这种准确的行计数信息将用于优化下游计划操作。
 
-表变量延迟编译会延迟编译引用表变量的语句，直到首次实际运行语句为止。 此延迟编译行为与临时表的相同。 此更改导致使用实际基数，而不是原始单行猜测。 
+使用“表变量延迟编译”，引用表变量的语句会延迟编译，直到首次实际执行语句后。 此延迟编译行为与临时表的行为相同。 此更改导致使用实际基数，而不是原始单行猜测。 
 
-可以在 Azure SQL 数据库中启用表变量延迟编译。 为此，请为要在运行查询时连接到的数据库启用兼容性级别 150。
+要启用表变量延迟编译，请为查询运行时连接到的数据库启用数据库兼容性级别 150。
 
-有关详细信息，请参阅[表变量延迟编译](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)。
+表变量延迟编译不会更改表变量的任何其他特性  。 例如，此功能不会向表变量添加列统计信息。
+
+表变量延迟编译不会增加重新编译频率  。 相反，它将转移初始编译出现的位置。 生成的缓存计划是基于初始延迟编译表变量行计数生成的。 缓存计划由连续查询重复使用。 会对计划重复使用，直至此计划已逐出或进行重新编译。 
+
+用于初始计划编译的表变量行计数表示典型值可能不同于固定的猜测行计数。 如果不同，下游操作会有优势。 如果表变量行计数在整个执行过程中差别很大，则可能无法通过此功能来提升性能。
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>在不更改兼容性级别的情况下禁用表变量延迟编译
+可在数据库或语句范围内禁用表变量延迟编译，同时将数据库兼容性级别维持在 150 或更高。 若要对源自数据库的所有查询禁用表变量延迟编译，请在对应数据库的上下文中执行以下示例：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+若要对源自数据库的所有查询重新启用表变量延迟编译，请在对应数据库的上下文中执行以下示例：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+此外，还可以通过将 DISABLE_DEFERRED_COMPILATION_TV 分配为 USE HINT 查询提示，为特定查询禁用表变量延迟编译。  例如：
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
 ## <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
-**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
 
 标量 UDF 内联会自动将[标量 UDF](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) 转换为关系表达式， 并将它们嵌入正在调用的 SQL 查询中。 此转换提升了利用标量 UDF 的工作负载的性能。 标量 UDF 内联可便于实现 UDF 内部基于成本的操作优化。 生成的是高效、面向集、并行的（而不是低效、迭代、串行的）执行计划。 在数据库兼容性级别 150 下默认启用此功能。
 
@@ -294,7 +340,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 ## <a name="approximate-query-processing"></a>近似查询处理
 
-**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 近似查询处理是新的功能系列。 它可以跨响应速度比绝对精度更为关键的大型数据集进行聚合。 例如，要跨 100 亿行计算 COUNT(DISTINCT())  ，以供显示在仪表板上。 在这种情况下，绝对精度并不重要，而响应速度则至关重要。 新增的 APPROX_COUNT_DISTINCT  聚合函数返回组中唯一非 NULL 值的近似数。
 
@@ -302,7 +348,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 ## <a name="batch-mode-on-rowstore"></a>行存储上的批处理模式 
 
-**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 行存储上的批处理模式可实现分析工作负载的批处理模式执行，而无需列存储索引。  此功能支持用于磁盘上堆和 B 树索引的批处理模式执行和位图筛选器。 行存储上的批处理模式可实现对所有现有支持批处理模式的运算符的支持。
 
@@ -312,43 +358,47 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 - 使用批处理模式  处理，查询运算符可以更高效地处理数据。 它们一次处理一批行，而不是一行。 许多其他可伸缩性改进都与批处理模式处理相关。 若要详细了解批处理模式，请参阅[执行模式](../../relational-databases/query-processing-architecture-guide.md#execution-modes)。
 
 两组功能协同工作，以改进输入/输出 (I/O) 和 CPU 利用率：
-- 通过使用列存储索引，更多数据适合内存。 这可以减少 I/O 需求。
+- 通过使用列存储索引，更多数据适合内存。 这会减少 I/O 工作负荷。
 - 批处理模式处理可更有效地使用 CPU。
 
-这两种技术尽可能利用彼此。 例如，批处理模式聚合可以计算为列存储索引扫描的一部分。 我们还使用批处理模式联接和批处理模式聚合，更高效地处理使用运行长度编码压缩的列存储数据。 
+这两种技术尽可能利用彼此。 例如，批处理模式聚合可以计算为列存储索引扫描的一部分。 此外，通过批处理模式联接和批处理模式聚合，使用运行长度编码可以更有效地处理压缩的列存储数据。 
  
-这两种功能可独立使用：
-* 获取使用列存储索引的行模式计划。
-* 获取仅使用行存储索引的批处理模式计划。 
+但是，重要的是要了解这两个功能是独立的：
+* 你可以获取使用列存储索引的行模式计划。
+* 你可以获取仅使用行存储索引的批处理模式计划。 
 
 结合使用这两种功能时，通常效果最佳。 因此，到目前为止，SQL Server 查询优化器仅对涉及至少一个有列存储索引的表的查询考虑使用批处理模式处理。
 
-对于一些应用程序，列存储索引并不是理想选择。 应用程序可能会使用列存储索引不支持的其他一些功能。 例如，就地修改与列存储压缩不兼容。 因此，有聚集列存储索引的表不支持触发器。 更重要的是，列存储索引会增加 DELETE  和 UPDATE  语句的开销。 
+列存储索引可能不适用于某些应用程序。 应用程序可能会使用列存储索引不支持的其他一些功能。 例如，就地修改与列存储压缩不兼容。 因此，带有聚集列存储索引的表不支持触发器。 更重要的是，列存储索引会增加 DELETE 和 UPDATE 语句的开销   。 
 
-对于一些混合事务分析工作负载，工作负载的事务方面开销远比列存储索引的优势重要。 此类方案只能通过批处理模式处理来改进 CPU 利用率。 正因如此，“行存储上的批处理模式”功能对所有查询考虑使用批处理模式。 涉及哪些索引并不重要。
+对于一些事务与分析混合工作负荷，事务工作负荷的开销超过了使用列存储索引的获益。 此类方案可以通过仅使用批处理模式处理来提高 CPU 使用率，以从中获益。 这就是为什么无论涉及哪种索引类型，行存储上的批处理模式功能都会考虑所有查询的批处理模式。
 
 ### <a name="workloads-that-might-benefit-from-batch-mode-on-rowstore"></a>可能会受益于行存储上的批处理模式的工作负载
 以下工作负载可能会受益于行存储上的批处理模式：
-* 工作负载的很大一部分由分析查询组成。 通常情况下，这些查询有联接或聚合等运算符，可处理数十万行或更多行。
-* 工作负载受 CPU 限制。 如果瓶颈是 I/O，仍建议尽量考虑使用列存储索引。
+* 工作负载的很大一部分由分析查询组成。 通常情况下，这些查询使用联接或聚合等运算符，可处理数十万行或更多行。
+* 工作负载受 CPU 限制。 如果瓶颈是 I/O，仍建议尽可能考虑使用列存储索引。
 * 创建列存储索引会增加太多的工作负载事务部分开销。 或者，创建列存储索引不可行，因为应用程序依赖列存储索引尚不支持的功能。
 
+
 > [!NOTE]
-> 只有通过减少 CPU 利用率，行存储上的批处理模式才能起到帮助作用。 如果瓶颈与 I/O 相关，且数据尚未缓存（“冷”缓存），那么行存储上的批处理模式不会改善运行时间。 同样，如果计算机上没有足够的内存可用来缓存所有数据，性能也不太可能得到提升。
+> 只有通过减少 CPU 利用率，行存储上的批处理模式才能起到帮助作用。 如果瓶颈与 I/O 相关，且数据尚未缓存（“冷”缓存），那么行存储上的批处理模式将不会改善查询运行时间。 同样，如果计算机上没有足够的内存来缓存所有数据，性能也不可能得到提高。
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>行存储上的批处理模式带来哪些变化？
-除了迁移到兼容性级别 150 之外，无需自行更改任何内容，即可为候选工作负载启用行存储上的批处理模式。
 
-即使查询不涉及任何有列存储索引的表，查询处理器现在也使用启发式方法来决定是否考虑使用批处理模式。 启发式方法包括以下检查：
+请将数据库兼容性级别设置为 150。 不需要进行其他更改。
+
+即使查询不访问任何具有列存储索引的表，查询处理器也将使用启发式方法来决定是否考虑批处理模式。 启发式方法包括以下检查：
 1. 初始检查输入查询中的表大小、使用的运算符和估计的基数。
 2. 其他检查点，因为优化器会发现新的、成本更低的查询计划。 如果这些替代计划没有大量使用批处理模式，优化器会停止探索批处理模式替代方案。
 
+
 如果使用行存储上的批处理模式，则会发现在查询计划中实际运行模式为批处理模式  。 扫描运算符对磁盘堆和 B 树索引使用批处理模式。 此批处理模式扫描可以评估批处理模式位图筛选器。 还可以在计划中看到其他批处理模式运算符。 例如，哈希联接、基于哈希的聚合、排序、窗口聚合、筛选器、串联和计算标量运算符。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>备注
+
 查询计划并不总是使用批处理模式。 查询优化器可能会认为批处理模式对查询没有益处。 
 
-查询优化器的搜索空间正在发生变化。 因此，如果获取行模式计划，它可能与在较低兼容性级别获取的计划不同。 另外，如果获取批处理模式计划，它可能与通过列存储索引获取的计划不同。 
+查询优化器搜索空间正在发生变化。 因此，如果获取行模式计划，它可能与在较低兼容性级别获取的计划不同。 另外，如果获取批处理模式计划，它可能与通过列存储索引获取的计划不同。 
 
 鉴于新增的行存储上的批处理模式扫描，计划也可能会对混合列存储索引和行存储索引的查询发生变化。
 

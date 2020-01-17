@@ -17,17 +17,17 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a24105ff8deb7e3b2dea54d6c1cb859736ae6f5f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593999"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254835"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![始终加密](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
+  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "|::ref1::|")  
   
  Always Encrypted 功能旨在保护 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储的敏感数据，如信用卡号或身份证号（例如美国社会安全号码）。 始终加密允许客户端对客户端应用程序内的敏感数据进行加密，并且永远不向 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] （[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）显示加密密钥。 因此，Always Encrypted 分隔了拥有数据且有权查看它的人员与管理数据但没有访问权限的人员。 Always Encrypted 确保本地数据库管理员、云数据库操作员或其他高特权但未经授权的用户无法访问加密的数据，使客户能够放心地将敏感数据存储在不受其直接控制的区域。 这样，组织便可以将数据存储在 Azure 中，并将本地数据库的管理权限委托给第三方，或者降低其自身 DBA 员工的安全核查要求。
 
@@ -36,7 +36,7 @@ ms.locfileid: "73593999"
   > [!NOTE] 
   > 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中，安全 Enclave 通过模式匹配、其他比较运算符和就地加密，大幅提升了 Always Encrypted 的机密计算能力。 请参阅[具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md)。
 
- 始终加密使向加密对应用程序透明。 安装在客户端计算机上的启用始终加密的驱动程序通过在客户端应用程序中对敏感数据进行加密和解密来实现此目标。 该驱动程序先对敏感列中的数据进行加密，然后再将该数据传递到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，并且自动重写查询以便保留应用程序的语义。 同样，该驱动程序以透明方式对存储在加密数据库列（包含在查询结果中）中的数据进行解密。  
+ 始终加密使向加密对应用程序透明。 安装在客户端计算机上的启用始终加密的驱动程序通过在客户端应用程序中对敏感数据进行加密和解密来实现此目标。 该驱动程序先对敏感列中的数据进行加密，然后再将该数据传递到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，并且自动重写查询以便保留应用程序的语义。 同样，该驱动程序透明地解密存储在查询结果中包含的加密数据库列中的数据。  
   
  从 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 开始的所有 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 版本和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的所有服务层均提供 Always Encrypted。 （[!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 之前，仅 Enterprise Edition 具有始终加密功能。）有关包含始终加密的第 9 频道演示内容，请参阅 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)（使用始终加密来保护敏感数据）。  
 
@@ -68,11 +68,11 @@ ms.locfileid: "73593999"
 
 有关如何使用具有特定客户端驱动程序的 Always Encrypted 开发应用程序的详细信息，请参阅[使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
-解密通过客户端发生。 这意味着使用 Always Encrypted 时，仅在服务器端发生的某些操作不起作用。 
+通过客户端驱动程序进行加密和解密。 这意味着使用“Always Encrypted”时，仅在服务器端发生的某些操作将不起作用。 示例包括通过 UPDATE、BULK INSERT(T-SQL)、SELECT INTO、INSERT..SELECT 将数据从一列复制到另一列。 
 
-以下更新示例尝试将数据从加密列移动到未加密列，而不将结果集返回客户端： 
+以下 UPDATE 示例尝试将数据从加密列移动到未加密列，而不将结果集返回客户端： 
 
 ```sql
 update dbo.Patients set testssn = SSN
@@ -213,7 +213,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
   
  下表总结了常见的操作所需的权限。  
   
-|应用场景|`ALTER ANY COLUMN MASTER KEY`|`ALTER ANY COLUMN ENCRYPTION KEY`|`VIEW ANY COLUMN MASTER KEY DEFINITION`|`VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`|  
+|场景|`ALTER ANY COLUMN MASTER KEY`|`ALTER ANY COLUMN ENCRYPTION KEY`|`VIEW ANY COLUMN MASTER KEY DEFINITION`|`VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`|  
 |--------------|-----------------------------------|---------------------------------------|---------------------------------------------|-------------------------------------------------|  
 |密钥管理（创建/更改/检查数据库中的密钥元数据）|X|X|X|X|  
 |查询加密列|||X|X|  
@@ -272,7 +272,7 @@ GO
 - [Always Encrypted 加密](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
 - [创建列主密钥 (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
 - [创建列加密密钥 (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
-- [创建表 (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md)   
+- [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md)   
 - [column_definition (Transact-SQL)](../../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
 - [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)  
 - [sys.column_encryption_key_values (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   

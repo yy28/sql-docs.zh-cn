@@ -1,6 +1,5 @@
 ---
 title: 将 RAW 模式与 FOR XML 一起使用 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ac5e5ccf60594d41ff89d9ef5bd2c4342944a6da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7e88a1c65d2c8cdf8ba6129c8af28492dc362aba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016147"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245240"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>将 RAW 模式与 FOR XML 一起使用
 
@@ -42,7 +42,7 @@ RAW 模式可将查询结果集中的每一行转换为带有通用标识符 \<r
   
 -   [示例：指定带有 ELEMENTS 指令的 XSINIL](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [示例：使用 XMLDATA 和 XMLSCHEMA 选项请求架构作为结果](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [使用 XMLDATA 和 XMLSCHEMA 请求架构作为结果](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [示例：检索二进制数据](../../relational-databases/xml/example-retrieving-binary-data.md)  
   

@@ -2,20 +2,20 @@
 title: 使用 Active Directory 身份验证 (Kerberos)
 titleSuffix: Azure Data Studio
 description: 了解如何启用 Kerberos 以对 Azure Data Studio 使用 Active Directory 身份验证
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
-ms.openlocfilehash: 5c8fae6bf1333742b40e9c8aae4ee575736058cd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959667"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957061"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>使用 Windows 身份验证将 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接到 SQL Server - Kerberos 
 
@@ -26,7 +26,7 @@ ms.locfileid: "67959667"
 ## <a name="prerequisites"></a>必备条件
 
 - 能够访问已加入域的 Windows 计算机，以便查询 Kerberos 域控制器。
-- 应将 SQL Server 配置为允许 Kerberos 身份验证。 对于在 Unix 上运行的客户端驱动程序，只有使用 Kerberos 才支持集成身份验证。 有关设置 SQL Server 以使用 Kerberos 进行身份验证的详细信息，请参阅[此处](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server)。 应该为尝试连接到的每个 SQL Server 实例注册 SPN。 [此处](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)列出了有关 SQL Server SPN 格式的详细信息
+- 应将 SQL Server 配置为允许 Kerberos 身份验证。 对于在 Unix 上运行的客户端驱动程序，只有使用 Kerberos 才支持集成身份验证。 有关详细信息，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 应该为尝试连接到的每个 SQL Server 实例注册 SPN。 有关详细信息，请参阅[注册服务主体名称](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)。
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>检查 SQL Server 是否设置了 Kerberos
@@ -73,7 +73,7 @@ dns-search **<AD domain name>**
 > [!NOTE]
 > 不同计算机的网络接口 (eth0) 可能不同。 若要查明正在使用哪个接口，请运行 ifconfig 并复制具有 IP 地址以及传输和接收字节的接口。
 
-编辑此文件后，重新启动网络服务：
+编辑此文件后，重启网络服务：
 
 ```bash
 sudo ifdown eth0 && sudo ifup eth0
@@ -104,7 +104,7 @@ PEERDNS=no
 DNS1=**<AD domain controller IP address>**
 ```
 
-编辑此文件后，重新启动网络服务：
+编辑此文件后，重启网络服务：
 
 ```bash
 sudo systemctl restart network

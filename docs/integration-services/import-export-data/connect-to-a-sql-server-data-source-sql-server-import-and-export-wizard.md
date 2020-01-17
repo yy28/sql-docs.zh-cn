@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 903ff234d0e29f6f9c8f6d1acb5c5ce658c59338
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285704"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74308007"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>连接到 SQL Server 数据源（SQL Server 导入和导出向导）
 
@@ -32,8 +32,9 @@ ms.locfileid: "71285704"
 > [!NOTE]
 > 无论 SQL Server 是源还是目标，此数据提供程序的连接选项是相同的。 也就是说，在向导的“选择数据源”页和“选择目标”页上看到的选项是相同的   。
 
-|所需信息|用于 SQL Server 的 .Net Framework 数据提供程序属性|
+|必填信息|用于 SQL Server 的 .Net Framework 数据提供程序属性|
 |---|---|
+|Authentication|“集成安全性”默认为“NotSpecified”，也可选择其他身份验证模式  。 不支持“交互式 Active Directory 身份验证”。 |
 |服务器名称|**数据源**|
 |身份验证（登录）信息|“集成安全性”或“用户 ID”和“密码”   <br/>如果想查看服务器上的数据库的下拉列表，首先必须提供有效的登录信息。|
 |数据库名称|**初始目录**|
@@ -88,7 +89,7 @@ ODBC 驱动程序的名称。 驱动程序不同版本的名称不同。
 **Server**  
 SQL Server 的名称。
 
-**“数据库”**  
+**Database**  
 数据库的名称。  
 
 Trusted_Connection；或 Uid 和 Pwd     
@@ -110,7 +111,7 @@ Trusted_Connection；或 Uid 和 Pwd
 
     `Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
 
-下面是输入连接字符串后看到的屏幕。
+下面是输入连接字符串后出现的屏幕。
 
 ![之后使用 ODBC 连接到 SQL](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 

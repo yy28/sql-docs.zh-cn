@@ -1,6 +1,7 @@
 ---
-title: SQL Server 连接器维护与故障排除 | Microsoft Docs
-ms.custom: ''
+title: SQL Server 连接器维护和疑难解答
+description: 了解 SQL Server 连接器的维护说明和常见疑难解答步骤。
+ms.custom: seo-lt-2019
 ms.date: 07/25/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -9,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: d24f4e86f59e91537886480b26248c683665850a
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148788"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557922"
 ---
-# <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 连接器维护与故障排除
+# <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 连接器维护与故障排除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主题提供了有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的补充信息。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的详细信息，请参阅 [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;（使用 Azure 密钥保管库的可扩展密钥管理）](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)、[Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)和 [Use SQL Server Connector with SQL Encryption Features（使用具有 SQL 加密功能的 SQL Server 连接器）](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。  
@@ -169,7 +170,10 @@ ms.locfileid: "70148788"
 SQL Server 连接器需要哪些终结点的访问权限？  该连接器与两个终结点通信，这两个终结点需要列入允许列表。 与这些其他服务进行出站通信所需的唯一端口是 443（用于 Https）：
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/* :443
-  
+
+**如何通过 HTTP(S) 代理服务器连接到 Azure Key Vault？**
+连接器使用 Internet Explorer 的代理配置设置。 这些设置可通过[组策略](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/)或注册表控制，但需要注意的是，这些设置不是系统范围的设置，而是针对运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务帐户。 如果数据库管理员在 Internet Explorer 中查看或编辑设置，则它们只会影响数据管理员的帐户，而不会影响 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎。 不建议使用服务帐户以交互的方式登录到服务器，并且在许多安全环境中都会阻止该方式。 对配置的代理设置进行更改可能需要重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例才能生效，因为当连接器首次尝试连接到 Key Vault 时，将缓存这些设置。
+
 **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中每个配置步骤所需的最低权限级别是什么？**  
  尽管你可以使用 sysadmin 固定服务器角色成员的身份执行所有配置步骤，但 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议你尽量使用最少的权限。 以下列表定义了每个操作的最小权限级别。  
   
@@ -202,7 +206,7 @@ SQL Server 连接器需要哪些终结点的访问权限？  该连接器与两�
 ##  <a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的错误代码说明  
  **提供程序错误代码：**  
   
-错误代码  |符号  |描述    
+错误代码  |符号  |说明    
 ---------|---------|---------  
 0 | scp_err_Success | 操作已成功执行。    
 1 | scp_err_Failure | 操作失败。    
@@ -211,7 +215,9 @@ SQL Server 连接器需要哪些终结点的访问权限？  该连接器与两�
 4 | scp_err_NotFound | EKM 提供程序找不到指定的密钥或算法。    
 5 | scp_err_AuthFailure | EKM 提供程序的身份验证失败。    
 6 | scp_err_InvalidArgument | 提供的参数无效。    
-7 | scp_err_ProviderError | EKM 提供程序中发生了 SQL 引擎捕获到的未知错误。    
+7 | scp_err_ProviderError | EKM 提供程序中发生了 SQL 引擎捕获到的未知错误。   
+401 | acquireToken | 服务器已针对请求响应代码 401。 请确保客户端 ID 和密码正确，并凭据字符串是 AAD 客户端 ID 和密码的串联（无连字符）。
+404 | getKeyByName | 服务器响应 404，因为找不到密钥名称。 请确保保管库中存在密钥名称。
 2049 | scp_err_KeyNameDoesNotFitThumbprint | 密钥名称太长，不适用于 SQL 引擎的指纹。 密钥名称不得超过 26 个字符。    
 2050 | scp_err_PasswordTooShort | 作为 AAD 客户端 ID 和密码的串联的密码字符串少于 32 个字符。    
 2051 | scp_err_OutOfMemory | SQL 引擎内存不足，无法为 EKM 提供程序分配内存。    
@@ -249,11 +255,13 @@ SQL Server 连接器需要哪些终结点的访问权限？  该连接器与两�
 -   你可能已从 Azure 密钥保管库或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中删除非对称密钥。 还原此密钥。  
   
 -   如果你收到“无法加载库”的错误消息，请确保已安装适当版本的 Visual Studio C++ 可再发行组件，该组件版本基于当前运行的 SQL Server 版本。 下表指定了应从 Microsoft 下载中心安装的版本。   
+
+Windows 事件日志还会记录与 SQL Server 连接器相关的错误，这有助于了解为何其他上下文也会出现这些错误。 Windows 应用程序事件日志中的源将为“用于 Microsoft Azure Key Vault 的 SQL Server 连接器”。
   
 SQL Server 版本  |可再发行组件安装链接    
 ---------|--------- 
 2008、2008 R2、2012、2014 | [适用于 Visual Studio 2013 的 Visual C++ 可再发行组件包](https://www.microsoft.com/download/details.aspx?id=40784)    
-2016 | [适用于 Visual Studio 2015 的 Visual C++ 可再发行组件](https://www.microsoft.com/download/details.aspx?id=48145)    
+2016 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
   
   
 ## <a name="additional-references"></a>其他参考  
@@ -287,7 +295,7 @@ SQL Server 版本  |可再发行组件安装链接
   
  Azure 密钥保管库文档：  
   
--   [什么是 Azure Key Vault？](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
+-   [什么是 Azure 密钥保管库？](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
   
 -   [Azure Key Vault 入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
   

@@ -1,6 +1,7 @@
 ---
-title: 查看日志传送报告 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 查看日志传送报告 (SSMS)
+description: 了解如何使用 SQL Server Management Studio (SSMS) GUI 查看日志传送报告。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 97a0255f25c1aba95247a0df797d2460e98eb9e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de5a925e9d583d1263fb8b99ebca2f8edac51165
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020782"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258563"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>查看日志传送报告 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68020782"
   
 |角色|显示的信息|  
 |----------|---------------------------|  
-|监视器|将此服务器实例用作其监视服务器的每台主服务器和辅助服务器的名称和状态。|  
+|监视|将此服务器实例用作其监视服务器的每台主服务器和辅助服务器的名称和状态。|  
 |主|对于每个主数据库，当前服务器实例（作为主服务器）的状态和名称以及主数据库名称。 报告将显示备份作业（存储在本地主服务器上）的状态。<br /><br /> 报告还包含用于显示每台对应辅助服务器的行。 如果配置使用监视服务器且存储过程可以连接到此监视服务器，这些行将显示最近日志备份的复制状态和还原状态。|  
 |辅助副本|对于每个辅助数据库，当前服务器实例（作为辅助服务器）的状态和名称以及辅助数据库名称。<br /><br /> 报告将显示辅助服务器上复制和还原作业的状态。<br /><br /> 报告还包含用于显示对应主服务器的行。 如果配置使用监视服务器且存储过程可以连接到此监视服务器，此行将显示最近日志备份的状态。|  
   

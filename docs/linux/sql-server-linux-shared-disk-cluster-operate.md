@@ -1,20 +1,21 @@
 ---
-title: 运行故障转移群集实例 - Linux 上的 SQL Server
-description: 本文介绍如何在 Linux 上运行 SQL Server 故障转移群集实例 (FCI)。
+title: 手动故障转移 FCI - Linux 上的 SQL Server
+description: 了解如何对 Linux 上的 SQL Server 手动故障转移 FCI。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 1df7f6a53bb8d634b5d347f7a043605f7610ed78
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: d63ef5b6535c34e9b5d2087d96dbe615c7f1d8b3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682119"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558537"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>运行故障转移群集实例 - Linux 上的 SQL Server
 
@@ -63,7 +64,7 @@ FCI 的故障转移类似于 Windows Server 故障转移群集 (WSFC)。 如果�
 crm resource migrate <FCIResourceName> <NewHostNode>
 ```
 
-\<FCIResourceName > 是故障转移群集实例的资源名称。 
+\<FCIResourceName> 是故障转移群集实例的资源名称。 
 
 \<NewHostNode > 是新目标主机的名称。 
 
@@ -77,7 +78,7 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 --->
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 
 - [配置故障转移群集实例 - Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)
 

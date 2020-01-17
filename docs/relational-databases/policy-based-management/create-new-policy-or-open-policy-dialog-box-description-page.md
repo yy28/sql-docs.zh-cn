@@ -1,6 +1,7 @@
 ---
-title: “创建新策略”或“打开策略”对话框，“说明”页 | Microsoft Docs
-ms.custom: ''
+title: “新建策略”或“打开策略”对话框的“说明”页面
+description: 介绍 SQL Server 中基于策略的管理的“新建策略”或“打开策略”对话框的“说明”页面。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d95b4eaeb42f2f7a15de22b58a1e7c42a0893a1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3d8afca0504f34d2d78794e5fddb0ffbf1a6562
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940507"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558272"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>“创建新策略”或“打开策略”对话框，“说明”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "67940507"
  **类别**  
  用于在创建新策略时选择策略类别。  
   
- **Description**  
+ **说明**  
  键入策略说明。  
   
  更多帮助超链接：  要显示的文本：  

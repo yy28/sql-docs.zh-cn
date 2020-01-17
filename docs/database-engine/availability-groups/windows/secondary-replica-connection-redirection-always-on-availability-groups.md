@@ -1,6 +1,7 @@
 ---
-title: SQL Server 次要副本到主要副本读/写连接重定向 - Always On 可用性组 | Microsoft Docs
-ms.custom: ''
+title: 将读/写连接重定向到主要副本
+description: 了解如何始终将读/写连接重定向到 Always On 可用性组的主要副本，而不考虑连接字符串中指定的目标服务器。
+ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014201"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235195"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要副本到主要副本读/写连接重定向（Always On 可用性组）
 
@@ -47,7 +48,7 @@ ms.locfileid: "68014201"
 * 副本规范 `PRIMARY_ROLE` 必须包含 `READ_WRITE_ROUTING_URL`。
 * 连接字符串必须将 `ApplicationIntent` 定义为 `ReadWrite`，这是默认设置。
 
-## <a name="set-readwriteroutingurl-option"></a>设置 READ_WRITE_ROUTING_URL 选项
+## <a name="set-read_write_routing_url-option"></a>设置 READ_WRITE_ROUTING_URL 选项
 
 若要配置读/写连接重定向，请在创建 AG 时为主要副本设置 `READ_WRITE_ROUTING_URL`。 
 
@@ -57,24 +58,24 @@ ms.locfileid: "68014201"
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
-### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) 未设置（默认值） 
+### <a name="primary_roleread_write_routing_url-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) 未设置（默认值） 
 
 默认情况下，未对副本设置读/写副本连接重定向。 次要副本处理连接请求的方式取决于是否将次要副本设置为允许连接以及连接字符串中的 `ApplicationIntent` 设置。 下表显示次要副本如何处理基于 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 的连接。
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/> ，则“默认”|连接失败|连接失败|连接成功<br/>读取成功<br/>写入失败|
+|`ApplicationIntent=ReadWrite`<br/> 默认|连接失败|连接失败|连接成功<br/>读取成功<br/>写入失败|
 |`ApplicationIntent=ReadOnly`|连接失败|连接成功|连接成功
 
 上表显示默认行为，与 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 之前的 SQL Server 版本相同。 
 
-### <a name="primaryrolereadwriteroutingurl-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) 集 
+### <a name="primary_roleread_write_routing_url-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) 集 
 
 设置读/写连接重定向后，副本处理连接请求的行为方式有所不同。 连接行为仍然取决于 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 设置。 下表显示包含 `READ_WRITE_ROUTING` 集的次要副本如何处理基于 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 的连接。
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/>，则“默认”|连接失败|连接失败|连接路由到主要副本|
+|`ApplicationIntent=ReadWrite`<br/>默认|连接失败|连接失败|连接路由到主要副本|
 |`ApplicationIntent=ReadOnly`|连接失败|连接成功|连接成功
 
 上表显示，当主要副本包含 `READ_WRITE_ROUTING_URL` 集时，次要副本会在 `SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)` 时将连接重定向到主要副本，并且连接会指定 `ReadWrite`。
@@ -124,7 +125,7 @@ CREATE AVAILABILITY GROUP MyAg
       'COMPUTER03' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
-         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = MANUAL,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  
@@ -136,7 +137,7 @@ CREATE AVAILABILITY GROUP MyAg
 GO  
 ```
    - `<domain>.<tld>`
-      - 完全限定域名的域和顶级域。 例如， `corporation.com`。
+      - 完全限定域名的域和顶级域。 例如，`corporation.com` 。
 
 
 ### <a name="connection-behaviors"></a>连接行为

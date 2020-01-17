@@ -1,8 +1,8 @@
 ---
-title: 使用 Azure Data Studio 中的见解小组件监视服务器和数据库
+title: 使用见解小组件监视服务器和数据库
 titleSuffix: Azure Data Studio
 description: 了解 Azure Data Studio 中的见解小组件
-ms.custom: seodec18, sqlfreshmay19
+ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959527"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957051"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的见解小组件管理服务器和数据库
 
@@ -27,14 +27,12 @@ ms.locfileid: "67959527"
 
 ![数据库仪表板](media/insight-widgets/database-dashboard.png)
 
-
 若要直入正题，开始创建不同类型的见解小组件，请查看以下教程：
 
 - [生成自定义见解小组件](tutorial-build-custom-insight-sql-server.md)
 - *启用内置见解小组件*
   - [启用性能监视见解](tutorial-qds-sql-server.md)
   - [启用表空间使用情况见解](tutorial-table-space-sql-server.md)
-
 
 ## <a name="sql-queries"></a>SQL 查询
 
@@ -50,7 +48,7 @@ ms.locfileid: "67959527"
 
 基本思路是以某种方式编写 T-SQL 查询，以便将其用作计数、图表和图形小组件的数据集。 
 
-## <a name="summary"></a>“摘要”
+## <a name="summary"></a>总结
 
 T-SQL 查询及其结果集决定了见解小组件的行为。 为图表类型编写查询或为现有查询映射正确的图表类型是生成有效见解小组件的关键考虑因素。
 

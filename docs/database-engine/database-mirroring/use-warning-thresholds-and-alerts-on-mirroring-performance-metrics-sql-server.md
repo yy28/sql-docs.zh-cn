@@ -1,6 +1,7 @@
 ---
-title: 使用镜像性能度量的警告阈值和警报 | Microsoft Docs
-ms.custom: ''
+title: 为数据库镜像性能指标配置警报
+description: '提供为数据库镜像使用的性能指标配置警告阈值和警报的指南。 '
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e1ff85e22911cf632ef2a2f6bea9fda85f9ece4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050597"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74820901"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用镜像性能度量的警告阈值和警报 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +31,6 @@ ms.locfileid: "68050597"
   
  针对镜像数据库建立监视之后，系统管理员可以为多个关键绩效指标配置警告阈值。 同时，管理员还可以为这些数据库镜像事件和其他数据库镜像事件配置警报。  
   
- **本主题内容：**  
-  
--   [性能指标和警告阈值](#PerfMetricsAndWarningThresholds)  
-  
--   [设置和管理警告阈值](#SetUpManageWarningThresholds)  
-  
--   [将警报用于镜像数据库](#UseAlerts)  
-  
--   [相关任务](#RelatedTasks)  
   
 ##  <a name="PerfMetricsAndWarningThresholds"></a> 性能指标和警告阈值  
  下表列出可为其配置警告的性能指标，说明相应的警告阈值并列出相应的数据库镜像监视器标签。  
@@ -67,7 +59,7 @@ ms.locfileid: "68050597"
   
      管理员可以使用下面一组系统存储过程，针对伙伴双方的镜像数据库，分别设置和管理警告阈值。  
   
-    |过程|描述|  
+    |过程|说明|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|添加或更改指定镜像性能指标的警告阈值。|  
     |[sp_dbmmonitorhelpalert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|返回若干个关键数据库镜像监视器性能指标中的一个或所有指标的警告阈值信息。|  

@@ -1,6 +1,7 @@
 ---
-title: 创建和测试分类器用户定义函数 | Microsoft Docs
-ms.custom: ''
+title: 创建和测试分类器用户定义函数 - Resource Governor
+description: 本主题说明如何创建和测试分类器用户定义函数 (UDF)。
+ms.custom: seo-dt-2019
 ms.date: 07/11/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: aff12e92692ebd3bd53319a91b0a480338458dc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32d8a7a590b31d63c256f861338193c234774908
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136865"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165559"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>创建和测试分类器用户定义函数
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68136865"
   
  下面的过程中显示的示例说明了创建非常复杂的分类器用户定义函数的可能性。  
   
- 在本示例中：  
+ 在示例中：  
   
 -   创建了 pProductionProcessing 资源池和 gProductionProcessing 工作负荷组，用于在指定时间范围内进行生产处理。  
   

@@ -1,7 +1,7 @@
 ---
-title: Always On 可用性组监视和故障排除参考
-description: 本指南用作参考页，帮助开始监视 Always On 可用性组并排除在其中发现的一些常见问题。
-ms.custom: ag-guide, seodec18
+title: 可用性组的监视和故障排除指南
+description: 一个内容索引，用于帮助开始监视 Always On 可用性组并排除在其中发现的一些常见问题。
+ms.custom: seo-lt-2019
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94430d6b32567f7f185f1a515f8391d4ee01b3a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991566"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822045"
 ---
-# <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 可用性组故障排除和监视指南
+# <a name="monitor-and-troubleshoot-availability-groups"></a>监视可用性组并对其进行故障排除
  本指南可帮助你开始监视 Always On 可用性组并排查可用性组的一些常见问题。 它提供了原始内容，以及在其他位置发布的有用信息的登陆页。 尽管本指南不能全面探讨大范围可用性组中出现的所有问题，但它可为分析根本原因和解决问题指出正确的方向。 
  
  由于可用性组是集成技术，因此遇到的许多问题可能是数据库系统中其他问题的症状。 部分问题由可用性组内的设置造成，例如可用性数据库被挂起。 其他问题可能包括 SQL Server 其他方面的问题，例如 SQL Server 设置、数据库文件部署和与可用性无关的系统性能问题。 可能还有一些问题发生在 SQL Server 之外，例如网络 I/O、TCP/IP、Active Directory 和 Windows Server 故障转移群集 (WSFC) 问题。 通常情况下，出现在可用性组、副本或数据库中的问题需要对多个技术进行故障排除才能确定根本原因。  
@@ -26,21 +26,21 @@ ms.locfileid: "67991566"
 ##  <a name="BKMK_SCENARIOS"></a>故障排除方案  
  下表包含指向可用性组常见故障排除方案的链接。 它们按方案类型（如配置、客户端连接、故障转移和性能）分类。  
   
-|应用场景|方案类型|描述|  
+|场景|方案类型|说明|  
 |--------------|-------------------|-----------------|  
 |[Always On 可用性组配置故障排除 (SQL Server)](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|配置|提供相关信息，帮助解决在为可用性组配置服务器实例时遇到的典型问题。 典型配置问题包括可用性组被禁用、帐户配置不当、数据库镜像终结点不存在、终结点无法访问（SQL Server 错误 1418）、网络访问不存在，以及联接数据库命令失败（SQL Server 错误 35250）。|  
 |[添加文件操作失败的故障排除（Always On 可用性组）](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|配置|添加文件操作导致辅助数据库挂起并处于“未同步”状态。|  
 |[无法在多子网环境中连接到可用性组侦听程序](https://support.microsoft.com/kb/2792139/en-us)|客户端连接性|配置可用性组侦听程序后，便无法 ping 侦听程序或从应用程序中连接它。|  
 |[自动故障转移失败的故障排除](https://support.microsoft.com/kb/2833707)|故障转移|自动故障转移未成功完成。|  
-|[故障排除：可用性组超过了 RTO](troubleshoot-availability-group-exceeded-rto.md)|“性能”|进行自动故障转移或计划的手动故障转移（无数据丢失）后，故障转移时间超过 RTO。 或者，在估计同步提交次要副本（如自动故障转移伙伴）的故障转移时间时，发现该时间超过 RTO。|  
-|[故障排除：可用性组超过了 RPO](troubleshoot-availability-group-exceeded-rpo.md)|“性能”|执行强制手动故障转移后，数据丢失超过 RPO。 或者，在计算异步提交次要副本可能丢失的数据时，发现它超过了 RPO。|  
-|[故障排除：主要副本的更改未反映在次要副本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|“性能”|客户端应用程序在主要副本上成功完成更新，但查询次要副本显示更改未得到反映。|  
-|[故障排除：Always On 可用性组的高 HADR_SYNC_COMMIT 等待类型](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|“性能”|如果 HADR_SYNC_COMMIT 特别长，则数据移动流或次要副本日志强化存在性能问题。|  
+|[故障排除：可用性组超过了 RTO](troubleshoot-availability-group-exceeded-rto.md)|性能|进行自动故障转移或计划的手动故障转移（无数据丢失）后，故障转移时间超过 RTO。 或者，在估计同步提交次要副本（如自动故障转移伙伴）的故障转移时间时，发现该时间超过 RTO。|  
+|[故障排除：可用性组超过了 RPO](troubleshoot-availability-group-exceeded-rpo.md)|性能|执行强制手动故障转移后，数据丢失超过 RPO。 或者，在计算异步提交次要副本可能丢失的数据时，发现它超过了 RPO。|  
+|[故障排除：主要副本的更改未反映在次要副本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|性能|客户端应用程序在主要副本上成功完成更新，但查询次要副本显示更改未得到反映。|  
+|[故障排除：Always On 可用性组的高 HADR_SYNC_COMMIT 等待类型](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|性能|如果 HADR_SYNC_COMMIT 特别长，则数据移动流或次要副本日志强化存在性能问题。|  
 
 ##  <a name="BKMK_TOOLS"></a>有用的故障排除工具  
  当配置或运行可用性组时，不同的工具可帮助诊断不同类型的问题。 下表提供的链接指向有关工具的有用信息。  
   
-|工具|描述|  
+|工具|说明|  
 |----------|-----------------|  
 |[使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)|在用户友好界面中针对可用性组运行状况报告一目了然的视图。|  
 |[Always On 策略](always-on-policies.md)|由 Always On 仪表板使用。|  
@@ -60,7 +60,7 @@ ms.locfileid: "67991566"
   
  下表指出了可帮助监视可用性组解决方案运行状况的主题。  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[监视 Always On 可用性组的性能](monitor-performance-for-always-on-availability-groups.md)|介绍可用性组的数据同步流程，流控制门以及监视可用性组时的有用指标，并演示如何收集 RTO 和 RPO 指标。|  
 |[监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)|提供用于监视可用性组的工具的相关信息。|  
@@ -69,7 +69,7 @@ ms.locfileid: "67991566"
 |[Monitoring Always On health with PowerShell, part 1:Basic cmdlet overview](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)（使用 PowerShell 监视 Always On 运行状况，第 1 部分：基本 cmdlet 概述）|提供有关可用于监视可用性组运行状况的 Always On PowerShell cmdlet 的基本概述。|  
 |[Monitoring Always On health with PowerShell, part 2:Advanced cmdlet usage](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)（使用 PowerShell 监视 Always On 运行状况，第 2 部分：高级 cmdlet 用法）|提供有关用于监视可用性组运行状况的 Always On PowerShell cmdlet 的高级用法的信息。|  
 |[Monitoring Always On health with PowerShell, part 3:A simple monitoring application](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)（使用 PowerShell 监视 Always On 运行状况，第 3 部分：简单的监视应用程序）|介绍如何使用应用程序自动监视可用性组。|  
-|[Monitoring Always On health with PowerShell, part 4:Integration with SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)（使用 PowerShell 监视 Always On 运行状况，第 4 部分：与 SQL Server 代理集成）|提供相关信息，介绍如何将可用性组监视与 SQL Server 代理集成，以及如何配置出现问题时向相应方发送的通知。|  
+|[Monitoring Always On health with PowerShell, part 4:Integration with SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)（使用 PowerShell 监视 Always On 运行状况 - 第 4 部分：与 SQL Server 代理集成）|提供相关信息，介绍如何将可用性组监视与 SQL Server 代理集成，以及如何配置出现问题时向相应方发送的通知。|  
 
 ## <a name="next-steps"></a>后续步骤  
  [SQL Server Always On 团队博客](https://blogs.msdn.com/b/sqlalwayson/)   

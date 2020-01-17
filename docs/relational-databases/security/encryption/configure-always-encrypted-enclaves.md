@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bda4d41d4f2a9c92dca2d41b959ad4c4b32a1c79
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 568944db62ca94048c45450500d3060daa957680
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594475"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317932"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>配置和使用具有安全 enclave 的 Always Encrypted 
 
@@ -27,7 +27,9 @@ ms.locfileid: "73594475"
 
 ## <a name="set-up-your-environment-to-support-enclaves-and-attestation"></a>设置环境，使其支持 enclave 和证明
 有关详细信息，请参阅以下文章：
-- [在 SQL Server 中为 Always Encrypted 设置主机保护者服务](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)。
+- [规划主机保护者服务证明](./always-encrypted-enclaves-host-guardian-service-plan.md)
+- [为 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md) 部署主机保护者服务
+- [使用主机保护者服务注册计算机](./always-encrypted-enclaves-host-guardian-service-register.md)
 
 ## <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>管理具有安全 enclave 的 Always Encrypted 的密钥
 有关详细信息，请参阅以下文章：

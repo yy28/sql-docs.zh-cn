@@ -1,6 +1,7 @@
 ---
-title: 在发布中添加和删除项目 | Microsoft Docs
-ms.custom: ''
+title: 添加和删除发布项目 (SSMS)
+description: 介绍如何使用 SQL Server Management Studio (SSMS) 将项目添加到发布中以及从发布中删除项目。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1b713b0615ae13fc898567307f945176db8908d7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 682f0af6b7ac2c6dffc8d0e1988ef2973b2f7b51
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769909"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321279"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication"></a>在发布中添加和删除项目
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68769909"
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [定义项目](../../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)   
  [发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

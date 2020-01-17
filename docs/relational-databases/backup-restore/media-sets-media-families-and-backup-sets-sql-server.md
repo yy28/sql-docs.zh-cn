@@ -1,8 +1,7 @@
 ---
-title: 媒体集、媒体簇和备份集 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2016
-ms.prod: sql
+title: 媒体集、媒体簇和备份集
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.technology: backup-restore
@@ -23,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13ae1c4ae17bca661289d044217f63c4bebb9a9c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155582"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258684"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>介质集、介质簇和备份集 (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的基本备份介质术语，适用于对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不熟悉的读者。** 
   
@@ -118,7 +118,7 @@ WITH
   
  如果成功，此备份操作将生成一个新的介质集，该介质集包含一个新介质标头和一个分布在三个磁带上的备份集。 下图说明了这些结果：  
   
- ![3 个磁带上的介质标头和第一个备份集](../../relational-databases/backup-restore/media/bnr-mediaset-new.gif "3 个磁带上的介质标头和第一个备份集")  
+ ![3 个磁带上的媒体标头和第一个备份集](../../relational-databases/backup-restore/media/bnr-mediaset-new.gif "3 个磁带上的媒体标头和第一个备份集")  
   
  通常，创建介质集后，后续备份操作将依次向介质集追加其备份集。 备份集使用的所有介质构成了介质集，而与所涉及到的介质或备份设备的数量无关。 备份集按照其在介质集中的位置依次编号，从而使您能够指定还原哪个备份集。  
   
@@ -137,7 +137,7 @@ WITH
   
  如果第二个备份操作成功，将向介质集写入第二个备份集，并按以下方式分布备份内容：  
   
- ![分布在 3 个媒体集磁带上的第二个备份集](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "分布在 3 个媒体集磁带上的第二个备份集")  
+ ![第二个备份集分散在 3 个媒体集磁带上](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "第二个备份集分散在 3 个媒体集磁带上")  
   
  在还原备份时，您可以使用 FILE 选项来指定想要使用的备份。 下面的示例展示了 FILE **=** _backup_set_file_number_ 子句的使用方法，在还原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的完整数据库备份并随后还原位于相同媒体集上的数据库差异备份时使用该子句。 介质集使用了三个备份磁带，它们位于磁带机 `\\.\tape0`、 `tape1`和 `tape2`上。  
   

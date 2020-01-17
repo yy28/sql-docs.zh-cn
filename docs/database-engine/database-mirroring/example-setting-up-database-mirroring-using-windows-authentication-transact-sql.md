@@ -1,6 +1,7 @@
 ---
-title: 例如：使用 Windows 身份验证设置数据库镜像 (T-SQL) | Microsoft Docs
-ms.custom: ''
+title: 使用 Windows 身份验证配置数据库镜像 (T-SQL)
+description: 此示例展示结合使用 Windows 身份验证和 Transact-SQL (T-SQL) 通过见证服务器创建数据库镜像会话所需的全部步骤
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b30804974d472f06dc2ab5971d4d3f7674c61e16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a263cd161370a4d3f87c673209e82296ec2a28c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997890"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822265"
 ---
-# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>例如：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)
+# <a name="example-configure-database-mirroring-using-windows-authentication-transact-sql"></a>示例：使用 Windows 身份验证配置数据库镜像 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此示例说明使用 Windows 身份验证来创建带有见证服务器的数据库镜像会话所需的所有阶段。 本主题中的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 注意，可以不使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，而使用配置数据库镜像安全向导来设置数据库镜像。 有关详细信息，请参阅本主题后面的 [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
@@ -116,7 +117,7 @@ GO
     GO  
     ```  
   
-4.  创建镜像数据库。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+4.  创建镜像数据库。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  
   
 5.  在 PARTNERHOST5 中的镜像服务器实例上，将 PARTNERHOST1 中的服务器实例设置为伙伴（使它成为初始的主体服务器实例）。  
   

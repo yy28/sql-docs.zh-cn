@@ -1,7 +1,7 @@
 ---
-title: 使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/25/2019
+title: 使用 Azure blob 存储备份和还原
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 169e437c141d379401b7a3294f0ae852d756374f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041370"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251134"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  ![“备份到 Azure blob”图](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "“备份到 Azure blob”图")  
+  ![备份到 Azure blob 图形](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "备份到 Azure blob 图形")  
   
  本主题介绍将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份到 [Microsoft Azure Blob 存储服务](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)和从中还原。 它还总结了使用 Microsoft Azure Blob 服务存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的好处。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68041370"
     > [!IMPORTANT]  
     >  在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中使用块 blob 可以条带化备份集，支持对大小高达 12.8 TB 的文件进行备份。  
   
--   备份存档：在对备份进行存档时，Microsoft Azure Blob 存储服务能够提供可替代常用磁带存储方式的更好方式。 磁带存储可能需要物理传输到站点外设施并采取措施来保护介质。 在 Microsoft Azure Blob 存储区中存储你的备份可以提供一个即时、高度可用、耐久的存档方案。  
+-   备份存档：在对备份进行存档时，Microsoft Azure Blob 存储服务能够提供可替代常用磁带存储方式的更好方式。 选择磁带存储时可能需要将数据实际运输到场外设施，并且需要采取一些介质保护措施。 在 Microsoft Azure Blob 存储区中存储你的备份可以提供一个即时、高度可用、耐久的存档方案。  
   
 -   无硬件管理开销：没有有关 Microsoft Azure 服务的硬件管理开销。 Microsoft Azure 服务管理硬件并支持地理复制以提供冗余和防止硬件故障。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68041370"
   
 ## <a name="see-also"></a>另请参阅  
 
-[SQL Server 备份到 URL 最佳实践和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+[从 SQL Server 备份到 URL 的最佳做法和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 
 [备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 

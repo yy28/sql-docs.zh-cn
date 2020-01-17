@@ -1,6 +1,7 @@
 ---
-title: 查看 SQL Server 对象的基于策略的管理方面 | Microsoft Docs
-ms.custom: ''
+title: 查看对象上基于策略的管理 Facet
+description: 介绍如何查看应用于 SQL Server Management Studio (SSMS) 中特定 SQL Server 对象的所有基于策略的管理 Facet。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 82acf976fef80f62059b5a433bb74e3fbbadec80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9284388a56014084b2478d6d805ff3fc917459d1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021428"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558106"
 ---
-# <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>查看 SQL Server 对象的基于策略的管理方面
+# <a name="view-policy-based-management-facets-on-a-sql-server-object"></a>查看 SQL Server 对象上基于策略的管理 Facet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看应用到特定 SQL Server 对象的所有基于策略的管理方面。  
   

@@ -1,6 +1,7 @@
 ---
-title: “摘要”页（AlwaysOn 可用性组向导）| Microsoft Docs
-ms.custom: ''
+title: 可用性组向导：摘要页
+description: 介绍 SQL Server Management Studio 中“Always on 可用性组向导”的“摘要”页面上提供的选项。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a8f18c72deffc33878de95ebc07a80c07cd49d67
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3d90d3339c34cd79111f498a4d854e19f9776209
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892266"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822558"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>“摘要”页（Always On 可用性组向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +40,9 @@ ms.locfileid: "68892266"
  如果您对所做选择满意，单击此选项可在向导中继续创建可用性组。  
   
  **取消**  
- 单击此选项可取消向导操作。 在 **“摘要”** 页上，取消此向导将导致其退出而不执行任何操作。  
+ 单击此选项可取消向导操作。 在“摘要”页面上，取消此向导将导致其退出而不执行任何操作  。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[[页首]](#Top)  
+ ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [[顶部]](#Top)  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -53,7 +54,7 @@ ms.locfileid: "68892266"
   
 -   [使用故障转移可用性组向导 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[[页首]](#Top)  
+ ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [[顶部]](#Top)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

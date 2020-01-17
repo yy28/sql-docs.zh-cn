@@ -1,6 +1,6 @@
 ---
-title: 使用内存优化表的数据库的段落还原 | Microsoft Docs
-ms.custom: ''
+title: 数据库的段落还原 - 内存优化表
+ms.custom: seo-dt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1305f3239f40fa6d699243e0512ce774da5109c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a546e2aeceb60e42f4fc9dc8b1170431fd581ef3
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100221"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412577"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>使用内存优化表的数据库的段落还原
 
@@ -90,7 +90,7 @@ ALTER DATABASE imoltp
 GO  
 ```  
   
-### <a name="backup"></a>Backup  
+### <a name="backup"></a>备份  
  该示例演示如何备份主文件组和内存优化文件组。 必须同时指定主文件组和内存优化文件组。  
   
 ```sql

@@ -1,6 +1,7 @@
 ---
-title: 使用仅下载项目优化合并复制性能 | Microsoft Docs
-ms.custom: ''
+title: 优化仅下载类项目性能（合并）
+description: 介绍如何优化合并复制使用的仅下载类项目的性能。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7875347d1bc002f32721c00ac1ad470b5ec75281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b2e5ba71eab133751b9ae58d912b933b6821178d
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018718"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321443"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>使用仅下载项目优化合并复制的性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

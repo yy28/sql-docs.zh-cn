@@ -1,6 +1,7 @@
 ---
-title: 设置最大并行度选项以获取最佳性能 | Microsoft Docs
-ms.custom: ''
+title: 最大并行度和基于策略的管理
+description: 介绍如何配置策略，以验证 SQL Server 的基于策略的管理的最大并行度值。
+ms.custom: seo-lt-2019
 ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 00123da615c420fa3d58daae9a287ce3c13b8329
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: c5f261998588fa15074a25c606a0aa50f742f04a
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316667"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557817"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>设置最大并行度选项以获取最佳性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: 有关 Linux 部署的 SQL Server 可用性基础知识
-description: ''
+title: Linux 部署的 SQL Server 高可用性
+description: 了解 Linux 上的 SQL Server 提供的不同高可用性选项，例如 Always On 可用性组、故障转移群集实例 (FCI) 和日志传送。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75243590"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656605"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>有关 Linux 部署的 SQL Server 可用性基础知识
 
@@ -57,7 +58,7 @@ ms.locfileid: "75243590"
 将文件从一台服务器复制到另一台服务器是一项任何人使用 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 都应该能够完成的任务。 此任务对 AG 配置非常重要。
 
 在 Linux 和基于 Windows 的安装上都可能存在权限等问题。 但是，那些熟悉如何在 Windows 上从服务器复制到服务器的人可能不熟悉在 Linux 上如何完成此操作。 常见方法是使用代表安全复制的命令行实用工具 `scp`。 在后台，`scp` 使用 OpenSSH。 SSH 代表安全外壳。 根据 Linux 分发版，可能未安装 OpenSSH 本身。 如果未安装，则需要先安装 OpenSSH。 有关配置 OpenSSH 的详细信息，请参阅以下链接中有关每个分发版的信息：
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -116,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **防火墙文档：**
--   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>安装 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 包以实现可用性

@@ -1,6 +1,7 @@
 ---
-title: 使用 Always On 可用性组仪表板 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 在 SSMS 中使用可用性组仪表板
+description: 介绍如何使用 Always On 可用性组仪表板监视 SQL Server Management Studio (SSMS) 中可用性组的运行状况。
+ms.custom: seo-lt-2019
 ms.date: 08/09/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 802fcd6ad0bead99a56f3bd5f8c71639a42a0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013529"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822673"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 Always On 可用性组仪表板 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +124,7 @@ ms.locfileid: "68013529"
 -   **手动**。 指示没有副本处于自动故障转移模式。  
   
  **同步状态**  
- 指示辅助副本当前是否与主副本同步。 默认情况下显示此列。 可能的值有：  
+ 指示辅助副本当前是否与主副本同步。 默认情况下显示此列。 可能的值包括：  
   
 -   **未同步**。 副本中的一个或多个数据库未同步或尚未联接到可用性组。  
   
@@ -140,7 +141,7 @@ ms.locfileid: "68013529"
  列出问题名称。 默认情况下显示此值。 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 Always On 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **可用性模式**  
- 指示用户为每个可用性副本分别设置的副本属性。 默认情况下隐藏此值。 可能的值有：  
+ 指示用户为每个可用性副本分别设置的副本属性。 默认情况下隐藏此值。 可能的值包括：  
   
 -   **异步**。 辅助副本从不与主副本同步。  
   
@@ -153,7 +154,7 @@ ms.locfileid: "68013529"
  指示用于连接辅助副本的模式。  默认情况下隐藏此值。  
   
  **连接状态**  
- 指示辅助副本当前是否连接到主副本。 默认情况下隐藏此列。 可能的值有：  
+ 指示辅助副本当前是否连接到主副本。 默认情况下隐藏此列。 可能的值包括：  
   
 -   **已断开连接**。 对于远程可用性副本，指示它与本地可用性副本已断开连接。 本地副本对于“已断开连接”状态的响应取决于它的角色，如下所示：  
   
@@ -164,10 +165,10 @@ ms.locfileid: "68013529"
 -   **Connected**。 远程可用性副本当前连接到本地副本。  
   
  **操作状态**  
- 指示辅助副本的当前操作状态。 默认情况下隐藏此值。 可能的值有：  
+ 指示辅助副本的当前操作状态。 默认情况下隐藏此值。 可能的值包括：  
   
  **0**。挂起故障转移    
- **1**。挂起    
+ 1  。挂起的    
  **2**。联机    
  **3**。Offline   
  **4**。失败    
@@ -237,14 +238,14 @@ ms.locfileid: "68013529"
     > [!CAUTION]  
     >  当数据库处于 INITIALIZING 状态时，强制故障转移到辅助副本将使数据库始终处于不能启动的状态。  
   
- **Failover Readiness**  
- 指示哪些可用性副本可以进行故障转移（有/无数据丢失）。 默认情况下显示此列。 可能的值有：  
+ **“故障转移就绪”**  
+ 指示哪些可用性副本可以进行故障转移（有/无数据丢失）。 默认情况下显示此列。 可能的值包括：  
   
 -   **数据丢失**   
 -   **无数据丢失**  
   
  **问题**  
- 列出问题名称。 默认情况下显示此列。 可能的值有：  
+ 列出问题名称。 默认情况下显示此列。 可能的值包括：  
   
 -   **警告**。 单击此选项可显示阈值和警告问题。   
 -   **严重**。 单击此选项可显示严重问题。  

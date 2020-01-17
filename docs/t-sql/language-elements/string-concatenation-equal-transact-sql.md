@@ -1,6 +1,8 @@
 ---
-title: +=（字符串串联和赋值）(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: += 字符串串联
+description: 将两个字符串串联起来并将一个字符串设置为运算结果。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/07/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,19 +19,19 @@ ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 631fcc8728975d12370d517fb785b7cb832e6758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd21fb221076470d0c39194ea4c38d96af0f1056
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121655"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257054"
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+=（字符串串联赋值）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   将两个字符串串联起来并将一个字符串设置为运算结果。 例如，如果变量 @x 等于 'Adventure'，则 @x += 'Works' 会接受 @x 的原始值，将 'Works' 添加到该字符串中并将 @x 设置为该新值 'AdventureWorks'。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +47,7 @@ expression += expression
 ## <a name="result-types"></a>结果类型  
  返回为变量定义的数据类型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SET @v1 += 'expression' 等同于 SET @v1 = @v1 + ('expression')。 同样，SET @v1 = @v2 + @v3 + @v4 等同于 SET @v1 = (@v2 + @v3) + @v4。  
   
  如果没有变量，则不能使用 += 运算符。 例如，下面的代码将导致错误：  

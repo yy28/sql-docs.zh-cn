@@ -1,7 +1,7 @@
 ---
-title: 为 SQL Server 可用性组配置 RHEL 群集
-titleSuffix: SQL Server
-description: 了解运行 Red Hat Enterprise Linux (RHEL) 时的可用性组群集
+title: RHEL：为 Linux 中的 SQL Server 配置可用性组
+description: 了解如何在运行 Red Hat Enterprise Linux (RHEL) 时为 SQL Server 配置可用性组。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 7e401a53b07d5a71ccafb38f6edb2f80bcf1e274
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 6976d81994dbc8db154b285da03bed2397e9fee1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910802"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558489"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>为 SQL Server 可用性组配置 RHEL 群集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文档介绍如何在 Red Hat Enterprise Linux 上为 SQL Server 创建三节点可用性组群集。 为实现高可用性，Linux 上的可用性组需要三个节点 - 请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 集群层基于在 [Pacemaker](https://clusterlabs.org/) 的基础上构建的 Red Hat Enterprise Linux (RHEL) [HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)。 
+本文档介绍如何在 Red Hat Enterprise Linux 上为 SQL Server 创建三节点可用性组群集。 若要实现高可用性，Linux 上的可用性组需要三个节点，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 集群层基于在 [Pacemaker](https://clusterlabs.org/) 的基础上构建的 Red Hat Enterprise Linux (RHEL) [HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)。 
 
 > [!NOTE] 
 > 访问 Red Hat 完整文档需要有效订阅。 
@@ -153,7 +153,7 @@ pcs resource update ag_cluster meta failure-timeout=60s
 
 有关 Pacemaker 群集属性的信息，请参阅 [ Pacemaker 群集属性](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)。
 
-## <a name="create-a-sql-server-login-for-pacemaker"></a>为 Pacemaker 创建 SQL Server 登录
+## <a name="create-a-sql-server-login-for-pacemaker"></a>为 Pacemaker 创建 SQL Server 登录名
 
 [!INCLUDE [SQL-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 

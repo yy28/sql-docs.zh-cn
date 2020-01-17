@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7db5211191f714b977c8d103328fdb48882df6a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 362111a7e0bf74c9732ea79582fdee34019f7536
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057655"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656634"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "74057655"
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 数据<br />数据仓库](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|\* SQL Server \*  &nbsp;|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 数据<br />数据仓库](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -107,9 +107,9 @@ LOCATION = 'folder_or_filepath  ' 为 Hadoop 或 Azure blob 存储中的实际�
 
 ![外部表的递归数据](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部表的递归数据")
 
-若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 为“false”。 此文件位于 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如， `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`。
+若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 为“false”。 此文件位于 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如，`C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 。
 
-DATA_SOURCE = external_data_source_name  指定包含外部数据位置的外部数据源的名称。 此位置是 Hadoop 或 Azure blob 存储。 要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
+DATA_SOURCE = external_data_source_name  指定包含外部数据位置的外部数据源的名称。 此位置是 Hadoop 文件系统 (HDFS)、Azure 存储 blob 容器或 Azure Data Lake Store。 要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
 FILE_FORMAT = external_file_format_name  指定为外部数据存储文件类型和压缩方法的外部文件格式对象的名称。 若要创建外部文件格式，请使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
@@ -140,7 +140,7 @@ Reject_sample_value  参数必须是介于 0 与 2,147,483,647 之间的整数�
 > [!NOTE]
 > 由于 PolyBase 按间隔计算失败行的百分比，因此失败行的实际百分比可能会超过 reject_value  。
 
-例如：
+示例：
 
 此示例演示三个 REJECT 选项相互之间如何交互。 例如，如果 REJECT_TYPE = percentage、REJECT_VALUE = 30、REJECT_SAMPLE_VALUE = 100，可能出现以下情况：
 
@@ -149,8 +149,6 @@ Reject_sample_value  参数必须是介于 0 与 2,147,483,647 之间的整数�
 - PolyBase 尝试加载下一个 100 行；这次 25 行成功，75 行失败。
 - 重新计算的失败行的百分比为 50%。 失败行的百分比已超过 30% 的拒绝值。
 - 在尝试返回前 200 行之后，PolyBase 查询失败，拒绝的行为 50%。 请注意，匹配行在 PolyBase 查询检测到超过拒绝阈值之前已返回。
-
-DATA_SOURCE 外部数据源，如存储在 Hadoop 文件系统、Azure blob 存储或[分片映射管理器](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/)中的数据。
 
 SCHEMA_NAME 通过 SCHEMA_NAME 子句可以将外部表定义映射到远程数据库上不同架构中的表。 使用此子句可消除本地和远程数据库上存在的架构之间的歧义。
 
@@ -216,7 +214,7 @@ PolyBase 可以将某些查询计算推送到 Hadoop 以提高查询性能。 �
 
 SCHEMARESOLUTION 对象上的共享锁。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 外部表的数据文件存储在 Hadoop 或 Azure blob 存储中。 这些数据文件由你自己的进程进行创建和管理。 由你负责管理外部数据的安全。
 
@@ -367,8 +365,8 @@ WITH
 (
   DATA_SOURCE = MyExtSrc,
   SCHEMA_NAME = 'sys',
-  OBJECT_NAME = 'dm_exec_requests',  
-  DISTRIBUTION=  
+  OBJECT_NAME = 'dm_exec_requests',
+  DISTRIBUTION=ROUND_ROBIN
 );
 ```
 
@@ -573,12 +571,12 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|**_SQL 数据库 \*\*_** &nbsp;|[SQL 数据<br />数据仓库](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|\* SQL 数据库 \*  &nbsp;|[SQL 数据<br />数据仓库](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>概述：Azure SQL Database
+## <a name="overview-azure-sql-database"></a>概述：Azure SQL 数据库
 
 在 Azure SQL 数据库中，针对[弹性查询（预览版）](/azure/sql-database/sql-database-elastic-query-overview/)创建外部表。
 
@@ -621,30 +619,21 @@ column_name <data_type>
 
 分片外部表选项
 
-为[弹性数据库查询](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)指定外部数据源（非 SQL Server 数据源）和分发方法。
+为[弹性查询](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)指定外部数据源（非 SQL Server 数据源）和分发方法。
 
-DATA_SOURCE 外部数据源，如存储在 Hadoop 文件系统、Azure blob 存储或[分片映射管理器](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/)中的数据。
+DATA_SOURCE，DATA_SOURCE 子句定义了用于外部表的外部数据源（分片映射）。 有关示例，请参阅[创建外部表](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)。
 
-SCHEMA_NAME 通过 SCHEMA_NAME 子句可以将外部表定义映射到远程数据库上不同架构中的表。 使用此子句可消除本地和远程数据库上存在的架构之间的歧义。
+SCHEMA_NAME 和 OBJECT_NAME，SCHEMA_NAME 和 OBJECT_NAME 子句将外部表定义映射到不同架构的表。 如果省略，则假定远程对象的架构是“dbo”，并假定其名称与所定义的外部表名称相同。 如果远程表的名称已在要在其中创建外部表的数据库中使用，那么该做法很有用。 例如，你希望定义一个外部表，用于获取扩展数据层上目录视图或 DMV 的聚合视图。 由于目录视图和 DMV 已在本地存在，因此不能在外部表定义中使用其名称。 而是改用不同名称，并在 SCHEMA_NAME 和/或 OBJECT_NAME 子句中使用目录视图或 DMV 的名称。 有关示例，请参阅[创建外部表](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)。
 
-OBJECT_NAME 通过 OBJECT_NAME 子句可以将外部表定义映射到远程数据库上具有不同名称的表。 使用此子句可消除本地和远程数据库上存在的对象名称之间的歧义。
+DISTRIBUTION，DISTRIBUTION 子句指定用于此表的数据分发。 查询处理器利用 DISTRIBUTION 子句中提供的信息来构建最有效的查询计划。
 
-DISTRIBUTION（可选）。 只有 SHARD_MAP_MANAGER 类型的数据库才需要此参数。 此参数控制表是被视为分片表还是复制表。 使用 SHARDED（列名）表时，来自不同表的数据不会重叠   。 **REPLICATED** 指定表在每个分片上具有相同数据。 **ROUND_ROBIN** 指示将特定于应用程序的方法用于分发数据。
+- SHARDED 表示数据在各数据库之间横向分区。 数据分发的分区键为 <sharding_column_name> 参数。
+- REPLICATED 表示每个数据库都存在表的相同副本。 要负责确保各数据库上的副本是相同的。
+- ROUND_ROBIN 表示使用依赖于应用程序的分发方法对表进行横向分区。
 
 ## <a name="permissions"></a>权限
 
-需要以下用户权限：
-
-- **CREATE TABLE**
-- **ALTER ANY SCHEMA**
-- **ALTER ANY EXTERNAL DATA SOURCE**
-- **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
-
-请注意，创建外部数据源的登录名必须有权对位于 Hadoop 或 Azure blob 存储中的外部数据源进行读取和写入。
-
-> [!IMPORTANT]
-> ALTER ANY EXTERNAL DATA SOURCE 权限授予任何主体创建和修改任何外部数据源对象的能力，因此，它还授予访问数据库上所有数据库作用域凭据的能力。 必须将此权限视为高度特权，因此必须仅授予系统中受信任的主体。
+有权访问外部表的用户在使用外部数据源定义中提供的凭据时自动获得对基础远程表的访问权。 避免通过外部数据源的凭据进行不必要的权限提升。 将外部表当作常规表，在其中使用 GRANT 或 REVOKE。 定义外部数据源和外部表后，可以对外部表使用完整的 T-SQL。
 
 ## <a name="error-handling"></a>错误处理
 
@@ -674,7 +663,7 @@ DISTRIBUTION（可选）。 只有 SHARD_MAP_MANAGER 类型的数据库才需要
 - 外部表列上的 DEFAULT 约束
 - 删除、插入和更新的数据操作语言 (DML) 操作
 
-仅查询中定义的文本谓词才能下推到外部数据源。 这不同于链接服务器以及访问可使用在查询执行过程中确定的谓词的位置，即，在查询计划中与嵌套循环一起使用时。 这通常会导致在本地复制整个外部表并随后联接到外部表。    
+仅查询中定义的文本谓词才能下推到外部数据源。 这不同于链接服务器以及访问可使用在查询执行过程中确定的谓词的位置，即，在查询计划中与嵌套循环一起使用时。 这通常会导致在本地复制整个外部表并随后联接到外部表。
 
 ```sql
   \\ Assuming External.Orders is an external table and Customer is a local table. 
@@ -711,14 +700,16 @@ WITH
 
 ## <a name="see-also"></a>另请参阅
 
-[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [Azure SQL 数据库弹性查询概述](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
+- [跨扩展云数据库进行报告](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [跨数据库查询（纵向分区）入门](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|_\*SQL 数据<br />仓库\*_  &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|_\* SQL 数据<br />仓库 \*_  &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -780,7 +771,7 @@ LOCATION = 'folder_or_filepath  ' 为 Azure Data Lake、Hadoop 或 Azure blob �
 
 ![外部表的递归数据](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部表的递归数据")
 
-若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 为“false”。 此文件位于 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如， `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`。
+若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 为“false”。 此文件位于 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如，`C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 。
 
 DATA_SOURCE = external_data_source_name  指定包含外部数据位置的外部数据源的名称。 此位置位于 Azure Data Lake 中。 要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
@@ -813,7 +804,7 @@ Reject_sample_value  参数必须是介于 0 与 2,147,483,647 之间的整数�
 > [!NOTE]
 > 由于 PolyBase 按间隔计算失败行的百分比，因此失败行的实际百分比可能会超过 reject_value  。
 
-例如：
+示例：
 
 此示例演示三个 REJECT 选项相互之间如何交互。 例如，如果 REJECT_TYPE = percentage、REJECT_VALUE = 30、REJECT_SAMPLE_VALUE = 100，可能出现以下情况：
 
@@ -946,7 +937,7 @@ AS SELECT * FROM
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 数据<br />数据仓库](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 数据<br />数据仓库](create-external-table-transact-sql.md?view=azure-sqldw-latest)|_\* Analytics<br />Platform System (PDW) \*_  &nbsp;|
 ||||||
 
 &nbsp;
@@ -1005,7 +996,7 @@ LOCATION = 'folder_or_filepath  ' 为 Hadoop 或 Azure blob 存储中的实际�
 
 ![外部表的递归数据](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部表的递归数据")
 
-若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 为“false”。 此文件位于 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如， `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`。
+若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 为“false”。 此文件位于 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如，`C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 。
 
 DATA_SOURCE = external_data_source_name  指定包含外部数据位置的外部数据源的名称。 此位置是 Hadoop 或 Azure blob 存储。 要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
@@ -1038,7 +1029,7 @@ Reject_sample_value  参数必须是介于 0 与 2,147,483,647 之间的整数�
 > [!NOTE]
 > 由于 PolyBase 按间隔计算失败行的百分比，因此失败行的实际百分比可能会超过 reject_value  。
 
-例如：
+示例：
 
 此示例演示三个 REJECT 选项相互之间如何交互。 例如，如果 REJECT_TYPE = percentage、REJECT_VALUE = 30、REJECT_SAMPLE_VALUE = 100，可能出现以下情况：
 
@@ -1108,7 +1099,7 @@ PolyBase 可以将某些查询计算推送到 Hadoop 以提高查询性能。 �
 
 SCHEMARESOLUTION 对象上的共享锁。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 外部表的数据文件存储在 Hadoop 或 Azure blob 存储中。 这些数据文件由你自己的进程进行创建和管理。 由你负责管理外部数据的安全。
 

@@ -1,6 +1,5 @@
 ---
-title: SQL Server 扩展事件包 | Microsoft Docs
-ms.custom: ''
+title: SQL Server 扩展事件包
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +13,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19797e4f886a28662c9dce5df34fc9c2978b3098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37c4b2c9972dbd8e236f8a8e64f312a15a3353ac
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009394"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242929"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 扩展事件包
 
@@ -81,7 +80,7 @@ ms.locfileid: "68009394"
 |术语|定义|  
 |----------|----------------|  
 |管理员|管理员事件主要针对的是最终用户、管理员和支持人员。 管理员通道中包含的事件指示定义好的解决方案出现问题，管理员可以对该问题进行处理。 例如，应用程序无法连接到打印机就是一个管理员事件。 这些事件可能在文档中有详细描述，或者有与之关联的消息告诉读者如何纠正这一问题。|  
-|操作|操作事件用于分析和诊断问题或匹配项。 它们可用于基于问题或匹配项来触发工具或任务。 操作事件的一个示例是从系统中添加或删除打印机。|  
+|可运行|操作事件用于分析和诊断问题或匹配项。 它们可用于基于问题或匹配项来触发工具或任务。 操作事件的一个示例是从系统中添加或删除打印机。|  
 |分析|分析事件的发布量是很大的。 它们对程序操作进行说明并且通常用于性能调查。|  
 |调试|调试事件仅由开发人员用来诊断问题以进行调试。<br /><br /> 调试渠道中的事件返回特定于实现的内部状态数据。 这些事件返回的架构和数据可能在 SQL Server 的将来版本中更改或失效。 因此，调试渠道中的事件在 SQL Server 的将来版本中可能更改或删除且不事先通知。|  
   
@@ -141,11 +140,11 @@ where name = 'keyword_map'
 ### <a name="types"></a>类型  
  由于数据是排列在一起的字节集合，因此需要使用字节集合的长度和特征来解释这些数据。 该信息将封装在 Type 对象中。 下面是为包对象提供的类型：  
   
--   事件  
+-   event  
   
 -   action  
   
--   target  
+-   目标  
   
 -   pred_source  
   
@@ -220,6 +219,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server 扩展事件引擎](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [SQL Server 扩展事件目标](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: 实现合并项目的业务逻辑处理程序 | Microsoft Docs
-ms.custom: ''
+title: 为合并项目设置业务逻辑处理程序
+description: 使用复制编程或复制管理对象来配置业务逻辑处理程序，以便进行合并复制同步。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17a7c0e27dbb6cb80cb0069a2ea76036654280e3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846680"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322144"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>实现合并项目的业务逻辑处理程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,11 +172,11 @@ ms.locfileid: "70846680"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> 并检查返回的 <xref:System.Collections.ArrayList> 对象，以确保还未将该程序集注册为业务逻辑处理程序。  
   
-4.  创建 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> 类的实例。 指定以下属性：  
+4.  创建的 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> 类的实例。 指定以下属性：  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> - .NET 程序集的名称。 如果该程序集未部署到与合并代理可执行文件相同的目录中、与同步启动合并代理的应用程序相同的目录中或 GAC 中，则必须随程序集名称提供完整的路径。 将业务逻辑处理程序与 Web 同步一起使用时，必须随程序集名称提供完整的路径。  
   
@@ -193,7 +194,7 @@ ms.locfileid: "70846680"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。 设置以下属性：  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。 设置以下属性：  
   
     -   将 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>设置为项目的名称。  
   
@@ -209,7 +210,7 @@ ms.locfileid: "70846680"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>和 <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> 属性。  
   
@@ -241,7 +242,7 @@ ms.locfileid: "70846680"
 ## <a name="see-also"></a>另请参阅  
  [为合并项目实现自定义冲突解决程序](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [调试业务逻辑处理程序（复制编程）](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
- [复制安全最佳实践](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [复制管理对象概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
   
   

@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ALTER DATABASE SCOPED CONFIGURATION
+description: 在单个数据库级别启用多个数据库配置设置。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240696"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258135"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -52,7 +54,7 @@ ms.locfileid: "73240696"
 - 在 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 中启用或禁用最后一个实际执行计划的收集。
 - 指定暂停的可恢复索引操作在被 SQL Server 引擎自动中止之前暂停的分钟数。
 
-![“链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![链接图标](../../database-engine/configure-windows/media/topic-link.gif "“链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法
 
@@ -128,9 +130,9 @@ MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 > 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，服务器级别的“最大并行度”配置始终设为 0  。 可以为每个数据库配置 MAXDOP，如当前文章中所述。 有关最佳配置 MAXDOP 的建议，请参阅[其他资源](#additional-resources)部分。
 
 > [!TIP]
-> 若要在查询级别完成此操作，请使用 MAXDOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。     
-> 若要在服务器级别完成此操作，请使用最大并行度 (MAXDOP)  [服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。     
-> 若要在工作负荷级别完成此操作，请使用 MAX_DOP [资源调控器工作负荷组配置选项](../../t-sql/statements/create-workload-group-transact-sql.md)  。    
+> 要在查询级别完成此操作，请使用 MAXDOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)  。    
+> 要在服务器级别完成此操作，请使用“**最大并行度 (MAXDOP)** ”[服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。     
+> 要在工作负荷级别完成此操作，请使用 MAX_DOP [Resource Governor 工作负荷组配置选项](../../t-sql/statements/create-workload-group-transact-sql.md)  。    
 
 PRIMARY
 

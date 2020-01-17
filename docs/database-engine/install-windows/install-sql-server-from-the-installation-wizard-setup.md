@@ -1,7 +1,7 @@
 ---
-title: 使用安装向导安装 SQL Server 2016（安装程序）| Microsoft Docs
-ms.custom: ''
-ms.date: 07/26/2019
+title: 使用图形用户界面安装
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962373"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259025"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
 
@@ -27,7 +27,7 @@ ms.locfileid: "73962373"
 
 本文介绍如何使用安装向导安装 SQL Server。 它适用于 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。
 
-本文介绍了使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序安装向导来安装新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的分步过程。 此安装向导提供了一个用于安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树，这样你就不必逐个安装这些组件了。 若要逐个安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，请参阅[安装 SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)。  
+本文介绍了使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序安装向导来安装新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的分步过程。 此安装向导提供了一个用于安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树，这样你就不必逐个安装这些组件了。 若要逐个安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，请参阅[安装 SQL Server](../../database-engine/install-windows/install-sql-server.md#individual-component-installation)。  
 
 有关安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他方法，请参阅：  
 
@@ -83,7 +83,7 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
 
 1. 如果这是首次在计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，安装程序会跳过“安装类型”  页，并直接转到“功能选择”  页。 如果系统中已安装有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，你可以使用“安装类型”  页来选择是执行新安装，还是向现有安装添加功能。 若要继续操作，请选择“下一步”  。
   
-1. 在“功能选择”  页上，选择要安装的组件。 例如，若要安装新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，请选择“数据库引擎服务”  。
+1. 在“功能选择”  页上，选择要安装的组件。 例如，要安装新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，请选择“数据库引擎服务”  。
 
     选择功能名称后， **“功能说明”** 窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅 [SQL Server 2016 版本和组件](../../sql-server/editions-and-components-of-sql-server-2016.md)或 [SQL Server 2017 版本和组件](../../sql-server/editions-and-components-of-sql-server-2017.md)。
   
@@ -249,7 +249,7 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
 
 1. 如果这是首次在计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，安装程序会跳过“安装类型”  页，并直接转到“功能选择”  页。 如果系统中已安装有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，你可以使用“安装类型”  页来选择是执行新安装，还是向现有安装添加功能。 若要继续操作，请选择“下一步”  。
   
-1. 在“功能选择”  页上，选择要安装的组件。 例如，若要安装新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，请选择“数据库引擎服务”  。
+1. 在“功能选择”  页上，选择要安装的组件。 例如，要安装新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，请选择“数据库引擎服务”  。
 
     选择功能名称后， **“功能说明”** 窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅 [SQL Server 2016 版本和组件](../../sql-server/editions-and-components-of-sql-server-2016.md)或 [SQL Server 2017 版本和组件](../../sql-server/editions-and-components-of-sql-server-2017.md)。
   

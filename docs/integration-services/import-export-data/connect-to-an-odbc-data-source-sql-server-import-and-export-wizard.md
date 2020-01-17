@@ -1,20 +1,21 @@
 ---
 title: 连接到 ODBC 数据源（SQL Server 导入和导出向导）| Microsoft Docs
+description: 介绍如何配置 ODBC DSN 或创建用于 SQL Server 导入和导出向导的 ODBC 连接字符串
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 12/31/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd4dbec9e08b19a0c06c991a7007b449dff02485
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
+ms.sourcegitcommit: ab7209b5856537bfef0a6e9d0527d9002bd0a528
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285494"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75608026"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>连接到 ODBC 数据源（SQL Server 导入和导出向导）
 
@@ -28,7 +29,7 @@ ms.locfileid: "71285494"
 可能还需要查找必须提供的连接信息。 第三方站点 - [The Connection Strings Reference（连接字符串参考）](https://www.connectionstrings.com/) - 包含示例连接字符串、关于数据提供程序的详细信息及它们需要的连接信息。
 
 ## <a name="make-sure-the-driver-you-want-is-installed"></a>确保已安装所需驱动程序
-1.  在控制面板中搜索或浏览到“ODBC 数据源(64 位)”小程序  。 如果只有 32 位驱动程序，或了解必须使用 32 位驱动程序，请改为搜索或浏览到“ODBC 数据源(32 位)”  。
+1.  在开始菜单或控制面板中搜索或浏览到“ODBC 数据源 (64 位)”小程序  。 如果只有 32 位驱动程序，或了解必须使用 32 位驱动程序，请改为搜索或浏览到“ODBC 数据源(32 位)”  。
 2.  启动小程序。 此时会打开“ODBC 数据源管理器”窗口  。
 3.  在“驱动程序”选项卡上，可找到计算机上安装的所有 OBDC 驱动程序的列表  。 （部分驱动程序的名称可能以多个语言列出。）
 
@@ -50,7 +51,7 @@ ms.locfileid: "71285494"
 
 ## <a name="step-2---provide-the-connection-info"></a>步骤 2 - 提供连接信息
 下一步是为 ODBC 驱动程序和数据源提供连接信息。 您有两种选择：
-1.  提供已经存在的 DSN（数据源名称），或在“控制面板”中使用“ODBC 数据源管理器”小程序创建的 DSN   。 DSN 是连接 ODBC 数据源时所需的设置（已保存）的集合。
+1.  提供已经存在的 DSN（数据源名称），或使用“ODBC 数据源管理器”小程序创建的 DSN   。 DSN 是连接 ODBC 数据源时所需的设置（已保存）的集合。
 
     如果已知 DSN 名称或已知如何创建新的 DSN，可跳过本页的其余部分。 在“选择数据源”页或“选择目标”页上的“DSN”字段中输入 DSN 名称，然后继续执行向导的下一步    。
 
@@ -66,7 +67,7 @@ ms.locfileid: "71285494"
 
 ## <a name="odbc_dsn"></a>选项 1 - 提供 DSN
 如果要在连接信息中提供 DSN（数据源名称），使用“ODBC 数据源管理器”小程序，查找现有 DSN 的名称或创建一个新 DSN  。
-1.  在控制面板中搜索或浏览到“ODBC 数据源(64 位)”小程序  。 如果只有 32 位驱动程序，或必须使用 32 位驱动程序，请改为搜索或浏览到“ODBC 数据源(32 位)”  。
+1.  在开始菜单或控制面板中搜索或浏览到“ODBC 数据源 (64 位)”小程序  。 如果只有 32 位驱动程序，或必须使用 32 位驱动程序，请改为搜索或浏览到“ODBC 数据源(32 位)”  。
 2.  启动小程序。 此时会打开“ODBC 数据源管理器”窗口  。 下面是小程序的外观。
 
     ![ODBC 管理器控制面板小程序](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
@@ -90,7 +91,7 @@ ms.locfileid: "71285494"
 ## <a name="odbc_connstring"></a>选项 2 - 提供一个连接字符串
 如果要在连接信息中提供连接字符串，可借助本主题的其余内容获取所需的连接字符串。
 
-本示例将使用以下连接字符串，该字符串与 Microsoft SQL Server 连接。
+本示例将使用以下连接字符串，该字符串与 Microsoft SQL Server 连接。 使用的数据库示例是 WideWorldImporters，我们将连接到本地计算机上的 SQL Server  。
 
     ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
@@ -111,9 +112,9 @@ ms.locfileid: "71285494"
 ## <a name="get-the-connection-string-with-an-app"></a>使用应用获取连接字符串
 若要在自己的计算机上生成并测试用于 ODBC 驱动程序的连接字符串，可以使用“控制面板”中的“ODBC 数据源管理器”小程序  。 为连接创建一个文件 DSN，然后将设置从文件 DSN 复制出来，组合成连接字符串。 这需要执行多个步骤，但有助于确保连接字符串有效。
 
-1.  在控制面板中搜索或浏览到“ODBC 数据源(64 位)”小程序  。 如果只有 32 位驱动程序，或必须使用 32 位驱动程序，请改为搜索或浏览到“ODBC 数据源(32 位)”  。
+1.  在开始菜单或控制面板中搜索或浏览到“ODBC 数据源 (64 位)”小程序  。 如果只有 32 位驱动程序，或必须使用 32 位驱动程序，请改为搜索或浏览到“ODBC 数据源(32 位)”  。
 2.  启动小程序。 此时会打开“ODBC 数据源管理器”窗口  。
-3.  现在，转到小程序的“文件 DSN”选项卡  。 单击 **“添加”** 。
+3.  现在，转到小程序的“文件 DSN”选项卡  。 单击“添加”  。
 
     对于本示例，创建文件 DSN 而不是用户 DSN 或系统 DSN，因为文件 DSN 会以连接字符串所需的特定格式来保存名称-值对。
 
@@ -160,7 +161,7 @@ ms.locfileid: "71285494"
 
     通常无需用到 ODBC 数据源管理器创建的 DSN 中的全部设置，即可创建正常运行的连接字符串。  
     -   始终需要指定 ODBC 驱动程序。
-    -   对于 SQL Server 这类基于服务器的数据源，通常需要服务器、数据库和登录信息。 因此在示例 DSN 中，不需要 TrustServerCertificate、WSID 或 APP。
+    -   对于 SQL Server 这类基于服务器的数据源，通常需要服务器、数据库和登录信息。 在示例 DSN 中，不需要 TrustServerCertificate、WSID 或 APP。
     -   对于基于文件的数据源，至少需要文件名和位置。
     
 12. 在向导“选择数据源”页或“选择目标”页上的“ConnectionString”字段中粘贴此连接字符串    。 向导会分析字符串，可继续操作！

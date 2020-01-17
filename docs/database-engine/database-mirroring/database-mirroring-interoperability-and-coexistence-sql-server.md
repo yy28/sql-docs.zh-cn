@@ -1,6 +1,7 @@
 ---
-title: 数据库镜像：互操作性和共存 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 数据库镜像：互操作性和共存
+description: 了解 SQL Server 数据库镜像及其他 SQL Server 功能（如全文目录、数据库快照、日志传送、复制和故障转移群集实例）的互操作性和共存性。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d116624ddea37922e401244c3c669db0a81aa03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 045aa94292a4633b8d61e95491d603e0d9897d0d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006413"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254161"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>数据库镜像：互操作性和共存 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

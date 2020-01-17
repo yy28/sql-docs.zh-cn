@@ -1,6 +1,6 @@
 ---
-title: 创建和管理用于内存优化对象的存储 | Microsoft Docs
-ms.custom: ''
+title: 创建和管理存储 - 内存优化对象
+ms.custom: seo-dt-2019
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c0c50a375559b34e5fa09bbce419d9acdb860e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 90817352d72991e47f20b31144e15b204e5f3bff
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915346"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412714"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>创建和管理用于内存优化的对象的存储
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "67915346"
   
  本节主题：  
   
--   [为内存优化表配置内存](../../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md)  
+-   [为内存优化表配置存储](../../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md)  
   
 -   [内存优化的文件组](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)  
   

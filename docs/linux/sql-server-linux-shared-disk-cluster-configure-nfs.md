@@ -1,6 +1,7 @@
 ---
-title: 配置故障转移群集实例存储 NFS - Linux 上的 SQL Server
-description: ''
+title: 配置 NFS 存储 FCI - Linux 上的 SQL Server
+description: 了解如何使用 NFS 存储为 Linux 上的 SQL Server 配置故障转移群集实例 (FCI)。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1088060b8f1af418f14210b7e09a6641fc3a62d8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 35f6dc79756c192419dbe3a8962d5dcdfeea8aef
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032366"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558332"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>配置故障转移群集实例 NFS - Linux 上的 SQL Server
 
@@ -75,7 +76,7 @@ NFS 或网络文件系统是用于在 Linux 中而非 Windows 中共享磁盘的
     mkdir <TempDir>
     ```
 
-    \<TempDir> 为文件夹名称。 以下示例创建名为 /var/opt/mssql/tmp 的文件夹。
+    \<TempDir> 是文件夹名称。 以下示例创建名为 /var/opt/mssql/tmp 的文件夹。
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -109,7 +110,7 @@ NFS 或网络文件系统是用于在 Linux 中而非 Windows 中共享磁盘的
     ls /var/opt/mssql/data
     ```
     
-   * 键入 exit 切换回 root 用户。
+   * 键入 exit 切换回根用户。
 
    * 将 NFS 共享装载到 SQL Server 数据文件夹中。 如果成功，不会收到任何确认信息。
 
@@ -185,7 +186,7 @@ NFS 或网络文件系统是用于在 Linux 中而非 Windows 中共享磁盘的
 
     \<FolderMountedIn> 是在上一步中创建的文件夹。 
 
-4. 对于系统数据库以外的其他内容，例如用户数据库或备份，请按照下列步骤操作。 如果仅使用默认位置，请跳至步骤 5。
+4. 对于系统数据库以外的其他内容，例如用户数据库或备份，请按照以下步骤操作。 如果仅使用默认位置，请跳至步骤 5。
 
    * 切换为超级用户。 如果成功，不会收到任何确认信息。
 
@@ -199,7 +200,7 @@ NFS 或网络文件系统是用于在 Linux 中而非 Windows 中共享磁盘的
     mkdir <FolderName>
     ```
 
-    \<FolderName> 为文件夹名称。 如果文件夹不在正确的位置，需要指定文件夹的完整路径。 以下示例创建名为 /var/opt/mssql/userdata 的文件夹。
+    \< 为文件夹名称。 如果文件夹不在正确的位置，需要指定文件夹的完整路径。 以下示例将创建名为 /var/opt/mssql/userdata 的文件夹。
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -225,7 +226,7 @@ NFS 或网络文件系统是用于在 Linux 中而非 Windows 中共享磁盘的
   
    * 键入 exit，退出超级用户身份。
 
-   * 要进行测试，请在该文件夹中创建数据库。 以下示例使用 sqlcmd 创建数据库、相应切换上下文、验证文件是否存在于操作系统级别，然后删除临时位置。 可以使用 SSMS。
+   * 若要进行测试，请在该文件夹中创建数据库。 以下示例使用 sqlcmd 创建数据库、相应切换上下文、验证文件是否存在于操作系统级别，然后删除临时位置。 可以使用 SSMS。
 
     ![15-createtestdatabase][4]
  

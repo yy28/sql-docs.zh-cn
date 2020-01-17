@@ -1,6 +1,7 @@
 ---
-title: 将受 TDE 保护的数据库移到其他 SQL Server | Microsoft Docs
-ms.custom: ''
+title: 将受 TDE 保护的数据库移到其他 SQL Server
+description: 本文介绍如何使用透明数据加密 (TDE) 保护数据库，然后再使用 SQL Server Management Studio (SSMS) 或 Transact-SQL (T-SQL) 将该数据库移动到其他 SQL Server 实例。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 991af6f353fb4862bd66426e7fdeed2664f3d101
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594317"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558504"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的其他实例。 TDE 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 DEK 是使用存储在服务器的 **master** 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。   
+  本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的其他实例。 TDE 针对数据和日志文件执行实时 I/O 加密和解密。 加密使用数据库加密密钥 (DEK)，它存储在数据库引导记录中，可在恢复时使用。 DEK 是使用存储在服务器的 **master** 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。   
    
 ##  <a name="Restrictions"></a> 限制和局限  
   
@@ -47,7 +48,7 @@ ms.locfileid: "73594317"
   
 1.  在 **master** 数据库中创建数据库主密钥和证书。 有关详细信息，请参阅下面的 **使用 Transact-SQL** 。  
   
-2.  在 **master** 数据库中创建服务器证书的备份。 有关详细信息，请参阅下面的 **“使用 Transact-SQL”** 。  
+2.  在 **master** 数据库中创建服务器证书的备份。 有关详细信息，请参阅下面的 **使用 Transact-SQL** 。  
   
 3.  在对象资源管理器中，右键单击 **“数据库”** 文件夹，并选择 **“新建数据库”** 。  
   
@@ -163,7 +164,7 @@ ms.locfileid: "73594317"
      **保留全文目录**  
      默认情况下，分离操作保留所有与数据库关联的全文目录。 若要删除全文目录，请清除 **“保留全文目录”** 复选框。 只有从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]升级数据库时，才会显示此选项。  
   
-     **“状态”**  
+     **Status**  
      显示以下状态之一：“就绪”或“未就绪”   。  
   
      **消息**  
@@ -175,7 +176,7 @@ ms.locfileid: "73594317"
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   
-2.  单击“确定”  。  
+2.  单击“确定”。   
   
 3.  使用 Window 资源管理器，将数据库文件从源服务器移动到或复制到目标服务器上的相同位置。  
   
@@ -208,17 +209,17 @@ ms.locfileid: "73594317"
      **附加为**  
      根据需要，可以指定要附加数据库的其他名称。  
   
-     **“所有者”**  
+     **所有者**  
      提供数据库可能所有者的下拉列表，您可以根据需要从其中选择其他所有者。  
   
-     **“状态”**  
+     **Status**  
      显示下表中相应的数据库状态。  
   
-    |图标|状态文本|描述|  
+    |图标|状态文本|说明|  
     |----------|-----------------|-----------------|  
     |（无图标）|（无文本）|此对象的附加操作尚未启动或者可能挂起。 这是打开该对话框时的默认值。|  
     |绿色的右向三角形|正在进行|已启动附加操作，但是该操作未完成。|  
-    |绿色的选中标记|成功|已成功附加该对象。|  
+    |绿色的选中标记|Success|已成功附加该对象。|  
     |包含白色十字形的红色圆圈|错误|附加操作遇到错误，未成功完成。|  
     |包含左、右两个黑色象限和上、下两个白色象限的圆圈|已停止|由于用户停止了附加操作，该操作未成功完成。|  
     |包含一个指向逆时针方向的曲线箭头的圆圈|已回滚|附加操作已成功，但已对其进行回滚，因为在附加其他对象的过程中出现了错误。|  
@@ -226,13 +227,13 @@ ms.locfileid: "73594317"
      **消息**  
      显示空消息或“找不到文件”超链接。  
   
-     **“添加”**  
+     **添加**  
      查找必需的主数据库文件。 当用户选择 .mdf 文件时，就会在 **“要附加的数据库”** 网格的相应字段中自动填充合适的信息。  
   
      **删除**  
      从 **“要附加的数据库”** 网格中删除选定文件。  
   
-     **"** _<database_name>_ **”数据库详细信息**  
+     " <database_name> " 数据库详细信息     
      显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击“浏览”按钮 (…)   。  
   
     > [!NOTE]  

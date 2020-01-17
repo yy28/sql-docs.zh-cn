@@ -1,7 +1,7 @@
 ---
 title: 为可用性组生成和分析 CLUSTER.LOG
 description: '介绍如何为 Always On 可用性组生成和分析群集日志。 '
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240752"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244376"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>为 Always On 可用性组生成和分析 CLUSTER.LOG
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,11 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 3.  在“详细信息”窗格中，右键单击可用性组资源，然后单击“属性”  。  
   
-4.  单击 **“属性”** 选项卡。  
+4.  单击“属性”  选项卡。  
   
 5.  修改“VerboseLogging”属性  。 默认情况下，VerboseLogging 设置为 `0`，它会报告信息、警告和错误  。 可以将“VerboseLogging”从 `0` 设置为 `2`  。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 7.  再次右键单击可用性组资源，然后单击“使此资源脱机”  。  
   
@@ -57,7 +57,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 ## <a name="availability-group-resource-events"></a>可用性组资源事件  
  下表显示了可在 CLUSTER.LOG 中看到的不同种类的事件，这些事件与可用性组资源有关。 有关 WSFC 中资源宿主子系统 (RHS) 和资源控制监视器 (RCM) 的详细信息，请参阅 [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx)（Windows Server 2008 故障转移群集中的资源宿主子系统 (RHS)）。  
   
-|Identifier|数据源|CLUSTER.LOG 中的示例|  
+|标识符|源|CLUSTER.LOG 中的示例|  
 |----------------|------------|------------------------------|  
 |带有 `[RES]` 和 `[hadrag]` 前缀的消息|hadrres.dll（Always On 资源 DLL）|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server 可用性组 \<ag>：`[hadrag]` 脱机请求。<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server 可用性组 \<ag>：`[hadrag]` 租用线程已终止<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server 可用性组 \<ag>：`[hadrag]` 释放 SQL 语句<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server 可用性组 \<ag>：`[hadrag]` 从 SQL Server 断开连接|  
 |带有 `[RHS]` 前缀的消息|RHS.EXE（资源宿主子系统，hadrres.dll 的主机进程）|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] Resource ag 已脱机。 RHS 即将向 RCM 报告资源状态。|  

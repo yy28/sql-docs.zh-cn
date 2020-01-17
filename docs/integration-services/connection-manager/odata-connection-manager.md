@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a643d35b6f9c31060e2c0404a6042be8b1c87abb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 39499e36568d64f92d3608f610d64193c93389e6
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298461"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542187"
 ---
 # <a name="odata-connection-manager"></a>OData 连接管理器
 
@@ -51,7 +51,7 @@ ms.locfileid: "71298461"
   
 对于匿名访问，请选择“Windows 身份验证”选项。  
 
-要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，不可使用 Microsoft Online Services 身份验证选项  。 也不可使用任何为多重身份验证配置的选项。
+要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，不可使用 Microsoft Online Services 身份验证选项  。 也不可使用任何为多重身份验证配置的选项。 当前不支持新式身份验证。 
   
 ### <a name="specifying-and-securing-credentials"></a>指定和保护凭据  
  如果 OData 服务需要基本身份验证，则可以在 [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md)中指定用户名和密码。 在编辑器中输入的值保留在包中。 密码值根据包保护级别进行加密。  
@@ -63,10 +63,10 @@ ms.locfileid: "71298461"
   
 |||  
 |-|-|  
-|属性|描述|  
-|Url|服务文档的 URL。|  
+|properties|说明|  
+|URL|服务文档的 URL。|  
 |UserName|用于进行身份验证的用户名（如果需要）。|  
-|Password|用于进行身份验证的密码（如果需要）。|  
+|密码|用于进行身份验证的密码（如果需要）。|  
 |ConnectionString|包括连接管理器的其他属性。|  
   
 ## <a name="odata-connection-manager-editor"></a>“OData 连接管理器编辑器”

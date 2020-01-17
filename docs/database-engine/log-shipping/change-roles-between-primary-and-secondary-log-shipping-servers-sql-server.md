@@ -1,6 +1,7 @@
 ---
-title: 交换主日志传送服务器和辅助日志传送服务器的角色 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 更改主数据库和辅助数据库日志传送角色
+description: 了解如何将辅助数据库配置为充当 SQL Server 日志传送解决方案的主数据库。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b7924bc8d7dfc8a3460ca4beb989fd0daf0e85a8
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.openlocfilehash: e06d382258d6d98b7f54ff9dd3f4840a04274d81
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008445"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259006"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>交换主日志传送服务器和辅助日志传送服务器的角色 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "72008445"
   
     2.  添加辅助数据库时，在 **“辅助数据库设置”** 对话框的 **“辅助数据库”** 框中输入原来的主数据库的名称。  
   
-    3.  在 **“辅助数据库设置”** 对话框中，选中 **“否，辅助数据库已初始化”**。  
+    3.  在 **“辅助数据库设置”** 对话框中，选中 **“否，辅助数据库已初始化”** 。  
   
 4.  如果对于您之前的日志传送配置启用了日志传送监视，则重新配置日志传送监视以便监视新的日志传送配置。  将 threshold_alert_enabled 设置为 1 指定在超过 restore_threshold 时将引发警报。 执行以下命令，将 *database_name* 替换为你的数据库的名称：  
   

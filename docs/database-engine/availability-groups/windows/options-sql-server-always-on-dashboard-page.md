@@ -1,6 +1,6 @@
 ---
-title: 选项（SQL Server AlwaysOn、“仪表板”页）| Microsoft Docs
-description: SQL Server Always On 仪表板上的“选项”页面的介绍。
+title: SSMS 中的可用性组仪表板
+description: 介绍 SQL Server Management Studio 中 SQL Server Always On 仪表板上的“选项”页面。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 887ed12836ca3581e40c6c6831906def6c0d0e5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae4c5aae76c41b642d445e92844efa2ddf36fdcc
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014641"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822542"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>选项（SQL Server AlwaysOn、“面板”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68014641"
   
 ## <a name="on-this-page"></a>在此页上  
  **启用自动刷新。**  
- 单击此选项可以启用自动刷新。 相应的选项包括：  
+ 单击此选项可以启用自动刷新。 选项包括：  
   
 -   “刷新时间间隔（秒）”  字段显示仪表板刷新的秒数。 默认值为 30。 启用自动刷新时，您可以编辑此字段以更改刷新间隔。  
   

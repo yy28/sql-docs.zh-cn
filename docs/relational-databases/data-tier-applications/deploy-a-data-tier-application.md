@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: db961211295a83b61478f0849feb1cd6b3fa6c7c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907890"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190119"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署数据层应用程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72907890"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>多次部署同一 DAC 包 
  同一 DAC 包可以多次部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的单个实例上，但必须一次一个运行这些部署。 为每个部署指定的 DAC 实例名称在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中必须唯一。  
   
- 如果将 DAC 部署到数据库引擎的实例，在下次将实用工具收集组从该实例发送到实用工具控制点时，部署的 DAC 将合并到 SQL Server 实用工具中  。 然后，该 DAC 将出现 **中的** “实用工具资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **“已部署的数据层应用程序”** 节点下，并且在 **中的** 详细信息页中报告。  
+ 如果将 DAC 部署到数据库引擎的实例，在下次将实用工具收集组从该实例发送到实用工具控制点时，部署的 DAC 将合并到 SQL Server 实用工具中  。 然后，该 DAC 将出现在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 实用工具资源管理器的“已部署的数据层应用程序”节点中，并且将在“已部署的数据层应用程序”的详细信息页面中报告    。  
   
 ###  <a name="database-options-and-settings"></a>数据库选项和设置  
  默认情况下，在部署过程中创建的数据库将具有来自 CREATE DATABASE 语句的几乎所有默认设置，只有以下方面除外：  
@@ -91,7 +91,7 @@ ms.locfileid: "72907890"
   
  **策略条件的评估结果** - 显示 DAC 部署策略条件是否成功。 将在单独的行上报告对每个条件进行评估的结果。  
   
- 在将 DAC 部署到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 时以下服务器选择策略的计算结果始终为 false：操作系统版本、语言、启用的命名管道、平台和启用的 tcp。  
+ 在将 DAC 部署到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时以下服务器选择策略的计算结果始终为 false：操作系统版本、语言、启用的命名管道、平台和启用的 tcp。  
   
  “忽略违反策略情况”  - 使用此复选框可以在未能满足一个或多个策略条件的情况下继续进行部署。 只有在您确保未满足的所有条件都不会阻碍 DAC 操作成功条件的情况下，才选择此选项。  
    
@@ -104,7 +104,7 @@ ms.locfileid: "72907890"
   
  该数据库名称还用作 DAC 实例的名称。 该实例名称显示在“对象资源管理器”  中“数据层应用程序”  节点下的 DAC 的节点上，或者显示在“实用工具资源管理器”  中“已部署的数据层应用程序”  节点下的 DAC 的节点上。  
   
- 以下选项不应用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，并且在部署到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 时不显示。  
+ 以下选项不应用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，并且在部署到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时不显示。  
   
  “使用默认数据库位置”  - 选择此选项可在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的默认位置中创建数据库数据和日志文件。 将使用数据库名称生成文件名。  
   
@@ -145,6 +145,10 @@ ms.locfileid: "72907890"
 
 下面的示例使用来自 MyApplication.dacpac 包的 DAC 定义，将名为 MyApplication 的 DAC 部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的默认实例。  
   
+## <a name="powershell-examples"></a>PowerShell 示例  
+
+下面的示例使用来自 MyApplication.dacpac 包的 DAC 定义，将名为 MyApplication 的 DAC 部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的默认实例。  
+
 ```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  

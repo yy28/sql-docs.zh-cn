@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
+ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096937"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74866070"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ GO
   `TableC`、 `TableB`、 `TableA`或  
   `TableB`、 `TableA`、 `TableC`或  
   `TableB`、 `TableC`、 `TableA`或  
-  `TableC`、 `TableA`、 `TableB`  
+  `TableC`、`TableA`、`TableB`  
 
 * 从每个表析取数据的方法。  
   访问每个表中的数据一般也有不同的方法。 如果只需要有特定键值的几行，数据库服务器可以使用索引。 如果需要表中的所有行，数据库服务器则可以忽略索引并执行表扫描。 如果需要表中的所有行，而有一个索引的键列在 `ORDER BY`中，则执行索引扫描而非表扫描可能会省去对结果集的单独排序。 如果表很小，则对该表的几乎所有访问来说，表扫描可能都是最有效的方法。
@@ -154,7 +154,7 @@ GO
 - 结果取决于服务器配置选项的表达式。
 
 #### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>可折叠和不可折叠常量表达式示例
-请考虑以下查询：
+请考虑下列查询：
 
 ```sql
 SELECT *
@@ -420,9 +420,9 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 执行计划包含下列主要组件： 
 
 - **查询执行计划**     
-  大部分执行计划是由任意数量的用户使用的可重入的只读数据结构。 这称为查询计划。 查询计划中不存储用户上下文。 内存中查询计划副本永远不超过两个：一个副本用于所有的串行执行，另一个用于所有的并行执行。 并行副本覆盖所有的并行执行，与并行执行的并行度无关。 
+  执行计划的主体是一个重入的只读数据结构，可由任意数量的用户使用。 这称为查询计划。 查询计划中不存储用户上下文。 内存中查询计划副本永远不超过两个：一个副本用于所有的串行执行，另一个用于所有的并行执行。 并行副本覆盖所有的并行执行，与并行执行的并行度无关。 
 - **执行上下文**     
-  正在执行查询的每个用户都有一个数据结构，用于保存特定于其执行的数据（如参数值）。 此数据结构称为执行上下文。 执行上下文数据结构可以重新使用。 如果用户执行查询而其中的一个结构未使用，将会用新用户的上下文重新初始化该结构。 
+  每个正在执行查询的用户都有一个包含其执行专用数据（如参数值）的数据结构。 此数据结构称为执行上下文。 执行上下文数据结构可以重新使用。 如果用户执行查询而其中的一个结构未使用，将会用新用户的上下文重新初始化该结构。 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
@@ -483,7 +483,7 @@ GO
 
 为了使语句正确，或要获得可能更快的查询执行计划，大多数都需要进行重新编译。
 
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 中，只要批处理中的语句导致重新编译，就会重新编译整个批处理，无论此批处理是通过存储过程、触发器、即席批处理，还是通过预定义的语句进行提交。 从 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 开始，只会重新编译批处理中导致重新编译的语句。 由于这种差异，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 和更高版本中的重新编译计数不可比较。 另外，由于 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 和更高版本扩展了功能集，因此它们具有更多类型的重新编译。
+在低于 2005 版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中，只要批处理中的语句导致重新编译，就会重新编译整个批处理，无论此批处理是通过存储过程、触发器、临时批处理还是预定义语句提交的。 从 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 开始，只会重新编译批处理中触发重新编译的语句。 另外，由于 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 和更高版本扩展了功能集，因此它们具有其他类型的重新编译。
 
 语句级重新编译有助于提高性能，因为在大多数情况下，只有少数语句导致了重新编译并造成相关损失（指 CPU 时间和锁）。 因此，避免了批处理中其他不必重新编译的语句的这些损失。
 
@@ -507,7 +507,7 @@ GO
 > `SP:Recompile` 和 `SQL:StmtRecompile` 的 EventSubClass 列都包含一个整数代码，用以指明重新编译的原因  。 [此处](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)对代码进行了说明。
 
 > [!NOTE]
-> 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `ON` 时，如果查询以表或索引视图为目标，而自上次执行后，表或索引视图的统计信息已更新或其基数已发生很大变化，查询将被重新编译。 此行为适用于标准用户定义表、临时表以及由 DML 触发器创建的插入表和删除表。 如果过多的重新编译影响到查询性能，请考虑将此设置更改为 `OFF`。 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `OFF` 时，不会因统计信息或基数的更改而发生任何重新编译，但是，由 DML `INSTEAD OF` 触发器创建的插入表和删除表除外。 因为这些表是在 tempdb 中创建的，因此，是否重新编译访问这些表的查询取决于 tempdb 中 `AUTO_UPDATE_STATISTICS` 的设置。 请注意，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 中，即使此设置为 `OFF`，查询也将继续基于 DML 触发器插入表和删除表的基数更改进行重新编译。
+> 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `ON` 时，如果查询以表或索引视图为目标，而自上次执行后，表或索引视图的统计信息已更新或其基数已发生很大变化，查询将被重新编译。 此行为适用于标准用户定义表、临时表以及由 DML 触发器创建的插入表和删除表。 如果过多的重新编译影响到查询性能，请考虑将此设置更改为 `OFF`。 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `OFF` 时，不会因统计信息或基数的更改而发生任何重新编译，但是，由 DML `INSTEAD OF` 触发器创建的插入表和删除表除外。 因为这些表是在 tempdb 中创建的，因此，是否重新编译访问这些表的查询取决于 tempdb 中 `AUTO_UPDATE_STATISTICS` 的设置。 请注意，在低于 2005 版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，即使此设置为 `OFF`，查询也将继续基于 DML 触发器插入表和删除表的基数更改进行重新编译。
 
 ### <a name="PlanReuse"></a>参数和执行计划的重复使用
 
@@ -585,7 +585,7 @@ WHERE AddressID = 1 + 2;
 > [!WARNING] 
 > 与将最终用户键入的值串联到字符串中，然后使用数据访问 API 方法、 `EXECUTE` 语句或 `sp_executesql` 存储过程来执行该字符串相比，使用参数或参数标记来保存这些值更安全。
 
-如果执行不带参数的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将在内部对该语句进行参数化以增加将其与现有执行计划相匹配的可能性。 此过程称为简单参数化。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 中，此过程称为自动参数化。
+如果执行不带参数的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将在内部对该语句进行参数化以增加将其与现有执行计划相匹配的可能性。 此过程称为简单参数化。 在低于 2005 版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中，该过程被称为自动参数化。
 
 请看下面的语句：
 
@@ -940,9 +940,9 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种方
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 关系引擎使用 OLE DB 应用程序编程接口 (API) 打开链接服务器上的行集、提取行并管理事务。
 
-对于每个作为链接服务器访问的 OLE DB 数据源，运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的服务器上必须有 OLE DB 访问接口。 在特定 OLE DB 数据源上可执行哪些 [!INCLUDE[tsql](../includes/tsql-md.md)] 操作取决于 OLE DB 提供程序的功能。
+对于每个作为链接服务器访问的 OLE DB 数据源，运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的服务器上必须有 OLE DB 访问接口。 在特定 OLE DB 数据源上可执行哪些 [!INCLUDE[tsql](../includes/tsql-md.md)] 操作取决于 OLE DB 访问接口的功能。
 
-对于每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，`sysadmin` 固定服务器角色的成员可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` 属性启用或禁用对 OLE DB 提供程序使用即席连接器名称。 如果启用了即席访问，则任何登录到该实例的用户都可以执行包含即席连接器名称的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，该即席连接器名称引用了网络中可以通过 OLE DB 访问接口访问的任何数据源。 为了控制对数据源的访问， `sysadmin` 角色的成员可以对该 OLE DB 提供程序禁用即席访问，从而限制用户只能访问由管理员定义的链接服务器名称所引用的那些数据源。 默认情况下，对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 访问接口启用即席访问，而对所有其他的 OLE DB 访问接口禁用即席访问。
+对于每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，`sysadmin` 固定服务器角色的成员可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` 属性启用或禁用对 OLE DB 提供程序使用临时连接器名称。 如果启用了即席访问，则任何登录到该实例的用户都可以执行包含即席连接器名称的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，该即席连接器名称引用了网络中可以通过 OLE DB 访问接口访问的任何数据源。 为了控制对数据源的访问， `sysadmin` 角色的成员可以对该 OLE DB 提供程序禁用即席访问，从而限制用户只能访问由管理员定义的链接服务器名称所引用的那些数据源。 默认情况下，对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 访问接口启用即席访问，而对所有其他的 OLE DB 访问接口禁用即席访问。
 
 分布式查询可允许用户使用运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务的 Microsoft Windows 帐户的安全上下文来访问其他数据源（例如，文件、非关系数据源 [如 Active Directory] 等）。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以正确模拟 Windows 登录名，但不能模拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名。 这样，就有可能使分布式查询用户能够访问自己本没有访问权限、但运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务的帐户有访问权限的另一数据源。 使用 `sp_addlinkedsrvlogin` 定义被授权访问相应链接服务器的特定登录名。 此控制对即席名称无效，所以对 OLE DB 访问接口启用即席访问时要小心。
 
@@ -983,7 +983,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>显示查询执行计划中的分区信息
 
-可以使用 Transact-SQL [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 语句 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或者使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的图形执行计划输出来检查已分区表和已分区索引上的查询执行计划。 例如，单击“查询编辑器”工具栏上的“显示估计的执行计划”  可以显示编译时执行计划，单击“包括实际的执行计划”  可以显示运行时计划。 
+可以使用 [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 语句 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或者使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的图形执行计划输出来检查已分区表和已分区索引上的查询执行计划。 例如，单击“查询编辑器”工具栏上的“显示估计的执行计划”  可以显示编译时执行计划，单击“包括实际的执行计划”  可以显示运行时计划。 
 
 使用这些工具，您可以确定以下信息：
 

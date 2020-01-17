@@ -1,6 +1,7 @@
 ---
-title: 在事务复制中发布存储过程执行 | Microsoft Docs
-ms.custom: ''
+title: 发布存储过程执行（事务）
+description: 了解如何将在发布服务器上执行并影响已发布表的存储过程作为存储过程执行项目包含到事务发布中。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93377a86d55086f2f3af501a962c6973f0d66234
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ad8e489d753587912eb7369316c1413bd1eaf1c9
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710736"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321401"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>在事务复制中发布存储过程执行
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

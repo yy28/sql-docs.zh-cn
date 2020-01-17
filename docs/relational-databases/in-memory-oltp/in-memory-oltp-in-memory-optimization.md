@@ -1,7 +1,7 @@
 ---
 title: 内存中 OLTP（内存中优化）| Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 11/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581397e01991ef1fb23b8c4bbfa9de879bc39ac3
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494098"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401655"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>内存中 OLTP 和内存优化
 
@@ -47,7 +47,7 @@ ms.locfileid: "69494098"
 ## <a name="in-this-section"></a>在本节中  
  本节包括下列主题：  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[快速入门 1：可提高 Transact SQL 性能的内存中 OLTP 技术](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|深入探讨内存中 OLTP|
 |[概述和使用方案](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|有关什么是内存中 OLTP 以及什么是显示性能优势的方案的概述。|
@@ -62,7 +62,7 @@ ms.locfileid: "69494098"
 |[内存优化表的备份、还原和恢复](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|讨论内存优化表的备份、还原和恢复。|  
 |[对内存中 OLTP 的 Transact-SQL 支持](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|讨论 [!INCLUDE[tsql](../../includes/tsql-md.md)] 对 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]的支持。|  
 |[对内存中 OLTP 数据库的高可用性支持](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|讨论 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]中的可用性组和故障转移群集。|  
-|[对内存中 OLTP 的 SQL Server 支持](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|列出支持内存优化表的新增和更新的语法和功能。|  
+|[SQL Server 对内存中 OLTP 的支持](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|列出支持内存优化表的新增和更新的语法和功能。|  
 |[迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)|论述如何将基于磁盘的表迁移到内存优化的表。|  
 | &nbsp; | &nbsp; |
 
@@ -78,7 +78,7 @@ ms.locfileid: "69494098"
 
 -   [SQL Server In-Memory OLTP and Columnstore Feature Comparison](https://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
 
--   SQL Server 2016 内存中 OLTP 的新增功能 [第 1 部分](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) 和 [第 2 部分](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
+-   SQL Server 2016 内存中 OLTP 的新增功能[第 1 部分](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/)和[第 2 部分](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
   
 -   [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)  
   
@@ -86,16 +86,16 @@ ms.locfileid: "69494098"
 
 ## <a name="anchorname-17minute-video"></a>已编制索引的 17分钟视频
 
-- _视频标题：_ **SQL Server 2016 中的内存中 OLTP**
-- _发布日期：_ 2019-03-10
-- _持续时间：_ 17:32
-- _：_ SQL Server 高级项目经理 Jos de Bruijn
+- _视频标题：_ &nbsp; **SQL Server 2016 中的内存中 OLTP**
+- _发布日期：_ &nbsp; 2019 年 3 月 10 日，发布于 `YouTube.com`。
+- _持续时间：_ &nbsp; 17:32 &nbsp; &nbsp;（有关视频链接，请参阅以下[索引](#anchorname-index-17minute-video)  。）
+- _：_ &nbsp; SQL Server 高级项目经理 Jos de Bruijn
 
 ### <a name="demo-can-be-downloaded"></a>可以下载演示
 
-在时间标记 08:09 处，视频会运行两次演示。 可以通过以下链接下载视频中使用的可运行性能演示：
+在时间标记 08:09 处，视频会运行两次演示。 可通过以下链接下载视频中使用的可运行性能演示的源代码：
 
-- [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+- [内存中 OLTP 性能演示 v1.0，源代码](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
 视频中所示的常规步骤如下：
 
@@ -103,7 +103,7 @@ ms.locfileid: "69494098"
 2. 接下来，我们会看到如何通过在 SQL Server Management Studio (SSMS) 中单击几次来创建和填充表的内存优化版本。
 3. 随后演示使用内存优化表重新运行。 可测量到速度大幅提高。
 
-### <a name="index-to-each-section-in-the-video"></a>视频中每节的索引
+### <a name="anchorname-index-17minute-video"></a>视频中每节的索引
 
 | 时间标记链接 | 节标题 |
 | :------------- | :------------ |
@@ -119,13 +119,13 @@ ms.locfileid: "69494098"
 | &nbsp; &nbsp; [07:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=442) | 在 SQL Server 2014 中首次发布，但是在 2016 中进行了重大改进。 |
 | &nbsp; &nbsp; [07:58](https://www.youtube.com/watch?v=l5l5eophmK4&t=558) | 也在 Azure SQL 数据库中可用（云中）。 |
 | <br/>D.&nbsp;[08:09](https://www.youtube.com/watch?v=l5l5eophmK4&t=489) | <br/>性能演示。<br/> 使用一个常规表运行演示。 |
-| &nbsp; &nbsp; [09:11](https://www.youtube.com/watch?v=l5l5eophmK4&t=551) | SSMS 上下文菜单：“报表”  &gt;“事务性能分析”  |
+| &nbsp; &nbsp; [09:11](https://www.youtube.com/watch?v=l5l5eophmK4&t=551) | SSMS 上下文菜单：“报表”&gt;“事务性能分析”   |
 | &nbsp; &nbsp; [10:38](https://www.youtube.com/watch?v=l5l5eophmK4&t=638) | SSMS 上下文菜单：**内存优化顾问**<br/> &nbsp; &nbsp; 通过常规表实际创建内存优化表，以及迁移数据。 |
 | &nbsp; &nbsp; [11:28](https://www.youtube.com/watch?v=l5l5eophmK4&t=688) | 重新运行演示，速度提高 45 倍。 |
 | <br/>E.&nbsp;[12:17](https://www.youtube.com/watch?v=l5l5eophmK4&t=737) | <br/>在 SQL Server 2016 中更易于使用内存中 OLTP（与 2014 相比）。 |
 | &nbsp; &nbsp; [12:43](https://www.youtube.com/watch?v=l5l5eophmK4&t=763) | 简化了分析以帮助进行应用迁移。 |
 | &nbsp; &nbsp; [13:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=783) | 通过改进的 Transact-SQL 语言支持（例如，具有外键和触发器）降低了应用迁移的复杂性。 |
-| &nbsp; &nbsp; [13:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=836) | 提高了可管理性。<br/> &nbsp; &nbsp; 例如，更改架构和索引、统计信息的自动更新。 |
+| &nbsp; &nbsp; [13:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=836) | 提高了可管理性。<br/> &nbsp; &nbsp; 例如，更改架构和索引，以及自动更新统计信息。 |
 | <br/>F.&nbsp;[14:46](https://www.youtube.com/watch?v=l5l5eophmK4&t=886) | <br/>改进了可伸缩性。 |
 | &nbsp; &nbsp; [15:12](https://www.youtube.com/watch?v=l5l5eophmK4&t=912) | 大型内存优化表（每个数据库多达 2TB）。 |
 | &nbsp; &nbsp; [15:34](https://www.youtube.com/watch?v=l5l5eophmK4&t=934) | 更好地缩放。 |

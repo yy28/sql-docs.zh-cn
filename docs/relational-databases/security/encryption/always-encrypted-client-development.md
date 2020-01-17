@@ -12,12 +12,12 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 235dc20ca94affa5f022bc242aa0ef6726f1542c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 0dbf983f044118a5d59812f1183d0733b20cb449
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594448"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74492020"
 ---
 # <a name="develop-applications-using-always-encrypted"></a>使用 Always Encrypted 开发应用程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,5 +30,5 @@ ms.locfileid: "73594448"
 - [对 JDBC 驱动程序使用始终加密](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
 - [对 ODBC 驱动程序使用 Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 - [对 PHP 驱动程序使用 Always Encrypted](../../../connect/php/using-always-encrypted-php-drivers.md)
-- [在 .NET Core 和 .NET Framework 应用程序中对 Microsoft.Data.SqlClient 使用 Always Encrypted](https://github.com/dotnet/sqlclient/tree/master/release-notes)
-- [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [在 .NET Core 和 .NET Framework 应用程序中对用于 SQL Server 的 Microsoft .NET 数据提供程序使用 Always Encrypted](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

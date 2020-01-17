@@ -1,7 +1,7 @@
 ---
-title: 恢复数据库但不还原数据 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 10/23/2019
+title: 恢复数据库 - 不还原 (Transact-SQL)
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 68cf8bc2412ff715d42ad22b2000f832d86b1f63
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: 1d5c0fbb11b7ec3aaed4ac48a7334f790f3fd9b3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916053"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255855"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>恢复数据库但不还原数据 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "72916053"
  `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
-> FROM =\<backup_device>   子句不用于仅恢复还原，因为不需要任何备份。  
+> FROM =\<backup_device> 子句不用于仅恢复还原，因为不需要任何备份   。  
   
  **示例**  
   

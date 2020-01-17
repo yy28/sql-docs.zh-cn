@@ -1,6 +1,5 @@
 ---
-title: 查找具有最多锁定的对象 | Microsoft Docs
-ms.custom: ''
+title: 使用扩展事件查找锁定次数最多的对象
 ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,13 +14,14 @@ helpviewer_keywords:
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1173afdae14e2c68d2aade38c938eecfe3bc25d7
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: 66a28ef1b0f6dcd683097bcd6b8d38a07fe15204
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589959"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234479"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>查找具有最多锁定的对象
 
@@ -110,7 +110,7 @@ ms.locfileid: "72589959"
 
 前面的 Transact-SQL 脚本中的语句完成后，查询编辑器的“结果”选项卡将显示以下列  ：
   
-- NAME
+- name
 - object_id
 - lock_count
   

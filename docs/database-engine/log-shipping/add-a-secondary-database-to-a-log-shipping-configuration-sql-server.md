@@ -1,6 +1,7 @@
 ---
-title: 向日志传送配置添加辅助数据库 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 添加日志传送辅助数据库
+description: 介绍如何向现有的日志传送配置添加辅助数据库。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,30 +15,17 @@ helpviewer_keywords:
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f1a2f3c2149a089b4fe62564fae1278690ba4420
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66a194a26529834a3d77229a21b7556b03da635e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057902"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822158"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>向日志传送配置添加辅助数据库 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向现有的日志传送配置添加辅助数据库。  
   
- **本主题内容**  
-  
--   **开始之前：**  
-  
-     [安全性](#Security)  
-  
--   **若要添加日志传送辅助数据库，请使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
--   [相关任务](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -50,11 +38,11 @@ ms.locfileid: "68057902"
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>添加日志传送辅助数据库  
   
-1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击“属性”。  
+1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击“属性”  。  
   
-2.  在 **“选择页”** 下，单击 **“事务日志传送”**。  
+2.  在 **“选择页”** 下，单击 **“事务日志传送”** 。  
   
-3.  在 **“辅助服务器实例和数据库”** 下，单击 **“添加”**。  
+3.  在 **“辅助服务器实例和数据库”** 下，单击 **“添加”** 。  
   
 4.  单击 **“连接”** ，连接到要用作辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
@@ -76,7 +64,7 @@ ms.locfileid: "68057902"
   
 13. 请注意 **“还原作业”** 下 **“计划”** 框中列出的还原计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
   
-14. 单击 **“确定”** 中向现有的日志传送配置添加辅助数据库。  
+14. 单击“确定”。   
   
 15. 在“数据库属性”对话框上单击 **“确定”** ，以开始配置过程。  
   

@@ -1,6 +1,6 @@
 ---
-title: 链接服务器
-ms.date: 05/29/2019
+title: 链接服务器（数据库引擎）| Microsoft Docs
+ms.date: 10/14/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ed882119c2589dbec4209523e5bc66b896316ec8
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74094780"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165340"
 ---
 # <a name="linked-servers-database-engine"></a>链接服务器（数据库引擎）
 
@@ -56,7 +56,7 @@ ms.locfileid: "74094780"
   
 “OLE DB 访问接口”  是管理特定数据源并与其交互的 DLL。 “OLE DB 数据源”  标识可通过 OLE DB 访问的特定数据库。 虽然通过链接服务器定义查询的数据源通常是数据库，但 OLE DB 访问接口对各种文件和文件格式仍可用。 这些文件和文件格式包括文本文件、电子表格数据和全文内容搜索的结果。  
   
-[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序 (PROGID:SQLNCLI11) 是适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的官方 OLE DB 提供程序。  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序 (PROGID：SQLNCLI11) 是适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的官方 OLE DB 提供程序。  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式查询旨在与任何实现所需 OLE DB 接口的 OLE DB 访问接口一起使用。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口和特定访问接口进行过测试。  
@@ -64,16 +64,19 @@ ms.locfileid: "74094780"
 ## <a name="linked-server-details"></a>链接服务器详细信息  
  下图显示了链接服务器配置的基础。  
   
- ![客户端层、服务器层和数据库服务器层](../../relational-databases/linked-servers/media/lsvr.gif "客户端层、服务器层和数据库服务器层")  
+ ![客户端层、服务器层和数据库服务器层](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
   
 通常，链接服务器用于处理分布式查询。 当客户端应用程序通过链接服务器执行分布式查询时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将分析命令并向 OLE DB 发送请求。 行集请求的形式可以是对该访问接口执行查询或从该访问接口打开基表。  
-  
+
 > [!NOTE]
 > 为使数据源能通过链接服务器返回数据，该数据源的 OLE DB 访问接口 (DLL) 必须与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例位于同一服务器上。  
-  
-> [!IMPORTANT] 
-> 使用 OLE DB 提供程序时，运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有对安装提供程序的目录及其所有子目录的读取权限和执行权限。 这包括 Microsoft 发布的提供程序和任何第三方提供程序。 
-  
+ 
+> [!IMPORTANT]
+> 使用 OLE DB 提供程序时，运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有对安装提供程序的目录及其所有子目录的读取权限和执行权限。 这包括 Microsoft 发布的提供程序和任何第三方提供程序。
+
+> [!NOTE]
+> 使用完全委派时，链接服务器支持 Active Directory 传递身份验证。 自 SQL Server 2017 CU17 起，还支持使用约束委派的传递身份验证；但是，不支持[基于资源的约束委派](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)。
+
 ## <a name="managing-providers"></a>管理访问接口  
 有一组选项可以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何加载和使用注册表中指定的 OLE DB 访问接口。  
   
@@ -88,7 +91,7 @@ ms.locfileid: "74094780"
   
 -   通过运行 **sp_dropserver**删除链接服务器定义。 还可以使用此存储过程删除远程服务器。  
   
-还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来定义链接服务器。 在对象资源管理器中，右键单击“服务器对象”  ，选择“新建”  ，再选择“链接服务器”  。 通过右键单击链接服务器名称并选择“删除”  ，可以删除链接服务器定义。  
+还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来定义链接服务器。 在对象资源管理器中，右键单击“服务器对象”  ，选择“新建”  ，再选择“链接服务器”  。 通过右键单击链接服务器名称并选择“删除”  ，可以删除链接服务器定义。  
   
  对链接服务器执行分布式查询时，请对每个要查询的数据源指定由四个部分组成的完全限定的表名。 这个四部分名称格式应为 _linked\_server\_name.catalog_ **.** _schema_ **.** _object\_name_。  
   

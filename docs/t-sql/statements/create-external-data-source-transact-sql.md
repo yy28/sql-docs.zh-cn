@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91711ce160dcb653d9e05e8b0a445214a247d337
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ec1bd01ae5f92efbbbe08ebee3da3484ce387e29
+ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981888"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681778"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ ms.locfileid: "73981888"
 
 |                               |                                                              |                                                              |                                                              |      |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| **\* _SQL Server \*_** &nbsp; | [SQL 数据库](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL 数据<br />数据仓库](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| \* SQL Server \*  &nbsp; | [SQL 数据库](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL 数据<br />数据仓库](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
@@ -138,7 +138,7 @@ WITH
   - 至少对应加载的文件具有读取权限（例如 `srt=o&sp=r`）
   - 使用有效的有效期（所有日期均采用 UTC 时间）。
 
-有关使用具有 `SHARED ACCESS SIGNATURE` 和 `TYPE` = `BLOB_STORAGE` 的 `CREDENTIAL` 的示例，请参阅[创建外部数据源以执行批量操作并将数据从 Azure Blob 存储检索到 SQL 数据库](#f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+有关使用具有 `SHARED ACCESS SIGNATURE` 和 `TYPE` = `BLOB_STORAGE` 的 `CREDENTIAL` 的示例，请参阅[创建外部数据源以执行批量操作并将数据从 Azure blob 存储检索到 SQL 数据库](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 要创建数据库范围凭据，请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]。
 
@@ -152,7 +152,7 @@ WITH
 > [!IMPORTANT]
 > 如果使用任何其他外部数据源，请勿设置 `TYPE`。
 
-有关使用 `TYPE` = `HADOOP` 从 Azure Blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure Blob 存储](#e-create-external-data-source-to-reference-azure-blob-storage)。
+有关使用 `TYPE` = `HADOOP` 从 Azure blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure blob 存储](#e-create-external-data-source-to-reference-azure-blob-storage)。
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' 
 
@@ -189,7 +189,7 @@ WITH
 
 在 EXTERNAL DATA SOURCE 对象上采用共享锁。  
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 PolyBase 支持大多数外部数据源的基于代理的身份验证。 创建数据库范围凭据以创建代理帐户。
 
@@ -311,14 +311,38 @@ WITH
 ;
 ```
 
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-2019"></a>F. 创建外部数据源以通过 Polybase 连接引用 SQL Server 命名实例 (SQL 2019)
+
+要创建引用 SQL Server 命名实例的外部数据源，可以使用 CONNECTION_OPTIONS 指定实例名称。 在下面的示例中，WINSQL2019 是主机名，而 SQL2019 是实例名。
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019',
+  CONNECTION_OPTIONS = 'Server=%s\SQL2019',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+或者，可以使用端口连接到 SQL Server 实例。
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019:58137',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+
 ## <a name="examples-bulk-operations"></a>示例：批量操作
 
 > [!NOTE]
 > 为批量操作配置外部数据源时，请勿在 `LOCATION` URL 的末尾放置尾随 /、文件名或共享访问签名参数  。
 
-### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. 创建外部数据源以用于从 Azure Blob 存储检索数据的批量操作
+### <a name="g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>G. 创建外部数据源以用于从 Azure Blob 存储检索数据的批量操作
 
-**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
+适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  。
 对使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 的批量操作使用以下数据源。 凭据必须设置 `SHARED ACCESS SIGNATURE` 作为标识、不应在 SAS 令牌中具有前导 `?`、必须对应加载的文件（例如 `srt=o&sp=r`）至少具有读取权限，并且有效期应有效（所有日期均采用 UTC 时间）。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)][sas_token]。
 
 ```sql
@@ -379,12 +403,12 @@ WITH
 
 |                                                              |                                 |                                                              |                                                              |      |
 | ------------------------------------------------------------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_SQL 数据库 \*\*_** &nbsp; | [SQL 数据<br />数据仓库](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | \* SQL 数据库 \*  &nbsp; | [SQL 数据<br />数据仓库](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                                                              |                                 |                                                              |                                                              |      |
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>概述：Azure SQL Database
+## <a name="overview-azure-sql-database"></a>概述：Azure SQL 数据库
 
 为弹性查询创建外部数据源。 外部数据源用于建立连接以及支持以下这些用例：
 
@@ -419,8 +443,8 @@ WITH
 | 外部数据源   | 位置前缀 | 位置路径                                         |
 | ---------------------- | --------------- | ----------------------------------------------------- |
 | 批量操作        | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
-| 弹性查询（分片）  | 可选    | `<shard_map_server_name>.database.windows.net`        |
-| 弹性查询（远程） | 可选    | `<remote_server_name>.database.windows.net`           |
+| 弹性查询（分片）  | 不是必需    | `<shard_map_server_name>.database.windows.net`        |
+| 弹性查询（远程） | 不是必需    | `<remote_server_name>.database.windows.net`           |
 
 位置路径：
 
@@ -444,7 +468,7 @@ WITH
   - 至少对应加载的文件具有读取权限（例如 `srt=o&sp=r`）
   - 使用有效的有效期（所有日期均采用 UTC 时间）。
 
-有关使用具有 `SHARED ACCESS SIGNATURE` 和 `TYPE` = `BLOB_STORAGE` 的 `CREDENTIAL` 的示例，请参阅[创建外部数据源以执行批量操作并将数据从 Azure Blob 存储检索到 SQL 数据库](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+有关使用具有 `SHARED ACCESS SIGNATURE` 和 `TYPE` = `BLOB_STORAGE` 的 `CREDENTIAL` 的示例，请参阅[创建外部数据源以执行批量操作并将数据从 Azure blob 存储检索到 SQL 数据库](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 要创建数据库范围凭据，请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]。
 
@@ -463,7 +487,7 @@ WITH
 
 当 `TYPE` 设置为 `RDBMS` 或 `SHARD_MAP_MANAGER` 时，配置此参数。
 
-| TYPE              | DATABASE_NAME 的值                                       |
+| 类型              | DATABASE_NAME 的值                                       |
 | ----------------- | ------------------------------------------------------------ |
 | RDBMS             | 使用 `LOCATION` 提供的服务器上的远程数据库的名称 |
 | SHARD_MAP_MANAGER | 作为分片映射管理器运行的数据库的名称      |
@@ -606,7 +630,7 @@ WITH
 
 |                                                              |                                                              |                                            |                                                              |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL 数据库](create-external-data-source-transact-sql.md?view=azuresqldb-current) | _\*SQL 数据<br />仓库\*_  &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL 数据库](create-external-data-source-transact-sql.md?view=azuresqldb-current) | \* SQL 数据<br />仓库 \*   &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                                                              |                                                              |                                            |                                                              |      |
 
 &nbsp;
@@ -653,7 +677,7 @@ WITH
 
 设置位置时的其他说明和指南：
 
-- 默认选项是在预配 Azure Data Lake Storage Gen 2 时使用“启用安全 SSL 连接”。 启用此链接后，必须选择在安全的 SSL 连接时使用 `abfss`。 请注意，`abfss` 也适用于不安全的 SSL 连接。 
+- 默认选项是在预配 Azure Data Lake Storage Gen 2 时使用 `enable secure SSL connections`。 启用此链接后，必须选择在安全的 SSL 连接时使用 `abfss`。 请注意，`abfss` 也适用于不安全的 SSL 连接。 
 - 创建对象时，SQL 数据仓库引擎不会验证外部数据源是否存在。 要进行验证，请使用外部数据源创建外部表。
 - 查询 Hadoop 时，所有表使用相同的外部数据源，以确保查询语义一致。
 - `wasb` 是 Azure blob 存储的默认协议。 `wasbs` 是可选的，但建议使用，因为会使用安全的 SSL 连接发送数据。
@@ -678,7 +702,7 @@ WITH
 > [!IMPORTANT]
 > 如果使用任何其他外部数据源，请勿设置 `TYPE`。
 
-有关使用 `TYPE` = `HADOOP` 从 Azure Blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure Blob 存储](#a-create-external-data-source-to-reference-azure-blob-storage)。
+有关使用 `TYPE` = `HADOOP` 从 Azure blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure blob 存储](#a-create-external-data-source-to-reference-azure-blob-storage)。
 
 ## <a name="permissions"></a>权限
 
@@ -688,7 +712,7 @@ WITH
 
 在 EXTERNAL DATA SOURCE 对象上采用共享锁。  
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 PolyBase 支持大多数外部数据源的基于代理的身份验证。 创建数据库范围凭据以创建代理帐户。
 
@@ -861,7 +885,7 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 
 |                                                              |                                                              |                                                              |                                                         |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------- | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL 数据库](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL 数据<br />数据仓库](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL 数据库](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL 数据<br />数据仓库](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | \* Analytics<br />Platform System (PDW) \*   &nbsp; |      |
 |                                                              |                                                              |                                                              |                                                         |      |
 
 &nbsp;
@@ -930,7 +954,7 @@ WITH
 > [!IMPORTANT]
 > 如果使用任何其他外部数据源，请勿设置 `TYPE`。
 
-有关使用 `TYPE` = `HADOOP` 从 Azure Blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure Blob 存储](#d-create-external-data-source-to-reference-azure-blob-storage)。
+有关使用 `TYPE` = `HADOOP` 从 Azure blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure blob 存储](#d-create-external-data-source-to-reference-azure-blob-storage)。
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' 
 
@@ -970,7 +994,7 @@ WITH
 
 在 EXTERNAL DATA SOURCE 对象上采用共享锁。  
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 PolyBase 支持大多数外部数据源的基于代理的身份验证。 创建数据库范围凭据以创建代理帐户。
 

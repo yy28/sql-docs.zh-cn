@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性组的 Transact-SQL 语句 | Microsoft Docs
-ms.custom: ''
+title: 可用性组的 Transact-SQL 语句
+description: 介绍支持部署、创建和管理 Always On 可用性组的 Transact-SQL (T-SQL) 语句。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b96b5d6921875aab92236475f4f6b66281a31599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ef8cd17f7a6db5058fd10d26de9f8674846ed03
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013827"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822199"
 ---
-# <a name="transact-sql-statements-for-always-on-availability-groups"></a>AlwaysOn 可用性组的 Transact-SQL 语句
+# <a name="transact-sql-statements-for-always-on-availability-groups"></a>Always On 可用性组的 Transact-SQL 语句
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主题介绍支持部署 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 以及创建和管理指定的可用性组、可用性副本和可用性数据库的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 语句。  

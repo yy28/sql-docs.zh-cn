@@ -1,6 +1,7 @@
 ---
-title: 为非 SQL Server 订阅服务器创建订阅 | Microsoft Docs
-ms.custom: ''
+title: 为非 SQL 订阅服务器创建订阅
+description: 介绍如何使用 SQL Server Management Studio (SSMS) 或 Transact-SQL (T-SQL) 在 SQL Server 中为非 SQL Server 订阅服务器创建订阅。
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710434"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321995"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>为非 SQL Server 订阅服务器创建订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +131,7 @@ ms.locfileid: "71710434"
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>在订阅服务器上保留表  
   
--   默认情况下，为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布会将 **pre_creation_cmd** 项目属性的值设置为“drop”。 此设置指定，如果复制与项目中某个表的名称相匹配，则复制应删除订阅服务器上对应的表。 如果要保留订阅服务器上的现有表，则可以对每个项目使用 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 存储过程，并为 **pre_creation_cmd**指定值“none”。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
+-   默认情况下，为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布会将 **pre_creation_cmd** 项目属性的值设置为“drop”。 此设置指定，如果复制与项目中某个表的名称相匹配，则复制应删除订阅服务器上对应的表。 如果要保留订阅服务器上的现有表，则可以对每个项目使用 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 存储过程，并为 **pre_creation_cmd**指定值“none”。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'` 列中的一个值匹配。  
   
 #### <a name="to-generate-a-snapshot-for-the-publication"></a>为发布生成快照  
   

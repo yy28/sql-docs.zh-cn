@@ -1,6 +1,7 @@
 ---
-title: “创建新条件”或“打开条件”对话框，“常规”页 | Microsoft Docs
-ms.custom: ''
+title: “新建条件”或“打开条件”对话框的“常规”页面
+description: 介绍 SQL Server Management Studio (SSMS) 中基于策略的管理的“新建条件”或“打开条件”对话框的“常规”页面。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 793d49d46e3a26164437fd6db542a7db0704e1cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c16d813af595e3698379026e219440ba0007db12
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137914"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558132"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>“创建新条件”或“打开条件”对话框，“常规”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此对话框用于创建或更改基于策略的管理条件。 条件是一个布尔表达式，用于针对方面指定基于策略的管理目标的一组允许状态。 可在“表达式”/“字段”框中选择的属性取决于所使用的方面。 有关条件与方面和策略如何关联的详细信息，请参阅[使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
+  此对话框用于创建或更改基于策略的管理条件。 条件是一个布尔表达式，用于针对方面指定基于策略的管理目标的一组允许状态。 可在  “表达式”/“字段”框中选择的属性取决于所使用的方面。 有关条件与方面和策略如何关联的详细信息，请参阅 [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -36,18 +37,18 @@ ms.locfileid: "68137914"
  **字段**  
  每个方面公开一个或多个可设置的属性。 在“字段”框中，从可用属性列表中选择一个属性，为此条件创建一个表达式。  
   
- **运算符**  
+ **“运算符”**  
  为该表达式选择一个比较运算符。 比较运算符包括：=、!=、>、>=、<、<=、[NOT]LIKE、[NOT]IN。 并非所有运算符都适用于某些属性。  
   
- **ReplTest1**  
- 该表达式的值设置。 允许的值取决于方面。 值可以为 TRUE/FALSE、字符串或数值。 字符串值必须用单引号引起来，例如：'AdventureWorks'。 并非所有运算符都适用于某些属性。  
+ **值**  
+ 该表达式的值设置。 允许的值取决于方面。 值可以为 TRUE/FALSE、字符串或数值。 字符串值必须用单引号引起来，例如：'AdventureWorks'  。 并非所有运算符都适用于某些属性。  
   
 ## <a name="group-clauses"></a>子句分组  
  可以对子句进行分组，以使其作为独立于查询其余部分的一个单元来运行，就像在数学等式或逻辑语句中的表达式两侧加上括号一样。 在生成复杂查询时，对子句进行分组是非常有用的。  
   
  **对子句进行分组**  
   
--   按 Shift 或 Ctrl 键，然后单击两个或多个子句以选择一个范围。 右键单击所选区域，然后单击“子句分组”。  
+-   按 Shift 或 Ctrl 键，然后单击两个或多个子句以选择一个范围。 右键单击所选区域，然后单击  “子句分组”。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

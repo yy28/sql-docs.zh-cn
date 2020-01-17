@@ -1,25 +1,26 @@
 ---
-title: Red Hat Enterprise Linux 上的 SQL Server 的无人参与安装
+title: 在 RHEL 上以无人参与的方式安装 SQL Server
 titleSuffix: SQL Server
-description: SQL Server 脚本示例 - Red Hat Enterprise Linux 上的无人参与安装
+description: SQL Server 脚本示例 - Red Hat Enterprise Linux (RHEL) 上的无人参与安装
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 696ba88a9f2d5f29de8dc3afb45af8c392f2de68
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: dc37a110b82113f2a96bd46be914c06a43c1a0ea
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67910439"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558632"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>示例：Red Hat Enterprise Linux 的无人参与 SQL Server 安装脚本
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-此示例 Bash 脚本在没有交互式输入的 Red Hat Enterprise Linux (RHEL) 上安装 SQL Server 2017。 它提供了安装数据库引擎、SQL Server 命令行工具、SQL Server 代理和执行安装后步骤的示例。 可以选择安装全文搜索并创建管理用户。
+此示例 Bash 脚本在没有交互式输入的 Red Hat Enterprise Linux (RHEL) 上安装 SQL Server 2017。 它提供数据库引擎、SQL Server 命令行工具和 SQL Server 代理的安装示例，并执行安装后步骤。 可以选择安装全文搜索并创建管理用户。
 
 > [!TIP]
 > 如果不需要无人参与的安装脚本，安装 SQL Server 最快的方法是遵循 [Red Hat 的快速入门](quickstart-install-connect-red-hat.md)。 有关其他设置信息，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
@@ -153,7 +154,7 @@ echo Done!
 
 运行该脚本
 
-1. 将示例粘贴到你最喜爱的文本编辑器中，并使用便于记忆的名称保存，比如 `install_sql.sh`。
+1. 将示例粘贴到你最喜欢的文本编辑器中，并使用便于记忆的名称保存它，例如 `install_sql.sh`。
 
 1. 自定义 `MSSQL_SA_PASSWORD`、`MSSQL_PID` 和要更改的任何其他变量。
 
@@ -171,7 +172,7 @@ echo Done!
 
 ## <a name="understanding-the-script"></a>了解脚本
 
-Bash 脚本执行的第一件事是设置几个变量。  它们可以是脚本变量，如示例或环境变量。  `MSSQL_SA_PASSWORD` 变量是安装 SQL Server 所必需的变量，其余变量是为脚本创建的自定义变量  。  示例脚本执行以下步骤：
+Bash 脚本执行的第一件事是设置几个变量。  它们可以是脚本变量（例如本示例），也可以是环境变量。  `MSSQL_SA_PASSWORD` 变量是安装 SQL Server 所必需的变量，其余变量是为脚本创建的自定义变量  。  示例脚本执行以下步骤：
 
 1. 导入公共 Microsoft GPG 密钥。
 
@@ -191,19 +192,19 @@ Bash 脚本执行的第一件事是设置几个变量。  它们可以是脚本�
 
 1. 如果已设置 ```SQL_INSTALL_FULLTEXT``` 变量，则可以选择安装 SQL Server 全文搜索。
 
-1. 在系统防火墙上取消阻止 TCP 端口 1433，以连接到其他系统中的 SQL Server。
+1. 在系统防火墙上取消阻止 TCP 端口 1433，这是从另一个系统连接到 SQL Server 所必需的。
 
-1. （可选）设置跟踪标志以进行死锁跟踪。 （需要取消评论行）
+1. （可选）设置跟踪标志以进行死锁跟踪。 （需要取消注释行）
 
 1. SQL Server 现已安装，若要使其可操作，请重启该过程。
 
-1. 验证是否已正确安装 SQL Server，并隐藏任何错误消息。
+1. 验证是否已正确安装 SQL Server，并隐藏所有错误消息。
 
 1. 如果同时设置 ```SQL_INSTALL_USER``` 和 ```SQL_INSTALL_USER_PASSWORD```，则将创建新的服务器管理用户。
 
 ## <a name="next-steps"></a>后续步骤
 
-简化多个无人参与的安装，并创建独立的 Bash 脚本来设置适当的环境变量。  可删除该示例脚本使用的任何变量，并将其放入自己的 Bash 脚本。
+简化多个无人参与安装，并创建独立的 Bash 脚本来设置适当的环境变量。  可删除该示例脚本使用的任何变量，并将其放入自己的 Bash 脚本。
 
 ```bash
 #!/bin/bash

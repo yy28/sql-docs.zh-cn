@@ -1,6 +1,7 @@
 ---
-title: 用于还原、恢复、管理备份的 RESTORE 语句 (T-SQL) | Microsoft Docs
-ms.custom: ''
+title: 还原、恢复和管理备份
+description: 用于还原、恢复和管理备份的 Transact-SQL RESTORE 语句。
+ms.custom: seo-lt-2019
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
@@ -22,12 +23,12 @@ ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 62be9d06e64e3ce986da0d96c4d04238d5f9ca3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a316cb512f3f5e23a7413ab5f5eaa4b15e3d39a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082554"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258762"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>用于还原、恢复和管理备份的 RESTORE 语句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
@@ -39,7 +40,7 @@ ms.locfileid: "68082554"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|。|描述|  
+|语句|说明|  
 |---------------|-----------------|  
 |[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|说明 RESTORE DATABASE 和 RESTORE LOG Transact-SQL 语句，这些语句用于从使用 BACKUP 命令创建的备份还原和恢复数据库。 RESTORE DATABASE 可用于任何恢复模式下的数据库。 RESTORE LOG 仅用于完全恢复模式和大容量日志记录恢复模式。 RESTORE DATABASE 也可用于将数据库恢复为数据库快照。|  
 |[RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|记录 RESTORE 语句和相关联的辅助语句集的“语法”部分描述的参数：RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 和 RESTORE VERIFYONLY。 大多数参数都仅由这六个语句中的一部分支持。 每个参数的说明中都指示了相应的支持信息。|  

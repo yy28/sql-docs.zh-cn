@@ -1,6 +1,7 @@
 ---
-title: 查看和使用数据库引擎优化顾问的输出 | Microsoft Docs
-ms.custom: ''
+title: 来自 DTA 的输出
+description: 查看和使用来自数据库引擎优化顾问 (DTA) 的输出。
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -25,14 +26,15 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907039"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165479"
 ---
-# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>查看和使用数据库引擎优化顾问的输出
+# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>查看和使用来自数据库引擎优化顾问 (DTA) 的输出
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   数据库引擎优化顾问在优化数据库时，会创建摘要、建议、报告和优化日志。 可以使用优化日志输出来对数据库引擎优化顾问优化会话进行故障排除。 可以使用摘要、建议和报告来确定是要实施优化建议，还是继续优化直到查询性能可提高到安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所需的程度为止。 有关如何使用数据库优化引擎来创建工作负荷和优化数据库的信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
@@ -168,7 +170,7 @@ ms.locfileid: "72907039"
   
 4.  保存该输入文件，以 **.xml** 为扩展名。  
   
-5.  根据数据库引擎优化顾问 XML 架构验证在步骤 4 中保存的 XML 输入文件。 此架构在您安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时安装在以下位置：  
+5.  根据数据库引擎优化顾问 XML 架构验证在步骤 4 中保存的 XML 输入文件。 此架构在安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时安装在以下位置：  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
@@ -183,7 +185,7 @@ ms.locfileid: "72907039"
 7.  重复步骤 6 和步骤 7，直到您所创建的假设配置能使查询性能达到您的要求为止。 然后，可以实施该新配置。 有关详细信息，请参阅本主题前面的 [实施优化建议](#Implement) 。  
   
 ##  <a name="ReviewEvaluateClone"></a> 查看、评估和克隆优化会话  
- 每当用户开始分析工作负荷对数据库的影响时，数据库引擎优化顾问都会创建新的优化会话。 可以使用数据库引擎优化顾问 GUI 中的 **“会话监视器”** 查看或重新加载在指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上运行的所有优化会话。 能够查看所有现有优化会话后，就可以轻松实现以下操作：根据现有会话克隆会话，编辑现有优化建议、然后使用数据库引擎优化顾问来评估编辑的会话，或定期执行优化以监视数据库的物理设计。 例如，您可以按月优化数据库。  
+ 每当用户开始分析工作负荷对数据库的影响时，数据库引擎优化顾问都会创建新的优化会话。 可以使用数据库引擎优化顾问 GUI 中的“会话监视器”查看或重新加载在指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上运行的所有优化会话  。 能够查看所有现有优化会话后，就可以轻松实现以下操作：根据现有会话克隆会话，编辑现有优化建议、然后使用数据库引擎优化顾问来评估编辑的会话，或定期执行优化以监视数据库的物理设计。 例如，您可以按月优化数据库。  
   
  必须先通过使用数据库引擎优化顾问优化工作负荷，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上创建优化会话，然后才能查看服务器实例的优化会话。 有关详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
   
@@ -251,7 +253,7 @@ ms.locfileid: "72907039"
  **“定义”** 列以超链接形式包含所建议分区或索引的定义。 此列通常很窄，无法看到整个定义。 单击超链接可以显示一个对话框，其中包含完整定义及 **“复制到剪贴板”** 按钮。  
   
 #### <a name="partition-recommendations"></a>“分区建议”  
- **数据库名称**  
+ **Database Name**  
  包含建议修改的对象的数据库。  
   
  **建议**  
@@ -291,7 +293,7 @@ ms.locfileid: "72907039"
  **大小(KB)**  
  所建议的新对象的预期大小。 如果此列空白，请单击 **“有关现有对象的大小，请参阅‘报告’”** 。  
   
- **“定义”**  
+ **定义**  
  “建议目标”  的定义。 单击此列以打开“SQL 脚本预览”对话框，该对话框中包含建议操作的脚本。  
   
  **“建议”**  
@@ -312,7 +314,7 @@ ms.locfileid: "72907039"
  **Date**  
  指定要运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业以应用建议的日期。  
   
- **Time**  
+ **时间**  
  指定要运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业以应用建议的时间。  
   
 ### <a name="reports-tab-options"></a>“报告”选项卡选项  
@@ -324,7 +326,7 @@ ms.locfileid: "72907039"
  **Date**  
  数据库引擎优化顾问创建报告的日期。  
   
- **Time**  
+ **时间**  
  数据库引擎优化顾问创建报告的时间。  
   
  **Server**  

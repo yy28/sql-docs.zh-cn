@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 11/18/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 50c5edee93747c98060d664f1edd2d42036aa9b2
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: bed396bf39b4b621c5b333a7b13218998264675a
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982656"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165898"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "73982656"
 
 > |||||
 > |---|---|---|---|
-> |**\* _SQL Server \*_** &nbsp;|[SQL 数据库<br />托管实例](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+> |**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />托管实例](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 
 &nbsp;
 
@@ -45,7 +45,7 @@ ms.locfileid: "73982656"
 
 创建资源调控器工作负荷组并将工作负荷组与资源调控器资源池关联。 不是 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都提供资源调控器。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。
 
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -124,14 +124,14 @@ MAX_DOP = value
 指定并行查询执行的最大并行度 (MAXDOP)。  value 必须为 0 或一个正整数  。 value 的允许范围为 0 到 64  。 value 的默认设置为 0，表示使用全局设置  。 按如下方式处理 MAX_DOP：
 
 > [!NOTE]
-> 工作负荷组 MAX_DOP 会覆盖[最大并行度的服务器配置](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)和 MAXDOP [数据库范围的配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 
+> 工作负荷组 MAX_DOP 会覆盖[最大并行度的服务器配置](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)和 MAXDOP [数据库范围的配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  。
 
 > [!TIP]
-> 若要在查询级别完成此操作，请使用 MAXDOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。  将最大并行度设置为查询提示时，在未超出工作负荷组 MAX_DOP 时保持有效。 如果 MAXDOP 查询提示值超出使用资源调控器配置的值，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用资源调控器 `MAX_DOP` 值。 MAXDOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)始终会覆盖[最大并行度的服务器配置](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。      
+> 要在查询级别完成此操作，请使用 MAXDOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)  。 将最大并行度设置为查询提示时，在未超出工作负荷组 MAX_DOP 时保持有效。 如果 MAXDOP 查询提示值超出使用资源调控器配置的值，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用资源调控器 `MAX_DOP` 值。 MAXDOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)始终会覆盖[最大并行度的服务器配置](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。      
 >   
-> 若要在数据库级别完成此操作，请使用 MAXDOP [数据库范围的配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。       
+> 要在数据库级别完成此操作，请使用 MAXDOP [数据库范围的配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  。      
 >   
-> 若要在服务器级别完成此操作，请使用最大并行度 (MAXDOP)  [服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。     
+> 要在服务器级别完成此操作，请使用“**最大并行度 (MAXDOP)** ”[服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。     
 
 GROUP_MAX_REQUESTS = value      
 指定在工作负荷组中允许执行的同时请求最大数。 value 必须为 0 或一个正整数  。 value 的默认设置为 0，表示允许的请求数不限  。 当达到最大并发请求数时，该组中的用户可以登录但置于等待状态，直至并发请求数降到指定值之下。
@@ -152,7 +152,7 @@ EXTERNAL external_pool_name | “default“
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷和查询的资源池
 - 外部进程的外部资源池。 有关详细信息，请参阅 [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 使用 `REQUEST_MEMORY_GRANT_PERCENT` 时，允许索引创建操作使用比最初授予的工作区内存更多的工作区内存以提高性能。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的资源调控器支持这种特殊的处理方法。 然而，最初授予及任何其他内存授予都受资源池和工作负荷组设置的限制。
 
 将按[任务](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)设置 `MAX_DOP` 限制。 它不是按[请求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)限制或按查询限制。 这意味着，在并行查询期间，单个请求可以生成多个任务，然后将它们分配给[计划程序](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 有关详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。
@@ -190,15 +190,15 @@ GO
 
 > ||||
 > |---|---|---|
-> |[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)||[SQL 数据库<br />托管实例](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)||_\*SQL 数据<br />仓库\*_  &nbsp;||||
+> |[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)||[SQL 数据库<br />托管实例](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* SQL 数据<br />仓库\*_** &nbsp;||||
 
 &nbsp;
 
-## <a name="sql-data-warehouse"></a>SQL 数据仓库 
+## <a name="sql-data-warehouse-preview"></a>SQL 数据仓库（预览）
 
-CREATE WORKLOAD GROUP (Transact-SQL)（预览版）创建工作负荷组。  工作负荷组是一组请求的容器，是在系统上配置工作负荷管理的基础。  通过使用工作负荷组，能够为工作负荷隔离保留资源、包含资源、定义每个请求的资源并遵循执行规则。  语句完成后，设置生效。
+创建工作负荷组。  工作负荷组是一组请求的容器，是在系统上配置工作负荷管理的基础。  通过使用工作负荷组，能够为工作负荷隔离保留资源、包含资源、定义每个请求的资源并遵循执行规则。  语句完成后，设置生效。
 
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
 
 ```
 CREATE WORKLOAD GROUP group_name  
@@ -216,13 +216,13 @@ group_name </br>
 指定用于标识工作负荷组的名称。  group_name 为 sysname。  最长可为 128 个字符，并且在实例中必须是唯一的。
 
 MIN_PERCENTAGE_RESOURCE = value </br>
-指定为此工作负荷组保证的最小资源分配，这些资源不与其他工作负荷组共享。  取值为 0 到 100 之间的整数。  所有工作负荷组的 min_percentage_resource 的总和不能超过 100。  min_percentage_resource 的值不能大于 cap_percentage_resource。  有每个服务级别允许的最小有效值。  有关更多详细信息，请参阅有效值<link>。
+指定为此工作负荷组保证的最小资源分配，这些资源不与其他工作负荷组共享。  取值为 0 到 100 之间的整数。  所有工作负荷组的 min_percentage_resource 的总和不能超过 100。  min_percentage_resource 的值不能大于 cap_percentage_resource。  有每个服务级别允许的最小有效值。  有关更多详细信息，请参阅[有效值](#effective-values)。
 
 CAP_PERCENTAGE_RESOURCE = value </br>
-指定工作负荷组中所有请求的最大资源利用率。  取值范围为 1 到 100。  cap_percentage_resource 的值必须大于 min_percentage_resource。  如果在其他工作负荷组中将 min_percentage_resource 配置为大于零，则 cap_percentage_resource 的有效值会减少。
+指定工作负荷组中所有请求的最大资源利用率。  整数取值范围为 1 到 100。  cap_percentage_resource 的值必须大于 min_percentage_resource。  如果在其他工作负荷组中将 min_percentage_resource 配置为大于零，则 cap_percentage_resource 的有效值会减少。
 
 REQUEST_MIN_RESOURCE_GRANT_PERCENT = value </br>
-设置每个请求分配到的最小资源量。  value 是一个必需参数，取值范围为 0.75 到 100.00（十进制）。  request_min_resource_grant_percent 的值必须是0.25 的倍数，必须是 min_percentage_resource 的因数，且小于 cap_percentage_resource。  有每个服务级别允许的最小有效值。  有关更多详细信息，请参阅有效值<link>。
+设置每个请求分配到的最小资源量。  value 是一个必需参数，取值范围为 0.75 到 100.00（十进制）。  request_min_resource_grant_percent 的值必须是0.25 的倍数，必须是 min_percentage_resource 的因数，且小于 cap_percentage_resource。  有每个服务级别允许的最小有效值。  有关更多详细信息，请参阅[有效值](#effective-values)。
 
 例如：
 
@@ -244,7 +244,7 @@ CREATE WORKLOAD GROUP wgSample WITH
 |||
 
 REQUEST_MAX_RESOURCE_GRANT_PERCENT = value </br>
-设置每个请求分配的最小资源量。  value 是一个可选参数，其默认值等于 request_min_resource_grant_percent。  value 不能低于 request_min_resource_grant_percent。  当 request_max_resource_grant_percent 的值大于 request_min_resource_grant_percent 并且系统资源可用时，会向请求分配其他资源。
+设置每个请求分配的最小资源量。  value 是一个可选十进制参数，其默认值等于 request_min_resource_grant_percent。  value 不能低于 request_min_resource_grant_percent。  当 request_max_resource_grant_percent 的值大于 request_min_resource_grant_percent 并且系统资源可用时，会向请求分配其他资源。
 
 IMPORTANCE = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } </br>
 指定工作负荷组中某个请求的默认重要性。  重要性为下列值之一，默认值为 NORMAL：
@@ -257,48 +257,54 @@ IMPORTANCE = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } </br>
 在工作负荷组设置的重要性是工作负荷组中所有请求的默认重要性。  用户还可以在分类器级别设置重要性，这可能会覆盖工作负荷组的重要性设置。  这允许对工作负荷组内请求的重要性进行区分，以便更快地访问非保留资源。  当工作负荷组 min_percentage_resource 的总和小于 100 时，将根据重要性分配非保留资源。
 
 QUERY_EXECUTION_TIMEOUT_SEC = value </br>
-指定查询在取消之前可以执行的最长时间（以秒为单位）。  value 必须为 0 或一个正整数。  value 的默认设置为 0，也就是说无限制。  在请求队列中等待的时间不计入查询执行时间。
+指定查询在取消之前可以执行的最长时间（以秒为单位）。  value 必须为 0 或一个正整数。  value 的默认设置为 0，查询永不超时。QUERY_EXECUTION_TIMEOUT_SEC 在查询处于运行状态时而不是在查询加入队列时进行计数。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 自动创建对应于资源类的工作负荷组，以实现后向兼容性。  不能删除这些系统定义的工作负荷组。  可以创建额外的 8 个用户定义的工作负荷组。
+
+如果使用大于零的 min_percentage_resource 创建工作负荷组，则 `CREATE WORKLOAD GROUP` 语句将加入队列，直到有足够的资源来创建工作负荷组。
 
 ## <a name="effective-values"></a>有效值
 
 参数 min_percentage_resource、cap_percentage_resource、request_min_resource_grant_percent 和 request_max_resource_grant_percent 具备有效值，这些有效值会根据当前服务级别和其他工作负荷组的配置进行调整。
 
-每个服务级别支持的并发与使用资源类定义每个查询授予的资源时保持一致，因此，request_min_resource_grant_percent 支持的值依赖于实例设置的服务级别。  最低服务级别 DW100c 支持 4 个并发。  配置的工作负荷组的有效 request_min_resource_grant_percent 可以为 25% 或更高。  有关详细信息，请参阅下表。
+每个服务级别支持的并发与使用资源类定义每个查询授予的资源时保持一致，因此，request_min_resource_grant_percent 支持的值依赖于实例设置的服务级别。  在最低的服务级别 DW100c，每个请求至少需要 25% 的资源。  在 DW100c 级别，所配置工作负荷组的有效 request_min_resource_grant_percent 可为 25% 或更高。  有关如何派生有效值的更多详细信息，请参阅下表。
 
-|服务级别|最大并行查询|REQUEST_MIN_RESOURCE_GRANT_PERCENT 和 MIN_PERCENTAGE_RESOURCE 支持的最小百分比|
+|服务级别|REQUEST_MIN_RESOURCE_GRANT_PERCENT 的最低有效值|最大并行查询|
 |---|---|---|
-|DW100c|4|25%|
-|DW200c|8|12.5%|
-|DW300c|12|8%|
-|DW400c|16|6.25%|
-|DW500c|20|5%|
-|DW1000c|32|3%|
-|DW1500c|32|3%|
-|DW2000c|48|2%|
-|DW2500c|48|2%|
-|DW3000c|64|1.5%|
-|DW5000c|64|1.5%|
-|DW6000c|128|0.75%|
-|DW7500c|128|0.75%|
-|DW10000c|128|0.75%|
-|DW15000c|128|0.75%|
-|DW30000c|128|0.75%|
+|DW100c|25%|4|
+|DW200c|12.5%|8|
+|DW300c|8%|12|
+|DW400c|6.25%|16|
+|DW500c|5%|20|
+|DW1000c|3%|32|
+|DW1500c|3%|32|
+|DW2000c|2%|48|
+|DW2500c|2%|48|
+|DW3000c|1.5%|64|
+|DW5000c|1.5%|64|
+|DW6000c|0.75%|128|
+|DW7500c|0.75%|128|
+|DW10000c|0.75%|128|
+|DW15000c|0.75%|128|
+|DW30000c|0.75%|128|
 ||||
 
 同样，request_min_resource_grant_percent、min_percentage_resource 必须大于或等于有效 request_min_resource_grant_percent。  若工作负荷组的 min_percentage_resource 被配置为小于有效 min_percentage_resource，那么在运行时，该值会被调整为零。  发生这种情况时，为 min_percentage_resource 配置的资源可在所有工作负荷组中共享。  例如，工作负荷组 wgAdHoc 的 min_percentage_resource 为 10%，在 DW1000c 服务级别运行，其有效 min_percentage_resource 则为 10%（DW1000c 支持的最低值为 3.25%）。  DW100c 级别的 wgAdhoc 的有效 min_percentage_resource 为 0%。  为 wgAdhoc 配置的10% 将在所有工作负荷组之间共享。
 
 Cap_percentage_resource 也具有有效值。  如果工作负荷组 wgAdhoc 配置 100% cap_percentage_resource，并且创建另一个 min_percentage_resource 为 25% 的工作负荷组 wgDashboards，则 wgAdhoc 的有效 cap_percentage_resource 将为 75%。
 
-了解工作负荷组的运行时值的最简单方法是查询系统视图 [sys.dm_workload_management_workload_groups_stats] (../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md?view=azure-sqldw-latest)。
+了解工作负荷组运行时值的最简单方法是查询系统视图 [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)。
+
 
 ## <a name="permissions"></a>权限
 
 需要 CONTROL DATABASE 权限
 
 ## <a name="see-also"></a>另请参阅
-[DROP 工作负荷组 (Transact-SQL)](drop-workload-group-transact-sql.md)
+[DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md) <br>
+[sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) <br>
+[sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) <br>
+关于如何创建和使用[工作负荷组](https://docs.microsoft.com/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)的快速入门
 
 ::: moniker-end

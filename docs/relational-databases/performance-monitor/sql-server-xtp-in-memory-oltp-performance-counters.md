@@ -1,6 +1,6 @@
 ---
-title: SQL Server XTP（内存中 OLTP）性能计数器 | Microsoft Docs
-ms.custom: ''
+title: XTP（内存中 OLTP）性能计数器
+ms.custom: seo-dt-2019
 ms.date: 04/06/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2ed90197774cb7be9d8229aa6b5e79ae811fbd88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f963d8d7fe186d889856c108de1541110beb16a3
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915257"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165509"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP（内存中 OLTP）性能计数器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,14 +24,14 @@ ms.locfileid: "67915257"
   
  对象和计数器的名称在过去以 *XTP* 开头，如“XTP 游标”  中所示。 现在，自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，其名称将遵循以下模式：  
   
--   **SQL Server** *\<version>* **XTP 游标**  
+-   SQL Server \<版本> XTP 游标     
   
  其中 *\<version>* 的值类似于 2016。  
   
 ##  <a name="SQLServerPOs"></a> SQL Server XTP 性能对象  
  下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能对象。  
   
-|性能对象|描述|  
+|性能对象|说明|  
 |------------------------|-----------------|  
 |[SQL Server XTP 游标](../../relational-databases/performance-monitor/sql-server-xtp-cursors.md)|SQL Server XTP 游标性能对象包含与内部内存中 OLTP 引擎游标相关的计数器。 游标是内存中 OLTP 引擎用于处理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的低级构建基块。 因此，您通常不能直接控制游标。|  
 |[SQL Server XTP 数据库](../../relational-databases/performance-monitor/sql-server-xtp-databases.md)|SQL Server XTP 数据库性能对象提供内存中 OLTP 数据库特定计数器。|  

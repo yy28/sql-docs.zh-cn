@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: ae6e3b08b3a29afb9282d28f33ec9406ab418b2c
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68419603"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721922"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函数将返回 varbinary 位模式，它指示表或视图中已插入或已更新的列  。 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器主体中的任意位置使用 `COLUMNS_UPDATED`，以测试触发器是否应执行某些操作。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>返回类型
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `COLUMNS_UPDATED` 是针对在多列上执行的 UPDATE 或 INSERT 操作进行检测。 若要对一列的 UPDATE 或 INSERT 尝试进行测试，请使用 [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md)。
   
 `COLUMNS_UPDATED` 将按从左到右的顺序返回一个或多个字节。 每个字节的最右侧位是最低有效位。 最左侧字节的最右侧位表示表中的第一表列；向左的下一位表示第二列，依此类推。 如果创建了触发器的表中包含八列以上，`COLUMNS_UPDATED` 则将返回多个字节，最低有效字节位于最左侧。 在 INSERT 操作中，`COLUMNS_UPDATED` 将为所有列返回 TRUE，因为这些列已插入了显式值或隐式 (NULL) 值。
@@ -116,7 +116,7 @@ AFTER UPDATE AS
 /* Check whether columns 2, 3 or 4 have been updated. If any or all  
 columns 2, 3 or 4 have been changed, create an audit record.
 The bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14.
-This bitmask translates into base_10 as: 1 + 4 + 9 = 14.
+This bitmask translates into base_10 as: 2 + 4 + 8 = 14.
 To test whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
 (below). */
   

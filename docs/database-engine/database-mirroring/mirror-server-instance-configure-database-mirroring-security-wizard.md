@@ -1,6 +1,7 @@
 ---
-title: 镜像服务器实例（配置数据库镜像安全向导）| Microsoft Docs
-ms.custom: ''
+title: 配置安全向导：镜像服务器实例
+description: 介绍 SQL Server Management Studio 中“配置数据库镜像安全向导”的“镜像服务器实例”页面。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,14 +13,14 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8a311d8792468909fe00f02a051e33326f2483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d52fa3912bffd084a8f95e79963abcd99158cdd4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045635"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822393"
 ---
-# <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>镜像服务器实例（配置数据库镜像安全向导）
+# <a name="configure-database-mirrroing-security-wizard-mirror-server-instance"></a>配置数据库镜像安全向导：镜像服务器实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用此页可以指定有关具有镜像数据库的服务器实例的信息。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "68045635"
 > [!NOTE]  
 >  与服务器实例建立连接时，配置数据库镜像安全向导将使用 **“连接到服务器”** 对话框中提供的凭据。 这些凭据与镜像会话的凭据不同，镜像会话使用启动帐户（其中服务器实例作为服务运行）的凭据。  
   
- **侦听器端口**  
+ **侦听程序端口**  
  此选项的行为取决于此服务器实例是否存在镜像端点，如下所示：  
   
 -   如果该服务器实例不存在侦听器端口，则端口号 5022 将显示在 **“端口”** 文本框中。 可以使用任何可用的端口号，例如 7022。  

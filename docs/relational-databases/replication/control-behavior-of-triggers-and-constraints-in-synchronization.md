@@ -1,6 +1,7 @@
 ---
-title: 同步中触发器和约束的控制行为 | Microsoft Docs
-ms.custom: ''
+title: 同步过程中触发器和约束的控制行为
+description: 了解如何在 SQL Server 复制发布的同步过程中防止执行触发器或强制执行约束。
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -21,12 +22,12 @@ ms.assetid: 7c4e0f0e-cadc-4c99-98f4-69799b9b356b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 076a28e4fac4c8c64c44e0df3c10fbc8e075eafb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 816bda09c547345f5d05cd511d51c72135f15029
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768601"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321797"
 ---
 # <a name="control-behavior-of-triggers-and-constraints-in-synchronization"></a>同步中触发器和约束的控制行为
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

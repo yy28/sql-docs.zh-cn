@@ -1,7 +1,7 @@
 ---
-title: FILESTREAM DDL、函数、存储过程和视图 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: FILESTREAM、函数、存储过程、视图 | Microsoft Docs
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: eb3c99723396142a49f7eaea827a532e4454e052
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bc559bce60b4b179cd6e5a69846e1caa9b4668b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080021"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257963"
 ---
-# <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM DDL、函数、存储过程和视图
+# <a name="filestream-functions-stored-procedures-and-views"></a>FILESTREAM、函数、存储过程和视图
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   列出用于支持 FILESTREAM 的 Transact-SQL 语句和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象。  
   

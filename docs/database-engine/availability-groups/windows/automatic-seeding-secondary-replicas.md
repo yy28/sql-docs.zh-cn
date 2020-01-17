@@ -1,8 +1,7 @@
 ---
-title: 使用自动种子设定初始化可用性组的辅助副本
-description: 使用自动种子设定初始化 SQL 2016 及更高版本中 AlwaysOn 可用性组的辅助副本。
-services: data-lake-analytics
-ms.custom: seodec18
+title: 次要副本的自动种子设定
+description: 了解自动种子设定如何将次要副本初始化为 SQL 2016 及更高版本中 Always On 可用性组的一部分。
+ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -13,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53e1651766e653c2444a9e454756017d552ce323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934929"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254096"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>使用自动种子设定初始化 AlwaysOn 可用性组的辅助副本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在 SQL Server 2012 和 2014 中，初始化 SQL Server Always On 可用性组中的次要副本的唯一方法是使用备份、复制和还原。 SQL Server 2016 引入了用于初始化次要副本的新功能“自动种子设定”  。 自动种子设定使用日志流传输将使用 VDI 的备份流式传输到使用所配置终结点的可用性组的每个数据库的次要副本。 最初创建可用性组或将数据库添加到可用性组时，可以使用此新功能。 支持 AlwaysOn 可用性组的所有 SQL Server 版本都支持自动种子设定，并可与传统可用性组和[分布式可用性组](distributed-availability-groups.md)一起使用。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 安全性权限根据要初始化的副本类型而有所不同：
 
@@ -192,7 +191,7 @@ GO
 
 自动种子设定还会将条目放入 `msdb` 表中，该表存储用于备份和还原的历史记录。 在接收自动种子设定的次要副本上，`backupmediafamily` 表的 physical_device_name 列的值为 GUID，`backupset` 中的相应条目为 server_name 和 machine_name 的主要副本的名称。
 
-### <a name="extended-events"></a>扩展事件
+### <a name="extended-events"></a>扩展的事件
 
 自动种子设定添加了新的扩展事件，用于在初始化过程中跟踪状态更改、故障和性能统计信息。
 例如，以下脚本会创建用于捕获自动种子设定相关事件的扩展事件会话。
@@ -231,7 +230,7 @@ GO
 
 下表列出了与自动种子设定相关的扩展事件。
 
-|“属性”|描述|
+|名称|说明|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|种子设定请求消息。|
 |hadr_physical_seeding_backup_state_change|物理种子设定备份端状态更改。|

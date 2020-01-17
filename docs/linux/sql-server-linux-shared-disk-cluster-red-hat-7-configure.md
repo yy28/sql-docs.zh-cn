@@ -1,6 +1,7 @@
 ---
-title: 配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享群集
-description: 通过配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集来实现高可用性。
+title: 为 Linux 上的 SQL Server 配置 RHEL FCI
+description: 了解如何为 Linux 上的 SQL Server 配置 Red Hat Enterprise Linux (RHEL) 共享磁盘故障转移群集实例 (FCI)，以实现高可用性。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252234"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656624"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集
+# <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>为 SQL Server 配置 RHEL 故障转移群集实例 (FCI)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南介绍如何在 Red Hat Enterprise Linux 上为 SQL Server 创建两节点的共享磁盘群集。 集群层基于在 [Pacemaker](https://clusterlabs.org/) 的基础上构建的 Red Hat Enterprise Linux (RHEL) [HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)。 SQL Server 实例在一个节点或另一个节点上处于活动状态。
+本指南介绍如何在 Red Hat Enterprise Linux 上为 SQL Server 创建两节点的共享磁盘故障转移群集。 集群层基于在 [Pacemaker](https://clusterlabs.org/) 的基础上构建的 Red Hat Enterprise Linux (RHEL) [HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)。 SQL Server 实例在一个节点或另一个节点上处于活动状态。
 
 > [!NOTE] 
 > 需拥有订阅才能访问 Red Hat HA 加载项和文档。 
@@ -202,7 +203,7 @@ ms.locfileid: "75252234"
 
 * [NFS 服务器和 firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [装载 NFS 卷 | Linux 网络管理员指南](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [NFS 服务器配置 | Red Hat 客户门户](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [NFS 服务器配置 | Red Hat 客户门户](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>装载数据库文件目录，使其指向共享存储
 

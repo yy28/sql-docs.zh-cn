@@ -1,6 +1,7 @@
 ---
-title: 数据库镜像 - 使用证书进行入站连接 | Microsoft Docs
-ms.custom: ''
+title: 使用证书进行入站连接
+description: 介绍配置服务器实例以使用证书对数据库镜像的入站连接进行身份验证的步骤。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 274260c382eea20a3adb2fc61c1bde27e02469a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 145c182323d3de702ce1e7d4bfcc4e966c5928c2
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997903"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822277"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>数据库镜像 - 使用证书进行入站连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题说明配置服务器实例以使用证书对数据库镜像的入站连接进行身份验证的步骤。 在可以建立入站连接之前，必须在每个服务器实例上配置出站连接。 有关详细信息，请参阅[允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
+  本主题说明配置服务器实例以使用证书对数据库镜像的入站连接进行身份验证的步骤。 在可以建立入站连接之前，必须在每个服务器实例上配置出站连接。 有关详细信息，请参阅 [允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
   
  配置入站连接的过程通常有以下几个步骤：  
   
@@ -41,7 +42,7 @@ ms.locfileid: "67997903"
   
  下面的过程详细说明了这些步骤。 对于每个步骤，该过程都提供了一个在名为 HOST_A 的系统上配置服务器实例的示例。 伴随的示例部分说明了在名为 HOST_B 的系统上配置另一服务器实例的步骤（步骤相同）。  
   
-### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-hosta"></a>为入站镜像连接配置服务器实例（在 HOST_A 上）  
+### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-host_a"></a>为入站镜像连接配置服务器实例（在 HOST_A 上）  
   
 1.  为其他系统创建登录名。  
   

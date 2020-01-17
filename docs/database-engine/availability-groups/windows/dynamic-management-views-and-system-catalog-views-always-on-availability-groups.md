@@ -1,7 +1,7 @@
 ---
-title: 可用性组的动态管理视图和系统目录视图
+title: 可用性组的 DMV 和系统目录视图
 description: 可帮助监视和诊断 Always On 可用性组运行状况的一系列动态管理视图和目录视图。
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 591365dfd1aff7e4c4dc8811ea640cc3885dfeb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0389f613d9b7a26aa14c5a8388ee8cd34036ddf8
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000184"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822331"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>动态管理视图和系统目录视图（Always On 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ select * from sys.dm_hadr_cluster_members
 go  
 ```  
   
- 此结果集会报告当前 WSFC 群集每个成员节点的状态。 如果仲裁定义为“节点和文件共享的大多数”，则甚至会报告文件共享。 可以查看每个节点的状态，包括每个节点的投票权重（[number_of_quorum_votes](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md) 值）。  
+ 此结果集会报告当前 WSFC 群集每个成员节点的状态。 如果仲裁定义为“节点和文件共享的大多数”，则甚至会报告文件共享  。 可以查看每个节点的状态，包括每个节点的投票权重（[number_of_quorum_votes](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md) 值）。  
   
 ## <a name="explore-the-cluster-network"></a>探索群集网络  
  以下查询会检索当前 WSFC 群集的网络配置。  

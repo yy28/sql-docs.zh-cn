@@ -1,6 +1,7 @@
 ---
-title: SQL Server 复制“发布服务器属性”对话框 | Microsoft Docs
-ms.custom: ''
+title: “发布服务器属性”对话框 (SSMS)
+description: 介绍 SQL Server Management Studio (SSMS) 中特定发布的“发布服务器属性”对话框。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f157f541cae6fed5613f95df8d883044f8e09ff5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 12c7a8482561e6ab608501158a05a275763ab74a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908308"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320639"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server 复制“发布服务器属性”对话框
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "72908308"
 -   队列读取器代理的 **“分发服务器属性”** 对话框。    
 -   快照代理和日志读取器代理的 **“发布属性”** 对话框。  
   
- **杂项**  
+ **其他**  
  **“发布服务器类型”** 和 **“分发数据库名称”** 都是只读属性。 可以更改 **“默认快照文件夹”** 属性。 有关快照文件夹的详细信息，请参阅[保护快照文件夹](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
 
 ## <a name="publication-databases"></a>发布数据库
@@ -66,13 +67,13 @@ ms.locfileid: "72908308"
   
 
 ## <a name="subcribers"></a>订阅服务器
-  “发布服务器属性”  对话框的“订阅服务器”  页用于运行早于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的发布服务器。 使用此页，可以启用订阅服务器以接收此发布服务器上发布的数据。 启用订阅服务器接收此发布服务器的数据，并不会创建对此发布服务器上的发布的订阅。 若要创建订阅，必须使用新建订阅向导。  
+  “发布服务器属性”对话框的“订阅服务器”页面用于运行版本低于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器   。 使用此页，可以启用订阅服务器以接收此发布服务器上发布的数据。 启用订阅服务器接收此发布服务器的数据，并不会创建对此发布服务器上的发布的订阅。 若要创建订阅，必须使用新建订阅向导。  
   
 ### <a name="options"></a>选项  
  **“发布服务器属性”**  
  **“订阅服务器”** 属性网格显示了已启用的从此发布服务器上发布接收数据的订阅服务器。 单击订阅服务器旁边的属性按钮 ( **...** ) 可以查看和设置其他属性。  
   
- **“添加”**  
+ **添加**  
  单击 **“添加”** 以添加订阅服务器，然后可单击 **“添加 SQL Server 订阅服务器”** 或 **“添加非 SQL Server 订阅服务器”** 。  
   
 ## <a name="see-also"></a>另请参阅  

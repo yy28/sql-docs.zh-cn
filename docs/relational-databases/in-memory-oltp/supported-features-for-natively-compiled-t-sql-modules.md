@@ -1,6 +1,6 @@
 ---
-title: 本机编译的 T-SQL 模块支持的功能 | Microsoft Docs
-ms.custom: ''
+title: 本机编译 T-SQL 模块的功能
+ms.custom: seo-dt-2019
 ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1cf5b6242f5c76abf8dca638a2596eb2cae9641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025081"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412517"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68025081"
 支持以下查询构造：  
 
 CASE 表达式：CASE 可用于允许使用有效表达式的任意语句或子句。
-   - **适用于：** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
+   - 适用对象：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  。  
     从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始，本机编译 T-SQL 模块已支持 CASE 语句。
 
 SELECT 子句：  
@@ -57,19 +57,19 @@ SELECT 子句：
 -   列名和别名（使用 AS 或 = 语法）。  
 
 -   标量子查询
-    - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持标量子查询。
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 DISTINCT 运算符。
 
               DISTINCT aggregates are not supported.  
 
 -   UNION 和 UNION ALL
-    - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 UNION 和 UNION ALL 运算符。
 
 -   表分配  
@@ -81,11 +81,11 @@ FROM 子句：
 -   FROM \<本机编译的内联 TVF>  
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN 和 INNER JOIN。
-    - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 JOINS。
 
 -   子查询 `[AS] table_alias`。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。 
-    - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持子查询。
 
 WHERE 子句：  
@@ -94,7 +94,7 @@ WHERE 子句：
 
 -   AND、BETWEEN  
 -   OR、NOT、IN、EXISTS
-    - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 OR/NOT/IN/EXISTS 运算符。
 
 
@@ -150,7 +150,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   UPDATE  
 
--   删除  
+-   DELETE  
 
 -   UPDATE 和 DELETE 语句支持 WHERE。  
 
@@ -191,7 +191,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   按位运算符 ~、&、| 和 ^  
 
 -   APPLY 运算符
-    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
+    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  。  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，本机编译模块支持 APPLY 运算符。
 
 ##  <a name="bfncsp"></a> 本机编译模块中的内置函数  
@@ -202,7 +202,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   日期函数：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
 
 -   字符串函数：LEN、LTRIM、RTRIM 和 SUBSTRING。  
-    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
+    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  。  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，还支持下列内置函数：TRIM、TRANSLATE 和 CONCAT_WS。  
 
 -   标识函数：SCOPE_IDENTITY  
@@ -212,7 +212,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   Uniqueidentifier 函数：NEWID 和 NEWSEQUENTIALID  
 
 -   JSON 函数  
-    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
+    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  。  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，本机编译模块支持 JSON 函数。
 
 -   错误函数：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  

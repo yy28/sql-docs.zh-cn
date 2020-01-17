@@ -1,7 +1,7 @@
 ---
 title: CREATE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 12/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982719"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901878"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "73982719"
 > [!NOTE]  
 >  本主题讨论 .NET Framework CLR 与 SQL Server 的集成。 CLR 集成不适用于 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -177,13 +177,13 @@ column_name <data_type>
   
 |||||  
 |-|-|-|-|  
-|**bigint**|binary( n )   |**bit**|char( n )   |  
+|**bigint**|**binary(** *n* **)**|**bit**|**char(** *n* **)**|  
 |**date**|**datetime**|**datetime2**|**datetimeoffset**|  
 |**decimal**|**float**|**图像**|**int**|  
-|**money**|nchar( n )   |**ntext**|**numeric**|  
-|nvarchar( n &#124; max)   |**real**|**smalldatetime**|**smallint**|  
+|**money**|**nchar(** *n* **)**|**ntext**|**numeric**|  
+|**nvarchar(** *n* &#124; **max)**|**real**|**smalldatetime**|**smallint**|  
 |**smallmoney**|**sql_variant**|**text**|**time**|  
-|**tinyint**|**uniqueidentifier**|varbinary( n &#124; max)   |varchar( n &#124; max)   |  
+|**tinyint**|**uniqueidentifier**|**varbinary(** *n* &#124; **max)**|**varchar(** *n* &#124; **max)**|  
   
  base_type 还可以是映射到这些系统数据类型之一的任何数据类型同义词  。  
   
@@ -204,7 +204,7 @@ column_name <data_type>
 > [!NOTE]  
 >  EXTERNAL_NAME 在包含数据库中不可用。  
   
- [.  class_name  ]    
+ [.  *class_name*  **]**  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定实现用户定义类型的程序集内的类。 class_name 必须是有效的标识符，并且它必须作为类存在于可见程序集中  。 class_name 区分大小写，不考虑数据库的排序规则，且必须与对应的程序集中的类名完全匹配  。 如果用于编写类的编程语言使用命名空间概念（例如 C#），则类名可以是用方括号 ([ ]) 括起来的限定命名空间的名称  。 如果未指定 class_name，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假定该名称与 type_name 相同   。  
@@ -251,7 +251,7 @@ column_name <data_type>
   
  指示创建哈希索引。 仅在内存优化表中支持哈希索引。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 assembly_name 中引用的程序集的类及其方法应满足在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中实现用户定义类型的所有要求  。 有关这些要求的详细信息，请参阅 [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
   
  其他注意事项包括以下几点：  
@@ -289,7 +289,7 @@ column_name <data_type>
 ### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>A. 基于 varchar 数据类型创建别名类型  
  以下示例基于系统提供的 `varchar` 数据类型创建别名类型。  
   
-```  
+```sql  
 CREATE TYPE SSN  
 FROM varchar(11) NOT NULL ;  
 ```  
@@ -299,7 +299,7 @@ FROM varchar(11) NOT NULL ;
   
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
-```  
+```sql  
 CREATE ASSEMBLY utf8string  
 AUTHORIZATION [dbi]   
 FROM 0x4D... ;  
@@ -312,7 +312,7 @@ GO
 ### <a name="c-creating-a-user-defined-table-type"></a>C. 创建用户定义表类型  
  下面的示例创建一个具有两列的用户定义表类型。 有关如何创建和使用表值参数的详细信息，请参阅[使用表值参数（数据库引擎）](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
-```  
+```sql  
 CREATE TYPE LocationTableType AS TABLE   
     ( LocationName VARCHAR(50)  
     , CostRate INT );  
@@ -341,6 +341,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP TYPE (Transact-SQL)](../../t-sql/statements/drop-type-transact-sql.md)   
- [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
-  
+ [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)    
+ [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     
+ [使用 SQL Server 中的用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
   

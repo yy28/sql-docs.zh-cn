@@ -1,6 +1,7 @@
 ---
-title: 从复制监视器中添加和删除发布服务器 | Microsoft Docs
-ms.custom: ''
+title: 从复制监视器添加和删除发布服务器 (SSMS)
+description: 了解如何从 SQL Server Management Studio (SSMS) 中的复制监视器添加和删除发布服务器。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 28d0a979e6cf4d76dd338f139f5c48887aed988e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d46f710bfae73527f414017108954bf4e9129f8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770691"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320754"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>从复制监视器中添加和删除发布服务器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "68770691"
   
 3.  在 **“连接到服务器”** 对话框中输入该发布服务器的名称，然后选择身份验证类型。 如果选择 **“SQL Server 身份验证”** ，请输入登录名和密码。 您所指定的凭据由复制监视器进行保存，以便将来连接到此服务器时使用。 指定的 Windows 帐户或 SQL Server 登录名必须为 **sysadmin** 固定服务器角色的成员或分发数据库中 **replmonitor** 固定数据库角色的成员。  
   
-4.  单击 **“连接”** 。 如果发布服务器使用远程分发服务器，系统将在 **“连接到服务器”** 对话框中提示您连接到分发服务器。 您所指定的凭据由复制监视器进行保存，以便将来连接到此服务器时使用。 指定的 Windows 帐户或 SQL Server 登录名必须为 **sysadmin** 固定服务器角色的成员或分发数据库中 **replmonitor** 固定数据库角色的成员。  
+4.  单击“连接”  。 如果发布服务器使用远程分发服务器，系统将在 **“连接到服务器”** 对话框中提示您连接到分发服务器。 您所指定的凭据由复制监视器进行保存，以便将来连接到此服务器时使用。 指定的 Windows 帐户或 SQL Server 登录名必须为 **sysadmin** 固定服务器角色的成员或分发数据库中 **replmonitor** 固定数据库角色的成员。  
   
 5.  发布服务器和分发服务器的名称显示在 **“开始监视下列发布服务器”** 网格中。  
   
@@ -48,9 +49,9 @@ ms.locfileid: "68770691"
   
 2.  在 **“添加发布服务器”** 对话框中，单击 **“添加”** ，然后单击 **“添加 Oracle 发布服务器”** 。  
   
-3.  在 **“连接到服务器”** 对话框中，输入与 Oracle 发布服务器相关联的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器的名称，然后选择身份验证类型。 如果选择 **“SQL Server 身份验证”** ，请输入登录名和密码。 您所指定的凭据由复制监视器进行保存，以便将来连接到此服务器时使用。 指定的 Windows 帐户或 SQL Server 登录名必须为 **sysadmin** 固定服务器角色的成员或分发数据库中 **replmonitor** 固定数据库角色的成员。  
+3.  在“连接到服务器”对话框中，输入与 Oracle 发布服务器关联的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器的名称，然后选择身份验证类型  。 如果选择 **“SQL Server 身份验证”** ，请输入登录名和密码。 您所指定的凭据由复制监视器进行保存，以便将来连接到此服务器时使用。 指定的 Windows 帐户或 SQL Server 登录名必须为 **sysadmin** 固定服务器角色的成员或分发数据库中 **replmonitor** 固定数据库角色的成员。  
   
-4.  单击 **“连接”** 。  
+4.  单击“连接”  。  
   
 5.  发布服务器和分发服务器的名称显示在 **“开始监视下列发布服务器”** 网格中。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "68770691"
   
 3.  在 **“连接到服务器”** 对话框中，输入该分发服务器的名称，然后选择身份验证类型。 如果选择 **“SQL Server 身份验证”** ，请输入登录名和密码。 您所指定的凭据由复制监视器进行保存，以便将来连接到此服务器时使用。 指定的 Windows 帐户或 SQL Server 登录名必须为 **sysadmin** 固定服务器角色的成员或分发数据库中 **replmonitor** 固定数据库角色的成员。  
   
-4.  单击 **“连接”** 。  
+4.  单击“连接”  。  
   
 5.  分发服务器和每个发布服务器的名称显示在 **“开始监视下列发布服务器”** 网格中。 如果一个发布服务器已经添加到复制监视器中，则该网格中不显示其名称。  
   

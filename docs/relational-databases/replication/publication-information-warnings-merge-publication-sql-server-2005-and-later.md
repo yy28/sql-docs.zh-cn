@@ -1,6 +1,7 @@
 ---
-title: 发布信息 - 警告 - 合并发布 - SQL Server 2005+ | Microsoft Docs
-ms.custom: ''
+title: 警告（合并发布信息）
+description: 介绍 SQL Server 2005 和更高版本的 SQL Server Management Studio 中“合并复制发布信息”页面的“警告”选项卡。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fd25636ed1451f51430e889051bef18c8ce1570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41e709bcbc533c3cf7ff294dd2b07a6c638a0c52
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120292"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321330"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>发布信息，警告（合并发布，SQL Server 2005 及更高版本）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "68120292"
  **已启用**  
  选择此项可以启用警告并指定阈值。  
   
- **警报**  
+ **Alert**  
  选择可启用给定复制警报的警报设置。  
   
  **警告**  

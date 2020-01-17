@@ -1,11 +1,12 @@
 ---
-title: 安装 SQL Server | Microsoft Docs
+title: SQL Server 安装指南
+ms.description: 'An index of content that helps you install SQL Server and associated components through various options such as the installation wizard, command prompt, or sysprep. '
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
-ms.topic: quickstart
+ms.topic: conceptual
 helpviewer_keywords:
 - AdventureWorks sample database
 - installing SQL Server, preparing to install
@@ -14,18 +15,18 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b4f60e7041801d67f93dab467b574e5d0da54e7d
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 30155a37f57391edeee916cd2b6629d63a1dcaaa
+ms.sourcegitcommit: 7906af9d11c79b14fdd38babd73a0c8dc6f6de9b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240748"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75688246"
 ---
-# <a name="install-sql-server"></a>安装 SQL Server
+# <a name="sql-server-installation-guide"></a>SQL Server 安装指南
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文提供关于在 Windows 上安装 SQL Server 的指南。
+本文是内容索引，提供关于在 Windows 上安装 SQL Server 的指南。
 
 有关其他部署方案，请参阅：
 
@@ -35,71 +36,82 @@ ms.locfileid: "73240748"
 
 从 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 开始，[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 仅可用作 64 位应用程序。 以下是有关如何获取 SQL Server 以及如何安装 SQL Server 的重要详细信息。
 
-## <a name="installation-details"></a>安装详细信息
+## <a name="getting-started"></a>入门
   
-*  **选项**：通过安装向导、命令提示符或 sysprep 进行安装
- 
-*  **要求**：安装之前，请先查看 [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md) 
+* **版本和功能**：查看不同版本 SQL Server 支持的功能，以确定最适合你业务需求的功能。 
+    - [[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)]](~/sql-server/editions-and-components-of-sql-server-version-15.md)：  
+    - [[!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]](~/sql-server/editions-and-components-of-sql-server-2017.md)：  
+    - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md)：  
+    - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
 
-* **过程**：有关安装过程的完整说明，请参阅 [安装 SQL Server](../../database-engine/install-windows/installation-for-sql-server-2016.md)
-
+*  **要求**：查看[计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)中的安装要求、系统配置检查和安全注意事项 
+  
 * **示例数据库和示例代码**： 
-    * 默认情况下，它们不作为 SQL Server 安装程序的一部分安装 
-    * 若要为 SQL Server 的非 Express 版本安装它们，请参阅 [GitHub](https://github.com/Microsoft/sql-server-samples)
+    * 默认情况下，它们不作为 SQL Server 安装程序的一部分安装，但可以找到它们 
+    * 要为非 Express 版本的 SQL Server 安装它们，请参阅[示例存储库](../../samples/sql-samples-where-are.md)
     
 
-## <a name="get-the-installation-media"></a>获取安装介质
+## <a name="installation-media"></a>安装媒体
 
-[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的下载位置由版本决定：
 
-## <a name="how-to-install-includessnoversionincludesssnoversion-mdmd"></a>如何安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
+* “SQL Server Enterprise、Standard 和 Express Edition”  已获授权，可供生产之用。 对于企业版和标准版，请联系软件供应商获取安装媒体。 可以在 [Microsoft 许可页面](https://www.microsoft.com/licensing/product-licensing/sql-server)上找到采购信息和 Microsoft 合作伙伴目录。
+* [免费版本 - 最新](https://www.microsoft.com/sql-server/sql-server-downloads)
+* [免费版本 - 其他](https://www.microsoft.com/evalcenter/evaluate-sql-server)
+
+
+可在此处找到其他 SQL Server 组件： 
+
+* [所有累积更新](https://sqlserverbuilds.blogspot.com/)
+* [SQL Server Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122)。 
+* [SQL Server Management Studio](https://aka.ms/ssmsfullsetup)
+* [Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2109256)
+
+
+## <a name="sql-server-installation"></a>SQL Server 安装
  
-|Title|描述|  
+|项目|说明|  
 |-----------|-----------------|  
-|[在服务器核心上安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-on-server-core.md)|查看本文可了解如何在 Windows Server Core 上安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]。|  
-|[系统配置检查器的检查参数](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|讨论系统配置检查器 (SCC) 的功能。|  
-|[使用安装向导安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|介绍如何使用安装向导进行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 典型安装的过程文章。|  
-|[通过命令提示符安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|提供运行无人参与安装的示例语法和安装参数的过程文章。|  
-|[使用配置文件安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|提供通过配置文件运行安装程序的示例语法和安装参数的过程文章。|  
-|[使用 SysPrep 安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|提供通过 SysPrep 运行安装程序的示例语法和安装参数的过程文章。|  
-|[向 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的实例添加功能（安装程序）](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|介绍如何更新现有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 实例的组件的过程文章。|  
-|[修复失败的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|介绍如何修复损坏的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装的过程文章。|  
-|[重命名托管 SQL Server 独立实例的计算机](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|介绍如何更新存储在 sys.servers 中的系统元数据的过程文章。|  
-|[安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 服务更新](../../database-engine/install-windows/install-sql-server-servicing-updates.md)|为 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装更新的过程文章。|  
-|[查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|介绍如何在安装日志文件中检查错误的过程文章。|  
-|[验证 SQL Server 安装](../../database-engine/install-windows/validate-a-sql-server-installation.md)|查看 SQL 发现报告的用法，以便确认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本以及在计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。|  
+|[安装向导](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|使用从 setup.exe 安装媒体启动的安装向导 GUI 安装 SQL Server。 |  
+|[命令提示符](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|用于从命令提示符运行 SQL Server 安装的示例语法和安装参数。 | 
+|[Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|在 Windows Server Core 上安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]。|  
+|[系统配置检查器的检查参数](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|讨论系统配置检查器 (SCC) 的功能。|   
+|[配置文件](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|用于通过配置文件运行安装程序的示例语法和安装参数。|  
+|[SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|用于通过 SysPrep 运行安装程序的示例语法和安装参数。|
+|[将功能添加到实例](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|更新 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 现有实例的组件。|  
+|[SQL Server 故障转移群集安装](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)| 安装 SQL Server 故障转移群集实例。  | 
+|[修复失败的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|修复损坏的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装。|  
+|[使用 SQL Server 重命名计算机](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|在重命名托管 SQL Server 独立实例的计算机的主机名之后，更新存储在 sys.servers 中的系统元数据。 |  
+|[安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 服务更新](../../database-engine/install-windows/install-sql-server-servicing-updates.md)|安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的更新。|  
+|[安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)| 查看和读取 SQL Server 安装程序日志文件中的错误。 |  
+|[验证安装](../../database-engine/install-windows/validate-a-sql-server-installation.md)|查看 SQL 发现报告的用法，以便确认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本以及在计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。|  
   
   
-## <a name="how-to-install-individual-components"></a>如何安装各个组件  
+## <a name="individual-component-installation"></a>单个组件安装 
   
-|主题|描述|  
+|项目|说明|  
 |-----------|-----------------|  
-|[安装 SQL Server 数据库引擎](../../database-engine/install-windows/install-sql-server-database-engine.md)|说明如何安装和配置 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
-|[安装 SQL Server 复制](../../database-engine/install-windows/install-sql-server-replication.md)|说明如何安装和配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制。|  
-|[安装 Distributed Replay - 概述](../../tools/distributed-replay/install-distributed-replay-overview.md)|列出了有关安装 Distributed Replay 功能的文章。|  
-|[安装带有 SSMS 的 SQL Server 管理工具](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|说明如何安装和配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具。|  
-|[安装 SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|介绍安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 组件的注意事项。|  
+|[SQL Server 数据库引擎](../../database-engine/install-windows/install-sql-server-database-engine.md)|安装和配置 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
+|[SQL Server 复制](../../database-engine/install-windows/install-sql-server-replication.md)|安装和配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制。|  
+|[Distributed Replay](../../tools/distributed-replay/install-distributed-replay-overview.md)|列出了有关安装 Distributed Replay 功能的文章。|  
+|[带有 SSMS 的 SQL Server 管理工具](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|安装和配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具。|  
+|[SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 组件的注意事项。|  
   
 
-## <a name="how-to-configure-sql-server"></a>如何配置 SQL Server  
+## <a name="sql-server-configuration"></a>SQL Server 配置 
   
-|主题|描述|  
+|项目|说明|  
 |-----------|-----------------|  
-|[配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|本文概述了防火墙配置和 Windows 防火墙配置方法。|  
-|[将多宿主计算机配置为允许 SQL Server 访问](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|本文介绍如何在多宿主环境中配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和高级安全 Windows 防火墙，以便为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例提供多个网络连接。|  
-|[配置 Windows 防火墙以允许 Analysis Services 访问](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|可以按照本文中提供的步骤配置端口和防火墙设置，以允许访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或用于 SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]。|  
-  
-## <a name="related-sections"></a>相关章节  
-[[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的各版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)  
-[安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Business Intelligence 功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
-  [SQL Server 故障转移群集安装](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
+|[配置 Windows 防火墙 (SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|概述防火墙配置以及如何配置 Windows 防火墙以允许访问 SQL Server。|  
+|[配置 Windows 防火墙 (SSAS)](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|配置端口和防火墙设置，以允许访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或用于 SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]。|  
+|[配置多宿主计算机](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有高级安全性的 Windows 防火墙，以便在多宿主环境中与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例建立网络连接。|  
+
  
-  
 ## <a name="see-also"></a>另请参阅  
 
-[计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)   
- [升级到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/upgrade-sql-server.md)   
- [卸载 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/install/uninstall-sql-server.md)   
- [高可用性解决方案 (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
-  
-  
+[升级 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/upgrade-sql-server.md)   
+[卸载 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/install/uninstall-sql-server.md)   
+[安装 SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)
+[安装 SQL Server Analysis Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)
+[安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 商业智能功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
+[高可用性解决方案 (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  

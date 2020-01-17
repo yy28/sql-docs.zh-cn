@@ -1,6 +1,7 @@
 ---
-title: Oracle 发布服务器的设计注意事项和限制 | Microsoft Docs
-ms.custom: ''
+title: 注意事项和限制（Oracle 发布服务器）
+description: 介绍使用 Oracle 发布服务器配置 SQL Server 订阅服务器时的设计注意事项和限制。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a2bf159b42298a2b1fc031383dffe7218f55aabd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 9b45f787bf590eb3d4b29aa3d02f9ba8a2fd2934
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710929"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321900"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 发布服务器的设计注意事项和限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  从设计上，从 Oracle 数据库中进行发布几乎与从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中进行发布一样。 不过，还应注意下列限制和问题：  
+  在设计上，从 Oracle 数据库中进行发布与从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中进行发布几乎一样。 不过，还应注意下列限制和问题：  
   
 -   “Oracle Gateway”选项的性能优于“Oracle Complete”选项；但是，此选项不能用于在多个事务发布中发布同一个表。 一个表最多只能出现在一个事务发布中，但可以出现在任意多个快照发布中。 如果需要在多个事务发布中发布同一个表，请选择“Oracle Complete”选项。  
   
@@ -143,7 +144,7 @@ ms.locfileid: "71710929"
 -   不支持对已发布的 Oracle 表进行架构更改。 若要更改架构，请先删除发布，进行更改，然后重新创建发布和任何订阅。  
   
     > [!NOTE]  
-    >  如果在已发布的表中没有发生任何活动时执行架构更改以及发布和订阅的后续删除与重新创建，则可以为订阅指定“仅支持复制”选项。 这样不用将快照复制到每个订阅服务器上就能使订阅同步。 有关详细信息，请参阅[初始化事务订阅（不使用快照）](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)。  
+    >  如果在已发布的表中没有发生任何活动时执行架构更改以及发布和订阅的后续删除与重新创建，则可以为订阅指定“仅支持复制”选项。 这样不用将快照复制到每个订阅服务器上就能使订阅同步。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
 ### <a name="replication-security-model"></a>复制安全模式  
  Oracle 发布的安全模式与标准事务复制的安全模式相同，但下列情况除外：  

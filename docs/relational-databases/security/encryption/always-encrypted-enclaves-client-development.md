@@ -12,12 +12,12 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54e282e7d68c23837c1865f1257ba7e159644d26
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 7ec032a9a6bd6d02372d77d8844d5e4938fbe945
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595532"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74492002"
 ---
 # <a name="develop-applications-using-always-encrypted-with-secure-enclaves"></a>使用具有安全 enclave 的 Always Encrypted 开发应用程序
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -40,6 +40,9 @@ ms.locfileid: "73595532"
 - .NET Framework 4.7.2 或更高版本中的用于 SQL Server 的 .NET Framework 数据提供程序。 
     - 有关详细信息，请参阅[对用于 SQL Server 的 .NET Framework 数据提供程序使用 Always Encrypted](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)。
     - 有关分步教程，请参阅[教程：开发使用具有安全 enclave 的 Always Encrypted 的 .NET Framework 应用程序](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- .NET Framework 4.6 或更高版本中以及 .NET Core 2.1 或更高版本中用于 SQL Server 的 Microsoft .NET 数据提供程序。 
+    - 有关详细信息，请参阅[对用于 SQL Server 的 Microsoft .NET 数据提供程序使用 Always Encrypted](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md)。
+    - 有关分步教程，请参阅[教程：使用具有安全 enclave 的 Always Encrypted 开发 .NET 应用程序](../../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - Microsoft ODBC Driver for SQL Server 版本 17.4 或更高版本。 
     - 有关详细信息，请参阅[在 ODBC 驱动程序中使用 Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)。 
     - 有关如何使用 ODBC 为数据库连接启用 enclave 计算的信息，请参阅[启用具有安全 Enclave 的 Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves)部分。

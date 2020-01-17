@@ -1,7 +1,7 @@
 ---
-title: 如何为可用性组群集 DTC 服务
+title: 为可用性组聚集 DTC 服务
 description: '介绍为 AlwaysOn 可用性组群集 Microsoft 分布式事务处理协调器 (DTC) 服务的要求和步骤。 '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 450ea18f977f720b742a9fba28f6d24d01d5373d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b16af8c06f6ce1a5ab221f267b5b16dde27b587e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988558"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244389"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>如何为 AlwaysOn 可用性组群集 DTC 服务
 
