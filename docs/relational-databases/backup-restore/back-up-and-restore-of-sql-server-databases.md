@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c948c6e26655b8a450aee22f1ca6a6a178e0db76
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176322"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320492"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 数据库的备份和还原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "70176322"
 
 > 本文介绍了 SQL Server 备份。 有关备份 SQL Server 数据库的特定步骤，请参阅[创建备份](#creating-backups)。
   
- SQL Server 备份和还原组件为保护存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的关键数据提供了基本安全保障。 为了最大限度地降低灾难性数据丢失的风险，您需要定期备份数据库以保留对数据所做的修改。 规划良好的备份和还原策略有助于防止数据库因各种故障而造成数据丢失。 通过还原一组备份，然后恢复数据库来测试您的策略，以便为有效地应对灾难做好准备。
+ SQL Server 备份和还原组件为保护存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的关键数据提供了基本安全保障。 为了尽量降低灾难性数据丢失的风险，需备份数据库，以便定期保存对数据的修改。 计划良好的备份和还原策略有助于保护数据库，使之免受各种故障导致的数据丢失的威胁。 测试策略，方法是先还原一组备份，然后恢复数据库，以便准备好对灾难进行有效的响应。
   
- 除了在本地存储中存储备份外，SQL Server 还支持备份到 Azure Blob 存储服务和从其还原。 有关详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 对于使用 Microsoft Azure Blob 存储服务存储的数据库文件， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供相应的选项让你使用 Azure 快照来实现接近实时的备份和更快的还原。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+ 除了在本地存储中存储备份外，SQL Server 还支持备份到 Azure Blob 存储服务和从其还原。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 对于使用 Microsoft Azure Blob 存储服务存储的数据库文件， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供相应的选项让你使用 Azure 快照来实现接近实时的备份和更快的还原。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ##  <a name="why-back-up"></a>为何备份？  
--   备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、在备份上运行测试还原过程以及在另一个安全位置存储备份副本可防止可能的灾难性数据丢失。 备份是保护数据的唯一方法  。
+-   备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、在备份上运行测试还原过程以及在另一个安全位置存储备份副本可防止可能的灾难性数据丢失。 备份是保护数据的唯一方法。
 
      使用有效的数据库备份，可从多种故障中恢复数据，例如：  
   
@@ -53,13 +53,13 @@ ms.locfileid: "70176322"
   
 ##  <a name="glossary-of-backup-terms"></a>备份术语的术语表
  **备份** [动词]  
- 创建备份 [名词]  的过程，方法是通过复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据记录或复制其事务日志中的日志记录。  
+ 创建备份 [名词] 的过程，方法是通过复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据记录或复制其事务日志中的日志记录。  
   
  **备份** [名词]  
  可用于在出现故障后还原或恢复数据的数据副本。 数据库备份还可用于将数据库副本还原到新位置。  
   
 **备份** 设备  
- 要写入 SQL Server 备份及能从中还原这些备份的磁盘或磁带设备。 SQL Server 备份也可以写入 Azure Blob 存储服务，并且使用 URL  格式来指定备份文件的目标和名称。 有关详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 要写入 SQL Server 备份及能从中还原这些备份的磁盘或磁带设备。 SQL Server 备份也可以写入 Azure Blob 存储服务，并且使用 URL 格式来指定备份文件的目标和名称。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 **备份介质**  
  已写入一个或多个备份的一个或多个磁带或磁盘文件。  
@@ -79,7 +79,7 @@ ms.locfileid: "70176322"
 **日志备份 (log backup)**  
  包括以前日志备份中未备份的所有日志记录的事务日志备份。 （完整恢复模式）  
   
-**恢复 (recover)**  
+**recover**  
  将数据库恢复到稳定且一致的状态。  
   
 **recovery**  
@@ -92,25 +92,28 @@ ms.locfileid: "70176322"
  一种包括多个阶段的过程，用于将指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份中的所有数据和日志页复制到指定数据库，然后通过应用记录的更改使该数据在时间上向前移动，以前滚备份中记录的所有事务。  
   
  ##  <a name="backup-and-restore-strategies"></a>备份和还原策略  
- 备份和还原数据必须根据特定环境进行自定义，并且必须使用可用资源。 因此，可靠使用备份和还原以实现恢复需要有一个备份和还原策略。 设计良好的备份和还原策略在考虑到特定业务要求的同时，可以尽量提高数据的可用性并尽量减少数据的丢失。  
+ 备份和还原数据必须根据特定环境进行自定义，并且必须使用可用资源。 因此，要可靠地使用备份和还原进行恢复，需要制定备份和还原策略。设计完善的备份和还原策略可以平衡业务需求，以实现最大的数据可用性和最小的数据丢失，同时考虑维护和存储备份的成本。  
+
+ 备份和还原策略包含备份部分和还原部分。 策略的备份部分定义备份的类型和频率、备份所需硬件的特性和速度、备份的测试方法以及备份介质的存储位置和方法（包括安全注意事项）。 策略的还原部分定义负责执行还原的人员、如何执行还原以满足数据库可用性和最大程度减少数据丢失的目标，以及如何测试还原。 
   
-  > [!IMPORTANT] 
-  > 请将数据库和备份放置在不同的设备上。 否则，如果包含数据库的设备失败，备份也将不可用。 此外，将数据和备份放置在不同的设备上还可以提高写入备份和使用数据库时的 I/O 性能。**  
+ 设计有效的备份和还原策略需要仔细计划、实现和测试。 需要进行测试：直到成功还原了还原策略中包含的所有组合中的备份并且测试了还原的数据库是否具有物理一致性后，才会生成备份策略。 必须考虑各种因素。 其中包括：  
   
- 备份和还原策略包含备份部分和还原部分。 策略的备份部分定义备份的类型和频率、备份所需硬件的特性和速度、备份的测试方法以及备份介质的存储位置和方法（包括安全注意事项）。 策略的还原部分定义负责执行还原的人员以及如何执行还原以满足数据库可用性和尽量减少数据丢失的目标。 建议您将备份和还原过程记录下来并在运行手册中保留记录文档的副本。  
+- 组织在生产数据库方面的目标，尤其是对可用性和防止数据丢失或损坏的要求。  
   
- 设计有效的备份和还原策略需要仔细计划、实现和测试。 测试是必需环节。 直到成功还原了还原策略中所有组合内的备份后，才会生成备份策略。 必须考虑各种因素。 其中包括：  
-  
--   您的组织对数据库的生产目标，尤其是对可用性和防止数据丢失的要求。  
-  
--   每个数据库的特性，包括：大小、使用模式、内容特性以及数据要求等。  
+-  每个数据库的特性包括：大小、使用模式、内容特性以及数据要求等。  
   
 -   对资源的约束，例如：硬件、人员、备份介质的存储空间以及所存储介质的物理安全性等。  
 
-### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>恢复模式对备份和还原的影响  
- 备份和还原操作发生在恢复模式的上下文中。 恢复模式是一种数据库属性，用于控制事务日志的管理方式。 此外，数据库的恢复模式还决定数据库支持的备份类型和还原方案。 通常，数据库使用简单恢复模式或完整恢复模式。 可以在执行大容量操作之前切换到大容量日志恢复模式，以补充完整恢复模式。 有关这些恢复模式以及它们是如何影响事务日志管理方式的说明，请参阅 [事务日志 (SQL Server)](../logs/the-transaction-log-sql-server.md)。  
+## <a name="best-practice-recommendations"></a>最佳做法建议
+
+### <a name="use-separate-storage"></a>使用独立的存储 
+> [!IMPORTANT] 
+> 确保将数据库备份放在与数据库文件不同的物理位置或设备上。 存储数据库的物理驱动器出现故障或崩溃时，可恢复性取决于能否访问存储备份的独立驱动器或远程设备以执行还原。 请记住，你可以在同一个物理磁盘驱动器中创建多个逻辑卷或分区。 在为备份选择存储位置之前，请仔细研究磁盘分区和逻辑卷布局。
+
+### <a name="choose-appropriate-recovery-model"></a>选择适当的恢复模式
+ 备份和还原操作发生在[恢复模式](../backup-restore/recovery-models-sql-server.md)的上下文中。 恢复模式是一种数据库属性，用于控制事务日志的管理方式。 因此，数据库的恢复模式决定了数据库支持的备份类型和还原方案，以及事务日志备份的大小。 通常，数据库使用简单恢复模式或完整恢复模式。 可以在执行大容量操作之前切换到大容量日志恢复模式，以补充完整恢复模式。 有关这些恢复模式以及它们是如何影响事务日志管理方式的说明，请参阅 [事务日志 (SQL Server)](../logs/the-transaction-log-sql-server.md)。  
   
- 数据库的最佳恢复模式取决于您的业务要求。 若要免去事务日志管理工作并简化备份和还原，请使用简单恢复模式。 若要在管理开销一定的情况下使工作丢失的可能性降到最低，请使用完整恢复模式。 有关恢复模式对备份和还原存在哪些影响的信息，请参阅 [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
+ 数据库的最佳恢复模式取决于您的业务要求。 若要免去事务日志管理工作并简化备份和还原，请使用简单恢复模式。 若要在管理开销一定的情况下使工作丢失的可能性降到最低，请使用完整恢复模式。 为了在大容量日志操作期间最大程度减少对日志大小的影响，同时允许这些操作的可恢复性，请使用大容量日志恢复模式。 有关恢复模式对备份和还原存在哪些影响的信息，请参阅 [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
 ### <a name="design-your-backup-strategy"></a>设计备份策略  
  当为特定数据库选择了满足业务要求的恢复模式后，需要计划并实现相应的备份策略。 最佳备份策略取决于各种因素，以下因素尤其重要：  
@@ -132,6 +135,10 @@ ms.locfileid: "70176322"
      对于更改集中于部分文件或文件组的大型数据库，部分备份和/或文件备份非常有用。 有关详细信息，请参阅[部分备份 (SQL Server)](../../relational-databases/backup-restore/partial-backups-sql-server.md) 和[完整文件备份 (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md)。  
   
 -   完整数据库备份需要多少磁盘空间？  
+-   你的企业需要维护过去多久的备份？ 
+
+    确保你已根据应用程序需求和业务需求制定了适当的备份计划。 随着备份变得陈旧，数据丢失风险会更高，除非你有办法重新生成故障点之前的所有数据。 由于存储资源限制而选择处理旧备份之前，请考虑是否需要以前的可恢复性
+
   
  ### <a name="estimate-the-size-of-a-full-database-backup"></a>估计完整数据库备份的大小  
  在实现备份与还原策略之前，应当估计完整数据库备份将使用的磁盘空间。 备份操作会将数据库中的数据复制到备份文件。 备份仅包含数据库中的实际数据，而不包含任何未使用的空间。 因此，备份通常小于数据库本身。 你可以使用 **sp_spaceused** 系统存储过程估计完整数据库备份的大小。 有关详细信息，请参阅 [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)。  
@@ -144,12 +151,19 @@ ms.locfileid: "70176322"
  确定所需的备份类型和必须执行每种备份类型的频率后，建议您将定期备份计划为数据库维护计划的一部分。 有关维护计划以及如何为数据库备份和日志备份创建维护计划的信息，请参阅 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)。
   
 ### <a name="test-your-backups"></a>测试备份！  
- 直到完成备份测试后，才会生成还原策略。 必须通过将数据库副本还原到测试系统，针对每个数据库的备份策略进行全面测试。 您必须对每种要使用的备份类型进行还原测试。
-  
- 建议您为每个数据库维护一个操作手册。 此操作手册应记录备份的位置、备份设备名称（如果有），以及还原测试备份所需的时间。
+ 直到完成备份测试后，才会生成还原策略。 必须通过将数据库副本还原到测试系统，针对每个数据库的备份策略进行全面测试。 您必须对每种要使用的备份类型进行还原测试。 另外建议在还原备份后，通过数据库的 DBCC CHECKDB 执行数据库一致性检查，以验证备份媒体是否未损坏。 
+
+### <a name="verify-media-stability-and-consistency"></a>验证媒体稳定性和一致性
+使用备份实用工具提供的验证选项（BACKUP T-SQL 命令、SQL Server 维护计划、备份软件或解决方案等）。 有关示例，请参阅 [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 使用 BACKUP CHECKSUM 等高级功能来检测备份媒体本身的问题。 有关详细信息，请参阅 [](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。
+
+### <a name="document-backuprestore-strategy"></a>文档备份/还原策略 
+建议您将备份和还原过程记录下来并在运行手册中保留记录文档的副本。
+我们还建议你为每个数据库维护一个操作手册。 此操作手册应记录备份的位置、备份设备名称（如果有），以及还原测试备份所需的时间。
+
+
 
 ## <a name="monitor-progress-with-xevent"></a>使用 xEvent 监视进度
-由于数据库的大小和所涉及操作的复杂性，备份和还原操作可能需要很长时间。 当任一操作出现问题时，可使用 backup_restore_progress_trace 扩展事件来监控实时进度  。 有关扩展事件的详细信息，请参阅 [扩展事件](../extended-events/extended-events.md)。
+由于数据库的大小和所涉及操作的复杂性，备份和还原操作可能需要很长时间。 当任一操作出现问题时，可使用 backup_restore_progress_trace 扩展事件来监控实时进度。 有关扩展事件的详细信息，请参阅 [扩展事件](../extended-events/extended-events.md)。
 
   >[!WARNING]
   > 使用 backup_restore_progress_trace 扩展事件可能会导致性能问题并使用大量磁盘空间。 请在短时间内谨慎使用，并在生产中实现前进行彻底测试。

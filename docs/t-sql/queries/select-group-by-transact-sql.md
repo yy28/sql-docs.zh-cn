@@ -32,12 +32,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2ca8bd62bc1f05e655875c528efa8ea32b20ff5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b846628a77f6e11f864679d51fd62fc783fb2c7b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948420"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258294"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67948420"
   
 ## <a name="syntax"></a>语法  
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ```  
 -- Syntax for SQL Server and Azure SQL Database   
@@ -85,7 +85,7 @@ GROUP BY
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure SQL Data Warehouse 
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -93,8 +93,18 @@ GROUP BY {
     | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
+```
+
 ```  
+-- Syntax for Parallel Data Warehouse  
   
+GROUP BY {
+      column-name [ WITH (DISTRIBUTED_AGG) ]  
+    | column-expression
+} [ ,...n ]
+
+```  
+    
 ## <a name="arguments"></a>参数 
  
 ### <a name="column-expression"></a>*column-expression*  
@@ -123,7 +133,7 @@ SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;
 列表达式不能包含：
 
 - SELECT 列表中定义的列别名。 它可以使用 FROM 子句中定义的派生表的列别名。
-- text、ntext 或 image 类型的列    。 但是，可以使用 text、ntext 或 image 列作为返回有效数据类型值的函数的参数。 例如，表达式可以使用 SUBSTRING() 和 CAST()。 这也适用于 HAVING 子句中的表达式。
+- text、ntext 或 image 类型的列。 但是，可以使用 text、ntext 或 image 列作为返回有效数据类型值的函数的参数。 例如，表达式可以使用 SUBSTRING() 和 CAST()。 这也适用于 HAVING 子句中的表达式。
 - xml 数据类型方法。 它可以包含使用 xml 数据类型方法的用户定义函数。 它可以包含使用 xml 数据类型方法的计算列。 
 - 子查询。 返回错误 144。 
 - 来自索引视图中的列。 
@@ -144,7 +154,7 @@ INSERT INTO sales VALUES (N'United States', N'Montana', 100);
 ```
 销量表包含这些行：
 
-| Country | 地区 | Sales |
+| 国家/地区 | 区域 | Sales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 200 |
@@ -160,7 +170,7 @@ GROUP BY Country, Region;
 ```
 因为 Country 和 Region 的值有 3 种组合，所以查询结果有 3 行。 Canada 和 British Columbia 的 TotalSales 是两行的总和。 
 
-| Country | 地区 | TotalSales |
+| 国家/地区 | 区域 | TotalSales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
@@ -190,14 +200,14 @@ GROUP BY ROLLUP (Country, Region);
 
 查询结果与没有 ROLLUP 的简单 GROUP BY 具有相同的聚合。 此外，它为 Country 的每个值创建小计。 最后，它为所有行提供总计。 结果类似以下形式：
 
-| Country | 地区 | TotalSales |
+| 国家/地区 | 区域 | TotalSales |
 | :------ | :----- | ---------: |
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
-| Canada | NULL | 600 |
+| Canada | Null | 600 |
 | United States | Montana | 100 |
-| United States | NULL | 100 |
-| NULL | NULL | 700 |
+| United States | Null | 100 |
+| Null | Null | 700 |
 
 ### <a name="group-by-cube--"></a>GROUP BY CUBE ( )  
 
@@ -213,17 +223,17 @@ GROUP BY CUBE (Country, Region);
 
 查询结果具有 (Country, Region)、(NULL, Region)、(Country, NULL) 和 (NULL, NULL) 的唯一值的组。 结果如下所示：
 
-| Country | 地区 | TotalSales |
+| 国家/地区 | 区域 | TotalSales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
-| NULL | Alberta | 100 |
+| Null | Alberta | 100 |
 | Canada | British Columbia | 500 |
-| NULL | British Columbia | 500 |
+| Null | British Columbia | 500 |
 | United States | Montana | 100 |
-| NULL | Montana | 100 |
-| NULL | NULL | 700
-| Canada | NULL | 600 |
-| United States | NULL | 100 |
+| Null | Montana | 100 |
+| Null | Null | 700
+| Canada | Null | 600 |
+| United States | Null | 100 |
    
  ### <a name="group-by-grouping-sets--"></a>GROUP BY GROUPING SETS ( )  
  
@@ -264,7 +274,7 @@ GROUP BY GROUPING SETS ( Country, () );
 
 ### <a name="group-by--all--column-expression--n-"></a>GROUP BY [ ALL ] column-expression [ ,...n ] 
 
-适用范围：SQL Server 和 Azure SQL 数据库
+适用对象：SQL Server 和 Azure SQL 数据库
 
 注意：提供此语法的目的只是为了实现后向兼容性。 未来的版本中会将其删除。 请避免在新的开发工作中使用该语法，并考虑修改当前使用该语法的应用程序。
 
@@ -274,8 +284,8 @@ GROUP BY ALL：
 - 如果在访问远程表的查询中还有 WHERE 子句，则该查询不支持 GROUP BY ALL。
 - 对于具有 FILESTREAM 属性的列，GROUP BY ALL 将失败。
   
-### <a name="with-distributedagg"></a>WITH (DISTRIBUTED_AGG)
-适用范围：Azure SQL 数据仓库和并行数据仓库
+### <a name="with-distributed_agg"></a>WITH (DISTRIBUTED_AGG)
+适用对象：Azure SQL 数据仓库和并行数据仓库
 
 DISTRIBUTED_AGG 查询提示强制大规模并行处理 (MPP) 系统以在执行聚合之前重新分发特定列上的表。 GROUP BY 子句中只有一列可以拥有 DISTRIBUTED_AGG 查询提示。 查询完成后，重新分发的表被删除。 不会更改原始表格。  
 
@@ -286,7 +296,7 @@ DISTRIBUTED_AGG 查询提示强制大规模并行处理 (MPP) 系统以在执行
 ### <a name="how-group-by-interacts-with-the-select-statement"></a>GROUP BY 如何与 SELECT 语句进行交互
 SELECT 列表：
 - 矢量聚合。 如果 SELECT 列表中包含聚合函数，则 GROUP BY 将计算每组的汇总值。 这些函数称为矢量聚合。 
-- Distinct 聚合。 ROLLUP、CUBE 和 GROUPING SETS 支持聚合 AVG (DISTINCT column_name)、COUNT (DISTINCT column_name) 和 SUM (DISTINCT column_name)    。
+- Distinct 聚合。 ROLLUP、CUBE 和 GROUPING SETS 支持聚合 AVG (DISTINCT column_name)、COUNT (DISTINCT column_name) 和 SUM (DISTINCT column_name)。
   
 WHERE 子句：
 - 执行任何分组操作之前，SQL 会删除不满足 WHERE 子句中条件的行。  
@@ -302,7 +312,7 @@ NULL 值：
   
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
-适用范围：SQL Server（从 2008 版开始）和 Azure SQL 数据仓库
+适用对象：SQL Server（从 2008 版开始）和 Azure SQL 数据仓库
 
 ### <a name="maximum-capacity"></a>最大容量
 
@@ -341,19 +351,19 @@ NULL 值：
 ### <a name="comparison-of-supported-group-by-features"></a>对支持的 GROUP BY 功能的比较  
  下表描述了不同的 SQL 版本以及数据库兼容级别支持的 GROUP BY 功能。  
   
-|功能|SQL Server Integration Services|SQL Server 兼容级别 100 或更高|SQL Server 2008 或兼容级别为 90 的更高版本。|  
+|Feature|SQL Server Integration Services|SQL Server 兼容级别 100 或更高|SQL Server 2008 或兼容级别为 90 的更高版本。|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 聚合|WITH CUBE 或 WITH ROLLUP 不支持。|WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE 或 ROLLUP 支持。|与兼容级别 100 相同。|  
-|GROUP BY 子句中具有 CUBE 或 ROLLUP 名称的用户定义函数|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)           。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 子句中不允许使用用户定义函数 dbo.cube (arg1,...argN) 或 dbo.rollup(arg1,...argN)         。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 返回以下错误消息：“Incorrect syntax near the keyword 'cube'&#124;'rollup'.”（关键字 'cube'|'rollup' 附近有语法错误。）<br /><br /> 为了避免出现此问题，请将 `dbo.cube` 替换为 `[dbo].[cube]` 或将 `dbo.rollup` 替换为 `[dbo].[rollup]`。<br /><br /> 允许使用下面的示例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)         <br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
-|GROUPING SETS|不支持|是否支持|是否支持|  
-|CUBE|不支持|是否支持|不支持|  
-|ROLLUP|不支持|是否支持|不支持|  
-|总计，如 GROUP BY ()|不支持|是否支持|是否支持|  
-|GROUPING_ID 函数|不支持|是否支持|是否支持|  
-|GROUPING 函数|是否支持|是否支持|是否支持|  
-|WITH CUBE|是否支持|是否支持|是否支持|  
-|WITH ROLLUP|是否支持|是否支持|是否支持|  
-|WITH CUBE 或 WITH ROLLUP“重复”分组删除|是否支持|是否支持|是否支持| 
+|GROUP BY 子句中具有 CUBE 或 ROLLUP 名称的用户定义函数|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 子句中不允许使用用户定义函数 dbo.cube (arg1,...argN) 或 dbo.rollup(arg1,...argN)。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 返回以下错误消息：“Incorrect syntax near the keyword 'cube'&#124;'rollup'.”（关键字 'cube'|'rollup' 附近有语法错误。）<br /><br /> 为了避免出现此问题，请将 `dbo.cube` 替换为 `[dbo].[cube]` 或将 `dbo.rollup` 替换为 `[dbo].[rollup]`。<br /><br /> 允许使用下面的示例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUPING SETS|不支持|支持|支持|  
+|CUBE|不支持|支持|不支持|  
+|ROLLUP|不支持|支持|不支持|  
+|总计，如 GROUP BY ()|不支持|支持|支持|  
+|GROUPING_ID 函数|不支持|支持|支持|  
+|GROUPING 函数|支持|支持|支持|  
+|WITH CUBE|支持|支持|支持|  
+|WITH ROLLUP|支持|支持|支持|  
+|WITH CUBE 或 WITH ROLLUP“重复”分组删除|支持|支持|支持| 
  
   
 ## <a name="examples"></a>示例  
@@ -415,7 +425,7 @@ SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales
 GROUP BY OrderDateKey ORDER BY OrderDateKey;  
 ```  
   
-### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. DISTRIBUTED_AGG 提示的基本用法  
+### <a name="f-basic-use-of-the-distributed_agg-hint"></a>F. DISTRIBUTED_AGG 提示的基本用法  
  此示例使用 DISTRIBUTED_AGG 查询提示强制设备在执行聚合之前对 `CustomerKey` 列上的表随意排布。  
   
 ```sql  
