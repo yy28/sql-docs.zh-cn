@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74901945"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831816"
 ---
 # <a name="collation-and-unicode-support"></a>排序规则和 Unicode 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -478,16 +478,12 @@ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全�
 若要使用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中提供的 UTF-8 排序规则来改进对某些 Unicode 字符的搜索和排序（仅 Windows 排序规则），必须选择已启用 UTF-8 编码的排序规则 (\_UTF8)。
  
 -   UTF8 标志可应用于：    
-    -   90 版本的排序规则 
-        > [!NOTE]
-        > 仅当此版本中已存在补充字符 (\_SC) 或区分变体选择符 (\_VSS) 识别排序规则时。
-    -   100 版本的排序规则    
-    -   140 版本的排序规则   
+    -   已支持补充字符 (\_SC) 或区分变体选择符 (\_VSS) 感知的语言排序规则
     -   BIN2<sup>1</sup> 二进制排序规则
     
 -   UTF8 标志可应用于：    
-    -   不支持补充字符 (\_SC) 或区分变体选择符 (\_VSS) 的 90 版本的排序规则    
-    -   BIN 或 BIN2<sup>2</sup> 二进制排序规则    
+    -   不支持补充字符 (\_SC) 或区分变体选择符 (\_VSS) 感知的语言排序规则
+    -   BIN 或 BIN2<sup>2</sup> 二进制排序规则
     -   SQL\_* 排序规则  
     
 <sup>1</sup>自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 起。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 已将排序规则 UTF8_BIN2 替换为 Latin1_General_100_BIN2_UTF8   。        
@@ -528,8 +524,6 @@ Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 
 -   只有在 90 版本或更高版本的排序规则中才可以将增补字符用于排序和比较操作。    
 -   所有 100 版本的排序规则均支持使用补充字符进行语言排序。    
 -   不支持在元数据（如数据库对象的名称）中使用增补字符。    
--   使用含增补字符 (\_SC) 的排序规则的数据库无法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时启用。 这是因为，创建了一些用于复制的系统表和存储过程，它们使用不支持增补字符的旧 ntext  数据类型。  
-
 -   SC 标志可应用于：    
     -   90 版本的排序规则    
     -   100 版本的排序规则    

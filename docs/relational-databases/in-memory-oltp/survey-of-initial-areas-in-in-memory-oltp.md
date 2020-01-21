@@ -1,6 +1,6 @@
 ---
-title: 快速调查 1：用于提高 Transact-SQL 性能的内存中 OLTP 技术 | Microsoft Docs
-ms.custom: ''
+title: 通过内存中 OLTP 加速 T-SQL 性能
+ms.custom: seo-dt-2019
 ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebbf3c4bd5bbe4672734733fd8bd082954877e4b
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: ca32d98270a6eea4bd918c12c6b45279a05628e5
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712937"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412499"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>内存中 OLTP 内的初始领域调查
 

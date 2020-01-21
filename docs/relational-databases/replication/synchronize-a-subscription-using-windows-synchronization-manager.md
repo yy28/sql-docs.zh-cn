@@ -1,6 +1,7 @@
 ---
-title: 使用 Windows 同步管理器同步订阅 | Microsoft Docs
-ms.custom: ''
+title: 同步订阅（Windows 同步管理器）
+description: 了解如何使用 Windows 同步管理器同步订阅。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 81899227c470ece81f01338e4e873e2f40cd015c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bcdf5cee07666509722a591410431b00f82dc27b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768303"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321437"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>使用 Windows 同步管理器同步订阅
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -119,6 +120,6 @@ ms.locfileid: "68768303"
 >  所做的编辑只有在属于为解决冲突而选择的行时才生效。 例如，如果在 **“发布服务器”** 下进行编辑，然后单击 **“接受订阅服务器”** ，那么所做的编辑将被忽略。  
   
 ## <a name="see-also"></a>另请参阅  
- [交互式冲突解决方法](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   
   

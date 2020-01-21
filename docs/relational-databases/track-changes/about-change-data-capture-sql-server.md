@@ -1,10 +1,10 @@
 ---
 title: 关于变更数据捕获
 ms.custom: seo-dt-2019
-ms.date: 01/02/2019
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 876de84a811ad7b4eb5bad3260258acc4abd05fc
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 7e360df3a5e29aae987b90c97c0c983af6cd0f8a
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095322"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952461"
 ---
 # <a name="about-change-data-capture-sql-server"></a>关于变更数据捕获 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+
+> [!NOTE]
+> 从 CU18 开始的 Linux 上的 SQL Server 2017 和 Linux 上的 SQL Server 2019 都支持 CDC。
+
   变更数据捕获可记录应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表的插入、更新和删除活动。 这样，就可以按易于使用的关系格式提供这些更改的详细信息。 将为修改的行捕获列信息以及将更改应用于目标环境所需的元数据，并将其存储在镜像所跟踪源表的列结构的更改表中。 系统提供了一些表值函数，以便使用者可以系统地访问更改数据。  
   
  此技术针对的数据使用者的一个典型示例是提取、转换和加载 (ETL) 应用程序。 ETL 应用程序以增量方式将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源表中的更改数据加载到数据仓库或数据市场。 虽然数据仓库中的源表的表示形式必须反映源表中的更改，但刷新源副本的端到端技术并不适用。 相反，您需要一种具有特定结构的可靠更改数据流，以便使用者可以将其应用于不同的目标数据表示形式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 变更数据捕获就提供了这一技术。  
@@ -30,7 +34,7 @@ ms.locfileid: "74095322"
 ## <a name="change-data-capture-data-flow"></a>变更数据捕获数据流  
  下图说明了变更数据捕获的主体数据流。  
   
- ![变更数据捕获数据流](../../relational-databases/track-changes/media/cdcdataflow.gif "变更数据捕获数据流")  
+ ![变更数据捕获数据流](../../relational-databases/track-changes/media/cdcdataflow.gif "|::ref1::|")  
   
  变更数据捕获的更改数据源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志。 在将插入、更新和删除应用于跟踪的源表时，将会在日志中添加说明这些更改的项。 日志用作捕获进程的输入来源。 它会读取日志，并在跟踪的表的关联更改表中添加有关更改的信息。 系统将提供一些函数，以枚举在更改表中指定范围内发生的更改，并以筛选的结果集的形式返回该值。 通常，应用程序进程使用筛选的结果集在某种外部环境中更新源表示形式。  
   

@@ -1,6 +1,7 @@
 ---
-title: Microsoft 复制冲突查看器（事务复制）| Microsoft Docs
-ms.custom: ''
+title: 复制冲突查看器（对等）
+description: 了解复制冲突查看器和如何使用它来查看对等事务复制和具有排队更新订阅的事务复制的冲突。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,14 +14,14 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 61d78e20a51d3a2c28af9cb19a845248d73b5a28
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 39be2638f1d85e610e5898f9a4c33c7129764424
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770582"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321517"
 ---
-# <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft 复制冲突查看器（事务复制）
+# <a name="replication-conflict-viewer-transactional-replication"></a>复制冲突查看器（事务复制）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   利用复制冲突查看器，您可以查看同步期间对等事务复制和具有排队更新订阅的事务复制发生的冲突。 有关详细信息，请参阅[查看事务发布的数据冲突 (SQL Server Management Studio)](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "68770582"
   
  在下半部分中，冲突数据显示在两个相对应的列（ **“冲突解决入选方”** 和 **“冲突解决落选方”** ）中。 如果冲突发生在更新的数据和删除的数据之间，则对于冲突中删除的一方来说，可能没有可显示的数据。 在这种情况下，复制冲突查看器会在其中一列中显示一条消息，指示在一个位置删除了该行，在另一个位置更新了该行。 此外，它还会指出建议的解决方法。  
   
- **“数据库”**  
+ **Database**  
  选择包含具有冲突的发布的数据库。  
   
  **发布**  
@@ -70,6 +71,6 @@ ms.locfileid: "68770582"
   
 ## <a name="see-also"></a>另请参阅  
  [对等复制中的冲突检测](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [查看事务发布的数据冲突 (SQL Server Management Studio)](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+ [查看事务发布的数据冲突 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
   

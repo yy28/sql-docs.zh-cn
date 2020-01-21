@@ -1,6 +1,7 @@
 ---
-title: SQL Server 复制“发布属性”对话框 | Microsoft Docs
-ms.custom: ''
+title: 发布属性 - 对话框
+description: 介绍 SQL Server Management Studio (SSMS) 中的“发布属性”对话框中发现的页面。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -21,12 +22,12 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4edfe83d19a0db5c15c767e5d94cf7de993d1fe8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0124efa2f34cc0c329376d7e3dc3f83b3d38cf85
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769982"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321344"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>SQL Server 复制“发布属性”对话框
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,13 +41,13 @@ ms.locfileid: "68769982"
  **名称**  
  发布的名称（只读）。  
   
- **“数据库”**  
+ **Database**  
  发布数据库的名称（只读）。  
   
- **Description**  
+ **说明**  
  发布的说明。  
   
- **类型**  
+ 类型   
  发布的类型（只读）。  
   
  **订阅过期**  
@@ -58,8 +59,8 @@ ms.locfileid: "68769982"
   
  有关详细信息，请参阅 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
   
- **兼容级别**  
- 仅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本；仅限合并发布。 选择与此发布同步的订阅服务器所需的最低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有多个与确定兼容级别有关的规则。  
+ **兼容性级别**  
+ 仅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本；仅限合并发布。 选择与此发布同步的订阅服务器所需的最低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有多个与确定兼容级别有关的规则。  
 
 ## <a name="filter-rows"></a>筛选行
   可以使用 **“发布属性”** 对话框的 **“筛选行”** 页，执行添加、编辑或删除操作：  
@@ -83,7 +84,7 @@ ms.locfileid: "68769982"
  **筛选的表**  
  此窗格使用您向发布中的表项目添加的筛选器进行填充。 带行筛选器的表在窗格中显示为顶级节点。 对于合并发布，筛选操作通过联接筛选器扩展到的表显示为子节点。  
   
- **“添加”**  
+ **添加**  
  单击 **“添加”** 可以启动一个用于对表项目进行筛选的对话框。 对于快照发布或事务发布，单击 **“添加”** 将立即启动对话框。 对于合并发布，单击“添加”将会显示三个选项  ：“添加筛选器”、“添加联接以扩展所选筛选器”和“自动生成筛选器”    。  
   
 -   选择 **“添加筛选器”** 将启动 **“添加筛选器”** 对话框。 使用此对话框可以将行筛选器应用于表项目。 例如，在 **“添加筛选器”** 对话框中，可以指定在将包含客户数据的表复制到订阅服务器时，该表应只包含法国客户的相关数据。  
@@ -111,7 +112,7 @@ ms.locfileid: "68769982"
   
  在窗格中选择快捷方式节点并单击 **“查找表”** 。窗格将展开并突出显示该表。 如果单击 **“查找表”** 而没有选定快捷方式节点，将会启动 **“查找表”** 对话框。  
   
- **Filter**  
+ **筛选器**  
  包含筛选器窗格中选定筛选器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义。  
 
 ## <a name="publication-access-list"></a>发布访问列表
@@ -120,7 +121,7 @@ ms.locfileid: "68769982"
  当订阅服务器连接到发布服务器或分发服务器并请求访问发布时，订阅服务器的登录名将与 PAL 中的身份验证信息进行比较。 这样，通过防止客户端工具使用发布服务器和分发服务器登录名在发布服务器上直接进行修改，从而为发布服务器提供额外的安全性。 有关详细信息，请参阅[保护发布服务器](../../relational-databases/replication/security/secure-the-publisher.md)。  
   
 ### <a name="options"></a>选项  
- **“添加”**  
+ **添加**  
  将新项添加到列表。 只能添加那些在发布服务器和分发服务器上均已定义的登录名、帐户或组名称。 如果使用域帐户或在两个服务器上都已创建本地帐户，则这些信息在两个服务器上均已定义。  
   
  **删除**  
@@ -190,7 +191,7 @@ ms.locfileid: "68769982"
 ## <a name="snapshot"></a>快照
 快照  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
-  可以使用 **“发布属性”** 对话框的 **“快照”** 页设置快照格式、快照文件夹位置以及应用快照前后运行的脚本。 快照文件夹必须指定为共享文件夹，并且对于将文件读/写到快照文件夹的代理有足够的权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹的安全](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
+  可以使用 **“发布属性”** 对话框的 **“快照”** 页设置快照格式、快照文件夹位置以及应用快照前后运行的脚本。 快照文件夹必须指定为共享文件夹，并且对于将文件读/写到快照文件夹的代理有足够的权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
 > [!NOTE]  
 >  若要进行更改，则需要发布的新快照。 有关详细信息，请参阅[更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
@@ -199,7 +200,7 @@ ms.locfileid: "68769982"
  **快照格式**  
  选择快照格式的本机模式或字符模式。  
   
--   如果所有订阅服务器都是  的实例，而不是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，请选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 本机快照格式可以提供最佳性能。    
+-   如果所有订阅服务器都是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，而不是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的实例，请选择“本机 SQL Server - 所有订阅服务器都必须是运行 SQL Server 的服务器”  。 本机快照格式可以提供最佳性能。    
 -   如果有任何订阅服务器正在运行 **，或者为非** 订阅服务器，请选择 [!INCLUDE[ssEW](../../includes/ssew-md.md)] “字符 - 如果发布服务器或订阅服务器没有运行 SQL Server，则需要此项”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。    
  **快照文件的位置**  
  选择要存储快照文件的位置。 可以将快照文件存储在默认位置，也可以将其存储在默认位置之外的其他位置。 可以压缩存储在其他位置的文件。  

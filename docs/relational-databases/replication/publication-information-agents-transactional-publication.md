@@ -1,6 +1,7 @@
 ---
-title: 发布信息，代理（事务发布）| Microsoft Docs
-ms.custom: ''
+title: 代理（事务性 - SSMS）
+description: 介绍 SQL Server Management Studio (SSMS) 中所选事务发布的“代理”选项卡。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 36c0233d5ba6f51f0cc7cd354bd810a08b2d3b72
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ae95cc4fd67b7843d773a2dc175dd89f1784025b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770032"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321374"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>发布信息，代理（事务发布）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "68770032"
   
  筛选设置是特定于每个网格的。 列的选择和排序应用于同一类型的所有网格，如每个发布服务器的发布网格。  
   
- **“状态”**  
+ **Status**  
  与该发布关联的各个复制代理的状态。 下面列出了可能的状态值：  
   
 -   错误  

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/03/2020
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362111a7e0bf74c9732ea79582fdee34019f7536
-ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
+ms.openlocfilehash: 123b395fe54000b34b509637e5a0568340598edb
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2020
-ms.locfileid: "75656634"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952379"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "75656634"
 
 ||||||
 |---|---|---|---|---|
-|\* SQL Server \*  &nbsp;|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 数据<br />数据仓库](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|\* SQL Server \*  &nbsp;|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -187,7 +187,7 @@ PolyBase 可以将某些查询计算推送到 Hadoop 以提高查询性能。 �
 
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
-由于外部表的数据不在 SQL Server 中，因此它不受 PolyBase 控制，可以随时由外部进程进行更改或删除。 因此，针对外部表的查询结果不保证具有确定性。 相同查询可能会在每次针对外部表运行时返回不同结果。 同样，如果外部数据已移动或删除，则查询可能会失败。
+由于外部表的数据不受 SQL Server 直接控制，这些数据可以随时通过外部进程进行更改或删除。 因此，针对外部表的查询结果不保证具有确定性。 相同查询可能会在每次针对外部表运行时返回不同结果。 同样，如果外部数据已移动或删除，则查询可能会失败。
 
 可以创建各自引用不同外部数据源的多个外部表。 如果同时针对不同 Hadoop 数据源运行查询，则每个 Hadoop 源都必须使用相同的“hadoop 连接”服务器配置设置。 例如，不能同时针对 Cloudera Hadoop 群集和 Hortonworks Hadoop 群集运行查询，因为这些群集使用不同的配置设置。 有关配置设置和受支持的组合，请参阅 [PolyBase 连接配置](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
 
@@ -389,7 +389,7 @@ WITH
     * CREDENTIAL: the database scoped credential, created above.
     */
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( 
+    WITH (
     LOCATION = 'sqlserver://SqlServer',
     -- PUSHDOWN = ON | OFF,
       CREDENTIAL = SQLServerCredentials
@@ -431,14 +431,14 @@ WITH
    CREATE DATABASE SCOPED CREDENTIAL credential_name
    WITH IDENTITY = 'username', Secret = 'password';
 
-   /* 
+   /*
    * LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
    * PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
    * CONNECTION_OPTIONS: Specify driver location
    * CREDENTIAL: the database scoped credential, created above.
    */
    CREATE EXTERNAL DATA SOURCE external_data_source_name
-   WITH ( 
+   WITH (
      LOCATION = 'oracle://<server address>[:<port>]',
      -- PUSHDOWN = ON | OFF,
      CREDENTIAL = credential_name)
@@ -484,7 +484,7 @@ WITH
     * CREDENTIAL: the database scoped credential, created above.
     */
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( 
+    WITH (
     LOCATION = teradata://<server address>[:<port>],
    -- PUSHDOWN = ON | OFF,
     CREDENTIAL =credential_name
@@ -571,7 +571,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|\* SQL 数据库 \*  &nbsp;|[SQL 数据<br />数据仓库](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|\* SQL 数据库 \*  &nbsp;|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -666,15 +666,15 @@ DISTRIBUTION，DISTRIBUTION 子句指定用于此表的数据分发。 查询处
 仅查询中定义的文本谓词才能下推到外部数据源。 这不同于链接服务器以及访问可使用在查询执行过程中确定的谓词的位置，即，在查询计划中与嵌套循环一起使用时。 这通常会导致在本地复制整个外部表并随后联接到外部表。
 
 ```sql
-  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ Assuming External.Orders is an external table and Customer is a local table.
   \\ This query  will copy the whole of the external locally as the predicate needed
   \\ to filter isn't known at compile time. Its only known during execution of the query
   
-  SELECT Orders.OrderId, Orders.OrderTotal 
+  SELECT Orders.OrderId, Orders.OrderTotal
     FROM External.Orders
-   WHERE CustomerId in (SELECT TOP 1 CustomerId 
-                          FROM Customer 
-                         WHERE CustomerName = 'MyCompany')
+   WHERE CustomerId in (SELECT TOP 1 CustomerId
+                          FROM Customer
+                          WHERE CustomerName = 'MyCompany')
 ```
 
 使用外部表可防止在查询计划中使用并行。
@@ -709,18 +709,18 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|_\* SQL 数据<br />仓库 \*_  &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|_Azure Synapse<br />Analytics_&nbsp;\*\* |[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>概述：Azure SQL 数据仓库
+## <a name="overview-azure-synapse-analytics"></a>概述：Azure Synapse Analytics
 
-在 Azure SQL 数据仓库中，使用外部表执行以下操作：
+使用外部表可：
 
 - 通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句查询 Hadoop 或 Azure blob 存储数据。
-- 将数据从 Hadoop 或 Azure blob 存储导入并存储到 Azure SQL 数据仓库中。
-- 将数据从 Azure Data Lake Store 导入并存储到 Azure SQL 数据仓库中。
+- 从 Hadoop 或 Azure blob 存储导入数据。
+- 从 Azure Data Lake Store 导入数据。
 
 另请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 和 [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md)。  
 
@@ -754,7 +754,7 @@ column_name <data_type>
 
 ## <a name="arguments"></a>参数
 
-{ database_name.schema_name.table_name | schema_name.table_name | table_name } 要创建的表的一到三部分名称  。 对于外部表，SQL 数据仓库仅存储表元数据以及有关 Azure Data Lake、Hadoop 或 Azure blob 存储中引用的文件或文件夹的基本统计信息。 在 SQL 数据仓库中不移动或存储任何实际数据。
+{ database_name.schema_name.table_name | schema_name.table_name | table_name } 要创建的表的一到三部分名称  。 对于外部表，仅需要表元数据以及有关 Azure Data Lake、Hadoop 或 Azure blob 存储中引用的文件或文件夹的基本统计信息。 创建外部表时，不会移动或存储任何实际数据。
 
 \<column_definition> [ ,...n  ] CREATE EXTERNAL TABLE 支持配置列名、数据类型、为 Null 性和排序规则功能。 不能对外部表使用 DEFAULT CONSTRAINT。
 
@@ -852,7 +852,7 @@ PolyBase 可以将某些查询计算推送到 Hadoop 以提高查询性能。 �
 
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
-由于外部表的数据不受 SQL 数据仓库控制，因此可以随时由外部进程进行更改或删除。 因此，针对外部表的查询结果不保证具有确定性。 相同查询可能会在每次针对外部表运行时返回不同结果。 同样，如果外部数据已移动或删除，则查询可能会失败。
+外部表的数据不受 Azure Synapse 直接控制，这些数据可以随时通过外部进程进行更改或删除。 因此，针对外部表的查询结果不保证具有确定性。 相同查询可能会在每次针对外部表运行时返回不同结果。 同样，如果外部数据已移动或删除，则查询可能会失败。
 
 可以创建各自引用不同外部数据源的多个外部表。
 
@@ -898,7 +898,7 @@ WITH (TYPE = HADOOP,
 CREATE EXTERNAL FILE FORMAT TextFileFormat
 WITH
 (
-    FORMAT_TYPE = DELIMITEDTEXT 
+    FORMAT_TYPE = DELIMITEDTEXT
     , FORMAT_OPTIONS ( FIELD_TERMINATOR = '|'
        , STRING_DELIMITER = ''
       , DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
@@ -930,14 +930,14 @@ AS SELECT * FROM
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
-- [CREATE TABLE AS SELECT（Azure SQL 数据仓库）](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+- [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 数据<br />数据仓库](create-external-table-transact-sql.md?view=azure-sqldw-latest)|_\* Analytics<br />Platform System (PDW) \*_  &nbsp;|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|\* Analytics<br />Platform System (PDW) \*   &nbsp;|
 ||||||
 
 &nbsp;
@@ -1070,7 +1070,7 @@ PolyBase 可以将某些查询计算推送到 Hadoop 以提高查询性能。 �
 
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
-由于外部表的数据不在设备上，它不受 PolyBase 控制，可以随时由外部进程进行更改或删除。 因此，针对外部表的查询结果不保证具有确定性。 相同查询可能会在每次针对外部表运行时返回不同结果。 同样，如果外部数据已移动或删除，则查询可能会失败。
+外部表的数据不受设备直接控制，这些数据可以随时通过外部进程进行更改或删除。 因此，针对外部表的查询结果不保证具有确定性。 相同查询可能会在每次针对外部表运行时返回不同结果。 同样，如果外部数据已移动或删除，则查询可能会失败。
 
 可以创建各自引用不同外部数据源的多个外部表。 如果同时针对不同 Hadoop 数据源运行查询，则每个 Hadoop 源都必须使用相同的“hadoop 连接”服务器配置设置。 例如，不能同时针对 Cloudera Hadoop 群集和 Hortonworks Hadoop 群集运行查询，因为这些群集使用不同的配置设置。 有关配置设置和受支持的组合，请参阅 [PolyBase 连接配置](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
 
@@ -1093,7 +1093,7 @@ PolyBase 可以将某些查询计算推送到 Hadoop 以提高查询性能。 �
 
 基于表定义中单个有效行的最大大小，SQL Server 2016 中的 PolyBase 具有 32 KB 的行宽限制。 如果列架构的总和大于 32 KB，则 PolyBase 无法查询数据。
 
-在 SQL 数据仓库中，此限制已提高到 1 MB。
+在 Azure Synapse Analytics 中，此限制已提高到 1 MB。
 
 ## <a name="locking"></a>锁定
 
@@ -1138,6 +1138,6 @@ FROM ClickStream
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
-- [CREATE TABLE AS SELECT（Azure SQL 数据仓库）](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+- [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end

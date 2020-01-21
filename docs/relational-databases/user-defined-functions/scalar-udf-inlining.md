@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的标量 UDF 内联 | Microsoft Docs
 description: 标量 UDF 内联功能可提高在 SQL Server（从 SQL Server 2019 开始）和 Azure SQL 数据库中调用标量 UDF 的查询性能。
 ms.custom: ''
-ms.date: 09/13/2019
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926050"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831770"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
@@ -154,6 +154,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 - UDF 不引用用户定义类型。
 - 没有签名添加到 UDF。
 - UDF 不是配分函数。
+- UDF 不包含对公用表表达式 (CTE) 的引用
 
 <sup>1</sup> 带变量累计/聚合（例如 `SELECT @val += col1 FROM table1`）的 `SELECT` 不支持内联。
 

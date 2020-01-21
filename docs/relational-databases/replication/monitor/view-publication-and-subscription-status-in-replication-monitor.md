@@ -1,6 +1,7 @@
 ---
-title: 在复制监视器中查看发布和订阅状态 | Microsoft Docs
-ms.custom: ''
+title: 查看发布和订阅状态（复制监视器）
+description: 了解如何在 SQL Server Management Studio (SSMS) 中使用复制监视器查看发布和订阅状态。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -22,12 +23,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 51dafccba54e66ff9f6ed9d7fd6c7e4159c8ef19
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bc233524eed394001b0b3fb087d7273c8ead8009
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770541"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322251"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在复制监视器中查看发布和订阅状态
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,12 +65,12 @@ ms.locfileid: "68770541"
 ## <a name="publication-status-values"></a>发布状态值  
  下表按优先级顺序显示了发布状态值及其对应的图标。  
   
-|“登录属性”|图标|  
+|状态|图标|  
 |------------|----------|  
 |错误|![UI 图标：错误](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 图标：错误")|  
 |“严重”状态下的性能|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
 |正在重试失败的命令|![UI 图标：复制代理重试](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 图标：复制代理重试")|  
-|“确定”|none|  
+|OK|none|  
   
 ## <a name="subscription-status-values"></a>订阅状态值  
  下列表按优先级顺序显示了订阅状态值及其对应的图标。 一个订阅可以同时处于两种状态，如“即将过期/已过期”  和“正在重试失败的命令”  ；将显示最高优先级状态。  
@@ -78,7 +79,7 @@ ms.locfileid: "68770541"
   
 ### <a name="transactional-subscriptions"></a>事务订阅  
   
-|“登录属性”|图标|  
+|状态|图标|  
 |------------|----------|  
 |错误|![UI 图标：错误](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 图标：错误")|  
 |“严重”状态下的性能|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
@@ -90,7 +91,7 @@ ms.locfileid: "68770541"
   
 ### <a name="merge-subscriptions"></a>合并订阅  
   
-|“登录属性”|图标|  
+|状态|图标|  
 |------------|----------|  
 |错误|![UI 图标：错误](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 图标：错误")|  
 |“严重”状态下的性能|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
@@ -103,7 +104,7 @@ ms.locfileid: "68770541"
   
 ### <a name="snapshot-subscriptions"></a>快照订阅  
   
-|“登录属性”|图标|  
+|状态|图标|  
 |------------|----------|  
 |错误|![UI 图标：错误](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 图标：错误")|  
 |即将过期/已过期|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  

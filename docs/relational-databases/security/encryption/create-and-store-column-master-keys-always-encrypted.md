@@ -1,6 +1,7 @@
 ---
-title: 创建并存储 Always Encrypted 的列主密钥 | Microsoft Docs
-ms.custom: ''
+title: 创建并存储 Always Encrypted 的列主密钥
+description: 了解如何选择密钥存储并创建 SQL Server Always Encrypted 的列主密钥。
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
@@ -11,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594437"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557830"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>创建并存储 Always Encrypted 的列主密钥
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -220,10 +221,10 @@ Windows 包含以下基于软件的（不受 HSM 支持）CSP，它支持 RSA �
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>使 CNG 密钥可用于应用程序和用户
 请参阅 HSM 和 CSP 的相关文档，了解如何在计算机上配置 CSP，以及如何向应用程序和用户授予访问 HSM 的权限。
  
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 - [使用 SQL Server Management Studio 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-ssms.md)
 - [使用 PowerShell 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-powershell.md)
   
 ## <a name="see-also"></a>另请参阅 
-- [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 密钥管理概述](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

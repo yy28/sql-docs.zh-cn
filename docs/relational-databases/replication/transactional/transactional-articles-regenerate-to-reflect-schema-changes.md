@@ -1,6 +1,7 @@
 ---
-title: 重新生成自定义事务过程以反映架构更改 | Microsoft Docs
-ms.custom: ''
+title: 重新生成架构更改的自定义过程（事务性）
+description: 重新生成自定义事务存储过程以反映事务复制的架构更改。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ff1a4e5c9c185e97f3dd31c8c2ec96d10bceda42
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: e6a71e6591781f61560e4c997963571a49f816e5
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710699"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321421"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>事务项目 - 重新生成以反映架构更改
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

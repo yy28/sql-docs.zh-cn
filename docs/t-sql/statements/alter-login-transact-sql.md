@@ -1,7 +1,7 @@
 ---
 title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,18 +24,18 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2eeec689116946d99b348cadf0b41bca829848b1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 6523da9177f15673461880cbad0fc0a751a4391d
+ms.sourcegitcommit: cc20a148c785ac43832f47d096fe53508a4b1940
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982096"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75871127"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
 更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的属性。
 
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="click-a-product"></a>单击一个产品！
 
@@ -45,7 +45,7 @@ ms.locfileid: "73982096"
 
 ||||||
 |-|-|-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[SQL 数据库<br />单一数据库/弹性池](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />单一数据库/弹性池](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -129,7 +129,7 @@ ADD CREDENTIAL 将可扩展的密钥管理 (EKM) 提供程序凭据添加到登�
 
 DROP CREDENTIAL 从登录名删除可扩展密钥管理 (EKM) 提供程序凭据。 有关详细信息，请参阅 [可扩展的密钥管理 (EKM)] (../.. /relational-databases/security/encryption/extensible-key-management-ekm.md)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 如果 CHECK_POLICY 设置为 ON，则无法使用 HASHED 参数。
 
@@ -266,7 +266,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|**_\*SQL 数据库<br />单一数据库/弹性池\*_**|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|**_\*SQL 数据库<br />单一数据库/弹性池\*_**|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -277,7 +277,7 @@ GO
 ## <a name="syntax"></a>语法
 
 ```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
+-- Syntax for Azure SQL Database
 
 ALTER LOGIN login_name
   {
@@ -314,7 +314,7 @@ OLD_PASSWORD ='  oldpassword  '  仅适用于 [!INCLUDE[ssNoVersion](../../inclu
 
 NAME = login_name  正在重命名的登录的新名称。 如果是 Windows 登录，则与新名称对应的 Windows 主体的 SID 必须匹配与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的登录相关联的 SID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的新名称不能包含反斜杠字符 (\\)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中，对连接和服务器级别的防火墙规则进行身份验证时所需的登录数据会暂时缓存在每个数据库中。 此缓存定期刷新。 若要强制刷新身份验证缓存并确保数据库具有最新版本的登录表，请执行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
@@ -424,7 +424,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-login-transact-sql.md?view=azuresqldb-current)|**_\*SQL 数据库<br />托管实例\*_**|[SQL 数据<br />数据仓库](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-login-transact-sql.md?view=azuresqldb-current)|**_\*SQL 数据库<br />托管实例\*_**|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -469,7 +469,7 @@ ALTER LOGIN login_name
 ```
 
 > [!NOTE]
-> 创建之后用于托管实例的 Azure AD 管理员功能已更改。 有关详细信息，请参阅[用于 MI 的新 Azure AD 管理员功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
+> 创建后托管实例功能的 Azure AD 管理员已更改。 有关详细信息，请参阅[适用于 MI 的新 Azure AD 管理员功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 ```
 -- Syntax for Azure SQL Database managed instance using Azure AD logins
@@ -532,7 +532,7 @@ ADD CREDENTIAL 将可扩展的密钥管理 (EKM) 提供程序凭据添加到登�
 
 DROP CREDENTIAL 从登录名删除可扩展密钥管理 (EKM) 提供程序凭据。 有关详细信息，请参阅[可扩展的密钥管理 (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 如果 CHECK_POLICY 设置为 ON，则无法使用 HASHED 参数。
 
@@ -675,16 +675,16 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|\*SQL 数据<br />仓库\* |[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL 数据仓库
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
 
 ## <a name="syntax"></a>语法
 
 ```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
+-- Syntax for Azure Synapse
 
 ALTER LOGIN login_name
   {
@@ -721,7 +721,7 @@ OLD_PASSWORD ='  oldpassword  '  仅适用于 [!INCLUDE[ssNoVersion](../../inclu
 
 NAME = login_name  正在重命名的登录的新名称。 如果是 Windows 登录，则与新名称对应的 Windows 主体的 SID 必须匹配与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的登录相关联的 SID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的新名称不能包含反斜杠字符 (\\)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中，对连接和服务器级别的防火墙规则进行身份验证时所需的登录数据会暂时缓存在每个数据库中。 此缓存定期刷新。 若要强制刷新身份验证缓存并确保数据库具有最新版本的登录表，请执行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
@@ -830,7 +830,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
 
 &nbsp;
 
@@ -886,7 +886,7 @@ CHECK_POLICY =  { ON  | OFF } 仅适用于 [!INCLUDE[ssNoVersion](../../includes
 
 UNLOCK 仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 指定应解锁被锁定的登录名。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 如果 CHECK_POLICY 设置为 ON，则无法使用 HASHED 参数。
 

@@ -1,6 +1,7 @@
 ---
-title: 订阅验证选项（合并订阅）| Microsoft Docs
-ms.custom: ''
+title: 订阅验证选项（合并）
+description: 介绍 SQL Server Management Studio (SSMS) 中的“订阅验证选项”对话框。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e3c49cf0da50879d533fc78dff60253e753ec87b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2b21aaec23bfadee55217b7de411aec31c4bf9ab
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769442"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322174"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>订阅验证选项（合并订阅）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68769442"
  选择此选项可以验证订阅服务器上的表是否与发布服务器上的表具有相同的行数。 此方法不会验证行的内容是否匹配。 行计数验证是一种简易验证方法，可帮助您了解数据是否存在问题。  
   
  **验证行计数并比较校验和以验证行数据**  
- 除了可在发布服务器和订阅服务器上对行进行计数之外，还可使用二进制校验和算法来计算所有数据的校验和。 如果行计数失败，则不计算校验和。 此选项对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]无效。  
+ 除了可在发布服务器和订阅服务器上对行进行计数之外，还可使用二进制校验和算法来计算所有数据的校验和。 如果行计数失败，则不计算校验和。 此选项对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 无效。  
   
 ## <a name="see-also"></a>另请参阅  
  [验证订阅服务器上的数据](../../relational-databases/replication/validate-data-at-the-subscriber.md)   

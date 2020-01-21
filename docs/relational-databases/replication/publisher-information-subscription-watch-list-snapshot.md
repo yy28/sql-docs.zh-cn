@@ -1,6 +1,7 @@
 ---
-title: 发布服务器信息，订阅监视列表（快照）| Microsoft Docs
-ms.custom: ''
+title: 订阅监视列表（复制监视器 - 快照）
+description: 介绍 SQL Server Management Studio (SSMS) 中快照发布的复制监视器的“订阅监视列表”选项卡。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bc62259db10a92350aeb24f51b38072339b34921
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 45fec0f9c4d2c5ab7520c2ddfb2a921b771acfcb
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769720"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320486"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot"></a>发布服务器信息，订阅监视列表（快照）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,10 +41,10 @@ ms.locfileid: "68769720"
  **显示快照订阅**  
  为所选发布服务器选择要显示的订阅类型（事务、快照或合并）。  
   
- **“显示”**  
+ **显示**  
  为所选订阅类型选择要显示的订阅状态。 例如，可以选择仅显示包含错误的订阅。  
   
- **“状态”**  
+ **Status**  
  每一个订阅的状态，该状态由快照代理或分发代理的状态决定（显示优先级较高的状态）。  
   
  默认情况下，包含订阅信息的网格按 **“状态”** 列排序。 下面的列表显示了可能的状态值以及这些值的排序顺序（例如，错误项始终显示在该网格的顶部）：  
@@ -62,7 +63,7 @@ ms.locfileid: "68769720"
   
  如果给定的订阅处于多种状态，该排序顺序还决定将要显示哪个值。 例如，如果某个订阅包含错误并且即将过期， **“状态”** 列将显示 **“错误”** 。  
   
- 状态值 **“即将过期/已过期”** 和 **“未初始化的订阅”** 属于警告。 当显示警告时，“状态”  列还可显示是否正在运行代理。 例如，状态可以为 **“正在运行，即将过期/已过期”** 。  
+ 状态值 **“即将过期/已过期”** 和 **“未初始化的订阅”** 属于警告。 当显示警告时， **“状态”** 列还可显示是否正在运行代理。 例如，状态可以为 **“正在运行，即将过期/已过期”** 。  
   
  只有在设置了阈值时，才会显示状态值 **“即将过期/已过期”** 。 有关设置阈值的信息，请参阅[在复制监视器中设置阈值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   

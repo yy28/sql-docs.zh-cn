@@ -46,19 +46,19 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1afd61f86bf6b7f7f93fdbcade77fd3118ff7781
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517930"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924957"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   通过禁用、重新生成或重新组织索引，或通过设置索引选项，修改现有的表索引或视图索引（行存储、列存储或 XML）。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -184,12 +184,12 @@ ALTER INDEX { index_name | ALL }
   
 |将关键字 ALL 与此操作一起使用|如果表有一个或多个，语句会失败|  
 |----------------------------------------|----------------------------------------|  
-|REBUILD WITH ONLINE = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|REBUILD WITH ONLINE = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |REBUILD PARTITION = *partition_number*|未分区的索引、XML 索引、空间索引或已禁用的索引|  
 |REORGANIZE|ALLOW_PAGE_LOCKS 设置为 OFF 的索引。|  
 |REORGANIZE PARTITION = *partition_number*|未分区的索引、XML 索引、空间索引或已禁用的索引|  
-|IGNORE_DUP_KEY = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|ONLINE = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|IGNORE_DUP_KEY = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|ONLINE = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |RESUMABLE = ON| **All** 关键字不支持可恢复索引。 <br /><br /> **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |   
   
 > [!WARNING]
@@ -297,7 +297,7 @@ LOB_COMPACTION = OFF
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  适用于列存储索引。 
 
- **适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 COMPRESS_ALL_ROW_GROUPS 提供将打开或关闭的增量行组强制到列存储中的方式。 使用此选项时，无需重新生成列存储索引即可清空增量行组。  此操作与其他移除和合并碎片整理功能相结合，使得在大多数情况下不再需要重新生成索引。    
 
@@ -306,7 +306,7 @@ COMPRESS_ALL_ROW_GROUPS 提供将打开或关闭的增量行组强制到列存�
 
 有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。 
 
-SET ( \<set_index option> [ ,... n] )      
+SET **(** \<set_index option> [ **,** ... *n*] **)**  
  指定不重新生成或重新组织索引的索引选项。 不能为已禁用的索引指定 SET。  
   
 PAD_INDEX = { ON | OFF }  
@@ -403,7 +403,7 @@ STATISTICS_INCREMENTAL = { ON | OFF }
  对于 XML 索引或空间索引，仅支持 `ONLINE = OFF`；如果 ONLINE 设置为 ON，便会引发错误。  
   
 > [!IMPORTANT]
-> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
+> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  ON  
  在索引操作期间不持有长期表锁。 在索引操作的主要阶段，源表上只使用意向共享 (IS) 锁。 这样，即可继续对基础表和索引进行查询或更新。 操作开始时，将对源对象保持极短时间的共享 (S) 锁。 操作结束时，如果创建非聚集索引，将对源持有极短时间的 S 锁；当联机创建或删除聚集索引时，或者重新生成聚集或非聚集索引时，将获取 SCH-M（架构修改）锁。 对本地临时表创建索引时，ONLINE 不能设置为 ON。  
@@ -433,7 +433,7 @@ RESUMABLE **=** { ON | **OFF**}
 
  OFF 索引操作不可恢复。
 
-MAX_DURATION = time [MINUTES]，与 RESUMABLE = ON 一起使用（要求 ONLINE = ON）      。
+MAX_DURATION **=** *time* [**MINUTES**]，与 **RESUMABLE = ON** 一起使用（要求 **ONLINE = ON**）。
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
@@ -474,7 +474,7 @@ ALLOW_PAGE_LOCKS = { ON | OFF }
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF  }
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起）。
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定是否针对最后一页插入争用进行优化。 默认为 OFF。 有关详细信息，请参阅“CREATE INDEX”页的[顺序键](./create-index-transact-sql.md#sequential-keys)部分。
 
@@ -505,7 +505,7 @@ ALLOW_PAGE_LOCKS = { ON | OFF }
   
 COMPRESSION_DELAY = { 0 |duration [Minutes] }     
 
-**适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）  
+**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）  
   
  对于基于磁盘的表，延迟指定处于关闭状态的增量行组在 SQL Server 可以将它压缩为压缩行组之前，必须保持为增量行组的最小分钟数。 由于基于磁盘的表不对单个行跟踪插入和更新时间，因此 SQL Server 会将该延迟应用于处于关闭状态的增量行组。  
 默认为 0 分钟。  
@@ -515,7 +515,7 @@ COMPRESSION_DELAY = { 0 |duration [Minutes] }
  有关何时使用 COMPRESSION_DELAY 的建议，请参阅[开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
   
  DATA_COMPRESSION  
- 为指定的索引、分区号或分区范围指定数据压缩选项。 选项如下所示：  
+ 为指定的索引、分区号或分区范围指定数据压缩选项。 选项如下：  
   
  无  
  不压缩索引或指定的分区。 这不适用于列存储索引。  
@@ -632,7 +632,7 @@ ABORT
 
 中止已声明为可恢复的正在运行或已暂停的索引操作。 必须显式执行 **ABORT** 命令才能终止可恢复索引重新生成操作。 失败或暂停可恢复索引操作不会终止其执行；而是将操作停留在无限期暂停状态。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组。 此语句不能用于修改索引定义，如添加或删除列，或更改列的顺序。 使用带有 DROP_EXISTING 子句的 CREATE INDEX 执行这些操作。  
   
 未显式指定选项时，则应用当前设置。 例如，如果未在 REBUILD 子句中指定 FILLFACTOR 设置，将在重新生成过程中使用系统目录中存储的填充因子值。 若要查看当前索引选项设置，请使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
@@ -869,7 +869,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. 将所有打开和关闭的增量行组压缩到列存储中  
- **适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+ **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  命令 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) 将每个打开和关闭的增量行组作为压缩行组压缩到列存储中。 这会清空增量存储，并强制所有行压缩到列存储中。 这在执行许多插入操作之后特别有用，因为这些操作将行存储在一个或多个增量行组中。  
   
@@ -899,7 +899,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
 ```  
   
 ### <a name="e-rebuild-a-clustered-columnstore-index-offline"></a>E. 脱机重新生成聚集列存储索引  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）   
+适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）   
   
 > [!TIP]
 > 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始并且在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中，建议使用 ALTER INDEX REORGANIZE 而不是 ALTER INDEX REBUILD。  

@@ -1,6 +1,7 @@
 ---
-title: 在复制监视器中设置阈值和警告 | Microsoft Docs
-ms.custom: ''
+title: 设置阈值和警告（复制监视器）
+description: 了解如何在 SQL Server Management Studio (SSMS) 中使用复制监视器对复制可能出现的各种情况启用警告。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fcc0e1482d3b38a395724f090805767291b609d7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bf3d9ba88f433619a79c9f4453823e81589b4ee3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767597"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322257"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在复制监视器中设置阈值和警告
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -87,7 +88,7 @@ ms.locfileid: "68767597"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
 ##  <a name="Merge"></a> 为合并发布设置阈值和警告  
   
@@ -129,7 +130,7 @@ ms.locfileid: "68767597"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
 ##  <a name="Snapshot"></a> 为快照发布设置阈值和警告  
   
@@ -161,7 +162,7 @@ ms.locfileid: "68767597"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [监视复制](../../../relational-databases/replication/monitor/monitoring-replication.md)  

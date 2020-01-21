@@ -1,6 +1,7 @@
 ---
-title: 排除故障：查找 SQL Server 事务复制错误 | Microsoft Docs
-ms.custom: ''
+title: 查找事务复制错误
+description: 描述如何查找和识别事务复制错误，以及解决复制问题的故障排除方法。
+ms.custom: seo-lt-2019
 ms.date: 04/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c8b363be7cd8f160cb7317e6a90d109cc1ad3ccb
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907289"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321934"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>排除故障：查找 SQL Server 事务复制错误 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "72907289"
 2. 哪个代理遇到错误？
 1. 上次复制成功是在什么时候？ 从那以后有什么变化？  
 
-### <a name="steps-to-take"></a>采取的步骤
+### <a name="steps-to-take"></a>要执行的步骤
 1. 使用复制监视器来确定复制出错的位置（哪个代理？）：
    - 如果在“发布服务器到分发服务器”部分发生错误，则是日志读取器代理出现问题  。 
    - 如果在“分发服务器到订阅服务器”部分发生错误，则是分发代理出现问题  。  
@@ -56,17 +57,17 @@ ms.locfileid: "72907289"
 
 1. 查看快照代理的状态：
 
-    A. 在对象资源管理器中，展开“复制”下的“本地发布”节点   。
+    a. 在对象资源管理器中，展开“复制”下的“本地发布”节点   。
 
-    B. 右键单击发布“AdvWorksProductTrans” > “查看快照代理状态”   。 
+    b. 右键单击发布“AdvWorksProductTrans” > “查看快照代理状态”   。 
 
     ![快捷菜单上的“查看快照代理状态”命令](media/troubleshooting-tran-repl-errors/view-snapshot-agent-status.png)
 
 1. 如果快照代理状态中报告了错误，可在快照代理作业历史记录中了解更多详细信息：
 
-    A. 在对象资源管理器中展开“SQL Server 代理”，并打开作业活动监视器  。 
+    a. 在对象资源管理器中展开“SQL Server 代理”，并打开作业活动监视器  。 
 
-    B. 按“类别”排序，并根据类别“REPL-Snapshot”找到快照代理   。
+    b. 按“类别”排序，并根据类别“REPL-Snapshot”找到快照代理   。
 
     c. 右键单击快照代理，然后选择“查看历史记录”  。 
 
@@ -114,9 +115,9 @@ ms.locfileid: "72907289"
 
 6. 若未正确设置发布服务器数据库的所有者，通常便会发生该错误。 这可能会在还原数据库时发生。 要验证这一点：
 
-    A. 在对象资源管理器中展开“数据库”  。
+    a. 在对象资源管理器中展开“数据库”  。
 
-    B. 右键单击“AdventureWorks2012” > “属性”   。 
+    b. 右键单击“AdventureWorks2012” > “属性”   。 
 
     c. 确认一名所有者存在于“文件”页下  。 如果此框为空，则这可能是产生该问题的原因所在。 
 
@@ -133,9 +134,9 @@ ms.locfileid: "72907289"
 
 8. 可能需要重启日志读取器代理：
 
-    A. 在对象资源管理器中展开“SQL Server 代理”节点，并打开作业活动监视器  。
+    a. 在对象资源管理器中展开“SQL Server 代理”节点，并打开作业活动监视器  。
 
-    B. 按“类别”排序，并根据“REPL-LogReader”类别找到日志读取器代理   。 
+    b. 按“类别”排序，并根据“REPL-LogReader”类别找到日志读取器代理   。 
 
     c. 右键单击日志读取器代理作业，并选择“启动作业于步骤”   。 
 
@@ -163,9 +164,9 @@ ms.locfileid: "72907289"
 
 3. 错误指示分发代理正在重试。 若要查找更多详细信息，请检查分发代理的作业历史记录： 
 
-    A. 在对象资源管理器中展开“SQL Server 代理”>“作业活动监视器”   。 
+    a. 在对象资源管理器中展开“SQL Server 代理”>“作业活动监视器”   。 
     
-    B. 按照“类别”对作业进行排序  。 
+    b. 按照“类别”对作业进行排序  。 
 
     c. 根据类别“REPL-Distribution”找到分发代理  。 右键单击该代理并选择“查看历史记录”  。
 
@@ -180,9 +181,9 @@ ms.locfileid: "72907289"
 
 6. 此错误表示分发代理使用的密码不正确。 解决方法：
 
-    A. 展开对象资源管理器中的“复制”节点  。
+    a. 展开对象资源管理器中的“复制”节点  。
     
-    B. 右键单击“订阅”>“属性面板”  。
+    b. 右键单击“订阅”>“属性面板”  。
     
     c. 选择“代理进程帐户”旁边的省略号 (...)，并修改密码  。
 

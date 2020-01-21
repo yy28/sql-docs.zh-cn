@@ -1,6 +1,7 @@
 ---
-title: 复制管理员常见问题解答 | Microsoft Docs
-ms.custom: ''
+title: 复制管理常见问题解答
+description: 与 SQL Server 的复制管理员相关的常见问题列表。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041205"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322022"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>复制管理员常见问题
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "72041205"
 ## <a name="configuring-replication"></a>配置复制  
   
 ### <a name="does-activity-need-to-be-stopped-on-a-database-when-it-is-published"></a>活动在发布时是否需要在数据库上停止？  
- 否。 创建发布时，活动仍可在数据库上继续进行。 注意，生成快照可能占用大量资源，因此最好在数据库活动较少的期间生成快照（默认情况下完成新建发布向导后就生成快照）。  
+ 不是。 创建发布时，活动仍可在数据库上继续进行。 注意，生成快照可能占用大量资源，因此最好在数据库活动较少的期间生成快照（默认情况下完成新建发布向导后就生成快照）。  
   
 ### <a name="are-tables-locked-during-snapshot-generation"></a>快照生成期间是否锁定表？  
  锁定的时间长度取决于所用复制的类型：  
@@ -56,7 +57,7 @@ ms.locfileid: "72041205"
 -   如果将分发代理或合并代理配置为按计划运行或按需运行，而且在代理运行时不存在可用的快照，则代理将关闭，并显示一条快照尚不可用的消息。 快照代理完成后，必须再次运行代理以应用快照。 有关运行代理的详细信息，请参阅[同步推送订阅](../../../relational-databases/replication/synchronize-a-push-subscription.md)、[同步请求订阅](../../../relational-databases/replication/synchronize-a-pull-subscription.md)和[复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
 ### <a name="should-i-script-my-replication-configuration"></a>是否应为复制配置编写脚本？  
- 是。 为复制配置编写脚本是任何复制拓扑的灾难恢复计划的关键。 有关编写脚本的详细信息，请参阅 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
+ 是的。 为复制配置编写脚本是任何复制拓扑的灾难恢复计划的关键。 有关编写脚本的详细信息，请参阅 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
   
 ### <a name="what-recovery-model-is-required-on-a-replicated-database"></a>复制数据库需要什么样的恢复模式？  
  复制使用以下任何恢复模式都可正常运行：简单恢复模式、大容量日志恢复模式或完整恢复模式。 合并复制以在元数据表中存储信息的方式跟踪更改。 事务复制通过标记事务日志来跟踪更改，但此标记过程不受恢复模式影响。  
@@ -88,7 +89,7 @@ ms.locfileid: "72041205"
  是，但有一些限制。 有关详细信息，请参阅[发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)主题中的“在多个发布中发布表”部分。  
   
 ### <a name="can-multiple-publications-use-the-same-distribution-database"></a>多个发布是否可以使用同一个分发数据库？  
- 是。 对于可以使用同一分发数据库的发布的数量或类型没有任何限制。 来自给定发布服务器的所有发布都必须使用同一分发服务器和分发数据库。  
+ 是的。 对于可以使用同一分发数据库的发布的数量或类型没有任何限制。 来自给定发布服务器的所有发布都必须使用同一分发服务器和分发数据库。  
   
  如果有多个发布，则可以在分发服务器上配置多个分发数据库，以确保通过每个分发数据库的数据流都来自单个发布。 使用“分发服务器属性”对话框或 [sp_adddistributiondb &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) 添加分发数据库。  有关访问该对话框的详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
   
@@ -96,7 +97,7 @@ ms.locfileid: "72041205"
  此信息可通过 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]和许多复制存储过程获得。 有关详细信息，请参阅 [Distributor and Publisher Information Script](../../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)。  
   
 ### <a name="does-replication-encrypt-data"></a>复制是否加密数据？  
- 否。 复制不对数据库中存储的数据或网络上传输的数据加密。 有关详细信息，请参阅主题[查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)的“加密”部分。  
+ 不是。 复制不对数据库中存储的数据或网络上传输的数据加密。 有关详细信息，请参阅主题[查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)的“加密”部分。  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>如何在 Internet 上复制数据？  
  使用以下方式在 Internet 上复制数据：  
@@ -108,7 +109,7 @@ ms.locfileid: "72041205"
  所有类型的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制都可以通过 VPN 来复制数据。但如果使用的是合并复制，应考虑使用 Web 同步。  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>如果删除连接，复制是否可以继续？  
- 是。 如果删除连接，复制处理可从停止处继续。 如果在不可靠的网络上使用合并复制，则请考虑使用逻辑记录，这可确保把相关更改作为一个单元来处理。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
+ 是的。 如果删除连接，复制处理可从停止处继续。 如果在不可靠的网络上使用合并复制，则请考虑使用逻辑记录，这可确保把相关更改作为一个单元来处理。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
 ### <a name="does-replication-work-over-low-bandwidth-connections-does-it-use-compression"></a>复制是否可以在低带宽连接上工作？ 它是否使用压缩？  
  是，复制的确可以在低带宽连接上工作。 对于通过 TCP/IP 的连接，复制使用该协议提供的压缩，但不提供其他压缩。 对于通过 HTTPS 的 Web 同步连接，复制使用协议提供的压缩，也使用复制更改所用的 XML 文件的其他压缩。  
@@ -116,10 +117,10 @@ ms.locfileid: "72041205"
 ## <a name="logins-and-object-ownership"></a>登录名和对象所有权  
   
 ### <a name="are-logins-and-passwords-replicated"></a>是否复制登录名和密码？  
- 否。 可以创建 SSIS 包，将登录名和密码从发布服务器传输到一个或多个订阅服务器。  
+ 不是。 可以创建 SSIS 包，将登录名和密码从发布服务器传输到一个或多个订阅服务器。  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>什么是架构，如何复制架构？  
- 从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)],  有两种含义：  
+ 从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，架构  有两种含义：  
   
 -   对象的定义，如 `CREATE TABLE` 语句。 默认情况下，复制把所有已复制对象的定义都复制到订阅服务器。  
   
@@ -167,7 +168,7 @@ ms.locfileid: "72041205"
  对于事务复制，大容量插入命令跟踪和复制的方式和其他插入命令相同。 对于合并复制，则必须确保正确更新跟踪元数据的更改。  
   
 ### <a name="are-there-any-replication-considerations-for-backup-and-restore"></a>对于备份和还原，是否存在复制注意事项？  
- 是。 对于复制所涉及数据库有许多特别注意事项。 有关详细信息，请参阅 [备份和还原复制的数据库](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)。  
+ 是的。 对于复制所涉及数据库有许多特别注意事项。 有关详细信息，请参阅 [备份和还原复制的数据库](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)。  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>复制是否影响事务日志的大小？  
  合并复制和快照复制不影响事务日志的大小，但事务复制会影响。 如果数据库包括一个或多个事务发布，则只有将与这些发布有关的所有事务传递到分发数据库之后才会截断日志。 如果事务日志增长得过大，而且日志读取器代理按计划运行，请考虑缩短运行间隔。 或者，将日志读取器代理设置为以连续模式运行。 如果将其设置为以连续模式运行（默认值），请确保它正在运行。 有关检查日志读取器代理状态的详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
@@ -226,10 +227,10 @@ ms.locfileid: "72041205"
 ## <a name="replication-and-other-database-features"></a>复制和其他数据库功能  
   
 ### <a name="does-replication-work-in-conjunction-with-log-shipping-and-database-mirroring"></a>复制是否可与日志传送和数据库镜像一起进行？  
- 是。 有关详细信息，请参阅[日志传送和复制 &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md) 和[数据库镜像和复制 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
+ 是的。 有关详细信息，请参阅[日志传送和复制 &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md) 和[数据库镜像和复制 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>复制是否可与聚类分析一起进行？  
- 是。 没有需要特别注意的事项，因为所有数据都存储在群集上的一组磁盘中。  
+ 是的。 没有需要特别注意的事项，因为所有数据都存储在群集上的一组磁盘中。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制管理常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   

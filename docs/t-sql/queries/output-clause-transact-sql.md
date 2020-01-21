@@ -1,7 +1,7 @@
 ---
 title: OUTPUT 子句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2122954c2ce126441eba6d5d05db69e9a8bfa30e
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901874"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952439"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "67901874"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -138,7 +138,7 @@ DELETE Sales.ShoppingCartItem
  $action  
  仅可用于 MERGE 语句。 在 MERGE 语句的 OUTPUT 子句中指定一个 **nvarchar(10)** 类型的列，该子句为每行返回以下三个值之一：“INSERT”、“UPDATE”或“DELETE”（具体视对相应行执行的操作而定）。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { \@  table\_variable   | output\_table  }子句可以在单个 INSERT、UPDATE、DELETE 或 MERGE 语句中进行定义。  
   
 > [!NOTE]  
@@ -211,7 +211,7 @@ DELETE Sales.ShoppingCartItem
   
 -   在 \<dml_table_source> 子句中，SELECT 和 WHERE 子句不能包括子查询、聚合函数、排名函数、全文谓词、执行数据访问的用户定义函数或是 TEXTPTR 函数。  
 
-## <a name="parallelism"></a>Parallelism
+## <a name="parallelism"></a>并行度
  可将结果返回客户端的 OUTPUT 子句将始终使用串行计划。
 
 在兼容性级别设置为 130 或更高的数据库的上下文中，如果 INSERT...SELECT 操作使用 SELECT 语句的 WITH (TABLOCK) 提示，并且使用 OUTPUT…INTO 插入临时表或用户表，则 INSERT…SELECT 的目标表将可以进行并行操作（具体取决于子树成本）。  OUTPUT INTO 子句中引用的目标表不能进行并行操作。 
@@ -421,7 +421,7 @@ GO
   
 ```  
   
-### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>E. 在 UPDATE 语句中使用包含 from_table_name 的 OUTPUT INTO  
+### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. 在 UPDATE 语句中使用包含 from_table_name 的 OUTPUT INTO  
  以下示例使用指定的 `ProductID` 和 `ScrapReasonID`，针对 `WorkOrder` 表中的所有工作顺序更新 `ScrapReasonID` 列。 `OUTPUT INTO` 子句返回所更新表 (`WorkOrder`) 中的值以及 `Product` 表中的值。 在 `Product` 子句中使用 `FROM` 表来指定要更新的行。 由于 `WorkOrder` 表上定义了 `AFTER UPDATE` 触发器，因此需要 `INTO` 关键字。  
   
 ```  
@@ -455,7 +455,7 @@ GO
   
 ```  
   
-### <a name="f-using-output-into-with-fromtablename-in-a-delete-statement"></a>F. 在 DELETE 语句中使用包含 from_table_name 的 OUTPUT INTO  
+### <a name="f-using-output-into-with-from_table_name-in-a-delete-statement"></a>F. 在 DELETE 语句中使用包含 from_table_name 的 OUTPUT INTO  
  以下示例将按照在 `ProductProductPhoto` 语句的 `FROM` 子句中所定义的搜索条件删除 `DELETE` 表中的行。 `OUTPUT` 子句返回所删除表（`deleted.ProductID`、`deleted.ProductPhotoID`）中的列以及 `Product` 表中的列。 在 `FROM` 子句中使用该表来指定要删除的行。  
   
 ```  
@@ -576,9 +576,11 @@ DECLARE @MyTableVar table(
   );  
   
 INSERT INTO dbo.EmployeeSales (LastName, FirstName, CurrentSales)  
-  OUTPUT INSERTED.LastName,   
+  OUTPUT INSERTED.EmployeeID,
+         INSERTED.LastName,   
          INSERTED.FirstName,   
-         INSERTED.CurrentSales  
+         INSERTED.CurrentSales,
+         INSERTED.ProjectedSales
   INTO @MyTableVar  
     SELECT c.LastName, c.FirstName, sp.SalesYTD  
     FROM Sales.SalesPerson AS sp  

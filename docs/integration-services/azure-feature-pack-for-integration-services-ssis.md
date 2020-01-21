@@ -1,7 +1,7 @@
 ---
 title: 用于 Integration Services (SSIS) 的Azure 功能包 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/17/2019
+ms.date: 12/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e6531e05a3f800bbd4c1563c53c4b4d18eb0eea
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 563f984ed5aa401ae67572ad0f915698286f0aa4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659590"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329949"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>用于 Azure 的 Integration Services (SSIS) 功能包
 
@@ -52,7 +52,7 @@ ms.locfileid: "73659590"
 
     -   [Azure 订阅连接管理器](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
--   “任务”
+-   任务
 
     -   [Azure Blob 下载任务](../integration-services/control-flow/azure-blob-download-task.md)
 
@@ -100,7 +100,7 @@ Azure 功能包使用的 TLS 版本遵循系统 .NET Framework 设置。
 
 ## <a name="dependency-on-java"></a>Java 上的依赖项
 
-必须使用 Java，才能结合使用 ORC/Parquet 文件格式和 Azure Data Lake Store/平面文件连接器。  
+必须使用 Java，才能结合使用 ORC/Parquet 文件格式和 Azure Data Lake Store/灵活的文件连接器。  
 Java 版本的体系结构（32/64 位）应与要使用的 SSIS 运行时的体系结构一致。
 已测试以下 Java 版本。
 
@@ -119,6 +119,13 @@ Java 版本的体系结构（32/64 位）应与要使用的 SSIS 运行时的体
 7. 选择“确定”，关闭“新建系统变量”对话框   。
 8. 选择“确定”，关闭“环境变量”对话框   。
 9. 选择“确定”以关闭“系统属性”对话框   。
+
+> [!TIP]
+> 如果使用 Parquet 格式出现错误，指示“调用 java 时出现错误，消息：‘java.lang.OutOfMemoryError:Java 堆空间’”  ，则可以添加一个环境变量 `_JAVA_OPTIONS`  以调整 JVM 的最小/最大堆大小。
+>
+>![jvm 堆](media/azure-feature-pack-jvm-heap-size.png)
+>
+> 示例：将变量 `_JAVA_OPTIONS`  的值设置为 `-Xms256m -Xmx16g`  。 标志 Xms 指定 Java 虚拟机 (JVM) 的初始内存分配池，而 Xmx 指定最大内存分配池。 这意味着 JVM 初始内存为 `Xms`  ，并且能够使用的最多内存为 `Xmx`  。 默认最小值为 64MB，最大值为 1G。
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>在 Azure-SSIS Integration Runtime 上设置 Zulu 的 OpenJDK
 
@@ -139,6 +146,13 @@ zulu8.33.0.1-jdk8.0.192-win_x64.zip
 ~~~
 powershell.exe -file install_openjdk.ps1
 ~~~
+
+> [!TIP]
+> 如果使用 Parquet 格式并出现错误，指示“调用 java 时出现错误，消息：‘java.lang.OutOfMemoryError:Java 堆空间’”  ，则可以在 `main.cmd`  中添加命令以调整 JVM 的最小/最大堆大小。 示例：
+> ~~~
+> setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
+> ~~~
+> 标志 Xms 指定 Java 虚拟机 (JVM) 的初始内存分配池，而 Xmx 指定最大内存分配池。 这意味着 JVM 初始内存为 `Xms`  ，并且能够使用的最多内存为 `Xmx`  。 默认最小值为 64MB，最大值为 1G。
 
 **install_openjdk.ps1**
 

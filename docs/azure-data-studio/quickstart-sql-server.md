@@ -10,12 +10,12 @@ ms.author: alayu
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: a218c2afa89c8798c46b305e80e677693509e7ab
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810784"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884052"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 SQL Server
 
@@ -39,15 +39,15 @@ ms.locfileid: "68810784"
 
 2. 首次运行 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 时，应该会打开“欢迎”页  。 如果没有看到“欢迎”页，请选择“帮助” > “欢迎”    。 选择“新建连接”以打开“连接”窗格   ：
 
-   ![新建连接图标](media/quickstart-sql-server/new-connection-icon.png)
+   ![“新建连接”图标](media/quickstart-sql-server/new-connection-icon.png)
 
 3. 本文使用 SQL 登录名，但也支持 Windows 身份验证   。 按如下所示填写字段：
 
-- **服务器名称:** - 在此处输入服务器名称。 例如，localhost。
+- **服务器名称：** 在此处输入服务器名。 例如，localhost。
 - **身份验证类型:** SQL 登录名
 - **用户名:** SQL Server 的用户名
 - **密码:** SQL Server 的密码
-- **数据库名称:** 此字段不填
+- **数据库名称：** \<默认\>
 - **服务器组:** \<默认\>
 
    ![新建连接屏幕](media/quickstart-sql-server/new-connection-screen.png)

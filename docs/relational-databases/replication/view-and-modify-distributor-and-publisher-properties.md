@@ -1,6 +1,7 @@
 ---
-title: 查看和修改分发服务器和发布服务器属性 | Microsoft Docs
-ms.custom: ''
+title: 查看和修改分发服务器和发布服务器属性
+description: 了解如何使用 SQL Server Management Studio （SSMS）、Transact-SQL (T-SQL) 或复制管理对象 (RMO) 修改分发服务器和发布服务器的属性。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a2d9e5b04164b3e8aab8c8d0a2fa50d154b10345
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5fcc1f21654fedc935a604fac37c7a3ca591b3d5
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769265"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321550"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>查看和修改分发服务器和发布服务器属性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "68769265"
   
 ###  <a name="Recommendations"></a> 建议  
   
--   对于运行低于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]版本的发布服务器， **sysadmin** 固定服务器角色中的用户可以在 **“订阅服务器”** 页上注册订阅服务器。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开始，不再需要为复制显式注册订阅服务器。  
+-   对于运行低于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本的发布服务器，sysadmin  固定服务器角色中的用户可以在“订阅服务器”  页上注册订阅服务器。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开始，不再需要为复制显式注册订阅服务器。  
   
 ###  <a name="Security"></a> Security  
  如果可能，请在运行时提示用户输入安全凭据。  
@@ -130,7 +131,7 @@ ms.locfileid: "68769265"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 3.  （可选）检查 <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> 属性以验证当前连接到的服务器是否为分发服务器。  
   
@@ -144,7 +145,7 @@ ms.locfileid: "68769265"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类的实例。 指定名称属性并传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类的实例。 指定名称属性并传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该服务器的属性。 如果此方法返回 **false**，则该服务器上不存在指定名称的数据库。  
   
@@ -156,7 +157,7 @@ ms.locfileid: "68769265"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 属性并传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 属性并传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 3.  （可选）若要更改属性，请为可以设置的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 属性中的一个设置新值。  
   
@@ -166,7 +167,7 @@ ms.locfileid: "68769265"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。  
   
 3.  将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
@@ -181,7 +182,7 @@ ms.locfileid: "68769265"
   
     1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-    2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。  
+    2.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。  
   
     3.  将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 6a 中创建的连接。  
   

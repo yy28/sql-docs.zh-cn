@@ -1,6 +1,7 @@
 ---
-title: 使用复制监视器查看信息和执行任务 | Microsoft Docs
-ms.custom: ''
+title: 查看信息并执行任务（复制监视器）
+description: 了解如何在 SQL Server Management Studio (SSMS) 中使用复制监视器查看信息和执行各种任务。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 836a286c5852a9822835977c47d9cd204a3724ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1a71ef96c559857e739b074915b219c38f036ff3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766903"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322206"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>使用复制监视器查看信息和执行任务
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68766903"
 ### <a name="view-information"></a>查看信息
 复制监视器提供了下列选项卡，以显示有关选定发布服务器的信息：   
 -   **发布** - 显示选定发布服务器上所有发布的相关信息。   
--   **订阅监视列表** - 显示有关所选发布服务器上所有可用发布中包含错误、警告或最差性能的订阅的信息。 对于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以前版本的分发服务器，不显示此选项卡。    
+-   **订阅监视列表** - 显示有关所选发布服务器上所有可用发布中包含错误、警告或最差性能的订阅的信息。 对于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以前版本的分发服务器，不显示此选项卡。    
 -   **代理**选项卡 - 显示所有类型的复制所使用的代理和作业的详细信息。 使用该选项卡，还可以启动和停止每个代理和作业。 若要查看每个选项卡上各个选项的详细信息，请在右窗格中单击该选项卡，再单击菜单栏上的 **“帮助”** 。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="perform-tasks"></a>执行任务
@@ -84,7 +85,7 @@ ms.locfileid: "68766903"
 ### <a name="view-information"></a>查看信息
   复制监视器提供下列包含订阅相关信息的选项卡：    
 -   **所有订阅** - 显示有关所选发布的所有订阅的信息。   
--   **订阅监视列表** - 显示所选发布服务器上所有可用发布中包含错误、警告或最差性能的订阅的信息。 对于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以前版本的分发服务器，不显示此选项卡。 有关每个选项卡上各选项的详细信息，请在右窗格中单击相应选项卡，然后在菜单栏上单击 **“帮助”** 。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+-   **订阅监视列表** - 显示所选发布服务器上所有可用发布中包含错误、警告或最差性能的订阅的信息。 对于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以前版本的分发服务器，不显示此选项卡。 有关每个选项卡上各选项的详细信息，请在右窗格中单击相应选项卡，然后在菜单栏上单击 **“帮助”** 。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="perform-tasks"></a>执行任务
   
@@ -127,7 +128,7 @@ ms.locfileid: "68766903"
 ### <a name="view-information"></a>查看信息
 -   **所有订阅** - 显示有关所选发布的所有订阅的信息。  
   
--   **订阅监视列表** - 旨在显示有关所选发布服务器上所有可用发布中包含错误、警告或最差性能的订阅的信息。 对于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以前版本的分发服务器，不显示此选项卡。 有关每个选项卡上各选项的详细信息，请在右窗格中单击相应选项卡，然后在菜单栏上单击 **“帮助”** 。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+-   **订阅监视列表** - 旨在显示有关所选发布服务器上所有可用发布中包含错误、警告或最差性能的订阅的信息。 对于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以前版本的分发服务器，不显示此选项卡。 有关每个选项卡上各选项的详细信息，请在右窗格中单击相应选项卡，然后在菜单栏上单击 **“帮助”** 。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="perform-tasks"></a>执行任务
   

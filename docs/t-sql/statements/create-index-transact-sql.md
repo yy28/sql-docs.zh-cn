@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b09ea4349a710bad0ed228e6f16637878047e9bc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 80f3fba621cbfe4f8411f618ca60025685c2da34
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982204"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924912"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -97,7 +97,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 - [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)
 - [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)
 
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法
 
@@ -241,7 +241,7 @@ NONCLUSTERED
 
 如果未另行指定，默认索引类型则为 NONCLUSTERED。
 
-*index_name*      
+index_name        
  索引的名称。 索引名称在表或视图中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。
 
 column        
@@ -284,7 +284,7 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 
 筛选索引不适用于 XML 索引和全文检索。 对于 UNIQUE 索引，仅选定的行必须具有唯一的索引值。 筛选索引不允许有 IGNORE_DUP_KEY 选项。
 
-ON partition_scheme_name ( column_name )        
+ON *partition_scheme_name* **( _column_name_ )**      
 
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -471,7 +471,7 @@ ONLINE = { ON | OFF }
 指定在索引操作期间基础表和关联的索引是否可用于查询和数据修改操作。 默认为 OFF。
 
 > [!IMPORTANT]
-> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。
+> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。
 
 ON      
 在索引操作期间不持有长期表锁。 在索引操作的主要阶段，源表上只使用意向共享 (IS) 锁。 这使得能够继续对基础表和索引进行查询或更新。 操作开始时，在很短的时间内对源对象持有共享 (S) 锁。 操作结束时，如果创建非聚集索引，将在短期内获取对源的 S（共享）锁；当联机创建或删除聚集索引时，以及重新生成聚集或非聚集索引时，将在短期内获取 SCH-M（架构修改）锁。 对本地临时表创建索引时，ONLINE 不能设置为 ON。
@@ -540,7 +540,7 @@ OFF
 不使用页锁。
 
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF  }      
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定是否针对最后一页插入争用进行优化。 默认为 OFF。 有关详细信息，请参阅[顺序键](#sequential-keys)部分。
 
@@ -566,7 +566,7 @@ max_degree_of_parallelism 可以是  ：
 > 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本中均支持并行索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能的列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。
 
 DATA_COMPRESSION      
-为指定的索引、分区号或分区范围指定数据压缩选项。 选项如下所示：
+为指定的索引、分区号或分区范围指定数据压缩选项。 选项如下：
 
 无      
 不压缩索引或指定的分区。
@@ -603,7 +603,7 @@ REBUILD WITH
 );
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 CREATE INDEX 语句同其他查询一样优化。 为了节省 I/O 操作，查询处理器可以选择扫描另一个索引，而不是执行表扫描。 在某些情况下，可不必执行排序操作。 在多处理器计算机上，CREATE INDEX 可按照与其他查询相同的方式，使用多个处理器执行与创建索引相关的扫描和排序操作。 有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。
 
 如果数据库恢复模型被设置为大容量日志模型或简单模型，则可以记录最少的创建索引操作。
@@ -652,7 +652,7 @@ CREATE INDEX 语句同其他查询一样优化。 为了节省 I/O 操作，查�
 - INSERT、UPDATE、DELETE 或 MERGE 操作修改筛选索引中的数据。
 - 查询优化器使用该筛选索引生成查询计划。
 
-    |SET 选项|必需的值|默认服务器值|默认<br /><br /> OLE DB 和 ODBC 值|默认<br /><br /> DB-Library 值|
+    |SET 选项|所需的值|默认服务器值|默认<br /><br /> OLE DB 和 ODBC 值|默认<br /><br /> DB-Library 值|
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
     |ANSI_NULLS|ON|ON|ON|OFF|
     |ANSI_PADDING|ON|ON|ON|OFF|
@@ -721,7 +721,7 @@ INSERT INTO t1 VALUES (1, 0);
 可以将非键列（称为包含列）添加到非聚集索引的叶级别，从而通过涵盖查询来提高查询性能。 也就是说，查询中引用的所有列都作为键列或非键列包含在索引中。 这样，查询优化器可以通过索引扫描找到所需的全部信息，而无需访问表或聚集索引数据。 有关详细信息，请参阅[创建带有包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)和 [SQL Server 索引体系结构和设计指南](../../relational-databases/sql-server-index-design-guide.md)。
 
 ## <a name="specifying-index-options"></a>指定索引选项
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入了新的索引选项，还修改了指定选项的方式。 在向后兼容的语法中，WITH option_name 等效于 WITH ( \<option_name> = ON )    。 在设置索引选项时，下列规则适用：
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入了新的索引选项，还修改了指定选项的方式。 在向后兼容的语法中，WITH option_name  等效于 WITH **(** \<option_name> **= ON )** 。 在设置索引选项时，下列规则适用：
 
 - 新的索引选项只能使用 WITH (option\_name  = ON | OFF  ) 指定。
 - 指定选项时不能在同一语句中同时使用向后兼容语法和新语法。 例如，指定 WITH (DROP_EXISTING, ONLINE = ON) 会导致语句失败  。
@@ -770,7 +770,7 @@ INSERT INTO t1 VALUES (1, 0);
 
 若要指示索引创建作为可恢复操作执行并检查其当前执行状态，请参阅 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)。
 
-#### <a name="resources"></a>Resources
+#### <a name="resources"></a>资源
 可恢复联机索引创建操作需要以下资源：
 
 - 使索引保持生成所需的附加空间，包括索引暂停的时间
@@ -794,7 +794,7 @@ INSERT INTO t1 VALUES (1, 0);
 如果 `ALLOW_ROW_LOCKS = OFF` 且 `ALLOW_PAGE_LOCK = OFF`，在访问索引时仅允许使用表级别锁定。
 
 ## <a name="sequential-keys"></a>顺序键
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 最后一页插入争用是在以下情况下发生的常见性能问题：当大量并发线程尝试将行插入包含顺序键的索引时。 如果前导键列包含始终增加（或减少）的值（如标识列），或包含默认为当前日期/时间的日期，索引就会被视为顺序索引。 由于键是按顺序插入，因此所有新行都会插入到索引结构的末尾处，即位于同一页面上。 这会导致内存中出现页面争用，可观察到多个线程在 PAGELATCH_EX 上等待相关页面。
 

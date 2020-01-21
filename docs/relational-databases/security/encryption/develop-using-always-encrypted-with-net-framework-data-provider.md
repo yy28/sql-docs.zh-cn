@@ -1,6 +1,7 @@
 ---
-title: 对用于 SQL Server 的 .NET Framework 数据提供程序使用 Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: 配合使用 Always Encrypted 和 .NET Framework 数据提供程序
+description: 了解如何使用 SQL Server 的 Always Encrypted 功能开发 .NET 应用程序。
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database
@@ -11,12 +12,12 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07351f5fe839f8304e56b5a94818c93255149fa5
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3c442568ad7764ba0f9031a02a8080499555d26f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594451"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558036"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>对用于 SQL Server 的 .NET Framework 数据提供程序使用 Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +109,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 
 ### <a name="inserting-data-example"></a>插入数据示例
 
-此示例向 Patients 表插入一行。 请注意以下事项：
+此示例向 Patients 表插入一行。 注意以下事项：
 - 对于示例代码中的加密，没有什么特定的注意事项。 用于 SQL Server 的 .NET Framework 数据提供程序会自动检测并加密面向加密列的 *paramSSN* 和 *paramBirthdate* 参数。 这使得加密操作对应用程序而言是透明的。 
 - 插入到数据库列（包括加密列）中的值将作为 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 对象传递。 在将值发送到非加密列时，SqlParameter  是可选的（虽然强烈建议使用它，因为它有助于防止 SQL 注入），而在发送面向加密列的值时，它是必需的。 如果插入到 SSN 或 BirthDate 列中的值作为查询语句中嵌入的文本传递，查询将失败，因为用于 SQL Server 的 .NET Framework 数据提供程序无法确定目标加密列中的值，所以它不会对这些值加密。 因此，服务器会因为与加密列不兼容而拒绝它们。
 - 面向 SSN 列的参数的数据类型将设置为映射到 char/varchar SQL Server 数据类型的 ANSI（非 Unicode）字符串。 如果该参数的类型设置为映射到 nchar/nvarchar 的 Unicode 字符串（字符串），查询将失败，因为 Always Encrypted 不支持从加密的 nchar/nvarchar 值转换为加密的 char/varchar 值。 有关数据类型映射的信息，请参阅 [SQL Server 数据类型映射](/dotnet/framework/data/adonet/sql-server-data-type-mappings) 。
@@ -160,7 +161,7 @@ using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
 
 ### <a name="retrieving-plaintext-data-example"></a>检索纯文本数据示例
 
-以下示例演示如何根据加密值筛选数据，以及从加密列中检索纯文本数据。 请注意以下事项：
+以下示例演示如何根据加密值筛选数据，以及从加密列中检索纯文本数据。 注意以下事项：
 - WHERE 子句中用于筛选 SSN 列的值需要使用 SqlParameter 进行传递，以便用于 SQL Server 的 .NET Framework 数据提供程序可以在将其发送到数据库之前以透明方式对其加密。
 - 程序打印的所有值均为纯文本形式，因为用于 SQL Server 的 .NET Framework 数据提供程序将以透明方式解密从 SSN 和 BirthDate 列中检索到的数据。
 
@@ -198,7 +199,7 @@ using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
 
 如果未启用始终加密，只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。
 
-以下示例演示如何从加密列中检索二进制加密数据。 请注意以下事项：
+以下示例演示如何从加密列中检索二进制加密数据。 注意以下事项：
 
 - 由于未在连接字符串中启用始终加密，因此，查询将以字节数组的形式返回 SSN 和 BirthDate 的加密值（程序会将值转换为字符串）。
 - 如果禁用始终加密，从加密列中检索数据的查询可以有参数，但前提是所有参数均不面向加密列。 上述查询按未在数据库中加密的 LastName 进行筛选。 如果查询按 SSN 或 BirthDate 进行筛选，则将失败。
@@ -294,7 +295,7 @@ cmd.ExecuteNonQuery();
 用于 SQL Server 的 .NET Framework 数据提供程序附带以下内置列主密钥存储提供程序，这些提供程序已使用特定的提供程序名称（用于查找该提供程序）进行预注册。
 
 
-| 类 | 描述 | 提供程序（查找）名称 |
+| 类 | 说明 | 提供程序（查找）名称 |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider 类| 用于 Windows 证书存储的提供程序。 | MSSQL_CERTIFICATE_STORE |
 |[SqlColumnEncryptionCngProvider 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**注意：** 此提供程序在 .NET Framework 4.6.1 及更高版本中可用。 |用于支持 [Microsoft 加密 API：下一代 (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx) 的密钥存储的提供程序。 这类存储通常是硬件安全模块 — 一种用于保护和管理数字密钥并提供加密处理的物理设备。  | MSSQL_CNG_STORE|
@@ -408,11 +409,11 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 若要控制单个查询的始终加密行为，需使用 [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) 的此构造函数和 [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)。 下面是一些有用的指导原则：
 - 如果客户端应用程序通过数据库连接发送的大多数查询访问的是加密列，则可执行以下操作：
     - 将“列加密设置”  连接字符串关键字设置为“已启用”  。
-    - 对于不访问任何加密列的单个查询，则设置 **SqlCommandColumnEncryptionSetting.Disabled**。 这将禁止调用 sys.sp_describe_parameter_encryption，同时禁止尝试对结果集中的任何值解密。
+    - 对于不访问任何加密列的单个查询，则设置 **SqlCommandColumnEncryptionSetting.Disabled** 。 这将禁止调用 sys.sp_describe_parameter_encryption，同时禁止尝试对结果集中的任何值解密。
     - 对于其参数不需要加密但会从加密列检索数据的单个查询，则设置 **SqlCommandColumnEncryptionSetting.ResultSet** 。 这将禁止调用 sys.sp_describe_parameter_encryption 和参数加密。 查询将能够解密来自加密列的结果。
 - 如果客户端应用程序通过数据库连接发送的大多数查询不访问加密列，则可执行以下操作：
     - 将“列加密设置”  连接字符串关键字设置为“已禁用”  。
-    - 对于有参数需要加密的单个查询，则设置 **SqlCommandColumnEncryptionSetting.Enabled**。 这将允许调用 sys.sp_describe_parameter_encryption，同时允许对从加密列中检索到的任何查询结果解密。
+    - 对于有参数需要加密的单个查询，则设置 **SqlCommandColumnEncryptionSetting.Enabled** 。 这将允许调用 sys.sp_describe_parameter_encryption，同时允许对从加密列中检索到的任何查询结果解密。
     - 对于其参数不需要加密但会从加密列检索数据的查询，则设置 **SqlCommandColumnEncryptionSetting.ResultSet** 。 这将禁止调用 sys.sp_describe_parameter_encryption 和参数加密。 查询将能够解密来自加密列的结果。
 
 在以下示例中，将对数据库连接禁用始终加密。 应用程序发出的查询有一个面向未加密的 LastName 列的参数。 该查询从已加密的 SSN 和 BirthDate 列中检索数据。 在这种情况下，不需要调用 sys.sp_describe_parameter_encryption 来检索加密元数据。 但是，需要启用查询结果解密，以便应用程序从两个加密列接收纯文本值。 使用 SqlCommandColumnEncryptionSetting.ResultSet 设置可以确保这一点。
@@ -522,7 +523,7 @@ SqlConnection.ColumnEncryptionTrustedMasterKeyPaths.Add(serverName, trustedKeyPa
 
 ## <a name="copying-encrypted-data-using-sqlbulkcopy"></a>使用 SqlBulkCopy 复制加密数据
 
-使用 SqlBulkCopy，可以将已加密并且存储在某个表中的数据复制到另一个表，而无需对数据解密。 为此：
+使用 SqlBulkCopy，可以将已加密并且存储在某个表中的数据复制到另一个表，而无需对数据解密。 若要执行该操作：
 
 - 请确保目标表的加密配置与源表的配置完全相同。 特别是，两个表必须对相同的列加密，并且必须使用相同的加密类型和相同的加密密钥对列加密。 注意：如果任何目标列的加密方式与其相应的源列不同，你都不能在复制操作完成后对目标表中的数据进行解密。 数据将损坏。
 - 配置数据库到源表和目标表的连接，而不启用始终加密。 
@@ -564,7 +565,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|“属性”|描述|在以下 .NET 版本中引入
+|名称|说明|在以下 .NET 版本中引入
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|用于 Windows 证书存储区的密钥存储提供程序。|  4.6
 |[SqlColumnEncryptionCngProvider 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|用于 Microsoft 下一代加密 API (CNG) 的密钥存储提供程序。|  4.6.1
@@ -584,7 +585,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="see-also"></a>另请参阅
 
-- [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [始终加密博客](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [SQL 数据库教程：使用 Always Encrypted 保护敏感数据](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

@@ -1,6 +1,7 @@
 ---
-title: 发布信息，跟踪令牌（SQL Server 2005 和更高版本）| Microsoft Docs
-ms.custom: ''
+title: 跟踪令牌（发布信息）
+description: “发布信息”页的“跟踪令牌”选项卡的说明位于 SQL Server Management Studio (SSMS) 中的复制监视器中。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e4ec223179bf7fdb2e2fae250f95ab241ed1acf7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 52f23a051de18881ee368bf34e6912abe67c6d2d
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770006"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321281"
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>发布信息，跟踪令牌（SQL Server 2005 和更高版本）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

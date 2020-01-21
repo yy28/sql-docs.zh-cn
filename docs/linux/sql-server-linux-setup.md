@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: a6cd31b1f67d37f1316db9db5d4356bbb5e31d3b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 57041b528186bde743abfeec293e696b0155d0e1
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593667"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884011"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的安装指南
 
@@ -59,7 +59,7 @@ SQL Server 在 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (S
 
 | 平台 | 支持的版本 | 获取
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 版本 7.3、7.4、7.5、7.6 | [获取 RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3、7.4、7.5、7.6、8.0 | [获取 RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2、SP3、SP4 | [获取 SLES v12](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [获取 Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Docker 引擎** | 1.8+ | [获取 Docker](https://www.docker.com/get-started)
@@ -78,7 +78,7 @@ SQL Server 对 Linux 具有以下系统要求：
 |||
 |-----|-----|
 | **内存** | 2 GB |
-| **“文件系统”** | XFS 或 EXT4（其他文件系统均不受支持，如 BTRFS）    。 |
+| **文件系统** | XFS 或 EXT4（其他文件系统均不受支持，如 BTRFS）    。 |
 | **磁盘空间** | 6 GB |
 | **处理器速度** | 2 GHz |
 | **处理器核心数** | 2 个核心 |
@@ -211,7 +211,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
     > [!NOTE]
     > 还可使用 `rpm -ivh` 命令安装 RPM 包（RHEL 和 SLES），但如果可以从批准的存储库中获得，则上表中的命令会自动安装依赖项。
 
-1. **解决缺少的依赖项**：此时可能会出现缺少依赖项的情况。 如果没有，可以跳过此步骤。 在 Ubuntu 上，如果能够访问包含这些依赖项的已批准的存储库，最简单的解决办法是使用 `apt-get -f install` 命令。 此命令还会完成 SQL Server 的安装。 若要手动检查依赖项，请使用以下命令：
+1. **解决缺少依赖项的问题**：此时可能会出现缺少依赖项的情况。 如果没有，可以跳过此步骤。 在 Ubuntu 上，如果能够访问包含这些依赖项的已批准的存储库，最简单的解决办法是使用 `apt-get -f install` 命令。 此命令还会完成 SQL Server 的安装。 若要手动检查依赖项，请使用以下命令：
 
    | 平台 | 列出依赖项命令 |
    |-----|-----|

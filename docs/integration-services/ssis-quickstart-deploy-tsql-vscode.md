@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc11ccdee25331ad4d3758e4ebdff2da9e420900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: befa64e6c79a1f1e4fe0604014dbb7c583bf830e
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281548"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947169"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>使用 TRANSACT-SQL 从 Visual Studio Code 部署 SSIS 项目
 
@@ -50,6 +50,10 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
  
 3. 在打开的“选择语言模式”  下拉菜单中选择或输入“SQL”  ，然后按 ENTER  将语言模式设置为 SQL。 
 
+## <a name="supported-authentication-method"></a>支持的身份验证方法
+
+请参阅[用于部署的身份验证方法](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment)。
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>连接到 SSIS 目录数据库
 
 使用 Visual Studio Code 来建立到 SSIS 目录的连接。
@@ -58,21 +62,21 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
 
 2. 键入 sqlcon，然后按 ENTER   。
 
-3. 按 ENTER  以选择“创建连接配置文件”  。 本步骤是为 SQL Server 实例创建连接配置文件。
+3. 按 **ENTER** 选择“创建连接配置文件”。  本步骤是为 SQL Server 实例创建连接配置文件。
 
-4. 按照提示为新连接配置文件指定连接属性。 指定每个值后，按 ENTER  继续。 
+4. 按照提示为新连接配置文件指定连接属性。 指定每个值后，按 **ENTER** 继续。 
 
-   | 设置       | 建议的值 | 详细信息 |
+   | 设置       | 建议的值 | 更多信息 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器名称** | 完全限定的服务器名称 |  |
    | **数据库名称** | **SSISDB** | 要连接到的数据库的名称。 |
    | **身份验证** | SQL 登录名 | |
-   | **User name** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
-   | **密码（SQL 登录名）** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
+   | **用户名** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
+   | **密码(SQL 登录名)** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
    | **是否保存密码？** | 是或否 | 如果不希望每次都输入密码，请选择“是”。 |
-   | **输入此配置文件的名称** | 一个配置文件名称，如 mySSISServer  | 保存一个配置文件名称可以加快后续登录时的连接速度。 | 
+   |  输入此配置文件的名称 | 一个配置文件名称，如 mySSISServer  | 保存一个配置文件名称可以加快后续登录时的连接速度。 | 
 
-5. 按 ESC  键关闭提示配置文件已创建并连接的提示消息。
+5. 按 ESC  键关闭信息消息，该消息通知你，配置文件已创建并且已连接。
 
 6. 在状态栏中验证连接。
 
@@ -99,11 +103,11 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
 ## <a name="next-steps"></a>后续步骤
 - 考虑部署包的其他方式。
     - [使用 SSMS 部署 SSIS 包](./ssis-quickstart-deploy-ssms.md)
-    - [使用 Transact-SQL (SSMS) 部署 SSIS 包](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [使用 Transact-SQL 部署 SSIS 包 (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
     - [从命令提示符部署 SSIS 包](./ssis-quickstart-deploy-cmdline.md)
     - [使用 PowerShell 部署 SSIS 包](ssis-quickstart-deploy-powershell.md)
     - [使用 C# 部署 SSIS 包](./ssis-quickstart-deploy-dotnet.md) 
-- 运行已部署的包。 若要运行包，可以从多个工具和语言中进行选择。 有关详细信息，请参阅下文：
+- 运行已部署的包。 若要运行包，可以从多个工具和语言中进行选择。 有关详细信息，请参阅以下文章：
     - [使用 SSMS 运行 SSIS 包](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 运行 SSIS 包 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [使用 Transact-SQL 运行 SSIS 包 (VS Code)](ssis-quickstart-run-tsql-vscode.md)

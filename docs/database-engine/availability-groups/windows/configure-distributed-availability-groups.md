@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c54ec57756ca2f840ac3f15771143cf697798e9f
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75002021"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952488"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>配置 Always On 分布式可用性组  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -180,7 +180,8 @@ GO
 >  **LISTENER_URL** 为每个可用性组指定了侦听程序与可用性组的数据库镜像端点。 在此示例中，为端口 `5022` （不是用于创建侦听程序的端口 `60173` ）。 如果使用的是负载均衡器，对于 Azure 中的实例，请[向分布式可用性组端口添加负载均衡规则](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 向侦听器端口添加规则，除了 SQL Server 实例端口。 
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>取消转发器的自动种子设定
-如果必须在同步两个可用性组前取消转发器的初始化，请通过将转发器的 SEEDING_MODE 参数设置为 MANUAL 并立即取消种子设定来更改分布式可用性组。 在全局主要可用性组中运行命令： 
+
+无论出于何种原因，如果必须在同步两个可用性组_前_取消转发器的初始化，请通过将转发器的 SEEDING_MODE 参数设置为 MANUAL 并立即取消种子设定来更改分布式可用性组。 在全局主要可用性组中运行命令： 
 
 ```sql
 -- Cancel automatic seeding.  Connect to global primary but specify DAG AG2
