@@ -13,25 +13,24 @@ helpviewer_keywords:
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c5f261998588fa15074a25c606a0aa50f742f04a
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: a03a0236c177605bf5041e92ea9c19708d5bc9ae
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75557817"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776376"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>设置最大并行度选项以获取最佳性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此规则确定最大并行度 (MAXDOP) 选项是否设置为大于 8 的值。 将此选项设置为大于 8 的值通常导致不必要的资源消耗和性能下降。  
   
-## <a name="best-practices-recommendations"></a>最佳做法建议  
- 通过使用 sp_configure 将最大并行度选项设置为 8 或更小。  
+## <a name="best-practice-recommendations"></a>最佳做法建议  
+ 最大并行度 (MAXDOP) 配置选项控制并行计划中用于执行查询的处理器数。 此选项确定用于并行执行工作的查询计划运算符的线程数。 必须根据 SQL Server 的安装位置（对称多处理式 (SMP) 计算机、非一致性内存访问 (NUMA) 计算机，或启用了超线程的处理器），适当地配置最大并行度选项。 
+ 
+ 配置 MAXDOP 的建议取决于使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有关特定版本的指导原则，请参阅[配置“最大并行度”服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)，并配置相应的策略来验证最大并行度的值。     
   
-## <a name="for-more-information"></a>有关详细信息  
- [SQL Server 中“最大并行度”配置选项的建议和指南](https://go.microsoft.com/fwlink/?linkid=117786)  
-  
- [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
-  
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
+## <a name="for-more-information"></a>更多信息  
+ [SQL Server 中“最大并行度”配置选项的建议和指南](https://go.microsoft.com/fwlink/?linkid=117786)    
+ [配置“最大并行度”服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)     
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)     
   
