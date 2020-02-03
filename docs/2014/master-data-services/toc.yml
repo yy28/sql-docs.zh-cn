@@ -206,7 +206,7 @@
   items:
     - name: 配置电子邮件通知
       href: configure-email-notifications-master-data-services.md
-- name: 中的
+- name: 事务
   href: transactions-master-data-services.md
   items:
     - name: 撤消事务
@@ -308,7 +308,7 @@
       href: deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md
     - name: 编辑模型部署包
       href: edit-a-model-deployment-package.md
-- name: Security
+- name: 安全性
   href: security-master-data-services.md
 - name: 管理员
   href: administrators-master-data-services.md

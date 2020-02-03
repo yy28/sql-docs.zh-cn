@@ -78,7 +78,7 @@
           href: sql-server-certificates-and-asymmetric-keys.md
     - name: 身份验证访问
       items:
-        - name: 主体
+        - name: Principals
           href: authentication-access/principals-database-engine.md
         - name: 服务器级别角色
           href: authentication-access/server-level-roles.md

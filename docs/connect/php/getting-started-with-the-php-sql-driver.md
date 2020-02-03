@@ -11,10 +11,10 @@ ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f10888f25413a7e8637498466e80a0864a7de95c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993585"
 ---
 # <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Driver for PHP for SQL Server 入门
@@ -31,7 +31,7 @@ ms.locfileid: "67993585"
 ## <a name="see-also"></a>另请参阅  
 [示例应用程序（SQLSRV 驱动程序）](../../connect/php/example-application-sqlsrv-driver.md)
 
-[Microsoft Driver for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
   

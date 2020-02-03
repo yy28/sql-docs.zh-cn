@@ -1,4 +1,4 @@
-- name: 变更数据捕获
+- name: 更改数据捕获
   href: change-data-capture-ssis.md
   items:
     - name: 指定变更数据的间隔
@@ -59,7 +59,7 @@
           href: generate-and-run-the-supplemental-logging-script.md
         - name: 生成镜像表和 CDC 捕获实例
           href: generate-mirror-tables-and-cdc-capture-instances.md
-        - name: “完成”
+        - name: 完成
           href: finish.md
         - name: 编辑实例属性
           href: edit-instance-properties.md
@@ -82,7 +82,7 @@
           href: how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
         - name: 如何创建 SQL Server 更改数据库实例
           href: how-to-create-the-sql-server-change-database-instance.md
-        - name: 如何管理 CDC 实例
+        - name: How to Manage a CDC Instance
           href: how-to-manage-a-cdc-instance.md
         - name: 如何编辑 CDC 实例属性
           href: how-to-edit-the-cdc-instance-properties.md
@@ -92,7 +92,7 @@
       href: sql-server-connection-for-instance-creation.md
     - name: 高级连接属性
       href: advanced-connection-properties.md
-    - name: 用于运行脚本的 Oracle 凭据
+    - name: Oracle Credentials for Running Script
       href: oracle-credentials-for-running-script.md
     - name: Oracle 补充日志记录脚本
       href: oracle-supplemental-logging-script.md
@@ -124,7 +124,7 @@
           href: connection-to-sql-server-for-delete.md
         - name: 创建和编辑 Oracle CDC 服务
           href: create-and-edit-an-oracle-cdc-service.md
-        - name: 管理 Oracle CDC 服务
+        - name: Manage an Oracle CDC Service
           href: manage-an-oracle-cdc-service.md
         - name: 为 CDC 准备 SQL Server
           href: prepare-sql-server-for-cdc.md
@@ -191,13 +191,13 @@
           href: ../data-flow/look-up-infopackage.md
         - name: 新建 InfoObject
           href: ../data-flow/create-new-infoobject.md
-        - name: 创建事务数据的 InfoCube
+        - name: “创建事务数据的 InfoCube”
           href: ../data-flow/create-infocube-for-transaction-data.md
         - name: 查找 InfoObject
           href: ../data-flow/look-up-infoobject.md
         - name: “创建 InfoSource”
           href: ../data-flow/create-infosource.md
-        - name: “创建事务数据的 InfoSource”
+        - name: 创建事务数据的 InfoSource
           href: ../data-flow/create-infosource-for-transaction-data.md
         - name: “创建主数据的 InfoSource”
           href: ../data-flow/create-infosource-for-master-data.md

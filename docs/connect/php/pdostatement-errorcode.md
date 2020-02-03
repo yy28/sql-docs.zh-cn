@@ -11,10 +11,10 @@ ms.assetid: 4161abec-c12b-444e-9de5-f1dac7b3e0e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 78a7486d17d103bec3c8b1ef29d533da2f164c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936070"
 ---
 # <a name="pdostatementerrorcode"></a>PDOStatement::errorCode
@@ -32,7 +32,7 @@ string PDOStatement::errorCode();
 ## <a name="return-value"></a>返回值  
 如果语句句柄上没有任何操作，将以字符串或 NULL 形式返回五个字符的 SQLSTATE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  

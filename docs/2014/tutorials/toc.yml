@@ -183,20 +183,20 @@
           href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
         - name: 第 3 课：为表报表定义数据集
           href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-        - name: 第 4 课：将表添加到报表
+        - name: 第 4 课：向报表添加表
           href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-        - name: 第 5 课：设置报表格式
+        - name: 'Lesson 5: Formatting a Report'
           href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-        - name: 第 6 课：添加分组和总计
+        - name: 'Lesson 6: Adding Grouping and Totals'
           href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
     - name: 创建数据驱动订阅（SSRS 教程）
       href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
       items:
         - name: 第 1 课：创建示例订阅服务器数据库
           href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-        - name: 第 2 课：修改报表数据源属性
+        - name: 'Lesson 2: Modifying the Report Data Source Properties'
           href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-        - name: 第 3 课：定义数据驱动订阅
+        - name: 'Lesson 3: Defining a Data-Driven Subscription'
           href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
     - name: 使用 ReportViewer 创建带有参数的钻取 (RDLC) 报表（SSRS 教程）
       href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
@@ -211,13 +211,13 @@
           href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
         - name: 第 5 课：使用报表向导设计子报表
           href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
-        - name: 第 6 课：向应用程序添加 ReportViewer 控件
+        - name: 第 6 课：将 ReportViewer 控件添加到应用程序
           href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
         - name: 第 7 课：在父报表上添加钻取操作
           href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
         - name: 第 8 课：创建数据筛选器
           href: ../reporting-services/lesson-8-create-a-data-filter.md
-        - name: 第 9 课：生成并运行应用程序
+        - name: 'Lesson 9: Build and Run the Application'
           href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: '使用 Visual Basic 或 Visual C# 访问报表服务器 Web 服务（SSRS 教程）'
       href: access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md
@@ -235,7 +235,7 @@
       items:
         - name: 第 1 课：创建 RDL 架构 Visual Studio 项目
           href: lesson-1-create-the-rdl-schema-visual-studio-project.md
-        - name: 第 2 课：使用 XSD 工具从 RDL 架构生成类
+        - name: 第 2 课：使用 xsd 工具从 RDL 架构生成类
           href: lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md
         - name: 第 3 课：从报表服务器加载报表定义
           href: lesson-3-load-a-report-definition-from-the-report-server.md
@@ -299,7 +299,7 @@
               href: task-5-setting-term-based-relationships.md
             - name: 任务 6：设置同义词
               href: task-6-setting-synonyms.md
-            - name: 任务 7：创建复合域
+            - name: 任务 7：创建复合域规则
               href: task-7-creating-a-composite-domain.md
             - name: 任务 8：创建复合域规则
               href: task-8-creating-a-composite-domain-rule.md
@@ -342,7 +342,7 @@
           items:
             - name: 任务 1：使用主数据管理器创建供应商模型
               href: task-1-creating-suppliers-model-using-master-data-manager.md
-            - name: 任务 2：使用用于 Excel 的 MDS 外接程序将供应商数据上传到 MDS
+            - name: 任务 2：使用用于 Excel 的 MDS 外接程序将供应商数据上载到 MDS
               href: task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md
             - name: 任务 3：在主数据管理器中验证数据
               href: task-3-verifying-the-data-in-master-data-manager.md
@@ -350,9 +350,9 @@
               href: task-4-optional-combining-matching-and-publishing-new-set-of-data.md
             - name: 任务 5：从 Excel 中创建基于域的属性
               href: task-5-creating-a-domain-based-attribute-from-excel.md
-            - name: 任务 6：验证基于域的属性是否使用主数据管理器进行创建
+            - name: 任务 6：验证通过使用主数据管理器创建了基于域的属性
               href: task-6-verify-domain-based-attribute-master-data-manager.md
-            - name: 任务 7：在 Excel 中查看你使用“主数据管理器”所做的更新
+            - name: 任务 7：在 Excel 中查看使用主数据管理器所做的更新
               href: task-7-viewing-updates-made-using-master-data-manager-in-excel.md
             - name: 任务 8：在 Excel 中为 State 实体添加新值
               href: task-8-adding-a-new-value-for-state-entity-in-excel.md
@@ -395,5 +395,5 @@
               href: task-16-verifying-with-master-data-manager.md
             - name: 任务 17：查看由 SSIS 包创建的 DQS 清理项目
               href: task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md
-        - name: 结语
+        - name: 结束语
           href: conclusion.md

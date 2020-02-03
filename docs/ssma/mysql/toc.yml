@@ -1,0 +1,123 @@
+- name: mySQL
+  href: sql-server-migration-assistant-for-mysql-mysqltosql.md
+- name: 安装 SSMA
+  href: installing-ssma-for-mysql-mysqltosql.md
+- name: SSMA for MySQL 入门
+  href: getting-started-with-ssma-for-mysql-mysqltosql.md
+- name: 法律通告
+  href: legal-notice-mysqltosql.md
+- name: 转换设置
+  href: conversion-settings-mysqltosql.md
+- name: 安装 SSMA for MySQL 客户端
+  href: installing-ssma-for-mysql-client-mysqltosql.md
+- name: 执行 SSMA 控制台
+  href: executing-the-ssma-console-mysqltosql.md
+- name: 创建服务器连接文件
+  href: creating-the-server-connection-files-mysqltosql.md
+- name: SQL 模式
+  href: sql-modes-mysqltosql.md
+- name: 连接到 SQL Server
+  href: connect-to-sql-server-mysqltosql.md
+- name: 连接到 Azure SQL DB
+  href: connecting-to-azure-sql-db-mysqltosql.md
+- name: 创建脚本文件
+  href: creating-script-files-mysqltosql.md
+- name: 将转换数据库对象加载到 SQL Server
+  href: loading-converted-database-objects-into-sql-server-mysqltosql.md
+- name: 转换 MySQL 数据库
+  href: converting-mysql-databases-mysqltosql.md
+- name: 迁移到 SQL Server - Azure SQL DB
+  href: migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
+- name: SSMA 控制台中的命令行选项
+  href: command-line-options-in-ssma-console-mysqltosql.md
+- name: 处理 SSMA 项目
+  href: working-with-ssma-projects-mysqltosql.md
+- name: 数据迁移设置
+  href: data-migration-settings-mysqltosql.md
+- name: 保存元数据
+  href: save-metadata-mysqltosql.md
+- name: 菜单命令和其他快捷键
+  href: menu-commands-and-other-shortcut-keys-mysqltosql.md
+- name: 故障排除
+  href: troubleshooting-mysqltosql.md
+- name: 连接到 MySQL
+  href: connect-to-mysql-mysqltosql.md
+- name: 删除 SSMA for MySQL 组件
+  href: removing-the-ssma-for-mysql-components-mysqltosql.md
+- name: 连接到 Azure SQL DB
+  href: connect-to-azure-sql-db-mysqltosql.md
+- name: 将 MySQL 数据库迁移到 Azure SQL DB
+  href: migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
+- name: 使用示例控制台脚本文件
+  href: working-with-the-sample-console-script-files-mysqltosql.md
+- name: 新建项目
+  href: new-project-ssma-mysqltosql.md
+- name: 在 SQL Server 上安装 SSMA 组件
+  href: installing-ssma-components-on-sql-server-mysqltosql.md
+- name: 将 MySQL 数据库映射到 SQL Server 架构
+  href: mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md
+- name: 从数据库刷新
+  href: refresh-from-database-mysqltosql.md
+- name: 快捷键
+  href: shortcut-keys-mysqltosql.md
+- name: 评估报表
+  href: assessment-report-mysqltosql.md
+- name: 数据迁移报表
+  href: data-migration-report-mysqltosql.md
+- name: 管理密码
+  href: managing-passwords-mysqltosql.md
+- name: 高级对象选择
+  href: advanced-object-selection-mysqltosql.md
+- name: 用户界面参考
+  href: user-interface-reference-mysqltosql.md
+- name: 附录 - 1
+  href: appendix-1-mysqltosql.md
+- name: 评估 MySQL 数据库以进行转换
+  href: assessing-mysql-databases-for-conversion-mysqltosql.md
+- name: 使用 SSMA for MySQL 控制台
+  href: working-with-ssma-for-mysql-console-mysqltosql.md
+- name: SSMA for MySQL 控制台入门
+  href: getting-started-with-ssma-for-mysql-console-mysqltosql.md
+- name: 映射 MySQL 和 SQL Server 字符集
+  href: mapping-mysql-and-sql-server-character-set-mysqltosql.md
+- name: 创建变量值文件
+  href: creating-variable-value-files-mysqltosql.md
+- name: 生成报告
+  href: generating-reports-mysqltosql.md
+- name: 编辑类型映射
+  href: edit-type-mapping-mysqltosql.md
+- name: 映射 MySQL 和 SQL Server 数据类型
+  href: mapping-mysql-and-sql-server-data-types-mysqltosql.md
+- name: SSMA for MySQL 中的新增功能
+  href: what-s-new-in-ssma-for-mysql-mysqltosql.md
+- name: SSMA for MySQL 中的新增 GUI 功能
+  href: new-gui-features-in-ssma-for-mysql-mysqltosql.md
+- name: 设置项目选项
+  href: setting-project-options-mysqltosql.md
+- name: 连接到 MySQL
+  href: connecting-to-mysql-mysqltosql.md
+- name: 连接到 SQL Server
+  href: connecting-to-sql-server-mysqltosql.md
+- name: 项目设置
+  items:
+    - name: GUI
+      href: project-settings-gui-mysqltosql.md
+    - name: Azure SQL DB
+      href: project-settings-azure-sql-db-mysqltosql.md
+    - name: Type-Mapping
+      href: project-settings-type-mapping-mysqltosql.md
+    - name: 迁移
+      href: project-settings-migration-mysqltosql.md
+    - name: Synchronization
+      href: project-settings-synchronization-mysqltosql.md
+    - name: 转换
+      href: project-settings-conversion-mysqltosql.md
+- name: 全局设置
+  href: global-settings-output-window-mysqltosql.md
+  items:
+    - name: 对话框
+      href: global-settings-dialogs-mysqltosql.md
+    - name: 日志记录
+      href: global-settings-logging-mysqltosql.md
+    - name: 编辑器
+      href: global-settings-editor-mysqltosql.md

@@ -11,10 +11,10 @@ ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe0f0cc2ec15fcdb871f290f03565482a8477995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936260"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
@@ -30,7 +30,7 @@ array PDO::errorInfo();
 ```  
   
 ## <a name="return-value"></a>返回值  
-有关数据库句柄上最近操作的错误信息的阵列。 该阵列包含以下字段：  
+有关数据库句柄上最近操作的错误信息的阵列。 该数组包含以下字段：  
   
 -   SQLSTATE 错误代码。  
   
@@ -40,7 +40,7 @@ array PDO::errorInfo();
   
 如果没有错误或如果未设置 SQLSTATE，则特定于驱动程序的字段为 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 PDO::errorInfo 仅对直接在数据库上执行的操作检索错误信息。 在使用 PDO::prepare 或 PDO::query 创建 PDOStatement 实例时，使用 PDOStatement::errorInfo。  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  

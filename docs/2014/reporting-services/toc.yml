@@ -90,7 +90,7 @@
       href: report-builder/report-design-view-report-builder.md
     - name: 共享数据集设计视图
       href: report-builder/shared-dataset-design-view-report-builder.md
-    - name: 键盘快捷键
+    - name: 键盘快捷方式
       href: report-builder/keyboard-shortcuts-report-builder.md
     - name: 报表创作概念
       href: report-design/report-authoring-concepts-report-builder-and-ssrs.md
@@ -186,7 +186,7 @@
       href: report-builder/print-reports-report-builder-and-ssrs.md
     - name: 保存报表 +
       href: report-builder/saving-reports-report-builder.md
-    - name: Security
+    - name: 安全性
       href: report-builder/security-report-builder.md
     - name: 安装、卸载和报表生成器支持
       href: install-uninstall-and-report-builder-support.md
@@ -251,7 +251,7 @@
       href: search-a-report-using-url-access.md
     - name: 使用 URL 访问呈现报表历史记录快照
       href: render-a-report-history-snapshot-using-url-access.md
-- name: 扩展项
+- name: 扩展
   href: extensions-ssrs.md
   items:
     - name: 在 RSReportServer.Config 中自定义呈现扩展插件参数

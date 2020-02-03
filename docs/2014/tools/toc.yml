@@ -13,7 +13,7 @@
       href: profiler-utility.md
     - name: sqlagent90 应用程序
       href: sqlagent90-application.md
-    - name: sqlcmd Utility
+    - name: sqlcmd 实用工具
       href: sqlcmd-utility.md
     - name: SQLdiag 实用工具
       href: sqldiag-utility.md

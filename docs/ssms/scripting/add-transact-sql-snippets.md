@@ -1,6 +1,6 @@
 ---
-title: 添加 Transact-SQL 代码段 | Microsoft Docs
-ms.custom: ''
+title: 添加 Transact-SQL 代码段
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 255fb72bea9ac6d967a69576804c2d70748f22d0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6f2878a93f241235bb725cd40afd169f4c7d31aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256872"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246471"
 ---
 # <a name="add-transact-sql-snippets"></a>添加 Transact-SQL 代码段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68256872"
   
 2.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”** 。  
   
-3.  单击 **“导入”** 按钮。  
+3.  单击“导入”按钮。   
   
 4.  导航到包含您的代码段的文件夹，单击 .snippet 文件，然后单击 **“打开”** 按钮。  
   
@@ -108,11 +108,11 @@ ms.locfileid: "68256872"
   
 3.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”** 。  
   
-4.  单击 **“导入”** 按钮。  
+4.  单击“导入”按钮。   
   
 5.  导航到包含 TryCatch.snippet 的文件夹，单击该 TryCatch.snippet 文件，然后单击 **“打开”** 按钮。 您不应在 **“我的代码段”** 文件夹中具有 TryCatch 代码段。  
   
 ## <a name="see-also"></a>另请参阅  
- [插入外侧 Transact-SQL 代码段](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
+ [插入外侧 Transact-SQL 代码片段](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   

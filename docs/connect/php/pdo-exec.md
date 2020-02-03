@@ -11,10 +11,10 @@ ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ac158f9005f66e49082b6be288c35f96b527f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993274"
 ---
 # <a name="pdoexec"></a>PDO::exec
@@ -29,13 +29,13 @@ ms.locfileid: "67993274"
 int PDO::exec ($statement)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
 *$statement*：包含要执行的 SQL 语句的字符串。  
   
 ## <a name="return-value"></a>返回值  
 报告受影响行数的整数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 如果 *$statement* 包含多个 SQL 语句，则仅为最后一个语句报告受影响行的计数。  
   
 PDO::exec 不为 SELECT 语句返回结果。  

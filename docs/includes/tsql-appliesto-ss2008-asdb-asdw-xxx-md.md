@@ -1,10 +1,15 @@
 ---
-ms.openlocfilehash: 8b74690303d6887dacbf7a2fc466298aa84322fe
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+author: MikeRayMSFT
+ms.service: sql
+ms.topic: include
+ms.date: 01/13/2020
+ms.author: mikeray
+ms.openlocfilehash: 4a902cc88411325717d3afa54c30f0c9ff81cd09
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73590350"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76037713"
 ---
-<Token>**适用对象：** ![是](media/yes.png)SQL Server ![是](media/yes.png)Azure SQL 数据库 ![是](media/yes.png)Azure Synapse Analytics (SQL DW) ![否](media/no.png)并行数据仓库 </Token>
+<Token>适用对象：**是**SQL Server ![是](media/yes.png)Azure SQL 数据库 ![是](media/yes.png)Azure Synapse Analytics (SQL DW) ![否](media/yes.png)并行数据仓库![](media/no.png)</Token>
 

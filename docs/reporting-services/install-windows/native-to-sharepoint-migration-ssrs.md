@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9a13b2a72e66d069d0a3161bab4af8ce4d430157
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570711"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>本机到 SharePoint 迁移 (SSRS)
@@ -44,12 +44,12 @@ ms.locfileid: "65570711"
 |Object|是否可编写脚本|注释|  
 |------------|---------------------|--------------|  
 |报表|是|在迁移后，重新为数据源输入密码。|  
-|数据源|是|在迁移后，重新将报表链接到数据源。|  
+|Datasources|是|在迁移后，重新将报表链接到数据源。|  
 |Models|是||  
 |数据集|是||  
 |报表部件||在迁移后，验证或更新指向报表部件的路径。|  
-|“计划”|是|请参阅 ListSchedules 方法 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|  
-|订阅|是|请参阅列表订阅方法 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 和 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 方法。|  
+|计划|是|请参阅 ListSchedules 方法 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|  
+|Subscriptions|是|请参阅列表订阅方法 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 和 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 方法。|  
 |快照|||
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

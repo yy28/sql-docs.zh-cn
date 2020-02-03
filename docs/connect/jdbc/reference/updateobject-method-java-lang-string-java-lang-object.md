@@ -16,10 +16,10 @@ ms.assetid: f6999d9c-eab6-4e4d-96d8-e0fa4b4b87e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de499e4cc11f1da1780878e4c921d161ee8b2693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998444"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject"></a>updateObject 方法 (java.lang.String, java.lang.Object)
@@ -35,7 +35,7 @@ public void updateObject(java.lang.String columnName,
                          java.lang.Object x)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *columnName*  
   
  一个包含列名的字符串  。  
@@ -44,10 +44,10 @@ public void updateObject(java.lang.String columnName,
   
  Object 值  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 updateObject 方法是由 java.sql.ResultSet 接口中的 updateObject 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

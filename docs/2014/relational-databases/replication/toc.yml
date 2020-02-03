@@ -9,9 +9,9 @@
       href: breaking-changes-in-sql-server-replication.md
     - name: 最佳做法
       href: administration/best-practices-for-replication-administration.md
-    - name: 常见问题解答
+    - name: 常见问题
       href: administration/frequently-asked-questions-for-replication-administrators.md
-- name: 操作指南
+- name: 操作方法指南
   items:
     - name: 管理员
       items:
@@ -54,7 +54,7 @@
               href: agents/start-and-stop-a-replication-agent-sql-server-management-studio.md
             - name: 命令提示符参数
               href: agents/view-and-modify-replication-agent-command-prompt-parameters.md
-    - name: 监视器
+    - name: 监视
       href: monitoring-replication.md
       items:
         - name: 复制监视器
@@ -211,13 +211,13 @@
               href: merge/parameterized-filters-optimize-for-precomputed-partitions.md
         - name: 事务复制
           href: administration/enhance-transactional-replication-performance.md
-    - name: Security
+    - name: 安全性
       items:
         - name: 分发服务器
           href: security/secure-the-distributor.md
-        - name: 发布服务器
+        - name: 发布者
           href: security/secure-the-publisher.md
-        - name: 订阅服务器
+        - name: 订阅者
           href: security/secure-the-subscriber.md
         - name: 快照文件夹
           href: security/secure-the-snapshot-folder.md
@@ -399,7 +399,7 @@
           href: concepts/replication-system-stored-procedures-concepts.md
     - name: 发布对象
       href: publish/replication-publishing-model-overview.md
-    - name: Security
+    - name: 安全性
       items:
         - name: 威胁和漏洞缓解
           href: security/threat-and-vulnerability-mitigation-replication.md
@@ -493,7 +493,7 @@
                   items:
                     - name: 订阅监视列表
                       href: publisher-information-subscription-watch-list-transactional.md
-                    - name: 订阅
+                    - name: Subscriptions
                       href: publication-information-all-subscriptions-transactional-publication.md
                     - name: 警告
                       href: publication-information-warnings-transactional-publication.md
@@ -511,7 +511,7 @@
                   items:
                     - name: 订阅监视列表
                       href: publisher-information-subscription-watch-list-merge-publication.md
-                    - name: 订阅
+                    - name: Subscriptions
                       href: publication-information-all-subscriptions-merge-publication.md
                     - name: 警告
                       href: publication-information-warnings-merge-publication-sql-server-2005-and-later.md
@@ -523,7 +523,7 @@
                   items:
                     - name: 订阅监视列表
                       href: publisher-information-subscription-watch-list-snapshot.md
-                    - name: 订阅
+                    - name: Subscriptions
                       href: publication-information-all-subscriptions-snapshot-publication.md
                     - name: 警告
                       href: publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
@@ -540,7 +540,7 @@
               href: snapshot-folder.md
             - name: 分发数据库
               href: distribution-database.md
-            - name: “分发服务器属性”
+            - name: 发布者
               href: publishers.md
             - name: 分发服务器密码
               href: distributor-password.md

@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: jt000
 ms.author: jasontre
 ms.openlocfilehash: 738908549caa157557a16b1ae05575231a15c734
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580590"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>用于报表查看器 Web 部件的 SharePoint 网站设置 - Reporting Services
@@ -24,9 +24,9 @@ ms.locfileid: "65580590"
 
 可通过以下操作访问网站设置：
 
-1. 在 SharePoint 网站上，选择左上角的“齿轮”  图标并选择“网站设置”  。
+1. 在 SharePoint 网站中，选择左上角的“齿轮”图标，然后选择“网站设置”   。
 
-    ![从齿轮图标进行网站设置。](media/sharepoint-site-settings.png)
+    ![齿轮图标中的“网站设置”。](media/sharepoint-site-settings.png)
 
 2. 单击“Reporting Services”  网站设置组中的“报表查看器 Web 部件设置”  。
 

@@ -170,7 +170,7 @@
   href: large-clr-user-defined-types-ole-db.md
 - name: FILESTREAM 支持 (OLE DB)
   href: filestream-support-ole-db.md
-- name: 中的
+- name: 事务
   href: ../../native-client-ole-db-transactions/transactions.md
   items:
     - name: 支持本地事务

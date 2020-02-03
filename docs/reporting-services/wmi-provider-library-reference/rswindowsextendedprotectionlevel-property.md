@@ -9,14 +9,14 @@ ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7854821a9f43bc234490d915ff75339e250f6c39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571081"
 ---
 # <a name="rswindowsextendedprotectionlevel-property"></a>RSWindowsExtendedProtectionLevel 属性
-  返回一个字符串值，该值指示配置报表服务器所支持的保护级别。 该属性为只读。  
+  返回一个字符串值，该值指示配置报表服务器所支持的保护级别。 此属性为只读。  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,7 +28,7 @@ Public Dim RSWindowsExtendedProtectionLevel As String
 public string RSWindowsExtendedProtectionLevel;  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  返回一个字符串值，该值指示配置报表服务器所支持的保护级别。 如果 WMI 提供程序连接到的报表服务器不支持扩展保护，则返回“”（空字符串）。 下表显示有效值：  
   
  `"Off" | "Allow" | "Require"`  

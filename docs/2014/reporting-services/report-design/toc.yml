@@ -199,7 +199,7 @@
       href: ../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md
     - name: 指定图像作为仪表的指针
       href: ../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md
-- name: 指示器
+- name: 指示灯
   href: indicators-report-builder-and-ssrs.md
   items:
     - name: 添加或删除指示器

@@ -9,7 +9,7 @@
       href: creating-a-custom-report-item-run-time-component.md
     - name: 创建自定义报表项设计时组件
       href: creating-a-custom-report-item-design-time-component.md
-    - name: 如何：部署自定义报表项
+    - name: 如何部署自定义报表项
       href: how-to-deploy-a-custom-report-item.md
     - name: 自定义报表项类库
       href: custom-report-item-class-libraries.md

@@ -11,10 +11,10 @@ ms.assetid: d918c1e3-1be0-4001-b3b0-000db6d9e8b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d37145856da6c4b3ff6def1620de443b20faebfb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936199"
 ---
 # <a name="pdorollback"></a>PDO::rollback
@@ -32,7 +32,7 @@ bool PDO::rollBack ();
 ## <a name="return-value"></a>返回值  
 如果方法调用成功，则为 True；否则为 False。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 PDO::rollback 不受 PDO::ATTR_AUTOCOMMIT 的值影响（也不影响该值）。  
   
 有关使用 PDO::rollback 的示例，请参阅 [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) 。  

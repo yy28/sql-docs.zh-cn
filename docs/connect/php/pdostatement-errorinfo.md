@@ -11,10 +11,10 @@ ms.assetid: e45bebe8-ea4c-49b6-93db-cf1ae65f530c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15686a93c5e23a476968332479897d2fb5b90220
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993066"
 ---
 # <a name="pdostatementerrorinfo"></a>PDOStatement::errorInfo
@@ -40,7 +40,7 @@ array PDOStatement::errorInfo();
   
 如果没有错误或如果未设置 SQLSTATE，特定于驱动程序的字段将为 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  

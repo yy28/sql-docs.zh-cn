@@ -59,7 +59,7 @@
           href: upgrading-mirrored-instances.md
         - name: 使用镜像性能度量的警告阈值和警报
           href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
-    - name: Security
+    - name: 安全性
       items:
         - name: 设置数据库镜像或 AlwaysOn 可用性组的登录帐户
           href: set-up-login-accounts-database-mirroring-always-on-availability.md
@@ -103,7 +103,7 @@
           href: troubleshoot-database-mirroring-configuration-sql-server.md
         - name: 在系统上安装 Service Pack 并且尽量缩短镜像数据库停机时间
           href: ../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md
-    - name: Security
+    - name: 安全性
       items:
         - name: 终结点
           href: the-database-mirroring-endpoint-sql-server.md

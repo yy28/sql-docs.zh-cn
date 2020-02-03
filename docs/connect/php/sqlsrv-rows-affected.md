@@ -17,13 +17,13 @@ ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93c7ec396d3388a2de6c0d6518fc516de7156f35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014949"
 ---
-# <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
+# <a name="sqlsrv_rows_affected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 返回由上次执行的语句修改的行数。 此函数不返回由 SELECT 语句返回的行数。  
@@ -35,7 +35,7 @@ ms.locfileid: "68014949"
 sqlsrv_rows_affected( resource $stmt)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
 *$stmt*：对应于已执行语句的语句资源。  
   
 ## <a name="return-value"></a>返回值  

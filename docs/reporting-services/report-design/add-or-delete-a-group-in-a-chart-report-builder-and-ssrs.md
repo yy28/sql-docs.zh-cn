@@ -9,10 +9,10 @@ ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b9c8e747ca0ca003e531381a6713b1a083a47d57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581962"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>在图表中添加或删除组（报表生成器和 SSRS）
@@ -54,6 +54,6 @@ ms.locfileid: "65581962"
 2.  在“类别组”  或“序列组”  区域中右键单击该组，然后单击“删除”  。  
   
 ## <a name="see-also"></a>另请参阅  
- [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [图表&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

@@ -45,7 +45,7 @@
                 - name: SQL 跟踪
                   tocHref: /sql/relational-databases/sql-trace/
                   topicHref: /sql/relational-databases/sql-trace/sql-trace
-                - name: 事件探查器
+                - name: 探查器
                   tocHref: /sql/tools/sql-server-profiler/
                   topicHref: /sql/tools/sql-server-profiler/sql-server-profiler
                 - name: 跟踪更改
@@ -54,7 +54,7 @@
                 - name: 日志
                   tocHref: /sql/relational-databases/logs/
                   topicHref: /sql/relational-databases/logs/log-file-viewer
-                - name: “性能”
+                - name: 性能
                   tocHref: /sql/relational-databases/performance/
                   topicHref: /sql/relational-databases/performance/monitor-and-tune-for-performance
                 - name: SQLXML
@@ -100,7 +100,7 @@
                 - name: 分布式重播
                   tocHref: /sql/tools/distributed-replay/
                   topicHref: /sql/tools/distributed-replay/sql-server-distributed-replay
-                - name: “数据收集”
+                - name: 数据收集
                   tocHref: /sql/relational-databases/data-collection/
                   topicHref: /sql/relational-databases/data-collection/data-collection
                 - name: 性能监视器
@@ -118,7 +118,7 @@
                 - name: 日志传送
                   tocHref: /sql/database-engine/log-shipping/
                   topicHref: /sql/database-engine/log-shipping/about-log-shipping-sql-server
-                - name: Security
+                - name: 安全性
                   tocHref: /sql/relational-databases/security/
                   topicHref: /sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
                 - name: 实用工具参考
@@ -174,7 +174,7 @@
               tocHref: /sql/integration-services/
               topicHref: /sql/integration-services/sql-server-integration-services
               items:
-                - name: “控制流”
+                - name: 控制流
                   tocHref: /sql/integration-services/control-flow/
                   topicHref: /sql/integration-services/control-flow/control-flow
                 - name: 数据流
@@ -184,7 +184,7 @@
                     - name: 转换
                       tocHref: /sql/integration-services/data-flow/transformations/
                       topicHref: /sql/integration-services/data-flow/transformations/integration-services-transformations
-                - name: 变更数据捕获
+                - name: 更改数据捕获
                   tocHref: /sql/integration-services/change-data-capture/
                   topicHref: /sql/integration-services/change-data-capture/change-data-capture-ssis
                 - name: 导入和导出数据
@@ -208,10 +208,10 @@
                 - name: 包
                   tocHref: /sql/integration-services/packages/
                   topicHref: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
-                - name: 监视器
+                - name: 监视
                   tocHref: /sql/integration-services/performance/
                   topicHref: /sql/integration-services/performance/monitor-running-packages-and-other-operations
-                - name: Security
+                - name: 安全性
                   tocHref: /sql/integration-services/security/
                   topicHref: /sql/integration-services/security/security-overview-integration-services
                 - name: 用脚本扩展包
@@ -303,7 +303,7 @@
                     - name: 合并
                       tocHref: /sql/relational-databases/replication/merge/
                       topicHref: /sql/relational-databases/replication/merge/merge-replication
-                    - name: 监视器
+                    - name: 监视
                       tocHref: /sql/relational-databases/replication/monitor/
                       topicHref: /sql/relational-databases/replication/monitoring-replication
                     - name: 非 SQL
@@ -315,7 +315,7 @@
                     - name: 事务性
                       tocHref: /sql/relational-databases/replication/transactional/
                       topicHref: /sql/relational-databases/replication/transactional/transactional-replication
-                    - name: Security
+                    - name: 安全性
                       tocHref: /sql/relational-databases/replication/security/
                       topicHref: /sql/relational-databases/replication/security/view-and-modify-replication-security-settings
                 - name: Native Client 编程
@@ -360,7 +360,7 @@
                 - name: 订阅和计划
                   tocHref: /sql/reporting-services/subscriptions/
                   topicHref: /sql/reporting-services/subscriptions/subscriptions-and-delivery-reporting-services
-                - name: Security
+                - name: 安全性
                   tocHref: /sql/reporting-services/security/
                   topicHref: /sql/reporting-services/security/reporting-services-security-and-protection
                 - name: 工具
@@ -378,7 +378,7 @@
                 - name: 报表服务器 Web 服务
                   tocHref: /sql/reporting-services/report-server-web-service/
                   topicHref: /sql/reporting-services/report-server-web-service/report-server-web-service
-                - name: 扩展项
+                - name: 扩展
                   tocHref: /sql/reporting-services/extensions/
                   topicHref: /sql/reporting-services/extensions/reporting-services-extensions
                 - name: 自定义报表项

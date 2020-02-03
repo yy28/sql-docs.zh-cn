@@ -55,7 +55,7 @@
           href: instances/spn-registration-for-an-analysis-services-instance.md
         - name: HTTP 访问
           href: instances/configure-http-access-to-analysis-services-on-iis-8-0.md
-        - name: 数据访问接口
+        - name: 数据提供程序
           href: instances/data-providers-used-for-analysis-services-connections.md
         - name: 断开用户和会话的连接
           href: instances/disconnect-users-and-sessions-on-analysis-services-server.md
@@ -298,7 +298,7 @@
           href: power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md
         - name: 创建与 PowerPivot 工作簿的 BI 语义模型连接
           href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md
-        - name: 创建与表格模型数据库的 BI 语义模型连接
+        - name: Create a BI Semantic Model Connection to a Tabular Model Database
           href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md
         - name: 在 Excel 或 Reporting Services 中使用 BI 语义模型连接
           href: power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md
@@ -348,7 +348,7 @@
           href: lesson-1-create-a-new-tabular-model-project.md
         - name: 第 2 课：添加数据
           href: lesson-2-add-data.md
-        - name: 第 3 课：对列重命名
+        - name: 第 3 课：重命名列
           href: rename-columns.md
         - name: 第 4 课：标记为日期表
           href: lesson-3-mark-as-date-table.md

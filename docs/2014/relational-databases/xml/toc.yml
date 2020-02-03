@@ -94,19 +94,19 @@
       href: invalid-characters-and-escape-rules.md
     - name: 将 RAW 模式与 FOR XML 一起使用
       href: use-raw-mode-with-for-xml.md
-    - name: 例如：以 XML 形式检索产品型号信息
+    - name: 示例：以 XML 形式检索产品型号信息
       href: example-retrieving-product-model-information-as-xml.md
-    - name: 例如：指定带有 ELEMENTS 指令的 XSINIL
+    - name: 示例：指定带有 ELEMENTS 指令的 XSINIL
       href: example-specifying-xsinil-with-the-elements-directive.md
-    - name: 例如：使用 XMLDATA 和 XMLSCHEMA 选项请求架构作为结果
+    - name: 示例：使用 XMLDATA 和 XMLSCHEMA 选项作为结果请求架构
       href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
-    - name: 例如：检索二进制数据
+    - name: 示例：检索二进制数据
       href: example-retrieving-binary-data.md
-    - name: 例如：重命名 <row> 元素
+    - name: 示例：重命名 <row> 元素
       href: example-renaming-the-row-element.md
-    - name: 例如：为 FOR XML 生成的 XML 指定根元素
+    - name: 示例：为 FOR XML 生成的 XML 指定根元素
       href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
-    - name: 例如：查询 XMLType 列
+    - name: 示例：查询 XML 类型的列
       href: example-querying-xmltype-columns.md
     - name: 将 AUTO 模式与 FOR XML 一起使用
       href: use-auto-mode-with-for-xml.md
@@ -118,25 +118,25 @@
       href: examples-using-auto-mode.md
     - name: 将 EXPLICIT 模式与 FOR XML 一起使用
       href: use-explicit-mode-with-for-xml.md
-    - name: 例如：检索员工信息
+    - name: 示例：检索雇员信息
       href: example-retrieving-employee-information.md
-    - name: 例如：指定 ELEMENT 指令
+    - name: 示例：指定 ELEMENT 指令
       href: example-specifying-the-element-directive.md
-    - name: 例如：指定 ELEMENTXSINIL 指令
+    - name: 示例：指定 ELEMENTXSINIL 指令
       href: example-specifying-the-elementxsinil-directive.md
-    - name: 例如：使用 EXPLICIT 模式构造同级
+    - name: 示例：使用 EXPLICIT 模式构造同级
       href: example-constructing-siblings-with-explicit-mode.md
-    - name: 例如：指定 ID 和 IDREF 指令
+    - name: 示例：指定 ID 和 IDREF 指令
       href: example-specifying-the-id-and-idref-directives.md
-    - name: 例如：指定 ID 和 IDREFS 指令
+    - name: 示例：指定 ID 和 IDREFS 指令
       href: example-specifying-the-id-and-idrefs-directives.md
-    - name: 例如：指定 HIDE 指令
+    - name: 示例：指定 HIDE 指令
       href: example-specifying-the-hide-directive.md
-    - name: 例如：指定 ELEMENT 指令和实体编码
+    - name: 示例：指定 ELEMENT 指令和实体编码
       href: example-specifying-the-element-directive-and-entity-encoding.md
-    - name: 例如：指定 CDATA 指令
+    - name: 示例：指定 CDATA 指令
       href: example-specifying-the-cdata-directive.md
-    - name: 例如：指定 XMLTEXT 指令
+    - name: 示例：指定 XMLTEXT 指令
       href: example-specifying-the-xmltext-directive.md
     - name: 将 PATH 模式与 FOR XML 一起使用
       href: use-path-mode-with-for-xml.md
