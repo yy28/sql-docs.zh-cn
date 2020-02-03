@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b2e87cf96d6237521caeaae55802d2d72769603
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594331"
 ---
 # <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-with-windows-installer"></a>使用 Windows Installer 安装 `azdata` 以管理 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何在 Windows 上安装用于 SQL Server 2019 大数据群集的 `azdata`。 在 Windows 安装可用之前，需要使用 `pip` 安装 `azdata`。
+本文介绍如何在 Windows 上安装用于 SQL Server 2019 大数据群集的 `azdata`。 在 Windows 安装可用之前，需要使用 `azdata` 安装 `pip`。
 
 >对于 Linux (Ubuntu)，请参阅[使用安装程序安装 `azdata`](./deploy-install-azdata-linux-package.md)。
 

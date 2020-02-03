@@ -1,29 +1,28 @@
 ---
-title: 导入跟踪模板 (SQL Server Profiler) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 导入跟踪模板
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- templates [SQL Server], traces
-- trace templates [SQL Server]
-- importing trace templates
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 03a029abbf9468bbf2164be9e6a09644a2363428
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 309edccd7793e2dbf17105b4bf8f31e976994742
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074954"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307196"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>导入跟踪模板 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题说明如何通过 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]导入跟踪模板文件 (.tdf)。  
+
+本主题说明如何通过 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]导入跟踪模板文件 (.tdf)。  
   
 ### <a name="to-import-a-trace-template"></a>导入跟踪模板  
   
@@ -40,6 +39,6 @@ ms.locfileid: "68074954"
  [从跟踪文件或跟踪表派生模板 (SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [导出跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

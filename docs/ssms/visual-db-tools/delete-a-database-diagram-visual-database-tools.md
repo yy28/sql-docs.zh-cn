@@ -1,10 +1,9 @@
 ---
-title: 删除数据库关系图 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 删除数据库关系图
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3eda893debd455b00a433657d57c5dc2a0e11a08
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5ebe7109bd97f4e06b708436bbcbe90e690ca1c4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263864"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244178"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>删除数据库对象图 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,13 +29,13 @@ ms.locfileid: "68263864"
   
 ### <a name="to-delete-a-database-diagram"></a>删除数据库关系图  
   
-1.  在对象资源管理器中，展开“数据库关系图”文件夹。  
+1.  在对象资源管理器中，展开“数据库关系图”  文件夹。  
   
 2.  右键单击要删除的数据库关系图。  
   
-3.  从快捷菜单中选择“删除”。  
+3.  从快捷菜单中选择“删除”  。  
   
-4.  此时，将显示一条消息，提示您确认删除。 选择 **“是”**。  
+4.  此时，将显示一条消息，提示您确认删除。 选择“是”  。  
   
 该数据库关系图随即从数据库中删除。 在删除数据库关系图时，不会删除关系图中的表。  
   

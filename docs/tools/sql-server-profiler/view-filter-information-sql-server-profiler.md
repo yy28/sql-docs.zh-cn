@@ -1,31 +1,28 @@
 ---
-title: 查看筛选器信息 (SQL Server Profiler) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 查看筛选器信息
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- displaying filter information
-- filters [SQL Server], viewing
-- filters [SQL Server], traces
-- traces [SQL Server], filters
-- viewing filter information
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 94cdf7dcde876b18a6080eefb5afde8137d2e021
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: fb79fc3c75686d2a09d46d1a336a3376028382e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059607"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307756"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>查看筛选器信息 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]查看数据列的事件类筛选器。  
+
+本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]查看数据列的事件类筛选器。  
   
 ### <a name="to-view-filter-information"></a>查看筛选器信息  
   
@@ -39,6 +36,6 @@ ms.locfileid: "68059607"
 >  具有分配值的比较运算符显示为粗体格式。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

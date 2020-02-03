@@ -1,6 +1,6 @@
 ---
-title: 打开和配置对象资源管理器 | Microsoft Docs
-ms.custom: ''
+title: 打开和配置对象资源管理器
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e09772c895fd2c5008c9d32d777919092bcd72b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 07a21139575c3eedfddec9f22254fe82a5b5659c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264055"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257134"
 ---
 # <a name="open-and-configure-object-explorer"></a>打开和配置对象资源管理器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“视图”  菜单打开对象资源管理器。 使用“工具”  菜单上的“选项”  配置对象资源管理器选项。  
+使用  **中的“视图”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]菜单打开对象资源管理器。 使用“工具”  菜单上的“选项”  配置对象资源管理器选项。  
   
 ## <a name="viewing-object-explorer"></a>查看对象资源管理器  
-默认情况下，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中对象资源管理器是可见的。 如果看不到对象资源管理器，请在“视图”  菜单上单击“对象资源管理器”  。  
+默认情况下， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中对象资源管理器是可见的。 如果看不到对象资源管理器，请在“视图”  菜单上单击“对象资源管理器”  。  
   
 ## <a name="configuring-object-explorer-options"></a>配置对象资源管理器选项  
 若要配置对象资源管理器设置，请在“工具”  菜单中单击“选项”  ，然后单击“SQL Server 对象资源管理器”  。  

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1df57079acd79fc5370d0f2f198dc2d624d6983
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658837"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java 和 SQL Server 支持的数据类型
@@ -28,7 +28,7 @@ ms.locfileid: "73658837"
 | bit      | boolean | | |
 | Tinyint      | short      | | |
 | Smallint | short      | | |
-| smallint | INT      | | |
+| Int | int      | | |
 | Real | FLOAT      | | |
 | Bigint | long      | | |
 | FLOAT | double      | | |
@@ -38,17 +38,17 @@ ms.locfileid: "73658837"
 | varbinary(n) | byte[]      | | |
 | nvarchar(max) | String      | | |
 | varbinary(max) | byte[]      | | |
-| UNIQUEIDENTIFIER | String | | |
+| uniqueidentifier | String | | |
 | char(n) | String | 仅支持 UTF8 字符串 | |
 | varchar(n) | String | 仅支持 UTF8 字符串 | |
 | varchar(max) | String | 仅支持 UTF8 字符串 | |
-| 日期 | java.sql.date  | | |
-| NUMERIC | java.math.BigDecimal  | | |
+| date | java.sql.date  | | |
+| numeric | java.math.BigDecimal  | | |
 | Decimal | java.math.BigDecimal  | | |
 | money | java.math.BigDecimal  | | |
-| SMALLMONEY | java.math.BigDecimal  | | |
+| smallmoney | java.math.BigDecimal  | | |
 | smalldatetime | java.sql.timestamp  | | |
-| DATETIME | java.sql.timestamp  | | |
+| datetime | java.sql.timestamp  | | |
 | datetime2 | java.sql.timestamp  | | |
 
 

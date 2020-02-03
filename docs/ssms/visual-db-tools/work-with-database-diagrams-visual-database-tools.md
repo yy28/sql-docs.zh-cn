@@ -1,10 +1,9 @@
 ---
-title: 使用数据库关系图 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 使用数据库关系图
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,14 @@ helpviewer_keywords:
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 66f06f8d721dbe6853774b42b294f6caf6d7e104
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: cf2a7c0625a542ca4e4f25e1bb42905595e7d7f2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258805"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246205"
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>使用数据库关系图 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,8 +46,8 @@ ms.locfileid: "68258805"
   
 [显示关系图属性 (Visual Database Tools)](../../ssms/visual-db-tools/show-diagram-properties-visual-database-tools.md)  
   
-## <a name="related-sections"></a>相关章节  
+## <a name="related-sections"></a>相关章节
+
 [使用数据库关系图中的表 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   
-[使用关系图布局 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
-  
+[使用关系图布局 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)

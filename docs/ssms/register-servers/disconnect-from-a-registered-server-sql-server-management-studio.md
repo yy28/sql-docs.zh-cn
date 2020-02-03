@@ -1,10 +1,7 @@
 ---
-title: 断开与已注册的服务器的连接 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 断开与注册的服务器的连接
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,21 +12,25 @@ helpviewer_keywords:
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a829bebd0f7831d04d040ad1bd5fa6c0bc4be48
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 1a2e2721dcdeffd55cc166fc94230c9a29768664
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264767"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246537"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>断开与已注册服务器的连接 (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中随时断开对象资源管理器与服务器的连接。 断开对象资源管理器不会断开其他 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 组件（如 SQL 编辑器）。  
-  
-##  <a name="SSMSProcedure"></a>  
-  
-#### <a name="to-disconnect-from-a-registered-server"></a>断开与已注册服务器的连接  
-  
--   在对象资源管理器中，右键单击服务器，然后单击“断开连接”，或者在对象资源管理器工具栏上单击“断开连接”图标。  
-  
-  
+
+本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中随时断开对象资源管理器与服务器的连接。 断开对象资源管理器不会断开其他 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 组件（如 SQL 编辑器）。  
+
+## <a name="SSMSProcedure"></a>
+
+### <a name="to-disconnect-from-a-registered-server"></a>断开与已注册服务器的连接
+
+- 在对象资源管理器中，右键单击服务器，然后单击  “断开连接”，或者在对象资源管理器工具栏上单击  “断开连接”图标。

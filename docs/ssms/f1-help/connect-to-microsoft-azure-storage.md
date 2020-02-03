@@ -1,6 +1,6 @@
 ---
-title: 连接到 Microsoft Azure 存储 | Microsoft Docs
-ms.custom: ''
+title: 连接到 Microsoft Azure 存储
+ms.custom: seo-lt-2019
 ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f4b05cc0ebd3c3d230b5f42bb46b74885e8e1e6
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: eb943430136a1406ea18b9c387c98fbec6fd27cf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155681"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245015"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>连接到 Microsoft Azure 存储
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "70155681"
    >
    >  其中一个 HTTP 标头的值格式不正确。 (Microsoft.SqlServer.StorageClient)。
    >
-   >  远程服务器返回错误：(400) 错误的请求。 （系统）
+   >  远程服务器返回错误：(400)错误的请求。 （系统）
 
 2.  **帐户密钥** - 为指定的存储帐户指定帐户密钥。  
   

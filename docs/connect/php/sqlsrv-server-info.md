@@ -17,13 +17,13 @@ ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e606d7f5d34225dd690181092c5fdfdfa8d05bb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014836"
 ---
-# <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
+# <a name="sqlsrv_server_info"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 返回有关服务器的信息。 必须在调用此函数之前建立连接。  
@@ -35,13 +35,13 @@ ms.locfileid: "68014836"
 sqlsrv_server_info( resource $conn)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
 *$conn*：客户端和服务器连接时所依据的连接资源。  
   
 ## <a name="return-value"></a>返回值  
 具有以下项的关联阵列：  
   
-|Key|描述|  
+|密钥|说明|  
 |-------|---------------|  
 |CurrentDatabase|当前针对的数据库。|  
 |SQLServerVersion|SQL Server 的版本。|  

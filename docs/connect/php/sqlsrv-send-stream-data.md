@@ -18,13 +18,13 @@ ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76d3841e637a101361fd72ccef5263a802a176b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014937"
 ---
-# <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
+# <a name="sqlsrv_send_stream_data"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 将数据从参数流发送至服务器。 每次调用 sqlsrv_send_stream_data  时，最多可以发送八千字节 (8K) 的数据。  
@@ -39,7 +39,7 @@ ms.locfileid: "68014937"
 sqlsrv_send_stream_data( resource $stmt)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
 *$stmt*：对应于已执行语句的语句资源。  
   
 ## <a name="return-value"></a>返回值  

@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio 中的工具窗口 | Microsoft Docs
-ms.custom: ''
+title: SQL Server Management Studio 中的工具窗口
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbb2464faa8620b7642dbd01affe3f9de318a8eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266711"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243885"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具窗口
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68266711"
 |[模板资源管理器](../ssms/template/template-explorer.md)|基于现有模板创建查询。 还可以创建自定义查询，或改变现有模板以使它适合您自己的需要。 可以从“视图”  菜单访问该工具。|  
 |[动态帮助](../ssms/user-assistance-in-sql-server-management-studio.md)|单击组件或类型代码时，显示相关帮助主题的列表。|  
   
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的工具可以一起工作。 例如，您可以：  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的工具可以一起工作。 例如，你能够：  
   
 -   向对象资源管理器注册服务器。  
   

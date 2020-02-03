@@ -1,10 +1,9 @@
 ---
-title: 验证查询 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 验证查询
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e19fbe26a7f3382885a8a1cd2bcbeaed71108708
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d5355354176fed20e2a5be855d7a5362fc371dcd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261585"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246284"
 ---
 # <a name="verify-queries-visual-database-tools"></a>验证查询 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68261585"
   
 在验证查询时应谨记以下几点：  
   
--   即使无法在“关系图”窗格和“条件”窗格中表示某个语句，该语句也可能是有效的，因此可以通过验证。  
+-   即使无法在“关系图”  窗格和“条件”  窗格中表示某个语句，该语句也可能是有效的，因此可以通过验证。  
   
 -   SQL 验证可检测某些 SQL 错误，但不能检测所有 SQL 错误。 如果查询包含在 SQL 验证过程中未检测到的错误，则在运行该查询时，数据库将检测到该错误。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "68261585"
   
 ### <a name="to-verify-an-sql-statement"></a>验证 SQL 语句  
   
--   右键单击“SQL 窗格”，然后从快捷菜单中选择“验证 SQL 语法”。  
+-   右键单击“SQL 窗格”  ，然后从快捷菜单中选择“验证 SQL 语法”  。  
   
 ## <a name="see-also"></a>另请参阅  
 [运行查询 (Visual Database Tools)](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  

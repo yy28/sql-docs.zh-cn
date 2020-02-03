@@ -1,10 +1,9 @@
 ---
-title: 打开数据库关系图 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 打开数据库关系图
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d183f673a2cd00200c90dd81e7f407ee84170bc2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7b6a12c3172b029c21ec0145d2dd872dc958c8b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263345"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251451"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>打开数据库关系图 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,13 +28,13 @@ ms.locfileid: "68263345"
   
 ### <a name="to-open-a-database-diagram"></a>打开数据库关系图  
   
-1.  在对象资源管理器中，展开“数据库关系图”文件夹。  
+1.  在对象资源管理器中，展开“数据库关系图”  文件夹。  
   
 2.  双击要打开的数据库关系图的名称。  
   
-    -或 -  
+    -或-  
   
-    右键单击要打开的数据库关系图的名称，然后选择“设计数据库关系图”。  
+    右键单击要打开的数据库关系图的名称，然后选择“设计数据库关系图”  。  
   
 此时，将在数据库关系图设计器中打开该数据库关系图，您可以在其中编辑关系图。  
   

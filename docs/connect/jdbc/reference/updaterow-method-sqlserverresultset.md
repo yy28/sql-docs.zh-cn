@@ -16,10 +16,10 @@ ms.assetid: cfced0ca-a281-40dc-8d2f-370d5f0bf12b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e33da1c8873bdc2d69c93d533860d9b9f5e227d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998348"
 ---
 # <a name="updaterow-method-sqlserverresultset"></a>updateRow 方法 (SQLServerResultSet)
@@ -34,10 +34,10 @@ ms.locfileid: "67998348"
 public void updateRow()  
 ```  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 updateRow 方法是由 java.sql.ResultSet 接口中的 updateRow 方法指定的。  
   
  游标位于插入行时，无法调用此方法。  

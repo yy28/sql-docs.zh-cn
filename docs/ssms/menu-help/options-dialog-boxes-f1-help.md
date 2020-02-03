@@ -1,6 +1,6 @@
 ---
-title: 选项对话框的 F1 帮助 | Microsoft Docs
-ms.custom: ''
+title: 选项对话框的 F1 帮助
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b22a11c4538ccdcd353c558d57263c65688ec0a8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d55f1115db836d3fddab4e18e63499c43e5993f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257267"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245717"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>选项对话框的 F1 帮助
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-本节包含可通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“工具”  菜单上“选项”  调用的对话框的 F1 帮助。  
+本节包含可通过单击  **中“工具”** **菜单上“选项”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]调用的对话框的 F1 帮助。  
   
 [选项（“设计器”-“Analysis Services 设计器”-“常规”）](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

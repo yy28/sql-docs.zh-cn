@@ -1,27 +1,28 @@
 ---
-title: 设置跟踪定义默认设置 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 设置跟踪定义默认值
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], defaults
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3e8f627e7aeac05d418345ded1a069e63e8d116
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 76144d1e3b115bca73683b198abb328ac72fae8a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104162"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307413"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>设置跟踪定义默认设置 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  跟踪定义默认设置是用于每一个提供程序或服务器的默认跟踪模板。 您可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]设置默认跟踪模板。  
+
+跟踪定义默认设置是用于每一个提供程序或服务器的默认跟踪模板。 您可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]设置默认跟踪模板。  
   
 ### <a name="to-set-trace-definition-defaults"></a>设置跟踪定义默认值  
   
@@ -35,10 +36,10 @@ ms.locfileid: "68104162"
   
 5.  如有必要，请单击“事件选择”  选项卡修改模板。  
   
-6.  单击 **“保存”** 。  
+6.  单击“保存”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Profiler 模板](../../tools/sql-server-profiler/sql-server-profiler-templates.md)   
- [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

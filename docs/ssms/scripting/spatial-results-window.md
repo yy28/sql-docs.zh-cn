@@ -1,6 +1,6 @@
 ---
-title: “空间结果”窗口 | Microsoft Docs
-ms.custom: ''
+title: “空间结果”窗口
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20cc4b1c97e7153fc93d810fba18742a0bb2e24b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 523cd3ffd5b72c08106e7d128e74138001619fdb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267721"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253615"
 ---
 # <a name="spatial-results-window"></a>“空间结果”窗口
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "68267721"
  如果某个查询中仅返回了点实例，则此选项不可用。  
   
  **选择投影**  
- 显示以下四个投影之一中的地理数据：Equirectangular、Mercator、Robinson 或 Bonne。  
+ 在下面的一个投影中显示地域数据：Equirectangular、Mercator、Robinson 或 Bonne。  
   
  此选项不适用于几何图形数据。  
   
- **缩放**  
+ **Zoom**  
  按指数比例调整映射显示。  
   
  **显示网格线**  

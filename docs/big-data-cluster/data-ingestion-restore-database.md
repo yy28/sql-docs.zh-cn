@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69652236"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>将数据库还原到 SQL Server 大数据群集主实例
@@ -39,7 +39,7 @@ ms.locfileid: "69652236"
 kubectl cp <path to .bak file> master-0:/tmp -c mssql-server -n <name of your big data cluster>
 ```
 
-例如：
+示例：
 
 ```bash
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n clustertest
@@ -54,7 +54,7 @@ ls /tmp
 exit
 ```
 
-例如：
+示例：
 
 ```bash
 kubectl exec -it master-0 -n clustertest -c mssql-server -- bin/bash
@@ -70,7 +70,7 @@ exit
 RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
 ```
 
-例如：
+示例：
 
 ```sql
 RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'

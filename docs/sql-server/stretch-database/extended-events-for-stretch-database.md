@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: be1cc04f4ee684fd2c97dd638038c6ce79d666fd
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844582"
 ---
 # <a name="extended-events-for-stretch-database"></a>Stretch Database 扩展事件
@@ -81,5 +81,5 @@ stretch_table_validation_error|报告用户启用延伸时表验证完成
 stretch_unprovision_table_start|报告延伸表取消设置开始  
   
 ## <a name="see-also"></a>另请参阅  
-[对 Stretch Database 进行管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+[Stretch Database 的管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
 
