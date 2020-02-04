@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 507bd04140880a3c15f1e72eed49c29ade56769c
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68714999"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapR（SQL Server 中的 R 库）
@@ -40,7 +40,7 @@ olapr 库分布于多种 Microsoft 产品中，但不管你是在 SQL Server 还
 
 以下产品以及 Azure 上的多个虚拟机映像中都提供了此包。 包位置也会相应地变化。
 
-Product | 位置 |
+Products | 位置 |
 --------|----------|
 SQL Server机器学习服务（包含 R 集成） | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
 SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library

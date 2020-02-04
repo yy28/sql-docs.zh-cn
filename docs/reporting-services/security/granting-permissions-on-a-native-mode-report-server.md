@@ -21,10 +21,10 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 26175cfea8af6686f8c15840c7e44a5bde191df5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175642"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>授予对本机模式报表服务器的权限
@@ -63,7 +63,7 @@ ms.locfileid: "66175642"
 ## <a name="tasks-and-tools-for-managing-permissions"></a>管理权限的任务和工具  
  使用以下工具可以管理角色定义和分配。  
   
-|工具|“任务”|  
+|工具|任务|  
 |----------|-----------|  
 |Management Studio - 用于查看、修改、创建和删除角色定义。|[创建、删除或修改角色 (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
 |Web 门户 - 用于为用户和组分配角色。|[授予用户对报表服务器的访问权限](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [修改或删除角色分配](../../reporting-services/security/role-assignments-modify-or-delete.md)|  

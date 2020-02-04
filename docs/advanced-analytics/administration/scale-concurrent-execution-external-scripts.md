@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: c10f92bcb0f8b64441ad4b088c4b8b3e2f62236b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727701"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中缩放外部脚本的并发执行
@@ -21,7 +21,7 @@ ms.locfileid: "73727701"
 
 了解 SQL Server 机器学习服务的辅助角色帐户，以及如何更改默认配置以扩展外部脚本的并发执行数。
 
-在安装机器学习服务的过程中，会创建一个新的 Windows 用户帐户池来支持 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 服务的任务执行  。 这些辅助角色帐户的用途是将不同 SQL Server 用户的外部脚本并发执行隔离开来。
+在安装机器学习服务的过程中，会创建一个新的 Windows 用户帐户池来支持  *服务的任务执行*[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]。 这些辅助角色帐户的用途是将不同 SQL Server 用户的外部脚本并发执行隔离开来。
 
 > [!Note]
 > 在 SQL Server 2019 中，SQLRUserGroup 现在只有一个成员，即一个 SQL Server Launchpad 服务帐户，而不是多个工作人员帐户  。 本文介绍 SQL Server 2016 和 2017 的辅助角色帐户。

@@ -1,10 +1,9 @@
 ---
-title: 用于输入搜索值的规则 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: “输入搜索值”的规则
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,14 @@ helpviewer_keywords:
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1d614875cb8530c95d2078579307e1b83c4aa41
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5c784351eadaaa6fc90c074d836ccd66238f9052
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255758"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255185"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>输入搜索值的规则 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

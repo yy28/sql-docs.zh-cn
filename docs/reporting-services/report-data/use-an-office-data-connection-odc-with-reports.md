@@ -13,10 +13,10 @@ ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a33b5bae668835ca1dbf52b2e7852c3af731ddfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574951"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>将 Office 数据连接 (.odc) 用于报表
@@ -56,7 +56,7 @@ ms.locfileid: "65574951"
   
 4.  选择 **“Microsoft OLE DB Provider for SQL Server”** ，然后单击 **“下一步”** 。  
   
-5.  输入服务器名称（默认情况下，该名称是计算机的网络名称）和具有有效登录名及数据库权限的用户帐户。 单击“下一步”  。  
+5.  输入服务器名称（默认情况下，该名称是计算机的网络名称）和具有有效登录名及数据库权限的用户帐户。 单击“下一步”。   
   
 6.  选择一个数据库，然后单击 **“确定”** 以关闭 **“数据链接”** 对话框。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "65574951"
   
 2.  在 **“上载”** 菜单中，单击 **“上载文档”** 。  
   
-3.  单击 **“浏览”** 。  
+3.  单击“浏览”  。  
   
 4.  选择所创建的 .odc 文件。 默认情况下，.odc 文件位于“我的文档”文件夹的“我的数据源”中。  
   

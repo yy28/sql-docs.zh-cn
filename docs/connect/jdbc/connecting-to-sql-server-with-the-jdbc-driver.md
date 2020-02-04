@@ -11,10 +11,10 @@ ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c8dbf7a415d413e0a9fad431013255ff48417687
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028181"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>通过 JDBC 驱动程序连接到 SQL Server
@@ -32,7 +32,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
   
 ## <a name="in-this-section"></a>在本节中  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[生成连接 URL](../../connect/jdbc/building-the-connection-url.md)|说明如何构建连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接 URL。 并说明到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库指定实例的连接。|  
 |[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)|说明各种连接属性以及如何在连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库时使用这些属性。|  

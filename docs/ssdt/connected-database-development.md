@@ -1,25 +1,24 @@
 ---
-title: 连接的数据库开发 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 连接的数据库开发
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- SQL.DATA.TOOLS.SQLSERVEROBJECTEXPLORER
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a072483769e4e75ac21b992b0fefa462640fa31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 068418e04624d912671e5b390823fb0903ba50af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984594"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256131"
 ---
 # <a name="connected-database-development"></a>连接的数据库开发
+
 本节介绍 SQL Server Data Tools 为设计和查询连接的数据库而提供的功能。  
   
 利用 Visual Studio 中的 SQL Server 对象资源管理器，开发人员现在可以创建、编辑和浏览位于内部数据库服务器（例如 SQL Server 2008 或 Microsoft SQL Server 2012）或 SQL Azure 中的外部数据库服务器中的数据库对象。 开发人员可以轻松地将现有生产数据库克隆到一个测试实例、对其执行其他开发工作，最后将更改发布回生产数据库。  
@@ -29,7 +28,7 @@ ms.locfileid: "67984594"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |---------|---------------|  
 |[如何：连接到数据库并浏览现有对象](../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md)|连接到数据库并浏览其实体。|  
 |[如何：使用表设计器创建数据库对象](../ssdt/how-to-create-database-objects-using-table-designer.md)|使用新的表设计器设计表和管理表关系。|  
@@ -42,6 +41,6 @@ ms.locfileid: "67984594"
 |[如何：克隆现有数据库](../ssdt/how-to-clone-an-existing-database.md)|从生产数据库创建一个开发数据库。|  
 |[提取、发布和注册 .dacpac 文件](../ssdt/extract-publish-and-register-dacpac-files.md)|显示如何提取和发布 .dacpac 文件。|  
   
-## <a name="related-sections"></a>相关章节  
-[管理表、关系和修复错误](../ssdt/manage-tables-relationships-and-fix-errors.md)  
-  
+## <a name="related-sections"></a>相关章节
+
+[管理表、关系和修复错误](../ssdt/manage-tables-relationships-and-fix-errors.md)

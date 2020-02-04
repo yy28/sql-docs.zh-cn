@@ -11,10 +11,10 @@ ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140453"
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
@@ -27,8 +27,8 @@ ms.locfileid: "67140453"
   
 |||  
 |-|-|  
-|File name|默认情况下，文件名为 ReportServerService_HTTP_\<timestamp>.log。 您可以通过在 ReportingServicesService.exe.config 文件中修改 HttpTraceFileName 属性来自定义文件名的前缀。 时间戳基于协调世界时 (UTC)。|  
-|文件位置|该文件位于 \Microsoft SQL Server\\\<SQL Server Instance>\Reporting Services\LogFiles 中  。|  
+|文件名|默认情况下，文件名为 ReportServerService_HTTP_\<timestamp>.log。 您可以通过在 ReportingServicesService.exe.config 文件中修改 HttpTraceFileName 属性来自定义文件名的前缀。 时间戳基于协调世界时 (UTC)。|  
+|文件位置|该文件位于 \Microsoft SQL Server\\*SQL Server Instance>\Reporting Services\LogFiles 中\<* 。|  
 |文件格式|该文件是 EN-US 格式。 它是 ASCII 文本文件。|  
 |创建和保留文件|当您在配置文件中启用了日志、重新启动服务以及报表服务器处理 HTTP 请求时，会创建 HTTP 日志。 如果配置了相应设置但没有看到日志文件，请打开报表或启动报表服务器应用程序（如 Web 门户），以生成创建日志文件的 HTTP 请求。<br /><br /> 在各服务重新启动并且随后发生对报表服务器的 HTTP 请求时，会创建日志文件的新实例。<br /><br /> 默认情况下，跟踪日志大小限制为 32 MB，并在 14 天后删除。|  
   
@@ -54,12 +54,12 @@ ms.locfileid: "67140453"
 ## <a name="log-file-fields"></a>日志文件字段  
  下表对在日志中可用的字段进行了说明： 该字段列表是可配置的；您可以通过 **HTTPTraceSwitches** 配置设置来指定要包括哪些字段。 如果您不指定 **HTTPTraceSwitches** ，则“默认”  列会指定日志文件是否自动包含某个字段。  
   
-|字段|描述|，则“默认”|  
+|字段|说明|默认|  
 |-----------|-----------------|-------------|  
-|HttpTraceFileName|该值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|是|  
-|HTTPTraceSwitches|该值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|否|  
-|date|活动发生的日期。|否|  
-|Time|活动发生的时间。|否|  
+|HttpTraceFileName|此值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|是|  
+|HTTPTraceSwitches|此值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|否|  
+|Date|活动发生的日期。|否|  
+|时间|活动发生的时间。|否|  
 |ClientIp|访问报表服务器的客户端的 IP 地址。|是|  
 |UserName|访问报表服务器的用户的名称。|否|  
 |ServerPort|连接使用的端口号。|否|  

@@ -11,10 +11,10 @@ ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63200532"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>使用 SQL Server 移动报表发布服务器创建移动报表
@@ -31,7 +31,7 @@ ms.locfileid: "63200532"
 * 在网格行和列可调整且移动报表元素灵活的设计图面上设计移动报表，这些报表可轻松缩放至任何屏幕大小。 
 * 然后，将这些移动报表保存到 Reporting Service 服务器，并在 iPad、iPhone、Android 手机、平板电脑和 Windows 10 设备上的浏览器或 Power BI 移动应用中进行查看和交互。
   
-## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>创建 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  移动报表  
+## <a name="create-includessrsnoversion_mdincludesssrsnoversion-mdmd--mobile-reports"></a>创建 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  移动报表  
   
 这些文章可帮助你入门。
 -  下载 [SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkID=733527)  

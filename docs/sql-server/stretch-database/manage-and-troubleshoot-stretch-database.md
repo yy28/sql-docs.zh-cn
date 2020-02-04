@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844612"
 ---
-# <a name="manage-and-troubleshoot-stretch-database"></a>对 Stretch Database 进行管理和故障排除
+# <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database 的管理和故障排除
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
@@ -42,10 +42,10 @@ GO
 ## <a name="manage-data-migration"></a>管理数据迁移  
   
 ### <a name="check-the-filter-function-applied-to-a-table"></a>检查应用到表的筛选器函数  
- 打开目录视图 **sys.remote_data_archive_tables** ，并检查 **filter_predicate** 列的值，以标识 Stretch Database 用于选择要迁移的行的函数。 如果值为 null，则整个表都可迁移。 有关详细信息，请参阅 [sys.remote_data_archive_tables (Transact SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 和 [通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。  
+ 打开目录视图 **sys.remote_data_archive_tables** ，并检查 **filter_predicate** 列的值，以标识 Stretch Database 用于选择要迁移的行的函数。 如果值为 null，则整个表符合迁移条件。 有关详细信息，请参阅 [sys.remote_data_archive_tables (Transact SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 和 [通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。  
   
 ###  <a name="Migration"></a> 检查数据迁移的状态  
- 在 SQL Server Management Studio 中选择数据库的“任务 | 延伸 | 监视”  以便在 Stretch Database 监视器中监视数据迁移。 有关详细信息，请参阅[数据迁移的监视与故障排除 (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
+ 在 SQL Server Management Studio 中选择数据库的“任务 | 延伸 | 监视”  以便在 Stretch Database 监视器中监视数据迁移。 有关详细信息，请参阅 [数据迁移的监视与故障排除 (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
   
  或者，打开动态管理视图 **sys.dm_db_rda_migration_status** 以查看有多少批数据和数据行已迁移。  
   
@@ -72,7 +72,7 @@ GO
 ## <a name="manage-table-schema"></a>管理表架构
 
 ### <a name="dont-change-the-schema-of-the-remote-table"></a>不要更改远程表的架构  
- 不要更改为 Stretch Database 配置的 SQL Server 表相关联的远程 Azure 表的架构。 特别是，不要修改列的名称或数据类型。 Stretch Database 功能对与 SQL Server 表的架构相关的远程表的架构作出各种假设。 如果更改了远程架构，Stretch Database 将停止处理已更改的表。  
+ 不要更改为 Stretch Database 配置的 SQL Server 表相关联的远程 Azure 表的架构。 特别是，不要修改列的名称或数据类型。 Stretch Database 功能对与 SQL Server 表的架构相关的远程表的架构作出各种假设。 如果更改了远程架构，所更改表的 Stretch Database 将停止工作。  
 
 ### <a name="reconcile-table-columns"></a>协调时间表列  
 如果意外删除了远程表中的列，运行 **sp_rda_reconcile_columns** 可将存在于已启用延伸的 SQL Server 表但不存在于远程表中的列添加到远程表。 有关详细信息，请参阅 [sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md)。  

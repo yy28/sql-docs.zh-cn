@@ -9,10 +9,10 @@ ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd4423251ae02931d539b047251abb5915f85ccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578840"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>在矩阵和图表上显示相同数据（报表生成器）
@@ -67,7 +67,7 @@ ms.locfileid: "65578840"
   
 14. 单击 **“排序”** 。  
   
-15. 单击 **“添加”** 。 将在排序表达式网格中出现一个新行。  
+15. 单击“添加”  。 将在排序表达式网格中出现一个新行。  
   
 16. 在“排序依据”  中，从下拉列表选择在步骤 9 中选择要按其分组的数据集字段。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "65578840"
   
 21. 单击 **“排序”** 。  
   
-22. 单击 **“添加”** 。 将在排序表达式网格中出现一个新行。  
+22. 单击“添加”  。 将在排序表达式网格中出现一个新行。  
   
 23. 在“排序依据”  中，从下拉列表选择在步骤 16 中选择要按其分组的数据集字段。  
   

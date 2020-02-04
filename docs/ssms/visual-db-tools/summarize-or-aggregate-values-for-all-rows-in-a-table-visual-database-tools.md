@@ -1,10 +1,9 @@
 ---
-title: 汇总或聚合表中所有行的值 | Microsoft Docs
-ms.custom: ''
+title: 汇总或聚合表中所有行的值
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9cfcb42df5c29fc0477e0a8575c6cfe299d3883b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0405898284fd40caf39743f901a70a7c60a75023
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263194"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254920"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>汇总或聚合表中所有行的值 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +59,7 @@ FROM titles
   
     查询及视图设计器将自动为要汇总的列分配列别名。 您可以用更有意义的名称替换此别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
-4.  在“分组依据”  网格列中，选择适当的聚合函数，例如：Sum、Avg、Min、Max 和 Count      。 如果只希望聚合结果集中的唯一行，请选择带 DISTINCT 选项的聚合函数，如 **Min Distinct**。 不要选择 **Group By**、 **Expression**或 **Where**，因为这些选项不适用于聚合所有行。  
+4.  在“分组依据”  网格列中，选择适当的聚合函数，例如：**Sum**、**Avg**、**Min**、**Max** 和 **Count**。 如果只希望聚合结果集中的唯一行，请选择带 DISTINCT 选项的聚合函数，如 **Min Distinct**。 不要选择 **Group By**、 **Expression**或 **Where**，因为这些选项不适用于聚合所有行。  
   
     查询和视图设计器将用指定的聚合函数替换 [“SQL”窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 内语句中的列名。 例如，SQL 语句可能类似以下形式：  
   

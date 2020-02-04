@@ -9,10 +9,10 @@ ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da9f07cf60a2ec42e23416b52cbfebab78802247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62512641"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>第 5 课：使用报表向导设计子报表
@@ -32,7 +32,7 @@ ms.locfileid: "62512641"
   
     随后将自动使用创建的 DataTable 更新“可用数据集”框  。  
   
-5.  选择“下一步”  。  
+5.  选择“**下一页**”。  
   
 6.  在“排列字段”页中，执行以下操作  ：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62512641"
   
     3.  确认在“数据类型”列表框中选择了“整数”   。  
   
-    4.  单击“确定”  。  
+    4.  单击“确定”。   
   
 9. 保存 .rdlc 文件。  
   

@@ -12,10 +12,10 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8c77e0f066c6342fb0b5bc58130cb20c80e40de3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571169"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>在报表服务器上配置自定义身份验证或窗体身份验证
@@ -52,7 +52,7 @@ Reporting Services 提供了可扩展的体系结构，该体系结构允许您�
 
      请注意，不能将 **Custom** 与其他身份验证类型一起使用。
 
-5.  保存该文件。
+5.  保存文件。
 
 6.  打开报表服务器的 Web.config 文件。 默认情况下，该文件位于 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer 下。
 
@@ -69,7 +69,7 @@ Reporting Services 提供了可扩展的体系结构，该体系结构允许您�
     ```
 9. 将 **PassThroughCookies** 元素结构添加到配置文件中。 有关详细信息，请参阅[将 Web 门户配置为传递自定义身份验证 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
-10. 保存该文件。  
+10. 保存文件。  
   
 11. 如果配置了扩展部署，请对该部署中的其他报表服务器重复以上所有步骤。  
   

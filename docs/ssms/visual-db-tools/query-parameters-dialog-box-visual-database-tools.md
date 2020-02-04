@@ -1,10 +1,9 @@
 ---
-title: “查询参数”对话框 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: “查询参数”对话框
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8bea7f04d7a0275b035879dabcb1da8b3952c849
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 05e99d2fc2365ab39b68ad6211889047a1564113
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266305"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255372"
 ---
 # <a name="query-parameters-dialog-box-visual-database-tools"></a>“查询参数”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68266305"
 **名称**  
 列出为正在执行的查询定义的参数。 如果该查询包含命名参数，则这些名称将显示在该列表中。 如果该查询包含未命名参数，则会为该查询中的每个参数列出系统定义的参数名称。  
   
-**ReplTest1**  
+**值**  
 为“名称”  下列出的每个参数输入值。 最近所用的值将显示为默认的参数值。  
   
 ## <a name="example"></a>示例  

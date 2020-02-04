@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531944"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>管理 SQL Server 控制器仪表板的大数据群集
@@ -22,7 +22,7 @@ ms.locfileid: "73531944"
 
 除了 azdata 和群集状态笔记本以外，还可以通过另一种方法查看 SQL Server 大数据群集的状态  。 现在可以通过“连接”viewlet 添加 SQL Server 大数据群集控制器  。 这样，就可以使用仪表板查看群集运行状况。
 
-![面板](media/manage-with-controller-dashboard/controller-dashboard.png)
+![仪表板](media/manage-with-controller-dashboard/controller-dashboard.png)
 ## <a name="prerequisites"></a>必备条件
 
 若要启动笔记本，需要满足以下必备条件：
@@ -78,6 +78,6 @@ ms.locfileid: "73531944"
 
 1. 如果查看运行不正常的组件，请单击工具栏上的“故障排除”，启动包含笔记本的 Jupyter Book，以帮助诊断问题  。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 
 有关控制器的详细信息，请参阅[我们的控制器文档](concept-controller.md)。

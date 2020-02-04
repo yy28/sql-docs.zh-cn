@@ -1,21 +1,23 @@
 ---
-title: “添加数据库引用”对话框 | Microsoft Docs
+title: “添加数据库引用”对话框
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ''
-ms.custom: SSDT
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e8ff16ab27f47cd283c81606a4db9b580db523d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a43b16b3c45a0f98ca22a4d1e0d3e291cf92f95d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984696"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256136"
 ---
 # <a name="add-database-reference-dialog-box"></a>“添加数据库引用”对话框
+
 本主题说明可在“添加数据库引用”  对话框中执行的过程。  
   
 数据库引用允许您：  
@@ -28,7 +30,8 @@ ms.locfileid: "67984696"
   
 数据库引用可以指向当前解决方案中的数据库对象或指向 DACPAC。 添加对某项目的数据库引用将更改项目依赖关系和生成顺序。  
   
-## <a name="selecting-the-database-to-reference"></a>选择要引用的数据库  
+## <a name="selecting-the-database-to-reference"></a>选择要引用的数据库
+
 您可以引用同一解决方案中的另一个数据库项目，也可以引用系统数据库，或者是 DACPAC。  
   
 如果你的解决方案中有多个数据库项目，“当前解决方案中的数据库项目”  就会被启用。 您可以引用解决方案中的另一数据库。  
@@ -37,7 +40,8 @@ ms.locfileid: "67984696"
   
 选择“数据层应用程序(.dacpac)”  以引用 DACPAC 中的数据库，然后浏览到包含该 DACPAC 文件的目录。  
   
-## <a name="selecting-the-databases-relative-location"></a>选择数据库的相对位置  
+## <a name="selecting-the-databases-relative-location"></a>选择数据库的相对位置
+
 在选择要引用的数据库后，您可以指定数据库对象相对于引用项目的预期位置。  
   
 可以在以下位置之一为对象解析引用：  
@@ -59,7 +63,8 @@ ms.locfileid: "67984696"
 > [!IMPORTANT]  
 > 在某些情况下，您可以创建与现有数据库引用同名的数据库引用。 同名的两个数据库引用可能导致意外的行为。 在这种情况下，请将这两个数据库引用都删除。  
   
-## <a name="common-procedures"></a>通用过程  
+## <a name="common-procedures"></a>通用过程
+
 以下是通用过程：  
   
 ### <a name="to-create-a-reference-to-a-database-on-the-same-server"></a>创建对同一服务器上数据库的引用  
@@ -112,6 +117,6 @@ ms.locfileid: "67984696"
   
 3.  在“高级发布设置”  对话框中，确保在“高级部署选项”  列表中选中了“包括复合对象”  。  
   
-## <a name="see-also"></a>另请参阅  
-[面向项目的脱机数据库开发](../ssdt/project-oriented-offline-database-development.md)  
-  
+## <a name="see-also"></a>另请参阅
+
+[面向项目的脱机数据库开发](../ssdt/project-oriented-offline-database-development.md)

@@ -15,10 +15,10 @@ ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570701"
 ---
 # <a name="secure-my-reports"></a>保护“我的报表”
@@ -32,7 +32,7 @@ ms.locfileid: "65570701"
   
  “我的报表”角色分配由以下元素组成：   
   
--   用户的“我的报表”文件夹，位于“用户文件夹\\\<用户名>\我的报表”文件夹下  。  
+-   用户的“我的报表”文件夹，位于“用户文件夹\\*用户名>\我的报表”文件夹下\<* 。  
   
 -   用户帐户，在激活“我的报表”文件夹时确定。 当用户单击报表管理器中的“我的报表”文件夹时，或将报表从报表设计器发布到“我的报表”文件夹时，将激活一个文件夹。 当用户请求“我的报表”链接的属性时，也将激活此文件夹。  
   

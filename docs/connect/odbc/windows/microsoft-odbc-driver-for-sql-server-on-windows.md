@@ -11,10 +11,10 @@ ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c075c7adcc7eeae3ae7a83676256e72b4b86d187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989436"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server（Windows 平台）
@@ -24,12 +24,12 @@ Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
 
 Microsoft ODBC Driver for SQL Server 可用于创建新应用程序。 还可以升级当前使用较旧的 ODBC 驱动程序的较旧应用程序。 ODBC Driver for SQL Server 支持与 Azure SQL 数据库、Azure SQL 数据仓库、SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008 和 SQL Server 2005 的连接。  
 
-## <a name="summary"></a>“摘要”
+## <a name="summary"></a>总结
 
 | 版本       | 支持的功能      |
 | ------------- |---------------| 
 | Microsoft ODBC Driver 17 for SQL Server | <ul><li>对 BCP API 的 Always Encrypted 支持</li><li>新连接字符串属性 UseFMTONLY 使驱动程序在需要临时表的特殊情况下使用旧的元数据</li>
-| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>始终加密</li><li>Azure AD 身份验证</li><li>AlwaysOn 可用性组 (AG)</li></ul>   | 
+| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD 身份验证</li><li>AlwaysOn 可用性组 (AG)</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>国际化域名 (IDN)</li></ul> |
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>识别驱动程序的连接池</li><li>连接复原</li><li>异步执行（轮询方法）</li></ul> |    
 
@@ -48,7 +48,7 @@ Microsoft ODBC Driver for SQL Server 可用于创建新应用程序。 还可以
 
 ## <a name="community"></a>社区  
 - [Microsoft SQL Server ODBC 驱动程序团队博客](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
-- [SQL Server Data Access Forum（英文）](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
+- [SQL Server 数据访问论坛](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
 ## <a name="see-also"></a>另请参阅  
 - [关于 SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   

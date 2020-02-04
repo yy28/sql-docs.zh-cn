@@ -1,10 +1,9 @@
 ---
-title: 从查询中删除列 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 从查询中删除列
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54f99801992ba804861d6712edaadae24720c8bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: e548479b98b6495ed61582a5a6fcef8b8878154a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266227"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255270"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>从查询中删除列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68266227"
   
 -   在“条件”  窗格中，选择包含要移除的列的网格行，然后按 Delete。  
   
-    -或 -  
+    -或-  
   
 -   在 [“SQL”窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中移除对该列的所有引用。  
   

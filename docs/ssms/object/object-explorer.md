@@ -1,5 +1,5 @@
 ---
-title: 对象资源管理器 | Microsoft Docs
+title: “对象资源管理器”
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -24,14 +24,14 @@ ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 1ef39a04a9b9ae6997b1cd262db43a79c5b5ff49
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 575c8d2ec6e6397f7a3444bcc718988b070e783d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988152"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257142"
 ---
 # <a name="object-explorer"></a>“对象资源管理器”
 
@@ -43,11 +43,11 @@ ms.locfileid: "70988152"
   
 ## <a name="object-explorer-tasks"></a>对象资源管理器任务  
   
-|描述|主题|  
+|说明|主题|  
 |---------------|---------|  
 |介绍如何打开对象资源管理器和配置定义资源管理器的行为的选项。|[打开和配置对象资源管理器](../../ssms/object/open-and-configure-object-explorer.md)|  
 |介绍如何将对象资源管理器连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]实例。|[从对象资源管理器连接到实例](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |介绍如何管理在对象资源管理器层次结构中表示为节点的对象。|[使用对象资源管理器管理对象](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
 |介绍“对象资源管理器详细信息”窗格、服务器中所有对象的表格视图及管理这些对象的用户界面。|[对象资源管理器详细信息窗格](../../ssms/object/object-explorer-details-pane.md)|  
-|介绍在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中运行自定义报表的方法。|[Management Studio 中的自定义报表](../../ssms/object/custom-reports-in-management-studio.md)|  
+|介绍在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中运行自定义报表的方法。|[Management Studio 中的自定义报告](../../ssms/object/custom-reports-in-management-studio.md)|  
   

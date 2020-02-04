@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041225"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教程：向报表添加饼图（报表生成器）
@@ -75,7 +75,7 @@ ms.locfileid: "63041225"
   
 8.  （可选）单击“运行”按钮 ( **!** )，查看要用于图表的数据。  
   
-9. 单击“下一步”  。  
+9. 单击“下一步”。   
   
 ## <a name="ChartType"></a>2.选择图表类型  
 可以从各种预定义的图表类型中进行选择。  
@@ -89,7 +89,7 @@ ms.locfileid: "63041225"
   
 3.  单击“下一步”  查看预览。  
   
-5.  单击 **“完成”** 。  
+5.  单击“完成”  。  
   
     图表将添加到设计图面中。 看不到饼图的实际值 -- 只能看到 Product 1、Product 2 等，以便了解该图表的显示外观。  
     
@@ -207,11 +207,11 @@ ms.locfileid: "63041225"
   
 3.  在“名称”  中，键入“Sales Pie Chart”  。  
   
-4.  单击 **“保存”** 。  
+4.  单击“保存”  。  
   
 报表将保存在报表服务器上。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 这样，您就成功完成了“向报表添加饼图”教程的学习。 若要了解有关图表的详细信息，请参阅[图表（报表生成器和 SSRS）](../reporting-services/report-design/charts-report-builder-and-ssrs.md)和[迷你图和数据条（报表生成器和 SSRS）](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  

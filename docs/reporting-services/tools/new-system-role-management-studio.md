@@ -11,10 +11,10 @@ ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4bb010a6f3b9c21661cfa840e6975cec51f90c84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582184"
 ---
 # <a name="new-system-role-management-studio"></a>新建系统角色 (Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "65582184"
   
  " /  
   
- **Description**  
+ **说明**  
  提供介绍如何使用角色和枚举角色所支持任务的说明。  
   
  **任务**  

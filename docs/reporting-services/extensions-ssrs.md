@@ -1,5 +1,5 @@
 ---
-title: 扩展项
+title: 扩展
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: f7a64289bd3f1e1bd8fce71d21e5e1604e5bf4b4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262891"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>用于 SQL Server Reporting Services 的扩展 (SSRS)
@@ -70,7 +70,7 @@ ms.locfileid: "68262891"
   
 - **PDF 呈现扩展插件** PDF 呈现扩展插件以 PDF 文件形式呈现报表，可以使用 Adobe Acrobat 6.0 或更高版本打开和查看这些文件。 有关详细信息，请参阅 [导出到 PDF 文件（报表生成器和 SSRS）](../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)中处理数据。  
   
-- **Word 呈现扩展插件**   [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 呈现扩展插件可将报表呈现为与 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 或更高版本兼容的 Word 文档。 有关详细信息，请参阅 [导出到 Microsoft Word（报表生成器和 SSRS）](../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)中处理数据。  
+- **Word 呈现扩展插件**[!INCLUDE[msCoName](../includes/msconame-md.md)] Word 呈现扩展插件可将报表呈现为与 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 或更高版本兼容的 Word 文档。 有关详细信息，请参阅 [导出到 Microsoft Word（报表生成器和 SSRS）](../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)中处理数据。  
   
 ## <a name="report-processing-extensions"></a>报表处理扩展插件
 

@@ -1,10 +1,9 @@
 ---
-title: 创建表别名 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 创建表别名
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 691f6280414dafd12839a8d55b13299b6b1ece56
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 14c8defcabde99a42993b4f1490094670a890cee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264273"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254228"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>创建表别名 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68264273"
   
 -   使用同一个表的多个实例（如在自联接中），并需要一种引用其中的一个实例或其他实例的方法。  
   
-例如，可以为表名 `employee_information` 创建别名 `"e"`，然后在查询的其余部分使用 `"e"` 引用该表。  
+例如，可以为表名 `"e"` 创建别名 `employee_information`，然后在查询的其余部分使用 `"e"` 引用该表。  
   
 ### <a name="to-create-an-alias-for-a-table-or-table-valued-object"></a>为表或表值对象创建别名  
   

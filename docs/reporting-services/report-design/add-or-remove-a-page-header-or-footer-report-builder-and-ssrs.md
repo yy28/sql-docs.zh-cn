@@ -9,10 +9,10 @@ ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b8c05a90f2d077e76bbbdebb9f285c3f2e8b3f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581919"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>添加或删除页眉或页脚（报表生成器和 SSRS）
@@ -47,9 +47,9 @@ ms.locfileid: "65581919"
   
     -   **图像**  
   
-3.  右键单击页眉，然后单击“页眉属性”  添加边框、背景图像或颜色，或调整页眉宽度。 再单击 **“确定”** 。  
+3.  右键单击页眉，然后单击“页眉属性”  添加边框、背景图像或颜色，或调整页眉宽度。 然后单击“确定”  。  
   
-4.  右键单击页脚，然后单击“页脚属性”  添加边框、背景图像或颜色，或调整页脚宽度。 再单击 **“确定”** 。  
+4.  右键单击页脚，然后单击“页脚属性”  添加边框、背景图像或颜色，或调整页脚宽度。 然后单击“确定”  。  
   
 ### <a name="to-remove-a-page-header-or-footer"></a>删除页眉或页脚  
   

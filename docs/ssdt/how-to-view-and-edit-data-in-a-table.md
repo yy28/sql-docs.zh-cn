@@ -1,11 +1,7 @@
 ---
-title: 如何：查看和编辑表中的数据 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 查看和编辑表中的数据
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.QUERYRESULTS.F1
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d6a59755f3c6675830324a314cbf364333e105c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 557b5d5c5986b47eab22bb9d70bd8103c5032eeb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141002"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226763"
 ---
-# <a name="how-to-view-and-edit-data-in-a-table"></a>如何：查看和编辑表中的数据
+# <a name="how-to-view-and-edit-data-in-a-table"></a>如何查看和编辑表中的数据
+
 您可以使用直观的数据编辑器查看、编辑和删除现有表中的数据。  
   
 > [!WARNING]  

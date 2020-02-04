@@ -5,22 +5,22 @@ description: 了解如何部署高可用性 SQL Server 大数据群集。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fc93fbeb3cf02b205cadba92b6d528701ec53cbe
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 25a6b733eed0611b43fb1f17ad0fe8a0cc1d690a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706344"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75720791"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>在高可用性配置中部署 HDFS 名称节点和共享 Spark 服务
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-除了使用可用性组在高可用性配置中部署 SQL Server 主实例以外，还可以在大数据群集中部署其他任务关键型服务，以确保提高可靠性。 可以使用附加副本来配置 `HDFS name node` 和按 `SparkHead` 分组的共享 Spark 服务。 在这种情况下，还会在大数据群集中部署 `Zookeeper`，用作以下服务的群集协调器和元数据存储： 
+除了使用可用性组在高可用性配置中部署 SQL Server 主实例以外，还可以在大数据群集中部署其他任务关键型服务，以确保提高可靠性。 可以使用附加副本来配置 `HDFS name node` 和按 `sparkhead` 分组的共享 Spark 服务。 在这种情况下，还会在大数据群集中部署 `Zookeeper`，用作以下服务的群集协调器和元数据存储： 
 
 - HDFS 名称节点
 - Livy 和 Yarn 资源管理器。 

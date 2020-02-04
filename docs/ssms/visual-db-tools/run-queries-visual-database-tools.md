@@ -1,10 +1,9 @@
 ---
-title: 运行查询 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 运行查询
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 28eaf23631d9f9331ede00394485d1cdc41b9fbd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3880beb6f4927c28fe6edd686b26804d3826cf16
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255656"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255167"
 ---
 # <a name="run-queries-visual-database-tools"></a>运行查询 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68255656"
   
 2.  右键单击查询窗口中的任意位置，然后从快捷菜单中选择“执行 SQL”  。  
   
-    -或 -  
+    -或-  
   
     按 Ctrl+R。  
   

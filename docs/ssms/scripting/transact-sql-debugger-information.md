@@ -1,10 +1,8 @@
 ---
-title: Transact-SQL 调试器信息 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Transact-SQL 调试器信息
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -16,20 +14,28 @@ helpviewer_keywords:
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6329776bd998a8d90cbadd577132a500020515b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82f5caaa772ab21ce5e36165fcc46665c99a4ea5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253557"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253038"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL 调试器 - 信息
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  每次当调试器对特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句暂停执行时，您可以使用不同调试器窗口来查看当前执行状态。  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+每次当调试器对特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句暂停执行时，您可以使用不同调试器窗口来查看当前执行状态。 
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="debugger-windows"></a>调试器窗口  
- 在调试器模式下，调试器会在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 主窗口底部打开两个窗口。 调试器在这两个窗口中显示其所有信息。 每个调试器窗口都有选项卡，可选择这些选项卡以控制在窗口中显示哪些信息。 左侧调试器窗口包含 **“局部变量”** 、 **“监视1”** 、 **“监视2”** 、 **“监视3”** 和 **“监视4”** 选项卡。 右侧调试器窗口包含 **“调用堆栈”** 、 **“线程”** 、 **“断点”** 、 **“命令窗口”** 和 **“输出”** 选项卡。  
+
+在调试器模式下，调试器会在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 主窗口底部打开两个窗口。 调试器在这两个窗口中显示其所有信息。 每个调试器窗口都有选项卡，可选择这些选项卡以控制在窗口中显示哪些信息。 左侧调试器窗口包含 **“局部变量”** 、 **“监视1”** 、 **“监视2”** 、 **“监视3”** 和 **“监视4”** 选项卡。 右侧调试器窗口包含 **“调用堆栈”** 、 **“线程”** 、 **“断点”** 、 **“命令窗口”** 和 **“输出”** 选项卡。  
   
 > [!NOTE]  
 >  以上说明适用于调试器窗口的默认位置。 可以拖动选项卡，将其从一个窗口移到另一个窗口，或者取消停靠选项卡以创建一个新窗口，可以将该窗口放在所需的任何地方。  
@@ -41,11 +47,11 @@ ms.locfileid: "68253557"
 -   在 **“调试”** 工具栏上，单击 **“断点”** ，然后选择所需窗口。  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL 表达式  
- 表达式是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，其计算结果为单个标量值，例如变量或参数。 左侧的调试器窗口可以显示当前赋给表达式的数据值，这些值最多可在 5 个选项卡或窗口中显示：“本地变量”、“监视 1”  、“监视 2”  、“监视 3”  和“监视 4”  。  
+ 表达式是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，其计算结果为单个标量值，例如变量或参数。 左侧的调试器窗口可以显示当前赋给表达式的数据值，这些值最多可在 5 个选项卡或窗口中显示： **“局部变量”、“监视1”** 、 **“监视2”** 、 **“监视3”** 和 **“监视4”** 。  
   
  **“局部变量”** 窗口显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器当前作用域中局部变量的信息。 调试器在代码的不同部分运行时， **“局部变量”** 窗口中列出的表达式集也会发生变化。  
   
- **“快速监视”** 和四个 **“监视”** 窗口中的表达式并不仅限于列出变量的标识符。 您可以通过指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式计算出单个值（如向变量添加数字），或使用 SELECT 语句计算出单个值。 例如：  
+ **“快速监视”** 和四个 **“监视”** 窗口中的表达式并不仅限于列出变量的标识符。 您可以通过指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式计算出单个值（如向变量添加数字），或使用 SELECT 语句计算出单个值。 示例包括：  
   
 -   变量名称，如 @IntegerCounter。  
   

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658872"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 语言扩展中的扩展性体系结构
@@ -54,7 +54,7 @@ The following diagram visually describes opportunities and benefits of the exten
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 是一种服务，用于管理负责脚本执行的外部进程的生存期、资源和安全边界。 这类似于全文索引和查询服务启动单独主机来处理全文查询的方式。 该 Launchpad 服务只能启动 Microsoft 发布的受信任启动器，或者经 Microsoft 认证满足性能和资源管理要求的启动器。
 
-| 受信任的启动器 | 扩展名 | SQL Server 版本 |
+| 受信任的启动器 | 分机 | SQL Server 版本 |
 |-------------------|-----------|---------------------|
 | 用于 Java 的 JavaLauncher.dll | Java 扩展 | SQL Server 2019 |
 

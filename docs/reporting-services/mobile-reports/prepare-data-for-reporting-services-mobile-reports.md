@@ -9,10 +9,10 @@ ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499917"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Prepare data for Reporting Services mobile reports
@@ -38,12 +38,12 @@ ms.locfileid: "62499917"
 ## <a name="preparing-filter-data"></a>准备筛选数据 ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 可以根据日期/时间字段和键字段筛选数据。 虽然键字段可以是数字，但在大多数情况下，它们要么是一个 ID，要么是一个字符串值。 若要准备与导航元素（如选择列表）配合使用的筛选器字段，筛选键在数据表中应为单列。 这样你便可以根据筛选器列中的值对表中的各行进行分组。 使多个列包含不同的筛选键或筛选条件，可以使具有多个筛选导航器的移动报表分层次地一起进行使用或单独使用。  
   
-| 行业  | 国家/地区   | 地区    |  
+| 行业  | 国家/地区   | 区域    |  
 | ------------- | ------------- | ------------- |  
 | 银行     | 阿富汗   | 亚洲      |  
 | 商业和专业服务 | 阿富汗 | 亚洲 |  
 | 食物饮料和烟草行业 | 阿富汗 | 亚洲 |  
-| 介质 | 阿富汗 | 亚洲 |  
+| 媒体 | 阿富汗 | 亚洲 |  
 | 医药业 | 阿富汗 | 亚洲 |  
 | 食物和必需品零售业 | 阿尔巴尼亚 | 欧洲 |  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62499917"
 | 食物饮料和烟草行业 |    消费者日常用品 |  
 | 食物和必需品零售业 |    消费者日常用品 |  
 | 家庭和个人用品 | 消费者日常用品 |  
-| 介质 | 非必需消费品 |  
+| 媒体 | 非必需消费品 |  
 | 汽车及配件 |  非必需消费品 |  
 | 耐用消费品和服装 |非必需消费品 |  
 | 消费性服务 |   非必需消费品 |  

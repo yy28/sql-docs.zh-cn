@@ -19,10 +19,10 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578446"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>按规则和分析数据更改多边形、线条和点的显示方式
@@ -119,7 +119,7 @@ ms.locfileid: "65578446"
   
  下表显示您可以使用的不同格式的示例：  
   
-|关键字和格式|描述|图例中的显示文本示例|  
+|关键字和格式|说明|图例中的显示文本示例|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|显示不带小数、带货币符号的总计值|$400|  
 |`#FROMVALUE {C2}`|显示带 2 位小数、带货币符号的总计值。|$400.55|  

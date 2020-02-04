@@ -9,10 +9,10 @@ ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573855"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>排除 Reporting Services 报表处理故障
@@ -28,7 +28,7 @@ ms.locfileid: "65573855"
 ### <a name="report-item-expressions-can-only-refer-to-fields-within-the-current-dataset-scope-or-if-inside-an-aggregate-the-specified-dataset-scope"></a>报表项表达式只能引用当前数据集作用域中的字段；如果在聚合中，则只能引用指定数据集作用域中的字段。  
   
 使用下面的列表可帮助确定错误原因：  
-* 当报表具有多个数据集时，表体上文本框中的聚合表达式必须指定作用域参数。 例如， `=First(Fields!FieldName.Value, "DataSet1")`。  
+* 当报表具有多个数据集时，表体上文本框中的聚合表达式必须指定作用域参数。 例如，`=First(Fields!FieldName.Value, "DataSet1")` 。  
   
 若要指定作用域参数，请提供报表项所在作用域中的数据集、数据区域或组的名称。 有关详细信息，请参阅 [了解总计、聚合和内置集合的表达式作用域（Report Builder 3.0 和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 以及 [表达式引用（Report Builder 3.0 和 SSRS）](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)。  
   

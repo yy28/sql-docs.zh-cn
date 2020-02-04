@@ -1,10 +1,9 @@
 ---
-title: 使用“结果”窗格中的数据 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 使用“结果”窗格中的数据
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,14 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0420ece084af7f5fde51498226dbd06671f1c9c9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 4161966534f65936bbddc8753cdb116ea5f47e33
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262933"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246223"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>使用“结果”窗格中的数据 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -116,7 +117,7 @@ ms.locfileid: "68262933"
 ### <a name="what-can-not-be-represented-fully"></a>不能完全呈现的内容  
 从数据库返回“结果”窗格的内容很大程度上受您所使用的数据源的提供程序控制。 “结果”窗格并不总是能转换所有数据库管理系统中的数据。 在以下情况下便是如此。  
   
--   Binary 数据类型对于在“结果”窗格中执行操作的人来说通常没什么用处，并且可能需要很长时间才能下载。 因此它们由 <Binary data> 或 Null 表示   。  
+-   Binary 数据类型对于在“结果”窗格中执行操作的人来说通常没什么用处，并且可能需要很长时间才能下载。 因此它们由  *或 Null 表示<Binary data>*  。  
   
 -   并不能始终保留精度和小数位数。 例如，结果窗格支持的精度为 27。 如果数据的数据类型的精度比这个值大，数据可能会截断或可能由 *<Unable to read data>* 表示。  
   

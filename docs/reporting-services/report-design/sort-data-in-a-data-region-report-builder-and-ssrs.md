@@ -9,10 +9,10 @@ ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6ad5600def990457834d858b61ba3bad4a241158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570747"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>对数据区域中的数据排序（报表生成器和 SSRS）
@@ -39,7 +39,7 @@ ms.locfileid: "65570747"
   
 3.  对于每个排序表达式，请按照下列步骤进行操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击“添加”  。  
   
     2.  键入或选择按其对数据进行排序的表达式。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65570747"
   
 4.  对于每个排序表达式，请按照下列步骤进行操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击“添加”  。  
   
     2.  键入或选择按其对数据进行排序的表达式。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "65570747"
   
 3.  对于每个排序表达式，请按照下列步骤进行操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击“添加”  。  
   
     2.  选择与分组字段匹配的表达式。 通过单击 **“分组”** ，可以验证分组字段的表达式。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65570747"
   
 3.  对于每个排序表达式，请按照下列步骤进行操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击“添加”  。  
   
     2.  选择与数据字段匹配的表达式。 在大多数情况下，此为聚合值，例如 `=Sum(Fields!Quantity.Value)`。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "65570747"
   
 7.  对于每个排序表达式，请按照下列步骤进行操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击“添加”  。  
   
     2.  选择与分组字段匹配的表达式。 通过单击 **“分组”** ，可以验证分组字段的表达式。  
   

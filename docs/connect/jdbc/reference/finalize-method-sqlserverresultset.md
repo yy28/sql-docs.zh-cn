@@ -16,10 +16,10 @@ ms.assetid: 49bc879d-822b-42da-bc20-2394865f1f0f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7afb8728b92ac7460173950bf42e38f968e056af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954570"
 ---
 # <a name="finalize-method-sqlserverresultset"></a>finalize 方法 (SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67954570"
 public void finalize()  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果应用程序未关闭结果集，则关闭它。 提供此方法只是为了符合 JDBC 规范。 由于 Java 虚拟机 (JVM) 不保证何时可以运行终结器，因此忽略显式关闭其结果集的应用程序对于正在使用同一连接并因为公共服务器资源（如行锁）而阻塞的另一语句可能造成死锁。  
   
 ## <a name="see-also"></a>另请参阅  

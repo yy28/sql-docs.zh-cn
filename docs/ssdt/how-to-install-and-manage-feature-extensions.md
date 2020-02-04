@@ -1,23 +1,24 @@
 ---
-title: 如何：安装和管理功能扩展 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 04/26/2017
+title: 安装和管理功能扩展
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a7d2f4fa27623a75bd49a32a7ce800801f63e9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
+ms.openlocfilehash: 7ef7a61b87c11c63070d1e7713d2aae0ad87f547
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929591"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241390"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>如何：安装和管理功能扩展
+
 你可以添加用于分析数据库代码的规则、用于数据库单元测试和生成/部署参与者的条件，以增强 Visual Studio 版本（包括 SQL Server Data Tools）提供的功能。 但是，无论你是创建了扩展还是安装了其他人创建的扩展，必须首先安装功能扩展，之后才能使用它。  
   
 安装扩展的位置取决于扩展类型和计划使用它的位置。 在 Visual Studio 的最新版本中，某些组件的安装位置已从 SQL Server 安装目录移动到 Visual Studio 目录内。 此安装程序使不同版本的软件更容易并排运行，但这意味着如果你想要在不同版本的 SQL Server Data Tools 中和通过命令行使用扩展，你可能需要将其安装在多个位置中。  

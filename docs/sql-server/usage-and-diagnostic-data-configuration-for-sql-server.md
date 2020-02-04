@@ -9,17 +9,17 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
 ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028928"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>配置 SQL Server 使用情况和诊断数据收集 (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-## <a name="summary"></a>“摘要”
+## <a name="summary"></a>总结
 
 默认情况下，Microsoft SQL Server 收集有关其客户如何使用应用程序的信息。 具体来说，SQL Server 收集有关安装体验、使用情况和性能的信息。 此信息有助于 Microsoft 改进产品以更好地满足客户需求。 例如，Microsoft 收集有关客户遇到的错误代码类型信息，这样我们就可以修复相关 bug，改进关于如何使用 SQL Server 的文档，并确定是否应将功能添加到产品中以更好地为客户服务。
 
@@ -55,7 +55,7 @@ AND instance_name = '_Total'
 > [!NOTE]
 > 只能在付费版本的 SQL Server 中禁用向 Microsoft 发送信息的功能。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
  - 不支持删除或禁用 SQL CEIP 服务。 
  - 不支持从群集组中删除 SQL CEIP 资源。 
 
@@ -84,7 +84,7 @@ AND instance_name = '_Total'
     
     注册表项名称 = CustomerFeedback
     
-    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
+    条目类型 DWORD：0 表示选择退出；1 表示选择加入
     
     {InstanceID} 是指实例类型和实例，如以下示例所示：
 
@@ -98,7 +98,7 @@ AND instance_name = '_Total'
     
     注册表项名称 = CustomerFeedback
     
-    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
+    条目类型 DWORD：0 表示选择退出；1 表示选择加入
 
 > [!NOTE]
 > {Major Version} 是指 SQL Server 的版本，例如，140 表示 SQL Server 2017
@@ -115,7 +115,7 @@ AND instance_name = '_Total'
 
     注册表项名称 = EnableErrorReporting
 
-    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
+    条目类型 DWORD：0 表示选择退出；1 表示选择加入
  
     {InstanceID} 是指实例类型和实例，如以下示例所示： 
 
@@ -130,7 +130,7 @@ AND instance_name = '_Total'
 
     注册表项名称 = EnableErrorReporting
 
-    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
+    条目类型 DWORD：0 表示选择退出；1 表示选择加入
 
 > [!NOTE]
 > {Major Version} 是指 SQL Server 的版本。 例如，“140”是指 SQL Server 2017。

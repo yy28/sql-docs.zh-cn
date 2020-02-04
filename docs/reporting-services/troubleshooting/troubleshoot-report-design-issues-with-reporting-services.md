@@ -9,10 +9,10 @@ ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573844"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>解决 Reporting Services 报表设计问题
@@ -38,7 +38,7 @@ PageNumber 和 TotalPages 仅在页眉和页脚中有效。
   
 内置字段 [&PageNumber] 和 [&TotalPages] 仅在页眉和页脚中有效。   
   
-若要向报表中添加 [&PageNumber] 或 [&TotalPages]，必须首先添加页眉或页脚。 有关详细信息，请参阅[添加或删除页眉](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
+若要向报表中添加 [&PageNumber] 或 [&TotalPages]，必须首先添加页眉或页脚。 有关详细信息，请参阅 [添加或删除页眉](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 > 在页眉或页脚中包含 [&TotalPages] 可能会对报表处理有影响。 有关详细信息，请参阅“报表故障排除：以特定文件格式导出的报表”。  
@@ -53,7 +53,7 @@ PageNumber 和 TotalPages 仅在页眉和页脚中有效。
 若要将多个数据区域或报表项分组到一起，请将它们放在同一父容器中。 例如，将图表和表放在一个矩形容器中，将它们沿上边缘对齐以便并排显示。 有关详细信息，请参阅 [报表生成器中的呈现行为](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[排除与 Reporting Services 报表相关的数据检索问题](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[排查与 Reporting Services 报表相关的数据检索问题](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Reporting Services 订阅和传递的疑难解答](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   

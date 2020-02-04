@@ -15,10 +15,10 @@ ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 19daac65c808691be20621d6718b4b71e33b83f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284632"
 ---
 # <a name="report-server-web-service-endpoints"></a>报表服务器 Web 服务端点
@@ -31,7 +31,7 @@ ms.locfileid: "63284632"
 >  如果报表服务器配置为 SharePoint 集成模式，<xref:ReportService2005> API 将返回 rsOperationNotSupportedSharePointMode 错误  。 如果报表服务器配置为本机模式，<xref:ReportService2006> API 将返回 rsOperationNotSupportedNativeMode 错误  。 同样，在非预期模式中使用 <xref:ReportService2010> 中的模式特定 API 时，API 将返回相应的错误。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 中不推荐使用 <xref:ReportService2005> 和 <xref:ReportService2006> 端点。 <xref:ReportService2010> 端点包含两个端点的功能和其他管理功能。  
+>  在 <xref:ReportService2005> 中不推荐使用 <xref:ReportService2006> 和 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 端点。 <xref:ReportService2010> 端点包含两个端点的功能和其他管理功能。  
   
  如果将报表服务器配置为本机模式或 SharePoint 集成模式，则可以使用以下 URL 之一访问管理端点的 WSDL：  
   
@@ -61,7 +61,7 @@ https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx
 ## <a name="sharepoint-proxy-endpoints"></a>SharePoint 代理端点  
  当报表服务器配置为 SharePoint 集成模式且已安装 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 外接程序时，将在 SharePoint 服务器上安装一组代理端点。 当将报表服务器配置为 SharePoint 集成模式时，代理端点是用于开发报表解决方案的主要 API。 当针对代理端点进行开发时，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 外接程序在可信帐户身份验证模式下管理 SharePoint 服务器与报表服务器之间的凭据交换。 当针对报表服务器端点进行开发时，调用应用程序必须在可信帐户身份验证模式下管理凭据交换。 下表列出随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 外接程序安装的端点。  
   
-|代理端点|描述|  
+|代理端点|说明|  
 |--------------------|-----------------|  
 |<xref:ReportService2006>|为管理配置为 SharePoint 集成模式的报表服务器提供 API。<br /><br /> 注意：在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 中不推荐使用此终结点。|  
 |<xref:ReportService2010>|为管理配置为本机模式或 SharePoint 集成模式的报表服务器提供 API。|  

@@ -16,10 +16,10 @@ ms.assetid: b22ba097-6cb8-4c5d-916b-6360dd01d2c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf00138e512b966614a19adaf152f038c516f9fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953497"
 ---
 # <a name="getbyte-method-int-sqlserverresultset"></a>getByte 方法 (int) (SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67953497"
 public byte getByte(int columnIndex)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  columnIndex   
   
  指示列索引的 int  。  
@@ -42,10 +42,10 @@ public byte getByte(int columnIndex)
 ## <a name="return-value"></a>返回值  
  一个 byte 值  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getByte 方法是由 java.sql.ResultSet 接口中的 getByte 方法指定的。  
   
  只有可以安全返回 byte 值的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型（例如 tinyint 和 bit）才支持此方法。 任何其他数据类型将会引发异常。  

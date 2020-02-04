@@ -1,10 +1,9 @@
 ---
-title: “排序规则”对话框 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: “排序规则”对话框
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ef284f2f09493ce0bd201efbd691c8ee1ba07c29
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 1c926bd77ab1fd2abf048c15d93b8935b2ed679d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262595"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255482"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>“排序规则”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,9 +27,9 @@ ms.locfileid: "68262595"
   
 在以下情况下将显示此对话框：  
   
--   在“列属性”选项卡的“排序规则”字段中输入无效的排序规则名称。  
+-   在“列属性”  选项卡的“排序规则”  字段中输入无效的排序规则名称。  
   
--   在“列属性”选项卡的“排序规则”字段中单击，再单击该字段右侧的省略号按钮 (…)。  
+-   在“列属性”选项卡的“排序规则”字段中单击，再单击该字段右侧的省略号按钮 (…)    。  
   
 ## <a name="options"></a>选项  
 **SQL 排序规则**  
@@ -38,10 +39,10 @@ ms.locfileid: "68262595"
 在下拉列表中由 Windows 定义的排序规则顺序之间进行选择。  
   
 **二进制排序**  
-使用字符值的二进制代码进行比较。 如果选择此选项，某些字母比较选项将不可用。 例如，不区分大小写的比较选项将不可用，因为大写字母和小写字母具有不同的二进制编码。 只有在选择了“Windows 排序规则”后才适用。  
+使用字符值的二进制代码进行比较。 如果选择此选项，某些字母比较选项将不可用。 例如，不区分大小写的比较选项将不可用，因为大写字母和小写字母具有不同的二进制编码。 只有在选择了“Windows 排序规则”  后才适用。  
   
 **字典排序**  
-使用字母比较选项。 只有在选择了“Windows 排序规则”后才适用。 字母比较选项包括：  
+使用字母比较选项。 只有在选择了“Windows 排序规则”  后才适用。 字母比较选项包括：  
   
 -   **区分大小写** 如果希望在比较中将大写字母和小写字母视为不相同，请选择此选项。  
   

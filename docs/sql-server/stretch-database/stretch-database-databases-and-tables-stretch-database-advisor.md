@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843749"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>使用数据迁移助手标识 Stretch Database 的数据库和表
@@ -56,7 +56,7 @@ Stretch Database 顾问之前是 SQL Server 2016 升级顾问的一个组件。 
 
 随着数据迁移助手的发布，它替换并扩展了升级顾问，并将 Stretch Database 顾问的功能纳入到此新工具中。 无需选择任何选项即可获取与 Stretch Database 相关的建议。 当在数据迁移助手中运行评估时，与 Stretch Database 相关的结果将显示在“功能建议”的“存储”选项卡上   。
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  启用 Stretch Database。  
   
 -   要在 **数据库**上启用 Stretch Database，请参阅 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。  

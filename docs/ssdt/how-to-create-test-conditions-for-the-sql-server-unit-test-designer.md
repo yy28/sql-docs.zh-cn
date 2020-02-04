@@ -1,23 +1,24 @@
 ---
-title: 如何：为 SQL Server 单元测试设计器创建测试条件 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 为 SQL Server 单元测试设计器创建测试条件
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6406c2e2ff709e163057163424719169cb2b9787
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911793"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241480"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>如何：为 SQL Server 单元测试设计器创建测试条件
+
 可以使用可扩展的 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 类来创建新的测试条件。 例如，您可以创建一个新的测试条件，验证结果集中列或值的数目。  
   
 ## <a name="to-create-a-test-condition"></a>创建测试条件  
@@ -35,7 +36,7 @@ ms.locfileid: "67911793"
   
 6.  在“项目”  菜单上，单击“卸载项目”  。  
   
-7.  在“解决方案资源管理器”  中右键单击项目，然后选择“编辑 <project name>.csproj”  。  
+7.  在“解决方案资源管理器”  中右键单击项目，然后选择“编辑 **.csproj”<project name>** 。  
   
 8.  在导入 Microsoft.CSharp.targets 后添加以下 Import 语句：  
   
@@ -48,7 +49,7 @@ ms.locfileid: "67911793"
   
 10. 从 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 类派生你的类。  
   
-11. 用强名称为程序集签名。 有关详细信息，请参阅[如何：使用强名称为程序集签名](https://msdn.microsoft.com/library/xc31ft41.aspx)。  
+11. 用强名称为程序集签名。 有关更多信息，请参见[如何：使用强名称为程序集签名](https://msdn.microsoft.com/library/xc31ft41.aspx)。  
   
 12. 生成类库。  
   
@@ -175,7 +176,7 @@ namespace Ssdt.Samples.SqlUnitTesting
   
 [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) 必须添加到扩展 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 的类中。 此特性使该类能够被 SQL Server Data Tools 发现并且在单元测试设计和执行过程中使用。 该特性有两个参数：  
   
-|特性参数|位置|描述|  
+|特性参数|位置|说明|  
 |-----------------------|------------|---------------|  
 |DisplayName|1|在“测试条件”组合框中标识字符串。 此名称必须唯一。 如果两个条件具有相同的显示名称，将向用户显示找到的第一个条件，并且在 Visual Studio 错误管理器将显示警告。|  
 |ImplementingType|2|该参数用于唯一标识扩展。 您需要更改该参数以便匹配您要放置特性的类型。 本示例使用 ResultSetColumnCountCondition  类型，因此请使用 typeof(ResultSetColumnCountCondition)  。 如果你的类型是 NewTestCondition  ，请使用 typeof(NewTestCondition)  。|  

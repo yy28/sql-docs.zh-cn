@@ -1,10 +1,9 @@
 ---
-title: “CHECK 约束表达式”对话框 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: “CHECK 约束表达式”对话框
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f1554ee91444462c52dee404d198b35944a7caf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: fcd0eacf11390947248208310eba3ddec40089ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263672"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255503"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>“CHECK 约束表达式”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ NOT (payment_method = 'credit card') OR
   
 SQL 语法由下列参数组成：  
   
-|参数|描述|  
+|参数|说明|  
 |-------------|---------------|  
 |常量|一个如数值数据或字符数据之类的文本值。 字符数据必须用单引号 (') 括起来。|  
 |column_name|指定列。|  

@@ -17,10 +17,10 @@ ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8724bbcfdb410f573ea65fbc1b9364d44f9af23d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578504"
 ---
 # <a name="tasks-and-permissions"></a>任务和权限
@@ -36,7 +36,7 @@ ms.locfileid: "65578504"
 ## <a name="system-and-item-level-tasks"></a>系统级任务和项级任务  
  任务分为两类：系统级任务和项级任务。 一个角色只能包含单个类别中的任务。 下表对每一类别的任务进行了说明。  
   
-|类别|描述|  
+|类别|说明|  
 |--------------|-----------------|  
 |[项级任务](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)|对报表服务器管理的项（例如文件夹、报表、报表模型和资源）执行的操作。<br /><br /> 项级任务的作用域为报表服务器文件夹命名空间。 通过报表服务器上的文件夹或通过 URL 访问的项都受到包含项级任务的角色分配的保护。|  
 |[系统级任务](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)|在系统级执行的操作，例如，管理可用于多个项的作业或共享计划。 系统级任务的作用域扩展到报表服务器文件夹命名空间之外。|  

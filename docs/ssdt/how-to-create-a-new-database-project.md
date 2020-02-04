@@ -1,11 +1,7 @@
 ---
-title: 如何：创建新的数据库项目 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 创建新的数据库项目
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.importschema
@@ -17,14 +13,19 @@ f1_keywords:
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3fb617241f9af31122993bc1d341e433ac62904f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3ce0ac6afc902803afe8aa6e20c71f38998f8286
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897168"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241540"
 ---
-# <a name="how-to-create-a-new-database-project"></a>如何：创建新的数据库项目
+# <a name="how-to-create-a-new-database-project"></a>如何创建新的数据库项目
+
 您可以创建一个新的数据库项目，并从现有数据库、.sql 脚本文件或数据层应用程序 (.dacpac) 中导入数据库架构。 然后可以调用可用于所连接的数据库开发的相同可视化设计器工具（Transact\-SQL 编辑器、表设计器），对脱机数据库项目进行更改，然后将更改发布回生产数据库。 这些更改也可以另存为脚本以便在以后发布。 使用“项目属性”  窗格，可以将目标平台更改为不同的 SQL Server 版本（包括 SQL Azure）。  
   
 下面的两个过程通过创建一个新的数据库项目并从现有数据库导入架构，大体上实现同样的目标。 每个数据库对象都将表示为“解决方案资源管理器”  中的 SQL 脚本文件 (.sql)。 有关从快照导入数据库架构的详细信息，请参阅[如何：创建项目的快照](../ssdt/how-to-create-a-snapshot-of-a-project.md)。  
@@ -54,7 +55,7 @@ ms.locfileid: "67897168"
   
 ### <a name="to-create-a-new-project-and-import-existing-database-schema"></a>创建新项目并导入现有数据库架构  
   
-1.  依次单击“文件”  、“新建”  和“项目”  。 在“新建项目”  对话框的左窗格中选择“SQL Server”  。 请注意，只有一种类型的数据库项目：“SQL Server 数据库项目”  。 与以前的 Visual Studio 版本不同，没有特定于平台的项目。 在创建了项目后，你将能够在“项目设置”  对话框中设置你的目标平台。 此类任务将在主题[如何：更改目标平台并发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)中予以介绍。  
+1.  依次单击“文件”  、“新建”  和“项目”  。 在“新建项目”  对话框的左窗格中选择“SQL Server”  。 请注意，只有一种类型的数据库项目：“SQL Server 数据库项目”  。 与以前的 Visual Studio 版本不同，没有特定于平台的项目。 在创建了项目后，你将能够在“项目设置”  对话框中设置你的目标平台。 此类任务将在[如何：更改目标平台和发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题中进行介绍。  
   
 2.  将项目的名称更改为“TradeDev”  ，然后单击“确定”  以便创建新项目。  
   
@@ -75,5 +76,5 @@ ms.locfileid: "67897168"
 9. 在“解决方案资源管理器”  中右键单击“TradeDev”  项目，然后选择“生成”  以便生成数据库项目。  
   
 ## <a name="see-also"></a>另请参阅  
-[如何：更改目标平台并发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+[如何：更改目标平台和发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   

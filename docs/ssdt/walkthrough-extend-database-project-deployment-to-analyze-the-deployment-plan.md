@@ -1,23 +1,24 @@
 ---
-title: 演练：扩展数据库项目部署以分析部署计划 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 扩展数据库项目部署以分析部署计划
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 167667590df0b2172e05674c462cfa9833d45acd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912785"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242675"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>演练：扩展数据库项目部署以分析部署计划
+
 可以创建部署参与者以便在部署 SQL 项目时执行自定义操作。 可以创建 DeploymentPlanModifier 或 DeploymentPlanExecutor。 使用 DeploymentPlanModifier 可在执行计划前更改计划，使用 DeploymentPlanExecutor 可在执行计划时执行操作。 在本演练中，您创建一个名为 DeploymentUpdateReportContributor 的 DeploymentPlanExecutor，它可创建有关在部署数据库项目时执行的操作的报告。 由于此生成参与者接受用于控制是否生成报告的参数，因此您必须额外执行一个必需步骤。  
   
 在本演练中，您将完成以下主要任务：  
@@ -545,11 +546,11 @@ ms.locfileid: "67912785"
   
 6.  （可选）可以为强名称密钥文件指定密码。  
   
-7.  单击“确定”  。  
+7.  单击“确定”。   
   
 8.  在“文件”  菜单上，单击“全部保存”  。  
   
-9. 在“生成”  菜单上，单击“生成解决方案”  。  
+9. 在“生成”  菜单中，单击“生成解决方案”  。  
   
 接下来，您必须安装程序集，以便在生成和部署 SQL 项目时加载该程序集。  
   
@@ -736,7 +737,7 @@ ms.locfileid: "67912785"
   
     通过在执行部署计划时分析该计划，您可以报告部署中包含的任何信息，并可以基于该计划中的步骤执行其他操作。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 可以创建其他工具来处理输出 XML 文件。 这只是 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 的一个示例。 还可以创建 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)，以便在执行部署计划前更改该计划。  
   
 ## <a name="see-also"></a>另请参阅  

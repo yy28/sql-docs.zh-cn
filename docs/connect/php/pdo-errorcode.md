@@ -11,10 +11,10 @@ ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9846867cfc6bd50568440c5c66711457754af50c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993285"
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
@@ -32,7 +32,7 @@ mixed PDO::errorCode();
 ## <a name="return-value"></a>返回值  
 如果数据库句柄上没有任何操作，PDO::errorCode 将以字符串或 NULL 形式返回五个字符的 SQLSTATE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 PDO_SQLSRV 驱动程序中的 PDO::errorCode 会针对某些成功操作返回警告。 例如，成功连接时，PDO::errorCode 会返回“01000”，该值指示 SQL_SUCCESS_WITH_INFO。  
   
 PDO::errorCode 仅检索直接在数据库连接上执行的操作的错误代码。 如果通过 PDO::prepare 或 PDO::query 创建 PDOStatement 实例，并生成与语句对象有关的错误，PDO::errorCode 不会检索该错误。 必须调用 PDOStatement::errorCode 才可以返回在特定语句对象上执行的操作的错误代码。  

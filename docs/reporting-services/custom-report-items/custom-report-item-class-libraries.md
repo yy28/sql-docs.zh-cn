@@ -12,10 +12,10 @@ ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194110"
 ---
 # <a name="custom-report-item-class-libraries"></a>自定义报表项类库
@@ -35,7 +35,7 @@ ms.locfileid: "63194110"
 |||  
 |-|-|  
 |**名称**|自定义报表项的名称。|  
-|**类型**|自定义报表项的类型。|  
+|类型 |自定义报表项的类型。|  
 |**CustomData**|用于封装在设计时指定的自定义报表项数据属性的 <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> 对象。|  
 |CustomProperties |自定义报表项的自定义属性的集合。|  
 |高度 |自定义报表项控件的高度。|  

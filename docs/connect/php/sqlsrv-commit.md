@@ -18,13 +18,13 @@ ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13c4f2534ec49c1d3467045d778e0c446f972573
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992848"
 ---
-# <a name="sqlsrvcommit"></a>sqlsrv_commit
+# <a name="sqlsrv_commit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 在指定连接上提交当前事务，并将该连接返回至自动提交模式。 当前事务包括指定连接上的所有语句，这些语句在调用 [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) 之后和调用 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) 或 **sqlsrv_commit**之前执行。  
@@ -42,7 +42,7 @@ ms.locfileid: "67992848"
 sqlsrv_commit( resource $conn )  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
 *$conn*：其事务处于活动状态的连接。  
   
 ## <a name="return-value"></a>返回值  

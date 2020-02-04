@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844592"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
@@ -26,14 +26,14 @@ ms.locfileid: "73844592"
   
  如果你为单个表选择“任务 | Stretch | 启用”  ，且尚未为数据库启用 Stretch Database，向导将会为数据库配置 Stretch Database，并在此过程中让你配置表。 请执行本主题中的步骤，而非[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)中的步骤。  
   
- 在数据库或表上启用 Stretch Database 需要 db_owner 权限。 在数据库上启用 Stretch Database 也需要 CONTROL DATABASE 权限。  
+ 在数据库或表上启用 Stretch Database 需要 db_owner 权限。 对数据库启用 Stretch Database 还需要有 CONTROL DATABASE 权限。  
 
 > [!NOTE]
 > 之后如果要禁用 Stretch Database，请记住，禁用表或数据库的 Stretch Database 不会删除远程对象。 如果希望删除远程表或远程数据库，则需要使用 Azure 管理门户进行删除。 远程对象会继续产生 Azure 成本，直到手动删除它们。 
  
 ## <a name="before-you-get-started"></a>开始操作之前  
   
--   在为数据库配置 Stretch 之前，建议你运行 Stretch Database Advisor 以识别适合配置 Stretch 的数据库和表。 Stretch Database Advisor 也能识别阻止问题。 有关详细信息，请参阅 [通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库和表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。  
+-   在为数据库配置 Stretch 之前，建议你运行 Stretch Database Advisor 以识别适合配置 Stretch 的数据库和表。 延伸数据库顾问还可识别阻碍性问题。 有关详细信息，请参阅 [通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库和表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。  
   
 -   查看 [Stretch Database 的限制](../../sql-server/stretch-database/limitations-for-stretch-database.md)。  
   
@@ -41,14 +41,14 @@ ms.locfileid: "73844592"
   
 -   具有创建新 Azure 服务器或选择现有 Azure 服务器所需的连接和登录名信息。  
   
-##  <a name="EnableTSQLServer"></a>先决条件：在服务器上启用 Stretch Database  
+##  <a name="EnableTSQLServer"></a> 先决条件：在服务器上启用 Stretch Database  
  必须先在本地服务器上启用 Stretch Database，然后才能在数据库或表上启用它。 此操作需要 sysadmin 或 serveradmin 权限。  
   
 -   如果你拥有必要的管理权限，“为数据库启用 Stretch”  向导将会为服务器配置 Stretch。  
   
 -   如果你没有必要的权限，在你运行向导之前，管理员必须通过运行 **sp_configure** 来手动启用该选项，否则便需由管理员运行该向导。  
   
- 若要在服务器上手动启用 Stretch Database，请运行 **sp_configure** 并打开 **remote data archive** 选项。 下列示例通过将 **remote data archive** 选项的值设置为 1 来启用它。  
+ 若要在服务器上手动启用 Stretch Database，请运行 **sp_configure** 并打开 **remote data archive** 选项。 以下示例通过将“**远程数据存档**”选项的值设置为 1 来启用该选项。  
   
 ```sql
 EXEC sp_configure 'remote data archive' , '1';  
@@ -66,11 +66,11 @@ GO
 ##  <a name="EnableTSQLDatabase"></a> 使用 Transact-SQL 在数据库上启用 Stretch Database  
  必须先在数据库上启用 Stretch Database，然后才能在单个表上启用它。  
   
- 在数据库或表上启用 Stretch Database 需要 db_owner 权限。 在数据库上启用 Stretch Database 也需要 CONTROL DATABASE 权限。  
+ 在数据库或表上启用 Stretch Database 需要 db_owner 权限。 对数据库启用 Stretch Database 还需要有 CONTROL DATABASE 权限。  
   
-1.  开始之前，请为 Stretch Database 迁移的数据选择现有 Azure 服务器，或创建新的 Azure 服务器。  
+1.  在开始之前，请选择 Stretch Database 要将数据迁移到的现有 Azure 服务器，或创建一个新的 Azure 服务器。  
   
-2.  在 Azure 服务器上，以 SQL Server 的 IP 地址创建能让 SQL Server 与远程服务器通信的防火墙规则。  
+2.  在该 Azure 服务器上，创建一个允许 SQL Server 与远程服务器通信的防火墙规则，该规则使用 SQL Server 的 IP 地址范围。  
 
     可以轻松找到所需值，并且通过尝试从 SQL Server Management Studio (SSMS) 中的对象资源管理器连接 Azure 服务器来创建防火墙规则。 SSMS 可帮助你通过打开以下对话框（已包括所需的 IP 地址值）来创建规则。
     
@@ -113,13 +113,13 @@ GO
   
         -   远程 Azure 服务器已配置为支持 Azure Active Directory 身份验证。  
   
-        -   用来运行 SQL Server 实例的服务帐户在远程 Azure 服务器上必须配置为 dbmanager 或 sysadmin 帐户。  
+        -   必须将运行 SQL Server 实例的服务帐户配置为远程 Azure 服务器上的 dbmanager 或 sysadmin 帐户。  
   
 5.  若要为数据库配置 Stretch Database，请运行 ALTER DATABASE 命令。  
   
     1.  对于 SERVER 参数，请提供现有 Azure 服务器的名称，包括名称的 `.database.windows.net` 部分 — 例如 `MyStretchDatabaseServer.database.windows.net`。  
   
-    2.  提供具有 CREDEMTIAL 参数的现有管理员凭据，或指定 FEDERATED_SERVICE_ACCOUNT = ON。 下面的示例提供现有的凭据。  
+    2.  提供具有 CREDEMTIAL 参数的现有管理员凭据，或指定 FEDERATED_SERVICE_ACCOUNT = ON。 以下示例提供了一个现有的凭据。  
   
     ```sql  
     ALTER DATABASE <database name>  
@@ -138,14 +138,14 @@ GO
   
 -   [暂停和恢复数据迁移 (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
--   [对 Stretch Database 进行管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+-   [Stretch Database 的管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
--   [备份已启用延伸的数据库](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
+-   [备份启用了延伸的数据库](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
   
 -   [还原已启用延伸的数据库](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库和表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
+ [通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库以及表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
  [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   

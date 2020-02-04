@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67957686"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE 代码加速器进行数据整理
@@ -45,7 +45,7 @@ import prose.codeaccelerator as cx
 
 PROSE 代码加速器会分析数据文件的结构，并自动生成用以加载文件的代码，以解决此问题。 在大多数情况下，生成的代码可正确分析数据。 在少数情况下，可能需要调整代码以满足需求。
 
-请参考如下示例：
+请考虑以下示例：
 
  ```python
 import prose.codeaccelerator as cx
@@ -113,10 +113,10 @@ builder.learn().code()
 另一种常见场景是检测字符串列中的模式，以便进行清除或分组。 例如，你的一个日期列中可能有多种不同格式的日期。 为了标准化这些值，你可能想要使用正则表达式来编写条件语句。
 
 
-|   |“属性”                      |BirthDate      |
+|   |名称                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
-| 1 |Naiara Moravcikova        |Unknown        |
+| 1 |Naiara Moravcikova        |未知        |
 | 2 |Jihoo Spel                |2014           |
 | 3 |Viachaslau Gordan Hilario |22-Apr-67      |
 | 4 |Maya de Villiers          |19-Mar-60      |

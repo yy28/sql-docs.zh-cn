@@ -1,6 +1,6 @@
 ---
-title: “参数”对话框 | Microsoft Docs
-ms.custom: ''
+title: “参数”对话框
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4573c603ad2fed4071a7903c20bd82aec3c78096
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 804cec4cbfe25f92b6b244b25b25a4498a09f1fa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267350"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245041"
 ---
 # <a name="arguments-dialog-box"></a>“参数”对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "68267350"
   
 ## <a name="options"></a>选项  
 **参数**  
-列出在“外部工具”  对话框中为该工具指定的当前变量。 有关预定义参数及其定义的完整列表，请参阅[外部工具的参数](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)。 也可以输入自定义参数。  
+列出在“外部工具”  对话框中为该工具指定的当前变量。 有关预定义参数及其定义的完整列表，请参阅 [外部工具的参数](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)。 也可以输入自定义参数。  
   
-**Command line**  
+**命令行**  
 显示在“参数”  对话框中指定的参数值。  
   
 ## <a name="see-also"></a>另请参阅  

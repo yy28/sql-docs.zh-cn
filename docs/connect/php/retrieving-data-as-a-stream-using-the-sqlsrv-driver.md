@@ -11,10 +11,10 @@ ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b83188359489759f50b2929de769721d627c15d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992898"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>使用 SQLSRV 驱动程序以流的形式检索数据
@@ -30,9 +30,9 @@ ms.locfileid: "67992898"
   
 2.  使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 在结果集中移动到下一行。  
   
-3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 从行中检索字段。 通过将 SQLSRV_PHPTYPE_STREAM(<encoding>) 用作函数调用中的第三个函数，指定数据将以流的形式进行检索  。 此表列出了用于指定编码及其描述符的常量：  
+3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 从行中检索字段。 通过将 SQLSRV_PHPTYPE_STREAM( **) 用作函数调用中的第三个函数，指定数据将以流的形式进行检索<encoding>** 。 此表列出了用于指定编码及其描述符的常量：  
   
-    |SQLSRV 常量|描述|  
+    |SQLSRV 常量|说明|  
     |-------------------|---------------|  
     |SQLSRV_ENC_BINARY|数据以原始字节流的形式从服务器返回，无需执行编码或转换。|  
     |SQLSRV_ENC_CHAR|数据以在系统上设置的 Windows 区域设置的代码页中指定的 8 位字符的形式返回。 任何多字节字符或未映射到此代码页中的字符都会替换为单字节问号 (?) 字符。|  
@@ -42,7 +42,7 @@ ms.locfileid: "67992898"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |---------|---------------|  
 |[使用 SQLSRV 驱动程序时支持流的数据类型](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|列出可以流的形式进行检索的 SQL Server 数据类型。|  
 |[如何：使用 SQLSRV 驱动程序以流的形式检索字符数据](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|演示如何以流的形式检索字符数据。|  

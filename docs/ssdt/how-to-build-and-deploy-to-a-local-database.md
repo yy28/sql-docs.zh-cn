@@ -1,23 +1,24 @@
 ---
-title: 如何：生成和部署到本地数据库 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 生成和部署到本地数据库
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 612ed6750946dfa5e77970bf6e3a4859cbb0045b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c3c079ddc375c1fa252975c419aff587d324dd1b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911874"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241609"
 ---
-# <a name="how-to-build-and-deploy-to-a-local-database"></a>如何：生成和部署到本地数据库
+# <a name="how-to-build-and-deploy-to-a-local-database"></a>如何生成和部署到本地数据库
+
 Microsoft SQL Server 2012 提供称作 SQL Server Express 本地数据库运行时的本地按需运行的服务器实例，在调试 SQL Server 数据库项目时该实例将被激活。 此本地服务器实例可以用作生成、测试和调试您的项目的沙盒。 它独立于已安装的任何 SQL Server 实例，并且不可从 SQL Server Data Tools (SSDT) 之外访问。 如果开发人员对生产数据库只有有限访问权限或没有访问权限，但想要在授权人士将其项目部署到生产前在本地测试其项目，则上述安排适合于此类开发人员。 此外，在您为 SQL Azure 开发数据库解决方案时，可以利用此本地服务器所提供的便利，在将数据库项目部署到云中之前在本地开发和测试您的数据库项目。  
   
 > [!WARNING]  
@@ -74,5 +75,5 @@ Microsoft SQL Server 2012 提供称作 SQL Server Express 本地数据库运行�
     select * from dbo.GetProductsBySupplier(1)  
     ```  
   
-9. 在 Transact\-SQL 编辑器窗格下的“结果”  窗格中，将看到返回 `Products` 表的 Apples 和 Potato Chips 行。  
+9. 在 Transact**SQL 编辑器窗格下的“结果”** \-窗格中，将看到返回 `Products` 表的 Apples 和 Potato Chips 行。  
   

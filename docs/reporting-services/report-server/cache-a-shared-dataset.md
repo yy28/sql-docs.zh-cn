@@ -9,10 +9,10 @@ ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7e98e5ffd8970806e2ed92e53c8e82da21387938
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574771"
 ---
 # <a name="cache-a-shared-dataset"></a>如何缓存一个共享数据集
@@ -39,7 +39,7 @@ ms.locfileid: "65574771"
   
 6.  选择缓存在 30 分钟后过期的选项。 还可以选择缓存按指定的计划过期。  
   
-7.  单击 **“应用”** 。  
+7.  单击“应用”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [管理共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)  

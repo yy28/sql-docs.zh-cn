@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.reviewer: ''
-ms.date: 03/14/2017
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8870849ef3cb83262284eab524b741c25a0a7ae
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: ab0abfe0e2221da335e069ef2f8ba6de38c1d3f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119215"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252993"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Transact-SQL 调试器 -“监视”窗口
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-**“监视”** 窗口显示有关所选表达式的信息。 最多可以有四个“监视”窗口：“监视 1”、“监视 2”、“监视 3”和“监视 4”    。 这些表达式是在 **“调用堆栈”** 窗口中选择的当前调用堆栈帧范围内求值的。 只有在调试模式下才可监视变量和表达式。  
+**“监视”** 窗口显示有关所选表达式的信息。 最多可以有四个监视窗口： **“监视 1”** 、 **“监视 2”、“监视 3”** 和 **“监视 4”** 。 这些表达式是在 **“调用堆栈”** 窗口中选择的当前调用堆栈帧范围内求值的。 只有在调试模式下才可监视变量和表达式。  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -38,7 +38,7 @@ ms.locfileid: "74119215"
   
 -   右键单击表达式，然后选择“编辑值”  。  
   
-## <a name="columns"></a>“列”  
+## <a name="columns"></a>列  
  **名称**  
  是由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器列出的表达式。 支持以下表达式：  
   
@@ -50,16 +50,16 @@ ms.locfileid: "74119215"
   
 -   通过向一个或多个变量、参数或系统函数应用运算符而生成的表达式，如 @IntegerCounter + 1 或 FirstName + LastName。  
   
--   返回单个值的 Transact-SQL 语句，例如：SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
+-   返回单个值的 Transact-SQL 语句，如 SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
   
- **ReplTest1**  
+ **值**  
  显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器对“名称”  中指定的表达式求值后所返回的值。  
   
  如果表达式的长度超过了 **“值”** 列的宽度，则将指针移动到该表达式的 **“值”** 单元格上方可显示一条工具提示，指示该表达式的完整值。  
   
  **“值”** 单元格中的放大镜图标指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器可视化工具可用。 在该列表中，可以指定 **“文本可视化工具”** 、 **“XML 可视化工具”** 或 **“HTML 可视化工具”** 。 若要启动调试器可视化工具，请单击此放大镜图标。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器将打开一个对话框，该对话框以适合相应数据类型的格式显示这些数据。  
   
- **类型**  
+ 类型   
  显示表达式的数据类型。  
   
 ## <a name="see-also"></a>另请参阅  

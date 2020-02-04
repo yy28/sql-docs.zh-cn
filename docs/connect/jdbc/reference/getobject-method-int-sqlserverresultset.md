@@ -16,10 +16,10 @@ ms.assetid: 94e59366-ca34-4cd5-a6ec-ae32d475ef36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98db08e342f1951df8346ae44e0689dbd7b7dd86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981230"
 ---
 # <a name="getobject-method-int-sqlserverresultset"></a>getObject 方法 (int) (SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67981230"
 public java.lang.Object getObject(int columnIndex)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  columnIndex   
   
  指示列索引的 int  。  
@@ -42,10 +42,10 @@ public java.lang.Object getObject(int columnIndex)
 ## <a name="return-value"></a>返回值  
  Object 值  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getObject 方法是由 java.sql.ResultSet 接口中的 getObject 方法指定的。  
   
  此方法将返回给定列的值作为一个 Java 对象。 根据 JDBC 规范中指定的内置类型映射，Java 对象的类型将为对应于此列 SQL 类型的默认 Java 对象类型。 如果此值为 SQL NULL，则驱动程序会返回 Java null。  

@@ -15,10 +15,10 @@ ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a6fe3c0cd82d8ee8b92948d76d4f7cdb5fa4cf73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570571"
 ---
 # <a name="role-assignments"></a>角色分配
@@ -30,10 +30,10 @@ ms.locfileid: "65570571"
 - 可由 Windows 安全性或其他身份验证机制进行身份验证的用户帐户或组帐户。  
   
 - 角色定义定义一组允许的任务，包括：
-  - **浏览者**
+  - **浏览器**
   - **内容管理员**
   - **我的报表**
-  - **发布服务器**
+  - **发布者**
   - **报表生成器**
   - **系统管理员**
   - **系统用户**
@@ -49,7 +49,7 @@ ms.locfileid: "65570571"
   
  下图显示了一个角色分配，它将一个组和一个特定用户映射到文件夹 B 的“发布者”  角色：  
   
- ![角色分配关系图](../../reporting-services/security/media/report-securityarch.gif "Role assignments diagram")  
+ ![角色分配关系图](../../reporting-services/security/media/report-securityarch.gif "角色分配关系图")  
 角色分配关系图  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>系统级和项级角色分配

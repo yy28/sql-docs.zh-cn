@@ -3,25 +3,25 @@ title: 安装新 R 包
 description: 了解如何使用 sqlmlutils 将新的 R 包安装到 SQL Server 机器学习服务或 SQL Server R Services 的实例。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 827e83a0d1b363d3b91477b9ae85fec156ee4fc9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727499"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479435"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装新的 R 包
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数以将新的 R 包安装到 SQL Server 机器学习服务或 SQL Server R Services 的实例  。 安装的包可用于使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 语句在数据库中运行的 R 脚本。
+本文介绍如何使用 [sqlmlutils **包中的函数以将新的 R 包安装到 SQL Server 机器学习服务或 SQL Server R Services 的实例**](https://github.com/Microsoft/sqlmlutils)。 安装的包可用于使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 语句在数据库中运行的 R 脚本。
 
 > [!NOTE]
 > 不建议使用标准 R `install.packages` 命令在 SQL Server 上添加 R 包。 请改用本文中所述的 sqlmlutils  。
@@ -51,7 +51,7 @@ sqlmlutils 包依赖于 RODBCext 包，RODBCext 依赖于许多其他包    。 
 
 如果客户端计算机可以访问 Internet，则可以联机下载并安装 sqlmlutils 及其依赖的包  。
 
-1. 从 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 将最新的 sqlmlutils zip 文件下载到客户端计算机  。 请勿解压缩文件。
+1. 从  **将最新的 sqlmlutils zip 文件下载到客户端计算机**https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 。 请勿解压缩文件。
 
 1. 打开“命令提示符”并运行以下命令，安装 sqlmlutils 和 RODBCext 包    。 将下载的 sqlmlutils zip 文件的完整路径替换进去（此示例假定该文件位于“文档”文件夹中）  。 已联机查找到 RODBCext 包，并安装它  。
 
@@ -64,7 +64,7 @@ sqlmlutils 包依赖于 RODBCext 包，RODBCext 依赖于许多其他包    。 
 
 如果客户端计算机没有 Internet 连接，则需要使用能够访问 Internet 的计算机预先下载 sqlmlutils 和 RODBCext 包   。 然后，可以将这些文件复制到客户端计算机上的一个文件夹中，并脱机安装这些包。
 
-RODBCext 包具备许多存在依赖关系的包，并且识别包的所有依赖关系很复杂  。 建议使用 [miniCRAN](https://andrie.github.io/miniCRAN/) 来为包含所有依赖包的包创建本地存储库文件夹  。
+RODBCext 包具备许多存在依赖关系的包，并且识别包的所有依赖关系很复杂  。 建议使用 [miniCRAN **来为包含所有依赖包的包创建本地存储库文件夹**](https://andrie.github.io/miniCRAN/)。
 有关详细信息，请参阅[使用 miniCRAN 创建本地 R 包存储库](create-a-local-package-repository-using-minicran.md)。
 
 **sqlmlutils** 包包含一个 zip 文件，可以将该文件复制到客户端计算机并进行安装。
@@ -108,9 +108,9 @@ RODBCext 包具备许多存在依赖关系的包，并且识别包的所有依�
     , @script = N'print(R.version)'
    ```
 
-1. 从 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 下载最新的 sqlmlutils zip 文件（请勿解压缩文件）  。 例如，将文件下载到 `c:\downloads\sqlmlutils_0.7.1.zip`。
+1. 从  **下载最新的 sqlmlutils zip 文件（请勿解压缩文件）** https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 。 例如，将文件下载到 `c:\downloads\sqlmlutils_0.7.1.zip`。
 
-1. 将整个 RODBCext 存储库文件夹 (`c:\downloads\rodbcext`) 和 sqlmlutils zip 文件 (`c:\downloads\sqlmlutils_0.7.1.zip`) 复制到客户端计算机   。 例如，将它们复制到客户端计算机上的 `c:\temp\packages` 文件夹中。
+1. 将整个 RODBCext 存储库文件夹 ( **) 和 sqlmlutils zip 文件 (** ) 复制到客户端计算机`c:\downloads\rodbcext`  `c:\downloads\sqlmlutils_0.7.1.zip`。 例如，将它们复制到客户端计算机上的 `c:\temp\packages` 文件夹中。
 
 在用于连接到 SQL Server 的客户端计算机上，打开命令提示符并运行以下命令依次安装 RODBCext 和 sqlmlutils   。
 
@@ -121,7 +121,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
 ## <a name="add-an-r-package-on-sql-server"></a>在 SQL Server 上添加 R 包
 
-在下面的示例中，将 [glue](https://cran.r-project.org/web/packages/glue/) 包添加到 SQL Server  。
+在下面的示例中，将 [glue **包添加到 SQL Server**](https://cran.r-project.org/web/packages/glue/)。
 
 ### <a name="add-the-package-online"></a>联机添加包
 
@@ -186,7 +186,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
     , @script = N'print(R.version)'
    ```
 
-1. 将整个 glue 存储库文件夹 (`c:\downloads\glue`) 复制到客户端计算机  。 例如，将它复制到 `c:\temp\packages\glue` 文件夹。
+1. 将整个 glue 存储库文件夹 ( **) 复制到客户端计算机**`c:\downloads\glue`。 例如，将它复制到 `c:\temp\packages\glue` 文件夹。
 
 在客户端计算机上执行以下操作：
 

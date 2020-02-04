@@ -1,23 +1,24 @@
 ---
-title: 演练：扩展数据库项目部署以修改部署计划 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 扩展数据库项目部署以修改部署计划
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d683bc743fe621b35cdc59588ce04f6ee96c5bbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 1f4c73d02d131a0399fd8dde7698592629ef2726
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068969"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242667"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>演练：扩展数据库项目部署以修改部署计划
+
 可以创建部署参与者以便在部署 SQL 项目时执行自定义操作。 可以创建 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 或 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)。 使用 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 可在执行计划前更改计划，使用 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 可在执行计划时执行操作。 在本演练中，你将创建一个名为 SqlRestartableScriptContributor 的 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)，用于将 IF 语句添加到部署脚本中的批处理，以便脚本能在执行期间出错时重新运行直至批处理完成。  
   
 在本演练中，您将完成以下主要任务：  
@@ -59,19 +60,19 @@ ms.locfileid: "68068969"
   
 2.  将文件“Class1.cs”重命名为“SqlRestartableScriptContributor.cs”。  
   
-3.  在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”。  
+3.  在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”  。  
   
-4.  在“框架”选项卡上，选择“System.ComponentModel.Composition”。  
+4.  在“框架”选项卡上，选择“System.ComponentModel.Composition”  。  
   
-5.  单击“浏览”并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies 目录，选择 Microsoft.SqlServer.TransactSql.ScriptDom.dll，然后单击“确定”。  
+5.  单击“浏览”  并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies  目录，选择 Microsoft.SqlServer.TransactSql.ScriptDom.dll  ，然后单击“确定”  。  
   
-6.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”。 单击“浏览”，并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin 文件夹。 选择“Microsoft.SqlServer.Dac.dll”、“Microsoft.SqlServer.Dac.Extensions.dll”和“Microsoft.Data.Tools.Schema.Sql.dll”条目，并单击“添加”，然后单击“确定”。  
+6.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”  。 单击“浏览”  ，并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin  文件夹。 选择“Microsoft.SqlServer.Dac.dll”  、“Microsoft.SqlServer.Dac.Extensions.dll”  和“Microsoft.Data.Tools.Schema.Sql.dll”  条目，并单击“添加”  ，然后单击“确定”  。  
   
 接下来，开始向类中添加代码。  
   
 #### <a name="to-define-the-sqlrestartablescriptcontributor-class"></a>定义 SqlRestartableScriptContributor 类  
   
-1.  在代码编辑器中，更新 class1.cs 文件以匹配以下 using 语句：  
+1.  在代码编辑器中，更新 class1.cs 文件以匹配以下 using  语句：  
   
     ```csharp  
     using System;  
@@ -148,7 +149,7 @@ ms.locfileid: "68068969"
   
     ```  
   
-    你将从基类 [DeploymentPlanContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.aspx) 重写 [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) 方法，该基类是 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 和 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 的基类。 将向 OnExecute 方法传递一个 [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 对象，该对象提供对任何指定参数、源和目标数据库模型、部署计划以及部署选项的访问权。 在此示例中，我们获取了部署计划和目标数据库名称。  
+    你将从基类 [DeploymentPlanContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) 重写 [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.aspx) 方法，该基类是 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 和 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 的基类。 将向 OnExecute 方法传递一个 [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 对象，该对象提供对任何指定参数、源和目标数据库模型、部署计划以及部署选项的访问权。 在此示例中，我们获取了部署计划和目标数据库名称。  
   
 2.  现在，将正文的开头添加到 OnExecute 方法：  
   
@@ -360,11 +361,11 @@ ms.locfileid: "68068969"
   
 -   必须定义多种 Helper 方法。 重要方法包括：  
   
-    |**方法**|**Description**|  
+    |**方法**|**说明**|  
     |--------------|-------------------|  
     |CreateExecuteSQL|定义 CreateExecuteSQL 方法以使用 EXEC sp_executesql 语句环绕提供的语句。 主要类型、方法和属性包括：[ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx)、[ExecutableProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference.aspx)、[SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx)、[ProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.procedurereference.aspx) 和 [ExecuteParameter](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executeparameter.aspx)。|  
     |CreateCompletedBatchesName|定义 CreateCompletedBatchesName 方法。 此方法创建将插入批处理的临时表中的名称。主要类型、方法和属性包括：[SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx)。|  
-    |IsStatementEscaped|定义 IsStatementEscaped 方法。 此方法确定此类模型元素是否需要先将语句包装在 EXEC sp_executesql 语句中，然后才能将其包含在 IF 语句中。 主要类型、方法和属性包括：TSqlObject.ObjectType、ModelTypeClass 以及以下模型类型的 TypeClass 属性：架构、过程、视图、TableValuedFunction、ScalarFunction、DatabaseDdlTrigger、DmlTrigger、ServerDdlTrigger。|  
+    |IsStatementEscaped|定义 IsStatementEscaped 方法。 此方法确定此类模型元素是否需要先将语句包装在 EXEC sp_executesql 语句中，然后才能将其包含在 IF 语句中。 主要类型、方法和属性包括：TSqlObject.ObjectType、ModelTypeClass 和以下模型类型的 TypeClass 属性：Schema、Procedure、View、TableValuedFunction、ScalarFunction、DatabaseDdlTrigger、DmlTrigger、ServerDdlTrigger。|  
     |CreateBatchCompleteInsert|定义 CreateBatchCompleteInsert 方法。 此方法创建将添加到部署脚本以便跟踪脚本执行进度的 INSERT 语句。 主要类型、方法和属性包括：InsertStatement、NamedTableReference、ColumnReferenceExpression、ValuesInsertSource 和 RowValue。|  
     |CreateIfNotExecutedStatement|定义 CreateIfNotExecutedStatement 方法。 此方法生成一个 IF 语句，该语句可检查临时批处理是否执行指示此批处理已执行的表。 主要类型、方法和属性包括：IfStatement、ExistsPredicate、ScalarSubquery、NamedTableReference、WhereClause、ColumnReferenceExpression、IntegerLiteral、BooleanComparisonExpression 和 BooleanNotExpression。|  
     |GetStepInfo|定义 GetStepInfo 方法。 此方法提取有关用于创建步骤的脚本的模型元素的信息以及步骤名称。 相关的类型和方法包括：[DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx)、[DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx)、[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)、[CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) 和 [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。|  
@@ -618,23 +619,23 @@ ms.locfileid: "68068969"
   
 #### <a name="to-sign-and-build-the-assembly"></a>生成程序集并对其进行签名  
   
-1.  在“项目”菜单上，单击“MyOtherDeploymentContributor 属性”。  
+1.  在“项目”  菜单上，单击“MyOtherDeploymentContributor 属性”  。  
   
 2.  单击“签名”  选项卡。  
   
-3.  单击“对程序集签名” 。  
+3.  单击“对程序集签名”  。  
   
-4.  在“选择强名称密钥文件”中，单击 **<New>**。  
+4.  在“选择强名称密钥文件”  中，单击 **<New>** 。  
   
-5.  在“创建强名称密钥”  对话框的“密钥文件名称” 中，键入“MyRefKey” 。  
+5.  在“创建强名称密钥”  对话框的“密钥文件名称”  中，键入“MyRefKey”  。  
   
 6.  （可选）可以为强名称密钥文件指定密码。  
   
-7.  单击“确定” 。  
+7.  单击“确定”。   
   
-8.  在“文件”  菜单上，单击“全部保存” 。  
+8.  在“文件”  菜单上，单击“全部保存”  。  
   
-9. 在“生成”  菜单上，单击“生成解决方案” 。  
+9. 在“生成”  菜单中，单击“生成解决方案”  。  
   
     接下来，您必须安装程序集，以便在部署 SQL 项目时加载该程序集。  
   
@@ -645,7 +646,7 @@ ms.locfileid: "68068969"
   
 1.  接下来，您要将程序集信息复制到 Extensions 目录中。 Visual Studio 在启动后将识别 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录和子目录中的任何扩展文件，并使其可供使用。  
   
-2.  将 MyOtherDeploymentContributor.dll 程序集文件从输出目录复制到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录。 默认情况下，已编译的 .dll 文件的路径为 YourSolutionPath\YourProjectPath\bin\Debug 或 YourSolutionPath\YourProjectPath\bin\Release。  
+2.  将 MyOtherDeploymentContributor.dll  程序集文件从输出目录复制到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录。 默认情况下，已编译的 .dll 文件的路径为 YourSolutionPath\YourProjectPath\bin\Debug 或 YourSolutionPath\YourProjectPath\bin\Release。  
   
 ## <a name="TestDeploymentContributor"></a>运行或测试部署参与者  
 若要运行或测试部署参与者，您必须执行以下任务：  
@@ -706,11 +707,11 @@ ms.locfileid: "68068969"
   
     1.  打开 Visual Studio 并打开包含您的 SQL 项目的解决方案。  
   
-    2.  在解决方案资源管理器中右键单击项目，并选择“发布…”选项。  
+    2.  在解决方案资源管理器中右键单击项目，并选择“发布…”选项  。  
   
     3.  设置要发布到的服务器和数据库的名称。  
   
-    4.  从对话框底部的选项中选择“生成脚本”。 这将创建可用于部署的脚本。 我们将检查此脚本以验证是否已添加 IF 语句以使脚本可重新启动。  
+    4.  从对话框底部的选项中选择“生成脚本”  。 这将创建可用于部署的脚本。 我们将检查此脚本以验证是否已添加 IF 语句以使脚本可重新启动。  
   
     5.  查看生成的部署脚本。 在标记为“预先部署脚本模板”的节的前面，您将看到类似于下列 Transact-SQL 语法的内容：  
   
@@ -779,9 +780,9 @@ ms.locfileid: "68068969"
 > [!NOTE]  
 > 若要使用定义的 DeploymentContributors 属性成功部署从项目生成的 dacpacs，则必须在将使用的计算机上安装包含部署参与者的 DLL。 这是因为这些 DLL 已标记为成功完成部署所需的项。  
 >   
-> 若要避开此要求，请从 .sqlproj 文件中排除部署参与者。 相反，请将 SqlPackage 与 AdditionalDeploymentContributors 参数结合使用来指定参与者在部署期间运行。 这在您仅希望在特定情况下（如部署到特定服务器）使用参与者时会很有用。  
+> 若要避开此要求，请从 .sqlproj 文件中排除部署参与者。 相反，请将 SqlPackage 与 AdditionalDeploymentContributors  参数结合使用来指定参与者在部署期间运行。 这在您仅希望在特定情况下（如部署到特定服务器）使用参与者时会很有用。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 您可以在执行部署计划前尝试对该计划进行其他类型的修改。 您可能需要进行的其他类型的修改包括：  
   
 -   向与某个版本号关联的所有数据库对象添加扩展属性。  

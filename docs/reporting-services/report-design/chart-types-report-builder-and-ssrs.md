@@ -11,10 +11,10 @@ ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9c041a300e9d64e5446f43a68f675f2290dd8963
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581649"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>图表类型（报表生成器和 SSRS）
@@ -33,18 +33,18 @@ ms.locfileid: "65581649"
   
 |图表类型|显示比率数据|显示股票数据|显示线性数据|显示多值数据|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
-|[分区图（报表生成器和 SSRS）](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|[条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|[数据条](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|[柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|[折线图（报表生成器和 SSRS）](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|[饼图&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||||  
-|[极坐标图（报表生成器和 SSRS）](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||||  
-|[范围图（报表生成器和 SSRS）](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-|[散点图（报表生成器和 SSRS）](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|[形状图（报表生成器和 SSRS）](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||||  
-|[迷你图](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-|[股价图（报表生成器和 SSRS）](../../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md)||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|  
+|[分区图（报表生成器和 SSRS）](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
+|[条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
+|[数据条](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
+|[柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
+|[折线图（报表生成器和 SSRS）](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
+|[饼图&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||||  
+|[极坐标图（报表生成器和 SSRS）](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||||  
+|[范围图（报表生成器和 SSRS）](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
+|[散点图（报表生成器和 SSRS）](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
+|[形状图（报表生成器和 SSRS）](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||||  
+|[迷你图](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
+|[股价图（报表生成器和 SSRS）](../../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md)||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
 
 ## <a name="next-steps"></a>后续步骤
 

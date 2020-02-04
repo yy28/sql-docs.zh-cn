@@ -1,6 +1,6 @@
 ---
-title: 打开编辑器 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 打开编辑器 (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31c2a9419105f1ee8435b3c1b7e0d7dc7728e0d8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 478f48cbea6bccb1cb66838a34d12689a94cf05a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267019"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253780"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>打开编辑器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68267019"
 ### <a name="permissions"></a>权限  
  在代码编辑器中执行的操作会受到为您用于登录的身份验证帐户所授予的权限的约束。 例如，如果您使用 Windows 身份验证打开一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，则无法执行引用您的 Windows 登录帐户无权访问的对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
-## <a name="how-to-open-editors"></a>如何：打开编辑器  
+## <a name="how-to-open-editors"></a>如何打开编辑器  
  本节介绍如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开各种编辑器。  
   
 ### <a name="using-the-filenew-menu"></a>使用“文件”/“新建”菜单  
@@ -67,9 +67,9 @@ ms.locfileid: "68267019"
 ### <a name="using-object-explorer"></a>使用对象资源管理器  
  在 **“对象资源管理器”** 中：  
   
--   右键单击连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的服务器节点，然后选择“新建查询”  。 这将打开一个连接到同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口，并将该窗口的数据库上下设置为登录帐户的默认数据库。  
+-   右键单击连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的服务器节点，然后选择“新建查询”  。 这将打开一个连接到同一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，并将该窗口的数据库上下设置为登录帐户的默认数据库。  
   
--   右键单击一个数据库节点，然后选择“新建查询”  。 这将打开一个连接到同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口，并将该窗口的数据库上下文设置为同一数据库。  
+-   右键单击一个数据库节点，然后选择“新建查询”  。 这将打开一个连接到同一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，并将该窗口的数据库上下文设置为同一数据库。  
   
 ### <a name="using-solution-explorer"></a>使用解决方案资源管理器  
  在  “解决方案资源管理器”中，展开一个文件夹，右键单击该文件夹中的某一项，再单击  “打开”，也可双击该项或文件。  

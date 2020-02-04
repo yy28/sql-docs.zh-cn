@@ -12,10 +12,10 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bbcd96e24d0819cc8403a669c7333bb92d396e05
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593740"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
@@ -38,7 +38,7 @@ ms.locfileid: "73593740"
   
 1.  在 **“开始”** 菜单上单击 **“控制面板”** ，单击 **“系统和安全”** ，然后单击 **“Windows 防火墙”** 。 不为“类别”视图配置控制面板，您只需要选择 **“Windows 防火墙”** 。  
   
-2.  单击 **“高级设置”** 。  
+2.  单击“高级设置”  。  
   
 3.  单击 **“入站规则”** 。  
   
@@ -46,25 +46,25 @@ ms.locfileid: "73593740"
   
 5.  单击 **“端口”** 的 **“规则类型”** 。  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。   
   
 7.  在 **“协议和端口”** 页上，单击 **TCP**。  
   
 8.  选择 **“特定本地端口”** ，然后键入值 **80**。  
   
-9. 单击“下一步”  。  
+9. 单击“下一步”。   
   
 10. 在 **“操作”** 页上，单击 **“允许连接”** 。  
   
-11. 单击“下一步”  。  
+11. 单击“下一步”。   
   
 12. 在 **“配置文件”** 页上，单击适合您的环境的选项。  
   
-13. 单击“下一步”  。  
+13. 单击“下一步”。   
   
 14. 在“名称”页上，输入名称“ReportServer (TCP on port 80)”    
   
-15. 单击 **“完成”** 。  
+15. 单击“完成”  。  
   
 16. 重新启动计算机。  
   

@@ -11,10 +11,10 @@ ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0e8441dec655398ec530bc95049a339edd9e01ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571407"
 ---
 # <a name="schedule-properties-reports-page"></a>计划属性（“报表”页）
@@ -29,7 +29,7 @@ ms.locfileid: "65571407"
  4. 右键单击共享计划，选择“属性”  。
  5. 单击“报表”  。  
   
-  还可以从 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户的“站点设置”管理共享计划  。
+  还可以从  **Web 门户的“站点设置”管理共享计划**[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]。
   
 > [!NOTE]  
 >  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "65571407"
   
 ## <a name="see-also"></a>另请参阅  
  [创建、修改和删除计划](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [计划](../../reporting-services/subscriptions/schedules.md)   
+ [“计划”](../../reporting-services/subscriptions/schedules.md)   
  [Management Studio 中报表服务器的 F1 帮助](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [配置报表的常规属性（报表管理器）](https://msdn.microsoft.com/10b941b2-28e6-4408-9ee4-acebc63c8496)  

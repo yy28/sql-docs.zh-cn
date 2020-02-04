@@ -1,6 +1,6 @@
 ---
-title: TCP/IP 属性 ("IP 地址" 选项卡) |Microsoft Docs
-ms.custom: ''
+title: TCP/IP 属性（“IP 地址”选项卡）
+ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 927f732d4f04c43b5e2973a82509e4da7970a448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: f1afdb9d25d599f32b2efb9d5339ef4afffd6f31
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023809"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307567"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 属性（“IP 地址”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  使用“TCP/IP 属性(‘IP 地址’选项卡)”  对话框，可以配置特定 IP 地址的 TCP/IP 协议选项。 只有选中 **“IP All”** ，才能一次配置所有地址的 **“TCP 动态端口”** 和 **“TCP 端口”** 。  
+  使用 **“TCP/IP 属性（‘IP 地址’选项卡）”** 对话框，可以配置特定 IP 地址的 TCP/IP 协议选项。 只有选中 **“IP All”** ，才能一次配置所有地址的 **“TCP 动态端口”** 和 **“TCP 端口”** 。  
   
- 更改在重启 SQL Server 后生效。 有关启动和停止 SQL Server Browser 服务的信息，请参阅[启动和停止 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+ 更改在重启 SQL Server 后生效。 有关启动和停止 SQL Server Browser 服务的信息，请参阅 [启动和停止 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 ## <a name="static-vs-dynamic-ports"></a>静态端口与动态端口  
  SQL Server 的默认实例侦听端口 1433 上传入的连接。 可以出于安全原因或客户端应用程序要求更改此端口。 默认情况下，命名实例（包含 SQL Server Express）被配置为侦听动态端口。 若要配置静态端口，请将 **“TCP 动态端口”** 框保留为空，并在 **“TCP 端口”** 框中提供一个可用的端口号。 有关打开防火墙中的端口的详细信息，请参阅联机丛书中的“配置 Windows 防火墙以允许 SQL Server 访问”。  
@@ -33,7 +33,7 @@ ms.locfileid: "68023809"
  如果某个 SQL Server 实例已配置为侦听动态端口，则在启动时，该实例将检查操作系统中的可用端口，并为该端口打开一个端点。 传入连接必须指定要连接的端口号。 由于每次启动 SQL Server 时端口号都可能会改变，因此 SQL Server 提供 SQL Server Browser 服务来监视端口，并将传入连接指向该实例的当前端口。 使用动态端口会增加通过防火墙连接 SQL Server 的复杂性，因为重新启动 SQL Server 时端口号可能会改变，从而需要更改防火墙设置。 若要避免通过防火墙连接的问题，请将 SQL Server 配置为使用静态端口。  
   
 ## <a name="options"></a>选项  
- **在职**  
+ **活动**  
  指示该 IP 地址在计算机上处于活动状态。 不适用于 **“IPAll”** 。  
   
  **已启用**  

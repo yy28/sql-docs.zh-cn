@@ -9,17 +9,17 @@ ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572118"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Reporting Services 订阅和传递的疑难解答
   
     
 利用本主题解决你在执行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] 报表订阅、计划和传递时遇到的问题。  
-## <a name="log-information"></a>日志信息
+## <a name="log-information"></a>记录信息
  
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的订阅页包含订阅状态，如果订阅出现问题， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 日志中将包含详细信息。 
 ![ssrs_tutorial_datadriven_subscription_status_ReportManager](../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png)
@@ -46,7 +46,7 @@ ms.locfileid: "65572118"
   
 其中，\<error message> 将被替换为从协作数据对象 (CDO) 返回的其他错误消息。  
   
-### <a name="to-resolve-this-problem"></a>解决此问题：  
+### <a name="to-resolve-this-problem"></a>若要解决此问题，请执行以下操作:  
 * 将 `SendUsing` 元素在 **Rsreportserver.config** 文件中的值设置为 1。  
 * 清除 `SMTPServer` 属性的值，使其为空。 还需要为 `SMTPServerPickupDirectory` 属性提供值。   
   

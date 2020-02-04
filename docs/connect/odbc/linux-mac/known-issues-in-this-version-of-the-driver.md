@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3508277502ad7e3eb3b0e7ff048301c8ed1efdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008779"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>此版本驱动程序中的已知问题
@@ -32,7 +32,7 @@ ms.locfileid: "68008779"
 
 - SQLBindParameter 的 ColumnSize 参数指的是 SQL 类型的字符数，而 BufferLength 是应用程序缓冲区中的字节数    。 但是，如果 SQL 数据类型为 `varchar(n)` 或 `char(n)` 且应用程序将参数绑定为 SQL_C_CHAR 或 SQL_C_VARCHAR 并且客户端的字符编码为 UTF-8，可能会从驱动程序收到“字符串数据，右截断”错误，即使 ColumnSize 的值与服务器上的数据类型大小保持一致  。 出现此错误是因为字符编码之间的转换可能会更改数据的长度。 例如，右单引号字符 (U+2019) 以 CP-1252 编码为单字节 0x92，但以 UTF-8 则编码为 3 个字节序列 - 0xe2 0x80 0x99。
 
-例如，如果采用 UTF-8 编码，并且为 out 参数的 SQLBindParameter 中的 BufferLength 和 ColumnSize 均指定 1，然后尝试检索存储在服务器上的 `char(1)` 列中的前一个字符（使用 CP-1252），则驱动程序会尝试将其转换为 3 个字节的 UTF-8 编码，但无法使结果适合 1 个字节的缓冲区    。 如果条件相反，它会比较 SQLBindParameter 中的 ColumnSize 和 BufferLength，然后在客户端和服务器上的不同代码页之间进行转换    。 因为 *ColumnSize* 的值 1 小于 *BufferLength* 的值（例如）3，因此驱动程序将生成一个错误。 要避免此错误，请确保转换后的数据长度适合指定的缓冲区或列。 请注意，对于 `varchar(n)` 类型，ColumnSize 不能大于 8000  。
+例如，如果采用 UTF-8 编码，并且为 out 参数的 SQLBindParameter 中的 BufferLength 和 ColumnSize 均指定 1，然后尝试检索存储在服务器上的  *列中的前一个字符（使用 CP-1252），则驱动程序会尝试将其转换为 3 个字节的 UTF-8 编码，但无法使结果适合 1 个字节的缓冲区*   `char(1)`。 如果条件相反，它会比较 SQLBindParameter 中的 ColumnSize 和 BufferLength，然后在客户端和服务器上的不同代码页之间进行转换    。 因为 *ColumnSize* 的值 1 小于 *BufferLength* 的值（例如）3，因此驱动程序将生成一个错误。 要避免此错误，请确保转换后的数据长度适合指定的缓冲区或列。 请注意，对于  *类型，ColumnSize 不能大于 8000*`varchar(n)`。
 
 ## <a name="see-also"></a>另请参阅  
 [编程指南](../../../connect/odbc/linux-mac/programming-guidelines.md)  

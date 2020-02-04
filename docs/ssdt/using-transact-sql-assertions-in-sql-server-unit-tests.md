@@ -1,23 +1,24 @@
 ---
-title: 在 SQL Server 单元测试中使用 Transact-SQL 断言 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 在 SQL Server 单元测试中使用 Transact-SQL 断言
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b4ff76e7d980081208f310dcae2a498f857151df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: b8feb69dc25d55b279d65904126afd2733160d6f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140960"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243513"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>在 SQL Server 单元测试中使用 Transact-SQL 断言
+
 在 SQL Server 单元测试中，Transact\-SQL 测试脚本将运行并返回结果。 有时，结果以结果集的形式返回。 您可以使用测试条件来验证结果。 例如，您可以使用测试条件来检查特定结果集中返回的行数，或验证特定测试的运行时长。 有关测试条件的详细信息，请参阅[在 SQL Server 单元测试中使用测试条件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)。  
   
 除了使用测试条件之外，还可以使用 Transact\-SQL 断言，也就是 Transact\-SQL 脚本中的 THROW 或 RAISERROR 语句。 在某些情况下，你可能更愿意使用 Transact\-SQL 断言，而不是测试条件。  
@@ -65,7 +66,7 @@ ms.locfileid: "68140960"
   
 可以通过在 Transact\-SQL 脚本中使用 RAISERROR 语句来在服务器上直接使用 Transact\-SQL 断言。 其语法为：  
   
-RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)   
+RAISERROR ( **, @ErrorMessage, @ErrorSeverity)@ErrorState**  
   
 其中：  
   
@@ -78,7 +79,7 @@ RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)
   
 @ErrorState 是介于 1 和 127 之间的任一整数。 您可以使用此整数来区分在代码中的不同位置引发的同一个错误。  
   
-有关详细信息，请参见 [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)。 以下主题中提供了在 SQL Server 单元测试中使用 RAISERROR 的示例，即[如何：编写在单个事务范围内运行的 SQL Server 单元测试](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)。  
+有关详细信息，请参见 [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)。 在 SQL Server 单元测试中使用 RAISERROR 的示例在主题[如何：编写在单个事务范围内运行的 SQL Server 单元测试](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)中提供。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

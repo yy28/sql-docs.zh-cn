@@ -16,10 +16,10 @@ ms.assetid: f81dde01-d328-4b32-8871-1efac645b68e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f474b2a15667df10bff8652239e8e00f1c923ba5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979379"
 ---
 # <a name="getstring-method-sqlserverresultset"></a>getString 方法 (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67979379"
   
 ## <a name="overload-list"></a>重载列表  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[getString (int)](../../../connect/jdbc/reference/getstring-method-int-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引的值作为 Java 编程语言中的字符串  。|  
 |[getString (java.lang.String)](../../../connect/jdbc/reference/getstring-method-java-lang-string-sqlserverresultset.md))|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名称作为 Java 编程语言中的字符串  的值。|  

@@ -1,6 +1,6 @@
 ---
-title: 向 Management Studio 添加自定义报表 | Microsoft Docs
-ms.custom: ''
+title: 向 Management Studio 添加自定义报表
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84aee831cb03ebf419849fca8bf653803e5d5ced
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a7a287cad9b674c55f032a04490a0518f723a797
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263463"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251367"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>向 Management Studio 添加自定义报表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,8 +69,8 @@ ms.locfileid: "68263463"
     2.  调整“显示最近使用列表中的文件”  的数量。  
   
 ## <a name="see-also"></a>另请参阅  
-[Management Studio 中的自定义报表](../../ssms/object/custom-reports-in-management-studio.md)  
-[将自定义报表与对象资源管理器节点属性一起使用](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
-[启用运行自定义报表警告](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
+[Management Studio 中的自定义报告](../../ssms/object/custom-reports-in-management-studio.md)  
+[将自定义报告与对象资源管理器节点属性一起使用](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
+[启用运行自定义报告警告](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
 [SQL Server Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

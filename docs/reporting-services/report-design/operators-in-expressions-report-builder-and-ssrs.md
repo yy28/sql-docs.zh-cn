@@ -9,10 +9,10 @@ ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3edfb8c885fbb8f7436f21271fc73d89599adfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582237"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>表达式中的运算符（报表生成器和 SSRS）
@@ -24,7 +24,7 @@ ms.locfileid: "65582237"
 ### <a name="arithmetic"></a>算术  
  算术运算符对表达式中的两个数值字词执行数学运算。  
   
-|运算符|描述|  
+|操作员|说明|  
 |--------------|-----------------|  
 |^|以一个数字为底、另一数字为幂求值。|  
 |*|使两个数字相乘。|  
@@ -37,7 +37,7 @@ ms.locfileid: "65582237"
 ### <a name="comparison"></a>比较  
  比较运算符测试两个表达式是否相同。  
   
-|运算符|描述|  
+|操作员|说明|  
 |--------------|-----------------|  
 |<|小于。|  
 |\<=|小于等于。|  
@@ -51,7 +51,7 @@ ms.locfileid: "65582237"
 ### <a name="string-concatenation"></a>字符串串联  
  字符串串联将第二个字符串追加到表达式中的第一个字符串。 对于其他字符串运算，使用内置函数。  
   
-|运算符|描述|  
+|操作员|说明|  
 |--------------|-----------------|  
 |&|串联两个字符串|  
 |+|串联两个字符串|  
@@ -59,7 +59,7 @@ ms.locfileid: "65582237"
 ### <a name="logical-and-bitwise"></a>逻辑和位  
  逻辑运算符和位运算符在表达式中的两个整数字词之间执行逻辑操作。  
   
-|运算符|描述|  
+|操作员|说明|  
 |--------------|-----------------|  
 |And|对两个布尔表达式执行逻辑与运算，或对两个数值表达式执行位与运算。|  
 |Not|对布尔表达式执行逻辑非运算，或对数值表达式执行位求反运算。|  
@@ -71,7 +71,7 @@ ms.locfileid: "65582237"
 ### <a name="bit-shift"></a>移位  
  位运算符在表达式中的两个整数字词之间执行位操作。  
   
-|运算符|描述|  
+|操作员|说明|  
 |--------------|-----------------|  
 |<\<|对位模式执行算术左移位运算。|  
 |>>|对位模式执行算术右移位运算。|  

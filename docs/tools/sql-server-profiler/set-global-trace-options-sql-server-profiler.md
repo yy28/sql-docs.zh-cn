@@ -1,27 +1,28 @@
 ---
-title: 设置全局跟踪选项 (SQL Server Profiler) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 设置全局跟踪选项
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9605f5e12b1dcc206d50e958d8c1787750e98941
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: c66bb6a8a2f894cb80fd17c9fce24a0d98d027f2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104184"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307944"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>设置全局跟踪选项 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题介绍了如何设置应用于随特定的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]实例创建的所有跟踪的选项。  
+
+本主题介绍了如何设置应用于随特定的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]实例创建的所有跟踪的选项。  
   
 ### <a name="to-set-global-trace-options"></a>设置全局跟踪选项  
   
@@ -45,7 +46,7 @@ ms.locfileid: "68104184"
   
     -   **默认重播线程数** ：控制重播期间使用的处理器线程数。 线程数越多，重播越快，但这会导致重播期间服务器的性能降低。 建议将该项设置为 **4**。 下表列出了可用选项：  
   
-        |ReplTest1|描述|  
+        |值|说明|  
         |-----------|-----------------|  
         |**2**|最小值。 使用两个线程重播。|  
         |**4**|默认值。|  
@@ -53,7 +54,7 @@ ms.locfileid: "68104184"
   
     -   “默认 Health Monitor 等待间隔(秒)”  设置重播线程可以阻塞其他进程的最长时间（以秒为单位）。 下表说明了这些值。  
   
-        |ReplTest1|描述|  
+        |值|说明|  
         |-----------|-----------------|  
         |**0**|最小值。 设置为 **0** 表示 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 永远不会停止阻塞进程。|  
         |**3600**|默认值。 允许不超过 **3600** 秒（1 小时）的阻塞进程。|  
@@ -61,7 +62,7 @@ ms.locfileid: "68104184"
   
     -   “默认 Health Monitor 轮询间隔(秒)”  设置阻塞进程的轮询重播线程的频率。 下表说明了这些值。  
   
-        |ReplTest1|描述|  
+        |值|说明|  
         |-----------|-----------------|  
         |**1**|最小值。 设置为 **1** 表示 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 每秒针对阻塞进程轮询一次。|  
         |**60**|默认值。 每分钟针对阻塞进程轮询一次。|  
@@ -69,6 +70,6 @@ ms.locfileid: "68104184"
   
 ## <a name="see-also"></a>另请参阅  
  [设置跟踪显示默认值 (SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
- [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

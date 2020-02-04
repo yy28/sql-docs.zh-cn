@@ -16,10 +16,10 @@ ms.assetid: 57560f0a-0fb8-40dd-bbe5-49feb502b9bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 983d1f9c670801995d8a29d82cf71500605bf7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954104"
 ---
 # <a name="getasciistream-method-sqlserverresultset"></a>getAsciiStream 方法 (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67954104"
   
 ## <a name="overload-list"></a>重载列表  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[getAsciiStream (int)](../../../connect/jdbc/reference/getasciistream-method-int.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引作为 ASCII 字符流的值。|  
 |[getAsciiStream (java.lang.String)](../../../connect/jdbc/reference/getasciistream-method-java-lang-string.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名称作为 ASCII 字符流的值。|  

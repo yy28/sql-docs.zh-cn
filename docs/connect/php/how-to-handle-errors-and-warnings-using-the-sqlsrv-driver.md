@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18e50d7344fb5d3d16c4fc0978137e169ba487ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: eb1af89c0641a50be503d1283f1f85a735a153f1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936496"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929419"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序处理错误和警告
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67936496"
   
 另请注意，该示例代码在每次调用 **sqlsrv** 函数之后检查错误。 这是建议做法。  
   
-此示例假定本地计算机上已安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。 当针对新安装的 AdventureWorks 数据库运行该示例时，它将产生三条警告和两个错误。 前两条警告是连接到数据库时就会发出的标准警告。 之所以出现第三条警告是因为员工的可用休假小时数更新为小于零的值。 发生错误的原因是员工的可用休假小时数更新为小于 40 小时的值，这与表中的约束条件冲突。  
+该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。 当针对新安装的 AdventureWorks 数据库运行该示例时，它将产生三条警告和两个错误。 前两条警告是连接到数据库时就会发出的标准警告。 之所以出现第三条警告是因为员工的可用休假小时数更新为小于零的值。 发生错误的原因是员工的可用休假小时数更新为小于 40 小时的值，这与表中的约束条件冲突。  
   
 ```  
 <?php  
@@ -130,7 +130,7 @@ $params = array(
                  array(&$vacationHrs, SQLSRV_PARAM_INOUT)  
                 );  
   
-/* Define and prepare the query to substract used vacation hours. */  
+/* Define and prepare the query to subtract used vacation hours. */  
 $tsql3 = "{call SubtractVacationHours(?, ?)}";  
 $stmt3 = sqlsrv_prepare($conn, $tsql3, $params);  
   

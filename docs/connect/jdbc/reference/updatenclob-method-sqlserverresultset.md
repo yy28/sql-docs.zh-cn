@@ -11,10 +11,10 @@ ms.assetid: 0cb0d347-4449-4920-b382-05f88f2a3225
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6520a5e6772ee837f8b47433b155e6b33baaa66f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998569"
 ---
 # <a name="updatenclob-method-sqlserverresultset"></a>updateNClob 方法 (SQLServerResultSet)
@@ -24,7 +24,7 @@ ms.locfileid: "67998569"
   
 ## <a name="overload-list"></a>重载列表  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[updateNClob 方法 &#40;int, java.sql.NClob&#41;](../../../connect/jdbc/reference/updatenclob-method-int-java-sql-nclob.md)|使用 NClob  值更新指定列。|  
 |[updateNClob 方法 &#40;java.lang.String, java.sql.NClob&#41;](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-sql-nclob.md)|使用 NClob  值更新指定列。|  

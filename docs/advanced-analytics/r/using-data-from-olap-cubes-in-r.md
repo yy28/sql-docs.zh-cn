@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2da5cbf0fd3fbc5b8fe1105261fff98625d590e5
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727322"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用来自 OLAP 多维数据集的数据
@@ -119,7 +119,7 @@ MDX（即多维表达式的缩写）是用于查询多维数据集的语言。 M
 
 SSAS 管理员可以通过标识和终止打开的会话来防止锁定问题。 在服务器级别，还可以将超时属性应用到 MDX 查询，以强制终止所有长时间运行的查询。
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>资源
 
 如果不熟悉 OLAP 或 MDX 查询，请参阅以下 Wikipedia 文章： 
 

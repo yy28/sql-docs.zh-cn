@@ -10,15 +10,15 @@ ms.author: mathoma
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5d9b834d94469adf8394dc12f3b812a0dfd1fbbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68067582"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>SQL Server include 文件，用于版本控制和 applies-to
 
-通过使用 Markdown 中的 Include 文件，可以轻松修改文档中的引用，而无需更改各个文章的实际文本。 在 SQL 内容世界中，include 文件有三种类型：SQL 版本、applies-to 和引用文本。 SQL Server 版本 include 文件用于指示讨论的 SQL 版本，例如 SQL Server 2016 或 2017  。 applies-to include 文件指示文档适用于什么 SQL 产品和服务，例如 Linux 上的 SQL Server 或 Azure SQL 数据库  。 引用文本 include 文件不属于其他两个类别，例如“Get Help” include - 客户可用于获得 SQL Server 相关帮助的链接列表  。
+通过使用 Markdown 中的 Include 文件，可以轻松修改文档中的引用，而无需更改各个文章的实际文本。 在 SQL 内容中有三种类型的 include 文件：SQL 版本、applies-to 和引用文本。 SQL Server 版本 include 文件用于指示讨论的 SQL 版本，例如 SQL Server 2016 或 2017  。 applies-to include 文件指示文档适用于什么 SQL 产品和服务，例如 Linux 上的 SQL Server 或 Azure SQL 数据库  。 引用文本 include 文件不属于其他两个类别，例如“Get Help” include - 客户可用于获得 SQL Server 相关帮助的链接列表  。
 
 本文仅用作前两种类型的 include 文件的参考点。 可通过 [sql-docs 存储库](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes)浏览 include 文件的完整列表。
 
@@ -44,7 +44,7 @@ SQL 内容写入程序经常需要添加 SQL Server 的产品名称和版本。 
 
 这些 applies-to include 文件忽略 SQL Server 的版本。
 
-| 文件名| Markdown 示例 |图像|
+| 文件名| Markdown 示例 |映像|
 | :-------------| :----------| :-------------------|
 | appliesto-ss-asdb-asdw-xxx-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)] |
 | appliesto-ss-asdb-asdw-pdw-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] |
@@ -66,7 +66,7 @@ SQL 内容写入程序经常需要添加 SQL Server 的产品名称和版本。 
 
 这些 applies-to include 文件指定文档适用的 SQL 版本。
 
-| 文件名| Markdown 示例 |图像|
+| 文件名| Markdown 示例 |映像|
 | :-------------| :----------| :-------------------|
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
@@ -110,7 +110,7 @@ SQL 内容写入程序经常需要添加 SQL Server 的产品名称和版本。 
 
 这些 applies-to include 文件用于 Analysis Services 文档。
 
-| 文件名| Markdown 示例 |图像|
+| 文件名| Markdown 示例 |映像|
 | :-------------| :----------| :-------------------|
 | ssas-appliesto-sql2016.md | `[!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)]` | [!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)] |
 | ssas-appliesto-sql2016-later.md | `[!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)]` | [!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)] |
@@ -127,7 +127,7 @@ SQL 内容写入程序经常需要添加 SQL Server 的产品名称和版本。 
 
 这些 applies-to include 文件用于 Reporting Services 文档。
 
-| 文件名| Markdown 示例 |图像|
+| 文件名| Markdown 示例 |映像|
 | :-------------| :----------| :-------------------|
 | ssrs-appliesto-2017-and-later.md | `[!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)]` | [!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)] |
 | ssrs-appliesto-not-pbirs.md | `[!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)]` | [!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)] |

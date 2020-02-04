@@ -13,10 +13,10 @@ ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7d894b48fc6ec82450c42599f13725f0cd8ee1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993546"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>How to: Connect Using SQL Server Authentication
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>另请参阅  
 [如何：使用 SQL Server 身份验证进行连接](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
-[Microsoft Driver for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)
 
@@ -140,7 +140,7 @@ sqlsrv_close( $conn);
 
 [如何：创建 SQL Server 登录名](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[如何创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[如何：创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [管理用户、角色和登录帐户](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

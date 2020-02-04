@@ -1,10 +1,9 @@
 ---
-title: “全文索引”对话框 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: “全文本索引”对话框
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 926e3d42d21e24d9a3e76d10966e3d90381ca843
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3056ebfc960b26dd3035f1aefd1932151bad207a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254617"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247264"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>“全文索引”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68254617"
 **选定的全文索引**  
 列出现有的全文索引。 选择一个索引即可在右侧的网格中显示其属性。 如果该列表为空，则表示尚未为该表定义任何全文本关系。  
   
-**“添加”**  
+**添加**  
 创建新的全文索引。  
   
 **删除**  
@@ -60,7 +61,7 @@ ms.locfileid: "68254617"
 **表设计器类别**  
 展开此项可显示指示索引执行方式的属性。  
   
-**在职**  
+**活动**  
 显示当前是否可以使用此全文索引执行全文搜索。  
   
 **更改跟踪设置**  
@@ -88,7 +89,7 @@ ms.locfileid: "68254617"
 显示下一次爬网的开始日期和时间。  
   
 **当前或上一次爬网的类型**  
-显示当前或最近一次爬网中的类型：“完全”、“增量”、“更新”或“自动传播”。  
+显示当前或最近一次爬网的类型：“完全”、“增量”、“更新”或“自动传播”。  
   
 **唯一索引名称**  
 显示此数据库中具有唯一单列索引的所有列的名称列表。 这些列可用于创建全文索引。  

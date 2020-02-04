@@ -9,10 +9,10 @@ ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63280732"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>添加从某个移动报表到其他移动报表或 URL 的钻取
@@ -34,7 +34,7 @@ ms.locfileid: "63280732"
 
    与大多数图表和简单的数据网格一样，地图和仪表也支持钻取。
    
-2. 在“视觉对象属性”窗格中，选择“钻取目标” > “移动报表”    。  
+2. 在“视觉对象属性”窗格中，选择“钻取目标” **“移动报表”**   >   。  
 3. 选择服务器和目标移动报表。  
 
    >注意：如果目标移动报表与源移动报表不在同一个服务器上，则改为使用自定义 URL 连接到源移动报表，如下一节所述。  
@@ -50,7 +50,7 @@ ms.locfileid: "63280732"
 ## <a name="set-up-a-drillthrough-to-a-custom-url"></a>设置到自定义 URL 的钻取  
   
 1. 在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]的“布局”视图中，选择一个支持钻取目标的可视化效果。    
-2. 在“视觉对象属性”窗格中，选择“钻取目标” > “自定义 URL”    。  这将打开钻取配置对话框。  
+2. 在“视觉对象属性”窗格中，选择“钻取目标” **“自定义 URL”**   >   。  这将打开钻取配置对话框。  
   
 3. 在“设置钻取 URL”中，输入在单击可视化效果时要转到的目标 URL，然后从右侧列出的“可用参数”中进行选择   。 面板下方将显示自定义 URL 与示例解析参数（如果包含）的组合预览。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63280732"
   
    *钻取到自定义 URL 属性*  
   
-4. 单击 **“应用”** 。  
+4. 单击“应用”  。  
 
   
 当你在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中预览移动报表时，如果单击某个带有钻取的可视化效果，将看到一条指示已禁用钻取的消息。 你只能在保存或发布移动报表后实际钻取到目标并查看它，而不能从 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 布局内或在预览模式下查看它。  
@@ -72,7 +72,7 @@ ms.locfileid: "63280732"
 
 你可以选择在 Web 门户中查看隐藏的项： 
 
-* 在 Web 门户的右上角选择“查看” > “显示隐藏项”   。 
+* 在 Web 门户的右上角选择“查看” **“显示隐藏项”**  >   。 
 
 隐藏的项以较浅的颜色显示。
     

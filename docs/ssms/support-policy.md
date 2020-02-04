@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Studio (SSMS) 支持策略 | Microsoft Docs
+title: SQL Server Management Studio (SSMS) 支持策略
 ms.date: 11/13/2018
 ms.prod: sql
 ms.technology: ssms
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-ms.openlocfilehash: 2be5846150a28ea76b48bab0434ab01ee9eee1d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2b46da30a4ea3c7548ca4696f144373feea7b986
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267039"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245668"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>SQL Server Management Studio (SSMS) 支持策略
 
@@ -35,7 +35,7 @@ Microsoft 计划每年发布数次 SQL Server Management Studio (SSMS) 的更新
 
 为获得最佳体验，建议客户通过 https://aka.ms/ssms 安装最新版本  
 
-“全面支持”服务阶段：  如果运行的是 SQL Server Management Studio 的最新当前分支版本，会收到所有更新 - 安全更新、关键更新、新增功能等。
+“全面支持”服务阶段：如果运行的是 SQL Server Management Studio 的最新当前分支版本，会收到所有更新 - 安全更新、关键更新、新功能等  。
 
 
 

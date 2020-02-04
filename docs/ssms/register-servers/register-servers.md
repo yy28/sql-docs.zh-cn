@@ -1,10 +1,7 @@
 ---
-title: 注册服务器 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 注册服务器
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -18,16 +15,22 @@ helpviewer_keywords:
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 34452ed824b8aa5bec4efcc9a926718481614e09
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manageR: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: d5b3993fb1c350e4aa89159ca8dd8135546b178b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266215"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256273"
 ---
 # <a name="register-servers"></a>注册服务器
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中注册服务器使您可以存储服务器连接信息，以供将来连接时使用。有三种方法可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中注册服务器。  
+
+在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中注册服务器使您可以存储服务器连接信息，以供将来连接时使用。有三种方法可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中注册服务器。  
   
 1.  在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之后首次启动它时，将自动注册 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的本地实例。  
   
@@ -63,7 +66,7 @@ ms.locfileid: "68266215"
 ## <a name="related-tasks"></a>Related Tasks  
  参考以下主题可以开始使用注册服务器：  
   
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |---------------------|---------------|  
 |注册本地服务器实例|[注册连接的服务器 (SQL Server Management Studio)](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)|  
 |注册服务器|[创建新的已注册的服务器 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)|  

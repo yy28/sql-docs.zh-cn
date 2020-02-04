@@ -11,10 +11,10 @@ ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bf9345d7f707c1cebc086b9c3ff8a1d69997854c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576804"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>向报表项目中添加新报表或现有报表 (SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "65576804"
   
 1.  在解决方案资源管理器中，右键单击“报表”文件夹，然后单击“添加新报表”  。 将打开 **“报表向导”** 对话框。  
   
-     该向导将指导你逐步完成以下操作：创建数据源，创建带查询的数据集，定义组，指定布局，以及创建报表。 这些步骤包括：  
+     该向导将指导你逐步完成以下操作：创建数据源，创建带查询的数据集，定义组，指定布局，以及创建报表。 步骤包括：  
   
     -   **选择数据源。** 创建报表的第一步是定义数据源。 报表向导提供了报表项目中的所有共享数据源的列表，此外还提供了选项，用于创建新数据源。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65576804"
   
 2.  在 **“模板”** 上单击 **“报表”** 。  
   
-3.  单击 **“添加”** 。  
+3.  单击“添加”  。  
   
      一个新的空白报表随即添加到项目中并显示在设计图面上。  
   

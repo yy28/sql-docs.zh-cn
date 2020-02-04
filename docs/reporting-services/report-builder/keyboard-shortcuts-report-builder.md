@@ -12,10 +12,10 @@ ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037860"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>键盘快捷键（报表生成器）
@@ -30,15 +30,15 @@ ms.locfileid: "67037860"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>报表生成器中的键盘快捷键  
   
-|描述|键组合|  
+|说明|键组合|  
 |-----------------|---------------------|  
-|打开报表生成器菜单。|Alt+F|  
+|打开报表生成器菜单。|ALT+F|  
 |创建报表。|Ctrl+N|  
 |打开报表。|Ctrl+O|  
 |保存报表。|Ctrl+S、Alt+S|  
 |在报表生成器的各区域之间移动，例如功能区、设计图面、“分组”窗格、“属性”窗格和“数据”窗格。|F6、Shift+F6|  
 |移动到功能区。|Alt|  
-|移动到功能区上的“主文件夹”选项卡。|Alt+H|  
+|移动到功能区上的“主文件夹”选项卡。|ALT+H|  
 |移动到功能区上的“插入”选项卡。|Alt+I|  
 |移动到功能区上的“视图”选项卡。|Alt+V|  
 |激活各区域之间的分隔线，例如，“分组”窗格与设计图面之间的分隔线。|Tab|  
@@ -57,7 +57,7 @@ ms.locfileid: "67037860"
 |复制|Ctrl+C、Alt+H+C|  
 |剪切|Ctrl+X、Alt+H+X|  
 |粘贴|Ctrl+V、Alt+H+V|  
-|全选。|Ctrl+A|  
+|全选。|CTRL+A|  
 |撤消|Ctrl+Z、Alt+Z|  
 |重做|Ctrl+Y、Alt+Y|  
 |放大。|Ctrl+加号 (+)|  

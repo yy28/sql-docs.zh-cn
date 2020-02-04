@@ -16,10 +16,10 @@ ms.assetid: d16a0aea-6144-4fcb-bcbc-5d7daa36d327
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64eb652fe7e5aa7e4d034fd2fa837ff9cca38a9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953356"
 ---
 # <a name="getbytes-method-sqlserverresultset"></a>getBytes 方法 (SQLServerResultSet)
@@ -29,12 +29,12 @@ ms.locfileid: "67953356"
   
 ## <a name="overload-list"></a>重载列表  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[getBytes (int)](../../../connect/jdbc/reference/getbytes-method-int-sqlserverresultset.md)|检索此 [SQLServerResultSet ](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引的值作为 Java 编程语言中的字节数组  。|  
 |[getBytes (java.lang.String)](../../../connect/jdbc/reference/getbytes-method-java-lang-string-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名称的值作为 Java 编程语言中的字节数组  。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的之前版本中，可以使用 SQLServerResultSet.getBytes 将字节数组和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型 date、time、datetime2 或 datetimeoffset 的值相互转换     。 现在对于这些数据类型使用此方法将导致异常，指出不支持该转换。  
   
 ## <a name="see-also"></a>另请参阅  

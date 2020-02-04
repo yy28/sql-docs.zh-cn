@@ -1,25 +1,26 @@
 ---
-title: 如何：查看数据差异 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 查看数据差异
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.f1
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec641fc027bae18a09e81d5cf14eee1bd8ab3ee3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 5c9e80f6289ff3313a3eeb7cec0601fb2c651aa2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930345"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226750"
 ---
 # <a name="how-to-view-data-differences"></a>如何：查看数据差异
+
 在比较两个数据库中的数据后，将显示比较的每个数据库对象  及其状态。 还可以查看每个对象中的记录的结果（按状态分组）。  
   
 查看差异后，可以针对部分或全部不同的、缺少的或新的对象或记录更新目标  以便与源  匹配。  

@@ -13,10 +13,10 @@ ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f3d51afd8a27786be3c66bfdf935ad8b2e328d36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580926"
 ---
 # <a name="windows-application-log"></a>Windows 应用程序日志
@@ -37,7 +37,7 @@ ms.locfileid: "65580926"
   
  下表对报表服务器写入应用程序事件日志的事件类型进行了说明：  
   
-|事件类型|描述|  
+|事件类型|说明|  
 |----------------|-----------------|  
 |信息|描述成功操作的事件（例如，报表服务器服务的启动时间）。|  
 |警告|指示潜在问题的事件（如磁盘空间不足）。|  

@@ -12,10 +12,10 @@ ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9f50535bbf4cca1775e963a2733e19dcd4ec7497
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582152"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>添加子报表和参数（报表生成器和 SSRS）
@@ -50,7 +50,7 @@ ms.locfileid: "65582152"
   
 2.  在 **“子报表属性”** 对话框中，单击 **“参数”** 。  
   
-3.  单击 **“添加”** 。 将向参数网格添加一个新行。  
+3.  单击“添加”  。 将向参数网格添加一个新行。  
   
 4.  在 **“名称”** 文本框中，键入子报表中参数的名称或者从列表框中选择该名称。 该名称必须与子报表中的报表参数的名称（而不是查询参数的名称）相匹配。  
   

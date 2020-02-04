@@ -1,11 +1,7 @@
 ---
-title: 如何：删除对象和解析依赖关系 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 删除对象和解析依赖关系
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
@@ -14,18 +10,23 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae25dbc584e564130348507e5aef657823502923
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9f2bd6ed462004d76750fb2328d1615a51c2c84
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026609"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241429"
 ---
-# <a name="how-to-delete-objects-and-resolve-dependencies"></a>如何：删除对象和解析依赖关系
+# <a name="how-to-delete-objects-and-resolve-dependencies"></a>如何删除对象和解析依赖关系
+
 在 SQL Server 对象资源管理器  中重命名或删除某一对象时，SQL Server Data Tools 将自动检测其所有依赖对象，并且将准备 ALTER 脚本以便根据需要重命名或删除这些依赖对象。  
   
 > [!WARNING]  
-> 下面的过程利用在[连接的数据库开发](../ssdt/connected-database-development.md)一节的前面的过程中创建的实体。  
+> 下面的过程使用了前面[连接的数据库开发](../ssdt/connected-database-development.md)一节介绍的过程中创建的实体。  
   
 ### <a name="to-delete-a-database"></a>删除数据库  
   
@@ -46,7 +47,7 @@ ms.locfileid: "68026609"
     > [!WARNING]  
     > SSDT 不自动更新基于脚本的依赖项，例如对来自视图的表或存储过程的引用。 重命名后，可以使用“错误列表”  窗格找到其他所有依赖项，并手动修复它们。  
   
-5.  在执行了上一过程中的步骤后应用更改，即[如何：使用 Power Buffer 更新连接的数据库](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)。  
+5.  按照之前的[如何：使用 Power Buffer 更新连接的数据库](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)过程中的步骤应用更改。  
   
 6.  再次右键单击“SQL Server 对象资源管理器”  中的“Customers”  表，然后选择“查看数据”  。 请注意，在重命名操作后表数据将保持不变。  
   
@@ -63,5 +64,5 @@ ms.locfileid: "68026609"
 4.  右键单击  “SQL Server 对象资源管理器”中的  “Products”表，然后选择“查看代码”  。 请注意，对 `Customers` 表的外键引用已消失。  
   
     > [!WARNING]  
-    > 如果在删除操作发生时已在表设计器或 Transact\-SQL 编辑器中打开了 Products  表，则该表将不会自动刷新以显示外键引用的删除。 此外，与无法解析的引用有关的错误可能会出现在“错误列表”  中。 若要解决此问题，请关闭表设计器或 Transact\-SQL 编辑器，然后重新打开 Products 表。  
+    > 如果在删除操作发生时已在表设计器或 Transact**SQL 编辑器中打开了 Products**\- 表，则该表将不会自动刷新以显示外键引用的删除。 此外，与无法解析的引用有关的错误可能会出现在“错误列表”  中。 若要解决此问题，请关闭表设计器或 Transact\-SQL 编辑器，然后重新打开 Products 表。  
   

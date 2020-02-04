@@ -9,10 +9,10 @@ ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e12b16ecf8df3452d327152638b794c58e2ec67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62503014"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>保留移动报表中 Analysis Services 数据的日期格式
@@ -38,5 +38,5 @@ ms.locfileid: "62503014"
    
 ### <a name="see-also"></a>另请参阅
 
--  [Data for Reporting Services mobile reports](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
+-  [Reporting Services 移动报表数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
 -  [为 Reporting Services 移动报表准备数据](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)

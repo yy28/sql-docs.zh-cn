@@ -9,10 +9,10 @@ ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2796447d65a7fcabe029c67f460a76284daf242f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580207"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>插入或删除列（报表生成器和 SSRS）
@@ -33,7 +33,7 @@ ms.locfileid: "65580207"
   
 -   右键单击要插入列的位置对应的列图柄，再单击“插入列”  ，然后单击“左侧”  或“右侧”  。  
   
-     --或者--  
+     \- 或 -  
   
 -   右键单击要插入行的数据区域中的单元，再单击“插入列”  ，然后单击“左侧”  或“右侧”  。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65580207"
   
 -   选择要删除的列，右键单击任一所选列的图柄，然后单击“删除列”  。  
   
-     --或者--  
+     \- 或 -  
   
 -   右键单击要删除的列所在的数据区域中的单元，然后单击“删除列”  。  
   

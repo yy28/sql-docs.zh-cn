@@ -9,10 +9,10 @@ ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd1fda200aae4a8d5bbc91191fe3b516a6109821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503994"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>呈现扩展插件的设备信息设置 (Reporting Services)
@@ -20,7 +20,7 @@ ms.locfileid: "65503994"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[ATOM 设备信息设置](../reporting-services/atom-device-information-settings.md)|介绍与 Atom 兼容的呈现输出相关的设备信息设置。|  
 |[CSV 设备信息设置](../reporting-services/csv-device-information-settings.md)|介绍与 CSV 呈现输出相关的设备信息设置。|  

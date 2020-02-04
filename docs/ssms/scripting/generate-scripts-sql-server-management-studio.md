@@ -1,6 +1,6 @@
 ---
-title: 生成脚本 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 生成脚本 (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,18 +11,18 @@ ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 800153a20651b649d644fecfeacf11d48958fab8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: abdbbd7659221fb27df12ff03995b2d246241463
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265449"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253861"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>生成脚本 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了两种机制，用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 可以使用“生成和发布脚本向导”为多个对象创建脚本  。 还可以通过使用 **“对象资源管理器”** 中的 **“编写脚本为”** 菜单为单个对象或多个对象生成脚本。  
 
-有关介绍如何使用 SQL Server Management Studio (SSMS) 编写各种对象的脚本的详细教程，请参阅[教程：在 SSMS 中编写脚本](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms)。
+有关使用 SQL Server Management Studio (SSMS) 编写各种对象的脚本的详细教程，请参阅[教程：在 SSMS 中编写脚本](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms)。
 
   
 ## <a name="before-you-begin"></a>开始之前  
@@ -43,7 +43,7 @@ ms.locfileid: "68265449"
   
 3.  展开该对象的类别。 例如，展开 **“表”** 或 **“视图”** 节点。  
   
-4.  右键单击该对象，指向“编写 \<对象类型> 脚本为”  ，例如，指向“编写表脚本为”  。  
+4.  右键单击该对象，指向“编写 **对象类型> 脚本为”\<** ，例如，指向“编写表脚本为”  。  
   
 5.  指向脚本类型，如 **“创建到”** 或 **“更改到”** 。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68265449"
   
 6.  然后，按住 Ctrl 并左键单击第二个要编写脚本的对象。  
   
-7.  右键单击所选对象之一，然后选择“编写 \<对象类型> 脚本为”  。  
+7.  右键单击所选对象之一，然后选择“编写 **对象类型> 脚本为”\<** 。  
 
     ![“对象资源管理器”](media/generate-scripts-sql-server-management-studio/objectexplorerdetails.png)
   

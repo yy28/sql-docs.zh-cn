@@ -9,10 +9,10 @@ ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 450a490e5c4f54f9fec2e88c1c73bfbf8502869a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499995"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教程先决条件（报表生成器）
@@ -27,9 +27,9 @@ ms.locfileid: "66499995"
   
 -   对报表生成器的访问权限。 可以在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 报表服务器上或 SharePoint 集成模式下的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 报表服务器上运行报表生成器。 在其他服务器上只有第一步不同，即如何打开报表生成器。  
   
-    在报表服务器上，选择“新建” > “分页报表”   。
+    在报表服务器上，选择“新建” **“分页报表”**  >   。
   
-    在 SharePoint 集成模式下的报表服务器上，在“文档”选项卡上选择“新建文档”，然后从下拉列表中，选择“报表生成器报表”    。 例如， `https://<servername>/sites/mySite/reports`。 SharePoint 管理员必须为每个文档库启用“报表生成器报表”功能。  
+    在 SharePoint 集成模式下的报表服务器上，在“文档”选项卡上选择“新建文档”，然后从下拉列表中，选择“报表生成器报表”    。 例如，`https://<servername>/sites/mySite/reports` 。 SharePoint 管理员必须为每个文档库启用“报表生成器报表”功能。  
   
 -   指向 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 报表服务器或与 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 报表服务器集成的 SharePoint 站点的 URL。 您必须拥有保存和查看报表、共享数据源、共享数据集、报表部件和模型的权限。 默认情况下，报表服务器的 URL 是 `https://<servername>/reportserver`。 默认情况下，SharePoint 站点的 URL 是 `https://<sitename>` 或 `https://<server>/site`。  
   

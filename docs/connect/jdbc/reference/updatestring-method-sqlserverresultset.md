@@ -16,10 +16,10 @@ ms.assetid: 0cf286c7-9dcd-4b02-a568-ba6b6eb27e82
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fabb6e8f71c1b771341045de7a113703d5f254e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998223"
 ---
 # <a name="updatestring-method-sqlserverresultset"></a>updateString 方法 (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67998223"
   
 ## <a name="overload-list"></a>重载列表  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[updateString (int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|根据给定的列索引使用字符串值更新指定的列  。|  
 |[updateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|根据给定的列名称使用字符串值更新指定的列  。|  

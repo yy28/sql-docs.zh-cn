@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727688"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的扩展性体系结构 
@@ -64,7 +64,7 @@ SQL Server 具有用于在服务器上运行外部脚本（例如 R 或 Python�
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 是用来管理和执行外部脚本的服务，其工作方式类似于全文索引和查询服务启动单独的主机来处理全文查询。 该 Launchpad 服务只能启动 Microsoft 发布的受信任启动器，或者经 Microsoft 认证满足性能和资源管理要求的启动器。
 
-| 受信任的启动器 | 扩展名 | SQL Server 版本 |
+| 受信任的启动器 | 分机 | SQL Server 版本 |
 |-------------------|-----------|---------------------|
 | 适用于 Windows 的 R 语言的 RLauncher.dll | [R 扩展](extension-r.md) | SQL Server 2016 及更高版本 |
 | 适用于 Windows 的 Python 3.5 的 Pythonlauncher.dll | [Python 扩展](extension-python.md) | SQL Server 2017 及更高版本 |
@@ -93,7 +93,7 @@ BxlServer 使用 SQL Satellite 执行以下任务：
 + 写入输出数据
 + 获取输入参数
 + 写入输出参数
-+ 错误处理
++ 错误处理。
 + 将 STDOUT 和 STDERR 写回客户端
 
 SQL Satellite 使用自定义数据格式，这种格式已针对 SQL Server 与外部脚本语言之间的快速数据传输进行优化。 在 SQL Server 与外部脚本运行时通信期间，SQL Satellite 会执行类型转换并定义输入和输出数据集的架构。

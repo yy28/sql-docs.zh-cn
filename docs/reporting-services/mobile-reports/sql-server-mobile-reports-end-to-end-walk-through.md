@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028896"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表：端到端演练
@@ -22,7 +22,7 @@ ms.locfileid: "69028896"
 
 在网格行和列可调整且移动报表元素灵活的设计图面上创建移动报表。 连接到各种本地数据源，或上传 Excel 工作簿以创建移动报表。 然后将报表保存到 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户，并在浏览器或 Power BI 移动应用中查看它们。  
   
-本文介绍了以下内容：   
+本文介绍：   
   
 - 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户上创建共享数据源和数据集，使用 AdventureWorks 数据库作为示例数据源。  
 - 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]中创建 Reporting Services 移动报表  
@@ -46,14 +46,14 @@ ms.locfileid: "69028896"
   
 可以从 Reporting Services 支持的任何数据源为移动报表创建共享数据源。 请参阅[支持的数据源列表](../report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
-1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “数据源”   。  
+1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” **“数据源”**  >   。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
 3. 输入数据源信息，然后单击“确定”  。  
   
     默认情况下，数据源不会显示在门户中。    
    
-5. 若要查看数据源，请单击“显示” > “数据源”   。  
+5. 若要查看数据源，请单击“显示” **“数据源”**  >   。  
   
    ![PBI_SSMRP_DisplayDataSources](../../reporting-services/mobile-reports/media/pbi-ssmrp-displaydatasources.png)  
    
@@ -65,9 +65,9 @@ ms.locfileid: "69028896"
    
 ## <a name="shared-dataset">创建共享数据集</a>  
   
-使用现有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 客户端工具（例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的报表设计器）创建共享数据集。  本演练使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安装报表生成器](../install-windows/install-report-builder.md)，或从你的 Web 门户启动它。 需要创建三个数据集，一个用于 KPI 值，一个用于 KPI 趋势，包含更多字段的那一个用于 Reporting Services 移动报表。     
+使用现有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 客户端工具（例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的报表设计器）创建共享数据集。  本演练使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安装报表生成器](../install-windows/install-report-builder.md)，或从 Web 门户启动它。 需要创建三个数据集，一个用于 KPI 值，一个用于 KPI 趋势，包含更多字段的那一个用于 Reporting Services 移动报表。     
   
-1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “分页报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]   。  
+1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” **“分页报表”以启动**  >   [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)   
 2. 单击“新数据集”  。  
@@ -96,7 +96,7 @@ ms.locfileid: "69028896"
 ## <a name="create-KPI">创建 KPI</a>  
 可在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中立即创建 KPI。    
   
-1. 在 Web 门户右上角，单击“新建” > “新建 KPI”   。   
+1. 在 Web 门户右上角，单击“新建” **“新建 KPI”**  >   。   
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
       
@@ -117,7 +117,7 @@ ms.locfileid: "69028896"
 
    ![reporting-services-kpi-pick-aggregation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
-6. 单击“确定”  。
+6. 单击“确定”。 
 
 7. 在“趋势集”  框中，单击“数据集趋势”  。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "69028896"
   
 ## <a name="start-with-the-visuals"></a>从视觉对象开始  
   
-1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “移动报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]   。  
+1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” **“移动报表”以启动**  >   [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
@@ -165,7 +165,7 @@ ms.locfileid: "69028896"
   
    ![PBI_SSMRP_TreeMapDataProps](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemapdataprops.png)  
   
-6. 单击“布局”  选项卡。  
+6. 单击“布局”选项卡。   
   
 7. 单击树形图右上角的“选项”嵌齿 ![PBI_SSMRP_Cog](../../reporting-services/mobile-reports/media/pbi-ssmrp-cog.png) 可以看到其包含的菜单。   
   
@@ -246,7 +246,7 @@ ms.locfileid: "69028896"
   
 3. 在服务器上，浏览到要保存移动报表的文件夹。  
   
-4. 单击“选择文件夹” > “保存”   。  
+4. 单击“选择文件夹” **“保存”**  >   。  
   
    你会收到一条确认报表已保存的消息。  
     

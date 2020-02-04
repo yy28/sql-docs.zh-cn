@@ -16,10 +16,10 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce5ddca1cb39d7d4f375232e3588900b5b1ebe6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570600"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>在 SharePoint Web 应用程序中设置报表服务器操作的权限
@@ -116,7 +116,7 @@ ms.locfileid: "65570600"
   
  可以设置共享数据源的属性，这些属性可决定各个用户是否可以查看或管理共享数据源。 查看或管理共享数据源的权限与报表查看权限不同；您可以在对 .rsds 文件本身没有查看权限的情况下查看使用 .rsds 文件的报表。  
   
-|“任务”|权限|  
+|任务|权限|  
 |-----------|----------------|  
 |创建共享数据源。|对包含共享数据源的库拥有“添加项”  权限。 可以从库中的“新建”菜单创建新共享数据源。 为此，必须在库中注册报表数据源内容类型。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。|  
 |编辑共享数据源。|对包含共享数据源的库或对共享数据源本身拥有“编辑项”  权限。|  

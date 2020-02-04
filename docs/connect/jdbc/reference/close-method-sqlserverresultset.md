@@ -16,10 +16,10 @@ ms.assetid: 8f3adf5b-874e-4cf2-b4ef-672dda42d77a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e78dbb981938e9af2fbe894919368da17347941a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955587"
 ---
 # <a name="close-method-sqlserverresultset"></a>close 方法 (SQLServerResultSet)
@@ -34,10 +34,10 @@ ms.locfileid: "67955587"
 public void close()  
 ```  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 close 方法是由 java.sql.ResultSet 接口中的 close 方法指定的。  
   
  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象会自动关闭其在 SQLServerStatement 对象关闭、重新运行或用于从一个多结果序列中检索下一个结果时生成的 SQLServerResultSet 对象。 对 SQLServerResultSet 对象进行垃圾收集处理后，此对象会自动关闭。  

@@ -9,10 +9,10 @@ ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c42f6cf00329129ea1137ecba4228a92f9665319
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571757"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>向数据集添加筛选器（报表生成器和 SSRS）
@@ -33,7 +33,7 @@ ms.locfileid: "65571757"
   
 3.  单击 **“筛选器”** 。 此时将显示当前筛选器公式的列表。 默认情况下，此列表是空的。  
   
-4.  单击 **“添加”** 。 此时将显示一个新的空白筛选器公式。  
+4.  单击“添加”  。 此时将显示一个新的空白筛选器公式。  
   
 5.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65571757"
   
 3.  单击 **“筛选器”** 。 此时将显示当前筛选器公式的列表。 默认情况下，此列表是空的。  
   
-4.  单击 **“添加”** 。 此时将显示一个新的空白筛选器公式。  
+4.  单击“添加”  。 此时将显示一个新的空白筛选器公式。  
   
 5.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   

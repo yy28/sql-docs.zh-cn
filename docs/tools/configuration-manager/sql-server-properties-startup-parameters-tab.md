@@ -1,6 +1,6 @@
 ---
-title: SQL Server 属性 ("启动参数" 选项卡) |Microsoft Docs
-ms.custom: ''
+title: SQL Server 属性（“启动参数”选项卡）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a95a90271c6196c68a23d0ba416c5157c90ae9c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 2d5a4c5cb279cb4cfd4bbe1baa63f89dc1289436
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023912"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306771"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 属性（“启动参数”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68023912"
  有关如何移动 master 数据库的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“移动系统数据库”主题。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书的“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”主题中介绍了所有支持的启动参数。 -T*trace#* 的启动参数指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例应该以有效的指定跟踪标志 (*trace#* ) 启动。 跟踪标记用于以非标准行为启动服务器。 有关跟踪标志的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“跟踪标志（[!INCLUDE[tsql](../../includes/tsql-md.md)]）”主题。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书的“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”主题中介绍了所有支持的启动参数。 -T*trace#* 的启动参数指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例应该以有效的指定跟踪标志 (*trace#* ) 启动。 跟踪标记用于以非标准行为启动服务器。 有关跟踪标志的详细信息，请参阅 [!INCLUDE[tsql](../../includes/tsql-md.md)] 联机丛书中的“跟踪标志（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）”主题。  
   
 > [!CAUTION]  
 >  您可能会看到在 Internet 上描述的其他未记录的启动参数和跟踪标志。 创建未记录的启动参数和跟踪标志是为了满足某些不常见问题或者强制测试所需的某些条件。 使用未记录的启动参数可能会导致意外结果。 除非 Microsoft 客户支持服务部门指示，否则不要使用未记录的参数。  
@@ -71,7 +71,7 @@ ms.locfileid: "68023912"
 > [!CAUTION]  
 >  某些可选参数可能会更改服务器行为并且可能会影响性能。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此页的使用被限制为可以在注册表中更改相关条目的用户。 其中包括以下用户。  
   
 -   本地管理员组的成员。  

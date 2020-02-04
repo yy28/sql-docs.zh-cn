@@ -9,10 +9,10 @@ ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4cae758708ce0ac703aa2b6e82b574b45c54195a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572263"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用调色板定义图表上的颜色（报表生成器和 SSRS）
@@ -50,7 +50,7 @@ ms.locfileid: "65572263"
   
 6.  单击 **“添加”** 以向调色板添加更多颜色。  
   
-7.  完成后，单击 **“确定”** 。  
+7.  完成后，单击“确定”。   
   
  如果使用自定义调色板，可更改颜色顺序以调整图表中不同序列的颜色。  
   

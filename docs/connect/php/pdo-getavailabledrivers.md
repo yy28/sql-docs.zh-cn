@@ -11,10 +11,10 @@ ms.assetid: eab561e6-1229-401a-9482-008c23f9a4e6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 632663b813db9a8b9a5b425c717613c24fa58ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993256"
 ---
 # <a name="pdogetavailabledrivers"></a>PDO::getAvailableDrivers
@@ -32,7 +32,7 @@ array PDO::getAvailableDrivers ();
 ## <a name="return-value"></a>返回值  
 带有 PDO 驱动程序列表的数组。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 在 PDO::__construct 中使用 PDO 驱动程序的名称来创建 PDO 实例。  
   
 PDO::getAvailableDrivers 不需要由 PHP 驱动程序来实现。 有关此方法的详细信息，请参阅 PHP 文档。  

@@ -12,10 +12,10 @@ ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2f3200a17f00efedae3f52be7f3b17df31167765
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579430"
 ---
 # <a name="configure-the-web-portal-to-pass-custom-authentication-cookies"></a>配置 Web 门户以传递自定义身份验证 Cookie
@@ -24,7 +24,7 @@ ms.locfileid: "65579430"
 
 ## <a name="modifying-the-rsreportserverconfig-file"></a>修改 RSReportServer.Config 文件
 
-通过将 \<PassThroughCookies> 元素添加到 RSReportServer.config 文件的 Web 门户配置设置中，可允许 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 将其他 Cookie 传输到报表服务器  。 在单一登录身份验证解决方案中，传输其他 Cookie 十分有用，因为此类解决方案不仅需要报表服务器身份验证 Cookie，而且还需要第三方身份验证系统中的 Cookie。
+通过将 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]PassThroughCookies> 元素添加到 RSReportServer.config 文件的 Web 门户配置设置中，可允许 \< 将其他 Cookie 传输到报表服务器  。 在单一登录身份验证解决方案中，传输其他 Cookie 十分有用，因为此类解决方案不仅需要报表服务器身份验证 Cookie，而且还需要第三方身份验证系统中的 Cookie。
 
 使用 Web 门户时，为了使其他 Cookie 可以通过 HTTP 请求进行传输，请在 RSReportServer.config 文件中设置下列元素：
   

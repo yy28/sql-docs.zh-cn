@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707440"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的新增功能
@@ -51,7 +51,7 @@ ms.locfileid: "73707440"
 
 SQL Server 机器学习服务 R 组件是下一代 SQL Server 2016 R Services，其中包含基本 R、RevoScaler 和其他包的更新版本。
 
-R 的新功能包括[包管理](r/install-additional-r-packages-on-sql-server.md)，以下是一些亮点  ： 
+R 的新功能包括[包管理 **，以下是一些亮点**](r/install-additional-r-packages-on-sql-server.md)： 
 
 + 数据库角色可帮助 DBA 管理包，并为包安装分配权限。
 + [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 帮助 DBA 以熟悉的 T-SQL 语言管理包。
@@ -59,7 +59,7 @@ R 的新功能包括[包管理](r/install-additional-r-packages-on-sql-server.md
 
 ### <a name="r-libraries"></a>R 库
 
-| “包” | 描述 |
+| 程序包 | 说明 |
 |---------|-------------|
 | [**MicrosoftML**](r/ref-r-microsoftml.md) | 在此版本中，MicrosoftML 包含在默认 R 安装中，从而消除了之前 SQL Server 2016 R Services 中所需的升级步骤。 MicrosoftML 提供先进的机器学习算法和可在远程计算上下文中扩展或运行的数据转换。 算法包括可自定义的深层神经网络、快速决策树和决策林、线性回归和逻辑回归。  |
 
@@ -75,14 +75,14 @@ Python 是一种语言，可为各种机器学习任务提供极大灵活性和�
 
 ### <a name="python-libraries"></a>Python 库
 
-| “包” | 描述 |
+| 程序包 | 说明 |
 |---------|-------------|
 |[**revoscalepy**](python/ref-py-revoscalepy.md)| RevoScaleR 的 Python 等效项。 你可以为线性和逻辑回归、决策树、提升树和随机林创建 Python 模型，所有这些都是可并行化的，并能够在远程计算上下文中运行。 此包支持使用多个数据源和远程计算上下文。 数据科学家或开发人员可以在远程 SQL Server 上执行 Python 代码，以浏览数据或生成模型，而无需移动数据。 |
 |[**microsoftml**](python/ref-py-microsoftml.md) |MicrosoftML R 包的 Python 等效项。 |
 
 ### <a name="pre-trained-models"></a>预定型模型
 
-[预定型模型](install/sql-pretrained-models-install.md)可用于 Python 和 R。使用这些模型进行图像识别和正负情绪分析，以便根据自己的数据生成预测  。 
+[预定型模型**可用于 Python 和 R。使用这些模型进行图像识别和正负情绪分析，以便根据自己的数据生成预测**](install/sql-pretrained-models-install.md)。 
 
 ### <a name="standalone-server-as-a-shared-feature-in-sql-server-setup"></a>独立服务器作为 SQL Server 安装程序中的共享功能
 
@@ -98,9 +98,9 @@ Python 是一种语言，可为各种机器学习任务提供极大灵活性和�
 
 有关所有的功能公告，请参阅 [SQL Server 2016 的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)。
 
-| 发行版本 |功能更新 |
+| 发布 |功能更新 |
 |---------|----------------|
-| CU 添加件 | [实时评分](real-time-scoring.md)依赖于本机 C++ 库来读取以优化的二进制格式存储的模型，然后生成预测，而无需调用 R 运行时  。 这使得评分操作的速度更快。 使用实时评分，可以运行存储过程或从 R 代码执行实时评分。 如果实例升级到 [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)] 的最新版本，则实时评分也可用于 SQL Server 2016。 |
+| CU 添加件 | [实时评分**依赖于本机 C++ 库来读取以优化的二进制格式存储的模型，然后生成预测，而无需调用 R 运行时**](real-time-scoring.md)。 这使得评分操作的速度更快。 使用实时评分，可以运行存储过程或从 R 代码执行实时评分。 如果实例升级到 [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)] 的最新版本，则实时评分也可用于 SQL Server 2016。 |
 | 初始版本 | [**用于数据库内分析的 R 集成**](r/sql-server-r-services.md)。 <br/><br/> 用于在 T-SQL 中调用 R 函数的 R 包，反之亦然。 RevoScaleR 函数通过将数据分块到组件部分、协调和管理分布式处理以及聚合结果，从而大规模提供 R 服务。 在 SQL Server 2016 R Services（数据库内）中，RevoScaleR 引擎与数据库引擎实例集成在一起，并在同一处理上下文中将数据和分析结合在一起。 <br/><br/>通过 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 实现 T-SQL 和 R 的集成。 可使用此存储过程调用任何 R 代码。 此安全体系结构支持企业级 Rn 模型和脚本的部署，这些模型和脚本可以使用简单的存储过程从应用程序中调用。 通过将数据从 SQL 流式传输到 R 进程以及 MPI 环并行化，实现更多性能提升。 <br/><br/>可使用 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 函数在以前以所需的二进制格式保存的预定型模型上执行[本机评分](sql-native-scoring.md)。|
 
 ::: moniker-end

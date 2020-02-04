@@ -9,10 +9,10 @@ ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cbfbc1b1d26f53e5ee8d3e04fc506048d76b3d28
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593674"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>创建文档结构图（报表生成器和 SSRS）
@@ -64,7 +64,7 @@ ms.locfileid: "73593674"
   
 2.  在“行组”窗格中，右键单击相应的组，然后单击 **“编辑组”** 。 将打开 **“Tablix 组属性”** 对话框的 **“常规”** 页。  
   
-3.  单击 **“高级”** 。  
+3.  单击“高级”。   
   
 4.  在 **“文档结构图”** 列表框中，键入或选择与组表达式匹配的表达式。  
   

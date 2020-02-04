@@ -12,10 +12,10 @@ ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8bdd50291a009189bf894300cdea4633fdd952f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570620"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 站点上为报表服务器项设置权限
@@ -55,11 +55,11 @@ ms.locfileid: "65570620"
   
 5.  单击 **“操作”** 。  
   
-6.  单击 **“编辑权限”** 。 单击“确定”  。  
+6.  单击 **“编辑权限”** 。 单击“确定”。   
   
 7.  单击 **“新建”** 。  
   
-8.  单击 **“添加用户”** 。  
+8.  单击“添加用户”。   
   
 9. 在“用户/组”中输入用户帐户。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "65570620"
   
 11. 单击 **“完全控制”** 。  
   
-12. 单击“确定”  。 用户具备管理特定模型权限的能力后，便可以打开模型并在模型内编辑权限。  
+12. 单击“确定”。  用户具备管理特定模型权限的能力后，便可以打开模型并在模型内编辑权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [将 Windows SharePoint Services 中的内置安全性用于报表服务器项](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   

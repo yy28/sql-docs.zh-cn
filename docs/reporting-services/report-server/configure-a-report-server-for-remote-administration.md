@@ -15,10 +15,10 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580417"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>配置报表服务器以进行远程管理
@@ -41,7 +41,7 @@ ms.locfileid: "65580417"
   
  有关详细信息，请参阅 MSDN 上 Platform SDK 文档中的 [Connecting Through Windows Firewall](https://go.microsoft.com/fwlink/?LinkId=63615) （通过 Windows 防火墙连接）。  
   
-## <a name="tasks"></a>“任务”  
+## <a name="tasks"></a>任务  
  启用远程报表服务器配置的任务包括：  
   
 -   在 Windows 防火墙中启用端口以允许报表服务器和 SQL Server 数据库引擎实例所使用的端口的请求。  请参阅 [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 和 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
@@ -60,7 +60,7 @@ ms.locfileid: "65580417"
   
 1.  单击 **“开始”** ，依次指向 **“程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-2.  在左窗格中，展开“SQL Server 网络配置”，然后针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例单击“协议”   。  
+2.  在左窗格中，展开“SQL Server 网络配置”，然后针对  **实例单击“协议”**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 3.  在详细信息窗格中，启用“TCP/IP”和“命名管道”协议，然后重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "65580417"
   
 1.  以本地管理员身份登录要启用远程管理功能的计算机。  
   
-2.  使用管理权限打开命令提示符。  
+2.  使用管理员权限打开命令提示符。  
   
 3.  运行以下命令：  
   
@@ -108,7 +108,7 @@ ms.locfileid: "65580417"
   
 9. 键入您的用户帐户名，然后单击 **“确定”** 。  
   
-10. 在“\<用户或组> 权限”的“允许”列中，选择“远程启动”和“远程激活”，然后单击“确定”      。  
+10. 在“**用户或组> 权限”的“允许”列中，选择“远程启动”和“远程激活”，然后单击“确定”\<**     。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>为非管理员设置报表服务器 WMI 命名空间的权限  
   

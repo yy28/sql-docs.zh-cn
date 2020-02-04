@@ -1,23 +1,24 @@
 ---
-title: 如何：打开 SQL Server 单元测试以进行编辑 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 打开 SQL Server 单元测试以进行编辑
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 52818b0d76ae5201fb9bf53376696fab54180cb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: b745cd57d589ecc08217d05edf51577f9d68e7cb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035151"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241365"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>如何：打开 SQL Server 单元测试以进行编辑
+
 在创建 SQL Server 单元测试之后，你可以使用  “SQL Server 单元测试设计器”添加 Transact\-SQL 语句和测试条件。 使用设计器创建的测试将会生成 Visual C# 或 Visual Basic 代码。 此代码即为测试运行时所执行的代码。  
   
 如果您对您的测试满意，则可以按原样运行它。 如果您想要为此单元测试添加更多功能，则可以编辑其代码。 此代码位于测试项目的 .cs 或 .vb 文件中。 有关详细信息，请参阅 [SQL Server 单元测试文件](../ssdt/sql-server-unit-test-files.md)。 也可以通过创建新的测试条件来自定义您的测试。 有关详细信息，请参阅[如何：为数据库单元测试设计器创建测试条件 (Visual Studio 2010)](https://msdn.microsoft.com/library/aa833409(VS.100).aspx)。  

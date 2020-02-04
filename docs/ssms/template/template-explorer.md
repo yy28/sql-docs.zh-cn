@@ -1,5 +1,5 @@
 ---
-title: 模板资源管理器 | Microsoft Docs
+title: Template Explorer
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -17,14 +17,14 @@ ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 67a1ba1d5f94703004a4a90d380cf7dd7c795a79
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 22864ca365917d295f8111580cb833097fb31c46
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988090"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247193"
 ---
 # <a name="template-explorer"></a>Template Explorer
 
@@ -45,7 +45,7 @@ ms.locfileid: "70988090"
 ## <a name="related-tasks"></a>Related Tasks  
 参考以下主题可以开始使用模板。  
   
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |-------------------|-------------|  
 |介绍如何将模板中的代码合并到代码编辑器窗口。|[打开模板](../../ssms/template/open-a-template.md)|  
 |介绍如何在代码编辑器中打开模板后替换模板参数值。|[替换模板参数](../../ssms/template/replace-template-parameters.md)|  

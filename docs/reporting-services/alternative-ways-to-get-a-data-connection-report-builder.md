@@ -9,10 +9,10 @@ ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 887104ff6667844071e44e1933592e8238b124dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62703881"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>获取数据连接的备选方法（报表生成器）
@@ -35,7 +35,7 @@ ms.locfileid: "62703881"
   
 3.  若要验证是否能连接到数据源，请单击“测试连接”  。 将显示消息“已成功地创建连接”。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  单击“下一步”  。  
+4.  单击“下一步”。   
   
     如果需要，请输入您的凭据。 要本地保存凭据，请选择“保存连接的密码”  。 如果不选择此选项，则每当你运行该报表时系统都会提示你输入凭据  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62703881"
   
 1.  在“新建表或矩阵”或“新建图表向导”中，在“选择数据集”页上，选择“创建数据集”，然后单击“下一步”    。 将打开“选择数据源的连接”  页面。  
   
-2.  单击 **“浏览”** 。 “选择数据源”对话框随即打开  。  
+2.  单击“浏览”  。 “选择数据源”对话框随即打开  。  
   
 3.  从“查找范围”下拉列表中选择“最近使用的站点和服务器”   。 在数据源窗格中，单击服务器的 URL，然后单击“打开”  。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62703881"
   
     将显示消息“已成功地创建连接”。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  单击“下一步”  。  
+7.  单击“下一步”。   
   
 8.  如果系统提示您输入用户名和密码，请输入您的凭据。 要本地保存凭据，请选择“保存连接的密码”  。  
   

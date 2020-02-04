@@ -1,10 +1,9 @@
 ---
-title: 用于更新结果的规则 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 更新结果的规则
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bef3b9612b68c253fed032fe63d5d67e61816dff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 95d22a06194bfd4121eff4ba01cb2788cf095bf8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255669"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255165"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新结果的规则 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,19 +40,19 @@ ms.locfileid: "68255669"
 |---------|---------------------------|  
 |基于表并且输出列表中包含主键的查询|是（但下面列出的除外）。|  
 |基于无唯一索引和主键的表的查询|取决于查询和数据库。 有些数据库在有足够的信息用于唯一地标识记录时才允许进行更新。|  
-|基于未联接在一起的多个表的查询|否。|  
-|基于数据库中标记为只读数据的查询|否。|  
+|基于未联接在一起的多个表的查询|不是。|  
+|基于数据库中标记为只读数据的查询|不是。|  
 |基于包含一个无约束表的视图的查询|是（但下面列出的除外）。|  
 |基于用一对一关系联接的表的查询|是（但下面列出的除外）。|  
 |基于用一对多关系联接的表的查询|通常是。|  
-|基于有多对多关系的表（不少于三个）的查询|否。|  
+|基于有多对多关系的表（不少于三个）的查询|不是。|  
 |基于未授予其更新权限的表的查询|可删除但不可更新。|  
 |基于未授予其删除权限的表的查询|可更新但不可删除。|  
-|聚合查询|否。|  
-|基于包含总计或聚合函数的子查询的查询|否。|  
-|包括 DISTINCT 关键字（用于排除重复的行）的查询|否。|  
-|FROM 子句包括用户定义函数的查询（查询返回一个表且用户定义函数包含多个 Select 语句）|否。|  
-|FROM 子句中包括内联用户定义函数的查询|是。|  
+|聚合查询|不是。|  
+|基于包含总计或聚合函数的子查询的查询|不是。|  
+|包括 DISTINCT 关键字（用于排除重复的行）的查询|不是。|  
+|FROM 子句包括用户定义函数的查询（查询返回一个表且用户定义函数包含多个 Select 语句）|不是。|  
+|FROM 子句中包括内联用户定义函数的查询|是的。|  
   
 此外，您也许不能在查询结果中更新特定的列。 下面的列表汇总了不能在“结果”窗格中更新的特定类型的列。  
   

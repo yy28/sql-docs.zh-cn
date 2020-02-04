@@ -1,10 +1,7 @@
 ---
-title: 使用数据库关系图中的表 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 使用数据库关系图中的表
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,21 +12,27 @@ helpviewer_keywords:
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 358d9940227e9034cdd3155d521d1782abb95360
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 81611e2968dcf60bbf4d20a07364dc8fdd91a072
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262481"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246194"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>使用数据库关系图中的表 (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 您可以在表设计器或数据库关系图设计器中修改和创建数据库表。  
   
 > [!NOTE]  
 > 如果表是为复制发布的，则必须使用 Transact-SQL 语句 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 SQL Server 管理对象 (SMO) 对架构进行更改。 使用表设计器或数据库关系图设计器更改架构后，会尝试删除并重新创建表。 由于您不能删除已发布的对象，因此架构更改将失败。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本节内容
+
 [向关系图中添加表 (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
   
 [向关系图中添加相关的表 (Visual Database Tools)](../../ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools.md)  
@@ -44,7 +47,8 @@ ms.locfileid: "68262481"
   
 [绘制自反关系 (Visual Database Tools)](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)  
   
-## <a name="reference"></a>参考  
-[“添加表”对话框（数据库设计器）(Visual Database Tools)](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)  
-  
-## <a name="related-sections"></a>相关章节  
+## <a name="reference"></a>参考
+
+[“添加表”对话框（数据库设计器）(Visual Database Tools)](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)
+
+## <a name="related-sections"></a>相关章节

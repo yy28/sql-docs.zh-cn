@@ -16,13 +16,13 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578098"
 ---
-# <a name="schedules"></a>“计划”
+# <a name="schedules"></a>计划
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了“共享计划”和“报表特定计划”，可帮助控制报表的处理和分发   。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。
   
   -   共享计划作为单独的项创建。 创建共享计划后，您就可以在定义订阅或其他某个计划操作时引用它们。  
@@ -35,7 +35,7 @@ ms.locfileid: "65578098"
   
   
 ##  <a name="bkmk_whatyoucando"></a> 可对计划执行的操作  
- 可以使用本机模式下的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户和 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] ，或 SharePoint 模式下的 SharePoint 站点管理页来创建和管理计划。 您可以：  
+ 可以使用本机模式下的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户和 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] ，或 SharePoint 模式下的 SharePoint 站点管理页来创建和管理计划。 可以：  
   
 -   计划标准订阅或数据驱动订阅中的报表传递时间。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "65578098"
 ##  <a name="bkmk_credentials"></a> 存储凭据和处理帐户  
  您对计划的处理权限取决于您的角色分配中的任务。 如果使用预定义角色，则作为“内容管理员”和“系统管理员”的用户可以创建和管理任何计划。 如果您使用自定义角色分配，角色分配必须包括支持计划操作的任务。  
   
-|执行的操作|包括此任务|本机模式预定义角色|SharePoint 模式组|  
+|要执行此操作|包括此任务|本机模式预定义角色|SharePoint 模式组|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
 |创建、修改或删除共享计划|管理共享计划|系统管理员|所有者|  
 |选择共享计划|查看共享计划|系统用户|成员|  

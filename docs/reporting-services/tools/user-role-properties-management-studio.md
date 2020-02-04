@@ -11,10 +11,10 @@ ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f7c663f1a6d13b910492e21b1bd05145dc2a5833
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575779"
 ---
 # <a name="user-role-properties-management-studio"></a>用户角色属性 (Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "65575779"
  **名称**  
  指定角色定义的名称。  
   
- **Description**  
+ **说明**  
  显示角色定义的说明。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，该说明仅在此页上可见。 在报表管理器中，该说明可帮助用户确定是否在角色分配中使用该角色。  
   
  **任务**  

@@ -1,11 +1,7 @@
 ---
-title: 如何：比较和同步两个数据库的数据 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 比较和同步两个数据库的数据
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.connection.datasources.f1
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d7654d02cfc35b0dfbaa82b100b9a82a8edacb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929476"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241583"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>如何：比较和同步两个数据库的数据
+
 您可以将两个数据库中包含的数据进行比较。 比较的数据库分别称作“源”  和“目标”  。  
   
 > [!NOTE]  
@@ -61,7 +62,7 @@ ms.locfileid: "67929476"
   
 4.  如果存在多个键，可以使用“比较键”  列指定要作为数据比较依据的键。 例如，可以指定是基于主键列还是其他（唯一可标识）键列进行比较。  
   
-5.  单击 **“完成”** 。  
+5.  单击“完成”  。  
   
     比较开始。  
   

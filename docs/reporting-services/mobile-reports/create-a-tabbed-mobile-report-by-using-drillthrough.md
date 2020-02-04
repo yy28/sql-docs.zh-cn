@@ -9,10 +9,10 @@ ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d01f9f1bef4d13cbce3f3e736cbef2f838c680ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63061780"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>使用钻取功能创建选项卡式移动报表
@@ -33,7 +33,7 @@ ms.locfileid: "63061780"
     * Sales
     * 运输
     * 燃料
-    * 存储器
+    * 存储
     * 杂项费用
 
    ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
@@ -50,7 +50,7 @@ ms.locfileid: "63061780"
 
     * 运输
     * 燃料
-    * 存储器
+    * 存储
     * 杂项费用
 
 3. 将它们保存到 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表服务器。

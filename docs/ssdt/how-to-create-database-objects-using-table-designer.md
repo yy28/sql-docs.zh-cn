@@ -1,11 +1,7 @@
 ---
-title: 如何：使用表设计器创建数据库对象 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 使用表设计器创建数据库对象
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897175"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241496"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>如何：使用表设计器创建数据库对象
+# <a name="how-to-create-database-objects-using-table-designer"></a>如何使用表设计器创建数据库对象
+
 SQL Server 对象资源管理器  中的新的“SQL Server”  节点不但在外观上与 SSMS 十分相似，而且可以使用在功能上与其 SSMS 对应项类似的上下文菜单创建新对象。  
   
 例如，可以在“数据库”  节点下创建一个新数据库。 同样，您可以选择特定的数据库，并且使用新的表设计器即时创建或编辑表定义及其相关编程对象。 从表设计器中，您可以切换到脚本窗格，从该窗格中，您可以直接编辑定义此表的脚本。  
@@ -45,7 +46,7 @@ SQL Server 对象资源管理器  中的新的“SQL Server”  节点不但在�
     CREATE TABLE [dbo].[Table1]  
     ```  
   
-    使用  
+    替换为  
   
     ```  
     CREATE TABLE [dbo].[Suppliers]  
@@ -56,24 +57,24 @@ SQL Server 对象资源管理器  中的新的“SQL Server”  节点不但在�
 5.  添加另一个新列。 为“名称”  字段输入 Address  ，为“数据类型”  字段输入 nvarchar (MAX)  ，取消选中“允许 Null 值”  字段。  
   
     > [!WARNING]  
-    > 在您正在从连接的数据库编辑对象时，不要将这些对象保存到您的本地驱动器。 若要正确保存对数据库的更改，请按照下一过程中的步骤执行操作，即[如何：使用 Power Buffer 更新连接的数据库](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)。  
+    > 在您正在从连接的数据库编辑对象时，不要将这些对象保存到您的本地驱动器。 若要将所做的更改正确保存到数据库中，请按照接下来的[如何：使用 Power Buffer 更新连接的数据库](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)过程中的步骤进行操作。  
   
 6.  重复上述步骤，创建另一个名为“Customer”  的表。 这一次，您将使用列网格向该 Customer 表添加以下列。 并且记住要更改脚本，以便该表的名称为 `[dbo].[Customer]`。  
   
-    |“属性”|数据类型|**允许 Null 值**|  
+    |名称|数据类型|**允许 Null 值**|  
     |--------|-------------|-------------------|  
-    |ID|INT|unchecked|  
-    |“属性”|nvarchar (128)|unchecked|  
+    |ID|int|unchecked|  
+    |名称|nvarchar (128)|unchecked|  
   
 7.  再创建一个名为“Products”  的表。 使用列网格向该 Products 表添加以下列。 并且记住要更改脚本，以便该表的名称为 `[dbo].[Products]`。  
   
-    |“属性”|数据类型|**允许 Null 值**|  
+    |名称|数据类型|**允许 Null 值**|  
     |--------|-------------|-------------------|  
-    |ID|INT|unchecked|  
-    |“属性”|nvarchar (128)|unchecked|  
-    |ShelfLife|INT|已选中|  
-    |SupplierId|INT|已选中|  
-    |CustomerId|INT|已选中|  
+    |ID|int|unchecked|  
+    |名称|nvarchar (128)|unchecked|  
+    |ShelfLife|int|已选中|  
+    |SupplierId|int|已选中|  
+    |CustomerId|int|已选中|  
   
 ### <a name="to-create-a-new-check-constraint-using-the-table-designer"></a>使用表设计器创建新的 CHECK 约束  
   

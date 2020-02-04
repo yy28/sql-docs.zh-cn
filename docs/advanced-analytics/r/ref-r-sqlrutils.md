@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715033"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils（SQL Server 中的 R 库）
@@ -41,7 +41,7 @@ sqlrutils 库分布于多种 Microsoft 产品中，但不管你是在 SQL Server
 
 下一节概述可从 sqlrutils 包中调用以开发包含嵌入式 R 代码的存储过程的函数  。 有关每个方法或函数的参数的详细信息，请参阅包的 R 帮助：`help(package="sqlrutils")`
 
-|函数 | 描述 |
+|函数 | 说明 |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| 执行 SQL 存储过程。|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| 获取存储过程的输入参数列表。| 
@@ -63,7 +63,7 @@ sqlrutils 库函数必须在具有 R 的 SQL Server 机器学习的计算机上�
 + 生成并注册存储过程    
 + 执行该存储过程  
 
-在 R 会话中，通过键入 `library(sqlrutils)`，从命令行加载 sqlrutils  。
+在 R 会话中，通过键入 **，从命令行加载 sqlrutils**`library(sqlrutils)`。
 
 > [!Note]
 > 如果将计算上下文更改为 SQL Server 并在该计算上下文中执行代码，则可以在不具有 SQL Server 的计算机上（例如，在 R 客户端实例上）加载此库。

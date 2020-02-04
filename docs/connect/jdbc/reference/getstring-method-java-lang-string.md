@@ -16,10 +16,10 @@ ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4ff58d1a2f58e044b49767f8fb2982b669a7b78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979432"
 ---
 # <a name="getstring-method-javalangstring"></a>getString 方法 (java.lang.String)
@@ -34,7 +34,7 @@ ms.locfileid: "67979432"
 public java.lang.String getString(java.lang.String sCol)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  sCol   
   
  包含参数名称的字符串  。  
@@ -42,10 +42,10 @@ public java.lang.String getString(java.lang.String sCol)
 ## <a name="return-value"></a>返回值  
  一个字符串值  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getString方法是由 java.sql.CallableStatement 接口中的 getString 方法指定的。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的所有列都可作为字符串返回。 这意味着可以返回基于数字和基于字符的所有类型的字符串表示形式，以及二进制列（如 binary、varbinary、varbinary(max)、image、timestamp 和 uniqueidentifier）的十六进制字符串表示形式。  
