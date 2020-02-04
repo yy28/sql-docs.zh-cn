@@ -1,10 +1,9 @@
 ---
-title: “XML 索引”对话框 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: “XML 索引”对话框
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c2526d2facc494dc102ac6674ac01ab851b0a40c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 38be046b5c99e56a76c716117708d4eeb88ac9fd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262458"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246177"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>“XML 索引”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68262458"
 **选定的 XML 索引**  
 列出现有的 XML 索引。 选择一个索引即可在右侧网格中显示其属性。 如果该列表为空，则表示尚未为该表定义任何 XML 索引。  
   
-**“添加”**  
+**添加**  
 创建新的 XML 索引。  
   
 **删除**  
@@ -48,16 +49,16 @@ ms.locfileid: "68262458"
 **次要类型**  
 显示二级索引的类型。 只有在此索引为二级索引时才可用。  
   
-**类型**  
+类型   
 显示此索引为 XML 索引。  
   
 **标识类别**  
 展开此项可显示“名称”  和“说明”  属性字段。  
   
 **名称**  
-显示 XML 索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定默认名称。 您可以随时更改该名称。  
+显示 XML 索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定默认名称。 可随时更改名称。  
   
-**Description**  
+**说明**  
 描述该索引。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (…)   。 这可以提供一个更大的文本编写区域。  
   
 **表设计器类别**  

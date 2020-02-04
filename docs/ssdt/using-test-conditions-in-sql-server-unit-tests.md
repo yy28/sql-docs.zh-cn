@@ -1,25 +1,26 @@
 ---
-title: 在 SQL Server 单元测试中使用测试条件 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 在 SQL Server 单元测试中使用测试条件
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconditions
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa2bce398b6ac03422044c9ffad23f91ab81818c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140966"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243521"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>在 SQL Server 单元测试中使用测试条件
+
 在 SQL Server 单元测试中，将执行一个或多个 Transact\-SQL 测试脚本。 可以在 Transact\-SQL 脚本内对结果进行评估，并且使用 THROW 或 RAISERROR 来返回错误和使测试失败，或者可以在测试中对测试条件进行定义以便评估结果。 该测试返回 [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) 类的实例。 此类的实例包含一个或多个数据集、执行时间和受脚本影响的行。 所有这些信息都是在脚本的执行过程中收集的。 这些结果可使用测试条件进行评估。 SQL Server Data Tools 提供一组预定义的测试条件。 还可以创建和使用自定义条件；请参阅 [SQL Server 单元测试的自定义测试条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)。  
   
 ## <a name="predefined-test-conditions"></a>预定义的测试条件  
@@ -27,7 +28,7 @@ ms.locfileid: "68140966"
   
 |**测试条件**|**测试条件说明**|  
 |----------------------|----------------------------------|  
-|数据校验和|如果从 Transact\-SQL 脚本返回的结果集的校验和与预期的校验和不一致，则将失败。 有关更多信息，请参见 [指定数据校验和](#SpecifyDataChecksum)。<br /><br />**注意**：如果要返回的数据在不同的测试运行之间是不同的，则不建议使用此测试条件。 例如，如果结果集包含生成日期或时间或者包含标识列，则测试将失败，因为每次运行的校验和都会不同。|  
+|数据校验和|如果从 Transact\-SQL 脚本返回的结果集的校验和与预期的校验和不一致，则将失败。 有关更多信息，请参见 [指定数据校验和](#SpecifyDataChecksum)。<br /><br />注意：  如果要返回的数据在不同的测试运行之间是不同的，则不建议使用此测试条件。 例如，如果结果集包含生成日期或时间或者包含标识列，则测试将失败，因为每次运行的校验和都会不同。|  
 |空结果集|如果从 Transact\-SQL 脚本返回的结果集不为空，则将失败。|  
 |执行时间|如果 Transact\-SQL 测试脚本所用时间长于预期执行时间，则将失败。 默认执行时间为 30 秒。<br /><br />执行时间仅适用于测试脚本的测试，而不适用于预先测试脚本或后期测试脚本。|  
 |预期架构|如果结果集的列和数据类型与为测试条件指定的不匹配，则将失败。 您必须通过测试条件的属性指定架构。 有关更多信息，请参见 [指定预期架构](#SpecifyExpectedSchema)。|  
@@ -41,7 +42,7 @@ ms.locfileid: "68140966"
 >   
 > 报告的持续时间不包括用于数据生成和架构部署的时间，因为它们发生在测试运行之前。 若要查看测试持续时间，请在“测试结果”  窗口中选择测试运行，右键单击并选择“查看测试结果详细信息”  。  
   
-可使用 SQL Server 单元测试设计器的“测试条件”窗格向 SQL Server 单元测试添加测试条件。 有关详细信息，请参阅[如何：向 SQL Server 单元测试添加测试条件](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)。  
+可使用 SQL Server 单元测试设计器的“测试条件”窗格向 SQL Server 单元测试添加测试条件。 有关详细信息，请参阅[如何：向 SQL Server 单元测试中添加测试条件](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)。  
   
 您还可直接编辑测试方法代码以添加更多功能。 有关详细信息，请参阅[如何：打开 SQL Server 单元测试以进行编辑](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)和[如何：编写在单个事务范围内运行的 SQL Server 单元测试](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)。 例如，您可通过添加 Assert 语句向测试方法添加功能。 有关详细信息，请参阅[在 SQL Server 单元测试中使用 Transact-SQL 断言](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)。  
   
@@ -91,7 +92,7 @@ ms.locfileid: "68140966"
   
     此时将显示“TestConditionName 的配置”  对话框。  
   
-5.  指定与要测试的数据库的连接。 有关详细信息，请参阅[如何：创建数据库连接](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)。  
+5.  指定与要测试的数据库的连接。 有关详细信息，请参阅 [如何：创建数据库连接](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)。  
   
 6.  默认情况下，测试的 Transact\-SQL 正文将出现在编辑窗格中。 您可修改代码（如有必要）以产生预期的结果。 例如，如果您的测试具有预先测试代码，则您可能必须添加该代码。  
   
@@ -121,7 +122,7 @@ ms.locfileid: "68140966"
   
     此时将显示“TestConditionName 的配置”  对话框。  
   
-5.  指定与要测试的数据库的连接。 有关详细信息，请参阅[如何：创建数据库连接](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)。  
+5.  指定与要测试的数据库的连接。 有关详细信息，请参阅 [如何：创建数据库连接](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)。  
   
 6.  默认情况下，测试的 Transact\-SQL 正文将出现在编辑窗格中。 您可修改代码（如有必要）以产生预期的结果。 例如，如果您的测试具有预先测试代码，则您可能必须添加该代码。  
   
@@ -134,7 +135,7 @@ ms.locfileid: "68140966"
   
 8.  如果结果与测试的预期结果匹配，则单击“确定”  。 否则，请修改 Transact\-SQL 正文并重复步骤 6、7 和 8，直至结果与预期相符。  
   
-    测试条件的“值”  列将显示有关预期架构的信息。 例如，它可能显示“应为：2 个表”。  
+    测试条件的“值”  列将显示有关预期架构的信息。 例如，它可能显示“Expected:2 tables”。  
   
 ## <a name="extensible-test-conditions"></a>可扩展的测试条件  
 除了六个预定义的测试条件之外，您还可编写您自己的新测试条件。 这些测试条件将显示在 SQL Server 单元测试设计器的“测试条件”窗格中。 有关详细信息，请参阅 [SQL Server 单元测试的自定义测试条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)。  
