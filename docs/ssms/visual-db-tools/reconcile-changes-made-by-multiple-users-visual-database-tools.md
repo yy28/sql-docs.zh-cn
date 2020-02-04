@@ -1,10 +1,9 @@
 ---
-title: 协调多个用户所做的更改 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 协调多个用户所做的更改
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b4eee47ea3e15b869909e66818bddf655f63ea3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b85d852b4eee542632af0afbbf561fec47fac35a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266236"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255281"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>协调多个用户所做的更改 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "68266236"
   
 -   选择“是”  保存表并使用列表中的所有更改更新数据库。  
   
-    此操作将影响共用相同数据库对象的表。 例如，假设编辑 `titleauthors` 表中的 `au_id` 列，而另一名用户正在处理 `authors` 表，该表通过 `au_id` 列与 `titleauthors` 表相关联。 保存您的表将影响另一个用户的表。 与此类似，假设另一个用户为 `qty` 表中的 `sales` 列定义了一个 CHECK 约束。 如果您删除 `qty` 列并保存 `sales` 表，则另一个用户的 CHECK 约束将受到影响。  
+    此操作将影响共用相同数据库对象的表。 例如，假设编辑 `au_id` 表中的 `titleauthors` 列，而另一名用户正在处理 `authors` 表，该表通过 `titleauthors` 列与 `au_id` 表相关联。 保存您的表将影响另一个用户的表。 与此类似，假设另一个用户为 `qty` 表中的 `sales` 列定义了一个 CHECK 约束。 如果您删除 `qty` 列并保存 `sales` 表，则另一个用户的 CHECK 约束将受到影响。  
   
 -   选择“否”  取消保存操作。  
   
