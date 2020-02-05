@@ -1,10 +1,9 @@
 ---
-title: 创建作业类别 | Microsoft Docs
-ms.custom: ''
+title: 创建作业类别
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,13 +13,15 @@ helpviewer_keywords:
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b1c34e565365113629e64dda7500501816d7a222
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 2b5721464d63893a917bb0036491eacbb7ca4c8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553143"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245944"
 ---
 # <a name="create-a-job-category"></a>创建作业类别
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "69553143"
   
 6.  选中 **“显示所有作业”** 复选框。 通过选中作业对应的框来为新类别选择一个或多个作业。  
   
-7.  单击“确定”  。  
+7.  单击“确定”。   
   
 8.  在“管理作业类别”  _server_name_ 对话框中，单击“刷新”  以确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
   

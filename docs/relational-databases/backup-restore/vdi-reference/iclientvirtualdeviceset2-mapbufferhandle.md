@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 5d181d1b6ddfea034716ebb048768cd7d43fbc61
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847578"
 ---
 # <a name="iclientvirtualdeviceset2mapbufferhandle-vdi"></a>IClientVirtualDeviceSet2::MapBufferHandle (VDI)
@@ -31,7 +31,7 @@ HRESULT IClientVirtualDeviceSet2::MapBufferHandle (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>parameters
 
 *dwBuffer* 这是由 IClientVirtualDeviceSet2::GetBufferHandle 返回的句柄。
 
@@ -39,13 +39,13 @@ HRESULT IClientVirtualDeviceSet2::MapBufferHandle (
 
 ## <a name="return-value"></a>返回值
 
-|返回值 | 解释 |
+|返回值 | 说明 |
 |---|---|
 | NOERROR | 函数成功。 |
 | VD_E_PROTOCOL | 当前未打开虚拟设备集。 |
 | VD_E_INVALID | ppBuffer 是无效的句柄。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 为了与句柄正确通信，必须格外谨慎。 对于单个虚拟设备集而言，句柄是本地的。 共享句柄的合作伙伴进程必须确保仅在最初获取缓冲区的虚拟设备集范围内使用缓冲区句柄。
 

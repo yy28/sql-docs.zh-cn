@@ -1,10 +1,7 @@
 ---
-title: FeatureSet 元素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: FeatureSet 元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9c0711dc15327cad726e61857f61539f8cadea02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 72aad15cdd024cf1ee0bc3ea5ed1bc2eb7a42917
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034968"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307662"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  包含数据库引擎优化顾问在分析中使用的物理设计结构（索引或索引视图）。  
+
+包含数据库引擎优化顾问在分析中使用的物理设计结构（索引或索引视图）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68034968"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**string**，无最大长度。|  
 |**允许的值**|**IDX_IV**<br /> 索引和索引视图。<br /><br /> **IDX**<br /> 仅限索引。<br /><br /> **IV**<br /> 仅限索引视图。<br /><br /> **NCL_IDX**<br /> 仅限非聚集索引。<br /><br /> 将这些值中的一个值用于此元素。|  

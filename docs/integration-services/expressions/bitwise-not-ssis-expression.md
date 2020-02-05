@@ -14,10 +14,10 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b9ac40997cd2d9962d067d181a66e9614de477d1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297682"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ （位非）（SSIS 表达式）
@@ -42,8 +42,8 @@ ms.locfileid: "71297682"
 ## <a name="result-types"></a>结果类型  
  返回 integer_expression  数据类型。  
   
-## <a name="remarks"></a>Remarks  
- None  
+## <a name="remarks"></a>备注  
+ 无  
   
 ## <a name="expression-examples"></a>表达式示例  
  以下示例对数值 170 (0000 0000 1010 1010) 执行位 ~（非）运算。 该数值是一个有符号整数。  

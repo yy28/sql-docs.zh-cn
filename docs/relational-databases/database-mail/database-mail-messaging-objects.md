@@ -16,10 +16,10 @@ ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8eb132920a6b51303e5725ecdb770dd742972f42
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70809945"
 ---
 # <a name="database-mail-messaging-objects"></a>数据库邮件消息处理对象
@@ -33,14 +33,14 @@ ms.locfileid: "70809945"
   
  这些对象是数据库邮件在邮件主机数据库内的接口。 还会安装其他对象以执行上面列出的对象所提供的功能， 但是这些对象仅供内部使用。  
   
-|“属性”|类型|描述|  
+|名称|类型|说明|  
 |----------|----------|-----------------|  
-|[sysmail_allitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**“视图”**|列出已提交到数据库邮件的所有邮件。|  
-|[sysmail_event_log (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**“视图”**|列出有关 [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)行为的邮件。|  
-|[sysmail_faileditems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|**“视图”**|有关数据库邮件无法发送的邮件的信息。|  
-|[sysmail_mailattachments (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)|**“视图”**|有关数据库邮件附件的信息。|  
+|[sysmail_allitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**视图**|列出已提交到数据库邮件的所有邮件。|  
+|[sysmail_event_log (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**视图**|列出有关 [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)行为的邮件。|  
+|[sysmail_faileditems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|**视图**|有关数据库邮件无法发送的邮件的信息。|  
+|[sysmail_mailattachments (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)|**视图**|有关数据库邮件附件的信息。|  
 |[sysmail_sentitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)|**视图**|有关已使用数据库邮件发送的邮件的信息。|  
-|[sysmail_unsentitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|**“视图”**|有关数据库邮件当前正在尝试发送的邮件的信息。|  
+|[sysmail_unsentitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|**视图**|有关数据库邮件当前正在尝试发送的邮件的信息。|  
 |[sp_send_dbmail (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)|**存储过程**|使用数据库邮件发送电子邮件。|  
 |[sysmail_delete_log_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|**存储过程**|从数据库邮件日志中删除邮件。|  
 |[sysmail_delete_mailitems_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)|**存储过程**|从数据库邮件队列中删除邮件项。|  

@@ -15,10 +15,10 @@ ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a6b946110049321c50427e33fbca05876ec6384
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297349"
 ---
 # <a name="trim-ssis-expression"></a>TRIM（SSIS 表达式）
@@ -45,7 +45,7 @@ TRIM(character_expression)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果该参数为空，则 TRIM 返回的结果为空。  
   
  TRIM 只可用于 DT_WSTR 数据类型。 如果 *character_expression* 参数是字符串文字或数据类型为 DT_STR 的数据列，则它在 TRIM 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  

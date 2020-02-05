@@ -11,17 +11,17 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de1dc6567603b0b16324aa798527a0b79282fa83
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095745"
 ---
 # <a name="import-json-documents-into-sql-server"></a>将 JSON 文档导入 SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-本文介绍如何将 JSON 文件导入 SQL Server。 目前有许多 JSON 文档存储在文件中。 例如 JSON 文件中的应用程序日志信息、JSON 文件中存储的传感器生成信息等。 必须能够读取文件中存储的 JSON 数据、将数据载入 SQL Server 和分析数据。
+本文介绍如何将 JSON 文件导入 SQL Server。 目前有许多 JSON 文档存储在文件中。 应用程序在 JSON 文件中记录信息，传感器生成存储在 JSON 文件中的信息等。 必须能够读取文件中存储的 JSON 数据、将数据载入 SQL Server 和分析数据。
 
 ## <a name="import-a-json-document-into-a-single-column"></a>将 JSON 文档导入单个列
 
@@ -110,7 +110,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>在行和列中分析 JSON 文档
 
-你可能不希望以单个值的形式读取整个 JSON 文件，而是希望在行和列中分析该文件，并返回其中的书籍及其属性。 以下示例使用[此站点](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)中的一个 JSON 文件，该文件包含书籍列表。
+你可能不希望以单个值的形式读取整个 JSON 文件，而是希望分析该文件，并将文件中的书籍及其属性以行和列的形式返回。 以下示例使用[此站点](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)中的一个 JSON 文件，该文件包含书籍列表。
 
 ### <a name="example-1"></a>示例 1
 
@@ -145,11 +145,11 @@ SELECT book.*
 
 在此示例中，OPENROWSET(BULK) 读取文件的内容，并使用定义的架构将该内容传递给 OPENJSON 函数，以便输出内容。 OPENJSON 使用列名匹配 JSON 对象中的属性。 例如，`price` 属性将以 `price` 列的形式返回，并转换为浮点数据类型。 结果如下：
 
-|ID|“属性”|price|pages_i|作者|
+|ID|名称|price|pages_i|作者|
 |---|---|---|---|---|
 |978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 |978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
-|978-1857995879|Sophie's World :The Greek Philosophers|3.07|64|Jostein Gaarder| 
+|978-1857995879|Sophie’s World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
 |978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless|
 ||||||
 

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 7fac24aec092ef65bb390d8df020999647f215c6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908269"
 ---
 # <a name="delete-a-push-subscription"></a>删除推送订阅
@@ -67,15 +67,15 @@ ms.locfileid: "72908269"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>删除快照发布或事务发布的推送订阅  
   
-1.  在发布服务器上，对发布数据库执行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 \@publication 和 \@subscriber   。 将 \@article 的值指定为 all   。 （可选）如果无法访问分发服务器，请将 \@ignore_distributor 的值指定为 1，以便在不删除分发服务器上相关对象的情况下删除订阅   。  
+1.  在发布服务器上，对发布数据库执行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 **publication 和 \@subscriber** **\@** 。 将 **article 的值指定为 all** **\@** 。 （可选）如果无法访问分发服务器，请将 **ignore_distributor 的值指定为 1，以便在不删除分发服务器上相关对象的情况下删除订阅** **\@** 。  
   
 2.  在订阅服务器上，对订阅数据库执行 [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) 以删除订阅数据库中的复制元数据。  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>删除合并发布的推送订阅  
   
-1.  在发布服务器上，执行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)，并指定 \@publication、\@subscriber 和 \@subscriber_db    。 （可选）如果无法访问分发服务器，请将 \@ignore_distributor 的值指定为 1，以便在不删除分发服务器上相关对象的情况下删除订阅   。  
+1.  在发布服务器上，执行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)，并指定 **publication、\@subscriber 和** subscriber_db **\@** **\@** 。 （可选）如果无法访问分发服务器，请将 **ignore_distributor 的值指定为 1，以便在不删除分发服务器上相关对象的情况下删除订阅** **\@** 。  
   
-2.  在订阅服务器上，对订阅数据库执行 [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)。 指定 \@publisher、\@publisher_db 和 \@publication    。 这将会删除订阅数据库中的合并元数据。  
+2.  在订阅服务器上，对订阅数据库执行 [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)。 指定 **publisher、\@publisher_db 和** publication **\@** **\@** 。 这将会删除订阅数据库中的合并元数据。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  该示例删除对事务发布的推送订阅。  
@@ -93,7 +93,7 @@ ms.locfileid: "72908269"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与订阅服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>和 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> 属性。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72908269"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与订阅服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>和 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> 属性。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72908269"
  [!code-vb[HowTo#rmo_vb_DropTranPushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_droptranpushsub)]  
   
 ## <a name="see-also"></a>另请参阅  
- [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [复制安全最佳做法](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

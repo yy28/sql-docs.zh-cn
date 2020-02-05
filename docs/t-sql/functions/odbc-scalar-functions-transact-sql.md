@@ -52,19 +52,19 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a58f211c1a838cb0089cbc2f3e5e156936d1c7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fd8173f0c29855fc4553dedcd9ac47ddc909f57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914743"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909827"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 标量函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中使用 [ODBC 标量函数](https://go.microsoft.com/fwlink/?LinkID=88579)。 这些语句由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解释。 它们可以用在存储过程和用户定义函数中。 这些函数包括字符串函数、数值函数、时间函数、日期函数、时间间隔函数和系统函数。  
+  可以在 [ 语句中使用 ](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC 标量函数[!INCLUDE[tsql](../../includes/tsql-md.md)]。 这些语句由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解释。 它们可以用在存储过程和用户定义函数中。 这些函数包括字符串函数、数值函数、时间函数、日期函数、时间间隔函数和系统函数。  
   
-## <a name="usage"></a>用法  
+## <a name="usage"></a>使用情况  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
 ## <a name="functions"></a>函数  
@@ -72,7 +72,7 @@ ms.locfileid: "67914743"
   
 ### <a name="string-functions"></a>字符串函数  
   
-|函数|描述|  
+|函数|说明|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|返回字符串表达式的长度（以位为单位）。<br /><br /> 返回给定数据类型的内部大小，而不将 string_exp 转换为字符串。|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|返回一个表示将 string_exp2 连接到 string_exp1 的结果的字符串。 生成的字符串依赖于 DBMS。 例如，如果 string_exp1 所表示的列包含一个 NULL 值，则 DB2 将返回 NULL，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回非 NULL 的字符串。|  
@@ -80,13 +80,13 @@ ms.locfileid: "67914743"
   
 ### <a name="numeric-function"></a>数值函数  
   
-|函数|描述|  
+|函数|说明|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|返回截断到小数点右侧 integer_exp 位置的 numeric_exp。 如果 integer_exp 为负数，则 numeric_exp 会截断到小数点左侧 &#124;integer_exp&#124; 位置。|  
   
 ### <a name="time-date-and-interval-functions"></a>时间、日期和时间间隔函数  
   
-|函数|描述|  
+|函数|说明|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|返回当前日期。|  
 |CURDATE( ) (ODBC 3.0)|返回当前日期。|  
@@ -223,7 +223,7 @@ SELECT {fn BIT_LENGTH( @string_exp )};
 SELECT {fn CONCAT( 'CONCAT ','returns a character string')};  
 -- Returns CONCAT returns a character string  
 SELECT {fn CURRENT_DATE( )};  
--- Returns todays date  
+-- Returns today's date  
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns the time  
   

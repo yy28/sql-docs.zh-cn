@@ -18,10 +18,10 @@ ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4314dbd1ab80fe8a26a1c6fa2b2429b68c6645fa
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908899"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>删除失效文件组 (SQL Server)
@@ -87,7 +87,7 @@ ms.locfileid: "72908899"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 （注意：  此示例假定文件和文件组已存在。 若要创建这些对象，请参阅 [ALTER DATABASE 和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)主题中的示例 B。）第一个示例通过使用具有 `test1dat3` 子句的 `test1dat4` 语句，从失效的文件组中删除 `ALTER DATABASE` 和 `REMOVE FILE` 文件。 第二个示例通过使用 `Test1FG1` 子句，删除失效的文件组 `REMOVE FILEGROUP`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 （**注意：** 此示例假定文件和文件组已存在。 若要创建这些对象，请参阅 [ALTER DATABASE 和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 主题中的示例 B。）第一个示例通过使用具有 `test1dat3` 子句的 `test1dat4` 语句，从失效的文件组中删除 `ALTER DATABASE` 和 `REMOVE FILE` 文件。 第二个示例通过使用 `Test1FG1`子句，删除失效的文件组 `REMOVE FILEGROUP` 。  
   
 ```sql  
 USE master;  

@@ -11,10 +11,10 @@ ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f963d8d7fe186d889856c108de1541110beb16a3
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165509"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP（内存中 OLTP）性能计数器
@@ -24,7 +24,7 @@ ms.locfileid: "74165509"
   
  对象和计数器的名称在过去以 *XTP* 开头，如“XTP 游标”  中所示。 现在，自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，其名称将遵循以下模式：  
   
--   SQL Server \<版本> XTP 游标     
+-   SQL Server **版本> XTP 游标** *\<*   
   
  其中 *\<version>* 的值类似于 2016。  
   

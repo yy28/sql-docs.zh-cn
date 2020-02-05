@@ -1,5 +1,5 @@
 ---
-title: 例如：查询 XMLType 列 | Microsoft Docs
+title: 示例：查询 XML 类型的列 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa648babb6c6ba6ae9578921833d2c2201fb4c95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006822"
 ---
-# <a name="example-querying-xmltype-columns"></a>例如：查询 XMLType 列
+# <a name="example-querying-xmltype-columns"></a>示例：查询 XML 类型的列
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   下面的查询包括 **xml** 类型的列。 该查询从 `Instructions` xml **类型的** 列的第一个位置检索产品型号 ID、名称和生产步骤。  
   

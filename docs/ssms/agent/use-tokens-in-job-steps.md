@@ -1,10 +1,9 @@
 ---
-title: 在作业步骤中使用标记 | Microsoft Docs
-ms.custom: ''
+title: 在作业步骤中使用标记
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +15,15 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 13ee039c9f3a70b5468d3d7b726b1600e8f80339
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5800bd00faac0c34052a5930cfdb1ccaf86afbcb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260890"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257882"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作业步骤中使用标记
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,11 +37,11 @@ ms.locfileid: "68260890"
 ## <a name="understanding-using-tokens"></a>了解标记用法  
   
 > [!IMPORTANT]  
-> 对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括：A-DBN、A-SVR、A-ERR、A-SEV、A-MSG 和 WMI（属性）。 请注意，在此版本中，对标记的使用扩展至所有警报。  
+> 对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括： **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**和 **WMI(** _property_ **)** 。 请注意，在此版本中，对标记的使用扩展至所有警报。  
 >   
-> 如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，并在“警报系统”页上选择“为警报的所有作业响应替换标记”以启用这些标记。  
+> 如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”  ，选择“属性”  ，并在“警报系统”  页上选择“为警报的所有作业响应替换标记”  以启用这些标记。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理令牌替换简单且有效：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以准确的文字字符串值替换令牌。 所有标记都是区分大小写的。 您的作业步骤必须考虑到这一点，并且将所用标记正确地用引号引起来或将替换字符串转换为正确的数据类型。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记替换简单且有效： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以准确的文字字符串值替换标记。 所有标记都是区分大小写的。 您的作业步骤必须考虑到这一点，并且将所用标记正确地用引号引起来或将替换字符串转换为正确的数据类型。  
   
 例如，您可以在作业步骤中使用以下语句输出数据库的名称：  
   
@@ -54,14 +55,14 @@ ms.locfileid: "68260890"
   
 在这种情况下，不会执行已插入的语句 `SELECT @@VERSION`。 相反，多余的单引号会导致服务器将已插入语句作为字符串进行分析。 如果标记替换字符串不包含单引号，则不会转义任何字符，并且包含此标记的作业步骤会按预期方式执行。  
   
-若要在作业步骤中调试标记使用，请使用 `PRINT N'$(ESCAPE_SQUOTE(SQLDIR))'` 之类的输出语句并将作业步骤输出保存到文件或表。 可以使用“作业步骤属性”对话框的“高级”页指定作业步骤输出文件或表。  
+若要在作业步骤中调试标记使用，请使用 `PRINT N'$(ESCAPE_SQUOTE(SQLDIR))'` 之类的输出语句并将作业步骤输出保存到文件或表。 可以使用“作业步骤属性”  对话框的“高级”  页指定作业步骤输出文件或表。  
   
 ## <a name="sql-server-agent-tokens-and-macros"></a>SQL Server 代理标记和宏  
 下列各表列出并说明了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理支持的标记和宏。  
   
 ### <a name="sql-server-agent-tokens"></a>SQL Server 代理标记  
   
-|标记|描述|  
+|标记|说明|  
 |---------|---------------|  
 |**(A-DBN)**|数据库名称。 如果作业由某个警报运行，则在作业步骤中，数据库名称值将自动替换此标记。|  
 |**(A-SVR)**|服务器名称。 如果作业由某个警报运行，则在作业步骤中，服务器名称值将自动替换此标记。|  
@@ -84,23 +85,23 @@ ms.locfileid: "68260890"
 |**(TIME)**|当前时间（以 HHMMSS 格式表示）。|  
 |**(STRTTM)**|作业开始执行的时间（以 HHMMSS 格式表示）。|  
 |**(STRTDT)**|作业开始执行的日期（以 YYYYMMDD 格式表示）。|  
-|**(WMI(** property **))**|对于为响应 WMI 警报而运行的作业，属性值由 property 指定。 例如，`$(WMI(DatabaseName))` 为导致警报运行的 WMI 事件提供 **DatabaseName** 属性值。|  
+|**(WMI(** property _))_ |对于为响应 WMI 警报而运行的作业，属性值由 property  指定。 例如，`$(WMI(DatabaseName))` 为导致警报运行的 WMI 事件提供 **DatabaseName** 属性值。|  
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server 代理转义宏  
   
-|转义宏|描述|  
+|转义宏|说明|  
 |-----------------|---------------|  
-|**$(ESCAPE_SQUOTE(** token\_name **))**|转义标记替换字符串中的单引号 (')。 将一个单引号替换为两个单引号。|  
-|**$(ESCAPE_DQUOTE(** token\_name **))**|转义标记替换字符串中的双引号 (")。 将一个双引号替换为两个双引号。|  
-|**$(ESCAPE_RBRACKET(** token\_name **))**|转义标记替换字符串中的右方括号 (])。 将一个右方括号替换为两个右方括号。|  
-|**$(ESCAPE_NONE(** token\_name **))**|替换标记而不转义字符串中的任何字符。 提供此宏是为了在仅需要来自受信任用户的标记替换字符串的环境中支持向后兼容。 有关详细信息，请参阅本主题后面的“更新作业步骤以使用宏”。|  
+|**$(ESCAPE_SQUOTE(** token_name\__ **))**|转义标记替换字符串中的单引号 (')。 将一个单引号替换为两个单引号。|  
+|**$(ESCAPE_DQUOTE(** token_name\__ **))**|转义标记替换字符串中的双引号 (")。 将一个双引号替换为两个双引号。|  
+|**$(ESCAPE_RBRACKET(** token_name\__ **))**|转义标记替换字符串中的右方括号 (])。 将一个右方括号替换为两个右方括号。|  
+|**$(ESCAPE_NONE(** token_name\__ **))**|替换标记而不转义字符串中的任何字符。 提供此宏是为了在仅需要来自受信任用户的标记替换字符串的环境中支持向后兼容。 有关详细信息，请参阅本主题后面的“更新作业步骤以使用宏”。|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>更新作业步骤以使用宏  
-下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理如何处理标记替换。 若要启用或禁用警报标记替换，请在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，然后在“警报系统”页上选中或清除“为警报的所有作业响应替换标记”复选框。  
+下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理如何处理标记替换。 若要启用或禁用警报标记替换，请在对象资源管理器中右键单击“SQL Server 代理”  ，选择“属性”  ，然后在“警报系统”  页上选中或清除“为警报的所有作业响应替换标记”  复选框。  
   
 |标记语法|启用警报标记替换|禁用警报标记替换|  
 |----------------|------------------------------|-------------------------------|  
-|使用转义宏|成功替换作业中的所有标记。|不替换由警报激活的标记。 这些标记包括 **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**和 **WMI(**_property_**)**。 成功替换其他静态标记。|  
+|使用转义宏|成功替换作业中的所有标记。|不替换由警报激活的标记。 这些标记包括 **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**和 **WMI(** _property_ **)** 。 成功替换其他静态标记。|  
 |不使用转义宏|任何包含标记的作业均失败。|任何包含标记的作业均失败。|  
   
 ## <a name="token-syntax-update-examples"></a>标记语法更新示例  
@@ -130,7 +131,7 @@ PRINT N'Print ' + @msgString ;</pre>
   
 另请注意，在此示例中 QUOTENAME 函数设置引号字符。  
   
-### <a name="c-using-tokens-with-the-escapenone-macro"></a>C. 将标记与 ESCAPE_NONE 宏配合使用  
+### <a name="c-using-tokens-with-the-escape_none-macro"></a>C. 将标记与 ESCAPE_NONE 宏配合使用  
 以下示例是从 `job_id` 表中检索 `sysjobs` 并使用 `JOBID` 标记填充 `@JobID` 变量（在脚本的前面部分已声明为 binary 数据类型）的脚本的一部分。 注意，由于 binary 数据类型不需要分隔符，因此将 `ESCAPE_NONE` 宏与 `JOBID` 标记配合使用。 运行更新脚本之后，无需更新此作业步骤。  
   
 <pre>SELECT * FROM msdb.dbo.sysjobs  

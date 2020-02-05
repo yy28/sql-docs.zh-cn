@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 92d62f3c-b8ae-482e-a348-2e9a8ee9786e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 20586254516f97552f3dbc181bc482f24a683d00
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c991192bcea9846467e54f5977b4f01ee0270a8a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764837"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286693"
 ---
-# <a name="mssqlrepl027056"></a>MSSQL_REPL027056
+# <a name="mssql_repl027056"></a>MSSQL_REPL027056
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68764837"
 |符号名称||  
 |消息正文|合并进程无法更改“%1”上的生成历史记录。 进行故障排除时，请使用详细的历史日志记录来重新启动同步，并指定要写入的输出文件。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  此错误通常是由增长过大的合并复制系统表中的争用所引起。 大型系统表通常是由于发布保持期过长造成的，因为在到达保持期之前，元数据必须一直存储在这些表中。  
   
 ## <a name="user-action"></a>用户操作  
@@ -50,7 +50,7 @@ ms.locfileid: "68764837"
   
 2.  为发布保持期指定尽可能低的设置。 有关详细信息，请参阅 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
   
-3.  在维护合并复制过程中，应不定期检查与合并复制关联的系统表的增长：MSmerge_contents、MSmerge_genhistory，以及 MSmerge_tombstone、MSmerge_current_partition_mappings，以及 MSmerge_past_partition_mappings      。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
+3.  在合并复制维护过程中，应不定期检查以下与合并复制相关联的系统表的增长情况： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**、 **MSmerge_past_partition_mappings**。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](../../relational-databases/replication/errors-and-events-reference-replication.md)  

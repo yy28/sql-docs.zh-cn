@@ -11,10 +11,10 @@ ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5f325c9322d9194ff9dfb99dcf5bcae902a59faa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295981"
 ---
 # <a name="lesson-3-install-ssis-packages"></a>第 3 课：安装 SSIS 包
@@ -26,7 +26,7 @@ ms.locfileid: "71295981"
   
 在本课中，将部署捆绑复制到目标计算机，然后在该计算机上运行包安装向导以安装包、包的依赖项和辅助文件。 包将安装在 **msdb**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中，其他项将安装在文件系统中。 完成包的安装后，将通过使用执行包实用工具从 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 运行包来测试部署。  
   
-**完成本课程的预计时间：** 30 分钟  
+**学完本课的估计时间：** 30 分钟  
   
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  

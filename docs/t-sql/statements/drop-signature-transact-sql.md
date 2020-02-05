@@ -23,10 +23,10 @@ ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f36f0bc8b70a371e61f309ac61b7b0d769135429
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929206"
 ---
 # <a name="drop-signature-transact-sql"></a>DROP SIGNATURE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67929206"
 
   从存储过程、函数、触发器或程序集中删除数字签名。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +58,7 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
  ASYMMETRIC KEY Asym_key_name   
  用于对存储过程、函数、程序集或触发器进行签名的非对称密钥的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以在 sys.crypt_properties 目录视图中看到有关签名的信息。  
   
 ## <a name="permissions"></a>权限  

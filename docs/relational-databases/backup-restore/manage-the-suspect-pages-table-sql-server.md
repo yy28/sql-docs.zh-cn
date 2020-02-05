@@ -19,10 +19,10 @@ ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 97c69fe0a6e1de53840b5f31c16d51d1d6d08263
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908914"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>管理 suspect_pages 表 (SQL Server)
@@ -163,7 +163,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [DROP DATABASE (Transact SQL)](../../t-sql/statements/drop-database-transact-sql.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [还原页 (SQL Server)](../../relational-databases/backup-restore/restore-pages-sql-server.md)   

@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e2f8c5534e58299f17f89543668404e7ea8507bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071288"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68071288"
 
 更改数据库主密钥的属性。
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法
 
@@ -96,9 +96,9 @@ ALTER MASTER KEY <alter_option>
 
 ## <a name="arguments"></a>参数
 
-PASSWORD ='*password*' 指定用于加密或解密数据库主密钥的密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。
+PASSWORD ='*password*' 指定用于加密或解密数据库主密钥的密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 可使用 REGENERATE 选项重新创建数据库主密钥和所有受该主密钥保护的密钥。 首先使用旧的主密钥对这些密钥进行解密，然后使用新的主密钥对它们进行加密。 在不危及主密钥安全性的前提下，应当将这种大量消耗资源的操作安排在资源需求较低的时段执行。
 

@@ -1,10 +1,7 @@
 ---
-title: EventString 元素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: EventString 元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 157c50f419b7003a9dde862c3a2c74c4033fe794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: a0bf4fe2b768fd0a9f714540946a84c126aa1679
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008800"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307697"
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  直接在 XML 输入文件中指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本工作负荷。  
+
+直接在 XML 输入文件中指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本工作负荷。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,13 +41,13 @@ ms.locfileid: "68008800"
   
 ## <a name="element-attributes"></a>元素属性  
   
-|Attribute|描述|  
+|Attribute|说明|  
 |---------------|-----------------|  
 |**Weight**|可选。 为指定的事件指定查询加权系数（重要性系数）。 使用 **float** 数据类型指定加权。 例如， **Weight**="100.01"。 可为 **Weight** 指定的最小值为“0”。|  
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**string**，无限长。|  
 |**默认值**|无。|  

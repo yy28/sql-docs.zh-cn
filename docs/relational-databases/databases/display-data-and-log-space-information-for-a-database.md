@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 289f48e7163afd70d072962e5e35355522c4b95e
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055224"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>显示数据库的数据和日志空间信息
@@ -37,7 +37,7 @@ ms.locfileid: "74055224"
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 权限  
- 执行 **sp_spaceused** 的权限授予 **public** 角色。 只有 db_owner 固定数据库角色的成员可以指定 **updateusage 参数  \@** 。  
+ 执行 **sp_spaceused** 的权限授予 **public** 角色。 只有 db_owner 固定数据库角色的成员可以指定 **updateusage 参数** **\@** 。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   

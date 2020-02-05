@@ -18,10 +18,10 @@ ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1990361b643aee24f34e6b119f61595a450ceab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127721"
 ---
 # <a name="m-geography-data-type"></a>M（geography 数据类型）
@@ -39,12 +39,12 @@ ms.locfileid: "68127721"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float   
   
- CLR 类型：**SqlDouble**  
+ CLR 类型：SqlDouble   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 geography 实例不是 Point，则此属性的值为 Null；对于未设置此属性的任何 Point 实例，此属性的值也为 Null    。  
   
- 该属性为只读。  
+ 此属性为只读。  
   
  M 值未在库进行的任何计算中使用，因此不通过任何库计算传递。  
   

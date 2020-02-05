@@ -11,10 +11,10 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: edb7f78fd1d1d64980e7874f953a91030e7ecdc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296032"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>第 2-1 课 — 生成部署实用工具
@@ -40,19 +40,19 @@ ms.locfileid: "71296032"
   
 5.  在“Deployment Tutorial 属性页”  对话框的右窗格中，确认“AllowConfigurationChanges”  设为“true”  ，将“CreateDeploymentUtility”  设为“true”  ，并更新“DeploymentOutputPath”  的默认值（可选）。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 ### <a name="to-build-the-deployment-utility"></a>生成部署实用工具  
   
 1.  在解决方案资源管理器中，单击“Deployment Tutorial”  。  
   
-2.  在“视图”  菜单上，单击“输出”  。 默认情况下，“输出”窗口位于 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的左下角。  
+2.  在“视图”  菜单上，单击“输出”  。 默认情况下，“输出”窗口位于 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的左下角。  
   
 3.  在“生成”  菜单上，单击“生成 Deployment Tutorial”  。  
   
 4.  在“输出”窗口中，验证以下信息：  
   
-    生成已开始：SQL Integration Services 项目：增量...  
+    已启动生成: SQL Integration Services 项目: 增量 ...  
   
     正在创建部署实用工具...  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71296032"
   
     生成完成 -- 0 个错误，0 个警告  
   
-    ========== 生成：0 已成功，0 已失败，1 最新，0 已跳过 ==========  
+    ========== 生成: 0 已成功，0 已失败，1 最新，0 已跳过 ==========  
   
 5.  在 **“文件”** 菜单中，单击 **“退出”** 。 如果提示保存对 Deployment Tutorial 的各项所做的更改，请单击“是”  。  
   

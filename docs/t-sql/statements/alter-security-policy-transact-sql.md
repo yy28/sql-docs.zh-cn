@@ -20,10 +20,10 @@ ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 458083fda6382c353af78c7d2b438fdc0d39c826
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72173856"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72173856"
 
 更改安全策略。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -74,7 +74,7 @@ tvf_schema_name.security_predicate_function_name
 table_schema_name.table_name   
 是安全谓词的目标表。 对于特定 DML 操作，多个禁用的安全策略能以单个表为目标，但是在任何给定时间只能启用一个。  
   
-\<block_dml_operation>   
+*block_dml_operation>\<*  
 应用的 block 谓词的特定 DML 操作。 AFTER 指定将针对 DML 操作（INSERT 或 UPDATE）执行后的行值计算谓词。 BEFORE 指定将针对 DML 操作（UPDATE 或 DELETE）执行前的行值计算谓词。 如果不指定任何操作，则谓词将应用到所有操作。  
   
 你无法对应用的 block 谓词的操作执行 ALTER，因为该操作用于唯一标识该谓词。 相反，必须删除该谓词，并为新操作添加一个新的谓词。  
@@ -88,7 +88,7 @@ NOT FOR REPLICATION
 table_schema_name.table_name  
 是应用的安全谓词的目标表。 多个禁用的安全策略能以单个表为目标，但是在任何给定时间只能启用一个。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 ALTER SECURITY POLICY 语句位于事务范围内。 如果对事务进行回滚，也将对该语句进行回滚。  
   
 将谓词函数用于内存优化表时，安全策略中必须包含 SCHEMABINDING 并使用 WITH NATIVE_COMPILATION 编译提示   。 不能使用 ALTER 语句更改 SCHEMABINDING 参数，因为该参数应用于所有谓词。 若要更改架构绑定，必须先删除安全策略，然后再重新创建。  

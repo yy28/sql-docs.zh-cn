@@ -15,13 +15,13 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c09e789738f8ca6633a56c36d626dd200ae70e78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137240"
 ---
-# <a name="mssqlserver17832"></a>MSSQLSERVER_17832
+# <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -35,10 +35,10 @@ ms.locfileid: "68137240"
 |符号名称|SRV_BAD_LOGIN_PKT|  
 |消息正文|用于打开该连接的登录数据包的结构无效；该连接已关闭。 请与客户端库的供应商联系。%.*ls|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机无法处理客户端登录数据包。 这可能是由于未正确创建数据包或数据包在传输过程中受损造成的。 也可能是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的配置引起的。 所列出的 IP 地址为客户端计算机的地址。  
   
-### <a name="more-information"></a>详细信息  
+### <a name="more-information"></a>更多信息  
 当在 Kerberos 环境中使用 Windows 身份验证时，客户端会接收包含特权属性证书 (PAC) 的 Kerberos 票证。 PAC 包含各种类型的身份验证数据，包括用户所在的组、用户拥有的权限以及对用户应用的策略。 当客户端接收 Kerberos 票证时，包含在 PAC 中的信息将用于生成用户的访问标记。 客户端会将该标记作为登录数据包的组成部分提交给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机。  
   
 如果未正确创建该标记或该标记在传输过程中受损，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法提供有关此问题的其他信息。  

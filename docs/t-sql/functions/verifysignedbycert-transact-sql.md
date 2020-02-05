@@ -24,10 +24,10 @@ ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 360b597b8cd122ede57426cc879dd041b3414078
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927558"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67927558"
 
   测试经过数字签名的数据在签名后是否发生了更改。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,7 +59,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
  如果已签名的数据未更改，则返回 1；否则返回 0。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  VerifySignedBycert 使用指定证书的公钥对数据的签名进行解密，并将解密所得到的值与数据新计算出的 MD5 哈希值进行比较  。 如果值匹配，则确认签名有效。  
   
 ## <a name="permissions"></a>权限  

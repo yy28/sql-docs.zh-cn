@@ -28,10 +28,10 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93571a71662f8d24044b77c2c65dec01778096d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948066"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "67948066"
 > [!NOTE]  
 >  若要创建关系索引，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。 有关如何创建空间索引的信息，请参阅 [CREATE SPATIAL INDEX (Transact-SQL)](../../t-sql/statements/create-spatial-index-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -99,7 +99,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  index_name   
  索引的名称。 索引名称在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
- 主 XML 索引名不得以下列字符开头：#、##、@ 或 @@     。  
+ 主 XML 索引名不得以下列字符开头： **、#、** 或 **##** **@** **@@** 。  
   
  xml_column_name   
  索引所基于的 xml 列  。 在一个 XML 索引定义中只能指定一个 xml 列；但可以为一个 xml 列创建多个辅助 XML 索引   。  
@@ -110,7 +110,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  指定辅助 XML 索引的类型。  
   
- Value  
+ 值  
  为主 XML 索引的键列（节点值和路径）所在的列创建辅助 XML 索引。  
   
  PATH  
@@ -136,7 +136,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  指定创建索引时要使用的选项。  
   
- PAD_INDEX = { ON | OFF }    
+ PAD_INDEX  **{ ON | OFF }=**   
  指定索引填充。 默认为 OFF。  
   
  ON  
@@ -147,8 +147,8 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  PAD_INDEX 选项只有在指定了 FILLFACTOR 时才有用，因为 PAD_INDEX 使用由 FILLFACTOR 指定的百分比。 如果为 FILLFACTOR 指定的百分比不够大，无法容纳一行，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在内部覆盖该百分比以允许最小值。 无论 fillfactor 的值有多小，中间级索引页上的行数永远都不会小于两行  。  
   
- FILLFACTOR =fillfactor    
- 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数  。 默认值为 0。 如果 fillfactor 为 100 或 0，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会创建完全填充叶级页的索引  。  
+ FILLFACTOR **fillfactor=**   
+ 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数  。 默认值为 0。 如果 fillfactor 为 100 或 0，*会创建完全填充叶级页的索引*[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 > [!NOTE]  
 >  填充因子的值 0 和 100 在所有方面都是相同的。  
@@ -160,7 +160,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
- SORT_IN_TEMPDB = { ON | OFF }    
+ SORT_IN_TEMPDB  **{ ON | OFF }=**   
  指定是否在 tempdb 中存储临时排序结果  。 默认为 OFF。  
   
  ON  
@@ -174,7 +174,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  IGNORE_DUP_KEY =OFF   
  对 XML 索引不起作用，这是因为此索引类型永远不唯一。 请不要将此选项设置为 ON，否则会引发错误。  
   
- DROP_EXISTING =  { ON | OFF  }  
+ DROP_EXISTING **=** { ON | OFF  }  
  指定删除并重新生成已命名的先前存在的 XML 索引。 默认为 OFF。  
   
  ON  
@@ -191,9 +191,9 @@ CREATE [ PRIMARY ] XML INDEX index_name
  创建、重新生成或删除 XML 索引的脱机索引操作将获取表的架构修改 (Sch-M) 锁。 这样可以防止所有用户在操作期间访问基础表。  
   
 > [!NOTE]
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- ALLOW_ROW_LOCKS = { ON | OFF }    
+ ALLOW_ROW_LOCKS  **{ ON | OFF }=**   
  指定是否允许行锁。 默认值为 ON。  
   
  ON  
@@ -202,7 +202,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  不使用行锁。  
   
- ALLOW_PAGE_LOCKS = { ON | OFF }    
+ ALLOW_PAGE_LOCKS  **{ ON | OFF }=**   
  指定是否允许使用页锁。 默认值为 ON。  
   
  ON  
@@ -211,7 +211,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  不使用页锁。  
   
- MAXDOP =max_degree_of_parallelism    
+ MAXDOP **max_degree_of_parallelism=**   
  在索引操作期间覆盖[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)配置选项。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
 > [!IMPORTANT]  
@@ -233,7 +233,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!NOTE]
 >  并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本中均支持并行索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以对从 xml 数据类型派生的计算列建立索引以作为键列或包含性非键列，条件是允许将该计算列数据类型作为索引键列或非键列  。 不能对 xml 计算列创建主 XML 索引  。  
   
  若要查看有关 XML 索引的信息，请使用 [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md) 目录视图。  

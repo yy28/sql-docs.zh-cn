@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 267209440bf68ecb2e6f3382823b30f3d19728f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67952339"
 ---
 # <a name="synonyms-database-engine"></a>同义词（数据库引擎）
@@ -43,7 +43,7 @@ ms.locfileid: "67952339"
 |复制筛选过程|扩展存储过程|  
 |SQL 标量函数|SQL 表值函数|  
 |SQL 内联表值函数|SQL 存储过程|  
-|“查看”|表*（用户定义）|  
+|查看|表*（用户定义）|  
   
  *包括本地和全局临时表  
   
@@ -66,8 +66,8 @@ ms.locfileid: "67952339"
   
 |||  
 |-|-|  
-|CONTROL|删除|  
-|在运行 CREATE 语句前执行|Insert|  
+|CONTROL|DELETE|  
+|在运行 CREATE 语句前执行|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
   
@@ -76,8 +76,8 @@ ms.locfileid: "67952339"
   
 |||  
 |-|-|  
-|SELECT|Insert|  
-|UPDATE|删除|  
+|SELECT|INSERT|  
+|UPDATE|DELETE|  
 |在运行 CREATE 语句前执行|嵌套的 SELECT|  
   
  在以前说明的上下文中使用同义词时，该基对象会受到影响。 例如，如果某个同义词引用了基对象（表）并且将行插入同义词中，则实际上将行插入到引用的表中。  

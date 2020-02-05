@@ -23,13 +23,13 @@ ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 63744a6731e7c57a21a821ce7ab65cb49e095e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071531"
 ---
-# <a name="fileid-transact-sql"></a>FILE_ID (Transact-SQL)
+# <a name="file_id-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 对于当前数据库的组件文件的给定逻辑名称，此函数返回文件标识 (ID) 号。  
@@ -37,7 +37,7 @@ ms.locfileid: "68071531"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,18 +46,18 @@ FILE_ID ( file_name )
 ```  
   
 ## <a name="arguments"></a>参数  
-file_name  
-类型 sysname 的表达式，表示文件的逻辑名称，文件 ID 值 `FILE_ID` 将返回此逻辑名称。  
+file_name   
+类型 sysname  的表达式，表示文件的逻辑名称，文件 ID 值 `FILE_ID` 将返回此逻辑名称。  
   
 ## <a name="return-types"></a>返回类型  
 **smallint**  
   
-## <a name="remarks"></a>Remarks  
-file_name 对应于 sys.master_files 或 sys.database_files 目录视图的 name 列中所显示的逻辑文件名。  
+## <a name="remarks"></a>备注  
+file_name  对应于 sys.master_files 或 sys.database_files 目录视图的 name 列中所显示的逻辑文件名。  
 
-如果 file_name 不对应当前数据库组件文件的逻辑名称，`FILE_ID` 将返回 `NULL`。
+如果 file_name`FILE_ID``NULL` 不对应当前数据库组件文件的逻辑名称，*将返回*。
   
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，分配给全文目录的文件标识号大于 32767。 因为 `FILE_ID` 函数具有 smallint 返回类型，`FILE_ID` 将不支持全文文件。 改用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，分配给全文目录的文件标识号大于 32767。 因为 `FILE_ID` 函数具有 smallint  返回类型，`FILE_ID` 将不支持全文文件。 改用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
 此示例返回 `AdventureWorks_Data` 文件的文件 ID 值，它是 `ADVENTUREWORKS2012` 数据库的组件文件。  

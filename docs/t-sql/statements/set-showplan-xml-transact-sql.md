@@ -25,19 +25,19 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 890c84330005c3d9f6c4b30a06662d67dfef46f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67941652"
 ---
-# <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
+# <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回有关如何以定义好的 XML 文档格式执行上述语句的详细信息。
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法
 
@@ -45,7 +45,7 @@ ms.locfileid: "67941652"
 SET SHOWPLAN_XML { ON | OFF }
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 SET SHOWPLAN_XML 的设置是在执行或运行时设置的，而不是在分析时设置的。
 
@@ -61,7 +61,7 @@ SET SHOWPLAN_XML 可以为应用程序（如 **sqlcmd** 实用工具）将输出
 SET SHOWPLAN_XML 将返回一组 XML 文档信息。 SET SHOWPLAN_XML ON 语句之后的每个批处理都将在单个文档输出中得到反映。 每个文档都包含批处理中语句的文本，后跟执行步骤的详细信息。 该文档可以显示估计的开销、行数、访问的索引数、执行的运算符的类型、联接次序以及有关执行计划的详细信息。
 
 > [!NOTE]
-> 如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出  。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮  。
+> 如果在  **中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮  。
 
 ### <a name="location-of-showplan-output"></a>显示计划输出的位置
 
@@ -83,7 +83,7 @@ SET SHOWPLAN_XML 将返回一组 XML 文档信息。 SET SHOWPLAN_XML ON 语句�
 
 - 对于包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句引用的对象（如表、视图等）的所有数据库，具有 SHOWPLAN 权限。
 
-对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限  。
+对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行  *语句的相应权限*[!INCLUDE[tsql](../../includes/tsql-md.md)]。
 
 ## <a name="examples"></a>示例
 

@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e16276b7b514d921261ea9b53af13162d0aa3b8b
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412618"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>监视本机编译的存储过程的执行
@@ -42,12 +42,12 @@ SELECT [definition]
 
 ## <a name="procedure-level-execution-statistics"></a>过程级别执行统计信息
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ：可使用 [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用过程级别统计信息收集。  以下语句针对当前实例上所有本机编译的 T-SQL 模块启用过程级别的执行统计信息收集：
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ：可使用 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用过程级别统计信息收集。  以下语句针对当前实例上所有本机编译的 T-SQL 模块启用过程级别的执行统计信息收集：
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** ：可使用[数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)选项 `XTP_PROCEDURE_EXECUTION_STATISTICS` 对本机编译的存储过程启用或禁用过程级别的统计信息收集。 以下语句对当前数据库中的所有本地编译的 T-SQL 模块启用过程级别的执行统计信息收集：
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** ：可使用[数据库范围的配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)选项 `XTP_PROCEDURE_EXECUTION_STATISTICS` 对本机编译的存储过程启用或禁用过程级别的统计信息收集。 以下语句对当前数据库中的所有本地编译的 T-SQL 模块启用过程级别的执行统计信息收集：
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION
@@ -56,7 +56,7 @@ ALTER DATABASE
 
 ## <a name="query-level-execution-statistics"></a>查询级别执行统计信息
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ：可使用 [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用查询级别的统计信息收集。  以下语句对当前实例的所有本机编译的 T-SQL 模块启用查询级别的执行统计信息收集：
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ：可使用 [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用查询级别的统计信息收集。  以下语句对当前实例的所有本机编译的 T-SQL 模块启用查询级别的执行统计信息收集：
 ```sql
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```

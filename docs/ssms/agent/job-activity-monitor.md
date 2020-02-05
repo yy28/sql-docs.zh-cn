@@ -1,10 +1,9 @@
 ---
-title: 作业活动监视器 | Microsoft Docs
-ms.custom: ''
+title: 作业活动监视器
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,13 +12,15 @@ f1_keywords:
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a3e08cddb16b38d49c93ad596e3bcb87a3afa0d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b23ddaf501201f8b86de820d29ade0ea5d977ce2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262365"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242358"
 ---
 # <a name="job-activity-monitor"></a>作业活动监视器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "68262365"
 **可运行**  
 在作业可以运行时为“是”  ；在作业无法运行时为“否”  。 如果作业没有步骤或没有目标服务器，则无法运行该作业。  
   
-**已计划**  
+ 计划  
 在作业已分配给作业计划时为“是”  ；在作业没有计划时为“否”  。  
   
 *只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 固定服务器角色和服务器管理员组的成员才能看到此列中的值。 SQLAgentOperatorRole 角色的成员不能看到此列中的值。  

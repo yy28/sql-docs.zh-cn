@@ -15,10 +15,10 @@ ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 83ddabdc1e67036ca191d6f4c9e6013037b21738
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75243674"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>示例：数据库的段落还原（完整恢复模式）

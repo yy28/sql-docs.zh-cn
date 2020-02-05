@@ -22,10 +22,10 @@ ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2854cca3e231c479675a06857e24c3e09cfd8762
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745340"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70745340"
 
   删除一个现有队列。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,7 +56,7 @@ DROP QUEUE <object>
  queue_name   
  要删除的队列的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果有任何服务正在引用一个队列，则不能删除该队列。  
   
 ## <a name="permissions"></a>权限  

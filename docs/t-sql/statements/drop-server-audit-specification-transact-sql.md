@@ -20,10 +20,10 @@ ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b4639ac643e1a7650a55ad9415b3ebd5f02d4388
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745348"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70745348"
 
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 功能删除服务器审核规范对象。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
  audit_specification_name   
  现有服务器审核规范对象的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  DROP SERVER AUDIT SPECIFICATION 删除审核规范的元数据，但在发出 DROP 命令之前不会删除收集的审核数据。 必须先使用 ALTER SERVER AUDIT SPECIFICATION 将服务器审核规范状态设置为 OFF，然后才可以删除该规范。  
   
 ## <a name="permissions"></a>权限  

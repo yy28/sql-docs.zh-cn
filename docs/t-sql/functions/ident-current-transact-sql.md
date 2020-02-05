@@ -21,10 +21,10 @@ ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2271bbdd9a5b61fdfbf4985ca68acbffbc0b0b9d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843695"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73843695"
 
 返回为指定的表或视图生成的最后一个标识值。 所生成的最后一个标识值可以针对任何会话和任何作用域。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,12 +47,12 @@ table_or_view
 ## <a name="return-types"></a>返回类型  
 numeric  ([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
 出现错误时或调用方没有查看对象的权限时，将返回 NULL。  
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 这意味着，如果用户对对象没有任何权限，则元数据生成的内置函数（如 IDENT_CURRENT）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 IDENT_CURRENT 类似于 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 标识函数 SCOPE_IDENTITY 和 @@IDENTITY。 这三个函数都返回最后生成的标识值。 但是，上述每个函数中定义的“最后”的作用域和会话有所不同  ：  
 
 -   IDENT_CURRENT 返回为某个会话和用域中的指定表生成的最新标识值。  

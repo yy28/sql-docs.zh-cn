@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f4ae543590e5985904e44235da89069c06c649ee
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412717"
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>通过存储过程创建和访问 TempDB 中的表
@@ -23,9 +23,9 @@ ms.locfileid: "74412717"
 
   不支持通过本机编译的存储过程创建和访问 TempDB 中的表。 请改用具有 DURABILITY=SCHEMA_ONLY 的内存优化表或使用表类型和表变量。 
 
-如需深入了解时态表和表变量方案的内存优化信息，请参阅：[通过使用内存优化获得更快的时态表和表变量](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)。
+有关临时表的内存优化和表变量方案的详细信息，请参阅： [通过使用内存优化获得更快的临时表和表变量](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)。
   
-  下面的示例演示如何将使用具有三列（id、ProductID、Quantity）的临时表替换为使用 dbo.OrderQuantityByProduct 类型的表变量 \@OrderQuantityByProduct   ：  
+  下面的示例演示如何将使用具有三列（id、ProductID、Quantity）的临时表替换为使用 dbo.OrderQuantityByProduct 类型的表变量 **OrderQuantityByProduct\@**  ：  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

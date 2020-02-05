@@ -14,10 +14,10 @@ ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a2a44d6e7245108c16442e30a67aaea13aae8293
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297508"
 ---
 # <a name="log-ssis-expression"></a>LOG（SSIS 表达式）
@@ -41,7 +41,7 @@ LOG(numeric_expression)
 ## <a name="result-types"></a>结果类型  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  计算对数前， *数值表达式* 被转换为 DT_R8 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  如果 *numeric_expression* 的计算结果为 0 或负值，则返回结果为 Null。  

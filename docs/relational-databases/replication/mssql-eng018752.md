@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bfff0348cfb8f8a4bcdc5db1b107bd6f2235fbeb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 745026d5b2c2ddf7bc04fdf39884962ea9aa05fe
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766144"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288487"
 ---
-# <a name="mssqleng018752"></a>MSSQL_ENG018752
+# <a name="mssql_eng018752"></a>MSSQL_ENG018752
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68766144"
 |符号名称||  
 |消息正文|一次只能有一个日志读取器代理或日志相关过程(sp_repldone、sp_replcmds 和 sp_replshowcmds)连接到某个数据库。 如果执行了一个日志相关过程，那么在启动日志读取器代理或者执行另一个日志相关过程之前，请删除执行第一个过程时所用的连接，或者在该连接上执行 sp_replflush。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  有多个当前连接正在尝试执行以下任一日志相关过程: **sp_repldone**、 **sp_replcmds**或 **sp_replshowcmds**。 存储过程 [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md) 和 [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) 是日志读取器代理用来在已发布数据库中查找和更新已复制事务的相关信息的存储过程。 存储过程 [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md) 用于解决事务性复制发生的某些类型的问题。  
   
  在以下情形下将引发此错误：  

@@ -16,10 +16,10 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251278"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>指定终结点 URL - 添加或修改可用性副本
@@ -37,7 +37,7 @@ ms.locfileid: "75251278"
   
  其中  
   
--   \<system-address> 是明确标识目标计算机系统的字符串  。 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
+-   *system-address> 是明确标识目标计算机系统的字符串\<* 。 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
   
     -   因为 Windows Server 故障转移群集 (WSFC) 群集的节点处于相同的域，所以，您可以使用计算机系统的名称，例如 `SYSTEM46`。  
   
@@ -47,13 +47,13 @@ ms.locfileid: "75251278"
   
     -   保证完全限定域名的有效性。 它是在不同位置具有不同形式的本地定义的地址字符串。 通常（但并不总是），完全限定域名是一个复合名称，包含计算机名称和一系列句点分隔的域段，其格式为：  
   
-         _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
+         computer_name .   _domain_segment_[... **.** _domain_segment_]  
   
          其中， *computer_name*是运行服务器实例的计算机的网络名称， *domain_segment*[... **.** _domain_segment_] 是服务器的其余域信息；例如： `localinfo.corp.Adventure-Works.com`。  
   
          在公司或组织内确定域段的内容和数量。 有关详细信息，请参阅本主题后面的 [查找完全限定域名](#Finding_FQDN)。  
   
--   \<port> 是合作伙伴服务器实例的镜像终结点所使用的端口号  。  
+-   *port> 是合作伙伴服务器实例的镜像终结点所使用的端口号\<* 。  
   
      数据库镜像端点可以使用计算机系统上的任意可用端口。 每个端口号只能与一个端点相关联，而每个端点与一个服务器实例相关联；这样，同一服务器上的不同服务器实例便可使用不同端口来侦听各个端点。 因此，在您指定可用性副本时在端点 URL 中指定的端口会始终将传入消息定向到其端点与该端口关联的服务器实例。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "75251278"
   
  若要形成完全限定的域名，请将 *<host_name>* 和 *<Primary_Dns_Suffix>* 的值连接一起，如下所示：  
   
- _<host_name>_ **.** _<Primary_Dns_Suffix>_  
+ <host_name> .   _<Primary_Dns_Suffix>_  
   
  例如，IP 配置  
   

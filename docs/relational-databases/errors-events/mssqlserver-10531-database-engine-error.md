@@ -12,13 +12,13 @@ ms.assetid: bb40e994-231c-44ce-933f-8d767fb2f450
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f9f7eaf086b3209dd5697bcf227a834ebe7cb916
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68068142"
 ---
-# <a name="mssqlserver10531"></a>MSSQLSERVER_10531
+# <a name="mssqlserver_10531"></a>MSSQLSERVER_10531
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68068142"
 |符号名称|PG_NO_ELIGIBLE_STMT|  
 |消息正文|因为用户没有足够的权限，所以无法从缓存创建计划指南 '%.*ls'。 请为创建该计划指南的用户授予 VIEW SERVER STATE 权限。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 用户权限不足，无法从计划缓存创建指定的计划指南。  
   
 ## <a name="user-action"></a>用户操作  

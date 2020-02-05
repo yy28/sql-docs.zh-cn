@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1aa8519092b90f34089cd2c31441b51b2b0da014
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109694"
 ---
 # <a name="database-states"></a>数据库状态
@@ -41,7 +41,7 @@ ms.locfileid: "68109694"
 ## <a name="database-state-definitions"></a>数据库状态定义  
  下表定义了数据库的状态。  
   
-|State|定义|  
+|状态|定义|  
 |-----------|----------------|  
 |ONLINE|可以对数据库进行访问。 即使可能尚未完成恢复的撤消阶段，主文件组仍处于在线状态。|  
 |OFFLINE|数据库无法使用。 数据库由于显式的用户操作而处于离线状态，并保持离线状态直至执行了其他的用户操作。 例如，可能会让数据库离线以便将文件移至新的磁盘。 然后，在完成移动操作后，使数据库恢复到在线状态。|  

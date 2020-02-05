@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c3eb8c58bc43268356f47946df3ec60e7553ec61
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b4f8a7c8bb130c7b92446ba3a925566e730737eb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769531"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287149"
 ---
 # <a name="snapshot-agent"></a>快照代理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "68769531"
 ## <a name="options"></a>选项  
  选择要从 **“视图”** 菜单中查看的快照代理会话，然后在标记为 **“快照代理的会话”** 的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中的操作”** 的网格中。 如果所选会话由于出错而结束，则还将显示一个标记为 **“所选会话的错误详细信息或消息”** 的文本区域。  
   
- **“视图”**  
+ **视图**  
  选择要查看的快照代理会话。  
   
- **“状态”**  
+ **Status**  
  快照代理的状态。 下面列出了可能的状态值：  
   
 -   错误  

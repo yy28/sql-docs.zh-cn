@@ -11,10 +11,10 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be3dcb5bd42624ee943db4393809e2889808a11e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283838"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>第 1-3 课 — 添加包和其他文件
@@ -34,7 +34,7 @@ ms.locfileid: "71283838"
   
 若要支持这些包的部署，请将下列辅助文件添加到 Deployment Tutorial 项目。  
   
-|“包”|文件|  
+|程序包|文件|  
 |-----------|--------|  
 |DataTransfer|NewCustomers.txt|  
 |LoadXMLData|orders.xml 和 orders.xsd|  
@@ -57,7 +57,7 @@ ms.locfileid: "71283838"
   
 5.  单击“浏览(…)”按钮，导航到 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages，选择“DataTransfer.dtsx”，再单击“打开”    。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 7.  重复步骤 3-6，但这一次添加的是 LoadXMLData.dtsx（它位于 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages 中）。  
   
