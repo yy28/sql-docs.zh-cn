@@ -24,10 +24,10 @@ ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064694"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73064694"
   
  此功能与使用数据层应用程序框架 (DACFx) 的数据库导出不兼容。 必须在导出之前删除所有非对称密钥。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -112,9 +112,9 @@ CREATE ASYMMETRIC KEY asym_key_name
  将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非对称密钥映射到现有可扩展的密钥管理密钥。 PROVIDER_KEY_NAME 必须用于指定设备上的密钥名称。 如果未提供 CREATION_DISPOSITION = OPEN_EXISTING，则默认值为 CREATE_NEW。  
   
  ENCRYPTION BY PASSWORD = 'password'   
- 指定用于对私钥进行加密的密码。 如果未提供该子句，则使用数据库主密钥对私钥进行加密。 password 最多为 128 个字符  。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求  。  
+ 指定用于对私钥进行加密的密码。 如果未提供该子句，则使用数据库主密钥对私钥进行加密。 password 最多为 128 个字符  。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  “非对称密钥”是数据库级的安全对象实体  。 该实体的默认格式包含公钥和私钥。 当未使用 FROM 子句执行时，CREATE ASYMMETRIC KEY 会生成新的密钥对。 使用 FROM 子句执行时，CREATE ASYMMETRIC KEY 会从文件中导入密钥对，或者从程序集或 DLL 文件中导入公钥。  
   
  默认情况下，私钥受数据库主密钥保护。 如果尚未创建任何数据库主密钥，则需要使用密码保护私钥。  
@@ -127,7 +127,7 @@ CREATE ASYMMETRIC KEY asym_key_name
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-an-asymmetric-key"></a>A. 创建非对称密钥  
- 下面的示例使用 `RSA_2048` 算法创建名为 `PacificSales09` 的非对称密钥，并使用密码保护私钥。  
+ 下面的示例使用 `PacificSales09` 算法创建名为 `RSA_2048` 的非对称密钥，并使用密码保护私钥。  
   
 ```sql  
 CREATE ASYMMETRIC KEY PacificSales09   
@@ -147,7 +147,7 @@ GO
 ```  
   
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. 通过 EKM 提供程序创建非对称密钥  
- 以下示例通过名为 `EKM_Provider1` 的可扩展密钥管理提供程序中存储的密钥对，或者名为 `key10_user1` 的可扩展密钥管理提供程序上的密钥创建非对称密钥 `EKM_askey1`。  
+ 以下示例通过名为 `EKM_askey1` 的可扩展密钥管理提供程序中存储的密钥对，或者名为 `EKM_Provider1` 的可扩展密钥管理提供程序上的密钥创建非对称密钥 `key10_user1`。  
   
 ```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   

@@ -19,10 +19,10 @@ ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 99cb9cd17ff26308c2eeb96519dad9a95810e2d1
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843667"
 ---
 # <a name="host_name-transact-sql"></a>HOST_NAME (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "73843667"
 
   返回工作站名。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ HOST_NAME ()
 ## <a name="return-types"></a>返回类型  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当该参数对系统函数可选时，则采用当前数据库、主机、服务器用户或数据库用户。 内置函数后面必须跟括号。  
   
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。  

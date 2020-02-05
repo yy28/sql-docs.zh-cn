@@ -15,10 +15,10 @@ ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b3d06da6d6f972c64d4bf196699b55a611b0f992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042469"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull（geography 数据类型）
@@ -36,9 +36,9 @@ ms.locfileid: "68042469"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  针对具有大于 90 度的信封角的 geography 实例返回一个 `FullGlobe` 对象  。  
   
  针对空的 geography 实例返回空的 geography 集合   。  

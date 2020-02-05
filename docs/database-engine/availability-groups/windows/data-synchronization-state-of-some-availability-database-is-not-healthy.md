@@ -15,16 +15,16 @@ ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b2c42ee67fe0c01570eadd6e3aa1d23019672172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67968331"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>一些可用性数据库的数据同步状态不正常
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="introduction"></a>简介  
+## <a name="introduction"></a>介绍  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ ms.locfileid: "67968331"
 |**类别**|**警告**|  
 |**方面**|可用性副本|  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  此策略检查可用性数据库（也称为“数据库副本”）的数据同步状态。 当数据同步状态为 NOT SYNCHRONIZING 或同步提交数据库副本的状态不为 SYNCHRONIZED 时，此策略处于不正常状态。  
   
 > [!NOTE]  

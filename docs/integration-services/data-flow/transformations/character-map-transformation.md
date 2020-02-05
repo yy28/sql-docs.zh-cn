@@ -19,10 +19,10 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8211045a72ae56b04bb93b7be7e83f296f2467e5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291668"
 ---
 # <a name="character-map-transformation"></a>字符映射表转换
@@ -41,7 +41,7 @@ ms.locfileid: "71291668"
 ## <a name="mapping-operations"></a>映射操作  
  下表说明了字符映射表转换支持的映射操作。  
   
-|运算|描述|  
+|Operation|说明|  
 |---------------|-----------------|  
 |Byte reversal|反转字节顺序。|  
 |Full width|将半角字符映射到全角字符。|  
@@ -49,7 +49,7 @@ ms.locfileid: "71291668"
 |Hiragana|将片假名字符映射到平假名字符。|  
 |Katakana|将平假名字符映射到片假名字符。|  
 |Linguistic casing|应用语言中的大小写来取代系统规则。 语言中的大小写是指 Win32 API 为 Turkic 和其他区域设置的 Unicode 简单大小写映射提供的功能。|  
-|Lowercase|将字符转换为小写。|  
+|小写|将字符转换为小写。|  
 |简体中文|将繁体中文字符映射到简体中文字符。|  
 |繁体中文|将简体中文字符映射到繁体中文字符。|  
 |大写|将字符转换为大写。|  
@@ -59,11 +59,11 @@ ms.locfileid: "71291668"
   
 |操作 A|操作 B|  
 |-----------------|-----------------|  
-|Lowercase|大写|  
+|小写|大写|  
 |Hiragana|Katakana|  
 |Half width|Full width|  
 |繁体中文|简体中文|  
-|Lowercase|Hiragana、katakana、half width、full width|  
+|小写|Hiragana、katakana、half width、full width|  
 |大写|Hiragana、katakana、half width、full width|  
   
 ## <a name="configuration-of-the-character-map-transformation"></a>配置字符映射表转换  
@@ -77,7 +77,7 @@ ms.locfileid: "71291668"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -100,17 +100,17 @@ ms.locfileid: "71291668"
  **目标**  
  指定是否就地保存字符串运算结果、使用现有列或将已修改的数据作为新列保存。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |新列|将数据保存在新列中。 在 **“输出别名”** 下分配列名。|  
 |就地更改|将已修改的数据保存在现有的列中。|  
   
- **运算**  
+ **操作**  
  从列表中选择要应用于列数据的字符串函数。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|Lowercase|转换为小写字母。|  
+|小写|转换为小写字母。|  
 |大写|转换为大写字母。|  
 |Byte reversal|通过反转字节顺序进行转换。|  
 |Hiragana|将日语的片假名字符转换为平假名字符。|  
@@ -121,7 +121,7 @@ ms.locfileid: "71291668"
 |简体中文|将繁体中文字符转换为简体中文字符。|  
 |繁体中文|将简体中文字符转换为繁体中文字符。|  
   
- **“输出别名”**  
+ **输出别名**  
  为每个输出列键入一个别名。 默认为 **Copy of** 后接输入列名。不过，你也可以任选一个唯一的描述性名称。  
   
  **配置错误输出**  

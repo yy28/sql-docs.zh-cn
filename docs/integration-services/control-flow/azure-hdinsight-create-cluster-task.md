@@ -14,10 +14,10 @@ ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa9599ae0a4c3a38a409131b3f9f344bd478e15b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294314"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 创建群集任务
@@ -39,17 +39,17 @@ ms.locfileid: "71294314"
   
 |||  
 |-|-|  
-|**字段**|**Description**|  
+|**字段**|**说明**|  
 |AzureResourceManagerConnection|选择一个现有的 Azure 资源管理器连接管理器，或创建一个用于创建 HDInsight 群集的新连接管理器。|  
 |AzureStorageConnection|选择一个现有的 Azure 存储连接管理器；或者创建一个新的连接管理器，该管理器引用将与 HDInsight 群集关联的 Azure 存储帐户。|
 |SubscriptionId|指定将在其中创建 HDInsight 群集的订阅的 ID。|
 |ResourceGroup|指定将在其中创建 HDInsight 群集的 Azure 资源组。|
 |位置|指定 HDInsight 群集的位置。 必须在与指定的 Azure 存储账户相同的位置创建群集。|  
 |ClusterName|指定要创建的 HDInsight 群集的名称。|  
-|ClusterSize|指定要在群集中创建的节点数。|  
+|clusterSize|指定要在群集中创建的节点数。|  
 |BlobContainer|指定要与 HDInsight 群集相关联的默认存储容器的名称。|  
 |UserName|指定用于连接到 HDInsight 群集的用户名。|  
-|Password|指定用于连接到 HDInsight 群集的密码。|
+|密码|指定用于连接到 HDInsight 群集的密码。|
 |SshUserName|指定使用 SSH 远程访问 HDInsight 群集时使用的用户名称。|
 |SshPassword|指定使用 SSH 远程访问 HDInsight 群集的密码。|
 |FailIfExists|指定如果群集已存在时任务是否失败。|  

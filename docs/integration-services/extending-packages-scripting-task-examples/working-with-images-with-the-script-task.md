@@ -24,10 +24,10 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bed89f0cade880f41122e921fbda146ae2abc28d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296981"
 ---
 # <a name="working-with-images-with-the-script-task"></a>使用脚本任务处理图像
@@ -51,7 +51,7 @@ ms.locfileid: "71296981"
   
 1.  创建一个名为 `CurrentImageFile` 的字符串变量，并将其值设置为一个现有图像文件的路径和名称。  
   
-2.  在“脚本任务编辑器”的“脚本”页，将 `CurrentImageFile` 变量添加到 ReadOnlyVariables 属性中    。  
+2.  在“脚本任务编辑器”的“脚本”页，将  **变量添加到 ReadOnlyVariables 属性中**  `CurrentImageFile`  。  
   
 3.  在脚本项目中，设置对 System.Drawing 命名空间的引用  。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71296981"
   
 2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为枚举器，并指定源文件的路径和文件掩码，如“*.bmp”    。  
   
-3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0  。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
+3.  在“变量映射”页中，将  **变量映射到索引 0**`CurrentImageFile`。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
   
     > [!NOTE]  
     >  这些步骤是在执行用于单个图像文件配置过程中列出的步骤之外还要执行的步骤。  
@@ -174,7 +174,7 @@ End Function
   
 2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为“枚举器”，并指定源文件的路径和文件掩码，如“*.jpg”     。  
   
-3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0  。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
+3.  在“变量映射”页中，将  **变量映射到索引 0**`CurrentImageFile`。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
   
     > [!NOTE]  
     >  这些步骤是在执行用于单个图像文件配置过程中列出的步骤之外还要执行的步骤。  

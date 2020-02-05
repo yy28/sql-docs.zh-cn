@@ -20,18 +20,18 @@ ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 892e4c09154e93ded7718819c86dfe91c18c85ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026248"
 ---
-# <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
+# <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 对于给定参数，`CURSOR_STATUS` 显示游标声明是否已返回游标或结果集。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   

@@ -13,10 +13,10 @@ ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9016a943848247ce7c9ba81d70cf542b470b6e2a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291969"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>SAP BW 目标编辑器（“错误输出”页）
@@ -56,7 +56,7 @@ ms.locfileid: "71291969"
  **截断**  
  未使用此选项。  
   
- **Description**  
+ **说明**  
  查看操作的说明。  
   
  **将此值设置到选定的单元格**  

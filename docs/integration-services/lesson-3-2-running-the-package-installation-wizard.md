@@ -11,10 +11,10 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b380b56611e72bfd6b0c249792843a6a684813b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283330"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>第 3-2 课 — 运行包安装向导
@@ -46,7 +46,7 @@ ms.locfileid: "71283330"
   
 7.  验证是否清除了“依靠服务器存储进行加密”  复选框。  
   
-8.  单击 **“下一步”** 。  
+8.  单击“下一步”   
   
 9. 在“选择安装文件夹”页上，单击“浏览”  。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "71283330"
     > [!IMPORTANT]  
     > 在配置所使用的环境变量的值中，将引用此名称。 文件夹的名称与引用必须匹配，否则包无法运行。  
   
-12. 单击“确定”  。  
+12. 单击“确定”。   
   
 13. 在“选择安装文件夹”页上，验证“文件夹”框中是否包含 **C:\DeploymentTutorialInstall**，再单击“下一步”  。  
   
@@ -69,14 +69,14 @@ ms.locfileid: "71283330"
   
 16. 在“配置文件”  列表中，单击 **datatransferconfig.dtsconfig**，展开“配置”  框的“路径”  列中的“属性”，再用下列值更新“值”  列：  
   
-    |属性|ReplTest1|更新后的值|  
+    |properties|值|更新后的值|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. 在“配置文件”  列表中，单击 loadxmldataconfig.dtsconfig，展开“配置”  框的“路径”  列中的“属性”，再用下列值更新“值”  列：  
   
-    |属性|ReplTest1|更新后的值|  
+    |properties|值|更新后的值|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
@@ -85,11 +85,11 @@ ms.locfileid: "71283330"
   
     由于目标计算机上环境变量的值与开发计算机上环境变量的值不同，因此会在“包验证”页上出现多个警告。 您可能会看到下列四个警告：  
   
-    -   配置文件：“C:\DeploymentTutorial\DataTransferConfig.dtsConfig”无效。 请检查此配置文件名。  
+    -   配置文件 "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" 无效。 请检查此配置文件名。  
   
     -   包中至少有一个配置条目无法加载。 请检查配置条目和以前的警告，查看配置失败的有关说明。  
   
-    -   配置文件：“C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig”无效。 请检查此配置文件名。  
+    -   配置文件 "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig" 无效。 请检查此配置文件名。  
   
     -   包中至少有一个配置条目无法加载。 请检查配置条目和以前的警告，查看配置失败的有关说明。  
   

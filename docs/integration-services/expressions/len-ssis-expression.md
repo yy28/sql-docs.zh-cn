@@ -14,10 +14,10 @@ ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f84bb32435afe7cbe52cea6ed25f59940dbd42c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297529"
 ---
 # <a name="len-ssis-expression"></a>LEN（SSIS 表达式）
@@ -41,7 +41,7 @@ LEN(character_expression)
 ## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  *character_expression* 参数可以是 DT_WSTR、DT_TEXT、DT_NTEXT 或 DT_IMAGE 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  如果 *character_expression* 是字符串文字或包含 DT_STR 数据类型的数据列，则在执行 LEN 操作前，该参数将隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  

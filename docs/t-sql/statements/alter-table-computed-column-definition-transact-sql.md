@@ -15,10 +15,10 @@ ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982046"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73982046"
 
   指定使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 添加到表中的计算列的属性。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,7 +55,7 @@ column_name
  要更改、添加或删除的列的名称。 column_name 可以包含 1 到 128 个字符  。 对于使用 timestamp 数据类型创建的新列，则可以省略 column_name   。 如果没有为 timestamp 数据类型的列指定 column_name，则使用名称 timestamp    。  
   
 computed_column_expression   
- 定义计算列的值的表达式。 计算列是以非物理方式存储在表中的虚拟列，该列是通过使用同一表中的其他列的表达式计算得出的。 例如，计算列可以包含定义：cost AS price * qty。表达式可以是非计算列的名称、常量、函数、变量以及通过一个或多个运算符连接的上述元素的任意组合。 表达式不能是子查询，也不能包含别名数据类型。  
+ 定义计算列的值的表达式。 计算列是以非物理方式存储在表中的虚拟列，该列是通过使用同一表中的其他列的表达式计算得出的。 例如，计算列可以包含定义：cost AS price * qty。表达式可以是非计算列的列名、常量、函数、变量，也可以是用一个或多个运算符连接的上述元素的任意组合。 表达式不能是子查询，也不能包含别名数据类型。  
   
  计算列可用于选择列表、WHERE 子句、ORDER BY 子句或其他任何可以使用正则表达式的位置，但下列情况除外：  
   
@@ -145,7 +145,7 @@ ON { partition_scheme_name(partition_column_name) | filegroup| "default"}
 > [!NOTE]  
 >  在此上下文中，default 不是关键字。 它是默认文件组的标识符，并且必须进行分隔（类似于 ON "default" 或 ON [default]）。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  每个 PRIMARY KEY 和 UNIQUE 约束都将生成一个索引。 UNIQUE 和 PRIMARY KEY 约束的数目不能导致表上非聚集索引的数目大于 999，也不能导致聚集索引的数目大于 1。  
   
 ## <a name="see-also"></a>另请参阅  

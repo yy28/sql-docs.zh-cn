@@ -13,10 +13,10 @@ ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 31c6ab812081d66980002ed0138f5b1ad63f62b5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298095"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目标编辑器（“映射”页）
@@ -58,7 +58,7 @@ ms.locfileid: "71298095"
   
  要将输入列映射到目标列，请将 **“可用输入列”** 列表中的列拖放到 **“可用目标列”** 列表中的列上。  
   
- **“可用目标列”**  
+ **可用目标列**  
  查看可用目标列的列表。  
   
  要将输入列映射到目标列，请将 **“可用输入列”** 列表中的列拖放到 **“可用目标列”** 列表中的列上。  
@@ -77,7 +77,7 @@ ms.locfileid: "71298095"
  **输入列**  
  查看您所选的输入列。  
   
- 要将不同输入列映射到相同目标列，请在该列表中选择不同输入列。 要删除映射，请选择“\<ignore>”以从输出中排除该输入列  。  
+ 要将不同输入列映射到相同目标列，请在该列表中选择不同输入列。 要删除映射，请选择“**ignore>”以从输出中排除该输入列\<** 。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对该列进行映射。  

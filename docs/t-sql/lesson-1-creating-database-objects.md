@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257018"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>第 1 课：创建和查询数据库对象
@@ -40,7 +40,7 @@ ms.locfileid: "75257018"
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 如果不能访问 SQL Server 实例，请从以下链接选择平台。 如果选择 SQL 身份验证，请使用 SQL Server 登录凭据。
--  Windows：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- **Windows**：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 - **macOS**：[在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 ## <a name="create-a-database"></a>创建数据库
@@ -105,7 +105,7 @@ ms.locfileid: "75257018"
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  
   
-基本语法为：INSERT、表名、列的列表、VALUES，然后是要插入的值的列表。 如果某行的前面有两个连字符，则指示该行为注释，编译器将忽略其文本。 在这种情况下，注释说明允许的语法变体。  
+基本语法如下：INSERT、表名、列的列表、VALUES，然后是要插入的值的列表。 如果某行的前面有两个连字符，则指示该行为注释，编译器将忽略其文本。 在这种情况下，注释说明允许的语法变体。  
   
 ### <a name="insert-data-into-a-table"></a>将数据插入到表  
   

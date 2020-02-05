@@ -12,13 +12,13 @@ ms.assetid: c93c1003-0e3a-40aa-9873-44a0f5b8b57e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 56bf6c459dbf7d4db85bb5ca405b7a59ebc0a8ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001839"
 ---
-# <a name="mssqlserver3159"></a>MSSQLSERVER_3159
+# <a name="mssqlserver_3159"></a>MSSQLSERVER_3159
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68001839"
 |符号名称|LDDB_LOGNOTBACKEDUP|  
 |消息正文|数据库 "%ls" 的日志尾部尚未备份。 如果该日志包含您不希望丢失的工作，则使用 BACKUP LOG WITH NORECOVERY 对其进行备份。 使用 RESTORE 语句的 WITH REPLACE 或 WITH STOPAT 子句覆盖该日志的内容。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 在大多数情况下，在完整恢复模式或大容量日志恢复模式下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要求您备份日志尾部以捕获尚未备份的日志记录。 还原操作之前对日志尾部执行的日志备份称为“结尾日志备份”。  
   
 将数据库恢复到故障点时，结尾日志备份是恢复计划中的最后一个相关备份。 如果无法备份日志尾部，则只能将数据库恢复为发生故障前创建的最后一个备份。  

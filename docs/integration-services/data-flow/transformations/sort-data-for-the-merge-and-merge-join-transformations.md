@@ -14,10 +14,10 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297786"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>为合并转换和合并联接转换排序数据
@@ -42,7 +42,7 @@ ms.locfileid: "71297786"
   
      排序转换使用 Windows 排序规则对字符串值进行排序。  
   
-     -或 -  
+     -或-  
   
 -   首先使用 Transact-SQL CAST 运算符将 **varchar** 值转换为 **nvarchar** 值，然后再使用 Transact-SQL ORDER BY 子句对数据进行排序。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "71297786"
   
 5.  单击 **“输入属性和输出属性”** 选项卡。  
   
-6.  单击“\<组件名称> 输出”  ，将“IsSorted”  属性设置为 True  。  
+6.  单击“**组件名称> 输出”\<** ，将“IsSorted”  属性设置为 True  。  
   
     > [!NOTE]  
     >  如果手动将输出的 **IsSorted** 属性设置为 **True** 且没有对数据进行排序，则当你运行该包时，可能会在下游合并或合并联接转换中产生缺失数据或错误数据比较。  
@@ -106,7 +106,7 @@ ms.locfileid: "71297786"
   
 9. 对每个已排序的列，重复步骤 8。  
   
-10. 单击“确定”  。  
+10. 单击“确定”。   
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

@@ -14,10 +14,10 @@ ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 933d15e789e0d069822f657ff09cff0e2b4aaf8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67945759"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files"></a>查看或更改数据文件和日志文件的默认位置
@@ -34,7 +34,7 @@ ms.locfileid: "67945759"
   
 3.  在 **“数据库默认位置”** 中，查看新的数据文件和日志文件的当前默认位置。 若要更改默认位置，请在 **“数据”** 或 **“日志”** 字段中输入新的默认路径名，或者单击浏览按钮找到并选择路径名。  
   
->**注意**：更改默认位置之后，必须停止并重新启动 SQL Server 服务以完成更改。  
+>**注意：** 更改默认位置之后，必须停止并重新启动 SQL Server 服务以完成更改。  
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   

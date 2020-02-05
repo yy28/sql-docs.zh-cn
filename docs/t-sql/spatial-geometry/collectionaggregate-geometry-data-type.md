@@ -15,16 +15,16 @@ ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: bff01341c6d28f38cc1ba18ecf6ac2644b4bb530
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017519"
 ---
 # <a name="collectionaggregate-geometry-data-type"></a>CollectionAggregate（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-从一组 geometry 类型创建一个 GeometryCollection 实例。
+从一组 geometry 类型创建一个 GeometryCollection 实例   。
   
 ## <a name="syntax"></a>语法  
   
@@ -35,21 +35,21 @@ CollectionAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>参数  
  *geometry_operand*  
- geometry 类型表列，表示要在 GeometryCollection 实例中列出的一组 geometry 对象。  
+ geometry 类型表列，表示要在 GeometryCollection 实例中列出的一组 geometry 对象    。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  在输入值无效时引发 `FormatException`。 请参阅 [STIsValid（geometry 数据类型）](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>Remarks  
- 在输入为空或具有不同的 SRID 时，方法返回 null。 请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>备注  
+ 在输入为空或具有不同的 SRID 时，方法返回 null  。 请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- 方法忽略 null 输入。  
+ 方法忽略 null 输入  。  
   
 > [!NOTE]  
->  如果所有输入值均为 null，则方法返回 null。  
+>  如果所有输入值均为 null，则方法返回 null   。  
   
 ## <a name="examples"></a>示例  
  以下示例返回一个包含 `GeometryCollection` 和 `CurvePolygon` 的 `Polygon` 实例。  

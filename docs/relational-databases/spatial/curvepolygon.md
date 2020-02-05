@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d42aa77e4ecddf96ee0405645e7f98a52b5823e7
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816745"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
@@ -30,7 +30,7 @@ ms.locfileid: "71816745"
   
 -   该 **CurvePolygon** 实例的内部是外环和所有内环之间的空间。  
   
- CurvePolygon 实例不同于 Polygon 实例，因为 CurvePolygon 实例可以包含以下圆弧线段    ：CircularString 和 CompoundCurve   。  
+ **CurvePolygon** 实例不同于 **Polygon** 实例，因为 **CurvePolygon** 实例可以包含以下圆弧线段： **CircularString** 和 **CompoundCurve**。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 实例  
  下图显示有效的 **CurvePolygon** 图形：  

@@ -17,10 +17,10 @@ ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 39df0ace2a24cb4c69f38617ba1a7b70f5da2f96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938205"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>remote admin connections 服务器配置选项
@@ -32,7 +32,7 @@ ms.locfileid: "67938205"
   
  下表将列出远程管理连接选项的可能值。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0|指明仅允许本地连接使用 DAC。|  
 |1|指明允许远程连接使用 DAC。|  

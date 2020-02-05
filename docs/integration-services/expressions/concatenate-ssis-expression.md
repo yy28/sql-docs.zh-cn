@@ -15,10 +15,10 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 366e307220d08192df04b95201758751cce90112
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297667"
 ---
 # <a name="-concatenate-ssis-expression"></a>+（连接）（SSIS 表达式）
@@ -43,7 +43,7 @@ character_expression1 + character_expression2
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  表达式可以使用 DT_STR 和 DT_WSTR 数据类型中的任一种或两者都使用。  
   
  DT_STR 和 DT_WSTR 数据类型的连接将返回 DT_WSTR 类型的结果。 字符串的长度是两个原始字符串长度的和（以字符计）。  

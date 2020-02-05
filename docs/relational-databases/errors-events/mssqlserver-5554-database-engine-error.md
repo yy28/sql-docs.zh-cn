@@ -12,13 +12,13 @@ ms.assetid: 7134bbe5-d240-4a98-85ce-b13cc8ae9b0e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 61844f1818693f639941a334efcefb457c5ea092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67985088"
 ---
-# <a name="mssqlserver5554"></a>MSSQLSERVER_5554
+# <a name="mssqlserver_5554"></a>MSSQLSERVER_5554
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "67985088"
 |符号名称|FS_MINIVER_OVERFLOW|  
 |消息正文|单个文件的版本总数已达到文件系统所设置的最大限制。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 在多个活动的结果集 (MARS) 或触发器方案中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都使用由操作系统指定的最低版本。  
   
 ## <a name="user-action"></a>用户操作  

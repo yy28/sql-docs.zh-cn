@@ -22,10 +22,10 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12088669f56dce1b6dee69202284f3cc044e274
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286959"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>为自定义任务开发用户界面
@@ -37,7 +37,7 @@ ms.locfileid: "71286959"
   
  为任务开发自定义用户界面包括使用两个重要的类。 下表介绍了这两个类。  
   
-|类|描述|  
+|类|说明|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|标识托管任务的特性，该特性通过其属性提供设计时信息以控制 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器显示对象和与对象交互的方式。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|任务所用的接口，用来将任务与其自定义用户界面相关联。|  
@@ -53,12 +53,12 @@ ms.locfileid: "71286959"
   
  下表介绍了 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 特性的各属性。  
   
-|属性|描述|  
+|properties|说明|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|在“控制流”工具箱中显示任务名称。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|任务说明（继承自 <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>）。 此属性显示在工具提示中。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|显示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中的图标。|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|如果使用，请将其设置为 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 枚举中的一个值。 例如， `RequiredProductLevel = DTSProductLevel.None`。|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|如果使用，请将其设置为 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 枚举中的一个值。 例如，`RequiredProductLevel = DTSProductLevel.None` 。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|保存联系信息，以备任务需要技术支持。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|为任务分配类型。|  
 |Attribute.TypeId|在派生类中实现时，获取此特性的唯一标识符。 有关详细信息，请参阅 .NET Framework 类库中的 **Attribute.TypeID** 属性。|  

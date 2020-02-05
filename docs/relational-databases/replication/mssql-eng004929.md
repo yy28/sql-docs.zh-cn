@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1d9b1d88-1fbf-4089-b392-687d3b0220ca
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0a9300f76bb5447866a4de8d79b1b89492e4a197
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f7666e5b50c257b9d827eefde5bf0853eb9a70cc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766701"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286277"
 ---
-# <a name="mssqleng004929"></a>MSSQL_ENG004929
+# <a name="mssql_eng004929"></a>MSSQL_ENG004929
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68766701"
 |符号名称||  
 |消息正文|无法更改 %S_MSG '%.*ls'，因为正在为复制而发布它。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  尝试删除为事务性复制而发布的表的主键约束时，通常会发生此错误。 事务性复制要求每个已发布表都具有主键，因此不能删除约束。  
   
 ## <a name="user-action"></a>用户操作  

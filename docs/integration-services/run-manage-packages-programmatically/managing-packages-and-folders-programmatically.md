@@ -15,10 +15,10 @@ ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a14ae64026443324f7a5dc3f47dcea15f9907f5f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295723"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>以编程方式管理包和文件夹
@@ -43,7 +43,7 @@ ms.locfileid: "71295723"
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [返回首页](#top)    
+ [返回页首](#top)    
     
 ##  <a name="managing"></a>管理包和文件夹    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供其他用于管理包和存储包的文件夹的方法。    
@@ -56,7 +56,7 @@ ms.locfileid: "71295723"
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromSqlServer%2A>|    
     
- [返回首页](#top)    
+ [返回页首](#top)    
     
 ###  <a name="managing_create"></a>创建文件夹    
  若要以编程方式创建存储文件夹，请调用以下方法之一：    
@@ -66,7 +66,7 @@ ms.locfileid: "71295723"
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnSqlServer%2A>|    
     
- [返回首页](#top)    
+ [返回页首](#top)    
     
 ###  <a name="managing_remfldr"></a>删除文件夹    
  若要以编程方式删除存储文件夹，请调用以下方法之一：    
@@ -76,7 +76,7 @@ ms.locfileid: "71295723"
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromSqlServer%2A>|    
     
- [返回首页](#top)    
+ [返回页首](#top)    
     
 ###  <a name="managing_rename"></a>重命名文件夹    
  若要以编程方式重命名存储文件夹，请调用以下方法之一：    
@@ -86,7 +86,7 @@ ms.locfileid: "71295723"
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnSqlServer%2A>|    
     
- [返回首页](#top)    
+ [返回页首](#top)    
     
 ## <a name="see-also"></a>另请参阅    
  [包管理（SSIS 服务）](../../integration-services/service/package-management-ssis-service.md)     

@@ -11,10 +11,10 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298203"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>在运行时提供 OData 源查询
@@ -33,7 +33,7 @@ ms.locfileid: "71298203"
   
 1.  右键单击“数据流任务”并选择“参数化…”选项   。  
   
-2.  在“参数化”对话框中，针对“属性”选择“[\<OData 源组件的名称>].[查询]”    。  
+2.  在“参数化”对话框中，针对“属性”选择“[**OData 源组件的名称>].[查询]”** **\<**  。  
   
 3.  选择是 **“创建新参数”** 还是 **“使用现有参数”** 。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71298203"
   
 6.  输入 **“表达式”** 。  
   
-7.  单击“确定”  。  
+7.  单击“确定”。   
   
 > [!NOTE]  
 > 当使用此方法的时候，需要确保设置的值为正确编码的 URL。 从用户输入接收值时（例如，通过参数设置各个查询选项值），必须确保值已验证，以避免潜在的 SQL 注入类型攻击。  

@@ -12,18 +12,18 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d2cf30f4f01a30d8171e58cce3052e45fefa6179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930319"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG（并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-减少当前 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 数据库在设备中的事务日志大小  。 已对数据进行碎片整理，以便收缩事务日志。 随着时间推移，数据库事务日志可能会变得零碎且效率低下。 使用 DBCC SHRINKLOG 减少碎片并减小日志大小。
+减少当前  *数据库在设备中的事务日志大小*[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 已对数据进行碎片整理，以便收缩事务日志。 随着时间推移，数据库事务日志可能会变得零碎且效率低下。 使用 DBCC SHRINKLOG 减少碎片并减小日志大小。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   

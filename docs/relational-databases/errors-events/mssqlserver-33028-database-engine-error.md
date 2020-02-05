@@ -12,13 +12,13 @@ ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cb42ae68df92466ab30cbb45f6ea526658143795
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908487"
 ---
-# <a name="mssqlserver33028"></a>MSSQLSERVER_33028
+# <a name="mssqlserver_33028"></a>MSSQLSERVER_33028
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,10 +32,10 @@ ms.locfileid: "67908487"
 |符号名称|SEC_CRYPTOPROV_CANTOPENSESSION|  
 |消息正文|无法为 %S_MSG '%.*ls' 打开会话。 提供程序错误代码: %d。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法打开错误消息中列出的加密提供程序。 加密提供程序提供的错误代码如下所示。 您可能需要联系您的加密服务供应商以获得有关错误的详细信息。  
   
-|错误代码|描述|  
+|错误代码|说明|  
 |--------------|---------------|  
 |0|成功。 没有错误。|  
 |1|失败。 出现了未指定的错误或意外错误。 无法获得其他信息。|  

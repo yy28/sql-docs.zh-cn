@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7efc30e37b1242c66df856f79944de687650b99d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982569"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73982569"
   
  若要了解更多信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -199,7 +199,7 @@ CREATE STATISTICS statistics_name
 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
 MAXDOP = max_degree_of_parallelism   
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
   
  在统计信息操作期间替代最大并行度配置选项  。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
@@ -249,7 +249,7 @@ MAXDOP = max_degree_of_parallelism
 ### <a name="examples-use-the-adventureworks-database"></a>使用 AdventureWorks 数据库示例。  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. 将 CREATE STATISTICS 与 SAMPLE number PERCENT 一起使用  
- 下例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Person` 表的 `BusinessEntityID` 和 `EmailPromotion` 列的 5% 作为随机抽样来创建 `ContactMail1` 统计信息。  
+ 下例使用 `ContactMail1` 数据库中 `BusinessEntityID` 表的 `EmailPromotion` 和 `Person` 列的 5% 作为随机抽样来创建 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 统计信息。  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -291,7 +291,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. 将 CREATE STATISTICS 与 FULLSCAN 和 PERSIST_SAMPLE_PERCENT 一起使用  
- 以下示例为 `Person` 表 `BusinessEntityID` 和 `EmailPromotion` 列中的所有行创建 `NamePurchase` 统计信息，并为所有未明确指定采样百分比的后续更新设置 100% 的采样百分比。  
+ 以下示例为 `NamePurchase` 表 `BusinessEntityID` 和 `EmailPromotion` 列中的所有行创建 `Person` 统计信息，并为所有未明确指定采样百分比的后续更新设置 100% 的采样百分比。  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -302,14 +302,14 @@ CREATE STATISTICS NamePurchase  
 ### <a name="examples-using-adventureworksdw-database"></a>使用 AdventureWorksDW 数据库的示例。 
   
 ### <a name="f-create-statistics-on-two-columns"></a>F. 在两列中创建统计信息  
- 以下示例基于 `DimCustomer` 表 `CustomerKey` 和 `EmailAddress` 列创建 `CustomerStats1` 统计信息。 此统计信息是基于 `Customer` 表的行中具有重大统计意义的采样而创建的。  
+ 以下示例基于 `CustomerStats1` 表 `CustomerKey` 和 `EmailAddress` 列创建 `DimCustomer` 统计信息。 此统计信息是基于 `Customer` 表的行中具有重大统计意义的采样而创建的。  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. 使用完全扫描创建统计信息  
- 以下示例扫描 `DimCustomer` 表中的所有行，创建 `CustomerStatsFullScan` 统计信息。  
+ 以下示例扫描 `CustomerStatsFullScan` 表中的所有行，创建 `DimCustomer` 统计信息。  
   
 ```sql  
 CREATE STATISTICS CustomerStatsFullScan 
@@ -317,7 +317,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ```  
   
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. 指定采样百分比，创建统计信息  
- 以下示例扫描 `DimCustomer` 表中 50% 的行，创建 `CustomerStatsSampleScan` 统计信息。  
+ 以下示例扫描 `CustomerStatsSampleScan` 表中 50% 的行，创建 `DimCustomer` 统计信息。  
   
 ```sql  
 CREATE STATISTICS CustomerStatsSampleScan 

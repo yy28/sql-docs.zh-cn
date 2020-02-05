@@ -11,10 +11,10 @@ ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 532513a6d8c62cb1f1f36e6dc2c8b83a7c96089b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295398"
 ---
 # <a name="catalogrename_environment-ssisdb-database"></a>catalog.rename_environment（SSISDB 数据库）
@@ -48,7 +48,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -66,7 +66,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   新名称已用于现有环境  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当您重命名环境时，项目中的环境引用不会自动更新。 必须相应地更新环境引用。 即使通过更改环境名称损坏了环境引用，此存储过程也会成功。 在此存储过程完成之后，必须更新环境引用。  
   
 > [!NOTE]  

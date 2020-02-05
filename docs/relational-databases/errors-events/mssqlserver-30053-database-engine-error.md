@@ -10,13 +10,13 @@ ms.assetid: 8ad23889-e243-4bd7-bc3e-150403399d89
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2773c43695f67cc6d3878f1885686e74e84e67c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039309"
 ---
-# <a name="mssqlserver30053"></a>MSSQLSERVER_30053
+# <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -30,7 +30,7 @@ ms.locfileid: "68039309"
 |符号名称|FTXT_QUERY_E_WORDBREAKINGTIMEOUT|  
 |消息正文|全文查询字符串出现断字超时。 如果断字器长时间处理全文查询字符串或服务器上有大量查询正在运行，则会发生这种情况。 请在负荷较轻的情况下再次尝试运行此查询。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 在以下情况下会发生断字超时错误：  
   
 -   查询语言的断字符配置不正确；例如，其注册表设置不正确。  

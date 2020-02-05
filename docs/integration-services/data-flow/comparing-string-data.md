@@ -17,10 +17,10 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c84997d8ec11a4eb620daf7bf34af7adf3e8de1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293240"
 ---
 # <a name="comparing-string-data"></a>比较字符串数据
@@ -37,7 +37,7 @@ ms.locfileid: "71293240"
   
 -   有条件拆分转换可以在表达式中使用字符串比较，以确定将数据行发送到哪个输出。 有关详细信息，请参阅 [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)。  
   
--   派生列转换可以在表达式中使用字符串比较，以生成新的列值。 有关详细信息，请参阅 [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
+-   派生列转换可以在表达式中使用字符串比较，以生成新的列值。 有关详细信息，请参阅 [派生列转换](../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
   
  变量、变量映射和优先约束也使用可以包含字符串比较的表达式。 有关表达式的详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71293240"
   
  下表介绍比较选项和排序样式。  
   
-|比较选项|描述|  
+|比较选项|说明|  
 |-----------------------|-----------------|  
 |忽略大小写|指定比较是否区分大小写字母。 如果设置了此选项，字符串比较会忽略大小写。 例如，"ABC" 和 "abc" 没有区别。|  
 |忽略假名类型|指定比较是否区分日语的两种假名字符类型：平假名和片假名。 如果设置了此选项，字符串比较会忽略假名类型。|  

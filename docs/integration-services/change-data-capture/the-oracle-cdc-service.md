@@ -11,10 +11,10 @@ ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a11a67f64a40aa5fe08d375a9f11fa186c568b1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298608"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC 服务
@@ -47,7 +47,7 @@ GO
   
  Oracle CDC 实例配置保存在 **cdc.xdbcdc_config** 表中，该表是 Oracle CDC 设计器控制台使用的表。 因为在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和 CDC 数据库中找到了某一 Oracle CDC 实例的整个配置，所以，可以为该 Oracle CDC 实例创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 部署脚本。 这是使用 Oracle CDC 服务配置和 Oracle CDC 设计器控制台实现的。  
   
-## <a name="security-considerations"></a>需要考虑的安全性因素  
+## <a name="security-considerations"></a>安全注意事项  
  下面介绍使用 Oracle CDC 服务时需遵守的安全要求。  
   
 ### <a name="protection-of-source-oracle-data"></a>源 Oracle 数据的保护  

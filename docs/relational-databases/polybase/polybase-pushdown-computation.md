@@ -9,10 +9,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 94e360c19c4f734b891701a4ec40c82cdb57927d
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710486"
 ---
 # <a name="pushdown-computations-in-polybase"></a>在 PolyBase 中下推计算
@@ -64,7 +64,7 @@ SQL Server 允许以下谓词下推的基本表达式和运算符。
 
 运算符 BETWEEN、NOT、IN 和 LIKE 可能能够下推。 实际具体行为取决于查询优化器如何将运算符表达式重写为一系列使用基本关系运算符的语句。
 
-此示例中的查询有多个可以向下推送到 Hadoop 的谓词。 SQL Server 能够将 map-reduce 作业推送到 Hadoop，以便执行谓词 `customer.account_balance <= 200000`。 表达式 `BETWEEN 92656 and 92677` 也是由可以推送到 Hadoop 的二进制和逻辑运算符组成。 `customer.account_balance and customer.zipcode` 中的逻辑 AND  是最终表达式。
+此示例中的查询有多个可以向下推送到 Hadoop 的谓词。 SQL Server 能够将 map-reduce 作业推送到 Hadoop，以便执行谓词 `customer.account_balance <= 200000`。 表达式 `BETWEEN 92656 and 92677` 也是由可以推送到 Hadoop 的二进制和逻辑运算符组成。 **中的逻辑 AND**`customer.account_balance and customer.zipcode` 是最终表达式。
 
 鉴于这种谓词组合，map-reduce 作业可以执行所有的 WHERE 子句。 只有符合 SELECT 条件的数据，才会复制回 SQL Server PDW。
 

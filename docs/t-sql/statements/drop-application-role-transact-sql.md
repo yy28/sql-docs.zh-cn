@@ -22,10 +22,10 @@ ms.assetid: 44121ee7-ef40-405d-b03b-f8ddb4e3c559
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 02f5056aae7eb7691be3842481ee8381198ddaeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984298"
 ---
 # <a name="drop-application-role-transact-sql"></a>DROP APPLICATION ROLE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67984298"
 
   从当前数据库删除应用程序角色。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ DROP APPLICATION ROLE rolename
  rolename   
  指定要删除的应用程序角色的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果应用程序角色拥有任何安全对象，则无法删除它。 在删除拥有安全对象的应用程序角色之前，必须首先移交安全对象的所有权或将其删除。  
   
 > [!CAUTION]  

@@ -20,10 +20,10 @@ ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314524"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71314524"
 
 此函数可对最初使用密码加密的数据进行解密。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 + **nchar**
 + **nvarchar**
 
-或多个
+或
 
 + **varchar**
 
@@ -81,7 +81,7 @@ authenticator
 ## <a name="return-types"></a>返回类型  
 varbinary（最大大小为 8,000 个字节）  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `DECRYPTBYPASSPHRASE` 不需要执行权限。 如果 `DECRYPTBYPASSPHRASE` 收到错误的密码或错误的验证器信息，则返回 NULL。  
   
 `DECRYPTBYPASSPHRASE` 使用密码生成解密密钥。 此解密密钥不会保留。  

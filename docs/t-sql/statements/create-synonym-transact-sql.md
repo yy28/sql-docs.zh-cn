@@ -23,10 +23,10 @@ ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3682c9faa66252f4e578fe75b41b010380409fc6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982580"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982580"
 
   创建新的同义词。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -84,7 +84,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  Azure SQL 数据库支持由三部分组成的名称格式 database_name.[schema_name].object_name，其中 database_name 为当前数据库，database_name 为 tempdb，object_name 以 # 开头。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  创建同义词时不需要基对象存在。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在运行时检查基对象是否存在。  
   
  可以为下列对象类型创建同义词：  
@@ -96,7 +96,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 |复制筛选过程|扩展存储过程|  
 |SQL 标量函数|SQL 表值函数|  
 |SQL 内联表值函数|SQL 存储过程|  
-|“查看”|表<sup>1</sup>（用户定义）|  
+|查看|表<sup>1</sup>（用户定义）|  
   
  <sup>1 包括局部临时表和全局临时表</sup>  
   

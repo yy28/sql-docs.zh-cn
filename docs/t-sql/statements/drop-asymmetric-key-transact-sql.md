@@ -24,10 +24,10 @@ ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fdc08d0598209e3d5fa4957ca241bfa49c60b6a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898311"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67898311"
 
   从数据库中删除非对称密钥。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
  REMOVE PROVIDER KEY  
  从 EKM 设备中删除可扩展密钥管理 (EKM) 密钥。 有关可扩展密钥管理的详细信息，请参阅[可扩展密钥管理 (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果数据库中的某一对称密钥使用非对称密钥进行了加密，或者有用户或登录名映射到该非对称密钥，则不能将其删除。 在删除此类密钥前，必须删除映射到该密钥的所有用户或登录名。 同时还必须删除或更改使用该非对称密钥进行加密的所有对称密钥。 可以使用 [ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) 的 DROP ENCRYPTION 选项删除非对称密钥的加密。  
   
  可以使用 [sys.asymmetric_keys](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md) 目录视图访问非对称密钥的元数据。 从数据库中无法直接查看密钥本身。  

@@ -9,10 +9,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 696b7bbd19ed41aeedaf0cbba683870c04de1b13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896199"
 ---
 # <a name="open-and-save-files-on-premises-and-in-azure-with-ssis-packages-deployed-in-azure"></a>使用 Azure 中部署的 SSIS 包在本地和 Azure 中打开并保存文件
@@ -30,7 +30,7 @@ ms.locfileid: "67896199"
 要在将使用本地文件系统的包提升和迁移到 Azure 中的 SSIS 时继续使用本地文件共享  ，请执行以下操作：
 1.  将文件从本地文件系统传输到本地文件共享。
 2.  将本地文件共享联接到 Azure 虚拟网络。
-3.  将 Azure-SSIS IR 联接到同一个虚拟网络。 有关详细信息，请参阅[将 Azure-SSIS 集成运行时联接到虚拟网络](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)。
+3.  将 Azure-SSIS IR 联接到同一个虚拟网络。 有关详细信息，请参阅[将 Azure-SSIS 集成运行时加入虚拟网络](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)。
 4.  通过设置使用 Windows 身份验证的访问凭据，将 Azure-SSIS IR 连接到同一个虚拟网络内的本地文件共享。 有关详细信息，请参阅[使用 Windows 身份验证连接到数据和文件共享](ssis-azure-connect-with-windows-auth.md)。
 5.  将包中的本地文件路径更新为指向本地文件共享的 UNC 路径。 例如，将 `C:\abc.txt` 更新为 `\\<on-prem-server-name>\<share-name>\abc.txt`。
 

@@ -23,10 +23,10 @@ ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a5ecfbcd49712ce22f5e48aa5643d90414f78fae
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74833784"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
@@ -54,7 +54,7 @@ GROUPING ( <column_expression> )
  GROUPING 用于区分标准空值和由 ROLLUP、CUBE 或 GROUPING SETS 返回的空值。 作为 ROLLUP、CUBE 或 GROUPING SETS 操作结果返回的 NULL 是 NULL 的特殊应用。 它在结果集内作为列的占位符，表示全体。  
   
 ## <a name="examples"></a>示例  
- 以下示例将分组 `SalesQuota` 并聚合 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `SaleYTD` 金额。 `GROUPING` 函数应用于 `SalesQuota` 列。  
+ 以下示例将分组 `SalesQuota` 并聚合 `SaleYTD` 数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 金额。 `GROUPING` 函数应用于 `SalesQuota` 列。  
   
 ```  
 SELECT SalesQuota, SUM(SalesYTD) 'TotalSalesYTD', GROUPING(SalesQuota) AS 'Grouping'  
@@ -63,7 +63,7 @@ GROUP BY SalesQuota WITH ROLLUP;
 GO  
 ```  
   
- 结果集在 `SalesQuota` 下面显示两个 null 值。 第一个 `NULL` 代表从表中的这一列得到的 null 值组。 第二个 `NULL` 位于 ROLLUP 操作所添加的汇总行之中。 汇总行显示所有 `SalesQuota` 组的 `TotalSalesYTD` 金额，并以 `Grouping` 列中的 `1` 进行指示。  
+ 结果集在 `SalesQuota` 下面显示两个 null 值。 第一个 `NULL` 代表从表中的这一列得到的 null 值组。 第二个 `NULL` 位于 ROLLUP 操作所添加的汇总行之中。 汇总行显示所有 `TotalSalesYTD` 组的 `SalesQuota` 金额，并以 `1` 列中的 `Grouping` 进行指示。  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   

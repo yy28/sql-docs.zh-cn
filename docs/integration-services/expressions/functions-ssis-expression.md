@@ -17,10 +17,10 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a271b9dd9da2a4b21040a89145d9f2ab1fe84b68
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297582"
 ---
 # <a name="functions-ssis-expression"></a>函数（SSIS 表达式）
@@ -42,7 +42,7 @@ ms.locfileid: "71297582"
   
  表达式语言提供了下列数学函数。  
   
-|函数|描述|  
+|函数|说明|  
 |--------------|-----------------|  
 |[ABS（SSIS 表达式）](../../integration-services/expressions/abs-ssis-expression.md)|返回数值表达式的绝对值。|  
 |[EXP（SSIS 表达式）](../../integration-services/expressions/exp-ssis-expression.md)|返回指定表达式以 e 为底的指数。|  
@@ -58,7 +58,7 @@ ms.locfileid: "71297582"
   
  表达式计算器提供了下列字符串函数。  
   
-|函数|描述|  
+|函数|说明|  
 |--------------|-----------------|  
 |[CODEPOINT（SSIS 表达式）](../../integration-services/expressions/codepoint-ssis-expression.md)|返回字符表达式最左端字符的 Unicode 代码值。|  
 |[FINDSTRING（SSIS 表达式）](../../integration-services/expressions/findstring-ssis-expression.md)|返回表达式中指定出现的字符串从 1 开始的索引。|  
@@ -78,7 +78,7 @@ ms.locfileid: "71297582"
   
  表达式计算器提供了下列日期和时间函数。  
   
-|函数|描述|  
+|函数|说明|  
 |--------------|-----------------|  
 |[DATEADD（SSIS 表达式）](../../integration-services/expressions/dateadd-ssis-expression.md)|通过将指定日期与一个日期或时间间隔相加，返回一个新的 DT_DBTIMESTAMP 值。|  
 |[DATEDIFF（SSIS 表达式）](../../integration-services/expressions/datediff-ssis-expression.md)|返回两个指定日期之间所跨的日期和时间边界的数目。|  
@@ -91,7 +91,7 @@ ms.locfileid: "71297582"
   
  表达式计算器提供了下列空函数。  
   
-|函数|描述|  
+|函数|说明|  
 |--------------|-----------------|  
 |[ISNULL（SSIS 表达式）](../../integration-services/expressions/isnull-ssis-expression.md)|根据表达式是否为空，返回一个布尔值结果。|  
 |[NULL（SSIS 表达式）](../../integration-services/expressions/null-ssis-expression.md)|返回请求的数据类型的 Null 值。|  

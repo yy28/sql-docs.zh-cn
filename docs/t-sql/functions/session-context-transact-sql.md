@@ -18,18 +18,18 @@ ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2949c4bbf5e72fad99f6698287880ec2a2f97f7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067560"
 ---
-# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
+# <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   返回当前会话上下文中指定键的值。 使用 [sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) 步骤设置值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="permissions"></a>权限  
  任何用户都可以读取其会话的会话上下文。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SESSION_CONTEXT 的 MARS 行为类似于 CONTEXT_INFO 的该行为。 如果 MARS 批设置键值对，则新值不会返回到相同连接上的其他 MARS 批，除非它们在设置新值的批完成后开始。 如果连接上有多个活动的 MARS 批，那么值不能设置为“read_only”。 这样可以避免有关哪一个值“胜出”的争用条件和非确定性。  
   
 ## <a name="examples"></a>示例  

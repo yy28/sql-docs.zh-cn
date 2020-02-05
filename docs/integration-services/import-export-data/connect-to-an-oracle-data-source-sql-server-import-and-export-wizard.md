@@ -10,10 +10,10 @@ ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285436"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>连接到 Oracle 数据源（SQL Server 导入和导出向导）
@@ -58,13 +58,13 @@ ODBC 驱动程序不在数据源的下拉列表中列出。 要使用 ODBC 驱�
 > [!TIP]
 > 获取有关组合出正确连接字符串的帮助。 或提供现有 DSN（数据源名称）或新建一个，而不是提供连接字符串。 有关这些选项的详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
 
-驱动程序   
+**驱动程序**  
 用于 Oracle 的 Microsoft ODBC  驱动程序的名称。
 
 **Server**  
 Oracle 服务器的名称。 
 
-Uid  和 Pwd     
+Uid 和 Pwd      
 要连接的用户 ID 和密码。
 
 ### <a name="connection-string-format"></a>连接字符串格式
@@ -86,7 +86,7 @@ Uid  和 Pwd
 
 `SELECT host_name FROM v$instance`
 
-或多个
+或
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 

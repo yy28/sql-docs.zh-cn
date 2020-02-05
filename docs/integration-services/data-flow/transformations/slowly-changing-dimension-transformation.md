@@ -18,10 +18,10 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1fd5584a5c43762c4d732c677de225436e191a7e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297802"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>渐变维度转换
@@ -50,7 +50,7 @@ ms.locfileid: "71297802"
   
 -   变化的属性更改覆盖现有记录。 此类更改等效于类型 1 更改。 渐变维度转换将这些行定向到名为 **“变化的属性更新输出”** 的输出。  
   
--   历史属性更改创建新记录而不更新现有记录。 现有记录中允许的唯一更改是对指示记录是当前记录还是过期记录的列的更新。 此类更改等效于类型 2 更改。 渐变维度转换将这些行定向到两个输出：“历史属性插入输出”和“新输出”。    
+-   历史属性更改创建新记录而不更新现有记录。 现有记录中允许的唯一更改是对指示记录是当前记录还是过期记录的列的更新。 此类更改等效于类型 2 更改。 渐变维度转换将这些行定向到两个输出： **“历史属性插入输出”** 和 **“新输出”** 。  
   
 -   固定的属性更改指示不得更改列值。 渐变维度转换检测更改，并可将带有更改的行定向到名为 **“固定的属性输出”** 的输出。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "71297802"
   
  下表介绍转换输出和这些输出的后续数据流的要求。 这些要求介绍渐变维度向导创建的数据流。  
   
-|“输出”|描述|数据流要求|  
+|输出|说明|数据流要求|  
 |------------|-----------------|----------------------------|  
 |**“变化的属性更新输出”**|查找表中的记录被更新。 此输出用于变化的属性行。|OLE DB 命令转换使用 UPDATE 语句更新记录。|  
 |**“固定的属性输出”**|不得更改的行中的值与查找表中的值不匹配。 此输出用于固定的属性行。|没有创建默认数据流。 如果转换配置为遇到固定的属性列更改时继续，则应创建可捕获这些行的数据流。|  
@@ -93,7 +93,7 @@ ms.locfileid: "71297802"
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

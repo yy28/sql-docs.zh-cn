@@ -25,10 +25,10 @@ ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 56dc5d83a23bfbf175c203edbdeb27d30760557b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299031"
 ---
 # <a name="handling-events-programmatically"></a>以编程方式处理事件
@@ -36,12 +36,12 @@ ms.locfileid: "71299031"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 运行时提供了一个事件集合，该集合中的事件在包的验证和执行过程之前、期间和之后发生。 这些事件可用两种方法捕获。 第一种方法是在类中实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口，并将该类作为参数提供给包的 Execute  和 Validate  方法。 第二种方法是创建 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象，该对象可以包含当 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 中的事件发生时所执行的其他 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对象，例如任务和循环。 本节介绍这两种方法并提供代码示例来说明它们的用法。  
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 运行时提供了一个事件集合，该集合中的事件在包的验证和执行过程之前、期间和之后发生。 这些事件可用两种方法捕获。 第一种方法是在类中实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口，并将该类作为参数提供给包的 Execute  和 Validate  方法。 第二种方法是创建 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象，该对象可以包含当 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 中的事件发生时所执行的其他 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 对象，例如任务和循环。 本节介绍这两种方法并提供代码示例来说明它们的用法。  
   
 ## <a name="receiving-idtsevents-callbacks"></a>接收 IDTSEvents 回调  
  以编程方式生成和执行包的开发人员可以使用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口在验证和执行过程中接收事件通知。 其方法是创建一个实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口的类，并将该类作为参数提供给包的 Execute  和 Validate  方法。 运行时引擎随后会在事件发生时调用该类的这些方法。  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 类是一个已实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口的类；因此，直接实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 的另一种方法是从 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 继承并重写要响应的特定事件。 然后，将你的类作为参数提供给 <xref:Microsoft.SqlServer.Dts.Runtime.Package> 的 Validate  和 Execute  方法来接收事件回调。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 类是一个已实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口的类；因此，直接实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 的另一种方法是从 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 继承并重写要响应的特定事件。 然后，将你的类作为参数提供给  **的 Validate** **和 Execute**<xref:Microsoft.SqlServer.Dts.Runtime.Package> 方法来接收事件回调。  
   
  以下代码示例演示从 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 继承的类，并重写 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> 方法。 该类随后作为一个参数提供给包的 Validate  和 Execute  方法。  
   

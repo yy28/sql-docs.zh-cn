@@ -13,10 +13,10 @@ ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd4b9487f6a185b76b5f4ee52d7a39f349906d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943370"
 ---
 # <a name="examples-using-path-mode"></a>示例：使用 PATH 模式
@@ -329,7 +329,7 @@ FOR XML PATH ('Translation')
 GO  
 ```  
   
- 添加到 <`English`> 元素的 `@xml:lang` 属性在预定义的 xml 命名空间中定义。  
+ 添加到 <`@xml:lang`> 元素的 `English` 属性在预定义的 xml 命名空间中定义。  
   
  结果如下：  
 

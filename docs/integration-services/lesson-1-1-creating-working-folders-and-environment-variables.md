@@ -11,10 +11,10 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 08de88d45b31e4c00c9ce5a7790405c6da1542a2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284136"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>第 1-1 课 - 创建工作文件夹和环境变量
@@ -54,7 +54,7 @@ ms.locfileid: "71284136"
   
 5.  在“新建系统变量”  对话框中，在“变量名”  框中键入 **DataTransfer**，并在“变量值”  框中键入 **C:\DeploymentTutorial\datatransferconfig.dtsconfig**。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 7.  再次单击“新建”  ，在“变量名”  框中键入 **LoadXMLData**，并在“变量值”  框中键入 **C:\DeploymentTutorial\loadxmldataconfig.dtsconfig**。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "71284136"
   
 5.  在“新建系统变量”  对话框中，在“变量名”  框中键入 **DataTransfer**，并在“变量值”  框中键入 **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig**。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 7.  再次单击“新建”  ，在“变量名”  框中键入 **LoadXMLData**，并在“变量值”  框中键入 **C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig**。  
   

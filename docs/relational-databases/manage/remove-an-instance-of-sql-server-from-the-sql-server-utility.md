@@ -13,10 +13,10 @@ ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 785c056b50ed3594fe9886eb9c6a9ec79f7895c1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908660"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>从 SQL Server 实用工具中删除 SQL Server 实例
@@ -30,7 +30,7 @@ ms.locfileid: "72908660"
   
 2.  在该列表视图的 **“SQL Server 实例名称”** 列中，选择要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 右键单击要删除的实例，然后选择“删除托管实例…”  。  
   
-3.  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的管理员权限指定凭据：单击“连接...”，确认“连接到服务器”对话框中的信息，然后单击“连接”。    您将在 **“删除托管实例”** 对话框中看到登录信息。  
+3.  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例指定具有管理员权限的凭据：单击“连接…”，验证“连接到服务器”对话框中的信息，然后单击“连接”    。 您将在 **“删除托管实例”** 对话框中看到登录信息。  
   
 4.  若要确认该操作，请单击 **“确定”** 。 若要退出该操作，请单击 **“取消”** 。  
 

@@ -12,13 +12,13 @@ ms.assetid: 2a35d57d-74e2-45a2-8f67-3f2e51d69712
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ea12450aba44938a1333687d14aa0dc5dfc471e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896828"
 ---
-# <a name="mssqlserver1904"></a>MSSQLSERVER_1904
+# <a name="mssqlserver_1904"></a>MSSQLSERVER_1904
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "67896828"
 |符号名称|KEYCOUNT|  
 |消息正文|表 '%.\*ls' 的 %S_MSG '%.*ls' 在 %S_MSG 键列表中具有 %d 个列名。 索引或统计信息键列列表的最大限制为 %d。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 指定索引或统计信息的键列列表超出了允许的最大列数。  
   
 ## <a name="user-action"></a>用户操作  

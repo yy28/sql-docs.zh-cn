@@ -17,10 +17,10 @@ ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d8d863a6ca6a44a323c05f26298c68de774dfc3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948015"
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "67948015"
 
   存储 XML 数据的数据类型。 可在列中或者 xml 类型的变量中存储 xml 实例   。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
  CONTENT  
  将 xml 实例限制为格式正确的 XML 片段  。 XML 数据的顶层可包含多个零或多个元素。 还允许在顶层使用文本节点。  
   
- 这是默认行为。  
+ 此选项为默认行为。  
   
  DOCUMENT  
  将 xml 实例限制为格式正确的 XML 片段  。 XML 数据必须且只能有一个根元素。 不允许在顶层使用文本节点。  
@@ -49,7 +49,7 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
  xml_schema_collection   
  XML 架构集合的名称。 若要创建类型化的 xml 列或变量，可选择指定 XML 架构集合名称  。 有关类型化和非类型化 XML 的详细信息，请参阅[类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  存储的 xml 数据类型表示实例大小不能超过 2 GB  。  
   
  CONTENT 和 DOCUMENT 方面仅应用于类型化的 XML。 有关详细信息，请参阅[类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  

@@ -14,10 +14,10 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947358"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 任务
@@ -44,11 +44,11 @@ ms.locfileid: "67947358"
 
 ### <a name="u-sql-configuration"></a>U-SQL 配置
 
-U-SQL 配置包含以下两个设置：SourceType 和基于 SourceType 值的动态选项   。 
+U-SQL 配置包含以下两个设置：SourceType  和基于 SourceType  值的动态选项。 
 
 SourceType  指定的是 U-SQL 脚本源。 脚本在 SSIS 包执行期间提交到 Data Lake Analytics 帐户。 下面列出了此属性的选项：
 
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |DirectInput |通过内联编辑器指定 U-SQL 脚本。 选择此值将显示动态选项 USQLStatement  。|  
 |**文件连接**|指定包含 U-SQL 脚本的本地 .usql 文件。 选择此选项将显示动态选项 FileConnection  。|  
@@ -66,28 +66,28 @@ SourceType  指定的是 U-SQL 脚本源。 脚本在 SSIS 包执行期间提交
 ### <a name="job-configuration"></a>作业配置
 作业配置指定 U-SQL 作业提交属性。
 
-- **AzureDataLakeAnalyticsConnection：** 指定在其中提交 U-SQL 脚本的 Data Lake Analytics 帐户。 从已定义的连接管理器的列表中选择连接。 要创建新连接，请选择“<新建连接>”  。 若要了解相关信息，请参阅 [Azure Data Lake Analytics 连接管理器](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md).
+- **AzureDataLakeAnalyticsConnection：** 指定将 U-SQL 脚本提交到的 Data Lake Analytics 帐户。 从已定义的连接管理器的列表中选择连接。 要创建新连接，请选择“<新建连接>”  。 若要了解相关信息，请参阅 [Azure Data Lake Analytics 连接管理器](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md).
 
-- **JobName：** 指定 U-SQL 作业的名称。 
-- **AnalyticsUnits：** 指定 U-SQL 作业的分析单元计数。
-- **优先级：** 指定 U-SQL 作业的优先级。 可以将此属性设置为介于 0 和 1000 之间的值。 数字越小，优先级越高。
+- JobName：  指定 U-SQL 作业的名称。 
+- **AnalyticsUnits：** 指定 U-SQL 作业的分析单位数。
+- **Priority：** 指定 U-SQL 作业的优先级。 可以将此属性设置为介于 0 和 1000 之间的值。 数字越小，优先级越高。
 - **RuntimeVersion：** 指定 U-SQL 作业的 Data Lake Analytics 运行时版本。 默认情况下，此选项设置为“默认”。 通常无需更改此属性。
-- **同步：** 布尔值指定任务是否等待作业执行完成。 如果将此值设置为 true，任务在作业完成后标记为“成功”  。 如果将此值设置为 false，任务在作业通过准备阶段后标记为“成功”  。
+- **Synchronous：** 指定任务是否等待作业执行完成的布尔值。 如果将此值设置为 true，任务在作业完成后标记为“成功”  。 如果将此值设置为 false，任务在作业通过准备阶段后标记为“成功”  。
 
-  |ReplTest1|描述|
+  |值|说明|
   |-----------|-----------------|
   |True|任务结果基于 U-SQL 作业执行结果。 作业成功先于任务成功。 作业失败先于任务失败。 任务成功或失败先于任务完成。|
   |False|任务结果基于 U-SQL 作业提交和准备结果。 作业提交成功并通过准备阶段先于任务成功。 作业提交失败或未通过准备阶段先于任务失败。 任务成功或失败先于任务完成。|
 
-- **超时：** 指定作业执行的超时时间（以秒为单位）。 如果作业超时，就会被取消并标记为“失败”。 如果“Synchronous”  设置为“false”，便无法设置此属性。
+- **TimeOut：** 指定作业执行的超时时间（以秒为单位）。 如果作业超时，就会被取消并标记为“失败”。 如果“Synchronous”  设置为“false”，便无法设置此属性。
 
 ## <a name="parameter-mapping-page-configuration"></a>“参数映射”页配置
 
 在“Azure Data Lake Analytics 任务编辑器”  对话框的“参数映射”  页中，可以将变量映射到 U-SQL 脚本中的参数（U-SQL 变量）。
 
-- **变量名称：** 通过选择“添加”添加参数映射之后，从列表中选择系统或用户定义的变量  。 也可以选择“<新建变量...>”  ，以通过“添加变量”  对话框来添加新变量。 若要了解相关信息，请参阅 [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)。  
+- **变量名：** 通过选择“添加”  添加参数映射后，从列表中选择系统变量或用户定义的变量。 也可以选择“<新建变量...>”  ，以通过“添加变量”  对话框来添加新变量。 若要了解相关信息，请参阅 [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)。  
 
-- **参数名称：** 提供 U-SQL 脚本中的参数/变量名称。 请确保参数名以 \@ 符号开头（如 \@Param1）。 
+- 参数名称：  提供 U-SQL 脚本中的参数/变量名称。 请确保参数名以 \@ 符号开头（如 \@Param1）。 
 
 以下是如何将参数传递到 U-SQL 脚本的示例。
 
@@ -119,7 +119,7 @@ OUTPUT @rs1
       USING Outputters.Tsv(quoting:false, dateTimeFormat:null);
 ```
 
-请注意，输入和输出路径是在 \@in  和 \@out  参数中进行定义。 U-SQL 脚本中的 \@in  和 \@out  参数值是通过“参数映射”配置动态传递。
+请注意，输入和输出路径是在 **in\@** 和 **out\@** 参数中进行定义。 U-SQL 脚本中的 **in\@** 和 **out\@** 参数值是通过“参数映射”配置动态传递。
 
 |变量名称|参数名称|
 |-------------|--------------|

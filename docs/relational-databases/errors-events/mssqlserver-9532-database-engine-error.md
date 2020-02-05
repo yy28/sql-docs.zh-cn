@@ -12,13 +12,13 @@ ms.assetid: ab95cce8-4f97-4aea-a746-a73eea7c9aab
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6cb06f095b51d4fb5e10f571d8918ffbb20c67ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903832"
 ---
-# <a name="mssqlserver9532"></a>MSSQLSERVER_9532
+# <a name="mssqlserver_9532"></a>MSSQLSERVER_9532
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "67903832"
 |符号名称|XMLERR_COLUMNSET_CANNOT_CONVERT_FROM_TO|  
 |消息正文|在涉及列集 '%.*ls' 的查询/DML 操作中，将列 '%.\*ls' 从数据类型 '%ls' 转换为数据类型 '%ls' 时转换失败。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 列集是一种非类型化的 XML 表示形式，它将表的某些列组合成为结构化的输出。 通过 XML 列集插入或更新稀疏列值时，插入到基础稀疏列的值将从 **xml** 数据类型隐式转换为另一种类型。 所提供的值无法转换为列的数据类型。  
   
 ## <a name="user-action"></a>用户操作  

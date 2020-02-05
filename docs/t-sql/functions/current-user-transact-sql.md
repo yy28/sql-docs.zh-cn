@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6901afbb6d0faa26c4977c15a3836bdeab68bb4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844615"
 ---
 # <a name="current_user-transact-sql"></a>CURRENT_USER (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73844615"
 
 此函数返回当前用户的名称。 此函数等效于 `USER_NAME()`。
   
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -45,8 +45,8 @@ CURRENT_USER
 ## <a name="return-types"></a>返回类型
 **sysname**
   
-## <a name="remarks"></a>Remarks  
-`CURRENT_USER` 返回当前安全上下文的名称。 如果在 `EXECUTE AS` 的调用切换上下文后执行 `CURRENT_USER`，`CURRENT_USER` 将返回被模拟上下文的名称。 如果 Windows 主体通过某组中的成员身份访问数据库，则 `CURRENT_USER` 将返回 Windows 主体的名称，而不是该组名。
+## <a name="remarks"></a>备注  
+`CURRENT_USER` 返回当前安全上下文的名称。 如果在 `CURRENT_USER` 的调用切换上下文后执行 `EXECUTE AS`，`CURRENT_USER` 将返回被模拟上下文的名称。 如果 Windows 主体通过某组中的成员身份访问数据库，则 `CURRENT_USER` 将返回 Windows 主体的名称，而不是该组名。
   
 若要了解如何返回当前用户的登录名，请参阅 [SUSER_NAME (Transact-SQL)](../../t-sql/functions/suser-name-transact-sql.md) 和 [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)。
   

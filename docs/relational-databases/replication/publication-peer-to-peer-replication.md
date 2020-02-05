@@ -13,10 +13,10 @@ ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d7097c59f77b95a561420183e2e899c0672dc5e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908126"
 ---
 # <a name="publication-peer-to-peer-replication"></a>发布（对等复制）
@@ -24,7 +24,7 @@ ms.locfileid: "67908126"
   **“发布”** 页显示为对等复制启用的事务发布。 可以在 **“发布属性”** 对话框的 **“订阅选项”** 页上启用发布。  
   
 ## <a name="options"></a>选项  
- **发布服务器**  
+ **发布者**  
  显示连接的服务器。 若要连接到不同的服务器，请选择 **“查找 SQL Server 发布服务器”** 。  
   
  **数据库和发布**  

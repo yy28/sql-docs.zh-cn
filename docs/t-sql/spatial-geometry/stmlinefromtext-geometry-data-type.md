@@ -18,10 +18,10 @@ ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: dd96ae317c4f40a8b530bbc20ec64d5e3e2dccaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030849"
 ---
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText（geometry 数据类型）
@@ -46,11 +46,11 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
- OGC 类型：**MultiLineString**  
+ OGC 类型：MultiLineString   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果输入的格式不正确，此方法将引发 FormatException  。  
   
 ## <a name="examples"></a>示例  

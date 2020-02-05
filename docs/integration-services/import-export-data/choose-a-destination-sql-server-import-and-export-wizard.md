@@ -12,10 +12,10 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86b2cf26c7af957579c5368ed70262e43db005f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285878"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>选择目标（SQL Server 导入和导出向导）
@@ -40,7 +40,7 @@ ms.locfileid: "71285878"
 
 -   **如果有用于目标的 ODBC 驱动程序**，则选择用于 ODBC 的 .Net Framework 数据提供程序。 然后输入特定于驱动程序的信息。 目标下拉列表中不会列出 ODBC 驱动程序。 用于 ODBC 的 .Net Framework 数据提供程序充当 ODBC 驱动程序的包装器。 有关详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
 
--   **可用于目标的访问接口可能不止一个。** 通常可以选择任何可用于目标的访问接口。 例如，若要连接到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以使用用于 SQL Server 的 .NET Framework 数据提供程序或 SQL Server ODBC 驱动程序。 （其他提供程序也仍在列表中，但不再受支持。） 
+-   **可用于目标的访问接口可能不止一个。** 通常可以选择任何可用于目标的访问接口。 例如，若要连接到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以使用用于 SQL Server 的 .NET Framework 数据提供程序或 SQL Server ODBC 驱动程序。 （其他提供程序仍在列表中，但不再受支持。） 
 
 ## <a name="my-destination-isnt-in-the-list"></a>我的目标不在列表中
 -   **可能需要从 Microsoft 或第三方下载数据提供程序**。 “目标”  列表中的可用数据提供程序列表仅包含计算机上安装的提供程序。 有关可使用的目标的信息，请参阅[可使用哪些数据源和目标？](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)

@@ -15,10 +15,10 @@ ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 95893aac0b6ca62b60b12f9d35daf15e77e565f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929302"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance（geometry 数据类型）
@@ -43,12 +43,12 @@ ms.locfileid: "67929302"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  设置 tolerance <= 0 将引发 `ArgumentOutOfRange` 异常。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此方法可以指定结果 LineString 的容错大小  。  
   
  下表显示了 `CurveToLineWithTolerance()` 为各种类型返回的实例类型。  
@@ -72,7 +72,7 @@ ms.locfileid: "67929302"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. 在 CircularString 实例上使用不同的公差值  
- 以下示例说明设置容差如何影响从 `CircularString` 实例返回的 `LineString` 实例：  
+ 以下示例说明设置容差如何影响从 `LineString` 实例返回的 `CircularString` 实例：  
   
 ```
  DECLARE @g geometry; 

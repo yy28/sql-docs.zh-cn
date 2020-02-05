@@ -15,16 +15,16 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0fc0dbd2df2d0383e7fd63eddc941170d4b0a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67988654"
 ---
 # <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>AlwaysOn 可用性组中的可用性副本连接已断开
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="introduction"></a>简介  
+## <a name="introduction"></a>介绍  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ ms.locfileid: "67988654"
 |**类别**|**严重**|  
 |**方面**|可用性副本|  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  此策略检查可用性副本之间的连接状态。 当可用性副本的连接状态为 DISCONNECTED 时，此策略处于不正常状态。 否则，该策略处于正常状态。  
   
 > [!NOTE]  

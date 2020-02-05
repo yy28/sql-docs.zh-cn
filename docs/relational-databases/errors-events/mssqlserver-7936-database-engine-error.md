@@ -12,13 +12,13 @@ ms.assetid: d78fc8a9-d173-4801-bb32-ed6a29257f08
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e094c571498c315ec57471f216b65376f76eb2aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987749"
 ---
-# <a name="mssqlserver7936"></a>MSSQLSERVER_7936
+# <a name="mssqlserver_7936"></a>MSSQLSERVER_7936
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -30,9 +30,9 @@ ms.locfileid: "67987749"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|消息正文|表错误：存在对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 的列 ID C_ID 的 Filestream 目录，但该列不是 Filestream 列。|  
+|消息正文|表错误: 存在对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 的列 ID C_ID 的 Filestream 目录，但该列不是 Filestream 列。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 在运行 DBCC CHECKDB 期间，发现指定列的 FILESTREAM 目录；但该列不是 **FILESTREAM** 列。  
   
 ## <a name="user-action"></a>用户操作  

@@ -19,10 +19,10 @@ ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 1d5c0fbb11b7ec3aaed4ac48a7334f790f3fd9b3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255855"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>恢复数据库但不还原数据 (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "75255855"
  `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
-> FROM =\<backup_device> 子句不用于仅恢复还原，因为不需要任何备份   。  
+> FROM **=backup_device> 子句不用于仅恢复还原，因为不需要任何备份**\<  。  
   
  **示例**  
   

@@ -16,17 +16,17 @@ ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 639d661dd9a7196119bbb34f11f0ed5a9161a978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986680"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server Database Mirroring 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SQLServer:Database Mirroring** 性能对象包含报告有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库镜像的性能计数器。 下表列出了此对象包含的计数器。  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |**Bytes Received/sec**|每秒收到的字节数。|  
 |**Bytes Sent/sec**|每秒发送的字节数。|  
@@ -53,7 +53,7 @@ ms.locfileid: "67986680"
 > [!NOTE]  
 >  根据每个伙伴当前执行的角色不同，某些计时器显示零值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用性能计数器可以监视数据库镜像性能。 例如，可以检查 **Transaction Delay** 计数器以确定数据库镜像是否影响主体服务器的性能，可以检查 **Redo Queue** 和 **Log Send Queue** 计数器以确定镜像数据库与主体数据库之间保持同步的情况。 还可以检查 **Log Bytes Sent/sec** 计数器以监视每秒发送的日志量。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59cbaf203b8e877f9476e807008345b9af05b0fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944539"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67944539"
 
 用另一个字符串值替换出现的所有指定字符串值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,7 +59,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
  如果 string_expression 的类型不是 varchar(max) 或 nvarchar(max)，则 REPLACE 将返回值截断为 8000 个字节    。 若要返回大于 8,000 字节的值，则必须将 string_expression 显式转换为大值数据类型  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  REPLACE 根据输入的排序规则执行比较操作。 若要以指定排序规则进行比较，则可以使用 [COLLATE](~/t-sql/statements/collations.md) 将显式排序规则应用于输入。  
   
  0x0000 (char(0)) 是 Windows 排序规则中未定义的字符，不能包括在 REPLACE 中  。  

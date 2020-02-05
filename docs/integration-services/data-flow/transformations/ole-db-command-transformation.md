@@ -16,10 +16,10 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 09850707b83481909a881dcefdf00e710e6a8790
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291239"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令转换
@@ -74,7 +74,7 @@ ms.locfileid: "71291239"
   
 8.  在“字符串值编辑器”中，键入参数化 SQL 语句，并且使用问号 (?) 作为每个参数的参数标记。   
   
-9. 单击 **“刷新”** 。 单击“刷新”时，转换将为 External Columns 集合中的每一个参数都创建一列，并设置 DBParamInfoFlags 属性。   
+9. 单击“刷新”。  单击“刷新”时，转换将为 External Columns 集合中的每一个参数都创建一列，并设置 DBParamInfoFlags 属性。   
   
 10. 单击 **“输入属性和输出属性”** 选项卡。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "71291239"
   
     -   单击 **“列映射”** ，并将 **“可用输入列”** 列表中的列映射到 **“可用目标列”** 列表中的参数。  
   
-14. 单击“确定”  。  
+14. 单击“确定”。   
   
 15. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存”** 。  
   

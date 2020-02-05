@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.openlocfilehash: 31904a43dba642c73620a66bcf4abaa066b5ef82
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73531283"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
@@ -65,7 +65,7 @@ SQL Server 2019 在 Linux 上运行。 它属于相同的 SQL Server 数据库�
 | SQL Server Management Studio (SSMS) | [使用 Windows 上的 SSMS 连接到 Linux 上的 SQL Server](sql-server-linux-manage-ssms.md) |
 | SQL Server Data Tools (SSDT) | [将 SSDT 用于 Linux 上的 SQL Server](sql-server-linux-develop-use-ssdt.md) |
 
-## <a name="explore"></a>浏览
+## <a name="explore"></a>探究
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

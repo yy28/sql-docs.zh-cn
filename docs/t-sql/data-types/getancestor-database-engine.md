@@ -18,16 +18,16 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f13f076309cfc1b78ab5b76676cbf7ec3eb82f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077977"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回表示 this 的第 n 个祖先的 hierarchyid。
+返回表示 this 的第 n 个祖先的 hierarchyid    。
   
 ## <a name="syntax"></a>语法  
   
@@ -43,14 +43,14 @@ SqlHierarchyId GetAncestor ( int n )
   
 ## <a name="arguments"></a>参数  
 *n*  
-int，表示在层次结构中上升的级别数。
+int，表示在层次结构中上升的级别数  。
   
 ## <a name="return-types"></a>返回类型
-SQL Server 返回类型：hierarchyid
+SQL Server 返回类型：hierarchyid 
   
-CLR 返回类型：SqlHierarchyId
+CLR 返回类型：SqlHierarchyId 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 用于测试输出中的每个节点是否将当前节点作为指定级别的祖先。
   
 如果传递的数字大于 [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md)，则返回 NULL。

@@ -11,10 +11,10 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 13c40349ea5d46ecf1264ae5c7b7aee341d6d8f2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295848"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW

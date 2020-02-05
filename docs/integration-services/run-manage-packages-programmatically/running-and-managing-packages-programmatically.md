@@ -11,10 +11,10 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6e2af58481babf1ba9e19465a67c530275db0402
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295688"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>以编程方式运行和管理包
@@ -32,7 +32,7 @@ ms.locfileid: "71295688"
   
  您可以只编写几行代码，从客户端应用程序加载和运行现有包。  
   
- 本节介绍并演示如何以编程方式运行现有包，以及如何从其他应用程序访问数据流的输出。 作为高级编程选项，可以按照[以编程方式生成包](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)主题中的说明，已编程方式逐行创建 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
+ 本节介绍并演示如何以编程方式运行现有包，以及如何从其他应用程序访问数据流的输出。 作为高级编程选项，可以按照[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]以编程方式生成包[主题中的说明，已编程方式逐行创建 ](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) 包。  
   
  本节还讨论其他可以用编程方式执行的管理任务，用于管理存储的包、正在运行的包和包角色。  
   

@@ -15,10 +15,10 @@ ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1eb57ac476d430d5bc79c71ce5c6a12087155366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089002"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves（geometry 数据类型）
@@ -36,9 +36,9 @@ ms.locfileid: "68089002"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  空的一维 **geometry** 实例返回 0。 当 **geometry** 实例不是一维实例或为未初始化的实例时，将返回 **NULL**。  
   
 ## <a name="examples"></a>示例  

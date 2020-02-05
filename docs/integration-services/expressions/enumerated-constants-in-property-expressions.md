@@ -18,10 +18,10 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297641"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>属性表达式中的枚举常量
@@ -37,15 +37,15 @@ ms.locfileid: "71297641"
   
  以下部分提供了有关枚举常量的信息：  
   
- [“包”](#Package)  
+ [包](#Package)  
   
  [Foreach 循环枚举器](#Foreach)  
   
- [“任务”](#Tasks)  
+ [任务](#Tasks)  
   
  [维护计划任务](#MaintenancePlanTasks)  
   
- [通用属性](#CommonProperties)  
+ [Common Properties](#CommonProperties)  
   
 ##  <a name="Package"></a> “包”  
  下表列出了通过使用枚举器中的值所设置的包的属性的友好名称和等价数值。  
@@ -75,9 +75,9 @@ ms.locfileid: "71297641"
 |---------------------------------------|-------------------|  
 |默认|0|  
 |AboveNormal|1|  
-|Normal|2|  
+|一般|2|  
 |BelowNormal|3|  
-|Idle|4|  
+|空闲|4|  
   
  **ProtectionLevel** 属性 - 通过使用“DTSProtectionLevel”枚举中的值设置  。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "71297641"
   
 |友好名称|数值|  
 |-------------------|-------------------|  
-|成功|0|  
+|Success|0|  
 |失败|1|  
 |Completion|2|  
 |已取消|3|  
@@ -134,7 +134,7 @@ ms.locfileid: "71297641"
   
 |EnumerationType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
-|Navigator|0|  
+|导航器|0|  
 |节点|1|  
 |NodeText|2|  
 |ElementCollection|3|  
@@ -143,7 +143,7 @@ ms.locfileid: "71297641"
   
 |InnerElementType 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
-|Navigator|0|  
+|导航器|0|  
 |节点|1|  
 |NodeText|2|  
   
@@ -207,8 +207,8 @@ ms.locfileid: "71297641"
   
 |DTSFileSystemAttributes 中的友好名称|数值|  
 |----------------------------------------------|-------------------|  
-|Normal|0|  
-|Archive|1|  
+|一般|0|  
+|存档|1|  
 |Hidden|2|  
 |ReadOnly|4|  
 |系统|8|  
@@ -219,7 +219,7 @@ ms.locfileid: "71297641"
 |DTSFTPOp 中的友好名称|数值|  
 |-------------------------------|-------------------|  
 |Send|0|  
-|Receive|1|  
+|接收|1|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -266,9 +266,9 @@ ms.locfileid: "71297641"
   
 |MailPriority 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
-|High|1|  
-|Normal|3|  
-|Low|5|  
+|高|1|  
+|一般|3|  
+|低|5|  
   
 ### <a name="transfer-database-task"></a>传输数据库任务  
  **Action** 属性 - 通过使用“TransferAction”枚举中的值设置  。  
@@ -276,7 +276,7 @@ ms.locfileid: "71297641"
 |TransferAction 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |复制|0|  
-|“移动”|1|  
+|移动|1|  
   
  **Method** 属性 - 通过使用“TransferMethod”枚举中的值设置  。  
   
@@ -292,7 +292,7 @@ ms.locfileid: "71297641"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|跳过|2|  
   
 ### <a name="transfer-jobs-task"></a>传输作业任务  
  **IfObjectExists** 属性 - 通过使用“IfObjectExists”枚举中的值设置  。  
@@ -301,7 +301,7 @@ ms.locfileid: "71297641"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|跳过|2|  
   
 ### <a name="transfer-logins-task"></a>传输登录名任务  
  **IfObjectExists** 属性 - 通过使用“IfObjectExists”枚举中的值设置  。  
@@ -310,7 +310,7 @@ ms.locfileid: "71297641"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|跳过|2|  
   
  **LoginsToTransfer** 属性 - 通过使用“LoginsToTransfer”枚举中的值设置  。  
   
@@ -327,15 +327,15 @@ ms.locfileid: "71297641"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|跳过|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务  
  **ExistingData** 属性 - 通过使用“ExistingData”枚举中的值设置  。  
   
 |ExistingData 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
-|替换|0|  
-|追加|1|  
+|将|0|  
+|附加|1|  
   
 ### <a name="web-service-task"></a>Web 服务任务  
  **OutputType** 属性 - 通过使用“DTSOutputType”枚举中的值设置  。  
@@ -425,7 +425,7 @@ ms.locfileid: "71297641"
 |XPATH|2|  
 |合并|3|  
 |差异|4|  
-|Patch|5|  
+|修补程序|5|  
   
  **SourceType**、**SecondOperandType** 和 **XPathSourceType** 属性 - 通过使用“DTSXMLSourceType”枚举中的值设置  。  
   
@@ -453,7 +453,7 @@ ms.locfileid: "71297641"
   
 |DTSXMLXPathOperation 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
-|Evaluation|0|  
+|计算|0|  
 |值|1|  
 |NodeList|2|  
   
@@ -461,7 +461,7 @@ ms.locfileid: "71297641"
   
 |DTSXMLDiffOptions 中的友好名称|数值|  
 |----------------------------------------|-------------------|  
-|None|0|  
+|无|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -491,26 +491,26 @@ ms.locfileid: "71297641"
   
 |DatabaseSelection 中的友好名称|数值|  
 |----------------------------------------|-------------------|  
-|None|0|  
+|无|0|  
 |All|1|  
 |系统|2|  
 |用户|3|  
-|Specific|4|  
+|特定|4|  
   
  **TableSelectionType** 属性 - 通过使用“TableSelection”枚举中的值设置  。  
   
 |TableSelection 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
-|None|0|  
+|无|0|  
 |All|1|  
-|Specific|2|  
+|特定|2|  
   
  **ObjectTypeSelection** 属性 - 通过使用“ObjectType”枚举中的值设置  。  
   
 |ObjectType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
 |表|0|  
-|“查看”|1|  
+|查看|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>“备份数据库”任务  
@@ -519,21 +519,21 @@ ms.locfileid: "71297641"
 |DestinationType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
-|Manual|1|  
+|手动|1|  
   
  **ExistingBackupsAction** 属性 - 通过使用“ActionForExistingBackups”枚举中的值设置  。  
   
 |ActionForExistingBackups 中的友好名称|数值|  
 |-----------------------------------------------|-------------------|  
-|追加|0|  
+|附加|0|  
 |Overwrite|1|  
   
  **BackupAction** 属性 - 通过使用“BackupTaskType”枚举中的值设置  。 此属性与 **BackupIsIncremental** 属性一起使用以定义该任务所执行的备份的类型。  
   
 |BackupTaskType 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
-|“数据库”|0|  
-|“文件”|1|  
+|数据库|0|  
+|文件|1|  
 |日志|2|  
   
  **BackupDevice** 属性 - 通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)“DeviceType”枚举中的值设置  。  
@@ -558,17 +558,17 @@ ms.locfileid: "71297641"
   
 |TimeUnitType 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
-|Day|0|  
+|日期|0|  
 |Week|1|  
-|Month|2|  
-|Year|3|  
+|月份|2|  
+|年龄|3|  
   
 ### <a name="update-statistics-task"></a>“更新统计信息”任务  
  **UpdateType** 属性 - 通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)“StatisticsTarget”枚举中的值设置  。  
   
 |StatisticsTarget 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
-|“列”|1|  
+|列|1|  
 |索引|2|  
 |All|3|  
   
@@ -579,8 +579,8 @@ ms.locfileid: "71297641"
   
 |DTSForcedExecResult 中的友好名称|数值|  
 |------------------------------------------|-------------------|  
-|None|-1|  
-|成功|0|  
+|无|-1|  
+|Success|0|  
 |失败|1|  
 |Completion|2|  
   
@@ -592,15 +592,15 @@ ms.locfileid: "71297641"
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
 |已启用|1|  
-|禁用|2|  
+|已禁用|2|  
   
  **TransactionOption** 属性 - 通过使用“DTSTransactionOption”枚举中的值设置  。  
   
 |DTSTransactionOption 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|是否支持|1|  
-|Required|2|  
+|支持|1|  
+|必选|2|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [添加或更改属性表达式](../../integration-services/expressions/add-or-change-a-property-expression.md)  

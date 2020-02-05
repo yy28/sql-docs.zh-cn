@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056521"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>查找搜索属性的属性集 GUID 和属性整数 ID
@@ -40,7 +40,7 @@ ms.locfileid: "74056521"
 ##  <a name="wellknown"></a> 查找广泛使用的、众所周知的 Microsoft 属性的信息  
  Microsoft 定义了数百个在多种上下文中使用的文档属性，但这只是每种文件格式使用的可用属性的一小部分。 在常用的 Windows 属性中包括一小部分泛型属性。 下表显示了众所周知的泛型属性的一些示例。 下表显示了已知名称、Windows 规范名称（来自 Microsoft 发布的属性说明）、属性集 GUID、属性整数标识符和简短说明。  
   
-|已知名称|Windows 规范名称|属性集 GUID|整数标识符|描述|  
+|已知名称|Windows 规范名称|属性集 GUID|整数标识符|说明|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|给定项的一个或多个创作者。|  
 |Tags|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|分配给该项的一组关键字（也称为标记）。|  

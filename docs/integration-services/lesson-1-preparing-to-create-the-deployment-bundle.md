@@ -11,10 +11,10 @@ ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6587c8c0e56e824b1a2ae73c5067949f3c4a223a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296081"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>第 1 课：准备创建部署捆绑
@@ -30,7 +30,7 @@ ms.locfileid: "71296081"
   
 添加配置后，应该在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器（用于生成 ETL 包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 图形工具）中打开包，并检查包属性、包元素以及包配置，以便更好地了解部署需要解决的问题。 例如，其中一个包从文本文件提取数据，因此必须先更新数据文件的位置，已部署的包才能成功运行。  
   
-**完成本课程的预计时间：** 1 小时  
+**学完本课的估计时间：** 1 小时  
   
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  

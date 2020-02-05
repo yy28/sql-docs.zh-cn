@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 361059daeb60402f564caa09837046117804ba6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059927"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68059927"
 
   返回字符串中从左边开始指定个数的字符。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,25 +43,25 @@ LEFT ( character_expression , integer_expression )
   
 ## <a name="arguments"></a>参数  
  *character_expression*  
- 字符或二进制数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列。 character_expression 可以是除 text 或 ntext 外的任何数据类型，可隐式转换为 varchar 或 nvarchar。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 函数显式转换 character_expression。  
+ 字符或二进制数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列  。 character_expression 可以是除 text 或 ntext 外的任何数据类型，可隐式转换为 varchar 或 nvarchar      。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 函数显式转换 character_expression  。  
   
  *integer_expression*  
- 指定要返回的 character_expression 的字符数的正整数。 如果 integer_expression 为负，则返回错误。 如果 integer_expression 的数据类型为 bigint，且包含较大的值，则 character_expression 必须是较大的数据类型，如 varchar(max)。  
+ 指定要返回的 character_expression 的字符数的正整数  。 如果 integer_expression 为负，则返回错误  。 如果 integer_expression 的数据类型为 bigint，且包含较大的值，则 character_expression 必须是较大的数据类型，如 varchar(max)     。  
   
- integer_expression 参数将 UTF-16 代理项字符计为一个字符。  
+ integer_expression 参数将 UTF-16 代理项字符计为一个字符  。  
   
 ## <a name="return-types"></a>返回类型  
- character_expression 为非 Unicode 字符数据类型时，返回 varchar。  
+ character_expression 为非 Unicode 字符数据类型时，返回 varchar   。  
   
- character_expression 为 Unicode 字符数据类型时，返回 nvarchar。  
+ character_expression 为 Unicode 字符数据类型时，返回 nvarchar   。  
   
-## <a name="remarks"></a>Remarks  
- 在使用 SC 排序规则时，integer_expression 参数将 UTF-16 代理项对计为一个字符。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+## <a name="remarks"></a>备注  
+ 在使用 SC 排序规则时，integer_expression 参数将 UTF-16 代理项对计为一个字符  。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-left-with-a-column"></a>A. 带列使用 LEFT  
- 以下示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Product` 表中每个产品名称中最左边的五个字符。  
+ 以下示例返回 `Product` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中每个产品名称中最左边的五个字符。  
   
 ```  
 SELECT LEFT(Name, 5)   

@@ -1,5 +1,5 @@
 ---
-title: 排除故障：可用性组超过了 RTO (SQL Server) | Microsoft Docs
+title: 故障排除：可用性组超过了 RTO (SQL Server) | Microsoft Docs
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013747"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rto"></a>排除故障：可用性组超过了 RTO
+# <a name="troubleshoot-availability-group-exceeded-rto"></a>故障排除：可用性组超过了 RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   对可用性组进行自动故障转移或计划的手动故障转移（无数据丢失）后，可能会发现故障转移时间超过恢复时间目标 (RTO)。 或者，在使用[监视 Always On 可用性组的性能](monitor-performance-for-always-on-availability-groups.md)中的方法估计同步提交次要副本的故障转移时间时（如自动故障转移伙伴），发现该时间超过了 RTO。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68013747"
 ##  <a name="BKMK_REDOBLOCK"></a>报告工作负荷阻止重做线程运行  
  一个长时间运行的只读查询阻止次要副本上的重做线程执行数据定义语言 (DDL) 更改。  
   
-### <a name="explanation"></a>解释  
+### <a name="explanation"></a>说明  
  在次要副本上，只读查询可获取架构稳定性 (`Sch-S`) 锁定。 这些 `Sch-S` 锁定可阻止重做线程获取架构修改 (`Sch-M`) 锁定并进行任何 DDL 修改。 必须先取消阻止重做线程才可应用日志记录。 取消阻止后，可继续追赶到日志结尾，并允许后续撤销和故障转移过程继续。  
   
 ### <a name="diagnosis-and-resolution"></a>诊断和解决方法  
@@ -47,7 +47,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
 ##  <a name="BKMK_CONTENTION"></a>重做线程因资源争用而滞后  
  次要副本上的大型报告工作负荷降低了次要副本的性能，且重做线程已滞后。  
   
-### <a name="explanation"></a>解释  
+### <a name="explanation"></a>说明  
  如果对次要副本应用日志记录，重做线程将读取日志磁盘中的日志记录，然后对于每个日志记录，该线程将访问数据页，以应用日志记录。 如果页面并非已在缓冲池中，页面访问可能受到 I/O 限制（访问物理磁盘）。 如果存在受到 I/O 限制的报告工作负荷，该工作负荷将与重做线程争用 I/O 资源，可能会降低重做线程的速度。  
   
 ### <a name="diagnosis-and-resolution"></a>诊断和解决方法  
