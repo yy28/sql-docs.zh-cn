@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810967"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux 上的 SQL Server VDI 客户端 SDK 规范
@@ -65,7 +65,7 @@ ms.locfileid: "68810967"
 - 函数语法
 - 参数列表
 - 返回值
-- Remarks
+- 备注
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 
@@ -79,12 +79,12 @@ ms.locfileid: "68810967"
    );
    ```
 
-| Parameters | 参数 | 解释
+| parameters | 参数 | 说明
 | ----- | ----- | ------ |
-| | **名称** | 用于标识虚拟设备集。 必须遵循 CreateFileMapping() 所用的名称规则。 可以使用除反斜杠 (\) 以外的任何字符。 这是一个字符串。 建议将用户的产品或公司名称和数据库名称作为字符串前缀。 |
+| | name  | 用于标识虚拟设备集。 必须遵循 CreateFileMapping() 所用的名称规则。 可以使用除反斜杠 (\) 以外的任何字符。 这是一个字符串。 建议将用户的产品或公司名称和数据库名称作为字符串前缀。 |
 | |**cfg** | 这是虚拟设备集的配置。 有关详细信息，请参阅本文档后面的“配置”。
 
-| 返回值 | 参数 | 解释
+| 返回值 | 参数 | 说明
 | ----- | ----- | ------ |
 | |**NOERROR** | 函数成功。 |
 | |**VD_E_NOTSUPPORTED** |配置中的一个或多个字段无效或不受支持。 |
@@ -103,12 +103,12 @@ ms.locfileid: "68810967"
    );
    ```
 
-| Parameters | 参数 | 解释
+| parameters | 参数 | 说明
 | ----- | ----- | ------ |
 | | **timeout** | 此为超时时间（毫秒）。 使用 INFINITE 或任何负整数来防止超时。
 | | **cfg** | 执行成功后，此项将包含服务器所选的配置。 有关详细信息，请参阅本文档后面的“配置”。
 
-| 返回值 | 参数 | 解释
+| 返回值 | 参数 | 说明
 | ----- | ----- | ------ |
 | |**NOERROR** | 已返回配置。
 | |**VD_E_ABORT** |已调用 SignalAbort。
@@ -127,12 +127,12 @@ ms.locfileid: "68810967"
    );
    ```
 
-| Parameters | 参数 | 解释
+| parameters | 参数 | 说明
 | ----- | ----- | ------ |
-| | **名称** |用于标识虚拟设备集。
+| | name  |用于标识虚拟设备集。
 | | **ppVirtualDevice** |如果此函数成功，会返回指向虚拟设备的指针。 此设备用于 GetCommand 和 CompleteCommand。
 
-| 返回值 | 参数 | 解释
+| 返回值 | 参数 | 说明
 | ----- | ----- | ------ |
 | |**NOERROR** |函数成功。
 | |**VD_E_ABORT** | 已请求中止。
@@ -158,13 +158,13 @@ ms.locfileid: "68810967"
    );
    ```
 
-| Parameters | 参数 | 解释
+| parameters | 参数 | 说明
 | ----- | ----- | ------ |
 | |**timeout** |此为等待时间（毫秒）。 使用 INFINTE 可无限期等待。 使用 0 可轮询命令。 如果当前无可用的命令，则返回 VD_E_TIMEOUT。 如果发生超时，客户端将决定后续操作。
 | |**超时** |此为等待时间（毫秒）。 使用 INFINTE 或负值可无限期等待。 使用 0 可轮询命令。 如果在超时时间过去之前无可用命令，则返回 VD_E_TIMEOUT。 如果发生超时，客户端将决定后续操作。
 | |**ppCmd** |成功返回命令后，参数将返回要执行的命令的地址。 返回的内存是只读的。 命令完成后，会将此指针传递到 CompleteCommand 例程。 有关每个命令的详细信息，请参阅本文档后面的“命令”。
         
-| 返回值 | 参数 | 解释
+| 返回值 | 参数 | 说明
 | ----- | ----- | ------ |
 | |**NOERROR** |已获取命令。
 | |**VD_E_CLOSE** |服务器已关闭该设备。
@@ -189,14 +189,14 @@ ms.locfileid: "68810967"
    );
    ```
 
-| Parameters | 参数 | 解释
+| parameters | 参数 | 说明
 | ----- | ----- | ------ |
 | |**pCmd** |这是之前从 ClientVirtualDevice::GetCommand 返回的命令的地址。
 | |**completionCode** |这是指示完成状态的状态代码。 必须为所有命令返回此参数。 返回的代码应适合于正在执行的命令。 在任何情况下，ERROR_SUCCESS 均用于表示已成功执行的命令。 有关可能的代码的完整列表，请参阅文件 vdierror.h。 有关每个命令的典型状态代码列表，请参阅本文档后面的“命令”。
 | |**bytesTransferred** |这是已成功传输的字节数。 仅为数据传输命令 Read 和 Write 返回。
 | |**position** |这是仅针对 GetPosition 命令的响应。
         
-| 返回值 | 参数 | 解释
+| 返回值 | 参数 | 说明
 | ----- | ----- | ------ |
 | |**NOERROR** |已正确标注完成情况。
 | |**VD_E_INVALID** |pCmd 不是一条活动命令。
@@ -215,11 +215,11 @@ ms.locfileid: "68810967"
    int ClientVirtualDeviceSet::SignalAbort ();
    ```
 
-| Parameters | 参数 | 解释
+| parameters | 参数 | 说明
 | ----- | ----- | ------ |
-| |None | 不适用
+| |无 | 不适用
         
-| 返回值 | 参数 | 解释
+| 返回值 | 参数 | 说明
 | ----- | ----- | ------ |
 | |**NOERROR**|已成功发布“中止”通知。
 
@@ -235,11 +235,11 @@ ms.locfileid: "68810967"
    int ClientVirtualDeviceSet::Close ();
    ```
 
-| Parameters | 参数 | 解释
+| parameters | 参数 | 说明
 | ----- | ----- | ------ |
-| |None |不适用
+| |无 |不适用
         
-| 返回值 | 参数 | 解释
+| 返回值 | 参数 | 说明
 | ----- | ----- | ------ |
 | |**NOERROR** |将在虚拟设备集成功关闭后返回。
 | |**VD_E_PROTOCOL** |未采取任何操作，因为虚拟设备集未打开。
@@ -262,11 +262,11 @@ ms.locfileid: "68810967"
    );
    ```
 
-| Parameters | 参数 | 解释
+| parameters | 参数 | 说明
 | ----- | ----- | ------ |
 | |**setName** |用于标识设备集。 此名称区分大小写，且必须与主客户端调用 ClientVirtualDeviceSet::Create 时所用的名称相匹配。
 
-| 返回值 | 参数 | 解释
+| 返回值 | 参数 | 说明
 | ----- | ----- | ------ |
 | |**NOERROR** |函数成功。
 | |**VD_E_PROTOCOL** |尚未创建虚拟设备集，虚拟设备集已在此客户端上打开或虚拟设备集尚未准备好接受来自次要客户端的打开请求。
@@ -287,12 +287,12 @@ ms.locfileid: "68810967"
    );
    ```
 
-| Parameters | 参数 | 解释
+| parameters | 参数 | 说明
 | ----- | ----- | ------ |
 | |**pBuffer** |这是通过 Read 或 Write 命令获取的缓冲区的地址。
 | |**BufferHandle** |返回缓冲区的唯一标识符。
 
-| 返回值 | 参数 | 解释
+| 返回值 | 参数 | 说明
 | ----- | ----- | ------ |
 | |**NOERROR** |函数成功。
 | |**VD_E_PROTOCOL** |当前未打开虚拟设备集。
@@ -313,12 +313,12 @@ ms.locfileid: "68810967"
    );
    ```
 
-| Parameters | 参数 | 解释
+| parameters | 参数 | 说明
 | ----- | ----- | ------ |
 | |**dwBuffer** |这是由 ClientVirtualDeviceSet::GetBufferHandle 返回的句柄。
 | |**ppBuffer** |这是当前进程中有效缓冲区的地址。
 
-| 返回值 | 参数 | 解释
+| 返回值 | 参数 | 说明
 | ----- | ----- | ------ |
 | |**NOERROR** |函数成功。
 | |**VD_E_PROTOCOL** |当前未打开虚拟设备集。

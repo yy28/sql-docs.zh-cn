@@ -10,19 +10,16 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 957d0fa1d5b311fbecfd76340e443e8f2f3f81f5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b5de8c538d0ee91f8d176637beceabdf9352177a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296422"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76037053"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>函数 - dm_execution_performance_counters
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   返回正在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上运行的执行的性能统计信息。  
   
@@ -39,10 +36,10 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
  如果未指定执行 ID，则返回多个执行的性能统计信息。 如果你是 **ssis_admin** 数据库角色的成员，将返回所有正在运行的执行的性能统计信息。  如果你不是 **ssis_admin** 数据库角色的成员，则返回你对其具有读权限的正在运行的执行的性能统计信息。 *execution_id* 为 **BigInt**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  下表列出了由 dm_execution_performance_counter 函数返回的计数器名称值。  
   
-|计数器名称|描述|  
+|计数器名称|说明|  
 |------------------|-----------------|  
 |BLOB bytes read|数据流引擎从所有源中读取的二进制大型对象 (BLOB) 数据的字节数。|  
 |BLOB bytes written|数据流引擎写入所有目标的 BLOB 数据的字节数。|  
@@ -60,7 +57,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>返回  
  dm_execution_performance_counters 函数为正在运行的执行返回包含以下列的表。 返回的信息用于执行中包含的所有包。 如果没有正在运行的执行，则返回空表。  
   
-|列名|列类型|描述|Remarks|  
+|列名|列类型|说明|备注|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** 不是有效值。|包含包的执行的唯一标识符。||  
 |counter_name|**nvarchar(128)**|计数器的名称。|请参阅值的**备注**部分。|  

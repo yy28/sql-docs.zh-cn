@@ -11,10 +11,10 @@ ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0338675549b49dd5c50eff9a8996f7a3ee6ee329
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73049953"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values（SSISDB 数据库）
@@ -47,7 +47,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  包的名称。 指定包名称，以便从特定包中检索所有项目参数和参数。 package_name  为 nvarchar(260)  。  
   
  [ @reference_id = ] reference_id   
- 环境引用的唯一标识符。 此参数可选。 reference_id 为 bigint   。  
+ 环境引用的唯一标识符。 此参数是可选的。 reference_id 为 bigint   。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
@@ -55,14 +55,14 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>结果集  
  返回具有以下格式的表：  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|参数的类型。 对于项目参数，该值是 `20`；对于包参数，值是 `30`。|  
 |parameter_data_type|**nvarchar(128)**|参数的数据类型。|  
-|parameter_name|**sysname**|参数名。|  
-|parameter_value|**sql_variant**|参数的值。|  
+|parameter_name|**sysname**|参数的名称。|  
+|parameter_value|**sql_variant**|参数值。|  
 |sensitive|**bit**|当值为 `1` 时，参数值是敏感的。 当值为 `0` 时，参数值是不敏感的。|  
-|required|**bit**|如果值为 `1`，则需要参数值才能开始执行。 如果值为 `0`，则不需要参数值即可开始执行。|  
+|必填|**bit**|如果值为 `1`，则需要参数值才能开始执行。 如果值为 `0`，则不需要参数值即可开始执行。|  
 |value_set|**bit**|如果值为 `1`，则已分配参数值。 如果值为 `0`，则尚未分配参数值。|  
   
 > [!NOTE]  

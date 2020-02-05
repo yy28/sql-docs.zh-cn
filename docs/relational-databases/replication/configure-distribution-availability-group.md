@@ -21,10 +21,10 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d5f721d589354d5e7f4ec970bf0ea086895df129
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75319991"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>在 Always On 可用性组中设置复制分发数据库
@@ -98,7 +98,7 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 通过以下机制，引入对 A
 
 ### <a name="distributors-workflow"></a>分发服务器工作流
 
-1. 通过 `sp_adddistributor @@servername` 将 DIST1、DIST2、DIST3 配置为分发服务器。 通过 `@password` 为 `distributor_admin` 指定密码。 DIST1、DIST2、DIST3 的 `@password` 应完全相同。
+1. 通过 `sp_adddistributor @@servername` 将 DIST1、DIST2、DIST3 配置为分发服务器。 通过 `distributor_admin` 为 `@password` 指定密码。 DIST1、DIST2、DIST3 的 `@password` 应完全相同。
 2. 通过 `sp_adddistributiondb` 在 DIST1 上创建分发数据库。 分发数据库的名称为 `distribution`。 将 `distribution` 数据库的恢复模式从简单更改为完全。
 3. 使用 DIST1、DIST2 和 DIST3 上的副本，为 `distribution` 数据库创建 AG。 首选将所有的副本都设为同步。 将次要副本配置为可读取或允许读取。 此时，分发数据库是 AG，DIST1 是主要副本，DIST2 和 DIST3 是次要副本。
 4. 为 AG 配置名为 `DISTLISTENER` 的侦听器。
@@ -188,7 +188,7 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 通过以下机制，引入对 A
 
 ### <a name="distributors-workflow"></a>分发服务器工作流
 
-1. 应通过 `sp_adddistributor @@servername` 将 DIST3 配置为分发服务器。 应通过 @password 参数指定 `distributor_admin` 的密码。 此密码应与为 DIST1 和 DIST2 指定的密码相同。
+1. 应通过 `sp_adddistributor @@servername` 将 DIST3 配置为分发服务器。 应通过 `distributor_admin` 参数指定 @password 的密码。 此密码应与为 DIST1 和 DIST2 指定的密码相同。
 2. 向当前分发数据库的 AG 添加 DIST3。
 3. 在 DIST3 上，运行：
 
@@ -286,7 +286,7 @@ DIST1 是 `distribution` 数据库 AG 当前的主要副本。
 
 ### <a name="subscriber-workflow"></a>订阅服务器工作流
 
-若要使用 AG 中的分发数据库添加请求订阅，请使用 `sp_addpullsubscription_agent` 的 `@distributor` 参数中的 AG 侦听器名称。
+若要使用 AG 中的分发数据库添加请求订阅，请使用 `@distributor` 的 `sp_addpullsubscription_agent` 参数中的 AG 侦听器名称。
 
 ## <a name="sample-t-sql-create-distribution-db-in-ag"></a>示例 T-SQL 创建 AG 中的分发数据库
 

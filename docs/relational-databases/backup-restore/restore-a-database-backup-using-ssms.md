@@ -20,10 +20,10 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70278769"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>使用 SSMS 还原数据库备份
@@ -32,13 +32,13 @@ ms.locfileid: "70278769"
   本主题阐释如何使用 SQL Server Management Studio 还原完整的数据库备份。    
        
 ### <a name="important"></a>重要说明！    
-在完整恢复模式或大容量日志恢复模式下，可能需要先备份活动事务日志（称为 [日志尾部](tail-log-backups-sql-server.md)），然后才能还原数据库。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)），然后才能还原数据库。  
+在完整恢复模式或大容量日志恢复模式下，可能需要先备份活动事务日志（称为 [日志尾部](tail-log-backups-sql-server.md)），然后才能还原数据库。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)数据库还原到一个新位置并且可以选择重命名该数据库。  
 
 从其他实例还原数据库时，请考虑 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)中的信息。   
     
 若要还原加密数据库，你需要有用于加密该数据库的证书或非对称密钥的访问权限。 如果没有证书或非对称密钥，数据库将无法还原。 如果需要保存备份，就必须保留用于加密数据库加密密钥的证书。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。    
     
-如果将较旧版本的数据库还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，则该数据库将自动升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 这将阻止数据库被旧版本的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 使用。 但是，这与元数据升级相关，不会影响[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果升级前兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持的最低兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+如果将较旧版本的数据库还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，则该数据库将自动升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 这将阻止数据库被旧版本的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 使用。 但是，这与元数据升级相关，不会影响[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果升级前兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持的最低兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
 通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于**全文升级选项**服务器属性的设置。 如果将升级选项设置为“导入”  或“重新生成”  ，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。     
     
@@ -56,26 +56,26 @@ ms.locfileid: "70278769"
     
 3.  在 **“常规”** 页上，使用 **“源”** 部分指定要还原的备份集的源和位置。 选择以下选项之一：    
     
-    -   **“数据库”**    
+    -   **Database**    
     
          从下拉列表中选择要还原的数据库。 此列表仅包含已根据 **msdb** 备份历史记录进行备份的数据库。    
     
         > [!NOTE]
         > 如果备份是从另一台服务器执行的，则目标服务器不具有指定数据库的备份历史记录信息。 这种情况下，请选择 **“设备”** 以手动指定要还原的文件或设备。 
     
-    -   **“设备”**    
+    -   **设备**    
     
          单击“浏览”按钮 ( **...** ) 以打开“选择备份设备”  对话框。 
          
         -   **选择备份设备** 对话框  
         
             **备份介质类型**  
-         从“备份介质类型”下拉列表中选择一个介质类型。   注意：只有在计算机上装有磁带机时，才会显示 **“磁带”** 选项，只有至少存在一个备份设备时，才会显示 **“备份设备”** 选项。
+         从“备份介质类型”下拉列表中选择一个介质类型。   注意：只有在计算机上装有磁带机时，才会显示“磁带”选项，只有至少存在一个备份设备时，才会显示“备份设备”选项。  
 
-            **“添加”**  
+            **添加**  
             根据在“备份介质类型”下拉列表中选择的介质类型，单击“添加”将打开下列对话框之一。   （如果“备份介质”列表框中的列表已满，则“添加”按钮不可用。）  
 
-            |介质类型|对话框|描述|    
+            |介质类型|对话框|说明|    
             |----------------|----------------|-----------------|    
             |**File**|**定位备份文件**|在此对话框中，您可以从树中选择一个本地文件，或使用完全限定的通用命名约定 (UNC) 名称指定一个远程文件。 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|    
             |**设备**|**选择备份设备**|在此对话框中，您可以从服务器实例中定义的逻辑备份设备列表中进行选择。|    
@@ -93,7 +93,7 @@ ms.locfileid: "70278769"
     
              将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。    
     
-         在“源:设备:数据库”列表框中，选择应还原的数据库名称 **。**    
+         在 **“源: 设备: 数据库”** 列表框中，选择应还原的数据库名称。    
     
          > [!NOTE]
          > 此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。    
@@ -130,7 +130,7 @@ ms.locfileid: "70278769"
   
    5. 如果要在每个还原操作之间进行提示，请选择 **“还原每个备份之前进行提示”** 。 除非数据库过大并且您要监视还原操作的状态，否则通常没有必要选中该选项。    
     
-有关这些还原选项的详细信息，请参阅[《Restore Database &#40;Options Page&#41;》](../../relational-databases/backup-restore/restore-database-options-page.md)（还原数据库（“选项”页））。    
+有关这些还原选项的详细信息，请参阅 [还原数据库（“选项”页）](../../relational-databases/backup-restore/restore-database-options-page.md)），然后才能还原数据库。    
     
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -146,7 +146,7 @@ ms.locfileid: "70278769"
 7.  在“还原选项”部分中，选择“覆盖现有数据库 (WITH REPLACE)”。  
 
     > [!NOTE]
-    > 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError:备份集中的数据库备份与现有的“`Sales`”数据库不同。 (Microsoft.SqlServer.SmoExtended)”
+    > 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError: 备份集包含数据库备份，而不是现有的‘`Sales`’数据库。 (Microsoft.SqlServer.SmoExtended)”
 
 8.  在“结尾日志备份”  部分中，取消选中“还原前执行结尾日志备份”  。
 
@@ -158,12 +158,12 @@ ms.locfileid: "70278769"
 9.  在“服务器连接”  部分，选中“关闭目标数据库的现有连接”  。
 
     > [!NOTE]
-    > 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError:因为数据库正在使用，所以无法获得对数据库的独占访问权。 (Microsoft.SqlServer.SmoExtended)”
+    > 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError: 无法获得独占访问权限，因为数据库正在使用中。 (Microsoft.SqlServer.SmoExtended)”
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
 ### <a name="c--restore-an-earlier-disk-backup-with-a-new-database-name-where-the-original-database-still-exists"></a>C.  使用新的数据库名称还原以前的磁盘备份，并且原始数据库仍然存在
-下面的示例将还原 `Sales` 的以前的磁盘备份，并创建名为 `SalesTest` 的新数据库。  原始数据库 `Sales`仍存在于服务器上。
+下面的示例将还原 `Sales` 的以前的磁盘备份，并创建名为 `SalesTest`的新数据库。  原始数据库 `Sales`仍存在于服务器上。
 
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
 2.  右键单击“数据库”  ，然后选择“还原数据库...”   
@@ -181,7 +181,7 @@ ms.locfileid: "70278769"
 
     > [!NOTE]
     > 如果收到以下错误信息：      
-    > “System.Data.SqlClient.SqlError:数据库“`Sales`”的日志结尾尚未备份。 如果该日志包含不希望丢失的工作，请使用 `BACKUP LOG WITH NORECOVERY` 备份该日志。 使用 `RESTORE` 语句的 `WITH REPLACE` 或 `WITH STOPAT` 子句覆盖该日志的内容。 (Microsoft.SqlServer.SmoExtended)”。      
+    > “System.Data.SqlClient.SqlError：数据库“`Sales`”的日志结尾尚未备份。 如果该日志包含不希望丢失的工作，请使用 `BACKUP LOG WITH NORECOVERY` 备份该日志。 使用 `WITH REPLACE` 语句的 `WITH STOPAT` 或 `RESTORE` 子句覆盖该日志的内容。 (Microsoft.SqlServer.SmoExtended)”。      
     > 那么你可能未输入上面步骤 6 中的新数据库名称。 还原一般会防止意外使用一个数据库覆盖另一个数据库。 如果 `RESTORE` 语句中指定的数据库已存在于当前服务器上，并且指定的数据库系列 GUID 与备份集中记录的数据库系列 GUID 不同，则不还原该数据库。 这是一项重要的安全保护措施。
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  将以前的磁盘备份还原到某个时间点
@@ -202,7 +202,7 @@ ms.locfileid: "70278769"
 ### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>E.  从 Microsoft Azure 存储服务还原备份
 
 #### <a name="common-steps"></a>一般步骤
-下面的两个示例执行从位于 Microsoft Azure 存储服务中的备份还原 `Sales`。  存储帐户名称为 `mystorageaccount`。  容器名称为 `myfirstcontainer`。  出于简洁的目的，在此处一次列出前六个步骤，所有示例将从**步骤 7** 开始。
+下面的两个示例执行从位于 Microsoft Azure 存储服务中的备份还原 `Sales` 。  存储帐户名称为 `mystorageaccount`。  容器名称为 `myfirstcontainer`。  出于简洁的目的，在此处一次列出前六个步骤，所有示例将从**步骤 7** 开始。
 1.  在“对象资源管理器”  中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
 2.  右键单击“数据库”  ，然后选择“还原数据库...”  。
 3.  在“常规”  页上，在“源”  部分下选择“设备”  。
@@ -213,18 +213,18 @@ ms.locfileid: "70278769"
 #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>E1.   在现有数据库上还原条带备份，并存在共享的访问签名。
 已经创建具有读取、写入、删除和列表权限的存储访问策略。  已经为容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`创建与存储访问策略相关联的共享访问签名。  如果已存在 SQL Server 凭据，则步骤几乎一样。  数据库 `Sales` 当前在服务器上。  备份文件为 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。  
 
-1.  如果已存在 SQL Server 凭据，则从“Azure 存储容器:”下拉列表中选择 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`，否则请手动输入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 的名称。  
+1.  如果已存在 SQL Server 凭据，则从“Azure 存储容器:”下拉列表中选择 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`，否则请手动输入容器  **的名称。** `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 
 1. 在“共享访问签名:”富文本框中输入共享访问签名。 
 1. 单击“确定”  将打开“在 Microsoft Azure 上定位备份文件”  对话框。
 1. 展开“容器”  并导航到 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
 1. 按住 ctrl 并选择文件 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。
-1. 单击“确定”  。
+1. 单击“确定”。 
 1. 单击“确定”以返回到“常规”页。  
 1. 在“选择页”窗格中单击“选项”。  
 1. 在“还原选项”部分中，选择“覆盖现有数据库 (WITH REPLACE)”。  
 1. 在“结尾日志备份”  部分中，取消选中“还原前执行结尾日志备份”  。
 1. 在“服务器连接”  部分，选中“关闭目标数据库的现有连接”  。
-1. 单击“确定”  。
+1. 单击“确定”。 
 
 #### <a name="e2---a-shared-access-signature-does-not-exist"></a>E2.   共享访问签名不存在
 在本示例中数据库 `Sales` 当前不在服务器上。
@@ -234,10 +234,10 @@ ms.locfileid: "70278769"
 1. 展开“容器”  并导航到 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
 1. 选择备份文件，再单击“确定”  。
 1. 单击“确定”以返回到“常规”页。  
-1. 单击“确定”  。
+1. 单击“确定”。 
 
 #### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. 将本地备份还原到 Microsoft Azure 存储 (URL)
-将从位于 `E:\MSSQL\BAK` 的备份中将 `Sales` 数据库还原到 Microsoft Azure 存储容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。  已创建 Azure 容器的 SQL Server 凭据。  必须已存在目标容器的 SQL Server 凭据，因为不能通过创建 **还原** 任务创建该凭据。  `Sales` 数据库当前不在服务器上。
+将从位于 `Sales` 的备份中将 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 数据库还原到 Microsoft Azure 存储容器 `E:\MSSQL\BAK`。  已创建 Azure 容器的 SQL Server 凭据。  必须已存在目标容器的 SQL Server 凭据，因为不能通过创建 **还原** 任务创建该凭据。  `Sales` 数据库当前不在服务器上。
 1.  在“对象资源管理器”  中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
 2.  右键单击“数据库”  ，然后选择“还原数据库...”  。
 3.  在“常规”  页上，在“源”  部分下选择“设备”  。
@@ -249,14 +249,14 @@ ms.locfileid: "70278769"
 9.  在“选择页”窗格中，单击“文件”。  
 10. 选中“将所有文件重新定位到文件夹”复选框。 
 11. 在“数据文件文件夹:”和“日志文件文件夹:”的文本框中输入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。  
-12. 单击“确定”  。
+12. 单击“确定”。 
 
 ## <a name="see-also"></a>另请参阅    
  [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     
  [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)     
  [将数据库还原到新位置 (SQL Server)](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)     
  [还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)     
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)     
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)     
  [还原数据库（“选项”页）](../../relational-databases/backup-restore/restore-database-options-page.md)     
  [还原数据库（“常规”页）](../../relational-databases/backup-restore/restore-database-general-page.md)    
     

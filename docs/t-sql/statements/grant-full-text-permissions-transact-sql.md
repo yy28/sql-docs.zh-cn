@@ -19,10 +19,10 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050831"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT 全文权限 (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68050831"
   
 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,11 +56,11 @@ GRANT permission [ ,...n ] ON
  ON FULLTEXT CATALOG ::full-text_catalog_name    
  指定对其授予权限的全文目录。 需要使用作用域限定符 ::  。  
   
- ON FULLTEXT STOPLIST ::_full-text_stoplist_name_   
+ ON FULLTEXT STOPLIST ::full-text_stoplist_name    
  指定要对其授予权限的全文非索引字表。 需要使用作用域限定符 ::  。  
   
  database_principal   
- 指定要向其授予权限的主体。 可以是以下类型之一：  
+ 指定要向其授予权限的主体。 下列类型作之一：  
   
 -   数据库用户  
 -   数据库角色  
@@ -75,7 +75,7 @@ GRANT OPTION
  指示该主体还可以向其他主体授予所指定的权限。  
   
 AS granting_principal   
- 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 可以是以下类型之一：  
+ 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
 -   数据库角色  
@@ -86,7 +86,7 @@ AS granting_principal
 -   映射到非对称密钥的数据库用户  
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="fulltext-catalog-permissions"></a>FULLTEXT CATALOG 权限  
  全文目录是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下表列出了可授予的对全文目录最为具体的限定权限，以及隐含这些权限的更为通用的权限。  

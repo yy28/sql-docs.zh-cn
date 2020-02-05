@@ -17,10 +17,10 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eb4812b48c9465659ca8c0739f0411a9e65660bf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293872"
 ---
 # <a name="transfer-jobs-task"></a>传输作业任务
@@ -60,7 +60,7 @@ ms.locfileid: "71293872"
   
  此外，还有 **OnInformation** 事件的日志项（报告已传输的作业数），以及 **OnWarning** 事件的日志项（是为目标服务器上每个被覆盖的作业写入的）。  
   
-## <a name="security-and-permissions"></a>安全性和权限  
+## <a name="security-and-permissions"></a>安全和权限  
  若要传输作业，用户必须是 sysadmin 固定服务器角色的成员，或者是同时位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的源实例和目标实例上的 msdb 数据库的固定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理固定数据库角色的成员。  
   
 ## <a name="configuration-of-the-transfer-jobs-task"></a>传输作业任务的配置  
@@ -92,7 +92,7 @@ ms.locfileid: "71293872"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入传输作业任务的说明。  
   
 ## <a name="transfer-jobs-task-editor-jobs-page"></a>传输作业任务编辑器（“作业”页）
@@ -103,17 +103,17 @@ ms.locfileid: "71293872"
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接  。  
+ 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与源服务器的新连接\<** 。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接  。  
+ 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与目标服务器的新连接\<** 。  
   
  **TransferAllJobs**  
  选择该任务是应将全部的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业还是仅将指定的作业从源服务器复制到目标服务器。  
   
  此属性具有下表所列的选项：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|复制所有作业。|  
 |**False**|仅复制指定的作业。|  
@@ -131,7 +131,7 @@ ms.locfileid: "71293872"
   
  此属性具有下表所列的选项：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**FailTask**|如果目标服务器上已存在同名的作业，则任务失败。|  
 |**Overwrite**|任务将覆盖目标服务器上同名的作业。|  
@@ -142,7 +142,7 @@ ms.locfileid: "71293872"
   
  此属性具有下表所列的选项：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|启用目标服务器上的作业。|  
 |**False**|禁用目标服务器上的作业。|  
