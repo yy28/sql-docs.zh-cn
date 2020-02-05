@@ -12,13 +12,13 @@ ms.assetid: 92dfe449-a122-4730-942b-e1d319862d20
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 954ca0de8de0584ac2ec03133367f6d9fec700fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67996094"
 ---
-# <a name="mssqlserver2575"></a>MSSQLSERVER_2575
+# <a name="mssqlserver_2575"></a>MSSQLSERVER_2575
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "67996094"
 |符号名称|DBCC_IAM_PAGE_WAS_NOT_SEEN|  
 |消息正文|对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE) 中 IAM 页 P_ID2 的下一个指针指向了 IAM 页 P_ID1，但在扫描过程中检测不到页 P_ID1。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 找到了指定索引的索引分配映射 (IAM) 页；但是，找不到该索引下一页指针的 IAM 页。  
   
 ## <a name="user-action"></a>用户操作  

@@ -13,10 +13,10 @@ ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 3b408951b0a1f32bda0920260aae18ab93350fdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986717"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQL Server, 目录元数据对象
@@ -26,12 +26,12 @@ ms.locfileid: "67986717"
 下表介绍了 SQL Server **目录元数据** 性能对象。
 
 
-|**SQL Server 目录元数据计数器**|描述|  
+|**SQL Server 目录元数据计数器**|说明|  
 |-------------|-----------------|  
 |**Cache Entries Count**|目录元数据缓存中的项数。|
 |**Cache Entries Pinned Count**|目录元数据缓存中已固定的项数。|
 |**Cache Hit Ratio**|目录元数据缓存中命中次数和查找次数之比。|
-|**Cache Hit Ratio Base**|仅限内部使用。|
+|**Cache Hit Ratio Base**|仅供内部使用。|
 
 每个数据库都有该计数器的一个实例。
 

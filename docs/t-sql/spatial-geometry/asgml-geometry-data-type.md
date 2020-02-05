@@ -20,16 +20,16 @@ ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 11fe7041212c668855c86664362d555696f36bbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017567"
 ---
 # <a name="asgml-geometry-data-type"></a>AsGml（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回 geometry 实例的地理标记语言 (GML) 表示形式。
+返回 geometry 实例的地理标记语言 (GML) 表示形式  。
   
 有关地理标记语言的详细信息，请参阅下面的开放地理空间信息联盟规范：[OGC 规范：地理标记语言](https://go.microsoft.com/fwlink/?LinkId=93629)。
   
@@ -41,11 +41,11 @@ ms.locfileid: "68017567"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：xml  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：xml   
   
- CLR 返回类型：**SqlXml**  
+ CLR 返回类型：SqlXml   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="examples"></a>示例  
  下面的示例创建 `LineString` 实例，并使用 `AsGML()` 返回实例的 GML 说明。  

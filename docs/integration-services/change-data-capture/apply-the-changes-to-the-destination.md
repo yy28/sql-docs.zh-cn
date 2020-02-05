@@ -13,10 +13,10 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4df2ce8bc53694c74142f843c4656e254e748d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298982"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>将变更应用到目标
@@ -27,7 +27,7 @@ ms.locfileid: "71298982"
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中，第三个任务（即最后一个任务）是将变更应用到目标。 您将需要一个组件应用插入操作、一个组件应用更新操作以及一个组件应用删除操作。  
   
 > [!NOTE]  
->  为用于执行变更数据增量加载的包设计数据流的过程中，第二个任务是分隔插入、更新和删除操作。 有关此组件的详细信息，请参阅[处理插入、更新和删除](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)。 有关创建用于执行变更数据增量加载的包的完整过程的说明，请参阅[变更数据捕获 (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
+>  为用于执行变更数据增量加载的包设计数据流的过程中，第二个任务是分隔插入、更新和删除操作。 有关此组件的详细信息，请参阅 [处理插入、更新和删除](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)。 有关创建用于执行变更数据增量加载的包的完整过程的说明，请参阅[变更数据捕获 (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
   
 ## <a name="applying-inserts"></a>应用插入操作  
  若要应用插入操作，请使用 OLE DB 目标，因为新行不需要任何特殊处理。  
@@ -106,6 +106,6 @@ ms.locfileid: "71298982"
 ## <a name="optimizing-inserts-and-updates-by-using-merge-functionality"></a>使用 MERGE 功能优化插入和更新操作  
  可以通过将特定的变更数据捕获选项与 Transact-SQL MERGE 关键字结合使用，来优化插入操作和更新操作的处理。 有关 MERGE 关键字的详细信息，请参阅[ MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)。  
   
- 在用于检索变更数据的 Transact-SQL 语句中，调用 **cdc.fn_cdc_get_net_changes_<capture_instance>** 函数时可以将 all with merge 指定为 row_filter_option 参数的值   。 当此变更数据捕获函数不需要执行用于区分插入操作和更新操作的额外处理时，它的操作效率会大大提高。 将 all with merge 指定为参数值时，对于删除操作来说，变更数据的 **__$operation** 值为 1，而对于插入操作或更新操作引起的变更来说，该值为 5  。 有关用于检索变更数据的 Transact-SQL 函数的详细信息，请参阅[检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。使用 all with merge 参数值检索变更之后，可以应用删除操作，并将剩余行输出到临时表或中间临时表中  。 然后，在下游执行 SQL 任务中，可以使用一个 MERGE 语句将所有插入操作或更新操作从中间临时表应用到目标中。  
+ 在用于检索变更数据的 Transact-SQL 语句中，调用 *cdc.fn_cdc_get_net_changes_<capture_instance>* 函数时可以将 all with merge 指定为 row_filter_option 参数的值   。 当此变更数据捕获函数不需要执行用于区分插入操作和更新操作的额外处理时，它的操作效率会大大提高。 将 all with merge 指定为参数值时，对于删除操作来说，变更数据的 *__$operation* 值为 1，而对于插入操作或更新操作引起的变更来说，该值为 5  。 有关用于检索变更数据的 Transact-SQL 函数的详细信息，请参阅[检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。使用 all with merge 参数值检索变更之后，可以应用删除操作，并将剩余行输出到临时表或中间临时表中  。 然后，在下游执行 SQL 任务中，可以使用一个 MERGE 语句将所有插入操作或更新操作从中间临时表应用到目标中。  
   
   

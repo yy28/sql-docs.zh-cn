@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 08e81abbc21671881affc80fc9b7f0346cd490f7
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056007"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>批量访问 Azure Blob 存储中数据的示例
@@ -42,7 +42,7 @@ ms.locfileid: "74056007"
 > [!IMPORTANT]
 > 必须借助一个使用 `SHARED ACCESS SIGNATURE` 标识的数据库范围凭据创建外部数据源。 若要为存储帐户创建共享访问签名，请查看 Azure 门户中存储帐户属性页上的“共享访问签名”属性。  有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 有关凭据的详细信息，请参阅 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
-使用必须属于 `SHARED ACCESS SIGNATURE` 的 `IDENTITY` 创建数据库范围凭据。 使用为 blob 存储帐户生成的 SAS 令牌。 验证 SAS 令牌是否没有前导 `?`、你是否至少对应加载的对象拥有读取权限以及有效期是否有效（所有日期都采用 UTC 时间）。
+使用必须属于 `IDENTITY` 的 `SHARED ACCESS SIGNATURE` 创建数据库范围凭据。 使用为 blob 存储帐户生成的 SAS 令牌。 验证 SAS 令牌是否没有前导 `?`、你是否至少对应加载的对象拥有读取权限以及有效期是否有效（所有日期都采用 UTC 时间）。
 
 例如：
 

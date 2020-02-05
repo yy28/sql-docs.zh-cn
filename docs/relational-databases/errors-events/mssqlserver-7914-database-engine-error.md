@@ -12,13 +12,13 @@ ms.assetid: d32a81ce-4ca7-4b33-b536-c7ea0ed6f226
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0bdd7db91d41e9169fb5c71b138355694e73ed42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109126"
 ---
-# <a name="mssqlserver7914"></a>MSSQLSERVER_7914
+# <a name="mssqlserver_7914"></a>MSSQLSERVER_7914
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -30,11 +30,11 @@ ms.locfileid: "68109126"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_REPAIR_ALLOCATION_PAGE_REBUILT|  
-|消息正文|修复:位于 P_ID 的 PAGE_TYPE 页已重新生成。|  
+|消息正文|修复: 位于 P_ID 的 PAGE_TYPE 页已重新生成。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 这是来自 REPAIR 的信息性消息，该消息声明 GAM 或 SGAM 页已通过使用 PFS 页数据重新生成。  
   
 ## <a name="user-action"></a>用户操作  
-None  
+无  
   

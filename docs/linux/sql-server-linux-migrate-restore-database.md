@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.openlocfilehash: 148b887497cf9411aad72936a201805000c717ec
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558556"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>使用备份和还原将 SQL Server 数据库从 Windows 迁移到 Linux
@@ -170,7 +170,7 @@ ms.locfileid: "75558556"
    Directory lookup for the file "Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf" failed with the operating system error 2(The system cannot find the file specified.).
    ```
    
-   在这种情况下，数据库包含辅助文件。 如果未在 `RESTORE DATABASE` 的 `MOVE` 子句中指定这些文件，则还原过程将尝试在与原始服务器相同的路径中创建这些文件。 
+   在这种情况下，数据库包含辅助文件。 如果未在 `MOVE` 的 `RESTORE DATABASE` 子句中指定这些文件，则还原过程将尝试在与原始服务器相同的路径中创建这些文件。 
 
    可以列出备份中包含的所有文件：
    ```sql

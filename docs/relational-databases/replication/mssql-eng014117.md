@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2d6a7318c8d45da6c6c029dcacc315fdd1b36460
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1fa2265ec7f53372eac007ecb668cb6801e50d21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809960"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287720"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68809960"
 |符号名称||  
 |消息正文|未将 '%s' 配置为分发数据库。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  如果下列之一或两者均为 True，则会出现此错误：  
   
 -   msdb..MSdistributiondbs  中缺少指定分发数据库的条目。  
@@ -48,7 +48,7 @@ ms.locfileid: "68809960"
 ## <a name="user-action"></a>用户操作  
  验证分发服务器实例正确注册。 如果计算机的网络名称和 SQL Server 实例的名称不一致，则：  
   
--   添加 SQL Server 实例名称作为有效的网络名称。 一种设置备用网络名称的方法是将其添加到本地主机文件中。 默认情况下，本地主机文件位于 WINDOWS\system32\drivers\etc 或 WINNT\system32\drivers\etc 中。有关详细信息，请参阅 Windows 文档。  
+-   添加 SQL Server 实例名称作为有效的网络名称。 一种设置备用网络名称的方法是将其添加到本地主机文件中。 默认情况下，本地宿主文件位于 WINDOWS\system32\drivers\etc 或 WINNT\system32\drivers\etc 下。有关详细信息，请参阅 Windows 文档。  
   
      例如，如果计算机名称为 comp1，IP 地址为 10.193.17.129，实例名称为 inst1/instname，则将以下条目添加到主机文件中：  
   

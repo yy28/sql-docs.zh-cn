@@ -22,10 +22,10 @@ ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68004728"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68004728"
 
   使 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，并以定义完善的 XML 文档格式生成有关语句执行情况的详细信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68004728"
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SET STATISTICS XML 的设置是在执行或运行时设置的，而不是在分析时设置的。  
   
  当 SET STATISTICS XML 为 ON 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在执行每条语句后返回该语句的执行信息。 该选项设置为 ON 后，将返回有关所有后续 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的信息，直到该选项设置为 OFF 为止。 请注意，SET STATISTICS XML 不必是批处理中的唯一语句。  
@@ -60,7 +60,7 @@ SET STATISTICS XML { ON | OFF }
  SET STATISTICS PROFILE 和 SET STATISTICS XML 彼此互为对等物。 前者生成文本输出；后者生成 XML 输出。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，新的查询执行计划信息将只通过 SET STATISTICS XML 语句显示，而不通过 SET STATISTICS PROFILE 语句显示。  
   
 > [!NOTE]  
->  如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出  。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮  。  
+>  如果在  **中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮  。  
   
 ## <a name="permissions"></a>权限  
  若要使用 SET STATISTICS XML 并查看输出，用户必须具有以下权限：  
@@ -95,6 +95,6 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [SET SHOWPLAN_XML (Transact-SQL)](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+ [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e4ae8127d6365e2fd88b92992ab7dd3308e1460f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105033"
 ---
 # <a name="replication-functions---publishingservername"></a>复制函数 - PUBLISHINGSERVERNAME
@@ -30,7 +30,7 @@ ms.locfileid: "68105033"
 
   为参与数据库镜像会话的已发布数据库返回起始发布服务器的名称。 此函数在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器实例的发布数据库中执行。 使用它可确定已发布数据库的起始发布服务器。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ PUBLISHINGSERVERNAME()
 ## <a name="return-types"></a>返回类型  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  PUBLISHINGSERVERNAME 用于所有类型的复制。  
   
  当数据库镜像会话存在于发布服务器与镜像伙伴实例之间的发布数据库中时，将使用 PUBLISHINGSERVERNAME。  

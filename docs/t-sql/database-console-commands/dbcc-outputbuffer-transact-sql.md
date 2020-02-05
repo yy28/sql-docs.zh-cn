@@ -22,18 +22,18 @@ ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: f35532913a21ed6f90d1e940dd6346137fc3feda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039096"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-以十六进制和 ASCII 格式返回指定 session_id 的当前输出缓冲区。
+以十六进制和 ASCII 格式返回指定 session_id 的当前输出缓冲区  。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
 ```sql
@@ -45,9 +45,9 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ])
  *session_id*  
  与各活动主连接关联的会话 ID。  
   
- request_id  
+ request_id   
  要在当前会话中搜索的精确请求（批）。  
- 下面的查询返回 request_id：  
+ 下面的查询返回 request_id  ：  
   
 ```sql
 SELECT request_id   
@@ -55,14 +55,14 @@ FROM sys.dm_exec_requests
 WHERE session_id = @@spid;  
 ```  
   
- 替换为  
+ WITH  
  允许指定其他选项。  
   
  NO_INFOMSGS  
  取消严重级别从 0 到 10 的所有信息性消息。  
   
-## <a name="remarks"></a>Remarks  
-DBCC OUTPUTBUFFER 显示发送到指定客户端 (session_id) 的结果。 对于不包含输出流的进程，则返回错误消息。
+## <a name="remarks"></a>备注  
+DBCC OUTPUTBUFFER 显示发送到指定客户端 (session_id) 的结果  。 对于不包含输出流的进程，则返回错误消息。
   
 若要显示所执行的、其返回的结果由 DBCC OUTPUTBUFFER 所显示的语句，请执行 DBCC INPUTBUFFER。
   

@@ -12,13 +12,13 @@ ms.assetid: 0af6ff69-d75a-4c39-8da2-9bd0695277c6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1b6f07d54fbc04d3ddd9ff6d0a25c2f940f0ca54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103621"
 ---
-# <a name="mssqlserver2537"></a>MSSQLSERVER_2537
+# <a name="mssqlserver_2537"></a>MSSQLSERVER_2537
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -30,9 +30,9 @@ ms.locfileid: "68103621"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_RECORD_CHECK_FAILED|  
-|消息正文|表错误：对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE），页 P_ID，行 ROW_ID。 记录检查(CHECK_TEXT)失败。 值为 VALUE1 和 VALUE2。|  
+|消息正文|表错误: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (type TYPE)，页 P_ID，行 ROW_ID。 记录检查(CHECK_TEXT)失败。 值为 VALUE1 和 VALUE2。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 行 ROW_ID（或该行中的某列）未通过 CHECK_TEXT 所描述的测试或条件。  
   
 ## <a name="user-action"></a>用户操作  

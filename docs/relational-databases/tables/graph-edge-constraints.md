@@ -17,10 +17,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
 ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70873880"
 ---
 # <a name="edge-constraints"></a>边缘约束
@@ -39,7 +39,7 @@ ms.locfileid: "70873880"
 
 每个边缘约束都由一个或多个边缘约束子句组成。 边缘约束子句是给定边缘可以连接的 FROM 和 TO 节点对。
 
-假设图形中有 `Product` 和 `Customer` 节点，并使用 `Bought` 边缘连接这些节点。 边缘约束子句指定 FROM 和 TO 节点对以及边缘的方向。 在这种情况下，边缘约束子句将为 `Customer` TO `Product`。 也就是说，将允许插入范围从 `Customer` 到 `Product` 的 `Bought`。 尝试插入范围从 `Product` 到 `Customer` 的边缘失败。
+假设图形中有 `Product` 和 `Customer` 节点，并使用 `Bought` 边缘连接这些节点。 边缘约束子句指定 FROM 和 TO 节点对以及边缘的方向。 在这种情况下，边缘约束子句将为 `Customer` TO `Product`。 也就是说，将允许插入范围从 `Bought` 到 `Customer` 的 `Product`。 尝试插入范围从 `Product` 到 `Customer` 的边缘失败。
 
 - 边缘约束子句包含对其强制执行边缘约束的 FROM 和 TO 节点对表。
 - 用户可以为每个边缘约束指定多个边缘约束子句，这些子句将应用为析取。
@@ -59,7 +59,7 @@ ms.locfileid: "70873880"
 
 ## <a name="working-with-edge-constraints"></a>使用边缘约束
 
-可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的边缘约束。 边缘约束只能在图形边缘表上进行定义。 若要创建、删除或修改边缘约束，必须对表拥有 ALTER  权限。
+可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的边缘约束。 边缘约束只能在图形边缘表上进行定义。 若要创建、删除或修改边缘约束，必须对表拥有 ALTER  权限。
 
 ### <a name="create-edge-constraints"></a>创建边缘约束
 

@@ -16,10 +16,10 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0001806e1a8f0cba9a879297b4dab49367dd84a8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297015"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>使用脚本任务为 Foreach 循环收集列表
@@ -32,11 +32,11 @@ ms.locfileid: "71297015"
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  下面的示例使用 **System.IO** 命名空间中的方法，收集计算机中 Excel 工作簿的一个列表，其中的工作簿存在天数大于或小于用户在变量中指定的天数。 它会以递归方式搜索驱动器 C 的各目录中扩展名为 .xls 的文件，并检查每个文件的最新修改日期，以确定该文件是否属于此列表。 它会将符合要求的文件添加到 **ArrayList** 中，并将 **ArrayList** 保存到一个变量中，供以后在 Foreach 循环容器中使用。 Foreach 循环容器配置为使用变量枚举器的 Foreach。  
   
 > [!NOTE]  
->  用于变量枚举器的 Foreach 的变量必须为 **Object** 类型。 放入该变量中的对象必须实现以下接口之一：System.Collections.IEnumerable  、System.Runtime.InteropServices.ComTypes.IEnumVARIANT  、System.ComponentModel IListSource  或 Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost  。 通常会使用 **Array** 或 **ArrayList**。 **ArrayList** 需要引用 **System.Collections** 命名空间，因此需要针对该命名空间的 **Imports** 语句。  
+>  用于变量枚举器的 Foreach 的变量必须为 **Object** 类型。 放入该变量中的对象必须实现以下接口之一：**System.Collections.IEnumerable**、**System.Runtime.InteropServices.ComTypes.IEnumVARIANT**、**System.ComponentModel IListSource** 或 **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**。 通常会使用 **Array** 或 **ArrayList**。 **ArrayList** 需要引用 **System.Collections** 命名空间，因此需要针对该命名空间的 **Imports** 语句。  
   
  您可以对 `FileAge` 包变量使用不同的正值和负值来试用此任务。 例如，可以输入 5 以搜索最近 5 天内创建的文件，或者输入 -3 以搜索 3 天以前创建的文件。 对于要搜索较多文件夹的驱动器，此任务可能会花费一两分钟时间。  
   

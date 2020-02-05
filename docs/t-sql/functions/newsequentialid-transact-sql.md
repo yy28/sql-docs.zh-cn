@@ -19,10 +19,10 @@ ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3edebc2c1a7182e71ec093508adc5755afb22758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914946"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67914946"
 > [!WARNING]  
 >  UuidCreateSequential 函数具有硬件依赖关系。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，当数据库（如包含的数据库）移动到其他计算机时，可以开发顺序值的群集。 在使用 Always On 以及在 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 上时，如果数据库故障转移到另一台计算机，则可以开发顺序值的群集。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ NEWSEQUENTIALID ( )
 ## <a name="return-type"></a>返回类型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  NEWSEQUENTIALID() 只能与 **uniqueidentifier** 类型表列上的 DEFAULT 约束一起使用。 例如：  
   
 ```  

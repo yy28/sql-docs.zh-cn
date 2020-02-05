@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2847ef10bd52d69375fa4f13f1d003eb4159961f
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847468"
 ---
 # <a name="iservervirtualdeviceset2close-vdi"></a>IServerVirtualDeviceSet2::Close (VDI)
@@ -30,11 +30,11 @@ HRESULT IServerVirtualDeviceSet2::Close ();
 
 ## <a name="return-value"></a>返回值
 
-|返回值 | 解释 |
+|返回值 | 说明 |
 |---|---|
 | VD_E_PROTOCOL | 设备仍处于打开状态。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 不应在关闭设备前关闭虚拟设备集。 如果出现这种情况，则返回 VD_E_PROTOCOL。 此操作会导致 Close 立即释放其对共享内存的映射。 如果服务器继续要求从虚拟设备接口返回资源的所有权，则该服务器会受到访问冲突的影响。 接口执行 SignalAbort 处理。
 

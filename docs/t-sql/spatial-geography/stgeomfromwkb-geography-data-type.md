@@ -18,10 +18,10 @@ ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 34fcb2841d414d56a8718f3864039aa85d390d85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042105"
 ---
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB（geography 数据类型）
@@ -48,10 +48,10 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
-## <a name="remarks"></a>Remarks  
- `STGeomFromText()` 返回的 geography  实例的 OGC 类型设置为相应的 WKB 输入。  
+## <a name="remarks"></a>备注  
+ **返回的 geography**`STGeomFromText()` 实例的 OGC 类型设置为相应的 WKB 输入。  
   
  如果输入的格式不正确，此方法将引发 FormatException  。  
   

@@ -19,10 +19,10 @@ ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 61743139f35ed3e8a5dd4bbac9bd1f4660cb2ec2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136031"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68136031"
 
 此函数返回当前数据库的当前 timestamp 数据类型的值  。 当前数据库将具有确保唯一的时间戳值。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -41,13 +41,13 @@ ms.locfileid: "68136031"
 ## <a name="return-types"></a>返回类型
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 @@DBTS 返回当前数据库最后使用的时间戳值。 插入或更新包含 timestamp 列的行时，会产生一个新的时间戳值  。
   
 事务隔离级别的更改不会影响 @@DBTS 函数。
   
 ## <a name="examples"></a>示例  
-此示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库返回当前的 timestamp  。
+此示例从  **数据库返回当前的 timestamp**[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。
   
 ```sql
 USE AdventureWorks2012;  

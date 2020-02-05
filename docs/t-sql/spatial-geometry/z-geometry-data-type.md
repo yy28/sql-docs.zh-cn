@@ -18,10 +18,10 @@ ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e5932235ea8d97f67b17b481cff4e2d39b0c524a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127333"
 ---
 # <a name="z-geometry-data-type"></a>Z（geometry 数据类型）
@@ -39,12 +39,12 @@ ms.locfileid: "68127333"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float   
   
- CLR 类型：**SqlDouble**  
+ CLR 类型：SqlDouble   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 geometry 实例不是 point，则此属性的值为 null；对于未设置此属性的任何 **Point** 实例，此属性的值也为 null。  
   
- 该属性为只读。  
+ 此属性为只读。  
   
  Z 坐标未在库进行的任何计算中使用，因此不通过任何库计算传递。  
   

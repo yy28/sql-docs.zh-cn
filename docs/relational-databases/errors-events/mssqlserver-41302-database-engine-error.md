@@ -12,13 +12,13 @@ ms.assetid: 01e75618-afec-4232-ba68-93ab7bc31003
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0d3d7b98ec94e36f813972b11b12210bc32d04b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043506"
 ---
-# <a name="mssqlserver41302"></a>MSSQLSERVER_41302
+# <a name="mssqlserver_41302"></a>MSSQLSERVER_41302
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68043506"
 |符号名称|WRITE_WRITE_CONFLICT|  
 |消息正文|当前事务尝试更新自该事务启动后已更新的记录。 该事务已中止。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 事务遇到写/写冲突，语句已终止。  
   
 ## <a name="user-action"></a>用户操作  

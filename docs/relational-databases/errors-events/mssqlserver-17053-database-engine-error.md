@@ -12,13 +12,13 @@ ms.assetid: e0a01f3d-d0aa-4c38-8bcc-82e59de50512
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d078557186af534f1f489e8fee2e0f803c548f58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100431"
 ---
-# <a name="mssqlserver17053"></a>MSSQLSERVER_17053
+# <a name="mssqlserver_17053"></a>MSSQLSERVER_17053
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -30,9 +30,9 @@ ms.locfileid: "68100431"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|OS_ERROR|  
-|消息正文|%ls:遇到操作系统错误 %ls。|  
+|消息正文|%ls: 遇到操作系统错误 %ls。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 出现了一般性的操作系统错误。  不清楚会出现什么状态。  
   
 ## <a name="user-action"></a>用户操作  

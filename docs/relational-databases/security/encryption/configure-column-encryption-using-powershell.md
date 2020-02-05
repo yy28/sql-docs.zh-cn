@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cc6f86a091f96f3d38bc4db7a5d5d2fde5462dce
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594388"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>通过 PowerShell 配置使用 Always Encrypted 的列加密
@@ -57,17 +57,17 @@ ms.locfileid: "73594388"
 使用联机方法：
 - 最小化数据库对应用程序造成的停机时间/不可用性。
 
-## <a name="security-considerations"></a>需要考虑的安全性因素
+## <a name="security-considerations"></a>安全注意事项
 
 用于配置数据库列加密的 **Set-SqlColumnEncryption** cmdlet 可处理 Always Encrypted 密钥和存储在数据库列中的数据。 因此，请务必在一台安全的计算机上运行此 cmdlet。 如果你的数据库在 SQL Server 中，请不要在托管 SQL Server 实例的计算机上执行 cmdlet，而是在另一台计算机上执行。 由于 Always Encrypted 的主要目的是确保加密的敏感数据的安全（即使数据库系统遭到入侵），因此执行用于处理 SQL Server 计算机上密钥和/或敏感数据的 PowerShell 脚本可减少或抵消该功能带来的益处。
 
 任务  |项目  |访问纯文本密钥/密钥存储  |访问数据库   
 ---|---|---|---
-步骤 1. 启动 PowerShell 环境并导入 SqlServer 模块。 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
+步骤 1。 启动 PowerShell 环境并导入 SqlServer 模块。 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
 步骤 2. 连接到服务器和数据库 | [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 是
 步骤 3. 如果列主密钥（保护要轮换的列加密密钥）存储在 Azure 密钥保管库中，请对 Azure 进行身份验证 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 是 | 否
 步骤 4. 构造一组 SqlColumnEncryptionSettings 对象，每个对象对应一个要加密、重新加密或解密的数据库列。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 它用于指定列的目标加密方案。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | 否 | 否
-步骤 5. 设置所需加密配置，该配置在之前的步骤中创建的一组 SqlColumnMasterKeySettings 对象中指定。 根据指定的目标设置和列的当前加密配置，将加密、重新加密或解密列。| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注意：** 此步骤可能需要较长时间。 应用程序无法通过整个操作或部分操作访问表，具体视你选择的方法（联机与脱机）而定。 | 是 | 是
+步骤 5。 设置所需加密配置，该配置在之前的步骤中创建的一组 SqlColumnMasterKeySettings 对象中指定。 根据指定的目标设置和列的当前加密配置，将加密、重新加密或解密列。| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注意：** 此步骤可能需要较长时间。 应用程序无法通过整个操作或部分操作访问表，具体视你选择的方法（联机与脱机）而定。 | 是 | 是
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>使用脱机方法加密列 - 示例
 
@@ -146,11 +146,11 @@ for($i=0; $i -lt $tables.Count; $i++){
 Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -LogFileDirectory .
 ```
  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 - [使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>另请参阅  
- - [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Always Encrypted 密钥管理概述](overview-of-key-management-for-always-encrypted.md) 
  - [使用 PowerShell 配置“始终加密”功能](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
  - [使用 Always Encrypted 向导配置列加密](always-encrypted-wizard.md)

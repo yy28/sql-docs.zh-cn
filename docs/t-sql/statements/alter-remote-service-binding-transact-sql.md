@@ -20,10 +20,10 @@ ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b91242524f3edada4de8112558a01f09fb3310cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927226"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67927226"
 
   更改与远程服务绑定相关联的用户，或更改绑定的匿名身份验证设置。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +52,7 @@ ALTER REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  指定在与远程服务进行通信时是否使用匿名身份验证。 如果 ANONYMOUS = ON，则使用匿名身份验证，且不会将本地用户的凭据传输给远程服务。 如果 ANONYMOUS = OFF，则传输用户凭据。 如果没有指定该子句，则默认为 OFF。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  与 user_name 关联的证书中的公钥用于对发送到远程服务的消息进行身份验证，并对会话密钥进行加密，然后使用加密的会话密钥对会话进行加密  。 user_name 的证书必须与承载远程服务的数据库登录证书相对应  。  
   
 ## <a name="permissions"></a>权限  

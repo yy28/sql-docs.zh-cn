@@ -12,10 +12,10 @@ ms.assetid: 4cc3498d-5449-4c4e-b1f9-3271831c725a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 01573bcf745efcdc1f4865ac9157c71ef65cb9bf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907693"
 ---
 # <a name="mssqlserver_8651"></a>MSSQLSERVER_8651
@@ -32,7 +32,7 @@ ms.locfileid: "72907693"
 |符号名称|MEMGRANT_ERR|  
 |消息正文|未能执行所请求的操作，因为可用内存少于最小查询内存。 请减小“每次查询占用的最小内存”服务器配置选项的配置值。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 其他进程正在占用服务器内存（在服务器中施加内存压力）。  
   
 ## <a name="user-action"></a>用户操作  
@@ -42,7 +42,7 @@ ms.locfileid: "72907693"
   
 1.  验证其他应用程序或服务是否占用此服务器上的内存。 重新配置不太重要的应用程序或服务，使其占用更少的内存。  
   
-2.  开始收集以下内容的性能监视器计数器：**SQL Server:Buffer Manager**、**SQL Server:Memory Manager**。  
+2.  开始收集 **SQL Server: Buffer Manager**、**SQL Server: Memory Manager** 的性能监视器计数器。  
   
 3.  检查下面的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存配置参数：  
   

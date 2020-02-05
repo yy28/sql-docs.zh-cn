@@ -24,10 +24,10 @@ ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e838729d064a6101d4efb8fc57c7cd7b9910ad8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117284"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68117284"
 
   创建新的搜索属性列表。 搜索属性列表用于指定要在全文检索中包括的一个或多个搜索属性。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 > [!NOTE]  
 >  可通过 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句更改所有者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!NOTE]  
 >  有关属性列表的一般信息，请参阅[使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
@@ -96,7 +96,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. 创建空属性列表并将其与索引关联  
- 以下示例创建名为 `DocumentPropertyList` 的新搜索属性列表。 该示例然后使用 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 语句将新属性列表与 `AdventureWorks` 数据库中 `Production.Document` 表的全文检索关联，但不开始填充。  
+ 以下示例创建名为 `DocumentPropertyList` 的新搜索属性列表。 该示例然后使用 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 语句将新属性列表与 `Production.Document` 数据库中 `AdventureWorks` 表的全文检索关联，但不开始填充。  
   
 > [!NOTE]  
 >  有关将多个预定义的知名搜索属性添加到此搜索属性列表的示例，请参阅 [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md)。 在向列表中添加搜索属性后，数据库管理员将需要使用另一个带有 START FULL POPULATION 子句的 ALTER FULLTEXT INDEX 语句。  

@@ -18,15 +18,15 @@ ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 826e0a047e119b186905f9d3f2d56170aa7b9249
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041238"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>使用 OpenSqlFilestream 访问 FILESTREAM 数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  OpenSqlFilestream API 为文件系统中存储的 FILESTREAM 二进制大型对象 (BLOB) 获取与 Win32 兼容的文件句柄。 句柄可以传递给以下任何 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果将此句柄传递给其他任何 Win32 API，将返回错误 ERROR_ACCESS_DENIED。 必须首先将此句柄传递给 Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API 来关闭它，才能提交或回退事务。 未能关闭句柄将导致服务器端资源泄漏。  
+  OpenSqlFilestream API 为文件系统中存储的 FILESTREAM 二进制大型对象 (BLOB) 获取与 Win32 兼容的文件句柄。 可以将该句柄传递给以下任意 Win32 API： [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果将此句柄传递给其他任何 Win32 API，将返回错误 ERROR_ACCESS_DENIED。 必须首先将此句柄传递给 Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API 来关闭它，才能提交或回退事务。 未能关闭句柄将导致服务器端资源泄漏。  
   
  你必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务中执行所有 FILESTREAM 数据容器访问。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句也可以在同一事务中执行。 这样可保持 SQL 数据与 FILESTREAM BLOB 数据之间的一致性。  
   
@@ -48,14 +48,14 @@ HANDLE OpenSqlFilestream (
     PLARGE_INTEGER AllocationSize);  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *FilestreamPath*  
  [in] 是由 **PathName** 函数返回的 [nvarchar(max)](../../relational-databases/system-functions/pathname-transact-sql.md) 路径。 必须从具有 FILESTREAM 表和列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 或 UPDATE 权限的帐户的上下文中调用 PathName。  
   
  *DesiredAccess*  
  [in] 设置用于访问 FILESTREAM BLOB 数据的模式。 该值传递到 [DeviceIoControl 函数](https://go.microsoft.com/fwlink/?LinkId=105527)。  
   
-|“属性”|ReplTest1|含义|  
+|名称|值|含义|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|可从文件中读取数据。|  
 |SQL_FILESTREAM_WRITE|1|可将数据写入文件。|  
@@ -67,7 +67,7 @@ HANDLE OpenSqlFilestream (
  *OpenOptions*  
  [in] 文件属性和标志。 此参数还可以包括下列标志的任意组合。  
   
-|标志|ReplTest1|含义|  
+|标志|值|含义|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_OPEN_NONE|0x00000000:|文件是未使用任何特殊选项打开或创建的。|  
 |SQL_FILESTREAM_OPEN_FLAG_ASYNC|0x00000001L|文件是针对异步 I/O 打开或创建的。|  
@@ -97,7 +97,7 @@ HANDLE OpenSqlFilestream (
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  必须安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 才能使用此 API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 随同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端工具一起安装。 有关详细信息，请参阅 [安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
   
 ## <a name="see-also"></a>另请参阅  

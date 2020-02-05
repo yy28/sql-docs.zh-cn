@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f9e0f46e098ec0944577738332a38e08384a2579
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121766"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>SET 运算符 - EXCEPT 和 INTERSECT (Transact-SQL)
@@ -45,7 +45,7 @@ INTERSECT 返回由左右双侧输入查询运算符输出的非重复行。
   
 -   数据类型必须兼容。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,7 +56,7 @@ INTERSECT 返回由左右双侧输入查询运算符输出的非重复行。
 ```  
   
 ## <a name="arguments"></a>参数  
-\<query\_specification  > | ( \<query\_expression  > )  
+\<query_specification\__ > | ( \<query_expression\__ > )  
 查询规范或查询表达式返回与来自另一个查询规范或查询表达式的数据相比较的数据。 属于 EXCEPT 或 INTERSECT 运算的列定义不一定要相同。 但必须可通过隐式转换实现可比较。 如果数据类型不同，根据[数据类型优先顺序](../../t-sql/data-types/data-type-precedence-transact-sql.md)规则确定为执行比较而运行的数据类型。  
   
 如果类型相同，但精度、确定位数或长度不同，那么结果以相同的表达式合并规则为依据。 有关详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
@@ -69,7 +69,7 @@ EXCEPT
 INTERSECT  
 返回由 INTERSECT 运算符左侧和右侧的查询都返回的所有非重复值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 可比较列的数据类型是由 EXCEPT 或 INTERSECT 运算符左侧和右侧的查询返回。 这些数据类型可包括具有不同排序规则的字符数据类型。 如果确实是这样，根据[排序规则优先顺序](../../t-sql/statements/collation-precedence-transact-sql.md)规则运行必需比较。 如果无法运行此转换，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 返回错误。  
   
 通过比较列值来确定非重复行时，两个 NULL 值被视为相等。  

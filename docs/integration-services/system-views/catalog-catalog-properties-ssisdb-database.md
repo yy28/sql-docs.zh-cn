@@ -11,10 +11,10 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9b5f7628f0284cb4662f0cf88bff1fd80cb2014e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295232"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties（SSISDB 数据库）
@@ -26,22 +26,22 @@ ms.locfileid: "71295232"
 
   显示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录的属性。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|目录属性的名称。|  
 |property_value|**nvarchar(256)**|目录属性的值。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此视图对于每个目录属性显示一行。
   
-|属性名称|描述|  
+|属性名称|说明|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|服务器范围的默认包执行模式 - `Server` (0) 或 `Scale Out` (1)。 |
 |**ENCRYPTION_ALGORITHM**|用于加密敏感数据的加密算法的类型。 支持的值包括：`DES`、`TRIPLE_DES`、`TRIPLE_DES_3KEY`、`DESX`、`AES_128`、`AES_192` 和 `AES_256`。 注意：要更改此属性，目录数据库必须处于单用户模式。|
 |**IS_SCALEOUT_ENABLED**|值如果为 `True`，SSIS Scale Out 功能为启用状态。 如果未启用 Scale Out，该属性可能不会显示在视图中。|
 |**MAX_PROJECT_VERSIONS**|为单个项目保留的新项目版本的数量。 当启用了版本清理时，超出了此计数的较早版本将被删除。|  
 |**OPERATION_CLEANUP_ENABLED**|当值为 `TRUE` 时，将从目录中删除超过 RETENTION_WINDOW  （天）的操作详细信息和操作消息。 当值为 `FALSE` 时，将在目录中存储所有操作详细信息和操作消息。 注意：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作业执行清理操作。|  
-|**RETENTION_WINDOW**|操作详细信息和操作消息存储在目录中的天数。 如果值为 `-1`，则保持期窗口是无限的。 注意：如果无需清理，将 OPERATION_CLEANUP_ENABLED 设置为 FALSE   。|
+|**RETENTION_WINDOW**|操作详细信息和操作消息存储在目录中的天数。 如果值为 `-1`，则保持期窗口是无限的。 请注意：如果无需清理，将 OPERATION_CLEANUP_ENABLED  设置为 FALSE  。|
 |**SCHEMA_BUILD**|SSISDB 目录数据库架构的生成号。 每当创建或升级 SSISDB 目录，此号相应更改。|
 |**SCHEMA_VERSION**|SSISDB 目录数据库架构的主版本号。 每当创建 SSISDB 目录或升级主版本，此号相应更改。|
 |**VALIDATION_TIMEOUT**|如果验证没有在该属性指定的秒数内完成，则将停止验证。|  

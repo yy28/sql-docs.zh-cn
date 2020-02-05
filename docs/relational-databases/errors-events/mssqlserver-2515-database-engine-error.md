@@ -12,13 +12,13 @@ ms.assetid: af93aa29-70c9-4923-90af-aafadb20c1c6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0250837855713c1d81202d176976d668f42a164
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138561"
 ---
-# <a name="mssqlserver2515"></a>MSSQLSERVER_2515
+# <a name="mssqlserver_2515"></a>MSSQLSERVER_2515
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68138561"
 |符号名称|DBCC_DIFF_MAP_OUT_OF_SYNC|  
 |消息正文|页 P_ID、对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）已修改，但在差异备份位图中未标记为已修改。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 指定的页具有的日志序列号 (LSN) 大于数据库的 BackupManager 中的差异引用 LSN 或该文件的文件控制块中的差异基准 LSN（以更晚者为准）。 但是，页在差异备份位图中未标记为已更改。  
   
 每个数据库将仅报告一页，因为仅当已知差异位图没有错误时才执行此检查。  

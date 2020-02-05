@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d9908d99f81094b8b8d3c2afd5c82ad870c2de22
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995743"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68995743"
 
 此函数返回指定数据库的数据库标识 (ID) 号。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -45,19 +45,19 @@ DB_ID ( [ 'database_name' ] )
   
 ## <a name="arguments"></a>参数  
 'database_name'   
-将返回其数据库 ID 号 `DB_ID` 的数据库的名称。 如果对 `DB_ID` 的调用省略 database_name，则 `DB_ID` 返回当前数据库的 ID  。
+将返回其数据库 ID 号 `DB_ID` 的数据库的名称。 如果对 `DB_ID` 的调用省略 database_name，则  *返回当前数据库的 ID*`DB_ID`。
   
 ## <a name="return-types"></a>返回类型
 **int**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 `DB_ID` 仅可用于返回 Azure SQL 数据库中当前数据库的数据库标识符。 如果指定的数据库名称不是当前数据库，则返回 NULL。
 
 > [!NOTE]
-> 与 Azure SQL 数据库一起使用时，`DB_ID` 可能不会返回从 sys.databases  查询 `database_id` 得到的相同结果。 如果 `DB_ID` 的调用方将结果与其他 sys  视图进行比较，应改为查询 sys.databases  。
+> 与 Azure SQL 数据库一起使用时，`DB_ID` 可能不会返回从 sys.databases`database_id`**查询** 得到的相同结果。 如果 `DB_ID` 的调用方将结果与其他 sys  视图进行比较，应改为查询 sys.databases  。
   
 ## <a name="permissions"></a>权限  
-如果 `DB_ID` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 服务器级权限才能看到相应的 `DB_ID` 行   。 对于 master 数据库，`DB_ID` 至少需要 `CREATE DATABASE` 权限  。 调用方连接的数据库将始终出现在 sys.databases 中  。
+如果 `DB_ID` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 **或** 服务器级权限才能看到相应的  **行**`ALTER ANY DATABASE``VIEW ANY DATABASE``DB_ID`。 对于 master 数据库，**至少需要** 权限`DB_ID``CREATE DATABASE`。 调用方连接的数据库将始终出现在 sys.databases 中  。
   
 > [!IMPORTANT]  
 >  默认情况下，公共角色具有 `VIEW ANY DATABASE` 权限，允许所有登录名查看数据库信息。 若要防止登录名检测数据库，则需 `REVOKE` 公共登录名的 `VIEW ANY DATABASE` 权限或 `DENY` 个人登录名的 `VIEW ANY DATABASE` 权限。  
@@ -81,7 +81,7 @@ GO
 ```  
   
 ### <a name="c-using-db_id-to-specify-the-value-of-a-system-function-parameter"></a>C. 使用 DB_ID 来指定系统函数参数的值  
-此示例使用 `DB_ID` 返回系统函数 `sys.dm_db_index_operational_stats` 中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的数据库 ID。 此函数将数据库 ID 作为第一个参数。
+此示例使用 `DB_ID` 返回系统函数 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中 `sys.dm_db_index_operational_stats` 数据库的数据库 ID。 此函数将数据库 ID 作为第一个参数。
   
 ```sql
 DECLARE @db_id int;  

@@ -12,13 +12,13 @@ ms.assetid: e2ad218a-3249-4f18-8b32-09f0030765a5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c5da5b977426cd1d953f4aad53dd0bfc22f6aeb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087576"
 ---
-# <a name="mssqlserver7932"></a>MSSQLSERVER_7932
+# <a name="mssqlserver_7932"></a>MSSQLSERVER_7932
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -30,9 +30,9 @@ ms.locfileid: "68087576"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_ROWSET_IN_WRONG_FILEGROUP|  
-|消息正文|表错误:对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 的 FileStream 目录 ID F_ID 位于文件组 FG_ID1 中，但该目录应位于文件组 FG_ID2 中。|  
+|消息正文|表错误: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 的 FileStream 目录 ID F_ID 位于文件组 FG_ID1 中，但该目录应位于文件组 FG_ID2 中。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 在运行 DBCC CHECKDB 期间，在错误的文件组中检测到指定对象的 FILESTREAM 存储。 这可能是由于对象元数据损坏。  
   
 ## <a name="user-action"></a>用户操作  

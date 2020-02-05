@@ -25,13 +25,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0852c01f37e8dbf324e18d140bd30a510fd14c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008972"
 ---
-# <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
+# <a name="set-numeric_roundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 指定当表达式中的舍入导致精度损失时生成的错误报告级别。  
@@ -45,7 +45,7 @@ ms.locfileid: "68008972"
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 当 SET NUMERIC_ROUNDABORT 为 ON 时，在表达式中出现精度损失时将生成错误。 如果设置为 OFF，精度的降低不会生成错误消息。 结果会根据存储结果的列或变量的精度进行舍入。  
   
 在精度较低的列或变量中，当尝试以固定精度存储值时，会出现精度降低的情况。  
@@ -63,8 +63,8 @@ SET NUMERIC_ROUNDABORT 的设置是在执行或运行时设置，而不是在分
 
 - CREATE 
 - UPDATE 
-- Insert 
-- 删除 
+- INSERT 
+- DELETE 
 
 有关计算列的索引视图和索引所需的 SET 选项设置的详细信息，请参阅[使用 SET 语句时的注意事项](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements)。
   

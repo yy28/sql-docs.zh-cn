@@ -18,10 +18,10 @@ ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0713ba46d6d99a8ed325d37d11396b46618f92ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101760"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce（geography 数据类型）
@@ -48,9 +48,9 @@ ms.locfileid: "68101760"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  对于集合类型，此算法单独作用于包含在该实例中的每个 tolerance  。 此算法不修改 Point 实例  。  
   
  此方法将尝试保留 LineString 实例的终结，但是可能为了保留有效结果而无法实现此目的  。  

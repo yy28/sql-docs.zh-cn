@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5de24851562858eced26c7189fca5e786f395b94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68069655"
 ---
 # <a name="transactions-event-category"></a>Transactions 事件类别
@@ -27,20 +27,20 @@ ms.locfileid: "68069655"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[DTCTransaction 事件类](../../relational-databases/event-classes/dtctransaction-event-class.md)|跟踪由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 协调的事务。 这些是在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的两个或两个以上的数据库或实例之间分布的事务。|  
 |[SQLTransaction 事件类](../../relational-databases/event-classes/sqltransaction-event-class.md)|跟踪 [!INCLUDE[tsql](../../includes/tsql-md.md)] BEGIN TRAN、COMMIT TRAN、SAVE TRAN 和 ROLLBACK TRAN 语句。|  
-|[TM：Begin Tran Completed 事件类](../../relational-databases/event-classes/tm-begin-tran-completed-event-class.md)|指明已完成 BEGIN TRANSACTION 请求。|  
-|[TM：Begin Tran Starting 事件类](../../relational-databases/event-classes/tm-begin-tran-starting-event-class.md)|指明正在启动 BEGIN TRANSACTION 请求。|  
-|[TM：Commit Tran Completed 事件类](../../relational-databases/event-classes/tm-commit-tran-completed-event-class.md)|指明已完成 COMMIT TRANSACTION 请求。|  
-|[TM：Commit Tran Starting 事件类](../../relational-databases/event-classes/tm-commit-tran-starting-event-class.md)|指明正在启动 COMMIT TRANSACTION 请求。|  
-|[TM：Promote Tran Completed 事件类](../../relational-databases/event-classes/tm-promote-tran-completed-event-class.md)|指明已完成 PROMOTE TRANSACTION 请求。|  
-|[TM：Promote Tran Starting 事件类](../../relational-databases/event-classes/tm-promote-tran-starting-event-class.md)|指明正在启动 PROMOTE TRANSACTION 请求。|  
-|[TM：Rollback Tran Completed 事件类](../../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md)|指明已完成 ROLLBACK TRANSACTION 请求。|  
-|[TM：Rollback Tran Starting 事件类](../../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md)|指明正在启动 ROLLBACK TRANSACTION 请求。|  
-|[TM：Save Tran Completed 事件类](../../relational-databases/event-classes/tm-save-tran-completed-event-class.md)|指明已完成 SAVE TRANSACTION 请求。|  
-|[TM：Save Tran Starting 事件类](../../relational-databases/event-classes/tm-save-tran-starting-event-class.md)|指明正在启动 SAVE TRANSACTION 请求。|  
+|[TM: Begin Tran Completed 事件类](../../relational-databases/event-classes/tm-begin-tran-completed-event-class.md)|指明已完成 BEGIN TRANSACTION 请求。|  
+|[TM: Begin Tran Starting 事件类](../../relational-databases/event-classes/tm-begin-tran-starting-event-class.md)|指明正在启动 BEGIN TRANSACTION 请求。|  
+|[TM: Commit Tran Completed 事件类](../../relational-databases/event-classes/tm-commit-tran-completed-event-class.md)|指明已完成 COMMIT TRANSACTION 请求。|  
+|[TM: Commit Tran Starting 事件类](../../relational-databases/event-classes/tm-commit-tran-starting-event-class.md)|指明正在启动 COMMIT TRANSACTION 请求。|  
+|[TM: Promote Tran Completed 事件类](../../relational-databases/event-classes/tm-promote-tran-completed-event-class.md)|指明已完成 PROMOTE TRANSACTION 请求。|  
+|[TM: Promote Tran Starting 事件类](../../relational-databases/event-classes/tm-promote-tran-starting-event-class.md)|指明正在启动 PROMOTE TRANSACTION 请求。|  
+|[TM: Rollback Tran Completed 事件类](../../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md)|指明已完成 ROLLBACK TRANSACTION 请求。|  
+|[TM: Rollback Tran Starting 事件类](../../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md)|指明正在启动 ROLLBACK TRANSACTION 请求。|  
+|[TM: Save Tran Completed 事件类](../../relational-databases/event-classes/tm-save-tran-completed-event-class.md)|指明已完成 SAVE TRANSACTION 请求。|  
+|[TM: Save Tran Starting 事件类](../../relational-databases/event-classes/tm-save-tran-starting-event-class.md)|指明正在启动 SAVE TRANSACTION 请求。|  
 |[TransactionLog 事件类](../../relational-databases/event-classes/transactionlog-event-class.md)|跟踪事务何时写入数据库事务日志。|  
   
   

@@ -14,10 +14,10 @@ ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a5a408ac1329c11054804902f3e751d6126afa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987340"
 ---
 # <a name="sql-server-agent-alerts-object"></a>SQL Server 代理中的 Alerts 对象
@@ -26,7 +26,7 @@ ms.locfileid: "67987340"
   
  下表介绍了 **SQLAgent:Alerts** 计数器。  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |**Activated alerts**|此计数器可报告自上次 SQL Server 代理重新启动以来 SQL Server 代理已经激活的警报总数。|  
 |**Alerts activated/minute**|此计数器可报告上一分钟内 SQL Server 代理激活的警报数。|  

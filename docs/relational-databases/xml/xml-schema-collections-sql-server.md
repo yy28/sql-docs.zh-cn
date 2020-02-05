@@ -22,10 +22,10 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096822"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "68096822"
   
  请注意，XML 架构集合是一个类似于数据库表的元数据实体。 您可以创建、修改和删除它们。 [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 语句中指定的架构将自动导入到新建的 XML 架构集合对象中。 通过使用 [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) 语句，可以将其他架构或架构组件导入到数据库中的现有集合对象。  
   
- 如主题[类型化与非类型化的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md) 中所述，存储在与架构关联的列或变量中的 XML 称为**类型化的** XML，因为该架构为实例数据提供了必要的数据类型信息。 SQL Server 使用此类型信息优化数据存储。  
+ 如主题 [类型化与非类型化的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)中所述，存储在与架构关联的列或变量中的 XML 称为 **类型化的** XML，因为该架构为实例数据提供了必要的数据类型信息。 SQL Server 使用此类型信息优化数据存储。  
   
  查询处理引擎也使用该架构进行类型检查并优化查询和数据修改。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68096822"
  还可以使用 XML 架构集合类型化 XML 变量、参数和列。  
   
 ##  <a name="ddl"></a> 用于管理架构集合的 DDL  
- 可以在数据库中创建 XML 架构集合，并将它们与 **xml** 类型的变量和列相关联。 为了管理数据库中的架构集合，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列 DDL 语句：  
+ 可以在数据库中创建 XML 架构集合，并将它们与 **xml** 类型的变量和列相关联。 为了管理数据库中的架构集合， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列 DDL 语句：  
   
 -   [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 可将架构组件导入到数据库。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "68096822"
   
      本主题讨论了如何授予创建 XML 架构集合的权限和如何授予 XML 架构集合对象的权限。  
   
--   [撤消对 XML 架构集合的权限](../../relational-databases/xml/revoke-permissions-on-an-xml-schema-collection.md)  
+-   [吊销对 XML 架构集合的权限](../../relational-databases/xml/revoke-permissions-on-an-xml-schema-collection.md)  
   
      本主题讨论了如何使用撤消权限来防止创建 XML 架构集合和如何撤消 XML 架构集合对象的权限。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "68096822"
   
  这些在下列示例中进行了说明。  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>例如：枚举 XML 架构集合中的 XML 命名空间  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>示例：枚举 XML 架构集合中的 XML 命名空间  
  对 XML 架构集合“myCollection”使用下面的查询：  
   
 ```sql
@@ -183,7 +183,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>例如：枚举 XML 架构集合的内容  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>示例：枚举 XML 架构集合的内容  
  以下语句枚举关系架构 dbo 中的 XML 架构集合“myCollection”的内容。  
   
 ```sql
@@ -192,8 +192,8 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  可以通过将目标命名空间指定为 **XML_SCHEMA_NAMESPACE()** 的第三个参数，获取集合中单个 XML 架构作为 **xml**数据类型实例。 下面的示例说明了这一点。  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例如：从 XML 架构集合输出指定的架构  
- 以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出假定目标命名空间为“https/\/www.microsoft.com/was-books”的 XML 架构。   
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>示例：从 XML 架构集合输出指定的架构  
+ 以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出假定目标命名空间为“https/_www.microsoft.com/was-books”的 XML 架构。_ \/  
   
 ```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 448906ca9a9dcb1a29b4cfab323e610909546171
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251579"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安装 SQL Server 的注意事项
@@ -80,7 +80,7 @@ ms.locfileid: "75251579"
 ##  <a name="BKMK_PrepareImage"></a> 准备映像  
 “准备映像”步骤安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品和功能，但不配置安装。  
   
-可在此步骤中指定要安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品安装文件的安装位置。 你可以通过“安装中心”  的“高级”  页上的“SysPrep 部署的独立实例的映像准备”  或从命令提示符准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
+可在此步骤中指定要安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品安装文件的安装位置。 你可以通过“安装中心”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**的“高级”** **页上的“SysPrep 部署的独立实例的映像准备”** **或从命令提示符准备**  的实例。  
   
 - 您可以在同一台计算机上准备可以在以后完成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例。  
   

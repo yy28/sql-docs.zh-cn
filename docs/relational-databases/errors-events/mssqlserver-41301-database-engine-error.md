@@ -12,13 +12,13 @@ ms.assetid: c6127e1e-2846-4ee9-bc42-2d896ea9730e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a8000007cdf122e01d306978b8fb6612f6359ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043487"
 ---
-# <a name="mssqlserver41301"></a>MSSQLSERVER_41301
+# <a name="mssqlserver_41301"></a>MSSQLSERVER_41301
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68043487"
 |符号名称|COMMIT_DEPENDENCY_FAILURE|  
 |消息正文|当前事务所依赖的前一事务已终止，当前事务无法再提交。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 事务遇到依赖关系错误，已失败。  
   
 依赖事务太多也可导致此错误。 任何写事务的依赖事务都有数量限制。 例如，如果太多的读事务尝试依赖更新事务，就可能会发生此错误。  

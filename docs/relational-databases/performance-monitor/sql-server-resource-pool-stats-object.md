@@ -14,10 +14,10 @@ ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 98241060994cd97944db30a777bc23f475b8cb0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995697"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server，Resource Pool Stats 对象
@@ -26,23 +26,23 @@ ms.locfileid: "67995697"
   
  每个活动资源池都创建一个 SQLServer:Resource Pool Stats 性能对象实例，实例的名称与资源调控器资源池的名称相同。 下表介绍了此实例支持的计数器。  
   
-|计数器名称|描述|  
+|计数器名称|说明|  
 |------------------|-----------------|  
 |**Active memory grant amount (KB)**|当前授予的内存总量，以千字节 (KB) 为单位。 此信息还可在 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)中获得。| 
 |**Active memory grants count**|当前内存授予总数。 此信息还可在 [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)中获得。|  
 |**Avg Disk Read IO (ms)**|从磁盘进行读取操作的平均时间（毫秒）。|  
-|**Avg Disk Read IO (ms) Base**|仅限内部使用。|
+|**Avg Disk Read IO (ms) Base**|仅供内部使用。|
 |**Avg Disk Write IO (ms)**|对磁盘进行写入操作的平均时间（毫秒）。|  
-|**Avg Disk Write IO (ms) Base**|仅限内部使用。|
+|**Avg Disk Write IO (ms) Base**|仅供内部使用。|
 |**Cache memory target (KB)**|缓存的当前内存代理目标值，以千字节 (KB) 为单位。|  
 |**Compile memory target (KB)**|查询编译的当前内存代理目标值，以千字节 (KB) 为单位。|  
 |**CPU control effect %**|资源调控器对资源池的控制效果。 计算公式为：（CPU 使用率 %）/（无资源调控器情况下的 CPU 使用率 %）。|  
 |**CPU delayed %**|以占总活动时间的百分比表示的指定的性能对象实例中所有请求的系统 CPU 延迟。|
-|**CPU delayed % base**|仅限内部使用。|
+|**CPU delayed % base**|仅供内部使用。|
 |**CPU effective %**|以占总活动时间的百分比表示的指定的性能对象实例中所有请求的系统 CPU 使用率。|
-|**CPU effective % base**|仅限内部使用。|
+|**CPU effective % base**|仅供内部使用。|
 |**CPU usage %**|属于此池的所有工作负荷组中所有请求的 CPU 带宽使用量。 此值是相对于计算机度量的，并针对系统中的所有 CPU 进行规范化。 此值将随着可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的 CPU 量的变化而变化。 它不会针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程接收的信息进行规范化。|  
-|**CPU usage % base**|仅限内部使用。|
+|**CPU usage % base**|仅供内部使用。|
 |**CPU usage target %**|资源池基于资源池配置设置和系统负荷的目标 CPU 使用率 (%)。|  
 |**CPU violated %**|CPU 预留和有效计划百分比之差。|
 |**Disk Read Bytes/sec**|在上一秒中从磁盘读取的字节数。|  

@@ -18,10 +18,10 @@ ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f7a525dedd8f5cbfbf881da63b7bb40f461bc802
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120934"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves（geography 数据类型）
@@ -39,9 +39,9 @@ ms.locfileid: "68120934"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  一维空间数据类型包括 LineString、CircularString 和 CompoundCurve    。 空的一维 geography 实例返回 0  。  
   
  `STNumCurves`() 仅适用于简单类型，它不适用于 MultiLineString 之类的 geography 集合   。 当 geography 实例不是一维数据类型时，将返回 NULL   。  

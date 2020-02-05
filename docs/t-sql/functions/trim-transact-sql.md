@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9707f0b23d9461418536c2b9f9015623124d5436
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70059837"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
@@ -53,7 +53,7 @@ TRIM ( string )
 
 返回一个字符串参数类型的字符表达式，其中已从两侧删除空格字符 `char(32)` 或其他指定字符。 如果输入字符串是 `NULL`，则返回 `NULL`。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 默认情况下，`TRIM` 函数删除字符串开头和结尾的空格字符。 此行为等同于 `LTRIM(RTRIM(@string))`。
 

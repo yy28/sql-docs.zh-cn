@@ -14,10 +14,10 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252704"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable 与其他 SQL Server 功能的兼容性
@@ -29,7 +29,7 @@ ms.locfileid: "75252704"
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]支持部分 FileTable 功能。 故障转移后，FileTable 数据在主副本上是可访问的，但是在可读辅助副本上不可访问。  
   
-    > **注意：** 请注意故障转移后支持所有 FILESTREAM 功能。 FILESTREAM 数据在可读辅助副本和新的主副本上均可访问。  
+    > **注意：**  请注意故障转移后支持所有 FILESTREAM 功能。 FILESTREAM 数据在可读辅助副本和新的主副本上均可访问。  
   
 -   FILESTREAM 和 FileTable 函数接受或返回虚拟网络名称 (VNN)，而非计算机名称。 有关这些函数的详细信息，请参阅 [Filestream 和 FileTable 函数 (Transact-SQL)](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md)。  
   

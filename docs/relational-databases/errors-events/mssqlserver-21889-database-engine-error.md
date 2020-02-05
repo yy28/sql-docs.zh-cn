@@ -12,10 +12,10 @@ ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 177da1486d7cab622bacaea56cd886bd8dc06d06
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251487"
 ---
 # <a name="mssqlserver_21889"></a>MSSQLSERVER_21889
@@ -30,11 +30,11 @@ ms.locfileid: "72251487"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|SQLErrorNum21889|  
-|消息正文|SQL Server 实例“%s”不是复制发布服务器。 在 SQL Server 实例“%s”(具有分发服务器“%s”)上运行 sp_adddistributor，以便使该实例承载发布数据库“%s”。 确保指定的登录名和密码与用于原始发布服务器的登录名和密码相同。|  
+|消息正文|SQL Server 实例“%s”不是复制发布服务器。 在 SQL Server 实例“%s”(具有分发服务器“%s”)上运行 sp_adddistributor  ，以便使该实例承载发布数据库“%s”。 确保指定的登录名和密码与用于原始发布服务器的登录名和密码相同。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 为了承载发布服务器数据库，SQL Server 实例必须为复制发布服务器。 **sp_validate_redirected_publisher** 在远程服务器上调用 **sp_helpdistributor** 来确定该服务器是否为复制发布服务器。 此错误表示 SQL Server 的目标实例不是复制发布服务器。  
   
 ## <a name="user-action"></a>用户操作  
-在承载发布服务器数据库的 SQL Server 实例上执行 sp_adddistributor。 在运行 **sp_adddistributor** 时，指定正确的分发服务器。 为 \@password 参数使用与最初在分发服务器上运行 sp_adddistributor 时使用的值相同的值。  
+在承载发布服务器数据库的 SQL Server 实例上执行 sp_adddistributor  。 在运行 **sp_adddistributor** 时，指定正确的分发服务器。 为 *password 参数使用与最初在分发服务器上运行 sp_adddistributor 时使用的值相同的值\@*  。  
   

@@ -15,10 +15,10 @@ ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 91bcf58df4f8dd9651f077c200d69eea2c1f7660
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101056"
 ---
 # <a name="parse-geometry-data-type"></a>Parse（geometry 数据类型）
@@ -38,16 +38,16 @@ Parse ( 'geometry_tagged_text' )
  希望返回的 **geometry** 实例的 WKT 表示形式。 *geometry_tagged_text* 是一个 **nvarchar** 表达式。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
-## <a name="remarks"></a>Remarks  
- `Parse()` 返回的 **geometry** 实例的 OGC 类型设置为相应的 WKT 输入。  
+## <a name="remarks"></a>备注  
+ **返回的**geometry`Parse()` 实例的 OGC 类型设置为相应的 WKT 输入。  
   
  字符串“Null”将被解释为 Null **geometry** 实例。  
   
- 如果输入的格式不正确，此方法将引发 FormatException。  
+ 如果输入的格式不正确，此方法将引发 FormatException  。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `Parse()` 创建 `geometry` 实例。  

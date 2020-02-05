@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 707d33dd-644e-4cc9-ac51-dddd49031530
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7ab8f39970447b670dde3f5a653de4642a9d890e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ac57d8427196b432f133f83f2e26be1ede88543f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766874"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287817"
 ---
-# <a name="mssqleng003165"></a>MSSQL_ENG003165
+# <a name="mssql_eng003165"></a>MSSQL_ENG003165
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68766874"
 |符号名称||  
 |消息正文|数据库 '%ls' 已还原，但在还原/删除复制时出错。 该数据库仍保留为脱机状态。 请参阅 SQL Server 联机丛书中的主题 MSSQL_ENG003165。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  如果在还原已复制数据库的备份时出现问题，将引发此错误：  
   
 -   如果将备份还原到对其创建备份的同一数据库和服务器，此错误将指示无法正确还原复制设置。  

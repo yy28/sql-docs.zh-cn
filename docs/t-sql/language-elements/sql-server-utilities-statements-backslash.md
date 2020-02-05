@@ -29,10 +29,10 @@ ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495435"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>反斜杠（行继续符）(Transact SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68495435"
 
 `\` 将一个长字符串常量、字符或二进制分成两行或更多行，以方便阅读。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68495435"
  \<continued section of string>  
  是字符串的后面部分。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 该命令将字符串的第一部分和后续部分作为一个字符串返回，中间没有反斜杠。 反斜杠后的新行必须是换行符 (U + 000A) 或回车符 (U + 000D) 和换行符 (U + 000A) 的组合。 
 
 ## <a name="examples"></a>示例  

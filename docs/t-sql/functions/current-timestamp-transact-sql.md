@@ -32,13 +32,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15d684788ee14713c0a6fb2e8d742d7a81a6eed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026409"
 ---
-# <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
+# <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函数返回当前数据库系统时间戳，返回值的类型为 datetime，并且不含数据库时区偏移量  。 `CURRENT_TIMESTAMP` 从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的操作系统中获得此值。
@@ -48,9 +48,9 @@ ms.locfileid: "68026409"
   
 此函数是 ANSI SQL，等价于 [GETDATE](../../t-sql/functions/getdate-transact-sql.md)。
   
-有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
+有关所有 [ 日期和时间数据类型及函数的概述，请参阅](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日期和时间数据类型及函数[!INCLUDE[tsql](../../includes/tsql-md.md)]。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ CURRENT_TIMESTAMP
 ## <a name="return-type"></a>返回类型  
 **datetime**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以在能引用 datetime 表达式的所有位置引用 `CURRENT_TIMESTAMP`  。
   
 `CURRENT_TIMESTAMP` 是非确定性函数。 引用该列的视图和表达式无法进行索引。

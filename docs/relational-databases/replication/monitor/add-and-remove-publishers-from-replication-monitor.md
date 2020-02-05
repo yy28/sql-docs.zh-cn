@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d46f710bfae73527f414017108954bf4e9129f8f
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8bd540f4fa1ba34fde5d804bae0b64e642a13237
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320754"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287734"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>从复制监视器中添加和删除发布服务器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "75320754"
   
 2.  在 **“添加发布服务器”** 对话框中，单击 **“添加”** ，然后单击 **“添加 Oracle 发布服务器”** 。  
   
-3.  在“连接到服务器”对话框中，输入与 Oracle 发布服务器关联的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器的名称，然后选择身份验证类型  。 如果选择 **“SQL Server 身份验证”** ，请输入登录名和密码。 您所指定的凭据由复制监视器进行保存，以便将来连接到此服务器时使用。 指定的 Windows 帐户或 SQL Server 登录名必须为 **sysadmin** 固定服务器角色的成员或分发数据库中 **replmonitor** 固定数据库角色的成员。  
+3.  在“连接到服务器”对话框中，输入与 Oracle 发布服务器关联的   分发服务器的名称，然后选择身份验证类型[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果选择 **“SQL Server 身份验证”** ，请输入登录名和密码。 您所指定的凭据由复制监视器进行保存，以便将来连接到此服务器时使用。 指定的 Windows 帐户或 SQL Server 登录名必须为 **sysadmin** 固定服务器角色的成员或分发数据库中 **replmonitor** 固定数据库角色的成员。  
   
 4.  单击“连接”  。  
   

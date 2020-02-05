@@ -22,10 +22,10 @@ ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: b7b8bf219c62734398d387e63f86d8a2d9a11662
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553269"
 ---
 # <a name="dbcc-traceoff-transact-sql"></a>DBCC DBREPAIR (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "69553269"
 
 禁用指定的跟踪标记。
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ trace#
 WITH NO_INFOMSGS  
 取消严重级别从 0 到 10 的所有信息性消息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 跟踪表记用于自定义某些控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的操作方式的特征。
   
 ## <a name="result-sets"></a>结果集  

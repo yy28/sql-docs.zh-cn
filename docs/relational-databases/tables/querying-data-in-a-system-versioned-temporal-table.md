@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 415e966e2ecebb9004e64ddedd6b96d87cedee35
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165614"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>在系统控制版本的时态表中查询数据
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-如果想要获取临时表中数据的最新（实际）状态，完全可以像查询非临时表一样进行查询。 如果 PERIOD 列未隐藏，其值将出现在 SELECT \* 查询中。 如果已将“PERIOD”列指定为隐藏，其值将不会出现在 SELECT \* 查询中  。 当 **PERIOD** 列隐藏时，可在 SELECT 子句中明确引用 **PERIOD** 列以返回这些列的值。
+如果想要获取临时表中数据的最新（实际）状态，完全可以像查询非临时表一样进行查询。 如果 PERIOD 列未隐藏，其值将出现在 SELECT \* 查询中。 如果已将“PERIOD”列指定为隐藏，其值将不会出现在 SELECT  **查询中**\*。 当 **PERIOD** 列隐藏时，可在 SELECT 子句中明确引用 **PERIOD** 列以返回这些列的值。
 
 若要执行任何一种基于时间的分析，请将新的 FOR SYSTEM_TIME 子句和四个特定时态的子子句结合使用，以便跨当前表和历史记录表查询数据  。 有关这些子句的详细信息，请参阅[临时表](../../relational-databases/tables/temporal-tables.md)和 [FROM (Transact SQL)](../../t-sql/queries/from-transact-sql.md)
 

@@ -21,10 +21,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292182"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -59,9 +59,9 @@ ms.locfileid: "71292182"
   
  下表介绍 WriteOption 属性的可用选项。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
-|追加|将数据追加到现有文件中。 追加数据的元数据必须与文件格式匹配。|  
+|附加|将数据追加到现有文件中。 追加数据的元数据必须与文件格式匹配。|  
 |始终创建|始终创建新文件。|  
 |创建一次|创建新文件。 如果该文件已经存在，该组件将失败。|  
 |截断和追加|截断现有文件，然后将数据写入此文件。 追加数据的元数据必须与文件格式匹配。|  

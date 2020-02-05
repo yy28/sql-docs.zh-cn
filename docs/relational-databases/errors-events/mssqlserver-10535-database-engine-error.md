@@ -12,13 +12,13 @@ ms.assetid: 478fd978-11d9-4155-8329-f599fdbec14b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b026dd0a0b9ecfc252947874b746cd5c18593f47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043685"
 ---
-# <a name="mssqlserver10535"></a>MSSQLSERVER_10535
+# <a name="mssqlserver_10535"></a>MSSQLSERVER_10535
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68043685"
 |符号名称|PG_NO_PLAN|  
 |消息正文|由于在计划缓存中找不到与指定计划句柄对应的计划，因此无法创建计划指南 '%.*ls'。 请指定已缓存的计划句柄。 有关已缓存的计划句柄的列表，请查询 sys.dm_exec_query_stats 动态管理视图。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 未在与指定的计划句柄相对应的计划缓存中找到计划。  
   
 ## <a name="user-action"></a>用户操作  

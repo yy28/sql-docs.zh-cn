@@ -14,17 +14,17 @@ ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc11a8dd385266d38bb12f067d2ffa1a88030b87
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70190425"
 ---
 # <a name="xml-data-sql-server"></a>XML 数据 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一个强大的平台，以针对半结构化数据管理开发功能丰富的应用程序。 对 XML 的支持已集成到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有组件中，包括下面几项：  
   
--   **xml** 数据类型。 可将 XML 值本机存储在根据 XML 架构集合类型化或保持非类型化的 **xml** 数据类型列中。 可以对 XML 列创建索引。  
+-   **xml** 数据类型。 可将 XML 值本机存储在根据 XML 架构集合类型化或保持非类型化的 **xml** 数据类型列中。 可为 XML 列编制索引。  
   
 -   可以针对 **xml** 类型的列和变量中存储的 XML 数据指定 XQuery 查询。  
   

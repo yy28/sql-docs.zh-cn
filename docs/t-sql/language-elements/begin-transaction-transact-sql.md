@@ -31,10 +31,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6dc5c823a69d348e3206d55c3c49f8954204a794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910078"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "67910078"
 
   标记一个显式本地事务的起始点。 显式事务以 BEGIN TRANSACTION 语句开始，并以 COMMIT 或 ROLLBACK 语句结束。  
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,20 +65,20 @@ BEGIN { TRAN | TRANSACTION }
 
   
 ## <a name="arguments"></a>参数  
- transaction_name  
- **适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
+ transaction_name   
+ 适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database 
  
- 分配给事务的名称。 transaction_name 必须符合标识符规则，但标识符所包含的字符数不能大于 32。 仅在最外面的 BEGIN...COMMIT 或 BEGIN...ROLLBACK 嵌套语句对中使用事务名。 transaction_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此。  
+ 分配给事务的名称。 transaction_name 必须符合标识符规则，但标识符所包含的字符数不能大于 32  。 仅在最外面的 BEGIN...COMMIT 或 BEGIN...ROLLBACK 嵌套语句对中使用事务名。 transaction_name 始终区分大小写，即使  *实例不区分大小写也是如此*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- @tran_name_variable  
- **适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
+ @tran_name_variable   
+ 适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database 
  
- 用户定义的、含有有效事务名称的变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量。 如果传递给该变量的字符多于 32 个，则仅使用前面的 32 个字符；其余的字符将被截断。  
+ 用户定义的、含有有效事务名称的变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量     。 如果传递给该变量的字符多于 32 个，则仅使用前面的 32 个字符；其余的字符将被截断。  
   
- WITH MARK [ 'description' ]  
-**适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
+ WITH MARK [ 'description' ]   
+适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database 
 
-指定在日志中标记事务。 description 是描述该标记的字符串。 在将长于 128 个字符的 description 存储到 msdb.dbo.logmarkhistory 表中之前，先将其截断为 128 个字符。  
+指定在日志中标记事务。 description 是描述该标记的字符串  。 在将长于 128 个字符的 description 存储到 msdb.dbo.logmarkhistory 表中之前，先将其截断为 128 个字符  。  
   
  如果使用了 WITH MARK，则必须指定事务名。 WITH MARK 允许将事务日志还原到命名标记。  
   
@@ -112,7 +112,7 @@ BEGIN TRANSACTION 为发出本语句的连接启动一个本地事务。 根据�
   
  只有当数据库由标记事务更新时，才在事务日志中放置标记。 不修改数据的事务不被标记。  
   
- 在已存在的未标记事务中可以嵌套 BEGIN TRAN new_name WITH MARK。 嵌套后，new_name 便成为事务的标记名，不论是否已为事务提供了名称。 在以下示例中，`M2` 是标记名。  
+ 在已存在的未标记事务中可以嵌套 BEGIN TRAN new_name WITH MARK  。 嵌套后，new_name 便成为事务的标记名，不论是否已为事务提供了名称  。 在以下示例中，`M2` 是标记名。  
   
 ```  
 BEGIN TRAN T1;  
@@ -133,7 +133,7 @@ COMMIT TRAN T1;
   
  "BEGIN TRAN M2 WITH MARK ...;"  
   
- “服务器：消息 3920、级别 16、状态 1、第 3 行”  
+ "Server: Msg 3920, Level 16, State 1, Line 3"  
   
  "WITH MARK option only applies to the first BEGIN TRAN WITH MARK."  
   
@@ -145,7 +145,7 @@ COMMIT TRAN T1;
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 使用显式事务
-**适用对象：** SQL Server（从 2008 版开始）、Azure SQL 数据库、Azure SQL 数据仓库、并行数据仓库
+适用范围：SQL Server（从 2008 版开始）、Azure SQL 数据库、Azure SQL 数据仓库、并行数据仓库 
 
 本示例使用 AdventureWorks。 
 
@@ -157,7 +157,7 @@ COMMIT;
 ```
 
 ### <a name="b-rolling-back-a-transaction"></a>B. 回滚事务
-**适用对象：** SQL Server（从 2008 版开始）、Azure SQL 数据库、Azure SQL 数据仓库、并行数据仓库
+适用范围：SQL Server（从 2008 版开始）、Azure SQL 数据库、Azure SQL 数据仓库、并行数据仓库 
 
 以下示例显示了回滚事务的效果。 在此示例中，ROLLBACK 语句将回滚 INSERT 语句，但已创建的表仍会存在。
 
@@ -172,7 +172,7 @@ ROLLBACK;
 ```
 
 ### <a name="c-naming-a-transaction"></a>C. 命名事务 
-**适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
+适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database 
 
 下面的示例说明如何命名事务。  
   
@@ -190,7 +190,7 @@ GO
 ```  
   
 ### <a name="d-marking-a-transaction"></a>D. 标记事务  
-**适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
+适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database 
 
 以下示例显示如何标记事务。 将标记事务 `CandidateDelete`。  
   

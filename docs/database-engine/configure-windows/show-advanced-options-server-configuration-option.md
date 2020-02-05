@@ -14,16 +14,16 @@ ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0c7755484582f407fb288dd25af1ec74e520b0ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026116"
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>show advanced options 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  “显示高级选项”选项用来显示 **sp_configure** 系统存储过程高级选项。 当“显示高级选项”设置为 1 时，可以使用 **sp_configure** 列出高级选项。 默认值为 0。  
+   “显示高级选项”选项用来显示 **sp_configure** 系统存储过程高级选项。 当“显示高级选项”  设置为 1 时，可以使用 **sp_configure** 列出高级选项。 默认值为 0。  
   
  该设置将立即生效，无需重新启动服务器。  
   

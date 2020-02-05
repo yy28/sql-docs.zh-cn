@@ -12,13 +12,13 @@ ms.assetid: eb5ee2be-acbb-4fb7-9b45-dc6200bde06e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e4a1be0fe2d9860cdcb3b5b8da2ac92b751bcbb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023148"
 ---
-# <a name="mssqlserver2540"></a>MSSQLSERVER_2540
+# <a name="mssqlserver_2540"></a>MSSQLSERVER_2540
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68023148"
 |符号名称|DBCC_REPAIR_ERROR_NOT_REPAIRABLE|  
 |消息正文|系统无法自己修复此错误。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 此错误消息指示无法自动修复的问题，如损坏的元数据、页可用空间 (PFS) 页损坏或者某些关键系统基表中的损坏。  
   
 ## <a name="user-action"></a>用户操作  

@@ -15,10 +15,10 @@ ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc1a9b8b91d37359ce7dc2a4845d0d83e81f996a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044153"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX（选择性 XML 索引）
@@ -26,7 +26,7 @@ ms.locfileid: "68044153"
 
   删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的现有选择性 XML 索引或辅助选择性 XML 索引。 有关详细信息，请参阅[选择性 XML 索引 (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ DROP INDEX index_name ON <object>
   
  *\<drop_index_option>* 有关删除索引选项的信息，请参阅 [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
  若要运行 DROP INDEX，需要对表或视图拥有 ALTER 权限。 默认情况下，此权限授予 sysadmin 固定服务器角色以及 db_ddladmin 和 db_owner 固定数据库角色。  

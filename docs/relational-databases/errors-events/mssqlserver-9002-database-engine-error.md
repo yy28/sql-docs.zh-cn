@@ -12,13 +12,13 @@ ms.assetid: 2e50841f-2b99-45f4-aec5-aa4add70cbeb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3397d8fc1fbf271ab3bd8032ae14c7d9b61b6020
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118362"
 ---
-# <a name="mssqlserver9002"></a>MSSQLSERVER_9002
+# <a name="mssqlserver_9002"></a>MSSQLSERVER_9002
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68118362"
 |符号名称|LOG_IS_FULL|  
 |消息正文|数据库 '%.*ls' 的事务日志已满。 若要查明无法重用日志中的空间的原因，请参阅 sys.databases 中的 log_reuse_wait_desc 列。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 数据库日志空间不足。 **sys.databases** 中的 **log_reuse_wait_desc** 列说明无法重用日志中的空间的原因。  
   
 ## <a name="user-action"></a>用户操作  

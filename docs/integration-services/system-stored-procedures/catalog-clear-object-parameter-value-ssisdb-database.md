@@ -11,10 +11,10 @@ ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2ad9b1900c3933b2756d376f152ac714af91cc3d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281066"
 ---
 # <a name="catalogclear_object_parameter_value-ssisdb-database"></a>catalog.clear_object_parameter_value（SSISDB 数据库）
@@ -50,13 +50,13 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
  包的名称。 *object _name* 为 **nvarchar(260)** 。  
   
  [ \@parameter_ name = ] *parameter_name*  
- 参数名。 *parameter_ name* 为 **nvarchar(128)** 。  
+ 参数的名称。 *parameter_ name* 为 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  

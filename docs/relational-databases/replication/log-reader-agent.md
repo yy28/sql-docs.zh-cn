@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 8877af08b093b81a875b59fc11f4497b5089f680
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 4873d4e4481bb6a845101b5ce2754062bcd7ce10
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767645"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288488"
 ---
 # <a name="log-reader-agent"></a>日志读取器代理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "68767645"
 ## <a name="options"></a>选项  
  从 **“视图”** 菜单中选择要查看的日志读取器代理会话，然后在标记为 **“日志读取器代理的会话”** 的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中的操作”** 的网格中。 如果所选会话由于出错而结束，则还将显示一个标记为 **“所选会话的错误详细信息或消息”** 的文本区域。  
   
- **“视图”**  
+ **视图**  
  选择要查看的日志读取器代理会话。 日志读取器代理通常连续运行，因此可能只有一个可供查看的会话。  
   
- **“状态”**  
+ **Status**  
  日志读取器代理的状态。 下面列出了可能的状态值：  
   
 -   错误  

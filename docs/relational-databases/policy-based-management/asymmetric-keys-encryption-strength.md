@@ -13,10 +13,10 @@ ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3c8baf2b846e33d7df51dfef3e24ee2b6028babb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109924"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>非对称密钥加密强度
@@ -30,6 +30,6 @@ ms.locfileid: "68109924"
  [选择加密算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [使用基于策略的管理来监视和强制执行最佳实践](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [使用基于策略的管理来监视和强制执行最佳做法](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

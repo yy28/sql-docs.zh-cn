@@ -18,10 +18,10 @@ ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: caa274b1571a9c0506acbe3f6d5d5d004588fede
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042276"
 ---
 # <a name="stequals-geography-data-type"></a>STEquals（geography 数据类型）
@@ -38,18 +38,18 @@ ms.locfileid: "68042276"
   
 ## <a name="arguments"></a>参数  
  other_geography   
- 与对其调用 `STEquals()` 的实例进行比较的其他 geography 实例  。  
+ 与对其调用  **的实例进行比较的其他 geography 实例**`STEquals()`。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：**SqlBoolean**  
+ CLR 返回类型：SqlBoolean   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用 `STGeomFromText()` 创建两个等效但又不完全相等的 `geography` 实例，并使用 `STEquals()` 测试它们的等效性。 因为 `LINESTRING` 和 `POINT` 包含在 `POLYGON` 中，所以这两个实例相等。  
+ 下面的示例使用 `geography` 创建两个等效但又不完全相等的 `STGeomFromText()` 实例，并使用 `STEquals()` 测试它们的等效性。 因为 `LINESTRING` 和 `POINT` 包含在 `POLYGON` 中，所以这两个实例相等。  
   
 ```  
 DECLARE @g geography;  

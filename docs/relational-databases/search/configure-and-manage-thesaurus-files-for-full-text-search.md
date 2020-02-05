@@ -15,17 +15,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056204"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索查询可以通过使用全文搜索*同义词库*来搜索用户指定的字词的同义词。 每个同义词库为特定语言定义一组同义词。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。
 
-仅对所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查询以及指定 `FORMSOF THESAURUS` 子句的任意 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查询执行同义词库匹配操作。
+仅对所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查询以及指定 [ 子句的任意 ](../../t-sql/queries/contains-transact-sql.md)CONTAINS[ 和 ](../../relational-databases/system-functions/containstable-transact-sql.md)CONTAINSTABLE`FORMSOF THESAURUS` 查询执行同义词库匹配操作。
   
 全文搜索同义词库是一个 XML 文本文件。
   
@@ -44,7 +44,7 @@ ms.locfileid: "74056204"
 
 -   标注字符设置  
   
-     对于给定同义词库，所有搜索模式要么区分标注字符，要么不区分标注字符，如波形符 (~  )、锐音符 (&acute;  ) 或元音变音符 (&uml;  )（即要么区分重音  ，要么不区分重音  ）。 例如，假设你在全文查询中指定要将“caf&eacute;”模式替换为其他模式。 如果同义词库不区分重音，全文搜索会替换“caf&eacute;”和“cafe”模式。 如果同义词库区分重音，全文搜索仅替换“caf&eacute;”模式。 默认情况下，同义词库不区分重音。  
+     对于给定同义词库，所有搜索模式要么区分标注字符，要么不区分标注字符，如波形符 ( **~** )、锐音符 ( **&acute;** ) 或元音变音符 ( **&uml;** )（即要么区分重音  ，要么不区分重音  ）。 例如，假设你在全文查询中指定要将“caf&eacute;”模式替换为其他模式。 如果同义词库不区分重音，全文搜索会替换“caf&eacute;”和“cafe”模式。 如果同义词库区分重音，全文搜索仅替换“caf&eacute;”模式。 默认情况下，同义词库不区分重音。  
   
 ##  <a name="initial_thesaurus_files"></a>默认同义词库文件
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一组 XML 同义词库文件，分别对应于每种支持的语言。 这些文件实际上是空的。 它们仅包含所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同义词库通用的顶级 XML 结构以及注释掉的示例同义词库。  
@@ -115,7 +115,7 @@ ms.locfileid: "74056204"
 </XML>  
 ```
 
-### <a name="expansion"></a>扩展集的 XML 结构  
+### <a name="expansion"></a> XML structure of an expansion set  
   
  每个扩展集包含在 `<expansion>` 元素中。 在此元素中，可以在 `<sub>` 元素中指定一个或多个替换项。 在扩展集中，可以指定一组互为同义词的替换项。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "74056204"
 </expansion>  
 ```  
   
-### <a name="replacement"></a>替换集的 XML 结构  
+### <a name="replacement"></a> XML structure of a replacement set  
   
 每个替换集包含在 `<replacement>` 元素中。 在此元素中，可以在 `<pat>` 元素中指定一个或多个模式，还可以在 `<sub>` 元素中指定零个或多个替换项，每个替换项对应于一个同义词。 可以指定要由替换集替换的模式。 模式和替换项可以包含一个或一组单词。 如果没有为某个模式指定任何替换项，则会导致从用户查询中删除该模式。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "74056204"
 </replacement>  
 ```  
   
-和  
+and  
   
 ```xml  
 <replacement>  
@@ -170,7 +170,7 @@ ms.locfileid: "74056204"
   
 同义词库的标注字符设置是在单个 `<diacritics_sensitive>` 元素中指定的。 此元素包含一个控制重音区分设置的整数值，如下所示：  
   
-|标注字符设置|ReplTest1|XML|  
+|标注字符设置|值|XML|  
 |------------------------|-----------|---------|  
 |不区分重音|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
 |区分重音|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
@@ -228,7 +228,7 @@ ms.locfileid: "74056204"
  [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)   
- [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)     
- [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)  
- [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)
+ [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)     
+ [sp_fulltext_load_thesaurus_file (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)  
+ [sys.dm_fts_parser (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)
  

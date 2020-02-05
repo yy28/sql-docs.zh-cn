@@ -19,10 +19,10 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291225"
 ---
 # <a name="pivot-transformation"></a>透视转换
@@ -50,7 +50,7 @@ ms.locfileid: "71291225"
  输入数据可能包含重复行，这会导致透视转换失败。 “重复行”表示在设置键列和透视列中具有相同值的行。 为了避免失败，可以将转换配置为将错误行重定向到错误输出或预先聚合值，以确保不存在重复行。  
   
 ##  <a name="options"></a> “透视”对话框中的选项  
- 可以通过设置 **“透视”** 对话框中的选项来配置透视操作。 若要打开“透视”对话框，请在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中将透视转换添加到包，右键单击该组件，然后单击“编辑”。    
+ 可以通过设置 **“透视”** 对话框中的选项来配置透视操作。 若要打开“透视”对话框，请在  **中将透视转换添加到包，右键单击该组件，然后单击“编辑”。** [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]   
   
  以下列表介绍了 **“透视”** 对话框中的选项。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "71291225"
   
  下表显示对 **年** 列透视数据前的数据集。  
   
-|年|产品名称|总计|  
+|年龄|产品名称|总计|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  

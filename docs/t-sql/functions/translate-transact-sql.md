@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 025aaad5c92a448114355c8700aee1b6bc0a7d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098831"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
@@ -37,19 +37,19 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="arguments"></a>参数
 
- inputString 是要搜索的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 inputString 可以是任何字符数据类型（nvarchar、varchar、nchar、char）。
+ inputString  是要搜索的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 inputString 可以是任何字符数据类型（nvarchar、varchar、nchar、char）  。
 
- characters 是一个包含应替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 字符可以是任何字符数据类型。
+  characters 是一个包含应替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 字符可以是任何字符数据类型  。
 
-translations 是一个包含替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 转换必须与字符的数据类型和长度相同。
+ translations 是一个包含替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 转换必须与字符的数据类型和长度相同   。
 
 ## <a name="return-types"></a>返回类型
 
 返回与 `inputString`（第二个参数中的字符被替换为第三个参数中的匹配字符）具有相同数据类型的字符表达式。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
-如果字符和转换表达式长度不同，则 `TRANSLATE` 将返回错误。 如果任何参数为 NULL，`TRANSLATE` 将返回 NULL。  
+如果字符和转换表达式长度不同，则 `TRANSLATE` 将返回错误   。 如果任何参数为 NULL，`TRANSLATE` 将返回 NULL。  
 
 `TRANSLATE` 函数行为类似于使用多个 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函数。 但是，`TRANSLATE` 不会多次替换字符。 这不同于多个 `REPLACE` 函数，因为每次使用都会替换所有相关字符。 
 
@@ -111,7 +111,7 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|点  |坐标 |  
+|Point  |坐标 |  
 |---------|--------- |
 |(137.4  72.3) |[137.4,72.3] |
 

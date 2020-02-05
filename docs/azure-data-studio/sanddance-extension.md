@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: e6576d383011a47eb963774f2834a854dec4416e
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212333"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>适用于 Azure Data Studio 的 SandDance（预览版）
@@ -27,7 +27,7 @@ Azure Data Studio 现在可为数据创建快速可视化效果。 当你尝试�
 SandDance 使用单位可视化效果，在数据库中的行与屏幕上的标记之间应用一对一映射。
 视图间的平滑动画转换有助于在与数据进行交互时维持上下文。
 
-## <a name="usage"></a>用法
+## <a name="usage"></a>使用情况
 
 ### <a name="view-csv-or-tsv-files"></a>查看 .csv 或 .tsv 文件
 这包括 SQL Server 2019 大数据群集中的本地文件或 HDFS 上的文件。
@@ -52,5 +52,5 @@ SandDance 使用单位可视化效果，在数据库中的行与屏幕上的标�
 
 azdata-sanddance 的初始版本
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 若要了解详细信息，请[访问 GitHub 存储库。](https://github.com/Microsoft/SandDance)

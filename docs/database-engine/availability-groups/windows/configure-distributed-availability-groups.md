@@ -11,10 +11,10 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952488"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>配置 Always On 分布式可用性组  
@@ -153,7 +153,7 @@ GO
 ```  
   
 ## <a name="create-distributed-availability-group-on-first-cluster"></a>在第一个群集上创建分布式可用性组  
- 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、`ag1` 和 `ag2`  。  
+ 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、**和**`ag1``ag2`。  
   
 ```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
@@ -301,7 +301,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
     FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
     WHERE drs.group_id = ag.group_id; 
     ```  
-    当 synchronization_state_desc 为 `SYNCHRONIZED` 且两个可用性组的 **end_of_log_lsn** 相同时，可用性组即可进行故障转移  。 
+    当 synchronization_state_desc 为 **且两个可用性组的**end_of_log_lsn`SYNCHRONIZED` 相同时，可用性组即可进行故障转移  。 
 
 1. 从主要可用性组故障转移到次要可用性组。 在托管次要可用性组的主要副本的 SQL Server 上运行以下命令。 
 

@@ -12,13 +12,13 @@ ms.assetid: e579d104-3307-4edd-8587-b14ecbc02ed9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6e18eff965ac406ffd764bbe01bd9bb1aff41437
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076712"
 ---
-# <a name="mssqlserver17084"></a>MSSQLSERVER_17084
+# <a name="mssqlserver_17084"></a>MSSQLSERVER_17084
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68076712"
 |符号名称|P3_ATOMIC_WITH_MISSING_OPTION|  
 |消息正文|BEGIN ATOMIC 语句的 WITH 子句必须为选项“%ls”指定一个值。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 BEGIN ATOMIC 语句的 WITH 子句没有为某一选项指定值。  
   
 ## <a name="user-action"></a>用户操作  

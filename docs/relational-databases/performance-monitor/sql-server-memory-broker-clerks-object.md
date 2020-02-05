@@ -13,10 +13,10 @@ ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: fff8aa7a2e37f66470798b2772ed00d0298708a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093413"
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQL Server，Memory Broker Clerk 对象
@@ -25,7 +25,7 @@ ms.locfileid: "68093413"
 
 下表介绍了 SQL Server **Memory Broker Clerk** 性能对象。
 
-|**SQL Server Memory Broker Clerk 计数器**|描述|  
+|**SQL Server Memory Broker Clerk 计数器**|说明|  
 |-------------|-----------------|  
 |**内部优势**|条目计数压力的内部内存值（毫秒/页/毫秒，乘以 100 亿并截断为整数）。|
 |**Memory Broker Clerk 大小**|Clerk 的大小（页数）。|

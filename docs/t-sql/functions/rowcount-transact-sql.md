@@ -22,10 +22,10 @@ ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5baec7bb0328f6765bc4d4e1a04993074ad62999
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843515"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73843515"
 
   返回受上一语句影响的行数。 如果行数大于 20 亿，请使用 [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md)。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73843515"
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以通过下列方式设置 @@ROWCOUNT 的值：  
   
 -   将 @@ROWCOUNT 设置为受影响或被读取的行的数目。 可以将行发送到客户端，也可以不发送。  
@@ -53,9 +53,9 @@ ms.locfileid: "73843515"
   
 -   将 @@ROWCOUNT 重置为 0 但不将该值返回到客户端。  
   
- 执行简单分配的语句始终将 @@ROWCOUNT 值设置为 1。 不将任何行发送到客户端。 这些语句的示例包括：SET @*local_variable*、RETURN、READTEXT 和在没有 SELECT GETDATE() 或 SELECT **'***Generic Text***'** 等查询语句的情况下选择。  
+ 执行简单分配的语句始终将 @@ROWCOUNT 值设置为 1。 不将任何行发送到客户端。 这些语句的示例如下：SET @local_variable、RETURN、READTEXT 以及不带查询 Select 语句，如 SELECT GETDATE() 或 SELECT 'Generic Text'  **** 。  
   
- 在查询中进行分配或使用 RETURN 的语句将 @@ROWCOUNT 值设置为受查询影响或由查询读取的行数，例如：SELECT @local_variable = c1 FROM t1  。  
+ 在查询中执行分配或使用 RETURN 的语句将 @@ROWCOUNT 值设置为受查询影响或由查询读取的行数，例如：SELECT @local_variable = c1 FROM t1  。  
   
  数据操作语言 (DML) 语句将 @@ROWCOUNT 值设置为受查询影响的行数，并将该值返回到客户端。 DML 语句不会将任何行发送到客户端。  
   

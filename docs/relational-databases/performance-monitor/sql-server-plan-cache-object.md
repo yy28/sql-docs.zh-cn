@@ -14,10 +14,10 @@ ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a181919a40ce2e53c9fef9887f5c7ec6ff93fc5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130847"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server Plan Cache 对象
@@ -26,17 +26,17 @@ ms.locfileid: "68130847"
   
  下表介绍了 **SQLServer:Plan Cache**计数器。  
   
-|SQL Server Plan Cache 计数器|描述|  
+|SQL Server Plan Cache 计数器|说明|  
 |------------------------------------|-----------------|  
 |**Cache Hit Ratio**|高速缓存命中次数和查找次数的比率。|  
-|**Cache Hit Ratio Base**|仅限内部使用。| 
+|**Cache Hit Ratio Base**|仅供内部使用。| 
 |**Cache Object Counts**|高速缓存中高速缓存的对象数。|  
 |**Cache Pages**|高速缓存对象所使用的 8 (KB) 页的数目。|  
 |**Cache Objects in use**|正在使用的缓存对象数。|  
   
  对象中的每个计数器均包含以下实例：  
   
-|Plan Cache 实例|描述|  
+|Plan Cache 实例|说明|  
 |-------------------------|-----------------|  
 |**_Total**|所有类型的缓存实例的信息。|  
 |**Sql 计划**|由一个临时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询（包括自动参数化查询）生成的查询计划，或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_prepare **或** sp_cursorprepare **预备的**语句生成的查询计划。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将临时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的计划存入缓存，以便将来需要执行相同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时再次使用。 用户参数化的查询（即使未显式准备）也作为准备好的 SQL 计划监视。|  

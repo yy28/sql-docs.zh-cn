@@ -14,13 +14,13 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 91bcaba1008ee0ca67de6562d681b81bcc5641e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048547"
 ---
-# <a name="point"></a>点
+# <a name="point"></a>Point
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空间数据中， **Point** 是表示单个位置的零维对象，可能包含 Z（仰角）和 M（度量）值。  
   

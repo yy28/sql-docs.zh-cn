@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c7fed197491d26c4aaad4b4d09ba480d2d7eb82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123603"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>确定性函数和不确定性函数
@@ -48,9 +48,9 @@ ms.locfileid: "68123603"
 |ATN2|FLOOR|SIN|  
 |CEILING|ISNULL|SQUARE|  
 |COALESCE|ISNUMERIC|SQRT|  
-|COS|LOG|TAN|  
-|COT|LOG10|YEAR|  
-|DATALENGTH|MONTH||  
+|COS|日志|TAN|  
+|COT|LOG10|年|  
+|DATALENGTH|月||  
 |DATEADD|NULLIF||  
   
  下列函数并非始终是确定性函数，但是在以确定性方式指定后，可用于索引视图或计算列的索引。  

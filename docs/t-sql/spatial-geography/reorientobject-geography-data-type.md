@@ -18,10 +18,10 @@ ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9c4660fa212a85f3bba5812d6cc990f9c02c5539
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101755"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject（geography 数据类型）
@@ -40,14 +40,14 @@ ms.locfileid: "68101755"
   
 ## <a name="arguments"></a>参数  
 _地理_  
-对其调用 `ReorientObject()` 的另一个 geography 实例  。  
+对其调用  **的另一个 geography 实例**`ReorientObject()`。  
   
 ## <a name="return-value"></a>返回值  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
-CLR 返回类型：**SqlGeography**  
+CLR 返回类型：SqlGeography   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 此方法更改 GeometryCollection  中所有 Polygons  的环方向，但不删除或更改给定集合中的任何 Points  或 LineStrings  。  
   
 如果将 GeometryCollection  传递给此方法，则会重新调整集合中的每个实例，但不会重新调整整个集合。  

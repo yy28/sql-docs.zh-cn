@@ -19,10 +19,10 @@ ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 02cb2a76fdf24837546e8fc29326db79c8b2c977
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294906"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>以编程方式连接数据流组件
@@ -33,7 +33,7 @@ ms.locfileid: "71294906"
   将组件添加到数据流任务后，连接这些组件以创建表示从源通过转换到目标的数据流的执行树。 使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 对象连接数据流中的组件。  
   
 ## <a name="creating-a-path"></a>创建路径  
- 调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> 属性的新方法以创建新路径并将其添加到数据流任务中的路径集合。 此方法返回新的断开连接的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 对象，然后使用该对象连接两个组件。  
+ 调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> 属性的新方法以创建新路径并将其添加到数据流任务中的路径集合。 此方法返回新的断开连接的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 对象，然后使用该对象连接两个组件。  
   
  调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100.AttachPathAndPropagateNotifications%2A> 方法连接路径并通知组件参与已连接的路径。 此方法接受上游组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 和下游组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> 作为参数。 默认情况下，对组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 方法的调用为具有输入的组件创建单个输入，为具有输出的组件创建单个输出。 下面的示例使用此默认的源输出和目标输入。  
   

@@ -19,10 +19,10 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952469"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
@@ -97,7 +97,7 @@ ms.locfileid: "75952469"
      指定当“审核目标”  是文件时，要将审核数据写入的文件夹所在的位置。  
   
      **省略号 (...)**  
-     打开“定位文件夹 - server\_name”对话框，以指定文件路径或创建要写入审核文件的文件夹   。  
+     打开“定位文件夹 - server**name”对话框，以指定文件路径或创建要写入审核文件的文件夹** _\__ 。  
   
      **审核文件最大限制：**  
      **最大滚动更新文件数**  

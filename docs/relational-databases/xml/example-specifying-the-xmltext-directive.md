@@ -1,5 +1,5 @@
 ---
-title: 例如：指定 XMLTEXT 指令 | Microsoft Docs
+title: 示例：指定 XMLTEXT 指令 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006674"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>例如：指定 XMLTEXT 指令
+# <a name="example-specifying-the-xmltext-directive"></a>示例：指定 XMLTEXT 指令
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   此示例说明如何在使用 EXPLICIT 模式的 **语句中使用** XMLTEXT `SELECT` 指令处理溢出列中的数据。  
   
@@ -49,9 +49,9 @@ FOR XML EXPLICIT;
   
  在所得到的 XML 文档中：  
   
--   因为 `Overflow` 列没有指定 *AttributeName*，但却指定了 `xmltext` 指令，所以 <`overflow`> 元素中的属性被追加到封闭的 <`Parent`> 元素的属性列表中。  
+-   因为 *列没有指定*AttributeName`Overflow`，但却指定了 `xmltext` 指令，所以 <`overflow`> 元素中的属性被追加到封闭的 <`Parent`> 元素的属性列表中。  
   
--   因为 <`xmltext`> 元素中的 `PersonID` 属性与相同元素级上检索到的 `PersonID` 属性冲突，所以忽略 <`xmltext`> 元素中的此属性，即使 `PersonID` 为 NULL 也是如此。 通常情况下，属性将覆盖溢出中具有相同名称的属性。  
+-   因为 <`PersonID`> 元素中的 `xmltext` 属性与相同元素级上检索到的 `PersonID` 属性冲突，所以忽略 <`xmltext`> 元素中的此属性，即使 `PersonID` 为 NULL 也是如此。 通常情况下，属性将覆盖溢出中具有相同名称的属性。  
   
  结果如下：  
   
@@ -97,7 +97,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- 如果使用 `xmltext` 指令指定了 *AttributeName*，则 <`overflow`> 元素的属性将作为封闭的 <`Parent`> 元素的子元素属性添加。 为 *AttributeName* 指定的名称将成为子元素的名称。  
+ 如果使用 *指令指定了*AttributeName`xmltext`，则 <`overflow`> 元素的属性将作为封闭的 <`Parent`> 元素的子元素属性添加。 为 *AttributeName* 指定的名称将成为子元素的名称。  
   
  在此查询中，将 *AttributeName* <`overflow`> 与 `xmltext` 指令一起指定 *：*  
   

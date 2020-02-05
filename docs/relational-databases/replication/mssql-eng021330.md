@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: e2bb2e21-62a7-4689-b68b-bdfba3fdd985
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0c72354dfb7babbc3a9b3cd3cb5ebef9f8eb8311
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8b9865059820acdcbeae14c0295d3c84b5545486
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770342"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288011"
 ---
-# <a name="mssqleng021330"></a>MSSQL_ENG021330
+# <a name="mssql_eng021330"></a>MSSQL_ENG021330
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68770342"
 |符号名称||  
 |消息正文|无法在复制工作目录下创建子目录。(%ls)|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  当手动初始化订阅而且创建存储复制脚本的目录有问题时，会出现此错误。 权限问题可导致此错误：在不使用快照的情况下初始化订阅时，在发布服务器上运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户对分发服务器上的快照文件夹必须具有写权限。  
   
 ## <a name="user-action"></a>用户操作  

@@ -1,5 +1,5 @@
 ---
-title: 例如：检索二进制数据 | Microsoft Docs
+title: 示例：检索二进制数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/23/2019
 ms.prod: sql
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
 ms.openlocfilehash: c168c76d33ac90bc658fad86404aea45b322d037
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71199468"
 ---
-# <a name="example-retrieving-binary-data"></a>例如：检索二进制数据
+# <a name="example-retrieving-binary-data"></a>示例：检索二进制数据
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 

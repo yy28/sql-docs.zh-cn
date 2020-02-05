@@ -18,10 +18,10 @@ ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8880c5287d65e91ccca3c223d93c7b7b070a8df3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107748"
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals（geometry 数据类型）
@@ -38,18 +38,18 @@ ms.locfileid: "68107748"
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 将与调用 `STEquals()` 的实例进行比较的另一个 geometry 实例  。  
+ 将与调用  **的实例进行比较的另一个 geometry 实例**`STEquals()`。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：**SqlBoolean**  
+ CLR 返回类型：SqlBoolean   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用 `STGeomFromText()` 创建两个等效但又不完全相等的 `geometry` 实例，并使用 `STEquals()` 测试它们的等效性。  
+ 下面的示例使用 `geometry` 创建两个等效但又不完全相等的 `STGeomFromText()` 实例，并使用 `STEquals()` 测试它们的等效性。  
   
 ```  
 DECLARE @g geometry  

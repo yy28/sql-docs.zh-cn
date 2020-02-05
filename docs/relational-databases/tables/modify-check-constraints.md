@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0aeeeab2e90ebd90068be44f817cd6bd65af061
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907268"
 ---
 # <a name="modify-check-constraints"></a>修改 CHECK 约束
@@ -59,7 +59,7 @@ ms.locfileid: "72907268"
   
 4.  完成下表中的相应操作：  
   
-    |若要|需要遵循的步骤|  
+    |目标|需要遵循的步骤|  
     |--------|------------------------|  
     |编辑约束表达式|在 **“表达式”** 字段中键入新的表达式。|  
     |重命名约束|在 **“名称”** 字段中键入新的名称。|  
@@ -70,7 +70,7 @@ ms.locfileid: "72907268"
     > [!NOTE]  
     >  对于 CHECK 约束，有些数据库具有不同的功能。  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
 6.  在“文件”  菜单上，单击“保存”  以保存表名  。  
 

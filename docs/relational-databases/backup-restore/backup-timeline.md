@@ -16,10 +16,10 @@ ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 30bf006998ac543b732b4aecac97280f07d36a99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68081427"
 ---
 # <a name="backup-timeline"></a>备份时间线
@@ -33,10 +33,10 @@ ms.locfileid: "68081427"
   
  **“特定日期和时间”** 允许您停止在所选的特定日期和时间上的还原。 时间线展现了围绕所选日期和时间的 24 小时中执行的备份操作。  
   
- **日期**  
+ **Date**  
  输入一个日期或者从下拉列表中选择一个日期。  
   
- **Time**  
+ **时间**  
  输入或选择一个日期以便为还原停止指定特定的时间点。  
   
  **时间线间隔**  

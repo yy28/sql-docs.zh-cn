@@ -18,10 +18,10 @@ ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 19572f60d1b13dd7b9e1e03c6d2b75f707962569
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67952254"
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText（geography 数据类型）
@@ -46,11 +46,11 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
- OGC 类型：**LineString**  
+ OGC 类型：LineString   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果输入的格式不正确，此方法将引发 FormatException  。  
   
 ## <a name="examples"></a>示例  

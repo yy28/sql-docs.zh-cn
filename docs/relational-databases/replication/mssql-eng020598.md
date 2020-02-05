@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1c3032f2-23d1-4ead-94ee-16ac4d75cd0c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1c64d157b093483303b93ed1e383e39d31fe9677
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c65e6d67890f1f2a3bab91a6d61abcddd0f51a0e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770374"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286837"
 ---
-# <a name="mssqleng020598"></a>MSSQL_ENG020598
+# <a name="mssql_eng020598"></a>MSSQL_ENG020598
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68770374"
 |符号名称||  
 |消息正文|应用复制的命令时在订阅服务器上找不到该行。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  如果分发代理尝试更新订阅服务器上的行，但该行已删除或该行的主键已更改，则事务性复制中会出现此错误。 默认情况下，事务发布的订阅服务器应视为只读，因为更改不会传播回发布服务器。 对于事务性复制，只有使用可更新订阅或对等复制，才能在订阅服务器上进行用户更改。 有关这些选项的信息，请参阅 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md) 和 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
 ## <a name="user-action"></a>用户操作  

@@ -17,10 +17,10 @@ ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e49ef1ad379f675ca457f8cd9c82a5e4ecc3fd04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107136"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
@@ -80,7 +80,7 @@ ms.locfileid: "68107136"
  联机索引操作使用行版本控制来使索引操作不受其他事务所做的修改的影响。 这就不需要对已经读取的行请求共享锁。 在联机索引操作期间，并发的用户更新和删除操作需要一定的空间以用于 **tempdb**中的版本记录。 有关详细信息，请参阅 [联机索引操作](../../relational-databases/indexes/perform-index-operations-online.md) 。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
+ [索引磁盘空间示例](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [索引操作的事务日志磁盘空间](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

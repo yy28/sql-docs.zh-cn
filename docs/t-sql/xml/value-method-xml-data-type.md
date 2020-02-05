@@ -15,10 +15,10 @@ ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9224e9050ecf01255151e5ec8e11ecaf282d7387
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051225"
 ---
 # <a name="value-method-xml-data-type"></a>value() 方法（xml 数据类型）
@@ -42,7 +42,7 @@ value (XQuery, SQLType)
  SQLType   
  要返回的首选 SQL 类型（一种字符串文字）。 此方法的返回类型与 SQLType 参数匹配  。 SQLType 不能为 xml 数据类型、公共语言运行时 (CLR) 用户定义类型、image、text、ntext 或 sql_variant 数据类型       。 SQLType 可以是用户定义数据类型 SQL  。  
   
- value() 方法隐式使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT 运算符并尝试将 XQuery 表达式（序列化字符串表示形式）的结果从 XSD 类型转换为由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 转换指定的相应 SQL 类型  。 有关 CONVERT 的类型强制转换规则的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
+ value() 方法隐式使用 **CONVERT 运算符并尝试将 XQuery 表达式（序列化字符串表示形式）的结果从 XSD 类型转换为由** 转换指定的相应 SQL 类型[!INCLUDE[tsql](../../includes/tsql-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)]。 有关 CONVERT 的类型强制转换规则的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
 > [!NOTE]  
 >  由于性能原因，不在谓词中使用 value() 方法与关系值进行比较，而改用具有 sql:column() 的 exist()    。 如下面的示例 D 所示。  
@@ -73,7 +73,7 @@ SELECT @ProdID
  即使 XML 实例中仅有一个 `ProductID` 属性，静态类型化规则也会要求显式指定路径表达式返回 1。 因此，在路径表达式结尾处指定了另一个 `[1]`。 有关静态类型化的详细信息，请参阅 [XQuery 与静态类型化](../../xquery/xquery-and-static-typing.md)。  
   
 ### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. 使用 value() 方法从 xml 类型的列中检索值  
- 根据 `AdventureWorks` 数据库中的 xml 类型列 (`CatalogDescription`) 指定以下查询  。 查询从列中存储的每个 XML 实例中检索 `ProductModelID` 属性值。  
+ 根据  **数据库中的 xml 类型列 (** ) 指定以下查询`CatalogDescription``AdventureWorks`。 查询从列中存储的每个 XML 实例中检索 `ProductModelID` 属性值。  
   
 ```  
 SELECT CatalogDescription.value('             

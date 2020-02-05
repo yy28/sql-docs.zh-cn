@@ -11,10 +11,10 @@ ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4a84025efefa397cd1f33a706073faceb0ad70ae
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292132"
 ---
 # <a name="request-log"></a>请求日志
@@ -46,19 +46,19 @@ ms.locfileid: "71292132"
     >  单击 **“预览”** 还将打开 **“预览”** 对话框。 有关此对话框的详细信息，请参阅 [Preview](../../integration-services/data-flow/preview.md)。  
   
 ## <a name="options"></a>选项  
- **Time**  
+ **时间**  
  显示所记录事件的时间。  
   
- **类型**  
+ 类型   
  显示所记录事件的类型。 下表列出了可能的事件类型。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |S|成功消息。|  
 |E|错误消息|  
 |W|警告消息。|  
 |I|信息性消息。|  
-|仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，|操作已中止。|  
+|A|操作已中止。|  
   
  **消息**  
  显示与记录事件相关联的消息文本。  

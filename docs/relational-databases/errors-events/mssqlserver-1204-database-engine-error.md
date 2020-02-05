@@ -12,13 +12,13 @@ ms.assetid: de6ece78-79de-484d-9224-ca0f7645815f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 50087e0397238ae0164bbb31cf8cddbdb5996c21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116169"
 ---
-# <a name="mssqlserver1204"></a>MSSQLSERVER_1204
+# <a name="mssqlserver_1204"></a>MSSQLSERVER_1204
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,10 +32,10 @@ ms.locfileid: "68116169"
 |符号名称|LK_OUTOF|  
 |消息正文|SQL Server 数据库引擎的实例此时无法获得 LOCK 资源。 请在活动用户较少时重新运行该语句。 请询问数据库管理员，检查此实例的锁定和内存配置，或检查是否有长时间运行的事务。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法获得锁资源。 这可能是由以下任一原因导致的：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法从操作系统分配更多的内存，因为其他进程正在使用它，或者因为服务器在配置了“最大服务器内存”选项的情况下运行。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法从操作系统分配更多的内存，因为其他进程正在使用它，或者因为服务器在配置了“最大服务器内存”  选项的情况下运行。  
   
 -   锁管理器使用的内存不会超过可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的内存的 60%。  
   

@@ -19,10 +19,10 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa5d978126807e1fb83c08a1d1b8d9d7b74d8368
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74687166"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 连接管理器
@@ -132,7 +132,7 @@ OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编�
 
 然后为 OLE DB 连接管理器配置 OLE DB 提供程序。 完成此操作的方法有两种：
     
-- **在设计时进行配置。** 在 SSIS 设计器中，双击 OLE DB 连接管理器以打开“连接管理器”窗口  。 在“提供程序”下拉列表中，选择[适用于 SQL Server 的 Microsoft OLE DB 驱动程序](https://go.microsoft.com/fwlink/?linkid=871294)   。
+- **在设计时进行配置。** 在 SSIS 设计器中，双击 OLE DB 连接管理器以打开“连接管理器”窗口  。 在“提供程序”下拉列表中，选择**适用于 SQL Server 的 Microsoft OLE DB 驱动程序**[  ](https://go.microsoft.com/fwlink/?linkid=871294)。
     > [!NOTE]
     >  下拉列表中的其他提供程序可能不支持托管标识身份验证。
     
@@ -145,7 +145,7 @@ OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编�
     
 - **在设计时进行配置。** 在 SSIS 设计器中，右键单击 OLE DB 连接管理器，然后选择“属性”  。 将属性 `ConnectUsingManagedIdentity` 更新为 `True`。
     > [!NOTE]
-    >  目前，当你在 SSIS 设计器或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 中运行 SSIS 包时，连接管理器属性 `ConnectUsingManagedIdentity` 不生效（表明托管标识身份验证不起作用）。
+    >  目前，当你在 SSIS 设计器或 `ConnectUsingManagedIdentity` SQL Server 中运行 SSIS 包时，连接管理器属性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不生效（表明托管标识身份验证不起作用）。
 
 - **在运行时进行配置。** 通过 SSMS 或“执行 SQL 包”活动  运行包时，找到 OLE DB 连接管理器并将其属性 `ConnectUsingManagedIdentity` 更新为 `True`。
     > [!NOTE]

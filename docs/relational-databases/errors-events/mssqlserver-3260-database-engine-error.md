@@ -12,13 +12,13 @@ ms.assetid: ed62f86d-90cb-4b04-8bc5-43e0b9ba6141
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4b523cd8519bbbb6affce403ca14695a4c18a603
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027943"
 ---
-# <a name="mssqlserver3260"></a>MSSQLSERVER_3260
+# <a name="mssqlserver_3260"></a>MSSQLSERVER_3260
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,9 +32,9 @@ ms.locfileid: "68027943"
 |符号名称|DMPIO_BUFFER_OVERFLOW|  
 |消息正文|内部缓冲区已满。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 服务器的内存不足。  
   
 ## <a name="user-action"></a>用户操作  
-重试该操作。 如果该错误再次出现，请与您的产品支持提供商联系。  
+请重试操作即可。 如果该错误再次出现，请与您的产品支持提供商联系。  
   

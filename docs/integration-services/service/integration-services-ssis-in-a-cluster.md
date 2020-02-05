@@ -11,10 +11,10 @@ ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9203423267f68137e11203be60ffa4d0e0c3e41
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296899"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>群集中的 Integration Services (SSIS)
@@ -39,7 +39,7 @@ ms.locfileid: "71296899"
   
 -   在不同于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的资源组中配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务时，不能使用客户端计算机上的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来管理存储在 msdb 数据库中的包。 在这个双跃点方案中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不能委托凭据。  
   
--   如果群集内有多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源组包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，则故障转移可能会导致意外的结果。 请考虑下面的方案。 组 1 运行于节点 A 上，其中包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。组 2 运行于节点 B 上，其中也包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。组 2 故障转移到节点 A。由于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务是单实例服务，因此尝试在节点 A 上启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的另一个实例时将失败。 尝试故障转移到节点 A 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务是否也失败取决于组 2 中 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置。 如果 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为影响资源组中的其他服务，那么，由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务失败，因此正在故障转移的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务也将失败。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务配置为不影响资源组中的其他服务，则该服务将能够故障转移到节点 A。除非组 2 中的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为不影响资源组中的其他服务，否则，当正在故障转移的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务失败时，正在故障转移到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务也将失败。  
+-   如果群集内有多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源组包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，则故障转移可能会导致意外的结果。 请考虑以下场景。 组 1 运行于节点 A 上，其中包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。组 2 运行于节点 B 上，其中也包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。组 2 故障转移到节点 A。由于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务是单实例服务，因此尝试在节点 A 上启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的另一个实例时将失败。 尝试故障转移到节点 A 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务是否也失败取决于组 2 中 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置。 如果 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为影响资源组中的其他服务，那么，由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务失败，因此正在故障转移的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务也将失败。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务配置为不影响资源组中的其他服务，则该服务将能够故障转移到节点 A。除非组 2 中的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为不影响资源组中的其他服务，否则，当正在故障转移的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务失败时，正在故障转移到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务也将失败。  
 
 ## <a name="configure-the-service-as-a-cluster-resource"></a>将服务配置为群集资源
 对于那些认为将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为群集资源所带来的优点大于缺点的客户，本节包含必要的配置说明。 但是， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不建议将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为群集资源。  
@@ -102,15 +102,15 @@ ms.locfileid: "71296899"
   
 4.  在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“资源”** 。  
   
-5.  在“资源向导”的“新资源”页上，键入名称并选择“一般服务”作为“服务类型”    。 不要更改 **“组”** 的值。 单击“下一步”  。  
+5.  在“资源向导”的“新资源”页上，键入名称并选择“一般服务”作为“服务类型”    。 不要更改 **“组”** 的值。 单击“下一步”。   
   
-6.  在 **“可能的所有者”** 页上，将群集的节点作为可能的资源所有者来添加或删除。 单击“下一步”  。  
+6.  在 **“可能的所有者”** 页上，将群集的节点作为可能的资源所有者来添加或删除。 单击“下一步”。   
   
 7.  若要添加依赖关系，请在 **“依赖关系”** 页上的 **“可用资源”** 下选择一项资源，然后单击 **“添加”** 。 对于故障转移情况， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和用来存储 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的共享磁盘应在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 联机前重新联机。 在选择依赖关系之后，单击 **“下一步”** 。  
   
      有关详细信息，请参阅 [Add Dependencies to a SQL Server Resource](../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)。  
   
-8.  在“一般服务参数”  页上，输入 **MsDtsServer** 作为服务名。 单击“下一步”  。  
+8.  在“一般服务参数”  页上，输入 **MsDtsServer** 作为服务名。 单击“下一步”。   
   
 9. 在 **“注册表复制”** 页上单击 **“添加”** ，以添加用来标识 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件位置的注册表项。 此文件必须位于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务所在资源组中的共享磁盘上。  
   

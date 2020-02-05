@@ -23,10 +23,10 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072381"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68072381"
 
   更新使用 sp_configure 系统存储过程更改的配置选项的当前已配置值（sp_configure 结果集中的 config_value 列）    。 由于有些配置选项需要服务器停止并重新启动才能更新当前运行的值，因此 RECONFIGURE 并不总是为已更改的配置值更新当前运行的值（sp_configure 结果集中的 run_value 列）   。    
     
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>语法    
     
@@ -52,7 +52,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  使用 WITH OVERRIDE 选项几乎可以重新配置任何配置选项，但仍然要避免某些灾难性错误。 例如，不能使用大于max server memory 配置选项中指定的值来配置 min server memory 配置选项   。
       
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>备注    
  sp_configure 不接受超出所记录的各配置选项值有效范围的新配置选项值  。    
     
  不允许在显式或隐式事务中使用 RECONFIGURE。 同时对多个选项进行重新配置时，如果任意重新配置操作失败，所有重新配置操作都将无效。    

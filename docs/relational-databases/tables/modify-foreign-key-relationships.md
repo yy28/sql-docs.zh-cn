@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139602"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外键关系
@@ -72,7 +72,7 @@ ms.locfileid: "68139602"
      **选定的关系**  
      列出现有的关系。 选择一个关系将在右侧的网格中显示其属性。 如果该列表为空，则表示尚未为该表定义关系。  
   
-     **“添加”**  
+     **添加**  
      创建新关系。 必须先设置 **“表和列规范”** ，之后该关系才会生效。  
   
      **删除**  
@@ -103,9 +103,9 @@ ms.locfileid: "68139602"
      展开此项可显示“名称”  和“说明”  的属性字段。  
   
      **名称**  
-     显示关系的名称。 在创建新关系时，将基于 **表设计器**的活动窗口中的表为其指定默认名称。 您可以随时更改该名称。  
+     显示关系的名称。 在创建新关系时，将基于 **表设计器**的活动窗口中的表为其指定默认名称。 可随时更改名称。  
   
-     **Description**  
+     **说明**  
      描述该关系。 若要编写更详细的说明，请单击“说明”  ，再单击属性字段右侧显示的省略号 **(...)** 。 这可以提供一个更大的文本编写区域。  
   
      **表设计器类别**  

@@ -25,10 +25,10 @@ ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 3d353a6c11d19f96f590e11aa5ebe48677c3cd84
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211238"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "70211238"
 
 显示跟踪标志的状态。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -61,16 +61,16 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>结果集  
 下表对结果集中的信息进行了说明。
   
-|列名|描述|  
+|列名称|说明|  
 |---|---|
 |**TraceFlag**|跟踪标志的名称|  
-|**“状态”**|表示跟踪标志是设置为 ON 还是 OFF，是全局启用的还是针对会话启用的。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
+|**Status**|表示跟踪标志是设置为 ON 还是 OFF，是全局启用的还是针对会话启用的。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |**全局**|表示跟踪标志是否是全局设置的<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**会话**|表示跟踪标志是否是针对会话设置的<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS 将针对跟踪标志号和状态各返回一列。 这表示跟踪标志为 ON (1) 还是 OFF (0)。 跟踪标志号的列标题为 Global Trace Flag  或 Session Trace Flag  ，具体取决于要检查全局跟踪标志还是会话跟踪标志的状态。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，有两种跟踪标志：会话和全局。 会话跟踪标志对某个连接是有效的，只对该连接可见。 全局跟踪标志在服务器级别上进行设置，对服务器上的每一个连接都可见。
   
 ## <a name="permissions"></a>权限  

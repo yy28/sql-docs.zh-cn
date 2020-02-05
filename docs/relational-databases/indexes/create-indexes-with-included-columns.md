@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c3ec437ccaaf3280be800ea6f80ac6ad38a0a1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024915"
 ---
 # <a name="create-indexes-with-included-columns"></a>创建带有包含列的索引
@@ -88,15 +88,15 @@ ms.locfileid: "68024915"
   
 6.  在“索引键列”选项卡下，单击“添加…”   。  
   
-7.  在“从 _table\_name_ 中选择列”  对话框中，选中要添加到索引的一个或多个表列的复选框。  
+7.  在“从 **table**name _中选择列”\__ 对话框中，选中要添加到索引的一个或多个表列的复选框。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 9. 在“包含性列”选项卡下，单击“添加…”   。  
   
-10. 在“从 _table\_name_ 中选择列”  对话框中，选中要作为非键列添加到索引的一个或多个表列的复选框。  
+10. 在“从 **table**name _中选择列”\__ 对话框中，选中要作为非键列添加到索引的一个或多个表列的复选框。  
   
-11. 单击“确定”  。  
+11. 单击“确定”。   
   
 12. 在 **“新建索引”** 对话框中，单击 **“确定”** 。  
   

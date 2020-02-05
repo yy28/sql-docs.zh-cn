@@ -24,10 +24,10 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73637958"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
@@ -80,7 +80,7 @@ ms.locfileid: "73637958"
  不要将缓冲区大小增加到开始对磁盘进行分页的点。 与未经过优化的缓冲区大小相比，对磁盘进行分页对性能的阻碍作用更大。 若要确定是否在进行分页，可监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (MMC) 的性能管理单元中的“Buffers spooled”性能计数器。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>将包配置为支持并行执行  
- 并行执行能改善具有多个物理或逻辑处理器的计算机的性能。 为了支持并行执行包中的不同任务，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用两种属性：MaxConcurrentExecutables  和 EngineThreads  。  
+ 并行执行能改善具有多个物理或逻辑处理器的计算机的性能。 为了支持在包中并行执行不同的任务， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用两个属性： **MaxConcurrentExecutables** 和 **EngineThreads**。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 属性  
  **MaxConcurrentExecutables** 属性是包本身的一个属性。 此属性定义可同时运行的任务的数量。 默认值为 -1，表示物理或逻辑处理器的个数加 2。  
@@ -98,7 +98,7 @@ ms.locfileid: "73637958"
 ## <a name="configuring-individual-data-flow-components"></a>配置单个数据流组件  
  若要配置单个数据流组件以优化性能，可以按照某些通用指导原则进行操作。 同时还存在针对各种类型的数据流组件的特定指导原则：源数据流组件、转换数据流组件和目标数据流组件等。  
   
-### <a name="general-guidelines"></a>通用指导原则  
+### <a name="general-guidelines"></a>一般性指导  
  无论采用何种数据流组件，为了改善性能您应该遵循下面两个通用指导原则：优化查询和避免不必要的字符串。  
   
 #### <a name="optimize-queries"></a>优化查询  
@@ -151,9 +151,9 @@ ms.locfileid: "73637958"
   
  通常，渐变维度转换中最慢的组件是一次对单行执行 UPDATE 的 OLE DB 命令转换。 因此，改善渐变维度转换性能最有效的方法是替换 OLE DB 命令转换。 可以用目标组件来替换这些转换，目标组件将要更新的所有行保存到一个临时表中。 然后，可以添加执行 SQL 任务，该任务同时对所有行执行基于单集的 Transact-SQL UPDATE。  
   
- 高级用户可以为渐变维度处理设计自定义数据流，此数据流将针对大型维度进行优化。 有关此方法的讨论和示例，请参阅白皮书 [Project REAL：Business Intelligence ETL 设计实践](https://www.microsoft.com/download/details.aspx?id=14582)中的“唯一维度方案”一节。  
+ 高级用户可以为渐变维度处理设计自定义数据流，此数据流将针对大型维度进行优化。 有关此方法的讨论和示例，请参阅白皮书 [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)（Project REAL：Business Intelligence ETL 设计实践）中的章节 "Unique dimension scenario"（唯一维度方案）。  
   
-### <a name="destinations"></a>目标  
+### <a name="destinations"></a>Destinations  
  若要改善目标的性能，请考虑使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标并测试目标的性能。  
   
 #### <a name="sql-server-destination"></a>SQL Server 目标  
@@ -174,9 +174,9 @@ ms.locfileid: "73637958"
 ## <a name="related-content"></a>相关内容  
  **文章和博客文章**  
   
--   technet.microsoft.com 上的技术文章：[SQL Server 2005 Integration Services:性能策略](https://go.microsoft.com/fwlink/?LinkId=98899)  
+-   technet.microsoft.com 上的技术文章 [SQL Server 2005 Integration Services：性能策略](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
--   technet.microsoft.com 上的技术文章：[Integration Services:性能优化技术](https://go.microsoft.com/fwlink/?LinkId=98900)  
+-   technet.microsoft.com 上的技术文章 [Integration Services：性能优化技术](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
 -   SQLCAT 针对 BI 和 Analytics 的指南中的技术文章[通过将同步转换拆分为多个任务来增加管道的吞吐量](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf) 
   
@@ -206,6 +206,6 @@ ms.locfileid: "73637958"
   
 ## <a name="see-also"></a>另请参阅  
  [包开发的故障排除工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [对包执行进行故障排除的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

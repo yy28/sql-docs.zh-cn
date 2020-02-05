@@ -25,18 +25,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75e3664517ac0ce66f2a56499286303df81513ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094684"
 ---
-# <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
+# <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 如果该错误导致执行了 TRY…CATCH 构造的 CATCH 块，此函数返回出现错误的存储过程或触发器的名称。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,14 +54,14 @@ ERROR_PROCEDURE ( )
   
 在 CATCH 块作用域外调用时，`ERROR_PROCEDURE` 返回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `ERROR_PROCEDURE` 支持在 CATCH 块作用域内的任意位置调用。  
   
 无论 `ERROR_PROCEDURE` 运行多少次或在 `CATCH` 块作用域内的任意位置运行，它都将返回出现错误的存储过程或触发器的名称。 这与 @@ERROR 之类的函数不同，后者只在导致错误的语句的后一个语句中返回错误号。  
    
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
-### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_PROCEDURE  
+### <a name="a-using-error_procedure-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_PROCEDURE  
 下面的示例显示生成被零除错误的存储过程。 `ERROR_PROCEDURE` 返回出现错误的存储过程的名称。  
   
 ```  
@@ -98,7 +98,7 @@ usp_ExampleProc
 
 ```  
   
-### <a name="b-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>B. 通过其他错误处理工具在 CATCH 块中使用 ERROR_PROCEDURE。  
+### <a name="b-using-error_procedure-in-a-catch-block-with-other-error-handling-tools"></a>B. 通过其他错误处理工具在 CATCH 块中使用 ERROR_PROCEDURE。  
 下面的示例显示生成被零除错误的存储过程。 除了返回出现错误的存储过程的名称外，存储过程将返回有关此错误的信息。  
   
 ```  

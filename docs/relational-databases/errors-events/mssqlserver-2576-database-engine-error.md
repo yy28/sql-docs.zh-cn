@@ -12,13 +12,13 @@ ms.assetid: b727cc2f-c76c-46f8-bbbe-5e7a05a6eabf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7d7b080dacab0b3cac77eac962571f7a5deb7a04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023057"
 ---
-# <a name="mssqlserver2576"></a>MSSQLSERVER_2576
+# <a name="mssqlserver_2576"></a>MSSQLSERVER_2576
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68023057"
 |符号名称|DBCC_IAM_PARENT_PAGE_WAS_NOT_SEEN|  
 |消息正文|位于对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）中的上一个指针 IAM 页 P_ID2 指向了索引分配映射 (IAM) 页 P_ID1 ，但在扫描过程中检测不到该页。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 找不到索引分配映射 (IAM) 页或元数据条目，尽管对该页的引用作为上一页链接存在于 IAM 链中另一 IAM 页上。 如果 *P_ID1* 页是 (0:0)，则 IAM 页 *P_ID2* 是 IAM 链的开头，而且缺少 IAM 链的元数据条目。  
   
 ## <a name="user-action"></a>用户操作  

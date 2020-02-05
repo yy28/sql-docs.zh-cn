@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: c553e650dcbcfabc8ad2d18ce490221c0d2439ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054600"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 计划 Azure 中部署的 SSIS 包的执行
@@ -29,7 +29,7 @@ ms.locfileid: "68054600"
 
 如果使用 SSMS 来计划包，SSIS 会自动创建三个基于所选包和时间戳的名称命名的新数据工厂对象。 例如，如果 SSIS 包的名称为 MyPackage，SSMS 将创建与以下类似的新数据工厂对象  ：
 
-| Object | “属性” |
+| Object | 名称 |
 |---|---|
 | 管道 | Pipeline_MyPackage_2018-05-08T09_00_00Z  |
 | 执行 SSIS 包活动 | Activity_MyPackage_2018-05-08T09_00_00Z  |

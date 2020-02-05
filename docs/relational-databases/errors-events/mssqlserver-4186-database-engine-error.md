@@ -12,13 +12,13 @@ ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3efa12b744d331949fc0af18f555e603f18e33ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123099"
 ---
-# <a name="mssqlserver4186"></a>MSSQLSERVER_4186
+# <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68123099"
 |符号名称||  
 |消息正文|无法在 OUTPUT 子句中引用列 '%ls.%.*ls'，因为该列的定义中包含一个子查询或者引用一个执行用户或系统数据访问的函数。 默认情况下，如果函数未绑定到架构，则会认为该函数执行数据访问。 请考虑从列定义中删除子查询或函数，或者从 OUTPUT 子句中删除该列。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 为了防止出现不确定的行为，当某个列是通过下列方法之一定义时，OUTPUT 子句不能通过视图或内联表值函数引用该列：  
   
 -   子查询。  

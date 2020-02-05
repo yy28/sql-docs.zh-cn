@@ -19,18 +19,18 @@ ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: bc8173d8be0c5f5c3194667935e3cc7af4f1cca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930731"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-根据地理标记语言 (GML) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 子集中的给定表示形式构造 geography 实例  。
+根据地理标记语言 (GML) 的  **子集中的给定表示形式构造 geography 实例**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
   
-有关 GML 的详细信息，请参阅下面的开放地理空间信息联盟规范：[OGC 规范：地理标记语言](https://go.microsoft.com/fwlink/?LinkId=93629)
+有关 GML 的详细信息，请参阅以下开放地理空间信息联盟规范：[OGC 规范：地理标记语言](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例   。
   
@@ -51,9 +51,9 @@ GeomFromGml ( GML_input, SRID )
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果输入的格式不正确，此方法将引发 FormatException  。  
   
  如果输入包含对跖边缘，此方法将引发 ArgumentException  。  

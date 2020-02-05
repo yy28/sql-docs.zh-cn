@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 43086213ec4c13e6849a40a4013a99ffc9df3903
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907090"
 ---
 # <a name="page-compression-implementation"></a>页压缩的实现
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  本主题概述了 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是如何实现页压缩的。 此摘要提供了有助于你规划数据所需存储空间的基本信息。  
+  本主题概述了 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是如何实现页压缩的。 此摘要提供了有助于您规划数据所需存储空间的基本信息。  
   
  表、表分区、索引和索引分区的页压缩都是类似的。 以下针对表的页压缩的说明同样适用于所有对象类型的页压缩。 以下示例压缩的是字符串，但对于其他数据类型而言，前缀压缩和字典压缩的原理都是相同的。  
   

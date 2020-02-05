@@ -22,10 +22,10 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 65154f6e4ffd67a207db9a3b6c5044710249c1eb
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682053"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>精度、小数位数和长度 (Transact-SQL)
@@ -51,7 +51,7 @@ ms.locfileid: "71682053"
   
 操作数表达式由表达式 e1（精度为 p1，小数位数为 s1）和表达式 e2（精度为 p2，小数位数为 s2）来表示。 非 decimal 类型的任何表达式的精度和小数位数，是对此表达式数据类型定义的精度和小数位数  。 函数 max(a,b) 的涵义如下：取 "a" 和 "b" 中较大的值。 同样，min(a,b) 表示取 "a" 和 "b" 中较小的值。
   
-|运算|结果精度|结果小数位数 *|  
+|Operation|结果精度|结果小数位数 *|  
 |---|---|---|
 |e1 + e2|max(s1, s2) + max(p1-s1, p2-s2) + 1|max(s1, s2)|  
 |e1 - e2|max(s1, s2) + max(p1-s1, p2-s2) + 1|max(s1, s2)|  

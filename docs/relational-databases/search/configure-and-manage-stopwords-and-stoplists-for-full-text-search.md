@@ -19,15 +19,15 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 872f5207f673c5047475220b1da01a41678c1c6d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056142"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>为全文搜索配置和管理非索引字和非索引字表
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  为了精简全文检索，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一种机制，用于去掉那些经常出现但对搜索无益的字符串。 这些去掉的字符串称为“非索引字”  。 在索引创建期间，全文引擎将忽略全文检索中的非索引字。 也就是说全文查询将不搜索非索引字。  
+  为了精简全文检索， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一种机制，用于去掉那些经常出现但对搜索无益的字符串。 这些去掉的字符串称为“非索引字”  。 在索引创建期间，全文引擎将忽略全文检索中的非索引字。 也就是说全文查询将不搜索非索引字。  
    
 **非索引字**。 非索引字可以是特定语言中具有含义的单词。 例如，在英语中，诸如“a”、“and”、“is”和“the”之类的词将被排除在全文检索之外，这是因为已经知道它们对搜索没有用处。 非索引字也可以是没有语言含义的“令牌”  。  
 
@@ -97,7 +97,7 @@ ms.locfileid: "74056142"
   
 5.  在“ [全文非索引字表属性](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) ”对话框中：  
   
-    1.  在“操作”列表框中，选择以下操作之一  ：“添加非索引字”、“删除非索引字”、“删除所有非索引字”或“清除非索引字表”     。  
+    1.  在 **“操作”** 列表框中，选择下列操作之一： **“添加非索引字”** 、 **“删除非索引字”** 、 **“删除所有非索引字”** 或 **“清除非索引字表”** 。  
   
     2.  如果对选定的操作启用了 **“非索引字”** 文本框，请输入一个非索引字。 该非索引字必须是唯一的，也就是说，在针对所选语言的此非索引字表中还不存在该非索引字。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "74056142"
 |Instructions|1|  
 |are|2|  
 |applicable|3|  
-|实例部署到 Windows Azure 虚拟机 (VM) 中的|4|  
+|to|4|  
 |these|5|  
 |Adventure|6|  
 |Works|7|  

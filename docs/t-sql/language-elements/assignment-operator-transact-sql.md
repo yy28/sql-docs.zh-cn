@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b810edee811d1cd772cf7b4306b0bb4f5d29d41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223583"
 ---
 # <a name="-assignment-operator-transact-sql"></a>=（赋值运算符）(Transact-SQL)
@@ -36,7 +36,7 @@ DECLARE @MyCounter INT;
 SET @MyCounter = 1;  
 ```  
   
- 赋值运算符也能用于在列标题和定义列值的表达式之间建立联系。 以下示例显示列标题 `FirstColumnHeading` 和 `SecondColumnHeading`。 标题为 `FirstColumnHeading` 的列中，所有行均显示字符串 `xyz`。 然后，标题为`SecondColumnHeading` 的列中，列出来自 `Product` 表的每个产品 ID。  
+ 赋值运算符也能用于在列标题和定义列值的表达式之间建立联系。 以下示例显示列标题 `FirstColumnHeading` 和 `SecondColumnHeading`。 标题为 `xyz` 的列中，所有行均显示字符串 `FirstColumnHeading`。 然后，标题为`Product` 的列中，列出来自 `SecondColumnHeading` 表的每个产品 ID。  
   
 ```  
 -- Uses AdventureWorks  

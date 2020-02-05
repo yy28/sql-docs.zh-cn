@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c75cd206557547f55d47eec0a7aec52cc0069b71
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847508"
 ---
 # <a name="iservervirtualdevicesendcommand-vdi"></a>IServerVirtualDevice::SendCommand (VDI)
@@ -30,7 +30,7 @@ HRESULT IServerVirtualDevice::SendCommand (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>parameters
 
 *pCmd* 这是一个指向命令请求块的指针。 有关详细信息，请参阅“命令”。 CompletionFunction 字段必须设置为指向具有以下签名的函数地址：
 
@@ -42,14 +42,14 @@ void callbackFunction ( VDS_Command *pCmd);
 
 ## <a name="return-value"></a>返回值
 
-|返回值 | 解释 |
+|返回值 | 说明 |
 |---|---|
 | NOERROR | 此命令已成功排队等待应用到客户端。 |
 | VD_E_QUEUE_FULL | 设备队列已满。 |
 | VD_E_IO_ERROR | 设备处于 IO 错误状态。 |
 | VD_E_PROTOCOL | 设备不是活动的。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 如果尝试发送命令时出现错误，则会调用回调函数，并且命令缓冲区中的 completionCode 设置如下：
 

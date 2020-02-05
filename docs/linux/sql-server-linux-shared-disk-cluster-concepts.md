@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 81d283ba02ec62a2de8d3c8f0e56be8c55d58190
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032390"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>故障转移群集示例 - Linux 上的 SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "68032390"
 * 在 RHEL 中，群集层基于 Red Hat Enterprise Linux (RHEL) [HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)。 
 
     > [!NOTE] 
-    > 访问 Red Hat HA 加载项和文档需要订阅。 
+    > 需拥有订阅才能访问 Red Hat HA 加载项和文档。 
 
 * 在 SLES 中，群集层基于 SUSE Linux Enterprise [高可用性扩展 (HAE)](https://www.suse.com/products/highavailability)。
 
@@ -36,7 +36,7 @@ ms.locfileid: "68032390"
 
 RHEL HA 加载项和 SUSE HAE 都是基于 [Pacemaker](https://clusterlabs.org/) 构建的。
 
-如下图所示，存储将呈现给两台服务器。 群集组件（Corosync 和 Pacemaker）负责协调通信和资源管理。 其中一个服务器具有与存储资源和 SQL Server 的活动连接。 当 Pacemaker 检测到故障时，群集组件会设法将资源移到另一个节点。  
+如下图所示，存储将呈现给两个服务器。 群集组件（Corosync 和 Pacemaker）负责协调通信和资源管理。 其中一个服务器具有活动连接，可连接至存储资源以及 SQL Server。 当 Pacemaker 检测到故障时，群集组件会设法将资源移到另一个节点。  
 
 ![Red Hat Enterprise Linux 7 共享磁盘 SQL 群集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 

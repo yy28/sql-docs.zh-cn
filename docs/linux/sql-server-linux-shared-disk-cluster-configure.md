@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558322"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>配置故障转移群集实例 - Linux 上的 SQL Server (RHEL)
@@ -88,7 +88,7 @@ SQL Server 双节点共享磁盘故障转移群集实例为实现高可用性提
     sudo ip addr show
     ```
 
-1. 在每个节点上设置计算机名。 为每个节点提供长度不超过 15 个字符的唯一名称。 通过将计算机名添加到 `/etc/hosts` 来设置该名称。 以下脚本可使用 `vi` 编辑 `/etc/hosts`。 
+1. 在每个节点上设置计算机名。 为每个节点提供长度不超过 15 个字符的唯一名称。 通过将计算机名添加到 `/etc/hosts` 来设置该名称。 以下脚本可使用 `/etc/hosts` 编辑 `vi`。 
 
    ```bash
    sudo vi /etc/hosts

@@ -11,10 +11,10 @@ ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 048ead08bf4a0f3f275eb265434581c8be4405bc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292324"
 ---
 # <a name="look-up-process-chain"></a>查找进程链
@@ -44,7 +44,7 @@ ms.locfileid: "71292324"
 ## <a name="lookup-options"></a>查找选项  
  在查找字段中，您可以使用星号通配符 (*) 或使用部分字符串结合星号通配符来筛选结果。 但是，如果您将查找字段保留为空，则查找操作仅与该字段中的空字符串匹配。  
   
- **Process chain**  
+ **进程链**  
  输入您要查找的进程链的名称，或输入部分名称加上星号通配符 (*)。 或者，仅使用星号通配符，以包括所有进程链。  
   
  **查找**  
@@ -56,7 +56,7 @@ ms.locfileid: "71292324"
  **“进程链”**  
  显示在 SAP Netweaver BW 系统中定义的进程链的名称。  
   
- **Description**  
+ **说明**  
  显示进程链的说明。  
   
  当可用进程链列表显示时，选择您需要的进程链，然后源将使用需要的值填充关联的选项。  

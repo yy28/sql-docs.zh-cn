@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 5f87b375773b9c81b29b3b5cac11ea97121c45df
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847378"
 ---
 # <a name="iclientvirtualdeviceset2close-vdi"></a>IClientVirtualDeviceSet2::Close (VDI)
@@ -30,13 +30,13 @@ HRESULT IClientVirtualDeviceSet2::Close ();
 
 ## <a name="return-value"></a>返回值
 
-|返回值 | 解释 |
+|返回值 | 说明 |
 |---|---|
 | NOERROR | 将在虚拟设备集成功关闭后返回。 |
 | VD_E_PROTOCOL | 未采取任何操作，因为虚拟设备集未打开。 |
 | VD_E_OPEN | 设备仍处于打开状态。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 对 Close 的调用是由客户端做出的声明，表示应释放虚拟设备集所用的所有资源。 调用 Close 前，客户端须确保已终止涉及数据缓冲区和虚拟设备的所有活动。 Close 会使由 OpenDevice 返回的所有虚拟设备接口失效。
 

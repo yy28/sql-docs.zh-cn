@@ -12,10 +12,10 @@ ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fc78c62c83530a0e5b7d5ee280addfd67e593fb6
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874731"
 ---
 # <a name="mssqlserver_847"></a>MSSQLSERVER_847
@@ -32,10 +32,10 @@ ms.locfileid: "70874731"
 |符号名称|空值|  
 |消息正文|等待闩锁时出现超时: 类“%ls”，id %p，类型 %d，任务 0x%p : %d，等待时间 %d，标志 0x%I64x，所属任务 0x%p。 将继续等待。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 计算机可能停止响应，或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将缓冲区闩锁错误写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志的同时可能出现超时或某些其他常规操作中断。  
   
-如果消息中的状态字段的值为 0x04 on，则表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在等待 I/O 操作。 也可能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中收到消息 [MSSQLSERVER_833](~/relational-databases/errors-events/mssqlserver-833-database-engine-error.md)。  
+如果消息中的状态字段的值为 0x04 on，则表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在等待 I/O 操作。 也可能在 [ 错误日志中收到消息 ](~/relational-databases/errors-events/mssqlserver-833-database-engine-error.md)MSSQLSERVER_833[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 如果消息中的状态字段的值为 0x04 off，则表示存在对某个页的大量争用。 如果对象是数据页，则错误可能是由低效的代码设计引起的。 如果是非数据页，则错误可能由服务器瓶颈引起，如硬件资源不足。  
   

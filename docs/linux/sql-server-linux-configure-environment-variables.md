@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: f768a79512059025ebd6dfe6a6f339175b6149f3
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558367"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>在 Linux 上使用环境变量配置 SQL Server 设置
@@ -152,4 +152,4 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 
 有关此处未列出的其他 SQL Server 设置，请参阅[使用 mssql-conf 工具配置 Linux 上的 SQL Server](sql-server-linux-configure-mssql-conf.md)。
 
-有关如何安装和运行 Linux 上的 SQL Server 的详细信息，请参阅[安装 Linux 上的 SQL Server](sql-server-linux-setup.md)。
+有关如何在 Linux 上安装和运行 SQL Server 的详细信息，请参阅[在 Linux 上安装 SQL Server](sql-server-linux-setup.md)。

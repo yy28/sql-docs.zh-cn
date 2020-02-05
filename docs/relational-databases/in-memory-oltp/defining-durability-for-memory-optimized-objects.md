@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 764824a74480b6d17c890f57714b0df9221bf523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68219874"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>为内存优化对象定义持续性
@@ -43,6 +43,6 @@ ms.locfileid: "68219874"
  如果发生故障或损坏的磁盘包含持久内存优化的对象的一个或多个持久化副本，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原功能将内存优化表还原到新介质上。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建和管理用于内存优化的对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [创建和管理用于内存优化对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

@@ -16,13 +16,13 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 043a13a84eebe9fc1c2cac96628ce6303653e8ac
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768594"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284003"
 ---
 # <a name="distributor-information-publications"></a>分发服务器信息，发布
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68768594"
  以下各节说明了此选项卡上为分发服务器代理和合并代理显示的数据。  
   
 ### <a name="distributor-agent"></a>“分发服务器代理”  
- **“状态”**  
+ **Status**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误    
@@ -61,7 +61,7 @@ ms.locfileid: "68768594"
 -   未运行   
 -   从未启动  
   
- **发布服务器**  
+ **发布者**  
  发布服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
  **发布**  
@@ -70,7 +70,7 @@ ms.locfileid: "68768594"
  **订阅**  
  订阅的名称，格式为：[*SubscriberName*].[*Database*]。  
   
- **类型**  
+ 类型   
  复制的类型：推送、请求或匿名。  
   
  **上次启动时间**  
@@ -98,7 +98,7 @@ ms.locfileid: "68768594"
  在此代理最近一次运行期间平均每个事务的命令数。  
   
 ### <a name="merge-agent"></a>合并代理  
- **“状态”**  
+ **Status**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -111,7 +111,7 @@ ms.locfileid: "68768594"
   
 -   从未启动  
   
- **发布服务器**  
+ **发布者**  
  发布服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
  **发布**  
@@ -120,7 +120,7 @@ ms.locfileid: "68768594"
  **订阅**  
  订阅的名称，格式为：[*SubscriberName*].[*Database*]。  
   
- **类型**  
+ 类型   
  复制的类型：推送、请求或匿名。  
   
  **上次启动时间**  

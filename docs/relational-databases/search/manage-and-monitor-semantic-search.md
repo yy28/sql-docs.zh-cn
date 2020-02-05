@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132245"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>管理和监视语义搜索
@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>全文目录的全文索引和语义索引的总大小是多少？  
- 查询 [FULLTEXTCATALOGPROPERTY (Transact SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 元数据函数的 **IndexSize** 属性 。  
+ 查询 **FULLTEXTCATALOGPROPERTY (Transact SQL)** 元数据函数的 [IndexSize](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 属性 。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>有多少项编入全文目录的全文索引和语义索引？  
- 查询 [FULLTEXTCATALOGPROPERTY (Transact SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 元数据函数的 **ItemCount** 属性 。  
+ 查询 **FULLTEXTCATALOGPROPERTY (Transact SQL)** 元数据函数的 [ItemCount](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 属性 。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
@@ -99,7 +99,7 @@ GO
 ```  
   
 ##  <a name="HowToDisableIndexing"></a> 禁用或重新启用语义索引编制  
- 可以使用 ENABLE/DISABLE 子句以及针对全文索引而描述的相同语法和行为，启用或禁用全文索引编制或语义索引编制。 有关详细信息，请参阅 [ALTER FULLTEXT INDEX (Transact-SQL )](../../t-sql/statements/alter-fulltext-index-transact-sql.md)。  
+ 可以使用 ENABLE/DISABLE 子句以及针对全文索引而描述的相同语法和行为，启用或禁用全文索引编制或语义索引编制。 有关详细信息，请参阅 [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)。  
   
  禁用和挂起语义索引编制时，可以继续成功进行针对语义数据的查询并返回以前的索引数据。 此行为与全文搜索的行为不一致。  
   

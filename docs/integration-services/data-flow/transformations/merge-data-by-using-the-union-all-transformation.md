@@ -17,10 +17,10 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 42c556b3c348205833f4d080199c184dd30c8cf3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291257"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>通过使用 Union All 转换来合并数据
@@ -42,7 +42,7 @@ ms.locfileid: "71291257"
   
 4.  双击 Union All 转换。  
   
-5.  在 **“Union All 转换编辑器”** 中，通过单击行然后在输入列表中选择列，将输入中的列映射到 **“输出列的名称”** 列表中的列。 在输入列表中选择“\<ignore>”以跳过对该列的映射  。  
+5.  在 **“Union All 转换编辑器”** 中，通过单击行然后在输入列表中选择列，将输入中的列映射到 **“输出列的名称”** 列表中的列。 在输入列表中选择“**ignore>”以跳过对该列的映射\<** 。  
   
     > [!NOTE]  
     >  两列间的映射要求各列的元数据相匹配。  
@@ -54,12 +54,12 @@ ms.locfileid: "71291257"
   
 7.  对每个输入中的每一列重复第 5 和第 6 步。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 9. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Union All 转换](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../../integration-services/data-flow/integration-services-paths.md)   
  [数据流任务](../../../integration-services/control-flow/data-flow-task.md)  

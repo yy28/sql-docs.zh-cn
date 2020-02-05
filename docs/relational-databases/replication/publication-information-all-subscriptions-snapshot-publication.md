@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 37f5359dfa1fe4f127012256c724cb208768fd34
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 469bcee14742682050e0c2726615f6942f18635b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321359"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286639"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>发布信息，所有订阅（快照发布）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "75321359"
 ## <a name="options"></a>选项  
  有关订阅的详细信息及相关任务，请右键单击相应订阅所在的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：在“列排序”对话框中对一列或多个列进行排序  。  
+-   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
   
--   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序  。  
+-   **选择要显示的列**：选择要显示哪些列以及要在 **“选择列”** 对话框中以何种顺序显示它们。  
   
--   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行  。  
+-   **筛选器**：根据 **“筛选设置”** 对话框中的列值筛选网格中的行。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "75321359"
  只有在设置了阈值时，才会显示状态值 **“即将过期/已过期”** 。 有关设置阈值的信息，请参阅[在复制监视器中设置阈值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **订阅**  
- 每个订阅的名称，格式为：SubscriberName:  SubscriptionDatabaseName。  
+ 每个订阅的名称，格式为： *SubscriberName: SubscriptionDatabaseName*。  
   
  **上次同步**  
  分发代理上次运行的时间。 如果正在进行同步，则显示 **“正在进行”** 。  

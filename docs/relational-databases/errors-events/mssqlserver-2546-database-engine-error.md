@@ -12,13 +12,13 @@ ms.assetid: c8f0e1b4-c7c4-45f2-9221-746714172313
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f43cdb5e07f9ac6d490eabf5f17d194e7446bb49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023033"
 ---
-# <a name="mssqlserver2546"></a>MSSQLSERVER_2546
+# <a name="mssqlserver_2546"></a>MSSQLSERVER_2546
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68023033"
 |符号名称|DBCC_INDEX_MARKED_DISABLED|  
 |消息正文|表 'OBJECT_NAME' 的索引 'INDEX_NAME' 已标记为禁用。 请重新生成该索引，以使之联机。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 指定的索引已标记为离线或禁用。 因此，不能检查该索引。  
   
 ## <a name="user-action"></a>用户操作  

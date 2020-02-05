@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1de402650df0f3e9181750fb17d74c4329e4ca93
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d59d9f277c027b0c10f578016348062de32aa47d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770401"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288030"
 ---
-# <a name="mssqleng020574"></a>MSSQL_ENG020574
+# <a name="mssql_eng020574"></a>MSSQL_ENG020574
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -33,11 +33,11 @@ ms.locfileid: "68770401"
 |符号名称||  
 |消息正文|订阅服务器“%s”对发布“%s”中项目“%s”的订阅未通过数据验证。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  根据发布服务器上的数据对订阅服务器上的数据进行验证，数据不匹配；因此验证失败。 有关验证的详细信息，请参阅 [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)。  
   
 ## <a name="user-action"></a>用户操作  
- 建议您进行以下操作：  
+ 建议执行以下操作：  
   
 -   确定验证失败的原因。  
   

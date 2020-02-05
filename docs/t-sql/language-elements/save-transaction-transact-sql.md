@@ -26,10 +26,10 @@ ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 46a6f7c08b540b6180326350a6e0aadb933a7ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121810"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68121810"
 
   在事务内设置保存点。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
  ## <a name="syntax"></a>语法  
   
@@ -48,14 +48,14 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 ```  
   
 ## <a name="arguments"></a>参数  
- savepoint_name  
- 分配给保存点的名称。 保存点名称必须符合标识符的规则，但长度不能超过 32 个字符。 savepoint_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此。  
+ savepoint_name   
+ 分配给保存点的名称。 保存点名称必须符合标识符的规则，但长度不能超过 32 个字符。 savepoint_name 始终区分大小写，即使  *实例不区分大小写也是如此*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  @*savepoint_variable*  
- 包含有效保存点名称的用户定义变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量。 如果长度超过 32 个字符，也可以传递到变量，但只使用前 32 个字符。  
+ 包含有效保存点名称的用户定义变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量     。 如果长度超过 32 个字符，也可以传递到变量，但只使用前 32 个字符。  
   
-## <a name="remarks"></a>Remarks  
- 用户可以在事务内设置保存点或标记。 保存点可以定义在按条件取消某个事务的一部分后，该事务可以返回的一个位置。 如果将事务回滚到保存点，则根据需要必须完成其他剩余的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 COMMIT TRANSACTION 语句，或者必须通过将事务回滚到起始点完全取消事务。 若要取消整个事务，请使用 ROLLBACK TRANSACTION transaction_name。 这将撤消事务的所有语句和过程。  
+## <a name="remarks"></a>备注  
+ 用户可以在事务内设置保存点或标记。 保存点可以定义在按条件取消某个事务的一部分后，该事务可以返回的一个位置。 如果将事务回滚到保存点，则根据需要必须完成其他剩余的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 COMMIT TRANSACTION 语句，或者必须通过将事务回滚到起始点完全取消事务。 若要取消整个事务，请使用 ROLLBACK TRANSACTION transaction_name  。 这将撤消事务的所有语句和过程。  
   
  在事务中允许有重复的保存点名称，但指定保存点名称的 ROLLBACK TRANSACTION 语句只将事务回滚到使用该名称的最近的 SAVE TRANSACTION。  
   

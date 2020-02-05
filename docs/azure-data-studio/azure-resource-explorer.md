@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: azure-data-studio
 ms.date: 09/24/2018
 ms.openlocfilehash: 2a1f62ed9266b0575f037dfe9541a026a4c1ed29
-ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73801139"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>使用 Azure 资源浏览器浏览和管理 Azure SQL 资源
@@ -21,7 +21,7 @@ ms.locfileid: "73801139"
 在本文档中，将了解如何通过 [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] 中的 Azure 资源浏览器浏览和管理 Azure SQL Server、Azure SQL 数据库以及 Azure SQL 托管实例资源。
 
 >[!NOTE]
->SQL Server 2019 支持 Azure 资源浏览器。 之后，可通过[扩展管理器](extensions.md)或通过“文件” > “从 VSIX 包安装包”安装扩展   。
+>SQL Server 2019 支持 Azure 资源浏览器。 之后，可通过[扩展管理器](extensions.md)或通过“文件” **“从 VSIX 包安装包”安装扩展** >   。
 
 ## <a name="connect-to-azure"></a>连接到 Azure
 
@@ -33,7 +33,7 @@ ms.locfileid: "73801139"
 
 1. 通过左下角的帐户管理图标或通过 Azure 资源浏览器中的“登录 Azure...”链接，打开“已关联帐户”对话框   。
 
-    ![登录 Azure](media/azure-resource-explorer/sign-in-to-azure.png)
+    ![登录到 Azure](media/azure-resource-explorer/sign-in-to-azure.png)
 
 2. 在“已关联帐户”对话框中，单击“添加帐户”   。
 

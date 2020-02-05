@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d658b63e8c2b80c277ed9d8c3647717d07c96c48
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 8e426d6af578cd822befdeab928c522a55f98d7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982981"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76259406"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   禁用触发器。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -71,7 +71,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  默认情况下，创建触发器后会启用触发器。 禁用触发器不会删除该触发器。 该触发器仍然作为对象存在于当前数据库中。 但是，当执行编写触发器程序所用的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，不会激发触发器。 可以使用 [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) 重新启用触发器。 还可以通过使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 来禁用或启用为表定义的 DML 触发器。  
   
  使用 **ALTER TRIGGER** 语句更改触发器将启用此触发器。  
@@ -85,7 +85,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 AdventureWorks2012 数据库中介绍了以下示例。
   
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. 禁用对表的 DML 触发器  
- 以下示例禁用对表 `uAddress` 创建的触发器 `Address`。  
+ 以下示例禁用对表 `uAddress` 创建的触发器 `Person`。  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  

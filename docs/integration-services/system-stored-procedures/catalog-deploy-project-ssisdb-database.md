@@ -11,10 +11,10 @@ ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f85e27484378d1074564a320aea7f8ed1766e1ce
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251325"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project（SSISDB 数据库）
@@ -36,27 +36,27 @@ catalog.deploy_project [@folder_name =] folder_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [@folder_name =] folder_name  
- 在其中部署项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
+ [@folder_name =] folder_name   
+ 在其中部署项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)** 。  
   
- [@project_name =] project_name  
- 文件夹中新的或更新的项目的名称。 *project_name* 为 **nvarchar(128)**。  
+ [@project_name =] project_name   
+ 文件夹中新的或更新的项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
- [@projectstream =] projectstream  
+ [@projectstream =] projectstream   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署文件（扩展名为.ispac）的二进制内容。  
   
  您可以使用带 OPENROWSET 函数的 SELECT 语句以及大容量行集提供程序来检索该文件的二进制内容。 有关示例，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。 有关 OPENROWSET 的详细信息，请参阅 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)。  
   
- projectstream 为 varbinary(MAX)  
+ projectstream  为 varbinary(MAX)   
   
- [@operation_id =] operation_id  
- 返回部署操作的唯一标识符。 operation_id 为 bigint。  
+ [@operation_id =] operation_id   
+ 返回部署操作的唯一标识符。 operation_id 为 bigint   。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -72,11 +72,11 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   参数引用的对象不存在，参数试图创建的对象已存在，或者参数在某个其他方面无效  
   
--   参数 \@project_name 的值与部署文件中的项目的名称不匹配。  
+-   参数 *project_name 的值与部署文件中的项目的名称不匹配\@* 。  
   
 -   用户不具备足够的权限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在项目部署或更新期间，存储过程不检查项目中各个包的保护级别。  
   
   

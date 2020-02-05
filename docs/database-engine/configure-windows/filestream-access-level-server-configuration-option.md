@@ -14,10 +14,10 @@ ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8335f821e2bd4026c17b0054e047125a0afd0177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011701"
 ---
 # <a name="filestream-access-level-server-configuration-option"></a>filestream access level 服务器配置选项
@@ -28,7 +28,7 @@ ms.locfileid: "68011701"
 > [!NOTE]  
 >  必须先启用 Windows FILESTREAM 管理设置，然后此选项才会生效。 可以在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时启用这些设置，也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器进行启用。  
   
-|ReplTest1|定义|  
+|值|定义|  
 |-----------|----------------|  
 |0|为此实例禁用 FILESTREAM 支持。|  
 |1|针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。|  

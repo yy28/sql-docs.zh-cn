@@ -12,13 +12,13 @@ ms.assetid: b528bb49-340c-4a81-9c8d-cefce6562f16
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fe4aa3b74af774543c5125652d8f860c68fb04fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118325"
 ---
-# <a name="mssqlserver9004"></a>MSSQLSERVER_9004
+# <a name="mssqlserver_9004"></a>MSSQLSERVER_9004
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68118325"
 |符号名称|LOG_CORRUPT|  
 |消息正文|处理数据库 '%.*ls' 的日志时出错。  如果可能，请从备份还原。 如果没有可用备份，可能需要重新生成日志。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 在回滚、恢复或复制期间处理日志时出错。 这可能表明操作系统检测到错误，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检测到内部一致性错误。  
   
 ## <a name="user-action"></a>用户操作  

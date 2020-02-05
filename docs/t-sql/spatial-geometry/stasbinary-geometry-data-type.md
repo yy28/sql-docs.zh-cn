@@ -18,10 +18,10 @@ ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2b80156459988793ae4733c9617562b5b6120ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100984"
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary（geometry 数据类型）
@@ -37,9 +37,9 @@ ms.locfileid: "68100984"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：varbinary(max)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：varbinary(max)   
   
- CLR 返回类型：**SqlBytes**  
+ CLR 返回类型：SqlBytes   
   
 ## <a name="examples"></a>示例  
  以下示例根据文本创建一个从 (0,0) 到 (2,3) 的 `LineString` geometry 实例。 `STAsBinary()` 以 WKB 形式返回结果。  

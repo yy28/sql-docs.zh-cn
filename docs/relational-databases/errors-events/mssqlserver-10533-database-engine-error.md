@@ -12,13 +12,13 @@ ms.assetid: cc2fbdab-7b90-415f-a1f9-066824344283
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 061afedceeafdaf2660bf46180a80105d85e2a39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68060746"
 ---
-# <a name="mssqlserver10533"></a>MSSQLSERVER_10533
+# <a name="mssqlserver_10533"></a>MSSQLSERVER_10533
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68060746"
 |符号名称|PG_NAME_TOO_BIG|  
 |消息正文|无法创建计划指南 '%.*ls'，因为其名称超过允许的最大字符数 124。 请指定字符数少于 125 个的名称。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 计划指南的名称超过所允许的最大字符数（即 124 个字符）。  
   
 ## <a name="user-action"></a>用户操作  

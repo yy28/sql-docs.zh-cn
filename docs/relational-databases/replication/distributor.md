@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 22770207bd0c6da38f88680313d8da433e1da286
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 664ceea195e327b9c301ed1206eba014c8adf2a8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768519"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287869"
 ---
 # <a name="distributor"></a>分发服务器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68768519"
  **使用以下服务器作为分发服务器(注意: 您选择的服务器必须已配置为分发服务器)**  
  选择此选项，再单击下面的服务器名称，可将另外一个服务配置为分发服务器。  
   
- **“添加”**  
+ **添加**  
  如果未列出要用作分发服务器的服务器，请单击 **“添加”** 以标识服务器，并将其添加到列表中。  
   
 > [!NOTE]  

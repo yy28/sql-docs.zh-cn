@@ -17,16 +17,16 @@ ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d0b05e5d73c75e340535c3323a8219dedf5be76d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101229"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-geometry 实例的类型为 Null。 如果该实例不为 NULL，则返回 0。
+geometry 实例的类型为 Null  。 如果该实例不为 NULL，则返回 0。
   
 ## <a name="syntax"></a>语法  
   
@@ -35,12 +35,12 @@ geometry 实例的类型为 Null。 如果该实例不为 NULL，则返回 0。
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：bit  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：bit   
   
- CLR 类型：**SqlBoolean**  
+ CLR 类型：SqlBoolean   
   
-## <a name="remarks"></a>Remarks  
- `IsNull` 可用于测试 geometry 实例是否为 Null。 如果实例不为 NULL，则 `IsNull` 返回 0；如果实例为 NULL，则返回 NULL。  
+## <a name="remarks"></a>备注  
+ `IsNull` 可用于测试 geometry 实例是否为 Null  。 如果实例不为 NULL，则 `IsNull` 返回 0；如果实例为 NULL，则返回 NULL。  
   
  此方法主要供 SQL Server 基础结构使用；建议不要使用 `IsNull` 来测试实例是否为 Null。  
   

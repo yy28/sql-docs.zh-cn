@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: a861377924b4bb3cc1c1d2a4b83eba660fbf99e0
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847588"
 ---
 # <a name="iclientvirtualdevicegetcommand-vdi"></a>IClientVirtualDevice::GetCommand (VDI)
@@ -31,7 +31,7 @@ HRESULT IClientVirtualDevice::GetCommand (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>parameters
 
 *ppCmd* 成功返回命令后，该参数将返回要执行的命令的地址。 返回的内存是只读的。 命令完成后，会将此指针传递到 CompleteCommand 例程。 有关每个命令的详细信息，请参阅“命令”。
 
@@ -39,14 +39,14 @@ HRESULT IClientVirtualDevice::GetCommand (
 
 ## <a name="return-value"></a>返回值
 
-|返回值 | 解释 |
+|返回值 | 说明 |
 |---|---|
 | NOERROR | 已获取命令。 |
 | VD_E_CLOSE | 服务器已关闭该设备。 |
 | VD_E_TIMEOUT | 无可用命令且超时时间已过。 |
 | VD_E_ABORT | 客户端或服务器已使用 SignalAbort 执行强制关闭。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 如果返回 VD_E_CLOSE，表示 SQL Server 已关闭设备。 这是正常关闭操作的一部分。 在所有设备均已关闭后，客户端将调用 IClientVirtualDeviceSet2::Close 以关闭虚拟设备集。
 

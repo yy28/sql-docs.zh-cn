@@ -12,13 +12,13 @@ ms.assetid: 53a51c7a-dcd4-4c15-b4d2-6aaa9dce76da
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d68d356991db028aff47ce65658ef057f3e9b753
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107208"
 ---
-# <a name="mssqlserver32042"></a>MSSQLSERVER_32042
+# <a name="mssqlserver_32042"></a>MSSQLSERVER_32042
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68107208"
 |符号名称|SQLErrorNum32042|  
 |消息正文|引发了 '未发送日志' 警报。 '%d' 的当前值超出了阈值 '%d'。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 对主体服务器实例发出此数据库镜像事件，表明未发送日志的量达到了用户指定的阈值。 通常，发生该事件是由于系统的性能已发生变化。 两个系统间的带宽减小或负载增加。  
   
 未发送日志的量（以 KB 计）是一个性能指标，可帮助您计算数据丢失的可能性。 此指标尤其适用于高性能模式会话。 但是，当镜像因伙伴断开连接而暂停或挂起时，此指标也适用于高安全模式会话。  

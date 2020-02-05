@@ -14,10 +14,10 @@ ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2d1f0eeb0591bd4a51b79b8e83fbbd8d6023535f
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73632998"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>修改现有跟踪 (Transact-SQL)
@@ -38,17 +38,17 @@ ms.locfileid: "73632998"
   
     -   **\@on**（启用）  
   
-     修改“\@on”参数时，请记住它与“\@columnid”参数是相互作用的   ：  
+     修改“**on”参数时，请记住它与“\@columnid”参数是相互作用的** **\@** ：  
   
     |ON|列 ID|结果|  
     |--------|---------------|------------|  
-    |ON (**1**)|NULL|事件打开， 所有列被清除。|  
+    |ON (**1**)|Null|事件打开， 所有列被清除。|  
     ||NOT NULL|指定事件的列打开。|  
-    |OFF (**0**)|NULL|事件关闭， 所有列被清除。|  
+    |OFF (**0**)|Null|事件关闭， 所有列被清除。|  
     ||NOT NULL|指定事件的列关闭。|  
   
 > [!IMPORTANT]
->  与常规的存储过程不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 存储过程 (<strong>sp_trace_xx</strong>) 参数的类型都受到严格限制，不支持自动的数据类型转换  。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
+>  与常规的存储过程不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 存储过程 (<strong>sp_trace_xx *) 参数的类型都受到严格限制，不支持自动的数据类型转换*</strong>。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

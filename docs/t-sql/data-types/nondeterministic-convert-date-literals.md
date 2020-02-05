@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119851"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>文字日期字符串转换为日期值的不确定性转换
@@ -27,7 +27,7 @@ ms.locfileid: "68119851"
 
 
 
-## <a name="set-language-example-month-name-in-polish"></a>SET LANGUAGE 示例：Polish 中为 Month name
+## <a name="set-language-example-month-name-in-polish"></a>SET LANGUAGE 示例：波兰语中的月份名称
 
 - `SET LANGUAGE Polish;`
 
@@ -119,11 +119,11 @@ YMD-Interpretation--?--NotGuaranteed
 
 在前面的代码示例中，最后一个示例格式 ymd 与输入字符串不匹配  。 输入字符串的第三个节点代表一个太大而无法表示一天的数值。 Microsoft 不保证这种不匹配输出的值。
 
-#### <a name="convert-offers-explicit-codes-for-deterministic-control-of-date-formats"></a>CONVERT 提供确定性  日期格式控制的显式代码
+#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT 提供确定性  日期格式控制的显式代码
 
 CAST 和 CONVERT 文档文章列出了可以与 CONVERT 函数一起使用以确定性地  控制日期转换的显式代码。 每个月这篇文章都有最高的页面浏览量。
 
-- [CAST 和 CONVERT (Transact-SQL)：Date 和 Time 样式](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
+- [CAST 和 CONVERT (Transact SQL)：日期和时间样式](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
 - [CAST 和 CONVERT (Transact-SQL)：某些日期时间的转换具有不确定性](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 

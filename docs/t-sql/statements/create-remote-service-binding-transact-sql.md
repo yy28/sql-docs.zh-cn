@@ -38,10 +38,10 @@ ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2fc021cec09a7f62d05f5e435db9d6fc2597fce3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117344"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68117344"
 
   创建一个绑定，以用于定义在启动与远程服务的会话时要使用的安全凭据。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -78,10 +78,10 @@ CREATE REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  指定在与远程服务进行通信时是否使用匿名身份验证。 如果 ANONYMOUS 为 ON，则使用匿名身份验证，并且作为 public 固定数据库角色的成员执行远程数据库中的操作  。 如果 ANONYMOUS 为 OFF，则作为该数据库中的特定用户执行远程数据库中的操作。 如果没有指定该子句，则默认为 OFF。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 使用远程服务绑定来定位要用于新会话的证书。 与 user_name 关联的证书中的公钥用于对发送到远程服务的消息进行身份验证，并对会话密钥进行加密，然后使用加密的会话密钥对会话进行加密  。 user_name 的证书必须对应于承载远程服务的数据库中的用户的证书  。  
   
- 只有在启动与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以外的目标服务通信的服务时，才需要远程服务绑定。 承载启动服务的数据库必须包含可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以外的任何目标服务的远程服务绑定。 承载目标服务的数据库不需要包含用于与目标服务通信的启动服务的远程服务绑定。 当发起方服务与目标服务位于相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中时，无需远程服务绑定。 但是，如果存在远程服务绑定，并且其中为 TO SERVICE 指定的 service_name 与本地服务的名称匹配，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将使用该绑定  。  
+ 只有在启动与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以外的目标服务通信的服务时，才需要远程服务绑定。 承载启动服务的数据库必须包含可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以外的任何目标服务的远程服务绑定。 承载目标服务的数据库不需要包含用于与目标服务通信的启动服务的远程服务绑定。 当发起方服务与目标服务位于相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中时，无需远程服务绑定。 但是，如果存在远程服务绑定，并且其中为 TO SERVICE 指定的 service_name 与本地服务的名称匹配，则  *将使用该绑定*[!INCLUDE[ssSB](../../includes/sssb-md.md)]。  
   
  ANONYMOUS = ON 时，启动服务将作为 public 固定数据库角色的成员连接到目标服务  。 默认情况下，该角色的成员无权连接到数据库。 若要成功发送消息，目标数据库必须将数据库的 CONNECT 权限和目标服务的 SEND 权限授予 public 角色  。  
   
@@ -92,7 +92,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
  执行 CREATE REMOTE SERVICE BINDING 语句的用户必须对该语句中指定的主体数据库拥有模拟权限。  
   
- 远程服务绑定可能不是临时对象。 远程服务绑定名称可以以 # 开头，但它们是永久对象  。  
+ 远程服务绑定可能不是临时对象。 远程服务绑定名称可以以  **开头，但它们是永久对象#** 。  
   
 ## <a name="examples"></a>示例  
   

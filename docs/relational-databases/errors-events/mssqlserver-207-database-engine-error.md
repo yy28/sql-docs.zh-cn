@@ -12,13 +12,13 @@ ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0fa8c6371ba5889cde5afe2c66b036a1ec8c031d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056798"
 ---
-# <a name="mssqlserver207"></a>MSSQLSERVER_207
+# <a name="mssqlserver_207"></a>MSSQLSERVER_207
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68056798"
 |符号名称|SQ_BADCOL|  
 |消息正文|列名“%.*ls”无效。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 此查询错误可能是由以下问题之一导致的：  
   
 -   列名称拼写错误，或任一指定的表中不存在该列。  
@@ -115,7 +115,7 @@ ms.locfileid: "68056798"
     GROUP BY Year;  
     ```  
   
--   MERGE 语句中的 WHEN NOT MATCHED BY SOURCE 子句引用的是可以访问的值。 修改 MERGE 语句，使源表至少在 WHEN NOT MATCHED BY SOURCE 子句中返回一行。 例如，您可能需要添加或修订为子句指定的搜索条件。 或者，也可以更改该子句以指定没有引用源表的值。 例如， `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`。  
+-   MERGE 语句中的 WHEN NOT MATCHED BY SOURCE 子句引用的是可以访问的值。 修改 MERGE 语句，使源表至少在 WHEN NOT MATCHED BY SOURCE 子句中返回一行。 例如，您可能需要添加或修订为子句指定的搜索条件。 或者，也可以更改该子句以指定没有引用源表的值。 例如，`WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>` 。  
   
 ## <a name="see-also"></a>另请参阅  
 [MERGE (Transact-SQL)](~/t-sql/statements/merge-transact-sql.md)  

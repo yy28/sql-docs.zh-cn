@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8efa6f503f552965e3885d92626e8b5da453e29b
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69494088"
 ---
 # <a name="broker-event-category"></a>Broker 事件类别
@@ -29,7 +29,7 @@ ms.locfileid: "69494088"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[Broker:Activation 事件类](../../relational-databases/event-classes/broker-activation-event-class.md)|队列监视器启动激活存储过程时生成的事件。|  
 |[Broker:Connection 事件类](../../relational-databases/event-classes/broker-connection-event-class.md)|为报告 Service Broker 所管理的传输连接的状态而生成的事件。|  

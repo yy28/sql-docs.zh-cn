@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906063"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>使用数据库邮件发送测试电子邮件  
@@ -32,7 +32,7 @@ ms.locfileid: "72906063"
 ## <a name="procedure"></a>过程
 
 1. 使用 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 中的对象资源管理器，连接到配置了数据库邮件的 SQL Server 数据库引擎实例，展开“管理”，右键单击“数据库邮件”，然后选择“发送测试电子邮件”。 如果不存在数据库邮件配置文件，将通过一个对话框提示用户创建配置文件，同时还会打开“数据库邮件配置向导”。
-1. 在 <instance name> 中的“发送测试电子邮件”对话框中，在“数据库邮件配置文件”框中，选择要测试的配置文件  。
+1. 在  **中的“发送测试电子邮件”对话框中，在“数据库邮件配置文件”框中，选择要测试的配置文件**<instance name>。
 1. 在“收件人”框中，键入测试电子邮件收件人的电子邮件名称  。
 1. 在“主题”框中，键入测试电子邮件的主题行  。 更改默认主题，以便更好地标识电子邮件以进行故障排除。
 1. 在“正文”框中，键入测试电子邮件的正文  。 更改默认主题，以便更好地标识电子邮件以进行故障排除。

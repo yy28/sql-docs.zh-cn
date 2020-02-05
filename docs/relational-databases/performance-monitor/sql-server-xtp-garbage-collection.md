@@ -11,10 +11,10 @@ ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ced667fb99f412a4891d3e3e53f788430ee9112d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947784"
 ---
 # <a name="sql-server-xtp-garbage-collection"></a>SQL Server XTP 垃圾收集
@@ -24,7 +24,7 @@ ms.locfileid: "67947784"
   
  下表介绍了 **SQL Server XTP 垃圾回收** 计数器。  
   
-|计数器|描述|  
+|计数器|说明|  
 |-------------|-----------------|  
 |**灰尘角扫描重试次数/秒（垃圾收集器发出）**|在垃圾收集器发出的灰尘角扫描期间，由于写冲突而进行的每秒扫描重试次数（平均值）。 此为非常低级的计数器，不适合客户使用。|  
 |**主垃圾收集器工作项数/秒**|主垃圾收集器线程处理的工作项数。|  

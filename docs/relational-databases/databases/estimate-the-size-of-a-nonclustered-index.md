@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f63cb12399efd7417f9b00695d54b1356f681fb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934465"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估计非聚集索引的大小
@@ -41,7 +41,7 @@ ms.locfileid: "67934465"
   
 4.  对计算出的值求和。  
   
-## <a name="step-1-calculate-variables-for-use-in-steps-2-and-3"></a>步骤 1. 计算步骤 2 和步骤 3 中所用变量的值  
+## <a name="step-1-calculate-variables-for-use-in-steps-2-and-3"></a>步骤 1。 计算步骤 2 和步骤 3 中所用变量的值  
  可使用下列步骤计算所用变量的值以估计存储索引的较高级别所需的空间大小。  
   
 1.  指定表中显示的行数：  

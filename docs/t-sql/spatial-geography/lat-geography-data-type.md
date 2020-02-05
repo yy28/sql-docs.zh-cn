@@ -18,16 +18,16 @@ ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7da6aca6ccc5180d379ff853267d2de9f682cfb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040090"
 ---
 # <a name="lat-geography-data-type"></a>Lat（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  geography 实例的纬度属性。  
+  geography 实例的纬度属性  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,12 +36,12 @@ ms.locfileid: "68040090"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float   
   
- CLR 类型：**SqlDouble**  
+ CLR 类型：SqlDouble   
   
-## <a name="remarks"></a>Remarks  
- 在 OpenGIS 模型中，仅对由一个点组成的 geography 实例定义 Lat。 如果 geography 实例包含多个点，则此属性返回 NULL。 此属性是精确属性，且是只读的。  
+## <a name="remarks"></a>备注  
+ 在 OpenGIS 模型中，仅对由一个点组成的 geography 实例定义 Lat  。 如果 geography 实例包含多个点，则此属性返回 NULL  。 此属性是精确属性，且是只读的。  
   
 ## <a name="examples"></a>示例  
  此示例创建一个点并返回该点的纬度。  

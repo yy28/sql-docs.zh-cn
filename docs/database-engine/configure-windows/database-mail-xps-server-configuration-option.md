@@ -14,29 +14,29 @@ ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e16286e558d860a346ba8fff366009f064e65f91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011962"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs 服务器配置选项
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-使用 **DatabaseMail XPs** 选项可以在此服务器上启用数据库邮件。 可能的值有：  
+使用 **DatabaseMail XPs** 选项可以在此服务器上启用数据库邮件。 可能的值包括：  
   
-- `0`设置用户帐户 ：数据库邮件不可用（默认）。  
+- `0`：数据库邮件不可用（默认值）。  
   
-- `1`设置用户帐户 ：数据库邮件可用。  
+- `1`：数据库邮件可用。  
   
  该设置立即生效，无需停止并重新启动服务器。  
   
  启用数据库邮件后，必须配置一个数据库邮件主机数据库，才能使用 Database Mail。  
   
- 使用“数据库邮件配置向导”配置数据库邮件可以启用 `msdb` 数据库中的数据库邮件扩展存储过程  。 如果使用的是“数据库邮件配置向导”，则无需使用下面的 `sp_configure` 示例  。  
+ 使用“数据库邮件配置向导”配置数据库邮件可以启用  **数据库中的数据库邮件扩展存储过程**`msdb`。 如果使用的是“数据库邮件配置向导”，则无需使用下面的  **示例**`sp_configure`。  
   
- 将“Database Mail XPs”选项设置为 `0` 可以防止启动数据库邮件  。 如果该选项设置为 `0` 时数据库邮件正在运行，则它将继续运行并发送邮件，直到数据库邮件空闲时间达到 `DatabaseMailExeMinimumLifeTime` 选项中配置的时间。  
+ 将“Database Mail XPs”选项设置为  **可以防止启动数据库邮件**`0`。 如果该选项设置为 `0` 时数据库邮件正在运行，则它将继续运行并发送邮件，直到数据库邮件空闲时间达到 `DatabaseMailExeMinimumLifeTime` 选项中配置的时间。  
   
 ## <a name="examples"></a>示例
  以下示例启用了 Database Mail 扩展存储过程。  

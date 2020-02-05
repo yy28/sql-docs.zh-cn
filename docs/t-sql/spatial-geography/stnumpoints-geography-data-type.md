@@ -18,10 +18,10 @@ ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 320118e7844dfe40e45be9a893ad7bf45faff8bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120904"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints（geography 数据类型）
@@ -39,9 +39,9 @@ ms.locfileid: "68120904"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int   
   
- CLR 返回类型：**SqlInt32**  
+ CLR 返回类型：SqlInt32   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此方法对 geography 实例说明中的点进行计数  。 重复的点被计算在内；但是，段之间的连接点只计算一次。 如果此实例为集合，则此方法将返回该集合内的总点数。  
   
 ## <a name="examples"></a>示例  

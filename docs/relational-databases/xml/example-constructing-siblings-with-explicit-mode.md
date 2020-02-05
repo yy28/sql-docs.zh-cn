@@ -1,5 +1,5 @@
 ---
-title: 例如：使用 EXPLICIT 模式构造同级 | Microsoft Docs
+title: 示例：使用 EXPLICIT 模式构造同级 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 606c83c59147bf6ef171d4fa4f802d13f55f8219
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006830"
 ---
-# <a name="example-constructing-siblings-with-explicit-mode"></a>例如：使用 EXPLICIT 模式构造同级
+# <a name="example-constructing-siblings-with-explicit-mode"></a>示例：使用 EXPLICIT 模式构造同级
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   假定您要构造提供销售订单信息的 XML。 请注意，<`SalesPerson`> 和 <`OrderDetail`> 元素是同级。 每个订单都有一个 <`OrderHeader`> 元素、一个 <`SalesPerson`> 元素和一个或多个 <`OrderDetail`> 元素。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68006830"
 <OrderHeader ...</OrderHeader>  
 ```  
   
- 以下 EXPLICIT 模式查询将构造此 XML。 请注意，查询将 <`OrderHeader`> 元素的 `Tag` 值指定为 1，将 <`SalesPerson`> 元素的此值指定为 2，将 <`OrderDetail`> 元素的此值指定为 3。 因为 <`SalesPerson`> 和 <`OrderDetail`> 是同级，所以该查询将 `Parent` 标记值都指定为 1，从而标识 <`OrderHeader`> 元素。  
+ 以下 EXPLICIT 模式查询将构造此 XML。 请注意，查询将 <`Tag`> 元素的 `OrderHeader` 值指定为 1，将 <`SalesPerson`> 元素的此值指定为 2，将 <`OrderDetail`> 元素的此值指定为 3。 因为 <`SalesPerson`> 和 <`OrderDetail`> 是同级，所以该查询将 `Parent` 标记值都指定为 1，从而标识 <`OrderHeader`> 元素。  
   
 ```  
 USE AdventureWorks2012;  

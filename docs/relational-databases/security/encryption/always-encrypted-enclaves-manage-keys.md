@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d3968c5c8f04cba8581dfdd44ac847f7010de994
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595622"
 ---
 # <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>管理具有安全 enclave 的 Always Encrypted 的密钥
@@ -34,7 +34,7 @@ ms.locfileid: "73595622"
 - [预配已启用 enclave 的密钥](always-encrypted-enclaves-provision-keys.md)
 - [轮换已启用 enclave 的密钥](always-encrypted-enclaves-rotate-keys.md)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 - [预配已启用 enclave 的密钥](always-encrypted-enclaves-provision-keys.md)
 
 ## <a name="see-also"></a>另请参阅  

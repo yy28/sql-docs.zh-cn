@@ -1,5 +1,5 @@
 ---
-title: 例如：指定 ELEMENT 指令 | Microsoft Docs
+title: 示例：指定 ELEMENT 指令 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5e0760c0d1ee59725e074f55d3730f574a5fac3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006724"
 ---
-# <a name="example-specifying-the-element-directive"></a>例如：指定 ELEMENT 指令
+# <a name="example-specifying-the-element-directive"></a>示例：指定 ELEMENT 指令
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   此示例检索雇员信息并生成以元素为中心的 XML，如下所示：  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68006724"
 </Employee>  
 ```  
   
- 查询依然相同，只是在列名中添加了 `ELEMENT` 指令。 因此，向 <`Name`> 元素添加了 <`FName`> 和 <`LName`> 元素子级，而不是添加属性。 因为 `Employee!1!EmpID` 列没有指定 `ELEMENT` 指令，所以将 `EmpID` 作为 <`Employee`> 元素的属性添加。  
+ 查询依然相同，只是在列名中添加了 `ELEMENT` 指令。 因此，向 <`FName`> 元素添加了 <`LName`> 和 <`Name`> 元素子级，而不是添加属性。 因为 `Employee!1!EmpID` 列没有指定 `ELEMENT` 指令，所以将 `EmpID` 作为 <`Employee`> 元素的属性添加。  
   
 ```  
 SELECT 1    as Tag,  

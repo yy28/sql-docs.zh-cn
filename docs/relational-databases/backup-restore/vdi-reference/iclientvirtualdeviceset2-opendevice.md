@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: aff46d7240cf504b02e75d91b75d0ba746a24752
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847568"
 ---
 # <a name="iclientvirtualdeviceset2opendevice-vdi"></a>IClientVirtualDeviceSet2::OpenDevice (VDI)
@@ -32,7 +32,7 @@ HRESULT IClientVirtualDeviceSet2::OpenDevice (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>parameters
 
 *lpName* 用于标识虚拟设备。
 
@@ -40,7 +40,7 @@ HRESULT IClientVirtualDeviceSet2::OpenDevice (
 
 ## <a name="return-value"></a>返回值
 
-|返回值 | 解释 |
+|返回值 | 说明 |
 |---|---|
 | NOERROR | 函数成功。 |
 | VD_E_ABORT | 已请求中止。 |
@@ -48,7 +48,7 @@ HRESULT IClientVirtualDeviceSet2::OpenDevice (
 | VD_E_PROTOCOL | 设备集未处于正在初始化状态或此特定设备已打开。 |
 | VD_E_INVALID | 设备名称无效。 它不是构成设备集的已知名称之一。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 可能返回 VD_E_OPEN 且无任何问题。 在返回此代码前，客户端可能通过循环方式调用 OpenDevice。
 如果配置了多台设备（例如，n 台设备），虚拟设备集将返回 n 个唯一的设备接口。 第一台设备的名称与虚拟设备集的名称相同。 其他设备的名称由 BACKUP/RESTORE 语句的 VIRTUAL_DEVICE 子句指定。

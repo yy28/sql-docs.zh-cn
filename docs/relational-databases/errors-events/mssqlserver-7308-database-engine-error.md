@@ -13,13 +13,13 @@ ms.assetid: cca9eab9-afb9-463d-abfd-0802257e2c99
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 96a456d18ef0e776970baed251ededac7bf3b2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951579"
 ---
-# <a name="mssqlserver7308"></a>MSSQLSERVER_7308
+# <a name="mssqlserver_7308"></a>MSSQLSERVER_7308
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -33,7 +33,7 @@ ms.locfileid: "67951579"
 |符号名称|RMT_STA_DISABLED|  
 |消息正文|因为 OLE DB 访问接口“%ls”配置为在单线程单元模式下运行，所以该访问接口无法用于分布式查询。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 您使用了配置为在单线程单元 (STA) 模式下运行的 OLE DB 访问接口。 在单线程单元 (STA) 模式下运行的 OLE DB 访问接口无法用于分布式查询。  
   
 ## <a name="user-action"></a>用户操作  

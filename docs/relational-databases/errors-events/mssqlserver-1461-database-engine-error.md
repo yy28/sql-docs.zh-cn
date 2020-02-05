@@ -12,13 +12,13 @@ ms.assetid: fce10907-4753-441b-b624-f28e00ed7520
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6411b8eaf64daf16bc42636950f43fd37104629a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033450"
 ---
-# <a name="mssqlserver1461"></a>MSSQLSERVER_1461
+# <a name="mssqlserver_1461"></a>MSSQLSERVER_1461
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68033450"
 |符号名称|DBM_SAFETY_MISMATCH|  
 |消息正文|在服务器中检测到数据库"%.*ls"的不同数据库镜像安全级别。 将使用 FULL 安全级别。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 修改事务安全级别时镜像连接断开，因为事务安全设置在主体数据库和镜像数据库中不一致。 将使用完全事务安全的默认安全设置。 会话将在高安全模式下运行。  
   
 ## <a name="user-action"></a>用户操作  

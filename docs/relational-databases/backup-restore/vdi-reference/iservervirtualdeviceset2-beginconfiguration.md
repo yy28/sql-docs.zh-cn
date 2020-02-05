@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: fea109e55b9efa5619bdccb11d692ffebd1a6847
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847478"
 ---
 # <a name="iservervirtualdeviceset2beginconfiguration-vdi"></a>IServerVirtualDeviceSet2::BeginConfiguration (VDI)
@@ -34,7 +34,7 @@ HRESULT IServerVirtualDeviceSet2::BeginConfiguration (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>parameters
 
 *dwFeatures* 已修改的功能掩码。 VDF_WriteMedia 和/或 VDF_ReadMedia。
 
@@ -48,13 +48,13 @@ HRESULT IServerVirtualDeviceSet2::BeginConfiguration (
 
 ## <a name="return-value"></a>返回值
 
-|返回值 | 解释 |
+|返回值 | 说明 |
 |---|---|
 | NOERROR | 虚拟设备集处于可配置状态。 |
 | VD_E_ABORT | 已调用 SignalAbort。 |
 | VD_E_PROTOCOL | 虚拟设备集不处于已连接状态。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 调用此函数后，虚拟设备集将转变为可配置状态，在此状态下，将确定缓冲区布局。
 （按照参数）设置基本配置后，这些值在虚拟设备集使用期间保持不变。 虚拟设备集的对齐属性用于控制数据缓冲区的对齐方式。 该值会设置在逐个缓冲区上可能会被替代的最小对齐值。

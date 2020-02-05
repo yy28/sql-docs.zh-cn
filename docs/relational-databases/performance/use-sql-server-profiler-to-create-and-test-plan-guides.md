@@ -24,10 +24,10 @@ ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2879807d7eb64446a26ea5857f33c52fe7b78970
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165925"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>使用 SQL Server Profiler 创建和测试计划指南
@@ -68,7 +68,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  在记事本中打开该批处理文本文件，将文本复制到复制和粘贴缓冲区。  
   
-8.  创建计划指南，并将复制的文本粘贴到为 \@stmt参数指定的引号 ( '' ) 内   。 必须通过在前面再加上其他单引号来转义 \@stmt 参数中的任何单引号  。 插入这些单引号时务必小心，不要添加或删除任何其他字符。 例如，日期文本 **'** 20000101 **'** 必须分隔为 **''** 20000101 **''** 。  
+8.  创建计划指南，并将复制的文本粘贴到为 **stmt参数指定的引号 ( '' ) 内** **\@** 。 必须通过在前面再加上其他单引号来转义 **stmt 参数中的任何单引号\@** 。 插入这些单引号时务必小心，不要添加或删除任何其他字符。 例如，日期文本 **'** 20000101 **'** 必须分隔为 **''** 20000101 **''** 。  
   
  下面是该计划指南：  
   

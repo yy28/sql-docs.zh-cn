@@ -21,18 +21,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11d5012cadf7bdb028ce921f9039d5502363cbc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064695"
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>排序规则函数 - TERTIARY_WEIGHTS (Transact-SQL)
+# <a name="collation-functions---tertiary_weights-transact-sql"></a>排序规则函数 - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 对于非 Unicode 字符串表达式中的每个字符（使用 SQL 第三排序规则定义），此函数返回一个表示权重的二进制字符串。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ non_Unicode_character_string_expression
 ## <a name="return-types"></a>返回类型
 non_Unicode_character_string_expression 是 char 或 varchar 时，`TERTIARY_WEIGHTS` 返回 varbinary；non_Unicode_character_string_expression 具有 varchar(max) 数据类型时，返回 varbinary(max)        。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 SQL 第三排序规则未定义 non_Unicode_character_string_expression 时，`TERTIARY_WEIGHTS` 返回 NULL  。 下表显示了 SQL 第三排序规则：
   
 |排序次序 ID|SQL 排序规则|  

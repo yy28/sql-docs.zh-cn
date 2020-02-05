@@ -38,10 +38,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: cd1fc9d36200a571a3dfd0e5367d4e3e01278466
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262323"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68262323"
 
 使用 DBCC CLONEDATABASE 生成仅限架构的克隆数据库，以调查与查询优化器相关的性能问题。
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -88,7 +88,7 @@ SERVICEBROKER<br>
 BACKUP_CLONEDB  
 创建并验证克隆数据库的备份。  与 VERIFY_CLONEDB 配合使用时，系统先验证克隆数据库，再进行备份。  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 开始提供此选项。
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 DBCC CLONEDATABASE 可执行以下验证。 如果任何验证失败，则该命令失败。
 - 源数据库必须是用户数据库。 不允许克隆系统数据库（主数据库、模型数据库、msdb 数据库、tempdb 数据库和分发数据库等）。
 - 源数据库必须处于联机状态或可读取。
@@ -153,12 +153,12 @@ DBCC CLONEDATABASE 使用源数据库的内部数据库快照来实现执行复�
 - 全文（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 开始支持）
 - FUNCTION
 - INDEX
-- Login
+- LOGIN
 - PARTITION FUNCTION
 - PARTITION SCHEME
 - PROCEDURE   
 > [!NOTE]   
-> 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始，所有版本均支持 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 开始支持 CLR 过程。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始支持本机编译过程。  
+> 从 [!INCLUDE[tsql](../../includes/tsql-md.md)] SP2 开始，所有版本均支持 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 过程。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 开始支持 CLR 过程。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始支持本机编译过程。  
 
 - QUERY STORE（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始支持）   
 > [!NOTE]   
@@ -175,9 +175,9 @@ DBCC CLONEDATABASE 使用源数据库的内部数据库快照来实现执行复�
 - MEMORY OPTIMIZED TABLES（仅限 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 和更高版本）。
 - FILESTREAM AND FILETABLE OBJECTS（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本开始支持）。 
 - TRIGGER
-- TYPE
+- 类型
 - UPGRADED DB
-- User
+- USER
 - VIEW
 - XML INDEX
 - XML SCHEMA COLLECTION  

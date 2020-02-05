@@ -19,10 +19,10 @@ ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 701110865f4cda286c647ef887dba2e29cc5fb42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68081159"
 ---
 # <a name="filter-geometry-data-type"></a>Filter（geometry 数据类型）
@@ -48,9 +48,9 @@ ms.locfileid: "68081159"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：**SqlBoolean**  
+ CLR 返回类型：SqlBoolean   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此方法是不具有确定性的方法，而且不精确。  
   
 ## <a name="examples"></a>示例  

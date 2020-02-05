@@ -14,17 +14,17 @@ ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8a6a8bc83c1842676220f384d39179c74c47a336
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987063"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server Broker - DBM Transport 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **Broker / DBM Transport** 性能对象包含报告 Service Broker 和数据库镜像的网络信息的性能计数器。 下表列出了此对象包含的计数器。  
   
-|SQL Server Broker/DBM Transport 计数器|描述|  
+|SQL Server Broker/DBM Transport 计数器|说明|  
 |------------------------------------------------|-----------------|  
 |**Current Bytes for Recv I/O**|此计数器报告当前运行的传输接收操作读取的字节数。|  
 |**Current Bytes for Send I/O**|此计数器报告当前通过网络正被发送的消息片段中的字节数。|  
@@ -42,9 +42,9 @@ ms.locfileid: "67987063"
 |**Message Fragment Receives/sec**|此计数器报告每秒通过网络接收的消息片段数。|   
 |**Message Fragment Sends/sec**|此计数器报告每秒通过网络发送的所有优先级的消息片段数。|  
 |**Msg Fragment Recv Size Avg**|此计数器报告通过网络接收的消息片段的平均大小。|  
-|**Msg Fragment Recv Size Avg Base**|仅限内部使用。| 
+|**Msg Fragment Recv Size Avg Base**|仅供内部使用。| 
 |**Msg Fragment Send Size Avg**|此计数器报告通过网络发送的消息片段的平均大小。|  
-|**Msg Fragment Send Size Avg Base**|仅限内部使用。|
+|**Msg Fragment Send Size Avg Base**|仅供内部使用。|
 |**Open Connection Count**|此计数器报告 Service Broker 当前已经打开的网络连接数。|  
 |**Pending Bytes for Recv I/O**|此计数器报告已经从网络接收但尚未放置到队列中或尚未放弃的消息片段中包含的字节数。|  
 |**Pending Bytes for Send I/O**|此计数器报告准备好通过网络发送的消息片段中的字节总数。|  
@@ -53,14 +53,14 @@ ms.locfileid: "67987063"
 |**Receive I/O bytes/sec**|此计数器报告每秒通过网络由 Service Broker 端点和数据库镜像端点接收的字节数。|  
 |**Receive I/O Bytes Total**|此计数器报告通过网络由 Service Broker 端点和数据库镜像端点接收的字节总数。|  
 |**Receive I/O Len Avg**|此计数器报告传输接收操作的字节平均数。|  
-|**Receive I/O Len Avg Base**|仅限内部使用。|
+|**Receive I/O Len Avg Base**|仅供内部使用。|
 |**Receive I/Os/sec**|此计数器报告每秒 Service Broker / DBM transport 层已完成的传输接收 I/O 操作数。 注意，传输接收操作可能包含多个消息片段。|  
 |**Recv I/O Buffer Copies bytes/sec**|传输接收 I/O 操作必须将缓冲区片段移入内存时的速率。|
 |**Recv I/O Buffer Copies Count**|传输接收 I/O 操作必须将缓冲区片段移入内存的次数。| 
 |**Send I/O bytes/sec**|此计数器报告 Service Broker 端点和数据库镜像端点每秒通过网络传送的字节数。|   
 |**Send I/O Bytes Total**|此计数器报告 Service Broker 端点和数据库镜像端点通过网络传送的总字节数。| 
 |**Send I/O Len Avg**|此计数器报告每个传输发送操作的平均大小（以字节为单位）。 注意，传输发送操作可能包含多个消息片段。|  
-|**Send I/O Len Avg Base**|仅限内部使用。|
+|**Send I/O Len Avg Base**|仅供内部使用。|
 |**Send I/Os/sec**|此计数器报告每秒已完成的传输发送 I/O 操作数。 注意，传输发送操作可能包含多个消息片段。|  
   
 ## <a name="see-also"></a>另请参阅  

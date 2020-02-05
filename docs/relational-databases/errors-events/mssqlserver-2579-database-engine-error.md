@@ -12,13 +12,13 @@ ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a38a5470c51145141eda81d30eaadd8ff9f72e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68002027"
 ---
-# <a name="mssqlserver2579"></a>MSSQLSERVER_2579
+# <a name="mssqlserver_2579"></a>MSSQLSERVER_2579
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68002027"
 |符号名称|DBCC_EXTENT_OUT_OF_RANGE|  
 |消息正文|表错误：对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）中的区 P_ID 超出了此数据库的范围。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 *P_ID* 是格式为 *(filenum:pageinfile)* 的 PageID。 此盘区的 *pageinfile* 大于数据库的文件 (*filenum)* 的物理大小。 此区被标记为在指示的分配单元 ID 的 IAM 页中进行分配。  
   
 ## <a name="user-action"></a>用户操作  

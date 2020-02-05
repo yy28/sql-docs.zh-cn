@@ -12,13 +12,13 @@ ms.assetid: 6b1150fd-9dfd-4df9-8f08-8eca237667db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8dff6385227c8ec498187541f4c8f8653ace15b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68074295"
 ---
-# <a name="mssqlserver8966"></a>MSSQLSERVER_8966
+# <a name="mssqlserver_8966"></a>MSSQLSERVER_8966
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68074295"
 |符号名称|DBCC3_FAILED_TO_READ_AND_LATCH_PAGE|  
 |消息正文|无法使用闩锁类型 TYPE 读取并闩锁页 P_ID。 操作失败。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 页读取失败或无法针对 PFS 或 GAM 页进行闩锁。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中可能会有闩锁超时或其他附带的消息。  
   
 ## <a name="user-action"></a>用户操作  

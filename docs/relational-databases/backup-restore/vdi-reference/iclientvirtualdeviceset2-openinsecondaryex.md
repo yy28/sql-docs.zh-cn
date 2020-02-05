@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: cd89359ecbcc920fe03ed4b2bc7d90fd01592476
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847558"
 ---
 # <a name="iclientvirtualdeviceset2openinsecondaryex-vdi"></a>IClientVirtualDeviceSet2::OpenInSecondaryEx (VDI)
@@ -31,7 +31,7 @@ HRESULT IClientVirtualDeviceSet2::OpenInSecondaryEx (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>parameters
 
 *lpInstanceName* 此字符串标识将向其发送 SQL 命令的 SQL Server 实例。
 
@@ -39,13 +39,13 @@ HRESULT IClientVirtualDeviceSet2::OpenInSecondaryEx (
 
 ## <a name="return-value"></a>返回值
 
-|返回值 | 解释 |
+|返回值 | 说明 |
 |---|---|
 | NOERROR | 函数成功。 |
 | VD_E_PROTOCOL | 虚拟设备集已打开，或者虚拟设备集尚未准备好接受来自次要客户端的打开请求。 |
 | VD_E_ABORT | 正在中止操作。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 使用多个进程模型时，主要客户端负责检测次要客户端的正常或异常终止。
 

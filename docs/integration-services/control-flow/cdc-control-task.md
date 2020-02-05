@@ -14,10 +14,10 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1ef859193b0a2410b7057365c64506976d7ee8ab
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294257"
 ---
 # <a name="cdc-control-task"></a>CDC 控制任务
@@ -33,7 +33,7 @@ ms.locfileid: "71294257"
   
  下列操作处理初始加载和更改处理的同步：  
   
-|运算|描述|  
+|Operation|说明|  
 |---------------|-----------------|  
 |ResetCdcState|此操作用于重置与当前 CDC 上下文相关联的持久的 CDC 状态。 在此操作运行后，来自 LSN-timestamp `sys.fn_cdc_get_max_lsn` 表的当前最大 LSN 将成为下一处理范围的起始范围。 此操作要求到源数据库的连接。|  
 |MarkInitialLoadStart|此操作用于初始加载包的开头，以便在初始加载包开始读取源表之前记录源数据库中的当前 LSN。 此操作要求到源数据库的连接以便调用 `sys.fn_cdc_get_max_lsn`。<br /><br /> 如果在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC（也就是说，不是 Oracle）上工作时选择 MarkInitialLoadStart，则在连接管理器中指定的用户必须是 db_owner 或 sysadmin。|  
@@ -42,10 +42,10 @@ ms.locfileid: "71294257"
   
  下列操作用于管理处理范围：  
   
-|运算|描述|  
+|Operation|说明|  
 |---------------|-----------------|  
 |GetProcessingRange|在调用使用 CDC 源数据流的数据流之前使用此操作。 此操作建立 CDC 源数据流在调用时读取的 LSN 的范围。 该范围存储于一个 SSIS 包变量中，在数据流处理期间 CDC 源将使用该变量。<br /><br /> 有关存储的状态的详细信息，请参阅 [定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。|  
-|MarkProcessedRange|解码的字符：此操作在每次 CDC 运行后（在 CDC 数据流成功完成后）执行，以便记录在 CDC 运行中完全处理的上一个 LSN。 下一次执行 GetProcessingRange 时，此位置将是处理范围的起始位置。|  
+|MarkProcessedRange|此操作在每次 CDC 运行后（在 CDC 数据流成功完成后）执行，以便记录在 CDC 运行中完全处理的上一个 LSN。 下一次执行 GetProcessingRange 时，此位置将是处理范围的起始位置。|  
   
 ## <a name="handling-cdc-state-persistency"></a>处理 CDC 状态持久性  
  此 CDC 控制任务维护激活之间的持久性状态。 在 CDC 状态中存储的信息用于确定和维护 CDC 包的处理范围以及用于检测到错误条件。 该持久性状态以字符串的形式存储。 有关详细信息，请参阅 [定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。  
@@ -107,17 +107,17 @@ ms.locfileid: "71294257"
   
 -   **标记初始加载开始**：在从不具有快照的活动数据库执行初始加载时使用此操作。 在初始加载包的开头调用此操作，以便在初始加载包开始读取源表之前记录源数据库中的当前 LSN。 此操作要求连接到源数据库。  
   
-     如果你在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC（也就是说，不是 Oracle）时选择“标记初始加载开始”  ，则在连接管理器中指定的用户必须是 **db_owner** 或 **sysadmin**。  
+     如果你在  **CDC（也就是说，不是 Oracle）时选择“标记初始加载开始”** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，则在连接管理器中指定的用户必须是 **db_owner** 或 **sysadmin**。  
   
 -   **标记初始加载结束**：在从不具有快照的活动数据库执行初始加载时使用此操作。 在初始加载包的末尾调用此操作，以便在初始加载包完成读取源表之后记录源数据库中的当前 LSN。 此 LSN 通过以下方式确定：首先记录此操作发生时的当前时间，然后在 CDC 数据库的 `cdc.lsn_time_`映射表中进行查询以便查找在该时间后发生的更改。  
   
-     如果你在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC（也就是说，不是 Oracle）上工作时选择“标记初始加载结束”  ，则在连接管理器中指定的用户必须是 **db_owner** 或 **sysadmin**。  
+     如果你在  **CDC（也就是说，不是 Oracle）上工作时选择“标记初始加载结束”** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，则在连接管理器中指定的用户必须是 **db_owner** 或 **sysadmin**。  
   
 -   **标记 CDC 开始**：在从快照数据库或静默数据库执行初始加载时使用此操作。 在初始加载包内的任何一点都可以调用该操作。 该操作接受可以作为快照 LSN 的参数、快照数据库的名称（将自其自动派生快照 LSN），也可以将其保留为空（这种情况下，将当前数据库 LSN 用作更改处理包的开始 LSN）。  
   
      此操作可用来替代标记初始加载开始/结束操作。  
   
-     如果你在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC（也就是说，不是 Oracle）上工作时选择“标记 CDC 开始”  ，则在连接管理器中指定的用户必须是 **db_owner** 或 **sysadmin**。  
+     如果你在  **CDC（也就是说，不是 Oracle）上工作时选择“标记 CDC 开始”** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，则在连接管理器中指定的用户必须是 **db_owner** 或 **sysadmin**。  
   
 -   **获取处理范围**：在调用使用 CDC 源数据流的数据流之前，在更改处理包中使用此操作。 此操作建立 CDC 源数据流在调用时读取的 LSN 的范围。 该范围存储于一个 SSIS 包变量中，在数据流处理期间 CDC 源将使用该变量。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "71294257"
   
 -   **标记已处理的范围**：在 CDC 运行结束时（在 CDC 数据流成功完成后）在更改处理包中使用此操作，以便记录在 CDC 运行中完全处理的上一个 LSN。 下一次执行 `GetProcessingRange` 时，此位置确定下一处理范围的起点。  
   
--   **重置 CDC 状态**：此操作用于重置与当前 CDC 上下文相关联的持久的 CDC 状态。 在此操作运行后，来自 LSN-timestamp `sys.fn_cdc_get_max_lsn` 表的当前最大 LSN 将成为下一处理范围的起始范围。 此操作要求到源数据库的连接。  
+-   **重置 CDC 状态**：此操作用于重置与当前 CDC 上下文相关联的持久 CDC 状态。 在此操作运行后，来自 LSN-timestamp `sys.fn_cdc_get_max_lsn` 表的当前最大 LSN 将成为下一处理范围的起始范围。 此操作要求到源数据库的连接。  
   
      举例来说，当您只需处理新创建的更改记录而忽略所有旧的更改记录时，就需要使用此操作。  
   

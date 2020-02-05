@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: a39e0a743053db694efc2d0e8176e659d7e376d1
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995868"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)
@@ -29,7 +29,7 @@ ms.locfileid: "68995868"
 
 MSDTC 为 mssql-conf 实用程序引入了两个配置参数：
 
-| mssql-conf 设置 | 描述 |
+| mssql-conf 设置 | 说明 |
 |---|---|
 | **network.rpcport** | RPC 终结点映射程序进程绑定到的 TCP 端口。 |
 | **distributedtransaction.servertcpport** | MSDTC 服务器侦听的端口。 如果未设置，MSDTC 服务在服务重新启动时使用随机临时端口，并且需要重新配置防火墙例外情况以确保 MSDTC 服务可以继续通信。 |
@@ -139,7 +139,7 @@ Ubuntu 和 SLES 不使用“firewalld”服务，因此 iptable 规则就是实�
    > [!NOTE]
    > 需要具有超级用户 (sudo) 权限才能编辑“rc.local”或“after.local”文件   。
 
-“iptables-save”和“iptables-restore”命令以及 `rc.local`/`after.local` 启动配置提供了保存和恢复 iptables 条目的基本机制   。 可能有更高级或更自动化的选项，具体取决于 Linux 分发。 例如，Ubuntu 替代方案是 iptables-persistent 包，用于使条目持久  。
+“iptables-save”和“iptables-restore”命令以及  **启动配置提供了保存和恢复 iptables 条目的基本机制**`rc.local`/`after.local`。 可能有更高级或更自动化的选项，具体取决于 Linux 分发。 例如，Ubuntu 替代方案是 iptables-persistent 包，用于使条目持久  。
 
 > [!IMPORTANT]
 > 前面的步骤假设为固定的 IP 地址。 如果 SQL Server 实例的 IP 地址发生更改（由于手动干预或 DHCP），则需要删除并重新创建路由规则（如果它们是使用 iptables 创建的）。 如果需要重新创建或删除现有路由规则，可以使用以下命令删除旧 `RpcEndPointMapper` 规则：
@@ -150,7 +150,7 @@ Ubuntu 和 SLES 不使用“firewalld”服务，因此 iptable 规则就是实�
 
 ### <a name="port-routing-in-rhel"></a>RHEL 中的端口路由
 
-在使用“firewalld”服务的分发（例如 Red Hat Enterprise Linux）上，可以使用同一服务来打开服务器上的端口和实现内部端口转发  。 例如，在 Red Hat Enterprise Linux 上，应使用“firewalld”服务（通过带有 `-add-forward-port` 或类似选项的“firewall-cmd”配置实用程序）来创建和管理永久性端口转发规则，而非使用 iptables   。
+在使用“firewalld”服务的分发（例如 Red Hat Enterprise Linux）上，可以使用同一服务来打开服务器上的端口和实现内部端口转发  。 例如，在 Red Hat Enterprise Linux 上，应使用“firewalld”服务（通过带有  **或类似选项的“firewall-cmd”配置实用程序）来创建和管理永久性端口转发规则，而非使用 iptables**  `-add-forward-port`。
 
 ```bash
 sudo firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
@@ -165,7 +165,7 @@ sudo firewall-cmd --reload
 sudo netstat -tulpn | grep sqlservr
 ```
 
-会显示类似于以下的输出：
+会得到类似于下面的输出：
 
 ```bash
 tcp 0 0 0.0.0.0:1433 0.0.0.0:* LISTEN 13911/sqlservr
@@ -184,7 +184,7 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 默认情况下，Linux 上 SQL Server 的 MSDTC 不对 RPC 通信使用身份验证。 但是，当主机加入 Active Directory (AD) 域时，可使用以下“mssql-conf”设置将 MSDTC 配置为使用经过身份验证的 RPC 通信  ：
 
-| 设置 | 描述 |
+| 设置 | 说明 |
 |---|---|
 | **distributedtransaction.allowonlysecurerpccalls**          | 仅为分布式事务配置安全的 RPC 调用。 默认值为 0。 |
 | **distributedtransaction.fallbacktounsecurerpcifnecessary** | 为分布式事务配置“仅安全”的 RPC 调用。 默认值为 0。 |
@@ -202,7 +202,7 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 | 操作系统 | 最低版本 | 操作系统内部版本 |
 |---|---|---|
-| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
+| [Windows 服务器](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
 | [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
 
 ## <a name="next-steps"></a>后续步骤

@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121559"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68121559"
 
   对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实现与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 语言中的异常处理类似的错误处理。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句组可以包含在 TRY 块中。 如果 TRY 块内部发生错误，则会将控制传递给 CATCH 块中包含的另一个语句组。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,7 +63,7 @@ END CATCH
  statement_block   
  批处理或包含于 BEGIN…END 块中的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句组。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  TRY…CATCH 构造可对严重程度高于 10 但不关闭数据库连接的所有执行错误进行缓存。  
   
  TRY 块后必须紧跟相关联的 CATCH 块。 在 END TRY 和 BEGIN CATCH 语句之间放置任何其他语句都将生成语法错误。  
@@ -133,7 +133,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- ERROR\_\* 函数也适用于[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)内的 `CATCH` 块。  
+ ERROR\_\* 函数也适用于`CATCH`本机编译的存储过程[内的 ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) 块。  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>不受 TRY…CATCH 构造影响的错误  
  TRY…CATCH 构造在下列情况下不捕获错误：  
@@ -200,7 +200,7 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-## <a name="uncommittable-transactions-and-xactstate"></a>不可提交的事务和 XACT_STATE  
+## <a name="uncommittable-transactions-and-xact_state"></a>不可提交的事务和 XACT_STATE  
  如果 TRY 块内生成的错误导致当前事务的状态失效，则将该事务归类为不可提交的事务。 如果通常在 TRY 块外中止事务的错误在 TRY 内发生时，就会导致事务进入不可提交状态。 不可提交的事务只能执行读操作或 ROLLBACK TRANSACTION。 该事务不能执行任何可能生成写操作或 COMMIT TRANSACTION 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 如果事务被分类为不可提交的事务，则 XACT_STATE 函数会返回值 -1。 当批处理结束时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将回滚所有不可提交的活动事务。 如果事务进入不可提交状态时未发送错误消息，则当批处理结束时，将向客户端应用程序发送一个错误消息。 该消息指示检测到并回滚了一个不可提交的事务。  
   
  有关不可提交的事务和 XACT_STATE 函数的详细信息，请参阅 [XACT_STATE (Transact-SQL)](../../t-sql/functions/xact-state-transact-sql.md)。  
@@ -256,7 +256,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>C. 将 TRY…CATCH 与 XACT_STATE 配合使用  
+### <a name="c-using-trycatch-with-xact_state"></a>C. 将 TRY…CATCH 与 XACT_STATE 配合使用  
  以下示例显示如何使用 `TRY...CATCH` 构造来处理事务内发生的错误。 `XACT_STATE` 函数确定应提交事务还是应回滚事务。 在本示例中，`SET XACT_ABORT` 状态为 `ON`。 在发生违反约束的错误时，这会使事务处于不可提交状态。  
   
 ```sql  

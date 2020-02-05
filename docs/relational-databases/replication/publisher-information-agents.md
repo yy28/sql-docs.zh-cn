@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b006eac4981866bbadadaf47bc6d895e3abd0f9e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c0670e972dfb3c93a3b41dea67ebe5300c534843
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769730"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287485"
 ---
 # <a name="publisher-information-agents"></a>发布服务器信息，代理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "68769730"
 ## <a name="options"></a>选项  
  若要显示有关代理或作业的信息，请从 **“代理和作业类型”** 下拉菜单中选择。 若要查看与代理或作业相关的详细信息和任务，请右键单击该代理或作业所在的行，然后单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：在“列排序”对话框中对一列或多个列进行排序  。  
+-   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
   
--   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序  。  
+-   **选择要显示的列**：选择要显示哪些列以及要在 **“选择列”** 对话框中以何种顺序显示它们。  
   
--   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行  。  
+-   **筛选器**：根据 **“筛选设置”** 对话框中的列值筛选网格中的行。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68769730"
  以下各节说明了此选项卡上为每个代理或作业显示的数据。  
   
 ### <a name="snapshot-agent"></a>快照代理  
- **“状态”**  
+ **Status**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -95,7 +95,7 @@ ms.locfileid: "68769730"
  在此代理最近一次运行期间分发数据库中提交的命令数。 一个命令相当于一次数据更改，如一次更新。  
   
 ### <a name="log-reader-agent"></a>日志读取器代理  
- **“状态”**  
+ **Status**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -134,7 +134,7 @@ ms.locfileid: "68769730"
  在此代理最近一次运行期间平均每个事务的命令数。  
   
 ### <a name="queue-reader-agent"></a>队列读取器代理  
- **“状态”**  
+ **Status**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -173,7 +173,7 @@ ms.locfileid: "68769730"
  在此代理最近一次运行期间平均每个事务的命令数。  
   
 ### <a name="maintenance-jobs"></a>维护作业  
- **“状态”**  
+ **Status**  
  每个作业的状态。 下面列出了可能的状态值：  
   
 -   错误  

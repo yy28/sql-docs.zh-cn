@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1696860fd97d1622389cd7ac02ed96919663b5d6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3d8792020e540e67bc81aa1bba7453084fa8a65f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908528"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285944"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72908528"
  [配置分发](../../../relational-databases/replication/configure-distribution.md)  
  本节中的主题介绍如何使用 RMO 配置发布和分发。  
   
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [创建发布](../../../relational-databases/replication/publish/create-a-publication.md)  
  本节中的主题介绍如何使用 RMO 创建、删除和修改发布和项目。  
   
  [订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)  
@@ -66,7 +66,7 @@ ms.locfileid: "72908528"
   
 1.  启动 Visual Studio。  
   
-2.  在“文件”菜单中，单击“新建项目”。   此时将显示“新建项目”  对话框。  
+2.  在“文件”菜单中，单击“新建项目”。   将显示“新建项目”对话框  。  
   
 3.  在“项目类型”对话框中，选择“Visual C# 项目”。   在“模板”窗格中，选择“Windows 应用程序”。    
   
@@ -87,7 +87,7 @@ ms.locfileid: "72908528"
     > [!NOTE]  
     >  使用 CTRL 键可选择多个文件。  
   
-8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。    
+8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 **COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。** [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]   
   
 9. 在 **“视图”** 菜单上，单击 **“代码”** 。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "72908528"
   
 1.  启动 Visual Studio。  
   
-2.  在“文件”菜单中，选择“新建项目”。   此时将显示“新建项目”  对话框。  
+2.  在“文件”菜单中，选择“新建项目”。   将显示“新建项目”对话框  。  
   
 3.  在“项目类型”窗格中，选择“Visual Basic”。  在“模板”窗格中，选择“Windows 应用程序”。   
   
@@ -127,7 +127,7 @@ ms.locfileid: "72908528"
     > [!NOTE]  
     >  使用 CTRL 键可选择多个文件。  
   
-8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。    
+8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 **COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。** [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]   
   
 9. 在 **“视图”** 菜单上，单击 **“代码”** 。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "72908528"
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>连接复制服务器  
- RMO 编程对象要求使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 与该服务器的连接是独立于任何 RMO 编程对象的。 然后，在创建实例的过程中或在给 RMO 对象的 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 属性赋值的过程中，该编程对象会传递给 RMO 对象。 采用这种方式，RMO 编程对象实例和连接对象实例可以分别创建和管理，而多个 RMO 编程对象可以重用一个连接对象。 连接复制服务器时适用下列规则：  
+ RMO 编程对象要求使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 类的实例连接 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 实例。 与该服务器的连接是独立于任何 RMO 编程对象的。 然后，在创建实例的过程中或在给 RMO 对象的 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 属性赋值的过程中，该编程对象会传递给 RMO 对象。 采用这种方式，RMO 编程对象实例和连接对象实例可以分别创建和管理，而多个 RMO 编程对象可以重用一个连接对象。 连接复制服务器时适用下列规则：  
   
 -   该连接的所有属性都对给定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象定义。  
   

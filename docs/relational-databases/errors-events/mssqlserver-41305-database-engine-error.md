@@ -12,13 +12,13 @@ ms.assetid: a96e5083-ff97-4003-a900-07942454151d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce1b677da8356bd010145b612588fb10d5295a60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043476"
 ---
-# <a name="mssqlserver41305"></a>MSSQLSERVER_41305
+# <a name="mssqlserver_41305"></a>MSSQLSERVER_41305
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68043476"
 |符号名称|HK_TX_COMMIT_RR_VALIDATION|  
 |消息正文|因某个可重复读取验证失败，当前事务无法提交。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 事务遇到验证错误，已失败。  
   
 有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  

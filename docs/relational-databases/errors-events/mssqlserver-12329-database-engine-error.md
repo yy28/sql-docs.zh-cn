@@ -12,13 +12,13 @@ ms.assetid: 43f90287-36d5-46c2-ac91-a37202dcf6d3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 404f414a1f4bfe75c3476e0954e810c4b36ddaa3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68002898"
 ---
-# <a name="mssqlserver12329"></a>MSSQLSERVER_12329
+# <a name="mssqlserver_12329"></a>MSSQLSERVER_12329
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68002898"
 |符号名称|HK_UNSUPPORTED_NON_LATIN_CODEPAGE|  
 |消息正文|*construct* 不支持排序规则中代码页不是 1252 的数据类型 char(n) 和 varchar(n)。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 请勿使用排序规则中代码页不是 1252 的数据类型 char(n) 和 varchar(n)。  
   
 ## <a name="user-action"></a>用户操作  

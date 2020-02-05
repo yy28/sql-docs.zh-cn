@@ -18,10 +18,10 @@ ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a2b65decea6d737801ef1b0b37e44b0c8ae028af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101007"
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>空间类型 - geometry (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68101007"
 
   平面空间数据类型 **geometry** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中作为公共语言运行时 (CLR) 数据类型实现。 此类型表示欧几里得（平面）坐标系中的数据。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 **geometry** 空间数据类型的一组方法。 这些方法包括开放地理空间信息联盟 (OGC) 标准和对该标准的一组 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 扩展所定义的 **geometry** 方法。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 **geometry** 空间数据类型的一组方法。 这些方法包括开放地理空间信息联盟 (OGC) 标准和对该标准的一组 **扩展所定义的**geometry[!INCLUDE[msCoName](../../includes/msconame-md.md)] 方法。  
  
  geometry 方法的公差可高达 1.0e-7 * extents。 extents 表示 **geometry** 对象的各点之间的近似最大距离。
   

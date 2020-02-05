@@ -18,10 +18,10 @@ ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: eb5d28712e5d4132cd8be07ab1e5014d5cb26567
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71118135"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndPoint（geography 数据类型）
@@ -39,11 +39,11 @@ ms.locfileid: "71118135"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
- 开放地理空间联盟 (OGC) 类型：**Point**  
+ 开放地理空间信息联盟 (OGC) 类型：Point   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  STEndPoint() 等效于 [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`。  
   
  如果针对空 geography 实例调用此方法，则此方法返回 Null  。  

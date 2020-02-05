@@ -11,10 +11,10 @@ ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a0c867d9acba6542d90f72595fa0f71ab6d62e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026050"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO 和 DMO XP 服务器配置选项
@@ -26,12 +26,12 @@ ms.locfileid: "68026050"
   
  下表中列出了该选项的可能值：  
   
-|ReplTest1|含义|  
+|值|含义|  
 |-----------|-------------|  
 |0|SMO XP 不可用。|  
-|1|SMO XP 可用。 这是默认设置。|  
+|1|SMO XP 可用。 这是默认值。|  
   
- 此设置将立即生效。  
+ 设置立即生效。  
   
 ## <a name="examples"></a>示例  
  以下示例启用了 SMO 扩展存储过程。  

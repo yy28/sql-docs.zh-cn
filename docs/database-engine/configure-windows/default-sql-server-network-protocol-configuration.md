@@ -14,10 +14,10 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011948"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>默认 SQL Server 网络协议配置
@@ -36,9 +36,9 @@ ms.locfileid: "68011948"
 |Enterprise | 新安装 | 已启用 | 已启用 | 对于网络连接为禁用。|
 |Standard | 新安装 | 已启用 | 已启用 | 对于网络连接为禁用。|
 |Web | 新安装 | 已启用 | 已启用 | 对于网络连接为禁用。|
-|开发人员 | 新安装 | 已启用 | 禁用 | 对于网络连接为禁用。|
-|Evaluation | 新安装 | 已启用 | 已启用 | 对于网络连接为禁用。|
-|SQL Server Express | 新安装 | 已启用 | 禁用 | 对于网络连接为禁用。|
+|开发人员 | 新安装 | 已启用 | 已禁用 | 对于网络连接为禁用。|
+|计算 | 新安装 | 已启用 | 已启用 | 对于网络连接为禁用。|
+|SQL Server Express | 新安装 | 已启用 | 已禁用 | 对于网络连接为禁用。|
 |所有版本 | 存在以前的安装但未升级。 | 与全新安装相同 | 与全新安装相同 | 与全新安装相同|
 |所有版本 | 升级 | 已启用 | 保留以前安装中的设置。 | 保留以前安装中的设置。|
 
@@ -57,7 +57,7 @@ ms.locfileid: "68011948"
 
 
 
-## <a name="includessnoversionmdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 浏览器设置
+## <a name="includessnoversion_mdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 浏览器设置
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 服务可以配置为在安装过程中自动启动。 默认设置是在下列条件下自动启动：
 

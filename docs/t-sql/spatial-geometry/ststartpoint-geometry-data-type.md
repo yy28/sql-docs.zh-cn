@@ -18,10 +18,10 @@ ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ede5ca7a0037eabee9c1588057fd18c45460e812
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066296"
 ---
 # <a name="ststartpoint-geometry-data-type"></a>STStartPoint（geometry 数据类型）
@@ -37,13 +37,13 @@ ms.locfileid: "68066296"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
- 开放地理空间联盟 (OGC) 类型：**Point**  
+ 开放地理空间信息联盟 (OGC) 类型：Point   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `STStartPoint()` 等效于 [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (1)。  
   
 ## <a name="examples"></a>示例  

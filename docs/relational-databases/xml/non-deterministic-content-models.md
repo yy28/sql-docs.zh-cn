@@ -14,10 +14,10 @@ ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4de53a22bb650098db48619bef26efe543dd9ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137425"
 ---
 # <a name="non-deterministic-content-models"></a>不确定性内容模型
@@ -26,7 +26,7 @@ ms.locfileid: "68137425"
   
  不过从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1 开始，如果匹配项约束为 0、1 或不受限制，则会接受不确定性内容模型。  
   
-## <a name="example-non-deterministic-content-model-rejected"></a>例如：已拒绝的不确定性内容模型  
+## <a name="example-non-deterministic-content-model-rejected"></a>示例：拒绝的不确定性内容模型  
  下面的示例尝试创建具有不确定的内容模型的 XML 架构。 此代码失败，因为不清楚 `<root>` 元素应有一个包含两个 `<a>` 元素的序列，还是 `<root>` 元素应有两个序列，其中每个序列有一个 `<a>` 元素。  
   
 ```  
@@ -60,7 +60,7 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>例如：已接受的不确定性内容模型  
+## <a name="example-non-deterministic-content-model-accepted"></a>示例：接受的不确定性内容模型  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 之前的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本中，会拒绝下面的架构。  
   
 ```  

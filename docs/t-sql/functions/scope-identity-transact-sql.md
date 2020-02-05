@@ -21,18 +21,18 @@ ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111334"
 ---
-# <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
+# <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回插入到同一作用域中的标识列内的最后一个标识值。 一个范围是一个模块：存储过程、触发器、函数或批处理。 因此，如果两个语句处于同一个存储过程、函数或批处理中，则它们位于相同的作用域中。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,9 +41,9 @@ SCOPE_IDENTITY()
 ```  
   
 ## <a name="return-types"></a>返回类型  
- numeric(38,0)  
+ numeric(38,0)   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SCOPE_IDENTITY、IDENT_CURRENT 和 @@IDENTITY 是相似的函数，因为它们都返回插入到标识列中的值。  
   
  IDENT_CURRENT 不受作用域和会话的限制，而受限于指定的表。 IDENT_CURRENT 返回为任何会话和作用域中的特定表所生成的值。 有关详细信息，请参阅 [IDENT_CURRENT (Transact-SQL)](../../t-sql/functions/ident-current-transact-sql.md)。  
@@ -58,7 +58,7 @@ SCOPE_IDENTITY()
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. 将 @@IDENTITY 和 SCOPE_IDENTITY 用于触发器  
+### <a name="a-using-identity-and-scope_identity-with-triggers"></a>A. 将 @@IDENTITY 和 SCOPE_IDENTITY 用于触发器  
  下面的示例创建两个表，`TZ` 和 `TY`，并对 `TZ` 创建一个 INSERT 触发器。 当将某行插入表 `TZ` 中时，触发器 (`Ztrig`) 将激发并在 `TY` 中插入一行。  
   
 ```sql  
@@ -132,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. 将 @@IDENTITY 和 SCOPE_IDENTITY() 用于复制  
+### <a name="b-using-identity-and-scope_identity-with-replication"></a>B. 将 @@IDENTITY 和 SCOPE_IDENTITY() 用于复制  
  下面的示例说明如何针对为合并复制发布的数据库中的插入内容使用 `@@IDENTITY` 和 `SCOPE_IDENTITY()`。 示例中的两个表都在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中，其中 `Person.ContactType` 未发布，`Sales.Customer` 已发布。 合并复制将把触发器添加到已发布的表中。 因此，`@@IDENTITY` 可以从复制系统表中的插入内容而非用户表中的插入内容返回值。  
   
  `Person.ContactType` 表的最大标识值为 20。 如果在该表中插入一行，`@@IDENTITY` 和 `SCOPE_IDENTITY()` 将返回相同的值。  

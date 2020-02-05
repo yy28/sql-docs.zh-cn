@@ -12,13 +12,13 @@ ms.assetid: 1cef90ef-9c39-44e6-bc7f-316c8f53c10c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bc2b1094a4ea7f8f6c2d2d60c804260286c5f237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085995"
 ---
-# <a name="mssqlserver2527"></a>MSSQLSERVER_2527
+# <a name="mssqlserver_2527"></a>MSSQLSERVER_2527
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68085995"
 |符号名称|DBCC_INDEX_FILEGROUP_IS_OFFLINE|  
 |消息正文|无法处理表 O_NAME 的索引 I_NAME，因为文件组 F_NAME 离线。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 此信息性消息指示由于用来存储索引数据的某个文件组处于脱机状态而无法检查索引。 文件组中文件的状态决定整个文件组的可用性。 文件组中的所有文件都必须联机，文件组才可用。 如果没有其他问题，将检查同一对象的所有其他索引。  
   
 ## <a name="user-action"></a>用户操作  

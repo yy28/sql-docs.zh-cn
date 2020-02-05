@@ -14,10 +14,10 @@ ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 06bf3ea82f026a36fece8266354e79992473df44
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288644"
 ---
 # <a name="square-ssis-expression"></a>SQUARE（SSIS 表达式）
@@ -41,7 +41,7 @@ SQUARE(numeric_expression)
 ## <a name="result-types"></a>结果类型  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果参数为空，SQUARE 将返回空结果。  
   
  执行 SQUARE 操作前，参数会转换为 DT_R8 数据类型。  

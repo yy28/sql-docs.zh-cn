@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082074"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
@@ -28,10 +28,10 @@ Scale Out Worker 运行 Scale Out Worker 服务以从 Scale Out Master 中请求
 ## <a name="configure-the-scale-out-worker-service"></a>配置 Scale Out Worker 服务
 可使用 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` 文件配置 Scale Out Worker 服务。 更新配置文件之后，必须重启服务。
 
-|配置  |描述  |默认值|
+|配置  |说明  |默认值|
 |---------|---------|---------|
-|DisplayName|Scale Out Worker 的显示名称。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。 |计算机名称|
-|描述|Scale Out Worker 的说明。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。 |Empty|
+|DisplayName|Scale Out Worker 的显示名称。 没有在  **2017 中使用。[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]**|计算机名称|
+|说明|Scale Out Worker 的说明。 没有在  **2017 中使用。[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]**|空|
 |MasterEndpoint|连接到 Scale Out Master 的终结点。|该终结点在 Scale Out Worker 安装期间设置|
 |MasterHttpsCertThumbprint|用于对 Scale Out Master 进行身份验证的客户端 SSL 证书的指纹|客户端证书的指纹在 Scale Out Worker 安装期间指定。|
 |WorkerHttpsCertThumbprint|用于对 Scale Out Worker 进行身份验证的 Scale Out Master 证书的指纹。|证书的指纹在 Scale Out Worker 安装期间自动创建并安装|
@@ -44,11 +44,11 @@ Scale Out Worker 运行 Scale Out Worker 服务以从 Scale Out Master 中请求
 |TaskRequestMinMemory|Scale Out Worker 请求任务的内存（以 MB 表示）下限。|100.0|
 |MaxTaskCount|Scale Out Worker 可保留的最大任务数。|10|
 |LeaseInterval|Scale Out Worker 可保留任务的租用间隔。|00:01:00|
-|TasksRootFolder|任务日志的文件夹。 如果值为空，则使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` 文件夹路径。 [account] 是运行 Scale Out Worker 服务的帐户。 默认情况下，该帐户为 SSISScaleOutWorker140。|Empty|
+|TasksRootFolder|任务日志的文件夹。 如果值为空，则使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` 文件夹路径。 [account] 是运行 Scale Out Worker 服务的帐户。 默认情况下，该帐户为 SSISScaleOutWorker140。|空|
 |TaskLogLevel|Scale Out Worker 的任务日志级别。 (Verbose 0x01, Information 0x02, Warning 0x04, Error 0x08, Progress 0x10, CriticalError 0x20, Audit 0x40)|126（信息、警告、错误、进度、CriticalError 和审核）|
 |TaskLogSegment|任务日志文件的时间跨度。|00:00:00|
 |TaskLogEnabled|指定是否启用任务日志。|true|
-|ExecutionLogCacheFolder|用于缓存包执行日志的文件夹。 如果值为空，则使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` 文件夹路径。 [account] 是运行 Scale Out Worker 服务的帐户。 默认情况下，该帐户为 SSISScaleOutWorker140。|Empty|
+|ExecutionLogCacheFolder|用于缓存包执行日志的文件夹。 如果值为空，则使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` 文件夹路径。 [account] 是运行 Scale Out Worker 服务的帐户。 默认情况下，该帐户为 SSISScaleOutWorker140。|空|
 |ExecutionLogMaxBufferLogCount|在内存的一个执行日志缓冲区中，缓存的执行日志的最大数量。|10000|
 |ExecutionLogMaxInMemoryBufferCount|用于执行日志的内存中，执行日志缓冲区的最大数量。|10|
 |ExecutionLogRetryCount|执行日志记录失败时的重试次数。|3|
@@ -59,7 +59,7 @@ Scale Out Worker 运行 Scale Out Worker 服务以从 Scale Out Master 中请求
 ## <a name="view-the-scale-out-worker-log"></a>查看 Scale Out Worker 日志
 Scale Out Worker 服务的日志文件位于 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent` 文件夹。
 
-在 `TasksRootFolder` 的 `WorkerSettings.config` 文件中配置每项单独任务的日志位置。 如果未指定值，则日志位于 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` 文件夹。 
+在 `WorkerSettings.config` 的 `TasksRootFolder` 文件中配置每项单独任务的日志位置。 如果未指定值，则日志位于 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` 文件夹。 
 
 [account] 参数是运行 Scale Out Worker 服务的帐户  。 默认情况下，该帐户为 `SSISScaleOutWorker140`。
 

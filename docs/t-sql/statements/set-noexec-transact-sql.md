@@ -23,10 +23,10 @@ ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7c74a19dc498e3551b1e8bdc2018c10392e803f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68034939"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68034939"
 
   编译每个查询但不执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68034939"
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当 SET NOEXEC 为 ON 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将编译每一批 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句但并不执行它们。 当 SET NOEXEC 设置为 OFF 时，所有批处理将在编译后执行。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的语句执行包含两个阶段：编译和执行。 该设置可用于让 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码时，验证代码中的语法和对象名。 它也可以用于调试通常是较大的批处理中的部分语句。  

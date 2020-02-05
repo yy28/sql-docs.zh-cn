@@ -14,17 +14,17 @@ ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa53478ba653961d255ee3a03038d44fcbd15f3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943251"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 数据类型的 FOR XML 支持
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   如果 FOR XML 查询在 SELECT 子句中指定了 **xml** 类型的列，列值将映射为返回的 XML 中的元素，不管是否指定了 ELEMENTS 指令。 **xml** 类型的列中的任何 XML 声明都不是序列化的。  
   
- 例如，下列查询将从 **xml** 类型的 `AdditionalContactInfo` 列中检索客户联系人信息（如 `BusinessEntityID``FirstName` 和 `LastName` 列以及电话号码）。  
+ 例如，下列查询将从 `BusinessEntityID`xml`FirstName` 类型的 `LastName` 列中检索客户联系人信息（如 `AdditionalContactInfo`**和** 列以及电话号码）。  
   
 ```  
 USE AdventureWorks2012;  

@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 274c79dabe90098094423b2994edb93603e649e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123574"
 ---
 # <a name="rename-user-defined-functions"></a>重命名用户定义函数
@@ -80,6 +80,6 @@ ms.locfileid: "68123574"
   
 ## <a name="see-also"></a>另请参阅  
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [查看用户定义函数](../../relational-databases/user-defined-functions/view-user-defined-functions.md)  
+ [查看用户定义的函数](../../relational-databases/user-defined-functions/view-user-defined-functions.md)  
   
   

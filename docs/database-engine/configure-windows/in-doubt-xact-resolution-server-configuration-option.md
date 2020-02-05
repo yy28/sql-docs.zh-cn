@@ -15,10 +15,10 @@ ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bfdee182770e24896796bc3837d5c17d3d73da9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67998044"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution 服务器配置选项
@@ -28,7 +28,7 @@ ms.locfileid: "67998044"
   
  下表列出了解决有疑问的事务可能出现的结果值。  
   
-|结果值|描述|  
+|结果值|说明|  
 |-------------------|-----------------|  
 |0|没有假设。 如果 MS DTC 无法解决任何有疑问的事务，恢复就会失败。|  
 |1|假设提交。 假设已提交任何 MS DTC 有疑问的事务。|  

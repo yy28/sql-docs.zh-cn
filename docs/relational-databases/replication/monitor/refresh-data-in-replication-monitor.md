@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f98fa5b39585c8e8cd66178a82a9d6c95b330c7a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2e115bd7007d967429495a18a1421ee4bd46687d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909611"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287714"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>刷新复制监视器中的数据
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "72909611"
   
     3.  右键单击订阅，然后单击 **“查看详细信息”** 。  
   
-2.  在“订阅 \<SubscriptionName>”  详细信息窗口中，单击“操作”  ，然后单击“自动刷新”  。 刷新速率由 **“发布服务器设置”** 对话框中的 **“刷新速率”** 设置决定。  
+2.  在“订阅 **SubscriptionName>”\<** 详细信息窗口中，单击“操作”  ，然后单击“自动刷新”  。 刷新速率由 **“发布服务器设置”** 对话框中的 **“刷新速率”** 设置决定。  
   
 ## <a name="see-also"></a>另请参阅  
  [监视复制](../../../relational-databases/replication/monitor/monitoring-replication.md)  

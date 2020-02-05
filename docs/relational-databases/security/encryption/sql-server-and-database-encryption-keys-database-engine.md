@@ -13,10 +13,10 @@ ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 1c5e618d1116dfc464bcea781cdab8469e735b32
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558102"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和数据库加密密钥（数据库引擎）
@@ -26,7 +26,7 @@ ms.locfileid: "75558102"
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，加密密钥包括一组用来保护敏感数据的公钥、私钥和对称密钥。 当第一次启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例时，将在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初始化过程中创建对称密钥。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用此密钥来加密存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的敏感数据。 公钥和私钥由操作系统创建，用于保护对称密钥。 对于在数据库中存储敏感数据的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，都要创建一个公钥私钥对。  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>SQL Server 和数据库密钥的应用  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在密钥中的应用主要有两个方面：作为某 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上为该实例生成的*服务主密钥* (SMK) 和作为用于数据库的*数据库主密钥* (DMK)。
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在密钥中的应用主要有两个方面：作为某  *实例上为该实例生成的*服务主密钥[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMK) 和作为用于数据库的*数据库主密钥* (DMK)。
 
 ### <a name="service-master-key"></a>服务主密钥
   

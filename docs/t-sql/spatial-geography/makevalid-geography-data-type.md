@@ -15,10 +15,10 @@ ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d913a0e7bbe29ab6f6f303519c73304238afd7df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127395"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid（geography 数据类型）
@@ -40,15 +40,15 @@ ms.locfileid: "68127395"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此方法可能更改 geography 实例的类型  。 此外，geography 实例的点可能会略有偏移  。 某些方法（如 NumPoint()）产生的结果可能会发生变化。  
   
  在无效的空间实例与赤道相交且 EnvelopeAngle() = 180 的情况下，将返回 FullGlobe 实例  。 `MakeValid()` geography 数据类型方法将以最佳方式尝试返回有效的实例，但不保证结果的准确性或精确性  。  
   
 > [!NOTE]  
->  无效的对象可以存储在数据库中。 可对无效实例（即对其 STIsValid() 返回 False 的那些实例）执行的方法是用于检查有效性或允许导出的方法：STIsValid()、MakeValid()、STAsText()、STAsBinary()、ToString()、AsTextZM() 和 AsGml()。  
+>  无效的对象可以存储在数据库中。 可对无效实例（即 STIsValid() 对其返回 False 的那些实例）执行的方法是用于检查有效性或允许导出的方法：STIsValid()、MakeValid()、STAsText()、STAsBinary()、ToString()、AsTextZM() 和 AsGml()。  
   
  此方法不精确。  
   

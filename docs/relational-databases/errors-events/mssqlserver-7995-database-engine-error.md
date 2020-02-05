@@ -12,10 +12,10 @@ ms.assetid: af6d6322-3cba-43d8-be97-e6ef15f8c933
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 16f2bebd761898fad44cd19c78c02470420b6d18
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906560"
 ---
 # <a name="mssqlserver_7995"></a>MSSQLSERVER_7995
@@ -32,7 +32,7 @@ ms.locfileid: "72906560"
 |符号名称|DBCC2_SYSTEM_CATALOGS_CORRUPT|  
 |消息正文|数据库 'DBNAME'：系统目录中存在一致性错误，无法进一步处理 DBCC CHECKNAME。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 DBCC CHECKDB 进程包含以下三个阶段：  
   
 1.  分配检查。 这等效于运行 DBCC CHECKALLOC。  

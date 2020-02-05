@@ -11,10 +11,10 @@ ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cda4fd3fa0bbb66e95d61ec87ff66dee809e2962
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155445"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>从 Microsoft Azure 中存储的备份还原
@@ -26,9 +26,9 @@ ms.locfileid: "70155445"
 ## <a name="overview"></a>概述  
  用于从本地备份还原数据库的工具和方法也适用于从云备份还原数据库。  以下各节介绍了这些注意事项，以及在使用 Azure Blob 存储服务存储的备份时应当了解的所有差异。  
   
-### <a name="using-transact-sql"></a>使用 Transact-SQL  
+### <a name="using-transact-sql"></a>“使用 Transact-SQL”  
   
--   因为 SQL Server 必须连接外部源才能检索备份文件，所以会使用 SQL 凭据来对存储帐户进行身份验证。 因此，RESTORE 语句需要有 WITH CREDENTIAL 选项。 有关详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+-   因为 SQL Server 必须连接外部源才能检索备份文件，所以会使用 SQL 凭据来对存储帐户进行身份验证。 因此，RESTORE 语句需要有 WITH CREDENTIAL 选项。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 -   如果你正在使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 管理备份到云中的备份，则可以通过使用 **smart_admin.fn_available_backups** 系统函数，查看存储中的所有可用备份。 此系统函数会在一个表中返回数据库的所有可用备份。 因为结果以表的形式返回，所以您可以对结果进行筛选或排序。 有关详细信息，请参阅 [managed_backup.fn_available_backups (Transact-SQL)](../../relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql.md)。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "70155445"
   
  要减少还原次数，建议使用压缩的备份。  对于大小超过 25 GB 的备份，请使用 [AzCopy 实用工具](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) 下载到本地驱动器，然后执行还原。 有关其他备份最佳实践和建议，请参阅 [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。  
   
- 在执行还原操作时，也可开启跟踪标志 3051，以生成详细日志。 此日志文件放置在日志目录中，以下面的格式命名：BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log。 日志文件包含每次往返 Azure 存储的相关信息（包括计时），这在诊断问题时可能非常有用。  
+ 在执行还原操作时，也可开启跟踪标志 3051，以生成详细日志。 此日志文件放置在日志目录中，以下面的格式命名：BackupToUrl-\<实例名称>-\<数据库名称>-action-\<PID>.log。 日志文件包含每次往返 Azure 存储的相关信息（包括计时），这在诊断问题时可能非常有用。  
   
 ### <a name="topics-on-performing-restore-operations"></a>关于执行还原操作的主题  
   

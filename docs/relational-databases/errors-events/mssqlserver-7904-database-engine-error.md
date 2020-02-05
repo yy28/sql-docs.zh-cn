@@ -12,13 +12,13 @@ ms.assetid: d047920c-f864-4338-b15f-49820886fbc5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bfc9cfccbad7d41997199f25d3d69ef0fff55e8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951481"
 ---
-# <a name="mssqlserver7904"></a>MSSQLSERVER_7904
+# <a name="mssqlserver_7904"></a>MSSQLSERVER_7904
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -30,9 +30,9 @@ ms.locfileid: "67951481"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_MISSING_FILE|  
-|消息正文|表错误:找不到列 ID C_ID，ROWGUID RG_ID (位于对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 中)的 FileStream 文件。|  
+|消息正文|表错误：找不到列 ID C_ID，ROWGUID RG_ID (位于对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 中)的 FileStream 文件。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 分区的列值在对应的 FILESTREAM 列目录中没有匹配的 FILESTREAM 文件。  
   
 ## <a name="user-action"></a>用户操作  

@@ -11,10 +11,10 @@ ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2a8830fbf4b9418f80cf07c7586e71689001d455
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109607"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用内存优化表的要求
@@ -43,7 +43,7 @@ ms.locfileid: "68109607"
   
      要安装报表生成（[确定表或存储过程是否应移植到内存中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]（通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器管理内存中 OLTP），[请下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。   
   
-## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>有关使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的重要说明  
+## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>有关使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的重要说明  
   
 -   自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，对内存优化表没有大小限制（不同于可用内存）。 
 
@@ -52,7 +52,7 @@ ms.locfileid: "68109607"
 > [!NOTE]
 > 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，Standard 和 Express 版本支持内存中 OLTP，但它们对可用于给定数据库中内存优化表的内存量设置了配额。 在 Standard 版本中，每个数据库的配额是 32GB；在 Express 版本中，每个数据库的配额是 352MB。 
   
--   如果创建一个或多个包含内存优化表的数据库，应通过向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户授予 SE_MANAGE_VOLUME_NAME 用户权限，启用即时文件初始化 (IFI)。 如果没有 IFI，内存优化存储文件（数据和差异文件）将在创建时初始化，这会对工作负荷性能产生负面影响。 有关 IFI 的详细信息，包括如何启用它，请参阅[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
+-   如果创建一个或多个包含内存优化表的数据库，应通过向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户授予 SE_MANAGE_VOLUME_NAME 用户权限，启用即时文件初始化 (IFI)  。 如果没有 IFI，内存优化存储文件（数据和差异文件）将在创建时初始化，这会对工作负荷性能产生负面影响。 有关 IFI 的详细信息，包括如何启用它，请参阅[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
   
 ## <a name="see-also"></a>另请参阅  
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

@@ -11,10 +11,10 @@ ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 733e6c8000f3a14127b0f3a8704b43af81fa0f85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292333"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>通过使用 ODBC 目标来加载数据
@@ -50,7 +50,7 @@ ms.locfileid: "71292333"
   
 10. 若要配置错误输出，请单击 **“错误输出”** 。  
   
-11. 单击“确定”  。  
+11. 单击“确定”。   
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

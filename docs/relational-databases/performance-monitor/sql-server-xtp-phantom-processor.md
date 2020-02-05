@@ -11,10 +11,10 @@ ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f9f7f51b2d0ede3bb49bb152ab08cbb2a7eb2732
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114034"
 ---
 # <a name="sql-server-xtp-phantom-processor"></a>SQL Server XTP 虚拟处理器
@@ -24,7 +24,7 @@ ms.locfileid: "68114034"
   
  下表介绍了 **SQL Server XTP 虚拟处理器** 计数器。  
   
-|计数器|描述|  
+|计数器|说明|  
 |-------------|-----------------|  
 |**灰尘角扫描重试次数/秒（虚拟发出）**|在虚拟处理器发出的灰尘角扫描期间，由于写冲突而进行的每秒扫描重试次数（平均值）。 此为非常低级的计数器，不适合客户使用。|  
 |**删除的虚拟过期行数/秒**|虚拟扫描每秒删除的过期行数（平均值）。|  

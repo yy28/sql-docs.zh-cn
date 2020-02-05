@@ -12,13 +12,13 @@ ms.assetid: c1d6bfb6-28af-4df6-8087-25807602d282
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1d6b4f7cdabc8688fda5ad21cc40e6c5f11fa39e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131662"
 ---
-# <a name="mssqlserver17300"></a>MSSQLSERVER_17300
+# <a name="mssqlserver_17300"></a>MSSQLSERVER_17300
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68131662"
 |符号名称|PROC_OUT_OF_SYSTASK_SESSIONS|  
 |消息正文|SQL Server 无法运行新的系统任务，原因是内存不足或配置的会话数超过了服务器允许的最大数。 请查看服务器是否有足够的内存。 请使用 sp_configure 以及选项 '用户连接' 查看允许的最大用户连接数。 请使用 sys.dm_exec_sessions 检查当前会话数，包括用户进程。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 尝试运行新系统任务失败，因为系统内存不足或超出了服务器中配置的会话数。  
   
 ## <a name="user-action"></a>用户操作  
@@ -47,7 +47,7 @@ ms.locfileid: "68131662"
 -   增大服务器所允许的最大用户连接数。  
   
 ## <a name="see-also"></a>另请参阅  
-[sp_configure (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+[sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
 [服务器配置选项 (SQL Server)](~/database-engine/configure-windows/server-configuration-options-sql-server.md)  
 [sys.dm_exec_sessions (Transact-SQL)](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 [配置 user connections 服务器配置选项](~/database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)  

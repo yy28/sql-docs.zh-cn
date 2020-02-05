@@ -13,10 +13,10 @@ ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 14333d96ce4a1022979a2998cb808bfa16cd7a0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087386"
 ---
 # <a name="export-as-policy-dialog-box"></a>“导出为策略”对话框
@@ -34,7 +34,7 @@ ms.locfileid: "68087386"
  选择此选项可在本地服务器实例上保存策略。  
   
  **到文件**  
- 若要将策略保存为 XML 文件，请键入此文件的路径和名称或者使用“浏览”(**...**) 按钮。  
+ 若要将策略保存为 XML 文件，请键入此文件的路径和名称或者使用“浏览”( **...** ) 按钮。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

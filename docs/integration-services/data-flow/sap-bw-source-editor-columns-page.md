@@ -13,10 +13,10 @@ ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d523437dd2deaddac4462f2e825ff0c197b26bf6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291850"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 源编辑器（“列”页）
@@ -52,7 +52,7 @@ ms.locfileid: "71291850"
   
  若要在数据流中包括某列，请选中该列对应的复选框。 您选择这些复选框的顺序决定了列的输出顺序。 也就是说，您选择的第一个复选框将是第一个输出列，而选择的第二个复选框则将是第二个输出列，以此类推。  
   
- **外部列**  
+ **“外部列”**  
  查看选定外部（源）列。 选定列将按照您在配置要使用来自此源的数据的下游组件时将看到的对应输出列的顺序显示。  
   
  要更改这些列的顺序，请在 **“可用外部列”** 列表中清除所有列的复选框。 然后按照您希望列显示的顺序选择列。  

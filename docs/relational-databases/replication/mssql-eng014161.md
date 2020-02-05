@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 4b983e76-bb77-43c5-b44b-19919d3da619
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 74cfa4b2d6e4ea21ac6e920d9aaf6a720ec8ec69
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 74fd90cfc88e9ae4903408575c048a46fc288217
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766156"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287754"
 ---
-# <a name="mssqleng014161"></a>MSSQL_ENG014161
+# <a name="mssql_eng014161"></a>MSSQL_ENG014161
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68766156"
 |符号名称||  
 |消息正文|已设置发布 [%s] 的阈值 [%s:%s]。 请确保日志读取器和分发代理正在运行并且可以满足滞后时间要求。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  使用复制可以对一些情况启用警告。 这些情况包括超过了事务订阅的指定滞后时间。 滞后时间是指在发布服务器上提交数据更改到在订阅服务器上提交相应更改之间所用的时间。  
   
  使用复制监视器或 [sp_replmonitorchangepublicationthreshold](../../relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql.md)启用警告时，请指定阈值以确定何时触发警告。 达到或超过该阈值时，复制监视器中将显示警告，并且将一个事件写入 Windows 事件日志。 达到阈值还会触发 SQL Server 代理警报。 有关详细信息，请参阅[在复制监视器中设置阈值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)和[以编程方式监视复制](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)。  

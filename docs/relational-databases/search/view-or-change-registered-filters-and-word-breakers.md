@@ -17,10 +17,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4b1679674ba3ae46dd988ef25703acd291fc6bfa
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056077"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>查看或更改注册的筛选器和断字符
@@ -69,7 +69,7 @@ ms.locfileid: "74056077"
   
 1.  准备安装包含新的断字符或筛选器的 DLL 文件时，请验证其文件名是否不同于已在您的服务器实例上安装的任何现有 DLL 文件的文件名。  
   
-2.  将新的 DLL 文件复制到包含该服务器实例的标准 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 文件的目录内。 默认位置是：  
+2.  将新的 DLL 文件复制到包含该服务器实例的标准 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 文件的目录内。 默认位置为：  
   
      C:\Program Files\Microsoft SQL Server\MSSQL.*instance_name*\MSSQL\Binn  
   

@@ -17,10 +17,10 @@ ms.assetid: 67a4b019-9091-4443-85cc-f4836d0cb509
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a5f6a00225549c32d95be58bd3987b42494e28a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101183"
 ---
 # <a name="null-geometry-data-type"></a>Null（geometry 数据类型）
@@ -42,7 +42,7 @@ Null
   
  CLR 类型：**SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="examples"></a>示例  
  下面的示例检索一个 Null `geometry` 实例。  

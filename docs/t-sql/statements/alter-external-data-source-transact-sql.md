@@ -19,10 +19,10 @@ ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 236749303a05b54f37be5e24f10f56fc6f5bc41d
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71227160"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
@@ -68,13 +68,13 @@ ALTER EXTERNAL DATA SOURCE data_source_name
  CREDENTIAL = Credential_Name 指定命名凭据。 请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
 TYPE = [HADOOP | BLOB_STORAGE]   
-**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
-仅对于大容量操作，`LOCATION` 必须是有效的 Azure Blob 存储 URL。 请勿将 /、文件名或共享访问签名参数放在 `LOCATION` URL 的末尾  。
+适用对象：  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
+仅对于大容量操作，`LOCATION` 必须是有效的 Azure Blob 存储 URL。 请勿将 **、文件名或共享访问签名参数放在 / URL 的末尾**`LOCATION`。
 必须使用 `SHARED ACCESS SIGNATURE` 作为标识创建所使用的凭据。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
 
   
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
  一次只能修改一个源。 修改同一个源的并发请求会导致一个语句等待。 但是，可以同时修改不同的源。 此语句可以与其他语句同时运行。
 
 ## <a name="permissions"></a>权限  

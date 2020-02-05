@@ -11,10 +11,10 @@ ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: de1e0cddcee34685e5921b7cc31837a301f44166
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295343"
 ---
 # <a name="catalogset_environment_reference_type-ssisdb-database"></a>catalog.set_environment_reference_type（SSISDB 数据库）
@@ -48,7 +48,7 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -68,7 +68,7 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 -   通过使用 reference_location 参数中的 `A` 字符指定绝对引用，而未使用 environment_folder_name 参数指定该文件夹的名称   。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  项目可以具有相对或绝对的环境引用。 相对引用通过名称引用环境，并要求它与项目位于相同文件夹中。 绝对引用通过名称和文件夹引用环境，可能引用与项目不在同一文件夹中的环境。 项目可以引用多个环境。  
   
 > [!IMPORTANT]  

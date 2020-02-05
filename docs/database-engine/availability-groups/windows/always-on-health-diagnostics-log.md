@@ -11,10 +11,10 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: aa9d269333e5c39f12b82d739575652efdd6c2c4
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822078"
 ---
 # <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>可用性组的 SQL Server 资源 DLL 运行状况诊断日志
@@ -25,7 +25,7 @@ ms.locfileid: "74822078"
   
  **使用 SQL Server 故障转移群集诊断日志**
  
- 从 sp_server_diagnostics are automatically 收到的所有运行状况诊断 SQL Server 资源 DLL 将自动保存在 SQL Server 实例的默认日志目录中 (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log)。 这些日志称为 SQLDIAG 日志，以 XEL（扩展事件）文件格式保存。 SQL Server 日志目录下的这些文件采用以下格式：\<HOSTNAME>_\<INSTANCENAME>_SQLDIAG_X_XXXXXXXXX.xel。 通过查看 SQLDIAG 日志，也许能够确定可用性组资源故障或故障转移事件的根本原因。  
+ 从 sp_server_diagnostics are automatically 收到的所有运行状况诊断 SQL Server 资源 DLL 将自动保存在 SQL Server 实例的默认日志目录中 (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log)。 这些日志称为 SQLDIAG 日志，以 XEL（扩展事件）文件格式保存。 这些 SQL Server 日志目录下的文件采用以下格式：\<HOSTNAME>_\<INSTANCENAME>_SQLDIAG_X_XXXXXXXXX.xel。 通过查看 SQLDIAG 日志，也许能够确定可用性组资源故障或故障转移事件的根本原因。  
   
  要查看 SQLDIAG 日志，请将 .xel 文件拖到 SQL Server Management Studio。  
   

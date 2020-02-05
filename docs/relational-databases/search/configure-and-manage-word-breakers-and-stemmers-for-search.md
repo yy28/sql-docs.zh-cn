@@ -22,10 +22,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056264"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>配置和管理断字符和词干分析器以便搜索 (SQL Server)
@@ -95,7 +95,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 
 ### <a name="info-about-the-mssqlserver_30053-error"></a>有关 MSSQLSERVER_30053 错误的信息
   
-|属性|ReplTest1|
+|properties|值|
 |-|-|
 |产品名称|SQL Server|  
 |事件 ID|30053|  
@@ -104,7 +104,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 |符号名称|FTXT_QUERY_E_WORDBREAKINGTIMEOUT|  
 |消息正文|全文查询字符串出现断字超时。 如果断字器长时间处理全文查询字符串或服务器上有大量查询正在运行，则会发生这种情况。 请在负荷较轻的情况下再次尝试运行此查询。|  
   
-#### <a name="explanation"></a>解释  
+#### <a name="explanation"></a>说明  
  在以下情况下会发生断字超时错误：  
   
 -   查询语言的断字符配置不正确；例如，其注册表设置不正确。  

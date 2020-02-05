@@ -11,10 +11,10 @@ ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 975dca6fe0151b5bd1fc1d72b9d14e47a57413d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67915212"
 ---
 # <a name="sql-server-xtp-io-governor"></a>SQL Server XTP IO 调控器
@@ -24,7 +24,7 @@ SQL Server XTP IO 调控器性能对象包含与内存中 OLTP IO 速率调控�
 
 下表介绍了 **SQL Server XTP IO 调控器** 计数器。
 
-|计数器|描述|  
+|计数器|说明|  
 |-------------|-----------------|  
 |**信用不足等待数/秒**|由于速率对象中没有足够的信用而引起的等待次数（每秒）。|
 |**发出的 IO 数/秒**|每秒由刷新线程发出的 IO 数。|

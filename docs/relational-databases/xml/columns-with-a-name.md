@@ -13,10 +13,10 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 855f7c079d592c095ce3754cd5c6fc799139324e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113055"
 ---
 # <a name="columns-with-a-name"></a>具有名称的列
@@ -36,7 +36,7 @@ ms.locfileid: "68113055"
 -   一列具有不同的名称。  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>列名以 at 符号 (\@) 开头  
- 如果列名以 at 符号 (\@) 开头且不包含斜线标记 (/)，就会创建包含相应列值的 `row` 元素的属性。 例如，下面的查询返回包含两列（\@PmId 和 Name）的行集。 在生成的 XML 中，会向相应的 `row` 元素添加 PmId 属性并为其分配 ProductModelID 值  。  
+ 如果列名以 at 符号 (\@) 开头且不包含斜线标记 (/)，就会创建包含相应列值的 `row` 元素的属性。 例如，下面的查询返回包含两列（\@PmId 和 Name）的行集。 在生成的 XML 中，会向相应的  **元素添加 PmId 属性并为其分配 ProductModelID 值**`row`。  
   
 ```sql
 SELECT ProductModelID as "@PmId",  
@@ -67,7 +67,7 @@ FOR XML PATH;
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>列名不以 at 符号 (\@) 开头  
  如果列名不以 at 符号 (\@) 开头、不是 XPath 节点测试之一且不包含斜线标记 (/)，就会创建作为行元素（默认为 `row`）的子元素的 XML 元素。  
   
- 以下查询指定了列名 result。 因此，会向 `row` 元素添加 `result` 子元素。  
+ 以下查询指定了列名 result。 因此，会向 `result` 元素添加 `row` 子元素。  
   
 ```sql
 SELECT 2+2 as result  
@@ -127,7 +127,7 @@ WHERE  E.EmployeeID = C.ContactID  AND
 FOR XML PATH;
 ```  
   
- 列名用作在 PATH 模式中构造 XML 时的路径。 包含雇员 ID 值的列名以“\@”开头。因此，向 `row` 元素添加 EmpID 属性  。 其他所有列的列名中均包含指明层次结构的斜杠标记 (/)。 在生成的 XML 中，`row` 元素下包含 `EmpName` 子元素，而 `EmpName` 子元素包含 `First`、`Middle` 和 `Last` 子元素。  
+ 列名用作在 PATH 模式中构造 XML 时的路径。 包含雇员 ID 值的列名以“\@”开头。因此，向  **元素添加 EmpID 属性**`row`。 其他所有列的列名中均包含指明层次结构的斜杠标记 (/)。 在生成的 XML 中，`EmpName` 元素下包含 `row` 子元素，而 `EmpName` 子元素包含 `First`、`Middle` 和 `Last` 子元素。  
   
 ```xml
 <row EmpID="1">  
@@ -166,7 +166,7 @@ FOR XML PATH, ELEMENTS XSINIL;
   
  默认情况下，PATH 模式生成以元素为中心的 XML。 因此，在 PATH 模式中指定 ELEMENTS 指令将不起作用。 但是，如上一个示例所示，可以指定带有 XSINIL 的 ELEMENTS 指令来针对 Null 值生成元素。  
   
- 除了 ID 和名称以外，以下查询还将检索雇员地址。 按照地址列的列名中包含的路径，可向 `row` 元素添加 `Address` 子元素，并添加地址详细信息来作为 `Address` 元素的子元素。  
+ 除了 ID 和名称以外，以下查询还将检索雇员地址。 按照地址列的列名中包含的路径，可向 `Address` 元素添加 `row` 子元素，并添加地址详细信息来作为 `Address` 元素的子元素。  
   
 ```sql
 SELECT EmployeeID   "@EmpID",   

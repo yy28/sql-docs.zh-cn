@@ -13,10 +13,10 @@ ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c86ab8b3f29699e807c61b571832c106ab235710
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68018889"
 ---
 # <a name="access-filetables-with-transact-sql"></a>使用 Transact-SQL 访问 FileTable
@@ -28,9 +28,9 @@ ms.locfileid: "68018889"
   
 -   所有文件属性列具有 NOT NULL 约束。 如果没有显式设置值，则提供适当的默认值。  
   
--   如果 INSERT 语句设置了 **name**、**path_locator**、**parent_path_locator** 或文件属性，则强制执行系统定义的约束。  
+-   如果 INSERT 语句设置了 **name**、 **path_locator**、 **parent_path_locator**或文件属性，则强制执行系统定义的约束。  
   
--   该应用程序可以通过提供指向 [GetPathLocator (Transact-SQL)](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 函数的文件系统路径，来获取文件或目录的 **path_locator**。  
+-   该应用程序可以通过提供指向 **GetPathLocator (Transact-SQL)** 函数的文件系统路径，来获取文件或目录的 [path_locator](../../relational-databases/system-functions/getpathlocator-transact-sql.md)。  
   
 ##  <a name="BasicsUpdate"></a> FileTable 上的 UPDATE 操作  
  下列注意事项适用于 FileTable 上的 **UPDATE** 操作：  
@@ -71,7 +71,7 @@ ms.locfileid: "68018889"
   
 ## <a name="see-also"></a>另请参阅  
  [将文件加载到 FileTable 中](../../relational-databases/blob/load-files-into-filetables.md)   
- [在 FileTable 中使用目录和路径](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [使用文件输入输出 API 访问 FileTable](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)   
  [FileTable DDL、函数、存储过程和视图](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   

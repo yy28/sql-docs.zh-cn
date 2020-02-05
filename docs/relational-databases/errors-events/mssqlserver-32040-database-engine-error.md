@@ -12,13 +12,13 @@ ms.assetid: 709219b1-f8b2-4696-8923-dd2e91492eb8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b5a78df53c3841ac84c59c8ef84233a8d7785b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105158"
 ---
-# <a name="mssqlserver32040"></a>MSSQLSERVER_32040
+# <a name="mssqlserver_32040"></a>MSSQLSERVER_32040
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68105158"
 |符号名称|SQLErrorNum32040|  
 |消息正文|引发了 '最早的未发送事务' 警报。 '%d' 的当前值超出了阈值 '%d'。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 此数据库镜像事件是对主体服务器实例发出的，指示最早的未发送事务的保留时间已达到了用户指定的阈值。 通常，发生该事件是由于系统的性能已发生变化。 两个系统间的带宽减小或负载增加。  
   
 最早的未发送事务的保留时间是一种性能指标，有助于您估算数据丢失的可能性（以未发送事务的分钟数来衡量）。 此指标特别适用于高性能模式会话。 但是，当镜像因伙伴断开连接而暂停或挂起时，该指标也适用于高安全模式会话。  

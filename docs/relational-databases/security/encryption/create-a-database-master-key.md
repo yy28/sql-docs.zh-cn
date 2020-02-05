@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6c8e1609b60013a3adabd04e0b3ce8e08e825d5e
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957465"
 ---
 # <a name="create-a-database-master-key"></a>创建数据库主密钥
@@ -37,7 +37,7 @@ ms.locfileid: "74957465"
 
 1. 选择密码来对存储于该数据库中的主密钥副本进行加密。
 2. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。
-3. 展开“系统数据库”，右键单击 `master`，然后单击“新建查询”   。
+3. 展开“系统数据库”，右键单击 **，然后单击“新建查询”** `master`  。
 4. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。
 
    ```sql

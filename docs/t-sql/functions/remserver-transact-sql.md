@@ -20,10 +20,10 @@ ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0bc401b25b2822b7322c856ed3b2de0e670656b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944504"
 ---
 # <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67944504"
   
  返回远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库服务器在登录记录中显示的名称。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67944504"
 ## <a name="return-types"></a>返回类型  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 @@REMSERVER，存储过程可以检查其运行所在的数据库服务器的名称。  
   
 ## <a name="examples"></a>示例  

@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 05a5e9c01e46a83e0ba6a2bc206fd6f10328e9c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093381"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>创建全文索引时选择语言
@@ -50,7 +50,7 @@ ms.locfileid: "68093381"
   
      测试表明这些新的断字符在高压查询环境中非常可靠。  
   
--   Security  
+-   安全性  
   
      由于语言组件的安全性得到改进，因此默认情况下 SQL Server 中已启用这些新的断字符。 我们极力建议对诸如断字符和筛选器之类的外部组件进行签名以提高 SQL Server 的整体安全性和可靠性。 可以按如下方式配置全文查询以验证是否对这些组件进行了签名：  
   

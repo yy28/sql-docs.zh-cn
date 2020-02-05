@@ -13,18 +13,18 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116494"
 ---
-# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
+# <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 显示特定表或者 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 数据库中所有表的行数、保留的磁盘空间和已使用的磁盘空间。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -48,28 +48,28 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ## <a name="result-sets"></a>结果集  
 下面是针对所有表的结果集。
   
-|“列”|数据类型|描述|  
+|列|数据类型|说明|  
 |------------|---------------|-----------------|  
-|reserved_space|BIGINT|用于数据库的总空间，单位为 KB。|  
-|data_space|BIGINT|用于数据的空间，单位为 KB。|  
-|index_space|BIGINT|用于索引的空间，单位为 KB。|  
-|unused_space|BIGINT|保留空间中未使用的空间，单位为 KB。|  
-|pdw_node_id|INT|要用于数据的计算节点。|  
+|reserved_space|bigint|用于数据库的总空间，单位为 KB。|  
+|data_space|bigint|用于数据的空间，单位为 KB。|  
+|index_space|bigint|用于索引的空间，单位为 KB。|  
+|unused_space|bigint|保留空间中未使用的空间，单位为 KB。|  
+|pdw_node_id|int|要用于数据的计算节点。|  
   
 下面是一个表的结果集。
   
-|“列”|数据类型|描述|范围|  
+|列|数据类型|说明|范围|  
 |------------|---------------|-----------------|-----------|  
-|rows|BIGINT|行数。||  
-|reserved_space|BIGINT|为对象保留的总空间，单位为 KB。||  
-|data_space|BIGINT|用于数据的空间，单位为 KB。||  
-|index_space|BIGINT|用于索引的空间，单位为 KB。||  
-|unused_space|BIGINT|保留空间中未使用的空间，单位为 KB。||  
-|pdw_node_id|INT|用于报告空间使用量的计算节点。||  
-|distribution_id|INT|用于报告空间使用量的分发。|复制的表的值为 -1。|  
+|行|bigint|行数。||  
+|reserved_space|bigint|为对象保留的总空间，单位为 KB。||  
+|data_space|bigint|用于数据的空间，单位为 KB。||  
+|index_space|bigint|用于索引的空间，单位为 KB。||  
+|unused_space|bigint|保留空间中未使用的空间，单位为 KB。||  
+|pdw_node_id|int|用于报告空间使用量的计算节点。||  
+|distribution_id|int|用于报告空间使用量的分发。|复制的表的值为 -1。|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED 基本语法  
+### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED 基本语法  
 以下示例演示了多种方式来显示 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 数据库中 FactInternetSales 表的行数、保留的磁盘空间和已使用的磁盘空间。
   
 ```sql

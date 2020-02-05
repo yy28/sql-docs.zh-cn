@@ -12,13 +12,13 @@ ms.assetid: 7b15a5e6-fd41-47ce-ba87-54f72acea4bb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 210df5d533908e75e83b348ac6c9a84a22198f4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131818"
 ---
-# <a name="mssqlserver17128"></a>MSSQLSERVER_17128
+# <a name="mssqlserver_17128"></a>MSSQLSERVER_17128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -30,9 +30,9 @@ ms.locfileid: "68131818"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|INIT_NOBUFSPACE|  
-|消息正文|initdata:没有可用于核心缓冲区的内存。|  
+|消息正文|initdata: 没有可用于核心缓冲区的内存。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 缓冲池的初始内存分配或预留失败，并且 SQL Server 退出。  
   
 ## <a name="user-action"></a>用户操作  

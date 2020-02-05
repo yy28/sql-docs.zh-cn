@@ -14,10 +14,10 @@ ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078032"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 查询中的 TYPE 指令
@@ -74,7 +74,7 @@ GO
 ### <a name="querying-results-of-a-for-xml-query"></a>查询 FOR XML 查询的结果  
  FOR XML 查询返回 XML。 因此，可以将 **xml** 类型方法（如 **query()** 和 **value()** ）应用于 FOR XML 查询返回的 XML 结果。  
   
- 在下面的查询中，**xml** 数据类型的 `query()` 方法用于查询 `FOR XML` 查询的结果。 有关详细信息，请参阅 [query() 方法（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md)。  
+ 在下面的查询中， `query()` xml **数据类型的** 方法用于查询 `FOR XML` 查询的结果。 有关详细信息，请参阅 [query() 方法（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -104,7 +104,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- 在下面的查询中，**xml** 数据类型的 `value()` 方法用于检索 `SELECT...FOR XML` 查询返回的 XML 结果中的值。 有关详细信息，请参阅 [value() 方法（xml 数据类型）](../../t-sql/xml/value-method-xml-data-type.md)。  
+ 在下面的查询中， `value()` xml **数据类型的** 方法用于检索 `SELECT...FOR XML` 查询返回的 XML 结果中的值。 有关详细信息，请参阅 [value() 方法（xml 数据类型）](../../t-sql/xml/value-method-xml-data-type.md)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,7 +124,7 @@ declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure
 SELECT @FirstPhoneFromAdditionalContactInfo;  
 ```  
   
- `value()` 方法中的 XQuery 路径表达式检索 `BusinessEntityID` 为 `1` 的客户联系人的第一个电话号码。  
+ `value()` 方法中的 XQuery 路径表达式检索 `BusinessEntityID` 为 `1`的客户联系人的第一个电话号码。  
   
 > [!NOTE]  
 >  如果未指定 TYPE 指令，则返回的 FOR XML 查询结果的类型为 **nvarchar(max)** 。  

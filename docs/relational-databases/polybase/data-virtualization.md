@@ -11,10 +11,10 @@ ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
 ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75227505"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>对关系数据源使用“外部表”向导
@@ -28,7 +28,7 @@ SQL Server 2019 的重要方案之一是能够虚拟化数据。 此过程允许
 
 ## <a name="start-the-external-table-wizard"></a>启动外部表向导
 
-使用通过 [azdata cluster endpoints list](../../big-data-cluster/deployment-guidance.md#endpoints) 命令获取的 sql-server-master 终结点的 IP 地址/端口号连接到主实例   。 在对象资源管理器中展开  数据库节点。 然后从现有 SQL Server 实例中选择一个要虚拟化数据的数据库。 右键单击该数据库，并选择“创建外部表”以启动虚拟化数据向导  。 还可以从命令面板启动虚拟化数据向导。 在 Windows 中使用 Ctrl+Shift+P，或在 Mac 中使用 Cmd+Shift+P。
+使用通过 **azdata cluster endpoints list** 命令获取的 sql-server-master 终结点的 IP 地址/端口号连接到主实例[  ](../../big-data-cluster/deployment-guidance.md#endpoints)。 在对象资源管理器中展开  数据库节点。 然后从现有 SQL Server 实例中选择一个要虚拟化数据的数据库。 右键单击该数据库，并选择“创建外部表”以启动虚拟化数据向导  。 还可以从命令面板启动虚拟化数据向导。 在 Windows 中使用 Ctrl+Shift+P，或在 Mac 中使用 Cmd+Shift+P。
 
 ![虚拟化数据向导](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>选择数据源

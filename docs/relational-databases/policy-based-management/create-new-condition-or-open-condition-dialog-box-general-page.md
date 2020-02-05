@@ -14,10 +14,10 @@ ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c16d813af595e3698379026e219440ba0007db12
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558132"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>“创建新条件”或“打开条件”对话框，“常规”页
@@ -41,7 +41,7 @@ ms.locfileid: "75558132"
  为该表达式选择一个比较运算符。 比较运算符包括：=、!=、>、>=、<、<=、[NOT]LIKE、[NOT]IN。 并非所有运算符都适用于某些属性。  
   
  **值**  
- 该表达式的值设置。 允许的值取决于方面。 值可以为 TRUE/FALSE、字符串或数值。 字符串值必须用单引号引起来，例如：'AdventureWorks'  。 并非所有运算符都适用于某些属性。  
+ 该表达式的值设置。 允许的值取决于方面。 值可以为 TRUE/FALSE、字符串或数值。 字符串值必须用单引号引起来，例如： **'AdventureWorks'** 。 并非所有运算符都适用于某些属性。  
   
 ## <a name="group-clauses"></a>子句分组  
  可以对子句进行分组，以使其作为独立于查询其余部分的一个单元来运行，就像在数学等式或逻辑语句中的表达式两侧加上括号一样。 在生成复杂查询时，对子句进行分组是非常有用的。  

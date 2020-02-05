@@ -13,17 +13,17 @@ ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a280477dbc8a41292ff3ee3519ec74df4d5c7ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943417"
 ---
 # <a name="examples-using-auto-mode"></a>示例：使用 AUTO 模式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   下列示例说明了 AUTO 模式的使用。 这些查询中有许多都针对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 ProductModel 表的 Instructions 列中存储的自行车生产说明 XML 文档指定的。  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>例如：检索客户、订单和订单详细信息  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>示例：检索客户、订单和订单详细信息  
  此查询检索特定客户的客户、订单和订单详细信息。  
   
 ```  
@@ -94,7 +94,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>例如：指定 GROUP BY 和聚合函数  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>示例：指定 GROUP BY 和聚合函数  
  以下查询将返回各个客户 ID 以及客户已请求的订单数。  
   
 ```  
@@ -114,7 +114,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>例如：在 AUTO 模式中指定计算列  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>示例：在 AUTO 模式下指定计算列  
  此查询返回串联的各个客户名以及订单信息。 因为计算列被分配到在该点（在此例中是 <`SOH`>）出现的最内层级别， 因此，串联的客户名在结果中作为 <`SOH`> 元素的属性添加。  
   
 ```  
@@ -137,7 +137,7 @@ FOR XML AUTO;
 <SOH Name="Eugene Huang" SalesOrderID="43767" />  
 ```  
   
- 若要检索具有 `Name` 属性（包含销售订单表头信息，并将每条信息作为一个子元素）的 <`IndividualCustomer`> 元素，应使用嵌套的 SELECT 子句重写查询。 内部 SELECT 子句创建临时的 `IndividualCustomer` 表，此表具有计算列，其中包含各个客户的名称。 然后，此表与 `SalesOrderHeader` 表联接以获得结果。  
+ 若要检索具有 `IndividualCustomer` 属性（包含销售订单表头信息，并将每条信息作为一个子元素）的 <`Name`> 元素，应使用嵌套的 SELECT 子句重写查询。 内部 SELECT 子句创建临时的 `IndividualCustomer` 表，此表具有计算列，其中包含各个客户的名称。 然后，此表与 `SalesOrderHeader` 表联接以获得结果。  
   
  请注意， `Sales.Customer` 表存储有单个客户信息，其中包括该客户的 `PersonID` 值。 然后，此 `PersonID` 用于从 `Person.Person` 表中查找联系人姓名。  
   
@@ -167,7 +167,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>例如：返回二进制数据  
+## <a name="example-returning-binary-data"></a>示例：返回二进制数据  
  此查询返回 `ProductPhoto` 表中的产品照片。 `ThumbNailPhoto` 是 **表中的** varbinary(max) `ProductPhoto` 列。 默认情况下， `AUTO` 模式向二进制数据返回一个引用，该引用为执行查询的数据库的虚拟根目录的相对 URL。 必须指定 `ProductPhotoID` 键属性，才能标识图像。 如此示例中所示，检索图像引用时，还必须在 `SELECT` 子句中指定表的主键，才能唯一标识行。  
   
 ```  
@@ -223,7 +223,7 @@ FOR XML AUTO;
   
  这可能成为一个问题，尤其是对区分大小写的数据库执行 dbobject 查询时。 若要避免这个问题，查询中指定的表名或列名的大小写应该与数据库中表名或列名的大小写一致。  
   
-## <a name="example-understanding-the-encoding"></a>例如：了解编码  
+## <a name="example-understanding-the-encoding"></a>示例：了解编码  
  下面的示例显示了结果中出现的各种编码。  
   
  创建下表：  
@@ -266,7 +266,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   通过使用相应的 Unicode 字符的十六进制值，对查询结果中返回的元素名及属性名中的特殊 XML 和 URL 字符进行编码。 在上面的结果中，元素名 <`Special Chars`> 作为 <`Special_x0020_Chars`> 返回。 属性名称 <`Col#&2`> 作为 <`Col_x0023__x0026_2`> 返回。 XML 和 URL 特殊字符都进行了编码。  
   
--   如果元素值或属性值包含 5 个标准 XML 字符实体（'、""、\<、> 和 &）中的任何一个，将始终使用 XML 字符编码对这些特殊 XML 字符进行编码。 在上面的结果中，属性 <`Col1`> 的值中的 `&` 值被编码为 `&`。 但是，# 字符仍保留为 #，因为它是有效的 XML 字符，而不是特殊的 XML 字符。  
+-   如果元素值或属性值包含 5 个标准 XML 字符实体（'、""、\<、> 和 &）中的任何一个，将始终使用 XML 字符编码对这些特殊 XML 字符进行编码。 在上面的结果中，属性 <`&`> 的值中的 `Col1` 值被编码为 `&`。 但是，# 字符仍保留为 #，因为它是有效的 XML 字符，而不是特殊的 XML 字符。  
   
 -   如果元素值或属性值包含 URL 中有特殊意义的任何特殊 URL 字符，则只能在 DBOBJECT URL 值中对它们进行编码，而且只有当该特殊字符是表名或列名的一部分时，才会对它们进行编码。 在结果中，作为表名 `#` 的一部分的字符 `Col#&2` 被编码为 `_x0023_ in the DBOJBECT URL`。  
   

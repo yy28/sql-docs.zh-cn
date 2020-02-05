@@ -18,10 +18,10 @@ ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 33237c45e6b082e35acf9f8206ef29aa9b71c888
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089010"
 ---
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB（geometry 数据类型）
@@ -46,11 +46,11 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
- OGC 类型：**MultiPolygon**  
+ OGC 类型：MultiPolygon   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STMPolyFromWKB()` 创建 `geometry` 实例：  

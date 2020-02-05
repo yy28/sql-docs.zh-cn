@@ -18,10 +18,10 @@ ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: fcaad3c2fb8337c64612d5ef5532bcbc4ed4b91d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100995"
 ---
 # <a name="starea-geometry-data-type"></a>STArea（geometry 数据类型）
@@ -39,9 +39,9 @@ ms.locfileid: "68100995"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float   
   
- CLR 返回类型：**SqlDouble**  
+ CLR 返回类型：SqlDouble   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 geometry 实例仅包含 0 维和 1 维图形，或者为空，则 `STArea()` 返回 0  。 如果 geometry 实例尚未初始化，则 `STArea()` 返回 NULL   。  
   
 ## <a name="examples"></a>示例  

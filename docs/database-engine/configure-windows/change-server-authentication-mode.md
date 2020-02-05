@@ -16,10 +16,10 @@ ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a688bae85e0ea6bd30bbde50df0151a97fd6f505
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012996"
 ---
 # <a name="change-server-authentication-mode"></a>更改服务器身份验证模式
@@ -55,7 +55,7 @@ ms.locfileid: "68012996"
   
 3.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对话框中，单击 **“确定”** 以确认需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-4.  在对象资源管理器中，右键单击你的服务器，再单击“重启”  。 如果运行有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，则也必须重新启动该代理。  
+4.  在“对象资源管理器”中，右键单击服务器，并单击“重新启动”。  如果运行有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，则也必须重新启动该代理。  
   
 #### <a name="to-enable-the-sa-login"></a>启用 sa 登录名  
   

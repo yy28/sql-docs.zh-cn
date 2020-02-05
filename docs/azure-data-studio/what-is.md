@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 10/15/2019
-ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.date: 01/15/2020
+ms.openlocfilehash: 7cf4f98a4cb8d191cebd9b361fd63217b9cd2228
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241748"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "75956488"
 ---
 # <a name="what-is-azure-data-studio"></a>什么是 Azure Data Studio？
 
@@ -33,7 +33,7 @@ Azure Data Studio 利用 IntelliSense、代码片段、源代码管理集成和�
 
 ## <a name="smart-sql-code-snippets"></a>智能 SQL 代码片段
 
-SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图、存储过程、用户、登录名、角色等等，并更新现有的数据库对象。 使用智能代码片段快速创建数据库副本，以便进行开发或测试，并生成和执行 CREATE 和 INSERT 脚本。
+SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图、存储过程、用户、登录名、角色，并更新现有的数据库对象。 使用智能代码片段快速创建数据库副本，以便进行开发或测试，并生成和执行 CREATE 和 INSERT 脚本。
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 还提供用于创建自定义 SQL 代码片段的功能。 若要了解详细信息，请参阅[创建和使用代码片段](code-snippets.md)。
 
@@ -95,9 +95,9 @@ SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图�
 |主题|是||
 |深色模式|是||
 |Azure 资源浏览器|预览||
-|生成脚本向导||是|
-|导入\导出 DACPAC||是|
-|对象属性||是|
+|生成脚本向导||预览|
+|导入/导出 DACPAC||是|
+|对象属性||预览|
 |表设计器||是|
 
 ### <a name="query-editor"></a>查询编辑器
@@ -131,9 +131,9 @@ SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图�
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|创建外部表向导|预览||
-|HDFS 集成|预览||
-|笔记本|预览||
+|创建外部表向导|是||
+|HDFS 集成|是||
+|笔记本|是||
 
 ### <a name="database-administration"></a>数据库管理
 
@@ -147,7 +147,7 @@ SQL 代码片段可生成正确的 SQL 语法来创建数据库、表、视图�
 |AlwaysOn||是|
 |Always Encrypted||是|
 |复制数据向导||是|
-|数据优化顾问||是|
+|Database Engine Tuning Advisor||是|
 |错误日志查看器||是|
 |维护计划||是|
 |多服务器查询||是|

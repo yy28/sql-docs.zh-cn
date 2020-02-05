@@ -14,10 +14,10 @@ ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 08cc5200801b99442c8973583f4ab7caa9ea9fb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140729"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server，Query Store 对象
@@ -27,7 +27,7 @@ ms.locfileid: "68140729"
   
  下表介绍了 **SQLServer:Query Store**计数器。  
   
-|SQL Server Query Store 计数器|描述|  
+|SQL Server Query Store 计数器|说明|  
 |-------------------------------------|-----------------|  
 |**Query Store CPU 使用率**|指明 Query Store 的 CPU 使用率。|  
 |**Query Store 逻辑读取次数**|指明由 Query Store 执行的逻辑读取次数。|  
@@ -36,13 +36,13 @@ ms.locfileid: "68140729"
   
  对象中的每个计数器均包含以下实例：  
   
-|Query Store 实例|描述|  
+|Query Store 实例|说明|  
 |--------------------------|-----------------|  
 |**_Total**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的 Query Store 信息。|  
 |\<数据库名称>|此数据库的 Query Store 信息。|  
   
 ## <a name="see-also"></a>另请参阅  
- [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

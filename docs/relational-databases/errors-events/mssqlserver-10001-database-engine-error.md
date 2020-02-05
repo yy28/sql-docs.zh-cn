@@ -12,13 +12,13 @@ ms.assetid: f8fd2d8d-a4af-4b6a-ba51-9123b7e4c9bf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cc803a38774e433d4cd6a3fdbe777c257bda2997
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68068334"
 ---
-# <a name="mssqlserver10001"></a>MSSQLSERVER_10001
+# <a name="mssqlserver_10001"></a>MSSQLSERVER_10001
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68068334"
 |符号名称|HR_E_UNEXPECTED|  
 |消息正文|提供程序报告了意外的灾难性错误。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 分布式查询处理在调用 OLE DB 访问接口期间遇到一个一般性错误。  
   
 ## <a name="user-action"></a>用户操作  

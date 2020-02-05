@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e61f8d9df3cb6dcaf545819d630c70bc18709d15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041784"
 ---
 # <a name="database-mirroring-system-object-reference"></a>数据库镜像系统对象参考
@@ -21,14 +21,14 @@ ms.locfileid: "68041784"
   
 ## <a name="system-catalog-views"></a>系统目录视图
 
-| 系统目录视图 | 描述|
+| 系统目录视图 | 说明|
 | :------ | :----------------------------- |
 | [sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   | 服务器在数据库镜像合作关系中充当的每个见证服务器角色在表中都占用一行。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="system-dynamic-management-views"></a>系统动态管理视图
 
-| 系统动态管理视图 | 描述|
+| 系统动态管理视图 | 说明|
 | :------ | :----------------------------- |
 | [sys.dm_db_mirroring_auto_page_repair](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)   | 对服务器实例上所有镜像数据库的每个自动页修复尝试返回一行。  |
 | [sys.dm_db_mirroring_connections](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)    | 针对为每个数据库镜像建立的连接返回一行。 |
@@ -36,7 +36,7 @@ ms.locfileid: "68041784"
 
 ## <a name="system-tables"></a>系统表
 
-| 系统表 | 描述|
+| 系统表 | 说明|
 | :------ | :----------------------------- |
 | [sysdbmaintplan_databases](../../relational-databases/system-tables/sysdbmaintplan-databases-transact-sql.md)   | 返回有关数据库镜像维护计划的信息。 |
 | [sysdbmaintplan_history](../../relational-databases/system-tables/sysdbmaintplan-history-transact-sql.md)    | 返回有关数据库镜像维护计划的历史记录信息。 |

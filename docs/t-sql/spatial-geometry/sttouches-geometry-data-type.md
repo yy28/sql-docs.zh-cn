@@ -18,10 +18,10 @@ ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 93ea5be3c2f9a4ecdd415471da16ca21eb1f08c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066245"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches（geometry 数据类型）
@@ -38,17 +38,17 @@ ms.locfileid: "68066245"
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 将与调用 `STTouches()` 的实例进行比较的另一个 geometry 实例。  
+ 将与调用  **的实例进行比较的另一个 geometry 实例**`STTouches()`。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：**SqlBoolean**  
+ CLR 返回类型：SqlBoolean   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果两个 **geometry** 实例的点集相交，但是它们的内部不相交，则表明这两个实例接触。  
   
- 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STTouches()` 来测试两个 `geometry` 实例，以查看它们是否接触。  

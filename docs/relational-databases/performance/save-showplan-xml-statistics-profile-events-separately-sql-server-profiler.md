@@ -15,19 +15,19 @@ ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: d15ca528efb0246d1d05c87420045fcc74918886
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165570"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>单独保存 Showplan XML Statistics Profile 事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题说明如何使用 **将在跟踪中捕获的** Showplan XML Statistics Profile [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件保存到单独的 .SQLPlan 文件中。 可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开 Showplan XML Statistics Profile 事件文件，这样就可以查看每个事件的图形执行计划  。  
+  本主题说明如何使用 **将在跟踪中捕获的** Showplan XML Statistics Profile [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件保存到单独的 .SQLPlan 文件中。 可在  **中打开 Showplan XML Statistics Profile 事件文件，这样就可以查看每个事件的图形执行计划**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 ## <a name="save-showplan-xml-statistics-profile-events-separately"></a>单独保存 Showplan XML Statistics Profile 事件  
   
-1. 在“文件”菜单上，选择“新建跟踪”，然后连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例   。  
+1. 在“文件”菜单上，选择“新建跟踪”，然后连接到  **实例**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
      此时，将显示 **“跟踪属性”** 对话框。  
   

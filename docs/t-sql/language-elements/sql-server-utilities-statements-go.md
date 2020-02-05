@@ -20,20 +20,20 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 48bca691f10822176c5169cf6bf9a052d7675478
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072300"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server 实用工具语句 - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供不在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中、但 sqlcmd 和 osql 实用工具以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代码编辑器可识别的命令。 这些命令可用于提高批处理和脚本的可读性和执行效率。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供不在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中、但 sqlcmd 和 osql 实用工具以及  **代码编辑器可识别的命令**  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 这些命令可用于提高批处理和脚本的可读性和执行效率。  
   
-  GO 向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具发出一批 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句已结束的信号。  
+  GO 向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实用工具发出一批 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句已结束的信号。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,8 +45,8 @@ GO [count]
  *计数*  
  为一个正整数。 GO 之前的批处理将执行指定的次数。  
   
-## <a name="remarks"></a>Remarks  
- GO 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句；它是可由 sqlcmd 和 osql 实用工具以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代码编辑器识别的命令。  
+## <a name="remarks"></a>备注  
+ GO 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句；它是可由 sqlcmd 和 osql 实用工具以及  **代码编辑器识别的命令**  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具将 GO 解释为应该向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例发送当前批 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句的信号。 当前批语句由上一 GO 命令后输入的所有语句组成，如果是第一条 GO 命令，则由即席会话或脚本开始后输入的所有语句组成。  
   

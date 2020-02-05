@@ -14,10 +14,10 @@ ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 28fb816554093c78c1ce71d7a3712ca8804fd4af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115663"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>维护计划（子计划属性）
@@ -28,13 +28,13 @@ ms.locfileid: "68115663"
  **名称**  
  输入子计划的名称。 名称限制在 128 个字符以内。  
   
- **Description**  
+ **说明**  
  输入子计划的说明。 说明限制在 512 个字符以内。  
   
- **计划**  
+ **“计划”**  
  单击计划图标可指定子计划中的任务应该在何时运行，或者单击带红色 x 的计划图标可删除现有子计划的计划。  
   
 ## <a name="see-also"></a>另请参阅  
- [中对象资源管理器的](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

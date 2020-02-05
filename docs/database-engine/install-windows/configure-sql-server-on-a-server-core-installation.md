@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251599"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安装上配置 SQL Server
@@ -99,7 +99,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>远程使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器  
 这些步骤用于在运行 Windows 的客户端版的电脑上执行，或在安装了服务器图形 Shell 的 Windows Server 上运行。  
   
-1. 打开“计算机管理”  。 要打开“计算机管理”，请单击“启动”，键入 `compmgmt.msc`，然后单击“确定”    。    
+1. 打开“计算机管理”  。 要打开“计算机管理”，请单击“启动”，键入 **，然后单击“确定”**  `compmgmt.msc`  。    
   
 2. 在控制台树中，右键单击“计算机管理”，再单击“连接到另一台计算机...”   。  
   
@@ -107,9 +107,9 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
   
 4. 在控制台树中，单击服务器核心计算机的“计算机管理”下的“服务和应用程序”   。  
   
-5. 双击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”  。  
+5. 双击“ **配置管理器”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 。  
   
-6. 在“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”中，单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务”、右键单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]”(\<instance name)，其中 \<instance name> 是要启用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”    。  
+6. 在“ **配置管理器”中，单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务”、右键单击“** ”(**instance name)，其中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance name> 是要启用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”** **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** \<\<。  
   
 7. 选择 **“AlwaysOn 高可用性”** 选项卡。  
   
@@ -225,7 +225,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> 使用故障排除工具  
  可以使用 [SQLdiag 实用工具](../../tools/sqldiag-utility.md) 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他类型的服务器中收集日志和数据文件，同时还可将其用于一直监视服务器或对服务器的特定问题进行故障排除。 SQLdiag 用于加快和简化为 Microsoft 客户支持服务部门收集诊断信息的过程。  
   
- 可以在 Server Core 上使用以下文章中指定的语法在管理员命令提示符下启动该实用工具：[SQLdiag 实用工具](../../tools/sqldiag-utility.md)。  
+ 可以在 Server Core 上使用 [SQLdiag Utility](../../tools/sqldiag-utility.md) 一文中指定的语法在管理员命令提示符下启动该实用工具。  
   
 ## <a name="see-also"></a>另请参阅  
  [在服务器核心上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

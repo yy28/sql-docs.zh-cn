@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 688db496825af348183e195bfd4003cfcfb53d81
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69653389"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server 容器的高可用性
@@ -26,13 +26,13 @@ SQL Server 2017 引入了可以在 Kubernetes 上部署的 Docker 映像。 可�
 
 ## <a name="container-with-sql-server-instance-on-kubernetes"></a>Kubernetes 上存在具有 SQL Server 实例的容器
 
-Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/concepts/storage/storage-classes/)、[持久卷声明](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)和 [Azure 磁盘卷类型](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)    。 
+Kubernetes 1.6 及更高版本支持[存储类 *、* 持久卷声明](https://kubernetes.io/docs/concepts/storage/storage-classes/)和 [Azure 磁盘卷类型  ](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)[  ](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 
 
 在此配置中，Kubernetes 扮演容器业务流程协调程序一角。 
 
 ![Kubernetes SQL Server 群集示意图](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-在上图中，`mssql-server` 是 [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/) 中的 SQL Server 实例（容器）  。 [副本集](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可确保在节点发生故障后自动恢复 Pod。 应用程序会连接到服务。 在这种情况下，该服务表示负载均衡器，承载着 `mssql-server` 发生故障后保持不变的 IP 地址。
+在上图中，`mssql-server` 是 [Pod *中的 SQL Server 实例（容器）* ](https://kubernetes.io/docs/concepts/workloads/pods/pod/)。 [副本集](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可确保在节点发生故障后自动恢复 Pod。 应用程序会连接到服务。 在这种情况下，该服务表示负载均衡器，承载着 `mssql-server` 发生故障后保持不变的 IP 地址。
 
 Kubernetes 协调群集中的资源。 如果承载 SQL Server 实例容器的节点发生故障，该节点会使用 SQL Server 实例来启动新容器，并将其附加到同一个持久存储上。
 

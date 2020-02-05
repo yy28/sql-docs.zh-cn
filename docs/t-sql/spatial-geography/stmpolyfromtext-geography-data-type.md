@@ -18,10 +18,10 @@ ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 45be9818ed599365ca50648cb08a1c65825d5a11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121003"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText（geography 数据类型）
@@ -46,11 +46,11 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**Sql 地域**  
+ CLR 返回类型：Sql Geography   
   
- OGC 类型：**MultiPolygon**  
+ OGC 类型：MultiPolygon   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果输入的格式不正确，此方法将引发 FormatException  。  
   
 ## <a name="examples"></a>示例  

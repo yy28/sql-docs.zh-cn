@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9c8334573b66b5c227a5033a63b5aedf06909c78
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68316958"
 ---
 # <a name="modify-an-index"></a>修改索引
@@ -60,7 +60,7 @@ ms.locfileid: "68316958"
   
 #### <a name="to-modify-an-index"></a>修改索引  
   
-下面的示例使用 `DROP_EXISTING` 选项，删除 AdventureWorks 数据库中 `Production.WorkOrder` 表的 `ProductID` 列上的现有索引并重新创建。 还设置了 `FILLFACTOR` 和 `PAD_INDEX` 选项。  
+下面的示例使用 `ProductID` 选项，删除 AdventureWorks 数据库中 `Production.WorkOrder` 表的 `DROP_EXISTING` 列上的现有索引并重新创建。 还设置了 `FILLFACTOR` 和 `PAD_INDEX` 选项。  
   
 [!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
   

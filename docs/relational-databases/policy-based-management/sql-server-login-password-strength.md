@@ -13,10 +13,10 @@ ms.assetid: b0862c3a-926b-490c-a37f-382e50146a3e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8a392547d4e8b43430c2608f36790944eb88287f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043309"
 ---
 # <a name="sql-server-login-password-strength"></a>SQL Server 登录密码强度
@@ -34,6 +34,6 @@ ms.locfileid: "68043309"
  [密码策略](../../relational-databases/security/password-policy.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [使用基于策略的管理来监视和强制执行最佳实践](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [使用基于策略的管理来监视和强制执行最佳做法](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

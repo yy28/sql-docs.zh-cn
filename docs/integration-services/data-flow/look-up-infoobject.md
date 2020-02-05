@@ -11,10 +11,10 @@ ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e77890725659f05d8616156f6e84712dc20323eb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292317"
 ---
 # <a name="look-up-infoobject"></a>查找 InfoObject
@@ -39,11 +39,11 @@ ms.locfileid: "71292317"
   
 4.  在 **“连接管理器”** 页的 **“创建 SAP BW 对象”** 组框中，选择以下选项之一：  
   
-    1.  选择 **“InfoCube”** 。 然后单击 **“创建”** 。 在 **“创建事务数据的 InfoCube”** 对话框中单击列表中某一行的 **“IObject”** 列中的 **“搜索”** 。 每一行表示包数据流中的一列。  
+    1.  选择 **“InfoCube”** 。 然后单击“创建”  。 在 **“创建事务数据的 InfoCube”** 对话框中单击列表中某一行的 **“IObject”** 列中的 **“搜索”** 。 每一行表示包数据流中的一列。  
   
-    2.  选择 **“InfoSource”** 。 然后单击 **“创建”** 。 在 **“创建 InfoSource”** 对话框中，选择 **“事务数据”** 。 在 **“创建事务数据的 InfoSource”** 对话框中单击列表中某一行的 **“IObject”** 列中的 **“搜索”** 。 每一行表示包数据流中的一列。  
+    2.  选择 **“InfoSource”** 。 然后单击“创建”  。 在 **“创建 InfoSource”** 对话框中，选择 **“事务数据”** 。 在 **“创建事务数据的 InfoSource”** 对话框中单击列表中某一行的 **“IObject”** 列中的 **“搜索”** 。 每一行表示包数据流中的一列。  
   
-    3.  选择 **“InfoSource”** 。 然后单击 **“创建”** 。 在 **“创建 InfoSource”** 对话框中，选择 **“主数据”** 。 在 **“创建主数据的 InfoSource”** 对话框中单击 **“查找”** 。  
+    3.  选择 **“InfoSource”** 。 然后单击“创建”  。 在 **“创建 InfoSource”** 对话框中，选择 **“主数据”** 。 在 **“创建主数据的 InfoSource”** 对话框中单击 **“查找”** 。  
   
  您还可以单击 **“新建 InfoObject”** 对话框中 **“属性”** 部分中的 **“添加”** 来打开 **“查找 InfoObject”** 对话框。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71292317"
  **名称**  
  输入您要查找的 InfoObject 的名称，或输入部分名称加上星号通配符 (*)。 或者，仅使用星号通配符以包括所有 InfoObject。  
   
- **Description**  
+ **说明**  
  输入说明，或输入部分说明加上星号通配符 (*)。 或者，仅使用星号通配符以包括所有 InfoObject（而无论说明是什么）。  
   
  **查找**  
@@ -85,9 +85,9 @@ ms.locfileid: "71292317"
 ## <a name="see-also"></a>另请参阅  
  [“创建事务数据的 InfoCube”](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [“创建 InfoSource”](../../integration-services/data-flow/create-infosource.md)   
- [“创建事务数据的 InfoSource”](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [创建事务数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [创建主数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)   
- [“查找 InfoObject”](../../integration-services/data-flow/create-new-infoobject.md)   
+ [新建 InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
  [SAP BW 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

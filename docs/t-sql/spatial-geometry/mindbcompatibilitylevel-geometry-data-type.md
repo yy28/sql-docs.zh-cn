@@ -15,16 +15,16 @@ ms.assetid: c848b974-8ccb-4c5c-a7eb-b019a9538d99
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ddebe254c44d1577b2da5200cec02011c5bca89f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101204"
 ---
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回识别 geometry 数据类型实例的最基本的数据库兼容级别。
+返回识别 geometry  数据类型实例的最基本的数据库兼容级别。
   
 ## <a name="syntax"></a>语法  
   
@@ -34,11 +34,11 @@ ms.locfileid: "68101204"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int   
   
- CLR 返回类型：int  
+ CLR 返回类型：int   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在更改数据库的兼容级别之前应使用 `MinDbCompatibilityLevel()` 测试空间对象的兼容性。  
   
 ## <a name="examples"></a>示例  

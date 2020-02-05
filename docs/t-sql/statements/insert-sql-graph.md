@@ -18,16 +18,16 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071174"
 ---
 # <a name="insert-sql-graph"></a>INSERT（SQL 图形）
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 `node` 或 `edge` 表格添加一行或多行。 
+向 `node` 中的 `edge` 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表格添加一行或多行。 
 
 > [!NOTE]   
 >  有关标准 TRANSACT-SQL 语句，请参阅 [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。
@@ -116,14 +116,14 @@ edge_table_column_list
 插入边时，用户必须提供 `$from_id` 和 `$to_id` 的值。 如果未提供值或这些列中插入了 NULL，则会返回错误。 
   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 插入节点表与插入任何关系表相同。 会自动生成 $node_id 列的值。
 
 插入边缘表时，用户必须提供 `$from_id` 和 `$to_id` 列的值。   
 
 节点表的 BULK 插入与关系表的 BULK 插入相同。
 
-批量插入边缘表之前，必须导入节点表。 然后才可从节点表的 `$node_id` 列中提取 `$from_id` 和 `$to_id` 的值，并将其作为边插入。 
+批量插入边缘表之前，必须导入节点表。 然后才可从节点表的 `$from_id` 列中提取 `$to_id` 和 `$node_id` 的值，并将其作为边插入。 
 
   
 ### <a name="permissions"></a>权限  

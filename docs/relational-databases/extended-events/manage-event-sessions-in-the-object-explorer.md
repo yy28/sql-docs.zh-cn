@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2d7019b369999afe8c28660a6a533e61b1d01c29
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75234534"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在对象资源管理器中管理事件会话
@@ -99,7 +99,7 @@ STATE = STOP
   
 4.  展开 **“模板”** 下拉框。  
   
-5.  单击“\<文件位置 …>打开”并通过浏览找到要导入的会话（XML 文件）  。  
+5.  单击“**文件位置 …>打开”并通过浏览找到要导入的会话（XML 文件）\<** 。  
   
  会话将出现在 **“会话”** 节点下。 默认情况下，不会启动会话。  
   

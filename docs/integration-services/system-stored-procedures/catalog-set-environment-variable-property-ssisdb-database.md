@@ -11,10 +11,10 @@ ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aefbbc8f1b2286eb43378cf0cf5fe92e5741e610
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295331"
 ---
 # <a name="catalogset_environment_variable_property-ssisdb-database"></a>catalog.set_environment_variable_property（SSISDB 数据库）
@@ -56,7 +56,7 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -80,7 +80,7 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 -   用户没有相应的权限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在这一版本中，仅可设置 `Description` 属性。 `Description` 属性的属性值不能超过 4000 个字符。  
   
   

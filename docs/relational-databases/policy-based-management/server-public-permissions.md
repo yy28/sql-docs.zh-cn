@@ -13,10 +13,10 @@ ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4d600a5bf3e5667fdd3bd247e2e479a6c870ff21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021709"
 ---
 # <a name="server-public-permissions"></a>服务器 public 权限
@@ -29,7 +29,7 @@ ms.locfileid: "68021709"
 > [!IMPORTANT]  
 >  安装完成后， **PUBLIC** 角色在“专用管理员连接”  之外的所有端点上具有 **CONNECT**权限。 这很正常，通常不应更改。 （通过使用 **CONNECT SQL** 权限来控制访问，该权限是在创建新登录名时自动授予的。）  
   
-### <a name="for-more-information"></a>有关详细信息，请参阅：  
+### <a name="for-more-information"></a>更多信息  
  [保护 SQL Server](../../relational-databases/security/securing-sql-server.md)  
   
   

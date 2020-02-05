@@ -18,10 +18,10 @@ ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 59842dc6ee0fa2d0438aeed0620cf7ac04094c59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896410"
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB（geography 数据类型）
@@ -46,11 +46,11 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
- OGC 类型：**MultiLineString**  
+ OGC 类型：MultiLineString   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果输入的格式不正确，此方法将引发 FormatException  。  
   
 ## <a name="examples"></a>示例  

@@ -22,23 +22,23 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74190119"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署数据层应用程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   使用向导或 PowerShell 脚本将数据层应用程序 (DAC) 从 DAC 包部署到数据库引擎或 Azure SQL 数据库的现有实例。 
   
- 该部署过程通过在 **msdb** 系统数据库（在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中为 **master**）中存储 DAC 定义来注册一个 DAC 实例，创建一个数据库，然后使用在该 DAC 中定义的所有数据库对象来填充该数据库。  
+ 该部署过程通过在 **msdb** 系统数据库（在 **中为**master[!INCLUDE[ssSDS](../../includes/sssds-md.md)]）中存储 DAC 定义来注册一个 DAC 实例，创建一个数据库，然后使用在该 DAC 中定义的所有数据库对象来填充该数据库。  
  
   
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>多次部署同一 DAC 包 
  同一 DAC 包可以多次部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的单个实例上，但必须一次一个运行这些部署。 为每个部署指定的 DAC 实例名称在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中必须唯一。  
   
- 如果将 DAC 部署到数据库引擎的实例，在下次将实用工具收集组从该实例发送到实用工具控制点时，部署的 DAC 将合并到 SQL Server 实用工具中  。 然后，该 DAC 将出现在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 实用工具资源管理器的“已部署的数据层应用程序”节点中，并且将在“已部署的数据层应用程序”的详细信息页面中报告    。  
+ 如果将 DAC 部署到数据库引擎的实例，在下次将实用工具收集组从该实例发送到实用工具控制点时，部署的 DAC 将合并到 SQL Server 实用工具中  。 然后，该 DAC 将出现在  **实用工具资源管理器的“已部署的数据层应用程序”节点中，并且将在“已部署的数据层应用程序”的详细信息页面中报告**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]   。  
   
 ###  <a name="database-options-and-settings"></a>数据库选项和设置  
  默认情况下，在部署过程中创建的数据库将具有来自 CREATE DATABASE 语句的几乎所有默认设置，只有以下方面除外：  

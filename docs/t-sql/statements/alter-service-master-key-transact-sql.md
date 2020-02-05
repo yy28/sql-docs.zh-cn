@@ -25,10 +25,10 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68112862"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68112862"
 
   更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务主密钥。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,31 +61,31 @@ ALTER SERVICE MASTER KEY
  REGENERATE  
  指示应当重新生成服务主密钥。  
   
- OLD_ACCOUNT ='account_name'   
+ OLD_ACCOUNT ='account_name' ****  
  指定旧的 Windows 服务帐户的名称。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- OLD_PASSWORD ='password'   
+ OLD_PASSWORD ='password' ****  
  指定旧的 Windows 服务帐户的密码。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- NEW_ACCOUNT ='account_name'   
+ NEW_ACCOUNT ='account_name' ****  
  指定新的 Windows 服务帐户的名称。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- NEW_PASSWORD ='password'   
+ NEW_PASSWORD ='password' ****  
  指定新的 Windows 服务帐户的密码。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当第一次需要使用服务主密钥对链接服务器密码、凭据或数据库主密钥进行加密时，便会自动生成服务主密钥。 使用本地计算机密钥和 Windows 数据保护 API 对服务主密钥进行加密。 该 API 使用从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的 Windows 凭据中派生的密钥。  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 使用 AES-256 加密算法来保护服务主密钥 (SMK) 和数据库主密钥 (DMK)。 AES 是一种比早期版本中使用的 3DES 更新的加密算法。 在将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 后，应重新生成 SMK 和 DMK 以便将主密钥升级到 AES。 有关重新生成 DMK 的详细信息，请参阅 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。  

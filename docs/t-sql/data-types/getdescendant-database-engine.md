@@ -18,10 +18,10 @@ ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077975"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant（数据库引擎）
@@ -53,7 +53,7 @@ SQL Server 返回类型：hierarchyid
   
 CLR 返回类型：SqlHierarchyId 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 返回作为父节点的后代的一个子节点。
 -   如果父级为 NULL，则返回 NULL。  
 -   如果父级不为 NULL，而 child1 和 child2 为 NULL，则返回父级的子级。  

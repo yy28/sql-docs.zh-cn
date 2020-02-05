@@ -16,10 +16,10 @@ ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 89d2da02b841edd85d58798ca4c7c1745332d536
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093637"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server，数据库副本
@@ -27,7 +27,7 @@ ms.locfileid: "68093637"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SQLServer:Database Replica** 性能对象包含的性能计数器报告有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中 Always On 可用性组的辅助数据库的信息。 此对象仅在承载辅助副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上有效。  
   
-|计数器名称|描述|有关视图…|  
+|计数器名称|说明|有关视图…|  
 |------------------|-----------------|--------------|  
 |**File Bytes Received/sec**|辅助副本在最后一秒为辅助数据库接收的 FILESTREAM 数据量。|辅助副本|  
 |**Log Apply Pending Queue**|正在等待应用于数据库副本的日志块数。|辅助副本|
@@ -41,7 +41,7 @@ ms.locfileid: "68093637"
 |**Redo Bytes Remaining**|为完成还原阶段而要重做的剩余的日志量 (KB)。|辅助副本|  
 |**Redone Bytes/sec**|在最后一秒在辅助数据库上重做的日志记录量。|辅助副本|  
 |**Total Log requiring undo**|必须撤消的日志总字节数 (KB)。|辅助副本|  
-|**Transaction Delay**|等待所有当前事务的未终止的提交确认的延迟时间（以毫秒为单位）。 除以“镜像写入事务/秒”，获得“平均事务延迟时间”。 有关详细信息，请参阅 [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/)（SQL Server 2012 AlwaysOn - 第 12 节 - 性能方面和性能监视 II）|主副本|  
+|**Transaction Delay**|等待所有当前事务的未终止的提交确认的延迟时间（以毫秒为单位）。 除以“镜像写入事务/秒”，获得“平均事务延迟时间”   。 有关详细信息，请参阅 [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/)（SQL Server 2012 AlwaysOn - 第 12 节 - 性能方面和性能监视 II）|主副本|  
   
 ## <a name="see-also"></a>另请参阅
   

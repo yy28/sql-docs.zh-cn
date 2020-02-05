@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9176052b413293d25acd7696701e4f118adba03f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595722"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>备份和还原使用 Always Encrypted 的数据库 
@@ -32,12 +32,12 @@ ms.locfileid: "73595722"
 - [备份概述 (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
 - [将数据库还原到托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 - [通过 SQL Server Management Studio 查询使用 Always Encrypted 的列](always-encrypted-query-columns-ssms.md)
 - [使用具有安全 enclave 的 Always Encrypted 开发应用程序](always-encrypted-enclaves-client-development.md) 
 
 ## <a name="see-also"></a>另请参阅
-- [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [导出和导入使用 Always Encrypted 的数据库](always-encrypted-migrate-using-bacpac.md)
 - [通过 SQL Server 导入和导出向导在使用 Always Encrypted 的列之间迁移数据](always-encrypted-migrate-using-import-export-wizard.md)
 - [使用 Always Encrypted 将加密数据批量加载到列中](migrate-sensitive-data-protected-by-always-encrypted.md)

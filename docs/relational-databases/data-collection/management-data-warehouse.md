@@ -14,10 +14,10 @@ ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133622"
 ---
 # <a name="management-data-warehouse"></a>管理数据仓库
@@ -39,7 +39,7 @@ ms.locfileid: "68133622"
   
  下表介绍了核心架构中的数据库表。 这些数据库表使得数据收集器可以跟踪数据来自何处、谁插入的数据以及数据是什么时候上载至数据仓库的。  
   
-|表名|描述|  
+|表名称|说明|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|存储有关管理数据仓库报表应如何对性能计数器进行分组和聚合的信息。|  
 |core.snapshots_internal|标识每个新快照。 只要上载包开始上载一批新数据，此表中即会插入新的一行。|  
