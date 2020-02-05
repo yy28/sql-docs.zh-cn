@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f18ee84c1bbb2234672d198923e93af4d99374f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907107"
 ---
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67907107"
 
   为指定的日期和时间返回 smalldatetime 值  。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ```  
   
 ## <a name="arguments"></a>参数  
- year   
+ *year*  
  用于指定年度的整数表达式。  
   
  month   
@@ -57,7 +57,7 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ## <a name="return-types"></a>返回类型  
  **smalldatetime**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此函数的行为像完全初始化的 smalldatetime 值的构造函数  。 如果参数无效，则引发错误。 如果所需的参数为 null，则返回 null。  
   
  此函数可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器以及更高版本上远程执行。 但在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之下的服务器版本中无法远程执行。  

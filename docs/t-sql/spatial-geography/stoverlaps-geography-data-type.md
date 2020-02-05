@@ -15,10 +15,10 @@ ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: fc0d0a449941c3d8a04526180cfa721931d98d09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120845"
 ---
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps（geography 数据类型）
@@ -35,14 +35,14 @@ ms.locfileid: "68120845"
   
 ## <a name="arguments"></a>参数  
  other_geography   
- 与对其调用 `STOverlaps()` 的实例进行比较的其他 geography 实例  。  
+ 与对其调用  **的实例进行比较的其他 geography 实例**`STOverlaps()`。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：**SqlBoolean**  
+ CLR 返回类型：SqlBoolean   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。  
   
 ## <a name="examples"></a>示例  

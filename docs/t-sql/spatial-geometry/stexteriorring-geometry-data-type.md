@@ -18,10 +18,10 @@ ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5c79a6aea1042649d688b52d124f9b661d4a5b7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107723"
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing（geometry 数据类型）
@@ -39,11 +39,11 @@ ms.locfileid: "68107723"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
- 开放地理空间联盟 (OGC) 类型：**LineString**  
+ 开放地理空间信息联盟 (OGC) 类型：LineString   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 geometry 实例不是多边形，则此方法返回 NULL   。  
   
 ## <a name="examples"></a>示例  

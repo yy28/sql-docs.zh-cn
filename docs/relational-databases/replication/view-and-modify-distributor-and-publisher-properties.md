@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5fcc1f21654fedc935a604fac37c7a3ca591b3d5
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e577144d9c259d097e28b435b0d0eedc4252e82a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321550"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286934"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>查看和修改分发服务器和发布服务器属性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "75321550"
   
 2.  右键单击 **“复制”** 文件夹，然后单击 **“分发服务器属性”** 。  
   
-3.  在“分发服务器属性 - \<分发服务器>”对话框中查看和修改属性。   
+3.  在“分发服务器属性 - **分发服务器>”对话框中查看和修改属性。\<**  
   
     -   若要查看和修改分发数据库的属性，请在该对话框的“常规”页上单击该数据库的属性按钮 ( **...** )。   
   

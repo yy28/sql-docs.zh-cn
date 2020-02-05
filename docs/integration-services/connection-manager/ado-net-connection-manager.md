@@ -18,10 +18,10 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d3cf4e302df6e28d898a2790d928cf40085f7915
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74687275"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 连接管理器
@@ -110,7 +110,7 @@ ms.locfileid: "74687275"
     
 1. 在 Azure 门户上为托管实例[预配 Azure Active Directory 管理员](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)（如果尚未执行该操作）。 Azure AD 管理员可以是 Azure AD 用户或 Azure AD 组。 如果为具有托管标识的组授予管理员角色，请跳过步骤 2-4。 管理员将拥有对数据库的完全访问权限。
 
-1. 为数据工厂托管标识[创建登录名](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current)。 在 SQL Server Management Studio (SSMS) 中，使用 SQL Server 帐户 sysadmin 连接到托管实例  。 在 master 数据库中，运行以下 T-SQL  ：
+1. 为数据工厂托管标识[创建登录名](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current)。 在 SQL Server Management Studio (SSMS) 中，使用 SQL Server 帐户 sysadmin  连接到托管实例。 在 master  数据库中，运行以下 T-SQL：
 
     ```sql
     CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
@@ -132,7 +132,7 @@ ms.locfileid: "74687275"
     
 - **在设计时进行配置。** 在 SSIS 设计器中，右键单击 ADO.NET 连接管理器，然后选择“属性”  。 将属性 `ConnectUsingManagedIdentity` 更新为 `True`。
     > [!NOTE]
-    >  目前，当你在 SSIS 设计器或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 中运行 SSIS 包时，连接管理器属性 `ConnectUsingManagedIdentity` 不生效（表明托管标识身份验证不起作用）。
+    >  目前，当你在 SSIS 设计器或 `ConnectUsingManagedIdentity` SQL Server 中运行 SSIS 包时，连接管理器属性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不生效（表明托管标识身份验证不起作用）。
     
 - **在运行时进行配置。** 通过 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) 或 [Azure 数据工厂执行 SSIS 包活动](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)运行包时，找到 ADO.NET 连接管理器。 将其属性 `ConnectUsingManagedIdentity` 更新为 `True`。
     > [!NOTE]

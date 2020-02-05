@@ -18,10 +18,10 @@ ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7ddc3324099be031fff61c2268094b85e9fab143
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042338"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference（geography 数据类型）
@@ -43,12 +43,12 @@ ms.locfileid: "68042338"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  如果实例包含对拓边缘，此方法将引发 ArgumentException  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null  。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能返回的结果集已扩展到 FullGlobe 实例  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。 此方法不精确。  

@@ -26,10 +26,10 @@ ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117285"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68117285"
 
   为行级别安全性创建安全策略。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,22 +56,22 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
 ```  
   
 ## <a name="arguments"></a>参数  
- security_policy_name  
+ security_policy_name   
  安全策略的名称。 安全策略名称必须符合有关标识符的规则，并且在数据库中以及对其架构来说必须是唯一的。  
   
  *schema_name*  
- 是安全策略所属架构的名称。 由于架构绑定，必须使用 schema_name。  
+ 是安全策略所属架构的名称。 由于架构绑定，必须使用 schema_name  。  
   
  [ FILTER | BLOCK ]  
  绑定到目标表的函数的安全谓词类型。 FILTER 谓词以静默方式筛选可用于读取操作的行。 BLOCK 谓词显式阻止违反谓词函数的写入操作。  
   
- tvf_schema_name.security_predicate_function_name  
+ tvf_schema_name.security_predicate_function_name   
  是将用作谓词的内联表值函数，并且将强制用于对目标表的查询。 最多能为针对特定表的特定 DML 操作定义一个安全谓词。 必须使用 SCHEMABINDING 选项创建内联表值函数。  
   
  { *column_name* | *expression* }  
  用作安全谓词函数的参数的列名和表达式。 目标表上的任何列都可以使用。 [表达式](../../t-sql/language-elements/expressions-transact-sql.md)只能包含常量，构建在目标表的标量函数、操作符和列中。 需要为函数的每个参数指定列名称或表达式。  
   
- table_schema_name.table_name  
+ table_schema_name.table_name   
  是将要应用安全谓词的目标表。 对于特定 DML 操作，多个禁用的安全策略能以单个表为目标，但是在任何给定时间只能启用一个。  
   
  *\<block_dml_operation>* 要应用阻止谓词的特定 DML 操作。 AFTER 指定将针对 DML 操作（INSERT 或 UPDATE）执行后的行值计算谓词。 BEFORE 指定将针对 DML 操作（UPDATE 或 DELETE）执行前的行值计算谓词。 如果不指定任何操作，则谓词将应用到所有操作。  
@@ -85,11 +85,11 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  NOT FOR REPLICATION  
  指示当复制代理修改目标对象时不应执行安全策略。 有关详细信息，请参阅[控制同步期间触发器和约束的行为（复制 Transact-SQL 编程）](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)。  
   
- [table_schema_name.] table_name  
+ [table_schema_name.] table_name    
  是将要应用安全谓词的目标表。 多个禁用的安全策略能以单个表为目标，但是在任何给定时间只能启用一个。  
   
-## <a name="remarks"></a>Remarks  
- 将谓词函数用于内存优化表时，必须包含 SCHEMABINDING 并使用 WITH NATIVE_COMPILATION 编译提示。  
+## <a name="remarks"></a>备注  
+ 将谓词函数用于内存优化表时，必须包含 SCHEMABINDING 并使用 WITH NATIVE_COMPILATION 编译提示   。  
   
  在执行相应 DML 操作后计算阻止谓词。 因此，READ UNCOMMITTED 查询可看到要回滚的临时值。  
   

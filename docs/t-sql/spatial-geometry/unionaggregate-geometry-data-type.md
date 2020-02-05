@@ -15,10 +15,10 @@ ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f4fd01821e8f432d39905fb0bca974c155a151af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066129"
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate（geometry 数据类型）
@@ -40,10 +40,10 @@ UnionAggregate ( geometry_operand )
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  在输入值无效时引发 `FormatException`。 请参阅 [STIsValid（geometry 数据类型）](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在输入为空或具有不同的 SRID 时，方法返回 null  。 请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  方法忽略 null 输入  。  

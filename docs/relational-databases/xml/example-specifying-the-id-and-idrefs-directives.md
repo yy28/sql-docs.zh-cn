@@ -1,5 +1,5 @@
 ---
-title: 例如：指定 ID 和 IDREFS 指令 | Microsoft Docs
+title: 示例：指定 ID 和 IDREFS 指令 | Microsoft Docs
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1574f3336ae06b8bfb368de7eff37d1bc4286af0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006685"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>例如：指定 ID 和 IDREFS 指令
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>示例：指定 ID 和 IDREFS 指令
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -39,7 +39,7 @@ ms.locfileid: "68006685"
 </Customer>  
 ```  
   
-`SalesOrderIDList` 元素的 `<Customer>` 属性是一个多值属性，它引用 `SalesOrderID` 元素的 `<SalesOrder>` 属性。 若要建立此链接，必须将 `SalesOrderID` 属性声明为 `ID` 类型，并且必须将 `<Customer>` 元素的 `SalesOrderIDList` 属性声明为 `IDREFS` 类型。 因为一个客户可请求多个订单，所以使用 `IDREFS` 类型。
+`SalesOrderIDList` 元素的 `<Customer>` 属性是一个多值属性，它引用 `SalesOrderID` 元素的 `<SalesOrder>` 属性。 若要建立此链接，必须将 `SalesOrderID` 属性声明为 `ID` 类型，并且必须将 `SalesOrderIDList` 元素的 `<Customer>` 属性声明为 `IDREFS` 类型。 因为一个客户可请求多个订单，所以使用 `IDREFS` 类型。
   
  **IDREFS** 类型的元素也有多个值。 因此，必须使用单独的 SELECT 子句来重复使用相同的标记、父级和键列信息。 然后， `ORDER BY` 必须确保组成 **IDREFS** 值的行的序列成组显示在它们的父元素下。  
   

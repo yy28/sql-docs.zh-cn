@@ -16,10 +16,10 @@ ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 04d0864d07eeb741690df26fb9aee02c3f0bc547
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254171"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>数据库镜像和 SQL Server 故障转移群集实例
@@ -45,7 +45,7 @@ ms.locfileid: "75254171"
   
  ![对群集进行故障转移](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "对群集进行故障转移")  
   
- 镜像会话中的三个服务器实例驻留在三个不同的群集上：Cluster_A、Cluster_B 和 Cluster_C    。 每个群集上都有一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认实例，此实例作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例在运行。 镜像会话启动时， **Cluster_A** 上的故障转移群集实例是主体服务器， **Cluster_B** 上的故障转移群集实例是镜像服务器， **Cluster_C** 上的故障转移群集实例是镜像会话中的见证服务器。 最终， **Cluster_A** 上的活动节点失败，这将导致主体服务器不可用。  
+ 镜像会话中的三个服务器实例驻留在三个不同的群集上： **Cluster_A**、 **Cluster_B**和 **Cluster_C**。 每个群集上都有一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认实例，此实例作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例在运行。 镜像会话启动时， **Cluster_A** 上的故障转移群集实例是主体服务器， **Cluster_B** 上的故障转移群集实例是镜像服务器， **Cluster_C** 上的故障转移群集实例是镜像会话中的见证服务器。 最终， **Cluster_A** 上的活动节点失败，这将导致主体服务器不可用。  
   
  在群集准备执行故障转移之前，镜像服务器借助见证服务器检测到主体服务器已丢失。 镜像服务器将前滚其数据库，并尽快使该数据库在线以成为新的主体数据库。 当 **Cluster_A** 完成故障转移之后，先前的主体服务器现在成为镜像服务器，并将其数据库与 **Cluster_B**上的当前主体数据库同步。  
   

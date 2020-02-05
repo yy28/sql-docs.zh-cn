@@ -15,16 +15,16 @@ ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: da14149b9518a14fa4b7a50072ba35c0b8dcefe2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991375"
 ---
 # <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>可用性副本未联接到 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="introduction"></a>简介  
+## <a name="introduction"></a>介绍  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ ms.locfileid: "67991375"
 |**类别**|**警告**|  
 |**方面**|可用性副本|  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  此策略检查可用性副本的联接状态。 当可用性副本添加到可用性组但未正确联接时，该策略将处于不正常状态。 否则，该策略处于正常状态。  
   
 > [!NOTE]  

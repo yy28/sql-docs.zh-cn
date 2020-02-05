@@ -12,13 +12,13 @@ ms.assetid: 8f4b0e2f-04c0-46e4-9208-20a7085d7a1a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 917884670872daf6db0fa66c479c3d10a603e227
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118381"
 ---
-# <a name="mssqlserver8994"></a>MSSQLSERVER_8994
+# <a name="mssqlserver_8994"></a>MSSQLSERVER_8994
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68118381"
 |符号名称|DBCC3_MISSING_FORWARDING_ROW|  
 |消息正文|前推行页 P_ID2，槽 S_ID2 应指向对象 ID O_ID，被前推行页 P_ID1，槽 S_ID1。 但未遇到前推行。 可能是因为分配错误。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 堆集中的被前推行缺少应该指向它的前推行。  
   
 ## <a name="user-action"></a>用户操作  

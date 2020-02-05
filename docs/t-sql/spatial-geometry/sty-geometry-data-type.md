@@ -18,10 +18,10 @@ ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 05f4ddd6366fbb09b4c5f0c9dd186f415fdc16ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066146"
 ---
 # <a name="sty-geometry-data-type"></a>STY（geometry 数据类型）
@@ -39,10 +39,10 @@ ms.locfileid: "68066146"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float   
   
- CLR 类型：**SqlDouble**  
+ CLR 类型：SqlDouble   
   
-## <a name="remarks"></a>Remarks  
- 如果 **geometry** 实例为一个点，此属性的值将为 null。 该属性为只读。  
+## <a name="remarks"></a>备注  
+ 如果 **geometry** 实例为一个点，此属性的值将为 null。 此属性为只读。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建 `Point` 实例，并使用 `STY` 检索该实例的 Y 坐标。  

@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 38570e910994e77084777bcc4245ccbb6033d39b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ba656a13c71792a176b7f625a2f561f1f422e4b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769431"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287050"
 ---
 # <a name="subscription-synchronization-history"></a>订阅，同步历史记录
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,10 +28,10 @@ ms.locfileid: "68769431"
 ## <a name="options"></a>选项  
  从 **“视图”** 菜单中选择要查看的合并代理会话，然后在标记为 **“合并代理的会话”** 的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中已处理的项目”** 的网格中。  
   
- **“视图”**  
+ **视图**  
  选择要查看的合并代理会话。  
   
- **“状态”**  
+ **Status**  
  会话结束时合并代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -60,7 +60,7 @@ ms.locfileid: "68769431"
  **错误消息**  
  如果某会话由于出错而结束，此字段将会显示合并代理记录的上一条错误消息。 如果某会话未因出错而结束，此字段为空白。  
   
- **项目**  
+ **文章**  
  发布中各个项目的名称以及在整个发布中所处的处理阶段：  
   
 -   **初始化**。 这是指启动合并代理；其过程不同于初始化订阅，后者涉及应用快照。  
@@ -82,7 +82,7 @@ ms.locfileid: "68769431"
  **Inserts**  
  在所选会话的此阶段中插入的行数。  
   
- **Updates**  
+ **更新**  
  在所选会话的此阶段中更新的行数。  
   
  **Deletes**  

@@ -11,10 +11,10 @@ ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8273d3c86cbfa6774458d40a964e64ba415f1de0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114044"
 ---
 # <a name="sql-server-xtp-storage"></a>SQL Server XTP 存储
@@ -24,7 +24,7 @@ ms.locfileid: "68114044"
   
  下表介绍了 **SQL Server XTP 存储** 计数器。  
   
-|计数器|描述|  
+|计数器|说明|  
 |-------------|-----------------|  
 |**Checkpoints Closed**|联机代理执行的已关闭检查点的计数。|  
 |**Checkpoints Completed**|脱机检查点线程处理的检查点计数。|  

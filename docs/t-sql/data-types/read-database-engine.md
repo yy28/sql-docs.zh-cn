@@ -18,16 +18,16 @@ ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000604"
 ---
 # <a name="read-database-engine"></a>Read（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Read 从传入的 BinaryReader 中读取 SqlHierarchyId 的二进制表示形式，并将 SqlHierarchyId 对象设置为该值。 无法通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来调用 Read。 请改为使用 CAST 或 CONVERT。
+Read 从传入的 BinaryReader 中读取 SqlHierarchyId 的二进制表示形式，并将 SqlHierarchyId 对象设置为该值。    无法通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来调用 Read。 请改为使用 CAST 或 CONVERT。
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +37,17 @@ void Read( BinaryReader r )
   
 ## <a name="arguments"></a>参数  
 *r*  
- BinaryReader 对象，该对象生成对应于 hierarchyid 节点的二进制表示形式的二进制流。  
+ BinaryReader 对象，该对象生成对应于 hierarchyid 节点的二进制表示形式的二进制流   。  
   
 ## <a name="return-types"></a>返回类型
- CLR 返回类型：void  
+ CLR 返回类型：void   
   
-## <a name="remarks"></a>Remarks  
- Read 不验证其输入。 如果给出了无效的二进制输入，则 Read 可能引发异常。 或者，它可能成功并生成无效的 SqlHierarchyId 对象，这些对象的方法可能给出不可预测的结果或引发异常。  
+## <a name="remarks"></a>备注  
+ Read 不验证其输入。 如果给出了无效的二进制输入，则 Read 可能引发异常。 或者，它可能成功并生成无效的 SqlHierarchyId 对象，这些对象的方法可能给出不可预测的结果或引发异常  。  
   
- 只能对新创建的 SqlHierarchyId 对象调用 Read。  
+ 只能对新创建的 SqlHierarchyId 对象调用 Read  。  
   
- 必要时（例如，将数据写入 hierarchyid 列时），[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在内部使用 Read。 在 varbinary 和 hierarchyid 之间进行转换时，也将在内部调用 Read。  
+ 必要时（例如，将数据写入 hierarchyid 列时），[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在内部使用 Read  。 在 varbinary 和 hierarchyid 之间进行转换时，也将在内部调用 Read   。  
   
 ## <a name="examples"></a>示例  
   

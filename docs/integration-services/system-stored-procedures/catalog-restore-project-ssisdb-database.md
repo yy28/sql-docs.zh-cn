@@ -11,10 +11,10 @@ ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d131ebd8d532e0844774fc675165750832f964c9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295463"
 ---
 # <a name="catalogrestore_project-ssisdb-database"></a>catalog.restore_project（SSISDB 数据库）
@@ -71,7 +71,7 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 -   用户没有相应的权限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  还原某个项目后，将为所有参数分配默认值，并且所有环境引用都保持不变。 目录中保留的最大项目版本数量由目录属性 MAX_VERSIONS_PER_PROJECT  决定，如 [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 视图中所示。  
   
 > [!WARNING]  

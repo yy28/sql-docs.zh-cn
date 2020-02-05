@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495474"
 ---
 # <a name="---comment-transact-sql"></a>--（注释）(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68495474"
 
   表示用户提供的文本。 可以将注释插入单独行中，嵌套在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令行的结尾或嵌套在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中。 服务器不对注释进行计算。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,8 +47,8 @@ ms.locfileid: "68495474"
  text_of_comment   
  包含注释文本的字符串。  
   
-## <a name="remarks"></a>Remarks  
-将两个连字符 (“--”) 用于单行或嵌套的注释  。 使用 -- 插入的注释通过一个新行终止，该新行由回车符 (u + 000A)、换行符 (u + 000D) 或二者的组合指定  。 注释没有最大长度限制。 下表列出了可用来注释或取消注释文本的键盘快捷键：
+## <a name="remarks"></a>备注  
+将两个连字符 (“ **”) 用于单行或嵌套的注释--** 。 使用  **插入的注释通过一个新行终止，该新行由回车符 (u + 000A)、换行符 (u + 000D) 或二者的组合指定--** 。 注释没有最大长度限制。 下表列出了可用来注释或取消注释文本的键盘快捷键：
   
 |操作|Standard|  
 |------------|--------------|  

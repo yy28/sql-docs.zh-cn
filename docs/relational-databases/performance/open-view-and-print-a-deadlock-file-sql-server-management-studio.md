@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c305d9fd08ffcdd1c4b66d90d834c8f0fb6dead5
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165765"
 ---
 # <a name="open-view-and-print-a-deadlock-file-in-sql-server-management-studio-ssms"></a>在 SQL Server Management Studio (SSMS) 中打开、查看和打印死锁文件
@@ -30,13 +30,13 @@ ms.locfileid: "74165765"
   
 ## <a name="open-and-view-a-deadlock-file"></a>打开和查看死锁文件  
   
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“文件”  菜单上，指向“打开”  ，然后选择“文件”  。  
+1. 在  **中的“文件”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]菜单上，指向“打开”  ，然后选择“文件”  。  
   
 2. 在 **“打开文件”** 对话框的 **“文件类型”** 框中选择 .xdl 文件类型。 现在就获得了一个筛选为只包含死锁文件的列表。  
   
 ## <a name="print-a-deadlock-file"></a>打印死锁文件  
   
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“文件”  菜单上，指向“打开”  ，然后选择“文件”  。  
+1. 在  **中的“文件”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]菜单上，指向“打开”  ，然后选择“文件”  。  
   
 2. 在 **“打开文件”** 对话框的 **“文件类型”** 框中选择 .xdl 文件类型。 现在就获得了一个筛选为只包含死锁文件的列表。  
   

@@ -13,10 +13,10 @@ ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 30b70c57d90f7772368713ac378c809a3dd7c46e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117198"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "68117198"
 
   对指定的表和 XML 列创建新的选择性 XML 索引。 选择性 XML 索引通过只对您通常查询的节点子集建立索引，改进 XML 索引和查询的性能。 您还可以创建辅助选择性 XML 索引。 有关信息，请参阅[创建、更改和删除辅助选择性 XML 索引](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -98,7 +98,7 @@ identifier
  index_name   
  要创建的新索引的名称。 索引名称在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
-  \<table_object> 是包含要建立索引的 XML 列的表。 使用以下格式之一：  
+ *\<* table_object> 是包含要建立索引的 XML 列的表。 使用以下格式之一：  
   
 -   `database_name.schema_name.table_name`  
   
@@ -113,7 +113,7 @@ identifier
   
  [WITH XMLNAMESPACES (  \<xmlnamespace_list>  )] 是要建立索引的路径使用的命名空间的列表。 有关 WITH XMLNAMESPACES 子句的语法的信息，请参阅 [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md)。  
   
- (\<promoted_node_path_list>) 是要使用可选优化提示建立索引的路径列表   。 有关可以在 CREATE 或 ALTER 语句中指定的路径和优化提示的信息，请参阅[为选择性 XML 索引指定路径和优化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
+ (**promoted_node_path_list>) 是要使用可选优化提示建立索引的路径列表**\<  。 有关可以在 CREATE 或 ALTER 语句中指定的路径和优化提示的信息，请参阅[为选择性 XML 索引指定路径和优化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
   
  有关通过 *\<* index_options> 获取索引选项的信息，请参阅 [CREATE XML INDEX（选择性 XML 索引）](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
@@ -127,7 +127,7 @@ identifier
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  有关限制和局限的信息，请参阅[选择性 XML 索引 (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  

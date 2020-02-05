@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e333a149ca50531be3eb89b8b9d249ea4d5996b9
-ms.sourcegitcommit: cc20a148c785ac43832f47d096fe53508a4b1940
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75871117"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
@@ -95,9 +95,9 @@ ALTER CERTIFICATE certificate_name
  指定解密私钥所需的密码。  
   
  ENCRYPTION BY PASSWORD = new_password   
- 指定用于对数据库中的证书私钥进行加密的密码。 new_password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求  。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
+ 指定用于对数据库中的证书私钥进行加密的密码。 new_password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
- ACTIVE FOR BEGIN_DIALOG = { ON | OFF }   
+ ACTIVE FOR BEGIN_DIALOG  **{ ON | OFF }=**  
  使证书可用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话会话的发起方。  
   
 ## <a name="remarks"></a>备注  

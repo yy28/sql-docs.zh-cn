@@ -12,13 +12,13 @@ ms.assetid: 18e7a3dc-7d8a-41b9-8724-d2a8587b6903
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 278b22983ea339e2bfa9c388c530254aed57c872
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087589"
 ---
-# <a name="mssqlserver7931"></a>MSSQLSERVER_7931
+# <a name="mssqlserver_7931"></a>MSSQLSERVER_7931
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -30,9 +30,9 @@ ms.locfileid: "68087589"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|消息正文|数据库错误:发现存在两个分区 FileStream 目录 ID F_ID。|  
+|消息正文|数据库错误: 发现存在两个分区 FileStream 目录 ID F_ID。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 在元数据中发现了相同的 Filestream 目录的分区 ID。  
   
 ## <a name="user-action"></a>用户操作  

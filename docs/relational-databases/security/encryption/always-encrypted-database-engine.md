@@ -18,16 +18,16 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254835"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "|::ref1::|")  
+  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
  Always Encrypted 功能旨在保护 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储的敏感数据，如信用卡号或身份证号（例如美国社会安全号码）。 始终加密允许客户端对客户端应用程序内的敏感数据进行加密，并且永远不向 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] （[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）显示加密密钥。 因此，Always Encrypted 分隔了拥有数据且有权查看它的人员与管理数据但没有访问权限的人员。 Always Encrypted 确保本地数据库管理员、云数据库操作员或其他高特权但未经授权的用户无法访问加密的数据，使客户能够放心地将敏感数据存储在不受其直接控制的区域。 这样，组织便可以将数据存储在 Azure 中，并将本地数据库的管理权限委托给第三方，或者降低其自身 DBA 员工的安全核查要求。
 
@@ -38,7 +38,7 @@ ms.locfileid: "75254835"
 
  始终加密使向加密对应用程序透明。 安装在客户端计算机上的启用始终加密的驱动程序通过在客户端应用程序中对敏感数据进行加密和解密来实现此目标。 该驱动程序先对敏感列中的数据进行加密，然后再将该数据传递到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，并且自动重写查询以便保留应用程序的语义。 同样，该驱动程序透明地解密存储在查询结果中包含的加密数据库列中的数据。  
   
- 从 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 开始的所有 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 版本和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的所有服务层均提供 Always Encrypted。 （[!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 之前，仅 Enterprise Edition 具有始终加密功能。）有关包含始终加密的第 9 频道演示内容，请参阅 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)（使用始终加密来保护敏感数据）。  
+ 从 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 开始的所有 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 版本和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的所有服务层均提供 Always Encrypted。 （ [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 之前，仅 Enterprise Edition 具有始终加密功能。）有关包含始终加密的第 9 频道演示内容，请参阅 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)（使用始终加密来保护敏感数据）。  
 
   
 ## <a name="typical-scenarios"></a>典型方案  
@@ -115,7 +115,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 |对选定的数据库列中的现有数据进行加密|是|是|否|
 
 > [!NOTE]
-> [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中引入的[具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md) 支持使用 Transact-SQL 加密现有数据。 这样也无需将数据移动到数据源之外来进行加密操作。
+> [ 中引入的](always-encrypted-enclaves.md)具有安全 Enclave 的 Always Encrypted[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 支持使用 Transact-SQL 加密现有数据。 这样也无需将数据移动到数据源之外来进行加密操作。
 
 > [!NOTE]
 > 请确保在安全环境中，在非托管数据库的计算机上运行密钥预配或数据加密工具。 否则，敏感数据或密钥可能会泄漏给服务器环境，这将减少使用“始终加密”功能的好处。  
@@ -148,7 +148,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
   
 -   对使用随机加密进行加密的列执行查询无法对上述任何列执行操作。 不支持对使用随机加密进行加密的列编制索引。  
  > [!NOTE] 
- > [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中引入的[具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md)，通过启用模式匹配、比较运算符和对使用随机加密的列编制索引来解决上述限制。
+ > [ 中引入的](always-encrypted-enclaves.md)具有安全 Enclave 的 Always Encrypted[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]，通过启用模式匹配、比较运算符和对使用随机加密的列编制索引来解决上述限制。
 
 -   列加密密钥最多可以包含两个不同的加密值，每个值是使用不同的列主密钥加密的。 这样便于轮换列主密钥。  
   
@@ -226,7 +226,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
   
 -   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，向固定的数据库角色 *默认授予这两个* VIEW `public` 权限。 数据库管理员可以选择撤消（或拒绝） *角色的* VIEW `public` 权限，并将该权限授予特定的角色或用户来实现更严格的控制。  
   
--   在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]中，默认情况下不会向 `public` 固定数据库角色授予 VIEW 权限  。 这可以使某些现有的旧工具（使用旧版本的 DacFx）能够正常工作。 因此，若要使用加密列（即使不对其进行解密），数据库管理员必须显式授予这两个 *VIEW* 权限。  
+-   在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]中，默认情况下不会向  *固定数据库角色授予 VIEW 权限*`public`。 这可以使某些现有的旧工具（使用旧版本的 DacFx）能够正常工作。 因此，若要使用加密列（即使不对其进行解密），数据库管理员必须显式授予这两个 *VIEW* 权限。  
 
   
 ## <a name="example"></a>示例  

@@ -15,16 +15,16 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d2f9c6101be3dba631a9e0cbebdfedc3444c72d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991479"
 ---
 # <a name="always-on-availability-group-is-offline"></a>Always On 可用性组处于脱机状态
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="introduction"></a>简介  
+## <a name="introduction"></a>介绍  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ ms.locfileid: "67991479"
 |**类别**|**严重**|  
 |**方面**|可用性组 (availability group)|  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  此策略检查可用性组的联机或脱机状态。 当可用性组的群集资源处于脱机状态或可用性组不具有主副本时，此策略处于不正常状态并引发警报。  
   
  当可用性组的群集资源处于联机状态并且可用性组具有主副本时，此策略处于正常状态。  

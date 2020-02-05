@@ -23,10 +23,10 @@ ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b0dd587240a56dcdfab4d618255ee838491054af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122292"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68122292"
 
   终止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的异步统计信息更新作业。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ KILL STATS JOB job_id
  *job_id*  
  job_id 字段，由该作业的 sys.dm_exec_background_job_queue 动态管理视图返回。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  job_id 与在其他形式的 KILL 语句中所使用的 session_id 或工作单元无关。  
   
 ## <a name="permissions"></a>权限  

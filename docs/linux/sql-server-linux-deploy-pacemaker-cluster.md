@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077478"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 部署 Pacemaker 群集
@@ -200,7 +200,7 @@ Ubuntu 的配置与 RHEL 类似。 但有一个主要区别：安装 Pacemaker �
 如果尚未安装 SQL Server HA 包和 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理，请使用以下命令安装它们。 安装 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 后安装 HA 包需要重新启动 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 才能使用。 这些说明假定已经设置了 Microsoft 包的存储库，因为此时应安装 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。
 > [!NOTE]
 > - 如果不将 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理用于日志传送或任何其他用途，则不必安装它，这时可以跳过包 mssql-server-agent  。
-> - 其他用于 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 全文搜索 (mssql-server-fts) 和 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (mssql-server-is) 的可选包对于高可用性、FCI 或 AG 都不是必需的   。
+> - 其他用于 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 全文搜索 (mssql-server-fts) 和  *Integration Services (mssql-server-is) 的可选包对于高可用性、FCI 或 AG 都不是必需的*[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]  。
 
 **RHEL**
 
@@ -225,7 +225,7 @@ sudo systemctl restart mssql-server
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，你学习了如何为 Linux 上的 SQL Server 部署 Pacemaker 群集。 学习了如何：
+在本教程中，你学习了如何为 Linux 上的 SQL Server 部署 Pacemaker 群集。 你已了解如何执行以下操作：
 > [!div class="checklist"]
 > * 安装高可用性加载项并安装 Pacemaker。
 > * 为 Pacemaker 准备节点（仅限 RHEL 和 Ubuntu）。

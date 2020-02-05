@@ -24,10 +24,10 @@ ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dc3caf4c1643405cc7db31e2a9c76cf70456b272
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064596"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73064596"
 
   向当前数据库中添加应用程序角色。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,12 +50,12 @@ CREATE APPLICATION ROLE application_role_name
  指定应用程序角色的名称。 该名称一定不能被用于引用数据库中任何主体。  
   
  PASSWORD ='password'     
- 指定数据库用户将用于激活应用程序角色的密码。 应始终使用强密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求  。  
+ 指定数据库用户将用于激活应用程序角色的密码。 应始终使用强密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- DEFAULT_SCHEMA =_schema\_name_   
+ DEFAULT_SCHEMA **=schema**name _\__  
  指定服务器在解析该角色的对象名时将搜索的第一个架构。 如果未定义 DEFAULT_SCHEMA，则应用程序角色将使用 DBO 作为其默认架构。 schema_name 可以是数据库中不存在的架构  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
 >  当设置应用程序角色密码时，将检查密码复杂性。 调用应用程序角色的应用程序必须存储其密码。 而且应当始终以加密的形式存储应用程序角色密码。  

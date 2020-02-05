@@ -14,10 +14,10 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4ed4722261ca83d95345c8d8fc5024f1076be839
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282511"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 包记录的事件
@@ -29,7 +29,7 @@ ms.locfileid: "71282511"
   
  本主题提供有关包记入应用程序事件日志的常见事件消息的信息。 默认情况下，即使未对包启用日志记录，包也会记录其中某些消息。 但对于其他消息，只有对包启用了日志记录，包才会记录这些消息。 无论包是在默认情况下还是在启用日志记录后记录这些消息，消息的事件源都是 SQLISPackage。  
   
- 有关如何运行 SSIS 包的常规信息，请参阅[项目和包的执行](../packages/run-integration-services-ssis-packages.md)。  
+ 有关如何运行 SSIS 包的常规信息，请参阅 [项目和包的执行](../packages/run-integration-services-ssis-packages.md)。  
   
  有关如何对运行的包进行故障排除的信息，请参阅 [对包执行进行故障排除的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   

@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a3b2d2ff81fddaae0b0ae68da9d4477819a61073
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101936"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68101936"
 
 从缓冲池删除所有清除缓冲区，并从列存储对象池中删除列存储对象。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法
 SQL Server 语法： 
@@ -61,7 +61,7 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
  ALL  
  从每个“计算”节点和“管理”节点，清除内存中的数据缓存。 如果不指定值，则使用此默认值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 使用 DBCC DROPCLEANBUFFERS 测试包含冷缓存的查询，而不用关闭和重新启动服务器。
 若要从缓冲池删除清除缓冲区，并从列存储对象池删除列存储对象，请首先使用 CHECKPOINT 生成一个冷缓冲区缓存。 这可以强制将当前数据库的全部脏页写入磁盘，然后清除缓冲区。 完成此操作后，便可发出 DBCC DROPCLEANBUFFERS 命令来从缓冲池中删除所有缓冲区。
   
@@ -74,11 +74,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="permissions"></a>权限  
 
-适用范围：SQL Server、并行数据仓库 
+适用于：SQL Server、并行数据仓库 
 
 - 要求具有 **sysadmin** 固定服务器角色的成员身份。  
 
-适用范围：Azure SQL 数据仓库
+适用于：Azure SQL 数据仓库
 
 - 要求具有 DB_OWNER 固定服务器角色中的成员资格。  
   

@@ -17,10 +17,10 @@ ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115879"
 ---
 # <a name="maintenance-plans"></a>维护计划
@@ -45,7 +45,7 @@ ms.locfileid: "68115879"
 ## <a name="maintenance-plan-functionality"></a>维护计划功能  
  可以创建维护计划来执行以下任务：  
   
--   用新填充因子重新生成索引来重新组织数据和索引页上的数据。 用新填充因子重新生成索引会确保数据库页中包含的数据量和可用空间的平均分布。 还使得以后能够更快地增长。 有关详细信息，请参阅[为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
+-   用新填充因子重新生成索引来重新组织数据和索引页上的数据。 用新填充因子重新生成索引会确保数据库页中包含的数据量和可用空间的平均分布。 还使得以后能够更快地增长。 有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
 -   通过删除空数据库页压缩数据文件。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68115879"
   
 |||  
 |-|-|  
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |配置“代理 XP”  服务器配置选项以启用 SQL Server 代理扩展存储过程。|[“代理 XP”服务器配置选项](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建维护计划。|[创建维护计划](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |说明如何使用维护计划设计图面创建维护计划。|[创建维护计划（维护计划设计图面）](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

@@ -11,10 +11,10 @@ ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fda2594b2dc61a78eb5900ef6d1b735dac5b44e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012327"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>配置远程数据存档服务器配置选项
@@ -24,7 +24,7 @@ ms.locfileid: "68012327"
   
  **remote data archive** 选项可以具有下列值。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0|不可以为服务器上的数据库和表启用延伸。|  
 |1|可以为服务器上的数据库和表启用延伸。|  

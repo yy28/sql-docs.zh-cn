@@ -18,10 +18,10 @@ ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: f072ed3e73b7dacd10254c04aaa34e5466b582b8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262224"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>已启用符合通用准则的服务器配置
@@ -29,7 +29,7 @@ ms.locfileid: "68262224"
 
 符合通用准则选项支持[信息技术安全评估通用准则](https://www.commoncriteriaportal.org/)所需的以下元素。  
   
-|条件|描述|  
+|条件|说明|  
 |--------------|-----------------|  
 |残留信息保护 (RIP)|RIP 要求将内存重新分配给新资源之前，用已知的位模式覆盖内存分配。 满足 RIP 标准有助于提高安全性；然而，覆盖内存分配会使性能降低。 启用 common criteria compliance enabled 选项之后，将执行覆盖操作。|  
 |查看登录统计信息的能力|启用 common criteria compliance enabled 选项之后，将启用登录审核。 用户每次成功登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，系统都会提供有关上一次成功登录的时间、上一次登录失败的时间以及上一次成功登录时间和当前登录时间之间尝试登录的次数的信息。 可以通过查询 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 动态管理视图来查看这些登录统计信息。|  
@@ -42,7 +42,7 @@ ms.locfileid: "68262224"
   
  如果使用 `sp_configure` 系统存储过程来更改该设置，则只有在“show advanced options”设置为 1 时才能更改“common criteria compliance enabled”。 该设置在服务器重新启动后生效。 可能的值为 0 和 1：  
   
--   0 表示未启用符合通用准则。 这是默认设置。  
+-   0 表示未启用符合通用准则。 这是默认值。  
   
 -   1 表示启用了符合通用准则。  
   

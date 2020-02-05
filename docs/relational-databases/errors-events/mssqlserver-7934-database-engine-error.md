@@ -12,13 +12,13 @@ ms.assetid: f656bf46-e5be-4c7b-9ea4-0f2eee7441fe
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c3adcba99280331fd604cf71544d85a87f996109
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087556"
 ---
-# <a name="mssqlserver7934"></a>MSSQLSERVER_7934
+# <a name="mssqlserver_7934"></a>MSSQLSERVER_7934
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -30,9 +30,9 @@ ms.locfileid: "68087556"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|消息正文|表错误：找不到对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 的 Filestream 目录 ID F_ID。|  
+|消息正文|表错误: 找不到对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 的 Filestream 目录 ID F_ID。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 在运行 DBCC CHECKDB 期间，找到一个分区；但在 FILESTREAM 数据空间中却找不到与其对应的 FILESTREAM 行集目录。  
   
 ## <a name="user-action"></a>用户操作  

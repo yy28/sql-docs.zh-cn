@@ -18,18 +18,18 @@ ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1880ef3ea67ddac948653054a8d5678787c17dcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026434"
 ---
-# <a name="currentrequestid-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
+# <a name="current_request_id-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 此函数返回当前会话中当前请求的 ID。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +40,7 @@ CURRENT_REQUEST_ID()
 ## <a name="return-types"></a>返回类型
 **smallint**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 若要查找有关当前会话的准确信息，请使用 @@SPID。 有关当前请求的确切信息，请使用 CURRENT_REQUEST_ID()。
   
 ## <a name="see-also"></a>另请参阅

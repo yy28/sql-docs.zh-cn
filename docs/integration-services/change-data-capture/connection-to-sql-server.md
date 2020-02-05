@@ -11,10 +11,10 @@ ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e87e29349cdef9db94e917f6fe543b327c5abf9f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298853"
 ---
 # <a name="connection-to-sql-server"></a>连接到 SQL Server
@@ -31,12 +31,12 @@ ms.locfileid: "71298853"
 ### <a name="server-name"></a>服务器名称  
  键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的服务器的名称。  
   
-### <a name="authentication"></a>身份验证  
- 选择下列选项之一：  
+### <a name="authentication"></a>Authentication  
+ 选择以下方案之一：  
   
 -   Windows 身份验证  
   
--   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“登录名”  和“密码”  。  
+-   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的  **中为用户键入“登录名”** **和“密码”** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ### <a name="options"></a>选项  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  

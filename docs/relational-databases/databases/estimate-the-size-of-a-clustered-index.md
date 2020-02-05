@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8c785e98a06e31448c22422f85f3be34efcffa6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051107"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>估计聚集索引的大小
@@ -42,7 +42,7 @@ ms.locfileid: "68051107"
   
 3.  对计算出的值求和。  
   
-## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>步骤 1. 计算在叶级别存储数据所用的空间  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>步骤 1。 计算在叶级别存储数据所用的空间  
   
 1.  指定表中显示的行数：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68051107"
   
      ***Num_Variable_Cols***  = 可变长度列数  
   
-     ***Max_Var_Size*** = 所有可变长度列的最大字节大小  
+     ***Max_Var_Size***  = 所有可变长度列的最大字节大小  
   
 3.  如果聚集索引不唯一，则请说明“唯一标识符  ”列：  
   

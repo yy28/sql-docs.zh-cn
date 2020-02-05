@@ -12,13 +12,13 @@ ms.assetid: 6e9c7241-0201-44e0-9f8b-b3c4e293f0f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c8f238589f0f9b6641095a4ccb65a4665300a28b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023173"
 ---
-# <a name="mssqlserver1418"></a>MSSQLSERVER_1418
+# <a name="mssqlserver_1418"></a>MSSQLSERVER_1418
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68023173"
 |符号名称|DBM_PARTNERNOTFOUND|  
 |消息正文|服务器网络地址 "%.*ls" 无法访问或不存在。 请检查网络地址名称，并检查本地和远程端点的端口是否正常运行。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 该服务器网络端点未做出响应，这是因为无法到达指定的服务器网络地址或该地址不存在。  
   
 > [!NOTE]  

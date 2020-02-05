@@ -18,10 +18,10 @@ ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0320cbd20242f19bab7c7990f4bad13458e403e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930148"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses（geometry 数据类型）
@@ -38,14 +38,14 @@ ms.locfileid: "67930148"
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 将与调用 `STCrosses()` 的实例进行比较的另一个 geometry 实例  。  
+ 将与调用  **的实例进行比较的另一个 geometry 实例**`STCrosses()`。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：**SqlBoolean**  
+ CLR 返回类型：SqlBoolean   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果同时满足以下两个条件，则表示两个 **geometry** 实例相交：  
   
 -   两个 **geometry** 实例的交集生成一个维度小于源 **geometry** 实例最大维度的几何图形。  

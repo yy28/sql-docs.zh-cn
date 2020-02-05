@@ -18,10 +18,10 @@ ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f81b5ba7ba6de057dd82090775013db55e4275b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066489"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance（geography 数据类型）
@@ -46,12 +46,12 @@ _relative_
 ## <a name="return-types"></a>返回类型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
-CLR 返回类型：**SqlGeography**  
+CLR 返回类型：SqlGeography   
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
 将 tolerance 设置为 <= 0 会引发 **ArgumentOutOfRange** 异常。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 此方法允许为生成的 **LineString** 指定公差大小。  
   
 CurveToLineWithTolerance 方法将为 CircularString 或 CompoundCurve 实例返回 LineString 实例，为 CurvePolygon 实例返回 Polygon 实例       。  
@@ -59,7 +59,7 @@ CurveToLineWithTolerance 方法将为 CircularString 或 CompoundCurve 实例返
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. 在 CircularString 实例上使用不同的公差值  
-以下示例说明设置容差如何影响从 `CircularString` 实例返回的 `LineString` 实例：  
+以下示例说明设置容差如何影响从 `LineString` 实例返回的 `CircularString` 实例：  
   
 ```
 DECLARE @g geography;  

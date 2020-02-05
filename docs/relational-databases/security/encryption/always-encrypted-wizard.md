@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594507"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>使用 Always Encrypted 向导配置列加密
@@ -38,7 +38,7 @@ Always Encrypted 向导是一个功能强大的工具，可让你为所选数据
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> 如果使用的是 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，并且 SQL Server 实例配置了安全 Enclave，则无需将数据移出数据库，即可就地运行加密操作。 请参阅[使用具有安全 Enclave 的 Always Encrypted 就地配置列加密](always-encrypted-enclaves-configure-encryption.md)。 请注意，该向导不支持就地加密。
+> 如果使用的是 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，并且 SQL Server 实例配置了安全 Enclave，则无需将数据移出数据库，即可就地运行加密操作。 请参阅[使用具有安全 enclave 的 Always Encrypted 就地配置列加密](always-encrypted-enclaves-configure-encryption.md)。 请注意，该向导不支持就地加密。
 
 ::: moniker-end
 
@@ -101,12 +101,12 @@ Always Encrypted 向导是一个功能强大的工具，可让你为所选数据
 > [!TIP]
 > 该向导仅允许在 Windows 证书存储和 Azure Key Vault 中浏览和创建密钥。 它还会自动生成新密钥和用于描述密钥的数据库元数据对象的名称。 如果你需要更好地控制密钥预配方式（并对包含列主密钥的密钥存储有更多选择），可以使用“新建列主密钥”  和“新建列加密密钥”  对话框先创建密钥，然后运行该向导并选取所创建的密钥。 请参阅[使用“新建列主密钥”对话框预配列主密钥](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)和[使用“新建列加密密钥”对话框预配列加密密钥](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)。 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 - [通过 SQL Server Management Studio 查询使用 Always Encrypted 的列](always-encrypted-query-columns-ssms.md)
 - [使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>另请参阅  
- - [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Always Encrypted 密钥管理概述](overview-of-key-management-for-always-encrypted.md) 
  - [使用 SQL Server Management Studio 配置 Always Encrypted](configure-always-encrypted-using-sql-server-management-studio.md)
  - [使用 PowerShell 预配 Always Encrypted 密钥](configure-always-encrypted-keys-using-powershell.md)

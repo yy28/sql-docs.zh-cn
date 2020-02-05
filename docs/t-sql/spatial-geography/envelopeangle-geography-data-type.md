@@ -18,10 +18,10 @@ ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e3289956dd79c852eef6534ad1f72623ad4dcaa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066466"
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle（geography 数据类型）
@@ -41,14 +41,14 @@ EnvelopeAngle( )
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float   
   
- CLR 返回类型：**SqlDouble**  
+ CLR 返回类型：SqlDouble   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此方法返回 geography 实例中的点（以度数为单位）  。 在与 EnvelopeCenter() 一起使用时，`EnvelopeAngle()` 返回 geography 实例的一个边框圆  。  
   
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此方法已扩展到 FullGlobe 实例  。  
   
- 已删除应用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中的 `EnvelopeAngle()` 的半球限制。 但是，对于角度大于 90 度的实例将返回 180 度。 对于跨越多个半球的 geography 实例而言，`EnvelopeAngle()` 并不精确  。  
+ 已删除应用于 `EnvelopeAngle()` 中的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的半球限制。 但是，对于角度大于 90 度的实例将返回 180 度。 对于跨越多个半球的 geography 实例而言，`EnvelopeAngle()` 并不精确  。  
   
 ## <a name="examples"></a>示例  
   

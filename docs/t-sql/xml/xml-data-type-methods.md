@@ -15,10 +15,10 @@ ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c10c5b34f7a3364113062821aba99e11536cc2ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948044"
 ---
 # <a name="xml-data-type-methods"></a>XML 数据类型方法
@@ -28,7 +28,7 @@ ms.locfileid: "67948044"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[query() 方法（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md)|说明如何使用 query() 方法查询 XML 实例。|  
 |[value() 方法（xml 数据类型）](../../t-sql/xml/value-method-xml-data-type.md)|说明如何使用 value() 方法从 XML 实例中检索 SQL 类型的值。|  
@@ -46,7 +46,7 @@ FROM   Table
 ```  
   
 > [!NOTE]  
->  如果对 NULL XML 实例执行 **xml** 数据类型方法 **query()**、**value()** 和 **exist()**，它们将返回 NULL。 此外，**modify()** 不返回任何值，而 **nodes()** 返回行集和一个输入为 NULL 的空行集。  
+>  如果对 NULL XML 实例执行 **xml** 数据类型方法 **query()** 、**value()** 和 **exist()** ，它们将返回 NULL。 此外，**modify()** 不返回任何值，而 **nodes()** 返回行集和一个输入为 NULL 的空行集。  
   
 ## <a name="see-also"></a>另请参阅  
  [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   

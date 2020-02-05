@@ -19,10 +19,10 @@ ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051329"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>在 XML 数据内部绑定关系数据
@@ -42,7 +42,7 @@ ms.locfileid: "68051329"
   
  而且，此绑定用于只读目的。 也就是说，不能在使用这些函数的列中写入数据。 例如，sql:variable("\@x")="某一表达式" 是不允许的  。  
   
-## <a name="example-cross-domain-query-using-sqlvariable"></a>例如：使用 sql:variable() 的跨域查询  
+## <a name="example-cross-domain-query-using-sqlvariable"></a>示例：使用 sql:variable() 的跨域查询  
  本示例显示 sql:variable() 如何使应用程序能够将某个查询进行参数化  。 使用 SQL 变量 @isbn 来传入 ISBN。 通过将常量替换为 sql:variable()，可以使用该查询来搜索任何 ISBN，而不仅仅是 ISBN 为 0-7356-1588-2 的图书  。  
   
 ```  

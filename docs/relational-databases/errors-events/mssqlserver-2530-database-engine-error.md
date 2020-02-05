@@ -10,13 +10,13 @@ ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b51fb99c97447d630610be45dc3e3b681d90c40f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086002"
 ---
-# <a name="mssqlserver2530"></a>MSSQLSERVER_2530
+# <a name="mssqlserver_2530"></a>MSSQLSERVER_2530
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -30,7 +30,7 @@ ms.locfileid: "68086002"
 |符号名称|DBCC_INDEX_IS_OFFLINE|  
 |消息正文|表 "%.\*ls" 的索引 "%.*ls" 已禁用。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 DBCC 语句无法继续，因为指定的索引已禁用。 索引被禁用后一直保持禁用状态，直到它重新生成或删除并重新创建。  
   
 ## <a name="user-action"></a>用户操作  

@@ -25,10 +25,10 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094567"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68094567"
 
 此函数返回有关服务器或数据库事件的信息。 激发事件通知且指定的 Service Broker 收到结果时，将调用 `EVENTDATA`。 DDL 或登录触发器还支持在内部使用 `EVENTDATA`。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68094567"
 EVENTDATA( )  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 只有直接在 DDL 或登录触发器内部引用 `EVENTDATA` 时，它才会返回数据。 如果其他例程调用 `EVENTDATA`，则它返回 null，即使 DDL 或登录触发器调用这些例程时也是如此。
   
 当执行以下事务时，由 `EVENTDATA` 返回的数据无效
@@ -73,7 +73,7 @@ EVENTDATA( )
 密码在 `CREATE LOGIN` 或 `ALTER LOGIN` 语句执行时不会显示。 这可以保护登录安全性。  
   
 ## <a name="schemas-returned"></a>返回的架构  
-EVENTDATA 返回数据类型为 xml  的值。 默认情况下，所有事件的架构定义都将安装在以下目录中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
+EVENTDATA 返回数据类型为 xml  的值。 默认情况下，所有事件的架构定义都安装在此目录中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
   
 [Microsoft SQL Server XML 架构](https://go.microsoft.com/fwlink/?LinkID=31850)网页还具有事件架构。  
   
@@ -85,7 +85,7 @@ EVENTDATA 返回数据类型为 xml  的值。 默认情况下，所有事件的
 此示例创建阻止创建新数据库表的 DDL 触发器。 对 `EVENTDATA` 生成的 XML 数据使用 XQuery 可捕获激发触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 请参阅 [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md) 以了解详细信息。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“以网格显示结果”  来查询 `<TSQLCommand>` 元素时，命令文本中的分行符不会出现。 请改用“以文本格式显示结果”  。  
+>  使用  **中的“以网格显示结果”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来查询 `<TSQLCommand>` 元素时，命令文本中的分行符不会出现。 请改用“以文本格式显示结果”  。  
   
 ```  
 USE AdventureWorks2012;  

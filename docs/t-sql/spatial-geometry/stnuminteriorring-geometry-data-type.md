@@ -18,10 +18,10 @@ ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a076c8356cb7dedec9759e445c9c80499528437b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140929"
 ---
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing（geometry 数据类型）
@@ -39,9 +39,9 @@ ms.locfileid: "68140929"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int   
   
- CLR 返回类型：**SqlInt32**  
+ CLR 返回类型：SqlInt32   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 **geometry** 实例不是多边形，则此方法返回 null。  
   
 ## <a name="examples"></a>示例  

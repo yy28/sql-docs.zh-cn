@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fcdbb300bbc9209f284cd5a92d192a219f79052d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075329"
 ---
-# <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
+# <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 此函数以端到端的方式返回从串联或联接的两个或更多字符串值生成的字符串。 它会用第一个函数参数中指定的分隔符分隔连接的字符串值。 （`CONCAT_WS` 指示使用分隔符连接。） 
@@ -45,7 +45,7 @@ argument1、argument2、argumentN
 ## <a name="return-types"></a>返回类型
 长度和类型取决于输入的字符串值。
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>备注   
 `CONCAT_WS` 采用可变数量的字符串自变量，并将它们串联（或联接）成单个字符串。 它会用第一个函数参数中指定的分隔符分隔连接的字符串值。 `CONCAT_WS` 需要分隔符参数和两个其他字符串值参数的最小值，否则，`CONCAT_WS` 将引发错误。 `CONCAT_WS` 在串联前会将所有自变量隐式转换为字符串类型。 
 
 隐式转换为字符串的过程遵循现有的数据类型转换规则。 请参阅 [CONCAT (Transact SQL)](../../t-sql/functions/concat-transact-sql.md) 获取有关行为和数据类型转换的详细信息。

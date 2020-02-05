@@ -14,10 +14,10 @@ ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f101051d924c1fca0bfbcd131ea8544ea4781e12
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909111"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>对 XML 列使用全文搜索
@@ -36,7 +36,7 @@ ms.locfileid: "72909111"
   
 2.  然后，查询那些使用 XML 列的 XML 索引的 XML 值。  
 
-## <a name="example-combining-full-text-search-with-xml-querying"></a>例如：将全文搜索和 XML 查询结合起来  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>示例：将全文搜索和 XML 查询结合起来  
  对 XML 列创建了全文索引后，下面的查询将检查 XML 值是否在书的标题中包含“custom”一词：  
   
 ```sql
@@ -52,7 +52,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  此外，全文搜索使用词干匹配，而 XQuery **contains()** 是文字匹配。 这一区别在下一个示例中进行说明。  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>例如：使用词干分解对 XML 值进行全文搜索  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>示例：使用词干匹配对 XML 值进行全文搜索  
  通常不能消除上一个示例中执行的 XQuery **contains()** 检查。 请看下面的查询：  
   
 ```sql

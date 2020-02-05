@@ -18,10 +18,10 @@ ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 79d63ac2bca109e1bc1238cee96f8870632c96cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042157"
 ---
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType（geography 数据类型）
@@ -39,9 +39,9 @@ ms.locfileid: "68042157"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(4000)   
   
- CLR 返回类型：**SqlString**  
+ CLR 返回类型：SqlString   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `STGeometryType()` 可以返回的 OGC 类型名称包括 Point、LineString、CircularString、CompoundCurve、Polygon、CurvePolygon、GeometryCollection、MultiPoint、MultiLineString、MultiPolygon 和 FullGlobe            。  
   
 ## <a name="examples"></a>示例  

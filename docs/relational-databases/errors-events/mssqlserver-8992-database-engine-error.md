@@ -12,13 +12,13 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 149e83acd2a8e0e6d3022d74f929584190c91374
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118474"
 ---
-# <a name="mssqlserver8992"></a>MSSQLSERVER_8992
+# <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -30,9 +30,9 @@ ms.locfileid: "68118474"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC3_CHECK_CATALOG|  
-|消息正文|请检查目录消息 ERROR，级别 LEVEL，状态 STATE:MESSAGE。|  
+|消息正文|请检查目录消息 ERROR，级别 LEVEL，状态 STATE: MESSAGE。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定对象的系统元数据表中发现了不一致。 这就是说，已记录的对象 ID 与错误消息中指定的对象之间存在不一致。  
   
 如果通过某种方式手动更新一个或多个系统表，而该方式在系统元数据中造成了不一致，就会发生此错误。 例如，用户可能从 **sysobjects** 表中手动删除了某个对象，但未从 **sysindexes** 和 **syscolumns** 等其他表中删除关联的行。  

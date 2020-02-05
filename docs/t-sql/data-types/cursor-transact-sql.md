@@ -15,10 +15,10 @@ ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c25550ed5e985f643f81b0b41e749f007eef0df3
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682077"
 ---
 # <a name="cursor-transact-sql"></a>cursor (Transact-SQL)
@@ -26,9 +26,9 @@ ms.locfileid: "71682077"
 
 这是变量或存储过程 OUTPUT 参数的一种数据类型，这些参数包含对游标的引用。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 有些操作可以引用那些具有 cursor 数据类型的变量和参数，这些操作包括  ：
--   DECLARE \@local_variable 和 SET \@local_variable 语句   。  
+-   DECLARE *local_variable 和 SET \@local_variable 语句* *\@* 。  
 -   OPEN、FETCH、CLOSE 及 DEALLOCATE 游标语句。  
 -   存储过程输出参数。  
 -   CURSOR_STATUS 函数。  

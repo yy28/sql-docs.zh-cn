@@ -11,10 +11,10 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822045"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>监视可用性组并对其进行故障排除
@@ -32,8 +32,8 @@ ms.locfileid: "74822045"
 |[添加文件操作失败的故障排除（Always On 可用性组）](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|配置|添加文件操作导致辅助数据库挂起并处于“未同步”状态。|  
 |[无法在多子网环境中连接到可用性组侦听程序](https://support.microsoft.com/kb/2792139/en-us)|客户端连接性|配置可用性组侦听程序后，便无法 ping 侦听程序或从应用程序中连接它。|  
 |[自动故障转移失败的故障排除](https://support.microsoft.com/kb/2833707)|故障转移|自动故障转移未成功完成。|  
-|[故障排除：可用性组超过了 RTO](troubleshoot-availability-group-exceeded-rto.md)|性能|进行自动故障转移或计划的手动故障转移（无数据丢失）后，故障转移时间超过 RTO。 或者，在估计同步提交次要副本（如自动故障转移伙伴）的故障转移时间时，发现该时间超过 RTO。|  
-|[故障排除：可用性组超过了 RPO](troubleshoot-availability-group-exceeded-rpo.md)|性能|执行强制手动故障转移后，数据丢失超过 RPO。 或者，在计算异步提交次要副本可能丢失的数据时，发现它超过了 RPO。|  
+|[疑难解答：可用性组超过了 RTO](troubleshoot-availability-group-exceeded-rto.md)|性能|进行自动故障转移或计划的手动故障转移（无数据丢失）后，故障转移时间超过 RTO。 或者，在估计同步提交次要副本（如自动故障转移伙伴）的故障转移时间时，发现该时间超过 RTO。|  
+|[疑难解答：可用性组超过了 RPO](troubleshoot-availability-group-exceeded-rpo.md)|性能|执行强制手动故障转移后，数据丢失超过 RPO。 或者，在计算异步提交次要副本可能丢失的数据时，发现它超过了 RPO。|  
 |[故障排除：主要副本的更改未反映在次要副本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|性能|客户端应用程序在主要副本上成功完成更新，但查询次要副本显示更改未得到反映。|  
 |[故障排除：Always On 可用性组的高 HADR_SYNC_COMMIT 等待类型](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|性能|如果 HADR_SYNC_COMMIT 特别长，则数据移动流或次要副本日志强化存在性能问题。|  
 
@@ -64,12 +64,12 @@ ms.locfileid: "74822045"
 |-----------|-----------------|  
 |[监视 Always On 可用性组的性能](monitor-performance-for-always-on-availability-groups.md)|介绍可用性组的数据同步流程，流控制门以及监视可用性组时的有用指标，并演示如何收集 RTO 和 RPO 指标。|  
 |[监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)|提供用于监视可用性组的工具的相关信息。|  
-|[The Always On health model, part 1:Health model architecture](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)（Always On 运行状况模型，第 1 部分：运行状况模型体系结构）|提供有关 Always On 运行状况模型的概述。|  
-|[The Always On health model, part 2:Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)（Always On 运行状况模型，第 2 部分：扩展运行状况模型）|介绍如何自定义 Always On 运行状况模型和如何自定义 Always On 仪表板，以显示额外信息。|  
-|[Monitoring Always On health with PowerShell, part 1:Basic cmdlet overview](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)（使用 PowerShell 监视 Always On 运行状况，第 1 部分：基本 cmdlet 概述）|提供有关可用于监视可用性组运行状况的 Always On PowerShell cmdlet 的基本概述。|  
-|[Monitoring Always On health with PowerShell, part 2:Advanced cmdlet usage](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)（使用 PowerShell 监视 Always On 运行状况，第 2 部分：高级 cmdlet 用法）|提供有关用于监视可用性组运行状况的 Always On PowerShell cmdlet 的高级用法的信息。|  
-|[Monitoring Always On health with PowerShell, part 3:A simple monitoring application](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)（使用 PowerShell 监视 Always On 运行状况，第 3 部分：简单的监视应用程序）|介绍如何使用应用程序自动监视可用性组。|  
-|[Monitoring Always On health with PowerShell, part 4:Integration with SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)（使用 PowerShell 监视 Always On 运行状况 - 第 4 部分：与 SQL Server 代理集成）|提供相关信息，介绍如何将可用性组监视与 SQL Server 代理集成，以及如何配置出现问题时向相应方发送的通知。|  
+|[Always On 运行状况模型，第 1 部分：运行状况模型体系结构](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|提供有关 Always On 运行状况模型的概述。|  
+|[Always On 运行状况模型，第 2 部分：扩展运行状况模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|介绍如何自定义 Always On 运行状况模型和如何自定义 Always On 仪表板，以显示额外信息。|  
+|[使用 PowerShell 监视 Always On 运行状况，第 1 部分：基本 cmdlet 概述](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|提供有关可用于监视可用性组运行状况的 Always On PowerShell cmdlet 的基本概述。|  
+|[使用 PowerShell 监视 Always On 运行状况，第 2 部分：高级 cmdlet 用法](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|提供有关用于监视可用性组运行状况的 Always On PowerShell cmdlet 的高级用法的信息。|  
+|[使用 PowerShell 监视 Always On 运行状况，第 3 部分：简单的监视应用程序](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|介绍如何使用应用程序自动监视可用性组。|  
+|[使用 PowerShell 监视 Always On 运行状况，第 4 部分：与 SQL Server 代理集成](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|提供相关信息，介绍如何将可用性组监视与 SQL Server 代理集成，以及如何配置出现问题时向相应方发送的通知。|  
 
 ## <a name="next-steps"></a>后续步骤  
  [SQL Server Always On 团队博客](https://blogs.msdn.com/b/sqlalwayson/)   

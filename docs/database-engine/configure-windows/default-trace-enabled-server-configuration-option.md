@@ -15,10 +15,10 @@ ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33a04235580d70567b1de09180b10526255811bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011943"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled 服务器配置选项
@@ -29,7 +29,7 @@ ms.locfileid: "68011943"
 > [!WARNING]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件。  
   
-## <a name="purpose"></a>用途  
+## <a name="purpose"></a>目的  
  默认跟踪可确保数据库管理员在问题首次出现时即具有诊断该问题所需的日志数据，从而为数据库管理员提供了故障排除帮助。  
   
 ## <a name="viewing"></a>查看  
@@ -37,7 +37,7 @@ ms.locfileid: "68011943"
   
  有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件探查器查看此跟踪文件的详细信息，请参阅[打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)。  
   
-### <a name="example"></a>例如：  
+### <a name="example"></a>示例：  
  以下语句将打开默认位置中的默认跟踪日志：  
   
 ```  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: db933c5382049767fcb205b8daa2356a497f3d43
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909478"
 ---
 # <a name="create-views"></a>创建视图
@@ -64,7 +64,7 @@ ms.locfileid: "72909478"
   
 2.  右键单击“视图”文件夹，然后单击“新建视图...”   。  
   
-3.  在“添加表”对话框中，从以下选项卡之一选择要在新视图中包含的元素：  “表”、“视图”、“函数”和“同义词”。  
+3.  在 **“添加表”** 对话框中，从以下选项卡之一选择要在新视图中包含的元素：“表”、“视图”、“函数”和“同义词”。  
   
 4.  单击 **“添加”** ，再单击 **“关闭”** 。  
   

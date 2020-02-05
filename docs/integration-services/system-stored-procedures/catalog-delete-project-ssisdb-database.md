@@ -11,10 +11,10 @@ ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a48cb51b363d036f57dfd4f175ab862645ebca1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296788"
 ---
 # <a name="catalogdelete_project-ssisdb-database"></a>catalog.delete_project（SSISDB 数据库）
@@ -43,7 +43,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -63,7 +63,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   用户没有相应的权限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  对应项目的所有对象和环境引用将与项目一起删除。 但是，直到下次运行操作清除作业之前，将保留项目版本和相关的操作记录。  
   
   

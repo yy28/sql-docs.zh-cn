@@ -15,15 +15,15 @@ ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 73a95255bcce173fa0ce2141b4f968d7efab7e57
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165585"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>单独保存 Showplan XML 事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题介绍了如何使用 **将在跟踪中捕获到的** Showplan XML [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件分别保存到单独的 .SQLPlan 文件中。 可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开  Showplan XML 事件文件，以便查看每个事件以图形表示的执行计划。  
+  本主题介绍了如何使用 **将在跟踪中捕获到的** Showplan XML [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件分别保存到单独的 .SQLPlan 文件中。 可在 **中打开**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Showplan XML 事件文件，以便查看每个事件以图形表示的执行计划。  
   
 ## <a name="save-showplan-xml-events-separately"></a>分别保存 Showplan XML 事件  
   

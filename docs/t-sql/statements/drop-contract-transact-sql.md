@@ -22,10 +22,10 @@ ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 479d00aec0cbd4c9cd81359a0a1f633e80bce521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898267"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67898267"
 
   从数据库中删除一个现有约定。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ DROP CONTRACT contract_name
  contract_name   
  要删除的约定的名称。 不能指定服务器、数据库和架构名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果有任何服务或会话优先级正在引用某个约定，则不能删除该约定。  
   
  删除约定时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 会结束使用该约定的所有现有会话并返回错误。  

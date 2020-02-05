@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959549"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] 常见问题解答
@@ -48,11 +48,11 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>我们是否计划要使用开源 SSMS？
 
-否。 但新一代多操作系统 CLI 和 GUI 工具是开源工具。 例如，GitHub 上的 VS Code、mssql-scripter 和 msql-CLI 的 mssql 扩展都是开源的。 GitHub 上提供 Azure Data Studio 的源代码。  
+不是。 但新一代多操作系统 CLI 和 GUI 工具是开源工具。 例如，GitHub 上的 VS Code、mssql-scripter 和 msql-CLI 的 mssql 扩展都是开源的。 GitHub 上提供 Azure Data Studio 的源代码。  
 
 ## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>既然要使用 Azure Data Studio，Microsoft 是否计划弃用 SSMS 和 SSDT？ 
 
-否。 除了要投资新一代多操作系统和多数据库 CLI 以及 GUI 工具，我们将继续投资重要的 Windows 工具（SSMS、SSDT、PowerShell）。 我们的目标是为客户提供工具使用上的选择，使其能够根据方案需要在所需平台上使用所需工具。 Azure Data Studio 更专注于查询编辑和数据开发体验，据研究表明，这项功能在 SQL Server Management Studio 中的使用频率比其他功能高出一个数量级。 Azure Data Studio 中还以扩展项的方式提供了其他高价值的管理功能，如备份、恢复、代理作业管理和服务器分析等。 Azure Data Studio 同时还是跨平台的环境，这使用户能够在所需平台上工作。 不过，SQL Server Management Studio 所提供的管理功能相较而言仍是最全面广泛的，因此仍是处理平台管理任务的一个非常重要的工具。 
+不是。 除了要投资新一代多操作系统和多数据库 CLI 以及 GUI 工具，我们将继续投资重要的 Windows 工具（SSMS、SSDT、PowerShell）。 我们的目标是为客户提供工具使用上的选择，使其能够根据方案需要在所需平台上使用所需工具。 Azure Data Studio 更专注于查询编辑和数据开发体验，据研究表明，这项功能在 SQL Server Management Studio 中的使用频率比其他功能高出一个数量级。 Azure Data Studio 中还以扩展项的方式提供了其他高价值的管理功能，如备份、恢复、代理作业管理和服务器分析等。 Azure Data Studio 同时还是跨平台的环境，这使用户能够在所需平台上工作。 不过，SQL Server Management Studio 所提供的管理功能相较而言仍是最全面广泛的，因此仍是处理平台管理任务的一个非常重要的工具。 
 
 ## <a name="when-should-i-use-azure-data-studio-vs-sql-server-management-studio"></a>分别应在什么情况下使用 Azure Data Studio 和 SQL Server Management Studio？
 
@@ -80,11 +80,11 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 ### <a name="shell-features"></a>Shell 功能
 
-|功能|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Azure 登录|是|是|
-|面板|是| |
-|扩展项|是| |
+|仪表板|是| |
+|扩展|是| |
 |集成终端|是||
 |“对象资源管理器”|是|是|
 |对象脚本|是|是|
@@ -102,7 +102,7 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 ### <a name="query-editor"></a>查询编辑器
 
-|功能|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |图表查看器|是||
 |将结果导出为 CSV、JSON、XLSX|是||
@@ -120,7 +120,7 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 ### <a name="operating-system-support"></a>操作系统支持
 
-|功能|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Windows|是|是|
 |macOS|是||
@@ -128,7 +128,7 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 ### <a name="data-engineering"></a>数据工程
 
-|功能|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |外部数据向导|预览||
 |HDFS 集成|预览||
@@ -136,14 +136,14 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 ### <a name="database-administration"></a>数据库管理
 
-|功能|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|备份/恢复|是|是|
+|备份/还原|是|是|
 |平面文件导入|预览|是|
 |SQL 代理|预览|是|
 |SQL Profiler|预览|是|
 |AlwaysOn||是|
-|始终加密||是|
+|Always Encrypted||是|
 |复制数据向导||是|
 |数据优化顾问||是|
 |数据库关系图||是|
@@ -154,7 +154,7 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 |PolyBase||是|
 |查询存储||是|
 |已注册的服务器||是|
-|Replication||是|
+|复制||是|
 |安全管理||是|
 |Service Broker||是|
 |SQL Mail||是|
@@ -185,7 +185,7 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 ## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio 是否与 Azure SQL 数据仓库进行了集成？
 
-是。 Azure Data Studio 对 Azure SQL 数据仓库的支持目前为预览版，同时提供 Azure SQL 数据库管理实例和 SQL Server 2019 大数据。
+是的。 Azure Data Studio 对 Azure SQL 数据仓库的支持目前为预览版，同时提供 Azure SQL 数据库管理实例和 SQL Server 2019 大数据。
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>为何 Azure Data Studio 对于新版本的 SQL Server 而言很重要？
 

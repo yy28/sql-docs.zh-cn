@@ -26,18 +26,18 @@ ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ead8278841f3eafa97f31b91480cb8464ce77dd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071496"
 ---
-# <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
+# <a name="file_name-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 此函数返回给定文件标识 (ID) 号的逻辑文件名。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,17 +46,17 @@ FILE_NAME ( file_id )
 ```  
   
 ## <a name="arguments"></a>参数  
-file_id  
-文件名称 `FILE_NAME` 将返回的文件标识号。 file_id 具有 int 数据类型。  
+file_id   
+文件名称 `FILE_NAME` 将返回的文件标识号。 file_id  具有 int  数据类型。  
   
 ## <a name="return-types"></a>返回类型  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
-file_ID 与 sys.master_files 目录视图或 sys.database_files 目录视图中的 file_id 列相对应。  
+## <a name="remarks"></a>备注  
+file_ID  与 sys.master_files 目录视图或 sys.database_files 目录视图中的 file_id 列相对应。  
   
 ## <a name="examples"></a>示例  
-此示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `file_ID 1` 和 `file_ID` 的文件名。  
+此示例返回 `file_ID 1` 数据库中的 `file_ID` 和 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的文件名。  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  

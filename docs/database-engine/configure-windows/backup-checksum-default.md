@@ -11,10 +11,10 @@ ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: eb631212791a80fbcf32bd461a2ef476eebe8703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013129"
 ---
 # <a name="backup-checksum-default"></a>备份校验和默认值
@@ -26,11 +26,11 @@ ms.locfileid: "68013129"
   
 |||  
 |-|-|  
-|**ReplTest1**|**含义**|  
+|**值**|**含义**|  
 |0|已禁用。 这是默认设置。|  
 |1|已启用|  
   
- 此设置将立即生效。  
+ 设置立即生效。  
   
 ## <a name="see-also"></a>另请参阅  
  [在备份或还原期间启用或禁用备份校验和 (SQL Server)](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

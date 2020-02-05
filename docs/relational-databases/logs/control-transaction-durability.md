@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b20a628a24e36da854dd567c8f72c89c7169e361
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084106"
 ---
 # <a name="control-transaction-durability"></a>控制事务持续性
@@ -172,7 +172,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
     
 -   执行系统存储过程 `sp_flush_log`。 此过程会强制将之前提交的所有延迟持久事务的日志记录刷新到磁盘。 有关详细信息，请参阅 [sys.sp_flush_log (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md)。    
     
-##  <a name="bkmk_OtherSQLFeatures"></a>延迟持续性和其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能    
+##  <a name="bkmk_OtherSQLFeatures"></a> 延迟持续性和其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能    
  **更改跟踪和更改数据捕获**    
  具有更改跟踪属性的所有事务都是完全持久事务。 如果一个事务对支持更改跟踪的表执行了任何写入操作，则该事务具有更改跟踪属性。 使用变更数据捕获 (CDC) 的数据库不支持使用延迟的持续性。    
     
