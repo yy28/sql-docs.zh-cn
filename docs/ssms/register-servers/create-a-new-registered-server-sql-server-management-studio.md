@@ -1,10 +1,7 @@
 ---
-title: 新建已注册的服务器 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 新建已注册的服务器
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2fd57edd00e2e5cd6a8921f324b1de20260bfa9f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: a62555b9cb6f94b4fd51e304537551d857d2c525
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267777"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246573"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>创建新的已注册的服务器 (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主题介绍如何通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的已注册服务器组件中注册服务器，以保存经常访问的服务器的连接信息。 您可以在连接之前注册服务器，也可以在从对象资源管理器中进行连接时注册服务器。 对象资源管理器中有注册本地计算机上的服务器实例的专用菜单选项。  
+
+本主题介绍如何通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的已注册服务器组件中注册服务器，以保存经常访问的服务器的连接信息。 您可以在连接之前注册服务器，也可以在从对象资源管理器中进行连接时注册服务器。 对象资源管理器中有注册本地计算机上的服务器实例的专用菜单选项。  
   
  共有两种类型的已注册服务器：  
   
@@ -53,7 +56,7 @@ ms.locfileid: "68267777"
      从“已注册的服务器”中注册某服务器时，“服务器类型”  框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上依次单击 **“数据库引擎”** 、 **“分析服务器”** 、 **Reporting Services** 或 **Integration Services** 。  
   
      **服务器名称**  
-     选择要注册的服务器实例，格式如下：\<servername>  [\\\<instancename>  ]。  
+     选择要注册的服务器实例，格式如下：*servername>\<* [\\*instancename>\<* ]。  
   
      **身份验证**  
      在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时，可以使用两种身份验证模式。  
@@ -67,7 +70,7 @@ ms.locfileid: "68267777"
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 有关详细信息，请参阅 [选择身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
   
-     **User name**  
+     **用户名**  
      显示当前连接所使用的用户名。 只有在已选择使用 Windows 身份验证进行连接的情况下，此只读选项才可用。 若要更改 **“用户名”** ，请以其他用户身份登录计算机。  
   
      **登录**  
@@ -88,7 +91,7 @@ ms.locfileid: "68267777"
      **已注册的服务器说明**  
      输入服务器的说明（可选）。  
   
-     **测试**  
+     **Test**  
      单击此项可测试与“服务器名称”  中所选服务器的连接。  
   
      **保存**  

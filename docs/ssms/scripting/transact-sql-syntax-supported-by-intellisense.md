@@ -1,10 +1,7 @@
 ---
-title: IntelliSense 支持的 Transact-SQL 语法 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+title: IntelliSense 支持的 Transact-SQL 语法
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,20 +11,23 @@ helpviewer_keywords:
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63e8ba6c7770679ca487d945e4823f70425413ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5acada236056a5691ceebe81d0372f1fa06543f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253259"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252978"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 支持的 Transact-SQL 语法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   本主题介绍了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的 IntelliSense 支持的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]语句和语法元素。  
   
 ## <a name="statements-supported-by-intellisense"></a>IntelliSense 支持的语句  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，IntelliSense 只支持最常用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 有些通用 [!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器条件可能妨碍 IntelliSense 正常运行。 有关详细信息，请参阅 [IntelliSense 故障排除 (SQL Server Management Studio)](../../relational-databases/scripting/troubleshooting-intellisense.md)。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，IntelliSense 只支持最常用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 有些通用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器条件可能妨碍 IntelliSense 正常运行。 有关详细信息，请参阅 [IntelliSense 故障排除 (SQL Server Management Studio)](../../relational-databases/scripting/troubleshooting-intellisense.md)。  
   
 > [!NOTE]  
 >  IntelliSense 不能用于加密的数据库对象，例如加密的存储过程或用户定义函数。 参数帮助和快速信息不能用于扩展存储过程和 CLR 集成用户定义类型的参数。  
@@ -46,19 +46,19 @@ ms.locfileid: "68253259"
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>支持的其他 Transact-SQL 语句  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器还为下表中列出的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句提供 IntelliSense 支持。  
   
-|Transact-SQL 语句|支持的语法|异常|  
+|Transact-SQL 语句|支持的语法|例外|  
 |-----------------------------|----------------------|----------------|  
-|[Insert](../../t-sql/statements/insert-transact-sql.md)|所有语法， *execute_statement* 子句除外。|None|  
-|[UPDATE](../../t-sql/queries/update-transact-sql.md)|所有语法。|None|  
-|[DELETE](../../t-sql/statements/delete-transact-sql.md)|所有语法。|None|  
-|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|所有语法。|None|  
-|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|所有语法。|None|  
-|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|执行用户定义的存储过程、系统存储过程、用户定义函数和系统函数。|None|  
-|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|所有语法。|None|  
-|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|所有语法。|None|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|所有语法， *execute_statement* 子句除外。|无|  
+|[UPDATE](../../t-sql/queries/update-transact-sql.md)|所有语法。|无|  
+|[DELETE](../../t-sql/statements/delete-transact-sql.md)|所有语法。|无|  
+|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|所有语法。|无|  
+|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|所有语法。|无|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|执行用户定义的存储过程、系统存储过程、用户定义函数和系统函数。|无|  
+|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|所有语法。|无|  
+|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|所有语法。|无|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|所有语法。|对 EXTERNAL NAME 子句不提供 IntelliSense 支持。<br /><br /> 在 AS 子句中，IntelliSense 仅支持本主题中列出的语句和语法。|  
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|所有语法|对 EXTERNAL NAME 子句不提供 IntelliSense 支持。<br /><br /> 在 AS 子句中，IntelliSense 仅支持本主题中列出的语句和语法。|  
-|[USE](../../t-sql/language-elements/use-transact-sql.md)|所有语法。|None|  
+|[USE](../../t-sql/language-elements/use-transact-sql.md)|所有语法。|无|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense 在支持的语句中  
  当以下语法元素用于受支持的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 语句之一时， [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器中的 IntelliSense 提供支持：  
@@ -73,7 +73,7 @@ ms.locfileid: "68253259"
   
     -   表、视图、表值函数和表表达式  
   
-    -   “列”  
+    -   列  
   
     -   过程和过程参数  
   

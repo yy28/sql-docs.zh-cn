@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710768"
 ---
 # <a name="validate-replicated-data"></a>验证已复制的数据
@@ -46,7 +46,7 @@ ms.locfileid: "71710768"
 
  验证数据分为三个部分：  
   
-1.  将对发布的单个或所有订阅“标记”  为要验证。 可以在“验证单个订阅”  、“验证多个订阅”  和“验证所有订阅”  对话框中，将订阅标记为要验证，这些对话框可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“本地发布”  **文件夹和“本地订阅”** 文件夹访问。 也可以从 **“所有订阅”** 选项卡、 **“订阅监视列表”** 选项卡和复制监视器中的发布节点中对订阅进行标记。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+1.  将对发布的单个或所有订阅“标记”  为要验证。 可以在“验证单个订阅”  、“验证多个订阅”  和“验证所有订阅”  对话框中，将订阅标记为要验证，这些对话框可以通过  中的“本地发布”  [!INCLUDE[msCoName](../../includes/msconame-md.md)]文件夹和“本地订阅”[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]文件夹访问。 也可以从 **“所有订阅”** 选项卡、 **“订阅监视列表”** 选项卡和复制监视器中的发布节点中对订阅进行标记。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 2.  下次分发代理（对于事务复制）或合并代理（对于合并复制）同步订阅时，将对订阅进行验证。 分发代理通常是连续运行的，在这种情况下验证会立即进行；合并代理通常是按需运行的，在这种情况下验证在运行代理后进行。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "71710768"
   
  若要处理验证失败，请考虑以下事项：  
   
--   配置名为“复制 **：** 订阅服务器未通过数据验证”的复制警报，以便在验证失败时收到通知。 有关详细信息，请参阅[配置预定义的复制警报 (SQL Server Management Studio)](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)。  
+-   配置名为 **“复制: 订阅服务器未通过数据验证”** 的复制警报，以便您在验证失败时得到通知。 有关详细信息，请参阅[配置预定义的复制警报 (SQL Server Management Studio)](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)。  
   
 -   验证失败是否已对您的应用程序带来问题？ 如果验证失败带来了问题，请手动更新数据以进行同步，或者重新初始化订阅：  
   
@@ -104,7 +104,7 @@ ms.locfileid: "71710768"
     2.  如果代理未运行，请单击 **“查看同步状态”** 对话框中的 **“启动”** 。 该对话框将显示有关验证的信息性消息。    
      如果未显示有关验证的任何消息，则说明该代理已记录了后续消息。 在这种情况下，请在复制监视器中查看验证结果。 有关详细信息，请参阅本主题中有关复制监视器相关操作的过程。  
 
-### <a name="using-transact-sql"></a>使用 Transact-SQL
+### <a name="using-transact-sql"></a>“使用 Transact-SQL”
 
 #### <a name="all-articles"></a>所有项目 
   
@@ -213,7 +213,7 @@ ms.locfileid: "71710768"
     2.  右键单击该订阅，然后单击 **“查看详细信息”** 。    
     3.  查看 **“同步历史记录”** 选项卡 **“所选会话的最后消息”** 文本区域中的信息。  
 
-### <a name="using-transact-sql"></a>使用 Transact-SQL
+### <a name="using-transact-sql"></a>“使用 Transact-SQL”
 1.  在发布服务器上，对发布数据库执行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)。 指定 `@publication`，为 `@subscriber` 指定订阅服务器的名称，为 `@subscriber_db` 指定订阅数据库的名称，并为 `@level` 指定以下值之一：   
     -   **1** - 只验证行计数。    
     -   **3** - 行计数二进制校验和验证。  
@@ -240,7 +240,7 @@ ms.locfileid: "71710768"
     2.  右键单击该订阅，然后单击 **“查看详细信息”** 。    
     3.  查看 **“同步历史记录”** 选项卡 **“所选会话的最后消息”** 文本区域中的信息。 
   
-### <a name="using-transact-sql"></a>使用 Transact-SQL
+### <a name="using-transact-sql"></a>“使用 Transact-SQL”
 1.  在发布服务器上，对发布数据库执行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 指定 `@publication`并为 `@level` 指定以下值之一：    
     -   **1** - 只验证行计数。   
     -   **3** - 行计数二进制校验和验证。  
@@ -269,7 +269,7 @@ ms.locfileid: "71710768"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性。 将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性。 将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的其余属性。 如果此方法返回 **false**，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
   
@@ -289,7 +289,7 @@ ms.locfileid: "71710768"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性。 将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性。 将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的其余属性。 如果此方法返回 **false**，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
   
@@ -301,7 +301,7 @@ ms.locfileid: "71710768"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性。 将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性。 将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的其余属性。 如果此方法返回 **false**，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
   

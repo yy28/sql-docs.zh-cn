@@ -19,10 +19,10 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a2a3258dfa0fbb234cf4f888e4ae98f27c215993
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67988517"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>配置 AlwaysOn 可用性组的次要副本备份
@@ -30,9 +30,9 @@ ms.locfileid: "67988517"
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 配置 AlwaysOn 可用性组的次要副本的备份。  
   
 > [!NOTE]  
->  有关次要副本备份的介绍，请参阅[活动次要副本：次要副本备份（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  有关辅助副本备份的介绍，请参阅 [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)或 PowerShell 配置 AlwaysOn 可用性组的次要副本的备份。  
   
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a>先决条件  
  您必须连接到承载主副本的服务器实例。  
   
   
@@ -48,7 +48,7 @@ ms.locfileid: "67988517"
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后单击服务器名称以便展开服务器树。  
   
-2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
 3.  单击要为其配置备份首选项的可用性组，然后选择 **“属性”** 命令。  
   
@@ -62,17 +62,17 @@ ms.locfileid: "67988517"
      **仅辅助**  
      指定备份应该永远不会在主副本上执行。 如果主副本是唯一的联机副本，则备份应不会发生。  
   
-     **主**  
+     **主要节点**  
      指定备份应该始终在主副本上发生。 如果您需要在对辅助副本运行备份时不支持的备份功能，例如创建差异备份，此选项将很有用。  
   
     > [!IMPORTANT]  
-    >  如果你计划使用日志传送为可用性组准备任何辅助数据库，请将自动备份首选项设置为“主要”，直到准备好所有辅助数据库并将其联接到可用性组。  
+    >  如果你计划使用日志传送为可用性组准备任何辅助数据库，请将自动备份首选项设置为“主要”  ，直到准备好所有辅助数据库并将其联接到可用性组。  
   
      **任何副本**  
      指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
   
     > [!IMPORTANT]  
-    >  没有强制的自动备份首选项设置。 对此首选项的解释取决于您为给定可用性组中的数据库撰写备份作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅本主题后面部分的[跟进：配置次要副本备份之后](#FollowUp)。  
+    >  没有强制的自动备份首选项设置。 对此首选项的解释取决于您为给定可用性组中的数据库撰写备份作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅本主题后面的 [跟进：配置辅助副本备份之后](#FollowUp) 。  
   
 6.  使用 **“副本备份优先级”** 网格更改可用性副本的备份优先级。 此网格将显示每个承载可用性组的副本的服务器实例的当前备份优先级。 网格列如下所示：  
   
@@ -80,12 +80,12 @@ ms.locfileid: "67988517"
      承载可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  
   
      **备份优先级(最低 = 1，最高 = 100)**  
-     指定相对于同一可用性组中的其他副本，在此副本上执行备份的优先级。 该值是范围 0..100 中的整数。 1 表示最低优先级，100 表示最高优先级。 如果“备份优先级”= 1，则仅在当前没有更高优先级的可用性副本可用时，才选择此可用性副本来执行备份。  
+     指定相对于同一可用性组中的其他副本，在此副本上执行备份的优先级。 该值是范围 0..100 中的整数。 1 表示最低优先级，100 表示最高优先级。 如果“备份优先级”  = 1，则仅在当前没有更高优先级的可用性副本可用时，才选择此可用性副本来执行备份。  
   
      **排除副本**  
      如果从不希望选择此可用性副本来执行备份，请选择此选项。 例如，这对于您永远不希望备份故障转移到的远程可用性副本十分有用。  
   
-7.  若要提交更改，请单击 **“确定”**。  
+7.  若要提交更改，请单击 **“确定”** 。  
   
  **用于访问“备份首选项”页的其他方法**  
   
@@ -124,23 +124,23 @@ ms.locfileid: "67988517"
   
      其中：  
   
-     **主**  
+     **主要节点**  
      指定备份应该始终在主副本上发生。 如果您需要在对辅助副本运行备份时不支持的备份功能，例如创建差异备份，此选项将很有用。  
   
     > [!IMPORTANT]  
-    >  如果你计划使用日志传送为可用性组准备任何辅助数据库，请将自动备份首选项设置为“主要”，直到准备好所有辅助数据库并将其联接到可用性组。  
+    >  如果你计划使用日志传送为可用性组准备任何辅助数据库，请将自动备份首选项设置为“主要”  ，直到准备好所有辅助数据库并将其联接到可用性组。  
   
      **SecondaryOnly**  
      指定备份应该永远不会在主副本上执行。 如果主副本是唯一的联机副本，则备份应不会发生。  
   
-     **辅助副本**  
-     指定备份应在辅助副本上发生，但在主副本是唯一联机的副本时除外。 在该情况下，备份应在主副本上发生。 这是默认行为。  
+     **辅助节点**  
+     指定备份应在辅助副本上发生，但在主副本是唯一联机的副本时除外。 在该情况下，备份应在主副本上发生。 此选项为默认行为。  
   
-     **无**  
+     无   
      指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
   
     > [!IMPORTANT]  
-    >  没有强制的 **AutomatedBackupPreference**。 对此首选项的解释取决于您为给定可用性组中的数据库撰写备份作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅本主题后面部分的[跟进：配置次要副本备份之后](#FollowUp)。  
+    >  没有强制的 **AutomatedBackupPreference**。 对此首选项的解释取决于您为给定可用性组中的数据库撰写备份作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅本主题后面的 [跟进：配置辅助副本备份之后](#FollowUp) 。  
   
      例如，以下命令将可用性组 **上的** AutomatedBackupPreference `MyAg` 属性设置为 **SecondaryOnly**。 此可用性组中的数据库自动备份将永远不会在主副本上发生，但将重定向到具有最高备份优先级设置的辅助副本。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "67988517"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a>跟进：配置次要副本备份之后  
+##  <a name="FollowUp"></a> 跟进：配置辅助副本备份之后  
  若要为某一给定可用性组考虑使用自动备份首选项，则对于承载备份优先级大于零 (>0) 的可用性副本的每个服务器实例，您需要为该可用性组中的数据库的备份作业编写脚本。 若要确定当前副本是否为首选备份副本，请在备份脚本中使用 [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 函数。 如果当前服务器实例承载的可用性副本是用于备份的首选副本，则此函数将返回 1。 否则，该函数返回 0。 通过对查询此函数的每个可用性副本运行简单的脚本，可以确定哪个副本应运行给定的备份作业。 例如，备份作业脚本的典型代码段如下所示：  
   
 ```  
@@ -180,7 +180,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 ##  <a name="ForInfoAboutBuPref"></a> 获取有关备份首选项设置的信息  
  以下内容对于获取辅助副本备份的相关信息很有用。  
   
-|“查看”|信息|相关列|  
+|查看|信息|相关列|  
 |----------|-----------------|----------------------|  
 |[sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)|当前副本是否为首选备份副本？|不适用。|  
 |[sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)|自动备份首选项|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
@@ -191,7 +191,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

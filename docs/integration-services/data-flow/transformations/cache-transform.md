@@ -17,10 +17,10 @@ ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b934ea191a0dc4f9f276b4e483f5f5671bd0cc3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298001"
 ---
 # <a name="cache-transform"></a>缓存转换
@@ -67,7 +67,7 @@ ms.locfileid: "71298001"
  若要了解有关缓存连接管理器的详细信息，请参阅 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
   
 ### <a name="options"></a>选项  
- **缓存连接管理器**  
+ **“完全缓存”**  
  使用列表选择现有的缓存连接管理器，或使用“新建”  按钮创建新的连接。  
   
  **新建**  

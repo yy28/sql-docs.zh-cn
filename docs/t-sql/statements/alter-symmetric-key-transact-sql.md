@@ -22,10 +22,10 @@ ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7314659cc8d0ba18b5b7b7b562ad5df467988638
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070254"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68070254"
 
   更改对称密钥的属性。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +69,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  指定用于对对称密钥进行加密的证书。 该证书必须已存在于数据库中。  
   
  PASSWORD ='password'     
- 指定用于对对称密钥进行加密的密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求  。  
+ 指定用于对对称密钥进行加密的密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  SYMMETRIC KEY Symmetric_Key_Name   
  指定用于对要更改的对称密钥进行加密的对称密钥。 该对称密钥必须已存在于数据库中，并且必须打开。  
@@ -77,7 +77,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  ASYMMETRIC KEY Asym_Key_Name   
  指定用于对要更改的对称密钥进行加密的非对称密钥。 此非对称密钥必须已经存在于数据库中。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!CAUTION]  
 >  当使用密码（而不是数据库主密钥的公钥）对对称密钥进行加密时，便会使用 TRIPLE_DES 加密算法。 因此，用强加密算法（如 AES）创建的密钥本身受较弱算法的保护。  

@@ -11,10 +11,10 @@ ms.assetid: 2d5e9f50-15b2-4c76-8bfc-3b5be49c2781
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 074983f08e837f3a895ddc8884e5ac140033c51e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972742"
 ---
 # <a name="setstring-method-long-javalangstring-int-int-sqlservernclob"></a>setString 方法 (long, java.lang.String, int, int) (SQLServerNClob)
@@ -32,7 +32,7 @@ int setString(long pos,
               int len)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  pos   
   
  写入 NCLOB  的起始位置；第一个位置为 1。  
@@ -41,7 +41,7 @@ int setString(long pos,
   
  要写入 NCLOB  的 String。  
   
- offset   
+ *offset*  
   
  *str* 中的偏移量，从这个位置开始读取将要写入的字符。  
   
@@ -49,10 +49,10 @@ int setString(long pos,
   
  将要写入的字符数。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 setString 方法是由 java.sql.NClob 接口中的 setString 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

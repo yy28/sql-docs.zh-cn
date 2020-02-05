@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ebcb2e848891000f8dce007f7330b7b2b0d31bb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909370"
 ---
 # <a name="disable-foreign-key-constraints-for-replication"></a>对复制禁用外键约束
@@ -59,7 +59,7 @@ ms.locfileid: "72909370"
   
 3.  在 **“外键关系”** 对话框，针对 **“强制用于复制”** 选择 **“否”** 值。  
   
-4.  单击 **“关闭”** 。  
+4.  单击“关闭”  。  
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

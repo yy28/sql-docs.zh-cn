@@ -13,10 +13,10 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68049033"
 ---
 # <a name="database-properties-options-page"></a>数据库属性（“选项”页）
@@ -29,9 +29,9 @@ ms.locfileid: "68049033"
  通过从列表中进行选择来指定数据库的排序规则。 有关详细信息，请参阅 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)。  
   
  **恢复模式**  
- 指定下列模式之一来恢复数据库：**完整**、**大容量日志**或**简单**。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
+ 指定下列模式之一来恢复数据库：“完整”  、“大容量日志”  或“简单”  。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
- **兼容级别**  
+ **兼容性级别**  
  指定数据库支持的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有关可能的值，请参阅 [ALTER DATABASE (Transact-SQL) 兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 升级 SQL Server 数据库时，如果可能，保留该数据库的兼容性级别，或更改为新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的最低级别。 
   
  **包含类型**  
@@ -44,7 +44,7 @@ ms.locfileid: "68049033"
  **自动关闭**  
  指定在上一个用户退出后，数据库是否完全关闭并释放资源。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则在上一个用户注销之后，数据库会完全关闭并释放其资源。  
 
- 自动创建增量统计信息  
+ 自动创建增量统计信息   
  指定在创建每个分区的统计信息时是否使用增量选项。 有关增量统计信息的信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
  **自动创建统计信息**  
@@ -57,7 +57,7 @@ ms.locfileid: "68049033"
  指定数据库是否自动更新过期的优化统计信息。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则将在优化过程中自动生成优化查询需要但已过期的所有统计信息。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
  **自动异步更新统计信息**  
- 如果设置为“True”，则启动自动更新过期统计信息的查询在编译前不会等待统计信息被更新。 后续查询会在更新统计信息可用时使用。  
+ 如果设置为“True”，则启动自动更新过期统计信息的查询在编译前不会等待统计信息被更新  。 后续查询会在更新统计信息可用时使用。  
   
  如果设置为 **False**，则启动自动更新过期统计信息的查询将等待，直到更新的统计信息可在查询优化计划中使用。  
   
@@ -131,10 +131,10 @@ ms.locfileid: "68049033"
  为与所选数据库相关联的 FILESTREAM 数据指定目录名称。  
   
  **FILESTREAM 非事务访问**  
- 为从文件系统到 FileTables 中存储的 FILESTREAM 数据的非事务性访问指定以下选项之一：**OFF**、**READ_ONLY** 或 **FULL**。 如果在服务器上未启用 FILESTREAM，则该值将设置为 OFF 并且被禁用。 有关详细信息，请参阅 [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)。  
+ 为从文件系统到 FileTables 中存储的 FILESTREAM 数据的非事务性访问指定以下选项之一： **OFF**、 **READ_ONLY**或 **FULL**。 如果在服务器上未启用 FILESTREAM，则该值将设置为 OFF 并且被禁用。 有关详细信息，请参阅 [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)。  
   
 ## <a name="miscellaneous"></a>杂项  
-允许快照隔离  
+允许快照隔离   
 启用此功能。  
 
  **ANSI NULL 默认值**  
@@ -163,10 +163,10 @@ ms.locfileid: "68049033"
   
  如果设置为 **False**，则不维护相关统计信息。  
  
- 延迟持续性  
+ 延迟持续性   
  启用此功能。  
  
- 读提交快照处于打开状态  
+ 读提交快照处于打开状态   
  启用此功能。  
  
  **数值舍入中止**  
@@ -207,27 +207,27 @@ ms.locfileid: "68049033"
  指定在发生崩溃的情况下恢复指定数据库的最长时间（秒）。 有关详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
 
 ## <a name="service-broker"></a>Service Broker  
-启用 Broker  
+启用 Broker   
 启用或禁用 Service Broker。  
 
-优先处理 Broker 优先级  
+优先处理 Broker 优先级   
 只读的 Service Broker 属性。  
 
-Service Broker 标识符  
+Service Broker 标识符   
 只读的标识符。  
 
-## <a name="state"></a>State  
+## <a name="state"></a>状态  
  **数据库为只读**  
  指定数据库是否为只读。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则用户只能读取数据库中的数据。 用户不能修改数据或数据库对象；然而，数据库本身可以通过使用 `DROP DATABASE` 语句自行删除。 在为 **“数据库为只读”** 选项指定新值时，数据库不能处于使用状态。 master 数据库是个例外，在设置该选项时，只有系统管理员才能使用 master 数据库。  
   
  **数据库状态**  
- 查看数据库的当前状态。 它是不可编辑的。 有关 **“数据库状态”** 的详细信息，请参阅 [Database States](../../relational-databases/databases/database-states.md)。  
+ 查看数据库的当前状态。 该策略不能编辑。 有关 **“数据库状态”** 的详细信息，请参阅 [Database States](../../relational-databases/databases/database-states.md)。  
 
  **已启用加密**  
  设置为 **True**时，会对此数据库启用数据库加密。 加密时需要数据库加密密钥。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
  
  **限制访问**  
- 指定哪些用户可以访问该数据库。 可能的值有：  
+ 指定哪些用户可以访问该数据库。 可能的值包括：  
   
 -   **多个**  
   

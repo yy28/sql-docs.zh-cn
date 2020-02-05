@@ -10,10 +10,10 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594119"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>配置 URL（SSRS 配置管理器）
@@ -133,7 +133,7 @@ ms.locfileid: "73594119"
   **主机标头**  
  如果已有一个在域名服务器上定义的主机标头解析为您的计算机，则可以在为报表服务器访问配置的 URL 中指定该主机标头。  
   
- 主机标头是允许多个网站共享一个 IP 地址和端口的唯一名称。 主机标头名称比 IP 地址和端口号更容易记住和键入。 这里有一个主机标头名称的示例：www.adventure-works.com 。  
+ 主机标头是允许多个网站共享一个 IP 地址和端口的唯一名称。 主机标头名称比 IP 地址和端口号更容易记住和键入。 这里有一个主机标头名称的示例： www.adventure-works.com 。  
   
  **SSL 端口**  
  为 SSL 连接指定端口。 SSL 的默认端口为 443。  
@@ -149,13 +149,13 @@ ms.locfileid: "73594119"
   
 1.  在“Web 服务 URL”或“Web 门户 URL”页上，单击“高级”    。  
   
-2.  单击 **“添加”** 。  
+2.  单击“添加”  。  
   
 3.  单击“IP 地址”或“主机标头名称”。 如果指定主机标头，请确保指定一个 DNS 服务可以解析的名称。 如果要指定公开可用的域名，请包含整个 URL，包括 `https://www`。  
   
 4.  指定端口。 如果指定自定义端口，则应用程序的 URL 必须始终包含该端口号。  
   
-5.  单击“确定”  。  
+5.  单击“确定”。   
   
 6.  通过打开浏览器窗口并输入 URL 来测试 URL。  
   

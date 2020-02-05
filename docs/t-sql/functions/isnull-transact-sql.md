@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b49310a633c822f8c57f66cc36951dfebe2c0707
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843638"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73843638"
 
 使用指定的替换值替换 NULL。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +52,7 @@ ISNULL ( check_expression , replacement_value )
 ## <a name="return-types"></a>返回类型  
  返回与该 check_expression 相同的类型  。 如果提供了文本 NULL 作为 check_expression，则返回replacement_value 数据类型。   如果提供了文本 NULL 作为 check_expression 且未提供 replacement_value，则返回 int    。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 check_expression 不为 NULL，则将返回该表达式的值；否则，将返回 replacement_value。如果类型不同，则 replacement_value 会隐式转换为 check_expression 的类型    。 如果 replacement_value 长于 check_expression，则可能截断 replacement_value    。  
   
 > [!NOTE]  
@@ -93,7 +93,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|  描述       |  DiscountPct    |   MinQty    |   最大数量       |
+|  说明       |  DiscountPct    |   MinQty    |   最大数量       |
 |  ---------------   |  -------------  |   --------  |   ---------------    |
 |  No Discount       |  0.00           |   0         |   0                  |
 |  Volume Discount   |  0.02           |   11        |   14                 |
@@ -170,7 +170,7 @@ ORDER BY ResellerName;
 |  可接受的销售和服务  |     0.0000         |
   
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. 使用 IS NULL 在 WHERE 子句中测试 NULL  
- 下面的示例查找 `Weight` 列中存在 `NULL` 的所有产品。 请注意 `IS` 和 `NULL` 之间的空格。  
+ 下面的示例查找 `NULL` 列中存在 `Weight` 的所有产品。 请注意 `IS` 和 `NULL` 之间的空格。  
   
 ```  
 -- Uses AdventureWorks  

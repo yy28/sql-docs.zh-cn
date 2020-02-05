@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982216"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 数据库权限 (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73982216"
 
 授予对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库的权限。
 
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法
 
@@ -73,23 +73,23 @@ Database_user  指定数据库用户。
 
 Database_role  指定数据库角色。
 
-Application_role
-适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+Application_role*适用于：* 及更高版本、
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 指定应用程序角色。
 
-Database_user_mapped_to_Windows_User
-适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本  
+Database_user_mapped_to_Windows_User*适用于：* 及更高版本
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
 
 指定映射到 Windows 用户的数据库用户。
 
-Database_user_mapped_to_Windows_Group
-适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本  
+Database_user_mapped_to_Windows_Group*适用于：* 及更高版本
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
 
 指定映射到 Windows 组的数据库用户。
 
-Database_user_mapped_to_Windows_certificate
-适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本  
+Database_user_mapped_to_Windows_certificate*适用于：* 及更高版本
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
 
 指定映射到证书的数据库用户。
 
@@ -100,7 +100,7 @@ Database_user_mapped_to_asymmetric_key
 
 Database_user_with_no_login  指定无相应服务器级主体的数据库用户。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 > [!IMPORTANT]
 > 在某些情况下，如果同时拥有 ALTER 权限和 REFERENCE 权限，被授权者将可以查看数据或执行未经授权的函数。 例如：对表拥有 ALTER 权限和对函数拥有 REFERENCE 权限的用户可对函数创建计算列并执行该函数。 在此情况下，用户必须还对计算列具有 SELECT 权限。
@@ -109,7 +109,7 @@ Database_user_with_no_login  指定无相应服务器级主体的数据库用户
 
 |数据库权限|数据库权限隐含的权限|服务器权限隐含的权限|
 |-------------------------|------------------------------------|----------------------------------|
-|ADMINISTER DATABASE BULK OPERATIONS<br/>**适用于：** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
+|ADMINISTER DATABASE BULK OPERATIONS<br/>适用对象：  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|
@@ -171,11 +171,11 @@ Database_user_with_no_login  指定无相应服务器级主体的数据库用户
 |CREATE TYPE|ALTER|CONTROL SERVER|
 |CREATE VIEW|ALTER|CONTROL SERVER|
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|
-|删除|CONTROL|CONTROL SERVER|
+|DELETE|CONTROL|CONTROL SERVER|
 |在运行 CREATE 语句前执行|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **适用于**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。|CONTROL|CONTROL SERVER|
 |EXECUTE EXTERNAL SCRIPT <br /> **适用于**： [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)]。|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
-|Insert|CONTROL|CONTROL SERVER|
+|INSERT|CONTROL|CONTROL SERVER|
 |KILL DATABASE CONNECTION<br />**适用于**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|CONTROL|ALTER ANY CONNECTION|
 |REFERENCES|CONTROL|CONTROL SERVER|
 |SELECT|CONTROL|CONTROL SERVER|
@@ -214,7 +214,7 @@ Database_user_with_no_login  指定无相应服务器级主体的数据库用户
 
 ### <a name="a-granting-permission-to-create-tables"></a>A. 授予创建表的权限
 
-以下示例授予用户 `MelanieK` 对 `AdventureWorks` 数据库的 `CREATE TABLE` 权限。
+以下示例授予用户 `CREATE TABLE` 对 `AdventureWorks` 数据库的 `MelanieK` 权限。
 
 ```sql
 USE AdventureWorks;
@@ -246,7 +246,7 @@ GO
 
 ### <a name="d-granting-control-permission-to-a-database-user"></a>D. 将 CONTROL 权限授予数据库用户
 
- 以下示例授予数据库用户 `Sarah` 对 `AdventureWorks2012` 数据库的 `CONTROL` 权限。 用户必须存在于数据库中，并且必须将上下文设置为数据库。
+ 以下示例授予数据库用户 `CONTROL` 对 `AdventureWorks2012` 数据库的 `Sarah` 权限。 用户必须存在于数据库中，并且必须将上下文设置为数据库。
 
 ```sql
 USE AdventureWorks2012;

@@ -1,28 +1,28 @@
 ---
-title: SQL Server Profiler 模板和权限 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: SQL Server Profiler 模板和权限
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], about SQL Server Profiler
-- SQL Server Profiler, about SQL Server Profiler
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1a7ddad23bf5abbe80d95c7218b62589b0c102b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 9a5bb7c38fe1a9984c66dd83414aed9d3b853aa6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059767"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307836"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 模板和权限
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何在内部解析查询。 这就使管理员能够准确查看提交到服务器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或多维表达式，以及服务器是如何访问数据库或多维数据集以返回结果集的。  
+
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何在内部解析查询。 这就使管理员能够准确查看提交到服务器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或多维表达式，以及服务器是如何访问数据库或多维数据集以返回结果集的。  
   
  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]可以执行下列操作：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68059767"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[SQL Server Profiler 模板](../../tools/sql-server-profiler/sql-server-profiler-templates.md)|介绍 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]附带的预定义跟踪模板。|  
 |[运行 SQL Server Profiler 所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|介绍运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]时所需的权限。|  
@@ -58,7 +58,7 @@ ms.locfileid: "68059767"
 |[重播跟踪](../../tools/sql-server-profiler/replay-traces.md)|解释重播跟踪的意义以及重播跟踪所需的条件。|  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [启动 SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   
