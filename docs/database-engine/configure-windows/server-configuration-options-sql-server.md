@@ -30,10 +30,10 @@ ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c42c9501772972c523d5635a159fcdeb54bf107b
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75001965"
 ---
 # <a name="server-configuration-options-sql-server"></a>服务器配置选项 (SQL Server)
@@ -114,7 +114,7 @@ ms.locfileid: "75001965"
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) （A，SC）|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> （对于 32 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 1024；对于 64 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 2048。） 注意：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位操作系统支持的最新版本  。|0<br /><br /> 归零操作会根据处理器的数量自动配置最大工作线程数，可以使用公式（256 + (\<处理器数> -4) * 8）来计算 32 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的线程数，使用公式（512 + (\<处理器数> -4) * 8）来计算 64 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的线程数   。 注意：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位操作系统支持的最新版本  。|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> （对于 32 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 1024；对于 64 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 2048。） 注意： **是 32 位操作系统支持的最新版本**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。|0<br /><br /> 归零操作会根据处理器的数量自动配置最大工作线程数，可以使用公式（256 + (*处理器数> -4) * 8）来计算 32 位 \< 的线程数，使用公式（512 + (* 处理器数> -4) * 8）来计算 64 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的线程数 *\<* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 注意： **是 32 位操作系统支持的最新版本**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) （A，RR）|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) （A，SC）|0|2147483647|0|  
@@ -124,7 +124,7 @@ ms.locfileid: "75001965"
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) （A，RR，已过时）|0|2147483647|0|  
     |[针对即席工作负荷进行优化](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
-    |[已启用 polybase](../../relational-databases/polybase/polybase-installation.md#enable) (RR) 适用对象：[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] |0|1|0|
+    |[已启用 polybase](../../relational-databases/polybase/polybase-installation.md#enable) (RR) 适用对象：  [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)]|0|1|0|
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) （A，RR）|0|1|0|  
     |[query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  

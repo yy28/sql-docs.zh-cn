@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 955cfe87f93bedc41c6aeb29951ee1c81d0a4d6e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68425929"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68425929"
 
   指定当前数据库中的文件名和属性名时，返回指定的扩展文件属性值。 对于不在当前数据库中的文件或不存在的扩展文件属性，将返回 NULL。 目前，扩展文件属性仅适用于 Azure Blob 存储中的数据库。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,15 +40,15 @@ FILEPROPERTYEX ( name , property )
 ```  
   
 ## <a name="arguments"></a>参数  
- *名称*  
+ name   
  包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 file_name 是 nchar(128)   。  
   
- property   
+ *property*  
  包含将返回的文件属性名的表达式。 property 是 varchar(128)，可以是下列值之一   。  
 
 
   
-|ReplTest1|描述|
+|值|说明|
 |-----------|-----------------|  
 |**BlobTier**|目标 Azure 页 blob 的层级。 仅适用于使用 Azure 页 blob 存储的标准和通用数据库。|
 |**AccountType**|存储帐户类型用于指示它是 blob 存储还是文件存储，以及它是高级还是标准存储。|
@@ -58,7 +58,7 @@ FILEPROPERTYEX ( name , property )
 ## <a name="return-types"></a>返回类型  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  file_name 与 sys.master_files 或 sys.database_files 目录视图中的 name 列相对应     。  
   
 ## <a name="examples"></a>示例  

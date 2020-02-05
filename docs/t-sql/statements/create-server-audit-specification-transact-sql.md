@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 88afe7ebedac531c4d6acdb60c579cb335c98980
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 6060fdf1819750e0ec0faa00d0e82ab8f76fa52c
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745419"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004660"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 功能创建服务器审核规范对象。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,10 +55,10 @@ FOR SERVER AUDIT audit_name
  audit_action_group_name   
  服务器级别可审核操作组的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- WITH ( STATE = { ON | OFF } )     
+ WITH ( STATE  **{ ON | OFF } )** **=**   
  允许或禁止审核收集此审核规范的记录。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  审核必须已存在，才能为它创建服务器审核规范。 服务器审核规范在创建之后处于禁用状态。  
   
 ## <a name="permissions"></a>权限  
@@ -72,12 +72,13 @@ FOR SERVER AUDIT audit_name
 ```  
 CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
-    ADD (FAILED_LOGIN_GROUP);  
+    ADD (FAILED_LOGIN_GROUP)  
+    WITH (STATE=ON);  
 GO  
 ```  
   
  有关如何创建审核的完整示例，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
-  
+   
 ## <a name="see-also"></a>另请参阅  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   

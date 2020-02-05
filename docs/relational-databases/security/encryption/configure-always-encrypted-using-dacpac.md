@@ -13,16 +13,16 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df18a2ca6f79982db41b5188283bf1721b518e31
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595742"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>使用 Always Encrypted 和 DAC 包配置列加密 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[数据层应用程序 (DAC) 包](../../data-tier-applications/data-tier-applications.md)（也称为 DACPAC）是 SQL Server 数据库部署的一个可移植单元，它定义了所有 SQL Server 对象，包括表和表中的列。 将 DACPAC 发布到数据库时（使用 DACPAC 升级数据库），目标数据库的架构将会更新以匹配 DACPAC 中的架构。 可以使用 SQL Server Management Studio、[PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell) 或 [sqlpackage](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables) 中的[升级数据层应用程序向导](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard)来发布 DACPAC。
+[数据层应用程序 (DAC) 包](../../data-tier-applications/data-tier-applications.md)（也称为 DACPAC）是 SQL Server 数据库部署的一个可移植单元，它定义了所有 SQL Server 对象，包括表和表中的列。 将 DACPAC 发布到数据库时（使用 DACPAC 升级数据库），目标数据库的架构将会更新以匹配 DACPAC 中的架构。 可以使用 SQL Server Management Studio、[PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard) 或 [sqlpackage](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell) 中的[升级数据层应用程序向导](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables)来发布 DACPAC。
 
 本文介绍了在 DACPAC 或/和目标数据库包含受 [Always Encrypted](always-encrypted-database-engine.md) 保护的列时升级数据库的特殊注意事项。 如果 DACPAC 中列的加密方案与目标数据库中现有列的加密方案不同，则发布 DACPAC 将导致对该列中存储的数据进行加密、解密或重新加密。 有关详细信息，请参阅下表。
 
@@ -60,12 +60,12 @@ ms.locfileid: "73595742"
 有关详细信息，请参阅 [创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。 
 
  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 - [使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)
 - [通过 SQL Server Management Studio 查询使用 Always Encrypted 的列](always-encrypted-query-columns-ssms.md)
 
 ## <a name="see-also"></a>另请参阅  
- - [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Always Encrypted 密钥管理概述](overview-of-key-management-for-always-encrypted.md) 
  - [使用 SQL Server Management Studio 配置 Always Encrypted](configure-always-encrypted-using-sql-server-management-studio.md)
  - [使用 Always Encrypted 向导配置列加密](always-encrypted-wizard.md)

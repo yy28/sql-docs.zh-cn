@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d78a3024214c960f36405c321ed75371ff9d3a27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141174"
 ---
 # <a name="close-master-key-transact-sql"></a>CLOSE MASTER KEY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68141174"
 
   关闭当前数据库的主密钥。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ CLOSE MASTER KEY
 ## <a name="arguments"></a>参数  
  无参数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  该语句可反转 OPEN MASTER KEY 执行的操作。 仅当使用 OPEN MASTER KEY 语句在当前会话中打开数据库主密钥时，OSE MASTER KEY 才能成功。  
   
 ## <a name="permissions"></a>权限  

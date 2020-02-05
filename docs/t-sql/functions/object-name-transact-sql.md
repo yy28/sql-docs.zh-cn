@@ -25,18 +25,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a18b99d8e4700a840fa3cdc98af492bc0193bbaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914732"
 ---
-# <a name="objectname-transact-sql"></a>OBJECT_NAME (Transact-SQL)
+# <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回架构范围内对象的数据库对象名称。 有关架构范围内对象的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ OBJECT_NAME ( object_id [, database_id ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- *object_id*  
+ object_id   
  要使用的对象的 ID。 object_id 的数据类型为 int，并假定为指定数据库或当前数据库上下文中的架构范围内的对象   。  
   
  database_id   
@@ -54,7 +54,7 @@ OBJECT_NAME ( object_id [, database_id ] )
 ## <a name="return-types"></a>返回类型  
  **sysname**  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  出现错误时或调用方没有查看对象的权限时，将返回 NULL。 如果目标数据库的 AUTO_CLOSE 选项设置为 ON，则此函数将打开此数据库。  
   
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 也就是说，如果用户对该对象没有任何权限，则那些会生成元数据的内置函数（如 OBJECT_NAME）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
@@ -62,7 +62,7 @@ OBJECT_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>权限  
  需要对对象拥有 ANY 权限。 若要指定数据库 ID，还需要对数据库拥有 CONNECT 权限，或者必须启用 guest 帐户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。 有关详细信息，请参阅[表达式](../../t-sql/language-elements/expressions-transact-sql.md)和 [WHERE](../../t-sql/queries/where-transact-sql.md)。  
   
  由此系统函数返回的值使用当前数据库的排序规则。  
@@ -89,7 +89,7 @@ GO
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-objectname-in-a-where-clause"></a>A. 在 WHERE 子句中使用 OBJECT_NAME  
+### <a name="a-using-object_name-in-a-where-clause"></a>A. 在 WHERE 子句中使用 OBJECT_NAME  
  以下示例将返回来自对象的 `sys.objects` 目录视图的列，该对象是通过 `OBJECT_NAME` 在 `WHERE` 语句的 `SELECT` 子句中指定的。  
   
 ```  
@@ -134,7 +134,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-objectname-in-a-where-clause"></a>D. 在 WHERE 子句中使用 OBJECT_NAME  
+### <a name="d-using-object_name-in-a-where-clause"></a>D. 在 WHERE 子句中使用 OBJECT_NAME  
  以下示例将返回来自对象的 `sys.objects` 目录视图的列，该对象是通过 `OBJECT_NAME` 在 `WHERE` 语句的 `SELECT` 子句中指定的。 （对象编号（在下面的示例中为 274100017）各不相同。  若要测试此示例，请通过在数据库中执行 `SELECT name, object_id FROM sys.objects;` 来查看有效的对象编号。）  
   
 ```  

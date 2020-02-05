@@ -11,17 +11,17 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025774"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驱动程序
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-本部分提供使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库建立简单连接的快速入门指导。 在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库之前，必须首先在本地计算机或服务器上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并且必须在本地计算机上安装 JDBC 驱动程序。  
+本部分提供使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 数据库建立简单连接的快速入门指导。 在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库之前，必须首先在本地计算机或服务器上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并且必须在本地计算机上安装 JDBC 驱动程序。  
   
 ## <a name="choosing-the-right-jar-file"></a>选择正确的 JAR 文件
 
@@ -227,7 +227,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 调用 DriverManager 类的 getConnection 方法时，会从已注册的 JDBC 驱动程序集中找到相应的驱动程序。 sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 文件包括“META-INF/services/java.sql.Driver”文件，其中包含 com.microsoft.sqlserver.jdbc.SQLServerDriver  作为注册驱动程序。 当前通过使用 Class.forName 方法加载驱动程序的现有应用程序将继续工作，无需进行修改。  
   
 > [!NOTE]  
-> sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 类库无法用于较早版本的 Java Runtime Environment (JRE)。 有关 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持的 JRE 版本列表，请参阅 [JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+> sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 类库无法用于较早版本的 Java Runtime Environment (JRE)。 有关 [ 支持的 JRE 版本列表，请参阅 ](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)JDBC 驱动程序的系统要求[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。  
 
 若要详细了解如何与数据源连接，以及如何使用连接 URL，请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md) 和[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   

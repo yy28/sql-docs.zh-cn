@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 1f6bb69e4d1a18cf2f3e596a4bbbd179e8c4f373
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056019"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>用于大容量导入或导出的数据格式 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74056019"
 ##  <a name="ComponentsAndConcepts"></a> 用于大容量导入或导出的数据格式  
  下表列出了不同数据显示方式和操作的源或目标一般适合使用的数据格式。  
   
-|运算|本机|Unicode 本机|字符|Unicode 字符|  
+|Operation|本机|Unicode 本机|字符|Unicode 字符|  
 |---------------|------------|--------------------|---------------|-----------------------|  
 |使用不包含任何扩展字符或双字节字符集 (DBCS) 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。 除非使用格式化文件，否则这些表的定义必须相同。|是*|-|-|-|  
 |对于“sql_variant”  列，最好使用本机数据格式，因为本机数据格式可以保留每一个 **sql_variant** 值的元数据，这一点不同于字符格式或 Unicode 格式。|是|-|-|-|  
@@ -44,7 +44,7 @@ ms.locfileid: "74056019"
 |将数据大容量导出到要在其他程序中使用的文本文件中。|-|-|是|-|  
 |使用包含 Unicode 数据而不包含任何扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。|-|-|-|是|  
   
- \* 这是在使用 **bcp** 时从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批量导出数据的最快方法。  
+ \* 这是在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bcp**时从** 批量导出数据的最快方法。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   

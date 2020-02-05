@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c37a0b953177d0e3d978607982da54c613a3d2a2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3006b3258d26f359e5eab98856ca7ffe43d8321a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908233"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287324"
 ---
 # <a name="republish-data"></a>重新发布数据
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "72908233"
   
  ![重新发布数据](../../relational-databases/replication/media/repl-06a.gif "重新发布数据")  
   
- 任何服务器都既可用作发布服务器又可用作订阅服务器。 例如，请考虑下面这个关系图，其中表的发布位于伦敦，且必须分发到美国四个不同的城市：芝加哥、纽约、圣地亚哥和西雅图。 之所以选择位于纽约的服务器来订阅源于伦敦的已发布表，是因为纽约的站点满足下列条件：  
+ 任何服务器都既可用作发布服务器又可用作订阅服务器。 例如，考虑一下下面这个关系图：表的发布位于伦敦，且必须分发到美国四个不同的城市，即芝加哥、纽约、圣地亚哥和西雅图。 之所以选择位于纽约的服务器来订阅源于伦敦的已发布表，是因为纽约的站点满足下列条件：  
   
 -   返回伦敦的网络链接相对可靠。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "72908233"
   
  复制支持下表中显示的重新发布方案。  
   
-|发布服务器|发布订阅服务器|订阅服务器|  
+|发布者|发布订阅服务器|订阅者|  
 |---------------|---------------------------|----------------|  
 |事务发布|事务订阅/事务发布|事务订阅|  
 |事务发布|事务订阅/合并发布*|合并订阅|  

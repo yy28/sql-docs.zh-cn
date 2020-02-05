@@ -11,10 +11,10 @@ ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 97d78f4a96a87b6ffe373335167b796ea5a2de3d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296587"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
@@ -26,7 +26,7 @@ ms.locfileid: "71296587"
 
   每当数据流组件向下游组件发送数据时，此视图就会针对给定的包执行显示一行。 此视图中的信息可用于计算组件的数据吞吐量。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|数据的唯一标识符 (ID)。|  
 |execution_id|**bigint**|执行实例的唯一 ID。|  
@@ -40,7 +40,7 @@ ms.locfileid: "71296587"
 |created_time|**datatimeoffset(7)**|获取值的时间。|  
 |execution_path|**nvarchar(max)**|组件的执行路径。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 -   有来自组件的多个输出时，为每个输出添加一行。  
   

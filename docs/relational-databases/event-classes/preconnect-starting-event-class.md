@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e309d3783dab58e42f0be76badfa293d7ce872f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940688"
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting 事件类
@@ -25,7 +25,7 @@ ms.locfileid: "67940688"
   
 ## <a name="preconnectstarting-event-class-data-columns"></a>PreConnect:Starting 事件类数据列  
   
-|数据列名称|数据类型|描述|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|**int**|215|27|否|  
 |SPID|**int**|激发此事件的服务器进程的 ID。|12|是|  

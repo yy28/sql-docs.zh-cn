@@ -24,13 +24,13 @@ ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b385caa4146f40a1395c74fa0f26b5be518ff149
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026486"
 ---
-# <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
+# <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 此函数返回自最近一次开始以来，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在活动操作中所花的时间。 `@@CPU_BUSY` 返回一个以 CPU 时间增量或“滴答数”计算的结果。 此值为所有 CPU 时间的累积，因此，可能会超出实际占用的时间。 若要转换为微秒，请乘以 [@@TIMETICKS](./timeticks-transact-sql.md)。
@@ -38,7 +38,7 @@ ms.locfileid: "68026486"
 > [!NOTE]  
 >  如果 @@CPU_BUSY 或 @@IO_BUSY 中返回的时间超过 49 天（大约）的累积 CPU 时间，则会收到算术溢出警告。 在这种情况下，`@@CPU_BUSY``@@IO_BUSY` 和 `@@IDLE` 变量值并不精确。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68026486"
 ## <a name="return-types"></a>返回类型
 **integer**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 若要查看包含若干个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括 CPU 活动）的报表，请运行 [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)。
   
 ## <a name="examples"></a>示例  

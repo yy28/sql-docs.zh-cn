@@ -13,10 +13,10 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 05906db66c2bf4948e91dddafa2cdd54aaf936ec
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907300"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 课：将表转换为层次结构
@@ -289,7 +289,7 @@ ms.locfileid: "72907300"
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    **EmployeeID** 优先索引：各行按照 EmployeeID  顺序存储。  
+    **EmployeeID**优先索引：各行按照 **EmployeeID** 顺序存储。  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

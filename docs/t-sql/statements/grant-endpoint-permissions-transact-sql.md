@@ -18,10 +18,10 @@ ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 53cac5548d231896b72e0786516c1e32c994869a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050837"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT 端点权限 (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68050837"
   授予对端点的权限。  
 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -75,7 +75,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  AS SQL_Server_login   
  指定执行此查询的主体要从哪个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名派生其授予该权限的权限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  只有在当前数据库为 master 时，才可授予其服务器作用域内的权限  。  
   
  可以在 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 目录视图中查看终结点的相关信息。 可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目录视图中查看服务器权限的相关信息，在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目录视图中查看服务器主体的相关信息。  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. 使用 GRANT OPTION 授予 TAKE OWNERSHIP 权限  
- 以下示例使用 `TAKE OWNERSHIP`，将对端点 `Shipping83` 的 `PKomosinski` 权限授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `GRANT OPTION`。  
+ 以下示例使用 `TAKE OWNERSHIP`，将对端点 `Shipping83` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限授予 `PKomosinski` 用户 `GRANT OPTION`。  
   
 ```  
 USE master;  

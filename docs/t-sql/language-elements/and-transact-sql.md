@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb5211a2d45ef1a5495d1df57143190f1d5f6419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927370"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67927370"
 
   合并两个布尔表达式；在两个表达式均为 TRUE 时返回 TRUE   。 当语句中使用多个逻辑运算符时，将首先计算 AND 运算符  。 可以通过使用括号改变求值顺序。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,12 +47,12 @@ boolean_expression AND boolean_expression
  返回以下布尔值的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)：TRUE、FALSE 或 UNKNOWN    。  
   
 ## <a name="result-types"></a>结果类型  
- **Boolean**  
+ **布尔值**  
   
 ## <a name="result-value"></a>结果值  
  当两个表达式均为 TRUE 时返回 TRUE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  下表显示了使用 AND 运算符比较 TRUE 值和 FALSE 值时的结果。  
   
 ||TRUE|FALSE|UNKNOWN|  

@@ -11,10 +11,10 @@ ms.assetid: e8b6e380-6b53-489b-be73-73fcb5258269
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 166c9ddbd4b5c11b3c032a5a4ecf43c95f183473
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974540"
 ---
 # <a name="setdatetimeoffsetint-javasqldatetimeoffset-sqlserverstatement"></a>setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67974540"
 public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  parameterIndex   
   
  要设置的列的索引。  
@@ -38,19 +38,19 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
   
  一个 DateTimeOffset 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  DateTimeOffset 格式为“YYYY-MM-DD HH-MM-SS[.nnnnnnn] [+][-] HH:MM”。 请以下表作为参考。  
   
 |SQL 类型|Insert|  
 |--------------|------------|  
-|DATETIME|只能插入：“YYYY-MM-DD hh:mm:ss[.nnn]”|  
+|datetime|只能插入：“YYYY-MM-DD hh:mm:ss[.nnn]”|  
 |smalldatetime|只能插入：“YYYY-MM-DD hh:mm:ss”|  
-|Time|只能插入：“hh:mm:ss[.nnnnnnn]”|  
-|date|只能插入：“YYYY-MM-DD”|  
-|datetime2|只能插入：“YYYY-MM-DD hh:mm:ss[.nnnnnnn]”|  
+|时间|只能插入：“hh:mm:ss[.nnnnnnn]”|  
+|Date|只能插入：“YYYY-MM-DD”|  
+|DateTime2|只能插入：“YYYY-MM-DD hh:mm:ss[.nnnnnnn]”|  
   
 ## <a name="see-also"></a>另请参阅  
  [getDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   

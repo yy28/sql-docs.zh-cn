@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 431ec504fdcf977af23cf5340e39052ff4416d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043299"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 事件类别
@@ -27,7 +27,7 @@ ms.locfileid: "68043299"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[RPC:Completed 事件类](../../relational-databases/event-classes/rpc-completed-event-class.md)|指示已完成远程过程调用 (RPC)。|  
 |[PreConnect:Completed 事件类](../../relational-databases/event-classes/preconnect-completed-event-class.md)|指示何时资源调控器分类器函数结束执行。|  
