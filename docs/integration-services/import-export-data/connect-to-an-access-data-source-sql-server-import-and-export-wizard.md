@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296297"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>连接到 Access 数据源（SQL Server 导入和导出向导）
@@ -54,7 +54,7 @@ ms.locfileid: "71296297"
  **“浏览”**  
  通过使用“打开”  对话框定位数据库文件。  
   
- **User name**  
+ **用户名**  
 如果工作组信息文件与数据库关联，则提供一个有效的用户名。  
   
  **密码**  
