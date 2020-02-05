@@ -21,10 +21,10 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a961dc8923d07b9a3036c38d9e0ae05a6b6a6010
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983036"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>用于数据库管理员的诊断连接
@@ -42,7 +42,7 @@ ms.locfileid: "73983036"
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 角色的成员可以使用 DAC 进行连接。  
   
- 通过使用专用的管理员开关 ( **-A** ) 的**sqlcmd**命令提示实用工具，可以支持和使用 DAC。 有关使用 **sqlcmd** 的详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 还可以将前缀 **admin:** 连接到格式为 **sqlcmd -S admin:<*instance_name*>** 的实例名。 也可以通过连接到 **admin:\<*instance_name*>** ，从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器启动 DAC。  
+ 通过使用专用的管理员开关 ( **-A** ) 的**sqlcmd**命令提示实用工具，可以支持和使用 DAC。 有关使用 **sqlcmd** 的详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 还可以将前缀 **admin:** 连接到格式为 **sqlcmd -S admin:<*instance_name*>** 的实例名。 也可以通过连接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]admin: **\<instance_name  >，从**  查询编辑器启动 DAC。  
   
 ## <a name="restrictions"></a>限制  
  由于 DAC 仅用于在极少数情况下诊断服务器问题，因此对连接有一些限制：  
@@ -61,7 +61,7 @@ ms.locfileid: "73983036"
   
     -   RESTORE  
   
-    -   BACKUP  
+    -   备份  
   
 -   DAC 只能使用有限的资源。 请勿使用 DAC 运行需要消耗大量资源的查询（例如， 对大型表执行复杂的联接）或可能造成阻塞的查询。 这有助于防止将 DAC 与任何现有的服务器问题混淆。 为了避免发生潜在的阻塞情况，如果必须执行可能会发生阻塞的查询，则尽可能在基于快照的隔离级别下运行查询；或者，将事务隔离级别设置为 READ UNCOMMITTED，将 LOCK_TIMEOUT 值设置为较短的值（如 2000 毫秒），或者同时执行这两种操作。 这可以防止 DAC 会话被阻塞。 但是，根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所处的状态，DAC 会话可能会在闩锁上被阻塞。 可以使用 CTRL-C 终止 DAC 会话，但不能保证一定成功。 如果失败，唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73983036"
   
 -   基本 DBCC 命令，例如 [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)、[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)、[DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) 和 [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)。 请勿运行需要消耗大量资源的命令，如 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) 或 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL\<spid>  命令。 根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的状态，KILL 命令并非一定会成功；如果失败，则唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是一般的指导原则：  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*spid>\<* 命令。 根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的状态，KILL 命令并非一定会成功；如果失败，则唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是一般的指导原则：  
   
     -   请通过查询 `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`来验证 SPID 是否已被实际终止。 如果没有返回任何行，则表明会话已被终止。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "73983036"
   
  DAC 端口由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时动态分配。 当连接到默认实例时，DAC 会避免在连接时对 SQL Server Browser 服务使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解决协议 (SSRP) 请求。 它先通过 TCP 端口 1434 进行连接。 如果失败，则通过 SSRP 调用来获取端口。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器没有侦听 SSRP 请求，则连接请求将返回错误。 若要了解 DAC 所侦听的端口号，请参阅错误日志。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为接受远程管理连接，则必须使用显式端口号启动 DAC：  
   
- sqlcmd -S tcp:\<server>,\<port>    
+ sqlcmd -S tcp:**server>,** port> _\<\<_  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志列出了 DAC 的端口号，默认情况下为 1434。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为只接受本地 DAC 连接，请使用以下命令和环回适配器进行连接：  
   

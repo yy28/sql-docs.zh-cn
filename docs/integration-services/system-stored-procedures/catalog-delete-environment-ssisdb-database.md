@@ -11,10 +11,10 @@ ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0539fc5af006a20cf554776c014da66c1120d129
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296855"
 ---
 # <a name="catalogdelete_environment-ssisdb-database"></a>catalog.delete_environment（SSISDB 数据库）
@@ -43,7 +43,7 @@ delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] envi
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  

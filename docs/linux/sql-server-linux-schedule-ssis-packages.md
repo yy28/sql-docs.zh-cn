@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: ac7648287b4e4b609f4dd4f25b1b07a512065364
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065164"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>使用 cron 在 Linux 上计划 SQL Server Integration Services 包执行
@@ -75,8 +75,8 @@ Cron 作业是可以配置为按指定间隔定期运行的任务。 作业可�
 
 ![crontab 格式的详细部分说明](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
 
-## <a name="related-content-about-ssis-on-linux"></a>有关 Linux 上 SSIS 的相关内容
+## <a name="related-content-about-ssis-on-linux"></a>有关 Linux 上的 SSIS 的相关内容
 -   [使用 SSIS 在 Linux 上提取、转换和加载数据](sql-server-linux-migrate-ssis.md)
 -   [在 Linux 上安装 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
 -   [使用 ssis-conf 在 Linux 上配置 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
--   [适用于 Linux 上 SSIS 的限制和已知问题](sql-server-linux-ssis-known-issues.md)
+-   [适用于 Linux 上的 SSIS 的限制和已知问题](sql-server-linux-ssis-known-issues.md)

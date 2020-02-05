@@ -16,10 +16,10 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041356"
 ---
 # <a name="transaction-log-backups-sql-server"></a>事务日志备份 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "68041356"
 ##  <a name="LogBackupSequence"></a> 日志备份顺序的工作方式  
  事务日志备份“日志链”  的序列与数据备份无关。 例如，假设有下列事件顺序。  
   
-|Time|事件|  
+|时间|事件|  
 |----------|-----------|  
 |上午 8:00|备份数据库。|  
 |中午|备份事务日志。|  

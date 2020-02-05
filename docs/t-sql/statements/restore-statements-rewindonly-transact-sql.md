@@ -23,10 +23,10 @@ ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0b70fdfc02e876310841bde3646aab9620c56951
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082497"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE 语句 - REWINDONLY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68082497"
 
   倒带并关闭指定的磁带设备，这些设备在以 NOREWIND 选项执行 BACKUP 或 RESTORE 语句后保持打开状态。 仅磁带设备支持此命令。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ FROM <backup_device> [ ,...n ]
  由 sp_addumpdevice  创建的、用于还原数据库的备份设备的逻辑名称，该名称必须符合有关标识符的规则。 如果作为变量 ( **@** _logical\_backup\_device\_name\_var_) 提供，则可以将该备份设备名称指定为字符串常量 ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) 或字符字符串数据类型（ntext  或 text  数据类型除外）的变量。  
   
  {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
- 允许从指定的磁盘或磁带设备还原备份。 应以设备的实际名称（例如，完整路径和文件名）指定磁盘和磁带的设备类型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' 或 TAPE = '\\\\.\TAPE0'。 如果指定为变量 (@physical\_backup\_device\_name\_var)，则可以将该设备名称指定为字符串常量 (@physical\_backup\_device\_name\_var = 'physical_backup_device_name') 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量        。  
+ 允许从指定的磁盘或磁带设备还原备份。 应使用设备的实际名称（例如，完整的路径和文件名）指定磁盘和磁带的设备类型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'。 如果指定为变量 (**physical@backup**device_name\_var)，则可以将该设备名称指定为字符串常量 (\_physical\_backup\_device_name**var = 'physical_backup_device_name') 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量@** _\_\_\_\__    。  
   
  如果使用的是具有 UNC 名称（必须包含计算机名称）的网络服务器，请指定磁盘的设备类型。 有关如何使用 UNC 名称的详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
@@ -91,7 +91,7 @@ FROM <backup_device> [ ,...n ]
 ## <a name="general-remarks"></a>一般备注  
  RESTORE REWINDONLY 是 RESTORE LABELONLY FROM TAPE = \<name> WITH REWIND 的替代命令。 可以从 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 动态管理视图中查看打开的磁带驱动器列表。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
  任何用户都可以使用 RESTORE REWINDONLY。  

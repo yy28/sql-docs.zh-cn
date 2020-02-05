@@ -22,20 +22,20 @@ ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6f6876003c64889d32e31266ebe74b6532c1a8f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000300"
 ---
-# <a name="-wildcard---match-one-character-transact-sql"></a>_（通配符 - 匹配一个字符）(Transact-SQL)
+# <a name="_-wildcard---match-one-character-transact-sql"></a>_（通配符 - 匹配一个字符）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 下划线字符 _ 用于匹配涉及模式匹配的字符串比较操作（如 `LIKE` 和 `PATINDEX`）中的任何单个字符。  
   
 ## <a name="examples"></a>示例  
 
-## <a name="a-simple-example"></a>A:简单示例   
+## <a name="a-simple-example"></a>A：简单示例   
 
 以下示例返回以字母 `m` 开头且第三个字母为 `d` 的所有数据库名称。 下划线字符指定名称的第二个字符可以是任何字母。 `model` 数据库和 `msdb` 数据库均符合此条件。 `master` 数据库则不符合。
 
@@ -65,7 +65,7 @@ FROM Person.Person
 WHERE FirstName LIKE '_an'  
 ORDER BY FirstName;  
 ```  
-## <a name="c-escaping-the-underscore-character"></a>C:对下划线字符进行转义   
+## <a name="c-escaping-the-underscore-character"></a>C：对下划线字符进行转义   
 以下示例会返回 `db_owner`、`db_ddladmin` 等固定数据库角色的名称，但它也会返回 `dbo` 用户。 
 
 ```sql

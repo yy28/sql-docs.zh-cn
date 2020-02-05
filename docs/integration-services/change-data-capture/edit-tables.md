@@ -13,10 +13,10 @@ ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b9c25ae3771a8ca7087f4668b717643fbe4b2648
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298799"
 ---
 # <a name="edit-tables"></a>编辑表
@@ -33,7 +33,7 @@ ms.locfileid: "71298799"
   
 -   **捕获实例**：用于命名特定于实例的变更数据捕获对象的捕获实例的名称。 捕获实例不能为 NULL。 如果未指定，则该名称将从源架构名称加上源表名称中派生而来，格式为 `<schema-name>_<table-name>.` 。捕获实例名称不能超过 100 个字符，并且在数据库中必须是唯一的。 可单击此列的任意单元格对 **capture_instance**进行手动编辑。  
   
--   **安全角色**：用于访问变更数据的数据库角色的名称。 可单击此列的任意单元格对 **security_role**进行手动编辑。  
+-   **安全角色**：用于获取对更改数据的访问权限的数据库角色的名称。 可单击此列的任意单元格对 **security_role**进行手动编辑。  
   
  **添加表**  
  单击“添加表”  可打开“表选择”对话框，从中可以[将表添加到 CDC 实例](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)。 首次访问 Oracle 数据库时，您必须 [Connect to Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)。  

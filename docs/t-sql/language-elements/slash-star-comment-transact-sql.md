@@ -22,10 +22,10 @@ ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c1bee651b2dd74564ebaff47add5acd4b62c5018
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121682"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>斜杠星型（块注释）(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68121682"
 
   表示用户提供的文本。 服务器不计位于 /* 和 \*/ 之间的文本。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ text_of_comment
  text_of_comment   
  是注释的文本。 它是一个或多个字符串。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  注释可以插入单独行中，也可以插入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中。 多行的注释必须用 /* 和 \*/ 指明。 用于多行注释的样式规则是，第一行用 /\* 开始，接下来的注释行用 \*\*，并且用 \*/ 结束注释。  
   
  注释没有最大长度限制。  

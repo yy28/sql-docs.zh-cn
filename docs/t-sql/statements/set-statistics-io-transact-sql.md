@@ -26,10 +26,10 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3cf335242bd0f0e33939c0a72c19390d90252103
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67941847"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "67941847"
 
   导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所生成的磁盘活动量的相关信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67941847"
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当 STATISTICS IO 为“开”时，显示统计信息；为“关”时，不显示信息。   
   
  如果将此选项设置为“开”，则所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句均返回统计信息，直至将该选项设置为“关”。  
@@ -56,7 +56,7 @@ SET STATISTICS IO { ON | OFF }
 |输出项|含义|  
 |-----------------|-------------|  
 |**表**|表的名称。|  
-|**扫描计数**|在任意方向到达叶级别之后开始的搜索或扫描次数，搜索/扫描目的是检索所有用于构造输出的最终数据集的值。<br /><br /> 如果使用的索引是主键上的唯一索引或聚集索引，且只搜索一个值，则扫描计数为 0。 例如， `WHERE Primary_Key_Column = <value>`。<br /><br /> 当使用对非主键列定义的非唯一的聚集索引搜索一个值时，扫描计数为 1。 此过程的目的是针对你正在搜索的键值检查重复值。 例如， `WHERE Clustered_Index_Key_Column = <value>`。<br /><br /> 当 N 为通过使用索引键定位键值后，在叶级别的左侧或右侧启动的不同查找或扫描数时，则扫描计数为 N。|  
+|**扫描计数**|在任意方向到达叶级别之后开始的搜索或扫描次数，搜索/扫描目的是检索所有用于构造输出的最终数据集的值。<br /><br /> 如果使用的索引是主键上的唯一索引或聚集索引，且只搜索一个值，则扫描计数为 0。 例如，`WHERE Primary_Key_Column = <value>` 。<br /><br /> 当使用对非主键列定义的非唯一的聚集索引搜索一个值时，扫描计数为 1。 此过程的目的是针对你正在搜索的键值检查重复值。 例如，`WHERE Clustered_Index_Key_Column = <value>` 。<br /><br /> 当 N 为通过使用索引键定位键值后，在叶级别的左侧或右侧启动的不同查找或扫描数时，则扫描计数为 N。|  
 |**逻辑读取次数**|从数据缓存读取的页数。|  
 |**物理读取次数**|从磁盘读取的页数。|  
 |**预读次数**|为进行查询而放入缓存的页数。|  

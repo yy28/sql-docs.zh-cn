@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68035681"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 示例表 (SQL Server)
@@ -31,11 +31,11 @@ ms.locfileid: "68035681"
   
  myTeam 表包含以下列  。  
   
-|“列”|数据类型|可空性|描述|  
+|列|数据类型|可空性|说明|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|非空|行的主键。 我的工作组中成员的雇员 ID。|  
 |**名称**|**nvarchar(50)**|非空|我的工作组中成员的名称。|  
-|**标题**|**nvarchar(50)**|可以为 Null|我的工作组中雇员的职位。|  
+|**标题**|**nvarchar(50)**|Nullable|我的工作组中雇员的职位。|  
 |**背景**|**nvarchar(50)**|非空|上次更新行的日期和时间。 （默认值）|  
   
 **创建 HumanResources.myTeam**  

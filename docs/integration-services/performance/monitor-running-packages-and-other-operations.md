@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295792"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>监视运行包和其他操作
@@ -70,7 +70,7 @@ ms.locfileid: "71295792"
   
 ### <a name="configure-the-options"></a>配置选项  
   
- **类型**  
+ 类型   
  指定操作的类型。 下面是 **“类型”** 字段的可能值以及 Transact-SQL **catalog.operations** 视图的 operations_type 列中的相应值。  
   
 |||  
@@ -86,7 +86,7 @@ ms.locfileid: "71295792"
 |验证包|301|  
 |配置目录|1000|  
   
- **停止**  
+ **Stop**  
  单击以停止当前正在运行的操作。  
 
 ## <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>查看和停止在 Integration Services 服务器上运行的包
@@ -139,7 +139,7 @@ ms.locfileid: "71295792"
   
  该报告显示以下信息部分。  
   
-|部分|描述|  
+|部分|说明|  
 |-------------|-----------------|  
 |**执行信息**|显示过去 24 小时内处于不同状态（失败、正在运行、成功、其他）的执行次数。|  
 |**包信息**|显示过去 24 小时内执行的包总数。|  
@@ -153,7 +153,7 @@ ms.locfileid: "71295792"
   
  该报告显示以下信息部分。  
   
-|部分|描述|  
+|部分|说明|  
 |-------------|-----------------|  
 |“筛选器”|显示应用于该报告的当前筛选器，如开始时间范围。|  
 |执行信息|显示每个包执行的开始时间、结束时间和持续时间。您可以查看用于包执行的参数值列表，如使用“执行包”任务传递给子包的值。 若要查看参数列表，请单击“概述”。|  
@@ -167,7 +167,7 @@ ms.locfileid: "71295792"
   
  该报告显示以下信息部分。  
   
-|部分|描述|  
+|部分|说明|  
 |-------------|-----------------|  
 |“筛选器”|显示应用于此报告的当前筛选器，如具有指定字符串的连接和 **“上次失败时间”** 范围。<br /><br /> 可以设置 **“上次失败时间”** 范围以仅显示在日期范围内发生的连接失败。 该范围可以跨多个天、月或年。|  
 |详细信息|显示连接字符串、某个连接失败过程中的执行次数和上次连接失败的日期。|  
@@ -179,7 +179,7 @@ ms.locfileid: "71295792"
  **“所有验证”** 报告显示已在服务器上执行的所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 验证的摘要。 摘要中显示每次验证的信息，如状态、开始时间和结束时间。 每个摘要条目包含一个指向在验证期间生成的消息的链接。 与 Integration Services 面板一样，您可以将筛选器应用于表，以便缩小显示的信息的范围。  
   
 ### <a name="custom-reports"></a>自定义报告  
- 可以将自定义报告（.rdl 文件）添加到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“Integration Services 目录”节点下的 **SSISDB** 目录节点  。 在添加报告前，请确认正在使用第三方命名约定以完全限定您引用的对象（如源表）。 否则， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将显示错误。 命名约定为 \<数据库>.\<所有者>.\<对象>。 例如，SSISDB.internal.executions。  
+ 可以将自定义报告（.rdl 文件）添加到 **中“Integration Services 目录”节点下的**SSISDB **目录节点**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在添加报告前，请确认正在使用第三方命名约定以完全限定您引用的对象（如源表）。 否则， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将显示错误。 命名约定为 \<数据库>.\<所有者>.\<对象>。 例如，SSISDB.internal.executions。  
   
 > [!NOTE]  
 >  将自定义报告添加到“数据库”  节点下的 **SSISDB** 节点时，可以不使用 SSISDB 前缀。  
@@ -209,4 +209,4 @@ ms.locfileid: "71295792"
 
 ## <a name="see-also"></a>另请参阅  
  [项目和包的执行](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [对包执行进行故障排除的报告](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [包执行的疑难解答报告](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

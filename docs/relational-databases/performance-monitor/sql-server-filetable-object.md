@@ -13,10 +13,10 @@ ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f2110726db47cf76adffca4b10f153ce941565cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093502"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server，FileTable 对象
@@ -25,7 +25,7 @@ ms.locfileid: "68093502"
 
 下表介绍了 SQL Server **FileTable** 性能对象。
 
-|**SQL Server FileTable 计数器**|描述|  
+|**SQL Server FileTable 计数器**|说明|  
 |-------------|-----------------|  
 |**删除 FileTable 项的平均时间**|删除一个 FileTable 项所花的平均时间（毫秒）。|
 |**FileTable 枚举平均时间**|一个 FileTable 枚举请求所花的平均时间（毫秒）。|
@@ -47,15 +47,15 @@ ms.locfileid: "68093502"
 |**FileTable 项更新请求/秒**|每秒 FileTable 更新项请求总数。|
 |**FileTable 终止句柄操作/秒**|每秒 FileTable 句柄终止操作的总数。|
 |**FileTable 表操作数/秒**|FileTable 存储组件每秒处理的表操作事件总数。|
-|**删除 FileTable 项的基准时间**|仅限内部使用。|
-|**FileTable 枚举基准时间**|仅限内部使用。|
-|**终止 FileTable 句柄的基准时间**|仅限内部使用。|
-|**移动 FileTable 项的基准时间**|仅限内部使用。|
-|**每个文件 I/O 请求的基准时间**|仅限内部使用。|
-|**每个文件 I/O 响应的基准时间**|仅限内部使用。|
-|**重命名 FileTable 项的基准时间**|仅限内部使用。|
-|**获取 FileTable 项的基准时间**|仅限内部使用。|
-|**更新 FileTable 项的基准时间**|仅限内部使用。| 
+|**删除 FileTable 项的基准时间**|仅供内部使用。|
+|**FileTable 枚举基准时间**|仅供内部使用。|
+|**终止 FileTable 句柄的基准时间**|仅供内部使用。|
+|**移动 FileTable 项的基准时间**|仅供内部使用。|
+|**每个文件 I/O 请求的基准时间**|仅供内部使用。|
+|**每个文件 I/O 响应的基准时间**|仅供内部使用。|
+|**重命名 FileTable 项的基准时间**|仅供内部使用。|
+|**获取 FileTable 项的基准时间**|仅供内部使用。|
+|**更新 FileTable 项的基准时间**|仅供内部使用。| 
  
 ## <a name="see-also"></a>另请参阅  
 [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

@@ -11,10 +11,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9efb96c0bb54e3887f6c3fd101633a0efe664bdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091047"
 ---
 # <a name="modify-a-partition-scheme"></a>修改分区方案
@@ -64,9 +64,9 @@ ms.locfileid: "68091047"
   
 3.  单击加号以便展开 **“分区方案”** 文件夹。  
   
-4.  右键单击要删除的分区方案，然后选择“删除”。  
+4.  右键单击要删除的分区方案，然后选择“删除”  。  
   
-5.  在 **“删除对象”** 对话框中，确保已选择正确的分区方案，然后单击 **“确定”**。  
+5.  在 **“删除对象”** 对话框中，确保已选择正确的分区方案，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -74,9 +74,9 @@ ms.locfileid: "68091047"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

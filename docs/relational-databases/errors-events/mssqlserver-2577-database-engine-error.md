@@ -12,13 +12,13 @@ ms.assetid: f53256a2-2fb0-47fd-9ed9-c45389104145
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7fb2c67a1d2e0ea80f0fb54c0136831109a9c3f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023061"
 ---
-# <a name="mssqlserver2577"></a>MSSQLSERVER_2577
+# <a name="mssqlserver_2577"></a>MSSQLSERVER_2577
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68023061"
 |符号名称|DBCC_IAM_CHAIN_SEQUENCE_OUT_OF_ORDER|  
 |消息正文|在对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）的索引分配映射 (IAM) 链中，链序列号顺序不对。 序列号为 SEQUENCE1 的页 P_ID1 指向了序列号为 SEQUENCE2 的页 P_ID2。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 每个索引分配映射 (IAM) 页都有一个序列号。 该序列号指示 IAM 页在 IAM 链内的位置。 规则是用该序列号加一来表示每个 IAM 页。 IAM 页 *P_ID2* 具有的序列号未遵循此规则。  
   
 ## <a name="user-action"></a>用户操作  

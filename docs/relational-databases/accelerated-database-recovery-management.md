@@ -13,10 +13,10 @@ ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245255"
 ---
 # <a name="manage-accelerated-database-recovery"></a>管理加速数据库恢复
@@ -110,11 +110,11 @@ GO
 
 如果 PVS 明显比基线大，或者接近数据库大小的 50%，则认为 PVS 大。 
 
-1. 基于事务 ID 查询 `sys.dm_tran_database_transactions`，检索 `oldest_active_transaction_id` 并检查此事务是否已长时间处于活动状态。
+1. 基于事务 ID 查询 `oldest_active_transaction_id`，检索 `sys.dm_tran_database_transactions` 并检查此事务是否已长时间处于活动状态。
 
    活动事务会阻止清理 PVS 的操作。
 
-1. 如果数据库属于可用性组，请检查 `secondary_low_water_mark`。 这与 `sys.dm_hadr_database_replica_states` 报告的 `low_water_mark_for_ghosts` 相同。 查询 `sys.dm_hadr_database_replica_states`，以查看其中一个副本是否包含此值，因为这也会阻止 PVS 清理操作。
-1. 检查 `min_transaction_timestamp`（如果联机 PVS 被阻止，则为 `online_index_min_transaction_timestamp`），并根据对 `transaction_sequence_num` 列执行的 `sys.dm_tran_active_snapshot_database_transactions` 检查来查找包含阻止 PVS 清理的旧快照事务的会话。
+1. 如果数据库属于可用性组，请检查 `secondary_low_water_mark`。 这与 `low_water_mark_for_ghosts` 报告的 `sys.dm_hadr_database_replica_states` 相同。 查询 `sys.dm_hadr_database_replica_states`，以查看其中一个副本是否包含此值，因为这也会阻止 PVS 清理操作。
+1. 检查 `min_transaction_timestamp`（如果联机 PVS 被阻止，则为 `online_index_min_transaction_timestamp`），并根据对 `sys.dm_tran_active_snapshot_database_transactions` 列执行的 `transaction_sequence_num` 检查来查找包含阻止 PVS 清理的旧快照事务的会话。
 1. 如果以上均不适用，则表示清理操作被中止事务控制。 检查 `aborted_version_cleaner_last_start_time` 和 `aborted_version_cleaner_last_end_time` 上次时间，查看中止的事务清理是否已完成。 中止事务清理完成后，`oldest_aborted_transaction_id` 应会移到更高的位置。
 1. 如果中止事务最近未成功完成，请检查错误日志中是否存在报告 `VersionCleaner` 问题的消息。

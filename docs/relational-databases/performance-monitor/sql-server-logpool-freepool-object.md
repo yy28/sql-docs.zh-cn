@@ -13,10 +13,10 @@ ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 508f0cfa001107ad43536525d65311bf3a294f4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093425"
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQL Server，LogPool FreePool 对象
@@ -25,7 +25,7 @@ ms.locfileid: "68093425"
 
 下表介绍了 SQL Server **LogPool FreePool** 性能对象。
 
-|**SQL Server LogPool FreePool 计数器**|描述|  
+|**SQL Server LogPool FreePool 计数器**|说明|  
 |-------------|-----------------|  
 |**可用缓冲区重填数/秒**|每秒为重填分配的缓冲区数。|
 |**可用列表长度**|可用列表的长度。|

@@ -15,10 +15,10 @@ ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cda41d0db42f72b56c84b184138ade1e345fdaa9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289058"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp;（逻辑与）（SSIS 表达式）
@@ -42,7 +42,7 @@ boolean_expression1 && boolean_expression2
 ## <a name="result-types"></a>结果类型  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  下表显示 && 运算符的结果。  
   
 |结果|表达式|表达式|  
@@ -50,9 +50,9 @@ boolean_expression1 && boolean_expression2
 |TRUE|TRUE|TRUE|  
 |FALSE|TRUE|FALSE|  
 |FALSE|FALSE|FALSE|  
-|NULL|NULL|NULL|  
-|NULL|NULL|TRUE|  
-|FALSE|NULL|FALSE|  
+|Null|Null|Null|  
+|Null|Null|TRUE|  
+|FALSE|Null|FALSE|  
   
 ## <a name="expression-examples"></a>表达式示例  
  该示例使用 **StandardCost** 和 **ListPrice** 列。 如果 **StandardCost** 列的值小于 300，并且 **ListPrice** 列的值大于 500，则该示例计算结果为 TRUE。  

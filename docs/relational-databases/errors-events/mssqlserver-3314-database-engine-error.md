@@ -12,13 +12,13 @@ ms.assetid: f3a5ca6a-b502-4cab-b3b1-4bc753763fa9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fbc8b9b406b291d3d3424f438c09aca22ec419fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908365"
 ---
-# <a name="mssqlserver3314"></a>MSSQLSERVER_3314
+# <a name="mssqlserver_3314"></a>MSSQLSERVER_3314
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "67908365"
 |符号名称|ERR_LOG_RID2|  
 |消息正文|在数据库 '%.*ls' 中撤消日志记录下的操作时，在日志记录 %S_LSN 处出错。 通常，这一特定故障以前在 Windows 事件日志服务中会记录为错误。 请利用备份还原数据库或文件，或者修复该数据库。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 这是撤消恢复的累积错误。 此错误使数据库进入 SUSPECT 状态。 主文件组以及可能其他文件组可疑并可能受损。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动过程中无法恢复数据库，因此无法使用该数据库。 需要用户执行操作来解决问题。  
   
 请注意，如果对于 **tempdb**发生此错误，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例关闭。  

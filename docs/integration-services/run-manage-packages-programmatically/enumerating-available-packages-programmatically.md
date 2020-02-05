@@ -15,10 +15,10 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 80bf829afcbc93e397e8ea797f22905b3b55c0cd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295770"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>以编程方式枚举可用的包
@@ -43,7 +43,7 @@ ms.locfileid: "71295770"
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [返回首页](#top)    
+ [返回页首](#top)    
     
 ##  <a name="listing"></a> 枚举可用的包    
  若要以编程方式获取已保存的包的列表，请调用以下方法之一：    
@@ -159,7 +159,7 @@ namespace EnumeratePackagesSSIS_CS
 }    
 ```    
     
- [返回首页](#top)    
+ [返回页首](#top)    
     
 ###  <a name="listing_sql"></a> 示例 (SQL Server)    
  使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> 方法列出在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 实例中存储的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。    
@@ -240,7 +240,7 @@ namespace EnumeratePackagesSql_CS
 }    
 ```    
     
- [返回首页](#top)    
+ [返回页首](#top)    
    
 ## <a name="see-also"></a>另请参阅    
  [包管理（SSIS 服务）](../../integration-services/service/package-management-ssis-service.md)    

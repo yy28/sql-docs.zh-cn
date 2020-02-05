@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43d4405411005ab43e3f2b2fe9b2136a5793e8a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099989"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 语句
@@ -43,8 +43,8 @@ ms.locfileid: "68099989"
 数据操作语言 (DML) 影响存储在数据库中的信息。 使用以下语句在数据库中插入、更新和更改行。
 
 - BULK INSERT
-- 删除
-- Insert
+- DELETE
+- INSERT
 - UPDATE
 - MERGE
 - TRUNCATE TABLE

@@ -12,13 +12,13 @@ ms.assetid: 33a35f00-98c8-46c6-b432-544b326b6117
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 22fbf90a31514513555fd90fde421f81ba3eb499
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031111"
 ---
-# <a name="mssqlserver1203"></a>MSSQLSERVER_1203
+# <a name="mssqlserver_1203"></a>MSSQLSERVER_1203
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68031111"
 |符号名称|LK_NOT|  
 |消息正文|进程 ID %d 尝试对不归它所有的资源进行解锁: %.*ls。 请重试该事务，因为此错误可能是计时条件导致的。 如果该问题仍然存在，请与数据库管理员联系。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行的活动不是普通的后处理清除活动，并且发现它试图解锁的特定页已经解锁时，将产生此错误。  
   
 ### <a name="possible-causes"></a>可能的原因  

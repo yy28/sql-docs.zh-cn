@@ -1,12 +1,4 @@
----
-ms.openlocfilehash: 4803a99e0fb1435b545ec775b2a8abe063d9fd8d
-ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890921"
----
-SA  帐户是在安装期间创建的 SQL Server 实例上的系统管理员。 创建 SQL Server 容器后，可以通过在容器中运行 `echo $MSSQL_SA_PASSWORD` 来发现指定的 `MSSQL_SA_PASSWORD` 环境变量。 出于安全考虑，请考虑更改 SA 密码：
+SA  帐户是在安装期间创建的 SQL Server 实例上的系统管理员。 创建 SQL Server 容器后，可以通过在容器中运行 `MSSQL_SA_PASSWORD` 来发现指定的 `echo $MSSQL_SA_PASSWORD` 环境变量。 出于安全考虑，请考虑更改 SA 密码：
 
 1. 选择 SA 用户要使用的强密码。
 

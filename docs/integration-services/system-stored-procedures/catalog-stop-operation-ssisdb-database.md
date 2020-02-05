@@ -11,10 +11,10 @@ ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95216c6ecca08c48d845a63fb43486ace9bb44a5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296709"
 ---
 # <a name="catalogstop_operation-ssisdb-database"></a>catalog.stop_operation（SSISDB 数据库）
@@ -40,7 +40,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -60,7 +60,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   操作已停止  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  一次只能有一个用户应停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录的操作。 如果多个用户试图停止操作，则存储过程在第一次尝试时将返回成功（值 `0`），但后续尝试将引发错误。  
   
   

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67916043"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>运行 Linux 上的 Always On 可用性组
@@ -39,7 +39,7 @@ ms.locfileid: "67916043"
 
 1. 停用承载要升级的次要副本的节点上的资源。
    
-   运行升级命令之前，请停用该资源，这样群集就不会监视它，从而避免出现不必要的问题。 以下示例在节点上添加位置约束，以停用资源。 使用资源名称更新 `ag_cluster-master`，使用承载要升级的副本的节点更新 `nodeName1`。
+   运行升级命令之前，请停用该资源，这样群集就不会监视它，从而避免执行不必要的故障转移。 以下示例在节点上添加位置约束，以停用资源。 使用资源名称更新 `ag_cluster-master`，使用承载要升级的副本的节点更新 `nodeName1`。
 
    ```bash
    pcs constraint location ag_cluster-master avoids nodeName1
@@ -76,13 +76,13 @@ ms.locfileid: "67916043"
 
    如果可用性组群集类型为 `NONE`，则手动执行故障转移。 请按顺序完成下列步骤：
 
-      A. 以下命令可以将主副本设置为次要副本。 将 `AG1` 替换为可用性组的名称。 在承载主副本的 SQL Server 实例上运行 Transact-SQL 命令。
+      a. 以下命令可以将主副本设置为次要副本。 将 `AG1` 替换为可用性组的名称。 在承载主副本的 SQL Server 实例上运行 Transact-SQL 命令。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. 以下命令可以将同步次要副本设置为主副本。 在 SQL Server 的目标实例（承载同步次要副本的实例）上运行以下 Transact-SQL 命令。
+      b. 以下命令可以将同步次要副本设置为主副本。 在 SQL Server 的目标实例（承载同步次要副本的实例）上运行以下 Transact-SQL 命令。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

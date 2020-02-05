@@ -13,10 +13,10 @@ ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 01336bc87411fec167a3f78dfd3bf397a93b6d2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947799"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP 数据库
@@ -29,7 +29,7 @@ ms.locfileid: "67947799"
 
 下表说明了 **SQL Server XTP 数据库** 计数器。
 
-|计数器|描述| 
+|计数器|说明| 
 |-------------|-----------------|  
 |**事务片段大型数据的平均大小**|事务片段大型数据负载的平均大小。 此为非常低级的计数器，不适合客户使用。|
 |**事务片段的平均大小**|事务片段负载的平均大小。 如果此值为零，则将从后端分配器分配更多页。 此为非常低级的计数器，不适合客户使用。|

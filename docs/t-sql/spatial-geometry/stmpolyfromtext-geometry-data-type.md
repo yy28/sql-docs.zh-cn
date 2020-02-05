@@ -18,10 +18,10 @@ ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2c67174927ea913f50bc23db7e940a79e224dcf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894698"
 ---
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText（geometry 数据类型）
@@ -48,9 +48,9 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
  CLR 返回类型：**Sql Geometry**  
   
- OGC 类型：**MultiPolygon**  
+ OGC 类型：MultiPolygon   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果输入的格式不正确，此方法将引发 FormatException  。  
   
 ## <a name="examples"></a>示例  

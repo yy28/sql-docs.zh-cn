@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72008463"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>升级或修补复制的数据库
@@ -120,7 +120,7 @@ SQL Server 的升级路径因部署模式而异。 SQL Server 一般情况下提
 
 
   >[!NOTE]
-  > 为了减少停机时间，我们建议将分发服务器的“并行迁移”作为一个活动执行，将“就地升级到 SQL Server 2016”作为另一个活动执行。 这样，可通过分阶段方法来降低风险和尽量减少停机时间。
+  > 为了减少停机时间，我们建议将分发服务器的“并行迁移”作为一个活动执行，将“就地升级到 SQL Server 2016”作为另一个活动执行   。 这样，可通过分阶段方法来降低风险和尽量减少停机时间。
 
 ## <a name="web-synchronization-for-merge-replication"></a>合并复制的 Web 同步  
  合并复制的 Web 同步选项要求将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (replisapi.dll) 复制到用于同步的 Internet Information Services (IIS) 服务器上的虚拟目录中。 配置 Web 同步时，该文件被配置 Web 同步向导复制到虚拟目录中。 若要升级安装在 IIS 服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，必须将 replisapi.dll 从 COM 目录手动复制到 IIS 服务器上的虚拟目录。 有关配置 Web 同步的详细信息，请参阅 [配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)。  

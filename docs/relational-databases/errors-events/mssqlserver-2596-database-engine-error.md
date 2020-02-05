@@ -12,13 +12,13 @@ ms.assetid: 49ab892f-8ba3-4ba1-b562-ddf205019802
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8d39e007653bfdccd68ad9b5a2705b629d1e9979
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68022953"
 ---
-# <a name="mssqlserver2596"></a>MSSQLSERVER_2596
+# <a name="mssqlserver_2596"></a>MSSQLSERVER_2596
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68022953"
 |符号名称|DBCC_DATABASE_IN_READ_ONLY_MODE|  
 |消息正文|未处理修复语句。 该数据库不能处于只读模式。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 此消息指示数据库处于只读模式。 当数据库处于只读模式时不能进行修复。  
   
 ## <a name="user-action"></a>用户操作  

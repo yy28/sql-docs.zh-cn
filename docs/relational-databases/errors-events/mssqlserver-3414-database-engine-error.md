@@ -12,13 +12,13 @@ ms.assetid: f25852f9-b91c-4356-b817-78bec9ec8db4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f02dafba3f6fbb8742c8b81ded8fccf39f0509f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098326"
 ---
-# <a name="mssqlserver3414"></a>MSSQLSERVER_3414
+# <a name="mssqlserver_3414"></a>MSSQLSERVER_3414
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68098326"
 |符号名称|REC_GIVEUP|  
 |消息正文|恢复期间出错，导致数据库 '%.*ls' (数据库 ID %d)无法重新启动。 请诊断并纠正这些恢复错误，或者从已知的正确备份中还原。 如果无法更正错误，或者为意外错误，请与技术支持人员联系。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 已恢复指定的数据库，但无法启动它，因为在恢复期间出现了错误。 此错误使数据库进入 SUSPECT 状态。 主文件组以及可能其他文件组可疑并可能受损。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动过程中无法恢复数据库，因此无法使用该数据库。 需要用户执行操作来解决问题。  
   
 请注意，如果对于 **tempdb**发生此错误，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例关闭。  

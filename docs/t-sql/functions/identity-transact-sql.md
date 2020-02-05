@@ -20,10 +20,10 @@ ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e1b4177de655300e8297d450ab382c6f37a9f0fe
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843659"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73843659"
 
   返回最后插入的标识值的系统函数。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73843659"
 ## <a name="return-types"></a>返回类型  
  numeric(38,0)   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在一条 INSERT、SELECT INTO 或大容量复制语句完成后，@@IDENTITY 中包含语句生成的最后一个标识值。 如果语句未影响任何包含标识列的表，则 @@IDENTITY 返回 NULL。 如果插入了多个行，生成了多个标识值，则 @@IDENTITY 将返回最后生成的标识值。 如果语句触发了一个或多个触发器，该触发器又执行了生成标识值的插入操作，那么，在语句执行后立即调用 @@IDENTITY 将返回触发器生成的最后一个标识值。 如果对包含标识列的表执行插入操作后触发了触发器，并且触发器对另一个没有标识列的表执行了插入操作，则 @@IDENTITY 将返回第一次插入的标识值。 出现 INSERT 或 SELECT INTO 语句失败或大容量复制失败，或者事务被回滚的情况时，@@IDENTITY 值不会恢复为以前的设置。  
   
  如果语句和事务失败，它们会更改表的当前标识，从而使标识列中的值出现不连贯现象。 即使未提交试图向表中插入值的事务，也永远无法回滚标识值。 例如，如果因 IGNORE_DUP_KEY 冲突而导致 INSERT 语句失败，表的当前标识值仍然会增加。  

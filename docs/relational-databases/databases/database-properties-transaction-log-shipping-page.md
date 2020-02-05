@@ -13,10 +13,10 @@ ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8155524f6e5d8172092630c04dbb0540514b56ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099568"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>数据库属性（“事务日志传送”页）
@@ -41,7 +41,7 @@ ms.locfileid: "68099568"
  **辅助服务器实例和数据库**  
  列出当前为此主数据库配置的辅助服务器和数据库。 突出显示某个数据库，然后单击 **“...”** 可以修改与该辅助数据库相关联的参数。  
   
- **“添加”**  
+ **添加**  
  单击“添加”  可以向此主数据库的日志传送配置中添加辅助数据库。  
   
  **删除**  
@@ -53,7 +53,7 @@ ms.locfileid: "68099568"
  **监视服务器实例**  
  指示当前为该日志传送配置设置的监视服务器实例。  
   
- **“设置”**  
+ **设置**  
  为日志传送配置设置监视服务器实例。 单击 **“设置”** 可以配置此监视服务器实例。  
   
  **编写配置脚本**  

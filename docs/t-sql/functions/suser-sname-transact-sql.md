@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981787"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73981787"
 
   返回与安全标识号 (SID) 关联的登录名。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,12 +50,12 @@ SUSER_SNAME ( [ server_user_sid ] )
  server_user_sid   
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
- 可选的登录安全标识号。 server_user_sid 为 varbinary(85)   。 server_user_sid 可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户或组的安全标识号  。 如果未指定 server_user_sid，则返回有关当前用户的信息  。 如果此参数包含词 NULL，将返回 NULL。  
+ 可选的登录安全标识号。 server_user_sid 为 varbinary(85)   。 server_user_sid 可以是任何 *登录或* Windows 用户或组的安全标识号[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]。 如果未指定 server_user_sid，则返回有关当前用户的信息  。 如果此参数包含词 NULL，将返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SUSER_SNAME 在 ALTER TABLE 或 CREATE TABLE 中可用作 DEFAULT 约束。 SUSER_SNAME 可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。 SUSER_SNAME 必须始终后跟括号，即使在未指定参数的情况下也是如此。  
   
  在无参数的情况下调用时，SUSER_SNAME 返回当前安全上下文的名称。 当通过使用 EXECUTE AS 切换上下文的批中无参数调用 SUSER_SNAME 时，将返回模拟上下文的名称。 从模拟上下文中调用时，ORIGINAL_LOGIN 将返回原始上下文的名称。  

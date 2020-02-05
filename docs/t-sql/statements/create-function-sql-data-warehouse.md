@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f5510d6c75380e48008740ab8a0f5b1c9f500fe5
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064545"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION（SQL 数据仓库）
@@ -35,7 +35,7 @@ ms.locfileid: "73064545"
   
 -   用于替换存储过程  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -98,12 +98,12 @@ RETURNS return_data_type
  function_body   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句系列。  function_body 不能包含 SELECT 语句且不能引用数据库数据。  function_body 不能引用表或视图。 function body 可以调用其他确定性的函数但不能调用不确定性函数。 
   
- 在标量函数中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句一起使用可计算出标量值  。  
+ 在标量函数中，function_body 是一系列  *语句，这些语句一起使用可计算出标量值*[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
  *scalar_expression*  
  指定标量函数返回的标量值。  
   
- \<function_option>::=  
+ **function_option>::=\<** 
   
  指定函数将具有以下一个或多个选项：  
   
@@ -167,7 +167,7 @@ GO
   
  [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)：显示用户定义函数中定义的参数的有关信息。  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)：显示函数所引用的基础对象。  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)：显示函数引用的基础对象。  
   
 ## <a name="permissions"></a>权限  
  需要在数据库中具有 CREATE FUNCTION 权限，并对创建函数时所在的架构具有 ALTER 权限。  

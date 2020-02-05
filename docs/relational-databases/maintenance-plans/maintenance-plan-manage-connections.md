@@ -13,10 +13,10 @@ ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a388792d24ce033dce0ffb4c6f0120a6ea341ae0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115963"
 ---
 # <a name="maintenance-plan-manage-connections"></a>维护计划（管理连接）
@@ -34,6 +34,6 @@ ms.locfileid: "68115963"
 > 包存储在 msdb  数据库中，其 ProtectionLevel  设置为 ServerStorage  ，因此，在使用 SQL Server 身份验证  时，将不会在 msdb  中加密密码。 只要 msdb  是安全的，就可以使用 SQL Server 身份验证  ，但建议使用 Windows 身份验证 
 
 ## <a name="see-also"></a>另请参阅  
- [中对象资源管理器的](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

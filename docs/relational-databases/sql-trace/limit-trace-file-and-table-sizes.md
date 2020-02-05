@@ -17,10 +17,10 @@ ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b12834eac33fd016279b6f2f3a79cee413c3d23d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072888"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>限制跟踪文件和表的大小
@@ -30,7 +30,7 @@ ms.locfileid: "68072888"
 > [!NOTE]  
 >  如果将跟踪数据保存到已经存在的文件，则可以向该文件追加数据或覆盖该文件。 如果选择向该文件追加数据，而此跟踪文件已经达到或超过指定的最大文件大小，则会通知您，并提示您可以增加最大文件大小或指定新文件。 对跟踪表也是如此。  
   
-## <a name="maximum-file-size"></a>最大文件大小  
+## <a name="maximum-file-size"></a>文件大小上限  
  指定有最大文件大小的跟踪在达到最大文件大小时，会停止将跟踪信息保存到该文件。 使用此选项可将事件分组成更小、更容易管理的文件。 此外，限制文件大小使得无人参与的跟踪运行起来更加安全，因为跟踪会在达到最大文件大小后停止。 可以为通过 Transact-SQL 存储过程或使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]创建的跟踪设置最大文件大小。  
   
  最大文件大小选项的上限为 1 GB。 默认最大文件大小为 5 MB。  

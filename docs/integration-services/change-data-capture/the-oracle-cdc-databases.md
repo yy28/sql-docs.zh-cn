@@ -11,10 +11,10 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298630"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
@@ -80,11 +80,11 @@ ms.locfileid: "71298630"
 ###  <a name="BKMK_Change_Tables_CT"></a> 更改表 (_CT)  
  更改表是从镜像表创建的。 它们包含从 Oracle 数据库捕获的更改数据。 根据以下约定命名这些表：  
   
- [cdc].[\<capture-instance>_CT]   
+ [cdc].[**capture-instance>_CT]\<**  
   
  在最初为表 `<schema-name>.<table-name>`启用捕获时，默认捕获实例名称为 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 表的默认捕获实例名称为 HR_EMPLOYEES，而关联的更改表为 [cdc]。 [HR_EMPLOYEES_CT]。  
   
- 捕获表由 Oracle CDC 实例写入。 使用在创建捕获实例时由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的特殊表值函数读取捕获表。 例如， `fn_cdc_get_all_changes_HR_EMPLOYEES`。 有关这些 CDC 函数的详细信息，请参阅 [变更数据捕获函数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)。  
+ 捕获表由 Oracle CDC 实例写入。 使用在创建捕获实例时由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的特殊表值函数读取捕获表。 例如，`fn_cdc_get_all_changes_HR_EMPLOYEES` 。 有关这些 CDC 函数的详细信息，请参阅 [变更数据捕获函数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)。  
   
 ###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** 表由 SQL Server CDC 组件生成。 它在 Oracle CDC 情况下的用法与其常规用法不同。  
@@ -98,9 +98,9 @@ ms.locfileid: "71298630"
   
  下表介绍了 **cdc.xdbcdc_config** 表的各列。  
   
-|项|描述|  
+|Item|说明|  
 |----------|-----------------|  
-|version|它跟踪 CDC 实例配置的版本。 在每次更新表时，以及在每次添加新的捕获实例或删除现有捕获实例时，将更新该项。|  
+|版本|它跟踪 CDC 实例配置的版本。 在每次更新表时，以及在每次添加新的捕获实例或删除现有捕获实例时，将更新该项。|  
 |connect_string|Oracle 连接字符串。 下面是一个基本示例：<br /><br /> `<server>:<port>/<instance>` （例如 `erp.contoso.com:1521/orcl`）。<br /><br /> 连接字符串还可以指定 Oracle Net 连接描述符，例如 `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`。<br /><br /> 如果使用目录服务器或 tnsnames，则连接字符串可以是连接的名称。<br /><br /> 有关 Oracle 连接字符串的详细信息，请参阅 [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153)，其中介绍了针对 Oracle CDC 服务使用的 Oracle Instant Client 的 Oracle 数据库连接字符串的详细信息。|  
 |use_windows_authentication|可以取以下值的布尔值：<br /><br /> **0**：提供 Oracle 用户名和密码进行身份验证（默认值）<br /><br /> **1**：使用 Windows 身份验证连接到 Oracle 数据库。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。|  
 |username|日志挖掘 Oracle 数据库用户的名称。 **仅当 use_windows_authentication = 0**时，该值才是必填的。|  
@@ -111,9 +111,9 @@ ms.locfileid: "71298630"
   
  下表介绍了可用的选项。  
   
-|“属性”|默认|Min|Max|静态|描述|  
+|名称|默认|Min|Max|静态|说明|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|跟踪|False|-|-|False|可用值有：<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
+|跟踪|False|-|-|False|可用值有：<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> 关闭|  
 |cdc_update_state_interval|10|1|120|False|为某一事务分配的内存块的大小（一个事务可分配多个块）(KB)。 请参阅 [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) 表中的 memory_limit 列。|  
 |target_max_batched_transactions|100|1|1000|True|可在 SQL Server CT 表更新中作为一个事务处理的 Oracle 事务的最大数目。|  
 |target_idle_lsn_update_interval|10|0|1|False|用于在捕获表没有任何活动时更新 **lsn_time_mapping** 表的时间间隔（秒）。|  
@@ -141,14 +141,14 @@ ms.locfileid: "71298630"
   
  下表介绍了 **cdc.xdbcdc_state** 表的各列。  
   
-|项|描述|  
+|Item|说明|  
 |----------|-----------------|  
 |status|用于当前 Oracle CDC 实例的当前状态代码。 该状态描述 CDC 的当前状态。|  
 |sub_status|提供有关当前状态的其他信息的第二级状态。|  
-|active|可以取以下值的布尔值：<br /><br /> **0**：Oracle CDC 实例进程处于不活动状态。<br /><br /> **1**：Oracle CDC 实例进程处于活动状态。|  
+|活动|可以取以下值的布尔值：<br /><br /> **0**：Oracle CDC 实例进程处于不活动状态。<br /><br /> **1**：Oracle CDC 实例进程处于活动状态。|  
 |error|可以取以下值的布尔值：<br /><br /> **0**：Oracle CDC 实例进程未处于错误状态。<br /><br /> **1**：Oracle CDC 实例处于错误状态。|  
 |status_message|提供错误或状态的说明的字符串。|  
-|TIMESTAMP|具有上次更新捕获状态的时间 (UTC) 的时间戳。|  
+|timestamp|具有上次更新捕获状态的时间 (UTC) 的时间戳。|  
 |active_capture_node|当前正运行 Oracle CDC 服务和 Oracle CDC 实例（正在处理 Oracle 事务日志）的主机（该主机可以是群集上的节点）的名称。|  
 |last_transaction_timestamp|具有事务上次写入更改表的时间 (UTC) 的时间戳。|  
 |last_change_timestamp|具有从源 Oracle 事务日志读取最近更改记录的时间 (UTC) 的时间戳。 此时间戳有助于标识 CDC 进程的当前延迟。|  
@@ -166,10 +166,10 @@ ms.locfileid: "71298630"
   
  下表描述 cdc.xdbcdc_trace 表的各列。  
   
-|项|描述|  
+|Item|说明|  
 |----------|-----------------|  
-|TIMESTAMP|写入跟踪日志时的准确 UTC 时间戳。|  
-|type|包含以下值之一。<br /><br /> error<br /><br /> INFO<br /><br /> 跟踪|  
+|timestamp|写入跟踪日志时的准确 UTC 时间戳。|  
+|type|包含以下值之一。<br /><br /> ERROR<br /><br /> INFO<br /><br /> TRACE|  
 |节点|写入记录的节点的名称。|  
 |status|状态表使用的状态代码。|  
 |sub_status|状态表使用的子状态代码。|  
@@ -181,7 +181,7 @@ ms.locfileid: "71298630"
   
  下表介绍了 **cdc.xdbcdc_staged_transactions** 表的各列。  
   
-|项|描述|  
+|Item|说明|  
 |----------|-----------------|  
 |transaction_id|要暂存的事务的唯一事务标识符。|  
 |seq_num|当前事务的 **xcbcdc_staged_transactions** 行的编号（从 0 开始）。|  

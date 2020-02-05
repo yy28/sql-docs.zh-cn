@@ -18,10 +18,10 @@ ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d9244a2833a75925fab1f00d6ce20915f5ceaafb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930336"
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull（geometry 数据类型）
@@ -39,9 +39,9 @@ ms.locfileid: "67930336"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `STConvexHull()` 返回包含给定 geometry 实例的最小凸多边形  。 Points 或共线 LineString 实例将生成与该输入具有相同类型的实例   。  
   
 ## <a name="examples"></a>示例  

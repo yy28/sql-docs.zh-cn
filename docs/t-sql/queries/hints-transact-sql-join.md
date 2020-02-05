@@ -23,10 +23,10 @@ ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902015"
 ---
 # <a name="hints-transact-sql---join"></a>提示 (Transact-SQL) - 联接
@@ -37,7 +37,7 @@ ms.locfileid: "67902015"
 > [!CAUTION]  
 >  由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器通常会为查询选择最佳执行计划，因此我们建议仅在最后迫不得已的情况下才可由资深的开发人员和数据库管理员使用提示。
   
- **适用范围：**  
+ **适用于：**  
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67902015"
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,7 +68,7 @@ ms.locfileid: "67902015"
   
  REMOTE 只可用于 INNER JOIN 操作。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  联接提示在查询的 FROM 子句中指定。 联接提示可以在两个表之间强制执行联接策略。 如果为任意两个表指定了联接提示，查询优化器会根据 ON 关键字的位置，自动为查询中所有联接的表强制确定联接顺序。 如果使用了不带 ON 子句的 CROSS JOIN，则可使用括号指示联接顺序。  
   
 ## <a name="examples"></a>示例  

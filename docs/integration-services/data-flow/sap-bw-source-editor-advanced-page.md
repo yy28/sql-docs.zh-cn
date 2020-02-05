@@ -13,10 +13,10 @@ ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8eaed6e70ad457f33dc9587e3004e433da43ae1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298087"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 源编辑器（“高级”页）
@@ -50,7 +50,7 @@ ms.locfileid: "71298087"
  **字符串转换**  
  指定要应用的字符串转换规则。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**自动字符串转换**|当 SAP Netweaver BW 系统为 Unicode 系统时，将所有字符串转换为 **nvarchar** 。 否则，将所有字符串转换为 **varchar**。|  
 |**将字符串转换为 varchar**|将所有字符串转换为 **varchar**。|  

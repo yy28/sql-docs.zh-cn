@@ -12,13 +12,13 @@ ms.assetid: a3541b9c-b1a8-4280-add1-275f08696b62
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 23d53cad26ed52d985fa5c99fe07c9f0dd64e42f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101511"
 ---
-# <a name="mssqlserver8443"></a>MSSQLSERVER_8443
+# <a name="mssqlserver_8443"></a>MSSQLSERVER_8443
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68101511"
 |符号名称|SB_DIALOG_WO_CONV_GROUP|  
 |消息正文|ID 为 '%.*ls' 且发起方为 %d 的会话引用的会话组 '%.\*ls' 已丢失。 请运行 DBCC CHECKDB 以分析和修复数据库。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 元数据层为会话组返回了 NULL。 数据库由于某个原因已损坏。 造成它损坏的一个可能原因是磁盘错误。  
   
 ## <a name="user-action"></a>用户操作  

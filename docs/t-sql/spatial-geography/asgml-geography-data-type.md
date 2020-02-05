@@ -20,10 +20,10 @@ ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4264aabaca1fe1b13427fc11cf3cd1b7ccc59e99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066614"
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml - geography 数据类型
@@ -31,7 +31,7 @@ ms.locfileid: "68066614"
 
   返回 **geography** 实例的地理标记语言 (GML) 表示形式。  
   
- 有关地理标记语言的详细信息，请参阅开放地理空间联盟规范：[OGC 规范，地理标记语言。](https://go.microsoft.com/fwlink/?LinkId=93629)  
+ 有关地理标记语言的详细信息，请参阅开放地理空间信息联盟规范：[OGC 规范：地理标记语言](https://go.microsoft.com/fwlink/?LinkId=93629)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,9 +43,9 @@ ms.locfileid: "68066614"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：xml   
   
- CLR 返回类型：**SqlXml**  
+ CLR 返回类型：SqlXml   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="examples"></a>示例  
  下面的示例创建 `LineString` 实例，并使用 `AsGML()` 返回实例的 GML 说明。  

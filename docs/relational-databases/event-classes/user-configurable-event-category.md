@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6d4f387317da407d74f90fb7280639851cf6aaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087635"
 ---
 # <a name="user-configurable-event-category"></a>User-Configurable 事件类别
@@ -27,7 +27,7 @@ ms.locfileid: "68087635"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[User-Configurable 事件类](../../relational-databases/event-classes/user-configurable-event-class.md)|用于监视其他事件类别中的系统提供的事件无法监视且由用户定义的事件。|  
   

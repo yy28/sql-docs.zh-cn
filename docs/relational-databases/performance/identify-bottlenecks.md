@@ -23,10 +23,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bbabafa1f5b367343f02c3a0bf3e122bc827ce66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946755"
 ---
 # <a name="identify-bottlenecks"></a>识别瓶颈
@@ -56,7 +56,7 @@ ms.locfileid: "67946755"
   
 |可能的瓶颈方面|对服务器的影响|  
 |------------------------------|---------------------------|  
-|内存使用量|分配的内存不足或可由 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的内存不足导致性能下降。 数据必须从磁盘读取而非直接从数据缓存读取。 当需要页时，Microsoft Windows 操作系统将通过与磁盘交换数据来执行大量分页操作。|  
+|内存使用率|分配的内存不足或可由 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的内存不足导致性能下降。 数据必须从磁盘读取而非直接从数据缓存读取。 当需要页时，Microsoft Windows 操作系统将通过与磁盘交换数据来执行大量分页操作。|  
 |CPU 使用率|长期的高 CPU 使用率可能表明 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询需要优化或 CPU 需要升级。|  
 |磁盘输入/输出 (I/O)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 可以优化查询以减少不必要的 I/O（例如，使用索引）。|  
 |用户连接|可能有太多用户同时访问服务器，从而导致性能下降。|  
@@ -67,6 +67,6 @@ ms.locfileid: "67946755"
  [监视磁盘使用情况](../../relational-databases/performance-monitor/monitor-disk-usage.md)   
  [监视内存使用量](../../relational-databases/performance-monitor/monitor-memory-usage.md)   
  [SQL Server General Statistics 对象](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)   
- [SQL Server Locks 对象](../../relational-databases/performance-monitor/sql-server-locks-object.md)  
+ [SQL Server - Locks 对象](../../relational-databases/performance-monitor/sql-server-locks-object.md)  
   
   

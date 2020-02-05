@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 30688490a06c784a2149e53f7e175b6350d3d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986572"
 ---
 # <a name="securables"></a>安全对象
@@ -31,7 +31,7 @@ ms.locfileid: "67986572"
 
   安全对象是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 授权系统控制对其进行访问的资源。 例如，表是安全对象。 通过创建可以为自己设置安全性的名为“范围”的嵌套层次结构，可以将某些安全对象包含在其他安全对象中。 安全对象范围有 **服务器**、 **数据库**和 **架构**。  
   
-## <a name="securable-scope-server"></a>安全对象范围：“服务器”  
+## <a name="securable-scope-server"></a>安全对象范围：服务器  
  **服务器** 安全对象范围包含以下安全对象：  
   
 -   可用性组 (availability group)  
@@ -42,9 +42,9 @@ ms.locfileid: "67986572"
   
 -   服务器角色  
   
--   “数据库”  
+-   数据库  
   
-## <a name="securable-scope-database"></a>安全对象范围：“数据库”  
+## <a name="securable-scope-database"></a>安全对象范围：数据库  
  **数据库** 安全对象范围包含以下安全对象：  
   
 -   应用程序角色  
@@ -55,7 +55,7 @@ ms.locfileid: "67986572"
   
 -   证书  
   
--   约定  
+-   合约  
   
 -   全文目录  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67986572"
   
     -   表  
   
-    -   “查看” 
+    -   查看 
     
     -   外部表 
   

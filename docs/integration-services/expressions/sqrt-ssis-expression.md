@@ -14,10 +14,10 @@ ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a13d07fe353c4d10345cce609f4b82cd7019db6c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297396"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT（SSIS 表达式）
@@ -41,7 +41,7 @@ SQRT(numeric_expression)
 ## <a name="result-types"></a>结果类型  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果参数为空，则 SQRT 返回的结果为空。  
   
  如果参数是负值，则 SQRT 失败。  

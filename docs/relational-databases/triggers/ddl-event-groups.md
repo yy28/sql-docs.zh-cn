@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 388a9d8e11cc738b13df752868568cd4cea556d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68074168"
 ---
 # <a name="ddl-event-groups"></a>DDL 事件组
@@ -31,10 +31,10 @@ ms.locfileid: "68074168"
 ## <a name="events"></a>事件  
  DDL_DATABASE_LEVEL_EVENTS 下列出的事件在服务器（实例）或数据库级别执行。 DDL_SERVER_LEVEL_EVENTS 下列出的事件只在服务器级别执行。  
   
-|parent_type|type|NAME|  
+|parent_type|type|name|  
 |-|-|-|
-|NULL|296|ALTER_SERVER_CONFIGURATION|  
-|NULL|10001|DDL_EVENTS|  
+|Null|296|ALTER_SERVER_CONFIGURATION|  
+|Null|10001|DDL_EVENTS|  
 |10001|10016|   DDL_DATABASE_LEVEL_EVENTS|  
 |10016|10027|      DDL_ASSEMBLY_EVENTS|  
 |10027|102|         ALTER_ASSEMBLY|  

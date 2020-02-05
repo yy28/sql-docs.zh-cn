@@ -14,10 +14,10 @@ ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 63c2638f6b6f58d3c3cafd8e8dd601a5a467b210
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987330"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 代理中的 Jobs 对象
@@ -26,7 +26,7 @@ ms.locfileid: "67987330"
   
  下表介绍了 **SQLAgent:Jobs** 计数器。  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |**Active Jobs**|该计数器报告当前运行的作业数。|  
 |**Failed jobs**|该计数器报告失败退出的作业数。|  
@@ -37,7 +37,7 @@ ms.locfileid: "67987330"
   
  对象中的每个计数器均包含以下实例：  
   
-|实例|描述|  
+|实例|说明|  
 |--------------|-----------------|  
 |**_Total**|所有作业的信息。|  
 |**警报**|由警报启动的作业的信息。|  

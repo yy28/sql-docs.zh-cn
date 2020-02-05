@@ -17,10 +17,10 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1c3ccadbe443ca555e5386ea3d3434405ae97461
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291471"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清除转换
@@ -47,9 +47,9 @@ ms.locfileid: "71291471"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [在数据质量客户端中打开 Integration Services 项目](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
+-   [在 Data Quality Client 中打开 Integration Services 项目](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
--   [将清理项目值导入到域中](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
+-   [将清理项目值导入域](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
 -   [将数据质量规则应用于数据源](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
@@ -138,7 +138,7 @@ ms.locfileid: "71291471"
  **标准化输出**  
  指示是否根据为域定义的输出格式以标准化格式输出数据。 有关标准化格式的详细信息，请参阅 [数据清理](../../../data-quality-services/data-cleansing.md)。  
   
- **置信度**  
+ **Confidence**  
  指示是否包括已更正数据的置信度。 置信度指示 DQS 对更正或建议的确信程度。 有关置信度的详细信息，请参阅 [数据清理](../../../data-quality-services/data-cleansing.md)。  
   
  **原因**  
@@ -163,5 +163,5 @@ ms.locfileid: "71291471"
   
 2.  在连接区域中单击右键，依次单击“新建连接”  和“DQS”  。  
   
-3.  单击 **“添加”** 。  
+3.  单击“添加”  。  
   

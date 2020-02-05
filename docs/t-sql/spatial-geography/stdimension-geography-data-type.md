@@ -18,10 +18,10 @@ ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac39de3b0fe0d85aa65ef59661a512988acd4a36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042327"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension（geography 数据类型）
@@ -39,9 +39,9 @@ ms.locfileid: "68042327"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int   
   
- CLR 返回类型：**SqlInt32**  
+ CLR 返回类型：SqlInt32   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 **geography** 实例为空，则 STDimension() 返回 -1。  
   
 ## <a name="examples"></a>示例  
@@ -60,9 +60,9 @@ FROM @temp;
   
  然后，该示例返回每个 `geography` 实例的维度。  
   
-|NAME|dim|  
+|name|dim|  
 |----------|---------|  
-|点|0|  
+|Point|0|  
 |LineString|1|  
 |Polygon|2|  
   

@@ -13,10 +13,10 @@ ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a282e3e9493bb1cfbcc57186a8e1b9f53faf22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095464"
 ---
 # <a name="add-business-logic-to-xml-data"></a>将业务逻辑添加到 XML 数据
@@ -31,7 +31,7 @@ ms.locfileid: "68095464"
   
 -   您可以编写 Transact-SQL 存储过程和函数，对 XML 列进行处理以满足业务需要。  
   
-## <a name="example-applying-xsl-transformation"></a>例如：应用 XSL 转换  
+## <a name="example-applying-xsl-transformation"></a>示例：应用 XSL 转换  
  考虑一个 CLR 函数 **TransformXml()** ，该函数接受 **xml** 数据类型实例和存储在文件中的 XSL 转换，并对 XML 数据应用转换，然后在结果中返回转换的 XML。 以下是用 C# 编写的主干函数：  
   
 ```  

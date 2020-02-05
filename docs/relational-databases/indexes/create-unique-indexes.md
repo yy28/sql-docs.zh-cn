@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898593"
 ---
 # <a name="create-unique-indexes"></a>创建唯一索引
@@ -123,11 +123,11 @@ ms.locfileid: "67898593"
   
 11. 在主网格中，在“(常规)”  下，选择“是唯一的”  ，然后从列表中选择“是”  。  
   
-12. 可选：在主网格中，在“表设计器”下，选择“忽略重复键”，然后从列表中选择“是”    。 如果要忽略尝试添加导致唯一索引中有重复键的数据，请这样做。  
+12. 可选：在主网格中，在 **“表设计器”** 下，选择 **“忽略重复键”** ，然后从列表中选择 **“是”** 。 如果要忽略尝试添加导致唯一索引中有重复键的数据，请这样做。  
   
-13. 单击 **“关闭”** 。  
+13. 单击“关闭”  。  
   
-14. 在“文件”  菜单上，单击“保存 _table\_name_”  。  
+14. 在“文件”  菜单上，单击“保存 **table**name _”\__ 。  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>使用对象资源管理器创建唯一索引  
   
@@ -145,9 +145,9 @@ ms.locfileid: "67898593"
   
 7.  在“索引键列”下，单击“添加…”   。  
   
-8.  在“从 table\_name  选择列”  对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
+8.  在“从 table**name** _选择列”\__ 对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
-9. 单击“确定”  。  
+9. 单击“确定”。   
   
 10. 在 **“新建索引”** 对话框中，单击 **“确定”** 。  
   

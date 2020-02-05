@@ -19,10 +19,10 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077913"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 数据类型方法引用
@@ -42,7 +42,7 @@ hierarchyid 数据类型是一种长度可变的系统数据类型  。 可使�
   
 hierarchyid 类型可以作为 SqlHierarchyId 数据类型供 CLR 客户端使用   。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 hierarchyid 类型对层次结构树中有关单个节点的信息进行逻辑编码的方法是：对从树的根目录到该节点的路径进行编码  。 这种路径在逻辑上表示为一个在根之后被访问的所有子级的节点标签序列。 表示形式以一条斜杠开头，只访问根的路径由单条斜杠表示。 对于根以下的各级，各标签编码为由点分隔的整数序列。 子级之间的比较就是按字典顺序比较由点分隔的整数序列。 每个级别后面紧跟着一个斜杠。 因此斜杠将父级与其子级分隔开。 例如，以下是长度分别为 1 级、2 级、2 级、3 级和 3 级的有效 hierarchyid 路径  ：
   
 -   /  
@@ -74,9 +74,9 @@ hierarchyid 数据类型可按如下方法转换为其他数据类型  ：
 可在任何复制的表中使用类型为 hierarchyid 的列  。 应用程序的要求取决于复制是单向的还是双向的，同时还取决于所用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本。
   
 ### <a name="one-directional-replication"></a>单向复制
-单向复制包括快照复制、事务复制，以及在订阅服务器上不做更改的合并复制。 在单向复制过程中如何使用层次结构列取决于订阅服务器所运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本  。
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 发布服务器可以将 hierachyid 列复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 订阅服务器，而无须考虑任何特殊事项  。  
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 发布服务器必须转换 hierarchyid 列，才能将它们复制到运行 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 或更早版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的订阅服务器  。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更早版本不支持 hierarchyid 列  。 如果您使用的是这些版本之一，仍然可以将数据复制到订阅服务器。 为此，必须设置架构选项或发布兼容性级别（如果是合并复制），从而使列能够转换为兼容的数据类型。  
+单向复制包括快照复制、事务复制，以及在订阅服务器上不做更改的合并复制。 在单向复制过程中如何使用层次结构列取决于订阅服务器所运行的  **版本**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 发布服务器可以将 hierachyid 列复制到  **订阅服务器，而无须考虑任何特殊事项**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 发布服务器必须转换 hierarchyid 列，才能将它们复制到运行 **或更早版本的** 的订阅服务器[!INCLUDE[ssEW](../../includes/ssew-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更早版本不支持 hierarchyid 列  。 如果您使用的是这些版本之一，仍然可以将数据复制到订阅服务器。 为此，必须设置架构选项或发布兼容性级别（如果是合并复制），从而使列能够转换为兼容的数据类型。  
   
 这两种情况均支持列筛选。 这包括筛选出 hierarchyid 列  。 只要筛选器不包含 hierarchyid 列，就支持行筛选  。
   

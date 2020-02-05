@@ -15,10 +15,10 @@ ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b354f824da86e3bfcc5fb8d6279cb755048046d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051297"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml 数据类型方法的使用准则
@@ -71,9 +71,9 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 如果编译器无法确定在运行时能否确保单一性，则具有单一性要求的位置步骤、函数参数和运算符将返回错误。 此问题经常出现在非类型化数据上。 例如，查找属性时就需要使用单一的父元素。 通过一个用来选择单个父节点的序号即可满足此要求。 而在计算 node()  -value()  组合以提取属性值时可能不需要指定序号规范。 如下例所示。
 
-### <a name="example-known-singleton"></a>例如：已知单一实例
+### <a name="example-known-singleton"></a>示例：已知单一性
 
-在此示例中，nodes()  方法为每个 `<book>` 元素生成一个单独的行。 对 `<book>` 节点进行计算的 value()  方法提取 `@genre` 值，并且是单一属性。
+在此示例中，nodes()  方法为每个 `<book>` 元素生成一个单独的行。 对  **节点进行计算的 value()** `<book>` 方法提取 `@genre` 值，并且是单一属性。
 
 ```sql
 SELECT nref.value('@genre', 'varchar(max)') LastName
@@ -84,7 +84,7 @@ XML 架构用于对类型化的 XML 进行类型检查。 如果将某个节点�
 
 对于类型检查，务必注意 `//first-name[1]` 和 `(//first-name)[1]` 之间的差异。 前者返回一组 `<first-name>` 节点，其中每个节点都是其同级节点中最左侧的 `<first-name>` 节点。 后者返回 XML 实例中按文档顺序排列的第一个单一的 `<first-name>` 节点。
 
-### <a name="example-using-value"></a>例如：使用 value()
+### <a name="example-using-value"></a>示例：使用 value()
 
 下面对非类型化 XML 列的查询导致发生静态的编译错误。这是因为 value()  希望将一个单一节点作为第一个参数，而编译器无法确定在运行时是否将仅有一个 `<last-name>` 节点：
 

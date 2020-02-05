@@ -18,10 +18,10 @@ ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f0bb90a3dd13ffd245c1cac5a9ee1610055aae55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929287"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67929287"
 
   使用 SQL Server Audit 功能删除服务器审核对象。 有关 SQL Server Audit 的详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ DROP SERVER AUDIT audit_name
     [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  为了对审核进行任何更改，必须将审核的状态设置为 OFF 选项。 使用 STATE=OFF 以外的任何选项启用审核时，如果执行 DROP AUDIT，您将接收到一条 MSG_NEED_AUDIT_DISABLED 错误消息。  
   
  DROP SERVER AUDIT 删除审核的元数据，但不会删除发出该命令之前收集的审核数据。  

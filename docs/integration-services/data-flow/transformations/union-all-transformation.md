@@ -19,10 +19,10 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0b9f629126dcd5a8f81eeab444aef50456589e4a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291008"
 ---
 # <a name="union-all-transformation"></a>Union All 转换
@@ -66,6 +66,6 @@ ms.locfileid: "71291008"
  从第二个或其他输入中可用输入列的列表中选择。 映射的列的元数据必须匹配。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [通过使用 Union All 转换来合并数据](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
+ [使用 Union All 转换来合并数据](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
   
   

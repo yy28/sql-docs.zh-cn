@@ -25,10 +25,10 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 451743ebafe719b554384edd2d9abadb60e070f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039129"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68039129"
 
 从所有缓存中释放所有未使用的缓存条目。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会事先在后台清理未使用的缓存条目，以使内存可用于当前条目。 但是，可以使用此命令从每个缓存中或者从指定的 Resource Governor 池缓存中手动删除未使用的条目。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
 ```sql
@@ -58,7 +58,7 @@ MARK_IN_USE_FOR_REMOVAL
 NO_INFOMSGS  
 取消显示所有信息性消息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 运行 DBCC FREESYSTEMCACHE 可清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 清除计划缓存将导致对所有即将到来的执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中的每个已清除缓存存储，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志都包含以下信息性消息：“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 刷新了 %d 次(计划缓存中的)'%s' 缓存存储，因为有 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 操作。” 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。
 
 ## <a name="result-sets"></a>结果集  

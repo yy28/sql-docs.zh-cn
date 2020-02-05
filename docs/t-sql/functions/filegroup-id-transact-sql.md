@@ -22,18 +22,18 @@ ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9902a85fbede75926bfbcb3dd48e19f622c19ea3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071480"
 ---
-# <a name="filegroupid-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
+# <a name="filegroup_id-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 此函数返回指定文件组名称的文件组标识 (ID) 号。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,11 +47,11 @@ filegroup_name  是类型 sysname  的表达式，它表示文件组 ID `FILEGRO
 ## <a name="return-types"></a>返回类型  
 **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应    。  
   
 ## <a name="examples"></a>示例  
-此示例将返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中名为 `PRIMARY` 的文件组的文件组 ID。  
+此示例将返回 `PRIMARY` 数据库中名为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的文件组的文件组 ID。  
   
 ```  
 SELECT FILEGROUP_ID('PRIMARY') AS [Filegroup ID];  

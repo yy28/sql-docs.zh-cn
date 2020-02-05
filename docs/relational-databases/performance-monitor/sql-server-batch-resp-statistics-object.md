@@ -13,10 +13,10 @@ ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 87045f104bdf183c91c3b60b0d85c4a64929359e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987192"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, Batch Resp Statistics 对象
@@ -26,7 +26,7 @@ ms.locfileid: "67987192"
 下表介绍了 SQL Server **Batch Resp Statistics** 性能对象。
 
 
-|**SQL Server Batch Resp Statistics 计数器**|描述|  
+|**SQL Server Batch Resp Statistics 计数器**|说明|  
 |-------------|-----------------|  
 |**Batches >=000000ms & \<000001ms**|其响应时间大于或等于 0ms 但小于 1ms 的 SQL 批处理的数目|
 |**Batches >=000001ms & \<000002ms**|其响应时间大于或等于 1ms 但小于 2ms 的 SQL 批处理的数目|
@@ -48,7 +48,7 @@ ms.locfileid: "67987192"
 
 对象中的每个计数器均包含以下实例：  
   
-|项|描述|  
+|Item|说明|  
 |----------|-----------------|  
 |**CPU Time:Requests**|CPU 在请求上花费的时间。|  
 |**CPU Time:Total(ms)**|CPU 在批处理上花费的总时间。|  
@@ -56,5 +56,5 @@ ms.locfileid: "67987192"
 |**Elapsed Time:Total(ms)**|批处理的占用时间。|  
 
 ## <a name="see-also"></a>另请参阅
-[SQL Server Plan Cache 对象](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
+[SQL Server - Plan Cache 对象](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

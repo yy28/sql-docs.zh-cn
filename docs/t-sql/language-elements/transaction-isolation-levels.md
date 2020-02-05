@@ -17,10 +17,10 @@ ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28a8de0654fe6e083b52e83d85653a0d9856d351
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072201"
 ---
 # <a name="transaction-isolation-levels"></a>事务隔离级别
@@ -48,7 +48,7 @@ ms.locfileid: "68072201"
   
  下表概述了各种隔离级别下的元数据访问。  
   
-|隔离级别|是否支持|遵守|  
+|隔离级别|支持|遵守|  
 |---------------------|---------------|-------------|  
 |READ UNCOMMITTED|否|不保证|  
 |READ COMMITTED|是|是|  

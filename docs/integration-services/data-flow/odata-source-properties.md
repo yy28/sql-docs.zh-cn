@@ -11,10 +11,10 @@ ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d2db1405817c3fa6033082c7a1e285b2edca6ce0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298194"
 ---
 # <a name="odata-source-properties"></a>OData 源属性
@@ -26,13 +26,13 @@ ms.locfileid: "71298194"
 
 ## <a name="properties"></a>属性 
 
-|属性|描述|  
+|properties|说明|  
 |-|-|  
 |CollectionName|从 OData 服务检索的集合的名称。 **“CollectionName”** 属性在 **UseResourcePath** 为 False 时使用。<br /><br /> 此属性能够使用表达式，可以在运行时设置值。 但是，如果集合的元数据与设计时使用的元数据不匹配，会出现验证错误，从而导致数据流执行失败。|  
-|DefaultStringLength|此值为没有最大长度的字符串列指定默认长度。<br /><br /> 默认值：  4000|  
+|DefaultStringLength|此值为没有最大长度的字符串列指定默认长度。<br /><br /> **默认值：** 4000|  
 |查询|OData 查询参数。 此属性能够使用表达式，可以在运行时设置。|  
 |ResourcePath|在需要指定完整资源路径（而不仅仅是选择集合名称）时使用此属性。 此属性在 **UseResourcePath** 为 True 时使用。|  
-|UseResourcePath|设置为 True 时， **ResourcePath** 值追加到基 URL 以确定 OData 馈送位置。 设置为 False 时 ，使用 **CollectionName** 值。<br /><br /> 默认值：  False|  
+|UseResourcePath|设置为 True 时， **ResourcePath** 值追加到基 URL 以确定 OData 馈送位置。 设置为 False 时 ，使用 **CollectionName** 值。<br /><br /> **默认值：** False|  
   
 ## <a name="see-also"></a>另请参阅
 [OData 源](odata-source.md)

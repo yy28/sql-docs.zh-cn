@@ -14,10 +14,10 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 906809946b22012e6a8831017fb57769fc6063b8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298972"
 ---
 # <a name="package-properties-dialog-box"></a>“包属性”对话框
@@ -57,7 +57,7 @@ ms.locfileid: "71298972"
  **名称**  
  显示包的名称。  
   
- **Identifier**  
+ **标识符**  
  列出包 ID。  
   
  **入口点**  
@@ -65,7 +65,7 @@ ms.locfileid: "71298972"
   
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中为父包和子包设置此属性，方法是在解决方案资源管理器中右键单击包，然后单击“入口点包”  。  
   
- **Description**  
+ **说明**  
  显示包的可选说明。  
   
   

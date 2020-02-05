@@ -18,10 +18,10 @@ ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9d8b500415aa5e6812524fff6403735a11cf765a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017543"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance（geometry 数据类型）
@@ -40,7 +40,7 @@ ms.locfileid: "68017543"
  distance   
  一个 **float** 表达式，用于指定与围绕其计算缓冲区的 **geometry** 实例的距离。  
   
- *tolerance*  
+ tolerance   
  一个 float 表达式，用于指定缓冲区距离的公差  。  
   
  *公差*是指理想的缓冲区距离与返回的线性近似值之间的最大偏差。  
@@ -53,15 +53,15 @@ ms.locfileid: "68017543"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  *tolerance* 参数必须大于零。 如果 *tolerance* <= 0，则引发 `System.ArgumentOutOfRangeException`。  
   
 > [!NOTE]  
 >  由于 *tolerance* 的类型为 **float**，如果指定的 tolerance 值很小，则可能会由于浮点类型舍入问题而引发 `System.Runtime.InteropServices.COMException`。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 distance > 0，则返回 Polygon 或 MultiPolygon 实例    。  
   
 > [!NOTE]  

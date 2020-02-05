@@ -12,13 +12,13 @@ ms.assetid: b09a95e2-0ffe-4847-aa77-51e6639259f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5b4872e87ffa3c84be8a93e5faeb597d90c722c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087621"
 ---
-# <a name="mssqlserver7923"></a>MSSQLSERVER_7923
+# <a name="mssqlserver_7923"></a>MSSQLSERVER_7923
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,9 +32,9 @@ ms.locfileid: "68087621"
 |符号名称|DBCC2_SUMMARY_TABLE_NAME|  
 |消息正文|表 TABLE                对象 ID O_ID。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 这是来自 DBCC CHECKALLOC 命令的信息性消息。 在该消息中，表中所有分配单元的分配信息列表顶部都包含表名和表 ID。  
   
 ## <a name="user-action"></a>用户操作  
-None  
+无  
   

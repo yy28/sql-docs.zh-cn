@@ -16,10 +16,10 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c47bd07fd48431f850744e58ba2838b61d5969d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291550"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>使用模糊分组转换标识相似数据行
@@ -79,7 +79,7 @@ ms.locfileid: "71291550"
   
 18. 还可以清除标记分隔符复选框以忽略数据中的分隔符。  
   
-19. 单击“确定”  。  
+19. 单击“确定”。   
   
 20. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

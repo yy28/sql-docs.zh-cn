@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 51dc2ba27e346dea75f1bd347491d4932695fd43
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077536"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>使用 ssis-conf 在 Linux 上配置 SQL Server Integration Services
@@ -23,7 +23,7 @@ ms.locfileid: "68077536"
 
 也可以使用 `ssis-conf` 实用工具配置以下属性：
 
-| Command | 描述 |
+| Command | 说明 |
 |-------------|---------------------------------------------------------------------|
 | set-edition | 设置 SQL Server 的版本                                       |
 | telemetry   | 启用或禁用 SQL Server Integration Services 遥测服务 |
@@ -32,7 +32,7 @@ ms.locfileid: "68077536"
 
 ## <a name="run-ssis-conf"></a>运行 ssis-conf
 
-本文中的示例通过指定完整路径 `/opt/ssis/bin/ssis-conf` 来运行 `ssis-conf`。 如果在运行 `ssis-conf` 之前导航到该位置，则可以在当前目录 (`./ssis-conf`) 的上下文中运行该实用工具。
+本文中的示例通过指定完整路径 `ssis-conf` 来运行 `/opt/ssis/bin/ssis-conf`。 如果在运行 `ssis-conf` 之前导航到该位置，则可以在当前目录 (`./ssis-conf`) 的上下文中运行该实用工具。
 
 确保以根权限运行本文中所述的命令。 例如，运行 `sudo /opt/ssis/bin/ssis-conf setup` 而不是 `/opt/ssis/bin/ssis-conf setup`。
 
@@ -140,8 +140,8 @@ enabled = Y
 lcid = 2052
 ```
 
-## <a name="related-content-about-ssis-on-linux"></a>有关 Linux 上 SSIS 的相关内容
+## <a name="related-content-about-ssis-on-linux"></a>有关 Linux 上的 SSIS 的相关内容
 -   [使用 SSIS 在 Linux 上提取、转换和加载数据](sql-server-linux-migrate-ssis.md)
 -   [在 Linux 上安装 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
--   [适用于 Linux 上 SSIS 的限制和已知问题](sql-server-linux-ssis-known-issues.md)
+-   [适用于 Linux 上的 SSIS 的限制和已知问题](sql-server-linux-ssis-known-issues.md)
 -   [使用 cron 在 Linux 上计划 SQL Server Integration Services 包执行](sql-server-linux-schedule-ssis-packages.md)

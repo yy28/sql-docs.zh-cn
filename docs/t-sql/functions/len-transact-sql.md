@@ -20,11 +20,11 @@ ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7fa3d9db220dcacf425399600166858300489dc
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 0b6f470a08c3605f9ea5afa5fff1f7b6cbd17f1b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72798424"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "72798424"
 > [!NOTE]  
 > 若要返回用于表示表达式的字节数，请使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 函数。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +52,7 @@ LEN ( string_expression )
   
  如果使用 SC 排序规则，则返回的整数值将 UTF-16 代理项对作为单个字符计数。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 LEN 不包括尾随空格。 如果这是个问题，请考虑使用 [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md) 函数，该函数不会修整字符串。 如果处理的是 unicode 字符串，DATALENGTH 会返回可能不等于字符数的数字。 以下示例演示 LEN 和带有尾随空格的 DATALENGTH。  
   
 ```sql  
@@ -66,7 +66,7 @@ SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];
 ```  
 
 > [!NOTE]
-> 当使用 [LEN](../../t-sql/functions/len-transact-sql.md) 返回为给定字符串表达式编码的字符数或使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 返回给定字符串表达式的大小（以字节为单位）时，输出可能会不同，具体取决于数据类型和列中使用的编码类型。 若要详细了解不同编码类型的存储区别，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。
+> 使用 [LEN](../../t-sql/functions/len-transact-sql.md) 返回编码到给定字符串表达式中的字符数，使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 返回给定字符串表达式的字节大小。 这些输出可能会因列中使用的数据类型和编码类型而异。 若要详细了解不同编码类型的存储区别，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。
 
 ## <a name="examples"></a>示例  
  以下示例在 `FirstName` 地区的人的 `Australia` 中选择字符数和数据。 本示例使用 AdventureWorks 数据库。  

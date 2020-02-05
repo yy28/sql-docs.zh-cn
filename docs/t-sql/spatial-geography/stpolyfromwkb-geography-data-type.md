@@ -18,16 +18,16 @@ ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 68ce1a309d3b6abf77e2fe9d3f571f9c4f738cef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120802"
 ---
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式返回 geographyPolygon 实例。
+从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式返回 geographyPolygon 实例  。
   
 ## <a name="syntax"></a>语法  
   
@@ -37,21 +37,21 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
 ```  
   
 ## <a name="arguments"></a>参数  
- WKB_polygon  
- 希望返回的 geographyPolygon 实例的 WKB 表示形式。 WKB_polygon 是一个 varbinary(max) 表达式。  
+ WKB_polygon   
+ 希望返回的 geographyPolygon 实例的 WKB 表示形式  。 WKB_polygon 是一个 varbinary(max) 表达式   。  
   
- SRID  
- 一个 int 表达式，表示希望返回的 geographyPolygon 实例的空间引用 ID (SRID)。  
+ SRID   
+ 一个 int 表达式，表示希望返回的 geographyPolygon 实例的空间引用 ID (SRID)   。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
- OGC 类型：**多边形**  
+ OGC 类型：Polygon   
   
-## <a name="remarks"></a>Remarks  
- 如果输入的格式不正确，此方法将引发 FormatException。  
+## <a name="remarks"></a>备注  
+ 如果输入的格式不正确，此方法将引发 FormatException  。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STPolyFromWKB()` 创建 `geography` 实例。  

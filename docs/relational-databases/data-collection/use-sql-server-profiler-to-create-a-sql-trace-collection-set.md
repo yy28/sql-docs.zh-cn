@@ -12,10 +12,10 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5f11e6c98d53cd5008c72510282a0d31019a320d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056451"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>使用 SQL Server Profiler 创建 SQL 跟踪收集组
@@ -34,7 +34,7 @@ ms.locfileid: "74056451"
   
 ### <a name="create-and-export-a-sql-server-profiler-trace"></a>创建和导出 SQL Server Profiler 跟踪  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，打开 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 （在“工具”  菜单上，单击“SQL Server Profiler”  。）  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 （在“工具”  菜单上，单击“SQL Server Profiler”  。）  
   
 2.  在 **“连接到服务器”** 对话框中，单击 **“取消”** 。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "74056451"
   
 5.  在 **“连接到服务器”** 对话框中，选择要连接到的服务器，然后单击 **“连接”** 。  
   
-     此时，将显示“跟踪属性”  对话框。  
+     此时，将显示 **“跟踪属性”** 对话框。  
   
 6.  在 **“常规”** 选项卡上，请执行下列操作：  
   

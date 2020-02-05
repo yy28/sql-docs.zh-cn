@@ -23,18 +23,18 @@ ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 569486f5806ac6f0d62f32fa9ac17efc1d43a85a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904374"
 ---
-# <a name="errorline-transact-sql"></a>ERROR_LINE (Transact-SQL)
+# <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函数返回出现错误的行号，该错误导致执行了 TRY…CATCH 构造的 CATCH 块。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +52,7 @@ ERROR_LINE ( )
 -   如果在存储过程或触发器中出现错误，则返回例程中的行号  
 -   如果在 CATCH 块作用域外调用，则返回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 可在 CATCH 块作用域内的任意位置调用 `ERROR_LINE`。  
   
 `ERROR_LINE` 返回出现错误的行号。 无论在 CATCH 块作用域内的任何位置调用 `ERROR_LINE`，以及无论调用 `ERROR_LINE` 多少次，都会发生这种情况。 这与函数不同，例如 @@ERROR。 @@ERROR 在导致错误的语句的后一个语句中或 CATCH 块的第一个语句中返回错误号。  
@@ -61,7 +61,7 @@ ERROR_LINE ( )
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-errorline-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_LINE  
+### <a name="a-using-error_line-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_LINE  
 下面的代码示例显示生成被零除错误的 `SELECT` 语句。 `ERROR_LINE` 返回出现错误的行号。  
   
 ```  
@@ -89,7 +89,7 @@ ErrorLine
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-errorline-in-a-catch-block-with-a-stored-procedure"></a>B. 带存储过程在 CATCH 块中使用 ERROR_LINE  
+### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B. 带存储过程在 CATCH 块中使用 ERROR_LINE  
 下面的示例显示生成被零除错误的存储过程。 `ERROR_LINE` 返回出现错误的行号。  
   
 ```  
@@ -129,7 +129,7 @@ ErrorLine
    
 ```
 
-### <a name="c-using-errorline-in-a-catch-block-with-other-error-handling-tools"></a>C. 带其他错误处理工具在 CATCH 块中使用 ERROR_LINE  
+### <a name="c-using-error_line-in-a-catch-block-with-other-error-handling-tools"></a>C. 带其他错误处理工具在 CATCH 块中使用 ERROR_LINE  
 下面的代码示例显示生成被零除错误的 `SELECT` 语句。 `ERROR_LINE` 返回出现错误的行号，以及与错误本身相关的信息。  
   
 ```  

@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593821"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>配置 Always Encrypted 的 enclave 类型服务器配置选项
@@ -24,7 +24,7 @@ ms.locfileid: "73593821"
 
 列加密 enclave 类型  服务器配置选项控制用于 Always Encrypted 的安全 enclave 类型。 该选项可以设置为以下值之一：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-------------------|-----------------| 
 |0|没有安全 enclave  。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不会为 Always Encrypted 初始化安全 enclave。 因此，具有安全 enclave 的 Always Encrypted 功能将不可用。|  
 |1|基于虚拟化的安全性 (VBS)  。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会尝试初始化基于虚拟化的安全性 (VBS) enclave。
@@ -72,7 +72,7 @@ SELECT
 FROM sys.configurations
 WHERE [name] = 'column encryption enclave type'; 
 ```  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
  [管理具有安全 enclave 的 Always Encrypted 的密钥](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)
 
 ## <a name="see-also"></a>另请参阅  

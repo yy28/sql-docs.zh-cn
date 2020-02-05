@@ -22,10 +22,10 @@ ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9964745ede5eb49dd56fbcf2a8d75aee3633fc3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075203"
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68075203"
 
   将执行流更改到标签处。 跳过 GOTO 后面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，并从标签位置继续处理。 GOTO 语句和标签可在过程、批处理或语句块中的任何位置使用。 GOTO 语句可嵌套使用。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ GOTO label
  label   
  如果 GOTO 语句指向该标签，则其为处理的起点。 标签必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 无论是否使用 GOTO 语句，标签均可作为注释方法使用。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  GOTO 可出现在条件控制流语句、语句块或过程中，但它不能跳转到该批以外的标签。 GOTO 分支可跳转到定义在 GOTO 之前或之后的标签。  
   
 ## <a name="permissions"></a>权限  

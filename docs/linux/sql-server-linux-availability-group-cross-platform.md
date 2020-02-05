@@ -11,10 +11,10 @@ ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68045195"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>在 Windows 和 Linux 上配置 SQL Server AlwaysOn 可用性组（跨平台）
@@ -23,11 +23,11 @@ ms.locfileid: "68045195"
 
 本文介绍后述操作的步骤：创建“Always On 可用性组 (AG)”，且一个副本在 Windows 服务器上，另一个副本在 Linux 服务器上。 此配置是跨平台的，因为副本在不同的操作系统上。 使用此配置从一个平台迁移到另一个平台或实现灾难恢复 (DR)。 此配置不支持高可用性，因为没有可用于管理跨平台配置的群集解决方案。 
 
-![无混合](./media/sql-server-linux-availability-group-overview/image1.png)
+![混合 None](./media/sql-server-linux-availability-group-overview/image1.png)
 
 在继续之前，应熟悉 Windows 和 Linux 上 SQL Server 实例的安装和配置。 
 
-## <a name="scenario"></a>应用场景
+## <a name="scenario"></a>场景
 
 在此方案中，两台服务器使用不同的操作系统。 名为 `WinSQLInstance` 的 Windows Server 2016 承载主副本。 名为 `LinuxSQLInstance` 的 Linux 服务器承载次要副本。
 

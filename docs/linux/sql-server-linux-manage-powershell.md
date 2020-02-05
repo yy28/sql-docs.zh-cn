@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.openlocfilehash: 52db0986bb6af34e1dc034d95146a96d3fdcf246
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000128"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 PowerShell 管理 Linux 上的 SQL Server
@@ -37,7 +37,7 @@ ms.locfileid: "68000128"
 PowerShell
 ```
 
-SQL Server 提供名为 SqlServer 的 PowerShell 模块  。 可以使用 SqlServer 模块将 SQL Server 组件（SQL Server 提供程序和 cmdlet）导入到 PowerShell 环境或脚本  。
+SQL Server 提供名为“SqlServer”的 PowerShell 模块  。 可以使用 SqlServer 模块将 SQL Server 组件（SQL Server 提供程序和 cmdlet）导入到 PowerShell 环境或脚本  。
 
 在 PowerShell 提示符处复制并粘贴以下命令，将 SqlServer 模块导入当前的 PowerShell 会话  ：
 
@@ -63,9 +63,9 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 使用 Windows 上的 PowerShell 连接到 Linux 上的 SQL Server 实例，并显示几个服务器属性。
 
-在 PowerShell 提示符处复制并粘贴以下命令。 运行这些命令时，PowerShell 将：
+在 PowerShell 提示符下复制并粘贴以下命令。 运行这些命令时，PowerShell 将：
 - 显示提示输入实例的主机名或 IP 地址的对话框
-- 显示提示输入凭据的 Windows PowerShell 凭据请求对话框  。 可以使用 SQL 用户名和 SQL 密码连接到 Linux 上的 SQL Server 实例  
+- 显示提示输入凭据的 Windows PowerShell 凭据请求对话框  。 可以使用 *SQL 用户名*和 *SQL 密码*连接到 Linux 上的 SQL Server 实例
 - 使用 Get-SqlInstance cmdlet 连接到服务器，并显示一些属性  
 
 也可选择仅将 `$serverInstance` 变量替换为 SQL Server 实例的 IP 地址或主机名。
@@ -94,7 +94,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 连接到 SQL Server 实例的另一种方法是使用 [SQL Server PowerShell 提供程序](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)。  使用此提供程序可以导航 SQL Server 实例，就像在对象资源管理器中（但在命令行中）导航树结构一样。  此提供程序默认显示为名为 `SQLSERVER:\` 的 PSDrive，可用于连接和导航域帐户有权访问的 SQL Server 实例。  有关如何为 Linux 上的 SQL Server 设置 Active Directory 身份验证的信息，请参阅[配置步骤](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps)。
 
-还可以使用 SQL Server PowerShell Provider 进行 SQL 身份验证。 为此，请使用 `New-PSDrive` cmdlet 创建新的 PSDrive，并提供适当的凭据以进行连接。
+还可以使用 SQL Server PowerShell 提供程序进行 SQL 身份验证。 为此，请使用 `New-PSDrive` cmdlet 创建新的 PSDrive，并提供适当的凭据以进行连接。
 
 在下面的示例中，你将看到一个有关如何使用 SQL 身份验证创建新 PSDrive 的示例。
 
@@ -134,10 +134,10 @@ AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 
 以下步骤使用 Windows 上的 PowerShell 检查连接到 Linux 上 SQL Server 实例的错误日志。 我们还将使用 Out-GridView cmdlet 以网格视图样式显示错误日志中的信息  。
 
-在 PowerShell 提示符处复制并粘贴以下命令。 它们可能会运行几分钟。 这些命令执行以下操作：
+在 PowerShell 提示符下复制并粘贴以下命令。 它们可能会运行几分钟。 这些命令执行以下操作：
 - 显示提示输入实例的主机名或 IP 地址的对话框
-- 显示提示输入凭据的 Windows PowerShell 凭据请求对话框  。 可以使用 SQL 用户名和 SQL 密码连接到 Linux 上的 SQL Server 实例  
-- 使用 Get-SqlErrorLog cmdlet 连接到 Linux 上的 SQL Server 实例，并检索自昨天起的错误日志  
+- 显示提示输入凭据的 Windows PowerShell 凭据请求对话框  。 可以使用 *SQL 用户名*和 *SQL 密码*连接到 Linux 上的 SQL Server 实例
+- 使用 **Get-SqlErrorLog** cmdlet 连接到 Linux 上的 SQL Server 实例，并检索自**昨天**起的错误日志
 - 将输出传送到 Out-GridView cmdlet 
 
 也可以选择将 `$serverInstance` 变量替换为 SQL Server 实例的 IP 地址或主机名。

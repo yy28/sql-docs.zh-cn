@@ -14,10 +14,10 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a9e62710d28b9b7e0ad66ff157b841f939d6dfaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041089"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>对等 - 对等复制中的冲突检测
@@ -87,7 +87,7 @@ ms.locfileid: "68041089"
   
 -   尝试通过允许分发代理继续应用所做的更改，再次同步节点：  
   
-    1.  执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：为 @property 参数指定“p2p_continue_onconflict”，为 @value 参数指定 **true**。  
+    1.  执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：为 @property 参数指定“p2p_continue_onconflict”，为 **参数指定**true@value。  
   
     2.  重新启动分发代理。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68041089"
         > [!NOTE]  
         >  如果在执行该步骤之后数据不一致，则必须在具有最高优先级的节点上手动更新行，然后允许从该节点传播所做的更改。 如果拓扑中不再有发生冲突的更改，则所有节点将保持一致状态。  
   
-    5.  执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：为 @property 参数指定“p2p_continue_onconflict”，为 @value 参数指定 **false**。  
+    5.  执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：为 @property 参数指定“p2p_continue_onconflict”，为 **参数指定**false@value。  
   
 ## <a name="see-also"></a>另请参阅  
  [@loopback_detection](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  

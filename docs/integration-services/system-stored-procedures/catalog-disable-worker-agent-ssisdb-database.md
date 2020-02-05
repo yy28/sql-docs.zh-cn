@@ -11,10 +11,10 @@ ms.assetid: 3f19dc4c-a000-4318-8fe1-e80d56720e66
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6830f2288ade02a10cf1f7adfb55575831b3c15c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296820"
 ---
 # <a name="catalogdisable_worker_agent-ssisdb-database"></a>catalog.disable_worker_agent（SSISDB 数据库）
@@ -52,7 +52,7 @@ GO
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
 
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  

@@ -12,13 +12,13 @@ ms.assetid: ee501d13-0bd9-4627-896c-ed5b1bdb88b3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6ffd88524bcb6d19c2882e77f7fc8b9c151c2f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037539"
 ---
-# <a name="mssqlserver945"></a>MSSQLSERVER_945
+# <a name="mssqlserver_945"></a>MSSQLSERVER_945
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68037539"
 |符号名称|DB_IS_SHUTDOWN|  
 |消息正文|由于文件不可访问，或者内存或磁盘空间不足，所以无法打开数据库“%.*ls”。  有关详细信息，请参阅 SQL Server 错误日志。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 由于缺少文件或其他资源，因此无法访问数据库。  
   
 ## <a name="user-action"></a>用户操作  

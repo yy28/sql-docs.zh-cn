@@ -14,10 +14,10 @@ ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e26df3ba35f81fb386cd208e8df207360510254c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297373"
 ---
 # <a name="--subtract-ssis-expression"></a>-（减）（SSIS 表达式）
@@ -42,10 +42,10 @@ numeric_expression1 - numeric_expression2
 ## <a name="result-types"></a>结果类型  
  由两个参数的数据类型决定。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  用括号将减法一元表达式括起来，以便确保按正确顺序对该表达式进行求值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果任意一个操作数为 Null，则结果为 Null。  
   
 ## <a name="expression-examples"></a>表达式示例  

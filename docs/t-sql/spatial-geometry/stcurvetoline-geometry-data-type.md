@@ -15,10 +15,10 @@ ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5bc1bdb1ece65113422af1e9a8ebe09de0db1fa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930300"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine（geometry 数据类型）
@@ -36,9 +36,9 @@ ms.locfileid: "67930300"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  为空的 geometry 实例变量返回空的 GeometryCollection 实例，为未初始化的 geometry 变量返回 NULL     。  
   
  该方法返回的多边形近似值取决于用于调用该方法的 **geometry** 实例：  

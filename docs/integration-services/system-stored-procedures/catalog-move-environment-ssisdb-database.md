@@ -11,10 +11,10 @@ ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc0bc77fda49e715879dceec60d616143952c265
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296839"
 ---
 # <a name="catalogmove_environment-ssisdb-database"></a>catalog.move_environment（SSISDB 数据库）
@@ -48,7 +48,7 @@ catalog.move_environment [ @source_folder = ] source_folder
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -68,7 +68,7 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   用户没有相应的权限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在移动过程中，项目中的环境引用未遵循此环境。 必须相应地更新环境引用。 即使通过移动环境损坏了环境引用，此存储过程也会成功。 在此存储过程完成之后，必须更新环境引用。  
   
 > [!NOTE]  

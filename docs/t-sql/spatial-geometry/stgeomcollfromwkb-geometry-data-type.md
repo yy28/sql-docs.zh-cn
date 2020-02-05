@@ -18,10 +18,10 @@ ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 09e6d37f95832ed2b3e9a51ef351e6f62e464b74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950218"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB（geometry 数据类型）
@@ -46,10 +46,10 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
-## <a name="remarks"></a>Remarks  
- `STGeomCollFromWKB()` 返回的 geometry 实例的 OGC 类型设置为 GeomCollection、MultiPolygon、MultiLineString 或 MultiPoint，具体取决于相应的 WKB 输入      。  
+## <a name="remarks"></a>备注  
+ **返回的 geometry 实例的 OGC 类型设置为 GeomCollection、MultiPolygon、MultiLineString 或 MultiPoint，具体取决于相应的 WKB 输入**`STGeomCollFromWKB()`     。  
   
  如果输入格式不正确，此方法会抛出 FormatException 异常。  
   

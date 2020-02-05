@@ -14,10 +14,10 @@ ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3ba0b574fea1974ab93c5cecf4346942df6c4a2c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75247485"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>更改数据库镜像会话中的事务安全 (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "75247485"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     其中，\<database>  为镜像数据库的名称。  
+     其中，*database>\<* 为镜像数据库的名称。  
   
 ### <a name="to-turn-off-transaction-safety"></a>关闭事务安全  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75247485"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     其中，\<database>  为镜像数据库。  
+     其中，*database>\<* 为镜像数据库。  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE 数据库镜像 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   

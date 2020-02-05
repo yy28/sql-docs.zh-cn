@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0db1834114a8bb2ea21d9fb566f2201dd933803c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68088480"
 ---
 # <a name="delete-columns-from-a-table"></a>从表中删除列
@@ -75,7 +75,7 @@ ms.locfileid: "68088480"
 
 1. 在“对象资源管理器”  中，右键单击要从其中删除列的表，然后选择“设计”  。
 2. 右键单击要删除的列，然后从快捷菜单上选择“删除列”  。
-3. 如果该列参与了关系（FOREIGN KEY 或 PRIMARY KEY），则将显示一条消息，提示您确认删除所选列及其关系。 选择 **“是”** 。
+3. 如果该列参与了关系（FOREIGN KEY 或 PRIMARY KEY），则将显示一条消息，提示您确认删除所选列及其关系。 选择“是”  。
 
 ## <a name="TsqlProcedure"></a> 使用 Transact-SQL
 

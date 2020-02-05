@@ -17,10 +17,10 @@ ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050669"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT 系统对象权限 (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68050669"
 
   授予对系统对象（例如，系统存储过程、扩展存储过程、函数以及视图）的权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  principal   
  指定要向其授予权限的主体。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可使用该语句授予对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的特定存储过程、扩展存储过程、表值函数、标量函数、视图、目录视图、兼容性视图、INFORMATION_SCHEMA 视图、动态管理视图以及系统表的权限。 上述每个系统对象都作为服务器的资源数据库 (mssqlsystemresource) 中的唯一记录而存在。 该资源数据库为只读。 指向对象的链接作为各数据库的 sys 架构中的一条记录显示。 可以授予、拒绝和撤消执行或选择系统对象的权限。  
   
  授予执行或选择对象的权限不一定会提供使用该对象所需的所有权限。 多数对象执行的操作都需要其他权限。 例如，被授予对 sp_addlinkedserver 的 EXECUTE 权限的用户无法创建链接服务器，除非该用户也是 sysadmin 固定服务器角色的成员。  

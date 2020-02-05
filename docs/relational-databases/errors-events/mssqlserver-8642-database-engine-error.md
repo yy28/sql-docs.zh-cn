@@ -12,13 +12,13 @@ ms.assetid: fc498059-202f-4d0b-8599-4e784b47c186
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 614f4a3db9ebce75f2f7c45c301745871b6f5b43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68063202"
 ---
-# <a name="mssqlserver8642"></a>MSSQLSERVER_8642
+# <a name="mssqlserver_8642"></a>MSSQLSERVER_8642
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68063202"
 |符号名称|EXCHNGSTART_ERR|  
 |消息正文|查询处理器未能为执行并行查询启动必要的线程资源。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 服务器中的线程资源不足。  
   
 ## <a name="user-action"></a>用户操作  

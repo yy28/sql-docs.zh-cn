@@ -19,10 +19,10 @@ ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ac25131e24aa89253abfc13eac69a4a60d0b7aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040288"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68040288"
 
 此函将返回有关程序集属性的信息。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ assembly_name
 property_name   
 要检索其有关信息的属性的名称。 property_name 可以具有下列值之一  ：
   
-|ReplTest1|描述|  
+|值|说明|  
 |---|---|
 |**CultureInfo**|程序集的区域设置。|  
 |**PublicKey**|程序集的公钥或公钥令牌。|  
@@ -62,7 +62,7 @@ property_name
 **sql_variant**
   
 ## <a name="examples"></a>示例  
-此示例假定在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中注册了 `HelloWorld` 程序集。 有关详细信息，请参阅 [Hello World 示例](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。
+此示例假定在 `HelloWorld` 数据库中注册了 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 程序集。 有关详细信息，请参阅 [Hello World 示例](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。
   
 ```sql
 USE AdventureWorks2012;  

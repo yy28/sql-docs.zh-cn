@@ -18,10 +18,10 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b09c2392f49bdfb8a86c33ce16679ec02c232310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078015"
 ---
 # <a name="unique-particle-attribution-constraint"></a>唯一粒子归属约束
@@ -81,11 +81,11 @@ ms.locfileid: "68078015"
 ## <a name="finding-more-information"></a>查找详细信息  
  以下文档由 World Wide Web 联合会 (W3C) 发布，其中包含唯一粒子归属约束的技术说明：  
   
- “XML 架构第 1 部分：结构第二版 - W3C 已修正的提议推荐”：  
+ “XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation”：  
   
--   第 3.8.6 节：模型组架构组件的相关约束  
+-   第 3.8.6 节：Constraints on Model Group Schema Components  
   
--   附录 H：唯一粒子归属约束（非标准）的分析  
+-   附录 H：Analysis of the Unique Particle Attribution Constraint (non-normative)  
   
  若要查看该文档，请访问 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)。  
   

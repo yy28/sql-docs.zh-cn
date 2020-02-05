@@ -11,10 +11,10 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244376"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>为 Always On 可用性组生成和分析 CLUSTER.LOG
@@ -46,7 +46,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 4.  单击“属性”  选项卡。  
   
-5.  修改“VerboseLogging”属性  。 默认情况下，VerboseLogging 设置为 `0`，它会报告信息、警告和错误  。 可以将“VerboseLogging”从 `0` 设置为 `2`  。  
+5.  修改“VerboseLogging”属性  。 默认情况下，VerboseLogging 设置为 **，它会报告信息、警告和错误**`0`。 可以将“VerboseLogging”从 **设置为**`0``2`。  
   
 6.  单击“确定”。   
   
@@ -59,9 +59,9 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 |标识符|源|CLUSTER.LOG 中的示例|  
 |----------------|------------|------------------------------|  
-|带有 `[RES]` 和 `[hadrag]` 前缀的消息|hadrres.dll（Always On 资源 DLL）|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server 可用性组 \<ag>：`[hadrag]` 脱机请求。<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server 可用性组 \<ag>：`[hadrag]` 租用线程已终止<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server 可用性组 \<ag>：`[hadrag]` 释放 SQL 语句<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server 可用性组 \<ag>：`[hadrag]` 从 SQL Server 断开连接|  
+|带有 `[RES]` 和 `[hadrag]` 前缀的消息|hadrres.dll（Always On 资源 DLL）|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server 可用性组 \<ag>: `[hadrag]` 脱机请求。<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server 可用性组 \<ag>: `[hadrag]` 租约线程已终止<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server 可用性组 \<ag>: `[hadrag]` 免费 SQL 语句<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server 可用性组 \<ag>: `[hadrag]` 从 SQL Server 断开连接|  
 |带有 `[RHS]` 前缀的消息|RHS.EXE（资源宿主子系统，hadrres.dll 的主机进程）|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] Resource ag 已脱机。 RHS 即将向 RCM 报告资源状态。|  
-|带有 `[RCM]` 前缀的消息|资源控制监视器（群集服务）|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move：首先使组“ag”脱机...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
+|带有 `[RCM]` 前缀的消息|资源控制监视器（群集服务）|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: 首先使“ag”组脱机...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
 |RcmApi/ClusAPI|API 调用，通常意味着 SQL Server 正在请求操作|000011d0.00000f80::2011/08/05-13:47:42.465 INFO  [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  
   
 ## <a name="debug-always-on-resource-dll-in-isolation"></a>隔离调试 Always On 资源 DLL  
@@ -69,7 +69,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  若要将可用性组与其他群集资源 DLL（包括其他可用性组）隔离，请执行以下操作以在单独的 rhs.exe 进程内运行 hadrres.dll：  
   
-1.  打开注册表编辑器并导航到以下项  ：HKEY_LOCAL_MACHINE\Cluster\Resources。 此项包含所有资源的关键值，每个关键值具有不同的 GUID。  
+1.  打开“注册表编辑器”并导航到以下项：HKEY_LOCAL_MACHINE\Cluster\Resources  。 此项包含所有资源的关键值，每个关键值具有不同的 GUID。  
   
 2.  查找包含与可用性组名称相匹配的“名称”值的资源关键字  。  
   

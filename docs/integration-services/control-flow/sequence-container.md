@@ -18,10 +18,10 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6255a348383804bb2bb37ae88b5d91dbc6db3eca
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293943"
 ---
 # <a name="sequence-container"></a>序列容器
@@ -31,7 +31,7 @@ ms.locfileid: "71293943"
 
   序列容器可定义作为包控制流子集的控制流。 序列容器将包分组到多个单独的控制流中，每个控制流包含一个或多个在整体包控制流中运行的任务和容器。  
   
- 除包含其他容器外，序列容器还可以包含多个任务。 将任务和容器添加到序列容器的过程与将它们添加到包的过程相似，唯一不同是把任务和容器拖动到序列容器，而不是拖动到包容器。 如果序列容器包含多个任务或容器，可以使用优先约束连接它们，如同在包中的操作一样。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+ 除包含其他容器外，序列容器还可以包含多个任务。 将任务和容器添加到序列容器的过程与将它们添加到包的过程相似，唯一不同是把任务和容器拖动到序列容器，而不是拖动到包容器。 如果序列容器包含多个任务或容器，可以使用优先约束连接它们，如同在包中的操作一样。 有关详细信息，请参阅 [优先约束](../../integration-services/control-flow/precedence-constraints.md)。  
   
  使用序列容器有许多好处：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "71293943"
   
 -   对许多任务进行分组，以便您可以通过展开和折叠序列容器，更轻松地管理这些任务。  
   
-     也可以创建任务组，这些任务组用 **“分组”** 框展开和折叠。 但是，“分组”  框是设计时功能，没有属性或运行时行为。 有关详细信息，请参阅[对组件分组或取消分组](../../integration-services/group-or-ungroup-components.md)  
+     也可以创建任务组，这些任务组用 **“分组”** 框展开和折叠。 但是，“分组”  框是设计时功能，没有属性或运行时行为。 有关详细信息，请参阅 [对组件分组或取消分组](../../integration-services/group-or-ungroup-components.md)  
   
 -   在序列容器上设置事务属性，以便为包控制流的子集定义事务。 采用这种方法，可以更详细地管理事务。  
   

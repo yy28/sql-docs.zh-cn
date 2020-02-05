@@ -13,10 +13,10 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: beba1f54c4eae683e6b35eb44408d84c5d812b84
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293232"
 ---
 # <a name="cdc-splitter"></a>CDC 拆分器
@@ -26,13 +26,13 @@ ms.locfileid: "71293232"
 
   CDC 拆分器将更改行的单个流从 CDC 源数据流拆分到多个不同的数据流中以便用于插入、更新和删除操作。 基于必需的列 `__$operation` 及其在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中的标准值来拆分数据流。  
   
-|操作的值|“输出”|描述|  
+|操作的值|输出|说明|  
 |------------------------|------------|-----------------|  
-|1|DELETE|删除的行|  
+|1|删除|删除的行|  
 |2|Insert|插入的行（使用“净值且具有合并”  CDC 模式时不可用）|  
-|3|Update|更新前的行（仅在使用“全部且具有旧值”  CDC 模式时可用）|  
-|4|Update|更新后的行（与更新前相同）|  
-|5|Update|合并行（仅在使用“净值且具有合并”  CDC 模式时可用）|  
+|3|更新|更新前的行（仅在使用“全部且具有旧值”  CDC 模式时可用）|  
+|4|更新|更新后的行（与更新前相同）|  
+|5|更新|合并行（仅在使用“净值且具有合并”  CDC 模式时可用）|  
 |其他|错误||  
   
  您可以使用拆分器连接到预定义的 INSERT、DELETE 和 UPDATE 输出以便进行进一步的处理。  

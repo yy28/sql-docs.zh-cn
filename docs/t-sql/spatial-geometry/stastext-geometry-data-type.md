@@ -18,10 +18,10 @@ ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1d38aee9c7fdb7f7142af5f5d72b5b08b0e18ccd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930197"
 ---
 # <a name="stastext-geometry-data-type"></a>STAsText（geometry 数据类型）
@@ -39,7 +39,7 @@ ms.locfileid: "67930197"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)   
   
- CLR 返回类型：**SqlChars**  
+ CLR 返回类型：SqlChars   
   
 ## <a name="examples"></a>示例  
  以下示例根据文本创建一个从 (0,0) 到 (2,3) 的 `LineString` geometry 实例。 `STAsText()` 以文本形式返回结果。  

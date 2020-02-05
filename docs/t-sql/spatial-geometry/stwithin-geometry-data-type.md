@@ -18,10 +18,10 @@ ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1ca7e74743773fb42a85300a37cc6b8aaa9d8f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066264"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin（geometry 数据类型）
@@ -38,14 +38,14 @@ ms.locfileid: "68066264"
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 将与调用 `STWithin()` 的实例进行比较的另一个 geometry 实例  。  
+ 将与调用  **的实例进行比较的另一个 geometry 实例**`STWithin()`。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：**SqlBoolean**  
+ CLR 返回类型：SqlBoolean   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。
   
 ## <a name="examples"></a>示例  

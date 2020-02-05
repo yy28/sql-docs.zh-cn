@@ -20,10 +20,10 @@ ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5e67b62ec00e2dd98ff4289c1f725892592340e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024757"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>创建图表、警报、日志和报表
@@ -49,7 +49,7 @@ ms.locfileid: "68024757"
   
  图表对于短期、实时监视本地或远程计算机很有用，例如，希望在事件发生时对其进行监视。  
   
-## <a name="alerts"></a>Alerts  
+## <a name="alerts"></a>警报  
  利用警报，系统监视器可以跟踪特定的事件，并按要求向您通知这些事件。 警报日志可以监视所选计数器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中对象的实例的性能。 当计数器超过给定值时，日志记录下这一事件的日期和时间。 事件也可产生网络警报。 可在一个事件第一次出现或每次出现时运行一个特定的程序。 例如，一个警报可以向所有系统管理员发送一条网络消息，报告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的磁盘空间不足。  
   
 ## <a name="logs"></a>日志  

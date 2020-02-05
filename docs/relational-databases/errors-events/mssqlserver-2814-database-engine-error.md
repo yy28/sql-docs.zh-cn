@@ -12,13 +12,13 @@ ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c36c06ad91cb9082f06d57f622db4209ac94212
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001973"
 ---
-# <a name="mssqlserver2814"></a>MSSQLSERVER_2814
+# <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,12 +32,12 @@ ms.locfileid: "68001973"
 |符号名称|PR_POSSIBLE_INFINITE_RECOMPILE|  
 |消息正文|检测到可能无限的重新编译: SQLHANDLE %hs，PlanHandle %hs，起始偏移量 %d，结束偏移量 %d。 上次重新编译的原因为 %d。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 一个或多个语句导致查询批处理至少重新编译 50 次。 应更正指定语句以免进一步重新编译。  
   
 下表列出了重新编译的原因。  
   
-|原因代码|描述|  
+|原因代码|说明|  
 |---------------|---------------|  
 |1|架构已更改|  
 |2|统计信息已更改|  
@@ -53,7 +53,7 @@ ms.locfileid: "68001973"
   
 ## <a name="user-action"></a>用户操作  
   
-1.  通过运行以下查询查看导致重新编译的语句。 将 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 占位符替换为错误消息中指定的值。 对于临时和预定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，database_name  和 object_name  列将为 NULL。  
+1.  通过运行以下查询查看导致重新编译的语句。 将 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 占位符替换为错误消息中指定的值。 对于临时和预定义  **语句，database_name** **和 object_name**[!INCLUDE[tsql](../../includes/tsql-md.md)] 列将为 NULL。  
   
     ```sql   
     SELECT DB_NAME(st.dbid) AS database_name,  

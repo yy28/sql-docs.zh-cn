@@ -12,13 +12,13 @@ ms.assetid: f33f514c-56aa-42e2-841b-e91244da90e2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 473d752109ce90476602a0a60d7f6f5263caac09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68060596"
 ---
-# <a name="mssqlserver107"></a>MSSQLSERVER_107
+# <a name="mssqlserver_107"></a>MSSQLSERVER_107
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68060596"
 |符号名称|P_NOCORRMATCH|  
 |消息正文|列前缀 '%.*ls' 与查询中使用的表名或别名不匹配。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 用列前缀错误地对该查询的 Select 列表中包含的星号 (*) 进行了限定。 在以下情况下可能会返回此错误：  
   
 -   列前缀与查询中使用的表名或别名不对应。 例如，下面的语句使用别名 (`T1`) 作为列前缀，但是该别名未在 FROM 子句中定义。  
@@ -56,7 +56,7 @@ ms.locfileid: "68060596"
 SELECT T1.* FROM dbo.ErrorLog AS T1;  
 ```  
   
-或多个  
+或  
   
 ```  
 SELECT ErrorLog.* FROM dbo.ErrorLog;  

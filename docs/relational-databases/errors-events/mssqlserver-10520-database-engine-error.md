@@ -12,13 +12,13 @@ ms.assetid: cc8799f1-5b90-4248-b209-e1d5087f9529
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4b39522a5aa1e3208dfe1f7440abe20f4f0e00fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68068162"
 ---
-# <a name="mssqlserver10520"></a>MSSQLSERVER_10520
+# <a name="mssqlserver_10520"></a>MSSQLSERVER_10520
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68068162"
 |符号名称|PG_PARAM_NOT_ALLOWED|  
 |消息正文|无法创建计划指南 '%.*ls'，因为 @type 指定为 '%ls' ，并且为参数 '%ls' 指定了非 NULL 值。 此类型要求该参数的值为 NULL 值。 请为该参数指定 NULL 值，或将该类型更改为允许该参数为非 NULL 值的类型。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 @type 中指定的类型要求指定参数的值为 NULL 值，但却提供了非 NULL 值。  
   
 ## <a name="user-action"></a>用户操作  

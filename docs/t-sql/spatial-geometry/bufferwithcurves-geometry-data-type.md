@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 608b6cc3ee887a8d17b30a027a7669d51c8822ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929319"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves（geometry 数据类型）
@@ -41,18 +41,18 @@ ms.locfileid: "67929319"
 ## <a name="return-types"></a>返回类型  
 SQL Server 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  以下条件将引发 ArgumentException  。  
   
 -   没有为方法传递任何参数，例如，`@g.BufferWithCurves()`  
   
 -   为方法传递了非数值参数，例如，`@g.BufferWithCurves('a')`  
   
--   向方法传递了 NULL，例如，`@g.BufferWithCurves(NULL)`   
+-   向方法传递了 NULL，例如，  `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  下图显示此方法返回的示例 geometry 实例。  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -62,7 +62,7 @@ SQL Server 返回类型：geometry
 |距离值|类型维度|返回的空间类型|  
 |--------------------|---------------------|---------------------------|  
 |距离 < 0|0 或 1|空的 GeometryCollection 实例 |  
-|距离 < 0|2 或更大|具有负缓冲区的 CurvePolygon 或 GeometryCollection 实例   。 **注意：** 负缓冲区可能会创建空的“GeometryCollection” |  
+|距离 < 0|2 或更大|具有负缓冲区的 CurvePolygon 或 GeometryCollection 实例   。 **注意：** 负缓冲区可能会创建空 GeometryCollection |  
 |距离 = 0|所有维度|调用 geometry 实例的副本 |  
 |distance > 0|所有维度|CurvePolygon 或 GeometryCollection 实例  |  
   
@@ -71,7 +71,7 @@ SQL Server 返回类型：geometry
   
  负缓冲区删除距几何图形边界给定距离内的所有点。 下图以圆的明暗交错区域显示负缓冲区。 虚线是原始多边形的边界，实线是结果多边形的边界。  
   
- 如果将 string 参数传递给方法，则会将其转换为 float；否则，将引发 `ArgumentException`   。  
+ 如果将 string 参数传递给方法，则会将其转换为 float；否则，将引发   `ArgumentException`。  
   
 ## <a name="examples"></a>示例  
   
@@ -99,7 +99,7 @@ SQL Server 返回类型：geometry
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- 此 SELECT 语句返回 `GEOMETRYCOLLECTION EMPTY`   
+ 此 SELECT 语句返回  `GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. 使用 = 0 的参数值调用 BufferWithCurves()  
  以下示例返回调用 geometry 实例的副本  ：  
@@ -154,7 +154,7 @@ SQL Server 返回类型：geometry
  SELECT @g.BufferWithCurves(1.6).ToString();
  ```  
   
- 前两个 SELECT 语句返回一个 `GeometryCollection` 实例，因为 distance 参数小于或等于两个点 (1 1) 和 (1 4) 之间的距离的 1/2   。 第三个 SELECT 语句返回一个 `CurvePolygon` 实例，因为两个点 (1 1) 和 (1 4) 的缓冲实例发生重叠  。  
+ 前两个 SELECT 语句返回一个  **实例，因为 distance 参数小于或等于两个点 (1 1) 和 (1 4) 之间的距离的 1/2**`GeometryCollection`  。 第三个 SELECT 语句返回一个  **实例，因为两个点 (1 1) 和 (1 4) 的缓冲实例发生重叠**`CurvePolygon`。  
   
 ## <a name="see-also"></a>另请参阅  
  [几何图形实例上的扩展方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  

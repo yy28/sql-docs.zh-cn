@@ -18,10 +18,10 @@ ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f0e5927216d6bc0ff1acbb2146d7f23c31012ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066553"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves（geography 数据类型）
@@ -43,18 +43,18 @@ ms.locfileid: "68066553"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  以下条件将引发 ArgumentException  。  
   
 -   没有为方法传递任何参数，例如，`@g.BufferWithCurves()`  
   
 -   为方法传递了非数值参数，例如，`@g.BufferWithCurves('a')`  
   
--   向方法传递了 NULL，例如，`@g.BufferWithCurves(NULL)`   
+-   向方法传递了 NULL，例如，  `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  下表显示为不同距离值返回的结果。  
   
 |距离值|类型维度|返回的空间类型|  
@@ -67,7 +67,7 @@ ms.locfileid: "68066553"
 > [!NOTE]  
 >  由于 distance 的类型为 float，因此，很小的值可能在计算中等于零   。  如果发生这种情况，则会返回执行调用的 geography 实例的副本  。  
   
- 如果将 string 参数传递给方法，则会将其转换为 float；否则，将引发 `ArgumentException`   。  
+ 如果将 string 参数传递给方法，则会将其转换为 float；否则，将引发   `ArgumentException`。  
   
 ## <a name="examples"></a>示例  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68066553"
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- 此 SELECT 语句返回 `GEOMETRYCOLLECTION EMPTY`   
+ 此 SELECT 语句返回  `GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. 使用 = 0 的参数值调用 BufferWithCurves()  
  以下示例返回执行调用的 geography 实例的副本  ：  

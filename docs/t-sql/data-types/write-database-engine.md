@@ -18,10 +18,10 @@ ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d026e01ee6675d0af462492469913d280124cc31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000366"
 ---
 # <a name="write-database-engine"></a>Write（数据库引擎）
@@ -42,7 +42,7 @@ void Write( BinaryWriter w )
 ## <a name="return-types"></a>返回类型  
 CLR 返回类型：void 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 必要时（例如，从 hierarchyid 列加载数据时），[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在内部使用 Write  。 在 hierarchyid 和 varbinary 之间进行转换时，也将在内部调用 Write   。
   
 ## <a name="examples"></a>示例  

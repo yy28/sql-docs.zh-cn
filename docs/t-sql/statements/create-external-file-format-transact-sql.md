@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd632c012e6859da004e105d2311c9c21d3dec02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902695"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "67902695"
   
 若要创建外部表，请参阅 [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)。
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法
   
@@ -170,7 +170,7 @@ PolyBase 仅使用自定义日期格式来导入数据。 它不使用自定义�
   
 -   DateTimeOffset：'yyyy-MM-dd HH:mm:ss'  
   
--   时间：'HH:mm:ss'  
+-   Time：'HH:mm:ss'  
   
 下表中显示了**示例日期格式**：
   
@@ -182,23 +182,23 @@ PolyBase 仅使用自定义日期格式来导入数据。 它不使用自定义�
   
 -   Am、pm (tt) 不是必需的。 默认值为 AM。
   
-|日期类型|示例|描述|  
+|日期类型|示例|说明|  
 |---------------|-------------|-----------------|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|除了年、月和日之外，此日期格式包括 00-24 小时、00-59 分钟、00-59 秒以及用于毫秒的 3 位数字。|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|除了年、月和日之外，此日期格式包括 00-12 小时、00-59 分钟、00-59 秒、用于毫秒的 3 位数字以及 AM、am、PM 或 pm。 |  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|除了年、月和日之外，此日期格式包括 00-23 小时、00-59 分钟。|  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|除了年、月和日之外，此日期格式包括 00-11 小时、00-59 分钟、无秒以及 AM、am、PM 或 pm。|  
-|date|DATE_FORMAT =  'yyyy-MM-dd'|年、月和日。 不包括任何时间元素。|  
-|date|DATE_FORMAT = 'yyyy-MMM-dd'|年、月和日。 当使用 3 个 M 指定月时，输入值是一，或字符串 Jan、Feb、Mar、Apr、May、Jun、Jul、Aug、Sep、Oct、Nov 或 Dec。|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|除了年、月和日之外，此日期格式包括 00-23 小时、00-59 分钟、00-59 秒以及用于毫秒的 7 位数字。|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|除了年、月和日之外，此日期格式包括 00-11 小时、00-59 分钟、00-59 秒、用于毫秒的 7 位数字以及 AM、am、PM 或 pm。|  
+|Date|DATE_FORMAT =  'yyyy-MM-dd'|年、月和日。 不包括任何时间元素。|  
+|Date|DATE_FORMAT = 'yyyy-MMM-dd'|年、月和日。 当使用 3 个 M 指定月时，输入值是一，或字符串 Jan、Feb、Mar、Apr、May、Jun、Jul、Aug、Sep、Oct、Nov 或 Dec。|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|除了年、月和日之外，此日期格式包括 00-23 小时、00-59 分钟、00-59 秒以及用于毫秒的 7 位数字。|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|除了年、月和日之外，此日期格式包括 00-11 小时、00-59 分钟、00-59 秒、用于毫秒的 7 位数字以及 AM、am、PM 或 pm。|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|除了年、月和日之外，此日期格式包括 00-23 小时、00-59 分钟、00-59 秒和用于毫秒的 7 位数字，在输入文件中以 `{+&#124;-}HH:ss` 形式输入的时区偏移。 例如，因为没有夏令时的洛杉矶比 UTC 落后 8 小时，所以输入文件中的值 -08:00 会指定洛杉矶的时区。|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt zzz'|除了年、月和日之外，此日期格式包括 00-11 小时、00-59 分钟、00-59 秒、用于毫秒的 7 位数字、（AM、am、PM 或 pm）以及时区偏移。 请参阅上一行中的说明。|  
-|Time|DATE_FORMAT = 'HH:mm:ss'|没有日期值，只有 00-23 小时、00-59 分钟和 00-59 秒。|  
+|时间|DATE_FORMAT = 'HH:mm:ss'|没有日期值，只有 00-23 小时、00-59 分钟和 00-59 秒。|  
   
  所有支持的日期格式：
   
-|DATETIME|smalldatetime|日期|datetime2|datetimeoffset|  
+|datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
 |[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
 |[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
@@ -296,7 +296,7 @@ PolyBase 仅使用自定义日期格式来导入数据。 它不使用自定义�
 ## <a name="locking"></a>锁定  
  在 EXTERNAL FILE FORMAT 对象上采用共享锁。
   
-## <a name="performance"></a>“性能”
+## <a name="performance"></a>性能
  使用压缩文件时始终需要在传输更少的数据（在外部数据源与 SQL Server 之间）与提高 CPU 使用率来压缩和解压缩数据之间进行权衡。
   
  Gzip 压缩文本文件不可拆分。 若要提高 Gzip 压缩文本文件的性能，建议生成全部存储在外部数据源中同一目录中的多个文件。 此文件结构使 PolyBase 可以使用多个读取器和解压缩进程更快地读取和解压缩数据。 理想的压缩文件数是每个计算节点的最大数据读取器进程数。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，最大数据读取器进程数为每节点 8 个，除了 Azure SQL 数据仓库 Gen2，其每个节点为 20 个读取器。 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]中，每个节点的最大数据读取器进程数因 SLO 而异。 有关详细信息，请参阅 [Azure SQL 数据仓库加载模式和策略](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)。  

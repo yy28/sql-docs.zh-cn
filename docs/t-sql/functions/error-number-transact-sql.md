@@ -23,18 +23,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 085832fdb8d0918c76dbbcadb759c2fdf1169b5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094714"
 ---
-# <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
+# <a name="error_number-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函数返回错误的错误号，该错误导致执行了 TRY…CATCH 构造的 CATCH 块。  
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ ERROR_NUMBER ( )
 
 在 CATCH 块作用域外调用时，`ERROR_NUMBER` 返回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `ERROR_NUMBER` 支持在 CATCH 块作用域内的任意位置调用。  
   
 无论 `ERROR_NUMBER` 运行多少次或在 `CATCH` 块作用域内的任意位置运行，它都将返回相关的错误号。 这与 @@ERROR 之类的函数不同，后者只在导致错误的语句的后一个语句中返回错误号。  
@@ -59,7 +59,7 @@ ERROR_NUMBER ( )
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-errornumber-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_NUMBER  
+### <a name="a-using-error_number-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_NUMBER  
 此示例显示生成被零除错误的 `SELECT` 语句。 `CATCH` 块返回错误号。  
   
 ```sql  
@@ -86,7 +86,7 @@ ErrorNumber
 
 ```  
   
-### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>B. 在包含其他错误处理工具的 CATCH 块中使用 ERROR_NUMBER  
+### <a name="b-using-error_number-in-a-catch-block-with-other-error-handling-tools"></a>B. 在包含其他错误处理工具的 CATCH 块中使用 ERROR_NUMBER  
 此示例显示生成被零除错误的 `SELECT` 语句。 `CATCH` 块将返回错误号和有关此错误的信息。  
 
 ```sql  

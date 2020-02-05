@@ -14,10 +14,10 @@ ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 712cc824e6faa834bd8d6023e4948e9e80dfabce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986701"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server Cursor Manager by Type 对象
@@ -26,11 +26,11 @@ ms.locfileid: "67986701"
   
  此表介绍了 SQL Server **Cursor Manager by Type** 计数器。  
   
-|Cursor Manager by Type 计数器|描述|  
+|Cursor Manager by Type 计数器|说明|  
 |-------------------------------------|-----------------|  
 |**Active cursors**|活动游标数。|  
 |**Cache Hit Ratio**|高速缓存命中次数和查找次数的比率。|  
-|**Cache Hit Ratio Base**|仅限内部使用。| 
+|**Cache Hit Ratio Base**|仅供内部使用。| 
 |**Cached Cursor Counts**|缓存中给定类型的游标数。|  
 |**Cursor Cache Use Count/sec**|每种缓存的游标的使用次数。|  
 |**Cursor memory usage**|游标占用的内存量 (KB)。|  
@@ -40,7 +40,7 @@ ms.locfileid: "67986701"
   
  对象中的每个计数器均包含以下实例：  
   
-|Cursor Manager 实例|描述|  
+|Cursor Manager 实例|说明|  
 |-----------------------------|-----------------|  
 |**_Total**|所有游标的信息。|  
 |**API 游标**|仅 API 游标信息。|  

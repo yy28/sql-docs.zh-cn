@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: daa05543715f81511aa0faa8467fc78819999404
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075891"
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>内存中 OLTP 支持的数据类型
@@ -39,7 +39,7 @@ ms.locfileid: "68075891"
 ## <a name="notable-supported-data-types"></a>值得注意的受支持数据类型  
  内存中 OLTP 的功能支持大多数数据类型。 以下几个数据类型值得注意：  
   
-|字符串和二进制类型|有关详细信息，请参阅：|  
+|字符串和二进制类型|更多信息|  
 |-----------------------------|--------------------------|  
 |binary 和 varbinary*|[binary 和 varbinary (Transact-SQL)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
 |char 和 varchar*|[char 和 varchar (Transact-SQL)](../../t-sql/data-types/char-and-varchar-transact-sql.md)|  
@@ -54,7 +54,7 @@ ms.locfileid: "68075891"
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>标识 LOB 和其他行外列
 
-自 SQL Server 2016 起，内存优化表[支持行外列](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)，即允许一个表行大于 8060 个字节。 以下 Transact-SQL SELECT 语句报告了内存优化表中的所有行外列。 注意：
+自 SQL Server 2016 起，内存优化表[支持行外列](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)，即允许一个表行大于 8060 个字节。 以下 Transact-SQL SELECT 语句报告了内存优化表中的所有行外列。 请注意：
 
 - 所有索引键列均存储于行内。
   - 现在，允许在内存优化表上的非唯一索引键中包含可为 NULL 的列。
@@ -81,7 +81,7 @@ SELECT
 ### <a name="other-data-types"></a>其他数据类型
 
 
-|其他类型|有关详细信息，请参阅：|  
+|其他类型|更多信息|  
 |-----------------|--------------------------|  
 |表类型|[内存优化表变量](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   

@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082900"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
@@ -43,7 +43,7 @@ ms.locfileid: "68082900"
   
 -   可以对具有任何支持全文索引的数据类型的列创建语义索引。 有关详细信息，请参阅 [创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。  
   
--   你可为 **varbinary(max)** 列指定支持全文索引的任何文档类型。 有关详细信息，请参阅本主题中的[如何确定可对哪些文档类型编制索引](#doctypes)。  
+-   你可为 **varbinary(max)** 列指定支持全文索引的任何文档类型。 有关详细信息，请参阅本主题中的 [如何确定可对哪些文档类型编制索引](#doctypes) 。  
   
 -   语义索引为你选择的列创建两种类型的索引：关键短语索引和文档相似性索引。 启用语义索引时，您无法只选择其中一种索引类型。 但是，您可以单独查询这两种索引。 有关详细信息，请参阅 [使用语义搜索在文档中查找关键短语](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) 和 [使用语义搜索查找相似和相关文档](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68082900"
   
  **示例 1：创建一个唯一索引、全文索引和语义索引**  
   
- 以下示例创建一个默认全文目录 **ft**。然后，该示例对 AdventureWorks2012 示例数据库的 **HumanResources.JobCandidate** 表的 **JobCandidateID** 列创建一个唯一索引。 需要将此唯一索引用作全文索引的键列。 然后，该示例在 **Resume** 列上创建一个全文索引和语义索引。  
+ 以下示例创建一个默认全文目录 **ft**.。然后，该示例对 AdventureWorks2012 示例数据库的 **HumanResources.JobCandidate** 表的 **JobCandidateID** 列创建一个唯一索引。 需要将此唯一索引用作全文索引的键列。 然后，该示例在 **Resume** 列上创建一个全文索引和语义索引。  
   
 ```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
@@ -158,7 +158,7 @@ GO
 在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以删除语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框删除语义索引。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 删除语义索引  
-要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn\_nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句     。 可以在单个 **ALTER** 语句中从多个列删除索引。  
+要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn**nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句**  _\__  。 可以在单个 **ALTER** 语句中从多个列删除索引。  
   
 ```sql  
 USE database_name  
@@ -170,7 +170,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn\_nameDROP 选项调用 ALTER FULLTEXT INDEX 语句     。  
+要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn**nameDROP 选项调用 ALTER FULLTEXT INDEX 语句**  _\__  。  
   
 ```sql  
 USE database_name  
@@ -194,7 +194,7 @@ GO
 ## <a name="check-whether-semantic-search-is-enabled-on-database-objects"></a>检查是否在数据库对象上启用了语义搜索  
 ### <a name="is-semantic-search-enabled-for-a-database"></a>是否为数据库启用了语义搜索？
   
- 查询 [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md) 元数据函数的 **IsFullTextEnabled** 属性。  
+ 查询 **DATABASEPROPERTYEX (Transact-SQL)** 元数据函数的 [IsFullTextEnabled](../../t-sql/functions/databasepropertyex-transact-sql.md) 属性。  
   
  返回值 1 表示为数据库启用了全文搜索和语义搜索；返回值 0 表示未启用它们。  
   
@@ -205,7 +205,7 @@ GO
   
 ### <a name="is-semantic-search-enabled-for-a-table"></a>是否为表启用了语义搜索？  
  
- 查询 [OBJECTPROPERTYEX (Transact-SQL)](../../t-sql/functions/objectpropertyex-transact-sql.md) 元数据函数的 **TableFullTextSemanticExtraction** 属性。  
+ 查询 **OBJECTPROPERTYEX (Transact-SQL)** 元数据函数的 [TableFullTextSemanticExtraction](../../t-sql/functions/objectpropertyex-transact-sql.md) 属性。  
   
  返回值 1 表示为表启用了语义搜索；返回值 0 表示未启用它。  
   
@@ -218,7 +218,7 @@ GO
    
  若要确定是否为特定列启用了语义搜索：  
   
--   查询 [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md) 元数据函数的 **StatisticalSemantics** 属性。  
+-   查询 **COLUMNPROPERTY (Transact-SQL)** 元数据函数的 [StatisticalSemantics](../../t-sql/functions/columnproperty-transact-sql.md) 属性。  
   
      返回值 1 表示为列启用了语义搜索；返回值 0 表示未启用它。  
   
@@ -256,17 +256,17 @@ GO
   
  语义索引支持以下语言。 此列表按 LCID 列出了目录视图 [sys.fulltext_semantic_languages (Transact SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md) 的输出。  
   
-|“报表”|LCID|  
+|语言|LCID|  
 |--------------|----------|  
 |德语|1031|  
-|英语（美国）|2052|  
+|英语(美国)|2052|  
 |法语|1036|  
 |意大利语|1040|  
 |葡萄牙语（巴西）|1046|  
 |俄语|1049|  
 |瑞典语|1053|  
-|英国（英语）|2057|  
-|葡萄牙语（葡萄牙）|2070|  
+|英语(英国)|2057|  
+|葡萄牙语(葡萄牙)|2070|  
 |西班牙语|3082|  
   
 ###  <a name="doctypes"></a> 确定可对哪些文档类型编制索引  
@@ -274,7 +274,7 @@ GO
   
  如果您要为其编制索引的文档类型不在所支持类型的列表中，则可能必须查找、下载和安装其他筛选器。 有关详细信息，请参阅 [查看或更改注册的筛选器和断字符](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="BestPracticeFilegroup"></a> 最佳做法：考虑为全文索引和语义索引创建单独的文件组  
+##  <a name="BestPracticeFilegroup"></a> 最佳实践：考虑为全文索引和语义索引创建单独的文件组  
  如果磁盘空间分配成问题，请考虑为全文索引和语义索引创建单独的文件组。 在全文索引所在的文件组中创建语义索引。 完全填充的语义索引可能包含大量数据。  
  
 ##  <a name="IssueNoResults"></a> 问题：搜索特定列时未返回结果  

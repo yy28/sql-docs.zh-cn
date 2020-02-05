@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: df7163395127b1478762078a74c0552c60e2dd65
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d03b0e8d21414101940e4eb653e8f9a7fa3d2d30
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907820"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287657"
 ---
 # <a name="delete-an-article"></a>删除项目
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,18 +44,18 @@ ms.locfileid: "72907820"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>从快照或事务发布中删除项目  
   
-1.  执行 [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) 以从由 \@publication 指定的发布中删除由 \@article 指定的项目   。 将 \@force_invalidate_snapshot 的值指定为 1   。  
+1.  执行 [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) 以从由 **publication 指定的发布中删除由 \@article 指定的项目** **\@** 。 将 **force_invalidate_snapshot 的值指定为 1** **\@** 。  
   
 2.  （可选）若要从数据库完全删除已发布的对象，请在发布服务器上对发布数据库执行 `DROP <objectname>` 命令。  
 
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>从合并发布删除项目  
   
-1.  执行 [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 以从由 \@publication 指定的发布中删除由 \@article 指定的项目   。 如有必要，可将 \@force_invalidate_snapshot 的值指定为 1，并将 \@force_reinit_subscription 的值指定为 1     。  
+1.  执行 [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 以从由 **publication 指定的发布中删除由 \@article 指定的项目** **\@** 。 如有必要，可将 **force_invalidate_snapshot 的值指定为 1，并将** force_reinit_subscription 的值指定为 1 **\@**  **\@** 。  
   
 2.  （可选）若要从数据库完全删除已发布的对象，请在发布服务器上对发布数据库执行 `DROP <objectname>` 命令。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
- 下面的示例将从事务发布中删除项目。 因为此更改会使现有快照失效，所以 \@force_invalidate_snapshot 参数的值将会指定为 1   。  
+ 下面的示例将从事务发布中删除项目。 因为此更改会使现有快照失效，所以 **force_invalidate_snapshot 参数的值将会指定为 1** **\@** 。  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -72,7 +72,7 @@ EXEC sp_droparticle
 GO  
 ```  
   
- 下面的示例将从合并发布中删除两个项目。 因为这些更改会使现有快照失效，所以 \@force_invalidate_snapshot 参数的值将会指定为 1   。  
+ 下面的示例将从合并发布中删除两个项目。 因为这些更改会使现有快照失效，所以 **force_invalidate_snapshot 参数的值将会指定为 1** **\@** 。  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -102,7 +102,7 @@ GO
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.TransArticle> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.TransArticle> 类的实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>和 <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> 属性。  
   
@@ -118,7 +118,7 @@ GO
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>和 <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> 属性。  
   

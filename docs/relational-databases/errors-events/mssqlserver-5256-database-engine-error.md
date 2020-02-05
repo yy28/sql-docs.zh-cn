@@ -12,13 +12,13 @@ ms.assetid: 6fe254b4-2926-446f-8b20-0f1d921a4615
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e8fddb4dbc6ef34a4c389ebd1dd164056a1c6f9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68058169"
 ---
-# <a name="mssqlserver5256"></a>MSSQLSERVER_5256
+# <a name="mssqlserver_5256"></a>MSSQLSERVER_5256
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68058169"
 |符号名称|DBCC4_INCORRECT_PAGE_ID_IN_HEADER_NO_METADATA|  
 |消息正文|表错误：分配单元 ID A_ID，页 P_ID1 在页头中包含错误的页 ID。 该页头中的 PageId 为 P_ID2。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 页 *P_ID1* 的页眉包含错误的页 ID *P_ID2*。  
   
 ## <a name="user-action"></a>用户操作  

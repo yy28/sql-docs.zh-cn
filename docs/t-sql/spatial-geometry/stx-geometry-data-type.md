@@ -18,10 +18,10 @@ ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8a6b8896dadf8abc17d2fb3b3836d53815b7d3f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066161"
 ---
 # <a name="stx-geometry-data-type"></a>STX（geometry 数据类型）
@@ -37,14 +37,14 @@ ms.locfileid: "68066161"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float   
   
- CLR 类型：**SqlDouble**  
+ CLR 类型：SqlDouble   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 **geometry** 实例不是一个点，此属性的值将为 null。  
   
- 该属性为只读。  
+ 此属性为只读。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个 `Point` 实例，并使用 `STX` 检索该实例的 X 坐标。  

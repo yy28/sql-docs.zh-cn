@@ -12,10 +12,10 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b707b2b31c15c565353f0ff581ca1f4d7308a25b
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71951944"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>选择数据源（SQL Server 导入和导出向导）
@@ -46,11 +46,11 @@ ms.locfileid: "71951944"
 -   **可用于数据源的访问接口可能不止一个。** 通常可以选择任何可用于源的提供程序。 例如，若要连接到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以使用用于 SQL Server 的 .NET Framework 数据提供程序或 SQL Server ODBC 驱动程序。 （其他提供程序仍在列表中，但不再受支持。） 
 
 ## <a name="my-data-source-isnt-in-the-list"></a>我的数据源不在列表中
--   你可能需要从 Microsoft 或第三方下载数据提供程序  。 “数据源”  列表中可用数据提供程序的列表只包括计算机上安装的提供程序。 有关可以使用的数据源的信息，请参阅 [我可以使用哪些数据源和目标？](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
+-   **可能需要从 Microsoft 或第三方下载数据提供程序**。 “数据源”  列表中可用数据提供程序的列表只包括计算机上安装的提供程序。 有关可以使用的数据源的信息，请参阅 [我可以使用哪些数据源和目标？](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
 -    你是否具备适用于你的数据源的 ODBC 驱动程序？ ODBC 驱动程序不在数据源的下拉列表中列出。 如果有用于数据源的 ODBC 驱动程序，则选择用于 ODBC 的 .NET Framework 数据提供程序。 然后输入特定于驱动程序的信息。 用于 ODBC 的 .Net Framework 数据提供程序充当 ODBC 驱动程序的包装器。 有关详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
 
--   64 位和 32 位提供程序  如果运行的是 64 位向导，则不会看到仅安装了 32 位提供程序的数据源，反之亦然。
+-   **64 位和 32 位提供程序。** 如果运行的是 64 位向导，则不会看到仅安装了 32 位提供程序的数据源，反之亦然。
 
 > [!NOTE]
 > 若要使用 64 位版本的 SQL Server 导入和导出向导，必须安装 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位应用程序且仅安装 32 位文件，包括 32 位版本的向导。
@@ -69,7 +69,7 @@ ms.locfileid: "71951944"
 -   [连接到 PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
 -   [连接到 MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
-有关如何连接到此处未列出的数据源的信息，请参阅[连接字符串参考](https://www.connectionstrings.com/)。 该第三方站点包含示例连接字符串、关于数据提供程序的详细信息以及它们需要的连接信息。
+有关如何连接到此处未列出的数据源的信息，请参阅 [The Connection Strings Reference](https://www.connectionstrings.com/)（连接字符串参考）。 该第三方站点包含示例连接字符串、关于数据提供程序的详细信息以及它们需要的连接信息。
 
 ## <a name="whats-next"></a>下一步是什么？
  在提供有关数据源以及如何连接到它的信息后，下一个页面是“选择目标”  。 在此页上，需提供有关数据目标以及如何连接到它的信息。 有关详细信息，请参阅 [选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。
