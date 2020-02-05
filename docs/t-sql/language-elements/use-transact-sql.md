@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bf46cd6f2ce89553d846c0322d0f8866f05921f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086146"
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68086146"
 
   将数据库上下文更改为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的指定数据库或数据库快照。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ USE { database_name }
   
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，数据库参数只能引用当前数据库。 如果提供的数据库不是当前数据库，则 `USE` 语句不会在数据库之间切换，并返回错误代码 40508。 若要更改数据库，您必须直接连接到数据库。 在本页顶部，USE 语句标记为不适用于 SQL 数据库，因为即使可以在批处理中使用 `USE` 语句，它也不会起任何作用。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，该登录将自动连接到它的默认数据库，并获得数据库用户的安全上下文。 如果还没有为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录创建数据库用户，则登录将作为 guest 进行连接。 如果数据库用户在数据库上没有 CONNECT 权限，则 USE 语句将失败。 如果还没有为登录分配默认数据库，则它的默认数据库将设置为 master。  
   
  USE 在编译和执行期间均可执行，并且立即生效。 因此，出现在批处理中 USE 语句之后的语句将在指定数据库中执行。  

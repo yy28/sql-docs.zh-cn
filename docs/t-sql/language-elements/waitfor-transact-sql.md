@@ -27,10 +27,10 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086114"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68086114"
 
   阻止执行批处理、存储过程或事务，直到已过指定时间或时间间隔，或者指定语句发生修改或至少返回一行为止。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,13 +70,13 @@ WAITFOR
  有效的 RECEIVE 语句。  
   
 > [!IMPORTANT]  
->  包含 receive_statement 的 WAITFOR 仅适用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息  。 有关详细信息，请参阅 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)。  
+>  包含 receive_statement 的 WAITFOR 仅适用于  *消息*[!INCLUDE[ssSB](../../includes/sssb-md.md)]。 有关详细信息，请参阅 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)。  
   
  *get_conversation_group_statement*  
  有效的 GET CONVERSATION GROUP 语句。  
   
 > [!IMPORTANT]  
->  包含 get_conversation_group_statement 的 WAITFOR 仅适用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息  。 有关详细信息，请参阅 [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
+>  包含 get_conversation_group_statement 的 WAITFOR 仅适用于  *消息*[!INCLUDE[ssSB](../../includes/sssb-md.md)]。 有关详细信息，请参阅 [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
   
  TIMEOUT timeout   
  指定消息到达队列前等待的时间（以毫秒为单位）。  
@@ -84,7 +84,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  指定包含 TIMEOUT 的 WAITFOR 仅适用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息。 有关详细信息，请参阅 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md) 和 [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  执行 WAITFOR 语句时，事务正在运行，并且其他请求不能在同一事务下运行。  
   
  实际的时间延迟可能与 time_to_pass、time_to_execute 或 timeout 中指定的时间不同，它依赖于服务器的活动级别    。 计划 WAITFOR 语句线程时，计时器开始计时。 如果服务器忙碌，则可能不会立即计划线程；因此，时间延迟可能比指定的时间要长。  

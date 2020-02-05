@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68212205"
----
 本文概述 SQL Server 中高可用性和灾难恢复的业务连续性解决方案。 
 
 每个人在部署 SQL Server 时都需执行一项常见任务，即确保所有任务关键型 SQL Server 实例以及其中的数据库在业务和最终用户需要时（无论是朝九晚五还是全天候）可用。 其目标是尽量减少或杜绝中断，保持业务正常运行。 此概念也称为业务连续性。
@@ -75,8 +67,8 @@ SQL Server 2012 中引入的 AlwaysOn 可用性组将数据库的每个事务发
 由于群集堆栈有所不同，SQL Server 必须处理一些由 WSFC 本机处理的元数据，因此需要对可用性组进行一些更改。 最[!IMPORTANT]的更改是为可用性组引入了群集类型。 这存储在 cluster_type 和 cluster_type_desc 列的 sys.availability_groups 中。 有以下三种群集类型：
 
 * WSFC 
-* External
-* None
+* 外部
+* 无
 
 要求可用性的所有可用性组都必须使用基础群集，在 SQL Server 2017 中则为 WSFC 或 Pacemaker。 对于使用基础 WSFC 的基于 Windows Server 的可用性组，默认群集类型为 WSFC 且无需设置。 对于基于 Linux 的可用性组，创建可用性组时，群集类型必须设置为“外部”。 在创建可用性组后配置与 Pacemaker 的集成，而在 WSFC 上，需在创建时进行集成。
 
@@ -91,11 +83,11 @@ Windows Server 和 Linux 可用性组都可使用“无”群集类型。 将群
 
 ![SSMS AG 选项](media/sql-server-ha-story/image2.png)
  
-##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
+##### <a name="required_synchronized_secondaries_to_commit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
 SQL Server 2016 将 Enterprise 版本中支持的同步副本数从两个增加到了三个。 然而，如果其中一个次要副本已同步，但另一个副本遇到问题，则无法控制告知主要副本等待运行异常的副本或允许它继续运行的行为。 这表示即使次要副本未处于同步状态，在某种情况下主要副本仍会继续接收写入流量，这意味着次要副本上存在数据丢失。
 现在，SQL Server 2017 中提供了一个选项，可控制在出现名为 REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT 的同步副本时执行何种操作的行为。 该选项的工作原理如下所示：
-* 有三种可能的值：0、1 和 2
+* 有三个可能的值：0、1 和 2
 * 值是必须同步的次要副本数，它对数据丢失、可用性组可用性和故障转移都有影响
 * 对于 WSFC 和群集类型为“无”的情况，默认值为 0，可手动设置为 1 或 2
 * 对于群集类型为“外部”的情况，该值默认由群集机制设置，并可手动重写。 对于三个同步副本，默认值为 1。
@@ -251,7 +243,7 @@ FCI 可就地升级到 SQL Server 2017。 有关详细信息，请参阅[升级 
 
 对于具有可用性组的所有读取缩放方案，应注意的一点是，与使用所有数据都是实时数据的事务复制不同，每个次要副本都不处于可应用唯一索引的状态，该副本是对主要副本的精确复制。 这意味着如果需要任何索引进行报告或需要处理数据，则必须在主要副本的数据库上执行。 如果需要灵活性，复制是对可读数据而言较佳的解决方案。
 
-## <a name="summary"></a>“摘要”
+## <a name="summary"></a>总结
 
 在 Windows Server 和 Linux 上使用相同的功能，可实现 SQL Server 2017 实例和数据库的高可用性。 除本地高可用性和灾难恢复的标准可用性方案之外，还可使用 SQL Server 中的可用性功能尽量减少与升级和迁移相关的停机时间。 可用性组还可提供数据库的其他副本，用作同一体系结构的一部分，扩大可读副本。 无论是使用 SQL Server 2017 部署新的解决方案还是考虑升级，SQL Server 2017 均可提供所需的可用性和可靠性。
  

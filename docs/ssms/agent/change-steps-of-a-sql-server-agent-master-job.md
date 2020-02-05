@@ -1,22 +1,23 @@
 ---
-title: 更改 SQL Server 代理主作业的步骤 | Microsoft Docs
-ms.custom: ''
+title: Change Steps of a SQL Server Agent Master Job
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ca117df9e02489e9ea3a9a194a002cc5e36d661d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 00c518337b74f1c1adea9b39692e6659b6741d9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553319"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75238080"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,13 +49,13 @@ ms.locfileid: "69553319"
   
 4.  右键单击要修改步骤的作业，然后选择“属性”  。  
   
-5.  在“作业属性 - job\_name”对话框中的“选择页”下，选择“步骤     。  
+5.  在“作业属性 - job**name”对话框中的“选择页”下，选择“步骤** _\__   。  
   
-6.  单击“编辑”，打开“作业步骤属性 -job \_step\_name”  对话框   。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性 - 新建作业步骤（“常规”页）](../../ssms/agent/job-step-properties-new-job-step-general-page.md)和[作业步骤属性 - 新建作业步骤（“高级”页）](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
+6.  单击“编辑”，打开“作业步骤属性 -job **step**name”  对话框 _\_\__ 。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性 - 新建作业步骤（“常规”页）](../../ssms/agent/job-step-properties-new-job-step-general-page.md)和[作业步骤属性 - 新建作业步骤（“高级”页）](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
   
 7.  完成后，单击 **“确定”** 。  
   
-8.  在“作业属性 - job\_name”  对话框中，单击“确定”   。  
+8.  在“作业属性 - job**name”** _对话框中，单击“确定”\__  。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   

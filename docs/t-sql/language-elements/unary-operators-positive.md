@@ -21,10 +21,10 @@ ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f6c7f0ebb1960c763dead68443ed4ae0c4c397db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086149"
 ---
 # <a name="unary-operators---positive"></a>一元运算符 - 正
@@ -32,7 +32,7 @@ ms.locfileid: "68086149"
 
 返回数值表达式（一个一元运算符）的值。 一元运算符只对一个表达式执行操作，该表达式可以是 numeric 数据类型类别中的任何一种数据类型。   
   
-|运算符|含义|  
+|操作员|含义|  
 |--------------|-------------|  
 |[+（正）](../../t-sql/language-elements/unary-operators-positive.md)|数值为正。|  
 |[-（负）](../../t-sql/language-elements/unary-operators-negative.md)|数值为负。|  
@@ -40,7 +40,7 @@ ms.locfileid: "68086149"
   
  +（正）和 -（负）运算符可以用于 numeric 数据类型类别中任一数据类型的任意表达式。 ~ （位非）运算符只能用于整数数据类型类别中任一数据类型的表达式。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,12 +51,12 @@ ms.locfileid: "68086149"
   
 ## <a name="arguments"></a>参数  
  *numeric_expression*  
- 具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。  
   
 ## <a name="result-types"></a>结果类型  
  返回 *numeric_expression*的数据类型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  尽管一元加号可以出现在任何数值表达式之前，但它对表达式返回的值不执行操作。 很明显，负表达式不会返回正值。 若要返回负表达式的正值，请使用 [ABS](../../t-sql/functions/abs-transact-sql.md) 函数。  
   
 ## <a name="examples"></a>示例  

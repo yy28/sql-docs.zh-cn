@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000447"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
@@ -32,12 +32,12 @@ ms.locfileid: "68000447"
 
 16 字节 GUID。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 uniqueidentifier 数据类型的列或局部变量可通过以下方式初始化为一个值  ：
 -   通过使用 [NEWID](../../t-sql/functions/newid-transact-sql.md) 或 [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 函数。    
--   通过从 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 形式的字符串常量进行转换，其中，每个 x 都是 0-9 或 a-f 范围内的十六进制数字       。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 为有效的 uniqueidentifier 值  。  
+-   通过从 xxxxxxxx*xxxx*xxxx-xxxx*xxxxxxxxxxxx 形式的字符串常量进行转换，其中，每个 x 都是 0-9 或 a-f 范围内的十六进制数字*-  -  -   。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 为有效的 uniqueidentifier 值  。  
   
-比较运算符可与 uniqueidentifier 值一起使用  。 不过，排序不是通过比较两个值的位模式来实现的。 可针对 uniqueidentifier 值执行的运算只有比较运算（=、<>、\<、>、\<=、>=）以及检查是否为 NULL（IS NULL 和 IS NOT NULL）  。 不能使用其他算术运算符。 除 IDENTITY 之外的所有列约束和属性均可对 uniqueidentifier 数据类型使用  。
+比较运算符可与 uniqueidentifier 值一起使用  。 不过，排序不是通过比较两个值的位模式来实现的。 可针对 uniqueidentifier 值执行的运算只有比较运算（=、<>、 **、>、** =、>=）以及检查是否为 NULL（IS NULL 和 IS NOT NULL）\<\<。 不能使用其他算术运算符。 除 IDENTITY 之外的所有列约束和属性均可对 uniqueidentifier 数据类型使用  。
   
 具有更新订阅的合并复制和事务复制使用 uniqueidentifier 列来确保在表的多个副本中唯一地标识行  。
   

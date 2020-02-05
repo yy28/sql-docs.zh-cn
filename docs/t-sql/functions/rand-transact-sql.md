@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: af3301961fb153dc64e7ebe98f7012ce6570d0e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948449"
 ---
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67948449"
 
   返回一个介于 0 到 1（不包括 0 和 1）之间的伪随机 float 值  。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,12 +43,12 @@ RAND ( [ seed ] )
   
 ## <a name="arguments"></a>参数  
  seed   
- 提供种子值的整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)（tinyint、smallint 或 int）    。 如果未指定 seed，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 随机分配种子值  。 对于指定的种子值，返回的结果始终相同。  
+ 提供种子值的整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)（tinyint、smallint 或 int）    。 如果未指定 seed，则  *随机分配种子值*[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 对于指定的种子值，返回的结果始终相同。  
   
 ## <a name="return-types"></a>返回类型  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用同一个种子值重复调用 RAND() 会返回相同的结果。  
   
  对于一个连接，如果使用指定的种子值调用 RAND()，则 RAND() 的所有后续调用将基于使用该指定种子值的 RAND() 调用生成结果。 例如，以下查询将始终返回相同的数字序列。  

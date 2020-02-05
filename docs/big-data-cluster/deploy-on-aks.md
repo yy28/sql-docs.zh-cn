@@ -1,20 +1,21 @@
 ---
 title: 配置 Azure Kubernetes 服务
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: 了解如何为 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 部署配置 Azure Kubernetes 服务 (AKS)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016892"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251202"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>为 SQL Server 大数据群集部署配置 Azure Kubernetes 服务
 
@@ -69,7 +70,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
    az account set --subscription <subscription id>
    ```
 
-1. 使用“az group create”命令创建资源组  。 以下示例在 `westus2` 位置创建名为 `sqlbdcgroup` 的资源组。
+1. 使用“az group create”命令创建资源组  。 以下示例在 `sqlbdcgroup` 位置创建名为 `westus2` 的资源组。
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -148,7 +149,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
    ```
 
-1. 若要验证与群集的连接，请使用 [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) 命令返回群集节点列表。  以下示例显示配置了 1 个主节点和 3 个代理节点时的输出。
+1. 若要验证到群集的连接，请使用 [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) 命令返回群集节点列表。  以下示例显示配置了 1 个主节点和 3 个代理节点时的输出。
 
    ```bash
    kubectl get nodes

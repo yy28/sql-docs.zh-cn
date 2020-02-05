@@ -16,10 +16,10 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19a234b8c2939730a6c5a815885606dac15d0a0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298171"
 ---
 # <a name="odbc-source"></a>ODBC 源
@@ -60,11 +60,11 @@ ms.locfileid: "71298171"
   
 -   **批处理**：组件将基于发现的 ODBC 访问接口功能尝试使用最高效的提取方法。 对于大多数现今的 ODBC 提供程序，这是具有数组绑定的 SQLFetchScroll（其中，数组大小由 **BatchSize** 属性确定）。 如果选择“批处理”  并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”  模式。  
   
--   **逐行**：组件使用 SQLFetch 来检索行，每次检索一行。  
+-   **逐行**：组件使用 SQLFetch 来一次一行的检索行。  
   
  有关 **FetchMethod** 属性的详细信息，请参阅 [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)。  
   
-## <a name="parallelism"></a>Parallelism  
+## <a name="parallelism"></a>并行度  
  对于可对同一台计算机或不同计算机（并非一般的全局会话限制）上的相同表或不同表并行运行的 ODBC 源组件的数目没有限制。  
   
  但是，要使用的 ODBC 访问接口的限制可能会限制通过该访问接口的同时连接的数目。 这些限制将会限制 ODBC 源可能支持的并行实例的数目。 SSIS 开发人员必须知道要使用的任何 ODBC 访问接口的限制并且在生成 SSIS 包时将这些限制元素考虑进去。  
@@ -110,9 +110,9 @@ ms.locfileid: "71298171"
 #### <a name="data-access-mode"></a>数据访问模式  
  选择从源选择数据的方法。 选项显示在下表中：  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
-|表名|从 ODBC 数据源中的表或视图检索数据。 选择此选项后，请从列表中为以下选项选择一个值：|  
+|表名称|从 ODBC 数据源中的表或视图检索数据。 选择此选项后，请从列表中为以下选项选择一个值：|  
 ||**表或视图的名称**：从列表中选择一个可用表或视图，或键入正则表达式以标识该表。|  
 ||该列表仅包含前 1000 个表。 如果您的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (*) 通配符输入名称的任何部分以便显示要使用的表。|  
 |SQL 命令|使用 SQL 查询从 ODBC 数据源中检索数据。 您应该采用正在使用的源数据库的语法编写查询。 选择此选项后，请采用以下方法之一输入查询：|  
@@ -165,7 +165,7 @@ ms.locfileid: "71298171"
 #### <a name="inputoutput"></a>输入/输出  
  查看数据源的名称。  
   
-#### <a name="column"></a>“列”  
+#### <a name="column"></a>列  
  未使用。  
   
 #### <a name="error"></a>错误  
@@ -174,7 +174,7 @@ ms.locfileid: "71298171"
 #### <a name="truncation"></a>截断  
  选择 ODBC 源应该如何处理流中的截断：忽略失败、重定向行或使组件失败。  
   
-#### <a name="description"></a>描述  
+#### <a name="description"></a>说明  
  未使用。  
   
 #### <a name="set-this-value-to-selected-cells"></a>将此值设置到选定的单元格  
@@ -187,7 +187,7 @@ ms.locfileid: "71298171"
  使用下列选项来配置 ODBC 源处理错误和截断的方式。  
   
 #### <a name="fail-component"></a>组件失败  
- 发生错误或截断时数据流任务失败。 这是默认行为。  
+ 发生错误或截断时数据流任务失败。 此选项为默认行为。  
   
 #### <a name="ignore-failure"></a>忽略失败  
  忽略错误或截断。  

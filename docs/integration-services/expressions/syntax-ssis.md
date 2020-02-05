@@ -14,10 +14,10 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c0e005ee8dbb1c01cdaf5d3af031fd9ffba31ac
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288259"
 ---
 # <a name="syntax-ssis"></a>语法 (SSIS)
@@ -39,7 +39,7 @@ ms.locfileid: "71288259"
 ## <a name="identifiers"></a>标识符  
  表达式可包含列和变量标识符。 列可以源自数据源或由数据流中的转换创建。 表达式可以使用沿袭标识符来引用列。 沿袭标识符是唯一地标识包元素的数字。 表达式中引用的沿袭标识符必须包含井号 (#) 前缀。 例如，使用 #138 引用沿袭标识符 138。  
   
- 表达式可包含 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 提供的系统变量和自定义变量。 表达式中引用的变量必须包含 \@ 前缀。 例如，使用 \@Counter 引用 `Counter` 变量。 \@ 字符不属于变量名，仅向表达式计算器指明标识符是变量。 有关详细信息，请参阅[标识符 (SSIS)](../../integration-services/expressions/identifiers-ssis.md)。  
+ 表达式可包含 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 提供的系统变量和自定义变量。 表达式中引用的变量必须包含 \@ 前缀。 例如，使用 `Counter`Counter 引用 \@ 变量。 \@ 字符不属于变量名，仅向表达式计算器指明标识符是变量。 有关详细信息，请参阅[标识符 (SSIS)](../../integration-services/expressions/identifiers-ssis.md)。  
   
 ## <a name="literals"></a>文字  
  表达式可以包含数值、字符串和布尔文字。 表达式中使用的字符串文字必须用引号引起来。 数值和布尔文字不使用引号。 表达式语言包含用于常用转义字符的转义序列。 有关详细信息，请参阅[文字 (SSIS)](../../integration-services/expressions/numeric-string-and-boolean-literals.md)。  

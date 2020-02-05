@@ -12,10 +12,10 @@ ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d867839a68e3b6fc595f0753872b8224f3bf51fb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908319"
 ---
 # <a name="mssqlserver_8645"></a>MSSQLSERVER_8645
@@ -32,7 +32,7 @@ ms.locfileid: "72908319"
 |符号名称|MEMTIMEDOUT_ERR|  
 |消息正文|等待内存资源来执行该查询时发生超时。 请重新运行查询。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 等待资源池“default”中的内存资源来执行该查询时发生超时。  
   
 ## <a name="user-action"></a>用户操作  
@@ -42,7 +42,7 @@ ms.locfileid: "72908319"
   
 1.  验证其他应用程序或服务是否占用此服务器上的内存。 重新配置不太重要的应用程序或服务，使其占用更少的内存。  
   
-2.  开始收集以下内容的性能监视器计数器：**SQL Server:Buffer Manager**、**SQL Server:Memory Manager**。  
+2.  开始收集 **SQL Server: Buffer Manager**、**SQL Server: Memory Manager** 的性能监视器计数器。  
   
 3.  检查以下 SQL Server 内存配置参数：  
   

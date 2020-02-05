@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 156ed5549daa8129ff17d1b2827d798521c8a88b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257627"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用计算列提升常用的 XML 值
@@ -51,7 +51,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  可以按通常的方式对计算列创建索引。  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>示例：针对基于 xml 数据类型方法的计算列的查询  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>示例：对基于 xml 数据类型方法的计算列的查询  
  若要获得其 ISBN 为 0-7356-1588-2 的 <`book`>：  
   
 ```  
@@ -164,7 +164,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>示例：使用 CLR 流式处理表值函数的解决方案  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>示例：使用 CLR 流式表值函数的解决方案  
  此解决方案包括下列步骤：  
   
 1.  定义 CLR 类 SqlReaderBase，它实现 ISqlReader，并通过在 XML 实例上应用路径表达式来生成流式表值输出。  

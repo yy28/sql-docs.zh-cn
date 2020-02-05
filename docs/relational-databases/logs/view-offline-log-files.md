@@ -14,10 +14,10 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908560"
 ---
 # <a name="view-offline-log-files"></a>查看脱机日志文件
@@ -94,13 +94,13 @@ ms.locfileid: "72908560"
   
 ##### <a name="to-view-log-files-for-instances-that-are-offline"></a>查看脱机实例的日志文件  
   
-1.  如果您要查看本地实例的脱机日志文件，请确保使用提升的权限启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 若要这样做，请在启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时，右键单击“SQL Server Management Studio”，然后单击“以管理员身份运行”   。  
+1.  如果您要查看本地实例的脱机日志文件，请确保使用提升的权限启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 若要这样做，请在启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时，右键单击“SQL Server Management Studio”，然后单击“以管理员身份运行”   。  
   
 2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“视图”** 菜单上，单击 **“已注册的服务器”** 。  
   
 3.  在控制台树中，找到您想要在其上查看脱机文件的实例。  
   
-4.  执行以下操作之一：  
+4.  执行下列操作之一：  
   
     -   如果实例位于“本地服务器组”下，则展开“本地服务器组”，展开服务器组（如果实例是组的成员），右键单击该实例，然后单击“查看 SQL Server 日志”    。  
   

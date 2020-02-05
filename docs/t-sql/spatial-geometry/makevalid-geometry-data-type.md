@@ -18,10 +18,10 @@ ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9c613a95ea3bee42d51ac1805ff65281fa96ec33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101191"
 ---
 # <a name="makevalid-geometry-data-type"></a>MakeValid（geometry 数据类型）
@@ -37,11 +37,11 @@ ms.locfileid: "68101191"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此方法可能会导致 **geometry** 实例的类型有所变化，还会导致 **geometry** 实例的点略微移位。  
   
 ## <a name="examples"></a>示例  

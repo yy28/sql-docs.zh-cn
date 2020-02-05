@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582057"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>添加数据集筛选器、数据区域筛选器和组筛选器
@@ -68,26 +68,26 @@ ms.locfileid: "65582057"
   
 |**报表定义架构数据类型**|**CLR 类型**|  
 |--------------------------------------------|-----------------------|  
-|**Boolean**|**Boolean**|  
+|**布尔值**|**布尔值**|  
 |**DateTime**|**DateTime**、 **DateTimeOffset**|  
-|**Integer**|**Int16**、 **Int32**、 **UInt16**、 **Byte**、 **SByte**|  
+|**整数**|**Int16**、 **Int32**、 **UInt16**、 **Byte**、 **SByte**|  
 |**Float**|**Single**、 **Double**、 **Decimal**|  
 |**Text**|**String**、 **Char**、 **GUID**、 **Timespan**|  
   
  必须指定数据类型时，你可以在表达式的 Value 部分指定你自己的转换。  
   
-### <a name="operator"></a>运算符  
+### <a name="operator"></a>操作员  
  下表列出了可在筛选器公式中使用的运算符，以及报表处理器用于计算筛选器公式的内容。  
   
-|运算符|操作|  
+|操作员|操作|  
 |--------------|------------|  
 |**Equal、Like、NotEqual、GreaterThan、GreaterThanOrEqual、LessThan、LessThanOrEqual**|将表达式与一个值进行比较。|  
 |**TopN、BottomN**|将表达式与一个 **Integer** 值进行比较。|  
 |**TopPercent、BottomPercent**|将表达式与一个 **Integer** 或 **Float** 值进行比较。|  
 |**Between**|测试表达式是否在两个值之间（含这两个值）。|  
-|**In**|测试表达式是否包含在一组值中。|  
+|**位于**|测试表达式是否包含在一组值中。|  
   
-### <a name="value"></a>ReplTest1  
+### <a name="value"></a>值  
  Value 表达式指定筛选器公式的最后一部分。 报表处理器会将计算后的表达式转换为指定的数据类型，然后计算整个筛选器公式以确定表达式中指定的数据是否通过了筛选器的筛选。  
   
  若要转换为非标准 CLR 数据类型的数据类型，必须修改表达式以显式转换为该数据类型。 您可使用 **“表达式”** 对话框的 **“常见函数”** 下的 **“转换”** 中列出的转换函数。 例如，对于 `ListPrice` 字段，该字段表示 **数据源中以** money [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型存储的数据，数据处理扩展插件将以 <xref:System.Decimal> 数据类型返回该字段值。 若要将筛选器设置为仅使用报表货币中大于 **$50000.00** 的值，则可使用表达式 `=CDec(50000.00)`将该值转换为 Decimal 类型。  

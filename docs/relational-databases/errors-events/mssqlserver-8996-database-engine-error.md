@@ -12,13 +12,13 @@ ms.assetid: 4e655cdc-945a-4a18-95dd-75f050563d26
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a0b64656d68874e5cf5dc87c2b70da0abccc5d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037548"
 ---
-# <a name="mssqlserver8996"></a>MSSQLSERVER_8996
+# <a name="mssqlserver_8996"></a>MSSQLSERVER_8996
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68037548"
 |符号名称|DBCC3_IAM_PAGE_RANGE_IN_WRONG_FILEGROUP|  
 |消息正文|对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）的 IAM 页 P_ID 控制着文件组 FG_ID1 中的页，这些页应该在文件组 FG_ID2 中。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 文件组 *FG_ID1* 中的索引分配映射 (IAM) 页 *P_ID* 错误地包括了文件组 *FG_ID2* 的区数。 IAM 页的所有区都应该在与 IAM 页本身相同的文件组中。  
   
 ## <a name="user-action"></a>用户操作  

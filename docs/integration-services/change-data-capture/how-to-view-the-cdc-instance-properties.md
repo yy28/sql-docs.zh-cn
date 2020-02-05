@@ -11,10 +11,10 @@ ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eaf4308f05b7a7fb1f450947754736d0cf565b61
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294666"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>如何查看 CDC 实例属性
@@ -34,7 +34,7 @@ ms.locfileid: "71294666"
   
      与该实例有关的信息将显示在 CDC 设计器控制台的中央部分。 它分为四个选项卡。 所有选项卡均为只读。  
   
-     **“状态”**  
+     **Status**  
      此选项卡显示有关该实例的变更数据捕获的当前状态的信息。 有关此选项卡中显示的内容的信息，请参阅 **Manage a CDC Instance** 中的 [“查看器选项卡”](../../integration-services/change-data-capture/manage-a-cdc-instance.md)部分。  
   
      **Oracle**  

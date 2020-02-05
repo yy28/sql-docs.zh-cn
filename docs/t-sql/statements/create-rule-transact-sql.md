@@ -30,10 +30,10 @@ ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006490"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "68006490"
   
  列或别名数据类型只能被绑定一个规则。 不过，列可以同时有一个规则以及一个或多个检查约束与其相关联。 在这种情况下，将评估所有限制。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,12 +67,12 @@ AS condition_expression
  condition_expression   
  定义规则的条件。 规则可以是 WHERE 子句中任何有效的表达式，并且可以包括诸如算术运算符、关系运算符和谓词（如 IN、LIKE、BETWEEN）这样的元素。 规则不能引用列或其他数据库对象。 可以包括不引用数据库对象的内置函数。 不能使用用户定义函数。  
   
- condition_expression 包括一个变量  。 每个局部变量前面都有一个 at 符号 (@)  。 该表达式引用通过 UPDATE 或 INSERT 语句输入的值。 在创建规则时，可以使用任何名称或符号表示值，但第一个字符必须是 at 符号 (@)  。  
+ condition_expression 包括一个变量  。 每个局部变量前面都有一个 at 符号 ( **)@** 。 该表达式引用通过 UPDATE 或 INSERT 语句输入的值。 在创建规则时，可以使用任何名称或符号表示值，但第一个字符必须是 at 符号 ( **)@** 。  
   
 > [!NOTE]  
 >  请避免对使用别名数据类型的表达式创建规则。 虽然可以对使用别名数据类型的表达式创建规则，但在将规则绑定到列或别名数据类型后，表达式被引用时将无法对其进行编译。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  不能在单个批处理中将 CREATE RULE 语句与其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句组合在一起。 规则不适用于在创建规则时已存在于数据库中的数据，而且规则不能绑定到系统数据类型。  
   
  规则只能在当前的数据库中创建。 创建规则后，执行 sp_bindrule 可将规则绑定到列或别名数据类型  。 规则必须与列数据类型兼容。 例如，不能将 "\@value LIKE A%" 用作数值列的规则。 无法将规则绑定到 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、CLR 用户定义类型或 timestamp 列         。 无法将规则绑定到计算列。  
@@ -87,10 +87,10 @@ AS condition_expression
   
  可以在不取消绑定原有规则的情况下将新规则绑定到列或数据类型；新规则将覆盖原有规则。 绑定到列的规则始终优先于绑定到别名数据类型的规则。 将规则绑定到列时，将替换已经绑定到该列的别名数据类型的规则。 但是，将规则绑定到数据类型时，不会替换绑定到该别名数据类型的列的规则。 下表显示了当规则绑定到列以及绑定到已存在规则的别名数据类型时有效的优先级。  
   
-|新规则绑定到|旧规则绑定到<br /><br /> 别名数据类型|旧规则绑定到<br /><br /> “列”|  
+|新规则绑定到|旧规则绑定到<br /><br /> 别名数据类型|旧规则绑定到<br /><br /> 列|  
 |-----------------------|-------------------------------------------|----------------------------------|  
 |别名数据类型|旧规则被替换|没有变化|  
-|“列”|旧规则被替换|旧规则被替换|  
+|列|旧规则被替换|旧规则被替换|  
   
  如果列同时有与之相关联的默认值和规则，则默认值必须在规则定义的范围内。 与规则冲突的默认值永远不能被插入。 每次试图插入这样的默认值时，SQL Server 数据库引擎都会生成错误消息。  
   

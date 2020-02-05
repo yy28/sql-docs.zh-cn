@@ -18,10 +18,10 @@ ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a96f4e48c56be6558ecb6523ebd687e50d9f82a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059749"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>逻辑函数 - CHOOSE (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68059749"
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中从值列表返回指定索引处的项。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,18 +39,18 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- 索引  
+ 索引   
  一个整数表达式，表示其后的项列表的从 1 开始的索引。  
   
- 如果提供的索引值具有 int 之外的数值数据类型，则该值将隐式转换为整数。 如果索引值超出了值数组的界限，则 CHOOSE 返回 Null。  
+ 如果提供的索引值具有 int 之外的数值数据类型，则该值将隐式转换为整数  。 如果索引值超出了值数组的界限，则 CHOOSE 返回 Null。  
   
- val_1 … val_n  
+ val_1 … val_n   
  任何数据类型的逗号分隔的值列表。  
   
 ## <a name="return-types"></a>返回类型  
  从传递到函数的类型集中返回优先级最高的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  CHOOSE 像索引一样进入数组中，其中，数组由跟在索引参数之后的各参数组成。 索引参数确定将返回以下哪些值。  
   
 ## <a name="examples"></a>示例  

@@ -22,10 +22,10 @@ ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816676"
 ---
 # <a name="sql-writer-service"></a>SQL 编写器服务
@@ -34,7 +34,7 @@ ms.locfileid: "71816676"
   
  SQL 编写器服务是自动安装的。 在卷影复制服务 (VSS) 应用程序请求备份或还原时，必须运行该服务。 若要配置该服务，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 服务小程序。 SQL 编写器服务可安装在所有操作系统上。  
   
-## <a name="purpose"></a>用途  
+## <a name="purpose"></a>目的  
  在运行时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会锁定数据文件并具有独占访问权限。 如果 SQL 编写器服务没有运行，Windows 中运行的备份程序将不能访问数据文件，而且必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才能进行备份。  
   
  使用 SQL 编写器服务，可以使 Windows 备份程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 运行时复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件。  
@@ -76,6 +76,6 @@ ms.locfileid: "71816676"
   
 -   页面还原  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 SQL 编写器服务是独立于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎的服务，由不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和同一台服务器上的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例共同使用。  SQL 编写器服务文件随附在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装包中，并标有与所随附 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎相同的版本号。  如果服务器上安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例或现有实例已升级，且安装或升级的实例的版本号高于服务器上现有 SQL 编写器服务的版本号，这个文件就会替换安装包中的现有文件。  请注意，如果 SQL 编写器服务已通过 Service Pack 或累积更新进行更新，且安装的是 RTM 版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，便可将新版 SQL 编写器服务替换为旧版服务，前提是安装文件的主版本号更高。  例如，SQL 编写器服务在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 中进行了更新。  如果此实例升级到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM，那么已更新的 SQL 编写器服务就会替换为旧版服务。  在此示例中，必须将最新 CU 应用于新实例，才能获取新版 SQL 编写器服务。
 

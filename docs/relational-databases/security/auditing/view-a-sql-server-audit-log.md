@@ -15,10 +15,10 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9bc987034cde54d5c90392876f223ef5cf428562
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903797"
 ---
 # <a name="view-a-sql-server-audit-log"></a>查看 SQL Server 审核日志
@@ -50,7 +50,7 @@ ms.locfileid: "72903797"
   
 2.  展开“审核”文件夹。   
   
-3.   右键单击要查看的审核日志，然后选择“查看审核日志”。 这将打开“日志文件查看器 - server\_name”对话框   。 有关详细信息，请参阅 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
+3.   右键单击要查看的审核日志，然后选择“查看审核日志”。 这将打开“日志文件查看器 - server**name”对话框** _\__ 。 有关详细信息，请参阅 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
   
 4.   完成后，单击“关闭”。  
 

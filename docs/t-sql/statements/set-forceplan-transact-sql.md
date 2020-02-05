@@ -24,10 +24,10 @@ ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 84060374e3d46dde985e32a549180d8492c72892
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929007"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67929007"
 
   当 FORCEPLAN 设置为 ON 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器处理联接的顺序与表在查询的 FROM 子句中出现的顺序相同。 此外，在将 FORCEPLAN 设置为 ON 的情况下，如果不需要其他类型的联接来构造查询计划，或者使用联接提示或查询提示请求了其他联接类型，则会强制使用嵌套循环联接。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67929007"
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SET FORCEPLAN 从本质上覆盖了查询优化器处理 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句所使用的逻辑。 SELECT 语句返回的数据同样与该设置无关。 唯一的差别是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为满足查询对表进行处理的方式。  
   
  在查询中也可以使用查询优化器提示影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理 SELECT 语句的方式。  

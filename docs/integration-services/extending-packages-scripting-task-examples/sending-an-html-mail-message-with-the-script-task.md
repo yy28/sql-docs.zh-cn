@@ -17,10 +17,10 @@ ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eb1de7efdc8592551343a9424e4ab3b1dd1f69f9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286749"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>使用脚本任务发送 HTML 邮件消息
@@ -33,7 +33,7 @@ ms.locfileid: "71286749"
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  以下示例使用 System.Net.Mail 命名空间配置和发送 HTML 邮件  。 该脚本从包变量获取电子邮件的收件人、发件人、主题和正文，然后使用它们创建一个新 MailMessage，并将其 IsBodyHtml 属性设置为 True    。 然后，该脚本从另一个包变量获取 SMTP 服务器名称，初始化 System.Net.Mail.SmtpClient 实例，并调用其 Send 方法发送 HTML 消息   。 该示例将消息发送功能封装到一个可在其他脚本中重用的子例程中。  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>不使用 SMTP 连接管理器配置此脚本任务示例  

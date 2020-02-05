@@ -12,13 +12,13 @@ ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 00538607fca244177541b20b96324c421a3746f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039306"
 ---
-# <a name="mssqlserver3168"></a>MSSQLSERVER_3168
+# <a name="mssqlserver_3168"></a>MSSQLSERVER_3168
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68039306"
 |符号名称|LDDB_SYSTEMWRONGVER|  
 |消息正文|无法还原设备 %ls 上的系统数据库备份，因为创建该数据库的服务器版本 (%ls) 与此服务器 (%ls) 的版本不同。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 不能在与原来执行备份的服务器内部版本不同的内部版本上还原系统数据库（**master**、**model** 或 **msdb**）的备份。  
   
 > [!NOTE]  

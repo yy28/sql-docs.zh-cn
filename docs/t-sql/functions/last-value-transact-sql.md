@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53053b4f2176a01970f433072634a49ec0d21eb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109194"
 ---
-# <a name="lastvalue-transact-sql"></a>LAST_VALUE (Transact-SQL)
+# <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   返回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中有序值集中的最后一个值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,22 +43,22 @@ LAST_VALUE ( [ scalar_expression ] )
   
 ## <a name="arguments"></a>参数  
  *scalar_expression*  
- 是要返回的值。 scalar_expression 可以是产生单个值的列、子查询或其他表达式。 不允许使用其他分析函数。  
+ 是要返回的值。 scalar_expression 可以是产生单个值的列、子查询或其他表达式  。 不允许使用其他分析函数。  
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。  
   
- order_by_clause 在应用函数之前确定数据的顺序。 需要 order_by_clause。 rows_range_clause 通过指定起点和终点，限制分区中的行数。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ order_by_clause 在应用函数之前确定数据的顺序  。 需要 order_by_clause  。 rows_range_clause 通过指定起点和终点，限制分区中的行数  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 是与 scalar_expression 相同的类型。  
+ 是与 scalar_expression 相同的类型  。  
   
 ## <a name="general-remarks"></a>一般备注  
  LAST_VALUE 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-lastvalue-over-partitions"></a>A. 对分区使用 LAST_VALUE  
+### <a name="a-using-last_value-over-partitions"></a>A. 对分区使用 LAST_VALUE  
  下面的示例给定每个部门中给定薪金（比率）的最后一个雇员的雇佣日期。 PARTITION BY 子句按部门对员工分区，而 LAST_VALUE 函数独立应用于每个分区。 在 OVER 子句中指定的 ORDER BY 子句确定对每个分区中的行应用 LAST_VALUE 函数的逻辑顺序。  
   
 ```  
@@ -99,7 +99,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
 ```  
   
-### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. 在计算表达式中使用 FIRST_VALUE 和 LAST_VALUE  
+### <a name="b-using-first_value-and-last_value-in-a-computed-expression"></a>B. 在计算表达式中使用 FIRST_VALUE 和 LAST_VALUE  
  以下示例在计算表达式中使用 FIRST_VALUE 和 LAST_VALUE 函数，显示给定数量的员工当前季度分别与一年中第一季度和最后一季度之间的销售配额值差异。 FIRST_VALUE 函数返回该年度第一季度的销售配额值，并将该值从当前季度的销售配额值中减去。 它在名为 DifferenceFromFirstQuarter 的派生列中返回。 对于一年的第一季度，DifferenceFromFirstQuarter 列的值为 0。 LAST_VALUE 函数返回该年度最后一个季度的销售配额值，并从当前季度的销售配额值中减去它。 它在名为 DifferenceFromLastQuarter 的派生列中返回。 对于一年的最后一个季度，DifferenceFromLastQuarter 列的值为 0。  
   
  如下所示，对于要在 DifferenceFromLastQuarter 列中返回的非零值，子句“RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING”在此示例中是必需的。 默认范围为“RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW”。 在此示例中，使用默认范围（或不包括范围，导致使用默认范围）将导致在 DifferenceFromLastQuarter 列中返回零。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  

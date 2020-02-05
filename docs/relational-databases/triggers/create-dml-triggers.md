@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed3026ae450e50bcb2d9debf93c4b90eab3afad0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905537"
 ---
 # <a name="create-dml-triggers"></a>创建 DML 触发器
@@ -57,17 +57,17 @@ ms.locfileid: "72905537"
   
 5.  在 **“指定模板参数的值”** 对话框中，输入下列所示的参数值。  
   
-    |参数|ReplTest1|  
+    |参数|值|  
     |---------------|-----------|  
     |作者|*您的姓名*|  
     |创建日期|*今天的日期*|  
-    |描述|在允许插入具有供应商的新采购订单之前，请检查供应商信用等级。|  
-    |Schema_Name|Purchasing|  
+    |说明|在允许插入具有供应商的新采购订单之前，请检查供应商信用等级。|  
+    |Schema_Name|购买|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|从列表中删除 UPDATE 和 DELETE。|  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 7.  在 **“查询编辑器”** 中，使用以下语句替换注释 `-- Insert statements for trigger here` ：  
   

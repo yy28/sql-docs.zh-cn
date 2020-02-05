@@ -1,6 +1,6 @@
 ---
-title: 外部工具 | Microsoft Docs
-ms.custom: ''
+title: 外部工具
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 17e385913c362a2921d715607ca590d66ed69a48
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f86cd81ce23c0e68854a10c3df6e2aa0019bf9ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262806"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257722"
 ---
 # <a name="external-tools"></a>外部工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68262806"
 **“下移”**  
 将所选工具移动到工具列表（显示在“工具”  菜单上）中更靠下的位置。  
   
-**“添加”**  
+**添加**  
 清除相应的文本框以便指定新工具。  
   
 **删除**  
@@ -42,8 +42,8 @@ ms.locfileid: "68262806"
 **标题**  
 在“工具”  菜单的“外部工具”  子菜单上显示的工具或命令的名称。 在工具名称中的一个字母前放置 &amp; 号可以将该字母用作工具的快捷键。 例如，`&Spy++` 将在“工具”  菜单上显示为 **Spy++** 。  
   
-**Command**  
-指定要启动的 .exe、.com、.pif、.bat、.cmd 或其他文件的路径。 如果选中“使用输出窗口”  复选框，则可以在“输出”窗口中查看 `.bat`、`.com` 和其他文件的输出。  
+**命令**  
+指定要启动的 .exe、.com、.pif、.bat、.cmd 或其他文件的路径。 如果选中“使用输出窗口”`.bat``.com`复选框，则可以在“输出”窗口中查看 **、** 和其他文件的输出。  
   
 **参数**  
 指定在菜单上选择某个工具时传递到该工具的变量。 参数可以指定启动工具或命令时传递给工具或命令的值。 例如，参数值可以指定文件名或目录。 使用“箭头”  按钮可以从预定义的参数列表中进行选择。 您可以添加多个参数。 有关预定义参数及其定义的完整列表，请参阅 [外部工具的参数](../../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)。 根据所用命令或工具的不同，您还可以输入自定义参数（例如，命令提示符开关）。  
@@ -76,4 +76,4 @@ ms.locfileid: "68262806"
 4.  在“参数”  框中，键入 .msc 文件的路径，如 **"C:\WINNT\system32\SQLServerManager.msc"**  
   
 > [!NOTE]  
-> 查看“开始”  菜单上 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 快捷方式的属性，即可确认相应文件在计算机上的位置。  
+> 查看“开始”[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**菜单上**  快捷方式的属性，即可确认相应文件在计算机上的位置。  

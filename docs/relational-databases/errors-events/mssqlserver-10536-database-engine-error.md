@@ -12,10 +12,10 @@ ms.assetid: 9f97b41f-0ef8-4ad2-aec0-906a5d7522ba
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 85901c0fc1a720849cb93f7392ade34ff1db35e0
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71174277"
 ---
 # <a name="mssqlserver_10536"></a>MSSQLSERVER_10536
@@ -30,10 +30,10 @@ ms.locfileid: "71174277"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|PG_TOO_MANY_STMTS|  
-|消息正文|无法创建计划指南“%.\*ls”，因为与指定 \@plan_handle 对应的批或模块中包含的合格语句超过 1000 个  。 通过为每个语句指定 **statement_start_offset** 值，为批处理或模块中的每个语句创建一个计划指南。|  
+|消息正文|无法创建计划指南“%.\*ls”，因为与指定 **plan_handle 对应的批或模块中包含的合格语句超过 1000 个\@** 。 通过为每个语句指定 **statement_start_offset** 值，为批处理或模块中的每个语句创建一个计划指南。|  
   
-## <a name="explanation"></a>解释  
-与指定的 \@plan_handle 对应的批或模块中包含的合格语句超过 1000 个  。  
+## <a name="explanation"></a>说明  
+与指定的 **plan_handle 对应的批或模块中包含的合格语句超过 1000 个\@** 。  
   
 ## <a name="user-action"></a>用户操作  
 通过为每个语句指定 **statement_start_offset** 值，为批处理或模块中的每个语句创建一个计划指南。  

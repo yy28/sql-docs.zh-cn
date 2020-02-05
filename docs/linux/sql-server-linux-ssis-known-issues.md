@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032218"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>适用于 Linux 上 SSIS 的限制和已知问题
@@ -142,7 +142,7 @@ SQL Server 日志提供程序仅支持 SQL 身份验证；它不支持 Windows �
 -   如果未提供路径，则日志提供程序写入主机的当前目录。 如果当前用户没有写入主机当前目录的权限，则日志提供程序会引发错误。
 -   不能在文件路径中使用环境变量。 如果指定环境变量，指定的文本将显示在文件路径中。 例如，如果指定 `%TMP%/log.txt`，则日志提供程序会将文本 `/%TMP%/log.txt` 追加到当前主机目录。
 
-## <a name="related-content-about-ssis-on-linux"></a>有关 Linux 上 SSIS 的相关内容
+## <a name="related-content-about-ssis-on-linux"></a>有关 Linux 上的 SSIS 的相关内容
 -   [使用 SSIS 在 Linux 上提取、转换和加载数据](sql-server-linux-migrate-ssis.md)
 -   [在 Linux 上安装 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
 -   [使用 ssis-conf 在 Linux 上配置 SQL Server Integration Services](sql-server-linux-configure-ssis.md)

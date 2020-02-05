@@ -11,10 +11,10 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac260f2c3703260e5472d5be399333a93574f2c9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283256"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>第 3-3 课 — 测试已部署的包
@@ -24,7 +24,7 @@ ms.locfileid: "71283256"
 
 在此任务中，将测试已部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例的包。  
   
-在其他 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程中，可以在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的开发环境中使用“调试”菜单上的“开始调试”选项运行 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的包。   这一次，将以不同方式运行包。  
+在其他 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程中，可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的开发环境中使用“调试”菜单上的“开始调试”选项运行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的包。   这一次，将以不同方式运行包。  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了几个可用于在测试和生产环境中运行包的工具：命令提示实用工具 **dtexec** 和执行包实用工具。 执行包实用工具是基于 **dtexec**构建的图形工具。 这两种工具均可直接执行包。 此外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 还提供了一个 SQL Server 代理子系统，专门用于将包执行计划为 SQL Server 代理作业中的一个步骤。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "71283256"
   
 2.  在“连接到服务器”对话框中，选择“服务器类型”列表中的“数据库引擎”，在“服务器名称”框中提供在其上已安装教程包的服务器的名称或键入 (local)，再选择身份验证模式。     如果使用 SQL Server 身份验证，请提供用户名和密码。  
   
-3.  单击 **“连接”** 。  
+3.  单击“连接”  。  
   
 4.  在查询窗口中，键入或粘贴以下 SQL 语句：  
   
@@ -95,7 +95,7 @@ ms.locfileid: "71283256"
   
 2.  如果再次提示进行连接，请在“连接到服务器”对话框中，选择“服务器类型”列表中的“数据库引擎”，在“服务器名称”框中提供在其上已安装教程包的服务器的名称或输入 (local)，再选择身份验证模式。     如果使用 SQL Server 身份验证，请提供用户名和密码。  
   
-3.  单击 **“连接”** 。  
+3.  单击“连接”  。  
   
 4.  在查询窗口中，键入或粘贴以下 SQL 语句：  
   
