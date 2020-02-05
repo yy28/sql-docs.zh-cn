@@ -16,10 +16,10 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294218"
 ---
 # <a name="data-profile-viewer"></a>数据配置文件查看器 (Data Profile Viewer)
@@ -32,22 +32,22 @@ ms.locfileid: "71294218"
 > [!IMPORTANT]  
 >  输出文件可能包含有关数据库的敏感数据和数据库所包含的数据。 有关如何使此文件更加安全的建议，请参阅 [访问包使用的文件](../../integration-services/security/security-overview-integration-services.md#files)。  
   
-## <a name="data-profiles"></a>数据事件探查  
+## <a name="data-profiles"></a>数据配置文件  
  若要查看数据配置文件，请将数据事件探查任务配置为将其输出发送到文件，然后使用独立的数据配置文件查看器。 若要打开数据配置文件查看器，请执行以下操作之一。  
   
--   在“[!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器”中右键单击“数据事件探查”  任务，然后单击“编辑”  。 在 **“数据事件探查任务编辑器”** 的 **“常规”** 页上，单击 **“打开配置文件查看器”** 。  
+-   在“ **设计器”中右键单击“数据事件探查”** [!INCLUDE[ssIS](../../includes/ssis-md.md)]任务，然后单击“编辑”  。 在 **“数据事件探查任务编辑器”** 的 **“常规”** 页上，单击 **“打开配置文件查看器”** 。  
   
--   在文件夹 \<drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中，运行 DataProfileViewer.exe  。  
+-   在文件夹 *drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中，运行 DataProfileViewer.exe\<* 。  
   
  该查看器使用多个窗格来显示请求的配置文件和计算所得的结果，包含可选详细信息和明细功能：  
   
- “配置文件”  窗格  
+ **“配置文件”** 窗格  
  “配置文件”  窗格显示数据配置文件任务中所请求的配置文件。 若要查看配置文件的计算结果，请在 **“配置文件”** 窗格中选择配置文件，结果将显示在查看器的其他窗格中。  
   
  **“结果”** 窗格  
  “结果”  窗格使用单行来汇总配置文件的计算结果。 例如，如果请求 **“列长度分布配置文件”** ，此行将包括最小和最大长度以及行数。 对于大多数配置文件，可以在 **“结果”** 窗格中选择此行，以便在可选的 **“详细信息”** 窗格中查看其他详细信息。  
   
- “详细信息”  窗格  
+ **“详细信息”** 窗格  
  对于大多数配置文件类型，“详细信息”  窗格显示有关在“结果”  窗格中选择的配置文件结果的其他信息。 例如，如果请求 **“列长度分布配置文件”** ， **“详细信息”** 窗格将显示找到的每列长度。 该窗格还显示列值为该列长度的行数和行数百分比。  
   
  对于对多列进行计算的三种配置文件类型（候选键、函数依赖关系和值包含），“详细信息”  窗格显示违反期望关系的信息。 例如，如果请求候选键配置文件，“详细信息”窗格将显示违反候选键唯一性约束的重复值。  
@@ -148,10 +148,10 @@ ms.locfileid: "71294218"
 #### <a name="profile-type--column-statistics-profile"></a>配置文件类型 = 列统计信息配置文件  
   
 ##### <a name="column-statistics-profile---column-pane"></a>列统计信息配置文件 - \<列> 窗格  
- **最低要求**  
+ **最低**  
  显示在进行事件探查的列中发现的最小值。  
   
- **最大值**  
+  最大值  
  显示在进行事件探查的列中发现的最大值。  
   
  **中间线**  
@@ -170,7 +170,7 @@ ms.locfileid: "71294218"
  显示表或视图中的行数。  
   
 ##### <a name="detailed-value-distribution-pane"></a>“详细值分布”窗格  
- **ReplTest1**  
+ **值**  
  显示在进行事件探查的列中发现的非重复值。  
   
  **Count**  
@@ -189,7 +189,7 @@ ms.locfileid: "71294218"
  显示候选键列或候选键列组合的强度（按百分比）。 键强度小于 100% 指示存在重复值。  
   
 ##### <a name="key-violations-pane"></a>“键冲突”窗格  
- \<column1>、\<column2> 等   
+ **column1>、\<column2> 等\<**  
  显示进行事件探查的列中找到的重复值。  
   
  **Count**  
@@ -198,7 +198,7 @@ ms.locfileid: "71294218"
 #### <a name="profile-type--functional-dependency-profile"></a>配置文件类型 = 函数依赖关系配置文件  
   
 ##### <a name="functional-dependency-profile-pane"></a>“函数依赖关系配置文件”窗格  
- **决定列**  
+ **“决定列”**  
  显示选择作为决定列的单个列或多个列。 在相同的美国邮政编码应总对应相同的州的示例中，邮政编码列就是决定列。  
   
  **依赖列**  
@@ -212,17 +212,17 @@ ms.locfileid: "71294218"
 > [!NOTE]  
 >  数据中的错误值的高百分比可能导致函数依赖关系配置文件产生意外结果。 例如，在 90% 的行中，与邮政编码值“98052”对应的州值为“WI”。 配置文件将包含正确州值“WA”的行报告为冲突。  
   
- \<决定列名称>   
+ **决定列名称>\<**  
  显示在此函数依赖关系冲突实例中决定列或决定列组合的值。  
   
- \<依赖列名称>   
+ **依赖列名称>\<**  
  显示在此函数依赖关系冲突实例中依赖列的值。  
   
  **支持计数**  
  显示决定列值决定依赖列的行数。  
   
  **冲突计数**  
- 显示决定列值不能决定依赖列的行数。 （在这些行中，依赖值是 \<dependent column name> 列中显示的值。  ）  
+ 显示决定列值不能决定依赖列的行数。 （在这些行中，依赖值是 **dependent column name> 列中显示的值。\<** ）  
   
  **支持百分比**  
  显示决定列决定依赖列的行数的百分比。  
@@ -230,17 +230,17 @@ ms.locfileid: "71294218"
 #### <a name="profile-type--value-inclusion-profile"></a>配置文件类型 = 值包含配置文件  
   
 ##### <a name="value-inclusion-profile-pane"></a>“值包含配置文件”窗格  
- **子集端列**  
+ **“子集端列”**  
  显示进行事件探查的列或列组合，以确定它们是否包含在超集列中。  
   
- **超集端列**  
+ **“超集端列”**  
  显示进行事件探查的列或列组合，以确定它们是否包含子集列中的值。  
   
  **包含强度**  
  显示列之间的重叠强度（按百分比）。 键强度小于 100% 指示存在在超集值中找不到子集值的情况。  
   
 ##### <a name="inclusion-violations-pane"></a>“包含冲突”窗格  
- \<column1>、\<column2> 等   
+ **column1>、\<column2> 等\<**  
  显示在单个或多个超集列中找不到的单个或多个子集列中的值。  
   
  **Count**  

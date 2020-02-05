@@ -11,10 +11,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0d8299581c5394b5528e9c42a41a64445fae800
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903893"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
@@ -36,7 +36,7 @@ ms.locfileid: "72903893"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>从当前版本的美国英语断字符切换到以前的版本  
   
-1.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID  。  
+1.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
   
 2.  使用以下步骤添加 COM ClassID 的新键，用于 LCID 1033 的以前美国英语的断字符和词干分析器接口：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72903893"
   
     4.  将该键值的（默认）数据更新为 **infosoft.dll**。  
   
-3.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu  。  
+3.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**。  
   
 4.  将 **WBreakerClass** 键值更新为 **{188D6CC5-CB03-4C01-912E-47D21295D77E}** 。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "72903893"
 
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>从当前版本的英国英语断字符切换到以前的版本  
   
-1.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID  。  
+1.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
   
 2.  使用以下步骤添加 COM ClassID 的新键，用于 LCID 2057 的以前英国英语的断字符和词干分析器接口：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72903893"
   
     4.  将该键值的（默认）数据更新为 **infosoft.dll**。  
   
-3.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng  。  
+3.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
   
 4.  将 **WBreakerClass** 键值更新为 **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** 。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72903893"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>从以前版本的美国英语断字符切换回当前版本  
   
-1.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID  。  
+1.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
   
 2.  如果以下键不存在，则使用以下步骤添加 COM ClassID 的新键，用于 LCID 1033 的当前美国英语的断字符和词干分析器接口：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72903893"
   
     4.  将该键值的（默认）数据更新为 **MsWb7.dll**。  
   
-3.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng  。  
+3.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
   
 4.  将 **WBreakerClass** 键值更新为 **{9faed859-0b30-4434-ae65-412e14a16fb8}** 。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "72903893"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>从以前版本的英国英语断字符切换回当前版本  
   
-1.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID  。  
+1.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
   
 2.  如果以下键不存在，则使用以下步骤添加 COM ClassID 的新键，用于 LCID 2057 的当前英国英语的断字符和词干分析器接口：  
   
@@ -116,7 +116,7 @@ ms.locfileid: "72903893"
   
     4.  将该键值的（默认）数据更新为 **MsWb7.dll**。  
   
-3.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng  。  
+3.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
   
 4.  将 **WBreakerClass** 键值更新为 **{9faed859-0b30-4434-ae65-412e14a16fb8}** 。  
   
@@ -126,6 +126,6 @@ ms.locfileid: "72903893"
   
 ## <a name="see-also"></a>另请参阅  
  [将搜索功能所使用的断字符还原到以前的版本](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [全文搜索的行为更改](/sql/database-engine/behavior-changes-to-full-text-search)  
+ [对全文搜索的行为更改](/sql/database-engine/behavior-changes-to-full-text-search)  
   
   

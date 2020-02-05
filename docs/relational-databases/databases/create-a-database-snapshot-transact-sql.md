@@ -13,10 +13,10 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708279"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>创建数据库快照 (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "71708279"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  可以使用任何恢复模式的源数据库必须满足以下先决条件：  
   
 -   服务器实例必须运行支持数据库快照的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中数据库快照支持的详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -97,7 +97,7 @@ AdventureWorks_snapshot_evening
   
 1.  根据源数据库的当前大小，确保有足够的磁盘空间存放数据库快照。 数据库快照的最大大小为创建快照时源数据库的大小。 有关详细信息，请参阅[查看数据库快照的稀疏文件大小 (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)。  
   
-2.  使用 AS SNAPSHOT OF 子句对文件执行 CREATE DATABASE 语句。 创建快照需要指定源数据库的每个数据库文件的逻辑名称。 语法如下：  
+2.  使用 AS SNAPSHOT OF 子句对文件执行 CREATE DATABASE 语句。 创建快照需要指定源数据库的每个数据库文件的逻辑名称。 语法如下所示：  
 
      CREATE DATABASE *database_snapshot_name*  
   

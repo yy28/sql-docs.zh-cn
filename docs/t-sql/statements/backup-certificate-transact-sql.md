@@ -29,10 +29,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 7b2559ca1eee0f2787fbf74adba97b03671d6faf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091757"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68091757"
 
   将证书导出到文件中。  
   
- ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "“链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,24 +69,24 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>参数  
- certname  
+ certname   
  要备份的证书的名称。
 
- TO FILE = path_to_file  
+ TO FILE = path_to_file   
  指定要保存证书的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。 如果仅指定了文件名，则该文件将保存在实例的默认用户数据文件夹中（可能是也可能不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹）。 对于 SQL Server Express LocalDB，实例的默认用户数据文件夹是 `%USERPROFILE%` 环境变量为创建实例的帐户指定的路径。  
 
  WITH PRIVATE KEY 指定将证书的私钥保存到文件中。 此子句为可选项。
 
- FILE = path_to_private_key_file  
+ FILE = path_to_private_key_file   
  指定要保存私钥的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。 如果仅指定了文件名，则该文件将保存在实例的默认用户数据文件夹中（可能是也可能不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹）。 对于 SQL Server Express LocalDB，实例的默认用户数据文件夹是 `%USERPROFILE%` 环境变量为创建实例的帐户指定的路径。  
 
- ENCRYPTION BY PASSWORD = encryption_password  
+ ENCRYPTION BY PASSWORD = encryption_password   
  用于在将密钥写入备份文件之前对私钥进行加密的密码。 该密码需要进行复杂性检查。  
   
- DECRYPTION BY PASSWORD = decryption_password  
+ DECRYPTION BY PASSWORD = decryption_password   
  用于在备份密钥之前对私钥进行解密的密码。 如果证书是用主密钥加密，便无需使用此参数。 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果在数据库中使用密码对私钥进行加密，则必须指定解密密码。  
   
  将私钥备份到文件时，需要进行加密。 用于保护文件中私钥的密码和用于加密数据库中证书私钥的密码不是同一个密码。  

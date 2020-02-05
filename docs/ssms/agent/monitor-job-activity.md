@@ -1,10 +1,9 @@
 ---
-title: 监视作业活动 | Microsoft Docs
-ms.custom: ''
+title: 监视作业活动
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,13 +20,15 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a227b7ee1723dd8a77d7eb118476969575c5951c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0fdb46ddca31f870363385bef70adde37a7a36ef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267504"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252362"
 ---
 # <a name="monitor-job-activity"></a>监视作业活动
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,15 +56,15 @@ ms.locfileid: "68267504"
   
 若要查看计划运行的作业、当前会话期间运行的作业的最新结果以及当前正在运行或空闲的作业，请使用作业活动监视器。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务意外失败，您可以参考作业活动监视器中的上一次会话来确定正在执行的作业。  
   
-若要打开作业活动监视器，请在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 对象资源管理器中展开“SQL Server 代理”  ，右键单击“作业活动监视器”  ，再单击“查看作业活动”  。  
+若要打开作业活动监视器，请在  **对象资源管理器中展开“SQL Server 代理”** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，右键单击“作业活动监视器”  ，再单击“查看作业活动”  。  
   
-也可以使用存储过程 **sp_help_jobactivity** 查看当前会话的作业活动。  
+也可以使用存储过程 **sp_help_jobactivity**查看当前会话的作业活动。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |介绍如何查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的运行时状态。|[View Job Activity](../../ssms/agent/view-job-activity.md)|  
   
 ## <a name="see-also"></a>另请参阅  

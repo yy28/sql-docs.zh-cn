@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 3469a162645816a3b90657b0c2a3b81b37e6cade
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054633"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>运行部署在 Azure 中的 SQL Server Integration Services (SSIS) 包
@@ -64,7 +64,7 @@ ms.locfileid: "68054633"
 
 ## <a name="script"></a>使用脚本或代码运行包
 
-在可以调用托管 API 的任何开发环境中，可以通过调用 `Microsoft.SQLServer.Management.IntegrationServices` 命名空间中 `Package` 对象的 `Execute` 方法，运行包。
+在可以调用托管 API 的任何开发环境中，可以通过调用 `Execute` 命名空间中 `Package` 对象的 `Microsoft.SQLServer.Management.IntegrationServices` 方法，运行包。
 
 有关详细信息，请参阅以下示例：
 

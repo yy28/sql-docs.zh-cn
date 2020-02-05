@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997915"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 连接配置 (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "67997915"
 
   显示或更改 PolyBase Hadoop 和 Azure blob 存储连接的全局配置设置。
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,10 +45,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@configname=** ] **'**_option\_name_**'**  
- 配置选项的名称。 *option_name* 的数据类型为 **varchar(35)**，默认值为 NULL。 如果未指定该参数，则返回选项的完整列表。  
+ [ **@configname=** ] **'** _option\_name_ **'**  
+ 配置选项的名称。 *option_name* 的数据类型为 **varchar(35)** ，默认值为 NULL。 如果未指定该参数，则返回选项的完整列表。  
   
- [ **@configvalue=** ] **'**_value_**'**  
+ [ **@configvalue=** ] **'** _value_ **'**  
  新的配置设置。 *value* 的数据类型为 **int**，默认值为 NULL。 最大值取决于各个选项。  
   
  **“hadoop 连接”**  
@@ -91,9 +91,9 @@ RECONFIGURE
 ##  <a name="ResultSets"></a> 结果集  
  在不使用参数执行时， **sp_configure** 会返回五列的结果集。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**名称**|**nvarchar(35)**|配置选项的名称。|  
+|name |**nvarchar(35)**|配置选项的名称。|  
 |**最小值**|**int**|配置选项的最小值。|  
 |**最大值**|**int**|配置选项的最大值。|  
 |**config_value**|**int**|使用 **sp_configure**设置的值。|  
@@ -142,7 +142,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  

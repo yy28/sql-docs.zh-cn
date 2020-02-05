@@ -17,10 +17,10 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907990"
 ---
 # <a name="oracle-subscribers"></a>Oracle 订阅服务器
@@ -32,7 +32,7 @@ ms.locfileid: "72907990"
   
 1.  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上安装和配置 Oracle 客户端网络软件和 Oracle OLE DB 访问接口，以便分发服务器可以连接到 Oracle 订阅服务器。 Oracle 客户端网络软件应是可用的最新版本。 Oracle 建议用户安装最新版本的客户端软件。 因此，客户端软件的版本通常比数据库软件更高。 安装此软件的最直接方法是使用 Oracle Client 光盘上的 Oracle Universal Installer。 在 Oracle Universal Installer 中，您需要提供以下信息：  
   
-    |信息|描述|  
+    |信息|说明|  
     |-----------------|-----------------|  
     |Oracle 主目录|这是 Oracle 软件的安装目录的路径。 接受默认路径（C:\oracle\ora90 或类似路径），或输入另一个路径。 有关 Oracle 主目录的详细信息，请参阅本主题后面的“Oracle 主目录注意事项”部分。|  
     |Oracle 主目录名称|Oracle 主目录路径的别名。|  
@@ -42,7 +42,7 @@ ms.locfileid: "72907990"
   
      完成 Oracle Universal Installer 之后，使用 Net Configuration Assistant 配置网络连接。 必须提供四部分信息以配置网络连接。 在设置数据库和侦听器时，Oracle 数据库管理员将配置网络。如果您没有此信息，应由数据库管理员提供此信息。 必须执行以下操作：  
   
-    |操作|描述|  
+    |操作|说明|  
     |------------|-----------------|  
     |标识数据库|标识数据库的方法有两种。 第一种方法是使用 Oracle 系统标识符 (SID)，该方法在所有 Oracle 版本中均可用。 第二种方法是使用服务名称，该名称从 Oracle 8.0 版本开始才可用。 这两种方法都使用一个在创建数据库时所配置的值，并且要注意，客户端网络配置所使用的命名方法要与管理员在配置数据库的侦听器时使用的命名方法相同。|  
     |标识数据库的网络别名|必须指定网络别名，该别名将用来访问 Oracle 数据库。 实际上，网络别名是指向在创建数据库时所配置的远程 SID 或服务名称的指针。在不同的 Oracle 版本和产品中存在多种引用名称，包括 Net 服务名称和 TNS 别名。 在登录时，SQL*Plus 将提示您输入此别名来作为“Host String”参数。|  
@@ -63,7 +63,7 @@ ms.locfileid: "72907990"
   
 2.  键入 `cmd` ，然后单击 **“确定”** 。  
   
-3.  在命令提示符下，键入：  
+3.  在命令提示符处，键入：  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
