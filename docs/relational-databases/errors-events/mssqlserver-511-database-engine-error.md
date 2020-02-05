@@ -12,13 +12,13 @@ ms.assetid: 0c85686a-53c1-4180-ba8c-2000e68a0d63
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: caae7702ae1f4fde3f136024d538cf36c5ee2b51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123076"
 ---
-# <a name="mssqlserver511"></a>MSSQLSERVER_511
+# <a name="mssqlserver_511"></a>MSSQLSERVER_511
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68123076"
 |符号名称|ROW_TOOBIG|  
 |消息正文|不能创建大小为 %d 的行，该大小大于所允许的最大值 %d。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 尝试的操作已超出行大小的最大值。 通常，行大小的最大值为 8,060 个字节。 某些存储格式包含的开销可减小数据可用的行大小。 例如，使用稀疏列时，行大小的最大值为 8,018 个字节。 某些添加或删除行的操作和某些更改列的数据类型的操作要求在数据页重写此行，然后才能删除原始行。 在这些操作中，行大小的有效限制值为最大限制值的一半。 这是因为，在短时间内，原始行和已修改的行都必须保留在数据页中。  
   
 ## <a name="user-action"></a>用户操作  

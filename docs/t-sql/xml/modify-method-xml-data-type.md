@@ -15,16 +15,16 @@ ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c98ef9c726d2db5b5ec06d71a00de08288098a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051279"
 ---
 # <a name="modify-method-xml-data-type"></a>modify() 方法（xml 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  修改 XML 文档的内容。 使用此方法修改 xml 类型变量或列的内容。 此方法使用 XML DML 语句在 XML 数据中插入、更新或删除节点。 xml 数据类型的 modify() 方法只能在 UPDATE 语句的 SET 子句中使用。  
+  修改 XML 文档的内容。 使用此方法修改 xml 类型变量或列的内容  。 此方法使用 XML DML 语句在 XML 数据中插入、更新或删除节点。 xml 数据类型的 modify() 方法只能在 UPDATE 语句的 SET 子句中使用   。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ modify (XML_DML)
  是 XML 数据操作语言 (DML) 中的字符串。 将根据此表达式来更新 XML 文档。  
   
 > [!NOTE]  
->  如果针对 null 值或以 null 值表示的结果调用 modify() 方法，则会返回错误。  
+>  如果针对 null 值或以 null 值表示的结果调用 modify() 方法，则会返回错误  。  
   
 ## <a name="examples"></a>示例  
- modify() 方法需要使用 XML 数据操作语言 (DML) 中的字符串，因此有关 modify() 的示例包含在说明 XML DML 语句的主题中。 有关这些示例，请参阅[插入 (XML DML)](../../t-sql/xml/insert-xml-dml.md)、[删除 (XML DML)](../../t-sql/xml/delete-xml-dml.md) 和[替换 (XML DML) 的值](../../t-sql/xml/replace-value-of-xml-dml.md)。  
+ modify() 方法需要使用 XML 数据操作语言 (DML) 中的字符串，因此有关 modify() 的示例包含在说明 XML DML 语句的主题中   。 有关这些示例，请参阅[插入 (XML DML)](../../t-sql/xml/insert-xml-dml.md)、[删除 (XML DML)](../../t-sql/xml/delete-xml-dml.md) 和[替换 (XML DML) 的值](../../t-sql/xml/replace-value-of-xml-dml.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)   

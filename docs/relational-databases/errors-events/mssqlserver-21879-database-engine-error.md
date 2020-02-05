@@ -12,13 +12,13 @@ ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7068229bcfcf63bb08fe46272cf308cee60be022
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056716"
 ---
-# <a name="mssqlserver21879"></a>MSSQLSERVER_21879
+# <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,8 +32,8 @@ ms.locfileid: "68056716"
 |符号名称|SQLErrorNum21879|  
 |消息正文|无法查询重定向服务器“%s”以找到原始发布服务器“%s”和发布服务器数据库“%s”来确定远程服务器的名称；错误 %d，错误消息“%s”。|  
   
-## <a name="explanation"></a>解释  
-**sp_validate_redirected_publisher** 使用其创建的临时链接服务器连接到重定向发布服务器，以便发现远程服务器的名称。 在链接服务器查询失败时，将返回错误 21879。 对请求远程服务器名称的调用通常是首次使用临时链接服务器，因此如果存在连接问题，则这些问题可能首先会与此调用一起出现。 在远程服务器上，此远程调用只执行选择 **@@servername**。  
+## <a name="explanation"></a>说明  
+**sp_validate_redirected_publisher** 使用其创建的临时链接服务器连接到重定向发布服务器，以便发现远程服务器的名称。 在链接服务器查询失败时，将返回错误 21879。 对请求远程服务器名称的调用通常是首次使用临时链接服务器，因此如果存在连接问题，则这些问题可能首先会与此调用一起出现。 在远程服务器上，此远程调用只执行选择 **@@servername** 。  
   
 用于查询重定向发布服务器的链接服务器使用在为原始发布服务器调用 **sp_adddistpublisher** 时提供的安全模式、登录名和密码。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "68056716"
   
 如果由非分发服务器的其他节点上运行的复制代理（如在订阅服务器上运行的合并代理）启动的 **sp_get_redirected_publisher** 调用返回了错误 21879，则应注意一些特殊事项。 如果使用 Windows 身份验证连接到重定向发布服务器，则必须将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 Kerberos 身份验证以便成功建立连接。 当使用 Windows 身份验证且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未配置为使用 Kerberos 身份验证时，在订阅服务器上运行的合并代理将收到错误 18456，指示“NT AUTHORITY\ANONYMOUS LOGON”登录名失败。 可以通过三种方式解决此问题：  
   
--   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 Kerberos 身份验证。 请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的 **Kerberos 身份验证和 SQL Server**。  
+-   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 Kerberos 身份验证。 请参阅 **联机丛书中的**Kerberos 身份验证和 SQL Server[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 -   使用 **sp_changedistpublisher** 更改与 MSdistpublishers 中的原始发布服务器相关联的安全模式，并指定要用于该连接的登录名和密码。  
   
--   当在分发服务器上调用 **sp_get_redirected_publisher** 时，在合并代理命令行中指定命令行参数 *BypassPublisherValidation* 以跳过验证。  
+-   当在分发服务器上调用 *sp_get_redirected_publisher* 时，在合并代理命令行中指定命令行参数 **BypassPublisherValidation** 以跳过验证。  
   

@@ -12,13 +12,13 @@ ms.assetid: 28270d98-c543-4e7d-b40c-2200e38dce1c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d57f619326a36237dac8cbad7eb59bba429ad3af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123277"
 ---
-# <a name="mssqlserver41342"></a>MSSQLSERVER_41342
+# <a name="mssqlserver_41342"></a>MSSQLSERVER_41342
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68123277"
 |符号名称|HK_HW_NOT_SUPPORTED|  
 |消息正文|系统上的处理器型号不支持创建 *construct*。 较早的处理器通常会出现此错误。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 内存优化的表要求处理器型号支持对 128 位值执行原子比较和交换操作，这要求装配说明 CMPXCHG16B。 一些较旧的 AMD 处理器型号不支持 CMPXCHG16B 指令。 此外，默认情况下，某些虚拟化环境不启用此指令。  
   
 ## <a name="user-action"></a>用户操作  

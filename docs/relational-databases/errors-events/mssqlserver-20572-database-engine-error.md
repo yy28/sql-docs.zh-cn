@@ -12,13 +12,13 @@ ms.assetid: 9d91d0fc-e8b1-4ba6-b97c-725864578a7b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 816ffc53761e3026cd9e2c281f417b129d9bd822
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896712"
 ---
-# <a name="mssqlserver20572"></a>MSSQLSERVER_20572
+# <a name="mssqlserver_20572"></a>MSSQLSERVER_20572
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,6 +32,6 @@ ms.locfileid: "67896712"
 |符号名称|SQLErrorNum20572|  
 |消息正文|在验证失败之后，订阅服务器“%s”对发布“%s”中项目“%s”的订阅已被重新初始化。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
   
 ## <a name="user-action"></a>用户操作  

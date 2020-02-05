@@ -12,13 +12,13 @@ ms.assetid: bfdc626e-7958-4511-987d-3b687824e8af
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c2a0a00e5df34da8bf56cf92752e6bd0ea135d73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908522"
 ---
-# <a name="mssqlserver33027"></a>MSSQLSERVER_33027
+# <a name="mssqlserver_33027"></a>MSSQLSERVER_33027
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "67908522"
 |符号名称|SEC_CRYPTOPROV_CANTLOADDLL|  
 |消息正文|由于 Authenticode 签名或文件路径无效，未能加载加密提供程序“%.*ls”。 请检查以前的消息，了解其他失败信息。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 SQL Server 无法使用错误消息中列出的加密提供程序，因为 SQL Server 无法加载 DLL。 原因是名称无效或 Authenticode 签名无效。  
   
 ## <a name="user-action"></a>用户操作  

@@ -13,10 +13,10 @@ ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68083986"
 ---
 # <a name="open-log-file-viewer"></a>打开日志文件查看器
@@ -25,7 +25,7 @@ ms.locfileid: "68083986"
   
 -   审核集合  
   
--   “数据收集”  
+-   数据收集  
   
 -   数据库邮件  
   
@@ -46,58 +46,58 @@ ms.locfileid: "68083986"
   
  若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脱机实例的日志文件，不仅必须具有 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空间的读取权限，还必须具有存储日志文件的文件夹的读取权限。 有关详细信息，请参阅 [查看脱机日志文件](../../relational-databases/logs/view-offline-log-files.md)主题的“安全性”部分。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
  要求具有 securityadmin 固定服务器角色的成员身份。  
   
 ### <a name="view-log-files"></a>查看日志文件  
   
 ##### <a name="to-view-logs-that-are-related-to-general-sql-server-activity"></a>查看与常规 SQL Server 活动相关的日志  
   
-1.  在对象资源管理器中，展开 **“管理”**。  
+1.  在对象资源管理器中，展开 **“管理”** 。  
   
 2.  执行下列任一操作：  
   
-    -   右键单击“SQL Server 日志”，指向“查看”，然后单击“SQL Server 日志”或“SQL Server 和 Windows 日志”。  
+    -   右键单击“SQL Server 日志”  ，指向“查看”  ，然后单击“SQL Server 日志”  或“SQL Server 和 Windows 日志”  。  
   
-    -   展开“SQL Server 日志”，右键单击任何日志文件，然后单击“查看 SQL Server 日志”。 还可以双击任何日志文件。  
+    -   展开“SQL Server 日志”  ，右键单击任何日志文件，然后单击“查看 SQL Server 日志”  。 还可以双击任何日志文件。  
   
-     这些日志包括 **“数据库邮件”**、 **“SQL Server”**、 **“SQL Server 代理”** 和 **“Windows NT”**。  
+     这些日志包括 **“数据库邮件”** 、 **“SQL Server”** 、 **“SQL Server 代理”** 和 **“Windows NT”** 。  
   
 ##### <a name="to-view-logs-that-are-related-to-jobs"></a>查看与作业相关的日志  
   
--   在对象资源管理器中，展开“SQL Server 代理”，右键单击“作业”，然后单击“查看历史记录”。  
+-   在对象资源管理器中，展开“SQL Server 代理”  ，右键单击“作业”  ，然后单击“查看历史记录”  。  
   
-     这些日志包括 **“数据库邮件”**、 **“作业历史记录”** 和 **“SQL Server 代理”**。  
+     这些日志包括 **“数据库邮件”** 、 **“作业历史记录”** 和 **“SQL Server 代理”** 。  
   
 ##### <a name="to-view-logs-that-are-related-to-maintenance-plans"></a>查看与维护计划相关的日志  
   
--   在对象资源管理器中，展开“管理”，右键单击“维护计划”，然后单击“查看历史记录”。  
+-   在对象资源管理器中，展开“管理”  ，右键单击“维护计划”  ，然后单击“查看历史记录”  。  
   
-     这些日志包括 **“数据库邮件”**、 **“作业历史记录”**、 **“维护计划”**、 **“远程维护计划”** 和 **“SQL Server 代理”**。  
+     这些日志包括 **“数据库邮件”** 、 **“作业历史记录”** 、 **“维护计划”** 、 **“远程维护计划”** 和 **“SQL Server 代理”** 。  
   
 ##### <a name="to-view-logs-that-are-related-to-data-collection"></a>查看与数据收集相关的日志  
   
--   在对象资源管理器中，展开“管理”，右键单击“数据收集”，然后单击“查看日志”。  
+-   在对象资源管理器中，展开“管理”  ，右键单击“数据收集”  ，然后单击“查看日志”  。  
   
-     这些日志包括 **“数据收集”**、 **“作业历史记录”** 和 **“SQL Server 代理”**。  
+     这些日志包括 **“数据收集”** 、 **“作业历史记录”** 和 **“SQL Server 代理”** 。  
   
 ##### <a name="to-view-logs-that-are-related-to-database-mail"></a>查看与数据库邮件相关的日志  
   
--   在对象资源管理器中，展开“管理”，右键单击“数据库邮件”，然后单击“查看数据库邮件日志”。  
+-   在对象资源管理器中，展开“管理”  ，右键单击“数据库邮件”  ，然后单击“查看数据库邮件日志”  。  
   
-     这些日志包括 **“数据库邮件”**、“作业历史记录”、 **“维护计划”**、 **“远程维护计划”**、 **“SQL Server”**、 **“SQL Server 代理”** 和 **“Windows NT”**。  
-  
-##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>查看与审核集合相关的日志  
-  
--   在对象资源管理器中，依次展开“安全性”和“审核”，右键单击一个审核，然后单击“查看审核日志”。  
-  
-     这些日志包括 **“审核集合”** 和 **“Windows NT”**。  
+     这些日志包括 **“数据库邮件”** 、“作业历史记录”、 **“维护计划”** 、 **“远程维护计划”** 、 **“SQL Server”** 、 **“SQL Server 代理”** 和 **“Windows NT”** 。  
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>查看与审核集合相关的日志  
   
--   在对象资源管理器中，依次展开“安全性”和“审核”，右键单击一个审核，然后单击“查看审核日志”。  
+-   在对象资源管理器中，依次展开“安全性”  和“审核”  ，右键单击一个审核，然后单击“查看审核日志”  。  
   
-     这些日志包括 **“审核集合”** 和 **“Windows NT”**。  
+     这些日志包括 **“审核集合”** 和 **“Windows NT”** 。  
+  
+##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>查看与审核集合相关的日志  
+  
+-   在对象资源管理器中，依次展开“安全性”  和“审核”  ，右键单击一个审核，然后单击“查看审核日志”  。  
+  
+     这些日志包括 **“审核集合”** 和 **“Windows NT”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [日志文件查看器](../../relational-databases/logs/log-file-viewer.md)   

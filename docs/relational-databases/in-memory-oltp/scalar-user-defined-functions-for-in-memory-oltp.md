@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f3614b1f9c058405c041aa2b4de27d97caadb8fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111757"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>针对内存中 OLTP 的标量用户定义函数
@@ -91,7 +91,7 @@ END
   
 -   如果由架构绑定存储过程或用户定义函数引用，则不能删除或更改。  
   
-## <a name="showplanxml"></a>SHOWPLAN_XML  
+## <a name="showplan_xml"></a>SHOWPLAN_XML  
  本机编译标量用户定义函数支持 SHOWPLAN_XML。 与本机编译存储过程一样，它遵循常规 SHOWPLAN_XML 架构。 用户定义函数的基元素是 `<UDF>`。  
   
  本机编译标量用户定义函数不支持 STATISTICS XML。 当在启用 STATISTICS XML 的情况下运行引用用户定义函数的查询时，会返回 XML 内容，而不返回用户定义函数部分。  
