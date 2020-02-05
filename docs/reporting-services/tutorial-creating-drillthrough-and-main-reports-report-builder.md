@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73637982"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
@@ -94,7 +94,7 @@ ms.locfileid: "73637982"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. 单击“下一步”  。  
+14. 单击“下一步”。   
   
 ## <a name="DMDXQuery"></a>1b. 创建 MDX 查询  
 在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
@@ -163,7 +163,7 @@ ms.locfileid: "73637982"
   
 6.  在查询设计器工具栏中，单击“运行(!)”  。  
   
-7.  单击“下一步”  。  
+7.  单击“下一步”。   
   
 ## <a name="DLayout"></a>1c. 将数据组织到组中  
 在选择要对数据分组的字段时，可以设计一个矩阵，其中的行和列显示了详细数据和聚合数据。  
@@ -185,11 +185,11 @@ ms.locfileid: "73637982"
   
     若要查看其他可用聚合函数，请打开下拉列表（不要更改聚合函数）。  
   
-5.  将“Sales_Return_Amount”拖到“值”中，然后将它放到“`[Sum(Sales_Amount)]`”下面  。  
+5.  将“Sales_Return_Amount”拖到“值”中，然后将它放到“ **”下面**`[Sum(Sales_Amount)]`。  
   
     步骤 4 和 5 指定要在矩阵中显示的数据。  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。   
   
 ## <a name="DTotals"></a>1d. 添加小计和总计  
 创建组后，可以添加用于显示字段的聚合值的行并设置其格式。 还可以选择是显示所有数据还是允许用户以交互方式展开和折叠已分组数据。  
@@ -200,15 +200,15 @@ ms.locfileid: "73637982"
   
     向导的“预览”窗格将显示包含四行的矩阵。  
   
-2.  单击“下一步”  。  
+2.  单击“下一步”。   
   
-2.  单击 **“完成”** 。  
+2.  单击“完成”  。  
   
     表将添加到设计图面中。  
   
 3.  若要预览报表，请单击“运行 (!)”  。  
   
-## <a name="DFormat"></a>2.将数据格式设置为货币  
+## <a name="DFormat"></a>2.将数据格式设置为货币格式  
 将货币格式应用到钻取报表中的销售额字段。  
   
 #### <a name="to-format-data-as-currency"></a>将数据格式设置为货币格式  
@@ -230,7 +230,7 @@ ms.locfileid: "73637982"
   
     一个空列会添加到“销售额”的右侧  。  
   
-3.  在功能区上，单击“矩形”，然后单击 [Product_Subcategory] 行组中 `[Sum(Sales_Amount)]` 单元右侧的空单元  。  
+3.  在功能区上，单击“矩形”，然后单击 [Product_Subcategory] 行组中  **单元右侧的空单元**`[Sum(Sales_Amount)]`。  
   
 4.  在功能区上单击“迷你图”图标，然后单击添加了矩形的单元  。  
   
@@ -267,7 +267,7 @@ ms.locfileid: "73637982"
   
 5.  单击“值”列表右侧的“(fx)”按钮   。  
   
-6.  在“表达式”对话框的“类别”窗格中，单击“数据集”，然后在“值”列表中双击 `First(Product_Category_Name)`    。  
+6.  在“表达式”对话框的“类别”窗格中，单击“数据集”，然后在“值”列表中双击    `First(Product_Category_Name)`。  
   
     “表达式”框包含以下表达式  ：  
   
@@ -322,7 +322,7 @@ ms.locfileid: "73637982"
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  单击 **“保存”** 。  
+4.  单击“保存”  。  
   
     “最近使用的站点和服务器”列出 SharePoint 站点上的库  。  
   
@@ -333,7 +333,7 @@ ms.locfileid: "73637982"
     > [!NOTE]  
     > 您将主报表保存到同一位置。 如果要将主报表和钻取报表保存到不同的站点或库，必须在主报表中更新“转到报表”操作的路径  。  
   
-7.  单击 **“保存”** 。  
+7.  单击“保存”  。  
   
 ## <a name="MMatrixAndDataset"></a>1.使用表或矩阵向导创建主报表  
 使用“表或矩阵向导”从“入门”对话框创建一个矩阵报表   。  
@@ -363,7 +363,7 @@ ms.locfileid: "73637982"
   
 5.  在“数据源”  中，确认数据源是“Microsoft SQL Server Analysis Services (AdomdClient)”  。  
   
-6.  在“服务器名称”中，键入安装 [!INCLUDE[msCoName](../includes/msconame-md.md)] 实例所在服务器的名称[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  。  
+6.  在“服务器名称”中，键入安装  **实例所在服务器的名称**[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
 7.  在“选择或输入数据库名称”  中，选择 Contoso 多维数据集。  
   
@@ -385,7 +385,7 @@ ms.locfileid: "73637982"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. 单击“下一步”  。  
+14. 单击“下一步”。   
   
 ## <a name="MMDXQuery"></a>1b. 创建 MDX 查询  
 接下来将创建嵌入数据集。 为此，您将使用查询设计器来创建筛选器、参数和计算成员以及数据集本身。  
@@ -475,7 +475,7 @@ ms.locfileid: "73637982"
   
 2.  从“Product”维度将“Product Category Name”拖到数据窗格，然后将它放到“Channel Name”的右侧。  
   
-3.  从“计算成员”，将“`Net QTY`”拖到数据窗格，然后将它放到“Product Category Name”的右侧  。  
+3.  从“计算成员”，将“ **”拖到数据窗格，然后将它放到“Product Category Name”的右侧**`Net QTY`。  
   
 4.  从“计算成员”，将“Net Sales”拖到数据窗格，然后将它放到“ `Net QTY`”的右侧。  
   
@@ -483,7 +483,7 @@ ms.locfileid: "73637982"
   
     查看查询结果集。  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。   
   
 ## <a name="MLayout"></a>1c. 将数据组织到组中  
 在选择要对数据分组的字段时，可以设计一个矩阵，其中的行和列显示了详细数据和聚合数据。  
@@ -500,7 +500,7 @@ ms.locfileid: "73637982"
   
     若要查看其他可用聚合函数，请打开下拉列表。 不要更改聚合函数。  
   
-4.  将“`Net_Sales_Return`”拖到“值”，然后将它放在“`[Sum(Net_QTY)]`”下面  。  
+4.  将“`Net_Sales_Return`”拖到“值”，然后将它放在“ **”下面**`[Sum(Net_QTY)]`。  
   
     步骤 3 和 4 指定要在矩阵中显示的数据。  
   
@@ -513,9 +513,9 @@ ms.locfileid: "73637982"
   
     向导的“预览”窗格将显示包含四行的矩阵。  运行报表时，将通过以下方式显示每个行：第一行为列组，第二行包含列标题，第三行包含产品类别数据（`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`），第四行包含总计。  
   
-2.  单击“下一步”  。  
+2.  单击“下一步”。   
   
-3.  单击 **“完成”** 。  
+3.  单击“完成”  。  
   
 3.  若要预览报表，请单击“运行”  。  
   
@@ -581,7 +581,7 @@ ms.locfileid: "73637982"
   
 1.  若要切换到设计视图，请单击“设计”  。  
   
-2.  在功能区上，单击“矩形”图标，然后在 `Channel_Name` 列组的 `[Product_Category_Name]` 行组中的 `[Sum(Net QTY)]` 单元内单击  。  
+2.  在功能区上，单击“矩形”图标，然后在 **列组的** 行组中的 `[Sum(Net QTY)]` 单元内单击`[Product_Category_Name]``Channel_Name`。  
   
 3.  在功能区上，单击“指示器”图标，然后在矩形内单击  。 “选择指示器类型”对话框将打开，其中选择了“方向”指示器   。  
   
@@ -589,11 +589,11 @@ ms.locfileid: "73637982"
   
 5.  右键单击该指示器，然后在“仪表数据”窗格中单击“(未指定)”旁边的向下箭头  。 选择 `Net_QTY`。  
   
-6.  对“总计”内 `[Product_Category_Name]` 行组中的 `[Sum(Net QTY)]` 单元重复步骤 2 到 5  。  
+6.  对“总计”内 `[Sum(Net QTY)]` 行组中的 `[Product_Category_Name]` 单元重复步骤 2 到 5  。  
   
 #### <a name="to-add-an-indicator-for-net-sales-values"></a>添加 Net Sales 值的指示器  
   
-1.  在功能区上，单击“矩形”图标，然后在 `Channel_Name` 列组的 `[Product_Category_Name]` 行组中的 `[Sum(Net_Sales)]` 单元内单击  。  
+1.  在功能区上，单击“矩形”图标，然后在 **列组的** 行组中的 `[Sum(Net_Sales)]` 单元内单击`[Product_Category_Name]``Channel_Name`。  
   
 2.  在功能区上，单击“指示器”图标，然后在矩形内单击  。  
   
@@ -601,7 +601,7 @@ ms.locfileid: "73637982"
   
 4.  右键单击该指示器，然后在“仪表数据”窗格中单击“(未指定)”旁边的向下箭头  。 选择 `Net_Sales`。  
   
-5.  对“总计”内 `[Product_Category_Name]` 行组中的 `[Sum(Net_Sales)]` 单元重复步骤 1 到 4  。  
+5.  对“总计”内 `[Sum(Net_Sales)]` 行组中的 `[Product_Category_Name]` 单元重复步骤 1 到 4  。  
   
 6.  若要预览报表，请单击 **“运行”** 。  
   
@@ -659,7 +659,7 @@ ms.locfileid: "73637982"
     > [!IMPORTANT]  
     > 将主报表保存到保存钻取报表的同一位置。 若要将主报表和钻取报表保存到不同的站点或库，请确保主报表中的“转到报表”操作指向正确的钻取报表位置  。  
   
-7.  单击 **“保存”** 。  
+7.  单击“保存”  。  
   
 ## <a name="MRunReports"></a>8.运行主报表和钻取报表  
 运行主报表，然后单击产品类别列中的值以运行钻取报表。  

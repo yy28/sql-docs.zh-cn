@@ -19,10 +19,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1876c16455876931d6a5c1d091d9d4c0dc860fcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103424"
 ---
 # <a name="create-statistics"></a>创建统计信息
@@ -70,7 +70,7 @@ ms.locfileid: "68103424"
   
 4.  右键单击“统计信息”文件夹，然后选择“新建统计信息…”   。  
   
-     以下属性将显示在“新建表 _table\_name_ 的统计信息”  对话框的“常规”  页面上。  
+     以下属性将显示在“新建表 **table**name **的统计信息”** _对话框的“常规”\__ 页面上。  
   
      **表名**  
      显示统计信息中所涉及表的名称。  
@@ -96,7 +96,7 @@ ms.locfileid: "68103424"
      **允许 Null 值**  
      指示列是否接受空值。  
   
-     **“添加”**  
+     **添加**  
      将表中的其他列添加到统计信息网格。  
   
      **删除**  
@@ -114,12 +114,12 @@ ms.locfileid: "68103424"
      **更新这些列的统计信息**  
      选中此项后将在对话框关闭时更新统计信息。  
   
-     以下属性将显示在“新建 _table\_name_ 的统计信息”  对话框的“筛选器”  页面上。  
+     以下属性将显示在“新建 **table**name **的统计信息”** _对话框的“筛选器”\__ 页面上。  
   
      **筛选表达式**  
      定义要将哪些数据行包含在筛选的统计信息中。 例如： `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  在“新建表 _table\_name_ 的统计信息”  对话框中，在“常规”  页面上，单击“添加”  。  
+5.  在“新建表 **table**name _的统计信息”\__ 对话框中，在“常规”  页面上，单击“添加”  。  
   
      **“选择列”** 对话框中显示以下属性： 此信息为只读信息。  
   
@@ -135,12 +135,12 @@ ms.locfileid: "68103424"
      **标识**  
      如果选中，则指示标识列。  
   
-     **Allow NULLs**  
+     **允许 Null**  
      指示列是否接受空值。  
   
 6.  在 **“选择列”** 对话框中，选中要为其创建统计信息的每个列旁边的复选框，然后单击 **“确定”** 。  
   
-7.  在“新建表 _table\_name_ 的统计信息”  对话框中，单击“确定”  。  
+7.  在“新建表 **table**name _的统计信息”\__ 对话框中，单击“确定”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -1,8 +1,7 @@
 ---
-title: SQL Server 代理 | Microsoft Docs
+title: SQL Server 代理
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +10,17 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552665"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257936"
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
 
@@ -28,7 +29,7 @@ ms.locfileid: "69552665"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”  。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在  *中执行计划的管理任务，即“作业”* [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
 
 ## <a name="Benefits"></a>SQL Server 代理的好处 
 
@@ -42,8 +43,8 @@ ms.locfileid: "69552665"
 ## <a name="Components"></a>SQL Server 代理的组件  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用下列组件来定义要执行的任务、执行任务的时间以及报告任务成功或失败的方式。  
   
-### <a name="jobs"></a>中执行计划的管理任务，即“作业”  
-“作业”  是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的一系列指定操作。 使用作业可以定义一个能执行一次或多次的管理任务，并能监视执行结果是成功还是失败。 作业可以在一个本地服务器上运行，也可以在多个远程服务器上运行。  
+### <a name="jobs"></a>作业  
+“作业”  是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的一系列指定操作。 使用作业能够定义可一次或多次运行的，并且可以监视其成功或失败状态的管理任务。 一个作业可在一台本地服务器或者多台远程服务器上运行。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例上发生故障转移事件时正在运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业在故障转移到其他故障转移群集节点后不恢复。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 Hyper-V 节点暂停时，如果该暂停导致故障转移到其他节点，则正在运行的代理作业不恢复。 已开始但由于故障转移事件而未能完成的作业在日志中记录为已开始，但不提供附加的条目来指明完成或失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业好像永远不会结束。  
@@ -60,8 +61,8 @@ ms.locfileid: "69552665"
   
 所有作业步骤均在特定的安全上下文中运行。 对于使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的作业步骤，请使用 EXECUTE AS 语句设置作业步骤的安全上下文。 对于其他类型的作业步骤，请使用代理帐户来设置作业步骤的安全上下文。  
   
-### <a name="schedules"></a>“计划”  
-“计划”  指定了作业运行的时间。 多个作业可以根据一个计划运行，多个计划也可以应用到一个作业。 计划可以为作业运行的时间定义下列条件：  
+### <a name="schedules"></a>计划  
+“计划”  指定了作业运行的时间。 多个作业可按同一计划运行，可将多个计划应用到同一作业。 计划可为作业运行时间定义以下条件：  
   
 -   每当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时。  
   
@@ -69,11 +70,11 @@ ms.locfileid: "69552665"
   
 -   在特定日期和时间运行一次。  
   
--   按重复执行的计划运行。  
+-   按重复的计划运行。  
   
 有关详细信息，请参阅 [创建计划并将计划附加到作业](../../ssms/agent/create-and-attach-schedules-to-jobs.md)。  
   
-### <a name="alerts"></a>Alerts  
+### <a name="alerts"></a>警报  
 “警报”  是对特定事件的自动响应。 例如，事件可以是启动的作业，也可以是达到特定阈值的系统资源。 可以定义警报产生的条件。  
   
 警报可以响应下列任一条件：  
@@ -93,7 +94,7 @@ ms.locfileid: "69552665"
 有关详细信息，请参阅 [“警报”](../../ssms/agent/alerts.md)。  
   
 ### <a name="operators"></a>运算符  
-“操作员”  定义的是负责维护一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的个人的联系信息。 在有些企业中，操作员职责被分配给一个人。 在拥有多个服务器的企业中，操作员职责可以由多人分担。 操作员既不包含安全信息，也不会定义安全主体。  
+“操作员”  定义的是负责维护一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的个人的联系信息。 在有些企业中，操作员职责被分配给一个人。 在拥有多个服务器的企业中，操作员职责可以由多人分担。 操作员不涉及安全信息，因此不会定义安全主体。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以通过下列一种或多种方式通知操作员有警报出现：  
   
@@ -109,7 +110,7 @@ ms.locfileid: "69552665"
 > [!IMPORTANT]  
 > 在 **的未来版本中，将从** 代理中删除寻呼程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
   
-若要使用电子邮件或寻呼程序向操作员发送通知，必须将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为使用数据库邮件。 有关详细信息，请参阅 [数据库邮件](../../relational-databases/database-mail/database-mail.md)。  
+若要使用电子邮件或寻呼程序向操作员发送通知，必须将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为使用数据库邮件。 有关详细信息，请参阅[数据库邮件](../../relational-databases/database-mail/database-mail.md)。  
   
 可以将操作员定义为一组个人的别名。 这样，该组的所有成员就可以同时收到通知。 有关详细信息，请参阅 [运算符](../../ssms/agent/operators.md)。  
   
@@ -124,9 +125,9 @@ ms.locfileid: "69552665"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义了下表中列出的子系统：  
   
-|子系统名称|描述|  
+|子系统名称|说明|  
 |--------------|-----------|  
-|Microsoft ActiveX 脚本|运行 ActiveX 脚本作业步骤。<br /><br />**警告** 在未来版本的 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，将从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
+|Microsoft ActiveX 脚本|运行 ActiveX 脚本作业步骤。<br /><br />**警告** 在未来版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame_md.md)] 中，将从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
 |操作系统 (**CmdExec**)|运行可执行程序。|  
 |PowerShell|运行 PowerShell 脚本作业步骤。|  
 |复制分发服务器|运行激活复制分发服务器代理的作业步骤。|  
@@ -164,7 +165,7 @@ ms.locfileid: "69552665"
   
 通过以下任务以开始使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理：  
   
-|描述|主题|  
+|说明|主题|  
 |-----------|-----|  
 |介绍如何配置 SQL Server 代理。|[配置 SQL Server 代理](../../ssms/agent/configure-sql-server-agent.md)|  
 |介绍如何启动、停止和暂停 SQL Server 代理服务。|[启动、停止或暂停 SQL Server 代理服务](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  

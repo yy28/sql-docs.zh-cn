@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92d7ba023176aabd08179638fbccfd37540d345f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085355"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove 事件类
@@ -25,7 +25,7 @@ ms.locfileid: "68085355"
   
 ## <a name="spcacheremove-event-class-data-columns"></a>SP:CacheRemove 事件类的数据列  
   
-|数据列名称|**Data type**|描述|列 ID|可筛选|  
+|数据列名称|**Data type**|说明|列 ID|可筛选|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
@@ -33,7 +33,7 @@ ms.locfileid: "68085355"
 |DatabaseName|**nvarchar**|正在运行存储过程的数据库的名称。|35|是|  
 |EventClass|**int**|事件类型 = 36。|27|否|  
 |EventSequence|**int**|给定事件在请求中的顺序。|51|否|  
-|EventSubClass|**int**|事件子类的类型。<br /><br /> 1 = 计算计划删除：一个经过编译的查询计划已从缓存中删除。<br /><br /> 2 = 进程缓存刷新：所有项都已从过程缓存中删除。|21|是|  
+|EventSubClass|**int**|事件子类的类型。<br /><br /> 1=Compplan Remove：一个经过编译的查询计划已从缓存中删除。<br /><br /> 2=Proc Cache Flush：所有项都已从过程缓存中删除。|21|是|  
 |GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  

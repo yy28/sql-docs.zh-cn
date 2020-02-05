@@ -22,10 +22,10 @@ ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a4711f9673ba5acf7a4a7398588c6e27f80a9179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024486"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY（函数）(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68024486"
 > [!NOTE]  
 >  要创建一个可在多个表中使用的自动递增数字或者可以从应用程序中调用而不引用任何表的自动递增数字，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,7 +61,7 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
 ## <a name="return-types"></a>返回类型  
  返回与 data_type 相同的数据类型  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  因为该函数在表中创建一个列，所以必须用下列方式中的一种在选择列表中指定该列的名称：  
   
 ```  
@@ -78,7 +78,7 @@ FROM OldTable;
 ```  
   
 ## <a name="examples"></a>示例  
- 下面的示例将来自 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Contact` 表的所有行都插入到名为 `NewContact` 的新表。 使用 IDENTITY 函数在 `NewContact` 表中从 100 而不是 1 开始编标识号。  
+ 下面的示例将来自 `Contact` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表的所有行都插入到名为 `NewContact` 的新表。 使用 IDENTITY 函数在 `NewContact` 表中从 100 而不是 1 开始编标识号。  
   
 ```  
 USE AdventureWorks2012;  

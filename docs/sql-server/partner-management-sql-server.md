@@ -8,12 +8,12 @@ ms.prod: sql
 ms.technology: ''
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 1e4d29fb73c11b727c21730a71eb8d97331296f6
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: f483b643d2d1b1c8ec1e58c0772de021092b2594
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68049777"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75656932"
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 管理合作伙伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +21,7 @@ ms.locfileid: "68049777"
 
 ## <a name="our-management-partners"></a>我们的管理合作伙伴
 
-| Partner | 描述 | 链接 |
+| Partner | 说明 | 链接 |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL 合规性管理器是一种综合的审核解决方案，显示在 SQL Server 上由谁执行何种操作、何时执行、如何执行，以帮助确保符合法规和数据安全要求。<br><br>[系统要求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[网站][idera_website]<br>[Twitter][idera_twitter]<br>[视频][idera_youtube] | |
 
@@ -29,7 +29,7 @@ ms.locfileid: "68049777"
 若要详细了解其他一些合作伙伴，请参阅[高可用性和灾难恢复合作伙伴][hadr_partners]、[管理合作伙伴][monitor_partners]以及[开发合作伙伴][dev_partners]。
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
 
 
 <!--Article links-->

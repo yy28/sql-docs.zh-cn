@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f3548feb06b05699750ce5c088c05c4e3cc67d57
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6b72e6043626715994c59273bd3eb679396975f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531786"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822378"
 ---
 # <a name="azdata-bdc-hdfs-status"></a>azdata bdc hdfs status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
+以下文章提供了 `bdc hdfs status` 工具中 `azdata` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |

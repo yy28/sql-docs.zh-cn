@@ -18,10 +18,10 @@ ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57849c8d99700f61c251177c3c3195b2277163ae
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982085"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73982085"
 
   更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中现有资源调控器的资源池配置。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -116,7 +116,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  如果池的 MAX_IOPS_PER_VOLUME 设置为 0，则该池根本不受管控，可以采用系统中的所有 IOPS，即使其他池设置了 MIN_IOPS_PER_VOLUME 也是如此。 对于这种情况，我们建议您在希望管控此池的 IO 时将此池的 MAX_IOPS_PER_VOLUME 值设置为较高的数字（例如，最大值 2^31-1）。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  MAX_CPU_PERCENT 和 MAX_MEMORY_PERCENT 必须分别大于或等于 MIN_CPU_PERCENT 和 MIN_MEMORY_PERCENT。  
   
  如果可以，MAX_CPU_PERCENT 可使用高于 MAX_CPU_PERCENT 值的 CPU 容量。 虽然可能有高于 CAP_CPU_PERCENT 的周期峰值，但即使有额外的 CPU 容量可用，工作负载也不应延时超过 CAP_CPU_PERCENT。  
