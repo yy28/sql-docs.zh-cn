@@ -15,10 +15,10 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66733b12bbf3b4723449eb09f93182efb1f6462c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290180"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD（SSIS 表达式）
@@ -39,7 +39,7 @@ DATEADD(datepart, number, date)
  *datepart*  
  指定要与数值相加的日期部分的参数。  
   
- *number*  
+ *数字*  
  用于与 datepart  相加的值。 该值必须是分析表达式时已知的整数值。  
   
  *date*  
@@ -48,21 +48,21 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>结果类型  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  下表列出了表达式计算器可以识别的日期部分和缩写形式。 日期部分名称不区分大小写。  
   
 |datepart|缩写形式|  
 |--------------|-------------------|  
-|Year|yy、yyyy|  
+|年龄|yy、yyyy|  
 |季度|qq、q|  
-|Month|mm、m|  
+|月份|mm、m|  
 |Dayofyear|dy、y|  
-|Day|dd、d|  
+|日期|dd、d|  
 |Week|wk、ww|  
-|Weekday|dw、w|  
+|星期|dw、w|  
 |Hour|Hh|  
 |Minute|mi、n|  
-|第二个|ss、s|  
+|秒|ss、s|  
 |Millisecond|Ms|  
   
  分拆表达式时必须提供 *number* 参数。 该参数可以是常量，也可以是变量。 由于分析表达式时列值是未知的，因此不能使用列值。  

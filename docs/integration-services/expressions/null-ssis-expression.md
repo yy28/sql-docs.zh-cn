@@ -14,10 +14,10 @@ ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4750f030dc1193ef8ed8be1b14198ca21e99be6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288728"
 ---
 # <a name="null-ssis-expression"></a>NULL（SSIS 表达式）
@@ -41,7 +41,7 @@ NULL(typespec)
 ## <a name="result-types"></a>结果类型  
  任何包含 Null 值的有效数据类型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果参数为 Null，则 NULL 返回的结果为 Null。  
   
  请求某些数据类型的 Null 值时需要提供参数。 下表列出了这些数据类型及其参数。  
@@ -51,12 +51,12 @@ NULL(typespec)
 |DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252) 将 30 个字符转换为使用 1252 代码页的 DT_STR 数据类型。|  
 |DT_WSTR|*charcount*|(DT_WSTR,20) 将 20 个字符转换为 DT_WSTR 数据类型。|  
 |DT_BYTES|*bytecount*|(DT_BYTES,50) 将 50 个字节的数据转换为 DT_BYTES 数据类型。|  
-|DT_DECIMAL|*小数位数*|(DT_DECIMAL,2) 将数值转换为带 2 位小数的 DT_DECIMAL 数据类型。|  
+|DT_DECIMAL|*scale*|(DT_DECIMAL,2) 将数值转换为带 2 位小数的 DT_DECIMAL 数据类型。|  
 |DT_NUMERIC|*精度*<br /><br /> *scale*|(DT_NUMERIC,10,3) 将数值转换为带 3 位小数且精度为 10 的 DT_NUMERIC 数据类型。|  
 |DT_TEXT|*codepage*|(DT_TEXT,1252) 将值转换为使用 1252 代码页的 DT_TEXT 数据类型。|  
   
 ## <a name="expression-examples"></a>表达式示例  
- 以下示例将返回下列数据类型的 NULL 值：DT_STR、DT_DATE 和 DT_BOOL。  
+ 以下示例将返回下列数据类型的 Null 值：DT_STR、DT_DATE 和 DT_BOOL。  
   
 ```  
 NULL(DT_STR,10,1252)  

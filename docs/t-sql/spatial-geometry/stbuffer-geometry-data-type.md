@@ -18,10 +18,10 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 01d7b5277e0711f5297e00d7b08b12e105b7f78b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930369"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer（geometry 数据类型）
@@ -43,10 +43,10 @@ ms.locfileid: "67930369"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
-## <a name="remarks"></a>Remarks  
- `STBuffer()` 计算缓冲区的方式与 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) 相似，指定 tolerance = distance\* .001 和 relative  = false    。  
+## <a name="remarks"></a>备注  
+ `STBuffer()` 计算缓冲区的方式与 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) 相似，指定 tolerance = distance *.001 和 relative*false\*   =   。  
   
  如果 distance > 0，则返回 Polygon 或 MultiPolygon 实例    。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "67930369"
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. 使用 < 0 的参数值在一维 geometry 实例上调用 STBuffer()  
+### <a name="a-calling-stbuffer-with-parameter_value--0-on-one-dimensional-geometry-instance"></a>A. 使用 < 0 的参数值在一维 geometry 实例上调用 STBuffer()  
  以下示例返回一个空 `GeometryCollection` 实例：  
   
 ```
@@ -78,7 +78,7 @@ ms.locfileid: "67930369"
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. 使用 < 0 的参数值在 Polygon 实例上调用 STBuffer()  
+### <a name="b-calling-stbuffer-with-parameter_value--0-on-a-polygon-instance"></a>B. 使用 < 0 的参数值在 Polygon 实例上调用 STBuffer()  
  以下示例返回一个具有负缓冲区的 `Polygon` 实例：  
   
 ```
@@ -86,7 +86,7 @@ ms.locfileid: "67930369"
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. 使用 < 0 的参数值在 CurvePolygon 实例上调用 STBuffer()  
+### <a name="c-calling-stbuffer-with-parameter_value--0-on-a-curvepolygon-instance"></a>C. 使用 < 0 的参数值在 CurvePolygon 实例上调用 STBuffer()  
  以下示例从 `Polygon` 实例中返回一个具有负缓冲区的 `CurvePolygon` 实例：  
   
 ```
@@ -105,9 +105,9 @@ ms.locfileid: "67930369"
  SELECT @g.STBuffer(-2).ToString();
  ```  
   
- 此 SELECT 语句返回 `GEOMETRYCOLLECTION EMPTY.`   
+ 此 SELECT 语句返回  `GEOMETRYCOLLECTION EMPTY.`  
   
-### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. 当参数值 = 0 时调用 STBuffer()  
+### <a name="e-calling-stbuffer-with-parameter_value--0"></a>E. 当参数值 = 0 时调用 STBuffer()  
  以下示例返回调用 `geometry` 实例的副本：  
   
 ```
@@ -124,7 +124,7 @@ ms.locfileid: "67930369"
  SELECT @g.STBuffer(@distance).ToString();
  ```  
   
-### <a name="g-calling-stbuffer-with-parametervalue--0"></a>G. 使用 > 0 的参数值调用 STBuffer()  
+### <a name="g-calling-stbuffer-with-parameter_value--0"></a>G. 使用 > 0 的参数值调用 STBuffer()  
  以下示例返回 `Polygon` 实例：  
   
 ```
@@ -160,7 +160,7 @@ ms.locfileid: "67930369"
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- 前两个 SELECT 语句返回一个 `MultiPolygon` 实例，因为 distance 参数小于或等于两个点 (1 1) 和 (1 4) 之间的距离的 1/2   。 第三个 SELECT 语句返回一个 `Polygon` 实例，因为两个点 (1 1) 和 (1 4) 的缓冲实例发生重叠  。  
+ 前两个 SELECT 语句返回一个  **实例，因为 distance 参数小于或等于两个点 (1 1) 和 (1 4) 之间的距离的 1/2**`MultiPolygon`  。 第三个 SELECT 语句返回一个  **实例，因为两个点 (1 1) 和 (1 4) 的缓冲实例发生重叠**`Polygon`。  
   
 ## <a name="see-also"></a>另请参阅  
  [BufferWithTolerance（geometry 数据类型）](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   

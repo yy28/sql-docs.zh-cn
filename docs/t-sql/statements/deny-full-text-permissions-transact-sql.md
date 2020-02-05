@@ -19,10 +19,10 @@ ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5451cddba8a1719e9672c0d10ffe4a62c960d38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114822"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY 全文权限 (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68114822"
   拒绝授予全文目录和全文非索引字表权限。  
   
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,17 +48,17 @@ DENY permission [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- ON FULLTEXT CATALOG ::full-text_catalog_name  
- 指定要对其拒绝权限的全文目录。 需要使用作用域限定符 ::。  
+ ON FULLTEXT CATALOG ::full-text_catalog_name    
+ 指定要对其拒绝权限的全文目录。 需要使用作用域限定符 ::  。  
   
- ON FULLTEXT STOPLIST ::full-text_stoplist_name  
- 指定要对其拒绝权限的全文非索引字表。 需要使用作用域限定符 ::。  
+ ON FULLTEXT STOPLIST ::full-text_stoplist_name    
+ 指定要对其拒绝权限的全文非索引字表。 需要使用作用域限定符 ::  。  
   
- database_principal  
- 指定要对其拒绝权限的主体。 可以是以下类型之一：  
+ database_principal   
+ 指定要对其拒绝权限的主体。 下列类型作之一：  
   
 -   数据库用户  
   
@@ -79,8 +79,8 @@ DENY permission [ ,...n ] ON
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- denying_principal  
- 指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 可以是以下类型之一：  
+ denying_principal   
+ 指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
   

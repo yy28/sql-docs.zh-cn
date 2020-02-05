@@ -18,10 +18,10 @@ ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114852"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY 端点权限 (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68114852"
   拒绝对端点的权限。  
 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,35 +48,35 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可对端点拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON ENDPOINT ::endpoint_name  
- 指定要对其拒绝权限的端点。 需要使用作用域限定符 (::)。  
+ ON ENDPOINT ::endpoint_name    
+ 指定要对其拒绝权限的端点。 需要使用作用域限定符 (::)  。  
   
  TO \<server_principal>  
  指定要拒绝权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login  
+ SQL_Server_login   
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_Windows_login  
+ SQL_Server_login_from_Windows_login   
  指定通过 Windows 登录帐户创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_certificate  
+ SQL_Server_login_from_certificate   
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_AsymKey  
+ SQL_Server_login_from_AsymKey   
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- AS SQL_Server_login  
+ AS SQL_Server_login   
  指定执行此查询的主体要从哪个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名派生其拒绝该权限的权限。  
   
-## <a name="remarks"></a>Remarks  
- 只有在当前数据库为 master 时，才可拒绝其服务器作用域内的权限。  
+## <a name="remarks"></a>备注  
+ 只有在当前数据库为 master 时，才可拒绝其服务器作用域内的权限  。  
   
  可以在 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 目录视图中查看终结点的相关信息。 可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目录视图中查看服务器权限的相关信息，在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目录视图中查看服务器主体的相关信息。  
   
@@ -96,7 +96,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>示例  
   
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. 拒绝对端点的 VIEW DEFINITION 权限  
- 以下示例拒绝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `ZArifin` 对终结点 `Mirror7` 的 `VIEW DEFINITION` 权限。  
+ 以下示例拒绝 `VIEW DEFINITION` 登录名 `Mirror7` 对终结点 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `ZArifin` 权限。  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. 使用 CASCADE 选项拒绝 TAKE OWNERSHIP 权限  
- 以下示例拒绝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `TAKE OWNERSHIP` 以及 `Shipping83` 授予 `PKomosinski` 权限的主体对端点 `PKomosinski` 的 `TAKE OWNERSHIP` 权限。  
+ 以下示例拒绝 `TAKE OWNERSHIP` 用户 `Shipping83` 以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授予 `PKomosinski` 权限的主体对端点 `PKomosinski` 的 `TAKE OWNERSHIP` 权限。  
   
 ```  
 USE master;  

@@ -1,10 +1,9 @@
 ---
-title: 创建插入结果查询 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 创建“插入结果”查询
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 850d64df71644c5010cfda9a2c2624ab4bfd49cf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: bf6436ae1ec235c2fb750df5ed57e640326c56aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264965"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254323"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>创建插入结果查询 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +95,7 @@ WHERE (pub_id = '0766')
   
 8.  如果希望复制摘要信息，请指定“分组依据”选项。 有关详细信息，请参阅[汇总查询结果 (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)。  
   
-在执行“插入结果”查询时，不会在[“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中报告任何结果。 但是，会显示一条消息，指出已复制的行数。  
+在执行“插入结果”查询时，不会在 [“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中报告任何结果。 但是，会显示一条消息，指出已复制的行数。  
   
 ## <a name="see-also"></a>另请参阅  
 [查询类型 (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  

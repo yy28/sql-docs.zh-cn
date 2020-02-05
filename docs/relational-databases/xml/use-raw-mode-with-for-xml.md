@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7e88a1c65d2c8cdf8ba6129c8af28492dc362aba
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245240"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>将 RAW 模式与 FOR XML 一起使用
@@ -46,7 +46,7 @@ RAW 模式可将查询结果集中的每一行转换为带有通用标识符 \<r
   
 -   [示例：检索二进制数据](../../relational-databases/xml/example-retrieving-binary-data.md)  
   
--   [示例：重命名 &#60;row&#62; 元素](../../relational-databases/xml/example-renaming-the-row-element.md)  
+-   [示例：重命名 <row> 元素](../../relational-databases/xml/example-renaming-the-row-element.md)  
   
 -   [示例：为 FOR XML 生成的 XML 指定根元素](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   

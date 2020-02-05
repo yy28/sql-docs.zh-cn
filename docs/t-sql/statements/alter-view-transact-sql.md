@@ -21,10 +21,10 @@ ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47335a2b31b87ca1e74b2605fb62df006eeace07
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981940"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73981940"
 
   修改先前创建的视图。 其中包括索引视图。 ALTER VIEW 不影响相关的存储过程或触发器，并且不会更改权限。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -92,7 +92,7 @@ AS select_statement
  WITH CHECK OPTION  
  要求对该视图执行的所有数据修改语句都必须符合 select_statement 中所设置的条件  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  有关 ALTER VIEW 的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md) 中的“备注”部分。  
   
 > [!NOTE]  

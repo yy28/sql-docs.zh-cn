@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a08dbc63f765b436d9f6bb56be6456f197217db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075271"
 ---
 # <a name="-equals-transact-sql"></a>=（等于）(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68075271"
 
   比较 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 中两个表达式的等价性（比较运算符）。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ expression = expression
 ## <a name="result-types"></a>结果类型  
  Boolean  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 NULL 表达式进行比较时，结果取决于 `ANSI_NULLS` 设置：  
   
 -   如果 `ANSI_NULLS` 设置为 ON，根据 ANSI 约定，即 NULL 是未知值且不能与任何其他值（包括其他 NULL）进行比较，任何与 NULL 进行比较的结果均为 UNKNOWN。  

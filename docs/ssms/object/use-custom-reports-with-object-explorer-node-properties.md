@@ -1,6 +1,6 @@
 ---
-title: 将自定义报表与对象资源管理器节点属性一起使用 | Microsoft Docs
-ms.custom: ''
+title: 将自定义报表与对象资源管理器节点属性一起使用
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e3bc3c116f8082b17f392d04ae14e0895762fc37
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 971432a363eb18129c560c5738a9cc65e77b01a4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262070"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257600"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>将自定义报表与对象资源管理器节点属性一起使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "68262070"
 |参数名称|数据类型|  
 |------------------|-------------|  
 |**ObjectName**|**字符串**|  
-|**ObjectTypeName**|**String**|  
-|**筛选**|**Boolean**|  
-|**ServerName**|**String**|  
-|**FontName**|**String**|  
-|**DatabaseName**|**String**|  
+|**ObjectTypeName**|**字符串**|  
+|**筛选**|**布尔值**|  
+|**ServerName**|**字符串**|  
+|**FontName**|**字符串**|  
+|**DatabaseName**|**字符串**|  
   
 ## <a name="object-explorer-node-report-parameters-example"></a>对象资源管理器节点的报表参数示例  
 若要运行此示例，请按以下步骤操作。  

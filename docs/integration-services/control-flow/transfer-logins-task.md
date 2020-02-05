@@ -17,10 +17,10 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d82f3ef27525ad918ef01e9cb2e0600ef85ae0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293861"
 ---
 # <a name="transfer-logins-task"></a>传输登录名任务
@@ -50,7 +50,7 @@ ms.locfileid: "71293861"
   
  此外，还有 **OnInformation** 事件的日志项（报告已传输的登录名数），以及 **OnWarning** 事件的日志项（是为目标服务器上每个被覆盖的登录名写入的）。  
   
-## <a name="security-and-permissions"></a>安全性和权限  
+## <a name="security-and-permissions"></a>安全和权限  
  若要浏览源服务器上的登录名并在目标服务器上创建登录名，用户必须同时是这两台服务器上 sysadmin 服务器角色的成员。  
   
 ## <a name="configuration-of-the-transfer-logins-task"></a>传输登录名任务的配置  
@@ -95,7 +95,7 @@ ms.locfileid: "71293861"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入传输登录名任务的说明。  
   
 ## <a name="transfer-logins-task-editor-logins-page"></a>传输登录名任务编辑器（“登录名”页）
@@ -106,15 +106,15 @@ ms.locfileid: "71293861"
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接  。  
+ 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与源服务器的新连接\<** 。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接  。  
+ 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与目标服务器的新连接\<** 。  
   
  **LoginsToTransfer**  
  选择要从源服务器复制到目标服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此属性具有下表所列的选项：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**AllLogins**|源服务器上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名都将复制到目标服务器。|  
 |**SelectedLogins**|只有通过 **LoginsList** 指定的登录名才会复制到目标服务器。|  
@@ -131,7 +131,7 @@ ms.locfileid: "71293861"
   
  此属性具有下表所列的选项：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**FailTask**|如果目标服务器上已存在同名的登录名，则任务失败。|  
 |**Overwrite**|任务将覆盖目标服务器上同名的登录名。|  

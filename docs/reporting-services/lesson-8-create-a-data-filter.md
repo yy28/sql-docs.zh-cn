@@ -9,10 +9,10 @@ ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62512389"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 课：创建数据筛选器
@@ -39,7 +39,7 @@ ms.locfileid: "62512389"
   
 4.  在“表达式”字段中，从下拉列表中选择“ProductID”   。 筛选器即应用于此列。  
   
-5.  在“运算符”下拉列表中选择等号 (=) 运算符   。  
+5.  在“运算符”下拉列表中选择等号 ( **) 运算符=**  。  
   
 6.  选择“值”字段旁的“表达式”按钮，在“类别”区域中选择“参数”，然后在“值”区域中双击“productid”      。 “为以下项设置表达式: 值”字段现在应包含类似于 =Parameters!productid.Value 的表达式   。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "62512389"
             }  
         ```  
   
-6.  保存该文件。  
+6.  保存文件。  
   
 ## <a name="query-filter"></a>查询筛选器  
 需要完成以下任务才能实现查询筛选器。  
@@ -284,7 +284,7 @@ ms.locfileid: "62512389"
             }  
         ```  
   
-6.  保存该文件。  
+6.  保存文件。  
   
 ## <a name="next-task"></a>下一个任务  
 您已成功创建了一个数据筛选器，用于为子报表定义的数据表。 接下来，将生成并运行网站应用程序。 请参阅 [第 9 课：生成并运行应用程序](../reporting-services/lesson-9-build-and-run-the-application.md)。  

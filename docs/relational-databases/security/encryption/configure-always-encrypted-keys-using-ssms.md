@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595752"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 预配 Always Encrypted 密钥
@@ -84,7 +84,7 @@ ms.locfileid: "73595752"
 2.  右键单击“列加密密钥”文件夹，然后选择“新建列加密密钥...”   。 
 3.  在“新建列加密密钥”  对话框中，输入列加密密钥元数据对象的名称。
 4.  在数据库中选择一个表示列主密钥的元数据对象。
-5.  单击“确定”  。 
+5.  单击“确定”。  
 
 完成此对话框中的选择后，SQL Server Management Studio 会生成新的列加密密钥，然后它会从数据库中检索你所选的列主密钥的元数据。 然后，SSMS 会使用此列主密钥元数据来访问包含你的列主密钥的密钥存储并对列加密密钥进行加密。 最后，SSMS 通过生成并发出 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 语句，为数据库中新的列加密创建元数据数据。
 
@@ -103,7 +103,7 @@ ms.locfileid: "73595752"
 
 [Always Encrypted 向导](../../../relational-databases/security/encryption/always-encrypted-wizard.md)是用于加密、解密和重新加密所选数据库列的工具。 尽管它可以使用已配置的密钥，但也使你可以生成新的列主密钥和新的列加密。 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 - [使用 Always Encrypted 向导配置列加密](always-encrypted-wizard.md)
 - [使用 Always Encrypted 和 DAC 包配置列加密](configure-always-encrypted-using-dacpac.md)
 - [使用 SQL Server Management Studio 轮换 Always Encrypted 密钥](rotate-always-encrypted-keys-using-ssms.md)
@@ -111,7 +111,7 @@ ms.locfileid: "73595752"
 - [通过 SQL Server 导入和导出向导在使用 Always Encrypted 的列之间迁移数据](always-encrypted-migrate-using-import-export-wizard.md)
 
 ## <a name="see-also"></a>另请参阅
-- [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 密钥管理概述](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [创建并存储 Always Encrypted 的列主密钥](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [使用 SQL Server Management Studio 配置 Always Encrypted](configure-always-encrypted-using-sql-server-management-studio.md)

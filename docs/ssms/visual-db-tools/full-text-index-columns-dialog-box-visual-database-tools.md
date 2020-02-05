@@ -1,10 +1,9 @@
 ---
-title: “全文索引列”对话框 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: “全文检索列”对话框
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 304854a203b4c8e57a9dde003448c526de98bf24
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 28426680f0627753ba26a6aba4b36bb2041487bd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254573"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247231"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>“全文本索引列”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68254573"
 显示参与全文本索引的列的名称。 若要添加列，请单击第一个空单元格，再从下拉列表中选择列。 只能基于文本的数据类型或 image 数据类型的列才可访问。  
   
 **数据类型**  
-显示每列的数据类型。 此属性是只读属性。 若要更改数据类型，请在表设计器中打开表，单击相应列，然后在“列属性”  选项卡中编辑数据类型。  
+显示每列的数据类型。 这是只读属性。 若要更改数据类型，请在表设计器中打开表，单击相应列，然后在“列属性”  选项卡中编辑数据类型。  
   
 **按列分类**  
 仅适用于数据类型为“图像”  的列。 提供一个下拉列表，可以从中选择其他列中哪一列代表此列的数据类型。 如果此列的数据类型不是“图像”  ，则该值将为“None”。  

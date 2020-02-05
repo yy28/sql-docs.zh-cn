@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075060"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68075060"
 
   确定指定的值是否与子查询或列表中的值相匹配。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,27 +46,27 @@ test_expression [ NOT ] IN
 ```  
   
 ## <a name="arguments"></a>参数  
- test_expression  
+ test_expression   
  为任意有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- subquery  
- 包含某列结果集的子查询。 该列必须与 test_expression 具有相同的数据类型。  
+ subquery   
+ 包含某列结果集的子查询。 该列必须与 test_expression 具有相同的数据类型  。  
   
- expression[ ,... n ]  
- 一个表达式列表，用来测试是否匹配。 所有的表达式必须与 test_expression 具有相同的类型。  
+ expression[ ,... n ]     
+ 一个表达式列表，用来测试是否匹配。 所有的表达式必须与 test_expression 具有相同的类型  。  
   
 ## <a name="result-types"></a>结果类型  
- **Boolean**  
+ **布尔值**  
   
 ## <a name="result-value"></a>结果值  
- 如果 test_expression 的值与 subquery 所返回的任何值相等，或与逗号分隔的列表中的任何 expression 相等，则结果值为 TRUE；否则，结果值为 FALSE。  
+ 如果 test_expression 的值与 subquery 所返回的任何值相等，或与逗号分隔的列表中的任何 expression 相等，则结果值为 TRUE；否则，结果值为 FALSE    。  
   
- 使用 NOT IN 对 subquery 值或 expression 求反。  
+ 使用 NOT IN 对 subquery 值或 expression 求反   。  
   
 > [!CAUTION]  
->  subquery 或 expression 使用 IN 或 NOT IN 与 test_expression 比较后返回的所有空值都将返回 UNKNOWN。 将空值与 IN 或 NOT IN 一起使用会产生意外结果。  
+>  subquery 或 expression 使用 IN 或 NOT IN 与 test_expression 比较后返回的所有空值都将返回 UNKNOWN    。 将空值与 IN 或 NOT IN 一起使用会产生意外结果。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 IN 子句的括号中显式包括数量非常多的值（数以千计，以逗号分隔）可能会消耗资源并返回错误 8623 或 8632。 若要解决这一问题，请将这些项存储于某个表的 IN 列表中，并在 IN 子句中使用 SELECT 嵌套查询。  
   
  错误 8623：  
@@ -174,7 +174,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-in-and-not-in"></a>D. 使用 IN 和 NOT IN  
- 下面的示例查找 `FactInternetSales` 表中与 `DimSalesReason` 表中的 `SalesReasonKey` 值相匹配的所有条目。  
+ 下面的示例查找 `FactInternetSales` 表中与 `SalesReasonKey` 表中的 `DimSalesReason` 值相匹配的所有条目。  
   
 ```  
 -- Uses AdventureWorks  
@@ -184,7 +184,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 下面的示例查找 `FactInternetSalesReason` 表中与 `DimSalesReason` 表中的 `SalesReasonKey` 值不匹配的所有条目。  
+ 下面的示例查找 `FactInternetSalesReason` 表中与 `SalesReasonKey` 表中的 `DimSalesReason` 值不匹配的所有条目。  
   
 ```  
 -- Uses AdventureWorks  
