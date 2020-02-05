@@ -15,10 +15,10 @@ ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 66f12768a7fb739125022908d1decb4ef3327a77
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909183"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>在数据库损坏时备份事务日志 (SQL Server)
@@ -62,11 +62,11 @@ ms.locfileid: "72909183"
   
 #### <a name="to-back-up-the-tail-of-the-transaction-log"></a>备份事务日志尾部  
 
-1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
+1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在“对象资源管理器”中，单击服务器名称以展开服务器树。  
   
 2.  展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-3.  右键单击数据库，指向“任务”  ，再单击“备份”  。 将出现 **“备份数据库”** 对话框。  
+3.  右键单击数据库，指向 **“任务”** ，再单击 **“备份”** 。 将出现 **“备份数据库”** 对话框。  
   
 4.  在 **“数据库”** 列表框中，验证数据库名称。 您也可以从列表中选择其他数据库。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "72909183"
   
     -   若要使备份集在特定天数后过期，请单击 **“之后”** （默认选项），并输入备份集从创建到过期所需的天数。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。  
   
-         默认值在“服务器属性”  对话框（位于“数据库设置”  页上）的“默认备份媒体保持期(天)”  选项中设置。 若要访问此对话框，请在对象资源管理器中右键单击服务器名称，选择“属性”，再选择“数据库设置”  页。  
+         默认值在 **“服务器属性”** 对话框（位于 **“数据库设置”** 页上）的 **“默认备份媒体保持期(天)”** 选项中设置。 若要访问此对话框，请在对象资源管理器中右键单击服务器名称，选择“属性”，再选择 **“数据库设置”** 页。  
   
     -   若要使备份集在特定日期过期，请单击 **“在”** ，并输入备份集的过期日期。  
   

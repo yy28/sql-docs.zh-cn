@@ -18,10 +18,10 @@ ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f128cbf86d30cabe0aa00ce7033b7cd5b04c93e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065606"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT 非对称密钥权限 (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68065606"
 
   授予对非对称密钥的权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ GRANT { permission  [ ,...n ] }
  指定对其授予权限的非对称密钥。 需要使用作用域限定符“::”。  
   
  database_principal   
- 指定要向其授予权限的主体。 可以是以下类型之一：  
+ 指定要向其授予权限的主体。 下列类型作之一：  
   
 -   数据库用户  
 -   数据库角色  
@@ -64,7 +64,7 @@ GRANT OPTION
  指示该主体还可以向其他主体授予所指定的权限。  
   
 AS granting_principal   
- 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 可以是以下类型之一：  
+ 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
 -   数据库角色  
@@ -75,7 +75,7 @@ AS granting_principal
 -   映射到非对称密钥的数据库用户  
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  非对称密钥是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下面列出了可授予非对称密钥的最特定和最受限的权限，以及隐含这些权限的更常用权限。  
   
 |非对称密钥权限|非对称密钥权限隐含的权限|数据库权限隐含的权限|  

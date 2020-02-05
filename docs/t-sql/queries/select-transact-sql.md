@@ -26,16 +26,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948289"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  从数据库中检索行，并允许从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的一个或多个表中选择一个或多个行或列。 虽然 SELECT 语句的完整语法较复杂，但其主要子句可归纳如下：  
+  从数据库中检索行，并允许从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的一个或多个表中选择一个或多个行或列。 虽然 SELECT 语句的完整语法较复杂，但其主要子句可归纳如下：  
   
 [ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
@@ -51,7 +51,7 @@ ms.locfileid: "67948289"
   
  可在查询之间使用 UNION、EXCEPT 和 INTERSECT 运算符，以便将各个查询的结果合并或比较到一个结果集中。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -100,7 +100,7 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  由于 SELECT 语句的复杂性，下面按子句说明详细的语法元素和参数：  
   
 |||  
@@ -147,7 +147,7 @@ SELECT <select_criteria>
 下面的示例使用 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 数据库。
   
 ### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. 使用 SELECT 检索行和列  
- 本部分演示三个代码示例。 此第一个代码示例返回 `DimEmployee` 表中的所有行（未指定 WHERE 子句）和所有列（使用了 `*`）。  
+ 本部分演示三个代码示例。 此第一个代码示例返回 `*` 表中的所有行（未指定 WHERE 子句）和所有列（使用了 `DimEmployee`）。  
   
 ```sql  
 SELECT *  
@@ -163,7 +163,7 @@ FROM DimEmployee AS e
 ORDER BY LastName;  
 ```  
   
- 此示例返回 `AdventureWorksPDW2012` 数据库的 `DimEmployee` 表中的所有行（未指定 WHERE 子句）以及列（`FirstName`、`LastName`、`StartDate`）的子集。 第三个列标题重命名为 `FirstDay`。  
+ 此示例返回 `FirstName` 数据库的 `LastName` 表中的所有行（未指定 WHERE 子句）以及列（`StartDate`、`DimEmployee`、`AdventureWorksPDW2012`）的子集。 第三个列标题重命名为 `FirstDay`。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  

@@ -11,10 +11,10 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f75065f38d47964ab3bbc07f22bb809061fb22d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295313"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value（SSISDB 数据库）
@@ -65,22 +65,22 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  *object_type* 为 **smallint**。  
   
  [ @parameter_name = ] *parameter_name*  
- 参数名。 parameter_name  为 nvarchar(128)  。  
+ 参数的名称。 parameter_name  为 nvarchar(128)  。  
   
  [ @parameter_value = ] *parameter_value*  
- 参数的值。 parameter_value  为 sql_variant  。  
+ 参数值。 parameter_value  为 sql_variant  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  要查找用于给定执行的参数值，请查询 catalog.execution_parameter_values 视图。  
   
  若要指定在包执行期间记录的信息范围，请将 *parameter_name* 设置为 LOGGING_LEVEL 并将 *parameter_value* 设置为以下值之一。  
   
  将 *object_type* 参数设置为 50。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|0|None<br /><br /> 关闭日志记录。 仅记录包执行状态。|  
-|1|“基本”<br /><br /> 除了自定义事件和诊断事件之外，记录其余所有事件。 这是默认值。|  
+|0|无<br /><br /> 关闭日志记录。 仅记录包执行状态。|  
+|1|基本<br /><br /> 除了自定义事件和诊断事件之外，记录其余所有事件。 这是默认值。|  
 |2|性能<br /><br /> 仅记录性能统计信息、OnError 和 OnWarning 事件。|  
 |3|“详细”<br /><br /> 记录所有事件，包括自定义事件和诊断事件。 <br />自定义事件包括 Integration Services 任务记录的那些事件。 有关详细信息，请参阅[日志记录的自定义消息](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)|  
 |4|运行时沿袭<br /><br /> 收集跟踪数据流中的沿袭所需的数据。|  
@@ -88,7 +88,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  若要指定 Integration Services 服务器在包执行期间出现任意错误时生成转储文件，请为未运行的执行实例设置以下参数值：  
   
-|参数|ReplTest1|  
+|参数|值|  
 |---------------|-----------|  
 |*execution_id*|执行实例的唯一标识符|  
 |*object_type*|50|  
@@ -97,7 +97,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  若要指定 Integration Services 服务器在包执行期间出现事件时生成转储文件，请为未运行的执行实例设置以下参数值：  
   
-|参数|ReplTest1|  
+|参数|值|  
 |---------------|-----------|  
 |*execution_id*|执行实例的唯一标识符|  
 |*object_type*|50|  
@@ -106,7 +106,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  若要指定在包执行期间导致 Integration Services 服务器生成转储文件的事件，请为未运行的执行实例设置以下参数值： 使用分号分隔多个事件代码。  
   
-|参数|ReplTest1|  
+|参数|值|  
 |---------------|-----------|  
 |*execution_id*|执行实例的唯一标识符|  
 |*object_type*|50|  
@@ -137,7 +137,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  

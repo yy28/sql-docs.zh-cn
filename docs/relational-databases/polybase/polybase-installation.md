@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908672"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安装 PolyBase
@@ -29,11 +29,11 @@ ms.locfileid: "72908672"
    
 - Microsoft .NET Framework 4.5。  
 
-- 最小内存：4 GB。 
+- 最低内存：4 GB。 
    
 - 最小硬盘空间：2 GB。
   
-- 建议：至少 16 GB 的 RAM。
+- 建议：最小值为 16-GB RAM。
    
 - 必须启用 TCP/IP 才能使 PolyBase 正常工作。 SQL Server 的所有版本均默认启用 TCP/IP，Developer 和 Express SQL Server 版本除外。 若要使 PolyBase 在 Developer 和 Express 版本上正常工作，必须启用 TCP/IP 连接。 请参阅[启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 
@@ -102,7 +102,7 @@ ms.locfileid: "72908672"
 <!--SQL Server 2016/2017-->
 ::: moniker range="= sql-server-2016 || = sql-server-2017"
 
-|SQL Server 组件 (SQL Server component)|参数和值|描述|  
+|SQL Server 组件 (SQL Server component)|参数和值|说明|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server 安装程序控件|**必需**<br /><br /> /FEATURES=PolyBase|选择 PolyBase 功能。|  
 |SQL Server PolyBase 引擎|**可选**<br /><br /> /PBENGSVCACCOUNT|指定引擎服务的帐户。 默认为 **NT Authority\NETWORK SERVICE**。|  
@@ -112,13 +112,13 @@ ms.locfileid: "72908672"
 |SQL Server PolyBase 数据移动 |**可选**<br /><br /> /PBDMSSVCPASSWORD|指定数据移动帐户的密码。|  
 |SQL Server PolyBase 数据移动 |**可选**<br /><br /> /PBDMSSVCSTARTUPTYPE|指定数据移动服务的启动模式：自动（默认）、禁用和手动。|  
 |PolyBase|**可选**<br /><br /> /PBSCALEOUT|指定是否将 SQL Server 实例用作 PolyBase 横向扩展计算组的一部分。 <br />支持的值：True、False。|  
-|PolyBase|**可选**<br /><br /> /PBPORTRANGE|指定一个端口范围，其中至少具有六个端口用于 PolyBase 服务。 例如：<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|**可选**<br /><br /> /PBPORTRANGE|指定一个端口范围，其中至少具有六个端口用于 PolyBase 服务。 示例：<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
-|SQL Server 组件 (SQL Server component)|参数和值|描述|  
+|SQL Server 组件 (SQL Server component)|参数和值|说明|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server 安装程序控件|**必需**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore 安装对除 Hadoop 连接外的所有 PolyBase 功能的支持。 PolyBaseJava 支持 Hadoop 连接。 PolyBase 安装两者。 |  
 |SQL Server PolyBase 引擎|**可选**<br /><br /> /PBENGSVCACCOUNT|指定引擎服务的帐户。 默认为 **NT Authority\NETWORK SERVICE**。|  
@@ -128,7 +128,7 @@ ms.locfileid: "72908672"
 |SQL Server PolyBase 数据移动 |**可选**<br /><br /> /PBDMSSVCPASSWORD|指定数据移动帐户的密码。|  
 |SQL Server PolyBase 数据移动 |**可选**<br /><br /> /PBDMSSVCSTARTUPTYPE|指定数据移动服务的启动模式：自动（默认）、禁用和手动。|  
 |PolyBase|**可选**<br /><br /> /PBSCALEOUT|指定是否将 SQL Server 实例用作 PolyBase 横向扩展计算组的一部分。 <br />支持的值：True、False。|  
-|PolyBase|**可选**<br /><br /> /PBPORTRANGE|指定一个端口范围，其中至少具有六个端口用于 PolyBase 服务。 例如：<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|**可选**<br /><br /> /PBPORTRANGE|指定一个端口范围，其中至少具有六个端口用于 PolyBase 服务。 示例：<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
 
@@ -188,7 +188,7 @@ SQL Server PolyBase 安装程序将在计算机上创建以下防火墙规则：
    
 #### <a name="to-enable-the-firewall-rules"></a>启用防火墙规则的步骤  
 
-1. 打开“控制面板”  。  
+1. 打开“控制面板”   
 
 2. 选择“系统和安全”，然后选择“Windows 防火墙”   。  
    

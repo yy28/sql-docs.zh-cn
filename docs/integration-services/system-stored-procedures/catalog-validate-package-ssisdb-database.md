@@ -14,10 +14,10 @@ ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a7ecbe24971e4138dfc55c847d07efa5e901f1f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295257"
 ---
 # <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package（SSISDB 数据库）
@@ -55,10 +55,10 @@ catalog.validate_package [ @folder_name = ] folder_name
  返回验证的唯一标识符 (ID)。 validation_id  为 bigint  。  
   
  [ @use32bitruntime = ] use32bitruntime   
- 指示是否应使用 32 位运行时在 64 位操作系统上运行包。 在 64 位操作系统上运行时，使用值 `1` 以便使用 32 位运行时执行此包。 在 64 位操作系统上运行时，使用值 `0` 以便使用 64 位运行时执行此包。 此参数可选。 use32bitruntime  为 bit  。  
+ 指示是否应使用 32 位运行时在 64 位操作系统上运行包。 在 64 位操作系统上运行时，使用值 `1` 以便使用 32 位运行时执行此包。 在 64 位操作系统上运行时，使用值 `0` 以便使用 64 位运行时执行此包。 此参数是可选的。 use32bitruntime  为 bit  。  
   
  [ @environment_scope = ] environment_scope   
- 指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。 此参数可选。 默认情况下使用字符 `D`。 environment_scope 为 char(1)   。  
+ 指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。 此参数是可选的。 默认情况下使用字符 `D`。 environment_scope 为 char(1)   。  
   
  [ @reference_id = ] reference_id   
  环境引用的唯一 ID。 如果 environment_scope  为 `S`，仅当在验证中包含单个环境引用时，才需要此参数。 reference_id 为 bigint   。  
@@ -67,7 +67,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -95,7 +95,7 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   包参数中引用了变量，但验证中不包括任何引用的环境  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  验证有助于识别可能阻止包成功运行的问题。 使用 [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 或 [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 视图以监视验证状态。  
   
   

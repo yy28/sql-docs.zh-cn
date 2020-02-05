@@ -20,10 +20,10 @@ ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b4be2767bd0ae3a2486e598678e7654a50b1dc93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984416"
 ---
 # <a name="deny-symmetric-key-permissions-transact-sql"></a>DENY 对称密钥权限 (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67984416"
 
   拒绝对对称密钥的权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,7 +59,7 @@ DENY permission [ ,...n ]
  ON SYMMETRIC KEY ::asymmetric_key_name   
  指定要对其拒绝权限的对称密钥。 需要作用域限定符 ::。  
   
- TO \<database_principal>   
+ TO \<database_principal  >  
  指定要从中撤消权限的主体。  
   
  CASCADE  
@@ -92,7 +92,7 @@ DENY permission [ ,...n ]
  Database_user_with_no_login   
  指定无相应服务器级主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以在 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) 目录视图中查看对称密钥的有关信息。  
   
  对称密钥是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下表列出了可拒绝的对对称密钥最为具体的限定权限，以及隐含这些权限的更为通用的权限。  
