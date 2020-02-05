@@ -9,10 +9,10 @@ ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8f2b86d4fe54943ccc3f4c0f06243b72af5779ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577221"
 ---
 # <a name="report-builder-functions---sum-function"></a>报表生成器函数 - Sum 函数
@@ -28,7 +28,7 @@ ms.locfileid: "65577221"
 Sum(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *expression*  
  （**Integer** 或 **Float**）要对其执行聚合的表达式。  
   
@@ -41,7 +41,7 @@ Sum(expression, scope, recursive)
 ## <a name="return-type"></a>返回类型  
  对于十进制表达式，返回 **Decimal** ；对于所有其他类型的表达式，返回 **Double** 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  表达式中指定的数据集必须具有相同的数据类型。 若要将具有多个数值数据类型的数据转换为同一数据类型，请使用类似 **CInt**、 **CDbl** 或 **CDec**的转换函数。 有关详细信息，请参阅 [Type Conversion Functions](https://go.microsoft.com/fwlink/?LinkId=96142)（类型转换函数）。  
   
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  

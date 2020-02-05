@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1eaed4b8cc26cd1705aacb74e102be2e33b443e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059937"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68059937"
 
   访问相同结果集的后续行中的数据，而不使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始提供的自联接。 LEAD 以当前行之后的给定物理偏移量来提供对行的访问。 在 SELECT 语句中使用此分析函数可将当前行中的值与后续行中的值进行比较。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,19 +42,19 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
   
 ## <a name="arguments"></a>参数  
  *scalar_expression*  
- 要根据指定偏移量返回的值。 这是一个返回单个（标量）值的任何类型的表达式。 scalar_expression 不能为分析函数。  
+ 要根据指定偏移量返回的值。 这是一个返回单个（标量）值的任何类型的表达式。 scalar_expression 不能为分析函数  。  
   
- offset  
- 从在其中获取值的当前行前移的行数。 如果未指定，则默认值为 1。 offset 可以是列、子查询或其他表达式，它们的计算值为正整数，或可隐式转换为 bigint。 offset 不能是负数值或分析函数。  
+ *offset*  
+ 从在其中获取值的当前行前移的行数。 如果未指定，则默认值为 1。 offset 可以是列、子查询或其他表达式，它们的计算值为正整数，或可隐式转换为 bigint   。 offset 不能是负数值或分析函数  。  
   
- default  
- 偏移量超出分区范围时返回的值。 如果未指定默认值，则返回 NULL。 default 可以是列、子查询或其他表达式，但它不能是分析函数。 default 的类型与 scalar_expression 的类型必须兼容。
+ default   
+ 偏移量  超出分区范围时返回的值。 如果未指定默认值，则返回 NULL。 default 可以是列、子查询或其他表达式，但它不能是分析函数  。 default 的类型与 scalar_expression 的类型必须兼容   。
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
- partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 在应用函数之前确定数据的顺序。 当指定 partition_by_clause 时，它确定每个分区中数据的顺序。 需要 order_by_clause。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 在应用函数之前确定数据的顺序  。 当指定 partition_by_clause 时，它确定每个分区中数据的顺序  。 需要 order_by_clause  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 指定 scalar_expression 的数据类型。 如果 scalar_expression 可以为 null 或 default 被设置为 NULL，则返回 NULL。  
+ 指定 scalar_expression 的数据类型  。 如果 scalar_expression 可以为 null 或 default 被设置为 NULL，则返回 NULL   。  
   
  LEAD 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
@@ -139,7 +139,7 @@ b           c           i
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D:比较季度之间的值  
+### <a name="d-compare-values-between-quarters"></a>D：比较季度之间的值  
  以下示例演示了 LEAD 函数。 该查询可获得指定员工在后续各日历季度的销售配额值差异。 请注意，因为最后一行没有提供提前值，所以使用默认值零 (0)。  
   
 ```sql  

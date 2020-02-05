@@ -26,10 +26,10 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909178"
 ---
 # <a name="backup-devices-sql-server"></a>备份设备 (SQL Server)
@@ -212,7 +212,7 @@ GO
 ##  <a name="MirroredMediaSets"></a> 镜像备份媒体集  
  镜像备份介质集可减小备份设备故障的影响。 由于备份是防止数据丢失的最后防线，因此备份设备出现故障的后果是非常严重的。 随着数据库不断增大，备份设备或介质发生故障致使备份不可还原的可能性也相应增加。 镜像备份介质通过提供物理备份设备冗余来提高备份的可靠性。 有关详细信息，请参阅本主题后面的 [镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)不熟悉的读者。  
   
-> **注意：** 只有 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 和更高版本支持镜像备份介质集。  
+> **注意：** 只有 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 和更高版本支持镜像备份媒体集。  
   
   
 ##  <a name="Archiving"></a> 存档 SQL Server 备份  
@@ -269,7 +269,7 @@ GO
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
  [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [sys.dm_io_backup_tapes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)   

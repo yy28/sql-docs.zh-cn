@@ -13,10 +13,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f0ebc393c48562c5fcd783b4c056aa218e8ffaa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298479"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 连接管理器
@@ -72,7 +72,7 @@ ms.locfileid: "71298479"
   
     -   双击 SAP BW 连接管理器。  
   
-         -或 -  
+         -或-  
   
     -   右键单击 SAP BW 连接管理器，然后选择“编辑”。   
   
@@ -87,7 +87,7 @@ ms.locfileid: "71298479"
  **语言**  
  指定系统使用的语言。 例如，指定 **“EN”** 表示英语。  
   
- **User name**  
+ **用户名**  
  指定将用于连接到系统的用户名。  
   
  **密码**  

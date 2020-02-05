@@ -1,10 +1,7 @@
 ---
-title: 分区元素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 分区元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b7114d3c2efe53bd14028e1b326bd90434ff2e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 092a652783f5ccaa16e52fe915820a009e4fc274
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034581"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306127"
 ---
 # <a name="partitioning-element-dta"></a>分区元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  包含数据库引擎优化顾问在分析过程中所要使用的分区方案。  
+
+包含数据库引擎优化顾问在分析过程中所要使用的分区方案。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68034581"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**string**，无最大长度。|  
 |**允许的值**|**NONE**<br /> 无分区。<br /><br /> **FULL**<br /> 完全分区。 （提高性能。）<br /><br /> **ALIGNED**<br /> 仅对齐分区。 （提高可管理性。）<br /><br /> 只能将这些值中的一个用于此元素。<br /><br /> **ALIGNED** 的意思是，在数据库引擎优化顾问生成的建议中，每个建议的索引的分区方式，与定义了索引的基础表的分区方式完全相同。 索引视图中的非聚集索引与索引视图对齐。|  
