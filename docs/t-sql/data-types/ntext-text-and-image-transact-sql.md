@@ -22,10 +22,10 @@ ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8aaae44a73bc7cd7ccf41bf1c33823664044a2e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086736"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext、text 和 image (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "68086736"
 **图像**  
 长度可变的二进制数据，从 0 到 2^31-1 (2,147,483,647) 个字节。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 以下函数和语句可与 ntext、text 或 image 数据一起使用    。
   
 |函数|语句|  
