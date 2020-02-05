@@ -16,13 +16,13 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 12c7a8482561e6ab608501158a05a275763ab74a
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 35ad6f4ab64f308fed55e328a1ddcae223ca4a79
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320639"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287460"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server 复制“发布服务器属性”对话框
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "75320639"
   
 
 ## <a name="subcribers"></a>订阅服务器
-  “发布服务器属性”对话框的“订阅服务器”页面用于运行版本低于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器   。 使用此页，可以启用订阅服务器以接收此发布服务器上发布的数据。 启用订阅服务器接收此发布服务器的数据，并不会创建对此发布服务器上的发布的订阅。 若要创建订阅，必须使用新建订阅向导。  
+  “发布服务器属性”对话框的“订阅服务器”页面用于运行版本低于 **的**  **发布服务器**[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 使用此页，可以启用订阅服务器以接收此发布服务器上发布的数据。 启用订阅服务器接收此发布服务器的数据，并不会创建对此发布服务器上的发布的订阅。 若要创建订阅，必须使用新建订阅向导。  
   
 ### <a name="options"></a>选项  
  **“发布服务器属性”**  

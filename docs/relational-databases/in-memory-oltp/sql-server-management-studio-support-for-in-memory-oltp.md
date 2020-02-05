@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e9bd4cb0c2fff4259814f6e33a65777023a801fd
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412526"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server Management Studio 支持
@@ -138,7 +138,7 @@ ms.locfileid: "74412526"
   
         -   复制数据库。 对于具有内存优化的对象的数据库，将不在事务内执行在目标服务器上创建数据库以及传输数据。  
   
-        -   导入和导出数据。 使用  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从一个或多个表或视图中导入和导出向导复制数据”选项。 如果目标表是目标数据库中不存在的内存优化表：  
+        -   导入和导出数据。 使用 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“** 从一个或多个表或视图中导入和导出向导复制数据”选项。 如果目标表是目标数据库中不存在的内存优化表：  
   
             1.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入与导出向导”** 中的 **“指定表复制或查询”** 屏幕上，选择 **“复制一个或多个表或视图的数据”** 。 然后单击“下一步”  。  
   

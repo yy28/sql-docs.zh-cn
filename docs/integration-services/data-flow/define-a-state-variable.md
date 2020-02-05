@@ -11,10 +11,10 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292938"
 ---
 # <a name="define-a-state-variable"></a>定义状态变量
@@ -30,7 +30,7 @@ ms.locfileid: "71292938"
   
  下表提供了 CDC 状态变量值的组分的详细说明。  
   
-|组件|描述|  
+|组件|说明|  
 |---------------|-----------------|  
 |**\<state-name>**|这是当前 CDC 状态的名称。|  
 |**CS**|这标记当前处理范围开始点（当前开始）。|  
@@ -49,7 +49,7 @@ ms.locfileid: "71292938"
   
  下表对可能的CDC 状态值进行了说明：  
   
-|状态|描述|  
+|状态|说明|  
 |-----------|-----------------|  
 |(INITIAL)|这是在当前 CDC 组上运行任何包之前的初始状态。 这也是 CDC 状态为空时的状态。|  
 |ILSTART（初始加载已开始）|这是初始加载包已开始、 **MarkInitialLoadStart** 操作调用 CDC 控制任务后时的状态。|  
@@ -90,6 +90,6 @@ ms.locfileid: "71292938"
   
 ## <a name="see-also"></a>另请参阅  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [CDC 控制任务编辑器](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

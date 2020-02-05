@@ -11,10 +11,10 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822198"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
@@ -28,7 +28,7 @@ ms.locfileid: "74822198"
 ## <a name="prerequisites"></a>必备条件  
 开始之前，请仔细阅读以下重要信息：  
   
-- [支持的版本和版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+- [支持的版本和版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 - [选择数据库引擎升级方法](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：要按正确顺序升级，请检查支持的版本和版本升级以及环境中安装的其他组件，并据此选择适当的升级方法和步骤。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "74822198"
   
 - [安装 SQL Server 的硬件和软件要求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：查看安装 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的软件要求。 如果需要其他软件，则应在升级过程开始之前在每个节点上安装该软件，从而最大程度减少故障时间。  
 
-- [检查是否对任何 AG 数据库使用了更改数据捕获或复制](#special-steps-for-change-data-capture-or-replication):如果 AG 中的任何数据库已启用更改数据捕获 (CDC)，请完成这些[指令](#special-steps-for-change-data-capture-or-replication)。
+- [检查更改数据捕获或复制是否用于任何 AG 数据库](#special-steps-for-change-data-capture-or-replication)：如果 AG 中的任何数据库已启用更改数据捕获 (CDC)，请完成这些[操作](#special-steps-for-change-data-capture-or-replication)。
 
 >[!NOTE]  
 >在滚动升级之外，不支持在同一 AG 中混合使用 SQL Server 实例版本，并且不应该长时间保持该状态，因为升级应该快速进行。 升级 SQL Server 2016 及更高版本的其他选项是使用分布式可用性组。
@@ -202,7 +202,7 @@ ms.locfileid: "74822198"
 
 >[!IMPORTANT]
 >- 验证各步骤间的同步。 在进行下一步前，确认同步提交副本在可用性组中同步，且全局主要副本与分布式 AG 中的转发器同步。 
->- **建议**：每当验证同步时，在 SQL Server Management Studio 中刷新数据库节点和分布式 AG 节点。 所有项同步后，保存每个副本状态的屏幕截图。 这有助于跟踪当前步骤，在进行下一步前确保一切运行正常，并帮助你在故障发生时进行故障排除。 
+>- 建议：每当验证同步时，在 SQL Server Management Studio 中刷新数据库节点和分布式 AG 节点  。 所有项同步后，保存每个副本状态的屏幕截图。 这有助于跟踪当前步骤，在进行下一步前确保一切运行正常，并帮助你在故障发生时进行故障排除。 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>分布式可用性组的滚动升级的示例图

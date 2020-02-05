@@ -26,10 +26,10 @@ ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7d2061479ac8f93dfcdbc4a8039ef3914d897f87
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064656"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "73064656"
 > [!IMPORTANT]  
 >  仅在兼容级别为 100 时才支持 CREATE FULLTEXT STOPLIST、ALTER FULLTEXT STOPLIST 和 DROP FULLTEXT STOPLIST。 兼容级别为 80 和 90 时，将不支持这些语句。 不过，在所有兼容级别下，系统非索引字表将会自动与新的全文索引相关联。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -72,7 +72,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  AUTHORIZATION owner_name   
  指定拥有此非索引字表的数据库主体的名称。 owner_name 必须是当前用户所属的主体的名称，或者当前用户必须具有对 owner_name 的 IMPERSONATE 权限   。 如果未指定，则所有权授予当前用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  非索引字表的创建者也是其所有者。  
   
 ## <a name="permissions"></a>权限  

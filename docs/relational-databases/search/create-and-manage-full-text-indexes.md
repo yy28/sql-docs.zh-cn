@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257657"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
@@ -76,7 +76,7 @@ ms.locfileid: "75257657"
     |----------|-----------------|  
     |**常规**|显示全文索引的基本属性。 这些基本属性包括若干个可修改属性和多个不可更改属性，后者如数据库名称、表名和全文键列的名称。 可修改属性包括：<br /><br /> **全文索引非索引字表**<br /><br /> **全文索引已启用**<br /><br /> **更改跟踪**<br /><br /> **搜索属性列表**|  
     |**“列”**|显示可用于全文索引的表列。 对于选中的列，均会创建全文索引。 您可以根据需要选择将任意数目的可用列包括在全文索引中。 有关详细信息，请参阅[填充全文索引](populate-full-text-indexes.md)。|
-    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在退出“全文检索属性”对话框之后，所有新创建的计划都将与 SQL Server 代理作业（对 database_name.table_name 启动表增量填充）相关联    。|  
+    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在退出“全文索引属性”  对话框之后，所有新创建的计划都将与 SQL Server 代理作业（对 *database_name*.*table_name* 启动表增量填充）相关联。|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。   
   

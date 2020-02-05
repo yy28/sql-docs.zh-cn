@@ -27,10 +27,10 @@ ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1e8fa047a65663f918bfcce4a92692f1c443f77a
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064663"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "73064663"
 > [!IMPORTANT]  
 >  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，全文目录为虚拟对象且不再属于任何文件组。 全文目录是表示一组全文索引的逻辑概念。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -97,7 +97,7 @@ CREATE FULLTEXT CATALOG catalog_name
   
  owner_name 还必须拥有对指定全文目录的 TAKE OWNERSHIP 权限  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  全文目录 ID 从 00005 开始，每创建一个新目录，ID 值就会递增 1。  
   
 ## <a name="permissions"></a>权限  

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ef602ecc617f9811b5c40abd1e512a6109fc8ec
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74249788"
 ---
 # <a name="square-transact-sql"></a>SQUARE (Transact-SQL)
@@ -65,7 +65,7 @@ Cyl Vol
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例返回 `containers` 表 `volume` 列中每个值的平方。  
+ 下面的示例返回 `volume` 表 `containers` 列中每个值的平方。  
   
 ```  
 -- Uses AdventureWorks  

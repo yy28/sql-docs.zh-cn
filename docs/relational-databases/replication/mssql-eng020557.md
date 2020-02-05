@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c43c6952-5b60-4347-b881-11a0004dce24
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c5962d9858bdc23c05e7f1b21167f4d79f69ff78
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6bb176bf9a18232f23cddd8446897383ae102f71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770417"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288469"
 ---
-# <a name="mssqleng020557"></a>MSSQL_ENG020557
+# <a name="mssql_eng020557"></a>MSSQL_ENG020557
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68770417"
 |符号名称||  
 |消息正文|代理关闭。 有关详细信息，请参阅作业 '%s' 的 SQL Server 代理作业历史记录。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  复制代理在没有将原因写入相应的历史记录表的情况下关闭，或代理在某个过程中关闭。  
   
 ## <a name="user-action"></a>用户操作  

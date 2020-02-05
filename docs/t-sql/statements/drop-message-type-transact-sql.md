@@ -22,10 +22,10 @@ ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 48c1a96998adf9fddd8ffd8da0e6f6711b9277b0
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745316"
 ---
 # <a name="drop-message-type-transact-sql"></a>DROP MESSAGE TYPE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70745316"
 
   删除一个现有消息类型。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ DROP MESSAGE TYPE message_type_name
 ## <a name="permissions"></a>权限  
  默认情况下，消息类型的所有者、db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员拥有删除消息类型的权限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果有任何约定引用了某个消息类型，则无法删除该消息类型。  
   
 ## <a name="examples"></a>示例  

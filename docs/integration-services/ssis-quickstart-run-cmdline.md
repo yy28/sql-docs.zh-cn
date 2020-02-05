@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 964fdf4d4abb58d7baf27ee9e2f8b6900a7d0bbb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295714"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>使用 DTExec.exe 从命令提示符运行 SSIS 包
@@ -55,6 +55,6 @@ ms.locfileid: "71295714"
 - 考虑运行包的其他方式。
     - [使用 SSMS 运行 SSIS 包](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 运行 SSIS 包 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [使用 Transact-SQL (VS Code) 运行 SSIS 包](ssis-quickstart-run-tsql-vscode.md)
+    - [使用 Transact-SQL 运行 SSIS 包 (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [使用 PowerShell 运行 SSIS 包](ssis-quickstart-run-powershell.md)
     - [使用 C# 运行 SSIS 包](./ssis-quickstart-run-dotnet.md) 

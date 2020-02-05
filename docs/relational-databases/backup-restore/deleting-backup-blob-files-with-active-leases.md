@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908938"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>删除具有活动租约的备份 Blob 文件
@@ -33,7 +33,7 @@ ms.locfileid: "72908938"
 
 以下步骤说明在备份或还原活动失败后如何进行清除。 可以使用 PowerShell 脚本来执行所有这些步骤。 以下部分包括一个 PowerShell 脚本示例：  
   
-1. **标识具有租约的 blob：** 如果有运行备份过程的脚本或进程，可能可以捕获脚本或进程内的失败并使用它清除 blob。  还可以使用 LeaseStats 和 LeastState 属性来标识具有租约的 blob。 一旦标识了 blob，我们建议查看列表，在删除 blob 前验证备份文件的有效性。  
+1. **标识具有租约的 blob：** 如果你有运行备份过程的脚本或进程，可能可以捕获脚本或进程内的失败并使用它清除 blob。  还可以使用 LeaseStats 和 LeastState 属性来标识具有租约的 blob。 一旦标识了 blob，我们建议查看列表，在删除 blob 前验证备份文件的有效性。  
   
 1. **中断租约：** 获得授权的请求可以中断租约而不提供租约 ID。 有关详细信息，请参阅 [此处](https://go.microsoft.com/fwlink/?LinkID=275664) 。  
   
@@ -127,4 +127,4 @@ if($lockedBlobs.Count -gt 0)
   
 ## <a name="see-also"></a>另请参阅
 
-[SQL Server 备份到 URL 最佳实践和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+[从 SQL Server 备份到 URL 的最佳做法和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

@@ -15,10 +15,10 @@ ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930132"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN（geometry 数据类型）
@@ -40,12 +40,12 @@ ms.locfileid: "67930132"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  如果 *curve_index* < 1，则引发 `ArgumentOutOfRangeException`。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果出现以下任何情况，则会返回 **NULL**：  
   
 -   声明 **geometry** 实例，但未将其实例化  
@@ -97,7 +97,7 @@ ms.locfileid: "67930132"
  请注意，前面的三个示例的结果是相同的。 无论使用哪种 WKT（熟知文本）格式输入相同的曲线序列，在使用 `STCurveN()` 实例时，`CompoundCurve` 返回的结果都是相同的。  
   
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. 在调用 STCurveN() 之前验证参数  
- 以下示例说明如何在调用 `STCurveN()` 方法之前确保 `@n` 有效：  
+ 以下示例说明如何在调用 `@n` 方法之前确保 `STCurveN()` 有效：  
   
 ```
  DECLARE @g geometry;  

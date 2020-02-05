@@ -18,10 +18,10 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 14fa2d0602f0c358cd400e0734e567e853a6db85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286827"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>使用脚本任务查询 Active Directory
@@ -34,14 +34,14 @@ ms.locfileid: "71286827"
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  下面的示例基于 `email` 变量的值（包含雇员的电子邮件地址），从 Active Directory 检索雇员的姓名、职务和电话号码。 包中的优先约束可使用检索到的信息，例如基于雇员的职务来确定发送具有低优先级的电子邮件消息，还是具有高优先级的页。  
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
 1.  创建三个字符串变量：`email`、`name` 和 `title`。 输入一个有效的企业电子邮件地址作为 `email` 变量的值。  
   
-2.  在“脚本任务编辑器”的“脚本”页，将 `email` 变量添加到 ReadOnlyVariables 属性中    。  
+2.  在“脚本任务编辑器”的“脚本”页，将  **变量添加到 ReadOnlyVariables 属性中**  `email`  。  
   
 3.  将 `name` 和 `title` 变量添加到 ReadWriteVariables  属性中。  
   

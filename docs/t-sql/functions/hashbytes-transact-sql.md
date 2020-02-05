@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 29008af0f2584322b180a82b20268c452c603baa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982934"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982934"
 
   返回其在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的输入的 MD2、MD4、MD5、SHA、SHA1 或 SHA2 哈希值。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,7 +53,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 'input'   
 指定一个表达式，其计算结果为要对其执行哈希操作的字符或二进制字符串。  
   
- 输出符合算法标准：MD2、MD4 和 MD5 为 128 位（16 个字节）；SHA 和 SHA1 为 160 位（20 个字节）；SHA2_256 为 256 位（32 个字节），SHA2_512 为 512 位（64 个字节）。  
+ 输出符合算法标准：MD2、MD4 和 MD5 为 128 位（即 16 个字节）；SHA 和 SHA1 为 160 位（即 20 个字节）；SHA2_256 为 256 位（即 32 个字节），SHA2_512 为 512 位（即 64 个字节）。  
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
   
@@ -62,14 +62,14 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="return-value"></a>返回值  
  varbinary（最大 8000 个字节）   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 请考虑使用 `CHECKSUM` 或 `BINARY_CHECKSUM` 作为替代方案，以计算哈希值。
 
 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，已弃用 MD2、MD4、MD5、SHA 和 SHA1 算法。 请改用 SHA2_256 或 SHA2_512。 旧算法将继续起作用，但会抛出弃用事件。
 
 ## <a name="examples"></a>示例  
 ### <a name="return-the-hash-of-a-variable"></a>返回变量的哈希  
- 以下示例返回变量 `@HashThis` 中存储的 nvarchar 数据的 `SHA2_256` 哈希值  。  
+ 以下示例返回变量 `SHA2_256` 中存储的 nvarchar 数据的  **哈希值**`@HashThis`。  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  
@@ -78,7 +78,7 @@ SELECT HASHBYTES('SHA2_256', @HashThis);
 ```  
   
 ### <a name="return-the-hash-of-a-table-column"></a>返回表列的哈希  
- 下面的示例返回 `Test1` 表 `c1` 列中值的 SHA2_256 哈希。  
+ 下面的示例返回 `c1` 表 `Test1` 列中值的 SHA2_256 哈希。  
   
 ```sql  
 CREATE TABLE dbo.Test1 (c1 nvarchar(32));  

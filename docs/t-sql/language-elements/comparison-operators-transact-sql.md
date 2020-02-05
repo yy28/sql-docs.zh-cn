@@ -21,10 +21,10 @@ ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a1cc6427e01055a3aa97f8f79f9270dc22579255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140260"
 ---
 # <a name="comparison-operators-transact-sql"></a>比较运算符 (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68140260"
 
   比较运算符测试两个表达式是否相同。 除 text、ntext 或 image 数据类型的表达式外，比较运算符可以用于所有其他表达式    。 下表列出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 比较运算符。  
   
-|运算符|含义|  
+|操作员|含义|  
 |--------------|-------------|  
 |[=（等于）](../../t-sql/language-elements/equals-transact-sql.md)|等于|  
 |[>（大于）](../../t-sql/language-elements/greater-than-transact-sql.md)|大于|  
@@ -45,7 +45,7 @@ ms.locfileid: "68140260"
 |[\!>（不大于）](../../t-sql/language-elements/not-greater-than-transact-sql.md)|不大于（非 ISO 标准）|  
   
 ## <a name="boolean-data-type"></a>Boolean 数据类型  
- 具有 Boolean 数据类型的比较运算符的结果  。 这有三个值：TRUE、FALSE 和 UNKNOWN。 返回 Boolean 数据类型的表达式称为布尔表达式  。  
+ 具有 Boolean 数据类型的比较运算符的结果  。 它有三个值：TRUE、FALSE 和 UNKNOWN。 返回 Boolean 数据类型的表达式称为布尔表达式  。  
   
  与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不同，Boolean 数据类型不能被指定为表列或变量的数据类型，也不能在结果集中返回  。  
   

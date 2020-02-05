@@ -12,13 +12,13 @@ ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c9e763c2873c018ca53a0c36db2b5c72b3b5d22b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123070"
 ---
-# <a name="mssqlserver4846"></a>MSSQLSERVER_4846
+# <a name="mssqlserver_4846"></a>MSSQLSERVER_4846
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68123070"
 |符号名称|BULKPROV_MEMORY|  
 |消息正文|大容量数据提供程序分配内存失败。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 内存分配失败。  
   
 ## <a name="user-action"></a>用户操作  
@@ -40,7 +40,7 @@ ms.locfileid: "68123070"
   
 1.  验证其他应用程序或服务是否占用此服务器上的内存。 重新配置不太重要的应用程序或服务，使其占用更少的内存。  
   
-2.  开始收集以下内容的性能监视器计数器：**SQL Server:Buffer Manager**、**SQL Server:Memory Manager**。  
+2.  开始收集 **SQL Server: Buffer Manager**、**SQL Server: Memory Manager** 的性能监视器计数器。  
   
 3.  检查以下 SQL Server 内存配置参数：  
   

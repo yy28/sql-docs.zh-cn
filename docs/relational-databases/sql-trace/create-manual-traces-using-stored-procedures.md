@@ -11,10 +11,10 @@ ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d24b9300b5ce5d727d7e9b53c42cea4571ad066f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095977"
 ---
 # <a name="create-manual-traces-using-stored-procedures"></a>使用存储过程创建手动跟踪
@@ -47,21 +47,21 @@ ms.locfileid: "74095977"
   
  **设置跟踪定义默认值**  
   
- [SQL Server 事件探查器](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)  
   
  **设置跟踪显示默认值**  
   
- [SQL Server 事件探查器](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)  
   
  **创建跟踪**  
   
- [SQL Server 事件探查器](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
  [Transact-SQL](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)  
   
  **向跟踪模板添加或从中删除事件**  
   
- [SQL Server 事件探查器](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
  [Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

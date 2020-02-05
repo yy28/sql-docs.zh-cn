@@ -9,10 +9,10 @@ author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
 ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028726"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>使用 PowerShell Core 管理 Linux 上的 SQL Server
@@ -79,7 +79,7 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 以下步骤使用 PowerShell Core 连接到 Linux 上的 SQL Server 实例，并显示几个服务器属性。
 
 在 PowerShell 提示符下复制并粘贴以下命令。 运行这些命令时，PowerShell 将：
-- 显示一个对话框，提示你输入实例的主机名或 IP 地址
+- 显示提示输入实例的主机名或 IP 地址的对话框
 - 显示“PowerShell 凭据请求”对话框，提示你输入凭据  。 可以使用 *SQL 用户名*和 *SQL 密码*连接到 Linux 上的 SQL Server 实例
 - 使用 Get-SqlInstance cmdlet 连接到服务器，并显示一些属性  
 
@@ -149,7 +149,7 @@ AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 
 ## <a name="get-databases"></a>获取数据库
 
-要了解的一个重要 cmdlet 是 `Get-SqlDatabase`。  对于涉及数据库或数据库中对象的许多操作，都可以使用 `Get-SqlDatabase` cmdlet。  如果为 `-ServerInstance` 和 `-Database` 参数都提供值，则仅检索一个数据库对象。  但是，如果仅指定 `-ServerInstance` 参数，则将返回该实例上的所有数据库的完整列表。
+要了解的一个重要 cmdlet 是 `Get-SqlDatabase`。  对于涉及数据库或数据库中对象的许多操作，都可以使用 `Get-SqlDatabase` cmdlet。  如果为 `-ServerInstance` 和 `-Database` 参数都提供值，则仅检索一个数据库对象。  但如果仅指定 `-ServerInstance` 参数，则将返回该实例上所有数据库的完整列表。
 
 ```powershell
 # NOTE: We are reusing the values saved in the $credential variable from the above example.
@@ -181,7 +181,7 @@ tempdb               Normal       16.00 MB    5.49 MB Simple       140 sa
 以下步骤使用 PowerShell Core 检查连接到 Linux 上 SQL Server 实例的错误日志。
 
 在 PowerShell 提示符下复制并粘贴以下命令。 它们可能会运行几分钟。 这些命令执行以下步骤：
-- 显示一个对话框，提示你输入实例的主机名或 IP 地址
+- 显示提示输入实例的主机名或 IP 地址的对话框
 - 显示“PowerShell 凭据请求”对话框，提示你输入凭据  。 可以使用 *SQL 用户名*和 *SQL 密码*连接到 Linux 上的 SQL Server 实例
 - 使用 **Get-SqlErrorLog** cmdlet 连接到 Linux 上的 SQL Server 实例，并检索自**昨天**起的错误日志
 

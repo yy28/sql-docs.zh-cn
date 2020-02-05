@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532491"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 备份和还原数据库
@@ -29,7 +29,7 @@ ms.locfileid: "73532491"
 
 ## <a name="prerequisites"></a>必备条件
 
-本教程需要 SQL Server TutorialDB  。 若要创建 TutorialDB 数据库，请完成以下其中一项快速入门  ：
+本教程需要 SQL Server TutorialDB  。 若要创建 TutorialDB  数据库，请完成以下其中一项快速入门：
 
 * [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 连接并查询 SQL Server](quickstart-sql-server.md)
 
@@ -72,8 +72,8 @@ ms.locfileid: "73532491"
 
 5. 在“目标”部分的“目标数据库”字段中，键入“TutorialDB_Restored”以将备份文件还原到新数据库    。 然后选择“还原”  。
 
-   ![还原 (restore)](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![还原](./media/tutorial-backup-restore-sql-server/restore.png)
 
 6. 要查看还原操作的状态，请按 Ctrl+T，打开“任务历史记录”   。
 
-   ![还原 (restore)](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![还原](./media/tutorial-backup-restore-sql-server/task-history-restore.png)

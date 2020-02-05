@@ -17,10 +17,10 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 183c95bf39c504c7444f1604206f5acef517a53d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284171"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 用户界面
@@ -43,15 +43,15 @@ ms.locfileid: "71284171"
   
  此表列出可从 **SSIS** 菜单和 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的设计图面访问的对话框。  
   
-|对话框|用途|访问|  
+|对话框|目的|访问|  
 |----------------|-------------|------------|  
 |**入门**|访问示例、教程和视频内容。|右键单击“控制流”  选项卡或“数据流”  选项卡的设计图面，然后单击“入门”  。<br /><br /> 要在创建新的 **项目时自动显示** “入门” [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 窗口，请选择该窗口底部的 **“始终在新项目中显示”** 。|  
-|**配置 SSIS 日志**|添加日志和设置日志记录详细信息，从而配置包及其任务的日志记录。|在 **SSIS** 菜单上，单击 **“日志记录”** 。<br /><br /> \- 或 -<br /><br /> 右键单击“控制流”  选项卡的设计图面上任意位置，再单击“日志记录”  。|  
-|**包配置组织程序**|添加和编辑包配置。 请从此对话框运行包配置向导。|在 **SSIS** 菜单上，单击 **“包配置”** 。<br /><br /> -或 -<br /><br /> 右键单击“控制流”  选项卡的设计图面上任意位置，再单击“包配置”  。|  
-|**数字签名**|为包签名或从包中删除签名。|在 **SSIS** 菜单上，单击 **“数字签名”** 。<br /><br /> -或 -<br /><br /> 右键单击“控制流”  选项卡的设计图面上任意位置，再单击“数字签名”  。|  
+|**配置 SSIS 日志**|添加日志和设置日志记录详细信息，从而配置包及其任务的日志记录。|在 **SSIS** 菜单上，单击 **“日志记录”** 。<br /><br /> -或-<br /><br /> 右键单击“控制流”  选项卡的设计图面上任意位置，再单击“日志记录”  。|  
+|**包配置组织程序**|添加和编辑包配置。 请从此对话框运行包配置向导。|在 **SSIS** 菜单上，单击 **“包配置”** 。<br /><br /> -或-<br /><br /> 右键单击“控制流”  选项卡的设计图面上任意位置，再单击“包配置”  。|  
+|**数字签名**|为包签名或从包中删除签名。|在 **SSIS** 菜单上，单击 **“数字签名”** 。<br /><br /> -或-<br /><br /> 右键单击“控制流”  选项卡的设计图面上任意位置，再单击“数字签名”  。|  
 |**设置断点**|对任务启用断点，并设置断点属性。|在“控制流”  选项卡的设计图面上，右键单击任务或容器，再单击“编辑断点”  。 若要对包设置断点，请右键单击“控制流”  选项卡的设计图面上的任意位置，再单击“编辑断点”  。|  
   
- **“入门”** 窗口提供指向示例、教程和视频内容的链接。 若要添加指向更多内容的链接，请修改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]当前版本附带的 SamplesSites.xml 文件。 建议不要修改指定 RSS 源 URL 的 \<GettingStartedSamples> 元素值。 该文件位于 \<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn 文件夹中  。 在 64 位计算机上，该文件位于 \<drive>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 文件夹中  。  
+ **“入门”** 窗口提供指向示例、教程和视频内容的链接。 若要添加指向更多内容的链接，请修改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]当前版本附带的 SamplesSites.xml 文件。 建议不要修改指定 RSS 源 URL 的 \<GettingStartedSamples> 元素值。 该文件位于 *drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn 文件夹中\<* 。 在 64 位计算机上，该文件位于 *drive>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 文件夹中\<* 。  
   
  如果 SamplesSites.xml 文件确已损坏，请用下面的默认 xml 替换该文件中的 xml。  
   
@@ -71,10 +71,10 @@ ms.locfileid: "71284171"
   
  此表列出可从 **SSIS** 和 **“视图”** 菜单以及 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的设计图面访问的窗口。  
   
-|窗口|用途|访问|  
+|窗口|目的|访问|  
 |------------|-------------|------------|  
-|**变量**|添加和管理自定义变量。|在 **SSIS** 菜单上单击 **“变量”** 。<br /><br /> -或 -<br /><br /> 右键单击“控制流”  和“数据流”  选项卡的设计图面上任意位置，再单击“变量”  。<br /><br /> -或 -<br /><br /> 在 **“视图”** 菜单上，指向 **“其他窗口”** ，再单击 **“变量”** 。|  
-|**日志事件**|在运行时查看日志项。|在 **SSIS** 菜单上单击 **“日志事件”** 。<br /><br /> -或 -<br /><br /> 右键单击“控制流”  和“数据流”  选项卡的设计图面上的任意位置，再单击“日志事件”  。<br /><br /> -或 -<br /><br /> 在 **“视图”** 菜单上指向 **“其他窗口”** ，再单击 **“日志事件”** 。|  
+|**变量**|添加和管理自定义变量。|在 **SSIS** 菜单上单击 **“变量”** 。<br /><br /> -或-<br /><br /> 右键单击“控制流”  和“数据流”  选项卡的设计图面上任意位置，再单击“变量”  。<br /><br /> -或-<br /><br /> 在 **“视图”** 菜单上，指向 **“其他窗口”** ，再单击 **“变量”** 。|  
+|**日志事件**|在运行时查看日志项。|在 **SSIS** 菜单上单击 **“日志事件”** 。<br /><br /> -或-<br /><br /> 右键单击“控制流”  和“数据流”  选项卡的设计图面上的任意位置，再单击“日志事件”  。<br /><br /> -或-<br /><br /> 在 **“视图”** 菜单上指向 **“其他窗口”** ，再单击 **“日志事件”** 。|  
   
 ## <a name="custom-editors"></a>自定义编辑器  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为大多数容器、任务、源、转换和目标提供了自定义对话框。  

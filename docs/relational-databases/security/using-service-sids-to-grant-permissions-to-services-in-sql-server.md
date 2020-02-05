@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.openlocfilehash: 18ac490c514703d890f2a1075602494fff81749a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095592"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>使用服务 SID 授予对 SQL Server 中的服务的访问权限
@@ -32,7 +32,7 @@ SQL Server 使用[每个服务的安全标识符 (SID)](https://support.microsof
 > [!TIP]
 > 如果收到错误 `Login failed for user 'NT AUTHORITY\SYSTEM'`，请验证所需服务的服务 SID 是否存在、是否在 SQL Server 中创建了服务 SID 登录名，以及是否已在 SQL Server 中为该服务 SID 授予了相应权限。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 ### <a name="eliminate-service-accounts"></a>消除服务帐户
 
@@ -42,7 +42,7 @@ SQL Server 使用[每个服务的安全标识符 (SID)](https://support.microsof
 
 系统历来通过为 [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190)（[NT AUTHORITY\SYSTEM，语言为 en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)）或 [NetworkService](/windows/desktop/Services/networkservice-account)（[NT AUTHORITY\NETWORK SERVICE，语言为 en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)）帐户创建登录名并授予这些登录名权限，来授予系统帐户权限。 此方法在以系统帐户运行的 SQL 中授予任何进程或服务权限。
 
-使用服务 SID 允许对特定服务授予权限。 该服务在运行时只能访问已授予权限的资源。 例如，如果 `HealthService` 作为 `LocalSystem` 运行并被授予 `View Server State`，则 `LocalSystem` 帐户仅在 `HealthService` 的上下文中运行时才具有对 `View Server State` 的权限。 如果任何其他进程尝试像 `LocalSystem` 一样访问 SQL 的服务器状态，则将被拒绝访问。
+使用服务 SID 允许对特定服务授予权限。 该服务在运行时只能访问已授予权限的资源。 例如，如果 `HealthService` 作为 `LocalSystem` 运行并被授予 `View Server State`，则 `LocalSystem` 帐户仅在 `View Server State` 的上下文中运行时才具有对 `HealthService` 的权限。 如果任何其他进程尝试像 `LocalSystem` 一样访问 SQL 的服务器状态，则将被拒绝访问。
 
 ## <a name="examples"></a>示例
 

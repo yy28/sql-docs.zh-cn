@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 786729a6bfcae37e3c2fb1aa9a9e85839ca9c127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119110"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68119110"
 
 返回指定日期和时间参数的 datetimeoffset  值。 返回值包含精度参数指定的精度，以及偏移参数指定的偏移量。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +40,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
   
 ## <a name="arguments"></a>参数  
 
-year   
+*year*  
 指定年份的整数表达式。  
   
 month   
@@ -68,12 +68,12 @@ minute_offset
 整数表达式，用于指定时区偏移量的分钟部分。  
   
 *精度*  
-整数文本值，用于指定 `DATETIMEOFFSETFROMPARTS` 要返回的 datetimeoffset  值的精度。  
+整数文本值，用于指定  **要返回的 datetimeoffset**`DATETIMEOFFSETFROMPARTS` 值的精度。  
   
 ## <a name="return-types"></a>返回类型
-**datetimeoffset(** precision  **)**  
+datetimeoffset( precision )     
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 
 `DATETIMEOFFSETFROMPARTS` 返回已完全初始化的 datetimeoffset 数据类型  。 偏移参数表示时区偏移量。 对于省略的偏移参数，`DATETIMEOFFSETFROMPARTS` 假定时区偏移量为 `00:00`，换言之，即没有时区偏移量。 对于指定的偏移参数，`DATETIMEOFFSETFROMPARTS` 需要这两个参数的值，要么都是正值，要么都是负值。 如果 minute_offset  具有值而 hour_offset  没有值，`DATETIMEOFFSETFROMPARTS` 将引发错误。 如果其他参数具有无效值，`DATETIMEOFFSETFROMPARTS` 将引发错误。 如果至少一个必需参数具有 `NULL` 值，则 `DATETIMEOFFSETFROMPARTS` 将返回 `NULL`。 但是，如果 precision  参数具有 `NULL` 值，`DATETIMEOFFSETFROMPARTS` 将引发错误。  
   

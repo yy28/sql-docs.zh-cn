@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: e08891eb7cb9fb897b48e37d6d8caa0e12620d06
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68768361"
 ---
 # <a name="subscribe-to-publications"></a>订阅发布
@@ -76,14 +76,14 @@ ms.locfileid: "68768361"
   
  **删除推送订阅**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  删除订阅不会从订阅服务器中删除已发布的对象。  
   
  **创建请求订阅**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)  
   
  **查看或修改请求订阅属性**  
   

@@ -11,10 +11,10 @@ ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 048cbe154dde064d43178da6c58e5f948130ca7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294271"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制任务自定义属性
@@ -24,7 +24,7 @@ ms.locfileid: "71294271"
 
   下表描述了 CDC 控制任务的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|描述|  
+|属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
 |连接|ADO.NET 连接|与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 数据库的 ADO.NET 连接，用于访问更改表和 CDC 状态（如果存储于相同数据库中）。<br /><br /> 该连接必须是指向为 CDC 启用的并且所选更改表位于其中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接。|  
 |TaskOperation|Integer（枚举）|CDC 控制任务的所选操作。 可能值为 **“标记初始加载开始”** 、 **“标记初始加载结束”** 、 **“标记 CDC 状态”** 、 **“获取正在处理范围”** 、 **“标记已处理范围”** 和 **“重置 CDC 状态”** 。<br /><br /> 如果在 **CDC（即，不是 Oracle）上工作时选择**MarkCdcStart **、** MarkInitialLoadStart **或** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则在连接管理器中指定的用户必须是  **db_owner** 或 **sysadmin**。<br /><br /> 有关这些操作的详细信息，请参阅 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) 和 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。|  
@@ -38,6 +38,6 @@ ms.locfileid: "71294271"
   
 ## <a name="see-also"></a>另请参阅  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [CDC 控制任务编辑器](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

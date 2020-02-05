@@ -11,10 +11,10 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412759"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>将具有内存优化表的数据库绑定至资源池
@@ -86,7 +86,7 @@ GO
 ###  <a name="bkmk_CreateResourcePool"></a> 创建一个资源池并配置内存  
  为内存优化表配置内存时，应基于 MIN_MEMORY_PERCENT 而非 MAX_MEMORY_PERCENT 完成容量规划。  有关 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的信息，请参阅 [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)。 对于内存优化表，这将提高内存可用性的可预测性，因为 MIN_MEMORY_PERCENT 会对其他资源池带来内存压力以确保其得到遵守。 为确保内存可用并帮助避免内存不足情况，MIN_MEMORY_PERCENT 与 MAX_MEMORY_PERCENT 的值应相同。 请参阅下面的 [可用于内存优化表和索引的内存百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) ，以了解基于已提交内存量的可用于内存优化表的内存百分比。  
   
- 有关在虚拟机环境下工作时的详细信息，请参阅[最佳做法：在虚拟机环境中使用内存中 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)。  
+ 有关在虚拟机环境下工作时的详细信息，请参阅 [最佳做法：在虚拟机环境中使用内存中 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 。  
   
  下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码创建一个名为 Pool_IMOLTP 且可使用一半内存的资源池。  创建该池后，资源调控器重新配置为包括 Pool_IMOLTP。  
   
@@ -142,7 +142,7 @@ GO
  现在数据库已绑定至资源池。  
   
 ##  <a name="bkmk_ChangeAllocation"></a> 更改现有池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT  
- 如果您将附加内存添加到服务器，或者添加内存优化表更改所需的内存量，则可能需要更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 以下步骤演示了如何更改资源池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 有关要用于 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值的指导信息，请参阅下面的部分。  有关详细信息，请参阅主题[最佳做法：在虚拟机环境下使用内存中 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)。  
+ 如果您将附加内存添加到服务器，或者添加内存优化表更改所需的内存量，则可能需要更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 以下步骤演示了如何更改资源池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 有关要用于 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值的指导信息，请参阅下面的部分。  有关详细信息，请参阅主题 [最佳做法：在 VM 环境下使用内存中 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 。  
   
 1.  使用 `ALTER RESOURCE POOL` 可更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。  
   

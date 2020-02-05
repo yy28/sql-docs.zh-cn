@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 336162ea06533901107c83dd47f062fc94fdd869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68213319"
----
 ## <a name="prerequisites"></a>必备条件
 
 创建可用性组前，需要：
@@ -24,7 +16,7 @@ ms.locfileid: "68213319"
 Enable-SqlAlwaysOn -ServerInstance <server\instance> -Force
 ```
 
-## <a name="enable-an-alwaysonhealth-event-session"></a>启用 AlwaysOn_health 事件会话
+## <a name="enable-an-alwayson_health-event-session"></a>启用 AlwaysOn_health 事件会话
 
  若要在对可用性组进行故障排除时帮助诊断根本原因，可选择性地启用 AlwaysOn 可用性组扩展事件 (XEvents) 会话。 为此，请在 SQL Server 的每个实例上运行以下命令：
 

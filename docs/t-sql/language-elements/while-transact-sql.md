@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3ee098b61c233bb3012ab1505553873c30edd5d
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095880"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "74095880"
 
   设置重复执行 SQL 语句或语句块的条件。 只要指定的条件为真，就重复执行语句。 可以使用 BREAK 和 CONTINUE 关键字在循环内部控制 WHILE 循环中语句的执行。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,7 +59,7 @@ WHILE Boolean_expression
  *Boolean_expression*  
  返回 TRUE 或 FALSE 的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。 如果布尔表达式中含有 SELECT 语句，则必须用括号将 SELECT 语句括起来。  
   
- {sql_statement | statement_block}    
+ {sql_statement*statement_block}*  |    
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或用语句块定义的语句分组。 若要定义语句块，请使用控制流关键字 BEGIN 和 END。  
   
  BREAK  
@@ -68,7 +68,7 @@ WHILE Boolean_expression
  CONTINUE  
  使 WHILE 循环重新开始执行，忽略 CONTINUE 关键字后面的任何语句。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果嵌套了两个或多个 WHILE 循环，则内层的 BREAK 将退出到下一个外层循环。 将首先运行内层循环结束之后的所有语句，然后重新开始下一个外层循环。  
   
 ## <a name="examples"></a>示例  
@@ -117,7 +117,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C:简单 While 循环  
+### <a name="c-simple-while-loop"></a>C. 简单 While 循环  
  在以下示例中，如果产品的平均标价小于 `$300`，则 `WHILE` 循环将价格乘 2，然后选择最高价格。 如果最高价格小于或等于 `$500`，则 `WHILE` 循环重新开始，并再次将价格乘 2。 该循环不断地将价格乘 2，直到最高价格超过 `$500`，然后退出 `WHILE` 循环。  
   
 ```  

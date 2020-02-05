@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558532"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 配置使用情况和诊断数据收集
@@ -61,7 +61,7 @@ SQL Server 2017 始终收集和发送从安装过程开始的安装体验相关�
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. 在主机目录中添加包含行 `[telemetry]` 和 `customerfeedback = false` 的 `mssql.conf` 文件：
+1. 在主机目录中添加包含行 `mssql.conf` 和 `[telemetry]` 的 `customerfeedback = false` 文件：
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -85,7 +85,7 @@ SQL Server 2017 始终收集和发送从安装过程开始的安装体验相关�
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. 在主机目录中添加包含行 `[telemetry]` 和 `customerfeedback = false` 的 `mssql.conf` 文件：
+1. 在主机目录中添加包含行 `mssql.conf` 和 `[telemetry]` 的 `customerfeedback = false` 文件：
 
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -154,7 +154,7 @@ Microsoft SQL Server 2017 包含支持 Internet 的功能，可以收集关于�
    sudo mkdir <host directory>/audit
    ```
 
-1. 在主机目录中添加包含行 `[telemetry]` 和 `userrequestedlocalauditdirectory = <host directory>/audit` 的 `mssql.conf` 文件：
+1. 在主机目录中添加包含行 `mssql.conf` 和 `[telemetry]` 的 `userrequestedlocalauditdirectory = <host directory>/audit` 文件：
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -184,7 +184,7 @@ Microsoft SQL Server 2017 包含支持 Internet 的功能，可以收集关于�
    sudo mkdir <host directory>/audit
    ```
 
-1. 在主机目录中添加包含行 `[telemetry]` 和 `userrequestedlocalauditdirectory = <host directory>/audit` 的 `mssql.conf` 文件：
+1. 在主机目录中添加包含行 `mssql.conf` 和 `[telemetry]` 的 `userrequestedlocalauditdirectory = <host directory>/audit` 文件：
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf

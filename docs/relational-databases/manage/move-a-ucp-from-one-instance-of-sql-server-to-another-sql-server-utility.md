@@ -11,10 +11,10 @@ ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bffc65e8586e8a158c58f7afb5cfb244835e8c86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115393"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>将 UCP 从 SQL Server 的一个实例移到另一个实例（SQL Server 实用工具）
@@ -35,7 +35,7 @@ ms.locfileid: "68115393"
   
 5.  将 UMDW 的备份还原到新 UCP。 有关详细信息，请参阅 [通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
-6.  将实例注册到新的 UCP 中，使它们由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理。 有关详细信息，请参阅 [注册 SQL Server 实例（SQL Server 实用工具）](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)的一个实例移到另一个实例。  
+6.  将实例注册到新的 UCP 中，使它们由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理。 有关详细信息，请参阅[注册 SQL Server 的实例（SQL Server 实用工具）](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)。  
   
 7.  根据需要，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例实现自定义策略定义。  
   

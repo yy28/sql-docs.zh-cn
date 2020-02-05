@@ -18,10 +18,10 @@ ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119819"
 ---
 # <a name="parse-database-engine"></a>Parse（数据库引擎）
@@ -46,7 +46,7 @@ static SqlHierarchyId Parse ( SqlString input )
   
 ## <a name="arguments"></a>参数  
 input   
-[!INCLUDE[tsql](../../includes/tsql-md.md)]设置用户帐户 ：要转换的字符数据类型值。
+[!INCLUDE[tsql](../../includes/tsql-md.md)]：要转换的字符数据类型值。
   
 CLR：要计算的字符串值。
   
@@ -55,13 +55,13 @@ SQL Server 返回类型：hierarchyid
   
 CLR 返回类型：SqlHierarchyId 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 如果 Parse 收到的值不是 hierarchyid 的有效字符串表示形式，则会引发异常  。 例如，如果 char 数据类型包含尾随空格，则会引发异常  。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. 不使用表转换 Transact-SQL 值  
-下面的代码示例使用 `ToString` 将 hierarchyid 值转换为字符串，并使用 `Parse` 将字符串值转换为 hierarchyid   。
+下面的代码示例使用 `ToString` 将 hierarchyid 值转换为字符串，并使用  **将字符串值转换为 hierarchyid**`Parse`  。
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  

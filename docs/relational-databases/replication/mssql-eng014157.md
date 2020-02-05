@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1a0890cf-d977-43e0-a2ba-9c5ff1a8f856
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1c1b516b772e0fb44596529d794ee26984a4aab4
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 832f942e5fc15e9c25349500497c02816e31e4ed
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68765950"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287766"
 ---
-# <a name="mssqleng014157"></a>MSSQL_ENG014157
+# <a name="mssql_eng014157"></a>MSSQL_ENG014157
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68765950"
 |符号名称||  
 |消息正文|由发布 '%s' 的订阅服务器 '%s' 创建的订阅已过期，且已停止。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  订阅服务器在指定的发布保持期内必须与发布服务器同步。 如果订阅服务器在此期间内没有同步，则该订阅将过期。 有关详细信息，请参阅 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
   
 ## <a name="user-action"></a>用户操作  

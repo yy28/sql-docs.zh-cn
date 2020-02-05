@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 90165738dfcea8818353d602f72390bb08eea792
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847348"
 ---
 # <a name="iclientvirtualdeviceset2createex-vdi"></a>IClientVirtualDeviceSet2::CreateEx (VDI)
@@ -32,7 +32,7 @@ HRESULT IClientVirtualDeviceSet2::CreateEx (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>parameters
 
 *lpInstanceName* 此字符串标识将向其发送 SQL 命令的 SQL Server 实例。
 
@@ -42,13 +42,13 @@ HRESULT IClientVirtualDeviceSet2::CreateEx (
 
 ## <a name="return-value"></a>返回值
 
-|返回值 | 解释 |
+|返回值 | 说明 |
 |---|---|
 | NOERROR | 函数成功。 |
 | VD_E_NOTSUPPORTED | 配置中的一个或多个字段无效或不受支持。 |
 | VD_E_PROTOCOL | 已创建虚拟设备集。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 每个 BACKUP 或 RESTORE 操作仅应调用一次 CreateEx 方法。 调用 Close 方法后，客户端可以重复使用接口创建另一个虚拟设备集。
 

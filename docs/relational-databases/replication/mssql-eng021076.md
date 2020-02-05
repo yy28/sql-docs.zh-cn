@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 612e5c59-ba3e-49c3-a3df-56bac3d850a2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 20f819b4a4751ca46f3e010954508486827f7ae3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fc907238dd294106b4086c7df647acb051dc9d1f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770350"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288035"
 ---
-# <a name="mssqleng021076"></a>MSSQL_ENG021076
+# <a name="mssql_eng021076"></a>MSSQL_ENG021076
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68770350"
 |符号名称||  
 |消息正文|项目 '%s' 的初始快照尚不可用。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  如果分发代理在快照代理生成完快照之前启动，则会引发错误 MSSQL_ENG021076。 仅当发布包含单个项目时才会引发此错误。 如果发布包含多个项目，将引发 MSSQL_ENG021075。 有关详细信息，请参阅 [MSSQL_ENG021075](../../relational-databases/replication/mssql-eng021075.md)。  
   
 ## <a name="user-action"></a>用户操作  

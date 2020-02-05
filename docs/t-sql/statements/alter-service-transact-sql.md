@@ -21,10 +21,10 @@ ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3b18eb0d8f848bb57015aa78797d1222b9d92194
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745299"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "70745299"
 
   更改现有的服务。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ ALTER SERVICE service_name
  DROP CONTRACT *contract_name*  
  指定要从由此服务公开的约定集中删除的约定。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将对使用该约定的、与此服务进行的所有现有会话发送错误消息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当 ALTER SERVICE 语句从某个服务中删除一条约定后，此服务便不可再作为使用该约定的会话的目标。 因此，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将不允许使用该约定与此服务建立新会话。 使用该约定的现有会话不受影响。  
   
  若要更改服务的 AUTHORIZATION，请使用 ALTER AUTHORIZATION 语句。  

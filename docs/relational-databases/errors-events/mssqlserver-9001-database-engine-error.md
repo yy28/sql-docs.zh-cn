@@ -12,13 +12,13 @@ ms.assetid: a54de936-90c6-4845-aa96-29d32f154601
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 22767609a0281cc21a38d51716661ac98a8ffc24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118370"
 ---
-# <a name="mssqlserver9001"></a>MSSQLSERVER_9001
+# <a name="mssqlserver_9001"></a>MSSQLSERVER_9001
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68118370"
 |符号名称|LOG_NOT_AVAIL|  
 |消息正文|数据库 '%.*ls' 的日志不可用。 有关相应错误消息，请查看事件日志。 修复所有错误后重新启动数据库。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 数据库日志处于脱机状态。 通常，这表示需要重新启动数据库的灾难性故障。  
   
 ## <a name="user-action"></a>用户操作  

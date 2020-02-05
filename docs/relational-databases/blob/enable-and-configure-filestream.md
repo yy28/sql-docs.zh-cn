@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908769"
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
@@ -43,7 +43,7 @@ ms.locfileid: "72908769"
   
 8.  如果远程客户端必须访问存储在此共享中的 FILESTREAM 数据，请选择 **“允许远程客户端针对 FILESTREAM 数据启用流访问”** 。  
   
-9. 单击 **“应用”** 。  
+9. 单击“应用”  。  
   
 10. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，单击 **“新建查询”** 以显示查询编辑器。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "72908769"
     RECONFIGURE  
     ```  
   
-12. 单击 **“执行”** 。  
+12. 单击“执行”  。  
   
 13. 重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
 
@@ -77,9 +77,9 @@ ms.locfileid: "72908769"
   
 ||||||  
 |-|-|-|-|-|  
-|RAID 级别|写性能|读性能|容错|Remarks|  
-|RAID 5|Normal|Normal|很好|性能比一个磁盘或 JBOD 更好；比 RAID 0 或条带化 RAID 5 差。|  
-|RAID 0|很好|很好|None||  
+|RAID 级别|写性能|读性能|容错|备注|  
+|RAID 5|一般|一般|很好|性能比一个磁盘或 JBOD 更好；比 RAID 0 或条带化 RAID 5 差。|  
+|RAID 0|很好|很好|无||  
 |RAID 5 ＋ 条带化|很好|很好|很好|成本最高的选项。|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   

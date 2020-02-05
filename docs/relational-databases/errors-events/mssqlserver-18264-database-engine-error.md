@@ -12,13 +12,13 @@ ms.assetid: 3050fc56-2be5-43cf-916b-50a3ac5f89aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: df0bd7c7093aeb46421fca75c9e9233f2b1f4263
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137133"
 ---
-# <a name="mssqlserver18264"></a>MSSQLSERVER_18264
+# <a name="mssqlserver_18264"></a>MSSQLSERVER_18264
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68137133"
 |符号名称|STRMIO_DBDUMP|  
 |消息正文|数据库已备份。 数据库: %s，创建日期(时间): %s(%s)，转储的页数: %d，第一个 LSN: %s，最后一个 LSN: %s，转储设备数: %d，设备信息: (%s)。 这只是一条信息性消息。 不需要任何用户操作。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 默认情况下，每个成功的备份操作都会将该信息性消息添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中。 如果非常频繁地备份事务日志，这些消息会迅速累积，从而产生一个巨大的错误日志，这样会使查找其他消息变得非常困难。  
   
 ## <a name="user-action"></a>用户操作  

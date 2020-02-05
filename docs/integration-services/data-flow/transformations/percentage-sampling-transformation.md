@@ -22,10 +22,10 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c51d65dabef5efa4de7ecb4c62b633e62ed0b082
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297891"
 ---
 # <a name="percentage-sampling-transformation"></a>百分比抽样转换
@@ -55,7 +55,7 @@ ms.locfileid: "71297891"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

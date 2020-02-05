@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c28efd8106056ea900fef0cd57791837cf79e21a
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553226"
 ---
 # <a name="microsoft-connector-for-oracle-data-type-support"></a>Microsoft Connector for Oracle 数据类型支持
@@ -35,7 +35,7 @@ ms.locfileid: "69553226"
 |NUMBER(P, S)| 当小数位数为 0 时，根据精度 (P) <li> DT_I1 <Li> DT_I2 <Li> DT_I4 <Li> DT_NUMBERIC(P,0)||
 ||DT_NUMERIC(P,S)||
 |DATE|DT_DBTIMESTAMP||
-|<li>timestamp <li>TIMESTAMP WITH TIME ZONE <li>INTERVAL YEAR TO MONTH <li>INTERVAL DAY TO SECOND <li>TIMESTAMP WITH LOCAL TIME ZONE|DT_STR||
+|<li>TIMESTAMP <li>TIMESTAMP WITH TIME ZONE <li>INTERVAL YEAR TO MONTH <li>INTERVAL DAY TO SECOND <li>TIMESTAMP WITH LOCAL TIME ZONE|DT_STR||
 |RAW|DT_BYTES||
 |CLOB|DT_TEXT|仅在数组模式（而不是快速加载模式）下支持 CLOB、NCLOB 和 BLOB 数据类型。|
 |NCLOB|DT_NTEXT||

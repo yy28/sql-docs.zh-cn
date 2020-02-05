@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 3daa8144-d81f-445a-b6c3-4bb3e9fd1526
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 52570adba3cfd64b6bef38aad6e32dd8e485583c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 671ecb319f65fae97cc2e9ad8f54c6dd0069574c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770432"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285484"
 ---
-# <a name="mssqleng018456"></a>MSSQL_ENG018456
+# <a name="mssql_eng018456"></a>MSSQL_ENG018456
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68770432"
 |符号名称||  
 |消息正文|用户 '%.*ls'.%.\*ls 登录失败|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  每当尝试登录失败时都会引发 MSSQL_ENG018456 错误。 如果错误消息包括帐户 **distributor_admin** （用户“distributor_admin”登录失败。)，则问题出在复制所用的帐户上。 复制过程将创建远程服务器 **repl_distributor**，该服务器允许在分发服务器和发布服务器之间进行通信。 登录名 **distributor_admin** 与此远程服务器关联，并且必须具有有效的密码。  
   
 ## <a name="user-action"></a>用户操作  

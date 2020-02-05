@@ -19,10 +19,10 @@ ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a16eb1e7d6c94f87d77cac93c4f07f6ae251cd4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137364"
 ---
 # <a name="copy-databases-to-other-servers"></a>将数据库复制到其他服务器
@@ -37,7 +37,7 @@ ms.locfileid: "68137364"
   
 -   还原数据库备份  
   
-     若要复制整个数据库，可以使用 BACKUP 和 RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 通常，还原数据库的完整备份用于因各种原因将数据库从一台计算机复制到其他计算机。 有关使用备份和还原复制数据库的信息，请参阅[通过备份和还原复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
+     若要复制整个数据库，可以使用 BACKUP 和 RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 通常，还原数据库的完整备份用于因各种原因将数据库从一台计算机复制到其他计算机。 有关使用备份和还原复制数据库的信息，请参阅 [通过备份和还原复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
     > [!NOTE]  
     >  若要为进行数据库镜像设置镜像数据库，则必须使用 RESTORE DATABASE *<database_name>* WITH NORECOVERY 将数据库还原到镜像服务器。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  

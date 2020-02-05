@@ -12,10 +12,10 @@ ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0cdf2c06311e703b6a07667ba41d1c853c17eb86
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305884"
 ---
 # <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
@@ -32,7 +32,7 @@ ms.locfileid: "72305884"
 |符号名称|PG_INVALID_STMT|  
 |消息正文|无法创建计划指南“%.\*ls”，因为 **\@stmt** 或 **\@statement_start_offset** 指定的语句包含语法错误或不符合在计划指南中使用的条件。 请提供一个有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或者该语句在批中的有效起始位置。 若要获取有效的起始位置，请在 sys.dm_exec_query_stats 动态管理函数中查询 statement_start_offset 列。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 由 **\@stmt** 或 **\@statement_start_offset** 指定的语句包含语法错误或不符合在计划指南中使用的条件。  
   
 ## <a name="user-action"></a>用户操作  

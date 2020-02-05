@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0124efa2f34cc0c329376d7e3dc3f83b3d38cf85
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c4d1c2c09c764e1e5102e520ccb2f6152e57ce7c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321344"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286563"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>SQL Server 复制“发布属性”对话框
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "75321344"
  发布的类型（只读）。  
   
  **订阅过期**  
- 选择以下订阅过期选项之一：“订阅永不过期”或带有明确时间段（“间隔”）的“订阅过期”    。  
+ 选择以下订阅过期选项之一： **“订阅永不过期”** 或 **“订阅过期”** ，并明确指定时间段（ **“间隔”** ）。  
   
  对于快照和事务发布， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您接受默认选项 **“订阅永不过期”** 。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "75321344"
  此窗格使用您向发布中的表项目添加的筛选器进行填充。 带行筛选器的表在窗格中显示为顶级节点。 对于合并发布，筛选操作通过联接筛选器扩展到的表显示为子节点。  
   
  **添加**  
- 单击 **“添加”** 可以启动一个用于对表项目进行筛选的对话框。 对于快照发布或事务发布，单击 **“添加”** 将立即启动对话框。 对于合并发布，单击“添加”将会显示三个选项  ：“添加筛选器”、“添加联接以扩展所选筛选器”和“自动生成筛选器”    。  
+ 单击 **“添加”** 可以启动一个用于对表项目进行筛选的对话框。 对于快照发布或事务发布，单击 **“添加”** 将立即启动对话框。 对于合并发布，单击 **“添加”** 将会显示三个选项： **“添加筛选器”** 、 **“添加联接以扩展所选筛选器”** 和 **“自动生成筛选器”** 。  
   
 -   选择 **“添加筛选器”** 将启动 **“添加筛选器”** 对话框。 使用此对话框可以将行筛选器应用于表项目。 例如，在 **“添加筛选器”** 对话框中，可以指定在将包含客户数据的表复制到订阅服务器时，该表应只包含法国客户的相关数据。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "75321344"
  **查找表**  
  仅限合并发布。 单击 **“查找表”** 可以在复杂的筛选器树中查找表。 在关系复杂的数据库中，一个表可以联接到多个表，因此可能出现在筛选器树中的多个位置。  
   
- 实际的表只显示在树中的一个位置，该表在其他位置使用快捷方式来表示。 表的快捷方式只是对该表的引用；它不显示该表的子节点。 快捷方式节点标记有快捷方式箭头，展开该节点将会显示文本“单击‘查找表’可查看 \<表名> 表”  。  
+ 实际的表只显示在树中的一个位置，该表在其他位置使用快捷方式来表示。 表的快捷方式只是对该表的引用；它不显示该表的子节点。 快捷方式节点标记有快捷方式箭头，展开该节点将会显示文本“单击‘查找表’可查看 **表名> 表”\<** 。  
   
  在窗格中选择快捷方式节点并单击 **“查找表”** 。窗格将展开并突出显示该表。 如果单击 **“查找表”** 而没有选定快捷方式节点，将会启动 **“查找表”** 对话框。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "75321344"
  **快照格式**  
  选择快照格式的本机模式或字符模式。  
   
--   如果所有订阅服务器都是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，而不是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的实例，请选择“本机 SQL Server - 所有订阅服务器都必须是运行 SQL Server 的服务器”  。 本机快照格式可以提供最佳性能。    
+-   如果所有订阅服务器都是   的实例，而不是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，请选择“本机 SQL Server - 所有订阅服务器都必须是运行 SQL Server 的服务器”[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssEW](../../includes/ssew-md.md)]。 本机快照格式可以提供最佳性能。    
 -   如果有任何订阅服务器正在运行 **，或者为非** 订阅服务器，请选择 [!INCLUDE[ssEW](../../includes/ssew-md.md)] “字符 - 如果发布服务器或订阅服务器没有运行 SQL Server，则需要此项”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。    
  **快照文件的位置**  
  选择要存储快照文件的位置。 可以将快照文件存储在默认位置，也可以将其存储在默认位置之外的其他位置。 可以压缩存储在其他位置的文件。  

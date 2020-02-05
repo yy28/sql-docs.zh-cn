@@ -15,10 +15,10 @@ ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 82bebe29ff6fe9eb385a078aa762d5b8f171783a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292609"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>使用 OLE DB 源提取数据
@@ -64,7 +64,7 @@ ms.locfileid: "71292609"
   
 10. 可以单击 **“预览”** ，查看最多 200 行 OLE DB 源所提取的数据。  
   
-11. 单击“确定”  。  
+11. 单击“确定”。   
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

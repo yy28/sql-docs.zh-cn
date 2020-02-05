@@ -13,10 +13,10 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f53fe9d295fdd5cd34c6391332af12b9f6788668
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294756"
 ---
 # <a name="create-the-sql-server-change-database"></a>创建 SQL Server 更改数据库
@@ -48,7 +48,7 @@ ms.locfileid: "71294756"
   
 1.  **更改数据库**：新的更改数据库的名称。 该数据库的名称就是您向实例提供的名称。 此只读字段显示数据库的完整路径。  
   
-2.  **创建数据库**：单击“创建数据库”  可创建数据库。  
+2.  **创建数据库**：单击 **“创建数据库”** 可创建数据库。  
   
      若要创建数据库，该登录名必须具有 `sysasmin` 服务器角色。 有关详细信息，请参阅上面的安全说明。  
   

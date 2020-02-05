@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef278fbdc9fa2599e7612cd9c3b54b909a9bf1f0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907320"
 ---
 # <a name="modify-primary-keys"></a>修改主键
@@ -55,7 +55,7 @@ ms.locfileid: "72907320"
   
 3.  完成下表中的相应操作：  
   
-    |若要|需要遵循的步骤|  
+    |目标|需要遵循的步骤|  
     |--------|------------------------|  
     |重命名主键|在 **“名称”** 框中键入新名称。 确保新名称不与“选定的主/唯一键或索引”  列表中的名称重复。|  
     |设置聚集选项|若要为主键创建聚集索引，请选择“创建为聚集的”  ，再从下拉列表框中选择相应的选项。 对于每个表，只允许存在一个聚集索引。 如果此选项对您的索引不可用，则您必须首先对现有的聚集索引清除此设置。<br /><br /> 如果未选择此选项，则创建唯一的非聚集索引。|  

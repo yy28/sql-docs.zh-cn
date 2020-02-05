@@ -25,10 +25,10 @@ ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9a6c6993252ccad0335b177c31c9d20b40f520a5
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211426"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
@@ -50,7 +50,7 @@ SEND
 ```  
   
 ## <a name="arguments"></a>参数  
-ON CONVERSATION conversation_handle [.. @conversation_handle_n]   
+ON CONVERSATION conversation_handle [.. *]@conversation_handle_n*  
 指定消息所属的会话。 conversation_handle 必须包含一个有效的会话标识符。  不能多次使用相同的会话句柄。  
   
 MESSAGE TYPE message_type_name   
@@ -59,7 +59,7 @@ MESSAGE TYPE message_type_name
 message_body_expression   
 提供一个表示消息主体的表达式。 Message_body_expression 是可选的。  但如果存在 message_body_expression，则表达式必须是一个可以转换为 varbinary(max) 的类型。   该表达式不能为 NULL。 如果省略该子句，则消息主体为空。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
 >  如果 SEND 语句不是批处理或存储过程中的第一个语句，则必须使用分号 (;) 终止前面的语句。  

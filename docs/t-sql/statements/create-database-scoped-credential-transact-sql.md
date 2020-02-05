@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2fff507046ae5a53abbffbd91bb245f52d57a53c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594146"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73594146"
 
 创建数据库凭据。 数据库凭据不会映射到服务器登录或数据库用户。 只要数据库在执行需要访问权限的操作，数据库就可使用凭据访问外部位置。
 
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法
 
@@ -56,7 +56,7 @@ SECRET ='secret' 指定发送身份验证所需的机密内容    。 需要 `SE
 > [!WARNING]
 > SAS 密钥值可以“?”（问号）开头。 使用 SAS 密钥时，必须删除前导“?”。 否则会阻止操作。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 数据库范围凭据是一个记录，其中包含连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的资源所需的身份验证信息。 多数凭据包括一个 Windows 用户和一个密码。
 
@@ -101,7 +101,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. 为共享访问签名创建数据库范围凭据
 
-以下示例创建的数据库范围凭据可用于创建可执行批量操作（例如 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)）的[外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md)。 共享访问签名不能与 SQL Server、APS 或 SQL DW 中的 PolyBase一起使用。
+以下示例创建的数据库范围凭据可用于创建可执行批量操作（例如 [BULK INSERT](../../t-sql/statements/create-external-data-source-transact-sql.md) 和 [OPENROWSET](../../t-sql/statements/bulk-insert-transact-sql.md)）的[外部数据源](../../t-sql/functions/openrowset-transact-sql.md)。 共享访问签名不能与 SQL Server、APS 或 SQL DW 中的 PolyBase一起使用。
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.

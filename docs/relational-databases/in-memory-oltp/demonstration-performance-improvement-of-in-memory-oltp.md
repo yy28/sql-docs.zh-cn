@@ -12,13 +12,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412727"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存 OLTP 的性能改进
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存中 OLTP 的性能改进
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   本主题中的代码示例演示了内存优化表的快速性能。 从传统、已解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)]访问内存优化表中的数据时，此性能改进非常明显。 从本机编译存储过程 (NCSProc) 访问内存优化表中的数据时，此性能改进甚至更明显。  
@@ -32,7 +32,7 @@ ms.locfileid: "74412727"
 ## <a name="code-example"></a>代码示例  
  以下各小节介绍了每个步骤。  
   
-### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>步骤 1a：使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的先决条件  
+### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>步骤 1a：使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  此第一个小节中的步骤仅适用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中运行的情况，而不适用于在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中运行的情况。 请执行以下操作：  
   
 1.  使用 SQL Server Management Studio (SSMS.exe) 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 或也可使用任何类似于 SSMS.exe 的工具。  
@@ -58,7 +58,7 @@ USE imoltp;
 go  
 ```  
   
-### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>步骤 1b：使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 时的先决条件  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>步骤 1b：如果使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
  本小节仅适用于使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]的情况。 请执行以下操作：  
   
 1.  决定将用于代码示例的现有测试数据库。  

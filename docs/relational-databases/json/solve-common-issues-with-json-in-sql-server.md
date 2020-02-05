@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dd50c08035690fd932dc717ae08d179b89b4ed2
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325409"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>解决 SQL Server 中 JSON 的常见问题
@@ -85,7 +85,7 @@ FOR JSON PATH
   
  但 FOR JSON 查询返回的文本似乎被转义成了纯文本。 这种情况仅在指定了 WITHOUT_ARRAY_WRAPPER 的情况下才会发生。 为什么它不被视为 JSON 对象并以未转义的形式包含在结果中？  
   
- **答案。** 如果在内部 `FOR JSON` 中指定 `WITHOUT_ARRAY_WRAPPER` 选项，生成的 JSON 文本不一定是有效的 JSON。 因此，外部 `FOR JSON` 会假定其为纯文本，并对字符串进行转义。 如果确定该 JSON 输出是有效的，请用 `JSON_QUERY` 函数包装它，将其提升为格式正确的 JSON，如下例所示。  
+ **答案。** 如果在内部 `WITHOUT_ARRAY_WRAPPER` 中指定 `FOR JSON` 选项，生成的 JSON 文本不一定是有效的 JSON。 因此，外部 `FOR JSON` 会假定其为纯文本，并对字符串进行转义。 如果确定该 JSON 输出是有效的，请用 `JSON_QUERY` 函数包装它，将其提升为格式正确的 JSON，如下例所示。  
   
 ```sql  
 SELECT 'Text' as myText,  

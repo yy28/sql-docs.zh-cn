@@ -19,10 +19,10 @@ ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b00d10e27e515cb30d32cdd08d7d10e69ac55b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930287"
 ---
 # <a name="filter-geography-data-type"></a>Filter（geography 数据类型）
@@ -48,9 +48,9 @@ ms.locfileid: "67930287"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：**SqlBoolean**  
+ CLR 返回类型：SqlBoolean   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此方法是不具有确定性的方法，而且不精确。  
   
 ## <a name="examples"></a>示例  

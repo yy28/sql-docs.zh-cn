@@ -14,10 +14,10 @@ ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4d89c6302b55e0182e5f14f8cfab463d5aafeed
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284721"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>使用 SSIS 包升级向导升级 Integration Services 包
@@ -41,12 +41,12 @@ ms.locfileid: "71284721"
   
 #### <a name="to-run-the-wizard-from-sql-server-data-tools"></a>从 SQL Server Data Tools 运行向导  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，创建或打开一个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，创建或打开一个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
 2.  在解决方案资源管理器中，右键单击“SSIS 包”  节点，然后单击“升级所有包”  来升级该节点下的所有包。  
   
     > [!NOTE]  
-    >  打开包含 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更高版本的包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将自动打开 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导。  
+    >  打开包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或更高版本的包的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 项目时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将自动打开 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导。  
   
 #### <a name="to-run-the-wizard-from-sql-server-management-studio"></a>从 SQL Server Management Studio 运行向导  
   
@@ -90,8 +90,8 @@ ms.locfileid: "71284721"
 2.  在向导的 **“选择包管理选项”** 页上，选择 **“备份原始包”** 选项。  
   
     > [!WARNING]  
-    >  当你在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中打开某一 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更高版本的项目时，将不会显示“备份原始包”  选项，因为该向导将自动启动。  
+    >  当你在 **中打开某一** 或更高版本的项目时，将不会显示“备份原始包”[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项，因为该向导将自动启动。  
   
-3.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导。  
+3.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导。  
   
   

@@ -13,10 +13,10 @@ ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b06f56346e8e17fbdb9284dded2bfc154b9ae1a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297920"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>历史属性选项（渐变维度向导）
@@ -32,7 +32,7 @@ ms.locfileid: "71297920"
  **使用单独的列显示当前和过期记录**  
  如果您选择使用单独的列来记录历史属性的状态，则下列选项可用：  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**指示当前记录的列**|选择一个要在其中指示当前记录的列。|  
 |**表示当前记录的值**|使用 **True** 或 **“当前”** 来显示该记录是否为当前记录。|  
@@ -41,7 +41,7 @@ ms.locfileid: "71297920"
  **使用开始日期和结束日期确定当前记录和过期记录**  
  此选项的维度表必须包括一个日期列。 如果您选择按开始日期和结束日期显示历史属性，则下列选项可用：  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**开始日期列**|在维度表中选择要包含开始日期的列。|  
 |**结束日期列**|在维度表中选择要包含结束日期的列。|  

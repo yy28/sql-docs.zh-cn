@@ -10,10 +10,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ea43d88fea017c723177e4b83c86b5c8165b734b
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096024"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>在 SQL Server 或 SQL 数据库中存储 JSON 文档
@@ -139,7 +139,7 @@ create table WebSite.Logs (
 ) with (memory_optimized=on)
 ```
 
-若要最大化性能，请将 JSON 值强制转换为用于保留属性值的最小可能类型。 在前面的示例中，使用的是 tinyint  。
+若要最大化性能，请将 JSON 值强制转换为用于保留属性值的最小可能类型。 在前面的示例中，使用的是 **tinyint**。
 
 还可将更新 JSON 文档的 SQL 查询放置在存储过程中，以获得本机编译的优势。 例如：
 
@@ -159,7 +159,7 @@ END
 
 此本机编译的过程生成查询并创建运行查询的 .DLL 代码。 本机编译的过程是查询和更新数据的一种更快的方法。
 
-## <a name="conclusion"></a>结语
+## <a name="conclusion"></a>结束语
 
 可使用 SQL Server 和 SQL 数据库中的本机 JSON 函数处理 JSON 文档，如在 NoSQL 数据库中一样。 每种数据库（关系型或 NoSQL）在 JSON 数据处理方面都各有优缺点。 在 SQL Server 或 SQL 数据库中存储 JSON 文档的关键优势在于，可以获得完整的 SQL 语言支持。 可以使用丰富的 Transact-SQL 语言处理数据和配置各种存储选项（从列存储索引的高压缩比和快速分析到内存优化表的无锁处理方式）。 同时，还可获取成熟的安全性和国际化功能带来的优势，这些功能可在 NoSQL 方案中重复使用。 鉴于本文中所述的理由，建议考虑在 SQL Server 和 SQL 数据库中存储 JSON 文档。
 

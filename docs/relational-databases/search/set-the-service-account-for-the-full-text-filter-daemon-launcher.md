@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055952"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>设置用于全文筛选器后台程序启动器的服务帐户
@@ -33,7 +33,7 @@ SQL 全文筛选器后台程序启动器服务是可识别实例的服务，它�
 
 ##  <a name="setting"></a> 设置服务帐户  
   
-1.  在“开始”菜单上，指向“所有程序”、展开 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，再单击“SQL Server 2016 配置管理器”。     
+1.  在“开始”菜单上，指向“所有程序”、展开 **，再单击“SQL Server 2016 配置管理器”。**  [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]   
   
 2.  在“SQL Server 配置管理器”  中，单击“SQL Server 服务”  ，右键单击“SQL 全文筛选器后台程序启动器” **（** _实例名称_ **）** ，然后单击“属性”  。  
   

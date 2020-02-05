@@ -17,10 +17,10 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 448688a54a245cadffa4c0c916d146e7c3e7e115
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321984"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>合并复制的备份和还原策略
@@ -61,7 +61,7 @@ ms.locfileid: "75321984"
 > [!IMPORTANT]  
 >  使发布数据库与订阅数据库同步可使已发布的表还原到一个时间点，该时间点比从备份还原的其他未发布表的时间点更近。  
   
- 如果与运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的订阅服务器同步，则订阅无法匿名；它必须是客户端订阅或服务器订阅（在早期版本中称为本地订阅和全局订阅）。  
+ 如果与运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的订阅服务器同步，则订阅无法匿名；它必须是客户端订阅或服务器订阅（在早期版本中称为本地订阅和全局订阅）。  
   
  若要同步订阅，请参阅 [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) 和 [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   

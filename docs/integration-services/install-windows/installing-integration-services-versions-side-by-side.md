@@ -14,10 +14,10 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 89126793193172dbdc35de2cb059a91173bb6faa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296227"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>并行安装 Integration Services 版本
@@ -36,8 +36,8 @@ ms.locfileid: "71296227"
 |SQL Server 的目标版本|SSIS 包的开发环境|  
 |----------------------------------|-----------------------------------------------|  
 |2016|适用于 Visual Studio 2015 的 SQL Server Data Tools|  
-|2014|适用于 Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或多个<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2013|  
-|2012|适用于 Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或多个<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2012|  
+|2014|适用于 Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2013|  
+|2012|适用于 Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2012|  
 |2008|来自 SQL Server 2008 的 Business Intelligence Development Studio|  
   
  当将现有包添加到现有项目时，包将转换为项目所面向的格式。  

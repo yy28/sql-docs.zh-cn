@@ -14,10 +14,10 @@ ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321954"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 复制冲突查看器（合并复制）
@@ -73,7 +73,7 @@ ms.locfileid: "75321954"
  选择此选项可显示前五列以及所有包含冲突的列。 当表包含很多列，而您只想查看与解决冲突最相关的列时，这非常有用。 前五列始终包含在此视图中，因为标识行的字段（如主键或名称字段）通常位于表的前几列中。  
   
  **显示列信息** ( **…** )  
- 单击以查看列信息：“表名”、“列名”、“数据类型”和“列值”     。 除非值显示为只读，否则 **“列值”** 是可编辑的。  
+ 单击此项可查看列信息： **“表名”** 、 **“列名”** 、 **“数据类型”** 和 **“列值”** 。 除非值显示为只读，否则 **“列值”** 是可编辑的。  
   
  **提交入选方**  
  单击此项可将冲突解决程序确定的行保留为入选方。 在单击此按钮之前，可以更改未显示为只读的任何列的值。  

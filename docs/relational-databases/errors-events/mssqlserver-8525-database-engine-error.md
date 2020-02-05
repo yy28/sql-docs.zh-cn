@@ -14,13 +14,13 @@ ms.assetid: 297867c1-691e-4d6b-a3be-a7575015ecfa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 605bb1ae8ff8cd3fb3e5c0e7a096de7aa646730c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101505"
 ---
-# <a name="mssqlserver8525"></a>MSSQLSERVER_8525
+# <a name="mssqlserver_8525"></a>MSSQLSERVER_8525
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68101505"
 |符号名称||  
 |消息正文|分布式事务已完成。 请将此会话登记到新事务或 NULL 事务中。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 将分布式事务处理协调器与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配合使用的编程模型需要应用程序显式登记到分布式事务并从中脱离出来。  
   
 满足以下四个条件时会出现此错误：  

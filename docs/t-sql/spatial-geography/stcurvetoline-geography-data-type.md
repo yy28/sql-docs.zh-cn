@@ -18,10 +18,10 @@ ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d6c68aa9859fbe7e1066ad392377d6b50289fd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042390"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine（geography 数据类型）
@@ -39,9 +39,9 @@ ms.locfileid: "68042390"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  为 CircularString 或 CompoundCurve 实例返回 LineString 实例    。  
   
  为 CurvePolygon 实例返回 Polygon 实例   。  

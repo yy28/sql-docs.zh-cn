@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 162cccb3bba13d6d72f1af11effd6ceb8f26ff79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044311"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68044311"
 
   在架构之间传输安全对象。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +69,7 @@ ALTER SCHEMA schema_name
  securable_name   
  要移入架构中的架构范围内的安全对象的一部分或两部分名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  用户与架构完全分离。  
   
  ALTER SCHEMA 仅可用于在同一数据库中的架构之间移动安全对象。 若要更改或删除架构中的安全对象，请使用特定于该安全对象的 ALTER 或 DROP 语句。  
@@ -138,7 +138,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. 传递表的所有权  
- 下面的示例在 `dbo` 架构中创建一个表 `Region`，创建一个 `Sales` 架构，然后将 `Region` 表从 `dbo` 架构移动到 `Sales` 架构。  
+ 下面的示例在 `Region` 架构中创建一个表 `dbo`，创建一个 `Sales` 架构，然后将 `Region` 表从 `dbo` 架构移动到 `Sales` 架构。  
   
 ```  
 CREATE TABLE dbo.Region   

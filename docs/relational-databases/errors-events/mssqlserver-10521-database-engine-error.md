@@ -12,10 +12,10 @@ ms.assetid: ba2d7e44-207c-4428-b5f0-c975ac122c0d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d2dde7bedad58273cb207b05f54824c9c5ddff5c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305851"
 ---
 # <a name="mssqlserver_10521"></a>MSSQLSERVER_10521
@@ -32,8 +32,8 @@ ms.locfileid: "72305851"
 |符号名称|PG_PARAM_NEEDED|  
 |消息正文|无法创建计划指南“%.\*ls”，因为 **\@type** 被指定为“%ls”，参数“%ls”为 NULL。 此类型要求该参数的值为非 NULL 值。 请为该参数指定非 NULL 值，或将该类型更改为允许该参数为 NULL 值的类型。|  
   
-## <a name="explanation"></a>解释  
-\@type 中指定的类型要求指定参数的值为非 NULL 值；但你指定的是 NULL 值  。  
+## <a name="explanation"></a>说明  
+**type 中指定的类型要求指定参数的值为非 NULL 值；但你指定的是 NULL 值\@** 。  
   
 ## <a name="user-action"></a>用户操作  
 请为该参数指定非 NULL 值，或将该类型更改为允许该参数为 NULL 值的类型。  

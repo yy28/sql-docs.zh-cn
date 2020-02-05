@@ -12,13 +12,13 @@ ms.assetid: 188e5bde-6865-4740-a2b2-582be8f55c77
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 981d0079cb6b0ce8cf423bf44e382cca119ed477
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001938"
 ---
-# <a name="mssqlserver30089"></a>MSSQLSERVER_30089
+# <a name="mssqlserver_30089"></a>MSSQLSERVER_30089
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68001938"
 |符号名称|IFTS_FDHOST_TERMINATEDABNORMAL|  
 |消息正文|全文筛选器后台程序宿主(FDHost)进程已异常停止。 如果在执行全文检索或查询处理期间配置错误或工作不正常的语言组件(如断字器、词干分析器或筛选器)造成了无法恢复的错误，则会出现这种情况。 该进程将自动重新启动。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 全文筛选器后台程序宿主遇到了某个强制其异常停止的问题。 该问题可能是由格式不正确的文档、筛选器或断字器中的错误或者筛选器后台程序中的问题引起的。  
   
 ## <a name="user-action"></a>用户操作  

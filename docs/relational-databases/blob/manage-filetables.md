@@ -14,17 +14,17 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908743"
 ---
 # <a name="manage-filetables"></a>管理 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   说明用于管理 FileTable 的常见管理任务。  
   
-##  <a name="HowToEnumerate"></a> 如何：获取 FileTable 和相关对象的列表  
+##  <a name="HowToEnumerate"></a> 如何获取 FileTable 和相关对象的列表  
  若要获取 FileTable 的列表，请查询下列目录视图之一：  
   
 -   [sys.filetables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
@@ -79,7 +79,7 @@ GO
   
 -   如果在实例级别禁用 FILESTREAM，将看不到该实例上的任何数据库级别目录。  
   
-###  <a name="HowToDisable"></a> 如何：禁用和重新启用数据库级别的非事务性访问权限  
+###  <a name="HowToDisable"></a> 如何禁用和重新启用数据库级别的非事务性访问权限  
  有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  **禁用完全非事务性访问权限**  
@@ -106,7 +106,7 @@ SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );
 GO  
 ```  
   
-###  <a name="visible"></a> 如何：确保数据库中的 FileTable 的可见性  
+###  <a name="visible"></a> 如何确保数据库中的 FileTable 的可见性  
  当满足以下所有条件时，则可看到数据库级别目录及其下的 FileTable 目录：  
   
 1.  在实例级别启用 FILESTREAM。  
@@ -138,7 +138,7 @@ GO
   
 -   FileTable 目录及其包含的文件和目录将在文件系统中再次可见，且可用于文件 I/O 访问。  
   
-###  <a name="HowToEnableNS"></a> 如何：禁用和重新启用表级别的 FileTable 命名空间  
+###  <a name="HowToEnableNS"></a> 如何禁用和重新启用表级别 FileTable 命名空间  
  使用 **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** 选项调用 ALTER TABLE 语句。  
   
  **禁用 FileTable 命名空间**  
@@ -161,7 +161,7 @@ GO
 > [!WARNING]  
 >  终止打开的文件句柄可能会导致用户丢失未保存的数据。 此行为与文件系统自身的行为一致。  
   
-###  <a name="HowToListOpen"></a> 如何：获取与 FileTable 关联的打开的文件句柄的列表  
+###  <a name="HowToListOpen"></a> 如何获取与 FileTable 关联的打开的文件句柄的列表  
  查询目录视图 [sys.dm_filestream_non_transacted_handles (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。  
   
 ```sql  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> 如何：终止与 FileTable 关联的打开的文件句柄  
+###  <a name="HowToKill"></a> 如何终止与 FileTable 关联的打开的文件句柄  
  使用相应参数调用存储过程 [sp_kill_filestream_non_transacted_handles (Transact-SQL)](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) 以终止数据库或 FileTable 中所有打开的文件句柄或终止特定句柄。  
   
 ```sql  
@@ -188,11 +188,11 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> 如何：确定 FileTable 持有的锁  
+###  <a name="HowToIdentifyLocks"></a> 如何确定 FileTable 持有的锁  
  FileTable 持有的大多数锁与应用程序打开的文件相对应。  
   
  **确定打开的文件和关联锁**  
- 将动态管理视图 [sys.dm_tran_locks (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 中的 **request_owner_id** 字段与 [sys.dm_filestream_non_transacted_handles (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)中的 **fcb_id** 字段进行联接。 在某些情况下，锁并不对应单个打开的文件句柄。  
+ 将动态管理视图 **sys.dm_tran_locks (Transact SQL)** 中的 [request_owner_id](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 字段与 **sys.dm_filestream_non_transacted_handles (Transact SQL)** 中的 [fcb_id](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) 字段进行联接。 在某些情况下，锁并不对应单个打开的文件句柄。  
   
 ```sql  
 SELECT opened_file_name  

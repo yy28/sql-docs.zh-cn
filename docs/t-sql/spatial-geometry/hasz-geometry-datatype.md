@@ -15,10 +15,10 @@ ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: cba3487b17828ffaf4f7bd092b83542de639fcfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101255"
 ---
 # <a name="hasz-geometry-datatype"></a>HasZ（geometry 数据类型）
@@ -34,11 +34,11 @@ ms.locfileid: "68101255"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：**Boolean**  
+ CLR 返回类型：Boolean   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="examples"></a>示例  
   

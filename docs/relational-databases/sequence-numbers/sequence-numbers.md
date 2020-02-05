@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6f56e354023c869fb04d296b63ac748abec763e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126784"
 ---
 # <a name="sequence-numbers"></a>序列号
@@ -391,7 +391,7 @@ GO
   
 ```  
   
- 使用 `SELECT *` 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将这个新列作为最后一列接收，而非作为第一列接收。 如果这样做是不可接受的，则您必须创建全新的表，将数据移到该表中，然后针对这个新表重新创建权限。  
+ 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的 `SELECT *` 语句将这个新列作为最后一列接收，而非作为第一列接收。 如果这样做是不可接受的，则您必须创建全新的表，将数据移到该表中，然后针对这个新表重新创建权限。  
   
 ## <a name="related-content"></a>相关内容  
  [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b6263035a0094f07264774d7acc29da144c4f419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093656"
 ---
 # <a name="cursors-event-category"></a>Cursors 事件类别
@@ -27,7 +27,7 @@ ms.locfileid: "68093656"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[CursorClose 事件类](../../relational-databases/event-classes/cursorclose-event-class.md)|说明应用程序编程接口 (API) 游标中发生的游标关闭事件。|  
 |[CursorExecute 事件类](../../relational-databases/event-classes/cursorexecute-event-class.md)|说明 API 游标中发生的游标执行事件。|  

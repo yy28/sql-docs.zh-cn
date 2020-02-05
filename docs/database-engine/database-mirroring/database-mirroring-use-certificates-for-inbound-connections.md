@@ -16,10 +16,10 @@ ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 145c182323d3de702ce1e7d4bfcc4e966c5928c2
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822277"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>数据库镜像 - 使用证书进行入站连接
@@ -159,7 +159,7 @@ GO
   
  有关创建镜像数据库（包括 Transact-SQL 示例）的详细信息，请参阅[为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
- 有关建立高性能模式会话的 Transact-SQL 示例，请参阅[示例：使用证书设置数据库镜像 (Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
+ 有关建立高性能模式会话的 Transact-SQL 示例，请参阅 [示例：使用证书设置数据库镜像 (Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  将证书复制到其他系统时，请使用安全的复制方法。 必须格外小心地保证所有证书的安全。  

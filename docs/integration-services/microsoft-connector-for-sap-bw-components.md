@@ -11,10 +11,10 @@ ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba6298d5ead650b5e6f6bc3cb68d0c5926624741
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295862"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW 组件
@@ -37,13 +37,13 @@ ms.locfileid: "71295862"
 >  针对 Microsoft Connector 1.1 for SAP BW 的文档假定您熟悉 SAP Netweaver BW 环境。 有关 SAP NetWeaver BW 的详细信息，或者有关如何配置 SAP Netweaver BW 对象和过程的信息，请参阅您的 SAP 文档。  
   
 ## <a name="in-this-section"></a>本节内容  
- [SAP BW Connection Manager](../integration-services/connection-manager/sap-bw-connection-manager.md)  
+ [SAP BW 连接管理器](../integration-services/connection-manager/sap-bw-connection-manager.md)  
  介绍 SAP BW 连接管理器。 该连接管理器将 SAP BW 源或 SAP BW 目标连接到 SAP Netweaver BW 版本 7 系统。  
   
- [SAP BW Source](../integration-services/data-flow/sap-bw-source.md)  
+ [SAP BW 源](../integration-services/data-flow/sap-bw-source.md)  
  介绍 SAP BW 源，SAP BW 源用于从 SAP Netweaver BW 系统中提取数据。  
   
- [SAP BW Destination](../integration-services/data-flow/sap-bw-destination.md)  
+ [SAP BW 目标](../integration-services/data-flow/sap-bw-destination.md)  
  介绍 SAP BW 目标，SAP BW 目标用于将数据加载到 SAP Netweaver BW 系统。  
   
   

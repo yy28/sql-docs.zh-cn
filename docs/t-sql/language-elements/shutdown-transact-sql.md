@@ -22,10 +22,10 @@ ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 01cf9fcf7795e8f353565b767bbf79b1da43f4de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121699"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68121699"
 
   立即停止 SQL Server。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ SHUTDOWN [ WITH NOWAIT ]
  WITH NOWAIT  
  可选。 在不对每个数据库执行检查点操作的情况下关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在尝试终止全部用户进程后退出。 服务器重新启动时，将针对未完成事务执行回滚操作。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  除非使用 WITHNOWAIT 选项，否则 SHUTDOWN 通过下列操作关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：  
   
 1.  禁用登录（sysadmin 和 serveradmin 固定服务器角色成员除外）   。  
@@ -58,7 +58,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 3.  在每个数据库中插入检查点。  
   
- 当 sysadmin 固定服务器角色成员重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，使用 SHUTDOWN 语句可以将所需的自动恢复工作量减到最少  。  
+ 当 sysadmin 固定服务器角色成员重启  **时，使用 SHUTDOWN 语句可以将所需的自动恢复工作量减到最少**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  还可以使用其他工具和方法停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 每个工具或方法都在所有数据库内执行检查点。 您可以从数据缓存中刷新已提交的数据，然后停止服务器：  
   
@@ -68,10 +68,10 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   使用“控制面板”中的“服务”应用程序。  
   
- 如果是从命令提示符下启动 sqlservr.exe，按 Ctrl+C 可以关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  。 然而，按 Ctrl+C 键将不插入检查点。  
+ 如果是从命令提示符下启动 sqlservr.exe，按 Ctrl+C 可以关闭  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 然而，按 Ctrl+C 键将不插入检查点。  
   
 > [!NOTE]  
->  使用上述任何方法停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都会向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送 `SERVICE_CONTROL_STOP` 消息。  
+>  使用上述任何方法停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都会向 `SERVICE_CONTROL_STOP` 发送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息。  
   
 ## <a name="permissions"></a>权限  
  SHUTDOWN 权限分配给 sysadmin 和 serveradmin 固定服务器角色的成员，且不可转让   。  

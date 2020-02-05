@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126858"
 ---
 # <a name="sql-injection"></a>SQL 注入
@@ -85,14 +85,14 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   绝不串联未验证的用户输入。 字符串串联是脚本注入的主要输入点。  
   
--   不接受以下来自可构造文件名的字段中的字符串：AUX、CLOCK$、COM1 到 COM8、CON、CONFIG$、LPT1 到 LPT8、NUL 和 PRN。  
+-   在可能据以构造文件名的字段中，不接受下列字符串：AUX、CLOCK$、COM1 到 COM8、CON、CONFIG$、LPT1 到 LPT8、NUL 以及 PRN。  
   
  如果可能，拒绝包含以下字符的输入。  
   
 |输入字符|在 Transact-SQL 中的含义|  
 |---------------------|------------------------------|  
 |**;**|查询分隔符。|  
-|**”启用**|字符数据字符串分隔符。|  
+|**”**|字符数据字符串分隔符。|  
 |**--**|字符数据字符串分隔符。<br />。|  
 |**/\*** ... **\*/**|注释分隔符。 服务器不计位于 **/\*** 和 **\*/** 之间的文本。|  
 |**xp_**|用于目录扩展存储过程的名称的开头，如 `xp_cmdshell`。|  

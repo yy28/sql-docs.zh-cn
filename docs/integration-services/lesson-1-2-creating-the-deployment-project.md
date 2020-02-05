@@ -11,10 +11,10 @@ ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26803904c22953b919c568b2798ecf02ad6a94a7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283756"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>第 1-2 课 - 创建部署项目
@@ -38,7 +38,7 @@ ms.locfileid: "71283756"
   
 6.  在“项目位置”  对话框中，单击文件夹，再单击“打开”  。  
   
-7.  单击“确定”  。  
+7.  单击“确定”。   
   
 8.  默认情况下，将创建一个名为 Package.dtsx 的空包，并将该包添加到项目中。 但是您将不使用此包；相反您将现有的包添加到项目。 由于项目中的所有包都包括在部署中，因此您应该删除 Package.dtsx。 若要删除它，右键单击它，再单击“删除”  。  
   

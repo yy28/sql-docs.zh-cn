@@ -11,10 +11,10 @@ ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 77fea02dc933b63fff97b359673ab702e63f50ea
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295564"
 ---
 # <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment（SSISDB 数据库）
@@ -48,7 +48,7 @@ catalog.create_environment [@folder_name =] folder_name
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -68,7 +68,7 @@ catalog.create_environment [@folder_name =] folder_name
   
 -   指定的文件夹中已存在同名的环境  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  环境名称在文件夹中必须是唯一的。  
   
   

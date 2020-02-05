@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68823112"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>备份和还原 Linux 上的 SQL Server 数据库
@@ -24,7 +24,7 @@ ms.locfileid: "68823112"
 
 ## <a name="backup-a-database"></a>备份数据库
 
-下例使用 sqlcmd 连接到本地 SQL Server 实例，并对名为 `demodb` 的用户数据库进行完整备份  。
+下例使用 sqlcmd 连接到本地 SQL Server 实例，并对名为  **的用户数据库进行完整备份**`demodb`。
 
 ```bash
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
@@ -103,7 +103,7 @@ SQL Server 将完成数据库备份。
 
 1. 查找数据库备份文件，然后单击“确定”  。 
 
-1. 在“还原计划”下，验证备份文件和设置  。 单击“确定”  。 
+1. 在“还原计划”下，验证备份文件和设置  。 单击“确定”。  
 
 1. SQL Server 将还原数据库。 
 
@@ -112,4 +112,4 @@ SQL Server 将完成数据库备份。
 * [创建完整数据库备份 (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [备份事务日志 (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
 * [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
-* [SQL Server 备份到 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)
+* [SQL Server 的 URL 备份](../relational-databases/backup-restore/sql-server-backup-to-url.md)

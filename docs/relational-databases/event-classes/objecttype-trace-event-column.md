@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115890"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 跟踪事件列
@@ -28,7 +28,7 @@ ms.locfileid: "68115890"
   
 ## <a name="object-type-column-values"></a>ObjectType 列值  
   
-|ReplTest1|定义|  
+|值|定义|  
 |-----------|----------------|  
 |8259|检查约束|  
 |8260|默认值（约束或独立）|  
@@ -38,10 +38,10 @@ ms.locfileid: "68115890"
 |8275|系统表|  
 |8276|服务器上的触发器|  
 |8277|（用户定义的）表|  
-|8278|视图|  
+|8278|查看|  
 |8280|扩展存储过程|  
 |16724|CLR 触发器|  
-|16964|“数据库”|  
+|16964|数据库|  
 |16975|Object|  
 |17222|全文目录|  
 |17232|CLR 存储过程|  
@@ -60,7 +60,7 @@ ms.locfileid: "68115890"
 |18263|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 组|  
 |19265|非对称密钥|  
 |19277|主密钥|  
-|19280|主键|  
+|19280|主密钥|  
 |19283|ObfusKey|  
 |19521|非对称密钥登录名|  
 |19523|证书登录|  
@@ -81,7 +81,7 @@ ms.locfileid: "68115890"
 |20821|唯一约束|  
 |21057|应用程序角色|  
 |21059|证书|  
-|21075|“服务器”|  
+|21075|服务器|  
 |21076|Transact-SQL 触发器|  
 |21313|Assembly|  
 |21318|CLR 标量函数|  

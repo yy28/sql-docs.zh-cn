@@ -23,10 +23,10 @@ ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 369dd7ec16ee530d7612222ad7e77dd6faf66e14
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73980944"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73980944"
 
 启用 DML、DDL 或登录触发器。  
   
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,7 +67,7 @@ ALL SERVER
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 启用触发器并不是要重新创建它。 禁用的触发器仍以对象形式存在于当前数据库中，但并不触发。 启用触发器将导致在运行触发器最初编程时所针对的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时触发。 可以使用 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 禁用触发器。 此外，还可以通过使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 来禁用或启用为表定义的 DML 触发器。  
   
 ## <a name="permissions"></a>权限  
@@ -78,7 +78,7 @@ ALL SERVER
 ## <a name="examples"></a>示例  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. 在表中启用 DML 触发器  
-以下示例禁用在 AdventureWorks 数据库的表 `Address` 中创建的触发器 `uAddress`，然后再启用它。  
+以下示例禁用在 AdventureWorks 数据库的表 `uAddress` 中创建的触发器 `Address`，然后再启用它。  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  

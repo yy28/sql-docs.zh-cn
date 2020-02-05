@@ -18,10 +18,10 @@ ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 58f5389953c2257c7478ad54665cfdeeb0a805c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077934"
 ---
 # <a name="getroot-database-engine"></a>GetRoot（数据库引擎）
@@ -42,11 +42,11 @@ static SqlHierarchyId GetRoot ( )
 ```  
   
 ## <a name="return-types"></a>返回类型  
-SQL Server 返回类型：hierarchyid
+SQL Server 返回类型：hierarchyid 
   
-CLR 返回类型：SqlHierarchyId
+CLR 返回类型：SqlHierarchyId 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 用于确定层次结构树中的根节点。
   
 ## <a name="examples"></a>示例  

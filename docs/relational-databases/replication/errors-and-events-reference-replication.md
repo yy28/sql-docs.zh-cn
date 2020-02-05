@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a42dc8a023e1d44e911907cc96a77017dfc69eaf
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 813607ed006fb38120fd4a6f565fb9d6280f10b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768502"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286406"
 ---
 # <a name="errors-and-events-reference-replication"></a>错误和事件参考（复制）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "68768502"
 |MSSQL_ENG021642。 请参阅 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)。|异类发布服务器需要链接服务器。 已有一个名为 '%s' 的链接服务器。 请删除链接服务器或另选一个发布服务器名称。|  
 |MSSQL_ENG021663。 请参阅 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)。|找不到源表 [%s].[%s] 的有效主键。|  
 |MSSQL_ENG021684。 请参阅 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)。|与 Oracle 发布服务器‘%s’的管理员登录名关联的权限不足。|  
-|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|%s 必须是以下格式的有效 Windows 登录信息:'MACHINE\Login' 或 'DOMAIN\Login'。 请参阅 '%s' 的文档。|  
+|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' 必须是有效的 Windows 登录名，且格式为: '计算机\登录名' 或 '域\登录名'。 请参阅 '%s' 的文档。|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|在继续操作之前，必须通过“%s”添加“%s”代理作业。 请参阅 '%s' 的文档。|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|进程无法在“%2”上执行“%1”。|  
 |[MSSQL_REPL027056](../../relational-databases/replication/mssql-repl027056.md)|合并进程无法更改“%1”上的生成历史记录。 进行故障排除时，请使用详细的历史日志记录来重新启动同步，并指定要写入的输出文件。|  

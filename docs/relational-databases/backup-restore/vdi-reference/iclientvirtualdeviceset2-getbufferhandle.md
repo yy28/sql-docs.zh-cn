@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 844ddad21eaf3fb579d6a0981f2a042238e92372
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847328"
 ---
 # <a name="iclientvirtualdeviceset2getbufferhandle-vdi"></a>IClientVirtualDeviceSet2::GetBufferHandle (VDI)
@@ -31,7 +31,7 @@ HRESULT IClientVirtualDeviceSet2::GetBufferHandle (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>parameters
 
 *pBuffer* 这是通过 Read 或 Write 命令获取的缓冲区的地址。
 
@@ -39,13 +39,13 @@ HRESULT IClientVirtualDeviceSet2::GetBufferHandle (
 
 ## <a name="return-value"></a>返回值
 
-|返回值 | 解释 |
+|返回值 | 说明 |
 |---|---|
 | NOERROR | 函数成功。 |
 | VD_E_PROTOCOL | 当前未打开虚拟设备集。 |
 | VD_E_INVALID | pBuffer 不是有效地址。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 调用 GetBufferHandle 函数的进程负责在数据传输完成后调用 IClientVirtualDevice2::CompleteCommand。
 

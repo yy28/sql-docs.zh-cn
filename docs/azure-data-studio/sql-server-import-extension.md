@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 012c2c880e81c095e90086cf26ebffd6117d534e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959125"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 导入扩展（预览版）
@@ -27,7 +27,7 @@ SQL Server 导入扩展（预览版）将 .txt 和 .csv 文件转换为 SQL 表�
 ## <a name="install-the-sql-server-import-extension"></a>安装 SQL Server 导入扩展
 
 1. 若要打开扩展管理器并访问可用扩展，请选择扩展图标，或在“视图”菜单中选择“扩展”   。
-2. 选择可用的扩展以查看其详细信息。
+2. 选择某个可用扩展以查看其详细信息。
 
    ![导入扩展管理器](media/sql-server-import-extension/import-wizard-install.png)
 
@@ -46,9 +46,9 @@ SQL Server 导入扩展（预览版）将 .txt 和 .csv 文件转换为 SQL 表�
     
     单击“浏览”选择文件  。 它应该根据文件名自动填充表名，但也可以自行更改。
 
-    默认情况下，架构将是 dbo，但可进行更改。 单击 **“下一步”** 继续。
+    默认情况下，架构将是 dbo，但可进行更改。 单击“下一步”继续。 
     ![输入文件](media/sql-server-import-extension/import-wizard-input-file.png)
-1. 向导将根据前 50 行生成预览。 除验证数据是否准确外，此页上没有其他操作。 单击 **“下一步”** 继续。
+1. 向导将根据前 50 行生成预览。 除验证数据是否准确外，此页上没有其他操作。 单击“下一步”继续。 
     ![打开导入向导](media/sql-server-import-extension/import-wizard-preview-data.png)
 2. 在此页上，可以更改列名、数据类型、是否为主键或是否允许 null 值。 可以根据需要执行任意数量的更改。 单击“导入数据”继续操作  。
     ![打开导入向导](media/sql-server-import-extension/import-wizard-modify-columns.png)

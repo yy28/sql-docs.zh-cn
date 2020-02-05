@@ -11,10 +11,10 @@ ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
 ms.openlocfilehash: 3609de02157637ec30f7e21ad4426c5001f31a6e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282661"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 Azure SQL 数据仓库中
@@ -211,11 +211,11 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 
 ![][15]
 
-恭喜！ 已成功使用 SQL Server Integration Services 将数据加载到 Azure SQL 数据仓库。
+祝贺你！ 已成功使用 SQL Server Integration Services 将数据加载到 Azure SQL 数据仓库。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 了解如何在设计环境中调试包和排查包问题。 从此处开始：[包开发的疑难解答工具][Troubleshooting Tools for Package Development]。
+- 了解如何在设计环境中调试包和排查包问题。 从此处开始：[用于包开发的故障排除工具][Troubleshooting Tools for Package Development]。
 
 - 了解如何将 SSIS 项目和包部署到 Integration Services 服务器或其他存储位置。 从此处开始：[项目和包的部署][Deployment of Projects and Packages]。
 

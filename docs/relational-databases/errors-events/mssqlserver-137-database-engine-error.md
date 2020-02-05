@@ -12,10 +12,10 @@ ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4e780d6afaddc5ac3af0e87e6b629fb39c987879
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305038"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
@@ -32,14 +32,14 @@ ms.locfileid: "72305038"
 |符号名称|P_SCALAR_VAR_NOTFOUND|  
 |消息正文|必须声明标量变量 "%.*ls"。|  
   
-## <a name="explanation"></a>解释  
-如果未首先声明某个变量就在 SQL 脚本中使用它，则会出现此错误。 在下面的示例中，由于未声明 \@mycol，因此针对 SET 和 SELECT 语句都将返回 137 错误  。  
+## <a name="explanation"></a>说明  
+如果未首先声明某个变量就在 SQL 脚本中使用它，则会出现此错误。 在下面的示例中，由于未声明 **mycol，因此针对 SET 和 SELECT 语句都将返回 137 错误\@** 。  
   
 SET @mycol = 'ContactName';  
   
 SELECT @mycol;  
   
-之所以发生此错误，一个更为复杂的原因就是使用在 EXECUTE 语句外部声明的变量。 例如，在 SELECT 语句中指定的变量 \@mycol 是 SELECT 语句的局部变量，因此它位于 EXECUTE 语句外部  。  
+之所以发生此错误，一个更为复杂的原因就是使用在 EXECUTE 语句外部声明的变量。 例如，在 SELECT 语句中指定的变量 **mycol 是 SELECT 语句的局部变量，因此它位于 EXECUTE 语句外部\@** 。  
   
 USE AdventureWorks2012;  
   

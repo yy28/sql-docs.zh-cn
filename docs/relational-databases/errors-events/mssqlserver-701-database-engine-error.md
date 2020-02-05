@@ -12,10 +12,10 @@ ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db307d221b8c90f478c21ab1605362e7fdf2ffd6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907718"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
@@ -32,8 +32,8 @@ ms.locfileid: "72907718"
 |符号名称|NOSYSMEM|  
 |消息正文|系统内存不足，无法运行此查询。|  
   
-## <a name="explanation"></a>解释  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法分配足够的内存来运行查询。 产生这一现象的原因有多种，其中包括操作系统设置、物理内存可用性或对当前工作负荷的内存限制。 大多数情况下，失败的事务不是导致此错误的原因。  
+## <a name="explanation"></a>说明  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法分配足够的内存来运行查询。 这可能是由多种原因造成的，包括操作系统设置，物理内存可用性或当前工作负载的内存限制。 在大多数情况下，失败的事务不是此错误的原因。  
   
 由于服务器没有足够的内存，诊断查询（如 DBCC 语句）可能失败。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72907718"
   
 1.  验证其他应用程序或服务是否占用此服务器上的内存。 重新配置不太重要的应用程序或服务，使其占用更少的内存。  
   
-2.  开始为以下实例收集性能监视器计数器：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:Buffer Manager**、 **SQL Server:Memory Manager**。  
+2.  开始收集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager**、**SQL Server: Memory Manager** 的性能监视器计数器。  
   
 3.  检查以下 SQL Server 内存配置参数：  
   

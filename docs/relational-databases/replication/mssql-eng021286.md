@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: b63620b7-1c6d-46f7-90ea-3a8e99af8de4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c19dee32a305bdd41e2918ba35f246fef558926
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9ff7cf8f23c1c874734e92c5cd52fd0ddfb532e0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770335"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288012"
 ---
-# <a name="mssqleng021286"></a>MSSQL_ENG021286
+# <a name="mssql_eng021286"></a>MSSQL_ENG021286
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68770335"
 |符号名称||  
 |消息正文|冲突表 '%s' 不存在。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  如果 [sysmergearticles (Transact-SQL)](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) 中所列项目的冲突表实际不存在，则会引发此错误。 尝试向为合并复制发布的表中添加列或从中删除列，也会发生此错误。  
   
 ## <a name="user-action"></a>用户操作  

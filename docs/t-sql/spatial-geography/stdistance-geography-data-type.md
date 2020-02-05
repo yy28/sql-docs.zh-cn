@@ -18,10 +18,10 @@ ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 45f0b6f9524c4877c669bfec8c5ab7bcfec198bb
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74200505"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance（geography 数据类型）
@@ -46,7 +46,7 @@ ms.locfileid: "74200505"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float   
   
- CLR 返回类型：**SqlDouble**  
+ CLR 返回类型：SqlDouble   
   
 ## <a name="remarks"></a>备注  
  结果以空间数据的[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) 定义的度量单位表示。

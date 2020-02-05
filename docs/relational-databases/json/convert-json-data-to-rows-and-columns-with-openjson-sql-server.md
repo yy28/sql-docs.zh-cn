@@ -15,10 +15,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: feac4a3e00164837373f9b3024c322dbf7c49818
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095827"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>使用 OPENJSON 分析和转换 JSON 数据 (SQL Server)
@@ -55,11 +55,11 @@ FROM OPENJSON(@json);
   
 **结果**
   
-|Key|值|type|  
+|key|值|type|  
 |---------|-----------|----------|  
-|NAME|John|1|  
-|姓氏|Doe|1|  
-|年龄|45|2|  
+|name|John|1|  
+|surname|Doe|1|  
+|age|45|2|  
 |技能|["SQL","C#","MVC"]|4|
 
 ### <a name="more-info-about-openjson-with-the-default-schema"></a>有关具有默认架构的 OPENJSON 的详细信息
@@ -116,7 +116,7 @@ WITH (
   
 **结果**
   
-|Number|date|Customer|Quantity|  
+|Number|Date|客户|数量|  
 |------------|----------|--------------|--------------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  

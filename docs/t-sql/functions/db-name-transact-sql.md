@@ -23,18 +23,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5aa5e2a60189a82fb60cd416b7f87b35824e236f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118981"
 ---
-# <a name="dbname-transact-sql"></a>DB_NAME (Transact-SQL)
+# <a name="db_name-transact-sql"></a>DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函数返回指定数据库的名称。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -45,14 +45,14 @@ DB_NAME ( [ database_id ] )
 ## <a name="arguments"></a>参数  
 database_id   
 
-将返回其名称 `DB_NAME` 的数据库的标识号 (ID)。 如果对 `DB_NAME` 的调用省略 database_id，则 `DB_NAME` 返回当前数据库的名称  。
+将返回其名称 `DB_NAME` 的数据库的标识号 (ID)。 如果对 `DB_NAME` 的调用省略 database_id，则  *返回当前数据库的名称*`DB_NAME`。
   
 ## <a name="return-types"></a>返回类型
 **nvarchar(128)**
   
 ## <a name="permissions"></a>权限  
 
-如果 `DB_NAME` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 服务器级权限才能看到相应的 `DB_ID` 行   。 对于 master 数据库，`DB_ID` 至少需要 `CREATE DATABASE` 权限  。 调用方连接的数据库将始终出现在 sys.databases 中  。
+如果 `DB_NAME` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 **或** 服务器级权限才能看到相应的  **行**`ALTER ANY DATABASE``VIEW ANY DATABASE``DB_ID`。 对于 master 数据库，**至少需要** 权限`DB_ID``CREATE DATABASE`。 调用方连接的数据库将始终出现在 sys.databases 中  。
   
 > [!IMPORTANT]  
 >  默认情况下，公共角色具有 `VIEW ANY DATABASE` 权限，允许所有登录名查看数据库信息。 若要防止登录名检测数据库，则需 `REVOKE` 公共登录名的 `VIEW ANY DATABASE` 权限或 `DENY` 个人登录名的 `VIEW ANY DATABASE` 权限。

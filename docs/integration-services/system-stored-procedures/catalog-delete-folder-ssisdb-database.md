@@ -11,10 +11,10 @@ ms.assetid: b9c08992-500c-447e-bc19-1eb13c9b0293
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 496de1c9dd7e37542f5d3588a9662948ef8aabd4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281340"
 ---
 # <a name="catalogdelete_folder-ssisdb-database"></a>catalog.delete_folder（SSISDB 数据库）
@@ -37,10 +37,10 @@ delete_folder [ @folder_name = ] folder_name
  要删除的文件夹的名称。 *folder_name* 为 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  

@@ -12,10 +12,10 @@ ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 68829d55be0b080e9b4beb9d7b284e3f57a46581
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305910"
 ---
 # <a name="mssqlserver_10507"></a>MSSQLSERVER_10507
@@ -32,7 +32,7 @@ ms.locfileid: "72305910"
 |符号名称|PG_STMT_DOES_NOT_MATCH|  
 |消息正文|无法创建计划指南“%.\*ls”，因为由 **\@stmt** 和 **\@module_or_batch** 或由 **\@plan_handle** 和 **\@statement_start_offset** 指定的语句与指定模块或批中的语句均不匹配。 请修改这些值以匹配模块或批中的语句。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 指定模块或批中的语句无法与指定的语句或语句偏移量值相匹配。  
   
 ## <a name="user-action"></a>用户操作  

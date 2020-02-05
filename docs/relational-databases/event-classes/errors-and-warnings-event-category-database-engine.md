@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4832910f00322875c334e16df77975a33106d214
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056418"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings 事件类别（数据库引擎）
@@ -27,7 +27,7 @@ ms.locfileid: "74056418"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[Attention 事件类](../../relational-databases/event-classes/attention-event-class.md)|指示出现了 **Attention** 事件。|  
 |[Background Job Error 事件类](../../relational-databases/event-classes/background-job-error-event-class.md)|指示后台作业异常终止。|  

@@ -14,10 +14,10 @@ ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae990092e930bb1f017e10c0b6e1f07917e3a446
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281963"
 ---
 # <a name="managing-running-packages-programmatically"></a>以编程方式管理正在运行的包
@@ -29,7 +29,7 @@ ms.locfileid: "71281963"
   
  有关监视包的详细信息，请参阅[包管理（SSIS 服务）](../../integration-services/service/package-management-ssis-service.md)。  
   
- 本主题中讨论的所有方法都需要引用 **Microsoft.SqlServer.ManagedDTS** 程序集。 在新项目中添加引用后，请使用 **using** 或 **Imports** 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
+ 本主题中讨论的所有方法都需要引用 **Microsoft.SqlServer.ManagedDTS** 程序集。 在新项目中添加引用后，请使用 <xref:Microsoft.SqlServer.Dts.Runtime>using**或**Imports**语句导入** 命名空间。  
   
 > [!IMPORTANT]  
 >  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 类中用于 SSIS 包存储的方法仅支持“.”、localhost 或本地服务器的服务器名称。 不能使用“(local)”。  

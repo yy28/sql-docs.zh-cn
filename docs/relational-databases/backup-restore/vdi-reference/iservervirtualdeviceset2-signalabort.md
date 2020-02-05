@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: b61a972d7b379ff40440124c875d8d49a7af1835
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847168"
 ---
 # <a name="iservervirtualdeviceset2signalabort-vdi"></a>IServerVirtualDeviceSet2::SignalAbort (VDI)
@@ -32,7 +32,7 @@ HRESULT IServerVirtualDeviceSet2::SignalAbort ();
 
 返回 *HRESULT* ，指示方法调用是成功还是失败。 值 NOERROR 指示方法调用已成功。 非零值指示已发生错误。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 任何时候，服务器都可以选择中止 BACKUP 或 RESTORE 操作。
 

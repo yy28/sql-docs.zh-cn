@@ -18,10 +18,10 @@ ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7844f1d38f5d2e6f36f971eb83d8961596483142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042604"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo（geography 数据类型）
@@ -43,9 +43,9 @@ ms.locfileid: "68042604"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  该方法返回一个 LineString 实例，它包含的端点位于所比较的两个不相交 geography 实例的边界上   。 返回的 LineString 长度等于两个 geography 实例之间的最短距离   。 当两个 geography 实例彼此相交时，将返回空 LineString 实例   。  
   
 ## <a name="examples"></a>示例  

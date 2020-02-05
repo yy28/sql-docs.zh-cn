@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f168f0d6-cb11-45d4-9781-c374d7f388ee
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2331221ea8a15935b91a7ba8cc6691dd27cec4e3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8888d5f2b00115be6cc86fe5484135e82851d574
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770499"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286276"
 ---
-# <a name="mssqleng014005"></a>MSSQL_ENG014005
+# <a name="mssql_eng014005"></a>MSSQL_ENG014005
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68770499"
 |符号名称||  
 |消息正文|无法删除发布。 该发布已有订阅。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  您试图删除带有关联的订阅的发布。 只有发布不具有相关联的订阅时才可删除它。  
   
 ## <a name="user-action"></a>用户操作  

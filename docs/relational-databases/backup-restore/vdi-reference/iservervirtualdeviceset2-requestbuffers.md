@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 1b941f251c9093f10abbced8c3522f1719a1580e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847178"
 ---
 # <a name="iservervirtualdeviceset2requestbuffers-vdi"></a>IServerVirtualDeviceSet2::RequestBuffers (VDI)
@@ -32,7 +32,7 @@ HRESULT IServerVirtualDeviceSet2::RequestBuffers (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>parameters
 
 *dwSize* 标识每个缓冲区的大小。 此大小只应包含数据所需的区域。 VDI 负责任何对齐和前缀要求。
 
@@ -42,14 +42,14 @@ HRESULT IServerVirtualDeviceSet2::RequestBuffers (
 
 ## <a name="return-value"></a>返回值
 
-|返回值 | 解释 |
+|返回值 | 说明 |
 |---|---|
 | NOERROR | 函数成功。 |
 | VD_E_ABORT | 已请求中止。 |
 | VD_E_PROTOCOL | 该集未处于可能声明缓冲区分配的状态中（请参阅状态转换矩阵）。 |
 | VD_E_MEMORY | 无法获取请求的内存。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 在使用 AllocateBuffer 分配缓冲区之前，应使用此方法。 使用 RequestBuffers 请求具有给定大小和对齐方式的缓冲区集，然后使用 AllocateBuffer 分配单个缓冲区。
 

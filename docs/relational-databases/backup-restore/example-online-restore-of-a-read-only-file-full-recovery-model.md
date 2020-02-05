@@ -15,13 +15,13 @@ ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 545a3cfe319732ca7cb0f9d5a51b1e172072e636
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75227968"
 ---
-# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>示例：只读文件的联机还原（完整恢复模式）
+# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>示例：联机还原只读文件（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主题与完整恢复模式下包含多个文件或文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  

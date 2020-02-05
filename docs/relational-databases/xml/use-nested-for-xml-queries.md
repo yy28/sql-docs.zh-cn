@@ -15,10 +15,10 @@ ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91ba54ce9141cd0e891e442c5cb89aab02dec1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001723"
 ---
 # <a name="use-nested-for-xml-queries"></a>使用嵌套 FOR XML 查询
@@ -67,7 +67,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- 由于结果为 **xml** 类型，因此可以对此 XML 直接指定 **xml** 数据类型方法之一，如以下查询所示。 在此查询中，[query() 方法（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md)用于检索 <`myRoot`> 元素的第一个 <`row`> 子元素。  
+ 由于结果为 **xml** 类型，因此可以对此 XML 直接指定 **xml** 数据类型方法之一，如以下查询所示。 在此查询中，[query() 方法（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md)用于检索 <`row`> 元素的第一个 <`myRoot`> 子元素。  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  

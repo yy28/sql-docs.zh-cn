@@ -26,10 +26,10 @@ ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: bf05f923a5a7a6333bdca7278efae918aed71f32
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211418"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "70211418"
 
   返回某一会话方上次传输的状态。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,7 +53,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## <a name="return-types"></a>返回类型  
  **nchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  返回一个字符串，该字符串说明指定会话上次传输尝试的状态。 在下列情况下都将返回一个空字符串：上次传输尝试成功；尚未进行任何传输尝试；或 conversation_handle 不存在  。  
   
  该函数返回的信息与管理视图 sys.transmission_queue 的 last_transmission_error 列中显示的信息相同。 但是，该函数可用于查找那些当前传输队列中没有消息的会话的传输状态。  

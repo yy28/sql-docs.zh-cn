@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5654a27a5457fe1d89fe76241c576f831dc9bf55
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095783"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>FOR JSON 如何转义特殊字符和控制字符 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "74095783"
 |正斜杠 (/)|\\/|  
 |退格键|\b|  
 |换页符|\f|  
-|换行符|\n|  
+|新建行|\n|  
 |回车符|\r|  
 |水平制表符|\t|  
   
@@ -91,5 +91,5 @@ FOR JSON PATH
 -   [JSON 充当 NoSQL 和关系环境之间的桥梁](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## <a name="see-also"></a>另请参阅  
- [使用 FOR JSON 将查询结果格式化为 JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
+ [借助 FOR JSON 将查询结果的格式设置为 JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
 [FOR 子句](../../t-sql/queries/select-for-clause-transact-sql.md)

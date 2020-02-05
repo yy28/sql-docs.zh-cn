@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 537ad4d796792c7d4fce56eda25adcca8b1fea01
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095800"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>FOR JSON 如何将 SQL Server 数据类型转换为 JSON 数据类型 (SQL Server)
@@ -26,13 +26,13 @@ ms.locfileid: "74095800"
   
 |类别|SQL Server 数据类型|JSON 数据类型|  
 |--------------|--------------|---------------|  
-|字符和字符串类型|char、nchar、varchar、nvarchar|string|  
-|数字类型|int、bigint、float、decimal、numeric|number|  
+|字符和字符串类型|char、nchar、varchar、nvarchar|字符串|  
+|数字类型|int、bigint、float、decimal、numeric|数字|  
 |位类型|bit|布尔值（true 或 false）|  
-|日期和时间类型|date、datetime、datetime2、time、datetimeoffset|string|  
+|日期和时间类型|date、datetime、datetime2、time、datetimeoffset|字符串|  
 |二进制类型|varbinary、binary、image、timestamp、rowversion|BASE64 编码的字符串|  
-|CLR 类型|geometry、geography、其他 CLR 类型|不提供支持。 这些类型将返回错误。<br /><br /> 在 SELECT 语句中，使用 CAST 或 CONVERT，或使用 CLR 属性或方法，将源数据转换为可成功转换成 JSON 类型的 SQL Server 数据类型。 例如，对 geometry 类型使用 STAsText()，或对任何 CLR 类型使用 ToString()   。 然后，JSON 输出值的类型将派生自 SELECT 语句中应用的转换的返回类型。|  
-|其他类型|uniqueidentifier、money|string|  
+|CLR 类型|geometry、geography、其他 CLR 类型|不支持。 这些类型将返回错误。<br /><br /> 在 SELECT 语句中，使用 CAST 或 CONVERT，或使用 CLR 属性或方法，将源数据转换为可成功转换成 JSON 类型的 SQL Server 数据类型。 例如，对 geometry 类型使用 **STAsText()** ，或对任何 CLR 类型使用 **ToString()** 。 然后，JSON 输出值的类型将派生自 SELECT 语句中应用的转换的返回类型。|  
+|其他类型|uniqueidentifier、money|字符串|  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>详细了解 SQL Server 和 Azure SQL 数据库中的 JSON  
   

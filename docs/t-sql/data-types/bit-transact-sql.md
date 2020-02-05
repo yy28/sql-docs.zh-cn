@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e5ff96f07db7b368acc7ee36296516e047bc0475
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126001"
 ---
 # <a name="bit-transact-sql"></a>bit (Transact-SQL)
@@ -30,10 +30,10 @@ ms.locfileid: "68126001"
 
   可以取值为 1、0 或 NULL 的 integer 数据类型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可优化 **bit** 列的存储。 如果表中的 bit  列为 8 列或更少，则这些列作为 1 个字节存储。 如果 **bit** 列为 9 到 16 列，则这些列作为 2 个字节存储，以此类推。
   
-字符串值 TRUE 和 FALSE 可转换为 bit 值  ：TRUE 转换为 1，FALSE 转换为 0。
+字符串值 TRUE 和 FALSE 可转换为 **bit** 值：TRUE 将转换为 1，FALSE 将转换为 0。
   
 转换为 bit 会将任何非零值升为 1。
   

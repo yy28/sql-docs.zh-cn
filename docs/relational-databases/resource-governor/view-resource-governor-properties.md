@@ -14,10 +14,10 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903912"
 ---
 # <a name="view-resource-governor-properties"></a>查看资源调控器属性
@@ -123,7 +123,7 @@ ms.locfileid: "72903912"
 2.  若要查看资源调控器实体的当前配置，请使用[与资源调控器相关的动态管理视图 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)。  
   
 ## <a name="more-information"></a>详细信息
- [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
+ [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [资源调控器工作负荷组](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

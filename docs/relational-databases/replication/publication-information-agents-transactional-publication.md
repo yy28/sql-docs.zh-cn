@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ae95cc4fd67b7843d773a2dc175dd89f1784025b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f896520f56e96aa1d79f80fea49b835980a7442d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321374"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286658"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>发布信息，代理（事务发布）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "75321374"
 ## <a name="options"></a>选项  
  有关代理的详细信息及相关任务，请右键单击相应代理所在的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：在“列排序”对话框中对一列或多个列进行排序  。  
+-   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
   
--   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序  。  
+-   **选择要显示的列**：选择要显示哪些列以及要在 **“选择列”** 对话框中以何种顺序显示它们。  
   
--   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行  。  
+-   **筛选器**：根据 **“筛选设置”** 对话框中的列值筛选网格中的行。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   

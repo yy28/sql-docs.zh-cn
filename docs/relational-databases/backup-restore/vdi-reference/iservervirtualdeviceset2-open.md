@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 552394db26a1b236a4d6997f6dbfba77d12086ee
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847218"
 ---
 # <a name="iservervirtualdeviceset2open-vdi"></a>IServerVirtualDeviceSet2::Open (VDI)
@@ -31,7 +31,7 @@ HRESULT IServerVirtualDeviceSet2::Open (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>parameters
 
 *lpInstanceName* 此字符串标识将向其发送 SQL 命令的 SQL Server 实例。 可以传递 NULL 来标识当前计算机上的默认实例。
 
@@ -39,12 +39,12 @@ HRESULT IServerVirtualDeviceSet2::Open (
 
 ## <a name="return-value"></a>返回值
 
-|返回值 | 解释 |
+|返回值 | 说明 |
 |---|---|
 | NOERROR | 函数成功。 |
 | VD_E_INVALID | 提供的名称未标识服务器可访问的虚拟设备集。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 成功调用此函数后，服务器可以继续使用 GetConfiguration 和 SetConfiguration 配置虚拟设备集。
 

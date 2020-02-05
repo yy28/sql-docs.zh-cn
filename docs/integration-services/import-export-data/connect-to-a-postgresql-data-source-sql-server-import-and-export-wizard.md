@@ -10,10 +10,10 @@ ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: da1688881523723206b03d7f7dec3abc2e518370
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296302"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>连接到 PostgreSQL 数据源（SQL Server 导入和导出向导）
@@ -59,10 +59,10 @@ ODBC 驱动程序的名称 - 可以为 PostgreSQL ODBC Driver(UNICODE) 或 Postg
 **Server**  
 PostgreSQL 服务器的名称。 
 
-**端口**  
+端口   
 用于连接到 PostgreSQL 服务器的端口。
 
-**“数据库”**  
+**Database**  
 PostgreSQL 数据库的名称。
 
 Uid 和 Pwd      

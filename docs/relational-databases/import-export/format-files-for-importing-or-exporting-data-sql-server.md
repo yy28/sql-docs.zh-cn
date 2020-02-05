@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3cc48298aadc027509adb9d0abf5f5057e0c4fef
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055979"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>格式化文件以导入或导出数据 (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "74055979"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 当向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中大容量导入数据或从该表中大容量导出数据时，可以使用格式化文件  存储大容量导入数据或大容量导出数据所需的所有格式信息。 这包括数据文件中相对于该表的各字段的格式信息。
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持两种格式化文件类型：XML 格式和非 XML 格式化文件。 XML 格式化文件和非 XML 格式化文件在一个数据文件中包含每个字段的说明，并且 XML 格式化文件还包含相应表列的说明。 通常，XML 与非 XML 格式化文件可以互换。 但是，建议您为新的格式化文件使用 XML 语法，因为与非 XML 格式化文件相比，格式化文件具有多项优点。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持两种格式化文件：XML 格式化文件和非 XML 格式化文件。 XML 格式化文件和非 XML 格式化文件在一个数据文件中包含每个字段的说明，并且 XML 格式化文件还包含相应表列的说明。 通常，XML 与非 XML 格式化文件可以互换。 但是，建议您为新的格式化文件使用 XML 语法，因为与非 XML 格式化文件相比，格式化文件具有多项优点。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。
 
 ## <a name="Benefits"></a> 格式化文件的优点
 
@@ -36,7 +36,7 @@ ms.locfileid: "74055979"
 
 ## <a name="ExamplesOfFFs"></a> 格式化文件的示例
 
-下面的示例说明了非 XML 格式化文件和 XML 格式化文件的布局。 这些格式化文件对应于 `HumanResources.myTeam` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表。 该表包含四列：`EmployeeID`、`Name`、`Title` 和 `ModifiedDate`。
+下面的示例说明了非 XML 格式化文件和 XML 格式化文件的布局。 这些格式化文件对应于 `HumanResources.myTeam` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表。 该表包含四列： `EmployeeID`、 `Name`、 `Title`和 `ModifiedDate`。
 
 > [!NOTE]
 > 有关该表以及如何创建该表的信息，请参阅 [HumanResources.myTeam 示例表 (SQL Server)](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md)。
@@ -55,7 +55,7 @@ The contents of this format file are as follows: 9.0
 4       SQLNCHAR      2       100     ""   4     Background               SQL_Latin1_General_CP1_CI_AS  
 ```  
 
-有关详细信息，请参阅 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。
+有关详细信息，请参阅 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)早期版本支持的原始格式。
 
 ### <a name="b-using-an-xml-format-file"></a>B. 使用 XML 格式化文件
 

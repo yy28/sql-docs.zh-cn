@@ -13,20 +13,20 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809838"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-显示在特定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 计算节点或控制节点上运行的查询的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行计划。 在计算节点和控制节点上运行查询时，使用它来解决查询性能问题。
+显示在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 计算节点或控制节点上运行的查询的 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 执行计划。 在计算节点和控制节点上运行查询时，使用它来解决查询性能问题。
   
 了解在计算节点上运行的 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询的查询性能问题后，可通过几种方法来提高性能。 可提高计算节点上查询性能的方法包括创建多列统计信息、创建非聚集索引或使用查询提示。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
 Azure SQL 数据仓库的语法：

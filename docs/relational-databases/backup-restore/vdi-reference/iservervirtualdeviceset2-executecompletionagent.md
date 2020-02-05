@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2ad094794b5115aa4593f918de442798445e2b79
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847288"
 ---
 # <a name="iservervirtualdeviceset2executecompletionagent-vdi"></a>IServerVirtualDeviceSet2::ExecuteCompletionAgent (VDI)
@@ -32,7 +32,7 @@ HRESULT IServerVirtualDeviceSet2::ExecuteCompletionAgent ();
 
 返回 *HRESULT* ，指示方法调用是成功还是失败。 值 NOERROR 指示方法调用已成功。 非零值指示已发生错误。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 完成代理提供了一种机制，SQL Server 可以通过该机制将自身与虚拟设备命令完成操作同步。 它必须处于活动状态才能发出任何命令，因此它应保持活动状态，直到关闭所有设备。
 

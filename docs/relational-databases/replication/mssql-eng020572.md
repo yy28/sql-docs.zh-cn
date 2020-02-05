@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 636566db-ffcf-4109-8c11-15b8c7cb9cd9
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 07bd8dfb40c9832c55b6b0d21e11f3f0684c9a54
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0c297e8a7851d9f8c60277005a2385f2016c9078
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770411"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288440"
 ---
-# <a name="mssqleng020572"></a>MSSQL_ENG020572
+# <a name="mssql_eng020572"></a>MSSQL_ENG020572
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68770411"
 |符号名称||  
 |消息正文|在验证失败之后，订阅服务器“%s”对发布“%s”中项目“%s”的订阅已被重新初始化。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  根据发布服务器上的数据对订阅服务器上的数据进行验证，数据不匹配；因此验证失败。 在指定应该执行的验证时，选择了如果验证失败则应重新初始化订阅的选项。 重新初始化订阅包括在订阅服务器上应用新的快照。 有关验证的详细信息，请参阅 [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)。  
   
 ## <a name="user-action"></a>用户操作  

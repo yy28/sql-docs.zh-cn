@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094567"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
@@ -44,7 +44,7 @@ ms.locfileid: "74094567"
 2.  导入过程将从导出文件中大容量复制数据。  
 
 ## <a name="sql-server-utility"></a>SQL Server 实用工具  
- 如果将 DAC 导入到数据库引擎的实例，则在下次将实用工具收集组从该实例发送到实用工具控制点时，导入的 DAC 将合并到 SQL Server 实用工具中。 然后，该 DAC 将出现 **中的** “实用工具资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **“已部署的数据层应用程序”** 节点下，并且在 **中的** 详细信息页中报告。  
+ 如果将 DAC 导入到数据库引擎的实例，则在下次将实用工具收集组从该实例发送到实用工具控制点时，导入的 DAC 将合并到 SQL Server 实用工具中。 然后，该 DAC 将出现在  **实用工具资源管理器的“已部署的数据层应用程序”节点中，并且将在“已部署的数据层应用程序”的详细信息页面中报告**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]   。  
   
 ## <a name="database-options-and-settings"></a>数据库选项和设置  
  默认情况下，在导入过程中创建的数据库将具有来自 CREATE DATABASE 语句的几乎所有默认设置，而例外的是数据库排序规则和兼容级别设置为在 DAC 导出文件中定义的值。 DAC 导出文件将使用来自原始数据库的值。  
@@ -57,7 +57,7 @@ ms.locfileid: "74094567"
 ## <a name="prerequisites"></a>必备条件  
  建议您不要从未知或不可信的源导入 DAC 导出文件。 此类文件可能包含恶意代码，这些代码可能会执行非预期的 Transact-SQL 代码，或者通过修改架构导致错误。 在使用来自未知或不可信源的导出文件之前，请解压缩该 DAC 并检查代码，例如存储过程或者其他用户定义的代码。 有关如何执行这些检查的详细信息，请参阅 [Validate a DAC Package](validate-a-dac-package.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  为了提高安全性，SQL Server 身份验证登录名存储在 DAC 导出文件中且没有密码。 在导入该文件时，登录名将作为含有生成的密码的已禁用登录名创建。 若要启用这些登录名，请使用具有 ALTER ANY LOGIN 权限的登录名登录，并且使用 ALTER LOGIN 来启用该登录名和分配可以传达给用户的新密码。 对于 Windows 身份验证登录名则无需执行此操作，因为其密码不是由 SQL Server 管理的。  
   
 ## <a name="permissions"></a>权限  
@@ -121,11 +121,11 @@ ms.locfileid: "74094567"
   
  **对于 Azure SQL 数据库：**  
   
- - [导入 BACPAC 文件以创建新的 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-import/) 提供了有关使用 Azure 门户、PowerShell、SSMS 或 SqlPackage 的分步说明  。  
- - 请查阅 [SQL 数据库选项和性能：  了解每个服务层中的可用功能](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)，了解有关不同服务层的详细信息。  
+ - **导入 BACPAC 文件以创建新的 Azure SQL 数据库[ 提供了有关使用 Azure 门户、PowerShell、SSMS 或 SqlPackage 的分步说明](https://azure.microsoft.com/documentation/articles/sql-database-import/)** 。  
+ - 有关不同服务层的详细信息，请查阅 **[SQL 数据库选项和性能：了解每个服务层中的可用功能](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** 。  
 
 ### <a name="validation-page"></a>“验证”页  
- 使用此页可查看阻止操作的任何问题。 若要继续，请解决阻止问题，然后单击 **“重新运行验证”** 确保验证成功。  
+ 使用此页可查看阻止操作的任何问题。 若要继续，请解决阻止问题，然后单击“重新运行验证”  确保验证成功。  
   
  若要继续，请单击 **“下一步”** 。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "74094567"
 ###  <a name="Results"></a> “结果”页  
  此页将报告导入和创建数据库操作是成功还是失败，并显示各个操作的成功或失败。 遇到了错误的任何操作都将在 **“结果”** 列中具有一个链接。 单击该链接可以查看针对该操作的错误报告。  
   
- 单击 **“关闭”** 关闭该向导。  
+ 单击“**关闭**”以关闭向导。  
   
 ## <a name="see-also"></a>另请参阅  
 [导入 BACPAC 文件以创建新的 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-import/)  

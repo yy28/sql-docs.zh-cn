@@ -17,10 +17,10 @@ ms.assetid: beea1a5c-0053-4971-a68f-0da53063fcbb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8f25f3d9c9a69d3a8f87e8a4eb1886f31092940f
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75322046"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher"></a>为 Oracle 发布服务器配置事务集作业
@@ -31,27 +31,27 @@ ms.locfileid: "75322046"
   
 1.  在 Oracle 分发服务器上，将 **job_queue_processes** 初始化参数设置为一个足够大的值以允许 Xactset 作业运行。 有关此参数的详细信息，请参阅 Oracle 发布服务器的数据库文档。  
   
-2.  在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 为 \@publisher 指定 Oracle 发布服务器的名称，将 \@propertyname 的值指定为 xactsetbatching，并将 \@propertyvalue 的值指定为“enabled”      。  
+2.  在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 为 **publisher 指定 Oracle 发布服务器的名称，将 \@propertyname 的值指定为 xactsetbatching，并将** propertyvalue 的值指定为“enabled”  **\@**  **\@** 。  
   
-3.  在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 为 \@publisher 指定 Oracle 发布服务器的名称，将 \@propertyname 的值指定为 xactsetjobinterval，并为 \@propertyvalue 指定作业时间间隔（分钟）     。  
+3.  在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 为 **publisher 指定 Oracle 发布服务器的名称，将 \@propertyname 的值指定为 xactsetjobinterval，并为** propertyvalue 指定作业时间间隔（分钟）  **\@** **\@** 。  
   
-4.  在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 为 \@publisher 指定 Oracle 发布服务器的名称，将 \@propertyname 的值指定为 xactsetjob，并将 \@propertyvalue 的值指定为 enabled      。  
+4.  在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 为 **publisher 指定 Oracle 发布服务器的名称，将 \@propertyname 的值指定为 xactsetjob，并将** propertyvalue 的值指定为 enabled  **\@**  **\@** 。  
   
 ### <a name="to-configure-the-transaction-set-job"></a>配置事务集作业  
   
-1.  （可选）在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 为 \@publisher 指定 Oracle 发布服务器的名称  。 这将返回发布服务器上的 **Xactset** 作业的属性。  
+1.  （可选）在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 为 **publisher 指定 Oracle 发布服务器的名称\@** 。 这将返回发布服务器上的 **Xactset** 作业的属性。  
   
-2.  在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 为 \@publisher 指定 Oracle 发布服务器的名称，为 \@propertyname 指定要设置的 Xactset 作业属性的名称，并为 \@propertyvalue 指定新设置    。  
+2.  在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 为 **publisher 指定 Oracle 发布服务器的名称，为 \@propertyname 指定要设置的 Xactset 作业属性的名称，并为** propertyvalue 指定新设置 **\@** **\@** 。  
   
 3.  （可选）对于每个要设置的 Xactset 作业属性重复步骤 2。 更改 **xactsetjobinterval** 属性后，必须重新启动 Oracle 发布服务器上的作业以使得新间隔生效。  
   
 ### <a name="to-view-properties-of-the-transaction-set-job"></a>查看事务集作业的属性  
   
-1.  在分发服务器上，执行 [sp_helpxactsetjob](../../../relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql.md)。 为 \@publisher 指定 Oracle 发布服务器的名称  。  
+1.  在分发服务器上，执行 [sp_helpxactsetjob](../../../relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql.md)。 为 **publisher 指定 Oracle 发布服务器的名称\@** 。  
   
 ### <a name="to-disable-the-transaction-set-job"></a>禁用事务集作业  
   
-1.  在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 为 \@publisher 指定 Oracle 发布服务器的名称，将 \@propertyname 的值指定为 xactsetjob，并将 \@propertyvalue 的值指定为 disabled      。  
+1.  在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 为 **publisher 指定 Oracle 发布服务器的名称，将 \@propertyname 的值指定为 xactsetjob，并将** propertyvalue 的值指定为 disabled  **\@**  **\@** 。  
   
 ## <a name="example"></a>示例  
  以下示例将启用 `Xactset` 作业并将运行间隔设置为三分钟。  

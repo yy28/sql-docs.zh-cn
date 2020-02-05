@@ -11,10 +11,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d3177a3fc8b0b88e3cd65e8675041be3250a3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907343"
 ---
 # <a name="modify-a-partition-function"></a>修改分区函数
@@ -44,7 +44,7 @@ ms.locfileid: "72907343"
   
 -   ALTER PARTITION FUNCTION 只能用于将一个分区拆分为两个，或将两个分区合并为一个。 若要更改表或索引的分区方式（例如，从 10 个分区变为 5 个分区），可以使用下列选项之一：  
   
-    -   使用所需的分区函数创建一个新的已分区表，然后使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或者使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的  “管理分区向导”将旧表中的数据插入新表。  
+    -   使用所需的分区函数创建一个新的已分区表，然后使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或者使用 **中的** “管理分区向导” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]将旧表中的数据插入新表。  
   
     -   为堆创建分区聚集索引。  
   

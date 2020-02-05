@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 28835571ef6bd3690884ea3e2b916d0c0d237eab
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73057329"
----
 
 我们通过多组存档网页来留存较早版本的 Microsoft SQL Server 的相关文档。 搜索引擎（例如 Bing.com 和 Google.com）不会处理存档网页。 但是，可在 Docs previous-versions/sql/ 地址中看到这些存档  ：
 

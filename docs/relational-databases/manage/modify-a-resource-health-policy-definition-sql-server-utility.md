@@ -13,10 +13,10 @@ ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 83d1f152ef414022803d84781a7948d04c4a77b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115414"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>修改资源运行状况策略定义（SQL Server 实用工具）
@@ -43,7 +43,7 @@ ms.locfileid: "68115414"
   
 #### <a name="modify-resource-health-policy-definitions-for-an-individual-data-tier-application-or-an-individual-managed-instance-of-sql-server-in-a-sql-server-utility"></a>在 SQL Server 实用工具中为单独的数据层应用程序或 SQL Server 的单独托管实例修改资源运行状况策略定义。  
   
-1.  连接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 UCP。  
+1.  连接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的 UCP。  
   
 2.  在实用工具资源管理器导航窗格中，单击“已部署的数据层应用程序”  或者单击“托管实例”  ，以便查看或修改用于单独数据层应用程序或托管实例的监视策略。  
   

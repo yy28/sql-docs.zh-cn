@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: cd3e7abfd1d250a170e0de4ebc1b392bc5857468
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847358"
 ---
 # <a name="iservervirtualdeviceset2issharedbuffer-vdi"></a>IServerVirtualDeviceSet2::IsSharedBuffer (VDI)
@@ -30,13 +30,13 @@ HRESULT IServerVirtualDeviceSet2::IsSharedBuffer (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>parameters
 
 *lpBuffer* 这是缓冲区的地址。
 
 ## <a name="return-value"></a>返回值
 
-|返回值 | 解释 |
+|返回值 | 说明 |
 |---|---|
 | TRUE | 该缓冲区是共享缓冲区。 |
 | FALSE | 该缓冲区不是虚拟设备集的一部分。 |

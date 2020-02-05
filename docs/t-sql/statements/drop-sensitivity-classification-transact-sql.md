@@ -26,10 +26,10 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223588"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
@@ -55,10 +55,10 @@ object_name  ([schema_name.]table_name.column_name)
 
 是从中删除分类的数据库列的名称。 目前仅支持列分类。
     - schema_name  （可选）- 是已分类的列所属架构的名称。
-    - table_name  （可选）- 是已分类的列所属表的名称。
+    - *table_name* - 是已分类的列所属表的名称。
     - column_name  - 是从中删除分类的列的名称。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 
 - 可以使用单个“DROP SENSITIVITY CLASSIFICATION”语句删除多个对象分类。
 

@@ -13,10 +13,10 @@ ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e9178a16bf828d585e5f9fd3ae74a905fa6a0428
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298776"
 ---
 # <a name="edit-the-oracle-database-properties"></a>编辑 Oracle 数据库属性
@@ -31,7 +31,7 @@ ms.locfileid: "71298776"
  **名称**  
  在新建实例向导的“创建 CDC 数据库”页中输入的 CDC 实例的名称。 此字段是只读的，不能编辑此信息。  
   
- **Description**  
+ **说明**  
  您可以编辑新实例的说明或者添加说明（如果您在创建 CDC 实例时未添加说明）。  
   
  **Oracle 连接字符串**  
@@ -42,7 +42,7 @@ ms.locfileid: "71298776"
   
 -   **Windows 身份验证**：选择此选项可使用当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
   
--   **Oracle 身份验证**：如果选择此选项，则必须在连接到的 Oracle 数据库中为用户键入“用户名”和“密码”   。  
+-   **Oracle 身份验证**：如果选择此选项，则必须在您连接到的 Oracle 数据库中为用户键入 **“用户名”** 和 **“密码”** 。  
   
  您可以在查看器中查看 Oracle 数据库属性。 在使用查看器时，信息是只读的。 查看器还在表中包括捕获列的列表。 有关如何访问查看器的信息，请参阅 [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)。  
   

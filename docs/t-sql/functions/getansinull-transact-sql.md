@@ -21,10 +21,10 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c5c52edfde8a0cde06ec5a0f2f154df06b6b6c12
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843720"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
@@ -48,7 +48,7 @@ GETANSINULL ( [ 'database' ] )
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 如果数据库的为 Null 性允许 NULL 值，GETANSINULL 返回 1。 此返回值还要求不显式定义列或数据类型为 Null 性。 ANSI NULL 默认值为 1。 
   
  若要启用 ANSI NULL 默认行为，则必须设置下列条件之一:  

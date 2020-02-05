@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412547"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>在 SQL Server 中计划内存中 OLTP 功能的应用
@@ -215,7 +215,7 @@ ms.locfileid: "74412547"
 
 在使用“ **=** ”运算符按其确切的主键值访问特定行时，哈希索引是速度最快的格式。
 
-- 如果用于哈希索引，则不精确的运算符（例如，“!=”、“>”或“BETWEEN”）将损害性能    。
+- 如果用于哈希索引，则不精确的运算符（例如，“!=”、“ **”或“BETWEEN”）将损害性能** **>**  。
 
 - 如果键值重复率变得过高，则哈希索引可能不是最佳选择。
 

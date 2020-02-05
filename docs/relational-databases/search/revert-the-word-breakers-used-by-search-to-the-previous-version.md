@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055187"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>将搜索功能所使用的断字符还原到以前的版本（SQL Server 搜索）
@@ -39,14 +39,14 @@ ms.locfileid: "74055187"
   
 |当前文件|以前的文件|受影响语言的数目|针对文件的操作|针对注册表项的操作|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
-|NaturalLanguage6.dll|NaturalLanguage6.dll|34|获取并安装早期版本的 NaturalLanguage6.dll，覆盖当前版本的文件。|不需要执行任何操作。<br /><br /> 对于此版本，注册表项和值未更改。|  
+|NaturalLanguage6.dll|NaturalLanguage6.dll|34|获取并安装早期版本的 NaturalLanguage6.dll，覆盖当前版本的文件。|无需采取措施。<br /><br /> 对于此版本，注册表项和值未更改。|  
 |（其他文件名）|NaturalLanguage6.dll|5|获取并安装早期版本的 NaturalLanguage6.dll，覆盖当前版本的文件。|更改一组注册表项以便指定组件的以前版本。|  
-|（其他文件名）|（其他文件名）|6|不需要执行任何操作。<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序将组件的当前版本和以前版本都复制到 Binn 文件夹。|更改一组注册表项以便指定组件的以前版本。|  
+|（其他文件名）|（其他文件名）|6|无需采取措施。<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序将组件的当前版本和以前版本都复制到 Binn 文件夹。|更改一组注册表项以便指定组件的以前版本。|  
   
 > [!WARNING]  
 >  如果您使用其他版本替换文件 NaturalLanguage6.dll 的当前版本，则使用此文件的所有语言的行为都将受到影响。  
   
- 本文中所述的文件是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 `MSSQL\Binn` 文件夹中安装的 DLL 文件。 完整路径通常是以下路径：  
+ 本文中所述的文件是在 `MSSQL\Binn` 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件夹中安装的 DLL 文件。 完整路径通常是以下路径：  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
@@ -58,7 +58,7 @@ ms.locfileid: "74055187"
   
  **受影响的语言的列表**  
   
-|“报表”|缩写<br />用于<br />注册表|LCID|  
+|语言|缩写<br />用于<br />注册表|LCID|  
 |--------------|---------------------------------------|----------|  
 |孟加拉语|ben|1093|  
 |保加利亚语|bgr|1026|  
@@ -78,9 +78,9 @@ ms.locfileid: "74055187"
 |马拉雅拉姆语|mal|1100|  
 |马拉地语|mar|1102|  
 |马来语|msl|1086|  
-|非特定语言|非特定语言|0000|  
+|中立|中立|0000|  
 |挪威语（博克马尔）|nor|1044|  
-|旁遮普语|pan|1094|  
+|旁遮普语|平底锅|1094|  
 |葡萄牙语（巴西）|ptb|1046|  
 |葡萄牙语|ptg|2070|  
 |罗马尼亚语|rom|1048|  
@@ -129,7 +129,7 @@ ms.locfileid: "74055187"
   
  **受影响的语言的列表**  
   
-|“报表”|缩写<br />用于<br />注册表|LCID|  
+|语言|缩写<br />用于<br />注册表|LCID|  
 |--------------|---------------------------------------|----------|  
 |阿拉伯语|ara|1025|  
 |德语|deu|1031|  
@@ -154,7 +154,7 @@ ms.locfileid: "74055187"
     > [!WARNING]  
     >  此更改影响在当前版本和以前版本中均使用 NaturalLanguage6.dll 的所有语言。  
   
-5.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID  .  
+5.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**。  
   
 6.  使用以下步骤添加 COM ClassID 的新键，用于所选语言的以前的断字符和词干分析器接口：  
   
@@ -166,7 +166,7 @@ ms.locfileid: "74055187"
   
     4.  如果所选语言使用某一词干分析器，则将该键值的（默认）数据更新为来自该表的以前的词干分析器的文件名。  
   
-7.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>  。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
+7.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
   
 8.  将 **WBreakerClass** 键值更新为来自当前断字符的表的值。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "74055187"
     > [!WARNING]  
     >  此更改影响在当前版本和以前版本中均使用 NaturalLanguage6.dll 的所有语言。  
   
-3.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID  .  
+3.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**。  
   
 4.  如果以下键不存在，则使用以下步骤为所选语言的当前断字符和词干分析器接口的 COM ClassID 添加新键：  
   
@@ -195,7 +195,7 @@ ms.locfileid: "74055187"
   
     4.  如果所选语言使用某一词干分析器，则将该键值的（默认）数据更新为来自该表的当前词干分析器的文件名。  
   
-5.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>  。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
+5.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
   
 6.  将 **WBreakerClass** 键值更新为来自以前断字符的表的值。  
   
@@ -214,8 +214,8 @@ ms.locfileid: "74055187"
 |---------------|------------------|-------------|  
 |以前的 CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |以前的文件名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|当前的 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
-|当前文件名|MSWB7.dll|None|  
+|当前的 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|无|  
+|当前文件名|MSWB7.dll|无|  
   
  **德语 (deu)，LCID 1031**  
   
@@ -232,8 +232,8 @@ ms.locfileid: "74055187"
 |---------------|------------------|-------------|  
 |以前的 CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |以前的文件名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|当前的 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
-|当前文件名|MsWb70011.dll|None|  
+|当前的 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|无|  
+|当前文件名|MsWb70011.dll|无|  
   
  **荷兰语 (nld)，LCID 1043**  
   
@@ -258,13 +258,13 @@ ms.locfileid: "74055187"
   
  **受影响的语言的列表**  
   
-|“报表”|缩写<br />用于<br />注册表|LCID|  
+|语言|缩写<br />用于<br />注册表|LCID|  
 |--------------|---------------------------------------|----------|  
 |简体中文|chs|2052|  
 |繁体中文|cht|1028|  
 |泰语|tha|1054|  
-|繁体中文|zh-hk|3076|  
-|繁体中文|zh-mo|5124|  
+|中文(繁体)|zh-hk|3076|  
+|中文(繁体)|zh-mo|5124|  
 |简体中文|zh-sg|4100|  
   
  前面的表在缩写列上按字母顺序排序。  
@@ -275,7 +275,7 @@ ms.locfileid: "74055187"
   
 1.  不要从 Binn 文件夹中删除组件的当前版本的文件。  
   
-2.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID  .  
+2.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**。  
   
 3.  使用以下步骤添加 COM ClassID 的新键，用于所选语言的以前的断字符和词干分析器接口：  
   
@@ -287,7 +287,7 @@ ms.locfileid: "74055187"
   
     4.  如果所选语言使用某一词干分析器，则将该键值的（默认）数据更新为来自该表的以前的词干分析器的文件名。  
   
-4.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>  。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
+4.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
   
 5.  将 **WBreakerClass** 键值更新为来自当前断字符的表的值。  
   
@@ -299,7 +299,7 @@ ms.locfileid: "74055187"
   
 1.  不要从 Binn 文件夹中删除组件的以前版本的文件。  
   
-2.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID  .  
+2.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**。  
   
 3.  如果以下键不存在，则使用以下步骤为所选语言的当前断字符和词干分析器接口的 COM ClassID 添加新键：  
   
@@ -311,7 +311,7 @@ ms.locfileid: "74055187"
   
     4.  如果所选语言使用某一词干分析器，则将该键值的（默认）数据更新为来自该表的当前词干分析器的文件名。  
   
-4.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>  。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
+4.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
   
 5.  将 **WBreakerClass** 键值更新为来自以前断字符的表的值。  
   
@@ -348,8 +348,8 @@ ms.locfileid: "74055187"
 |---------------|------------------|-------------|  
 |以前的 CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |以前的文件名|Thawbrkr.dll|Thawbrkr.dll|  
-|当前的 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
-|当前文件名|MsWb7001e.dll|None|  
+|当前的 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|无|  
+|当前文件名|MsWb7001e.dll|无|  
   
  **繁体中文 (zh-hk)，LCID 3076**  
   

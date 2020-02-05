@@ -11,10 +11,10 @@ ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d1c5a85072bec1fc304156268680c201ad2245e
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095645"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>使用 Transact-SQL 存储过程创建和运行跟踪
@@ -40,7 +40,7 @@ ms.locfileid: "74095645"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[优化 SQL 跟踪](../../relational-databases/sql-trace/optimize-sql-trace.md)|说明如何降低跟踪对系统性能的影响。|  
 |[筛选跟踪](../../relational-databases/sql-trace/filter-a-trace.md)|介绍使用筛选器进行跟踪。|  

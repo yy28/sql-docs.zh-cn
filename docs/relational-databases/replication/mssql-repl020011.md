@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 348300256bfb6c208cbc3aade0f75a87024ab597
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b0d53d04f8aecde4ddbe23b28316fc0e50d38dd2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770076"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286704"
 ---
-# <a name="mssqlrepl020011"></a>MSSQL_REPL020011
+# <a name="mssql_repl020011"></a>MSSQL_REPL020011
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68770076"
 |符号名称||  
 |消息正文|进程无法在“%2”上执行“%1”。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  事务复制处理过程中的许多情况都可能引发此错误，例如日志读取器代理执行 **sp_replcmds**（此过程无法在 \<服务器名> 上执行“sp_replcmds”）或 **sp_repldone**（此过程无法在 \<服务器名> 上执行“sp_repldone”）时。  
   
 ## <a name="user-action"></a>用户操作  

@@ -17,10 +17,10 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bf8e8c7bafb72b90edfe108c5702ad330bc3e700
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293471"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目标大容量加载数据
@@ -58,14 +58,14 @@ ms.locfileid: "71293471"
     > [!NOTE]  
     >  目标自动映射名称相同的列。  
   
-9. 单击“高级”  ，并设置大容量加载选项：“保留标识”  、“保留 NULL”  、“表锁”  、“检查约束”  和“激发触发器”  。  
+9. 单击 **“高级”** ，并设置大容量加载选项： **“保留标识”** 、 **“保留空值”** 、 **“表锁”** 、 **“检查约束”** 和 **“激发触发器”** 。  
   
      也可以指定要插入的第一个和最后一个输入行、在插入操作停止前可以出现的最大错误数以及插入据以排序的列。  
   
     > [!NOTE]  
     >  排序顺序由列所列出的顺序确定。  
   
-10. 单击“确定”  。  
+10. 单击“确定”。   
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

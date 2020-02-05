@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 321859ffa20f9c576635a2c082b5f0d2458e848d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 74d521319e8378b264b560dacbfb664b737b810c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770634"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286394"
 ---
 # <a name="filter-table-rows"></a>筛选表行
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,8 +50,8 @@ ms.locfileid: "68770634"
  **筛选的表**  
  此窗格使用您向发布中的表项目添加的筛选器进行填充。 带行筛选器的表在窗格中显示为顶级节点。 对于合并发布，筛选操作通过联接筛选器扩展到的表显示为子节点。  
   
- **“添加”**  
- 单击 **“添加”** 可以启动一个用于对表项目进行筛选的对话框。 对于快照发布或事务发布，单击 **“添加”** 将立即启动对话框。 对于合并发布，单击“添加”将会显示三个选项  ：“添加筛选器”、“添加联接以扩展所选筛选器”和“自动生成筛选器”    。  
+ **添加**  
+ 单击 **“添加”** 可以启动一个用于对表项目进行筛选的对话框。 对于快照发布或事务发布，单击 **“添加”** 将立即启动对话框。 对于合并发布，单击 **“添加”** 将会显示三个选项： **“添加筛选器”** 、 **“添加联接以扩展所选筛选器”** 和 **“自动生成筛选器”** 。  
   
 -   选择 **“添加筛选器”** 将启动 **“添加筛选器”** 对话框。 使用此对话框可以将行筛选器应用于表项目。 例如，在 **“添加筛选器”** 对话框中，可以指定在将包含客户数据的表复制到订阅服务器时，该表应只包含法国客户的相关数据。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "68770634"
  **查找表**  
  仅将发布与联接筛选器合并。 单击 **“查找表”** 可以在复杂的筛选器树中查找表。 在关系复杂的数据库中，一个表可以联接到多个表，因此可能出现在筛选器树中的多个位置。  
   
- 实际的表只显示在树中的一个位置，该表在其他位置使用快捷方式来表示。 表的快捷方式只是对该表的引用；它不显示该表的子节点。 快捷方式节点标记有快捷方式箭头，展开该节点将会显示文本“单击‘查找表’可查看 \<表名> 表”  。  
+ 实际的表只显示在树中的一个位置，该表在其他位置使用快捷方式来表示。 表的快捷方式只是对该表的引用；它不显示该表的子节点。 快捷方式节点标记有快捷方式箭头，展开该节点将会显示文本“单击‘查找表’可查看 **表名> 表”\<** 。  
   
  选择窗格中的快捷方式节点，并单击 **“查找表”** 。 窗格随即展开，并突出显示所查找的表。 如果单击 **“查找表”** 而没有选定快捷方式节点，将会启动 **“查找表”** 对话框。  
   
- **Filter**  
+ **筛选器**  
  包含筛选器窗格中选定筛选器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义。  
   
 ## <a name="see-also"></a>另请参阅  

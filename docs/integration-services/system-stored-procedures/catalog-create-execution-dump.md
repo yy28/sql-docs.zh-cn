@@ -11,10 +11,10 @@ ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 901f430f09621c6ad9be20759cddb757e2e96ee7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295507"
 ---
 # <a name="catalogcreate_execution_dump"></a>catalog.create_execution_dump 
@@ -24,7 +24,7 @@ ms.locfileid: "71295507"
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  导致暂停正在运行的包并创建转储文件。 此文件存储在 \<drive>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps文件夹中  。  
+  导致暂停正在运行的包并创建转储文件。 此文件存储在 *drive>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps文件夹中\<* 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ EXEC create_execution_dump @execution_id = 88
  存储过程失败时引发错误。  
   
 ## <a name="result-set"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程要求用户为具有 ssis_admin 数据库角色的成员  。  

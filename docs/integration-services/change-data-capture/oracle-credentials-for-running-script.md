@@ -11,10 +11,10 @@ ms.assetid: 4a301cb0-2f5b-41ba-81bf-46b41d07f137
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9aa748fff6c0986290267815b90b43fd8fecb6b1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294654"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Oracle Credentials for Running Script
@@ -29,14 +29,14 @@ ms.locfileid: "71294654"
   
  **身份验证**  
   
- 选择下列选项之一：  
+ 选择以下方案之一：  
   
 -   **Windows 身份验证**：选择此选项可使用当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
   
--   **Oracle 身份验证**：如果选择此选项，则必须在连接到的源 Oracle 数据库中为用户键入“用户名”和“密码”   。  
+-   **Oracle 身份验证**：如果选择此选项，则必须在您连接到的源 Oracle 数据库中为用户键入 **“用户名”** 和 **“密码”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [如何管理 CDC 实例](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [查看和生成补充日志记录脚本](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
   

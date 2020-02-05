@@ -13,10 +13,10 @@ ms.assetid: 86d72275-45c7-459f-98cf-f5a366ed279c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a267600824313e55f49a175aee89891d7aad3dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137026"
 ---
 # <a name="web-server-information"></a>Web 服务器信息
@@ -33,7 +33,7 @@ ms.locfileid: "68137026"
 ## <a name="see-also"></a>另请参阅  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [非 SQL Server 订阅服务器](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
+ [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [合并复制的 Web 同步](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   

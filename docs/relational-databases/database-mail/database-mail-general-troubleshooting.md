@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fb063b3af008ad7e734197a0d4360c9d83535cd3
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094559"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>常规数据库邮件故障排除步骤 
@@ -45,7 +45,7 @@ ms.locfileid: "74094559"
    在结果窗格中，确认[数据库邮件 XP](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 的 run_value 是否设置为 1。
    如果 run_value 不是 1，则未启用数据库邮件。 数据库邮件不会自动启用，以减少恶意用户可用来发起攻击的功能数。 有关详细信息，请参阅[了解外围应用配置](../security/surface-area-configuration.md)。
 
-1. 如果确定可以启用数据库邮件，请执行以下代码：
+1. 如果您确定可以启用数据库邮件，请执行下面的代码：
 
     ```sql
     sp_configure 'Database Mail XPs', 1; 
@@ -81,7 +81,7 @@ ms.locfileid: "74094559"
     ,@membername = '<database user>';
     ```
 
-1. 要发送数据库邮件，用户必须至少可以访问一个数据库邮件配置文件。 要列出用户（主体）及其可以访问的配置文件，请执行以下语句。
+1. 若要发送数据库邮件，用户必须有权访问至少一个数据库邮件配置文件。 若要列出用户（主体）及其有权访问的配置文件，请执行以下语句：
 
     ```sql
     EXEC msdb.dbo.sysmail_help_principalprofile_sp;
@@ -108,7 +108,7 @@ ms.locfileid: "74094559"
     EXEC msdb.dbo.sysmail_help_queue_sp @queue_type = 'mail';
     ```
   
-   邮件队列的状态应为 RECEIVES_OCCURRING。 队列的状态可能会不时发生改变。 如果邮件队列的状态不是 RECEIVES_OCCURRING，请尝试重启队列。 请使用以下语句停止队列：
+   邮件队列的状态应为 RECEIVES_OCCURRING。 邮件队列的状态可能会不时发生改变。 如果邮件队列的状态不是 RECEIVES_OCCURRING，请尝试重启队列。 请使用以下语句停止队列：
    
 ```sql
 EXEC msdb.dbo.sysmail_stop_sp;
@@ -125,14 +125,14 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 ## <a name="do-problems-affect-some-or-all-accounts"></a>问题是否影响某些或所有帐户
 
-1. 如果确定只有某些而非全部配置文件可以发送邮件，则可能是有问题的配置文件所使用的数据库邮件帐户存在故障。 要确定成功发送邮件的帐户，请执行以下语句：
+1. 如果确定只有某些配置文件可以发送邮件，而不是所有配置文件都可以，则可能是有问题的配置文件所使用的数据库邮件帐户存在问题。 若要确定哪些帐户可以成功发送邮件，请执行以下语句：
 
     ```sql
     SELECT sent_account_id, sent_date FROM msdb.dbo.sysmail_sentitems;
     ```
 
 1. 如果有问题的配置文件未使用列出的任何帐户，那么可能是该配置文件可以使用的所有帐户都不能正常工作。 若要测试各个帐户，请使用数据库邮件配置向导创建一个只包含一个用户的新配置文件，然后通过“发送测试电子邮件”对话框使用新帐户发送邮件。 
-1. 要查看数据库邮件返回的错误消息，请执行以下语句：
+1. 若要查看数据库邮件返回的错误消息，请执行以下语句：
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log;
@@ -143,11 +143,11 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 ## <a name="retry-mail-delivery"></a>重试邮件发送
 
-1. 如果确定数据库邮件失败是由于无法可靠地到达 SMTP 服务器而导致的，则可以通过增大数据库邮件尝试发送每封邮件的次数来增加邮件发送的成功率。 启动数据库邮件配置向导，然后选择“查看或更改系统参数”选项。 还可以将更多帐户与配置文件相关联，这样，当从主帐户进行故障转移时，数据库邮件将使用故障转移帐户发送电子邮件。
+1. 如果确定数据库邮件失败是由于无法可靠地到达 SMTP 服务器而导致的，则可以通过增大数据库邮件尝试发送每封邮件的次数来增加邮件传送的成功率。 启动数据库邮件配置向导，然后选择“查看或更改系统参数”选项。 还可以将更多帐户与配置文件相关联，这样，当从主帐户进行故障转移时，数据库邮件将使用故障转移帐户发送电子邮件。
 1. 在“配置系统参数”页上，“帐户重试次数”的默认值为 5 次，“帐户重试延迟时间”的默认值为 60 秒，这意味着如果在 5 分钟之内不能到达 SMTP 服务器，邮件发送将失败。 增大这些参数可以延长邮件发送失败之前的时间。
 
     > [!NOTE]
-    > 发送大量邮件时，虽然较大的默认值可以提高可靠性，但会显著增加资源的使用量，因为会一遍又一遍地尝试发送大量邮件。 通过解决阻止数据库邮件与 SMTP 服务器快速建立联系的网络或 SMTP 服务器问题，解决根本问题。
+    > 当发送大量邮件时，虽然较大的默认值可以提高可靠性，但会显著增加资源的使用量，因为会一遍又一遍地尝试传递大量邮件。 若要从根本上解决问题，需要解决阻碍数据库邮件与 SMTP 服务器快速建立联系的网络问题或 SMTP 服务器问题。
 
 
 

@@ -16,10 +16,10 @@ ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5331a474d24d2204ca81e37427fc2615ecede622
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078001"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>将 AUTO 模式与 FOR XML 一起使用
@@ -62,7 +62,7 @@ FOR XML AUTO
   
 -   CustomerID 引用 Cust 表。 因此，创建一个 <`Cust`> 元素，CustomerID 作为其属性添加。  
   
--   接下来的三列 OrderHeader.CustomerID、OrderHeader.SaleOrderID 和 OrderHeader.Status 引用 OrderHeader 表。 因此，为 <`Cust`> 元素添加 <`OrderHeader`> 子元素，这三列作为 <`OrderHeader`> 的属性添加。  
+-   接下来的三列 OrderHeader.CustomerID、OrderHeader.SaleOrderID 和 OrderHeader.Status 引用 OrderHeader 表。 因此，为 <`OrderHeader`> 元素添加 <`Cust`> 子元素，这三列作为 <`OrderHeader`> 的属性添加。  
   
 -   接着，Cust.CustomerType 列再次引用 Cust 表，该表已由 Cust.CustomerID 列标识。 因此，不创建新元素， 而是为以前创建的 <`Cust`> 元素添加 CustomerType 属性。  
   
