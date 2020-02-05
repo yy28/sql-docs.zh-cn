@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095735"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 路径表达式 (SQL Server)
@@ -65,9 +65,9 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
 -   属性路径是一组路径步幅。 路径步幅可以包含下列元素和运算符。  
   
-    -   键名。 例如， `$.name` 和 `$."first name"`。 如果键名以美元符号开头或者包含空格等特殊字符，请为其加上引号。   
+    -   键名。 例如，`$.name` 和 `$."first name"`。 如果键名以美元符号开头或者包含空格等特殊字符，请为其加上引号。   
   
-    -   数组元素。 例如， `$.product[3]`。 数组从零开始。  
+    -   数组元素。 例如，`$.product[3]` 。 数组从零开始。  
   
     -   点运算符 (`.`) 指示对象的成员。 例如，在 `$.people[1].surname` 中，`surname` 是 `people` 的子级。
   
@@ -89,12 +89,12 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
  下表显示了一些路径表达式示例。  
   
-|路径表达式|ReplTest1|  
+|路径表达式|值|  
 |---------------------|-----------|  
 |$.people[0].name|John|  
-|$.people[1]|{ "name":"Jane",  "surname": null, "active": true }|  
-|$.people[1].surname|null|  
-|$|{ "people": [ { "name":"John",  "surname":"Doe" },<br />   { "name":"Jane",  "surname": null, "active": true } ] }|  
+|$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  
+|$.people[1].surname|Null|  
+|$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>内置函数如何处理重复的路径  
  如果 JSON 文本包含重复属性，例如，同一级别上有两个同名的键，JSON_VALUE 和 JSON_QUERY 函数将仅返回第一个与路径匹配的值   。 若要分析包含重复键的 JSON 对象并返回所有值，请使用 OPENJSON，如下面的示例中所示  。  

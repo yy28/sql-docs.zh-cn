@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107137"
 ---
 # <a name="disable-indexes-and-constraints"></a>禁用索引和约束
@@ -130,9 +130,9 @@ ms.locfileid: "68107137"
  显示创建索引的表或视图的名称。  
   
  **索引类型**  
- 显示索引的类型：聚集、非聚集、空间或 XML     。  
+ 显示索引的类型：  “聚集”、  “非聚集”、  “空间”或  ”XML”。  
   
- **“状态”**  
+ **Status**  
  显示禁用操作的状态。 执行之后可能的值包括：  
   
 -   空白  
@@ -143,7 +143,7 @@ ms.locfileid: "68107137"
   
      禁用索引操作已启动，但尚未完成。  
   
--   **成功**  
+-   **Success**  
   
      禁用操作已成功完成。  
   

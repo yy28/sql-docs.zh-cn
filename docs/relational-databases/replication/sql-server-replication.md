@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 427367994418ea7e82288541c89b47cc8bb7ea75
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: eb45cf400b0fe8318d0bef5a99b36f20bff8ef21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958343"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287114"
 ---
 # <a name="sql-server-replication"></a>SQL Server 复制
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "70958343"
   
 ## <a name="publications-and-articles"></a>发布和项目 
   
--   [Create a Publication](publish/create-a-publication.md)    
+-   [创建发布](publish/create-a-publication.md)    
 -   [定义项目](publish/define-an-article.md)   
 -   [查看和修改发布属性](publish/view-and-modify-publication-properties.md)   
 -   [查看和修改项目属性](publish/view-and-modify-article-properties.md)    
@@ -77,7 +77,7 @@ ms.locfileid: "70958343"
 ### <a name="transactional-replication-options"></a>事务复制选项  
   
 -   [为事务项目的数据更改设置传播方法](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
--   [对事务发布启用更新订阅](publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   [允许更新事务发布的订阅](publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
 ### <a name="merge-replication-options"></a>合并复制选项  
   
@@ -128,7 +128,7 @@ ms.locfileid: "70958343"
 -   [为 Oracle 发布服务器配置事务集作业（复制 Transact-SQL 编程）](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
 -   [升级复制脚本（复制 Transact-SQL 编程）](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>监视器
+## <a name="monitor"></a>监视
   
 -   [允许非管理员使用复制监视器](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [以编程方式监视复制](monitor/programmatically-monitor-replication.md)    

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98ab53220b995c0c94aa2eb25d509bd67f7090b5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908041"
 ---
 # <a name="create-nonclustered-indexes"></a>创建非聚集索引
@@ -69,7 +69,7 @@ ms.locfileid: "72908041"
   
 7.  在网格中，选择“创建为聚集”  ，然后从该属性右侧的下拉列表中选择“否”  。  
   
-8.  单击 **“关闭”** 。  
+8.  单击“关闭”  。  
   
 9. 在“文件”  菜单上，单击“保存”  以保存 _table_name_。  
 
@@ -89,7 +89,7 @@ ms.locfileid: "72908041"
   
 7.  在“从 table_name 中选择列”   对话框中，选中要添加到非聚集索引的一个或多个表列的复选框。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 9. 在 **“新建索引”** 对话框中，单击 **“确定”** 。  
   

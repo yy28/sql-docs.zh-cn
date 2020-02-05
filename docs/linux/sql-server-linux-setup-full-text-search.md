@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874762"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安装 SQL Server 全文搜索
@@ -86,9 +86,9 @@ sudo zypper update mssql-server-fts
 
 全文搜索使用[分词系统](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)来确定如何标识基于语言的单个单词。 可通过查询 sys.fulltext_languages 目录视图获取注册的分词系统列表  。 SQL Server 已安装以下语言的分词系统：
 
-| “报表” | 语言 ID |
+| 语言 | 语言 ID |
 |---|---|
-| 非特定语言 | 0 |
+| 中立 | 0 |
 | 阿拉伯语 | 1025 |
 | 孟加拉语（印度） | 1093 |
 | 书面挪威语 | 1044 |
@@ -115,7 +115,7 @@ sudo zypper update mssql-server-fts
 | 意大利语 | 1040 |
 | 日语 | 1041 |
 | 卡纳达语 | 1099 |
-| 朝鲜语 | 1042 |
+| 韩语 | 1042 |
 | 拉脱维亚语 | 1062 |
 | 立陶宛语 | 1063 |
 | 马来语（马来西亚） | 1086 |

@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4661fa1963b120a091953bff883a0510a396345e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099971"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68099971"
 
 控制到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的连接发出的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句的锁定行为和行版本控制行为。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>语法
 
@@ -126,7 +126,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  范围锁处于与事务中执行的每个语句的搜索条件相匹配的键值范围之内。 这样可以阻止其他事务更新或插入任何行，从而限定当前事务所执行的任何语句。 这意味着如果再次执行事务中的任何语句，则这些语句便会读取同一组行。 在事务完成之前将一直保持范围锁。 这是限制最多的隔离级别，因为它锁定了键的整个范围，并在事务完成之前一直保持范围锁。 因为并发级别较低，所以应只在必要时才使用该选项。 该选项的作用与在事务内所有 SELECT 语句中的所有表上设置 HOLDLOCK 相同。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  一次只能设置一个隔离级别选项，而且设置的选项将一直对那个连接始终有效，直到显式更改该选项为止。 事务中执行的所有读取操作都会在指定的隔离级别的规则下运行，除非语句的 FROM 子句中的表提示为表指定了其他锁定行为或版本控制行为。  
   
  事务隔离级别定义了可为读取操作获取的锁类型。 针对 READ COMMITTED 或 REPEATABLE READ 获取的共享锁通常为行锁，尽管当读取引用了页或表中大量的行时，行锁可以升级为页锁或表锁。 如果某行在被读取之后由事务进行了修改，则该事务会获取一个用于保护该行的排他锁，并且该排他锁在事务完成之前将一直保持。 例如，如果 REPEATABLE READ 事务具有用于某行的共享锁，并且该事务随后修改了该行，则共享行锁便会转换为排他行锁。  

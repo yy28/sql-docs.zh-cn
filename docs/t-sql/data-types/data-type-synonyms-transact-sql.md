@@ -17,10 +17,10 @@ ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ebe6db6130b3d9f058c1c8c65572263348f3dd99
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72689836"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>数据类型同义词 (Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "72689836"
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-在数据定义语言 (DDL) 语句中，数据类型同义词可用来代替相应的基本数据类型名。 这些语句包括 CREATE TABLE、CREATE PROCEDURE 和 DECLARE \@变量  。 但是，创建对象后看不到同义词。 创建对象后，为对象分配与同义词相关联的基本数据类型。 没有记录显示在创建对象的语句中指定了同义词。
+在数据定义语言 (DDL) 语句中，数据类型同义词可用来代替相应的基本数据类型名。 这些语句包括 CREATE TABLE、CREATE PROCEDURE 和 DECLARE *变量\@* 。 但是，创建对象后看不到同义词。 创建对象后，为对象分配与同义词相关联的基本数据类型。 没有记录显示在创建对象的语句中指定了同义词。
   
 将为从原始对象派生的对象（如结果集列或表达式）分配基本数据类型。 使用原始对象或任何派生对象的任何元数据函数都将报告基本数据类型，而不是同义词，其中包括：
 

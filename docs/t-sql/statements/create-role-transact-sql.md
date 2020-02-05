@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5a8e03235614ce9ae5b2461154c97a2bb5f67f1
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064620"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73064620"
 
   在当前数据库中创建新的数据库角色。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  AUTHORIZATION owner_name   
  将拥有新角色的数据库用户或角色。 如果未指定用户，则执行 CREATE ROLE 的用户将拥有该角色。 角色的所有者或拥有角色的任何成员都可以添加或删除角色的成员。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  角色是数据库级别的安全对象。 在创建角色后，可以使用 GRANT、DENY 和 REVOKE 来配置角色的数据库级权限。 若要向数据库角色添加成员，请使用 [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md)。 有关详细信息，请参阅[数据库级别角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  
   
  在 sys.database_role_members 和 sys.database_principals 目录视图中可以查看数据库角色。  

@@ -1,29 +1,32 @@
 ---
-title: “断点”窗口 | Microsoft Docs
+title: “断点”窗口
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ''
-ms.custom: ''
-ms.date: 11/04/2019
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc5600a7cd9e933046700204a8dac916199832c6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: a80750a9885bd3cd61afd6b6719f5839b5503eac
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638011"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243372"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL 调试器 -“断点”窗口
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **“断点”** 窗口列出在当前 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中设置的所有断点。 若要管理断点，请使用“断点”窗口中的工具栏。  断点是代码中的某些位置，在调试模式下执行在这些位置暂停，以便您可以查看调试数据。
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="task-list"></a>任务列表
 
@@ -46,7 +49,7 @@ ms.locfileid: "73638011"
 
 在 **“列”** 列表中选择以下列后，可以添加或删除这些列。  
 
-**Filter**  
+**筛选器**  
 显示“(无)”  。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不支持设置断点筛选器。
 
 **命中条件**  
@@ -55,7 +58,7 @@ ms.locfileid: "73638011"
 **语言**  
 如果是 **，则显示** Transact-SQL [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
 
-**函数**  
+**Function**  
 显示设有断点的行的行号。  
 
 **File**  
@@ -65,7 +68,7 @@ ms.locfileid: "73638011"
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不支持此功能。  
 
 **处理**  
-显示“[SQL]”  ，则表明这是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 进程。 后面跟随代码在其中执行的[!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例的名称。
+显示“[SQL]”  ，则表明这是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 进程。 后面跟随代码在其中执行的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例的名称。
 
 ## <a name="breakpoints-window-toolbar"></a>“断点”窗口工具栏
 
@@ -86,7 +89,7 @@ ms.locfileid: "73638011"
 **转到源代码**  
 将光标定位在查询编辑器中包含所选断点的行。
 
-**列**  
+**“列”**  
 列出所有可以在“断点”  窗口中显示的列。 复选框指示所显示的列。 若要在 **“断点”** 窗口中添加或删除某一列，请在此列表中选择该列。
 
 ## <a name="see-also"></a>另请参阅

@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 05906cfd0e72531bf332ebca4215df047eb8e3fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026450"
 ---
-# <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
+# <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此函数会计算某个值在某个值组内的累积分布。 换言之，`CUME_DIST` 计算某指定值在一组值中的相对位置。 假定采用升序，行 _r_ 中 `CUME_DIST` 的值定义为低于或等于行 _r_ 的值的行数除以在分区或查询结果集中求出的行数。 `CUME_DIST` 类似于 `PERCENT_RANK` 函数。
+对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此函数会计算某个值在某个值组内的累积分布。 换言之，`CUME_DIST` 计算某指定值在一组值中的相对位置。 假定采用升序，行 `CUME_DIST`r_中_ 的值定义为低于或等于行 _r_ 的值的行数除以在分区或查询结果集中求出的行数。 `CUME_DIST` 类似于 `PERCENT_RANK` 函数。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ _partition\_by\_clause_ 将 FROM 子句结果集划分为要应用函数的分�
 ## <a name="return-types"></a>返回类型
 **float(53)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `CUME_DIST` 返回一系列大于 0 且小于或等于 1 的值。 关联值始终计算为相同的累积分布值。 `CUME_DIST` 默认包含 NULL 值，且将这些值视为最低的可能值。
   
 `CUME_DIST` 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。

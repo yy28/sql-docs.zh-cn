@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a26dbcc45f5c236b6cbe8998b2d12808711ff6ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044119"
 ---
 # <a name="drop-login-transact-sql"></a>DROP LOGIN (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68044119"
 
   删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ DROP LOGIN login_name
  login_name   
  指定要删除的登录名。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  不能删除正在登录的登录名。 也不能删除拥有任何安全对象、服务器级对象或 SQL Server 代理作业的登录名。  
   
  可以删除数据库用户映射到的登录名，但是这会创建孤立用户。 有关详细信息，请参阅 [孤立用户故障排除 (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。  

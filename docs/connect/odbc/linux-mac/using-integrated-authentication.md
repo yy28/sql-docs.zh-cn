@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008699"
 ---
 # <a name="using-integrated-authentication"></a>使用集成身份验证
@@ -32,9 +32,9 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-使用 DSN 连接时，还可以向 `odbc.ini` 中的 DSN 条目添加 Trusted_Connection=yes  。
+使用 DSN 连接时，还可以向  **中的 DSN 条目添加 Trusted_Connection=yes**`odbc.ini`。
   
-`sqlcmd` 的 `-E` 选项和 `bcp` 的 `-T` 选项也可用于指定集成身份验证；有关详细信息，请参阅[使用 sqlcmd 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)和[使用 bcp 进行连接](../../../connect/odbc/linux-mac/connecting-with-bcp.md)   。
+`-E` 的 `sqlcmd` 选项和 `-T` 的 `bcp` 选项也可用于指定集成身份验证；有关详细信息，请参阅[使用 sqlcmd 进行连接**和**使用 bcp 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)[  ](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。
 
 确保要连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的客户端主体已使用 Kerberos KDC 进行身份验证。
   
@@ -60,11 +60,11 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 ## <a name="tracking-access-to-a-database"></a>跟踪对数据库的访问
 
-当通过系统帐户使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，数据库管理员可以创建数据库访问的审计线索。  
+当通过系统帐户使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，数据库管理员可以创建数据库访问的审核线索。  
   
 登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时需使用系统帐户，并且 Linux 上未提供相关功能来模拟安全上下文。 因此，需要更多信息来确定用户。
   
-若要代表用户（而非系统帐户）审核 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的活动，应用程序必须使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE AS  。  
+To audit activities in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on behalf of users other than the system account, the application must use [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
 若要提高应用程序性能，应用程序可以将连接池与集成身份验证和审核结合使用。 但是，合并连接池、集成身份验证和审核会带来安全风险，因为 unixODBC 驱动程序管理器允许不同的用户重复使用已入池的连接。 有关详细信息，请参阅 [ODBC 连接池](http://www.unixodbc.org/doc/conn_pool.html)。  
 
@@ -72,7 +72,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>使用 Active Directory 管理用户身份
 
-应用程序系统管理员不必管理单独的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登录凭据集。 可以针对集成身份验证将 Active Directory 配置为密钥发行中心 (KDC)。 有关详细信息，请参阅 [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)。
+应用程序系统管理员不必管理单独的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录凭据集。 可以针对集成身份验证将 Active Directory 配置为密钥发行中心 (KDC)。 有关详细信息，请参阅 [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)。
 
 ## <a name="using-linked-server-and-distributed-queries"></a>使用链接服务器和分布式查询
 
@@ -87,10 +87,10 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 配置集成身份验证后，凭据将传递给链接服务器。  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>集成身份验证和 sqlcmd
-若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `sqlcmd` 的 `-E` 选项。 确保运行 `sqlcmd` 的帐户与默认的 Kerberos 客户端主体相关联。
+若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `-E` 的 `sqlcmd` 选项。 确保运行 `sqlcmd` 的帐户与默认的 Kerberos 客户端主体相关联。
 
 ## <a name="integrated-authentication-and-bcp"></a>集成身份验证和 bcp
-若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `bcp` 的 `-T` 选项。 确保运行 `bcp` 的帐户与默认的 Kerberos 客户端主体相关联。 
+若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `-T` 的 `bcp` 选项。 确保运行 `bcp` 的帐户与默认的 Kerberos 客户端主体相关联。 
   
 将 `-T` 与 `-U` 或 `-P` 选项结合使用是错误的。
   
@@ -98,7 +98,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 
 以下是 SPN 在连接字符串或连接属性中使用的语法：  
 
-|语法|描述|  
+|语法|说明|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|使用 TCP 时访问接口生成的默认 SPN。 *port* 是 TCP 端口号。 *fqdn* 是一个完全限定域名。|  
   

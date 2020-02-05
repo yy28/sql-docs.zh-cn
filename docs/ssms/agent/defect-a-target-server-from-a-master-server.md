@@ -1,10 +1,9 @@
 ---
-title: 将目标服务器与主服务器脱离 | Microsoft Docs
-ms.custom: ''
+title: 将目标服务器从主服务器脱离
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 114dbc73c42404d66de34eb0273d47abd561f337
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: e61c18fc2312fc3b04569f6a6d536ce077c4c35e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553034"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252130"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>将目标服务器从主服务器脱离
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,5 +72,5 @@ sp_msx_defect ;
 ## <a name="see-also"></a>另请参阅  
 [创建多服务器环境](../../ssms/agent/create-a-multiserver-environment.md)  
 [企业范围的自动化管理](../../ssms/agent/automated-administration-across-an-enterprise.md)  
-[使多台目标服务器脱离主服务器](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+[将多台目标服务器从主服务器脱离](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   

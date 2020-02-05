@@ -24,10 +24,10 @@ ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982056"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982056"
 
   更改队列的属性。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -144,7 +144,7 @@ WITH
  指定存储过程以当前用户身份执行。 （执行该 ALTER QUEUE 语句的数据库主体。）  
   
  'user_name'   
- 存储过程执行时所用的用户的名称。 user_name 必须是指定为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户  。 当前用户必须对指定的 user_name 具有 IMPERSONATE 权限  。  
+ 存储过程执行时所用的用户的名称。 user_name 必须是指定为 *标识符的有效* 用户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 当前用户必须对指定的 user_name 具有 IMPERSONATE 权限  。  
   
  OWNER  
  指定存储过程以队列的所有者身份执行。  
@@ -157,7 +157,7 @@ WITH
   
  将有害消息处理设置为 OFF 的队列在五个连续的事务回滚之后不会被禁用。 这样，应用程序就可以定义自定义的有害消息处理系统。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当指定了激活存储过程的队列中包含消息时，如果将激活状态从 OFF 更改为 ON，则会立即激活该激活存储过程。 如果将激活状态从 ON 更改为 OFF，则会阻止代理激活存储过程的实例，但不会停止正在运行的存储过程实例。  
   
  修改队列以添加激活存储过程时，不会更改该队列的激活状态。 更改队列的激活存储过程时，也不会影响当前正在运行的激活存储过程实例。  
@@ -191,7 +191,7 @@ ALTER QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. 更改队列读取器数  
- 以下示例将 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 为此队列启动的最大存储过程实例数设置为 `7`。  
+ 以下示例将 `7` 为此队列启动的最大存储过程实例数设置为 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  

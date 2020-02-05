@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982937"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982937"
 
   根据指定的表标识号、索引或统计信息名称以及属性名称，返回已命名的索引或统计信息属性值。 对于 XML 索引，返回 NULL。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,13 +47,13 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  index_or_statistics_name   
  一个表达式，包含要为其返回属性信息的索引或统计信息的名称。 index_or_statistics_name 的数据类型为 nvarchar(128)   。  
   
- property   
+ *property*  
  一个表达式，包含要返回的数据库属性的名称。 property 的数据类型为 varchar(128)，它可以为以下值之一   。  
   
 > [!NOTE]  
 >  除非另外注明，否则出现以下情况时将返回 NULL：property 不是有效的属性名称；object_ID 不是有效的对象 ID；object_ID 不是指定属性支持的对象类型；调用方无权查看对象的元数据    。  
   
-|属性|描述|ReplTest1|  
+|properties|说明|值|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|索引的深度。|索引级别数。<br /><br /> NULL = XML 索引或输入无效。|  
 |**IndexFillFactor**|创建索引或最后重新生成索引时使用的填充因子值。|填充因子|  
@@ -74,13 +74,13 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  出现错误时或调用方没有查看对象的权限时，将返回 NULL。  
   
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 也就是说，如果用户对该对象没有任何权限，则那些会生成元数据的内置函数（如 INDEXPROPERTY）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
- 以下示例针对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Employee` 表的 `PK_Employee_BusinessEntityID` 索引返回 IsClustered、IndexDepth 和 IndexFillFactor 属性的值    。  
+ 以下示例针对 **数据库中** 表的  **索引返回 IsClustered、IndexDepth 和 IndexFillFactor 属性的值**  `PK_Employee_BusinessEntityID``Employee`[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。  
   
 ```  
 SELECT   

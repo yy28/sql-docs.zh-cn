@@ -26,10 +26,10 @@ helpviewer_keywords:
 - rank
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
 ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73882407"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
@@ -94,7 +94,7 @@ INFORMATION_TYPE_ID
 是基于预定义的一组值的标识符，这组值定义敏感度等级。 由高级威胁防护等其他服务用于根据其级别来检测异常。
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 
 - 只能向单个对象添加一个分类。 向已进行分类的对象添加分类将覆盖现有分类。
 - 可以使用单个 `ADD SENSITIVITY CLASSIFICATION` 语句对多个对象进行分类。

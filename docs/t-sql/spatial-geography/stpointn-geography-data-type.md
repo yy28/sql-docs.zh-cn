@@ -18,10 +18,10 @@ ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 12ae393f99510df743b5a5ec0bf777f7b982d570
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120821"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN（geography 数据类型）
@@ -43,11 +43,11 @@ ms.locfileid: "68120821"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
- 开放地理空间联盟 (OGC) 类型：**Point**  
+ 开放地理空间信息联盟 (OGC) 类型：Point   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 geography 实例是用户创建的，则 STPointN() 返回由 expression 通过按照点的原始输入顺序对点进行排序而指定的点   。  
   
  如果 geography 实例是系统构建的，则 STPointN() 返回由 expression 通过按照点的输出顺序对所有点进行排序而指定的点，点的输出顺序为：首先按 geography 实例、然后按实例中的环（如果适用），最后按环中的点    。 此顺序是确定的。  

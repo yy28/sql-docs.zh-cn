@@ -13,10 +13,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908092"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -44,7 +44,7 @@ ms.locfileid: "72908092"
   
 -   复查为了部分包含的数据库而修改的数据库功能的列表。 有关详细信息，请参阅[经过修改的功能（包含的数据库）](../../relational-databases/databases/modified-features-contained-database.md)。  
   
--   若要在数据库中查找非包含的对象或功能，请查询 [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)。 有关详细信息，请参阅  
+-   若要在数据库中查找非包含的对象或功能，请查询 [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) 。 有关详细信息，请参阅  
   
 -   监视 **database_uncontained_usage** XEvent 以了解何时使用非包含的功能。  
   
@@ -62,7 +62,7 @@ GO
 ```  
   
 #### <a name="enabling-contained-databases-using-management-studio"></a>使用 Management Studio 启用包含的数据库  
- 下面的示例对[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
+ 下面的示例对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
   
 1.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”  。  
   
@@ -119,7 +119,7 @@ DEALLOCATE user_cursor ;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Contained Databases](../../relational-databases/databases/contained-databases.md)   
+ [包含的数据库](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
   

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950295"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67950295"
 
 按顺序计算变量并返回最初不等于 `NULL` 的第一个表达式的当前值。 例如，`SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` 返回第三个值，因为第三个值是首个为非 Null 的值。 
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,13 +46,13 @@ _expression_
 是任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
-返回数据类型优先级最高的 expression 的数据类型。 如果所有表达式都不可为 Null，则结果的类型也不可为 Null。  
+返回数据类型优先级最高的 expression 的数据类型  。 如果所有表达式都不可为 Null，则结果的类型也不可为 Null。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 如果所有参数都为 `NULL`，则 `COALESCE` 返回 `NULL`。 至少应有一个 Null 值为 `NULL` 类型。  
   
 ## <a name="comparing-coalesce-and-case"></a>比较 COALESCE 和 CASE  
-`COALESCE` 表达式是 `CASE` 表达式的语法快捷方式。  即查询优化器将代码 `COALESCE`(expression1,...n) 重写为以下 `CASE` 表达式：  
+`COALESCE` 表达式是 `CASE` 表达式的语法快捷方式。  即查询优化器将代码 `COALESCE`(expression1,...n) 重写为以下  _表达式_  `CASE`：  
   
 ```sql  
 CASE  
@@ -65,7 +65,7 @@ END
   
 因此，输入值（_expression1_、_expression2_、_expressionN_ 等）会被计算多次。 包含子查询的值表达式被视为不确定的且子查询会被计算两次。 此结果符合 SQL 标准。 在每种情况中，第一次计算和后续计算可能返回不同的结果。  
   
-例如，执行代码 `COALESCE((subquery), 1)` 时，计算子查询两次。 因此，您可能得到不同的结果，具体取决于查询的隔离级别。 例如，在多用户环境中，代码在 `READ COMMITTED` 隔离级别下可能返回 `NULL`。 要确保返回稳定的结果，请使用 `SNAPSHOT ISOLATION` 隔离级别，或使用 `ISNULL` 函数替换 `COALESCE`。 此外，可以重写查询以将子查询推送到嵌套 select，如以下示例中所示：  
+例如，执行代码 `COALESCE((subquery), 1)` 时，计算子查询两次。 因此，您可能得到不同的结果，具体取决于查询的隔离级别。 例如，在多用户环境中，代码在 `NULL` 隔离级别下可能返回 `READ COMMITTED`。 要确保返回稳定的结果，请使用 `SNAPSHOT ISOLATION` 隔离级别，或使用 `COALESCE` 函数替换 `ISNULL`。 此外，可以重写查询以将子查询推送到嵌套 select，如以下示例中所示：  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -109,7 +109,7 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
     );  
     ```  
   
-4.  `ISNULL` 和 `COALESCE` 的验证也不同。 例如，可以将 `ISNULL` 的 `NULL` 值转换为 **int**；而对于 `COALESCE`，则必须提供数据类型。  
+4.  `ISNULL` 和 `COALESCE` 的验证也不同。 例如，可以将 `NULL` 的 `ISNULL` 值转换为 **int**；而对于 `COALESCE`，则必须提供数据类型。  
   
 5.  `ISNULL` 仅采用两个参数。 与此相反，`COALESCE` 采用可变数量的参数。  
   
@@ -189,7 +189,7 @@ Total Salary
 (12 row(s) affected)
 ```  
   
-### <a name="c-simple-example"></a>C:简单示例  
+### <a name="c-simple-example"></a>C：简单示例  
 下面的示例演示 `COALESCE` 如何从第一个具有非 Null 值的列中选择数据。 对于此示例，假定 `Products` 表包含此数据：  
   
 ```  
@@ -219,7 +219,7 @@ NULL         White      PN9876         White
   
 请注意，在第一行中，`FirstNotNull` 值是 `PN1278`，而不是 `Socks, Mens`。 此值之所以这样是因为示例中未将 `Name` 列指定为 `COALESCE` 的参数。  
   
-### <a name="d-complex-example"></a>D:复杂示例  
+### <a name="d-complex-example"></a>D：复杂示例  
 以下示例使用 `COALESCE` 来比较三个列中的值，并仅返回列中找到的非 null 值。  
   
 ```sql  

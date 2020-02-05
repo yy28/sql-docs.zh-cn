@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 22b11ff1f9a6ed218b4c63c2f22bfb6e2d441703
-ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74550199"
 ---
 # <a name="sql_variant_property-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
@@ -60,7 +60,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
   
 ## <a name="examples"></a>示例  
 ### <a name="a-using-a-sql_variant-in-a-table"></a>A. 在表中使用 sql_variant  
- 以下示例检索有关 `colA` 值 `46279.1` 的 `SQL_VARIANT_PROPERTY` 信息，其中，`colB` =`1689`，并假设 `tableA` 有类型为 `sql_variant` 和 `colB` 的 `colA`。  
+ 以下示例检索有关 `SQL_VARIANT_PROPERTY` 值 `colA` 的 `46279.1` 信息，其中，`colB` =`1689`，并假设 `tableA` 有类型为 `colA` 和 `sql_variant` 的 `colB`。  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -83,7 +83,7 @@ decimal      8           2
 ```  
   
 ### <a name="b-using-a-sql_variant-as-a-variable"></a>B. 使用 sql_variant 作为变量   
- 以下示例检索有关名为 @v1 的变量的 `SQL_VARIANT_PROPERTY` 信息。  
+ 以下示例检索有关名为 `SQL_VARIANT_PROPERTY` 的变量的 @v1 信息。  
   
 ```sql    
 DECLARE @v1 sql_variant;  

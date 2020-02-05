@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325447"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安装 SQL Server
@@ -31,7 +31,7 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
   
 |要求|如何安装|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |对于除 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 之外的所有版本的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]安装程序均要求 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core 配置文件。 如果尚未安装此配置文件，SQL Server 安装程序将自动安装。 安装需要重启。 可在运行安装程序前安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，避免重启。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |对于除 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 之外的所有版本的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]安装程序均要求 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core 配置文件。 如果尚未安装此配置文件，SQL Server 安装程序将自动安装。 安装需要重启。 可在运行安装程序前安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，避免重启。|  
 |Windows Installer 4.5|随 Server Core 安装一同提供。|  
 |Windows PowerShell|随 Server Core 安装一同提供。|  
 |Java 运行时 |为了使用 PolyBase，需要安装相应的 Java 运行时。 有关详细信息，请参阅 [PolyBase 安装](../../relational-databases/polybase/polybase-installation.md)。|

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
 ms.openlocfilehash: 9106c4c45845d1e31d65180c8f0fd979e7e3e14c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175337"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>设置部署属性 (Reporting Services)
@@ -51,7 +51,7 @@ ms.locfileid: "66175337"
   
 6. 在 **OverwriteDataSources** 列表中，选择 **True** 以在每次发布共享数据源时覆盖服务器上的共享数据源，或选择 **False** 以保留服务器上的数据源。  
   
-7. 在“TargetServerVersion”列表中，选择 SQL Server 2016 版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或者选择“检测版本”，从而自动确定在由“TargetServer URL”属性标识的服务器上安装的版本    。 默认值为“SQL Server 2016 或更高版本”  。  
+7. 在“TargetServerVersion”列表中，选择 SQL Server 2016 版本的 **，或者选择“检测版本”，从而自动确定在由“TargetServer URL”属性标识的服务器上安装的版本**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]   。 默认值为“SQL Server 2016 或更高版本”  。  
   
      使用 **TargetServerVersion** 可以自定义生成的报表，这些报表位于在 OutputPath 中指定的路径下，对应于在 **TargetServer URL**中指定的报表服务器版本。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66175337"
   
 2. 在该项目的 **“属性页”** 对话框中，单击 **“配置管理器”** 。  
   
-3. 在 **“配置管理器”** 对话框中，选择要编辑的配置。 当前有效的配置显示为“活动(***\<配置>***)”  。  
+3. 在 **“配置管理器”** 对话框中，选择要编辑的配置。 当前有效的配置显示为“活动( *****配置>\<)”***** 。  
   
 4. 在 **“项目上下文”** 中，为解决方案中的每个项目选中或清除 **“生成”** 或 **“部署”** 。  
   

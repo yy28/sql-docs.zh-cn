@@ -13,10 +13,10 @@ ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66365c942bc3f996d834f0217f29bd82cc911457
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298105"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目标编辑器（“连接管理器”页）
@@ -62,10 +62,10 @@ ms.locfileid: "71298105"
  **InfoSource**  
  输入 InfoSource 的名称。  
   
- **类型**  
+ 类型   
  输入标识 InfoSource 类型的单字符。 下表列出了可接受的单字符值。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**D**|事务数据|  
 |**M**|主数据|  

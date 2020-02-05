@@ -13,10 +13,10 @@ ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 11a8e63d75f4194727344009dfac6f2fed77edaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031435"
 ---
 # <a name="server-properties---security-page"></a>服务器属性 -“安全性”页
@@ -37,7 +37,7 @@ ms.locfileid: "68031435"
 >  更改安全性配置后需要重新启动服务。 将服务器身份验证改为 SQL Server 和 Windows 身份验证模式时，不会自动启用 SA 帐户。 若要使用 SA 帐户，请执行带有 ENABLE 选项的 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 命令。  
   
 ## <a name="login-auditing"></a>登录审核  
- **无**  
+ 无   
  关闭登录审核。  
   
  **仅限失败的登录**  

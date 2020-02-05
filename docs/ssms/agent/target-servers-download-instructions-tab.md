@@ -1,10 +1,9 @@
 ---
-title: 目标服务器（“下载指令”选项卡）| Microsoft Docs
-ms.custom: ''
+title: 目标服务器（“下载指令”选项卡）
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7609b8f6dd7e5ab4b63b04fe2c559aae10745a3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dd210b4c51707da7350ff83fd9b9c51566109c1e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256249"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257876"
 ---
 # <a name="target-servers-download-instructions-tab"></a>目标服务器（“下载指令”选项卡）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68256249"
 **目标服务器**  
 查看要应用下载指令的服务器的名称。  
   
-**运算**  
+**操作**  
 查看下载指令将执行的操作。  
   
 **Object Name**  

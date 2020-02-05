@@ -14,10 +14,10 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212286"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>监视数据库镜像 (SQL Server)
@@ -83,7 +83,7 @@ ms.locfileid: "70212286"
   
      下表介绍了管理和使用数据库镜像监视的存储过程，它们独立于数据库镜像监视器工作。  
   
-    |过程|描述|  
+    |过程|说明|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|创建定期更新服务器实例上每个镜像数据库的状态信息的作业。|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|更改数据库镜像监视参数的值。|  
@@ -131,7 +131,7 @@ ms.locfileid: "70212286"
      系统管理员可以使用 **sp_dbmmonitorresults** 系统存储过程查看状态表，如果此状态表在前 15 秒内没有更新，则还可以选择对其进行更新。 此过程将调用 **sp_dbmmonitorupdate** 过程并返回一个或多个历史记录行，具体取决于过程调用中的请求量。 有关其结果集中状态的信息，请参阅 [sp_dbmmonitorresults (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)。  
   
 #### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>监视数据库镜像状态（由 dbm_monitor 成员执行）  
- 如上所述，当 **sp_dbmmonitorupdate** 首次运行时，便会在 **msdb** 数据库中创建 **dbm_monitor** 固定数据库角色。 **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 若要了解所显示的状态的保留时间，用户可以在“状态”页上的“主体日志 (\<时间>)”和“镜像日志 (\<时间>)”标签上查看时间        。  
+ 如上所述，当 **sp_dbmmonitorupdate** 首次运行时，便会在 **msdb** 数据库中创建 **dbm_monitor** 固定数据库角色。 **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 若要了解所显示的状态的保留时间，用户可以在“状态”页上的“主体日志 (**时间>)”和“镜像日志 (** 时间>)”标签上查看时间 _\<_   _\<_   。  
   
  **dbm_monitor** 固定数据库角色成员使用  “数据库镜像监视器作业”定期更新状态表。 如果作业不存在，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理已停止，则状态便会迅速变旧，并且不再反映镜像会话的配置。 例如，在一次故障转移之后，伙伴可能会分享相同的角色（主体或镜像）。或者，当前主体服务器可能显示为镜像，而当前的镜像服务器显示为主体。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "70212286"
   
  下面将介绍上述各内容的概要。  
   
-#### <a name="partners"></a>伙伴  
+#### <a name="partners"></a>合作伙伴  
  **“状态”** 页显示每个伙伴的下列信息：  
   
 -   服务器实例  
@@ -165,13 +165,13 @@ ms.locfileid: "70212286"
   
      可能的状态包括：  
   
-    -   Unknown  
+    -   未知  
   
     -   正在同步  
   
     -   已同步  
   
-    -   挂起  
+    -   Suspended  
   
     -   已断开连接  
   
@@ -179,9 +179,9 @@ ms.locfileid: "70212286"
   
      见证服务器的连接状态。 可能的状态包括：  
   
-    -   Unknown  
+    -   未知  
   
-    -   已连接  
+    -   连续  
   
     -   已断开连接。  
   

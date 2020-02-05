@@ -23,10 +23,10 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982409"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "73982409"
   
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[在某些区域以预览版提供](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,12 +69,12 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>结果集  
  下表对结果集中的列进行了说明。  
   
-|列名|定义|  
+|列名称|定义|  
 |---|---|
 |**Database Name**|数据库名称，为该数据库显示日志统计信息。|  
 |**日志大小 (MB)**|分配给日志的当前大小。 该值始终小于最初为日志空间分配的量，因为[!INCLUDE[ssDE](../../includes/ssde-md.md)]会保留一小部分磁盘空间，用以存放内部标头信息。|  
 |**已用日志空间 (%)**|当前用于存储事务日志信息的日志文件的百分比。|  
-|**“状态”**|日志文件的状态。 始终为 0。|  
+|**Status**|日志文件的状态。 始终为 0。|  
   
 ## <a name="Remarks"></a> 注释  
 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，使用 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV 而不是 `DBCC SQLPERF(LOGSPACE)` 来返回每个数据库事务日志的空间使用情况信息。    

@@ -19,10 +19,10 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3aa388dd079de10f18abbb39d240f3d57d1e2efd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914387"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67914387"
 
   为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中任何指定的分区函数返回分区号，一组分区列值将映射到该分区号中。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,17 +43,17 @@ ms.locfileid: "67914387"
  *database_name*  
  包含分区函数的数据库的名称。  
   
- partition_function_name  
+ partition_function_name   
  对其应用一组分区列值的任何现有分区函数的名称。  
   
  *expression*  
- 其数据类型必须匹配或可隐式转换为其对应分区列数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 表达式也可以是当前参与 partition_function_name 的分区列的名称。  
+ 其数据类型必须匹配或可隐式转换为其对应分区列数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 表达式也可以是当前参与 partition_function_name 的分区列的名称   。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
- $PARTITION 返回从 1 到分区函数的分区数之间的 int 值。  
+## <a name="remarks"></a>备注  
+ $PARTITION 返回从 1 到分区函数的分区数之间的 int 值  。  
   
  $PARTITION 将针对任何有效值返回分区号，无论此值当前是否存在于使用分区函数的分区表或索引中。  
   

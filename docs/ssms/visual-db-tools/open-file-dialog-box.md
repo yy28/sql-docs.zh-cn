@@ -1,10 +1,9 @@
 ---
-title: “打开文件”对话框 | Microsoft Docs
-ms.custom: ''
+title: “打开文件”对话框
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 869af839389aec533f132f6e2174d8495ffe1f20
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 61a0a699c7d754d3b21b671da5cd29ea0ec0f240
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263316"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251455"
 ---
 # <a name="open-file-dialog-box"></a>“打开文件”对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,10 +27,10 @@ ms.locfileid: "68263316"
 若要访问此对话框，请在“文件”  菜单中，选择“打开”  ，然后选择“文件”  。 从诸如“外部工具”  对话框等其他元素中打开文件时，也将显示此对话框。 在“文件”  菜单中，选择“打开”  ，然后选择“项目/解决方案”  以打开类似的“打开项目”  对话框。  
   
 > [!NOTE]  
-> 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开项目或组件之前，请确定其代码的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开项目或组件的操作可能会在本地计算机上的可信进程中执行其代码。  
+> 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开项目或组件之前，请确定其代码的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开项目或组件的操作可能会在本地计算机上的可信进程中执行其代码。  
   
 ## <a name="option"></a>选项  
-**查找范围**  
+**Look in**  
 在此下拉菜单中查找现有的项目文件夹。 如果在此列表中选择了一个文件夹，则此文件夹的内容将显示在主窗格中。  
   
 ## <a name="my-places-bar"></a>“我的位置”栏  

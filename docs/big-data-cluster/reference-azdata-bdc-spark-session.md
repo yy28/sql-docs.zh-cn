@@ -1,26 +1,26 @@
 ---
 title: azdata bdc spark session 参考
-titleSuffix: SQL Server big data clusters
 description: azdata bdc spark session 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f1da72349e7594d267ae0d965ddad03cee93017b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6829ce474b2f2f0b000a8ded5cfae2e293e1c2da
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531742"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258619"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
+以下文章提供了 `bdc spark session` 工具中 `azdata` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -80,7 +80,7 @@ python文件路径列表。  若要传入列表，JSON 会对值进行编码。 
 #### `--name -n`
 Spark 会话的名称。
 #### `--config -c`
-包含 Spark 配置值的名称值对的列表。  编码为 JSON 字典。  示例：‘{"name":"value", "name2":"value2"}’。
+包含 Spark 配置值的名称值对的列表。  编码为 JSON 字典。  示例：'{"name":"value", "name2":"value2"}'。
 #### `--timeout-seconds -t`
 会话空闲超时值（以秒为单位）。
 ### <a name="global-arguments"></a>全局参数

@@ -18,10 +18,10 @@ ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 328e77c0a5be561f795d1892512e7a72fd21340a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950150"
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN（geometry 数据类型）
@@ -43,11 +43,11 @@ ms.locfileid: "67950150"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
- 开放地理空间联盟 (OGC) 类型：**LineString**  
+ 开放地理空间信息联盟 (OGC) 类型：LineString   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 geometry 实例不是多边形，则此方法返回 NULL   。 如果表达式大于环数，则此方法还将引发 ArgumentOutOfRangeException  。 可以使用 `STNumInteriorRing``()` 返回环数。  
   
 ## <a name="examples"></a>示例  

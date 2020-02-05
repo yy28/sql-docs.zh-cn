@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8f3b5cc1721483534307acf797a58e4dc70b5c81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048736"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>创建、构造和查询几何图形实例
@@ -239,7 +239,7 @@ ms.locfileid: "68048736"
   
   
 ###  <a name="boundary"></a> 边界、内部和外部  
- **geometry** 实例的“内部”  是指由实例占用的空间，而“外部”  是指未占用的空间。  
+ *geometry* 实例的“内部”  是指由实例占用的空间，而“外部”  是指未占用的空间。  
   
  “边界”  由 OGC 定义，如下所示：  
   
@@ -265,7 +265,7 @@ SELECT @g.STBoundary().ToString();
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
 ###  <a name="envelope"></a> 包络线  
- **geometry**实例的“包络线”  又称为“边界框”  ，它是一个由实例的最小和最大坐标 (X,Y) 形成的轴对齐矩形。  
+ *geometry*实例的“包络线”  又称为“边界框”  ，它是一个由实例的最小和最大坐标 (X,Y) 形成的轴对齐矩形。  
   
  **返回实例的包络线**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  

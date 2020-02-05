@@ -10,10 +10,10 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893085"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 教程
@@ -27,7 +27,7 @@ ms.locfileid: "68893085"
  
 ## <a name="current-tutorials"></a>当前教程  
   
-|技术|描述|  
+|技术|说明|  
 |--------------|---------------|  
 |[Analysis Services 教程 (SSAS)](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|了解如何开发和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格或多维模型。 还了解如何使用 PowerPivot 之类的工具来分析模型中的数据。|  
 |[数据库引擎教程](../relational-databases/database-engine-tutorials.md)|了解如何连接到数据库引擎实例并生成和运行 Transact-SQL 语句。|  

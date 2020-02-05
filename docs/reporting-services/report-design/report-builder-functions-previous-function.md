@@ -9,10 +9,10 @@ ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3a54bd68b1bac51581329224aa7e9405cee8e93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577200"
 ---
 # <a name="report-builder-functions---previous-function"></a>报表生成器函数 - Previous 函数
@@ -28,17 +28,17 @@ ms.locfileid: "65577200"
 Previous(expression, scope)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *expression*  
  （**Variant** 或 **Binary**）用于标识数据和检索以前值的表达式，例如 `Fields!Fieldname.Value` 或 `Sum(Fields!Fieldname.Value)`。  
   
  *作用域*  
- (**String**) 可选。 组或数据区域的名称，也可以为 null（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为“Nothing”  ），它指定从中检索由表达式  指定的以前值的作用域。  
+ (**String**) 可选。 组或数据区域的名称，也可以为 null（在  **中为“Nothing”** [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]），它指定从中检索由表达式  指定的以前值的作用域。  
   
 ## <a name="return-type"></a>返回类型  
  返回 **Variant** 或 **Binary**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **Previous** 函数返回在应用所有排序和筛选之后，指定作用域内计算的表达式的前一个值。  
   
  如果 *expression* 不包含聚合，则 **Previous** 函数默认为该报表项的当前作用域。  
@@ -58,7 +58,7 @@ Previous(expression, scope)
   
 ## <a name="examples"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  下面的代码示例置于数据区域的默认数据行时，提供上一行中 `LineTotal` 字段的值。  
   
 ### <a name="code"></a>代码  
@@ -67,7 +67,7 @@ Previous(expression, scope)
 =Previous(Fields!LineTotal.Value)  
 ```  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  下面的示例显示一个表达式，该表达式计算某月特定天的销售额和上一年该月该天的销售额的总和。 该表达式将添加至属于子组 `GroupbyDay`的行的某个单元格中。 它的父组是 `GroupbyMonth`，该父组的父组是 `GroupbyYear`。 该表达式显示 GroupbyDay（默认作用域）和 `GroupbyYear` （父组 `GroupbyMonth`的父组）的结果。  
   
  例如，对于具有名为 `Year`的父组的数据区域，其子组名为 `Month`，子组的子组名为 `Day` （3 个嵌套级别）。 与组 `=Previous(Sum(Fields!Sales.Value,"Day"),"Year")` 关联的行中的表达式 `Day` 返回上一年同一月同一天的销售额值。  

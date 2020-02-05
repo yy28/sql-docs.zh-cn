@@ -20,10 +20,10 @@ ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b27695eba9f1092b09d147c373877a9b44789497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065904"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68065904"
 
   通过可扩展密钥管理 (EKM) 提供程序更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的加密提供程序。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,16 +42,16 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
 ```  
   
 ## <a name="arguments"></a>参数  
- provider_name  
+ provider_name   
  可扩展密钥管理提供程序的名称。  
   
- Path_of_DLL  
+ Path_of_DLL   
  实现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可扩展密钥管理接口的 .dll 文件的路径。  
   
  ENABLE | DISABLE  
  启用或禁用某个提供程序。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果提供程序更改了用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中实现可扩展密钥管理的 .dll 文件，则您必须使用 ALTER CRYPTOGRAPHIC PROVIDER 语句。  
   
  使用 ALTER CRYPTOGRAPHIC PROVIDER 语句更新 .dll 文件路径时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行以下操作：  
@@ -76,7 +76,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  要求具有加密提供程序的 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中一个名为 `SecurityProvider` 的加密提供程序更改为更新版本的 .dll 文件。 该新版本名为 `c:\SecurityProvider\SecurityProvider_v2.dll` 并且安装在服务器上。 服务器上必须安装有该提供程序的证书。  
+ 以下示例将 `SecurityProvider` 中一个名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密提供程序更改为更新版本的 .dll 文件。 该新版本名为 `c:\SecurityProvider\SecurityProvider_v2.dll` 并且安装在服务器上。 服务器上必须安装有该提供程序的证书。  
   
 1. 禁止该提供程序执行升级。 这样会终止所有打开的加密会话。  
 ```  

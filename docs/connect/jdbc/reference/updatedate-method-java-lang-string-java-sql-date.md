@@ -16,10 +16,10 @@ ms.assetid: 4fbe9123-7365-4a8f-bbd5-dc2b16f1b231
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2eee4ccb8230ee32398cb75445297950ff89aa94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999152"
 ---
 # <a name="updatedate-method-javalangstring-javasqldate"></a>updateDate 方法 (java.lang.String, java.sql.Date)
@@ -35,7 +35,7 @@ public void updateDate(java.lang.String columnName,
                        java.sql.Date x)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *columnName*  
   
  一个包含列名的字符串  。  
@@ -44,10 +44,10 @@ public void updateDate(java.lang.String columnName,
   
  日期值。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 updateDate 方法是由 java.sql.ResultSet 接口中的 updateDate 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

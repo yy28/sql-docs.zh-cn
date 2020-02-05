@@ -11,10 +11,10 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9691deb08bdc6bce05945e1210edd91273f1bc61
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293177"
 ---
 # <a name="create-new-infoobject"></a>新建 InfoObject
@@ -124,16 +124,16 @@ ms.locfileid: "71293177"
 ### <a name="attributes-list"></a>“属性”列表  
  **“属性”** 列表显示所创建的 InfoObject 的属性。 **“属性”** 列表包含以下列标题：  
   
- **“InfoObject”**  
+ **InfoObject**  
  查看 InfoObject 的名称  
   
- **Description**  
+ **说明**  
  查看 InfoObject 的说明。  
   
  **InfoObject 类型**  
  查看 InfoObject 的类型。 下表列出了该类型的可能值。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |CHA|特征|  
 |KYF|关键数字|  
@@ -143,12 +143,12 @@ ms.locfileid: "71293177"
 ### <a name="attributes-options"></a>属性选项  
  使用以下选项添加和删除所创建的 InfoObject 的属性：  
   
- **“添加”**  
+ **添加**  
  添加现有的 InfoObject 作为属性。  
   
  要添加现有 InfoObject，请单击“添加”，然后使用 **“查找 InfoObject”** 对话框查找 InfoObject。 有关此对话框的详细信息，请参阅 [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md)。  
   
- **“新建”**  
+ **新建**  
  添加新的 InfoObject 作为属性。  
   
  要创建和添加新的 InfoObject，请单击“新建”，然后使用 **“新建 InfoObject”** 对话框的一个新实例来创建新的 InfoObject。  
@@ -159,7 +159,7 @@ ms.locfileid: "71293177"
 ## <a name="see-also"></a>另请参阅  
  [“创建事务数据的 InfoCube”](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [“创建 InfoSource”](../../integration-services/data-flow/create-infosource.md)   
- [“创建事务数据的 InfoSource”](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [创建事务数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [创建主数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bd439e528cc30c0971d1b4c824ab2375856d26e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114792"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY 架构权限 (Transact-SQL)
@@ -75,7 +75,7 @@ denying_principal
 -   映射到非对称密钥的数据库用户  
 -   未映射到服务器主体的数据库用户  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 架构是数据库级别的安全对象。 它由权限层次结构中属于其父级的数据库进行约束。 下表列出了可在架构上拒绝的最为具体的限定权限。 该表显示通过暗示包含它们的更一般的权限。  
   
 |架构权限|架构权限隐含的权限|数据库权限隐含的权限|  
@@ -83,9 +83,9 @@ denying_principal
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|删除|CONTROL|删除|  
+|DELETE|CONTROL|DELETE|  
 |在运行 CREATE 语句前执行|CONTROL|在运行 CREATE 语句前执行|  
-|Insert|CONTROL|Insert|  
+|INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
 |SELECT|CONTROL|SELECT|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  

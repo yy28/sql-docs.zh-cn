@@ -14,10 +14,10 @@ ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570687"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>报表服务器项的 SharePoint 站点和列表权限参考
@@ -42,7 +42,7 @@ ms.locfileid: "65570687"
 ## <a name="list-permissions"></a>列表权限  
  对包含报表服务器项的库设置的权限将确定用户如何访问这些项。  
   
-|权限|描述|F|C|V|报表服务器操作|  
+|权限|说明|F|C|V|报表服务器操作|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |管理列表|创建和删除列表，添加或删除列表中的栏，添加或删除列表的公共视图。|X|||在从创作工具执行发布操作期间，在 SharePoint 库中创建文件夹。 管理报表历史记录也需要此权限。|  
 |添加项|向列表中添加项目，向文档库中添加文档，添加 Web 讨论评论。|X|X||将报表、报表模型、共享数据源和资源（外部图像文件）添加到 SharePoint 库中。 创建共享数据源。 从共享数据源生成报表模型。 启动报表生成器并创建新报表，或将模型加载到报表生成器中。|  
@@ -59,7 +59,7 @@ ms.locfileid: "65570687"
 ## <a name="site-permissions"></a>网站权限  
  网站权限决定对与存储在特定库中的项不直接相关的报表服务器操作的访问。 例如，此类操作包括创建和管理共享计划（可由多个库中的项使用）以及配置报表查看器 Web 部件（可在整个网站内使用）。  
   
-|权限|描述|F|C|V|报表服务器操作|  
+|权限|说明|F|C|V|报表服务器操作|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |管理权限|创建和更改网站上的权限级别，并为用户和组分配权限。|X|||可以更改针对所有报表服务器项和操作的权限。 可以设置模型项安全性。|  
 |管理网站|执行网站的所有管理任务并管理内容。|X|||创建、更改和删除共享计划。|  

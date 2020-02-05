@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070276"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68070276"
 
 更改服务器角色的成员关系或更改用户定义的服务器角色的名称。 无法重命名固定服务器角色。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,16 +58,16 @@ ALTER SERVER ROLE  server_role_name  DROP MEMBER login;
 *server_role_name*  
 要更改的服务器角色的名称。  
   
-ADD MEMBER server_principal  
-将指定的服务器主体添加到服务器角色中。 server_principal 可以是登录名或用户定义的服务器角色。 server_principal 不能是固定服务器角色、数据库角色或 sa。  
+ADD MEMBER server_principal   
+将指定的服务器主体添加到服务器角色中。 server_principal 可以是登录名或用户定义的服务器角色  。 server_principal 不能是固定服务器角色、数据库角色或 sa  。  
   
-DROP MEMBER server_principal  
-从服务器角色中删除指定的服务器主体。 server_principal 可以是登录名或用户定义的服务器角色。 server_principal 不能是固定服务器角色、数据库角色或 sa。  
+DROP MEMBER server_principal   
+从服务器角色中删除指定的服务器主体。 server_principal 可以是登录名或用户定义的服务器角色  。 server_principal 不能是固定服务器角色、数据库角色或 sa  。  
   
-WITH NAME =new_server_role_name  
+WITH NAME **new_server_role_name=**   
 指定用户定义的服务器角色的新名称。 服务器中不能已存在此名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 更改用户定义的服务器角色名称并不会更改角色的 ID 号、所有者或权限。  
   
 为了更改角色成员身份，`ALTER SERVER ROLE` 会替换 sp_addsrvrolemember 和 sp_dropsrvrolemember。 不推荐使用这些存储过程。  
@@ -105,14 +105,14 @@ GO
 ```  
   
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. 在服务器角色中添加域帐户  
-以下示例在名为 `Production` 的用户定义服务器角色中添加一个名为 `adventure-works\roberto0` 的域帐户。  
+以下示例在名为 `adventure-works\roberto0` 的用户定义服务器角色中添加一个名为 `Production` 的域帐户。  
   
 ```  
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. 在服务器角色中添加 SQL Server 登录名  
-以下示例在 `diskadmin` 固定服务器角色中添加一个名为 `Ted` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
+以下示例在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定服务器角色中添加一个名为 `Ted` 的 `diskadmin` 登录名。  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -120,14 +120,14 @@ GO
 ```  
   
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. 从服务器角色中删除域帐户  
-以下示例从名为 `Production` 的用户定义服务器角色中删除一个名为 `adventure-works\roberto0` 的域帐户。  
+以下示例从名为 `adventure-works\roberto0` 的用户定义服务器角色中删除一个名为 `Production` 的域帐户。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. 从服务器角色中删除 SQL Server 登录名  
-以下示例从 `diskadmin` 固定服务器角色中删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `Ted`。  
+以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定服务器角色中删除 `Ted` 登录名 `diskadmin`。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. 查看角色成员身份  
-若要查看角色成员身份，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的服务器角色（成员）页或执行以下查询：  
+若要查看角色成员身份，请使用  **中的服务器角色（成员）页或执行以下查询**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

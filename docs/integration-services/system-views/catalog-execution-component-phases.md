@@ -11,10 +11,10 @@ ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c4580c6b6b4dc6ea0d7ab9bb93f9614b90feb1d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295177"
 ---
 # <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
@@ -26,7 +26,7 @@ ms.locfileid: "71295177"
 
   显示数据流组件在每个执行阶段中所花的时间。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |phase_stats_id|**bigint**|阶段的唯一标识符 (ID)。|  
 |execution_id|**bigint**|执行实例的唯一 ID。|  
@@ -38,7 +38,7 @@ ms.locfileid: "71295177"
 |end_time|**datetimeoffset(7)**|阶段结束的时间。|  
 |execution_path|**nvarchar(max)**|数据流任务的执行路径。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此视图显示数据流组件的每个执行阶段（如 Validate、Pre-Execute、Post-Execute、PrimeOutput 和 ProcessInput）对应的行。 每行显示特定执行阶段的开始时间和结束时间。  
   
 ## <a name="example"></a>示例  

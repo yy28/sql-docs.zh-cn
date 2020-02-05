@@ -14,10 +14,10 @@ ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d2cae61482de6b3269122249b310166987cfb44b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296545"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations（SSISDB 数据库）
@@ -29,7 +29,7 @@ ms.locfileid: "71296545"
 
   显示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中所有操作的详细信息。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |operation_id|**bigint**|操作的唯一标识符 (ID)。|  
 |operation_type|**smallint**|操作的类型。|  
@@ -37,7 +37,7 @@ ms.locfileid: "71296545"
 |object_type|**smallint**|受操作影响的对象的类型。 该对象可能是文件夹 (`10`）、项目 (`20`）、包 (`30`)、环境 (`40`） 或执行实例 （`50`)。|  
 |object_id|**bigint**|操作影响的对象的 ID。|  
 |object_name|nvarchar(260) |对象的名称。|  
-|status|**int**|操作的状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
+|status|**int**|操作状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |start_time|**datetimeoffset**|开始操作的时间。|  
 |end_time|**datetimeoffsset**|操作结束的时间。|  
 |caller_sid|**varbinary(85)**|如果是使用 Windows 身份验证进行登录的，则为用户的安全 ID (SID)。|  
@@ -48,7 +48,7 @@ ms.locfileid: "71296545"
 |server_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定实例的 Windows 服务器和实例信息。|  
 |machine_name|**nvarchar(128)**|运行服务器实例的计算机名称。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此视图对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中的每个操作显示一行。 它允许管理员枚举在服务器上执行的所有逻辑操作，如部署项目或执行包。  
   
  此视图显示以下操作类型，如 **operation_type** 列中所列出：  

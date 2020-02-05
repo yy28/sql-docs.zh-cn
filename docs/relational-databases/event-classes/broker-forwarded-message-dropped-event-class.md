@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5eff5410ecd53148a16ae1e726407a7883606a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999722"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped 事件类
@@ -27,7 +27,7 @@ ms.locfileid: "67999722"
   
 ## <a name="brokerforwarded-message-dropped-event-class-data-columns"></a>Broker:Forwarded Message Dropped 事件类的数据列  
   
-|数据列|类型|描述|列号|可筛选|  
+|数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BigintData1|**bigint**|消息序列号。|52|否|  
@@ -49,13 +49,13 @@ ms.locfileid: "67999722"
 |ObjectId|**int**|转发的消息的生存时间值。|22|否|  
 |ObjectName|**nvarchar**|所转发消息的消息 ID。|34|否|  
 |OwnerName|**nvarchar**|消息目标的 Broker 实例标识符。|37|否|  
-|RoleName|**nvarchar**|会话句柄的角色。 可为下列值之一：<br /><br /> -Initiator。 此 Broker 发起了该会话。<br /><br /> -Target。 此 Broker 是会话的目标。|38|否|  
+|RoleName|**nvarchar**|会话句柄的角色。 可取值为：<br /><br /> -Initiator。 此 Broker 发起了该会话。<br /><br /> -Target。 此 Broker 是会话的目标。|38|否|  
 |ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|Severity|**int**|事件中文本的严重级别号。|29|否|  
+|严重性|**int**|事件中文本的严重级别号。|29|否|  
 |SPID|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
 |StartTime|**datetime**|事件（如果有）的开始时间。|14|是|  
-|State|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|否|  
-|成功|**int**|消息处于活动状态的时间长度。 如果此值大于或等于生存时间，则删除该消息。|23|否|  
+|状态|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|否|  
+|Success|**int**|消息处于活动状态的时间长度。 如果此值大于或等于生存时间，则删除该消息。|23|否|  
 |TargetLoginName|**nvarchar**|消息本应已转发到的网络地址。|42|否|  
 |TargetUserName|**nvarchar**|启动消息的服务的名称。|39|否|  
 |TextData|**ntext**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 删除消息的原因说明。|1|是|  

@@ -13,10 +13,10 @@ ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fd94228e072f670e2bf32a46281f195bdf9b80ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099621"
 ---
 # <a name="database-properties-filegroups-page"></a>数据库属性（“文件组”页）
@@ -27,7 +27,7 @@ ms.locfileid: "68099621"
   
  如果未启用 FILESTREAM，则不能使用 **Filestream** 部分。 可以通过 [服务器属性（“高级”页）](../../database-engine/configure-windows/server-properties-advanced-page.md)启用 FILESTREAM 存储。  
   
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户如何使用行文件组的信息，请参阅[数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)。 有关 FILESTREAM 数据和文件组的详细信息，请参阅 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户如何使用行文件组的信息，请参阅 [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)。 有关 FILESTREAM 数据和文件组的详细信息，请参阅 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)。  
   
  数据库必须有内存优化文件组才能包含一个或多个内存优化表。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68099621"
  **Default**  
  选中此项可以将此文件组设为默认文件组。 您可以有一个用于行的默认文件组和一个用于 FILESTREAM 数据的默认文件组。  
   
- **“添加”**  
+ **添加**  
  向列出数据库文件组的网格中添加新的空白行。  
   
  **删除**  
@@ -57,7 +57,7 @@ ms.locfileid: "68099621"
  **Filestream 文件**  
  显示内存优化数据文件组中文件（容器）的数量。 可以在 **“文件”** 页面添加容器。  
   
- **“添加”**  
+ **添加**  
  向列出数据库文件组的网格中添加新的空白行。  
   
  **删除**  

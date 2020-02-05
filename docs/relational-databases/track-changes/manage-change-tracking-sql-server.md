@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e129ce11414f27c5502279b392f88204b502bd32
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095418"
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理更改跟踪 (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "74095418"
   
  此外， [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 目录视图还列出了对用户表启用更改跟踪时所创建的内部表。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
  若要使用 [更改跟踪函数](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)访问更改跟踪信息，主体必须拥有以下权限：  
   
 -   至少针对主键列（已启用更改跟踪的表针对被查询表的主键列）拥有 SELECT 权限。  
@@ -54,7 +54,7 @@ ms.locfileid: "74095418"
 ## <a name="understanding-change-tracking-overhead"></a>了解更改跟踪开销  
  启用表的更改跟踪后，会影响某些管理操作。 下表列出了应当注意的操作和影响。  
   
-|运算|启用更改跟踪后|  
+|Operation|启用更改跟踪后|  
 |---------------|-------------------------------------|  
 |DROP TABLE|会删除已删除表的所有更改跟踪信息。|  
 |ALTER TABLE DROP CONSTRAINT|删除 PRIMARY KEY 约束的尝试将失败。 必须先禁用更改跟踪，然后才能删除 PRIMARY KEY 约束。|  

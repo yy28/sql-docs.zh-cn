@@ -14,10 +14,10 @@ ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c27ed8ea6fbd2e4b89d27cb7772f533150cf0e5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099374"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>保存死锁图形 (SQL Server Profiler)
@@ -37,7 +37,7 @@ ms.locfileid: "68099374"
   
 3. 在“使用模板”列表中，选择一个跟踪所基于的跟踪模板  。 如果不想使用模板，请选择“无”  。  
   
-4. 执行以下操作之一：  
+4. 执行下列操作之一：  
   
     -   要将跟踪内容捕获到文件，请选中“保存到文件”复选框  。 指定 **“设置最大文件大小”** 的值。  
   

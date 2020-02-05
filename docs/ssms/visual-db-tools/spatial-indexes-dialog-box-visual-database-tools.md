@@ -1,10 +1,9 @@
 ---
-title: “空间索引”对话框 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: “空间索引”对话框
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4d8ce987edf5595c0f1f75bb0da6d94c5399033
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 40e3625aee9da35d2c29d495346386768b41aee8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263574"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254974"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>“空间索引”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68263574"
 **所选空间索引**  
 列出现有空间索引。 选择要显示其属性的索引。 如果该列表为空，则表示尚未为该表定义空间索引。  
   
-**“添加”**  
+**添加**  
 创建一个新的空间索引。  
   
 **删除**  
@@ -67,7 +68,7 @@ ms.locfileid: "68263574"
   
 -   “地理”列的“地理网格”   
   
-**类型**  
+类型   
 指示已选择一个空间索引。  
   
 **X 最大值**  
@@ -86,9 +87,9 @@ ms.locfileid: "68263574"
 展开此项可显示“名称”  和“说明”  属性字段。  
   
 **(名称)**  
-显示空间索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定一个默认名称。 您可以随时更改该名称。  
+显示空间索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定一个默认名称。 可随时更改名称。  
   
-**Description**  
+**说明**  
 说明该索引。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (…)   。 这可以提供一个更大的文本编写区域。  
   
 **表设计器类别**  

@@ -14,10 +14,10 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294872"
 ---
 # <a name="validate-dialog-box"></a>“验证”对话框
@@ -61,10 +61,10 @@ ms.locfileid: "71294872"
  **容器**  
  列出包含参数的对象。  
   
- **参数**  
+ **Parameter**  
  列出参数的名称  
   
- **ReplTest1**  
+ **值**  
  列出参数值。  
   
  **“连接管理器”** 选项卡列出了用于验证项目或包的连接管理器属性值。  
@@ -80,7 +80,7 @@ ms.locfileid: "71294872"
  **属性名称**  
  列出连接管理器属性的名称。  
   
- **ReplTest1**  
+ **值**  
  列出分配给连接管理器属性的值。  
   
   

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531591"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>如何查看大数据群集的状态 
@@ -24,7 +24,7 @@ ms.locfileid: "73531591"
 
 ## <a id="datastudio"></a> 使用 Azure Data Studio
 
-下载 [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新**预览体验内部版本**后，可以使用 SQL Server 大数据群集仪表板查看服务终结点以及大数据群集的状态。 下面的某些功能仅在 Azure Data Studio 的预览体验内部版本中可用。
+下载 **Azure Data Studio** 的最新[预览体验内部版本](https://aka.ms/getazuredatastudio)后，可以使用 SQL Server 大数据群集仪表板查看服务终结点以及大数据群集的状态。 下面的某些功能仅在 Azure Data Studio 的预览体验内部版本中可用。
 
 1. 首先，在 Azure Data Studio 中创建到大数据群集的连接。 有关详细信息，请参阅[使用 Azure Data Studio 连接到 SQL Server 大数据群集](connect-to-big-data-cluster.md)。
 

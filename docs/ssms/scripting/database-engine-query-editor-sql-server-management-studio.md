@@ -1,6 +1,6 @@
 ---
-title: 数据库引擎查询编辑器 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 数据库引擎查询编辑器 (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,12 +23,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26a6e67287c7a2effdd62604fa492a532ed636bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1a21b567232bf24b561e014de231268632cc4b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263496"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253943"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>数据库引擎查询编辑器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68263496"
     -   系统存储过程表或视图的名称，如 sys.data_spaces 或 sp_tableoption。  
   
 ## <a name="working-with-the-database-engine-query-editor"></a>使用数据库引擎查询编辑器  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中实现的四个编辑器之一。 对于在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中实现的功能以及使用此编辑器可以执行的主要任务的说明，请参阅[查询和文本编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中实现的四个编辑器之一。 对于在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中实现的功能以及使用此编辑器可以执行的主要任务的说明，请参阅[查询和文本编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
   
 ## <a name="sql-editor-toolbar"></a>SQL 编辑器工具栏  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器打开时，SQL 编辑器工具栏上显示以下按钮：  
@@ -70,7 +70,7 @@ ms.locfileid: "68263496"
  **可用数据库**  
  将连接更改到同一服务器上的其他数据库。  
   
- **Execute**  
+ **执行**  
  执行所选的代码，如果没有选择任何代码，则执行查询编辑器中的全部代码。  
   
  **调试**  
@@ -126,7 +126,7 @@ ms.locfileid: "68263496"
 ## <a name="sql-editor-toolbar"></a>SQL 编辑器工具栏  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口打开后，可以通过以下方法添加调试工具栏：在 **“视图”** 菜单上选择 **“工具栏”** ，然后选择 **“调试”** 。 如果在没有打开任何 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口的情况下添加调试工具栏，则所有按钮都不可用。  
   
- **Continue**  
+ **继续**  
  运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中的代码，直到遇到断点。  
   
  **全部中断**  
@@ -138,13 +138,13 @@ ms.locfileid: "68263496"
  **显示下一语句**  
  将光标移动到要执行的下一个语句。  
   
- **逐语句**  
+ **步入**  
  运行下一个语句。 如果该语句调用 Transact-SQL 存储过程、函数或触发器，则调试器会显示一个包含该模块的代码的新“查询编辑器”  窗口。 该窗口处于调试模式，并在模块中的第一个语句上暂停执行。 然后，您可以在模块中移动，例如，设置断点或逐句通过代码。  
   
- **逐过程**  
+ **步越**  
  运行下一个语句。 如果该语句调用了 Transact-SQL 存储过程、函数或触发器，则模块会运行，直到完成运行，并将结果返回到调用代码。 如果确认模块中没有错误，可以逐过程执行。 在调用模块的后面的语句上暂停执行。  
   
- **跳出**  
+ **步出**  
  后退到下一个最高调用级别（函数、存储过程或触发器）。 在调用存储过程、函数或触发器的后面的语句上暂停执行。  
   
  **Windows**  

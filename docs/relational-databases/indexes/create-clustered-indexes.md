@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024988"
 ---
 # <a name="create-clustered-indexes"></a>创建聚集索引
@@ -91,7 +91,7 @@ ms.locfileid: "68024988"
   
 5.  在“从表名称中选择列”对话框中，选中要添加到聚集索引的表列的复选框  _\__ 。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 7.  在 **“新建索引”** 对话框中，单击 **“确定”** 。  
   
@@ -113,9 +113,9 @@ ms.locfileid: "68024988"
   
 8.  在网格中，选择“创建为聚集”  ，然后从该属性右侧的下拉列表中选择“是”  。  
   
-9. 单击 **“关闭”** 。  
+9. 单击“关闭”  。  
   
-10. 在“文件”  菜单上，单击“保存 _table\_name_”  。  
+10. 在“文件”  菜单上，单击“保存 **table**name _”\__ 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

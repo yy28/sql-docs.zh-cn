@@ -16,10 +16,10 @@ ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38e5a31ccaf493a8800f0e15abd1c21424db07c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954810"
 ---
 # <a name="executequery-method-javalangstring"></a>executeQuery 方法 (java.lang.String)
@@ -34,7 +34,7 @@ ms.locfileid: "67954810"
 public final java.sql.ResultSet executeQuery(java.lang.String sql)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *sql*  
   
  包含 SQL 语句的 String  。  
@@ -42,17 +42,17 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="return-value"></a>返回值  
  SQLServerResultSet 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 executeQuery 方法是由 java.sql.Statement 接口中的 executeQuery 方法指定的。  
   
- 此方法替代 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 类中找到的 [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法。  
+ 此方法替代 [SQLServerStatement](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 类中找到的 [executeQuery](../../../connect/jdbc/reference/sqlserverstatement-class.md) 方法。  
   
  调用此方法将导致异常，因为在创建 SQLServerPreparedStatement 对象时指定了该对象的 SQL 语句。  
   
- 如果给定的 SQL 语句没有生成单一的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象，则会引发 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)。  
+ 如果给定的 SQL 语句没有生成单一的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverexception-class.md) 对象，则会引发 [SQLServerException](../../../connect/jdbc/reference/sqlserverresultset-class.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [executeQuery 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   

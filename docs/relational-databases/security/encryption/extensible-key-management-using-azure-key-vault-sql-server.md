@@ -18,16 +18,16 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: df42a2d0f7dea2e32df61670aff88374a6fcff54
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558030"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  借助 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure 密钥保管库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密可以将 Azure 密钥保管库服务用作[可扩展密钥管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)提供程序，以保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密密钥。  
+  借助 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 密钥保管库的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 连接器，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密可以将 Azure 密钥保管库服务用作[可扩展密钥管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)提供程序，以保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密密钥。  
   
  本主题介绍了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。 有关其他信息，你可以参阅 [使用 Azure 密钥保管库的可扩展密钥管理的设置步骤](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)、 [使用具有 SQL 加密功能的 SQL Server 连接器](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)和 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)。  
   

@@ -14,10 +14,10 @@ ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aea0d3c07482c7c54dc5adb8956b290791f29111
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295169"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages（SSISDB 数据库）
@@ -29,10 +29,10 @@ ms.locfileid: "71295169"
 
   显示 SSISDB  目录中显示的所有包的详细信息。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|包的唯一标识符 (ID)。|  
-|NAME|**nvarchar(256)**|包的唯一名称。|  
+|name|**nvarchar(256)**|包的唯一名称。|  
 |package_guid|**uniqueidentifier**|标识包的全局唯一标识符 (GUID)。|  
 |description|**nvarchar(1024)**|包的可选说明。|  
 |package_format_version|**int**|用于开发包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
@@ -46,7 +46,7 @@ ms.locfileid: "71295169"
 |validation_status|**char(1)**|验证的状态。|  
 |last_validation_time|**datetimeoffset(7)**|最后验证的时间。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此视图对于目录中的每个包显示一行。  
   
 ## <a name="permissions"></a>权限  

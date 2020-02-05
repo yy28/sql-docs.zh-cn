@@ -14,10 +14,10 @@ ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86bf6dc67143ea539ea0329fc1783629b26aa802
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297653"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF（SSIS 表达式）
@@ -47,21 +47,21 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  下表列出了表达式计算器可以识别的日期部分和缩写形式。  
   
 |datepart|缩写形式|  
 |--------------|-------------------|  
-|Year|yy、yyyy|  
+|年龄|yy、yyyy|  
 |季度|qq、q|  
-|Month|mm、m|  
+|月份|mm、m|  
 |Dayofyear|dy、y|  
-|Day|dd、d|  
+|日期|dd、d|  
 |Week|wk、ww|  
-|Weekday|dw、w|  
+|星期|dw、w|  
 |Hour|Hh|  
 |Minute|mi、n|  
-|第二个|ss、s|  
+|秒|ss、s|  
 |Millisecond|Ms|  
   
  如果任何参数为空，则 DATEDIFF 返回的结果为空。  

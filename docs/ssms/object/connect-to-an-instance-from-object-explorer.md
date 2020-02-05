@@ -1,6 +1,6 @@
 ---
-title: 连接到 SQL Server 或 Azure SQL 数据库 | Microsoft Docs
-ms.custom: ''
+title: 连接到 SQL Server 或 Azure SQL 数据库
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aeb46551b33f40ba6c42de705559e20d8c7b0315
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8241bb0edff2a424d42d79ad3e6aa514519e79b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264613"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257216"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>连接到 SQL Server 或 Azure SQL 数据库
 
@@ -28,7 +28,7 @@ ms.locfileid: "68264613"
 
 1. 在“对象资源管理器”中，单击“连接”>“数据库引擎...”   。
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![连接](../media/connect-to-server/connect-db-engine.png)
 
 1. 填写“连接到服务器”窗体，并单击“连接”   ：
 
@@ -48,7 +48,7 @@ ms.locfileid: "68264613"
 
    ![已连接](../media/connect-to-server/connected.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 
 [设计、创建和更新表](../visual-db-tools/design-tables-visual-database-tools.md)
 

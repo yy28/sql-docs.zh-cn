@@ -11,10 +11,10 @@ ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fc237875d0ba5b4f28838609f6b172c55ffe0e90
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296750"
 ---
 # <a name="catalogset_customized_logging_level_value"></a>catalog.set_customized_logging_level_value 
@@ -52,7 +52,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
   
  property_value 为 bigint   。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="return-codes"></a>返回代码  
  0（成功）  
@@ -60,7 +60,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  存储过程失败时引发错误。  
   
 ## <a name="result-set"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  

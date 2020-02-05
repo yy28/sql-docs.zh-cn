@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2127b9164537afca99b8bd556458137d6713001c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030526"
 ---
 # <a name="row-compression-implementation"></a>Row Compression Implementation
@@ -40,7 +40,7 @@ ms.locfileid: "68030526"
 ## <a name="how-row-compression-affects-storage"></a>行压缩影响存储的方式  
  下表介绍了行压缩是如何影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]中的现有类型的。 此表不包括通过使用页压缩可以节省的空间。  
   
-|数据类型|是否影响存储？|描述|  
+|数据类型|是否影响存储？|说明|  
 |---------------|--------------------------|-----------------|  
 |**tinyint**|否|1 个字节是所需的最小存储单位。|  
 |**smallint**|是|如果值使用 1 个字节即可存储，则将只使用 1 个字节。|  

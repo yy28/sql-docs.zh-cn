@@ -16,10 +16,10 @@ ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 783058a764963637f2c91808424bac7bdd403c02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954757"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate 方法 (java.lang.String, int)
@@ -35,7 +35,7 @@ public final int executeUpdate(java.lang.String sql,
                                int flag)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *sql*  
   
  包含 SQL 语句的 String  。  
@@ -51,10 +51,10 @@ public final int executeUpdate(java.lang.String sql,
 ## <a name="return-value"></a>返回值  
  一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 executeUpdate 方法是由 java.sql.Statement 接口中的 executeUpdate 方法指定的。  
   
  如果执行存储过程将产生大于 1 的更新计数，或生成多个结果集，则请使用 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法执行存储过程。  

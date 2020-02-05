@@ -1,6 +1,6 @@
 ---
-title: Windows 对话框（Microsoft 文档资源管理器的帮助）| Microsoft Docs
-ms.custom: ''
+title: Windows 对话框（Microsoft 文档资源管理器的帮助）
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 93f9f21bd681abdd95ca326e44ee4911f2e365ed
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3b909491eb6228225fe9e54390842e26e590d8dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263415"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75240574"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Windows 对话框（Microsoft 文档资源管理器的帮助）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68263415"
 **路径**  
 显示文档的完整路径。 窗口通常没有路径。  
   
-**Activate**  
+**激活**  
 使所选的文档或工具窗口成为 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 文档资源管理器中的活动项。  
   
 **保存**  

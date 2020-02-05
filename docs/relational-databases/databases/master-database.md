@@ -14,10 +14,10 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8c1447bfb5a4776430d24959267c7ec29aa48e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133603"
 ---
 # <a name="master-database"></a>master 数据库
@@ -30,7 +30,7 @@ ms.locfileid: "68133603"
   
 ## <a name="physical-properties-of-master"></a>master 数据库的物理属性
 
-下表列出了 SQL Server 和 Azure SQL 数据库托管实例的 master 数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
+下表列出了 SQL Server 和 Azure SQL 数据库托管实例的 master  数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
   
 |文件|逻辑名称|物理名称|文件增长|  
 |----------|------------------|-------------------|-----------------|  
@@ -40,11 +40,11 @@ ms.locfileid: "68133603"
 有关如何移动 **master** 数据和日志文件的信息，请参阅 [移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
 
 > [!IMPORTANT]
-> 对于 Azure SQL 数据库服务器，用户无法控制 master 数据库的大小。
+> 对于 Azure SQL 数据库服务器，用户无法控制 master  数据库的大小。
   
 ### <a name="database-options"></a>数据库选项
 
-下表列出了 SQL Server 和 Azure SQL 数据库托管实例的 master 数据库中每个数据库选项的默认值，以及该选项是否可以修改。 若要查看这些选项的当前设置，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。  
+下表列出了 SQL Server 和 Azure SQL 数据库托管实例的 master  数据库中每个数据库选项的默认值，以及该选项是否可以修改。 若要查看这些选项的当前设置，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。  
   
 > [!IMPORTANT]
 > 对于 Azure SQL 数据库单一数据库和弹性池，用户无法控制这些数据库选项。

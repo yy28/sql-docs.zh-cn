@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082557"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定表中的计算列
 
 [!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为计算列指定一个表达式。
+计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中为计算列指定一个表达式。
 
 **本主题内容**
 
@@ -67,12 +67,12 @@ ms.locfileid: "68082557"
 
 5. 从“持久化”  子属性的下拉菜单上选择“是”  或“否”  ，以指示该数据是否持久。
 
-6. 在“文件”  菜单上，单击“保存”  表格名称  。
+6. 在“文件”菜单上，单击“保存表名称”    。
 
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>将计算列定义添加到现有列中
 
 1. 在“对象资源管理器”  中，右键单击该表以及你要对其更改和展开“列”  文件夹的列。
-2. 右键单击你要为其指定计算列公式的列，然后单击“删除”  。 单击“确定”  。
+2. 右键单击你要为其指定计算列公式的列，然后单击“删除”  。 单击“确定”。 
 3. 添加一个新列，然后按照前面的步骤添加新计算列以指定新计算列公式。
 
 ## <a name="TsqlProcedure"></a> 使用 Transact-SQL

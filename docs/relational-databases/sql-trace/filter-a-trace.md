@@ -17,10 +17,10 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909488"
 ---
 # <a name="filter-a-trace"></a>筛选跟踪
@@ -61,9 +61,9 @@ ms.locfileid: "72909488"
   
  筛选器可用性取决于数据列。 某些数据列无法筛选。 可筛选的数据列只能使用部分关系运算符进行筛选，如下表所示。  
   
-|关系运算符|运算符|描述|  
+|关系运算符|运算符|说明|  
 |-------------------------|---------------------|-----------------|  
-|Like|Like|指定跟踪事件数据必须类似于输入文本。 允许使用多个值。|  
+|Like|LIKE|指定跟踪事件数据必须类似于输入文本。 允许使用多个值。|  
 |不类似于|不类似于|指定跟踪事件数据不能与输入文本类似。 允许使用多个值。|  
 |等于|=|指定跟踪事件数据必须等于输入的值。 允许使用多个值。|  
 |不等于|<>|指定跟踪事件数据不能等于输入的值。 允许使用多个值。|  
@@ -76,13 +76,13 @@ ms.locfileid: "72909488"
   
 |数据列|关系运算符|  
 |------------------|--------------------------|  
-|**ApplicationName**|LIKE、NOT LIKE|  
+|ApplicationName |LIKE、NOT LIKE|  
 |**BigintData1**|=, <>, >=, <=|  
 |**BigintData2**|=, <>, >=, <=|  
 |**BinaryData**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅 [使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**ClientProcessID**|=, <>, >=, <=|  
 |**ColumnPermissions**|=, <>, >=, <=|  
-|**CPU**|=, <>, >=, <=|  
+|CPU |=, <>, >=, <=|  
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE、NOT LIKE|  
 |**DBUserName**|LIKE、NOT LIKE|  
@@ -122,19 +122,19 @@ ms.locfileid: "72909488"
 |**RoleName**|LIKE、NOT LIKE|  
 |**RowCounts**|=, <>, >=, <=|  
 |**SessionLoginName**|LIKE、NOT LIKE|  
-|**Severity**|=, <>, >=, <=|  
+|**严重性**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅 [使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
-|**成功**|=, <>, >=, <=|  
+|**Success**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE、NOT LIKE|  
 |**TargetLoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅 [使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**TargetUserName**|LIKE、NOT LIKE|  
 |**TextData** *|LIKE、NOT LIKE|  
 |**TransactionID**|=, <>, >=, <=|  
-|**类型**|=, <>, >=, <=|  
+|类型 |=, <>, >=, <=|  
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   

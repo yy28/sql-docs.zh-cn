@@ -15,10 +15,10 @@ ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e53569a8680ec3a6414aeeaa83e9322e77568ecf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297977"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>为查找转换创建和部署缓存
@@ -30,7 +30,7 @@ ms.locfileid: "71297977"
   
  查找转换通过将所连接数据源输入列中的数据和引用数据集中的列进行联接来执行查找。  
   
- 可以使用缓存连接管理器和“缓存转换”转换来创建缓存文件。 有关详细信息，请参阅 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 和 [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md)。  
+ 可以使用缓存连接管理器和“缓存转换”转换来创建缓存文件。 有关详细信息，请参阅 [缓存连接管理器](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 和 [缓存转换](../../../integration-services/data-flow/transformations/cache-transform.md)。  
   
  若要了解查找转换和缓存文件的更多信息，请参阅 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
@@ -95,6 +95,6 @@ ms.locfileid: "71297977"
 5.  将包部署到文件系统。 有关详细信息，请参阅 [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)  
+ [创建部署实用工具](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   

@@ -34,10 +34,10 @@ ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040461"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "68040461"
 
 报告目录视图中的页数和行数错误并进行更正。 这些错误可能导致 sp_spaceused 系统存储过程返回不正确的空间使用报告。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -67,7 +67,7 @@ DBCC UPDATEUSAGE
 *index_id* | *index_name*  
 要使用的索引的 ID 或名称。 如果未指定，语句将对指定的表或视图的所有索引进行处理。  
   
-替换为  
+WITH  
 允许指定选项。  
   
 NO_INFOMSGS  
@@ -76,7 +76,7 @@ NO_INFOMSGS
 COUNT_ROWS  
 指定使用表或视图中的行数的当前计数更新 row count 列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 DBCC UPDATEUSAGE 将针对表或索引中的每个分区更正行、已用页、保留页、叶级页和数据页的计数。 如果系统表中没有错误，则 DBCC UPDATEUSAGE 不返回数据。 如果发现错误，并对其进行了更正，同时没有使用 WITH NO_INFOMSGS，DBCC UPDATEUSAGE 将返回系统表中更新的行和列。
   
 DBCC CHECKDB 已得到增强，可以检测页计数或行计数变为负值的情况。 检测到上述问题后，DBCC CHECKDB 的输出会包含一个警告和一个建议，建议运行 DBCC UPDATEUSAGE 解决该问题。
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. 为 Employee 表更新页计数或行计数，或同时更新这两者  
-下面的示例报告 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中 `Employee` 表的已更新页计数或行计数信息。
+下面的示例报告 `Employee` 数据库中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的已更新页计数或行计数信息。
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  

@@ -28,10 +28,10 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100464"
 ---
 # <a name="move-system-databases"></a>移动系统数据库
@@ -148,7 +148,7 @@ ms.locfileid: "68100464"
   
 2.  在“SQL Server 服务”  节点中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如 **SQL Server (MSSQLSERVER)** ），并选择“属性”  。  
   
-3.  在“SQL Server (_instance_name_) 属性”   对话框中，单击“启动参数”  选项卡。  
+3.  在“SQL Server (**instance_name**) 属性”   对话框中，单击“启动参数”  选项卡。  
   
 4.  在“现有参数”框中，选择 –d 参数以移动 master 数据文件  。 单击 **“更新”** 以保存更改。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68100464"
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  通过右键单击实例名称并选择“停止”  来停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+6.  通过右键单击实例名称并选择“停止”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**来停止**  实例。  
   
 7.  将 master.mdf 和 mastlog.ldf 文件移动到新位置。  
   
@@ -191,7 +191,7 @@ ms.locfileid: "68100464"
 ##  <a name="Resource"></a> 移动 Resource 数据库  
  Resource 数据库的位置是 \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\。 无法移动该数据库。  
   
-##  <a name="Follow"></a> 后续任务：移动所有系统数据库后  
+##  <a name="Follow"></a> 后续操作：移动所有系统数据库后  
  如果已将所有系统数据库都移到新的驱动器/卷或移到使用不同驱动器盘符的另一个服务器，请进行下列更新。  
   
 -   更改 SQL Server 代理日志路径。 如果不更新此路径，SQL Server 代理将无法启动。  

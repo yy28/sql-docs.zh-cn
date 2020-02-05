@@ -20,17 +20,17 @@ ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5ce5f0625cf4a57e974fe7faf9eac677a2c629db
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321201"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>定义和修改合并项目的参数化行筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义和修改参数化行筛选器。  
   
- 在创建表项目时，可以使用参数化行筛选器。 这些筛选器使用 [WHERE](../../../t-sql/queries/where-transact-sql.md) 子句来选择要发布的相应数据。 请勿在子句中指定文本值（像用静态行筛选器处理那样），而是指定以下一个或两个系统函数：[SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) 和 [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+ 在创建表项目时，可以使用参数化行筛选器。 这些筛选器使用 [WHERE](../../../t-sql/queries/where-transact-sql.md) 子句来选择要发布的相应数据。 不要在该子句中指定文字值（像在静态行筛选器中那样），而是指定以下一个或两个系统函数： [SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) 和 [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md)。 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
  **本主题内容**  
   
@@ -55,11 +55,11 @@ ms.locfileid: "75321201"
 -   出于性能方面的考虑，我们建议您不要将这些函数应用于参数化行筛选器子句（如 `LEFT([MyColumn]) = SUSER_SNAME()`）中的列名。 如果在筛选子句中使用 HOST_NAME 并覆盖 HOST_NAME 值，则可能需要使用 CONVERT 转换数据类型。 有关此情况的最佳实践的详细信息，请参阅主题 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“覆盖 HOST_NAME() 值”一节。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在新建发布向导的“筛选表行”  页或“发布属性 - \<发布>”  对话框的“筛选行”  页上定义、修改和删除参数化行筛选器。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 可在新建发布向导的“筛选表行”  页或“发布属性 - **发布>”** **对话框的“筛选行”\<** 页上定义、修改和删除参数化行筛选器。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-parameterized-row-filter"></a>定义参数化行筛选器  
   
-1.  在新建发布向导的“筛选表行”  页或“发布属性 - \<发布>”  的“筛选行”  页上，单击“添加”  ，然后单击“添加筛选器”  。  
+1.  在新建发布向导的“筛选表行”  页或“发布属性 - **发布>”** **的“筛选行”\<** 页上，单击“添加”  ，然后单击“添加筛选器”  。  
   
 2.  在 **“添加筛选器”** 对话框中，从下拉列表框中选择要筛选的表。  
   
@@ -89,11 +89,11 @@ ms.locfileid: "75321201"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
+6.  如果处于“发布属性 - **发布>”对话框中，请单击“确定”以保存并关闭该对话框。\<**   
   
 #### <a name="to-modify-a-parameterized-row-filter"></a>修改参数化行筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。       
+1.  在新建发布向导的“筛选表行”页或“发布属性 - **发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。**  **\<**    
   
 2.  在 **“编辑筛选器”** 对话框中，修改筛选器。  
   
@@ -101,14 +101,14 @@ ms.locfileid: "75321201"
   
 #### <a name="to-delete-a-parameterized-row-filter"></a>删除参数化行筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。       
+1.  在新建发布向导的“筛选表行”页或“发布属性 - **发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。**  **\<**    
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式创建和修改参数化行筛选器。  
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>为合并发布中的项目定义参数化行筛选器  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 指定 \@publication，为 \@article 指定项目名称，为 \@source_object 指定要发布的表，为 \@subset_filterclause 指定定义参数化筛选器的 WHERE 子句（不包括 `WHERE`），并为 \@partition_options（说明从参数化行筛选器得出的分区类型）指定下列值之一      ：  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 指定 **publication，为 \@article 指定项目名称，为** source_object 指定要发布的表，为 **subset_filterclause 指定定义参数化筛选器的 WHERE 子句（不包括 \@），并为** partition_options（说明从参数化行筛选器得出的分区类型）指定下列值之一 **\@** **\@** `WHERE` **\@** ：  
   
     -   **0** - 对项目的筛选是静态的，或者不为每个分区生成唯一的数据子集（“重叠”分区）。  
   
@@ -120,9 +120,9 @@ ms.locfileid: "75321201"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>更改合并发布中的项目的参数化行筛选器  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 指定 \@publication 和 \@article，为 \@property 指定 subset_filterclause 值，为 \@value 指定定义参数化筛选器的表达式（不包括 `WHERE`），并将 \@force_invalidate_snapshot 和 \@force_reinit_subscription 的值指定为 1         。  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 指定 **publication 和 \@article，为** property 指定 subset_filterclause 值，为 **value 指定定义参数化筛选器的表达式（不包括 \@），并将** force_invalidate_snapshot 和 **force_reinit_subscription 的值指定为 1** **\@** **\@** `WHERE`  **\@** **\@** 。  
   
-2.  如果此更改导致不同的分区行为，则再次执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 。 指定 \@publication 和 \@article，为 \@property 指定 partition_options 值，并为 \@value 指定最适合的选项，该选项可以为下列选项之一：      ：  
+2.  如果此更改导致不同的分区行为，则再次执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 。 指定 **publication 和 \@article，为** property 指定 partition_options 值，并为 **value 指定最适合的选项，该选项可以为下列选项之一：\@**  **\@** **\@** ：  
   
     -   **0** - 对项目的筛选是静态的，或者不为每个分区生成唯一的数据子集（“重叠”分区）。  
   

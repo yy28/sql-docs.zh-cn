@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6567861c2150362e0d5b5cf386512daec6d758f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113717"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
@@ -39,14 +39,14 @@ ms.locfileid: "68113717"
   
 ## <a name="datetime-description"></a>datetime 说明  
   
-|属性|ReplTest1|  
+|properties|值|  
 |---|---|
 |语法|**datetime**|  
-|用法|DECLARE \@MyDatetime datetime <br /><br /> CREATE TABLE Table1 (Column1 datetime  )|  
+|使用情况|DECLARE \@MyDatetime datetime <br /><br /> CREATE TABLE Table1 (Column1 datetime  )|  
 |默认的字符串文字格式<br /><br /> （用于下级客户端）|不适用|  
 |日期范围|1753 年 1 月 1 日到 9999 年 12 月 31 日|  
 |时间范围|00:00:00 到 23:59:59.997|  
-|时区偏移量范围|None|  
+|时区偏移量范围|无|  
 |各元素的范围|YYYY 是表示年份的四位数字，范围为 1753 到 9999。<br /><br /> MM 是表示指定年份中的月份的两位数字，范围为 01 到 12。<br /><br /> DD 是表示指定月份中的某一天的两位数字，范围为 01 到 31（最高值取决于相应月份）。<br /><br /> hh 是表示小时的两位数字，范围为 00 到 23。<br /><br /> mm 是表示分钟的两位数字，范围为 00 到 59。<br /><br /> ss 是表示秒钟的两位数字，范围为 00 到 59。<br /><br /> n* 为一个 0 到 3 位的数字，范围为 0 到 999，表示秒的小数部分。|  
 |字符长度|最低 19 位到最高 23 位|  
 |存储大小|8 字节|  
@@ -60,23 +60,23 @@ ms.locfileid: "68113717"
 ## <a name="supported-string-literal-formats-for-datetime"></a>datetime 支持的字符串文字格式  
 以下各表列出了 datetime 支持的字符串文字格式  。 datetime 字符串文字位于单引号 (') 中，例如 'string_literaL'，但 ODBC 除外  。 如果环境不是 us_english，则字符串文字应采用 N'string_literaL' 格式  。
   
-|数字|描述|  
+|Numeric|说明|  
 |---|---|
 |日期格式：<br /><br /> [0]4/15/[19]96 -- (mdy)<br /><br /> [0]4-15-[19]96 -- (mdy)<br /><br /> [0]4.15.[19]96 -- (mdy)<br /><br /> [0]4/[19]96/15 -- (myd)<br /><br /> 15/[0]4/[19]96 -- (dmy)<br /><br /> 15/[19]96/[0]4 -- (dym)<br /><br /> [19]96/15/[0]4 -- (ydm)<br /><br /> [19]96/[0]4/15 -- (ymd)<br /><br /> 时间格式：<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|您可以指定日期数据，其中月份也通过数值指定。 例如 5/20/97 表示 1997 年 5 月 20 日。 当使用数值日期格式时，请在使用正斜杠符号 (/)、连字符 (-) 或句点 (.) 作为分隔符的字符串中指定年、月、日。 此字符串必须采用以下格式：<br /><br /> *数字 分隔符 数字 分隔符 数字 [时间] [时间]*<br /><br /> <br /><br /> 当语言设置为 us_english 时，默认的日期顺序是 mdy  。 可以使用 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 语句更改日期顺序。<br /><br /> SET DATEFORMAT 的设置决定了如何解释日期值。 如果顺序不符合设置，这些值不会被解释为日期。 无序的日期可能会被错误解释成超出范围或使用错误的值。 例如，12/10/08 可以解释成六个不同的日期，具体解释为哪一日期取决于 DATEFORMAT 的设置。 四位数字的年份被解释为年。|  
   
-|字母|描述|  
+|字母|说明|  
 |---|---|
 |Apr[il] [15][,] 1996<br /><br /> Apr[il] 15[,] [19]96<br /><br /> Apr[il] 1996 [15]<br /><br /> [15] Apr[il][,] 1996<br /><br /> 15 Apr[il][,][19]96<br /><br /> 15 [19]96 apr[il]<br /><br /> [15] 1996 apr[il]<br /><br /> 1996 APR[IL] [15]<br /><br /> 1996 [15] APR[IL]|您可以指定一个日期数据，其中使用完整的月份名称来指定月份。 例如，月份用英语 April 或使用其缩写 Apr 指定；逗号是可选的，且忽略大小写。<br /><br /> 下面是使用字母日期格式的一些准则：<br /><br /> 1) 日期和时间数据要放在单引号 (') 内。 对于英语以外的其他语言，使用 N'。<br /><br /> 2) 方括号中的字符是可选的。<br /><br /> 3) 如果只指定年份的最后两位数字，则小于[配置 two digit year cutoff（两位数年份截止）服务器配置选项](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)配置选项值最后两位数字的值与截止年份处于同一个世纪。 大于或等于该选项值的值处于截止年份的上一个世纪。 例如，如果“两位数年份截止”为 2050（默认值），则两位数年份 25 被解释为 2025 年，而 50 被解释为 1950 年  。 为避免不确定性，请使用四位数年份。<br /><br /> 4) 如果没有指定日，则默认为当月第一天。<br /><br /> <br /><br /> 当按字母形式指定月份时，SET DATEFORMAT 会话设置不起作用。|  
   
-|ISO 8601|描述|  
+|ISO 8601|说明|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.mmm]<br /><br /> YYYYMMDD[ hh:mm:ss[.mmm]]|示例：<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> 若要使用 ISO 8601 格式，必须指定每个元素的格式，包括格式中显示的 T、冒号 (:)、句点 (.)  。<br /><br /> 方括号表示秒小数部分是可选的。 时间部分按 24 小时制指定。<br /><br /> T 表示后面是 datetime 值的时间部分  。<br /><br /> 使用 ISO 8601 格式的优点是它是一种国际标准，不会产生模糊的指定。 同时，此格式不受 SET DATEFORMAT 或 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 设置的影响。|  
   
-|未分隔的|描述|  
+|未分隔的|说明|  
 |---|---|
 |YYYYMMDD hh:mm:ss[.mmm]||  
   
-|ODBC|描述|  
+|ODBC|说明|  
 |---|---|
 |{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|ODBC API 用于定义转义序列以表示日期和时间值，ODBC 称之为时间戳数据。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支持的 OLE DB 语言定义 (DBGUID-SQL) 也支持这种 ODBC 时间戳格式。 使用 ADO、OLE DB 和基于 ODBC 的 API 的应用程序可以使用这种 ODBC 时间戳格式来表示日期和时间。<br /><br /> ODBC 时间戳转义序列的格式为：{ *literal_type* '*constant_value*' }:<br /><br /> <br /><br /> - literal_type 指定转义序列的类型  。 时间戳具有三个 literal_type 说明符  ：<br />1) d = 仅日期<br />2) t = 仅时间<br />3) ts = 时间戳（时间 + 日期）<br /><br /> <br /><br /> - 'constant_value' 是转义序列的值  。 constant_value 必须遵循以下每种 literal_type 的格式   。<br />d : yyyy-mm-dd<br />t : hh:mm:ss[.fff]<br />ts : yyyy-mm-dd hh:mm:ss[.fff]|  
   
@@ -187,7 +187,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|数据类型|“输出”|  
+|数据类型|输出|  
 |---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  

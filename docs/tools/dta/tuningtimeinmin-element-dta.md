@@ -1,10 +1,7 @@
 ---
-title: TuningTimeInMin 元素 (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: TuningTimeInMin 元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c19cec140b0059cad98c777613dcbe1d3ec5a7b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 31d72b47896360c673865aec9847f268ad79d9d5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105854"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304696"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  指定优化会话的最大时间长度（分钟）。  
+
+指定优化会话的最大时间长度（分钟）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68105854"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**unsignedInt**，长度没有限制。|  
 |**默认值**|480 分钟（8 小时）。|  
@@ -48,11 +51,11 @@ ms.locfileid: "68105854"
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[TuningOptions 元素 (DTA)](../../tools/dta/tuningoptions-element-dta.md)|  
-|**子元素**|None|  
+|**子元素**|无|  
   
 ## <a name="example"></a>示例  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  以下代码示例显示如何将 12 个小时设置为最长优化时间：  
   
 ## <a name="code"></a>代码  

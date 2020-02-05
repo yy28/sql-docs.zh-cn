@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9e891ee16ce664e12f12b16c9deda957d0fa2263
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727724"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用扩展事件监视 PREDICT T-SQL 语句
@@ -24,13 +24,13 @@ ms.locfileid: "73727724"
 
 以下扩展事件在所有支持 [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) T-SQL 语句的 SQL Server 版本中都可用。 
 
-|NAME |object_type|description| 
+|name |object_type|description| 
 |----|----|----|
-|predict_function_completed |事件  |内置执行时间细分|
-|predict_model_cache_hit |事件|从 PREDICT 函数模型缓中存检索模型时发生。 可将此事件与其他 predict_model_cache_* 事件结合使用来解决由 PREDICT 函数模型缓存引起的问题。|
-|predict_model_cache_insert |事件  |   将模型插入 PREDICT 函数模型缓存时发生。 可将此事件与其他 predict_model_cache_* 事件结合使用来解决由 PREDICT 函数模型缓存引起的问题。    |
-|predict_model_cache_miss   |事件|在 PREDICT 函数模型缓存中找不到模型时发生。 频繁出现此事件可能表示 SQL Server 需要更多内存。 可将此事件与其他 predict_model_cache_* 事件结合使用来解决由 PREDICT 函数模型缓存引起的问题。|
-|predict_model_cache_remove |事件| 从 PREDICT 函数的模型缓存中删除模型时发生。 可将此事件与其他 predict_model_cache_* 事件结合使用来解决由 PREDICT 函数模型缓存引起的问题。|
+|predict_function_completed |event  |内置执行时间细分|
+|predict_model_cache_hit |event|从 PREDICT 函数模型缓中存检索模型时发生。 可将此事件与其他 predict_model_cache_* 事件结合使用来解决由 PREDICT 函数模型缓存引起的问题。|
+|predict_model_cache_insert |event  |   将模型插入 PREDICT 函数模型缓存时发生。 可将此事件与其他 predict_model_cache_* 事件结合使用来解决由 PREDICT 函数模型缓存引起的问题。    |
+|predict_model_cache_miss   |event|在 PREDICT 函数模型缓存中找不到模型时发生。 频繁出现此事件可能表示 SQL Server 需要更多内存。 可将此事件与其他 predict_model_cache_* 事件结合使用来解决由 PREDICT 函数模型缓存引起的问题。|
+|predict_model_cache_remove |event| 从 PREDICT 函数的模型缓存中删除模型时发生。 可将此事件与其他 predict_model_cache_* 事件结合使用来解决由 PREDICT 函数模型缓存引起的问题。|
 
 ## <a name="query-for-related-events"></a>查询相关事件
 

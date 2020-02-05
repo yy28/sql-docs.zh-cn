@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e86955f75593c27e18de12bbcaf5bb6b7cf88b6a
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843539"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>查看或更改数据库的兼容级别
@@ -61,7 +61,7 @@ ms.locfileid: "73843539"
   
      当前兼容级别显示在 **“兼容级别”** 列表框中。  
   
-5.  若要更改兼容级别，请从列表中选择其他选项。 [ALTER DATABASE 兼容性级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) 页中列出了不同 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 版本的可用选项。  
+5.  若要更改兼容级别，请从列表中选择其他选项。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]ALTER DATABASE 兼容性级别 (Transact-SQL)[ 页中列出了不同 ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) 版本的可用选项。  
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

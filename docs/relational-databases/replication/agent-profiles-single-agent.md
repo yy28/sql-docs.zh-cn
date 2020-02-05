@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 08a8362ab1cdf55af1c3735ee9ab27fb9991b07e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0c0ad89bed910450618c043e7ab5dd2d96fff342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770829"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288296"
 ---
 # <a name="agent-profiles-single-agent"></a>代理配置文件（单个代理）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "68770829"
  **名称**  
  配置文件的名称。  
   
- **类型**  
- 配置文件的类型：用户（用户定义）或系统（预定义）   。  
+ 类型   
+ 配置文件类型： **“用户”** （用户定义）或 **“系统”** （预定义）。  
   
  **属性(...)**  
  单击此项可查看用于代理配置文件中每个参数的值。  

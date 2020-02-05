@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.openlocfilehash: 584bf33201cab5d0f57205de0fed181725187d52
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077416"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 开发应用程序
@@ -60,7 +60,7 @@ ms.locfileid: "68077416"
 
 ## <a name="use-new-sql-tools-for-linux"></a>使用适用于 Linux 的新 SQL 工具
 
-可在 Linux、macOS 和 Windows 上使用 [Visual Studio Code](https://code.visualstudio.com) 的新 [mssql 扩展](https://aka.ms/mssql-marketplace)。 相关分布演练请参阅下列教程：
+可在 Linux、macOS 和 Windows 上使用 [Visual Studio Code](https://aka.ms/mssql-marketplace) 的新 [mssql 扩展](https://code.visualstudio.com)。 相关分布演练请参阅下列教程：
 
 - [使用 Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 

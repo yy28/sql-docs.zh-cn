@@ -9,26 +9,26 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 951598c895fe322ee1a8b32cbbc2dc29b20c8e1a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f8fa1ca8df7f4d72c6df9b252d639f8771dee30c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531664"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908741"
 ---
 # <a name="azdata-sql"></a>azdata sql
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
+以下文章提供了 `sql` 工具中 `azdata` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
-[azdata sql shell](#azdata-sql-shell) | 借助 SQL DB CLI，用户可通过 T-SQL 与 SQL Server 进行交互。
+[azdata sql shell](#azdata-sql-shell) | SQL DB CLI 允许用户通过 T-SQL 与 SQL Server 交互。
 [azdata sql query](#azdata-sql-query) | query 命令允许执行 T-SQL 查询。
 ## <a name="azdata-sql-shell"></a>azdata sql shell
-借助 SQL DB CLI，用户可通过 T-SQL 与 SQL Server 进行交互。
+SQL DB CLI 允许用户通过 T-SQL 与 SQL Server 交互。
 ```bash
 azdata sql shell 
 ```
@@ -51,13 +51,12 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 ## <a name="azdata-sql-query"></a>azdata sql query
 query 命令允许执行 T-SQL 查询。
 ```bash
-azdata sql query --database -d 
-                 -q
+azdata sql query -q --database -d
 ```
 ### <a name="examples"></a>示例
 选择表名列表。  数据库默认为 master。
 ```bash
-azdata sql query 'SELECT name FROM SYS.TABLES'
+azdata sql query -q 'SELECT name FROM SYS.TABLES'
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--database -d`

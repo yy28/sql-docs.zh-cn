@@ -16,10 +16,10 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 668b7343ae893d302a27c0a68aec58e536cffcc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293281"
 ---
 # <a name="cdc-source"></a>CDC 源
@@ -45,7 +45,7 @@ ms.locfileid: "71293281"
   
 -   基于所确定的 CDC 处理范围的 CDC 状态包变量的名称。 CDC 源不修改该变量。  
   
- CDC 源返回的数据与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 函数 cdc.fn_cdc_get_all_changes_\<capture-instance-name> 或 cdc.fn_cdc_get_net_changes_\<capture-instance-name>（在可用时）返回的数据相同   。 唯一可选的添加是列 **__$initial_processing** ，它指示当前处理范围是否可与表的初始加载重叠。 有关初始处理的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。  
+ CDC 源返回的数据与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 函数 cdc.fn_cdc_get_all_changes_**capture-instance-name> 或 cdc.fn_cdc_get_net_changes_\<capture-instance-name>（在可用时）返回的数据相同** **\<** 。 唯一可选的添加是列 **__$initial_processing** ，它指示当前处理范围是否可与表的初始加载重叠。 有关初始处理的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。  
   
  CDC 源有一个常规输出和一个错误输出。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71293281"
   
 -   **错误列**：导致错误（针对转换错误）的源列。  
   
--   **错误行列**：导致错误的记录数据。  
+-   **错误行列**：导致了错误的记录数据。  
   
  根据错误行为设置，CDC 源支持在错误输出中返回在提取过程中发生的错误（数据转换、截断）。  
   
@@ -95,7 +95,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>SQL Server 错误消息  
  下面是可以由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回的消息：  
   
- 为过程或函数 cdc.fn_cdc_get_net_changes_\<..> 提供的参数数目不足  。  
+ 为过程或函数 cdc.fn_cdc_get_net_changes_ **..> 提供的参数数目不足\<** 。  
   
  此错误并不表示缺少参数。 这意味着 CDC 状态变量中的开始或结束 LSN 值无效。  
   
@@ -151,18 +151,18 @@ use <cdc-enabled-database-name>
  **捕获实例**  
  选择或键入具有要读取的 CDC 表的“CDC 捕获实例”的名称。  
   
- 一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [schema].[table] 的默认捕获实例名称为 \<schema>_\<table>，但使用的实际捕获实例名称可能会不同。 读取的实际表是 CDC 表 cdc .\<capture-instance>_CT  。  
+ 一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [schema].[table] 的默认捕获实例名称为 \<schema>_\<table>，但使用的实际捕获实例名称可能会不同。 读取的实际表是 CDC 表 cdc .**capture-instance>_CT\<** 。  
   
  **CDC 处理模式**  
  选择可以最好地满足您的处理需要的处理模式。 可能的选项包括：  
   
--   **全部**：返回当前 CDC 范围中的更改，不包括“更新前”  值。  
+-   **所有**：返回当前 CDC 范围中的更改，但没有 **“更新前”** 值。  
   
 -   **全部且具有旧值**：返回当前 CDC 处理范围中的更改，包括旧值（“更新前”  ）。 对于每个更新操作将会有两行，一个针对更新前值，一个针对更新后值。  
   
 -   **净值**：对于当前 CDC 处理范围中修改的每个源行，仅返回一个更改行。 如果某一源行更新了多次，将生成合并的更改（例如，插入+更新作为单个更新生成，更新+删除作为单个删除生成）。 在净更改处理模式下工作时，可以拆分对删除、插入和更新输出的更改并且并行处理它们，因为单个源行出现多次。  
   
--   **具有更新掩码的净值**：此模式类似于一般的净值模式，但它还添加了命名模式为 __$\<column-name>\__Changed 的布尔值列（指示当前更改行中已更改的列）  。  
+-   **具有更新掩码的净值**：此模式类似于一般的净值模式，但它还添加了命名模式为 __$**column-name>\<_Changed 的布尔值列（指示当前更改行中已更改的列）\_** 。  
   
 -   **净值且具有合并**：此模式类似于一般的净值模式，但具有合并到单个合并操作中的插入和更新操作 (UPSERT)。  
   
@@ -226,7 +226,7 @@ use <cdc-enabled-database-name>
  **截断**  
  选择 CDC 源应该如何处理流中的截断：忽略失败、重定向行或使组件失败。  
   
- **Description**  
+ **说明**  
  未使用。  
   
  **将此值设置到选定的单元格**  
@@ -239,7 +239,7 @@ use <cdc-enabled-database-name>
  使用下列选项来配置 CDC 源处理错误和截断的方式。  
   
  **组件失败**  
- 发生错误或截断时数据流任务失败。 这是默认行为。  
+ 发生错误或截断时数据流任务失败。 此选项为默认行为。  
   
  **忽略失败**  
  忽略错误或截断，并且将数据行定向到 CDC 源输出。  

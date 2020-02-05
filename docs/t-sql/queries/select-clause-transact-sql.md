@@ -27,10 +27,10 @@ ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 51707d97a738df13b7aae3c9e7208af76d440492
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141057"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 子句 (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68141057"
 
   指定查询返回的列。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -80,7 +80,7 @@ SELECT [ ALL | DISTINCT ]
  \*  
  指定返回 FROM 子句中的所有表和视图中的所有列。 这些列按 FROM 子句中指定的表或视图顺序返回，并对应于它们在表或视图中的顺序。  
   
- table_name | view_name | table_alias.*      
+ table_name*view_name*table_alias.* |    |     
  将 \* 的作用域限制为指定的表或视图。  
   
  column_name   
@@ -145,7 +145,7 @@ FROM Cities;
   
  column_alias 可以用于 ORDER BY 子句  。 但不能用于 WHERE、GROUP BY 或 HAVING 子句中。 如果查询表达式是 DECLARE CURSOR 语句的一部分，则不能在 FOR UPDATE 子句中使用 column_alias  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  选择列表中包含的 text 或 ntext 列返回的数据长度被设置为下列值中的最小值：text 列的实际大小、默认 TEXTSIZE 会话设置或硬编码应用程序限制    。 若要更改会话的返回文本长度，请使用 SET 语句。 默认情况下，用 SELECT 语句返回的文本数据的长度限制是 4,000 字节。  
   
  如果发生下列两种情况中的一种，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将引发编号为 511 的异常错误并回滚当前运行的语句：  

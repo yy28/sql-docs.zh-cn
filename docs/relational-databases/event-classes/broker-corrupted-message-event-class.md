@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0cd8504379475bd14e873c0d499a0c2c64d17928
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999735"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 事件类
@@ -27,9 +27,9 @@ ms.locfileid: "67999735"
   
 ## <a name="brokercorrupted-message-event-class-data-columns"></a>Broker:Corrupted Message 事件类的数据列  
   
-|数据列|类型|描述|列号|可筛选|  
+|数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
+|ApplicationName |**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**BigintData1**|**bigint**|此消息的序列号。|52|否|  
 |**BinaryData**|**图像**|消息的正文。|2|是|  
 |**ClientProcessID**|**int**|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
@@ -46,14 +46,14 @@ ms.locfileid: "67999735"
 |**NTDomainName**|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |**NTUserName**|**nvarchar**|拥有生成此事件的连接的用户的名称。|6|是|  
 |**ObjectName**|**nvarchar**|会话另一方的服务名称和远程数据库用来连接至此数据库的连接字符串。|34|否|  
-|**RoleName**|**nvarchar**|接收此消息的端点的角色。 取下列值之一。<br /><br /> **发起者**：接收端点为会话的发起方。<br /><br /> **目标**：               接收端点为会话的目标。|38|否|  
+|**RoleName**|**nvarchar**|接收此消息的端点的角色。 取下列值之一。<br /><br /> **initiator**：接收端点为会话的发起方。<br /><br /> **target**：接收端点为会话的目标。|38|否|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|**Severity**|**int**|导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 删除消息的错误的严重性。|29|否|  
+|**严重性**|**int**|导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 删除消息的错误的严重性。|29|否|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
 |**StartTime**|**datetime**|事件（如果有）的开始时间。|14|是|  
 |**State**|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|否|  
 |**TextData**|**ntext**|检测到的损坏说明。|1|是|  
-|**Transaction ID**|**bigint**|系统为事务分配的 ID。|4|否|  
+|**事务 ID**|**bigint**|系统为事务分配的 ID。|4|否|  
   
  此事件的 **TextData** 列包含一条描述消息问题的消息。  
   

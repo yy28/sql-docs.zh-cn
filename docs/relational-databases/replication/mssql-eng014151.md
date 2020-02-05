@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 54b45e70-46b3-4c7a-a5bf-06f6dd028ceb
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fd10c7bac52e72f9740d9570d006d6df8cc92f07
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 4fbadfe38611789e3a03d717d8411aed298ac6d2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770473"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287786"
 ---
-# <a name="mssqleng014151"></a>MSSQL_ENG014151
+# <a name="mssql_eng014151"></a>MSSQL_ENG014151
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68770473"
 |符号名称||  
 |消息正文|复制 - %s: 代理 %s 失败。 %s|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  此错误可由任何复制代理失败引发。 消息结尾的文本取决于失败的上下文。  
   
 ## <a name="user-action"></a>用户操作  
@@ -53,10 +53,10 @@ ms.locfileid: "68770473"
 ## <a name="see-also"></a>另请参阅  
  [复制代理管理](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [错误和事件参考（复制）](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [复制分发代理](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [复制日志读取器代理](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [复制合并代理](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [复制队列读取器代理](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [复制快照代理](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

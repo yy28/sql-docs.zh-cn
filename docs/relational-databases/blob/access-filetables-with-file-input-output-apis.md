@@ -13,10 +13,10 @@ ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908777"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用文件输入输出 API 访问 FileTable
@@ -103,7 +103,7 @@ ms.locfileid: "72908777"
   
 ##  <a name="funclist"></a> FileTable 中支持的文件系统功能  
   
-|功能|Supported|注释|  
+|功能|支持|注释|  
 |----------------|---------------|--------------|  
 |**Oplocks**|是|支持级别 2、级别 1、批处理和筛选器 oplocks。|  
 |**扩展属性**|否||  

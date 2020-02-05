@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63295728"
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
@@ -49,14 +49,14 @@ ms.locfileid: "63295728"
   
 3.  在右窗格中，单击“表或矩阵向导”  。  
   
-4.  在“选择数据集”页上，单击“创建数据集” > “下一步”    。  
+4.  在“选择数据集”页上，单击“创建数据集” **“下一步”**   >   。  
   
 6.  在“选择数据源的连接”  页上，选择类型为“SQL Server”  的数据源。 从列表中选择一个数据源或浏览到报表服务器以选择一个数据源。  
 
     > [!NOTE]  
     > 只要具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-7.  单击“下一步”  。  
+7.  单击“下一步”。   
   
 8.  在“设计查询”页上，单击“编辑为文本”   。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "63295728"
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
-11. 单击“下一步”  。  
+11. 单击“下一步”。   
   
 12. 在“排列字段”页上，将以下字段按指定顺序从“可用字段”列表拖到“值”列表    。  
   
@@ -114,13 +114,13 @@ ms.locfileid: "63295728"
     
     ![report-builder-expression-not-sum](../reporting-services/media/report-builder-expression-not-sum.png)
   
-15. 单击“下一步”  。  
+15. 单击“下一步”。   
   
 16. 在“选择布局”页上，保留所有默认设置，然后单击“下一步”   。  
 
     ![report-builder-expression-tutorial-choose-layout](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
-17. 单击 **“完成”** 。  
+17. 单击“完成”  。  
   
 ## <a name="UpdateNames"></a>2.更新数据源和数据集的默认名称  
   
@@ -504,7 +504,7 @@ ms.locfileid: "63295728"
   
 34. 单击“结束”  值的文本框右侧的 **fx** 按钮。  
   
-35. 在“表达式”对话框中，删除“100”并创建表达式：`=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`    
+35. 在“表达式”对话框中，删除“100”并创建表达式：   `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -533,25 +533,25 @@ ms.locfileid: "63295728"
   
 5.  在“可用值”选项卡上，单击“指定值”   。  
   
-7.  单击 **“添加”** 。  
+7.  单击“添加”  。  
   
 8.  在“标签”框中，键入“黄色”    
   
 9. 在“值”  框中，键入 **Yellow**  
   
-10. 单击 **“添加”** 。  
+10. 单击“添加”  。  
   
 11. 在“标签”  框中，键入“绿色”   
   
 12. 在“值”  框中，键入“淡绿色”   
   
-13. 单击 **“添加”** 。  
+13. 单击“添加”  。  
   
 14. 在“标签”  框中，键入“蓝色”   
   
 15. 在“值”  框中，键入“浅蓝色”   
   
-16. 单击 **“添加”** 。  
+16. 单击“添加”  。  
   
 17. 在“标签”  框中，键入“粉色”   
   

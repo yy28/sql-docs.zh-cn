@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ae89c263008c035dc7cd8e0050b50a5cdd9cc705
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056001"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据
@@ -54,7 +54,7 @@ ms.locfileid: "74056001"
  **UDT 表示用户定义的类型。  
   
 ## <a name="exporting-using--v-80"></a>使用 -V 80 进行导出  
- 使用 -V80 开关批量导出数据时，本机模式下的 nvarchar(max)、varchar(max)、varbinary(max)、XML 和 UDT 数据将像 text、image 和 ntext 数据一样以带有 4 个字节的前缀形式存储，而不是像 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本默认的那样以带有 8 个字节的前缀形式存储        。  
+ 使用 -V80 开关批量导出数据时，本机模式下的 nvarchar(max)、varchar(max)、varbinary(max)、XML 和 UDT 数据将像 text、image 和 ntext 数据一样以带有 4 个字节的前缀形式存储，而不是像  **及更高版本默认的那样以带有 8 个字节的前缀形式存储**       [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。  
   
 ## <a name="copying-date-values"></a>复制日期值  
  **bcp** 将使用 ODBC 大容量复制 API。 因此，为了将日期值导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **bcp** 使用了 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[ *.f...* ])。  
@@ -76,7 +76,7 @@ ms.locfileid: "74056001"
 -   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   

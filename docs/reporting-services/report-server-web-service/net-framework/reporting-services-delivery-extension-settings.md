@@ -21,10 +21,10 @@ ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b801fc7ada9e370d12388ba341259f1c13c7a0f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128859"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 传递扩展插件设置
@@ -36,9 +36,9 @@ ms.locfileid: "63128859"
 ## <a name="e-mail-delivery-settings"></a>电子邮件传递设置  
  下表列出用于使用报表服务器电子邮件的订阅的电子邮件传递设置。  
   
-|设置|ReplTest1|  
+|设置|值|  
 |-------------|-----------|  
-|TO |电子邮件的“收件人”行中显示的电子邮件地址  。 多个电子邮件地址之间用分号分隔。 必需的。|  
+|TO |电子邮件的“收件人”行中显示的电子邮件地址  。 多个电子邮件地址之间用分号分隔。 必需。|  
 |CC |电子邮件的“抄送”行中显示的电子邮件地址  。 多个电子邮件地址之间用分号分隔。 可选。|  
 |BCC |电子邮件的“密件抄送”行中显示的电子邮件地址  。 多个电子邮件地址之间用分号分隔。 可选。|  
 |ReplyTo |电子邮件的“答复发件人”标题中显示的电子邮件地址  。 该值必须为单个电子邮件地址。 可选。|  
@@ -52,7 +52,7 @@ ms.locfileid: "63128859"
 ## <a name="file-share-delivery-settings"></a>文件共享传递设置  
  下表列出用于订阅的文件共享传递设置。  
   
-|设置|ReplTest1|  
+|设置|值|  
 |-------------|-----------|  
 |FILENAME |保存到磁盘的文件的名称。|  
 |FILEEXTN |指示是否为所呈现报表包括文件扩展名。 值为 true 或 false   。|  

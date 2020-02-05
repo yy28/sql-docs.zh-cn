@@ -19,10 +19,10 @@ ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8cdc8f15cedb170ae6c5aeab35c8f92a979d30d6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909058"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>删除数据库中的数据文件或日志文件
@@ -45,7 +45,7 @@ ms.locfileid: "72909058"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   文件必须为空后才能删除。 有关详细信息，请参阅 [收缩文件](../../relational-databases/databases/shrink-a-file.md)。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "72909058"
   
 4.  在 **“数据库文件”** 网格中，选择要删除的文件，然后单击 **“删除”** 。  
   
-5.  单击“确定”  。  
+5.  单击“确定”。   
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

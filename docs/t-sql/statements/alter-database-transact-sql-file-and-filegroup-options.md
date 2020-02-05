@@ -45,10 +45,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244430"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 文件和文件组选项
@@ -65,7 +65,7 @@ ms.locfileid: "75244430"
 
 |||
 |-|-|-|
-|\* SQL Server \*  &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**SQL Server _\*\*_** &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -178,7 +178,7 @@ NEWNAME new_logical_file_name  指定文件的新逻辑名称。
 
 new_logical_file_name  用于替换现有逻辑文件名称的名称。 该名称在数据库中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 该名称可以是字符或 Unicode 常量、常规标识符或分隔标识符。
 
-FILENAME { 'os\_file\_name' | '_filestream\_path' | 'memory\_optimized\_data\_path'} 指定操作系统（物理）文件名    _    
+FILENAME { 'os**file**name' _'\_filestream\_path'_ 'memory**optimized**data|path'} 指定操作系统（物理）文件名  _\__  |  _\_\_\__ 
 
 ' os_file_name  ' 对于标准 (ROWS) 文件组，这是在创建文件时操作系统所使用的路径和文件名。 该文件必须驻留在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器上。 在执行 ALTER DATABASE 语句前，指定的路径必须已经存在。
 
@@ -312,14 +312,14 @@ READ_ONLY | READONLY 指定文件组为只读。 不允许更新其中的对象�
 - 在只读数据库中不会进行锁定。 这可以加快查询速度。
 
 > [!NOTE]
-> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READONLY` 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 `READONLY` 的应用程序。 请改用 `READ_ONLY`。
+> 在 `READONLY`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 的未来版本中，将删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 `READONLY` 的应用程序。 请改用 `READ_ONLY`。
 
 READ_WRITE | READWRITE 指定组是 READ_WRITE。 允许更新文件组中的对象。 若要更改此状态，您必须对数据库有独占访问权限。 有关详细信息，请参阅 SINGLE_USER 子句。
 
 > [!NOTE]
-> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READWRITE` 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。
+> 在 `READWRITE`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 的未来版本中，将删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。
 > [!TIP]
-> 可通过查看 **sys.databases** 目录视图中的**is_read_only** 列，或者查看 `DATABASEPROPERTYEX` 函数的 **Updateability** 属性，来确定这些选项的状态。
+> 可通过查看 **sys.databases** 目录视图中的**is_read_only** 列，或者查看 **函数的**Updateability`DATABASEPROPERTYEX` 属性，来确定这些选项的状态。
 
 ## <a name="remarks"></a>备注
 
@@ -338,9 +338,9 @@ READ_WRITE | READWRITE 指定组是 READ_WRITE。 允许更新文件组中的对
 
 无法为内存优化文件组设置 SIZE 和 FILEGROWTH 参数。
 
-在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READONLY` 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 READONLY 的应用程序。 请改用 `READ_ONLY`。
+在 `READONLY`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 的未来版本中，将删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 READONLY 的应用程序。 请改用 `READ_ONLY`。
 
-在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READWRITE` 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。
+在 `READWRITE`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 的未来版本中，将删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。
 
 ## <a name="moving-files"></a>移动文件
 
@@ -398,7 +398,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 向数据库中添加由两个文件组成的文件组
 
-以下示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建文件组 `Test1FG1`，然后将两个 5 MB 的文件添加到该文件组。
+以下示例在 `Test1FG1` 数据库中创建文件组 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]，然后将两个 5 MB 的文件添加到该文件组。
 
 ```sql
 USE master
@@ -845,9 +845,9 @@ READ_ONLY | READONLY 指定文件组为只读。 不允许更新其中的对象�
 READ_WRITE | READWRITE 指定组是 READ_WRITE。 允许更新文件组中的对象。 若要更改此状态，您必须对数据库有独占访问权限。 有关详细信息，请参阅 SINGLE_USER 子句。
 
 > [!NOTE]
-> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READWRITE` 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。
+> 在 `READWRITE`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 的未来版本中，将删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。
 
-可通过查看 **sys.databases** 目录视图中的**is_read_only** 列，或者查看 `DATABASEPROPERTYEX` 函数的 **Updateability** 属性，来确定这些选项的状态。
+可通过查看 **sys.databases** 目录视图中的**is_read_only** 列，或者查看 **函数的**Updateability`DATABASEPROPERTYEX` 属性，来确定这些选项的状态。
 
 ## <a name="remarks"></a>备注
 
@@ -879,7 +879,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 向数据库中添加由两个文件组成的文件组
 
-以下示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建文件组 `Test1FG1`，然后将两个 5 MB 的文件添加到该文件组。
+以下示例在 `Test1FG1` 数据库中创建文件组 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]，然后将两个 5 MB 的文件添加到该文件组。
 
 ```sql
 USE master

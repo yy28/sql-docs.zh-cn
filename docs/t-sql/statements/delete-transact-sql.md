@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75548283"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -127,7 +127,7 @@ DELETE
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数，视提供程序的功能而定。  
   
- WITH ( \<table_hint_limited> [... n] )     
+ WITH ( **table_hint_limited> [... n] )** \<    
  指定目标表允许的一个或多个表提示。 需要有 WITH 关键字和括号。 不允许 NOLOCK 和 READUNCOMMITTED。 有关表提示的详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  \<OUTPUT_Clause>  
@@ -164,7 +164,7 @@ DELETE
  cursor_variable_name   
  游标变量的名称。 游标变量必须引用允许更新的游标。  
   
- OPTION ( \<query_hint> [ ,... n] )      
+ OPTION ( **query_hint> [ ,... n] )** \<     
  关键字，指示用于自定义[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理语句的方式的优化器提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳实践  
@@ -241,7 +241,7 @@ GO
  本节中的示例演示了如何限制将被删除的行数。  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. 使用 WHERE 子句删除行集  
- 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `ProductCostHistory` 表中删除 `StandardCost` 列的值大于 `1000.00` 的所有行。  
+ 以下示例从 `ProductCostHistory` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中删除 `StandardCost` 列的值大于 `1000.00` 的所有行。  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -249,7 +249,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- 下面的示例演示一个更复杂的 WHERE 子句。 WHERE 子句定义要确定删除的行而必须满足的两个条件。 `StandardCost` 列中的值必须介于 `12.00` 与 `14.00` 之间，而 `SellEndDate` 列中的值必须为 Null。 该示例还将打印“\@\@ROWCOUNT”函数中的值，以返回已删除的行数  。  
+ 下面的示例演示一个更复杂的 WHERE 子句。 WHERE 子句定义要确定删除的行而必须满足的两个条件。 `StandardCost` 列中的值必须介于 `12.00` 与 `14.00` 之间，而 `SellEndDate` 列中的值必须为 Null。 该示例还将打印“ **\@ROWCOUNT”函数中的值，以返回已删除的行数\@** 。  
   
 ```sql
 DELETE Production.ProductCostHistory  
@@ -259,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. 使用游标以确定要删除的行  
- 以下示例使用名为 `complex_cursor` 的游标删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `EmployeePayHistory` 表中的单行。 删除操作只影响当前从游标提取的单行。  
+ 以下示例使用名为 `EmployeePayHistory` 的游标删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `complex_cursor` 表中的单行。 删除操作只影响当前从游标提取的单行。  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -279,7 +279,7 @@ GO
 ```  
   
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. 对一个表中的数据使用联接和子查询，以删除另一个表中的行  
- 下面的示例演示两种基于一个表中的数据删除另一个表中的行的方法。 这两个示例均基于 `SalesPerson` 表中存储的年初至今的销售业绩，从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPersonQuotaHistory` 表中删除行。 第一个 `DELETE` 语句显示与 ISO 兼容的子查询解决方案，第二个 `DELETE` 语句显示联接这两个表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 扩展。  
+ 下面的示例演示两种基于一个表中的数据删除另一个表中的行的方法。 这两个示例均基于 `SalesPersonQuotaHistory` 表中存储的年初至今的销售业绩，从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPerson` 表中删除行。 第一个 `DELETE` 语句显示与 ISO 兼容的子查询解决方案，第二个 `DELETE` 语句显示联接这两个表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 扩展。  
   
 ```sql
 -- SQL-2003 Standard subquery  
@@ -315,7 +315,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. 使用 TOP 限制删除的行数  
- 当 TOP (n) 子句与 DELETE 一起使用时，将针对随机选择的 n 行执行删除操作   。 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `PurchaseOrderDetail` 表中删除到期日期早于 2006 年 7 月 1 日的 `20` 个随机行。  
+ 当 TOP (n) 子句与 DELETE 一起使用时，将针对随机选择的 n 行执行删除操作   。 以下示例从 `20` 数据库的 `PurchaseOrderDetail` 表中删除到期日期早于 2006 年 7 月 1 日的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 个随机行。  
   
 ```sql
 DELETE TOP (20)   
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. 在 DELETE 语句中同时使用 OUTPUT 与 <from_table_name>  
- 以下示例根据 `DELETE` 语句的 `FROM` 子句中定义的搜索条件，删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `ProductProductPhoto` 表中的行。 `OUTPUT` 子句返回所删除表中的列（ `DELETED.ProductID`、 `DELETED.ProductPhotoID`）以及 `Product` 表中的列。 在 `FROM` 子句中使用该项来指定要删除的行。  
+ 以下示例根据 `ProductProductPhoto` 语句的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 子句中定义的搜索条件，删除 `FROM` 数据库的 `DELETE` 表中的行。 `OUTPUT` 子句返回所删除表中的列（ `DELETED.ProductID`、 `DELETED.ProductPhotoID`）以及 `Product` 表中的列。 在 `FROM` 子句中使用该项来指定要删除的行。  
   
 ```sql
 DECLARE @MyTableVar table (  

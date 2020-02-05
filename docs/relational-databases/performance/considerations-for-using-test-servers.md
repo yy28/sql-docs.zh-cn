@@ -19,10 +19,10 @@ ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a1cf7a4bb37abd60f7067381ba4da6a2d44328ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946986"
 ---
 # <a name="considerations-for-using-test-servers"></a>使用测试服务器的注意事项
@@ -38,7 +38,7 @@ ms.locfileid: "67946986"
   
 -   要使用测试服务器优化生产服务器上的数据库的用户必须同时存在于两个服务器上，否则此方案无效。  
   
--   必须启用扩展存储过程 **xp_msver**，才能使用测试服务器/生产服务器方案。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问使用此扩展存储过程来提取在优化测试服务器时要使用的处理器数和生产服务器的可用内存。 如果未启用 **xp_msver** ，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问假定运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的计算机具有硬件特征。 如果运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的计算机没有硬件特征，则假定具有一个处理器和 1024 MB 的内存。 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，该扩展存储过程默认是打开的。 有关详细信息，请参阅 [外围应用配置器](../../relational-databases/security/surface-area-configuration.md) 和 [xp_msver (Transact-SQL)](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)。  
+-   必须启用扩展存储过程 **xp_msver**，才能使用测试服务器/生产服务器方案。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问使用此扩展存储过程来提取在优化测试服务器时要使用的处理器数和生产服务器的可用内存。 如果未启用 **xp_msver** ，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问假定运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的计算机具有硬件特征。 如果运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的计算机没有硬件特征，则假定具有一个处理器和 1024 MB 的内存。 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，该扩展存储过程默认是打开的。 有关详细信息，请参阅 [外围应用配置器](../../relational-databases/security/surface-area-configuration.md) 和 [xp_msver (Transact-SQL)](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)。  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问需要测试服务器和生产服务器中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为同一版本。 如果有两个不同的版本，则优先使用测试服务器中的版本。 例如，如果测试服务器运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标准版，则即使生产服务器运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 企业版， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 优化顾问也不会建议使用索引视图、分区和联机操作。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "67946986"
   
 ## <a name="issues-related-to-the-shell-database"></a>与 Shell 数据库有关的问题  
   
--   执行优化后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问应删除优化期间在测试服务器中创建的所有元数据。 包括 shell 数据库。 如果您要使用相同的生产服务器和测试服务器执行一系列优化会话，那么您可能希望保留此 shell 数据库以节省时间。 请在 XML 输入文件中指定 **TuningOptions** 父元素下的 **RetainShellDB** 子元素以及其他子元素。 使用这些选项将使[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问保留 Shell 数据库。 有关详细信息，请参阅[ XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
+-   执行优化后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问应删除优化期间在测试服务器中创建的所有元数据。 包括 shell 数据库。 如果您要使用相同的生产服务器和测试服务器执行一系列优化会话，那么您可能希望保留此 shell 数据库以节省时间。 请在 XML 输入文件中指定 **TuningOptions** 父元素下的 **RetainShellDB** 子元素以及其他子元素。 使用这些选项将使 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问保留 Shell 数据库。 有关详细信息，请参阅[ XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
   
 -   在成功完成测试服务器/生产服务器的优化会话后，即使未指定 **RetainShellDB** 子元素，Shell 数据库也会保留在测试服务器中。 这些无用的 Shell 数据库可能会妨碍后续的会话优化操作，因此，在执行其他测试服务器/生产服务器优化会话之前，应先删除这些 Shell 数据库。 此外，如果优化会话意外结束，则测试服务器中的 Shell 数据库及其内部对象可能会保留在测试服务器中。 在启动新的测试服务器/生产服务器优化会话之前，也应删除这些数据库和对象。  
   

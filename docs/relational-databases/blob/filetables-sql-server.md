@@ -16,10 +16,10 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125173"
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
@@ -127,7 +127,7 @@ ms.locfileid: "68125173"
  说明用于管理 FileTable 的常见管理任务。  
   
 ##  <a name="relcontent"></a> 相关内容  
- [FileTable Schema](../../relational-databases/blob/filetable-schema.md)  
+ [FileTable 架构](../../relational-databases/blob/filetable-schema.md)  
  说明 FileTable 的预定义固定架构。  
   
  [FileTable 与其他 SQL Server 功能的兼容性](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)  

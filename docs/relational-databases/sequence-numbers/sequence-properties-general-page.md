@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b221a39ea46c0bb853aacfbeaa020d67b53ebbca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126989"
 ---
 # <a name="sequence-properties-general-page"></a>序列属性（“常规”页）
@@ -37,7 +37,7 @@ ms.locfileid: "68126989"
  **序列架构**  
  指定将拥有此序列的架构。  
   
- **数据类型**  
+ **Data type**  
  序列可定义为任何整数类型。 这包括：  
   
 |数据类型|范围|  

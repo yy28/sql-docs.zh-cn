@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909113"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
@@ -78,13 +78,13 @@ ms.locfileid: "72909113"
      **规则**  
      （可选）选择要绑定到用户定义数据类型别名的规则。  
   
-     **小数位数**  
+     **缩放**  
      指定可以在小数点右存储的十进制数字的最大位数。  
   
      **架构**  
      从包含当前用户的所有可用架构的列表中选择架构。 默认选择是当前用户的默认架构。  
   
-     **存储器**  
+     **存储**  
      显示用户定义数据类型别名的最大存储大小。 最大存储大小会根据精度的不同而变化。  
   
     |||  
@@ -96,7 +96,7 @@ ms.locfileid: "72909113"
   
      对于 **nchar** 和 **nvarchar** 数据类型，存储值始终是 **“长度”** 中值的两倍。  
   
-     不会显示 **nvarchar(max)** 、**varchar(max)** 或 **varbinary(max)** 数据类型的存储。  
+     不会显示 **nvarchar(max)** 、 **varchar(max)** 或 **varbinary(max)** 数据类型的存储。  
   
 2.  在“新建用户定义数据类型”对话框的“架构”框中，键入此数据类型别名所属的架构，或使用浏览按钮选择架构   。  
   

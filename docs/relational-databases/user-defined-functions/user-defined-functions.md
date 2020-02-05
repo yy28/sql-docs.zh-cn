@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8a659583df74cdc2e5100fcc25aa25e90af3bf22
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843841"
 ---
 # <a name="user-defined-functions"></a>用户定义函数
@@ -103,7 +103,7 @@ ms.locfileid: "73843841"
 |@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
- 下列不确定性内置函数不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数中使用  。  
+ 下列不确定性内置函数不能在  **用户定义函数中使用**[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
 |||  
 |-|-|  
@@ -115,7 +115,7 @@ ms.locfileid: "73843841"
 ##  <a name="SchemaBound"></a> 绑定到架构的函数  
  `CREATE FUNCTION` 支持 `SCHEMABINDING` 子句，后者可将函数绑定到它引用的任何对象（如表、视图和其他用户定义函数）的架构。 尝试更改或删除绑定到架构的函数所引用的任何对象失败。  
   
- 必须满足以下条件才能在 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 中指定 `SCHEMABINDING`：  
+ 必须满足以下条件才能在 `SCHEMABINDING`CREATE FUNCTION[ 中指定 ](../../t-sql/statements/create-function-transact-sql.md)：  
   
 -   该函数引用的所有视图和用户定义函数必须是绑定到架构的视图和函数。  
   

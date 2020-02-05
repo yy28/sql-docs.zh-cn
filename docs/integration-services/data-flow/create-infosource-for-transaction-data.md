@@ -11,10 +11,10 @@ ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19c8384a389db2032c36291e669d5dd2885ac8dd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293308"
 ---
 # <a name="create-infosource-for-transaction-data"></a>创建事务数据的 InfoSource
@@ -82,10 +82,10 @@ ms.locfileid: "71293308"
  **InfoObject**  
  显示与数据流列相关联的 InfoObject 的名称。  
   
- **“类型”**  
+ 类型   
  显示与数据流列相关联的 InfoObject 的类型。 下表列出了该类型的可能值。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |CHA|特征|  
 |UNI|单位|  

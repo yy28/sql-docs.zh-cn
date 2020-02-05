@@ -26,10 +26,10 @@ ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7075de83b3f2d13d80d0eb08db1d780827eddeec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039079"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
@@ -40,7 +40,7 @@ DBCC OPENTRAN 可帮助识别可能阻止日志截断的活动事务。 如果�
 > [!NOTE]
 >  非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器不支持 DBCC OPENTRAN。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -55,7 +55,7 @@ DBCC OPENTRAN
 ```  
   
 ## <a name="arguments"></a>参数  
- database_name | database_id| 0    
+ database_name*database_id| 0* |    
  显示其中的最早事务信息的数据库名称或 ID。 如果未指定，或者指定为 0，则使用当前数据库。 数据库名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
  TABLERESULTS  
@@ -64,7 +64,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  取消显示所有信息性消息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 使用 DBCC OPENTRAN 确定打开的事务是否存在于事务日志中。 使用 BACKUP LOG 语句时，只能截断日志的非活动部分；打开的事务会阻止日志被完全截断。 若要标识打开的事务，请使用 sp_who 获取系统进程 ID。
   
 ## <a name="result-sets"></a>结果集  

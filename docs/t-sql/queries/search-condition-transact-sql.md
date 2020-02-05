@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027652"
 ---
 # <a name="search-condition-transact-sql"></a>搜索条件 (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68027652"
 
   使用逻辑运算符 AND、OR 和 NOT 的一个或多个谓词的组合。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -200,7 +200,7 @@ ms.locfileid: "68027652"
  EXISTS  
  与子查询一起使用，用于测试是否存在子查询返回的行。 有关详细信息，请参阅 [EXISTS (Transact-SQL)](../../t-sql/language-elements/exists-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  逻辑运算符的优先顺序是 NOT（最高），然后是 AND，最后是 OR。 不过，可以在搜索条件内使用括号来表示优于此优先顺序的运算符。 根据查询优化器所做的选择，逻辑运算符的求值顺序可能有所不同。 有关逻辑运算符如何对逻辑值进行运算的详细信息，请参阅 [AND (Transact-SQL)](../../t-sql/language-elements/and-transact-sql.md)、[OR (Transact-SQL)](../../t-sql/language-elements/or-transact-sql.md) 和 [NOT (Transact-SQL)](../../t-sql/language-elements/not-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
