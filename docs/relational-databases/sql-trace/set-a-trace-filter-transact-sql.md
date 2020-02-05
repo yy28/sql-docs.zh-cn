@@ -14,10 +14,10 @@ ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 172c55839655fb5a49f60449e4e5eb87fe2cd7b7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907048"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>设置跟踪筛选器 (Transact-SQL)
@@ -26,12 +26,12 @@ ms.locfileid: "72907048"
   
 ### <a name="to-set-a-trace-filter"></a>设置跟踪筛选器  
   
-1.  如果跟踪已在运行，请通过指定 `@status = 0` 执行 sp_trace_setstatus  来停止跟踪。  
+1.  如果跟踪已在运行，请通过指定  **执行 sp_trace_setstatus**`@status = 0` 来停止跟踪。  
   
 2.  执行 **sp_trace_setfilter** 以配置有关检索跟踪事件信息的类型。  
 
 > [!IMPORTANT]  
->  与常规的存储过程不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 存储过程 (sp_trace\_xx  ) 参数的类型都受到严格限制，不支持自动的数据类型转换  。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
+>  与常规的存储过程不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 存储过程 (sp_trace**xx\_ _) 参数的类型都受到严格限制，不支持自动的数据类型转换_** 。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
   
 ## <a name="see-also"></a>另请参阅  
  [筛选跟踪](../../relational-databases/sql-trace/filter-a-trace.md)   

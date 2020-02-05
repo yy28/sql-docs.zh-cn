@@ -11,10 +11,10 @@ ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f7474200fa8156ab0663540611803276375ad6b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281182"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable（SSISDB 数据库）
@@ -64,7 +64,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -84,19 +84,19 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   用户没有相应的权限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以使用环境变量高效地将值分配给项目参数或包参数，以用于执行包。 环境变量启用参数值的排列。 变量名在环境中必须是唯一的。  
   
  此存储过程验证变量的数据类型，以确保它受 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录支持。  
   
 > [!TIP]  
->  请考虑在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中使用 Int16  数据类型，而不使用不受支持的 Sbyte  数据类型。  
+>  请考虑在  **中使用 Int16**[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，而不使用不受支持的 Sbyte  数据类型。  
   
  使用 value  参数传递给此存储过程的值将根据下表，从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型：  
   
 |Integration Services 数据类型|SQL Server 数据类型|  
 |------------------------------------|--------------------------|  
-|**Boolean**|**bit**|  
+|**布尔值**|**bit**|  
 |**Byte**|**binary**、**varbinary**|  
 |**DateTime**|**datetime**、**datetime2**、**datetimeoffset**、**smalldatetime**|  
 |**双精度**|精确数字：**decimal**、**numeric**；近似数字：**float**、**real**|  
@@ -104,7 +104,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
 |**Single**|精确数字：**decimal**、**numeric**；近似数字：**float**、**real**|  
-|**String**|**varchar**、**nvarchar**、**char**|  
+|**字符串**|**varchar**、**nvarchar**、**char**|  
 |**UInt32**|int  int  是与 Uint32  最接近的可用映射。）|  
 |**UInt64**|bigint  int  是与 Uint64  最接近的可用映射。）|  
   

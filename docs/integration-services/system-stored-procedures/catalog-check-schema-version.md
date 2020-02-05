@@ -11,10 +11,10 @@ ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7d7ec8899e880220dc2011014501a883fafa4470
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295615"
 ---
 # <a name="catalogcheck_schema_version"></a>catalog.check_schema_version 
@@ -41,7 +41,7 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
  当此参数设置为 1  时，将调用 32 位版本的 dtexec。 use32bitruntime  为 int  。  
   
 ## <a name="result-set"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要以下权限：  

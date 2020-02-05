@@ -13,10 +13,10 @@ ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 293df346a7eac72f23fa3b3bdd7bbe7994fdc54c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892888"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>含有 AlwaysOn 可用性组的 Analysis Services
@@ -27,14 +27,14 @@ ms.locfileid: "68892888"
   
  处理和查询属于只读工作负荷。 您可以通过将这些工作负荷转移到可读辅助副本来改善性能， 但这需要执行额外配置。 请使用本主题中的核对清单来确保遵循所有步骤。  
   
-##  <a name="bkmk_prereq"></a> 先决条件  
+##  <a name="bkmk_prereq"></a>先决条件  
  您必须具有针对所有副本的 SQL Server 登录名。 必须具有 **sysadmin** 权限才能配置可用性组、侦听器和数据库；但用户只需要 **db_datareader** 权限即可从 Analysis Services 客户端访问数据库。  
   
  请使用支持表格格式数据流 (TDS) 协议版本 7.4 或更高版本的数据访问接口（如 SQL Server Native Client 11.0），或 .NET Framework 4.02 中用于 SQL Server 的数据访问接口。  
   
  **（仅限只读工作负荷）** 。 必须为只读连接配置辅助副本角色，可用性组必须具备路由列表，并且 Analysis Services 数据源中的连接必须指定可用性组侦听器。 本主题中提供了相关说明。  
   
-##  <a name="bkmk_UseSecondary"></a> 清单：使用次要副本执行只读操作  
+##  <a name="bkmk_UseSecondary"></a> 核对清单：使用辅助副本执行只读操作  
  除非您的 Analysis Services 解决方案包括写回功能，否则您可以配置数据源连接使用可读的辅助副本。 如果您的网络连接速度很快，那么辅助副本的数据滞后时间很短，可提供与主副本几乎相同的数据。 通过将辅助副本用于 Analysis Services 操作，您可以减少主副本上的读写争用，并且更充分地利用可用性组中的辅助副本。  
   
  默认情况下，允许对主副本进行读写和读意向访问，同时不允许连接辅助副本。 需要进行额外配置，才能建立与辅助副本的只读客户端连接。 配置要求对辅助副本设置属性，并运行定义只读路由列表的 T-SQL 脚本。 请使用以下过程来确保已执行以上两个步骤。  
@@ -59,7 +59,7 @@ ms.locfileid: "68892888"
   
     -   在“可读次要副本”  下拉列表中，选择“仅读意向”  。  
   
-    -   在 **“主角色中的连接”** 下拉列表中，选择 **“允许所有连接”** 。 这是默认设置。  
+    -   在 **“主角色中的连接”** 下拉列表中，选择 **“允许所有连接”** 。 这是默认值。  
   
     -   或者，在 **“可用性模式”** 下拉列表中，选择 **“同步提交”** 。 此步骤不是必需的，但设置它可以确保主副本与辅助副本之间存在数据奇偶校验。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "68892888"
 ##  <a name="bkmk_test"></a> 测试配置  
  在 Analysis Services 中配置了辅助副本并创建了数据源连接后，您可以确认处理和查询命令是否重定向到辅助副本。 还可以执行计划的手动故障转移，以验证适用于此应用场景的恢复计划。  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>第 1 步：确认数据源连接重定向到次要副本  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>第 1 步：确认数据源连接重定向到辅助副本  
   
 1.  启动 SQL Server Profiler 并连接到承载辅助副本的 SQL Server 实例。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "68892888"
   
 2.  在 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]中，打开 Analysis Services 项目或包含要测试的数据源连接的解决方案。 确保数据源指定的是可用性组侦听器而不是组中的实例。  
   
-     此步骤至关重要。 如果指定服务器实例名称，则不会路由到辅助副本。  
+     此步骤非常重要， 如果指定服务器实例名称，则不会路由到辅助副本。  
   
 3.  排列应用程序窗口，使 SQL Server Profiler 和 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 并排显示。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "68892888"
 ##  <a name="bkmk_whathappens"></a> 故障转移之后的情形  
  在故障转移期间，辅助副本转换为主角色，以前的主副本转换为辅助角色。 所有客户端连接都已终止，可用性组侦听器的所有权随主副本角色移至新的 SQL Server 实例，并且该侦听器终结点绑定到新实例的虚拟 IP 地址和 TCP 端口。 有关详细信息，请参阅本主题后面的 [关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)之类的系统数据库。  
   
- 如果在处理过程中发生故障转移，则日志文件或输出窗口的 Analysis Services 中会出现以下错误：“OLE DB 错误：OLE DB 或 ODBC 错误：通讯链接失败；08S01；TPC 提供程序：远程主机强行关闭现有连接。 ; 08S01。”  
+ 如果执行过程中出现故障转移，Analysis Services 中会出现以下错误并显示在日志文件或输出窗口中：“OLE DB 错误: OLE DB 或 ODBC 错误通讯链接失败; 08S01; TPC 提供程序: 现有连接已被远程主机强行关闭。 ; 08S01。”  
   
  稍等片刻然后重试，该错误应自行解决。 如果为可读辅助副本正确配置了可用性组，那么在您重试处理后，处理将在新的辅助副本上继续执行。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "68892888"
   
 ## <a name="see-also"></a>另请参阅  
  [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [活动次要副本：可读次要副本（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [创建数据源（SSAS 多维）](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [启用维度写回](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  

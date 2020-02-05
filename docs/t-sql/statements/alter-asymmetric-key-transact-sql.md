@@ -20,10 +20,10 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 06263499babe005bca36a982bc863dfa24356b5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066074"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68066074"
 
   更改非对称密钥的属性。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,22 +60,22 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  更改私钥的保护。  
   
- ENCRYPTION BY PASSWORD ='strongPassword'   
- 指定用于保护私钥的新密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求  。 如果省略该选项，则使用数据库主密钥对私钥进行加密。  
+ ENCRYPTION BY PASSWORD ='strongPassword' ****  
+ 指定用于保护私钥的新密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果省略该选项，则使用数据库主密钥对私钥进行加密。  
   
- DECRYPTION BY PASSWORD ='oldPassword'   
+ DECRYPTION BY PASSWORD ='oldPassword' ****  
  指定当前用于保护私钥的旧密码。 如果私钥使用数据库主密钥进行加密，则不需要指定旧密码。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果没有 ENCRYPTION BY PASSWORD 选项所需的数据库主密钥，并且未提供任何密码，则该操作将失败。 有关如何创建数据库主密钥的信息，请参阅 [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)。  
   
  您可以按下表所示，指定 PRIVATE KEY 选项，然后使用 ALTER ASYMMETRIC KEY 更改私钥的保护。  
   
 |更改其保护|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|旧密码到新密码|Required|Required|  
-|密码到主密钥|省略|Required|  
-|主密钥到密码|Required|省略|  
+|旧密码到新密码|必选|必选|  
+|密码到主密钥|省略|必选|  
+|主密钥到密码|必选|省略|  
   
  必须首先打开数据库主密钥，然后才能使用它来保护私钥。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md)。  
   

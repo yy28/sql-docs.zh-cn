@@ -25,10 +25,10 @@ ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 276ce1b24afc58be960f7c9f580204f7b329fe4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091737"
 ---
 # <a name="backup-master-key-transact-sql"></a>BACKUP MASTER KEY (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68091737"
 
   导出数据库主密钥。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,7 +53,7 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
  PASSWORD ='password'   
  用于加密文件中主密钥的密码。 此密码应通过复杂性检查。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  主密钥必须为打开状态，因此在备份主密钥之前应对其进行解密。 如果主密钥使用服务主密钥进行加密，则不必显式打开。 但如果主密钥仅使用密码进行加密，则必须显式打开。  
   
  我们建议您在创建主密钥之后立即对其进行备份，并存储于另外一个安全的位置中。  

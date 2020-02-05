@@ -21,10 +21,10 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 94f179d9c1b8342e5c1cdfd7fcb62e6673634e7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135846"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68135846"
 
   使用对称密钥加密数据。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -72,7 +72,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  
  如果 cleartext 值为 NULL，则返回 NULL  。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  EncryptByKey 使用对称密钥。 该密钥必须打开。 如果在当前会话中已打开该对称密钥，则无需在查询上下文中再次打开它。  
   
  验证器有助于禁止对加密字段进行整个值替换。 例如，请考虑下面的工资单数据表。  
@@ -95,7 +95,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加密函数与 ANSI_PADDING OFF 设置一起使用会因隐式转换而导致数据可能丢失。 有关 ANSI_PADDING 的详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
- 以下示例中阐释的功能依赖于在[如何：加密数据列](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)。  
+ 以下示例所说明的功能依赖于在[如何加密数据列](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)中创建的密钥和证书。  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. 使用对称密钥加密字符串  
  以下示例向 `Employee` 表添加列，然后加密存储在 `NationalIDNumber` 列中的社会安全号码的值。  

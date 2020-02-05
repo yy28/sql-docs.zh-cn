@@ -12,23 +12,23 @@ f1_keywords:
 ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fbf94f1ef3926c43f44e293f783ba0f1ac57fac9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e5fa57172b7d6ec49b58bf965d81a23d4916cb2e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767697"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286399"
 ---
 # <a name="filter-settings"></a>筛选器设置
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   可以使用 **“筛选设置”** 对话框为复制监视器中的网格定义筛选器。 例如，若要只显示 **“所有订阅”** 选项卡上处于活动状态的订阅，请从 **“列名”** 列选择 **“状态”** ，从 **“运算符”** 列选择 **“等于”** 并从 **“值1”** 列选择 **“活动”** 。 在您基于一个或多个列定义筛选器之后，将应用筛选器以便网格中只显示与筛选器条件匹配的子集行。  
   
 ## <a name="options"></a>选项  
- **“状态”**  
+ **列名称**  
  选择要对其进行筛选的列的名称。 您可以使筛选器基于一个或多个列。  
   
- **“等于”**  
+ **“运算符”**  
  为筛选器选择一个运算符，例如 **“小于或等于”** 。  
   
  **“值1”** 和 **“值2”**  

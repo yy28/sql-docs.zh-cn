@@ -13,10 +13,10 @@ ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7b9ba71d5f7791b442989a5194c9cc6aede98677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099605"
 ---
 # <a name="database-properties-general-page"></a>数据库属性（“常规”页）
@@ -33,10 +33,10 @@ ms.locfileid: "68099605"
  **名称**  
  显示数据库的名称。  
   
- **“状态”**  
+ **Status**  
  显示数据库状态。 有关详细信息，请参阅 [Database States](../../relational-databases/databases/database-states.md)。  
   
- **“所有者”**  
+ **所有者**  
  显示数据库所有者的名称。 可以在 **“文件”** 页上更改所有者。  
   
  **创建日期**  

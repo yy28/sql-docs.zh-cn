@@ -26,20 +26,20 @@ author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 6a274535d53b7eec57fdf257425f855eded5d046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121782"
 ---
-# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+# <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   将局部变量设置为表达式的值。  
   
  要分配变量，建议使用 [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md) 而不是 SELECT @local_variable  。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -71,7 +71,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
  *expression*  
  为任意有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 此参数包含一个标量子查询。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SELECT @local_variable 通常用于将单个值返回到变量中  。 但是，如果 expression 是列的名称，则可返回多个值  。 如果 SELECT 语句返回多个值，则将返回的最后一个值赋给变量。  
   
  如果 SELECT 语句没有返回行，变量将保留当前值。 如果 expression 是不返回值的标量子查询，则将变量设为 NULL  。  
@@ -83,7 +83,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. 使用 SELECT @local_variable 返回单个值  
+### <a name="a-use-select-local_variable-to-return-a-single-value"></a>A. 使用 SELECT @local_variable 返回单个值  
  在以下示例中，为变量 `@var1` 赋值 `Generic Name`。 由于 `Store` 表中不存在为 `CustomerID` 指定的值，因此对该表的查询不返回任何行。 变量的值仍为 `Generic Name`。  
   
 ```sql  
@@ -105,7 +105,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>B. 使用 SELECT @local_variable 返回 null  
+### <a name="b-use-select-local_variable-to-return-null"></a>B. 使用 SELECT @local_variable 返回 null  
  在以下示例中，使用了一个子查询为 `@var1` 赋值。 由于为 `CustomerID` 请求的值不存在，因此子查询不返回值，并将变量设为 `NULL`。  
   
 ```sql  

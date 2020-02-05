@@ -15,10 +15,10 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bd0f58fc45889bfef8701538bebc4ec94af85944
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115752"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>“清除维护”任务（维护计划）
@@ -29,7 +29,7 @@ ms.locfileid: "68115752"
 >  “清除维护”任务不会自动删除指定目录的子文件夹中的文件。 此功能减少了使用清除维护任务删除文件的恶意攻击的可能性。 如果要删除一级子文件夹中的文件，必须选择“包括一级子文件夹”  。  
   
 ## <a name="options"></a>选项  
- **连接**  
+ **Connection**  
  显示当前的连接。  
   
  **新建**  
@@ -90,13 +90,13 @@ ms.locfileid: "68115752"
  **使用特定用户名和密码**  
  使用 SQL Server 身份验证连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例。 此选项不可用。  
   
- **User name**  
+ **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
  **密码**  
  提供一个在进行身份验证时要使用的密码。 此选项不可用。  
   
 ## <a name="see-also"></a>另请参阅  
- [中对象资源管理器的](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

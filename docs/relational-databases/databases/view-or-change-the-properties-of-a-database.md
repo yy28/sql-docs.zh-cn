@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: dc1e6d1021e1e7cf30a683d8c81c625a56b9766c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127060"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>查看或更改数据库的属性
@@ -64,7 +64,7 @@ ms.locfileid: "68127060"
 3.  在 **“数据库属性”** 对话框中，选择一个页以查看相应的信息。 例如，选择 **“文件”** 页可以查看数据和日志文件信息。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- Transact-SQL 提供了许多用于查看和更改数据库属性的不同方法。 若要查看数据库属性，可以使用 [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数和 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。 要更改数据库属性，可以使用适用于你环境的 ALTER DATABASE 语句版本：[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 或 [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-azure-sql-database.md)。 若要查看数据库范围属性，使用 [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 目录视图；若要更改数据库范围属性，则使用 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 语句。  
+ Transact-SQL 提供了许多用于查看和更改数据库属性的不同方法。 若要查看数据库属性，可以使用 [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数和 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。 若要更改数据库属性，可以使用适用于你环境的 ALTER DATABASE 语句版本：[ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) 或 [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-azure-sql-database.md)。 若要查看数据库范围属性，使用 [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 目录视图；若要更改数据库范围属性，则使用 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 语句。  
   
 #### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>使用 DATABASEPROPERTYEX 函数查看数据库属性  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68127060"
     FROM sys.databases WHERE name = 'AdventureWorks2012';  
     ```  
   
-#### <a name="to-view-the-properties-of-a-database-scoped-configuration-by-querying-sysdatabasesscopedconfiguration"></a>通过查询 sys.databases_scoped_configuration 查看数据库范围的配置的属性  
+#### <a name="to-view-the-properties-of-a-database-scoped-configuration-by-querying-sysdatabases_scoped_configuration"></a>通过查询 sys.databases_scoped_configuration 查看数据库范围的配置的属性  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，然后连接到要查看其属性的数据库。  
   

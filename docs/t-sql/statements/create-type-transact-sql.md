@@ -27,18 +27,18 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74901878"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的当前数据库中创建别名数据类型或用户定义类型。 别名数据类型的实现基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机系统类型。 用户定义类型通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中的程序集的类来实现。 若要将用户定义类型绑定到其实现，必须首先使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册包含该类型实现的 CLR 程序集。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的当前数据库中创建别名数据类型或用户定义类型。 别名数据类型的实现基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机系统类型。 用户定义类型通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中的程序集的类来实现。 若要将用户定义类型绑定到其实现，必须首先使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CREATE ASSEMBLY[ 在 ](../../t-sql/statements/create-assembly-transact-sql.md) 中注册包含该类型实现的 CLR 程序集。  
   
- 默认情况下，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中运行 CLR 代码的功能处于关闭状态。 可以创建、修改和删除引用托管代码模块的数据库对象，但除非使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 启用 [clr enabled Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)，否则不会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行这些引用。  
+ 默认情况下，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中运行 CLR 代码的功能处于关闭状态。 可以创建、修改和删除引用托管代码模块的数据库对象，但除非使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_configure[ 启用 ](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)clr enabled Option[，否则不会在 ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 中执行这些引用。  
  
 > [!NOTE]  
 >  本主题讨论 .NET Framework CLR 与 SQL Server 的集成。 CLR 集成不适用于 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
@@ -199,7 +199,7 @@ column_name <data_type>
  assembly_name   
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
- 指定可在公共语言运行时中引用用户定义类型的实现的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序集。 assembly_name 应与当前数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的现有程序集匹配  。  
+ 指定可在公共语言运行时中引用用户定义类型的实现的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序集。 assembly_name 应与当前数据库的  *中的现有程序集匹配*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  
 >  EXTERNAL_NAME 在包含数据库中不可用。  
@@ -207,7 +207,7 @@ column_name <data_type>
  [.  *class_name*  **]**  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
- 指定实现用户定义类型的程序集内的类。 class_name 必须是有效的标识符，并且它必须作为类存在于可见程序集中  。 class_name 区分大小写，不考虑数据库的排序规则，且必须与对应的程序集中的类名完全匹配  。 如果用于编写类的编程语言使用命名空间概念（例如 C#），则类名可以是用方括号 ([ ]) 括起来的限定命名空间的名称  。 如果未指定 class_name，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假定该名称与 type_name 相同   。  
+ 指定实现用户定义类型的程序集内的类。 class_name 必须是有效的标识符，并且它必须作为类存在于可见程序集中  。 class_name 区分大小写，不考虑数据库的排序规则，且必须与对应的程序集中的类名完全匹配  。 如果用于编写类的编程语言使用命名空间概念（例如 C#），则类名可以是用方括号 ([ ]) 括起来的限定命名空间的名称  。 如果未指定 class_name，则  *假定该名称与 type_name 相同*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  。  
   
  \<column_definition>  
  定义用户定义表类型的列。  
@@ -252,7 +252,7 @@ column_name <data_type>
  指示创建哈希索引。 仅在内存优化表中支持哈希索引。  
   
 ## <a name="remarks"></a>备注  
- 在 assembly_name 中引用的程序集的类及其方法应满足在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中实现用户定义类型的所有要求  。 有关这些要求的详细信息，请参阅 [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
+ 在 assembly_name 中引用的程序集的类及其方法应满足在  *中实现用户定义类型的所有要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关这些要求的详细信息，请参阅 [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
   
  其他注意事项包括以下几点：  
   
@@ -268,7 +268,7 @@ column_name <data_type>
   
  与使用 sp_addtype 创建的用户定义类型不同，对于使用 CREATE TYPE 创建的类型，不会向 public 数据库角色自动授予该类型的 REFERENCES 权限   。 此权限必须单独授予。  
   
- 在用户定义表类型中，column_name \<data type> 中使用的结构化用户定义类型是定义表类型的数据库架构作用域的一部分  。 若要访问数据库不同作用域中的结构化用户定义类型，请使用由两部分组成的名称。  
+ 在用户定义表类型中，column_name *data type> 中使用的结构化用户定义类型是定义表类型的数据库架构作用域的一部分*\<。 若要访问数据库不同作用域中的结构化用户定义类型，请使用由两部分组成的名称。  
   
  在用户定义表类型中，计算列的主键必须是 PERSISTED 和 NOT NULL。  
   

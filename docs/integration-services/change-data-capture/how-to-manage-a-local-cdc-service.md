@@ -11,10 +11,10 @@ ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 722db3a272c99ba6733551f4fa1a4131971e2416
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298739"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>如何管理本地 CDC 服务
@@ -34,7 +34,7 @@ ms.locfileid: "71298739"
   
      也可以右键单击要使用的 CDC 服务，然后选择所需操作。  
   
-     **或**  
+     **OR**  
   
      从 CDC 服务配置控制台的左侧窗格中选择 **“本地 CDC 服务”** ，然后从 CDC 服务配置控制台的中部选择要使用的服务。  
   
@@ -61,6 +61,6 @@ ms.locfileid: "71298739"
          也可以右键单击要编辑其属性的 CDC 服务，然后选择“属性”  。  
   
 ## <a name="see-also"></a>另请参阅  
- [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [管理 Oracle CDC 服务](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

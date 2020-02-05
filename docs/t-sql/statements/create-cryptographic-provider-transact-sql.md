@@ -23,10 +23,10 @@ ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d17e61de477b896a8fcdaead01d12674d3b9fddc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68061023"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68061023"
 
   通过可扩展密钥管理 (EKM) 提供程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内创建加密提供程序。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  path_of_DLL   
  实现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可扩展的密钥管理接口的 .dll 文件的路径。 使用用于 Microsoft Azure Key Vault 的 SQL Server 连接器时，默认位置是 C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll   。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  提供程序创建的所有密钥都将按照提供程序的 GUID 引用提供程序。 在 DLL 的所有版本中都将保留此 GUID。  
   
  必须使用任何证书对实现 SQLEKM 接口的 DLL 进行数字签名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将验证此签名。 此签名包括其证书链，证书链的根目录必须安装在 Windows 系统的受信任的根证书颁发机构位置  。 如果该签名未经正确验证，则 CREATE CRYPTOGRAPHIC PROVIDER 语句将失败。 有关证书和证书链的详细信息，请参阅 [SQL Server 证书和对称密钥](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。  
@@ -68,7 +68,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  要求具有 CONTROL SERVER 权限，或者具有 sysadmin 固定服务器角色的成员身份  。  
   
 ## <a name="examples"></a>示例  
- 下面的示例通过 .dll 文件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建名为 `SecurityProvider` 的加密提供程序。 此 .dll 文件命名为 `c:\SecurityProvider\SecurityProvider_v1.dll` 并安装在服务器上。 必须首先在服务器上安装此提供程序的证书。  
+ 下面的示例通过 .dll 文件在 `SecurityProvider` 中创建名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密提供程序。 此 .dll 文件命名为 `c:\SecurityProvider\SecurityProvider_v1.dll` 并安装在服务器上。 必须首先在服务器上安装此提供程序的证书。  
   
 ```  
 -- Install the provider  

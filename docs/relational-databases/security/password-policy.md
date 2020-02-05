@@ -33,10 +33,10 @@ ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: aa626cb69e22e56e1769d45b2cbfd652c51bc3b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68010821"
 ---
 # <a name="password-policy"></a>密码策略
@@ -119,7 +119,7 @@ ms.locfileid: "68010821"
   
  [ALTER USER (Transact-SQL)](../../t-sql/statements/alter-user-transact-sql.md)  
   
- [创建一个登录名](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [创建登录名](../../relational-databases/security/authentication-access/create-a-login.md)  
   
  [创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)  
   

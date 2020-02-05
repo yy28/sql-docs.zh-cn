@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8c35227dd4593d4d682caea51cc69c6b5dffd3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119166"
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68119166"
 
 此函数返回映射到指定年、月、日值的 date 值  。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ DATEFROMPARTS ( year, month, day )
 ```  
   
 ## <a name="arguments"></a>参数  
-year   
+*year*  
 指定年份的整数表达式。
   
 month   
@@ -51,7 +51,7 @@ day
 ## <a name="return-types"></a>返回类型
 **date**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `DATEFROMPARTS` 返回一个 date 值，其中日期部分设置为指定的年、月和日，时间部分设置为默认值  。 对于无效参数，`DATEFROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATEFROMPARTS` 返回 NULL。
   
 此函数可在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本的服务器上执行远程处理。 它不能无法在版本低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的服务器上执行远程处理。
