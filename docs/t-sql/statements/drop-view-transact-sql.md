@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ede74cb467b0ee9f83c72c5c07ee1b933c1a7fa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072102"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68072102"
 
   从当前数据库中删除一个或多个视图。 可对索引视图执行 DROP VIEW。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,7 +63,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
  view_name   
  要删除的视图的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  删除视图时，将从系统目录中删除视图的定义和有关视图的其他信息。 还将删除视图的所有权限。  
   
  使用 DROP TABLE 删除的表上的任何视图都必须使用 DROP VIEW 显式删除。  

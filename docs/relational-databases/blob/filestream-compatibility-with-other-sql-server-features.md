@@ -15,10 +15,10 @@ ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245400"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 与其他 SQL Server 功能的兼容性
@@ -69,7 +69,7 @@ ms.locfileid: "75245400"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Replication  
- 可以将发布服务器上启用了 FILESTREAM 属性的 **varbinary(max)** 列复制到订阅服务器，复制时可以带 FILESTREAM 属性，也可以不带。 若要指定复制列的方式，请使用“项目属性 - \<项目>”  对话框，或使用 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 @schema_option 参数。 复制到不具有 FILESTREAM 属性的 **varbinary(max)** 列的数据不能超过该数据类型的 2 GB 大小限制；否则，将产生运行时错误。 我们建议，如果您不是将数据复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，请复制 FILESTREAM 属性。 不论指定的架构选项为何，均不支持将包含 FILESTREAM 列的表复制到 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 订阅服务器。  
+ 可以将发布服务器上启用了 FILESTREAM 属性的 **varbinary(max)** 列复制到订阅服务器，复制时可以带 FILESTREAM 属性，也可以不带。 若要指定复制列的方式，请使用“项目属性 - **项目>”\<** 对话框，或使用 @schema_optionsp_addarticle[ 或 ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sp_addmergearticle[ 的 ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 参数。 复制到不具有 FILESTREAM 属性的 **varbinary(max)** 列的数据不能超过该数据类型的 2 GB 大小限制；否则，将产生运行时错误。 我们建议，如果您不是将数据复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，请复制 FILESTREAM 属性。 不论指定的架构选项为何，均不支持将包含 FILESTREAM 列的表复制到 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 订阅服务器。  
   
 > [!NOTE]  
 >  从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器的大数据值最多不得超过 256 MB。 有关详细信息，请参阅 [最大容量规范](https://go.microsoft.com/fwlink/?LinkId=103810)。  
@@ -77,7 +77,7 @@ ms.locfileid: "75245400"
 ### <a name="considerations-for-transactional-replication"></a>事务复制的注意事项  
  如果您使用为事务复制发布的表中的 FILESTREAM 列，请注意以下事项：  
   
--   如果表中的列具有 FILESTREAM 属性，则不能将 *database snapshot* 或 *database snapshot character* 的值用于 [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 的 @sync_method 属性。  
+-   如果表中的列具有 FILESTREAM 属性，则不能将 *database snapshot* 或 *database snapshot character* 的值用于 @sync_methodsp_addpublication[ 的 ](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 属性。  
   
 -   max text repl size 选项用于指定可以插入到为复制发布的列中的最大数据量。 此选项可用来控制复制的 FILESTREAM 数据的大小。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75245400"
   
     -   默认情况下，合并复制使用 NEWSEQUENTIALID()，因为与 NEWID() 相比，它可以提供更高的性能。 如果你要向将为合并复制发布的表添加 **uniqueidentifier** 列，请指定 NEWSEQUENTIALID() 作为默认值。  
   
--   合并复制包括为复制大型对象类型而进行的优化。 这种优化由 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 @stream_blob_columns 参数控制。 如果设置了用于复制 FILESTREAM 属性的架构选项，则 @stream_blob_columns 参数值将设置为 **true**。 通过使用 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，可以替代这种优化。 使用此存储过程可以将 @stream_blob_columns 设置为 **false**。 如果你要将 FILESTREAM 列添加到已经为合并复制发布的表中，建议你使用 sp_changemergearticle 将该选项设置为 **rue** 。  
+-   合并复制包括为复制大型对象类型而进行的优化。 这种优化由 @stream_blob_columnssp_addmergearticle[ 的 ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 参数控制。 如果设置了用于复制 FILESTREAM 属性的架构选项，则 @stream_blob_columns 参数值将设置为 **true**。 通过使用 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，可以替代这种优化。 使用此存储过程可以将 @stream_blob_columns 设置为 **false**。 如果你要将 FILESTREAM 列添加到已经为合并复制发布的表中，建议你使用 sp_changemergearticle 将该选项设置为 **rue** 。  
   
 -   如果 FILESTREAM 列中的数据大小超过 2 GB，则在创建项目后为 FILESTREAM 启用架构选项会导致复制失败，且复制过程中会发生冲突。 如果您预计这种情况会发生，建议您删除表项目，然后重新创建它，并在创建时间启用相应的 FILESTREAM 架构选项。  
   

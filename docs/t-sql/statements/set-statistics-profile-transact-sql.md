@@ -24,10 +24,10 @@ ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b3d48de1a5feef4a00b087fded311a2b57169047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131932"
 ---
 # <a name="set-statistics-profile-transact-sql"></a>SET STATISTICS PROFILE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68131932"
 
   显示语句的配置文件信息。 STATISTICS PROFILE 对即席查询、视图和存储过程有效。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,12 +44,12 @@ ms.locfileid: "68131932"
 SET STATISTICS PROFILE { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  STATISTICS PROFILE 为 ON 时，执行的各个查询都返回其常规结果集，后面跟一个附加结果集，显示查询执行的配置文件。  
   
  附加结果集包含查询的 SHOWPLAN_ALL 列以及下面的附加列。  
   
-|列名|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |**行**|各运算符生成的实际行数|  
 |**Executes**|运算符执行的次数|  

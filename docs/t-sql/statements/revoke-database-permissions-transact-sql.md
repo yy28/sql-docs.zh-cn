@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59536e4f4ba418aef0ee49737a67df43f903435d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983282"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE 数据库权限 (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73983282"
 
   撤消对数据库授予和拒绝的权限。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -112,14 +112,14 @@ permission | ALL [ PRIVILEGES ]
  Database_user_with_no_login   
  指定无相应服务器级主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果您撤消对通过 GRANT OPTION 被授予权限的主体的权限，但是未指定 CASCADE，则语句将失败。  
   
  数据库是安全对象，包含于权限层次结构中作为其父级的服务器中。 下表列出了可撤消的对数据库最为具体的限定权限，以及隐含这些权限的更为通用的权限。  
   
 |数据库权限|数据库权限隐含的权限|服务器权限隐含的权限|  
 |-------------------------|------------------------------------|----------------------------------|  
-|ADMINISTER DATABASE BULK OPERATIONS<br/>**适用于：** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
+|ADMINISTER DATABASE BULK OPERATIONS<br/>适用对象：  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|  
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|  
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|  
@@ -180,10 +180,10 @@ permission | ALL [ PRIVILEGES ]
 |CREATE TYPE|ALTER|CONTROL SERVER|  
 |CREATE VIEW|ALTER|CONTROL SERVER|  
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|  
-|删除|CONTROL|CONTROL SERVER|  
+|DELETE|CONTROL|CONTROL SERVER|  
 |在运行 CREATE 语句前执行|CONTROL|CONTROL SERVER|  
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **适用于**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。|CONTROL|CONTROL SERVER|   
-|Insert|CONTROL|CONTROL SERVER|  
+|INSERT|CONTROL|CONTROL SERVER|  
 |KILL DATABASE CONNECTION<br /> **适用于**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|CONTROL|ALTER ANY CONNECTION|  
 |REFERENCES|CONTROL|CONTROL SERVER|  
 |SELECT|CONTROL|CONTROL SERVER|  

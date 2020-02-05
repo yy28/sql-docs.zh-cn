@@ -1,10 +1,9 @@
 ---
-title: 创建计划并将计划附加到作业 | Microsoft Docs
-ms.custom: ''
+title: 创建计划并将计划附加到作业
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,13 +17,15 @@ helpviewer_keywords:
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2213390f252fdd07f1c8aacc6570940f759e7579
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5e515bcf14eff0ce4d4b6c5913803ee8e322365d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267261"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252134"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>创建计划并将计划附加到作业
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "68267261"
   
 -   在特定日期和时间运行一次。  
   
--   按重复执行的计划运行。  
+-   按重复的计划运行。  
   
 除了创建作业计划之外，还可以创建警报，通过运行作业来响应事件。  
   
@@ -91,7 +92,7 @@ ms.locfileid: "68267261"
   
 |||  
 |-|-|  
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |介绍如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业创建计划。|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
 |介绍如何安排 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划。|[安排作业计划](../../ssms/agent/schedule-a-job.md)|  
 |说明如何定义服务器的 CPU 空闲条件。|[设置 CPU 空闲时间和持续时间 (SQL Server Management Studio)](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  

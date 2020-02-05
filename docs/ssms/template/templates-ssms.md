@@ -17,18 +17,18 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: b3df46f3536c488ff863287a0efb26ed7063ffc2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 03f42fbffd124fbdaa18578009ce72598a743361
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266666"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247161"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用模板
 
-本教程将介绍 SQL Server Management Studio (SSMS) 中提供的预建 Transact-SQL (T-SQL) 模板。 本文将指导如何：
+本教程将介绍 SQL Server Management Studio (SSMS) 中提供的预建 Transact-SQL (T-SQL) 模板。 在本文中，学习如何：
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -74,7 +74,7 @@ ms.locfileid: "68266666"
 
 3. 在打开的“查询”窗口中，进行要进行的更改。
 
-4. 要保存模板，请选择“文件” > “保存”(Ctrl+S)   。
+4. 要保存模板，请选择“文件” **“保存”(Ctrl+S)**  >   。
 
 5. 关闭查询窗口。
 
@@ -96,13 +96,13 @@ ms.locfileid: "68266666"
 
 1. 打开“模板浏览器”。
 
-2. 右键单击“SQL Server 模板”，然后选择“新建” > “文件夹”    。
+2. 右键单击“SQL Server 模板”，然后选择“新建” **“文件夹”**   >   。
 
 3. 将此文件夹命名为“自定义模板”  ：
 
     ![创建自定义模板文件夹](media/templates-ssms/creatingcustomtemplate.png)
 
-4. 右键单击新创建的“自定义模板”文件夹，然后选择“新建” > “模板”   。 为模板输入名称：
+4. 右键单击新创建的“自定义模板”文件夹，然后选择“新建” **“模板”**  >   。 为模板输入名称：
 
     ![创建自定义模板](media/templates-ssms/createnewtemplate.png)
 

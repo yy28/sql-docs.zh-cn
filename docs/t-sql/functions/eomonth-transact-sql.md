@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 481faddf2a0a12bcc44a8b4e677101afa68c37a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904380"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67904380"
 
 此函数返回包含指定日期所在月份的最后一天（具有可选偏移量）。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,12 +45,12 @@ start_date
 month_to_add   
 可选的整数表达式，指定要加到 start_date 的月份数  。  
   
-如果 month_to_add 参数具有值，则 `EOMONTH` 向 start_date 添加指定月份数，然后返回结果日期所在月份的最后一天   。 如果增加后超过有效的日期范围，`EOMONTH` 将引发错误。  
+如果 month_to_add 参数具有值，则  *向 start_date 添加指定月份数，然后返回结果日期所在月份的最后一天*`EOMONTH`  。 如果增加后超过有效的日期范围，`EOMONTH` 将引发错误。  
   
 ## <a name="return-type"></a>返回类型  
  **date**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `EOMONTH` 函数可在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本的服务器上远程执行。 它不能在版本低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的服务器上远程执行。  
   
 ## <a name="examples"></a>示例  
@@ -90,7 +90,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. 具有和不具有 month_to_add 参数的 EOMONTH  
+### <a name="c-eomonth-with-and-without-the-month_to_add-parameter"></a>C. 具有和不具有 month_to_add 参数的 EOMONTH  
   
 注意：以下结果集中显示的值反映了执行日期范围（含）
         

@@ -16,10 +16,10 @@ ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244984"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>使用 SQL Server Management 中的“可用性组向导”将副本添加到 AlwaysOn 可用性组
@@ -70,7 +70,7 @@ ms.locfileid: "75244984"
   
 3.  右键单击要向其添加辅助副本的可用性组，然后选择“添加副本”  命令。 这将启动“将副本添加到可用性组向导”。  
   
-4.  在 **“连接到现有的辅助副本”** 页上，连接到可用性组中的每个辅助副本。 有关详细信息，请参阅[“连接到现有次要副本”页（添加副本向导：添加数据库向导）](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
+4.  在 **“连接到现有的辅助副本”** 页上，连接到可用性组中的每个辅助副本。 有关详细信息，请参阅[连接到现有的辅助副本页（添加副本向导：添加数据库向导）](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
   
 5.  在 **“指定副本”** 页上，为可用性组指定和配置一个或多个新的辅助副本。 此页包含三个选项卡。 下表介绍了这些选项卡。 有关详细信息，请参阅[“指定副本”页（新建可用性组向导：添加副本向导）](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "75244984"
      完成向导后，单击 **“关闭”** 以退出安装向导。  
   
 > [!IMPORTANT]  
->  添加副本后，请参阅[将次要副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md) 中的“跟进：添加副本后”部分。  
+>  添加副本后，请参阅 [将辅助副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   

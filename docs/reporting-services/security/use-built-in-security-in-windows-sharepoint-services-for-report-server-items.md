@@ -13,10 +13,10 @@ ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d57768a580b4343fbe1e6ee2919a8161013371a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579413"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>将 Windows SharePoint Services 中的内置安全性用于报表服务器项
@@ -25,7 +25,7 @@ ms.locfileid: "65579413"
 ## <a name="securable-items"></a>安全对象  
  对站点或库定义的权限可以用来授予对报表服务器项的访问权限。 但是，如果要确保各项的安全，您可以对以下内容类型设置权限：  
   
-|文件类型|描述|  
+|文件类型|说明|  
 |---------------|-----------------|  
 |.rdl|用来定义报表布局和数据检索命令的报表定义文件。 在处理报表时报表定义使用数据源连接信息来检索数据。 如果报表定义是在报表生成器中创建的特别报告，则该报表将与报表模型 (.smdl) 文件（设置了所呈现报表中的数据浏览的范围）成对使用。|  
 |.smdl|用来描述数据结构以及它们之间如何关联的报表模型文件。 报表模型文件用来创建和运行报表生成器报表。|  

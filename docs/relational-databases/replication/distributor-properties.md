@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4ab407b34e86cc95f12467230c9bc9e5d7ef4e20
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 85e6f642ebc8ec750c5831cd8b8e12747e9d248e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321754"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284023"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>SQL Server 复制“分发服务器属性”对话框 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "75321754"
  选择允许使用此分发服务器的服务器。 单击发布服务器旁边的属性按钮 **(...)** 可以查看和设置其他属性。  
   
  **添加**  
- 如果希望允许的服务器没有列出，请单击“添加”向可用发布服务器列表中添加 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器或 Oracle 发布服务器  。 如果添加的服务器是使用此分发服务器作为远程分发服务器的第一个服务器，则系统将会提示您提供管理链接密码。  
+ 如果希望允许的服务器没有列出，请单击“添加”向可用发布服务器列表中添加   发布服务器或 Oracle 发布服务器[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果添加的服务器是使用此分发服务器作为远程分发服务器的第一个服务器，则系统将会提示您提供管理链接密码。  
   
  **管理链接密码**  
  对于使用 **distributor_admin** 登录名在发布服务器和远程分发服务器之间进行的连接复制，使用此选项可以为其指定或更新密码：  

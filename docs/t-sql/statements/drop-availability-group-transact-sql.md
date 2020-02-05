@@ -21,10 +21,10 @@ ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 613841598b153dbe502f0267ed85197973bf706a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898298"
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "67898298"
   
  有关删除可用性组的其他方法的信息，请参阅[删除可用性组 (SQL Server)](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ DROP AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>参数  
- group_name  
+ group_name   
  指定要删除的可用性组的名称。  
   
 ## <a name="limitations-and-recommendations"></a>限制和建议  
@@ -62,9 +62,9 @@ DROP AVAILABILITY GROUP group_name
     > [!IMPORTANT]  
     >  如果 Windows Server 故障转移群集 (WSFC) 群集没有仲裁，则避免删除可用性组。 如果在群集缺少仲裁时必须删除可用性组，则不删除群集中存储的元数据可用性组。 在群集重新获得仲裁后，将需要再次删除此可用性组以便将其从 WSFC 群集中删除。  
   
--   在辅助副本上，**DROP AVAILABILITY GROUP** 应仅用于紧急情况。 这是因为删除可用性组会使该可用性组脱机。 如果从辅助副本中删除该可用性组，则主副本无法确定出现 **OFFLINE** 状态是因为仲裁丢失、强制故障转移还是 **DROP AVAILABILITY GROUP** 命令。 主副本将转换为 **RESTORING** 状态以避免出现可能的裂脑情况。 有关详细信息，请参阅[工作原理：DROP AVAILABILITY GROUP 行为](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx)（CSS SQL Server 工程师博客）。  
+-   在辅助副本上，**DROP AVAILABILITY GROUP** 应仅用于紧急情况。 这是因为删除可用性组会使该可用性组脱机。 如果从辅助副本中删除该可用性组，则主副本无法确定出现 **OFFLINE** 状态是因为仲裁丢失、强制故障转移还是 **DROP AVAILABILITY GROUP** 命令。 主副本将转换为 **RESTORING** 状态以避免出现可能的裂脑情况。 有关详细信息，请参阅 [工作方式：DROP AVAILABILITY GROUP 行为](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) （CSS SQL Server 工程师博客）。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
  对可用性组要求 **ALTER AVAILABILITY GROUP** 权限、**CONTROL AVAILABILITY GROUP** 权限、**ALTER ANY AVAILABILITY GROUP** 权限或 **CONTROL SERVER** 权限。 若要删除并非由本地服务器实例承载的某一可用性组，需要针对该可用性组的 **CONTROL SERVER** 权限或 **CONTROL** 权限。  
@@ -78,7 +78,7 @@ DROP AVAILABILITY GROUP AccountsAG;
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [工作原理：DROP AVAILABILITY GROUP 行为](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx)（CSS SQL Server 工程师博客）  
+-   [工作方式：DROP AVAILABILITY GROUP 行为](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) （CSS SQL Server 工程师博客）  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   

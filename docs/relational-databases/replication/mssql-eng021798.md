@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 596f5092-75ab-4a19-8582-588687c7b089
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9e2db420febd0bd4a607b23a6b69a014fa8d197c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: cecd059fba314e3ee50221b1a7b62d706ad71375
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711049"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288456"
 ---
 # <a name="mssql_eng021798"></a>MSSQL_ENG021798
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "71711049"
 |符号名称||  
 |消息正文|在继续操作之前，必须通过 '%s' 添加 '%s' 代理作业。 请参阅 '%s' 的文档。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  要创建发布，您必须是发布服务器上的 **sysadmin** 固定服务器角色的成员或者发布数据库中的 **db_owner** 固定数据库角色的成员。 如果您是 **db_owner** 角色的成员，则发生以下情况将会引发此错误：  
   
 -   从 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]运行脚本。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中的安全模式已更改，因此必须更新这些脚本。  

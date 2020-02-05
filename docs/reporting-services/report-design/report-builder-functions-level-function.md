@@ -9,10 +9,10 @@ ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9dbecce71d9464267da63dcebb7388cd947a168f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579496"
 ---
 # <a name="report-builder-functions---level-function"></a>报表生成器函数 - Level 函数
@@ -28,14 +28,14 @@ ms.locfileid: "65579496"
 Level(scope)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *作用域*  
  (**String**)（可选）。 包含要对其应用聚合函数的报表项的数据集、组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  
   
 ## <a name="return-type"></a>返回类型  
  返回 **Integer**。 如果 scope 指定数据集或数据区域，或指定非递归分组（即没有父元素的分组），则 Level 返回 0    。 如果省略 *scope* ，则返回当前作用域的级别。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **Level** 函数返回的值从 0 开始；即，层次结构中的第一级为 0。  
   
  **Level** 函数可用于为递归层次结构（如雇员列表）提供缩进格式。  

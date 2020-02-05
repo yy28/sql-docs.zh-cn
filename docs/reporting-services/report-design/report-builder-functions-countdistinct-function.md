@@ -9,10 +9,10 @@ ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6e7e7f39553d538359395470fca995122a006659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579617"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>报表生成器函数 - CountDistinct 函数
@@ -28,7 +28,7 @@ ms.locfileid: "65579617"
 CountDistinct(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *expression*  
  (**Variant**) 要对其执行聚合的表达式。  
   
@@ -41,7 +41,7 @@ CountDistinct(expression, scope, recursive)
 ## <a name="return-type"></a>返回类型  
  返回 **Integer**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  
   
  *Expression* 可以包含对嵌套聚合函数的调用，但具有以下例外和条件：  

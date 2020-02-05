@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b8a72455aafbf31f5a926719e821f3d15393d953
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bd9a563ffe3b9617bbdba529b67e7270d8b6ee5f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710783"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287298"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>管理发布访问列表中的登录名
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,16 +42,16 @@ ms.locfileid: "71710783"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   在将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名添加到 PAL 前，必须将该登录名与发布数据库中的数据库用户关联。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可以使用“发布属性 - \<发布>”  对话框的“发布访问列表”  页上的发布访问列表 (PAL) 管理登录名。 有关如何访问此对话框的详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 可以使用“发布属性 - **发布>”** **对话框的“发布访问列表”\<** 页上的发布访问列表 (PAL) 管理登录名。 有关如何访问此对话框的详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-manage-logins-in-the-pal"></a>管理 PAL 中的登录名  
   
-1.  在“发布属性 - \<发布>”  对话框的“发布访问列表”  页上，使用“添加”  、“删除”  和“全部删除”  按钮在 PAL 中添加和删除登录名和组。 不要从 PAL 中删除 **distributor_admin** 。 复制将使用此帐户。  
+1.  在“发布属性 - **发布>”** **对话框的“发布访问列表”\<** 页上，使用“添加”  、“删除”  和“全部删除”  按钮在 PAL 中添加和删除登录名和组。 不要从 PAL 中删除 **distributor_admin** 。 复制将使用此帐户。  
   
     > [!NOTE]  
     >  如果使用远程分发服务器，则 PAL 中的帐户必须在发布服务器和分发服务器中都可用。 帐户必须是在这两个服务器中定义的域帐户或本地帐户。 与这两个登录名关联的密码必须相同。  

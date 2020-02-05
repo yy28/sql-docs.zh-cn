@@ -9,10 +9,10 @@ ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8d7f2db5b2b212dd529ac800819c5aa58b5d121a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579522"
 ---
 # <a name="report-builder-functions---first-function"></a>报表生成器函数 - First 函数
@@ -28,7 +28,7 @@ ms.locfileid: "65579522"
 First(expression, scope)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *expression*  
  （**Variant** 或 **Binary**）要对其执行聚合的表达式，例如， `=Fields!FieldName.Value`。  
   
@@ -38,7 +38,7 @@ First(expression, scope)
 ## <a name="return-type"></a>返回类型  
  视表达式的类型而定。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **First** 函数返回在指定作用域中应用所有排序和筛选后的一组数据的第一个值。  
   
  **First** 函数只能用在当前作用域（默认）相关的组筛选表达式中。  

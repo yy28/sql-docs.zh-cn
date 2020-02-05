@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342005"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "71342005"
 
   STUFF 函数将字符串插入到另一个字符串中。 它从第一个字符串的开始位置删除指定长度的字符；然后将第二个字符串插入到第一个字符串的开始位置。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="return-types"></a>返回类型  
  如果 character_expression 是支持的字符数据类型之一，则返回字符数据  。 如果 character_expression 是支持的二进制数据类型之一，则返回二进制数据  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果开始位置或长度值是负数，或者开始位置大于第一个字符串的长度，则返回 Null 字符串。 如果开始位置为 0，则返回 Null 值。 如果要删除的长度大于第一个字符串的长度，则删除到第一个字符串中的第一个字符。  
 
 如果结果值大于返回类型支持的最大值，则会引发错误。  

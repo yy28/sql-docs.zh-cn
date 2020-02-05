@@ -22,10 +22,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211438"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70211438"
 
   从队列中检索一条或多条消息。 根据队列保持设置的不同，可以从队列中删除消息或更新队列中消息的状态。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -105,7 +105,7 @@ ms.locfileid: "70211438"
  TIMEOUT timeout   
  指定语句等待消息的时间（以毫秒为单位）。 此子句只能与 WAITFOR 子句一起使用。 如果未指定该子句，或者超时值为 1，则等待时间将为无限长  。 如果超时时间已到，RECEIVE 将返回一个空结果集。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
 >  如果 RECEIVE 语句不是批处理或存储过程中的第一个语句，则必须用分号 (;) 终止前面的语句。  
@@ -155,7 +155,7 @@ ms.locfileid: "70211438"
 ## <a name="queue-columns"></a>队列列  
  下表列出了队列中的列：  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**status**|**tinyint**|消息的状态。 对于由 RECEIVE 命令返回的消息，其状态始终为 0  。 队列中的消息可以包含下列值之一：<br /><br /> 0=就绪 1=已收到消息 2=尚未完成 3=已保留发送的消息    |  
 |**priority**|**tinyint**|应用于消息的会话优先级。|  

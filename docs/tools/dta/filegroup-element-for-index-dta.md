@@ -1,10 +1,7 @@
 ---
-title: 索引的文件组元素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 索引的文件组元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8ea26368dacd6cfc3a81245fe95eef27ec94b9a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: d08931e613cb32b961e6bbd8f848abb42c0de67b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034889"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307670"
 ---
 # <a name="filegroup-element-for-index-dta"></a>索引的文件组元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  指定要针对用户指定的配置，对其创建索引的文件组。  
+
+指定要针对用户指定的配置，对其创建索引的文件组。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +41,7 @@ ms.locfileid: "68034889"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**string**，长度没有限制。|  
 |**默认值**|无。|  

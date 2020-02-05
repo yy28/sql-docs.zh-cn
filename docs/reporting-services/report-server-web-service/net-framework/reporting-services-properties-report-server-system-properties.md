@@ -12,10 +12,10 @@ ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 30455d77efff3c9a9e4f48b9cbeccfa983001220
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128810"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services 属性 - 报表服务器系统属性
@@ -23,7 +23,7 @@ ms.locfileid: "63128810"
   
 ## <a name="properties"></a>属性  
   
-|属性|描述|  
+|properties|说明|  
 |--------------|-----------------|  
 |SiteName|在用户界面上显示的报表服务器站点的名称。 默认值为“Microsoft Report Server”  。 此属性可以是空字符串。 最大长度为 8,000 个字符。|  
 |SystemSnapshotLimit|为报表存储的快照的最大数目。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为 **-1**，则无快照限制。|  

@@ -9,10 +9,10 @@ ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9295abe7d34ee0b799517137163d4581d8b34ce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579603"
 ---
 # <a name="report-builder-functions---countrows-function"></a>报表生成器函数 - CountRows 函数
@@ -28,7 +28,7 @@ ms.locfileid: "65579603"
 CountRows(scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *作用域*  
  (**String**) 包含要计数的报表项的数据集、数据区域或组的名称。  
   
@@ -38,7 +38,7 @@ CountRows(scope, recursive)
 ## <a name="return-type"></a>返回类型  
  返回 **Integer**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **CountRows** 计数指定作用域内的所有行，其中包括具有 Null 值的行。  
   
  *scope* 的值不能是表达式，并且必须引用当前作用域或包含作用域。  

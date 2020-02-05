@@ -15,10 +15,10 @@ ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321237"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>创建事务发布的可更新订阅
@@ -51,7 +51,7 @@ ms.locfileid: "75321237"
 
     * **使用您指定的链接服务器或远程服务器。** 如果已使用 [sp_addserver (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)、[sp_addlinkedserver (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)、SQL Server Management Studio 或其他方法在订阅服务器和发布服务器之间定义了远程服务器或链接服务器，请选择此选项。
 
-    有关链接服务器帐户所需权限的信息，请参阅[在此处输入链接说明](../../../relational-databases/replication/security/secure-the-subscriber.md)的**排队更新订阅**部分。
+    有关链接服务器帐户所需权限的信息，请参阅**在此处输入链接说明**的[排队更新订阅](../../../relational-databases/replication/security/secure-the-subscriber.md)部分。
 
 8. 完成向导。
 
@@ -80,7 +80,7 @@ ms.locfileid: "75321237"
 
     * **使用您指定的链接服务器或远程服务器。** 如果已使用 [sp_addserver (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)、[sp_addlinkedserver (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)、SQL Server Management Studio 或其他方法在订阅服务器和发布服务器之间定义了远程服务器或链接服务器，请选择此选项。
 
-    有关链接服务器帐户所需权限的信息，请参阅[在此处输入链接说明](../../../relational-databases/replication/security/secure-the-subscriber.md)的**排队更新订阅**部分。
+    有关链接服务器帐户所需权限的信息，请参阅**在此处输入链接说明**的[排队更新订阅](../../../relational-databases/replication/security/secure-the-subscriber.md)部分。
 
 11. 完成向导。
 
@@ -201,7 +201,7 @@ ms.locfileid: "75321237"
 1. 在发布服务器上，通过执行 [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)验证发布是否支持排队更新订阅。 
 
     * 如果结果集中 allow_queued_tran 的值为 1，说明发布支持排队更新订阅。
-    * 如果结果集中 allow_queued_tran 的值为 0，说明必须重新创建该发布以使其支持排队更新订阅。 有关详细信息，请参阅如何：为事务发布启用更新订阅（复制 Transact-SQL 编程）。
+    * 如果结果集中 allow_queued_tran 的值为 0，说明必须重新创建该发布以使其支持排队更新订阅。 有关详细信息，请参阅“如何为事务发布启用更新订阅（复制 Transact-SQL 编程）”。
 
 2. 在发布服务器上，通过执行 [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)以验证发布是否支持推送订阅。 
 
@@ -228,10 +228,10 @@ ms.locfileid: "75321237"
     * 该订阅的分发代理作业计划。
 
 ## <a name="set-queued-updating-conflict-resolution-options"></a>设置已排队的更新冲突解决选项 
-在“发布属性 - \<发布>”  对话框的“订阅选项”  页上，为支持排队更新订阅的发布设置冲突解决选项。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+在“发布属性 - **发布>”** **对话框的“订阅选项”\<** 页上，为支持排队更新订阅的发布设置冲突解决选项。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
   
-1.  在“发布属性 - \<发布>”  对话框的“订阅选项”  页上，为“冲突解决策略”  选项选择以下值之一：  
+1.  在“发布属性 - **发布>”** **对话框的“订阅选项”\<** 页上，为“冲突解决策略”  选项选择以下值之一：  
   
     -   **保留发布服务器更改**    
     -   **保留订阅服务器更改**    

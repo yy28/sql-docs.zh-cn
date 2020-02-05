@@ -17,10 +17,10 @@ ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 33c1a7821f532249c13400c3937706267e22bf7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914187"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE 对称密钥权限 (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "67914187"
 
   撤消对对称密钥授予和拒绝的权限。  
    
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,7 +70,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- { TO | FROM } \<database_principal>   
+ { TO | FROM } \<database_principal  >  
  指定要从中撤消权限的主体。  
   
  AS \<database_principal> 指定一个主体，执行此查询的主体从该主体获得撤销该权限的权利。  
@@ -99,7 +99,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Database_user_with_no_login   
  指定无相应服务器级主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以在 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) 目录视图中查看对称密钥的有关信息。  
   
  如果从通过指定 GRANT OPTION 被授权的主体中撤消该权限，但是未指定 CASCADE，则语句将失败。  

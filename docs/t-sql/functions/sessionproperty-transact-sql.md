@@ -20,10 +20,10 @@ ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68022193"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68022193"
 
   返回会话的 SET 选项设置。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ SESSIONPROPERTY (option)
  *option*  
  该会话的当前选项设置。 option 可以是下列任意值  。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |ANSI_NULLS|指定是否对 Null 值上的等号 (=) 和不等号 (<>) 应用 ISO 标准行为。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |ANSI_PADDING|控制列存储小于定义的列大小的值的方式，以及列存储在字符串和 binary 数据中有尾随空格的值的方式。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
@@ -58,7 +58,7 @@ SESSIONPROPERTY (option)
 ## <a name="return-types"></a>返回类型  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  通过组合服务器级、数据库级和用户指定的选项对 SET 选项进行配置。  
   
 ## <a name="examples"></a>示例  

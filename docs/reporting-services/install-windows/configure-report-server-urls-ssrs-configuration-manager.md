@@ -12,10 +12,10 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594077"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>配置报表服务器 URL（SSRS 配置管理器）
@@ -28,7 +28,7 @@ ms.locfileid: "73594077"
 ## <a name="defining-a-report-server-url"></a>定义报表服务器 URL  
  URL 精确标识了网络上报表服务器应用程序实例的位置。 创建报表服务器 URL 时，必须指定以下部分。  
   
-|组成部分|描述|  
+|组成部分|说明|  
 |----------|-----------------|  
 |主机名|TCP/IP 网络使用 IP 地址来唯一标识网络上的设备。 计算机中安装的每个网络适配器都有一个物理 IP 地址。 如果 IP 地址解析为主机标头，则可以指定主机标头。 如果要将报表服务器部署到企业网络上，则可以使用计算机的网络名称。|  
 |端口|TCP 端口是设备上的端点。 报表服务器将侦听指定端口上的请求。|  
@@ -44,7 +44,7 @@ ms.locfileid: "73594077"
   
  下表中显示了使这些 URL 可用的设置。 该表显示了通过包含主机名的 URL 来启用报表服务器连接的默认值：  
   
-|组成部分|ReplTest1|解释|  
+|组成部分|值|说明|  
 |----------|-----------|-----------------|  
 |IP 地址|所有已分配的值|网络上的域名服务将 URL 上的主机名解析为计算机的 IP 地址。 只要定义的 URL 中指定了 IP 地址，发送到特定主机的请求便将到达其预期目标。|  
 |端口|80|端口 80 是计算机上进行 TCP/IP 连接的默认端口。 因为报表服务器侦听的是端口 80，所以可以忽略 URL 中的端口号。 如果指定另一个端口，则必须在 URL 中指定该端口。|  

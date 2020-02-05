@@ -1,6 +1,6 @@
 ---
-title: SQL Server 属性（“AlwaysOn 高可用性”选项卡）| Microsoft Docs
-ms.custom: ''
+title: SQL Server 属性（“AlwaysOn 高可用性”选项卡）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,18 +11,18 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 04c73d47f8289e5faf1ae5f5074d5e85b1516a50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: d57f7e3f98c9db33569414e3c6876e54503f25bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023959"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306824"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server 属性（“AlwaysOn 高可用性”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager “SQL Server 属性”对话框中的“AlwaysOn 高可用性”选项卡启用或禁用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的“AlwaysOn 可用性组”功能   。 启用 AlwaysOn 可用性组是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将可用性组用作高可用性和灾难恢复解决方案的一个先决条件。  
+  可以使用 **Configuration Manager “SQL Server 属性”对话框中的“AlwaysOn 高可用性”选项卡启用或禁用** 中的“AlwaysOn 可用性组”功能  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 启用 AlwaysOn 可用性组是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将可用性组用作高可用性和灾难恢复解决方案的一个先决条件。  
   
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a>先决条件  
  若要启用 AlwaysOn 可用性组，服务器实例必须满足以下先决条件：  
   
 -   该服务器实例必须驻留在 Windows Server 故障转移群集 (WSFC) 节点上。  

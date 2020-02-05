@@ -12,10 +12,10 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0481f39c0c047f401914e2c710a1f52c393bc335
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580339"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>设置图表上数据点的格式（报表生成器和 SSRS）
@@ -56,21 +56,21 @@ ms.locfileid: "65580339"
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>为数据点标签、工具提示和图例文本添加关键字  
  可以使用区分大小写的特定于图表的关键字来表示图表中的存在项。 这些关键字仅适用于工具提示、自定义图例文本和数据点标签属性。 在多数情况中，图表关键字具有等效的简单表达式，但关键字更快且更容易键入。 下面列出了图表关键字。  
   
-|图表关键字|描述|适用的图表类型|等效的简单表达式的示例|  
+|图表关键字|说明|适用的图表类型|等效的简单表达式的示例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|数据点的 Y 值。|All|`=Fields!MyDataField.Value`|  
-|#VALY2|数据点的 Y 值 #2。|范围图、气泡图|None|  
-|#VALY3|数据点的 Y 值 #3。|股价图、K 线图|None|  
-|#VALY4|数据点的 Y 值 #4。|股价图、K 线图|None|  
-|#SERIESNAME|序列名称。|All|None|  
-|#LABEL|数据点标签。|All|None|  
+|#VALY2|数据点的 Y 值 #2。|范围图、气泡图|无|  
+|#VALY3|数据点的 Y 值 #3。|股价图、K 线图|无|  
+|#VALY4|数据点的 Y 值 #4。|股价图、K 线图|无|  
+|#SERIESNAME|序列名称。|All|无|  
+|#LABEL|数据点标签。|All|无|  
 |#AXISLABEL|轴数据点标签。|形状|`=Fields!MyDataField.Value`|  
-|#INDEX|数据点索引。|All|None|  
+|#INDEX|数据点索引。|All|无|  
 |#PERCENT|数据点 Y 值的百分比。|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
 |#TOTAL|序列中所有 Y 值的总计。|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|对应于图例项文本的文本。|All|None|  
+|#LEGENDTEXT|对应于图例项文本的文本。|All|无|  
 |#AVG|序列中所有 Y 值的平均值。|All|`=Avg(Fields!MyDataField.Value)`|  
-|#MIN|序列中所有 Y 值的最小值。|全部|`=Min(Fields!MyDataField.Value)`|  
+|#MIN|序列中所有 Y 值的最小值。|All|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|序列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|序列中所有 Y 值第一个值。|All|`=First(Fields!MyDataField.Value)`|  
   

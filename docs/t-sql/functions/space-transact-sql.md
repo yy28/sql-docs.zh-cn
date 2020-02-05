@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c04af45ee0188c2520ccad6b65f50be2021cdf10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907066"
 ---
 # <a name="space-transact-sql"></a>SPACE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67907066"
 
   返回由重复空格组成的字符串。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ SPACE ( integer_expression )
 ## <a name="return-types"></a>返回类型  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  若要在 Unicode 数据中包括空格或返回 8000 个以上的字符空格，请使用 REPLICATE 而不是 SPACE。  
   
 ## <a name="examples"></a>示例  

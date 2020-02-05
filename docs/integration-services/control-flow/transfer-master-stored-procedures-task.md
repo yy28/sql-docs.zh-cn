@@ -17,10 +17,10 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cee2dfed374c3f479e32b8d81602eff924287356
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293849"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>传输主存储过程任务
@@ -62,7 +62,7 @@ ms.locfileid: "71293849"
   
  此外， **OnInformation** 事件的日志项报告已传输的存储过程数， **OnWarning** 事件的日志项是为目标服务器上被覆盖的每个存储过程写入的。  
   
-## <a name="security-and-permissions"></a>安全性和权限  
+## <a name="security-and-permissions"></a>安全和权限  
  用户必须具有查看源服务器上 **master** 数据库中的存储过程列表的权限，而且必须是 sysadmin 服务器角色的成员，或者必须具有对目标服务器上 **master** 数据库中所创建的存储过程的权限。  
   
 ## <a name="configuration-of-the-transfer-master-stored-procedures-task"></a>传输主存储过程任务的配置  
@@ -96,28 +96,28 @@ ms.locfileid: "71293849"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入传输主存储过程任务的说明。  
   
 ## <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>传输主存储过程任务编辑器（“存储过程”页）
-  可以使用“传输主存储过程任务编辑器”对话框的“存储过程”页，指定用于将一个或多个用户定义存储过程从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的 **master** 数据库复制到另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的 **master** 数据库的属性。    
+  可以使用“传输主存储过程任务编辑器”对话框的“存储过程”页，指定用于将一个或多个用户定义存储过程从一个 **实例中的**master**数据库复制到另一个** 实例中的 **master** 数据库的属性。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 > [!NOTE]  
 >  此任务只将 **dbo** 拥有的用户定义存储过程从源服务器上的 **master** 数据库传递到目标服务器上的 **master** 数据库。 若要在目标服务器上创建存储过程，必须在目标服务器上的 **master** 数据库中授予用户 CREATE PROCEDURE 权限，或者用户必须为目标服务器上 **sysadmin** 固定服务器角色的成员。  
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接  。  
+ 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与源服务器的新连接\<** 。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接  。  
+ 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与目标服务器的新连接\<** 。  
   
  **IfObjectExists**  
  选择该任务应如何处理目标服务器上的 **master** 数据库中已经存在的同名用户定义存储过程。  
   
  此属性具有下表所列的选项：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**FailTask**|如果目标服务器上的 **master** 数据库中已存在同名的存储过程，则任务失败。|  
 |**Overwrite**|任务将覆盖目标服务器上的 **master** 数据库中的同名存储过程。|  
@@ -126,7 +126,7 @@ ms.locfileid: "71293849"
  **TransferAllStoredProcedures**  
  选择是否应将源服务器上 **master** 数据库中的所有用户定义存储过程复制到目标服务器。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|复制 **master** 数据库中的所有用户定义存储过程。|  
 |**False**|仅复制指定的存储过程。|  

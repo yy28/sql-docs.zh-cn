@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e2f549af8bd9e594d14407fe16186ee5d308e546
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117629"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68117629"
 
   返回表达式中所有值的和或仅非重复值的和。 SUM 只能用于数字列。 Null 值会被忽略。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -75,7 +75,7 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 |money 和 smallmoney 类别  |**money**|  
 |float 和 real 类别  |**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SUM 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，它具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ## <a name="examples"></a>示例  
@@ -107,7 +107,7 @@ White           19.00                 6.7926
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
- 以下示例将 SUM 函数与 OVER 子句结合使用，以便为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Sales.SalesPerson` 表中的每个地区提供年度销售额的累计合计。 数据按 `TerritoryID` 分区并在逻辑上按 `SalesYTD` 排序。 这意味着将基于年度销售额为每个地区计算 SUM 函数。 请注意，对于 `TerritoryID` 1，为 2005 销售年度存在两行，分别表示在该年度有销售业绩的两个销售人员。 将计算这两行的累积销售总额，然后在计算中包括表示 2006 年销售额的第三行。  
+ 以下示例将 SUM 函数与 OVER 子句结合使用，以便为 `Sales.SalesPerson` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中的每个地区提供年度销售额的累计合计。 数据按 `TerritoryID` 分区并在逻辑上按 `SalesYTD` 排序。 这意味着将基于年度销售额为每个地区计算 SUM 函数。 请注意，对于 `TerritoryID` 1，为 2005 销售年度存在两行，分别表示在该年度有销售业绩的两个销售人员。 将计算这两行的累积销售总额，然后在计算中包括表示 2006 年销售额的第三行。  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 142762514f9bdbd7c7984dff218e5ea665d1d4d4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843318"
 ---
 # <a name="x40x40trancount-transact-sql"></a>@@TRANCOUNT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73843318"
 
   返回在当前连接上执行的 BEGIN TRANSACTION 语句的数目。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,8 +44,8 @@ ms.locfileid: "73843318"
 ## <a name="return-types"></a>返回类型  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
- BEGIN TRANSACTION 语句将 @@TRANCOUNT 增加 1。 ROLLBACK TRANSACTION 将 @@TRANCOUNT 递减到 0，但 ROLLBACK TRANSACTION savepoint_name 除外，它不影响 @@TRANCOUNT  。 COMMIT TRANSACTION 或 COMMIT WORK 将 @@TRANCOUNT 递减 1。  
+## <a name="remarks"></a>备注  
+ BEGIN TRANSACTION 语句将 @@TRANCOUNT 增加 1。 ROLLBACK TRANSACTION 将 @@TRANCOUNT 递减到 0，但 ROLLBACK TRANSACTION savepoint_name 除外，它不影响 @  @TRANCOUNT。 COMMIT TRANSACTION 或 COMMIT WORK 将 @@TRANCOUNT 递减 1。  
   
 ## <a name="examples"></a>示例  
   

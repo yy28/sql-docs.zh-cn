@@ -19,10 +19,10 @@ ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2d6045c17028c16dfb2b90de15042dd18e3a91a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986616"
 ---
 # <a name="view-the-windows-application-log-windows-10"></a>查看 Windows 应用程序日志 (Windows 10)
@@ -31,15 +31,15 @@ ms.locfileid: "67986616"
   
 ## <a name="view-the-windows-application-log"></a>查看 Windows 应用程序日志  
   
-1. 在“搜索栏”中，键入“事件查看器”，然后选择“事件查看器”桌面应用。
+1. 在“搜索栏”  中，键入“事件查看器”  ，然后选择“事件查看器”  桌面应用。
   
-2. 在“事件查看器”中，打开“应用程序和服务日志”。
+2. 在“事件查看器”中，打开“应用程序和服务日志”   。
 
-3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件由“源”列中的 **MSSQLSERVER** 项（命名实例以 **MSSQL$**_<instance_name>_ 标识）标识。 SQL Server 代理事件由 SQLSERVERAGENT 项标识（对于已命名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理事件由 **SQLAgent$**\<*instance_name*> 标识）。 Microsoft Search 服务事件由 **Microsoft Search**项标识。  
+3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件由“源”  列中的 **MSSQLSERVER** 项（命名实例以 _MSSQL$_ **<instance_name>** 标识）标识。 SQL Server 代理事件由 SQLSERVERAGENT 项标识（对于已命名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理事件由 **SQLAgent$** \<*instance_name*> 标识）。 Microsoft Search 服务事件由 **Microsoft Search**项标识。  
   
-4. 若要查看另一台计算机的日志，右键单击“事件查看器（本地）”。 选择“连接到另一台计算机”，并填写字段以完成“选择计算机”对话框。  
+4. 若要查看另一台计算机的日志，右键单击“事件查看器（本地）”  。 选择“连接到另一台计算机”  ，并填写字段以完成“选择计算机”对话框  。  
   
-5. 或是希望只显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件，请在“查看”菜单中选择“筛选器”。 在“事件源”列表中，选择“MSSQLSERVER”。 若要仅查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理事件，请在 **“事件源”** 列表中选择 **SQLSERVERAGENT** 。  
+5. 或是希望只显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件，请在“查看”菜单中选择“筛选器”   。 在“事件源”  列表中，选择“MSSQLSERVER”  。 若要仅查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理事件，请在 **“事件源”** 列表中选择 **SQLSERVERAGENT** 。  
   
 6. 若要查看有关某事件的详细信息，请双击该事件。  
   
