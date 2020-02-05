@@ -21,10 +21,10 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252784"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>数据库镜像会话期间的角色切换 (SQL Server)
@@ -96,7 +96,7 @@ ms.locfileid: "75252784"
   
  下图说明了升级数据库服务器实例时使用手动故障转移维护数据库可用性的实例。 完成升级后，管理员可以选择重新向原始服务器实例执行故障转移。 如果管理员希望停止镜像会话并在其他位置使用镜像服务器时，这很有用。 这样，在更新一系列数据库服务器实例时，可以反复使用一个服务器实例。  
   
- ![计划的手动故障转移 ](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "|::ref2::|")  
+ ![计划的手动故障转移 ](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "计划的手动故障转移")  
   
 ###  <a name="ConditionsForManualFo"></a> 手动故障转移所需条件  
  手动故障转移需要将事务安全设置为 FULL（即，高安全模式）。 当伙伴连接在一起并且数据库已同步时，支持手动故障转移。  
@@ -109,7 +109,7 @@ ms.locfileid: "75252784"
 2.  镜像服务器将从主体数据库接收到的最后一个日志记录的日志序列号 (LSN) 记录为故障转移 LSN。  
   
     > [!NOTE]  
-    >  若要查看此 LSN，请从 [sys.database_mirroring (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 中选择 **mirroring_failover_lsn** 列。  
+    >  若要查看此 LSN，请从 **sys.database_mirroring (Transact-SQL)** 中选择 [mirroring_failover_lsn](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 列。  
   
 3.  如果重做队列中有任何等待的日志，则镜像服务器将完成前滚镜像数据库的操作。 所需时间取决于系统速度、最新工作负荷以及重做队列中的日志量。 对于同步运行模式，可通过限制重做队列的大小调整故障转移时间。 不过，这会导致主体服务器的速度下降，以便镜像服务器能够与其同步。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "75252784"
   
  下图说明了自动故障转移的一个实例。  
   
- ![自动故障转移](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "|::ref3::|")  
+ ![自动故障转移](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "自动故障转移 (automatic failover)")  
   
  最初，所有三个服务器都已连接（会话具有完全仲裁）。 **Partner_A** 为主体服务器， **Partner_B** 为镜像服务器。 **Partner_A** （或 **Partner_A**上的主体数据库）变得不可用。 见证服务器和 **Partner_B** 都将认定主体服务器不可用，会话保留仲裁。 **Partner_B** 变为主体服务器，并将其数据库的副本用作新的主体数据库。 最后， **Partner_A** 重新连接到会话并发现 **Partner_B** 现在拥有主体角色。 **Partner_A** 接下来将接管镜像角色。  
   

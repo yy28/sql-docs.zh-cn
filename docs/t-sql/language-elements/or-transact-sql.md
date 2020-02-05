@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 78e19aa69d5d5141be7b142074a1c4d120ea8519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121868"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68121868"
 
   将两个条件组合起来。 在一个语句中使用多个逻辑运算符时，在 AND 运算符之后对 OR 运算符求值。 不过，使用括号可以更改求值的顺序。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,12 +45,12 @@ boolean_expression OR boolean_expression
  返回 TRUE、FALSE 或 UNKNOWN 的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>结果类型  
- **Boolean**  
+ **布尔值**  
   
 ## <a name="result-value"></a>结果值  
  当两个条件中的任何一个为 TRUE 时，OR 返回 TRUE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  下表显示 OR 运算符的结果。  
   
 ||TRUE|FALSE|UNKNOWN|  

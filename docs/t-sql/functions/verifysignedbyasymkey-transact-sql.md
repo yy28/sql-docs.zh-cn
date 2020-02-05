@@ -23,10 +23,10 @@ ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 414c5df86e58472bc1aa3f5df9ee25a54f8bc590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927544"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67927544"
 
   测试经过数字签名的数据在签名后是否发生了更改。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +58,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
   
  如果签名匹配，则返回 1；否则返回 0。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  VerifySignedByAsymKey 使用指定的非对称密钥的公钥对数据的签名进行解密，并将解密所得到的值与数据新计算出的 MD5 哈希值进行比较  。 如果值匹配，则确认签名有效。  
   
 ## <a name="permissions"></a>权限  

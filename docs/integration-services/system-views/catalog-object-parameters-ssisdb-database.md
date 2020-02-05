@@ -11,10 +11,10 @@ ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c462eb1957f1c8014dd9220f86cb9ae3e32ea65f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295185"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters（SSISDB 数据库）
@@ -26,15 +26,15 @@ ms.locfileid: "71295185"
 
   显示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中所有包和项目的参数。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |parameter_id|**bigint**|参数的唯一标识符 (ID)。|  
 |project_id|**bigint**|项目的唯一 ID。|  
 |object_type|**smallint**|参数的类型。 对于项目参数，该值是 `20`；对于包参数，值是 `30`。|  
 |object_name|**sysname**|包含对应项目或包的名称。|  
-|parameter_name|**sysname(nvarchar(128))**|参数名。|  
+|parameter_name|**sysname(nvarchar(128))**|参数的名称。|  
 |data_type|**nvarchar(128)**|参数的数据类型。|  
-|required|**bit**|如果值为 `1`，则需要参数值才能开始执行。 如果值为 `0`，则不需要参数值即可开始执行。|  
+|必填|**bit**|如果值为 `1`，则需要参数值才能开始执行。 如果值为 `0`，则不需要参数值即可开始执行。|  
 |sensitive|**bit**|当值为 `1` 时，参数值是敏感的。 当值为 `0` 时，参数值是不敏感的。|  
 |description|**nvarchar(1024)**|包的可选说明。|  
 |design_default_value|**sql_variant**|在设计项目或包的过程中分配的参数的默认值。|  

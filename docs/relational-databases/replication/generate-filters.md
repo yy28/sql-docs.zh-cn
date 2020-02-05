@@ -13,10 +13,10 @@ ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 79ca361c5f330196c4363441f573732e5ff15b6a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905036"
 ---
 # <a name="generate-filters"></a>生成筛选器
@@ -39,11 +39,11 @@ ms.locfileid: "72905036"
      此文本无法更改；请使用标准的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法在 WHERE 关键字后键入筛选子句。  
   
     > [!IMPORTANT]  
-    >  为提高性能，建议您不要在参数化行筛选子句中对列名应用函数，如 `LEFT([MyColumn]) = SUSER_SNAME()`。 如果在筛选子句中使用 HOST_NAME 并覆盖 HOST_NAME 值，则可能需要使用 CONVERT 转换数据类型。 有关此情况的最佳实践的详细信息，请参阅主题 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)表。  
+    >  为提高性能，建议您不要在参数化行筛选子句中对列名应用函数，如 `LEFT([MyColumn]) = SUSER_SNAME()`。 如果在筛选子句中使用 HOST_NAME 并覆盖 HOST_NAME 值，则可能需要使用 CONVERT 转换数据类型。 有关此情况的最佳实践的详细信息，请参阅主题 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“覆盖 HOST_NAME() 值”一节。  
   
 3.  **指定将从此表接收数据的订阅数。**  
 
-     仅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 通过合并复制，可以指定最适合您的数据和应用程序的分区类型。 如果选择 **“此表中的行将仅转到一个订阅”** ，则合并复制将设置不重叠分区选项。 不重叠分区与预计算分区协同工作以提高性能，使用不重叠分区可以将与预计算分区相关联的上载开销降至最低。 使用的参数化筛选器和联接筛选器越复杂，不重叠分区的性能优势就越明显。 如果选择此选项，则必须确保对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
+     仅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 通过合并复制，可以指定最适合您的数据和应用程序的分区类型。 如果选择 **“此表中的行将仅转到一个订阅”** ，则合并复制将设置不重叠分区选项。 不重叠分区与预计算分区协同工作以提高性能，使用不重叠分区可以将与预计算分区相关联的上载开销降至最低。 使用的参数化筛选器和联接筛选器越复杂，不重叠分区的性能优势就越明显。 如果选择此选项，则必须确保对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
   
  添加筛选器之后，请单击 **“确定”** 退出并关闭该对话框。 将对照 SELECT 子句中的表分析并运行指定的筛选器。 如果筛选语句有语法错误或其他问题，将会通知您编辑该筛选语句。  
   

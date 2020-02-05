@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f088c526666dcd81d269bc68479914202969a2e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934041"
 ---
 # <a name="execute-a-stored-procedure"></a>执行存储过程
@@ -139,7 +139,7 @@ ms.locfileid: "67934041"
   
 4.  在 **“执行过程”** 对话框中，为每个参数指定一个值以及它是否应传递 Null 值。  
   
-     **参数**  
+     **Parameter**  
      指示参数的名称。  
   
      **数据类型**  
@@ -151,7 +151,7 @@ ms.locfileid: "67934041"
      **传递空值**  
      将 NULL 作为参数值传递。  
   
-     **ReplTest1**  
+     **值**  
      在调用过程时键入参数的值。  
   
 5.  若要执行存储过程，请单击 **“确定”** 。  

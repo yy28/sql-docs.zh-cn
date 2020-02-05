@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095384"
 ---
-# <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
+# <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 对结果集的输出进行编号。 具体来说，返回结果集分区内行的序列号，每个分区的第一行从 1 开始。 
@@ -38,7 +38,7 @@ ms.locfileid: "68095384"
 > [!NOTE]
 > `ROW_NUMBER` 是运行查询时计算出的临时值。 若要将数值保存在表中，请参阅 [IDENTITY 属性](../../t-sql/statements/create-table-transact-sql-identity-property.md)和 [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)。 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
   
 ## <a name="syntax"></a>语法  
@@ -49,10 +49,10 @@ ROW_NUMBER ( )
 ```  
   
 ## <a name="arguments"></a>参数  
- PARTITION BY value_expression  
- 将 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分为应用 ROW_NUMBER 函数的分区。 value_expression 指定对结果集进行分区所依据的列。 如果未指定 `PARTITION BY`，则此函数将查询结果集的所有行视为单个组。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ PARTITION BY value_expression   
+ 将 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分为应用 ROW_NUMBER 函数的分区。 value_expression 指定对结果集进行分区所依据的列  。 如果未指定 `PARTITION BY`，则此函数将查询结果集的所有行视为单个组。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
- order_by_clause  
+ order_by_clause   
  `ORDER BY` 子句可确定在特定分区中为行分配唯一 `ROW_NUMBER` 的顺序。 它是必需的。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
@@ -85,7 +85,7 @@ ORDER BY name ASC;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|NAME    |recovery_model_desc |  
+|name    |recovery_model_desc |  
 |-----------  |------------ |  
 |master |SIMPLE |
 |model |FULL |
@@ -104,14 +104,14 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |master |SIMPLE |
 |2 |model |FULL |
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
-若是在 `recovery_model_desc` 列上添加 `PARTITION BY` 子句，当 `recovery_model_desc` 值发生更改时将重新开始编号。 
+若是在 `PARTITION BY` 列上添加 `recovery_model_desc` 子句，当 `recovery_model_desc` 值发生更改时将重新开始编号。 
  
 ```sql
 SELECT 
@@ -123,7 +123,7 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |model |FULL |
 |1 |master |SIMPLE |
@@ -182,7 +182,7 @@ FROM OrderedOrders
 WHERE RowNumber BETWEEN 50 AND 60;  
 ```  
   
-### <a name="d-using-rownumber-with-partition"></a>D. 将 ROW_NUMBER () 与 PARTITION 一起使用  
+### <a name="d-using-row_number-with-partition"></a>D. 将 ROW_NUMBER () 与 PARTITION 一起使用  
  以下示例使用 `PARTITION BY` 参数按列 `TerritoryName` 对结果集进行分区。 在 `ORDER BY` 子句中指定的 `OVER` 子句按列 `SalesYTD` 对每个分区中的行进行排序。 `ORDER BY` 语句中的 `SELECT` 按 `TerritoryName` 子句对整个查询结果集进行排序。  
   
 ```sql  
@@ -249,7 +249,7 @@ RowNumber  FirstName  LastName            SalesQuota
 4          Jae        Pak                 10,514,000.00  
 ```
 
-### <a name="f-using-rownumber-with-partition"></a>F. 将 ROW_NUMBER () 与 PARTITION 一起使用  
+### <a name="f-using-row_number-with-partition"></a>F. 将 ROW_NUMBER () 与 PARTITION 一起使用  
  以下示例显示了将 `ROW_NUMBER` 函数与 `PARTITION BY` 参数结合使用的情况。 这样会让 `ROW_NUMBER` 函数对每个分区中的行进行编号。  
   
 ```sql  

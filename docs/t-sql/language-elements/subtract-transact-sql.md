@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09d6eb369d7e4dd1678ea2c344686bb5b672a8c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121644"
 ---
 # <a name="--subtraction-transact-sql"></a>-（减法）(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68121644"
 
   将两个数相减（减法算术运算符）。 还可以从日期中减去以天为单位的数字。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ expression - expression
 ### <a name="a-using-subtraction-in-a-select-statement"></a>A. 在 SELECT 语句中使用减法  
  以下示例计算税率最高的省/市/自治区与税率最低的省/市/自治区之间的税率差异。  
   
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  。  
+ 适用范围：**和**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```  
 -- Uses AdventureWorks  
@@ -92,7 +92,7 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>C:在 SELECT 语句中使用减法  
+### <a name="c-using-subtraction-in-a-select-statement"></a>C. 在 SELECT 语句中使用减法  
  以下示例计算 `dimEmployee` 表中，基准费率最高的员工与基准费率最低的员工之间的基准费率差。  
   
 ```  

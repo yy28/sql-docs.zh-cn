@@ -18,10 +18,10 @@ ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 14668b9fac1ba05d458bdedc038faaf2883dc9c1
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314571"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "71314571"
 
 此函数对已加密的数据进行解密。 为此，该函数首先使用单独的非对称密钥解密对称密钥，然后使用在第一个“步骤”中提取的对称密钥解密已加密的数据。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -77,7 +77,7 @@ authenticator
 ## <a name="return-types"></a>返回类型  
 varbinary（最大大小为 8,000 个字节）  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `DECRYPTBYKEYAUTOASYMKEY` 合并了 `OPEN SYMMETRIC KEY` 和 `DECRYPTBYKEY` 的功能。 在单个操作中，它首先解密对称密钥，然后使用该密钥解密已加密的 ciphertext。  
   
 ## <a name="permissions"></a>权限  

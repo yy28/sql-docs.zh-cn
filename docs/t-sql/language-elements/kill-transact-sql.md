@@ -35,10 +35,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981926"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "73981926"
   
 KILL 结束正常连接，这会在内部停止与指定会话 ID 关联的事务。 有时，可能会使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC)。 如果使用 MS DTC，也可以使用此语句来结束孤立的未决分布式事务。  
   
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -87,7 +87,7 @@ UOW
 WITH STATUSONLY  
 生成由于更早的 KILL 语句而正在回滚的指定会话 ID  或 UOW  的进度报告。 KILL WITH STATUSONLY 不结束或回滚会话 ID  或 UOW  。 此命令只显示当前回滚进度。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 KILL 常用于结束使用锁来阻止其他重要进程的进程。 KILL 还可用于停止执行使用必要系统资源的查询的进程。 无法结束系统进程和运行扩展存储过程的进程。  
   
 应当小心使用 KILL，特别是正在运行重要进程时。 你无法终止自己的进程。 也不得终止以下进程：  
@@ -123,9 +123,9 @@ KILL 命令可用于解决有疑问的分布式事务。 这些事务是未解�
 通过重复不使用 WITH STATUSONLY 选项的同一 KILL session ID  |UOW  语句，可以获得相同的状态报告。 不过，不建议这样重复使用选项。 如果在新的 KILL 语句运行前回滚就已完成且会话 ID 已重新分配给新任务，那么重复 KILL session ID  语句可能会停止新进程。 通过指定 WITH STATUSONLY 来阻止新进程停止。  
   
 ## <a name="permissions"></a>权限  
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** 要求具有 ALTER ANY CONNECTION 权限。 ALTER ANY CONNECTION 包括在 sysadmin 或 processadmin 固定服务器角色的成员身份中。  
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：** 需要具有 ALTER ANY CONNECTION 权限。 ALTER ANY CONNECTION 包括在 sysadmin 或 processadmin 固定服务器角色的成员身份中。  
   
-**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** 需要具有 KILL DATABASE CONNECTION 权限。 服务器级别主体登录名具有 KILL DATABASE CONNECTION。  
+**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]：** 需要具有 KILL DATABASE CONNECTION 权限。 服务器级别主体登录名具有 KILL DATABASE CONNECTION。  
   
 ## <a name="examples"></a>示例  
   

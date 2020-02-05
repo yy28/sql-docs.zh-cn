@@ -31,10 +31,10 @@ ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
-ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74191085"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT 示例 (Transact-SQL)
@@ -43,11 +43,11 @@ ms.locfileid: "74191085"
   本主题提供了使用 [SELECT](../../t-sql/queries/select-transact-sql.md) 语句的示例。  
   
 ## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. 使用 SELECT 检索行和列  
- 以下示例显示三个代码示例。 第一个代码示例返回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的 `*` 表中的所有行（未指定 WHERE 子句）和所有列（使用了 `Product`）。  
+ 以下示例显示三个代码示例。 第一个代码示例返回 `*` 数据库的 `Product` 表中的所有行（未指定 WHERE 子句）和所有列（使用了 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]）。  
   
  [!code-sql[Select#SelectExamples1](../../t-sql/queries/codesnippet/tsql/select-examples-transact_1.sql)]  
   
- 该示例返回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的 `Name` 表的所有行（未指定 WHERE 子句）和列子集（`ProductNumber`、`ListPrice`、`Product`）。 此外，还添加了一个列标题。  
+ 该示例返回 `Name` 数据库的 `ProductNumber` 表的所有行（未指定 WHERE 子句）和列子集（`ListPrice`、`Product`、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]）。 此外，还添加了一个列标题。  
   
  [!code-sql[Select#SelectExamples2](../../t-sql/queries/codesnippet/tsql/select-examples-transact_2.sql)]  
   

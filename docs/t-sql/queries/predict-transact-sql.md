@@ -18,10 +18,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907261"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
@@ -90,7 +90,7 @@ WITH 子句用于指定 `PREDICT` 函数返回的输出的架构。
 
 不能使用 `PREDICT` 查看内部模型结构。 如果要了解模型本身的内容，必须加载模型对象，将其反序列化，然后使用相应的 R 代码来分析模型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 Windows 和 Linux 上的所有版本的 SQL Server 2017 或更高版本都支持 `PREDICT` 功能。 云中的 Azure SQL 数据库也支持 `PREDICT`。 无论是否启用其他机器学习功能，所有这些支持均是活动的。
 
@@ -110,7 +110,7 @@ Windows 和 Linux 上的所有版本的 SQL Server 2017 或更高版本都支持
 
 ### <a name="using-predict-in-a-from-clause"></a>在 FROM 子句中使用 PREDICT
 
-此示例引用 `SELECT` 语句的 `FROM` 子句中的 `PREDICT` 函数：
+此示例引用 `PREDICT` 语句的 `FROM` 子句中的 `SELECT` 函数：
 
 ```sql
 SELECT d.*, p.Score
@@ -118,7 +118,7 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-`DATA` 参数中为表源指定的别名 d 用于引用属于 dbo.mytable 的列  。 为 PREDICT 函数指定的别名 p 用于引用 PREDICT 函数返回的列   。
+**参数中为表源指定的别名 d 用于引用属于 dbo.mytable 的列**`DATA`。 为 PREDICT 函数指定的别名 p 用于引用 PREDICT 函数返回的列   。
 
 ### <a name="combining-predict-with-an-insert-statement"></a>将 PREDICT 与 INSERT 语句相结合
 

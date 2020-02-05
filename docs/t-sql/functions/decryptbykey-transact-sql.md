@@ -21,10 +21,10 @@ ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9ca108b3336a77becc605040b12c0361db4ac903
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251377"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72251377"
 
 此函数使用对称密钥解密数据。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,7 +61,7 @@ varbinary 类型的变量，包含使用密钥加密的数据  。
 ## <a name="return-types"></a>返回类型  
 varbinary（最大大小为 8,000 个字节）  。 如果用于数据加密的对称密钥未打开，或者如果 ciphertext 为 NULL，则 `DECRYPTBYKEY` 返回 NULL  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `DECRYPTBYKEY` 使用对称密钥。 该数据库必须已打开此对称密钥。 `DECRYPTBYKEY` 将允许同时打开多个密钥。 在密文解密之前，不必立即打开密钥。  
   
 对称加密和解密的运行速度通常较快，并且对涉及大量数据的操作而言，运行良好。  
