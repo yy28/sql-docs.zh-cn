@@ -21,10 +21,10 @@ ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 33a8623c3e098589015a00185c8ab2a895b1410b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050760"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT Service Broker 权限 (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68050760"
 
   授予对 Service Broker 约定、消息类型、远程绑定、路由或服务的权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -71,7 +71,7 @@ GRANT permission  [ ,...n ] ON
  指定将对其授予权限的服务。 需要使用作用域限定符“::”。  
   
  database_principal   
- 指定要向其授予权限的主体。 可以是以下类型之一：  
+ 指定要向其授予权限的主体。 下列类型作之一：  
   
 -   数据库用户  
   
@@ -93,7 +93,7 @@ GRANT permission  [ ,...n ] ON
  指示该主体还可以向其他主体授予所指定的权限。  
   
  granting_principal   
- 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 可以是以下类型之一：  
+ 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
   
@@ -111,7 +111,7 @@ GRANT permission  [ ,...n ] ON
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="service-broker-contracts"></a>Service Broker 约定  
  Service Broker 约定是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下面列出了可对 Service Broker 约定授予的最特定、最有限的权限，以及暗含这些权限的更一般的权限。  

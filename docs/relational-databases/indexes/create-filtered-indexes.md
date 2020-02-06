@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908107"
 ---
 # <a name="create-filtered-indexes"></a>创建筛选索引
@@ -118,13 +118,13 @@ ms.locfileid: "72908107"
   
 6.  在“索引键列”下，单击“添加…”   。  
   
-7.  在“从 table\_name  选择列”  对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
+7.  在“从 table**name** _选择列”\__ 对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 9. 在“筛选器”页的“筛选表达式”下，输入要用于创建筛选索引的 SQL 表达式   。  
   
-10. 单击“确定”  。  
+10. 单击“确定”。   
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

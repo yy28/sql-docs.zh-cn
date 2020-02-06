@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6a99d15ba812edac0408262ba1ae26d7ea8b8dbc
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3df80893c54978060387c7ff96cb975b34740534
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768441"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287332"
 ---
 # <a name="replication-tutorials"></a>复制教程
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68768441"
 了解如何配置事务复制，以在完全连接的服务器之间复制数据。 本教程还包括一些基本的错误故障排除方法。 
 
   
-[教程：在服务器和移动客户端之间配置复制（合并）](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)
+[教程：配置服务器和移动客户端之间的复制（合并）](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)
 
 了解如何配置合并复制，以在服务器与仅偶尔连接的一个或多个客户端之间交换数据。  
   

@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 416a4dd7b2c4d68860263b7417d2c48ddffd644b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9e4a59ac997232e7f037c4a9dd840f5cebbac70c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769763"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287433"
 ---
-# <a name="publishers"></a>“分发服务器属性”
+# <a name="publishers"></a>发布者
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   您可以为其他发布服务器授予使用分发服务器的权限。 请注意，允许发布服务器将此服务器用作其远程分发服务器的同时，并不会使该服务器成为发布服务器。 必须连接到发布服务器，对其进行配置以用于发布，并选择此服务器作为分发服务器。 您可以通过新建发布向导配置发布服务器并选择分发服务器。  
   
@@ -30,8 +30,8 @@ ms.locfileid: "68769763"
  **发布服务器**  
  选择允许使用此分发服务器的服务器。 请单击发布服务器旁边的属性按钮 ( **...** ) 以查看和设置其他属性。  
   
- **“添加”**  
- 如果希望允许的服务器没有列出，请单击 **“添加”** 向可用发布服务器列表中添加一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器或 Oracle 发布服务器。  
+ **添加**  
+ 如果希望允许的服务器没有列出，请单击“添加”向可用发布服务器列表中添加   发布服务器或 Oracle 发布服务器[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="see-also"></a>另请参阅  
  [“配置分发”](../../relational-databases/replication/configure-distribution.md)   

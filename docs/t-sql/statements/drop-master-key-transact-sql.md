@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6722becf2b18b1c81576b6f3173be2474e94cc73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044127"
 ---
 # <a name="drop-master-key-transact-sql"></a>DROP MASTER KEY (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68044127"
 
   从当前数据库中删除主密钥。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ DROP MASTER KEY
 ## <a name="arguments"></a>参数  
  该语句不带任何参数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果数据库中的任何私钥都受主密钥保护，则删除操作将会失败。  
   
 ## <a name="permissions"></a>权限  

@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126830"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 证书和非对称密钥
@@ -45,7 +45,7 @@ ms.locfileid: "68126830"
 ### <a name="using-a-certificate-in-sql-server"></a>在 SQL Server 中使用证书  
  证书可用来帮助确保连接的安全性（在数据库镜像中）、为包和其他对象签名或者加密数据或连接。 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中有关证书的其他资源。  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)|介绍用于创建证书的命令。|  
 |[使用数字签名标识包的源](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|显示有关如何使用证书为软件包签名的信息。|  
@@ -59,7 +59,7 @@ ms.locfileid: "68126830"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>在 SQL Server 中使用非对称密钥  
  非对称密钥可用来帮助确保数据的安全性或为纯文本签名。 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中有关非对称密钥的其他资源。  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|介绍用于创建非对称密钥的命令。|  
 |[SIGNBYASYMKEY (Transact-SQL)](../../t-sql/functions/signbyasymkey-transact-sql.md)|显示用于为对象签名的选项。|  
@@ -69,7 +69,7 @@ ms.locfileid: "68126830"
   
 |||  
 |-|-|  
-|工具|用途|  
+|工具|目的|  
 |[makecert](/windows/desktop/SecCrypto/makecert)|创建证书。|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|创建对称密钥的强名称。|  
   

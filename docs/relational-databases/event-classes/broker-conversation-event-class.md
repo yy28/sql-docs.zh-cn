@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3330b9b44f2794daf8e9cd45e9806991a6a815de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999769"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件类
@@ -27,9 +27,9 @@ ms.locfileid: "67999769"
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Broker:Conversation 事件类的数据列  
   
-|数据列|类型|描述|列号|可筛选|  
+|数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 该列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
+|ApplicationName |**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 该列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID。 如果未发出 USE *database*语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 **DB_ID** 函数来确定数据库的值。|3|是|  
 |**EventClass**|**int**|捕获的事件类的类型。 对于 **Broker:Conversation** ，始终为 **124**。|27|否|  
@@ -46,7 +46,7 @@ ms.locfileid: "67999769"
 |**Priority**|**int**|会话的优先级|5|是|  
 |**RoleName**|**nvarchar**|会话句柄的角色。 这可以是 **initiator** 或 **target**。|38|否|  
 |**ServerName**|**nvarchar**|正在跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|**Severity**|**int**|在此事件报告错误时表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的严重级别。|29|否|  
+|**严重性**|**int**|在此事件报告错误时表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的严重级别。|29|否|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
 |**StartTime**|**datetime**|该事件的启动时间（如果可用）。|14|是|  
 |**TextData**|**ntext**|会话的当前状态。 可以是下列值之一：|1|是|  
@@ -61,7 +61,7 @@ ms.locfileid: "67999769"
   
  下表列出了此事件类的子类值。  
   
-|ID|子类|描述|  
+|ID|子类|说明|  
 |--------|--------------|-----------------|  
 |1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 **SEND Message** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行不包含 WITH ERROR 子句的 END CONVERSATION 语句时 **END CONVERSATION** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  

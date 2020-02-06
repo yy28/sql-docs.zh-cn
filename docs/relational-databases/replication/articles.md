@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b70f8c24ed54a6f36a2c224a0fb3ea5182bf3c30
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 851f298d9a2b19a1f8a3bf3fc1ef415ac4a5e288
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770657"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288092"
 ---
 # <a name="articles"></a>项目
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,22 +60,22 @@ ms.locfileid: "68770657"
  **项目属性**  
  单击“项目属性”  ，再单击下列选项之一：  
   
--   单击“设置突出显示的 \<对象类型> 项目的属性”以启动“项目属性 - \<对象名>”对话框；在此对话框中进行的属性更改仅应用于在“项目”页上的对象窗格中突出显示的对象。     
+-   单击“设置突出显示的 **对象类型> 项目的属性”以启动“项目属性 - \<对象名>”对话框；在此对话框中进行的属性更改仅应用于在“项目”页上的对象窗格中突出显示的对象。** **\<**   
   
--   单击“设置所有 \<对象类型> 项目的属性”以启动“所有 \<对象类型> 项目的属性”对话框；在此对话框中进行的属性更改应用于“项目”页上的对象窗格中该类型的所有对象，包括尚未选择进行发布的对象。     
+-   单击“设置所有 **对象类型> 项目的属性”以启动“所有 \<对象类型> 项目的属性”对话框；在此对话框中进行的属性更改应用于“项目”页上的对象窗格中该类型的所有对象，包括尚未选择进行发布的对象。** **\<**   
   
     > [!NOTE]  
-    >  在“所有 \<对象类型> 项目的属性”对话框中进行的属性更改会重写以前在“项目属性 - \<对象名>”对话框中进行的任何更改。   例如，若要为某对象类型的所有项目设置一些默认值，但还希望为单个对象设置一些属性，请首先设置所有项目的默认值。 然后再设置单个对象的属性。  
+    >  在“所有 **对象类型> 项目的属性”对话框中进行的属性更改会重写以前在“项目属性 - \<对象名>”对话框中进行的任何更改。** **\<** 例如，若要为某对象类型的所有项目设置一些默认值，但还希望为单个对象设置一些属性，请首先设置所有项目的默认值。 然后再设置单个对象的属性。  
   
  **已选中的表仅用于下载**  
- 仅限合并复制。 仅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 选择此项可以指定在使用客户端订阅后不允许在订阅服务器上进行更改。 因为仅供下载的项目不能在订阅服务器上更新，所以跟踪元数据不会发送到订阅服务器。 这可以减少订阅服务器上的存储量并提高性能，特别是当网络连接较慢时。 此选项对应于 **“项目属性”** 对话框中的选项 **“同步方向”** 的值 **“仅下载到订阅服务器，禁止订阅服务器更改”** 。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
+ 仅限合并复制。 仅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 选择此项可以指定在使用客户端订阅后不允许在订阅服务器上进行更改。 因为仅供下载的项目不能在订阅服务器上更新，所以跟踪元数据不会发送到订阅服务器。 这可以减少订阅服务器上的存储量并提高性能，特别是当网络连接较慢时。 此选项对应于 **“项目属性”** 对话框中的选项 **“同步方向”** 的值 **“仅下载到订阅服务器，禁止订阅服务器更改”** 。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
   
  **仅显示列表中已选中的对象**  
  选中此复选框可以只显示对象窗格中选定的项目。  
   
 ## <a name="see-also"></a>另请参阅  
  [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [创建发布](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
   

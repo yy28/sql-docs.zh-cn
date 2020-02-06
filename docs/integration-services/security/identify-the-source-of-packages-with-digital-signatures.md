@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295697"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用数字签名标识包的源
@@ -62,7 +62,7 @@ ms.locfileid: "71295697"
   
  下表列出了 DWORD 数据的有效值及其相关策略。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0|无管理限制。|  
 |1|阻止无效签名。<br /><br /> 该设置不阻止未签名的包。|  
@@ -88,7 +88,7 @@ ms.locfileid: "71295697"
   
 7.  在 **“编辑 DWORD 值”** 对话框中，键入值 0、1、2 或 3。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 9. 在 **“文件”** 菜单中，单击 **“退出”** 。    
 

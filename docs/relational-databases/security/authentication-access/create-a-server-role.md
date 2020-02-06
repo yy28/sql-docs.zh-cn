@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 869ee9f88d8cb52f10fbb9120b6815868f7de5fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094953"
 ---
 # <a name="create-a-server-role"></a>创建服务器角色
@@ -71,13 +71,13 @@ ms.locfileid: "68094953"
   
 3.  右键单击“服务器角色”文件夹，然后选择“新建服务器角色…”   。  
   
-4.  在“新建服务器角色 - server\_role\_name”对话框的“常规”页上，在“服务器角色名称”框中输入新的服务器角色的名称     。  
+4.  在“新建服务器角色 - server**role**name”对话框的“常规”页上，在“服务器角色名称”框中输入新的服务器角色的名称 _\_\__   。  
   
 5.  在 **“所有者”** 框中，输入拥有新角色的服务器主体的名称。 或者，单击省略号 (…) 打开“选择服务器登录名或角色”对话框   。  
   
 6.  在“安全对象”  下，选择一个或多个服务器级别的安全对象。 当选择安全对象时，可以向此服务器角色授予或拒绝针对该安全对象的权限。  
   
-7.  在“权限:  显式”框中，选中相应的复选框以针对选定的安全对象授予、授予再授予或拒绝此服务器角色的权限。 如果某个权限无法针对所有选定的安全对象进行授予或拒绝，则该权限将表示为部分选择。  
+7.  在 **“权限: 显式”** 框中，选中相应的复选框以针对选定的安全对象授予、授予再授予或拒绝此服务器角色的权限。 如果某个权限无法针对所有选定的安全对象进行授予或拒绝，则该权限将表示为部分选择。  
   
 8.  在 **“成员”** 页上，使用 **“添加”** 按钮将代表个人或组的登录名添加到新的服务器角色。  
   

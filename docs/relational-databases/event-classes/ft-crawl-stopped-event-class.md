@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3804c83c328a7fc067d2aed964eb7b9635cfb386
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089329"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped 事件类
@@ -25,7 +25,7 @@ ms.locfileid: "68089329"
   
 ## <a name="ftcrawl-stopped-event-class-data-columns"></a>FT:Crawl Stopped 事件类的数据列  
   
-|数据列名称|数据类型|描述|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|已停止全文爬网的数据库的 ID。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**EventClass**|**int**|事件类型 = 156。|27|否|  

@@ -11,10 +11,10 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62cbd5141dfb6254415657dc3ef03d1402b0f3b4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281366"
 ---
 # <a name="catalogcleanup_server_execution_keys"></a>catalog.cleanup_server_execution_keys 
@@ -66,7 +66,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
 -   SSISDB 数据库未处于单用户模式下。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SQL Server 2012 Service Pack 2 将 SERVER_OPERATION_ENCRYPTION_LEVEL 属性添加到 internal.catalog_properties 表  。 该属性有两个可能值：  
   
 -   **PER_EXECUTION (1)** - 为每次执行创建用于保护敏感执行参数和执行日志的证书和对称密钥。 这是默认值。 因为每次执行都会生成证书/密钥，生产环境中可能会出现性能问题（死锁、失败的维护工作等）。 但是，此设置提供的安全性级别比其他值 (2) 高。  
@@ -85,7 +85,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
 5.  运行存储过程 [catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md) 以从 SSISDB 数据库清理证书密钥。 从 SSISDB 数据库中删除证书和密钥可能需要很长时间，因此应在非峰值时间定期运行。  
   
-     可指定范围或级别（执行与项目）以及要删除的密钥数量。 删除的默认批大小为 1000。 将级别设置为 2 时，仅当关联的项目已被删除时才会删除密钥和证书。  
+     可指定范围或级别（执行与项目）以及要删除的密钥数量。 删除的默认批大小为 1000。 将级别设置为 2 时，仅当删除关联的项目时才会删除密钥和证书。  
   
  有关详细信息，请参阅下面的知识库文章。 [修复：在 SQL Server 2012 中将 SSISDB 用作部署存储时的性能问题](https://support.microsoft.com/kb/2972285)  
   

@@ -11,10 +11,10 @@ ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 37fc28cbcdbeaa261550f0490dccaf2a25c51cdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579068"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>筛选器公式示例（报表生成器和 SSRS）
@@ -26,11 +26,11 @@ ms.locfileid: "65579068"
 ## <a name="filter-examples"></a>筛选器示例  
  下表显示使用不同数据类型和不同运算符的筛选器公式的示例。 比较的范围由将为其定义筛选器的报表项确定。 例如，对于为数据集定义的筛选器， **TOP % 10** 表示数据集中前 10% 的值；对于为组定义的筛选器， **TOP % 10** 表示组中前 10% 的值。  
   
-|简单表达式|数据类型|运算符|ReplTest1|描述|  
+|简单表达式|数据类型|操作员|值|说明|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
-|`[SUM(Quantity)]`|**Integer**|**>**|`7`|包括大于 7 的数据值。|  
-|`[SUM(Quantity)]`|**Integer**|**前 N 个**|`10`|包括前 10 个数据值。|  
-|`[SUM(Quantity)]`|**Integer**|**前 %**|`20`|包括前 20% 的数据值。|  
+|`[SUM(Quantity)]`|**整数**|**>**|`7`|包括大于 7 的数据值。|  
+|`[SUM(Quantity)]`|**整数**|**前 N 个**|`10`|包括前 10 个数据值。|  
+|`[SUM(Quantity)]`|**整数**|**前 %**|`20`|包括前 20% 的数据值。|  
 |`[Sales]`|**Text**|**>**|`=CDec(100)`|包括大于 $100 的 System.Decimal（SQL“money”数据类型）类型的所有值。|  
 |`[OrderDate]`|**DateTime**|**>**|`2008-01-01`|包括从 2008 年 1 月 1 日到当前日期的所有日期。|  
 |`[OrderDate]`|**DateTime**|**BETWEEN**|`2008-01-01`<br /><br /> `2008-02-01`|包括从 2008 年 1 月 1 日到 2008 年 2 月 1 日（含此日）的日期。|  

@@ -31,10 +31,10 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982188"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 对象
@@ -71,7 +71,7 @@ ms.locfileid: "73982188"
 ##  <a name="SQLServerAgentPOs"></a> SQL Server 代理性能对象  
  下表列出了为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理提供的性能对象：  
   
-|性能对象|描述|  
+|性能对象|说明|  
 |------------------------|-----------------|  
 |[SQLAgent:Alerts](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报的信息。|  
 |[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的信息。|  
@@ -81,7 +81,7 @@ ms.locfileid: "73982188"
 ##  <a name="ServiceBrokerPOs"></a> Service Broker 性能对象  
  下表列出了为 [!INCLUDE[ssSB](../../includes/sssb-md.md)]代理提供的性能对象：  
   
-|性能对象|描述|  
+|性能对象|说明|  
 |------------------------|-----------------|  
 |[SQLServer:Broker Activation](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|提供有关已激活 [!INCLUDE[ssSB](../../includes/sssb-md.md)]的任务的信息。|  
 |[SQLServer:Broker Statistics](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|提供 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的常规信息。|  
@@ -90,7 +90,7 @@ ms.locfileid: "73982188"
 ##  <a name="SQLServerPOs"></a> SQL Server 性能对象  
  下表介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象：  
   
-|性能对象|描述|  
+|性能对象|说明|  
 |------------------------|-----------------|  
 |[SQLServer:Access Methods](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|搜索并度量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象的分配（例如，索引搜索数或分配给索引和数据的页数）。|  
 |[SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|提供有关备份和还原操作使用的备份设备的信息，如备份设备的吞吐量。|  
@@ -118,19 +118,19 @@ ms.locfileid: "73982188"
 |[SQLServer:Memory Broker Clerks](../../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md)|与 Memory Broker Clerk 相关的统计信息。|
 |[SQLServer:Memory Manager](../../relational-databases/performance-monitor/sql-server-memory-manager-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存使用量的信息，如当前分配的锁结构总数。|  
 |[SQLServer:Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)|提供有关用于存储对象（如存储过程、触发器和查询计划）的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓存的信息。|  
-|[SQLServer：查询存储](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|提供有关查询存储的信息。|  
-|[SQLServer：资源池统计信息](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|提供了有关资源调控器资源池统计的信息。|  
+|[SQLServer: Query Store](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|提供有关查询存储的信息。|  
+|[SQLServer: Resource Pool Stats](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|提供了有关资源调控器资源池统计的信息。|  
 |[SQLServer:SQL Errors](../../relational-databases/performance-monitor/sql-server-sql-errors-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的信息。|  
 |[SQLServer:SQL Statistics](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)|提供有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询各个方面的信息，如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 收到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句的批数。|  
 |[SQLServer:Transactions](../../relational-databases/performance-monitor/sql-server-transactions-object.md)|提供了有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中活动事务的信息，如事务总数和快照事务数。|  
 |[SQLServer:User Settable](../../relational-databases/performance-monitor/sql-server-user-settable-object.md)|执行自定义监视。 每个计数器可以是一个自定义的存储过程，也可以是任何返回一个被监视值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|  
-|[SQLServer：等待统计信息](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|提供有关等待的信息。|  
-|[SQLServer：工作负载组统计信息](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|提供了有关资源调控器工作负荷组统计的信息。|  
+|[SQLServer: Wait Statistics](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|提供有关等待的信息。|  
+|[SQLServer: Workload Group Stats](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|提供了有关资源调控器工作负荷组统计的信息。|  
   
 ##  <a name="SQLServerReplicationPOs"></a> SQL Server 复制性能对象  
  下表列出了为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制提供的性能对象：  
   
-|性能对象|描述|  
+|性能对象|说明|  
 |------------------------|-----------------|  
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> 有关详细信息，请参阅 [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md)。|提供有关复制代理活动的信息。|  
   

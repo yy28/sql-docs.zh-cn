@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 66be3c8c81127b107f730fb38b0be10064d72926
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909379"
 ---
 # <a name="disable-check-constraints-for-replication"></a>对复制禁用 CHECK 约束
@@ -48,7 +48,7 @@ ms.locfileid: "72909379"
   
 3.  在 **“CHECK 约束”** 对话框中的 **“表设计器”** ，对 **“强制用于复制”** 选择 **“否”** 值。  
   
-4.  单击 **“关闭”** 。  
+4.  单击“关闭”  。  
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

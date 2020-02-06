@@ -11,10 +11,10 @@ ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fb1a989876126a57553a1ae833bcf847f9c005bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571131"
 ---
 # <a name="job-properties-management-studio"></a>作业属性 (Management Studio)
@@ -25,7 +25,7 @@ ms.locfileid: "65571131"
 > [!NOTE]  
 >  在具有高级服务的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中不支持此功能。 运行 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]时，将不会显示该页。  
   
-## <a name="tasks"></a>“任务”  
+## <a name="tasks"></a>任务  
  必须刷新该页以检索有关报表服务器上当前正在运行的作业的信息，才能查看有关作业的信息：  
   
 1.  打开报表服务器文件夹。  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2d674bf516dbdf25f940e9b14792d71c01d44806
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940666"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed 事件类
@@ -25,7 +25,7 @@ ms.locfileid: "67940666"
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>PreConnect:Completed 事件类的数据列  
   
-|数据列名称|数据类型|描述|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|**int**|216|27|否|  
 |SPID|**int**|激发此事件的服务器进程的 ID。|12|是|  
@@ -35,11 +35,11 @@ ms.locfileid: "67940666"
 |Duration|**bigint**|分类器函数所用的时间，以微秒为单位。|13|是|  
 |ObjectID|**int**|用户定义的分类器对象的 ID。|22|是|  
 |CPU|**int**|CPU 使用率，以毫秒为单位。|18|是|  
-|Reads|**int**|逻辑读取数。|16|是|  
-|Writes|**int**|逻辑写入数。|17|是|  
+|读取|**int**|逻辑读取数。|16|是|  
+|写入|**int**|逻辑写入数。|17|是|  
 |GroupID|**int**|分类工作负荷组的 ID。|66|是|  
 |错误|**int**|如果用户定义的分类器函数无法执行，则为最后一个错误号。|31|是|  
-|State|**int**|最后一个错误的状态。|30|是|  
+|状态|**int**|最后一个错误的状态。|30|是|  
 |TargetUserName|**sysname**|如果系统无法找到相应的活动组，则为用户定义的分类器函数的返回值（工作负荷组名）。 否则，此列设为 NULL.|39|是|  
 |ObjectName|**nvarchar(256)**|用户定义的分类器函数的两部分名称。 例如，dbo.classifier。|34|是|  
   

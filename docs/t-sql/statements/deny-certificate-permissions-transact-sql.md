@@ -18,10 +18,10 @@ ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b9314935f347fb4c8768cfaa192c5df0c18d1ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114934"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY 证书权限 (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68114934"
   拒绝对证书的权限。  
 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,14 +44,14 @@ DENY permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可拒绝授予证书的权限。 如下所列。  
   
- ON CERTIFICATE ::certificate_name  
+ ON CERTIFICATE ::certificate_name    
  指定拒绝将其权限授予他人的证书。 需要使用作用域限定符“::”。  
   
- database_principal  
- 指定要对其拒绝权限的主体。 可以是以下类型之一：  
+ database_principal   
+ 指定要对其拒绝权限的主体。 下列类型作之一：  
   
 -   数据库用户  
   
@@ -72,8 +72,8 @@ DENY permission  [ ,...n ]
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- denying_principal  
- 指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 可以是以下类型之一：  
+ denying_principal   
+ 指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
   
@@ -91,7 +91,7 @@ DENY permission  [ ,...n ]
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  证书是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下面列出了可拒绝授予证书的最为特定和受限的权限，以及隐含这些权限的更常用权限。  
   
 |证书权限|证书权限隐含的权限|数据库权限隐含的权限|  

@@ -18,13 +18,13 @@ ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ce7a12b3964e3e0c2407521978df03af9d88f63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014968"
 ---
-# <a name="sqlsrvquery"></a>sqlsrv_query
+# <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 准备并执行语句。  
@@ -36,7 +36,7 @@ ms.locfileid: "68014968"
 sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
 *$conn*：与已准备的语句相关联的连接资源。  
   
 $tsql：对应于已准备的语句的 Transact-SQL 表达式  。  
@@ -55,19 +55,19 @@ $params [可选]：对应于参数化查询中参数的值的阵列   。 该阵
   
     下表提供对阵列的每个元素的描述：  
   
-    |元素|描述|  
+    |元素|说明|  
     |-----------|---------------|  
     |*$value*|参数值、PHP 变量或通过引用传递的 PHP 变量。|  
     |*$direction*[可选]|用于指示参数方向的以下 **SQLSRV_PARAM_\*** 常量之一：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 默认值为 SQLSRV_PARAM_IN  。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
-    |*$phpType*[可选]|SQLSRV_PHPTYPE_\* 常量，用于指定返回的值的 PHP 数据类型  。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
-    |*$sqlType*[可选]|SQLSRV_SQLTYPE_\* 常量，用于指定输入值的 SQL Server 数据类型  。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$phpType*[可选]|SQLSRV_PHPTYPE_ **常量，用于指定返回的值的 PHP 数据类型\*** 。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$sqlType*[可选]|SQLSRV_SQLTYPE_ **常量，用于指定输入值的 SQL Server 数据类型\*** 。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
   
 $options [可选]：关联阵列，用于设置查询属性  。 它是也受 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties) 支持的相同键列表。
   
 ## <a name="return-value"></a>返回值  
 语句资源。 如果无法创建和/或执行语句，将返回 false  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 sqlsrv_query 函数非常适合一次性查询，并且应该是执行查询的默认选项，除非出现特殊情况  。 此函数提供了一个简化的方法，以便使用最少的代码来执行查询。 sqlsrv_query 函数可用于语句准备和语句执行，还可用于执行参数化查询  。  
   
 有关详细信息，请参阅 [如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
@@ -156,7 +156,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 当由于 PHP 的[浮点数](https://php.net/manual/en/language.types.float.php)具有有限精确度而将值绑定到[十进制或数值列](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)以确保精确度和准确度时，建议将字符串用作输入。 这同样适用于 bigint 列，尤其是在值超出[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围的情况下。
+> 当由于 PHP 的[浮点数](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)具有有限精确度而将值绑定到[十进制或数值列](https://php.net/manual/en/language.types.float.php)以确保精确度和准确度时，建议将字符串用作输入。 这同样适用于 bigint 列，尤其是在值超出[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围的情况下。
 
 ## <a name="example"></a>示例  
 此代码示例演示如何将十进制值作为输入参数进行绑定。  

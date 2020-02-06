@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843804"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>通过运行“启用数据库延伸向导”开始
@@ -56,17 +56,17 @@ ms.locfileid: "73843804"
  ![Stretch Database 向导的“简介”页](../../sql-server/stretch-database/media/stretch-wizard-1.png "Stretch Database 向导的“简介”页")  
   
 ##  <a name="Tables"></a> 选择表  
- 选择想要为其启用 Stretch 的表。  
+ 选择要为其启用延伸的表。  
  
 具有大量行的表显示于已排序列表的顶端。 向导显示表的列表之前，它会对当前不受 Stretch Database 支持的数据类型对其进行分析。 
   
  ![Stretch Database 向导的“选择表”页](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database 向导的“选择表”页")  
   
-|“列”|描述|  
+|列|说明|  
 |------------|-----------------|  
-|（无标题）|选中此列中的复选框以为所选的表启用 Stretch。|  
+|（无标题）|选中此列中的复选框可为选定的表启用延伸。|  
 |**名称**|指定数据库中表的名称。|  
-|（无标题）|此列中的符号可能代表一条警告，不会阻止你为 Stretch 启用所选表。 还有可能代表一个阻止问题，将阻止你为 Stretch 启用所选表 - 例如因为该表使用了不支持的数据类型。 将鼠标悬停符号上，以在工具提示中显示详细信息。 有关详细信息，请参阅 [Stretch Database 限制](../../sql-server/stretch-database/limitations-for-stretch-database.md)。|  
+|（无标题）|此列中的符号可能代表一条警告，不会阻止你为 Stretch 启用所选表。 还有可能代表一个阻止问题，将阻止你为 Stretch 启用所选表 - 例如因为该表使用了不支持的数据类型。 将鼠标悬停于符号上可在工具提示中显示更多信息。 有关详细信息，请参阅 [Stretch Database 限制](../../sql-server/stretch-database/limitations-for-stretch-database.md)。|  
 |**已拉伸**|指示该表是否已为 Stretch 启用。|  
 |**迁移**|你可以迁移整个表（**整个表**），或在表中现有的列上指定一个筛选器。 若想要使用不同的筛选器函数来选择要迁移的行，请运行 ALTER TABLE 语句以在退出向导后指定筛选器函数。 有关筛选器函数的详细信息，请参阅[通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。 有关如何应用函数的详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 或 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)。|  
 |**行**|指定表中的行数。|  
@@ -75,7 +75,7 @@ ms.locfileid: "73843804"
 ## <a name="optionally-provide-a-row-filter"></a>选择性地提供行筛选器  
  若想要提供筛选器函数来选择要迁移的行，请在“选择表”  页执行以下操作。  
   
-1.  在  “选择你想要拉伸的表”列表中，在表的行中单击“整个表”  。 将打开  “选择要拉伸的行”对话框。  
+1.  在  “选择你想要拉伸的表”列表中，在表的行中单击“整个表”  。 此时会打开“选择要延伸的行”  对话框。  
   
      ![定义基于日期的筛选器谓词](../../sql-server/stretch-database/media/stretch-wizard-2a.png "定义基于日期的筛选器谓词")  
   
@@ -108,7 +108,7 @@ ms.locfileid: "73843804"
   
      ![登录到 Azure - Stretch Database 向导](../../sql-server/stretch-database/media/stretch-wizard-3.png "登录到 Azure - Stretch Database 向导")  
   
-2.  为 Stretch Database 选择要使用的现有 Azure 订阅。 
+2.  选择用于 Stretch Database 的现有 Azure 订阅。 
 
 > [!NOTE] 
 > 若要在数据库上启用 Stretch，则必须具有正在使用的订阅的管理员权限。 Stretch Database 向导将只显示用户具有管理员权限的订阅。
@@ -163,7 +163,7 @@ ms.locfileid: "73843804"
   
  ![选择 Stretch Database 向导的“IP 地址”页](../../relational-databases/tables/media/stretch-wizard-7.png "选择 Stretch Database 向导的“IP 地址”页")  
   
-##  <a name="Summary"></a> 摘要  
+##  <a name="Summary"></a>总结  
  查看你输入的值和你在该向导中选择的选项以及 Azure 上的预估成本。 然后选择“完成”  以启用 Stretch。  
   
  ![Stretch Database 向导的“摘要”页](../../sql-server/stretch-database/media/stretch-wizard-8.png "Stretch Database 向导的“摘要”页")  
@@ -177,10 +177,10 @@ ms.locfileid: "73843804"
   
 ##  <a name="KnownIssues"></a> 对向导进行故障排除  
  **Stretch Database 向导失败。**  
- 如果尚未在服务器级别启用 Stretch Database，而你在没有系统管理员权限的情况下运行向导以启用它，则向导将失败。 让系统管理员在本地服务器实例上启用 Stretch Database，然后再次运行该向导。 有关详细信息，请参阅[先决条件：在服务器上启用 Stretch Database 的权限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。  
+ 如果延伸数据库尚未在服务器级别启用，而你在不使用系统管理员权限的情况下运行向导来启用延伸数据库，则向导会失败。 让系统管理员在本地服务器实例上启用 Stretch Database，然后再次运行该向导。 有关详细信息，请参阅 [先决条件：在服务器上启用 Stretch Database 的权限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。  
   
 ## <a name="next-steps"></a>后续步骤  
- 为 Stretch Database 启用其他表。 监视数据迁移并管理已启用 Stretch 的数据库和表。  
+ 为延伸数据库启用其他表。 监视数据迁移并管理已启用 Stretch 的数据库和表。  
   
 -   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 以启用其他表。  
   
@@ -188,14 +188,14 @@ ms.locfileid: "73843804"
   
 -   [暂停和恢复数据迁移 (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
--   [对 Stretch Database 进行管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+-   [Stretch Database 的管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
--   [备份已启用延伸的数据库](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
+-   [备份启用了延伸的数据库](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
   
 -   [还原已启用延伸的数据库](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [为数据库启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

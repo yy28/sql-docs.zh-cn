@@ -21,10 +21,10 @@ ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5563c65352713f3557e4c412607d1944f28f3a3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071428"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68071428"
 
 此函数返回指定名称的文件组属性值和文件组值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,10 +44,10 @@ FILEGROUPPROPERTY ( filegroup_name, property )
  filegroup_name   
 类型为 sysname  的表达式，它表示要为 `FILEGROUPPROPERTY` 返回命名的属性信息的文件组名称。  
   
- property   
+ *property*  
 类型为 varchar(128)  的表达式，它返回文件组属性的名称。 Property  可以返回下列值之一：  
   
-|ReplTest1|描述|返回的值|  
+|值|说明|返回的值|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|文件组是只读的。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效。|  
 |**IsUserDefinedFG**|文件组是用户定义文件组。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效。|  
@@ -56,11 +56,11 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 ## <a name="return-types"></a>返回类型  
 **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 filegroup_name  与 sys.filegroups  目录视图中的 name  列相对应。  
   
 ## <a name="examples"></a>示例  
-此示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中主文件组的 `IsDefault` 属性设置。  
+此示例返回 `IsDefault` 数据库中主文件组的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 属性设置。  
   
 ```  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  

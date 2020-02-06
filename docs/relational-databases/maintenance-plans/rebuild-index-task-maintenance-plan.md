@@ -16,10 +16,10 @@ ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5eba7d655d0c6ee047d59f3cd14ea39a6ad4ec3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115584"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>“重新生成索引”任务（维护计划）
@@ -29,13 +29,13 @@ ms.locfileid: "68115584"
  **“‘重新生成索引’任务”** 使用 ALTER INDEX 语句。 有关此页所述选项的详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
 ## <a name="options"></a>选项  
- **“连接”**  
+ **Connection**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
  创建一个新的服务器连接，在执行此任务时使用。 下面对 **“新建连接”** 对话框进行了介绍。  
   
- **“数据库”**  
+ **数据库**  
  指定受此任务影响的数据库。  
   
 -   **“所有数据库”**  
@@ -57,7 +57,7 @@ ms.locfileid: "68115584"
     > [!NOTE]  
     >  只能对兼容级别被设置为 80 或更高的数据库运行维护计划。 不显示兼容级别设置为 70 或更低的数据库。  
   
- **对象**  
+ **Object**  
  将“选择”  网格限制为显示表、显示视图或同时显示两者。  
   
  **选择**  
@@ -79,7 +79,7 @@ ms.locfileid: "68115584"
  使用 `ONLINE` 选项，用户可以在索引操作期间访问基础表或聚集索引数据以及任何关联的非聚集索引。  
   
 > [!NOTE]
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  **不要重新生成索引 | 重新脱机生成索引**  
  指定要对无法重新联机生成的索引类型执行的操作。  
@@ -125,7 +125,7 @@ ms.locfileid: "68115584"
  **使用特定用户名和密码**  
  使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
   
- **User name**  
+ **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
  **密码**  
