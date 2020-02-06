@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9eea6c5cbc995cd73a9f799124772d2be396a9f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095483"
 ---
 # <a name="writing-pages"></a>写入页
@@ -50,7 +50,7 @@ ms.locfileid: "68095483"
 * 勤奋写入   
  勤奋写入进程会写入与无日志记录的操作（例如大容量插入和选择插入）相关联的脏数据页。 该进程允许以并行方式创建和写入新页。 也就是说，调用操作不必等待整个操作完成，即可将页写入磁盘。
 
-* 检查点   
+* Checkpoint   
  检查点进程定期在缓冲区高速缓存中扫描包含来自指定数据库的页的缓冲区，然后将所有脏页写入磁盘。 CHECKPOINT 可创建一个检查点，在该点保证全部脏页都已写入磁盘，从而在以后的恢复过程中节省时间。 用户可使用 CHECKPOINT 命令请求检查点操作，否则 [!INCLUDE[ssDE](../includes/ssde-md.md)] 会根据上次检查点之后使用的日志空间量和经过的时间生成自动检查点。 另外，在发生特定活动时会生成检查点。 例如，在数据库中添加或删除了数据或日志文件时，或在 SQL Server 实例停止时。 有关详细信息，请参阅 [检查点和日志的活动部分](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)。
 
 惰性写入、勤奋写入和检查点进程均不等待 I/O 操作完成。 它们始终使用异步（或重叠）I/O，并将继续执行其他工作，之后再检查 I/O 是否成功。 因此，SQL Server 在执行相应任务时可充分利用 CPU 和 I/O 资源。

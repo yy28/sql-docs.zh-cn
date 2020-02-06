@@ -9,10 +9,10 @@ ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9cdf7cc51563de96e20e188a7fca2fb0f1ac9631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579721"
 ---
 # <a name="report-builder-functions---count-function"></a>报表生成器函数 - Count 函数
@@ -28,7 +28,7 @@ ms.locfileid: "65579721"
 Count(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *expression*  
  （**Variant** 或 **Binary**）要对其执行聚合的表达式，例如， `=Fields!FieldName.Value`。  
   
@@ -41,7 +41,7 @@ Count(expression, scope, recursive)
 ## <a name="return-type"></a>返回类型  
  返回 **Integer**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  
   
  *Expression* 可以包含对嵌套聚合函数的调用，但具有以下例外和条件：  
@@ -60,7 +60,7 @@ Count(expression, scope, recursive)
   
  示例  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  下面的代码示例显示一个表达式，该表达式为默认作用域和父组作用域计算 `Size` 的非 Null 值数。 该表达式将添加至属于子组 `GroupbySubcategory`的行的某个单元格中。 父组是 `GroupbyCategory`。 该表达式显示 `GroupbySubcategory` （默认作用域）和 `GroupbyCategory` （父组作用域）的结果。  
   
 > [!NOTE]  

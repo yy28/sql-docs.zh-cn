@@ -21,10 +21,10 @@ ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 726b071c222580ec75091477dc68509cdb71e1e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940254"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67940254"
 
   返回与全文引擎属性有关的信息。 可以使用 sp_fulltext_service 设置和检索这些属性  。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,13 +42,13 @@ FULLTEXTSERVICEPROPERTY ('property')
 ```  
   
 ## <a name="arguments"></a>参数  
- property   
+ *property*  
  包含全文服务级别属性名称的表达式。 下表列出了这些属性，并提供对返回的信息的说明。  
   
 > [!NOTE]
->  未来版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中将删除以下属性：ConnectTimeout、DataTimeout 和 ResourceUsage    。 应避免在新的开发工作中使用这些属性，并着手修改当前使用上述任意属性的应用程序。  
+>  以后的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中将删除下列属性：ConnectTimeout、DataTimeout 和 ResourceUsage    。 应避免在新的开发工作中使用这些属性，并着手修改当前使用上述任意属性的应用程序。  
   
-|属性|ReplTest1|  
+|properties|值|  
 |--------------|-----------|  
 |**ResourceUsage**|返回 0。 支持它仅仅是为了保持向后兼容。|  
 |**ConnectTimeout**|返回 0。 支持它仅仅是为了保持向后兼容。|  

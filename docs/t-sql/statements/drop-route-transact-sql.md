@@ -22,10 +22,10 @@ ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b11908f182037a1368b9d1fda34ebda3f1422918
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68022593"
 ---
 # <a name="drop-route-transact-sql"></a>DROP ROUTE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68022593"
 
   删除路由，并从当前数据库的路由表中删除该路由的信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,11 +44,11 @@ DROP ROUTE route_name
 ```  
   
 ## <a name="arguments"></a>参数  
- route_name  
+ route_name   
  要删除的路由名称。 不能指定服务器、数据库和架构名称。  
   
-## <a name="remarks"></a>Remarks  
- 存储路由的路由表是一个元数据表，可通过目录视图 sys.routes 来读取。 路由表只能通过 CREATE ROUTE、ALTER ROUTE 和 DROP ROUTE 语句进行更新。  
+## <a name="remarks"></a>备注  
+ 存储路由的路由表是一个元数据表，可通过目录视图 sys.routes  来读取。 路由表只能通过 CREATE ROUTE、ALTER ROUTE 和 DROP ROUTE 语句进行更新。  
   
  对于一个路由，无论是否有会话使用它，都可以删除它。 不过，如果没有到远程服务的其他路由，则这些会话的消息将保留在传输队列中，直到创建了到远程服务的路由或会话超时为止。  
   

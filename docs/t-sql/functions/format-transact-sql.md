@@ -19,19 +19,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155796"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-返回使用指定格式和可选区域性格式化的值。 使用 FORMAT 函数将日期/时间和数字值格式化为识别区域设置的字符串。 对于一般的数据类型转换，请使用 CAST 或 CONVERT。  
+返回以指定的格式和可选的区域性格式化的值。 使用 FORMAT 函数将日期/时间和数字值格式化为识别区域设置的字符串。 对于一般的数据类型转换，请使用 CAST 或 CONVERT。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,10 +49,10 @@ FORMAT ( value, format [, culture ] )
   
  format 参数必须包含一个有效的 .NET Framework 格式字符串，要么作为标准格式字符串（例如，“C”或“D”），要么作为日期值和数值的自定义字符模式（例如，“MMMM DD, yyyy (dddd)”）  。 不支持组合格式。 有关这些格式模式的完整解释，请查阅有关常规字符串格式、自定义日期和时间格式以及自定义数字格式的 .NET Framework 文档。 一个好的起点是主题“[格式类型](https://go.microsoft.com/fwlink/?LinkId=211776)”。  
   
- culture   
+ *区域性*  
  指定区域性的可选 nvarchar 参数  。  
   
- 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性作为参数；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言  。 如果 culture 参数无效，FORMAT 将引发错误  。  
+ 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性作为参数；它不局限于  *显式支持的语言*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果 culture 参数无效，FORMAT 将引发错误  。  
   
 ## <a name="return-types"></a>返回类型
 
@@ -60,7 +60,7 @@ FORMAT ( value, format [, culture ] )
   
  返回值的长度由 format 确定  。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
  FORMAT 将返回 NULL 错误，而不是非 valid 的 culture   。 例如，如果 format 中指定的值无效，则返回 NULL  。  
 
@@ -76,19 +76,19 @@ FORMAT ( value, format [, culture ] )
   
 |类别|类型|.NET 类型|  
 |--------------|----------|---------------|  
-|数字|BIGINT|Int64|  
-|数字|INT|Int32|  
-|数字|SMALLINT|Int16|  
-|数字|TINYINT|Byte|  
-|数字|Decimal|SqlDecimal|  
-|数字|NUMERIC|SqlDecimal|  
-|数字|FLOAT|双精度|  
-|数字|REAL|Single|  
-|数字|SMALLMONEY|Decimal|  
-|数字|money|Decimal|  
-|日期和时间|日期|DateTime|  
+|Numeric|bigint|Int64|  
+|Numeric|int|Int32|  
+|Numeric|smallint|Int16|  
+|Numeric|tinyint|Byte|  
+|Numeric|Decimal|SqlDecimal|  
+|Numeric|numeric|SqlDecimal|  
+|Numeric|FLOAT|Double|  
+|Numeric|real|Single|  
+|Numeric|smallmoney|Decimal|  
+|Numeric|money|Decimal|  
+|日期和时间|date|DateTime|  
 |日期和时间|time|TimeSpan|  
-|日期和时间|DATETIME|DateTime|  
+|日期和时间|datetime|DateTime|  
 |日期和时间|smalldatetime|DateTime|  
 |日期和时间|datetime2|DateTime|  
 |日期和时间|datetimeoffset|DateTimeOffset|  
@@ -150,7 +150,7 @@ DateTime Result  Custom Number Result
   
 ### <a name="c-format-with-numeric-types"></a>C. 用于数值类型的 FORMAT
 
- 下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 Sales.CurrencyRate 表中的 5 个行  。 EndOfDateRate 列在该表中作为 money 类型存储   。 在本示例中，该列以非格式化形式返回，然后通过指定 .NET 数字格式、常规格式和货币格式类型进行格式化。 有关这些格式和其他数字格式的详细信息，请参阅[标准数字格式字符串](https://msdn.microsoft.com/library/dwhawy9k.aspx)。  
+ 下面的示例返回  **数据库的 Sales.CurrencyRate 表中的 5 个行**[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 EndOfDateRate 列在该表中作为 money 类型存储   。 在本示例中，该列以非格式化形式返回，然后通过指定 .NET 数字格式、常规格式和货币格式类型进行格式化。 有关这些格式和其他数字格式的详细信息，请参阅[标准数字格式字符串](https://msdn.microsoft.com/library/dwhawy9k.aspx)。  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  

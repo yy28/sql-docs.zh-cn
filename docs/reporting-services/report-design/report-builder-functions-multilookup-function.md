@@ -9,10 +9,10 @@ ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1631f5f07c26e8b57cf8bc977ef6d6ccf4b3ae48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577151"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>报表生成器函数 - Multilookup 函数
@@ -28,15 +28,15 @@ ms.locfileid: "65577151"
 Multilookup(source_expression, destination_expression, result_expression, dataset)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *source_expression*  
  (**VariantArray**) 在当前作用域中计算结果并指定要查找的名称或键的集合的表达式。 例如，对于多值参数， `=Parameters!IDs.value`。  
   
  *destination_expression*  
- (**Variant**) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如， `=Fields!ID.Value`。  
+ (**Variant**) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如，`=Fields!ID.Value` 。  
   
  *result_expression*  
- (**Variant**) 针对数据集中的行（其中， *source_expression* = *destination_expression*）计算结果并指定要检索的值的表达式。 例如， `=Fields!Name.Value`。  
+ (**Variant**) 针对数据集中的行（其中， *source_expression* = *destination_expression*）计算结果并指定要检索的值的表达式。 例如，`=Fields!Name.Value` 。  
   
  *数据集 (dataset)*  
  指定报表中数据集的名称的常量。 例如，“Colors”。  
@@ -44,7 +44,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>返回  
  返回 **VariantArray**，如果没有匹配项，则返回 **Nothing** 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 **Multilookup** 从名称-值对（每对具有 1 对 1 的关系）的数据集中检索一组值。 **MultiLookup** 等同于对一组名称或键调用 **Lookup** 。 例如，对于基于主键标识符的多值参数，可以在表中使用文本框表达式中的 **Multilookup** 来检索未绑定到该参数或该表的数据集中的相关值。  
   
  **Multilookup** 执行下列操作：  
@@ -57,7 +57,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  若要从具有指定名称的名称/值对（具有 1 对 1 的关系）的数据集中检索单个值，请使用 [Lookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。 若要从具有某名称的名称-值对（具有 1 对多的关系）的数据集中检索多个值，请使用 [LookupSet 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)。  
   
- 存在下列限制：  
+ 存在以下限制：  
   
 -   在应用所有筛选表达式后计算**Multilookup** 的结果  
   
@@ -88,7 +88,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  数据集 CategoryNames 包含类别标识符和类别名称，如下表中所示：  
   
-|ID|“属性”|  
+|ID|名称|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  

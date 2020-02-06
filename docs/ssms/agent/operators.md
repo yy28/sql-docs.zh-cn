@@ -1,10 +1,9 @@
 ---
-title: 操作员 | Microsoft Docs
-ms.custom: ''
+title: 运算符
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,13 +22,15 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4059bda6f761171292f2977f7d8e6a3f6896451
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260083"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247634"
 ---
 # <a name="operators"></a>运算符
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,12 +45,12 @@ ms.locfileid: "68260083"
   
 -   操作员名称  
   
--   联系人信息  
+-   联系信息  
   
 ### <a name="naming-an-operator"></a>命名操作员  
 每个操作员都必须有一个名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中，操作员名称必须是唯一的，并且长度不得超过 **128** 个字符。  
   
-### <a name="contact-information"></a>联系人信息  
+### <a name="contact-information"></a>联系信息  
 操作员的联系信息决定了通知该操作员的方式。 可以通过电子邮件、寻呼程序或 **net send** ：  
   
 > [!IMPORTANT]
@@ -77,7 +78,7 @@ ms.locfileid: "68260083"
   
         如果所有操作员共享一个寻呼服务提供商的服务，则可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定寻呼到电子邮件系统需要的任何特殊电子邮件格式。 特殊格式可以是前缀或后缀，可以包含在电子邮件的下列行中：  
   
-        **主题：**  
+        **使用者：**  
   
         **抄送**：  
   

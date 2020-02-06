@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e0606b6a6895ffd63c219e312a727157d1e2ad86
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 79f24f3115f61b088fce684d0b7ada0bc1d39697
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769396"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287035"
 ---
 # <a name="synchronize-a-pull-subscription"></a>同步请求订阅
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "68769396"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地订阅”** 文件夹。  
   
-3.  右键单击要同步的订阅，然后单击 **“查看同步状态”**。  
+3.  右键单击要同步的订阅，然后单击 **“查看同步状态”** 。  
   
-4.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。 完成同步后，将显示消息 **“同步完成”** 。  
+4.  在“查看同步状态 - **订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。\<**  完成同步后，将显示消息 **“同步完成”** 。  
   
-5.  单击 **“关闭”**。  
+5.  单击“关闭”  。  
   
 ##  <a name="ReplProg"></a> Replication Agents  
  可通过在命令提示符下调用相应的复制代理可执行文件，以编程方式按需同步请求订阅。 被调用的复制代理可执行文件将取决于请求订阅所属的发布的类型。 有关详细信息，请参阅 [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md)。  
@@ -85,13 +85,13 @@ ms.locfileid: "68769396"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **\@publisher_security_mode**  
+    -   **-DistributorSecurityMode** =  **\@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode** =  **\@publisher_security_mode**  
   
     -   **-SubscriberLogin**  
   
@@ -129,13 +129,13 @@ ms.locfileid: "68769396"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **\@publisher_security_mode**  
+    -   **-DistributorSecurityMode** =  **\@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode** =  **\@publisher_security_mode**  
   
     -   **-SubscriberLogin**  
   
@@ -831,7 +831,7 @@ End Try
   
 ## <a name="see-also"></a>另请参阅  
  [同步数据](../../relational-databases/replication/synchronize-data.md)   
- [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [复制安全最佳做法](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

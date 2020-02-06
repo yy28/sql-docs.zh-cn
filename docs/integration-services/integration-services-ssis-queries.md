@@ -18,10 +18,10 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d24d4e8bdebca82ec0541132b52ac84de6c9c271
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284485"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查询
@@ -94,7 +94,7 @@ ms.locfileid: "71284485"
  **工具栏**  
  使用工具栏可以管理数据集、选择要显示的窗格以及控制查询函数。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**显示/隐藏关系图窗格**|显示或隐藏 **“关系图”** 窗格。|  
 |**显示/隐藏网格窗格**|显示或隐藏 **“网格”** 窗格。|  
@@ -111,7 +111,7 @@ ms.locfileid: "71284485"
  **查询定义**  
  查询定义提供可用来定义和测试查询的工具栏和窗格。  
   
-|窗格|描述|  
+|窗格|说明|  
 |----------|-----------------|  
 |**“关系图”** 窗格|在关系图中显示查询。 关系图可显示查询中包含的表以及这些表的联接方式。 选中或清除表中某列旁边的复选框，即可在查询输出中添加或删除该列。<br /><br /> 当您向查询添加表时，查询生成器将根据表和表中的键在表之间创建联接。 若要添加联接，请将一个表中的字段拖到另一个表中的字段上。 若要管理联接，请右键单击该联接，再选择菜单选项。<br /><br /> 右键单击“关系图”窗格，可以添加或删除表，选择所有表，以及显示或隐藏窗格。 |  
 |**“网格”** 窗格|在网格中显示查询。 使用此窗格可以在查询中添加和删除列，以及更改每个列的设置。|  

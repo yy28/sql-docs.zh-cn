@@ -18,10 +18,10 @@ ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 991d27258b37895ebb2bf54e267fd07fbe87d78e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892503"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68892503"
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中转换为所请求的数据类型的表达式的结果。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,15 +47,15 @@ PARSE ( string_value AS data_type [ USING culture ] )
  data_type   
  表示结果的所请求数据类型的文本值。  
   
- culture   
+ *区域性*  
  可选字符串，它标识对 string_value 进行格式化的区域性  。  
   
- 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言  。 如果 culture 参数无效，PARSE 将引发错误  。  
+ 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于  *显式支持的语言*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果 culture 参数无效，PARSE 将引发错误  。  
   
 ## <a name="return-types"></a>返回类型  
  返回转换为所请求的数据类型的表达式的结果。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  作为参数传递给 PARSE 的 Null 值按两种方式处理：  
   
 1.  如果传递一个 Null 常量，将引发错误。 无法以识别区域性的方式将 null 值分析为不同的数据类型。  
@@ -74,19 +74,19 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 |类别|类型|.NET Framework 类型|使用的样式|  
 |--------------|----------|-------------------------|-----------------|  
-|数字|BIGINT|Int64|NumberStyles.Number|  
-|数字|INT|Int32|NumberStyles.Number|  
-|数字|SMALLINT|Int16|NumberStyles.Number|  
-|数字|TINYINT|Byte|NumberStyles.Number|  
-|数字|Decimal|Decimal|NumberStyles.Number|  
-|数字|NUMERIC|Decimal|NumberStyles.Number|  
-|数字|FLOAT|双精度|NumberStyles.Float|  
-|数字|REAL|Single|NumberStyles.Float|  
-|数字|SMALLMONEY|Decimal|NumberStyles.Currency|  
-|数字|money|Decimal|NumberStyles.Currency|  
-|日期和时间|日期|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Numeric|bigint|Int64|NumberStyles.Number|  
+|Numeric|int|Int32|NumberStyles.Number|  
+|Numeric|smallint|Int16|NumberStyles.Number|  
+|Numeric|tinyint|Byte|NumberStyles.Number|  
+|Numeric|Decimal|Decimal|NumberStyles.Number|  
+|Numeric|numeric|Decimal|NumberStyles.Number|  
+|Numeric|FLOAT|Double|NumberStyles.Float|  
+|Numeric|real|Single|NumberStyles.Float|  
+|Numeric|smallmoney|Decimal|NumberStyles.Currency|  
+|Numeric|money|Decimal|NumberStyles.Currency|  
+|日期和时间|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日期和时间|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|日期和时间|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期和时间|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日期和时间|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日期和时间|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日期和时间|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
@@ -95,9 +95,9 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  下表显示从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语言到 .NET Framework 区域性的映射。  
   
-|完全名称|别名|LCID|特定区域性|  
+|完全名称|Alias|LCID|特定区域性|  
 |---------------|-----------|----------|----------------------|  
-|us_english|英语|2052|en-US|  
+|us_english|英语|2052|zh-CN|  
 |Deutsch|德语|1031|de-DE|  
 |Français|法语|1036|fr-FR|  
 |日本語|日语|1041|ja-JP|  
@@ -126,7 +126,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |lietuvių|立陶宛语|1063|lt-LT|  
 |Português (Brasil)|葡萄牙语（巴西）|1046|pt-BR|  
 |繁體中文|繁体中文|1028|zh-TW|  
-|한국어|朝鲜语|1042|Ko-KR|  
+|한국어|韩语|1042|Ko-KR|  
 |简体中文|简体中文|2052|zh-CN|  
 |阿拉伯语|阿拉伯语|1025|ar-SA|  
 |ไทย|泰语|1054|Th-TH|  

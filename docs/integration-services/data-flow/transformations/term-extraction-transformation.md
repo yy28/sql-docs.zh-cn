@@ -29,10 +29,10 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23ae71eff12e7155580eff8238a459c47211c5de
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297758"
 ---
 # <a name="term-extraction-transformation"></a>字词提取转换
@@ -180,7 +180,7 @@ ms.locfileid: "71297758"
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -196,7 +196,7 @@ ms.locfileid: "71297758"
  **术语**  
  为将包含所提取的字词的输出列提供名称。  
   
- **分数**  
+ **评分**  
  为将包含每个所提取字词的分数的输出列提供名称。  
   
  **配置错误输出**  
@@ -241,7 +241,7 @@ ms.locfileid: "71297758"
  指定分数为字词的频率。  
   
  **TFIDF**  
- 指定分数为字词的 TFIDF 值。 TFIDF 分数是字词频率和文档频率倒数的乘积，其定义如下：字词 T 的 TFIDF = (T 的频率) * log( (输入中的行数) / (具有 T 的行数) )  
+ 指定分数为字词的 TFIDF 值。 TFIDF 分数是字词频率和文档频率倒数的乘积，其定义如下：TFIDF of a Term T = (frequency of T) * log( (#rows in Input) / (#rows having T) )。  
   
  **频率阈值**  
  指定某个词或短语必须出现多少次以后才对其进行提取。 默认值为 2。  
