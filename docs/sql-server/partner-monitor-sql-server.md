@@ -8,26 +8,20 @@ ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: bbf66098bcc2b091ffd97a3f3aebf73c599fbf17
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 8012c6a4fecf4155615460da8bd568eb4007aa48
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974467"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75656904"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 监视合作伙伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 要监视 SQL Server 服务，请从各种行业领先工具中进行选择。 本文重点介绍提供支持 Microsoft SQL Server 的监视解决方案的 Microsoft 合作伙伴公司。
 
-<!--
-
-|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
-
--->
-
 ## <a name="microsoft-monitoring-partners"></a>Microsoft 监视合作伙伴
 
-| Partner | 描述 | 链接 |
+| Partner | 说明 | 链接 |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL 诊断管理器是一种功能强大的性能监视和诊断解决方案，它可以主动向管理员警报 SQL Server 环境中的运行状况、性能和可用性问题，且所有操作均可从一个中央控制台完成。<br><br>[系统要求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[网站][idera_website]<br>[Twitter][idera_twitter]<br>[视频][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>Spotlight on SQL Server Enterprise - 利用卓越的 SQL Server 环境监控、诊断和优化，全天候确保出色的性能。 Spotlight 可提供对您所需的详细信息的访问权限，以实现 SQL Server 数据库的出色适用性。 获得直观的运行状况和性能概述、自动化警报和操作，以及移动设备支持。|[市场][quest_marketplace]<br>[网站][quest_website]<br>[视频][quest_video] | |
@@ -41,7 +35,7 @@ ms.locfileid: "68974467"
 要深入了解一些其他合作伙伴，请参阅[高可用性和灾难恢复合作伙伴][hadr_partners]、[管理合作伙伴][management_partners]以及[开发合作伙伴][dev_partners]。
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
 [2]: ./media/partner-hadr-sql-server/sentryone.png
 [3]: ./media/partner-hadr-sql-server/quest.png
 [4]: ./media/partner-hadr-sql-server/redgate.png

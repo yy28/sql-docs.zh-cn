@@ -27,10 +27,10 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245303"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
@@ -101,7 +101,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
   
 `myRv` 是该行的 rowversion 列值，指示上一次读取行的时间  。 必须使用实际的 rowversion 值替换此值  。 实际的 rowversion 值可以是类似 0x00000000000007D3 这样的值  。
   
-还可以将示例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句放在事务中。 通过在事务的作用域中查询 `@t` 变量，可以在不重新查询 `MyTest` 表的情况下检索表的更新后的 `myKey` 列。
+还可以将示例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句放在事务中。 通过在事务的作用域中查询 `@t` 变量，可以在不重新查询 `myKey` 表的情况下检索表的更新后的 `MyTest` 列。
   
 以下是使用 timestamp 语法的同一个示例  ：
   

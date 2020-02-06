@@ -13,10 +13,10 @@ ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f3c0493192381bc3dedbf23ab1e01c0142e88be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099607"
 ---
 # <a name="database-properties-files-page"></a>数据库属性（“文件”页）
@@ -75,7 +75,7 @@ ms.locfileid: "68099607"
   
  此字段对于 FILESTREAM 文件（包括内存优化文件组中的文件）无效。  
   
- **“添加”**  
+ **添加**  
  将新文件添加到数据库。  
   
  **删除**  

@@ -11,10 +11,10 @@ ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 848e337ecfacd16df1b34a60e392b572b612735d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295201"
 ---
 # <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references（SSISDB 数据库）
@@ -26,7 +26,7 @@ ms.locfileid: "71295201"
 
   显示 **SSISDB** 目录中所有项目的环境引用。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |reference_id|**bigint**|引用的唯一标识符 (ID)。|  
 |project_id|**bigint**|项目的唯一 ID。|  
@@ -36,7 +36,7 @@ ms.locfileid: "71295201"
 |validation_status|**char(1)**|验证的状态。|  
 |last_validation_time|**datatimeoffset(7)**|最后验证的时间。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此视图对于目录中的每个环境引用显示一行。  
   
 ## <a name="permissions"></a>权限  
@@ -51,7 +51,7 @@ ms.locfileid: "71295201"
 > [!NOTE]  
 >  如果您对项目具有 READ 权限，则也对与该项目关联的所有包和环境引用具有 READ 权限。 将实施行级安全性；只显示您有权查看的行。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  项目可以具有相对或绝对的环境引用。 相对引用通过名称引用环境，并要求它与项目位于相同文件夹中。 绝对引用通过名称和文件夹引用环境，可能引用与项目不在同一文件夹中的环境。 项目可以引用多个环境。  
   
   

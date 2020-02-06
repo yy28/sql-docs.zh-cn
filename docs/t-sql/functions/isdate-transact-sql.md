@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1385a80df97bc02af60cb5c151424dc79bd03913
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109455"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "68109455"
   
  有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。 请注意，datetime 数据的范围为 1753-01-01 至 9999-12-31，而日期数据的范围为 0001-01-01 至 9999-12-31。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ISDATE ( expression )
 ## <a name="return-type"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  只有与 [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 函数一起使用，同时指定了 CONVERT 样式参数且样式不等于 0、100、9 或 109 时，ISDATE 才是确定性的。  
   
  ISDATE 的返回值取决于 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)、[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 和[配置默认语言服务器配置选项](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)设定的设置。  
@@ -74,7 +74,7 @@ ISDATE ( expression )
   
 |ISDATE 表达式|ISDATE 返回值|  
 |-----------------------|-------------------------|  
-|NULL|0|  
+|Null|0|  
 |[数据类型](../../t-sql/data-types/data-types-transact-sql.md)中除字符串、Unicode 字符串或日期和时间以外的任何数据类型类别中列出的数据类型值。|0|  
 |text、ntext 或 image 数据类型的值    。|0|  
 |秒精度小数位数超过 3 的任何值（.0000 到 .0000000...n）。 如果表达式为 datetime2 值，ISDATE 将返回 0，但如果表达式是有效的 datetime 值，则将返回 1     。|0|  

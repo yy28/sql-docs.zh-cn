@@ -14,10 +14,10 @@ ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bfad11f3bcba41160fcb46ede37f6e7ea3c5ece4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295162"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages（SSISDB 数据库）
@@ -29,7 +29,7 @@ ms.locfileid: "71295162"
 
   显示在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中执行操作期间记录的消息。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|消息的唯一标识符 (ID)。|  
 |operation_id|**bigint**|操作的唯一 ID。|  
@@ -39,14 +39,14 @@ ms.locfileid: "71295162"
 |message|**nvarchar(max)**|消息的文本。|  
 |extended_info_id|**bigint**|与在 [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) 视图中找到的操作消息相关的附加信息的 ID。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此视图对于在目录中执行操作期间记录的每条消息显示一行。 此消息可以由服务器、包执行进程或执行引擎生成。  
   
  此视图显示下列消息类型：  
   
-|**message_type** Value|描述|  
+|**message_type** Value|说明|  
 |-----------------------------|-----------------|  
-|-1|Unknown|  
+|-1|未知|  
 |120|错误|  
 |110|警告|  
 |70|信息|  
@@ -66,7 +66,7 @@ ms.locfileid: "71295162"
   
  此视图显示下列消息源类型。  
   
-|**message_source_type**|描述|  
+|**message_source_type**|说明|  
 |-------------------------------|-----------------|  
 |10|入口 API，如 T-SQL 和 CLR 存储过程|  
 |20|用来运行包的外部进程 (ISServerExec.exe)|  

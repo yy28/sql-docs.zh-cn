@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a6fd6dd25d19e153b4a2623ceaaeaec558a1aad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064754"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68064754"
 
 `CHECKSUM` 函数返回按照表的某一行或一组表达式计算出来的校验和值。 使用 `CHECKSUM` 来生成哈希索引。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +58,7 @@ CHECKSUM ( * | expression [ ,...n ] )
 ## <a name="return-types"></a>返回类型
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `CHECKSUM` 对其参数列表计算一个称为校验和的哈希值。 使用哈希值生成哈希索引。 如果 `CHECKSUM` 函数具有列参数，则结果是一个哈希索引，并且对计算的 `CHECKSUM` 值生成索引。 它可用于对列进行等价搜索。
   
 `CHECKSUM` 函数满足哈希函数的属性：`CHECKSUM` 在使用等于 (=) 运算符比较时，如果两个列表的相应元素具有相同数据类型且对应的元素相等，则在任何两个表达式列表上应用的 BINARY_CHECKSUM 将返回同一值。 因为 `CHECKSUM` 函数，指定类型的 Null 值被定义为相等进行比较。 如果表达式列表中的至少一个值发生更改，则列的校验和很可能也会更改。 但是，这一点无法保证。 因此，若要检测值是否更改，建议仅当应用程序可以容忍偶然错过更改时，使用 `CHECKSUM`。 否则，请考虑改用 `HASHBYTES`。 使用指定的 MD5 哈希算法时，`HASHBYTES` 为两个不同输入返回相同结果的可能性要比 `CHECKSUM` 小得多。
