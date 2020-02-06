@@ -1,5 +1,5 @@
 ---
-title: '? 解码的字符：（条件）（SSIS 表达式）| Microsoft Docs'
+title: '? :（条件）（SSIS 表达式）| Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 758cd90c3932d59e725f6a8a9bf829e59ecf5474
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290165"
 ---
-# <a name="--conditional-ssis-expression"></a>? 解码的字符：（条件）（SSIS 表达式）
+# <a name="--conditional-ssis-expression"></a>? :（条件）（SSIS 表达式）
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -40,15 +40,15 @@ boolean_expression?expression1:expression2
  计算结果为 TRUE、FALSE 或 NULL 的任意有效表达式。  
   
  *expression1*  
- 为任意有效的表达式。  
+ 为任何有效的表达式。  
   
  *expression2*  
- 为任意有效的表达式。  
+ 为任何有效的表达式。  
   
 ## <a name="result-types"></a>结果类型  
  *expression1* 或 *expression2*的数据类型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 *boolean_expression* 的计算结果为 NULL，则表达式结果为 NULL。 如果选择的表达式（ *expression1* 或 *expression2* ）为 NULL，则结果为 NULL。 如果选择的表达式不为 NULL，但未选择的表达式为 NULL，则结果为所选表达式的值。  
   
  如果 *expression1* 和 *expression2* 的数据类型相同，则结果便为该数据类型。 对于结果类型适用于下列附加规则：  
@@ -59,11 +59,11 @@ boolean_expression?expression1:expression2
   
  表达式集（ *expression1* 和 *expression2*）的计算结果必须为有效的数据类型而且必须遵循下列规则之一：  
   
--   **Numeric**   *expression1* 和 *expression2* 必须为数值数据类型。 数据类型的交集必须为数值数据类型，该类型在表达式计算器执行隐式数值转换的规则中指定。 两个数值数据类型的交集不能为空。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
+-   **Numeric***expression1* 和 *expression2* 必须为数值数据类型。 数据类型的交集必须为数值数据类型，该类型在表达式计算器执行隐式数值转换的规则中指定。 两个数值数据类型的交集不能为空。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
--   **字符串**：expression1  和 expression2  必须为字符串数据类型：DT_STR 或 DT_WSTR。 两个表达式的计算结果可以为不同的字符串数据类型。 结果为 DT_WSTR 数据类型，其长度为较长参数的长度。  
+-   **字符串***expression1* 和 *expression2* 必须为字符串数据类型：DT_STR 或 DT_WSTR。 两个表达式的计算结果可以为不同的字符串数据类型。 结果为 DT_WSTR 数据类型，其长度为较长参数的长度。  
   
--   **“日期”、“时间”或“日期/时间”** ：expression1  和 expression2  的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **Date、Time 或 Date/Time***expression1* 和 *expression2* 的计算结果必须为下列数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系统不支持对计算结果为时间数据类型的表达式和计算结果为日期或日期/时间数据类型的表达式进行比较。 否则系统会生成错误。  

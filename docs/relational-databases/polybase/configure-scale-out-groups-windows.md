@@ -9,10 +9,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906890"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>在 Windows 上配置 PolyBase 横向扩展组
@@ -35,7 +35,7 @@ ms.locfileid: "72906890"
   
 2. 选择一个 SQL Server 实例作为头节点。 只能在运行 SQL Server Enterprise 的实例上指定头节点。
   
-3. 使用 [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md) 将剩余的 SQL Server 实例添加为计算节点。
+3. 使用 [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)将剩余的 SQL Server 实例添加为计算节点。
 
 4. 使用 [sys.dm_exec_compute_nodes (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) 监视组中的节点。
 
@@ -51,7 +51,7 @@ ms.locfileid: "72906890"
   
    - PQTH4A-CMP02  
   
-2. 域帐户：PQTH4A\PolyBaseUser   
+2. 域帐户：  PQTH4A\PolyBaseUser  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>在所有机器上安装具有 PolyBase 的 SQL Server
 

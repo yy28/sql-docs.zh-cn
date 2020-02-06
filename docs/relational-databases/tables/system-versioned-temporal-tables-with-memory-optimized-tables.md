@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165457"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系统版本控制临时表与内存优化表
@@ -52,9 +52,9 @@ ms.locfileid: "74165457"
 
 内部内存优化临时表是一个由系统创建用来优化 DML 操作的内部对象。
 
-- 采用以下格式生成表名：生成的表名采用以下格式：Memory_Optimized_History_Table_<object_id>，其中 <object_id> 是当前时态表的标识符   。
+- 生成的表名采用以下格式：**Memory_Optimized_History_Table_<object_id>** ，其中 *<object_id>* 是当前临时表的标识符。
 - 该表在当前临时表的架构上另加一个 BIGINT 列。 此附加列保证了移动到内部历史记录缓冲区的行的唯一性。
-- 此附加列采用以下名称格式：Change_ID[_< suffix>]，其中 _\<suffix> 可以在表已有 Change_ID 列的情况下选择性地进行添加    。
+- 此附加列采用以下名称格式：**Change_ID[_< suffix>]** ，其中 *_\<suffix>* 可以在表已有 *Change_ID* 列的情况下选择性地进行添加。
 - 系统版本控制的内存优化表的最大行大小因临时表中的附加 BIGINT 列而减去 8 个字节。 新的最大值现在为 8052 字节。
 - 内部内存优化临时表不显示在 SQL Server Management Studio 的对象资源管理器中。
 - 你可以在 [sys.internal_tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 中找到此表的相关元数据及其与当前临时表的关联。
@@ -67,7 +67,7 @@ ms.locfileid: "74165457"
 
 数据刷新会从内存中内部缓冲区删除早于当前运行的最早事务的所有记录，以便将这些记录移动到基于磁盘的历史记录表。
 
-可通过调用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) 并指定架构和表名来强制进行数据刷新：sys.sp_xtp_flush_temporal_history @schema_name、@object_name  。 利用这个由用户执行的命令，将像在系统按内部计划调用数据刷新任务时一样调用相同的数据移动进程。
+可通过调用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) 并指定架构和表名来强制进行数据刷新：sys.sp_xtp_flush_temporal_history **、@schema_name@object_name** 。 利用这个由用户执行的命令，将像在系统按内部计划调用数据刷新任务时一样调用相同的数据移动进程。
 
 ## <a name="see-also"></a>另请参阅
 

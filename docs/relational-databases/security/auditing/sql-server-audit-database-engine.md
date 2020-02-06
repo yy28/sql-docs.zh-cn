@@ -17,16 +17,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d9319ef90263e6513661c4d9a24be7f530b917f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903849"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  “审核”  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 实例或单独的数据库涉及到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中发生的跟踪和记录事件。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核，您可以创建服务器审核，其中可以包含针对服务器级别事件的服务器审核规范和针对数据库级别事件的数据库审核规范。 经过审核的事件可以写入事件日志或审核文件。  
+  “审核”  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 实例或单独的数据库涉及到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中发生的跟踪和记录事件。 通过[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核，您可以创建服务器审核，其中可以包含针对服务器级别事件的服务器审核规范和针对数据库级别事件的数据库审核规范。 可将审核的事件写入事件日志或审核文件。  
   
 [!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
@@ -142,7 +142,7 @@ ms.locfileid: "72903849"
 ### <a name="data-definition-language-statements"></a>数据定义语言语句  
  可以使用下列 DDL 语句创建、更改和删除审核规范：  
   
-|DDL 语句|描述| 
+|DDL 语句|说明| 
 |-|-|  
 |[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|更改安全对象的所有权。|  
 |[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|使用 SQL Server 审核功能更改数据库审核规范对象。|  
@@ -158,7 +158,7 @@ ms.locfileid: "72903849"
 ### <a name="dynamic-views-and-functions"></a>动态视图和函数  
  下表列出了可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的动态视图和函数。  
   
-|动态视图和函数|描述|  
+|动态视图和函数|说明|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|为可在审核日志中报告的每项审核操作以及可配置为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 一部分的每个审核操作组返回一行。|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|提供有关当前审核状态的信息。|  
@@ -168,7 +168,7 @@ ms.locfileid: "72903849"
 ### <a name="catalog-views"></a>目录视图  
  下表列出了可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的目录视图。  
   
-|目录视图|描述|  
+|目录视图|说明|  
 |-------------------|-----------------|  
 |[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|包含服务器实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的数据库审核规范的相关信息。|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|包含所有数据库的服务器实例上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的数据库审核规范的相关信息。|  
@@ -200,7 +200,7 @@ ms.locfileid: "72903849"
   
 ## <a name="topics-closely-related-to-auditing"></a>与审核密切相关的主题  
  [服务器属性（“安全性”页）](../../../database-engine/configure-windows/server-properties-security-page.md)  
- 介绍如何为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启用登录审核。 审核记录存储在 Windows 应用程序日志中。  
+ 介绍如何为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]启用登录审核。 审核记录存储在 Windows 应用程序日志中。  
   
  [c2 审核模式服务器配置选项](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
  介绍 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的 C2 符合安全标准审核模式。  
@@ -214,7 +214,7 @@ ms.locfileid: "72903849"
  [DDL 触发器](../../../relational-databases/triggers/ddl-triggers.md)  
  介绍如何使用数据定义语言 (DDL) 触发器来跟踪对数据库的更改。  
   
- [Microsoft TechNet：SQL Server 技术中心：SQL Server 2005 安全性和保护](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet：SQL Server 技术中心：SQL Server 2005 安全和保护](https://go.microsoft.com/fwlink/?LinkId=101152)  
  提供有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新信息。  
   
 ## <a name="see-also"></a>另请参阅  

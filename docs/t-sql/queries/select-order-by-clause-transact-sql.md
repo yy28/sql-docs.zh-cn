@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981714"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
@@ -56,7 +56,7 @@ ms.locfileid: "73981714"
   
 -   确定将[排名函数](../../t-sql/functions/ranking-functions-transact-sql.md)值应用于结果集的顺序。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中的 SELECT/INTO 或 CREATE TABLE AS SELECT (CTAS) 语句中不支持 ORDER BY。
@@ -113,7 +113,7 @@ ORDER BY SchemaName + ''; -- wrong
  **ASC** | DESC  
  指定按升序或降序排列指定列中的值。 ASC 按从最低值到最高值的顺序进行排序。 DESC 按从最高值到最低值的顺序进行排序。 ASC 是默认排序顺序。 Null 值被视为最低的可能值。  
   
- OFFSET { integer_constant | offset_row_count_expression } { ROW | ROWS }    
+ OFFSET { integer_constant*offset_row_count_expression } { ROW | ROWS }*  |    
  指定开始从查询表达式返回行之前跳过的行数。 该值可以是大于或等于零的整数常量或表达式。  
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
@@ -124,7 +124,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  在查询执行计划中，将在 TOP 查询运算符的 Offset 属性中显示偏移行数值  。  
   
- FETCH { FIRST | NEXT } { integer_constant | fetch_row_count_expression } { ROW | ROWS } ONLY    
+ FETCH { FIRST | NEXT } { integer_constant*fetch_row_count_expression } { ROW | ROWS } ONLY* |    
  指定在处理 OFFSET 子句后返回的行数。 该值可以是大于或等于 1 的整数常量或表达式。  
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -537,7 +537,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName;  
 ```  
   
- 以下示例按照两列进行排序。 此查询首先按 `FirstName` 列以升序排序，然后按 `LastName` 列以降序对常见 `FirstName` 值降序排序。  
+ 以下示例按照两列进行排序。 此查询首先按 `FirstName` 列以升序排序，然后按 `FirstName` 列以降序对常见 `LastName` 值降序排序。  
   
 ```sql
 -- Uses AdventureWorks  
