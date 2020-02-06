@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12bcff24be2bf0a722375fa6f7c06444ba818e9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140360"
 ---
 # <a name="use-sparse-columns"></a>使用稀疏列
@@ -161,9 +161,9 @@ ms.locfileid: "68140360"
   
 -   事务复制  
   
-     事务复制支持稀疏列，但它不支持可以与稀疏列一起使用的列集。 有关列集的详细信息，请参阅[使用列集](../../relational-databases/tables/use-column-sets.md)。  
+     事务复制支持稀疏列，但它不支持可以与稀疏列一起使用的列集。 有关列集的详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。  
   
-     SPARSE 属性的复制由架构选项来决定，架构选项是通过使用 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或者使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“项目属性”对话框来指定的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本不支持稀疏列。 如果必须将数据复制到早期版本，需指定不应复制 SPARSE 属性。  
+     SPARSE 属性的复制由架构选项来决定，架构选项是通过使用 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或者使用  **中的**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“项目属性”对话框来指定的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本不支持稀疏列。 如果必须将数据复制到早期版本，需指定不应复制 SPARSE 属性。  
   
      对于发布的表，不能向表中添加任何新的稀疏列，也不能更改现有列的稀疏属性。 如果需要执行此类操作，则应删除然后再重新创建发布。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "68140360"
   
      更改跟踪支持稀疏列和列集。 当在表中更新列集时，更改跟踪将此视为整个行的更新。 由于不提供详细的更改跟踪，因此不能获取通过列集更新操作更新的稀疏列的准确集合。 如果通过 DML 语句显式更新稀疏列，则这些稀疏列上的更改跟踪将像平常一样工作，并且可以准确地识别出已更改的列的集合。  
   
--   变更数据捕获  
+-   更改数据捕获  
   
      变更数据捕获支持稀疏列，但不支持列集。  
   

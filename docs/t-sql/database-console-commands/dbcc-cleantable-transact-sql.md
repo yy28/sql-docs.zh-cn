@@ -27,16 +27,16 @@ ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb3c1c0eba5c39083b6a6b39b4040639909808c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101967"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 回收表或索引视图中已删除的可变长度列的空间。
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ DBCC CLEANTABLE
  WITH NO_INFOMSGS  
  取消显示所有信息性消息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 DBCC CLEANTABLE 用于在删除可变长度列之后回收空间。 可变长度列可以是以下其中一种数据类型：varchar、nvarchar、varchar(max)、nvarchar(max)、varbinary、varbinary(max)、text、ntext、image、sql_variant 和 xml            。 该命令不回收删除固定长度列后的空间。
 如果删除的列存储在行内，则 DBCC CLEANTABLE 将从表的 IN_ROW_DATA 分配单元回收空间。 如果列存储在行外，则将根据已删除列的数据类型从 ROW_OVERFLOW_DATA 或 LOB_DATA 分配单元回收空间。 如果从 ROW_OVERFLOW_DATA 或 LOB_DATA 页回收空间时产生空页，DBCC CLEANTABLE 将删除该页。
 DBCC CLEANTABLE 作为一个或多个事务运行。 如果未指定批大小，则该命令将在一个事务中处理整个表，并在操作过程中以独占方式锁定该表。 对于某些大型表，单个事务的长度和所需的日志空间可能太大。 如果指定批大小，则该命令将在一系列事务中运行，每个事务包括指定的行数。 DBCC CLEANTABLE 不能作为其他事务内的事务运行。
@@ -86,7 +86,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>示例  
 ### <a name="a-using-dbcc-cleantable-to-reclaim-space"></a>A. 使用 DBCC CLEANTABLE 回收空间  
-以下示例对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中的 `Production.Document` 表执行 DBCC CLEANTABLE。
+以下示例对 `Production.Document` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表执行 DBCC CLEANTABLE。
   
 ```sql  
 DBCC CLEANTABLE (AdventureWorks2012,'Production.Document', 0)  

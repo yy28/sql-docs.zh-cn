@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b2bce8ef0c47a26ef1b1a095160ce6cc7357a00f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127357"
 ---
 # <a name="system-databases"></a>系统数据库
@@ -28,7 +28,7 @@ ms.locfileid: "68127357"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含以下系统数据库。  
   
-|系统数据库|描述|  
+|系统数据库|说明|  
 |---------------------|-----------------|  
 |[master 数据库](../../relational-databases/databases/master-database.md)|记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的所有系统级信息。|  
 |[msdb 数据库](../../relational-databases/databases/msdb-database.md)|用于 SQL Server 代理计划警报和作业。|  
@@ -76,6 +76,6 @@ ms.locfileid: "68127357"
 ## <a name="related-content"></a>相关内容  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
- [“数据库”](../../relational-databases/databases/databases.md)  
+ [数据库](../../relational-databases/databases/databases.md)  
   
   

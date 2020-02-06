@@ -15,10 +15,10 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cb86b202db40fb3bde858a43fb5dac550a2aaada
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299114"
 ---
 # <a name="add-copy-of-existing-package"></a>添加现有包的副本
@@ -38,7 +38,7 @@ ms.locfileid: "71299114"
  **身份验证类型**  
  如果从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中复制，请选择一种身份验证类型。  
   
- **User name**  
+ **用户名**  
  如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，请提供用户名。  
   
  **密码**  

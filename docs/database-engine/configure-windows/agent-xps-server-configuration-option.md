@@ -14,10 +14,10 @@ ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e7e2e655be19ac8f84378930e1dfada525007504
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013159"
 ---
 # <a name="agent-xps-server-configuration-option"></a>“代理 XP”服务器配置选项
@@ -30,7 +30,7 @@ ms.locfileid: "68013159"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 除非这些扩展存储过程在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务处于任何状态下都启用，否则对象资源管理器不会显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理节点的内容。  
   
- 可能的值有：  
+ 可能的值包括：  
   
 -   **0**，表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理扩展存储过程不可用（默认值）。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "68013159"
 
 1. 在 Microsoft SQL Server Management Studio 中连接到数据库引擎。
 
-2.  在标准工具栏上，单击“新建查询”。
+2.  在标准工具栏上，单击“新建查询”。 
 
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 
   
 ```sql 
 sp_configure 'show advanced options', 1;  

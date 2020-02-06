@@ -17,10 +17,10 @@ ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082282"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE 端点权限 (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68082282"
 
   撤消对端点授予或拒绝的权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,24 +48,24 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可对端点授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON ENDPOINT ::endpoint_name  
- 指定要授予对其的权限的端点。 需要使用作用域限定符 (::)。  
+ ON ENDPOINT ::endpoint_name    
+ 指定要授予对其的权限的端点。 需要使用作用域限定符 (::)  。  
   
  { FROM | TO } \<server_principal> 指定要从中撤消权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login  
+ SQL_Server_login   
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_Windows_login  
+ SQL_Server_login_from_Windows_login   
  指定通过 Windows 登录帐户创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_certificate  
+ SQL_Server_login_from_certificate   
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_AsymKey  
+ SQL_Server_login_from_AsymKey   
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
  GRANT OPTION  
@@ -80,11 +80,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS SQL_Server_login  
+ AS SQL_Server_login   
  指定执行此查询的主体从哪个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名派生其撤消该权限的权限。  
   
-## <a name="remarks"></a>Remarks  
- 只有在当前数据库为 master 时，才可撤消服务器作用域内权限。  
+## <a name="remarks"></a>备注  
+ 只有在当前数据库为 master 时，才可撤消服务器作用域内权限  。  
   
  可以在 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 目录视图中查看终结点的相关信息。 可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目录视图中查看服务器权限的相关信息，在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目录视图中查看服务器主体的相关信息。  
   
@@ -104,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>示例  
   
 ### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. 撤消对端点的 VIEW DEFINITION 权限  
- 以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `VIEW DEFINITION` 中撤消对端点 `Mirror7` 的 `ZArifin` 权限。  
+ 以下示例从 `VIEW DEFINITION` 登录名 `Mirror7` 中撤消对端点 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `ZArifin` 权限。  
   
 ```  
 USE master;  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. 使用 CASCADE 选项撤消 TAKE OWNERSHIP 权限  
- 以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `PKomosinski` 以及 `PKomosinski` 授予对 `Shipping83` 的 `TAKE OWNERSHIP` 权限的所有主体中撤消对终结点 `Shipping83` 的 `TAKE OWNERSHIP` 权限。  
+ 以下示例从 `TAKE OWNERSHIP` 用户 `Shipping83` 以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授予对 `PKomosinski` 的 `PKomosinski` 权限的所有主体中撤消对终结点 `TAKE OWNERSHIP` 的 `Shipping83` 权限。  
   
 ```  
 USE master;  

@@ -16,10 +16,10 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0f04255feb2eec4b7cc8fc2fd9df0eed67ef25f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297893"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>在不缓存模式或部分缓存模式下实现查找
@@ -58,17 +58,17 @@ ms.locfileid: "71297893"
   
 7.  在 **“连接”** 页上，从 **“OLE DB 连接管理器”** 列表中选择一个连接管理器，或单击 **“新建”** 创建一个新的连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
-8.  执行下列步骤之一：  
+8.  执行以下步骤中的一个：  
   
     -   单击 **“使用表或视图”** ，然后选择一个表或视图，或单击 **“新建”** 创建表或视图。  
   
     -   单击 **“使用 SQL 查询的结果”** ，然后在 **“SQL 命令”** 窗口中生成查询。  
   
-         -或 -  
+         -或-  
   
          单击 **“生成查询”** ，使用 **“查询生成器”** 提供的图形工具生成一个查询。  
   
-         -或 -  
+         -或-  
   
          单击 **“浏览”** 从文件中导入 SQL 语句。  
   

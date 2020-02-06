@@ -22,10 +22,10 @@ ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b4389320436559504e6a9618565dad3198e91353
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099018"
 ---
 # <a name="x40x40textsize-transact-sql"></a>@@TEXTSIZE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68099018"
 
   返回 [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md) 选项的当前值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68099018"
  **integer**  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用 `SELECT` 语句来显示使用 `SET``TEXTSIZE` 语句更改前后的 `@@TEXTSIZE` 值。  
+ 下面的示例使用 `SELECT` 语句来显示使用 `@@TEXTSIZE` 语句更改前后的 `SET``TEXTSIZE` 值。  
   
 ```  
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  
