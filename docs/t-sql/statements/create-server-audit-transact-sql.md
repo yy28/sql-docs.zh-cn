@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983003"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73983003"
 
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 创建服务器审核对象。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
 
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -105,7 +105,7 @@ CREATE SERVER AUDIT audit_name
  CONTINUE  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作将继续。 审核记录将不会保留。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后恢复。 选择继续选项可以允许未经审核的活动，但可能违反了你的安全策略。 在[!INCLUDE[ssDE](../../includes/ssde-md.md)]的继续操作比维护完整审核更重要时，使用此选项。  
   
-SHUTDOWN  
+关机  
 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 出于任何原因无法将数据写入到审核目标，则强制关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 执行 `CREATE SERVER AUDIT` 语句的登录名必须具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内的 `SHUTDOWN` 权限。 即使稍后从执行的登录名中撤销 `SHUTDOWN` 权限，关闭行为仍然存在。 如果用户不具有此权限，则语句失败且无法创建审核。 在审核失败可能损害系统的安全或完整性时，使用此选项。 有关详细信息，请参阅 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)。  
   
  FAIL_OPERATION  
@@ -135,7 +135,7 @@ SHUTDOWN
 > ```
 
 
- number  
+ 数字  
  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  任何数值类型，包括 decimal  。 局限性在于缺少可用物理内存，或数值过大而无法用 64 位整数表示。  
@@ -145,7 +145,7 @@ SHUTDOWN
   
  进行谓词比较所需的 ANSI 字符串或 Unicode 字符串。 不为谓词比较函数执行隐式字符串类型转换。 传递错误类型会导致出错。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  服务器审核在创建之后处于禁用状态。  
   
  CREATE SERVER AUDIT 语句位于事务范围内。 如果对事务进行回滚，也将对该语句进行回滚。  
