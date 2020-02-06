@@ -16,21 +16,21 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013627"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用“对象资源管理器详细信息”来监视可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题说明如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“对象资源管理器详细信息”  窗格来监视和管理现有的 Always On 可用性组、可用性副本和可用性数据库。  
+  本主题说明如何通过使用  **的“对象资源管理器详细信息”** [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]窗格来监视和管理现有的 Always On 可用性组、可用性副本和可用性数据库。  
   
 > [!NOTE]  
 >  有关使用“对象资源管理器详细信息”窗格的信息，请参阅 [对象资源管理器详细信息窗格](../../../ssms/object/object-explorer-details-pane.md)。  
   
   
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a>先决条件  
  您必须连接到承载主副本或辅助副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（服务器实例）。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -74,7 +74,7 @@ ms.locfileid: "68013627"
   
  可能的值如下：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**禁止连接**|当此可用性副本充当辅助副本时，不允许直接连接到可用性数据库。 辅助数据库不可用于读访问。|  
 |**只允许读意向连接**|当此副本充当辅助副本时，仅允许直接只读连接。 副本中的所有数据库都可用于读访问。|  
@@ -83,7 +83,7 @@ ms.locfileid: "68013627"
  **连接状态**  
  指示辅助副本当前是否连接到主副本。 可能的值如下：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**已断开连接**|对于远程可用性副本，指示它与本地可用性副本已断开连接。 本地副本对于“已断开连接”状态的响应取决于它的角色，如下所示：<br /><br /> 在主副本上，如果辅助副本已断开连接，辅助数据库将在主副本上标记为 **“未同步”** ，主副本等待辅助副本重新连接。<br /><br /> 在辅助副本上，一旦检测到其未连接，辅助副本会尝试重新连接主副本。|  
 |**已连接**|远程可用性副本当前连接到本地副本。|  
@@ -92,7 +92,7 @@ ms.locfileid: "68013627"
  **同步状态**  
  指示辅助副本当前是否与主副本同步。 可能的值如下：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**“未同步”**|该数据库未同步或尚未联接到可用性组。|  
 |**已同步**|该数据库与当前主副本（如果有）或上一个主副本上的主数据库同步。<br /><br /> 注意：在性能模式中，数据库从不处于“已同步”状态。|  
@@ -112,7 +112,7 @@ ms.locfileid: "68013627"
   
  可能的同步状态如下所示：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |正在同步|辅助数据库已收到主数据库尚未写入磁盘（硬编码）的事务日志记录。<br /><br /> 注意：在异步提交模式中，同步状态始终是“正在同步”  。|  
 |||  
@@ -120,7 +120,7 @@ ms.locfileid: "68013627"
  **已挂起**  
  指示可用性数据库当前是否联机。 可能的值如下：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**已挂起**|此状态指示该数据库在本地挂起，需要手动恢复。<br /><br /> 在主副本上，该值对于辅助数据库是不可靠的。 若要确认辅助数据库是否挂起，请在承载该数据库的辅助副本上进行查询。|  
 |**未联接**|指示辅助数据库要么未联接到可用性组，要么已从该组中删除。|  
@@ -132,7 +132,7 @@ ms.locfileid: "68013627"
   
 ## <a name="see-also"></a>另请参阅  
  [sys.dm_os_performance_counters (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
- [使用 AlwaysOn 面板 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [使用 AlwaysOn 仪表板 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [查看可用性组属性 (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)   
  [查看可用性副本属性 (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
   

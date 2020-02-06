@@ -22,18 +22,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135915"
 ---
-# <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
+# <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函数返回结果集分区中每行的排名，排名值没有间断。 特定行的排名等于该特定行之前不同排名值的数量加一。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>参数  
  \<partition_by_clause>  
-首先将 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分到分区，然后将 `DENSE_RANK` 函数应用到每个分区。 有关 `PARTITION BY` 语法，请参阅 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+首先将 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分到分区，然后将 `DENSE_RANK` 函数应用到每个分区。 有关 [ 语法，请参阅 ](../../t-sql/queries/select-over-clause-transact-sql.md)OVER 子句 &#40;Transact-SQL&#41;`PARTITION BY`。  
   
  \<order_by_clause>  
 确定将 `DENSE_RANK` 函数应用于分区中的行时所基于的顺序。  
@@ -51,7 +51,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ## <a name="return-types"></a>返回类型  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 如果两个或更多行在同一分区中具有相同的排名值，那么每个行将获得相同的排名。 例如，如果两位顶尖销售员具有相同的 SalesYTD 值，则他们的排名值都为一。 接下来 SalesYTD 最高的销售人员排名值为二。 这比所讨论的行之前的不同行的数量多了一。 因此，`DENSE_RANK` 函数返回的数字没有间断，并且始终具有连续的排名值。  
   
 整个查询所用的排序顺序确定了各行在结果集中的顺序。 这说明排名第一的行可以不是分区中的第一行。  
@@ -157,7 +157,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 |FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
+|{1}Michael{2}|{1}Blythe{2}|1|1|1|1|4557045.0459|98027|  
 |Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
 |Jillian|Carson|3|1|1|1|3857163.6332|98027|  
 |Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
@@ -174,7 +174,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D:对分区中的行进行排名  
+### <a name="d-ranking-rows-within-a-partition"></a>D. 对分区中的行进行排名  
 此示例根据销售代表的销售总额将每个销售区域中的销售代表进行排名。 `DENSE_RANK` 按 `SalesTerritoryGroup` 对行集进行分区，并按 `SalesAmountQuota` 对结果集进行排序。  
   
 ```  
