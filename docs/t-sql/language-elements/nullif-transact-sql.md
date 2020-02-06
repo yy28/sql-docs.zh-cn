@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 28c331cd810e905a14fa17d6e212fee331da74f9
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844379"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73844379"
 
   如果两个指定的表达式相等，则返回空值。 例如，`SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` 为第一列（4 和 4）返回 NULL，因为两个输入值相同。 第二列返回第一个值 (5)，因为两个输入值不同。 
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ NULLIF ( expression , expression )
   
  如果两个表达式不相等，则 NULLIF 返回第一个 expression 的值  。 如果表达式相等，则 NULLIF 返回第一个 expression 类型的空值  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果两个表达式相等且结果表达式为 NULL，则 NULLIF 等价于 CASE 搜索表达式。  
   
  我们建议在 NULLIF 函数内不要使用依赖于时间的函数，如 RAND()。 这会使函数计算两次并从两次调用中返回不同的结果。  
@@ -111,8 +111,8 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C:返回不包含数据的预算数量  
- 如果 `current_year` 和 `previous_year` 都不包含数据，则以下示例创建 `budgets` 表、加载数据，并使用 `NULLIF` 返回 null。  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C. 返回不包含数据的预算数量  
+ 如果 `budgets` 和 `NULLIF` 都不包含数据，则以下示例创建 `current_year` 表、加载数据，并使用 `previous_year` 返回 null。  
   
 ```sql  
 CREATE TABLE budgets (  

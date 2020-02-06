@@ -23,10 +23,10 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982593"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982593"
 
   对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定的表和列创建空间索引。 可在向表中填入数据前创建索引。 可通过指定限定的数据库名称，针对另一个数据库中的表或视图创建索引。 空间索引要求表具有聚集主键。 有关空间索引的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -183,13 +183,13 @@ CREATE SPATIAL INDEX index_name
   
  在此上下文中，“default”一词不是关键字。 它是默认文件组的标识符，并且必须进行分隔（类似于 ON "default" 或 ON [default]）。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
- \<object>::=      
+ **object>::=\<**     
  要为其建立索引的完全限定对象或非完全限定对象。  
   
- database_name       
+ database_name        
  数据库的名称。  
   
- schema_name      
+ schema_name       
  表所属架构的名称。  
   
  *table_name*      
@@ -325,7 +325,7 @@ PAD_INDEX 选项只有在指定了 FILLFACTOR 时才有用，因为 PAD_INDEX �
 FILLFACTOR =fillfactor       
  **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数  。 默认值为 0。 如果 fillfactor 为 100 或 0，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会创建完全填充叶级页的索引  。  
+ 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数  。 默认值为 0。 如果 fillfactor 为 100 或 0，*会创建完全填充叶级页的索引*[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 > [!NOTE]  
 > 填充因子的值 0 和 100 在所有方面都是相同的。
@@ -448,7 +448,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE    
  对索引所使用的数据使用页压缩  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 每个选项在每个 CREATE SPATIAL INDEX 语句中只能指定一次。 重复指定任何选项都将引发错误。  
   
 对于表中的每个空间列，最多可以创建 249 个空间索引。 对特定空间列创建多个空间索引可能很有用，例如，在要对单个列中的不同分割参数进行索引时。  
@@ -516,7 +516,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
 ```  
   
 ### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>C. 对 geometry 列创建空间索引
-以下示例对 `SpatialTable` 表中的 `geometry_col` 列创建第三个空间索引 `SIndx_SpatialTable_geometry_col3`。 该示例使用默认分割方案。 该示例指定了边界框，并为第三和第四级网格使用不同的单元格密度，同时指定每个对象采用默认单元格数。  
+以下示例对 `SIndx_SpatialTable_geometry_col3` 表中的 `geometry_col` 列创建第三个空间索引 `SpatialTable`。 该示例使用默认分割方案。 该示例指定了边界框，并为第三和第四级网格使用不同的单元格密度，同时指定每个对象采用默认单元格数。  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3  

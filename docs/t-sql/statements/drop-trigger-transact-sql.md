@@ -25,10 +25,10 @@ ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 810367b817aec0688a2bc5168be10c7ff073affc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73980997"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "73980997"
 
   从当前数据库中删除一个或多个 DML 或 DDL 触发器。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -81,7 +81,7 @@ ON ALL SERVER
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以通过删除 DML 触发器或删除触发器表来删除 DML 触发器。 删除表时，将同时删除与表关联的所有触发器。  
   
  删除触发器时，会从 sys.objects、sys.triggers 和 sys.sql_modules 目录视图中删除有关该触发器的信息。     
@@ -104,7 +104,7 @@ ON ALL SERVER
 ## <a name="examples"></a>示例  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. 删除 DML 触发器  
- 以下示例将删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `employee_insupd` 触发器。 （从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可使用 DROP TRIGGER IF EXISTS 语句。）  
+ 以下示例将删除 `employee_insupd` 数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 触发器。 （从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可使用 DROP TRIGGER IF EXISTS 语句。）  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

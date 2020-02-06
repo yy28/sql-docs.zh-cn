@@ -26,10 +26,10 @@ ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b71c6f867bcc03b220b99ac1e28e930dbe8ea89d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907200"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>类型化的 XML 与非类型化的 XML 的比较
@@ -68,14 +68,14 @@ ms.locfileid: "72907200"
   
  在下列示例中，使用由两部分组成的名称命名约定指定 XML 架构集合名称。 第一部分是架构名称，第二部分是 XML 架构集合名称。  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>例如：将架构集合与 xml 类型变量关联起来  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>示例：将架构集合与 xml 类型变量关联起来  
  下面的示例将创建一个 xml 类型变量并将架构集合与其关联  。 该示例中指定的架构集合已导入 **AdventureWorks** 数据库。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>例如：为 xml 类型列指定架构  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>示例：为 xml 类型列指定架构  
  下面的示例创建一个包含 **xml** 类型列的表，并为该列指定了一个架构：  
   
 ```  
@@ -84,7 +84,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>例如：将 xml 类型参数传递给存储过程  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>示例：将 xml 类型参数传递给存储过程  
  下面的示例将 **xml** 类型参数传递给存储过程，并为该变量指定一个架构：  
   
 ```  
@@ -106,7 +106,7 @@ AS
   
  在数据类型层次结构中， **xml** 数据类型显示在 **sql_variant** 和用户定义类型之下，但显示在所有内置类型之上。  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>例如：指定用于约束类型化的 xml 列的方面  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>示例：指定用于约束类型化的 xml 列的方面  
  对于类型化的 **xml** 列，可以将列约束为仅允许存储在其中的每个实例的单独的顶层元素。 可以在创建了表以后通过指定可选的 `DOCUMENT` 方面来进行此操作，如以下示例中所示：  
   
 ```  
@@ -158,7 +158,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
 ## <a name="see-also"></a>另请参阅  
  [创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [XML 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
+ [xml 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
  [XML 数据修改语言 (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   
