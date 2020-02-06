@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c59a45533e68eb1af5d3e62ee059aa022c5cc503
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115952"
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate 事件类
@@ -25,7 +25,7 @@ ms.locfileid: "68115952"
   
 ## <a name="missing-join-predicate-event-class-data-columns"></a>Missing Join Predicate 事件类的数据列  
   
-|数据列名称|数据类型|描述|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
@@ -50,6 +50,6 @@ ms.locfileid: "68115952"
   
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

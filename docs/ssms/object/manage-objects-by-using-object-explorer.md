@@ -1,6 +1,6 @@
 ---
-title: 使用对象资源管理器管理对象 | Microsoft Docs
-ms.custom: ''
+title: 使用对象资源管理器管理对象
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb52261160cc693193e4cc983a4c2e28baa28686
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d499666f51605e7df90332174c82681f8a386017
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264096"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257221"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用对象资源管理器管理对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68264096"
 在对象资源管理器中，一次只能选择一个对象。 若要选择多个项，请按 **F7** 以打开“对象资源管理器详细信息”  页。 “对象资源管理器详细信息”  页支持多项选择。  
   
 ## <a name="register-a-server-from-object-explorer"></a>从对象资源管理器中注册服务器  
-连接到服务器后，即可轻松注册服务器，以供将来使用。 在对象资源管理器中，右键单击服务器名称，然后单击“注册”  。 在“注册服务器”  对话框中，指定要在服务器组树中放置服务器的位置。 在“服务器名称”  方框中，可以使用更有意义的服务器名称替换此服务器名称。 例如，可以使用更有意义的名称（如 **Accounts Payable**）来注册服务器 **APSQL02**。  
+连接到服务器后，即可轻松注册服务器，以供将来使用。 在对象资源管理器中，右键单击服务器名称，然后单击“注册”  。 在“注册服务器”  对话框中，指定要在服务器组树中放置服务器的位置。 在“服务器名称”  方框中，可以使用更有意义的服务器名称替换此服务器名称。 例如，可以使用更有意义的名称（如 **Accounts Payable** ）来注册服务器**APSQL02**。  
   
 ## <a name="performing-actions-on-object-explorer-nodes"></a>在对象资源管理器节点上执行操作  
 通过右键单击表示该对象的对象资源管理器节点，可以在对象上执行操作。 每种对象类型支持一组唯一的右键单击操作。 通过使用右键单击菜单，可以执行的操作类型包括：  

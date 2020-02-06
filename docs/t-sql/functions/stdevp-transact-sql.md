@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d76080b714d2ede1f2368ab2a98e8d3a216bf85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906917"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67906917"
 
   返回指定表达式中所有值的总体标准偏差。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,15 +61,15 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>返回类型  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果在 SELECT 语句中的所有项目上都使用 STDEVP，则计算中包括结果集内的每个值。 STDEVP 只能用于数字列。 Null 值会被忽略。  
   
  STDEVP 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，它具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-stdevp"></a>A:使用 STDEVP  
- 以下示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPerson` 表中所有奖金值的总体标准偏差。  
+### <a name="a-using-stdevp"></a>A：使用 STDEVP  
+ 以下示例返回 `SalesPerson` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中所有奖金值的总体标准偏差。  
   
 ```  
 SELECT STDEVP(Bonus)  
@@ -80,7 +80,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-stdevp"></a>B：使用 STDEVP  
- 下面的示例返回表 `dbo.FactSalesQuota` 中的销售配额值的 `STDEVP`。 第一列中包含所有非重复值的标准差，第二列中包含所有值（包括任何重复值）的标准差。  
+ 下面的示例返回表 `STDEVP` 中的销售配额值的 `dbo.FactSalesQuota`。 第一列中包含所有非重复值的标准差，第二列中包含所有值（包括任何重复值）的标准差。  
   
 ```  
 -- Uses AdventureWorks  

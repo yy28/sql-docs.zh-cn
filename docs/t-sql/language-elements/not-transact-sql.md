@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 30977ed0baff058c838403b436a4da497c5ac4c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121994"
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68121994"
 
   对布尔型输入取反。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,12 +46,12 @@ ms.locfileid: "68121994"
  任何有效的布尔[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>结果类型  
- **Boolean**  
+ **布尔值**  
   
 ## <a name="result-value"></a>结果值  
  NOT 反转任何布尔表达式的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 NOT 对表达式取反。  
   
  下表显示使用 NOT 运算符比较 TRUE 和 FALSE 值的结果。  
@@ -60,7 +60,7 @@ ms.locfileid: "68121994"
 |------|---------|  
 |**TRUE**|FALSE|  
 |**FALSE**|TRUE|  
-|UNKNOWN|UNKNOWN|  
+|UNKNOWN |UNKNOWN|  
   
 ## <a name="examples"></a>示例  
  以下示例查找标准价格不超过 400 美元的所有银色自行车。  

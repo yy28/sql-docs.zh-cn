@@ -20,10 +20,10 @@ ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a26896076c0c9ee12eae61a3e324090379b10df2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122130"
 ---
 # <a name="logical-operators-transact-sql"></a>逻辑运算符 (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68122130"
 
   逻辑运算符对某些条件进行测试，以获得其真实情况。 逻辑运算符和比较运算符一样，返回带有 TRUE、FALSE 或 UNKNOWN 值的布尔数据类型  。  
   
-|运算符|含义|  
+|操作员|含义|  
 |--------------|-------------|  
 |[ALL](../../t-sql/language-elements/all-transact-sql.md)|如果一组的比较都为 TRUE，那么就为 TRUE。|  
 |[AND](../../t-sql/language-elements/and-transact-sql.md)|如果两个布尔表达式都为 TRUE，那么就为 TRUE。|  

@@ -1,30 +1,28 @@
 ---
-title: 重播要求 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Replay Requirements
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- event classes [SQL Server], replaying traces
-- traces [SQL Server], replaying
-- replaying traces
-- TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4a4cf18a4bf6131e41e45343244a747c4651a2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 85f062ae15addae9908dca572c916e55a7ffde39
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928897"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307486"
 ---
 # <a name="replay-requirements"></a>Replay Requirements
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或分布式重播实用工具重播跟踪数据，则必须在跟踪中捕获一组特定的事件类和列。 如果使用 **TSQL_Replay** 跟踪模板配置稍后用于重播的跟踪，则会默认启用这些设置。 本主题介绍这些设置以及其他重播要求。  
+
+若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或分布式重播实用工具重播跟踪数据，则必须在跟踪中捕获一组特定的事件类和列。 如果使用 **TSQL_Replay** 跟踪模板配置稍后用于重播的跟踪，则会默认启用这些设置。 本主题介绍这些设置以及其他重播要求。  
   
 > [!NOTE]  
 >  建议使用分布式重播实用工具重播密集型 OLTP 应用程序（具有大量活动并发连接或高吞吐量）。 分布式重播实用工具可以从多台计算机重播跟踪数据，并更好地模拟任务关键型工作负荷。 有关详细信息，请参阅 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)。  
@@ -128,6 +126,6 @@ ms.locfileid: "67928897"
  [重播跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [SQL Server 事件类参考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_defaultdb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)  
+ [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)  
   
   

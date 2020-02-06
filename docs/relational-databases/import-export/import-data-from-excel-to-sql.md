@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245272"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>将 Excel 数据导入 SQL Server 或 Azure SQL 数据库
@@ -140,7 +140,7 @@ GO
 
 ### <a name="linked-servers"></a>链接服务器
 
-还可以将从 SQL Server 到 Excel 文件的永久性连接配置为链接服务器  。 下面的示例将现有 Excel 链接服务器 `EXCELLINK` 上的 `Data` 工作表数据导入名为 `Data_ls` 的新 SQL Server 数据库表。
+还可以将从 SQL Server 到 Excel 文件的永久性连接配置为链接服务器  。 下面的示例将现有 Excel 链接服务器 `Data` 上的 `EXCELLINK` 工作表数据导入名为 `Data_ls` 的新 SQL Server 数据库表。
 
 ```sql
 USE ImportFromExcel;

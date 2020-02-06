@@ -13,10 +13,10 @@ ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b4fa1d2dd8219c28a1fd9c8f3f403c6098d96e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298081"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 源编辑器（“连接管理器”页）
@@ -61,7 +61,7 @@ ms.locfileid: "71298081"
  **执行模式**  
  指定从源提取数据的方法。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**P - 触发进程链**|触发进程链。 此情况下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包会启动提取进程。|  
 |**W - 等待通知**|等待 SAP Netweaver BW 系统发出开始提取数据的通知。 此情况下，SAP Netweaver BW 系统会启动提取进程。|  

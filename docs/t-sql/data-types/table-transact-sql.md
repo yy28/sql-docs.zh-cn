@@ -16,16 +16,16 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a3ff2605e0c872bd5e544d618c88dc179e3c3b43
-ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74564802"
 ---
 # <a name="table-transact-sql"></a>表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-一种特殊的数据类型，可用于存储结果集以进行后续处理。 table 主要用于临时存储一组作为表值函数结果集返回的行  。 可将函数和变量声明为 table 类型  。 table 变量可用于函数、存储过程和批处理中  。 若要声明 table 类型的变量，请使用 [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  。
+一种特殊的数据类型，可用于存储结果集以进行后续处理。 table 主要用于临时存储一组作为表值函数结果集返回的行  。 可将函数和变量声明为 table 类型  。 table 变量可用于函数、存储过程和批处理中  。 若要声明 table 类型的变量，请使用 **DECLARE** [@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。
   
 
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
@@ -97,7 +97,7 @@ SELECT select_list INTO table_variable;
 ## <a name="limitations-and-restrictions"></a>限制和局限
 Table 变量没有分发统计信息  。 它们不会触发重新编译。 在许多情况下，优化器会生成查询计划，假设 table 变量没有行。 出于这一原因，如果您预计会存在大量行（超过 100 行），那么在使用 table 变量时应小心谨慎。 这种情况下，使用临时表可能是更好的解决方案。 如果查询联接 table 变量和其他表，则可使用 RECOMPILE 提示，这使优化器会对 table 变量使用正确的基数。
   
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 优化器基于成本的原因模型中，不支持 table 变量  。 因此，在需要基于成本的选择来实现高效的查询计划时，不应使用这些变量。 在需要基于成本的选择时，临时表是首选。 此计划通常包含具有联接、并行度决策和索引选择选项的查询。
+在  **优化器基于成本的原因模型中，不支持 table 变量**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 因此，在需要基于成本的选择来实现高效的查询计划时，不应使用这些变量。 在需要基于成本的选择时，临时表是首选。 此计划通常包含具有联接、并行度决策和索引选择选项的查询。
   
 修改 table 变量的查询不会生成并行查询执行计划  。 修改大型 table 变量或复杂查询中的 table 变量时，可能会影响性能   。 在需要修改 table 变量的情况下，请改用临时表  。 有关详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。 还可以并行执行读取 table 变量而不对变量进行修改的查询  。
 
@@ -118,7 +118,7 @@ table 类型声明中的 CHECK 约束、DEFAULT 值和计算列不能调用用�
 ## <a name="examples"></a>示例  
   
 ### <a name="a-declaring-a-variable-of-type-table"></a>A. 声明一个表类型的变量  
-下例将创建一个 `table` 变量，用于储存 UPDATE 语句的 OUTPUT 子句中指定的值。 在它后面的两个 `SELECT` 语句返回 `@MyTableVar` 中的值以及 `Employee` 表中更新操作的结果。 `INSERTED.ModifiedDate` 列中的结果与 `Employee` 表的 `ModifiedDate` 列中的值不同。 此区别是因为对 `AFTER UPDATE` 表定义了 `ModifiedDate` 触发器，该触发器可以将 `Employee` 的值更新为当前日期。 不过，从 `OUTPUT` 返回的列可反映触发器激发之前的数据。 有关详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。
+下例将创建一个 `table` 变量，用于储存 UPDATE 语句的 OUTPUT 子句中指定的值。 在它后面的两个 `SELECT` 语句返回 `@MyTableVar` 中的值以及 `Employee` 表中更新操作的结果。 `INSERTED.ModifiedDate` 列中的结果与 `ModifiedDate` 表的 `Employee` 列中的值不同。 此区别是因为对 `AFTER UPDATE` 表定义了 `ModifiedDate` 触发器，该触发器可以将 `Employee` 的值更新为当前日期。 不过，从 `OUTPUT` 返回的列可反映触发器激发之前的数据。 有关详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。
   
 ```sql
 USE AdventureWorks2012;  

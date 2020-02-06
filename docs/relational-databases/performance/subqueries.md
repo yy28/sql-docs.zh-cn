@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113278"
 ---
 # <a name="subqueries-sql-server"></a>子查询 (SQL Server)
@@ -76,7 +76,7 @@ GO
 
 子查询的 SELECT 查询总是使用圆括号括起来。 它不能包含 `COMPUTE` 或 `FOR BROWSE` 子句，如果同时指定了 TOP 子句，则只能包含 `ORDER BY` 子句。   
 
-子查询可以嵌套在外部 `SELECT``INSERT``UPDATE` 或 `DELETE` 语句的 `WHERE` 或 `HAVING` 子句内，也可以嵌套在其他子查询内。 尽管根据可用内存和查询中其他表达式的复杂程度的不同，嵌套限制也有所不同，但嵌套到 32 层是可能的。 个别查询可能不支持 32 层嵌套。 任何可以使用表达式的地方都可以使用子查询，只要它返回的是单个值。   
+子查询可以嵌套在外部 `WHERE``HAVING``SELECT` 或 `INSERT` 语句的 `UPDATE` 或 `DELETE` 子句内，也可以嵌套在其他子查询内。 尽管根据可用内存和查询中其他表达式的复杂程度的不同，嵌套限制也有所不同，但嵌套到 32 层是可能的。 个别查询可能不支持 32 层嵌套。 任何可以使用表达式的地方都可以使用子查询，只要它返回的是单个值。   
 
 如果某个表只出现在子查询中，而没有出现在外部查询中，那么该表中的列就无法包含在输出（外部查询的选择列表）中。   
 
@@ -100,12 +100,12 @@ GO
 -   由于必须返回单个值，所以由未修改的比较运算符（即后面未跟关键字 ANY 或 ALL 的运算符）引入的子查询不能包含 `GROUP BY` 和 `HAVING` 子句。   
 -   包含 GROUP BY 的子查询不能使用 `DISTINCT` 关键字。
 -   `COMPUTE` 和 `INTO` 子句不能指定。   
--   只有指定了 `TOP` 时才能指定 `ORDER BY`。   
+-   只有指定了 `ORDER BY` 时才能指定 `TOP`。   
 -   不能更新使用子查询创建的视图。   
 -   按照惯例，由 `EXISTS` 引入的子查询的选择列表有一个星号 (\*)，而不是单个列名。 因为由 `EXISTS` 引入的子查询创建了存在测试并返回 TRUE 或 FALSE 而非数据，所以由 `EXISTS` 引入的子查询的规则与标准选择列表的规则相同。   
 
 ## <a name="qualifying"></a> 在子查询中限定列名
-在下列示例中，外部查询的 `WHERE` 子句中的 BusinessEntityID  列是由外部查询的 `FROM` 子句中的表名 (Sales.Store  ) 隐性限定的。 对子查询的选择列表中 CustomerID  的引用则是由子查询的 `FROM` 子句（即通过 Sales.Customer  表）来限定的。
+在下列示例中，外部查询的  *子句中的 BusinessEntityID*`WHERE` 列是由外部查询的 `FROM` 子句中的表名 (Sales.Store  ) 隐性限定的。 对子查询的选择列表中 CustomerID  的引用则是由子查询的 `FROM` 子句（即通过 Sales.Customer  表）来限定的。
 
 ```sql
 USE AdventureWorks2016;
@@ -486,7 +486,7 @@ WHERE ProductSubcategoryID NOT IN
 GO
 ```
 
-此语句无法转换为一个联接。 这种类似但不相等的联接有不同的含义：它在某个非成品自行车的子类别中查找产品名称。      
+此语句无法转换为一个联接。 这种类似但不相等连接有不同的含义：它在某个非成品自行车的子类别中查找产品名称。      
 
 ### <a name="upsert"></a> UPDATE、DELETE 和 INSERT 语句中的子查询
 可以在 `UPDATE`、`DELETE`、`INSERT` 和 `SELECT` 数据操作 (DML) 语句中嵌套子查询。    
@@ -521,7 +521,7 @@ GO
 ### <a name="comparison"></a> 使用比较运算符的子查询
 子查询可以由一个比较运算符（=、< >、>、> =、<、! >、! < 或 < =）。   
 
-与使用 `IN` 引入的子查询一样，由未修饰的比较运算符（即后面不接 `ANY` 或 `ALL` 的比较运算符）引入的子查询必须返回单个值而不是值列表。 如果这样的子查询返回多个值，SQL Server 将显示一条错误信息。    
+与使用 `ANY` 引入的子查询一样，由未修饰的比较运算符（即后面不接 `ALL` 或 `IN` 的比较运算符）引入的子查询必须返回单个值而不是值列表。 如果这样的子查询返回多个值，SQL Server 将显示一条错误信息。    
 
 要使用由未修改的比较运算符引入的子查询，必须对数据和问题的本质非常熟悉，以了解该子查询实际是否只返回一个值。     
 
@@ -755,7 +755,7 @@ GO
 ```   
 
 ### <a name="expression"></a> 用于替代表达式的子查询
-在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中，除了在 `ORDER BY` 列表中以外，在 `SELECT`、`UPDATE`、`INSERT` 和 `DELETE` 语句中任何能够使用表达式的地方都可以用子查询替代。    
+在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中，除了在 `SELECT` 列表中以外，在 `UPDATE`、`INSERT`、`DELETE` 和 `ORDER BY` 语句中任何能够使用表达式的地方都可以用子查询替代。    
 
 以下示例说明如何使用此增强功能。 此查询找出所有山地车产品的价格、平均价格以及两者之间的差价。    
 

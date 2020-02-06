@@ -22,10 +22,10 @@ ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4ed6e67bbf6f3fcda872650c2d3394d6311802b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914218"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE Service Broker 权限 (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67914218"
 
   撤消授予 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 约定、消息类型、远程服务绑定、路由或服务的权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   未映射到服务器主体的数据库用户  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="service-broker-contracts"></a>Service Broker 约定  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 协定是权限层次结构中其父级数据库包含的数据库级安全对象。 下表列出了可撤消的对 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 协定最为具体的限定权限，以及隐含这些权限的更为通用的权限。  

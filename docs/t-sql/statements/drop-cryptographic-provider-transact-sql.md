@@ -18,10 +18,10 @@ ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 578026f567fc844cf2d0fdd13ce53d83e23f24ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898200"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67898200"
 
   删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的加密提供程序。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
  provider_name   
  可扩展密钥管理提供程序的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  若要删除某个可扩展密钥管理 (EKM) 提供程序，必须停止使用此提供程序的所有会话。  
   
  仅在没有凭据映射到某一 EKM 提供程序时才可以删除该提供程序。  

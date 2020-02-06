@@ -16,10 +16,10 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321884"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>合并复制的冲突解决
@@ -28,9 +28,9 @@ ms.locfileid: "75321884"
   
  在冲突保持期的指定时间（默认值为 14 天）内，可以在复制冲突查看器中查看冲突数据。 若要设置冲突保持期，请执行以下任一操作：  
   
--   为 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@conflict_retention` 参数指定保留期值。  
+-   为 `@conflict_retention`sp_addmergepublication &#40;Transact-SQL&#41;[ 的 ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 参数指定保留期值。  
   
--   为 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 的 `@property` 参数指定 conflict_retention  值，并为 `@value` 参数指定保留期值。  
+-   为 **sp_changemergepublication &#40;Transact-SQL&#41;** 的 `@property` 参数指定 conflict_retention`@value`[ 值，并为 ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 参数指定保留期值。  
   
  默认情况下，冲突信息存储在下列位置：    
 -   如果发布兼容级别为 90RTM 或更高，则存储在发布服务器和订阅服务器上。   
@@ -84,7 +84,7 @@ ms.locfileid: "75321884"
     -   **decentralized_conflicts** - 1 指示冲突行存储在订阅服务器上，0 指示冲突行未存储在订阅服务器上。  
   
         > [!NOTE]  
-        >  合并发布的冲突日志记录行为是通过使用 [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@conflict_logging` 参数设置的。 已不推荐使用 `@centralized_conflicts` 参数。  
+        >  合并发布的冲突日志记录行为是通过使用 `@conflict_logging`sp_addmergepublication[ 的 ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 参数设置的。 已不推荐使用 `@centralized_conflicts` 参数。  
   
      下表基于为 `@conflict_logging` 指定的值描述了这些列的值。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "75321884"
     -   **decentralized_conflicts** - 1 指示冲突行存储在订阅服务器上，0 指示冲突行未存储在订阅服务器上。  
   
         > [!NOTE]  
-        >  合并发布的冲突日志记录行为是通过使用 [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@conflict_logging` 参数设置的。 已不推荐使用 `@centralized_conflicts` 参数。  
+        >  合并发布的冲突日志记录行为是通过使用 `@conflict_logging`sp_addmergepublication[ 的 ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 参数设置的。 已不推荐使用 `@centralized_conflicts` 参数。  
   
 2.  在发布服务器上对发布数据库，或在订阅服务器上对订阅数据库执行 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)。 为 `@publication` 指定值，以便只返回属于特定发布的项目的冲突表信息。 这将返回具有冲突的项目的冲突表信息。 请注意任何相关项目的 **source_object** 值。 如果项目的 **conflict_table** 值为 NULL，则在该项目中只发生了删除冲突。  
   

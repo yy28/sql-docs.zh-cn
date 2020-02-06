@@ -11,10 +11,10 @@ ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ebd5c1cc320426ea0ae3ff1b0b9832fb2ca76f1b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296647"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
@@ -26,15 +26,15 @@ ms.locfileid: "71296647"
 
   显示有关在操作期间已记入日志的消息的信息。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|Event_message_ID|BIGINT|事件消息的唯一 ID。|  
-|Operation_id|BIGINT|操作的类型。<br /><br /> 有关操作类型的列表，请参阅 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)。|  
+|Event_message_ID|bigint|事件消息的唯一 ID。|  
+|Operation_id|bigint|操作的类型。<br /><br /> 有关操作类型的列表，请参阅 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)。|  
 |Message_time|datetimeoffset(7)|创建消息的时间。|  
-|Message_type|SMALLINT|所显示的消息的类型。 有关消息类型的详细信息，请参阅 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)。|  
-|Message_source_type|SMALLINT|消息的源。|  
+|Message_type|smallint|所显示的消息的类型。 有关消息类型的详细信息，请参阅 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)。|  
+|Message_source_type|smallint|消息的源。|  
 |message|nvarchar(max)|消息的文本。|  
-|Extended_info_id|BIGINT|与在 [catalog.extended_operation_info（SSISDB 数据库）](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md)视图中找到的操作消息相关的附加信息的 ID。|  
+|Extended_info_id|bigint|与在 [catalog.extended_operation_info（SSISDB 数据库）](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md)视图中找到的操作消息相关的附加信息的 ID。|  
 |Package_name|nvarchar(260)|包文件的名称。|  
 |Event_name|nvarchar(1024)|与消息关联的运行时事件。|  
 |Message_source_name|nvarchar(4000)|作为消息源的包组件。|  
@@ -42,13 +42,13 @@ ms.locfileid: "71296647"
 |Subcomponent_name|nvarchar(4000)|作为消息源的数据流组件。<br /><br /> 当 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 引擎返回消息时，SSIS.Pipeline 将出现在该列中。|  
 |Package_path|nvarchar(max)|包内组件的唯一路径。|  
 |Execution_path|nvarchar(max)|从父包到执行该组件的点的完整路径。<br /><br /> 此路径还捕获组件的迭代。|  
-|threadID|INT|将消息记入日志时正在执行的线程的 ID。|  
-|Message_code|INT|与此消息关联的代码。|  
+|threadID|int|将消息记入日志时正在执行的线程的 ID。|  
+|Message_code|int|与此消息关联的代码。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此视图显示下列消息源类型。  
   
-|**message_source_type**|描述|  
+|**message_source_type**|说明|  
 |-------------------------------|-----------------|  
 |10|入口 API，如 T-SQL 和 CLR 存储过程|  
 |20|用来运行包的外部进程 (ISServerExec.exe)|  

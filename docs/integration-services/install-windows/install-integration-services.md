@@ -20,10 +20,10 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0478e345f388b3f4246bf33fdaba29a47a6ec0f6
-ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74491952"
 ---
 # <a name="install-integration-services-ssis"></a>安装 Integration Services (SSIS)
@@ -48,7 +48,7 @@ ms.locfileid: "74491952"
 
 可以按下列配置安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]：
 
-- 可以在没有旧 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。
+- 可以在没有旧 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机上安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
 - 可并行安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的现有实例。
 
@@ -62,22 +62,22 @@ ms.locfileid: "74491952"
 
 ## <a name="install-integration-services"></a>安装集成服务
 
- 安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之前，请查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安装要求并确保计算机满足这些要求。
+ 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，请查看 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的安装要求并确保计算机满足这些要求。
 
 如果使用安装向导安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，则会使用一系列页面来指定组件和选项。
 
 - 在“功能选择”页的“共享功能”下，选择“Integration Services”    。
 
-- 在“实例功能”下，可根据需要选择“数据库引擎服务”，以托管 SSIS 目录数据库 `SSISDB`，并存储、管理、运行和监视 SSIS 包   。
+- 在“实例功能”下，可根据需要选择“数据库引擎服务”，以托管 SSIS 目录数据库 **，并存储、管理、运行和监视 SSIS 包**  `SSISDB`。
 
 - 要安装用于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编程的托管程序集，仍需在“共享功能”下选中“客户端工具 SDK”   。
 
 > [!NOTE]
-> 如果选择了可在安装向导的“功能选择”页上选择进行安装的某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，则会安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件的部分子集  。 这些组件可用于特定任务，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能会受到限制。 例如， **“数据库引擎服务”** 选项将安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 导入和导出向导所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 为确保完整安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，必须在 **“功能选择”** 页上选择“ **集成服务** ”。
+> 如果选择了可在安装向导的“功能选择”页上选择进行安装的某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，则会安装  **组件的部分子集**[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 这些组件可用于特定任务，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能会受到限制。 例如， **“数据库引擎服务”** 选项将安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 导入和导出向导所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 为确保完整安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，必须在 **“功能选择”** 页上选择“ **集成服务** ”。
 
 ### <a name="installing-a-dedicated-server-for-etl-processes"></a>为 ETL 进程安装专用服务器
 
-若要对提取、转换和加载 (ETL) 过程使用专用服务器，请在安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 时安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的本地实例。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 通常将包存储在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例中，并使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理对这些包进行计划。 如果 ETL 服务器上没有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则必须通过具有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的服务器计划或运行包。 这导致这些包不会在 ETL 服务器上运行，而是在其启动时所在的服务器上运行。 因此，专用 ETL 服务器的资源不会按预期方式使用。 而且，其他服务器的资源可能会受到 ETL 进程运行的影响
+若要对提取、转换和加载 (ETL) 过程使用专用服务器，请在安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 时安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的本地实例。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 通常将包存储在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例中，并使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理对这些包进行计划。 如果 ETL 服务器上没有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则必须通过具有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的服务器计划或运行包。 这导致这些包不会在 ETL 服务器上运行，而是在其启动时所在的服务器上运行。 因此，专用 ETL 服务器的资源不会按预期方式使用。 而且，其他服务器的资源可能会受到 ETL 进程运行的影响
 
 ### <a name="configuring-ssis-event-logging"></a>配置 SSIS 事件日志记录
 

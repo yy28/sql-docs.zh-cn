@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f5a9846ddc19320b3299893929c7ebf11ca0269
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962343"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73962343"
 
 此函数返回组中唯一非空值的近似数。 
   
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -38,12 +38,12 @@ APPROX_COUNT_DISTINCT ( expression )
   
 ## <a name="arguments"></a>参数  
 *expression*  
-任意类型（“**image**” 、“**sql_variant**” 、“**ntext**” 或“**text**” 除外）的 [表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 
+任意类型（“[image](../../t-sql/language-elements/expressions-transact-sql.md)” 、“**sql_variant**” 、“**ntext**” 或“**text**” 除外）的 **表达式**。 
 
 ## <a name="return-types"></a>返回类型
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `APPROX_COUNT_DISTINCT( expression )` 计算组中每行的表达式，并返回组中唯一非空值的近似数。 此函数旨在跨响应速度比绝对精度更为关键的大型数据集进行聚合。  
 
 `APPROX_COUNT_DISTINCT` 专用于大数据方案，更适合以下情形：

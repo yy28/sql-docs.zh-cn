@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46ce5f22f38b9854be8161aa3d104a60e41886ab
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844352"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 引用（数据库引擎）
@@ -56,7 +56,7 @@ ms.locfileid: "73844352"
 
  
 ## <a name="applies-to-references"></a>“适用范围”参考  
- T-SQL 参考主题涵盖 SQL Server 的多个版本（自 2008 起），还包含其他 Azure SQL 服务。 每个主题的顶部附近都有一个指示支持该主题要点的产品和服务的部分。 
+ T-SQL 参考主题涵盖 SQL Server 的多个版本（2008 版及更高版本），还包含其他 Azure SQL 服务。 每个主题的顶部附近都有一个指示支持该主题要点的产品和服务的部分。 
 
 例如，主题适用于所有版本，具有以下标签。 
   

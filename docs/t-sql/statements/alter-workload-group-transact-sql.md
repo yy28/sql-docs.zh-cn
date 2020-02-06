@@ -18,10 +18,10 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47b924754f221b93e8f9e661a1b12afb5f07fcd4
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70026234"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "70026234"
 
   更改现有 Resource Governor 工作负载组配置，并且可以选择将其分配给 Resource Governor 资源池。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -71,10 +71,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  IMPORTANCE 对资源池而言是局部性的；同一资源池内重要性不同的工作负荷组会相互影响，但不会影响其他资源池中的工作负荷组。  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT = value      
+ REQUEST_MAX_MEMORY_GRANT_PERCENT = value       
  指定单个请求可以从池中获取的最大内存量。 value 是相对于 MAX_MEMORY_PERCENT 指定的资源池大小的百分比  。  
 
-value 是一个最大为 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 的整数，以及一个以 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开头的浮点数  。 默认值为 25。 value 的允许范围是 1 到 100  。
+value 是一个最大为 *的整数，以及一个以* 开头的浮点数[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)][!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]。 默认值为 25。 value 的允许范围是 1 到 100  。
   
 > [!NOTE]  
 > 指定的量指的只是查询执行授予内存。  
@@ -93,7 +93,7 @@ value 是一个最大为 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 的�
 >   
 > 请注意，如果服务器没有足够的物理内存，则这两种情况都会出现超时错误 8645。  
   
- REQUEST_MAX_CPU_TIME_SEC = value        
+ REQUEST_MAX_CPU_TIME_SEC = value         
  指定请求可以使用的最长 CPU 时间，以秒为单位。 value 必须为 0 或一个正整数  。 value 的默认设置为 0，也就是说无限制  。  
   
 > [!NOTE]  
@@ -110,7 +110,7 @@ value 是一个最大为 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 的�
   
  value 必须是正整数  。 value 的默认设置为 0，表示使用基于查询开销的内部计算来确定最长时间  。  
   
- MAX_DOP = value        
+ MAX_DOP = value         
  指定并行请求的最大并行度 (DOP)。 value 必须为 0 或正整数（1 到 255）  。 value 为 0 时，服务器选择最大并行度  。 这是默认设置，也是推荐设置。  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ value 是一个最大为 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 的�
   
  配置 DOP 后，只能在授予内存不足时降低它。 工作负荷组重新配置在授予内存队列中等待时不可见。  
   
- GROUP_MAX_REQUESTS = value       
+ GROUP_MAX_REQUESTS = value        
  指定在工作负荷组中允许执行的同时请求最大数。 value 必须为 0 或一个正整数  。 value 的默认设置为 0，表示允许的请求数不限  。 当达到最大并发请求数时，该组中的用户可以登录但置于等待状态，直至并发请求数降到指定值之下。  
   
  USING { pool_name | "default" }        
@@ -142,7 +142,7 @@ value 是一个最大为 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 的�
 > [!NOTE]  
 > 选项 "default" 区分大小写。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  允许对默认组使用 ALTER WORKLOAD GROUP。  
   
  对工作负荷组配置的更改直到执行 ALTER RESOURCE GOVERNOR RECONFIGURE 后才会生效。 在更改计划影响到设置时，只有在执行 DBCC FREEPROCCACHE (pool_name  ) 后，  新设置才会在之前已缓存的计划中生效，其中 pool_name 是与工作负载组相关联的 Resource Governor 资源池的名称。  

@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981930"
 ---
 # <a name="create-a-database-user"></a>创建数据库用户
@@ -52,7 +52,7 @@ ms.locfileid: "73981930"
   
 > **重要说明！** 作为包含的数据库用户进行连接时，必须在连接字符串中提供数据库的名称。 若要在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中指定数据库，在“连接到”  对话框中单击“选项”  ，然后单击“连接属性”  选项卡。  
   
- 当用户连接无法使用 Windows 进行身份验证时，选择“带密码的 SQL 用户”  或者“带用户名的 SQL 用户”  ，具体取决于 **SQL Server 身份验证登录名**。 组织外的用户（例如客户）连接到你的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时这种情况很常见。  
+ 当用户连接无法使用 Windows 进行身份验证时，选择“带密码的 SQL 用户”  或者“带用户名的 SQL 用户”  ，具体取决于 **SQL Server 身份验证登录名**。 组织外的用户（例如客户）连接到你的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时这种情况很常见。  
   
 > **提示！** 对于组织内的用户，最好选择使用 Windows 身份验证。因为组织内的用户不需要记住其他密码，而且 Windows 身份验证可以提供其他安全功能，例如 Kerberos。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "73981930"
      **登录名**  
      输入用户的登录名。 或者，单击省略号 (…) 以打开“选择登录名”对话框   。 如果您从 **“用户类型”** 列表中选择了 **“带登录名的 SQL 用户”** 或 **“Windows 用户”** ，则 **“登录名”** 可用。  
   
-     “密码”  和“确认密码”   
+     **“密码”** 和 **“确认密码”**  
      输入在数据库中进行身份验证的用户的密码。  
   
      **默认语言**  
@@ -115,7 +115,7 @@ ms.locfileid: "73981930"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- “数据库用户 - 新建”对话框还提供了四个其他页上的选项  ：“拥有的架构”、“成员身份”、“安全对象”和“扩展属性”     。  
+ “数据库用户 - 新建”  对话框还在四个其他页面上提供了选项：“拥有的架构”、“成员身份”、“安全对象”和“扩展属性”     。  
   
 -   **“拥有的架构”** 页列出了可由新的数据库用户拥有的所有可能的架构。 若要向数据库用户添加架构或者从数据库用户中删除架构，请在 **“此用户拥有的架构”** 下选中或取消选中架构旁边的复选框。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "73981930"
   
 -   **“扩展属性”** 页允许您向数据库用户添加自定义属性。 此页还提供以下选项：  
   
-     **数据库**  
+     **Database**  
      显示所选数据库的名称。 此字段为只读。  
   
      **排序规则**  

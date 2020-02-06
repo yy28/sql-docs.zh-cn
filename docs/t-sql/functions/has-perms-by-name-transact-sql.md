@@ -23,10 +23,10 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982951"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982951"
 
   评估当前用户对安全对象的有效权限。 相关函数为 [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -72,7 +72,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  如果查询失败，则返回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此内置函数将测试当前主体对于指定的安全对象是否具有特定的有效权限。 如果用户具有针对安全对象的有效权限，HAS_PERMS_BY_NAME 返回 1；如果用户不具有针对安全对象的有效权限，返回 0；如果安全对象类或权限无效，返回 NULL。 有效权限可以是下列任意一种：  
   
 -   直接授予主体并且不被拒绝的权限。  
@@ -97,7 +97,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 -   当前数据库排序规则：包括架构未包含的安全对象的数据库级安全对象；由一部分或两部分组成的架构范围内的安全对象；使用由三部分组成的名称时的目标数据库。  
   
--   master 数据库排序规则(&M):服务器级别的安全对象。  
+-   master 数据库排序规则：服务器级安全对象。  
   
 -   列级别检查不支持“ANY”。 必须指定合适的权限。  
   

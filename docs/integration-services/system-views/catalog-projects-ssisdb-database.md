@@ -11,10 +11,10 @@ ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4102ee4dc551a02a8b6853062e19d448ab414e7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296522"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects（SSISDB 数据库）
@@ -26,11 +26,11 @@ ms.locfileid: "71296522"
 
   显示 **SSISDB** 目录中显示的所有项目的详细信息。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|项目的唯一标识符 (ID)。|  
 |folder_id|**bigint**|项目位于其中的文件夹的唯一 ID。|  
-|NAME|**sysname**|项目的名称。|  
+|name|**sysname**|项目的名称。|  
 |description|**nvarchar(1024)**|项目的可选说明。|  
 |project_format_version|**int**|用于开发项目的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
 |deployed_by_sid|**varbinary(85)**|安装了项目的用户的安全标识符 (SID)。|  
@@ -41,7 +41,7 @@ ms.locfileid: "71296522"
 |validation_status|**char(1)**|验证状态。|  
 |last_validation_time|**datetimeoffset(7)**|最后验证的时间。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此视图对于目录中的每个项目显示一行。  
   
 ## <a name="permissions"></a>权限  

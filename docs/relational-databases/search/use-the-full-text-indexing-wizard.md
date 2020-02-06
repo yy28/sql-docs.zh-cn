@@ -24,10 +24,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e82b1b58fb4ed880f288ae98148f6c16da1907fd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903813"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文索引向导
@@ -47,7 +47,7 @@ ms.locfileid: "72903813"
   
 5.  **类型列。** 选择存储作为全文索引列的文档类型的列名称。  
 
-> **注意：** 只有当“可用列”列中命名的列为“varbinary(max)”或“image”类型时，才会启用“类型列”     。  
+> **注意：** 只有当“可用列”列中命名的列为 **varbinary(max)** 或 **image** 类型时，才会启用   “类型列”。  
   
 6. **统计语义。** 选择是否为所选列启用语义索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md)。  
   
@@ -85,10 +85,10 @@ ms.locfileid: "72903813"
  10. **“创建新目录”**
  - 选择全文目录。  
   
-    A. **名称**  
+    a. **名称**  
      为新的全文目录输入一个名称。  
   
-     B. **设置为默认目录**  
+     b. **设置为默认目录**  
      选中此项可以将该目录设为此数据库的默认目录。  
   
      c. **区分重音**  
@@ -98,7 +98,7 @@ ms.locfileid: "72903813"
      指定对其创建全文索引的文件组。  
   
      e. 选择值：  
-      |ReplTest1|描述|  
+      |值|说明|  
       |-----------|-----------------|
       |**<default>**| 如果表或视图尚未分区，则选择此值，将与基础表或视图使用相同的文件组。 如果表或视图已分区，则使用主文件组|
       |**PRIMARY**|选择此值可将主文件组用于新全文索引。|
@@ -112,7 +112,7 @@ ms.locfileid: "72903813"
   
      选择下列值之一：  
   
-   |ReplTest1|描述|  
+   |值|说明|  
     |-----------|-----------------|  
     |**<system>**|选择此值将对新全文索引使用系统非索引字表。 这是默认值。|  
     |**<off>**|选择此值将禁用新全文索引的非索引字表。|  
@@ -136,7 +136,7 @@ ms.locfileid: "72903813"
   
 5.  查看或控制全文索引向导的进度。  
   
-     **停止**  
+     **Stop**  
      中断当前操作，并阻止该向导在此会话期间执行后续全文操作。  
   
      **报告**  

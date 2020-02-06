@@ -1,22 +1,23 @@
 ---
-title: 列出作业类别信息 | Microsoft Docs
-ms.custom: ''
+title: 列出作业类别信息
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 178e2e6305cb7be46d1ae8f398d100427b91b34d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: db86e18a399b4107e57bab926f0f91338565c43d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267558"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242203"
 ---
 # <a name="list-job-category-information"></a>列出作业类别信息
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "68267558"
 ## <a name="BeforeYouBegin"></a>开始之前  
   
 ### <a name="Security"></a>安全性  
-有关详细信息，请参阅 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)。  
+有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   

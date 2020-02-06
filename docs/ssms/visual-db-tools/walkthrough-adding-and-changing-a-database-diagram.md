@@ -1,10 +1,9 @@
 ---
-title: 演练：添加和更改数据库关系图 | Microsoft Docs
-ms.custom: ''
+title: 添加和更改数据库关系图
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30177e5dc9061fb66bffda6203f0740bcac3b5af
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8333c2120868f8d929d937faa155b7d595abff20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258925"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246247"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>演练：添加和更改数据库关系图
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68258925"
   
 3.  右键单击“数据库关系图”节点并选择“新建数据库关系图”  。  
   
-    如果数据库没有创建关系图所需的对象，将显示以下消息：**此数据库缺少一个或多个使用数据库关系图所需的支持对象。要创建它们吗？** 选择 **“是”** 。  
+    如果此数据库没有创建关系图所必需的对象，则将显示下列消息： **此数据库没有使用数据库关系图创建功能所需的一个或多个支持对象。要创建它们吗？** 选择“是”  。  
   
     此时将显示“添加表”  对话框。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68258925"
   
 1.  右键单击 `Address` 表。 在快捷菜单上，指向“表视图”  ，再单击“标准”  。  
   
-    表网格将显示三个列：“列名”、“数据类型”和“允许 NULL 值”    。  
+    表的网格将显示三个列：“列名”  、“数据类型”  和“允许 Null 值”  。  
   
 2.  右键单击 `Address` 表，单击“表视图”  并选择“键”  。  
   
@@ -73,11 +74,11 @@ ms.locfileid: "68258925"
   
 2.  在“选择名称”  对话框中，单击“确定”  以接受默认名称“Table1”  。  
   
-    将出现一个具有三个列的新表网格：“列名”、“数据类型”和“允许 NULL 值”    。  
+    将显示具有以下三列的新表网格：“列名”  、“数据类型”  和“允许 Null 值”  。  
   
 3.  向 **Table1**添加以下信息：  
   
-    |**列名**|**数据类型**|**允许 Null 值**|  
+    |**列名称**|**数据类型**|**允许 Null 值**|  
     |-------------------|-----------------|-------------------|  
     |**T1col1**|**int**|已选中|  
     |**T1col2**|**varchar(50)**|已选中|  
@@ -102,7 +103,7 @@ ms.locfileid: "68258925"
   
     此时将显示“CHECK 约束”  对话框。  
   
-2.  单击 **“添加”** 。  
+2.  单击“添加”  。  
   
     “选定的 CHECK 约束”  列表中将出现一个新约束，默认名称为 `CK_Table1`。  
   
@@ -114,13 +115,13 @@ ms.locfileid: "68258925"
   
     `Table1` 现在有了一个约束，即输入到 `T1col3` 中的所有值都必须大于 5。  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
 #### <a name="to-create-relationships-between-tables"></a>在表之间创建关系  
   
 1.  在关系图设计器中创建名为 `Table2` 的新表，该表具有以下列：  
   
-    |**列名**|**数据类型**|**允许 Null 值**|  
+    |**列名称**|**数据类型**|**允许 Null 值**|  
     |-------------------|-----------------|-------------------|  
     |**T2col1**|**int**|未选中|  
     |**T2col2**|**varchar(50)**|已选中|  
@@ -131,7 +132,7 @@ ms.locfileid: "68258925"
   
 2.  将 `T2col1` 拖动到 `T1col1`。  
   
-    出现两个对话框：背景中的“外键关系”  对话框和前景中的“表和列”  对话框。  
+    将显示两个对话框：背景中的“外键关系”  对话框和前景中的“表和列”  对话框。  
   
 3.  单击“确定”  保存新的关系。  
   
@@ -146,7 +147,7 @@ ms.locfileid: "68258925"
   
     此时将显示“索引/键”  对话框。  
   
-2.  单击 **“添加”** 。  
+2.  单击“添加”  。  
   
     “选定的主/唯一键或索引”  列表中将出现一个新索引，并使用类似 `IX_Table1` 的默认名称。  
   
@@ -174,11 +175,11 @@ ms.locfileid: "68258925"
   
     此时将显示“XML 索引”  对话框。  
   
-3.  单击 **“添加”** 。  
+3.  单击“添加”  。  
   
     将向“选定的 XML 索引”  列表中添加一个具有默认值的 XML 索引。  
   
-4.  单击 **“关闭”** 。  
+4.  单击“关闭”  。  
   
     > [!NOTE]  
     > XML 索引是按列创建的。 第一个 XML 索引是主索引，所有其他索引都是辅助索引。  
@@ -192,11 +193,11 @@ ms.locfileid: "68258925"
   
     此时将显示“保存”  对话框。 如果选中了“表受到影响时警告”  ，则会列出有关新表或更改的表的信息。  
   
-2.  单击“确定”  。  
+2.  单击“确定”。   
   
 3.  如果发生了任何错误，则会出现“保存后的通知”  对话框，显示错误及其原因。 修复错误并再次保存关系图。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 虽然这是一个仅包含两个现有表和两个新表的简单关系图，但是它展示了创建现有数据库的关系图或直观地创建新架构的潜力。 建议了解的其他内容包括：  
   
 -   创建包含多组相关表的新关系图  

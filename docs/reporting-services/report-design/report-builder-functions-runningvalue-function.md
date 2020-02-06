@@ -9,10 +9,10 @@ ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 91447a23f04b05dc27d0ddcc47ba845d3dc313a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577174"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>报表生成器函数 - RunningValue 函数
@@ -28,7 +28,7 @@ ms.locfileid: "65577174"
 RunningValue(expression, function, scope)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *expression*  
  要对其执行聚合的表达式，例如， `[Quantity]`。  
   
@@ -41,7 +41,7 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>返回类型  
  由 *function* 参数中指定的聚合函数确定。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  作用域的每个新实例 **RunningValue** 的值都会重置为 0。 如果指定组，则会在更改组表达式时重置该运行值。 如果指定数据区域，则会为该数据区域的每个新实例重置该运行值。 如果指定数据集，则不会在整个数据集中重置该运行值。  
   
  **RunningValue** 不能在筛选器或排序表达式中使用。  

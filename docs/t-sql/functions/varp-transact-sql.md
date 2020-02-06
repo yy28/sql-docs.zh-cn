@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49b699b943041ba3edf91db9e96a6e044826d854
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927571"
 ---
 # <a name="varp-transact-sql"></a>VARP (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67927571"
 
   返回指定表达式中所有值的总体统计方差。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,15 +60,15 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>返回类型  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果对 SELECT 语句中的所有项目使用 VARP，则在计算中将包括结果集中的每个值。 VARP 可只用于数字列。 Null 值会被忽略。  
   
  VARP 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，它具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-varp"></a>A:使用 VARP  
- 以下示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPerson` 表中所有奖金值的总体方差。  
+### <a name="a-using-varp"></a>A：使用 VARP  
+ 以下示例返回 `SalesPerson` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中所有奖金值的总体方差。  
   
 ```  
 SELECT VARP(Bonus)  
@@ -79,7 +79,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-varp"></a>B：使用 VARP  
- 下面的示例返回表 `dbo.FactSalesQuota` 中的销售配额值的 `VARP`。 第一列中包含所有非重复值的方差，第二列中包含所有值（包括任何重复值）的方差。  
+ 下面的示例返回表 `VARP` 中的销售配额值的 `dbo.FactSalesQuota`。 第一列中包含所有非重复值的方差，第二列中包含所有值（包括任何重复值）的方差。  
   
 ```  
 -- Uses AdventureWorks  

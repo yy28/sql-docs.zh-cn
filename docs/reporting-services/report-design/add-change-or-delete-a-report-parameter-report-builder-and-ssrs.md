@@ -9,10 +9,10 @@ ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eb0d29f62a3751f0b8b6acd1c33c7b7f7eb10ff2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582062"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>添加、更改或删除报表参数（报表生成器和 SSRS）
@@ -20,14 +20,14 @@ ms.locfileid: "65582062"
   
  报表发布后，您可以在报表服务器上更改报表参数的默认值、可用值以及其他属性。 通过创建链接报表，您可以提供多组默认参数值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
- 本文介绍如何将报表参数添加到 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中的分页报表或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器。 还可将报表参数添加到  [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]中的移动报表。 有关详细信息，请参阅 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 。  
+ 本文介绍如何将报表参数添加到 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中的分页报表或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的报表设计器。 还可将报表参数添加到 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中的移动报表。 有关详细信息，请参阅 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-add-or-edit-a-report-parameter"></a>添加或编辑报表参数  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 或报表设计器的“报表数据”  窗格中，右键单击“参数”  节点，然后单击“添加参数”  。 此时将打开 **“报表参数属性”** 对话框。  
+1.  在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或报表设计器的“报表数据”  窗格中，右键单击“参数”  节点，然后单击“添加参数”  。 此时将打开 **“报表参数属性”** 对话框。  
   
 2.  在 **“名称”** 中，键入参数的名称，或接受默认名称。  
   

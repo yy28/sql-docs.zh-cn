@@ -18,10 +18,10 @@ ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 17c5ec83217c072ada5d112bab1dd4f0105e0971
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120672"
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate（geography 数据类型）
@@ -43,7 +43,7 @@ UnionAggregate ( geography_operand )
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果输入具有不同的 SRID，方法返回 null  。 请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
   
  方法忽略 null 输入  。  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 771305c30bb4008ee3e4b937296864276cf74b73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908327"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed 事件类
@@ -25,7 +25,7 @@ ms.locfileid: "67908327"
   
 ## <a name="rpccompleted-event-class-data-columns"></a>RPC:Completed 事件类的数据列  
   
-|数据列名称|数据类型|描述|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BinaryData|**图像**|与在跟踪中捕获的事件类相关的二进制值。|2|是|  
@@ -46,7 +46,7 @@ ms.locfileid: "67908327"
 |NTDomainName|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |NTUserName|**nvarchar**|Windows 用户名。|6|是|  
 |ObjectName|**nvarchar**|引用的对象名。|34|是|  
-|Reads|**bigint**|由远程过程调用执行的页读取数。|16|是|  
+|读取|**bigint**|由远程过程调用执行的页读取数。|16|是|  
 |RequestID|**int**|包含该语句的请求的 ID。|49|是|  
 |RowCounts|**bigint**|RPC 批中的行数。|48|是|  
 |ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26||  
@@ -55,7 +55,7 @@ ms.locfileid: "67908327"
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|是|  
 |TextData|**ntext**|远程过程调用的文本。|1|是|  
 |TransactionID|**bigint**|系统分配的事务 ID。|4|是|  
-|Writes|**bigint**|由远程过程调用执行的页写入数。|17|是|  
+|写入|**bigint**|由远程过程调用执行的页写入数。|17|是|  
 |XactSequence|**bigint**|用于说明当前事务的标记。|50|是|  
   
 ## <a name="see-also"></a>另请参阅  

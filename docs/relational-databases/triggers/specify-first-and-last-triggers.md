@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1020bb9dff821471f33ba3af9285249a93980133
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055987"
 ---
 # <a name="specify-first-and-last-triggers"></a>指定第一个和最后一个触发器
@@ -29,11 +29,11 @@ ms.locfileid: "68055987"
   
  若要指定 AFTER 触发器的顺序，请使用 **sp_settriggerorder** 存储过程。 **sp_settriggerorder** 有下列选项。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**第一个**|指定 DML 触发器是执行触发操作时激发的第一个 AFTER 触发器。|  
 |**上一次**|指定 DML 触发器是执行触发操作时激发的最后一个 AFTER 触发器。|  
-|**无**|指定不按特定的顺序激发 DML 触发器。 主要用于将某个触发器重置为第一个或最后一个触发器。|  
+|无 |指定不按特定的顺序激发 DML 触发器。 主要用于将某个触发器重置为第一个或最后一个触发器。|  
   
  以下示例说明如何使用 **sp_settriggerorder**：  
   
@@ -52,7 +52,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  如果 ALTER TRIGGER 语句更改了第一个或最后一个触发器，则会删除 **First** 或 **Last** 属性并将顺序值设置为 **None**。 必须使用 **sp_settriggerorder**来重置顺序。  
   
- OBJECTPROPERTY 函数使用以下属性来报告某个触发器是第一个还是最后一个触发器：ExecIsFirstInsertTrigger、ExecIsFirstUpdateTrigger、ExecIsFirstDeleteTrigger、ExecIsLastInsertTrigger、ExecIsLastUpdateTrigger 和 ExecIsLastDeleteTrigger       。  
+ OBJECTPROPERTY 函数使用以下属性，报告某一触发器是第一个还是最后一个触发器：ExecIsFirstInsertTrigger、ExecIsFirstUpdateTrigger、ExecIsFirstDeleteTrigger、ExecIsLastInsertTrigger、ExecIsLastUpdateTrigger 和 ExecIsLastDeleteTrigger       。  
   
  复制将为包含在立即更新订阅或排队更新订阅中的任意表自动生成第一个触发器。 复制要求其触发器为第一个触发器。 在尝试将带有第一个触发器的表包含在立即更新订阅或排队更新订阅中时，复制将引发错误。 如果在表已经包含在订阅中之后尝试使某个触发器成为第一个触发器， **sp_settriggerorder** 将返回错误。 如果在复制触发器上使用 ALTER，或使用 **sp_settriggerorder** 将复制触发器更改为最后一个触发器或无触发器，订阅将无法正常工作。  
   

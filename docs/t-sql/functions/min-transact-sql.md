@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 68f9d07a2129424a59890f50b884b4fe5f4f70e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130235"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68130235"
 
   返回表达式中的最小值。 后面可以跟随 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,7 +63,7 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
 ## <a name="return-types"></a>返回类型  
  返回与 expression 相同的值  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  MIN 忽略任何 Null 值。  
   
  对于字符数据列，MIN 查找排序序列的最低值。  
@@ -92,7 +92,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
- 以下示例将 MIN、MAX、AVG 和 COUNT 函数与 OVER 子句结合使用，以便为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `HumanResources.Department` 表中的每个部门提供聚合值。  
+ 以下示例将 MIN、MAX、AVG 和 COUNT 函数与 OVER 子句结合使用，以便为 `HumanResources.Department` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中的每个部门提供聚合值。  
   
 ```  
 SELECT DISTINCT Name  

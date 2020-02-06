@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46bb30958394b2196c5521620cf503f4558a6f82
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844322"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73844322"
 
   当未指定默认值时，允许将系统为当前用户的数据库用户名提供的值插入表内。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ USER
 ## <a name="return-types"></a>返回类型  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  USER 提供与 USER_NAME 系统函数相同的功能。  
   
  在 CREATE TABLE 或 ALTER TABLE 语句中将 USER 和 DEFAULT 约束一起使用，或者将 USER 作为任何标准函数使用。  

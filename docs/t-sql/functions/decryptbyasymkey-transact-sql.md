@@ -20,10 +20,10 @@ ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c187caf0dc0027d6d7fa86cbd1bee09e76f0228d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118963"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68118963"
 
 此函数使用非对称密钥解密已加密数据。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +57,7 @@ varbinary 类型的变量，包含使用非对称密钥进行加密的数据  �
 ## <a name="return-types"></a>返回类型  
 varbinary（最大大小为 8,000 个字节）  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 与对称加密/解密相比，非对称加密/解密的成本更高。 处理大型数据集时（例如存储在表中的用户数据），建议开发人员避免使用非对称密钥加密/解密。  
   
 ## <a name="permissions"></a>权限  

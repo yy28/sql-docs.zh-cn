@@ -1,10 +1,9 @@
 ---
-title: 创建作业 | Microsoft Docs
-ms.custom: ''
+title: 创建作业
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,13 +12,15 @@ helpviewer_keywords:
 ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc88bb7f0fbab4489cd5cbb52538236abf215e0b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c743cde20e2761b37b004ec26869b96f6305d687
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267255"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252153"
 ---
 # <a name="create-jobs"></a>创建作业
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "68267255"
   
 |||  
 |-|-|  
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |介绍如何创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。|[创建作业](../../ssms/agent/create-a-job.md)|  
 |介绍如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的所有权重新指派给另一用户。|[Give Others Ownership of a Job](../../ssms/agent/give-others-ownership-of-a-job.md)|  
 |介绍如何设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录日志。|[Set Up the Job History Log](../../ssms/agent/set-up-the-job-history-log.md)|  

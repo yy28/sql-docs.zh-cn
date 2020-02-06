@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056372"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
@@ -52,7 +52,7 @@ ms.locfileid: "74056372"
   
  在大容量导出数据并以本机数据类型或字符格式存储数据时，请使用下表中显示的前缀长度。  
   
-|SQL Server<br /><br /> 数据类型|本机格式<br /><br /> NOT NULL|本机格式<br /><br /> NULL|字符格式<br /><br /> NOT NULL|字符格式<br /><br /> NULL|  
+|SQL Server<br /><br /> 数据类型|本机格式<br /><br /> NOT NULL|本机格式<br /><br /> Null|字符格式<br /><br /> NOT NULL|字符格式<br /><br /> Null|  
 |------------------------------|--------------------------------|----------------------------|-----------------------------------|-------------------------------|  
 |**char**|2|2|2|2|  
 |**varchar**|2|2|2|2|  

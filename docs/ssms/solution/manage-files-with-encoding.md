@@ -1,6 +1,6 @@
 ---
-title: 管理使用编码的文件 | Microsoft Docs
-ms.custom: ''
+title: 管理使用编码的文件
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c75981961540081d8761bfb4cdf24028b41d1071
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 67106a11e7a42f6167c0d08df99917ed057f11f5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262833"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251879"
 ---
 # <a name="manage-files-with-encoding"></a>管理使用编码的文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68262833"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>用其他编码或行尾类型保存文件  
   
-1.  在“文件”  菜单上，单击“将 <filename> 另存为”  。  
+1.  在“文件”  菜单上，单击“将  **另存为”<filename>** 。  
   
 2.  在“文件另存为”  对话框中，展开“保存”  按钮，再单击“编码保存”  。  
   

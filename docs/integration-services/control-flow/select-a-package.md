@@ -15,10 +15,10 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 561495eaad4dbe41a0af05e80d3c2ba35d91cb74
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293956"
 ---
 # <a name="select-a-package"></a>选择包
@@ -32,7 +32,7 @@ ms.locfileid: "71293956"
  **位置**  
  指定包的位置。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|将位置设置为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 选择此值将显示以下动态选项： **Server**、 **Use Windows Authentication**、 **Use SQL Server Authentication**、 **User name**和 **Password**。|  
 |DTSX 文件|将位置设置为 DTSX 文件。 选择此值将显示动态选项 **File name**。|  
@@ -52,10 +52,10 @@ ms.locfileid: "71293956"
  **Use SQL Server Authentication**  
  单击此项可使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。  
   
- **User name**  
+ **用户名**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则在登录服务器时应提供要使用的用户名。  
   
- **Password**  
+ **密码**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供密码。  
   
 ### <a name="location--dtsx-file"></a>位置 = DTSX 文件  

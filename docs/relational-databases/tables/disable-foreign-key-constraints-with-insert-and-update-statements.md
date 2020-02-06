@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 641d53338ebe0c425f16c3ead6872d3f31927d99
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73659519"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>使用 INSERT 和 UPDATE 语句禁用外键约束
@@ -63,7 +63,7 @@ ms.locfileid: "73659519"
   
 3.  在“表设计器”  下的网格中，单击  “强制外键约束”，然后从下拉菜单中选择  “否”。  
   
-4.  单击 **“关闭”** 。  
+4.  单击“关闭”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

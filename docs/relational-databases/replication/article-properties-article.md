@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 081802afb9f66380da93f46bf75011b0f4ddb811
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 22410fd71e91084c99823ceba020ed43f54ed75e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768203"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288247"
 ---
 # <a name="article-properties---ltarticlegt"></a>项目属性 - &lt;项目&gt;
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "68768203"
  此选项仅适用于存储过程。 它将确定是否复制存储过程的定义（CREATE PROCEDURE 语句）或其执行代码。 如果复制存储过程的执行代码，则在初始化订阅时，会将过程定义复制到订阅服务器；当在发布服务器上执行该过程时，复制功能将在订阅服务器上执行相应的过程。 对于执行较大的批处理操作的情况，这样可以显著地提高性能。 有关详细信息，请参阅 [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)。  
   
 ## <a name="options-for-merge-publications"></a>用于合并发布的选项  
- 合并发布的“项目属性”对话框有两个选项卡  ：“属性”和“解决程序”   。  
+ 合并发布的 **“项目属性”** 对话框有以下两个选项卡： **“属性”** 和 **“冲突解决程序”** 。  
   
 ### <a name="properties-tab"></a>“属性”选项卡  
  **同步方向**  
@@ -123,10 +123,10 @@ ms.locfileid: "68768203"
   
 ### <a name="resolver-tab"></a>“冲突解决程序”选项卡  
  **使用默认冲突解决程序**  
- 如果选择默认冲突解决程序，则解决冲突时会基于分配给每个订阅服务器的优先级，或基于写入到发布服务器的更改的先后次序，具体取决于所使用的订阅类型。 有关详细信息，请参阅[检测并解决合并复制冲突](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
+ 如果选择默认冲突解决程序，则解决冲突时会基于分配给每个订阅服务器的优先级，或基于写入到发布服务器的更改的先后次序，具体取决于所使用的订阅类型。 有关详细信息，请参阅 [检测并解决合并复制冲突](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
  **使用自定义冲突解决程序(已在分发服务器上注册)**  
- 如果选择使用项目冲突解决程序（ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供的冲突解决程序或您编写的冲突解决程序），则必须从该列表框中选择相应的冲突解决程序。 有关详细信息，请参阅 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
+ 如果选择使用项目冲突解决程序（ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供的冲突解决程序或您编写的冲突解决程序），则必须从该列表框中选择相应的冲突解决程序。 有关详细信息，请参阅 [高级合并复制冲突的检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
  如果冲突解决程序需要任何输入信息，请在 **“输入冲突解决程序所需的信息”** 文本框中指定该信息。 有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 自定义冲突解决程序所需输入内容的详细信息，请参阅 [Microsoft COM-Based Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "68768203"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供的所有基于 COM 的冲突解决程序均已签名。 选择此选项可以在进行同步时验证冲突解决程序是否有效。  
   
 ## <a name="options-for-oracle-publications"></a>用于 Oracle 发布的选项  
- Oracle 发布的“项目属性”对话框有两个选项卡  ：“属性”和“数据映射”   。 Oracle 发布并不能支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布所支持的所有属性。 有关详细信息，请参阅 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)。  
+ Oracle 发布的 **“项目属性”** 对话框有以下两个选项卡： **“属性”** 和 **“数据映射”** 。 Oracle 发布并不能支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布所支持的所有属性。 有关详细信息，请参阅 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)。  
   
 ### <a name="properties-tab"></a>“属性”选项卡  
  **复制 INSERT、UPDATE 和 DELETE 存储过程**  

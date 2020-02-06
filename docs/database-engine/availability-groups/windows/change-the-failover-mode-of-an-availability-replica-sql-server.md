@@ -16,10 +16,10 @@ ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4dd7de6af88d6fe5955c03f611a593869e19cfc0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75241824"
 ---
 # <a name="change-the-failover-mode-for-a-replica-within-an-always-on-availability-group"></a>更改 Always On 可用性组中副本的故障转移模式

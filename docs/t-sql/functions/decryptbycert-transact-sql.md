@@ -20,10 +20,10 @@ ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314535"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71314535"
 
 此函数使用证书的私钥解密已加密数据。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,14 +60,14 @@ varbinary 类型的变量，包含使用证书进行加密的数据  。
 ## <a name="return-types"></a>返回类型  
 varbinary（最大大小为 8,000 个字节）  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 此函数用证书的私钥解密数据。 使用非对称密钥进行的加密转换会消耗大量资源。 因此，建议开发人员避免使用 [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) 和 DECRYPTBYCERT 进行用户数据的常规加密/解密。  
 
 ## <a name="permissions"></a>权限  
 `DECRYPTBYCERT` 需要对证书具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
-此示例从 `[AdventureWorks2012].[ProtectedData04]` 选择行，选择范围标记为最初使用证书 `JanainaCert02` 加密的数据。 该示例首先使用证书 `pGFD4bb925DGvbd2439587y` 的密码解密证书 `JanainaCert02` 的私钥。 然后使用此私钥解密已加密文本。 该示例将解密后的数据从 varbinary 转换为 nvarchar   。  
+此示例从 `[AdventureWorks2012].[ProtectedData04]` 选择行，选择范围标记为最初使用证书 `JanainaCert02` 加密的数据。 该示例首先使用证书 `JanainaCert02` 的密码解密证书 `pGFD4bb925DGvbd2439587y` 的私钥。 然后使用此私钥解密已加密文本。 该示例将解密后的数据从 varbinary 转换为 nvarchar   。  
 
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  

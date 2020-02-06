@@ -23,10 +23,10 @@ ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79be8af32c13b9e910b94b40bd3c1bf9b2c0e2c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071397"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68071397"
 
   指定当前数据库中的文件名和属性名时，返回指定的文件名属性值。 对于不在当前数据库中的文件，返回 NULL。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,10 +47,10 @@ FILEPROPERTY ( file_name , property )
  file_name   
  包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 file_name 是 nchar(128)   。  
   
- property   
+ *property*  
  包含将返回的文件属性名的表达式。 property 是 varchar(128)，可以是下列值之一   。  
   
-|ReplTest1|描述|返回的值|  
+|值|说明|返回的值|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|文件组是只读的。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 输入无效。|  
 |**IsPrimaryFile**|文件为主文件。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 输入无效。|  
@@ -60,7 +60,7 @@ FILEPROPERTY ( file_name , property )
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  file_name 与 sys.master_files 或 sys.database_files 目录视图中的 name 列相对应     。  
   
 ## <a name="examples"></a>示例  

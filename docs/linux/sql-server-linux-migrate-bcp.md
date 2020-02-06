@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127324"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>使用 bcp 将数据批量复制到 Linux 上的 SQL Server
@@ -94,7 +94,7 @@ bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d Bc
 - `-t`：指定字段终止符。 我们在数据文件中使用 `comma` 作为记录的字段终止符
 
 > [!NOTE]
-> 本示例中不指定自定义行终止符。 先前使用 `cat` 命令创建数据文件时，文本数据文件中的行已使用 `newline` 正确终止。
+> 本示例中不指定自定义行终止符。 先前使用 `newline` 命令创建数据文件时，文本数据文件中的行已使用 `cat` 正确终止。
 
 可通过在终端窗口中运行以下命令，验证是否已成功导入数据。 运行命令前，请记得根据需要替换 `username` 和 `<your_password>`。
 ```bash 

@@ -20,10 +20,10 @@ ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2f5a83635d9c608d779631b61859082a6dccadc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940210"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67940210"
 
 返回有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的全文目录属性的信息。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,15 +43,15 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="arguments"></a>参数  
   
 > [!NOTE]  
->  未来版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中将删除以下属性：**LogSize** 和 **PopulateStatus**。 应避免在新的开发工作中使用这些属性，并着手修改当前使用上述任意属性的应用程序。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除以下属性：LogSize 和 PopulateStatus   。 应避免在新的开发工作中使用这些属性，并着手修改当前使用上述任意属性的应用程序。  
   
 _catalog\_name_  
 包含全文目录名称的表达式。  
   
-property  
+_property_  
 包含全文目录属性名称的表达式。 下表列出了这些属性，并提供对返回的信息的说明。  
   
-|属性|描述|  
+|properties|说明|  
 |--------------|-----------------|  
 |**AccentSensitivity**|区分重音设置。<br /><br /> 0 = 不区分重音<br /><br /> 1 = 区分重音|  
 |**IndexSize**|全文目录的逻辑大小 (MB)。 包括语义关键字短语和文档相似性索引的大小。<br /><br /> 有关详细信息，请参阅本主题后面的“备注”。|  
@@ -66,12 +66,12 @@ property
 ## <a name="return-types"></a>返回类型  
 **int**  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
 出现错误时或调用方没有查看对象的权限时将返回 NULL。  
   
 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，用户只能查看安全对象的元数据。 这些安全对象为该用户所有，或已授予该用户对这些安全对象的权限。 因此，如果用户对该对象没有任何权限，则发出元数据的内置函数（如 FULLTEXTCATALOGPROPERTY）可能会返回 NULL。 有关详细信息，请参阅 [sp_help_fulltext_catalogs (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 FULLTEXTCATALOGPROPERTY ('_catalog\_name_','**IndexSize**') 只查看状态为 4 或 6 的片段，如 [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md) 中所示。 这些片段是逻辑索引的一部分。 因此，**IndexSize** 属性仅返回逻辑索引大小。 
 
 但是，在索引合并期间，实际的索引大小可能会两倍于其逻辑大小。 若要找出合并期间将由全文索引使用的实际大小，请使用 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 系统存储过程。 该过程查看与全文索引关联的所有片段。 

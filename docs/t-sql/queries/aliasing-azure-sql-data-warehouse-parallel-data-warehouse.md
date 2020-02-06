@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244763"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>别名创建（Azure SQL 数据仓库、并行数据仓库）
@@ -47,7 +47,7 @@ object_source [ AS ] alias
   
 -   列别名创建：在此示例中，涉及选择列表中的列的列和表达式都创建了别名。 `SalesTerritoryRegion AS SalesTR` 演示了一个简单的列别名。 `Sum(SalesAmountQuota) AS TotalSales` 演示了  
   
--   表别名创建：`dbo.DimSalesTerritory AS st` 展示了如何为 `dbo.DimSalesTerritory` 表创建 `st` 别名。  
+-   表别名创建：`dbo.DimSalesTerritory AS st` 展示了如何为 `st` 表创建 `dbo.DimSalesTerritory` 别名。  
   
 ```  
 -- Uses AdventureWorks  

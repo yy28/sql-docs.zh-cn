@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951224"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>本机过程中的 ATOMIC 块
@@ -126,21 +126,21 @@ ORDER BY c1
 GO  
 ```  
   
- 以下特定于内存优化表的错误消息是注定事务终止的。 如果它们在 ATOMIC 块的作用域中发生，将导致中止事务：10772、41301、41302、41305、41325、41332、41333 和 41839。  
+ 以下特定于内存优化表的错误消息是注定事务终止的。 如果它们在原子块的作用域中发生，将导致中止事务：10772、41301、41302、41305、41325、41332、41333 和 41839。  
   
 ## <a name="session-settings"></a>会话设置  
  在编译存储过程时原子块中的会话设置是固定的。 某些设置可使用 **BEGIN ATOMIC** 指定，而其他设置则始终固定为相同值。  
   
  以下选项对于 **BEGIN ATOMIC**而言是必需的：  
   
-|必需设置|描述|  
+|必需设置|说明|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|支持的值为 **SNAPSHOT**、 **REPEATABLEREAD**和 **SERIALIZABLE**。|  
 |**LANGUAGE**|确定日期和时间格式以及系统消息。 支持 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中的所有语言和别名。|  
   
  以下设置是可选的：  
   
-|可选设置|描述|  
+|可选设置|说明|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|支持所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式。 指定后， **DATEFORMAT** 将取代与 **LANGUAGE**相关联的默认日期格式。|  
 |**DATEFIRST**|指定后， **DATEFIRST** 将取代与 **LANGUAGE**相关联的默认设置。|  

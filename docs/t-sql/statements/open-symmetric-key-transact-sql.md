@@ -19,10 +19,10 @@ ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68129386"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68129386"
 
   解密对称密钥并使其可供使用。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,7 +67,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  PASSWORD ='password'   
  用于保护对称密钥的密码。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  打开的对称密钥将绑定到会话而不是安全上下文。 打开的密钥将持续有效，直到它显式关闭或会话终止。 如果您打开一个对称密钥然后切换上下文，则该密钥将保持打开状态并在模拟的上下文中可用。 可以在 [sys.openkeys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) 目录视图中查看有关打开的对称密钥的信息。  
   
  如果对称密钥由另一个密钥加密，则必须首先打开该密钥。  

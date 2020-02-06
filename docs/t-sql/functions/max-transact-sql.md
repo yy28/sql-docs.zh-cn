@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c6a0c3acfaafd2e079901f52d1dd925a604a4c23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130303"
 ---
 # <a name="max-transact-sql"></a>MAX (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68130303"
 
   返回表达式中的最大值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
 ## <a name="return-types"></a>返回类型  
  返回与 expression 相同的值  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  MAX 忽略任何空值。  
  
  没有供选择的行时，MAX 将返回 NULL。  
@@ -93,7 +93,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
- 以下示例将 MIN、MAX、AVG 和 COUNT 函数与 OVER 子句结合使用，为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `HumanResources.Department` 表中的每个部门提供聚合值。  
+ 以下示例将 MIN、MAX、AVG 和 COUNT 函数与 OVER 子句结合使用，为 `HumanResources.Department` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中的每个部门提供聚合值。  
   
 ```sql  
 SELECT DISTINCT Name  

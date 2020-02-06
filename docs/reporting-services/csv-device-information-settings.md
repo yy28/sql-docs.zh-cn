@@ -12,10 +12,10 @@ ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9423f82e025146773c5d04a276cf15c76c6b1101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571611"
 ---
 # <a name="csv-device-information-settings"></a>CSV 设备信息设置
@@ -23,7 +23,7 @@ ms.locfileid: "65571611"
   
  下表列出以文本格式呈现时的设备信息设置。  
   
-|设置|ReplTest1|  
+|设置|值|  
 |-------------|-----------|  
 |**编码**|.NET Framework 支持的字符编码的 Internet 编号分配机构 (IANA) 名称。 默认值为 **UTF-8**。 其他值的示例包括 ASCII、UTF-7 和 UTF-16。|  
 |**ExcelMode**|指定目标输出面向 Excel。 默认值为 **true**。|  

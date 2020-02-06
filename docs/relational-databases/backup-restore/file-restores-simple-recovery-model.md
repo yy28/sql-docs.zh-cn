@@ -20,10 +20,10 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 4f6d06667e4cb3b2c89d920424fb9801b0e1de2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138742"
 ---
 # <a name="file-restores-simple-recovery-model"></a>文件还原（简单恢复模式）
@@ -48,7 +48,7 @@ ms.locfileid: "68138742"
      有关对联机页和文件还原的支持的信息，请参阅[数据库引擎功能和任务](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
     > [!TIP]  
-    >  如果希望数据库脱机以进行文件还原，请在开始还原顺序之前执行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 语句以使数据库脱机：ALTER DATABASE database_name SET OFFLINE  。  
+    >  如果你希望数据库脱机以进行文件还原，请在开始还原序列之前执行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 语句以使数据库脱机：ALTER DATABASE *database_name* SET OFFLINE。  
   
  **本主题内容：**  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68138742"
 -   [Restore.SqlRestore 方法（服务器）(SMO)](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
   
 ## <a name="see-also"></a>另请参阅  
- [备份和还原：互操作性和共存 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [备份和还原：互操作性和共存 (SQL Server)](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [完整文件备份 (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   

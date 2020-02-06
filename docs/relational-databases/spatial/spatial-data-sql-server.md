@@ -19,16 +19,16 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f600f45241016bc2f5bb59faa89b5f45b317c90d
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278139"
 ---
 # <a name="spatial-data-sql-server"></a>空间数据 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  空间数据表示有关几何对象的物理位置和形状的信息。 这些对象可以是点位置或更复杂的对象，例如国家/地区、公路或湖泊。  
+  空间数据表示有关物理位置和几何对象形状的信息。 这些对象可能是点位置或更复杂的对象，例如国家/地区、道路或湖泊。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持两种空间数据类型： **geometry** 数据类型和 **geography** 数据类型。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "72278139"
  [创建、构造和查询地理实例](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
  介绍可用于 geography 数据类型实例的方法。  
   
- [为 Nearest Neighbor 查询空间数据](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
+ [查询最近的邻域的空间数据](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
  介绍用于查找与特定的空间对象最接近的空间对象的常见查询模式。  
   
  [创建、修改和删除空间索引](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
@@ -55,7 +55,7 @@ ms.locfileid: "72278139"
  [空间数据类型概述](../../relational-databases/spatial/spatial-data-types-overview.md)  
  介绍空间数据类型。  
   
--   [点](../../relational-databases/spatial/point.md)  
+-   [Point](../../relational-databases/spatial/point.md)  
   
 -   [LineString](../../relational-databases/spatial/linestring.md)  
   

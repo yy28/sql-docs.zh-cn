@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b028b6ab4da678444427682a635f679acce576ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123575"
 ---
 # <a name="execute-user-defined-functions"></a>执行用户定义函数
@@ -26,10 +26,10 @@ ms.locfileid: "68123575"
   使用 Transact-SQL 执行用户定义函数
   
 
-> **注意：** 有关用户定义函数的详细信息，请访问 [用户定义函数](user-defined-functions.md) 和[创建函数 (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)。 
+> **注意：** 有关用户定义函数的详细信息，请访问  [用户定义函数](user-defined-functions.md) 和 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 。 
   
  
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="BeforeYouBegin"></a> 准备工作  
   
 ###  <a name="Restrictions"></a> 限制和局限  
  在 Transact-SQL 中，可通过使用 *value* 或使用 @*parameter_name*=*value*来提供参数。 来提供参数。参数不是事务的一部分；因此，如果在以后回退的事务中更改了参数，则此参数的值不会恢复为以前的值。 返回给调用方的值总是模块返回时的值。  

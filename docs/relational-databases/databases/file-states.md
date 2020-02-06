@@ -30,10 +30,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 06f36ff1e8891ad3753f3899fd5696d5e6ea365a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934444"
 ---
 # <a name="file-states"></a>文件状态
@@ -45,7 +45,7 @@ ms.locfileid: "67934444"
 ## <a name="file-state-definitions"></a>文件状态定义  
  下表定义了文件状态。  
   
-|State|定义|  
+|状态|定义|  
 |-----------|----------------|  
 |ONLINE|文件可用于所有操作。 如果数据库本身处于在线状态，则主文件组中的文件始终处于在线状态。 如果主文件组中的文件处于离线状态，则数据库将处于离线状态，并且辅助文件的状态未定义。|  
 |OFFLINE|文件不可访问，并且可能不显示在磁盘中。 文件通过显式用户操作变为离线，并在执行其他用户操作之前保持离线状态。<br /><br /> **\*\*警告\*\*** 如果文件损坏但可还原，则文件状态可设置为离线。 设置为离线的文件只能通过从备份还原才能设置为在线。 有关还原单个文件的详细信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)。 <br /><br /> 如果数据库处于完全或批量记录恢复状态且文件已删除时，数据库文件也设置为离线。 sys.master_files 中的条目继续存在，直到超过 drop_lsn 值截断事务日志。 有关详细信息，请参阅[事务日志截断](../../relational-databases/logs/the-transaction-log-sql-server.md#Truncation)。 |  

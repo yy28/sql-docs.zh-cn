@@ -15,10 +15,10 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cbdf7d05c25aad00e084c15929cce857cb6614d3
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822289"
 ---
 # <a name="configure-database-mirroring"></a>配置数据库镜像
@@ -44,7 +44,7 @@ ms.locfileid: "74822289"
      数据库镜像会话中的每个服务器实例都需要一个数据库镜像端点。 如果端点不存在，则必须先创建。  
   
     > [!NOTE]  
-    >  服务器实例对数据库镜像使用的验证形式是其数据库镜像端点的一种属性。 两种类型的传输安全性可用于数据库镜像：Windows 身份验证或基于证书的身份验证。 有关详细信息，请参阅 [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)。  
+    >  服务器实例对数据库镜像使用的验证形式是其数据库镜像端点的一种属性。 数据库镜像可以使用两种类型的传输安全功能：Windows 身份验证或基于证书的身份验证。 有关详细信息，请参阅 [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)。  
   
      在每台主体服务器和镜像服务器上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果只将该服务器实例用于数据库镜像会话中的伙伴，你可以为终结点分配伙伴角色 (ROLE **=** PARTNER)。 如果还要将该服务器用于其他数据库镜像会话中的见证服务器，则请将端点的角色分配为 ALL。  
   

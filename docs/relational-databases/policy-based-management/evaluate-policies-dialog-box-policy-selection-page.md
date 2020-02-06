@@ -14,10 +14,10 @@ ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 84e9e7577f74aa3ea43d99bc6b3c12cd5637c9ec
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558212"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>“评估策略”对话框，“策略选择”页
@@ -34,13 +34,13 @@ ms.locfileid: "75558212"
  **Server**  
  选择此选项可连接到包含所需策略的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例。  
   
- **策略：策略**  
+ **策略: 策略**  
  单击可打开指定策略的“策略”对话框。  
   
- **策略：类别**  
+ **策略: 类别**  
  策略的类别。 此框是只读的。  
   
- **策略：方面**  
+ **策略: 方面**  
  策略所实现的方面。 此框是只读的。  
   
  **评估**  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137329"
 ---
 # <a name="contained-databases"></a>包含的数据库
@@ -79,7 +79,7 @@ ms.locfileid: "68137329"
  数据库边界  
  由于部分包含数据库会区分数据库功能与实例功能，因此在这两个元素之间存在一条明确定义的边界，称为“数据库边界”  。  
   
- 数据库边界之内是“数据库模型”  ，在这里开发和管理数据库。 位于数据库模型内部的实体示例包括：系统表（如 **sys.tables**）、具有密码的包含数据库用户，以及当前数据库中由特定名称（包含两部分）引用的用户表。  
+ 数据库边界之内是“数据库模型”  ，在这里开发和管理数据库。 位于数据库模型内部的实体示例包括：系统表（如 **sys.tables**）、具有密码的包含数据库用户以及当前数据库中由特定名称（包含两部分）引用的用户表。  
   
  数据库边界之外是“管理模型”  ，这与实例级别的功能和管理有关。 位于数据库边界之外的实体示例包括：系统表（如 **sys.endpoints**）、映射到登录名的用户，以及另一个数据库中由特定名称（包含三部分）引用的用户表。  
   
@@ -143,17 +143,17 @@ ms.locfileid: "68137329"
 ##  <a name="Identifying"></a> 标识数据库包含关系  
  可以借助两个工具来帮助识别数据库的包含状态。 [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) 是可以显示数据库中所有潜在的非包含实体的视图。 在运行时识别出任何实际的非包含实体时将 database_uncontained_usage 事件将发生。  
   
-### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
+### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  此视图显示数据库中有可能成为非包含实体的所有实体（如跨数据库边界的那些实体）。 这包括可能在数据库模型外部使用对象的那些用户实体。 但是，由于直到运行时才能确定某些实体（例如那些使用动态 SQL 的实体）的包含关系，所以此视图中显示的某些实体实际上可能并不是非包含实体。 有关详细信息，请参阅 [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)。  
   
-### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage 事件  
+### <a name="database_uncontained_usage-event"></a>database_uncontained_usage 事件  
  在运行时标识出非包含实体时将发生此 XEvent。 这包括源自客户端代码的实体。 此 XEvent 仅针对实际的非包含实体发生。 但是，该事件仅在运行时发生。 因此，此 XEvent 将不能识别您尚未运行的任何非包含用户实体。  
   
 ## <a name="see-also"></a>另请参阅  
  [经过修改的功能（包含的数据库）](../../relational-databases/databases/modified-features-contained-database.md)   
- [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
- [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
+ [包含数据库的排序规则](../../relational-databases/databases/contained-database-collations.md)   
+ [针对包含数据库的安全性最佳方法](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
- [包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
+ [包含的数据库用户 - 使数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   
   

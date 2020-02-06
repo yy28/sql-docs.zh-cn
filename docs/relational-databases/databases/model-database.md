@@ -15,10 +15,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81f96fac7ea9021c1f5eb39ad186dcdd35c92127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067375"
 ---
 # <a name="model-database"></a>model 数据库
@@ -82,7 +82,7 @@ ms.locfileid: "68067375"
 |Service Broker 选项|DISABLE_BROKER|否|  
 |TRUSTWORTHY|OFF|否|  
   
- * 若要验证数据库的当前恢复模式，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 或 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。  
+ \* 若要验证数据库的当前恢复模式，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 或 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。  
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
