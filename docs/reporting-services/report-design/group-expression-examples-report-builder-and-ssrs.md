@@ -14,10 +14,10 @@ ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: abfb9f445b52550caf63cc440143e6b008df1d62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580270"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>组表达式示例（报表生成器和 SSRS）
@@ -31,7 +31,7 @@ ms.locfileid: "65580270"
 ## <a name="examples-of-group-expressions"></a>组表达式示例  
  下表提供了可用于定义组的组表达式示例。  
   
-|描述|表达式|  
+|说明|表达式|  
 |-----------------|----------------|  
 |按 `Region` 字段分组。|`=Fields!Region.Value`|  
 |按姓氏和名字分组。|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

@@ -13,10 +13,10 @@ ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 488b1efd533f038914f2d0186e29e28622531f02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048901"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>配置事件通知的对话安全模式
@@ -29,7 +29,7 @@ ms.locfileid: "68048901"
 > [!IMPORTANT]  
 >  所有证书的创建都必须使用有效的开始日期和过期日期。  
   
- **步骤 1：创建 TCP 端口号和目标服务名称。**  
+ **步骤 1：建立 TCP 端口号和目标服务名称。**  
   
  建立源服务器和目标服务器接收消息所用的 TCP 端口。 同时，必须确定目标服务的名称。  
   

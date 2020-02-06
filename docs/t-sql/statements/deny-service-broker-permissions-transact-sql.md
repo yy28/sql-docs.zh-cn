@@ -24,10 +24,10 @@ ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 346044530087c40c468abe9d304231ce06220845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984432"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 权限 (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67984432"
 
   拒绝授予 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 约定、消息类型、远程服务绑定、路由或服务的权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -73,7 +73,7 @@ DENY permission  [ ,...n ] ON
  指定拒绝将其权限授予他人的服务。 需要使用作用域限定符 ::  。  
   
  database_principal   
- 指定要对其拒绝权限的主体。 可以是以下类型之一：  
+ 指定要对其拒绝权限的主体。 下列类型作之一：  
   
 -   数据库用户  
 -   数据库角色  
@@ -88,7 +88,7 @@ CASCADE
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
 denying_principal   
- 指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 可以是以下类型之一：  
+ 指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
 -   数据库角色  
@@ -99,7 +99,7 @@ denying_principal
 -   映射到非对称密钥的数据库用户  
 -   未映射到服务器主体的数据库用户  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="service-broker-contracts"></a>Service Broker 约定  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 约定是权限层次结构中其父级数据库包含的数据库级安全对象。 下表列出了可拒绝授予 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 约定的最特定和最受限的权限，以及隐含这些权限的更常用权限。  

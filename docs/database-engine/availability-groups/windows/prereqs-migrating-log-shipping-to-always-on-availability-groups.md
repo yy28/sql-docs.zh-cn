@@ -14,10 +14,10 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 73cd348f9cb1f22eca30c28cee97ce8e81a20b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014516"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>将日志传送转换为 Always On 可用性组的先决条件
@@ -32,7 +32,7 @@ ms.locfileid: "68014516"
 ##  <a name="AGPrereqsRealAddress"></a> 可用性组先决条件  
  若要允许备份作业在可用性组的主要副本上运行，请使用下列 AlwaysOn 可用性组备份设置：  
   
-|属性|设置|  
+|properties|设置|  
 |--------------|-------------|  
 |可用性组的自动备份首选项|仅在主副本上|  
 |主副本的备份优先级。|>0|  
@@ -90,13 +90,13 @@ ms.locfileid: "68014516"
   
      [将日志传送主数据库和辅助数据库添加到现有可用性组](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/01/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group/)  
   
-     [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **白皮书：**  
   
-     [迁移指南：从之前组合数据库镜像和日志传送的部署迁移到 Always On 可用性组](https://msdn.microsoft.com/library/jj635217)  
+     [迁移指南：从之前组合数据库镜像和日志传送的部署迁移到 AlwaysOn 可用性组](https://msdn.microsoft.com/library/jj635217)  
   
      [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   

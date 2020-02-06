@@ -16,10 +16,10 @@ ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04b3bdcd2b495513500d07583fadc910fe9c13a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954684"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate 方法 (java.lang.String)
@@ -32,7 +32,7 @@ ms.locfileid: "67954684"
 public final int executeUpdate(java.lang.String sql)
 ```
 
-#### <a name="parameters"></a>Parameters
+#### <a name="parameters"></a>parameters
 *sql*
 
 包含 SQL 语句的 String  。
@@ -40,10 +40,10 @@ public final int executeUpdate(java.lang.String sql)
 ## <a name="return-value"></a>返回值
 一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0  。
 
-## <a name="exceptions"></a>异常
+## <a name="exceptions"></a>例外
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 此 executeUpdate 方法是由 java.sql.PreparedStatement 接口中的 executeUpdate 方法指定的。
 
 调用此方法将导致异常，因为在创建 SQLServerPreparedStatement 对象时指定了该对象的 SQL 语句。

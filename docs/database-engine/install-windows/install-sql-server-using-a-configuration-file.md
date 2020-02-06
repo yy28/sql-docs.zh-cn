@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 790d756479f4111d6c3b40d05643ec788527473c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054779"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>使用配置文件安装 SQL Server
@@ -82,17 +82,17 @@ FEATURES=SQL,Tools
   
 1. 准备一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并在同一计算机上配置它们。 
   
-    - 从安装中心的  “高级”页运行  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”，并捕获准备映像配置文件。 
+    - 从安装中心的 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“高级”页运行** **“** 的独立实例的映像准备”，并捕获准备映像配置文件。 
   
     - 将同一个准备映像配置文件用作准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例的模板。 
   
-    - 从安装中心的  “高级”页运行  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”，以便在计算机上配置准备的实例。 
+    - 从安装中心的 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“高级”页运行** **“** 的已准备独立实例的映像完成”，以便在计算机上配置准备的实例。 
   
 2. 使用 Windows SysPrep 工具准备操作系统的映像，包括未配置的、已准备的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 
   
-    -   从安装中心的“高级”页运行  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”，并捕获准备映像配置文件。 
+    -   从安装中心的“高级”页运行 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“** 的独立实例的映像准备”，并捕获准备映像配置文件。 
   
-    -   从安装中心的  “高级”页运行  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”，但在捕获完全的配置文件之后，在  “已准备好完成”页上取消它。 
+    -   从安装中心的 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“高级”页运行** **“** 的已准备独立实例的映像完成”，但在捕获完全的配置文件之后，在  “已准备好完成”页上取消它。 
   
     -   可以将完全的映像配置文件随 Windows 映像一起存储，以便自动执行已准备实例的配置。 
   

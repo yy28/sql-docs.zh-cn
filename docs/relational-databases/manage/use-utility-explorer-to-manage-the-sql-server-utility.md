@@ -11,10 +11,10 @@ ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115324"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>使用实用工具资源管理器管理 SQL Server 实用工具
@@ -38,7 +38,7 @@ ms.locfileid: "68115324"
 ### <a name="sql-server-utility-navigation-pane"></a>SQL Server 实用工具导航窗格  
  实用工具资源管理器导航窗格在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中提供对象的树视图，这些对象按实用工具控制点进行分组。 若要展开文件夹，请单击加号 (+) 或在实用工具资源管理器导航窗格中双击 UCP 名称。 右键单击文件夹或对象，以执行常见任务。 树视图中的节点如下所示：  
   
--   树视图中的顶端节点是实用工具控制点 (UCP)。 该节点名的结构为："Utility_Name" (ComputerName\UCP_instance_name)。 如果您没有 UCP，则必须创建一个。 如果您没有连接到某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具，则必须连接到一个实用工具。 有关详细信息，请参阅 [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 在树视图中单击该 UCP 名称可以使用面板视图中的数据填充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具资源管理器内容窗格。 有关详细信息，请参阅[实用工具仪表板（SQL Server 实用工具）](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)。  
+-   树视图中的顶端节点是实用工具控制点 (UCP)。 该节点名称的结构为："Utility_Name" (ComputerName\UCP_instance_name)。 如果您没有 UCP，则必须创建一个。 如果您没有连接到某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具，则必须连接到一个实用工具。 有关详细信息，请参阅 [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 在树视图中单击该 UCP 名称可以使用面板视图中的数据填充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具资源管理器内容窗格。 有关详细信息，请参阅[实用工具仪表板（SQL Server 实用工具）](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)。  
   
      右键单击 UCP 节点可以刷新面板中的数据。  
   

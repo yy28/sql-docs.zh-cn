@@ -16,10 +16,10 @@ ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114804"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 对象权限 (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68114804"
   拒绝对安全对象的 OBJECT 类成员授予的权限。 OBJECT 类的成员包括：表、视图、表值函数、存储过程、扩展存储过程、标量函数、聚合函数、服务队列以及同义词。  
 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ DENY <permission> [ ,...n ] ON
  ALL  
  拒绝 ALL 不会拒绝所有可能的权限。 拒绝 ALL 等同于拒绝适用于指定对象的所有 ANSI-92 权限。 对于不同权限，ALL 的含义有所不同：  
   
- - 标量值函数权限：EXECUTE、REFERENCES。  
+ - 标量函数权限：EXECUTE、REFERENCES。  
  - 表值函数权限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
  - 存储过程权限：EXECUTE。  
  - 表权限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
@@ -111,7 +111,7 @@ PRIVILEGES
  Database_user_with_no_login   
  指定无相应服务器级主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以在各种目录视图中查看对象的有关信息。 有关详细信息，请参阅[对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)。  
   
  对象是一个架构级的安全对象，包含于权限层次结构中作为其父级的架构中。 下表列出了可拒绝的对对象最为具体的限定权限，以及隐含这些权限的更为通用的权限。  
@@ -120,9 +120,9 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|删除|CONTROL|删除|  
+|DELETE|CONTROL|DELETE|  
 |在运行 CREATE 语句前执行|CONTROL|在运行 CREATE 语句前执行|  
-|Insert|CONTROL|Insert|  
+|INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
 |REFERENCES|CONTROL|REFERENCES|  
 |SELECT|RECEIVE|SELECT|  
@@ -140,7 +140,7 @@ PRIVILEGES
 以下示例使用 AdventureWorks 数据库。
   
 ### <a name="a-denying-select-permission-on-a-table"></a>A. 拒绝对表的 SELECT 权限  
- 以下示例拒绝用户 `RosaQdM` 对表 `Person.Address` 的 `SELECT` 权限。  
+ 以下示例拒绝用户 `SELECT` 对表 `RosaQdM` 的 `Person.Address` 权限。  
   
 ```  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
