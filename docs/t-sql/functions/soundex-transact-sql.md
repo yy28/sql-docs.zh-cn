@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3f0a8dd4c5faecc54b7d1c5a5d506fc7cf4ecd00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907069"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67907069"
 
   返回一个由四个字符组成的代码 (SOUNDEX)，用于评估两个字符串的相似性。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ SOUNDEX ( character_expression )
 ## <a name="return-types"></a>返回类型  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SOUNDEX 会根据字符串的发音，将字母数字字符串转换成一个由四个字符组成的代码。 该代码的第一个字符是 character_expression 的第一个字符，已转换为大写  。 代码的第二个字符到第四个字符是表示表达式中的字母的数字。 除非字母 A、E、I、O、U、H、W 和 Y 是字符串的首字母，否则将忽略这些字母。 如果需要生成一个四字符代码，将在末尾添加零。 有关 SOUNDEX 代码的详细信息，请参阅 [Soundex 索引系统](https://www.archives.gov/research/census/soundex.html)。  
   
  可比较不同字符串中的 SOUNDEX 代码以查看这些字符串发音的相似度。 DIFFERENCE 函数在两个字符串上执行一个 SOUNDEX，并返回一个整数，表示这些字符串的 SOUNDEX 代码的相似度。  

@@ -20,10 +20,10 @@ ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3adf38c1908e17dbac530cab0cc47658e9241559
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71961933"
 ---
 # <a name="shrink-a-file"></a>收缩文件
@@ -73,7 +73,7 @@ ms.locfileid: "71961933"
   
 3.  依次指向 **“任务”** 和 **“收缩”** ，再单击 **“文件”** 。  
   
-     **“数据库”**  
+     **Database**  
      显示所选数据库的名称。  
   
      **文件类型**  
@@ -122,7 +122,7 @@ ms.locfileid: "71961933"
   
      选中此选项后，将指定文件中的所有数据移至同一文件组中的其他文件中。 然后就可以删除空文件。 此选项与执行包含 EMPTYFILE 选项 DBCC SHRINKFILE 相同。  
   
-9. 单击“确定”  。  
+9. 单击“确定”。   
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -132,7 +132,7 @@ ms.locfileid: "71961933"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例使用 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) 将 `UserDB` 数据库中名为 `DataFile1` 的数据文件的大小收缩到 7 MB。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例使用 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) 将 `DataFile1` 数据库中名为 `UserDB` 的数据文件的大小收缩到 7 MB。  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   

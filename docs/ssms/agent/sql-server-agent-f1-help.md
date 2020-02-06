@@ -1,22 +1,23 @@
 ---
-title: SQL Server 代理的 F1 帮助 | Microsoft Docs
-ms.custom: ''
+title: SQL Server 代理的 F1 帮助
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 55f4bd55-aa61-4d5c-98fd-f85824206ea0
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 20be04fa82b22110644db982837b0e094825f044
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e85a87315642e201f8e66727faa2857c4df4f039
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261440"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242723"
 ---
 # <a name="sql-server-agent-f1-help"></a>SQL Server 代理的 F1 帮助
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

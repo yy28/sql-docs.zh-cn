@@ -1,10 +1,9 @@
 ---
-title: “打印”对话框 | Microsoft Docs
-ms.custom: ''
+title: “打印”对话框
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7591ac6ca80aabe5a9895b729184c2b4a6c4beb1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8c1eb1ef3959052fb285c713bf172521b74bc46b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266344"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255355"
 ---
 # <a name="print-dialog-box"></a>“打印”对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,13 +28,13 @@ ms.locfileid: "68266344"
 **名称**  
 指定打印机。 从列表中选择打印机。 您选择的打印机将成为默认打印机，直至您关闭 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或选择另一不同的打印机。 在列表下方字段中显示的信息适用于所选打印机。  
   
-**“状态”**  
+**Status**  
 描述所选打印机的状态，例如：忙或准备就绪。  
   
-**类型**  
+类型   
 标识所选打印机。  
   
-**位置**  
+**Where**  
 标识所选打印机的位置及其使用的打印机端口。  
   
 **注释**  

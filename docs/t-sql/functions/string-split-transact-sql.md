@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906835"
 ---
-# <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
+# <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -37,7 +37,7 @@ STRING_SPLIT 要求兼容性级别至少为 130。 级别低于 130 时，SQL Se
 
 若要更改数据库的兼容性级别，请参阅[查看或更改数据库的兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)。
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
 
@@ -48,20 +48,20 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>参数
 
  *string*  
- 任何字符类型（例如 nvarchar、varchar、nchar 或 char）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 任何字符类型（例如 nvarchar、varchar、nchar 或 char）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)     。  
   
- separator  
- 任何字符类型（例如 nvarchar(1)、varchar(1)、nchar(1) 或 char(1)）的单字符[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用作串联子字符串的分隔符。  
+ separator   
+ 任何字符类型（例如 nvarchar(1)、varchar(1)、nchar(1) 或 char(1)）的单字符[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用作串联子字符串的分隔符     。  
   
 ## <a name="return-types"></a>返回类型  
 
-返回其行是子字符串的单列表。 该列名为“value”。 如果任何输入参数为 nvarchar 或 nchar，则返回 nvarchar。 否则，返回 varchar。 返回类型的长度与字符串参数的长度相同。  
+返回其行是子字符串的单列表。 该列名为“value”  。 如果任何输入参数为 nvarchar 或 nchar，则返回 nvarchar    。 否则，返回 varchar  。 返回类型的长度与字符串参数的长度相同。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 
-STRING_SPLIT 输入包含分隔子字符串的字符串，并输入一个字符用作分隔符。 STRING_SPLIT 输出其行包含子字符串的单列表。 输出列的名称为“value”。
+STRING_SPLIT 输入包含分隔子字符串的字符串，并输入一个字符用作分隔符  。 STRING_SPLIT 输出其行包含子字符串的单列表。 输出列的名称为“value”  。
 
-输出行可以按任意顺序排列。 顺序不保证与输入字符串中的子字符串顺序匹配。 可以通过在 SELECT 语句中使用 ORDER BY 子句覆盖最终排序顺序 (`ORDER BY value`)。
+输出行可以按任意顺序排列。 顺序不保证与输入字符串中的子字符串顺序匹配  。 可以通过在 SELECT 语句中使用 ORDER BY 子句覆盖最终排序顺序 (`ORDER BY value`)。
 
 当输入字符串包含两个或多个连续出现的分隔符字符时，将出现长度为零的空子字符串。 空子字符串的处理方式与普通子字符串相同。 可以通过使用 WHERE 子句筛选出包含空的子字符串的任何行 (`WHERE value <> ''`)。 如果输入字符串为 NULL，则 STRING_SPLIT 表值函数返回一个空表。  
 
@@ -102,7 +102,7 @@ WHERE RTRIM(value) <> '';
 
 生产表中的某一列为逗号分隔的标记列表，如以下示例所示：  
   
-|ProductId|“属性”|Tags|  
+|ProductId|名称|Tags|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -118,10 +118,10 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|“属性”|值|  
+|ProductId|名称|值|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
-|1|Full-Finger Gloves|road|  
+|1|Full-Finger Gloves|道路|  
 |1|Full-Finger Gloves|touring|  
 |1|Full-Finger Gloves|bike|  
 |2|LL Headset|bike|  
@@ -129,7 +129,7 @@ FROM Product
 |3|HL Mountain Frame|mountain|  
 
   >[!NOTE]
-  > 输出的顺序不保证与输入字符串中的子字符串顺序匹配。
+  > 输出的顺序不保证与输入字符串中的子字符串顺序匹配  。
   
 ### <a name="c-aggregation-by-values"></a>C. 按值聚合
 

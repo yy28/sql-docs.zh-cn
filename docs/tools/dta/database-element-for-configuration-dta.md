@@ -1,10 +1,7 @@
 ---
-title: 用于配置的数据库元素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 用于配置的数据库元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 713fe8d41b4ec47e624b8fcc501c7e2b87653346
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: cb444b56c70d70fda8578459b83939ebcbcf3645
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116933"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306698"
 ---
 # <a name="database-element-for-configuration-dta"></a>用于配置的数据库元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  指定要用数据库引擎优化顾问进行假设配置（由 **配置** 元素指定）评估的数据库。  
+
+指定要用数据库引擎优化顾问进行假设配置（由 **配置** 元素指定）评估的数据库。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +39,7 @@ ms.locfileid: "68116933"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
@@ -49,7 +52,7 @@ ms.locfileid: "68116933"
 |**父元素**|[用于配置的服务器元素 (DTA)](../../tools/dta/server-element-for-configuration-dta.md)|  
 |**子元素**|[数据库的名称元素 (DTA)](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [数据库的架构元素 (DTA)](../../tools/dta/schema-element-for-database-dta.md)<br /><br /> [建议元素 (DTA)](../../tools/dta/recommendation-element-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在数据库引擎优化顾问 XML 架构中，此元素的名称为 **DatabaseTypecomplexType** 。 不要将此 **Database** 元素与其根父为 **Server** 元素的元素（出现在 XML 输入文件的顶部）混淆。 有关详细信息，请参阅[服务器的数据库元素 (DTA)](../../tools/dta/database-element-for-server-dta.md)。  
   
 ## <a name="example"></a>示例  

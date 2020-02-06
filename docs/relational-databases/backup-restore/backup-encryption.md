@@ -11,10 +11,10 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 19a8597136f073d609c7a9cc77ce8e2b73c72004
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71688293"
 ---
 # <a name="backup-encryption"></a>备份加密
@@ -26,7 +26,7 @@ ms.locfileid: "71688293"
   
  若要在备份期间加密，必须指定加密算法以及用于保护加密密钥的加密程序。 支持以下加密选项：  
   
-- **加密算法：** 支持的加密算法包括：AES 128、AES 192、AES 256 和 Triple DES  
+- **加密算法：** 支持的加密算法包括 AES 128、AES 192、AES 256 和 Triple DES  
   
 - **加密程序：** 证书或非对称密钥  
   
@@ -39,7 +39,7 @@ ms.locfileid: "71688293"
   
 ##  <a name="Benefits"></a> 优势  
   
-1. 加密数据库备份有助于保证数据安全：SQL Server 提供用于在创建备份时加密备份数据的选项。  
+1. 加密数据库备份有助于保护数据：SQL Server 提供在创建备份的同时加密备份数据的选项。  
   
 1. 加密还可用于使用 TDE 加密的数据库。  
   
@@ -49,10 +49,10 @@ ms.locfileid: "71688293"
   
 1. 可将加密密钥与扩展密钥管理 (EKM) 提供程序集成。  
  
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a>先决条件  
  以下是有关加密备份的先决条件：  
   
-1. **创建 master 数据库的数据库主密钥：** 数据库主密钥是一种用于保护数据库中存在的证书私钥和非对称密钥的对称密钥。 有关详细信息，请参阅 [SQL Server 和数据库加密密钥（数据库引擎）](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)。  
+1. **创建 master 数据库的数据库主密钥：** 数据库主密钥是一个对称密钥，用于保护数据库中证书和非对称密钥的私钥。 有关详细信息，请参阅 [SQL Server 和数据库加密密钥（数据库引擎）](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)。  
   
 1. 创建用于备份加密的证书或非对称密钥。 有关创建证书的详细信息，请参阅 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)。 有关创建非对称密钥的详细信息，请参阅[创建非对称密钥 (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "71688293"
   
 1. [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)选择某个备份任务后，可以在  “定义备份()任务”页的  “选项”选项卡上，选择  “备份加密”，并指定加密算法和证书或密钥以用于加密。  
   
-### <a name="using-transact-sql"></a>使用 Transact-SQL  
+### <a name="using-transact-sql"></a>“使用 Transact-SQL”  
  下面是用于加密备份文件的示例 TSQL 语句：  
   
 ```sql  
@@ -126,10 +126,10 @@ Backup-SqlDatabase -ServerInstance . -Database "<myDatabase>" -BackupFile "<myDa
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
-|主题/任务|描述|  
+|主题/任务|说明|  
 |-----------------|-----------------|  
 |[创建加密的备份](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|介绍创建加密的备份所需的基本步骤|  
-|[使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|提供了创建受 Azure 密钥保管库中的密钥保护的加密备份的示例。|  
+|[使用 Azure 密钥保管库的可扩展密钥管理 (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|提供了创建受 Azure 密钥保管库中的密钥保护的加密备份的示例。|  
   
 ## <a name="see-also"></a>另请参阅  
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)  

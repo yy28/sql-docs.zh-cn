@@ -17,10 +17,10 @@ ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70910831"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
@@ -39,7 +39,7 @@ ms.locfileid: "70910831"
 -   指定了表锁定（使用 TABLOCK）。 
   
     > [!NOTE]  
-    >  尽管在最小日志记录的大容量导入操作过程中，数据插入操作没有记录在事务日志中，但每当为表分配新区时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]仍会记录区分配信息。  
+    >  尽管在最小日志记录的大容量导入操作过程中，数据插入操作没有记录在事务日志中，但每当为表分配新区时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 仍会记录区分配信息。  
   
 -   表不是内存优化表。  
   

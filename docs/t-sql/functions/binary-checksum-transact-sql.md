@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 506f3f0e79501b16ea5455ab1ff4d4ee83a7abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040207"
 ---
-# <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
+# <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 返回按照表的某一行或表达式列表计算的二进制校验和值。
@@ -56,7 +56,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 ## <a name="return-types"></a>返回类型  
  **int**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 按照表中任一行计算的 `BINARY_CHECKSUM(*)` 返回相同的值，前提是后续没有对行进行修改。 `BINARY_CHECKSUM` 满足哈希函数的下列属性：在使用等于 (=) 运算符比较时，如果两个列表的相应元素类型相同且相等，则在任何两个表达式列表上应用的 BINARY CHECKSUM 将返回相同值。 对于该定义，我们认为指定类型的 NULL 值作为相等的值进行比较。 如果表达式列表中至少一个值发生更改，则表达式校验和也会更改。 但是，不保证此更改，因此若要检测值是否更改，建议仅当应用程序可以容忍偶然错过更改时，使用 `BINARY_CHECKSUM`。 否则，请考虑改用 `HASHBYTES`。 使用指定的 MD5 哈希算法时，`HASHBYTES` 为两个不同输入返回相同结果的可能性要比 `BINARY_CHECKSUM` 小得多。
   
 `BINARY_CHECKSUM` 可针对表达式列表运行，并为指定列表返回相同的值。 如果任意两个表达式列表的对应元素具有相同的类型和字节表示形式，则对这两个列表应用的 `BINARY_CHECKSUM` 将返回相同的值。 对于此定义，指定类型的 Null 值被认为具有相同的字节表示形式。
@@ -70,7 +70,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 * **nvarchar**  
 * **varchar**  
 
-或多个  
+或  
 
 * sql_variant（如果 sql_variant 的基类型为字符串数据类型）   。  
   

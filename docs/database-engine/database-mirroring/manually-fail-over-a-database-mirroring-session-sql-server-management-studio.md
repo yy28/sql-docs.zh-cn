@@ -15,10 +15,10 @@ ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ab61ea2aeebb4e901e93a113fb24a7a74640b059
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041748"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>手动故障转移数据库镜像会话 (SQL Server Management Studio)
@@ -27,7 +27,7 @@ ms.locfileid: "68041748"
   
  在手动故障转移过程中，将交换发生故障转移的数据库的主体服务器和镜像服务器的角色。 镜像数据库变成主体数据库，而主体数据库变成镜像数据库。 例如，下表显示了手动故障转移如何交换下面两个镜像伙伴的角色： `SQLDBENGINE0_1` 和 `SQLDBENGINE0_2`。  
   
-|“服务器”|故障转移之前|故障转移之后|  
+|服务器|在故障转移之前|在故障转移之后|  
 |------------|---------------------|--------------------|  
 |`SQLDBENGINE0_1`|PRINCIPAL|MIRROR|  
 |`SQLDBENGINE0_2`|MIRROR|PRINCIPAL|  

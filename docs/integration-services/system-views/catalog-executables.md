@@ -11,10 +11,10 @@ ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 687e6940b9674cdff852d8aff3e0f6c05423cc70
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296620"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
@@ -28,7 +28,7 @@ ms.locfileid: "71296620"
   
  可执行文件是添加到包的控制流中的任务或容器。  
   
-|列名|**Data type**|描述|  
+|列名称|**Data type**|说明|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|可执行文件的唯一标识符。|  
 |execution_id|**bigint**|执行实例的唯一标识符。|  
@@ -49,5 +49,5 @@ ms.locfileid: "71296620"
 > [!NOTE]  
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   

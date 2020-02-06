@@ -17,10 +17,10 @@ ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f52dd565f634061468a0eee4fbfbb2855da99c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082225"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE 全文权限 (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68082225"
 
   撤消全文目录或全文非索引字表权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,17 +53,17 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- permission  
+ permission   
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- ON FULLTEXT CATALOG ::full-text_catalog_name  
- 指定对其撤消权限的全文目录。 需要使用作用域限定符 ::。  
+ ON FULLTEXT CATALOG ::full-text_catalog_name    
+ 指定对其撤消权限的全文目录。 需要使用作用域限定符 ::  。  
   
- ON FULLTEXT STOPLIST ::_full-text_stoplist_name_  
- 指定要对其撤消权限的全文非索引字表。 需要使用作用域限定符 ::。  
+ ON FULLTEXT STOPLIST ::full-text_stoplist_name    
+ 指定要对其撤消权限的全文非索引字表。 需要使用作用域限定符 ::  。  
   
- database_principal  
- 指定要从中撤消权限的主体。 可以是以下类型之一：  
+ database_principal   
+ 指定要从中撤消权限的主体。 下列类型作之一：  
   
 -   数据库用户  
   
@@ -87,8 +87,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS revoking_principal  
- 指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 可以是以下类型之一：  
+ AS revoking_principal   
+ 指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
   
@@ -106,7 +106,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="fulltext-catalog-permissions"></a>FULLTEXT CATALOG 权限  
  全文目录是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下表列出了可撤消的对全文目录最为具体的限定权限，以及隐含这些权限的更为通用的权限。  

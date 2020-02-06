@@ -12,10 +12,10 @@ ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: af8c94c6705578371fcb6b4d260da6313b73e4ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013840"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>使可用性组脱机 (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "68013840"
 > [!CAUTION]  
 >  仅将 OFFLINE 选项用于可用性组资源的跨群集迁移。  
   
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a>先决条件  
   
 -   您对其输入 OFFLINE 命令的服务器实例必须正在运行 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 或更高版本（Enterprise Edition 或更高）。    
 -   可用性组当前必须处于联机状态。  
@@ -59,9 +59,9 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 ##  <a name="FollowUp"></a> 跟进：在可用性组处于脱机状态后  
   
--   **OFFLINE 操作的日志记录：** 启动了 OFFLINE 操作的 WSFC 节点的标识存储于 WSFC 群集日志和 SQL ERRORLOG 中。  
+-   **OFFLINE 操作的日志记录：**  启动了 OFFLINE 操作的 WSFC 节点的标识存储于 WSFC 群集日志和 SQL ERRORLOG 中。  
   
--   **如果在使组脱机之前未删除可用性组侦听程序：** 如果要将可用性组迁移到其他 WSFC 群集，请删除其侦听器的 VNN 和 VIP。 你可以通过使用故障转移群集管理控制台、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell cmdlet 或 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)删除侦听程序的 VNN 和 VIP。 请注意，在 Windows 8 上不推荐使用 cluster.exe。  
+-   **如果你在使可用性组脱机之前未删除该可用性组侦听程序：**  如果要将该可用性组迁移到其他 WSFC 群集，请删除该侦听程序的 VNN 和 VIP。 你可以通过使用故障转移群集管理控制台、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell cmdlet 或 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)删除侦听程序的 VNN 和 VIP。 请注意，在 Windows 8 上不推荐使用 cluster.exe。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -73,7 +73,7 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 -   [SQL Server 2012 技术文章](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 375993e4fd9506c129e4f98d9ad2193472e03edb
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531619"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server 大数据群集中使用 Sparklyr
@@ -80,7 +80,7 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>分布式 R 计算
 
-sparklyr 的一项功能是能够使用 [spark_apply](https://spark.rstudio.com/reference/spark_apply/) 来[分布 计算](https://spark.rstudio.com/guides/distributed-r/)。
+sparklyr 的一项功能是能够使用 [spark_apply](https://spark.rstudio.com/guides/distributed-r/) 来[分布 计算](https://spark.rstudio.com/reference/spark_apply/)。
 
 由于大数据群集使用 Livy 连接，因此必须在对“spark_apply”的调用中设置 `packages = FALSE`  。 有关详细信息，请参阅关于分布式 R 计算的 sparklyr 文档的 [Livy 部分](https://spark.rstudio.com/guides/distributed-r/#livy)。 使用此设置，只能在传递给“spark_apply”的 R 代码中使用已安装在 Spark 群集上的 R 包  。 下面的示例对此功能进行了演示：
 

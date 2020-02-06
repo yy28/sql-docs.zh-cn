@@ -15,10 +15,10 @@ ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 22101d8ec2f24eeb1a93708adf52b2b24060ce28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987148"
 ---
 # <a name="view-plan-guide-properties"></a>查看计划指南属性
@@ -65,7 +65,7 @@ ms.locfileid: "67987148"
      **名称**  
      显示计划指南的名称。  
   
-     **Parameters**  
+     **参数**  
      当作用域类型为 SQL 或 TEMPLATE 时，显示嵌入在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中的所有参数的名称和数据类型。  
   
      **作用域批处理**  
@@ -80,10 +80,10 @@ ms.locfileid: "67987148"
      **作用域类型**  
      显示其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的实体的类型。 这便指定了用于将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南匹配的上下文。 可能的值为 **OBJECT**、 **SQL**和 **TEMPLATE**。  
   
-     **声明专用纸**  
+     **Statement**  
      显示应用此计划指南的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
-4.  单击“确定”  。  
+4.  单击“确定”。   
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

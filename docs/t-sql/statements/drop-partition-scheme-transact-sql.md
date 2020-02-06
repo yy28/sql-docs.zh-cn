@@ -22,10 +22,10 @@ ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 709ba2af4cc06f1a1ff2314115f163032bd4227e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044026"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68044026"
 
   从当前数据库中删除一个分区方案。 分区方案使用 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 创建，使用 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 修改。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
  partition_scheme_name   
  要删除的分区方案的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  仅当不存在当前使用分区方案的表或索引时，才能删除分区方案。 如果存在使用分区方案的表或索引，DROP PARTITION SCHEME 将返回错误。 DROP PARTITION SCHEME 不删除文件组本身。  
   
 ## <a name="permissions"></a>权限  

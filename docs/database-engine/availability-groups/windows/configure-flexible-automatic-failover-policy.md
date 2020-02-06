@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 39e6e14700fe7ad9d9c1c3ba71eca82b3855beb2
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056686"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>为 Always On 可用性组配置灵活的自动故障转移策略
@@ -40,9 +40,9 @@ ms.locfileid: "74056686"
   
 -   只有三个副本支持自动故障转移。  
   
--   如果某个可用性组超过其 WSFC 故障阈值，则该 WSFC 群集不会尝试为该可用性组执行自动故障转移。 此外，该可用性组的 WSFC 资源组始终保持失败状态，直到群集管理员手动将该失败的资源组联机，或是数据库管理员对该可用性组执行手动故障转移。 WSFC 故障阈值  定义为给定时间段中可用性组所支持的最大故障数。 默认时间段为六个小时，此时间段中最大故障数的默认值为 *n*-1，其中*n* 是 WSFC 节点的数目。 若要更改给定的可用性组的故障阈值，请使用 WSFC 故障转移管理器控制台。  
+-   如果某个可用性组超过其 WSFC 故障阈值，则该 WSFC 群集不会尝试为该可用性组执行自动故障转移。 此外，该可用性组的 WSFC 资源组始终保持失败状态，直到群集管理员手动将该失败的资源组联机，或是数据库管理员对该可用性组执行手动故障转移。 WSFC 故障阈值  定义为给定时间段中可用性组所支持的最大故障数。 默认时间段为六个小时，此时间段中最大故障数的默认值为 *n*-1，其中 *n* 是 WSFC 节点的数目。 若要更改给定的可用性组的故障阈值，请使用 WSFC 故障转移管理器控制台。  
   
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载主副本的服务器实例。  
    
@@ -69,8 +69,8 @@ ms.locfileid: "74056686"
   
 |级别|失败条件|[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|PowerShell 值|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|一级|当服务器关闭时。 指定在发生以下某种情况时启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> 因为没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租期到期。 有关详细信息，请参阅[工作原理：SQL Server Always On 租约超时](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)。<br /><br /> <br /><br /> 这是限制最少的级别。|1|**OnServerDown**|  
-|二级|当服务器无响应时。 指定在发生以下某种情况时启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例未连接到群集，并且超出了可用性组的用户指定的运行状况检查超时阈值。<br /><br /> 可用性副本处于失败状态。|2|**OnServerUnresponsive**|  
+|一种|当服务器关闭时。 指定在发生以下某种情况时启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> 因为没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租期到期。 有关详细信息，请参阅 [工作原理：SQL Server AlwaysOn 租约超时](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)。<br /><br /> <br /><br /> 这是限制最少的级别。|1|**OnServerDown**|  
+|两种|当服务器无响应时。 指定在发生以下某种情况时启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例未连接到群集，并且超出了可用性组的用户指定的运行状况检查超时阈值。<br /><br /> 可用性副本处于失败状态。|2|**OnServerUnresponsive**|  
 |三级|出现严重服务器错误时。 指定在发生了严重的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部错误（例如孤立的自旋锁、严重的写访问冲突或过多的转储）时启动自动故障转移。<br /><br /> 这是默认级别。|3|**OnCriticalServerError**|  
 |四级|出现严重服务器错误时。 指定在发生了中等 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部错误（在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部资源池中出现持久的内存不足情况）时启动自动故障转移。|4|**OnModerateServerError**|  
 |五级|在出现任何限定的失败条件时。 指定在出现任何符合的失败条件时启动自动故障转移，这些失败条件包括：<br /><br /> 检测计划程序死锁。<br /><br /> 检测到无法解决的死锁。<br /><br /> <br /><br /> 这是限制最多的级别。|5|**OnAnyQualifiedFailureConditions**|  
@@ -98,15 +98,15 @@ ms.locfileid: "74056686"
   
         |[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|级别|当出现以下情况时，自动启动故障转移…|  
         |------------------------------|-----------|-------------------------------------------|  
-        |1|一级|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
-        |2|二级|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  
+        |1|一种|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
+        |2|两种|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  
         |3|三级|出现严重服务器错误时。 满足任何下限值条件或发生严重的内部服务器错误。<br /><br /> 这是默认级别。|  
         |4|四级|出现严重服务器错误时。 满足任何下限值条件或发生中度的服务器错误。|  
         |5|五级|在出现任何限定的失败条件时。 满足任何下限值条件或出现限定的失败条件。|  
   
          有关故障转移条件级别的更多信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
   
-    -   若要配置运行状况检查超时阈值，请使用 HEALTH_CHECK_TIMEOUT = *n* 选项，其中，*n* 是一个从 15000 毫秒（15 秒）到 4294967295 毫秒的整数。 默认值为 30000 毫秒（30 秒）  
+    -   若要配置运行状况检查超时阈值，请使用 HEALTH_CHECK_TIMEOUT = *n* 选项，其中， *n* 是一个从 15000 毫秒（15 秒）到 4294967295 毫秒的整数。 默认值为 30000 毫秒（30 秒）  
   
          例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句会将现有可用性组 `AG1`的运行状况检查超时阈值更改为 60,000 毫秒（1 分钟）。  
   
@@ -124,17 +124,17 @@ ms.locfileid: "74056686"
   
     -   若要设置故障转移条件级别，请使用 **FailureConditionLevel**_level_ 参数，其中 *level* 为以下值之一：  
   
-        |ReplTest1|级别|当出现以下情况时，自动启动故障转移…|  
+        |值|级别|当出现以下情况时，自动启动故障转移…|  
         |-----------|-----------|-------------------------------------------|  
-        |**OnServerDown**|一级|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
-        |**OnServerUnresponsive**|二级|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  
+        |**OnServerDown**|一种|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
+        |**OnServerUnresponsive**|两种|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  
         |**OnCriticalServerError**|三级|出现严重服务器错误时。 满足任何下限值条件或发生严重的内部服务器错误。<br /><br /> 这是默认级别。|  
         |**OnModerateServerError**|四级|出现严重服务器错误时。 满足任何下限值条件或发生中度的服务器错误。|  
         |**OnAnyQualifiedFailureConditions**|五级|在出现任何限定的失败条件时。 满足任何下限值条件或出现限定的失败条件。|  
   
          有关故障转移条件级别的更多信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
   
-         例如，以下命令会将现有可用性组 `AG1` 的故障条件级别更改为一级。  
+         例如，以下命令会将现有可用性组 `AG1`的故障条件级别更改为一级。  
   
         ```  
         Set-SqlAvailabilityGroup `   
@@ -172,7 +172,7 @@ ms.locfileid: "74056686"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [工作原理：SQL Server Always On 租约超时](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
+-   [工作原理：SQL Server AlwaysOn 租约超时](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -13,10 +13,10 @@ ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd0f778495220f227e2dd1fca42c8f5104ea7d2b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294229"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>列值分布配置文件请求选项（数据事件探查任务）
@@ -29,7 +29,7 @@ ms.locfileid: "71294229"
 > [!NOTE]  
 >  本主题中介绍的选项显示在 **“数据事件探查任务编辑器”** 的 **“配置文件请求”** 页中。 有关此编辑器页的详细信息，请参阅[数据事件探查任务编辑器（“配置文件请求”页）](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
- 有关如何使用数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 有关如何使用数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
  对于 **“列值分布配置文件请求”** ， **“请求属性”** 窗格显示下列选项组：  
@@ -38,7 +38,7 @@ ms.locfileid: "71294229"
   
 -   **常规**  
   
--   **Options**  
+-   **选项**  
   
 ### <a name="data-options"></a>Data 选项  
  **ConnectionManager**  
@@ -49,7 +49,7 @@ ms.locfileid: "71294229"
   
  有关详细信息，请参阅本主题中的“TableorView 选项”部分。  
   
- **Column**  
+ **列**  
  选择要进行事件探查的现有列。 选择 **(\*)** 可对所有列进行事件探查。  
   
  有关详细信息，请参阅本主题中的“Column 选项”部分。  
@@ -63,7 +63,7 @@ ms.locfileid: "71294229"
   
 #### <a name="column-options"></a>Column 选项  
  **IsWildCard**  
- 指定是否已选择通配符 **(\*)** 。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
+ 指定是否已选择通配符 **(\*)** 。 如果已选择 **(** ) **来对所有列进行事件探查，则此选项设置为 \*True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
   
  **ColumnName**  
  显示所选列的名称。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项空白。 此选项是只读的。  
@@ -74,7 +74,7 @@ ms.locfileid: "71294229"
 > [!NOTE]  
 >  如果将 **(\*)** 通配符用于 **ColumnName**，则 **CompareOptions** 为只读并设置为 **Default** 设置。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**Default**|根据源表中列的排序规则对数据进行排序和比较。|  
 |**BinarySort**|根据为每个字符所定义的位模式对数据进行排序和比较。 二进制排序顺序既区分大小写，也区分重音。 二进制排序顺序的速度也最快。|  
@@ -82,7 +82,7 @@ ms.locfileid: "71294229"
   
  如果选择 **DictionarySort**，还可以选择下表中列出的任意选项组合。 默认情况下，不会选择这些附加选项中的任何一个。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比较是否区分大小写字母。 如果设置了此选项，字符串比较会忽略大小写。 例如，"ABC" 和 "abc" 没有区别。|  
 |**IgnoreNonSpace**|指定比较是否区分空格字符和标注字符。 如果设置了此选项，则比较会忽略标注字符。 例如，“Ã¥”等于“a”。|  
@@ -97,7 +97,7 @@ ms.locfileid: "71294229"
  **ValueDistributionOption**  
  指定是否计算所有列值的分布。 此选项的默认值为 **FrequentValues**。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**AllValues**|计算所有列值的分布。|  
 |**FrequentValues**|仅计算其频率超出 **FrequentValueThreshold**中指定的最小值的值的分布。 输出报告中将不包括未满足 **FrequentValueThreshold** 的值。|  

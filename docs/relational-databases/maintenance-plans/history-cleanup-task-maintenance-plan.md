@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 37841e848aab5ff991741e5d460500834c9185e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115785"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>“清除历史记录”任务（维护计划）
@@ -27,7 +27,7 @@ ms.locfileid: "68115785"
  此语句使用 **sp_purge_jobhistory** 和 **sp_delete_backuphistory** 语句。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **连接**  
+ **Connection**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
@@ -70,7 +70,7 @@ ms.locfileid: "68115785"
  **使用特定用户名和密码**  
  使用 SQL Server 身份验证连接到 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 此选项不可用。  
   
- **User name**  
+ **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
  **密码**  

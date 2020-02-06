@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9b9f44c7fbd4b0b801347f1b1360165fb504e6bf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281507"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 运行 SSIS 包
@@ -28,7 +28,7 @@ SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 
 
 开始之前，请确保有最新版本的 SQL Server Management Studio (SSMS)。 要下载 SSMS，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
+Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
 
 ## <a name="supported-platforms"></a>支持的平台
 
@@ -55,9 +55,9 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
 
 1. 打开 SQL Server Management Studio。
 
-2. 在“连接到服务器”对话框中，输入以下信息  ：
+2. 在“连接到服务器”对话框中，输入以下信息： 
 
-   | 设置       | 建议的值 | 详细信息 | 
+   | 设置       | 建议的值 | 更多信息 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
    | **服务器名称** | 完全限定的服务器名称 | 如果要连接到 Azure SQL 数据库服务器，该名称为以下格式：`<server_name>.database.windows.net`。 |
@@ -65,7 +65,7 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
    | **登录** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
 
-3. 单击 **“连接”** 。 对象资源管理器窗口在 SSMS 中打开。 
+3. 单击“连接”  。 对象资源管理器窗口在 SSMS 中打开。 
 
 4. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”，查看 SSIS 目录数据库中的对象   。
 

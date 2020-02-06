@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e3560501061819b3911d7dd628d29e5dda09f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999870"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 事件类
@@ -25,7 +25,7 @@ ms.locfileid: "67999870"
   
 ## <a name="background-job-error-event-class-data-columns"></a>Background Job Error 事件类的数据列  
   
-|数据列名称|数据类型|描述|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|作业指定的数据库的 ID。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|是|  
@@ -37,12 +37,12 @@ ms.locfileid: "67999870"
 |**IntegerData**|**int**|作业尝试的次数（仅限**EventSubClass** 1）。|25|是|  
 |**IntegerData2**|**int**|作业序列号。|55|是|  
 |**Exchange Spill**|**int**|系统分配的对象 ID。|22|是|  
-|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录名。|64|是|  
-|**Severity**|**int**|上次尝试中出现的错误的严重级别（仅限**EventSubClass** 1）。|20|是|  
+|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录名。|64|是|  
+|**严重性**|**int**|上次尝试中出现的错误的严重级别（仅限**EventSubClass** 1）。|20|是|  
 |**StartTime**|**datetime**|创建作业的时间。|14|是|  
 |**State**|**int**|上次尝试中出现的错误状态（仅限**EventSubClass** 1）。|30|是|  
 |**TextData**|**ntext**|事件子类值的文本说明。|1|是|  
-|**类型**|**int**|作业类型。|57|是|  
+|类型 |**int**|作业类型。|57|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   

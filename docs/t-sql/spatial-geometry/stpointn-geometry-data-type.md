@@ -18,10 +18,10 @@ ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 81808f6387942bd3ba8aa01f4eeaa5bd93b2dcba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066413"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN（geometry 数据类型）
@@ -43,11 +43,11 @@ ms.locfileid: "68066413"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
- 开放地理空间联盟 (OGC) 类型：**Point**  
+ 开放地理空间信息联盟 (OGC) 类型：Point   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 **geometry** 实例是用户创建的，则 `STPointN()` 返回由 *expression* 通过按照点的原始输入顺序对点进行排序而指定的点。  
   
  如果 **geometry** 实例是系统构建的，则 `STPointN()` 返回由 *expression* 通过按照点的输出顺序对所有点进行排序而指定的点，点的排序顺序为：首先按几何图形，然后按几何图形中的环（如果适用），最后按环中的点。 此顺序是确定的。  

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e97480b767e10a27c7e9647c2e6ae7369d4b37f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040236"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68040236"
 
 此函数返回组中各值的平均值。 将忽略 null 值。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -51,13 +51,13 @@ DISTINCT
 指定 AVG 只在每个值的唯一实例上执行，而不管该值出现了多少次。
   
 *expression*  
-精确数值或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不允许使用聚合函数和子查询。
+精确数值或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。 不允许使用聚合函数和子查询。
   
-OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**  
-partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。
+OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**  
+partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序  。 需要 order_by_clause  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
-expression 的计算结果确定返回类型。
+expression 的计算结果确定返回类型  。
   
 |表达式结果|返回类型|  
 |---|---|
@@ -65,12 +65,12 @@ expression 的计算结果确定返回类型。
 |**smallint**|**int**|  
 |**int**|**int**|  
 |**bigint**|**bigint**|  
-|decimal 类别 (p, s)|**decimal(38, min(s,6))**|  
-|money 和 smallmoney 类别|**money**|  
-|float 和 real 类别|**float**|  
+|decimal 类别 (p, s) |**decimal(38, min(s,6))**|  
+|money 和 smallmoney 类别  |**money**|  
+|float 和 real 类别  |**float**|  
   
-## <a name="remarks"></a>Remarks  
-如果 expression 的数据类型是别名数据类型，则返回类型也具有别名数据类型。 但是，如果别名数据类型的基本数据类型得到提升（例如，从 tinyint 提升到 int），则返回值将使用提升的数据类型，而非别名数据类型。
+## <a name="remarks"></a>备注  
+如果 expression 的数据类型是别名数据类型，则返回类型也具有别名数据类型  。 但是，如果别名数据类型的基本数据类型得到提升（例如，从 tinyint 提升到 int），则返回值将使用提升的数据类型，而非别名数据类型   。
   
 AVG () 可计算一组值的平均值，方法是用一组值的总和除以非 Null 值的计数。 如果总和超过返回值数据类型的最大值，AVG() 将返回错误。
   
@@ -146,7 +146,7 @@ FROM Production.Product;
 ```
   
 ### <a name="d-using-avg-without-distinct"></a>D. 不带 DISTINCT 使用 AVG  
-如果不使用 DISTINCT，`AVG` 函数将计算出 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Product` 表中所有产品的平均标价，包括任何重复值。
+如果不使用 DISTINCT，`AVG` 函数将计算出 `Product` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中所有产品的平均标价，包括任何重复值。
   
 ```sql
 SELECT AVG(ListPrice)  
@@ -163,7 +163,7 @@ FROM Production.Product;
 ```
   
 ### <a name="e-using-the-over-clause"></a>E. 使用 OVER 子句  
-以下示例将 AVG 函数与 OVER 子句结合使用，以便为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Sales.SalesPerson` 表中的每个地区提供年度销售额的移动平均线。 数据按 `TerritoryID` 分区并在逻辑上按 `SalesYTD` 排序。 这意味着，将基于年度销售额为各区域计算 AVG 函数。 请注意，对于 `TerritoryID` 1，2005 销售年度存在两行，分别表示在该年度有销售业绩的两个销售人员。 将计算这两行的平均销售额，然后在计算中包括表示 2006 年销售额的第三行。
+以下示例将 AVG 函数与 OVER 子句结合使用，以便为 `Sales.SalesPerson` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中的每个地区提供年度销售额的移动平均线。 数据按 `TerritoryID` 分区并在逻辑上按 `SalesYTD` 排序。 这意味着，将基于年度销售额为各区域计算 AVG 函数。 请注意，对于 `TerritoryID` 1，2005 销售年度存在两行，分别表示在该年度有销售业绩的两个销售人员。 将计算这两行的平均销售额，然后在计算中包括表示 2006 年销售额的第三行。
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   

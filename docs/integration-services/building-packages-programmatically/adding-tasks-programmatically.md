@@ -17,10 +17,10 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7357e1508172e5b4debbdea99967314c45d53bf4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299063"
 ---
 # <a name="adding-tasks-programmatically"></a>以编程方式添加任务
@@ -321,7 +321,7 @@ End Module
   
  在代码中使用 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 类而不是转换为特定于任务的类具有下列好处：  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> 访问接口不要求在代码中引用程序集。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost><xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> 访问接口不要求在代码中引用程序集。  
   
 -   您可以编写适用于任何任务的通用例程，因为您无需在编译时知道任务的名称。 这样的通用例程包含的方法中，您向方法传递任务的名称，因此方法代码适用于所有任务。 这是一种编写测试代码的好方法。  
   

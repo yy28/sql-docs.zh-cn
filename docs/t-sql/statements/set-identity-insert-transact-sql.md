@@ -24,18 +24,18 @@ author: CarlRabeler
 ms.author: carlrab
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 1b1706a78402c705eac92f135a492ea352544fe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928961"
 ---
-# <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
+# <a name="set-identity_insert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 允许将显式值插入到表的标识列中。  
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
  *table_name*  
  包含标识列的表的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  任何时候，一个会话中只有一个表的 IDENTITY_INSERT 属性可以设置为 ON。 如果某个表已将此属性设置为 ON，则对另一个表发出 SET IDENTITY_INSERT ON 语句时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个错误信息，指出 SET IDENTITY_INSERT 已设置为 ON，并报告已将其属性设置为 ON 的表。  
   
  如果插入值大于表的当前标识值，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动将新插入值作为当前标识值使用。  

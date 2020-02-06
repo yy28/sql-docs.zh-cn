@@ -11,10 +11,10 @@ ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f2678853d13436811b53b40473a04191625535db
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295135"
 ---
 # <a name="catalogworker_agents-ssisdb-database"></a>catalog.worker_agents（SSISDB 数据库）
@@ -26,18 +26,18 @@ ms.locfileid: "71295135"
 
 显示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker 的相关信息。
 
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |WorkerAgentId|**uniqueidentifier**|Scale Out Worker 的 Worker 代理 ID。|
 |IsEnabled|**bit**|是否启用 Scale Out Worker。|
 |DisplayName|**nvarchar(256)**|Scale Out Worker 的显示名称。|
-|描述|**nvarchar(256)**|Scale Out Worker 的相关说明。|
+|说明|**nvarchar(256)**|Scale Out Worker 的相关说明。|
 |MachineName|**nvarchar(256)**|Scale Out Worker 的计算机名称。|
 |Tags|**nvarchar(max)**|Scale Out Worker 的标记。|
 |UserAccount|**nvarchar(256)**|运行 Scale Out Worker 服务的用户帐户。|
 |LastOnlineTime|**datetimeoffset(7)**|Scale Out Worker 上次联机的时间。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 此视图对于使用 SSISDB 目录连接到 Scale Out Master 的每个 Scale Out Worker 显示一行。
 
 ## <a name="permissions"></a>权限

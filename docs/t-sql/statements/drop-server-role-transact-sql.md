@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929256"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67929256"
   
  用户定义的服务器角色是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中的新增角色。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ DROP SERVER ROLE role_name
  role_name   
  指定要从服务器中删除的用户定义的服务器角色。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  无法从服务器中删除拥有安全对象的用户定义服务器角色。 若要删除拥有安全对象的用户定义服务器角色，必须先转移这些安全对象的所有权或删除这些安全对象。  
   
  无法删除拥有成员的用户定义服务器角色。 若要删除拥有成员的用户定义服务器角色，必须先使用 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 删除该角色的成员。  
@@ -68,7 +68,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>B. 查看角色成员身份  
- 若要查看角色成员身份，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“服务器角色(成员)”  页或执行以下查询：  
+ 若要查看角色成员身份，请使用  **中的“服务器角色(成员)”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]页或执行以下查询：  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

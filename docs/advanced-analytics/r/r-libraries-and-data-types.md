@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727415"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R 与 SQL Server 之间的数据类型映射
@@ -101,7 +101,7 @@ Microsoft SQL Server 2016 和 Microsoft Azure SQL 数据库对数据类型转换
 如果某个特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不受 R 支持，但你需要在 R 脚本中使用数据列，我们建议在 R 脚本中使用这些数据之前，使用 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) 函数确保数据类型转换按预期执行。  
 
 > [!WARNING]
-> 如果在移动数据时使用 **rxDataStep** 删除不兼容的列，请注意，**RxSqlServerData** 数据源类型不支持 _varsToKeep_ 和 _varsToDrop_ 参数。
+> 如果在移动数据时使用 **rxDataStep** 删除不兼容的列，请注意，_RxSqlServerData_ 数据源类型不支持 _varsToKeep_ 和 **varsToDrop** 参数。
 
 
 ## <a name="examples"></a>示例
@@ -140,7 +140,7 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|1|1|你好|6e225611-4b58-4995-a0a5-554d19012ef1|4|
 |1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 注意使用 R 中的 `str` 函数可获取输出数据的架构。 此函数返回以下信息：
@@ -168,7 +168,7 @@ outputDataSet <- inputDataSet'
 -   **列 C4**。 列包含由 R 脚本生成的值且不会出现在原始数据中。
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>示例 2：使用 R 进行动态列选择
+## <a name="example-2-dynamic-column-selection-using-r"></a>示例 2︰使用 R 进行动态列选择
 
 以下示例演示如何使用 R 代码来检查无效的列类型。 该查询使用 SQL Server 系统视图获取指定表的架构，然后删除指定的类型无效的所有列。
 

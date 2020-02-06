@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903020"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>数据库引擎权限入门
@@ -225,7 +225,7 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
  有关可帮助你入门的更多主题，请参阅：  
   
 -   [教程：数据库引擎入门](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
@@ -237,7 +237,7 @@ JOIN sys.database_principals AS dRole
 -   [教程：编写 Transact-SQL 语句](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ [SQL Server 数据库引擎和 Azure SQL 数据库的安全中心](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [安全函数 (Transact-SQL)](../../../t-sql/functions/security-functions-transact-sql.md)   
  [与安全性相关的动态管理视图和函数 (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
  [安全性目录视图 (Transact-SQL)](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

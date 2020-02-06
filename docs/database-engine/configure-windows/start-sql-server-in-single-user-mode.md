@@ -14,10 +14,10 @@ ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1cb488b6ce3dc21567b4f64738f9c26910c61f17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037161"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>在单用户模式下启动 SQL Server
@@ -68,7 +68,7 @@ ms.locfileid: "68037161"
 ## <a name="see-also"></a>另请参阅  
  [启动、停止或暂停 SQL Server 代理服务](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
  [用于数据库管理员的诊断连接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
+ [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   
  [检查点 (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)  

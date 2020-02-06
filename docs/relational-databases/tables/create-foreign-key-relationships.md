@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123749"
 ---
 # <a name="create-foreign-key-relationships"></a>创建外键关系
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-本文介绍了如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建外键关系。 当希望将一个表的行与另一个表的行相关联时，您可在这两个表之间创建关系。
+本文介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建外键关系。 当希望将一个表的行与另一个表的行相关联时，您可在这两个表之间创建关系。
 
 ## <a name="BeforeYouBegin"></a> 开始之前！ 限制和局限
 
@@ -71,9 +71,9 @@ ms.locfileid: "68123749"
 
 ## <a name="create-a-foreign-key-in-a-new-table"></a>在新表中创建外键
 
-### <a name="using-transact-sql"></a>使用 Transact-SQL
+### <a name="using-transact-sql"></a>“使用 Transact-SQL”
 
-下面的示例创建一个表，并对列 `TempID` 定义外键约束，以引用 AdventureWorks 数据库中 `Sales.SalesReason` 表内的列 `SalesReasonID`。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用于确保对 `Sales.SalesReason` 表的更改自动传播到 `Sales.TempSalesReason` 表。    
+下面的示例创建一个表，并对列 `TempID` 定义外键约束，以引用 AdventureWorks 数据库中 `SalesReasonID` 表内的列 `Sales.SalesReason`。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用于确保对 `Sales.SalesReason` 表的更改自动传播到 `Sales.TempSalesReason` 表。    
 
 ```sql
 CREATE TABLE Sales.TempSalesReason 
@@ -90,8 +90,8 @@ CREATE TABLE Sales.TempSalesReason
 
 ## <a name="create-a-foreign-key-in-an-existing-table"></a>在现有表中创建外键
 
-### <a name="using-transact-sql"></a>使用 Transact-SQL
-下面的示例对列 `TempID` 创建外键，并引用 AdventureWorks 数据库中 `Sales.SalesReason` 表内的列 `SalesReasonID`。
+### <a name="using-transact-sql"></a>“使用 Transact-SQL”
+下面的示例对列 `TempID` 创建外键，并引用 AdventureWorks 数据库中 `SalesReasonID` 表内的列 `Sales.SalesReason`。
 
 ```sql
 ALTER TABLE Sales.TempSalesReason

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f624ada102ddc74f1062659a35dd758b5c33ce7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295859"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel
@@ -55,7 +55,7 @@ ms.locfileid: "71295859"
 
 如果没有安装 Excel 的连接组件，首先需要下载这些组件，然后才能通过 SSIS 从 Excel 导出数据或将数据导入 Excel。 默认情况下，没有安装 Excel 的连接组件。
 
-从此处下载 Excel 的最新版连接组件：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。 最新版组件可以打开 Excel 早期版本创建的文件。
+在此处下载用于 Excel 的最新版连接组件：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。 最新版组件可以打开 Excel 早期版本创建的文件。
 
 ### <a name="notes-about-the-download-and-installation"></a>有关下载和安装说明
 
@@ -67,7 +67,7 @@ ms.locfileid: "71295859"
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-    如果安装 2016 可再发行组件遇到问题，请改为从此处安装 2010 可再发行组件：[Microsoft Access 数据库引擎 2010 可再发行组件](https://www.microsoft.com/download/details.aspx?id=13255)。 （不再发行 Excel 2013。）
+    如果安装 2016 可再发行组件遇到问题，请改为从此处安装 2010 可再发行组件：[Microsoft Access 2010 可再发行组件](https://www.microsoft.com/download/details.aspx?id=13255)。 （不再发行 Excel 2013。）
 
 ## <a name="specify-excel"></a> 指定 Excel 作为数据源
 
@@ -93,9 +93,9 @@ ms.locfileid: "71295859"
 
 输入路径和文件名，格式如下所示：
 
--   针对本地计算机上的文件，指定 C:\\TestData.xlsx  。
+-   针对本地计算机上的文件，指定 C:**TestData.xlsx\\** 。
 
--   针对网络共享上的文件，指定 \\\\Sales\\Data\\TestData.xlsx  。
+-   针对网络共享上的文件，指定 **\\Sales\\Data\\TestData.xlsx\\** 。
 
 或者，通过使用“打开”对话框，单击“浏览”定位电子表格   。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "71295859"
 
     -   要使用“工作表”或“命名区域”，请在“选择源表和视图”页的“目标”列中，选择目标工作表和命名区域     。
 
-    -   要使用用其地址指定的“未命名区域”，请在“选择源表和视图”页的“目标”列中输入区域，格式如下所示（不含分隔符）：`Sheet1$A1:B5`    。 该向导会添加分隔符。
+    -   要使用用其地址指定的“未命名区域”，请在“选择源表和视图”页的“目标”列中输入区域，格式如下所示（不含分隔符）：    `Sheet1$A1:B5`。 该向导会添加分隔符。
 
 选择或输入要导入或导出的 Excel 对象后，还可在向导的“选择源表和视图”页上执行以下操作  ：
 

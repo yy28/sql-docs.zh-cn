@@ -28,19 +28,19 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5a3fa36b42af67c26a5351a9d8ba7319fc37c4b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984398"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   拒绝为主体授予权限。 防止该主体通过组或角色成员身份继承权限。 DENY 优先于所有权限，但 DENY 不适用于 sysadmin 固定服务器角色的对象所有者或成员。
-  安全性注意事项：sysadmin 固定服务器角色的成员和对象所有者不能拒绝权限。
+  安全性注意事项：sysadmin 固定服务器角色的成员和对象所有者不能拒绝权限  。
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -108,31 +108,31 @@ DENY
  PRIVILEGES  
  包含此参数是为了符合 ISO 标准。 请不要更改 ALL 的行为。  
   
- permission  
+ permission   
  权限的名称。 下面列出的子主题介绍了不同权限与安全对象之间的有效映射。  
   
  *column*  
  指定表中拒绝授予其权限的列名。 需要使用圆括号 ()。  
   
- class  
- 指定拒绝授予其权限的安全对象的类。 需要使用作用域限定符 ::。  
+ class   
+ 指定拒绝授予其权限的安全对象的类。 需要使用作用域限定符 ::  。  
   
- securable  
+ securable   
  指定拒绝授予其权限的安全对象。  
   
- TO principal  
+ TO principal   
  主体的名称。 可以对其拒绝安全对象权限的主体随安全对象而异。 有关有效的组合，请参阅下面列出的特定于安全对象的主题。  
   
  CASCADE  
  指示拒绝授予指定主体该权限，同时，对该主体授予了该权限的所有其他主体，也拒绝授予该权限。 当主体具有带 GRANT OPTION 的权限时，为必选项。  
   
- AS principal  
+ AS principal   
  指定执行此查询的主体要从哪个主体派生其拒绝该权限的权利。
 使用 AS principal 子句指示：记录为权限的拒绝者的主体应为执行该语句的用户以外的主体。 例如，假设用户 Mary 是 principal_id 12，用户 Raul 是主体 15。 Mary 执行 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` 现在，即使语句的实际执行者是用户 13 (Mary)，sys.database_permissions 表仍将指示 deny 语句的 grantor_prinicpal_id 为 15 (Raul)。
   
 在此语句中使用 AS 并不意味着能够模拟其他用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  DENY 语句的完整语法很复杂。 上面的语法关系图进行了简化以突出其结构。 下列主题说明了用于拒绝授予特定安全对象的权限的完整语法。  
   
  如果在拒绝为主体授予某种权限时未指定 CASCADE，而之前为该主体授予此权限时指定了 GRANT OPTION，则 DENY 将失败。  
@@ -163,8 +163,8 @@ DENY
 |非对称密钥|[DENY 非对称密钥权限 (Transact-SQL)](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  
 |可用性组|[DENY 可用性组权限 (Transact-SQL)](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)|  
 |证书|[DENY 证书权限 (Transact-SQL)](../../t-sql/statements/deny-certificate-permissions-transact-sql.md)|  
-|约定|[DENY Service Broker 权限 (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|“数据库”|[DENY 数据库权限 (Transact-SQL)](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
+|合约|[DENY Service Broker 权限 (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|数据库|[DENY 数据库权限 (Transact-SQL)](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
 |数据库作用域凭据|[DENY 数据库作用域凭据 (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)|  
 |端点|[DENY 终结点权限 (Transact-SQL)](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
 |全文目录|[DENY 全文权限 (Transact-SQL)](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
@@ -179,7 +179,7 @@ DENY
 |路由|[DENY Service Broker 权限 (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |架构|[DENY 架构权限 (Transact-SQL)](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
 |搜索属性列表|[DENY 搜索属性列表权限 (Transact-SQL)](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)|  
-|“服务器”|[DENY 服务器权限 (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
+|服务器|[DENY 服务器权限 (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
 |服务|[DENY Service Broker 权限 (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |存储过程|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |对称密钥|[DENY 对称密钥权限 (Transact-SQL)](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)|  
@@ -188,7 +188,7 @@ DENY
 |表|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |类型|[DENY 类型权限 (Transact-SQL)](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
 |用户|[DENY 数据库主体权限 (Transact-SQL)](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|“查看”|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|查看|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |XML 架构集合|[DENY XML 架构集合权限 (Transact-SQL)](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>另请参阅  

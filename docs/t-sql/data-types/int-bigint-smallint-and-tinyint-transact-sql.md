@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077902"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
@@ -40,22 +40,22 @@ ms.locfileid: "68077902"
 
 使用整数数据的精确数字数据类型。 若要节省数据库空间，请使用能够可靠包含所有可能值的最小数据类型。 例如，对于一个人的年龄，tinyint 就足够了，因为没人活到 255 岁以上。 但对于建筑物的年龄，tinyint 就不再适应，因为建筑物的年龄可能超过 255 年。
   
-|数据类型|范围|存储器|  
+|数据类型|范围|存储|  
 |---|---|---|
 |**bigint**|-2^63 (-9,223,372,036,854,775,808) 到 2^63-1 (9,223,372,036,854,775,807)|8 字节|  
 |**int**|-2^31 (-2,147,483,648) 到 2^31-1 (2,147,483,647)|4 个字节|  
 |**smallint**|-2^15 (-32,768) 到 2^15-1 (32,767)|2 字节|  
 |**tinyint**|0 到 255|1 字节|  
   
-## <a name="remarks"></a>Remarks  
-int 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的主要整数数据类型  。 bigint 数据类型用于整数值可能超过 int 数据类型支持范围的情况   。
+## <a name="remarks"></a>备注  
+int 数据类型是  **中的主要整数数据类型**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 bigint 数据类型用于整数值可能超过 int 数据类型支持范围的情况   。
   
 在数据类型优先次序表中，bigint 介于 smallmoney 和 int 之间    。
   
 仅当参数表达式为 bigint 数据类型时，函数才返回 bigint   。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会自动将其他整数数据类型（tinyint、smallint 和 int）提升到 bigint     。
   
 > [!CAUTION]  
->  使用 +、-、\*、/ 或 % 等算术运算符将 int、smallint、tinyint 或 bigint 常量值隐式或显式转换为 float、real、decimal 或 numeric 数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算数据类型和表达式结果的精度时应用的规则有所不同，这取决于查询是否是自动参数化的         。  
+>  使用 +、-、\*、/ 或 % 等算术运算符将 int、smallint、tinyint 或 bigint 常量值隐式或显式转换为 float、real、decimal 或 numeric 数据类型时， **计算数据类型和表达式结果的精度时应用的规则有所不同，这取决于查询是否是自动参数化的**        [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 >   
 >  因此，查询中的类似表达式有时可能会生成不同的结果。 如果查询不是自动参数化的，则将常量值转换为指定的数据类型之前，首先将其转换为 numeric，该数据类型的精度很大，足以保存常量值  。 例如，常量值 1 转换为 numeric (1, 0)，常量值 250 转换为 numeric (3, 0)   。  
 >   

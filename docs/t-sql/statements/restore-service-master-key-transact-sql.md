@@ -24,10 +24,10 @@ ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a4bbbb9b08c63e6ab6f8b68d304b611847707558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141251"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68141251"
 
   从备份文件中导入服务主密钥。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>参数  
- FILE ='path\_to\_file'     
+ FILE ='path**to**file' _\_\__   
  指定存储服务主密钥的完整路径（包括文件名）。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径  。  
   
  PASSWORD ='password'     
@@ -55,7 +55,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
  FORCE  
  即使存在数据丢失的风险，也要强制替换服务主密钥。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当还原服务主密钥时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对所有已使用当前服务主密钥加密的密钥和机密内容进行解密，然后使用从备份文件中加载的服务主密钥对这些密钥和机密内容进行加密。  
   
  如果有任意一种解密操作失败，则还原操作将会失败。 您可以使用 FORCE 选项忽略错误，但是该选项会使无法进行解密的数据丢失。  

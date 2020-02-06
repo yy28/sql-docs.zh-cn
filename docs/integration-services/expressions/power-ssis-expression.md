@@ -13,10 +13,10 @@ ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 818f99100150c366c3caf982555f802b2ca6fc68
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297439"
 ---
 # <a name="power-ssis-expression"></a>POWER（SSIS 表达式）
@@ -43,7 +43,7 @@ POWER(numeric_expression,power)
 ## <a name="result-types"></a>结果类型  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  执行幂运算前， *numeric_expression* 和 *power* 参数会转换为 DT_R8 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  如果 *numeric_expression* 的计算结果为零，并且 *power* 为负，则表达式计算器将返回错误，并将返回结果设置为 Null。  

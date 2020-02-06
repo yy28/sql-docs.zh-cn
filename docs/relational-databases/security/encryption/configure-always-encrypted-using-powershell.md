@@ -11,16 +11,16 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594417"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 配置 Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-SqlServer PowerShell 模块提供用于在 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中配置 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 的 cmdlet。
+SqlServer PowerShell 模块提供用于在 [ 或 ](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 中配置 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]Always Encrypted[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 cmdlet。
 
 ## <a name="security-considerations-when-using-powershell-to-configure-always-encrypted"></a>使用 PowerShell 配置 Always Encrypted 时的安全注意事项
 
@@ -121,7 +121,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 
 以下 PowerShell cmdlet 可供 Always Encrypted 使用：
 
-|CMDLET |描述
+|CMDLET |说明
 |:---|:---
 |**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**   |执行 Azure 身份验证，获取身份验证令牌。
 |**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**   |为数据库中的现有列加密密钥对象添加新的加密值。
@@ -146,7 +146,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 
 ## <a name="see-also"></a>另请参阅
 
-- [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 密钥管理概述](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [使用 SQL Server Management Studio 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)

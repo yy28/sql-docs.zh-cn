@@ -1,28 +1,25 @@
 ---
-title: 基于事件结束时间筛选事件 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 基于事件结束时间筛选事件
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- event end times [SQL Server]
-- filters [SQL Server], traces
-- traces [SQL Server], filters
-- traces [SQL Server], events
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e6f27e50121261baa17409f67c5d70bde0f1cba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 8372ce58317eead122675f3585be01f5da7eb829
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930017"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307260"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>基于事件结束时间筛选事件 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍了如何通过使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]来根据事件结束时间筛选跟踪事件。  
   
@@ -47,6 +44,6 @@ ms.locfileid: "67930017"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

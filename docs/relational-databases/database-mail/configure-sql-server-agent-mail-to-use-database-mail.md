@@ -14,10 +14,10 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0692421ca7e63b419c99ecc835516af4cbd5af0
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095778"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>配置 SQL Server 代理邮件以使用数据库邮件
@@ -37,9 +37,9 @@ ms.locfileid: "74095778"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
   > [!NOTE]
-  > 托管实例上的 SQL 代理始终配置为使用数据库邮件，因此在托管实例上此内容不适用。 在托管实例中，需要具有必须调用的配置文件 [AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)，才能将 SQL 代理与数据库邮件绑定  。 
+  > 托管实例上的 SQL 代理始终配置为使用数据库邮件，因此在托管实例上此内容不适用。 在托管实例中，需要具有必须调用的配置文件 **AzureManagedInstance_dbmail_profile[，才能将 SQL 代理与数据库邮件绑定](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** 。 
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   [启用数据库邮件](../../relational-databases/database-mail/configure-database-mail.md)。  
   

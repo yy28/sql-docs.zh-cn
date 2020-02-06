@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09f32949faca6994d460284a56e2b08315f1b43b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072254"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+（字符串串联）(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68072254"
 
   字符串表达式中的运算符，它将两个或多个字符串或二进制字符串、列或字符串和列名的组合串联到一个表达式中（字符串运算符）。  例如，`SELECT 'book'+'case';` 返回 `bookcase`。
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ expression + expression
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 字符和二进制数据类型类别中的任何一个数据类型的有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，但 image、ntext 或 text 数据类型除外。 两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。  
+ 字符和二进制数据类型类别中的任何一个数据类型的有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，但 image、ntext 或 text 数据类型除外    。 两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。  
   
  在二进制字符串之间串联二进制字符串和任何字符串时，必须显式转换字符数据。 以下示例显示了对于二进制串联，何时必须使用 `CONVERT` 或 `CAST`，何时不需要使用 `CONVERT` 或 `CAST`。  
   
@@ -67,7 +67,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>结果类型  
  返回优先级最高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  +（字符串串联）运算符在用于长度为零的空字符串时的作用与用于 NULL 或未知值时不同。 长度为零的字符串可以指定为两个引号，引号内没有任何字符。 长度为零的二进制字符串可以指定为不带以十六进制常量指定的任何字节值的 0x。 串联长度为零的字符串始终要串联上述两个指定的字符串。 处理具有空值的字符串时，串联结果取决于会话设置。 与对空值执行的算术运算一样，当将空值添加到已知值时，结果通常是未知值，对空值执行的字符串串联运算也会产生空的结果。 但是，可以通过更改当前会话的 `CONCAT_NULL_YIELDS_NULL` 设置来更改此行为。 有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。  
   
  如果字符串串联的结果超出 8,000 字节的限值，则结果将被截断。 但是，如果至少其中一个串联的字符串是大值类型，就不会进行截断。  
@@ -86,7 +86,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ```  
   
 ### <a name="b-combining-numeric-and-date-data-types"></a>B. 组合数值和日期数据类型  
- 以下示例使用 `CONVERT` 函数串联 numeric 和 date 数据类型。  
+ 以下示例使用 `CONVERT` 函数串联 numeric 和 date 数据类型   。  
   
 ```sql  
 -- Uses AdventureWorks  

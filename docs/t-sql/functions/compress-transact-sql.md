@@ -16,10 +16,10 @@ ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fd94c5062e0f268e902c69c154834430bf9e6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943122"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "67943122"
 
 此函数使用 GZIP 算法压缩输入表达式。 该函数返回类型 varbinary(max) 的字节数组  。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>参数  
 *expression*  
-仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，
+A
 
 * **binary(***n***)**
 * **char(***n***)**
@@ -48,7 +48,7 @@ COMPRESS ( expression )
 * **varbinary(***n***)**
 * **varchar(max)**
 
-或多个
+或
 
 * **varchar(***n***)**
 
@@ -57,7 +57,7 @@ expression。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-s
 ## <a name="return-types"></a>返回类型
 varbinary(max) 代表已压缩的输入内容  。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 压缩数据无法编入索引。
   
 `COMPRESS` 函数压缩输入的表达式数据。 必须调用此函数，才能压缩每个部分的数据。 请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)，详细了解行或页级别存储过程中的自动数据压缩。

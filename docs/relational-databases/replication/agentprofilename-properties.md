@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 53f07adfd7479edba22370f3d4fd8c9ad7ad4450
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 7d7607d8749f99452d58374eb2a83c6a31f640d3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768214"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288242"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; 属性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "68768214"
  **名称**  
  配置文件的名称。  
   
- **Description**  
+ **说明**  
  关于配置文件的说明。  
   
- **参数**  
+ **Parameter**  
  配置文件中包含的代理参数。 配置文件无需指定每个参数值。 若要查看对给定代理有效的所有参数，请清除 **“仅显示此配置文件中使用的参数”** 复选框。 有关每个参数的说明，请参阅：  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
@@ -42,7 +42,7 @@ ms.locfileid: "68768214"
   
 -   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
--   [复制合并代理](../../relational-databases/replication/agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
 -   [复制队列读取器代理](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   

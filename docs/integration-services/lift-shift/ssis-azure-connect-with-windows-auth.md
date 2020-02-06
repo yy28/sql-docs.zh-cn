@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 009a65c7c4381440dd7af6bb627fe2db70a16918
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007951"
 ---
 # <a name="access-data-stores-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>从 Azure 的 SSIS 包中使用 Windows 身份验证访问数据存储和文件共享
@@ -28,8 +28,8 @@ ms.locfileid: "68007951"
 |---|---|---|---|---|---|
 | 设置活动级别执行上下文 | 每个执行 SSIS 包活动 | 将 SSIS 包作为 ADF 管道中的执行 SSIS 包活动运行时，配置“Windows 身份验证”  属性以设置“执行/运行方式”上下文。<br/><br/> 有关详细信息，请参阅[配置执行 SSIS 包活动](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。 | 通过 UNC 路径直接访问包资源（例如，如果使用文件共享或 Azure 文件存储：`\\YourFileShareServerName\YourFolderName` 或 `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName`） | 仅支持适用于所有连接资源的一个凭据集 | - 本地/Azure VM 上的文件共享<br/><br/> - Azure 文件，请参阅[使用 Azure 文件共享](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - 使用 Windows 身份验证的本地/Azure VM 上的 SQL Server<br/><br/> - 使用 Windows 身份验证的其他资源 |
 | 设置目录级别执行上下文 | 每个 Azure-SSIS IR，但是，如果同时还设置活动级别执行上下文，则会被替代（见上文） | 执行 SSISDB `catalog.set_execution_credential` 存储过程来设置“执行/运行方式”上下文。<br/><br/> 有关详细信息，请参阅本文下面的其余部分。 | 通过 UNC 路径直接访问包资源（例如，如果使用文件共享或 Azure 文件存储：`\\YourFileShareServerName\YourFolderName` 或 `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName`） | 仅支持适用于所有连接资源的一个凭据集 | - 本地/Azure VM 上的文件共享<br/><br/> - Azure 文件，请参阅[使用 Azure 文件共享](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - 使用 Windows 身份验证的本地/Azure VM 上的 SQL Server<br/><br/> - 使用 Windows 身份验证的其他资源 |
-| 通过 `cmdkey` 命令持久保留凭据 | 每个 Azure-SSIS IR，但是，如果同时还设置活动/目录级别执行上下文，则会被替代（见上文） | 在预配/重新配置 Azure-SSIS IR 时，在自定义安装脚本 (`main.cmd`) 中执行 `cmdkey` 命令，例如，如果使用文件共享或 Azure 文件存储 `cmdkey /add:YourFileShareServerName /user:YourDomainName\YourUsername /pass:YourPassword` 或 `cmdkey /add:YourAzureStorageAccountName.file.core.windows.net /user:azure\YourAzureStorageAccountName /pass:YourAccessKey`。<br/><br/> 有关详细信息，请参阅[为 Azure-SSIS IR 自定义安装程序](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)。 | 通过 UNC 路径直接访问包资源（例如，如果使用文件共享或 Azure 文件存储：`\\YourFileShareServerName\YourFolderName` 或 `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName`） | 支持不同连接资源的多个凭据集 | - 本地/Azure VM 上的文件共享<br/><br/> - Azure 文件，请参阅[使用 Azure 文件共享](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - 使用 Windows 身份验证的本地/Azure VM 上的 SQL Server<br/><br/> - 使用 Windows 身份验证的其他资源 |
-| 在包执行时装载驱动器（非永久） | 每个包 | 在包的控制流开头添加的执行过程任务中（例如，`net use D: \\YourFileShareServerName\YourFolderName`）执行 `net use` 命令 | 通过映射驱动器访问文件共享 | 支持不同文件共享的多个驱动器 | - 本地/Azure VM 上的文件共享<br/><br/> - Azure 文件，请参阅[使用 Azure 文件共享](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) |
+| 通过 `cmdkey` 命令持久保留凭据 | 每个 Azure-SSIS IR，但是，如果同时还设置活动/目录级别执行上下文，则会被替代（见上文） | 在预配/重新配置 Azure-SSIS IR 时，在自定义安装脚本 (`cmdkey`) 中执行 `main.cmd` 命令，例如，如果使用文件共享或 Azure 文件存储 `cmdkey /add:YourFileShareServerName /user:YourDomainName\YourUsername /pass:YourPassword` 或 `cmdkey /add:YourAzureStorageAccountName.file.core.windows.net /user:azure\YourAzureStorageAccountName /pass:YourAccessKey`。<br/><br/> 有关详细信息，请参阅[为 Azure-SSIS IR 自定义安装程序](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)。 | 通过 UNC 路径直接访问包资源（例如，如果使用文件共享或 Azure 文件存储：`\\YourFileShareServerName\YourFolderName` 或 `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName`） | 支持不同连接资源的多个凭据集 | - 本地/Azure VM 上的文件共享<br/><br/> - Azure 文件，请参阅[使用 Azure 文件共享](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - 使用 Windows 身份验证的本地/Azure VM 上的 SQL Server<br/><br/> - 使用 Windows 身份验证的其他资源 |
+| 在包执行时装载驱动器（非永久） | 每个包 | 在包的控制流开头添加的执行过程任务中（例如，`net use`）执行 `net use D: \\YourFileShareServerName\YourFolderName` 命令 | 通过映射驱动器访问文件共享 | 支持不同文件共享的多个驱动器 | - 本地/Azure VM 上的文件共享<br/><br/> - Azure 文件，请参阅[使用 Azure 文件共享](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) |
 |||||||
 
 > [!WARNING]
