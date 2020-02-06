@@ -15,24 +15,24 @@ ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a8bc0ae6764d96b03088cb05eb72dc5ab4f3a0d6
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321274"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>在合并项目之间自动生成联接筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在新建发布向导的“筛选表行”页上，或在“发布属性 - \<发布>”对话框的“筛选行”页上自动生成一组联接筛选器。    有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+  在新建发布向导的“筛选表行”页上，或在“发布属性 - **发布>”对话框的“筛选行”页上自动生成一组联接筛选器。**  **\<** 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 > [!NOTE]  
->  如果你在发布订阅初始化后在“发布属性 - \<发布>”对话框中自动生成一组联接筛选器，则必须生成一个新快照，并在进行更改后重新初始化所有订阅。  有关属性更改要求的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+>  如果你在发布订阅初始化后在“发布属性 - **发布>”对话框中自动生成一组联接筛选器，则必须生成一个新快照，并在进行更改后重新初始化所有订阅。\<** 有关属性更改要求的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
  可以手动为一组表创建联接筛选器，也可由复制根据表上定义的外键和主键的关系自动生成联接筛选器。 有关手动创建联接筛选器的详细信息，请参阅[定义和修改合并项目间的联接筛选器](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
 ### <a name="to-automatically-generate-a-set-of-join-filters-between-merge-articles"></a>在合并项目之间自动生成一组联接筛选器  
   
-1.  在新建发布向导的“筛选表行”页上，或在“发布属性 - \<发布>”的“筛选行”页上，依次单击“添加”和“自动生成筛选器”。       
+1.  在新建发布向导的“筛选表行”页上，或在“发布属性 - **发布>”的“筛选行”页上，依次单击“添加”和“自动生成筛选器”。**  **\<**    
   
     > [!NOTE]  
     >  自动生成筛选器将删除发布中所有现有的行筛选器或联接筛选器。 可以在自动生成一组筛选器后添加筛选器。  
@@ -59,7 +59,7 @@ ms.locfileid: "75321274"
   
     3.  指定筛选选项。  
   
-         选择指示订阅服务器之间如何共享数据的选项：“此表中的行将转到多个订阅”或“此表中的行将仅转到一个订阅”   。 如果选择 **“此表中的行将仅转到一个订阅”** ，则合并复制可以通过存储和处理较少的元数据来优化性能。 但是，必须确保在对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
+         选择与订阅服务器之间共享数据的方式相匹配的选项： **“此表中的行将转到多个订阅”** 或 **“此表中的行将仅转到一个订阅”** 。 如果选择 **“此表中的行将仅转到一个订阅”** ，则合并复制可以通过存储和处理较少的元数据来优化性能。 但是，必须确保在对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -67,11 +67,11 @@ ms.locfileid: "75321274"
   
      分析语句后，复制将创建必需的联接筛选器，并在 **“筛选表行”** 页或 **“筛选行”** 页的 **“筛选的表”** 窗格中显示这些联接筛选器。 如果从新建发布向导生成筛选器，并且尚未为运行此向导的发布服务器配置分发服务器，系统会提示您进行此项配置。  
   
-4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
+4.  如果处于“发布属性 - **发布>”对话框中，请单击“确定”以保存并关闭该对话框。\<**   
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>修改自动生成的筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。       
+1.  在新建发布向导的“筛选表行”页或“发布属性 - **发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。**  **\<**    
   
 2.  在 **“编辑筛选器”** 或 **“编辑联接”** 对话框中修改筛选器。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75321274"
   
 ### <a name="to-delete-a-filter-that-was-automatically-generated"></a>删除自动生成的筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。       
+1.  在新建发布向导的“筛选表行”页或“发布属性 - **发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。**  **\<**    
   
 ## <a name="see-also"></a>另请参阅  
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   

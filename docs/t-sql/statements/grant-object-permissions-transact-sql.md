@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a90add62cdda0e127d84a60fadf7f1f1578c7a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050822"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 对象权限 (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68050822"
   
 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ GRANT <permission> [ ,...n ] ON
  ALL  
  授予 ALL 不会授予所有可能的权限。 授予 ALL 等同于授予适用于指定对象的所有 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 权限。 对于不同权限，ALL 的含义有所不同：  
   
-- 标量值函数权限：EXECUTE、REFERENCES。  
+- 标量函数权限：EXECUTE、REFERENCES。  
 - 表值函数权限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
 - 存储过程权限：EXECUTE。  
 - 表权限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
@@ -112,7 +112,7 @@ PRIVILEGES
  Database_user_with_no_login   
  指定无相应服务器级主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
 >  在某些情况下，如果同时拥有 ALTER 权限和 REFERENCE 权限，被授权者将可以查看数据或执行未经授权的函数。 例如：对表拥有 ALTER 权限和对函数拥有 REFERENCE 权限的用户可对函数创建计算列并执行该函数。 在此情况下，用户可能需要对计算列具有 SELECT 权限。  
@@ -125,9 +125,9 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|删除|CONTROL|删除|  
+|DELETE|CONTROL|DELETE|  
 |在运行 CREATE 语句前执行|CONTROL|在运行 CREATE 语句前执行|  
-|Insert|CONTROL|Insert|  
+|INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
 |REFERENCES|CONTROL|REFERENCES|  
 |SELECT|RECEIVE|SELECT|  

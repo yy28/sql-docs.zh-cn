@@ -19,10 +19,10 @@ ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cf57aa52ce1ca216a8cd88ba310dcee5310b6a7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68019687"
 ---
 # <a name="join-a-secondary-database-to-an-always-on-availability-group"></a>将辅助数据库联接到 AlwaysOn 可用性组
@@ -32,7 +32,7 @@ ms.locfileid: "68019687"
 > [!NOTE]  
 >  有关在辅助数据库联接到该组后所发生的情况的信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
    
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载辅助副本的服务器实例。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "68019687"
   
 1.  在对象资源管理器中，连接到承载辅助副本的服务器实例，然后展开服务器树。  
   
-2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
 3.  展开您要更改的可用性组，然后展开 **“可用性数据库”** 节点。  
   
-4.  右键单击数据库，然后单击“联接到可用性组”。  
+4.  右键单击数据库，然后单击  “联接到可用性组”。  
   
-5.  这将打开 **“将数据库联接到可用性组”** 对话框。 验证在标题栏上显示的可用性组名称以及在网格中显示的数据库名称，然后单击 **“确定”** 或单击 **“取消”**。  
+5.  这将打开 **“将数据库联接到可用性组”** 对话框。 验证在标题栏上显示的可用性组名称以及在网格中显示的数据库名称，然后单击 **“确定”** 或单击 **“取消”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **将辅助数据库联接到可用性组**  

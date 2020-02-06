@@ -11,10 +11,10 @@ ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 086b4503289c01f8b0022633361e7ce72dff73e1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295252"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations（SSISDB 数据库）
@@ -26,7 +26,7 @@ ms.locfileid: "71295252"
 
   显示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中所有项目和包验证的详细信息。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |validation_id|**bigint**|验证的唯一标识符 (ID)。|  
 |environment_scope|**Char(1)**|指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。|  
@@ -42,7 +42,7 @@ ms.locfileid: "71295252"
 |object_id|**bigint**|操作影响的对象的 ID。|  
 |start_time|**datetimeoffset(7)**|开始操作的时间。|  
 |end_time|**datetimeoffsset(7)**|操作结束的时间。|  
-|status|**int**|操作的状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
+|status|**int**|操作状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |caller_sid|**varbinary(85)**|如果是使用 Windows 身份验证进行登录的，则为用户的安全 ID (SID)。|  
 |caller_name|**nvarchar(128)**|执行备份操作的帐户的名称。|  
 |process_id|**int**|外部进程的进程 ID（如果适用）。|  
@@ -52,7 +52,7 @@ ms.locfileid: "71295252"
 |machine_name|**nvarchar(128)**|运行服务器实例的计算机名称。|  
 |dump_id|**uniqueidentifier**|执行转储的 ID。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此视图对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中的每个验证显示一行。  
   
 ## <a name="permissions"></a>权限  

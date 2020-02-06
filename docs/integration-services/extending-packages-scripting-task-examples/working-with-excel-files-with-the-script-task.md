@@ -17,10 +17,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286577"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>使用脚本任务处理 Excel 文件
@@ -43,7 +43,7 @@ ms.locfileid: "71286577"
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中创建新的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 项目，并打开默认的包进行编辑。  
   
-2.  变量  。 打开“变量”  窗口并定义以下变量：  
+2.  **变量**。 打开“变量”  窗口并定义以下变量：  
   
     -   `ExcelFile`，类型为字符串  。 输入现有 Excel 工作簿的完整路径和文件名。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "71286577"
   
 5.  设置脚本组件的默认脚本语言，方法是使用“选项”  对话框的“常规”  页上的“脚本语言”  选项。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
-##  <a name="example1"></a>示例 1 说明：检查 Excel 文件是否存在  
+##  <a name="example1"></a> 示例 1 说明：检查 Excel 文件是否存在  
  本示例可确定 `ExcelFile` 变量中指定的 Excel 工作簿文件是否存在，然后根据该结果设置 `ExcelFileExists` 变量的布尔值。 可以使用此布尔值在包的工作流中进行分支。  
   
 ### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
@@ -80,7 +80,7 @@ ms.locfileid: "71286577"
   
     -   键入 ExcelFile  。  
   
-         -或 -  
+         -或-  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量    。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "71286577"
   
     -   键入 ExcelFileExists  。  
   
-         -或 -  
+         -或-  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFileExists”变量    。  
   
@@ -139,7 +139,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a>示例 2 说明：检查 Excel 表是否存在  
+##  <a name="example2"></a> 示例 2 说明：检查 Excel 表是否存在  
  本示例可确定 `ExcelTable` 变量中指定的 Excel 工作表或命名范围是否存在于 `ExcelFile` 变量中指定的 Excel 工作簿文件中，然后根据该结果设置 `ExcelTableExists` 变量的布尔值。 可以使用此布尔值在包的工作流中进行分支。  
   
 ### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
@@ -150,7 +150,7 @@ public class ScriptMain
   
     -   键入用逗号.  分隔的 ExcelTable  和 ExcelFile  。  
   
-         -或 -  
+         -或-  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelTable”和“ExcelFile”变量     。  
   
@@ -158,7 +158,7 @@ public class ScriptMain
   
     -   键入 ExcelTableExists  。  
   
-         -或 -  
+         -或-  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选“ExcelTableExists”变量    。  
   
@@ -257,7 +257,7 @@ public class ScriptMain
   
     -   键入 ExcelFolder   
   
-         -或 -  
+         -或-  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFolder”变量   。  
   
@@ -265,7 +265,7 @@ public class ScriptMain
   
     -   键入 ExcelFiles  。  
   
-         -或 -  
+         -或-  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量   。  
   
@@ -332,7 +332,7 @@ public class ScriptMain
   
     -   键入 ExcelFile  。  
   
-         -或 -  
+         -或-  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量   。  
   
@@ -340,7 +340,7 @@ public class ScriptMain
   
     -   键入 ExcelTables  。  
   
-         -或 -  
+         -或-  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelTables”变量   。  
   
@@ -445,7 +445,7 @@ public class ScriptMain
   
     -   键入用逗号分隔的每个变量的名称。  
   
-         -或 -  
+         -或-  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“”选择变量对话框中选择变量   。  
   

@@ -1,10 +1,9 @@
 ---
-title: 表值对象（列）属性 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 表值对象（列）属性
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 020c695ecd85de811586b55f2b739caab1590b8f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d5c82466168714f6a58055e1ed50959602318ef3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261469"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242155"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>表值对象（列）属性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "68261469"
 **精度**  
 显示数值数据类型所允许的最大位数。 对于非数值数据类型，此属性显示 **0** 。  
   
-**小数位数**  
+**缩放**  
 显示数值数据类型的小数点右侧可显示的最大位数。 此值必须小于或等于精度。 对于非数值数据类型，此属性显示 **0** 。  
   
 **大小**  

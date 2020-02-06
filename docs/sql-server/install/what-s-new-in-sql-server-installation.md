@@ -10,10 +10,10 @@ ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c42d536f427bba1e0b1642bcc5068bf3cd2d04f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68045649"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 安装中的新增功能
@@ -23,9 +23,9 @@ ms.locfileid: "68045649"
   
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的安装将提示您指定要将提取的包保存到的目录。 如果未输入位置，服务器将默认为计算机的系统驱动器。 在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安装完毕后，提取的文件仍将保持。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有安装均支持 SysPrep。 SysPrep 现在支持故障转移群集安装。 有关详细信息，请参阅[使用 SysPrep 安装 SQL Server 的注意事项](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)和[使用 SysPrep 安装 SQL Server](../../database-engine/install-windows/install-sql-server-using-sysprep.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有安装均支持 SysPrep。 SysPrep 现在支持故障转移群集安装。 有关详细信息，请参阅 [使用 SysPrep 安装 SQL Server 的注意事项](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md) 和 [使用 SysPrep 安装 SQL Server](../../database-engine/install-windows/install-sql-server-using-sysprep.md)。  
   
- 支持从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级，但不支持\-并行\-升级。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 支持的详细信息，请参阅[支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
+ 支持从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级，但不支持\-并行\-升级。 有关 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持的详细信息，请参阅 [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
  
   
 ## <a name="see-also"></a>另请参阅  

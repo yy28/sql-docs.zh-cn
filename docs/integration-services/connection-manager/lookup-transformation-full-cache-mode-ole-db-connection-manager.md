@@ -13,10 +13,10 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9e3a8be595188b0eef11a78826c7447af40bec4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294392"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查找转换完全缓存模式 - OLE DB 连接管理器
@@ -55,11 +55,11 @@ ms.locfileid: "71294392"
   
     -   单击 **“使用表或视图”** ，然后选择一个表或视图，或单击 **“新建”** 创建表或视图。  
   
-         -或 -  
+         -或-  
   
     -   单击 **“使用 SQL 查询的结果”** ，然后在 **“SQL 命令”** 窗口中生成查询，或者单击 **“生成查询”** ，使用 **查询生成器** 提供的图形工具生成查询。  
   
-         -或 -  
+         -或-  
   
     -   或者，单击 **“浏览”** ，从文件中导入 SQL 语句。  
   
