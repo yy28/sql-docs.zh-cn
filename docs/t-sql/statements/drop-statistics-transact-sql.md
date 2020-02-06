@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca0183f72823073d36181c63273972928ab7aee4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929169"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67929169"
 
   删除当前数据库的指定表中的多个集合的统计信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,13 +54,13 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ```  
   
 ## <a name="arguments"></a>参数  
- table | view    
+ table*view* |    
  其删除统计信息的目标表或索引视图的名称。 表和视图的名称必须符合[数据库标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定表或视图所有者名称。  
   
  *statistics_name*  
  要删除的统计信息组的名称。 统计信息名称必须符合有关标识符的规则。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  删除统计信息时，请谨慎从事。 这样做可能会影响查询优化器选择的执行计划。  
   
  不能使用 DROP STATISTICS 删除有关索引的统计信息。 统计信息的保留时间与索引存在的时间相同。  
@@ -93,7 +93,7 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-dropping-statistics-from-a-table"></a>B. 从表中删除统计信息  
- 以下示例从表 `Customer` 中删除 `CustomerStats1` 统计信息。  
+ 以下示例从表 `CustomerStats1` 中删除 `Customer` 统计信息。  
   
 ```  
 DROP STATISTICS Customer.CustomerStats1;  
