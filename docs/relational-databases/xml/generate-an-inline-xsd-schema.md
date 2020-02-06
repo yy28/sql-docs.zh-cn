@@ -19,10 +19,10 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943150"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>生成内联 XSD 架构
@@ -222,7 +222,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>元素名称冲突  
  在 FOR XML 中，同一个名称可以用来表示两个子元素。 例如，下面的查询将检索产品的 ListPrice 和 DealerPrice 值，但为这两列指定了同一别名 (Price)。 因此，产生的行集将具有名称相同的两列。  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>事例 1：两个子元素是相同类型的非键列而且可以为 NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>情况 1：两个子元素是相同类型的非键列而且可以为 NULL  
  在下面的查询中，两个子元素是相同类型的非键列而且可以为 NULL。  
   
 ```  
@@ -274,9 +274,9 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  请注意该内联 XSD 架构的以下方面：  
   
--   ListPrice 和 DealerPrice 属于同一类型 (`money`)，在表中都可以为 NULL。 因此，由于产生的 XML 中可能不返回它们，所以在 minOccurs=0 且 maxOccurs=2 的 <`row`> 元素的复杂类型声明中仅有一个 <`Price`> 子元素。  
+-   ListPrice 和 DealerPrice 属于同一类型 ( `money`)，在表中都可以为 NULL。 因此，由于产生的 XML 中可能不返回它们，所以在 minOccurs=0 且 maxOccurs=2 的 <`Price`> 元素的复杂类型声明中仅有一个 <`row`> 子元素。  
   
--   在结果中，由于表中的 `DealerPrice` 值为 NULL，所以只有 `ListPrice` 被作为一个 <`Price`> 元素返回。 如果将 `XSINIL` 参数添加到 ELEMENTS 指令，则假如将对应于 DealerPrice 的 <`Price`> 元素的 `xsi:nil` 值设置为 TRUE，返回的结果中将包括这两个元素。 如果将两个元素的 `nillable` 属性设置为 TRUE，还将收到内联 XSD 架构的 <`row`> 复杂类型定义中的两个 <`Price`> 子元素。 下面是部分结果：  
+-   在结果中，由于表中的 `DealerPrice` 值为 NULL，所以只有 `ListPrice` 被作为一个 <`Price`> 元素返回。 如果将 `XSINIL` 参数添加到 ELEMENTS 指令，则假如将对应于 DealerPrice 的 <`xsi:nil`> 元素的 `Price` 值设置为 TRUE，返回的结果中将包括这两个元素。 如果将两个元素的 `Price` 属性设置为 TRUE，还将收到内联 XSD 架构的 <`row`> 复杂类型定义中的两个 <`nillable`> 子元素。 下面是部分结果：  
   
  `...`  
   
@@ -314,7 +314,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>事例 2：相同类型的一个键列和一个非键列  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>情况 2：相同类型的一个键列和一个非键列  
  下面的查询说明了相同类型的一个键列和一个非键列。  
   
 ```  
@@ -392,7 +392,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  请注意，在内联 XSD 架构中，对应于 Col2 的 <`Col`> 元素的 minOccurs 被设置为 0。  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>事例 3：两个元素都属于不同的类型而且对应的列可以为 NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>情况 3：两个不同类型的元素而且对应的列可以为 NULL  
  对情况 2 中显示的示例表进行下面的查询：  
   
 ```  

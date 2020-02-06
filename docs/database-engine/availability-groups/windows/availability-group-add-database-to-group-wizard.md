@@ -16,10 +16,10 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1dfb6540724cf3dae9b39c4e388b4f2e2aacb734
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934887"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>使用“可用性组向导”将数据库添加到 Always On 可用性组
@@ -64,13 +64,13 @@ ms.locfileid: "67934887"
   
      如果数据库包含数据库主密钥，则请在“密码”列中输入数据库主密钥的密码。   
   
-5.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择下列选项之一：  
+5.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择以下选项之一：  
 
     - **自动种子设定**
       
       选择此选项可使用自动种子设定。 自动种子设定使用日志流传输将使用 VDI 的备份流式传输到使用所配置终结点的可用性组的每个数据库的次要副本。 无需手动执行此操作即可还原次要副本上的数据库备份。 有关自动种子设定的详细信息，请参阅[自动种子设定 ](automatic-seeding-secondary-replicas.md)。
   
-    -   **Full**  
+    -   **完整**  
   
          如果你的环境满足自动启动初始数据同步的要求，则选择此选项（有关详细信息，请参阅本主题前面的 [先决条件、限制和建议](#Prerequisites)）。  
   
@@ -93,9 +93,9 @@ ms.locfileid: "67934887"
   
 6.  在 **“连接到现有的辅助副本”** 页上，如果承载该可用性组的可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例全部作为相同用户帐户中的某个服务运行，则单击 **“全部连接”** 。 如果任何服务器实例作为不同帐户下的某个服务运行，则单击每个服务器实例名称右侧的各个 **“连接”** 按钮。  
   
-     有关详细信息，请参阅[“连接到现有次要副本”页（添加副本向导：添加数据库向导）](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
+     有关详细信息，请参阅[连接到现有的辅助副本页（添加副本向导：添加数据库向导）](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
   
-7.  **“验证”** 页验证在此向导中指定的值是否满足新建可用性组向导的要求。 若要进行更改，可以单击 **“上一页”** 以返回前面的向导页，更改一个或多个值。 单击“下一步”  返回到“验证”  页，然后单击“重新运行验证”  。  
+7.  **“验证”** 页验证在此向导中指定的值是否满足新建可用性组向导的要求。 若要进行更改，可以单击 **“上一页”** 以返回前面的向导页，更改一个或多个值。 单击 **“下一步”** 返回到 **“验证”** 页，然后单击 **“重新运行验证”** 。  
   
      有关详细信息，请参阅[“验证”页（Always On 可用性组向导）](../../../database-engine/availability-groups/windows/validation-page-always-on-availability-group-wizards.md)。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67934887"
   
      如果您满意所做的选择，可以选择单击“脚本”以创建向导将执行的步骤的脚本。 然后，若要创建和配置新的可用性组，请单击 **“完成”** 。  
   
-9. “进度”  页将显示创建可用性组的各步骤（配置端点、创建可用性组和将次要副本联接到该组）的进度。  
+9. **“进度”** 页将显示创建可用性组的各步骤（配置端点、创建可用性组和将辅助副本联接到该组）的进度。  
   
      有关详细信息，请参阅[“进度”页（Always On 可用性组向导）](../../../database-engine/availability-groups/windows/progress-page-always-on-availability-group-wizards.md)。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "67934887"
   
      完成向导后，单击 **“关闭”** 以退出安装向导。  
   
-     有关详细信息，请参阅[“结果”页（AlwaysOn 可用性组向导）](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md)。  
+     有关详细信息，请参阅 [“结果”页（AlwaysOn 可用性组向导）](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
   
 11. 如果在所有辅助数据库上未自动启动初始数据同步，则需要配置任何尚未加入的辅助数据库。 有关详细信息，请参阅本主题后面的 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   

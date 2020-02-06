@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 970c4f51535395a940a9c47e77d864d00c1f403c
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706627"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>使用 curl 将数据加载到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上的 HDFS 中
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何使用 curl 将数据加载到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上的 HDFS 中  。
+本文介绍如何使用 curl 将数据加载到  **上的 HDFS 中**[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。
 
-## <a id="prereqs"></a> 先决条件
+## <a id="prereqs"></a>先决条件
 
 - [将示例数据加载到大数据群集中](tutorial-load-sample-data.md)
 
@@ -65,7 +65,7 @@ curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP ext
 
 ## <a name="create-a-directory"></a>创建目录
 
-要在 `hdfs:///` 下创建目录测试，请使用以下命令  ：
+要在  **下创建目录测试，请使用以下命令**`hdfs:///`：
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'

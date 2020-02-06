@@ -14,10 +14,10 @@ ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f461997fbbbbc7e63256b67b8fecf40381aab788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940977"
 ---
 # <a name="back-up-database-backup-options-page"></a>备份数据库（“备份选项”页）
@@ -34,7 +34,7 @@ ms.locfileid: "67940977"
 >  可以定义用于创建数据库备份的数据库维护计划。 有关详细信息，请参阅[维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)和[使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”  按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) 脚本。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”[!INCLUDE[tsql](../../includes/tsql-md.md)][按钮，再为脚本选择一个目标，生成对应的 ](../../t-sql/statements/backup-transact-sql.md)**BACKUP** 脚本。  
   
 ## <a name="options"></a>选项  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67940977"
   
  有关备份集的信息，请参阅[媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。  
   
- **Description**  
+ **说明**  
  输入备份集的说明。  
   
  **备份集过期时间**  
@@ -54,7 +54,7 @@ ms.locfileid: "67940977"
   
 |||  
 |-|-|  
-|**After**|指定在多少天后此备份集才会过期，从而可被覆盖。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。<br /><br /> 备份过期时间的默认值是在“默认备份介质保持期(天)”  选项中设置的值。 若要访问此选项，请在对象资源管理器中右键单击服务器名称，再选择  “属性”；然后，单击  “服务器属性”对话框的  “数据库设置”页。|  
+|**之后**|指定在多少天后此备份集才会过期，从而可被覆盖。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。<br /><br /> 备份过期时间的默认值是在“默认备份介质保持期(天)”  选项中设置的值。 若要访问此选项，请在对象资源管理器中右键单击服务器名称，再选择  “属性”；然后，单击  “服务器属性”对话框的  “数据库设置”页。|  
 |**On**|指定备份集过期从而可被覆盖的具体日期。|  
   
 ### <a name="compression"></a>压缩  
@@ -78,7 +78,7 @@ ms.locfileid: "67940977"
   
 -   AES 256  
   
--   Triple DES  
+-   三重 DES  
   
 > [!TIP]  
 >  如果您选择了追加到现有备份集，则禁用加密选项。  

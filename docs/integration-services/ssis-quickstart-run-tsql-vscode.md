@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cdd1dc130efb795b957911c51d5d8c2243522d38
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281617"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 从 Visual Studio Code 运行 SSIS 包
@@ -70,21 +70,21 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
 
 2. 键入 sqlcon，然后按 ENTER   。
 
-3. 按 ENTER  以选择“创建连接配置文件”  。 本步骤是为 SQL Server 实例创建连接配置文件。
+3. 按 **ENTER** 选择“创建连接配置文件”。  本步骤是为 SQL Server 实例创建连接配置文件。
 
-4. 按照提示为新连接配置文件指定连接属性。 指定每个值后，按 ENTER  继续。 
+4. 按照提示为新连接配置文件指定连接属性。 指定每个值后，按 **ENTER** 继续。 
 
-   | 设置       | 建议的值 | 详细信息 |
+   | 设置       | 建议的值 | 更多信息 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器名称** | 完全限定的服务器名称 | 如果要连接到 Azure SQL 数据库服务器，该名称为以下格式：`<server_name>.database.windows.net`。 |
    | **数据库名称** | **SSISDB** | 要连接到的数据库的名称。 |
    | **身份验证** | SQL 登录名 | 使用 SQL Server 身份验证，可连接到 SQL Server 或 Azure SQL 数据库。 如果连接到 Azure SQL 数据库服务器，则无法使用 Windows 身份验证。 |
-   | **User name** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
-   | **密码（SQL 登录名）** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
+   | **用户名** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
+   | **密码(SQL 登录名)** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
    | **是否保存密码？** | 是或否 | 如果不希望每次都输入密码，请选择“是”。 |
-   | **输入此配置文件的名称** | 一个配置文件名称，如 mySSISServer  | 保存一个配置文件名称可以加快后续登录时的连接速度。 | 
+   |  输入此配置文件的名称 | 一个配置文件名称，如 mySSISServer  | 保存一个配置文件名称可以加快后续登录时的连接速度。 | 
 
-5. 按 ESC  键关闭提示配置文件已创建并连接的提示消息。
+5. 按 ESC  键关闭信息消息，该消息通知你，配置文件已创建并且已连接。
 
 6. 在状态栏中验证连接。
 
@@ -118,7 +118,7 @@ GO
 ## <a name="next-steps"></a>后续步骤
 - 考虑运行包的其他方式。
     - [使用 SSMS 运行 SSIS 包](./ssis-quickstart-run-ssms.md)
-    - [使用 Transact-SQL (SSMS) 运行 SSIS 包](./ssis-quickstart-run-tsql-ssms.md)
+    - [使用 Transact-SQL 运行 SSIS 包 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [从命令提示符运行 SSIS 包](./ssis-quickstart-run-cmdline.md)
     - [使用 PowerShell 运行 SSIS 包](ssis-quickstart-run-powershell.md)
     - [使用 C# 运行 SSIS 包](./ssis-quickstart-run-dotnet.md) 

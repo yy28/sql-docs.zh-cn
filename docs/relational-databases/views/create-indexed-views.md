@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325509"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
@@ -80,7 +80,7 @@ ms.locfileid: "75325509"
 
 索引视图的定义必须是确定性的。 如果选择列表中的所有表达式、`WHERE` 和 `GROUP BY` 子句都具有确定性，则视图也具有确定性。 在使用特定的输入值集对确定性表达式求值时，它们始终返回相同的结果。 只有确定性函数可以加入确定性表达式。 例如，`DATEADD` 函数是确定性函数，因为对于其三个参数的任何给定参数值集它总是返回相同的结果。 `GETDATE` 不是确定性函数，因为总是使用相同的参数调用它，而它在每次执行时返回结果都不同。
 
-要确定视图列是否为确定性列，请使用 **COLUMNPROPERTY** 函数的 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 属性。 使用 `COLUMNPROPERTY` 函数的 IsPrecise  属性确定具有架构绑定的视图中的确定性列是否为精确列。 如果为 TRUE，则 `COLUMNPROPERTY` 返回 1；如果为 FALSE，则返回 0；如果输入无效，则返回 NULL。 这意味着该列不是确定性列，也不是精确列。
+要确定视图列是否为确定性列，请使用 **COLUMNPROPERTY** 函数的 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 属性。 使用  **函数的 IsPrecise**`COLUMNPROPERTY` 属性确定具有架构绑定的视图中的确定性列是否为精确列。 如果为 TRUE，则 `COLUMNPROPERTY` 返回 1；如果为 FALSE，则返回 0；如果输入无效，则返回 NULL。 这意味着该列不是确定性列，也不是精确列。
 
 即使是确定性表达式，如果其中包含浮点表达式，则准确结果也会取决于处理器体系结构或微代码的版本。 为了确保数据完整性，此类表达式只能作为索引视图的非键列加入。 不包含浮点表达式的确定性表达式称为精确表达式。 只有精确的确定性表达式才能加入键列，并包含在索引视图的 `WHERE` 或 `GROUP BY` 子句中。
 
@@ -112,9 +112,9 @@ ms.locfileid: "75325509"
    ||||
    |-|-|-|
    |`COUNT`|ROWSET 函数（`OPENDATASOURCE`、`OPENQUERY`、`OPENROWSET` 和 `OPENXML`）|`OUTER` 联接（`LEFT`、`RIGHT` 或 `FULL`）|
-   |派生表（通过在 `FROM` 子句中指定 `SELECT` 语句来定义）|自联接|使用 `SELECT *` 或 `SELECT <table_name>.*` 来指定列|
+   |派生表（通过在 `SELECT` 子句中指定 `FROM` 语句来定义）|自联接|使用 `SELECT *` 或 `SELECT <table_name>.*` 来指定列|
    |`DISTINCT`|`STDEV`、`STDEVP`、`VAR`、`VARP` 或 `AVG`|公用表表达式 (CTE)|
-   |float<sup>1</sup>  、text  、ntext  、image  、XML  或 filestream  列|子查询|包括排名或聚合开窗函数的 `OVER` 子句|
+   |float**1**<sup></sup>、text  、ntext  、image  、XML  或 filestream  列|子查询|包括排名或聚合开窗函数的 `OVER` 子句|
    |全文谓词（`CONTAINS`、`FREETEXT`）|引用可为空的表达式的 `SUM` 函数|`ORDER BY`|
    |CLR 用户定义聚合函数|`TOP`|`CUBE`、`ROLLUP` 或 `GROUPING SETS` 运算符|
    |`MIN`、`MAX`|`UNION`、`EXCEPT` 或 `INTERSECT` 运算符|`TABLESAMPLE`|

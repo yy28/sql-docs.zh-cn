@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d05c8390ff43293c27207a2e0dd19b62248519ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68058650"
 ---
 # <a name="delete-check-constraints"></a>删除 CHECK 约束
@@ -54,11 +54,11 @@ ms.locfileid: "68058650"
   
 1.  在 **“对象资源管理器”** 中，展开具有 CHECK 约束的表。  
   
-2.  展开  **“约束”**。  
+2.  展开  **“约束”** 。  
   
-3.  右键单击该约束，然后单击“删除”。  
+3.  右键单击该约束，然后单击“删除”  。  
   
-4.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
+4.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -66,9 +66,9 @@ ms.locfileid: "68058650"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     ALTER TABLE dbo.DocExc   

@@ -14,10 +14,10 @@ ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0dedb0034099dcb803bb6354a0806b613108da8d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296797"
 ---
 # <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission（SSISDB 数据库）
@@ -65,10 +65,10 @@ catalog.revoke_permission [ @object_type = ] object_type
  5（其他错误）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
-## <a name="remarks"></a>Remarks  
- None  
+## <a name="remarks"></a>备注  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -79,7 +79,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   **sysadmin** 服务器角色的成员资格  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果指定 permission_type，存储过程会删除显式分配给主体的针对对象的权限。 即使不发生此类情况，该过程也将返回成功代码值 (`0`)。 如果忽略 permission_type，存储过程会删除主体针对对象的所有权限。  
   
 > [!NOTE]  
@@ -91,12 +91,12 @@ catalog.revoke_permission [ @object_type = ] object_type
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|允许主体读取被视为对象一部分的信息（如属性）。 它不允许主体枚举或读取该对象中包含的其他对象的内容。|文件夹、项目、环境、操作|  
 |`2`|MODIFY|允许主体修改被视为对象一部分的信息（如属性）。 它不允许主体修改该对象中包含的其他对象。|文件夹、项目、环境、操作|  
-|`3`|在运行 CREATE 语句前执行|允许主体执行项目中的所有包。|项目|  
+|`3`|在运行 CREATE 语句前执行|允许主体执行项目中的所有包。|Project|  
 |`4`|MANAGE_PERMISSIONS|允许主体向对象分配权限。|文件夹、项目、环境、操作|  
-|`100`|CREATE_OBJECTS|允许主体在文件夹中创建对象。|文件夹|  
-|`101`|READ_OBJECTS|允许主体读取文件夹中的所有对象。|文件夹|  
-|`102`|MODIFY_OBJECTS|允许主体修改文件夹中的所有对象。|文件夹|  
-|`103`|EXECUTE_OBJECTS|允许主体执行文件夹中所有项目的所有包。|文件夹|  
-|`104`|MANAGE_OBJECT_PERMISSIONS|允许主体管理文件夹中所有对象的权限。|文件夹|  
+|`100`|CREATE_OBJECTS|允许主体在文件夹中创建对象。|Folder|  
+|`101`|READ_OBJECTS|允许主体读取文件夹中的所有对象。|Folder|  
+|`102`|MODIFY_OBJECTS|允许主体修改文件夹中的所有对象。|Folder|  
+|`103`|EXECUTE_OBJECTS|允许主体执行文件夹中所有项目的所有包。|Folder|  
+|`104`|MANAGE_OBJECT_PERMISSIONS|允许主体管理文件夹中所有对象的权限。|Folder|  
   
   

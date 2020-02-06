@@ -13,10 +13,10 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73926025"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
@@ -25,18 +25,18 @@ ms.locfileid: "73926025"
   
  审核由零个或多个审核操作项组成，这些操作项会记录到审核“  目标”。 审核目标可以是二进制文件、Windows 应用程序事件日志或 Windows 安全事件日志。 发送到目标的记录可以包含下表中介绍的元素：  
   
-|列名|描述|类型|始终可用|  
+|列名称|说明|类型|始终可用|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|触发可审核操作的日期/时间。|**datetime2**|是|  
 |**sequence_no**|跟踪单个审核记录中的记录顺序，该记录太大而无法放在写入缓冲区中以进行审核。|**int**|是|  
-|**action_id**|操作的 ID<br /><br /> 提示：要将 action_id 用作谓词，必须将它从字符串转换为数值  。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|**varchar(4)**|是|  
+|**action_id**|操作的 ID<br /><br /> 提示：若要将 **action_id** 用作谓词，必须将它从字符串转换为数值。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|**varchar(4)**|是|  
 |**succeeded**|指示触发审核事件的操作的权限检查是否成功或失败。 |**bit**<br /> - 1 = 成功， <br />0 = 失败|是|  
 |**permission_bitmask**|当适用时，显示授予、拒绝或撤消的权限|**bigint**|否|  
 |**is_column_permission**|指示列级别权限的标志|**bit** <br />- 1 = True, <br />0 = False|否|  
 |**session_id**|发生该事件的会话的 ID。|**int**|是|  
 |**server_principal_id**|在其中执行操作的登录上下文 ID。|**int**|是|  
 |**database_principal_id**|在其中执行操作的数据库用户上下文 ID。|**int**|否|  
-|**object_id**|发生审核的实体的主 ID。 此 ID 可以是：<br /><br /> 服务器对象<br /><br /> 数据库<br /><br /> 数据库对象<br /><br /> 架构对象|**int**|否|  
+|object_id |发生审核的实体的主 ID。 此 ID 可以是：<br /><br /> 服务器对象<br /><br /> 数据库<br /><br /> 数据库对象<br /><br /> 架构对象|**int**|否|  
 |**target_server_principal_id**|可审核操作适用的服务器主体。|**int**|是|  
 |**target_database_principal_id**|可审核操作适用的数据库主体。|**int**|否|  
 |**class_type**|发生审核的可审核实体的类型。|**varchar(2)**|是|  
@@ -54,7 +54,7 @@ ms.locfileid: "73926025"
 |**语句**|TSQL 语句（如果有）|**nvarchar(4000)**|否|  
 |**additional_information**|有关此事件的其他任何信息，存储为 XML。|**nvarchar(4000)**|否|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  某些操作不填充列的值，这是因为它可能不适用于此操作。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核可以为审核记录中的字符字段存储 4000 个数据字符。 当可审核操作返回的 **additional_information** 和 **statement** 值返回的字符超过 4000 个时， **sequence_no** 列用于将多个记录写入到单个审核操作的审核报表中以记录此数据。 该过程如下所示：  

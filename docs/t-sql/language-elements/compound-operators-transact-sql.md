@@ -16,10 +16,10 @@ ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e81ef89165b3af5af0f8c48ca0338086c5c934a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929538"
 ---
 # <a name="compound-operators-transact-sql"></a>复合运算符 (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67929538"
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 提供了以下复合运算符：  
   
-|运算符|详细信息链接|操作|  
+|操作员|详细信息链接|操作|  
 |--------------|------------------------------|------------|  
 |+=|[+=（加法赋值）(Transact-SQL)](../../t-sql/language-elements/add-equals-transact-sql.md)|将原始值加上一定的量，并将原始值设置为结果。|  
 |-=|[-=（减法赋值）(Transact-SQL)](../../t-sql/language-elements/subtract-equals-transact-sql.md)|将原始值减去一定的量，并将原始值设置为结果。|  
@@ -54,7 +54,7 @@ expression operator expression
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  有关详细信息，请参阅与每个运算符相关的主题。  
   
 ## <a name="examples"></a>示例  

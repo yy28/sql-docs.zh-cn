@@ -11,10 +11,10 @@ ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6fe8a8e0fa76201ad4f363f0a91440d1c62958e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281032"
 ---
 # <a name="catalogdeny_permission-ssisdb-database"></a>catalog.deny_permission（SSISDB 数据库）
@@ -62,7 +62,7 @@ catalog.deny_permission [ @object_type = ] object_type
  5（其他错误）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -73,20 +73,20 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   **sysadmin** 服务器角色的成员资格  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  通过此存储过程可以拒绝下表中所示的权限类型：  
   
 |permission_type 值|权限名称|权限说明|适用对象类型|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|允许主体读取被视为对象一部分的信息（如属性）。 它不允许主体枚举或读取该对象中包含的其他对象的内容。|文件夹、项目、环境、操作|  
 |`2`|MODIFY|允许主体修改被视为对象一部分的信息（如属性）。 它不允许主体修改该对象中包含的其他对象。|文件夹、项目、环境、操作|  
-|`3`|在运行 CREATE 语句前执行|允许主体执行项目中的所有包。|项目|  
+|`3`|在运行 CREATE 语句前执行|允许主体执行项目中的所有包。|Project|  
 |`4`|MANAGE_PERMISSIONS|允许主体向对象分配权限。|文件夹、项目、环境、操作|  
-|`100`|CREATE_OBJECTS|允许主体在文件夹中创建对象。|文件夹|  
-|`101`|READ_OBJECTS|允许主体读取文件夹中的所有对象。|文件夹|  
-|`102`|MODIFY_OBJECTS|允许主体修改文件夹中的所有对象。|文件夹|  
-|`103`|EXECUTE_OBJECTS|允许主体执行文件夹中所有项目的所有包。|文件夹|  
-|`104`|MANAGE_OBJECT_PERMISSIONS|允许主体管理文件夹中所有对象的权限。|文件夹|  
+|`100`|CREATE_OBJECTS|允许主体在文件夹中创建对象。|Folder|  
+|`101`|READ_OBJECTS|允许主体读取文件夹中的所有对象。|Folder|  
+|`102`|MODIFY_OBJECTS|允许主体修改文件夹中的所有对象。|Folder|  
+|`103`|EXECUTE_OBJECTS|允许主体执行文件夹中所有项目的所有包。|Folder|  
+|`104`|MANAGE_OBJECT_PERMISSIONS|允许主体管理文件夹中所有对象的权限。|Folder|  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  

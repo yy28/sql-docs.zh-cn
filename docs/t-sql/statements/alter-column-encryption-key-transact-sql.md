@@ -21,10 +21,10 @@ ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: c06fb5b28e1c3ec5bd50b8922bcdf1e5d1b27ff7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594395"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73594395"
 
   在数据库中更改列加密密钥，添加或删除加密的值。 列加密密钥最多可具有两个值，这样使相应的列主密钥能够进行轮换。 使用 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 或[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 加密列时，会使用列加密密钥。 添加列加密密钥值之前，必须使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 语句定义用于加密该值的列主密钥。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,19 +49,19 @@ ALTER COLUMN ENCRYPTION KEY key_name
  key_name   
  要更改的列加密密钥。  
   
- *column_master_key_name*  
+ column_master_key_name   
  指定用于对列加密密钥 (CEK) 进行加密的列主密钥 (CMK) 的名称。  
   
- *algorithm_name*  
+ algorithm_name   
  用于对值进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP  。 删除列加密密钥值时，此参数无效。  
   
- *varbinary_literal*  
+ varbinary_literal   
  使用指定的主加密密钥加密的 CEK BLOB。 删除列加密密钥值时，此参数无效。  
   
 > [!WARNING]  
 >  切勿在此语句中传递纯文本 CEK 值。 这样做不利于发挥此功能的优点。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 通常情况下，创建列加密密钥时，密钥只具有一个加密值。 列主密钥需要进行轮换（需要将当前的列主密钥替换为新的列主密钥）时，可以为列加密密钥添加一个新值，并使用新的列主密钥进行加密。 此工作流可以确保客户端应用程序能访问使用列加密密钥加密的数据，同时客户端应用程序将能使用新的列主密钥。 通过 Always Encrypted 功能，无权访问新主密钥的客户端应用程序中的驱动程序将能够通过列加密密钥值（使用旧的列主密钥进行加密）来访问敏感数据。 Always Encrypted 支持的加密算法要求纯文本值具有 256 位。 
  
 建议使用诸如 SQL Server Management Studio (SSMS) 或 PowerShell 等工具来轮换列主密钥。 请参阅[使用 SQL Server Management Studio 轮换 Always Encrypted 密钥](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md)和[使用 PowerShell 轮换 Always Encrypted 密钥](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)。

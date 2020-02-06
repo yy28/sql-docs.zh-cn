@@ -20,10 +20,10 @@ ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a7c592af7f2971cc637c9049b8ca06a92a2f3c05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050775"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>GRANT 对称密钥权限 (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68050775"
 
   授予对对称密钥的权限。 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,13 +54,13 @@ GRANT permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可对对称密钥授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON SYMMETRIC KEY ::asymmetric_key_name  
+ ON SYMMETRIC KEY ::asymmetric_key_name   
  指定要对其授予权限的对称密钥。 需要作用域限定符 ::。  
   
- TO \<database_principal>  
+ TO \<database_principal  >  
  指定要向其授予权限的主体。  
   
  WITH GRANT OPTION  
@@ -68,31 +68,31 @@ GRANT permission [ ,...n ]
   
  AS \<database_principal> 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。  
   
- Database_user  
+ Database_user   
  指定数据库用户。  
   
- Database_role  
+ Database_role   
  指定数据库角色。  
   
- Application_role  
+ Application_role   
  指定应用程序角色。  
   
- Database_user_mapped_to_Windows_User  
+ Database_user_mapped_to_Windows_User   
  指定映射到 Windows 用户的数据库用户。  
   
- Database_user_mapped_to_Windows_Group  
+ Database_user_mapped_to_Windows_Group   
  指定映射到 Windows 组的数据库用户。  
   
- Database_user_mapped_to_certificate  
+ Database_user_mapped_to_certificate   
  指定映射到证书的数据库用户。  
   
- Database_user_mapped_to_asymmetric_key  
+ Database_user_mapped_to_asymmetric_key   
  指定映射到非对称密钥的数据库用户。  
   
- Database_user_with_no_login  
+ Database_user_with_no_login   
  指定无相应服务器级主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以在 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) 目录视图中查看对称密钥的有关信息。  
   
  对称密钥是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下表列出了可授予的对对称密钥最为具体的限定权限，以及隐含这些权限的更为通用的权限。  
@@ -110,7 +110,7 @@ GRANT permission [ ,...n ]
   
  若要使用 AS 选项，还必须满足以下附加要求：  
   
-|AS granting_principal|所需的其他权限|  
+|AS granting_principal |所需的其他权限|  
 |------------------------------|------------------------------------|  
 |数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
 |映射到 Windows 登录名的数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  

@@ -1,7 +1,6 @@
 ---
-title: 安装 Distributed Replay |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 安装 Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,16 +8,20 @@ ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4aa2cc0859972f980e26d67e054dba3c955527c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950039"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74992180"
 ---
 # <a name="install-distributed-replay"></a>安装 Distributed Replay
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  可以采用以下三种方法之一安装 Distributed Replay：  
+
+可以采用以下三种方法之一安装 Distributed Replay：  
   
 -   [从安装向导安装 Distributed Replay](#bkmk_wizard)  
   
@@ -113,9 +116,9 @@ ms.locfileid: "67950039"
   
     1.  在 32 位计算机上，默认安装路径为 **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  在 64 位计算机上，默认安装路径为 C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\   
+    2.  在 64 位计算机上，默认安装路径为 C:\Program Files (x86) **\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-9. 在完成后，单击 **“下一步”** 。  
+9. 完成后，单击“下一步”。   
   
 10. 在 **“安装规则”** 页上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将验证您的计算机配置。 在验证过程完成后，单击 **“下一步”** 。  
   
@@ -153,15 +156,15 @@ ms.locfileid: "67950039"
   
  使用下表中的参数可开发用于安装的命令行脚本。  
   
-|参数|描述|支持的值|  
+|参数|说明|支持的值|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **可选**|Distributed Replay 控制器服务的服务帐户。|检查帐户和密码|  
 |/CTLRSVCPASSWORD<br /><br /> **可选**|Distributed Replay 控制器服务帐户的密码。|检查帐户和密码|  
-|/CTLRSTARTUPTYPE<br /><br /> **可选**|Distributed Replay 控制器服务的启动类型。|自动<br /><br /> 禁用<br /><br /> Manual|  
+|/CTLRSTARTUPTYPE<br /><br /> **可选**|Distributed Replay 控制器服务的启动类型。|自动<br /><br /> 已禁用<br /><br /> 手动|  
 |/CTLRUSERS<br /><br /> **可选**|指定哪些用户对 Distributed Replay 控制器服务具有权限。|一组使用“ ”（空格）作为分隔符的用户帐户字符串<br /><br /> **重要**：在您配置 Distributed Replay 控制器服务时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个帐户。 下面是支持的帐户的列表：<br /><br /> 域用户帐户<br /><br /> 用户创建的本地用户帐户<br /><br /> 管理员<br /><br /> 管理员<br /><br /> 虚拟帐户和 MSA（托管服务帐户）<br /><br /> Network Services、Local Services 和 System<br /><br /> <br /><br /> 注意：不接受组帐户（本地或域）和其他内置帐户（如 Everyone）。|  
 |/CLTSVCACCOUNT<br /><br /> **可选**|Distributed Replay 客户端服务的服务帐户。|检查帐户和密码|  
 |/CLTSVCPASSWORD<br /><br /> **可选**|Distributed Replay 客户端服务帐户的密码。|检查帐户和密码|  
-|/CLTSTARTUPTYPE<br /><br /> **可选**|Distributed Replay 客户端服务的启动类型。|自动<br /><br /> 禁用<br /><br /> Manual|  
+|/CLTSTARTUPTYPE<br /><br /> **可选**|Distributed Replay 客户端服务的启动类型。|自动<br /><br /> 已禁用<br /><br /> 手动|  
 |/CLTCTLRNAME<br /><br /> **可选**|客户端就 Distributed Replay 控制器服务与之通信的计算机的名称。||  
 |/CLTWORKINGDIR<br /><br /> **可选**|Distributed Replay 客户端服务的工作目录。|有效的路径|  
 |/CLTRESULTDIR<br /><br /> **可选**|Distributed Replay 客户端服务的结果目录。|有效的路径|  
@@ -219,6 +222,6 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
  [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置分布式重播](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

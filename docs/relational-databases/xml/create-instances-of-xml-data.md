@@ -20,10 +20,10 @@ ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbdae019d2b4903bcebb0339df0ef243d6974766
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68112925"
 ---
 # <a name="create-instances-of-xml-data"></a>创建 XML 数据的实例
@@ -64,7 +64,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  如果 CLR 用户定义类型具有 XML 序列化，则该类型的实例可以显式转换为 XML 数据类型。 有关 CLR 用户定义类型的 XML 序列化的详细信息，请参 [从 CLR 数据库对象进行 XML 序列化](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)。  
   
 ### <a name="white-space-handling-in-typed-xml"></a>类型化的 XML 中的空格处理  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果元素内容中的空格出现在一组只有空格并由标记（如开始或结束标记）分隔的字符数据中，则认为其无关紧要，因此不对其进行实体化。 （忽略 CDATA 部分。）这种空格处理方式与万维网联盟 (W3C) 发布的 XML 1.0 规格中介绍的空格处理方式不同。 这是因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 分析器只识别有限数量的 DTD 子集（在 XML 1.0 中定义）。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持的有限 DTD 子集的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，如果元素内容中的空格出现在一组只有空格并由标记（如开始或结束标记）分隔的字符数据中，则认为其无关紧要，因此不对其进行实体化。 （忽略 CDATA 部分。）这种空格处理方式与万维网联盟 (W3C) 发布的 XML 1.0 规格中介绍的空格处理方式不同。 这是因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 分析器只识别有限数量的 DTD 子集（在 XML 1.0 中定义）。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持的有限 DTD 子集的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
  默认情况下，在 XML 分析器将字符串数据转换为 XML 时，如果存在下列任何一种情况，则 XML 分析器将丢弃无关紧要的空格：  
   
@@ -94,7 +94,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  如果未使用 *style* 参数，或将其值设置为 0，则转换 xml DT 实例时不保留无关紧要的空格。 有关在将字符串数据转换为 xml DT 实例时如何使用 CONVERT 运算符及其 *style* 参数的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>例如：将字符串值转换为类型化的 xml 并将它分配给某列  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>示例：将字符串值转换为类型化的 xml 并将其赋给某列  
  下面的示例将包含 XML 片段的字符串变量转换为 **xml** 数据类型，然后将其存储在 **xml** 类型列中：  
   
 ```  
@@ -122,7 +122,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>例如：将字符串转换为类型化的 xml 并将其分配给某个变量  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>示例：将字符串转换为类型化的 xml 并将其赋给某个变量  
  在下面的示例中，将字符串转换为 **xml** 类型并赋给 **xml** 数据类型的变量：  
   
 ```  
@@ -206,17 +206,17 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 >  对于类型化的 XML，是针对指定的架构来验证 XML。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
 ## <a name="using-bulk-load"></a>使用大容量加载  
- 通过增强的 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md) 功能，可以在数据库中大容量加载 XML 文档。 可以将文件中的 XML 实例大容量加载到数据库的 **xml** 类型列中。 有关工作示例，请参阅[批量导入和导出 XML 文档的示例 (SQL Server);](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)。 有关加载 XML 文档的详细信息，请参阅[加载 XML 数据](../../relational-databases/xml/load-xml-data.md)。  
+ 通过增强的 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md) 功能，可以在数据库中大容量加载 XML 文档。 可以将文件中的 XML 实例大容量加载到数据库的 **xml** 类型列中。 有关工作示例，请参阅[批量导入和导出 XML 文档的示例 (SQL Server);](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)。 有关加载 XML 文档的详细信息，请参阅 [加载 XML 数据](../../relational-databases/xml/load-xml-data.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[检索和查询 XML 数据](../../relational-databases/xml/retrieve-and-query-xml-data.md)|介绍了当 XML 实例存储在数据库中时未保留的部分。|  
   
 ## <a name="see-also"></a>另请参阅  
  [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [XML 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
+ [xml 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
  [XML 数据修改语言 (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   

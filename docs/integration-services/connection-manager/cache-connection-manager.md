@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294447"
 ---
 # <a name="cache-connection-manager"></a>缓存连接管理器
@@ -74,7 +74,7 @@ ms.locfileid: "71294447"
  **连接管理器名称**  
  为工作流中的缓存连接提供唯一的名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
- **Description**  
+ **说明**  
  描述此连接。 最好根据连接的用途对其进行说明，以使包的说明一目了然，且更便于维护。  
   
  **使用文件缓存**  
@@ -92,7 +92,7 @@ ms.locfileid: "71294447"
  **文件名**  
  键入缓存文件的路径和文件名。  
   
- **浏览**  
+ **“浏览”**  
  定位缓存文件。  
   
  **刷新元数据**  
@@ -115,7 +115,7 @@ ms.locfileid: "71294447"
 > [!NOTE]  
 >  当将查找转换配置为使用缓存连接管理器时，则仅引用数据集中的索引列能够映射到输入列。 此外，还必须对所有索引列进行映射。  
   
- **类型**  
+ 类型   
  指定列的数据类型。  
   
  **长度**  
@@ -124,7 +124,7 @@ ms.locfileid: "71294447"
  **精度**  
  指定特定列数据类型的精度。 精度指数字的位数。 如果适用于该数据类型，则可更新 **Precision**。  
   
- **小数位数**  
+ **缩放**  
  指定特定列数据类型的小数位数。 小数位数指小数点后的数字位数。 如果适用于该数据类型，则可更新 **Scale**。  
   
  **代码页**  

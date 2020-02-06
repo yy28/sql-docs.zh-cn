@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843714"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 数据库函数有哪些？
@@ -52,7 +52,7 @@ ms.locfileid: "73843714"
 
 ### <a name="categories-of-scalar-functions"></a>标量函数类别
   
-|函数类别|描述|  
+|函数类别|说明|  
 |-----------------------|-----------------|  
 |[配置函数](configuration-functions-transact-sql.md)|返回当前配置信息。|  
 |[转换函数](conversion-functions-transact-sql.md)|支持数据类型强制转换和转换。|  

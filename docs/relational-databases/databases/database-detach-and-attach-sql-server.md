@@ -28,10 +28,10 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037581"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>数据库分离和附加 (SQL Server)
@@ -102,7 +102,7 @@ ms.locfileid: "68037581"
 -   如果附加的主数据文件是只读的，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 假定数据库也是只读的。 对于只读数据库，日志文件在数据库主文件中指定的位置上必须可用。 因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法更新主文件中存储的日志位置，所以无法生成新的日志文件。  
  
 ###  <a name="Metadata"></a> 附加数据库时的元数据更改  
-分离再重新附加只读数据库后，会丢失有关当前差异基准的备份信息。 “差异基准”  是数据库或其文件或文件组子集中所有数据的最新完整备份。 如果没有基准备份信息，**master** 数据库会变得与只读数据库不同步，这样之后进行的差异备份可能会产生意外结果。 因此，如果对只读数据库使用差异备份，在重新附加数据库后，应通过进行完整备份来建立新的差异基准。 有关差异备份的信息，请参阅[差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
+分离再重新附加只读数据库后，会丢失有关当前差异基准的备份信息。 “差异基准”  是数据库或其文件或文件组子集中所有数据的最新完整备份。 如果没有基准备份信息， **master** 数据库会变得与只读数据库不同步，这样之后进行的差异备份可能会产生意外结果。 因此，如果对只读数据库使用差异备份，在重新附加数据库后，应通过进行完整备份来建立新的差异基准。 有关差异备份的信息，请参阅[差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
 附加时，数据库会启动。 通常，附加数据库时会将数据库重置为它分离或复制时的状态。 但是，附加和分离操作都会禁用数据库的跨数据库所有权链接。 有关如何启用链接的详细信息，请参阅 [cross db ownership chaining 服务器配置选项](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。 
 

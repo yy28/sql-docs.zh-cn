@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874462"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 排序规则名称 (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70874462"
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 COLLATE 子句中指定 Windows 排序规则名称。 Windows 排序规则名称是由排序规则指示符和比较样式构成的。
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法
 
@@ -54,7 +54,7 @@ CollationDesignator_<ComparisonStyle>
 - 指定按字典排序时应用的排序和比较规则。 排序规则基于字母表或语言。
 - 用于存储 varchar  数据 的代码页。
 
-以下是一些示例：
+一些示例如下：
 
 - Latin1\_General 或法语：都使用代码页 1252。
 - 土耳其语：使用代码页 1254。
@@ -72,12 +72,12 @@ WidthSensitivity
 省略此选项指定不区分全半角，WS 指定区分全半角  。
 
 VariationSelectorSensitivity   
-- **适用对象**：自 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 起 
+- 适用范围：从  **开始**[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - 省略此选项指定区分不区分选择器，VSS 指定区分区分选择器  。
 
 **UTF8**  
-- **适用对象**：自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起   
+- 适用范围：从  **开始**[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - 指定用于符合条件的数据类型的 UTF-8 编码。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。
 
@@ -87,7 +87,7 @@ VariationSelectorSensitivity
 **BIN2**  
 指定使用码位比较语义的二进制排序顺序。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 某些码位可能未定义排序权重和/或大写/小写映射，具体取决于排序规则的版本。 例如，在 `LOWER` 函数给定相同字符但在不同版本的同一排序规则中，比较该函数的输出：
 
 ```sql
@@ -196,10 +196,10 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |克丘亚语（秘鲁）|Latin1_General_100_|不可用|
 |罗曼什语（瑞士）|Romansh_100_|不可用|
 |萨米语（伊纳里，芬兰）|Sami_Sweden_Finland_100_|不可用|
-|萨米语（律勒欧，挪威）|Sami_Norway_100_|不可用|
+|萨米语(律勒欧，挪威)|Sami_Norway_100_|不可用|
 |萨米语（律勒欧，瑞典）|Sami_Sweden_Finland_100_|不可用|
 |萨米语（北方，芬兰）|Sami_Sweden_Finland_100_|不可用|
-|萨米语（北方，挪威）|Sami_Norway_100_|不可用|
+|萨米语(北方，挪威)|Sami_Norway_100_|不可用|
 |萨米语（北方，瑞典）|Sami_Sweden_Finland_100_|不可用|
 |萨米语（斯科特，芬兰）|Sami_Sweden_Finland_100_|不可用|
 |萨米语（南方，挪威）|Sami_Norway_100_|不可用|
@@ -233,7 +233,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |不推荐使用；在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，在服务器级别不可用|Hindi|Hindi|
 |不推荐使用；在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，在服务器级别不可用|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |不推荐使用；在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，在服务器级别不可用|Lithuanian_Classic|Lithuanian_Classic|
-|不推荐使用；在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，在服务器级别不可用|Macedonian|Macedonian|
+|不推荐使用；在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，在服务器级别不可用|马其顿语|马其顿语|
 
 <sup>1</sup> 仅 Unicode 的 Windows 排序规则只能应用于列级或表达式级数据。 它们不能用作服务器或数据库排序规则。
 

@@ -1,5 +1,5 @@
 ---
-title: TM:Begin Tran Starting 事件类 | Microsoft Docs
+title: 'TM: Begin Tran Starting 事件类 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4bae04195dff799ccf81fcf3986f8e29e05dafbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118159"
 ---
-# <a name="tm-begin-tran-starting-event-class"></a>TM:Begin Tran Starting 事件类
+# <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  TM：Begin Tran Starting 事件类指示正在启动 BEGIN TRANSACTION 请求。 将通过事务管理接口从客户端发送请求。  
+  TM: Begin Tran Starting 事件类表示正在启动 BEGIN TRANSACTION 请求。 将通过事务管理接口从客户端发送请求。  
   
-## <a name="tm-begin-tran-starting-event-class-data-columns"></a>TM:Begin Tran Starting 事件类的数据列  
+## <a name="tm-begin-tran-starting-event-class-data-columns"></a>TM: Begin Tran Starting 事件类的数据列  
   
-|数据列名称|数据类型|描述|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  

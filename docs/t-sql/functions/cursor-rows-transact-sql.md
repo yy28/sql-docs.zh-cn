@@ -21,18 +21,18 @@ ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ec6830916132a87a7beb50a8509f2f46bd2d1d74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026270"
 ---
-# <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
+# <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 它返回在连接上打开的上一个游标中当前拥有的限定行的数目。 为了提高性能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可异步填充大型键集和静态游标。 可调用 `@@CURSOR_ROWS` 以确定当 @@CURSOR_ROWS 被调用时检索了游标符合条件的行数。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -45,14 +45,14 @@ ms.locfileid: "68026270"
   
 ## <a name="return-value"></a>返回值  
   
-|返回值|描述|  
+|返回值|说明|  
 |---|---|
 |-m |游标被异步填充。 返回的值 (-m) 是键集中当前的行数*m*。|  
 |-1|游标为动态游标。 因为动态游标可反映所有更改，所以游标符合条件的行数不断变化。 游标不一定检索所有符合条件的行。|  
 |0|没有已打开的游标，对于上一个打开的游标没有符合条件的行，或上一个打开的游标已被关闭或被释放。|  
 |*n*|游标已完全填充。 返回值 (n) 是游标中的总行数  。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 如果异步打开最后一个游标，`@@CURSOR_ROWS` 返回负数。 如果 sp_configure cursor threshold 的值超过 0，且游标结果集中的行数大于游标阈值，则异步打开键集驱动程序或静态游标。
   
 ## <a name="examples"></a>示例  

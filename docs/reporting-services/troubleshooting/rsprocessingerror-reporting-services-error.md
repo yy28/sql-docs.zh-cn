@@ -11,10 +11,10 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573814"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 错误
@@ -29,7 +29,7 @@ ms.locfileid: "65573814"
 |组件|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |消息正文|处理报表时出错。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  在发布、处理、本地预览、从报表服务器中查看或者为报表创建订阅时，遇到了一个或多个错误。 此错误消息表示至少检测到了一个错误。  
   
 ### <a name="possible-causes"></a>可能的原因  
@@ -96,11 +96,11 @@ ms.locfileid: "65573814"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>无法比较筛选器的数据类型  
  在筛选器公式中，定义筛选内容的筛选器表达式和筛选器值必须为相同数据类型才能进行比较。 如果出现以下错误之一，请修改字段表达式或筛选器值以使数据类型匹配：  
   
--   无法为 \<report item name> 执行 \<report item type> 的处理   。 无法比较 \<type> 和 \<type> 类型的数据   。 请检查 \<report item name> 返回的数据类型  。  
+-   无法为 *report item name> 执行 \<report item type> 的处理* *\<* 。 无法比较 *type> 和 \<type> 类型的数据* *\<* 。 请检查 *report item name> 返回的数据类型\<* 。  
   
--   无法计算 \<property name>  。  
+-   无法计算 *property name>\<* 。  
   
--   无法计算 \<property name>  。 它引用了一个数据集字段，该字段包含一个错误：\<error string>  。  
+-   无法计算 *property name>\<* 。 它引用了一个数据集字段，该字段包含一个错误：*error string>\<* 。  
   
  有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
@@ -109,18 +109,18 @@ ms.locfileid: "65573814"
   
  也可以将特定作用域的名称传递给聚合函数。 作用域可以引用数据集和数据区域的名称，也可以引用位于数据层次结构中较高位置的作用域的名称。 这适用于以下消息：  
   
--   \<report item type>“\<report item name>”具有无效的作用域“\<scope name>”    。 该作用域必须是当前作用域或包含在当前作用域内。  
+-   *report item type>“\<report item name>”具有无效的作用域“* scope name>” *\<* *\<* 。 该作用域必须是当前作用域或包含在当前作用域内。  
   
--   \<report item type>“\<report item name>”的 \<property name> 表达式包含的作用域参数对聚合函数无效    。 作用域参数必须设置为字符串常量，该常量可以等于所包含组的名称、所包含数据区域的名称或数据集的名称。  
+-   *report item type>“\<report item name>”的* property name> 表达式包含的作用域参数对聚合函数无效 *\<* *\<* 。 作用域参数必须设置为字符串常量，该常量可以等于所包含组的名称、所包含数据区域的名称或数据集的名称。  
   
  对于计算运行总计的聚合函数（**Previous**、 **RunningValue**或 **RowNumber**），可以将作用域参数指定为行组名称或列组名称，但不能同时指定二者。 这适用于以下错误消息：  
   
--   \<report item type>“\<report item name>”的数据单元中所用的 Previous、RunningValue 或 RowNumber 聚合函数同时引用了 \<report item type> 的行和列中的分组作用域       。 \<report item type> 内的所有 Previous、RunningValue 和 RowNumber 聚合函数的作用域参数均可引用数据行分组或数据列分组，但不能同时引用这二者     。  
+-   **report item type>“** report item name>”的数据单元中所用的 Previous、RunningValue 或 RowNumber 聚合函数同时引用了 **report item type> 的行和列中的分组作用域**  *\<* *\<* *\<* 。 **report item type> 内的所有 Previous、RunningValue 和 RowNumber 聚合函数的作用域参数均可引用数据行分组或数据列分组，但不能同时引用这二者**   *\<* 。  
   
  有关详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)和[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>顶级文本框的默认数据集作用域  
- 如果报表包含多个数据集，请勿使用添加到报表设计图面上的文本框的默认作用域。 应使用一个表达式，其中包含数据集名称（作为作用域）和聚合函数。 例如， `=First(Fields!FieldName.Value, "DataSet2")`。  
+ 如果报表包含多个数据集，请勿使用添加到报表设计图面上的文本框的默认作用域。 应使用一个表达式，其中包含数据集名称（作为作用域）和聚合函数。 例如，`=First(Fields!FieldName.Value, "DataSet2")` 。  
   
 ## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

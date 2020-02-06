@@ -13,10 +13,10 @@ ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c8c7429c9352ca7f488317547eb082532c3916eb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909649"
 ---
 # <a name="start-or-stop-a-collection-set"></a>启动或停止收集组
@@ -49,7 +49,7 @@ ms.locfileid: "72909649"
   
 -   与常规存储过程不同的是，数据收集器存储过程的参数已严格类型化，不支持自动的数据类型转换。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   必须启动 SQL Server 代理。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "72909649"
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”** 。  
   
-2.  右键单击要停止的收集组，然后单击“停止数据收集组”  。  
+2.  右键单击要停止的收集组，然后单击 **“停止数据收集组”** 。  
   
      将出现一个消息框，显示此操作的结果，收集组图标上的红色圆圈指示收集组已经停止。  
   

@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4410c086ed5fdca8fa4812a96c13bac6f692c8ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942952"
 ---
 # <a name="-bitwise-or-transact-sql"></a>|（位或）(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67942952"
 
   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中，将两个指定的整数值转换为二进制表达式后执行逻辑位或运算。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,7 +53,7 @@ expression | expression
 ## <a name="result-types"></a>结果类型  
  如果输入值为 int，则返回 int，如果输入值为 smallint，则返回 smallint，或者如果输入值为 tinyint，则返回 tinyint       。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  位运算符 | 取两个表达式的每个对应位，在两个表达式之间执行逻辑位或运算。 如果在输入表达式中有一个位为 1 或两个位均为 1（对于正在解析的当前位），那么结果中的位将被设置为 1；如果输入表达式中的两个位都不为 1，则结果中的位将被设置为 0。  
   
  如果左侧和右侧的表达式具有不同的整数数据类型（例如，左侧的表达式的数据类型为 smallint，右侧的表达式的数据类型为 int），则会将较小数据类型的参数转换为较大数据类型     。 此示例中，smallint  表达式  转换成了 int  。  
@@ -89,7 +89,7 @@ GO
 (1 row(s) affected)  
 ```  
   
- 170（以下的 a_int_value 或 `A`）的二进制表示形式为 `0000 0000 1010 1010`  。 75（以下的 b_int_value 或 `B`）的二进制表示形式为 `0000 0000 0100 1011`  。 对这两个值执行位或运算产生的二进制结果为 `0000 0000 1110 1011`，即十进制数 235。  
+ 170（以下的 a_int_value 或 **）的二进制表示形式为** `A``0000 0000 1010 1010`。 75（以下的 b_int_value 或 **）的二进制表示形式为** `B``0000 0000 0100 1011`。 对这两个值执行位或运算产生的二进制结果为 `0000 0000 1110 1011`，即十进制数 235。  
   
 ```  
 (A | B)  

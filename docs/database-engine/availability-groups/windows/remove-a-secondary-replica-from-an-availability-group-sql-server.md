@@ -16,10 +16,10 @@ ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f0b73bf44f4990b94ad44e450214099760901134
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014382"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>从可用性组中删除辅助副本 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "68014382"
 -   只有主副本支持该任务。    
 -   从可用性组中仅可删除辅助副本。  
   
-## <a name="Prerequisites"></a> 先决条件  
+## <a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载可用性组的主副本的服务器实例。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68014382"
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="PostBestPractices"></a>跟进：在删除次要副本之后  
+##  <a name="PostBestPractices"></a> 跟进：在删除辅助副本之后  
  如果您指定一个当前不可用的副本，则在该副本联机时，将发现该副本已被删除。  
   
  删除副本会导致它停止接收数据。 在某个辅助副本确认其已从全局存储中删除之后，该副本将从其数据库（在本地服务器实例上保留为 RECOVERING 状态）中删除可用性组设置。  

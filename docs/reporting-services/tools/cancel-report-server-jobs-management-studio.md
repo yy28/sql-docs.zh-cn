@@ -11,10 +11,10 @@ ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8c433b8fcc0d768b3db48edf8bc56bed6440839a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574221"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>取消报表服务器作业 (Management Studio)
@@ -37,7 +37,7 @@ ms.locfileid: "65574221"
  **名称**  
  显示报表的名称。 订阅通过其各自的说明进行标识。  
   
- **类型**  
+ 类型   
  有效值为 **User** 和 **System**。  
   
  **Start Time**  
@@ -46,7 +46,7 @@ ms.locfileid: "65574221"
  **用户名**  
  对于由用户启动的作业，此列显示用户名。  
   
- **“状态”**  
+ **Status**  
  显示作业的状态。 有效值为 **“新”** 和 **“正在运行”** 。 当作业开始时，状态始终为 **“新”** 。 在 60 秒之后，状态会改为 **“正在运行”** 。 必须刷新该页才能看到变化。  
   
  **确定**  

@@ -33,10 +33,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846720"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE（SQL 图形）
@@ -47,7 +47,7 @@ ms.locfileid: "70846720"
 > [!NOTE]   
 >  有关标准 Transact-SQL 语句，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -98,10 +98,10 @@ CREATE TABLE
 ## <a name="arguments"></a>参数  
 本文档仅列出与 SQL 图形相关的参数。 有关受支持参数的完整列表和说明，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
- database_name     
+ database_name      
  要在其中创建表的数据库的名称。 database_name 须指定现有数据库的名称  。 如果未指定，则 database_name 默认为当前数据库  。 当前连接的登录名必须与 database_name 所指定数据库中的一个现有用户 ID 关联，并且该用户 ID 必须具有 CREATE TABLE 权限  。  
   
- schema_name     
+ schema_name      
  新表所属架构的名称。  
   
  *table_name*      
@@ -122,7 +122,7 @@ CREATE TABLE
  ON {partition_scheme | filegroup | "default"}    
  也可在 PRIMARY KEY 约束或 UNIQUE 约束中指定。 这些约束会创建索引。 如果 filegroup 未指定，则索引会存储在已命名文件组中。 如果指定了 default，或者根本未指定 ON，则索引将与表存储在同一文件组中。 如果 PRIMARY KEY 约束或 UNIQUE 约束创建聚集索引，则表的数据页将与索引存储在同一文件组中。 如果指定了 CLUSTERED 或约束另外创建了聚集索引，并且指定的 partition_scheme 不同于表定义的 partition_scheme 或 filegroup，或反之，则只接受约束定义，而忽略其他定义。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 不支持以节点或边界表的形式创建临时表。  
 
 不支持以临时表的形式创建节点或边界表。

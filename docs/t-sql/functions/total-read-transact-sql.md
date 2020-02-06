@@ -22,18 +22,18 @@ ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4d743ba90c6dc8ea93daa97a56aa341e4ba987cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098942"
 ---
-# <a name="x40x40totalread-transact-sql"></a>&#x40;&#x40;TOTAL_READ (Transact-SQL)
+# <a name="x40x40total_read-transact-sql"></a>&#x40;&#x40;TOTAL_READ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自上次启动后由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行的磁盘读取（非缓存读取）的次数。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68098942"
 ## <a name="return-types"></a>返回类型  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  要显示包含多项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括读写活动）的报表，请运行 sp_monitor  。  
   
 ## <a name="examples"></a>示例  

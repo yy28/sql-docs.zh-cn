@@ -11,10 +11,10 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08fb8cc6e54fff4b315a0a98ace046a49b2673a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008769"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 和 macOS 上的 ODBC 驱动程序对高可用性和灾难恢复的支持
@@ -41,7 +41,7 @@ Linux 和 macOS 的 ODBC 驱动程序支持 [!INCLUDE[ssHADR](../../../includes/
 
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接
 
-当连接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性组侦听程序或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 故障转移群集实例时，应始终指定 MultiSubnetFailover=Yes  。 MultiSubnetFailover 会为 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中的所有可用性组和故障转移群集实例启用更快速的故障转移  。 MultiSubnetFailover 还可以显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间  。 在多子网故障转移过程中，客户端将尝试并行连接。 在子网故障转移期间，驱动程序会主动重试 TCP 连接。
+当连接到 **可用性组侦听程序或** 故障转移群集实例时，应始终指定 MultiSubnetFailover=Yes[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)][!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 MultiSubnetFailover 会为  **中的所有可用性组和故障转移群集实例启用更快速的故障转移**[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 MultiSubnetFailover 还可以显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间  。 在多子网故障转移过程中，客户端将尝试并行连接。 在子网故障转移期间，驱动程序会主动重试 TCP 连接。
 
 **MultiSubnetFailover** 连接属性指示将在可用性组或故障转移群集实例中部署应用程序。 驱动程序会通过尝试连接到所有的 IP 地址，从而连接到主 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据库。 当与 MultiSubnetFailover=Yes连接时，客户端将以比操作系统默认的 TCP 重新传输间隔更快的速度重新尝试建立 TCP 连接  。 **MultiSubnetFailover=Yes** 会在 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例的故障转移之后进行更快速的重新连接。 MultiSubnetFailover=Yes 同时适用于单子网和多子网可用性组和故障转移群集实例  。  
 
@@ -93,7 +93,7 @@ Linux 和 macOS 的 ODBC 驱动程序支持 [!INCLUDE[ssHADR](../../../includes/
   
 使用 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] 的 ODBC 驱动程序应用程序可以使用以下两个函数之一来建立连接：  
   
-|函数|描述|  
+|函数|说明|  
 |------------|---------------|  
 |[SQLConnect 函数](../../../odbc/reference/syntax/sqlconnect-function.md)|SQLConnect 通过数据源名称 (DSN) 或连接属性同时支持 ApplicationIntent 和 MultiSubnetFailover    。|  
 |[SQLDriverConnect 函数](../../../odbc/reference/syntax/sqldriverconnect-function.md)|SQLDriverConnect 通过 DSN、连接字符串关键字或连接属性支持 ApplicationIntent 和 MultiSubnetFailover    。|

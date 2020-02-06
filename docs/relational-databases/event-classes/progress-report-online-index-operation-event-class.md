@@ -1,5 +1,5 @@
 ---
-title: Progress Report:Online Index Operation 事件类
+title: 'Progress Report: Online Index Operation 事件类'
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c87be1a2a80f9bd2f31077e6b6154720c58193b0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056122"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Progress Report:Online Index Operation 事件类
+# <a name="progress-report-online-index-operation-event-class"></a>Progress Report: Online Index Operation 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Progress Report:Online Index Operation 事件类指示在联机索引生成进程运行时联机索引生成操作的进度。  
+  Progress Report: Online Index Operation 事件类指示在联机索引生成进程运行时联机索引生成操作的进度。  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report:Online Index Operation 事件类的数据列  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report: Online Index Operation 事件类数据列  
   
-|数据列名称|数据类型|描述|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BigintData1|**bigint**|插入的行数。|52|是|  

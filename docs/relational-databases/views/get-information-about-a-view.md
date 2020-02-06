@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909884"
 ---
 # <a name="get-information-about-a-view"></a>获取有关视图的信息
@@ -65,7 +65,7 @@ ms.locfileid: "72909884"
 
      **“视图属性”** 对话框中显示以下属性：  
   
-     **“数据库”**  
+     **Database**  
      包含此视图的数据库的名称。  
   
      **Server**  
@@ -114,7 +114,7 @@ ms.locfileid: "72909884"
      **Database Name**  
      包含此视图的数据库的名称。  
   
-     **Description**  
+     **说明**  
      对当前视图的简短说明。  
   
      **架构**  

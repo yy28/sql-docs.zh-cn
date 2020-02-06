@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4badf632e87404b0c3496564abec6ca9a56e3747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909524"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>为索引指定填充因子
@@ -80,7 +80,7 @@ ms.locfileid: "67909524"
   
 6.  展开 **“填充规范”** ，选择 **“填充因子”** 行并在行中输入所需的填充因子。  
   
-7.  单击 **“关闭”** 。  
+7.  单击“关闭”  。  
   
 8.  在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67909524"
   
 7.  在 **“填充因子”** 行中，输入所需的填充因子。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

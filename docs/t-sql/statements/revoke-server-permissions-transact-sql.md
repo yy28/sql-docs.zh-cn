@@ -17,10 +17,10 @@ ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914275"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE 服务器权限 (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "67914275"
 
   删除服务器级 GRANT 和 DENY 权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -92,7 +92,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  server_role   
  指定用户定义的服务器角色。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  只有在当前数据库为 master 时，才可撤消其服务器作用域内的权限。  
   
  REVOKE 操作可同时删除 GRANT 和 DENY 权限。  
@@ -134,7 +134,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |EXTERNAL ACCESS ASSEMBLY|CONTROL SERVER|  
 |IMPERSONATE ANY LOGIN<br /><br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|CONTROL SERVER|  
 |SELECT ALL USER SECURABLES<br /><br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|CONTROL SERVER|  
-|SHUTDOWN|CONTROL SERVER|  
+|关机|CONTROL SERVER|  
 |UNSAFE ASSEMBLY|CONTROL SERVER|  
 |VIEW ANY DATABASE|VIEW ANY DEFINITION|  
 |VIEW ANY DEFINITION|CONTROL SERVER|  
@@ -146,7 +146,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>示例  
   
 ### <a name="a-revoking-a-permission-from-a-login"></a>A. 从登录名中撤消权限  
- 以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `VIEW SERVER STATE` 中撤消 `WanidaBenshoof` 权限。  
+ 以下示例从 `VIEW SERVER STATE` 登录名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中撤消 `WanidaBenshoof` 权限。  
   
 ```  
 USE master;  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ### <a name="b-revoking-the-with-grant-option"></a>B. 撤消 WITH GRANT 选项  
- 以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `CONNECT SQL` 中撤消授予 `JanethEsteves` 的权限。  
+ 以下示例从 `CONNECT SQL` 登录名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中撤消授予 `JanethEsteves` 的权限。  
   
 ```  
 USE master;  

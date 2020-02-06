@@ -19,10 +19,10 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8badd727143d80db08eed45ddbf5102c635ddeeb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293900"
 ---
 # <a name="transfer-database-task"></a>传输数据库任务
@@ -59,7 +59,7 @@ ms.locfileid: "71293900"
   
  此外，在覆盖目标数据库时会写入 **OnInformation** 事件的日志项。  
   
-## <a name="security-and-permissions"></a>安全性和权限  
+## <a name="security-and-permissions"></a>安全和权限  
  若要使用脱机模式传输数据库，运行包的用户必须是 sysadmin 服务器角色的成员。  
   
  若要使用联机模式传输数据库，运行包的用户必须是 sysadmin 服务器角色的成员或所选数据库的数据库所有者 (dbo)。  
@@ -100,7 +100,7 @@ ms.locfileid: "71293900"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入传输数据库任务的说明。  
   
 ## <a name="transfer-database-task-editor-databases-page"></a>传输数据库任务编辑器（“数据库”页）
@@ -108,10 +108,10 @@ ms.locfileid: "71293900"
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接  。  
+ 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与源服务器的新连接\<** 。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接  。  
+ 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与目标服务器的新连接\<** 。  
   
  **DestinationDatabaseName**  
  指定目标服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的名称。  
@@ -135,7 +135,7 @@ ms.locfileid: "71293900"
   
  此属性具有下表所列的选项：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|覆盖目标服务器数据库。|  
 |**False**|不覆盖目标服务器数据库。|  
@@ -143,7 +143,7 @@ ms.locfileid: "71293900"
 > [!CAUTION]  
 >  如果为 **DestinationOverwrite** 指定 **True**，则会覆盖目标服务器数据库中的数据，这可能导致数据丢失。 若要避免数据丢失，请在执行传输数据库任务之前将目标服务器数据库备份到其他位置。  
   
- **操作**  
+ **Action**  
  指定该任务是将数据库“复制”到目标服务器还是“移动”到目标服务器   。  
   
  **方法**  
@@ -164,7 +164,7 @@ ms.locfileid: "71293900"
   
  此属性具有下表所列的选项：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|重新附加源数据库。|  
 |**False**|不重新附加源数据库。|  

@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bfedebc32722f860fb0c84f385742c441023140d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072214"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68072214"
 
   引发异常，并将执行转移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中 TRY…CATCH 构造的 CATCH 块。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ THROW [ { error_number | @local_variable },
  State   
  在 0 到 255 之间的常量或变量，指示与消息关联的状态。 state 为 tinyint   。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  THROW 语句前的语句必须后跟分号 (;) 语句终止符。  
   
  如果 TRY…CATCH 构造不可用，则语句批处理将终止。 设置引发异常的行号和过程。 将严重性设置为 16。  

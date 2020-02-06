@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63294676"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：创建矩阵报表（报表生成器）
@@ -47,11 +47,11 @@ ms.locfileid: "63294676"
   
 4.  在“选择数据集”页上，单击“创建数据集”   。  
   
-5.  单击“下一步”  。  
+5.  单击“下一步”。   
   
 6.  在“选择数据源的连接”  页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 有关创建嵌入数据源的信息，请参阅[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-7.  单击“下一步”  。  
+7.  单击“下一步”。   
   
 8.  在“设计查询”页上，单击“编辑为文本”   。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "63294676"
   
 10. （可选）单击运行图标 (!) 以运行查询并查看数据。
 
-11. 单击“下一步”  。  
+11. 单击“下一步”。   
   
 ## <a name="Groups"></a>2.使用新的表或矩阵向导组织数据并选择布局  
 使用此向导可提供用于显示数据的起始设计。 此向导中的预览窗格可帮助您在完成矩阵设计之前展现对数据进行分组的结果。  
@@ -121,7 +121,7 @@ ms.locfileid: "63294676"
     
     ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
-7.  单击“下一步”  。  
+7.  单击“下一步”。   
   
 8.  在“选择布局”页的“选项”下，确认已选择“显示小计和总计”   。  
   
@@ -129,9 +129,9 @@ ms.locfileid: "63294676"
   
 10. 确认选择了“展开/折叠组”  选项。  
   
-11. 单击“下一步”  。  
+11. 单击“下一步”。   
   
-13. 单击 **“完成”** 。  
+13. 单击“完成”  。  
   
     矩阵将添加到设计图面中。 “行组”窗格显示两个行组：Territory 和 SalesDate。 “列组”窗格显示两个列组：Subcategory 和 Product。 详细信息数据是由数据集查询检索的所有数据。  
     
@@ -154,9 +154,9 @@ ms.locfileid: "63294676"
   
 2.  按 Ctrl 键，然后选择包含 `[Sum(Sales)]`的九个单元。  
   
-3.  在“主文件夹”选项卡中，单击“数字” > “货币”    。 单元会更改为显示已设置好格式的货币。  
+3.  在“主文件夹”选项卡中，单击“数字” **“货币”**   >   。 单元会更改为显示已设置好格式的货币。  
   
-    如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”    。  
+    如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” **“示例值”**   >   。  
     
     ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
   
@@ -310,7 +310,7 @@ ms.locfileid: "63294676"
   
 4.  在“名称”  中，用“SalesByTerritorySubcategory”  替换默认名称。  
   
-5.  单击 **“保存”** 。  
+5.  单击“保存”  。  
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -322,7 +322,7 @@ ms.locfileid: "63294676"
   
 3.  在“名称”  中，用“SalesByTerritorySubcategory”  替换默认名称。  
   
-4.  单击 **“保存”** 。  
+4.  单击“保存”  。  
   
 ## <a name="RotateTextBox"></a>9.（可选）将文本框旋转 270 度  
 具有矩阵的报表在运行时可以垂直方式和水平方式展开。 通过垂直旋转文本框或者旋转 270 度，您可以节约水平空间。 呈现的报表然后将更窄，并且如果导出到 Microsoft Word 之类的格式，报表将更有可能适合打印页面。  
@@ -352,7 +352,7 @@ ms.locfileid: "63294676"
   
 地区名称垂直书写，从下到上。 Territory 行组的高度由地区名称的长度决定。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 有关如何创建矩阵报表的教程到此结束。 有关矩阵报表的详细信息，请参阅： 
 -    [表、矩阵和列表](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [创建矩阵](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)

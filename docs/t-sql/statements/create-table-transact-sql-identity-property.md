@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938931"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY（属性）
@@ -36,7 +36,7 @@ ms.locfileid: "67938931"
 > [!NOTE]  
 >  IDENTITY 属性与 SQL-DMO **Identity** 属性不同，后者提供的是列的行标识属性。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ IDENTITY [ (seed , increment) ]
   
  必须同时指定种子和增量，或者二者都不指定。 如果二者都未指定，则取默认值 (1,1)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  标识列可用于生成键值。 列上的标识属性确保：  
   
 -   每个新值都基于当前种子和增量而生成。  
@@ -77,7 +77,7 @@ IDENTITY [ (seed , increment) ]
   
  每个表只能创建一个标识列。  
   
- 在内存优化表中，种子和增量必须分别设置为 1、1。 将种子或增量设置为 1 以外的值将导致以下错误：内存优化表不支持使用 1 以外的种子和增量值。  
+ 在内存优化表中，种子和增量必须分别设置为 1、1。 将种子或增量设置为 1 以外的值会导致以下错误：内存优化表不支持使用 1 以外的种子和增量值。  
   
 ## <a name="examples"></a>示例  
   

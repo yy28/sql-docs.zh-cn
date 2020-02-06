@@ -16,10 +16,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033241"
 ---
 # <a name="join-filters"></a>Join Filters
@@ -44,7 +44,7 @@ ms.locfileid: "68033241"
 LoginID = SUSER_SNAME()  
 ```  
   
- 此筛选器确保每个雇员的订阅仅包含 **HumanResources.Employee** 表中与该雇员相关的数据（这在本例中是一个单行）。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+ 此筛选器确保每个雇员的订阅仅包含 **HumanResources.Employee** 表中与该雇员相关的数据（这在本例中是一个单行）。 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
  下一步是将此筛选器扩展到各相关表，所使用的语法类似于指定两表间联接所使用的语法。 第一个联接筛选器子句是：  
   

@@ -14,17 +14,17 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844553"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用筛选器函数选择要迁移的行 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  如果在单独的表中存储冷数据，则可以将 Stretch Database 配置为迁移整个表。 另一方面，如果表中包含热数据和冷数据，则可以指定筛选器谓词以选择要迁移的行。 筛选器谓词是一个内联表值函数。 本文介绍如何编写内联表值函数以选择要迁移的行。  
+  如果在单独的某个表中存储了冷数据，则可以将 Stretch Database 配置为迁移整个表。 另一方面，如果表中包含热数据和冷数据，则可以指定筛选器谓词以选择要迁移的行。 筛选器谓词是一个内联表值函数。 本文介绍如何编写内联表值函数以选择要迁移的行。  
   
 > [!IMPORTANT]
 > 如果提供的筛选器函数性能不佳，则数据迁移性能也不佳。 Stretch Database 通过使用 CROSS APPLY 运算符将筛选器函数应用到表。  
@@ -51,21 +51,21 @@ RETURN  SELECT 1 AS is_eligible
         WHERE <predicate>  
 ```  
   
- 该函数的参数必须是表中的列的标识符。  
+ 该函数的参数必须是表中列的标识符。  
   
  需要进行架构绑定以防止筛选器函数使用的列被删除或被更改。  
   
 ### <a name="return-value"></a>返回值  
  如果该函数返回非空结果，则该行符合迁移条件。 否则（也就是说，如果该函数未返回结果），该行不符合迁移条件。  
   
-### <a name="conditions"></a>“条件”  
+### <a name="conditions"></a>条件  
  &lt;*谓词*&gt; 可以包含一个条件，或使用 AND 逻辑运算符联接的多个条件。  
   
 ```  
 <predicate> ::= <condition> [ AND <condition> ] [ ...n ]  
 ```  
   
- 每个条件又可以包含一个基元条件，或使用 OR 逻辑运算符联接的多个基元条件。  
+ 而每个条件又包含一个基元条件或者使用 OR 逻辑运算符联接的多个基元条件。  
   
 ```  
 <condition> ::= <primitive_condition> [ OR <primitive_condition> ] [ ...n ]  
@@ -84,9 +84,9 @@ RETURN  SELECT 1 AS is_eligible
   
 ```  
   
--   将函数参数与常量表达式进行比较。 例如， `@column1 < 1000`。  
+-   将函数参数与常量表达式进行比较。 例如，`@column1 < 1000` 。  
   
-     下面是一个示例，用于检查 *date* 列的值是否为 &lt; 1/1/2016。  
+     以下示例会检查 *date* 列的值是否 &lt; 1/1/2016。  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datetime)  
@@ -104,7 +104,7 @@ RETURN  SELECT 1 AS is_eligible
   
     ```  
   
--   将 IS NULL 或 IS NOT NULL 运算符应用于函数参数。  
+-   向函数参数应用 IS NULL 或 IS NOT NULL 运算符。  
   
 -   使用 IN 运算符将函数参数与常量值列表进行比较。  
   
@@ -138,16 +138,16 @@ RETURN  SELECT 1 AS is_eligible
 ### <a name="constant-expressions"></a>常量表达式  
  在筛选器函数中使用的常量可以是定义函数时可以计算的任何确定性表达式。 常量表达式可以包含以下内容。  
   
--   文字。 例如， `N'abc', 123`。  
+-   文字。 例如，`N'abc', 123` 。  
   
--   代数表达式。 例如， `123 + 456`。  
+-   代数表达式。 例如，`123 + 456` 。  
   
--   确定性函数。 例如， `SQRT(900)`。  
+-   确定性函数。 例如，`SQRT(900)` 。  
   
--   使用 CAST 或 CONVERT 的确定性转换。 例如， `CONVERT(datetime, '1/1/2016', 101)`。  
+-   使用 CAST 或 CONVERT 的确定性转换。 例如，`CONVERT(datetime, '1/1/2016', 101)` 。  
   
 ### <a name="other-expressions"></a>其他表达式  
- 如果将 BETWEEN 和 NOT BETWEEN 运算符替换为等效的 AND 和 OR 表达式后，生成的函数符合此处所述的规则，则可以使用 BETWEEN 和 NOT BETWEEN 运算符。  
+ 如果在将 BETWEEN 和 NOT BETWEEN 运算符替换为等效的 AND 和 OR 表达式后，生成的函数符合本文所述的规则，则可以使用这些 BETWEEN 和 NOT BETWEEN 运算符。  
   
  不能使用子查询或非确定性函数，如 RAND() 或 GETDATE()。  
   
@@ -162,7 +162,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
 ```  
   
- 将该函数作为谓词绑定到表后，以下事项均成立。  
+ 将函数作为谓词绑定到表后，将发生以下情况。  
   
 -   下次进行数据迁移时，只有该函数返回非空值的行才会迁移。  
   
@@ -173,11 +173,11 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
 > [!TIP]
 > 若要提高筛选器函数的性能，请在列上创建由该函数使用的索引。
 
- ### <a name="passing-column-names-to-the-filter-function"></a>将列名称传递给筛选器函数
+ ### <a name="passing-column-names-to-the-filter-function"></a>将列名传递给筛选器函数
  
  当向表分配筛选器函数时，请将传递给筛选器函数的列名称指定为单个部分组成的名称。 如果在传递列名称时指定三个部分组成的名称，则对已启用 Stretch 的表的后续查询将失败。
 
-例如，如果指定三个部分组成的列名称（如下所示），则该语句将成功运行，但对表的后续查询将失败。
+例如，如果指定下面的示例中所示的三部分列名，该语句将成功运行，但对该表的后续查询会失败。
 
 ```sql
 ALTER TABLE SensorTelemetry 
@@ -199,9 +199,9 @@ ALTER TABLE SensorTelemetry
   
 ## <a name="addafterwiz"></a>运行向导后添加筛选器函数  
   
-如果想要使用无法在“启用数据库延伸”向导中创建的函数  ，请退出向导，然后运行 **ALTER TABLE** 语句以指定函数。 但是，在应用函数前，必须停止正在进行的数据迁移，并且移回已迁移的数据。 （有关其必要性的原因的详细信息，请参阅 [替换现有的筛选器函数](#replacePredicate)。）
+如果想要使用无法在“启用数据库延伸”向导中创建的函数  ，请退出向导，然后运行 **ALTER TABLE** 语句以指定函数。 但是，在应用函数之前，必须停止已在进行的数据迁移并取回已迁移的数据。 （有关其必要性的原因的详细信息，请参阅 [替换现有的筛选器函数](#replacePredicate)。）
   
-1. 反向迁移和取回已迁移的数据。 启动此操作后将无法取消。 由于出站数据传输（流出），所以也会在 Azure 上产生成本。 有关详细信息，请参阅 [Azure 定价方式](https://azure.microsoft.com/pricing/details/data-transfers/)。  
+1. 反向迁移和取回已迁移的数据。 启动此操作后将无法取消此操作。 由于出站数据传输（流出），所以也会在 Azure 上产生成本。 有关详细信息，请参阅 [Azure 定价方式](https://azure.microsoft.com/pricing/details/data-transfers/)。  
   
     ```sql  
     ALTER TABLE <table name>  
@@ -212,7 +212,7 @@ ALTER TABLE SensorTelemetry
   
 3. 创建要应用到表的筛选器函数。  
   
-4. 将函数添加到表并重新将数据迁移到 Azure。  
+4. 将该函数添加到表，并重新启动到 Azure 的数据迁移。  
   
     ```sql  
     ALTER TABLE <table name>  
@@ -225,7 +225,7 @@ ALTER TABLE SensorTelemetry
     ```  
   
 ## <a name="filter-rows-by-date"></a>按日期筛选行  
- 下面的示例将迁移 **date** 列包含早于 2016 年 1 月 1 日的值的行。  
+ 下面的示例将迁移**日期**列中包含值早于 2016 年 1 月 1 日的行。  
   
 ```sql  
 -- Filter by date  
@@ -240,7 +240,7 @@ GO
 ```  
   
 ## <a name="filter-rows-by-the-value-in-a-status-column"></a>按状态列中的值筛选行  
- 下面的示例将迁移 **status** 列包含指定的值之一的行。  
+ 下面的示例将迁移**状态**列中包含指定值之一的行。  
   
 ```sql  
 -- Filter by status column  
@@ -288,11 +288,11 @@ SET (
   
 ```  
   
- 在你要更新滑动窗口时，请执行以下操作。  
+ 如果要更新滑动窗口，请执行以下操作。  
   
 1.  创建一个新函数，以指定新的滑动窗口。 下面的示例选择日期早于 2016 年 1 月 2 日，而不是 2016 年 1 月 1 日。  
   
-2.  通过调用 **ALTER TABLE**将以前的筛选器函数替换为新的筛选器函数，如下例所示。  
+2.  通过调用 **ALTER TABLE** 以前的筛选器函数替换为新的筛选器函数，如下面的示例中所示。  
   
 3.  （可选）通过调用 **DROP FUNCTION**删除你不再使用的前一个筛选器函数。 （示例中未显示此步骤。）  
   
@@ -368,7 +368,7 @@ COMMIT ;
   
     ```  
   
--   下面的示例使用 BETWEEN 和 NOT BETWEEN 运算符。 此用法有效，因为将 BETWEEN 和 NOT BETWEEN 运算符替换为等效的 AND 和 OR 表达式后，生成的函数符合此处所述的规则。  
+-   以下示例使用 BETWEEN 和 NOT BETWEEN 运算符。 这种用法是有效的，因为在将 BETWEEN 和 NOT BETWEEN 运算符替换为等效的 AND 和 OR 表达式之后，生成的函数符合此处所述的规则。  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example3(@column1 int, @column2 int)  
@@ -382,7 +382,7 @@ COMMIT ;
   
     ```  
   
-     将 BETWEEN 和 NOT BETWEEN 运算符替换为等效的 AND 和 OR 表达式后，前面的函数等效于下面的函数。  
+     在将 BETWEEN 和 NOT BETWEEN 运算符替换为等效的 AND 和 OR 表达式后，上面的函数等效于下面的函数。  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example4(@column1 int, @column2 int)  
@@ -436,7 +436,7 @@ COMMIT ;
   
     ```  
   
--   下面的函数无效，因为在定义函数时，使用代数运算符或内置函数的表达式的计算结果必须为常量。 不能在代数表达式或函数调用中包括列引用。  
+-   下面的函数无效，因为在定义函数时，使用代数运算符或内置函数的表达式的计算结果必须为常量。 不能在代数表达式或函数调用中包含列引用。  
   
     ```sql  
     CREATE FUNCTION dbo.fn_example8(@column1 int)  
@@ -457,7 +457,7 @@ COMMIT ;
   
     ```  
   
--   下面的函数无效，因为将 BETWEEN 运算符替换为等效的 AND 表达式后，它违反了此处所述的规则。  
+-   下面的函数无效，因为在将 BETWEEN 运算符替换为等效的 AND 表达式之后，它违反了此处所述的规则。  
   
     ```sql  
     CREATE FUNCTION dbo.fn_example10(@column1 int, @column2 int)  
@@ -470,7 +470,7 @@ COMMIT ;
   
     ```  
   
-     将 BETWEEN 运算符替换为等效的 AND 表达式后，前面的函数等效于下面的函数。 此函数无效，因为基元条件只能使用 OR 逻辑运算符。  
+     在将 BETWEEN 运算符替换为等效的 AND 表达式后，上面的函数等效于下面的函数。 此函数无效，因为基元条件只能使用 OR 逻辑运算符。  
   
     ```sql  
     CREATE FUNCTION dbo.fn_example11(@column1 int, @column2 int)  

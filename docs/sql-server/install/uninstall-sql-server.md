@@ -10,10 +10,10 @@ ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47a4d6efa06e94f62c572eed562f96ba1f2102a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68045766"
 ---
 # <a name="uninstall-sql-server"></a>卸载 SQL Server 
@@ -35,7 +35,7 @@ ms.locfileid: "68045766"
  本文介绍从本地计算机卸载和删除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 的过程。  
   
  [删除数据质量服务器对象](../../sql-server/install/remove-data-quality-server-objects.md)  
- 本文介绍如何在卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或者仅卸载 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 中的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 组件后手动删除 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 对象。  
+ 本文介绍如何在卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 或者仅卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DQS) 中的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 组件后手动删除 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 对象。  
   
 ## <a name="related-sections"></a>相关章节  
   

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 631ef62034027217e8893f2fab42ce299157c1ba
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661449"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
@@ -38,7 +38,7 @@ ROW_NUMBER 和 RANK 类似。 ROW_NUMBER 按顺序对所有行进行编号（例
 > [!NOTE]
 > RANK 是运行查询时计算出的临时值。 若要将数值保存在表中，请参阅 [IDENTITY 属性](../../t-sql/statements/create-table-transact-sql-identity-property.md)和 [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)。 
    
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,7 +53,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ## <a name="return-types"></a>返回类型  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果两个或多个行与一个排名关联，则每个关联行将得到相同的排名。 例如，如果两位顶尖销售员具有相同的 SalesYTD 值，则他们将并列第一。 由于已有两行排名在前，所以具有下一个最大 SalesYTD 的销售人员将排名第三。 因此，RANK 函数并不总返回连续整数。  
   
  用于整个查询的排序顺序决定了行在结果集中的显示顺序。  
@@ -131,7 +131,7 @@ BusinessEntityID Rate                  RankBySalary
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C:对分区中的行进行排名  
+### <a name="c-ranking-rows-within-a-partition"></a>C. 对分区中的行进行排名  
  下面的示例根据销售代表的销售总额将每个销售区域中的销售代表进行排名。 行集按 `SalesTerritoryGroup` 分区，按 `SalesAmountQuota` 排序。  
   
 ```sql  

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710381"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288174"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增强事务复制性能
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "71710381"
   
      将代理设置为连续运行而不是创建频繁的计划（如每分钟）会提高复制性能，因为代理不必启动和停止。 将分发代理设置为连续运行后，以低滞后时间将更改传播到拓扑中连接的其他服务器。 有关详细信息，请参阅：  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[指定同步计划](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定同步计划](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>分发代理和日志读取器代理参数  
 代理配置文件参数经常调整，以增加具有高流量 OLTP 系统的日志读取器和分发代理的吞吐量。 
@@ -116,7 +116,7 @@ ms.locfileid: "71710381"
   
 **–SubscriptionStreams** 参数可以显著提高聚合复制吞吐量。 它使到一台订阅服务器的多个连接可以并行应用批量更改，同时在使用单线程时保持多个事务特征的存在。 如果有一个连接无法执行或提交，则所有连接将中止当前批处理，而且代理将用单独的流重试失败的批处理。 在重试阶段完成之前，订阅服务器上会存在临时事务不一致。 失败的批处理成功提交后，订阅服务器将恢复到事务一致状态。  
   
-可以使用 [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 的 `@subscriptionstreams` 来指定此代理参数的值。  
+可以使用 `@subscriptionstreams`sp_addsubscription &#40;Transact-SQL&#41;[ 的 ](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 来指定此代理参数的值。  
 
 有关实施订阅流的详细信息，请参阅[导航 SQL 复制 subscriptionStream 设置](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting)。
   
@@ -142,11 +142,11 @@ ms.locfileid: "71710381"
 
 你可能会注意到在此查询超时期限内，分发代理性能计数器的以下趋势： 
 
-- Dist: Delivered Cmds/sec 性能  计数器的值始终是 0。
-- Dist: Delivered Trans/sec 性能  计数器的值始终是 0。
-- Dist: Delivery Latency 性能  计数器报告值增加，直到解决线程死锁问题。
+- Dist: Delivered Cmds/sec 性能计数器的值始终是 0  。
+- Dist: Delivered Trans/sec 性能计数器的值始终是 0  。
+- Dist: Delivery Latency 性能计数器报告值增加，直到解决线程死锁问题  。
 
-SQL Server 联机丛书中的“复制分发代理”主题包含对以下 SubscriptionStreams 参数的说明  ：“如果有一个连接无法执行或提交，则所有连接将中止当前批处理，而且代理将用单独的流重试失败的批处理。”
+SQL Server 联机丛书中的“复制分发代理”主题包含有关 SubscriptionStreams 参数的以下描述：“如果一个连接未能执行或提交，所有连接将中止当前批处理，代理将使用单个流重试失败的批处理  。”
 
 分发代理使用一个会话来重试之前不能应用的批处理。 分发代理成功应用批处理后，将继续使用多个会话，无需重新启动。
 
@@ -159,7 +159,7 @@ SQL Server 联机丛书中的“复制分发代理”主题包含对以下 Subsc
 ## <a name="see-more"></a>查看详细信息
   
 [处理复制代理配置文件](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
-[查看和修改复制代理命令提示符参数 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+[查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

@@ -18,13 +18,13 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014996"
 ---
-# <a name="sqlsrvprepare"></a>sqlsrv_prepare
+# <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 创建与指定连接相关联的语句资源。 此函数对于执行多个查询非常有用。  
@@ -36,7 +36,7 @@ ms.locfileid: "68014996"
 sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]])  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
 *$conn*：与创建的语句相关联的连接资源。  
   
 $tsql：对应于已创建语句的 Transact-SQL 表达式  。  
@@ -58,16 +58,16 @@ $params [可选]：对应于参数化查询中参数的值的阵列   。 该阵
   
     下表将介绍这些阵列元素：  
   
-    |元素|描述|  
+    |元素|说明|  
     |-----------|---------------|  
     |*$value*|文字值或对 PHP 变量的引用。|  
     |*$direction*[可选]|用于指示参数方向的以下 **SQLSRV_PARAM_\*** 常量之一：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 默认值为 SQLSRV_PARAM_IN  。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
-    |*$phpType*[可选]|SQLSRV_PHPTYPE_\* 常量，用于指定返回的值的 PHP 数据类型  。|  
-    |*$sqlType*[可选]|SQLSRV_SQLTYPE_\* 常量，用于指定输入值的 SQL Server 数据类型  。|  
+    |*$phpType*[可选]|SQLSRV_PHPTYPE_ **常量，用于指定返回的值的 PHP 数据类型\*** 。|  
+    |*$sqlType*[可选]|SQLSRV_SQLTYPE_ **常量，用于指定输入值的 SQL Server 数据类型\*** 。|  
   
 *$options* [可选]：关联阵列，用于设置<a name="properties">查询属性</a>。 下表列出了受支持的键和相应值：
 
-|Key|支持的值|描述|  
+|密钥|支持的值|说明|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|正整数|配置保留客户端游标的结果集的缓冲区大小。<br /><br />默认值为 10240 KB。 有关详细信息，请参阅[指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|
 |DecimalPlaces|介于 0 和 4 之间（含 0 和 4）的整数|指定设置提取的 Money 值格式时的小数位数。<br /><br />将忽略任何负整数或大于 4 的值。<br /><br />仅当 FormatDecimals 为 true  时，此选项才可用。|
@@ -80,7 +80,7 @@ $params [可选]：对应于参数化查询中参数的值的阵列   。 该阵
 ## <a name="return-value"></a>返回值  
 语句资源。 如果无法创建语句资源，将返回 **false** 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 当你准备一个将变量用作参数的语句时，这些变量将绑定到该语句。 这意味着，如果更新变量的值，下次执行该语句时，它将使用更新的参数值运行。  
   
 sqlsrv_prepare 和 sqlsrv_execute 的组合将语句准备和语句执行分成了两个函数调用，并且可用来执行参数化查询   。 如果要对每次执行使用不同的参数值来多次执行语句，该函数是理想之选。  
@@ -222,7 +222,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 当由于 PHP 的[浮点数](https://php.net/manual/en/language.types.float.php)具有有限精确度而将值绑定到[十进制或数值列](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)以确保精确度和准确度时，建议将字符串用作输入。 这同样适用于 bigint 列，尤其是在值超出[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围的情况下。
+> 当由于 PHP 的[浮点数](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)具有有限精确度而将值绑定到[十进制或数值列](https://php.net/manual/en/language.types.float.php)以确保精确度和准确度时，建议将字符串用作输入。 这同样适用于 bigint 列，尤其是在值超出[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围的情况下。
 
 ## <a name="example"></a>示例  
 此代码示例演示如何将十进制值作为输入参数进行绑定。  

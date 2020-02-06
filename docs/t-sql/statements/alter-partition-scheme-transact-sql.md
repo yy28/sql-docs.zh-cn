@@ -22,10 +22,10 @@ ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 593c2d8bf9cff3e10aaafc339aa82ef16c4bc09f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071243"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
@@ -60,7 +60,7 @@ NEXT USED [ filegroup_name ] [ ; ]
   
  如果指定了 filegroup_name 且没有文件组被标记为 NEXT USED，则 ALTER PARTITION SCHEME 将返回一个警告  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  受 ALTER PARTITION SCHEME 影响的所有文件组都必须处于联机状态。  
   
 ## <a name="permissions"></a>权限  
