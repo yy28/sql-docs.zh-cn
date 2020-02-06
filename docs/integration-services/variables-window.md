@@ -16,10 +16,10 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ef2e4b408dabf7b054465149b2489e07fbdefef8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295029"
 ---
 # <a name="variables-window"></a>“变量”窗口
@@ -51,7 +51,7 @@ ms.locfileid: "71295029"
  **网格选项**  
  单击此项可打开“变量网格选项”对话框，从中可以更改列选择并对“变量”窗口应用筛选器。   有关详细信息，请参阅 [变量网格选项](../integration-services/variable-grid-options.md)。  
   
- **Name**  
+ **名称**  
  查看变量名称。 您可以更新用户定义变量的名称。  
   
  **范围**  
@@ -65,7 +65,7 @@ ms.locfileid: "71295029"
 > [!NOTE]  
 >  如果为变量指定表达式，则无法更改数据类型。  
   
- **ReplTest1**  
+ **值**  
  查看变量值。 您可以更新用户定义变量的值。 此值可以是文字或表达式，还可以是多线串。 若要为变量指定表达式，请单击 **“变量”** 窗口中的 **“表达式”** 列旁边的省略号按钮。  
   
  **Namespace**  
@@ -74,10 +74,10 @@ ms.locfileid: "71295029"
  **引发更改事件**  
  指示在值发生更改时是否引发 **OnVariableValueChanged** 事件。 您可以更新用户定义变量和系统变量的值。 默认情况下， **“变量”** 窗口不列出此列。 若要显示此列，请单击 **“网格选项”** 。  
   
- **Description**  
+ **说明**  
  查看变量说明。 您可以更改用户定义变量的说明。 默认情况下， **“变量”** 窗口不列出此列。 若要显示此列，请单击 **“网格选项”** 。  
   
- **“变量”**  
+ **表达式**  
  查看为变量指定的表达式。 若要指定表达式，请单击省略号按钮。  
   
  如果为变量指定了表达式，该变量旁边将显示特殊的图标标记。 这个特殊的图标标记还显示在设置有表达式的连接管理器和任务旁边。  
@@ -94,7 +94,7 @@ ms.locfileid: "71295029"
  **显示所有作用域的变量**  
  选择以显示包范围内的变量以及包中的容器、任务和事件处理程序范围内的变量。 清除此选项以仅显示包范围内的变量以及所选容器、任务或事件处理程序范围内的变量。  
   
- 有关变量作用域的详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)。  
+ 有关变量作用域的详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)区域之下。  
   
 ### <a name="options-for-columns"></a>列选项  
  选择希望在 **“变量”** 窗口中显示的列。  
@@ -103,13 +103,13 @@ ms.locfileid: "71295029"
   
 -   **Data type**  
   
--   **ReplTest1**  
+-   **值**  
   
 -   **Namespace**  
   
 -   **变量值更改时引发事件**  
   
--   **Description**  
+-   **说明**  
   
 -   **表达式**  
   

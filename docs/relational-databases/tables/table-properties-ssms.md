@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905943"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -40,7 +40,7 @@ ms.locfileid: "72905943"
 4.  [“存储”页](#Storage)  
 
 ##  <a name="GeneralPage"></a> “常规”页  
- **“数据库”**  
+ **Database**  
  包含此表的数据库的名称。  
   
  **Server**  
@@ -68,7 +68,7 @@ ms.locfileid: "72905943"
  指示在创建对象时带引号的标识符选项是否设为 ON。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
  **锁升级**  
- 指示表的锁升级粒度。 有关数据库引擎中的锁定的详细信息，请参阅 [SQL Server 事务锁定和行版本控制指南](https://msdn.microsoft.com/library/jj856598.aspx)。 可能的值有：  
+ 指示表的锁升级粒度。 有关数据库引擎中的锁定的详细信息，请参阅 [SQL Server 事务锁定和行版本控制指南](https://msdn.microsoft.com/library/jj856598.aspx)。 可能的值包括：  
   
  AUTO  
  此选项可让 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 选择适合于表架构的锁升级粒度。  

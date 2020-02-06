@@ -17,10 +17,10 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f1a2e2122c4d141d8d702d027bf30d65db93f9c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293835"
 ---
 # <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务
@@ -96,7 +96,7 @@ ms.locfileid: "71293835"
   
  此外， **OnInformation** 事件的日志项报告属于为传输所选的对象类型的对象数、已经传输的对象数以及随表传输数据时截断表这样的操作。 覆盖目标上的每个对象时，都会写入 **OnWarning** 事件的日志项。  
   
-## <a name="security-and-permissions"></a>安全性和权限  
+## <a name="security-and-permissions"></a>安全和权限  
  用户必须具有浏览源服务器上的对象的权限，同时必须具有在目标服务器上删除和创建对象的权限，此外用户还必须具有访问指定数据库和数据库对象的权限。  
   
 ## <a name="configuration-of-the-transfer-sql-server-objects-task"></a>配置传输 SQL Server 对象任务  
@@ -137,7 +137,7 @@ ms.locfileid: "71293835"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务的说明。  
   
 ## <a name="transfer-sql-server-objects-task-editor-objects-page"></a>传输 SQL Server 对象任务编辑器（“对象”页）
@@ -148,13 +148,13 @@ ms.locfileid: "71293835"
   
 ### <a name="static-options"></a>静态选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接  。  
+ 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与源服务器的新连接\<** 。  
   
  **SourceDatabase**  
  选择要从源服务器上的哪个数据库复制对象。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接  。  
+ 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与目标服务器的新连接\<** 。  
   
  **DestinationDatabase**  
  选择对象要复制到目标服务器上的哪个数据库。  
@@ -171,10 +171,10 @@ ms.locfileid: "71293835"
  **ExistingData**  
  指定将数据复制到目标服务器的方式。 此属性具有下表所列的选项：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**替换**|将覆盖目标服务器上的数据。|  
-|**追加**|从源服务器复制的数据将追加到目标服务器上的现有数据中。|  
+|**Append**|从源服务器复制的数据将追加到目标服务器上的现有数据中。|  
   
 > [!NOTE]  
 >  只有在 **CopyData** 设置为 **True** 时， **ExistingData**选项才可用。  

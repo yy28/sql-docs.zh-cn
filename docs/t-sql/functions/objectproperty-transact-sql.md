@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e319c3875adc616d6a855b7fdca0ff24ff880522
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982511"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982511"
 
   返回当前数据库中架构范围内的对象的相关信息。 有关架构范围内对象的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。 不能将此函数用于不属于架构范围内的对象，如数据定义语言 (DDL) 触发器和事件通知。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -113,8 +113,8 @@ OBJECTPROPERTY ( id , property )
 |IsTrigger|任何架构范围内的对象|触发器。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|任何架构范围内的对象|UNIQUE 约束。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|表|用户定义的表。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsView|“查看”|视图。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|任何架构范围内的对象|对象的所有者。<br /><br /> **注意：** 架构所有者不一定是对象所有者。 例如，子对象（其 parent_object_id 为非 null）将始终返回与父对象相同的所有者 ID  。<br /><br /> Nonnull = 对象所有者的数据库用户 ID。|  
+|IsView|查看|视图。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|OwnerId|任何架构范围内的对象|对象的所有者。<br /><br /> 注意：架构所有者不一定是对象所有者  。 例如，子对象（其 parent_object_id 为非 null）将始终返回与父对象相同的所有者 ID  。<br /><br /> Nonnull = 对象所有者的数据库用户 ID。|  
 |SchemaId|任何架构范围内的对象| 对象所属架构的架构 ID。| 
 |TableDeleteTrigger|表|表具有 DELETE 触发器。<br /><br /> >1 = 指定类型的第一个触发器的 ID。|  
 |TableDeleteTriggerCount|表|表具有指定数目的 DELETE 触发器。<br /><br /> >0 = DELETE 触发器数目。|  
@@ -161,12 +161,12 @@ OBJECTPROPERTY ( id , property )
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  出现错误时或调用方没有查看对象的权限时，将返回 NULL。  
   
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 这意味着，如果用户对对象没有任何权限，则元数据生成的内置函数（如 OBJECTPROPERTY）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 假定 object_id 位于当前数据库上下文中  。 引用另一个数据库中的 object_id 的查询将返回 NULL 或返回不正确的结果  。 例如，在下面的查询中，当前数据库上下文为 master 数据库。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将尽量返回该数据库（而不是在查询中指定的数据库）中指定的 object_id 的属性值  。 由于 `vEmployee` 视图不在 master 数据库中，该查询将返回不正确的结果。  
   
 ```  
@@ -217,7 +217,7 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C:查找属于特定架构的表  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C. 查找属于特定架构的表  
  下面的示例返回 dbo 架构中的所有表。  
   
 ```  
@@ -232,7 +232,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>D:验证某个对象是否为表  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D. 验证某个对象是否为表  
  以下示例将测试 `dbo.DimReseller` 是否为 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 数据库中的表。  
   
 ```  

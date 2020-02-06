@@ -11,10 +11,10 @@ ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e7035802b5b4e13c2696af9d76c6a2904547ea25
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292287"
 ---
 # <a name="odbc-flow-components"></a>ODBC 流组件
@@ -28,7 +28,7 @@ ms.locfileid: "71292287"
   
  ODBC 连接器设计为在将数据加载到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]的上下文中支持 ODBC 的数据库中或者从支持 ODBC 的数据库卸载数据时获得最佳性能。  
   
-## <a name="benefits"></a>优势  
+## <a name="benefits"></a>优点  
  用于 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的 ODBC 源和 ODBC 目标在处理从支持 ODBC 的数据库加载数据或卸载数据方面为项目中的 SSIS 提供竞争力。  
   
  ODBC 源和 ODBC 目标实现了与支持 ODBC 的数据库的高性能数据集成。 这两个组件都可以配置为使用按行参数数组绑定来用于支持此模式的绑定的高性能 ODBC 访问接口，以及使用单行参数绑定来用于低性能的 ODBC 访问接口。  

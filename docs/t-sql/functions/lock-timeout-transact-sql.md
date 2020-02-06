@@ -21,18 +21,18 @@ ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 767ccc61139886a1e81bbeb390b89676267b0d79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059904"
 ---
-# <a name="x40x40locktimeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
+# <a name="x40x40lock_timeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回当前会话的当前锁定超时设置（毫秒）。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68059904"
 ## <a name="return-types"></a>返回类型  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SET LOCK_TIMEOUT 允许应用程序设置语句等待阻塞资源的最长时间。 当一条语句等待的时间长度超过 LOCK_TIMEOUT 所设置的时间长度时，被锁住的语句将自动取消，并给应用程序返回一条错误消息。  
   
  如果当前会话中尚未运行 SET LOCK_TIMEOUT，@@LOCK_TIMEOUT 将返回值 -1。  

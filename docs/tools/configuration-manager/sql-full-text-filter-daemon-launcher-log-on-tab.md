@@ -1,6 +1,6 @@
 ---
-title: SQL 全文筛选器守护程序启动器（“登录”选项卡）| Microsoft Docs
-ms.custom: ''
+title: SQL 全文筛选器后台程序启动器（“登录”选项卡）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 13e260f9-a75f-430b-88a3-959ddcead8fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 791079d881cf48c8eb5cdaa74f932cb29738003a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 81cca06132cd63bf344d54004895f1bd9a0ab2e7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058280"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306747"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>SQL 全文筛选器后台程序启动器（“登录”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "68058280"
  **确认密码**  
  再次键入帐户的密码。  
   
- **开始**  
+ **启动**  
  启动服务。  
   
- **停止**  
+ **Stop**  
  停止服务。  
   
  **暂停**  

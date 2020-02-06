@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f4f4e7ae4f7ba11add01a0612fe9607fcb42104c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000559"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68000559"
 |||  
 |-|-|  
 |语法|**smalldatetime**|  
-|用法|DECLARE \@MySmalldatetime smalldatetime <br /><br /> CREATE TABLE Table1 ( Column1 smalldatetime ) |  
+|使用情况|DECLARE \@MySmalldatetime smalldatetime <br /><br /> CREATE TABLE Table1 ( Column1 smalldatetime ) |  
 |默认的字符串文字格式<br /><br /> （用于下级客户端）|不适用|  
 |日期范围|1900-01-01 到 2079-06-06<br /><br /> 1900 年 1 月 1 日到 2079 年 6 月 6 日|  
 |时间范围|00:00:00 到 23:59:59<br /><br /> 2007-05-09 23:59:59 将舍入为<br /><br /> 2007-05-10 00:00:00|  
@@ -157,7 +157,7 @@ SELECT
     ,CAST('2007-05-08 12:59:59.998' AS smalldatetime);  
 ```  
   
-|输入|“输出”|  
+|输入|输出|  
 |---|---|
 |2007-05-08 12:35:29|2007-05-08 12:35:00|  
 |2007-05-08 12:35:30|2007-05-08 12:36:00|  
@@ -179,7 +179,7 @@ SELECT
         'datetimeoffset';  
 ```  
   
-|数据类型|“输出”|  
+|数据类型|输出|  
 |---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  

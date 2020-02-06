@@ -12,10 +12,10 @@ author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412677"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>通过使用内存优化获得更快的临时表和表变量
@@ -60,7 +60,7 @@ ms.locfileid: "74412677"
     - `DECLARE @mytablevariable my_type;` 列中的一个值匹配。  
   
   
-## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 方案：替换全局 tempdb &#x23;&#x23; 表  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 场景：替换全局 tempdb &#x23;&#x23;表  
   
 将全局临时表替换为内存优化的 SCHEMA_ONLY 表非常简单。 最大的改变是在部署时（而不是运行时）创建该表。 由于采用了编译时优化，创建内存优化表会比创建传统表所用时间更长。 创建和删除联机工作负载中的内存优化表不仅会影响工作负载的性能，而且还会影响 AlwaysOn 辅助副本以及数据库恢复的重做性能。
 
@@ -104,7 +104,7 @@ CREATE TABLE dbo.soGlobalB
 3. 在 T-SQL 中将所有提到的 **&#x23;&#x23;tempGlobalB** 替换为 **dbo.soGlobalB**。  
   
   
-## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. 方案：替换会话 tempdb &#x23; 表  
+## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. 场景：替换会话 tempdb &#x23; 表  
   
 替换会话临时表的准备工作包含的 T-SQL 比之前的全局临时表场景要多。 值得庆幸的是额外的 T-SQL 并不意味着需要执行更多操作来完成转换。  
 
@@ -124,7 +124,7 @@ CREATE TABLE #tempSessionC
   
   
   
-首先，创建以下表值函数来筛选 \@\@spid  。 该函数可供所有从会话临时表转换而来的 SCHEMA_ONLY 表使用。  
+首先，创建以下表值函数来筛选 **\@spid\@** 。 该函数可供所有从会话临时表转换而来的 SCHEMA_ONLY 表使用。  
   
   
   
@@ -190,7 +190,7 @@ go
   
   
   
-## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. 方案：表变量可以将 MEMORY_OPTIMIZED 设置为 ON  
+## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. 场景：表变量可以将 MEMORY_OPTIMIZED 设置为 ON  
   
   
 传统的表变量表示 tempdb 数据库中的一个表。 为了获得更快的性能，可以对表变量进行内存优化。  
@@ -211,7 +211,7 @@ DECLARE @tvTableD TABLE
   
 前面的语法是要以 *内联*方式创建表变量。 内联语法不支持内存优化。 因此，让我们针对 TYPE 将内联语法转换为显式语法。  
   
-作用域：  在由 go 关键字分隔的批处理语句中第一组语句创建的 TYPE 定义即使在服务器关闭并重新启动之后仍然有效。 但是在第一个 go 分隔符之后，声明的表 @tvTableC 仅会保留到到达下一个 go 分隔符，并且批处理将结束。  
+*作用域：* 在由 go 关键字分隔的批处理语句中第一组语句创建的 TYPE 定义即使在服务器关闭并重新启动之后仍然有效。 但是在第一个 go 分隔符之后，声明的表 @tvTableC 仅会保留到到达下一个 go 分隔符，并且批处理将结束。  
   
   
   
@@ -269,7 +269,7 @@ CREATE TYPE dbo.typeTableD
 - Azure SQL 数据库不需要创建此 FILEGROUP。  
   
   
-先决条件：  下面的针对 FILEGROUP 的 Transact-SQL 代码是本文后面小节中较长的 T-SQL 代码示例的先决条件。  
+*先决条件：* 下面的针对 FILEGROUP 的 Transact-SQL 代码是本文后面小节中较长的 T-SQL 代码示例的先决条件。  
   
 1. 必须使用可提交 T-SQL 的 SSMS.exe 或另一种工具。  
 2. 将示例 FILEGROUP T-SQL 代码粘贴到 SSMS。  
@@ -313,7 +313,7 @@ go
   
 比较测试的持续时间大约为 7 秒。 若要运行该示例：  
   
-1. 先决条件：  必须在上一节中已运行 FILEGROUP T-SQL。  
+1. *先决条件：* 必须在上一节中已运行 FILEGROUP T-SQL。  
 2. 运行以下 T-SQL INSERT-DELETE 脚本。  
   - 请注意“GO 5001”语句，该语句将重新提交 T-SQL 5001 次。 你可以调整该数字，然后重新运行。  
   
@@ -420,7 +420,7 @@ Batch execution completed 5001 times.
 你可以通过以下资源预测内存优化表的活动内存需求：  
   
 - [估算内存优化表的内存需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
-- [内存优化表中的表和行大小：示例计算](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+- [内存优化表的表和行大小：示例计算](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
 对于较大的表变量，非聚集索引所使用的内存大于它们对内存优化表所使用的内存。  行数和索引键越大，这种差别就越大。  
   
