@@ -21,18 +21,18 @@ ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0ec1dc88832c4a44b3f019bb0e63369ab2d3587a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914895"
 ---
-# <a name="objectdefinition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
+# <a name="object_definition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回指定对象的定义的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 源文本。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,19 +42,19 @@ OBJECT_DEFINITION ( object_id )
 ```  
   
 ## <a name="arguments"></a>参数  
- *object_id*  
- 要使用的对象的 ID。 object_id 的数据类型为 int，并假定表示当前数据库上下文中的对象。  
+ object_id   
+ 要使用的对象的 ID。 object_id 的数据类型为 int，并假定表示当前数据库上下文中的对象   。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar(max)**  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  出现错误时或调用方没有查看对象的权限时，将返回 NULL。  
   
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 这意味着，如果用户对对象没有任何权限，则元数据生成的内置函数（如 OBJECT_DEFINITION）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 假定 object_id 位于当前数据库上下文中。 对象定义的排序规则始终与调用数据库上下文的排序规则匹配。  
+## <a name="remarks"></a>备注  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 假定 object_id 位于当前数据库上下文中  。 对象定义的排序规则始终与调用数据库上下文的排序规则匹配。  
   
  OBJECT_DEFINITION 适用于以下对象类型：  
   

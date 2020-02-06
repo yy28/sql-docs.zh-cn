@@ -15,10 +15,10 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 88893b16dcb6e0529f166ab3c6e3f255110b6f71
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295775"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>通过使用检查点重新启动包
@@ -57,7 +57,7 @@ ms.locfileid: "71295775"
   
  下表列出了可设置为实现检查点的包属性。  
   
-|属性|描述|  
+|properties|说明|  
 |--------------|-----------------|  
 |CheckpointFileName|指定检查点文件的名称。|  
 |CheckpointUsage|指定是否使用检查点。|  
@@ -70,7 +70,7 @@ ms.locfileid: "71295775"
 ### <a name="checkpoint-usage"></a>检查点用法  
  CheckpointUsage 属性可设置为下列值：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**从不**|指定不使用检查点文件，包从包工作流的起点开始运行。|  
 |**始终**|指定始终使用检查点文件，包从上一次执行失败的点重新启动。 如果找不到检查点文件，则包失败。|  

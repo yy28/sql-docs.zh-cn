@@ -1,6 +1,6 @@
 ---
-title: 在文件中替换 | Microsoft Docs
-ms.custom: ''
+title: 在文件中替换
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b53a95f29495388f31ca833b992f8afe3fd9450c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 787ab0e852055b7dcc53a16f14580f7e184500bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265982"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253710"
 ---
 # <a name="replace-in-files"></a>在文件中替换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68265982"
 ## <a name="find-what"></a>查找内容  
  使用 **“在文件中替换”** 选项卡上的这些控件，可以指定要匹配的字符串或表达式。  
   
- **Find what**  
+ **查找内容**  
  键入要搜索的文本。 对话框会尝试使用在打开该对话框前用光标选择的文本、光标附近的文本或以前搜索过的文本，来填充可能的搜索文本。 通过从此下拉列表中选择字符串，可以重用最近搜索过的 20 个字符串之一。  
   
  **[带有通配符的字符串]**  
@@ -99,13 +99,13 @@ ms.locfileid: "68265982"
  **全字匹配**  
  选中此复选框后，“查找结果”窗口将仅显示与“查找内容”  中指定的字符串全字匹配的字符串实例。 例如，搜索 **MyObject** 将返回“MyObject”，而不会返回“CMyObject”或“MyObjectC”。  
   
- **“使用”**  
+ **使用**  
  指示如何解释“查找内容”  或“替换为”  文本框中输入的特殊字符。 选项包括 **“通配符”** 和 **“正则表达式”** 。  
   
  **“正则表达式”**  
  定义文本匹配模式的特殊表示法。 有关列表，请参阅 [使用正则表达式搜索文本](../../relational-databases/scripting/search-text-with-regular-expressions.md)。  
   
- **“通配符”**  
+ **通配符**  
  用于表示一个或多个字符特殊字符，如星号 (`*`) 和问号 (`?`)。 有关列表，请参阅 [使用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)。  
   
  **查找以下文件类型**  

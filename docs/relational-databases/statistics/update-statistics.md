@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59efa5a8143d448ca322ab1b6efa86cbfa9f66d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934084"
 ---
 # <a name="update-statistics"></a>更新统计信息
@@ -57,9 +57,9 @@ ms.locfileid: "67934084"
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
-5.  右键单击要更新的统计信息对象，然后选择“属性”。  
+5.  右键单击要更新的统计信息对象，然后选择  “属性”。  
   
-6.  在“统计信息属性 - statistics\_name”对话框中，选中“更新这些列的统计信息”复选框，然后单击“确定”。  
+6.  在“统计信息属性 - statistics**name”对话框中，选中“更新这些列的统计信息”复选框，然后单击“确定”** _\__   。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -67,9 +67,9 @@ ms.locfileid: "67934084"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -83,9 +83,9 @@ ms.locfileid: "67934084"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -95,15 +95,15 @@ ms.locfileid: "67934084"
     GO  
     ```  
   
-有关详细信息，请参阅 [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)。  
+有关详细信息，请参阅 [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)创建的数据库维护计划。  
   
 ### <a name="to-update-all-statistics-in-a-database"></a>更新数据库中的所有统计信息  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql  
     USE AdventureWorks2012;   

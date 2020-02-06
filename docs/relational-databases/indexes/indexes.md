@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 899bd7aada6364449fa71e9f87839447de73dedd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909673"
 ---
 # <a name="indexes"></a>索引
@@ -26,7 +26,7 @@ ms.locfileid: "67909673"
 ## <a name="available-index-types"></a>可用的索引类型
 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的索引类型，并提供了指向其他信息的链接。  
   
-|索引类型|描述|其他信息|  
+|索引类型|说明|其他信息|  
 |----------------|-----------------|----------------------------|  
 |哈希|借助于哈希索引，可通过内存中的哈希表来访问数据。 哈希索引的内存用量固定不变，是存储桶数量的函数。|[在内存优化表上使用索引的准则](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [哈希索引设计指南](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
 |内存优化非聚集索引|对于内存优化的非聚集索引，内存使用量依赖于行计数以及索引键列的大小|[在内存优化表上使用索引的准则](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [内存优化非聚集索引设计指南](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)|  
@@ -36,7 +36,7 @@ ms.locfileid: "67909673"
 |columnstore|内存中列存储索引通过使用基于列的数据存储和基于列的查询处理来存储和管理数据。<br /><br /> 列存储索引适合于主要执行大容量加载和只读查询的数据仓库工作负荷。 与传统面向行的存储方式相比，使用列存储索引存档可最多提高 **10 倍查询性能** ，与使用非压缩数据大小相比，可提供多达 **7 倍数据压缩率** 。|[列存储索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)<br /><br /> [列存储索引设计指南](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)|  
 |带有包含列的索引|一种非聚集索引，它扩展后不仅包含键列，还包含非键列。|[创建带有包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)|  
 |计算列上的索引|从一个或多个其他列的值或某些确定的输入值派生的列上的索引。|[计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)|  
-|筛选|一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。|[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)<br /><br /> [筛选索引设计指南](../../relational-databases/sql-server-index-design-guide.md#Filtered)|  
+|Filtered|一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。|[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)<br /><br /> [筛选索引设计指南](../../relational-databases/sql-server-index-design-guide.md#Filtered)|  
 |空间|利用空间索引，可以更高效地对*几何*数据类型的列中的空间对象（ **空间数据** ）执行某些操作。 空间索引可减少需要应用开销相对较大的空间操作的对象数。|[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)|  
 |XML|**xml** 数据类型列中 XML 二进制大型对象 (BLOB) 的已拆分持久表示形式。|[XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)|  
 |全文|一种特殊类型的基于标记的功能性索引，由 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文引擎生成和维护。 用于帮助在字符串数据中搜索复杂的词。|[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)|  

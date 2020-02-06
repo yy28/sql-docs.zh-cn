@@ -9,12 +9,12 @@ ms.technology: ''
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c865464022ba18e03be5baa5b66b4b4a87ce2799
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 769c421c087de366ec262c3e5b8744ffb78f3ba6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095852"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75656748"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 开发合作伙伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "74095852"
 
 ## <a name="our-development-partners"></a>我们的开发合作伙伴
 
-| Partner | 描述 | 链接 |
+| Partner | 说明 | 链接 |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>快速 SQL 是一种智能 SQL 集成开发环境，允许数据库开发人员和数据库管理员从一个界面在所有主要数据库平台（包括 SQL Server）上创建高性能 SQL 代码。<br><br>[系统要求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[网站][idera_website]<br>[Twitter][idera_twitter]<br>[视频][idera_youtube] |
 |![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. 让开发者社区能够使用合适的工具集灵活选择编程语言、框架和服务。 使用 Click2Cloud 的工具包，开发人员可以创建“SQL on Linux”容器，并将其附加到应用程序中，同时还可实现安全的多租户体系结构。 该容器可以独立部署于任何基于云的容器平台上。|[市场][click2cloud_marketplace]<br>[网站][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[视频][click2cloud_youtube] |
@@ -31,8 +31,8 @@ ms.locfileid: "74095852"
 若要详细了解其他一些合作伙伴，请参阅[高可用性和灾难恢复合作伙伴][hadr_partners]、[管理合作伙伴][management_partners]以及[监视合作伙伴][monitor_partners]。
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
-[2]: ./media/partner-hadr-sql-server/click2cloud_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
+[2]: ./media/partner-hadr-sql-server/click2cloud-logo.png
 
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md
@@ -42,7 +42,7 @@ ms.locfileid: "74095852"
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/rapid-sql-ide
-[click2cloud_website]:https://www.click2cloud.net
+[click2cloud_website]:https://www.click2cloud.com/
 <!--Get Started Links-->
 
 <!--Datasheet Links-->

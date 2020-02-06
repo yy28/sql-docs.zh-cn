@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 90a62fed8292a5d5cbb1945cdfe8b2cee2502235
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901934"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "67901934"
 
   确定指定的表达式是否为 NULL。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,14 +60,14 @@ expression IS [ NOT ] NULL
  指定 Boolean 结果取反。 谓词将对其返回值取反，值不为 NULL 时返回 TRUE，值为 NULL 时返回 FALSE。  
   
 ## <a name="result-types"></a>结果类型  
- **Boolean**  
+ **布尔值**  
   
 ## <a name="return-code-values"></a>返回代码值  
  如果 expression 的值为 NULL，则 IS NULL 返回 TRUE；否则，返回 FALSE  。  
   
  如果 expression 的值为 NULL，则 IS NOT NULL 返回 FALSE；否则，返回 TRUE  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  若要确定表达式是否为 NULL，请使用 IS NULL 或 IS NOT NULL，而不要使用比较运算符（如 = 或 !=）。 如果有一个参数为 NULL 或两个参数都为 NULL，比较运算符将返回 UNKNOWN。  
   
 ## <a name="examples"></a>示例  

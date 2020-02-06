@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574251"
 ---
 # <a name="url-access-ssrs"></a>URL 访问 (SSRS)
@@ -99,7 +99,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  **param**  
  参数名称。  
   
- *值*  
+ *value*  
  与要使用的参数值相对应的 URL 文本。  
   
  **注意：** 有关可用 URL 访问参数的列表，请参阅 [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)。 有关在 URL 中传递报表参数的示例，请参阅 [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)。  
@@ -108,8 +108,8 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |任务说明|链接|  
 |-----------------------|-----------|  
-|访问报表服务器项，例如报表、共享数据源和资源。|[使用 URL 访问报表服务器项](../reporting-services/access-report-server-items-using-url-access.md)|  
-|将报表参数传递到报表。|[Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
+|访问报表服务器项，例如报表、共享数据源和资源。|[使用 URL 访问来访问报表服务器项](../reporting-services/access-report-server-items-using-url-access.md)|  
+|将报表参数传递到报表。|[在 URL 内传递报表参数](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
 |设置 URL 访问字符串中报表参数的区域设置，它定义日期、货币等特定于区域设置的解释。|[设置 URL 中的报表语言参数](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
 |发送自定义报表呈现方式的报表扩展插件特定的设置。|[在 URL 中指定设备信息设置](../reporting-services/specify-device-information-settings-in-a-url.md)|  
 |将报表直接导出到某一文件格式而无需在浏览器中查看它。|[使用 URL 访问导出报表](../reporting-services/export-a-report-using-url-access.md)|  

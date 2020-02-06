@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228432"
 ---
 # <a name="common-errors-with-database-mail"></a>数据库邮件的常见错误 
@@ -28,7 +28,7 @@ ms.locfileid: "70228432"
 ## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>找不到存储过程“sp_send_dbmail”
 [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) 存储过程安装在 msdb 数据库中。 必须从 msdb 数据库运行 sp_send_dbmail，或为存储过程指定一个由三部分构成的名称  。
 
-例如：
+示例：
 ```sql
 EXEC msdb.dbo.sp_send_dbmail ...
 ```

@@ -1,10 +1,7 @@
 ---
-title: 注册已连接的服务器 (SQL Server Management Studio)| Microsoft Docs
-ms.custom: ''
-ms.date: 07/28/2016
+title: 注册连接的服务器
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24751639dcd0484bb31f1783ca936dddd3e9240c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 07/28/2016
+ms.openlocfilehash: 2487dff89a32c4a5b62bcbb7a610e88f58ed2f78
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256305"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256282"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>注册连接的服务器 (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (SSMS) 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中注册已连接的服务器。 通过注册服务器，您可以保存经常访问的服务器的连接信息。 可以在连接前注册服务器，也可以在通过对象资源管理器进行连接时注册服务器。  可以通过从菜单导航到“视图”  \\“已注册的服务器  ，在 SSMS 中查看已注册的服务器。
+
+本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (SSMS) 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中注册已连接的服务器。 通过注册服务器，您可以保存经常访问的服务器的连接信息。 可以在连接前注册服务器，也可以在通过对象资源管理器进行连接时注册服务器。  可以通过从菜单导航到“视图”  \\“已注册的服务器  ，在 SSMS 中查看已注册的服务器。
   
  **本主题内容**  
   
@@ -53,7 +56,7 @@ Windows 身份验证模式允许用户通过 [!INCLUDE[msCoName](../../includes/
      > [!IMPORTANT]  
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 有关详细信息，请参阅 [选择身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
 
-     -    **User name**  
+     -    **用户名**  
 显示当前连接所使用的用户名。 只有在已选择使用 Windows 身份验证进行连接的情况下，此只读选项才可用。 若要更改 **“用户名”** ，请以其他用户身份登录计算机。 
 
      -    **登录**  
@@ -74,13 +77,12 @@ Windows 身份验证模式允许用户通过 [!INCLUDE[msCoName](../../includes/
 **已注册的服务器说明**  
 输入服务器的说明（可选）。  
   
-**测试**  
+**Test**  
 单击此项可测试与“服务器名称”  中所选服务器的连接。  
   
 **保存**  
 单击此项可保存已注册服务器的设置。 
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
 [创建新的已注册的服务器 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
-  
-  

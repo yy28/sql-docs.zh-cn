@@ -18,17 +18,17 @@ ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
-ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74190153"
 ---
 # <a name="tempdb-database"></a>TempDB 数据库
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-TempDB 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或 SQL 数据库的所有用户使用  。 tempdb 用于保留：  
+TempDB 系统数据库是一个全局资源，可供连接到  **实例或 SQL 数据库的所有用户使用**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 tempdb 用于保留：  
   
 - 显式创建的临时用户对象  ，例如：全局或局部临时表及索引、临时存储过程、表变量、表值函数返回的表或游标。  
 - 由数据库引擎创建的内部对象  。 其中包括：
@@ -264,7 +264,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
 
-如果启用内存优化的 TempDB 元数据后，服务器因任何原因未能启动，则可以使用 **-f** 启动选项以[最小配置](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)启动 SQL Server，从而绕过该功能。 这将使用户能够禁用该功能，然后在正常模式下重启 SQL Server。
+如果启用内存优化的 TempDB 元数据后，服务器因任何原因未能启动，则可以使用 [-f](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) 启动选项以**最小配置**启动 SQL Server，从而绕过该功能。 这将使用户能够禁用该功能，然后在正常模式下重启 SQL Server。
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server 中的 TempDB 容量规划
 确定 TempDB 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生产环境中的适当大小取决于多种因素。 如本文中前面所述，这些因素包括现有工作负荷以及使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 建议你通过在 SQL Server 测试环境中执行下列任务来分析现有的工作负荷：

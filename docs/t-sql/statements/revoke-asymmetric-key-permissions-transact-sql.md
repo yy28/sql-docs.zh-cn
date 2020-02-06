@@ -17,10 +17,10 @@ ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: baf3fd0a03beb185a43180599352b6f64f8044cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082358"
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>REVOKE 非对称密钥权限 (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68082358"
 
   撤消对非对称密钥的权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,7 +55,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
  指定对其撤消权限的非对称密钥。 需要使用作用域限定符 ::  。  
   
  database_principal   
- 指定要从中撤消权限的主体。 可以是以下类型之一：  
+ 指定要从中撤消权限的主体。 下列类型作之一：  
   
 -   数据库用户  
   
@@ -80,7 +80,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
  AS revoking_principal   
- 指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 可以是以下类型之一：  
+ 指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
   
@@ -98,7 +98,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  非对称密钥是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下面列出可对非对称密钥撤消的最特定权限和有限权限，并列出暗含这些权限的更常用的权限。  
   
 |非对称密钥权限|非对称密钥权限隐含的权限|数据库权限隐含的权限|  

@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b6e1144572288b2bc56fd434278ecda6cdc56f8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914380"
 ---
-# <a name="percentrank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
+# <a name="percent_rank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   计算 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中一组行内某行的相对排名。 使用 PERCENT_RANK 计算一个值在查询结果集或分区中的相对位置。 PERCENT_RANK 类似于 CUME_DIST 函数。  

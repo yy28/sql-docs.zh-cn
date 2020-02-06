@@ -1,10 +1,7 @@
 ---
-title: 警报 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 警报
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,15 +19,20 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c29706e1bf94f8717b90964f8edc3a8fff4bc474
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383798"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252689"
 ---
-# <a name="alerts"></a>Alerts
+# <a name="alerts"></a>警报
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -71,7 +73,7 @@ ms.locfileid: "70383798"
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在发生特定级别的严重错误时发出警报。 例如，可以指定严重级别 15 来响应 Transact-SQL 语句中的语法错误。  
   
--   **“数据库”**  
+-   **Database**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理仅在特定数据库中发生事件时才发出警报。 此选项是对错误号或严重级别的补充。 例如，如果实例中包含一个用于生产的数据库和一个用于报告的数据库，可以定义仅响应生产数据库中的语法错误的警报。  
   
@@ -82,7 +84,7 @@ ms.locfileid: "70383798"
 ## <a name="selecting-a-performance-condition"></a>选择性能条件  
 可以指定警报来响应特定的性能条件。 在这种情况下，需要指定要监视的性能计数器、警报的阈值以及警报发生时计数器必须执行的操作。 若要设置性能条件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”  或“警报属性”  对话框中的“常规”  页上定义下列项：  
   
--   **对象**  
+-   **Object**  
   
     对象是要监视的性能区域。  
   
@@ -96,7 +98,7 @@ ms.locfileid: "70383798"
   
 -   **计数器** 和 **值**  
   
-    警报的阈值和导致警报的行为。 阈值是数字。 行为是下列之一：“低于”  、“等于”  或“大于”  指定的值。 **值**是描述性能条件计数器的数字。 例如，若要为性能对象 **SQLServer:Locks** 设置在 **Lock Wait Time** 超过 30 分钟时要发生的警报，则可以选择“大于”  并“指定 30 作为值”  。  
+    警报的阈值和导致警报的行为。 阈值是数字。 行为是下列之一：“低于”  、“等于”  或“大于”  指定的值。 **值** 是描述性能条件计数器的数字。 例如，若要为性能对象 **SQLServer:Locks** 设置在 **Lock Wait Time** 超过 30 分钟时要发生的警报，则可以选择“大于”  并“指定 30 作为值”  。  
   
     又如，可以为性能对象 **SQLServer:Transactions** 指定在 **tempdb** 中的可用空间低于 1000 KB 时发出警报。 若要这样设置，应当选择计数器 **Free space in tempdb (KB)** 、“小于”  和“值”  **1000**。  
   
@@ -110,7 +112,7 @@ ms.locfileid: "70383798"
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作为 WMI 客户端在 WMI 命名空间（使用该命名空间查询事件）进行注册。  
   
--   **Query**  
+-   **查询**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用所提供的 Windows Management Instrumentation 查询语言 (WQL) 语句来标识特定事件。  
   

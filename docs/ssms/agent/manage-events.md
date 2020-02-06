@@ -1,10 +1,9 @@
 ---
-title: 管理事件 | Microsoft Docs
-ms.custom: ''
+title: 管理事件
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,13 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a777dc834e835f7f06bc301158e4967d9c8117e1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 4c7acceed73fdc902fc384f6f7b81fa39e1bfbc5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258175"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254130"
 ---
 # <a name="manage-events"></a>管理事件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,9 +42,9 @@ ms.locfileid: "68258175"
   
 -   **集中性**。 可以从单台服务器对多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的事件进行集中控制，并获得这些事件的合并视图。  
   
--   **可伸缩性** 许多物理服务器可以作为一台逻辑服务器来管理。 可以根据需要在这个物理服务器组中添加或删除服务器。  
+-   **可伸缩性**。 许多物理服务器可以作为一台逻辑服务器来管理。 可以根据需要在这个物理服务器组中添加或删除服务器。  
   
--   **高效性**。 由于只需要定义一次警报和操作员，因此减少了配置时间。  
+-   **效率**。 由于只需要定义一次警报和操作员，因此减少了配置时间。  
   
 ## <a name="disadvantages-of-using-an-alerts-management-server"></a>使用警报管理服务器的缺点  
 设置警报管理服务器的缺点包括：  

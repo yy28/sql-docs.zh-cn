@@ -11,10 +11,10 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ca9674a5bb3128e86d9cceaca4a971066da0fef
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283672"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>第 1-4 课 — 添加包配置
@@ -53,7 +53,7 @@ ms.locfileid: "71283672"
     > [!NOTE]  
     > 为了使该环境变量在列表中可用，您最好在添加该变量后重新启动计算机。 如果不希望重新启动计算机，则可以键入该环境变量的名称。  
   
-7.  单击“下一步”  。  
+7.  单击“下一步”。   
   
 8.  在“完成向导”页上，在“配置名称”框中键入“DataTransfer EV Configuration”，在“预览”窗格中查看配置内容，然后单击“完成”。      
   
@@ -81,7 +81,7 @@ ms.locfileid: "71283672"
   
 10. 在“连接管理器”内，展开“NewCustomers”后，选中“连接字符串”复选框。   
   
-11. 单击“下一步”  。  
+11. 单击“下一步”。   
   
 12. 在“完成向导”页上，在“配置名称”框中键入“DataTransfer 配置”，查看配置的内容，然后单击“完成”。     
   
@@ -104,7 +104,7 @@ ms.locfileid: "71283672"
     > [!NOTE]  
     > 为了使该环境变量在列表中可用，您最好在添加该变量后重新启动计算机。  
   
-7.  单击“下一步”  。  
+7.  单击“下一步”。   
   
 8.  在“完成向导”页上，在“配置名称”框中键入“LoadXMLData EV 配置”，查看配置的内容，然后单击“完成”。     
   
@@ -128,7 +128,7 @@ ms.locfileid: "71283672"
   
 9. 在“选择要导出的属性”页上，依次展开“LoadXMLData”、“可执行文件”、“加载 XML 数据”和“属性”，然后选中“[XMLSource].[XMLData]”和“[XMLSource].[XMLSchemaDefinition]”复选框。    
   
-10. 单击“下一步”  。  
+10. 单击“下一步”。   
   
 11. 在“完成向导”页上，在“配置名称”框中键入“LoadXMLData 配置”，查看配置的内容，然后单击“完成”。     
   

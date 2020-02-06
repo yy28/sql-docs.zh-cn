@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7da76d948774ecbedfc363bdcff3404698d5cf43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085734"
 ---
 # <a name="create-check-constraints"></a>创建 CHECK 约束
@@ -71,19 +71,19 @@ ms.locfileid: "68085734"
     > [!NOTE]  
     >  确保将任何非数字约束值包含在单引号 (') 中。  
   
-4.  单击“确定”  。  
+4.  单击“确定”。   
   
 5.  在  “标识”类别中，您可以更改 CHECK 约束的名称并且为该约束添加说明（扩展属性）。  
   
 6.  在 **“表设计器”** 类别中，您可以设置何时强制约束。  
   
-    |**若要：**|**在以下字段中选择“是”：**|  
+    |**发件人：**|**在以下字段中选择“是”：**|  
     |-------------|---------------------------------------------|  
     |对在创建约束前存在的数据测试约束|**在创建或启用时检查现有数据**|  
     |在此表上发生复制操作时强制约束|**强制用于复制**|  
     |在此表中插入或更新行时强制约束|**强制用于 INSERT 和 UPDATE**|  
   
-7.  单击 **“关闭”** 。  
+7.  单击“关闭”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

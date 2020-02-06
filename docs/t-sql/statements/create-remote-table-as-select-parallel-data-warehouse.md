@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401704"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT（并行数据仓库）
@@ -24,7 +24,7 @@ ms.locfileid: "74401704"
   
  要配置远程服务器，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“远程表复制”。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 ## <a name="arguments"></a>参数  
  *database_name*  
- 在其中创建远程表的数据库。 database_name 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库  。 默认情况下，用户使用默认数据库登录到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+ 在其中创建远程表的数据库。 database_name 是  *数据库*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 默认情况下，用户使用默认数据库登录到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
  *schema_name*  
  新表的架构。 默认情况下，用户使用默认架构登录到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
@@ -126,7 +126,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ## <a name="security"></a>安全性  
  CREATE REMOTE TABLE 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，而不使用 Windows 身份验证。  
   
- 除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端口、管理端口和托管端口外，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 面向外部的网络必须启用防火墙。  
+ 除 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 端口、管理端口和托管端口外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 面向外部的网络必须启用防火墙。  
   
  为了帮助防止数据意外丢失或损坏，用于从设备复制到目标数据库的用户帐户应仅具有对目标数据库的最低要求的权限。  
   
@@ -135,7 +135,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ##  <a name="Examples"></a> 示例  
   
 ### <a name="a-creating-a-remote-table"></a>A. 创建远程表  
- 此示例在数据库 `OrderReporting` 和架构 `Orders` 上创建名为 `MyOrdersTable` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP 远程表。 `OrderReporting` 数据库在名为 `SQLA` 的服务器上，该服务器侦听默认端口 1433。 连接到服务器时使用用户 `David` 的凭据，密码为 `e4n8@3`。  
+ 此示例在数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和架构 `MyOrdersTable` 上创建名为 `OrderReporting` 的 `Orders` SMP 远程表。 `OrderReporting` 数据库在名为 `SQLA` 的服务器上，该服务器侦听默认端口 1433。 连接到服务器时使用用户 `David` 的凭据，密码为 `e4n8@3`。  
   
 ```  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  

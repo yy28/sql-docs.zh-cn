@@ -1,6 +1,6 @@
 ---
-title: 报表服务器属性（“登录”选项卡）| Microsoft Docs
-ms.custom: ''
+title: 报表服务器属性（“登录”选项卡）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 85b62a07b691492f9980574f1607fbb302071497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 1dda864021df72f2e45e2db08fec0c66765fb0a4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058392"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306343"
 ---
 # <a name="report-server-properties-log-on-tab"></a>报表服务器属性（“登录”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "68058392"
  **确认密码**  
  再次键入帐户的密码。  
   
- **开始**  
+ **启动**  
  启动服务。  
   
- **停止**  
+ **Stop**  
  停止服务。  
   
  **暂停**  

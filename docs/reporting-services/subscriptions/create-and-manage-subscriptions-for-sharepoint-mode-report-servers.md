@@ -13,10 +13,10 @@ ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578350"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>创建和管理 SharePoint 模式报表服务器的订阅
@@ -53,7 +53,7 @@ ms.locfileid: "65578350"
   
  在创建订阅时，可以选择输出文件格式。 并不是每个报表在每种格式下都能正常显示。 在订阅中选择格式之前，请打开报表并将其导出为不同格式以验证是否像预期的那样显示。  
   
- 如果用户希望能够创建 **订阅，则他们在 SharePoint 中需要“编辑项”** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 列表权限。 有关详细信息，请参阅 [报表服务器项的 SharePoint 站点和列表权限参考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ 如果用户希望能够创建  **订阅，则他们需要具有在 SharePoint 中“编辑项”列表的权限**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 有关详细信息，请参阅 [报表服务器项的 SharePoint 站点和列表权限参考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
 > [!IMPORTANT]  
 >  用来将报表传递到库或共享文件夹的订阅会创建一个基于原始报表的新静态文件，但它不是在报表查看器 Web 部件中运行的真正报表定义。 如果原始报表具有交互功能（如钻取链接）或动态内容，则这些功能在传递到目标位置的静态文件中将不可用。 如果选择“网页”，则可以保留一些交互功能，但由于该文档不是在报表查看器中运行的 .rdl 文件，因此在报表中单击浏览时将会在浏览器会话中创建一些新页，必须在这些新页中滚动才能返回站点。  
@@ -70,7 +70,7 @@ ms.locfileid: "65578350"
   
 2.  单击该报表旁边的向下箭头，然后选择“管理订阅”  。  
   
-3.  单击 **“添加订阅”** 。  
+3.  单击“添加订阅”  。  
   
 4.  在 **“传递扩展插件”** 中选择 **“SharePoint 文档库”** 。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "65578350"
   
 2.  单击该报表旁边的向下箭头，然后选择“管理订阅”  。  
   
-3.  单击 **“添加订阅”** 。  
+3.  单击“添加订阅”  。  
   
 4.  在 **“传递扩展插件”** 中选择 **“Windows 文件共享”** 。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "65578350"
   
 2.  单击该报表旁边的向下箭头，然后选择“管理订阅”  。  
   
-3.  单击 **“添加订阅”** 。  
+3.  单击“添加订阅”  。  
   
 4.  在“传递扩展插件”中，选择“电子邮件”   。  
   

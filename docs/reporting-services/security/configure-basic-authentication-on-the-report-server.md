@@ -12,10 +12,10 @@ ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d93152c87ff874014e6960e4f213e5eac050618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573298"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>在报表服务器上配置基本身份验证
@@ -36,7 +36,7 @@ ms.locfileid: "65573298"
   
 1.  在文本编辑器中打开 RSReportServer.config。  
   
-     该文件位于 \<>:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  。  
+     该文件位于 *>:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\<* 。  
   
 2.  查找 \<Authentication>  。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "65573298"
   
      请注意，不能将 **Custom** 与其他身份验证类型一起使用。  
   
-5.  使用对环境有效的值替换 \<Realm> 或 \<DefaultDomain> 的空值   。  
+5.  使用对环境有效的值替换 \<Realm> 或 **DefaultDomain> 的空值**\<  。  
   
-6.  保存该文件。  
+6.  保存文件。  
   
 7.  如果配置了扩展部署，请对该部署中的其他报表服务器重复这些步骤。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "65573298"
 ## <a name="rswindowsbasic-reference"></a>RSWindowsBasic 引用  
  配置基本身份验证时，可以指定以下元素。  
   
-|元素|Required|有效值|  
+|元素|必选|有效值|  
 |-------------|--------------|------------------|  
-|LogonMethod|是<br /><br /> 如果不指定值，将使用 3。|**2** = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器。<br /><br /> **3** = 明文登录，在此情况下，登录凭据保留在随各 HTTP 请求一起发送的身份验证包中，这样，该服务器在连接到网络中的其他服务器时可以模拟该用户。 （默认值）<br /><br /> 注意：   不 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]支持值 0（针对交互登录）和 1（针对批处理登录）。|  
+|LogonMethod|是<br /><br /> 如果不指定值，将使用 3。|**2** = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器。<br /><br /> **3** = 明文登录，在此情况下，登录凭据保留在随各 HTTP 请求一起发送的身份验证包中，这样，该服务器在连接到网络中的其他服务器时可以模拟该用户。 （默认值）<br /><br /> 注意：  不 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]支持值 0（针对交互登录）和 1（针对批处理登录）。|  
 |领域|可选|指定包含授权和身份验证功能的资源分区，这些功能用于控制对组织中受保护资源的访问。|  
 |默认域|可选|指定服务器用来对用户进行身份验证的域。 此值是可选的。但如果忽略此值，报表服务器会将计算机名称用作域。 如果计算机是域的成员，则该域是默认域。 如果在域控制器上安装了报表服务器，则所用的域为该计算机控制的域。|  
   

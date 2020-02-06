@@ -16,10 +16,10 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a48d827f621f37e73d82d4a8fa144bb1b95515e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293820"
 ---
 # <a name="update-statistics-task"></a>“更新统计信息”任务
@@ -27,7 +27,7 @@ ms.locfileid: "71293820"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  “更新统计信息”任务为指定的表或索引视图中的一个或多个统计信息组（集合）更新键值分布信息。 有关更多信息，请参见 [Statistics](../../relational-databases/statistics/statistics.md)。  
+  “更新统计信息”任务为指定的表或索引视图中的一个或多个统计信息组（集合）更新键值分布信息。 有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
   
  通过使用“更新统计信息”任务，包可以为单个数据库或多个数据库更新统计信息。 如果此任务仅更新单个数据库中的统计信息，则可以选择任务要为其更新统计信息的视图或表。 可以配置更新来更新所有统计信息、仅更新列统计信息或仅更新索引统计信息。  
   
