@@ -1,26 +1,26 @@
 ---
 title: azdata app template 参考
-titleSuffix: SQL Server big data clusters
 description: azdata app template 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3cdee262be7ef0c14d935c95eb9389d4a3ae03a3
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: da1b98649eeb48d5ae2d6ca05e61da53f519e944
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531915"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251057"
 ---
 # <a name="azdata-app-template"></a>azdata app template
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
+以下文章提供了 `app template` 工具中 `azdata` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -43,7 +43,7 @@ azdata app template list --url https://github.com/diffrent/templates.git
 ```
 ### <a name="optional-parameters"></a>可选参数
 #### `--url -u`
-指定不同的模板存储库位置。 默认： https://github.com/Microsoft/SQLBDC-AppDeploy.git
+指定其他模板存储库位置。 默认： https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 提高日志记录详细程度以显示所有调试日志。
@@ -79,7 +79,7 @@ azdata app template pull --name ssis
 #### `--name -n`
 模板名称。 有关支持的模板名称的完整列表，运行 `azdata app template list`
 #### `--url -u`
-指定其他模板存储库位置。 默认值： https://github.com/Microsoft/SQLBDC-AppDeploy.git
+指定其他模板存储库位置。 默认： https://github.com/Microsoft/SQLBDC-AppDeploy.git
 #### `--destination -d`
 应用程序主干模板的放置位置。
 `./templates`

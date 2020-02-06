@@ -20,10 +20,10 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c837241abfaebe3776a21e03a9c2cbf4c4f5ee9d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292534"
 ---
 # <a name="flat-file-destination"></a>平面文件目标
@@ -74,7 +74,7 @@ ms.locfileid: "71292534"
  **覆盖文件中的数据**  
  指示是覆盖现有文件还是向现有文件中追加数据。  
   
- **标题**  
+ **标头**  
  键入在向文件中写入任何数据之前插入到该文件中的文本块。 使用此选项可以包括其他信息，如列标题。  
   
  **预览**  
@@ -91,7 +91,7 @@ ms.locfileid: "71292534"
  查看可用目标列的列表。 使用拖放操作将可用目标列映射到输入列。  
   
  **输入列**  
- 查看本主题中以前选择的输入列。 可以通过使用 **“可用输入列”** 列表来更改映射。 选择“\<ignore>”可以将该列排除在输出之外  。  
+ 查看本主题中以前选择的输入列。 可以通过使用 **“可用输入列”** 列表来更改映射。 选择“**ignore>”可以将该列排除在输出之外\<** 。  
   
  **目标列**  
  查看每个可用的目标列，包括已映射或未映射的目标列。  

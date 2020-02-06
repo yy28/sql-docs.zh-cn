@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531975"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>执行 SQL Server 大数据群集的脱机部署
@@ -118,9 +118,9 @@ ms.locfileid: "73531975"
 
 ## <a name="install-tools-offline"></a>脱机安装工具
 
-大数据群集部署需要多种工具，包括 Python、`azdata` 和 Kubectl   。 通过下列步骤在脱机服务器上安装这些工具。
+大数据群集部署需要多种工具，包括 Python、 **和 Kubectl**`azdata`  。 通过下列步骤在脱机服务器上安装这些工具。
 
-### <a id="python"></a> 脱机安装 Python
+### <a id="python"></a> 脱机安装 python
 
 1. 在具有 Internet 访问权限的计算机上，下载以下包含 Python 的压缩文件之一：
 
@@ -132,7 +132,7 @@ ms.locfileid: "73531975"
 
 1. 将压缩文件复制到目标计算机，并将其解压缩到所选文件夹中。
 
-1. 从该文件夹运行 `installLocalPythonPackages.bat`，并将完整路径作为参数传到同一文件夹，该操作仅适用于 Windows。
+1. （仅适用于 Windows）从该文件夹运行 `installLocalPythonPackages.bat`，并将完整路径作为参数传递到同一文件夹。
 
    ```PowerShell
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"

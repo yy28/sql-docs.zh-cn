@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903747"
 ---
 # <a name="create-a-database-schema"></a>创建数据库架构
@@ -65,7 +65,7 @@ ms.locfileid: "72903747"
 > 如果要使用 SSMS 针对 Azure SQL 数据库或 Azure SQL 数据仓库创建架构，则不会显示对话框   。 将需要运行生成的“创建架构模板 T-SQL 语句”。
   
 ### <a name="additional-options"></a>其他选项  
- “架构 - 新建”对话框还在两个其他页上提供了选项：  “权限”和“扩展属性”   。  
+ “架构 - 新建”对话框还在两个其他页上提供了选项：“权限”和“扩展属性”    。  
   
 -   **“权限”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "72903747"
     CREATE TABLE Chains.Sizes (ChainID int, width dec(10,2));
     ```
 
-4.  可在单个语句中执行的其他选项。 下面的示例将创建由 Annik 所有、包含表 `NineProngs` 的 `Sprockets` 架构。 该语句向 Mandar 授予 `SELECT` 权限，而对 Prasanna 拒绝授予 `SELECT` 权限。  
+4.  可在单个语句中执行的其他选项。 下面的示例将创建由 Annik 所有、包含表 `Sprockets` 的 `NineProngs` 架构。 该语句向 Mandar 授予 `SELECT` 权限，而对 Prasanna 拒绝授予 `SELECT` 权限。  
 
     ```sql  
     CREATE SCHEMA Sprockets AUTHORIZATION Annik  

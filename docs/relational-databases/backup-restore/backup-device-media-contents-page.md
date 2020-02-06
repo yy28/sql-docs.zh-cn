@@ -13,10 +13,10 @@ ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c877ffb5bb15836f21a6a37c7cd8ccb22b27cc10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987760"
 ---
 # <a name="backup-device-media-contents-page"></a>备份设备（“介质内容”页）
@@ -47,7 +47,7 @@ ms.locfileid: "67987760"
  **名称**  
  显示介质集的名称（如果有的话）。  
   
- **Description**  
+ **说明**  
  显示介质集的说明（如果有的话）。  
   
  **介质簇计数**  
@@ -56,17 +56,17 @@ ms.locfileid: "67987760"
  **备份集**  
  显示介质上包含的备份集的有关信息。 备份集是成功备份操作的结果，其内容分布于相应的一组备份设备上的介质中。  
   
-|标题|值|  
+|标头|值|  
 |------------|------------|  
 |**名称**|备份集的名称。|  
-|**类型**|备份对象：数据库、文件或 \<空白>（对于事务日志）  。|  
-|**组件**|执行的备份类型：“完整”、“差异”或“事务日志”。|  
+|类型 |备份对象：数据库、文件或 *\<blank>* （用于事务日志）。|  
+|组件 |执行的备份类型：完整备份、差异备份或事务日志备份。|  
 |**Server**|执行备份操作的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例名。|  
-|**“数据库”**|已备份数据库的名称。|  
+|**Database**|已备份数据库的名称。|  
 |**位置**|备份集在卷中的位置。|  
 |**Date**|备份操作完成的日期和时间，按客户端的区域设置显示。|  
 |**大小**|备份集的大小（字节）。|  
-|**用户名**|执行备份操作的用户的名称。|  
+|**用户名**|{1}执行备份操作的用户的名称。{2}|  
 |**过期日期**|备份集的过期日期和时间。|  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
