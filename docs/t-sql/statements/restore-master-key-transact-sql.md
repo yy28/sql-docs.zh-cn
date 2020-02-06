@@ -26,10 +26,10 @@ ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3f821e16baa3853926da1323457385365ea64807
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141256"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68141256"
 
   从备份文件中导入数据库主密钥。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
  FORCE  
  指定即使当前数据库主密钥未打开，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法对使用该主密钥加密的某些私钥进行解密，RESTORE 过程也应继续执行。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  还原主密钥之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会对使用当前活动的主密钥加密的所有密钥进行解密，然后使用还原后的主密钥对这些密钥进行加密。 这种大量消耗资源的操作应当安排在资源需求较低的时段执行。 如果当前的数据库主密钥未打开或无法打开，或者无法对任何使用该主密钥加密的密钥进行解密，则还原操作将失败。  
   
  请仅在主密钥无法恢复或解密失败时，才使用 FORCE 选项。 仅由不可恢复密钥加密的信息将会丢失。  

@@ -11,10 +11,10 @@ ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca82bdc8a04ffee4426ffb934a9e9a4ddaf4654f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296611"
 ---
 # <a name="catalogextended_operation_info-ssisdb-database"></a>catalog.extended_operation_info（SSISDB 数据库）
@@ -26,18 +26,18 @@ ms.locfileid: "71296611"
 
   显示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中所有操作的扩展信息。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |info_id|**bigint**|扩展信息的唯一标识符 (ID)。|  
 |operation_id|**bigint**|对应于扩展信息的操作的唯一 ID。|  
 |object_name|nvarchar(260) |对象的名称。|  
 |object_type|**smallint**|受操作影响的对象的类型。 该对象可能是文件夹 (`10`）、项目 (`20`）、包 (`30`)、环境 (`40`） 或执行实例 （`50`)。|  
 |reference_id|**bigint**|操作中使用的引用的唯一 ID。|  
-|status|**int**|操作的状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
+|status|**int**|操作状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |start_time|**datetimeoffset(7)**|操作开始的日期和时间。|  
 |end_time|**datetimeoffset(7)**|操作结束的日期和时间。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  单个操作可以有多个扩展的信息行。  
   
 ## <a name="permissions"></a>权限  
