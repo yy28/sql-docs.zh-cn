@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557922"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 连接器维护与故障排除
@@ -153,7 +153,7 @@ ms.locfileid: "75557922"
 * 向 SQL Server 服务主体授予权限以使用此新的保管库。  
 * 修改数据库引擎使用的 SQL Server 凭据以反映新的保管库名称（如果需要）。  
   
-可以跨 Azure 区域还原密钥备份，前提是它们保留在同一个地理区域或国家/地区云中：美国、加拿大、日本、澳大利亚、印度、亚太地区、欧洲、巴西、中国、美国政府或德国。  
+只要密钥备份保留在同一个地理区域或国家云，就可以跨 Azure 区域还原密钥备份，这些国家/地区包括：美国、加拿大、日本、澳大利亚、印度、APAC、欧洲、巴西、中国、美国政府或德国。  
   
   
 ##  <a name="AppendixB"></a> B. 常见问题  

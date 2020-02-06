@@ -13,10 +13,10 @@ ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a9eb015bbab987c37df2390eee81af2f3338644b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297601"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING（SSIS 表达式）
@@ -46,7 +46,7 @@ FINDSTRING(character_expression, searchstring, occurrence)
 ## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  FINDSTRING 只能处理 DT_WSTR 数据类型。  如果*character_expression* 和 *searchstring* 参数是字符串文字或数据类型为 DT_STR 的数据列，则它们在 FINDSTRING 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
   
  如果 *character_expression* 或 *searchstring* 为 null，则 FINDSTRING 返回 null。  

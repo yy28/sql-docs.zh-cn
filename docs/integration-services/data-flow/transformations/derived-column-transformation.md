@@ -20,10 +20,10 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e605c4fb62e56113a5cc36e418d5648ed6ba3031
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297956"
 ---
 # <a name="derived-column-transformation"></a>派生列转换
@@ -65,7 +65,7 @@ ms.locfileid: "71297956"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "71297956"
   
  此属性的值可以使用属性表达式来指定。  
   
- **相关主题**：[Integration Services &#40;SSIS&#41; 表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[运算符（SSIS 表达式）](../../../integration-services/expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **相关主题**：[Integration Services (SSIS) 表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[运算符（SSIS 表达式）](../../../integration-services/expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **数据类型**  
  如果向新列中添加数据，“派生列转换编辑器”  对话框将自动计算表达式的值并设置相应的数据类型。 该列的值是只读的。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。  
@@ -109,7 +109,7 @@ ms.locfileid: "71297956"
  **精度**  
  如果向新列中添加数据，“派生列转换编辑器”  对话框将自动根据数据类型来设置数值数据的精度。 该列的值是只读的。  
   
- **小数位数**  
+ **缩放**  
  如果向新列中添加数据，“派生列转换编辑器”  对话框将自动根据数据类型来设置数值数据的小数位数。 该列的值是只读的。  
   
  **代码页**  
