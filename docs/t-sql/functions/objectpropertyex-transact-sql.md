@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3035fbe469fa70ed6419388107c479e28b2a656b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982486"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982486"
 
   返回当前数据库中架构范围内的对象的相关信息。 有关这些对象的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。 OBJECTPROPERTYEX 不能用于非架构范围内的对象，如数据定义语言 (DDL) 触发器和事件通知。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ OBJECTPROPERTYEX ( id , property )
  *id*  
  是表示当前数据库中对象 ID 的表达式。 id 的数据类型为 int，并假定为当前数据库上下文中的架构范围内的对象   。  
   
- property   
+ *property*  
  一个表达式，包含要为 ID 所指定的对象返回的信息。返回类型为 sql_variant  。 下表显示了各属性值的基本数据类型。  
   
 > [!NOTE]  
@@ -115,7 +115,7 @@ OBJECTPROPERTYEX ( id , property )
 |IsTrigger|任何架构范围内的对象|触发器。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本数据类型：int |  
 |IsUniqueCnst|任何架构范围内的对象|UNIQUE 约束。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本数据类型：int |  
 |IsUserTable|表|用户定义的表。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本数据类型：int |  
-|IsView|“查看”|视图。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本数据类型：int |  
+|IsView|查看|视图。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本数据类型：int |  
 |OwnerId|任何架构范围内的对象|对象的所有者。<br /><br /> **注意：** 架构所有者不一定是对象所有者。 例如，子对象（其 parent_object_id 为非 null）将始终返回与父对象相同的所有者 ID  。<br /><br /> Nonnull = 对象所有者的数据库用户 ID。<br /><br /> NULL = 不支持的对象类型，或对象 ID 无效。<br /><br /> 基本数据类型：int |  
 |SchemaId|任何架构范围内的对象|与对象关联的架构的 ID。<br /><br /> Nonnull = 对象的架构 ID。<br /><br /> 基本数据类型：int |  
 |SystemDataAccess|函数、视图|对象访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本地实例中的系统数据、系统目录或虚拟系统表。<br /><br /> 0 = 无<br /><br /> 1 = 读取<br /><br /> 基本数据类型：int |  
@@ -167,12 +167,12 @@ OBJECTPROPERTYEX ( id , property )
 ## <a name="return-types"></a>返回类型  
  **sql_variant**  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  出现错误时或调用方没有查看对象的权限时，将返回 NULL。  
   
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 也就是说，如果用户对该对象没有任何权限，则某些会产生元数据的内置函数（如 OBJECTPROPERTYEX）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 假定 object_id 位于当前数据库上下文中  。 引用另一个数据库中的 object_id 的查询将返回 NULL 或返回不正确的结果  。 例如，在下面的查询中，当前数据库上下文为 master 数据库。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将尝试从该数据库（而不是在查询中指定的数据库）中返回指定的 object_id 的属性值  。 由于 `vEmployee` 视图不在 master 数据库中，该查询将返回不正确的结果。  
   
 ```  

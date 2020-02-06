@@ -15,10 +15,10 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a0648ea24162f59562f6d7a68dd5007ca78be3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051269"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() 方法（xml 数据类型）
@@ -46,7 +46,7 @@ nodes (XQuery) as Table(Column)
 Table(Column)    
 结果行集的表名称和列名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 例如，假设有下表：  
   
 ```sql
@@ -215,7 +215,7 @@ go
   
 在 `'.'` 方法中，此查询返回上下文项，其中指定了 `self::node()` 的缩写语法 `query()`。  
   
-请注意以下事项：
+注意以下事项：
   
 - 将 `nodes()` 方法应用于 Instructions 列，并且返回行集 `T (C)`。 此行集包含原始生产说明文档的逻辑副本，并且以 `/root/Location` 作为上下文项。  
   
@@ -247,7 +247,7 @@ go
 ### <a name="applying-nodes-to-the-rowset-returned-by-another-nodes-method"></a>将 nodes() 应用于另一 nodes() 方法返回的行集  
 以下代码查询 XML 文档，以获得 `Instructions` 表的 `ProductModel` 列中的生产说明。 此查询返回包含产品样式 ID、生产位置和生产步骤的行集。  
   
-请注意以下事项：  
+注意以下事项：  
   
 - 将 `nodes()` 方法应用于 `Instructions` 列，并且返回 `T1 (Locations)` 行集。 此行集包含原始生产说明文档的逻辑副本，并且 `/root/Location` 元素作为项上下文。  
   

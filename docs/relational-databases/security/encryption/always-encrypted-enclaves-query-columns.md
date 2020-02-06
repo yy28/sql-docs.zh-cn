@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d0a522d6deb01169189d6f5faaf7ba2f189d1522
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595502"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves"></a>查询使用具有安全 enclave 的 Always Encrypted 的列
@@ -34,7 +34,7 @@ ms.locfileid: "73595502"
 > 对已加密字符串列进行的丰富查询要求列使用包含 BIN2 排序顺序的排序规则（即 BIN2 排序规则）。 
 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 - [通过 SSMS 查询使用具有安全 enclave 的 Always Encrypted 的列](always-encrypted-enclaves-query-columns-ssms.md)
 
 ## <a name="see-also"></a>另请参阅

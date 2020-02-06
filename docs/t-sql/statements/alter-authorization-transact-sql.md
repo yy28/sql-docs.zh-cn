@@ -27,10 +27,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982883"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73982883"
 
   更改安全对象的所有权。    
     
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>语法    
     
@@ -127,26 +127,26 @@ ALTER AUTHORIZATION ON
 |||    
 |-|-|    
 |OBJECT|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Azure SQL 数据仓库、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
-|ASSEMBLY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|ASYMMETRIC KEY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|ASSEMBLY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|ASYMMETRIC KEY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |AVAILABILITY GROUP |适用范围：  SQL Server 2012 和更高版本。|
-|CERTIFICATE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|CERTIFICATE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |CONTRACT|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
-|DATABASE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 有关详细信息，请参阅下面的 [ALTER AUTHORIZATION FOR 数据库](#AlterDB)部分。|    
+|DATABASE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 有关详细信息，请参阅下面的 [ALTER AUTHORIZATION FOR 数据库](#AlterDB)部分。|    
 |ENDPOINT|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
-|FULLTEXT CATALOG|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|FULLTEXT STOPLIST|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|FULLTEXT CATALOG|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|FULLTEXT STOPLIST|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |MESSAGE TYPE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
 |REMOTE SERVICE BINDING|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
-|ROLE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|ROLE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |ROUTE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
 |SCHEMA|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Azure SQL 数据仓库、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
 |SEARCH PROPERTY LIST|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |SERVER ROLE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
 |SERVICE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
-|SYMMETRIC KEY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|TYPE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|XML SCHEMA COLLECTION|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|SYMMETRIC KEY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|类型|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|XML SCHEMA COLLECTION|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
     
  entity_name     
  实体名。    
@@ -154,7 +154,7 @@ ALTER AUTHORIZATION ON
  principal_name | SCHEMA OWNER     
  将拥有实体的安全主体名称。 数据库对象必须为数据库主体、数据库用户或角色所拥有。 服务器对象（如数据库）必须为服务器主体（登录名）所拥有。 将 SCHEMA OWNER 指定为 principal_name，指示对象必须为拥有对象架构的主体所拥有   。    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>备注    
  ALTER AUTHORIZATION 可用于更改任何具有所有者的实体的所有权。 数据库包含的实体的所有权，可以转移给任何数据库级的主体。 服务器级实体的所有权只能转移给服务器级主体。    
     
 > [!IMPORTANT]    
@@ -185,14 +185,14 @@ ALTER AUTHORIZATION ON
 |-----------|---------------|    
 |OBJECT|无法更改触发器、约束、规则、默认值、统计信息、系统对象、队列、索引视图或具有索引视图的表的所有权。|    
 |SCHEMA|转移所有权时，将删除没有显式所有者的架构包含对象的权限。 无法更改 sys、dbo 或 information_schema 的所有者。|    
-|TYPE|无法更改属于 sys 或 information_schema 的 TYPE 的所有权。|    
+|类型|无法更改属于 sys 或 information_schema 的 TYPE 的所有权。|    
 |CONTRACT、MESSAGE TYPE 或 SERVICE|无法更改系统实体的所有权。|    
 |SYMMETRIC KEY|无法更改全局临时密钥的所有权。|    
 |CERTIFICATE 或 ASYMMETRIC KEY|无法将这些实体的所有权转移给角色或组。|    
 |ENDPOINT|主体必须为登录名。|    
   
 ## <a name="AlterDB"></a>对数据库执行 ALTER AUTHORIZATION  
-适用范围：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
+**适用范围**：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 ### <a name="for-sql-server"></a>对于 SQL Server：  
 **对新所有者的要求：**    
 新所有者主体必须是以下项之一：  
@@ -202,7 +202,7 @@ ALTER AUTHORIZATION ON
 -   表示 Windows 组的 Windows 用户，通过 Windows 身份验证登录名进行身份验证。  
   
 **对执行 ALTER AUTHORIZATION 语句的人员的要求：**  
-如果不是 sysadmin 固定服务器角色的成员，则必须至少对数据库具有 TAKE OWNERSHIP 权限和对新所有者用户名具有 IMPERSONATE 权限  。   
+如果不是 **sysadmin** 固定服务器角色的成员，则必须至少对数据库具有 TAKE OWNERSHIP 权限和对新所有者用户名具有 IMPERSONATE 权限。   
 
 ### <a name="for-azure-sql-database"></a>对于 Azure SQL 数据库：  
 **对新所有者的要求：**    
@@ -229,10 +229,10 @@ ALTER AUTHORIZATION ON
   
 执行者  |目标  |结果    
 ---------|---------|---------  
-SQL Server 身份验证登录名     |SQL Server 身份验证登录名         |成功  
+SQL Server 身份验证登录名     |SQL Server 身份验证登录名         |Success  
 SQL Server 身份验证登录名     |Azure AD 用户         |失败           
-Azure AD 用户     |SQL Server 身份验证登录名         |成功           
-Azure AD 用户     |Azure AD 用户         |成功           
+Azure AD 用户     |SQL Server 身份验证登录名         |Success           
+Azure AD 用户     |Azure AD 用户         |Success           
   
 若要验证数据库的 Azure AD 所有者，请在用户数据库中执行以下 Transact-SQL 命令（在此示例中为 `testdb`）。  
     
@@ -253,7 +253,7 @@ ON d.owner_sid = sl.sid;
     
 ```    
   
-### <a name="best-practice"></a>最佳实践  
+### <a name="best-practice"></a>最佳做法  
   
 将 Azure AD 组用作 db_owner 固定数据库角色的成员，而不是将 Azure AD 用户用作数据库的单个所有者  。 下面的步骤演示如何将禁用登录名配置为数据库所有者，并将 Azure Active Directory 组 (`mydbogroup`) 设为 db_owner 角色的成员  。 
 1.  以 Azure AD 管理员身份登录 SQL Server，将数据库的所有者更改为禁用的 SQL Server 身份验证登录名。 例如，在用户数据库中执行：  

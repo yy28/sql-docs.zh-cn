@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594407"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted 加密
@@ -31,7 +31,7 @@ ms.locfileid: "73594407"
   
  列加密密钥 (CEK) 是受 CMK 保护的内容加密密钥（例如，用于保护数据的密钥）。  
   
- 所有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存储提供程序都通过将 RSA 与最佳非对称加密填充 (RSA-OAEP) 配合使用来加密 CEK。 支持 Microsoft 加密 API 的密钥存储提供程序：.NET Framework 中的下一代加密技术 (CNG) ([SqlColumnEncryptionCngProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) 使用 A.2.1 节中 RFC 8017 指定的默认参数。 这些默认参数使用 SHA-1 哈希函数和具有 SHA-1 的 MGF1 掩码生成函数。 其他所有密钥存储提供程序都使用 SHA-256。 
+ 所有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存储提供程序都通过将 RSA 与最佳非对称加密填充 (RSA-OAEP) 配合使用来加密 CEK。 支持 Microsoft 加密 API 的密钥存储提供程序：.NET Framework 中的下一代加密技术 (CNG) ([SqlColumnEncryptionCngProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) 使用 A.2.1 节中 RFC 8017 指定的默认参数。 这些默认参数使用 SHA-1 哈希函数和 SHA-1 附带的 MGF1 掩码生成函数。 其他所有密钥存储提供程序都使用 SHA-256。 
   
 ## <a name="data-encryption-algorithm"></a>数据加密算法  
  始终加密使用 **AEAD_AES_256_CBC_HMAC_SHA_256** 算法来加密数据库中的数据。  
@@ -99,7 +99,7 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>步骤 4：Concatenation  
+### <a name="step-4-concatenation"></a>步骤 4：串联  
  最后，串联算法版本字节、MAC、IV 和 AES_256_CBC 已密码文本，以生成加密值：  
   
 ```  
@@ -178,7 +178,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
  有关本文档中讨论的算法的详细信息，请参阅 [.NET 参考](https://referencesource.microsoft.com/)中的 SqlAeadAes256CbcHmac256Algorithm.cs、SqlColumnEncryptionCertificateStoreProvider.cs 和 SqlColumnEncryptionCertificateStoreProvider.cs 文件    。  
   
 ## <a name="see-also"></a>另请参阅  
- - [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [使用 Always Encrypted 开发应用程序](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

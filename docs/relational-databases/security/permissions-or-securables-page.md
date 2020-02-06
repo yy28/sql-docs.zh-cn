@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 949e3c3cfc14082ef2093dfdd11baa01218ccb2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076624"
 ---
 # <a name="permissions-or-securables-page"></a>“权限”或“安全对象”页
@@ -39,13 +39,13 @@ ms.locfileid: "68076624"
  **名称**  
  添加到网格中的每个主体或安全对象的名称。  
   
- **类型**  
+ 类型   
  描述每个项目的类型。  
   
 ## <a name="explicit-tab"></a>“显式”选项卡  
  **“显式”** 选项卡列出了上部网格中所选安全对象的可能权限。 若要配置权限，请选中或清除“授予”（或“允许”）、“具有授予权限”和“拒绝”复选框     。 对于所有显式权限，全部选项均不可用。  
   
- **“权限”**  
+ **权限**  
  权限的名称。  
   
  **授权者**  

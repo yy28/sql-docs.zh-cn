@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: e370af38481593404629fb3367deb3b9f54bb869
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595672"
 ---
 # <a name="create-and-use-indexes-on-columns-using-always-encrypted-with-secure-enclaves"></a>对使用具有安全 enclave 的 Always Encrypted 的列创建和使用索引
@@ -84,7 +84,7 @@ ms.locfileid: "73595672"
 
 有关如何使用这种方法的分步说明，请参阅[教程：在使用随机加密且已启用 enclave 的列上创建并使用索引。](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md) 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 - [查询使用具有安全 enclave 的 Always Encrypted 的列](always-encrypted-enclaves-query-columns.md)。
 
 ## <a name="see-also"></a>另请参阅  
