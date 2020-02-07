@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71271916"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "71271916"
 
 定义数据库或表列的排序规则，或应用于字符串表达式时的排序规则强制转换操作。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果创建数据库期间未指定，则会为数据库分配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则。 如果创建表列期间未指定，则会为该列分配数据库的默认排序规则。
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法
 
@@ -52,7 +52,7 @@ SQL_collation_name 是 [SQL Server 排序规则名称](../../t-sql/statements/sq
 
 database_default  使 COLLATE 子句继承当前数据库的排序规则。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 可以在多个级别指定 COLLATE 子句。 其中包括：
 

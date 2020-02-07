@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a322934e89cb0b7b0c7959d3078c52a4a3fac65a
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952416"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
@@ -88,7 +88,7 @@ NAME = newUserName
 > [!NOTE]
 > 此选项仅适用于包含的用户。 有关详细信息，请参阅[包含的数据库](../../relational-databases/databases/contained-databases.md)和 [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)。
 
- OLD_PASSWORD **=** _'oldpassword'_ 适用于  ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+ OLD_PASSWORD **=** _'oldpassword'_ 适用于  ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
  将替换为“password”的当前用户密码  。 密码是区分大小写的。 除非拥有 ALTER ANY USER 权限，否则需要具有 OLD_PASSWORD 才能更改密码   。 需要 OLD_PASSWORD 可防止拥有 IMPERSONATION 权限的用户更改密码   。
 

@@ -18,10 +18,10 @@ ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 559a358e0a95af870a716001abb3935523d86248
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042542"
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary（geography 数据类型）
@@ -43,7 +43,7 @@ ms.locfileid: "68042542"
   
  CLR 返回类型：**SqlBytes**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  geography 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 来确定  。  
   
 ## <a name="examples"></a>示例  

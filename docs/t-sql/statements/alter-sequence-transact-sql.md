@@ -19,10 +19,10 @@ ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070333"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68070333"
   
  序列对象是用户定义的绑定到架构的对象，用于可根据规范生成数值序列。 通过调用 NEXT VALUE FOR 函数，从序列中生成新值。 使用 **sp_sequence_get_range** 同时获取多个序列号。 有关同时使用 CREATE SEQUENCE、sp_sequence_get_range 和 NEXT VALUE FOR 函数的信息和方案，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)  。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -77,7 +77,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
  有关缓存的行为的详细信息，请参阅 [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  有关如何创建序列以及如何管理序列缓存的信息，请参阅 [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)。  
   
  不能将表示升序的 MINVALUE 和表示降序的 MAXVALUE 更改为不允许序列的 START WITH 值的值。 如果要将升序的 MINVALUE 更改为一个大于 START WITH 值的数字，或者将降序的 MAXVALUE 更改为小于 START WITH 值的数字，请加入 RESTART WITH 参数，以便在最小值和最大值范围内的所需点重新开始序列。  
@@ -85,7 +85,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ## <a name="metadata"></a>元数据  
  有关序列的信息，请查询 [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
  要求对序列拥有 ALTER 权限或对架构拥有 ALTER 权限   。 若要授予针对序列的 ALTER 权限，请按以下格式使用 ALTER ON OBJECT 对象   ：  

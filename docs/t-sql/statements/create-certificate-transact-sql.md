@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7864be7bbf270e235fd1948a1f70f34417a8dec4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982780"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "73982780"
 
  此功能与使用数据层应用程序框架 (DACFx) 的数据库导出不兼容。 必须在导出之前删除所有证书。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -161,7 +161,7 @@ CREATE CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG = { ON | OFF  }  
  使证书可用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话会话的发起方。 默认值为 ON。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  证书是一个数据库级的安全对象，它遵循 X.509 标准并支持 X.509 V1 字段。 CREATE CERTIFICATE 可以从文件、二进制常量或程序集加载证书。 该语句也可生成密钥对并创建自我签名的证书。  
   
  私钥必须 \<= 2500 个字节，并且为加密格式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的私钥长度在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及以前版本中是 1024 位，从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始是 2048 位。 从外部源导入的私钥的最小长度为 384 位，最大长度为 4,096 位。 导入的私钥的长度必须是 64 位的整数倍。 用于 TDE 的证书限于专用密钥大小 3456 比特。  

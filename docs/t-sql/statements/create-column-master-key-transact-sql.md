@@ -27,10 +27,10 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593896"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73593896"
 
 在数据库中创建列主密钥元数据对象。 列主密钥元数据条目表示存储在外部密钥存储中的密钥。 使用 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 或[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 时，密钥会保护（加密）列加密密钥。 多列主密钥允许定期密钥轮换，以增强安全性。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的对象资源管理器或 PowerShell 在密钥存储中创建列主密钥，并在数据库中创建其相关元数据对象。 有关详细信息，请参阅 [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。  
   
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 > [!IMPORTANT]
@@ -167,7 +167,7 @@ signature
 通过对*密钥路径*进行数字签名产生的二进制文本以及包含列主密钥的 ENCLAVE_COMPUTATIONS 设置。 签名反映是否指定了 ENCLAVE_COMPUTATIONS。 该签名可防止未经授权的用户更改签名的值。 启用了 Always Encrypted 的客户端驱动程序会验证签名，如果签名无效，则向应用程序返回错误。 必须使用客户端工具生成签名。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 
 在数据库中创建列加密密钥元数据条目前，请先创建列主密钥元数据条目，然后才能使用 Always Encrypted 加密数据库中的任何列。 元数据中的列主密钥条目不包含实际列主密钥。 列主密钥必须存储在外部列密钥存储中（SQL Server 外部）。 元数据中的密钥存储提供程序名称和列主密钥路径对于客户端应用程序必须有效。 客户端应用程序需要使用列主密钥来解密列加密密钥。 列加密密钥使用列主密钥进行加密。 客户端应用程序还需要查询加密的列。
 
@@ -247,7 +247,7 @@ WITH (
 * [DROP COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [创建列加密密钥 (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [始终加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+* [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 * [具有安全 Enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
 * [管理具有安全 enclave 的 Always Encrypted 的密钥](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   

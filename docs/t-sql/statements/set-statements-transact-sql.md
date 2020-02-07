@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 20cf6e1c3c98a99898a7b302980d76cef327be5d
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228496"
 ---
 # <a name="set-statements-transact-sql"></a>SET 语句 (Transact-SQL)
@@ -92,4 +92,4 @@ ms.locfileid: "70228496"
   如果未将以上任一选项设置为要求的值，则对索引视图或带计算列索引的表进行 INSERT、UPDATE、DELETE、DBCC CHECKDB 和 DBCC CHECKTABLE 操作时将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将发出一个错误，并列出所有设置不正确的选项。 同时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对这些表或索引视图运行 SELECT 语句，就好像计算列或视图中不存在索引。 
 
 - 如果 SET RESULT_SET_CACHING 设置为 ON，它为当前客户端会话启用结果集缓存功能。   如果已在数据库级别将 Result_set_caching 设置为 OFF，就无法为会话将它设置为 ON。    如果 SET RESULT_SET_CACHING 设置为 OFF，它为当前客户端会话禁用结果集缓存功能。 必须有公共角色的成员身份，才能更改此设置。
-适用范围：Azure SQL 数据仓库 Gen2
+适用对象：Azure SQL 数据仓库 Gen2

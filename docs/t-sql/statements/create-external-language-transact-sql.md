@@ -11,10 +11,10 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3f2911406b902ea4d4e7840676dcf08b0318664d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73536243"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
@@ -108,7 +108,7 @@ WITH (<option_spec>)
 
 混合 OS 方案需要此参数。 在混合体系结构中，语言需要按平台进行一次注册。 平台和语言名称对每种外部语言是唯一键。 如果未指定平台，则假定为当前 OS。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 目前不支持 PARAMETERS 和 ENVIRONMENT_VARIABLES   。
 

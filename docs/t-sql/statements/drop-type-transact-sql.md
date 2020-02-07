@@ -21,10 +21,10 @@ ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 00659f76da827bf5e00df72d966b32ec56e1f7ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072115"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68072115"
 
   从当前数据库中删除别名数据类型或公共语言运行时 (CLR) 用户定义的类型。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +52,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
  type_name   
  要删除的别名数据类型或用户定义的类型的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在满足以下任何条件的情况下，将不执行 DROP TYPE 语句：  
   
 -   数据库中存在包含别名数据类型列或用户定义的类型列的表。 通过查询 [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 或 [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md) 目录视图可获得有关别名类型列或用户定义类型列的信息。  

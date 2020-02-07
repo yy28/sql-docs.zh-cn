@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982672"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "73982672"
   
 -   提供向后兼容接口来模拟架构已更改的表。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -158,7 +158,7 @@ OR ALTER
   
  当使用 WITH VIEW_METADATA 创建视图时，如果该视图具有 INSTEAD OF INSERT 或 INSTEAD OF UPDATE 触发器，则视图的所有列（timestamp 列除外）都可更新  。 有关可更新视图的详细信息，请参阅“备注”。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  只能在当前数据库中创建视图。 CREATE VIEW 必须是查询批处理中的第一条语句。 视图最多可以包含 1,024 列。  
   
  通过视图进行查询时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将进行检查以确保语句中任何位置被引用所有数据库对象都存在，这些对象在语句的上下文中有效，以及数据修改语句没有违反任何数据完整性规则。 如果检查失败，将返回错误消息。 如果检查成功，则将操作转换为对基础表的操作。  
@@ -489,7 +489,7 @@ ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+ [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/alter-view-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
  [DROP VIEW (Transact-SQL)](../../t-sql/statements/drop-view-transact-sql.md)   

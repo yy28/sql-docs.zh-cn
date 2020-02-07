@@ -23,10 +23,10 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2772440c98d103790808564b5cdddcde4c2dfd42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117181"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68117181"
   
  有关同时使用 **CREATE SEQUENCE** 和 **NEXT VALUE FOR** 函数的信息，请参阅 [序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -99,7 +99,7 @@ INCREMENT BY \<constant>
 当使用 CACHE 选项创建时，意外关机（如电源故障）可能导致缓存中保留的序列号丢失  。  
   
 ## <a name="general-remarks"></a>一般备注  
- 序列号在当前事务的作用域之外生成。 无论提交还是回滚使用序列号的事务，都会占用序列号。 只有在记录被完全填充后，才会发生重复验证。 这可能导致在某些情况下，即在创建过程中将相同数字用于多个记录，但随后将其识别为副本。 如果发生这种情况并且其他自动编号值已应用于后续记录，则可能会导致自动编号值与预期行为之间存在差距。
+ 序列号在当前事务的作用域之外生成。 无论提交还是回滚使用序列号的事务，都会占用序列号。 只有在记录被完全填充后，才会发生重复验证。 在某些情况下，这可能会导致在创建过程中将相同数字用于多个记录，但随后被识别为重复。 如果发生这种情况并且其他自动编号值已应用于后续记录，则可能会导致自动编号值与预期行为之间存在差距。
   
 ### <a name="cache-management"></a>缓存管理  
  为了提高性能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会预分配 CACHE 参数所指定数量的序列号  。  
@@ -151,7 +151,7 @@ INCREMENT BY \<constant>
 ## <a name="metadata"></a>元数据  
  有关序列的信息，请查询 [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
  要求对 SCHEMA 拥有 **CREATE SEQUENCE**、 **ALTER**或 **CONTROL** 权限。  
