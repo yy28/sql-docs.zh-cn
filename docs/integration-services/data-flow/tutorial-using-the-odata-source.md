@@ -11,10 +11,10 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95dceade62e487db05a66df6b7986f23723b1303
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297771"
 ---
 # <a name="tutorial-using-the-odata-source"></a>教程：使用 OData 源
@@ -28,7 +28,7 @@ ms.locfileid: "71297771"
   
 1.  启动 **SQL Server Data Tools** 或 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
   
-2.  单击 **“文件”** ，指向 **“新建”** ，然后单击 **“项目”** 。  
+2.  单击“文件”，指向“新建”并单击“项目”。     
   
 3.  在“新建项目”  对话框中，依次展开“已安装”  、“模板”  “商业智能”  ，然后单击“Integration Services”  。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71297771"
   
 10. 从“集合”  下拉列表中，选择“Employees”  。  
   
-11. 为 **“查询选项”** 输入任何其他 OData 查询选项或筛选器。 例如， `$orderby=CompanyName&$top=100`。 为了实现本教程的教学目的，请输入 `$top=5`。  
+11. 为 **“查询选项”** 输入任何其他 OData 查询选项或筛选器。 例如，`$orderby=CompanyName&$top=100` 。 为了实现本教程的教学目的，请输入 `$top=5`。  
   
 12. 单击 **“预览”** 可预览数据。  
   

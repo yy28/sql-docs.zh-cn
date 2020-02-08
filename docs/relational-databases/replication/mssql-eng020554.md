@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a9ad1938f94c090bd0f7e3746d565d2f0fce25d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6172f4e209c1c8d7ecb5768494f2c5fea0497d83
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770464"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288455"
 ---
-# <a name="mssqleng020554"></a>MSSQL_ENG020554
+# <a name="mssql_eng020554"></a>MSSQL_ENG020554
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>消息详细信息  
@@ -34,7 +34,7 @@ ms.locfileid: "68770464"
 |符号名称||  
 |消息正文|复制代理在 %ld 分钟内没有记录任何进度消息。 这表明代理已停止响应或系统活动过多。 请确保正在将记录复制到目标，并且与订阅服务器、发布服务器和分发服务器的连接仍然是活动的。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  复制代理检查  作业以指定的时间间隔运行（默认为 10 分钟），检查每个复制代理的状态。 如果自上次代理检查作业运行后，代理未记录任何进度消息，将引发错误 MSSQL_ENG020554。 即使未发生其他复制活动，代理至少应该记录历史记录消息。 虽然复制代理未按预期响应，但其未必已停止或失败（如果代理失败，将引发错误 MSSQL_ENG020536）。  
   
  下列问题可导致引发错误 MSSQL_ENG020554：  
@@ -73,10 +73,10 @@ ms.locfileid: "68770464"
 ## <a name="see-also"></a>另请参阅  
  [复制代理管理](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [错误和事件参考（复制）](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [复制分发代理](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [复制日志读取器代理](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [复制合并代理](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [复制队列读取器代理](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [复制快照代理](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

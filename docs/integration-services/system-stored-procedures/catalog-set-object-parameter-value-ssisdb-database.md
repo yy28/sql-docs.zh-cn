@@ -11,10 +11,10 @@ ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 36d73a0248be0bd8f9a0873e5ae8445ee68af2e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295283"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value（SSISDB 数据库）
@@ -49,10 +49,10 @@ catalog.set_object_parameter_value [@object_type =] object_type
  包含参数的项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
  [@parameter_name =] parameter_name   
- 参数名。 parameter_name  为 nvarchar(128)  。  
+ 参数的名称。 parameter_name  为 nvarchar(128)  。  
   
  [@parameter_value =] parameter_value   
- 参数的值。 parameter_value  为 sql_variant  。  
+ 参数值。 parameter_value  为 sql_variant  。  
   
  [@object_name =] object_name   
  包的名称。 当参数为包参数时，需要此参数。 object_name  为 nvarchar(260)  。  
@@ -64,7 +64,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -88,7 +88,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   用户没有相应的权限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 -   如果未指定 value_type  ，则默认为 parameter_value  使用文本值。 使用文本值时，[object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 视图中的 value_set  将设置为 `1`。 不允许 NULL 参数值。  
   

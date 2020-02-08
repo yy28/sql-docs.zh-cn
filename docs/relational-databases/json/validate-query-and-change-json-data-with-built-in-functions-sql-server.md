@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096068"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>使用内置函数 (SQL Server) 验证、查询和更改 JSON 数据
@@ -103,7 +103,7 @@ ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.
 
 此查询结果显示在下表中：
 
-| “属性” | City | County |
+| 名称 | 城市 | 县 |
 | --- | --- | --- |
 | AndersenFamily | NY | 曼哈顿 |
 
@@ -122,7 +122,7 @@ WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
 ```  
 此查询结果显示在下表中：
 
-| Address | 父项 | Parent0 |
+| 地址 | 父项 | Parent0 |
 | --- | --- | --- |
 | { "state":"NY", "county":"Manhattan", "city":"NY" } | [{ "familyName":"Wakefield", "givenName":"Robin" }, {"familyName":"Miller", "givenName":"Ben" } ]| { "familyName":"Wakefield", "givenName":"Robin" } |
 
@@ -143,7 +143,7 @@ FROM Families f
 
 此查询结果显示在下表中：
 
-| “属性” | City | givenName | 年级 |
+| 名称 | 城市 | givenName | 年级 |
 | --- | --- | --- | --- |
 | AndersenFamily | NY | Jesse | 1 |
 | AndersenFamily | NY | Lisa | 8 |
@@ -174,7 +174,7 @@ FROM Families f
 | familyName | childGivenName | childFirstName | petName |
 | --- | --- | --- | --- |
 | AndersenFamily | Jesse | Merriam | Goofy |
-| AndersenFamily | Jesse | Merriam | Shadow |
+| AndersenFamily | Jesse | Merriam | 卷影 |
 | AndersenFamily | Lisa | Miller| `NULL` |
 
 根文档与两个 `children` 行进行了联接，这两个行由生成两个行（或元组）的首次 `OPENJSON(children)` 调用返回。 然后，使用 `OUTER APPLY` 运算符将每行与由 `OPENJSON(pets)` 生成的新行进行联接。 Jesse 有两只宠物，因此 `(AndersenFamily, Jesse, Merriam)` 与为 Goofy 和 Shadow 生成的两行进行了联接。 Lisa 没有宠物，因此 `OPENJSON(pets)` 没有为该元组返回的任何行。 但是，由于我们使用的是 `OUTER APPLY`，因此这列的结果是 `NULL`。 如果我们使用 `CROSS APPLY` 而不是 `OUTER APPLY`，则不会在结果中返回 Lisa，因为没有可以与该元组联接的任何宠物行。

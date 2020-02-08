@@ -11,10 +11,10 @@ ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc76e5f5d710dfe088a27376af4f3938257a0ec7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296831"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
@@ -36,7 +36,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  [ @data_tap_id = ] data_tap_id   
  使用 catalog.add_data_tap 存储过程创建的数据分流点的唯一标识符。 data_tap_id 为 bigint   。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果包中包含名称相同的多个数据流任务，则将数据分流点添加到具有给定名称的第一个数据流任务。  
   
 ## <a name="return-codes"></a>返回代码  
@@ -45,9 +45,9 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  存储过程失败时引发错误。  
   
 ## <a name="result-set"></a>结果集  
- None  
+ 无  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  要删除数据分流点，执行实例必须处于已创建状态（在 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图的 status 列中值为 1）  。  
   
 ## <a name="permissions"></a>权限  

@@ -24,10 +24,10 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039064"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68039064"
   
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)） 
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -68,7 +68,7 @@ DBCC SHOWCONTIG
  *index_name* | *index_id*  
  要检查碎片信息的索引。 如果未指定，则该语句将处理指定表或视图的基本索引。 若要获取索引 ID，请使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目录视图。  
   
- 替换为  
+ WITH  
  指定有关 DBCC 语句返回的信息类型的选项。  
   
  FAST  
@@ -89,7 +89,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>结果集  
 下表对结果集中的信息进行了说明。
   
-|统计信息|描述|  
+|统计信息|说明|  
 |---|---|
 |**扫描页数**|表或索引中的页数。|  
 |**扫描区数**|表或索引中的区数。|  
@@ -110,7 +110,7 @@ DBCC SHOWCONTIG
   
 如果指定了 TABLERESULTS，则 DBCC SHOWCONTIG 将返回以下列以及上一个表中说明的九个列。
   
-|统计信息|描述|  
+|统计信息|说明|  
 |---|---|
 |**Object Name**|处理的表或视图的名称。|  
 |**ObjectId**|对象名的 ID。|  
@@ -142,7 +142,7 @@ DBCC SHOWCONTIG
 |**AverageRecordSize**|**ExtentFragmentation**|  
 |**ForwardedRecords**||  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 如果指定了 *index_id*，则 DBCC SHOWCONTIG 语句会遍历指定索引的叶级上的页链。 如果只指定 *table_id*，或者 *index_id* 为 0，则扫描指定表的数据页。 此操作只需要一个意向共享 (IS) 表锁。 通过这种方式，除了需要排他 (X) 表锁的更新和插入以外，可执行所有更新和插入。 这就可以根据返回的统计信息数量，实现执行速度与不减少并发之间进行权衡。 但是，如果使用此命令只是为了测量碎片，则建议您使用 WITH FAST 选项以优化性能。 快速扫描不读取索引的叶级或数据级页。 WITH FAST 选项不适用于堆。
   
 ## <a name="restrictions"></a>限制  
@@ -198,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. 使用 OBJECT_ID 获得表 ID，使用 sys.indexes 获得索引 ID  
+### <a name="b-using-object_id-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. 使用 OBJECT_ID 获得表 ID，使用 sys.indexes 获得索引 ID  
 以下示例使用 `OBJECT_ID` 和 `sys.indexes` 目录视图，以获取 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中 `Production.Product` 表的 `AK_Product_Name` 索引的表 ID 和索引 ID。
   
 ```sql  

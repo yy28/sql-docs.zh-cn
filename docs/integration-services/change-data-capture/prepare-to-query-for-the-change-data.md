@@ -13,10 +13,10 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 610f75fa8b706dab60b9691b4f5e5e82c2bdb93f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294616"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>准备查询变更数据
@@ -27,7 +27,7 @@ ms.locfileid: "71294616"
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第三个任务（即最后一个任务）是准备查询变更数据和添加数据流任务。  
   
 > [!NOTE]  
->  控制流的第二个任务是确保所选间隔的变更数据已准备就绪。 有关此任务的详细信息，请参阅[确定变更数据是否已准备就绪](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)。 有关设计控制流的总体过程的说明，请参阅[变更数据捕获 (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
+>  控制流的第二个任务是确保所选间隔的变更数据已准备就绪。 有关此任务的详细信息，请参阅 [确定变更数据是否已准备就绪](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)。 有关设计控制流的总体过程的说明，请参阅[变更数据捕获 (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
   
 ## <a name="design-considerations"></a>设计注意事项  
  为了检索变更数据，您将调用 Transact-SQL 表值函数，该函数将间隔的端点接受为输入参数并返回指定间隔的变更数据。 数据流中的源组件调用此函数。 有关此源组件的信息，请参阅 [检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。  

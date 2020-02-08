@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713268"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>为 Always On 可用性组配置分布式事务
@@ -195,7 +195,7 @@ following the guideline for Troubleshooting DTC Transactions.
 
 有关解决未决事务的详细信息，请参阅[手动解决事务](https://technet.microsoft.com/library/cc754134.aspx)。
 
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 
 [分布式事务](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

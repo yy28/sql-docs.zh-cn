@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981957"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "73981957"
 > [!IMPORTANT]  
 >  在使用字符串调用 EXECUTE 之前，请先验证该字符串。 永远不要执行由未经验证的用户输入构造的命令。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -266,12 +266,12 @@ Execute a character string
  AS \<context_specification>  
  指定执行语句的上下文。  
   
- Login  
+ LOGIN  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
  指定要模拟的上下文是登录名。 模拟范围为服务器。  
   
- User  
+ USER  
  指定要模拟的上下文是当前数据库中的用户。 模拟范围只限于当前数据库。 对数据库用户的上下文切换不会继承该用户的服务器级别权限。  
   
 > [!IMPORTANT]  
@@ -327,7 +327,7 @@ Execute a character string
   
  执行期间返回的实际结果集在以下方面可能不同于使用 WITH RESULT SETS 子句定义的结果：结果集数、列数、列名、为 Null 性以及数据类型。 如果结果集数不同，则会发生错误并中止批处理。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可通过使用 *value* 或使用 @*parameter_name*=*value* 来提供参数。 来提供参数。参数不是事务的一部分；因此，如果在以后回退的事务中更改了参数，则此参数的值不会恢复为以前的值。 返回给调用方的值总是模块返回时的值。  
   
  当一个模块调用其他模块或通过引用公共语言运行时 (CLR) 模块、用户定义类型或聚合执行托管代码时，将出现嵌套。 当开始执行调用模块或托管代码引用时，嵌套级别将增加，而当调用模块或托管代码引用完成时，嵌套级别将减少。 嵌套级别最高为 32 级，超过 32 级时，会导致整个调用链失败。 当前的嵌套级别存储在 @@NESTLEVEL 系统函数中。  

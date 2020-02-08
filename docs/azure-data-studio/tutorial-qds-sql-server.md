@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
 ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957041"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教程：将*五个最慢查询*示例小组件添加到数据库仪表板
@@ -55,7 +55,7 @@ ms.locfileid: "74957041"
 
 1. 按“Ctrl+Shift+P”打开“命令面板”，以打开“用户设置”    。
 
-2. 在搜索框中键入“设置”，然后选择“首选项:打开用户设置”   。
+2. 在搜索框中键入“设置”，然后选择“首选项:  **打开用户设置”** 。
 
    ![打开用户设置命令](./media/tutorial-qds-sql-server/open-user-settings.png)
 

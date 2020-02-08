@@ -11,10 +11,10 @@ ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 341d48d35404cd8d18c3f1474693305b7fadb3cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296713"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution（SSISDB 数据库）
@@ -37,9 +37,9 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  执行实例的唯一标识符。 execution_id 为 bigint   。
  
  [@retry_count =] retry_count   
- 执行失败时的重试次数。 仅当在 Scale Out 中执行时才生效。此参数可选。 如果未指定，其值设置为 0。 retry_count 为 int   。
+ 执行失败时的重试次数。 仅当在 Scale Out 中执行时才生效。此参数是可选的。 如果未指定，其值设置为 0。 retry_count 为 int   。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用执行来指定参数值，包在单个包执行实例中将使用这些参数值。 在创建执行实例后，但在启动此实例之前，可能重新部署对应的项目。 在本例中，执行实例引用过时的项目。 这个无效引用导致存储过程失败。  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ GO
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  

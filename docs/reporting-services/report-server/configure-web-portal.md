@@ -11,10 +11,10 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63308400"
 ---
 # <a name="configure-the-web-portal"></a>配置 Web 门户
@@ -48,7 +48,7 @@ Web 门户是用户在 Web 浏览器中访问的 Web 应用程序。 因此必�
 
 3. 为 Web 门户输入唯一的虚拟目录名称。
 
-4. 单击 **“应用”** 。
+4. 单击“应用”  。
 
 5. 如果使用的是 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 或 Windows Server 2008，则可能还需要执行其他步骤才能使用 Web 门户。 有关详细信息，请参阅 [为本地管理配置本机模式报表服务器 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。
 
@@ -66,7 +66,7 @@ Web 门户是用户在 Web 浏览器中访问的 Web 应用程序。 因此必�
 
 3. 将其替换为相应报表服务器实例的 URL。
 
-4. 保存所做的更改，并关闭该文件。
+4. 保存更改并关闭该文件。
 
 有关配置文件的详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) 和 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。
 
@@ -86,7 +86,7 @@ Web 门户是用户在 Web 浏览器中访问的 Web 应用程序。 因此必�
 
 5. 在 **“常规”** 选项卡上的 **“名称”** 中，将 **SQL Server Reporting Services** 替换为其他名称。
 
-6. 选择“应用”  。
+6. 选择“应用”。 
 
 ## <a name="next-steps"></a>后续步骤
 

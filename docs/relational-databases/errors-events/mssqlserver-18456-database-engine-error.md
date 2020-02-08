@@ -12,13 +12,13 @@ ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137085"
 ---
-# <a name="mssqlserver18456"></a>MSSQLSERVER_18456
+# <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68137085"
 |符号名称|LOGON_FAILED|  
 |消息正文|用户 '%.*ls'.%.\*ls 登录失败|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 因密码或用户名错误而使身份验证失败并导致连接尝试被拒时，类似以下内容的消息将返回到客户端：“用户‘<user_name>’登录失败。 （Microsoft SQL Server，错误：18456）”。  
   
 返回到客户端的其他信息有：  
@@ -60,7 +60,7 @@ ms.locfileid: "68137085"
 ## <a name="additional-error-information"></a>其他错误信息  
 为了增强安全性，返回到客户端的错误消息有意隐藏身份验证错误的本质。 但是，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中，对应的错误包含映射到身份验证失败条件的错误状态。 将错误状态与以下列表进行比较以确定登录失败的原因。  
   
-|State|描述|  
+|状态|说明|  
 |---------|---------------|  
 |1|无法获得错误信息。 此状态通常意味着您不拥有接收错误详细信息的权限。 请联系 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员以获得详细信息。|  
 |2|用户 ID 无效。|  
@@ -69,7 +69,7 @@ ms.locfileid: "68137085"
 |7|登录已禁用，密码不正确。|  
 |8|密码不正确。|  
 |9|密码无效。|  
-|11|登录有效，但服务器访问失败。 导致此错误的一个可能原因是：Windows 用户作为本地管理员组的成员有权访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 没有提供管理员凭据。 若要连接，请使用“以管理员身份运行”选项启动连接程序，然后将 Windows 用户作为特定的登录名添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|11|登录有效，但服务器访问失败。 导致此错误的一个可能原因是：Windows 用户作为本地管理员组的成员有权访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 没有提供管理员凭据。 若要连接，请使用“以管理员身份运行”选项启动连接程序，然后将 Windows 用户作为特定的登录名添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 |  
 |12|登录是有效的登录，但服务器访问失败。|  
 |18|必须更改密码。|  
 |38、46|找不到用户请求的数据库。|
@@ -93,7 +93,7 @@ ms.locfileid: "68137085"
 ## <a name="examples"></a>示例  
 在此示例中，身份验证错误状态为 8。 这表示密码不正确。  
   
-|date|数据源|消息|  
+|Date|源|消息|  
 |--------|----------|-----------|  
 |2007-12-05 20:12:56.34|登录|错误：18456，严重级别：14，状态：8.|  
 |2007-12-05 20:12:56.34|登录|用户‘<user_name>’登录失败。 [客户端: <ip address>]|  
@@ -110,7 +110,7 @@ ms.locfileid: "68137085"
   
 如果错误指示状态 1，请与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员联系。  
   
-如果您尝试使用您的管理员凭据进行连接，则通过使用“以管理员身份运行”选项启动您的应用程序。 在连接后，将您的 Windows 用户作为单独的登录名添加。  
+如果您尝试使用您的管理员凭据进行连接，则通过使用“以管理员身份运行”选项启动您的应用程序。  在连接后，将您的 Windows 用户作为单独的登录名添加。  
   
 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]支持包含的数据库，请确认在迁移到包含的数据库用户后未删除登录名。  
   

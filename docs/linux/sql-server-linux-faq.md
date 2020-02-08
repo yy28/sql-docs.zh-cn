@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72929905"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 的常见问题解答 (FAQ)
@@ -28,7 +28,7 @@ ms.locfileid: "72929905"
 
 1. Linux 上的 SQL Server 未来是否可以在其他平台上运行？ 
 
-   SQL Server 在 Linux 上针对之前列出的发行版上进行了测试且受支持。 其他 Linux 发行版密切相关并且可能可以运行 SQL Server（例如，CentOS 与 Red Hat Enterprise Server 密切相关）。 但是，如果选择在不受支持的操作系统上安装 SQL Server，请查看 [Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)的“支持策略”部分，以了解支持含义  。 另请注意，如果基础操作系统出现故障，一些社区维护的 Linux 发行版将没有获得支持的正式途径。
+   SQL Server 在 Linux 上针对之前列出的发行版进行了测试且受支持。 其他 Linux 发行版密切相关并且可能可以运行 SQL Server（例如，CentOS 与 Red Hat Enterprise Server 密切相关）。 但是，如果选择在不受支持的操作系统上安装 SQL Server，请查看 [Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)的“支持策略”部分，以了解支持含义  。 另请注意，如果基础操作系统出现故障，一些社区维护的 Linux 发行版将没有获得支持的正式途径。
 
 1. Linux 与 Windows 上的 SQL Server 是否相同？ 
 
@@ -83,7 +83,7 @@ ms.locfileid: "72929905"
 
 1. 能否在 Windows 10 的 Linux 子系统上安装 SQL Server？ 
 
-   否。 在 Windows 10 上运行的 Linux 目前不是 SQL Server 及其相关工具的受支持平台。
+   不是。 在 Windows 10 上运行的 Linux 目前不是 SQL Server 及其相关工具的受支持平台。
 
 1. SQL Server 可以将哪些 Linux 文件系统用于数据文件？ 
 
@@ -91,11 +91,11 @@ ms.locfileid: "72929905"
 
 1. 是否可以下载安装包以脱机安装 SQL Server？ 
 
-   是。 有关详细信息，请参阅[发行说明](sql-server-linux-release-notes.md)中的包下载链接。 另请参阅[脱机安装说明](sql-server-linux-setup.md#offline)。
+   是的。 有关详细信息，请参阅[发行说明](sql-server-linux-release-notes.md)中的包下载链接。 另请参阅[脱机安装说明](sql-server-linux-setup.md#offline)。
 
 1. 是否可以在 Linux 上执行无人参与安装 SQL Server？ 
 
-   是。 有关无人参与安装的介绍，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md#unattended)。 请参阅 [Red Hat](sample-unattended-install-redhat.md)、[SUSE Linux Enterprise Server](sample-unattended-install-suse.md) 和 [Ubuntu](sample-unattended-install-ubuntu.md) 的示例脚本。 还可以查看 SQL Server 客户顾问团队创建的[此示例脚本](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)。
+   是的。 有关无人参与安装的介绍，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md#unattended)。 请参阅 [Red Hat](sample-unattended-install-redhat.md)、[SUSE Linux Enterprise Server](sample-unattended-install-suse.md) 和 [Ubuntu](sample-unattended-install-ubuntu.md) 的示例脚本。 还可以查看 SQL Server 客户顾问团队创建的[此示例脚本](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)。
 
 ## <a name="tools"></a>工具
 
@@ -134,7 +134,7 @@ ms.locfileid: "72929905"
 
 1. **Linux 上是否支持 Active Directory 身份验证？**
 
-   是。 有关详细信息，请参阅[对 Linux 上的 SQL Server 使用 Active Directory 身份验证](sql-server-linux-active-directory-authentication.md)。
+   是的。 有关详细信息，请参阅[对 Linux 上的 SQL Server 使用 Active Directory 身份验证](sql-server-linux-active-directory-authentication.md)。
 
 1. Linux 是否支持 Always On 和群集？ 
 
@@ -150,7 +150,7 @@ ms.locfileid: "72929905"
 
 1. 是否可以将 Oracle 和其他数据库引擎中的数据迁移到 Linux 上的 SQL Server？ 
 
-   是。 SSMA 支持从几种类型的数据库引擎进行迁移：Microsoft Access、DB2、MySQL、Oracle 和 SAP ASE（以前称为 SAP Sybase ASE）。 有关如何使用 SSMA 的示例，请参阅[使用 SQL Server 迁移助手将 Oracle 架构迁移到 Linux 上的 SQL Server](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json)。
+   是的。 SSMA 支持从几种类型的数据库引擎进行迁移：Microsoft Access、DB2、MySQL、Oracle 和 SAP ASE（以前称为 SAP Sybase ASE）。 有关如何使用 SSMA 的示例，请参阅[使用 SQL Server 迁移助手将 Oracle 架构迁移到 Linux 上的 SQL Server](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json)。
 
 1. SQL Server 文件需要哪些权限？ 
 

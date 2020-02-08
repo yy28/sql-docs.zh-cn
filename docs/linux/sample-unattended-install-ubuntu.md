@@ -9,25 +9,25 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910485"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>示例：Ubuntu 的无人参与 SQL Server 安装脚本
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-此示例 Bash 脚本可在 Ubuntu 16.04 上安装 SQL Server 2017，且无需交互式输入。 它提供数据库引擎、SQL Server 命令行工具和 SQL Server 代理的安装示例，并执行安装后步骤。 你可以选择安装全文搜索并创建管理用户。
+此示例 Bash 脚本可在 Ubuntu 16.04 上安装 SQL Server 2017，且无需交互式输入。 它提供数据库引擎、SQL Server 命令行工具和 SQL Server 代理的安装示例，并执行安装后步骤。 可以选择安装全文搜索并创建管理用户。
 
 > [!TIP]
 > 如果不需要无人参与安装脚本，则安装 SQL Server 最快速的方法是遵循 [Ubuntu 的快速入门](quickstart-install-connect-ubuntu.md)。 有关其他设置信息，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
 ## <a name="prerequisites"></a>必备条件
 
-- 至少需要 2 GB 内存才能在 Linux 上运行 SQL Server。
-- 文件系统必须是 **XFS** 或 **EXT4**。 其他文件系统（如 **BTRFS**）均不受支持。
+- 至少需要 2GB 内存才能运行 Linux 上的 SQL Server。
+- 文件系统必须是 XFS 或 EXT4   。 其他文件系统（如 BTRFS）均不受支持  。
 - 有关其他系统要求，请参阅 [Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
 
 ## <a name="sample-script"></a>示例脚本
@@ -159,7 +159,7 @@ echo Done!
 
 1. 将示例粘贴到你最喜欢的文本编辑器中，并使用便于记忆的名称保存它，例如 `install_sql.sh`。
 
-1. 自定义 `MSSQL_SA_PASSWORD`、`MSSQL_PID` 以及要更改的任何其他变量。
+1. 自定义 `MSSQL_SA_PASSWORD`、`MSSQL_PID` 和要更改的任何其他变量。
 
 1. 将脚本标记为可执行文件
 
@@ -174,7 +174,7 @@ echo Done!
    ```
 
 ### <a name="understanding-the-script"></a>了解脚本
-该 Bash 脚本做的第一件事就是设置一些变量。 它们可以是脚本变量（例如本示例），也可以是环境变量。 变量 `MSSQL_SA_PASSWORD` 是安装 SQL Server **所必需的**，其他变量则是为该脚本创建的自定义变量。 示例脚本执行以下步骤：
+Bash 脚本执行的第一件事是设置几个变量。 它们可以是脚本变量（例如本示例），也可以是环境变量。 `MSSQL_SA_PASSWORD` 变量是安装 SQL Server 所必需的变量，其余变量是为脚本创建的自定义变量  。 示例脚本执行以下步骤：
 
 1. 导入公共 Microsoft GPG 密钥。
 
@@ -184,29 +184,29 @@ echo Done!
 
 1. 安装 SQL Server
 
-1. 使用 ```MSSQL_SA_PASSWORD``` 配置 SQL Server 并自动接受最终用户许可协议。
+1. 将 SQL Server 配置为 ```MSSQL_SA_PASSWORD``` 并自动接受最终用户许可协议。
 
 1. 自动接受 SQL Server 命令行工具的最终用户许可协议，安装这些工具，然后安装 unixodbc-dev 包。
 
-1. 将 SQL Server 命令行工具添加到路径中，以便于使用。
+1. 为便于使用，请将 SQL Server 命令行工具添加到路径。
 
-1. 如果设置了脚本变量 ```SQL_INSTALL_AGENT```（默认为“开”），则安装 SQL Server 代理。
+1. 如果已设置 ```SQL_INSTALL_AGENT``` 变量的脚本，则将默认安装 SQL Server 代理。
 
-1. （可选）如果设置了变量 ```SQL_INSTALL_FULLTEXT```，则安装 SQL Server 全文搜索。
+1. 如果已设置 ```SQL_INSTALL_FULLTEXT``` 变量，则可以选择安装 SQL Server 全文搜索。
 
 1. 在系统防火墙上取消阻止 TCP 端口 1433，这是从另一个系统连接到 SQL Server 所必需的。
 
-1. （可选）为死锁跟踪设置跟踪标志。 （需要取消注释行）
+1. （可选）设置跟踪标志以进行死锁跟踪。 （需要取消注释行）
 
-1. 现在安装了 SQL Server，若要使其正常运行，请重新启动该进程。
+1. SQL Server 现已安装，若要使其可操作，请重启该过程。
 
 1. 验证是否已正确安装 SQL Server，并隐藏所有错误消息。
 
-1. 如果同时设置了 ```SQL_INSTALL_USER``` 和 ```SQL_INSTALL_USER_PASSWORD```，则创建新的服务器管理员用户。
+1. 如果同时设置 ```SQL_INSTALL_USER``` 和 ```SQL_INSTALL_USER_PASSWORD```，则将创建新的服务器管理用户。
 
 ## <a name="next-steps"></a>后续步骤
 
-简化多个无人参与安装，并创建独立的 Bash 脚本来设置适当的环境变量。 可以删除示例脚本使用的任何变量，并将它们放在其自己的 Bash 脚本中。
+简化多个无人参与安装，并创建独立的 Bash 脚本来设置适当的环境变量。 可删除该示例脚本使用的任何变量，并将其放入自己的 Bash 脚本。
 
 ```bash
 #!/bin/bash

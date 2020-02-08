@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026488"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68026488"
 
 此函数返回组中找到的项数量。 `COUNT` 的操作与 [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 函数类似。 这些函数区别只在于其返回的值的数据类型。 `COUNT` 始终返回“int”  数据类型值。 `COUNT_BIG` 始终返回“bigint”  数据类型值。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -67,7 +67,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_claus
 ## <a name="return-types"></a>返回类型
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 COUNT(\*) 返回组中的项数。 包括 NULL 值和重复项。
   
 COUNT(ALL expression) 计算组中每行的 expression，然后返回非 null 值的数量   。

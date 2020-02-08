@@ -17,10 +17,10 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294144"
 ---
 # <a name="ftp-task"></a>FTP 任务
@@ -45,7 +45,7 @@ ms.locfileid: "71294144"
   
  这意味着 FTP 任务可以接收多个文件和删除多个远程文件；但如果使用连接管理器，则该任务只能发送一个文件和删除一个本地文件，因为文件连接管理器只能访问一个文件。 若要访问多个本地文件，FTP 任务必须使用变量来提供路径信息。 例如，包含“C:\Test\&#42;.txt”的变量所提供的路径可以支持删除或发送 Test 目录中所有以 .txt 为扩展名的文件。  
   
- 若要发送多个文件和访问多个本地文件及目录，还可以通过在 Foreach 循环中包含 FTP 任务来多次执行 FTP 任务。 Foreach 循环可以使用 For Each 文件枚举器对目录中的文件进行枚举。 有关详细信息，请参阅 [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)。  
+ 若要发送多个文件和访问多个本地文件及目录，还可以通过在 Foreach 循环中包含 FTP 任务来多次执行 FTP 任务。 Foreach 循环可以使用 For Each 文件枚举器对目录中的文件进行枚举。 有关详细信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md)。  
   
  FTP 任务支持在路径中使用通配符 *?* 和 *\** 。 这使得任务可以访问多个文件。 但是，只能在路径中指定文件名的部分使用通配符。 例如，C:\MyDirectory\\*.txt 是有效路径，而 C:\\\*\MyText.txt 则不是。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "71294144"
 ## <a name="predefined-ftp-operations"></a>预定义的 FTP 操作  
  FTP 任务包含一组预定义的操作。 下表介绍了这些运算。  
   
-|运算|描述|  
+|Operation|说明|  
 |---------------|-----------------|  
 |发送文件|将文件从本地计算机发送到 FTP 服务器。|  
 |接收文件|将文件从 FTP 服务器保存到本地计算机。|  
@@ -68,7 +68,7 @@ ms.locfileid: "71294144"
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP 任务可用的自定义日志项  
  下表列出了 FTP 任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|描述|  
+|日志项|说明|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|指示任务已启动与 FTP 服务器的连接。|  
 |**FTPOperation**|报告任务所执行的 FTP 操作的开始及其类型。|  
@@ -101,7 +101,7 @@ ms.locfileid: "71294144"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入对 FTP 任务的说明。  
   
 ## <a name="ftp-task-editor-file-transfer-page"></a>FTP 任务编辑器（“文件传输”页）
@@ -111,7 +111,7 @@ ms.locfileid: "71294144"
  **IsRemotePathVariable**  
  指示远程路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择该值将显示动态选项 **RemoteVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择该值将显示动态选项 **RemotePath**。|  
@@ -122,15 +122,15 @@ ms.locfileid: "71294144"
  **IsLocalPathVariable**  
  指示本地路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择该值将显示动态选项 **LocalVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择该值将显示动态选项 **LocalPath**。|  
   
- **运算**  
+ **操作**  
  选择要执行的 FTP 操作。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**发送文件**|发送文件。 选择此值将显示动态选项 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
 |**接收文件**|接收文件。 选择此值将显示动态选项 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  

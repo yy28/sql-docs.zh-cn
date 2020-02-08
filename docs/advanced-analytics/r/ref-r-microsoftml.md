@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707915"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML（SQL Server 中的 R 库）
@@ -55,7 +55,7 @@ MicrosoftML 库基于 R 3.4.3，且仅在安装以下 Microsoft 产品或下载�
 
 ## <a name="1-machine-learning-algorithms"></a>1 - 机器学习算法
 
-| 函数名称 | 描述 |
+| 函数名称 | 说明 |
 |---------------|-------------|
 |[rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) | FastRank（MART 梯度提升算法的一种有效实现）的一种实现。  |
 |[rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | 一种使用 [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) 的随机林和分位数回归林实现。  |
@@ -69,7 +69,7 @@ MicrosoftML 库基于 R 3.4.3，且仅在安装以下 Microsoft 产品或下载�
 
 ## <a name="2-transformation-functions"></a>2 - 转换函数
 
-| 函数名称 | 描述 |
+| 函数名称 | 说明 |
 |---------------|-------------|
 |[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | 用于从多个列创建单个向量值列的转换。  |
 |[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | 使用带字典的分类转换创建指示器向量。  |
@@ -87,7 +87,7 @@ MicrosoftML 库基于 R 3.4.3，且仅在安装以下 Microsoft 产品或下载�
 
 ## <a name="3-scoring-and-training-functions"></a>3 - 评分和定型函数
 
-| 函数名称 | 描述 |
+| 函数名称 | 说明 |
 |---------------|-------------|
 |[rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | 使用存储过程从 SQL Server 运行评分库，或从支持实时评分的 R 代码运行评分库，从而提供更快的预测性能。|
 |[rxFeaturize](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfeaturize) | 将数据从输入数据集转换为输出数据集。|
@@ -96,7 +96,7 @@ MicrosoftML 库基于 R 3.4.3，且仅在安装以下 Microsoft 产品或下载�
 
 ## <a name="4-loss-functions-for-classification-and-regression"></a>4 - 分类和回归的损失函数
 
-| 函数名称 | 描述 |
+| 函数名称 | 说明 |
 |---------------|-------------|
 |[expLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | 适用于指数分类损失函数的规范。 | 
 |[logLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | 适用于对数分类损失函数的规范。  |
@@ -107,14 +107,14 @@ MicrosoftML 库基于 R 3.4.3，且仅在安装以下 Microsoft 产品或下载�
 
 ## <a name="5-feature-selection-functions"></a>5 - 功能选择函数
 
-| 函数名称 | 描述 |
+| 函数名称 | 说明 |
 |---------------|-------------|
 |[minCount](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mincount) | 计数模式下的功能选择规范。 |
 |[mutualInformation](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mutualinformation) | 互信息模式下的功能选择规范。 |
 
 ## <a name="6-ensemble-modeling-functions"></a>6 - 集成建模函数
 
-| 函数名称 | 描述 |
+| 函数名称 | 说明 |
 |---------------|-------------|
 |[fastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/fasttrees) | 创建一个包含函数名称和参数的列表，以使用 [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble) 定型 Fast Tree 模型。|
 |[fastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | 创建一个包含函数名称和参数的列表，以使用 [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble) 定型 Fast Forest 模型。|
@@ -124,14 +124,14 @@ MicrosoftML 库基于 R 3.4.3，且仅在安装以下 Microsoft 产品或下载�
 
 ## <a name="7-neural-networking-functions"></a>7 - 神经网络函数
 
-| 函数名称 | 描述 |
+| 函数名称 | 说明 |
 |---------------|-------------|
 |[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | 指定 [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) 机器学习算法的优化算法。|
 
 
 ## <a name="8-package-state-functions"></a>8 - 包状态函数
 
-| 函数名称 | 描述 |
+| 函数名称 | 说明 |
 |---------------|-------------|
 |[rxHashEnv](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxHashEnv) | 用于存储包范围的状态的环境对象。 |
 

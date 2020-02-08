@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bc5a4def5c32ffc39c0df58d5a7927a24c90860d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135546"
 ---
 # <a name="native-compilation-advisor"></a>本机编译顾问
@@ -33,13 +33,13 @@ ms.locfileid: "68135546"
  有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>使用本机编译顾问的演练  
- 在 **对象资源管理器**中，右键单击要转换的存储过程，然后选择 **“本机编译顾问”**。 这将显示 **“存储过程本机编译顾问”** 的欢迎使用页。 单击 **“下一步”** 继续。  
+ 在 **对象资源管理器**中，右键单击要转换的存储过程，然后选择 **“本机编译顾问”** 。 这将显示 **“存储过程本机编译顾问”** 的欢迎使用页。 单击“下一步”  以继续。  
   
 ### <a name="stored-procedure-validation"></a>存储过程验证  
  此页将报告存储过程是否使用与本机编译不兼容的任何构造。 您可以单击 **“下一步”** 查看详细信息。 如果存在与本机编译不兼容的构造，可以单击 **“下一步”** 查看详细信息。  
   
 ### <a name="stored-procedure-validation-result"></a>存储过程验证结果  
- 如果存在与本机编译不兼容的构造，则 **“存储过程验证结果”** 页将显示详细信息。 你可以生成报表（单击“生成报表”）、退出“本机编译顾问”以及更新你的代码以便它与本机编译兼容。  
+ 如果存在与本机编译不兼容的构造，则 **“存储过程验证结果”** 页将显示详细信息。 你可以生成报表（单击“生成报表”  ）、退出“本机编译顾问”  以及更新你的代码以便它与本机编译兼容。  
   
 ## <a name="code-sample"></a>代码示例  
  下面的示例展示了已解释的存储过程，以及适用于本机编译的 *等效* 存储过程。 该示例假定名为 c:\data 的目录。  

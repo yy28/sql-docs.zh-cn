@@ -14,10 +14,10 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0eca650c1e499c54715204637306485280938707
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68049110"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查询表达式和统一资源名称
@@ -27,9 +27,9 @@ ms.locfileid: "68049110"
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 模型和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元使用与 XPath 表达式相似的两种类型的表达式。 查询表达式是指定一组条件的字符串，用于枚举对象模型层次结构中的一个或多个对象。 统一资源名称 (URN) 是一种特定类型的查询表达式字符串，用于唯一标识单个对象。  
 
 > [!NOTE]
-> SQL Server PowerShell 模块有两种；SqlServer 和 SQLPS。 虽然 SQL Server 安装附带了 SQLPS 模块（用于向后兼容），但该模块不再更新。 最新的 PowerShell 模块是 SqlServer 模块。 SqlServer 模块不仅包含 SQLPS 更新版本的 cmdlet，并且还包含新的 cmdlet 以支持最新的 SQL 功能。  
-> 虽然 SQL Server Management Studio (SSMS) 随附了以前版本的 SqlServer 模块，但仅限 16.x 版本的 SSMS。 要在 SSMS 17.0 和更高版本中使用 PowerShell，则必须从 PowerShell 库安装 SqlServer 模块。
-> 要安装 SqlServer 模块，请参阅[安装 SQL Server PowerShell](download-sql-server-ps-module.md)。
+> SQL Server PowerShell 模块有两种；SqlServer 和 SQLPS   。 虽然 SQL Server 安装附带了 SQLPS 模块（用于向后兼容），但该模块不再更新  。 最新的 PowerShell 模块是 SqlServer 模块  。 SqlServer 模块不仅包含 SQLPS 更新版本的 cmdlet，并且还包含新的 cmdlet 以支持最新的 SQL 功能   。  
+> 虽然 SQL Server Management Studio (SSMS) 随附了以前版本的 SqlServer 模块，但仅限 16.x 版本的 SSMS   。 要在 SSMS 17.0 和更高版本中使用 PowerShell，则必须从 PowerShell 库安装 SqlServer  模块。
+> 要安装 SqlServer 模块，请参阅[安装 SQL Server PowerShell](download-sql-server-ps-module.md)  。
 
   
 ## <a name="syntax"></a>语法  
@@ -53,7 +53,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 ```  
   
 ## <a name="arguments"></a>参数  
- *对象*  
+ *Object*  
  指定在表达式字符串的节点表示的对象的类型。 每个对象表示那些 SMO 对象模型名称空间中的一个集合类：  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -75,7 +75,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  例如，为 **ServerCollection** 类指定“服务器”，为 **DatabaseCollection** 类指定“数据库”。  
   
  \@*PropertyName*  
- 指定与“对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database 类的 IsAnsiNull 属性指定 \@IsAnsiNull。  
+ 指定与  “对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database  类的 IsAnsiNull  属性指定 \@IsAnsiNull。  
   
  \@*BooleanPropertyName*=true()  
  枚举指定的布尔属性设置为 TRUE 的所有对象。  
@@ -83,7 +83,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  \@*BooleanPropertyName*=false()  
  枚举指定的布尔属性设置为 FALSE 的所有对象。  
   
- contains(\@StringPropertyName, 'PatternString')  
+ contains(\@StringPropertyName  , 'PatternString  ')  
  枚举指定的字符串属性中包含“*PatternString*”中指定的一组字符（至少出现一次）的所有对象。  
   
  \@*StringPropertyName*='*PatternString*'  
@@ -95,7 +95,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 |||  
 |-|-|  
 |yyyy|四位数年份。|  
-|MM|两位数月份（01 到 12）。|  
+|mm|两位数月份（01 到 12）。|  
 |dd|两位数日期（01 到 31）。|  
 |hh|24 小时制的两位数小时（01 到 23）。|  
 |mi|两位数分钟（01 到 59）。|  
@@ -104,18 +104,18 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  可以按照存储在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的任何日期格式，计算以此格式指定的日期。  
   
- is_null(\@PropertyName)  
+ is_null(\@PropertyName  )  
  枚举指定属性的值为 NULL 的所有对象。  
   
  not(\<*PropertyExpression*>)  
  对 *PropertyExpression*的计算值求反，枚举与 *PropertyExpression*中指定的条件不匹配的所有对象。 例如，not(contains(\@Name, 'xyz')) 枚举名称中不含字符串 xyz 的所有对象。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  查询表达式是一些字符串，用于枚举 SMO 模型层次结构中的节点。 每个节点有一个筛选表达式，指定用于确定要枚举该节点的哪些对象的条件。 查询表达式在 XPath 表达式语言上建模。 查询表达式实现了 XPath 支持的一小部分表达式，还具有 XPath 中不提供的一些扩展。 XPath 表达式是一些字符串，指定用于枚举 XML 文档中的一个或多个标记的一组条件。 有关 XPath 的详细信息，请参阅 [W3C XPath Language](http://www.w3.org/TR/xpath20/)（W3C Xpath 语言）。  
   
  查询表达式必须以对服务器对象的绝对引用开头。 不允许使用以 / 开头的相对表达式。 查询表达式中指定的对象的顺序必须遵循相关对象模型中集合对象的层次结构。 例如，引用 Microsoft.SqlServer.Management.Smo 命令空间中对象的查询表达式必须从服务器节点开始，接下来才是数据库节点等。  
   
- 如果没有为对象指定 *\<FilterExpression>*，将枚举该节点的所有对象。  
+ 如果没有为对象指定 *\<FilterExpression>* ，将枚举该节点的所有对象。  
   
 ## <a name="uniform-resource-names-urn"></a>统一资源名称 (URN)  
  URN 是查询表达式的子集。 每个 URN 形成对单个对象的完全限定引用。 典型的 URN 使用 Name 属性来标识每个节点的单个对象。 例如，该 URN 引用一个特定列：  
@@ -161,7 +161,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='S
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
-### <a name="f-enumerating-objects-using-isnull"></a>F. 使用 is_null 枚举对象  
+### <a name="f-enumerating-objects-using-is_null"></a>F. 使用 is_null 枚举对象  
  此查询表达式枚举 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库中上次修改日期属性不为 Null 的所有表：  
   
 ```  

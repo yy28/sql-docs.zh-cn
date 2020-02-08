@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f32f4219e438a3f6dc390d11b50e6487c47ee49
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 71ab699e99a3d22b6b04299b8de1ccb18e5f0708
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531252"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971374"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安装 SQL Server 机器学习服务（Python 和 R）
 
@@ -76,7 +76,7 @@ ls /opt/microsoft/mssql/bin
 
 使用本文中针对操作系统的说明在最高包级别进行安装。
 
-对于每个特定于 OS 的安装说明集，“最高包级别”是“示例 1 - 完全安装”（完整的包集）或“示例 2 - 最小安装”（可行安装所需的最少的包数量）    。
+对于每组特定于操作系统的安装说明，*最高包级别*为**示例 1 - 完全安装**（一组完整的包）或**示例 2 - 最小安装**（可行安装所需的最少包数）。
 
 1. 对于 R 集成，请从 [MRO](#mro) 开始，因为它是必备组件。 如果没有该组件，则无法安装 R 集成。
 
@@ -168,9 +168,9 @@ zypper update
 
 ## <a name="package-list"></a>包列表
 
-在已连接 Internet 的设备上，将使用每个操作系统的包安装程序来独立于数据库引擎下载和安装包。 下表介绍了所有可用包，但对于 R 和 Python，需要指定提供完整功能安装或最小功能安装的包。
+在已连接 Internet 的设备上，将使用针对每个操作系统的包安装程序独立于数据库引擎下载和安装相应的包。 下表介绍了所有可用包，但对于 R 和 Python，需要指定提供完整功能安装或最小功能安装的包。
 
-| 包名称 | 适用对象 | 描述 |
+| 包名称 | 适用对象 | 说明 |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | All | 用于运行 R 和 Python 代码的可扩展性框架。 |
 | microsoft-openmpi  | Python、R | Revo* 库在 Linux 上进行并行化所使用的消息传递接口。 |
@@ -279,7 +279,7 @@ sudo zypper install mssql-mlservices-packages-r-9.4.7*
 
 ## <a name="post-install-config-required"></a>安装后配置（必需）
 
-其他配置主要通过 [mssql-conf 工具](sql-server-linux-configure-mssql-conf.md)来完成。
+其他配置主要通过 [mssql-conf 工具](sql-server-linux-configure-mssql-conf.md)完成。
 
 
 1. 添加用于运行 SQL Server 服务的 mssql 用户帐户。 如果之前未运行过该安装程序，则必须这样做。
@@ -384,13 +384,13 @@ GO
   sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.7* mssql-mlservices-packages-py-9.4.7*
   ```
 
-3. 接受许可协议并完成安装后的配置。 使用 **mssql-conf** 工具完成此任务。
+3. 接受许可协议并完成安装后配置。 使用 **mssql-conf** 工具完成此任务。
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf setup
   ```
 
-  系统将提示你接受数据库引擎的许可协议，选择版本，以及设置管理员密码。 系统还会提示你接受机器学习服务的许可协议。
+  系统将提示接受数据库引擎的许可协议、选择版本以及设置管理员密码。 系统还会提示你接受机器学习服务的许可协议。
 
 4. 如果系统出现重启提示，请重启服务。
 
@@ -398,7 +398,7 @@ GO
   sudo systemctl restart mssql-server.service
   ```
 
-## <a name="unattended-installation"></a>无人参与安装
+## <a name="unattended-installation"></a>无人参与的安装
 
 对数据库引擎使用[无人参与安装](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended)，添加 mssql-mlservices 和 EULA 的包。
 
@@ -426,7 +426,7 @@ EULA 接受的所有可能的排列方式都记录在[使用 mssql-conf 工具�
 
 |||
 |--|----|
-| mssql/mlservices 包 | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/mlservices 包 | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | microsoft-r-open 包 | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 
@@ -434,19 +434,19 @@ EULA 接受的所有可能的排列方式都记录在[使用 mssql-conf 工具�
 
 |||
 |--|----|
-| mssql/mlservices 包 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/mlservices 包 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | microsoft-r-open 包 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 #### <a name="sles12-paths"></a>SLES/12 路径
 
 |||
 |--|----|
-| mssql/mlservices 包 | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/mlservices 包 | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | microsoft-r-open 包 | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
 #### <a name="package-list"></a>包列表
 
-根据想要使用的扩展，下载特定语言所需的包。 确切文件名的后缀中包含平台信息，但下面的文件名应足够接近以确定要获取的文件。
+根据想要使用的扩展，下载特定语言所需的包。 精确的文件名在后缀中包含平台信息，但以下文件名应足够接近，可用于确定要获取的文件。
 
 ```
 # Core packages 
@@ -576,7 +576,7 @@ mssql-mlservices-mlm-py-9.4.7.64
    此命令使用开发人员版（默认）机器学习服务创建 SQL Server 容器。 SQL Server 端口 1433 在主机上公开为端口 1401   。
 
    > [!NOTE]
-   > 在容器中运行生产 SQL Server 版本的过程略有不同。 有关详细信息，请参阅 [在 Docker 上配置 SQL Server 容器映像](sql-server-linux-configure-docker.md)。 如果使用相同的容器名称和端口，本教程的其余部分仍适用于生产容器。
+   > 在容器中运行 SQL Server 生产版本的过程略有不同。 有关详细信息，请参阅 [在 Docker 上配置 SQL Server 容器映像](sql-server-linux-configure-docker.md)。 如果使用相同的容器名称和端口，本教程的其余部分仍适用于生产容器。
 
 1. 若要查看 Docker 容器，请运行 `docker ps` 命令：
 

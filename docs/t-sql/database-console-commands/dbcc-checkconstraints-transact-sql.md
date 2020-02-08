@@ -24,10 +24,10 @@ ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 4fb6bc14742d4aa25c47af59bc1be72ebfffa5a4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982399"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982399"
 
 检查当前数据库中指定表上的指定约束或所有约束的完整性。
   
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +69,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  取消显示所有信息性消息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 DBCC CHECKCONSTRAINTS 构造并执行一个对表的所有 FOREIGN KEY 和 CHECK 约束的查询。
   
 例如，外键查询可具有如下形式：
@@ -92,7 +92,7 @@ DBCC CHECKCONSTRAINTS 检查 FOREIGN KEY 和 CHECK 约束的完整性，但并�
   
 如果已指定 table_name 或 table_id 并启用它用于系统版本控制，DBCC CHECKCONSTRAINTS 还会对指定表执行临时数据一致性检查   。 如果未指定 NO_INFOMSGS，此命令将在单独一行上在输出中返回每项一致性冲突  。 输出格式将为 ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...)AND \<时态表记录的问题>。
   
-|检查|检查失败时输出中的其他信息|  
+|勾选标记|检查失败时输出中的其他信息|  
 |-----------|-----------------------------------------------|  
 |PeriodEndColumn ≥ PeriodStartColumn（当前）|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn（当前、历史记录）|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
@@ -105,11 +105,11 @@ DBCC CHECKCONSTRAINTS 检查 FOREIGN KEY 和 CHECK 约束的完整性，但并�
 ## <a name="result-sets"></a>结果集  
 DBCC CHECKCONSTRAINTS 返回带有以下列的行集。
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|表名|**varchar**|表的名称。|  
+|表名称|**varchar**|表的名称。|  
 |Constraint Name|**varchar**|违反的约束名。|  
-|位置|**varchar**|标识违反约束的行的列值分配。<br /><br /> 该列中的值可以用于 SELECT 语句（用于查询违反约束的行）的 WHERE 子句中。|  
+|其中|**varchar**|标识违反约束的行的列值分配。<br /><br /> 该列中的值可以用于 SELECT 语句（用于查询违反约束的行）的 WHERE 子句中。|  
   
 ## <a name="permissions"></a>权限  
 要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。

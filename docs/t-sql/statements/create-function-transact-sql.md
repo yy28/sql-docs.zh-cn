@@ -41,10 +41,10 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982787"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -74,7 +74,7 @@ ms.locfileid: "73982787"
 > [!NOTE]  
 > 有关 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，请参阅[CREATE FUNCTION（SQL 数据仓库）](../../t-sql/statements/create-function-sql-data-warehouse.md)。
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -333,7 +333,7 @@ RETURNS return_data_type
   
  在内联 TVF 中，TABLE 返回值是通过单个 SELECT 语句定义的。 内联函数没有关联的返回变量。  
   
- <a name="mstvf"></a> 在 MSTVF 中，\@return_variable  是一个 TABLE 变量，用于存储和汇总应作为函数值返回的行。 只能将 \@ *return_variable* 指定用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，而不能用于 CLR 函数。  
+ <a name="mstvf"></a> 在 MSTVF 中，\@return_variable  是一个 TABLE 变量，用于存储和汇总应作为函数值返回的行。 只能将 \@*return_variable* 指定用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，而不能用于 CLR 函数。  
   
  *select_stmt*  
  定义内联表值函数 (TVF) 返回值的单个 SELECT 语句。  
@@ -581,7 +581,7 @@ INLINE = { ON | OFF }
 ### <a name="computed-column-interoperability"></a>计算列互操作性  
  函数具有下列属性。 这些属性的值确定了函数是否可用于持久化计算列或索引计算列。  
   
-|属性|描述|说明|  
+|properties|说明|说明|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|函数是确定性函数还是不确定性函数。|确定性函数中允许本地数据访问。 例如，如果每次使用一组特定输入值和相同数据库状态调用函数时，函数都返回相同结果，则该函数将被标记为确定性函数。|  
 |**IsPrecise**|函数是精确函数还是不精确函数。|不精确函数包含浮点运算之类的运算。|  
@@ -655,7 +655,7 @@ INLINE = { ON | OFF }
 ## <a name="metadata"></a>元数据  
  下表列出可用于返回与用户定义函数有关的元数据的系统目录视图。  
   
-|系统视图|描述|  
+|系统视图|说明|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|请参阅下面“示例”部分中的“示例 E”。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|显示 CLR 用户定义函数的有关信息。|  

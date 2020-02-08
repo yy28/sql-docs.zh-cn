@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4d7b6b91ac3aeaa45c5e6c3e05c12176f5f60b28
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727357"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server 中 R 的性能优化
@@ -32,7 +32,7 @@ ms.locfileid: "73727357"
 + 第三篇文章介绍 R 代码中的优化和实现操作化的资源。
 + 第四篇文章详细介绍了测试方法，并报告了结果和结论。
 
-**适用范围：** SQL Server 2016 R Services、SQL Server 机器学习服务
+**适用于：** SQL Server 2016 R Services、SQL Server 机器学习服务
 
 ## <a name="performance-goals-and-targeted-scenarios"></a>性能目标和目标场景
 

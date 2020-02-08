@@ -14,10 +14,10 @@ ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2c33209236b866816ce1c597ab5cfe1a8971d976
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012286"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>配置两位数年份截止服务器配置选项
@@ -39,7 +39,7 @@ ms.locfileid: "68012286"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置“两位数年份截止”选项之后](#FollowUp)  
+-   **跟进：** [在配置“两位数年份截止”选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68012286"
   
 #### <a name="to-configure-the-two-digit-year-cutoff-option"></a>配置两位数年份截止选项  
   
-1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”** 。  
   
 2.  单击 **“杂项服务器设置”** 节点。  
   
@@ -72,9 +72,9 @@ ms.locfileid: "68012286"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `two digit year cutoff` 选项的值设置为 `2030`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `two digit year cutoff` 选项的值设置为 `2030`。  
   
 ```sql  
 USE AdventureWorks2012 ;  

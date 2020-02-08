@@ -13,10 +13,10 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9298d2ff1dc79d14fa5de943d2d7cfccf8bcbd4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298840"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>创建和编辑 Oracle CDC 服务
@@ -40,7 +40,7 @@ ms.locfileid: "71298840"
 > [!NOTE]  
 > 在编辑服务时，此选项不可用。 不能更改已存在的 Windows 服务的名称。  
   
- **Description**  
+ **说明**  
  键入有助于标识该服务的说明。  
   
  **服务帐户**  
@@ -63,7 +63,7 @@ ms.locfileid: "71298840"
  **服务器名称**：选择要连接到的目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（例如 \\\\<computer_name>\\<instance_name>  ）。 默认情况下，显示上次连接到的服务器实例。  
   
  **身份验证**  
- 选择下列选项之一：  
+ 选择以下方案之一：  
   
 -   **Windows 身份验证**：如果选择此选项，Oracle CDC 服务将使用服务帐户标识连接到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例正在不同的计算机上运行，则必须将 Windows 身份验证用于域帐户。  
   

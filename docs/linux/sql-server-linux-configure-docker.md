@@ -4,18 +4,18 @@ description: 探索在 Docker 中使用 SQL Server 2017 和 2019 容器映像并
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.date: 11/04/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.openlocfilehash: e97f535dedd2b6ee25abfc886d1f08272697c549
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75721539"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76162628"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上配置 SQL Server 容器映像
 
@@ -56,20 +56,17 @@ ms.locfileid: "75721539"
 
 ## <a id="rhel"></a> 运行基于 RHEL 的容器映像
 
-SQL Server Linux 容器映像的文档指向基于 Ubuntu 的容器。 从 SQL Server 2019 开始，可使用基于 Red Hat Enterprise Linux (RHEL) 的容器。 在所有 docker 命令中将容器存储库从 mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04 更改为 mcr.microsoft.com/mssql/rhel/server:2019-RC1   。
+SQL Server Linux 容器映像的文档指向基于 Ubuntu 的容器。 从 SQL Server 2019 开始，可使用基于 Red Hat Enterprise Linux (RHEL) 的容器。 在所有 docker 命令中，将容器存储库从 mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04 更改为 mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8   。
 
-例如，以下命令拉取使用 RHEL 的最新 SQL Server 2019 容器：
+例如，以下命令拉取使用 RHEL 8 的 SQL Server 2019 容器的累积更新 1：
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 ```
-
-> [!NOTE]
-> 自 SQL Server 2019 的 GA 版本开始，最新的 RHEL 容器映像仍是 RC1 版本。 此版本不适用于生产使用。 当新的 RHEL 容器映像可用时，将更新本文。
 
 ::: moniker-end
 
@@ -99,7 +96,7 @@ docker run --name sqlenterprise `
       -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       -e "MSSQL_PID=Enterprise" -p 1433:1433 `
       -d "mcr.microsoft.com/mssql/server:2017-latest"
- ```
+```
 
 > [!IMPORTANT]
 > 通过将值 **Y** 传递给环境变量 **ACCEPT_EULA** 并将版本值传递给 **MSSQL_PID**，你表明自己拥有打算使用的 SQL Server 版本的现行有效有许可证。 你还同意自己对在 Docker 容器映像中运行的 SQL Server 软件的使用将受 SQL Server 许可条款的约束。
@@ -238,11 +235,11 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>/data:/var/opt/mssql/data -v <host directory>/log:/var/opt/mssql/log -v <host directory>/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>/data:/var/opt/mssql/data -v <host directory>/log:/var/opt/mssql/log -v <host directory>/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 ::: moniker-end
@@ -250,11 +247,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>/data:/var/opt/mssql/data -v <host directory>/log:/var/opt/mssql/log -v <host directory>/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>/data:/var/opt/mssql/data -v <host directory>/log:/var/opt/mssql/log -v <host directory>/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -539,14 +536,14 @@ docker pull mcr.microsoft.com/mssql/server:<image_tag>
 > SQL Server 2019 容器自动以非根身份启动，因此以下步骤仅适用于 SQL Server 2017 容器，默认情况下，该容器以根身份启动。
 
 1. 下载[适用于非根 SQL Server 容器的示例dockerfile](https://raw.githubusercontent.com/microsoft/mssql-docker/master/linux/preview/examples/mssql-server-linux-non-root/Dockerfile)，并将其另存为 `dockerfile`。
- 
+
 2. 在 dockerfile 目录的上下文中运行以下命令，生成非根 SQL Server 容器：
 
 ```bash
 cd <path to dockerfile>
 docker build -t 2017-latest-non-root .
 ```
- 
+
 3. 启动容器。
 
 ```bash
@@ -555,16 +552,16 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword@" --cap-add SYS_P
 
 > [!NOTE]
 > 非根 SQL Server 容器需要 `--cap-add SYS_PTRACE` 标志来生成用于排除故障的转储。
- 
+
 4. 检查是否以非根用户的身份运行容器：
 
 docker 执行到容器中。
 ```bash
 docker exec -it sql1 bash
 ```
- 
+
 运行 `whoami`，这将返回容器中运行的用户。
- 
+
 ```bash
 whoami
 ```
@@ -572,14 +569,14 @@ whoami
 ## <a id="nonrootuser"></a>在主机上以其他非根用户的身份运行容器
 
 若要以其他非根用户的身份运行 SQL Server 容器，请将 -u 标志添加到 docker run 命令。 非根容器具有以下限制：必须作为根组的一部分运行，除非已将卷装载到非根用户可以访问的“/var/opt/mssql”。 根组不向非根用户授予任何额外的根权限。
- 
+
 **以具有 UID 4000 的用户身份运行**
- 
+
 可使用自定义 UID 启动 SQL Server。 例如，以下命令使用 UID 4000 启动 SQL Server：
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u 4000:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
- 
+
 > [!Warning]
 > 确保 SQL Server 容器具有命名用户，如“mssql”或“root”，否则 SQLCMD 将无法在容器中运行。 可通过在容器中运行 `whoami` 来检查是否以命名用户的身份运行 SQL Server 容器。
 
@@ -590,34 +587,34 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PT
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -u 0:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
- 
+
 **在主机计算机上以用户的身份运行**
- 
+
 可使用以下命令在主机计算机上以现有用户身份启动 SQL Server：
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u $(id -u myusername):0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
- 
+
 **以其他用户和组的身份运行**
- 
+
 可使用自定义用户和组启动 SQL Server。 在此示例中，已装载的卷具有为主机计算机上的用户或组配置的权限。
- 
+
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
- 
+
 ## <a id="storagepermissions"></a>为非根容器配置持久存储权限
 
 若要允许非根用户访问已装载的卷上的 DB 文件，请确保运行容器所用的用户/组可以接触持久文件存储。  
 
 可通过此命令获取数据库文件的当前所有权。
- 
+
 ```bash
 ls -ll <database file dir>
 ```
 
 如果 SQL Server 无权访问持久数据库文件，请运行以下命令之一。
- 
+
 **授予对 DB 文件的根组读/写访问权限**
 
 授予对以下目录的根组权限，使非根 SQL Server 容器有权访问数据库文件。
@@ -701,7 +698,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 
    ```bash
     usermod -aG docker $USER
-    ```
+   ```
 - 检查是否有任何来自容器的错误消息。
 
     ```bash

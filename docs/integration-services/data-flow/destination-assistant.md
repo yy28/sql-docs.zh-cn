@@ -14,10 +14,10 @@ ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5f302227746b0479f096fbfc29e50c328b61f114
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292911"
 ---
 # <a name="destination-assistant"></a>目标助手
@@ -48,9 +48,9 @@ ms.locfileid: "71292911"
 ## <a name="add-new-destination-dialog-box"></a>“添加新目标”对话框
 下表列出了“添加新目标”  对话框的可用选项。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |类型|选择要连接到的目标的类型。|  
 |连接管理器|选择现有连接管理器或单击“\<新建>”创建新的连接管理器  。|  
 |仅显示已安装项|指定是否要仅查看安装的目标。|  
-|“确定”|单击以保存您的更改，并打开任何后续对话框来配置其他选项。|  
+|OK|单击以保存您的更改，并打开任何后续对话框来配置其他选项。|  
