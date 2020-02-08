@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.openlocfilehash: 0a7c16f508621297e39df5cd47bde891b7d8a140
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73033022"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 为 Linux 上的 SQL Server 创建数据库
@@ -25,7 +25,7 @@ SQL Server Data Tools (SSDT) 可将 Visual Studio 转变为一种强大的开发
 
 1. 如果 Windows 计算机上尚未安装 Visual Studio，请[下载并安装 Visual Studio](https://visualstudio.microsoft.com/downloads/)。 如果缺少 Visual Studio 许可证，可使用免费的 Visual Studio Community 版本，该版本是一款适用于学生、开放源代码和个体开发人员的全功能型 IDE。
 
-2. 在 Visual Studio 的安装过程中，在“选择安装类型”选项下，选择“自定义”   。 单击 **“下一步”**
+2. 在 Visual Studio 的安装过程中，在“选择安装类型”选项下，选择“自定义”   。 点击“下一步” 
 
 3. 依次选择“Microsoft SQL Server Data Tools”和“Git for Windows”，然后从功能选择列表中选择“适用于 Visual Studio 的 GitHub 扩展”    。
 
@@ -49,7 +49,7 @@ SSDT 版本 17.0 RC 及更高版本支持 Linux 上的 SQL Server。
 
    <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-4. 单击 **“创建”** 。 创建本地 Git 存储库后，双击“SSDTRepo”  。
+4. 单击“创建”。  创建本地 Git 存储库后，双击“SSDTRepo”  。
 
 5. 单击“解决方案”部分的“新建”   。 选择“新建项目”对话框中“其他语言”节点下的“SQL Server”    。
 

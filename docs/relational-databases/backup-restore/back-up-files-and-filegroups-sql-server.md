@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708687"
 ---
 # <a name="back-up-files-and-filegroups"></a>备份文件和文件组
@@ -55,7 +55,7 @@ ms.locfileid: "71708687"
   
 1. 展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-1. 右键单击数据库，指向“任务”  ，再单击“备份”  。 将出现 **“备份数据库”** 对话框。  
+1. 右键单击数据库，指向 **“任务”** ，再单击 **“备份”** 。 将出现 **“备份数据库”** 对话框。  
   
 1. 在 **“数据库”** 列表中，验证数据库名称。 您也可以从列表中选择其他数据库。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "71708687"
   
      如需查看当前备份压缩默认值，请参阅[查看或配置备份压缩默认值服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
 
-## <a name="using-transact-sql"></a>使用 Transact-SQL
+## <a name="using-transact-sql"></a>“使用 Transact-SQL”
   
 若要创建文件或文件组备份，请使用 [BACKUP DATABASE <file_or_filegroup>](../../t-sql/statements/backup-transact-sql.md) 语句。 此语句至少必须指定以下各项：  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71708687"
   
   [ WITH with_options  [ **,** ...*o* ] ] ;  
   
-|选项|“说明”|  
+|选项|说明|  
 |------------|-----------------|  
 |*database*|备份事务日志、部分数据库或完整的数据库时所用的源数据库。|  
 |FILE _=_ logical_file_name |指定要包含在文件备份中的文件的逻辑名称。|  

@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959090"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>教程：生成自定义见解小组件
@@ -30,7 +30,7 @@ ms.locfileid: "67959090"
 
 ## <a name="prerequisites"></a>必备条件
 
-本教程需要 SQL Server 或 Azure SQL 数据库 TutorialDB。  若要创建 TutorialDB 数据库，请完成以下其中一项快速入门  ：
+本教程需要使用 SQL Server 或 Azure SQL 数据库 TutorialDB  。 若要创建 TutorialDB  数据库，请完成以下其中一项快速入门：
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 连接并查询 SQL Server](quickstart-sql-server.md)
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据库](quickstart-sql-database.md)
@@ -163,7 +163,7 @@ ms.locfileid: "67959090"
     ![activesession 见解](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>后续步骤
-在本教程中，你已学习如何执行以下操作：
+在本教程中，你了解了如何执行以下操作：
 > [!div class="checklist"]
 > * 运行自己的查询并在图表中进行查看
 > * 从图表生成自定义见解小组件

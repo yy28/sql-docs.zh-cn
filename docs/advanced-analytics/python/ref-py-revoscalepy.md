@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c6de9072c32155446b3ff40df3f81af9073c1090
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706820"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy（SQL Server 中的 Python 模块）
@@ -52,7 +52,7 @@ revoscalepy 包含用于创建数据源和设置执行计算的位置或计算�
 
 在某些情况下，SQL Server 和 Python 使用不同的数据类型。 有关 SQL 和 Python 数据类型之间的映射的列表，请参阅 [Python 到 SQL 数据类型](python-libraries-and-data-types.md)。
 
-| 函数| 描述|
+| 函数| 说明|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  创建 SQL Server 计算上下文对象以将计算推送到远程实例。 好几个 revoscalepy 函数都将计算上下文作为参数  。 有关上下文切换示例，请参阅[使用 revoscalepy 创建模型](../tutorials/use-python-revoscalepy-to-create-model.md)。|
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | 基于 SQL Server 查询或表创建数据对象。 |
@@ -64,7 +64,7 @@ revoscalepy 包含用于创建数据源和设置执行计算的位置或计算�
 
 ## <a name="2-data-manipulation-etl"></a>2 数据操作 (ETL)
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |----------|-------------|
 |[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | 将数据导入到 .xdf 文件或数据帧。|
 |[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | 将数据从输入数据集转换为输出数据集。|
@@ -73,7 +73,7 @@ revoscalepy 包含用于创建数据源和设置执行计算的位置或计算�
 
 ## <a name="3-training-and-summarization"></a>3 训练和摘要
 
-| 函数| 描述|
+| 函数| 说明|
 | ------- | ---------- |
 |[rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) | 调整随机梯度提升的决策树|
 |[rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) | 调整分类和回归决策林|
@@ -88,9 +88,9 @@ revoscalepy 包含用于创建数据源和设置执行计算的位置或计算�
 
 ## <a name="4-scoring-functions"></a>4 评分函数
 
-| 函数| 描述|
+| 函数| 说明|
 | ------- | ---------- |
-| [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 从已定型模型生成预测|“应用程序适配器” 区域） | 从已定型模型生成预测，并可用于实时评分。 |
+| [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 从已定型模型生成预测|) | 从已定型模型生成预测，并可用于实时评分。 |
 |[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | 使用 rx_lin_mod 和 rx_logit 对象计算预测值和残差。 |
 |[rx_predict_rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dforest) | 计算 rx_dforest 或 rx_btrees 对象中的数据集的预测值或拟合值。 |
 |[rx_predict_rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dtree) | 计算 rx_dtree 对象中数据集的预测值或拟合值。 |

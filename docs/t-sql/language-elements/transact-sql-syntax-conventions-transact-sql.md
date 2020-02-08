@@ -29,10 +29,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981903"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 语法约定 (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "73981903"
 |&#124; （垂直条）|分隔括号或大括号中的语法项。 只能使用其中一项。|  
 |`[ ]`（方括号）|可选语法项。 不要键入方括号。|  
 |{}（大括号）|必选语法项。 不要键入大括号。|  
-|[  ..._n_]|指示前面的项可以重复 _n_ 次。 各项之间以逗号分隔。|  
+|[  ..._n_]|指示前面的项可以重复 _n_ 次。 匹配项由逗号分隔。|  
 |[...n  ]|指示前面的项可以重复 _n_ 次。 每一项由空格分隔。|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句终止符。 虽然此版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中大部分语句都不需要分号，但今后发布的版本需要分号。|  
 |\<label> ::=|语法块的名称。 使用此约定，可以对能在一条语句中的多个位置使用的过长语法段或语法单元进行分组和标记。 可使用语法块的各个位置用括在尖括号内的标签指明：\<label>。<br /><br /> 集是表达式的集合，例如 \<分组集>；列表是集的集合，例如 \<组合元素列表>。|  
@@ -84,7 +84,7 @@ object\_name
   
 若要省略中间节点，请使用句点来指示这些位置。 下表显示了对象名的有效格式。  
   
-|对象引用格式|描述|  
+|对象引用格式|说明|  
 |-----------------------------|-----------------|  
 |server  .database  .schema  .object |四个部分的名称。|  
 |server  .database  ..object |省略架构名称。|  

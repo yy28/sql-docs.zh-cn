@@ -12,12 +12,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c97d3ae0dd6b334e129134ba391124d8de3e8260
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595792"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910230"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>通过 SQL Server Management Studio 查询使用 Always Encrypted 的列
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "73595792"
 1. 如果使用 SSMS 17 或更低版本：
     1. 选择“其他属性”  。
     1. 若要启用 Always Encrypted，请键入 `Column Encryption Setting = Enabled`。 若要禁用 Always Encrypted，请指定 `Column Encryption Setting = Disabled`，或从“其他属性”  选项卡中删除“列加密设置”  设置（其默认值为“已禁用”  ）。   
- 1. 单击 **“连接”** 。
+ 1. 单击“连接”  。
 
 > [!TIP]
 > 在为现有“查询编辑器”窗口启用和禁用 Always Encrypted 之间进行切换：   
@@ -108,7 +108,7 @@ ms.locfileid: "73595792"
    
 ## <a name="param"></a>Always Encrypted 参数化   
  
-Always Encrypted 参数化是 SQL Server Management Studio 中的一种功能，可自动将 Transact-SQL 变量转换为查询参数（[SqlParameter 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)的实例）。 （要求至少为 SSMS 版本 17.0。）这允许用于 SQL Server 的基础 .NET Framework 数据提供程序对针对加密列的数据进行检测，并在将数据发送到数据库之前对其进行加密。 
+Always Encrypted 参数化是 SQL Server Management Studio 中的一种功能，可自动将 Transact-SQL 变量转换为查询参数（ [SqlParameter 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)的实例）。 （要求至少为 SSMS 版本 17.0。）这允许用于 SQL Server 的基础 .NET Framework 数据提供程序对针对加密列的数据进行检测，并在将数据发送到数据库之前对其进行加密。 
   
 如果没有进行参数化，.NET Framework 数据提供程序会传递你在“查询编辑器”中编写的每个声明，作为非参数化查询。 如果查询包含定目标到加密列的文本或 Transact-SQL 变量，用于 SQL Server 的 .NET Framework 数据提供程序便无法在将查询发送到数据库之前检测和加密它们。 结果由于纯文本文字 Transact-SQL 变量和加密列之间的类型不匹配，查询将失败。 例如，假定 `SSN` 列已加密，如果没有参数化，以下查询将失败。   
 
@@ -128,7 +128,7 @@ WHERE [SSN] = @SSN
 2. 选择“查询选项…”  。
 3. 导航到“执行”   > “高级”  。
 4. 选择或取消选择“启用 Always Encrypted 参数化”  。
-5. 单击“确定”  。
+5. 单击“确定”。 
 
 为以后的“查询编辑器”窗口启用/禁用 Always Encrypted 参数化：
 
@@ -136,7 +136,7 @@ WHERE [SSN] = @SSN
 2. 选择“选项...”  。
 3. 导航到“查询执行”   > “SQL Server”   > “高级”  。
 4. 选择或取消选择“启用 Always Encrypted 参数化”  。
-5. 单击“确定”  。
+5. 单击“确定”。 
 
 如果在使用已启用 Always Encrypted 的数据库连接的“查询编辑器”窗口中执行查询，但没有为“查询编辑器”窗口启用参数化，便会看到启用提示。
 
@@ -162,7 +162,7 @@ DECLARE @Salary money = $30000;
 SQL Server Management Studio 不会尝试对下面的几个变量示例进行参数化：
 
 ```sql
-DECLARE @Name nvarchar(50); --Initialization seperate from declaration
+DECLARE @Name nvarchar(50); --Initialization separate from declaration
 SET @Name = 'Abel';
 
 DECLARE @StartDate date = GETDATE(); -- a function used instead of a literal
@@ -214,9 +214,9 @@ WHERE [SSN] = @SSN;
 > [!NOTE]
 > 如果没有进行参数化，整个查询（包括类型转换）将在 SQL Server/Azure SQL 数据库内进行处理。 如果启用了参数化，某些类型转换将由 SQL Server Management Studio 中的 .NET Framework 来执行。 由于 .NET Framework 类型系统和 SQL Server 类型系统之间存在差异（例如某些类型的精度不同，如 float），启用了参数化来执行的查询可产生不同于未启用参数化来执行的查询的结果。 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 - [使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)
 
 
 ## <a name="see-also"></a>另请参阅
-- [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

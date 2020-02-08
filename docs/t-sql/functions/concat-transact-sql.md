@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6968766b2d7d447f21fccc6425935017a6943778
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70122948"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "70122948"
 
 此函数以端到端的方式返回从串联或联接的两个或更多字符串值生成的字符串。 （若要在串联过程中添加分隔值，请参阅 [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)。）
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -46,15 +46,15 @@ string_value
 string_value   
 长度和类型取决于输入的字符串值。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `CONCAT` 采用可变数量的字符串自变量，并将它们串联（或联接）成单个字符串。 需要至少两个输入值；否则 `CONCAT` 将引发错误。 `CONCAT` 在串联前会将所有自变量隐式转换为字符串类型。 `CONCAT` 会将 Null 值隐式转换为空字符串。 如果 `CONCAT` 接收到全部为 NULL 值的自变量，它将返回类型为 varchar(1) 的空字符串   。 隐式转换为字符串的过程遵循现有的数据类型转换规则。 有关数据类型转换的详细信息，请参阅 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。
   
 返回类型取决于参数的类型。 此表将说明这一映射：
   
 |输入类型|输出类型和长度|  
 |---|---|
-|1.以下类型的任何自变量<br><br />SQL-CLR 系统类型<br><br />SQL-CLR UDT<br><br />或多个<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2.或者为以下类型的任何自变量<br><br />**varbinary(max)**<br><br />或多个<br><br />**varchar(max)**|varchar(max)，除非其中一个参数是任意长度的 nvarchar   。 在这种情况下，`CONCAT` 将返回类型 nvarchar(max) 的结果  。|  
+|1.以下类型的任何自变量<br><br />SQL-CLR 系统类型<br><br />SQL-CLR UDT<br><br />或<br><br />`nvarchar(max)`|**nvarchar(max)**|  
+|2.或者为以下类型的任何自变量<br><br />**varbinary(max)**<br><br />或<br><br />**varchar(max)**|varchar(max)，除非其中一个参数是任意长度的 nvarchar   。 在这种情况下，`CONCAT` 将返回类型 nvarchar(max) 的结果  。|  
 |3.或者为类型 nvarchar 的任何自变量，最多为 4000 个字符 <br><br />(nvarchar(<= 4000) ) |**nvarchar**(<= 4000)|  
 |4.在所有其他情况下|varchar(<= 8000)（最多为 8000 个字符的 varchar），除非其中一个参数是任意长度的 nvarchar   。 在那种情况下，`CONCAT` 将返回类型 nvarchar(max) 的结果  。|  
   

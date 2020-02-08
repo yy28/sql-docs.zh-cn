@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7ecbfd2edd20a312fc8a6d451938f1407585ded5
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706949"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml（SQL Server 中的 Python 模块）
@@ -52,7 +52,7 @@ microsoftml 中的算法依赖于以下内容的 [revoscalepy](ref-py-revoscalep
 
 ## <a name="1-training-functions"></a>1 训练函数
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |----------|-------------|
 |[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | 定型模型的系综。 |
 |[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | 随机林。 |
@@ -68,14 +68,14 @@ microsoftml 中的算法依赖于以下内容的 [revoscalepy](ref-py-revoscalep
 
 ### <a name="categorical-variable-handling"></a>分类变量处理
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |----------|-------------|
 |[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | 将文本列转换为类别。 |
 |[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | 将文本列进行哈希处理并转换为类别。 |
 
 ### <a name="schema-manipulation"></a>架构操作
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |----------|-------------|
 |[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | 将多个列串联为一个矢量。 |
 |[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | 从数据集中删除列。 |
@@ -84,7 +84,7 @@ microsoftml 中的算法依赖于以下内容的 [revoscalepy](ref-py-revoscalep
 
 ### <a name="variable-selection"></a>变量选择
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |----------|-------------|
 |[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |基于计数的功能选择。 |
 |[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | 基于互信息的功能选择。 |
@@ -92,7 +92,7 @@ microsoftml 中的算法依赖于以下内容的 [revoscalepy](ref-py-revoscalep
 
 ### <a name="text-analytics"></a>文本分析
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |----------|-------------|
 |[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | 将文本列转换为数字特征。 |
 |[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | 情绪分析。 |
@@ -100,7 +100,7 @@ microsoftml 中的算法依赖于以下内容的 [revoscalepy](ref-py-revoscalep
 
 ### <a name="image-analytics"></a>图像分析 
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |----------|-------------|
 |[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | 加载图像。 |
 |[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | 调整图像大小。 |
@@ -109,7 +109,7 @@ microsoftml 中的算法依赖于以下内容的 [revoscalepy](ref-py-revoscalep
 
 ### <a name="featurization-functions"></a>特征化函数
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |----------|-------------|
 |[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | 数据源的数据转换 |
 
@@ -117,7 +117,7 @@ microsoftml 中的算法依赖于以下内容的 [revoscalepy](ref-py-revoscalep
 
 ## <a name="3-scoring-functions"></a>3 评分函数
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |----------|-------------|
 |[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | 使用 Microsoft 机器学习模型评分 |
 

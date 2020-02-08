@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a2cfe01b4df32e0966084866a67cea4bfd57bc11
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907431"
 ---
 # <a name="rename-a-database"></a>重命名数据库
@@ -54,7 +54,7 @@ ms.locfileid: "72907431"
   - 在 SQL Server 中，可将数据库设置为单用户模式，关闭任何打开的连接。 有关详细信息，请参阅[将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。
   - 在 Azure SQL 数据库中，必须确保其他用户与要重命名的数据库之间没有打开的连接。
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
   
 #### <a name="permissions"></a>权限
 

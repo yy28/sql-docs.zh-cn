@@ -15,10 +15,10 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7d55050b132a3367ecc495d0afedcad6f0d2351b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284426"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
@@ -50,7 +50,7 @@ ms.locfileid: "71284426"
 ##  <a name="msgError"></a> 错误消息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误消息的符号名称以 **DTS_E_** 开头。  
   
-|十六进制代码|十进制代码|符号名称|描述|  
+|十六进制代码|十进制代码|符号名称|说明|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|正在覆盖目标中的存储过程“%1”。|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|对于 %3，不支持找到的列“%2”的数据类型“%1”。 此列将被转换为 DT_NTEXT。|  
@@ -1417,7 +1417,7 @@ ms.locfileid: "71284426"
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|行数 %2!ld! 对于“%1”属性无效。 此值必须大于 0。|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|要求适配器写入的字符串长度为 %1!I64d! 个字节，而所有数据的长度必须小于 4294967295 个字节。|  
 |0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|没有输入映射到输出。 “%1”必须至少有一个输入列映射到输出列。|  
-|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|不支持从“%1”(代码页为 %2!d!) 到“%3”(代码页为 %4!d!) 的转换。|  
+|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|不支持从“%1”(代码页为 %2!d!) 到“%3”(代码页为 %4!d!) 分层。|  
 |0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|%1 的外部元数据列映射无效。  外部元数据列 ID 不能为零。|  
 |0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|“%1”被映射到不存在的外部元数据列。|  
 |0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|无法为列“%1”将类型为 DT_TEXT、DT_NTEXT 或 DT_IMAGE 的长对象数据写入数据流任务缓冲区。|  
@@ -1463,7 +1463,7 @@ ms.locfileid: "71284426"
 |0xC0204010|-1071628272|DTS_E_CANONLYSETCOMPFLAGSONSOURCE|不能将“%1”的 ComparisonFlags 属性设置为非零值，因为“%2”不是源输出。 不能将输出列“colname”(ID)的 ComparisonFlags 属性设置为非零值，因为其输出“outputname”(ID)不是源输出。|  
 |0xC0204011|-1071628271|DTS_E_NONSTRINGCOMPARISONFLAGSNOTZERO|由于“%1”不是字符串类型，所以其比较标志一定为零。 只有字符串类型列的 ComparisonFlags 才能为非零。|  
 |0xC0204012|-1071628270|DTS_E_COMPFLAGSONLYONSORTCOL|不能将“%1”的 ComparisonFlags 属性设置为非零值，因为其 SortKeyPosition 被设置为零。 仅当输出列的 SortKeyPosition 也为非零值时，其 ComparisonFlags 才能为非零值。|  
-|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|此属性是只读的。|  
+|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|属性为只读属性。|  
 |0xC0204014|-1071628268|DTS_E_INVALIDDATATYPE|为 %1 设置的数据类型值(%2!ld!)无效。|  
 |0xC0204015|-1071628267|DTS_E_CODEPAGEREQUIRED|“%1”要求设置代码页，但传递的值为零。|  
 |0xC0204016|-1071628266|DTS_E_INVALIDSTRINGLENGTH|“%1”的长度无效。 此长度必须介于 %2!ld! 和 %3!ld! 之间。|  
@@ -1926,7 +1926,7 @@ ms.locfileid: "71284426"
 |0xC02090BE|-1071607618|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_PATHNOTFOUND|无法打开要读取的文件。 找不到该文件。|  
 |0xC02090BF|-1071607617|DTS_E_FILEOPENERR_FORREAD_TOOMANYOPENFILES|无法打开要读取的文件“%1”。 打开的文件太多。|  
 |0xC02090C0|-1071607616|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_TOOMANYOPENFILES|无法打开要读取的文件。 打开的文件太多。|  
-|0xC02090C1|-1071607615|DTS_E_FILEOPENERR_FORREAD_ACCESSDENIED|无法打开要读取的文件“%1”。 拒绝访问。|  
+|0xC02090C1|-1071607615|DTS_E_FILEOPENERR_FORREAD_ACCESSDENIED|无法打开要读取的文件“%1”。 访问被拒绝。|  
 |0xC02090C2|-1071607614|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_ACCESSDENIED|无法打开要读取的文件。 您没有适当的权限。|  
 |0xC02090C3|-1071607613|DTS_E_INSERTERINVALIDBOM|文件“%1”的字节顺序标记(BOM)值是 0x%2!4.4X!，但该值应为 0x%3!4.4X!。 为此文件设置了 ExpectBOM 属性，但该文件中缺少 BOM 值或该值无效。|  
 |0xC02090C4|-1071607612|DTS_E_TXFILEINSERTERSTATIC_INSERTERINVALIDBOM|该文件的字节顺序标记 (BOM) 值无效。 为此文件设置了 ExpectBOM 属性，但该文件中缺少 BOM 值或该值无效。|  
@@ -2024,7 +2024,7 @@ ms.locfileid: "71284426"
 ##  <a name="msgWarning"></a> 警告消息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 警告消息的符号名称以 **DTS_W_** 开头。  
   
-|十六进制代码|十进制代码|符号名称|描述|  
+|十六进制代码|十进制代码|符号名称|说明|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|评估期还剩下 %1!lu! 天。 过期后，将无法执行包。|  
 |0x80010015|-2147418091|DTS_W_GENERICWARNING|出现了警告。 在此说明警告细节的警告之前，应该还有更多特定警告。|  
@@ -2170,7 +2170,7 @@ ms.locfileid: "71284426"
 ##  <a name="msgInfo"></a> 信息性消息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 信息性消息的符号名称以 **DTS_I_** 开头。  
   
-|十六进制代码|十进制代码|符号名称|描述|  
+|十六进制代码|十进制代码|符号名称|说明|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x4001100A|1073811466|DTS_I_STARTINGTRANSACTION|正在启动此容器的分布式事务处理。|  
 |0x4001100B|1073811467|DTS_I_COMMITTINGTRANSACTION|正在提交此容器启动的分布式事务处理。|  
@@ -2269,7 +2269,7 @@ ms.locfileid: "71284426"
 ##  <a name="msgGeneral"></a> 常规消息和事件消息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误消息的符号名称以 **DTS_MSG_** 开头。  
   
-|十六进制代码|十进制代码|符号名称|描述|  
+|十六进制代码|十进制代码|符号名称|说明|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|函数不正确。|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|系统找不到指定的文件。|  
@@ -2308,7 +2308,7 @@ ms.locfileid: "71284426"
 ##  <a name="msgSuccess"></a> 成功消息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 成功消息的符号名称以 **DTS_S_** 开头。  
   
-|十六进制代码|十进制代码|符号名称|描述|  
+|十六进制代码|十进制代码|符号名称|说明|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x40003|262147|DTS_S_NULLDATA|该值为 NULL。|  
 |0x40005|262149|DTS_S_TRUNCATED|该字符串值被截断。 缓冲区接收到的字符串对该列而言太长，因而已被缓冲区截断。|  
@@ -2317,7 +2317,7 @@ ms.locfileid: "71284426"
 ##  <a name="msgPipeline"></a> 数据流组件错误消息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误消息的符号名称以 **DTSBC_E_** 开头，其中“BC”指的是大多数 Microsoft 数据流组件都从中派生的本机基类。  
   
-|十六进制代码|十进制代码|符号名称|描述|  
+|十六进制代码|十进制代码|符号名称|说明|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|输出和错误输出的总数 %1!lu! 不正确。 该值必须正好等于 %2!lu!。|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|无法检索索引为 %1!lu! 的输出。|  

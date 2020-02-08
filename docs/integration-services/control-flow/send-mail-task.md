@@ -21,10 +21,10 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293928"
 ---
 # <a name="send-mail-task"></a>发送邮件任务
@@ -64,7 +64,7 @@ ms.locfileid: "71293928"
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>发送邮件任务可用的自定义日志记录消息  
  下表列出了发送邮件任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|描述|  
+|日志项|说明|  
 |---------------|-----------------|  
 |**SendMailTaskBegin**|指示任务开始发送电子邮件。|  
 |**SendMailTaskEnd**|指示任务已发送完电子邮件。|  
@@ -97,7 +97,7 @@ ms.locfileid: "71293928"
   
  **注意** 任务名称在包中必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入发送邮件任务的说明。  
   
 ## <a name="send-mail-task-editor-mail-page"></a>发送邮件任务编辑器（“邮件”页）
@@ -115,7 +115,7 @@ ms.locfileid: "71293928"
  **From**  
  指定发件人的电子邮件地址。  
   
- **若要**  
+ **收件人**  
  提供收件人的电子邮件地址，用分号分隔。  
   
  **抄送**  
@@ -130,7 +130,7 @@ ms.locfileid: "71293928"
  **MessageSourceType**  
  选择消息的源类型。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为邮件正文。 选择此值将显示动态选项 **MessageSource**。|  
 |**文件连接**|将源设置为包含邮件正文的文件。 选择此值将显示动态选项 **MessageSource**。|  

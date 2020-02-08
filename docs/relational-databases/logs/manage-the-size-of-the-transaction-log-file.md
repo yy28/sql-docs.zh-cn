@@ -15,15 +15,15 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084021"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主题介绍如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小、收缩事务日志、添加或扩大事务日志文件、优化 tempdb 事务日志增长率以及控制事务日志文件的增长。  
+本主题介绍如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小、收缩事务日志、添加或扩大事务日志文件、优化 tempdb 事务日志增长率以及控制事务日志文件的增长  。  
 
 ##  <a name="MonitorSpaceUse"></a>监视日志空间使用情况  
 使用 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) 监视日志空间使用情况。 此 DMV 返回有关当前使用的日志空间量信息，并指示何时需要截断事务日志。 
@@ -39,7 +39,7 @@ ms.locfileid: "68084021"
 > [!NOTE]
 > 能够延长 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 活动时间的因素（如长时间运行的事务）可以限制甚至阻止日志收缩。 有关详细信息，请参阅[可能延迟日志截断的因素](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)。  
   
-收缩日志文件可删除一个或多个不包含逻辑日志任何部分的 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)（即不活动的 VLF）。 收缩事务日志文件时，将从日志文件末端删除不活动的 VLF，以将日志减小到接近目标大小。 
+收缩日志文件可删除一个或多个不包含逻辑日志任何部分的 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)（即不活动的 VLF）  。 收缩事务日志文件时，将从日志文件末端删除不活动的 VLF，以将日志减小到接近目标大小。 
 
 > [!IMPORTANT]
 > 收缩事务日志前，请记住[可能延迟日志截断的因素](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)。 如果在日志收缩后还需要存储空间，则会再次增加事务日志，导致在增加日志操作期间产生性能开销。 有关详细信息，请参阅本主题中的[建议](#Recommendations)。
@@ -74,7 +74,7 @@ ms.locfileid: "68084021"
  您可以通过在启动或重新启动服务器实例之后增加 **tempdb** 事务日志的大小来避免此开销。 有关详细信息，请参阅 [tempdb Database](../../relational-databases/databases/tempdb-database.md)。  
   
 ##  <a name="ControlGrowth"></a> 控制事务日志文件的增长  
- 使用 [ALTER DATABASE (Transact-SQL) 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)语句管理事务日志文件的增长。 请注意以下事项：  
+ 使用 [ALTER DATABASE (Transact-SQL) 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)语句管理事务日志文件的增长。 注意以下事项：  
   
 -   要更改当前文件大小（以 KB、MB、GB 和 TB 为单位），请使用 `SIZE` 选项。  
 -   要更改增量，请使用 `FILEGROWTH` 选项。 如果值为 0，则表明自动增长已设置为关闭，且不允许增加空间。  
@@ -90,7 +90,7 @@ ms.locfileid: "68084021"
     -  最大型索引维护操作所需的时间。
     -  在数据库中执行最大批操作所需的时间。
 
--   使用 `FILEGROWTH` 选项设置数据和日志文件的 autogrow 时，建议首选使用 size 而不是使用 percentage 进行设置，以便更好地控制增长比，因为 percentage 表示的是日益增长量。
+-   使用 `FILEGROWTH` 选项设置数据和日志文件的 autogrow 时，建议首选使用 size 而不是使用 percentage 进行设置，以便更好地控制增长比，因为 percentage 表示的是日益增长量    。
     -  请记住，事务日志不能利用[即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)，因此延长的日志增长时间尤其重要。 
     -  最佳做法是，针对日志事务，请勿将 `FILEGROWTH` 选项值设置为超过 1,024 MB。 `FILEGROWTH` 选项的默认值为：  
   
@@ -108,9 +108,9 @@ ms.locfileid: "68084021"
 
 -   在数据库中有多个日志文件不会以任何方式提升性能，因为事务日志文件不会像同一文件组中的数据文件一样使用[比例填充](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill)。  
 
--   日志文件可以设为自动收缩。 但是，不建议这样做，auto_shrink 数据库属性默认设为 FALSE。 如果 auto_shrink 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小。 
+-   日志文件可以设为自动收缩。 但是，不建议这样做，auto_shrink 数据库属性默认设为 FALSE   。 如果 auto_shrink 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小  。 
     -   文件将收缩至未使用空间占文件 25% 的大小，或者收缩至文件的原始大小，以两者中较大者为准。 
-    -   有关更改 auto_shrink 属性设置的详细信息，请参阅[查看或更改数据库的属性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)和 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 
+    -   有关更改 auto_shrink 属性设置的详细信息，请参阅[查看或更改数据库的属性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)和 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)  。 
   
 ## <a name="see-also"></a>另请参阅  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   

@@ -11,10 +11,10 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4bf9a4a922c8aeed7ca344b423193e8b01c19037
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296147"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>第 1-3 课：添加和配置 OLE DB 连接管理器
@@ -37,7 +37,7 @@ ms.locfileid: "71296147"
   
 3. 在“服务器名称”  中，输入 **localhost**。  
   
-    将 localhost 指定为服务器名称时，连接管理器将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例。 若要使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的远程实例，请将 localhost 替换为要连接到的服务器的名称。  
+    将 localhost 指定为服务器名称时，连接管理器将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例。 若要使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的远程实例，请将 localhost 替换为要连接到的服务器的名称。  
   
 4. 在“登录到服务器”  组中，确认选择了“使用 Windows 身份验证”  。  
   

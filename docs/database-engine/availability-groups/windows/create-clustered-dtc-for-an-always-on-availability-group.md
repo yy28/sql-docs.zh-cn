@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72586767"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>为 AlwaysOn 可用性组创建群集 DTC 资源
@@ -41,7 +41,7 @@ ms.locfileid: "72586767"
 - 群集详细信息（现有）：
   - 名称：`Cluster`
   - 网络名称：`Cluster Network 1`
-  - 节点：`SQLNODE1, SQLNODE2`
+  - 多个节点：`SQLNODE1, SQLNODE2`
   - 共享存储：`Cluster Disk 3`（归 `SQLNODE1` 所有）
 - 群集详细信息（待创建）：
   - 网络名称资源：`DTCnet1`
@@ -281,7 +281,7 @@ GO
 ```
 
 ## <a name="7---create-availability-group"></a>7. 创建可用性组
-[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必须使用 **CREATE AVAILABILITY GROUP** 命令和 **WITH DTC_SUPPORT = PER_DB** 子句创建。  当前不可更改现有可用性组。  新建可用性组向导不允许为新的可用性组启用 DTC 支持。  以下脚本将创建新的可用性组并加入辅助数据库。  在 SSMS 中以 `SQLNODE1` SQLCMD 模式 **对**运行以下 T-SQL 脚本。
+[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必须使用 **CREATE AVAILABILITY GROUP** 命令和 **WITH DTC_SUPPORT = PER_DB** 子句创建。  当前不可更改现有可用性组。  新建可用性组向导不允许为新的可用性组启用 DTC 支持。  以下脚本将创建新的可用性组并加入辅助数据库。  在 SSMS 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
 
 ```sql  
 /*******************************************************************

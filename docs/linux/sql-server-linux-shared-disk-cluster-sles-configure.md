@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032221"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 SLES 共享磁盘群集
@@ -22,7 +22,7 @@ ms.locfileid: "68032221"
 
 本指南介绍如何在 SUSE Linux Enterprise Server (SLES) 上为 SQL Server 创建双节点共享磁盘群集。 此群集层基于在 [Pacemaker](https://clusterlabs.org/) 之上生成的 SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability)。 
 
-有关群集配置、资源代理选项、管理、最佳做法和建议的详细信息，请参阅 [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
+有关群集配置、资源代理选项、管理、最佳实践和建议的详细信息，请参阅 [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)（SUSE Linux Enterprise 高可用性扩展 12 SP2）。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -35,7 +35,7 @@ ms.locfileid: "68032221"
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>在每个群集节点上安装和配置 SQL Server
 
 1. 在两个节点上安装并设置 SQL Server。 有关详细说明，请参阅[安装 Linux 上的 SQL Server](sql-server-linux-setup.md)。
-2. 出于配置目的，请将一个节点指定为主节点，另一个指定为辅助节点。 本指南使用这些术语。 
+2. 出于配置目的，请将一个节点指定为主节点，而将另一个指定为辅助节点。 本指南使用这些术语。 
 3. 在辅助节点上，停止并禁用 SQL Server。 以下示例会停止并禁用 SQL Server：
 
     ```bash
@@ -249,7 +249,7 @@ Full list of resources:
 
 若要管理群集资源，请参阅以下 SUSE 主题：[管理群集资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
-### <a name="manual-failover"></a>手动故障转移 (manual failover)
+### <a name="manual-failover"></a>手动故障转移
 
 虽然已将资源配置为在出现硬件或软件故障时自动故障转移（或迁移）到其他节点，但还可以使用 Pacemaker GUI 或命令行将资源手动移到群集中的其他节点。 
 

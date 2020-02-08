@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ddaca1490782c8fd3a88b941fbabe6af48531726
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727762"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用动态管理视图 (DMV) 监视 SQL Server 机器学习服务
@@ -41,7 +41,7 @@ ms.locfileid: "73727762"
 
 监视 SQL Server 中的机器学习工作负荷时，可以使用以下动态管理视图。 若要查询 DMV，需要对实例拥有 `VIEW SERVER STATE` 权限。
 
-| 动态管理视图 | 类型 | 描述 |
+| 动态管理视图 | 类型 | 说明 |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 执行 | 为运行外部脚本的每个活动工作线程帐户都返回一行。 |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 执行 | 为每种类型的外部脚本请求返回一行。 |
@@ -79,7 +79,7 @@ WHERE name = 'external scripts enabled';
 
 查询返回以下列：
 
-| “列” | 描述 |
+| 列 | 说明 |
 |--------|-------------|
 | IsMLServicesInstalled | 如果为实例安装了 SQL Server 机器学习服务，则返回 1。 否则，返回 0。 |
 | ExternalScriptsEnabled | 如果为实例启用了外部脚本，则返回 1。 否则，返回 0。 |
@@ -107,7 +107,7 @@ ON s.session_id = r.session_id;
 
 查询返回以下列：
 
-| “列” | 描述 |
+| 列 | 说明 |
 |--------|-------------|
 | session_id | 标识与每个活动主连接关联的会话。 |
 | blocking_session_id | 正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。 |
@@ -122,7 +122,7 @@ ON s.session_id = r.session_id;
 | reads | 此请求执行的读取数。 |
 | logical_reads | 此请求已经执行的逻辑读取数。 |
 | Writes | 此请求执行的写入数。 |
-| language | 表示支持的脚本语言的关键字。 |
+| 语言 | 表示支持的脚本语言的关键字。 |
 | degree_of_parallelism | 数字，指示已创建的并行进程数。 此值可能与请求的并行进程数不同。 |
 | external_user_name | 在其下执行脚本的 Windows 工作线程帐户。 |
 
@@ -143,9 +143,9 @@ ORDER BY language, counter_name;
 
 查询返回以下列：
 
-| “列” | 描述 |
+| 列 | 说明 |
 |--------|-------------|
-| language | 已注册的外部脚本语言的名称。 |
+| 语言 | 已注册的外部脚本语言的名称。 |
 | counter_name | 已注册的外部脚本函数的名称。 |
 | counter_value | 已在服务器上调用已注册外部脚本函数的实例的总数。 此值是累计的（从在实例上安装该功能的时间开始），且不能重置。 |
 
@@ -165,7 +165,7 @@ WHERE object_name LIKE '%External Scripts%'
 
 **sys.dm_os_performance_counters** 输出外部脚本的以下性能计数器：
 
-| 计数器 | 描述 |
+| 计数器 | 说明 |
 |---------|-------------|
 | 执行总次数 | 由本地或远程调用启动的外部进程数。 |
 | 并行执行 | 脚本包含 _\@parallel_ 规范的次数，以及 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 能够生成并使用并行查询计划的次数。 |
@@ -175,7 +175,7 @@ WHERE object_name LIKE '%External Scripts%'
 | 总执行时间 (ms) | 从开始调用到完成调用所消耗的时间。 |
 | 执行错误 | 脚本报告错误的次数。 此计数不包括 R 或 Python 错误。 |
 
-## <a name="memory-usage"></a>内存使用量
+## <a name="memory-usage"></a>内存使用率
 
 查看有关 OS、SQL Server 和外部池所使用的内存的信息。
 
@@ -193,7 +193,7 @@ FROM sys.dm_os_sys_info;
 
 查询返回以下列：
 
-| “列” | 描述 |
+| 列 | 说明 |
 |--------|-------------|
 | physical_memory_kb | 计算机上的物理内存总量。 |
 | committed_kb | 内存管理器中已提交的内存 (KB)。 不包括内存管理器中的保留内存。 |
@@ -222,9 +222,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 查询返回以下列：
 
-| “列” | 描述 |
+| 列 | 说明 |
 |--------|-------------|
-| NAME | 外部资源池或 SQL Server 的名称。 |
+| name | 外部资源池或 SQL Server 的名称。 |
 | max_memory_percent | SQL Server 或外部资源池可使用的最大内存。 |
 
 ## <a name="resource-pools"></a>资源池
@@ -247,7 +247,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 查询返回以下列：
 
-| “列” | 描述 |
+| 列 | 说明 |
 |--------|-------------|
 | pool_name | 资源池的名称。 SQL Server 资源池以 `SQL Server` 为前缀，外部资源池以 `External Pool` 为前缀。
 | total_cpu_usage_hours | 自重置 Resource Govenor 统计信息以来的累计 CPU 使用量（毫秒）。 |
@@ -276,12 +276,12 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 返回的列包括：
 
-| “列” | 描述 |
+| 列 | 说明 |
 |--------|-------------|
-| “包” | 已安装包的名称。 |
+| 程序包 | 已安装包的名称。 |
 | 版本 | 包的版本。 |
 | 依赖的对象 | 列出已安装的包所依赖的包。 |
-| 许可证 | 已安装包的许可证。 |
+| 许可 | 已安装包的许可证。 |
 | LibPath | 可在其中找到包的目录。 |
 
 ### <a name="installed-packages-for-python"></a>已安装的 Python 包
@@ -302,9 +302,9 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 返回的列包括：
 
-| “列” | 描述 |
+| 列 | 说明 |
 |--------|-------------|
-| “包” | 已安装包的名称。 |
+| 程序包 | 已安装包的名称。 |
 | 版本 | 包的版本。 |
 | 位置 | 可在其中找到包的目录。 |
 

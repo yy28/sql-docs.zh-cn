@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896956"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>管理 SQL Server Integration Services Scale Out 的证书
@@ -29,13 +29,13 @@ ms.locfileid: "67896956"
 
 大多数情况下，Scale Out Master 证书在安装 Scale Out Master 的过程中配置。
 
-在 SQL Server 安装向导的“Integration Services Scale Out 配置 - 主节点”页中，可以选择创建新的自签名 SSL 证书或使用现有 SSL 证书。
+在 SQL Server 安装向导的“Integration Services Scale Out 配置 - 主节点”页中，可以选择创建新的自签名 SSL 证书或使用现有 SSL 证书  。
 
 ![主节点配置](media/master-config.PNG)
 
 **新证书**。 如果对证书没有特殊要求，可选择创建新的自签名 SSL 证书。 可在证书中进一步指定 CN。 请确保 CN 中包含 Scale Out Worker 稍后使用的主终结点的主机名。 默认情况下，计算机名和主节点的 IP 地址也包含在内。 
 
-**现有证书**。 如果选择使用现有证书，请单击“浏览”，从本地计算机的根证书存储中选择 SSL 证书。
+**现有证书**。 如果选择使用现有证书，请单击“浏览”，从本地计算机的根证书存储中选择 SSL 证书   。
 
 ### <a name="change-the-scale-out-master-certificate"></a>更改 Scale Out Master 证书
 
@@ -88,9 +88,9 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5.将 Scale Out Worker 重新连接到 Scale Out Master
 对于每个 Scale Out Worker，均使用 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 删除并重新添加 Worker，或执行以下操作：
 
-A.  将客户端 SSL 证书安装到辅助节点上本地计算机的根存储。
+a.  将客户端 SSL 证书安装到辅助节点上本地计算机的根存储。
 
-B.  更新 Scale Out Worker 服务配置文件。
+b.  更新 Scale Out Worker 服务配置文件。
 
 在辅助节点上更新 Scale Out Worker 服务配置文件 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`。 将 **MasterHttpsCertThumbprint** 更新为新 SSL 证书的指纹。
 
@@ -142,6 +142,6 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s WorkerMachine -a SSISScaleOutWorker
 #### <a name="6-restart-the-scale-out-worker-service"></a>6.重启 Scale Out Worker 服务
 
 ## <a name="next-steps"></a>后续步骤
-有关详细信息，请参阅下文：
+有关详细信息，请参阅以下文章：
 -   [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
 -   [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

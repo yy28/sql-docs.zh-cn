@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077443"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 创建和配置可用性组
@@ -324,15 +324,15 @@ sudo systemctl restart mssql-server
 
 2.  在“简介”对话框上单击“下一步”  。
 
-3.  在“指定可用性组选项”对话框中，输入可用性组的名称，并在下拉列表中选择“外部”或“无”群集类型。 在部署 Pacemaker 时应使用“外部”。 “无”适用于专用方案，如读取横向扩展。选择数据库级别运行状况检测选项是可选的。 有关此选项的详细信息，请参阅[可用性组数据库级别运行状况检测故障转移选项](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 单击“下一步”  。
+3.  在“指定可用性组选项”对话框中，输入可用性组的名称，并在下拉列表中选择“外部”或“无”群集类型。 在部署 Pacemaker 时应使用“外部”。 “无”适用于专用方案，如读取横向扩展。选择数据库级别运行状况检测选项是可选的。 有关此选项的详细信息，请参阅[可用性组数据库级别运行状况检测故障转移选项](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 单击“下一步”。 
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  在“选择数据库”对话框中，选择将参与 AG 的数据库。 每个数据库在添加到 AG 之前必须具有完整备份。 单击“下一步”  。
+4.  在“选择数据库”对话框中，选择将参与 AG 的数据库。 每个数据库在添加到 AG 之前必须具有完整备份。 单击“下一步”。 
 
 5.  在“指定副本”对话框中，单击“添加副本”  。
 
-6.  在“连接到服务器”对话框中，输入将作为次要副本的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Linux 实例的名称以及要连接的凭据。 单击 **“连接”** 。
+6.  在“连接到服务器”对话框中，输入将作为次要副本的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Linux 实例的名称以及要连接的凭据。 单击“连接”  。
 
 7.  对包含仅配置副本或其他次要副本的实例重复前两个步骤。
 
@@ -354,17 +354,17 @@ sudo systemctl restart mssql-server
 
 11. 如果为可读方案创建了侦听器，则 SSMS 17.3 或更高版本允许在向导中创建只读路由。 也可以稍后通过 SSMS 或 Transact-SQL 添加它。 立即添加只读路由：
 
-    A.  选择“只读路由”选项卡。
+    a.  选择“只读路由”选项卡。
 
-    B.  输入只读副本的 URL。 这些 URL 类似于终结点，只是它们使用的是实例的端口，而不是终结点。
+    b.  输入只读副本的 URL。 这些 URL 类似于终结点，只是它们使用的是实例的端口，而不是终结点。
 
     c.  选择每个 URL，并从底部选择可读副本。 要进行多选，请按住 Shift 或单击并拖动。
 
-12. 单击“下一步”  。
+12. 单击“下一步”。 
 
-13. 选择次要副本的初始化方法。 默认情况下是使用[自动种子设定](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，这需要在所有参与 AG 的服务器上使用相同的路径。 也可以让向导进行备份、复制和还原（第二个选项）；如果已在副本上手动备份、复制和还原数据库，请将其连接（第三个选项）；或稍后添加数据库（最后一个选项）。 与证书一样，如果手动备份和复制证书，则需要在其他副本上设置备份文件的权限。 单击“下一步”  。
+13. 选择次要副本的初始化方法。 默认情况下是使用[自动种子设定](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，这需要在所有参与 AG 的服务器上使用相同的路径。 也可以让向导进行备份、复制和还原（第二个选项）；如果已在副本上手动备份、复制和还原数据库，请将其连接（第三个选项）；或稍后添加数据库（最后一个选项）。 与证书一样，如果手动备份和复制证书，则需要在其他副本上设置备份文件的权限。 单击“下一步”。 
 
-14. 在“验证”对话框中，如果所以内容都没有成功返回，请进行调查。 某些警告是可接受的而不是致命的，例如，不创建侦听器。 单击“下一步”  。
+14. 在“验证”对话框中，如果所以内容都没有成功返回，请进行调查。 某些警告是可接受的而不是致命的，例如，不创建侦听器。 单击“下一步”。 
 
 15. 在“摘要”对话框中，单击“完成”  。 现在将开始创建 AG。
 
@@ -512,7 +512,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-    位置
+    其中
     - AGName 是可用性组的名称  。
     - DBName 是将与可用性组一起使用的数据库的名称  。 它也可以是以逗号分隔的名称列表。
     - PortOfEndpoint 是所创建终结点使用的端口号  。
@@ -569,7 +569,7 @@ Linux 上基于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Pa
     
 4.  按住 Ctrl，再按 X，然后按 C 退出并保存文件。
 
-5.  Execute 
+5.  执行 
     ```bash
     sudo chmod 400 /var/opt/mssql/secrets/passwd
     ```
@@ -676,7 +676,7 @@ Linux 上基于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Pa
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，你了解了如何为 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 创建和配置可用性组。 已了解如何：
+在本教程中，你了解了如何为 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 创建和配置可用性组。 你已了解如何执行以下操作：
 > [!div class="checklist"]
 > * 启用可用性组。
 > * 创建 AG 终结点和证书。

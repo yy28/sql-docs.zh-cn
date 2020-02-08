@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 092760fdd99a6840e77278fce96e2d321ea4edc9
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553244"
 ---
 # <a name="oracle-connection-manager"></a>Oracle Connection Manager
@@ -40,7 +40,7 @@ Oracle Connection Manager 配置更改在运行时由 Integration Services 解�
 
 输入 Oracle 连接的名称。 默认名称为“Oracle Connection Manager”。 
 
-**Description** 
+**说明** 
 
 输入连接的说明。 此为可选输入。
 
@@ -78,9 +78,9 @@ Oracle Connection Manager 中有以下自定义连接管理器属性：
 
 - **EnableDetailedTracing**：未使用。
 
-- **OracleHome**：指定连接器要使用的 32 位 Oracle 主目录名称或文件夹。 （可选）
+- **OracleHome**：指定连接器要使用的 32 位 Oracle 主目录名称或文件夹。 (可选)
 
-- **OracleHome64**：指定在 64 位模式下运行时，连接器要使用的 64 位 Oracle 主目录名称或文件夹。 （可选）
+- **OracleHome64**：指定在 64 位模式下运行时，连接器要使用的 64 位 Oracle 主目录名称或文件夹。 (可选)
 
 自定义属性未在 Oracle Connection Manager 编辑器中列出。 若要设置 OracleHome  和 OracleHome64  属性，请执行以下操作：
 

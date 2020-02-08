@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74119188"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "74119188"
 
 返回字符表达式中最左侧的字符的 ASCII 代码值。
   
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ char 或 varchar 类型的[表达式](../../t-sql/language-elements/expressions-
 ## <a name="return-types"></a>返回类型
  **int**  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 ASCII 表示美国信息交换标准码      。 它是现代计算机的一种字符编码标准。 要获取 ASCII 字符列表，请参阅 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的“可打印字符”部分  。
 
 ASCII 是一个 7 位字符集。 扩展的 ASCII（或称 High ASCII）是不由 `ASCII` 函数处理的 8 位字符集。 

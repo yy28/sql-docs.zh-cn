@@ -9,10 +9,10 @@ ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574831"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>向 URL 添加超链接（报表生成器和 SSRS）
@@ -26,7 +26,7 @@ ms.locfileid: "65574831"
  
  *  并且你可以在相同报表中 **向特定位置添加书签** 。 
   
-尝试使用[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)中的示例数据添加超链接。  
+尝试使用以下教程中的示例数据添加超链接：[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  绑定到数据集字段的链接容易被篡改。 有关详细信息，请参阅 [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)。  
@@ -73,9 +73,9 @@ ms.locfileid: "65574831"
   
 4.  在 **“选择 URL”** 中，键入或选择某一 URL 或者计算结果为某一 URL 的表达式，或者单击下拉箭头并单击包含 URL 的字段的名称。 
 
-    对于发布到配置为本机模式的报表服务器的项，请使用完整路径或相对路径。 例如， `https://<servername>/images/image1.jpg`。 
+    对于发布到配置为本机模式的报表服务器的项，请使用完整路径或相对路径。 例如，`https://<servername>/images/image1.jpg` 。 
     
-    对于发布到配置为 SharePoint 集成模式的报表服务器的项，请使用完全限定的 URL。 例如， `https://<SharePointservername>/<site>/Documents/images/image1.jpg`。
+    对于发布到配置为 SharePoint 集成模式的报表服务器的项，请使用完全限定的 URL。 例如，`https://<SharePointservername>/<site>/Documents/images/image1.jpg` 。
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

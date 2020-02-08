@@ -12,10 +12,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b5b5246dabbe205554b45cee91be93c4485a60f6
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594125"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>使用 PowerShell 轮换 Always Encrypted 密钥
@@ -37,14 +37,14 @@ ms.locfileid: "73594125"
 
 | 任务 | 项目 | 访问纯文本密钥/密钥存储| 访问数据库
 |:---|:---|:---|:---
-|步骤 1. 在密钥存储中创建新的列主密钥。<br><br>**注意：** SqlServer PowerShell 模块不支持这一步。 若要从命令行完成此任务，需要使用特定于你的密钥存储的工具。 | [创建并存储 Always Encrypted 的列主密钥](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 是 | 否
+|步骤 1。 在密钥存储中创建新的列主密钥。<br><br>**注意：** SqlServer PowerShell 模块不支持这一步。 若要从命令行完成此任务，需要使用特定于你的密钥存储的工具。 | [创建并存储 Always Encrypted 的列主密钥](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 是 | 否
 |步骤 2. 启动 PowerShell 环境并导入 SqlServer 模块 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
 |步骤 3. 连接到服务器和数据库。 | [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 是
 |步骤 4. 创建包含新的列主密钥的位置信息的 SqlColumnMasterKeySettings 对象。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 若要创建该对象，需要使用特定于你的密钥存储的 cmdlet。 |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)<br> | 否 | 否
-|步骤 5. 在数据库中创建有关新的列主密钥的元数据。 | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注意：** 实际上，该 cmdlet 发布 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 语句来创建密钥元数据。 | 否 | 是
+|步骤 5。 在数据库中创建有关新的列主密钥的元数据。 | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注意：** 实际上，该 cmdlet 发布 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 语句来创建密钥元数据。 | 否 | 是
 |步骤 6. 如果当前的列主密钥或新的列主密钥存储在 Azure 密钥保管库中，请对 Azure 进行身份验证 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 是 | 否
 |步骤 7. 开始进行轮换，方法是使用新的列主密钥加密当前使用旧列主密钥保护的每个列加密密钥。 该步骤完成之后，每个受影响的列加密密钥（要轮换的与旧列主密钥关联的密钥）均使用旧和新的列主密钥进行加密，并在数据库元数据中有两个加密的值。| [Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation) | 是 | 是
-|步骤 8. 与查询数据库中的加密列（使用旧的列主密钥保护）的所有应用程序的管理员协调，以便他们可以确保应用程序可以访问新的列主密钥。| [创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | 是 | 否
+|步骤 8。 与查询数据库中的加密列（使用旧的列主密钥保护）的所有应用程序的管理员协调，以便他们可以确保应用程序可以访问新的列主密钥。| [创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | 是 | 否
 |步骤 9. 完成轮换<br><br>**注意：** 执行此步骤之前，请确保查询使用旧的列主密钥保护的加密列的所有应用程序已配置为使用新的列主密钥。 如果过早地执行此步骤，一些应用程序可能无法对数据进行解密。 通过从数据库中删除使用旧的列主密钥创建的加密值来完成轮换。 该操作将删除旧的列主密钥和它所保护的列加密密钥之间的关联。 |[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)| 否 | 是
 |步骤 10. 从旧的列主密钥中删除元数据。 |[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)| 否 | 是
 
@@ -101,11 +101,11 @@ DBA 将检索要轮换的列主密钥的元数据，以及与当前列主密钥�
 
 | 任务 | 项目 | 访问纯文本密钥/密钥存储| 访问数据库
 |:---|:---|:---|:---
-|步骤 1. 启动 PowerShell 环境并导入 SqlServer 模块。 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | None
+|步骤 1。 启动 PowerShell 环境并导入 SqlServer 模块。 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 无
 |步骤 2. 连接到服务器和数据库。 | [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 是
 |步骤 3. 检索旧的列主密钥的元数据。| [Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey) | 否 | 是
 |步骤 4. 检索旧的列主密钥保护的列加密密钥的元数据，包括其加密的值。 | [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey) | 否 | 是
-|步骤 5. 共享列主密钥的位置（提供程序名称和列主密钥的密钥路径）和相应的使用旧的列主密钥保护的列加密密钥的加密值。| 请参阅下面的示例。 | 否 | 否
+|步骤 5。 共享列主密钥的位置（提供程序名称和列主密钥的密钥路径）和相应的使用旧的列主密钥保护的列加密密钥的加密值。| 请参阅下面的示例。 | 否 | 否
 
 ### <a name="part-2-security-administrator"></a>第 2 部分：安全管理员
 
@@ -113,14 +113,14 @@ DBA 将检索要轮换的列主密钥的元数据，以及与当前列主密钥�
 
 | 任务 | 项目 | 访问纯文本密钥/密钥存储| 访问数据库
 |:---|:---|:---|:---
-|步骤 1. 从 DBA 处获取旧的列主密钥的位置和相应的使用旧的列主密钥保护的列加密密钥的加密值。|空值<br>请参阅下面的示例。|否| 否
+|步骤 1。 从 DBA 处获取旧的列主密钥的位置和相应的使用旧的列主密钥保护的列加密密钥的加密值。|空值<br>请参阅下面的示例。|否| 否
 |步骤 2. 在密钥存储中创建新的列主密钥。<br><br>**注意：** SqlServer 模块不支持这一步。 若要从命令行完成此任务，你需要使用特定于密钥存储类型的工具。|[创建并存储 Always Encrypted 的列主密钥](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 是 | 否
 |步骤 3. 启动 PowerShell 环境并导入 SqlServer 模块。 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
 |步骤 4. 创建包含 **旧的** 列主密钥的位置信息的 SqlColumnMasterKeySettings 对象。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 |New-SqlColumnMasterKeySettings| 否 | 否
-|步骤 5. 创建包含 **新的** 列主密钥的位置信息的 SqlColumnMasterKeySettings 对象。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 若要创建该对象，需要使用特定于你的密钥存储的 cmdlet。 | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| 否 | 否
+|步骤 5。 创建包含 **新的** 列主密钥的位置信息的 SqlColumnMasterKeySettings 对象。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 若要创建该对象，需要使用特定于你的密钥存储的 cmdlet。 | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| 否 | 否
 |步骤 6. 如果旧的（当前）列主密钥或新的列主密钥存储在 Azure 密钥保管库中，请对 Azure 进行身份验证。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 是 | 否
 |步骤 7. 使用新的列主密钥重新加密当前使用旧列主密钥保护的每个列加密密钥的值。 | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**注意：** 调用此 cmdlet 时，将传递旧的和新的列主密钥的 SqlColumnMasterKeySettings 对象，以及要重新加密的列加密密钥的值。|是|否
-|步骤 8. 与 DBA 共享新的列主密钥的位置（提供程序名称和列主密钥的密钥路径）以及列加密密钥的新加密值组。| 请参阅下面的示例。 | 否 | 否
+|步骤 8。 与 DBA 共享新的列主密钥的位置（提供程序名称和列主密钥的密钥路径）以及列加密密钥的新加密值组。| 请参阅下面的示例。 | 否 | 否
 
 > [!NOTE]
 > 强烈建议你不要在轮换后永久地删除旧的列主密钥。 相反，应该在其当前密钥存储中保留旧的列主密钥，或将其存档在另一个安全位置。 如果在配置新的列主密钥之前从备份文件中将数据库还原到某个时间点，则需要此旧密钥来访问数据。 
@@ -131,14 +131,14 @@ DBA 创建新的列主密钥的元数据，并更新受影响的列加密密钥�
 
 | 任务 | 项目 | 访问纯文本密钥/密钥存储| 访问数据库
 |:---|:---|:---|:---
-|步骤 1. 从安全管理员处获取新的列主密钥的位置和相应的使用旧的列主密钥保护的列加密密钥的新的加密值集。| 请参阅下面的示例。 | 否 | 否
+|步骤 1。 从安全管理员处获取新的列主密钥的位置和相应的使用旧的列主密钥保护的列加密密钥的新的加密值集。| 请参阅下面的示例。 | 否 | 否
 |步骤 2. 启动 PowerShell 环境并导入 SqlServer 模块。 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
 |步骤 3. 连接到服务器和数据库。 | [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 是
 |步骤 4. 创建包含新的列主密钥的位置信息的 SqlColumnMasterKeySettings 对象。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 |New-SqlColumnMasterKeySettings| 否| 否
-|步骤 5. 在数据库中创建有关新的列主密钥的元数据。|[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注意：** 实际上，该 cmdlet 发布 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 语句来创建密钥元数据。 | 否 | 是
+|步骤 5。 在数据库中创建有关新的列主密钥的元数据。|[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注意：** 实际上，该 cmdlet 发布 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 语句来创建密钥元数据。 | 否 | 是
 |步骤 6. 检索旧的列主密钥保护的列加密密钥的元数据。| [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)| 否 | 是
 |步骤 7. 将新的加密值（使用新的列主密钥生成）添加到每个受影响的列加密密钥的元数据。|[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)|否|是
-|步骤 8. 与查询数据库中的加密列（使用旧的列主密钥保护）的所有应用程序的管理员协调，以便他们可以确保应用程序可以访问新的列主密钥。|[创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 否|否
+|步骤 8。 与查询数据库中的加密列（使用旧的列主密钥保护）的所有应用程序的管理员协调，以便他们可以确保应用程序可以访问新的列主密钥。|[创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 否|否
 |步骤 9. 通过从数据库中删除与旧的列主密钥关联的加密值来完成轮换。<br><br>**注意：** 执行此步骤之前，请确保查询使用旧的列主密钥保护的加密列的所有应用程序已配置为使用新的列主密钥。 如果过早地执行此步骤，一些应用程序可能无法对数据进行解密。<br><br>该步骤将删除旧的列主密钥和它所保护的列加密密钥之间的关联。 | [Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)<br><br>或者，可以使用 [Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue) | 否|是
 |步骤 10. 从数据库中删除旧的列主密钥的元数据| [Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)| 否|是
 
@@ -292,14 +292,14 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 
 | 任务 | 项目 | 访问纯文本密钥/密钥存储| 访问数据库
 |:---|:---|:---|:---
-|步骤 1. 启动 PowerShell 环境并导入 SqlServer 模块。 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
+|步骤 1。 启动 PowerShell 环境并导入 SqlServer 模块。 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
 |步骤 2. 连接到服务器和数据库。 | [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 是
 |步骤 3. 如果列主密钥（保护要轮换的列加密密钥）存储在 Azure 密钥保管库中，请对 Azure 进行身份验证。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 是 | 否
 |步骤 4. 生成新的列加密密钥，使用列主密钥对其加密，并在数据库中创建列加密密钥元数据。  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**注意：** 使用内部生成并加密列加密密钥的 cmdlet 的变体。<br>实际上，该 cmdlet 发布 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 语句来创建密钥元数据。 | 是 | 是
-|步骤 5. 查找使用旧的列加密密钥加密的所有列。 | [SQL Server 管理对象 (SMO) 编程指南](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | 否 | 是
+|步骤 5。 查找使用旧的列加密密钥加密的所有列。 | [SQL Server 管理对象 (SMO) 编程指南](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | 否 | 是
 |步骤 6. 为每个受影响的列创建 *SqlColumnEncryptionSettings* 对象。  SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 它用于指定列的目标加密方案。 在此情况下，该对象应指定使用新的列加密密钥加密受影响的列。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | 否 | 否
 |步骤 7. 使用新的列加密密钥重新加密步骤 5 中标识的列。 | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注意：** 此步骤可能需要较长时间。 应用程序无法通过整个操作或部分操作访问表，具体视你选择的方法（联机与脱机）而定。 | 是 | 是
-|步骤 8. 删除旧的列加密密钥的元数据。 | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | 否 | 是
+|步骤 8。 删除旧的列加密密钥的元数据。 | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | 否 | 是
 
 ### <a name="example---rotating-a-column-encryption-key"></a>示例 - 轮换列加密密钥
 
@@ -344,12 +344,12 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -U
 Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
 ```
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 - [通过 SQL Server Management Studio 查询使用 Always Encrypted 的列](always-encrypted-query-columns-ssms.md)
 - [使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)
   
 ## <a name="see-also"></a>另请参阅
-- [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 密钥管理概述](overview-of-key-management-for-always-encrypted.md) 
 - [使用 PowerShell 配置“始终加密”功能](configure-always-encrypted-using-powershell.md)
 - [使用 SQL Server Management Studio 轮换 Always Encrypted 密钥](rotate-always-encrypted-keys-using-ssms.md)

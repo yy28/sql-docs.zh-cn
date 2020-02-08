@@ -14,27 +14,27 @@ ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6485a99d759d4c4b09ec2b78946f7e1aecd46204
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986975"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server Broker TO Statistics 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  SQLServer:Broker TO Statistics 性能对象报告有关 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话框请求传输对象的次数以及传输对象写入 **tempdb** 中的频率的信息。  
+  SQLServer:Broker TO Statistics 性能对象报告有关 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话框请求传输对象的次数以及传输对象写入 **tempdb**中的频率的信息。  
   
  传输对象记录 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话框的消息传输状态。 这些对象存储在内存中。 为了释放内存， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会定期将各批非活动传输对象写入 **tempdb**的工作表中。  
   
  下表列出了此对象包含的计数器。  
   
-|SQL Server Broker TO Statistics 计数器|描述|  
+|SQL Server Broker TO Statistics 计数器|说明|  
 |----------------------------------------------|-----------------|  
 |**页的Length of Batched Writes**|保存在一个批次中的传输对象平均数。|  
 |**页的Time To Write Batch (ms)**|保存一批传输对象所需的平均毫秒数。|  
-|**页的Time to Write Batch Base**|仅限内部使用。|
+|**页的Time to Write Batch Base**|仅供内部使用。|
 |**页的Time Between Batches (ms)**|不同传输对象批次写入之间间隔的平均毫秒数。|  
-|**页的Time Between Batches Base**|仅限内部使用。| 
+|**页的Time Between Batches Base**|仅供内部使用。| 
 |**Tran Object Gets/sec**|对话框每秒请求传输对象的次数。|  
 |**Tran Objects Marked Dirty/sec**|传输对象每秒标记为“脏”的次数。 当第一次出现导致内存中的副本不同于存储在 **tempdb**中的副本的修改时，传输对象会被其标记为“脏”。 当 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 必须在对话框的消息传输状态下记录更改时，将会修改传输对象。|  
 |**Tran Object Writes/sec**|每秒将各批传输对象写入 **tempdb** 工作表的次数。 大量写入可表明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存正在承受很大的压力。|  

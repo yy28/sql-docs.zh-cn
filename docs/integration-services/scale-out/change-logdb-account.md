@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 92cf3e13f1e386a77ba4621b817567af95b42884
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896976"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>更改 Scale Out 日志记录的帐户
@@ -22,7 +22,7 @@ ms.locfileid: "67896976"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-在 Scale Out 中运行 SSIS 包时，会使用自动创建的名为 ##MS_SSISLogDBWorkerAgentLogin## 的用户帐户将事件消息记录到 SSISDB 数据库中。 此用户使用 SQL Server 身份验证登录。
+在 Scale Out 中运行 SSIS 包时，会使用自动创建的名为 ##MS_SSISLogDBWorkerAgentLogin## 的用户帐户将事件消息记录到 SSISDB 数据库中  。 此用户使用 SQL Server 身份验证登录。
 
 要更改用于 Scale Out 日志记录的帐户，请执行以下操作：
 
@@ -32,7 +32,7 @@ ms.locfileid: "67896976"
 ## <a name="1-create-a-user-for-ssisdb"></a>1.创建 SSISDB 用户
 有关如何创建数据库用户的说明，请参阅[创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)。
 
-## <a name="2-add-the-user-to-the-database-role-ssisclusterworker"></a>2.向数据库角色 ssis_cluster_worker 添加用户
+## <a name="2-add-the-user-to-the-database-role-ssis_cluster_worker"></a>2.向数据库角色 ssis_cluster_worker 添加用户
 
 有关如何加入数据库角色的说明，请参阅[加入角色](../../relational-databases/security/authentication-access/join-a-role.md)。
 

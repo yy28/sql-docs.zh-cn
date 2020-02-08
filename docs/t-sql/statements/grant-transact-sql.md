@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e23c4794b00daca7a228a3cd189835fcdf32628a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050649"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
@@ -119,7 +119,7 @@ AS principal
 
 在此语句中使用 AS 并不意味着能够模拟其他用户。 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  GRANT 语句的完整语法非常复杂。 上面的语法关系图进行了简化以突出其结构。 下面列出的文章介绍了在授予特定安全对象权限时使用的完整语法。  
   
  REVOKE 语句可用于删除已授予的权限，DENY 语句可用于防止主体通过 GRANT 获得特定权限。  
@@ -167,8 +167,8 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |非对称密钥|[GRANT 非对称密钥权限 (Transact-SQL)](../../t-sql/statements/grant-asymmetric-key-permissions-transact-sql.md)|  
 |可用性组|[GRANT 可用性组权限 (Transact-SQL)](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)|  
 |证书|[GRANT 证书权限 (Transact-SQL)](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)|  
-|约定|[GRANT Service Broker 权限 (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|“数据库”|[GRANT 数据库权限 (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
+|合约|[GRANT Service Broker 权限 (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|数据库|[GRANT 数据库权限 (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
 |数据库作用域凭据|[GRANT 数据库作用域凭据 (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)|  
 |端点|[GRANT 终结点权限 (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
 |全文目录|[GRANT 全文权限 (Transact-SQL)](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
@@ -183,7 +183,7 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |路由|[GRANT Service Broker 权限 (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
 |架构|[GRANT 架构权限 (Transact-SQL)](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
 |搜索属性列表|[GRANT 搜索属性列表权限 (Transact-SQL)](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
-|“服务器”|[GRANT 服务器权限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
+|服务器|[GRANT 服务器权限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
 |服务|[GRANT Service Broker 权限 (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
 |存储过程|[GRANT 对象权限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |对称密钥|[GRANT 对称密钥权限 (Transact-SQL)](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
@@ -192,7 +192,7 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |表|[GRANT 对象权限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |类型|[GRANT 类型权限 (Transact-SQL)](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
 |用户|[GRANT 数据库主体权限 (Transact-SQL)](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|“查看”|[GRANT 对象权限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|查看|[GRANT 对象权限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |XML 架构集合|[GRANT XML 架构集合权限 (Transact-SQL)](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>另请参阅  

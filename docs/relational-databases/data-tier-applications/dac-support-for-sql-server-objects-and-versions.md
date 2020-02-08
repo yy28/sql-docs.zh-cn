@@ -13,10 +13,10 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810586"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>对 SQL Server 对象和版本的 DAC 支持
@@ -51,7 +51,7 @@ ms.locfileid: "68810586"
 |函数：多语句表值|函数：Scalar|  
 |索引：聚集|索引：非聚集|  
 |索引：特殊|索引：唯一|  
-|Login|权限|  
+|LOGIN|权限|  
 |角色成员资格|SCHEMA|  
 |统计信息|存储过程：Transact-SQL|  
 |同义词|表：检查约束|  
@@ -60,7 +60,7 @@ ms.locfileid: "68810586"
 |表：约束，索引|表：约束，主键|  
 |表：约束，唯一|触发器：DML|  
 |类型：HIERARCHYID、GEOMETRY、GEOGRAPHY|类型：用户定义数据类型|  
-|类型：用户定义表类型|User|  
+|类型：用户定义表类型|USER|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> 各 SQL Server 版本的数据层应用程序支持  

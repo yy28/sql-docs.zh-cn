@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727284"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>使用 PREDICT T-SQL 函数本机评分
@@ -71,11 +71,11 @@ PREDICT 在所有版本的 SQL Server 2017 数据库引擎上都可用，并且�
 + PMML 模型
 + 使用其他开放源代码或第三方库创建的模型
 
-## <a name="example-predict-t-sql"></a>例如：PREDICT (T-SQL)
+## <a name="example-predict-t-sql"></a>示例：PREDICT (T-SQL)
 
 在此示例中，需要创建一个模型，然后调用 T-SQL 中的实时预测函数。
 
-### <a name="step-1-prepare-and-save-the-model"></a>步骤 1. 准备并保存模型
+### <a name="step-1-prepare-and-save-the-model"></a>步骤 1。 准备并保存模型
 
 运行以下代码以创建示例数据库和所需的表。
 

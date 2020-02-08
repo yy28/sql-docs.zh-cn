@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d966094277f47d3ef12239c32a75c9a3ecbf88c9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727431"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R 服务性能 - 数据优化
@@ -31,7 +31,7 @@ ms.locfileid: "73727431"
 
 处理大型数据集时，始终应该使用 SQL 计算上下文。
 
-## <a name="factors"></a>因子
+## <a name="factors"></a>因素
 
 R 语言具有因子的概念，它们是分类数据的特殊变量  。 数据科学家经常在公式中使用因子变量，因为将分类变量作为因子处理可以确保机器学习函数正确处理数据。 有关详细信息，请参阅 [R for Dummies：因子变量](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)。
 

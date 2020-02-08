@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948241"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67948241"
 
 将在查询结果集中返回的行数限制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的指定行数或行的百分比。 将 TOP 用于 ORDER BY 子句时，结果集被限制为前 *N* 个已排序的行。 否则，TOP 将以未定义的顺序返回前 *N* 行。 使用此子句来指定从 SELECT 语句返回的行数。 或者，使用 TOP 来指定受 INSERT、UPDATE、MERGE 或 DELETE 语句影响的行。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
  

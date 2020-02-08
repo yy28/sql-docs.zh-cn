@@ -27,10 +27,10 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: a4c68ce8ca6174f036b2b893a664b758745369d0
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982326"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73982326"
 
 检查组成表或索引视图的所有页和结构的完整性。
 
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>语法    
     
@@ -130,7 +130,7 @@ MAXDOP
  > [!NOTE]  
  > 如果 MAXDOP 设置为零，服务器将选择最大并行度。  
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>备注    
     
 > [!NOTE]    
 > 若要对数据库中的每个表执行 DBCC CHECKTABLE，请使用 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。    
@@ -180,7 +180,7 @@ DBCC CHECKTABLE 使用内部数据库快照提供其执行这些检查必需的�
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 错误消息    
 DBCC CHECKTABLE 命令完成后，将向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中写入一条消息。 如果 DBCC 命令成功执行，则消息指示成功完成以及命令运行的时间。 如果 DBCC 命令在完成检查之前由于错误而停止，则消息将指示命令已终止，并指示状态值和命令运行的时间。 下表列出并说明了此消息中可包含的状态值。
     
-|状态|描述|    
+|状态|说明|    
 |-----------|-----------------|    
 |0|出现错误号 8930。 这指示导致 DBCC 命令终止的元数据损坏。|    
 |1|出现错误号 8967。 存在一个内部 DBCC 错误。|    

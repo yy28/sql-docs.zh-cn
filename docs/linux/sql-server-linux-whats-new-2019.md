@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5183efa51afd89ad82d0cdcb6448996429b81d28
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72890557"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Linux 上的 SQL Server 2019 的新增功能
@@ -20,7 +20,7 @@ ms.locfileid: "72890557"
 
 本文介绍了可用于在 Linux 上运行的 SQL Server 2019 的主要功能和服务。 有关包下载和已知问题，请参阅[发行说明](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15)。
 
-## <a name="updates"></a>Updates
+## <a name="updates"></a>更新
 
 已在 Linux 上的 SQL Server 2019 中进行了更新：
 

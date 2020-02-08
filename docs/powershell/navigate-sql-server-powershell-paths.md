@@ -10,10 +10,10 @@ ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4ced679315a8e682a438f2ab99ca610219768172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68049125"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>导航 SQL ServerPowerShell 路径
@@ -30,7 +30,7 @@ Windows PowerShell 实现 cmdlet 以便导航表示 PowerShell 提供程序支�
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序实现了提供程序 cmdlet 的一部分，如下表中所示：  
   
-|cmdlet|规范别名|cmd 别名|UNIX shell 别名|描述|  
+|cmdlet|规范别名|cmd 别名|UNIX shell 别名|说明|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|获取当前节点。|  
 |**Set-Location**|**sl**|**cd、chdir**|**cd、chdir**|更改当前节点。|  

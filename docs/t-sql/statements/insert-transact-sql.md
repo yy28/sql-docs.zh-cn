@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982228"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "73982228"
 
 将一行或多行添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的表或视图中。 有关示例，请参阅[示例](#InsertExamples)。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -295,7 +295,7 @@ OUTPUT 子句
 > [!NOTE]
 >  如果未提供列列表，则引发一个语法错误。  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 有关将数据插入 SQL 图表的详细信息，请参阅 [INSERT（SQL 图形）](../../t-sql/statements/insert-sql-graph.md)。 
 
 ## <a name="best-practices"></a>最佳实践  
@@ -399,7 +399,7 @@ OUTPUT 子句
 ## <a name="logging-behavior"></a>日志记录行为  
  INSERT 语句始终完全记入日志，只有在将 OPENROWSET 函数与 BULK 关键字一起使用或者在使用 `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` 时除外。 这些操作可进行最小日志记录。 有关详细信息，请参阅本主题前面的“大容量加载数据的最佳做法”一节。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  在链接服务器的连接过程中，发送服务器提供登录名和密码以代表自己连接到接收服务器。 为了使该连接有效，必须使用 [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) 在链接服务器之间创建登录名映射。  
   
  使用 OPENROWSET(BULK…) 时，请务必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是如何处理模拟的。 有关详细信息，请参阅[使用 BULK INSERT 或 OPENROWSET (BULK...) 批量导入数据 (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 中的“安全注意事项”。  

@@ -27,10 +27,10 @@ ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0faddc5b763a2728dc507d2aad17b26501846452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125321"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68125321"
   指定一个由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务处理协调器 (MS DTC) 管理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务的起点。  
     
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +57,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
  @tran_name_variable   
  用户定义的一个变量名，它含有一个事务名，该事务名用于跟踪 MS DTC 实用工具中的分布式事务。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量     。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  执行 BEGIN DISTRIBUTED TRANSACTION 语句的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例是事务创建者，并控制事务的完成。 当为会话发出后续 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句时，控制实例请求 MS DTC 在所涉及的所有实例间管理分布式事务的完成。  
   
  事务级别的快照隔离不支持分布式事务。  

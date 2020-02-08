@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 725dbc3306f9ad9616b5cbeca2d96249dca1c4a8
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165782"
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>由系统控制版本的时态表入门
@@ -26,7 +26,7 @@ ms.locfileid: "74165782"
 
 除了常规的 DML 和查询，临时表还提供了简单方便的方法来让你通过扩展的 Transact-SQL 语法从数据历史记录中获得见解。 每个系统版本控制表都分配有一个历史记录表，但该表对用户完全透明，除非他们想要通过创建附加索引或选择不同的存储选项来优化工作负载性能或存储空间。
 
-下图说明了使用由系统控制版本的时态表的典型工作流：![临时表入门](../../relational-databases/tables/media/getting-started-with-temporal.png "|::ref1::|")
+下图说明了使用由系统控制版本的时态表的典型工作流：![临时表入门](../../relational-databases/tables/media/getting-started-with-temporal.png "时态表入门")
 
 本主题分为以下 5 个子主题：
 

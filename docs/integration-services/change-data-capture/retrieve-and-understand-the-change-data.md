@@ -13,10 +13,10 @@ ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 83df88c61e99d4d13c4b5bc866aa8f1dff5d5b1a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294600"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>检索和了解变更数据
@@ -27,7 +27,7 @@ ms.locfileid: "71294600"
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中，第一个任务是运行查询以检索变更数据。 在数据流任务中在源组件内执行此查询。 然后，使用下游转换和目标将变更数据应用到目标。  
   
 > [!NOTE]  
->  在创建用于执行变更数据增量加载的包的过程中，第三步是创建包含表值函数的查询。 有关此查询的详细信息，请参阅[创建函数以检索变更数据](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)。 有关创建用于执行变更数据增量加载的包的完整过程的说明，请参阅[变更数据捕获 (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
+>  在创建用于执行变更数据增量加载的包的过程中，第三步是创建包含表值函数的查询。 有关此查询的详细信息，请参阅 [创建函数以检索变更数据](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)。 有关创建用于执行变更数据增量加载的包的完整过程的说明，请参阅[变更数据捕获 (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
   
 ## <a name="adding-the-data-flow-task"></a>添加数据流任务  
  在包的数据流中，您将检索变更数据，根据所发生的变更的类型分隔行，然后将变更应用到目标。  

@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 11cfb403fb6bd038549f2273810bb937e625eaf7
-ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74564783"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用更改跟踪 (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "74564783"
   
      下图说明了如何使用 CHANGETABLE(CHANGES …) 获取更改。  
   
-     ![变更跟踪查询输出的示例](../../relational-databases/track-changes/media/queryoutput.gif "|::ref1::|")  
+     ![变更跟踪查询输出的示例](../../relational-databases/track-changes/media/queryoutput.gif "更改跟踪查询输出的示例")  
   
  CHANGE_TRACKING_CURRENT_VERSION() 函数  
  用于获取当前版本，以供下次查询更改时使用。 该版本表示上次提交的事务的版本。  

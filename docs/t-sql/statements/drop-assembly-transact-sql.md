@@ -23,10 +23,10 @@ ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6b5b788ef8978ce88fdb3d8aa0567724023fd5cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984291"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67984291"
 
   从当前数据库中删除程序集及其所有关联文件。 使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 可以创建程序集，使用 [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md) 则可以修改程序集。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,7 +56,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  WITH NO DEPENDENTS  
  如果指定它，则只删除 assembly_name，而不删除该程序集引用的相关程序集  。 如果不指定它，则 DROP ASSEMBLY 会删除 assembly_name 和所有相关程序集  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  删除程序集时，将从数据库中删除程序集和它的所有关联文件，例如，源代码和调试文件。  
   
  如果不指定 WITH NO DEPENDENTS，则 DROP ASSEMBLY 删除 assembly_name 和所有相关程序集  。 如果删除任何相关程序集的尝试失败，则 DROP ASSEMBLY 返回错误。  

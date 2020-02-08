@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81e51dfca5692882ec75841f9be1244ef3479c33
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401573"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理由系统控制版本的临时表中历史数据的保留期
@@ -69,7 +69,7 @@ ms.locfileid: "74401573"
 1. 右键单击数据库，指向“任务”  ，指向“延伸”  ，然后单击“启用”  以启动向导。
 2. 在“选择表”  窗口中，选择临时历史记录表的复选框，然后单击“下一步”。
 
-    ![在“选择表”页上选择历史记录表](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "|::ref1::|")
+    ![在“选择表”页上选择历史记录表](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "在“选择表”页上选择历史记录表")
 3. 在“配置 Azure”  窗口中提供你的登录凭据。 登录到 Microsoft Azure 或注册一个帐户。 选择要使用的订阅并选择 Azure 区域。 然后创建一个新的服务器或选择现有的服务器。 单击“下一步”。 
 
     ![创建新的 Azure 服务器 - Stretch Database 向导](../../relational-databases/tables/media/stretch-wizard-4.png "创建新的 Azure 服务器 - Stretch Database 向导")
@@ -172,7 +172,7 @@ COMMIT ;
 
 下图显示了将数据保留 6 个月的初始分区配置。
 
-![分区](../../relational-databases/tables/media/partitioning.png "|::ref5::|")
+![分区](../../relational-databases/tables/media/partitioning.png "分区")
 
 > **注意：** 有关配置分区时使用 RANGE LEFT 与 RANGE RIGHT 对性能产生的影响，请参阅下面的“表分区的性能注意事项”。
 

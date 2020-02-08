@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dae7d1e29227484e907c45e8062f90873c10892b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086771"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
@@ -36,14 +36,14 @@ ms.locfileid: "68086771"
   
 ## <a name="datetime2-description"></a>datetime2 说明
   
-|属性|ReplTest1|  
+|properties|值|  
 |--------------|-----------|  
 |语法|datetime2 [ (fractional seconds precision) ]  |  
-|用法|DECLARE \@MyDatetime2 datetime2(7) <br /><br /> CREATE TABLE Table1 ( Column1 datetime2(7)  )|  
+|使用情况|DECLARE \@MyDatetime2 datetime2(7) <br /><br /> CREATE TABLE Table1 ( Column1 datetime2(7)  )|  
 |默认的字符串文字格式<br /><br /> （用于下级客户端）|YYYY-MM-DD hh:mm:ss[.fractional seconds]<br /><br /> 有关详细信息，请参阅后面的“下级客户端的向后兼容性”部分。|  
 |日期范围|0001-01-01 到 31.12.99<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日|  
 |时间范围|00:00:00 到 23:59:59.9999999|  
-|时区偏移量范围|None|  
+|时区偏移量范围|无|  
 |各元素的范围|YYYY 是一个四位数，范围从 0001 到 9999，表示年份。<br /><br /> MM 是一个两位数，范围从 01 到 12，它表示指定年份中的月份。<br /><br /> DD 是一个两位数，范围为 01 到 31（具体取决于月份），它表示指定月份中的某一天。<br /><br /> hh 是一个两位数，范围从 00 到 23，它表示小时。<br /><br /> mm 是一个两位数，范围从 00 到 59，它表示分钟。<br /><br /> ss 是一个两位数，范围从 00 到 59，它表示秒钟。<br /><br /> n* 代表 0 到 7 位数字，范围从 0 到 9999999，它表示秒小数部分。 在 Informatica 中，当 n > 3 时，秒的小数部分会被截断。|  
 |字符长度|最低 19 位 (YYYY-MM-DD hh:mm:ss )，最高 27 位 (YYYY-MM-DD hh:mm:ss.0000000)|  
 |精度、小数位数|0 至 7 位，准确度为 100ns。 默认精度为 7 位数。|  
@@ -62,11 +62,11 @@ ms.locfileid: "68086771"
 ## <a name="supported-string-literal-formats-for-datetime2"></a>datetime2 支持的字符串文字格式
 以下各表列出了适用于 datetime2 的支持的 ISO 8601 和 ODBC 字符串文字格式  。 有关 datetime2 日期和时间部分的字母、数值、未分隔和时间格式的信息，请参阅 [date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md) 和 [time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md)  。
   
-|ISO 8601|“说明”|  
+|ISO 8601|说明|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> YYYY-MM-DDThh:mm:ss[.nnnnnnn]|此格式不受 SET LANGUAGE 和 SET DATEFORMAT 会话区域设置的影响。 包括在字符串内的 T、冒号 (:) 和句点 (.)，例如“2007-05-02T19:58:47.1234567”  。|  
   
-|ODBC|描述|  
+|ODBC|说明|  
 |---|---|
 |{ ts 'yyyy-mm-dd hh:mm:ss[.fractional seconds]' }|特定于 ODBC API：<br /><br /> 小数点右侧的数字表示秒小数部分，可指定 0 到 7 位（100 纳秒）。|  
   
@@ -196,7 +196,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|数据类型|“输出”|  
+|数据类型|输出|  
 |---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  

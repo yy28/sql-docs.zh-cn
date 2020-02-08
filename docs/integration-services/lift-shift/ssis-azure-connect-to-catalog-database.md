@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 436d65965fa0fa114f1891293972141f1373a696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037172"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>连接到 Azure 中的 SSIS 目录 (SSISDB)
@@ -46,15 +46,15 @@ ms.locfileid: "68037172"
 ## <a name="connect-with-ssms"></a>与 SSMS 连接
 1. 打开 SQL Server Management Studio。
 
-2. **连接到该服务器**。 在“连接到服务器”对话框中，输入以下信息  ：
+2. **连接到该服务器**。 在“连接到服务器”对话框中，输入以下信息： 
 
-   | 设置       | 建议的值 | 描述 | 
+   | 设置       | 建议的值 | 说明 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
    | **服务器名称** | 完全限定的服务器名称 | 名称应采用此格式：**mysqldbserver.database.windows.net**。 |
    | **身份验证** | SQL Server 身份验证 | |
-   | **登录** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
-   | **密码** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
+   | **登录** | 服务器管理员帐户 | 这是在创建服务器时指定的帐户。 |
+   | **密码** | 服务器管理员帐户的密码 | 这是在创建服务器时指定的密码。 |
 
     ![使用 SSMS 连接到服务器](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
 

@@ -35,10 +35,10 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982424"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
@@ -60,7 +60,7 @@ ms.locfileid: "73982424"
 >     
 > 由于 DBCC 修复选项不可用于内存优化表，您必须定期备份数据库并测试备份。 如果内存优化表中出现数据完整性问题，必须从上次已知的正确备份中还原。    
 
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>语法    
     
@@ -168,7 +168,7 @@ DATA_PURITY
 > [!WARNING] 
 > 如果 MAXDOP 设置为零，则 SQL Server 需选择要使用的最大并行度。    
 
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>备注    
 DBCC CHECKDB 不检查禁用的索引。 有关禁用的索引的详细信息，请参阅[禁用索引和约束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。    
 
 如果用户定义类型标记为按字节排序，则该用户定义类型必须只有一个序列化。 在 DBCC CHECKDB 运行期间，如果按字节排序的用户定义类型没有一致的序列化，则会导致错误 2537。 有关详细信息，请参阅[用户定义类型的要求](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)。    
@@ -213,7 +213,7 @@ DBCC CHECKDB 不检查禁用的索引。 有关禁用的索引的详细信息，
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 错误消息    
 DBCC CHECKDB 命令结束之后，便会将一个消息写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志。 如果 DBCC 命令成功执行，则消息指示成功以及命令的运行时间。 如果 DBCC 命令在完成检查之前由于错误而停止，则消息将指示命令已终止，并指示状态值和命令运行的时间。 下表列出并说明了此消息中可包含的状态值。
     
-|状态|描述|    
+|状态|说明|    
 |-----------|-----------------|    
 |0|出现错误号 8930。 这表示元数据中存在的损坏终止了 DBCC 命令。|    
 |1|出现错误号 8967。 存在一个内部 DBCC 错误。|    

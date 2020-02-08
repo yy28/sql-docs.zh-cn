@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294193"
 ---
 # <a name="execute-package-task"></a>执行包任务
@@ -150,7 +150,7 @@ ms.locfileid: "71294193"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入对执行包任务的说明。  
   
 ###  <a name="package"></a> 设置“包”页上的选项  
@@ -164,7 +164,7 @@ ms.locfileid: "71294193"
  如果子包受密码保护，请提供子包的密码，或单击省略号按钮 (…)，为子包创建新的密码。  
   
  **ExecuteOutOfProcess**  
- 指定子包是在父包的进程中运行还是在单独的进程中运行。 默认情况下，“执行包”任务的 ExecuteOutOfProcess 属性被设置为 **False**，并且子包与父包运行在同一进程中。 如果将此属性设置为 **true**，则在单独的进程中运行子包。 这可能减慢子包的启动。 此外，如果将该属性设置为 **ture**，则不能在仅工具安装中调试包；必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 产品。 有关详细信息，请参阅 [安装 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
+ 指定子包是在父包的进程中运行还是在单独的进程中运行。 默认情况下，“执行包”任务的 ExecuteOutOfProcess 属性被设置为 **False**，并且子包与父包运行在同一进程中。 如果将此属性设置为 **true**，则在单独的进程中运行子包。 这可能减慢子包的启动。 此外，如果将该属性设置为 **true**，则不能在仅工具安装中调试包；必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 产品。 有关详细信息，请参阅 [安装 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
   
 #### <a name="referencetype-dynamic-options"></a>ReferenceType 动态选项  
   
@@ -172,12 +172,12 @@ ms.locfileid: "71294193"
  **位置**  
  选择子包的位置。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**SQL Server**|将位置设置为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。|  
 |**文件系统**|将位置设置为文件系统。|  
   
- **“连接”**  
+ **Connection**  
  选择子包的存储位置的类型。  
   
  **PackageNameReadOnly**  
@@ -190,7 +190,7 @@ ms.locfileid: "71294193"
 #### <a name="location-dynamic-options"></a>位置动态选项  
   
 ##### <a name="location--sql-server"></a>位置 = SQL Server  
- **“连接”**  
+ **Connection**  
  在列表中选择 OLE DB 连接管理器，或单击“\<新建连接...>”  以创建新的连接管理器。  
   
  **相关主题：** [OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -199,7 +199,7 @@ ms.locfileid: "71294193"
  键入子包的名称，或单击省略号 (…) 再定位到包。  
   
 ##### <a name="location--file-system"></a>位置 = 文件系统  
- **“连接”**  
+ **Connection**  
  在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器  。  
   
  **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
@@ -218,7 +218,7 @@ ms.locfileid: "71294193"
  **绑定参数或变量**  
  选择包含要传递到子包的值的参数或变量。  
   
- **“添加”**  
+ **添加**  
  单击此选项可将参数或变量映射到子包参数。  
   
  **删除**  

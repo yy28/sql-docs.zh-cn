@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595482"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>教程：开发使用具有安全 enclave 的 Always Encrypted 的 .NET Framework 应用程序
@@ -56,14 +56,14 @@ ms.locfileid: "73595482"
 
 8. 找到 \<configuration\> 部分，并添加或更新 \<configSections\> 部分。
 
-   A. 如果 \<configuration\> 部分不包含 \<configSections\> 部分，请直接在 \<configuration\> 下添加以下内容  。
+   a. 如果 \<configuration\> 部分不包含 \<configSections\> 部分，请直接在 \<configuration\> 下添加以下内容  。
    
       ```xml
       <configSections>
          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
-   B. 如果 \<configruation\> 部分已包含 \<configSections\> 部分，请在 \<configSections\> 内添加以下行：
+   b. 如果 \<configruation\> 部分已包含 \<configSections\> 部分，请在 \<configSections\> 内添加以下行：
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>

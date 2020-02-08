@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87ca7ef24d34a6f39255a92fcabaa2dab53cfa26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006204"
 ---
 # <a name="delete-a-database"></a>删除数据库
@@ -55,9 +55,9 @@ ms.locfileid: "68006204"
   
 -   不能删除系统数据库。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
--   删除数据库中的所有数据库快照。 有关详细信息，请参阅[删除数据库快照 (Transact SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)。  
+-   删除数据库中的所有数据库快照。 有关详细信息，请参阅 [删除数据库快照 (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)实例。  
   
 -   如果日志传送涉及数据库，请删除日志传送。  
   

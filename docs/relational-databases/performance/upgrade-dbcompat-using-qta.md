@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165686"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>使用查询优化助手升级数据库
@@ -89,7 +89,7 @@ QTA 是一种基于会话的功能，它将会话状态存储在首次创建会�
         -  完成 QTA 工作流之后，设置用户数据库应处于的预期目标数据库兼容性级别。
         完成后，单击“下一步”  。
     
-       ![新的数据库升级会话设置窗口](../../relational-databases/performance/media/qta-new-session-setup.png "|::ref3::|")  
+       ![新的数据库升级会话设置窗口](../../relational-databases/performance/media/qta-new-session-setup.png "新的数据库升级设置窗口")  
   
     2.  在“设置”窗口中，有两列显示目标数据库中查询存储的“当前”状态以及“推荐”设置    。 
         -  默认选择“推荐”设置，但单击“当前”列的单选按钮会接受当前设置，还可以微调当前的查询存储配置。 
@@ -153,7 +153,7 @@ QTA 是一种基于会话的功能，它将会话状态存储在首次创建会�
 
         下一页确认已成功升级数据库兼容性级别。
 
-        ![QTA 步骤 2 子步骤 2](../../relational-databases/performance/media/qta-step2-substep2.png "|::ref9::|")
+        ![QTA 步骤 2 子步骤 2](../../relational-databases/performance/media/qta-step2-substep2.png "QTA 步骤 2 子步骤 2")
 
     3.  “观测到的数据收集”  要求用户重新运行代表性工作负载周期，以便查询存储可收集用于搜索优化机会的比较基线。 执行工作负载时，使用“刷新”按钮持续更新回归的查询列表（若找到任何回归的查询）  。 更改“要显示的查询数”值，以限制显示的查询数量  。 列表顺序受“指标”（持续时间或 CpuTime）和“聚合”（默认使用平均值）   。 还需选择要显示的查询数量  。 完成此工作负载后，选中“工作负载运行已完成”并单击“下一步”   。
 

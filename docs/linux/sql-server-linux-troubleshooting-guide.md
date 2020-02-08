@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.openlocfilehash: 6ff5c1c5944e1313d6c95cd35be288ad4d2154c8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032216"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
@@ -107,7 +107,7 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
    ```bash
    sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
    ```
-## <a name="extended-events"></a>扩展事件
+## <a name="extended-events"></a>扩展的事件
 
 可通过 SQL 命令查询扩展事件。  可在[此处](https://technet.microsoft.com/library/bb630282.aspx)找到扩展事件的详细信息：
 

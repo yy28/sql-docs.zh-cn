@@ -11,10 +11,10 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127243"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 PostgreSQL
@@ -30,11 +30,11 @@ ms.locfileid: "71127243"
 
 ## <a name="connect-to-postgresql"></a>连接到 PostgreSQL
 
-1. 启动 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 。
+1. 启动 [!INCLUDE[name-sos](../includes/name-sos-short.md)]  。
 
 2. 第一次启动 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 时，将打开“连接”对话框  。 如果未打开“连接”对话框，请单击“服务器”页中的“新建连接”图标    ：
 
-   ![新建连接图标](media/quickstart-postgresql/new-connection-icon.png)
+   ![“新建连接”图标](media/quickstart-postgresql/new-connection-icon.png)
 
 3. 在弹出的窗体中，转到“连接类型”，然后从下拉列表中选择“PostgreSQL”   。
 
@@ -43,11 +43,11 @@ ms.locfileid: "71127243"
 
    ![新建连接屏幕](media/quickstart-postgresql/new-connection-screen.png)  
 
-   | 设置       | 示例值 | 描述 |
+   | 设置       | 示例值 | 说明 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器名称** | localhost | 完全限定的服务器名称 |
-   | **User name** | postgres | 要用来登录的用户名。 |
-   | **密码（SQL 登录名）** | password  | 用于登录的帐户的密码。 |
+   | **用户名** | postgres | 要用来登录的用户名。 |
+   | **密码(SQL 登录名)** | password  | 用于登录的帐户的密码。 |
    | **密码** | *检查* | 如果不想每次连接时都输入密码，请选中此框。 |
    | **数据库名称** | \<Default\> | 如果希望连接指定数据库，请填写此项。 |
    | **服务器组** | \<Default\> | 使用此选项可以将此连接分配给你创建的特定服务器组。 | 
@@ -105,7 +105,7 @@ ms.locfileid: "71127243"
 
 ## <a name="insert-rows"></a>插入行
 
-将以下代码片段粘贴到查询窗口中，并单击“运行”  ：
+将以下代码片段粘贴到查询窗口，并单击“运行”  ：
 
    ```sql
    -- Insert rows into table 'customers'
@@ -131,6 +131,6 @@ ms.locfileid: "71127243"
 
    ![查看结果](media/quickstart-postgresql/view-results.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 
 了解 [Azure Data Studio 中可用于 Postgres 的方案](postgres-extension.md)。 

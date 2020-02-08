@@ -14,10 +14,10 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155562"
 ---
 # <a name="back-up-database-media-options-page"></a>备份数据库（“介质选项”页）
@@ -50,7 +50,7 @@ ms.locfileid: "70155562"
   
 **备份到现有介质集**：将数据库备份到现有介质集。 选择此选项按钮将激活三个选项。  
   
- 选择下列选项之一：  
+ 选择以下选项之一：  
   
  - **追加到现有备份集**：将备份集追加到现有介质集，并保留以前的所有备份。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "70155562"
   
  - **出错时继续**：备份操作继续进行，即使在遇到一个或多个错误后。  
   
-### <a name="transaction-log"></a>“事务日志”  
+### <a name="transaction-log"></a>事务日志  
  **“事务日志”** 面板中的选项可以控制事务日志备份的行为。 这些选项只在完整恢复模式或大容量日志恢复模式下相关。 仅在 **“备份数据库”** 对话框的 **“常规”** 页上的 [“备份类型”](../../relational-databases/backup-restore/back-up-database-general-page.md) 字段中选中了 **“事务日志”** 时，才会激活这些选项。  
   
 > [!NOTE]  

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: e3e52a854224210ed4561dbce12877fbb4c0f6fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082123"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) Scale Out Master
@@ -52,7 +52,7 @@ Scale Out Master 服务是一项 Windows 服务，负责与 Scale Out Worker 的
 使用 `<drive>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` 文件配置 Scale Out Master 服务。 更新配置文件之后，必须重启服务。
 
 
-|配置  |描述  |“默认值”  |
+|配置  |说明  |默认值  |
 |---------|---------|---------|
 |PortNumber|用于与 Scale Out Worker 进行通信的网络端口号。|8391|
 |SSLCertThumbprint|用于保护与 Scale Out Worker 之间通信的 SSL 证书的指纹。|SSL 证书的指纹在 Scale Out Master 安装期间指定|

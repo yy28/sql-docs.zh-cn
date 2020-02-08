@@ -13,10 +13,10 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85f02243a8b331ac96dce55ed39813b39fa697b0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294250"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>列模式信息配置文件请求选项（数据事件探查任务）
@@ -29,7 +29,7 @@ ms.locfileid: "71294250"
 > [!NOTE]  
 >  本主题中介绍的选项显示在 **“数据事件探查任务编辑器”** 的 **“配置文件请求”** 页中。 有关此编辑器页的详细信息，请参阅[数据事件探查任务编辑器（“配置文件请求”页）](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
- 有关如何使用数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 有关如何使用数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="understanding-the-use-of-delimiters-and-symbols"></a>了解分隔符和符号的使用  
  在计算 **“列模式配置文件请求”** 的模式之前，数据事件探查任务先标记数据。 也就是说，该任务将字符串值分隔成称为标记的较小单元。 任务基于为 **“分隔符”** 和 **“符号”** 属性指定的分隔符和符号将字符串分隔成标记：  
@@ -50,7 +50,7 @@ ms.locfileid: "71294250"
 |标记|术语|  
 |---------|----------|  
 |方向|东部|  
-|方向|西部|  
+|方向|West|  
 |方向|北部|  
 |方向|南部|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71294250"
 |---------|----------|  
 |街道|街道|  
 |街道|大街|  
-|街道|广场|  
+|街道|位置|  
 |街道|道路|  
   
  基于这种标记组合，街道地址的结果模式可能类似下列模式：  
@@ -79,7 +79,7 @@ ms.locfileid: "71294250"
   
 -   **常规**  
   
--   **Options**  
+-   **选项**  
   
 ### <a name="data-options"></a>Data 选项  
  **ConnectionManager**  
@@ -90,7 +90,7 @@ ms.locfileid: "71294250"
   
  有关详细信息，请参阅本主题中的“TableorView 选项”部分。  
   
- **Column**  
+ **列**  
  选择要进行事件探查的现有列。 选择 **(\*)** 可对所有列进行事件探查。  
   
  有关详细信息，请参阅本主题中的“Column 选项”部分。  

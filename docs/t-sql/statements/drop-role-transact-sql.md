@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3b3227fa8aa15b2254e6f4a38caa0e5ac60163a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043926"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68043926"
 
   从数据库中删除角色。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,15 +52,15 @@ DROP ROLE role_name
 ```  
   
 ## <a name="arguments"></a>参数  
- IF EXISTS  
- **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+ IF EXISTS   
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
   
  有条件地删除角色（仅当其已存在时）。  
   
- role_name  
+ role_name   
  指定要从数据库删除的角色。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  无法从数据库删除拥有安全对象的角色。 若要删除拥有安全对象的数据库角色，必须首先转移这些安全对象的所有权，或从数据库删除它们。 无法从数据库删除拥有成员的角色。 若要删除拥有成员的角色，必须首先删除角色的成员。  
   
  若要删除数据库角色中的成员，请使用 [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md)。  
@@ -75,7 +75,7 @@ DROP ROLE role_name
  若要删除服务器角色，请使用[DROP SERVER ROLE (Transact-SQL)](../../t-sql/statements/drop-server-role-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
- 要求对数据库具有 ALTER ANY ROLE 权限、对角色具有 CONTROL 权限或具有 db_securityadmin 中的成员身份。  
+ 要求对数据库具有 ALTER ANY ROLE 权限、对角色具有 CONTROL 权限或具有 db_securityadmin 中的成员身份    。  
   
 ## <a name="examples"></a>示例  
  以下示例从 `AdventureWorks2012` 数据库中删除数据库角色 `purchasing`。  

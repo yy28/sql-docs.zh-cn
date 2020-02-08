@@ -9,10 +9,10 @@ ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63316618"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>向 Reporting Services 移动报表添加可视化效果
@@ -143,7 +143,7 @@ ms.locfileid: "63316618"
 
      * 在“大小表示”下，为图块大小选择一个数值字段  。
      * 在“颜色表示”  下面为图块颜色选择一个数值字段。 
-     * [可选] **自定义中间值**：可视化类型为 HeatMapWithCustomCenterValue 时，只能使用 **自定义中间值** 。
+     * [可选] **自定义中心值**：如果可视化类型为 HeatMapWithCustomCenterValue，只能使用自定义中心值  。
      
          中间值用于决定框的颜色。 与中间值相比，指标越好，颜色越绿。 指标越差，颜色越红。
      

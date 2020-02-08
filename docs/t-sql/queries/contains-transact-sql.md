@@ -35,10 +35,10 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982826"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
@@ -61,7 +61,7 @@ ms.locfileid: "73982826"
   
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的全文搜索形式的信息，请参阅[使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)。  
  
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -159,7 +159,7 @@ CONTAINS (
 >  要使查询返回任何行，必须在全文检索的搜索属性列表中指定 property_name，并且全文检索必须包含 property_name 的属性特定条目   。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
  LANGUAGE language_term   
- 查询中用于断字、词干分析、同义词库扩展和替换，以及干扰词（或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)）删除的语言。 此参数可选。  
+ 查询中用于断字、词干分析、同义词库扩展和替换，以及干扰词（或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)）删除的语言。 此参数是可选的。  
   
  如果将采用不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则给定文档的区域设置标识符 (LCID) 将决定为其内容编制索引时使用的语言。 在对这种列进行查询时，指定 LANGUAGE language_term 可增大找到有效匹配项的可能性  。  
   
@@ -285,7 +285,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  请注意，内部搜索词 `CC` 不计算在内。  
   
  **MAX**  
- 返回所有包含指定词的行，而不考虑它们之间距离。 这是默认设置。  
+ 返回所有包含指定词的行，而不考虑它们之间距离。 这是默认值。  
   
  \<match_order>  
  指定词是否必须按指定顺序出现，搜索查询才会返回这些词。 若要指定 \<match_order>，还必须指定 \<maximum_distance>。  
@@ -298,7 +298,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **FALSE**  
  忽略指定的顺序。 例如，`NEAR(A,B)` 匹配 `A ... B` 和 `B ... A`。  
   
- 这是默认设置。  
+ 这是默认值。  
   
  例如，以下邻近词按指定顺序搜索“`Monday`”、“`Tuesday`”和“`Wednesday`”词，而不考虑它们之间的距离：  
   
@@ -354,7 +354,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  可以在 CONTAINS 或 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 谓词中使用由四部分组成的名称对链接服务器上的目标表的全文索引列进行查询。 若要准备远程服务器以接收全文查询，请在远程服务器上的目标表和列上创建全文索引，然后将该远程服务器添加为链接服务器。  
   
 ## <a name="comparison-of-like-to-full-text-search"></a>LIKE 与全文搜索的比较  
- 与全文搜索不同，[LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 谓词仅对字符模式有效。 另外，不能使用 LIKE 谓词来查询格式化的二进制数据。 此外，对大量非结构化的文本数据执行 LIKE 查询要比对相同数据执行同样的全文查询慢得多。 对数百万行文本数据进行的 LIKE 查询可能需要几分钟的时间才能返回结果；而对于同样的数据，全文查询只需要几秒甚至更少的时间，具体取决于返回的行数及其大小。 另一个考虑因素是 LIKE 仅对整个表执行简单模式扫描。 相反，全文查询可识别语言，它在索引和查询时应用特定的转换，例如，筛选非索引字并进行同义词库和变形扩展。 这些转换可帮助全文查询改进其撤回以及结果的最终排名。  
+ 与全文搜索不同， [LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 谓词仅对字符模式有效。 另外，不能使用 LIKE 谓词来查询格式化的二进制数据。 此外，对大量非结构化的文本数据执行 LIKE 查询要比对相同数据执行同样的全文查询慢得多。 对数百万行文本数据进行的 LIKE 查询可能需要几分钟的时间才能返回结果；而对于同样的数据，全文查询只需要几秒甚至更少的时间，具体取决于返回的行数及其大小。 另一个考虑因素是 LIKE 仅对整个表执行简单模式扫描。 相反，全文查询可识别语言，它在索引和查询时应用特定的转换，例如，筛选非索引字并进行同义词库和变形扩展。 这些转换可帮助全文查询改进其撤回以及结果的最终排名。  
   
 ## <a name="querying-multiple-columns-full-text-search"></a>查询多个列（全文搜索）  
  可通过指定一组要搜索的列来查询多个列。 这些列必须来自同一个表。  
@@ -521,7 +521,7 @@ GO
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
- 以下查询在 `Title` 表的 `Document` 列中搜索索引属性 `Production.Document`。 该查询仅返回 `Title` 属性包含字符串 `Maintenance`   `Repair` 的文档。  
+ 以下查询在 `Title` 表的 `Document` 列中搜索索引属性 `Production.Document`。 该查询仅返回 `Title` 属性包含字符串 `Maintenance``Repair` 的文档。  
   
 > [!NOTE]  
 >  要使属性搜索返回行，在编制索引过程中分析列的一个或多个筛选器必须提取指定的属性。 另外，必须配置指定表的全文索引以包含该属性。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f05181e1a3069ec56f079751e43bd739424ce92
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727365"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server Launchpad 服务配置
@@ -48,9 +48,9 @@ ms.locfileid: "73727365"
 
 1. 打开[“SQL Server 配置管理器”](../../relational-databases/sql-server-configuration-manager.md)。
 
-2. 在“SQL Server 服务”下，右键单击“SQL Server Launchpad”，然后选择“属性”。
-  + 若要更改服务帐户，请单击“登录”选项卡。
-  + 若要增加用户数量，请单击“高级”选项卡，更改“安全性上下文计数”。
+2. 在“SQL Server 服务”下，右键单击“SQL Server Launchpad”，然后选择“属性”  。
+  + 若要更改服务帐户，请单击“登录”选项卡  。
+  + 若要增加用户数量，请单击“高级”选项卡，更改“安全性上下文计数”   。
 
 > [!Note]
 > 在早期版本的 SQL Server 2016 R Services 中，可以通过编辑 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]配置文件来更改服务的某些属性。 此文件不再用于更改配置。 SQL Server 配置管理器才是更改服务配置（例如服务帐户和用户数量）的正确方法。
@@ -63,7 +63,7 @@ ms.locfileid: "73727365"
 
 下表列出了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的高级设置以及允许的值。
 
-|**设置名称**|**类型**|**Description**|
+|**设置名称**|类型 |**说明**|
 |----|----|----|
 |JOB\_CLEANUP\_ON\_EXIT|Integer |这只是一项内部设置 — 请不要更改此值。 </br></br>指定在完成外部运行时会话之后，是否应该清理为每个会话创建的临时工作文件夹。 此设置有助于调试。 </br></br>支持的值为 **0**（已禁用）或 **1**（已启用）。 </br></br>默认值为 1，表示在退出时删除日志文件。|
 |TRACE\_LEVEL|Integer |配置 MSSQLLAUNCHPAD 的跟踪详细级别以进行调试。 这会影响 LOG_DIRECTORY 设置指定的路径中的跟踪文件。 </br></br>支持的值为：**1**（错误）、**2**（性能）、**3**（警告）、**4**（信息）。 </br></br>默认值为 1，表示仅输出错误。|
@@ -76,7 +76,7 @@ ms.locfileid: "73727365"
 
 如果组织中的某个策略要求定期更改密码，你可能需要强制 Launchpad 服务重新生成 Launchpad 为其辅助角色帐户维护的已加密密码。
 
-若要启用此设置并强制密码刷新，请在 SQL Server 配置管理器中打开 Launchpad 服务的“属性”窗格，单击“高级”，然后将“重置外部用户密码”更改为“是”。 应用此更改后，将立即为所有用户帐户重新生成密码。 若要在应用此更改后运行外部脚本，必须重新启动 Launchpad 服务，随后它会读取新生成的密码。
+若要启用此设置并强制密码刷新，请在 SQL Server 配置管理器中打开 Launchpad 服务的“属性”窗格，单击“高级”，然后将“重置外部用户密码”更改为“是”。     应用此更改后，将立即为所有用户帐户重新生成密码。 若要在应用此更改后运行外部脚本，必须重新启动 Launchpad 服务，随后它会读取新生成的密码。
 
 若要定期重置密码，可以手动设置此标志或使用脚本。
 

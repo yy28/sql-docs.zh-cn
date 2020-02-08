@@ -37,10 +37,10 @@ ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7f0d3d07f6f4a0ef3a35991c4805c478ed702bdf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982435"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
@@ -96,7 +96,7 @@ sys.dm_exec_requests 目录视图包含有关 DBCC CHECKDB、CHECKFILEGROUP 和 
   
 进度单位的定义取决于 DBCC 命令的当前执行阶段。 有时，根据数据库页的粒度报告进度，而在其他阶段，则根据单个数据库或分配修复的粒度报告进度。 下表对每个执行阶段以及命令报告进度的粒度进行了说明。
   
-|执行阶段|描述|进度报告粒度|  
+|执行阶段|说明|进度报告粒度|  
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|在该阶段中将检查数据库中对象的逻辑和物理一致性。|在数据库页级别报告进度。<br /><br /> 每检查 1000 个数据库页更新进程报告值一次。|  
 |DBCC TABLE REPAIR|如果指定 REPAIR_FAST、REPAIR_REBUILD 或 REPAIR_ALLOW_DATA_LOSS 并且存在必须修复的对象错误，则在该阶段执行数据库修复。|在单个修复级别报告进度。<br /><br /> 每次完成修复时更新计数器。|  

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0445fb83a1ee4c4e2a991df8e698f24988454d19
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727673"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server 中的 Python 语言扩展
@@ -35,7 +35,7 @@ SQL Server 不会修改基本 Python 可执行文件，但必须使用安装程�
 
 Microsoft 为并行和分布式工作负荷添加的 Python 包包含以下库。
 
-| 库 | 描述 |
+| 库 | 说明 |
 |---------|-------------|
 | [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 支持数据源对象以及数据浏览、操作、转换和可视化。 它支持创建远程计算上下文以及各种可缩放的机器学习模型，例如 **rxLinMod**。 有关详细信息，请参阅 [revoscalepy 模块与 SQL Server](../python/ref-py-revoscalepy.md)。  |
 | [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 包含针对速度和准确性进行了优化的机器学习算法，以及用于处理文本和图像的内联转换。 有关详细信息，请参阅 [microsoftml 模块与 SQL Server](../python/ref-py-microsoftml.md)。 |

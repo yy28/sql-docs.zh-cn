@@ -14,10 +14,10 @@ ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 44d6fd9052b2f36381b95223222ec9008a8e4728
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298403"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig 任务
@@ -39,7 +39,7 @@ ms.locfileid: "71298403"
  
 3.  对于 BlobContainer 字段，指定与群集关联的存储容器名称  。 只有在需要下载脚本执行输出和错误日志时，才需要执行此操作。
   
-4.  对于 LocalLogFolder 字段，指定脚本执行输出和错误日志要下载到的文件夹  。 只有在需要下载脚本执行输出和错误日志时，此操作才有必要。   
+4.  对于 LocalLogFolder 字段，指定脚本执行输出和错误日志要下载到的文件夹  。 只有在需要下载脚本执行输出和错误日志时，才需要执行此操作。   
   
 5.  有两种方法可指定要执行的 Pig 脚本：
   

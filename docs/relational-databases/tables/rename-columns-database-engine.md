@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92844b0a512129400e5f676f054fc68c68b26ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082584"
 ---
 # <a name="rename-columns-database-engine"></a>重命名列（数据库引擎）
@@ -66,7 +66,7 @@ ms.locfileid: "68082584"
 
 1. 在“对象资源管理器”  中，右键单击要为其重命名列的表，再选择“设计”  。
 2. 在 **“列名”** 下，选择要更改的名称，并键入新名称。
-3. 在“文件”  菜单上，单击“保存”  表格名称  。
+3. 在“文件”菜单上，单击“保存表名称”    。
 
 > [!NOTE]
 > 您也可以在 **“列属性”** 选项卡中更改列名。选择要更改名称的列，并为 **“名称”** 键入新值。

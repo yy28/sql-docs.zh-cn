@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72783403"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
@@ -130,12 +130,12 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 
 ## <a id="customerfeedback"></a> 配置客户反馈
 
-使用 telemetry.customerfeedback 设置可更改 SQL Server 是否向 Microsoft 发送反馈  。 默认情况下，对于所有版本，此值设置为“true”  。 要更改该值，请运行以下命令：
+使用 telemetry.customerfeedback 设置可更改 SQL Server 是否向 Microsoft 发送反馈  。 默认情况下，对于所有版本，此值设置为“true”  。 若要更改该值，请运行以下命令：
 
 > [!IMPORTANT]
 > 无法关闭 SQL Server、Express 和 Developer 免费版本的客户反馈。
 
-1. 使用 telemetry.customerfeedback 的 set 命令以根用户身份运行 mssql-conf 脚本   。 以下示例通过指定 false 来关闭客户反馈  。
+1. 使用 **telemetry.customerfeedback** 的 **set** 命令以根身份运行 mssql-conf 脚本。 以下示例通过指定 false 来关闭客户反馈  。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
@@ -159,7 +159,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo mkdir /tmp/data
    ```
 
-1. 将目录的所有者和组更改为 mssql 用户  ：
+1. 将目录的所有者和组更改为 **mssql** 用户：
 
    ```bash
    sudo chown mssql /tmp/data
@@ -199,7 +199,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo mkdir /tmp/masterdatabasedir
    ```
 
-1. 将目录的所有者和组更改为 mssql 用户  ：
+1. 将目录的所有者和组更改为 **mssql** 用户：
 
    ```bash
    sudo chown mssql /tmp/masterdatabasedir
@@ -285,7 +285,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo mkdir /tmp/dump
    ```
 
-1. 将目录的所有者和组更改为 mssql 用户  ：
+1. 将目录的所有者和组更改为 **mssql** 用户：
 
    ```bash
    sudo chown mssql /tmp/dump
@@ -316,7 +316,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo mkdir /tmp/logs
    ```
 
-1. 将目录的所有者和组更改为 mssql 用户  ：
+1. 将目录的所有者和组更改为 **mssql** 用户：
 
    ```bash
    sudo chown mssql /tmp/logs
@@ -348,7 +348,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo mkdir /tmp/backup
    ```
 
-1. 将目录的所有者和组更改为 mssql 用户  ：
+1. 将目录的所有者和组更改为 **mssql** 用户：
 
    ```bash
    sudo chown mssql /tmp/backup
@@ -393,10 +393,10 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 
     下表列出了可能的 coredump.coredumptype 值  。
 
-    | 类型 | 描述 |
+    | 类型 | 说明 |
     |-----|-----|
     | **mini** | Mini 是最小的转储文件类型。 它使用 Linux 系统信息确定进程中的线程和模块。 转储仅包含主机环境线程堆栈和模块。 不包含间接内存引用或全局变量。 |
-    | **miniplus** | MiniPlus 与 mini 相似，但它包括更多内存。 它理解 SQLPAL 的内部机制和主机环境，可将下面的内存区域添加到转储：</br></br> - 各种全局变量</br> - 超过 64TB 的所有内存</br> - - 在 /proc/$pid/maps 中找到的所有命名区域 </br> - 来自线程和堆栈的间接内存</br> - 线程信息</br> - 关联的 Teb 和 Peb</br> - 模块信息</br> - VMM 和 VAD 树 |
+    | **miniplus** | MiniPlus 与 mini 相似，但它包括更多内存。 它理解 SQLPAL 的内部机制和主机环境，可将下面的内存区域添加到转储：</br></br> - 各种全局变量</br> - 超过 64TB 的所有内存</br> - - 在/proc/$pid/maps 中找到的所有命名区域 </br> - 来自线程和堆栈的间接内存</br> - 线程信息</br> - 关联的 Teb 和 Peb</br> - 模块信息</br> - VMM 和 VAD 树 |
     | **filtered** | Filtered 采用基于减法的设计，其中包括进程中的所有内存，除非专门排除某些内存。 此设计理解 SQLPAL 的内部机制和主机环境，从转储中排除某些区域。
     | **full** | Full 是完整的过程转储，包括 /proc/$pid/maps 中的所有区域  。 这并非由 coredump.captureminiandfull 设置控制  。 |
 
@@ -419,7 +419,7 @@ sudo systemctl restart mssql-server
 有关如何将此项用于可用性组的信息，请参阅以下两个主题。
 
 - [为 Linux 上的 SQL Server 配置 Always On 可用性组](sql-server-linux-availability-group-configure-ha.md)
-- [为 Linux 上的 SQL Server 配置读取缩放可用性组](sql-server-linux-availability-group-configure-rs.md)
+- [为 Linux 上的 SQL Server 配置读取缩放可用性](sql-server-linux-availability-group-configure-rs.md)
 
 
 ## <a id="localaudit"></a> 设置本地审核目录
@@ -507,7 +507,7 @@ network.rpcport 和 distributedtransaction.servertcpport 设置用于配置 Micr
 
 可以使用 mssql-conf 的其他几项设置来监视 MSDTC 并对其进行故障排除。 下表简要描述了这些设置。 有关其用法的详细信息，请参阅 Windows 支持文章[如何为 MS DTC 启用诊断跟踪](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)了解详细信息。
 
-| mssql-conf 设置 | 描述 |
+| mssql-conf 设置 | 说明 |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Configure secure only RPC calls for distributed transactions |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | 为分布式事务配置“仅安全”的 RPC 调用 |
@@ -564,7 +564,7 @@ accepteulaml = Y
 
 默认情况下，[SQL Server 机器学习服务](sql-server-linux-setup-machine-learning.md)功能中的 R、Python 和 Java 扩展的出站网络访问处于禁用状态。 若要启用出站请求，请使用 mssql-conf 设置“outboundnetworkaccess”布尔属性。
 
-设置该属性后，重新启动 SQL Server Launchpad 服务以从 INI 文件中读取更新的值。 每当修改与可扩展性相关的设置时，重启消息都会提醒你。
+设置该属性后，重新启动 SQL Server Launchpad 服务以从 INI 文件中读取更新的值。 每当修改与扩展性相关的设置时，都会收到重启消息提醒。
 
 ```bash
 # Adds the extensibility section and property.
@@ -613,11 +613,11 @@ outboundnetworkaccess = 1
 
 以下选项为在 Linux 上运行的 SQL Server 实例配置 TLS。
 
-|选项 |描述 |
+|选项 |说明 |
 |--- |--- |
 |**network.forceencryption** |如果为 1，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 强制加密所有连接。 默认情况下，此选项为 0。 |
-|**network.tlscert** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用于 TLS 的证书文件的绝对路径。 例如： `/etc/ssl/certs/mssql.pem`，证书文件必须可由 mssql 帐户访问。 Microsoft 建议使用 `chown mssql:mssql <file>; chmod 400 <file>` 限制对文件的访问。 |
-|**network.tlskey** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用于 TLS 的专用密钥文件的绝对路径。 例如：`/etc/ssl/private/mssql.key`，证书文件必须可由 mssql 帐户访问。 Microsoft 建议使用 `chown mssql:mssql <file>; chmod 400 <file>` 限制对文件的访问。 |
+|**network.tlscert** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用于 TLS 的证书文件的绝对路径。 示例： `/etc/ssl/certs/mssql.pem`，证书文件必须可由 mssql 帐户访问。 Microsoft 建议使用 `chown mssql:mssql <file>; chmod 400 <file>` 限制对文件的访问。 |
+|**network.tlskey** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用于 TLS 的专用密钥文件的绝对路径。 示例：`/etc/ssl/private/mssql.key`，证书文件必须可由 mssql 帐户访问。 Microsoft 建议使用 `chown mssql:mssql <file>; chmod 400 <file>` 限制对文件的访问。 |
 |**network.tlsprotocols** |SQL Server 允许的 TLS 协议列表（以逗号分隔）。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 始终尝试协商允许的最强协议。 如果客户端不支持任何允许的协议，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将拒绝连接尝试。  为实现兼容性，默认情况下允许所有支持的协议（1.2、1.1、1.0）。  如果客户端支持 TLS 1.2，Microsoft 建议仅允许 TLS 1.2。 |
 |**network.tlsciphers** |指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 允许将哪些密码用于 TLS。 必须按照 [OpenSSL 的密码列表格式](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)设置此字符串的格式。 通常不需要更改此选项。 <br /> 默认情况下，允许使用以下密码： <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Kerberos keytab 文件的路径 |

@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f010a9fbd77d3b6a65103f3ed85a7cc521c279c9
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009431"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列存储索引 - 设计指南
@@ -125,7 +125,7 @@ ms.locfileid: "70009431"
 
 除非数据相当大，否则，可以为列存储索引使用比行存储索引所用更少的分区以实现最佳性能。 如果每个分区包含的行数不超过 100 万，大多数行可能会转到增量存储，在其中，这些行不会获得列存储压缩的性能优势。 例如，如果将 100 万行载入包含 10 个分区的表，每个分区包含 10 万行，则所有行将转到增量行组。 
 
-例如：
+示例：
 * 将 100 万行载入一个分区或非分区表。 获取一个包含 100 万行的压缩行组。 这非常适合用于提高数据压缩率和查询性能。
 * 将 100 万行均匀载入 10 个分区。 每个分区包含 10 万行，低于列存储压缩的最小阈值。 因此，列存储索引可以包含 10 个增量行组，每个行组包含 10 万行。 可通过某些方法强制将增量行组载入列存储。 不过，如果这些是列存储索引中的唯一行，压缩行组就会太小，无法实现最佳压缩和查询性能。
 

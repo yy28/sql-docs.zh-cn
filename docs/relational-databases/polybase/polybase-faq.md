@@ -8,13 +8,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 ms.openlocfilehash: 9d4cda6dd0fdade80521a801799e5ee53a80c140
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710556"
 ---
-# <a name="frequently-asked-questions"></a>常见问题解答
+# <a name="frequently-asked-questions"></a>常见问题
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -52,7 +52,7 @@ ms.locfileid: "71710556"
 
 下表主要说明了 [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)]独立安装和 [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)]大数据群集提供的 PolyBase 功能：
 
-|功能 |大数据群集|独立实例|
+|Feature |大数据群集|独立实例|
 |--------------------------|--------------------------|---------|   
 |为 SQL Server、Oracle、Teradata 和 Mongo DB 创建外部数据源 |X|X |
 |使用可兼容的第三方 ODBC 驱动程序创建外部数据源 | | X|

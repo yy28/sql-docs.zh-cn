@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 810dfbc7230171f59cb8f1df04ab1c7f4774e044
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907248"
 ---
 # <a name="modify-a-stored-procedure"></a>修改存储过程
@@ -60,7 +60,7 @@ ms.locfileid: "72907248"
   
 4.  修改存储过程的文本。  
   
-5.  若要测试语法，请在“查询”  菜单上单击“分析”  。  
+5.  若要测试语法，请在 **“查询”** 菜单上，单击 **“分析”** 。  
   
 6.  若要将修改信息保存到过程定义中，请在 **“查询”** 菜单上单击 **“执行”** 。  
   

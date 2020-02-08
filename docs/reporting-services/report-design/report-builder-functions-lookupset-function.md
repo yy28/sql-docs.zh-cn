@@ -9,10 +9,10 @@ ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577402"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>报表生成器函数 - LookupSet 函数
@@ -28,15 +28,15 @@ ms.locfileid: "65577402"
 LookupSet(source_expression, destination_expression, result_expression, dataset)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *source_expression*  
- (**Variant**) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如， `=Fields!ID.Value`。  
+ (**Variant**) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如，`=Fields!ID.Value` 。  
   
  *destination_expression*  
- (**Variant**) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如， `=Fields!CustomerID.Value`。  
+ (**Variant**) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如，`=Fields!CustomerID.Value` 。  
   
  *result_expression*  
- (**Variant**) 针对数据集中的行（其中， *source_expression* = *destination_expression*）计算结果并指定要检索的值的表达式。 例如， `=Fields!PhoneNumber.Value`。  
+ (**Variant**) 针对数据集中的行（其中， *source_expression* = *destination_expression*）计算结果并指定要检索的值的表达式。 例如，`=Fields!PhoneNumber.Value` 。  
   
  *数据集 (dataset)*  
  指定报表中数据集的名称的常量。 例如，“ContactInformation”。  
@@ -44,7 +44,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>返回  
  返回 **VariantArray**，如果没有匹配项，则返回 **Nothing** 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 **LookupSet** 从名称/值对（每对具有 1 对多的关系）的指定数据集中检索一组值。 例如，对于表中的客户标识符，可以使用 **LookupSet** 从未绑定到该数据区域的数据集检索该客户的所有相关电话号码。  
   
  **LookupSet** 执行下列操作：  
@@ -59,7 +59,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  若要从具有指定名称的名称/值对（具有 1 对 1 的关系）的数据集中检索单个值，请使用 [Lookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。 若要为一组值调用 Lookup，请使用 [Multilookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)  。  
   
- 存在下列限制：  
+ 存在以下限制：  
   
 -   在应用所有筛选表达式后计算**LookupSet** 的结果。  
   

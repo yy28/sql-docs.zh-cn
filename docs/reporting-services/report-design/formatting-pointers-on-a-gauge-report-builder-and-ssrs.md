@@ -9,10 +9,10 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 780cda075d8280d71f3438c79359c58ad1ac3133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575637"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上指针的格式（报表生成器和 SSRS）
@@ -48,7 +48,7 @@ ms.locfileid: "65575637"
 ##  <a name="SpecifyingImage"></a> 指定图像作为径向仪表的指针  
  除指针样式的内置列表以外，还可以指定图像作为指针。 当使用图像替换现有针式指针样式时，该方法最有效。 图像叠加在指针之上，但所有指针功能都适用。 将图像用作指针时，颜色和渐变选项不适用。  
   
- 如果指针图像的形状不规则，则应将颜色指定为透明色，以隐藏不应在仪表上显示的图像区域。 定义透明色时，仪表将图像转置到现有指针之上并裁剪该图像，以便仅显示指针形状。 仪表重新缩放图像，使其适合指针大小。 为指针指定图像时，在仪表上面添加的所有后续指针均绘制到该图像下面。 为此，如果仪表上存在多个指针，最好不要为指针指定图像。 有关详细信息，请参阅 [指定图像作为仪表的指针（报表生成器和 SSRS）](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)。  
+ 如果指针图像的形状不规则，则应将颜色指定为透明色，以隐藏不应在仪表上显示的图像区域。 定义透明色时，仪表将图像转置到现有指针之上并裁剪该图像，以便仅显示指针形状。 仪表重新缩放图像，使其适合指针大小。 为指针指定图像时，在仪表上面添加的所有后续指针均绘制到该图像下面。 为此，如果仪表上存在多个指针，最好不要为指针指定图像。 有关详细信息，请参阅[指定图像作为仪表指针（报表生成器和 SSRS）](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置仪表上刻度的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

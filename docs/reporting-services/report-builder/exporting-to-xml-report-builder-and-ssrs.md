@@ -9,10 +9,10 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52d83c17a1cfe79f8add7f0764216d404c14cfd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580759"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>导出到 XML（报表生成器和 SSRS）
@@ -24,9 +24,9 @@ ms.locfileid: "65580759"
 ##  <a name="ReportItems"></a> 报表项  
  下表对各报表项的呈现形式进行了说明：  
   
-|项|呈现行为|  
+|Item|呈现行为|  
 |----------|------------------------|  
-|报告|呈现为 XML 文档的顶级元素。|  
+|报表|呈现为 XML 文档的顶级元素。|  
 |数据区域|呈现为其容器的元素中的某个元素。 数据区域包括表、矩阵和列表，它们将数据显示为文本和图表、数据条、迷你图、仪表以及形象地展现数据的指示器。|  
 |组和详细信息部分|每个实例呈现为其容器的元素中的某个元素。|  
 |文本框|呈现为其容器中的某个属性或元素。|  
@@ -36,7 +36,7 @@ ms.locfileid: "65580759"
 |图表|呈现为其容器的元素中的某个元素。 序列是图表的子元素，而类别是序列的子元素。 为每个图表值呈现所有图表标签。 标签和值作为属性包括。|  
 |数据条|呈现为其容器的元素中的某个元素，与图表相似。 通常，数据条并不包括层次结构或标签，而只包含值。|  
 |迷你图|呈现为其容器的元素中的某个元素，与图表相似。 通常，迷你图并不包括层次结构或标签，而只包含值。|  
-|测量|呈现为其容器的元素中的某个元素。 作为单个元素呈现，它以刻度的最小值和最大值、范围的起始和终止值以及指针的值作为属性。|  
+|仪表|呈现为其容器的元素中的某个元素。 作为单个元素呈现，它以刻度的最小值和最大值、范围的起始和终止值以及指针的值作为属性。|  
 |指示器|呈现为其容器的元素中的某个元素，与仪表相似。 作为单个元素呈现，它以活动状态名称、可用状态以及数据值作为属性。|  
   
  使用 XML 呈现扩展插件呈现报表时，同样遵偱以下规则：  
@@ -62,8 +62,8 @@ ms.locfileid: "65580759"
 |**Float** （或 **Decimal** 和任何整数或字节数据类型）|**xsd:float**|  
 |**Double** （或 **Decimal** 和任何整数或字节数据类型）|**xsd:double**|  
 |**DateTime 或 DateTime Offset**|**xsd:dateTime**|  
-|**Time**|**xsd:string**|  
-|**Boolean**|**xsd:boolean**|  
+|**时间**|**xsd:string**|  
+|**布尔值**|**xsd:boolean**|  
 |**String**、 **Char**|**xsd:string**|  
 |其他|**xsd:string**|  
   
@@ -80,9 +80,9 @@ ms.locfileid: "65580759"
   
  变量的值如下所示：  
   
-|“属性”|ReplTest1|  
+|名称|值|  
 |----------|-----------|  
-|报告|Report.DataElementName|  
+|报表|Report.DataElementName|  
 |ReportURL|服务器上该报表的 URL 编码形式的绝对 URL。|  
 |SchemaName|Report.SchemaName。 如果为 Null，则为 Report.Name。 如果使用了 Report.Name，则将首先使用 XmlConvert.EncodeLocalName 对其进行编码。|  
 |ReportName|报表的名称。|  

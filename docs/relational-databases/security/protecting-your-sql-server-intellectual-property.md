@@ -14,10 +14,10 @@ ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: afe179023f72ec509af5828bb89afb51f93b53a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986602"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>保护 SQL Server 知识产权
@@ -26,7 +26,7 @@ ms.locfileid: "67986602"
 软件开发人员经常关注如何将 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 数据应用程序分发给客户，但却忽视了如何防止客户分析和解构其应用程序。 此处的重要原则在于，保护知识产权是一个法律问题，许可协议中就会规定保护措施。 在其他人管理的计算机上安装 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 时，你必然会失去某些方面的控制权。 
 
 ## <a name="nature-of-the-problem"></a>问题的性质
-计算机的所有者/管理员始终可以访问该计算机上安装的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 实例。 如果你将自己的应用程序部署在客户的计算机上，由于客户是管理员，因此他们能够以 sysadmin 固定服务器角色成员的身份连接到 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。 他们可以执行的操作包括授予权限、管理备份（包括将备份还原到其他计算机）、解密和移动数据文件，等等。有关详细信息，请参阅 [在系统管理员被锁定时连接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。 
+计算机的所有者/管理员始终可以访问该计算机上安装的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 实例。 如果你将自己的应用程序部署在客户的计算机上，由于客户是管理员，因此他们能够以 sysadmin 固定服务器角色成员的身份连接到 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]  。 他们可以执行的操作包括授予权限、管理备份（包括将备份还原到其他计算机）、解密和移动数据文件，等等。有关详细信息，请参阅 [在系统管理员被锁定时连接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。 
 
 可以加密存储过程和数据，但无法隐藏数据结构。可将调试器附加到服务器进程的用户可在运行时从内存中检索已解密的过程和数据。
 

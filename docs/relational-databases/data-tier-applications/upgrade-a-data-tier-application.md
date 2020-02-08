@@ -23,10 +23,10 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7030f40419850454e90978168e72846331b5e865
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134655"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升级数据层应用程序
@@ -54,7 +54,7 @@ ms.locfileid: "68134655"
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  DAC 升级只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本中执行。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  出于谨慎起见，在开始升级前应生成完整数据库备份。 如果升级遇到了错误并且无法回滚其所有更改，可能需要还原该备份。  
   
  在开始升级前，您应该采取若干操作以便验证 DAC 包和升级操作。 有关如何执行这些检查的详细信息，请参阅 [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md)。  

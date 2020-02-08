@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93ee480a595178627f65613b502c10e44dffc8e3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 7b0a47ff73186642e0b0b48aec06e5320fc44d15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907806"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288234"
 ---
 # <a name="work-with-replication-agent-profiles"></a>使用复制代理配置文件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "72907806"
   
     -   若要查看代理的所有参数，请清除 **“仅显示此配置文件中使用的参数”** 复选框。 有关代理参数的信息，请参阅本主题末尾处的链接。  
   
-4.  单击 **“关闭”** 。  
+4.  单击“关闭”  。  
   
 ###  <a name="Create_SSMS"></a> 创建用户定义的配置文件  
   
@@ -234,7 +234,7 @@ ms.locfileid: "72907806"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.AgentProfile> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.AgentProfile> 类的实例。  
   
 3.  设置对象的下列属性：  
   
@@ -258,7 +258,7 @@ ms.locfileid: "72907806"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回 **false**，请验证分发服务器是否存在。  
   
@@ -278,7 +278,7 @@ ms.locfileid: "72907806"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.AgentProfile> 类的实例。 将 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 设置为配置文件的名称，将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 设置为从步骤 1 中获得的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.AgentProfile> 类的实例。 将 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 设置为配置文件的名称，将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 设置为从步骤 1 中获得的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回 **false**，则指定的名称不正确或服务器上不存在该配置文件。  
   
@@ -295,6 +295,6 @@ ms.locfileid: "72907806"
  [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)   
- [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+ [复制队列读取器代理](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
   

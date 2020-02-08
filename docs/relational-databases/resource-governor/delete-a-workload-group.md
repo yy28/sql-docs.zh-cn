@@ -13,19 +13,19 @@ ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: b4b322231f546871d5581de470fdc894ed4fe41e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099262"
 ---
 # <a name="delete-a-workload-group"></a>删除工作负荷组
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 删除工作负荷组或资源池。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
+-   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **若要删除工作负荷组，请使用：**[对象资源管理器](#DelWGObjEx)、[Resource Governor 属性](#DelWGRGProp)、[Transact-SQL](#DelWGTSQL)  
+-   **若要删除工作负荷组，请使用：** [对象资源管理器](#DelWGObjEx)、[Resource Governor 属性](#DelWGRGProp)、[Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果工作负荷组中包含活动会话，则不能删除该组。  
@@ -35,7 +35,7 @@ ms.locfileid: "68099262"
   
 -   等待受影响组的所有会话均断开连接，然后重新运行 ALTER RESOURCE GOVERNOR RECONFIGURE 语句。  
   
--   使用 KILL 命令显式停止受影响的组中的会话，然后重新运行 ALTER RESOURCE GOVERNOR RECONFIGURE 语句。 如果决定不打算在使用“删除”之后同时在停止活动会话之前显式停止会话，请使用原始名称重新创建组并将组移至原始资源池。  
+-   使用 KILL 命令显式停止受影响的组中的会话，然后重新运行 ALTER RESOURCE GOVERNOR RECONFIGURE 语句。 如果决定不打算在使用“删除”  之后同时在停止活动会话之前显式停止会话，请使用原始名称重新创建组并将组移至原始资源池。  
   
 -   重新启动服务器。 完成重新启动过程后，将不会创建已删除的组，并且已移动的组将使用新分配的资源池。  
   
@@ -45,24 +45,24 @@ ms.locfileid: "68099262"
 ##  <a name="DelWGObjEx"></a> 使用对象资源管理器删除工作负荷组  
  **使用对象资源管理器删除工作负荷组**  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中包含 **“资源池”**。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中包含 **“资源池”** 。  
   
 2.  在包含要删除的工作负荷组的资源池中，依次逐步展开 **“资源池”** 节点直至其中包含 **“工作负荷组”** 节点。  
   
-3.  右键单击工作负荷组，然后单击“删除”。  
+3.  右键单击工作负荷组，然后单击“删除”  。  
   
-4.  在 **“删除对象”** 窗口的 **“要删除的对象”** 列表中，将列出工作负荷组。 若要删除工作负荷组，请单击 **“确定”**。  
+4.  在 **“删除对象”** 窗口的 **“要删除的对象”** 列表中，将列出工作负荷组。 若要删除工作负荷组，请单击 **“确定”** 。  
   
 ##  <a name="DelWGRGProp"></a> 使用资源调控器属性删除工作负荷组  
  **使用“资源调控器属性”页删除工作负荷组**  
   
-1.  在对象资源管理器中，依次向下展开 **“管理”** 节点直至其中包括 **“资源池”**。  
+1.  在对象资源管理器中，依次向下展开 **“管理”** 节点直至其中包括 **“资源池”** 。  
   
-2.  右键单击包含要删除的工作负荷组的资源池，然后单击“属性”。 这将打开 **“资源调控器属性”** 页。  
+2.  右键单击包含要删除的工作负荷组的资源池，然后单击“属性”  。 这将打开 **“资源调控器属性”** 页。  
   
-3.  在 **“资源池的工作负荷组”** 窗口中，单击要删除的工作负荷组所在的行，再右键单击该行左侧的向右箭头，然后单击“删除”。  
+3.  在 **“资源池的工作负荷组”** 窗口中，单击要删除的工作负荷组所在的行，再右键单击该行左侧的向右箭头，然后单击“删除”  。  
   
-4.  若要删除工作负荷组，请单击 **“确定”**。  
+4.  若要删除工作负荷组，请单击 **“确定”** 。  
   
 ##  <a name="DelWGTSQL"></a> 使用 Transact-SQL 删除工作负荷组  
  **使用 Transact-SQL 删除工作负荷组**  

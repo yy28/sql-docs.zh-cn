@@ -13,10 +13,10 @@ ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041563"
 ---
 # <a name="restore-database-options-page"></a>还原数据库（“选项”页）
@@ -38,7 +38,7 @@ ms.locfileid: "68041563"
  若要修改还原操作行为的各个方面，请使用使用 **“还原选项”** 面板中的选项。  
   
  **覆盖现有数据库 [WITH REPLACE]**  
- 还原操作将覆盖当前使用你指定的数据库名称（在“还原数据库”对话框中“[常规](../../relational-databases/backup-restore/restore-database-general-page.md)”页上“还原到”字段中指定）的任何数据库文件。 即使将备份从其他数据库还原到现有的数据库名称，现有数据库的文件也将被覆盖。 选择此选项等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中使用 REPLACE 选项。  
+ 还原操作将覆盖当前使用你指定的数据库名称（在“还原数据库”对话框中“[常规](../../relational-databases/backup-restore/restore-database-general-page.md)”页上“还原到”字段中指定）的任何数据库文件。   即使将备份从其他数据库还原到现有的数据库名称，现有数据库的文件也将被覆盖。 选择此选项等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中使用 REPLACE 选项。  
   
 > [!CAUTION]  
 >  只有在仔细考虑后，才能使用此选项。 有关详细信息，请参阅 [RESTORE Arguments (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "68041563"
  **保留复制设置 [WITH KEEP_REPLICATION]**  
  将已发布的数据库还原到创建该数据库的服务器之外的服务器时，保留复制设置。 此选项只适用于在创建备份时对数据库进行了复制的情况。  
   
- 仅在选择“回滚未提交的事务，使数据库处于可以使用的状态”选项（在本表的后面部分中说明）时，此选项才可用，其功能等效于使用 RECOVERY 选项还原备份。  
+ 仅在选择“回滚未提交的事务，使数据库处于可以使用的状态”  选项（在本表的后面部分中说明）时，此选项才可用，其功能等效于使用 RECOVERY 选项还原备份。  
   
  选择此选项等效于在 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句中使用 KEEP_REPLICATION 选项。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68041563"
  若要在完成存储操作后确定数据库的状态，则必须选择 **“恢复状态”** 面板中的选项之一。  
   
  **RESTORE WITH RECOVERY**  
- 在还原了在[“常规”](../../relational-databases/backup-restore/restore-database-general-page.md)页的“用于还原的备份集”网格中选中的最后一个备份之后，恢复数据库。 这是默认选项，等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH RECOVERY。  
+ 在还原了在[“常规”](../../relational-databases/backup-restore/restore-database-general-page.md)页的“用于还原的备份集”  网格中选中的最后一个备份之后，恢复数据库。 这是默认选项，等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH RECOVERY。  
   
 > [!NOTE]  
 >  在完整恢复模式或大容量日志恢复模式下，只有在需要还原所有日志文件时才选择此选项。  
@@ -90,7 +90,7 @@ ms.locfileid: "68041563"
 > [!NOTE]  
 >  如果你在[“备份时间线”](../../relational-databases/backup-restore/backup-timeline.md) 对话框中选择的时间点要求结尾日志备份，则将选择此框并且你将不能对其进行编辑。  
   
- **备份文件**  
+ **“备份文件”**  
  为日志的结尾指定备份文件。 您可以浏览备份文件，也可以在文本框中直接输入其名称。  
   
 ### <a name="server-connections"></a>服务器连接  
@@ -99,9 +99,9 @@ ms.locfileid: "68041563"
  **关闭现有连接**  
  如果存在与数据库的活动连接，则还原操作可能会失败。 选中 **“关闭现有连接”** 以确保关闭 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和数据库之间的所有活动连接。 此复选框可在执行还原操作之前将数据库设置为单用户模式，并在该操作完成后将数据库设置为多用户模式。  
   
-### <a name="prompt"></a>提示  
+### <a name="prompt"></a>Prompt  
  **还原每个备份之前进行提示**  
- 指定在还原了每个备份之后，将显示“继续还原”对话框，询问你是否要继续还原顺序。 该对话框将显示下一个介质集（如果已知）的名称以及下一个备份集的名称和说明。  
+ 指定在还原了每个备份之后，将显示“继续还原”  对话框，询问你是否要继续还原顺序。 该对话框将显示下一个介质集（如果已知）的名称以及下一个备份集的名称和说明。  
   
  此选项允许您在还原了任何备份后暂停还原顺序。 如果必须为不同介质集更换磁带，例如在服务器仅具有一个磁带设备时，此选项非常有用。 准备就绪后，请单击 **“确定”** 以继续。  
   

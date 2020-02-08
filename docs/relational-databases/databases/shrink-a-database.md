@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13c20f7fb8cd282251c734df1a4bb7b3adab3712
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909614"
 ---
 # <a name="shrink-a-database"></a>收缩数据库
@@ -89,7 +89,7 @@ ms.locfileid: "72909614"
   
 3.  指向 **“任务”** ，指向 **“收缩”** ，然后单击 **“数据库”** 。  
   
-     **“数据库”**  
+     **Database**  
      显示所选数据库的名称。  
   
      **当前分配的空间**  
@@ -104,7 +104,7 @@ ms.locfileid: "72909614"
      **收缩后文件中的最大可用空间**  
      输入在数据库收缩后数据库文件中剩余可用空间的最大百分比。 值可以介于 0 和 99 之间。  
   
-4.  单击“确定”  。  
+4.  单击“确定”。   
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

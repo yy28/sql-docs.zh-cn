@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92ff867d98b83f1934972a576df8295c3f9ca79d
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228410"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>数据库邮件：邮件已排队，但未送达 
@@ -54,18 +54,18 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 “未发送”状态表示[数据库邮件外部程序](database-mail-external-program.md)尚未处理电子邮件  。 数据库邮件外部程序可能在处理邮件方面滞后；外部程序处理邮件的速度取决于网络条件、重试超时、邮件量以及 SMTP 服务器的容量。 如果仍然存在问题，请考虑使用多个配置文件在多个 SMTP 服务器之间分配邮件。
 
-检查已成功发送的邮件的最新修改日期。 如果上次成功发送发生在一段时间以前，请检查 sysmail_event_log 视图，验证外部程序是否由 Service Broker 成功启动。 如果上一次尝试没有启动外部程序，请验证数据库邮件外部程序是否位于正确目录中，并且 SQL Server 服务帐户是否具有运行可执行文件的权限。
+检查已成功传送的邮件的最新修改日期。 如果上次成功发送发生在一段时间以前，请检查 sysmail_event_log 视图，验证外部程序是否由 Service Broker 成功启动。 如果上一次尝试没有启动外部程序，请验证数据库邮件外部程序是否位于正确目录中，并且 SQL Server 服务帐户是否具有运行可执行文件的权限。
 
    > [!NOTE]
    > 若要删除旧的未发送邮件，请等待无法送达的邮件成为队列中最早的邮件，然后使用 [sysmail_delete_mailitems_sp](../system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) 删除它们。
 
 ## <a name="message-status-retrying"></a>“正在重试”邮件状态
 
-正在重试的状态表示数据库邮件外部程序已经尝试将邮件发送到 SMTP 服务器，但没有成功。 这通常是由网络中断、SMTP 服务器故障或数据库邮件帐户配置不正确导致的。 邮件发送最终不是成功就是失败，并在事件日志中记录一条消息。
+正在重试的状态表示数据库邮件外部程序已经尝试将邮件传送到 SMTP 服务器，但没有成功。 这通常是由网络中断、SMTP 服务器故障或数据库邮件帐户配置不正确导致的。 邮件传送最终不是成功就是失败，并在事件日志中记录一条消息。
 
 ## <a name="message-status-sent"></a>“已发送”邮件状态
 
-“已发送”状态表示数据库邮件外部程序已将电子邮件成功发送给 SMTP 服务器  。 如果邮件没有抵达目标地址，说明 SMTP 服务器从数据库邮件外部程序接受了邮件，但未将邮件发送给最终收件人。 请检查 SMTP 服务器的日志，或与 SMTP 服务器的管理员联系。 还可以使用 Outlook Express 等其他客户端来测试 SMTP 邮件服务器。
+“已发送”状态表示数据库邮件外部程序已将电子邮件成功发送给 SMTP 服务器  。 如果邮件没有抵达目标地址，说明 SMTP 服务器从数据库邮件外部程序接受了邮件，但未将邮件传送给最终收件人。 请检查 SMTP 服务器的日志，或与 SMTP 服务器的管理员联系。 您还可以使用另外的客户端（如 Outlook Express）来测试 SMTP 邮件服务器。
 
 ## <a name="message-status-failed"></a>“失败”邮件状态
 

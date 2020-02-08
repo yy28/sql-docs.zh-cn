@@ -53,7 +53,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 'input'   
 指定一个表达式，其计算结果为要对其执行哈希操作的字符或二进制字符串。  
   
- 输出符合算法标准：MD2、MD4 和 MD5 为 128 位（即 16 个字节）；SHA 和 SHA1 为 160 位（即 20 个字节）；SHA2_256 为 256 位（即 32 个字节），SHA2_512 为 512 位（即 64 个字节）。  
+ 输出符合算法标准：MD2、MD4 和 MD5 为 128 位（16 个字节）；SHA 和 SHA1 为 160 位（20 个字节）；SHA2_256 为 256 位（32 个字节），SHA2_512 为 512 位（64 个字节）。  
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
   
@@ -69,7 +69,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 
 ## <a name="examples"></a>示例  
 ### <a name="return-the-hash-of-a-variable"></a>返回变量的哈希  
- 以下示例返回变量 `SHA2_256` 中存储的 nvarchar 数据的  **哈希值**`@HashThis`。  
+ 以下示例返回变量 `@HashThis` 中存储的 nvarchar 数据的 `SHA2_256` 哈希值  。  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  
@@ -78,7 +78,7 @@ SELECT HASHBYTES('SHA2_256', @HashThis);
 ```  
   
 ### <a name="return-the-hash-of-a-table-column"></a>返回表列的哈希  
- 下面的示例返回 `c1` 表 `Test1` 列中值的 SHA2_256 哈希。  
+ 下面的示例返回 `Test1` 表 `c1` 列中值的 SHA2_256 哈希。  
   
 ```sql  
 CREATE TABLE dbo.Test1 (c1 nvarchar(32));  

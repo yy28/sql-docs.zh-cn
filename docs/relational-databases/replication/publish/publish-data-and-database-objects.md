@@ -41,13 +41,13 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c0e87750bb408e617a94185ad85b101e8893711
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5db7d4d73c4d6c03ce31935a9eb874bdd605fa99
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769903"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287602"
 ---
 # <a name="publish-data-and-database-objects"></a>发布数据和数据库对象
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "68769903"
 -   发布的名称和说明。  
   
  有关如何使用发布的信息，请参阅下列主题：    
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [创建发布](../../../relational-databases/replication/publish/create-a-publication.md)    
 -   [定义项目](../../../relational-databases/replication/publish/define-an-article.md)    
 -   [查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
 -   [查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
@@ -97,7 +97,7 @@ ms.locfileid: "68769903"
   
 -   [筛选已发布数据](../../../relational-databases/replication/publish/filter-published-data.md)    
 -   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
+-   [合并复制的项目选项](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  为复制发布表时，可以指定应将哪些架构对象复制到订阅服务器。例如，已声明的引用完整性（主键约束、引用约束和唯一约束）、索引、用户 DML 触发器（不能复制的 DDL 触发器）、扩展属性和排序规则。 仅在发布服务器和订阅服务器之间的初始同步中复制扩展属性。 如果在初始同步之后添加或修改扩展属性，则不会复制该更改。  
@@ -203,7 +203,7 @@ ms.locfileid: "68769903"
   
 -   如果在多个支持排队更新订阅的事务发布中发布项目，那么对于所有发布中的项目，下列属性必须具有相同值：  
   
-    |属性|sp_addarticle 中的参数|  
+    |properties|sp_addarticle 中的参数|  
     |--------------|---------------------------------|  
     |标识范围管理|\@auto_identity_range  （已弃用）和 \@identityrangemangementoption |  
     |发布服务器标识范围|**\@pub_identity_range**|  
@@ -214,7 +214,7 @@ ms.locfileid: "68769903"
   
 -   如果在多个合并发布中发布项目，那么对于所有发布中的项目，下列属性必须具有相同值：  
   
-    |属性|sp_addmergearticle 中的参数|  
+    |properties|sp_addmergearticle 中的参数|  
     |--------------|--------------------------------------|  
     |列跟踪|**\@column_tracking**|  
     |架构选项|**\@schema_option**|  

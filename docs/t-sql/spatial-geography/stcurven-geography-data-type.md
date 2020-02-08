@@ -18,10 +18,10 @@ ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 19aec9ae5a0253e74ff8816fadcfdbb7a2a74001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042447"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN（geography 数据类型）
@@ -45,10 +45,10 @@ ms.locfileid: "68042447"
   
  CLR 返回类型：**SqlGeography**  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  如果 n < 1，则会引发 ArgumentOutOfRangeException  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果满足以下条件，则会返回 NULL  。  
   
 -   已声明 geography 实例，但未将其实例化   

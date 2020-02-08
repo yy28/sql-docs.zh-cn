@@ -22,10 +22,10 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904355"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 子句 (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "67904355"
   
 -   通过指定 FOR JSON，将查询结果格式化为 JSON  。  
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -164,9 +164,9 @@ JSON
   
      ---\-  
   
-     NULL  
+     Null  
   
-     NULL  
+     Null  
   
  在运行 SELECT 查询以便以浏览模式访问表之后，对于 tleft 表中的 c1 列，SELECT 查询的结果集包含两个 Null 值，这是因为在右外部联接语句中定义了该列。 因此，您无法在结果集中区分源自该表的 Null 值和右外部联接语句引入的 Null 值。 如果必须忽略结果集的 Null 值，则可能收到错误结果。  
   
@@ -230,7 +230,7 @@ JSON
  BINARY BASE64  
  指定查询返回二进制 base64 编码格式的二进制数据。 使用 RAW 和 EXPLICIT 模式检索二进制数据时，必须指定该选项。 这是 AUTO 模式中的默认值。  
   
- TYPE  
+ 类型  
  指定查询以 xml 类型返回结果  。 有关详细信息，请参阅 [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md)。  
   
  ROOT [ ('RootName') ]     

@@ -15,10 +15,10 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d06cb92287537293739fa9bd7b1a86ea7ffd767a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012162"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>配置 user options 服务器配置选项
@@ -50,7 +50,7 @@ ms.locfileid: "68012162"
   
 -   下表列出并说明了 **user options**的配置值。 并非所有配置值都是相互兼容的。 例如，不能同时设置 ANSI_NULL_DFLT_ON 和 ANSI_NULL_DFLT_OFF。  
   
-    |ReplTest1|配置|描述|  
+    |值|配置|说明|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|控制执行期间或延迟的约束检查。|  
     |2|IMPLICIT_TRANSACTIONS|对于 DBLIB 网络库连接，控制执行语句时是否隐式启动事务。 IMPLICIT_TRANSACTIONS 设置对 ODBC 或 OLEDB 连接没有影响。|  

@@ -11,10 +11,10 @@ ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8076434e550f27ac292eec1b7385fce93d60e3ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295549"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution（SSISDB 数据库）
@@ -52,13 +52,13 @@ catalog.create_execution [@folder_name = folder_name
  包含要执行的包的名称。 package_name  为 nvarchar(260)  。  
   
  [@reference_id =] reference_id   
- 环境引用的唯一标识符。 此参数可选。 reference_id 为 bigint   。  
+ 环境引用的唯一标识符。 此参数是可选的。 reference_id 为 bigint   。  
   
  [@use32bitruntime =] use32bitruntime   
- 指示是否应使用 32 位运行时在 64 位操作系统上运行包。 使用值 1 表示在 64 位操作系统上运行时，使用 32 位运行时执行此包。 使用值 0 表示在 64 位操作系统上运行时，使用 64 位运行时执行此包。 此参数可选。 Use32bitruntime  为 bit  。  
+ 指示是否应使用 32 位运行时在 64 位操作系统上运行包。 使用值 1 表示在 64 位操作系统上运行时，使用 32 位运行时执行此包。 使用值 0 表示在 64 位操作系统上运行时，使用 64 位运行时执行此包。 此参数是可选的。 Use32bitruntime  为 bit  。  
  
  [@runinscaleout =] runinscaleout   
- 指示执行是否在 Scale Out 中进行。使用值 1 在 Scale Out 中执行包。使用值 0 执行包，而无需 Scale Out。此参数可选。 如果未指定，其值在 [SSISDB].[catalog].[catalog_properties] 中设置为 DEFAULT_EXECUTION_MODE。 runinscaleout  为 bit  。 
+ 指示执行是否在 Scale Out 中进行。使用值 1 在 Scale Out 中执行包。使用值 0 执行包，而无需 Scale Out。此参数是可选的。 如果未指定，其值在 [SSISDB].[catalog].[catalog_properties] 中设置为 DEFAULT_EXECUTION_MODE。 runinscaleout  为 bit  。 
  
 [@useanyworker =] useanyworker   
 指示是否允许任何 Scale Out Worker 执行相应操作。
@@ -67,13 +67,13 @@ catalog.create_execution [@folder_name = folder_name
 
 -   使用值 0 指示并非允许所有 Scale Out Workers 执行包。 将 `@useanyworker` 设为 false 时，必须指定通过使用 Scale Out Manager 或调用存储过程 `[catalog].[add_execution_worker]` 允许运行包的辅助角色。 如果指定的辅助角色已在运行另一个包，则该辅助角色会先完成运行当前的包，然后再请求执行另一个。
 
-此参数可选。 如果未指定，其值设置为 1。 useanyworker  为 bit  。 
+此参数是可选的。 如果未指定，其值设置为 1。 useanyworker  为 bit  。 
   
  [@execution_id =] execution_id   
  返回执行实例的唯一标识符。 execution_id 为 bigint   。  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用执行来指定参数值，包在单个包执行实例中将使用这些参数值。  
   
  如果使用 reference_id  参数指定某个环境引用，则该存储过程将使用对应环境变量中的文本值或引用值填充项目和包参数。 如果指定了环境引用，则在包执行过程中将使用默认参数值。 若要精确确定将哪些值用于特定执行实例的值，应使用此存储过程中的 execution_id  输出参数值，并查询 [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) 视图。  
@@ -101,7 +101,7 @@ GO
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  

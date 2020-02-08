@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680966"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 项目和包
@@ -63,9 +63,9 @@ ms.locfileid: "71680966"
 ## <a name="features-of-project-deployment-model"></a>项目部署模型的功能  
  下表列出的功能仅可用于为项目部署模型开发的项目。  
   
-|功能|描述|  
+|Feature|说明|  
 |-------------|-----------------|  
-|Parameters|参数指定包将使用的数据。 您可以分别使用包参数和项目参数将参数范围限定在包级别或项目级别。 参数可用于表达式或任务中。 在将项目部署到目录时，可为每个参数分配文字值，或者使用在设计时分配的默认值。 还可以引用环境变量来代替文字值。 在包执行时解析环境变量值。|  
+|parameters|参数指定包将使用的数据。 您可以分别使用包参数和项目参数将参数范围限定在包级别或项目级别。 参数可用于表达式或任务中。 在将项目部署到目录时，可为每个参数分配文字值，或者使用在设计时分配的默认值。 还可以引用环境变量来代替文字值。 在包执行时解析环境变量值。|  
 |环境|环境是可由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目引用的变量的容器。 每个项目可以具有多个环境引用，但包执行的单个实例只能引用来自单个环境的变量。 环境允许您对分配给包的值进行组织。 例如，您可以具有名为“开发”、“测试”和“生产”的环境。|  
 |环境变量|环境变量定义可在包执行过程中赋给参数的文字值。 若要使用某一环境变量，请创建环境引用（在与具有参数的环境相对应的项目中），向该环境变量的名称分配某一参数值，并且在配置执行实例时指定相应的环境引用。|  
 |SSISDB 目录|所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象都在某一 SQL Server 实例上称作 SSISDB 目录的数据库中进行存储和管理。 通过该目录，您可以使用文件夹组织您的项目和环境。 每个 SQL Server 实例可具有一个目录。 每个目录中可具有零个或多个文件夹。 每个文件夹可具有零个或多个项目以及零个或多个环境。 该目录中的文件夹也可以用作针对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象的权限的边界。|  
@@ -135,7 +135,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 1.  在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中打开该项目，然后在解决方案资源管理器中，右键单击该项目并单击“转换为项目部署模型”  。  
   
-     -或 -  
+     -或-  
   
      从 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击“项目”  节点并选择“导入包”  。  
   
@@ -145,17 +145,17 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 1.  在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]并打开项目，然后从 **“项目”** 菜单，选择 **“部署”** 以便启动 **“Integration Services 部署向导”** 。  
   
-     或多个  
+     或  
   
      在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的对象资源管理器中，展开 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > SSISDB  节点，并查找想要部署的项目的项目文件夹。 右键单击“项目”  文件夹，然后单击“部署项目”  。  
   
-     或多个  
+     或  
   
      在命令提示符下，从 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 运行 **isdeploymentwizard.exe**。 在 64 位计算机上， **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**中还有 32 位版本的工具。  
   
 2.  在 **“选择源”** 页上，单击 **“项目部署文件”** 以便选择项目的部署文件。  
   
-     或多个  
+     或  
   
      单击 **“Integration Services 目录”** 以便选择已部署到 SSISDB 目录的项目。  
   
@@ -166,7 +166,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 ###  <a name="DeployWizard"></a> 通过使用 Integration Services 部署向导部署包  
   
-1.  在命令提示符下，从 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 运行 **isdeploymentwizard.exe**。 在 64 位计算机上， **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn** 中还有 32 位版本的工具。  
+1.  在命令提示符下，从 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 运行 **isdeploymentwizard.exe**。 在 64 位计算机上， **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**中还有 32 位版本的工具。  
   
 2.  在“选择源”  页上，切换到“包部署模型”  。 然后，选择包含源包的文件夹，并配置包。  
   
@@ -296,7 +296,7 @@ static void Main()
 
  - 在 Windows Search 中键入 **“SQL Server 部署向导”** 
 
- 或多个
+ 或
 
  - 在 SQL Server 安装文件夹下搜索可执行文件 ISDeploymentWizard.exe；例如  ：“C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn”。 
  
@@ -363,7 +363,7 @@ static void Main()
   
 2.  右键单击“环境”  文件夹，然后单击“创建环境”  。  
   
-3.  为环境键入名称，并添加说明（可选）。 单击“确定”  。  
+3.  为环境键入名称，并添加说明（可选）。 单击“确定”。   
   
 4.  右键单击该新环境，然后单击“属性”  。  
   
@@ -416,7 +416,7 @@ static void Main()
   
     2.  单击 **“使用环境变量”** ，然后选择已创建的环境变量。  
   
-14. 单击 **“确定”** 两次以保存所做的更改。  
+14. 单击“确定”两次以保存更改。   
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>使用存储过程部署和执行 SSIS 包
 
@@ -593,7 +593,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **使用 SQL Server 身份验证**  
  当户使用指定的登录名和密码从不可信连接进行连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将通过检查是否已设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户以及指定的密码是否与以前记录的密码匹配，对该连接进行身份验证。 如果未设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户，则身份验证失败，并且用户会收到一条错误消息。  
   
- **User name**  
+ **用户名**  
  使用 SQL Server 身份验证时，指定用户名。  
   
  **密码**  
@@ -606,7 +606,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **包名称**  
  列出包文件。  
   
- **“状态”**  
+ **Status**  
  指示包是否已准备好转换为项目部署模型。  
   
  **消息**  
@@ -671,16 +671,16 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="configurations"></a> 设置“选择配置”页上的选项  
  选择您要用参数替换的包配置。  
   
- **“包”**  
+ **包**  
  列出包文件。  
   
- **类型**  
+ 类型   
  列出配置类型，如 XML 配置文件。  
   
  **配置字符串**  
  列出配置文件的路径。  
   
- **“状态”**  
+ **Status**  
  显示配置的状态消息。 单击该消息可以查看整个消息文本。  
   
  **添加配置**  
@@ -697,7 +697,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="createParameters"></a> 设置“创建参数”页上的选项  
  选择每个配置属性的参数名称和作用域。  
   
- **“包”**  
+ **包**  
  列出包文件。  
   
  **参数名称**  
@@ -713,7 +713,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **范围**  
  列出参数的作用域。  
   
- **ReplTest1**  
+ **值**  
  列出参数值。  
   
  单击值字段旁边的省略号按钮以配置参数属性。  
@@ -736,7 +736,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="conversion"></a> 设置执行转换的选项  
  “执行转换”页显示项目转换的状态。  
   
- **操作**  
+ **Action**  
  列出特定的转换步骤。  
   
  **结果**  

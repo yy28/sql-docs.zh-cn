@@ -11,10 +11,10 @@ ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8ced076a2f8985e1734b36d4795cf81ffe538278
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292794"
 ---
 # <a name="excel-custom-properties"></a>Excel 自定义属性
@@ -28,7 +28,7 @@ ms.locfileid: "71292794"
   
  下表介绍 Excel 源的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|描述|  
+|属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|用来访问数据库的模式。 可能的值包括： **“打开行集”** 、 **“从变量打开行集”** 、 **“SQL 命令”** 和 **“变量中的 SQL 命令”** 。 默认值为 **“打开行集”** 。|  
 |CommandTimeout|Integer|命令超时之前的秒数。如果值为 0，则表示无限期超时。<br /><br /> **注意** ：此属性未在 **Excel 源编辑器**中提供，但可以使用 **高级编辑器**进行设置。|  
@@ -48,7 +48,7 @@ ms.locfileid: "71292794"
   
  下表介绍 Excel 目标的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|描述|  
+|属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer（枚举）|一个指定目标如何访问其目标数据库的值。<br /><br /> 此属性可以具有下列值之一：<br /><br /> “OpenRowset”(0) - 需要提供表或视图的名称  。<br /><br /> “OpenRowset from Variable”(1) - 需要提供包含表或视图名称的变量的名称  。<br /><br /> “OpenRowset Using Fastload” (3) - 需要提供表或视图名称  。<br /><br /> “OpenRowset Using Fastload from Variable”(4) - 需要提供包含表或视图名称的变量的名称  。<br /><br /> “SQL 命令”(2) - 需要提供 SQL 语句  。|  
 |CommandTimeout|Integer|SQL 命令在超时前可以运行的最大秒数。值 **0** 表示不限制时间。 此属性的默认值为 **0**。<br /><br /> 注意：此属性在 Excel 目标编辑器  中未提供，但可以使用“高级编辑器”  进行设置。|  

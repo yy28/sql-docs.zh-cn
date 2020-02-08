@@ -8,10 +8,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710464"
 ---
 # <a name="type-mapping-with-polybase"></a>PolyBase 的类型映射
@@ -33,26 +33,26 @@ ms.locfileid: "71710464"
 
 | SQL 数据类型 | .NET 数据类型            | Hive 数据类型 | Hadoop/Java 数据类型 | 注释                       |
 | ------------- | ------------------------- | -------------- | --------------------- | ------------------------------ |
-| TINYINT       | Byte                      | TINYINT        | ByteWritable          | 仅用于无符号数字。     |
-| SMALLINT      | Int16                     | SMALLINT       | ShortWritable         |
-| INT           | Int32                     | INT            | IntWritable           |
-| BIGINT        | Int64                     | BIGINT         | LongWritable          |
+| tinyint       | Byte                      | tinyint        | ByteWritable          | 仅用于无符号数字。     |
+| smallint      | Int16                     | smallint       | ShortWritable         |
+| int           | Int32                     | int            | IntWritable           |
+| bigint        | Int64                     | bigint         | LongWritable          |
 | bit           | Boolean                   | boolean        | BooleanWritable       |
-| FLOAT         | 双精度                    | double         | DoubleWritable        |
-| REAL          | Single                    | FLOAT          | FloatWritable         |
+| FLOAT         | Double                    | double         | DoubleWritable        |
+| real          | Single                    | FLOAT          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
-| SMALLMONEY    | Decimal                   | double         | DoubleWritable        |
-| NCHAR         | String<br /><br /> Char[] | string         | Varchar               |
-| NVARCHAR      | String<br /><br /> Char[] | string         | Varchar               |
-| char          | String<br /><br /> Char[] | string         | Varchar               |
-| varchar       | String<br /><br /> Char[] | string         | Varchar               |
-| BINARY        | Byte[]                    | BINARY         | BytesWritable         | 适用于 Hive 0.8 及更高版本。 |
-| varbinary     | Byte[]                    | BINARY         | BytesWritable         | 适用于 Hive 0.8 及更高版本。 |
-| 日期          | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| smalldatetime | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| datetime2     | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| DATETIME      | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| time          | TimeSpan                  | TIMESTAMP      | TimestampWritable     |
+| smallmoney    | Decimal                   | double         | DoubleWritable        |
+| nchar         | String<br /><br /> Char[] | 字符串         | Varchar               |
+| nvarchar      | String<br /><br /> Char[] | 字符串         | Varchar               |
+| char          | String<br /><br /> Char[] | 字符串         | Varchar               |
+| varchar       | String<br /><br /> Char[] | 字符串         | Varchar               |
+| binary        | Byte[]                    | binary         | BytesWritable         | 适用于 Hive 0.8 及更高版本。 |
+| varbinary     | Byte[]                    | binary         | BytesWritable         | 适用于 Hive 0.8 及更高版本。 |
+| date          | DateTime                  | timestamp      | TimestampWritable     |
+| smalldatetime | DateTime                  | timestamp      | TimestampWritable     |
+| datetime2     | DateTime                  | timestamp      | TimestampWritable     |
+| datetime      | DateTime                  | timestamp      | TimestampWritable     |
+| time          | TimeSpan                  | timestamp      | TimestampWritable     |
 | Decimal       | Decimal                   | Decimal        | BigDecimalWritable    | 适用于 Hive 0.11 及更高版本。 |
 
 <!--SQL Server 2019-->
@@ -62,11 +62,11 @@ ms.locfileid: "71710464"
 
 | Oracle 数据类型 | SQL Server 类型 | 
 | -------------    | --------------- |
-|float             |float            |
+|Float             |Float            |
 |NUMBER            |Decimal          |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
-|BINARY_DOUBLE     |float            | 
+|BINARY_DOUBLE     |Float            | 
 |CHAR              |Char             |
 |VARCHAR2          |Varchar          | 
 |NVARCHAR2         |nvarchar         | 
@@ -78,7 +78,7 @@ ms.locfileid: "71710464"
 |ROWID             |Varchar          |
 |UROWID            |Varchar          | 
 |DATE              |Datetime2        |
-|timestamp         |Datetime2        | 
+|TIMESTAMP         |Datetime2        | 
 
 类型不匹配  
 
@@ -93,13 +93,13 @@ Float：  Oracle 支持的浮点精度为 126，低于 SQL Server 支持的精�
 
 | BSON 数据类型     | SQL Server 类型 |
 | ------------------ | --------------- |
-| 双精度             | float           |
+| Double             | Float           |
 | String             | nvarchar        |
 | Binary data        | nvarchar        |
 | 对象 ID          | nvarchar        |
 | Boolean            | bit             |
-| date               | Datetime2       |
-| 32-bit integer     | smallint             |
+| Date               | Datetime2       |
+| 32-bit integer     | Int             |
 | 时间戳          | nvarchar        |
 | 64-bit integer     | BigInt          |
 |Decimal 128         | Decimal         | 
@@ -119,13 +119,13 @@ MongoDB 使用 BSON 文档来存储数据记录。 与之前的方案不同，BS
 
 | Teradata 数据类型 | SQL Server 类型 | 
 | -------------      | -------------   |
-|整数             |smallint              |
+|INTEGER             |Int              |
 |SMALLINT            |SmallInt         |
-|bigint              |BigInt           |
+|BIGINT              |BigInt           |
 |BYTEINT             |SmallInt         |
 |DECIMAL             |Decimal          |
 |FLOAT               |Decimal          |
-|BYTE                |二进制           |
+|BYTE                |Binary           |
 |VARBYTE             |Varbinary        |
 |BLOB                |varbinary        |
 |CHAR                |Nchar            |
@@ -134,11 +134,11 @@ MongoDB 使用 BSON 文档来存储数据记录。 与之前的方案不同，BS
 |Graphic             |Nchar            |
 |JSON                |nvarchar         |
 |VARGRAPHIC          |nvarchar         |
-|DATE                |date             |
-|timestamp           |Datetime2        |
-|TIME                |Time             |
-|TIME WITH TIME ZONE |Time             |
-|TIMESTAMP WITH TIME ZONE|Time         |
+|DATE                |Date             |
+|TIMESTAMP           |Datetime2        |
+|TIME                |时间             |
+|TIME WITH TIME ZONE |时间             |
+|TIMESTAMP WITH TIME ZONE|时间         |
 
 ::: moniker-end
 

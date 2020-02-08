@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68698306"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>用于迁移评估的 PowerShell Cmdlet
@@ -44,7 +44,7 @@ Save-SqlMigrationReport
 ;
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>parameters
 
 下表对这些参数进行了说明。
 
@@ -57,16 +57,16 @@ Save-SqlMigrationReport
 
 反之，如果未  指定 `-InputObject`，则必须指定 `-Server` 和 `-Database`。 如果指定 `-Server`，则可以选择通过指定 `-Schema` 或 `-Object` 或是同时指定两者来缩小范围。
 
-| 参数名称 | 描述 |
+| 参数名称 | 说明 |
 | :------------- | :---------- |
-| “数据库” | 目标 SQL Server 数据库的名称。 强制（当 `-Server` 为强制参数时）。<br/><br/> 在 SQLPS 中为可选。 |
-| FolderPath | 该 cmdlet 应在其中存储所生成的报告的文件夹。<br/><br/> 必需的。 |
+| 数据库 | 目标 SQL Server 数据库的名称。 强制（当 `-Server` 为强制参数时）。<br/><br/> 在 SQLPS 中为可选。 |
+| FolderPath | 该 cmdlet 应在其中存储所生成的报告的文件夹。<br/><br/> 必需。 |
 | InputObject | 该 cmdlet 设定为目标的 SMO 对象。<br/><br/> 如果未提供 `-Server`，则在 Windows Powershell 环境中为强制参数。<br/><br/> 在 SQLPS 中为可选。 |
 | MigrationType | 该 cmdlet 设定为目标的迁移方案的类型。 目前，唯一的值是默认“OLTP”  。<br/><br/> 可选。 |
 | Object | 要报告的对象的名称。 可以是表或存储过程。 |
-| Password | 必需（当 `-Username` 是必需参数时）。 |
+| 密码 | 必需（当 `-Username` 是必需参数时）。 |
 | 架构 | 拥有要报告的对象的架构的名称。<br/><br/> 可选。 |
-| “服务器” | 目标 SQL Server 实例的名称。 如果未提供 `-InputObject` 参数，则在 Windows Powershell 环境中为强制参数。<br/><br/> 在 SQLPS 中为可选。 |
+| 服务器 | 目标 SQL Server 实例的名称。 如果未提供 `-InputObject` 参数，则在 Windows Powershell 环境中为强制参数。<br/><br/> 在 SQLPS 中为可选。 |
 | 用户名 | 当通过 SQL Server 身份验证（而不是 Windows 身份验证）进行连接时是必需的。 否则省略。 |
 | &nbsp; | &nbsp; |
 
@@ -111,7 +111,7 @@ Save-SqlMigrationReport `
 
 该 HTML 主要是具有以下标头的由两列组成的表：
 
-- 描述
+- 说明
 - 验证结果
 
 接下来是一个表的 HTML 报告的实际示例。
@@ -176,7 +176,7 @@ Save-SqlMigrationReport `
 
 接下来是表的大致内容。
 
-| 描述 | 验证结果 |
+| 说明 | 验证结果 |
 | :---------- | :---------------- |
 | 此表未定义不支持的数据类型。 | 已成功 |
 | 此表未定义稀疏列。 | 已成功 |

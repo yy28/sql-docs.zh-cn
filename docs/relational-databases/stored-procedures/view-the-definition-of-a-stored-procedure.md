@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: de250fd158bdd02764e992e0ccbb69e072b4c6ab
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907338"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>查看存储过程的定义
@@ -61,7 +61,7 @@ ms.locfileid: "72907338"
   
 3.  展开“存储过程”，右键单击该过程，再单击“编写存储过程脚本为”，然后单击下列选项之一：   “CREATE 到”、“ALTER 到”或“DROP 和 CREATE 到”。     
   
-4.  选择 **“新建查询编辑器窗口”** 。 这将显示过程定义。  
+4.  选择“新建查询编辑器窗口”  。 这将显示过程定义。  
 
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查询编辑器中查看过程的定义**  

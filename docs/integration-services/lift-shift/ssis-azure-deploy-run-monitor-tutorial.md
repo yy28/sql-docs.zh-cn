@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 42250d8edbd646f9bd89f3663f2591b3404fe05f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007938"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>教程：在 Azure 中部署和运行 SQL Server Integration Services (SSIS) 包
@@ -48,23 +48,23 @@ ms.locfileid: "68007938"
 -   选择 `SSISDB` 数据库以供连接。
 
 > [!IMPORTANT]
-> Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
+> Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
 
 1. 打开 SQL Server Management Studio。
 
-2. **连接到该服务器**。 在“连接到服务器”对话框中，输入以下信息  ：
+2. **连接到该服务器**。 在“连接到服务器”对话框中，输入以下信息： 
 
-   | 设置       | 建议的值 | 描述 | 
+   | 设置       | 建议的值 | 说明 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
    | **服务器名称** | 完全限定的服务器名称 | 名称应采用此格式：**mysqldbserver.database.windows.net**。 如果需要服务器名称，请参阅[连接到 Azure 上的 SSISDB 目录数据库](ssis-azure-connect-to-catalog-database.md)。 |
    | **身份验证** | SQL Server 身份验证 | 无法通过 Windows 身份验证连接到 Azure SQL 数据库。 |
    | **登录** | 服务器管理员帐户 | 在创建服务器时指定的帐户。 |
-   | **密码** | 服务器管理员帐户的密码 | 在创建服务器时指定的密码。 |
+   | **密码** | 服务器管理员帐户的密码 | 创建服务器时指定的密码。 |
 
 3. **连接到 SSISDB 数据库**。 选择“选项”  展开“连接到服务器”  对话框。 在展开的“连接到服务器”  对话框中，选择“连接属性”  选项卡。在“连接到数据库”  字段中，选择或输入 `SSISDB`。
 
-4. 然后选择“连接”  。 对象资源管理器窗口随即在 SSMS 中打开。 
+4. 然后选择“连接”  。 对象资源管理器窗口在 SSMS 中打开。 
 
 5. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”，查看 SSIS 目录数据库中的对象   。
 
@@ -94,7 +94,7 @@ ms.locfileid: "68007938"
     -   若要部署位于 SSIS 目录中的项目，请选择“Integration Services 目录”，然后输入目录中该项目的服务器名称和路径  。
     -   选择“下一步”  查看“选择目标”  页。
   
-3.  在“选择目标”  页上，选择项目目标。
+3.  在“选择目标”页上，选择项目的目标  。
     -   使用 `<server_name>.database.windows.net` 格式输入完全限定服务器名称。
     -   提供身份验证信息，然后选择“连接”  。
     -   然后选择“浏览”  ，在 SSISDB 中选择目标文件夹。
@@ -102,7 +102,7 @@ ms.locfileid: "68007938"
   
 4.  在“查看”页上，查看所选的设置  。
     -   可以通过选择“上一步”  或选择左窗格中的任意步骤来更改所做的选择。
-    -   选择“部署”  启动部署过程。
+    -   选择“部署”启动部署进程  。
 
     > [!NOTE]
     > 如果收到错误消息“没有任何活动工作代理。(.Net SqlClient 数据提供程序)”，请确保 Azure-SSIS Integration Runtime 正在运行  。 如果尝试在 Azure SSIS IR 处于停止状态时进行部署，则会发生此错误。

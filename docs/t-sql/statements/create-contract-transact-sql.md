@@ -22,10 +22,10 @@ ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2e7dbdb8ea5a422b91f290478eeca4dfc9b21cbc
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064641"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73064641"
 
   创建新约定。 约定用于定义在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话中所使用的消息类型，还用于确定会话的哪一端可以发送该类型的消息。 每个会话都要遵循一个约定。 当会话开始时，启动服务为会话指定约定。 目标服务指定该目标服务将接受其会话的约定。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -75,7 +75,7 @@ CREATE CONTRACT contract_name
  [ DEFAULT ]  
  指示此约定支持默认消息类型的消息。 默认情况下，所有数据库都包含名为 DEFAULT 的消息类型。 此消息类型使用的验证为 NONE。 在此子句的上下文中，DEFAULT 不是关键字，必须作为标识符进行分隔。 Microsoft SQL Server 还提供了 DEFAULT 约定，该约定指定 DEFAULT 消息类型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在约定中消息类型的顺序并不重要。 目标收到第一条消息之后，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 允许会话的任一端在任何时候发送允许该会话端发送的任何消息。 例如，如果会话发起程序可以发送消息类型 //Adventure-Works.com/Expenses/SubmitExpense，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 允许发起程序在会话过程中发送任意数量的 SubmitExpense 消息   。  
   
  无法更改约定中的消息类型和方向。 若要更改约定的 AUTHORIZATION，请使用 ALTER AUTHORIZATION 语句。  

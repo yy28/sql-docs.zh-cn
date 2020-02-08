@@ -11,10 +11,10 @@ ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909145"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 连接疑难解答
@@ -35,7 +35,7 @@ ms.locfileid: "72909145"
 1. 安装了 PolyBase 的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]RTM CU6 / [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3 / [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 或更高版本
 1. 受 Kerberos（Active Directory 或 MIT）保护的 Hadoop 群集（Cloudera 或 Hortonworks）
 
-## <a name="introduction"></a>简介
+## <a name="introduction"></a>介绍
 这有助于先了解高级别的 Kerberos 协议。 涉及到三个执行组件：
 
 1. Kerberos 客户端 (SQL Server)
@@ -100,7 +100,7 @@ PolyBase 具有以下包含 Hadoop 群集属性的配置 XML 文件：
 
 ## <a name="arguments"></a>参数
 
-| 参数 | 描述|
+| 参数 | 说明|
 | --- | --- |
 | *Name Node Address* | 名称节点的 IP 或 FQDN。 指的是 CREATE EXTERNAL DATA SOURCE T-SQL 中的“LOCATION”参数。|
 | *Name Node Port* | 名称节点的端口。 指的是 CREATE EXTERNAL DATA SOURCE T-SQL 中的“LOCATION”参数。 例如，8020。 |
@@ -229,7 +229,7 @@ PolyBase 将尝试访问 HDFS 并将失败，因为请求不包含必要的服�
 
 如果仍然无法访问 Kerberos，请按照以下步骤进行调试：
 
-1. 确保可从外部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问 Kerberos HDFS 数据。 您可以： 
+1. 确保可从外部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问 Kerberos HDFS 数据。 可以： 
 
     - 编写自己的 Java 程序或
     - 使用 PolyBase 安装文件夹中的 `HdfsBridge` 类。 例如：

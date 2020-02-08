@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908028"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>开始使用列存储进行实时运营分析
@@ -28,7 +28,7 @@ ms.locfileid: "72908028"
   
 -   **复杂性。** 实施 ETL 可能需要编码相当多的代码，尤其是只想要加载修改的行时。 识别哪些行已被修改是一个复杂的过程。  
   
--   **高成本。** 实施 ETL 需要付出采购额外硬件和软件许可证的成本。  
+-   **成本。** 实施 ETL 需要付出采购额外硬件和软件许可证的成本。  
   
 -   **数据滞后时间。** 实施 ETL 会增大运行分析的时间延迟。 例如，如果 ETL 作业在每个工作日结束时运行，分析查询会针对至少一天的数据运行。 对于许多企业来说，这种延迟不可接受，因为企业依赖于实时分析数据。 例如，欺诈检测需要实时分析操作数据。  
   

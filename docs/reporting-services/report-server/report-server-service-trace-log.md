@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68254867"
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
@@ -32,7 +32,7 @@ ms.locfileid: "68254867"
 
 在配置文件 ReportingServicesService.exe.config 中管理跟踪日志行为  。可在以下文件夹路径中找到该配置文件：  
   
- `\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin`中管理跟踪日志行为。  
+ `\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin` 列中的一个值匹配。  
   
  下面的示例演示 **RStrace** 设置的 XML 结构。 **DefaultTraceSwitch** 的值确定添加到日志的信息种类。 除了 **Components** 属性以外，各个配置文件 **RStrace** 的值是相同的。  
   
@@ -55,15 +55,15 @@ ms.locfileid: "68254867"
   
  下表提供了有关每个设置的信息。  
   
-|设置|描述|值|  
+|设置|说明|值|  
 |-------------|-----------------|------------|  
 |**RStrace**|指定用于错误和跟踪的命名空间。||  
-|**DefaultTraceSwitch**|指定向 ReportServerService 跟踪日志报告的信息的级别。 每个级别都包含所有更低级别（用更小的数字表示）报告的信息。 建议您不要禁用跟踪。|有效值为<br /><br /> <br /><br /> 0= 禁用跟踪。 默认情况下，启用 ReportServerService 日志文件。 若要将其关闭，请将跟踪级别设为 0。<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式|  
+|**DefaultTraceSwitch**|指定向 ReportServerService 跟踪日志报告的信息的级别。 每个级别都包含所有更低级别（用更小的数字表示）报告的信息。 建议您不要禁用跟踪。|有效值是：<br /><br /> <br /><br /> 0= 禁用跟踪。 默认情况下，启用 ReportServerService 日志文件。 若要将其关闭，请将跟踪级别设为 0。<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式|  
 |**FileName**|指定日志文件名的第一部分。 日志文件名的其余部分由 **Prefix** 指定的值完成。||  
 |**FileSizeLimitMb**|指定跟踪日志大小的上限。 文件大小的单位为 MB。<br /><br /> 可通过设置跟踪级别（0 到 4）来控制要记录的内容的数量，从而控制文件的大小。 还可以指定要跟踪的组件。 如果在尚未达到 14 天过期时间之前日志文件已达到最大大小，将使用较新的项替换较旧的项。|有效值介于 0 到最大整数之间。 默认值为 32。 如果指定 0 或负数，报表服务器会将该值视为 1。|  
 |**KeepFilesForDays**|指定多少天后删除跟踪日志文件。|有效值介于 0 到最大整数之间。 默认值为 14。 如果指定 0 或负数，报表服务器会将该值视为 1。|  
 |**Prefix**|指定一个生成的值，该值可将日志实例彼此区分开。|默认情况下，跟踪日志文件名后面将附加时间戳值。 此值设置为“appdomain, tid, time”。 请不要修改此设置。|  
-|**TraceListeners**|指定输出跟踪日志内容的目标。 您可以通过使用逗号进行分隔来指定多个目标。|有效值为<br /><br /> <br /><br /> DebugWindow<br /><br /> File（默认值）<br /><br /> StdOut|  
+|**TraceListeners**|指定输出跟踪日志内容的目标。 您可以通过使用逗号进行分隔来指定多个目标。|有效值是：<br /><br /> <br /><br /> DebugWindow<br /><br /> File（默认值）<br /><br /> StdOut|  
 |**TraceFileMode**|指定跟踪日志是否包含 24 小时时段内的数据。 每天应当为每个组件设置唯一的跟踪日志。|此值设置为“Unique”（默认值）。 不要修改此值。|  
 |**组件类别**|按以下格式指定为其生成跟踪日志信息的组件以及跟踪级别：<br /><br /> \<component category>:\<tracelevel><br /><br /> 可以指定所有或部分组件 (**all**、 **RunningJobs**、 **SemanticQueryEngine**、 **SemanticModelGenerator**)。 如果您不想生成特定组件的信息，则可以禁用其跟踪（例如“SemanticModelGenerator:0”）。 请不要禁用 **all**的跟踪。<br /><br /> 如果要查看为每个语义查询生成的 Transact-SQL 语句，则可以设置“SemanticQueryEngine:4”。 Transact-SQL 语句记录到跟踪日志中。 下例说明将 Transact-SQL 语句添加到日志的配置设置：<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|组件类别可以设置为：<br /><br /> <br /><br /> **All** 用于跟踪未划分为特定类别的所有进程的常规报表服务器活动。<br /><br /> **RunningJobs** 用于跟踪正在进行中的报表或订阅操作。<br /><br /> **SemanticQueryEngine** 用于跟踪用户在基于模型的报表中执行即席数据浏览时处理的语义查询。<br /><br /> **SemanticModelGenerator** 用于跟踪模型生成。<br /><br /> **http** 用于启用报表服务器 HTTP 日志文件。 有关详细信息，请参阅 [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)。|  
 |组件类别的 trace level 值 |\<component category>:\<tracelevel><br /><br /> <br /><br /> 如果您不对组件追加跟踪级别，将使用为 **DefaultTraceSwitch** 指定的值。 例如，如果指定“all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator”，所有组件将使用默认跟踪级别。|有效的跟踪级别值包括：<br /><br /> <br /><br /> 0= 禁用跟踪<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式<br /><br /> 报表服务器的默认级别为“all:3”。|  

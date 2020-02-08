@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658794"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>教程：在 Java 中使用正则表达式 (regex) 搜索字符串
@@ -269,7 +269,7 @@ GO
 
 1. 右键单击该文件夹（例如 `C:\myJavaCode`），然后选择“属性”   > “安全性”  。
 2. 单击 **“编辑”** 。
-3. 单击 **“添加”** 。
+3. 单击“添加”  。
 4. 在“选择用户、计算机、服务帐户或组”  中：
    1. 单击“对象类型”  并确保选择“内置安全原则”  和“组”  。
    2. 单击“位置”  在列表顶部选择本地计算机名称。

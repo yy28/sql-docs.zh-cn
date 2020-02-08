@@ -16,10 +16,10 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093599"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server，Databases 对象
@@ -30,7 +30,7 @@ ms.locfileid: "68093599"
   
  下表说明了 SQL Server **Databases** 计数器。  
   
-|SQL Server Databases 计数器|描述|  
+|SQL Server Databases 计数器|说明|  
 |-----------------------------------|-----------------|  
 |**Active Transactions**|数据库的活动事务数。|  
 |**Avg Dist From EOL/LP Request**|对于最后一个 VLF 中的请求，每日志池请求与日志结尾的平均距离（字节）。| 
@@ -43,7 +43,7 @@ ms.locfileid: "68093599"
 |**Group Commit Time/sec**|每秒的组停滞时间（微秒）。|
 |**Log Bytes Flushed/sec**|刷新的日志字节总数。|  
 |**Log Cache Hit Ratio**|日志缓存所满足的日志缓存读取数所占的百分比。|  
-|**Log Cache Hit Ratio Base**|仅限内部使用。| 
+|**Log Cache Hit Ratio Base**|仅供内部使用。| 
 |**Log Cache Reads/sec**|每秒通过日志管理器缓存执行的读取数。|  
 |**Log File(s) Size (KB)**|数据库中所有事务日志文件的累计大小 (KB)。|  
 |**Log File(s) Used Size (KB)**|数据库中所有日志文件的累计已用大小。|  
@@ -63,7 +63,7 @@ ms.locfileid: "68093599"
 |**Log Pool Push Low Memory/sec**|内存过低导致的日志块推送失败率。|
 |**Log Pool Push No Free Buffer/sec**|可用缓冲区无法可用导致的日志块推送失败率。|
 |**Log Pool Req.Behind Trunc/sec**|日志池缓存由于请求的块位于截断 LSN 之后而未命中。|
-|**Log Pool Requests Base**|仅限内部使用。| 
+|**Log Pool Requests Base**|仅供内部使用。| 
 |**Log Pool Requests Old VLF/sec**|不在日志最后一个 VLF 中的日志池请求数。|  
 |**Log Pool Requests/sec**|日志池处理的日志块请求数。|  
 |**Log Pool Total Active Log Size**|共享缓存缓冲区管理器中存储的当前总活动日志（以字节为单位）。|
@@ -77,7 +77,7 @@ ms.locfileid: "68093599"
 |**Tracked transactions/sec**|数据库提交表中记录的已提交的事务数。|  
 |**Transactions/sec**|每秒为数据库启动的事务数。<br /><br /> **Transactions/sec** 不对仅限 XTP 的事务（本机编译存储过程启动的事务）进行计数。|  
 |**Write Transactions/sec**|在上一秒钟内写入数据库并提交的事务数。|  
-|**XTP 控制器 DLC 延迟基准**|仅限内部使用。| 
+|**XTP 控制器 DLC 延迟基准**|仅供内部使用。| 
 |**XTP 控制器 DLC 延迟/提取**|输入直接日志使用者和由 XTP 控制器检索的日志块之间的每秒平均延迟（以毫秒为单位）。|
 |**XTP 控制器 DLC 最高延迟**|XTP 控制器从直接日志使用者中提取时最高记录的延迟（以毫秒为单位）。|
 |**每秒处理的 XTP 控制器日志数**|XTP 控制器线程每秒处理的日志字节数。|
@@ -85,6 +85,6 @@ ms.locfileid: "68093599"
   
 ## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server，数据库副本](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
+ [SQL Server - 数据库副本](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
   

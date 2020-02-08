@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: ff3d3db1ab4fc3d02e8710cf482225523285c0a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031522"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68031522"
   
   AT TIME ZONE 实现依赖于 Windows 机制来跨时区转换 datetime  值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="return-value"></a>返回值  
  目标时区中的 datetimeoffset  值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  AT TIME ZONE 应用特定规则来转换 smalldatetime、datetime 和 datetime2 数据类型中的输入值，这些值位于受 DST 更改影响的区间     ：  
   
 -   如果将时钟向前拨，将当地时间出现与时钟调整持续时间相等的时差。 此持续时间通常为 1 小时，但它也可以是 30 或 45 分钟，具体取决于所在的时区。 落入该时差范围的时间点会按 DST 更改后的偏移量进行转换  。  

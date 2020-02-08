@@ -20,10 +20,10 @@ ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e33ca6d8afdb7aa9245bbdc6b0ad225dcd00dade
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982472"
 ---
 # <a name="x40x40options-transact-sql"></a>@@OPTIONS (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73982472"
 
   返回有关当前 SET 选项的信息。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73982472"
 ## <a name="return-types"></a>返回类型  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 SET 命令或 sp_configure user options 值可获得这些选项   。 使用 SET 命令配置的会话值会替代 sp_configure 选项   。 许多工具（例如 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 自动配置设置选项。 每个用户都有一个表示配置的 @OPTIONS 函数。  
   
  可以使用 SET 语句更改特定用户会话的语言和查询处理选项。 “\@\@ 选项”只能检测到设置为 ON 或 OFF 的选项  。  

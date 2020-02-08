@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991563"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>配置 AlwaysOn 可用性组扩展事件
@@ -29,13 +29,13 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
  创建可用性组时会自动创建 Alwayson_health 扩展事件会话，并捕获可用性组相关事件的子集。 此会话已预配置为一种有用且便利的工具，有助于在对可用性组进行故障排除时快速入门。 创建可用性组向导会自动在向导中已配置的每个参与可用性副本上启动会话。  
   
 > [!IMPORTANT]  
->  如果未使用“新建可用性组向导”创建可用性组，则 alwayson_health 会话可能不会自动启动。 如果会话未启动，则在发生意外问题时，它无法捕获事件数据。 应手动启动会话，并通过配置会话属性将会话配置为自动启动。  
+>  如果未使用“新建可用性组向导”创建可用性组，则 alwayson_health 会话可能不会自动启动  。 如果会话未启动，则在发生意外问题时，它无法捕获事件数据。 应手动启动会话，并通过配置会话属性将会话配置为自动启动。  
   
  查看 alwayson_health 会话的定义：  
   
-1.  在“对象资源管理器”中，依次展开“管理”、“扩展事件”和“会话”。  
+1.  在“对象资源管理器”中，依次展开“管理”、“扩展事件”和“会话”     。  
   
-2.  右键单击“Alwayson_health”，依次指向“编写会话脚本为”、“CREATE To”，然后单击“新查询编辑器窗口”。  
+2.  右键单击“Alwayson_health”，依次指向“编写会话脚本为”、“CREATE To”，然后单击“新查询编辑器窗口”     。  
 
 有关 alwayson_health 涵盖的部分事件的信息，请参阅[扩展事件引用](always-on-extended-events.md#BKMK_Reference)。  
 
@@ -43,19 +43,19 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 ##  <a name="BKMK_Debugging"></a>用于调试的扩展事件  
  除了 Alwayson_health 会话所涵盖的扩展事件外，SQL Server 还为可用性组定义了大量调试事件。 要在会话中利用这些额外的扩展事件，请执行以下过程：  
   
-1.  在“对象资源管理器”中，依次展开“管理”、“扩展事件”和“会话”。  
+1.  在“对象资源管理器”中，依次展开“管理”、“扩展事件”和“会话”     。  
   
-2.  右键单击“会话”，然后选择“新建会话”。 或者，右键单击“Alwayson_health”并选择“属性”。  
+2.  右键单击“会话”  ，然后选择“新建会话”  。 或者，右键单击“Alwayson_health”并选择“属性”   。  
   
-3.  在“选择页”窗格中，单击“事件”。  
+3.  在“选择页”窗格中，单击“事件”   。  
   
-4.  在事件库中的“类别”列中，选择“alwayson”并清除所有其他类别。  
+4.  在事件库中的“类别”列中，选择“alwayson”并清除所有其他类别   。  
   
-5.  在“频道”列中，选择“调试”。 尚未选择的所有可用性组相关事件现在都显示在事件库中。  
+5.  在“频道”列中，选择“调试”   。 尚未选择的所有可用性组相关事件现在都显示在事件库中。  
   
-6.  突出显示事件库中的一个事件，然后单击“>”按钮选择将其用于会话。  
+6.  突出显示事件库中的一个事件，然后单击“>”按钮选择将其用于会话  。  
   
-7.  完成会话后，单击“确定”将其关闭。 确保会话已启动，以便捕获所选事件。  
+7.  完成会话后，单击“确定”将其关闭  。 确保会话已启动，以便捕获所选事件。  
   
 ##  <a name="BKMK_Reference"></a>Always On 可用性组扩展事件引用  
  本节介绍了一些用于监视可用性组的扩展事件。  
@@ -81,15 +81,15 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
 #### <a name="event-information"></a>事件信息  
   
-|“列”|描述|  
+|列|说明|  
 |------------|-----------------|  
-|“属性”|availability_replica_state_change|  
+|名称|availability_replica_state_change|  
 |类别|always on|  
-|Channel|操作|  
+|Channel|可运行|  
   
 #### <a name="event-fields"></a>事件字段  
   
-|“属性”|Type_name|描述|  
+|名称|Type_name|说明|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性组的 ID。|  
 |availability_group_name|unicode_string|可用性组的名称。|  
@@ -97,7 +97,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 |previous_state|availability_replica_state|更改前副本的角色。<br /><br /> **可能的值包括：**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
 |current_state|availability_replica_state|更改后副本的角色。<br /><br /> **可能的值包括：**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 会话定义  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 会话定义  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -112,20 +112,20 @@ GO
   
 #### <a name="event-information"></a>事件信息  
   
-|“列”|描述|  
+|列|说明|  
 |------------|-----------------|  
-|“属性”|availability_group_lease_expired|  
+|名称|availability_group_lease_expired|  
 |类别|always on|  
-|Channel|操作|  
+|Channel|可运行|  
   
 #### <a name="event-fields"></a>事件字段  
   
-|“属性”|Type_name|描述|  
+|名称|Type_name|说明|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性组的 ID。|  
 |availability_group_name|unicode_string|可用性组的名称。|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 会话定义  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 会话定义  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -140,7 +140,7 @@ GO
   
 #### <a name="event-information"></a>事件信息  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
 |类别|always on|  
@@ -148,7 +148,7 @@ GO
   
 #### <a name="event-fields"></a>事件字段  
   
-|“属性”|Type_name|描述|  
+|名称|Type_name|说明|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性组的 ID。|  
 |availability_group_name|unicode_string|可用性组的名称。|  
@@ -157,7 +157,7 @@ GO
 |joined_and_synchronized|validation_result_type|如果值为 FALSE，自动故障转移会在此可用性副本上失效。<br /><br /> TRUE<br /><br /> FALSE|  
 |previous_primary_or_automatic_failover_target|validation_result_type|如果值为 FALSE，自动故障转移会在此可用性副本上失效。<br /><br /> TRUE<br /><br /> FALSE|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 会话定义  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 会话定义  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -177,15 +177,15 @@ GO
 ###  <a name="BKMK_error_reported"></a>error_reported（多个错误号）：传输或连接问题  
  每个已筛选事件表示在可用性组依赖的传输或数据库镜像终结点中发生了连接问题。  
   
-|“列”|描述|  
+|列|说明|  
 |------------|-----------------|  
-|“属性”|error_reported<br /><br /> 可筛选的错误号：35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
+|名称|error_reported<br /><br /> 可筛选的错误号：35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
 |类别|错误|  
 |Channel|管理员|  
   
 #### <a name="error-numbers-to-filter"></a>要筛选的错误号  
   
-|错误号|描述|  
+|错误号|说明|  
 |------------------|-----------------|  
 |35201|尝试建立与可用性副本“%ls”的连接时发生连接超时。|  
 |35202|已成功建立可用性组“%ls”从 ID 为 [%ls] 的可用性副本“%ls”到 ID 为 [%ls] 的“%ls”的连接。  这只是一条信息性消息。 不需要任何用户操作。|  
@@ -204,7 +204,7 @@ GO
 |28091|不支持未经身份验证启动 %S_MSG 的端点。|  
 |33309|无法启动群集端点，因为尚未加载默认 %S_MSG 端点配置。|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 会话定义  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 会话定义  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -240,17 +240,17 @@ GO
   
 #### <a name="event-information"></a>事件信息  
   
-|“列”|描述|  
+|列|说明|  
 |------------|-----------------|  
-|“属性”|data_movement_suspend_resume|  
-|类别|Always on|  
-|Channel|操作|  
+|名称|data_movement_suspend_resume|  
+|类别|始终启用|  
+|Channel|可运行|  
   
 #### <a name="event-fields"></a>事件字段  
   
 ||||  
 |-|-|-|  
-|“属性”|Type_name|描述|  
+|名称|Type_name|说明|  
 |availability_group_id|guid|可用性组的 ID。|  
 |availability_group_name|unicode_string|可用性组的名称（如果可用）。|  
 |availability_replica_id|guid|可用性副本的 ID。|  
@@ -261,7 +261,7 @@ GO
 |suspend_source|suspend_source_type|暂停或继续操作的源。|  
 |suspend_reason|unicode_string|数据库副本管理器中捕获的暂停原因。|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 会话定义  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 会话定义  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -283,23 +283,23 @@ GO
   
 #### <a name="event-information"></a>事件信息  
   
-|“列”|描述|  
+|列|说明|  
 |------------|-----------------|  
-|“属性”|alwayson_ddl_execution|  
+|名称|alwayson_ddl_execution|  
 |类别|always on|  
 |Channel|分析|  
   
 #### <a name="event-fields"></a>事件字段  
   
-|“属性”|Type_name|描述|  
+|名称|Type_name|说明|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|可用性组的 ID。|  
 |availability_group_name|unicode_string|可用性组的名称。|  
 |ddl_action|alwayson_ddl_action|指示 DDL 操作的类型：CREATE、ALTER 或 DROP。|  
 |ddl_phase|ddl_opcode|指示 DDL 操作的阶段：BEGIN、COMMIT 或 ROLLBACK。|  
-|。|unicode_string|已执行的语句的文本。|  
+|语句|unicode_string|已执行的语句的文本。|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 会话定义  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 会话定义  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -316,19 +316,19 @@ GO
   
 #### <a name="event-information"></a>事件信息  
   
-|“列”|描述|  
+|列|说明|  
 |------------|-----------------|  
-|“属性”|availability_replica_manager_state_change|  
+|名称|availability_replica_manager_state_change|  
 |类别|always on|  
-|Channel|操作|  
+|Channel|可运行|  
   
 #### <a name="event-fields"></a>事件字段  
   
-|“属性”|Type_name|描述|  
+|名称|Type_name|说明|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|可用性副本管理器的当前状态。<br /><br /> 联机<br /><br /> Offline<br /><br /> WaitingForClusterCommunication|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Alwayson_health 会话定义  
+#### <a name="alwayson_health-session-definition"></a>Alwayson_health 会话定义  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -347,13 +347,13 @@ GO
   
 #### <a name="event-information"></a>事件信息  
   
-|“列”|描述|  
+|列|说明|  
 |------------|-----------------|  
-|“属性”|error_reported<br /><br /> 错误号 1480：由于 REASON_MSG，REPLICATION_TYPE_MSG 数据库“DATABASE_NAME”正在将角色从“OLD_ROLE”更改为“NEW_ROLE”|  
+|名称|error_reported<br /><br /> 错误号 1480：由于 REASON_MSG，REPLICATION_TYPE_MSG 数据库“DATABASE_NAME”正在将角色从“OLD_ROLE”更改为“NEW_ROLE”|  
 |类别|错误|  
 |Channel|管理员|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 会话定义  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 会话定义  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   

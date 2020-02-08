@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708738"
 ---
 # <a name="back-up-a-transaction-log"></a>备份事务日志
@@ -48,7 +48,7 @@ ms.locfileid: "71708738"
   
 1. 展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-1. 右键单击数据库，指向“任务”  ，再单击“备份”  。 将出现 **“备份数据库”** 对话框。  
+1. 右键单击数据库，指向 **“任务”** ，再单击 **“备份”** 。 将出现 **“备份数据库”** 对话框。  
  
 1. 在 **“数据库”** 列表框中，验证数据库名称。 您也可以从列表中选择其他数据库。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "71708738"
   
     - 若要使备份集在特定天数后过期，请单击 **“之后”** （默认选项），并输入备份集从创建到过期所需的天数。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。  
   
-         默认值在“服务器属性”  对话框（位于“数据库设置”  页上）的“默认备份媒体保持期(天)”  选项中设置。 若要访问此对话框，请在对象资源管理器中右键单击服务器名称，选择“属性”，再选择“数据库设置”  页。  
+         默认值在 **“服务器属性”** 对话框（位于 **“数据库设置”** 页上）的 **“默认备份媒体保持期(天)”** 选项中设置。 若要访问此对话框，请在对象资源管理器中右键单击服务器名称，选择“属性”，再选择 **“数据库设置”** 页。  
   
     - 若要使备份集在特定日期过期，请单击 **“在”** ，并输入备份集的过期日期。  
   
@@ -127,9 +127,9 @@ ms.locfileid: "71708738"
   
    - AES 256  
   
-   - Triple DES  
+   - 三重 DES  
 
-## <a name="using-transact-sql"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a>“使用 Transact-SQL”  
   
 执行 BACKUP LOG 语句以备份事务日志，同时指定下列对象：  
   

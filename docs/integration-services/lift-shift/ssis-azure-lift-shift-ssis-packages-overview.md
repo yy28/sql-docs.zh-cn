@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896181"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>将 SQL Server Integration Services 工作负荷直接迁移到云
@@ -24,18 +24,18 @@ ms.locfileid: "67896181"
 
 现在，可将 SQL Server Integration Services (SSIS) 项目、包和工作负荷移到 Azure 云。 在 Azure SQL 数据库的 SSIS 目录 (SSISDB) 或 SQL 数据库托管实例中使用 SQL Server Management Studio (SSMS) 等熟悉的工具来部署、运行和管理 SSIS 项目和包。
 
-## <a name="benefits"></a>优势
+## <a name="benefits"></a>优点
 将本地 SSIS 工作负荷移到 Azure 具有以下潜在好处：
--   降低运营成本和减轻在本地或 Azure 虚拟机上运行 SSIS 时的基础结构管理负担。
--   通过实现每个群集指定多个节点，以及 Azure 和 Azure SQL 数据库的高可用性功能，增加高可用性。
--   通过实现每个节点指定多个核心（纵向扩展）和每个群集指定多个节点（横向扩展），提高可伸缩性。
+-   降低运营成本和减轻在本地或 Azure 虚拟机上运行 SSIS 时的基础结构管理负担  。
+-   通过实现每个群集指定多个节点，以及 Azure 和 Azure SQL 数据库的高可用性功能，增加高可用性  。
+-   通过实现每个节点指定多个核心（纵向扩展）和每个群集指定多个节点（横向扩展），提高可伸缩性  。
 
 ## <a name="architecture-of-ssis-on-azure"></a>Azure 上的 SSIS 的体系结构
 下表突出显示了本地 SSIS 和 Azure 上的 SSIS 之间的差异。
 
 最显著的差异是存储与运行时的分离。 Azure 数据工厂为 Azure 上的 SSIS 包承载运行时引擎。 运行时引擎名为 Azure-SSIS Integration Runtime (Azure-SSIS IR)。 有关详细信息，请参阅 [Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)。
 
-| 位置 | 存储器 | 运行时 | 可伸缩性 |
+| 位置 | 存储 | 运行时 | 可伸缩性 |
 |---|---|---|---|
 | 本地 | SQL Server | SQL Server 托管的 SSIS 运行时 | SSIS Scale Out（SQL Server 2017 及更高版本中）<br/><br/>自定义解决方案（之前的 SQL Server 版本中） |
 | 在 Azure 上 | SQL 数据库或 SQL 数据库托管实例 | Azure SSIS Integration Runtime（Azure 数据工厂的一个组件） | Azure-SSIS Integration Runtime 的缩放选项 |
@@ -61,21 +61,21 @@ ms.locfileid: "67896181"
 
 **改善性能**。 有关详细信息，请参阅[配置 Azure-SSIS Integration Runtime 以获得高性能](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance)。
 
-降低成本。 若要降低成本，请仅在需要时才运行 Azure-SSIS IR。 有关详细信息，请参阅[如何计划 Azure SSIS integration runtime 的开始和结束时间](https://docs.microsoft.com/azure/data-factory/how-to-schedule-azure-ssis-integration-runtime)。
+降低成本  。 若要降低成本，请仅在需要时才运行 Azure-SSIS IR。 有关详细信息，请参阅[如何计划 Azure SSIS integration runtime 的开始和结束时间](https://docs.microsoft.com/azure/data-factory/how-to-schedule-azure-ssis-integration-runtime)。
 
 ## <a name="design-packages"></a>设计包
 
-继续通过使用 SSDT 或使用安装了 SSDT 的 Visual Studio ，在本地设计和生成包。
+继续通过使用 SSDT 或使用安装了 SSDT 的 Visual Studio ，在本地设计和生成包  。
 
 ### <a name="connect-to-data-sources"></a>连接到数据源
 
-若要使用 Windows 身份验证从云连接到本地数据源，请参阅[从 Azure 的 SSIS 包中使用 Windows 身份验证连接到数据源和文件共享](ssis-azure-connect-with-windows-auth.md)。
+若要使用 Windows 身份验证  从云连接到本地数据源，请参阅[从 Azure 的 SSIS 包中使用 Windows 身份验证连接到数据源和文件共享](ssis-azure-connect-with-windows-auth.md)。
 
 若要连接到文件和文件共享，请参阅[使用 Azure 中部署的 SSIS 包在本地和在 Azure 中打开和保存文件](ssis-azure-files-file-shares.md)。
 
 ### <a name="available-ssis-components"></a>可用的 SSIS 组件
 
-如果要设置 SQL 数据库实例来承载 SSISDB，还需安装用于 SSIS 的 Azure 功能包和 Access 可再发行组件。 除提供与内置组件支持的数据源的连接外，这些组件还提供与 Excel 和 Access 文件和各种 Azure 数据源的连接。
+预配 SQL 数据库实例以托管 SSISDB 时，还会安装 Azure Feature Pack for SSIS 和 Access Redistributable。 除提供与内置组件支持的数据源的连接外，这些组件还提供与 Excel 和 Access 文件和各种 Azure 数据源的连接   。
 
 还可以安装其他组件，例如可以安装默认情况下未安装的驱动程序。 有关详细信息，请参阅 [Azure-SSIS integration runtime 的自定义安装](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)。
 
@@ -85,13 +85,13 @@ ms.locfileid: "67896181"
 
 ### <a name="transaction-support"></a>事务支持
 
-通过本地和 Azure 虚拟机上的 SQL Server，可使用 Microsoft 分布式事务处理协调器 (MSDTC) 事务。 要在 Azure-SSIS IR 的每个节点上配置 MSDTC，请使用自定义安装功能。 有关详细信息，请参阅 [Azure-SSIS 集成运行时的自定义安装](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)。
+通过本地和 Azure 虚拟机上的 SQL Server，可使用 Microsoft 分布式事务处理协调器 (MSDTC) 事务。 要在 Azure-SSIS IR 的每个节点上配置 MSDTC，请使用自定义安装功能。 有关详细信息，请参阅 [Azure-SSIS 集成运行时的自定义设置](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)。
 
 借助 Azure SQL 数据库，只能使用弹性事务。 有关详细信息，请参阅[跨云数据库的分布式事务](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-transactions-overview)。
 
 ## <a name="deploy-and-run-packages"></a>部署和运行包
 
-首先，请参阅[教程：在 Azure 中部署和运行 SQL Server Integration Services (SSIS) 包](ssis-azure-deploy-run-monitor-tutorial.md)。
+若要入门，请参阅[教程：在 Azure 中部署和运行 SQL Server Integration Services (SSIS) 包](ssis-azure-deploy-run-monitor-tutorial.md)。
 
 ### <a name="prerequisites"></a>必备条件
 
@@ -101,11 +101,11 @@ ms.locfileid: "67896181"
 
 ### <a name="connect-to-ssisdb"></a>连接到 SSISDB
 
-承载 SSISDB 的 SQL 数据库的名称（格式为 `<sql_database_name>.database.windows.net`）将成为四部分名称的第一部分，从 SSDT 和 SSMS 中部署和运行包时会使用到该名称。 有关如何连接到 Azure 中的 SSIS 目录数据库的详细信息，请参阅[连接到 Azure 中的 SSIS 目录 (SSISDB)](ssis-azure-connect-to-catalog-database.md)。
+承载 SSISDB 的 SQL 数据库的名称（格式为 `<sql_database_name>.database.windows.net`）将成为四部分名称的第一部分，从 SSDT 和 SSMS 中部署和运行包时会使用到该名称  。 有关如何连接到 Azure 中的 SSIS 目录数据库的详细信息，请参阅[连接到 Azure 中的 SSIS 目录 (SSISDB)](ssis-azure-connect-to-catalog-database.md)。
 
 ### <a name="deploy-projects-and-packages"></a>部署项目和包
 
-在 Azure 上将项目部署到 SSISDB 时，需要使用“项目部署模型”，而不是包部署模型。
+在 Azure 上将项目部署到 SSISDB 时，需要使用“项目部署模型”，而不是包部署模型  。
 
 若要在 Azure 上部署项目，可以使用以下多种熟悉的工具和脚本编写选项中的一种来实现：
 -   SQL Server Management Studio (SSMS)
@@ -134,8 +134,8 @@ ms.locfileid: "67896181"
 ## <a name="monitor-packages"></a>监视包
 
 要监视运行的包，可在 SSMS 中使用下列报表选项。
--   右键单击“SSISDB”，然后选择“活动操作”以打开“活动操作”对话框。
--   在对象资源管理器中选择包，然后依次选择“报表”、“标准报表”、“所有执行”。
+-   右键单击“SSISDB”，然后选择“活动操作”以打开“活动操作”对话框    。
+-   在对象资源管理器中选择包，然后依次选择“报表”、“标准报表”、“所有执行”    。
 
 要监视 Azure-SSIS Integration Runtime，请参阅[监视 Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)。
 

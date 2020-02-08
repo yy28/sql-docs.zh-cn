@@ -6,17 +6,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/05/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660773"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971225"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>在 Linux 上安装 SQL Server 语言扩展
 
@@ -86,7 +86,7 @@ ls /opt/microsoft/mssql/bin
 
 在已连接 Internet 的设备上，将使用针对每个操作系统的包安装程序独立于数据库引擎下载和安装相应的包。 下表列出了所有可用的包。
 
-| 包名称 | 适用对象 | 描述 |
+| 包名称 | 适用对象 | 说明 |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | 所有语言 | 用于 Java 语言扩展的扩展性框架 |
 |mssql-server-extensibility-java | Java | 用于 Java 语言扩展的扩展性框架，包括支持的 Java 运行时 |
@@ -240,7 +240,7 @@ Java 功能集成不包含库，但可以运行 `grep -r JRE_HOME /etc` 来确�
   sudo systemctl restart mssql-server.service
   ```
 
-## <a name="unattended-installation"></a>无人参与安装
+## <a name="unattended-installation"></a>无人参与的安装
 
 对数据库引擎使用[无人参与安装](https://docs.microsoft.com/sql/linux/sql-server-linux-setup#unattended)，添加 mssql-server-extensibility-java 包。
 
@@ -262,19 +262,19 @@ Java 功能集成不包含库，但可以运行 `grep -r JRE_HOME /etc` 来确�
 
 |||
 |--|----|
-| mssql/extensibility-java 包 | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/extensibility-java 包 | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### <a name="ubuntu1604-paths"></a>Ubuntu/16.04 路径
 
 |||
 |--|----|
-| mssql/extensibility-java 包 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/extensibility-java 包 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>SUSE/12 路径
 
 |||
 |--|----|
-| mssql/extensibility-java 包 | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/extensibility-java 包 | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>包列表
 
@@ -297,7 +297,7 @@ mssql-server-extensibility-java-15.0.1000
 
 Linux 和 Windows 之间存在供外部资源池进行[资源调控](../t-sql/statements/create-external-resource-pool-transact-sql.md)的奇偶校验，但 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 的统计信息目前在 Linux 上具有不同的单位。 
  
-| 列名   | 描述 | Linux 上的值 | 
+| 列名称   | 说明 | Linux 上的值 | 
 |---------------|--------------|---------------|
 |peak_memory_kb | 资源池使用的最大内存量。 | 在 Linux 上，此统计信息来自 CGroups 内存子系统，其值为 memory.max_usage_in_bytes |
 |write_io_count | 自重置 Resource Governor 统计信息以来发出的写入 IO 总数。 | 在 Linux 上，此统计信息来自 CGroups blkio 子系统，其中写入行上的值为 blkio.throttle.io_serviced | 

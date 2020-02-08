@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165340"
 ---
 # <a name="linked-servers-database-engine"></a>链接服务器（数据库引擎）
@@ -64,7 +64,7 @@ ms.locfileid: "74165340"
 ## <a name="linked-server-details"></a>链接服务器详细信息  
  下图显示了链接服务器配置的基础。  
   
- ![客户端层、服务器层和数据库服务器层](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
+ ![客户端层、服务器层和数据库服务器层](../../relational-databases/linked-servers/media/lsvr.gif "客户端层、服务器层和数据库服务器层")  
   
 通常，链接服务器用于处理分布式查询。 当客户端应用程序通过链接服务器执行分布式查询时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将分析命令并向 OLE DB 发送请求。 行集请求的形式可以是对该访问接口执行查询或从该访问接口打开基表。  
 

@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148835"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
@@ -37,10 +37,10 @@ ms.locfileid: "70148835"
   
 ## <a name="datetimeoffset-description"></a>datetimeoffset 说明
   
-|属性|ReplTest1|  
+|properties|值|  
 |---|---|
 |语法|datetimeoffset [ (fractional seconds precision) ]  |  
-|用法|DECLARE \@MyDatetimeoffset datetimeoffset(7) <br /><br /> CREATE TABLE Table1 (Column1 datetimeoffset(7)) |  
+|使用情况|DECLARE \@MyDatetimeoffset datetimeoffset(7) <br /><br /> CREATE TABLE Table1 (Column1 datetimeoffset(7)) |  
 |默认字符串文字格式（用于下级客户端）|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 有关详细信息，请参阅后面的“下级客户端的向后兼容性”部分。|  
 |日期范围|0001-01-01 到 31.12.99<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日|  
 |时间范围|00:00:00 到 23:59:59.9999999|  
@@ -71,7 +71,7 @@ ms.locfileid: "70148835"
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>datetimeoffset 支持的字符串文字格式
 下表列出了 datetimeoffset 支持的 ISO 8601 字符串文字格式  。 有关 datetimeoffset 日期和时间部分的字母、数值、未分隔的的字符串文字格式和时间格式的信息，请参阅 [date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md) 和 [time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md)  。
   
-|ISO 8601|描述|  
+|ISO 8601|说明|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|这两种格式不受 SET LANGUAGE 和 SET DATEFORMAT 会话的区域设置的影响。 datetimeoffset 和 datetime 部分之间不允许有空格   。|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|这种遵从 ISO 定义的格式表明 datetime 部分应采用协调世界时 (UTC) 表示  。 例如，1999-12-12 12:30:30.12345 -07:00 应表示为 1999-12-12 19:30:30.12345Z。|  
@@ -232,9 +232,9 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|数据类型|“输出”|  
+|数据类型|输出|  
 |---|---|
-|**Time**|12:35:29. 1234567|  
+|**时间**|12:35:29. 1234567|  
 |**Date**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
 |**日期时间**|2007-05-08 12:35:29.123|  

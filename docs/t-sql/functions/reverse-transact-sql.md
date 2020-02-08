@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 208babd394592d48feaf257d14329db89d11f767
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68092621"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68092621"
 
   返回字符串值的逆序。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,14 +41,14 @@ REVERSE ( string_expression )
 ```  
   
 ## <a name="arguments"></a>参数  
- string_expression  
- string_expression 是字符串或二进制数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列。  
+ string_expression   
+ string_expression 是字符串或二进制数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列  。  
   
 ## <a name="return-types"></a>返回类型  
- varchar 或 nvarchar  
+ varchar 或 nvarchar    
   
-## <a name="remarks"></a>Remarks  
- string_expression 的数据类型必须可隐式转换为 varchar。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 string_expression。  
+## <a name="remarks"></a>备注  
+ string_expression 的数据类型必须可隐式转换为 varchar   。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 string_expression  。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
  使用 SC 排序规则时，REVERSE 函数将不反转代理项对的两部分的顺序。  
@@ -86,7 +86,7 @@ SELECT REVERSE(@myvar) AS Reversed ;
 GO  
 ```  
   
- 以下示例从 int 数据类型隐式转换为 varchar 数据类型，然后反转结果。  
+ 以下示例从 int 数据类型隐式转换为 varchar 数据类型，然后反转结果   。  
   
 ```  
 SELECT REVERSE(1234) AS Reversed ;  

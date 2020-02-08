@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5d0a96f061f01749194cd3f0d1be1aae5443ff8a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595702"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 轮换 Always Encrypted 密钥
@@ -47,7 +47,7 @@ ms.locfileid: "73595702"
 2.  右键单击该列主密钥并选择“轮替”  。
 3.  在“列主密钥轮替”对话框的“目标”字段中，选择在步骤 1 中创建的新列主密钥的名称   。
 4.  查看现有列主密钥保护的列加密密钥的列表。 这些密钥将受到轮转的影响。
-5.  单击“确定”  。
+5.  单击“确定”。 
 
 SQL Server Management Studio 将获取使用旧列主密钥保护的列加密密钥的元数据，以及旧列主密钥和新列主密钥的元数据。 然后，SSMS 将使用列主密钥元数据来访问包含旧列主密钥的密钥存储并对列加密密钥解密。 随后，SSMS 将访问包含新列主密钥的密钥存储，以生成一组新的列加密密钥加密值，然后它会将新值添加到元数据中（生成并发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) 语句）。
 
@@ -80,7 +80,7 @@ SQL Server Management Studio 将获取使用旧列主密钥保护的列加密密
 1.  使用**对象资源管理器**导航到“安全”>“始终加密密钥”文件夹并找到要替换的现有列主密钥  。
 2.  右键单击现有的列主密钥，然后选择“清理”  。
 3.  查看要删除的列加密密钥值列表。
-4.  单击“确定”  。
+4.  单击“确定”。 
 
 SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) 语句，以删除用旧列主密钥加密的列加密密钥的加密值。
 
@@ -90,7 +90,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 
 1. 使用**对象资源管理器**导航到“安全”>“始终加密密钥”>“列主密钥”文件夹，并找到要从数据库中删除的旧列主密钥  。
 2. 右键单击旧列主密钥，然后选择“删除”  。 （这将生成并发出 [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) 语句，以删除列主密钥元数据。）
-3. 单击“确定”  。
+3. 单击“确定”。 
 
 > [!NOTE]
 > 强烈建议你不要在轮换后永久地删除旧的列主密钥。 相反，应该在其当前密钥存储中保留旧的列主密钥，或将其存档在另一个安全位置。 如果在配置新的列主密钥之前，从备份文件将数据库还原到某个时间点，则需要使用旧密钥来访问数据。
@@ -141,12 +141,12 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 
 有关详细信息，请参阅[创建并存储 Always Encrypted 的列主密钥](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 - [通过 SQL Server Management Studio 查询使用 Always Encrypted 的列](always-encrypted-query-columns-ssms.md)
 - [使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>另请参阅
-- [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 密钥管理概述](overview-of-key-management-for-always-encrypted.md) 
 - [使用 SQL Server Management Studio 配置 Always Encrypted](configure-always-encrypted-using-sql-server-management-studio.md)
 - [使用 PowerShell 配置“始终加密”功能](configure-always-encrypted-using-powershell.md)

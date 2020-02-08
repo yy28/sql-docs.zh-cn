@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 2412bfb8bcd3cacc2db2702879353b92e328b09a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727385"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>什么是 SQL Server 中独立的 Machine Learning Server 或 R Server？
@@ -30,7 +30,7 @@ SQL Server 为独立于 SQL Server 运行的独立 R Server 或 Machine Learning
 
 SQL Server 2016 仅支持 R。 SQL Server 2017 支持 R 和 Python。 下表介绍了每个版本中的功能。
 
-| 组件 | 描述 |
+| 组件 | 说明 |
 |-----------|-------------|
 | R 包 | [RevoScaleR](ref-r-revoscaler.md) 是可缩放 R 的主库，具有用于数据操作、转换、可视化和分析的函数  。  <br/>[MicrosoftML](ref-r-microsoftml.md) 添加了机器学习算法，以便为文本分析、图像分析和情绪分析创建自定义模型  。 <br/>[sqlRUtils](ref-r-sqlrutils.md) 提供了帮助程序函数，用于将 R 脚本置于 T-SQL 存储过程中、向数据库注册存储过程，以及从 R 开发环境运行存储过程  。<br/>[mrsdeploy](operationalization-with-mrsdeploy.md) 提供了 Web 服务部署（仅限 SQL Server 2017 中）  。 <br/>[**olapR**](ref-r-olapr.md) 用于在 R 中指定 MDX 查询。|
 | Microsoft R Open (MRO) | [MRO](https://mran.microsoft.com/open) 是 R 的 Microsoft 开放源代码分发版。其中包括包和解释器  。 始终使用安装程序中捆绑的 MRO 版本。 |

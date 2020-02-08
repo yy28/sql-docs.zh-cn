@@ -23,10 +23,10 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75320492"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 数据库的备份和还原
@@ -40,7 +40,7 @@ ms.locfileid: "75320492"
  除了在本地存储中存储备份外，SQL Server 还支持备份到 Azure Blob 存储服务和从其还原。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 对于使用 Microsoft Azure Blob 存储服务存储的数据库文件， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供相应的选项让你使用 Azure 快照来实现接近实时的备份和更快的还原。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ##  <a name="why-back-up"></a>为何备份？  
--   备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、在备份上运行测试还原过程以及在另一个安全位置存储备份副本可防止可能的灾难性数据丢失。 备份是保护数据的唯一方法。
+-   备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、在备份上运行测试还原过程以及在另一个安全位置存储备份副本可防止可能的灾难性数据丢失。 备份是保护数据的唯一方法  。
 
      使用有效的数据库备份，可从多种故障中恢复数据，例如：  
   
@@ -53,13 +53,13 @@ ms.locfileid: "75320492"
   
 ##  <a name="glossary-of-backup-terms"></a>备份术语的术语表
  **备份** [动词]  
- 创建备份 [名词] 的过程，方法是通过复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据记录或复制其事务日志中的日志记录。  
+ 创建备份 [名词]  的过程，方法是通过复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据记录或复制其事务日志中的日志记录。  
   
  **备份** [名词]  
  可用于在出现故障后还原或恢复数据的数据副本。 数据库备份还可用于将数据库副本还原到新位置。  
   
 **备份** 设备  
- 要写入 SQL Server 备份及能从中还原这些备份的磁盘或磁带设备。 SQL Server 备份也可以写入 Azure Blob 存储服务，并且使用 URL 格式来指定备份文件的目标和名称。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 要写入 SQL Server 备份及能从中还原这些备份的磁盘或磁带设备。 SQL Server 备份也可以写入 Azure Blob 存储服务，并且使用 URL  格式来指定备份文件的目标和名称。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 **备份介质**  
  已写入一个或多个备份的一个或多个磁带或磁盘文件。  
@@ -154,7 +154,7 @@ ms.locfileid: "75320492"
  直到完成备份测试后，才会生成还原策略。 必须通过将数据库副本还原到测试系统，针对每个数据库的备份策略进行全面测试。 您必须对每种要使用的备份类型进行还原测试。 另外建议在还原备份后，通过数据库的 DBCC CHECKDB 执行数据库一致性检查，以验证备份媒体是否未损坏。 
 
 ### <a name="verify-media-stability-and-consistency"></a>验证媒体稳定性和一致性
-使用备份实用工具提供的验证选项（BACKUP T-SQL 命令、SQL Server 维护计划、备份软件或解决方案等）。 有关示例，请参阅 [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 使用 BACKUP CHECKSUM 等高级功能来检测备份媒体本身的问题。 有关详细信息，请参阅 [](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。
+使用备份实用工具提供的验证选项（BACKUP T-SQL 命令、SQL Server 维护计划、备份软件或解决方案等）。 有关示例，请参阅 [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 使用 BACKUP CHECKSUM 等高级功能来检测备份媒体本身的问题。 有关详细信息，[请参阅](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。
 
 ### <a name="document-backuprestore-strategy"></a>文档备份/还原策略 
 建议您将备份和还原过程记录下来并在运行手册中保留记录文档的副本。
@@ -163,7 +163,7 @@ ms.locfileid: "75320492"
 
 
 ## <a name="monitor-progress-with-xevent"></a>使用 xEvent 监视进度
-由于数据库的大小和所涉及操作的复杂性，备份和还原操作可能需要很长时间。 当任一操作出现问题时，可使用 backup_restore_progress_trace 扩展事件来监控实时进度。 有关扩展事件的详细信息，请参阅 [扩展事件](../extended-events/extended-events.md)。
+由于数据库的大小和所涉及操作的复杂性，备份和还原操作可能需要很长时间。 当任一操作出现问题时，可使用 backup_restore_progress_trace 扩展事件来监控实时进度  。 有关扩展事件的详细信息，请参阅 [扩展事件](../extended-events/extended-events.md)。
 
   >[!WARNING]
   > 使用 backup_restore_progress_trace 扩展事件可能会导致性能问题并使用大量磁盘空间。 请在短时间内谨慎使用，并在生产中实现前进行彻底测试。

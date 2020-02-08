@@ -20,10 +20,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 40ce8094d651ee9ae1423b9c3feb636c33befca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901956"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67901956"
 
   指定图形的搜索条件。 MATCH 只能在 SELECT 语句中作为 WHERE 子句的一部分，与图形节点和边缘表一起使用。 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -134,7 +134,7 @@ al_pattern_quantifier
 * **+** ：重复模式 1 次或多次。 找到最短路径后立即终止。    
 * **{1,n}** ：重复模式 1到“n”次。 找到最短路径后立即终止。     
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 MATCH 中的节点名称可以重复。  换而言之，在同一个查询中可以按任意次数遍历节点。  
 MATCH 中的边缘名不能重复。  
 边缘可以指向两个方向中的任意一个方向，但它必须具有显式方向。  

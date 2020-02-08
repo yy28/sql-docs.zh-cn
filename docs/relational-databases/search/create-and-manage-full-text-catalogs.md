@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903854"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>创建和管理全文索引目录
@@ -66,7 +66,7 @@ GO
   
 下表列出了与全文目录相关的属性。 此信息可用于全文搜索的管理和故障排除。 
   
-|属性|描述|  
+|properties|说明|  
 |--------------|-----------------|  
 |**AccentSensitivity**|区分重音设置。|
 |**ImportStatus**|是否将导入全文目录。|  
@@ -119,5 +119,5 @@ GO
   
 4.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 [创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)

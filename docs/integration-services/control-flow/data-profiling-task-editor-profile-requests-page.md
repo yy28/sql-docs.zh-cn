@@ -15,10 +15,10 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a13799d353fcf1e1dff1999009cc2f1e8dcedc76
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294183"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>数据事件探查任务编辑器（“配置文件请求”页）
@@ -44,7 +44,7 @@ ms.locfileid: "71294183"
 ### <a name="requests-pane-options"></a>请求窗格选项  
  请求窗格具有下列选项：  
   
- **“视图”**  
+ **视图**  
  选择查看为该任务配置的所有配置文件，还是仅查看其中的一个配置文件。  
   
  请求窗格中的列会根据选择的 **“视图”** 而发生更改。 有关这些列中各列的详细信息，请参阅下一节“请求窗格列”。  
@@ -68,7 +68,7 @@ ms.locfileid: "71294183"
  **“配置文件类型”**  
  从下面的选项选择一个数据配置文件：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**候选键配置文件请求**|计算候选键项配置文件。<br /><br /> 此配置文件报告某个列或列集是选定表的键还是近似键。 此配置文件还可以帮助您识别数据中的问题，如可能的键列中的重复值。|  
 |**列长度分布配置文件请求**|计算列长度分布配置文件。<br /><br /> 列长度分布配置文件报告选定列中字符串值的所有不同长度以及每个长度所表示的表中的行的百分比。 此配置文件可以帮助您识别数据中的问题，例如值无效。 例如，在对以两个字符表示的美国州代码列进行事件探查，发现存在超过两个字符的值。|  
@@ -86,14 +86,14 @@ ms.locfileid: "71294183"
  **连接管理器**  
  显示连接到源数据库的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器。  
   
- **“请求 ID”**  
+ **请求 ID**  
  显示请求的标识符。 通常无需更改自动生成的值。  
   
 #### <a name="columns-common-to-the-five-individual-column-profiles"></a>对五个单个列配置文件都通用的列  
  **“表或视图”**  
  显示包含所选列的表或视图。  
   
- **“列”**  
+ **列**  
  显示要进行分析的列。  
   
 #### <a name="columns-specific-to-the-candidate-key-profile"></a>特定于候选键配置文件的列  

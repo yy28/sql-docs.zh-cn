@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000453"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -39,10 +39,10 @@ ms.locfileid: "68000453"
   
 ## <a name="time-description"></a>time 说明  
   
-|属性|ReplTest1|  
+|properties|值|  
 |--------------|-----------|  
 |语法|time [ (fractional second scale) ]  |  
-|用法|DECLARE \@MyTime time(7) <br /><br /> CREATE TABLE Table1 ( Column1 time(7)  )|  
+|使用情况|DECLARE \@MyTime time(7) <br /><br /> CREATE TABLE Table1 ( Column1 time(7)  )|  
 |fractional seconds scale |为秒的小数部分指定数字的位数。<br /><br /> 这可以是从 0 到 7 的整数。 对于 Informatica，这可以是从 0 到 3 的整数。<br /><br /> 默认小数位数为 7 (100ns)。|  
 |默认的字符串文字格式<br /><br /> （用于下级客户端）|对于 Informatica，为 hh:mm:ss[.nnnnnnn]）<br /><br /> 有关详细信息，请参阅[下级客户端的后向兼容性](#BackwardCompatibilityforDownlevelClients)部分。|  
 |范围|00:00:00.0000000 到 23:59:59.9999999（对于 Informatica，为 00:00:00.000 到 23:59:59.999）|  
@@ -71,7 +71,7 @@ ms.locfileid: "68000453"
 ## <a name="supported-string-literal-formats-for-time"></a>time 支持的字符串文字格式  
  下表显示的是适用于 time 数据类型的有效字符串文字格式  。  
   
-|SQL Server|描述|  
+|SQL Server|说明|  
 |----------------|-----------------|  
 |hh:mm[:ss][:fractional seconds][AM][PM]<br /><br /> hh:mm[:ss][.fractional seconds][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|如果小时值为 0，则不论是否指定了 AM，都表示午夜 (AM) 后的小时。 当小时值等于 0 时，不能指定 PM。<br /><br /> 如果 AM 和 PM 均未指定，则小时值为 01 到 11 时，表示中午以前的小时。 如果指定了 AM，则这些值表示中午以前的小时。 如果指定了 PM，则这些值表示中午以后的小时。<br /><br /> 如果既未指定 AM，也未指定 PM，则小时值 12 表示始于中午的小时。 如果指定了 AM，则该值表示始于午夜的小时。 如果指定了 PM，则该值表示始于中午的小时。 例如：12:01 是指中午过后 1 分钟，与 12:01 PM 的含义相同，而 12:01 AM 则指午夜过后 1 分钟。 指定 12:01 AM 与指定 00:01 或 00:01 AM 等效。<br /><br /> 如果未指定 AM 或 PM，则小时值 13 到 23 表示中午以后的小时。 如果指定了 PM，这些值也表示中午以后的小时。 如果小时值为 13 到 23，不能指定 AM。<br /><br /> 如果小时值为 24，则该值无效。 若要表示午夜，请使用 12:00 AM 或 00:00。<br /><br /> 可以在毫秒之前加上冒号 (:) 或者句点 (.)。 如果使用冒号，这个数字表示千分之一秒。 如果使用句点，则单个数字表示十分之一秒，两个数字表示百分之一秒，三个数字表示千分之一秒。 例如，12:30:20:1 表示到了 12:30 后又过了二十又千分之一秒；12:30:20.1 表示到了 12:30 后又过了二十又十分之一秒。|  
   
@@ -232,7 +232,7 @@ SELECT
         'datetimeoffset';  
 ```  
   
-|数据类型|“输出”|  
+|数据类型|输出|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
@@ -244,7 +244,7 @@ SELECT
 ###  <a name="ExampleB"></a> B. 将有效的时间字符串文字插入 time(7) 列  
  下表列出了可插入到数据类型为 time(7) 的一个列中的不同字符串文字，以及在插入后存储到该列中的对应值  。  
   
-|字符串文字格式类型|插入的字符串文字|存储的 time(7) 值|描述|  
+|字符串文字格式类型|插入的字符串文字|存储的 time(7) 值|说明|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01:123AM'|01:01:01.1230000|如果在秒的小数部分精度之前使用冒号 (:)，则小数位数不能超过三位，否则将引发错误。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|01:01:01.1234567|如果指定了 AM 或 PM，则时间以不带 AM 或 PM 文字的 24 小时格式存储|  
@@ -259,10 +259,10 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. 将时间字符串文字插入到各种日期和时间数据类型的列中  
  下表中的第一列显示的是时间字符串文字，第二列显示的是日期或时间数据类型，第一列中的时间字符串文字将插入到第二列中与之对应的数据类型的数据库表列中。 第三列显示的是将存储在对应数据库表列中的值。  
   
-|插入的字符串文字|列数据类型|存储在列中的值|描述|  
+|插入的字符串文字|列数据类型|存储在列中的值|说明|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|如果秒的小数部分精度超过为列指定的值，则字符串将被截断，且不会出错。|  
-|'2007-05-07'|**date**|NULL|任何时间值均将导致 INSERT 语句失败。|  
+|'2007-05-07'|**date**|Null|任何时间值均将导致 INSERT 语句失败。|  
 |“12:12:12”|**smalldatetime**|1900-01-01 12:12:00|任何秒的小数部分精度值都将导致 INSERT 语句失败。|  
 |'12:12:12.123'|**datetime**|1900-01-01 12:12:12.123|任何长于三位的秒精度都将导致 INSERT 语句失败。|  
 |'12:12:12.1234567'|**datetime2(7)**|1900-01-01 12:12:12.1234567|如果秒的小数部分精度超过为列指定的值，则字符串将被截断，且不会出错。|  

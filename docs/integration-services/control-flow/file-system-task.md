@@ -16,10 +16,10 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294130"
 ---
 # <a name="file-system-task"></a>文件系统任务
@@ -36,7 +36,7 @@ ms.locfileid: "71294130"
 ## <a name="predefined-file-system-operations"></a>预定义的文件系统操作  
  文件系统任务包含一组预定义的操作。 下表介绍了这些运算。  
   
-|运算|描述|  
+|Operation|说明|  
 |---------------|-----------------|  
 |复制目录|将文件夹从一个位置复制到另一个位置。|  
 |复制文件|将文件从一个位置复制到另一个位置。|  
@@ -58,7 +58,7 @@ ms.locfileid: "71294130"
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>文件系统任务可用的自定义日志项  
  下表介绍了文件系统任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|描述|  
+|日志项|说明|  
 |---------------|-----------------|  
 |**FileSystemOperation**|报告任务所执行的操作。 在文件系统操作开始时写入日志项，日志项包括有关源和目标的信息。|  
   
@@ -99,7 +99,7 @@ ms.locfileid: "71294130"
  **IsDestinationPathVariable**  
  指示目标路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择此值将显示动态选项 **DestinationVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择此值将显示动态选项 **DestinationConnection**。|  
@@ -113,13 +113,13 @@ ms.locfileid: "71294130"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入文件系统任务的说明。  
   
- **运算**  
+ **操作**  
  选择要执行的文件系统操作。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**复制目录**|复制目录。 选择此值将显示源和目标的动态选项。|  
 |**复制文件**|复制文件。 选择此值将显示源和目标的动态选项。|  
@@ -135,7 +135,7 @@ ms.locfileid: "71294130"
  **IsSourcePathVariable**  
  指示目标路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|ReplTest1||  
+|值||  
 |-----------|-|  
 |**True**|目标路径存储在变量中。 选择此值将显示动态选项 **SourceVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择此值将显示动态选项 **DestinationVariable**。|  
@@ -177,7 +177,7 @@ ms.locfileid: "71294130"
  **ReadOnly**  
  指示文件是否是只读的。  
   
- **Archive**  
+ **存档**  
  指示文件或目录可以用于存档。  
   
  **系统**  

@@ -11,10 +11,10 @@ ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6d31ad18b9a7de5b045a9ed868d20a0f35ab441b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281372"
 ---
 # <a name="catalogadd_data_tap_by_guid"></a>catalog.add_data_tap_by_guid 
@@ -44,7 +44,7 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  [ @dataflow_task_guid = ] *dataflow_task_guid*  
  包含要分流的数据流路径的包中的数据任务流 ID。 *dataflow_task_guid* 为 **uniqueidentifier**。  
   
- [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
+ [ @dataflow_path_id_string = ] dataflow_path_id_string   
  数据流路径的标识字符串。 一个路径连接两个数据流组件。 路径的 IdentificationString 属性指定该字符串  。  
   
  若要找到此标识字符串，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中右键单击两个数据流组件之间的路径，然后单击“属性”  。 将在“属性”窗口中显示 IdentificationString 属性   。  
@@ -52,7 +52,7 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  dataflow_path_id_string 为 nvarchar(4000)   。  
   
  [ @data_filename = ] data_filename   
- 存储分流的数据的文件名称。 如果数据流任务在 Foreach 循环或 For 循环容器内执行，则用单独的文件存储该循环每次迭代的分流数据。 用与每次迭代对应的编号为每个文件加前缀。 数据分流点文件写入文件夹“ *\<SQL Server 安装文件夹>* \130\DTS\\”。 *data_filename* 为 **nvarchar(4000)** 。  
+ 存储分流的数据的文件名称。 如果数据流任务在 Foreach 循环或 For 循环容器内执行，则用单独的文件存储该循环每次迭代的分流数据。 用与每次迭代对应的编号为每个文件加前缀。 数据分流点文件写入文件夹“ *\<SQL Server 安装文件夹>* \130\DTS\\”。 data_filename 为 nvarchar(4000)   。  
   
  [ @max_rows = ] max_rows  
  在数据分流期间捕获的行数。 如果未指定此值，则捕获所有行。 max_rows 为 **int**。  
@@ -70,7 +70,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 'D:\demos\datafiles\DCVendorOutput.csv'  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  若要添加数据分流点，执行实例必须处于已创建状态（在 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图的 status 列中值为 1）  。 只要运行执行，状态值就会发生更改。 可以通过调用 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)创建执行。  
   
  以下是 add_data_tap_by_guid 存储过程的注意事项。  
@@ -89,7 +89,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
  存储过程失败时引发错误。  
   
 ## <a name="result-set"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  

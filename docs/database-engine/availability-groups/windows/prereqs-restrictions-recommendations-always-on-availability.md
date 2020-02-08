@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f918fea905451aed787416aff0e2c22cae9e2bf5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258086"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831936"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,17 +157,14 @@ ms.locfileid: "75258086"
     -   如果给定线程空闲一段时间，则将释放回常规 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 线程池。 正常情况下，不活动线程在处于不活动状态 15 秒后释放。 但是，根据上一次活动，空闲线程可能保留更长时间。  
 
     -   对于次要副本，SQL Server 实例最多使用 100 个线程进行并行重做。 每个数据库最多使用 CPU 内核总数的一半，但是每个数据库不能超过 16 个线程。 如果单个实例的所需线程总数超过 100 个，则 SQL Server 会对每个其余数据库使用单个重做线程。 串行重做线程将在处于不活动状态约 15 秒后释放。 
-    
-    > [!NOTE]
-    > 基于数据库的升序数据库 ID 选择这些数据库使用单线程。 在这种情况下，对于托管可用性组数据库数量比可用工作线程数量多的 SQL Server 实例，应考虑其数据库创建顺序。 例如，在具有 32 个或更多个 CPU 核心的系统上，一个或多个可用性组中的前六个数据库（按数据库 ID 排序）将使用并行重做模式，所有后续数据库将使用单个重做模式。
-  
+     
 -   此外，可用性组使用未共享的线程，如下所示：  
   
     -   每个主副本为每个主数据库使用 1 个日志捕获线程。 此外，它为每个辅助数据库使用 1 个日志发送线程。 日志发送线程将在处于不活动状态 15 秒后释放。    
   
     -   辅助副本上的备份将在备份操作持续时间内包含主副本上的一个线程。  
   
- 有关详细信息，请参阅 [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)（CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程师博客）。  
+ 有关详细信息，请参阅 [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)（CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程师博客）。  
   
 ###  <a name="PermissionsSI"></a> 权限（服务器实例）  
   
@@ -186,7 +183,7 @@ ms.locfileid: "75258086"
   
 ###  <a name="RelatedContentSI"></a> 相关内容（服务器实例）  
   
--   [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ##  <a name="NetworkConnect"></a> 网络连接建议  
  强烈建议为 WSFC 节点之间的通信和可用性副本之间的通信使用相同的网络链接。  如果某些链接失败（甚至间歇性断开），使用单独的网络链接可能会导致意外行为。  
@@ -386,7 +383,7 @@ ms.locfileid: "75258086"
   
 -   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

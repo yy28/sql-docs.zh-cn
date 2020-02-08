@@ -13,10 +13,10 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294772"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>确定变更数据是否已准备就绪
@@ -27,7 +27,7 @@ ms.locfileid: "71294772"
   在用于执行变更数据的增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第二个任务是确保所选间隔的变更数据已准备就绪。 此步骤是必需的，因为异步捕获进程可能尚未处理完到达所选端点的所有更改。  
   
 > [!NOTE]  
->  控制流的第一个任务是计算更改间隔的端点。 有关此任务的详细信息，请参阅[指定变更数据的间隔](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)。 有关设计控制流的总体过程的说明，请参阅[变更数据捕获 (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
+>  控制流的第一个任务是计算更改间隔的端点。 有关此任务的详细信息，请参阅 [指定变更数据的间隔](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)。 有关设计控制流的总体过程的说明，请参阅[变更数据捕获 (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
   
 ## <a name="understanding-the-components-of-the-solution"></a>了解解决方案的组件  
  本主题中介绍的解决方案使用以下 4 个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件：  

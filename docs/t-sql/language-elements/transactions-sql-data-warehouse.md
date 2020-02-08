@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121590"
 ---
 # <a name="transactions-sql-data-warehouse"></a>事务（SQL 数据仓库）
@@ -30,7 +30,7 @@ ms.locfileid: "68121590"
   
 -   自动提交事务在会话中自动启动，但不会从 BEGIN TRANSACTION 语句开始  。 AUTOCOMMIT 设置为 ON 时，每个语句都在事务中运行，并且无需显式 COMMIT 或 ROLLBACK。 AUTOCOMMIT 设置为 OFF 时，需要 COMMIT 或 ROLLBACK 语句来确定事务的结果。 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中，自动提交事务会在 COMMIT 或 ROLLBACK 语句或 SET AUTOCOMMIT OFF 语句后立刻开始。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   

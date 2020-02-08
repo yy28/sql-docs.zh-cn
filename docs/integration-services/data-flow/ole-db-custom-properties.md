@@ -11,10 +11,10 @@ ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 039b36c2092d9e08e81802e441f42587be66445c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298152"
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 自定义属性
@@ -28,7 +28,7 @@ ms.locfileid: "71298152"
   
  下表介绍 OLE DB 源的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|描述|  
+|属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|用来访问数据库的模式。 可能的值包括： **“打开行集”** 、 **“从变量打开行集”** 、 **“SQL 命令”** 和 **“变量中的 SQL 命令”** 。 默认值为 **“打开行集”** 。|  
 |AlwaysUseDefaultCodePage|Boolean|一个值，指示是使用每列的 **DefaultCodePage** 属性的值，还是尝试从每列的区域设置中派生代码页。 此属性的默认值为 **False**。|  
@@ -53,7 +53,7 @@ ms.locfileid: "71298152"
 > [!NOTE]  
 >  此处列出的 FastLoad 选项（FastLoadKeepIdentity、FastLoadKeepNulls 和 FastLoadOptions）对应于由 Microsoft OLE DB Provider for SQL Server (SQLOLEDB) 实现的 **IRowsetFastLoad** 接口公开的具有相似名称的属性。 有关详细信息，请在 MSDN 库中搜索 IRowsetFastLoad。  
   
-|属性名称|数据类型|描述|  
+|属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer（枚举）|一个指定目标如何访问其目标数据库的值。<br /><br /> 此属性可以具有下列值之一：<br /><br /> <br /><br /> “OpenRowset”(0) - 需要提供表或视图的名称  。<br /><br /> “OpenRowset from Variable”(1) - 需要提供包含表或视图名称的变量的名称  。<br /><br /> “OpenRowset Using Fastload” (3) - 需要提供表或视图名称  。<br /><br /> “OpenRowset Using Fastload from Variable”(4) - 需要提供包含表或视图名称的变量的名称  。<br /><br /> “SQL 命令”(2) - 需要提供 SQL 语句  。|  
 |AlwaysUseDefaultCodePage|Boolean|一个值，指示是使用每列的 **DefaultCodePage** 属性的值，还是尝试从每列的区域设置中派生代码页。 此属性的默认值为 **False**。|  

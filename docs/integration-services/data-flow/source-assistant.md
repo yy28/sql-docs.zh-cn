@@ -14,10 +14,10 @@ ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0312349652ad1854efdeacdbfc25726e1766862f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298038"
 ---
 # <a name="source-assistant"></a>源助手
@@ -48,10 +48,10 @@ ms.locfileid: "71298038"
 ## <a name="add-new-source-dialog-box"></a>“添加新源”对话框
 下表列出了“添加新源”对话框中的可用选项  。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |类型|选择要连接到的源的类型。|  
 |连接管理器|选择现有连接管理器或单击“\<新建>”创建新的连接管理器  。|  
 |仅显示已安装项|指定是否要仅查看安装的源。|  
-|“确定”|单击以保存您的更改，并打开任何后续对话框来配置其他选项。| 
+|OK|单击以保存您的更改，并打开任何后续对话框来配置其他选项。| 
   

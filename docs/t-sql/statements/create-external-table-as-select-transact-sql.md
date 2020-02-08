@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68073137"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68073137"
 
   创建一个外部表，然后将 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的结果并行导出到 Hadoop 或 Azure 存储 Blob。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,13 +61,13 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ```  
   
 ## <a name="arguments"></a>参数  
- [ [ database_name . [ schema_name ] . ] | schema_name . ] *table_name*  
+ [ [ database_name .  [ schema_name ] .  ] | schema_name .  ] *table_name*  
  要在数据库中创建的表的一到三个部分的名称。 对于外部表，只有表元数据存储在关系数据库中。  
   
- LOCATION =  'hdfs_folder'  
+ LOCATION =  'hdfs_folder  '  
  在外部数据源上指定写入 SELECT 语句结果的位置。 位置是文件夹名称，可选择性地包含相对于 Hadoop 集群或 Azure 存储 Blob 的根文件夹的路径。  如果尚未存在，PolyBase 将创建路径和文件夹。  
   
- 外部文件写入 hdfs_folder 并命名为 QueryID_date_time_ID.format，其中 ID 是增量标识符，format 是导出的数据格式。 例如，QID776_20160130_182739_0.orc。  
+ 外部文件写入 hdfs_folder 并命名为 QueryID_date_time_ID.format，其中 ID 是增量标识符，format 是导出的数据格式     。 例如，QID776_20160130_182739_0.orc。  
   
  DATA_SOURCE = *external_data_source_name*  
  指定包含存储或将存储外部数据位置的外部数据源对象的名称。 位置是 Hadoop 群集或 Azure 存储 Blob。 若要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)。  
@@ -78,29 +78,29 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  拒绝选项  
  运行 CREATE EXTERNAL TABLE AS SELECT 语句时，拒绝选项不适用。 而是在此处指定，以便数据库稍后可从外部表导入数据时使用它们。 稍后，当 CREATE TABLE AS SELECT 语句从外部表中选择数据时，数据库将使用拒绝选项以确定在停止导入前无法导入的行的数量或百分比。  
   
- REJECT_VALUE = reject_value  
+ REJECT_VALUE = reject_value   
  指定在数据库暂停导入前无法导入的行的值或百分比。  
   
  REJECT_TYPE = **value** | percentage  
  说明 REJECT_VALUE 选项是指定为文本值还是百分比。  
   
  值  
- REJECT_VALUE 是文本值，而非百分比。  当失败行数超过 reject_value 时，数据库将停止从外部数据文件导入行。  
+ REJECT_VALUE 是文本值，而非百分比。  当失败行数超过 reject_value 时，数据库将停止从外部数据文件导入行  。  
   
  例如，如果 REJECT_VALUE = 5 且 REJECT_TYPE = value，数据库将在导入 5 行失败后停止导入行。  
   
  percentage  
- REJECT_VALUE 是百分比，而非文本值。 当失败行的百分比超过 reject_value 时，数据库将停止从外部数据文件导入行。 每隔一段时间计算失败行的百分比。  
+ REJECT_VALUE 是百分比，而非文本值。 当失败行的百分比超过 reject_value 时，数据库将停止从外部数据文件导入行   。 每隔一段时间计算失败行的百分比。  
   
- REJECT_SAMPLE_VALUE = reject_sample_value  
+ REJECT_SAMPLE_VALUE = reject_sample_value   
  当 REJECT_TYPE = percentage 时，需要此属性，它指定在数据库重新计算失败行的百分比之前尝试导入的行数。  
   
- 例如，如果 REJECT_SAMPLE_VALUE = 1000，数据库将在尝试从外部数据文件导入 1000 行后计算失败行的百分比。 如果失败行的百分比小于 reject_value，数据库将尝试加载另外 1000 行。 数据库在尝试导入每个其他 1000 行后继续重新计算失败行的百分比。  
+ 例如，如果 REJECT_SAMPLE_VALUE = 1000，数据库将在尝试从外部数据文件导入 1000 行后计算失败行的百分比。 如果失败行的百分比小于 reject_value，数据库将尝试加载另外 1000 行  。 数据库在尝试导入每个其他 1000 行后继续重新计算失败行的百分比。  
   
 > [!NOTE]  
->  由于数据库按间隔计算失败行的百分比，因此失败行的实际百分比可能会超过 reject_value。  
+>  由于数据库按间隔计算失败行的百分比，因此失败行的实际百分比可能会超过 reject_value  。  
   
- 例如：  
+ 示例：  
   
  此示例演示三个 REJECT 选项相互之间如何交互。 例如，如果 REJECT_TYPE = percentage、REJECT_VALUE = 30、REJECT_SAMPLE_VALUE = 100，可能出现以下情况：  
   
@@ -114,27 +114,27 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   尝试加载 200 行后，加载失败的行数为 50%，大于指定的 30% 限制。  
   
- WITH common_table_expression  
+ WITH common_table_expression   
  指定临时命名的结果集，这些结果集称为公用表表达式 (CTE)。 有关详细信息，请参阅 [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- SELECT \<select_criteria> 使用 SELECT 语句的结果填充新表。 select_criteria 是 SELECT 语句的主体，用于确定将哪些数据复制到新表中。 有关 SELECT 语句的信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
+ SELECT \<select_criteria> 使用 SELECT 语句的结果填充新表。 select_criteria 是 SELECT 语句的主体，用于确定将哪些数据复制到新表中  。 有关 SELECT 语句的信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
- 若要运行此命令，数据库用户需要所有这些权限或成员身份：  
+ 若要运行此命令，数据库用户需要所有这些权限或成员身份  ：  
   
--   本地架构上的 ALTER SCHEMA 权限，将包含 db_ddladmin 固定数据库角色中的新表或成员身份。  
+-   本地架构上的 ALTER SCHEMA 权限，将包含 db_ddladmin 固定数据库角色中的新表或成员身份   。  
   
--   CREATE TABLE 权限或 db_ddladmin 固定数据库角色的成员身份。  
+-   CREATE TABLE 权限或 db_ddladmin 固定数据库角色的成员身份   。  
   
--   select_criteria 中引用的任何对象的 SELECT 权限。  
+-   select_criteria 中引用的任何对象的 SELECT 权限   。  
   
  登录名需要所有这些权限：  
   
--   ADMINISTER BULK OPERATIONS 权限  
+-   ADMINISTER BULK OPERATIONS 权限   
   
--   ALTER ANY EXTERNAL DATA SOURCE 权限  
+-   ALTER ANY EXTERNAL DATA SOURCE 权限   
   
--   ALTER ANY EXTERNAL FILE FORMAT 权限  
+-   ALTER ANY EXTERNAL FILE FORMAT 权限   
   
 -   登录名必须具有写入权限才能读写 Hadoop 集群或 Azure 存储 Blob 上的外部文件夹。  
  
@@ -167,7 +167,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   外部分区移动  
   
- **适用对象：**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]作为创建外部表的先决条件，设备管理员需要配置 Hadoop 连接。 有关详细信息，请参阅 APS 文档中的“配置与外部数据的连接 (Analytics Platform System)”，可从[此处](https://www.microsoft.com/download/details.aspx?id=48241)下载该文档。  
+ **适用对象：** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]作为创建外部表的先决条件，设备管理员需要配置 Hadoop 连接。 有关详细信息，请参阅 APS 文档中的“配置与外部数据的连接 (Analytics Platform System)”，可从[此处](https://www.microsoft.com/download/details.aspx?id=48241)下载该文档。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  由于外部表数据驻留在数据库之外，所以备份和还原操作将仅对存储在数据库中的数据进行操作。 这意味着仅备份和还原元数据。  
@@ -194,7 +194,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. 使用 CREATE EXTERNAL TABLE AS SELECT (CETAS) 创建 Hadoop 表  
  以下示例使用源表 `dimCustomer` 中的列定义和数据创建一个名为 `hdfsCustomer` 的新外部表。  
   
- 表定义存储在数据库中，并且 SELECT 语句的结果将导出到 Hadoop 外部数据源 customer_ds 上的“/pdwdata/customer.tbl”文件。 该文件根据外部文件格式 customer_ff 设置格式。  
+ 表定义存储在数据库中，并且 SELECT 语句的结果将导出到 Hadoop 外部数据源 customer_ds 上的“/pdwdata/customer.tbl”文件  。 该文件根据外部文件格式 customer_ff 设置格式  。  
   
  文件名由数据库生成，并包含查询 ID，便于保持文件与生成该文件的查询的一致性。  
   

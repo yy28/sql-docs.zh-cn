@@ -23,10 +23,10 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101988"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68101988"
   
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)） 
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -66,7 +66,7 @@ DBCC DBREINDEX
  WITH NO_INFOMSGS  
  取消严重级别从 0 到 10 的所有信息性消息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 DBCC DBREINDEX 重新生成表的一个索引或为表定义的所有索引。 通过允许动态重新生成索引，可以重新生成强制 PRIMARY KEY 或 UNIQUE 约束的索引，而不必删除并重新创建这些约束。 这意味着无需了解表的结构或其约束，即可重新生成索引。 这可能在将数据大容量复制到表中以后发生。
 
 DBCC DBREINDEX 可以在一条语句中重新生成表的所有索引。 这要比对多条 DROP INDEX 和 CREATE INDEX 语句进行编码更容易。 由于这项工作是通过一条语句执行的，因此 DBCC DBREINDEX 自动成为原子性的，而单个 DROP INDEX 和 CREATE INDEX 语句则必须包含在事务中才能成为原子性的。 此外，DBCC DBREINDEX 提供了比单个 DROP INDEX 和 CREATE INDEX 语句更多的优化性能。

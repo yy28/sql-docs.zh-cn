@@ -12,13 +12,13 @@ ms.assetid: 03e76d4a-d463-4673-8843-08e4ecaefe27
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 495150983eefbd40515bbd35985d31f9ae3f3769
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033528"
 ---
-# <a name="mssqlserver14421"></a>MSSQLSERVER_14421
+# <a name="mssqlserver_14421"></a>MSSQLSERVER_14421
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -32,7 +32,7 @@ ms.locfileid: "68033528"
 |符号名称|SQLErrorNum14421|  
 |消息正文|日志传送辅助数据库 %s.%s 的还原阈值为 %d 分钟，并且现在不同步。在过去的 %d 分钟之内未执行任何还原操作。 还原操作滞后了 %d 分钟。 请查看代理日志和日志传送监视器信息。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
 此消息指出日志传送在超出还原阈值的情况下不同步。 还原阈值是生成消息之前在还原操作之间允许等待的分钟数。  
   
 ### <a name="possible-causes"></a>可能的原因  
