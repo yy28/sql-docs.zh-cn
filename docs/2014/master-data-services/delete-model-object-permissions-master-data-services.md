@@ -15,43 +15,43 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1a0cb087f5a0cd429d9bc6f30ea08aaef3d07b3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483106"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>删除模型对象权限 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，删除模型对象权限可以删除已进行的任何分配。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 ### <a name="to-delete-model-object-permissions"></a>删除模型对象权限  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”** 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”**。  
   
 2.  在 **“用户”** 或 **“组”** 页上，选择要编辑的用户或组所对应的行。  
   
-3.  单击 **“编辑所选用户”** 。  
+3.  单击 **“编辑所选用户”**。  
   
 4.  单击 **“模型”** 选项卡。  
   
 5.  也可以从 **“模型”** 列表中选择某一模型。  
   
-6.  在中**模型权限摘要**窗格中，选择你想要删除的权限的行。  
+6.  在 "**模型权限摘要**" 窗格中，选择要删除的权限所在的行。  
   
-7.  单击**删除所选的权限**。  
+7.  单击 "**删除所选权限**"。  
   
     > [!NOTE]  
     >  如果权限继承自一个组，则不能从用户删除该权限。 而是必须从该组删除该权限。  
   
-## <a name="see-also"></a>请参阅  
- [模型对象权限 (Master Data Services)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [分配模型对象权限 (Master Data Services)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;Master Data Services 的模型对象权限&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [&#40;Master Data Services 分配模型对象权限&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

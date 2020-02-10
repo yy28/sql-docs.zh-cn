@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 85e0c761f5dc784698b3aed361ce50488a93e366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010099"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable DDL、函数、存储过程和视图
@@ -28,7 +28,7 @@ ms.locfileid: "66010099"
   
 ##  <a name="ddl"></a> Transact-SQL 数据定义语言 (DDL) 语句  
   
-|Object|“登录属性”|详细信息|  
+|Object|状态|更多信息|  
 |------------|------------|----------------------|  
 |[ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)<br /><br /> [ALTER DATABASE SET 选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)|已更改|[启用 FileTable 的先决条件](enable-the-prerequisites-for-filetable.md)<br /><br /> [管理 FileTable](manage-filetables.md)|  
 |[ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)|已更改|[创建、更改和删除 FileTable](create-alter-and-drop-filetables.md)<br /><br /> [管理 FileTable](manage-filetables.md)|  
@@ -38,7 +38,7 @@ ms.locfileid: "66010099"
   
 ##  <a name="func"></a> 函数  
   
-|Object|“登录属性”|详细信息|  
+|Object|状态|更多信息|  
 |------------|------------|----------------------|  
 |[FileTableRootPath (Transact-SQL)](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**已添加**|[在 FileTable 中使用目录和路径](work-with-directories-and-paths-in-filetables.md)|  
 |[GetFileNamespacePath (Transact-SQL)](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|**已添加**|[在 FileTable 中使用目录和路径](work-with-directories-and-paths-in-filetables.md)|  
@@ -46,13 +46,13 @@ ms.locfileid: "66010099"
   
 ##  <a name="sproc"></a> 存储过程  
   
-|Object|“登录属性”|详细信息|  
+|Object|状态|更多信息|  
 |------------|------------|----------------------|  
 |[sp_kill_filestream_non_transacted_handles (Transact-SQL)](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles)|**已添加**|[管理 FileTable](manage-filetables.md)|  
   
 ##  <a name="cv"></a> 目录视图  
   
-|Object|“登录属性”|详细信息|  
+|Object|状态|更多信息|  
 |------------|------------|----------------------|  
 |[sys.database_filestream_options (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)|**已添加**|[启用 FileTable 的先决条件](enable-the-prerequisites-for-filetable.md)|  
 |[sys.filetable_system_defined_objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql)|**已添加**|[创建、更改和删除 FileTable](create-alter-and-drop-filetables.md)<br /><br /> [管理 FileTable](manage-filetables.md)|  
@@ -61,11 +61,11 @@ ms.locfileid: "66010099"
   
 ##  <a name="dmv"></a> 动态管理视图  
   
-|Object|“登录属性”|详细信息|  
+|Object|状态|更多信息|  
 |------------|------------|----------------------|  
 |[sys.dm_filestream_non_transacted_handles (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)|**已添加**|[管理 FileTable](manage-filetables.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理 FileTable](manage-filetables.md)  
   
   

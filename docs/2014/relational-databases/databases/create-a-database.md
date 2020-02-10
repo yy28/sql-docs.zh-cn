@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872253"
 ---
 # <a name="create-a-database"></a>创建数据库
@@ -48,19 +48,19 @@ ms.locfileid: "62872253"
   
 -   在一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例中最多可以指定 32,767 个数据库。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   CREATE DATABASE 语句必须以自动提交模式（默认事务管理模式）运行，不允许在显式或隐式事务中使用。  
   
 ###  <a name="Recommendations"></a> 建议  
   
--   创建、修改或删除用户数据库后，应备份 [master](master-database.md) 数据库。  
+-   创建、修改或删除用户数据库时，应备份[master](master-database.md)数据库。  
   
 -   在创建数据库时，请根据数据库中预期的最大数据量，创建尽可能大的数据文件。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对 master 数据库的 CREATE DATABASE 权限，或需要 CREATE ANY DATABASE/ALTER ANY DATABASE 权限。  
   
  为了控制对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机上的磁盘使用，通常只有少数登录帐户才有创建数据库的权限。  
@@ -75,12 +75,12 @@ ms.locfileid: "62872253"
   
 3.  在 **“新建数据库”** 中，输入数据库名称。  
   
-4.  若要通过接受所有默认值创建数据库，请单击 **“确定”** ；否则，请继续后面的可选步骤。  
+4.  若要通过接受所有默认值创建数据库，请单击 **“确定”**；否则，请继续后面的可选步骤。  
   
-5.  若要更改所有者名称，请单击 (…) 选择其他所有者  。  
+5.  若要更改所有者名称，请单击 (…) 选择其他所有者****。  
   
     > [!NOTE]  
-    >  “使用全文检索”  选项始终处于选中和灰显状态，这是因为从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，所有用户数据库都启用了全文检索。  
+    >  “使用全文检索”**** 选项始终处于选中和灰显状态，这是因为从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，所有用户数据库都启用了全文检索。  
   
 6.  若要更改主数据文件和事务日志文件的默认值，请在 **“数据库文件”** 网格中单击相应的单元并输入新值。 有关详细信息，请参阅 [向数据库中添加数据文件或日志文件](add-data-or-log-files-to-a-database.md)。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62872253"
   
     2.  在 **“值”** 列中，输入扩展属性文本。 例如，输入描述数据库的一个或多个语句。  
   
-12. 若要创建数据库，请单击 **“确定”** 。  
+12. 若要创建数据库，请单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -131,10 +131,10 @@ GO
   
  有关更多示例，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)。  
   
-## <a name="see-also"></a>请参阅  
- [数据库文件和文件组](database-files-and-filegroups.md)   
- [数据库分离和附加 (SQL Server)](database-detach-and-attach-sql-server.md)   
- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
+## <a name="see-also"></a>另请参阅  
+ [Database Files and Filegroups](database-files-and-filegroups.md)   
+ [数据库分离和附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [向数据库中添加数据文件或日志文件](add-data-or-log-files-to-a-database.md)  
   
   

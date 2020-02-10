@@ -1,5 +1,5 @@
 ---
-title: 包含函数 (XQuery) |Microsoft Docs
+title: contains 函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899032"
 ---
 # <a name="functions-on-string-values---contains"></a>基于字符串值的函数 - contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回的值为类型 xs: boolean，该值指示是否的值*美元 arg1*包含由指定的字符串值*美元 arg2*。  
+  返回 xs： boolean 类型的值，指示 *$arg 1*的值是否包含 *$arg 2*指定的字符串值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,31 +35,32 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ```  
   
 ## <a name="arguments"></a>参数  
- *$arg1*  
+ *$arg 1*  
  要测试的字符串值。  
   
- *$arg2*  
+ *$arg 2*  
  要查找的子字符串。  
   
 ## <a name="remarks"></a>备注  
- 如果的值*美元 arg2*是零长度字符串，该函数将返回**True**。 如果的值*美元 arg1*是一个零长度字符串和的值*美元 arg2*不是零长度字符串，该函数将返回**False**。  
+ 如果 *$arg 2*的值是长度为零的字符串，则函数将返回**True**。 如果 *$arg 1*的值是长度为零的字符串，而 *$arg 2*的值不是长度为零的字符串，则该函数返回**False**。  
   
- 如果的值*美元 arg1*或*美元 arg2*是空序列，该参数被视为零长度字符串。  
+ 如果 *$arg 1*或 *$arg 2*的值是空序列，则该参数将被视为长度为零的字符串。  
   
  contains() 函数使用 XQuery 默认的 Unicode 码位排序规则来进行字符串比较。  
   
- 为指定的子字符串值*美元 arg2*必须小于或等于 4000 个字符。 如果指定的值大于 4000 个字符，出现动态错误情况和 contains （） 函数返回空序列而不是布尔值 **，则返回 True**或**False**。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不会对 XQuery 表达式生成动态错误。  
+ 为 *$arg 2*指定的子字符串值必须小于或等于4000个字符。 如果指定的值超过4000个字符，则会出现动态错误条件，并且 contains （）函数返回一个空序列，而不是布尔值**True**或**False**。 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不会对 XQuery 表达式生成动态错误。  
   
- 若要获取不区分大小写的比较[大写](../xquery/functions-on-string-values-upper-case.md)或 lower-case 函数可用。  
+ 为了实现不区分大小写的比较，可以使用[大写](../xquery/functions-on-string-values-upper-case.md)或小写函数。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
- XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅主题中的"XQuery 函数可识别代理"部分[SQL Server 2016 中数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另请参阅[ALTER DATABASE 兼容性级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)并[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅[SQL Server 2016 中数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)主题中的 "XQuery 函数是代理感知" 部分。 另请参阅[ALTER DATABASE 兼容级别 &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了对存储在 AdventureWorks 数据库中的各种 xml 类型列中的 XML 实例的 XQuery 示例。  
+ 本主题提供针对 AdventureWorks 数据库中各种 xml 类型列中存储的 XML 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. 使用 contains() XQuery 函数搜索特定的字符串  
- 以下查询将查找概要说明中包含单词 Aerodynamic 的产品。 该查询将返回 ProductID 和 <`Summary`> 此类产品的元素。  
+ 以下查询将查找概要说明中包含单词 Aerodynamic 的产品。 查询返回此类产品的 ProductID 和`Summary` <> 元素。  
   
 ```  
 --The product model description document uses  
@@ -108,7 +109,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8ebe044c2cd08f8724dc33a6928c8b94447fa8dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914241"
 ---
-# <a name="mssqlserver3271"></a>MSSQLSERVER_3271
+# <a name="mssqlserver_3271"></a>MSSQLSERVER_3271
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62914241"
 |符号名称|DMPIO_IO_ERROR|  
 |消息正文|在文件 "%ls:" 上发生不可恢复的 I/O 错误: %ls。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  这是一个一般错误，是在操作系统在备份或还原操作过程中执行 I/O 的同时引发错误时出现的。 在大多数情况下，原因仅仅是备份介质已满。  
   
  该错误可能包含来自操作系统的其他文本，指示磁盘已满。 在使用第三方备份软件执行备份或还原操作时，可能会出现指示备份失败的其他消息。 该消息可能与以下文本类似：  

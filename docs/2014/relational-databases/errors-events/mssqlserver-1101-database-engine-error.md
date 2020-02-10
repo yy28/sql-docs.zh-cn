@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4468e85f8170ecb6b23abf5af8ee3a114a6bef3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870163"
 ---
-# <a name="mssqlserver1101"></a>MSSQLSERVER_1101
+# <a name="mssqlserver_1101"></a>MSSQLSERVER_1101
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62870163"
 |符号名称|NOALLOCPG|  
 |消息正文|由于文件组“%.\*ls”中的磁盘空间不足，无法为数据库“%.*ls”分配新页。 请删除文件组中的对象、将其他文件添加到文件组或者为文件组中的现有文件启用自动增长，以便增加必要的空间。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  文件组中没有可用的磁盘空间。  
   
 ## <a name="user-action"></a>用户操作  

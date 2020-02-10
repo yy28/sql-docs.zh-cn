@@ -1,5 +1,5 @@
 ---
-title: ODBC 源编辑器 （连接管理器页） |Microsoft Docs
+title: ODBC 源编辑器（"连接管理器" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057223"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>ODBC 源编辑器（“连接管理器”页）
@@ -29,22 +29,22 @@ ms.locfileid: "66057223"
   
 -   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，打开具有 ODBC 源的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包。  
   
--   在“数据流”选项卡上，双击 ODBC 源。  
+-   在“数据流”  选项卡上，双击 ODBC 源。  
   
 ## <a name="options"></a>选项  
   
 ### <a name="connection-manager"></a>“ODBC 源编辑器”  
  从列表中选择现有 ODBC 连接管理器，或单击 **“新建”** 创建新的连接。 该连接可以指向支持 ODBC 的任何数据库。  
   
-### <a name="new"></a>新版  
- 单击 **“新建”**。 **“配置 ODBC 连接管理器编辑器”** 对话框随即打开，供您在其中创建新的 ODBC 连接管理器。  
+### <a name="new"></a>新建  
+ 单击 **“新建”** 。 **“配置 ODBC 连接管理器编辑器”** 对话框随即打开，供您在其中创建新的 ODBC 连接管理器。  
   
 ### <a name="data-access-mode"></a>数据访问模式  
  选择从源选择数据的方法。 选项显示在下表中：  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
-|表名|从 ODBC 数据源中的表或视图检索数据。 选择此选项后，请从列表中为以下选项选择一个值：|  
+|表名称|从 ODBC 数据源中的表或视图检索数据。 选择此选项后，请从列表中为以下选项选择一个值：|  
 ||**表或视图的名称**：从列表中选择一个可用表或视图，或键入正则表达式以标识该表。|  
 ||该列表仅包含前 1000 个表。 如果您的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (*) 通配符输入名称的任何部分以便显示要使用的表。|  
 |SQL 命令|使用 SQL 查询从 ODBC 数据源中检索数据。 您应该采用正在使用的源数据库的语法编写查询。 选择此选项后，请采用以下方法之一输入查询：|  
@@ -55,7 +55,7 @@ ms.locfileid: "66057223"
 ### <a name="preview"></a>预览  
  单击 **“预览”** ，查看从选定的表或视图中提取的最多前 200 行数据。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC 源自定义属性](data-flow/odbc-source-custom-properties.md)   
  [ODBC 源编辑器（“列”页）](../../2014/integration-services/odbc-source-editor-columns-page.md)   
  [ODBC 源编辑器（“错误输出”页）](../../2014/integration-services/odbc-source-editor-error-output-page.md)  

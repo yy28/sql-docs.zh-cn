@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b62fb5e33311f1011911c40fc858723b218bac55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054831"
 ---
 # <a name="union-all-transformation-editor"></a>Union All 转换编辑器
@@ -36,9 +36,9 @@ ms.locfileid: "66054831"
  **Union All 输入 n**  
  从第二个或其他输入中可用输入列的列表中选择。 映射的列的元数据必须匹配。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [通过使用 Union All 转换来合并数据](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
+ [使用 Union All 转换来合并数据](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
  [合并转换](data-flow/transformations/merge-transformation.md)   
  [合并联接转换](data-flow/transformations/merge-join-transformation.md)  
   

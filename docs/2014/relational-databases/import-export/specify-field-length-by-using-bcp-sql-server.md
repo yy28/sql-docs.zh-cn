@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011840"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定字段长度 (SQL Server)
-  字段长度指示以字符格式表示数据时所要求的最大字符数。 如果数据以本机格式存储，则字段长度就是已知的，例如，`int` 数据类型占 4 个字节。 如果指示前缀长度为 0 **bcp**命令将提示你输入字段长度、 默认字段长度以及字段长度对包含的数据文件中的数据存储的影响`char`数据。  
+  字段长度指示以字符格式表示数据时所要求的最大字符数。 如果数据以本机格式存储，则字段长度就是已知的，例如，`int` 数据类型占 4 个字节。 如果为前缀长度指定了0，则**bcp**命令会提示输入字段长度、默认字段长度以及字段长度对包含`char`数据的数据文件中数据存储的影响。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>bcp 提示输入字段长度  
- 如果某个交互式 **bcp** 命令包含不带格式化文件开关 ( **-f**) 或数据格式开关（ **-n**、 **-c**、 **-w** 或 **-N**）的 **in** 或 **out** 选项，则该命令会提示输入每个数据字段的字段长度，如下所示：  
+ 如果某个交互式 **bcp** 命令包含不带格式化文件开关 (**-f**) 或数据格式开关（**-n**、**-c**、**-w** 或 **-N**）的 **in** 或 **out** 选项，则该命令会提示输入每个数据字段的字段长度，如下所示：  
   
  `Enter length of field <field_name> [<default>]:`  
   
@@ -36,21 +36,22 @@ ms.locfileid: "66011840"
 > [!NOTE]  
 >  在你以交互方式指定 **bcp** 命令中的所有字段后，该命令会提示你将自己对每个字段的响应保存到一个非 XML 格式化文件中。 有关非 XML 格式文件的详细信息，请参阅[ 非 XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  
   
- **bcp** 命令是否提示输入字段长度取决于若干因素，如下所示：  
+ 
+  **bcp** 命令是否提示输入字段长度取决于若干因素，如下所示：  
   
 -   当复制非固定长度的数据类型并指定前缀长度为 0 时， **bcp** 命令会提示输入字段长度。  
   
 -   当将非字符数据转换为字符数据时， **bcp** 会建议一个足以存储该数据的默认字段长度。  
   
--   如果文件存储类型为非字符类型，则 **bcp** 命令不会提示输入字段长度。 数据将以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机数据表示形式（本机格式）存储。  
+-   如果文件存储类型为非字符类型，则 **bcp** 命令不会提示输入字段长度。 数据以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机数据表示形式（本机格式）存储。  
   
 ## <a name="using-default-field-lengths"></a>使用默认字段长度  
  通常， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 会建议你接受 **bcp**建议的默认字段长度值。 如果已创建了字符模式数据文件，则使用默认字段长度可确保数据不会被截断，并且不会发生数字溢出错误。  
   
- 如果指定的字段长度不正确，可能会发生问题。 例如，当复制数字数据并且为该数据指定的字段长度过短时， **bcp** 实用工具将显示一条溢出消息而不复制数据。 此外，如果您导出`datetime`数据，并指定字段长度少于 26 个字节字符字符串中，为**bcp**实用工具将截断数据而不显示一条错误消息。  
+ 如果指定的字段长度不正确，可能会发生问题。 例如，当复制数字数据并且为该数据指定的字段长度过短时， **bcp** 实用工具将显示一条溢出消息而不复制数据。 此外，如果导出`datetime`数据并为字符串指定小于26个字节的字段长度， **bcp**实用工具将截断数据而不会出现错误消息。  
   
 > [!IMPORTANT]  
->  使用默认大小选项时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要读取整个字符串。 在某些情况下，使用默认字段长度可能导致“意外的文件结尾”错误。 通常，此错误出现在`money`并`datetime`数据类型时所需字段的唯一部分出现在数据文件中; 例如，当`datetime`的值*mm*/*dd* / *yy*时间组件而未指定，因此，比预期 24 字符长度更短`datetime`中的值`char`格式。 若要避免此类错误，请使用字段终止符或具有固定长度的数据字段，或者通过指定其他值来更改默认字段长度。  
+>  使用默认大小选项时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要读取整个字符串。 在某些情况下，使用默认字段长度可能导致“意外的文件结尾”错误。 通常，当数据文件中只`money`出现`datetime`预期字段的一部分时，和数据类型发生此错误;例如，如果在没有`datetime`时间部分的情况下指定了*mm*/*dd*/*yy*值，并且此值小于`datetime` `char`格式的值的预期24个字符长度，则为。 若要避免此类错误，请使用字段终止符或具有固定长度的数据字段，或者通过指定其他值来更改默认字段长度。  
   
 ### <a name="default-field-lengths-for-character-file-storage"></a>字符文件存储的默认字段长度  
  下表列出了要存储为字符文件存储类型的数据的默认字段长度。 可为空值的数据与非空数据的长度相同。  
@@ -87,10 +88,11 @@ ms.locfileid: "66011840"
 |UDT|用户定义的字词 (UDT) 列长度|  
 |XML|0|  
   
- \*有关详细信息`decimal`并`numeric`数据类型，请参阅[decimal 和 numeric &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
+ \*有关`decimal`和`numeric`数据类型的详细信息，请参阅[decimal 和 numeric &#40;transact-sql&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
   
 > [!NOTE]  
->  `tinyint` 类型的列的值介于 0 到 255 之间；表示该范围内的任意数值所需的最大字符数是三（用于表示 100 到 255 之间的值）。  
+>  
+  `tinyint` 类型的列的值介于 0 到 255 之间；表示该范围内的任意数值所需的最大字符数是三（用于表示 100 到 255 之间的值）。  
   
 ### <a name="default-field-lengths-for-native-file-storage"></a>本机文件存储的默认字段长度  
  下表列出了要存储为本机文件存储类型的数据的默认字段长度。 可为空值的数据与非空数据的长度相同，并且字符数据始终以字符格式存储。  
@@ -111,21 +113,21 @@ ms.locfileid: "66011840"
 |`tinyint`|1|  
 |`money`|8|  
 |`smallmoney`|4|  
-|`decimal` <sup>1</sup>|<sup>*</sup>|  
-|`numeric` <sup>1</sup>|<sup>*</sup>|  
+|`decimal`<sup>1</sup>|<sup>*</sup>|  
+|`numeric`<sup>1</sup>|<sup>*</sup>|  
 |`uniqueidentifier`|16|  
 |`timestamp`|8|  
   
- <sup>1</sup>有关详细信息`decimal`并`numeric`数据类型，请参阅[decimal 和 numeric &#40;-&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
+ <sup>1</sup>有关`decimal`和`numeric`数据类型的详细信息，请参阅[decimal 和 numeric &#40;transact-sql&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
   
  在上述所有情况中，若要创建日后要重新加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据文件并使存储空间保持最小，请使用长度前缀，以及默认文件存储类型和默认字段长度。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
- [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)   
- [使用 bcp 指定数据文件中的前缀长度 (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [使用 bcp 指定文件存储类型 (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)   
+ [指定字段终止符和行终止符 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [使用 bcp &#40;SQL Server 指定数据文件中的前缀长度&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
+ [使用 bcp &#40;SQL Server 指定文件存储类型&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)   
  [在批量导入期间保留 Null 或使用默认值 (SQL Server)](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
   

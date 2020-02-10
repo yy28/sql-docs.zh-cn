@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833750"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>“添加 Analysis Services 连接管理器”对话框 UI 参考
@@ -28,10 +28,10 @@ ms.locfileid: "62833750"
   
 ## <a name="options"></a>选项  
  **与运行 Analysis Services 的计算机建立连接**  
- 使用与运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器的默认连接，或者通过单击“编辑”  建立新连接。  
+ 使用与运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器的默认连接，或者通过单击“编辑”**** 建立新连接。  
   
  **编辑**  
- 使用“连接管理器”  对话框，可以与运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器建立连接，并编辑连接属性。  
+ 使用“连接管理器”**** 对话框，可以与运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器建立连接，并编辑连接属性。  
   
  **与此解决方案中的 Analysis Services 项目建立连接**  
  指定连接将在打开的解决方案中使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。  
@@ -42,7 +42,7 @@ ms.locfileid: "62833750"
  **Analysis Services 项目**  
  从列表中选择 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../integration-services-error-and-message-reference.md)   
  [Integration Services (SSIS) 连接](integration-services-ssis-connections.md)  
   

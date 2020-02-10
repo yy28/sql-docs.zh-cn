@@ -1,5 +1,5 @@
 ---
-title: Web 服务任务编辑器 （输入页） |Microsoft Docs
+title: Web 服务任务编辑器（"输入" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054519"
 ---
 # <a name="web-service-task-editor-input-page"></a>Web 服务任务编辑器（“输入”页）
@@ -34,12 +34,12 @@ ms.locfileid: "66054519"
  从列表中为要执行的任务选择 Web 方法。  
   
  **WebMethodDocumentation**  
- 键入对 Web 方法的说明，或单击浏览按钮 (…)，再在“Web 方法文档”对话框中键入说明   。  
+ 键入对 Web 方法的说明，或单击浏览按钮 (…)，再在“Web 方法文档”对话框中键入说明********。  
   
  **名称**  
  列出为 Web 方法提供的输入名称。  
   
- **类型**  
+ 类型   
  列出输入的数据类型。  
   
 > [!NOTE]  
@@ -48,13 +48,13 @@ ms.locfileid: "66054519"
  **变量**  
  选中该复选框以使用变量来提供输入。  
   
- **ReplTest1**  
+ **值**  
  如果选中了“变量”复选框，则请在列表中选择要提供输入的变量；否则，请键入要在输入中使用的值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Web 服务任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
- [Web 服务任务编辑器（“输出”页）](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Web 服务任务编辑器 &#40;常规 "页面&#41;](general-page-of-integration-services-designers-options.md)   
+ [Web 服务任务编辑器 &#40;输出页&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [“表达式”页](expressions/expressions-page.md)  
   
   

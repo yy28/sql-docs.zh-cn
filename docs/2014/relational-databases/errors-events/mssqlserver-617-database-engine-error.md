@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f63983243d0859fcb7ebaaf1ac5d184757d1f274
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867197"
 ---
-# <a name="mssqlserver617"></a>MSSQLSERVER_617
+# <a name="mssqlserver_617"></a>MSSQLSERVER_617
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62867197"
 |符号名称|NODESHASH|  
 |消息正文|尝试对数据库 ID %d 中的对象 ID %ld 的描述符进行解哈希运算时，在哈希表中没有找到该描述符。 工作表缺少条目。 请重新运行查询。 如果涉及到游标，请关闭游标，然后重新打开。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  SQL Server 在工作表中找不到特定项。  
   
 ## <a name="user-action"></a>用户操作  

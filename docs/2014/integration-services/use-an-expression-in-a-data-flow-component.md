@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054822"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>在数据流组件中使用表达式
@@ -46,9 +46,9 @@ ms.locfileid: "66054822"
   
 6.  双击该转换打开其对话框。  
   
-7.  在左窗格中，展开“变量”显示系统变量和用户定义的变量，然后展开“列”显示转换输入列。  
+7.  在左窗格中，展开“变量”显示系统变量和用户定义的变量，然后展开“列”显示转换输入列。********  
   
-8.  在右窗格中，展开“数学函数”、“字符串函数”、“日期/时间函数”、“NULL 函数”、“类型转换”和“运算符”，访问表达式语法提供的函数、转换和运算符。  
+8.  在右窗格中，展开“数学函数”、“字符串函数”、“日期/时间函数”、“NULL 函数”、“类型转换”和“运算符”，访问表达式语法提供的函数、转换和运算符。************************  
   
 9. 根据转换的类型，可以执行下列某项操作来生成表达式：  
   
@@ -57,14 +57,14 @@ ms.locfileid: "66054822"
     -   在 **“派生列转换编辑器”** 对话框中，将变量、列、函数、运算符和转换拖到 **“表达式”** 列中。 另外，您还可以直接在 **“表达式”** 列中键入表达式。  
   
         > [!NOTE]  
-        >  当焦点离开“条件”列或“表达式”列时，表达式文本可能会突出显示，指示表达式语法不正确。  
+        >  当焦点离开“条件”列或“表达式”列时，表达式文本可能会突出显示，指示表达式语法不正确。********  
   
-10. 单击 **“确定”** 退出对话框。  
+10. 单击 **“确定”**，退出对话框。  
   
     > [!NOTE]  
     >  如果该表达式无效，则会出现一个警告，描述表达式中的语法错误。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)   
  [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
  [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   

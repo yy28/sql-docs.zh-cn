@@ -1,5 +1,5 @@
 ---
-title: '有效的 ID、 IDREF 和 IDREFS 类型属性使用 sql: prefix 创建 (SQLXML 4.0) |Microsoft Docs'
+title: 使用 sql： prefix 创建有效的 ID、IDREF 和 IDREFS 类型属性（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013923"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>使用 sql:prefix 创建有效的 ID、IDREF 和 IDREFS 类型属性 (SQLXML 4.0)
   可以将属性指定为 ID 类型属性。 然后，可以用指定为 IDREF 或 IDREFS 的属性引用 ID 类型属性，从而启用文档之间的链接。  
   
- ID、IDREF 和 IDREFS 大体上对应于数据库中的 PK/FK（主键/外键）关系。 在 XML 文档中，ID 类型属性的值必须是非重复。 如果**CustomerID**并**OrderID**属性指定为 ID 类型在 XML 文档中，这些值必须是非重复。 但是，在数据库中，CustomerID 和 OrderID 列可以具有相同值。 （例如，CustomerID = 1 和 OrderID = 1 在数据库中都是有效的）。  
+ ID、IDREF 和 IDREFS 大体上对应于数据库中的 PK/FK（主键/外键）关系。 在 XML 文档中，ID 类型属性的值必须是唯一的。 如果在 XML 文档中将**CustomerID**和**订单**ID 属性指定为 ID 类型，则这些值必须是唯一的。 但是，在数据库中，CustomerID 和 OrderID 列可以具有相同值。 （例如，CustomerID = 1 和 OrderID = 1 在数据库中都是有效的）。  
   
  若要使 ID、IDREF 和 IDREFS 属性有效：  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66013923"
   
 -   ID、IDREF 和 IDREFS 的值必须是命名标记。 （例如，整数值 101 不能是 ID 值。）  
   
--   ID、 IDREF 和 IDREFS 类型的属性不能映射到类型的列`text`， `ntext`，或`image`或任何其他二进制数据类型 (例如， `timestamp`)。  
+-   ID、IDREF 和 IDREFS 类型的属性不能`text`映射到类型`ntext`为、或`image`的列，也不能映射到任何其他二进制数据类型（例如`timestamp`）。  
   
  如果 XML 文档包含多个 ID，则使用 `sql:prefix` 批注以确保值是唯一的。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "66013923"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. 指定 ID 和 IDREFS 类型  
- 在以下架构中， **\<客户 >** 元素组成 **\<顺序 >** 子元素。 **\<顺序 >** 元素还有子元素，而 **\<OrderDetail >** 元素。  
+ 在下面的架构中， ** \<Customer>** 元素由** \<Order>** 子元素组成。 Order>元素还具有一个子元素，即** \<OrderDetail>** 元素。 ** \<**  
   
- **OrderIDList**的属性 **\<客户 >** 是指的是一个 IDREFS 类型属性**OrderID**特性 **\<顺序 >** 元素。  
+ Customer>的**OrderIDList**属性是一个 IDREFS 类型属性，该属性引用** \<Order>** 元素的 "订单**id** " 属性。 ** \<**  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -108,7 +108,7 @@ ms.locfileid: "66013923"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将该文件另存为 sqlPrefix.xml。  
   

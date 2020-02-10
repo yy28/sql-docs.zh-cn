@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b06d3d34879ffd1f16ff6102f21fdbe3f031f7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868888"
 ---
-# <a name="mssqlserver26013"></a>MSSQLSERVER_26013
+# <a name="mssqlserver_26013"></a>MSSQLSERVER_26013
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62868888"
 |符号名称|SNI_SSL_READY|  
 |消息正文|已成功加载用于加密的证书 [Cert Hash(sha1) "%hs"]。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  这是一条信息性消息。 命名证书已成功加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，而且可用于加密。  
   
 ## <a name="user-action"></a>用户操作  

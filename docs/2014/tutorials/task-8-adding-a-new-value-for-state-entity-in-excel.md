@@ -1,5 +1,5 @@
 ---
-title: 任务 8：为在 Excel 中的 State 实体添加新值 |Microsoft Docs
+title: 任务8：在 Excel 中为 State 实体添加新值 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,48 +11,48 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489700"
 ---
 # <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>任务 8：在 Excel 中为 State 实体添加新值
   在本任务中，您将在 Excel 中为 State 实体添加值，并且将更改发布到 MDS 服务器。  
   
-1.  添加**工作表**Excel 通过单击底部的新选项卡中。  
+1.  单击底部的 "新建" 选项卡，在 Excel 中添加**工作表**。  
   
-     ![Excel-新工作表选项卡](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-01.jpg "Excel 的新工作表选项卡")  
+     ![Excel -“新建工作表”选项卡](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-01.jpg "Excel -“新建工作表”选项卡")  
   
-2.  在中**Excel**，单击**主数据**菜单上，选项卡，然后单击**显示资源管理器**功能区上。  
+2.  在**Excel**中，单击菜单上的 "**主数据**" 选项卡，然后单击功能区上的 "**显示资源管理器**"。  
   
-3.  在中**主数据资源管理器**，选择**供应商**有关**模型**。 应会看到两个实体：**供应商**并**状态**实体列表中。  
+3.  在**主数据资源管理器**中，选择 "**模型****供应商**"。 应会在实体列表中看到两个实体：**供应商**和**状态**。  
   
-4.  双击**状态**列表中。 所有成员**状态**从 MDS 实体应显示在工作表中。  
+4.  双击列表中的 "**状态**"。 来自 MDS 的**状态**实体的所有成员应显示在工作表中。  
   
-5.  现在，使用以下值末尾添加一行：**北卡罗来纳州**有关**名称**并**NC**有关**代码**。 颜色编码可以将任何新的/更新的记录与其他记录区分开来。  
+5.  现在，在末尾添加具有以下值的行：**北卡罗来纳**for **Name**和**NC** for **Code**。 颜色编码可以将任何新的/更新的记录与其他记录区分开来。  
   
-     ![Excel-将北卡罗来纳州添加到状态](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel-将北卡罗来纳州添加到状态")  
+     ![Excel - 将北卡罗来纳州添加到“州/省”](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel - 将北卡罗来纳州添加到“州/省”")  
   
-6.  单击**发布**在功能区中，若要将更改发布到 MDS。  
+6.  在功能区上单击 "**发布**"，将更改发布到 MDS。  
   
-     ![Excel-发布主数据选项卡上的按钮](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-03.jpg "Excel-发布主数据选项卡上的按钮")  
+     ![Excel -“主数据”选项卡上的“发布”按钮](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-03.jpg "Excel -“主数据”选项卡上的“发布”按钮")  
   
-7.  上**发布并添加批注**对话框框中，注意**对所有更改使用相同的批注**处于选中状态。 您可以在此处为所有更改输入单个批注。  
+7.  请注意，在 "**发布并添加批注**" 对话框上，选择 "对**所有更改使用相同的批注**"。 您可以在此处为所有更改输入单个批注。  
   
-8.  选择**审阅更改并分别提供批注**选项来提供每次更改 （在此情况下，只有一个） 的批注。  
+8.  选择 "**查看更改并单独提供批注**" 选项以提供每个更改的批注（在此示例中，只有一个）。  
   
-     ![Excel-发布并添加批注对话框的](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-04.jpg "Excel-发布并添加批注对话框的")  
+     ![Excel -“发布并添加批注”对话框](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-04.jpg "Excel -“发布并添加批注”对话框")  
   
-9. 单击**发布**将数据发布到 MDS。  
+9. 单击 "**发布**" 以将数据发布到 MDS。  
   
-10. 请注意，**颜色编码**行的**北卡罗来纳州**作为**状态**现已与其他记录相同。  
+10. 请注意，将**北卡罗莱纳州**的行的**颜色编码**为 "**状态**" 与其他记录相同。  
   
-11. **可选：** 验证新成员 (NC) 已添加到**状态**通过使用实体**资源管理器**中**主数据管理器**。  
+11. **可选：** 使用**主数据管理器**中的 "**资源管理器**" 验证新成员（NC）已添加到**State**实体。  
   
-12. 在 Excel 中，右键单击**状态**工作表的底部，然后单击**删除**以删除该工作表。 删除该工作表不会从 MDS 服务器中删除任何数据。  
+12. 在 Excel 中，右键单击底部的**状态**工作表，然后单击 "**删除**" 以删除该工作表。 删除该工作表不会从 MDS 服务器中删除任何数据。  
   
 ## <a name="next-step"></a>下一步  
- [任务 9:创建派生层次结构使用主数据管理器](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
+ [任务 9：使用主数据管理器创建派生层次结构](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
   
   

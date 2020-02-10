@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011918"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据
@@ -47,40 +47,41 @@ ms.locfileid: "66011918"
 |XML|`ntext`|`ntext`|`ntext`|  
 |UDT<sup>1</sup>|`image`|`image`|`image`|  
   
- \* 此类型受本机支持。  
+ \*此类型受本机支持。  
   
  <sup>1</sup> UDT 表示用户定义的类型。  
   
 ## <a name="exporting-using--v-80"></a>使用 -V 80 进行导出  
- 当你使用大容量导出数据 **-V80**切换，请`nvarchar(max)`， `varchar(max)`， `varbinary(max)`，XML，并使用 4 个字节的前缀，如存储在纯模式下的 UDT 数据`text`， `image`，和`ntext`数据，而不是使用 8 个字节的前缀，这是默认设置[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]及更高版本。  
+ 使用 **-V80**开关大容量导出数据时，纯模式`nvarchar(max)`下`varchar(max)`的`varbinary(max)`、、、XML 和 UDT 数据将存储为带有4个字节的前缀， `text`例如、 `image`和`ntext`数据，而不是使用8字节前缀，这是[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本的默认值。  
   
 ## <a name="copying-date-values"></a>复制日期值  
- **bcp** 将使用 ODBC 大容量复制 API。 因此，为了将日期值导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **bcp** 使用了 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[ *.f...* ])。  
+ **bcp**使用 ODBC 大容量复制 API。 因此，为了将日期值导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **bcp** 使用了 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[*.f...*])。  
   
- **Bcp**命令将使用 ODBC 默认格式的字符格式数据文件导出`datetime`和`smalldatetime`值。 例如，包含日期 `12 Aug 1998` 的 `datetime` 列将以字符串 `1998-08-12 00:00:00.000` 的形式大容量复制到数据文件中。  
+ **Bcp**命令使用和`datetime` `smalldatetime`值的 ODBC 默认格式导出字符格式的数据文件。 例如，包含日期 `datetime` 的 `12 Aug 1998` 列将以字符串 `1998-08-12 00:00:00.000` 的形式大容量复制到数据文件中。  
   
 > [!IMPORTANT]  
->  导入到的数据时`smalldatetime`字段使用**bcp**，请确保秒数值为 00.000，否则操作将失败。 `smalldatetime` 数据类型仅支持最接近的分钟值。 BULK INSERT 和 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在这种情况下不会失败，但会截断秒值。  
+>  使用 bcp 将数据导`smalldatetime`入到**** 字段中时，请确保秒数值为 00.000;否则，操作将失败。 
+  `smalldatetime` 数据类型仅支持最接近的分钟值。 BULK INSERT 和 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在这种情况下不会失败，但会截断秒值。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
- **使用数据格式进行大容量导入或大容量导出**  
+ **使用数据格式进行批量导入或批量导出**  
   
--   [使用字符格式导入或导出数据 (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用字符格式导入或导出数据 &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用本机格式导入或导出数据 (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用本机格式导入或导出数据 &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 字符格式导入或导出数据 (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 字符格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 本机格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
  
   
-## <a name="see-also"></a>请参阅  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>另请参阅  
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
  [数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
- [SQL Server 数据库引擎的向后兼容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [SQL Server 数据库引擎向后兼容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [CAST 和 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   
   

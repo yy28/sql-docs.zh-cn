@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8d49bcc6b25b9d66d8aba77c2300549c682a879
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867703"
 ---
-# <a name="mssqlserver605"></a>MSSQLSERVER_605
+# <a name="mssqlserver_605"></a>MSSQLSERVER_605
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62867703"
 |符号名称|WRONGPAGE|  
 |消息正文|尝试在数据库 %d 中提取逻辑页 %S_PGID 失败。 该逻辑页属于分配单元 %I64d，而非 %I64d。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  此错误通常表示指定数据库中的页或分配已损坏。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在根据页链接或使用索引分配映射 (IAM) 读取属于表的页时，检测到此损坏。 分配给表的所有页必须属于与该表相关联的分配单元之一。 如果页眉中包含的分配单元 ID 不匹配与表相关联的分配单元 ID，将引发此异常。 错误消息中列出的第一个分配单元 ID 是页眉中显示的 ID，而第二个分配单元值则是与表相关联的 ID。  
   
  **数据损坏错误**  
@@ -45,7 +45,7 @@ ms.locfileid: "62867703"
   
 -   操作系统过早地通知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已完成某个 I/O 操作；尽管不存在实际的数据损坏，但显示错误消息。  
   
- 运行带有优化器提示 NOLOCK 的查询，或将事务隔离级别设置为 READ UNCOMMITTED。 当使用 NOLOCK 或 READ UNCOMMITTED 的查询尝试读取被其他用户移走或更改的数据时，将发生 605 错误。 若要验证是否为暂时性的 605 错误，请稍后重新运行该查询。 有关详细信息，请参阅此知识库文章[235880](https://support.microsoft.com/kb/235880/en-us):"您"Error 605"时收到错误消息与优化器提示 NOLOCK 运行查询或将事务隔离级别设置为 SQL Server 中 READ UNCOMMITTED。"  
+ 运行带有优化器提示 NOLOCK 的查询，或将事务隔离级别设置为 READ UNCOMMITTED。 当使用 NOLOCK 或 READ UNCOMMITTED 的查询尝试读取被其他用户移走或更改的数据时，将发生 605 错误。 若要验证是否为暂时性的 605 错误，请稍后重新运行该查询。 有关详细信息，请参阅下面的知识库文章 [235880](https://support.microsoft.com/kb/235880/en-us)：“You receive an "Error 605" error message when you run a query with the optimizer hint NOLOCK or you set the transaction isolation level to READ UNCOMMITTED in SQL Server.”（当用优化程序提示 NOLOCK 运行查询或者在 SQL Server 中将事务隔离级别设为 READ UNCOMMITTED 时，将收到‘错误 605’错误消息）。  
   
  通常，如果在数据访问期间发生该错误，但后续的 DBCC CHECKDB 操作在没有出错的情况下完成，则 605 错误可能是暂时的。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62867703"
   
      USE`database_name`;  
   
-     前往  
+     GO  
   
      SELECT au.allocation_unit_id, OBJECT_NAME(p.object_id) AS table_name, fg.name AS filegroup_name,  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62867703"
   
      ORDER BY au.allocation_unit_id;  
   
-     前往  
+     GO  
   
 2.  对与错误消息中说明的第二个分配单元 ID 相关联的表，执行不带 REPAIR 子句的 DBCC CHECKTABLE。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62867703"
     > [!CAUTION]  
     >  如果您不确定运行带有 REPAIR 子句的 DBCC CHECKDB 会对数据造成何种影响，请在运行该语句前与您的主要支持提供商联系。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DBCC CHECKTABLE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 字词提取转换编辑器 （高级选项卡） |Microsoft Docs
+title: 字词提取转换编辑器（"高级" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055271"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>字词提取转换编辑器（“高级”选项卡）
@@ -36,11 +36,11 @@ ms.locfileid: "66055271"
  **名词和名词短语**  
  指定转换既提取名词也提取名词短语。  
   
- **频率**  
+ **率**  
  指定分数为字词的频率。  
   
  **TFIDF**  
- 指定分数为字词的 TFIDF 值。 TFIDF 分数是字词频率和文档频率倒数的乘积，其定义如下：字词 T 的 TFIDF = (T 的频率) * log( (输入中的行数) / (具有 T 的行数) )  
+ 指定分数为字词的 TFIDF 值。 TFIDF 分数是字词频率和文档频率倒数的乘积，其定义如下：TFIDF of a Term T = (frequency of T) * log( (#rows in Input) / (#rows having T) )。  
   
  **频率阈值**  
  指定某个词或短语必须出现多少次以后才对其进行提取。 默认值为 2。  
@@ -49,15 +49,15 @@ ms.locfileid: "66055271"
  指定短语的最大长度（字）。 此选项仅影响名词短语。 默认值为 12。  
   
  **使用区分大小写的字词提取**  
- 指定是否将提取设置为区分大小写。 默认值为 `False`。  
+ 指定是否将提取设置为区分大小写。 默认为 `False`。  
   
  **配置错误输出**  
  使用[“配置错误输出” ](../../2014/integration-services/configure-error-output.md) 对话框可以为导致错误的行指定错误处理方式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [字词提取转换编辑器（“字词提取”选项卡）](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [字词提取转换编辑器（“排除”选项卡）](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [字词提取转换编辑器 &#40;字词提取选项卡&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [字词提取转换编辑器 &#40;排除选项卡&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [字词查找转换](data-flow/transformations/lookup-transformation.md)  
   
   

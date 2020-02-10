@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877872"
 ---
 # <a name="variables-window"></a>“变量”窗口
@@ -29,7 +29,8 @@ ms.locfileid: "62877872"
  您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   
 > [!NOTE]
->  `Name` 和 `Namespace` 属性的值必须以 Unicode 标准 2.0 定义的字母字符或下划线 (_) 开头。 后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (\_)。  
+>  
+  `Name` 和 `Namespace` 属性的值必须以 Unicode 标准 2.0 定义的字母字符或下划线 (_) 开头。 后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (\_)。  
   
 ## <a name="options"></a>选项  
  **添加变量**  
@@ -60,26 +61,26 @@ ms.locfileid: "62877872"
 > [!NOTE]  
 >  如果为变量指定表达式，则无法更改数据类型。  
   
- **ReplTest1**  
+ **值**  
  查看变量值。 您可以更新用户定义变量的值。 此值可以是文字或表达式，还可以是多线串。 若要为变量指定表达式，请单击 **“变量”** 窗口中的 **“表达式”** 列旁边的省略号按钮。  
   
  `Namespace`  
- 查看命名空间名称。 用户定义变量最初创建于**用户**命名空间，但您可以更改中的命名空间名称`Namespace`字段。 若要显示此列，请单击 **“网格选项”** 。  
+ 查看命名空间名称。 用户定义变量最初在**user**命名空间中创建，但您可以在`Namespace`字段中更改命名空间名称。 若要显示此列，请单击 **“网格选项”**。  
   
  **引发更改事件**  
- 指示在值发生更改时是否引发 `OnVariableValueChanged` 事件。 您可以更新用户定义变量和系统变量的值。 默认情况下， **“变量”** 窗口不列出此列。 若要显示此列，请单击 **“网格选项”** 。  
+ 指示在值发生更改时是否引发 `OnVariableValueChanged` 事件。 您可以更新用户定义变量和系统变量的值。 默认情况下， **“变量”** 窗口不列出此列。 若要显示此列，请单击 **“网格选项”**。  
   
  **说明**  
- 查看变量说明。 您可以更改用户定义变量的说明。 默认情况下， **“变量”** 窗口不列出此列。 若要显示此列，请单击 **“网格选项”** 。  
+ 查看变量说明。 您可以更改用户定义变量的说明。 默认情况下， **“变量”** 窗口不列出此列。 若要显示此列，请单击 **“网格选项”**。  
   
- **“变量”**  
+ **表达式**  
  查看为变量指定的表达式。 若要指定表达式，请单击省略号按钮。  
   
  如果为变量指定了表达式，该变量旁边将显示特殊的图标标记。 这个特殊的图标标记还显示在设置有表达式的连接管理器和任务旁边。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
- [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)   
+ [使用包中的变量](../../2014/integration-services/use-variables-in-packages.md)   
  [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)   
  [生成包执行的转储文件](troubleshooting/generating-dump-files-for-package-execution.md)  
   

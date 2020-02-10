@@ -1,5 +1,5 @@
 ---
-title: 筛选值使用 sql:-字段和 sql:-值 (SQLXML 4.0) |Microsoft Docs
+title: 使用 sql 筛选值：限制字段和 sql：限制值（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013811"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 筛选值 (SQLXML 4.0)
-  可以基于某些限制值来限制从数据库查询返回的行。 `sql:limit-field` 和 `sql:limit-value` 批注用于标识包含限制值的数据库列和指定用于筛选返回的数据的特定限制值。  
+  可以基于某些限制值来限制从数据库查询返回的行。 
+  `sql:limit-field` 和 `sql:limit-value` 批注用于标识包含限制值的数据库列和指定用于筛选返回的数据的特定限制值。  
   
- `sql:limit-field` 批注用于标识包含限制值的列；对于每个映射的元素或属性允许该批注。  
+ 
+  `sql:limit-field` 批注用于标识包含限制值的列；对于每个映射的元素或属性允许该批注。  
   
- `sql:limit-value` 批注用于指定在 `sql:limit-field` 批注所指定的列中的受限制值。 `sql:limit-value` 批注是可选的。 如果未指定 `sql:limit-value`，将采用 NULL 值。  
+ 
+  `sql:limit-value` 批注用于指定在 `sql:limit-field` 批注所指定的列中的受限制值。 
+  `sql:limit-value` 批注是可选的。 如果未指定 `sql:limit-value`，将采用 NULL 值。  
   
 > [!NOTE]  
 >  使用 `sql:limit-field`（其中映射的 SQL 列为 `real` 类型）时，SQLXML 4.0 对 `sql:limit-value` 执行转换（如作为 `nvarchar` 指定值在 XML 架构中指定）。 这要求使用纯科学记数法指定小数限制值。 有关详细信息，请参阅下面的示例 B。  
@@ -53,7 +57,7 @@ ms.locfileid: "66013811"
   
  一个客户可以具有发货地址和/或开票地址。 AddressType 列值是 Shipping 和 Billing。  
   
- 这是在其中的映射架构**ShipTo**架构属性映射到 Addresses 关系中的 StreetAddress 列。 此属性的返回值被限制为仅通过指定发货地址`sql:limit-field`和`sql:limit-value`批注。 同样， **BillTo**架构属性返回只客户的开票地址。  
+ 这是映射架构，其中**ShipTo**架构属性映射到地址关系中的 StreetAddress 列。 此属性返回的值仅限于通过指定`sql:limit-field`和`sql:limit-value`批注来发送地址。 同样， **BillTo**架构特性仅返回客户的帐单地址。  
   
  以下是架构：  
   
@@ -97,9 +101,9 @@ ms.locfileid: "66013811"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
-1.  创建两个表中的**tempdb**数据库：  
+1.  在**tempdb**数据库中创建两个表：  
   
     ```  
     USE tempdb  
@@ -148,7 +152,7 @@ ms.locfileid: "66013811"
   
      有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -170,7 +174,7 @@ ms.locfileid: "66013811"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- 这是在其中的映射架构**OrderID**订单详细信息属性映射到 orders 关系中的 OrderID 列。 此属性的返回值被限制为仅显示那些具有值 2.0000000e-001 (0.2) 为指定**折扣**属性使用`sql:limit-field`和`sql:limit-value`批注。  
+ 这是订单详细信息中的 "订单**id** " 属性映射到订单关系中的 "订单 id" 列的映射架构。 此属性返回的值仅限于使用`sql:limit-field`和`sql:limit-value`批注为**折扣**属性指定的值为 2.0000000 e-001 （0.2）的值。  
   
  以下是架构：  
   
@@ -214,9 +218,9 @@ ms.locfileid: "66013811"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
-1.  创建两个表中的**tempdb**数据库：  
+1.  在**tempdb**数据库中创建两个表：  
   
     ```  
     USE tempdb  
@@ -287,7 +291,7 @@ ms.locfileid: "66013811"
   
 5.  通过在 Windows 资源管理器中单击 TestQuery.vbs 文件来执行它。  
   
-     下面是结果：  
+     结果如下：  
   
     ```  
     <root>  
@@ -304,10 +308,10 @@ ms.locfileid: "66013811"
     </root>  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [float 和 real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)   
- [nchar 和 nvarchar &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
+## <a name="see-also"></a>另请参阅  
+ [float 和 real &#40;Transact-sql&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)   
+ [nchar 和 nvarchar &#40;Transact-sql&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [使用带批注的 XSD 架构在查询中的&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [在查询中使用带批注的 XSD 架构 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

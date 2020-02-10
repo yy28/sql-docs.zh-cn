@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055348"
 ---
 # <a name="ssis-package-format"></a>SSIS 包格式
-  在当前版本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中，我们对包格式（.dtsx 文件）进行了重大更改，以方便读取格式和比较包。 您还可以更可靠地合并不包含有冲突的更改或以二进制格式存储的更改的包。  
+  在当前版本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中，我们对包格式（.dtsx 文件）进行了重大更改，以方便读取格式和比较包。 您还可以更可靠地合并不包含冲突更改或以二进制格式存储的更改的包。  
   
- 若要查看当前的 DTSX 包文件格式，请参阅[ \[MS DTSX\]:Data Transformation Services 包 XML 文件格式规范](https://go.microsoft.com/fwlink/?LinkId=233251)。  
+ 若要查看当前的 .dtsx 包文件格式，请参阅[ \[.dtsx\]：数据转换服务包 XML 文件格式规范](https://go.microsoft.com/fwlink/?LinkId=233251)。  
   
  下面的列表概述了这些文件格式更改。 若要查看这些更改的代码示例，请参阅 [SQL Server 2012 中的包格式更改](https://go.microsoft.com/fwlink/?LinkId=233255)。  
   

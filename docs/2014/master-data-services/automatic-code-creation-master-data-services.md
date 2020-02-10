@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7ee7e06829f72ab44fd036766907be94c95b7d90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483695"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>自动创建代码 (Master Data Services)
@@ -31,25 +31,25 @@ ms.locfileid: "65483695"
  在相关工具之一中或使用临时过程向 MDS 中输入属性值时，可以保留属性值为空。 应用业务规则时，将以最大的现有值为基础增加值。 例如，如果规则是“属性默认为一个从 1 开始、增量为 4 的生成值”，并且属性当前的最大值是 700，则添加的下一个成员的值将是 704。  
   
 ## <a name="deleting-automatically-generated-values"></a>删除自动生成的值  
- 在管理员启用为 Code 属性自动生成值之后，用户可能会意外删除具有要重复使用的 Code 值的成员。 将显示"成员代码已被某个已删除的成员使用"错误消息。 下面是两种可能的解决方案：  
+ 在管理员启用为 Code 属性自动生成值之后，用户可能会意外删除具有要重复使用的 Code 值的成员。 将显示错误消息 "成员代码已被删除的成员使用"。 有两个可能的解决方案：  
   
--   在中**版本管理**功能区域中，管理员可以撤消删除成员时发生的事务。 但是，这意味着还原所有的前一个成员属性和层次结构和集合中的成员身份。 有关详细信息，请参阅[撤消事务&#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)。  
+-   在 "**版本管理**" 功能区域中，管理员可以撤消删除成员时所发生的事务。 但是，这意味着将还原以前的所有成员的属性和层次结构和集合中的成员身份。 有关详细信息，请参阅[反转事务 &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)。  
   
--   管理员可以使用临时过程永久删除成员。 有关详细信息，请参阅[停用或通过使用临时过程删除成员&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)。  
+-   管理员可以使用临时过程永久删除成员。 有关详细信息，请参阅[&#41;&#40;Master Data Services 停用或删除成员](add-update-and-delete-data-master-data-services.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|自动为 Code 属性生成值。|[自动生成 Code 属性值 (Master Data Services)](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|自动为其他属性生成值。|[自动生成 Code 之外的属性值 (Master Data Services)](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|自动为 Code 属性生成值。|[自动生成 Master Data Services &#40;的代码属性值&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|自动为其他属性生成值。|[自动生成代码 &#40;Master Data Services 之外的属性值&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
 -   [Master Data Services 概述](master-data-services-overview-mds.md)  
   
--   [业务规则 (Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [业务规则 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
--   [实体 (Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)  
+-   [实体 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
   

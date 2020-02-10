@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dfbd321e56d1df3b985ed7b89dde3a4b29d36c27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012530"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>使用 ExecuteXMLReader 方法执行 SQL 查询
-  而不是使用 ExecuteToStream 方法，可以使用 SqlXmlCommand 对象 ExecuteXmlReader 方法执行命令。 此方法返回可用于进一步处理结果 （在此示例中打印元素或属性名称和值） 的 XmlReader 对象。  
+  您可以使用 SqlXmlCommand 对象的 ExecuteXmlReader 方法来执行命令，而不是使用 ExecuteToStream 方法。 此方法返回一个 XmlReader 对象，该对象可用于进一步处理结果（在本示例中，打印元素或属性名称和值）。  
   
 > [!NOTE]  
 >  在代码中，必须在连接字符串中提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  
@@ -69,7 +69,7 @@ using System.Xml;
   
 1.  确保已在计算机上安装了 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework。  
   
-2.  在此主题中的文件夹中保存的 C# 代码 (DocSample.cs) 提供。  
+2.  将本主题中提供的 c # 代码（DocSample.cs）保存在文件夹中。  
   
 3.  编译代码。 若要在命令提示符下编译此代码，请使用：  
   

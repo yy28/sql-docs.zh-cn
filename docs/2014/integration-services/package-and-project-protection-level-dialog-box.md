@@ -1,5 +1,5 @@
 ---
-title: 包和项目保护级别对话框 |Microsoft Docs
+title: "\"包和项目保护级别\" 对话框 |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056949"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>“包和项目保护级别”对话框
@@ -28,16 +28,16 @@ ms.locfileid: "66056949"
  若要了解有关包的安全性的要求和选项，请参阅[对包中敏感数据的访问控制](security/access-control-for-sensitive-data-in-packages.md)和[安全性概述 (Integration Services)](security/security-overview-integration-services.md)。  
   
 ## <a name="options"></a>选项  
- **Package protection level**  
+ **“包保护级别”**  
  从列表中选择保护级别。  
   
- **密码**  
- 如果使用“使用密码加密敏感数据”或“使用密码加密所有数据”保护级别，请键入密码。  
+ **权限**  
+ 如果使用“使用密码加密敏感数据”**** 或“使用密码加密所有数据”**** 保护级别，请键入密码。  
   
  **重新键入密码**  
  再次键入该密码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

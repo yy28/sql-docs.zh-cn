@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f78f4bdf08b9a5caf9b2654289bf181080efff02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871511"
 ---
 # <a name="modified-features-contained-database"></a>经过修改的功能（包含数据库）
@@ -45,13 +45,13 @@ ms.locfileid: "62871511"
  临时表可能不引用用户定义类型、XML 架构集合或用户定义函数。  
   
 ## <a name="collation"></a>排序规则  
- 在非包含数据库模型中，有三种不同的排序规则：数据库排序规则、 实例排序规则和 tempdb 排序规则。 包含数据库只使用两种排序规则：数据库排序规则和新目录排序规则。 有关包含数据库排序规则的详细信息，请参阅 [Contained Database Collations](contained-database-collations.md) 。  
+ 非包含的数据库模型中有三种不同的排序规则：数据库排序规则、实例排序规则和 tempdb 排序规则。 包含数据库只使用两种排序规则：数据库排序规则和新目录排序规则。 有关包含数据库排序规则的详细信息，请参阅 [Contained Database Collations](contained-database-collations.md) 。  
   
 ## <a name="user-options"></a>用户选项  
  启用包含数据库时，对于 [的实例而言，](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) user options Option [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必须设置为 0。  
   
-## <a name="see-also"></a>请参阅  
- [Contained Database Collations](contained-database-collations.md)   
- [Contained Databases](contained-databases.md)  
+## <a name="see-also"></a>另请参阅  
+ [包含数据库的排序规则](contained-database-collations.md)   
+ [包含的数据库](contained-databases.md)  
   
   

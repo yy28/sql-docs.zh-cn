@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2eec829c3c8909bd318a86ecf35eedb9ac0f222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010080"
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
@@ -82,9 +82,9 @@ ms.locfileid: "66010080"
 -   还可以通过常规 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问来查询和更新 FileTable。 它们还与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具和诸如备份的功能集成。  
   
   
-##  <a name="additional"></a> 使用 FileTable 的其他注意事项  
+##  <a name="additional"></a>使用 Filetable 的其他注意事项  
   
-###  <a name="DBA"></a> 管理注意事项  
+###  <a name="DBA"></a>管理注意事项  
  **关于 FILESTREAM 和 FileTable**  
   
 -   独立于 FILESTREAM 配置 FileTable。 因此，您可以继续使用 FILESTREAM 功能，而不启用非事务性访问或创建 FileTable。  
@@ -98,7 +98,7 @@ ms.locfileid: "66010080"
 -   您可以通过将非事务性访问关闭或者启用只读或完全读/写访问，在数据库级别配置或优化非事务性访问。  
   
   
-###  <a name="memory"></a> FileTable 不支持内存映射文件  
+###  <a name="memory"></a>Filetable 不支持内存映射文件  
  FileTable 不支持内存映射文件。 “记事本”和“画图”是两个常见的使用内存映射文件的示例应用程序。 不能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的计算机上使用这些应用程序来打开存储在 FileTable 中的文件。 但是，可以从远程计算机使用这些应用程序来打开存储在 FileTable 中的文件，因为在这些情况下不使用内存映射功能。  
   
   
@@ -126,7 +126,7 @@ ms.locfileid: "66010080"
   
   
 ##  <a name="relcontent"></a> 相关内容  
- [FileTable Schema](filetable-schema.md)  
+ [FileTable 架构](filetable-schema.md)  
  说明 FileTable 的预定义固定架构。  
   
  [FileTable 与其他 SQL Server 功能的兼容性](filetable-compatibility-with-other-sql-server-features.md)  

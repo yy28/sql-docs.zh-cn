@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060431"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>使用默认优先约束来连接任务和容器
@@ -34,13 +34,13 @@ ms.locfileid: "66060431"
   
 2.  在“工具”  菜单上，单击“选项”  。  
   
-3.  在 **“选项”** 对话框中，展开 **“商业智能设计器”** ，再展开 **“Integration Services 设计器”** 。  
+3.  在 **“选项”** 对话框中，展开 **“商业智能设计器”** ，再展开 **“Integration Services 设计器”**。  
   
-4.  单击 **“控制流自动连接”** ，并选择 **“将新形状连接到默认选中的形状”** 。  
+4.  单击 **“控制流自动连接”** ，并选择 **“将新形状连接到默认选中的形状”**。  
   
-5.  在下拉列表中，选择“对新形状使用‘失败’约束”或“对新形状使用‘完成’约束”。    
+5.  在下拉列表中，选择“对新形状使用‘失败’约束”或“对新形状使用‘完成’约束”。********  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 #### <a name="to-create-a-default-precedence-constraint"></a>创建默认优先约束  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66060431"
   
 5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [优先约束](control-flow/precedence-constraints.md)   
  [使用快捷菜单设置优先约束的值](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [设置优先约束的属性](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877116"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>完整数据库还原（简单恢复模式）
@@ -36,7 +36,7 @@ ms.locfileid: "62877116"
 > [!NOTE]  
 >  有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)中的“兼容性支持”部分。  
   
-##  <a name="Overview"></a> 在简单恢复模式下还原数据库的概述  
+##  <a name="Overview"></a>简单恢复模式下的数据库还原概述  
  简单恢复模式下的完整数据库还原只涉及一个或两个 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 语句，具体取决于是否需要还原差异数据库备份。 如果只使用完整数据库备份，则只需还原最近的备份，如下图所示。  
   
  ![仅还原完整数据库备份](../../database-engine/media/bnrr-rmsimple1-fulldbbu.gif "仅还原完整数据库备份")  
@@ -97,9 +97,9 @@ GO
 ##  <a name="RelatedTasks"></a> 相关任务  
  **还原完整数据库备份**  
   
--   [在简单恢复模式下还原数据库备份 (Transact-SQL)](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
+-   [&#40;Transact-sql&#41;在简单恢复模式下还原数据库备份](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
--   [还原数据库备份&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [还原数据库备份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [将数据库还原到新位置 (SQL Server)](restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -113,7 +113,7 @@ GO
   
 
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [sp_addumpdevice (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   

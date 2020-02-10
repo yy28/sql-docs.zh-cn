@@ -13,13 +13,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: b5027eb9be355348e00b6f17128b821a2bfc2af4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014153"
 ---
-# <a name="point"></a>点
+# <a name="point"></a>Point
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空间数据中，`Point` 是表示单个位置的零维对象，可能包含 Z（仰角）和 M（度量）值。  
   
 ## <a name="geography-data-type"></a>Geography 数据类型  
@@ -59,7 +59,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('POINT(3 4 NULL NULL)');  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MultiPoint](multipoint.md)   
  [STX（geometry 数据类型）](/sql/t-sql/spatial-geometry/stx-geometry-data-type)   
  [STY（geometry 数据类型）](/sql/t-sql/spatial-geometry/sty-geometry-data-type)   

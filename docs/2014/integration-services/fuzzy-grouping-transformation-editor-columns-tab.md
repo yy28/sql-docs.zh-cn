@@ -1,5 +1,5 @@
 ---
-title: 模糊分组转换编辑器 （列选项卡） |Microsoft Docs
+title: 模糊分组转换编辑器（"列" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058359"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊分组转换编辑器（“列”选项卡）
@@ -37,7 +37,7 @@ ms.locfileid: "66058359"
  选择是否在转换的输出中包含输入列。 用于分组的所有列将自动复制到输出中。 通过选中此列可以包含其他列。  
   
  **输入列**  
- 选择先前在“可用输入列”  列表中选中的一个输入列。  
+ 选择先前在“可用输入列”**** 列表中选中的一个输入列。  
   
  **输出别名**  
  为相应的输出列输入一个描述性名称。 默认情况下，输出列名称与输入列名称相同。  
@@ -57,17 +57,17 @@ ms.locfileid: "66058359"
  **数字**  
  指定比较列数据时前导数字和尾随数字的重要性。 例如，如果前导数字重要，则“123 Main Street”将不会与“456 Main Street”分组在一起。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
-|**Neither**|前导数字和尾随数字都不重要。|  
-|**Leading**|只有前导数字重要。|  
-|**Trailing**|只有尾随数字重要。|  
+|**但**|前导数字和尾随数字都不重要。|  
+|**前导**|只有前导数字重要。|  
+|**加**|只有尾随数字重要。|  
 |**LeadingAndTrailing**|前导数字和尾随数字都重要。|  
   
  **比较标志**  
  有关字符串比较选项的信息，请参阅 [比较字符串数据](data-flow/comparing-string-data.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [使用模糊分组转换标识相似数据行](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

@@ -14,18 +14,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c688d41a1f27c6f3d620e9395d2a908d9b9cddd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874685"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 对象
+  
   `SqlDataRecord` 对象表示一行数据及其相关元数据。  
   
- 托管存储过程可以发送到并非来自于 `SqlDataReader` 的客户端结果集。 `SqlDataRecord` 类以及 `SendResultsStart` 对象的 `SendResultsRow`、`SendResultsEnd` 和 `SqlPipe` 方法允许存储过程将自定义结果集发送到客户端。  
+ 托管存储过程可以发送到并非来自于 `SqlDataReader` 的客户端结果集。 
+  `SqlDataRecord` 类以及 `SendResultsStart` 对象的 `SendResultsRow`、`SendResultsEnd` 和 `SqlPipe` 方法允许存储过程将自定义结果集发送到客户端。  
   
- 有关详细信息，请参阅`Microsoft.SqlServer.Server.SqlDataRecord`类在.NET Framework SDK 文档中的参考文档。  
+ 有关详细信息，请参阅`Microsoft.SqlServer.Server.SqlDataRecord` .NET Framework SDK 文档中的类参考文档。  
   
 ## <a name="example"></a>示例  
  下面的示例创建一个新雇员记录并将其返回到调用方。  
@@ -86,7 +88,7 @@ Public Shared Sub  CreateNewRecordVBProc ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SqlPipe 对象](sqlpipe-object.md)  
   
   

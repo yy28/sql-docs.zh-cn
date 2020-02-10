@@ -15,14 +15,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 74be4b3e924d02f6992b927af35c7774c3ea0ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484315"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>将值从 Excel 文件导入到域
-  本主题介绍如何将值从 Excel 文件导入到 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的域中。 使用 Excel 文件将域值导入到 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中可以简化知识生成过程、节省时间并提高效率。 借助这一方法，在 Excel 文件或文本文件中具有有效数据值列表的人士能够将这些值导入到域中。 从 Excel 文件，您可以将域值导入到某个域中，或者将多个域导入到知识库中。 （有关将域导入到知识库的详细信息，请参阅[在知识发现中从 Excel 文件中导入域](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)。）不支持导出到 Excel 文件。  
+  本主题介绍如何将值从 Excel 文件导入到 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的域中。 使用 Excel 文件将域值导入到 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中可以简化知识生成过程、节省时间并提高效率。 借助这一方法，在 Excel 文件或文本文件中具有有效数据值列表的人士能够将这些值导入到域中。 从 Excel 文件，您可以将域值导入到某个域中，或者将多个域导入到知识库中。 （有关将域导入知识库的详细信息，请参阅[在知识发现中从 Excel 文件导入域](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)。）不支持导出到 Excel 文件。  
   
  您可以通过两种方式导入数据值：  
   
@@ -32,15 +32,15 @@ ms.locfileid: "65484315"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  若要从 Excel 文件导入域，Excel 必须安装在装有 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序的计算机上，以便导入域值或整个域；您必须使用域值创建了一个 Excel 文件（请参阅 [How the import works](#How)）；并且必须创建并打开了要将域导入其中的知识库。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  您必须具有针对 DQS_MAIN 数据库的 dqs_kb_editor 或 dqs_administrator 角色，才能从 Excel 文件导入域值。  
   
-##  <a name="Import"></a> 将值从 Excel 文件导入到域  
+##  <a name="Import"></a>将值从 Excel 文件导入到域中  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -60,20 +60,21 @@ ms.locfileid: "65484315"
   
 9. 如果电子表格中的第一行表示域名，并且所有其他行表示有效的域值，则选择 **“将第一行用作标头”** 。  
   
-10. 单击“确定” 。 将显示一个进度栏，指示成功导入了多少个值、未导入多少个值以及值的总数。 单击 **“取消”** 按钮将取消该过程。  
+10. 单击“确定”。  将显示一个进度栏，指示成功导入了多少个值、未导入多少个值以及值的总数。 单击 **“取消”** 按钮将取消该过程。  
   
-11. 确认“导入完成”显示在“导入域值”对话框中。 在此对话框中查看哪些值已成功导入、哪些值未导入。 该对话框将指示文件的名称和路径、操作的完成状态、成功导入了多少个值、未导入多少个值以及处理的值的总数。  
+11. 确认“导入完成”显示在“导入域值”对话框中****。 在此对话框中查看哪些值已成功导入、哪些值未导入。 该对话框将指示文件的名称和路径、操作的完成状态、成功导入了多少个值、未导入多少个值以及处理的值的总数。  
   
-12. 对于未成功导入的那些值，单击“日志”可显示“导入域值 – 失败值”对话框，从而查看导入操作失败的原因。 **“失败值”** 列将显示未能从 Excel 文件导入到域中的值， **“原因”** 列将说明导入失败的原因。 单击 **“复制到剪贴板”** 可以将 **“失败值”** 表复制到剪贴板上，从而可以将该表复制到其他程序中，例如复制到 Excel 电子表格或记事本文件中。 单击 **“确定”** 关闭 **“失败值”** 对话框。  
+12. 对于未成功导入的那些值，单击“日志”可显示“导入域值 – 失败值”对话框，从而查看导入操作失败的原因********。 
+  **“失败值”** 列将显示未能从 Excel 文件导入到域中的值， **“原因”** 列将说明导入失败的原因。 单击 **“复制到剪贴板”** 可以将 **“失败值”** 表复制到剪贴板上，从而可以将该表复制到其他程序中，例如复制到 Excel 电子表格或记事本文件中。 单击 **“确定”** 关闭 **“失败值”** 对话框。  
   
 13. 单击 **“确定”** 将完成导入操作并且关闭该对话框。 在导入成功完成后， **“域值”** 页上的域值列表将刷新并且将包含新导入的值。 筛选器将更改为 **“所有值”** ，并且 **“仅显示新内容”** 将被选中。 如果在导入操作后选中了 **“仅显示新内容”** ，将仅显示从 Excel 文件导入的值。  
   
 14. 单击 **“完成”** 将值添加到知识库。  
   
-##  <a name="FollowUp"></a> 跟进：将值从 Excel 文件导入到域后  
+##  <a name="FollowUp"></a>跟进：在将值从 Excel 文件导入到域后  
  在将值导入到某个域中之后，您可以对该域执行其他域管理任务，可以执行知识发现以便向该域添加知识，或者可以向该域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="Synonyms"></a> 导入同义词  
+##  <a name="Synonyms"></a>导入同义词  
  按如下所示导入同义词：  
   
 -   首先，导入所有值，然后建立同义词连接。  
@@ -88,7 +89,7 @@ ms.locfileid: "65484315"
   
 -   如果出于任何原因不能在应用程序中手动连接这些值，则这些值将不适用于导入操作。  
   
-##  <a name="How"></a> 导入的工作原理  
+##  <a name="How"></a>导入的工作方式  
  此操作将导入下列值：  
   
  在导入操作中，DQS 按如下所示从 Excel 文件进行导入：  

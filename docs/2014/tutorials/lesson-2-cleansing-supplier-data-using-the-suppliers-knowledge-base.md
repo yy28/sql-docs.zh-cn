@@ -1,5 +1,5 @@
 ---
-title: 第 2 课：清理供应商数据使用 Suppliers 知识库 |Microsoft Docs
+title: 第2课：使用供应商知识库清理供应商数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488476"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>第 2 课：使用 Suppliers 知识库清理供应商数据
-  通过使用在本课程中，清理 Excel 文件中的供应商数据**供应商**第一课中创建的知识库。 DQS 中的数据清理包括**计算机辅助过程**前者分析数据与知识库中知识的相符和一个**交互进程**，可用于查看和修改从在计算机辅助过程的结果。 数据清理功能可以识别数据源中不正确的数据，然后对这些数据进行更正或提出更正建议。 它还通过使用域值、同义词的前导值、域规则、基于字词的关系和参考数据来使客户数据标准化和更加丰富。 您可以通过交互方式批准或拒绝计算机辅助过程建议的更改。 请参阅[数据清理](https://msdn.microsoft.com/library/gg524800.aspx)的更多详细信息。  
+  在本课中，您将使用在第一课中创建的**供应商**知识库来清理 Excel 文件中的供应商数据。 DQS 中的数据清理包括一个**计算机辅助过程**，该过程分析数据与知识库中知识的符合程度，并提供一个**交互式过程**，使您可以查看和修改计算机辅助过程的结果。 数据清理功能可以识别数据源中不正确的数据，然后对这些数据进行更正或提出更正建议。 它还通过使用域值、同义词的前导值、域规则、基于字词的关系和参考数据来使客户数据标准化和更加丰富。 您可以通过交互方式批准或拒绝计算机辅助过程建议的更改。 有关更多详细信息，请参阅[数据清理](https://msdn.microsoft.com/library/gg524800.aspx)。  
   
  计算机辅助过程使用以下阈值，您可以使用 DQS 客户端主页上的“配置”选项来配置这些阈值。  
   
--   **建议的最低分数：** 最低分数或置信度级别由 DQS 用于建议替换值。  
+-   **建议的最低分数：** DQS 用于建议替换值的最低分数或置信度。  
   
--   **用于自动更正的最低分数：** 最低分数或置信度级别由 DQS 用于自动更正值。  
+-   **自动更正的最低分数：** DQS 用于自动更正值的最低分数或置信度级别。  
   
- 请参阅[配置清理和匹配活动的阈值值](https://msdn.microsoft.com/library/hh510415.aspx)有关如何配置这些设置的详细信息。  
+ 有关如何配置这些设置的详细信息，请参阅[配置清理和匹配的阈值](https://msdn.microsoft.com/library/hh510415.aspx)。  
   
  在本课中，您将执行以下任务来使用 Suppliers 知识库清理输入数据。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "65488476"
   
 5.  将清理过程的结果导出到 Excel 文件。  
   
-6.  清理项目的值导入域，以增加知识库中知识库的新规则、 值和更正等...  
+6.  将清理项目中的值导入到域中，以通过新的规则、值、更正等来增强知识库中的知识。  
   
 ## <a name="next-step"></a>下一步  
  [任务 1：创建数据质量项目](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  

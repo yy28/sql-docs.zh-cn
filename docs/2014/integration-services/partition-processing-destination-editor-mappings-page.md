@@ -1,5 +1,5 @@
 ---
-title: 分区处理目标编辑器 （映射页） |Microsoft Docs
+title: 分区处理目标编辑器（"映射" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16f08d9b10bd0f29593695b8d7ea44c329b6a3a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056703"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>分区处理目标编辑器（“映射”页）
@@ -42,9 +42,9 @@ ms.locfileid: "66056703"
  **目标列**  
  查看每个可用的目标列，包括已映射或未映射的目标列。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [分区处理目标编辑器（“连接管理器”页）](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [分区处理目标编辑器（“高级”页）](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [分区处理目标编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
+ [分区处理目标编辑器 &#40;高级页面&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

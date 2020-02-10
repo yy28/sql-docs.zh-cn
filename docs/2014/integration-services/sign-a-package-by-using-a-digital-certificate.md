@@ -1,5 +1,5 @@
 ---
-title: 使用数字证书对包签名 |Microsoft Docs
+title: 使用数字证书对包进行签名 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 31da686dbf25922205ea4d1b03ecaa3758457573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055618"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>使用数字证书对包签名
@@ -50,13 +50,13 @@ ms.locfileid: "66055618"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的 **“SSIS”** 菜单上，单击 **“数字签名”** 。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的 **“SSIS”** 菜单上，单击 **“数字签名”**。  
   
-4.  在 **“数字签名”** 对话框中，单击 **“签名”** 。  
+4.  在 **“数字签名”** 对话框中，单击 **“签名”**。  
   
 5.  在 **“选择证书”** 对话框中，选择一个证书。  
   
-6.  也可单击“查看证书”  来查看证书信息。  
+6.  也可单击“查看证书”**** 来查看证书信息。  
   
 7.  单击 **“确定”** 关闭 **“选项证书”** 对话框。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66055618"
   
      虽然已对包进行了签名，您现在必须配置 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，以便在加载该包之前检查或验证数字签名。 有关详细信息，请参阅 [使用数字签名标识包的源](security/identify-the-source-of-packages-with-digital-signatures.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安全性概述 (Integration Services)](security/security-overview-integration-services.md)  
   
   

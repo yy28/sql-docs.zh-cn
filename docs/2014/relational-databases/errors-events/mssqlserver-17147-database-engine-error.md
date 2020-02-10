@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b46fdc4886a6a2bcda0d82de23833d0fa96c7c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915293"
 ---
-# <a name="mssqlserver17147"></a>MSSQLSERVER_17147
+# <a name="mssqlserver_17147"></a>MSSQLSERVER_17147
     
 ## <a name="details"></a>详细信息  
   
@@ -32,10 +32,10 @@ ms.locfileid: "62915293"
 |符号名称|STARTUP_SERVERKILLED|  
 |消息正文|由于系统关闭，SQL Server 正在终止。 这只是一条信息性消息。 不需要任何用户操作。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  系统已关闭。  
   
 ## <a name="user-action"></a>用户操作  
- None  
+ 无  
   
   

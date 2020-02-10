@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d833e0b42a6bfdaf9754525740f9bb58df794fdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580029"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>将筛选器或文档 Web 部件与 Reporting Services 报表查看器 Web 部件连接
@@ -39,13 +39,13 @@ ms.locfileid: "65580029"
   
 4.  在“所有 Web 部件”  的“杂项”  类别中，选择“SQL Server Reporting Services 报表查看器”  。  
   
-5.  单击 **“添加”** 。 Web 部件将添加到区域的顶部。  
+5.  单击“添加”  。 Web 部件将添加到区域的顶部。  
   
 6.  在同一 Web 部件页或仪表板中的另一区域上，单击“添加 Web 部件”  。  
   
 7.  在“所有 Web 部件”  的“筛选器”  部分，选择一个 Web 部件。  
   
-8.  单击 **“添加”** 。 Web 部件将添加到区域的顶部。  
+8.  单击“添加”  。 Web 部件将添加到区域的顶部。  
   
 9. 在包含 Web 部件的区域中，单击 Web 部件的“编辑”  菜单，依次指向“连接”  、“发送筛选值到”  ，然后选择“报表查看器”   - 报表名称  。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "65580029"
   
 4.  在“所有 Web 部件”  的“列表和库”  部分中，选择“文档”  。  
   
-5.  单击 **“添加”** 。 Web 部件将添加到区域的顶部。  
+5.  单击“添加”  。 Web 部件将添加到区域的顶部。  
   
 6.  在工具窗格的底部，单击 **“应用”** ，然后单击 **“确定”** 关闭窗格。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65580029"
   
 8.  在“所有 Web 部件”  的“杂项”  类别中，选择“SQL Server Reporting Services 报表查看器”  。  
   
-9. 单击 **“添加”** 。 Web 部件将添加到区域的顶部。  
+9. 单击“添加”  。 Web 部件将添加到区域的顶部。  
   
 10. 在包含 Web 部件的区域中，单击 Web 部件的“编辑”  菜单，依次指向“连接”  、“获取报表定义于”  ，然后选择“文档”  。  
   

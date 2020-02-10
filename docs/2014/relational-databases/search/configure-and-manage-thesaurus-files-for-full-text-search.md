@@ -15,21 +15,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011479"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，全文查询可以通过使用同义词库来搜索用户指定的字词的同义词。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*同义词库*为特定语言定义一组同义词。 系统管理员可以定义两种形式的同义词：扩展集和替换集。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。 仅对所有 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 查询以及指定 FORMSOF THESAURUS 子句的任意 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 查询执行同义词库匹配操作。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，全文查询可以通过使用同义词库来搜索用户指定的字词的同义词。 
   
-##  <a name="tasks"></a> 设置同义词库文件的基本任务  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *同义词库*为特定语言定义一组同义词。 系统管理员可以定义两种形式的同义词：扩展集和替换集。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。 仅对所有 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 查询以及指定 FORMSOF THESAURUS 子句的任意 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 查询执行同义词库匹配操作。  
+  
+##  <a name="tasks"></a>设置同义词库文件的基本任务  
  必须先为给定语言定义同义词库映射（同义词），才能使服务器实例上的全文搜索查询可以查找该语言的同义词。 必须手动配置每个同义词库以定义下面各项：  
   
 -   标注字符设置  
   
-     对于给定的同义词库，所有搜索模式可以都是敏感或不区分标注如波形符 ( **~** )，锐音符标记 ( **??** )，或变音符号 ( **??** ) (即*重音区分*或*不区分重音*)。 例如，假设您指定的模式"自助餐厅??" 替换为全文查询中的其他模式。 全文搜索同义词库是不区分重音，如果替换模式"咖啡馆??" 和"咖啡厅"。 如果同义词库是区分重音，全文搜索将替换仅模式"自助餐厅??"。 默认情况下，同义词库不区分重音。  
+     对于给定的同义词库，所有搜索模式都是敏感的或不区分等式标记，如**~** 波形符（）、锐音符号（**？？**）或元音变音符（**？？**）（即区分*重音*或不*区分重音*）。 例如，假设指定了 "caf？" 模式。 替换为全文查询中的其他模式。 如果同义词库不区分重音，则全文搜索将替换模式 "caf？"。 和“cafe”。 如果同义词库区分重音，则全文搜索仅替换模式 "caf？"。 默认情况下，同义词库不区分重音。  
   
 -   扩展集  
   
@@ -42,7 +44,7 @@ ms.locfileid: "66011479"
      替换集包含将由替换集替换的文本模式。 有关示例，请参阅本主题后面的“替换集的 XML 结构”部分。  
   
   
-##  <a name="initial_thesaurus_files"></a> 同义词库文件的初始内容  
+##  <a name="initial_thesaurus_files"></a>同义词库文件的初始内容  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一组 XML 同义词库文件，分别对应于每种支持的语言。 这些文件实际上是空的。 它们仅包含所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同义词库通用的顶级 XML 结构以及注释掉的示例同义词库。  
   
  随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发行的同义词库文件均包含以下 XML 代码：  
@@ -74,10 +76,10 @@ ms.locfileid: "66011479"
 ```  
   
   
-##  <a name="location"></a> 同义词库文件的位置  
+##  <a name="location"></a>同义词库文件的位置  
  同义词库文件的默认位置为：  
   
- *<SQL_Server_data_files_path>* \MSSQL12.MSSQLSERVER\MSSQL\FTDATA\  
+ *<SQL_Server_data_files_path>* \MSSQL12。MSSQLSERVER\MSSQL\FTDATA\  
   
  该默认位置包含以下文件：  
   
@@ -87,7 +89,7 @@ ms.locfileid: "66011479"
   
      同义词库文件的默认文件名采用以下格式：  
   
-     'ts' + \<three-letter language-abbreviation> + '.xml'  
+     "ts" + \<由三个字母组成的语言缩写> + ' .xml '  
   
      给定语言的同义词库文件名称是在注册表中的下列值中指定的：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<instance-name>\MSSearch\\<language-abbrev>。  
   
@@ -97,23 +99,23 @@ ms.locfileid: "66011479"
   
  可通过更改同义词库文件的注册表项来更改其位置和名称。 对于每种语言，同义词库文件位置是在注册表的以下值中指定的：  
   
- HKLM/软件/Microsoft/Microsoft SQL Server /\<实例名称>/MSSearch/语言/\<语言缩写 > / TsaurusFile  
+ HKLM/SOFTWARE/Microsoft/Microsoft SQL Server/\<instance name>/Mssearch/language/\<>/tsaurusfile  
   
  全局同义词库文件对应于 LCID 为 0 的非特定语言。 此值只能由管理员更改。  
   
   
-##  <a name="how_queries_use_tf"></a> 如何查询使用同义词库文件  
+##  <a name="how_queries_use_tf"></a>查询如何使用同义词库文件  
  同义词库查询同时使用特定于语言的同义词库和全局同义词库。 首先，查询查找特定于语言的文件，并加载该文件以进行处理（除非已加载了该文件）。 该查询将进行扩展以包含同义词库文件中的扩展集和替换集规则所指定的特定于语言的同义词。 然后，对全局同义词库重复执行这些步骤。 但是，如果字词已经是特定于语言的同义词库文件中的匹配项的一部分，则不会在全局同义词库中对该字词再次进行匹配。  
   
   
-##  <a name="structure"></a> 了解同义词库文件的结构  
- 每个同义词库文件都定义了一个 ID 为 `Microsoft Search Thesaurus` 的 XML 容器，以及一个包含示例同义词库的注释 `<!--`...`-->`。 在中定义同义词库\<同义词库 > 元素，其中包含定义标注字符设置、 扩展集和替换集的子元素的示例，如下所示：  
+##  <a name="structure"></a>了解同义词库文件的结构  
+ 每个同义词库文件都定义了一个 ID 为 `Microsoft Search Thesaurus` 的 XML 容器，以及一个包含示例同义词库的注释 `<!--`...`-->`。 同义词库是在\<同义词库> 元素中定义的，该元素包含定义音调符号设置、扩展集和替换集的子元素的示例，如下所示：  
   
 -   标注字符设置的 XML 结构  
   
      同义词库的标注字符设置是在单个 <diacritics_sensitive> 元素中指定的。 此元素包含一个控制重音区分设置的整数值，如下所示：  
   
-    |标注字符设置|ReplTest1|XML|  
+    |标注字符设置|值|XML|  
     |------------------------|-----------|---------|  
     |不区分重音|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
     |区分重音|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
@@ -123,7 +125,7 @@ ms.locfileid: "66011479"
   
 -   扩展集的 XML 结构  
   
-     每个扩展集包含在\<扩展 > 元素。 在此元素中，可以指定中的一个或多个替换项\<子 > 元素。 在扩展集中，可以指定一组互为同义词的替换项。  
+     每个扩展集都包含在\<一个扩展> 元素中。 在此元素中，在\<sub> 元素中指定一个或多个替换项。 在扩展集中，可以指定一组互为同义词的替换项。  
   
      例如，可以编辑扩展部分，以将替换项“writer”、“author”和“journalist”视为同义词。 在一个替换项中包含匹配项的全文搜索查询将展开以包括扩展集中指定的所有其他替换项。 因此，在前面的示例中，如果对单词“author”发出 FORMS OF THESAURUS 或 FREETEXT 查询，全文搜索还会返回包含单词“writer”和“journalist”的搜索结果。  
   
@@ -139,7 +141,7 @@ ms.locfileid: "66011479"
   
 -   替换集的 XML 结构  
   
-     每个替换集都包含在\<替换 > 元素。 可以在此元素中指定一个或多个模式中的\<pat > 元素和零个或多个替换项中的\<子 > 元素，每个同义词的一个。 可以指定要由替换集替换的模式。 模式和替换项可以包含一个或一组单词。 如果没有为某个模式指定任何替换项，则会导致从用户查询中删除该模式。  
+     每个替换集都包含在\<替换> 元素中。 在此元素中，可以指定 pat> 元素中的\<一个或多个模式，并在子\<> 元素中指定零个或多个替换项，每个同义词一个。 可以指定要由替换集替换的模式。 模式和替换项可以包含一个或一组单词。 如果没有为某个模式指定任何替换项，则会导致从用户查询中删除该模式。  
   
      例如，假设您希望运行用替换项“Windows Server 2012”或“Windows 8.0”替换“Win8”模式的查询。 如果对“Win8”运行全文查询，全文搜索仅返回包含“Windows Server 2012”或“Windows 8.0”的搜索结果。 它不会返回包含“Win8”的结果。 这是因为模式“Win8”已经被模式“Windows Server 2012”和“Windows 8.0”替换。  
   
@@ -162,7 +164,7 @@ ms.locfileid: "66011479"
     </replacement>  
     ```  
   
-     和  
+     and  
   
     ```  
     <replacement>  
@@ -173,22 +175,22 @@ ms.locfileid: "66011479"
     ```  
   
   
-##  <a name="working_with_thesaurus_files"></a> 使用同义词库文件  
- **若要编辑同义词库文件**  
+##  <a name="working_with_thesaurus_files"></a>使用同义词库文件  
+ **编辑同义词库文件**  
   
 -   [编辑同义词库文件](#editing)  
   
- **若要加载更新的同义词库文件**  
+ **加载更新的同义词库文件**  
   
 -   [sp_fulltext_load_thesaurus_file (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql)  
   
- **若要查看断字符、 同义词库和非索引字表组合的词汇切分结果**  
+ **查看断字符的词汇切分结果、同义词库和非索引字表组合**  
   
 -   [sys.dm_fts_parser (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="editing"></a> 编辑同义词库文件  
- 可通过编辑给定语言的同义词库文件（XML 文件）来配置该语言的同义词库。 安装过程中，空同义词库文件，它们仅包含\<xml > 容器和注释掉示例\<同义词库 > 元素已安装。 按顺序的全文搜索查询该查找同义词才能正常工作，您必须创建一个实际\<同义词库 > 元素，用于定义一组同义词。 可以定义两种形式的同义词，即扩展集和替换集。  
+##  <a name="editing"></a>编辑同义词库文件  
+ 可通过编辑给定语言的同义词库文件（XML 文件）来配置该语言的同义词库。 在安装过程中，将安装空的同义词\<库文件，其中只包含 xml> 容器\<和注释掉的示例同义词库> 元素。 为了使查找同义词的全文搜索查询正常工作，必须创建一个实际\<的同义词库> 元素，该元素定义一组同义词。 可以定义两种形式的同义词，即扩展集和替换集。  
   
  **同义词库文件的限制**  
   
@@ -202,13 +204,13 @@ ms.locfileid: "66011479"
   
 -   同义词库文件中的短语长度不得超过 512 个字符。  
   
--   同义词库不能包含任何重复项\<sub > 条目的扩展集和\<pat > 元素的替换集。  
+-   同义词库不能在扩展集的\<sub> 项和替换集的\<pat> 元素之间包含任何重复项。  
   
- **有关同义词库文件的建议**  
+ **针对同义词库文件的建议**  
   
  建议同义词库文件中的项不要包含任何特殊字符。 这是因为，断字符在遇到特殊字符时会出现不确定的行为。 如果同义词库项包含任何特殊字符，在全文查询中与该项一起使用的断字符会出现不确定的行为。  
   
- 我们建议，\<子 > 项不要包含任何非索引字因为全文索引中将省略非索引字。 查询将展开以包括\<sub > 条目从同义词库文件，并且如果\<子 > 项包含非索引字，则会不必要地增加查询大小。  
+ 建议\<> 条目不包含任何非索引字，因为全文索引中省略了非索引字。 查询将进行扩展以包含\<同义词库文件中的子> 条目，并且如果\<sub> 条目包含非索引字，则查询大小不必要地增加。  
   
 #### <a name="to-edit-a-thesaurus-file"></a>编辑同义词库文件  
   
@@ -234,7 +236,7 @@ ms.locfileid: "66011479"
     ```  
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CONTAINS (Transact-SQL)](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE (Transact-SQL)](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [FREETEXT (Transact-SQL)](/sql/t-sql/queries/freetext-transact-sql)   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011149"
 ---
 # <a name="limit-search-results-with-rank"></a>使用 RANK 限制搜索结果
@@ -37,7 +37,7 @@ ms.locfileid: "66011149"
   
 ##  <a name="examples"></a> 使用 RANK 限制搜索结果的示例  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>示例 a:仅搜索前三个匹配项  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>示例 A：仅搜索前三个匹配项  
  下面的示例使用 CONTAINSTABLE 仅返回前三个匹配项。  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>示例 b:搜索前十个匹配项  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>示例 B：搜索前十个匹配项  
  下面的示例使用 CONTAINSTABLE 返回前 5 个产品的说明，其中 `Description` 列在单词“light”或“lightweight”附近包含字词“aluminum”。  
   
 ```  
@@ -104,7 +104,7 @@ GO
   
  下表包含了对计算排名非常重要的一些常用术语和统计值。  
   
- 属性  
+ properties  
  行的全文索引列。  
   
  Document  
@@ -143,7 +143,8 @@ GO
   
  诸如 `IndexRowCount` 之类的统计信息可能会大不相同。 例如，如果一个目录的主索引有二十亿行，那么对一个新文档的索引将被编制为内存中的中间索引，而基于该内存中索引内的文档数对该文档的排名可能与主索引中的文档排名不同。 因此，建议在完成产生大量要创建索引或重新创建索引的行的任意填充后，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将这些索引合并为一个主索引。 全文引擎也会根据参数（例如中间索引的数目和大小）自动合并索引。  
   
- `MaxOccurrence` 值被规范化到 32 个范围的其中一个内。 举例来说，这意味着 50 个字长的文档与 100 个字长的文档的处理方式相同。 下面是用于规范化的表。 由于文档的长度位于相邻表值 32 与 128 之间的范围，它们都被有效地视为具有相同长度 128 (32 < `docLength` < = 128)。  
+ 
+  `MaxOccurrence` 值被规范化到 32 个范围的其中一个内。 举例来说，这意味着 50 个字长的文档与 100 个字长的文档的处理方式相同。 下面是用于规范化的表。 由于文档长度位于相邻表值32和128之间的范围内，因此它们被有效地视为具有相同的长度、128（32 < `docLength` <= 128）。  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   
@@ -203,7 +204,7 @@ qtf is the frequency of the term in the query.
 ```  
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用全文搜索查询](query-with-full-text-search.md)  
   
   

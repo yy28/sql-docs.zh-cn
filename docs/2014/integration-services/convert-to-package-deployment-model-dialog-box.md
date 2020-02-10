@@ -1,5 +1,5 @@
 ---
-title: 将转换为包部署模型对话框 |Microsoft Docs
+title: "\"转换为包部署模型\" 对话框 |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dfe1f6e5b752284b6bb0feec96f4f3dfd67cc4f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060352"
 ---
 # <a name="convert-to-package-deployment-model-dialog-box"></a>“转换为包部署模型”对话框
@@ -32,11 +32,11 @@ ms.locfileid: "66060352"
 2.  如果项目和所有包都通过了兼容测试，则单击 **“确定”** 以转换包。  
   
 > [!NOTE]  
->  若要将项目转换为项目部署模型，请使用 **“Integration Services 项目转换向导”** 。 有关详细信息，请参阅 [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md)。  
+>  若要将项目转换为项目部署模型，请使用 **“Integration Services 项目转换向导”**。 有关详细信息，请参阅 [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [项目和包的部署](packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [打包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
+ [包部署 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [Integration Services 项目转换向导](../../2014/integration-services/integration-services-project-conversion-wizard.md)  
   
   

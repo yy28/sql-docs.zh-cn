@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055563"
 ---
 # <a name="smtp-connection-manager-editor"></a>SMTP 连接管理器编辑器
-  使用“SMTP 连接管理器编辑器”  对话框可以指定简单邮件传输协议 (SMTP) 服务器。  
+  使用“SMTP 连接管理器编辑器”**** 对话框可以指定简单邮件传输协议 (SMTP) 服务器。  
   
  若要了解有关 SMTP 连接管理器的详细信息，请参阅 [SMTP Connection Manager](connection-manager/smtp-connection-manager.md)。  
   
@@ -36,19 +36,19 @@ ms.locfileid: "66055563"
  **SMTP 服务器**  
  提供 SMTP 服务器的名称。  
   
- **Use Windows Authentication**  
+ **使用 Windows 身份验证**  
  如果选中此选项，在通过 SMTP 服务器发送邮件时将使用 Windows 身份验证来验证对服务器的访问权限。  
   
 > [!IMPORTANT]  
 >  SMTP 连接管理器仅支持匿名身份验证和 Windows 身份验证， 而不支持基本身份验证。  
   
 > [!NOTE]  
->  当使用 Microsoft Exchange 作为 SMTP 服务器，您可能需要设置**使用 Windows 身份验证**到`True`。 Exchange 服务器可以配置为不支持未经身份验证的 SMTP 连接。  
+>  使用 Microsoft Exchange 作为 SMTP 服务器时，可能需要将 "**使用 Windows 身份验证**" 设置`True`为。 Exchange 服务器可以配置为不支持未经身份验证的 SMTP 连接。  
   
- **启用安全套接字层 (SSL)**  
+ **启用安全套接字层（SSL）**  
  如果选中此选项，则在发送电子邮件时，将使用安全套接字层 (SSL) 来加密通信。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

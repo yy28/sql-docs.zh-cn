@@ -1,5 +1,5 @@
 ---
-title: Excel 目标编辑器 （连接管理器页） |Microsoft Docs
+title: Excel 目标编辑器（"连接管理器" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,47 +15,47 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c55b9daba7e8e1823e1ced43fc9958d4fe5892ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059243"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Excel 目标编辑器（“连接管理器”页）
   使用 **“Excel 目标编辑器”** 对话框的 **“连接管理器”** 页可以指定数据源信息和预览结果。 Excel 目标将数据加载到 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 工作簿中的工作表或指定范围。  
   
 > [!NOTE]  
->  `CommandTimeout` Excel 目标的属性不是在可用**Excel 目标编辑器**，但可以通过使用设置**高级编辑器**。 另外，某些快速加载选项仅在 **“高级编辑器”** 中提供。 有关这些属性的详细信息，请参阅 [Excel Custom Properties](data-flow/excel-custom-properties.md)的“Excel 目标”部分。  
+>  Excel `CommandTimeout`目标的属性在**excel 目标编辑器**中不可用，但可以使用**高级编辑器**进行设置。 此外，某些快速加载选项仅在**高级编辑器**中可用。 有关这些属性的详细信息，请参阅 [Excel Custom Properties](data-flow/excel-custom-properties.md)的“Excel 目标”部分。  
   
  若要了解有关 Excel 目标的详细信息，请参阅 [Excel Destination](data-flow/excel-destination.md)。  
   
 ## <a name="static-options"></a>静态选项  
  **Excel 连接管理器**  
- 从列表中选择现有的 Excel 连接管理器，或单击“新建”  创建新连接。  
+ 从列表中选择现有的 Excel 连接管理器，或单击“新建”**** 创建新连接。  
   
  **新建**  
- 使用“Excel 连接管理器”  对话框创建一个新连接管理器。  
+ 使用“Excel 连接管理器”**** 对话框创建一个新连接管理器。  
   
  **数据访问模式**  
  指定从源选择数据的方法。  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
 |表或视图|将数据加载到 Excel 数据源中的工作表或指定范围。|  
 |表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息**：[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL 命令|使用 SQL 查询将数据加载到 Excel 目标中。|  
   
  **Excel 表的名称**  
- 从下拉列表中选择 Excel 目标。 如果此列表为空，请单击 **“新建”** 。  
+ 从下拉列表中选择 Excel 目标。 如果此列表为空，请单击 **“新建”**。  
   
  **新建**  
- 单击“新建”将启动“创建表”对话框。   当您单击 **“确定”** 时，此对话框将创建 **“Excel 连接管理器”** 指向的 Excel 文件。  
+ 单击“新建”将启动“创建表”对话框。******** 当您单击 **“确定”** 时，此对话框将创建 **“Excel 连接管理器”** 指向的 Excel 文件。  
   
  **查看现有数据**  
  使用“预览查询结果”  对话框预览结果。 预览最多可以显示 200 行。  
   
 > [!WARNING]  
->  如果你选择的“Excel 连接管理器”指向的 Excel 文件不存在，则单击此按钮时你将看到一条错误消息。   
+>  如果你选择的“Excel 连接管理器”指向的 Excel 文件不存在，则单击此按钮时你将看到一条错误消息。****  
   
 ## <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
   
@@ -69,21 +69,21 @@ ms.locfileid: "66059243"
   
 ### <a name="data-access-mode--sql-command"></a>数据访问模式 = SQL 命令  
  **SQL 命令文本**  
- 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”定位到包含查询文本的文件。    
+ 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”定位到包含查询文本的文件。********  
   
  **生成查询**  
- 使用“查询生成器”  对话框可直观地构造 SQL 查询。  
+ 使用“查询生成器”**** 对话框可直观地构造 SQL 查询。  
   
  **“浏览”**  
- 使用“打开”  对话框可定位到包含 SQL 查询文本的文件。  
+ 使用“打开”**** 对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  
  验证查询文本的语法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 目标编辑器（“映射”页）](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
- [Excel 目标编辑器（“错误输出”页）](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
- [使用 Foreach 循环容器循环遍历 Excel 文件和表](control-flow/foreach-loop-container.md)  
+ [Excel 目标编辑器 &#40;映射 "页面&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Excel 目标编辑器 &#40;错误输出页&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [使用 Foreach 循环容器，循环遍历 Excel 文件和表](control-flow/foreach-loop-container.md)  
   
   

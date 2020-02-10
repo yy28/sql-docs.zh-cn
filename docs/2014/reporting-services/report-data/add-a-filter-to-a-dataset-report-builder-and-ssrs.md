@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3ce57aa0ac17a29b9e8f3b0ea7eef3ad1501a60e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107541"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>向数据集添加筛选器（报表生成器和 SSRS）
@@ -35,7 +35,7 @@ ms.locfileid: "66107541"
   
 3.  单击 **“筛选器”** 。 此时将显示当前筛选器公式的列表。 默认情况下，此列表是空的。  
   
-4.  单击 **“添加”** 。 此时将显示一个新的空白筛选器公式。  
+4.  单击“添加”  。 此时将显示一个新的空白筛选器公式。  
   
 5.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66107541"
   
 3.  单击 **“筛选器”** 。 此时将显示当前筛选器公式的列表。 默认情况下，此列表是空的。  
   
-4.  单击 **“添加”** 。 此时将显示一个新的空白筛选器公式。  
+4.  单击“添加”  。 此时将显示一个新的空白筛选器公式。  
   
 5.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66107541"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [表达式示例（报表生成器和 SSRS）](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [添加筛选器（报表生成器和 SSRS）](../report-design/add-a-filter-report-builder-and-ssrs.md)  

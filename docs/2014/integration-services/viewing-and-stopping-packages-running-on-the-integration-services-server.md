@@ -1,5 +1,5 @@
 ---
-title: 查看和停止集成上运行的包 Services 服务器 |Microsoft Docs
+title: 查看和停止在 Integration Services 服务器上运行的包 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054598"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>查看和停止在 Integration Services 服务器上运行的包
+  
   `SSISDB` 数据库在对用户不可见的内部表中存储执行历史记录。 不过，它通过您可以查询的公共视图公开您所需的信息。 它还提供存储过程，您可以调用这些存储过程以执行与包相关的常见任务。  
   
  通常，您在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的服务器上管理 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对象。 不过，您还可以查询数据库视图和直接调用存储过程，或者编写调用托管 API 的自定义代码。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和托管 API 查询视图并调用存储过程以便执行其许多任务。 例如，您可以查看当前正在服务器上运行的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的列表，并且在需要时请求包停止运行。  
@@ -60,8 +61,8 @@ ms.locfileid: "66054598"
  通过托管 API 以编程方式访问  
  请参阅 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间及其类。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [项目和包的执行](packages/run-integration-services-ssis-packages.md)   
- [对包执行进行故障排除的报告](troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [包执行的疑难解答报告](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   
   

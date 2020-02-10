@@ -1,5 +1,5 @@
 ---
-title: 地图嵌入的点属性对话框，标记 |Microsoft Docs
+title: "\"地图嵌入点属性\" 对话框-\"标记\" |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108326"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>“地图嵌入点属性”对话框 -&gt;“标记”
@@ -31,12 +31,12 @@ ms.locfileid: "66108326"
   
 ## <a name="options"></a>选项  
  **标记类型**  
- 指定标记类型。 默认值为 `Circle`。  
+ 指定标记类型。 默认为 `Circle`。  
   
  **标记大小**  
  指定标记大小。 默认值为 10pt。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [地图（报表生成器和 SSRS）](report-design/maps-report-builder-and-ssrs.md)  
   
   

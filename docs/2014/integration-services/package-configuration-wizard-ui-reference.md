@@ -1,5 +1,5 @@
 ---
-title: 包配置向导 UI 参考 |Microsoft Docs
+title: 包配置向导用户界面参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056938"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>包配置向导用户界面参考
@@ -37,7 +37,7 @@ ms.locfileid: "66056938"
  **不再显示此页**  
  下次打开向导时跳过欢迎页。  
   
- **Next**  
+ **一个**  
  转到向导的下一页。  
   
 ## <a name="select-configuration-type-page"></a>“选择配置类型”页  
@@ -49,7 +49,7 @@ ms.locfileid: "66056938"
  **配置类型**  
  使用下列选项选择存储配置的源的类型：  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**XML 配置文件**|将配置存储为 XML 文件。 选择此值将显示 **“配置类型”** 部分中的动态选项。|  
 |**环境变量**|将配置存储在一个环境变量中。 选择此值将显示 **“配置类型”** 部分中的动态选项。|  
@@ -57,7 +57,7 @@ ms.locfileid: "66056938"
 |**父包变量**|将配置存储为包含该任务的包中的变量。  选择此值将显示 **“配置类型”** 部分中的动态选项。|  
 |**SQL Server**|将配置存储在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]表中。 选择此值将显示 **“配置类型”** 部分中的动态选项。|  
   
- **Next**  
+ **一个**  
  查看向导的下一页。  
   
 ### <a name="dynamic-options"></a>动态选项  
@@ -66,15 +66,15 @@ ms.locfileid: "66056938"
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
-|**配置文件名**|键入向导生成的配置文件的路径。|  
+|**配置文件名称**|键入向导生成的配置文件的路径。|  
 |**“浏览”**|使用 **“选择配置文件位置”** 对话框指定向导生成的配置文件的路径。 如果文件不存在，则向导将创建该文件。|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -86,14 +86,14 @@ ms.locfileid: "66056938"
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**注册表项**|键入包含配置信息的注册表项。 格式为 \<registry key>。<br /><br /> 该注册表项必须已经存在于 HKEY_CURRENT_USER 中并且具有一个名为 Value 的值。 该值可以是 DWORD 或一个字符串。<br /><br /> 如果要使用不在 HKEY_CURRENT_USER 根目录下的注册表项，请使用 \<Registry key\registry key\\...> 格式来标识该项。|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -101,14 +101,14 @@ ms.locfileid: "66056938"
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**父变量**|指定父包中包含配置信息的变量。|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -116,16 +116,16 @@ ms.locfileid: "66056938"
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
-|**“连接”**|从列表中选择连接，或者单击 **“新建”** 创建新连接。|  
+|**连接**|从列表中选择连接，或者单击 **“新建”** 创建新连接。|  
 |**配置表**|选择现有的表，或者单击 **“新建”** 编写用于创建新表的 SQL 语句。|  
 |**配置筛选器**|选择现有配置名称或者键入新名称。<br /><br /> 多个 SQL Server 配置可以存储在同一个表中，而且每个配置可以包括多个配置项。<br /><br /> 此用户定义值存储在表中以标识属于特定配置的配置项|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -139,7 +139,7 @@ ms.locfileid: "66056938"
  **属性特性**  
  查看属性的特性。  
   
- **Next**  
+ **一个**  
  转到向导的下一页。  
   
 ## <a name="completing-the-wizard-page"></a>“完成向导”页  
@@ -155,7 +155,7 @@ ms.locfileid: "66056938"
  **“完成”**  
  创建配置并退出 **包配置向导**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建包配置](../../2014/integration-services/create-package-configurations.md)  
   
   

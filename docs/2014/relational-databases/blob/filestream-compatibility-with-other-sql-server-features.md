@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aba8bdc3182cd0e3784908a8af32b6f2fbebd6e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010186"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 与其他 SQL Server 功能的兼容性
@@ -50,14 +50,14 @@ ms.locfileid: "66010186"
   
  您可以使用“导入列”转换将文件从文件系统加载到 FILESTREAM 列， 还可以使用“导出列”转换将文件从 FILESTREAM 列提取到文件系统中的另一个位置。  
   
-##  <a name="distqueries"></a> 分布式查询和链接服务器  
- 处理分布式的查询和链接的服务器的 FILESTREAM 数据的方法是将它`varbinary(max)`数据。 不能在使用由四部分构成的名称的分布式查询中使用 FILESTREAM **PathName()** 函数，甚至在该名称表示本地服务器时也不能使用。 但是，你可以在使用 **OPENQUERY()** 的传递查询的内部查询中使用 **PathName()**。  
+##  <a name="distqueries"></a>分布式查询和链接服务器  
+ 您可以通过将 FILESTREAM 数据视为`varbinary(max)`数据，通过分布式查询和链接服务器来处理这些数据。 不能在使用由四部分构成的名称的分布式查询中使用 FILESTREAM **PathName()** 函数，甚至在该名称表示本地服务器时也不能使用。 但是，你可以在使用 **OPENQUERY()** 的传递查询的内部查询中使用 **PathName()**。  
   
-##  <a name="encryption"></a> 加密  
+##  <a name="encryption"></a>密匙  
  即使启用了透明数据加密，也不会加密 FILESTREAM 数据。  
   
-##  <a name="DatabaseSnapshot"></a> 数据库快照  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持对 FILESTREAM 文件组使用 [数据库快照](../databases/database-snapshots-sql-server.md) 功能。 如果 CREATE DATABASE ON 子句中包含 FILESTREAM 文件组，则相应语句将会失败并会引发错误。  
+##  <a name="DatabaseSnapshot"></a>数据库快照  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支持 FILESTREAM 文件组的[数据库快照](../databases/database-snapshots-sql-server.md)。 如果 CREATE DATABASE ON 子句中包含 FILESTREAM 文件组，则相应语句将会失败并会引发错误。  
   
  当您使用 FILESTREAM 时，您可以创建标准（非 FILESTREAM）文件组的数据库快照。 这些数据库快照的 FILESTREAM 文件组被标记为脱机。  
   
@@ -65,8 +65,8 @@ ms.locfileid: "66010186"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="Replication"></a> Replication  
- 可以将发布服务器上启用了 FILESTREAM 属性的 `varbinary(max)` 列复制到订阅服务器，复制时可以带 FILESTREAM 属性，也可以不带。 若要指定复制列的方式，请使用“项目属性 - \<项目>”对话框，或使用 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 @schema_option 参数。 复制到不具有 FILESTREAM 属性的 `varbinary(max)` 列的数据不能超过该数据类型的 2 GB 大小限制；否则，将产生运行时错误。 我们建议你复制 FILESTREAM 属性，除非您要复制数据到[!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)]不支持订阅服务器，而不考虑指定的架构选项。  
+##  <a name="Replication"></a>副本  
+ 可以将发布服务器上启用了 FILESTREAM 属性的 `varbinary(max)` 列复制到订阅服务器，复制时可以带 FILESTREAM 属性，也可以不带。 若要指定复制列的方式，请使用“项目属性 - **项目>”\<** 对话框，或使用 @schema_optionsp_addarticle[ 或 ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sp_addmergearticle[ 的 ](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 参数。 复制到不具有 FILESTREAM 属性的 `varbinary(max)` 列的数据不能超过该数据类型的 2 GB 大小限制；否则，将产生运行时错误。 建议你复制 FILESTREAM 属性，除非你将数据复制到[!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)]订阅服务器，而不考虑指定的架构选项。  
   
 > [!NOTE]  
 >  从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 复制到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 订阅服务器的大数据值最多不得超过 256 MB。 有关详细信息，请参阅 [最大容量规范](https://go.microsoft.com/fwlink/?LinkId=103810)。  
@@ -74,7 +74,7 @@ ms.locfileid: "66010186"
 ### <a name="considerations-for-transactional-replication"></a>事务复制的注意事项  
  如果您使用为事务复制发布的表中的 FILESTREAM 列，请注意以下事项：  
   
--   如果表中的列具有 FILESTREAM 属性，则不能将 *database snapshot* 或 *database snapshot character* 的值用于 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 的 @sync_method 属性。  
+-   如果表中的列具有 FILESTREAM 属性，则不能将 *database snapshot* 或 *database snapshot character* 的值用于 @sync_methodsp_addpublication[ 的 ](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 属性。  
   
 -   max text repl size 选项用于指定可以插入到为复制发布的列中的最大数据量。 此选项可用来控制复制的 FILESTREAM 数据的大小。  
   
@@ -91,35 +91,35 @@ ms.locfileid: "66010186"
   
     -   默认情况下，合并复制使用 NEWSEQUENTIALID()，因为与 NEWID() 相比，它可以提供更高的性能。 如果您要向将为合并复制发布的表添加 `uniqueidentifier` 列，请指定 NEWSEQUENTIALID() 作为默认值。  
   
--   合并复制包括为复制大型对象类型而进行的优化。 这种优化由 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 @stream_blob_columns 参数控制。 如果您设置了用于复制 FILESTREAM 属性的架构选项，则 @stream_blob_columns 参数值将设置为 `true`。 通过使用 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，可以替代这种优化。 此存储过程支持您将 @stream_blob_columns 设置为 `false`。 如果您要将 FILESTREAM 列添加到已经为合并复制发布的表中，建议您使用 sp_changemergearticle 将该选项设置为 `true`。  
+-   合并复制包括为复制大型对象类型而进行的优化。 这种优化由 @stream_blob_columnssp_addmergearticle[ 的 ](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 参数控制。 如果您设置了用于复制 FILESTREAM 属性的架构选项，则 @stream_blob_columns 参数值将设置为 `true`。 通过使用 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，可以替代这种优化。 此存储过程支持您将 @stream_blob_columns 设置为 `false`。 如果您要将 FILESTREAM 列添加到已经为合并复制发布的表中，建议您使用 sp_changemergearticle 将该选项设置为 `true`。  
   
 -   如果 FILESTREAM 列中的数据大小超过 2 GB，则在创建项目后为 FILESTREAM 启用架构选项会导致复制失败，且复制过程中会发生冲突。 如果您预计这种情况会发生，建议您删除表项目，然后重新创建它，并在创建时间启用相应的 FILESTREAM 架构选项。  
   
 -   合并复制可以使用 [Web 同步](../replication/merge/merge-replication.md)通过 HTTPS 连接同步 FILESTREAM 数据。 此数据不能超过针对 Web 同步的 50 MB 大小限制；否则，将产生运行时错误。  
   
-##  <a name="LogShipping"></a> 日志传送  
- [日志传送](../../database-engine/log-shipping/about-log-shipping-sql-server.md) 支持 FILESTREAM。 主服务器和辅助服务器运行的都必须是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或更高版本，并且必须启用 FILESTREAM。  
+##  <a name="LogShipping"></a>日志传送  
+ [日志传送](../../database-engine/log-shipping/about-log-shipping-sql-server.md)支持 FILESTREAM。 主服务器和辅助服务器运行的都必须是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或更高版本，并且必须启用 FILESTREAM。  
   
-##  <a name="DatabaseMirroring"></a> 数据库镜像  
+##  <a name="DatabaseMirroring"></a>数据库镜像  
  数据库镜像不支持 FILESTREAM。 不能在主体服务器上创建 FILESTREAM 文件组。 不能为包含 FILESTREAM 文件组的数据库配置数据库镜像。  
   
-##  <a name="FullText"></a> 全文索引  
- [全文索引](../indexes/indexes.md)FILESTREAM 列的工作方式与其处理完全相同`varbinary(max)`列。 FILESTREAM 表必须有一列包含每个 FILESTREAM BLOB 的文件扩展名。 有关详细信息，请参阅[使用全文搜索查询](../search/query-with-full-text-search.md)、[配置和管理搜索筛选器](../search/configure-and-manage-filters-for-search.md)和[sys.fulltext_document_types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
+##  <a name="FullText"></a>全文索引  
+ [全文索引](../indexes/indexes.md)处理 FILESTREAM 列的方式与处理`varbinary(max)`列的方式相同。 FILESTREAM 表必须有一列包含每个 FILESTREAM BLOB 的文件扩展名。 有关详细信息，请参阅[使用全文搜索查询](../search/query-with-full-text-search.md)、[配置和管理搜索筛选器](../search/configure-and-manage-filters-for-search.md)和[sys.fulltext_document_types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
   
  全文引擎会对 FILESTREAM BLOB 的内容进行索引。 对诸如图像之类的文件进行索引可能没有用。 更新 FILESTREAM BLOB 时，会重新对其进行索引。  
   
-##  <a name="FailoverClustering"></a> 故障转移群集  
+##  <a name="FailoverClustering"></a>故障转移群集  
  对于故障转移群集，必须将 FILESTREAM 文件组放在共享磁盘上。 必须在群集中将承载 FILESTREAM 实例的每个节点上启用 FILESTREAM。 有关详细信息，请参阅 [在故障转移群集中设置 FILESTREAM](set-up-filestream-on-a-failover-cluster.md)。  
   
-##  <a name="SQLServerExpress"></a> SQL Server Express  
- [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 支持 FILESTREAM。 10 GB 的数据库大小限制不包括 FILESTREAM 数据容器。  
+##  <a name="SQLServerExpress"></a>SQL Server Express  
+ [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]支持 FILESTREAM。 10 GB 的数据库大小限制不包括 FILESTREAM 数据容器。  
   
-##  <a name="contained"></a> 包含的数据库  
+##  <a name="contained"></a>包含的数据库  
  FILESTREAM 功能需要数据库以外的一些配置。 因此，使用 FILESTREAM 或 FileTable 的数据库并未被完全包含。  
   
  如果您想要使用包含的数据库的某些功能（例如包含的用户），则可以将数据库包含设置为 PARTIAL。 但在此情况下，您必须知道某些数据库设置未包含在数据库中，并且在数据库移动时不自动移动。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [二进制大型对象 (Blob) 数据 (SQL Server)](binary-large-object-blob-data-sql-server.md)  
   
   

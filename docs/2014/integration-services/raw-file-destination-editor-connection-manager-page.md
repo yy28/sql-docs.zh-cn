@@ -1,5 +1,5 @@
 ---
-title: 原始文件目标编辑器 （连接管理器页） |Microsoft Docs
+title: 原始文件目标编辑器（"连接管理器" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2677d0dd1f4697177171ba0edd4641ec02110310
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056567"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>原始文件目标编辑器（“连接管理器”页）
@@ -34,7 +34,7 @@ ms.locfileid: "66056567"
   
 1.  将原始文件目标添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]包。  
   
-2.  右键单击该组件，然后单击 **“编辑”**。  
+2.  右键单击该组件，然后单击 **“编辑”** 。  
   
 ##  <a name="connection"></a> 设置“连接管理器”选项卡上的选项  
  **访问模式**  
@@ -61,7 +61,7 @@ ms.locfileid: "66056567"
  **输出别名**  
  指定要用于输出列的备用名称。  
   
-## <a name="see-also"></a>请参阅  
- [原始文件目标](data-flow/raw-file-destination.md)  
+## <a name="see-also"></a>另请参阅  
+ [Raw File Destination](data-flow/raw-file-destination.md)  
   
   

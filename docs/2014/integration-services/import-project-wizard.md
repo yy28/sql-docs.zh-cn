@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058048"
 ---
 # <a name="import-project-wizard"></a>导入项目向导
@@ -24,13 +24,13 @@ ms.locfileid: "66058048"
   
 ### <a name="to-create-a-project-based-on-a-project-in-ispac-file-or-in-catalog"></a>基于 .ispac 文件或目录中的项目创建项目  
   
-1.  单击 **“文件”** ，指向 **“新建”** ，然后单击“项目”。  
+1.  单击 "**文件**"，指向 "**新建**"，然后单击 "项目"。  
   
-2.  展开 **“商业智能”** ，然后单击 **Integration Services**。  
+2.  展开 **“商业智能”**，然后单击 **Integration Services**。  
   
-3.  在中间的窗格中选择 **“Integration Services 导入向导”** ，为解决方案键入 **“名称”** ，为项目指定 **“文件夹”** ，然后单击 **“确定”** 。  
+3.  在中间的窗格中选择 **“Integration Services 导入向导”** ，为解决方案键入 **“名称”** ，为项目指定 **“文件夹”** ，然后单击 **“确定”**。  
   
-     此时应看到 **“Integration Services 导入项目向导”** 。 该向导将基于现有的项目创建一个新的 Integration Services 项目。  
+     此时应看到 **“Integration Services 导入项目向导”**。 该向导将基于现有的项目创建一个新的 Integration Services 项目。  
   
 4.  在 **“简介”** 页上单击 **“下一步”** 以便看到 **“选择源”** 页。  
   
@@ -44,8 +44,9 @@ ms.locfileid: "66058048"
   
 7.  单击 **“导入”** 以便基于您选择的项目创建一个新的 Integration Services 项目。  
   
-8.  **“结果”** 页应该显示向导执行的导入操作的结果。 单击 **“保存报表”** 可以将报表保存到某一 XML 文件。  
+8.  
+  **“结果”** 页应该显示向导执行的导入操作的结果。 单击 **“保存报表”** 可以将报表保存到某一 XML 文件。  
   
-9. 单击 **“关闭”** 关闭该向导。  
+9. 单击“**关闭**”以关闭向导。  
   
   

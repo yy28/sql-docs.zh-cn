@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: dd6a34e6dbf57eb5080525d7dd0f7d7067484ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580490"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>向用户和警报管理员授予权限
@@ -31,7 +31,7 @@ ms.locfileid: "65580490"
 
 若要了解有关 SharePoint 权限的详细信息，请参阅 [用户权限和权限级别 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx)。
 
-## <a name="grant-permissions"></a>“授予权限”
+## <a name="grant-permissions"></a>授予权限
   
 1.  转到要授予权限的 SharePoint 站点。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65580490"
   
      如果未看到此选项，则表明您没有向他人授予权限所需的足够权限。  
   
-3.  单击 **“授予权限”** 。  
+3.  单击“授予权限”  。  
   
 4.  在“用户/组”中，键入要授予权限的用户名、组名或电子邮件地址  。  
   

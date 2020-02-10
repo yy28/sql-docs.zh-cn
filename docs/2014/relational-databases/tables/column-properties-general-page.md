@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62854900"
 ---
 # <a name="column-properties-general-page"></a>列属性（“常规”页）
   使用此页可以查看所选列的属性。  
   
- 此页上的信息为只读信息。 若要修改列，请关闭“列属性”  对话框，然后在对象资源管理器中展开表和列，右键单击该列，再单击“设计”  。  
+ 此页上的信息为只读信息。 若要修改列，请关闭“列属性”**** 对话框，然后在对象资源管理器中展开表和列，右键单击该列，再单击“设计”****。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -38,7 +38,7 @@ ms.locfileid: "62854900"
  指示该列是否为主键。 可能的值包括 **True**和 **False**。  
   
  **允许 Null 值**  
- 指示列是否接受空值。 可能的值包括 **True** 和 **False**。  
+ 指示列是否接受空值。 可能的值为**True**和**False**。  
   
  **是计算**  
  指示该列的值是否为计算表达式的结果。  
@@ -47,13 +47,13 @@ ms.locfileid: "62854900"
  指示用于计算列文本的语句。 有关详细信息，请参阅 [Specify Computed Columns in a Table](specify-computed-columns-in-a-table.md)。  
   
  **标识**  
- 指示列是否为表的标识列。 可能的值包括 **True** 和 **False**。  
+ 指示列是否为表的标识列。 可能的值为**True**和**False**。  
   
  **标识种子**  
  指示标识列的初始行值。  
   
- **标识增量**  
- “标识增量”  属性指定在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为插入的行生成标识值时，在现有的最大行标识值基础上所加的值。  
+ **标识递增**  
+ “标识增量”**** 属性指定在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为插入的行生成标识值时，在现有的最大行标识值基础上所加的值。  
   
  **默认值绑定**  
  绑定到该列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认值。 如果未绑定默认值，此选项为空白。  
@@ -61,7 +61,7 @@ ms.locfileid: "62854900"
  **默认架构**  
  标识拥有绑定到被引用列的默认值的数据库架构。 如果未绑定默认值，此选项为空白。  
   
- **规则**  
+ **线**  
  标识绑定到该列的数据完整性约束。 如果未绑定规则，此选项为空白。  
   
  **规则架构**  
@@ -86,13 +86,13 @@ ms.locfileid: "62854900"
  拥有 XML 架构命名空间的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架构。  
   
 > [!NOTE]  
->  架构一词具有多种不同的常用含义。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用架构来组织数据库对象。 其含义类似于所有权。 XML 使用架构来定义 XML 信息在一系列命名空间内的结构。 架构是一种组织相关 XML 代码的方式。  
+>  架构一词具有多种不同的常用含义。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用架构来组织数据库对象。 其含义类似于所有权。 XML 使用架构来定义 XML 信息在一系列命名空间内的结构。 架构是一种组织相关 XML 代码的方式。  
   
  **稀疏**  
- 指示列是否为稀疏列。 可能的值包括 **True** 和 **False**。 有关详细信息，请参阅 [使用稀疏列](use-sparse-columns.md)。  
+ 指示列是否为稀疏列。 可能的值为**True**和**False**。 有关详细信息，请参阅 [使用稀疏列](use-sparse-columns.md)。  
   
  **是列集**  
- 指示列是否为列集。 可能的值包括 **True** 和 **False**。 有关详细信息，请参阅 [使用列集](use-column-sets.md)。  
+ 指示列是否为列集。 可能的值为**True**和**False**。 有关详细信息，请参阅 [使用列集](use-column-sets.md)。  
   
  **ANSI 填充状态**  
  指示 ANSI 填充是启用还是禁用。 有关详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](/sql/t-sql/statements/set-ansi-padding-transact-sql)。  
@@ -104,6 +104,6 @@ ms.locfileid: "62854900"
  指示是否为列启用了统计语义搜索。 有关详细信息，请参阅[语义搜索 (SQL Server)](../search/semantic-search-sql-server.md)。  
   
  **不用于复制**  
- 指示该列是否可用于复制。 可能的值包括 **True** 和 **False**。  
+ 指示该列是否可用于复制。 可能的值为**True**和**False**。  
   
   

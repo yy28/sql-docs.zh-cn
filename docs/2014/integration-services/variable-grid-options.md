@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054679"
 ---
 # <a name="variable-grid-options"></a>变量网格选项
@@ -26,25 +26,25 @@ ms.locfileid: "66054679"
   
 ## <a name="options-for-filter"></a>筛选器选项  
  **显示系统变量**  
- 选择此项可在“变量”  窗口中列出系统变量。 系统变量是预定义的。 您无法添加或删除系统变量。 可以修改 **“RaiseChangedEvent”** 属性设置。  
+ 选择此项可在“变量”**** 窗口中列出系统变量。 系统变量是预定义的。 您无法添加或删除系统变量。 可以修改 **“RaiseChangedEvent”** 属性设置。  
   
  此列表使用颜色进行标记。 系统变量呈灰色，而用户定义变量则呈黑色。  
   
  **显示所有作用域的变量**  
  选择以显示包范围内的变量以及包中的容器、任务和事件处理程序范围内的变量。 清除此选项以仅显示包范围内的变量以及所选容器、任务或事件处理程序范围内的变量。  
   
- 有关变量作用域的详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)。  
+ 有关变量作用域的详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)区域之下。  
   
 ## <a name="options-for-columns"></a>列选项  
  选择希望在 **“变量”** 窗口中显示的列。  
   
 -   **范围**  
   
--   **Data type**  
+-   **数据类型**  
   
--   **ReplTest1**  
+-   **值**  
   
--   **Namespace**  
+-   **命名空间**  
   
 -   **变量值更改时引发事件**  
   
@@ -52,10 +52,10 @@ ms.locfileid: "66054679"
   
 -   **表达式**  
   
-## <a name="see-also"></a>请参阅  
- [“变量”窗口](../../2014/integration-services/variables-window.md)   
+## <a name="see-also"></a>另请参阅  
+ [变量窗口](../../2014/integration-services/variables-window.md)   
  [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
- [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)   
+ [使用包中的变量](../../2014/integration-services/use-variables-in-packages.md)   
  [Integration Services (SSIS) 事件处理程序](integration-services-ssis-event-handlers.md)  
   
   

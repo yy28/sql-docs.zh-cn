@@ -1,5 +1,5 @@
 ---
-title: OLE DB 目标编辑器 （映射页） |Microsoft Docs
+title: OLE DB 目标编辑器（"映射" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057090"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>OLE DB 目标编辑器（“映射”页）
@@ -34,15 +34,15 @@ ms.locfileid: "66057090"
  查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
   
  **输入列**  
- 查看选定的输入列。 可以通过选择“\<忽略>”  以从输出中排除列来移除映射。  
+ 查看选定的输入列。 可以通过选择“**忽略>”\<** 以从输出中排除列来移除映射。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对其进行映射。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 目标编辑器（“连接管理器”页）](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [OLE DB 目标编辑器（“错误输出”页）](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+ [OLE DB 目标编辑器 &#40;"连接管理器" 页&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
+ [OLE DB 目标编辑器 &#40;错误输出页&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [通过使用 OLE DB 目标来加载数据](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 执行 DiffGram 使用 SQLXML 托管类 |Microsoft Docs
+title: 使用 SQLXML 托管类执行 DiffGram |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d8756bb3dc7b030541159c2aa127162907aa4b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013050"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>使用 SQLXML 托管类执行 DiffGram
-  此示例演示如何执行 DiffGram 文件中的[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 环境来应用数据更新为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表使用 SQLXML 托管类 (Microsoft.Data.SqlXml)。  
+  此示例演示如何使用 SQLXML 托管类（node.js） [!INCLUDE[msCoName](../../../includes/msconame-md.md)]在 .NET Framework 环境中执行 DiffGram 文件[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，以将数据更新应用到表。  
   
  在本示例中，DiffGram 更新客户 ALFKI 的客户信息（CompanyName 和 ContactName）。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "66013050"
 </ROOT>  
 ```  
   
- **\<之前 >** 块包括 **\<客户 >** 元素 (**diffgr: id ="Customer1"** )。 **\<DataInstance >** 块包括相应 **\<客户 >** 元素具有相同 **id**。 **\<客户 >** 中的元素 **\<NewDataSet >** 还指定了 **diffgr: haschanges ="modified"** 。 这指示一个更新操作，而且 Cust 表中的客户记录也会相应地更新。 请注意，如果**diffgr: haschanges**属性未指定，DiffGram 处理逻辑将忽略此元素，则不执行任何更新。  
+ Before>块包含** \<Customer>** 元素（**diffgr： id = "Customer1"**）。 ** \<** DataInstance>块包含具有相同**id**的相应** \<Customer>** 元素。 ** \<**** \<NewDataSet>** 中的** \<customer>** 元素还指定了**diffgr： hasChanges = "modified"**。 这指示一个更新操作，而且 Cust 表中的客户记录也会相应地更新。 请注意，如果未指定**diffgr： hasChanges**属性，DiffGram 处理逻辑将忽略此元素，并且不执行任何更新。  
   
- 以下是 C# 教程应用程序代码演示如何使用 SQLXML 托管类执行上面的 DiffGram 和更新两个表 (Cust、 Ord) 还将创建在**tempdb**数据库。  
+ 下面是 c # 教程应用程序的代码，该应用程序演示如何使用 SQLXML 托管类来执行上述 DiffGram，并更新两个表（用户、Ord），你还将在**tempdb**数据库中创建该应用程序。  
   
 ```  
 using System;  
@@ -128,7 +128,7 @@ class Test
     </xsd:schema>  
     ```  
   
-3.  创建这些表中的**tempdb**数据库。  
+3.  在**tempdb**数据库中创建这些表。  
   
     ```  
     CREATE TABLE Cust(  
@@ -177,7 +177,7 @@ class Test
   
 8.  在命令提示符下，执行 DiffgramSample.exe。  
   
-## <a name="see-also"></a>请参阅  
- [DiffGram 示例&#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SQLXML 4.0&#41;的 DiffGram 示例](diffgram-examples-sqlxml-4-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 任务 12：添加派生列转换以添加 MDS 所需的列 |Microsoft Docs
+title: 任务12：添加派生列转换以添加 MDS 所需的列 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,52 +11,52 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65485243"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>任务 12：添加派生列转换以添加 MDS 所需的列
-  在本任务中，您将向数据流添加派生列转换。 添加两个派生的列**ImportType**并**BatchTag**到记录传递给此转换。 您应该在将数据上载到 MDS 中的临时表之前添加这些列。 这两列是 MDS 中的临时表所必需的列。 请参阅[叶成员临时表](../master-data-services/leaf-member-staging-table-master-data-services.md)的更多详细信息。  
+  在本任务中，您将向数据流添加派生列转换。 将两个派生列**ImportType**和**BatchTag**添加到传递给此转换的记录。 您应该在将数据上载到 MDS 中的临时表之前添加这些列。 这两列是 MDS 中的临时表所必需的列。 有关更多详细信息，请参阅[叶成员临时表](../master-data-services/leaf-member-staging-table-master-data-services.md)。  
   
-1.  拖放**派生列转换**从**常见**主题中**SSIS 工具箱**到**数据流**选项卡。  
+1.  将从 " **SSIS 工具箱**" 中的 "**公共**" 部分拖放到 **"数据流" 选项卡**的**派生列转换**。  
   
-2.  右键单击**派生列**转换中**数据流**选项卡，然后单击**重命名**。 类型**添加列所需的 MDS**然后按**ENTER**。  
+2.  右键**单击 "数据流**" 选项卡中的 "**派生列**转换"，然后单击 "**重命名**"。 键入 "**添加 MDS 所需的列**"，然后按**enter**。  
   
-3.  连接**筛选重复项**到**添加列所需的 MDS**使用蓝色连接器。 应会看到**选择输入输出**对话框。  
+3.  使用蓝色连接器连接**筛选器重复项**以**添加 MDS 所需的列**。 应会看到 "**输入输出选择**" 对话框。  
   
-4.  在中**选择输入输出**对话框中，选择**唯一记录**，然后单击**确定**。  
+4.  在 "**输入输出选择**" 对话框中，选择 "**唯一记录**"，并单击 **"确定"**。  
   
-     ![输入输出选择对话框](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-01.jpg "输入输出选择对话框")  
+     ![“选择输入输出”对话框](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-01.jpg "“选择输入输出”对话框")  
   
-5.  单击**SSIS**在菜单栏上单击**变量**。  
+5.  单击菜单栏上的 " **SSIS** "，然后单击 "**变量**"。  
   
-6.  在中**变量**窗口中，单击**添加变量**工具栏上的按钮。  
+6.  在 "**变量**" 窗口中，单击工具栏上的 "**添加变量**" 按钮。  
   
      ![SSIS 变量窗口](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "SSIS 变量窗口")  
   
-7.  类型**ImportType**有关**名称**并**2**有关**值**。 您将该值指定为 2，因为您想要向 MDS 中的实体添加新成员。 有关此参数的详细信息，请参阅[叶成员临时表](../master-data-services/leaf-member-staging-table-master-data-services.md)。  
+7.  键入**ImportType**作为**名称**，键入**2**作为**值**。 您将该值指定为 2，因为您想要向 MDS 中的实体添加新成员。 有关此参数的详细信息，请参阅[叶成员临时表](../master-data-services/leaf-member-staging-table-master-data-services.md)。  
   
-8.  单击**添加变量**再次工具栏按钮。  
+8.  再次单击 "**添加变量**" 工具栏按钮。  
   
-9. 类型**BatchTag**有关**名称**，选择**字符串**有关**数据类型**，并**EIMBatch**为**值**。 **BatchTag**是只需将提交到 MDS 的批处理的唯一名称。  
+9. 键入 " **BatchTag** " 作为 "**名称**"，选择 "**字符串**" 作为 "**数据类型**"，并选择 " **EIMBatch** " 作为**值**。 **BatchTag**只是要提交到 MDS 的批处理的唯一名称。  
   
-10. 在中**Data Flow**选项卡上，双击**添加列所需的 MDS**。  
+10. 在 "**数据流" 选项卡**中，双击 "**添加 MDS 所需的列**"。  
   
-11. 在中**派生列转换编辑器**对话框中**底部窗格中的列表框**，类型**ImportType**为**派生列名称**.  
+11. 在 "**派生列转换编辑器**" 对话框的**底部窗格的列表框**中，键入**ImportType**作为**派生列名称**。  
   
-12. 展开**变量和参数**左上方窗格中拖放**user:: importtype**到**表达式**列。  
+12. 展开左上方窗格中的 "**变量和参数**"，将**User：： ImportType**拖放到**Expression**列。  
   
      ![派生列转换编辑器](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-03.jpg "派生列转换编辑器")  
   
-13. 类型**BatchTag**中的下一步行**派生列名称**。  
+13. 在 "**派生列名称**" 的下一行中键入**BatchTag** 。  
   
-14. 拖放**user:: batchtag**从**变量和参数**到**表达式**列。  
+14. 将**User：： BatchTag**从**Variables 和 Parameters**拖放到**Expression**列。  
   
-15. 单击**确定**以关闭**派生列转换**对话框。  
+15. 单击 **"确定"** 以关闭 "**派生列转换**" 对话框。  
   
 ## <a name="next-step"></a>下一步  
- [任务 13:添加 OLE DB 目标将数据写入 MDS 临时表](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
+ [任务 13：添加 OLE DB 目标以便将数据写入 MDS 临时表](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

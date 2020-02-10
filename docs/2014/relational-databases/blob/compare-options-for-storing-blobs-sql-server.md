@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010351"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>比较用于存储 Blob 的选项 (SQL Server)
@@ -38,14 +38,14 @@ ms.locfileid: "66010351"
 -   Windows 应用程序要求与文件和目录数据的文件系统 API 兼容。  
   
 ##  <a name="Filestream"></a> FILESTREAM  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已有 FILESTREAM 功能，它为作为文件存储在文件系统中的非结构化数据提供了高效的存储、管理和流式处理方法。 但是，FILESTREAM 解决方案要求自定义的编程，并且不满足上文所述的完全 Windows 应用程序兼容性的要求。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已有 FILESTREAM 功能，它为文件系统中存储为文件的非结构化数据提供了高效的存储、管理和流式处理。 但是，FILESTREAM 解决方案要求自定义的编程，并且不满足上文所述的完全 Windows 应用程序兼容性的要求。  
   
 ##  <a name="FileTables"></a> FileTable  
  FileTable 功能以现有的 FILESTREAM 功能为基础，使企业客户只要满足对基于文件的数据的非事务性访问和 Windows 应用程序兼容性要求，就可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中存储非结构化文件数据和目录层次结构。  
   
 ##  <a name="CompareFileTable"></a> FILESTREAM 和 FileTable 的比较  
   
-|功能|文件服务器和数据库解决方案|FILESTREAM 解决方案|FileTable 解决方案|  
+|Feature|文件服务器和数据库解决方案|FILESTREAM 解决方案|FileTable 解决方案|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
 |**用于管理任务的单个存储区**|否|是|**是**|  
 |**单组服务**：搜索、报告、查询等|否|是|**是**|  
@@ -56,7 +56,7 @@ ms.locfileid: "66010351"
 |**对文件属性的关系访问**|否|否|**是**|  
   
 ##  <a name="CompareRBS"></a> FILESTREAM 和远程 BLOB 存储区 (RBS) 的比较  
- 这两个功能的比较，请参阅来自 RBS 团队的以下博客：[SQL Server 远程 BLOB 存储区和 FILESTREAM 功能比较](https://go.microsoft.com/fwlink/?LinkId=210317)。  
+ 有关这两种功能的比较，请参阅来自 RBS 团队的以下博客： [SQL Server 远程 BLOB 存储区和 FILESTREAM 功能比较](https://go.microsoft.com/fwlink/?LinkId=210317)。  
   
 ##  <a name="more"></a> 详细信息  
  [FILESTREAM (SQL Server)](filestream-sql-server.md)  

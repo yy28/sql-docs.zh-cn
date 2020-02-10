@@ -1,5 +1,5 @@
 ---
-title: FTP 任务编辑器 （常规页） |Microsoft Docs
+title: FTP 任务编辑器（"常规" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058424"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 任务编辑器（“常规”页）
@@ -28,12 +28,12 @@ ms.locfileid: "66058424"
   
 ## <a name="options"></a>选项  
  **FtpConnection**  
- 选择现有 FTP 连接管理器，或单击“\<新建连接...>”  以创建连接管理器。  
+ 选择现有的 FTP 连接管理器，或\<单击 "**新建连接 ...** "> 创建连接管理器。  
   
 > [!IMPORTANT]  
 >  FTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
   
- **相关主题**：[FTP 连接管理器](connection-manager/ftp-connection-manager.md)、[FTP 连接管理器编辑器](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **相关主题**： [Ftp 连接管理器](connection-manager/ftp-connection-manager.md)、 [ftp 连接管理器编辑器](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  指示在 FTP 操作失败时是否终止 FTP 任务。  
@@ -47,9 +47,9 @@ ms.locfileid: "66058424"
  **说明**  
  键入对 FTP 任务的说明。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [FTP 任务编辑器（“文件传输”页）](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
+ [FTP 任务编辑器 &#40;文件传输页面&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [“表达式”页](expressions/expressions-page.md)  
   
   

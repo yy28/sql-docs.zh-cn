@@ -1,5 +1,5 @@
 ---
-title: 选择包管理选项 （SSIS 包升级向导） |Microsoft Docs
+title: 选择包管理选项（SSIS 包升级向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056026"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>选择包管理选项（SSIS 包升级向导）
@@ -32,18 +32,18 @@ ms.locfileid: "66056026"
   
 -   用于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的 OLE DB 提供程序  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client{2}  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 包升级向导仅更新存储在连接管理器中的连接字符串。 向导不会更新通过使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 表达式语言或在脚本任务中使用代码动态构造的连接字符串。  
   
  **验证升级包**  
  验证升级包，并仅保存通过验证的升级包。  
   
- 如果未选择此选项，则向导将不会验证升级包。 因此，向导将保存所有升级包，不论包是否有效。 向导会将升级包保存到在向导的“选择目标位置”  页上指定的目标。  
+ 如果未选择此选项，则向导将不会验证升级包。 因此，向导将保存所有升级包，不论包是否有效。 向导会将升级包保存到在向导的“选择目标位置”**** 页上指定的目标。  
   
  验证会延长升级过程的时间。 对于可能成功升级的大型包，建议不要选择此选项。  
   
- **创建新的包 ID**  
+ **创建新的包 Id**  
  为升级包创建新的包 ID。  
   
  **包升级失败时继续执行升级过程**  
@@ -74,7 +74,7 @@ ms.locfileid: "66056026"
   
  有关详细信息，请参阅 [使用 SSIS 包升级向导升级 Integration Services 包](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [升级 Integration Services 包](install-windows/upgrade-integration-services-packages.md)  
   
   

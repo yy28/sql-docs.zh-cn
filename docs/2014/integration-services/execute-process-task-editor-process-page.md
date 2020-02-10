@@ -1,5 +1,5 @@
 ---
-title: 执行进程任务编辑器 （进程页） |Microsoft Docs
+title: 执行进程任务编辑器（"进程" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059033"
 ---
 # <a name="execute-process-task-editor-process-page"></a>执行进程任务编辑器（“进程”页）
@@ -37,18 +37,18 @@ ms.locfileid: "66059033"
  提供命令提示符参数。  
   
  **WorkingDirectory**  
- 键入包含可执行文件的文件夹的路径，或单击浏览 (…) 按钮定位到该文件夹  。  
+ 键入包含可执行文件的文件夹的路径，或单击浏览 (…) 按钮定位到该文件夹****。  
   
  **StandardInputVariable**  
- 选择为进程提供输入的变量，或单击“\<新建变量...>”创建一个新变量  ：  
+ 选择为进程提供输入的变量，或单击“\<新建变量...>”创建一个新变量****：  
   
- **相关主题：** [添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：**  [添加变量](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
- 选择用于捕获进程输出的变量，或单击“\<新建变量...>”创建一个新变量  。  
+ 选择用于捕获进程输出的变量，或单击“\<新建变量...>”创建一个新变量****。  
   
  **StandardErrorVariable**  
- 选择用于捕获进程错误输出的变量，或单击“\<新建变量...>”创建一个新变量  。  
+ 选择用于捕获进程错误输出的变量，或单击“\<新建变量...>”创建一个新变量****。  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  指示在进程退出代码与 **SuccessValue**中指定的值不同时任务是否失败。  
@@ -65,7 +65,7 @@ ms.locfileid: "66059033"
  **WindowStyle**  
  指定用于运行进程的窗口样式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [“表达式”页](expressions/expressions-page.md)  
   

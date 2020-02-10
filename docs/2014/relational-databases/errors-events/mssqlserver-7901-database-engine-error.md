@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: faf43de11a0c1779f043c6dd854e361c0396dc6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913565"
 ---
-# <a name="mssqlserver7901"></a>MSSQLSERVER_7901
+# <a name="mssqlserver_7901"></a>MSSQLSERVER_7901
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62913565"
 |符号名称|DBCC2_DATABASE_IN_EMERGENCY_MODE|  
 |消息正文|未处理修复语句。 当数据库处于紧急模式下时，不支持此级别的修复。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  数据库处于紧急模式下，而且指定的修复级别不是 REPAIR_ALLOW_DATA_LOSS。 除非指定 REPAIR_ALLOW_DATA_LOSS，否则无法在紧急模式下进行修复。  
   
 ## <a name="user-action"></a>用户操作  

@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c97c07d34de2b17b6966ab269004612c966b961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856446"
 ---
 # <a name="stored-procedure-properties-general-page"></a>存储过程属性（“常规”页）
   显示有关存储过程的信息。 所有信息均为只读。  
   
 ## <a name="options"></a>选项  
- **“数据库”**  
+ **Database**  
  包含此存储过程的数据库的名称。  
   
  **Server**  
@@ -60,7 +60,7 @@ ms.locfileid: "62856446"
  **重新编译**  
  指示创建对象时是否选择了“RECOMPILE”选项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [存储过程（数据库引擎）](stored-procedures-database-engine.md)   
  [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)   
  [ALTER PROCEDURE (Transact-SQL)](/sql/t-sql/statements/alter-procedure-transact-sql)  

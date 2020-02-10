@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cef2c37c2775b1b5bd46e04f214d8ae77ee7b56d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060550"
 ---
 # <a name="configure-ole-db-connection-manager"></a>配置 OLE DB 连接管理器
@@ -37,9 +37,9 @@ ms.locfileid: "66060550"
  使用“连接管理器”  对话框来创建 OLE DB 数据连接。  
   
  **删除**  
- 选择一个数据连接，然后使用“删除”  按钮来删除该连接。  
+ 选择一个数据连接，然后使用“删除”**** 按钮来删除该连接。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

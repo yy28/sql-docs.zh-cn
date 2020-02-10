@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010318"
 ---
 # <a name="create-a-filestream-enabled-database"></a>创建启用了 FILESTREAM 的数据库
@@ -28,7 +28,7 @@ ms.locfileid: "66010318"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，单击 **“新建查询”** 以显示查询编辑器。  
   
-2.  复制[!INCLUDE[tsql](../../includes/tsql-md.md)]代码将创建名为存档的启用了 FILESTREAM 的数据库。  
+2.  复制[!INCLUDE[tsql](../../includes/tsql-md.md)]代码会创建一个名为 Archive 的启用了 FILESTREAM 的数据库。  
   
     > [!NOTE]  
     >  对于此脚本，C:\Data 目录必须存在。  
@@ -59,7 +59,7 @@ GO
   
  对于现有数据库，可以使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 语句来添加 FILESTREAM 文件组。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   

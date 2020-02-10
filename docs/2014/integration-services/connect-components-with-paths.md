@@ -1,5 +1,5 @@
 ---
-title: 使用路径连接组件 |Microsoft Docs
+title: 用路径连接组件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a75a9717345d1d0dc4c2fe30bf7fc441cb91ddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060388"
 ---
 # <a name="connect-components-with-paths"></a>使用路径连接组件
@@ -26,7 +26,7 @@ ms.locfileid: "66060388"
   
  下面的关系图显示一个简单的数据流，它具有一个源组件、两个转换、一个目标组件以及连接它们的路径。  
   
- ![Data flow](media/mw-dts-08.gif "Data flow")  
+ ![数据流](media/mw-dts-08.gif "数据流")  
   
  连接两个组件后，即可在 **“数据流路径编辑器”** 中查看通过路径移动的数据的元数据以及路径的属性。 有关详细信息，请参阅 [Integration Services Paths](data-flow/integration-services-paths.md)。  
   
@@ -48,10 +48,10 @@ ms.locfileid: "66060388"
   
 -   [将数据查看器添加到数据流](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据流任务](control-flow/data-flow-task.md)   
  [数据流](data-flow/data-flow.md)   
- [使用转换对数据进行转换](data-flow/transformations/transform-data-with-transformations.md)   
+ [转换带转换的数据](data-flow/transformations/transform-data-with-transformations.md)   
  [数据中的错误处理](data-flow/error-handling-in-data.md)  
   
   

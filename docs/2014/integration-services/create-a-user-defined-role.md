@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0277b936ddd4884f8a6b9b47b9184766dac9954b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060239"
 ---
 # <a name="create-a-user-defined-role"></a>创建用户定义的角色
@@ -29,11 +29,11 @@ ms.locfileid: "66060239"
   
 4.  在 **“连接到服务器”** 对话框中，提供服务器名，并选择身份验证模式。 可以使用句点 (.)、(local) 或 `localhost` 来指示本地服务器。  
   
-5.  单击 **“连接”** 。  
+5.  单击“连接”  。  
   
 6.  展开“数据库”、“系统数据库”、“msdb”、“安全性”和“角色”。  
   
-7.  在“角色”节点中，右键单击“数据库角色”，再单击“新建数据库角色”  。  
+7.  在“角色”节点中，右键单击“数据库角色”，再单击“新建数据库角色”****。  
   
 8.  在“常规”页上，提供一个名称，还可以指定一个所有者、拥有的架构以及添加角色成员。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "66060239"
   
 10. 还可以单击 **“扩展属性”** ，配置任何扩展属性。  
   
-11. 单击“确定”  。  
+11. 单击“确定”。   
   
   

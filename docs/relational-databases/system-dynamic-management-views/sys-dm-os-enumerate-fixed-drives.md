@@ -17,10 +17,10 @@ ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fa5834c14bfb1fafe3123c28a60359d64d059dfc
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71342512"
 ---
 # <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives （Transact-sql）
@@ -29,20 +29,20 @@ ms.locfileid: "71342512"
 
 SQL Server 2019 中引入。
 
-枚举装载到驱动器号的卷，如 `C:\`。
+枚举装载到驱动器号的卷`C:\`，例如。
 
-|列名|数据类型|描述|
+|列名称|数据类型|说明|
 |-----------------|---------------|-----------------|  
-|`fixed_drive_path`|`nvarchar(512)`|卷的路径，如 `C:\`。|  
-|`drive_type`|`int`|驱动器类型的代码。 请参阅[`GetDriveTypeW` 函数](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)。|
-|`drive_type_desc`|`nvarchar(512)`|驱动器类型的说明。 请参阅[`GetDriveTypeW` 函数](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)。|
+|`fixed_drive_path`|`nvarchar(512)`|卷的路径，如`C:\`。|  
+|`drive_type`|`int`|驱动器类型的代码。 请参阅[ `GetDriveTypeW`函数](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)。|
+|`drive_type_desc`|`nvarchar(512)`|驱动器类型的说明。 请参阅[ `GetDriveTypeW`函数](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)。|
 |`free_space_in_bytes`|`bigint`|磁盘可用空间（以字节为单位）。|
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
-用户必须对服务器具有 `VIEW SERVER STATE` 权限。
+用户必须具有`VIEW SERVER STATE`对服务器的权限。
 
 ## <a name="see-also"></a>另请参阅  
 
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与 i/o 相关的动态管理视图和函数&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [与 i/o 相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  

@@ -14,17 +14,17 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d6ad90fe277e76f98298f4e66fe8c652e64fd38d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483648"
 ---
 # <a name="business-rules-master-data-services"></a>业务规则 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，业务规则是您用于确保主数据的质量和准确性的规则。 可以使用业务规则自动更新数据、发送邮件或启用业务流程或工作流。  
   
 ## <a name="create-and-publish-business-rules"></a>创建和发布业务规则  
- 业务规则是您在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中创建的 `If/Then` 语句。 如果某一属性值满足指定的条件，则执行操作。 可能的操作包括设置默认值或更改值。 这些操作可与发送电子邮件通知这一操作结合使用。  
+ 业务规则是您在`If/Then`中创建的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 语句。 如果某一属性值满足指定的条件，则执行操作。 可能的操作包括设置默认值或更改值。 这些操作可与发送电子邮件通知这一操作结合使用。  
   
  业务规则可以基于特定属性值（例如，如果 Color=Blue，则执行操作），或在属性值发生更改时（例如，如果 Color 属性的值发生更改，则执行操作）应用。 有关跟踪非特定更改的详细信息，请参阅[更改跟踪 &#40;Master Data Services&#41;](change-tracking-master-data-services.md)。  
   
@@ -62,19 +62,20 @@ ms.locfileid: "65483648"
 -   一个业务规则不能包含多个 **“启动工作流”** 操作。  
   
 ## <a name="system-settings"></a>系统设置  
- [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有两个会影响业务规则的设置。 可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在“系统设置”表中调整这些设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../../2014/master-data-services/system-settings-master-data-services.md)。  
+ 
+  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有两个会影响业务规则的设置。 可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在“系统设置”表中调整这些设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../../2014/master-data-services/system-settings-master-data-services.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建和发布新的业务规则。|[创建和发布业务规则 (Master Data Services)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|创建和发布新的业务规则。|[创建和发布业务规则 &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |向业务规则添加多个条件。|[向业务规则添加多个条件 &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|创建业务规则来要求属性具有值。|[要求属性值 &#40;Master Data Services&#41;](../../2014/master-data-services/require-attribute-values-master-data-services.md)|  
-|创建业务规则以便基于对属性值的更改执行操作。|[基于属性值更改启动操作 (Master Data Services)](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|创建业务规则来要求属性具有值。|[需要 &#40;Master Data Services 的属性值&#41;](../../2014/master-data-services/require-attribute-values-master-data-services.md)|  
+|创建业务规则以便基于对属性值的更改执行操作。|[基于属性值更改启动操作 &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
 |更改现有业务规则的名称。|[更改业务规则名称 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|将 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 配置为在应用业务规则时发送通知。|[配置业务规则以发送通知 (Master Data Services)](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|将业务规则应用于特定成员。|[针对业务规则验证特定成员 (Master Data Services)](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|将 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 配置为在应用业务规则时发送通知。|[配置业务规则以发送通知 &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|将业务规则应用于特定成员。|[根据业务规则验证特定成员 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |排除业务规则以便不使用该规则。|[排除业务规则 &#40;Master Data Services&#41;](../../2014/master-data-services/exclude-a-business-rule-master-data-services.md)|  
 |删除现有业务规则。|[删除业务规则 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)|  
   
@@ -82,9 +83,9 @@ ms.locfileid: "65483648"
   
 -   [Master Data Services 概述](master-data-services-overview-mds.md)  
   
--   [版本 (Master Data Services)](../../2014/master-data-services/versions-master-data-services.md)  
+-   [版本 &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
--   [验证 (Master Data Services)](../../2014/master-data-services/validation-master-data-services.md)  
+-   [验证 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
 -   [更改跟踪 &#40;Master Data Services&#41;](change-tracking-master-data-services.md)  
   

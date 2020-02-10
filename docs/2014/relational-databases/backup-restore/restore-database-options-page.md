@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875635"
 ---
 # <a name="restore-database-options-page"></a>还原数据库（“选项”页）
@@ -87,9 +87,9 @@ ms.locfileid: "62875635"
  选中此复选框可以指定应执行结尾日志备份。  
   
 > [!NOTE]  
->  如果你在“[备份时间线](backup-timeline.md)”对话框中选择的时间点要求结尾日志备份，则将选择此框并且你将不能对其进行编辑。  
+>  如果你在[“备份时间线”](backup-timeline.md) 对话框中选择的时间点要求结尾日志备份，则将选择此框并且你将不能对其进行编辑。  
   
- **备份文件**  
+ **“备份文件”**  
  为日志的结尾指定备份文件。 您可以浏览备份文件，也可以在文本框中直接输入其名称。  
   
 ### <a name="server-connections"></a>服务器连接  
@@ -98,7 +98,7 @@ ms.locfileid: "62875635"
  **关闭现有连接**  
  如果存在与数据库的活动连接，则还原操作可能会失败。 选中 **“关闭现有连接”** 以确保关闭 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和数据库之间的所有活动连接。 此复选框可在执行还原操作之前将数据库设置为单用户模式，并在该操作完成后将数据库设置为多用户模式。  
   
-### <a name="prompt"></a>提示  
+### <a name="prompt"></a>Prompt  
  **还原每个备份之前进行提示**  
  指定在还原了每个备份之后，将显示“继续还原”  对话框，询问你是否要继续还原顺序。 该对话框将显示下一个介质集（如果已知）的名称以及下一个备份集的名称和说明。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62875635"
   
 -   如果下一个备份是日志备份，请使用 **“还原事务日志”** 任务。 有关通过还原事务日志来继续还原顺序的信息，请参阅 [还原事务日志备份 (SQL Server)](restore-a-transaction-log-backup-sql-server.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [从设备还原备份 (SQL Server)](restore-a-backup-from-a-device-sql-server.md)   
  [还原事务日志备份 (SQL Server)](restore-a-transaction-log-backup-sql-server.md)   

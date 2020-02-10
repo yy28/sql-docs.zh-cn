@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011268"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改进全文查询的性能
@@ -26,7 +26,8 @@ ms.locfileid: "66011268"
   
 -   使用 [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)重新组织全文目录。 请务必在性能测试之前执行此操作，因为它会导致该目录中全文索引的主合并。  
   
--   仅选择较小的列作为全文键列。 尽管支持 900 个字节的列，但我们建议在全文索引中使用更小的键列。 `int` 和 `bigint` 可提供最佳性能。  
+-   仅选择较小的列作为全文键列。 尽管支持 900 个字节的列，但我们建议在全文索引中使用更小的键列。 
+  `int` 和 `bigint` 可提供最佳性能。  
   
 -   使用整数型全文键可以避免与 **docid** 映射表联接。 因此，整数型全文键可以使查询性能获得数量级的提升，并改进爬网性能。 如果全文键也是聚集索引键，可能会进一步提高性能。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "66011268"
   
 -   如果只需要全文键或排名的信息，请使用 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) ，而不要使用分别与之对应的 CONTAINS 或 FREETEXT。  
   
--   若要限制结果数并提高性能，请使用 FREETEXTTABLE 和 CONTAINSTABLE 函数的 *top_n_by_rank* 参数。 使用 *top_n_by_rank* 可以只返回最密切相关的匹配项。 仅当商业应用场景不需要返回所有可能的匹配项（即不需要“返回全部项”  ）时，才应使用此参数。  
+-   若要限制结果数并提高性能，请使用 FREETEXTTABLE 和 CONTAINSTABLE 函数的 *top_n_by_rank* 参数。 使用*top_n_by_rank* 可以只返回最密切相关的匹配项。 仅当商业应用场景不需要返回所有可能的匹配项（即不需要“返回全部项”  ）时，才应使用此参数。  
   
     > [!NOTE]  
     >  法律应用场景通常需要返回全部项，不过对于诸如电子商务等商业应用场景，性能可能更为重要。  
@@ -48,9 +49,9 @@ ms.locfileid: "66011268"
 -   对于包含选择性关系谓词的应用程序，如果将使用选择性关系谓词和非选择性全文谓词的查询编写成使用查询优化器，则这样的查询可能会有最佳性能。 这将允许查询优化器决定它是否可以利用谓词或范围下推来生成有效的查询计划。 与将关系数据作为全文数据建立索引相比，此方法更简单，通常也更有效。  
   
 ## <a name="related-resources"></a>相关资源  
- [SQL Server 2008 Full-Text Search:Internals and Enhancements](https://go.microsoft.com/fwlink/?LinkId=129544)（SQL Server 2008 全文搜索：内部机制和增强功能）  
+ [SQL Server 2008 Full-Text Search: Internals and Enhancements（SQL Server 2008 全文搜索：内在变化与增强功能）](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.dm_fts_memory_buffers (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
  [sys.dm_fts_memory_pools (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   

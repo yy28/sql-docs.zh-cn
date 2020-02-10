@@ -1,5 +1,5 @@
 ---
-title: 使用 OLE DB (SQLXML 4.0) 执行 Updategram |Microsoft Docs
+title: 使用 OLE DB 执行 Updategram （SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,25 +16,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014785"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>使用 OLE DB 执行 Updategram (SQLXML 4.0)
-  本主题提供 usingOLE DB 执行 updategram 的工作示例。  
+  本主题提供了 usingOLE DB 的工作示例，以执行 updategram。  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>使用 ICommandStream 设置 XML 命令  
- OLE DB （2.6 或更高版本） ICommandStream 接口的流对象，而不是以字符串形式传递命令。  
+ OLE DB （版本2.6 或更高版本） ICommandStream 接口将命令作为流对象传递，而不是作为字符串传递。  
   
- 该接口允许命令采用 XML 分析器理解的任何编码形式。 当调用 icommand:: Execute 时，直接从流读取命令文本并不不需要任何转换。 因此，执行 XML 命令使用 ICommandStream 则接口是更高效。  
+ 该接口允许命令采用 XML 分析器理解的任何编码形式。 调用 ICommand：： Execute 时，将直接从流中读取命令文本，而不需要进行任何转换。 因此，使用 ICommandStream 接口执行 XML 命令更有效。  
   
 ### <a name="setting-xml-as-a-command-using-icommandstream-and-retrieving-the-results-as-an-xml-document"></a>使用 IcommandStream 将 XML 设置为命令并以 XML 文档形式检索结果  
- ICommandStream 接口可用于将 XML 文档设置为一个命令，并可以以 XML 文档形式检索结果。  
+ ICommandStream 接口可用于将 XML 文档设置为命令，可将结果作为 XML 文档来检索。  
   
 #### <a name="executing-templates-with-xpath-queries"></a>使用 XPath 查询执行模板  
- 下面的 XML 模板包含的 XPath 查询指定为使用 ICommandStream 命令：  
+ 以下 XML 模板由 XPath 查询指定为使用 ICommandStream 的命令：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -58,19 +58,19 @@ ms.locfileid: "66014785"
 </Schema>  
 ```  
   
- 查询返回所有雇员元素。 使用默认映射 **\<Person.Contact >** 元素映射到 AdventureWorks 数据库中的 Person.Contact 表。  
+ 查询返回所有雇员元素。 在默认映射中， ** \<person>** 元素将映射到 AdventureWorks 数据库中的 contact 表。  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>将 XML 设置为命令并以 XML 文档形式检索结果  
   
 1.  初始化并建立与数据库的连接。  
   
-2.  获取 ICommand ICommandStream 接口。  
+2.  获取 ICommand 上的 ICommandStream 接口。  
   
 3.  设置必要的命令属性。 在本示例中，将特定于访问接口的 SSPROP_STREAM_BASEPATH 属性设置为存储映射架构和模板文件的目录。  
   
-4.  使用 ICommandStream::SetCommandStream 指定命令流。 在本示例中，执行的 XML 模板是从文件中读取的。 在希望执行大型 XML 模板时，此功能非常有用。  
+4.  使用 ICommandStream：： SetCommandStream 来指定命令流。 在本示例中，执行的 XML 模板是从文件中读取的。 在希望执行大型 XML 模板时，此功能非常有用。  
   
-5.  执行 XML 命令使用 icommand:: Execute，请求 IID_ISequentialStream 接口 id。  
+5.  使用 ICommand：： Execute 执行 XML 命令，请求 IID_ISequentialStream 接口 ID。  
   
 6.  处理结果。 在本示例中，从流读取的 XML 将在屏幕上显示。  
   
@@ -513,7 +513,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- 该模板包含 SQL 查询。 查询要求其参数的值 (@Title)。 如果未传递参数值，则使用默认值（“Mr.”）。  
+ 该模板包含 SQL 查询。 查询需要其参数（@Title）的值。 如果未传递参数值，则使用默认值（“Mr.”）。  
   
  向模板传递参数值时，参数名称和值都必须指定。  
   

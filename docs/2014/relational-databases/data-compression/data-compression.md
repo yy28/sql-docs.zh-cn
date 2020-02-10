@@ -23,13 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873556"
 ---
 # <a name="data-compression"></a>Data Compression
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持针对行存储表和索引的行和页压缩，并且支持针对列存储表和索引的列存储和列存储存档压缩。  
   
  对于行存储表和索引，使用数据压缩功能可帮助减小数据库的大小。 除了节省空间之外，数据压缩还可以帮助提高 I/O 密集型工作负荷的性能，因为数据存储在更少的页中，查询需要从磁盘读取的页更少。 但是，在与应用程序交换数据时，在数据库服务器上需要额外的 CPU 资源来压缩和解压缩数据。 您可以在以下数据库对象上配置行和页压缩：  
@@ -57,13 +58,13 @@ ms.locfileid: "62873556"
   
 -   在 Service Pack 或后续版本中，有关数据压缩的详细信息如有更改，恕不另行通知。  
   
--   不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本都提供压缩功能。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+-   不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本都提供压缩功能。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 -   压缩功能不可用于系统表。  
   
 -   通过压缩可在一页上存储更多的行，但不会更改表或索引的最大行大小。  
   
--   当最大行大小加上压缩开销超过最大行大小 8060 个字节时，不能对表启用压缩功能。 例如，表具有列 c1`char(8000)`和 c2`char(53)`无法压缩，因为存在额外的压缩开销。 当使用 vardecimal 存储格式时，会在启用此格式时执行行大小检查。 对于行压缩和页压缩，在最初压缩对象时会执行行大小检查，以后在每插入或修改一行时也都会执行这一检查。 压缩功能要求遵循下面两条规则：  
+-   当最大行大小加上压缩开销超过最大行大小 8060 个字节时，不能对表启用压缩功能。 例如，不能压缩具有 c1`char(8000)`和 c2`char(53)`列的表，因为存在额外的压缩开销。 当使用 vardecimal 存储格式时，会在启用此格式时执行行大小检查。 对于行压缩和页压缩，在最初压缩对象时会执行行大小检查，以后在每插入或修改一行时也都会执行这一检查。 压缩功能要求遵循下面两条规则：  
   
     -   固定长度类型的更新必须始终成功。  
   
@@ -99,18 +100,20 @@ ms.locfileid: "62873556"
   
 -   由于大小的关系，大值数据类型有时不与普通行数据存储在一起，而是存储在特殊用途的页上。 对于单独存储的数据，数据压缩不可用。  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中实现 vardecimal 存储格式的表在升级后会保留该设置。 可以向具有 vardecimal 存储格式的表应用行压缩。 但是，因为行压缩是 vardecimal 存储格式的超集，所以不必保留 vardecimal 存储格式。 将 vardecimal 存储格式与行压缩一起使用时，十进制值不会进一步压缩。 可以向具有 vardecimal 存储格式的表应用页压缩；但是，vardecimal 存储格式列可能不会实现进一步的压缩。  
+-   
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中实现 vardecimal 存储格式的表在升级后会保留该设置。 可以向具有 vardecimal 存储格式的表应用行压缩。 但是，因为行压缩是 vardecimal 存储格式的超集，所以不必保留 vardecimal 存储格式。 将 vardecimal 存储格式与行压缩一起使用时，十进制值不会进一步压缩。 可以向具有 vardecimal 存储格式的表应用页压缩；但是，vardecimal 存储格式列可能不会实现进一步的压缩。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 vardecimal 存储格式；但是，由于行级压缩可实现同样的目标，因此不推荐使用 vardecimal 存储格式。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 vardecimal 存储格式；但是，由于行级压缩可实现同样的目标，因此不推荐使用 vardecimal 存储格式。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>使用列存储和列存储存档压缩  
   
 ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
+|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
   
-### <a name="basics"></a>基础知识  
+### <a name="basics"></a>基础  
  列存储表和索引始终使用列存储压缩进行存储。 您可以通过配置称作存档压缩的附加压缩，进一步减少列存储数据的大小。  为了执行存档压缩， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对数据运行 Microsoft XPRESS 压缩算法。 通过使用以下数据压缩类型添加或删除存档压缩：  
   
 -   使用 `COLUMNSTORE_ARCHIVE` 数据压缩可使用存档压缩来压缩列存储数据。  
@@ -167,11 +170,12 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>元数据  
  下面的系统视图包含有关聚集索引的数据压缩的信息：  
   
--   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -`type`并`type_desc`列包括 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE。  
+-   [sys. 索引 &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - `type`和`type_desc`列包含聚集列存储和非聚集列存储。  
   
--   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) -`data_compression`并`data_compression_desc`列包括 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
+-   [sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - `data_compression`和`data_compression_desc`列包含列存储和 COLUMNSTORE_ARCHIVE。  
   
- [sp_estimate_data_compression_savings (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 过程不会应用在列存储索引中。  
+ 
+  [sp_estimate_data_compression_savings (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 过程不会应用在列存储索引中。  
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>压缩对已分区表和已分区索引的影响  
  如果对已分区表和已分区索引使用数据压缩，则应注意以下事项：  
@@ -251,14 +255,14 @@ REBUILD PARTITION = ALL WITH (
   
 -   启用压缩可以导致查询计划更改，因为数据是用不同的页数和每页不同的行数存储的。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [行压缩的实现](row-compression-implementation.md)   
  [页压缩的实现](page-compression-implementation.md)   
- [Unicode 压缩的实现](unicode-compression-implementation.md)   
- [CREATE PARTITION SCHEME (Transact-SQL)](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
- [CREATE PARTITION FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-partition-function-transact-sql)   
+ [Unicode 压缩实现](unicode-compression-implementation.md)   
+ [&#40;Transact-sql&#41;创建分区方案](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
+ [&#40;Transact-sql&#41;创建分区函数](/sql/t-sql/statements/create-partition-function-transact-sql)   
  [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)   
- [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)  
   

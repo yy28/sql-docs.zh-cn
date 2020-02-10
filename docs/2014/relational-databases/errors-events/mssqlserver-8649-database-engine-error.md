@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e265344d3e05081ebc01f5e9f7fdd240d27c7d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912670"
 ---
-# <a name="mssqlserver8649"></a>MSSQLSERVER_8649
+# <a name="mssqlserver_8649"></a>MSSQLSERVER_8649
     
 ## <a name="details"></a>详细信息  
   
@@ -32,13 +32,13 @@ ms.locfileid: "62912670"
 |符号名称|COST_TOO_HIGH|  
 |消息正文|查询已取消，因为此查询的估计开销 (%d) 出了配置的阈值 %d。 请与系统管理员联系。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  查询已取消，因为此查询的估计开销超出了为 QUERY_GOVERNOR_COST_LIMIT 设置的配置阈值。  
   
 ## <a name="user-action"></a>用户操作  
  将 QUERY_GOVERNOR_COST_LIMIT 选项设置为更大的值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)](/sql/t-sql/statements/set-query-governor-cost-limit-transact-sql)  
   
   

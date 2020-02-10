@@ -1,5 +1,5 @@
 ---
-title: SqlXmlParameter 对象 （SQLXML 托管类） |Microsoft Docs
+title: SqlXmlParameter 对象（SQLXML 托管类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13267e732c6eb5eae388ff8e79ed1d6e0be5febc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010762"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter 对象（SQLXML 托管类）
   SqlXmlParameter 对象支持以下属性：  
   
- “属性”  
- 参数名。 命令可以是传递的参数。 调用 CreateParameter 方法 SqlXmlCommand 对象的创建参数对象。  
+ 名称  
+ 参数的名称。 命令可以是传递的参数。 调用 SqlXmlCommand 对象的 CreateParameter 方法会创建参数对象。  
   
- ReplTest1  
- 参数的值。 有关工作示例，请参阅[执行 SQL 查询&#40;SQLXML 托管类&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)。  
+ 值  
+ 参数值。 有关工作示例，请参阅[执行 SQL 查询 &#40;SQLXML 托管类&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)。  
   
-## <a name="see-also"></a>请参阅  
- [SqlXmlCommand 对象&#40;SQLXML 托管类&#41;](sqlxml-managed-classes-sqlxmlcommand-object.md)   
- [SqlXmlAdapter 对象&#40;SQLXML 托管类&#41;](sqlxml-managed-classes-sqlxmladapter-object.md)   
+## <a name="see-also"></a>另请参阅  
+ [SQLXML 托管类 &#40;的 SqlXmlCommand 对象&#41;](sqlxml-managed-classes-sqlxmlcommand-object.md)   
+ [SQLXML 托管类 &#40;的 SqlXmlAdapter 对象&#41;](sqlxml-managed-classes-sqlxmladapter-object.md)   
  [在 .NET 环境中访问 SQLXML 功能](accessing-sqlxml-functionality-in-the-net-environment.md)  
   
   

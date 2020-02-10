@@ -1,5 +1,5 @@
 ---
-title: HTTP 连接管理器编辑器 （代理页） |Microsoft Docs
+title: HTTP 连接管理器编辑器（"代理" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058263"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP 连接管理器编辑器（“代理”页）
@@ -42,7 +42,7 @@ ms.locfileid: "66058263"
  **用户名**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
- **密码**  
+ **权限**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
  **域**  
@@ -51,14 +51,14 @@ ms.locfileid: "66058263"
  **代理跳过列表**  
  要跳过代理服务器的地址的列表。  
   
- **“添加”**  
+ **添加**  
  键入要跳过代理服务器的地址。  
   
  **删除**  
- 选择某个地址，再单击“删除”  即可将其删除。  
+ 选择某个地址，再单击“删除”**** 即可将其删除。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [HTTP 连接管理器编辑器（“服务器”页）](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ [HTTP 连接管理器编辑器 &#40;服务器页面&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
   

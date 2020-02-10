@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889829"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 包记录的事件
@@ -35,14 +35,14 @@ ms.locfileid: "62889829"
 > [!NOTE]  
 >  即使未对包启用日志记录，包也会记录下表中的消息。  
   
-|事件 ID|符号名称|Text|说明|  
+|事件 ID|符号名称|文本|说明|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|包“”已开始运行。|包已开始运行。|  
 |12289|DTS_MSG_PACKAGESUCCESS|包“”已成功完成。|包已运行成功且不再运行。|  
 |12290|DTS_MSG_PACKAGECANCEL|包“%1!s!” 已取消。|包已取消，因此不再运行。|  
 |12291|DTS_MSG_PACKAGEFAILURE|包“”已失败。|包无法成功运行，已停止运行。|  
   
- 默认情况下，在全新安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置为不将有关包运行的某些事件记录到应用程序事件日志中。 使用当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的数据收集器功能时，此设置可防止生成过多的事件日志项。 未记录的事件包括 EventID 12288“包已启动”和 EventID 12289“包已成功完成”。 若要将这些事件记录到应用程序事件日志中，请打开注册表以进行编辑。 然后在注册表中，找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS 节点，并将 LogPackageExecutionToEventLog 设置的 DWORD 值从 1 更改为 0。 不过，在升级安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置为记录这两个事件。 若要禁用记录功能，请将 LogPackageExecutionToEventLog 设置的值从 1 更改为 0。  
+ 默认情况下，在全新安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置为不将有关包运行的某些事件记录到应用程序事件日志中。 使用当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的数据收集器功能时，此设置可防止生成过多的事件日志项。 未记录的事件是，EventID 12288“包已启动”和 EventID 12289“包已成功完成”。 若要将这些事件记录到应用程序事件日志中，请打开注册表以进行编辑。 然后在注册表中，找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS 节点，并将 LogPackageExecutionToEventLog 设置的 DWORD 值从 1 更改为 0。 不过，在升级安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置为记录这两个事件。 若要禁用记录功能，请将 LogPackageExecutionToEventLog 设置的值从 1 更改为 0。  
   
 ## <a name="messages-associated-with-package-logging"></a>与包日志记录关联的消息  
  如果已对包启用日志记录，应用程序事件日志将是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中可选的日志记录功能所支持的目标之一。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](integration-services-ssis-logging.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "62889829"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>有关包执行阶段的消息  
   
-|事件 ID|符号名称|Text|说明|  
+|事件 ID|符号名称|文本|说明|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|事件名称: %1%r 消息: %9%r 操作员: %2%r 源名称: %3%r 源 ID: %4%r 执行 ID: %5%r 开始时间: %6%r 结束时间: %7%r 数据代码: %8|将包日志记录配置为记入应用程序事件日志时，各种消息都会使用这种通用格式。|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|事件名称: %1%r 消息: %9%r 操作员: %2%r 源名称: %3%r 源 ID: %4%r 执行 ID: %5%r 开始时间: %6%r 结束时间: %7%r 数据代码: %8|包已启动。|  
@@ -68,7 +68,7 @@ ms.locfileid: "62889829"
 ### <a name="messages-about-events-that-occur"></a>有关发生的事件的消息  
  下表仅列出属于事件结果的部分消息。 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用的错误、警告和信息性消息的更全面的列表，请参阅 [Integration Services 错误和消息引用](../integration-services-error-and-message-reference.md)。  
   
-|事件 ID|符号名称|Text|说明|  
+|事件 ID|符号名称|文本|说明|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|事件名称: %1%r 消息: %9%r 操作员: %2%r 源名称: %3%r 源 ID: %4%r 执行 ID: %5%r 开始时间: %6%r 结束时间: %7%r 数据代码: %8|任务失败。|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|事件名称: %1%r 消息: %9%r 操作员: %2%r 源名称: %3%r 源 ID: %4%r 执行 ID: %5%r 开始时间: %6%r 结束时间: %7%r 数据代码: %8|此消息用于报告产生了一个错误。|  
@@ -76,9 +76,9 @@ ms.locfileid: "62889829"
 |12258|DTS_MSG_EVENTLOGENTRY_INFORMATION|事件名称: %1%r 消息: %9%r 操作员: %2%r 源名称: %3%r 源 ID: %4%r 执行 ID: %5%r 开始时间: %6%r 结束时间: %7%r 数据代码: %8|此消息用于报告与错误或警告无关的信息。|  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 有关如何实时查看日志项的信息，请参阅[在“日志事件”窗口中查看日志项](../view-log-entries-in-the-log-events-window.md)。  
+ 有关如何实时查看日志项的信息，请参阅 [在“日志事件”窗口中查看日志项](../view-log-entries-in-the-log-events-window.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [由 Integration Services 服务记录的事件](../service/events-logged-by-the-integration-services-service.md)  
   
   

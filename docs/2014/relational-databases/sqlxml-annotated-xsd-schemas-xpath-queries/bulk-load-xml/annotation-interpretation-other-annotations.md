@@ -1,5 +1,5 @@
 ---
-title: 其他批注 (SQLXML 4.0) |Microsoft Docs
+title: 其他批注（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fff698fc4eb92dd1bade50274a289f861e07ede0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013613"
 ---
 # <a name="other-annotations-sqlxml-40"></a>其他批注 (SQLXML 4.0)
@@ -49,7 +49,7 @@ ms.locfileid: "66013613"
  `sql:key-fields`  
  XML 大容量加载始终忽略此批注。  
   
-## <a name="see-also"></a>请参阅  
- [批注解释&#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQLXML 4.0 &#40;的批注解释&#41;](annotation-interpretation-sqlxml-4-0.md)  
   
   

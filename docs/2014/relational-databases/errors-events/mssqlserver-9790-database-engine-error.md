@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5747a13e60182596610f25dd4ed1243670ff5018
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912171"
 ---
-# <a name="mssqlserver9790"></a>MSSQLSERVER_9790
+# <a name="mssqlserver_9790"></a>MSSQLSERVER_9790
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62912171"
 |符号名称|SB3_XMIT_ERROR_ENTRANCE_BROKER_SINGLE_USER|  
 |消息正文|无法确定传入消息的路由。 包含路由信息的系统数据库 MSDB 处于 SINGLE USER 模式。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  尝试对从网络接收的消息进行分类时出错，因为 MSDB 数据库处于 SINGLE USER 模式。  
   
 ## <a name="user-action"></a>用户操作  

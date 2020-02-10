@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d7c7edea5701fe784f34375c2ff218fc93e610e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058042"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>安装和卸载 OData 源组件
@@ -27,7 +27,7 @@ ms.locfileid: "66058042"
   
 -   SQL Server Integration Services（用于在 Visual Studio 外部运行包）  
   
- 若要安装 OData 源组件，请下载[SQL Server 2014 功能包](https://go.microsoft.com/fwlink/p/?LinkId=391999)并运行以下 MSI 文件之一。  
+ 若要安装 OData 源组件，请下载[SQL Server 2014 功能包](https://go.microsoft.com/fwlink/p/?LinkId=391999)，并运行以下 MSI 文件之一。  
   
 -   用于 64 位平台的 ODataSourceForSQLServer2014-amd64.msi  
   
@@ -37,6 +37,6 @@ ms.locfileid: "66058042"
 >  64 位安装程序将同时安装 32 位和 64 位版本的 OData 源组件。 如果使用 32 位操作系统，则只需运行 32 位安装程序。  
   
 ## <a name="uninstallation"></a>卸载  
- 可以从卸载 OData 源组件**程序和功能**菜单。 查找**Microsoft SQL Server SSIS OData 源组件 (x64)** 条目，单击**卸载**。  
+ 可以通过 "**程序和功能**" 菜单卸载 OData 源组件。 找到 " **MICROSOFT SQL SERVER SSIS OData 源组件（x64）** " 条目，然后单击 "**卸载**"。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: '通过使用 sql: hide 隐藏元素和属性 |Microsoft Docs'
+title: 使用 sql： hide | 隐藏元素和属性Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -25,24 +25,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ce8daf2badb855cbf855031d93e38fb689eab54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013828"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>使用 sql:hide 隐藏元素和属性
   针对 XSD 架构执行 XPath 查询时，生成的 XML 文档具有在架构中指定的元素和属性。 可以使用 `sql:hide` 批注来指定隐藏架构中的某些元素和属性。 当查询的选择条件需要架构中的特定元素或属性，但是不希望在生成的 XML 文档中返回这些元素或属性时，该批注很有用。  
   
- `sql:hide` 批注采用布尔值（0 = FALSE，1 = TRUE）。 可接受的值为 0、1、true 和 false。  
+ 
+  `sql:hide` 批注采用布尔值（0 = FALSE，1 = TRUE）。 可接受的值为 0、1、true 和 false。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 对属性指定 sql:hide  
- 此示例中的 XSD 架构组成 **\<Person.Contact >** 具有元素**ContactID**， **FirstName**，和**LastName**属性。  
+ 此示例中的 XSD 架构由一个** \<人员组成。请联系>** 元素与**ContactID**、 **FirstName**和**LastName**属性。  
   
- **\<Person.Contact >** 元素属于复杂类型，并因此，将映射到相同的名称 （默认映射） 的表。 所有属性 **\<Person.Contact >** 元素均属于简单类型，并将映射到具有在 AdventureWorks 数据库中 Person.Contacttable 相同名称的列。 在架构中，`sql:hide`指定批注**ContactID**属性。 针对此架构指定 XPath 查询时**ContactID**不返回 XML 文档中。  
+ Person>元素属于复杂类型，因此映射到具有相同名称的表（默认映射）。 ** \<** Person>元素的所有属性都属于简单类型，并映射到 AdventureWorks 数据库的 Contacttable 中具有相同名称的列。 ** \<** 在架构中， `sql:hide`批注是在**ContactID**属性中指定的。 针对此架构指定 XPath 查询时，XML 文档中将不会返回**ContactID** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -57,7 +58,7 @@ ms.locfileid: "66013828"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 Hide.xml。  
   
@@ -89,7 +90,7 @@ ms.locfileid: "66013828"
 </ROOT>  
 ```  
   
- 如果对元素指定 `sql:hide`，则该元素及其属性或子元素都不会出现在生成的 XML 文档中。 下面是在其中的另一个 XSD 架构`sql:hide`上指定 **\<OD >** 元素：  
+ 如果对元素指定 `sql:hide`，则该元素及其属性或子元素都不会出现在生成的 XML 文档中。 下面是在** \<OD>** 元素上`sql:hide`指定的另一个 XSD 架构：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -144,7 +145,7 @@ ms.locfileid: "66013828"
 </xsd:schema>  
 ```  
   
- 在 XPath 查询时 (例如`/Customers[@CID="1"]`) 指定针对此架构生成的 XML 文档不包括 **\<OD >** 元素及其子项，如以下部分结果中所示：  
+ 针对此架构指定 XPath 查询（ `/Customers[@CID="1"]`例如）时，生成的 XML 文档不包含** \<OD>** 元素及其子级，如下面的部分结果所示：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

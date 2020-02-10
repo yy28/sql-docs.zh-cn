@@ -1,5 +1,5 @@
 ---
-title: 数据集属性对话框中，字段 （报表生成器） |Microsoft Docs
+title: "\"数据集属性\" 对话框-\"字段（报表生成器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 375d8eda6f0863dbe3852f1a88ea2e58ecc85b80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109425"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>“数据集属性”对话框 -&gt;“字段”（报表生成器）
@@ -25,7 +25,7 @@ ms.locfileid: "66109425"
  仅在嵌入数据集上支持计算字段。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ## <a name="options"></a>选项  
- **“添加”**  
+ **添加**  
  向数据集添加新的查询或计算字段。  
   
  **删除**  
@@ -44,14 +44,14 @@ ms.locfileid: "66109425"
  **表达式 (fx)**  
  为新的计算字段添加或更改表达式。 仅当单击 **“添加”** 并选择 **“计算字段”** 时，才会显示此按钮。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据集字段集合（报表生成器和 SSRS）](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [数据集属性对话框中，选项&#40;报表生成器&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
- [数据集属性对话框中，筛选器&#40;报表生成器&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
- [数据集属性对话框中，参数&#40;报表生成器&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
- [数据集属性对话框中，查询&#40;报表生成器&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+ [创建共享数据集或嵌入数据集 &#40;报表生成器和 SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [报表生成器对话框、窗格和向导的帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ ["数据集属性" 对话框-"选项" &#40;报表生成器&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
+ ["数据集属性" 对话框-> "筛选器" &#40;报表生成器&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
+ ["数据集属性" 对话框-"参数" &#40;报表生成器&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
+ ["数据集属性" 对话框-> "查询 &#40;报表生成器&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)   
  [报表生成器中的数据连接、数据源和连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   

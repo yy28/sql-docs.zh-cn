@@ -1,5 +1,5 @@
 ---
-title: 平面文件目标编辑器 （连接管理器页） |Microsoft Docs
+title: 平面文件目标编辑器（"连接管理器" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058699"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>平面文件目标编辑器（“连接管理器”页）
@@ -28,26 +28,28 @@ ms.locfileid: "66058699"
   
 ## <a name="options"></a>选项  
  **平面文件连接管理器**  
- 使用列表框选择现有的连接管理器，或单击“新建”  创建新的连接管理器。  
+ 使用列表框选择现有的连接管理器，或单击“新建”**** 创建新的连接管理器。  
   
  **新建**  
- 使用“平面文件格式”和“平面文件连接管理器编辑器”   对话框创建新的连接。  
+ 使用“平面文件格式”和“平面文件连接管理器编辑器”******** 对话框创建新的连接。  
   
- **“平面文件格式”** 对话框中除了提供带分隔符、固定宽度和右边未对齐这三种标准的平面文件格式外，还提供了第四个选项： **“固定宽度并使用行分隔符”** 。 此选项表示右边未对齐格式的一种特殊情况，在这种格式下， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将添加一个虚列作为最后一个数据列。 此虚列可确保最后一列具有固定宽度。  
+ 
+  **“平面文件格式”** 对话框中除了提供带分隔符、固定宽度和右边未对齐这三种标准的平面文件格式外，还提供了第四个选项： **“固定宽度并使用行分隔符”**。 此选项表示右边未对齐格式的一种特殊情况，在这种格式下， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将添加一个虚列作为最后一个数据列。 此虚列可确保最后一列具有固定宽度。  
   
- **“固定宽度并使用行分隔符”** 选项在 **“平面文件连接管理器编辑器”** 中不可用。 如果需要，可以在该编辑器中模拟此选项。 若要模拟此选项，请在 **“平面文件连接管理器编辑器”** 的 **“常规”** 页上，为 **“格式”** 选择 **“右边未对齐”** 。 然后在该编辑器的 **“高级”** 页上，添加一个新的虚列作为最后一个数据列。  
+ 
+  **“固定宽度并使用行分隔符”** 选项在 **“平面文件连接管理器编辑器”** 中不可用。 如果需要，可以在该编辑器中模拟此选项。 若要模拟此选项，请在 **“平面文件连接管理器编辑器”** 的 **“常规”** 页上，为 **“格式”** 选择 **“右边未对齐”**。 然后在该编辑器的 **“高级”** 页上，添加一个新的虚列作为最后一个数据列。  
   
  **覆盖文件中的数据**  
  指示是覆盖现有文件还是向现有文件中追加数据。  
   
- **标题**  
+ **标头**  
  键入在向文件中写入任何数据之前插入到该文件中的文本块。 使用此选项可以包括其他信息，如列标题。  
   
  **预览**  
- 通过使用“数据视图”  对话框预览结果。 预览最多可以显示 200 行。  
+ 通过使用“数据视图”**** 对话框预览结果。 预览最多可以显示 200 行。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [平面文件目标编辑器（“映射”页）](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
+ ["平面文件目标编辑器" &#40;映射 "页面&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
   
   

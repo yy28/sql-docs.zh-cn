@@ -1,5 +1,5 @@
 ---
-title: HTTP 连接管理器编辑器 （服务器页） |Microsoft Docs
+title: HTTP 连接管理器编辑器（"服务器" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058246"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>HTTP 连接管理器编辑器（“服务器”页）
@@ -41,7 +41,7 @@ ms.locfileid: "66058246"
  **用户名**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
- **密码**  
+ **权限**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
  **域**  
@@ -51,7 +51,7 @@ ms.locfileid: "66058246"
  指定是否希望 HTTP 连接管理器使用客户端证书进行身份验证。  
   
  **证书**  
- 使用“选择证书”对话框从列表中选择证书。  文本框显示与此证书关联的名称。  
+ 使用“选择证书”对话框从列表中选择证书。**** 文本框显示与此证书关联的名称。  
   
  **超时值(秒)**  
  提供连接 Web 服务器时允许的超时值。 此属性的默认值为 30 秒。  
@@ -60,10 +60,10 @@ ms.locfileid: "66058246"
  提供用于写入数据的块区大小。  
   
  **测试连接**  
- 在配置 HTTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。   
+ 在配置 HTTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。****  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [HTTP 连接管理器编辑器（“代理”页）](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
+ [HTTP 连接管理器编辑器 &#40;代理页面&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
   
   

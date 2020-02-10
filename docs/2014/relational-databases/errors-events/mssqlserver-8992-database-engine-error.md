@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912541"
 ---
-# <a name="mssqlserver8992"></a>MSSQLSERVER_8992
+# <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62912541"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC3_CHECK_CATALOG|  
-|消息正文|检查目录消息错误级别 LEVEL，状态 STATE:消息。|  
+|消息正文|请检查目录消息 ERROR，级别 LEVEL，状态 STATE: MESSAGE。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定对象的系统元数据表中发现了不一致。 这就是说，已记录的对象 ID 与错误消息中指定的对象之间存在不一致。  
   
  如果通过某种方式手动更新一个或多个系统表，而该方式在系统元数据中造成了不一致，就会发生此错误。 例如，用户可能从 **sysobjects** 表中手动删除了某个对象，但未从 **sysindexes** 和 **syscolumns** 等其他表中删除关联的行。  
@@ -74,7 +74,7 @@ ms.locfileid: "62912541"
 ### <a name="do-not-manually-update-system-tables"></a>不手动更新系统表  
  不对系统表进行手动更新。 SQL Server 不支持对系统数据库进行任何手动更改。 如果您更新 SQL Server 数据库中的系统表，则会记录两个事件（事件 ID 17659 和事件 ID 3859）。 有关详细信息，请参阅知识库文章 2688307：“当更新 SQL Server 数据库中的系统表时，将记录事件 ID 17659 和事件 ID 3859”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [当更新 SQL Server 数据库中的系统表时，将记录事件 ID 17659 和事件 ID 3859](https://support.microsoft.com/kb/2688307/EN-US)  
   
   

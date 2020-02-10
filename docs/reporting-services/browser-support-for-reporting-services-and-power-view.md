@@ -18,10 +18,10 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574821"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的浏览器支持
@@ -94,11 +94,11 @@ ms.locfileid: "65574821"
 
 |**浏览器类型**|**支持**|**浏览器默认值**|**服务器默认值**|
 |----------------------|------------------|-------------------------|------------------------|
-|**Microsoft Edge** (+)|协商、Kerberos、NTLM、基本|Negotiate|是。 默认身份验证设置使用 Edge。|
-|**Microsoft Internet Explorer**|协商、Kerberos、NTLM、基本|Negotiate|是。 默认身份验证设置使用 Internet Explorer。|
-|**Google Chrome**(+)|协商、NTLM、基本|Negotiate|是。 默认身份验证设置使用 Chrome。|
-|**Mozilla Firefox**(+)|NTLM、基本|NTLM|是。 默认身份验证设置使用 Firefox。|
-|**Apple Safari**(+)|NTLM、基本|“基本”|是。 默认身份验证设置使用 Safari。|
+|**Microsoft Edge** (+)|协商、Kerberos、NTLM、基本|Negotiate|是的。 默认身份验证设置使用 Edge。|
+|**Microsoft Internet Explorer**|协商、Kerberos、NTLM、基本|Negotiate|是的。 默认身份验证设置使用 Internet Explorer。|
+|**Google Chrome**(+)|协商、NTLM、基本|Negotiate|是的。 默认身份验证设置使用 Chrome。|
+|**Mozilla Firefox**(+)|NTLM、基本|NTLM|是的。 默认身份验证设置使用 Firefox。|
+|**Apple Safari**(+)|NTLM、基本|基本|是的。 默认身份验证设置使用 Safari。|
 
  **(+)** 最新公开发布的版本
 
@@ -157,7 +157,7 @@ ms.locfileid: "65574821"
 [在 Web 门户中查找和查看报表](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
 [Web 门户（SSRS 本机模式）](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
-[HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
+[HTML 查看器和报表工具栏](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL 访问参数引用](../reporting-services/url-access-parameter-reference.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

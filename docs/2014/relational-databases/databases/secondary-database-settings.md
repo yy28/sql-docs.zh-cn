@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871207"
 ---
 # <a name="secondary-database-settings"></a>辅助数据库设置
@@ -35,7 +35,7 @@ ms.locfileid: "62871207"
  连接到日志传送配置中用作辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 用于连接的帐户必须是辅助服务器实例上 sysadmin 固定服务器角色的成员。  
   
  **“初始化”选项卡**  
- 选项如下所示：  
+ 选项如下：  
   
  **是，生成主数据库的完整备份并将其还原到辅助数据库**  
  通过备份主数据库并在辅助服务器上还原该数据库，让 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 配置辅助数据库。 如果在 **“辅助数据库”** 框中输入新的数据库名称，数据库将作为还原操作的一部分进行创建。  
@@ -62,7 +62,7 @@ ms.locfileid: "62871207"
  指定辅助数据库已初始化并准备接受主数据库的事务日志备份。 如果在 **“辅助数据库”** 框中键入新的数据库名称，则此选项不可用。  
   
  **“复制文件”选项卡**  
- 选项如下所示：  
+ 选项如下：  
   
  **复制文件的目标文件夹**  
  键入事务日志备份应复制到的路径以还原到辅助数据库。 通常，此路径为辅助服务器上文件夹的本地路径。 但是，如果该文件夹位于其他服务器，则必须指定该文件夹的 UNC 路径。 辅助服务器实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户必须具有此文件夹的读取权限。 此外，还必须向代理帐户授予此网络共享的读写权限。通过代理帐户，复制作业和还原作业将在辅助服务器实例上的该帐户下运行。 默认情况下，这是辅助服务器实例的 SQL Server 代理服务帐户，但是 sysadmin 可以为该作业选择其他代理帐户。  
@@ -83,7 +83,7 @@ ms.locfileid: "62871207"
  挂起 SQL Server 代理复制作业。  
   
  **“还原事务日志”选项卡**  
- 选项如下所示：  
+ 选项如下：  
   
  **在还原备份时断开数据库中用户的连接**  
  在还原事务日志备份时，自动断开用户与辅助数据库的连接。  
@@ -115,7 +115,7 @@ ms.locfileid: "62871207"
  **禁用此作业**  
  挂起对辅助数据库的还原操作。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

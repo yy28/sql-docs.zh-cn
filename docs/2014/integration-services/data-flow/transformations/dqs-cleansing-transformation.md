@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c06abe4d6adb3916028b3501c16b68d2491af47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900394"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清除转换
@@ -31,7 +31,7 @@ ms.locfileid: "62900394"
   
 -   该列映射到的域具有兼容数据类型。  
   
- 该转换还包括您配置为处理行级错误的错误输出。 若要配置错误输出，请使用 **“DQS 清理转换编辑器”**。  
+ 该转换还包括您配置为处理行级错误的错误输出。 若要配置错误输出，请使用 **“DQS 清理转换编辑器”** 。  
   
  您可以在数据流中包含 [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md) 来标识可能为重复项的数据行。  
   
@@ -40,15 +40,15 @@ ms.locfileid: "62900394"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [在数据质量客户端中打开 Integration Services 项目](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
+-   [在 Data Quality Client 中打开 Integration Services 项目](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
--   [将清理项目值导入到域中](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
+-   [将清理项目值导入域](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
 -   [将数据质量规则应用于数据源](apply-data-quality-rules-to-data-source.md)  
   
 ## <a name="related-content"></a>相关内容  
   
--   [管理&#40;打开、 解锁、 重命名，并删除&#41;的数据质量项目](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
+-   [管理数据质量项目&#41; &#40;打开、解锁、重命名和删除](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
   
 -   social.technet.microsoft.com 上的文章： [使用复合域清理复杂数据](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)。  
   

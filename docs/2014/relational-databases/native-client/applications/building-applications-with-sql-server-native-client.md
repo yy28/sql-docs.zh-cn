@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175412"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>使用 SQL Server Native Client 生成应用程序
@@ -55,7 +55,7 @@ ms.locfileid: "70175412"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 编程](../sql-server-native-client-programming.md)   
- [ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)操作指南主题   
+ [ODBC 操作指南主题](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 操作指南主题](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3e98a5c49877f6bc94e9e3ac1e880c90229cd3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106602"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>添加、移动或删除表、矩阵或列表（报表生成器和 SSRS）
@@ -32,7 +32,7 @@ ms.locfileid: "66106602"
   
 1.  在 **“插入”** 选项卡上，单击 **“表”** 或 **“矩阵”** ，然后单击 **“表向导”** 或 **“矩阵向导”** 。  
   
-2.  按照中的步骤**NewTable**或**新矩阵**向导。  
+2.  按照 " **NewTable** " 或 "**新建矩阵**" 向导中的步骤进行操作。  
   
 3.  在 **“主文件夹”** 选项卡上，单击 **“运行”** ，以查看所呈现的报表。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66106602"
   
 -   选择数据区域，在该数据区域中右键单击，然后单击“删除”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)   
  [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   
  [矩阵（报表生成器和 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   

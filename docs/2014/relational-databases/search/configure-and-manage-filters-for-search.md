@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df228060a5b714d92c9ae200d91851e4b579839d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011583"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>配置和管理搜索筛选器
@@ -25,7 +25,7 @@ ms.locfileid: "66011583"
   
  给定筛选器特定于给定文档类型（.doc、.pdf、.xls、.xml 等等）。 这些筛选器实现 IFilter 接口。 有关这些文档类型的详细信息，请查询 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 目录视图。  
   
- 二进制文档可以存储在单个 `varbinary(max)` 或 `image` 列中。 对于每个文档， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 根据文件扩展名来选择正确的筛选器。 因为文件扩展名不可见时，文件存储在`varbinary(max)`或`image`必须存储在表，称为类型列中的单独列中的列，文件扩展名 （.doc、.xls、.pdf 等）。 此类型列可以是任意基于字符的数据类型，并且包含文档文件扩展名，例如 .doc 表示 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word 文档。 在**文档**表中[!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]，则**文档**列的类型是`varbinary(max)`，而类型列**FileExtension**，属于类型`nvarchar(8)`。  
+ 二进制文档可以存储在单个 `varbinary(max)` 或 `image` 列中。 对于每个文档， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 根据文件扩展名来选择正确的筛选器。 由于文件存储在`varbinary(max)`或`image`列中时，文件扩展名不可见，因此文件扩展名（.doc、.xls、.pdf 等）必须存储在表中单独的列中，称为类型列。 此类型列可以是任意基于字符的数据类型，并且包含文档文件扩展名，例如 .doc 表示 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word 文档。 在的**document**表中[!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]， **document**列的类型`varbinary(max)`为，类型列**FileExtension**的类型为`nvarchar(8)`。  
   
 > [!NOTE]  
 >  筛选器有可能能够处理嵌入到父对象中的对象，具体取决于筛选器的实现方式。 不过， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会将筛选器配置为跟踪指向其他对象的链接。  
@@ -42,7 +42,7 @@ EXEC sp_help_fulltext_system_components 'filter';
   
 -   [sys.fulltext_index_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.fulltext_index_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)   
  [FILESTREAM 与其他 SQL Server 功能的兼容性](../blob/filestream-compatibility-with-other-sql-server-features.md)  
   

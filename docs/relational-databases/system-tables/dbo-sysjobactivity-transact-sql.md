@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobactivity (Transact SQL) |Microsoft Docs
+title: dbo. sysjobactivity （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
@@ -20,30 +20,30 @@ ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52d929496bf3db83dc63cdde6d86bf1a2ee1a3f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67902224"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  记录当前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业活动和状态。  此表存储中**msdb**数据库。
+  记录当前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业活动和状态。  该表存储在**msdb**数据库中。
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|中存储的会话 ID **syssessions**表中**msdb**数据库。|  
+|**session_id**|**int**|存储在**msdb**数据库的**syssessions**表中的会话的 ID。|  
 |**job_id**|**uniqueidentifier**|作业的 ID。|  
 |**run_requested_date**|**datetime**|请求运行作业的日期和时间。|  
-|**run_requested_source**|**sysname(nvarchar(128))**|请求运行作业的请求者。<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
+|**run_requested_source**|**sysname （nvarchar （128））**|请求运行作业的请求者。<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|该作业排队的日期和时间。 如果直接运行该作业，则此列为 NULL。|  
 |**start_execution_date**|**datetime**|计划运行作业的日期和时间。|  
 |**last_executed_step_id**|**int**|上一个运行的作业步骤的 ID。|  
 |**last_executed_step_**<br /><br /> **date**|**datetime**|上一个作业步骤开始运行的日期和时间。|  
 |**stop_execution_date**|**datetime**|作业完成运行的日期和时间。|  
-|**job_history_id**|**int**|用于标识中的行**sysjobhistory**表。|  
-|**next_scheduled_run_date**|**datetime**|下一步的日期和时间的计划作业运行。|  
+|**job_history_id**|**int**|用于标识**sysjobhistory**表中的行。|  
+|**next_scheduled_run_date**|**datetime**|计划运行作业的下一日期和时间。|  
 
 ## <a name="example"></a>示例
 此示例将返回所有 SQL Server 代理作业的运行时状态。  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中执行以下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
@@ -61,7 +61,7 @@ WHERE session_id = (
     SELECT MAX(session_id) FROM msdb.dbo.sysjobactivity); 
 ```
   
-## <a name="see-also"></a>请参阅  
- [dbo.sysjobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [sysjobhistory &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

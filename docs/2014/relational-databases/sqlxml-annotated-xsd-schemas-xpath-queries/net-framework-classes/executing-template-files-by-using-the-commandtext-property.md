@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012511"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 属性执行模板文件
-  此示例说明了如何通过使用 CommandTextproperty 指定 SQL 或 XPath 查询组成的模板文件。 而不是作为 CommandText 值中指定的 SQL 或 XPath 查询，可以指定文件名称，作为值。 在以下示例中，CommandType 属性指定为 SqlXmlCommandType.TemplateFile。  
+  此示例演示如何使用 CommandTextproperty 指定由 SQL 或 XPath 查询组成的模板文件。 可以指定文件名作为值，而不是将 SQL 或 XPath 查询指定为 CommandText 值。 在下面的示例中，CommandType 属性指定为 SqlXmlCommandType. TemplateFile。  
   
  示例应用程序执行下面的模板：  
   
@@ -79,7 +79,7 @@ class Test
   
 2.  将该示例中提供的 XML 模板 (TemplateFile.xml) 保存在某个文件夹中。  
   
-3.  在此示例中在其中存储架构的同一文件夹中保存的 C# 代码 (DocSample.cs) 提供。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
+3.  将此示例中提供的 c # 代码（DocSample.cs）保存到存储架构的相同文件夹中。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
   
 4.  编译代码。 若要在命令提示符下编译此代码，请使用：  
   
@@ -91,7 +91,7 @@ class Test
   
 5.  在命令提示符下，执行 DocSample.exe。  
   
- 如果向模板传递参数，参数名称必须以 at 符号 (@);例如，p.Name="@ContactID"，其中 p 是 SqlXmlParameter 对象。  
+ 如果将参数传递给模板，则参数名称必须以 at 符号（@）开头;例如，p.Name = "@ContactID"，其中 p 是一个 SqlXmlParameter 对象。  
   
  下面是接受一个参数后的已更新模板。  
   

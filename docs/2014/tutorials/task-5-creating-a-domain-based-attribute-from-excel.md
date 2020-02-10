@@ -1,5 +1,5 @@
 ---
-title: 任务 5：从 Excel 中创建基于域的属性 |Microsoft Docs
+title: 任务5：从 Excel 中创建基于域的属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,36 +11,36 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489109"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>任务 5：从 Excel 中创建基于域的属性
-  在此任务中，您将转换**状态**的属性**供应商**作为实体**基于域的属性**。 配置基于域的一个，并将其发布到 MDS，名为的新实体的 State 属性之后**状态**将所有值位于列中的 MDS 服务器上创建并**状态**的属性**供应商**将使用中的值填充实体**状态**实体。 现在，**供应商**模型应具有两个实体：**供应商**并**状态**其中**状态**属性的**供应商**实体是一个基于域的属性，取决于**状态**实体。  
+  在此任务中，您将**供应商**实体的**State**属性转换为**基于域的属性**。 将状态属性配置为基于域的属性并将其发布到 MDS 后，将在 MDS 服务器上创建一个名为 "**状态**" 的新实体，其中包含列中的所有值，并使用 "**状态**" 实体中的值填充 "**供应商**" 实体的 "**状态**" 属性。 现在，**供应**商模型应具有两个实体 **：供应商和****州**，其中**供应商**实体的**state**属性是依赖于**州**实体的基于域的属性。  
   
-1.  切换到**Excel**具有窗口**Cleansed and Matched Suppliers.xlsx**打开。  
+1.  切换到**清理和匹配的供应商 .xlsx**的**Excel**窗口。  
   
-2.  单击**刷新**要从 MDS 获取最新的更新的功能区上的按钮。 如果您执行了可选，应看到两条详细记录**任务 4**。  
+2.  单击功能区上的 "**刷新**" 按钮可从 MDS 获取最新更新。 如果执行了可选**任务 4**，则应该会看到另外两个记录。  
   
-3.  单击列名称**状态**(单元格**I1**) 中**标头行**。  
+3.  单击**标题行**中的 "列名**状态**（单元格**I1**）"。  
   
-     ![Excel-属性属性按钮](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-01.jpg "Excel-属性属性按钮")  
+     ![Excel -“特性”属性按钮](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-01.jpg "Excel -“特性”属性按钮")  
   
-4.  单击**特性属性**功能区上。  
+4.  在功能区上单击 "**特性属性**"。  
   
-5.  在中**特性的属性**对话框中，选择**约束列表 （基于域的）** 有关**属性类型**。  
+5.  在 "**特性属性**" 对话框中，选择 "**约束列表（基于域）** " 作为**属性类型**。  
   
-6.  类型**状态**有关**新实体名称**然后单击**确定**。  
+6.  键入**新实体名称**的**状态**，然后单击 **"确定"**。  
   
-     ![Excel-特性属性对话框](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-02.jpg "Excel-特性属性对话框")  
+     ![Excel -“特性”属性对话框](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-02.jpg "Excel -“特性”属性对话框")  
   
-7.  现在，在 Excel 中，应看到**向下箭头**时单击中的任何值**状态**列。 可以根据需要使用下拉列表来更改该值。  
+7.  现在，在 Excel 中，单击 "**状态**" 列中的任何值时，应会看到**向下箭头**。 可以根据需要使用下拉列表来更改该值。  
   
-     ![Excel-下拉列表中与状态](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel-下拉列表中与状态")  
+     ![Excel - 带州/省的下拉列表](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel - 带州/省的下拉列表")  
   
 ## <a name="next-step"></a>下一步  
- [任务 6:验证使用主数据管理器创建基于域的属性](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+ [任务 6：验证通过使用主数据管理器创建了基于域的属性](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

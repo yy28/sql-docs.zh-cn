@@ -1,5 +1,5 @@
 ---
-title: 选择包 （SSIS 包升级向导） |Microsoft Docs
+title: 选择包（SSIS 包升级向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056023"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>选择包（SSIS 包升级向导）
@@ -36,14 +36,14 @@ ms.locfileid: "66056023"
 > [!NOTE]  
 >  还可以在升级包后更改目标包名称。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，打开升级的包并更改包名称。  
   
- **密码**  
+ **权限**  
  指定用于解密选定升级包的密码。  
   
  **应用于所选内容**  
  应用指定密码来解密选定的升级包。  
   
-## <a name="see-also"></a>请参阅  
- [选择源位置&#40;SSIS 包升级向导&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
+## <a name="see-also"></a>另请参阅  
+ [选择 &#40;SSIS 包升级向导的源位置&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
  [升级 Integration Services 包](install-windows/upgrade-integration-services-packages.md)  
   
   

@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060045"
 ---
 # <a name="data-conversion-transformation-editor"></a>数据转换编辑器
   可以使用 **“数据转换编辑器”** 对话框，选择要转换的列和要将列转换成的数据类型以及设置转换属性。  
   
 > [!NOTE]  
->  `FastParse`数据转换的输出列的属性不是在可用**数据转换编辑器**，但可以通过使用设置**高级编辑器**。 有关此属性的详细信息，请参阅 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)的“数据转换”部分。  
+>  数据`FastParse`转换的输出列的属性在 "**数据转换编辑器**" 中不可用，但可以使用**高级编辑器**进行设置。 有关此属性的详细信息，请参阅 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)的“数据转换”部分。  
   
  若要了解有关数据转换的详细信息，请参阅 [Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md)。  
   
@@ -45,10 +45,10 @@ ms.locfileid: "66060045"
  **长度**  
  设置字符串数据的列长度。  
   
- **精度**  
+ **Precision**  
  设置数字数据的精度。  
   
- **小数位数**  
+ **缩放**  
  设置数字数据的小数位数。  
   
  **代码页**  
@@ -57,7 +57,7 @@ ms.locfileid: "66060045"
  **配置错误输出**  
  使用 [配置错误输出](../../2014/integration-services/configure-error-output.md) 对话框指定处理行级错误的方式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [使用数据转换将数据转换为其他数据类型](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   

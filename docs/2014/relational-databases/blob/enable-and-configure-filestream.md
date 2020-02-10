@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010160"
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
@@ -45,7 +45,7 @@ ms.locfileid: "66010160"
   
 8.  如果远程客户端必须访问存储在此共享中的 FILESTREAM 数据，请选择 **“允许远程客户端针对 FILESTREAM 数据启用流访问”** 。  
   
-9. 单击 **“应用”** 。  
+9. 单击“应用”  。  
   
 10. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，单击 **“新建查询”** 以显示查询编辑器。  
   
@@ -56,15 +56,15 @@ ms.locfileid: "66010160"
     RECONFIGURE  
     ```  
   
-12. 单击 **“执行”** 。  
+12. 单击“执行”  。  
   
 13. 重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
 
   
-##  <a name="best"></a> 最佳实践  
+##  <a name="best"></a>最佳做法  
   
-###  <a name="config"></a> 物理配置和维护  
+###  <a name="config"></a>物理配置和维护  
  设置 FILESTREAM 存储卷时，请考虑下列准则：  
   
 -   禁用 FILESTREAM 计算机系统中的短文件名。 创建短文件名需要花费相当长的时间。 若要禁用短文件名，请使用 Windows **fsutil** 实用工具。  
@@ -82,16 +82,16 @@ ms.locfileid: "66010160"
 ||||||  
 |-|-|-|-|-|  
 |RAID 级别|写性能|读性能|容错|备注|  
-|RAID 5|Normal|Normal|很好|性能比一个磁盘或 JBOD 更好；比 RAID 0 或条带化 RAID 5 差。|  
-|RAID 0|很好|很好|None||  
+|RAID 5|一般|一般|很好|性能比一个磁盘或 JBOD 更好；比 RAID 0 或条带化 RAID 5 差。|  
+|RAID 0|很好|很好|无||  
 |RAID 5 ＋ 条带化|很好|很好|很好|成本最高的选项。|  
   
 
   
-###  <a name="database"></a> 物理数据库设计  
+###  <a name="database"></a>物理数据库设计  
  设计 FILESTREAM 数据库时，应考虑下列准则：  
   
--   FILESTREAM 列必须附带相应的`uniqueidentifier`ROWGUID 列。 这些类型的表还必须附带唯一索引。 此索引通常不是聚集索引。 如果数据库业务逻辑需要聚集索引，则必须确保该索引中存储的值不是随机的。 随机值将导致每次向表中添加行或从表中删除行时，索引都会重新排序。  
+-   FILESTREAM 列必须附带相应`uniqueidentifier`的 ROWGUID 列。 这些类型的表还必须附带唯一索引。 此索引通常不是聚集索引。 如果数据库业务逻辑需要聚集索引，则必须确保该索引中存储的值不是随机的。 随机值将导致每次向表中添加行或从表中删除行时，索引都会重新排序。  
   
 -   出于性能方面的考虑，FILESTREAM 文件组和容器应驻留在操作系统、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志、tempdb 或分页文件以外的卷上。  
   

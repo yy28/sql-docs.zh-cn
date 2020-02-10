@@ -1,5 +1,5 @@
 ---
-title: sql:-字段和 sql:-值 (SQLXML 4.0) |Microsoft Docs
+title: sql： limit 字段和 sql： limit-值（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5d49a8159601236d280aed809fa41287cd4ab22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013568"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field 和 sql:limit-value (SQLXML 4.0)
-  XML 大容量加载按照定义处理 `sql:limit-field` 和 `sql:limit-value` 批注。 有关详细信息，请参阅[筛选值使用 sql:-字段和 sql： 的值&#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)。  
+  XML 大容量加载按照定义处理 `sql:limit-field` 和 `sql:limit-value` 批注。 有关详细信息，请参阅[使用 sql： limit 字段和 sql： limit-value &#40;SQLXML 4.0&#41;筛选值](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)。  
   
  例如，假定一个数据库包含以下各表：  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66013568"
   
 1.  将在该示例中提供的架构另存为 SampleSchema.xml。  
   
-2.  创建这些表：  
+2.  创建以下表：  
   
     ```  
     CREATE TABLE Customer(  
@@ -121,7 +121,7 @@ ms.locfileid: "66013568"
     set objBL=Nothing  
     ```  
   
- 以下是等效的 XDR 架构：  
+ 这是等效的 XDR 架构：  
   
 ```  
 <?xml version="1.0" ?>  

@@ -1,5 +1,5 @@
 ---
-title: NULL 处理 (SQLXML 4.0) |Microsoft Docs
+title: NULL 处理（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11f7ca96ca65ae23202b84030140e0eaef945de2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014689"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL 处理 (SQLXML 4.0)
-  XML 语法将 NULL 视为不存在。 (例如，如果属性或元素值为 NULL，该属性或元素不存在从 XML 文档。)在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML，`updg:nullvalue`特性使元素或属性值指定为 NULL。  
+  XML 语法将 NULL 视为不存在。 （例如，如果属性或元素值为 NULL，则 XML 文档中不存在该属性或元素。）在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 中， `updg:nullvalue`特性允许为元素或属性值指定 NULL。  
   
- 例如，以下 updategram 确保**标题**值与联系人**ContactID** 64 的为 NULL，并更新**标题**值为"Mr." 该联系人。  
+ 例如，以下 updategram 确保**ContactID**为64的联系人的**标题**值为 NULL，然后将**Title**值更新为 "Mr"。 此联系人。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -40,9 +40,9 @@ ms.locfileid: "66014689"
 </ROOT>  
 ```  
   
- 参数传递到 Updategram 时，NULL 可以作为参数值进行传递。 通过在 `nullvalue` 块中指定 `<updg:header>` 属性，可以完成该操作。 有关示例，请参阅[将参数传递给 Updategram &#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)。  
+ 参数传递到 Updategram 时，NULL 可以作为参数值进行传递。 通过在 `nullvalue` 块中指定 `<updg:header>` 属性，可以完成该操作。 有关示例，请参阅[将参数传递到 updategram &#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SQLXML 4.0&#41;的 Updategram 安全注意事项](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

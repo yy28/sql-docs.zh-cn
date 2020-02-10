@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 87e5446d4d6c9c0997dadbd2d3f9964b8d4271ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483906"
 ---
 # <a name="entities-master-data-services"></a>实体 (Master Data Services)
@@ -31,11 +31,11 @@ ms.locfileid: "65483906"
 ## <a name="how-entities-relate-to-other-model-objects"></a>实体如何与其他模型对象关联  
  您可以将实体看作包含主数据的一个表，其中行表示成员，列表示属性。  
   
- ![表示为表的 Master Data Services 实体](../../2014/master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
+ ![表示为表的 Master Data Services 实体](../../2014/master-data-services/media/mds-conc-entity-table.gif "表示为表的 Master Data Services 实体")  
   
  使用要管理的主数据的列表填充该实体。  
   
- 实体可用于生成派生层次结构，它们是基于多个实体的基于级别的层次结构。 有关详细信息，请参阅 [派生层次结构 (Master Data Services)](derived-hierarchies-master-data-services.md)。  
+ 实体可用于生成派生层次结构，它们是基于多个实体的基于级别的层次结构。 有关详细信息，请参阅[派生层次结构 (Master Data Services)](derived-hierarchies-master-data-services.md)。  
   
  还允许实体包含显示层次结构（基于单个实体的不规则结构）和集合（成员子集的一次性组合）。 有关详细信息，请参阅[显式层次结构 (Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md) 和[集合 (Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "65483906"
 ## <a name="entity-examples"></a>实体示例  
  在下面的示例中，显示具有以下属性的实体：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 这些属性描述成员。 每个成员由一行属性值表示。  
   
- ![自行车产品实体表](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
+ ![自行车产品实体表](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "自行车产品实体表")  
   
  在下面的示例中，Product 实体是中心实体。 Subcategory 实体是 Product 实体的基于域的属性。 Category 实体是 Subcategory 实体的基于域的属性。 StandardCost 和 ListPrice 是 Product 实体的自由格式的属性，FilePhoto 是 Product 实体的文件属性。  
   
- ![产品实体树结构](../../2014/master-data-services/media/mds-conc-entity-ui.gif "Product Entity Tree Structure")  
+ ![产品实体树结构](../../2014/master-data-services/media/mds-conc-entity-ui.gif "产品实体树结构")  
   
 > [!NOTE]  
 >  这是基于 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户界面 (UI) 的一个示例。 树状层次结构显示实体和基于域的属性之间的关系。 它旨在显示关系而不是表示重要性级别。  
@@ -64,18 +64,18 @@ ms.locfileid: "65483906"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新实体。|[创建实体 (Master Data Services)](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
-|指定一个实体可以包含显式层次结构和集合。|[为显式层次结构和集合启用实体&#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|更改现有实体的名称。|[更改实体名称&#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
-|删除现有实体。|[删除实体 (Master Data Services)](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
-|将权限分配给实体。|[分配模型对象权限 (Master Data Services)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|创建新实体。|[创建实体 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
+|指定一个实体可以包含显式层次结构和集合。|[为显式层次结构和集合启用实体 &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|更改现有实体的名称。|[更改实体名称 &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
+|删除现有实体。|[删除实体 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
+|将权限分配给实体。|[&#40;Master Data Services 分配模型对象权限&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [模型 (Master Data Services)](../../2014/master-data-services/models-master-data-services.md)  
+-   [Master Data Services &#40;模型&#41;](../../2014/master-data-services/models-master-data-services.md)  
   
--   [成员 (Master Data Services)](../../2014/master-data-services/members-master-data-services.md)  
+-   [成员 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

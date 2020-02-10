@@ -1,5 +1,5 @@
 ---
-title: XPath 查询 (SQLXML 4.0) 中指定布尔运算符 |Microsoft Docs
+title: 在 XPath 查询中指定布尔运算符（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29404c4a3dc7b4b10106e7a3a8cb170ffe1e7a3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010628"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔运算符 (SQLXML 4.0)
-  以下示例说明如何在 XPath 查询中指定布尔运算符。 本示例中的 XPath 查询针对 SampleSchema1.xml 中包含的映射架构指定。 有关该示例架构的信息，请参阅[示例带批注的 XSD 架构的 XPath 示例&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  以下示例说明如何在 XPath 查询中指定布尔运算符。 本示例中的 XPath 查询针对 SampleSchema1.xml 中包含的映射架构指定。 有关此示例架构的信息，请参阅[&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. 指定 OR 布尔运算符  
- 此 XPath 查询将返回 **\<客户 >** 的上下文节点的子元素**CustomerID**属性值为 13 或 31:  
+ 此 XPath 查询将返回**CustomerID**属性值为13或31的上下文节点的** \<Customer>** 元素子级：  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,11 +41,11 @@ ms.locfileid: "66010628"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 在谓词中，`attribute`是轴和`CustomerID`是节点测试 (如果**CustomerID**是 **\<属性 >** 节点，因为 **\<属性 >** 节点是主节点`attribute`轴)。 谓词筛选器 **\<客户 >** 元素并返回只有满足条件的谓词中指定。  
+ 在谓词中， `attribute`是`CustomerID`轴，是节点测试（如果**CustomerID**是>节点的** \<属性**，则为 TRUE，因为** \<>** 节点的属性是`attribute`轴的主节点）。 谓词筛选** \<Customer>** 元素，并仅返回满足谓词中指定的条件的元素。  
   
-##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>若要测试针对映射架构的 XPath 查询  
+##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
-1.  复制[示例架构代码](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
+1.  复制[示例架构代码](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)，并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
   
 2.  创建以下模板 (BooleanOperatorsA.xml) 并将其保存到保存 SampleSchema1.xml 的目录中。  
   

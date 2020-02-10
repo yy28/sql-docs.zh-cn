@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872086"
 ---
 # <a name="database-instant-file-initialization"></a>数据库实例文件初始化
@@ -49,15 +49,15 @@ ms.locfileid: "62872086"
   
 1.  在将要创建备份文件的计算机上打开 `Local Security Policy` 应用程序 (`secpol.msc`)。  
   
-2.  在左侧窗格中，展开“本地策略” ，然后单击“用户权限指派” 。  
+2.  在左侧窗格中，展开“本地策略” ****，然后单击“用户权限指派” ****。  
   
-3.  在右侧窗格中，双击“执行卷维护任务”。  
+3.  在右侧窗格中，双击“执行卷维护任务”****。  
   
-4.  单击“添加用户或组”  ，添加用于备份的任何用户帐户。  
+4.  单击“添加用户或组” **** ，添加用于备份的任何用户帐户。  
   
-5.  单击**Apply**，然后关闭所有`Local Security Policy`对话框。  
+5.  单击 "**应用**"，然后关闭`Local Security Policy`所有对话框。  
   
-### <a name="security-considerations"></a>需要考虑的安全性因素  
+### <a name="security-considerations"></a>安全注意事项  
  因为只有在新数据写入文件中时才覆盖删除的磁盘内容，因此，未授权的主体可能会访问删除的内容。 当数据库文件连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之后，可以通过文件中的随机访问控制列表 (DACL) 来降低此信息泄露的风险。 此 DACL 仅允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和本地管理员访问文件。 但是，当文件分离以后，可以由不具有 SE_MANAGE_VOLUME_NAME 的用户或服务访问。 在备份数据库时，也存在类似风险。 如果未使用适当的 DACL 对备份文件进行保护，则未授权的用户或服务将可以使用删除的内容。  
   
  如果担心可能会泄漏删除的内容，则应执行以下两种或其中一种操作：  
@@ -69,7 +69,7 @@ ms.locfileid: "62872086"
 > [!NOTE]  
 >  禁用即时文件初始化功能只会影响在用户权限撤消之后创建的文件或其大小增大的文件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

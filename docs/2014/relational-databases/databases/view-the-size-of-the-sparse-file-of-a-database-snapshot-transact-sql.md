@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870876"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>查看数据库快照的稀疏文件大小 (Transact-SQL)
@@ -46,9 +46,9 @@ ms.locfileid: "62870876"
 > [!NOTE]  
 >  稀疏文件按 64 KB 的增量增长；因此，磁盘上稀疏文件的大小始终是 64 KB 的倍数。  
   
- 若要查看磁盘上每个快照稀疏文件当前使用的字节数，请查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][sys.dm_io_virtual_file_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) 动态管理视图的 **size_on_disk_bytes** 列。  
+ 若要查看磁盘上每个快照稀疏文件当前使用的字节数，请查询 **sys.dm_io_virtual_file_stats** 动态管理视图的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][size_on_disk_bytes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) 列。  
   
- 若要查看稀疏文件占用的磁盘空间，在 Microsoft Windows 中右键单击文件，再单击“属性”  ，然后查看“占用空间”  值。  
+ 若要查看稀疏文件占用的磁盘空间，在 Microsoft Windows 中右键单击文件，再单击“属性”****，然后查看“占用空间”**** 值。  
   
 ## <a name="find-out-the-maximum-size-of-a-sparse-file"></a>查看稀疏文件的最大大小  
  稀疏文件最大只能增长到创建快照时相应的源数据库文件的大小。 若要了解此大小，可以使用下列方法之一：  
@@ -61,13 +61,14 @@ ms.locfileid: "62870876"
   
 -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上：  
   
-     从数据库快照的 **sys.database_files** 中或从 **sys.master_files** 中选择 **size**列。 **“大小”** 列的值反映快照可以使用的最大空间（SQL 页数）；此值相当于 Windows 的 **“大小”** 字段，不同的是此值以文件中包含的 SQL 页数表示；大小（以字节为单位）为：  
+     从数据库快照的 **sys.database_files** 中或从 **sys.master_files** 中选择 **size**列。 
+  **“大小”** 列的值反映快照可以使用的最大空间（SQL 页数）；此值相当于 Windows 的 **“大小”** 字段，不同的是此值以文件中包含的 SQL 页数表示；大小（以字节为单位）为：  
   
      ( *number_of_pages* * 8192)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库快照 (SQL Server)](database-snapshots-sql-server.md)   
- [sys.fn_virtualfilestats (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
+ [sys. fn_virtualfilestats &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
  [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [sys.master_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   

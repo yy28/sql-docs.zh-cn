@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874868"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
@@ -33,25 +33,27 @@ ms.locfileid: "70874868"
 
   对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的每种语言都包含一行。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|langid|**int**|唯一语言 ID。|  
-|dateformat|**nchar(3)**|日期顺序，如 DMY。|  
+|langid|**smallint**|唯一语言 ID。|  
+|dateformat|**nchar （3）**|日期顺序，如 DMY。|  
 |datefirst|**tinyint**|每周的第一天：1 代表星期一，2 代表星期二，依此类推，直到 7 代表星期日。|  
-|upgrade|**int**|预留给系统使用。|  
-|NAME|**sysname**|官方语言名称，例如，结算。|  
+|升级|**int**|预留给系统使用。|  
+|name|**sysname**|官方语言名称，例如，结算。|  
 |alias|**sysname**|代替语言名称，如 French。|  
-|months|**nvarchar(372)**|以逗号分隔的月份名全称列表，按一月到十二月的顺序排列，每个名称最多可有 20 个字符。|  
-|shortmonths|**nvarchar(132)**|以逗号分隔的月份名简称列表，按一月到十二月的顺序排列，每个名称最多可有 9 个字符。|  
-|days|**nvarchar(217)**|以逗号分隔的星期名称，按星期一到星期日的顺序排列，每个名称最多可有 30 个字符。|  
+|months|**nvarchar （372）**|以逗号分隔的月份名全称列表，按一月到十二月的顺序排列，每个名称最多可有 20 个字符。|  
+|shortmonths|**nvarchar （132）**|以逗号分隔的月份名简称列表，按一月到十二月的顺序排列，每个名称最多可有 9 个字符。|  
+|days|**nvarchar （217）**|以逗号分隔的星期名称，按星期一到星期日的顺序排列，每个名称最多可有 30 个字符。|  
 |lcid|**int**|语言的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 区域设置 ID。|  
-|msglangid|**int**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]消息组 ID。|  
+|msglangid|**smallint**|
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]消息组 ID。|  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]包含下列已安装的语言。  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]包含下列已安装的语言。  
   
 |用英语表示的名称|Windows LCID|[!INCLUDE[ssDE](../../includes/ssde-md.md)]消息组 ID|  
 |---------------------|------------------|-----------------------------------------|  
-|英语|2052|2052|  
+|英语|1033|1033|  
 |德语|1031|1031|  
 |法语|1036|1036|  
 |日语|1041|1041|  
@@ -74,19 +76,19 @@ ms.locfileid: "70874868"
 |保加利亚语|1026|1026|  
 |俄语|1049|1049|  
 |土耳其语|1055|1055|  
-|英语（英国）|2057|2052|  
+|英语（英国）|2057|1033|  
 |爱沙尼亚语|1061|1061|  
 |拉脱维亚语|1062|1062|  
 |立陶宛语|1063|1063|  
 |葡萄牙语（巴西）|1046|1046|  
 |繁体中文|1028|1028|  
-|朝鲜语|1042|1042|  
+|韩语|1042|1042|  
 |简体中文|2052|2052|  
 |阿拉伯语|1025|1025|  
 |泰语|1054|1054|  
   
 ## <a name="see-also"></a>另请参阅  
- [兼容性&#40;视图 transact-sql&#41; ](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [将系统表映射到系统&#40;视图 transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Transact-sql&#41;的兼容性视图 &#40;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [将系统表映射到系统视图 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

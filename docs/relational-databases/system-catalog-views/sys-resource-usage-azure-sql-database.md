@@ -1,5 +1,5 @@
 ---
-title: sys.resource_usage （Azure SQL 数据库） |Microsoft Docs
+title: sys. resource_usage （Azure SQL Database） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -20,13 +20,13 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 3be4ff07923759af53b929852d4dbaa4088a77f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67904424"
 ---
-# <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
+# <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
@@ -38,19 +38,19 @@ ms.locfileid: "67904424"
 >  -   如果打开，DMV 在聚合时将返回当前数据。  
 > -   如果关闭，则 DMV 返回历史数据，这些数据可能是旧数据。  
   
- 为当前服务器中的用户数据库提供资源使用情况数据的每小时摘要。 历史数据保留 90 天。  
+ 为当前服务器中的用户数据库提供资源使用情况数据的每小时摘要。 历史数据将保留 90 天。  
   
  对于每个用户数据库，以连续方式为每小时提供一行信息。 即使数据库在该小时内处于闲置状态，也有对应的一行，并且该数据库的 usage_in_seconds 值将为 0。 将相应地为该小时累积存储使用情况和 SKU 信息。  
   
-|“列”|数据类型|描述|  
+|列|数据类型|说明|  
 |-------------|---------------|-----------------|  
 |time|**datetime**|时间 (UTC)（以小时增量表示）。|  
 |database_name|**nvarchar**|用户数据库的名称。|  
-|sku|**nvarchar**|SKU 的名称。 下面是可能的值：<br /><br /> Web<br /><br /> Business<br /><br /> 基本<br /><br /> 标准<br /><br /> Premium|  
-|usage_in_seconds|**int**|该小时内使用的 CPU 时间之和。<br /><br /> 注意:此列的 V11 已弃用，不适用于 V12。 **值始终设置为 0。**|  
-|storage_in_megabytes|**decimal**|该小时的最大存储大小，包括数据库数据、索引、存储过程和元数据。|  
+|sku|**nvarchar**|SKU 的名称。 下面是可能的值：<br /><br /> Web<br /><br /> 业务电话<br /><br /> 基本<br /><br /> Standard<br /><br /> 高级|  
+|usage_in_seconds|**int**|该小时内使用的 CPU 时间之和。<br /><br /> 注意：此列不推荐用于 V11，不适用于 V12。 **值始终设置为0。**|  
+|storage_in_megabytes|**Decimal**|该小时的最大存储大小，包括数据库数据、索引、存储过程和元数据。|  
   
 ## <a name="permissions"></a>权限  
- 此视图可供所有用户角色有权连接到虚拟**主**数据库。  
+ 此视图可用于具有连接到虚拟**master**数据库的权限的所有用户角色。  
   
   

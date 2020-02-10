@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059649"
 ---
 # <a name="date-and-time-formats"></a>日期和时间格式
@@ -32,11 +32,11 @@ ms.locfileid: "66059649"
   
 -   ISO 8601 格式，如下表中所示：  
   
-    |格式|Description|  
+    |格式|说明|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|用四位数表示年、两位数表示月和两位数表示日的基本和扩展格式。 在扩展格式中，日期部分以连字符 (-) 分隔。|  
     |YYYY-MM|用四位数表示年和两位数表示月的基本和扩展简化精度格式。 在扩展格式中，日期部分以连字符 (-) 分隔。|  
-    |yyyy|用四位数表示年的简化精度格式。|  
+    |YYYY|用四位数表示年的简化精度格式。|  
   
  快速分析不支持日期数据的下列格式：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66059649"
   
 -   ISO 8601 时间格式，如下表中所示：  
   
-    |格式|Description|  
+    |格式|说明|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|用两位数表示小时、两位数表示分钟和两位数表示秒的基本和扩展格式。 在扩展格式中，时间部分以冒号 (:) 分隔。|  
     |HHMI<br /><br /> HH:MI|用两位数表示小时和两位数表示分钟的基本和扩展截断格式。 在扩展格式中，时间部分以冒号 (:) 分隔。|  
@@ -72,7 +72,7 @@ ms.locfileid: "66059649"
   
 -   指定时区的时间格式，如下表所示：  
   
-    |格式|Description|  
+    |格式|说明|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|指示为得出本地时间而在协调世界时 (UTC) 基础上加上的小时和分钟数的基本和扩展格式。|  
     |-HH:MI<br /><br /> -HHMI|指示为得出本地时间而从 UTC 减去的小时和分钟数的基本和扩展格式。|  
@@ -90,7 +90,7 @@ ms.locfileid: "66059649"
   
 -   包含小数的时间格式，如下表所示：  
   
-    |格式|Description|  
+    |格式|说明|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n 是介于 0 和 9999999 之间的值，表示小时的小数部分。 方括号表明该值是可选的。<br /><br /> 例如，值 12.750 表示 12:45。|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n 是介于 0 和 9999999 之间的值，表示分钟的小数部分。 方括号表明该值是可选的。<br /><br /> 例如，值 1220.500 表示 12:20:30。|  
@@ -122,11 +122,11 @@ ms.locfileid: "66059649"
   
 |日期/时间部分|填充|  
 |---------------------|-------------|  
-|Seconds|添加 00。|  
-|Minutes|添加 00:00。|  
+|秒|添加 00。|  
+|分钟数|添加 00:00。|  
 |Hour|添加 00:00:00。|  
-|Day|添加 01，表示一个月中的第几天。|  
-|Month|添加 01，表示一年中的第几个月。|  
+|日期|添加 01，表示一个月中的第几天。|  
+|月份|添加 01，表示一年中的第几个月。|  
   
  有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
   

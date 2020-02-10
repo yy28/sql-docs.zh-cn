@@ -1,5 +1,5 @@
 ---
-title: 字词查找转换编辑器 （字词查找选项卡） |Microsoft Docs
+title: 字词查找转换编辑器（"字词查找" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2939d160773d60944a2e8a786e5495cea366edb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055124"
 ---
 # <a name="term-lookup-transformation-editor-term-lookup-tab"></a>字词查找转换编辑器（“字词查找”选项卡）
@@ -30,7 +30,7 @@ ms.locfileid: "66055124"
  **可用输入列**  
  使用复选框选择要传递给未更改输出的输入列。 将输入列拖动到 **“可用引用列”** 列表可以将其映射到引用表中的查找列。 输入列和查找列必须具有支持的匹配数据类型（DT_NTEXT 或 DT_WSTR）。 选择一个映射行，再右键单击可在 [创建关系](data-flow/transformations/create-relationships.md) 对话框中编辑该映射。  
   
- **“可用引用列”**  
+ **可用引用列**  
  查看引用表中可用的列。 选择包含要匹配的字词列表的列。  
   
  **传递列**  
@@ -42,10 +42,10 @@ ms.locfileid: "66055124"
  **配置错误输出**  
  使用 [配置错误输出](../../2014/integration-services/configure-error-output.md) 对话框可以为导致错误的行指定错误处理方式选项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [字词查找转换编辑器（“引用表”选项卡）](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
- [字词查找转换编辑器（“高级”选项卡）](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
+ [字词查找转换编辑器 &#40;引用表 "选项卡&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
+ [字词查找转换编辑器 &#40;高级 "选项卡&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [字词提取转换](data-flow/transformations/term-extraction-transformation.md)  
   
   

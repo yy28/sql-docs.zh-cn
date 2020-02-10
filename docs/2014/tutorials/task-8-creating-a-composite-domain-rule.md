@@ -1,5 +1,5 @@
 ---
-title: 任务 8：创建复合域规则 |Microsoft Docs
+title: 任务8：创建复合域规则 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,30 +11,30 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489632"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>任务 8：创建复合域规则
-  在此任务中，创建的规则**地址验证**复合域。 你可以定义跨域规则： 如果**城市**是**Los Angeles**，**状态**必须是**CA**其中**城市**并**状态**是两个域。  
+  在此任务中，您将为 "**地址验证**" 复合域创建规则。 定义跨域规则：如果**city**为**洛杉矶，则** **state**必须为**CA** ，其中**City**和**state**是两个域。  
   
-1.  在右窗格中，切换到**复合域规则**选项卡。  
+1.  在右侧窗格中，切换到 " **CD 规则**" 选项卡。  
   
-2.  单击**添加新的域规则**从工具栏中。  
+2.  单击工具栏中的 "**添加新的域规则**"。  
   
-3.  类型**城市-州规则**有关**名称**然后按**ENTER**。  
+3.  键入 " **City-** **Name**规则"，然后按**enter**。  
   
-4.  中**生成规则**窗格中，选择**市/县**在域列表中，然后选择条件**值等于**并键入**Los Angeles**为值。  
+4.  在 "**生成规则**" 窗格中，选择 "域列表" 中的 "**城市**"，然后选择 "条件**值等于**"，然后键入**洛杉矶**作为值。  
   
-5.  在中**然后**窗格中，选择**状态**域列表中，然后选择**值等于**，类型**CA**值，然后按**选项卡**。  
+5.  在 " **Then** " 窗格中，选择 "域列表" 中的 "**状态**"，然后选择 "**值等于**"，键入**CA**作为值，然后按**tab**。  
   
      ![复合域规则](../../2014/tutorials/media/et-creatingacompositedomainrule.jpg "复合域规则")  
   
-6.  单击**关闭**页后，可以切换到 DQS 客户端的主页面底部的按钮。 在下一课将发布知识库。 注意，知识库处于锁定状态（锁定图标）。  
+6.  单击页面底部的 "**关闭**" 按钮可切换到 DQS 客户端的主页。 在下一课将发布知识库。 注意，知识库处于锁定状态（锁定图标）。  
   
 ## <a name="next-step"></a>下一步  
- [任务 9:配置引用数据服务](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
+ [任务 9：配置引用数据服务](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
   
   

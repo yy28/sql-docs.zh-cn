@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4379e0ff3ca534acd6ae130cbdf0f8acd2b6a81f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66009852"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>远程 Blob 存储区 (RBS) (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "66009852"
 ## <a name="rbs-security"></a>RBS 安全性  
  当您使用自定义提供程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外存储 BLOB 时，这些 BLOB 可能会被绕过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全系统的其他进程所利用。 请确保您使用适合于自定义提供程序所使用的存储介质的权限和加密选项保护存储的 BLOB。  
   
-##  <a name="rbsresources"></a> RBS 资源  
+##  <a name="rbsresources"></a>RBS 资源  
  **RBS 文档**  
  RBS 文档包括在 Windows 安装程序包中。 如果您想要不安装 RBS 就查看 RBS 文档，则可以在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] MSDN 库 [中在线查看该文档的](https://go.microsoft.com/fwlink/?LinkId=210192)版本。  
   

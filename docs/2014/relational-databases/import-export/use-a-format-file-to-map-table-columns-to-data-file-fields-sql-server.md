@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011744"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式化文件将表列映射到数据文件字段 (SQL Server)
   数据文件中包含的字段的排列顺序可能不同于表中相应列的顺序。 本主题介绍了非 XML 格式化文件和 XML 格式化文件，它们经过修改可容纳字段排列顺序不同于表列顺序的数据文件。 修改后的格式化文件可将数据字段映射到与之相应的表列。  
   
 > [!NOTE]  
->  非 XML 格式化文件或 XML 格式化文件都可以用来将数据文件大容量导入表中，方法是使用 **bcp** 命令、BULK INSERT 语句或 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句。 有关详细信息，请参阅[使用格式化文件批量导入数据 (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md)。  
+>  可以使用非 XML 格式化文件或 XML 格式化文件将数据文件大容量导入表中，方法是使用**bcp**命令、BULK INSERT 语句或 INSERT .。。SELECT * FROM OPENROWSET （BULK ...）语句。 有关详细信息，请参阅[使用格式化文件批量导入数据 (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md)。  
   
 ## <a name="sample-table-and-data-file"></a>示例表和数据文件  
  本主题中修改的格式化文件示例基于下面的表和数据文件。  
@@ -96,7 +96,8 @@ GO
 ## <a name="using-an-xml-format-file"></a>使用 XML 格式化文件  
  下面的非 XML 格式化文件示例提供了一个格式化文件 `myTestOrder.xml`，它将 `myTestOrder-c.txt` 中的字段映射到 `myTestOrder` 表中的列。有关如何创建数据文件和表的信息，请参阅本主题前面的“示例表和数据文件”部分。  
   
- `myTestOrder.xml` 格式化文件包含以下信息：  
+ 
+  `myTestOrder.xml` 格式化文件包含以下信息：  
   
 ```  
 <?xml version="1.0"?>  
@@ -122,7 +123,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 >  有关 XML 架构语法和 XML 格式化文件的其他示例的信息，请参阅 [XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  
   
 ### <a name="example"></a>示例  
- 下面的示例使用 XML 格式化文件 `OPENROWSET` ，通过 `myTestOrder-c.txt` 大容量行集提供程序将数据文件 `myTestOrder` 中的数据导入示例表 `myTestOrder.xml` 中。 `INSERT... SELECT` 语句指定选择列表中的列。  
+ 下面的示例使用 XML 格式化文件 `OPENROWSET` ，通过 `myTestOrder-c.txt` 大容量行集提供程序将数据文件 `myTestOrder` 中的数据导入示例表 `myTestOrder.xml` 中。 
+  `INSERT... SELECT` 语句指定选择列表中的列。  
   
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中，执行下列代码：  
   
@@ -138,8 +140,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用格式化文件跳过表列 (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用格式化文件跳过表列 &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [使用格式化文件跳过数据字段 (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
   

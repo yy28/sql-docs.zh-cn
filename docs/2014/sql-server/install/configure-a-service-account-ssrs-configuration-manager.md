@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952586"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>配置服务帐户（SSRS 配置管理器）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中，报表服务器 Web 服务、报表管理器和后台处理应用程序在一个服务内运行。 运行该服务的帐户是在安装过程中定义的，即在“服务标识”页中指定的帐户；但是，如果希望使用不同的帐户或更改密码，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具。  
   
- 如果 Report Server 配置为使用 SharePoint 集成模式，并且您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具更改了服务帐户，则您还必须打开 SharePoint 管理中心并使用 "[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**授予数据库访问权限**" 页重新应用 Report Server 和实例设置。 此步骤向新服务帐户授予对 SharePoint 数据库的访问权限，这是将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 与 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]集成所必需的。  
+ 如果您的 Report Server 配置为使用 SharePoint 集成模式，并且您使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置工具更改了该服务帐户，则您还必须打开 SharePoint 管理中心并使用 " [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **授予数据库访问权限**" 页重新应用 "Report Server" 和 "实例" 设置。 此步骤向新服务帐户授予对 SharePoint 数据库的访问权限，这是将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 与 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]集成所必需的。  
   
  请始终使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具来更新服务帐户，以便可以同时更新依赖服务标识的其他设置。  
   
@@ -38,19 +38,19 @@ ms.locfileid: "71952586"
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到报表服务器。  
   
-2.  在“服务帐户”页上，选择描述您要使用的帐户类型的选项。 有关指定哪种帐户类型的建议，请参阅[配置报表服务器服务帐户&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+2.  在“服务帐户”页上，选择描述您要使用的帐户类型的选项。 有关指定哪种帐户类型的建议，请参阅[将报表服务器服务帐户 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)中。  
   
 3.  如果选择了一个 Windows 用户帐户，请指定新的帐户名和密码。 帐户名不能超过 20 个字符。  
   
      如果报表服务器部署在支持 Kerberos 身份验证的网络中，则必须使用刚刚指定的域用户帐户注册报表服务器服务主体名称 (SPN)。 有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
-4.  单击 **“应用”** 。  
+4.  单击“应用”  。  
   
-5.  当系统提示您备份对称密钥时，请键入对称密钥备份的文件名和位置，并键入用于锁定和解锁该文件的密码，然后单击 **“确定”** 。  
+5.  当系统提示您备份对称密钥时，请键入对称密钥备份的文件名和位置，并键入用于锁定和解锁该文件的密码，然后单击 **“确定”**。  
   
-6.  如果报表服务器使用该服务帐户连接到报表服务器数据库，则连接信息将更新为使用新的帐户或密码。 更新连接信息要求连接到数据库。 如果出现“ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **数据库连接”** 对话框，请输入拥有连接到数据库的权限的凭据，然后单击 **“确定”** 。  
+6.  如果报表服务器使用该服务帐户连接到报表服务器数据库，则连接信息将更新为使用新的帐户或密码。 更新连接信息要求连接到数据库。 如果出现“ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **数据库连接”** 对话框，请输入拥有连接到数据库的权限的凭据，然后单击 **“确定”**。  
   
-7.  当系统提示您还原对称密钥时，请键入在步骤 5 中指定的密码，并单击 **“确定”** 。  
+7.  当系统提示您还原对称密钥时，请键入在步骤 5 中指定的密码，并单击 **“确定”**。  
   
 8.  查看“结果”窗格中的状态消息以验证所有任务是否均已成功完成。  
   
@@ -66,8 +66,8 @@ ms.locfileid: "71952586"
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [配置报表服务器数据库连接（SSRS 配置管理器）](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [服务帐户&#40;SSRS 本机模式&#41; ](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
+ [&#40;SSRS Configuration Manager 配置报表服务器数据库连接&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [服务帐户 &#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

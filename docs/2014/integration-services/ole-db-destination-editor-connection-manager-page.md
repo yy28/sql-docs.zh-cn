@@ -1,5 +1,5 @@
 ---
-title: OLE DB 目标编辑器 （连接管理器页） |Microsoft Docs
+title: OLE DB 目标编辑器（"连接管理器" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,31 +15,31 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 436b758abdde0c05539bc17aabd2c11b240642df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057139"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>OLE DB 目标编辑器（“连接管理器”页）
   使用 **“OLE DB 目标编辑器”** 对话框的 **“连接管理器”** 页可以为目标选择 OLE DB 连接。 使用此页还可以选择数据库中的表或视图。  
   
 > [!NOTE]  
->  `CommandTimeout` OLE DB 目标属性不可用在**OLE DB 目标编辑器**，但可以通过使用设置**高级编辑器**。 另外，某些快速加载选项仅在 **“高级编辑器”** 中提供。 有关这些属性的详细信息，请参阅 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)的“OLE DB 目标”部分。  
+>  OLE DB `CommandTimeout`目标的属性在**OLE DB 目标编辑器**中不可用，但可以使用**高级编辑器**进行设置。 另外，某些快速加载选项仅在 **“高级编辑器”** 中提供。 有关这些属性的详细信息，请参阅 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)的“OLE DB 目标”部分。  
   
  若要了解有关 OLE DB 目标的详细信息，请参阅 [OLE DB Destination](data-flow/ole-db-destination.md)。  
   
 ## <a name="static-options"></a>静态选项  
  **“无缓存”**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”**** 创建一个新连接。  
   
  **新建**  
- 通过使用“配置 OLE DB 连接管理器”  对话框创建一个新连接管理器。  
+ 通过使用“配置 OLE DB 连接管理器”**** 对话框创建一个新连接管理器。  
   
  **数据访问模式**  
  指定向目标中加载数据的方法。 加载双字节字符集 (DBCS) 数据需要使用一个快速加载选项。 有关针对大容量插入进行了优化的快速加载数据访问模式的详细信息，请参阅 [OLE DB Destination](data-flow/ole-db-destination.md)。  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
 |表或视图|将数据加载到 OLE DB 目标中的表或视图。|  
 |表或视图 - 快速加载|将数据加载到 OLE DB 目标中的表或视图，并使用快速加载选项。 有关针对大容量插入进行了优化的快速加载数据访问模式的详细信息，请参阅 [OLE DB Destination](data-flow/ole-db-destination.md)。|  
@@ -65,7 +65,7 @@ ms.locfileid: "66057139"
   
 ### <a name="data-access-mode--table-or-view---fast-load"></a>数据访问模式 = 表或视图 – 快速加载  
  **表或视图的名称**  
- 使用此列表从数据库中选择表或视图，或单击“新建”  创建新表。  
+ 使用此列表从数据库中选择表或视图，或单击“新建”**** 创建新表。  
   
  **新建**  
  通过使用“创建表”  对话框创建一个新表。  
@@ -89,7 +89,7 @@ ms.locfileid: "66057139"
  指定每批中的行数。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
->  如果在“OLE DB 目标编辑器”  中清空此文本框，则表示不希望为此属性分配自定义值。  
+>  如果在“OLE DB 目标编辑器”**** 中清空此文本框，则表示不希望为此属性分配自定义值。  
   
  **最大插入提交大小**  
  指定 OLE DB 目标在快速加载操作期间尝试提交的批大小。 值为 **0** 表示在处理完所有行之后以单批方式提交所有数据。  
@@ -97,10 +97,10 @@ ms.locfileid: "66057139"
 > [!NOTE]  
 >  如果该 OLE DB 目标和其他数据流组件正在更新同一源表，则 **0** 值可能导致正在运行的包停止响应。 若要防止包停止，请将 **“最大插入提交大小”** 选项设置为 **2147483647**。  
   
- 如果为此属性提供一个值，目标将分批提交行，提交的行数是 (a) “最大插入提交大小”  与 (b) 当前正在处理的缓冲区中的剩余行数中的较小者。  
+ 如果为此属性提供一个值，目标将分批提交行，提交的行数是 (a) “最大插入提交大小”**** 与 (b) 当前正在处理的缓冲区中的剩余行数中的较小者。  
   
 > [!NOTE]  
->  目标中任何约束失败都将导致“最大插入提交大小”  所定义的整批行失败。  
+>  目标中任何约束失败都将导致“最大插入提交大小”**** 所定义的整批行失败。  
   
 ### <a name="data-access-mode--table-name-or-view-name-variable"></a>数据访问模式 = 表名变量或视图名变量  
  **变量名称**  
@@ -132,7 +132,7 @@ ms.locfileid: "66057139"
  指定每批中的行数。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
->  如果在“OLE DB 目标编辑器”  中清空此文本框，则表示不希望为此属性分配自定义值。  
+>  如果在“OLE DB 目标编辑器”**** 中清空此文本框，则表示不希望为此属性分配自定义值。  
   
  **最大插入提交大小**  
  指定 OLE DB 目标在快速加载操作期间尝试提交的批大小。 默认值为 **2147483647** ，表示在处理完所有行之后以单批方式提交所有数据。  
@@ -142,24 +142,24 @@ ms.locfileid: "66057139"
   
 ### <a name="data-access-mode--sql-command"></a>数据访问模式 = SQL 命令  
  **SQL 命令文本**  
- 输入 SQL 查询的文本，通过单击“生成查询”  来生成查询，或通过单击“浏览”  定位到包含查询文本的文件。  
+ 输入 SQL 查询的文本，通过单击“生成查询”**** 来生成查询，或通过单击“浏览”**** 定位到包含查询文本的文件。  
   
 > [!NOTE]  
 >  OLE DB 目标不支持参数。 如果需要执行参数化 INSERT 语句，请考虑使用 OLE DB 命令转换。 有关详细信息，请参阅 [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)。  
   
  **生成查询**  
- 使用“查询生成器”  对话框可直观地构造 SQL 查询。  
+ 使用“查询生成器”**** 对话框可直观地构造 SQL 查询。  
   
  **“浏览”**  
- 使用“打开”  对话框可定位到包含 SQL 查询文本的文件。  
+ 使用“打开”**** 对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  
  验证查询文本的语法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 目标编辑器（“映射”页）](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
- [OLE DB 目标编辑器（“错误输出”页）](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+ [OLE DB 目标编辑器 &#40;映射 "页&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [OLE DB 目标编辑器 &#40;错误输出页&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [通过使用 OLE DB 目标来加载数据](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

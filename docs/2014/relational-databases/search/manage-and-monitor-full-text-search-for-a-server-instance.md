@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011171"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理和监视服务器实例的全文搜索
@@ -56,7 +56,7 @@ ms.locfileid: "66011171"
   
          如果全文目录不可用，则会重新生成关联的全文检索。 此选项仅对 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 数据库可用。  
   
-         **Rebuild**  
+         **重新生成**  
          使用新的和增强的断字符重新生成全文目录。 重新生成索引可能需要一些时间，且升级后可能需要占用大量的 CPU 和内存。  
   
          **重置**  
@@ -72,13 +72,13 @@ ms.locfileid: "66011171"
   
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器实例全文属性及其相关的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数。  
   
-|属性|Description|函数|  
+|properties|说明|函数|  
 |--------------|-----------------|--------------|  
 |`IsFullTextInstalled`|全文组件是否安装在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前实例中。|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中是否注册并使用了操作系统断字符和筛选器。|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|指定全文引擎是否只加载已签名的二进制文件。|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> 监视全文搜索活动  
+##  <a name="monitor"></a>监视全文搜索活动  
  有几个动态管理视图和函数可用来监视服务器实例上的全文搜索活动。  
   
  **查看与正在进行填充活动的全文目录有关的信息**  
@@ -89,7 +89,7 @@ ms.locfileid: "66011171"
   
 -   [sys.dm_fts_fdhosts (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql)  
   
- **查看与正在进行的索引填充有关的信息**  
+ **查看有关正在进行的索引填充的信息**  
   
 -   [sys.dm_fts_index_population (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66011171"
   
 -   [sys.dm_fts_memory_buffers (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **查看可供全文爬网或全文爬网范围的全文收集器组件使用的共享内存池**  
+ **查看可供全文爬网或全文爬网范围的全文收集组件使用的共享内存池**  
   
 -   [sys.dm_fts_memory_pools (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66011171"
   
 -   [sys.dm_fts_outstanding_batches (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql)  
   
- **查看与正在进行的填充操作有关的特定范围的相关信息**  
+ **查看与正在进行的填充相关的特定范围的相关信息**  
   
 -   [sys.dm_fts_population_ranges (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql)  
   

@@ -10,25 +10,26 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014253"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
-  `CurvePolygon` 是由一个外部边界环以及零个或多个内环界定的在拓扑结构上闭合的图面。  
+  `CurvePolygon`是由外部边界环和零个或多个内部环定义的界定闭合封闭曲面  
   
 > [!IMPORTANT]  
->  有关详细的说明和中引入的空间功能的示例[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，其中包括`CurvePolygon`子类型，请下载白皮书[SQL Server 2012 中的新空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  有关中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]引入的空间功能的详细说明和示例（包括`CurvePolygon`子类型），请下载白皮书[SQL Server 2012 中的新的空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
- 下面的条件定义的属性`CurvePolygon`实例：  
+ 以下条件定义`CurvePolygon`实例的属性：  
   
 -   该 `CurvePolygon` 实例的边界由外环和所有内环界定。  
   
 -   该 `CurvePolygon` 实例的内部是外环和所有内环之间的空间。  
   
- `CurvePolygon` 实例不同于 `Polygon` 实例，因为 `CurvePolygon` 实例可以包含以下圆弧线段：`CircularString` 和 `CompoundCurve`。  
+ 
+  `CurvePolygon` 实例不同于 `Polygon` 实例，因为 `CurvePolygon` 实例可以包含以下圆弧线段：`CircularString` 和 `CompoundCurve`。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 实例  
  下图显示有效的 `CurvePolygon` 图形：  
@@ -55,7 +56,7 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` 已被接受，即使在起点和终点具有不同的 Z 值时也是如此，因为 Z 值被忽略。 `@g5` 已被接受，即使 `geography` 类型实例无效时也是如此。  
+ `@g3` 已被接受，即使在起点和终点具有不同的 Z 值时也是如此，因为 Z 值被忽略。 `@g5`接受，即使`geography`类型实例无效。  
   
  下面的示例引发 `System.FormatException`。  
   
@@ -77,7 +78,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  每个环都必须是可接受的曲线类型。  
   
- `CurvePolygon` 实例根据其是 `geometry` 还是 `geography` 数据类型，也需要满足特定的条件。  
+ `CurvePolygon`实例还需要满足特定的条件，具体取决于它们`geometry`是`geography`还是数据类型。  
   
 #### <a name="geometry-data-type"></a>geometry 数据类型  
  一个有效的 **geometryCurvePolygon** 实例必须具有以下属性：  
@@ -181,7 +182,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  @g1 和 @g2 都使用相同的外部边界环：一个半径为 5 的圆形，并且它们都使用一个正方形作为内环。  不过，实例 @g1 有效，而实例 @g2 却无效。  @g2 无效的原因在于内环将外环界定的内部空间拆分为四个单独的区域。  下图显示所发生的情况：  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Polygon](polygon.md)   
  [CircularString](circularstring.md)   
  [CompoundCurve](compoundcurve.md)   

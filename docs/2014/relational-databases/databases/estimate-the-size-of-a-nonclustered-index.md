@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054122"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估计非聚集索引的大小
@@ -37,7 +37,7 @@ ms.locfileid: "66054122"
   
 4.  对计算出的值求和。  
   
-## <a name="step-1-calculate-variables-for-use-in-steps-2-and-3"></a>步骤 1. 计算步骤 2 和步骤 3 中所用变量的值  
+## <a name="step-1-calculate-variables-for-use-in-steps-2-and-3"></a>步骤 1。 计算步骤 2 和步骤 3 中所用变量的值  
  可使用下列步骤计算所用变量的值以估计存储索引的较高级别所需的空间大小。  
   
 1.  指定表中显示的行数：  
@@ -181,7 +181,7 @@ ms.locfileid: "66054122"
   
 5.  计算索引行大小：  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1（对应于索引行的行标题开销）+ 6（对应于子页 ID 指针）  
+     ***Leaf_Row_Size***  = ****** Fixed_Leaf_Size + ****** Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 （用于索引行的行标题开销） + 6 （对应于子页 ID 指针）  
   
 6.  下一步，计算每页的索引行数（每页有 8096 个可用字节）：  
   
@@ -210,19 +210,19 @@ ms.locfileid: "66054122"
   
 1.  计算索引中的非叶级数：  
   
-     ***非叶级别***= 1 + 日志 Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***非叶级别***= 1 + 日志 Index_Rows_Per_Page （***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***）  
   
      将此值向上舍入到最接近的整数。 此值不包括非聚集索引的叶级别。  
   
 2.  计算索引中的非叶页数：  
   
-     ***Num_Index_Pages*** = level (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>级别</sup>) 其中 1 < = Level < =***级别***  
+     ***Num_Index_Pages*** = ∑ level （***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>level</sup>），其中 1 <= Level <***= level***  
   
      将每个被加数向上舍入到最接近的整数。 由于是个简单示例，请考虑使用 ***Num_Leaf_Pages*** = 1000 和 ***Index_Rows_Per_Page*** = 25 的索引。 页级别以上的第一个索引级别存储 1000 个索引行，即每个叶页一个索引行，每页可以包括 25 个索引行。 这意味着存储这 1000 个索引行需要 40 页。 下一级索引必须存储 40 行。 这意味着需要 2 页。 最后一级索引必须存储 2 行。 这意味着需要 1 页。 这就产生了 43 个非叶索引页。 如果将这些数用到前面的公式中，结果如下：  
   
-     ***Non-leaf_levels*** = 1 + log25 (1000年 / 25) = 3  
+     ***非 leaf_Levels*** = 1 + log25 （1000/25） = 3  
   
-     ***Num_Index_Pages*** = 1000年 /(25<sup>3</sup>) + 1000年 / (25<sup>2</sup>) + 1000年 / (25<sup>1</sup>) = 1 + 2 + 40 = 43，这是在示例中所述的页数。  
+     ***Num_Index_Pages*** = 1000/（25<sup>3</sup>） + 1000/（25<sup>2</sup>） + 1000/（25<sup>1</sup>） = 1 + 2 + 40 = 43，这是示例中所述的页数。  
   
 3.  计算索引的大小（每页总共有 8192 个字节）：  
   
@@ -255,7 +255,7 @@ ms.locfileid: "66054122"
   
      有关稀疏列的空间要求的信息，请参阅 [Use Sparse Columns](../tables/use-sparse-columns.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [描述的聚集索引和非聚集索引](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [创建非聚集索引](../indexes/create-nonclustered-indexes.md)   
  [创建聚集索引](../indexes/create-clustered-indexes.md)   

@@ -11,32 +11,32 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a68a050627d431570327822cccc60dd0aaf860b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107609"
 ---
 # <a name="security-report-builder"></a>安全性（报表生成器）
-  报表生成器是一类设计用来与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器配合使用的报表创作客户端应用程序。 可以将报表服务器配置为在本机模式中作为独立服务器运行，也可以将报表服务器配置为在 SharePoint 集成模式中运行以支持 SharePoint 站点上的报表。  
+  报表生成器是一种设计用于处理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Server 的报表创作客户端应用程序。 可以将报表服务器配置为在本机模式中作为独立服务器运行，也可以将报表服务器配置为在 SharePoint 集成模式中运行以支持 SharePoint 站点上的报表。  
   
  在报表生成器中，可以创作报表、共享数据集和可重用的报表部件。 可以从报表服务器或 SharePoint 站点中编辑报表和添加共享数据源、共享数据集和共享报表部件。  
   
  若要创作、发布和使用报表以及与报表相关的项，则应了解安全性功能是如何与以下几个方面相关的：  
   
--   **在其上发布报表的报表服务器或 SharePoint 站点** 这些功能由报表服务器管理员或 SharePoint 站点管理员管理。  
+-   **要在其中发布报表的 Report Server 或 SharePoint 站点**这些功能由 Report Server 管理员或 SharePoint 站点管理员管理。  
   
--   **已发布的报表以及与报表相关的项** ：与报表相关的项包括嵌入数据源和共享数据源及其凭据、共享数据集、参数、报表部件和报表模型。 应用于这些项的安全性功能由报表作者管理。 报表作者必须获得由报表服务器管理员或 SharePoint 站点管理员授予的足够权限，才能发布和共享项。  
+-   **已发布的报表和与报表相关的项**与报表相关的项包括嵌入数据源和共享数据源及其凭据、共享数据集、参数、报表部件和报表模型。 应用于这些项的安全性功能由报表作者管理。 报表作者必须获得由报表服务器管理员或 SharePoint 站点管理员授予的足够权限，才能发布和共享项。  
   
--   **报表使用的外部数据源** 这些功能由外部数据源的所有者管理。  
+-   **报表使用的外部数据源**这些功能由外部数据源的所有者管理。  
   
--   **基于外部数据源的报表模型** 这些功能由模型设计器管理。  
+-   **基于外部数据源的报表模型**这些功能由模型设计器管理。  
   
--   **交互式报表功能（如参数）** 这些功能由报表作者管理。  
+-   **交互式报表功能，如参数**这些功能由报表作者管理。  
   
  查看本主题中的信息，更好地了解如何使用安全性功能来帮助管理和保护报表以及与报表相关的项。  
   
-##  <a name="ReportServers"></a> 了解报表服务器的安全性  
+##  <a name="ReportServers"></a>了解报表服务器的安全性  
  发布报表和查看报表是需要特权的操作。 报表服务器管理员授予权限以确保只有得到授权的用户才能在下列某个类型的报表服务器上发布和查看报表：  
   
 -   在本机模式中配置的报表服务器  
@@ -57,7 +57,7 @@ ms.locfileid: "66107609"
   
 =
   
-##  <a name="Reports"></a> 了解已发布的报表以及与报表相关的项的安全性  
+##  <a name="Reports"></a>了解已发布的报表和与报表相关的项的安全性  
  报表以及与报表相关的项的安全性由报表服务器管理员管理。 与报表相关的项包括嵌入数据源和共享数据源（包括凭据、共享数据集、参数、报表部件和模型）。  
   
  在报表服务器或 SharePoint 站点上，可以单独保护报表以及与报表相关的项和操作。 通过安全策略来授予项和操作的访问权限，这些策略可映射拥有与项相关的某个权限级别的用户帐户或组帐户。 为了降低维护大量策略所带来的复杂性和管理负担，容器（如文件夹）的权限由容器中的项来继承。 例如，如果用户具有某个文件夹的特定“查看报表”权限，则用户具有该文件夹中的项的“查看报表”权限。  
@@ -68,9 +68,9 @@ ms.locfileid: "66107609"
   
  为了让其他人能够浏览并找到您已发布的共享项，您必须与报表服务器管理员协作，设置用于为您的用户提供访问权的文件夹组织。 创作报表和运行已发布的报表时必须具有访问权。  
   
- 有关详细信息，请参阅 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
+ 有关详细信息，请参阅 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
--   [角色和权限 (Reporting Services)](../security/roles-and-permissions-reporting-services.md)  
+-   [角色和权限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  
   
 -   [管理共享数据集](../report-data/manage-shared-datasets.md)  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66107609"
   
 =  
   
-##  <a name="Data"></a> 了解报表数据和外部数据源的安全性  
+##  <a name="Data"></a>了解报表数据和外部数据源的安全性  
  若要在报表中访问来自每个外部数据源的数据，请在报表中创建嵌入数据源或添加对共享数据源或共享数据集的引用。  
   
  对于每个外部数据源，您必须提供足以用来访问源和基础数据的凭据。 数据源所有者将指定用于提供此访问的凭据的类型。  
@@ -94,7 +94,7 @@ ms.locfileid: "66107609"
   
  在报表设计时，凭据用于运行数据集查询和预览报表。 在运行时，凭据用于运行报表和缓存查询结果。 也可以单独缓存数据集查询结果。 设计时凭据和运行时凭据可能不同。 有关详细信息，请参阅 [在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。  
   
- 有关保护数据的详细信息，请参阅 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
+ 有关保护数据的详细信息，请参阅 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
@@ -102,14 +102,14 @@ ms.locfileid: "66107609"
   
 =
   
-##  <a name="Models"></a> 了解模型和安全筛选器  
+##  <a name="Models"></a>了解模型和安全筛选器  
  在从基于外部数据的报表模型中检索数据时，可以在该模型中应用安全筛选器。这是保护数据的好方法，使每个运行报表的用户只能看到其有权使用的数据。  
   
  报表参数不能提供行级安全性；它们并不防止用户或用户组查看特定的数据行。 若要对报表中显示的数据应用安全性，必须使用安全筛选器或模型项安全性。  
   
 =
   
-##  <a name="Interactive"></a> 了解为报表创作交互式功能的安全性  
+##  <a name="Interactive"></a>了解用于交互式功能的报表创作的安全性  
  报表经常会使用参数，使用户能够以交互方式自定义其报表视图。 使用以下提示可帮助设计遵循良好实践的报表：  
   
 -   除非您提供了有效的值，否则不要使用基于查询参数且类型为 **Text** 的参数。 可用值列表可帮助用户只选择有效值。 如果不使用可用值列表，则无法限制用户可输入的值。  
@@ -120,8 +120,8 @@ ms.locfileid: "66107609"
   
  
   
-## <a name="see-also"></a>请参阅  
- [安装、 卸载和报表生成器支持](../install-uninstall-and-report-builder-support.md)   
+## <a name="see-also"></a>另请参阅  
+ [安装、卸载和报表生成器支持](../install-uninstall-and-report-builder-support.md)   
  [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

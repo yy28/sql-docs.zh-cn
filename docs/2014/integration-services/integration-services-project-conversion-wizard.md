@@ -13,70 +13,71 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057979"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services 项目转换向导
+  
   **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。  
   
 > [!NOTE]  
->  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到可由项目中的包共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [添加、 删除或共享连接管理器在包中](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)。  
+>  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到可由项目中的包共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)。  
   
  **您希望做什么？**  
   
--   [打开“Integration Services 项目转换向导”](#open_dialog)  
+-   [打开 Integration Services 项目转换向导](#open_dialog)  
   
--   [设置“查找包”页上的选项](#locate)  
+-   [设置 "查找包" 页上的选项](#locate)  
   
--   [设置“选择包”页上的选项](#selectPackages)  
+-   [设置 "选择包" 页上的选项](#selectPackages)  
   
--   [设置“选择目标”页上的选项](#destination)  
+-   [设置 "选择目标" 页上的选项](#destination)  
   
--   [设置“指定项目属性”页上的选项](#projectProperties)  
+-   [设置 "指定项目属性" 页上的选项](#projectProperties)  
   
--   [设置“更新执行包任务”页上的选项](#executePackage)  
+-   [设置 "更新执行包任务" 页上的选项](#executePackage)  
   
--   [设置“选择配置”页上的选项](#configurations)  
+-   [设置 "选择配置" 页上的选项](#configurations)  
   
--   [设置“创建参数”页上的选项](#createParameters)  
+-   [设置 "创建参数" 页上的选项](#createParameters)  
   
--   [设置“配置参数”页上的选项](#configureParameters)  
+-   [设置 "配置参数" 页上的选项](#configureParameters)  
   
--   [设置“检查”页上的选项](#review)  
+-   [设置 "检查" 页上的选项](#review)  
   
 -   [设置执行转换的选项](#conversion)  
   
-##  <a name="open_dialog"></a> 打开“Integration Services 项目转换向导”  
+##  <a name="open_dialog"></a>打开 Integration Services 项目转换向导  
  执行下列操作之一以打开 **“Integration Services 项目转换”** 向导。  
   
--   在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中打开该项目，然后在解决方案资源管理器中，右键单击该项目并单击“转换为项目部署模型”  。  
+-   在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中打开该项目，然后在解决方案资源管理器中，右键单击该项目并单击“转换为项目部署模型”****。  
   
--   从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击“项目”  节点并选择“导入包”  。  
+-   从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击“项目”**** 节点并选择“导入包”****。  
   
  根据您是从 **还是从** 运行 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] “Integration Services 项目转换向导” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，该向导将执行不同的转换任务。 有关详细信息，请参阅 [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)。  
   
-##  <a name="locate"></a> 设置“查找包”页上的选项  
+##  <a name="locate"></a>设置 "查找包" 页上的选项  
   
 > [!NOTE]  
->  只有在从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]运行该向导时，“查找包”  页才可用。  
+>  只有在从 **运行该向导时，“查找包”**[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]页才可用。  
   
- 在“源”下拉列表中选择“文件系统”时，该页显示以下选项   。 当包驻留在文件系统中时选择此选项。  
+ 在“源”下拉列表中选择“文件系统”时，该页显示以下选项********。 当包驻留在文件系统中时选择此选项。  
   
  **文件夹**  
- 键入包路径，或通过单击“浏览”  导航到该包。  
+ 键入包路径，或通过单击“浏览”**** 导航到该包。  
   
- 在“源”下拉列表中选择“SSIS 包存储区”时，该页显示以下选项   。 有关包存储区的详细信息，请参阅[包管理（SSIS 服务）](service/package-management-ssis-service.md)。  
+ 在“源”下拉列表中选择“SSIS 包存储区”时，该页显示以下选项********。 有关包存储区的详细信息，请参阅[包管理（SSIS 服务）](service/package-management-ssis-service.md)。  
   
  **Server**  
  键入服务器名称或选择该服务器。  
   
  **文件夹**  
- 键入包路径，或通过单击“浏览”  导航到该包。  
+ 键入包路径，或通过单击“浏览”**** 导航到该包。  
   
- 在“源”下拉列表中选择“Microsoft SQL Server”时，该页显示以下选项   。 当包驻留在 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中时选择此选项。  
+ 在“源”下拉列表中选择“Microsoft SQL Server”时，该页显示以下选项********。 当包驻留在 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中时选择此选项。  
   
  **Server**  
  键入服务器名称或选择该服务器。  
@@ -90,39 +91,39 @@ ms.locfileid: "66057979"
  **用户名**  
  使用 SQL Server 身份验证时，指定用户名。  
   
- **密码**  
+ **权限**  
  使用 SQL Server 身份验证时，提供密码。  
   
  **文件夹**  
- 键入包路径，或通过单击“浏览”  导航到该包。  
+ 键入包路径，或通过单击“浏览”**** 导航到该包。  
   
-##  <a name="selectPackages"></a> 设置“选择包”页上的选项  
+##  <a name="selectPackages"></a>设置 "选择包" 页上的选项  
  **包名称**  
  列出包文件。  
   
- **“状态”**  
+ **Status**  
  指示包是否已准备好转换为项目部署模型。  
   
- **Message**  
+ **消息**  
  显示与包关联的消息。  
   
- **密码**  
+ **权限**  
  显示与包关联的密码。 密码文本将被隐藏。  
   
  **应用于所选内容**  
- 单击以将“密码”  文本框中的密码应用于一个或多个所选包。  
+ 单击以将“密码”**** 文本框中的密码应用于一个或多个所选包。  
   
- **刷新**  
+ **“刷新”**  
  刷新包的列表。  
   
-##  <a name="destination"></a> 设置“选择目标”页上的选项  
+##  <a name="destination"></a>设置 "选择目标" 页上的选项  
  在此页上，指定新的项目部署文件 (.ispac) 的名称和路径或者选择一个现有文件。  
   
 > [!NOTE]  
->  只有在从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 运行该向导时，“选择目标”  页才可用。  
+>  只有在从 ** 运行该向导时，“选择目标”**[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]页才可用。  
   
  **输出路径**  
- 键入部署文件的路径，或通过单击“浏览”  导航到该文件。  
+ 键入部署文件的路径，或通过单击“浏览”**** 导航到该文件。  
   
  **项目名称**  
  键入项目名称。  
@@ -133,10 +134,10 @@ ms.locfileid: "66057979"
  **项目说明**  
  键入项目的可选说明。  
   
-##  <a name="projectProperties"></a> 设置“指定项目属性”页上的选项  
+##  <a name="projectProperties"></a>设置 "指定项目属性" 页上的选项  
   
 > [!NOTE]  
->  只有在从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]运行该向导时，“指定项目属性”  页才可用。  
+>  只有在从 **运行该向导时，“指定项目属性”**[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]页才可用。  
   
  **项目名称**  
  列出项目名称。  
@@ -147,7 +148,7 @@ ms.locfileid: "66057979"
  **项目说明**  
  键入可选的项目说明。  
   
-##  <a name="executePackage"></a> 设置“更新执行包任务”页上的选项  
+##  <a name="executePackage"></a>设置 "更新执行包任务" 页上的选项  
  更新包中所含的执行包任务，以使用基于项目的引用。 有关详细信息，请参阅 [Execute Package Task Editor](../../2014/integration-services/execute-package-task-editor.md)。  
   
  **父包**  
@@ -162,36 +163,36 @@ ms.locfileid: "66057979"
  **分配引用**  
  选择存储在项目中的子包。  
   
-##  <a name="configurations"></a> 设置“选择配置”页上的选项  
+##  <a name="configurations"></a>设置 "选择配置" 页上的选项  
  选择您要用参数替换的包配置。  
   
- **“包”**  
+ **包**  
  列出包文件。  
   
- **类型**  
+ 类型   
  列出配置类型，如 XML 配置文件。  
   
  **配置字符串**  
  列出配置文件的路径。  
   
- **“状态”**  
+ **Status**  
  显示配置的状态消息。 单击该消息可以查看整个消息文本。  
   
  **添加配置**  
  将在其他项目中包含的包配置添加到要用参数替换的可用配置的列表中。 您可以选择存储在文件系统或 SQL Server 中的配置。  
   
- **刷新**  
+ **“刷新”**  
  单击以刷新配置列表。  
   
- **在转换后删除所有包的配置**  
+ **转换后删除所有包的配置**  
  建议通过选择此选项从项目中删除所有配置。  
   
  如果没有选择此选项，将只删除已选择用参数替换的配置。  
   
-##  <a name="createParameters"></a> 设置“创建参数”页上的选项  
+##  <a name="createParameters"></a>设置 "创建参数" 页上的选项  
  选择每个配置属性的参数名称和作用域。  
   
- **“包”**  
+ **包**  
  列出包文件。  
   
  **参数名称**  
@@ -200,14 +201,14 @@ ms.locfileid: "66057979"
  **范围**  
  选择参数的作用域（包或项目）。  
   
-##  <a name="configureParameters"></a> 设置“配置参数”页上的选项  
+##  <a name="configureParameters"></a>设置 "配置参数" 页上的选项  
  **名称**  
  列出参数名称。  
   
  **范围**  
  列出参数的作用域。  
   
- **ReplTest1**  
+ **值**  
  列出参数值。  
   
  单击值字段旁边的省略号按钮以配置参数属性。  
@@ -216,21 +217,22 @@ ms.locfileid: "66057979"
   
  您可以通过单击参数旁的“浏览”按钮，在 **的** “配置” **对话框的** “参数” [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]页中修改值。 将显示 **“设置参数值”** 对话框。  
   
- **“设置参数详细信息”** 对话框还列出参数值的数据类型和参数的来源。  
+ 
+  **“设置参数详细信息”** 对话框还列出参数值的数据类型和参数的来源。  
   
-##  <a name="review"></a> 设置“检查”页上的选项  
- 使用“检查”页可以确认为项目转换选择的选项  。  
+##  <a name="review"></a>设置 "检查" 页上的选项  
+ 使用“检查”页可以确认为项目转换选择的选项****。  
   
- **上一篇**  
+ **以前**  
  单击以更改选项。  
   
  **转换**  
  单击以将项目转换为项目部署模型。  
   
-##  <a name="conversion"></a> 设置执行转换的选项  
+##  <a name="conversion"></a>设置执行转换的选项  
  “执行转换”页显示项目转换的状态。  
   
- **操作**  
+ **Action**  
  列出特定的转换步骤。  
   
  **结果**  
@@ -238,10 +240,10 @@ ms.locfileid: "66057979"
   
  直到在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中保存项目后，才保存项目转换。  
   
- **保存报告**  
+ **保存报表**  
  单击以在 .xml 文件中保存项目转换的摘要。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db039658fa292976062426268234d3978c1b32ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483006"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>显式层次结构 (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "65483006"
  显式层次结构可以是不规则的，这意味着层次结构可以同时在不同级别结束。 每个合并成员下面可以有不限数目的合并成员和叶成员，也可以没有任何成员。 叶成员可以在单个合并成员下，也可以在多个级别的合并成员下。  
   
 > [!NOTE]  
->  在创建显式层次结构前，必须为显式层次结构启用了实体。 有关详细信息，请参阅[为显式层次结构和集合启用实体&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。  
+>  在创建显式层次结构前，必须为显式层次结构启用了实体。 有关详细信息，请参阅为[显式层次结构和集合启用实体 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。  
   
 ## <a name="types-of-explicit-hierarchies"></a>显式层次结构的类型  
  显式层次结构有两种类型：强制和非强制。  
@@ -39,7 +39,7 @@ ms.locfileid: "65483006"
  强制显式层次结构要求所有叶成员必须包含在层次结构树中。 默认情况下，所有成员都包含在该树的根上。 您可以根据需要重新排列成员。  
   
 ### <a name="non-mandatory-explicit-hierarchy"></a>非强制显式层次结构  
- 非强制显式层次结构是所有叶成员都处于系统创建的“未使用”  节点中的层次结构。 可以根据需要将成员移出此节点。 其余成员可以保留在 **“未使用”** 节点中。  
+ 非强制显式层次结构是所有叶成员都处于系统创建的“未使用”**** 节点中的层次结构。 可以根据需要将成员移出此节点。 其余成员可以保留在 **“未使用”** 节点中。  
   
  使用非强制显式层次结构时，对层次结构所做的任何报告或分析可能与对强制层次结构所做的报告或分析不一致。  
   
@@ -69,11 +69,11 @@ ms.locfileid: "65483006"
 |可以是不规则的|始终包含一致的级别数|  
   
 ## <a name="explicit-hierarchy-example"></a>显式层次结构示例  
- 在以下示例中，Product 实体包含这些叶成员：BK-M101 {Mountain-100}、BK-M201 {Mountain-200}、BK-M301 {Mountain-300}、BK-R150 {Road-150}、BK-R450 {Road-450} 和 BK-R650 {Road-650}。  
+ 在下面的示例中，Product 实体包含以下叶成员：BK-M101 {Mountain-100}、BK-M201 {Mountain-200}、BK-M301 {Mountain-300}、BK-R150 {Road-150}、BK-R450 {Road-450} 和 BK-R650 {Road-650}。  
   
  若要在特定的合并点汇总这些叶成员，您可以在 Product 实体中创建合并成员。 在要汇总叶成员的层次结构树的级别中插入合并成员。 对插入合并成员的位置没有限制，但是每个成员（叶成员或合并成员）只能使用一次。  
   
- ![山地车显式层次结构示例](../../2014/master-data-services/media/mds-conc-explicit-hierarchy.gif "Mountain Bike Explicit Hierarchy Example")  
+ ![山地车显式层次结构示例](../../2014/master-data-services/media/mds-conc-explicit-hierarchy.gif "山地车显式层次结构示例")  
   
  合并成员可用于将任何级别的成员分组，叶成员和合并成员按您确定的顺序排序。  
   
@@ -81,16 +81,16 @@ ms.locfileid: "65483006"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|为显式层次结构和集合启用实体。|[为显式层次结构和集合启用实体&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|创建新的显式层次结构。|[创建显式层次结构 (Master Data Services)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|更改现有显式层次结构的名称。|[更改显式层次结构名称 (Master Data Services)](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|删除现有显式层次结构。|[删除显式层次结构 (Master Data Services)](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|为显式层次结构和集合启用实体。|[为显式层次结构和集合启用实体 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|创建新的显式层次结构。|[创建显式层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|更改现有显式层次结构的名称。|[更改显式层次结构名称 &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|删除现有显式层次结构。|[删除显式层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>相关内容  
   
--   [派生层次结构 (Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+-   [派生层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [集合 (Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
+-   [集合 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

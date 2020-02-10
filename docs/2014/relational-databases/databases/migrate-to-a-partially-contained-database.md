@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e535935da5c99668e39ab4f84eb98ccd5bab064
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871723"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -43,7 +43,7 @@ ms.locfileid: "62871723"
   
 -   复查为了部分包含的数据库而修改的数据库功能的列表。 有关详细信息，请参阅[经过修改的功能（包含的数据库）](modified-features-contained-database.md)。  
   
--   若要在数据库中查找非包含的对象或功能，请查询 [sys.dm_db_uncontained_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql)。 有关详细信息，请参阅  
+-   若要在数据库中查找非包含的对象或功能，请查询 [sys.dm_db_uncontained_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) 。 有关详细信息，请参阅  
   
 -   监视 **database_uncontained_usage** XEvent 以了解何时使用非包含的功能。  
   
@@ -61,7 +61,7 @@ GO
 ```  
   
 #### <a name="enabling-contained-databases-using-management-studio"></a>使用 Management Studio 启用包含的数据库  
- 下面的示例对[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
+ 下面的示例对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
   
 1.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”  。  
   
@@ -117,8 +117,8 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Contained Databases](contained-databases.md)   
+## <a name="see-also"></a>另请参阅  
+ [包含的数据库](contained-databases.md)   
  [sp_migrate_user_to_contained (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql)   
  [sys.dm_db_uncontained_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql)  
   

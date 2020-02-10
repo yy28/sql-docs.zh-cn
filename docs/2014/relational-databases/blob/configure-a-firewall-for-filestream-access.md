@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fff59c773e4c96b8d14cf604c1a9a3e2b31869f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010313"
 ---
 # <a name="configure-a-firewall-for-filestream-access"></a>将防火墙配置为进行 FILESTREAM 访问
@@ -27,7 +27,7 @@ ms.locfileid: "66010313"
   
 1.  在“控制面板”中，打开 **“Windows 防火墙”** 。  
   
-2.  在左窗格中，单击 **“高级设置”** 。 如果系统提示您输入管理员密码或进行确认，请键入密码或提供确认。  
+2.  在左窗格中，单击 **“高级设置”** 。 如果系统提示需要管理员密码或确认，请键入密码或进行确认。  
   
 3.  在 **“高级安全 Windows 防火墙”** 对话框的左窗格中，单击 **“入站规则”** ，然后在右窗格中单击 **“新建规则”** 。  
   

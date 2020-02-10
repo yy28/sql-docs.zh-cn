@@ -22,17 +22,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056886"
 ---
 # <a name="package-configurations"></a>包配置
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供可用于在运行时更新属性值的包配置。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供可用于在运行时更新属性值的包配置。  
   
 > [!NOTE]  
->  配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [部署的项目和包](packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+>  配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  配置是添加到已完成包中的属性/值对。 通常，在包开发期间您在包对象上创建包设置属性，然后将配置添加到包中。 当包运行时，它从配置中获取新的属性值。 例如，通过使用配置，您可以更改连接管理器的连接字符串，或者更新变量的值。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66056886"
   
 -   配置可以使包更加灵活。 例如，配置可以更新在属性表达式中使用的变量的值。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支持几种不同的存储包配置（例如 XML 文件、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的表以及环境变量和包变量）的方法。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]支持多种不同的存储包配置的方法，例如 XML 文件、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库中的表以及环境和包变量。  
   
  每个配置都是一个属性/值对。 XML 配置文件和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置类型可以包括多个配置。  
   
@@ -55,7 +55,8 @@ ms.locfileid: "66056886"
   
  在实用工具加载和运行包时，事件的发生顺序如下：  
   
-1.  **dtexec** 实用工具加载包。  
+1.  
+  **dtexec** 实用工具加载包。  
   
 2.  该实用工具应用设计时在包中指定的配置，并根据在包中指定的顺序应用。 （唯一的例外是父包变量配置。 该实用工具仅应用一次这些配置，并且是在过程的后面应用。）  
   
@@ -67,7 +68,8 @@ ms.locfileid: "66056886"
   
 6.  该实用工具运行包。  
   
- **dtexec** 实用工具应用配置的方式会影响以下命令行选项：  
+ 
+  **dtexec** 实用工具应用配置的方式会影响以下命令行选项：  
   
 -   在运行时，可以使用 **/Connection** 或 **/Set** 选项从在设计时指定的位置之外的某个位置加载包配置。  
   
@@ -79,18 +81,19 @@ ms.locfileid: "66056886"
   
 -   不能使用 **/ConfigFile** 选项加载用来替换在设计时指定的配置的配置。  
   
- 有关这些选项以及这些选项的行为之间的区别的详细信息[!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]和早期版本中，请参阅[SQL Server 2014 中 Integration Services 功能的行为更改](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)。  
+ 有关这些选项的详细信息以及这些选项的行为与早期版本的不同[!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]之处，请参阅[SQL Server 2014 中 Integration Services 功能的行为更改](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)。  
   
 ## <a name="package-configuration-types"></a>包配置类型  
  下表介绍了包配置的类型。  
   
-|类型|描述|  
+|类型|说明|  
 |----------|-----------------|  
 |XML 配置文件|XML 文件包含配置。 XML 文件可以包括多个配置。|  
 |环境变量|环境变量包含配置。|  
 |注册表项|注册表项包含配置。|  
 |父包变量|包中的变量包含配置。 此配置类型通常用于更新子包中的属性。|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的表包含配置。 表可以包括多个配置。|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据表|
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的表包含配置。 表可以包括多个配置。|  
   
 ### <a name="xml-configuration-files"></a>XML 配置文件  
  如果选择 **“XML 配置文件”** 配置类型，您可以创建一个新的配置文件；重用现有文件并添加新的配置；也可以重用现有文件但覆盖现有文件的内容。  
@@ -101,7 +104,7 @@ ms.locfileid: "66056886"
   
 -   包含有关每个配置的信息的配置元素。 此元素包括的特性有属性路径和属性的配置值等。  
   
- 下列 XML 代码说明了 XML 配置文件的语法。 此示例显示了一个名为 `MyVar`的整数变量的 Value 属性配置。  
+ 下列 XML 代码说明了 XML 配置文件的语法。 此示例显示了一个名为 `MyVar` 的整数变量的 Value 属性配置。  
   
 ```  
 <?xml version="1.0"?>  
@@ -144,7 +147,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  您为配置提供的名称就是在 **ConfigurationFilter** 列中存储的值。  
   
 ## <a name="direct-and-indirect-configurations"></a>直接配置和间接配置  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了直接配置和间接配置。 如果直接指定配置， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会在配置项和包对象属性之间创建直接链接。 如果源的位置不更改，则直接配置是较好的选择。 例如，如果确定包中的所有部署都使用相同的文件路径，则可以指定一个 XML 配置文件。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供直接和间接配置。 如果直接指定配置， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会在配置项和包对象属性之间创建直接链接。 如果源的位置不更改，则直接配置是较好的选择。 例如，如果确定包中的所有部署都使用相同的文件路径，则可以指定一个 XML 配置文件。  
   
  间接配置使用环境变量。 配置不直接指定配置设置，而是指向环境变量，环境变量又包含配置值。 如果对于包的每个部署，配置的位置都可以更改，则使用间接配置是较好的选择。  
   
@@ -155,8 +158,8 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 -   msdn.microsoft.com 上的技术文章 [理解 Integration Services 包配置](https://go.microsoft.com/fwlink/?LinkId=165643)  
   
--   博客文章[代码的包配置中创建包](https://go.microsoft.com/fwlink/?LinkId=217663)，www.sqlis.com 上的。  
+-   Www.sqlis.com 上的博客文章[在代码包配置中创建包](https://go.microsoft.com/fwlink/?LinkId=217663)。  
   
--   博客文章[API 示例-以编程方式将配置文件添加到包](https://go.microsoft.com/fwlink/?LinkId=217664)，blogs.msdn.com 上的。  
+-   Blogs.msdn.com 上的博客文章[API 示例-以编程方式将配置文件添加到包](https://go.microsoft.com/fwlink/?LinkId=217664)。  
   
   

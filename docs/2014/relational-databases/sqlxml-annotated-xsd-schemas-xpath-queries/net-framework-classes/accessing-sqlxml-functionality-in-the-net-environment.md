@@ -1,5 +1,5 @@
 ---
-title: 在.NET 环境中访问 SQLXML 功能 |Microsoft Docs
+title: 在 .NET 环境中访问 SQLXML 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d4055c52f8d7a9401bf3c9b89754db831d94bb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012569"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>在 .NET 环境中访问 SQLXML 功能
-  此示例演示：  
+  此示例显示：  
   
--   如何使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML 托管类 (Microsoft.Data.SqlXml) 访问 Microsoft[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 环境。  
+-   如何使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 托管类（node.js）在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 环境中访问 Microsoft。  
   
 -   在 .NET Framework 环境中生成的 DiffGram 如何向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表应用数据更新。  
   
- 在此应用程序中，XPath 查询是针对 XSD 架构执行的。 执行 XPath 查询返回的联系人数据包含的 XML 文档 (**FirstName**， **LastName**)。 应用程序在 .NET Framework 环境中将 XML 文档加载到数据集。 修改该数据集中的数据：对于数据集中的第一个联系人，该联系人的名字被更改为“Susan”。 从该数据集生成 DiffGram，然后将在 DiffGram 中指定的更新（雇员名字的更改）应用到 Person.Contact 表。  
+ 在此应用程序中，XPath 查询是针对 XSD 架构执行的。 XPath 查询的执行将返回一个由联系人数据（**FirstName**， **LastName**）组成的 XML 文档。 应用程序在 .NET Framework 环境中将 XML 文档加载到数据集。 修改该数据集中的数据：对于数据集中的第一个联系人，该联系人的名字被更改为“Susan”。 从该数据集生成 DiffGram，然后将在 DiffGram 中指定的更新（雇员名字的更改）应用到 Person.Contact 表。  
   
 > [!NOTE]  
 >  在该代码中，必须在连接字符串中提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  
@@ -70,7 +70,7 @@ class Test
 }  
 ```  
   
- **若要测试示例：**  
+ **测试示例：**  
   
  若要测试该示例，必须在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework。  
   

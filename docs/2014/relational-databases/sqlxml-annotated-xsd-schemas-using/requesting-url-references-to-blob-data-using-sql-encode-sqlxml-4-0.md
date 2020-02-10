@@ -1,5 +1,5 @@
 ---
-title: 请求 URL 引用 BLOB 数据使用 sql： 进行编码 (SQLXML 4.0) |Microsoft Docs
+title: 使用 sql：加码请求对 BLOB 数据的 URL 引用（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013733"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>使用 sql:encode 请求 BLOB 数据的 URL 引用 (SQLXML 4.0)
@@ -31,11 +31,13 @@ ms.locfileid: "66013733"
   
  如果希望在稍后使用返回的数据引用 (URI) 来检索二进制格式的 BLOB 数据，请指定 `sql:encode` 批注。 您可以针对简单类型的属性或元素指定 `sql:encode`。  
   
- 指定 `sql:encode` 批注以指示应返回字段的 URL，而非字段的值。 `sql:encode` 根据主键来在 URL 中生成单一选择。 可以使用指定的主键`sql:key-fields`批注。  
+ 指定 `sql:encode` 批注以指示应返回字段的 URL，而非字段的值。 
+  `sql:encode` 根据主键来在 URL 中生成单一选择。 可以使用`sql:key-fields`批注指定主键。  
   
  可以为 `sql:encode` 批注分配“url”或“default”值。 值为“default”将返回 Base 64 编码格式的数据。  
   
- `sql:encode` 批注不能与 `sql:use-cdata` 一起使用，也不能用于 ID、IDREF、IDREFS、NMTOKEN 或 NMTOKENS 属性类型。 它还不能使用与 XSD**修复**属性。  
+ 
+  `sql:encode` 批注不能与 `sql:use-cdata` 一起使用，也不能用于 ID、IDREF、IDREFS、NMTOKEN 或 NMTOKENS 属性类型。 它也不能用于 XSD**固定**属性。  
   
 > [!NOTE]  
 >  BLOB 类型的列不能用作键或外键的一部分。  
@@ -44,7 +46,7 @@ ms.locfileid: "66013733"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. 指定 sql:encode 以获取对 BLOB 数据的 URL 引用  
- 在此示例中，指定映射架构`sql:encode`上**LargePhoto**属性来检索 （而不是检索 Base 64 编码格式的二进制数据） 的特定产品照片的 URI 引用。  
+ 在此示例中，映射架构指定`sql:encode` **LargePhoto**属性以检索对特定产品照片的 URI 引用（而不是以64编码格式检索二进制数据）。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -60,7 +62,7 @@ ms.locfileid: "66013733"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 sqlEncode.xml。  
   
@@ -84,7 +86,7 @@ ms.locfileid: "66013733"
   
      有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

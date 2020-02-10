@@ -1,5 +1,5 @@
 ---
-title: Foreach 循环编辑器 （常规页） |Microsoft Docs
+title: Foreach 循环编辑器（"常规" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058523"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Foreach 循环编辑器（“常规”页）
@@ -34,10 +34,10 @@ ms.locfileid: "66058523"
  **说明**  
  键入对 Foreach 循环容器的说明。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Foreach 循环编辑器&#40;集合页面&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Foreach 循环编辑器&#40;变量映射页&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
+ [Foreach 循环编辑器 &#40;收集页面&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
+ [Foreach 循环编辑器 &#40;的 "变量映射" 页&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [“表达式”页](expressions/expressions-page.md)   
  [Foreach 循环容器](control-flow/foreach-loop-container.md)   
  [For 循环容器](control-flow/for-loop-container.md)  

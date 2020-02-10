@@ -22,16 +22,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056828"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>包安装向导 UI 参考
   可以使用 **“包安装向导”** 部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目（包括包、所包含的杂项文件以及所有包的依赖关系）。  
   
- 在部署包之前，可以先创建配置，然后再将其与包一起进行部署。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在运行时使用配置来动态更新包和包对象的属性。 例如，通过提供将值映射到包含连接字符串的属性的配置，可在运行时动态设置 OLE DB 连接的连接字符串。  
+ 在部署包之前，可以先创建配置，然后再将其与包一起进行部署。 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在运行时使用配置来动态更新包和包对象的属性。 例如，通过提供将值映射到包含连接字符串的属性的配置，可在运行时动态设置 OLE DB 连接的连接字符串。  
   
  只有在生成 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目并创建部署实用工具后，方可运行包安装向导。 有关详细信息，请参阅 [Deploy Packages by Using the Deployment Utility](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "66056828"
  **不再显示此起始页**  
  选择此选项可以在下次运行向导时跳过起始页。  
   
- **Next**  
+ **一个**  
  转到向导的下一页。  
   
  **“完成”**  
@@ -58,16 +59,16 @@ ms.locfileid: "66056828"
   
  **相关主题：** [创建包配置](../../2014/integration-services/create-package-configurations.md)  
   
- **路径**  
+ **通道**  
  查看要配置的属性的路径。  
   
- **类型**  
+ 类型   
  查看属性的数据类型。  
   
- **ReplTest1**  
+ **值**  
  指定配置的值。  
   
- **Next**  
+ **一个**  
  转到向导的下一页。  
   
  **“完成”**  
@@ -76,10 +77,10 @@ ms.locfileid: "66056828"
 ## <a name="confirm-installation-page"></a>“确认安装”页  
  可以使用 **“确认安装”** 页开始安装包，查看状态以及查看向导用于从指定项目中安装文件的信息。  
   
- **Next**  
+ **一个**  
  安装包及其相关文件，并在完成安装后转到下一个向导页。  
   
- **“状态”**  
+ **Status**  
  显示包的安装进度。  
   
  **“完成”**  
@@ -89,16 +90,16 @@ ms.locfileid: "66056828"
  可以使用 **“部署 SSIS 包”** 页指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包及其依赖关系的安装位置。  
   
 ### <a name="options"></a>选项  
- **部署到文件系统**  
+ **文件系统部署**  
  将包及其依赖关系部署到文件系统内指定的文件夹中。  
   
- **部署到 SQL Server**  
+ **SQL Server 部署**  
  将包及其依赖关系部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例中。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在服务器之间共享包，请使用此选项。 将所有包依赖关系安装在文件系统内指定的文件夹中。  
   
  **安装后验证包**  
  指示安装后是否验证包。  
   
- **Next**  
+ **一个**  
  转到向导的下一页。  
   
  **“完成”**  
@@ -107,7 +108,7 @@ ms.locfileid: "66056828"
 ## <a name="packages-validation-page"></a>“包验证”页  
  可以使用 **“包验证”** 页查看包验证的进度和结果。  
   
- **Next**  
+ **一个**  
  转到向导的下一页。  
   
 ## <a name="select-installation-folder-page"></a>“选择安装文件夹”页  
@@ -118,9 +119,9 @@ ms.locfileid: "66056828"
  指定包及其依赖关系要复制到的路径和文件夹。  
   
  **“浏览”**  
- 使用“查找文件夹”  对话框找到目标文件夹。  
+ 使用“查找文件夹”**** 对话框找到目标文件夹。  
   
- **Next**  
+ **一个**  
  转到向导的下一页。  
   
  **“完成”**  
@@ -133,30 +134,30 @@ ms.locfileid: "66056828"
  **服务器名称**  
  指定要部署包的服务器的名称。  
   
- **Use Windows Authentication**  
+ **使用 Windows 身份验证**  
  指定是否使用 Windows 身份验证来登录到服务器。 为了实现更好的安全性，建议使用 Windows 身份验证。  
   
- **使用 SQL Server 身份验证**  
+ **Use SQL Server Authentication**  
  指定包是否应使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证来登录到服务器。 如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
   
  **用户名**  
  指定用户名。  
   
- **密码**  
+ **权限**  
  指定密码。  
   
  **包路径**  
  指定逻辑文件夹的名称，或者输入 "/" 作为默认文件夹。  
   
- 若要在“SSIS 包”  对话框中选择该文件夹，请单击“浏览(...)”。但是，该对话框不提供用来选择默认文件夹的方法。 如果要使用默认文件夹，则必须在该文本框中输入 "/"。  
+ 若要在 " **SSIS 包**" 对话框中选择该文件夹，请单击 "浏览（...）"。但是，该对话框不提供选择默认文件夹的方法。 如果要使用默认文件夹，则必须在该文本框中输入 "/"。  
   
 > [!NOTE]  
->  如果没有输入有效的包路径，则会出现下面的错误消息：“一个或多个参数无效。”  
+>  如果您没有输入有效的包路径，则会出现下面的错误消息：“一个或多个参数无效”。  
   
  **依靠服务器存储进行加密**  
  选择此项可以使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的安全功能来帮助保护包。  
   
- **Next**  
+ **一个**  
  转到向导的下一页。  
   
  **“完成”**  
@@ -166,9 +167,9 @@ ms.locfileid: "66056828"
  可以使用 **“完成包安装向导”** 页查看包安装结果的摘要。 此页提供了如所部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的名称、已安装的包、配置文件和安装位置等之类的详细信息。  
   
  **“完成”**  
- 单击“完成”  即可退出该向导。  
+ 单击“完成”**** 即可退出该向导。  
   
-## <a name="see-also"></a>请参阅  
- [打包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+## <a name="see-also"></a>另请参阅  
+ [包部署 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

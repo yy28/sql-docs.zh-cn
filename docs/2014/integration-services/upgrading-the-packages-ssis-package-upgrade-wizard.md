@@ -1,5 +1,5 @@
 ---
-title: 升级包 （SSIS 包升级向导） |Microsoft Docs
+title: 升级包（SSIS 包升级向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054739"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>升级包（SSIS 包升级向导）
-  可以使用 **“升级包”** 页查看包升级的进度以及中断升级过程。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包升级向导会逐一升级所选包。  
+  可以使用 **“升级包”** 页查看包升级的进度以及中断升级过程。 
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] 包升级向导会逐一升级所选包。  
   
- **若要查看的升级包保存到 SQL Server 数据库或包存储区**  
+ **查看保存到 SQL Server 数据库或包存储区的升级包**  
   
 -   在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中的对象资源管理器中，连接到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的本地实例，然后展开 **“已存储的包”** 节点查看已升级的包。  
   
- **若要查看已从 SQL Server Data Tools 升级的升级的包**  
+ **查看通过 SQL Server Data Tools 升级的升级包**  
   
 -   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的解决方案资源管理器中，打开 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，然后展开 **“SSIS 包”** 节点查看已升级的包。  
   
@@ -34,16 +35,16 @@ ms.locfileid: "66054739"
  **消息窗格**  
  在升级过程中显示进度消息和摘要信息。  
   
- **操作**  
+ **Action**  
  查看升级中的操作。  
   
- **“状态”**  
+ **Status**  
  查看每个操作的结果。  
   
- **Message**  
+ **消息**  
  查看每个操作生成的错误消息。  
   
- **停止**  
+ **Stop**  
  停止包升级。  
   
  **报告**  
@@ -57,7 +58,7 @@ ms.locfileid: "66054739"
   
 -   将报告作为电子邮件发送。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [升级 Integration Services 包](install-windows/upgrade-integration-services-packages.md)  
   
   

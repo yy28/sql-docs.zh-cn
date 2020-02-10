@@ -1,5 +1,5 @@
 ---
-title: 执行 XPath 查询 （SQLXML 托管类） |Microsoft Docs
+title: 执行 XPath 查询（SQLXML 托管类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1175b26436e3af9794057ec14eba35675209cf84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010868"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>执行 XPath 查询（SQLXML 托管类）
@@ -88,7 +88,7 @@ class Test
   
 2.  将在该示例中提供的 XSD 架构 (MySchema.xml) 保存到某个文件夹中。  
   
-3.  在此示例中在其中存储架构的同一文件夹中保存的 C# 代码 (DocSample.cs) 提供。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
+3.  将此示例中提供的 c # 代码（DocSample.cs）保存到存储架构的相同文件夹中。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
   
 4.  编译代码。 若要在命令提示符下编译此代码，请使用：  
   

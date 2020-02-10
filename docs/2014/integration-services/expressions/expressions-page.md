@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4cb37061fd90f8662ee6670bb558e99035c792e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898029"
 ---
 # <a name="expressions-page"></a>“表达式”页
@@ -35,9 +35,9 @@ ms.locfileid: "62898029"
  **\<属性名称>**  
  单击省略号可以打开 **“表达式生成器”** 对话框。 有关详细信息，请参阅 [Expression Builder](expression-builder.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)   
  [系统变量](../system-variables.md)   
- [Integration Services &#40;SSIS&#41; 表达式](integration-services-ssis-expressions.md)  
+ [Integration Services (SSIS) 表达式](integration-services-ssis-expressions.md)  
   
   

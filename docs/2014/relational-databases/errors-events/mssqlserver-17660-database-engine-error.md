@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65a1a6ef73336a8e47db19984be62e3c132bfaa6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869602"
 ---
-# <a name="mssqlserver17660"></a>MSSQLSERVER_17660
+# <a name="mssqlserver_17660"></a>MSSQLSERVER_17660
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62869602"
 |符号名称|DEMO_BOOTNORECOVERY|  
 |消息正文|正在启动，但不会进行恢复。 这只是一条信息性消息。 不需要任何用户操作。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  诊断输出。  
   
 ## <a name="user-action"></a>用户操作  

@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) 项目 |Microsoft Docs
+title: Integration Services （SSIS）项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26ab429a5f2abeda9a811e85dc5113121380e999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892472"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services (SSIS) 项目
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 用于开发 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。  
   
- 将包部署到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区时，使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务来管理包。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务只在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中可用。 有关详细信息，请参阅 [Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)。 有关包部署的详细信息，请参阅[包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)。  
+ 将[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]包部署到数据库或[!INCLUDE[ssIS](../includes/ssis-md.md)]包存储区时，可以使用[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务来管理包。 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务只在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中可用。 有关详细信息，请参阅 [Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)。 有关包部署的详细信息，请参阅[包部署 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)。  
   
  将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器时，您在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用 Transact-SQL 视图和存储过程来管理项目。 有关项目部署的详细信息，请参阅 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)。 有关 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的详细信息，请参阅 [Integration Services (SSIS) 服务器](catalog/integration-services-ssis-server-and-catalog.md)。  
   
@@ -42,14 +44,14 @@ ms.locfileid: "62892472"
 ### <a name="folders-in-integration-services-projects"></a>Integration Services 项目中的文件夹  
  下面的关系图显示 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中一个 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目中的文件夹。  
   
- ![Integration Services 项目中的文件夹](media/solutionexplorer.gif "Integration Services 项目中的文件夹")  
+ ![集成服务项目中的文件夹](media/solutionexplorer.gif "集成服务项目中的文件夹")  
   
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中出现的文件夹。  
   
-|文件夹|Description|  
+|Folder|说明|  
 |------------|-----------------|  
-|[!INCLUDE[ssIS](../includes/ssis-md.md)] 包|包含包。 有关详细信息，请参阅 [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)。|  
-|杂项|包含除包文件以外的文件。|  
+|[!INCLUDE[ssIS](../includes/ssis-md.md)]包|包含包。 有关详细信息，请参阅 [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)。|  
+|其他|包含除包文件以外的文件。|  
   
 ### <a name="files-in-integration-services-projects"></a>Integration Services 项目中的文件  
  向解决方案添加新的或现有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目时， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 创建具有扩展名 .dtproj 、.dtproj.user 和 .database 的项目文件。  
@@ -74,7 +76,7 @@ ms.locfileid: "62892472"
  当您创建新项目时 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将自动创建解决方案，但您也可创建空解决方案，然后再添加项目。  
   
 > [!NOTE]  
->  默认情况下，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建新 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目时， **“项目资源管理器”** 窗格不会显示解决方案。 若要更改此默认行为，请在 **“工具”** 菜单上单击 **“选项”** 。 在 **“选项”** 对话框中，展开 **“项目和解决方案”** ，然后单击 **“常规”** 。 在 **“常规”** 页上，选择 **“总是显示解决方案”** 。  
+>  默认情况下，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建新 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目时， **“项目资源管理器”** 窗格不会显示解决方案。 若要更改此默认行为，请在 **“工具”** 菜单上单击 **“选项”**。 在 **“选项”** 对话框中，展开 **“项目和解决方案”**，然后单击 **“常规”**。 在 **“常规”** 页上，选择 **“总是显示解决方案”**。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [在解决方案中添加或删除 Integration Services 项目](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  

@@ -12,14 +12,16 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: c06ed0be91d64e02f30d6ef4fbebb68e3b9a1272
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014169"
 ---
 # <a name="multipoint"></a>MultiPoint
-  `MultiPoint` 是零个点或更多个点的集合。 `MultiPoint` 实例的边界为空。  
+  
+  `MultiPoint` 是零个点或更多个点的集合。 
+  `MultiPoint` 实例的边界为空。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个 `geometry MultiPoint` 实例，该实例的 SRID 为 23 且包含两个点：一个点的坐标为 (2, 3)，另一个点的坐标为 (7, 8)，Z 值为 9.5。  
@@ -42,7 +44,7 @@ SET @g = geometry::STMPointFromText('MULTIPOINT((2 3), (7 8 9.5))', 23);
 SELECT @g.STGeometryN(1).STAsText();  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [点](point.md)   
  [空间数据 (SQL Server)](spatial-data-sql-server.md)  
   

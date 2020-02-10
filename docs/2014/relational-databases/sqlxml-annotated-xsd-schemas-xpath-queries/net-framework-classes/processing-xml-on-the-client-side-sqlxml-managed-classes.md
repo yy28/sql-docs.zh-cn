@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a75d9fb1d4f77cb41cfdc3578af675533fbb6bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010810"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>在客户端处理 XML（SQLXML 托管类）
   此示例演示如何使用 ClientSideXml 属性。 应用程序在服务器上执行存储过程。 在客户端对存储过程的结果（一个有两列的行集）进行处理，以产生 XML 文档。  
   
- 以下 GetContacts 存储过程返回**FirstName**并**LastName**的 AdventureWorks 数据库中 Person.Contact 表中的雇员。  
+ 下面的 GetContacts 存储过程将返回用户的**名字**和**姓氏**。 AdventureWorks 数据库中的 Contact 表。  
   
 ```  
 USE AdventureWorks  
@@ -38,7 +38,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- 此 C# 应用程序执行存储的过程，并指定 FOR XML AUTO 选项中指定的 CommandText 值。 在应用程序，SqlXmlCommand 对象 ClientSideXml 属性设置为 true。 这将允许执行预先存在的存储过程，然后由存储过程返回行集，并在客户端上对它执行 XML 转换。  
+ 此 c # 应用程序执行存储过程，并在指定 CommandText 值中指定 FOR XML AUTO 选项。 在应用程序中，SqlXmlCommand 对象的 ClientSideXml 属性设置为 true。 这将允许执行预先存在的存储过程，然后由存储过程返回行集，并在客户端上对它执行 XML 转换。  
   
 > [!NOTE]  
 >  在代码中，必须在连接字符串中提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  
@@ -81,7 +81,7 @@ public static int Main(String[] args)
   
 ### <a name="to-test-the-application"></a>测试应用程序  
   
-1.  创建存储的过程。  
+1.  创建存储过程。  
   
 2.  将此示例中提供的 C# 代码 (DocSample.cs) 保存在某个文件夹中。 编辑代码，以指定合适的登录和密码信息。  
   

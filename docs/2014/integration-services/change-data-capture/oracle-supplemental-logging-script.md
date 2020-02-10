@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c8f876852ff78e254bdff7ed687d2196d01d9c1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835344"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 补充日志记录脚本
@@ -33,10 +33,10 @@ ms.locfileid: "62835344"
  **另存为**  
  将脚本保存到文本文件中。 这在 Oracle 数据库管理员 (DBA) 需要检查和执行补充日志记录脚本时很有用，程序会让您将该脚本保存到一个文本文件，您在以后可以通过电子邮件或其他方式将该文件发送给 Oracle DBA 以便执行（通过使用 SQL*Plus Oracle 实用工具或用于在 Oracle 数据库上运行脚本的其他工具）。  
   
- **复制**  
+ **Copy**  
  将脚本复制到剪贴板。 在就绪后，在 Oracle 数据库管理员 (DBA) 需要检查和执行补充日志记录脚本时，您可以将该脚本粘贴到您需要的任何位置。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [管理 CDC 实例](manage-a-cdc-instance.md)  
   

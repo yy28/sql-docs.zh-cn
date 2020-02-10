@@ -29,10 +29,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc37fbade038b39d6d05cb5b51ecc3e8ba405e2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871570"
 ---
 # <a name="file-states"></a>文件状态
@@ -43,12 +43,12 @@ ms.locfileid: "62871570"
 ## <a name="file-state-definitions"></a>文件状态定义  
  下表定义了文件状态。  
   
-|State|定义|  
+|状态|定义|  
 |-----------|----------------|  
 |ONLINE|文件可用于所有操作。 如果数据库本身处于在线状态，则主文件组中的文件始终处于在线状态。 如果主文件组中的文件处于离线状态，则数据库将处于离线状态，并且辅助文件的状态未定义。|  
-|OFFLINE|文件不可访问，并且可能不显示在磁盘中。 文件通过显式用户操作变为离线，并在执行其他用户操作之前保持离线状态。<br /><br /> **\*\* 警告 \*\*** 当文件已损坏时，该文件仅应设置为离线，但可以进行还原。 设置为离线的文件只能通过从备份还原才能设置为在线。 有关还原单个文件的详细信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)。|  
+|OFFLINE|文件不可访问，并且可能不显示在磁盘中。 文件通过显式用户操作变为离线，并在执行其他用户操作之前保持离线状态。<br /><br /> ** \*警告\* \* **仅当文件已损坏时，才应脱机设置文件，但可以还原文件。 设置为离线的文件只能通过从备份还原才能设置为在线。 有关还原单个文件的详细信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)。|  
 |RESTORING|正在还原文件。 文件处于还原状态（因为还原命令会影响整个文件，而不仅是页还原），并且在还原完成及文件恢复之前，一直保持此状态。|  
-|RECOVERY PENDING|文件恢复被推迟。 由于在段落还原过程中未还原和恢复文件，因此文件将自动进入此状态。 需要用户执行其他操作来解决该错误，并允许完成恢复过程。 有关详细信息，请参阅[段落还原 (SQL Server)](../backup-restore/piecemeal-restores-sql-server.md)。|  
+|RECOVERY PENDING|文件恢复被推迟。 由于在段落还原过程中未还原和恢复文件，因此文件将自动进入此状态。 需要用户执行其他操作来解决该错误，并允许完成恢复过程。 有关详细信息，请参阅[段落还原 &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md)。|  
 |SUSPECT|联机还原过程中，恢复文件失败。 如果文件位于主文件组，则数据库还将标记为可疑。 否则，仅文件处于可疑状态，而数据库仍处于在线状态。<br /><br /> 在通过以下方法之一将文件变为可用之前，该文件将保持可疑状态：<br /><br /> 还原和恢复<br /><br /> 包含 REPAIR_ALLOW_DATA_LOSS 的 BCC CHECKDB|  
 |DEFUNCT|当文件不处于在线状态时被删除。 删除离线文件组后，文件组中的所有文件都将失效。|  
   

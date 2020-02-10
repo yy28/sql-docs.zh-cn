@@ -1,5 +1,5 @@
 ---
-title: 步骤 3：测试第 3 课教程包 |Microsoft Docs
+title: 步骤 3：测试第 3 课教程包 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891585"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>步骤 3：测试第 3 课教程包
@@ -25,11 +25,11 @@ ms.locfileid: "62891585"
   
  **控制流**  
   
- ![包中的控制流](../../2014/tutorials/media/task4lesson2control.gif "Control flow in package")  
+ ![包中的控制流](../../2014/tutorials/media/task4lesson2control.gif "包中的控制流")  
   
  **数据流**  
   
- ![包中的数据流](../../2014/tutorials/media/task9lesson1data.gif "Data flow in package")  
+ ![包中的数据流](../../2014/tutorials/media/task9lesson1data.gif "包中的数据流")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>运行第 4 课教程包  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62891585"
   
 -   使用记事本或其他任何文本编辑器，打开 TutorialLog.log 文件。  
   
--   尽管为生成的信息的语义`PipelineExecutionPlan`并`PipelineExecutionTrees`事件不在本教程的范围，则会看到第一行列出了在指定的信息字段**详细信息**选项卡**配置 SSIS 日志**对话框。 此外，可以验证已为 Foreach 循环的每个迭代记录了所选择的两个事件：PipelineExecutionPlan 和 PipelineExecutionTrees。  
+-   尽管为`PipelineExecutionPlan`和`PipelineExecutionTrees`事件生成的信息的语义超出了本教程的范围，但你可以看到第一行列出了在 "**配置 SSIS 日志**" 对话框的 "**详细信息**" 选项卡中指定的信息字段。 此外，可以验证已为 Foreach 循环的每个迭代记录了所选择的两个事件：PipelineExecutionPlan 和 PipelineExecutionTrees。  
   
 ## <a name="next-lesson"></a>下一课  
  [第 4 课：添加错误流重定向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  

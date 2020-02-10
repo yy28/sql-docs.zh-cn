@@ -1,5 +1,5 @@
 ---
-title: Integration Services 服务器的报告 |Microsoft Docs
+title: Integration Services Server 的报表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056435"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Integration Services 服务器的报表
@@ -31,7 +31,7 @@ ms.locfileid: "66056435"
   
  该报告显示以下信息部分。  
   
-|部分|Description|  
+|部分|说明|  
 |-------------|-----------------|  
 |**执行信息**|显示过去 24 小时内处于不同状态（失败、正在运行、成功、其他）的执行次数。|  
 |**包信息**|显示过去 24 小时内执行的包总数。|  
@@ -45,7 +45,7 @@ ms.locfileid: "66056435"
   
  该报告显示以下信息部分。  
   
-|部分|Description|  
+|部分|说明|  
 |-------------|-----------------|  
 |“筛选器”|显示应用于该报告的当前筛选器，如开始时间范围。|  
 |执行信息|显示每个包执行的开始时间、结束时间和持续时间。您可以查看用于包执行的参数值列表，如使用“执行包”任务传递给子包的值。 若要查看参数列表，请单击“概述”。|  
@@ -59,7 +59,7 @@ ms.locfileid: "66056435"
   
  该报告显示以下信息部分。  
   
-|部分|Description|  
+|部分|说明|  
 |-------------|-----------------|  
 |“筛选器”|显示应用于此报告的当前筛选器，如具有指定字符串的连接和 **“上次失败时间”** 范围。<br /><br /> 可以设置 **“上次失败时间”** 范围以仅显示在日期范围内发生的连接失败。 该范围可以跨多个天、月或年。|  
 |详细信息|显示连接字符串、某个连接失败过程中的执行次数和上次连接失败的日期。|  
@@ -71,7 +71,7 @@ ms.locfileid: "66056435"
  **“所有验证”** 报告显示已在服务器上执行的所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 验证的摘要。 摘要中显示每次验证的信息，如状态、开始时间和结束时间。 每个摘要条目包含一个指向在验证期间生成的消息的链接。 与 Integration Services 面板一样，您可以将筛选器应用于表，以便缩小显示的信息的范围。  
   
 ## <a name="custom-reports"></a>自定义报告  
- 可以将自定义报告（.rdl 文件）添加到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中“Integration Services 目录”节点下的 **SSISDB** 目录节点  。 在添加报告前，请确认正在使用第三方命名约定以完全限定您引用的对象（如源表）。 否则， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将显示错误。 命名约定为 \<数据库>.\<所有者>.\<对象>。 例如，SSISDB.internal.executions。  
+ 可以将自定义报告（.rdl 文件）添加到 **中“Integration Services 目录”节点下的**SSISDB **目录节点**[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 在添加报告前，请确认正在使用第三方命名约定以完全限定您引用的对象（如源表）。 否则， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将显示错误。 命名约定为 \<数据库>.\<所有者>.\<对象>。 例如，SSISDB.internal.executions。  
   
 > [!NOTE]  
 >  将自定义报告添加到“数据库”  节点下的 **SSISDB** 节点时，可以不使用 SSISDB 前缀。  

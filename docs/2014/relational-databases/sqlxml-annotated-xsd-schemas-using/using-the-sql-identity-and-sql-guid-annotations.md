@@ -1,5 +1,5 @@
 ---
-title: '使用 sql: identity 和 sql: guid 批注 |Microsoft Docs'
+title: 使用 sql： identity 和 sql： guid 批注 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,23 +24,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6135f1b46e9b2312f01b9ff7a7ebdd08d2d34a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013641"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>使用 sql:identity 和 sql:guid 批注
-  您可以指定`sql:identity`并`sql:guid`映射到数据库列中的任何节点上的 XSD 架构中的批注[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 updategram 格式支持 `updg:at-identity` 和 `updg:guid` 属性，而 DiffGram 格式不支持这些属性。 `updg:at-identity` 属性定义在更新 IDENTITY 类型列时的行为。 `updg:guid` 属性使您可以获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 GUID 值，并将其用于 updategram 中。 有关详细信息和工作示例，请参阅[使用 XML Updategram 插入数据&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。  
+  您可以在映射`sql:identity`到`sql:guid`中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的数据库列的任何节点上的 XSD 架构中指定和批注。 updategram 格式支持 `updg:at-identity` 和 `updg:guid` 属性，而 DiffGram 格式不支持这些属性。 
+  `updg:at-identity` 属性定义在更新 IDENTITY 类型列时的行为。 
+  `updg:guid` 属性使您可以获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 GUID 值，并将其用于 updategram 中。 有关详细信息和工作示例，请参阅[使用 XML Updategram 插入数据 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。  
   
- `sql:identity` 和 `sql:guid` 批注将此功能扩展至 DiffGram。  
+ 
+  `sql:identity` 和 `sql:guid` 批注将此功能扩展至 DiffGram。  
   
  执行 DiffGram 时，应首先将其转换为 updategram，然后再执行该 updategram。 通过在 XSD 架构中指定 `sql:identity` 和 `sql:guid` 批注，您实际上正在定义 updategram 的行为。 因此，所有批注都在 updategram 的上下文中进行描述。 这些批注可用于 DiffGram 和 updategram；但是，updategram 已提供了一种更强大的处理标识和 GUID 值的方式。  
   
  可以针对复杂内容元素定义 `sql:identity` 和 `sql:guid` 批注。  
   
 ## <a name="sqlidentity-annotation"></a>sql:identity 批注  
- 您可以在映射到 IDENTITY 类型的数据库列的任何节点上的 XSD 架构中指定 `sql:identity` 批注。 为此批注指定的值定义如何更新 IDENTITY 类型的列 (通过使用在 updategram 中提供的值来修改列或通过在这种情况下忽略该值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-生成的值用于此列)。  
+ 您可以在映射到 IDENTITY 类型的数据库列的任何节点上的 XSD 架构中指定 `sql:identity` 批注。 为此批注指定的值定义如何更新 IDENTITY 类型列（通过使用 updategram 中提供的值来修改列，或者通过忽略值（在这种情况下，将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成的值用于此列）。  
   
  可以为 `sql:identity` 批注分配两个值：  
   

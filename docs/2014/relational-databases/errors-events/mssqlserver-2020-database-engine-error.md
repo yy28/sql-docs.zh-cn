@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e54a04cc9d787ae4d6d4545bbc5d9661bbba213d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869378"
 ---
-# <a name="mssqlserver2020"></a>MSSQLSERVER_2020
+# <a name="mssqlserver_2020"></a>MSSQLSERVER_2020
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62869378"
 |符号名称||  
 |消息正文|为实体“%.*ls”报告的依赖关系不包含对列的引用。 这是由于此实体引用的对象不存在，或由于此实体中的一个或多个语句有错误。  在重新运行该查询之前，请确保该实体中没有错误并且该实体引用的所有对象都存在。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  **sys.dm_sql_referenced_entities** 系统函数将报告绑定到架构的引用的所有列级依赖关系。 例如，此函数将报告索引视图的所有列级依赖关系，因为索引视图需要架构绑定。 但是，如果被引用实体不绑定到架构，则仅当引用列的所有语句可以绑定时，才会报告列依赖关系。 只有在分析语句时所有对象都存在，才可以成功绑定语句。 如果实体中有任何已定义的语句无法进行绑定，将不会报告列依赖关系，并且 **referenced_minor_id** 列将返回 0。 无法解析列依赖关系时，将引发错误 2020。 此错误不会阻止查询返回对象级依赖关系。  
   
 ## <a name="user-action"></a>用户操作  
@@ -118,7 +118,7 @@ ms.locfileid: "62869378"
   
  `GO`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.dm_sql_referenced_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)  
   
   
