@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b5be7eb52d0aa8c0a94b1a4ff63493e7f641bdbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754467"
 ---
 # <a name="register-mirrored-database"></a>注册镜像数据库
@@ -44,12 +44,12 @@ ms.locfileid: "62754467"
   
  该网格包含以下列：  
   
-|列名|Description|  
+|列名称|说明|  
 |-----------------|-----------------|  
-|**注册**|检查您要注册的每个数据库。 如果正在监视数据库，则该数据库的复选框会被选中且禁用。<br /><br /> 注意：若要撤消注册某一数据库，请关闭“已注册镜像数据库”对话框，在导航树中选择该数据库，并从“操作”菜单中选择“撤消注册”    。|  
-|**“数据库”**|选定服务器实例上的镜像数据库名称。|  
+|**注册**|检查您要注册的每个数据库。 如果正在监视数据库，则该数据库的复选框会被选中且禁用。<br /><br /> 注意：若要撤消注册某一数据库，请关闭“已注册镜像数据库”  对话框，在导航树中选择该数据库，并从“操作”  菜单中选择“撤消注册”  。|  
+|**Database**|选定服务器实例上的镜像数据库名称。|  
 |**当前角色**|选定服务器实例上的数据库的当前镜像角色，即主体或镜像。|  
-|**伙伴(连接为)**|数据库的故障转移伙伴的名称。 括号中显示“控制台用户的 Windows 身份验证 **”或“** 登录名‘\<登录名>’的 **SQL ***Server*** 身**份验证”。 如果之前已添加实例，则此内容为当前使用的身份验证信息；如果尚未将实例添加到监视器中，则此内容为将要使用的身份验证信息。|  
+|**伙伴(连接为)**|数据库的故障转移伙伴的名称。 括号中显示“控制台用户的 Windows 身份验证”  或“登录名‘**登录名>’的 SQL Server 身份验证”***\<***** 。 如果之前已添加实例，则此内容为当前使用的身份验证信息；如果尚未将实例添加到监视器中，则此内容为将要使用的身份验证信息。|  
   
  **当单击“确定”后，显示“管理服务器连接”对话框。**  
  在默认情况下，对于以前未给定凭据的伙伴服务器实例，数据库镜像监视器将使用 Windows 身份验证凭据。 启用该选项，可在完成数据库注册后为一个或多个服务器实例更改凭据。  
@@ -61,7 +61,7 @@ ms.locfileid: "62754467"
  **应用**  
  单击该按钮，在保存对话框打开的状态下注册选定的数据库（并为伙伴服务器实例保存凭据）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动数据库镜像监视器 (SQL Server Management Studio)](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [监视数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
  [启动配置数据库镜像安全向导 (SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)  

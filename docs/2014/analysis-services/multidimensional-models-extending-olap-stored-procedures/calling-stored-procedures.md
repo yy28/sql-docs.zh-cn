@@ -1,5 +1,5 @@
 ---
-title: 调用存储的过程 |Microsoft Docs
+title: 调用存储过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55569f23ae943e96a495905434bb0d39f2796a63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727753"
 ---
 # <a name="calling-stored-procedures"></a>调用存储过程
@@ -65,7 +65,8 @@ SELECT Country.Members on 0, MySproc(Measures.Sales) ON 1 FROM Sales
 ## <a name="calling-stored-procedures-with-the-call-statement"></a>用 Call 语句调用存储过程  
  使用 MDX `Call` 语句，可以在 MDX 查询的上下文以外调用存储过程。  
   
- 可以使用此方法实例化存储查询的副作用，或让应用程序获得存储查询的结果。 `Call` 语句的通常用法是使用分析管理对象 (AMO) 来执行没有返回结果的管理函数。 例如，以下命令将调用一个存储过程：  
+ 可以使用此方法实例化存储查询的副作用，或让应用程序获得存储查询的结果。 
+  `Call` 语句的通常用法是使用分析管理对象 (AMO) 来执行没有返回结果的管理函数。 例如，以下命令将调用一个存储过程：  
   
 ```  
 Call MyStoredProcedure(a,b,c)  
@@ -81,7 +82,7 @@ Call MyStoredProcedure(a,b,c)
 CALL(MyVoidFunction)  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型程序集管理](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [定义存储过程](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

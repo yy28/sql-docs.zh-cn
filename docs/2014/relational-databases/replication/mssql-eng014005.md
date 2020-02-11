@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 418628c33764c6e765e8ba855da20f0890f6191a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666877"
 ---
-# <a name="mssqleng014005"></a>MSSQL_ENG014005
+# <a name="mssql_eng014005"></a>MSSQL_ENG014005
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62666877"
 |符号名称||  
 |消息正文|无法删除发布。 该发布已有订阅。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  您试图删除带有关联的订阅的发布。 只有发布不具有相关联的订阅时才可删除它。  
   
 ## <a name="user-action"></a>用户操作  
@@ -40,7 +40,7 @@ ms.locfileid: "62666877"
   
  如果看起来发布不存在订阅或者在创建发布时看到此错误，则说明可能存在以前删除时未完全清除的订阅。 对数据库执行 [sp_removedbreplication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)，以删除所有与复制相关的对象和设置。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)  
   
   

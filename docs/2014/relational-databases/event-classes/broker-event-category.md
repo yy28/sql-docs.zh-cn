@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9918aca57caaef0dc460e810f5ed5ca2d1106ac3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663806"
 ---
 # <a name="broker-event-category"></a>Broker 事件类别
@@ -28,7 +28,7 @@ ms.locfileid: "62663806"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[Broker:Activation 事件类](broker-activation-event-class.md)|队列监视器启动激活存储过程时生成的事件。|  
 |[Broker:Connection 事件类](broker-connection-event-class.md)|为报告 Service Broker 所管理的传输连接的状态而生成的事件。|  
@@ -43,7 +43,7 @@ ms.locfileid: "62663806"
   
  还为 Service Broker 提供了两个安全审核事件。 有关这些事件的详细信息，请参阅 [Audit Broker Login 事件类](audit-broker-login-event-class.md) 和 [Audit Broker Conversation 事件类](audit-broker-conversation-event-class.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“安全审核”事件类别](https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category)  
   
   

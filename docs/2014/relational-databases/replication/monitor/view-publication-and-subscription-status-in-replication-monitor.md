@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666922"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在复制监视器中查看发布和订阅状态
@@ -59,12 +59,12 @@ ms.locfileid: "62666922"
 ## <a name="publication-status-values"></a>发布状态值  
  下表按优先级顺序显示了发布状态值及其对应的图标。  
   
-|“登录属性”|图标|  
+|状态|图标|  
 |------------|----------|  
 |错误|![UI 图标：错误](../media/repl-icon-error.gif "UI 图标：错误")|  
 |“严重”状态下的性能|![UI 图标：警告](../media/repl-icon-warn.gif "UI 图标：警告")|  
 |正在重试失败的命令|![UI 图标：复制代理重试](../media/repl-icon-retry.gif "UI 图标：复制代理重试")|  
-|“确定”|none|  
+|OK|none|  
   
 ## <a name="subscription-status-values"></a>订阅状态值  
  下列表按优先级顺序显示了订阅状态值及其对应的图标。 一个订阅可以同时处于两种状态，如“即将过期/已过期”  和“正在重试失败的命令”  ；将显示最高优先级状态。  
@@ -73,7 +73,7 @@ ms.locfileid: "62666922"
   
 ### <a name="transactional-subscriptions"></a>事务订阅  
   
-|“登录属性”|图标|  
+|状态|图标|  
 |------------|----------|  
 |错误|![UI 图标：错误](../media/repl-icon-error.gif "UI 图标：错误")|  
 |“严重”状态下的性能|![UI 图标：警告](../media/repl-icon-warn.gif "UI 图标：警告")|  
@@ -85,7 +85,7 @@ ms.locfileid: "62666922"
   
 ### <a name="merge-subscriptions"></a>合并订阅  
   
-|“登录属性”|图标|  
+|状态|图标|  
 |------------|----------|  
 |错误|![UI 图标：错误](../media/repl-icon-error.gif "UI 图标：错误")|  
 |“严重”状态下的性能|![UI 图标：警告](../media/repl-icon-warn.gif "UI 图标：警告")|  
@@ -98,7 +98,7 @@ ms.locfileid: "62666922"
   
 ### <a name="snapshot-subscriptions"></a>快照订阅  
   
-|“登录属性”|图标|  
+|状态|图标|  
 |------------|----------|  
 |错误|![UI 图标：错误](../media/repl-icon-error.gif "UI 图标：错误")|  
 |即将过期/已过期|![UI 图标：警告](../media/repl-icon-warn.gif "UI 图标：警告")|  
@@ -107,7 +107,7 @@ ms.locfileid: "62666922"
 |正在同步|![UI 图标：复制代理正在运行](../media/repl-icon-running.gif "UI 图标：复制代理正在运行")|  
 |未同步|![UI 图标：复制代理已停止](../media/repl-icon-stopped.gif "UI 图标：复制代理已停止")|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视复制](../monitoring-replication.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 选项 (文本编辑器-Transact-SQL-IntelliSense) |Microsoft Docs
+title: 选项（文本编辑器-Transact-sql-IntelliSense） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd2cf2be2102aeed1c853ce1b9a198c2b196d26a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089822"
 ---
-# <a name="options-text-editor-transact-sql-intellisense"></a>选项 (文本编辑器-Transact-SQL-IntelliSense)
-  您可以使用 **“选项”** 对话框更改 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器的 IntelliSense 设置。 若要显示这些设置，请在“工具”  菜单上单击“选项”  ，依次展开“文本编辑器”  文件夹和“Transact-SQL”  文件夹，然后单击“高级”  。  
+# <a name="options-text-editor-transact-sql-intellisense"></a>选项（文本编辑器-Transact-sql-IntelliSense）
+  您可以使用 **“选项”** 对话框更改 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器的 IntelliSense 设置。 若要显示这些设置，请在“工具”**** 菜单上单击“选项”****，依次展开“文本编辑器”**** 文件夹和“Transact-SQL”**** 文件夹，然后单击“高级”****。  
   
 ## <a name="transact-sql-intellisense-settings"></a>Transact-SQL IntelliSense 设置  
  指定 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器的 IntelliSense 选项。  
@@ -43,7 +43,7 @@ ms.locfileid: "66089822"
  **内置函数名称的大小写**  
  指定完成列表中内置 [!INCLUDE[tsql](../includes/tsql-md.md)] 函数的名称采用大写形式（例如 DATEADD）还是小写形式（例如 dateadd）。 请选择最符合您使用的 [!INCLUDE[tsql](../includes/tsql-md.md)] 编码约定的选项。  
   
-## <a name="see-also"></a>请参阅  
- [IntelliSense 故障排除&#40;SQL Server Management Studio&#41;](../relational-databases/scripting/troubleshooting-intellisense.md)  
+## <a name="see-also"></a>另请参阅  
+ [IntelliSense &#40;SQL Server Management Studio 疑难解答&#41;](../relational-databases/scripting/troubleshooting-intellisense.md)  
   
   

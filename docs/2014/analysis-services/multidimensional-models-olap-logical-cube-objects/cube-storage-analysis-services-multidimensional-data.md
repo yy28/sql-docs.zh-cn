@@ -1,5 +1,5 @@
 ---
-title: 多维数据集存储 (Analysis Services-多维数据) |Microsoft Docs
+title: 多维数据集存储（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727654"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>多维数据集存储（Analysis Services - 多维数据）
-  存储可能仅包括多维数据集元数据，也可能包括事实数据表中的所有源数据以及通过与度量值组相关的维度所定义的聚合。 存储的数据数量取决于所选择的存储模式和聚合数。 存储的数据的量会直接影响查询性能。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用几种方法来最小化存储多维数据集数据和聚合所需的空间：  
+  存储可能仅包括多维数据集元数据，也可能包括事实数据表中的所有源数据以及通过与度量值组相关的维度所定义的聚合。 存储的数据数量取决于所选择的存储模式和聚合数。 存储的数据的量会直接影响查询性能。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用几种方法来最大程度地减少存储多维数据集数据和聚合所需的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]空间：  
   
 -   使用存储选项，您可以选择最适合于多维数据集数据的存储模式和位置。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62727654"
   
 -   不为空单元分配存储空间。  
   
- 存储按分区进行定义，并且对于多维数据集中的每个度量值组，至少存在一个分区。 有关详细信息，请参阅[分区&#40;Analysis Services-多维数据&#41;](partitions-analysis-services-multidimensional-data.md)，[分区存储模式和处理](partitions-partition-storage-modes-and-processing.md)，[度量值和度量值组](../multidimensional-models/measures-and-measure-groups.md)，并[在多维模型中创建度量值和度量值组](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
+ 存储按分区进行定义，并且对于多维数据集中的每个度量值组，至少存在一个分区。 有关详细信息，请参阅[分区 &#40;Analysis Services 多维数据&#41;](partitions-analysis-services-multidimensional-data.md)、[分区存储模式和处理](partitions-partition-storage-modes-and-processing.md)、[度量值和度量值组](../multidimensional-models/measures-and-measure-groups.md)，以及[在多维模型中创建度量值和度量值组](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
   
 ## <a name="partition-storage"></a>分区存储  
  度量值组的存储空间可以分成多个分区。 使用分区，您可以将度量值组分散到单个服务器或多个服务器上的离散段中，并优化存储和查询性能。 度量值组中的每个分区都可基于不同的数据源，并使用不同的存储设置进行存储。  
@@ -42,12 +42,12 @@ ms.locfileid: "62727654"
   
  分区最初使用其所属度量值组的存储设置进行创建。 存储设置确定是将详细信息和聚合数据以多维格式存储在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中，还是以关系格式存储在源服务器上，或者是两者的组合。 存储设置还确定是否使用主动缓存来自动处理对存储在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的多维数据所进行的源数据更改。  
   
- 用户看不到多维数据集的分区。 但是，为不同分区选择的存储设置可能影响到数据的即时性、所用磁盘空间的数量和查询性能。 分区可以存储在多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中。 这为多维数据集存储提供了群集途径，并将工作负荷分散到多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上。 有关详细信息，请参阅[分区存储模式和处理](partitions-partition-storage-modes-and-processing.md)，[远程分区](partitions-remote-partitions.md)，并[分区&#40;Analysis Services-多维数据&#41;](partitions-analysis-services-multidimensional-data.md).  
+ 用户看不到多维数据集的分区。 但是，为不同分区选择的存储设置可能影响到数据的即时性、所用磁盘空间的数量和查询性能。 分区可以存储在多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中。 这为多维数据集存储提供了群集途径，并将工作负荷分散到多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上。 有关详细信息，请参阅[分区存储模式和处理](partitions-partition-storage-modes-and-processing.md)、[远程分区](partitions-remote-partitions.md)和[分区 &#40;Analysis Services 多维数据&#41;](partitions-analysis-services-multidimensional-data.md)。  
   
 ## <a name="linked-measure-groups"></a>链接度量值组  
  在不同 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上存储多个多维数据集副本可能需要相当大的磁盘空间，但可以通过用链接度量值组替换度量值组副本来大大减少所需空间。 链接度量值组基于其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库（位于相同或不同 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中）的多维数据集中的度量值组。 链接度量值组还只能与来自同一源多维数据集的链接维度一起使用。 链接维度和度量值组都使用源多维数据集的聚合，并且对它们自己的聚合没有数据存储要求。 因此，通过在一个数据库中维护源度量值组和维度，而在其他数据库的多维数据集中创建链接多维数据集和维度，您可以因存储所用空间的大大降低而节约大量磁盘空间。 有关详细信息，请参阅[链接度量值组](../multidimensional-models/linked-measure-groups.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [聚合和聚合设计](aggregations-and-aggregation-designs.md)  
   
   

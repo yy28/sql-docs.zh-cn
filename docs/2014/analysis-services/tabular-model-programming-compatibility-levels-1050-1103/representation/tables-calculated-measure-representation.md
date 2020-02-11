@@ -1,5 +1,5 @@
 ---
-title: 计算度量值表示形式 （表格） |Microsoft Docs
+title: 计算度量值表示形式（表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9fb706a5175a2eb673e8f175a154f681b3af3c43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757655"
 ---
 # <a name="calculated-measure-representation-tabular"></a>计算度量值表示形式（表格）
@@ -23,7 +23,7 @@ ms.locfileid: "62757655"
 ## <a name="calculated-measure-representation"></a>计算度量值表示形式  
   
 ### <a name="calculated-measure-in-amo"></a>AMO 中的计算度量值  
- 使用 AMO 管理表格模型计算度量值时，在逻辑计算度量值对象和 <xref:Microsoft.AnalysisServices.Command> 对象的 <xref:Microsoft.AnalysisServices.MdxScript> 对象中定义的度量值之间存在一对一匹配关系。 每个**计算度量值**指`CREATE MEASURE`内的表达式<xref:Microsoft.AnalysisServices.Command>对象，并由分号分隔。 表格模型中的所有计算度量值对应于 <xref:Microsoft.AnalysisServices.MdxScript> 对象中的一个命令对象中的集合 `CREATE MEASURE` 字符串。 对于每个计算度量值，存在与 <xref:Microsoft.AnalysisServices.CalculationProperty> 的一对一映射关系。  
+ 使用 AMO 管理表格模型计算度量值时，在逻辑计算度量值对象和 <xref:Microsoft.AnalysisServices.Command> 对象的 <xref:Microsoft.AnalysisServices.MdxScript> 对象中定义的度量值之间存在一对一匹配关系。 每个**计算度量值**都定义`CREATE MEASURE`为<xref:Microsoft.AnalysisServices.Command>对象内的表达式，并用分号分隔。 表格模型中的所有计算度量值对应于 `CREATE MEASURE` 对象中的一个命令对象中的集合 <xref:Microsoft.AnalysisServices.MdxScript> 字符串。 对于每个计算度量值，存在与 <xref:Microsoft.AnalysisServices.CalculationProperty> 的一对一映射关系。  
   
  下面的代码段演示如何创建计算度量值。  
   

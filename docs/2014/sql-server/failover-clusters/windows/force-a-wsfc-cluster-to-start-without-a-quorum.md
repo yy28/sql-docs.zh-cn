@@ -14,42 +14,42 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c63930883642cf7f5e675cb57d5f83648a5787a
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797473"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在无仲裁情况下强制启动 WSFC 群集
   本主题说明如何在无仲裁情况下强制启动 Windows Server 故障转移群集 (WSFC) 群集节点。  在灾难恢复和多子网方案中，可能需要它来为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例恢复数据和完全重建高可用性。  
   
--   **准备工作：** [建议](#Recommendations)、[安全性](#Security)  
+-   **开始之前：**  [建议](#Recommendations)、[安全性](#Security)  
   
--   **若要在无仲裁情况下强制启动群集，请使用：** [使用故障转移群集管理器](#FailoverClusterManagerProcedure)、[使用 Powershell](#PowerShellProcedure)、[使用 Net.exe](#CommandPromptProcedure)  
+-   **若要强制在没有仲裁的情况下启动群集**，请使用：使用[故障转移群集管理器](#FailoverClusterManagerProcedure)，使用[Powershell](#PowerShellProcedure)，[使用 net.tcp](#CommandPromptProcedure)    
   
--   **跟进：** [跟进：在无仲裁情况下强制启动群集后](#FollowUp)  
+-   **跟进：**  [跟进：在无仲裁情况下强制启动群集后](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="BeforeYouBegin"></a>开始之前  
   
 ###  <a name="Recommendations"></a> 建议  
  除了明确指出的情况外，从 WSFC 群集中的任意节点执行时，本主题中的步骤都应适用。  但是，通过从要在无仲裁情况下强制启动的节点执行这些步骤，可能获得更好的效果并避免网络问题。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  用户必须是一个域帐户，该帐户是每个 WSFC 群集节点上本地 Administrators 组的成员。  
   
-##  <a name="FailoverClusterManagerProcedure"></a> 使用故障转移群集管理器  
+##  <a name="FailoverClusterManagerProcedure"></a>使用故障转移群集管理器  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>在无仲裁情况下强制启动群集  
   
 1.  打开故障转移群集管理器并连接到所需的群集节点，以强制联机。  
   
-2.  在“操作”窗格中，单击“强制启动群集”，然后单击“是 - 强制启动我的群集”。  
+2.  在“操作”窗格中，单击“强制启动群集”，然后单击“是 - 强制启动我的群集”************。  
   
 3.  在左窗格中，在 **“故障转移群集管理器”** 树中单击该群集名称。  
   
-4.  在摘要窗格中，确认当前 **“仲裁配置”** 值为  **“警告: 群集正在 ForceQuorum 状态下运行”** 。  
+4.  在摘要窗格中，确认当前 **“仲裁配置”** 值为  **“警告: 群集正在 ForceQuorum 状态下运行”**。  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="PowerShellProcedure"></a>使用 Powershell  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>在无仲裁情况下强制启动群集  
   
@@ -81,7 +81,7 @@ $nodes = Get-ClusterNode -Cluster $node
 $nodes | Format-Table -property NodeName, State, NodeWeight
 ```  
   
-##  <a name="CommandPromptProcedure"></a> 使用 Net.exe  
+##  <a name="CommandPromptProcedure"></a>使用 Net.pipe  
   
 ### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>在无仲裁情况下强制启动群集  
   
@@ -101,7 +101,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> 跟进：在无仲裁情况下强制启动群集后  
+##  <a name="FollowUp"></a>跟进：在无仲裁情况下强制启动群集后  
   
 -   在使其他节点重新联机前，必须重新计算和重新配置 NodeWeight 值以正确构造新的仲裁。 否则，该群集可能再次脱机。  
   
@@ -123,9 +123,9 @@ net.exe start clussvc /forcequorum
   
 -   [查看故障转移群集的事件和日志](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772342(v=ws.11))  
   
--   [Get-ClusterLog 故障转移群集 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-clusterlog 故障转移群集 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
- [通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
+ [通过强制仲裁 &#40;SQL Server 进行 WSFC 灾难恢复&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [配置群集仲裁 NodeWeight 设置](configure-cluster-quorum-nodeweight-settings.md)   
  [Windows PowerShell 中按任务焦点列出的故障转移群集 Cmdlet](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b86b68b0e7273a275c8dd1bd00fe99a7c462a27d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662623"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings 事件类别（数据库引擎）
@@ -28,7 +28,7 @@ ms.locfileid: "62662623"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[Attention 事件类](attention-event-class.md)|指示出现了 **Attention** 事件。|  
 |[Background Job Error 事件类](background-job-error-event-class.md)|指示后台作业异常终止。|  
@@ -46,7 +46,7 @@ ms.locfileid: "62662623"
 |[Sort Warnings 事件类](sort-warnings-event-class.md)|指示不适合内存的排序操作。|  
 |[User Error Message 事件类](user-error-message-event-class.md)|显示用户可见的错误消息。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

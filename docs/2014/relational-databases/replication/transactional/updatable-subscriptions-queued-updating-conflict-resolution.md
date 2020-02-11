@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655333"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
@@ -54,13 +54,13 @@ ms.locfileid: "62655333"
   
  **设置排队更新冲突解决策略**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[设置排队更新冲突解决选项 &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[设置排队更新冲突解决选项 (SQL Server Management Studio)](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
--   复制 Transact-SQL 编程：[允许更新事务发布的订阅](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   复制 Transact-SQL 编程： [允许更新事务发布的订阅](../publish/enable-updating-subscriptions-for-transactional-publications.md)。  
   
  **查看数据冲突**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[查看事务发布的数据冲突 &#40;SQL Server Management Studio&#41;](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[查看事务发布的数据冲突 (SQL Server Management Studio)](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>发布服务器入选  
  如果将冲突解决设置为服务器入选，将根据发布服务器中的数据保持事务的一致性。 冲突的事务将回滚到启动该事务的订阅服务器。  
@@ -77,7 +77,7 @@ ms.locfileid: "62655333"
 ### <a name="subscriber-wins"></a>订阅服务器入选  
  使用订阅服务器入选策略下的冲突检测意味着要更新发布服务器的最后一项订阅服务器事务入选。 在这种情况下，如果检测到冲突，将仍使用订阅服务器发送的事务，并更新发布服务器。 此策略适用于此类更改不会危及数据完整性的应用程序。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)  
   
   

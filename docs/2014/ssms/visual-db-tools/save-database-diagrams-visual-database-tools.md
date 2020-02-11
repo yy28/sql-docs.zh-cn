@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62710503"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>保存数据库关系图 (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "62710503"
   
 ### <a name="to-save-the-database-diagram"></a>保存数据库关系图  
   
-1.  从**文件**菜单中，选择**保存 < *`tablename`* >** 。  
+1.  从 "**文件**" 菜单中，选择 "**保存 <*`tablename`* **。  
   
 2.  如果这是一个以前从未保存过的新关系图，则将显示“另存为”  对话框。 键入关系图的名称。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62710503"
   
 3.  单击“是”  （如果是新关系图，则单击“确定”  ）以更新数据库，使其与关系图保持一致。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用数据库关系图 (Visual Database Tools)](visual-database-tools.md)  
   
   

@@ -58,16 +58,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96106fc8bc50a2a1b19c54a6970eeeb72952d82d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069061"
 ---
 # <a name="data-mining-properties"></a>数据挖掘属性
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的数据挖掘服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持下表中列出的数据挖掘服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
   
- **适用范围：** 仅限多维服务器模式  
+ **适用于：** 仅限多维服务器模式  
   
 ## <a name="non-specific-category"></a>非特定类别  
  `AllowSessionMiningModels`  
@@ -117,8 +117,8 @@ ms.locfileid: "66069061"
 > [!NOTE]  
 >  除了可定义服务器上可用的数据挖掘服务的属性外，还有定义特定算法的行为的数据挖掘属性。 您可在创建单个数据挖掘模型时，对这些属性进行配置（不在服务器级别）。 有关详细信息，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](../data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
-## <a name="see-also"></a>请参阅  
- [物理体系结构（Analysis Services - 数据挖掘）](../data-mining/physical-architecture-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另请参阅  
+ [物理体系结构 &#40;Analysis Services 数据挖掘&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
  [在 Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: ODBC API 实现的详细信息 |Microsoft Docs
+title: ODBC API 实现详细信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62715084"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 实现细节
   本节介绍了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起使用时呈现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定行为的 ODBC 函数。 此处只介绍部分 ODBC 函数。 各个单独的主题只讨论 ODBC 函数的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定问题， 它们不提供 ODBC 函数的完整参考资料。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范，如果您使用 Windows 7 SDK，则符合 ODBC 3.8 规范。 有关 ODBC 的全面参考，查看[ODBC 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)联机。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范，如果您使用 Windows 7 SDK，则符合 ODBC 3.8 规范。 有关综合性 ODBC 引用，请联机查看[Odbc 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -131,8 +132,8 @@ ms.locfileid: "62715084"
   
 -   [SQLTables](sqltables.md)  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 本机客户端&#40;ODBC&#41;引用](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Native Client &#40;ODBC&#41; 引用](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
  [使用 SQL Server Native Client 生成应用程序](../native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 启用 DirectQuery 设计模式 (SSAS 表格) |Microsoft Docs
+title: 启用 DirectQuery 设计模式（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 965a3a7c1bfa9549793690e92760ce39f147e0d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067198"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>启用 DirectQuery 设计模式（SSAS 表格）
@@ -38,9 +38,9 @@ ms.locfileid: "66067198"
   
 3.  在 **“属性”** 窗格中，将属性 **DirectQueryMode**更改为 **On**。  
   
-4.  如果存在错误，在 Visual Studio 中，打开**错误列表**并且解决将阻止模型切换到 DirectQuery 模式下的任何问题。  
+4.  如果有错误，则在 Visual Studio 中打开**错误列表**并解决任何会阻止模型切换到 DirectQuery 模式的问题。  
   
-## <a name="see-also"></a>请参阅  
- [DirectQuery 模式（SSAS 表格）](directquery-mode-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [DirectQuery 模式 &#40;SSAS 表格&#41;](directquery-mode-ssas-tabular.md)  
   
   

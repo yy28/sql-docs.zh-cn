@@ -17,19 +17,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 270df8181fe42f48619736ba858dc0c16d9e30c7
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781804"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>使用文件组和文件存储数据
-  数据文件可用于存储数据库文件。 数据文件可细分为文件组。 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象具有 <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A> 属性，该属性引用 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 对象。 该集合中的每个 <xref:Microsoft.SqlServer.Management.Smo.FileGroup> 对象都具有 <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A> 属性。 此属性引用 <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> 集合，该集合包含属于数据库的所有数据文件。 文件组主要用于将用于存储数据库对象的文件组合在起来。 将一个数据库对象分布到几个文件上的一个原因是，它可以提高性能，尤其是在文件存储在不同磁盘驱动器上时。  
+  数据文件可用于存储数据库文件。 数据文件可细分为文件组。 <xref:Microsoft.SqlServer.Management.Smo.Database>对象具有<xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A>属性，该属性引用<xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>对象。 该集合中的每个 <xref:Microsoft.SqlServer.Management.Smo.FileGroup> 对象都具有 <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A> 属性。 此属性引用 <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> 集合，该集合包含属于数据库的所有数据文件。 文件组主要用于将用于存储数据库对象的文件组合在起来。 将一个数据库对象分布到几个文件上的一个原因是，它可以提高性能，尤其是在文件存储在不同磁盘驱动器上时。  
   
  自动创建的每个数据库都具有一个名为“Primary”的文件组和一个与数据库同名的数据文件。 其他文件和组可以添加到集合中。  
   
 ## <a name="examples"></a>示例  
- 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)和[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)和[在 visual Studio .Net 中创建 VISUAL C&#35; smo 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-visual-basic"></a>在 Visual Basic 中将 FileGroups 和 DataFiles 添加到数据库  
  主文件组和数据文件将自动使用默认属性值创建。 代码示例指定了一些可以使用的属性值。 否则，将使用默认属性值。  
@@ -150,6 +150,6 @@ $lf1.Alter()
 $lf1.Drop()
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [数据库文件和文件组](../../databases/database-files-and-filegroups.md)  

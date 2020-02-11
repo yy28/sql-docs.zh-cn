@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783243"
 ---
 # <a name="altering-memory-optimized-tables"></a>更改内存优化表
@@ -63,13 +63,13 @@ ms.locfileid: "72783243"
     select @permissions  
     ```  
   
-4.  创建表的副本并将数据从原始表复制到表的副本。 可以使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]<sup>1</sup>创建副本。  
+4.  创建表的副本并将数据从原始表复制到表的副本。 可以使用以下[!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>创建副本。  
   
     ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     如果有足够的可用内存，`T_copy` 可以是内存优化表，这会使数据复制更快。<sup>2</sup>  
+     如果有足够的可用内存， `T_copy`则可以是内存优化表，这会使数据复制更快。<sup>2</sup>  
   
 5.  删除引用原始表的架构绑定对象。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "72783243"
   
 10. 启动 `T` 上的工作负荷。  
   
- <sup>1</sup>请注意，在此示例中，`T_copy` 保留在磁盘上。 如果 `T` 的备份可用，`T_copy` 可以为临时表或非持久表。  
+ <sup>1</sup>请注意`T_copy` ，在此示例中，保存到磁盘。 如果 `T` 的备份可用，`T_copy` 可以为临时表或非持久表。  
   
- <sup>2</sup>对于 `T_copy`，必须有足够的内存。 执行 `DROP TABLE` 后，不立即释放内存。 如果 `T_copy` 进行内存优化，需要有足够的内存用于新增的两个 `T` 副本。 如果 `T_copy` 是基于磁盘的表，仅需要有足够的内存用于新增的一个 `T` 副本，因为在删除旧版本的 `T` 后垃圾收集器需要同步。  
+ <sup>2</sup>对于，必须有足够的`T_copy`内存。 执行 `DROP TABLE` 后，不立即释放内存。 如果 `T_copy` 进行内存优化，需要有足够的内存用于新增的两个 `T` 副本。 如果 `T_copy` 是基于磁盘的表，仅需要有足够的内存用于新增的一个 `T` 副本，因为在删除旧版本的 `T` 后垃圾收集器需要同步。  
   
 ## <a name="changing-schema-powershell"></a>更改架构 (PowerShell)  
  以下 PowerShell 脚本通过对表和相关权限编写脚本来为架构更改做准备和生成。  
@@ -223,7 +223,7 @@ Write-Host ""
   
  以下 PowerShell 脚本执行在上一示例中脚本化的架构更改。 此脚本提取作为变量的表，并执行为该表和相关存储过程生成的架构更改脚本。  
   
- 用法： execute_schema_change *server_name * * db_name `schema_name`table_name*  
+ 用法： execute_schema_change ps1 *server_name * *`schema_name`db_name table_name*  
   
 ```powershell
 # stop execution once an error occurs  

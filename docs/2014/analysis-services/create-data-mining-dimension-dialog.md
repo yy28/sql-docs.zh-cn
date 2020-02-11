@@ -1,5 +1,5 @@
 ---
-title: 创建数据挖掘维度对话框 |Microsoft Docs
+title: "\"创建数据挖掘维度\" 对话框 |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 801dbaaa8f267c2936f86644cc4a7ad3de6549a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086963"
 ---
 # <a name="create-data-mining-dimension-dialog"></a>“创建数据挖掘维度”对话框
@@ -32,8 +32,8 @@ ms.locfileid: "66086963"
  **创建多维数据集**  
  选择此选项可以基于要创建的挖掘模型维度创建多维数据集。 选择此选项之后，可以为多维数据集输入新的名称。  
   
-## <a name="see-also"></a>请参阅  
- [挖掘结构视图&#40;数据挖掘模型设计器&#41;](mining-structure-view-data-mining-model-designer.md)   
+## <a name="see-also"></a>另请参阅  
+ [挖掘结构视图 &#40;数据挖掘模型设计器&#41;](mining-structure-view-data-mining-model-designer.md)   
  [创建数据挖掘维度](data-mining/create-a-data-mining-dimension.md)  
   
   

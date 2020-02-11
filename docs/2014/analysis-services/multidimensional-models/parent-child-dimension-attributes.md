@@ -1,5 +1,5 @@
 ---
-title: 父-子层次结构中的属性 |Microsoft Docs
+title: 父子层次结构中的属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35521a8f12d3e5c16e63ba883a2b5d561bde4c96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073482"
 ---
 # <a name="attributes-in-parent-child-hierarchies"></a>父子层次结构中的属性
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，通常会对维度中成员的内容做出常规假设。 叶成员包含直接派生自基础数据源的数据；非叶成员包含派生自对子成员所执行的聚合的数据。  
+  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，通常假设是对维度中成员的内容进行一般假设。 叶成员包含直接派生自基础数据源的数据；非叶成员包含派生自对子成员所执行的聚合的数据。  
   
- 但是在父子层次结构中，一些非叶成员除包含通过子成员聚合的数据外，还可能包含派生自基础数据源的数据。 对于父子层次结构中的这些非叶成员，可创建包含基础事实数据表数据的系统生成的特殊子成员。 这些成员称为“数据成员  ”，它们包含与非叶成员直接相关的值，而非叶成员独立于通过该非叶成员的后代计算的汇总值。  
+ 但是在父子层次结构中，一些非叶成员除包含通过子成员聚合的数据外，还可能包含派生自基础数据源的数据。 对于父子层次结构中的这些非叶成员，可创建包含基础事实数据表数据的系统生成的特殊子成员。 这些成员称为“数据成员 **”，它们包含与非叶成员直接相关的值，而非叶成员独立于通过该非叶成员的后代计算的汇总值。  
   
  数据成员仅可用于具有父子层次结构的维度，并且仅当父属性允许时才可见。 可以使用维度设计器来控制数据成员的可见性。 若要公开数据成员，请将父特性的 `MembersWithData` 属性设置为 `NonLeafDataVisible.`。若要隐藏父特性所包含的数据成员，请将父特性的 `MembersWithData` 属性设置为 `NonLeafDataHidden`。  
   
- 此设置不会覆盖非叶成员的正常聚合行为；为了进行聚合，将始终包括作为子成员的数据成员。 但是，可以用自定义汇总公式来覆盖正常聚合行为。 多维表达式 (MDX) [DataMember](/sql/mdx/datamember-mdx)函数使您能够访问相关的数据成员而不考虑的值的值`MembersWithData`属性。  
+ 此设置不会覆盖非叶成员的正常聚合行为；为了进行聚合，将始终包括作为子成员的数据成员。 但是，可以用自定义汇总公式来覆盖正常聚合行为。 多维表达式（MDX） [DataMember](/sql/mdx/datamember-mdx)函数使你能够访问关联数据成员的值，而不考虑`MembersWithData`属性的值。  
   
  父特性的 `MembersWithDataCaption` 属性为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 提供了用于生成数据成员名称的命名模板。  
   
@@ -46,8 +46,8 @@ ms.locfileid: "66073482"
   
  此外，每个销售职员成员的个人佣金可能不同。 在这种情况下，与其下属销售人员所产生的总销售额的合计相对比，将使用两种不同的计数法来计算销售经理的个人总销售额的佣金。 因此，能够访问非叶成员的基础事实数据表数据非常重要。 MDX `DataMember` 函数可用来检索销售经理 1 成员的个人总销售量，并且自定义汇总表达式可用来将数据成员从销售经理 1 成员的聚合值中排除，从而提供与该成员相关的销售人员总销售量。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [维度特性属性参考](dimension-attribute-properties-reference.md)   
- [父-子层次结构](parent-child-dimension.md)  
+ [父子层次结构](parent-child-dimension.md)  
   
   

@@ -18,13 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6a8625af05b13331d513608bc20eb8dd9678d01a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714574"
 ---
 # <a name="using-url-access-in-a-web-application"></a>在 Web 应用程序中使用 URL 访问
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 访问是为实现通过网络访问单独报表而专门设计的。 此类型的访问最适合于将报表查看和导航集成到自定义 Web 应用程序中。 为了在 Web 应用程序中使用 URL 访问，您可以：  
   
 -   将 URL 从某一网站或门户寻址到特定的报表服务器。  
@@ -32,7 +33,7 @@ ms.locfileid: "62714574"
 -   使用窗体 POST 方法并使用窗体字段将查询字符串参数传递到报表服务器 URL。  
   
 ## <a name="url-access-through-direct-addressing"></a>通过直接寻址进行 URL 访问  
- 若要使用某一 URL 访问某个报表服务器或报表服务器数据库项，只需从某一 Web 浏览器或应用程序内提供该 URL 地址。 还可以向 URL 提供可能影响所访问的报表或资源的外观的参数。 URL 可以通过 Web 浏览器的地址栏以某一报表服务器为目标，或者 URL 可以是作为更大的 Web 应用程序或门户的一部分的 IFrame 的来源  。 您可以在门户的不同网页上包括指向报表的超链接，以及以报表的特定框架为目标或在这一过程中打开新的浏览器窗口。  
+ 若要使用某一 URL 访问某个报表服务器或报表服务器数据库项，只需从某一 Web 浏览器或应用程序内提供该 URL 地址。 还可以向 URL 提供可能影响所访问的报表或资源的外观的参数。 URL 可以通过 Web 浏览器的地址栏以某一报表服务器为目标，或者 URL 可以是作为更大的 Web 应用程序或门户的一部分的 IFrame 的来源****。 您可以在门户的不同网页上包括指向报表的超链接，以及以报表的特定框架为目标或在这一过程中打开新的浏览器窗口。  
   
  在以下示例中，超链接以名为“main”的框架为目标，该框架可能不同于包括该超链接的框架。 该超链接可能是 Web 门户的一部分。  
   
@@ -43,7 +44,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
 </a>  
 ```  
   
- 在上例中，设备信息设置 LinkTarget 与值“main”一起传递到 URL 的查询字符串中  。 这确保报表中的所有钻取超链接也以名为“main”的框架为目标。  
+ 在上例中，设备信息设置 LinkTarget 与值“main”一起传递到 URL 的查询字符串中****。 这确保报表中的所有钻取超链接也以名为“main”的框架为目标。  
   
  有关设备信息设置的详细信息，请参阅[将设备信息设置传递给呈现扩展插件](../report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  
   
@@ -78,7 +79,7 @@ http://server/reportserver?/SampleReports/Territory Sales
 Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 Reporting Services 集成到应用程序中](../application-integration/integrating-reporting-services-into-applications.md)   
  [使用 URL 访问集成 Reporting Services](integrating-reporting-services-using-url-access.md)   
  [在 Windows 应用程序中使用 URL 访问](integrating-reporting-services-using-url-access-windows-application.md)   

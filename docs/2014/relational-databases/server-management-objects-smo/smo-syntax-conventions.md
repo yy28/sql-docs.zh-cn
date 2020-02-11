@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a19c67f19c6b1b73947ef752a09516449eeec1a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655350"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 语法约定
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 版式约定基于在中使用的那些[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Studio.NET 参考资料。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象（SMO）的印刷约定基于 Visual Studio .NET 参考[!INCLUDE[msCoName](../../includes/msconame-md.md)]资料中使用的约定。  
   
 |约定|用于|  
 |----------------|--------------|  

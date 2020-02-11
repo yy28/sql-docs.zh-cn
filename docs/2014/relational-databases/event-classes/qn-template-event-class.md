@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca0ef50d40b1c4d4f481bef4de89b43ff4a275c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650410"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template 事件类
@@ -26,7 +26,7 @@ ms.locfileid: "62650410"
   
 ## <a name="qntemplate-event-class-data-columns"></a>QN:Template 事件类的数据列  
   
-|数据列|类型|Description|列号|可筛选|  
+|数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|`int`|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
@@ -34,7 +34,7 @@ ms.locfileid: "62650410"
 |DatabaseName|`nvarchar`|正在运行用户语句的数据库的名称。|35|是|  
 |EventClass|`int`|事件类型 = 201。|27|否|  
 |EventSequence|`int`|此事件的序列号。|51|否|  
-|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 创建的模板：指示已在数据库中创建查询通知模板。<br /><br /> 匹配的模板：指示重用查询通知模板的时间。<br /><br /> 删除模板：指示从数据库删除查询通知模板的时间。|21|是|  
+|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> Template created：指示已在数据库中创建查询通知模板。<br /><br /> Template matched：指示重用查询通知模板的时间。<br /><br /> Template dropped：指示从数据库中删除查询通知模板的时间。|21|是|  
 |GroupID|`int`|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|`nvarchar`|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> 0 = 用户<br /><br /> 1 = 系统|60|否|  

@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778918"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>在内存优化的表中实现 LOB 列
-  内存优化表没有行外或大型对象 (LOB) 存储 (在 SQL Server 2016 及更高的版本，请参阅已取消了此限制[支持内存中 OLTP 的数据类型](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md))，和行大小限制为 8060 个字节。 可以通过两种方式存储大的二进制或字符串值：  
+  内存优化表没有行外或大对象（LOB）存储（已在 SQL Server 2016 及更高版本中删除了此限制-请参阅[内存中 OLTP 支持的数据类型](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)），行大小限制为8060个字节。 可以通过两种方式存储大的二进制或字符串值：  
   
 -   将 LOB 值拆分为多个行。  
   
@@ -100,7 +100,7 @@ COMMIT
 END  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [迁移到内存中 OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

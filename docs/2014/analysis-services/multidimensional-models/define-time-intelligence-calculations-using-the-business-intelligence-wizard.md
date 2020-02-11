@@ -1,5 +1,5 @@
 ---
-title: 定义时间智能计算使用商业智能向导 |Microsoft Docs
+title: 使用商业智能向导定义时间智能计算 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c665c894a4e0bb3691c483a8d8bab084ac2fa276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075435"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>使用商业智能向导定义时间智能计算
@@ -43,7 +43,7 @@ ms.locfileid: "66075435"
   
  时间智能应用于有时间维度的多维数据集。 （时间维度是其 `Type` 属性设置为 `Time` 的维度）。 另外，该维度的时间特性的 `Type` 属性还必须有适当的设置（如年份或月份）。 如果使用维度向导创建时间维度，将会正确设置维度及其特性的 `Type` 属性。  
   
- 若要向多维数据集添加时间智能，请使用商业智能向导，并在 **“选择增强功能”** 页上选择 **“定义时间智能”** 选项。 然后此向导将指引您完成相应的步骤，以选择将向其添加时间智能的层次结构，并指定将对层次结构中的哪些成员应用时间智能。 在向导的最后一页，可以看到为了添加所选时间智能而要对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库进行的更改。  
+ 若要向多维数据集添加时间智能，请使用商业智能向导，并在 **“选择增强功能”** 页上选择 **“定义时间智能”** 选项。 然后此向导将指引您完成相应的步骤，以选择将向其添加时间智能的层次结构，并指定将对层次结构中的哪些成员应用时间智能。 在向导的最后一页上，您可以查看将对[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库进行的更改以添加所选的时间智能。  
   
 ## <a name="selecting-a-time-hierarchy"></a>选择时间层次结构  
  在 **“选择目标层次结构和计算”** 页中，选择将应用时间增强功能的时间层次结构。 每次运行商业智能向导时，只能向一个时间层次结构应用时间增强功能。 如果希望向多个时间层次结构应用增强功能，请再次运行向导。  
@@ -59,9 +59,9 @@ ms.locfileid: "66075435"
 ## <a name="apply-time-views-to-members"></a>对成员应用时间视图  
  在 **“定义计算作用域”** 页中，可以指定要应用新时间视图的成员。 可以对下列对象之一应用新的时间视图：  
   
--   **帐户维度的成员** 在 **“定义计算作用域”** 页中， **“可用度量值”** 列表已包括帐户维度。 帐户维度的 `Type` 属性已设置为 `Accounts`。 如果有帐户维度但该维度没有出现在 **“可用度量值”** 列表中，则可以使用商业智能向导对该维度应用帐户智能。 有关详细信息，请参阅 [向维度中添加帐户智能](bi-wizard-add-account-intelligence-to-a-dimension.md)。  
+-   **帐户维度的成员**在 "**定义计算作用域**" 页上，"**可用度量值**" 列表包括帐户维度。 帐户维度的 `Type` 属性已设置为 `Accounts`。 如果有帐户维度但该维度没有出现在 **“可用度量值”** 列表中，则可以使用商业智能向导对该维度应用帐户智能。 有关详细信息，请参阅 [向维度中添加帐户智能](bi-wizard-add-account-intelligence-to-a-dimension.md)。  
   
--   **度量值** 可以不指定帐户维度，而指定应用时间视图的度量值。 在这种情况下，请选择要应用所选时间计算的视图。 例如，资产和负债是本年度截止到现在的数据；因此，不对资产或负债度量值应用“本年度截止到现在”的计算。  
+-   **度量值**您可以不指定帐户维度，而指定应用时间视图的度量值。 在这种情况下，请选择要应用所选时间计算的视图。 例如，资产和负债是本年度截止到现在的数据；因此，不对资产或负债度量值应用“本年度截止到现在”的计算。  
   
 ## <a name="viewing-the-time-intelligence-enhancement"></a>查看时间智能增强功能  
  在商业智能向导的最后一页中，可以查看将对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库进行的更改。 对于时间智能增强功能，向导将按下表所述更改所选时间维度、关联的数据源视图以及关联的多维数据集。  
@@ -70,9 +70,9 @@ ms.locfileid: "66075435"
 |------------|------------|  
 |时间维度|为每个计算（或视图）添加属性。|  
 |数据源视图|在时间表中为时间维度中每个新属性添加计算列。|  
-|多维数据集|添加计算成员，该成员定义了执行此计算的多维表达式 (MDX) 代码。|  
+|Cube|添加计算成员，该成员定义了执行此计算的多维表达式 (MDX) 代码。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建计算成员](create-calculated-members.md)  
   
   

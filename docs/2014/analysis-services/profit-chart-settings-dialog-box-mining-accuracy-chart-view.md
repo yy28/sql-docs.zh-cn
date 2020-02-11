@@ -1,5 +1,5 @@
 ---
-title: 利润图设置对话框 （挖掘准确性图表视图） |Microsoft Docs
+title: "\"利润图设置\" 对话框（\"挖掘准确性图表\" 视图） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9c44aa6060a9b626b3de0cde5a3c82e1e55b1dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070689"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>“利润图设置”对话框（“挖掘准确性图表”视图）
@@ -32,12 +32,12 @@ ms.locfileid: "66070689"
  **单项成本**  
  分别输入未包含在固定成本中的其他成本。  
   
- **单项收入**  
+ **每个人收入**  
  输入由某一笔销售或新客户带来的预计收入。  
   
-## <a name="see-also"></a>请参阅  
- [挖掘准确性图表设计器&#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [测试和验证任务和操作指南&#40;数据挖掘&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>另请参阅  
+ [挖掘准确性图表设计器 &#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [测试和验证任务以及操作方法 &#40;数据挖掘&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [测试和验证 &#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

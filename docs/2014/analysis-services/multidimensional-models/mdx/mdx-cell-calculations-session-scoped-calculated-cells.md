@@ -1,5 +1,5 @@
 ---
-title: 创建会话作用域的计算单元格 |Microsoft Docs
+title: 创建会话作用域的计算单元 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074431"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>创建会话作用域的计算单元
@@ -73,16 +73,17 @@ FOR String_Expression AS 'MDX_Expression'
    ( CellProperty_Identifier = Scalar_Expression )  
 ```  
   
- `String_Expression` 值包含一个正交、单维度 MDX 集表达式列表，每个表达式都必须解析为下表列出的集类别之一。  
+ 
+  `String_Expression` 值包含一个正交、单维度 MDX 集表达式列表，每个表达式都必须解析为下表列出的集类别之一。  
   
-|Category|Description|  
+|类别|说明|  
 |--------------|-----------------|  
 |空集|解析为空集的 MDX 集表达式。 在这种情况下，计算单元的作用域是整个多维数据集。|  
 |单个成员集|解析为单个成员的 MDX 集表达式。|  
-|级别成员集|解析为单个级别的成员的 MDX 集表达式。 这就*Level_Expression*。`Members` MDX 函数。 若要包括计算的成员，请使用*Level_Expression*。`AllMembers` MDX 函数。<br /><br /> 有关详细信息，请参阅 [AllMembers (MDX)](/sql/mdx/allmembers-mdx)。|  
-|后代集|解析为指定成员的后代的 MDX 集表达式。 这就`Descendants`(*Member_Expression*， *Level_Expression*， *Desc_Flag*) MDX 函数。<br /><br /> 有关详细信息，请参阅 [Descendants (MDX)](/sql/mdx/descendants-mdx)。|  
+|级别成员集|解析为单个级别的成员的 MDX 集表达式。 *Level_Expression*就是其中的一个示例。`Members` MDX 函数。 若要包括计算成员，请使用*Level_Expression*。`AllMembers` MDX 函数。<br /><br /> 有关详细信息，请参阅 [AllMembers (MDX)](/sql/mdx/allmembers-mdx)。|  
+|后代集|解析为指定成员的后代的 MDX 集表达式。 `Descendants`这是（*Member_Expression*、 *Level_Expression* *Desc_Flag*） MDX 函数的一个示例。<br /><br /> 有关详细信息，请参阅 [Descendants (MDX)](/sql/mdx/descendants-mdx)。|  
   
-## <a name="see-also"></a>请参阅  
- [在 MDX 中生成单元格计算 (MDX)](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+## <a name="see-also"></a>另请参阅  
+ [在 MDX 中生成单元计算 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

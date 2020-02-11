@@ -18,10 +18,10 @@ ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f84e84ed7801beb20bdaca5c92d333133fad3b63
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70745357"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
@@ -39,34 +39,34 @@ ms.locfileid: "70745357"
   
  如果要查看正在等待发送的消息数以及消息已在邮件队列中存在的时间，则请使用该视图。 通常，未**发送**的消息数将很少。 请在正常操作过程中进行基准测试，以确定消息队列中合理的消息数以便进行操作。  
   
- 若要查看数据库邮件处理的所有消息，请使用[sysmail_allitems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。 若要仅查看状态为 "失败" 的消息，请使用[sysmail_faileditems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)。 若要仅查看已发送的消息，请使用[sysmail_sentitems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)。  
+ 若要查看数据库邮件处理的所有消息，请使用[sysmail_allitems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。 若要仅查看状态为 "失败" 的消息，请使用 " [sysmail_faileditems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)"。 若要仅查看已发送的消息，请使用[&#40;transact-sql&#41;sysmail_sentitems ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|邮件队列中邮件项的标识符。|  
 |**profile_id**|**int**|提交消息所用配置文件的标识符。|  
-|**者**|**varchar(max)**|消息收件人的电子邮件地址。|  
+|**recipients**|**varchar(max)**|消息收件人的电子邮件地址。|  
 |**copy_recipients**|**varchar(max)**|接收消息副本的用户的电子邮件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|接收消息副本但其姓名未出现在消息标头中的用户的电子邮件地址。|  
-|**subject**|**nvarchar(510)**|消息的主题行。|  
-|**大量**|**varchar(max)**|消息的正文。|  
-|**body_format**|**varchar(20)**|消息正文的格式。 可能的值为**TEXT**和**HTML**。|  
-|**importance**|**varchar(6)**|消息的**重要性**参数。|  
-|**程度**|**varchar(12)**|消息的**敏感度**参数。|  
+|**主题**|**nvarchar （510）**|消息的主题行。|  
+|**大量**|**varchar(max)**|消息正文。|  
+|**body_format**|**varchar （20）**|消息正文的格式。 可能的值为**TEXT**和**HTML**。|  
+|**仅次于**|**varchar （6）**|消息的**重要性**参数。|  
+|**程度**|**varchar （12）**|消息的**敏感度**参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
-|**attachment_encoding**|**varchar(20)**|邮件附件的类型。|  
+|**attachment_encoding**|**varchar （20）**|邮件附件的类型。|  
 |**query**|**varchar(max)**|邮件程序所执行的查询。|  
 |**execute_query_database**|**sysname**|邮件程序在其中执行查询的数据库上下文。|  
 |**attach_query_result_as_file**|**bit**|如果该值为 0，则查询结果包含在电子邮件的正文中，在正文的内容之后。 如果该值为 1，则结果作为附件返回。|  
 |**query_result_header**|**bit**|如果值为1，则查询结果包含列标题。 如果该值为0，则查询结果不包括列标题。|  
 |**query_result_width**|**int**|消息的**query_result_width**参数。|  
-|**query_result_separator**|**char(1)**|用于分隔查询输出中的各列的字符。|  
-|**exclude_query_output**|**bit**|消息的**exclude_query_output**参数。 有关详细信息，请[参阅&#40;sp_send_dbmail transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。|  
+|**query_result_separator**|**char （1）**|用于分隔查询输出中的各列的字符。|  
+|**exclude_query_output**|**bit**|消息的**exclude_query_output**参数。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_send_dbmail ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。|  
 |**append_query_error**|**bit**|消息的**append_query_error**参数。 0 指示如果查询中存在错误，则数据库邮件不应发送电子邮件。|  
 |**send_request_date**|**datetime**|将消息放在邮件队列中的日期和时间。|  
 |**send_request_user**|**sysname**|提交消息的用户。 这是数据库邮件过程的用户上下文，不是消息的 "**发件**字段" 字段。|  
 |**sent_account_id**|**int**|发送消息所用数据库邮件帐户的标识符。 对于该视图，始终为 NULL。|  
-|**sent_status**|**varchar(8)**|如果数据库邮件尚未尝试发送邮件，则将**发送**该邮件。 如果数据库邮件无法发送消息，但正在重试，将**重试**。|  
+|**sent_status**|**varchar （8）**|如果数据库邮件尚未尝试发送邮件，则将**发送**该邮件。 如果数据库邮件无法发送消息，但正在重试，将**重试**。|  
 |**sent_date**|**datetime**|数据库邮件上次尝试发送邮件的日期和时间。 如果数据库邮件尚未尝试发送消息，则为 NULL。|  
 |**last_mod_date**|**datetime**|上次修改行的日期和时间。|  
 |**last_mod_user**|**sysname**|上次修改行的用户。|  

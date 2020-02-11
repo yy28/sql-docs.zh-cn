@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc9aa519d37b040026414ab826373357a1ddd92f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074731"
 ---
 # <a name="autoexists"></a>Autoexists
-  “autoexists”  的概念将多维数据集空间限制为在多维数据集中实际存在的那些单元，而不是可能由于从同一层次结构创建属性层次结构成员的所有可能组合而存在的那些单元。 其原因在于，一个属性层次结构的成员不能与同一维度中其他属性层次结构的成员共存。 在 SELECT 语句中使用同一维度的两个或更多属性层次结构时，Analysis Services 会计算这些属性的表达式，以确保这些属性的成员得到适当限制，使它们满足所有其他属性的条件。  
+  “autoexists” ** 的概念将多维数据集空间限制为在多维数据集中实际存在的那些单元，而不是可能由于从同一层次结构创建属性层次结构成员的所有可能组合而存在的那些单元。 其原因在于，一个属性层次结构的成员不能与同一维度中其他属性层次结构的成员共存。 在 SELECT 语句中使用同一维度的两个或更多属性层次结构时，Analysis Services 会计算这些属性的表达式，以确保这些属性的成员得到适当限制，使它们满足所有其他属性的条件。  
   
  例如，假定您在处理来自 Geography 维度的属性。 如果您有一个表达式返回 City 属性中的所有成员，另一个表达式将 Country 属性中的成员限定为欧洲的所有国家/地区，这样将使 City 成员限制为仅属于欧洲国家的城市。 其原因就在于 Analysis Services 的 autoexists 特性。 Autoexists 仅适用于同一维度中的属性，因为它试图阻止在一个属性表达式中排除的维度记录被包括在其他属性表达式中。 也可以将 Autoexists 理解为不同的属性表达式产生的维度行的交集。  
   
@@ -62,7 +62,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  请注意 0 用于表示列轴的名称，它是列轴“axis(0)”的简称。  
   
- 前面的查询仅为查询中每个属性层次结构的共存成员返回单元。 此外可以使用新编写前面的查询 * 的变体[Crossjoin (MDX)](/sql/mdx/crossjoin-mdx)函数。  
+ 前面的查询仅为查询中每个属性层次结构的共存成员返回单元。 前面的查询还可以使用[交叉结合（MDX）](/sql/mdx/crossjoin-mdx)函数的新 * 变体来编写。  
   
 ```  
 SELECT   
@@ -85,10 +85,12 @@ WHERE (Measures.[Internet Sales Amount],
   
  虽然结果集中的元数据将不同，但返回的单元值将是相同的。 例如，在前面的查询中，Country 层次结构已移到切片器轴（在 WHERE 子句中），因此没有显式显示在结果集中。  
   
- 前面的这三个查询均阐释了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中自动共存行为所带来的影响。  
+ 这三个前面的查询都说明了中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的自动共存行为的影响。  
   
 ## <a name="deep-and-shallow-autoexists"></a>深度和浅表 Autoexists  
- Autoexists 可以深度或浅表的形式应用于表达式。 `Deep Autoexists` 意味着将对所有表达式进行计算，以便在应用了切片器表达式、轴中的嵌套 select 表达式等后到达可能的最深空间。 `Shallow Autoexists` 意味着在将当前表达式和这些结果传递到当前表达式之前对外部表达式进行计算。 默认设置为深度 autoexists。  
+ Autoexists 可以深度或浅表的形式应用于表达式。 
+  `Deep Autoexists` 意味着将对所有表达式进行计算，以便在应用了切片器表达式、轴中的嵌套 select 表达式等后到达可能的最深空间。 
+  `Shallow Autoexists` 意味着在将当前表达式和这些结果传递到当前表达式之前对外部表达式进行计算。 默认设置为深度 autoexists。  
   
  下面的应用场景和示例将帮助阐明不同类型的 Autoexists。 在下面的示例中，将创建两个集：一个作为计算表达式，另一个作为常量表达式。  
   
@@ -132,17 +134,17 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
-|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2.47%**|  
-|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
-|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
-|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
-|**Road-150**|**$2,363,805.16**|**$0.00**|**0.00%**|  
-|**Touring-3000**|**$2,046,508.26**|**$79,582.15**|**3.89%**|  
+||**分销商销售额**|**Discount Amount**|**PCT 折扣**|  
+|**山地-200**|**$14356699.36**|**$19012.71**|**0.13%**|  
+|**道路-250**|**$9377457.68**|**$4032.47**|**0.04%**|  
+|**山地-100**|**$8568958.27**|**$139393.27**|**1.63%**|  
+|**道路-650**|**$7442141.81**|**$39698.30**|**0.53%**|  
+|**旅行-1000**|**$6723794.29**|**$166144.17**|**2.47%**|  
+|**公路-550-W**|**$3668383.88**|**$1901.97**|**0.05%**|  
+|**公路-350-W**|**$3665932.31**|**$20946.50**|**0.57%**|  
+|**HL 山地框**|**$3365069.27**|**$174.11**|**0.01%**|  
+|**道路-150**|**$2363805.16**|**$0.00**|**0.00%**|  
+|**旅行-3000**|**$2046508.26**|**$79582.15**|**3.89%**|  
   
  获得的产品集似乎与 Preferred10Products 相同；因此，请验证 Preferred10Products 集：  
   
@@ -184,17 +186,17 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
-|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2.47%**|  
-|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
-|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
-|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
-|**Road-150**|**$2,363,805.16**|**$0.00**|**0.00%**|  
-|**Touring-3000**|**$2,046,508.26**|**$79,582.15**|**3.89%**|  
+||**分销商销售额**|**Discount Amount**|**PCT 折扣**|  
+|**山地-200**|**$14356699.36**|**$19012.71**|**0.13%**|  
+|**道路-250**|**$9377457.68**|**$4032.47**|**0.04%**|  
+|**山地-100**|**$8568958.27**|**$139393.27**|**1.63%**|  
+|**道路-650**|**$7442141.81**|**$39698.30**|**0.53%**|  
+|**旅行-1000**|**$6723794.29**|**$166144.17**|**2.47%**|  
+|**公路-550-W**|**$3668383.88**|**$1901.97**|**0.05%**|  
+|**公路-350-W**|**$3665932.31**|**$20946.50**|**0.57%**|  
+|**HL 山地框**|**$3365069.27**|**$174.11**|**0.01%**|  
+|**道路-150**|**$2363805.16**|**$0.00**|**0.00%**|  
+|**旅行-3000**|**$2046508.26**|**$79582.15**|**3.89%**|  
   
  下面的示例将阐释深度 Autoexists 的概念。 在该示例中，我们将依据 [Product].[Product Line] 属性对 [Mountain] 组中的产品筛选 Top10SellingProducts。 请注意两个属性（slicer 和 axis）均属于同一维度 [Product]。  
   
@@ -216,17 +218,17 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
-|**Mountain-300**|**$1,907,249.38**|**$876.95**|**0.05%**|  
-|**Mountain-500**|**$1,067,327.31**|**$17,266.09**|**1.62%**|  
-|**Mountain-400-W**|**$592,450.05**|**$303.49**|**0.05%**|  
-|**LL Mountain Frame**|**$521,864.42**|**$252.41**|**0.05%**|  
-|**ML Mountain Frame-W**|**$482,953.16**|**$206.95**|**0.04%**|  
-|**ML Mountain Frame**|**$343,785.29**|**$161.82**|**0.05%**|  
-|**Women's Mountain Shorts**|**$260,304.09**|**$6,675.56**|**2.56%**|  
+||**分销商销售额**|**Discount Amount**|**PCT 折扣**|  
+|**山地-200**|**$14356699.36**|**$19012.71**|**0.13%**|  
+|**山地-100**|**$8568958.27**|**$139393.27**|**1.63%**|  
+|**HL 山地框**|**$3365069.27**|**$174.11**|**0.01%**|  
+|**山地-300**|**$1907249.38**|**$876.95**|**0.05%**|  
+|**Mountain-500**|**$1067327.31**|**$17266.09**|**1.62%**|  
+|**山地-400-W**|**$592450.05**|**$303.49**|**0.05%**|  
+|**山地框**|**$521864.42**|**$252.41**|**0.05%**|  
+|**ML 山地帧-W**|**$482953.16**|**$206.95**|**0.04%**|  
+|**ML 山地框架**|**$343785.29**|**$161.82**|**0.05%**|  
+|**Women's Mountain Shorts**|**$260304.09**|**$6675.56**|**2.56%**|  
   
  在上面的结果集中，我们看到 Top10SellingProducts 列表中有七种新产品，并且 Mountain-200、Mountain-100 和 HL Mountain Frame 移到了列表顶部。 在前面的结果集中，这三个值是混杂的。  
   
@@ -274,10 +276,10 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
+||**分销商销售额**|**Discount Amount**|**PCT 折扣**|  
+|**山地-200**|**$14356699.36**|**$19012.71**|**0.13%**|  
+|**山地-100**|**$8568958.27**|**$139393.27**|**1.63%**|  
+|**HL 山地框**|**$3365069.27**|**$174.11**|**0.01%**|  
   
  在上面的示例中，与预期的一样，切片生成的结果仅包含 Preferred10Products 中属于 [Product].[Product Line] 中的 [Mountain] 组的那些产品，因为 Preferred10Products 是一个常量表达式。  
   
@@ -303,20 +305,20 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
+||**分销商销售额**|**Discount Amount**|**PCT 折扣**|  
+|**山地-200**|**$14356699.36**|**$19012.71**|**0.13%**|  
+|**山地-100**|**$8568958.27**|**$139393.27**|**1.63%**|  
+|**HL 山地框**|**$3365069.27**|**$174.11**|**0.01%**|  
   
- 可以修改 Autoexists 的行为使用 AUTOEXISTS = [1 | 2 | 3] 参数; 在连接字符串请参阅[支持的 XMLA 属性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)并<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>有关参数的用法。  
+ 使用连接字符串中的 AUTOEXISTS = [1 | 2 | 3] 参数可以修改 Autoexists 行为;[&#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和参数用法， <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>请参阅支持的 xmla 属性。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 中的重要概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [MDX &#40;Analysis Services 中的关键概念&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [多维数据集空间](cube-space.md)   
- [元组](tuples.md)   
- [使用成员、元组和集 (MDX)](working-with-members-tuples-and-sets-mdx.md)   
+ [元](tuples.md)   
+ [使用成员、元组和集 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [直观合计和非直观合计](visual-totals-and-non-visual-totals.md)   
- [MDX 语言参考 (MDX)](/sql/mdx/mdx-language-reference-mdx)   
- [多维表达式 (MDX) 参考](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Mdx 语言参考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [MDX&#41; 引用 &#40;多维表达式](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   
