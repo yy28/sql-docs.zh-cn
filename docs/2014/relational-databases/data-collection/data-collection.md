@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd38517c80eb5a1eca697bbc1705880132f4ea62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919053"
 ---
-# <a name="data-collection"></a>“数据收集”
+# <a name="data-collection"></a>数据收集
   数据收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一个组件，用于收集不同的数据集。 数据收集连续运行或按照用户定义的计划运行。 数据收集器将收集的数据存储在称为管理数据仓库的关系数据库中。  
   
 ## <a name="benefits-of-data-collector"></a>数据收集器的优点  
@@ -36,7 +36,7 @@ ms.locfileid: "62919053"
 ## <a name="data-collector-concepts"></a>数据收集器概念  
  数据收集器与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]集成并可广泛使用这两者。 因此在使用数据收集器之前，应了解与这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件相关的某些概念。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用于计划和运行收集作业。 您应该了解以下概念：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理用于计划和运行收集作业。 您应该了解以下概念：  
   
 -   作业  
   
@@ -50,19 +50,19 @@ ms.locfileid: "62919053"
   
  有关详细信息，请参阅 [自动执行管理任务（SQL Server 代理）](../../ssms/agent/sql-server-agent.md)。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 用于执行从各个数据提供程序收集数据的包。 您应该熟悉以下 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工具和概念：  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]（[!INCLUDE[ssIS](../../includes/ssis-md.md)]）用于执行从各个数据访问接口收集数据的包。 您应该熟悉以下 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工具和概念：  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]软件包  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包配置  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]包配置  
   
  有关详细信息，请参阅 [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)。  
   
 ## <a name="data-collector-terminology"></a>数据收集器术语  
- target  
- 支持数据收集的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关受支持版本的详细信息，请参阅的"可管理性"部分[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 目标  
+ 支持数据收集的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关支持的版本的详细信息，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)的 "可管理性" 部分。  
   
- “目标根目录  ”定义目标层次结构中的子树。 “目标集  ”是通过将筛选器应用到目标根目录定义的子树上而得到的目标组。 目标根目录可以是数据库、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或计算机实例。  
+ “目标根目录 ** ”定义目标层次结构中的子树。 “目标集 ** ”是通过将筛选器应用到目标根目录定义的子树上而得到的目标组。 目标根目录可以是数据库、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或计算机实例。  
   
  目标类型 (target type)  
  目标的类型，它具有某些特征和行为。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例目标具有与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库目标不同的特征。  
@@ -71,7 +71,8 @@ ms.locfileid: "62919053"
  特定于某个目标类型的已知数据源，用于为收集器类型提供数据。  
   
  收集器类型 (collector type)  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的逻辑包装，该包提供收集数据和将数据上载到管理数据仓库的实际机制。  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的逻辑包装，该包提供收集数据和将数据上载到管理数据仓库的实际机制。  
   
  收集项 (collection item)  
  收集器类型的实例。 收集项是通过一组特定的输入属性并以特定的收集频率创建的。  
@@ -112,7 +113,7 @@ ms.locfileid: "62919053"
 |任务说明|主题|  
 |----------------------|-----------|  
 |描述如何管理数据收集的各个方面，例如启用或禁用数据收集、更改收集组配置或查看管理数据仓库中的数据。|[管理数据收集](manage-data-collection.md)|  
-|描述如何使用报表获取信息以监视系统功能和解决系统性能问题。|[系统数据收集组报告](system-data-collection-set-reports.md)|  
+|描述如何使用报表获取信息以监视系统功能和解决系统性能问题。|[系统数据收集组报表](system-data-collection-set-reports.md)|  
 |描述如何使用管理数据仓库收集来自身为数据收集目标的服务器的数据。|[管理数据仓库](management-data-warehouse.md)|  
   
   

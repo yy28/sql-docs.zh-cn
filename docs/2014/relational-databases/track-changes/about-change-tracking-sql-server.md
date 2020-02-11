@@ -17,14 +17,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670913"
 ---
 # <a name="about-change-tracking-sql-server"></a>关于更改跟踪 (SQL Server)
-  更改跟踪是一种轻量型解决方案，它为应用程序提供了一种有效的更改跟踪机制。 通常，若要使应用程序能够查询对数据库中的数据所做的更改和访问与这些更改相关的信息，应用程序开发人员必须实现自定义更改跟踪机制。 创建这些机制通常涉及多项工作的和经常涉及到使用的触发器，组合`timestamp`列和新表来存储跟踪信息和自定义清除过程。  
+  更改跟踪是一种轻量型解决方案，它为应用程序提供了一种有效的更改跟踪机制。 通常，若要使应用程序能够查询对数据库中的数据所做的更改和访问与这些更改相关的信息，应用程序开发人员必须实现自定义更改跟踪机制。 创建这些机制通常涉及到许多工作，并经常涉及使用触发器、 `timestamp`列、用于存储跟踪信息的新表和自定义清理过程的组合。  
   
  不同类型的应用程序对其所需的有关更改的信息量有不同的要求。 应用程序可以使用更改跟踪来回答以下有关对用户表所做更改的问题：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62670913"
   
  使用更改跟踪也可以获取与每个行所做更改相关的信息。 例如，导致更改（插入、更新或删除）的 DML 操作的类型或作为更新操作的一部分而更改的列。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启用和禁用更改跟踪 (SQL Server)](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [处理更改跟踪 (SQL Server)](../track-changes/work-with-change-tracking-sql-server.md)   
  [管理更改跟踪 (SQL Server)](../track-changes/manage-change-tracking-sql-server.md)   

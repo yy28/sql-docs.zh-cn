@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067643"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 故障转移群集安装
@@ -25,13 +25,13 @@ ms.locfileid: "63067643"
   
 1.  若要安装、配置和维护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，请使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。  
   
-    -   确定创建故障转移群集实例（如群集磁盘资源、IP 地址和网络名称）和可用于故障转移的节点所需的信息。 详细信息：  
+    -   确定创建故障转移群集实例（如群集磁盘资源、IP 地址和网络名称）和可用于故障转移的节点所需的信息。 更多相关信息：  
   
         -   [安装故障转移群集前的准备工作](before-installing-failover-clustering.md)  
   
         -   [安装 SQL Server 的安全注意事项](../../install/security-considerations-for-a-sql-server-installation.md)  
   
-    -   必须在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序之前完成这些配置步骤，可使用 Windows 群集管理器来执行操作。必须为要配置的各个故障转移群集实例设置一个 WSFC 组。  
+    -   必须在运行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装程序之前进行配置步骤;使用 Windows 群集管理器来执行。您必须为要配置的每个故障转移群集实例设置一个 WSFC 组。  
   
     -   您必须确保您的系统满足最低要求。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的具体要求的详细信息，请参阅 [安装故障转移群集前的准备工作](before-installing-failover-clustering.md)。  
   
@@ -41,17 +41,17 @@ ms.locfileid: "63067643"
   
 3.  为每个故障转移群集实例指定多个 IP 地址。 您可以为每个子网指定多个 IP 地址。 如果多个 IP 地址在同一子网上， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序会将依赖关系设置为 AND。 如果您正在创建跨多个子网的群集节点，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将依赖关系设置为 OR。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集安装选项  
+## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集安装选项  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>选项 1：带“添加节点”功能的集成安装  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 集成故障转移群集安装包括两个步骤：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]集成故障转移群集安装包括两个步骤：  
   
 1.  创建并配置单节点 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例。 在成功配置完该节点时，您将拥有一个功能齐全的故障转移群集实例。 此时，由于故障转移群集内仅有一个节点，因此它不具备高可用性。  
   
 2.  在要添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中的每个节点上，运行带“添加节点”功能的安装程序以添加该节点。  
   
 ##### <a name="option-2-advancedenterprise-installation"></a>选项 2：高级/企业安装  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 高级/企业故障转移群集安装包括两个步骤：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]高级/企业故障转移群集安装包括两个步骤：  
   
 1.  在将要成为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集一部分的每个节点上，运行带“准备故障转移群集”功能的安装程序。 此步骤将准备好节点使其可以加入群集，但在此步骤结束时不会有可工作的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
   
@@ -61,26 +61,27 @@ ms.locfileid: "63067643"
     >  两种安装选项都允许多节点 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集安装。 在创建了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集后，“添加节点”功能可用于在任一安装选项下添加更多节点。  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装位置的操作系统驱动器号在添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的所有节点上必须匹配。  
+    >  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装位置的操作系统驱动器号在添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的所有节点上必须匹配。  
   
 #### <a name="ip-address-configuration-during-setup"></a>在安装过程中配置 IP 地址  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序在以下操作期间允许您设置或更改 IP 资源依赖关系设置：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装程序允许您在执行以下操作时设置或更改 IP 资源依赖关系设置：  
   
--   集成安装 - [创建新的 SQL Server 故障转移群集（安装程序）](create-a-new-sql-server-failover-cluster-setup.md)  
+-   集成安装 - [Create a New SQL Server Failover Cluster &#40;Setup&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
--   CompleteFailoverCluster（高级安装） - [创建新的 SQL Server 故障转移群集（安装程序）](create-a-new-sql-server-failover-cluster-setup.md)  
+-   CompleteFailoverCluster（高级安装） - [Create a New SQL Server Failover Cluster &#40;Setup&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
 -   添加节点 - [在 SQL Server 故障转移群集中添加或删除节点（安装程序）](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
 -   删除节点 - [在 SQL Server 故障转移群集中添加或删除节点（安装程序）](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
- **注意** 支持 IPV6 IP 地址。  如果您同时配置 IPV4 和 IPV6，将像对待不同的子网那样处理它们，IPV6 首先联机。  
+ **注意**支持 IPV6 IP 地址。  如果您同时配置 IPV4 和 IPV6，将像对待不同的子网那样处理它们，IPV6 首先联机。  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集  
+##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]多子网故障转移群集  
  当群集上的节点位于不同子网时，您可以设置 OR 依赖关系。 但是， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集中的每个节点必须是至少一个指定的 IP 地址的可能所有者。  
   
-## <a name="see-also"></a>请参阅  
- [安装故障转移群集前的准备工作](before-installing-failover-clustering.md)   
+## <a name="see-also"></a>另请参阅  
+ [安装故障转移群集之前](before-installing-failover-clustering.md)   
  [创建新的 SQL Server 故障转移群集（安装程序）](create-a-new-sql-server-failover-cluster-setup.md)   
  [从命令提示符安装 SQL Server 2014](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [升级 SQL Server 故障转移群集](../windows/upgrade-a-sql-server-failover-cluster-instance.md)  

@@ -1,5 +1,5 @@
 ---
-title: 创建预测结构和模型 （数据挖掘中级教程） |Microsoft Docs
+title: 创建预测结构和模型（数据挖掘中级教程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204809"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>创建预测结构和模型（数据挖掘中级教程）
@@ -22,47 +22,47 @@ ms.locfileid: "63204809"
   
 ### <a name="to-create-a-forecasting-mining-structure"></a>创建预测挖掘结构  
   
-1.  在解决方案资源管理器中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，右键单击**挖掘结构**，然后选择**新建挖掘结构**。  
+1.  在的解决方案资源管理器[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，右键单击 "**挖掘结构**"，然后选择 "**新建挖掘结构**"。  
   
-2.  在 **“欢迎使用数据挖掘向导”** 页上，单击 **“下一步”** 。  
+2.  在 **“欢迎使用数据挖掘向导”** 页上，单击 **“下一步”**。  
   
-3.  上**选择定义方法**页上，确认**从现有关系数据库或数据仓库**已选择，然后单击**下一步**。  
+3.  在 "**选择定义方法**" 页上，验证是否选择了 "**从现有关系数据库或数据仓库**"，然后单击 "**下一步**"。  
   
-4.  上**创建数据挖掘结构**页面上，在**想要使用何种数据挖掘技术？** ，选择**Microsoft 时序**，然后单击**下一步**。  
+4.  在 "**创建数据挖掘结构**" 页上，在 "**要使用何种数据挖掘技术？**" 下，选择 " **Microsoft 时序**"，然后单击 "**下一步**"。  
   
-5.  上**选择数据源视图**页面上，在**可用数据源视图**，选择**SalesByRegion**。  
+5.  在 "**选择数据源视图**" 页上的 "**可用数据源视图**" 下，选择**salesbyregion.dsv**。  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。   
   
-7.  上**指定表类型**页上，确保中的复选框**用例**vTimeSeries 表的列已选中，然后单击**下一步**。  
+7.  在 "**指定表类型**" 页上，确保选中 "vTimeSeries" 表的 "**事例**" 列中的复选框，然后单击 "**下一步**"。  
   
-8.  上**指定定型数据**页上，选择中的复选框**密钥**ModelRegion 和 ReportingDate 列的列。  
+8.  在 "**指定定型数据**" 页上，选中 ModelRegion 和 ReportingDate 列的**键**列中的复选框。  
   
      ReportingDate 默认情况下应处于选中状态，因为您在创建数据源视图时已经将该列指定为逻辑主键。 通过将 ModelRegion 添加为第二个键，您将指示此算法为该字段中列出的每个模型和地区组合创建一个单独的时序。  
   
-9. 选择中的复选框**输入**并**可预测**列的数量，列，再单击**下一步**。  
+9. 选中 "数量" 列的 "**输入**" 和 "**可预测**" 列中的复选框，然后单击 "**下一步**"。  
   
-     通过选择**可预测**，指示你想要在此列中的数据，来创建预测。 但是，由于您希望预测基于以前的数据，还必须添加该列作为输入。  
+     通过选择 "**可预测**"，您可以指示要对此列中的数据创建预测。 但是，由于您希望预测基于以前的数据，还必须添加该列作为输入。  
   
-10. 在页上**指定列内容和数据类型**，检查所做选择。  
+10. 在 "**指定列的内容和数据类型**" 页上，查看所选内容。  
   
-     ModelRegion 列被指定为**键**列，ReportingDate 列将自动指定为**Key Time**列。 您只能拥有一种类型的键。  
+     将 ModelRegion 列指定为**键**列，并将 ReportingDate 列自动指定为**key Time**列。 您只能拥有一种类型的键。  
   
-11. 单击“下一步”  。  
+11. 单击“下一步”。   
   
-12. 上**完成向导**页上，对于**挖掘结构名称**，类型`Forecasting`。  
+12. 在 "**完成向导**" 页的 "**挖掘结构名称**" 中`Forecasting`，键入。  
   
     > [!NOTE]  
     >  用来启用钻取的选项对于时序模型不可用。  
   
-13. 在中**挖掘模型名称**，类型`Forecasting`，然后单击**完成**。  
+13. 在 "**挖掘模型名称**" `Forecasting`中，键入，然后单击 "**完成**"。  
   
-     数据挖掘设计器将打开以显示`Forecasting`刚创建的挖掘结构。  
+     此时将打开数据挖掘设计器`Forecasting` ，显示您刚创建的挖掘结构。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [修改预测结构&#40;数据挖掘中级教程&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
+ [&#40;中级数据挖掘教程修改预测结构&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘设计器](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Microsoft 时序算法](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: ADO 事件实例化：Visual Basic |Microsoft Docs
+title: ADO 事件实例化： Visual Basic |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ead713a37d4ecf8bdfecd0d6c485684d1ad0777f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926071"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>ADO 事件实例化：Visual Basic
-若要处理 Microsoft® Visual Basic® 中的 ADO 事件，必须声明模块级变量 using **WithEvents**关键字。 变量可以声明仅为类模块的一部分，且必须在模块级别声明。 这不是限制性最高，因为它看上去，但是，因为 Visual Basic**窗体**对象也是类。 处理 ADO 事件的最简单方法是声明变量的使用**WithEvents**。 下面的示例处理**ConnectComplete**事件**连接**对象：  
+若要在 Microsoft® Visual Basic®中处理 ADO 事件，必须使用**WithEvents**关键字声明模块级变量。 变量只能声明为类模块的一部分，并且必须在模块级别声明。 但这并不像看起来一样严格，因为 Visual Basic**窗体**对象也是类。 处理 ADO 事件的最简单方法是使用**WithEvents**声明变量。 下面的示例处理**连接**对象的**ConnectComplete**事件：  
   
 ```  
 ' BeginEventExampleVB02  
@@ -65,4 +65,4 @@ End Sub
 ' EndEventExampleVB02  
 ```  
   
- **连接**处声明对象**窗体**级别使用**WithEvents**关键字来启用事件处理。 Form_Load 事件处理程序实际上会通过将分配一个新创建对象**连接**对象传递给*connEvent*信息，然后打开该连接。 当然，实际的应用程序可以实现更多的处理在 Form_Load 事件处理程序与此处所示。
+ 使用**WithEvents**关键字在**窗体**级别声明**连接**对象，以启用事件处理。 Form_Load 事件处理程序实际上通过向*connEvent*分配新的**连接**对象，然后打开连接来创建对象。 当然，实际的应用程序会在 Form_Load 事件处理程序中执行更多处理，而不是在此处显示。

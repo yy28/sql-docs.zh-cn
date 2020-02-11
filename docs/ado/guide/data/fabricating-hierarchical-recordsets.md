@@ -1,5 +1,5 @@
 ---
-title: 构造分层记录集 |Microsoft Docs
+title: 制造分层记录集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925326"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>构造分层记录集
-下面的示例演示如何通过使用数据整理语法来定义列的父级、 子级和孙级编制分层记录集而无需基础数据源**记录集**。  
+下面的示例演示如何使用数据定形语法来定义父、子和孙**记录集**的列，以创建不包含基础数据源的分层记录集。  
   
- 创建一种分层**记录集**，必须指定[适用于 OLE DB （ADO 服务提供商） 的 Microsoft Data Shaping 服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)(MSDataShape)，并可以指定数据提供程序值 NONE 中连接字符串参数[开放](../../../ado/reference/ado-api/open-method-ado-connection.md)方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 有关详细信息，请参阅[将提供程序所需的数据整理](../../../ado/guide/data/required-providers-for-data-shaping.md)。  
+ 若要创建分层**记录集**，您必须[为 OLE DB （ADO 服务提供程序）（MSDataShape）指定 Microsoft 数据定形服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)，并且您可以在[connection](../../../ado/reference/ado-api/connection-object-ado.md)对象的[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)方法的连接字符串参数中指定 "NONE" 的数据提供程序值。 有关详细信息，请参阅[数据定形所需的提供程序](../../../ado/guide/data/required-providers-for-data-shaping.md)。  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -52,11 +52,11 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- 只要**记录集**已制造，它可以填充、 操作，或保存到文件。  
+ 一旦记录了该**记录集**，就可以对其进行填充、操作或保存到文件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [数据整理所需的提供程序](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Shape APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

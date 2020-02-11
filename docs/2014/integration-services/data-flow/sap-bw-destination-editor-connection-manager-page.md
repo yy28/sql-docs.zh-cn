@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770843"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目标编辑器（“连接管理器”页）
@@ -56,10 +56,10 @@ ms.locfileid: "62770843"
  **InfoSource**  
  输入 InfoSource 的名称。  
   
- **类型**  
+ 类型   
  输入标识 InfoSource 类型的单字符。 下表列出了可接受的单字符值。  
   
-|“值”|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**D**|事务数据|  
 |**M**|主数据|  
@@ -109,10 +109,10 @@ ms.locfileid: "62770843"
 |**InfoSource**|使用 **“创建 InfoSource”** 对话框，然后使用 **“创建事务数据的 InfoSource”** 或 **“创建主数据的 InfoSource”** 对话框创建一个新的 InfoSource。 有关这些对话框的详细信息，请参阅 [Create InfoSource](create-infosource.md), [Create InfoSource for Transaction Data](create-infosource-for-transaction-data.md) 和 [Create InfoSource for Master Data](create-infosource-for-master-data.md)。|  
 |**InfoPackage**|使用 **“创建 InfoPackage”** 对话框创建新的 InfoPackage。 有关此对话框的详细信息，请参阅 [Create InfoPackage](create-infopackage.md)。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SAP BW 目标编辑器（“映射”页）](sap-bw-destination-editor-mappings-page.md)   
  [SAP BW 目标编辑器（“错误输出”页）](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 目标编辑器（“高级”页）](sap-bw-destination-editor-advanced-page.md)   
- [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Microsoft Connector 1.1 for SAP BW F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

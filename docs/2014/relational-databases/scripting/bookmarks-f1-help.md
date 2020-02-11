@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7375b1fb5e76efae9feea1fa5f3a7384fc39b003
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244790"
 ---
 # <a name="bookmarks-f1-help"></a>书签的 F1 帮助
 
- 本部分包含中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]"**书签**" 页的 F1 帮助。  
+ 本节包含 **中** “书签” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]页的 F1 帮助。  
   
  [管理书签](manage-bookmarks.md)

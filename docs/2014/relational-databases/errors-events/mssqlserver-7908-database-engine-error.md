@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b2d8a9218c5cb654f3343a7475d17630d7b49e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762248"
 ---
-# <a name="mssqlserver7908"></a>MSSQLSERVER_7908
+# <a name="mssqlserver_7908"></a>MSSQLSERVER_7908
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62762248"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|消息正文|表错误：分区 ID PN_ID 中的文件 FILE 不是有效的 Filestream 文件。|  
+|消息正文|表错误: 分区 ID PN_ID 中的文件 'FILE' 不是有效的 Filestream 文件。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  列目录中 FILESTREAM 文件的名称为 ROWGUID。 如果无法将列目录中的文件名转换为 ROWGUID，则该文件不是有效文件。  
   
 ## <a name="user-action"></a>用户操作  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916763"
 ---
 # <a name="rename-a-database"></a>重命名数据库
@@ -45,9 +45,9 @@ ms.locfileid: "62916763"
   
 -   无法重命名系统数据库。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -56,11 +56,11 @@ ms.locfileid: "62916763"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  确保没有任何用户正在使用数据库，然后[将数据库设置为单用户模式](set-a-database-to-single-user-mode.md)。  
+2.  确保没有任何用户正在使用数据库，然后 [将数据库设置为单用户模式](set-a-database-to-single-user-mode.md)。  
   
-3.  展开“数据库”  ，右键单击要重命名的数据库，然后单击“重命名”  。  
+3.  展开“数据库”****，右键单击要重命名的数据库，然后单击“重命名”****。  
   
-4.  输入新的数据库名称，然后单击 **“确定”** 。  
+4.  输入新的数据库名称，然后单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -81,11 +81,11 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> 跟进：在重命名数据库之后  
+##  <a name="FollowUp"></a>跟进：在重命名数据库之后  
  在重命名任何数据库后，备份 **master** 数据库。  
   
-## <a name="see-also"></a>请参阅  
- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
+## <a name="see-also"></a>另请参阅  
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [数据库标识符](database-identifiers.md)  
   
   
