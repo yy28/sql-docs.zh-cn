@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58890cc7b9e34a3e8ff9262af1f6b1a67b47841e
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782361"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>创建、更改和删除存储过程
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中，存储过程由 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 对象表示。  
   
- 在 SMO 中创建 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 对象需要将 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> 属性设置为定义存储过程的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本。 参数需要 \@ 前缀，并且必须通过使用 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象并添加到 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 对象的 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 集合来单独创建。  
+ 在 SMO 中创建 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 对象需要将 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> 属性设置为定义存储过程的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本。 参数需要\@前缀，并且必须通过使用<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>对象并将其添加到<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象的集合中单独创建。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio .Net 中创建 VISUAL C&#35; smo 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除存储过程  
  此代码示例说明如何为 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 数据库创建存储过程。 如果提供了雇员的 ID 号，则将返回该雇员的姓氏。 存储过程需要一个输入参数来指定雇员的 ID 号，需要一个输出参数来返回该雇员的姓氏。  

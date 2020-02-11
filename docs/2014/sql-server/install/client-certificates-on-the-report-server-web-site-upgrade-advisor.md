@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 5588930efbadf785e78aa115ad0021bce64bd7f7
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952604"
 ---
 # <a name="client-certificates-on-the-report-server-web-site-upgrade-advisor"></a>报表服务器网站上的客户端证书（升级顾问）
@@ -24,18 +24,18 @@ ms.locfileid: "71952604"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式。|  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>描述  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支持使用客户端证书对用户进行身份验证。 可以继续升级，但升级后的报表服务器将不使用客户端证书。  
+## <a name="description"></a>说明  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]不支持使用客户端证书对用户进行身份验证。 可以继续升级，但升级后的报表服务器将不使用客户端证书。  
   
 ## <a name="corrective-action"></a>纠正措施  
  必须使用单独的解决方案（如 ISA Server）以确保满足任何客户端证书身份验证要求。  
   
-## <a name="see-also"></a>请参阅  
- [Reporting Services 升级问题&#40;升级顾问&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>另请参阅  
+ [升级顾问 &#40;Reporting Services 升级问题&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

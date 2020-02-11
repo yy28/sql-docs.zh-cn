@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782672"
 ---
 # <a name="validate-a-dac-package"></a>验证 DAC 包
   最好在生产中部署 DAC 包之前查看其内容，并且在升级现有 DAC 之前验证升级操作。 当部署的包并非您的组织开发时更需要这样做。  
   
-1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
+1.  **开始之前：** [先决条件](#Prerequisites)  
   
-2.  **若要升级 DAC，请使用：**  [查看 DAC 的内容](#ViewDACContents)、 [查看数据库更改](#ViewDBChanges)、 [查看升级操作](#ViewUpgradeActions)、 [Compare DACs](#CompareDACs)  
+2.  若要升级 DAC，请使用：  [查看 DAC 的内容](#ViewDACContents)、[查看数据库更改](#ViewDBChanges)、[查看升级操作](#ViewUpgradeActions)、[比较 DAC](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a>先决条件  
  建议您不要从未知或不可信源部署 DAC 包。 此类 DAC 可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构导致错误。 使用来自未知源或不可信源的 DAC 前，请在[!INCLUDE[ssDE](../../includes/ssde-md.md)]的独立测试实例上部署它，对数据库运行 [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)，然后检查数据库中的代码，例如存储过程或其他用户定义的代码。  
   
 ##  <a name="ViewDACContents"></a> 查看 DAC 的内容  
@@ -39,17 +39,17 @@ ms.locfileid: "72782672"
   
  **在 SQL Server 开发工具中查看 DAC**  
   
-1.  打开“文件”菜单，选择“新建”，然后选择“项目…”。  
+1.  打开“文件”菜单，选择“新建”，然后选择“项目…”    。  
   
 2.  选择 **SQL Server** 项目模板，然后指定 **“名称”** 、 **“位置”** 和 **“解决方案名称”** 。  
   
-3.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“属性…”。  
+3.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“属性…”   。  
   
-4.  在“项目设置” 选项卡上的“输出类型”部分中，选中“数据层应用程序（.dacpac 文件）”复选框，然后关闭属性对话框。  
+4.  在“项目设置”  选项卡上的“输出类型”  部分中，选中“数据层应用程序（.dacpac 文件）”  复选框，然后关闭属性对话框。  
   
-5.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“导入数据层应用程序…”。  
+5.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“导入数据层应用程序…”   。  
   
-6.  使用“解决方案资源管理器”可打开该 DAC 中的所有文件，例如服务器选择策略以及预部署和部署后脚本。  
+6.  使用“解决方案资源管理器”  可打开该 DAC 中的所有文件，例如服务器选择策略以及预部署和部署后脚本。  
   
 7.  使用 **“架构视图”** 可查看架构中的所有对象，特别是查看对象（例如函数或存储过程）中的代码。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "72782672"
   
  **使用向导查看数据库更改**  
   
-1.  运行“升级数据层应用程序”向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
+1.  运行“升级数据层应用程序”  向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
   
 2.  在 **“检测更改”** 页上，查看已对数据库进行的更改的报告。  
   
@@ -105,12 +105,12 @@ $dacName  = "MyApplication"
 $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DACScripts\MyApplicationChanges.txt  
 ```  
   
-##  <a name="ViewUpgradeActions"></a> 查看升级操作  
+##  <a name="ViewUpgradeActions"></a>查看升级操作  
  在使用新版本的 DAC 包升级从早期的 DAC 包部署的 DAC 之前，您可以生成一个报告，该报告包含在升级期间将运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，然后查看该语句。  
   
  **使用向导报告升级操作**  
   
-1.  运行“升级数据层应用程序”向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
+1.  运行“升级数据层应用程序”**** 向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
   
 2.  对 **“摘要”** 页上，查看升级操作的报告。  
   
@@ -161,7 +161,7 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> Compare DACs  
+##  <a name="CompareDACs"></a>比较 Dac  
  在升级 DAC 之前，最好检查当前 DAC 和新 DAC 之间数据库和实例级别对象中的差别。 如果您对于当前 DAC 没有该包的副本，则可以从当前数据库中提取一个包。  
   
  如果您在 SQL Server 开发工具中将两个 DAC 包都导入 DAC 项目中，则可以使用架构比较工具来分析这两个 DAC 之间的差别。  

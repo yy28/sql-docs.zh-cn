@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 44664805dc9b728ecbd48acbf38c4565601c631a
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71326148"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
@@ -36,16 +36,16 @@ ms.locfileid: "71326148"
   
  使用此 DMV 查看向外扩展群集中所有节点的列表及其角色、名称和 IP 地址。  
   
-|Column Name|数据类型|描述|范围|  
+|列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|与节点关联的唯一数字 id。 此视图的键。|在扩展群集中唯一，而不考虑类型。|  
-|类型|**nvarchar(32)**|节点的类型。|"COMPUTE"、"HEAD"|  
-|NAME|**nvarchar(32)**|节点的逻辑名称。|任何适当长度的字符串。|  
-|address|**nvarchar(32)**|此节点的 IP 地址。|IP 地址范围|  
+|type|**nvarchar （32）**|节点的类型。|"COMPUTE"、"HEAD"|  
+|name|**nvarchar （32）**|节点的逻辑名称。|任何适当长度的字符串。|  
+|地址|**nvarchar （32）**|此节点的 IP 地址。|IP 地址范围|  
   
 ## <a name="see-also"></a>另请参阅  
  [通过动态管理视图进行 PolyBase 故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与数据库相关的动态&#40;管理视图 transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

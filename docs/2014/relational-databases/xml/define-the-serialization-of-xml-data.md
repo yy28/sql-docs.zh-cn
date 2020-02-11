@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 39f3ccc462fb063ecb314b1e9968dcfa8a095cbb
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688888"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>定义 XML 数据的序列化
@@ -65,7 +65,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
- 如果当前排序规则的代码页无法表示 Unicode 字符，这可能会导致错误，或者&#x10300;它将用特定的编码来表示该字符。  
+ 如果当前排序规则的代码页不能表示 & # x10300; 的 Unicode 字符，这可能会导致错误，否则将用特定编码来表示该字符。  
   
  将 XML 结果返回到客户端时，将用 UTF-16 编码发送数据。 然后，客户端提供程序将根据 API 规则显示该数据。  
   

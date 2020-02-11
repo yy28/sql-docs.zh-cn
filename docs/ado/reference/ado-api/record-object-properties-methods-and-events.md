@@ -13,10 +13,10 @@ ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70737658"
 ---
 # <a name="record-object-properties-methods-and-events"></a>记录对象属性、方法和事件
@@ -52,8 +52,8 @@ ms.locfileid: "70737658"
   
  [Open 方法（ADO 记录）](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  无。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
