@@ -1,5 +1,5 @@
 ---
-title: 解决通讯簿数据绑定对象 |Microsoft Docs
+title: 通讯簿数据绑定对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,23 +14,23 @@ ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922975"
 ---
 # <a name="address-book-data-binding-object"></a>通讯簿数据绑定对象
-通讯簿应用程序使用[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象将数据从 SQL Server 数据库绑定到可视对象 （在这种情况下，DHTML 表），应用程序的客户端 HTML 页中。 事件驱动的 VBScript 程序逻辑使用[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)到：  
+通讯簿应用程序使用[RDS。](../../../ado/reference/rds-api/datacontrol-object-rds.md)用于将 SQL Server 数据库中的数据绑定到应用程序客户端 HTML 页中的可视化对象（在本例中为 DHTML 表）的 DataControl 对象。 事件驱动的 VBScript 程序逻辑使用[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) ：  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
--   查询数据库，将更新发送到数据库，并刷新该数据网格。  
+-   查询数据库，将更新发送到数据库并刷新数据网格。  
   
--   在数据网格中允许用户移动到第一个，接下来上, 一个或最后一条记录。  
+-   允许用户移动到数据网格中的第一条、下一条、上一条或最后一条记录。  
   
- 下面的代码定义**rds。DataControl**组件：  
+ 下面的代码定义了**RDS。DataControl**组件：  
   
 ```vb
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"  
@@ -41,30 +41,30 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 </OBJECT>  
 ```  
   
- 对象标记定义**rds。DataControl**组件在程序中。 标记包括两种类型的参数：  
+ 对象标记定义**RDS。** 程序中的 DataControl 组件。 标记包含两种类型的参数：  
   
--   其中每个与泛型对象标记相关联。  
+-   与泛型对象标记相关联的。  
   
--   这些特定于**rds。DataControl**对象。  
+-   特定于 RDS 的 **。DataControl**对象。  
   
-## <a name="generic-object-tag-parameters"></a>一般的对象标记参数  
- 下表描述了与对象标记关联的参数。  
+## <a name="generic-object-tag-parameters"></a>泛型对象标记参数  
+ 下表描述了与对象标记相关的参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
-|***CLASSID***|一个唯一的 128 位数字标识系统的嵌入对象的类型。 此标识符被保存在本地计算机的系统注册表中。 (有关的类 Id **rds。DataControl**对象，请参阅[rds。DataControl 对象](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)|  
-|***ID***|定义用于标识代码中的嵌入对象的文档范围标识符。|  
+|***CLASSID***|唯一的128位数字，用于标识嵌入到系统的嵌入对象的类型。 此标识符保存在本地计算机的系统注册表中。 （对于 RDS 的类 Id **。DataControl**对象，请参阅[RDS。DataControl 对象](../../../ado/reference/rds-api/datacontrol-object-rds.md)。）|  
+|***识别***|定义用于在代码中标识的嵌入对象的文档范围标识符。|  
   
-## <a name="rdsdatacontrol-tag-parameters"></a>RDS。DataControl Tag 参数  
- 下表描述了特定于参数**rds。DataControl**对象。 (有关完整列表的**rds。DataControl**对象的参数，以及何时实现它们，请参阅[rds。DataControl 对象](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)  
+## <a name="rdsdatacontrol-tag-parameters"></a>RDS.DataControl 标记参数  
+ 下表描述了特定于 RDS 的参数 **。DataControl**对象。 （有关 RDS 的完整列表， **DataControl**对象参数和实现它们的时间，请参阅[RDS。DataControl 对象](../../../ado/reference/rds-api/datacontrol-object-rds.md)。）  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
-|[服务器](../../../ado/reference/rds-api/server-property-rds.md)|如果使用 HTTP，值是前面的服务器计算机名称`https://`。|  
-|[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|提供必要的连接信息**rds。DataControl**以连接到 SQL Server。|  
-|[SQL](../../../ado/reference/rds-api/sql-property.md)|设置或返回用来检索查询字符串[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
+|[服务](../../../ado/reference/rds-api/server-property-rds.md)|如果使用的是 HTTP，则值为前面带有的服务器计算机的名称`https://`。|  
+|[与](../../../ado/reference/rds-api/connect-property-rds.md)|为 RDS 提供必要的连接信息 **。DataControl**连接到 SQL Server。|  
+|[TRANSACT-SQL](../../../ado/reference/rds-api/sql-property.md)|设置或返回用于检索[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的查询字符串。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [通讯簿命令按钮](../../../ado/guide/remote-data-service/address-book-command-buttons.md)
 
 
