@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef5450bc9598f86909bbb032adcfa4bfc0fc9040
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900632"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>为查找转换创建和部署缓存
@@ -26,7 +26,7 @@ ms.locfileid: "62900632"
   
  查找转换通过将所连接数据源输入列中的数据和引用数据集中的列进行联接来执行查找。  
   
- 可以使用缓存连接管理器和“缓存转换”转换来创建缓存文件。 有关详细信息，请参阅 [Cache Connection Manager](../../connection-manager/cache-connection-manager.md) 和 [Cache Transform](cache-transform.md)。  
+ 可以使用缓存连接管理器和“缓存转换”转换来创建缓存文件。 有关详细信息，请参阅 [缓存连接管理器](../../connection-manager/cache-connection-manager.md) 和 [缓存转换](cache-transform.md)。  
   
  若要了解查找转换和缓存文件的更多信息，请参阅 [Lookup Transformation](lookup-transformation.md)。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "62900632"
   
 5.  将包部署到文件系统。 有关详细信息，请参阅 [Deploy Packages by Using the Deployment Utility](../../deploy-packages-by-using-the-deployment-utility.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建部署实用工具](../../create-a-deployment-utility.md)  
   
   

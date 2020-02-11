@@ -16,13 +16,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915414"
 ---
-# <a name="mssqlserver17832"></a>MSSQLSERVER_17832
+# <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
     
 ## <a name="details"></a>详细信息  
   
@@ -35,10 +35,10 @@ ms.locfileid: "62915414"
 |符号名称|SRV_BAD_LOGIN_PKT|  
 |消息正文|用于打开该连接的登录数据包的结构无效；该连接已关闭。 请与客户端库的供应商联系。%.*ls|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机无法处理客户端登录数据包。 这可能是由于未正确创建数据包或数据包在传输过程中受损造成的。 也可能是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的配置引起的。 所列出的 IP 地址为客户端计算机的地址。  
   
-### <a name="more-information"></a>详细信息  
+### <a name="more-information"></a>更多信息  
  当在 Kerberos 环境中使用 Windows 身份验证时，客户端会接收包含特权属性证书 (PAC) 的 Kerberos 票证。 PAC 包含各种类型的身份验证数据，包括用户所在的组、用户拥有的权限以及对用户应用的策略。 当客户端接收 Kerberos 票证时，包含在 PAC 中的信息将用于生成用户的访问标记。 客户端会将该标记作为登录数据包的组成部分提交给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机。  
   
  如果未正确创建该标记或该标记在传输过程中受损，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法提供有关此问题的其他信息。  
@@ -51,11 +51,11 @@ ms.locfileid: "62915414"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- **若要更改服务器计算机上的 MaxTokenSize**  
+ **更改服务器计算机上的 MaxTokenSize**  
   
 1.  在 **“开始”** 菜单上，单击 **“运行”** 。  
   
-2.  类型`regedit`，然后单击**确定**。 （如果此时出现“用户帐户控制”对话框，请单击“继续”。）    
+2.  键入`regedit`，然后单击 **"确定"**。 （如果此时出现“用户帐户控制”对话框，请单击“继续”。）    
   
 3.  导航到 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**。  
   

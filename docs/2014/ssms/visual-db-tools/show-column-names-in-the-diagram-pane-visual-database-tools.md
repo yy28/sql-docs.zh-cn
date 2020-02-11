@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15dfb65dc7cb51311e60112145623eeda50339e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067483"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>在“关系图”窗格中显示列名 (Visual Database Tools)
@@ -37,7 +37,7 @@ ms.locfileid: "63067483"
   
 2.  从快捷菜单中选择“仅表名”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设计查询和视图操作指南主题 (Visual Database Tools)](visual-database-tools.md)  
   
   

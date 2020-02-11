@@ -1,5 +1,5 @@
 ---
-title: 创建和管理角色 (SSAS 表格) |Microsoft Docs
+title: 创建和管理角色（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284903"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>创建和管理角色（SSAS 表格）
@@ -25,10 +25,10 @@ ms.locfileid: "67284903"
   
  本主题中的任务说明如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的“角色管理器”对话框在模型创作期间创建和管理角色。 有关在部署的模型数据库中管理角色的信息，请参阅[表格模型角色（SSAS 表格）](roles-ssas-tabular.md)。  
   
-## <a name="tasks"></a>“任务”  
+## <a name="tasks"></a>任务  
  若要创建、编辑、复制和删除角色，可使用 **“角色管理器”** 对话框。 若要查看 **“角色管理器”** 对话框，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“角色管理器”**。  
   
-###  <a name="bkmk_new_role"></a> 创建新角色  
+###  <a name="bkmk_new_role"></a>创建新角色  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“角色管理器”**。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "67284903"
   
 4.  在 **“权限”** 字段中，单击向下箭头，然后选择以下权限类型之一：  
   
-    |权限|Description|  
+    |权限|说明|  
     |----------------|-----------------|  
     |**无**|成员无法对模型架构进行任何修改，也无法查询数据。|  
     |**读取**|允许成员查询数据（基于行筛选器），但不能对模型架构进行任何更改。|  
     |**读取和处理**|允许成员查询数据（基于行级别筛选器）并运行“处理”和“全部处理”操作，但无法对模型架构进行任何更改。|  
-    |**处理**|成员可以运行“处理”和“全部处理”操作。 不能修改模型架构且不能查询数据。|  
-    |**管理员**|成员可以对模型架构进行修改并可以查询所有数据。|  
+    |**进程**|成员可以运行“处理”和“全部处理”操作。 无法修改模型架构，也无法查询数据。|  
+    |**管理**|成员可以对模型架构进行修改并可以查询所有数据。|  
   
 5.  若要输入角色的说明，请单击 **“说明”** 字段，然后键入说明。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "67284903"
   
 9. 单击 **“确定”**。  
   
-## <a name="see-also"></a>请参阅  
- [角色（SSAS 表格）](roles-ssas-tabular.md)   
- [透视表（SSAS 表格）](perspectives-ssas-tabular.md)   
- [在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)   
- [USERNAME 函数&#40;DAX&#41;](/dax/username-function-dax)   
- [CUSTOMDATA 函数&#40;DAX&#41;](/dax/customdata-function-dax)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;的角色](roles-ssas-tabular.md)   
+ [SSAS 表格&#41;&#40;透视](perspectives-ssas-tabular.md)   
+ [在 Excel 中分析 &#40;SSAS 表格&#41;](analyze-in-excel-ssas-tabular.md)   
+ [USERNAME 函数 &#40;DAX&#41;](/dax/username-function-dax)   
+ [&#40;DAX&#41;的 CUSTOMDATA 函数](/dax/customdata-function-dax)  
   
   

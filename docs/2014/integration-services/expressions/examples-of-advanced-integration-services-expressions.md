@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9272a6c11ce226f385c0b1f79f965a2a0f55835e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901118"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>高级 Integration Services 表达式的示例
   本节提供合并多个运算符和函数的高级表达式示例。 如果表达式用于优先约束或有条件拆分转换中，则其计算结果必须为布尔值。 但是，这一限制并不适用于属性表达式、变量、派生列转换或 For 循环容器中使用的表达式。  
   
- 下列示例使用了 **AdventureWorks** 和 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 每个示例都标识了其使用的表。  
+ 下面的示例使用**AdventureWorks**和[!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 每个示例都标识了其使用的表。  
   
 ## <a name="boolean-expressions"></a>布尔表达式  
   

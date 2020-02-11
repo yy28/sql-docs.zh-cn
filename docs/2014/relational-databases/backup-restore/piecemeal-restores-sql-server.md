@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876075"
 ---
 # <a name="piecemeal-restores-sql-server"></a>段落还原 (SQL Server)
   本主题仅与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 中包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  
   
- 有关段落还原和内存优化表的信息，请参阅[对具有内存优化表的数据库进行段落还原](../in-memory-oltp/memory-optimized-tables.md)。  
+ 有关段落还原和内存优化表的信息，请参阅 [对具有内存优化表的数据库进行段落还原](../in-memory-oltp/memory-optimized-tables.md)。  
   
   “段落还原”允许分阶段还原和恢复包含多个文件组的数据库。 段落还原包括从主文件组开始（有时也从一个或多个辅助文件组开始）的一系列还原顺序。 段落还原保持进行检查，以便确保数据库在结束时将是一致的。 在还原顺序结束后，如果恢复的文件有效并且与数据库一致，则恢复的文件将直接变为联机状态。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "62876075"
   
 4.  后面跟有在原始段落还原顺序中还原的用于将数据还原到原始恢复点的任何其他备份的差异备份。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   

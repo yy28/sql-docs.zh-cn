@@ -1,5 +1,5 @@
 ---
-title: 例如：指定 XMLTEXT 指令 | Microsoft Docs
+title: 示例：指定 XMLTEXT 指令 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67597548"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>例如：指定 XMLTEXT 指令
-  此示例说明如何在使用 EXPLICIT 模式的 `SELECT` 语句中使用 `XMLTEXT` 指令处理溢出列中的数据。  
+# <a name="example-specifying-the-xmltext-directive"></a>示例：指定 XMLTEXT 指令
+  此示例说明如何在使用 EXPLICIT 模式的 `XMLTEXT` 语句中使用 `SELECT` 指令处理溢出列中的数据。  
   
  请考虑一下 `Person` 表。 此表含有存储 XML 文档的未使用部分的 `Overflow` 列。  
   
@@ -48,11 +48,11 @@ FOR XML EXPLICIT;
   
  在所得到的 XML 文档中：  
   
--   因为 `Overflow` 列没有指定 *AttributeName*，但却指定了 `xmltext` 指令，所以 <`overflow`> 元素中的属性被追加到封闭的 <`Parent`> 元素的属性列表中。  
+-   因为 *列没有指定*AttributeName`Overflow`，但却指定了 `xmltext` 指令，所以 <`overflow`> 元素中的属性被追加到封闭的 <`Parent`> 元素的属性列表中。  
   
--   因为 <`xmltext`> 元素中的 `PersonID` 属性与相同元素级上检索到的 `PersonID` 属性冲突，所以忽略 <`xmltext`> 元素中的此属性，即使 `PersonID` 为 NULL 也是如此。 通常情况下，属性将覆盖溢出中具有相同名称的属性。  
+-   因为 <`PersonID`> 元素中的 `xmltext` 属性与相同元素级上检索到的 `PersonID` 属性冲突，所以忽略 <`xmltext`> 元素中的此属性，即使 `PersonID` 为 NULL 也是如此。 通常情况下，属性将覆盖溢出中具有相同名称的属性。  
   
- 下面是结果：  
+ 结果如下：  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -86,7 +86,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -98,9 +98,9 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- 如果使用 `xmltext` 指令指定了 *AttributeName*，则 <`overflow`> 元素的属性将作为封闭的 <`Parent`> 元素的子元素属性添加。 为指定的名称*AttributeName*将成为子元素的名称。  
+ 如果使用 *指令指定了*AttributeName`xmltext`，则 <`overflow`> 元素的属性将作为封闭的 <`Parent`> 元素的子元素属性添加。 为*AttributeName*指定的名称将成为子元素的名称。  
   
- 在此查询中， *AttributeName*，<`overflow`>，指定与`xmltext`指令：  
+ 在此查询中， *AttributeName*<`overflow`> 与`xmltext`指令一起指定：  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -112,7 +112,7 @@ FROM Person
 FOR XML EXPLICIT  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
  `<Parent PersonID="P1" PersonName="Joe">`  
   
@@ -147,7 +147,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
  `<Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>`  
   
@@ -194,7 +194,7 @@ FOR XML EXPLICIT, xmldata;
   
  `</overflow>`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 EXPLICIT 模式与 FOR XML 一起使用](use-explicit-mode-with-for-xml.md)  
   
   

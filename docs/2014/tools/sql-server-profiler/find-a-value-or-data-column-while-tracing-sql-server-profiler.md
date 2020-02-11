@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cc5088fdb0bc78a2befff241854e4a2bc354a22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035028"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>在跟踪时查找值或数据列 (SQL Server Profiler)
@@ -38,7 +38,7 @@ ms.locfileid: "63035028"
   
      搜索从步骤 1 中选择的行开始。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](sql-server-profiler-templates-and-permissions.md)  
   

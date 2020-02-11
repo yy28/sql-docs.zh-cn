@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: baf35c096ec552c39b70729470263765570e79dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913628"
 ---
-# <a name="mssqlserver5242"></a>MSSQLSERVER_5242
+# <a name="mssqlserver_5242"></a>MSSQLSERVER_5242
     
 ## <a name="details"></a>详细信息  
   
@@ -32,11 +32,11 @@ ms.locfileid: "62913628"
 |符号名称||  
 |消息正文|在数据库 '%.*ls'(ID:%d) 中对页 %S_PGID 执行内部操作期间检测到不一致性。 请与技术支持联系。 参考号为 %ld。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  在错误消息中引用的数据库页上出现结构不一致性。  
   
-## <a name="see-also"></a>请参阅  
- [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
+## <a name="see-also"></a>另请参阅  
+ [DBCC CHECKDB &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
  [数据库文件和文件组](../databases/database-files-and-filegroups.md)  
   
   

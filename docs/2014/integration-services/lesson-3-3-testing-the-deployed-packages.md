@@ -11,18 +11,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92055ceb4226406fe26d7ce23491c81606f292c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891802"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>步骤 3：测试已部署的包
   在此任务中，将测试已部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例的包。  
   
- 在其他 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程中，可以在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的开发环境中使用“调试”菜单上的“开始调试”选项运行 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的包。   这一次，将以不同方式运行包。  
+ 在其他 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程中，可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的开发环境中使用“调试”菜单上的“开始调试”选项运行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的包。   这一次，将以不同方式运行包。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了几个可用于在测试和生产环境中运行包的工具：命令提示实用工具 `dtexec` 和执行包实用工具。 执行包实用工具是基于 `dtexec` 构建的图形工具。 这两种工具均可直接执行包。 此外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 还提供了一个 SQL Server 代理子系统，专门用于将包执行计划为 SQL Server 代理作业中的一个步骤。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了几个可用于在测试和生产环境中运行包的工具：命令提示实用工具 `dtexec` 和执行包实用工具。 执行包实用工具是基于 `dtexec` 构建的图形工具。 这两种工具均可直接执行包。 此外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 还提供了一个 SQL Server 代理子系统，专门用于将包执行计划为 SQL Server 代理作业中的一个步骤。  
   
  将使用执行包实用工具运行已部署的包。 将照原样使用包；因此，您不必更新对话框中任何页上的信息。 您将从“常规”页运行包，该页是执行包实用工具中的第一页。 如果愿意，还可以单击其他页以查看其中包含的有关每个包的信息。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "62891802"
   
 2.  在“连接到服务器”对话框中，选择“服务器类型”列表中的“数据库引擎”，在“服务器名称”框中提供在其上已安装教程包的服务器的名称或键入 (local)，再选择身份验证模式。     如果使用 SQL Server 身份验证，请提供用户名和密码。  
   
-3.  单击 **“连接”** 。  
+3.  单击“连接”  。  
   
 4.  在查询窗口中，键入或粘贴以下 SQL 语句：  
   
@@ -91,7 +92,7 @@ ms.locfileid: "62891802"
   
 2.  如果再次提示进行连接，请在“连接到服务器”对话框中，选择“服务器类型”列表中的“数据库引擎”，在“服务器名称”框中提供在其上已安装教程包的服务器的名称或输入 (local)，再选择身份验证模式。     如果使用 SQL Server 身份验证，请提供用户名和密码。  
   
-3.  单击 **“连接”** 。  
+3.  单击“连接”  。  
   
 4.  在查询窗口中，键入或粘贴以下 SQL 语句：  
   
@@ -103,9 +104,9 @@ ms.locfileid: "62891802"
   
      查询将返回 21 行数据。 返回结果中包含来自 XML 数据文件 orders.xml 的行。 在每行中按国家/地区进行了汇总；行中列出了国家/地区的名称、每个国家/地区的订单数以及最新订单和最早订单的日期。  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [dtexec 实用工具](packages/dtexec-utility.md)  
   
   

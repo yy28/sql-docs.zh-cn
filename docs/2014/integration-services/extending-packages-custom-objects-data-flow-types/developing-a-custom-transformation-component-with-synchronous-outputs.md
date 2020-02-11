@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 785ca6c05bc221e1449607b9dc3deaa93aa667bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896579"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>开发具有同步输出的自定义转换组件
@@ -111,7 +111,7 @@ End Class
   
  列的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> 决定了为其他属性设置的值。 下表说明了对每个 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> 的依赖属性的要求。 未列出的数据类型的依赖属性设置为零。  
   
-|DataType|长度|小数位数|精度|CodePage|  
+|数据类型|长度|缩放|Precision|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|大于 0 且小于或等于 28。|0|0|  
 |DT_CY|0|0|0|0|  
@@ -184,7 +184,8 @@ End Sub
 ### <a name="processing-rows"></a>处理行  
  组件可接收 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 对象，这些对象包含 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法中的行和列。 在此方法中，将循环访问缓冲区中的行，并读取和修改 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 期间标识的列。 数据流任务将重复调用该方法，直到上游组件不再提供行。  
   
- 可使用数组索引器访问方法或者使用 `Get` 或 `Set` 方法之一来读取或写入缓冲区中的单个列。 `Get` 和 `Set` 方法的效率更高，应在缓冲区中的列的数据类型已知时使用。  
+ 可使用数组索引器访问方法或者使用 `Get` 或 `Set` 方法之一来读取或写入缓冲区中的单个列。 
+  `Get` 和 `Set` 方法的效率更高，应在缓冲区中的列的数据类型已知时使用。  
   
  下面的代码示例演示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法的实现，该方法用于处理传入的行。  
   
@@ -321,9 +322,9 @@ Namespace Uppercase
 End Namespace  
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [开发具有异步输出的自定义转换组件](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
  [了解同步和异步转换](../understanding-synchronous-and-asynchronous-transformations.md)   
  [使用脚本组件创建同步转换](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 

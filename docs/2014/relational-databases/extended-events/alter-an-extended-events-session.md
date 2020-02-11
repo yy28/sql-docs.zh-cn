@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99984df84d2eb24ebf3d58f3fa697d11c5ad4a1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128604"
 ---
 # <a name="alter-an-extended-events-session"></a>更改扩展事件会话
@@ -48,7 +48,7 @@ ms.locfileid: "63128604"
   
 -   在 **“属性”** 对话框中进行相应的更改，然后单击 **“确定”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [使用查询编辑器创建扩展事件会话](../../database-engine/create-an-extended-events-session-using-query-editor.md)  
   

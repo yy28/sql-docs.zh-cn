@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5532156a555139b8bb985621e343a3fd59031462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899834"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>欢迎使用渐变维度向导
@@ -28,7 +28,7 @@ ms.locfileid: "62899834"
  **不再显示此页**  
  下次打开向导时跳过欢迎页。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用渐变维度向导配置输出](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

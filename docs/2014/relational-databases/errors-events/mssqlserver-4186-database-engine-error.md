@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53a8e0ab728c1fee0033ef86dbf6b7dfc22bdc8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867840"
 ---
-# <a name="mssqlserver4186"></a>MSSQLSERVER_4186
+# <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62867840"
 |符号名称||  
 |消息正文|无法在 OUTPUT 子句中引用列 '%ls.%.*ls'，因为该列的定义中包含一个子查询或者引用一个执行用户或系统数据访问的函数。 默认情况下，如果函数未绑定到架构，则会认为该函数执行数据访问。 请考虑从列定义中删除子查询或函数，或者从 OUTPUT 子句中删除该列。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  为了防止出现不确定的行为，当某个列是通过下列方法之一定义时，OUTPUT 子句不能通过视图或内联表值函数引用该列：  
   
 -   子查询。  
@@ -106,7 +106,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 -   从 OUTPUT 子句中删除列。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OUTPUT 子句 (Transact-SQL)](/sql/t-sql/queries/output-clause-transact-sql)  
   
   

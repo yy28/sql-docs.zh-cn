@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918335"
 ---
 # <a name="management-data-warehouse"></a>管理数据仓库
@@ -39,7 +39,7 @@ ms.locfileid: "62918335"
   
  下表介绍了核心架构中的数据库表。 这些数据库表使得数据收集器可以跟踪数据来自何处、谁插入的数据以及数据是什么时候上载至数据仓库的。  
   
-|表名|Description|  
+|表名称|说明|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|存储有关管理数据仓库报表应如何对性能计数器进行分组和聚合的信息。|  
 |core.snapshots_internal|标识每个新快照。 只要上载包开始上载一批新数据，此表中即会插入新的一行。|  
@@ -125,7 +125,7 @@ ms.locfileid: "62918335"
 |向“核心架构”部分增添了 core.performance_counter_report_group_items 表。|  
 |更新了“快照架构”部分中表的列表。 增加了 snapshots.os_memory_clerks、snapshots.sql_process_and_system_memory 和 snapshots.io_virtual_file_stats。 删除了 snapshots.os_process_memory 和 snapshots.distinct_query_stats。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理数据仓库存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
  [数据收集器存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [数据收集](data-collection.md)   

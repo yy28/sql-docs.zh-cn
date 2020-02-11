@@ -11,25 +11,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b69440f38af5cd71e481325d5d4df577d4c267b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63070824"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>使用 ISequentialStream 从 FILESTREAM 列检索数据 (OLE DB)
   此示例显示如何使用 ICommandText 接口中的 ISequentialStream 接口从 Filestream 列检索单个记录。  
   
- 有关 filestream 功能的详细信息，请参阅[FILESTREAM 支持&#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)。  
+ 有关 filestream 功能的详细信息，请参阅[Filestream 支持 &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>示例  
- 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
+ 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
  使用以下示例之一创建此示例读取的表：  
   
--   [使用绑定到 ICommandText 参数的 ISequentialStream 向 FILESTREAM 列发送数据 (OLE DB)](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [使用绑定到 ICommandText 参数的 ISequentialStream 将数据发送到 FILESTREAM 列 &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [使用 Irowsetfastupload 向 &#40;OLE DB 将数据发送到 FILESTREAM 列&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  复制第一个代码列表，并将其粘贴到名为 ISSHelper.h 的文件中。  
   

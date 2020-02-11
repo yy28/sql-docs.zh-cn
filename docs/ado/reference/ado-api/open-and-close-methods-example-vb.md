@@ -1,5 +1,5 @@
 ---
-title: Open 和 Close 方法示例 (VB) |Microsoft Docs
+title: Open 和 Close 方法示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a37568f6bf4435d762d62c0475abb7d0fb8065a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917984"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Open 和 Close 方法示例 (VB)
-此示例使用**开放**和[关闭](../../../ado/reference/ado-api/close-method-ado.md)方法同时[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[连接](../../../ado/reference/ado-api/connection-object-ado.md)已打开的对象。  
+此示例使用已打开的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象上的**打开**和[关闭](../../../ado/reference/ado-api/close-method-ado.md)方法。  
   
 ```  
 'BeginOpenVB  
@@ -101,9 +101,9 @@ End Sub
 'EndOpenVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Close 方法 (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open 方法 （ADO 连接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+## <a name="see-also"></a>另请参阅  
+ [Close 方法（ADO）](../../../ado/reference/ado-api/close-method-ado.md)   
+ [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Open 方法（ADO 连接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Open 方法（ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

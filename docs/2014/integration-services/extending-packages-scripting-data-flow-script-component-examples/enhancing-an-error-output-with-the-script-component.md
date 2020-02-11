@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd935387e8d6e4a95a25d21eb5d5d229f9599bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62895486"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用脚本组件增强错误输出
   默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误输出中的另外两列 ErrorCode 和 ErrorColumn 只包含表示错误号的数值代码以及出现错误的列的 ID。 如果没有相应的错误说明，这些数值没有多大用处。  
   
- 本主题介绍如何使用脚本组件向数据流中的现有错误输出数据中添加错误说明列。 示例使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法添加与特定预定义 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误代码对应的错误说明，该接口通过脚本组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性提供。  
+ 本主题介绍如何使用脚本组件向数据流中的现有错误输出数据中添加错误说明列。 示例使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 方法添加与特定预定义 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 错误代码对应的错误说明，该接口通过脚本组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性提供。  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个数据流任务和多个包的组件，请考虑以此脚本组件示例中的代码为基础，创建自定义数据流组件。 有关详细信息，请参阅 [开发自定义数据流组件](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "62895486"
 ## <a name="example"></a>示例  
  下面显示的示例使用一个配置为转换的脚本组件向数据流中的现有错误输出数据中添加错误说明列。  
   
- 有关如何使用脚本组件配置为数据流中的数据转换的详细信息，请参阅[使用脚本组件创建同步转换](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[创建异步使用脚本组件转换](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
+ 有关如何配置脚本组件以用作数据流中的转换的详细信息，请参阅[使用脚本组件创建同步转换](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用脚本组件创建异步转换](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
   
 #### <a name="to-configure-this-script-component-example"></a>配置此脚本组件示例  
   
@@ -43,17 +43,17 @@ ms.locfileid: "62895486"
   
 3.  将错误输出从上游组件连接到新脚本组件。  
   
-4.  打开“脚本转换编辑器”，在“脚本”页中，为 **ScriptLanguage** 属性选择脚本语言。  
+4.  打开“脚本转换编辑器”****，在“脚本”**** 页中，为 **ScriptLanguage** 属性选择脚本语言。  
   
-5.  单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，并添加下面的示例代码。  
+5.  单击“编辑脚本”**** 打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，并添加下面的示例代码。  
   
 6.  关闭 VSTA。  
   
-7.  在脚本转换编辑器上**输入列**页上，选择 ErrorCode 列。  
+7.  在 "脚本转换编辑器" 的 "**输入列**" 页中，选择 ErrorCode 列。  
   
-8.  上**输入和输出**页上，添加类型的新输出列`String`名为**ErrorDescription**。 将新列的默认长度提高到 255 以支持长消息。  
+8.  在 "**输入和输出**" 页中，添加名为**ErrorDescription**的`String`类型的新输出列。 将新列的默认长度提高到 255 以支持长消息。  
   
-9. 关闭“脚本转换编辑器”。  
+9. 关闭“脚本转换编辑器”****。  
   
 10. 将脚本组件的输出附加到合适的目标。 对于即席测试，平面文件目标是最容易配置的。  
   
@@ -85,9 +85,9 @@ public class ScriptMain:
   
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据中的错误处理](../data-flow/error-handling-in-data.md)   
  [在数据流组件中使用错误输出](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [使用脚本组件创建同步转换](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f1814c96a5f58052be6271d2a35c1bbf78f87b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066475"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新结果的规则 (Visual Database Tools)
@@ -38,19 +38,19 @@ ms.locfileid: "63066475"
 |-----------|-----------------------------|  
 |基于表并且输出列表中包含主键的查询|是（但下面列出的除外）。|  
 |基于无唯一索引和主键的表的查询|取决于查询和数据库。 有些数据库在有足够的信息用于唯一地标识记录时才允许进行更新。|  
-|基于未联接在一起的多个表的查询|否。|  
-|基于数据库中标记为只读数据的查询|否。|  
+|基于未联接在一起的多个表的查询|不是。|  
+|基于数据库中标记为只读数据的查询|不是。|  
 |基于包含一个无约束表的视图的查询|是（但下面列出的除外）。|  
 |基于用一对一关系联接的表的查询|是（但下面列出的除外）。|  
 |基于用一对多关系联接的表的查询|通常是。|  
-|基于有多对多关系的表（不少于三个）的查询|否。|  
+|基于有多对多关系的表（不少于三个）的查询|不是。|  
 |基于未授予其更新权限的表的查询|可删除但不可更新。|  
 |基于未授予其删除权限的表的查询|可更新但不可删除。|  
-|聚合查询|否。|  
-|基于包含总计或聚合函数的子查询的查询|否。|  
-|包括 DISTINCT 关键字（用于排除重复的行）的查询|否。|  
-|FROM 子句包括用户定义函数的查询（查询返回一个表且用户定义函数包含多个 Select 语句）|否。|  
-|FROM 子句中包括内联用户定义函数的查询|是。|  
+|聚合查询|不是。|  
+|基于包含总计或聚合函数的子查询的查询|不是。|  
+|包括 DISTINCT 关键字（用于排除重复的行）的查询|不是。|  
+|FROM 子句包括用户定义函数的查询（查询返回一个表且用户定义函数包含多个 Select 语句）|不是。|  
+|FROM 子句中包括内联用户定义函数的查询|是的。|  
   
  此外，您也许不能在查询结果中更新特定的列。 下面的列表汇总了不能在“结果”窗格中更新的特定类型的列。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63066475"
   
 -   时间戳列或 BLOB 列  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

@@ -15,13 +15,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911399"
 ---
-# <a name="set-breakpoints"></a>“设置断点”
+# <a name="set-breakpoints"></a>设置断点
   可以使用 **“设置断点”** 对话框，指定要启用断点和控制断点行为的事件。  
   
 ## <a name="options"></a>选项  
@@ -34,17 +34,17 @@ ms.locfileid: "62911399"
  **命中计数类型**  
  指定断点生效的时间。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**始终**|断点命中时始终挂起执行。|  
 |**命中计数等于**|断点发生的次数等于命中计数时挂起执行。|  
 |**命中计数大于或等于**|断点发生的次数等于或大于命中计数时挂起执行。|  
-|**命中计数倍增基数**|断点发生的次数为命中计数的倍数时挂起执行。 例如，如果将此选项设置为 5，则每命中五次就挂起执行。|  
+|**命中计数多个**|断点发生的次数为命中计数的倍数时挂起执行。 例如，如果将此选项设置为 5，则每命中五次就挂起执行。|  
   
  **命中计数**  
  指定触发中断的命中次数。 如果断点始终有效，则此选项将不可用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试控制流](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   

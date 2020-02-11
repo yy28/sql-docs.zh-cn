@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d4920be6af560cbd5bd1d7699dd6378cdc2db3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914847"
 ---
-# <a name="mssqlserver2501"></a>MSSQLSERVER_2501
+# <a name="mssqlserver_2501"></a>MSSQLSERVER_2501
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62914847"
 |符号名称|DBCC_NO_SUCH_TABLE_NAME|  
 |消息正文|找不到名为 'NAME' 的表或对象。 请检查系统目录。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  找不到指定的对象。  
   
 ### <a name="possible-causes"></a>可能的原因  
@@ -54,7 +54,7 @@ ms.locfileid: "62914847"
   
 -   验证此对象是否存在于系统表中。 若要验证是否存在表或其他架构范围内的对象，请查询 [sys.objects](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql) 目录视图。 如果系统表中没有此对象，则表明此对象已删除或者用户没有查看此对象元数据的权限。 有关如何查看对象元数据的详细信息，请参阅[元数据可见性配置](../security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)  
   
   

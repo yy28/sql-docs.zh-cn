@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7e2324fcfce6c560000bfef798aa966102d674b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62895506"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>模拟脚本组件的错误输出
@@ -34,25 +34,25 @@ ms.locfileid: "62895506"
   
 1.  创建新脚本组件之前，先创建一个连接管理器，并配置一个从 AdventureWorks 示例数据库选择地址数据的数据流源。 对于此示例，由于仅查看 CountryRegionName 列，所以只需使用 Person.vStateCountryProvinceRegion 视图，或通过联接 Person.Address、Person.StateProvince 和 Person.CountryRegion 表来选择数据。  
   
-2.  向数据流设计器图面添加新的脚本组件并将其配置为转换。 打开“脚本转换编辑器”  。  
+2.  向数据流设计器图面添加新的脚本组件并将其配置为转换。 打开“脚本转换编辑器”****。  
   
-3.  在“脚本”  页中，将 **ScriptLanguage** 属性设置为要用于编写脚本代码的脚本语言。  
+3.  在“脚本”**** 页中，将 **ScriptLanguage** 属性设置为要用于编写脚本代码的脚本语言。  
   
-4.  单击“编辑脚本”  打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。  
+4.  单击“编辑脚本”**** 打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。  
   
 5.  在 `Input0_ProcessInputRow` 方法中，键入或粘贴如下所示的示例代码。  
   
 6.  关闭 VSTA。  
   
-7.  在“输入列”  页中，选择要在脚本转换中处理的列。 此示例仅使用 CountryRegionName 列。 您未选择的可用列将不进行任何更改，原封不动地在数据流中传递。  
+7.  在“输入列”**** 页中，选择要在脚本转换中处理的列。 此示例仅使用 CountryRegionName 列。 您未选择的可用列将不进行任何更改，原封不动地在数据流中传递。  
   
-8.  上**输入和输出**页上，添加一个新、 第二个输出，并设置其`SynchronousInputID`为输入，这也是值的 ID 值的`SynchronousInputID`默认输出的属性。 将两个输出的 `ExclusionGroup` 属性都设置为同一非零值（例如 1），以指示每一行都将仅定向到两个输出中的一个。 以不同名称为新的错误输出命名，如“MyErrorOutput”。  
+8.  在 "**输入和输出**" 页上，添加一个新的第二个输出`SynchronousInputID` ，并将其值设置为输入的 ID，这也是默认`SynchronousInputID`输出的属性的值。 将两个输出的 `ExclusionGroup` 属性都设置为同一非零值（例如 1），以指示每一行都将仅定向到两个输出中的一个。 以不同名称为新的错误输出命名，如“MyErrorOutput”。  
   
 9. 向新错误输出中添加其他输出列，以捕获所需的错误信息，其中包括错误代码、出现错误的列的 ID，可能还有错误说明。 此示例将创建新列：ErrorColumn 和 ErrorMessage。 若要在自己的实现中捕获预定义的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误，请确保为错误号添加了 ErrorCode 列。  
   
 10. 记下脚本组件将查找其错误情况的一个或多个输入列的 ID 值。 本示例使用此列标识符填充 ErrorColumn 值。  
   
-11. 关闭“脚本转换编辑器”  。  
+11. 关闭“脚本转换编辑器”****。  
   
 12. 将脚本组件的输出附加到合适的目标。 对于即席测试，平面文件目标是最容易配置的。  
   
@@ -99,9 +99,9 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 }  
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据中的错误处理](../data-flow/error-handling-in-data.md)   
  [在数据流组件中使用错误输出](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [使用脚本组件创建同步转换](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 

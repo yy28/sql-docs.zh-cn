@@ -11,13 +11,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8058c7c31c49935d244726bf9e8ea0ac6cfbe750
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914568"
 ---
-# <a name="mssqlserver2530"></a>MSSQLSERVER_2530
+# <a name="mssqlserver_2530"></a>MSSQLSERVER_2530
     
 ## <a name="details"></a>详细信息  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62914568"
 |符号名称|DBCC_INDEX_IS_OFFLINE|  
 |消息正文|表 "%.\*ls" 的索引 "%.*ls" 已禁用。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  DBCC 语句无法继续，因为指定的索引已禁用。 索引被禁用后一直保持禁用状态，直到它重新生成或删除并重新创建。  
   
 ## <a name="user-action"></a>用户操作  
@@ -45,7 +45,7 @@ ms.locfileid: "62914568"
   
 2.  请重新运行 DBCC 语句。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启用索引和约束](../indexes/enable-indexes-and-constraints.md)   
  [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)   
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   

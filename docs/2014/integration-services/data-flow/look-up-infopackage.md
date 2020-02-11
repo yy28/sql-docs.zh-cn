@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27063b71c307d1114f74977b81eac19130e70708
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901771"
 ---
 # <a name="look-up-infopackage"></a>查找 InfoPackage
@@ -56,10 +56,10 @@ ms.locfileid: "62901771"
  **InfoPackage**  
  显示在 SAP Netweaver BW 系统中定义的 InfoPackage 的名称。  
   
- **类型**  
+ 类型   
  显示 InfoPackage 的类型。 下表列出了该类型的可能值。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |Trans.|事务数据。|  
 |Attr.|属性数据。|  
@@ -76,8 +76,8 @@ ms.locfileid: "62901771"
   
  当 InfoPackage 列表显示时，选择您需要的 InfoPackage，然后目标将使用需要的值填充关联的选项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SAP BW 目标编辑器（“连接管理器”页）](sap-bw-destination-editor-connection-manager-page.md)   
- [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Microsoft Connector 1.1 for SAP BW F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

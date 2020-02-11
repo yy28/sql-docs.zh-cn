@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915684"
 ---
-# <a name="mssqlserver137"></a>MSSQLSERVER_137
+# <a name="mssqlserver_137"></a>MSSQLSERVER_137
     
 ## <a name="details"></a>详细信息  
   
@@ -32,18 +32,18 @@ ms.locfileid: "62915684"
 |符号名称|P_SCALAR_VAR_NOTFOUND|  
 |消息正文|必须声明标量变量 "%.*ls"。|  
   
-## <a name="explanation"></a>解释  
- 如果未首先声明某个变量就在 SQL 脚本中使用它，则会出现此错误。 在下面的示例中，由于未声明 **@mycol** ，因此针对 SET 和 SELECT 语句都将返回 137 错误。  
+## <a name="explanation"></a>说明  
+ 如果未首先声明某个变量就在 SQL 脚本中使用它，则会出现此错误。 下面的示例对 SET 和 SELECT 语句都返回错误137，因为**@mycol**未声明。  
   
  SET @mycol = 'ContactName';  
   
  SELECT @mycol;  
   
- 之所以发生此错误，一个更为复杂的原因就是使用在 EXECUTE 语句外部声明的变量。 例如，在 SELECT 语句中指定的变量 **@mycol** 是 SELECT 语句的局部变量，因此它位于 EXECUTE 语句外部。  
+ 之所以发生此错误，一个更为复杂的原因就是使用在 EXECUTE 语句外部声明的变量。 例如，SELECT 语句中**@mycol**指定的变量是 select 语句的本地变量;因此它位于 EXECUTE 语句外部。  
   
  USE AdventureWorks2012;  
   
- 前往  
+ GO  
   
  DECLARE @mycol nvarchar(20);  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62915684"
   
  USE AdventureWorks2012;  
   
- 前往  
+ GO  
   
  DECLARE @mycol nvarchar(20);  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62915684"
   
  EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql)   
  [SET 语句 (Transact-SQL)](/sql/t-sql/statements/set-statements-transact-sql)   
  [DECLARE @local_variable (Transact-SQL)](/sql/t-sql/language-elements/declare-local-variable-transact-sql)  

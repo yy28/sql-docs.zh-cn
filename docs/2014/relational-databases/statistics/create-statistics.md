@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033614"
 ---
 # <a name="create-statistics"></a>创建统计信息
@@ -52,9 +52,9 @@ ms.locfileid: "63033614"
   
 -   不能删除、重命名或更改在筛选的统计信息谓词中定义的表列的定义。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求用户是表或索引视图所有者，或者是以下角色之一的成员： **sysadmin** 固定服务器角色、 **db_owner** 固定数据库角色或 **db_ddladmin** 固定数据库角色。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,7 +69,7 @@ ms.locfileid: "63033614"
   
 4.  右键单击“统计信息”文件夹，然后选择“新建统计信息…”   。  
   
-     以下属性将显示在“新建表  table_name 的统计信息”  对话框的“常规”  页面上。  
+     以下属性将显示在 "**新建表的统计信息**_table_name_ " 对话框的 "**常规**" 页上。  
   
      **表名**  
      显示统计信息中所涉及表的名称。  
@@ -95,7 +95,7 @@ ms.locfileid: "63033614"
      **允许 Null 值**  
      指示列是否接受空值。  
   
-     **“添加”**  
+     **添加**  
      将表中的其他列添加到统计信息网格。  
   
      **删除**  
@@ -113,12 +113,12 @@ ms.locfileid: "63033614"
      **更新这些列的统计信息**  
      选中此项后将在对话框关闭时更新统计信息。  
   
-     以下属性将显示在“新建表  table_name 的统计信息”  对话框的“筛选器”  页面上。  
+     以下属性将显示在 "表_table_name_的**新统计信息**" 对话框中的 "**筛选器**" 页上。  
   
      **筛选表达式**  
      定义要将哪些数据行包含在筛选的统计信息中。 例如： `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  在“新建表  table_name 的统计信息”  对话框中，在“常规”  页面上，单击“添加”  。  
+5.  在 "**新建表的统计信息**_table_name_ " 对话框的 "**常规**" 页上，单击 "**添加**"。  
   
      **“选择列”** 对话框中显示以下属性： 此信息为只读信息。  
   
@@ -134,12 +134,12 @@ ms.locfileid: "63033614"
      **标识**  
      如果选中，则指示标识列。  
   
-     **Allow NULLs**  
+     **允许 Null**  
      指示列是否接受空值。  
   
 6.  在 **“选择列”** 对话框中，选中要为其创建统计信息的每个列旁边的复选框，然后单击 **“确定”** 。  
   
-7.  在“新建表  table_name 的统计信息”  对话框中，单击“确定”  。  
+7.  在 "**新建表的统计信息**_table_name_ " 对话框中，单击 **"确定"**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86bd82dfd095baeacb35f8454859adb938123f52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916184"
 ---
-# <a name="mssqlserver10533"></a>MSSQLSERVER_10533
+# <a name="mssqlserver_10533"></a>MSSQLSERVER_10533
     
 ## <a name="details"></a>详细信息  
   
@@ -32,15 +32,15 @@ ms.locfileid: "62916184"
 |符号名称|PG_NAME_TOO_BIG|  
 |消息正文|无法创建计划指南 '%.*ls'，因为其名称超过允许的最大字符数 124。 请指定字符数少于 125 个的名称。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  计划指南的名称超过所允许的最大字符数（即 124 个字符）。  
   
 ## <a name="user-action"></a>用户操作  
  请指定字符数少于 125 个的名称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [计划指南](../performance/plan-guides.md)   
- [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

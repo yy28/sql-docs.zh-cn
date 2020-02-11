@@ -1,5 +1,5 @@
 ---
-title: Append 方法 （ADOX 表） |Microsoft Docs
+title: Append 方法（ADOX 表） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967246"
 ---
 # <a name="append-method-adox-tables"></a>Append 方法（ADOX 表）
-添加一个新[表](../../../ado/reference/adox-api/table-object-adox.md)对象传递给[表](../../../ado/reference/adox-api/tables-collection-adox.md)集合。  
+向[Tables](../../../ado/reference/adox-api/tables-collection-adox.md)集合添加一个新的[Table](../../../ado/reference/adox-api/table-object-adox.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,23 +33,23 @@ ms.locfileid: "67967246"
 Tables.Append Table  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *表*  
- 一个**Variant**值，该值包含对引用**表**追加或要创建并追加的表的名称。  
+ 一个包含对要追加的**表**的引用的**变量**值，或者是要创建并追加的表的名称。  
   
 ## <a name="remarks"></a>备注  
- 如果提供程序不支持创建表，将会出错。  
+ 如果提供程序不支持创建表，则会发生错误。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
-## <a name="see-also"></a>请参阅  
- [列和表 Append 方法、 Name 属性示例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [ParentCatalog 属性示例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Append 方法 （ADOX 列）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 方法 （ADOX 组）](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append 方法 （ADOX 索引）](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append 方法 （ADOX 项）](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append 方法 （ADOX 过程）](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append 方法 （ADOX 用户）](../../../ado/reference/adox-api/append-method-adox-users.md)   
+## <a name="see-also"></a>另请参阅  
+ [列和表追加方法，Name 属性示例（VB）](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [ParentCatalog 属性示例（VB）](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
+ [Append 方法（ADOX 列）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append 方法（ADOX 组）](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Append 方法（ADOX 索引）](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Append 方法（ADOX 键）](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Append 方法（ADOX 过程）](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Append 方法（ADOX 用户）](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Append 方法（ADOX 视图）](../../../ado/reference/adox-api/append-method-adox-views.md)

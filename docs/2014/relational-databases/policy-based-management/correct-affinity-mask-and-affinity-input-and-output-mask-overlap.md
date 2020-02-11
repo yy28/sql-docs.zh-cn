@@ -1,5 +1,5 @@
 ---
-title: 正确的关联掩码和关联输入的输出掩码重叠 |Microsoft Docs
+title: 正确的关联掩码和关联输入输出掩码重叠 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3139c864805c7df9220afc9b81d2a242775f4fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856702"
 ---
-# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>正确的关联掩码和关联输入的输出掩码重叠
+# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>正确的关联掩码和关联输入输出掩码重叠
   此规则检查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是否有一个或多个要分配以用于 affinity mask 和 affinity I/O mask 选项的处理器。 在有多个处理器的计算机上，affinity mask 和 affinity I/O mask 选项用于指定哪些 CPU 由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用。 启用包含关联掩码和关联 I/O 掩码的 CPU 会由于强制过度使用处理器而降低性能。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建议  
@@ -42,7 +42,7 @@ ms.locfileid: "62856702"
   
  [affinity64 I/O mask 服务器配置选项](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md)  
   
-## <a name="see-also"></a>请参阅  
- [使用基于策略的管理来监视和强制执行最佳实践](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+## <a name="see-also"></a>另请参阅  
+ [使用基于策略的管理来监视和强制执行最佳做法](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfbfa64cb61332591fadef874b8c73da3ce1e7c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913744"
 ---
-# <a name="mssqlserver5228"></a>MSSQLSERVER_5228
+# <a name="mssqlserver_5228"></a>MSSQLSERVER_5228
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62913744"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|消息正文|表错误：对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID （类型为 TYPE），页 PG_ID，行 R_ID。 DBCC 检测到来自联机索引生成操作的不完全清除。 (Antimatter 列值为 VALUE。)|  
+|消息正文|表错误: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE)，页 PG_ID，行 R_ID。 DBCC 检测到来自联机索引生成操作的不完全清除。 (Antimatter 列值为 VALUE。)|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  检测到对象 *O_ID*、索引 *I_ID* 和分区 *PN_ID* 存在未完成的联机索引生成。 这将由行 *R_ID* 上存在的 antimatter 列进行显示。 在联机索引生成过程中协调来自多个源的记录时，将使用 antimatter 列。 此错误消息还指出 antimatter 列的值。  
   
 ## <a name="user-action"></a>用户操作  
@@ -58,7 +58,7 @@ ms.locfileid: "62913744"
 ### <a name="results-of-running-repair-options"></a>运行 REPAIR 选项的结果  
  运行 REPAIR 将会重新生成指定的索引及其所有相关索引。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
   

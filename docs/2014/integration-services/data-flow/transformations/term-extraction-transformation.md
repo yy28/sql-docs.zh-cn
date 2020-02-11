@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899930"
 ---
 # <a name="term-extraction-transformation"></a>字词提取转换
@@ -44,7 +44,7 @@ ms.locfileid: "62899930"
   
  字词提取转换为所提取的每个字词生成分数。 该分数可以是 TFIDF 值，也可以是原始频率（表示规范的字词在输入中出现的次数）。 不管哪种情况，分数都表示为大于 0 的实数。 例如，TFIDF 分数可能为 0.5 的值，而频率可能为像 1.0 或 2.0 这样的值。  
   
- 字词提取转换的输出仅包括两列。 一列包含提取的字词，另一列包含分数。 列的默认名称为**术语**和`Score`。 由于输入中的文本列可能包含多个字词，所以字词提取转换输出的行通常比输入的多。  
+ 字词提取转换的输出仅包括两列。 一列包含提取的字词，另一列包含分数。 列的默认名称是 "**字词**" 和`Score`。 由于输入中的文本列可能包含多个字词，所以字词提取转换输出的行通常比输入的多。  
   
  如果提取字词写入表中，则其他查找转换（如字词查找、模糊查找和查找转换）可以使用它们。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "62899930"
   
 -   数字、标点符号和字母字符的组合。 例如， *A23B#99* 返回字词 *A23B*。  
   
--   字符：%、@，&、$、#、\*、;、。、！、？、\<>、+、=、^、~、|、\\/、（、）、[、]、{、}、" 和 '。  
+-   字符：%、@，&、$、#、\*、;、。、  ！、？、\<>、+、=、^、~、|、\\/、（、）、[、]、{、}、" 和 '。  
   
     > [!NOTE]  
     >  包括一个或多个句点 (.) 的首字母缩略词不分隔为多个句子。  
@@ -155,7 +155,7 @@ ms.locfileid: "62899930"
   
 -   Space  
   
--   Tab  
+-   选项卡  
   
 -   ASCII 0x0d（回车符）  
   
@@ -173,15 +173,15 @@ ms.locfileid: "62899930"
   
  有关可在 **“字词提取转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [字词提取转换编辑器（“字词提取”选项卡）](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [字词提取转换编辑器 &#40;字词提取选项卡&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [字词提取转换编辑器（“排除”选项卡）](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [字词提取转换编辑器 &#40;排除选项卡&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [字词提取转换编辑器（“高级”选项卡）](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [字词提取转换编辑器 &#40;高级 "选项卡&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [转换自定义属性](transformation-custom-properties.md)  
   
