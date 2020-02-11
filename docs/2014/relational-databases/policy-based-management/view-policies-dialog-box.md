@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676851"
 ---
 # <a name="view-policies-dialog-box"></a>“查看策略”对话框
@@ -38,7 +38,7 @@ ms.locfileid: "62676851"
  **评估模式**  
  命名策略的评估模式。  
   
- **历史记录**  
+ **History**  
  单击超链接可显示执行历史记录报表。  
   
  **评估**  
@@ -47,7 +47,7 @@ ms.locfileid: "62676851"
  **上次执行**  
  上次运行策略的日期和时间。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)  
   
   

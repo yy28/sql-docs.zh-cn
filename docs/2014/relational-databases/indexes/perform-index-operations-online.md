@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9eceaff8ea7fee16eac3afef8bdc560d7fb1642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63036191"
 ---
 # <a name="perform-index-operations-online"></a>联机执行索引操作
@@ -59,9 +59,9 @@ ms.locfileid: "63036191"
   
 -   有关联机创建、重新生成或删除索引的更多限制和局限性，请参阅 [联机索引操作指南](guidelines-for-online-index-operations.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -82,7 +82,7 @@ ms.locfileid: "63036191"
   
 7.  选择 **“允许联机 DML 处理”** ，然后从列表中选择 **True** 。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 9. 右键单击要联机重新生成的索引，然后选择“重新生成”  。  
   
@@ -110,6 +110,6 @@ ms.locfileid: "63036191"
   
      [!code-sql[IndexDDL#DropIndex4](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/dropindex.sql#dropindex4)]  
   
- 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。  
+ 有关详细信息，请参阅[ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 服务器范围的配置目录视图 (Transact SQL) |Microsoft Docs
+title: 服务器范围内的配置目录视图（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2015
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9f9c089e1e0c0c9b8788922ad566a1ee6bcd9c6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018279"
 ---
 # <a name="server-wide-configuration-catalog-views-transact-sql"></a>服务器范围内的配置目录视图 (Transact-SQL)
@@ -34,8 +34,8 @@ ms.locfileid: "68018279"
 |[sys.traces](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)|[sys.trace_event_bindings](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)|  
 |[sys.trace_categories](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)|[sys.trace_subclass_values](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [系统视图&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

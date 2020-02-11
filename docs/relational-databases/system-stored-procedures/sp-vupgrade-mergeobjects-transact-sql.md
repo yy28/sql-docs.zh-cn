@@ -1,5 +1,5 @@
 ---
-title: sp_vupgrade_mergeobjects (TRANSACT-SQL) |Microsoft Docs
+title: sp_vupgrade_mergeobjects （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ed0992ff1b6b7de6f93213b612ff05ebcbdb3df5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042705"
 ---
-# <a name="spvupgrademergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
+# <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   重新生成特定于项目的触发器、存储过程和视图，用于跟踪和应用合并复制的数据更改。 在以下情况下执行此过程：  
@@ -33,7 +33,7 @@ ms.locfileid: "68042705"
   
  执行此存储过程不需要重新初始化订阅。 如果对新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装 service pack 或更新，则不需要此过程。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,14 +45,14 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @login = ] 'login'` 是分发数据库中创建新的系统对象时要使用的系统管理员登录名。 login 的数据类型为 sysname，默认值为 NULL   。 如果不需要此参数*security_mode*设置为**1**，这是 Windows 身份验证。  
+`[ @login = ] 'login'`在分发数据库中创建新的系统对象时要使用的系统管理员登录名。 *login*的值为**sysname**，默认值为 NULL。 如果*security_mode*设置为**1**（这是 Windows 身份验证），则不需要此参数。  
   
-`[ @password = ] 'password'` 是分发数据库中创建新的系统对象时要使用的系统管理员密码。 *密码*是**sysname**，默认值为 **'** （空字符串）。 如果不需要此参数*security_mode*设置为**1**，这是 Windows 身份验证。  
+`[ @password = ] 'password'`在分发数据库中创建新的系统对象时要使用的系统管理员密码。 *password*的值为**sysname**，默认值为 **' '** （空字符串）。 如果*security_mode*设置为**1**（这是 Windows 身份验证），则不需要此参数。  
   
-`[ @security_mode = ] 'security_mode'` 是分发数据库中创建新的系统对象时要使用的登录安全模式。 *security_mode*是**位**默认值为**1**。 如果**0**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将使用身份验证。 如果**1**，将使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] 'security_mode'`在分发数据库中创建新的系统对象时要使用的登录安全模式。 *security_mode*为**bit** ，默认值为**1**。 如果**** 为 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则使用身份验证。 如果为**1**，则将使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
  **sp_vupgrade_mergeobjects**仅用于合并复制。  
@@ -60,8 +60,8 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [升级复制的数据库](../../database-engine/install-windows/upgrade-replicated-databases.md)  
+ [升级复制数据库](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

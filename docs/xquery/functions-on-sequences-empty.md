@@ -1,5 +1,5 @@
 ---
-title: 空函数 (XQuery) |Microsoft Docs
+title: 空函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004670"
 ---
 # <a name="functions-on-sequences---empty"></a>基于序列的函数 - empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  如果返回 True 的值 *$arg*是一个空序列。 否则，该函数返回 False。  
+  如果 *$arg*的值是空序列，则返回 True。 否则，该函数返回 False。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,13 +39,13 @@ fn:empty($arg as item()*) as xs:boolean
  项序列。 如果该序列为空，则此函数返回 True。 否则，该函数返回 False。  
   
 ## <a name="remarks"></a>备注  
- **Fn:exists()** 不支持函数。 作为替代方法， **not （)** 函数可用。  
+ 不支持**fn： exists （）** 函数。 作为替代方法，可以使用**not （）** 函数。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
+ 本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. 使用 empty() XQuery 函数来确定属性是否存在  
- 在产品型号 7 的生产过程中，此查询返回不具有的所有工作中心位置**MachineHours**属性。  
+ 在产品型号7的生产过程中，此查询将返回没有**MachineHours**属性的所有工作中心位置。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -64,7 +64,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 ProductModelID      Result          
@@ -74,7 +74,7 @@ ProductModelID      Result
                <Location LocationID="60" LaborHrs="4"/>  
 ```  
   
- 以下、 略有修改，查询将返回"NotFound"如果**MachineHour**属性不存在：  
+ 以下内容经过略微修改后，如果未提供**MachineHour**属性，查询将返回 "NotFound"：  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -96,7 +96,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 ProductModelID Result                         
@@ -110,7 +110,7 @@ ProductModelID Result
   <Location LocationID="60" LaborHrs="4" MachineHours="NotFound"/>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [exist() 方法（xml 数据类型）](../t-sql/xml/exist-method-xml-data-type.md)  
   

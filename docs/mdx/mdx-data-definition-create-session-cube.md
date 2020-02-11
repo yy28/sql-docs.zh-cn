@@ -1,5 +1,5 @@
 ---
-title: CREATE SESSION CUBE 语句 (MDX) |Microsoft Docs
+title: CREATE SESSION CUBE 语句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038358"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX 数据定义 - CREATE SESSION CUBE
@@ -101,13 +101,13 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  会话多维数据集中的维度的名称。  
   
- 从\<dim from 子句 >  
+ FROM \<dim from 子句>  
  该规范仅对于派生维度定义有效。  
   
  NOT_RELATED_TO_FACTS  
  该规范仅对于派生维度定义有效。  
   
- \<级别类型 >  
+ \<级别类型>  
  该规范仅对于派生维度定义有效。  
   
 ## <a name="remarks"></a>备注  
@@ -198,8 +198,8 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
    )  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [CREATE GLOBAL CUBE 语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 数据定义语句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [&#40;MDX 创建全局多维数据集语句&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   
   

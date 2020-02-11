@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667180"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在复制监视器中设置阈值和警告
@@ -65,7 +65,7 @@ ms.locfileid: "62667180"
   
 4.  在 **“阈值”** 列中，为警告设置阈值。 例如，如果在步骤 3 中选中了 **“如果滞后时间超出阈值，则发出警告”** ，就可以在 **“阈值”** 列中，选择滞后时间 **“60 秒”** 。  
   
-5.  单击**保存更改**。  
+5.  单击 **“保存更改”** 。  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>为阈值配置警报  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62667180"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
 ##  <a name="Merge"></a> 为合并发布设置阈值和警告  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62667180"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
 ##  <a name="Snapshot"></a> 为快照发布设置阈值和警告  
   
@@ -139,7 +139,7 @@ ms.locfileid: "62667180"
   
 4.  在 **“阈值”** 列中，为警告设置阈值。 例如，可以在 **“阈值”** 列中选择值 **70%** 。  
   
-5.  单击**保存更改**。  
+5.  单击 **“保存更改”** 。  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>为阈值配置警报  
   
@@ -159,9 +159,9 @@ ms.locfileid: "62667180"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视复制](../monitoring-replication.md)  
   
   

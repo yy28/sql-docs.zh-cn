@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a55662b38fbd69dc45d8f0031856ad4da5929038
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136438"
 ---
 # <a name="save-trace-results-to-a-file"></a>将跟踪结果保存到文件
@@ -34,7 +34,7 @@ ms.locfileid: "63136438"
   
 -   执行查询优化  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为存储过程 **@tracefile** 的 **@tracefile**参数指定路径和文件名后，将跟踪结果保存到文件中。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果为存储过程**@tracefile** **sp_trace_create**的参数指定了路径和文件名，则会将跟踪结果保存到文件。  
   
 > [!NOTE]  
 >  如果为存储过程 **sp_trace_create** 指定路径用来保存跟踪文件，则服务器必须可以访问该目录。 同时注意，如果为 **sp_trace_create**指定本地目录，则该目录应是服务器上的本地目录。  
@@ -43,7 +43,7 @@ ms.locfileid: "63136438"
   
  有关保存跟踪结果的详细信息，请参阅 [将跟踪结果保存到表 (SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md) 和 [将跟踪结果保存到文件 (SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_create (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)   
  [创建跟踪 (Transact-SQL)](../sql-trace/create-a-trace-transact-sql.md)   
  [创建跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
