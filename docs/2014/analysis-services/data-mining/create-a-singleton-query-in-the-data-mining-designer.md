@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085311"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>在数据挖掘设计器中创建单独查询
@@ -49,7 +49,7 @@ AS [t]
   
      选择要用于创建预测的模型。  
   
-     例如，若要创建本主题开头所显示的示例代码，请选择 TM_Decision_Tree，再单击“确定”  。  
+     例如，若要创建本主题开头所显示的示例代码，请选择 TM_Decision_Tree，再单击“确定”****。  
   
 3.  在 **“挖掘模型预测”** 选项卡中，单击工具栏上的 **“单独查询”** 。  
   
@@ -57,17 +57,17 @@ AS [t]
   
 4.  在 **“单独查询输入”** 表中，选择 **“值”** 列中的值，用以说明要为其创建预测的事例。  
   
-     例如，选择**2**有关**Number Children At Home**，然后键入`45`有关**年龄**。  
+     例如，选择 " **2** " 作为 "家庭中的**子女数**" `45` ，然后键入 " **Age**"。  
   
-5.  将一个可预测列从 **“挖掘模型”** 表拖到该选项卡底部的 **“源”** 列中。还可以根据需要键入该列的别名。  
+5.  将一个可预测列从 "**挖掘模型**" 表拖到该选项卡底部的 "**源**" 列。或者，您也可以为列键入一个别名。  
   
      例如，将 **Bike Buyer** 拖到 **“源”** 列。  
   
-6.  通过在“源”列的下拉列表中选择“预测函数”或“自定义表达式”，向查询中添加其他函数    。  
+6.  通过在“源”列的下拉列表中选择“预测函数”或“自定义表达式”，向查询中添加其他函数************。  
   
-     例如，单击 **“预测函数”** ，再选择 **PredictProbability**。  
+     例如，单击 **“预测函数”**，再选择 **PredictProbability**。  
   
-7.  在 **PredictProbability** 行中单击“条件/参数”  ，键入要预测的列的名称，还可以选择键入要预测的特定值。  
+7.  在 **PredictProbability** 行中单击“条件/参数”****，键入要预测的列的名称，还可以选择键入要预测的特定值。  
   
      例如，键入 `[Bike Buyer], 1`。  
   
@@ -79,7 +79,7 @@ AS [t]
   
      此时将出现一个新屏幕，显示查询的结果。 若要查看刚创建的 DMX 语句，请单击 **SQL**。  
   
-## <a name="see-also"></a>请参阅  
- [预测查询（数据挖掘）](prediction-queries-data-mining.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘 &#40;预测查询&#41;](prediction-queries-data-mining.md)  
   
   

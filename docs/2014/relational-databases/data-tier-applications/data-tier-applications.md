@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873098"
 ---
 # <a name="data-tier-applications"></a>数据层应用程序
@@ -98,7 +98,7 @@ ms.locfileid: "62873098"
 ## <a name="backup-package-bacpac"></a>备份包 (.bacpac)  
  BACPAC 是一个封装数据库架构以及数据库中存储的数据的项目。 BACPAC 是一个扩展名为 .bacpac 的 Windows 文件。 与 DACPAC 类似，BACPAC 文件是开放的 - BACPAC 的架构内容与 DACPAC 的架构内容相同。 数据是以 JSON 格式存储的。  
   
- 虽然 DACPAC 和 BACPAC 相似，但它们面向的方案不同。 DACPAC 侧重于捕获和部署架构，包括升级现有数据库。 DACPAC 是将严密定义的架构部署到开发、 测试、 生产环境中，并反过来主要用例： 捕获生产的架构并将其应用回测试和开发环境。  
+ 虽然 DACPAC 和 BACPAC 相似，但它们面向的方案不同。 DACPAC 侧重于捕获和部署架构，包括升级现有数据库。 DACPAC 的主要用例是将严格定义的架构部署到开发、测试和生产环境，反之亦然：捕获生产的架构并将其应用于测试和开发环境。  
   
  另一方面，BACPAC 侧重于捕获架构和数据。 BACPAC 是数据库备份的逻辑等效项，且不能用来升级现有数据库。 BACPAC 的主要用例是，将数据库从一台服务器移动到另一台服务器（或从本地服务器移动到云），并以开放格式对现有数据库进行存档。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62873098"
   
 -   **IMPORT** - 用户可以将架构和数据导入到主机服务器上的新数据库中。  
   
- 数据库管理工具：Server Management Studio、 SQL Azure 管理门户和 DACFx API。  
+ 数据库管理工具 Server Management Studio、Management Portal for SQL Azure 和 DACFx API 支持这两种功能。  
   
 ## <a name="permissions"></a>权限  
  用户必须是 `dbmanager` 角色的成员或分配了 `CREATE DATABASE` 权限才能创建数据库，包括通过部署 DAC 包来创建数据库。 用户必须是 `dbmanager` 角色的成员或分配了 `DROP DATABASE` 权限才能删除数据库。  
@@ -129,7 +129,7 @@ ms.locfileid: "62873098"
 |介绍如何将 DAC 包的内容放置于一个文件夹中，数据库管理员可以查看该文件夹，以便在将该 DAC 部署到生产服务器之前查看其内容。|[解压缩 DAC 包](unpack-a-dac-package.md)|  
 |介绍如何使用向导部署现有数据库。 此向导使用 DAC 执行部署。|[使用 DAC 部署数据库](deploy-a-database-by-using-a-dac.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对 SQL Server 对象和版本的 DAC 支持](dac-support-for-sql-server-objects-and-versions.md)  
   
   

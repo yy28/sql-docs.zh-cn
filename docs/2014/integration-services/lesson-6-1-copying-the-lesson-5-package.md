@@ -1,5 +1,5 @@
 ---
-title: 第 1 步：复制第 5 课包 |Microsoft Docs
+title: 步骤 1：复制第 5 课包 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890753"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>第 1 步：复制第 5 课包
+# <a name="step-1-copying-the-lesson-5-package"></a>步骤 1：复制第 5 课包
   在本任务中，您将为第 5 课中创建的 Lesson 5.dtsx 包创建一个副本。 或者将本教程中附带的已完成的 Lesson 5 包添加到项目中，然后再对其进行复制。 您将使用这一新副本来完成第 6 课剩余部分。  
   
 ### <a name="to-copy-the-lesson-5-package"></a>复制 Lesson 5 包  
@@ -38,7 +38,7 @@ ms.locfileid: "62890753"
   
 7.  在“属性”窗口中，将 Name 属性更新为 Lesson 6。  
   
-8.  单击 ID 属性框，然后单击下拉箭头，然后单击\<生成新 ID >。  
+8.  单击 "ID" 属性的框，然后单击下拉箭头，然后单击\<"生成新 ID>。  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>添加已完成的 Lesson 5 包  
   
@@ -48,11 +48,11 @@ ms.locfileid: "62890753"
   
 3.  在“添加现有包的副本”对话框的“包位置”中，选择“文件系统”。  
   
-4.  依次单击“浏览(...)”按钮和计算机上的 Lesson 5.dtsx，然后单击“打开”。  
+4.  依次单击“浏览(...)”按钮和计算机上的 Lesson 5.dtsx，然后单击“打开”****。  
   
      要下载此教程的所有课程包，请执行以下操作：  
   
-    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到[Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  单击 **“下载”** 选项卡。  
   

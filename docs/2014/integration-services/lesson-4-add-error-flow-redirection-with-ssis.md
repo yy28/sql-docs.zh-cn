@@ -1,5 +1,5 @@
 ---
-title: 第 4 课：添加错误流重定向 |Microsoft Docs
+title: 第4课：添加错误流重定向 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891322"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>第 4 课：添加错误流重定向
-  为了处理在转换过程中可能发生的错误， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 允许根据每个组件和每个列来决定如何处理无法转换的数据。 可以选择忽略某些列中的失败、重定向整个失败的行或者只是使组件失败。 默认情况下， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的所有组件被配置为在发生错误时失败。 而使组件失败又会导致包失败，并使所有后续处理停止。  
+  为了处理在转换过程中可能发生的错误， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]使您能够根据每个组件和每个列来决定如何处理无法转换的数据。 可以选择忽略某些列中的失败、重定向整个失败的行或者只是使组件失败。 默认情况下， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的所有组件被配置为在发生错误时失败。 而使组件失败又会导致包失败，并使所有后续处理停止。  
   
  如果不让失败导致包停止执行，一个好方法是通过配置使在转换中发生潜在处理错误时这些错误能够得到处理。 虽然可能选择忽略失败以确保包成功运行，但通常更好的做法是将失败的行重定向到另一个处理路径，在这里可以使数据和错误持久化、接受检查并在随后的某个时间对其进行重新处理。  
   
- 在本课程中，您将创建一份中开发的包[第 3 课：添加日志记录](lesson-3-add-logging-with-ssis.md)。 使用这个新包时，将创建一个示例数据文件的损坏版本。 损坏的文件将在运行包时强制发生处理错误。  
+ 在本课中，将创建在 [Lesson 3: Adding Logging](lesson-3-add-logging-with-ssis.md)中开发的包的副本。 使用这个新包时，将创建一个示例数据文件的损坏版本。 损坏的文件将在运行包时强制发生处理错误。  
   
  为了处理错误数据，您将添加并配置一个平面文件目标，它会将所有无法在 Lookup Currency Key 转换中找到查找值的行写入文件。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62891322"
 ## <a name="tasks-in-lesson"></a>课程中的任务  
  本课程包含以下任务：  
   
--   [步骤 1：复制第 3 课包](lesson-4-1-copying-the-lesson-3-package.md)  
+-   [步骤 1：复制 Lesson 3 包](lesson-4-1-copying-the-lesson-3-package.md)  
   
 -   [步骤 2：创建损坏的文件](lesson-4-2-creating-a-corrupted-file.md)  
   
@@ -45,6 +45,6 @@ ms.locfileid: "62891322"
 -   [步骤 5：测试第 4 课教程包](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
- [步骤 1：复制第 3 课包](lesson-4-1-copying-the-lesson-3-package.md)  
+ [步骤 1：复制 Lesson 3 包](lesson-4-1-copying-the-lesson-3-package.md)  
   
   

@@ -25,14 +25,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 051f2ed14e8218a3909a43052f08e0e339138dab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894801"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extending the Data Flow with the Script Component
-  脚本组件通过以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写，在包运行时编译和执行的自定义代码来扩展 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包的数据流功能。 当 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含的数据流源、转换或目标不能完全满足您的需求时，脚本组件可简化自定义数据流源、转换或目标的开发。 用预期输入和输出配置该组件后，它将为您编写所有必需的基础结构代码，这样您就可以只将注意力集中于自定义处理所需的代码。  
+  脚本组件通过在包运行时编译和[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]执行的自定义[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic [!INCLUDE[msCoName](../../../includes/msconame-md.md)]代码来扩展包的数据流功能。 当 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含的数据流源、转换或目标不能完全满足您的需求时，脚本组件可简化自定义数据流源、转换或目标的开发。 用预期输入和输出配置该组件后，它将为您编写所有必需的基础结构代码，这样您就可以只将注意力集中于自定义处理所需的代码。  
   
  脚本组件通过 `ComponentWrapper` 和 `BufferWrapper` 项目项中自动生成的类来与包含包和数据流进行交互，这两个项目项分别是 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 类的实例。 这些类使连接、变量和其他包项成为类型化对象，并管理输入和输出。 脚本组件还可以使用 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 命名空间、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 类库以及自定义程序集来实现自定义功能。  
   
@@ -44,19 +44,21 @@ ms.locfileid: "62894801"
  下列主题提供有关脚本组件的详细信息。  
   
  [在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)  
- 在“脚本转换编辑器”中配置的属性会影响脚本组件代码的功能和性能  。  
+ 在“脚本转换编辑器”中配置的属性会影响脚本组件代码的功能和性能****。  
   
- [的编码和调试脚本组件](coding-and-debugging-the-script-component.md  
- 可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 开发环境来开发包含在脚本组件中的脚本。  
+ [编码和调试脚本组件]（coding-and-debugging-the-script-component.md  
+ 使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications （VSTA）开发环境来开发包含在脚本组件中的脚本。  
   
  [了解脚本组件对象模型](understanding-the-script-component-object-model.md)  
  新脚本组件项目包含三个带有多个类和自动生成的属性及方法的项目项。  
   
  [在脚本组件中使用变量](using-variables-in-the-script-component.md)  
- `ComponentWrapper` 项目项包含包变量的强类型取值函数属性。  
+ 
+  `ComponentWrapper` 项目项包含包变量的强类型取值函数属性。  
   
  [在脚本组件中连接数据源](connecting-to-data-sources-in-the-script-component.md)  
- `ComponentWrapper` 项目项还包含在包中定义的连接的强类型取值函数属性。  
+ 
+  `ComponentWrapper` 项目项还包含在包中定义的连接的强类型取值函数属性。  
   
  [在脚本组件中引发事件](raising-events-in-the-script-component.md)  
  您可以引发事件来提供问题和错误的通知。  
@@ -70,9 +72,9 @@ ms.locfileid: "62894801"
  [其他脚本组件示例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  这些简单示例说明和演示脚本组件的一些可能的用法。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [脚本组件](../../data-flow/transformations/script-component.md)   
  [比较脚本任务和脚本组件](../comparing-the-script-task-and-the-script-component.md)  
   

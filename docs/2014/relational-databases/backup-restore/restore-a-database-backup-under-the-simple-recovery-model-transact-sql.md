@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2fd00fd96fe9b0bf7e1b605d935908970d0c1fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875630"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>在简单恢复模式下还原数据库备份 (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "62875630"
 > [!IMPORTANT]  
 >  还原完整数据库备份的系统管理员必须是当前使用要还原的数据库的唯一人员。  
   
-## <a name="prerequisites-and-recommendations"></a>前提条件和建议  
+## <a name="prerequisites-and-recommendations"></a>先决条件和建议  
   
 -   若要还原已加密的数据库，您必须有权访问用于对数据库进行加密的证书或非对称密钥。 如果没有证书或非对称密钥，数据库将无法还原。 因此，只要需要该备份，就必须保留用于对数据库加密密钥进行加密的证书。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md)。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62875630"
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>说明  
  以下示例从磁带中还原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的完整数据库备份。  
   
 ### <a name="example"></a>示例  
@@ -80,7 +80,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [完整数据库还原（完整恢复模式）](complete-database-restores-full-recovery-model.md)   
  [完整数据库还原（简单恢复模式）](complete-database-restores-simple-recovery-model.md)   
  [完整数据库备份 (SQL Server)](full-database-backups-sql-server.md)   

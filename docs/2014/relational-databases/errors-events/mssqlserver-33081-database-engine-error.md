@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 913be11caa9a76ee012571e5ee4b275826668330
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868581"
 ---
-# <a name="mssqlserver33081"></a>MSSQLSERVER_33081
+# <a name="mssqlserver_33081"></a>MSSQLSERVER_33081
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62868581"
 |符号名称|SEC_DLL_TRUST_VERIFICATION_FAILED|  
 |消息正文|由于 Authenticode 签名或文件路径无效，未能加载加密提供程序“%.*ls”。  请检查以前的消息，了解其他失败信息。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法加载错误消息中列出的加密提供程序。 几个 Windows API 失败可能导致此错误。 环形缓冲区包含失败的 API 的名称和 API 返回的 Windows 错误代码。 若要获取更多信息，请使用以下查询来查询 sys.dm_os_ring_buffers 视图。  
   
 ```  

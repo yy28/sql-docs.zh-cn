@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a50b7ce1db0aa390d4fee9fa4e5752c1444dfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62864558"
 ---
 # <a name="user-configurable-event-category"></a>User-Configurable 事件类别
@@ -28,7 +28,7 @@ ms.locfileid: "62864558"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[User-Configurable 事件类](user-configurable-event-class.md)|用于监视其他事件类别中的系统提供的事件无法监视且由用户定义的事件。|  
   

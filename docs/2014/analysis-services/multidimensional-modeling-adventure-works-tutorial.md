@@ -1,5 +1,5 @@
 ---
-title: 多维建模 （Adventure Works 教程） |Microsoft Docs
+title: 多维建模（艾德 Works 教程） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 174d4ab61cf56f4916babb1639e110162d20e6fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077582"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>多维建模（Adventure Works 教程）
@@ -34,10 +34,10 @@ ms.locfileid: "66077582"
   
 -   如何定义多维数据集内的计算、关键绩效指标 (KPI)、操作、透视、翻译和安全角色。  
   
- 在此教程中随附应用场景说明，以便您可以更好地理解这些课程的上下文。 有关详细信息，请参阅 [Analysis Services 教程方案](analysis-services-tutorial-scenario.md)。  
+ 在此教程中随附应用场景说明，以便您可以更好地理解这些课程的上下文。 有关详细信息，请参阅 [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)。  
   
-## <a name="prerequisites"></a>必要條件  
- 要完成本教程的所有课程，您将需要示例数据、示例项目文件以及软件。 有关如何查找和安装本教程的必备组件的说明，请参阅 [安装 Analysis Services 多维建模教程的示例数据和项目](install-sample-data-and-projects.md)。  
+## <a name="prerequisites"></a>必备条件  
+ 要完成本教程的所有课程，您将需要示例数据、示例项目文件以及软件。 有关如何查找和安装本教程的必备组件的说明，请参阅 [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](install-sample-data-and-projects.md)。  
   
  此外，必须具有下列权限才能成功完成本教程：  
   
@@ -48,15 +48,15 @@ ms.locfileid: "66077582"
 ## <a name="lessons"></a>课程  
  本教程包括以下几课。  
   
-|课程|学完本课的估计时间|  
+|课程|估计完成时间|  
 |------------|--------------------------------|  
-|[第 1 课：定义数据源视图中 Analysis Services 项目](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 分钟|  
+|[第 1 课：在 Analysis Services 项目中定义数据源视图](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 分钟|  
 |[第 2 课：定义和部署多维数据集](lesson-2-defining-and-deploying-a-cube.md)|30 分钟|  
-|[第 3 课：修改度量值、 属性和层次结构](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 分钟|  
-|[第 4 课：定义高级的属性和维度属性](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分钟|  
+|[第 3 课：修改度量值、属性和层次结构](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 分钟|  
+|[第 4 课：定义高级属性和维度属性](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分钟|  
 |[第 5 课：定义维度和度量值组之间的关系](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 分钟|  
 |[第 6 课：定义计算](lesson-6-defining-calculations.md)|45 分钟|  
-|[第 7 课：定义关键绩效指标&#40;Kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 分钟|  
+|[第7课：定义关键绩效指标 &#40;Kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 分钟|  
 |[第 8 课：定义操作](lesson-8-defining-actions.md)|30 分钟|  
 |[第 9 课：定义透视和翻译](lesson-9-defining-perspectives-and-translations.md)|30 分钟|  
 |[第 10 课：定义管理角色](lesson-10-defining-administrative-roles.md)|15 分钟|  
@@ -65,6 +65,6 @@ ms.locfileid: "66077582"
 >  您将在本教程中创建的多维数据集数据库是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维模型项目的简化版本，此项目是可在 codeplex 站点上下载的 Adventure Works 示例数据库的一部分。 对 Adventure Works 多维数据库的教程版本进行了简化，以便重点关注您将要立即掌握的特定技能。 在完成该教程后，请考虑自己探索该多维模型项目，以便进一步理解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维建模。  
   
 ## <a name="next-step"></a>下一步  
- 若要开始本教程，请继续第一课：[第 1 课：定义数据源视图中 Analysis Services 项目](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
+ 要开始学习本教程，请转到第一课： [Lesson 1: Defining a Data Source View within an Analysis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
   
   

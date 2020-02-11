@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 919c10372e397f0c2d66d7648363aef7916ec598
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875603"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>将数据库还原到标记的事务 (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "62875603"
   
 ### <a name="to-restore-a-marked-transaction"></a>还原标记的事务  
   
-1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
+1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在“对象资源管理器”中，单击服务器名称以展开服务器树。  
   
 2.  展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
@@ -45,18 +45,18 @@ ms.locfileid: "62875603"
   
      下表列出了网格的列标题并对列值进行了说明。  
   
-    |Header|ReplTest1|  
+    |标头|值|  
     |------------|-----------|  
     |\<blank>|显示一个用于选择标记的复选框。|  
     |**事务标记**|提交事务时，用户为标记的事务指定的名称。|  
     |**Date**|事务的提交日期及时间。 事务日期和时间显示为 **msdbgmarkhistory** 表中所记录的日期和时间，而非客户端计算机的日期和时间。|  
     |**说明**|提交事务时，用户为标记的事务指定的说明（如果有的话）。|  
     |**LSN**|所标记事务的日志序列号。|  
-    |**“数据库”**|提交标记的事务时所在数据库的名称。|  
+    |**Database**|提交标记的事务时所在数据库的名称。|  
     |**用户名**|提交标记事务的数据库用户的名称。|  
   
-## <a name="see-also"></a>请参阅  
- [还原数据库备份&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
+## <a name="see-also"></a>另请参阅  
+ [还原数据库备份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [还原事务日志备份 (SQL Server)](restore-a-transaction-log-backup-sql-server.md)  
   
   

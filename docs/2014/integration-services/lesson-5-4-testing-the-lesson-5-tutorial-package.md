@@ -1,5 +1,5 @@
 ---
-title: 步骤 4：测试第 5 课教程包 |Microsoft Docs
+title: 步骤 4：测试第 5 课教程包 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890939"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>步骤 4：测试第 5 课教程包
@@ -27,19 +27,19 @@ ms.locfileid: "62890939"
   
  **控制流**  
   
- ![包中的控制流](../../2014/tutorials/media/task4lesson2control.gif "Control flow in package")  
+ ![包中的控制流](../../2014/tutorials/media/task4lesson2control.gif "包中的控制流")  
   
  **数据流**  
   
- ![包中的数据流](../../2014/tutorials/media/task9lesson1data.gif "Data flow in package")  
+ ![包中的数据流](../../2014/tutorials/media/task9lesson1data.gif "包中的数据流")  
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>测试 Lesson 5 教程包  
   
 1.  在 **“调试”** 菜单中，单击 **“启动调试”** 。  
   
-2.  该包运行完成后，请在 **“调试”** 菜单上单击 **“停止调试”** 。  
+2.  该包运行完成后，请在 **“调试”** 菜单上单击 **“停止调试”**。  
   
 ## <a name="next-lesson"></a>下一课  
- [第 6 课：使用项目部署模型使用参数](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [第 6 课：对项目部署模型使用参数](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

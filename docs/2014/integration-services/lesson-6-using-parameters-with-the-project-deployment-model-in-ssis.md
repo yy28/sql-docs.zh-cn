@@ -1,5 +1,5 @@
 ---
-title: 第 6 课：使用项目部署模型使用参数 |Microsoft Docs
+title: 第6课：对项目部署模型使用参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890542"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>第 6 课：对项目部署模型使用参数
   SQL Server 2012 引入了一个新的部署模型，可用于将您的项目部署到 Integration Services 服务器。 通过 Integration Services 服务器，您可以管理和运行包，以及为包配置运行时值。  
   
- 在本课程中，您将修改你在中创建的包[第 5 课：为包部署模型中添加包配置](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)以便使用项目部署模型。 您将使用一个参数替换该配置值，以便指定示例数据位置。 还可以复制本教程附带的已完成的 Lesson 5 包。  
+ 在本课中，您将修改在[第5课：添加包部署模型的包配置](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)中创建的包，以使用项目部署模型。 您将使用一个参数替换该配置值，以便指定示例数据位置。 还可以复制本教程附带的已完成的 Lesson 5 包。  
   
  使用 Integration Services 项目配置向导，您将该项目转换为项目部署模型，并且使用参数而不是配置值来设置 Directory 属性。 本课部分介绍了您将现有 SSIS 包转换为新的项目部署模型时要遵循的步骤。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62890542"
   
 2.  [步骤 2：将项目转换为项目部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [步骤 3：测试第 6 课包](lesson-6-3-testing-the-lesson-6-package.md)  
+3.  [步骤 3：测试 Lesson 6 包](lesson-6-3-testing-the-lesson-6-package.md)  
   
 4.  [步骤 4：部署第 6 课包](lesson-6-4-deploying-the-lesson-6-package.md)  
   

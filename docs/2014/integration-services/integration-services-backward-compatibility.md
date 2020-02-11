@@ -18,23 +18,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 262a6404ced039e629aa7e507c211949dab7bad2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892293"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services 的向后兼容性
-  本节介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的不同版本之间的更改。 它包括不再可用或计划在将来的版本中删除的功能。 本部分还介绍对产品所做的更改，已知这些更改会使包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能的现有应用程序无法继续工作，或会使其行为发生变化。  
+  本部分介绍各版本之间的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]更改。 它包括不再可用或计划在将来的版本中删除的功能。 本部分还介绍对产品所做的更改，已知这些更改会使包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能的现有应用程序无法继续工作，或会使其行为发生变化。  
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [SQL Server 2014 中弃用的 Integration Services 功能](../../2014/integration-services/deprecated-integration-services-features-in-sql-server-2014.md)  
+-   [SQL Server 2014 中不推荐使用的 Integration Services 功能](../../2014/integration-services/deprecated-integration-services-features-in-sql-server-2014.md)  
   
 -   [SQL Server 2014 中已停止使用的 Integration Services 功能](../../2014/integration-services/discontinued-integration-services-functionality-in-sql-server-2014.md)  
   
--   [SQL Server 2014 中 Integration Services 功能的中断性变更](../../2014/integration-services/breaking-changes-to-integration-services-features-in-sql-server-2014.md)  
+-   [SQL Server 2014 中 Integration Services 功能的重大更改](../../2014/integration-services/breaking-changes-to-integration-services-features-in-sql-server-2014.md)  
   
--   [SQL Server 2014 中 Integration Services 功能的行为变更](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)  
+-   [SQL Server 2014 中 Integration Services 功能的行为更改](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)  
   
   

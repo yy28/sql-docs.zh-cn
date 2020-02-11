@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8ecb517174c8cd8189ad2f7382c774df3545620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62864944"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 源提取数据
@@ -36,7 +36,7 @@ ms.locfileid: "62864944"
   
          该列表仅包含前 1000 个表。 如果您的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (*) 通配符输入名称的任何部分以便显示要使用的表。  
   
-    -   **SQL 命令**：键入 SQL 命令，或单击“浏览”  从文本文件中加载 SQL 查询。  
+    -   **SQL 命令**：键入 SQL 命令，或单击 **“浏览”** 从文本文件中加载 SQL 查询。  
   
 6.  可以单击 **“预览”** ，查看最多 200 行 ODBC 源所提取的数据。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "62864944"
   
 9. 若要配置错误输出，请单击 **“错误输出”** 。  
   
-10. 单击“确定”  。  
+10. 单击“确定”。   
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC 源编辑器（“连接管理器”页）](../odbc-source-editor-connection-manager-page.md)   
  [ODBC 源编辑器（“列”页）](../odbc-source-editor-columns-page.md)   
  [ODBC 源编辑器（“错误输出”页）](../odbc-source-editor-error-output-page.md)  

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4117013b671ee9c5d5acf1fcde94ab382468dc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914475"
 ---
-# <a name="mssqlserver3176"></a>MSSQLSERVER_3176
+# <a name="mssqlserver_3176"></a>MSSQLSERVER_3176
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62914475"
 |符号名称|LDDB_FILE_CLAIM|  
 |消息正文|'%ls'(%d)和 '%ls'(%d)要求使用文件 '%ls'。 WITH MOVE 子句可用于重新定位一个或多个文件。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  尝试在多项操作中使用同一文件。  
   
 ### <a name="possible-causes"></a>可能的原因  
@@ -41,9 +41,9 @@ ms.locfileid: "62914475"
 ## <a name="user-action"></a>用户操作  
  将数据库文件还原到不同位置。 在 RESTORE 语句中，使用 WITH MOVE 子句移动各个文件。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，在“还原数据库选项”  对话框的“将数据库文件还原为”  网格中更改文件位置。  
   
-## <a name="see-also"></a>请参阅  
- [将数据库还原到新位置 (SQL Server)](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
- [文件还原到新位置&#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [将数据库还原到新位置 &#40;SQL Server&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
+ [将文件还原到 &#40;SQL Server 的新位置&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 例如：数据库的段落还原（完整恢复模式）| Microsoft Docs
+title: 示例：数据库的段落还原（完整恢复模式）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 157541fe3792ba082d9b1ec84c3ab45ca0617060
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875819"
 ---
-# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>例如：数据库的段落还原（完整恢复模式）
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>示例：数据库的段落还原（完整恢复模式）
   段落还原顺序将从主文件组及所有具有读写权限的辅助文件组开始，在文件组级别分阶段还原和恢复数据库。  
   
  在此示例中，灾难发生后，数据库 `adb` 被还原到新计算机。 该数据库使用完整恢复模式，因此，开始进行还原之前必须先获取数据库的结尾日志备份。 灾难发生之前，所有文件组均处于联机状态。 文件组 `B` 是只读的。 必须还原所有辅助文件组，但这些辅助文件组将按重要性顺序进行还原： `A` （最高）， `C`其次，最后为 `B`。 在此示例中，存在四个日志备份，其中包括结尾日志备份。  
@@ -95,7 +95,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 -   [示例：只读文件的联机还原（完整恢复模式）](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [联机还原 (SQL Server)](online-restore-sql-server.md)   
  [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   

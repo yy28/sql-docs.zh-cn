@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843553"
 ---
 # <a name="share-files"></a>共享文件
@@ -34,13 +34,13 @@ ms.locfileid: "62843553"
   
 1.  在解决方案资源管理器中，选择要存放共享文件的文件夹或项目。  
   
-2.  上**文件**菜单，依次指向**源代码管理**，然后单击**共享**。  
+2.  在 "**文件**" 菜单上，指向 "**源代码管理**"，然后单击 "**共享**"。  
   
-3.  在中**与共享**对话框中，浏览想要共享的项的目录列表，然后单击该项目。  
+3.  在 "**共享方式**" 对话框中，浏览要共享的项的目录列表，并单击该项。  
   
-4.  单击**共享**。  
+4.  单击 "**共享**"。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [源代码管理基础](../../2014/database-engine/source-control-basics.md)  
   
   

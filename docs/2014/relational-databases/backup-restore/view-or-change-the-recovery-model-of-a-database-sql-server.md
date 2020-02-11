@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875083"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>查看或更改数据库的恢复模式 (SQL Server)
@@ -36,13 +36,13 @@ ms.locfileid: "62875083"
   
      [安全性](#Security)  
   
--   **若要查看或更改恢复模式的数据库，使用：**  
+-   **若要查看或更改数据库的恢复模式，可使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进建议：** [在更改恢复模式之后](#FollowUp)  
+-   **跟进建议：** 在[更改恢复模式之后](#FollowUp)    
   
 -   [相关任务](#RelatedTasks)  
   
@@ -63,9 +63,9 @@ ms.locfileid: "62875083"
 > [!NOTE]  
 >  如果在大容量操作过程中切换到完整恢复模式，则大容量操作的日志记录将从最小日志记录更改为最大日志记录，反之亦然。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -74,15 +74,15 @@ ms.locfileid: "62875083"
   
 1.  连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
+2.  展开 "**数据库**"，根据数据库的不同，选择用户数据库，或展开 "**系统**数据库" 并选择一个系统数据库。  
   
-3.  右键单击该数据库，再单击“属性”  ，这将打开“数据库属性”  对话框。  
+3.  右键单击该数据库，再单击“属性”****，这将打开“数据库属性”**** 对话框。  
   
-4.  在 **“选择页”** 窗格中，单击 **“选项”** 。  
+4.  在 **“选择页”** 窗格中，单击 **“选项”**。  
   
 5.  当前恢复模式显示在 **“恢复模式”** 列表框中。  
   
-6.  也可以从列表中选择不同的模式来更改恢复模式。 可以选择“完整”  、“大容量日志”  或“简单”  。  
+6.  也可以从列表中选择不同的模式来更改恢复模式。 可以选择“完整”****、“大容量日志”**** 或“简单”****。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -117,7 +117,7 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 跟进建议：在更改恢复模式之后  
+##  <a name="FollowUp"></a>跟进建议：在更改恢复模式之后  
   
 -   **在完整恢复模式和大容量日志恢复模式之间切换后**  
   
@@ -154,17 +154,17 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [创建作业](../../ssms/agent/create-a-job.md)  
   
--   [启用或禁用作业](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [数据库维护计划](../maintenance-plans/maintenance-plans.md) （ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 联机丛书中）  
+-   [数据库维护计划](../maintenance-plans/maintenance-plans.md)（联机[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]丛书中）  
   
-## <a name="see-also"></a>请参阅  
- [恢复模式 (SQL Server)](recovery-models-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [恢复模式 &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [事务日志 (SQL Server)](../logs/the-transaction-log-sql-server.md)   
- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
- [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [恢复模式 (SQL Server)](recovery-models-sql-server.md)  
   
   

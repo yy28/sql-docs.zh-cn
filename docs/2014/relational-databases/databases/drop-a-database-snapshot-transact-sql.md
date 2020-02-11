@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1387b6321ace59ec8a0c13ed03444553f4adf85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871911"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>删除数据库快照 (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "62871911"
   
 ## <a name="security"></a>安全性  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  具有 DROP DATABASE 权限的任何用户都可以删除数据库快照。  
   
 ##  <a name="TsqlProcedure"></a> 如何删除数据库快照（使用 Transact-SQL）  
@@ -34,7 +34,7 @@ ms.locfileid: "62871911"
   
 1.  标识要删除的数据库快照。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看数据库快照。 有关详细信息，请参阅 [查看数据库快照 (SQL Server)](view-a-database-snapshot-sql-server.md)中查看数据库快照。  
   
-2.  执行 [DROP DATABASE](/sql/t-sql/statements/drop-database-audit-specification-transact-sql) 语句，并指定要删除的数据库快照的名称。 语法如下：  
+2.  执行 [DROP DATABASE](/sql/t-sql/statements/drop-database-audit-specification-transact-sql) 语句，并指定要删除的数据库快照的名称。 语法如下所示：  
   
      DROP DATABASE *database_snapshot_name* [ **,** ...*n* ]  
   
@@ -62,7 +62,7 @@ DROP DATABASE SalesSnapshot0600 ;
   
 
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DROP DATABASE (Transact SQL)](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)   
  [数据库快照 (SQL Server)](database-snapshots-sql-server.md)  
   

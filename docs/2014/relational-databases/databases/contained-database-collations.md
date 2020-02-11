@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872051"
 ---
 # <a name="contained-database-collations"></a>包含数据库的排序规则
-  许多属性会影响文本数据的排序顺序和相等语义，包括区分大小写、区分重音以及所用的基本语言。 对于这些特性，可通过选择数据的排序规则来表示给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关排序规则本身的更深入讨论，请参阅[排序规则和 Unicode 支持](../collations/collation-and-unicode-support.md)。  
+  许多属性会影响文本数据的排序顺序和相等语义，包括区分大小写、区分重音以及所用的基本语言。 对于这些特性，可通过选择数据的排序规则来表示给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关排序规则本身的更深入讨论，请参阅 [排序规则和 Unicode 支持](../collations/collation-and-unicode-support.md)。  
   
- 排序规则不仅适用于用户表中存储的数据，还适用于由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理的所有文本，包括元数据、临时对象、变量名称等。在这些内容的处理方面，包含数据库和非包含数据库采用不同的方式。 此更改不会影响很多用户，而且有助于提供独立而统一的实例。 但是，此更改也可能导致某些混淆，并可能使同时访问包含数据库和非包含数据库的会话出现问题。  
+ 排序规则不仅适用于用户表中存储的数据，还适用于由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]处理的所有文本，包括元数据、临时对象、变量名称等。在这些内容的处理方面，包含数据库和非包含数据库采用不同的方式。 此更改不会影响很多用户，而且有助于提供独立而统一的实例。 但是，此更改也可能导致某些混淆，并可能使同时访问包含数据库和非包含数据库的会话出现问题。  
   
  本主题阐明更改的内容，并考察这一更改可能导致问题的领域。  
   
@@ -58,7 +58,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- 这看起来比较简单，但会引发几个问题。 使用存储在临时表使用列的排序规则是依赖于在其中创建表的数据库，因为出现问题`tempdb`。 排序规则`tempdb`通常与该实例，不需要与数据库排序规则匹配的排序规则。  
+ 这看起来比较简单，但会引发几个问题。 由于列的排序规则依赖于在其中创建表的数据库，因此使用存储在中`tempdb`的临时表会出现问题。 的`tempdb`排序规则通常与实例的排序规则匹配，而不必与数据库排序规则匹配。  
   
 ### <a name="example-2"></a>示例 2  
  假设在排序规则为 **Latin1_General** 的实例上使用上述（中文）数据库：  
@@ -85,7 +85,8 @@ JOIN #T2
   
  无法解决等于运算中“Latin1_General_100_CI_AS_KS_WS_SC”与“Chinese_Simplified_Pinyin_100_CI_AS”之间的排序规则冲突。  
   
- 通过显式排列临时表可修复此问题。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 `DATABASE_DEFAULT` 子句提供了 `COLLATE` 关键字，使操作在一定程度上得到了简化。  
+ 通过显式排列临时表可修复此问题。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 `DATABASE_DEFAULT` 子句提供了 `COLLATE` 关键字，使操作在一定程度上得到了简化。  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
@@ -111,16 +112,17 @@ AS BEGIN
 END;  
 ```  
   
- 这是一个相当特殊的函数。 在区分大小写的排序规则@ireturn 子句中不能绑定到@I或 @ 确定。 在不区分大小写的 Latin1_General 排序规则中，@i 绑定到 @I，该函数返回 1。 但在不区分大小写的 Turkish 排序规则，@i将绑定到 @??，并且该函数返回 2。 如果在采用不同排序规则的实例之间移动数据库，则会给数据库造成严重的破坏。  
+ 这是一个相当特殊的函数。 在区分大小写的排序规则中@i ，return 子句中的不能绑定@I到或 @??。 在不区分大小写的 Latin1_General 排序规则中，@i 绑定到 @I，该函数返回 1。 但在不区分大小写的土耳其语@i排序规则中，绑定到 @??, 并且函数返回2。 如果在采用不同排序规则的实例之间移动数据库，则会给数据库造成严重的破坏。  
   
 ## <a name="contained-databases"></a>包含的数据库  
  由于包含数据库的设计目标是让自身实现独立，因此必须切断它们对实例和 `tempdb` 排序规则的依赖。 为此，包含数据库引入了目录排序规则的概念。 目录排序规则适用于系统元数据和临时对象。 下面将详细介绍这一概念。  
   
  如果某个包含数据库的目录排序规则是 **Latin1_General_100_CI_AS_WS_KS_SC**。 则所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的所有包含数据库都采用此排序规则，而且不能更改。  
   
- 数据库排序规则将得到保留，但只能用作用户数据的默认排序规则。 默认情况下，数据库排序规则等同于模型的数据库排序规则，但可以由用户通过更改`CREATE`或`ALTER DATABASE`命令作为非包含数据库。  
+ 数据库排序规则将得到保留，但只能用作用户数据的默认排序规则。 默认情况下，数据库排序规则等于 model 数据库排序规则，但用户可通过`CREATE`或`ALTER DATABASE`命令更改为非包含数据库。  
   
- `CATALOG_DEFAULT` 子句中提供了一个新关键字 `COLLATE`。 此关键字用作包含数据库和非包含数据库中当前元数据排序规则的快捷方式。 换言之，在非包含数据库中，`CATALOG_DEFAULT` 将返回当前的数据库排序规则，因为元数据是按数据库排序规则排列的。 在包含数据库中，这两个值可能是不同的，因为用户可以更改数据库排序规则，以使其不同于目录排序规则。  
+ 
+  `CATALOG_DEFAULT` 子句中提供了一个新关键字 `COLLATE`。 此关键字用作包含数据库和非包含数据库中当前元数据排序规则的快捷方式。 换言之，在非包含数据库中，`CATALOG_DEFAULT` 将返回当前的数据库排序规则，因为元数据是按数据库排序规则排列的。 在包含数据库中，这两个值可能是不同的，因为用户可以更改数据库排序规则，以使其不同于目录排序规则。  
   
  下表总结了非包含数据库和包含数据库中各个对象的行为：  
   
@@ -235,7 +237,7 @@ GO
  对象名“#A”无效。  
   
 ### <a name="example-3"></a>示例 3  
- 下面的示例演示引用找到多个原本不同的匹配项的情况。 首先，我们开始`tempdb`（具有相同的区分大小写排序规则与实例） 并执行以下语句。  
+ 下面的示例演示引用找到多个原本不同的匹配项的情况。 首先，我们开始`tempdb` （与实例具有相同的区分大小写的排序规则）并执行以下语句。  
   
 ```  
 USE tempdb;  
@@ -278,7 +280,7 @@ GO
 ## <a name="conclusion"></a>结束语  
  与非包含数据库相比，包含数据库的排序规则行为略有不同。 此行为通常是有益的，因为它可以提供独立而简单的实例。 某些用户可能会遇到问题，特别是当会话同时访问包含数据库和非包含数据库时。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [包含的数据库](contained-databases.md)  
   
   

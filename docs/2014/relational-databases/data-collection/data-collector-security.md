@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873612"
 ---
 # <a name="data-collector-security"></a>数据收集器的安全性
@@ -32,7 +32,7 @@ ms.locfileid: "62873612"
 ## <a name="general-security"></a>一般安全性  
  数据收集器的安装应依照指定用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的明文标准进行。  
   
-### <a name="network-security"></a>网络安全性  
+### <a name="network-security"></a>网络安全  
  可以在目标实例、与配置服务器关联的关系实例、正在运行的收集组以及承载管理数据仓库的服务器之间传递敏感信息。  
   
  为保护通过网络传输的所有数据，实施了标准安全机制，如针对 [!INCLUDE[tsql](../../includes/tsql-md.md)]的协议加密。  
@@ -48,13 +48,13 @@ ms.locfileid: "62873612"
   
  这些角色存储在 msdb 数据库中。 默认情况下，任何用户都不是这些数据库角色的成员。 这些角色的用户成员资格必须显式授予。  
   
- 成员用户的`sysadmin`固定的服务器角色具有完全访问权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理对象和数据收集器视图。 但是，需要将这些用户显式添加到数据收集器角色中。  
+ 作为`sysadmin`固定服务器角色成员的用户具有对[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理对象和数据收集器视图的完全访问权限。 但是，需要将这些用户显式添加到数据收集器角色中。  
   
 > [!IMPORTANT]  
 >  db_ssisadmin 角色和 dc_admin 角色的成员可以将其特权提升为 sysadmin。 因为这些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 sysadmin 安全上下文可以执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包，所以可以实现特权提升。 若要在运行维护计划、数据收集组和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时防止此权限提升，请将运行包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业配置为使用具有有限权限的代理帐户，或只将 sysadmin 成员添加到 db_ssisadmin 和 dc_admin 角色。  
   
-### <a name="dcadmin-role"></a>dc_admin 角色  
- 分配给用户`dc_admin`角色具有完全管理员访问权限 （创建、 读取、 更新和删除） 数据收集器配置服务器实例上。 此角色的成员可执行以下操作：  
+### <a name="dc_admin-role"></a>dc_admin 角色  
+ 分配到该`dc_admin`角色的用户对服务器实例上的数据收集器配置具有完全管理员访问权限（创建、读取、更新和删除）。 此角色的成员可执行以下操作：  
   
 -   设置收集器级别的属性。  
   
@@ -69,11 +69,11 @@ ms.locfileid: "62873612"
 -   **SQLAgentUserRole**。 创建计划和运行作业时需要此角色。  
   
     > [!NOTE]  
-    >  创建数据收集器必须授予访问权限的代理`dc_admin`来创建和使用任何需要代理的作业步骤中。  
+    >  为数据收集器创建的代理必须授予对`dc_admin`的访问权限，才能在需要代理的任何作业步骤中创建和使用这些代理。  
   
--   **dc_operator**。 成员`dc_admin`继承授予的权限**dc_operator**。  
+-   **dc_operator**。 的`dc_admin`成员继承赋予**dc_operator**的权限。  
   
-### <a name="dcoperator-role"></a>dc_operator 角色  
+### <a name="dc_operator-role"></a>dc_operator 角色  
  **dc_operator** 角色的成员拥有读取和更新访问权限。 此角色支持与运行和配置收集组相关的操作任务。 此角色的成员可执行以下操作：  
   
 -   启动或停止收集组。  
@@ -94,7 +94,7 @@ ms.locfileid: "62873612"
   
  有关详细信息，请参阅 [Integration Services Roles（SSIS 服务）](../../integration-services/security/integration-services-roles-ssis-service.md)。  
   
-### <a name="dcproxy-role"></a>dc_proxy 角色  
+### <a name="dc_proxy-role"></a>dc_proxy 角色  
  **dc_proxy** 角色的成员对数据收集器收集组和收集器级别的属性拥有读取访问权限。 此角色的成员还可以执行它们所拥有的作业和创建以现有代理帐户运行的作业步骤。  
   
  此角色的成员可执行以下操作：  
@@ -124,9 +124,9 @@ ms.locfileid: "62873612"
   
  这些角色存储在 msdb 数据库中。 默认情况下，任何用户都不是这些数据库角色的成员。 这些角色的用户成员资格必须显式授予。  
   
- 成员用户的`sysadmin`固定的服务器角色具有对数据收集器视图的完全访问权限。 但是，需要将这些用户显式添加到数据库角色以执行其他操作。  
+ 作为`sysadmin`固定服务器角色成员的用户拥有对数据收集器视图的完全访问权限。 但是，需要将这些用户显式添加到数据库角色以执行其他操作。  
   
-### <a name="mdwadmin-role"></a>mdw_admin 角色  
+### <a name="mdw_admin-role"></a>mdw_admin 角色  
  **mdw_admin** 角色的成员对管理数据仓库拥有读取、写入、更新和删除访问权限。  
   
  此角色的成员可执行以下操作：  
@@ -134,17 +134,17 @@ ms.locfileid: "62873612"
 -   在需要时更改管理数据仓库的架构（例如在安装新的收集类型时添加新表）。  
   
     > [!NOTE]  
-    >  架构更改时，用户还必须是属于`dc_admin`角色来安装新的收集器类型，因为此操作需要拥有更新 msdb 中的数据收集器配置权限。  
+    >  如果架构发生更改，用户还必须是`dc_admin`角色的成员才能安装新的收集器类型，因为此操作需要在 msdb 中更新数据收集器配置的权限。  
   
 -   对管理数据仓库运行维护作业（例如存档或清除）。  
   
-### <a name="mdwwriter-role"></a>mdw_writer 角色  
+### <a name="mdw_writer-role"></a>mdw_writer 角色  
  **mdw_writer** 角色的成员可向管理数据仓库上载和写入数据。 将数据存储到管理数据仓库中的任何数据收集器都必须是此角色的成员。  
   
-### <a name="mdwreader-role"></a>mdw_reader 角色  
+### <a name="mdw_reader-role"></a>mdw_reader 角色  
  **mdw_reader** 角色的成员对管理数据仓库拥有读取访问权限。 由于此角色的用途在于通过提供对历史数据的访问来支持故障排除，因此该角色的成员无法查看管理数据仓库架构的其他元素。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

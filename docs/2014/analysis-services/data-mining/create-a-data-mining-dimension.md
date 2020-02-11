@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b642d7a0bdf552d8944602761aa76eec1cf35306
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085501"
 ---
 # <a name="create-a-data-mining-dimension"></a>创建数据挖掘维度
@@ -28,7 +28,7 @@ ms.locfileid: "66085501"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的数据挖掘设计器中，选择 **“挖掘结构”** 选项卡或 **“挖掘模型”** 选项卡。  
   
-2.  从 **“挖掘模型”** 菜单中，选择 **“创建数据挖掘维度”** 。  
+2.  从 **“挖掘模型”** 菜单中，选择 **“创建数据挖掘维度”**。  
   
      将打开 **“创建数据挖掘维度”** 对话框。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "66085501"
   
 4.  在 **“维度名称”** 框中，输入新的数据挖掘维度的名称。  
   
-5.  如果要创建包含新的数据挖掘维度的多维数据集，则选择 **“创建多维数据集”** 。 选择 **“创建多维数据集”** 之后，可以输入多维数据集的新名称。  
+5.  如果要创建包含新的数据挖掘维度的多维数据集，则选择 **“创建多维数据集”**。 选择 **“创建多维数据集”** 之后，可以输入多维数据集的新名称。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
-     这样便可创建数据挖掘维度并将其添加到解决方案资源管理器中的 **“维度”** 文件夹。 如果选择了 **“创建多维数据集”** ，则也可创建新的多维数据集并将其添加到 **“多维数据集”** 文件夹。  
+     这样便可创建数据挖掘维度并将其添加到解决方案资源管理器中的 **“维度”** 文件夹。 如果选择了 **“创建多维数据集”**，则也可创建新的多维数据集并将其添加到 **“多维数据集”** 文件夹。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘结构任务和操作指南](mining-structure-tasks-and-how-tos.md)  
   
   

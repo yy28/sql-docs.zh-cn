@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4e18ce61356947754423cfb878cf47f90534b40f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869217"
 ---
-# <a name="mssqlserver233"></a>MSSQLSERVER_233
+# <a name="mssqlserver_233"></a>MSSQLSERVER_233
     
 ## <a name="details"></a>详细信息  
   
@@ -32,15 +32,15 @@ ms.locfileid: "62869217"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称||  
-|消息正文|已成功与服务器建立连接，但是在登录过程中发生错误。 (提供程序：共享内存提供程序，错误: 0 - 在管道的另一端没有进程。) (Microsoft SQL Server，错误: 233)|  
+|消息正文|已成功与服务器建立连接，但是在登录过程中发生错误。 (提供程序: 共享内存提供程序，错误: 0 - 在管道的另一端没有进程。) (Microsoft SQL Server，错误: 233)|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端无法连接到服务器。 发生此错误的原因可能是服务器未配置为接受远程连接。  
   
 ## <a name="user-action"></a>用户操作  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器工具使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接受远程连接。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [网络协议和网络库](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [客户端网络配置](../../database-engine/configure-windows/client-network-configuration.md)   
  [配置客户端协议](../../database-engine/configure-windows/configure-client-protocols.md)   

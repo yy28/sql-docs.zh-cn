@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082737"
 ---
 # <a name="training-and-testing-data-sets"></a>定型数据集和测试数据集
-  将数据分为定型集和测试集是评估数据挖掘模型的一个重要部分。 将数据集分为定型集和测试集时，通常大部分数据用于定型，小部分数据用于测试。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会随机地进行数据抽样，以帮助确保测试集和定型集相似。 通过使用相似的数据来进行定型和测试，可以最小化数据差异所造成的影响并更好地了解模型的特征。  
+  将数据分为定型集和测试集是评估数据挖掘模型的一个重要部分。 将数据集分为定型集和测试集时，通常大部分数据用于定型，小部分数据用于测试。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]随机采样数据以帮助确保测试集和定型集相似。 通过使用相似的数据来进行定型和测试，可以最小化数据差异所造成的影响并更好地了解模型的特征。  
   
  使用定型集处理模型后，可通过对测试集进行预测来测试该模型。 由于测试集内的数据已经包含要预测属性的已知值，因此可以方便地确定模型的预测准确性。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66082737"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>修改结构属性以创建测试数据集  
  如果您在创建和处理挖掘结构之后又决定取消一个测试数据集，可以修改挖掘结构的属性。 若要更改数据的分区方式，请编辑下列属性：  
   
-|属性|Description|  
+|properties|说明|  
 |--------------|-----------------|  
 |`HoldoutMaxCases`|指定要包括在测试集内的最大事例数。|  
 |`HoldoutMaxPercent`|指定测试集内要包括的事例数在整个数据集中所占的百分比。 如果没有数据集，则将指定 0。|  
@@ -62,11 +62,11 @@ ms.locfileid: "66082737"
 ### <a name="specifying-holdout-programmatically"></a>以编程方式指定维持  
  您可以使用 DMX 语句、AMO 或 XML DDL 来定义挖掘结构的测试数据集和定型数据集。 ALTER MINING STRUCTURE 语句不支持使用维持参数。  
   
--   **DMX** 在数据挖掘扩展插件 (DMX) 语言中，CREATE MINING STRUCTURE 语句已扩展为包括 WITH HOLDOUT 子句。  
+-   **Dmx**在数据挖掘扩展插件（DMX）语言中，CREATE 挖掘 STRUCTURE 语句已扩展为包含 WITH 维持子句。  
   
--   **ASSL** 使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 可以创建新的挖掘结构或向现有挖掘结构添加测试数据集。  
+-   **ASSL**您可以使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]脚本语言（ASSL）创建新的挖掘结构，或向现有挖掘结构添加测试数据集。  
   
--   **AMO** 还可以使用 AMO 来查看和修改维持数据集。  
+-   **AMO**还可以使用 AMO 查看和修改维持数据集。  
   
  可以通过查询数据挖掘架构行集来查看有关现有挖掘结构中维持数据集的信息。 可以通过发出 DISCOVER ROWSET 调用或者使用 DMX 查询，来查看此信息。  
   
@@ -91,7 +91,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   不能从时序模型删除数据；因此不能将源数据分为定型集和测试集。 如果开始创建挖掘结构和模型并选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法，将禁用创建维持数据集的选项。 如果挖掘结构的事例级别或嵌套表级别中包含 KEY TIME 列，也将禁止使用维持数据。  
   
--   可能因为疏忽这样配置维持数据集：将整个数据集用于测试，没有为定型保留数据。 但是，如果这样做， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会引发错误，以便您可以解决此问题。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也会向您发出警告。  
+-   可能因为疏忽这样配置维持数据集：将整个数据集用于测试，没有为定型保留数据。 但是，如果这样做， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会引发错误，以便您可以解决此问题。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]如果有超过50% 的数据进行测试，则也会向您发出警告。  
   
 -   在多数情况下，默认的维持值 (30) 会在定型数据和测试数据之间提供良好的平衡。 不能通过任何一种简单的方法来确定数据集应当多大才能提供足够的定型，或者如何可使定型集稀疏并且仍可以避免过度拟合。 不过，在生成模型后，可以使用交叉验证来评估特定模型的数据集。  
   
@@ -101,16 +101,16 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 |主题|链接|  
 |------------|-----------|  
-|说明模型的筛选器如何与定型数据集和测试数据集进行交互。|[挖掘模型的筛选器（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)|  
-|说明定型数据和测试数据的使用如何影响交叉验证。|[交叉验证（Analysis Services - 数据挖掘）](cross-validation-analysis-services-data-mining.md)|  
-|提供用于处理挖掘结构中定型集和测试集的编程接口的相关信息。|[AMO 概念和对象模型](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [MiningStructure 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
-|提供用于创建维持集的 DMX 语法。|[CREATE MINING STRUCTURE (DMX)](/sql/dmx/create-mining-structure-dmx)|  
-|在定型集和测试集中检索有关事例的信息。|[数据挖掘架构行集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [查询数据挖掘架构行集&#40;Analysis Services-数据挖掘&#41;](data-mining-schema-rowsets-ssas.md)|  
+|说明模型的筛选器如何与定型数据集和测试数据集进行交互。|[挖掘模型的筛选器 &#40;Analysis Services 数据挖掘&#41;](mining-models-analysis-services-data-mining.md)|  
+|说明定型数据和测试数据的使用如何影响交叉验证。|[交叉验证 &#40;Analysis Services 数据挖掘&#41;](cross-validation-analysis-services-data-mining.md)|  
+|提供用于处理挖掘结构中定型集和测试集的编程接口的相关信息。|[AMO 概念和对象模型](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [MiningStructure 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|提供用于创建维持集的 DMX 语法。|[创建挖掘结构 &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
+|在定型集和测试集中检索有关事例的信息。|[Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [查询数据挖掘架构行集 &#40;Analysis Services 数据挖掘&#41;](data-mining-schema-rowsets-ssas.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘工具](data-mining-tools.md)   
  [数据挖掘概念](data-mining-concepts.md)   
  [数据挖掘解决方案](data-mining-solutions.md)   
- [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)  
+ [测试和验证 &#40;数据挖掘&#41;](testing-and-validation-data-mining.md)  
   
   

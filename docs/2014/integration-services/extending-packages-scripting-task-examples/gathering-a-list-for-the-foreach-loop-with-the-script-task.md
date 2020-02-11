@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d06a2ec19b4a84dcd0d69fb70389d68974813be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894976"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>使用脚本任务为 Foreach 循环收集列表
@@ -28,11 +28,12 @@ ms.locfileid: "62894976"
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  下面的示例使用 `System.IO` 命名空间的方法，收集计算机中 Excel 工作簿的一个列表，其中的工作簿存在天数大于或小于用户在变量中指定的天数。 它会以递归方式搜索驱动器 C 的各目录中扩展名为 .xls 的文件，并检查每个文件的最新修改日期，以确定该文件是否属于此列表。 它会将符合要求的文件添加到 `ArrayList` 中，并将 `ArrayList` 保存到一个变量中，以供以后在 Foreach 循环容器中使用。 Foreach 循环容器配置为使用变量枚举器的 Foreach。  
   
 > [!NOTE]  
->  用于变量枚举器的 Foreach 的变量必须为 `Object` 类型。 放入该变量中的对象必须实现以下接口之一：`System.Collections.IEnumerable`、`System.Runtime.InteropServices.ComTypes.IEnumVARIANT`、`System.ComponentModel IListSource` 或 `Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost`。 通常会使用 `Array` 或 `ArrayList`。 `ArrayList` 需要引用 `Imports` 命名空间，因此需要对该命名空间的 `System.Collections` 语句。  
+>  用于变量枚举器的 Foreach 的变量必须为 `Object` 类型。 放入该变量中的对象必须实现以下接口之一：`System.Collections.IEnumerable`、`System.Runtime.InteropServices.ComTypes.IEnumVARIANT`、`System.ComponentModel IListSource` 或 `Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost`。 通常会使用 `Array` 或 `ArrayList`。 
+  `ArrayList` 需要引用 `Imports` 命名空间，因此需要对该命名空间的 `System.Collections` 语句。  
   
  您可以对 `FileAge` 包变量使用不同的正值和负值来试用此任务。 例如，可以输入 5 以搜索最近 5 天内创建的文件，或者输入 -3 以搜索 3 天以前创建的文件。 对于要搜索较多文件夹的驱动器，此任务可能会花费一两分钟时间。  
   
@@ -245,9 +246,9 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Foreach 循环容器](../control-flow/foreach-loop-container.md)   
  [配置 Foreach 循环容器](../configure-a-foreach-loop-container.md)  
   

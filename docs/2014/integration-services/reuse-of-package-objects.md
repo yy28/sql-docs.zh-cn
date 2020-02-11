@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab572e7c0793f9d3a673698bf54a0109ad42551c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889618"
 ---
 # <a name="reuse-of-package-objects"></a>重用包对象
@@ -43,6 +43,6 @@ ms.locfileid: "62889618"
   
 -   [复制项目项](../../2014/integration-services/copy-project-items.md)  
   
--   [将包另存为包模板](../../2014/integration-services/save-a-package-as-a-package-template.md)  
+-   [将包保存为包模板](../../2014/integration-services/save-a-package-as-a-package-template.md)  
   
   

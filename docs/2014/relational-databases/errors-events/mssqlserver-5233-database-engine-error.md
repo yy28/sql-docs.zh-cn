@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a54c45746ec786461135fb3f2a50f4753dbe2df5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867901"
 ---
-# <a name="mssqlserver5233"></a>MSSQLSERVER_5233
+# <a name="mssqlserver_5233"></a>MSSQLSERVER_5233
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62867901"
 |符号名称|DBCC4_INCORRECT_VALUE_IN_PAGE_HEADER_NO_METADATA|  
 |消息正文|表错误: 分配单元 ID A_ID，页 P_ID。 测试 (TEST) 失败。 值是 VAL1 和 VAL2。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  由于页 *P_ID* 的页眉中有损坏，因此该页未通过审核。 TEST 中的字符串提供了发生失败的实际测试。  
   
 ### <a name="look-for-hardware-failure"></a>查找硬件故障  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856506"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>查看存储过程的定义
@@ -28,13 +28,13 @@ ms.locfileid: "62856506"
   
 -   **开始之前：** [安全性](#Security)  
   
--   **若要查看过程的定义使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-    要查看过程的定义，请使用：[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  系统存储过程：`sp_helptext`  
  要求 **公共** 角色具有成员身份。 系统对象定义对所有用户可见。 用户对象的定义对于对象所有者或具有下列任一权限的被授权者可见：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。  
   
@@ -58,9 +58,9 @@ ms.locfileid: "62856506"
   
 2.  展开 **“数据库”** 、过程所属的数据库以及 **“可编程性”** 。  
   
-3.  展开**存储过程**，右键单击该过程，然后单击**存储过程脚本为**，然后单击以下项之一：**创建到**，**更改为**，或**删除并创建到**。  
+3.  展开“存储过程”，右键单击该过程，再单击“编写存储过程脚本为”，然后单击下列选项之一：   “CREATE 到”、“ALTER 到”或“DROP 和 CREATE 到”。     
   
-4.  选择 **“新建查询编辑器窗口”** 。 这将显示过程定义。  
+4.  选择“新建查询编辑器窗口”  。 这将显示过程定义。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查询编辑器中查看过程的定义**  
@@ -106,7 +106,7 @@ ms.locfileid: "62856506"
     WHERE object_id = (OBJECT_ID(N'AdventureWorks2012.dbo.uspLogError'));  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建存储过程](create-a-stored-procedure.md)   
  [修改存储过程](modify-a-stored-procedure.md)   
  [删除存储过程](delete-a-stored-procedure.md)   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bebeec974bff46333662708952d0a8b6fa841a87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835216"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>用于实例创建的 SQL Server 连接
@@ -29,7 +29,7 @@ ms.locfileid: "62835216"
  键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的服务器的名称。  
   
  **身份验证**  
- 选择下列选项之一：  
+ 选择以下方案之一：  
   
 -   **Windows 身份验证**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62835216"
   
      有关“高级连接属性”对话框的信息，请参阅 [高级连接属性](advanced-connection-properties.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建 SQL Server 更改数据库](create-the-sql-server-change-database.md)   
  [针对 CDC 设计器的 SQL Server 连接所需权限](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   

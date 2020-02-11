@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c59f74a3e0584ec70eea4832936d7dc08cc74087
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868955"
 ---
-# <a name="mssqlserver21898"></a>MSSQLSERVER_21898
+# <a name="mssqlserver_21898"></a>MSSQLSERVER_21898
     
 ## <a name="details"></a>详细信息  
   
@@ -32,8 +32,8 @@ ms.locfileid: "62868955"
 |符号名称|SQLErrorNum21898|  
 |消息正文|发布服务器“%s”使用的是分发数据库“%s”，而不是“%s”（后者是承载发布数据库“%s”所需的）。 请在分发服务器“%s”上运行 `sp_changedistpublisher`，以将发布服务器使用的分发数据库更改为“%s”。|  
   
-## <a name="explanation"></a>解释  
- `sp_validate_redirected_publisher` 验证已使用新的发布服务器的分发数据库使用与原始发布服务器的分发数据库相同的本地分发服务器上查询 msdb.dbo.MSdistpublishers。 当这些数据库不同时将返回此错误，同时使发布服务器不适合作为发布服务器数据库的主机。  
+## <a name="explanation"></a>说明  
+ `sp_validate_redirected_publisher`在本地分发服务器上， 查询 msdb.dbo.MSdistpublishers，以验证新的发布服务器使用的分发数据库与原始发布服务器使用的分发数据库相同。 当这些数据库不同时将返回此错误，同时使发布服务器不适合作为发布服务器数据库的主机。  
   
 ## <a name="user-action"></a>用户操作  
  执行存储过程 `sp_changedistpublisher`，以将新发布服务器的分发数据库更改为由原始发布服务器使用的分发数据库。  

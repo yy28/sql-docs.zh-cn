@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90269bc6fab7cd496561b9dfe5cae6bf0ff36bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875042"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>在现有文件上还原文件和文件组 (SQL Server)
@@ -50,13 +50,13 @@ ms.locfileid: "62875042"
   
 -   不允许在显式或隐式事务中使用 RESTORE。  
   
--   在完整恢复模式或大容量日志恢复模式下，必须先备份活动事务日志（称为日志尾部），然后才能还原文件。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)中还原文件和文件组。  
+-   在完整恢复模式或大容量日志恢复模式下，必须先备份活动事务日志（称为日志尾部），然后才能还原文件。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)数据库还原到一个新位置并且可以选择重命名该数据库。  
   
 -   若要还原已加密的数据库，您必须有权访问用于对数据库进行加密的证书或非对称密钥。 如果没有证书或非对称密钥，数据库将无法还原。 因此，只要需要该备份，就必须保留用于对数据库加密密钥进行加密的证书。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。  
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
@@ -89,15 +89,15 @@ ms.locfileid: "62875042"
     |-----------------|------------|  
     |**还原**|选中的复选框指示要还原的备份集。|  
     |**名称**|备份集的名称。|  
-    |**文件类型**|指定备份中的数据类型：**数据**，**日志**，或**Filestream 数据**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
-    |**类型**|执行的备份类型：“完整”、“差异”或“事务日志”    。|  
+    |**文件类型**|指定备份中数据的类型： **“数据”** 、 **“日志”** 或 **“Filestream 数据”** 。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
+    |类型 |执行的备份类型有： **“完整”** 、 **“差异”** 或 **“事务日志”** 。|  
     |**Server**|执行备份操作的数据库引擎实例的名称。|  
     |**文件逻辑名称**|文件的逻辑名称。|  
-    |**“数据库”**|备份操作中涉及的数据库的名称。|  
+    |**Database**|备份操作中涉及的数据库的名称。|  
     |**开始日期**|备份操作开始的日期和时间，按客户端的区域设置显示。|  
     |**完成日期**|备份操作完成的日期和时间，按客户端的区域设置显示。|  
     |**大小**|备份集的大小（字节）。|  
-    |**用户名**|执行备份操作的用户的名称。|  
+    |**用户名**|{1}执行备份操作的用户的名称。{2}|  
   
 6.  在 **“选择页”** 窗格中，单击 **“选项”** 页。  
   
@@ -164,8 +164,8 @@ RESTORE LOG MyNwind
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [还原数据库备份&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
+## <a name="see-also"></a>另请参阅  
+ [还原数据库备份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [还原文件和文件组 (SQL Server)](restore-files-and-filegroups-sql-server.md)   
  [通过备份和还原来复制数据库](../databases/copy-databases-with-backup-and-restore.md)  

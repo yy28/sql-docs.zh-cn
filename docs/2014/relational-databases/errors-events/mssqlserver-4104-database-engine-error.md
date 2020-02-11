@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd364a08781c00eaaf42eb0b1c15e7e5011ed432
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867994"
 ---
-# <a name="mssqlserver4104"></a>MSSQLSERVER_4104
+# <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62867994"
 |符号名称|ALG_MULTI_ID_BAD|  
 |消息正文|无法绑定由多个部分组成的标识符 "%.*ls"。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中实体的名称称为其“标识符”  。 在引用实体（例如在查询中指定列名和表名）时可以使用标识符。 由多个部分组成的标识符包含一个或多个作为标识符前缀的限定符。 例如，表标识符可能以诸如包含表的数据库和架构的名称之类的限定符作为前缀，而列标识符可能以诸如表名称或表别名之类的限定符作为前缀。  
   
  错误 4104 表示无法将指定的由多个部分组成的标识符映射到现有实体。 在以下情况下可能会返回此错误：  
@@ -79,7 +79,7 @@ ms.locfileid: "62867994"
     SELECT a.c2 FROM a, b;   
     ```  
   
-     假定 UDT `myudt2` 不具有名为 `c2` 的属性，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将无法确定标识符 `a.c2` 是指表 `a` 中的列 `c2`，还是指表 `b` 中的列 `a`、属性 `c2`。  
+     假定 UDT `myudt2` 不具有名为 `c2` 的属性，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将无法确定标识符 `a.c2` 是指表 `c2` 中的列 `a`，还是指表 `a` 中的列 `c2`、属性 `b`。  
   
 ## <a name="user-action"></a>用户操作  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62867994"
   
 -   为标识符使用明确定义的唯一名称。 这样做可以使您的代码更易于理解和维护，并可以将不明确引用多个实体的风险降至最低。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSSQLSERVER_107](mssqlserver-107-database-engine-error.md)   
  [数据库标识符](../databases/database-identifiers.md)  
   

@@ -13,19 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 922454c7bc04a211d6f54754d48331fdfdffeb07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894966"
 ---
 # <a name="using-variables-in-the-script-component"></a>在脚本组件中使用变量
   变量存储包及其容器、任务和事件处理程序在运行时可以使用的值。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services-ssis-variables.md)。  
   
- 您可以使现有变量可用于只读或读/写访问权限由自定义脚本输入以逗号分隔列表中的变量`ReadOnlyVariables`和`ReadWriteVariables`字段中**脚本**页**脚本转换编辑器**。 请注意，变量名称区分大小写。 使用 `Value` 属性可以从单个变量读取数据或向其中写入数据。 当脚本在运行时操作变量时，脚本组件将在后台处理任何所需的锁定。  
+ 您可以`ReadOnlyVariables`通过在 "**脚本转换编辑器**" 的 "**脚本**" 页上的 "和" 字段中输入逗号分隔的变量列表， `ReadWriteVariables`使现有变量可用于只读或读/写访问。 请注意，变量名称区分大小写。 使用 `Value` 属性可以从单个变量读取数据或向其中写入数据。 当脚本在运行时操作变量时，脚本组件将在后台处理任何所需的锁定。  
   
 > [!IMPORTANT]  
->  `ReadWriteVariables` 集合仅供在 `PostExecute` 方法中尽可能优化性能并降低锁定冲突的风险。 因此不能在处理每行数据时直接递增包变量的值， 而应递增本地变量的值，并在所有数据处理完毕后，在 `PostExecute` 方法中将包变量的值设置为本地变量的值。 还可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> 属性解决此限制问题，本主题稍后会进行介绍。 但是，在处理每一行时直接写包变量将会对性能产生负面影响，并增加锁定冲突的风险。  
+>  
+  `ReadWriteVariables` 集合仅供在 `PostExecute` 方法中尽可能优化性能并降低锁定冲突的风险。 因此不能在处理每行数据时直接递增包变量的值， 而应递增本地变量的值，并在所有数据处理完毕后，在 `PostExecute` 方法中将包变量的值设置为本地变量的值。 还可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> 属性解决此限制问题，本主题稍后会进行介绍。 但是，在处理每一行时直接写包变量将会对性能产生负面影响，并增加锁定冲突的风险。  
   
  有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)和[脚本转换编辑器（“脚本”页）](../../script-transformation-editor-script-page.md)   。  
   
@@ -35,9 +36,9 @@ ms.locfileid: "62894966"
   
  还可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> 属性（通过调用 `Me.VariableDispenser` 进行访问）在脚本组件中使用变量。 在这种情况下，使用的不是变量的已命名类型化取值函数属性，而是直接访问这些变量。 使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> 时，您必须在您自己的代码中处理锁定语义和变量值的数据类型转换。 如果要使用在设计时不可用，而是以编程方式在运行时创建的变量，则必须使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> 属性，而不是已命名的类型化取值函数属性。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 变量](../../integration-services-ssis-variables.md)   
  [在包中使用变量](../../use-variables-in-packages.md)  
   

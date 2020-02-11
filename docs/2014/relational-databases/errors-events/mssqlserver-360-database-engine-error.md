@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bc46a5cf1252df209243623a63ec9bdc68e71873
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867952"
 ---
-# <a name="mssqlserver360"></a>MSSQLSERVER_360
+# <a name="mssqlserver_360"></a>MSSQLSERVER_360
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62867952"
 |符号名称|DML_UPDATE_SPARSE_AND_COLSET|  
 |消息正文|INSERT、UPDATE 或 MERGE 语句的目标列列表不能同时包含稀疏列和包含稀疏列的列集。 请重写该语句以包括稀疏列或列集，但不能同时包括这两者。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  列集是一种非类型化的 XML 表示形式，它将表的某些列组合成为结构化的输出。 由于尝试修改列集和此列集中包含的某个列，导致这二者引用相同的列。  
   
 ## <a name="user-action"></a>用户操作  

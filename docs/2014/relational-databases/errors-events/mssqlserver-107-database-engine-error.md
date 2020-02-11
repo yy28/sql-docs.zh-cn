@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bea6901e999f1bb236e94e220c3cfeac53119e16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870553"
 ---
-# <a name="mssqlserver107"></a>MSSQLSERVER_107
+# <a name="mssqlserver_107"></a>MSSQLSERVER_107
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62870553"
 |符号名称|P_NOCORRMATCH|  
 |消息正文|列前缀 '%.*ls' 与查询中使用的表名或别名不匹配。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  用列前缀错误地对该查询的 Select 列表中包含的星号 (*) 进行了限定。 在以下情况下可能会返回此错误：  
   
 -   列前缀与查询中使用的表名或别名不对应。 例如，下面的语句使用别名 (`T1`) 作为列前缀，但是该别名未在 FROM 子句中定义。  
@@ -62,7 +62,7 @@ SELECT T1.* FROM dbo.ErrorLog AS T1;
 SELECT ErrorLog.* FROM dbo.ErrorLog;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSSQLSERVER_4104](mssqlserver-4104-database-engine-error.md)  
   
   

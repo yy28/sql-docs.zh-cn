@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bfb82476d42bf471853a66b3c93736952d876071
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897327"
 ---
 # <a name="round-ssis-expression"></a>ROUND（SSIS 表达式）
@@ -34,7 +34,7 @@ ROUND(numeric_expression,length)
  *numeric_expression*  
  是有效的数值类型的表达式。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
   
- *长度*  
+ *length*  
  是整数表达式。 它是 *numeric_expression* 的舍入精度。  
   
 ## <a name="result-types"></a>结果类型  
@@ -53,7 +53,7 @@ ROUND(137.1574,3)
 ROUND(137.1575,3)  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [函数（SSIS 表达式）](functions-ssis-expression.md)  
   
   
