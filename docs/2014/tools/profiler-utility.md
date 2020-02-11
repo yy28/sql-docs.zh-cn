@@ -1,5 +1,5 @@
 ---
-title: Profiler 实用工具 |Microsoft Docs
+title: 探查器实用工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,17 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211097"
 ---
 # <a name="profiler-utility"></a>Profiler 实用工具
-  **Profiler** 实用工具可以启动 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 工具。 利用此主题后面列出的可选参数，可以控制应用程序的启动方式。  
+  **探查器**实用工具启动[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]工具。 利用此主题后面列出的可选参数，可以控制应用程序的启动方式。  
   
 > [!NOTE]  
->  **Profiler** 实用工具不适用于脚本跟踪。 有关详细信息，请参阅 [SQL Server Profiler](sql-server-profiler/sql-server-profiler.md)。  
+>  
+  **Profiler** 实用工具不适用于脚本跟踪。 有关详细信息，请参阅 [SQL Server Profiler](sql-server-profiler/sql-server-profiler.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,9 +61,9 @@ ms.locfileid: "68211097"
  用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的用户登录 ID。 登录 ID 区分大小写。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]。  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
- **/P** *password*  
+ **/P** *密码*  
  指定用户指定的用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的密码。  
   
  **/E**  
@@ -74,20 +75,20 @@ ms.locfileid: "68211097"
  **/A**  *analysis_services_server_name*  
  指定一个 Analysis Services 实例。 Profiler 会使用在 **/U** 和 **/P** 开关或 **/E** 开关中指定的身份验证信息，自动连接到指定的服务器。 若要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例，请使用 **/A** *analysis_services_server_name\instance_name*。  
   
- **/D** *database*  
+ **/D** *数据库*  
  指定要用于连接的数据库的名称。 如果不指定任何数据库，该选项将为指定的用户选择默认数据库。  
   
  **/B "** *trace_table_name* **"**  
  指定要在事件探查器启动时加载的跟踪表。 必须指定数据库、用户或架构以及表。  
   
- **/T"** *template_name* **"**  
+ **/T "** *template_name* **"**  
  指定要加载以便配置跟踪的模板。 模板名称必须括在引号中。 模板名称必须位于系统模板目录或用户模板目录下。 如果这两个目录中同时存在同名的两个模板，则将加载系统目录下的模板。 如果不存在具有指定名称的模板，则将加载标准模板。 请注意，模板的文件扩展名 (.tdf) 不能指定为 *template_name*的一部分。 例如：  
   
 ```  
 /T "standard"  
 ```  
   
- **/F"** *filename* **"**  
+ **/F "** *filename* **"**  
  指定要在事件探查器启动时加载的跟踪文件的路径和文件名。 整个路径和文件名必须置于引号中。 此选项不能与 **/O**一起使用。  
   
  **/O "** *filename*  **"**  
@@ -96,7 +97,7 @@ ms.locfileid: "68211097"
  **/L** *locale_ID*  
  不可用。  
   
- **/M "** *MM-DD-YY hh:mm:ss* **"**  
+ **/M "** *MM-DD-YY hh： MM： ss* **"**  
  指定跟踪停止的日期和时间。 停止时间必须括在引号中。 根据下表中的参数指定停止时间：  
   
 |参数|定义|  
@@ -105,11 +106,11 @@ ms.locfileid: "68211097"
 |DD|两位数日期|  
 |YY|两位数年份|  
 |hh|24 小时制的两位数小时|  
-|MM|两位数分钟|  
+|mm|两位数分钟|  
 |ss|两位数秒数|  
   
 > [!NOTE]  
->  仅当在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中启用了“使用区域设置来显示日期和时间值”  选项时，才能使用“YY-MM-DD- hh:mm:ss”格式。 如果未启用此选项，则必须使用“YYYY-MM-DD hh:mm:ss”日期和时间格式。  
+>  仅当在 ** 中启用了“使用区域设置来显示日期和时间值”**[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]选项时，才能使用“YY-MM-DD- hh:mm:ss”格式。 如果未启用此选项，则必须使用“YYYY-MM-DD hh:mm:ss”日期和时间格式。  
   
  **/R**  
  启用跟踪文件滚动。  
@@ -124,7 +125,7 @@ ms.locfileid: "68211097"
 profiler /S MyServer\MyInstance /T "Standard"  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [命令提示实用工具参考（数据库引擎）](command-prompt-utility-reference-database-engine.md)  
+## <a name="see-also"></a>另请参阅  
+ [命令提示实用工具引用 &#40;数据库引擎&#41;](command-prompt-utility-reference-database-engine.md)  
   
   

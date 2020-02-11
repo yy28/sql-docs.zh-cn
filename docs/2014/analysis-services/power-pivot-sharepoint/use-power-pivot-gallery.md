@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 880baacd3cf629ee28f55a399fcb02019e836d44
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229230"
 ---
 # <a name="use-powerpivot-gallery"></a>使用 PowerPivot 库
@@ -42,7 +42,7 @@ ms.locfileid: "75229230"
   
 -   [已知问题](#bkmk_known_issues)  
   
- [必备条件](#prereq)  
+ [先决条件](#prereq)  
   
 ##  <a name="prereq"></a>先决条件  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75229230"
 ##  <a name="add"></a>将 Excel 工作簿保存到 PowerPivot 库  
  您可以使用 Excel 2010 提供的所有共享方法将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿发布到库。 例如，在 Excel 2010 中，您可以使用“另存为”来指定库的完整或部分 SharePoint 路径。  
   
-1.  保存该文件。  
+1.  保存文件。  
   
 2.  1.  **Excel 2010：** 在 "文件" 菜单中，单击 "**保存" & 发送**"。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "75229230"
   
 3.  单击右侧的向下箭头，然后选择 **“编辑属性”**。  
   
-4.  单击**保存**。 保存文档将强制快照服务重新生成预览图像。  
+4.  单击“保存”  。 保存文档将强制快照服务重新生成预览图像。  
   
 ##  <a name="bkmk_known_issues"></a>已知问题  
   

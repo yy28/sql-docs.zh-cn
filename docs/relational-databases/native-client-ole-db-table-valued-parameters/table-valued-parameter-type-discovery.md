@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 92bd68e69cd3127bdb2dabd6b94b1097b47e48c4
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73788568"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>表值参数类型发现
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  使用者（即使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序的客户端应用程序）可以发现每个命令参数的类型（如果命令文本已提供给 OLE DB 提供程序）。 了解表值参数的类型之后，使用者可以发现表值参数各列的元数据信息。  
+  使用者（即使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序的客户端应用程序）可以发现每个命令参数的类型（如果命令文本已提供给 OLE DB 提供程序）。 了解表值参数的类型之后，使用者可以发现表值参数各列的元数据信息。  
   
- 对于大多数参数类型，ICommandWithParameters：： GetParameterInfo 支持过程参数的类型信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，随着用户定义类型和 xml 数据类型的引入，由于无法通过 ICommandWithParameters 提供用户定义类型信息（名称、架构和目录），GetParameterInfo 方法不再能够完全满足此目的。 定义了一个新接口 ISSCommandWithParameters，用于提供扩展类型信息。  
+ 对于大多数参数类型，ICommandWithParameters：： GetParameterInfo 支持过程参数的类型信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，随着用户定义类型和 xml 数据类型的引入，由于无法通过 ICommandWithParameters 提供用户定义类型信息（名称、架构和目录），GetParameterInfo 方法不再能够完全满足此目的****。 定义了一个新接口 ISSCommandWithParameters，用于提供扩展类型信息。  
   
- 对于表值参数，还可以使用 ISSCommandWithParameters 接口来发现详细的信息。 在准备命令对象之后，客户端将调用 ISSCommandWithParameters：： GetParameterInfo。 对于表值参数，访问接口将 DBPARAMINFO 结构的 wType 成员设置为 DBTYPE_TABLE。 DBPARAMINFO 结构的 ulParamSize 字段的值为 ~0。  
+ 对于表值参数，还可以使用 ISSCommandWithParameters 接口来发现详细的信息。 在准备命令对象之后，客户端将调用 ISSCommandWithParameters：： GetParameterInfo。 对于表值参数，访问接口将 DBPARAMINFO 结构的 wType 成员设置为 DBTYPE_TABLE**。 DBPARAMINFO 结构的 ulParamSize 字段的值为 ~0**。  
   
  使用者随后使用 ISSCommandWithParameters::GetParameterProperties 请求获取附加属性（表值参数类型目录名称、表值参数类型架构名称、表值参数类型名称、列排序和默认列）。  
   

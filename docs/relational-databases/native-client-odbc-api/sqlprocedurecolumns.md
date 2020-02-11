@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ece1e3a161b03598ebc40ce9022780387b47e5c3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785965"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLProcedureColumns**返回一个报告所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程的返回值属性的行。  
+  **SQLProcedureColumns**返回一个报告所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程的返回值属性的行。  
   
  **SQLProcedureColumns**返回 SQL_SUCCESS *CatalogName*、 *SchemaName*、 *ProcName*或*ColumnName*参数是否存在值。 当在这些参数中使用了无效值时， **SQLFetch**将返回 SQL_NO_DATA。  
   
  可以对静态服务器游标执行**SQLProcedureColumns** 。 尝试对可更新的（动态或键集）游标执行**SQLProcedureColumns**时，将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
- 下表列出了结果集返回的列以及这些列如何通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序进行扩展以处理**udt**和**xml**数据类型：  
+ 下表列出了结果集返回的列，以及如何通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序扩展这些列来处理**udt**和**xml**数据类型：  
   
-|列名|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|返回包含 UDT（用户定义类型）的目录的名称。|  
 |SS_UDT_SCHEMA_NAME|返回包含 UDT 的架构的名称。|  
@@ -44,20 +44,20 @@ ms.locfileid: "73785965"
 ## <a name="sqlprocedurecolumns-and-table-valued-parameters"></a>SQLProcedureColumns 和表值参数  
  SQLProcedureColumns 以类似于 CLR 用户定义类型的方式处理表值参数。 在针对表值参数返回的行中，列具有以下值：  
   
-|列名|说明/值|  
+|列名称|说明/值|  
 |-----------------|------------------------|  
 |DATA_TYPE|SQL_SS_TABLE|  
 |TYPE_NAME|表值参数的表类型的名称。|  
-|COLUMN_SIZE|NULL|  
+|COLUMN_SIZE|Null|  
 |BUFFER_LENGTH|0|  
 |DECIMAL_DIGITS|表值参数中的列数。|  
-|NUM_PREC_RADIX|NULL|  
+|NUM_PREC_RADIX|Null|  
 |NULLABLE|SQL_NULLABLE|  
-|REMARKS|NULL|  
+|注释|Null|  
 |COLUMN_DEF|NULL。 表类型可能没有默认值。|  
 |SQL_DATA_TYPE|SQL_SS_TABLE|  
-|SQL_DATEIME_SUB|NULL|  
-|CHAR_OCTET_LENGTH|NULL|  
+|SQL_DATEIME_SUB|Null|  
+|CHAR_OCTET_LENGTH|Null|  
 |IS_NULLABLE|"YES"|  
 |SS_TYPE_CATALOG_NAME|返回包含表或 CLR 用户定义类型的目录的名称。|  
 |SS_TYPE_SCHEMA_NAME|返回包含表或 CLR 用户定义类型的架构的名称。|  
@@ -66,15 +66,15 @@ ms.locfileid: "73785965"
   
  为了符合 ODBC 规范，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 的显示位置位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中添加的所有驱动程序特定列之前，ODBC 自身托管的所有列之后。  
   
- 有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有关表值参数的详细信息，请参阅[ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>SQLProcedureColumns 对日期和时间增强功能的支持  
  有关为日期/时间类型返回的值，请参阅[目录元数据](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
   
- 有关更多常规信息，请参阅[日期和&#40;时间&#41;改进 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关更多常规信息，请参阅[ODBC&#41;&#40;日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>SQLProcedureColumns 对大型 CLR UDT 的支持  
- **SQLProcedureColumns**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[大型 CLR 用户定义类型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLProcedureColumns**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLProcedureColumns 函数](https://go.microsoft.com/fwlink/?LinkId=59363)   

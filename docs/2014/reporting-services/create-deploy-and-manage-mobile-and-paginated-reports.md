@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a4d9983da355c244e5d26873f92b4c43159a0e1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74685439"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "74685439"
  有关其他 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件、工具和资源的信息，请参阅 [SQL Server 联机丛书](../2014-toc/index.yml)。  
   
  **按区域浏览内容**  
- ![文件夹图标](media/hlp-16folder.gif "F旧图标 ") [Reporting Services 报表服务器](../../2014/reporting-services/reporting-services-report-server.md)  
+ ![文件夹图标](media/hlp-16folder.gif "文件夹图标") [Reporting Services 报表服务器](../../2014/reporting-services/reporting-services-report-server.md)  
   
  [&#40;SSRS Reporting Services 报表](reports/reporting-services-reports-ssrs.md)的![文件夹图标](media/hlp-16folder.gif "文件夹图标")&#41;  
   

@@ -1,5 +1,5 @@
 ---
-title: 对 HelloData 的注释 |Microsoft Docs
+title: HelloData 上的注释 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,64 +13,64 @@ ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925809"
 ---
 # <a name="comments-on-hellodata"></a>对 HelloData 的注释
-HelloData 应用程序将指导逐步典型的 ADO 应用程序的基本操作： 获取、 查看、 编辑和更新数据。 当你启动应用程序时，单击第一个按钮**获取数据**。 这将运行**GetData**子例程。  
+HelloData 应用程序逐句通过典型 ADO 应用程序的基本操作：获取、检查、编辑和更新数据。 启动应用程序时，单击第一个按钮 "**获取数据**"。 这会**运行 "有**  
   
 ## <a name="getdata"></a>GetData  
- **GetData**将有效的连接字符串放入的模块级变量， *m_sConnStr*。 有关连接字符串的详细信息，请参阅[创建的连接字符串](../../../ado/guide/data/creating-a-connection-string.md)。  
+ 有效的连接字符串将有效的连接**字符串放入**模块级变量， *m_sConnStr*。 有关连接字符串的详细信息，请参阅[创建连接字符串](../../../ado/guide/data/creating-a-connection-string.md)。  
   
- 分配错误处理程序使用的 Visual Basic **OnError**语句。 有关在 ADO 中的错误处理的详细信息，请参阅[的错误处理](../../../ado/guide/data/error-handling.md)。 一个新**连接**创建对象，并**CursorLocation**属性设置为**adUseClient**因为 HelloData 示例创建*未连接记录集*。 这意味着，只要已从数据源中提取的数据，与数据源物理连接已断开，但您仍可以使用中本地缓存数据在**记录集**对象。  
+ 使用 Visual Basic **OnError**语句分配错误处理程序。 有关 ADO 中的错误处理的详细信息，请参阅[错误处理](../../../ado/guide/data/error-handling.md)。 将创建一个新的**连接**对象，并将**CursorLocation**属性设置为**adUseClient** ，因为 HelloData 示例会创建一个*断开连接的记录集*。 这意味着，一旦从数据源中提取数据，与数据源的物理连接就会中断，但仍可以使用**记录在记录集**对象中的数据。  
   
- 打开连接后，将为 SQL 字符串分配给一个变量 (sSQL)。 然后，创建的新实例**记录集**对象， `m_oRecordset1`。 在下一行代码中，打开**记录集**通过现有**连接**，并传入`sSQL`作为源**记录集**。 使 SQL 字符串您决定帮助 ADO 作为源已通过**记录集**命令的文本定义是通过传递**adCmdText** 的最后一个参数中**记录集已打开**方法。 此外设置此行**LockType**并**CursorType**与关联**记录集**。  
+ 打开连接后，将 SQL 字符串分配给变量（Sql）。 然后创建新的**记录集**对象的实例`m_oRecordset1`。 在下一行代码中，通过现有**连接**打开`sSQL` **记录集**，并传入作为**记录集**的源。 在确定作为**记录集**的源传递的 SQL 字符串是命令的文本定义时，可以通过将最后一个参数中的**AdCmdText**传递给**RECORDSET Open**方法来帮助 ADO。 此行还设置与**记录集**关联的**LockType**和**CursorType** 。  
   
- 代码集的下一行**MarshalOptions**属性等于**adMarshalModifiedOnly**。 **MarshalOptions**指示哪些记录应封送处理到中间层 （或 Web 服务器）。 有关封送处理的详细信息，请参阅 COM 文档。 当你使用**adMarshalModifiedOnly**与客户端游标 ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**)，只有在已修改的记录客户端写回到在中间层。 设置**MarshalOptions**到**adMarshalModifiedOnly**可以提高性能，因为封送更少的行。  
+ 下一行代码将**MarshalOptions**属性设置为与**adMarshalModifiedOnly**相等。 **MarshalOptions**指示应将哪些记录封送到中间层（或 Web 服务器）。 有关封送处理的详细信息，请参阅 COM 文档。 将**adMarshalModifiedOnly**用于客户端游标（[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**）时，只有已在客户端上修改的记录写回中间层。 将**MarshalOptions**设置为**adMarshalModifiedOnly**可以提高性能，因为封送的行更少。  
   
- 接下来，断开**记录集**通过设置其**ActiveConnection**属性等于**Nothing**。 详细信息，请参阅"断开连接并重新连接记录集"一节中[更新和保存数据](../../../ado/guide/data/updating-and-persisting-data.md)。  
+ 接下来，将**记录集**的**ActiveConnection**属性设置为 "**无**"，从而断开记录集。 有关详细信息，请参阅[更新和保存数据](../../../ado/guide/data/updating-and-persisting-data.md)中的 "断开和重新连接记录集" 部分。  
   
- 关闭到数据源的连接，然后销毁现有**连接**对象。 此释放它占用的资源。  
+ 关闭与数据源的连接并销毁现有**连接**对象。 这将释放所使用的资源。  
   
- 最后一步是设置**记录集**作为**数据源**Microsoft 数据网格控件在窗体上因此，可以轻松地显示从数据**记录集**上窗体。  
+ 最后一步是将**记录**集设置为窗体上 Microsoft DataGrid 控件的数据**源**，以便可以轻松地在窗体上显示**记录集中**的数据。  
   
- 单击第二个按钮**检查数据**。 这将在运行**ExamineData**子例程。  
+ 单击第二个按钮 "**检查数据**"。 这将运行**ExamineData**子例程。  
   
 ## <a name="examinedata"></a>ExamineData  
- ExamineData 使用各种方法和属性**记录集**对象来显示有关中的数据的信息**记录集**。 它通过使用报告的记录数**RecordCount**属性。 它循环访问**记录集**，并输出的值**AbsolutePosition**中窗体上显示文本框的属性。 此外在循环中的值，而**书签**第三条记录的属性放入 variant 变量*vBookmark*，以供将来使用。  
+ ExamineData 使用**recordset**对象的各种方法和属性来显示有关**记录集中**的数据的信息。 它通过使用**RecordCount**属性报告记录数。 它循环遍历**记录集**并在窗体上的 "显示" 文本框中打印**AbsolutePosition**属性的值。 此外，在循环中，第三个记录的 "**书签**" 属性的值将放入变量变量*vBookmark*，以备以后使用。  
   
- 例程直接导航回使用以前存储的书签变量的第三个记录。 例程的调用**WalkFields**子例程，它循环访问**字段**的集合**记录集**，并显示有关每个详细信息**字段**集合中。  
+ 例程使用之前存储的书签变量直接导航回第三条记录。 例程调用**WalkFields**子例程，该子例程循环遍历**记录集**的**字段**集合，并显示集合中每个**字段**的详细信息。  
   
- 最后， **ExamineData**使用**筛选器**属性**记录集**到仅使用这些记录的屏幕**CategoryId**等于2。 应用此筛选器的结果会立即出现在窗体上显示网格。  
+ 最后， **ExamineData**将**记录集**的 Filter 属性仅用于**筛选器****等于2的记录**。 应用此筛选器的结果立即显示在窗体上的显示网格中。  
   
- 有关详细信息中所示的功能**ExamineData**子例程中，请参阅[检查数据](../../../ado/guide/data/examining-data.md)。  
+ 有关**ExamineData**子例程中所示功能的详细信息，请参阅[检查数据](../../../ado/guide/data/examining-data.md)。  
   
- 接下来，单击第三个按钮**编辑数据**。 这将运行**EditData**子例程。  
+ 接下来，单击第三个按钮，**编辑数据**。 这将运行**EditData**子例程。  
   
 ## <a name="editdata"></a>EditData  
- 当代码进入**EditData**子例程，**记录集**仍上筛选**CategoryId**等于 2，以便只满足筛选条件的项可见。 它首先循环访问**记录集**，并增加中每个可见项的价格**记录集**10%。 值**价格**字段更改通过设置**值**针对新的有效金额等于该字段的属性。  
+ 当代码进入**EditData**子例程时，**记录集**仍将**在等于2的筛选**器上进行筛选，以便只显示符合筛选条件的那些项。 它首先遍历**记录集**，并将**记录集中**每个可见项的价格增加10%。 通过将该字段的 "**值**" 属性设置为等于一个新的有效金额，可以更改 "**价格**" 字段的值。  
   
- 请记住，**记录集**从数据源断开连接时。 中所做的更改**EditData**仅对数据的本地缓存副本。 有关详细信息，请参阅[编辑数据](../../../ado/guide/data/editing-data.md)。  
+ 请记住，**记录集**与数据源断开连接。 在**EditData**中所做的更改仅对数据的本地缓存副本进行。 有关详细信息，请参阅[编辑数据](../../../ado/guide/data/editing-data.md)。  
   
- 所做的更改不会在数据源上单击第四个按钮，直到**更新数据**。 这将运行**UpdateData**子例程。  
+ 在单击第四个按钮，**更新数据**之前，将不会在数据源上进行更改。 这将运行**UpdateData**子例程。  
   
 ## <a name="updatedata"></a>UpdateData  
- UpdateData 首先删除已应用到的筛选器**记录集**。 代码中删除和重置`m_oRecordset1`作为**数据源**为 Microsoft 绑定 DataGrid 窗体上，以便未筛选**记录集**出现在网格中。  
+ UpdateData 首先删除已应用于**记录集**的筛选器。 此代码将删除和`m_oRecordset1`重置为窗体上 Microsoft 绑定的 DataGrid 的**数据源**，以便在网格中显示未筛选的**记录集**。  
   
- 该代码会检查以查看是否可以向后移动中**记录集**通过使用**支持**方法替换**adMovePrevious**参数。  
+ 然后，该代码将检查是否可以通过使用带有**adMovePrevious**参数的**支持**方法在**记录集中**向后移动。  
   
- 移动到第一个记录使用的例程**MoveFirst**方法，并通过使用显示字段的原始值和当前值， **OriginalValue**并**值**属性**字段**对象。 这些属性一起使用**UnderlyingValue**属性 （此处未使用） 中讨论了[更新和保存数据](../../../ado/guide/data/updating-and-persisting-data.md)。  
+ 例程使用**MoveFirst**方法移动到第一条记录，并使用**Field**对象的**OriginalValue**和**Value**属性显示该字段的原始值和当前值。 这些属性与**UnderlyingValue**属性（此处未使用）一起讨论了如何[更新和保留数据](../../../ado/guide/data/updating-and-persisting-data.md)。  
   
- 接下来，一个新**连接**创建对象并将其用于重新建立与数据源的连接。 重新建立**记录集**到通过设置新的数据源**连接**作为**ActiveConnection**有关**记录集**。 若要将更新发送到服务器，该代码调用**UpdateBatch**上**记录集**。  
+ 接下来，将创建一个新的**连接**对象并用于重新建立与数据源的连接。 通过将新**连接**设置为**记录集**的**ActiveConnection** ，将**记录集**重新连接到数据源。 若要将更新发送到服务器，代码将对**记录集**调用**UpdateBatch** 。  
   
- 如果批处理更新成功，模块级别的标志变量`m_flgPriceUpdated`，设置为 True。 这将提醒您更高版本以进行清除所有对数据库所做的更改。  
+ 如果批更新成功，则模块级标志变量`m_flgPriceUpdated`将设置为 True。 这会提醒你稍后清除对数据库进行的所有更改。  
   
- 最后，代码将移回第一条记录**记录集**并显示原始值和当前值。 值是相同的调用后面**UpdateBatch**。  
+ 最后，该代码将移回**记录集中**的第一条记录，并显示原始值和当前值。 调用**UpdateBatch**后值是相同的。  
   
- 有关如何更新数据的详细信息，包括要执行的操作时数据时的服务器更改你**记录集**是断开连接，请参阅[更新和保存数据](../../../ado/guide/data/updating-and-persisting-data.md)。  
+ 有关如何更新数据的详细信息，包括在断开**记录集**的情况下服务器上的数据更改时要执行的操作，请参阅[更新和保留数据](../../../ado/guide/data/updating-and-persisting-data.md)。  
   
-## <a name="formunload"></a>Form_Unload  
- **Form_Unload**子例程是重要的原因。 首先，由于这是一个示例应用程序，Form_Unload 清理对应用程序退出前对数据库所做的更改。 其次，该代码演示如何直接从一种开放执行命令**连接**通过使用对象**Execute**方法。 最后，它显示了执行针对数据源的非返回行的查询 （更新查询） 的示例。
+## <a name="form_unload"></a>Form_Unload  
+ **Form_Unload**子例程之所以重要，是因为有多种原因。 首先，因为这是一个示例应用程序，所以 Form_Unload 清除在应用程序退出之前对数据库所做的更改。 其次，此代码演示如何使用**Execute**方法直接从打开的**连接**对象执行命令。 最后，它会显示对数据源执行非行返回查询（更新查询）的一个示例。

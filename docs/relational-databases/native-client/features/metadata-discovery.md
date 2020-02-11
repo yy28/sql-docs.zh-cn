@@ -11,23 +11,24 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 380d76fe0740a6c43584a68f9353d85539867fe3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761396"
 ---
 # <a name="metadata-discovery"></a>元数据发现
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中的元数据发现改进允许 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 应用程序确保从执行查询返回的列或参数元数据与执行之前指定的元数据格式相同或与其兼容。查询。 如果执行查询后返回的元数据与执行该查询之前指定的元数据格式不兼容，您将会收到错误。  
+  中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的元数据发现改进[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]允许 Native Client 应用程序确保从执行查询返回的列或参数元数据与执行查询之前指定的元数据格式相同或与其兼容。 如果执行查询后返回的元数据与执行该查询之前指定的元数据格式不兼容，您将会收到错误。  
   
  在 bcp 和 ODBC 函数以及 IBCPSession 和 IBCPSession2 接口中，您现在可以指定延迟读取（延迟的元数据发现）以避免对查询输出操作执行元数据发现。 这样可以提高性能，并避免元数据发现失败。  
   
- 如果使用 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 开发应用程序，但连接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]之前的服务器版本，则元数据发现功能将与服务器版本相对应。  
+ 如果使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的 Native Client 开发应用程序，但连接到早于[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的服务器版本，则元数据发现功能将与服务器版本相对应。  
   
-## <a name="remarks"></a>注释  
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 bcp 函数，以提供改进的元数据发现：  
+## <a name="remarks"></a>备注  
+ 
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 bcp 函数，以提供改进的元数据发现：  
   
 -   [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
   
@@ -43,7 +44,8 @@ ms.locfileid: "73761396"
   
  [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)提供了一个新的*eOption*来控制 bcp_readfmt： **BCPDELAYREADFMT**的行为。  
   
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 ODBC 函数，以提供改进的元数据发现：  
+ 
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 ODBC 函数，以提供改进的元数据发现：  
   
 -   [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)  
   
@@ -53,7 +55,8 @@ ms.locfileid: "73761396"
   
 -   [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)  
   
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 OLE DB 成员函数，以提供改进的元数据发现：  
+ 
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 OLE DB 成员函数，以提供改进的元数据发现：  
   
 -   IColumnsInfo::GetColumnInfo  
   

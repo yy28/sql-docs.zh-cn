@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7c71ebfbda37e66050f868fa7676d0247e84840e
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74119226"
 ---
 # <a name="sql-server-r-language-tutorials"></a>SQL Server R 语言教程
@@ -30,7 +30,7 @@ ms.locfileid: "74119226"
 
 ## <a name="r-quickstarts-and-tutorials"></a>R 快速入门和教程
 
-| 链接 | 描述 |
+| 链接 | 说明 |
 |------|-------------|
 | [快速入门：创建并运行简单的 R 脚本](quickstart-r-create-script.md) | 本快速入门是几个快速入门教程中的第一个，其中演示了使用 T-SQL 查询编辑器（如 SQL Server Management Studio）调用 R 函数的基本语法。 |
 | [教程：了解适用于数据科学家的数据库内 R 分析](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | 对于刚接触 SQL Server 的 R 开发者，本教程介绍了如何在 SQL Server 中执行常见的数据科学任务。 加载和可视化数据，定型模型并将其保存到 SQL Server，以及使用模型进行预测分析。 |
@@ -41,7 +41,7 @@ ms.locfileid: "74119226"
 
 ## <a name="code-samples"></a>代码示例
 
-| 链接 | 描述 |
+| 链接 | 说明 |
 |------|-------------|
 | [使用 R 和 SQL Server 生成预测模型](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | 介绍雪橇租赁公司可如何使用机器学习来预测未来的租赁情况，这有助于合理制定业务和人员计划以满足未来的需求。 |
 | [使用 R 和 SQL Server 执行客户聚类分析](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | 使用无人监督学习根据销售数据细分客户。 |

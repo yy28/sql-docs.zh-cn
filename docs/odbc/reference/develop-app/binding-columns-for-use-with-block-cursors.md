@@ -1,5 +1,5 @@
 ---
-title: 绑定列用于块游标 |Microsoft Docs
+title: 用于块游标的绑定列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,22 +19,22 @@ ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 827f6ddca12f15ce0bce1773b9cbe26fae5069dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106234"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>绑定列用于块游标
-因为块状游标返回多个行，使用它们的应用程序必须将变量的数组绑定到每个列而不是单个变量。 这些列阵统称为*行集缓冲区*。 以下是绑定的两种样式:  
+由于块游标返回多行，因此使用它们的应用程序必须将变量数组绑定到每个列而不是一个变量。 这些数组统称为*行集缓冲区*。 下面是两种绑定样式：  
   
--   将数组绑定到每个列。 这称为*按列绑定*因为每个数据结构 （数组） 包含对单个列的数据。  
+-   将数组绑定到每个列。 这称为按*列绑定*，因为每个数据结构（数组）都包含单个列的数据。  
   
--   定义一种结构来保存整个行的数据，并将绑定这些结构的数组。 这称为*按行绑定*因为每个数据结构包含单个行的数据。  
+-   定义一个结构来保存整行的数据，并绑定这些结构的数组。 这称为按*行绑定*，因为每个数据结构包含单个行的数据。  
   
- 因为当应用程序将单个变量绑定到列，它将调用**SQLBindCol**要绑定到列的数组。 唯一的区别是传递的地址是数组地址，不要使用单个变量的地址。 应用程序设置 SQL_BIND_BY_COLUMN 语句属性指定是否使用按列绑定或按行绑定。 是否使用按列绑定或按行绑定很大程度的应用程序首选项。 按行绑定可能会更紧密地对应的数据的应用程序的布局，在这种情况下，它会提供更好的性能。  
+ 当应用程序将单个变量绑定到列时，它将调用**SQLBindCol**将数组绑定到列。 唯一的区别在于传递的地址是数组地址，而不是单个变量地址。 应用程序设置 SQL_BIND_BY_COLUMN 语句特性来指定它是使用按列绑定还是按行绑定。 是使用按列绑定还是按行绑定，在很大程度上取决于应用程序首选项。 按行绑定可能更接近应用程序的数据布局，在这种情况下，它可以提供更好的性能。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [按列绑定](../../../odbc/reference/develop-app/column-wise-binding.md)  
   

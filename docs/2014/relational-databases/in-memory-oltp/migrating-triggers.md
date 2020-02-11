@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071465"
 ---
 # <a name="migrating-triggers"></a>迁移触发器
@@ -34,7 +34,7 @@ ms.locfileid: "63071465"
   
  根据触发器事件（FOR/AFTER 或 INSTEAD OF），您可以在对该表执行 INSERT、UPDATE 或 DELETE 的相应存储过程中包含触发器的内容。 例如，在迁移某一 AFTER INSERT 触发器时，您可以通过在相应 INSERT 语句后包含该触发器的内容，更改执行插入操作的存储过程。  
   
- 您可以使用解释型存储过程或本机编译的存储过程。 解释型存储过程中的大多数 [!INCLUDE[tsql](../../includes/tsql-md.md)] 构造函数可对内存优化表执行。 但是，在本机编译的存储过程中只支持一部分的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 构造函数。 有关的信息[!INCLUDE[tsql](../../includes/tsql-md.md)]支持对内存优化表，请参阅[访问内存优化表使用解释型 TRANSACT-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)。 有关的信息[!INCLUDE[tsql](../../includes/tsql-md.md)]支持本机编译存储过程中，请参阅[内存中 OLTP 不支持 TRANSACT-SQL 构造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
+ 您可以使用解释型存储过程或本机编译的存储过程。 解释型存储过程中的大多数 [!INCLUDE[tsql](../../includes/tsql-md.md)] 构造函数可对内存优化表执行。 但是，在本机编译的存储过程中只支持一部分的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 构造函数。 有关内存优化[!INCLUDE[tsql](../../includes/tsql-md.md)]表支持的信息，请参阅[使用解释型 Transact-sql 访问内存优化表](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)。 有关本机编译[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程中支持的信息，请参阅[内存中 OLTP 不支持的 transact-sql 构造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
   
  下面是在内存优化表上模拟 DML 触发器行为的一个简单示例。  
   
@@ -154,7 +154,7 @@ END
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [迁移到内存中 OLTP](migrating-to-in-memory-oltp.md)  
   
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20bc4c4e56e3843a9a36cdd1ebdc97b875726cf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914561"
 ---
-# <a name="mssqlserver2575"></a>MSSQLSERVER_2575
+# <a name="mssqlserver_2575"></a>MSSQLSERVER_2575
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62914561"
 |符号名称|DBCC_IAM_PAGE_WAS_NOT_SEEN|  
 |消息正文|对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE) 中 IAM 页 P_ID2 的下一个指针指向了 IAM 页 P_ID1，但在扫描过程中检测不到页 P_ID1。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  找到了指定索引的索引分配映射 (IAM) 页；但是，找不到该索引下一页指针的 IAM 页。  
   
 ## <a name="user-action"></a>用户操作  
@@ -58,7 +58,7 @@ ms.locfileid: "62914561"
 #### <a name="results-of-running-repair-options"></a>运行 REPAIR 选项的结果  
  DBCC 将重新生成索引。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
   

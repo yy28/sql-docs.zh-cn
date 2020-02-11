@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401642"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys （Transact-sql）
@@ -26,18 +26,18 @@ ms.locfileid: "74401642"
   
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|database_id|**整形**|每个节点上的物理数据库的 ID。|  
-|encryption_state|**整形**|指示此节点上的数据库是否已加密或未加密。<br /><br /> 0 = 不存在数据库加密密钥，未加密<br /><br /> 1 = 未加密<br /><br /> 2 = 正在进行加密<br /><br /> 3 = 已加密<br /><br /> 4 = 正在更改密钥<br /><br /> 5 = 正在进行解密<br /><br /> 6 = 正在进行保护更改（正在更改加密数据库加密密钥的证书。）|  
-|create_date|**型**|显示加密密钥的创建日期。|  
-|regenerate_date|**型**|显示重新生成加密密钥的日期。|  
-|modify_date|**型**|显示加密密钥的修改日期。|  
-|set_date|**型**|显示加密密钥应用于数据库的日期。|  
-|opened_date|**型**|显示上次打开数据库密钥的时间。|  
+|database_id|**int**|每个节点上的物理数据库的 ID。|  
+|encryption_state|**int**|指示此节点上的数据库是否已加密或未加密。<br /><br /> 0 = 不存在数据库加密密钥，未加密<br /><br /> 1 = 未加密<br /><br /> 2 = 正在进行加密<br /><br /> 3 = 已加密<br /><br /> 4 = 正在更改密钥<br /><br /> 5 = 正在进行解密<br /><br /> 6 = 正在进行保护更改（正在更改加密数据库加密密钥的证书。）|  
+|create_date|**datetime**|显示加密密钥的创建日期。|  
+|regenerate_date|**datetime**|显示重新生成加密密钥的日期。|  
+|modify_date|**datetime**|显示加密密钥的修改日期。|  
+|set_date|**datetime**|显示加密密钥应用于数据库的日期。|  
+|opened_date|**datetime**|显示上次打开数据库密钥的时间。|  
 |key_algorithm|**varchar （？）**|显示用于密钥的算法。|  
-|key_length|**整形**|显示密钥的长度。|  
+|key_length|**int**|显示密钥的长度。|  
 |encryptor_thumbprint|**varbin**|显示加密程序的指纹。|  
-|percent_complete|**real**|数据库加密状态更改的完成百分比。 如果未发生状态更改，则为 0。|  
-|node_id|**整形**|与节点关联的唯一数字 id。|  
+|percent_complete|**实际上**|数据库加密状态更改的完成百分比。 如果未发生状态更改，则为 0。|  
+|node_id|**int**|与节点关联的唯一数字 id。|  
   
 ## <a name="permissions"></a>权限  
  要求对服务器拥有 VIEW SERVER STATE 权限。  

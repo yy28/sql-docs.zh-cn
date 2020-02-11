@@ -1,5 +1,5 @@
 ---
-title: 映射 Oracle 和 SQL Server 数据类型 (OracleToSQL) |Microsoft Docs
+title: 映射 Oracle 和 SQL Server 数据类型（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,83 +13,83 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262960"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>映射 Oracle 和 SQL Server 数据类型 (OracleToSQL)
-Oracle 数据库类型不同于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库类型。 转换到的 Oracle 数据库对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象，您必须指定如何将数据类型从 oracle 迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以接受默认数据类型映射，也可以自定义映射，如以下各节中所示。  
+Oracle 数据库类型与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库类型不同。 将 Oracle 数据库对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象时，必须指定如何将数据类型从 oracle 映射到。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 你可以接受默认的数据类型映射，也可以自定义映射，如以下部分所示。  
   
 ## <a name="default-mappings"></a>默认映射  
-SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置&#40;类型映射&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)。  
+SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置 &#40;类型映射&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)。  
   
-## <a name="type-mapping-inheritance"></a>映射继承的类型  
-您可以自定义在项目级别、 对象 （例如所有存储过程） 的类别级别或对象级别的类型映射。 除非它们在较低级别重写从更高级别继承设置。 例如，如果您将映射**smallmoney**到**资金**在项目级别，该项目中的所有对象将都使用此映射，除非你自定义对象或类别级别的映射。  
+## <a name="type-mapping-inheritance"></a>类型映射继承  
+您可以在项目级别、对象类别级别（如所有存储过程）或对象级别自定义类型映射。 除非在较低级别上被重写，否则将从较高级别继承设置。 例如，如果在项目级别将**smallmoney**映射到**money** ，则项目中的所有对象都将使用此映射，除非你在对象或类别级别自定义映射。  
   
-当您查看**类型映射**SSMA，在后台中的选项卡了彩色编码来显示继承的类型映射。 黄色表示任何继承的类型映射，并在当前级别上指定任何映射的白色背景的类型映射。  
+查看 SSMA 中的 "**类型映射**" 选项卡时，背景会进行颜色编码，以显示继承了哪些类型的映射。 对于任何继承的类型映射，类型映射的背景为黄色; 对于在当前级别指定的任何映射，背景为白色。  
   
 ## <a name="customizing-data-type-mappings"></a>自定义数据类型映射  
-以下过程演示如何在项目、 数据库或对象级别的数据类型映射：  
+下面的过程演示如何在项目、数据库或对象级别映射数据类型：  
   
-**若要将数据类型映射**  
+**映射数据类型**  
   
-1.  若要自定义整个项目的数据类型映射，请打开**项目设置**对话框：  
+1.  若要为整个项目自定义数据类型映射，请打开 "**项目设置**" 对话框：  
   
-    1.  上**工具**菜单中，选择**项目设置**。  
+    1.  在 "**工具**" 菜单上，选择 "**项目设置**"。  
   
-    2.  在左窗格中，选择**类型映射**。  
+    2.  在左窗格中，选择 "**类型映射**"。  
   
-        类型映射表和按钮显示在右窗格中。  
+        类型映射图表和按钮将显示在右窗格中。  
   
-    或者，若要自定义数据类型映射在数据库、 表、 视图或存储的过程级别选择数据库、 对象类别或对象 Oracle 元数据资源管理器中：  
+    或者，若要在数据库、表、视图或存储过程级别自定义数据类型映射，请在 Oracle 元数据资源管理器中选择数据库、对象类别或对象：  
   
-    1.  在 Oracle 元数据资源管理器中，选择要自定义对象的文件夹。  
+    1.  在 Oracle 元数据资源管理器中，选择要自定义的文件夹或对象。  
   
-    2.  在右窗格中，单击**类型映射**选项卡。  
+    2.  在右侧窗格中，单击 "**类型映射**" 选项卡。  
   
-2.  若要添加新的映射，请执行以下操作：  
+2.  若要添加新映射，请执行以下操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击“添加”  。  
   
-    2.  下**源类型**，选择要映射的 Oracle 数据类型。  
+    2.  在 "**源类型**" 下，选择要映射的 Oracle 数据类型。  
   
-    3.  如果类型要求长度，指定映射中的最小数据长度**从**框和中的最大数据长度**到**框。  
+    3.  如果类型需要长度，请在 "**从**" 框中指定映射的最小数据长度，在 "**到**" 框中指定最大数据长度。  
   
-        这允许您自定义的相同的数据类型的更小且更大值的数据映射。  
+        这使您可以为相同数据类型的较小值和较大值自定义数据映射。  
   
-    4.  下**目标类型**，选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
+    4.  在 "**目标类型**" 下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择目标数据类型。  
   
-        某些类型需要目标数据类型长度。 如果需要，输入中的新数据长度**替换为**框。  
+        某些类型需要目标数据类型长度。 如果需要，请在 "**替换为**" 框中输入新的数据长度。  
   
     5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-3.  若要修改的数据类型映射，请执行以下操作：  
+3.  若要修改数据类型映射，请执行以下操作：  
   
-    1.  单击 **“编辑”** 。  
+    1.  单击 **“编辑”**。  
   
-    2.  下**源类型**，选择要映射的 Oracle 数据类型。  
+    2.  在 "**源类型**" 下，选择要映射的 Oracle 数据类型。  
   
-    3.  如果类型要求长度，指定映射中的最小数据长度**从**框和中的最大数据长度**到**框。  
+    3.  如果类型需要长度，请在 "**从**" 框中指定映射的最小数据长度，在 "**到**" 框中指定最大数据长度。  
   
-        这允许您自定义的相同的数据类型的更小且更大值的数据映射。  
+        这使您可以为相同数据类型的较小值和较大值自定义数据映射。  
   
-    4.  下**目标类型**，选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
+    4.  在 "**目标类型**" 下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择目标数据类型。  
   
-        某些类型需要目标数据类型长度。 如果需要，输入中的新数据长度**替换为**框中，然后 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        某些类型需要目标数据类型长度。 如果需要，请在 "**替换为**" 框中输入新的数据长度，然后[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  若要删除自定义数据类型映射，请执行以下操作：  
   
-    1.  包含你想要删除的数据类型映射的类型映射列表中选择行。  
+    1.  在 "类型映射" 列表中选择包含要删除的数据类型映射的行。  
   
     2.  单击 **“删除”** 。  
   
-        不能删除继承的映射。 但是，由特定对象或对象类别的自定义映射中重写继承的映射。  
+        不能删除继承的映射。 但是，在特定对象或对象类别上，自定义映射会重写继承的映射。  
   
 ## <a name="next-steps"></a>后续步骤  
-迁移过程中的下一步是为[创建评估报告](assessing-oracle-schemas-for-conversion-oracletosql.md)或[将 Oracle 数据库对象转换为 SQL Server 语法](converting-oracle-schemas-oracletosql.md)。 如果您创建评估报告，Oracle 对象会自动转换在评估期间。  
+迁移过程的下一步是[创建一个评估报表](assessing-oracle-schemas-for-conversion-oracletosql.md)或[将 Oracle 数据库对象转换为 SQL Server 语法](converting-oracle-schemas-oracletosql.md)。 如果创建评估报告，Oracle 对象会在评估期间自动转换。  
   
-## <a name="see-also"></a>请参阅  
-[迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>另请参阅  
+[将 Oracle 数据库迁移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

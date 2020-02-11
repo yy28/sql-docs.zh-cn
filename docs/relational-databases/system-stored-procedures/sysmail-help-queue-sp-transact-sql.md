@@ -18,18 +18,18 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305218"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  数据库邮件中具有两个队列：邮件队列和状态队列。 邮件队列存储正在等待发送的邮件项。 状态队列存储已发送项的状态。 此存储过程允许查看邮件队列的状态或状态队列的状态。 如果未指定参数 **\@queue_type** ，则存储过程将为每个队列返回一行。  
+  数据库邮件中具有两个队列：邮件队列和状态队列。 邮件队列存储正在等待发送的邮件项。 状态队列存储已发送项的状态。 此存储过程允许查看邮件队列的状态或状态队列的状态。 如果未指定参数** \@queue_type** ，则存储过程将为每个队列返回一行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,23 +39,23 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @queue_type = ] 'queue_type'` 可选参数删除指定为*queue_type*的类型的电子邮件。 *queue_type*的值为**nvarchar （6）** ，无默认值。 有效条目为 "**邮件**" 和 "**状态**"。  
+`[ @queue_type = ] 'queue_type'`可选参数删除指定为*queue_type*的类型的电子邮件。 *queue_type*为**nvarchar （6）** ，无默认值。 有效条目为 "**邮件**" 和 "**状态**"。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
 ## <a name="result-set"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**queue_type**|**nvarchar(6)**|队列的类型。 可能的值为 "**邮件**" 和 "**状态**"。|  
-|**length**|**int**|指定队列中邮件项的数量。|  
-|**State**|**nvarchar(64)**|监视器的状态。 可能的值为**非活动状态**（队列处于非活动状态）、已**通知**（队列已通知发生接收）以及**RECEIVES_OCCURRING** （队列正在接收）。|  
+|**queue_type**|**nvarchar （6）**|队列的类型。 可能的值为 "**邮件**" 和 "**状态**"。|  
+|**长短**|**int**|指定队列中邮件项的数量。|  
+|**状态**|**nvarchar （64）**|监视器的状态。 可能的值为**非活动状态**（队列处于非活动状态）、已**通知**（队列已通知发生接收）和**RECEIVES_OCCURRING** （队列正在接收）。|  
 |**last_empty_rowset_time**|**型**|上次队列为空的日期和时间。 采用军用时间格式和 GMT 时区。|  
 |**last_activated_time**|**型**|上次激活队列的日期和时间。 采用军用时间格式和 GMT 时区。|  
   
 ## <a name="remarks"></a>备注  
- 在对数据库邮件进行故障排除时，使用**sysmail_help_queue_sp**查看队列中有多少项、队列的状态以及上次激活的时间。  
+ 在对数据库邮件进行故障排除时，使用**sysmail_help_queue_sp**来查看队列中有多少项、队列的状态以及上次激活的时间。  
   
 ## <a name="permissions"></a>权限  
  默认情况下，只有**sysadmin**固定服务器角色的成员才能访问此过程。  
@@ -80,7 +80,7 @@ status     0        INACTIVE           2005-10-07 21:04:47.003 2005-10-10 21:04:
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)  
   
   

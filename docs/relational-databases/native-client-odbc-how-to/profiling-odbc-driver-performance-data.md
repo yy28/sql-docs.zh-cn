@@ -14,33 +14,33 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df90080d0c07b87d646c7c67cbe1fd672a2a582f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780661"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>分析 ODBC 驱动程序性能数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  此示例显示用于记录性能统计信息的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的选项； 该示例创建一个文件： odbcperf.log。此示例演示了性能数据日志文件的创建，并直接从 SQLPERF 数据结构中显示了性能数据（SQLPERF 结构在 Odbcss.h 中定义）。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
+  此示例显示用于记录性能统计信息的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的选项； 其中创建了一个文件：odbcperf.log。此示例显示如何直接从 SQLPERF 数据结构（SQLPERF 结构在 Odbcss.h 中定义）创建性能数据日志文件和显示性能数据。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>使用 ODBC 管理器记录驱动程序性能数据  
   
-1.  在 "控制面板" 中，双击 "**管理工具**"，然后双击 "**数据源（ODBC）** **"** 。 或者，可以调用 odbcad32.exe。  
+1.  在 "控制面板" 中，双击 "**管理工具**"，然后双击 "**数据源（ODBC）** **"**。 或者，可以调用 odbcad32.exe。  
   
 2.  单击 "**用户 dsn**"、"**系统 dsn**" 或 "**文件 dsn** " 选项卡。  
   
 3.  单击要记录其性能的数据源。  
   
-4.  单击 "**配置**"。  
+4.  单击“配置”****。  
   
 5.  在 Microsoft SQL Server 配置 DSN 向导 "中，导航到日志文件中包含" 将**ODBC 驱动程序统计信息记录到**"的页。  
   
-6.  选择 **"将 ODBC 驱动程序统计信息记录到日志文件"** 。 在该框中，放置应记录统计信息的文件的名称。 还可以单击 "**浏览**"，浏览文件系统中的统计信息日志。  
+6.  选择 **"将 ODBC 驱动程序统计信息记录到日志文件"**。 在该框中，放置应记录统计信息的文件的名称。 还可以单击 "**浏览**"，浏览文件系统中的统计信息日志。  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>通过编程方式记录驱动程序性能数据  
   
@@ -241,7 +241,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [分析 odbc 驱动程序性能操作指南主题&#40;odbc&#41; ](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
- [分析 ODBC 驱动程序性能](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
+ [分析 ODBC 驱动程序性能操作指南主题 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
+ [ODBC 驱动程序性能事件探查](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

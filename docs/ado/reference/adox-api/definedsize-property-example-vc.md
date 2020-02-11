@@ -1,5 +1,5 @@
 ---
-title: DefinedSize 属性示例 （VC + +） |Microsoft Docs
+title: DefinedSize 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4c6930cd849ca7d0dd8b8905d52fd8355a38b66a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d34aeed81cfead8f3081d9e0d7c4f148c17396d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966469"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939577"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize 属性示例 (VC++)
-此示例演示[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)的属性[列](../../../ado/reference/adox-api/column-object-adox.md)。 该代码将重新定义的 FirstName 列的大小**员工**表的*Northwind*数据库。 然后，在名字的值更改[字段](../../../ado/reference/ado-api/field-object.md)的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)基于**员工**显示表。 请注意，默认情况下，名字字段将成为使用空格填充后您重新定义**DefinedSize**属性。  
+此示例演示[列](../../../ado/reference/adox-api/column-object-adox.md)的[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)属性。 该代码将重新定义*Northwind*数据库的**Employees**表的 FirstName 列的大小。 然后，将显示基于 " **Employees** " 表的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的 "名字"[字段](../../../ado/reference/ado-api/field-object.md)值的更改。 请注意，在您重新定义**DefinedSize**属性后，默认情况下，FirstName 字段会用空格填充。  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -149,7 +149,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in DefinedSizeX...." << endl;  
+      cout << "Error occurred in DefinedSizeX...." << endl;  
    }  
   
    if (m_pRstEmployees)  
@@ -162,6 +162,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [列对象（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize 属性 (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

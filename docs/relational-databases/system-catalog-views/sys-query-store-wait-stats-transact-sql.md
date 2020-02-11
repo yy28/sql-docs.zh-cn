@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6bff80fbe2b5022e12eca58de42192a3a1bb18d1
-ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74190374"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats （Transact-sql）
@@ -54,10 +54,10 @@ ms.locfileid: "74190374"
   
 |整数值|等待类别|等待类型包括在类别中|  
 |-----------------|---------------|-----------------|  
-|**0**|**未知**|Unknown |  
-|**2**|**CPU**|SOS_SCHEDULER_YIELD|
-|**pps-2**|**工作线程**|THREADPOOL|
-|**三维空间**|**Lock**|LCK_M_%|
+|**0**|**未知**|未知 |  
+|**1**|**CPU**|SOS_SCHEDULER_YIELD|
+|**2**|**工作线程**|THREADPOOL|
+|**3**|**住**|LCK_M_%|
 |**4**|**曾**|LATCH_%|
 |**5**|**缓冲区闩锁**|PAGELATCH_%|
 |**6**|**缓冲区 IO**|PAGEIOLATCH_%|
@@ -65,18 +65,18 @@ ms.locfileid: "74190374"
 |**8**|**SQL CLR**|CLR%，SQLCLR%|
 |**900**|**镜像**|DBMIRROR%|
 |**万**|**事务所**|事务%，DTC%，TRAN_MARKLATCH_%，MSQL_XACT_%，TRANSACTION_MUTEX|
-|**11**|**时间**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_队列，XE_TIMER_EVENT|
+|**11**|**空闲**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_队列，XE_TIMER_EVENT|
 |**12**|**预防**|PREEMPTIVE_%|
 |**9**|**Service Broker**|BROKER_% **（但不 BROKER_RECEIVE_WAITFOR）**|
 |**14**|**事务日志 IO**|数据库准备、LOGBUFFER、LOGMGR_RESERVE_APPEND、LOGMGR_FLUSH、LOGMGR_PMM_LOG、CHKPT.、WRITELOG|
 |**15**|**网络 IO**|ASYNC_NETWORK_IO、NET_WAITFOR_PACKET、PROXY_NETWORK_IO EXTERNAL_SCRIPT_NETWORK_IOF|
-|**16**|**度**|CXPACKET、EXCHANGE、HT%、BMP%、BP%|
-|**17**|**记忆**|RESOURCE_SEMAPHORE、CMEMTHREAD、CMEMPARTITIONED、EE_PMOLOCK、MEMORY_ALLOCATION_EXT、RESERVED_MEMORY_ALLOCATION_EXT、MEMORY_GRANT_UPDATE|
+|**16**|**并行度**|CXPACKET、EXCHANGE、HT%、BMP%、BP%|
+|**17**|**内存**|RESOURCE_SEMAPHORE、CMEMTHREAD、CMEMPARTITIONED、EE_PMOLOCK、MEMORY_ALLOCATION_EXT、RESERVED_MEMORY_ALLOCATION_EXT、MEMORY_GRANT_UPDATE|
 |**18**|**用户等待**|WAITFOR、WAIT_FOR_RESULTS、BROKER_RECEIVE_WAITFOR|
 |**19**|**跟踪**|TRACEWRITE、SQLTRACE_LOCK、SQLTRACE_FILE_BUFFER、SQLTRACE_FILE_WRITE_IO_COMPLETION、SQLTRACE_FILE_READ_IO_COMPLETION、SQLTRACE_PENDING_BUFFER_WRITERS、SQLTRACE_SHUTDOWN、QUERY_TRACEOUT、TRACE_EVTNOTIFF|
 |**0.2**|**全文搜索**|FT_RESTART_CRAWL、全文收集、MSSEARCH、FT_METADATA_MUTEX、FT_IFTSHC_MUTEX、FT_IFTSISM_MUTEX、FT_IFTS_RWLOCK、FT_COMPROWSET_RWLOCK、FT_MASTER_MERGE、FT_PROPERTYLIST_CACHE、FT_MASTER_MERGE_COORDINATOR、PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC|
 |**21**|**其他磁盘 IO**|ASYNC_IO_COMPLETION、IO_COMPLETION、BACKUPIO、WRITE_COMPLETION、IO_QUEUE_LIMIT、IO_RETRY|
-|**22**|**副本**|SE_REPL_%，REPL_%，HADR_% **（但不 HADR_THROTTLE_LOG_RATE_GOVERNOR）**，PWAIT_HADR_%，REPLICA_WRITES，FCB_REPLICA_WRITE，FCB_REPLICA_READ，PWAIT_HADRSIM|
+|**22**|**复制**|SE_REPL_%，REPL_%，HADR_% **（但不 HADR_THROTTLE_LOG_RATE_GOVERNOR）**，PWAIT_HADR_%，REPLICA_WRITES，FCB_REPLICA_WRITE，FCB_REPLICA_READ，PWAIT_HADRSIM|
 |**23**|**日志速率调控器**|LOG_RATE_GOVERNOR、POOL_LOG_RATE_GOVERNOR、HADR_THROTTLE_LOG_RATE_GOVERNOR INSTANCE_LOG_RATE_GOVERNOR|
 
 当前不支持**编译**等待类别。
@@ -93,6 +93,6 @@ ms.locfileid: "74190374"
 - [sys. query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
 - [sys. query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
 - [sys. query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
-- [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-- [查询存储存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+- [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  

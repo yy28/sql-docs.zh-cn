@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 88ed55a3c2890864e3e9623f3fa53ca3e747350c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: aca31d10c030c360dcd82d6c4851df700bc3c4fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536186"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74319052"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安装 SQL Server 的硬件和软件要求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "73536186"
 |.NET Framework|最低版本操作系统包括最低版本 .NET 框架。|  
 |网络软件|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 支持的操作系统具有内置网络软件。 独立安装项的命名实例和默认实例支持以下网络协议：共享内存、命名管道和 TCP/IP。<br/><br/> |  
 |硬盘|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 要求最少 6 GB 的可用硬盘空间。<br/><br/> 磁盘空间要求将随所安装的 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 组件不同而发生变化。 有关详细信息，请参阅本文后面部分的[硬盘空间要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) 。 有关支持的数据文件存储类型的信息，请参阅 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)。|  
-|监视器|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 要求有 Super-VGA (800x600) 或更高分辨率的显示器。|  
+|监视|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 要求有 Super-VGA (800x600) 或更高分辨率的显示器。|  
 |Internet|使用 Internet 功能需要连接 Internet（可能需要付费）。|  
 
 > [!NOTE]
@@ -100,8 +100,8 @@ ms.locfileid: "73536186"
   
 |组件|要求|  
 |---------------|-----------------|  
-|内存\*|**最低要求：**<br/><br/> Express Edition：512 MB<br/><br/> 所有其他版本：1 GB<br/><br/> **建议：**<br/><br/> Express Edition：1 GB<br/><br/> 所有其他版本：至少 4 GB，并且应随着数据库大小的增加而增加来确保最佳性能。|  
-|处理器速度|最低要求：x64 处理器：  1.4 GHz<br/><br/> **建议：** 2.0 GHz 或更快|  
+|内存\*|**最低要求：**<br/><br/> Express Edition：512 MB<br/><br/> 所有其他版本：1 GB<br/><br/> **推荐：**<br/><br/> Express Edition：1 GB<br/><br/> 所有其他版本：至少 4 GB，并且应随着数据库大小的增加而增加来确保最佳性能。|  
+|处理器速度|最低要求：x64 处理器：  1.4 GHz<br/><br/> **推荐：** 2.0 GHz 或更快|  
 |处理器类型|x64 处理器：AMD Opteron、AMD Athlon 64、支持 Intel EM64T 的 Intel Xeon，以及支持 EM64T 的 Intel Pentium IV|  
   
 > [!NOTE]  
@@ -126,14 +126,17 @@ ms.locfileid: "73536186"
 下表显示了与各版本的 Windows 兼容的 SQL Server 2019 版本：  
   
 
-| SQL Server 版本：               | Enterprise | Developer | Standard | Web | Express |  
-| :------------------------       | :--------- | :-------- | :------- | :-- | :------ | 
+| SQL Server 版本：               | Enterprise | 开发人员 | Standard | Web | Express |  
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2019 Standard      |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2019 Essentials    |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2016 Datacenter    |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2016 Standard      |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2016 Essentials    |    是     |    是    |    是   | 是 |   是   |
+| Windows 10 Enterprise             |    否      |    是    |    是   | 否  |   是   |
+| Windows 10 专业版           |    否      |    是    |    是   | 否  |   是   |
+| Windows 10 家庭版                   |    否      |    是    |    是   | 否  |   是   |
 | &nbsp; | &nbsp; |
 
 

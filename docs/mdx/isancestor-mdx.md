@@ -1,5 +1,5 @@
 ---
-title: IsAncestor (MDX) |Microsoft Docs
+title: IsAncestor （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5cc8352b0d087b54a623cce892a05dfed29258b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105263"
 ---
 # <a name="isancestor-mdx"></a>IsAncestor (MDX)
@@ -35,10 +35,10 @@ IsAncestor(Member_Expression1, Member_Expression2)
  返回成员的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **IsAncestor**函数将返回**true**如果指定的第一个成员是指定的第二个成员的祖先。 否则，该函数返回**false**。  
+ 如果指定的第一个成员是指定的第二个成员的上级，则**IsAncestor**函数返回**true** 。 否则，该函数返回**false**。  
   
 ## <a name="example"></a>示例  
- 下面的示例返回 **，则返回 true**如果 [Date]。 [会计]。CurrentMember 是 2003 年 1 月的祖先：  
+ 如果为 [Date]，以下示例将返回**true** 。[财政]。CurrentMember 是2003年1月的上级：  
   
  `WITH MEMBER MEASURES.ISANCESTORDEMO AS`  
   
@@ -50,8 +50,8 @@ IsAncestor(Member_Expression1, Member_Expression2)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>请参阅  
- [祖先&#40;MDX&#41;](../mdx/ancestor-mdx.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;MDX 的上级&#41;](../mdx/ancestor-mdx.md)   
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

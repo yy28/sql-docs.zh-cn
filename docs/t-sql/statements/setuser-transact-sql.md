@@ -21,10 +21,10 @@ ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 66830b3000d749ab17a5800c3450c5880c5d1aba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076437"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68076437"
 > [!IMPORTANT]  
 >  包含 SETUSER 只是为了保持向后兼容性。 在以后的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中可能不再支持 SETUSER。 建议改用 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,13 +45,13 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 ```  
   
 ## <a name="arguments"></a>参数  
- ' username '     
+ **'** *username* **'**  
  当前数据库中被模拟的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户名或 Windows 用户名。 如果未指定 username，将重置模拟用户的系统管理员或数据库所有者的原始标识。   
   
  WITH NORESET  
  指定后续 SETUSER 语句（没有指定的 username）不应将用户标识重置为系统管理员或数据库所有者。   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  为测试其他用户的权限，sysadmin 固定服务器角色的成员或数据库所有者可以使用 SETUSER 来使用另外一个用户的标识。  具有 db_owner 固定数据库角色中的成员身份还不够。  
   
  仅对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户使用 SETUSER。 不支持 Windows 用户使用 SETUSER。 如果使用 SETUSER 来模拟其他用户的标识，则进行模拟的用户创建的任何对象均由被模拟的用户所有。 例如，如果数据库所有者模拟了用户 Margaret 的标识并创建了一个名为 orders 的表，则 orders 表将归 Margaret 所有，而不归系统管理员所有。      

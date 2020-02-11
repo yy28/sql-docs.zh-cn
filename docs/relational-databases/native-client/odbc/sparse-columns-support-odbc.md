@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f5fa48a2ddeb884611b86387e1ea044cf865639
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760628"
 ---
 # <a name="sparse-columns-support-odbc"></a>稀疏列支持 (ODBC)
@@ -29,7 +29,7 @@ ms.locfileid: "73760628"
  新的实现行描述符（IRD）是一个名为 SQL_CA_SS_IS_COLUMN_SET 的只读 SQLSMALLINT 字段，可用于确定列是否为 XML **column_set**值。 SQL_CA_SS_IS_COLUMN_SET 接受值 SQL_TRUE 和 SQL_FALSE。  
   
 ## <a name="catalog-metadata"></a>目录元数据  
- 已将两个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定列（SS_IS_SPARSE 和 SS_IS_COLUMN_SET）添加到[SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)的结果集中。  
+ 已[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]将两个特定列（SS_IS_SPARSE 和 SS_IS_COLUMN_SET）添加到[SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)的结果集中。  
   
 ## <a name="odbc-function-support-for-sparse-columns"></a>对稀疏列的 ODBC 函数支持  
  以下 ODBC 函数已进行更新，以便在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中支持稀疏列：  
@@ -45,6 +45,6 @@ ms.locfileid: "73760628"
 -   [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

@@ -11,19 +11,20 @@ ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 415e20eb08041780b8d20fb124151cc700cacbe6
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728255"
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 开发人员文档
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  查找有关如何编写用于自定义您和您的用户如何与 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 交互的代码的信息。 了解如何操作：  
+  查找有关如何编写用于自定义您和您的用户如何与 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 交互的代码的信息。 了解如何：  
   
--   编写访问 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务的程序。 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务是一项 Windows Communication Foundation (WCF) 服务，开发人员使用此服务可通过代码控制 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能。  
+-   编写访问 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务的程序。 
+  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务是一项 Windows Communication Foundation (WCF) 服务，开发人员使用此服务可通过代码控制 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能。  
   
 -   将 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能合并到现有应用程序中。  
   
@@ -32,24 +33,29 @@ ms.locfileid: "73728255"
 -   创建为了响应您指定的业务规则而执行的自定义工作流。 自定义工作流将调用您编写的代码，此代码可以执行处理该工作流所需的任何操作。  
   
 ## <a name="master-data-manager-web-service"></a>主数据管理器 Web 服务  
- [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务可让您通过任何能访问 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 网站的计算机以编程方式使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的功能。 在开始编写访问 Web 服务的代码之前，必须先生成代理类，代理类包含在您指定的命名空间中。 本文档使用 <xref:Microsoft.MasterDataServices> 作为代理命名空间。 您用于执行 Web 服务操作的主代理类是 <xref:Microsoft.MasterDataServices.ServiceClient> 类，它可实现 <xref:Microsoft.MasterDataServices.IService> 接口。 通过您的代码，调用 <xref:Microsoft.MasterDataServices.ServiceClient> 类的方法以访问 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务。 命名空间中的类的其余部分供 Web 服务操作使用。  
+ 
+  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务可让您通过任何能访问 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 网站的计算机以编程方式使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的功能。 在开始编写访问 Web 服务的代码之前，必须先生成代理类，代理类包含在您指定的命名空间中。 本文档使用 <xref:Microsoft.MasterDataServices> 作为代理命名空间。 您用于执行 Web 服务操作的主代理类是 <xref:Microsoft.MasterDataServices.ServiceClient> 类，它可实现 <xref:Microsoft.MasterDataServices.IService> 接口。 通过您的代码，调用 <xref:Microsoft.MasterDataServices.ServiceClient> 类的方法以访问 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务。 命名空间中的类的其余部分供 Web 服务操作使用。  
   
 ### <a name="web-service-content"></a>Web 服务内容  
  [创建主数据管理器 Web 服务代理类](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)  
  描述如何从[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]网站启用元数据发布，以及如何创建可用于以编程方式访问 Web 服务操作的代理类。  
   
  [分类的 Web 服务操作 &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
- <xref:Microsoft.MasterDataServices.ServiceClient> 类的 Web 服务操作的分类列表。  
+ 
+  <xref:Microsoft.MasterDataServices.ServiceClient> 类的 Web 服务操作的分类列表。  
   
 ## <a name="custom-workflows"></a>自定义工作流  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用业务规则来创建基本工作流解决方案。 您可以自动更新和验证数据，并可根据指定的条件发送电子邮件通知。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中的业务规则旨在管理最常见的工作流方案。 如果您的工作流需要更复杂的事件处理（如多层审核或复杂决策树），则可配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 将数据发送到您创建的自定义程序集。 若要处理自定义工作流，您必须在 Web 应用程序计算机上配置并启动 SQL Server MDS Workflow Integration Service，并创建用于实现 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 接口的程序集。  
+ 
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用业务规则来创建基本工作流解决方案。 您可以自动更新和验证数据，并可根据指定的条件发送电子邮件通知。 
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中的业务规则旨在管理最常见的工作流方案。 如果您的工作流需要更复杂的事件处理（如多层审核或复杂决策树），则可配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 将数据发送到您创建的自定义程序集。 若要处理自定义工作流，您必须在 Web 应用程序计算机上配置并启动 SQL Server MDS Workflow Integration Service，并创建用于实现 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 接口的程序集。  
   
 ### <a name="custom-workflow-content"></a>自定义工作流内容  
- [创建自定义工作流 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
+ [Master Data Services 创建自定义工作流 &#40;&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
  有关如何创建工作流处理程序程序集、如何配置和启动 SQL Server MDS Workflow Integration Service 以及如何在启动自定义工作流的[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]中创建业务规则的说明。  
   
 ## <a name="web-server-namespaces"></a>Web 服务命名空间  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 在 Web 服务器计算机上安装一组程序集。 这些程序集包含可用于高级方案（用于自定义 Web 服务器计算机的行为）的命名空间。 下表介绍了这些命名空间。  
+ 
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 在 Web 服务器计算机上安装一组程序集。 这些程序集包含可用于高级方案（用于自定义 Web 服务器计算机的行为）的命名空间。 下表介绍了这些命名空间。  
   
 |命名空间|说明|  
 |---------------|-----------------|  

@@ -21,10 +21,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165917"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance （Transact-sql）
@@ -33,26 +33,26 @@ ms.locfileid: "74165917"
 
 返回当前数据库或弹性池中的资源调控机制所使用的实际配置和容量设置。
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|database_id|smallint|数据库的 ID，在 Azure SQL 数据库服务器中是唯一的。|
+|database_id |int|数据库的 ID，在 Azure SQL 数据库服务器中是唯一的。|
 |**logical_database_guid**|uniqueidentifier|用户数据库的逻辑 GUID，用于保持用户数据库的使用。  重命名数据库或更改其服务级别目标将不会更改此值。|
 |**physical_database_guid**|uniqueidentifier|用户数据库的物理 GUID，该 GUID 贯穿用户数据库的物理实例。 更改数据库服务级别目标将导致此值更改。|
-|server_name|nvarchar|逻辑服务器名称。|
+|server_name |nvarchar|逻辑服务器名称。|
 |**database_name**|nvarchar|逻辑数据库名称。|
 |**slo_name**|nvarchar|服务级别目标，包括硬件生成。|
-|**dtu_limit**|smallint|数据库的 DTU 限制（对于 vCore 为 NULL）。|
-|**cpu_limit**|smallint|数据库的 vCore 限制（DTU 数据库为 NULL）。|
+|**dtu_limit**|int|数据库的 DTU 限制（对于 vCore 为 NULL）。|
+|**cpu_limit**|int|数据库的 vCore 限制（DTU 数据库为 NULL）。|
 |**min_cpu**|tinyint|用户工作负荷资源池的 MIN_CPU_PERCENT 值。 请参阅[资源池概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
 |**max_cpu**|tinyint|用户工作负荷资源池的 MAX_CPU_PERCENT 值。 请参阅[资源池概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
 |**cap_cpu**|tinyint|用户工作负荷资源池的 CAP_CPU_PERCENT 值。 请参阅[资源池概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
-|**min_cores**|int|仅限内部使用。|
-|**max_dop**|int|用户工作负荷组的 MAX_DOP 值。 请参阅[创建工作负荷组](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)。|
-|**min_memory**|smallint|用户工作负荷资源池的 MIN_MEMORY_PERCENT 值。 请参阅[资源池概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
-|**max_memory**|smallint|用户工作负荷资源池的 MAX_MEMORY_PERCENT 值。 请参阅[资源池概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
-|**max_sessions**|smallint|用户工作负荷组中允许的最大会话数。|
-|**max_memory_grant**|smallint|用户工作负荷组的 REQUEST_MAX_MEMORY_GRANT_PERCENT 值。 请参阅[创建工作负荷组](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)。|
-|**max_db_memory**|smallint|仅限内部使用。|
+|**min_cores**|smallint|仅限内部使用。|
+|**max_dop**|smallint|用户工作负荷组的 MAX_DOP 值。 请参阅[创建工作负荷组](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)。|
+|**min_memory**|int|用户工作负荷资源池的 MIN_MEMORY_PERCENT 值。 请参阅[资源池概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
+|**max_memory**|int|用户工作负荷资源池的 MAX_MEMORY_PERCENT 值。 请参阅[资源池概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
+|**max_sessions**|int|用户工作负荷组中允许的最大会话数。|
+|**max_memory_grant**|int|用户工作负荷组的 REQUEST_MAX_MEMORY_GRANT_PERCENT 值。 请参阅[创建工作负荷组](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)。|
+|**max_db_memory**|int|仅限内部使用。|
 |**govern_background_io**|bit|仅限内部使用。|
 |**min_db_max_size_in_mb**|bigint|数据文件的最小 max_size 值（以 MB 为单位）。 请参阅[database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
 |**max_db_max_size_in_mb**|bigint|数据文件的最大 max_size 值（以 MB 为单位）。 请参阅[database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
@@ -60,41 +60,41 @@ ms.locfileid: "74165917"
 |**db_file_growth_in_mb**|bigint|数据文件的默认增长增量（以 MB 为单位）。 请参阅[database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
 |**initial_db_file_size_in_mb**|bigint|新数据文件的默认大小，以 MB 为单位。 请参阅[database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
 |**log_size_in_mb**|bigint|新日志文件的默认大小，以 MB 为单位。 请参阅[database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
-|**instance_cap_cpu**|smallint|仅限内部使用。|
-|**instance_max_log_rate**|bigint|SQL Server 实例的日志生成速率限制（以字节/秒为单位）。 适用于实例生成的所有日志，包括 `tempdb` 和其他系统数据库。 在弹性池中，适用于池中所有数据库生成的日志。|
-|**instance_max_worker_threads**|smallint|SQL Server 实例的工作线程限制。|
-|**replica_type**|smallint|副本类型，其中0是主要副本，1为辅助副本。|
+|**instance_cap_cpu**|int|仅限内部使用。|
+|**instance_max_log_rate**|bigint|SQL Server 实例的日志生成速率限制（以字节/秒为单位）。 适用于由实例生成的所有日志，包括`tempdb`和其他系统数据库。 在弹性池中，适用于池中所有数据库生成的日志。|
+|**instance_max_worker_threads**|int|SQL Server 实例的工作线程限制。|
+|**replica_type**|int|副本类型，其中0是主要副本，1为辅助副本。|
 |**max_transaction_size**|bigint|任何事务使用的最大日志空间，以 KB 为单位。|
-|**checkpoint_rate_mbps**|smallint|仅限内部使用。|
-|**checkpoint_rate_io**|smallint|仅限内部使用。|
-|**last_updated_date_utc**|DATETIME|上次更改或重新配置的日期和时间（UTC）。|
-|**primary_group_id**|smallint|主副本和辅助副本上的用户工作负荷的工作负荷组 ID。|
-|**primary_group_max_workers**|smallint|用户工作负荷组的工作线程限制。|
+|**checkpoint_rate_mbps**|int|仅限内部使用。|
+|**checkpoint_rate_io**|int|仅限内部使用。|
+|**last_updated_date_utc**|datetime|上次更改或重新配置的日期和时间（UTC）。|
+|**primary_group_id**|int|主副本和辅助副本上的用户工作负荷的工作负荷组 ID。|
+|**primary_group_max_workers**|int|用户工作负荷组的工作线程限制。|
 |**primary_min_log_rate**|bigint|用户工作负荷组级别的最小日志速率（字节/秒）。 资源调控不会尝试将对数速率降低到此值以下。|
 |**primary_max_log_rate**|bigint|用户工作负荷组级别的最大对数速率（字节/秒）。 资源调控不允许高于此值的日志速率。|
-|**primary_group_min_io**|smallint|用户工作负荷组的最小 IOPS。 资源调控不会尝试降低低于此值的 IOPS。|
-|**primary_group_max_io**|smallint|用户工作负荷组的最大 IOPS。 资源调控不允许高于此值的 IOPS。|
-|**primary_group_min_cpu**|Float|用户工作负荷组级别的最小 CPU 百分比。 资源调控不会尝试降低低于此值的 CPU 利用率。|
-|**primary_group_max_cpu**|Float|用户工作负荷组级别的最大 CPU 百分比。 资源调控不会允许 CPU 利用率高于此值。|
-|**primary_log_commit_fee**|smallint|用户工作负荷组的日志费率调控提交费用（以字节为单位）。 提交费用会按固定值增加每个日志 IO 的大小，以仅用于日志速率记帐。 不会增加实际的日志 IO 到存储。|
-|**primary_pool_max_workers**|smallint|用户工作负荷资源池的工作线程限制。|
-|**pool_max_io**|smallint|用户工作负荷资源池的最大 IOPS 限制。|
+|**primary_group_min_io**|int|用户工作负荷组的最小 IOPS。 资源调控不会尝试降低低于此值的 IOPS。|
+|**primary_group_max_io**|int|用户工作负荷组的最大 IOPS。 资源调控不允许高于此值的 IOPS。|
+|**primary_group_min_cpu**|FLOAT|用户工作负荷组级别的最小 CPU 百分比。 资源调控不会尝试降低低于此值的 CPU 利用率。|
+|**primary_group_max_cpu**|FLOAT|用户工作负荷组级别的最大 CPU 百分比。 资源调控不会允许 CPU 利用率高于此值。|
+|**primary_log_commit_fee**|int|用户工作负荷组的日志费率调控提交费用（以字节为单位）。 提交费用会按固定值增加每个日志 IO 的大小，以仅用于日志速率记帐。 不会增加实际的日志 IO 到存储。|
+|**primary_pool_max_workers**|int|用户工作负荷资源池的工作线程限制。|
+|**pool_max_io**|int|用户工作负荷资源池的最大 IOPS 限制。|
 |**govern_db_memory_in_resource_pool**|bit|仅限内部使用。|
-|**volume_local_iops**|smallint|仅限内部使用。|
-|**volume_managed_xstore_iops**|smallint|仅限内部使用。|
-|**volume_external_xstore_iops**|smallint|仅限内部使用。|
-|**volume_type_local_iops**|smallint|仅限内部使用。|
-|**volume_type_managed_xstore_iops**|smallint|仅限内部使用。|
-|**volume_type_external_xstore_iops**|smallint|仅限内部使用。|
-|**volume_pfs_iops**|smallint|仅限内部使用。|
-|**volume_type_pfs_iops**|smallint|仅限内部使用。|
+|**volume_local_iops**|int|仅限内部使用。|
+|**volume_managed_xstore_iops**|int|仅限内部使用。|
+|**volume_external_xstore_iops**|int|仅限内部使用。|
+|**volume_type_local_iops**|int|仅限内部使用。|
+|**volume_type_managed_xstore_iops**|int|仅限内部使用。|
+|**volume_type_external_xstore_iops**|int|仅限内部使用。|
+|**volume_pfs_iops**|int|仅限内部使用。|
+|**volume_type_pfs_iops**|int|仅限内部使用。|
 |||
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 此视图需要拥有 VIEW DATABASE STATE 权限。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 有关 Azure SQL 数据库中资源调控的说明，请参阅[SQL 数据库资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server)。
 
@@ -117,11 +117,11 @@ ORDER BY database_name;
 
 ## <a name="see-also"></a>另请参阅
 
-- [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
-- [sys. dm_resource_governor_resource_pools （Transact-sql）](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)
-- [sys. dm_resource_governor_workload_groups （Transact-sql）](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
+- [资源调控器](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
+- [sys.dm_resource_governor_resource_pools (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)
+- [sys.dm_resource_governor_workload_groups (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
 - [sys. dm_resource_governor_resource_pools_history_ex （Transact-sql）](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database)
-- [sys. dm_resource_governor_workload_groups_history_ex （Azure SQL Database）](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
+- [sys.dm_resource_governor_workload_groups_history_ex（Azure SQL 数据库）](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
 - [事务日志速率管理](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [单个数据库 DTU 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
 - [单一数据库 vCore 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

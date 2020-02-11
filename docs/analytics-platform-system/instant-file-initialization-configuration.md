@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 83ed373fd4fdd38ae5ddd391678b74e3d2e168c9
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401116"
 ---
 # <a name="instant-file-initialization-configuration"></a>即时文件初始化配置
@@ -48,7 +48,7 @@ ms.locfileid: "74401116"
     > [!WARNING]  
     > 关闭即时文件初始化时，上述功能的安全注意事项可能仍适用于启用即时文件初始化时删除的文件。  
   
-4.  单击 **“应用”**。 此更改将在下一次重新启动设备服务时，传播 SQL Server PDW 上的 SQL Server 实例。 若要立即重新启动设备服务，请参阅[PDW 服务状态 &#40;分析平台系统&#41;](pdw-services-status.md)。  
+4.  单击“应用”  。 此更改将在下一次重新启动设备服务时，传播 SQL Server PDW 上的 SQL Server 实例。 若要立即重新启动设备服务，请参阅[PDW 服务状态 &#40;分析平台系统&#41;](pdw-services-status.md)。  
   
 5.  你可能需要重复上述步骤以**添加备份帐户的权限**，以删除 "**执行卷维护任务**" 权限。  
   

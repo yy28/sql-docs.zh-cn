@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f0d51123d4ef5b17ad69dc8623a586058e27e212
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897534"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp;（逻辑与）（SSIS 表达式）
@@ -46,9 +46,9 @@ boolean_expression1 && boolean_expression2
 |TRUE|TRUE|TRUE|  
 |FALSE|TRUE|FALSE|  
 |FALSE|FALSE|FALSE|  
-|NULL|NULL|NULL|  
-|NULL|NULL|TRUE|  
-|FALSE|NULL|FALSE|  
+|Null|Null|Null|  
+|Null|Null|TRUE|  
+|FALSE|Null|FALSE|  
   
 ## <a name="expression-examples"></a>表达式示例  
  该示例使用 **StandardCost** 和 **ListPrice** 列。 如果 **StandardCost** 列的值小于 300，并且 **ListPrice** 列的值大于 500，则该示例计算结果为 TRUE。  
@@ -63,7 +63,7 @@ StandardCost < 300 && ListPrice > 500
 StandardCost < @SPrice && ListPrice > @LPrice  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [&（位与）（SSIS 表达式）](bitwise-and-ssis-expression.md)   
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
  [运算符（SSIS 表达式）](operators-ssis-expression.md)  

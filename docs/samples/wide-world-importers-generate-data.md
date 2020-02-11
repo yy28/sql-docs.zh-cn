@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 0f880ea881b53c2600fb1fffdf7da5d16ab8d423
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056284"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 数据生成
@@ -40,7 +40,7 @@ WideWorldImporters 和 WideWorldImportersDW 数据库的已发布版本具有从
 
     此语句将示例销售和采购数据添加到数据库中，直到达到当前日期。 它按天显示数据生成的进度。 每年需要数据的数据生成可能需要大约10分钟。 由于数据生成的随机因素，在运行之间生成的数据存在一些差异。
 
-    若要增加或减少每天生成的订单数，请更改参数 `@AverageNumberOfCustomerOrdersPerDay`的值。 使用参数 `@SaturdayPercentageOfNormalWorkDay` 和 `@SundayPercentageOfNormalWorkDay` 确定周末的订单量。
+    若要增加或减少每天生成的订单数，请更改参数`@AverageNumberOfCustomerOrdersPerDay`的值。 使用参数`@SaturdayPercentageOfNormalWorkDay`和`@SundayPercentageOfNormalWorkDay`来确定周末的订单量。
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>导入在 WideWorldImportersDW 中生成的数据
 
@@ -62,20 +62,20 @@ WideWorldImportersDW 可以任意增加用于性能测试的数据大小。 例�
 
 其中一项难题是将下载内容的大小保持在足够小，以方便地下载，但足以演示 SQL Server 性能功能。 例如，仅当使用较大的行时，才会实现列存储索引的重要优势。 
 
-您可以使用 `Application.Configuration_PopulateLargeSaleTable` 过程来增加 `Fact.Sale` 表中的行数。 行将在2012日历年中插入，以避免与开始2013年1月1日起的现有世界范围导入程序数据发生冲突。
+您可以使用此`Application.Configuration_PopulateLargeSaleTable`过程来增加`Fact.Sale`表中的行数。 行将在2012日历年中插入，以避免与开始2013年1月1日起的现有世界范围导入程序数据发生冲突。
 
 ### <a name="procedure-details"></a>过程详细信息
 
-#### <a name="name"></a>NAME
+#### <a name="name"></a>名称
 
     Application.Configuration_PopulateLargeSaleTable
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-  `@EstimatedRowsFor2012` **bigint** （默认值为12000000）
+  `@EstimatedRowsFor2012`**bigint** （默认值为12000000）
 
 #### <a name="result"></a>结果
 
-在2012年中，大约将所需的行数插入到 `Fact.Sale` 表中。 过程人为每天将行数限制为50000。 您可以更改此限制，但该限制有助于避免意外的表 overinflations。
+在2012年中，大约将所需的`Fact.Sale`行数插入表中。 过程人为每天将行数限制为50000。 您可以更改此限制，但该限制有助于避免意外的表 overinflations。
 
 此过程还会应用聚集列存储索引（如果尚未应用）。

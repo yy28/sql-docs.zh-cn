@@ -1,5 +1,5 @@
-- name: SQL Server 2014 联机丛书
-  href: books-online-for-sql-server-2014.md
+- name: SQL Server 2014 文档
+  href: index.yml
 - name: Analysis Services +
   href: ../analysis-services/analysis-services.md
 - name: Data Quality Services +
@@ -20,7 +20,7 @@
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: SQL Server 2014 教程 +
   href: ../tutorials/tutorials-for-sql-server-2014.md
-- name: 词汇表
+- name: 术语表
   href: glossary.md
 - name: SQL Server 2014 中的新增功能 +
   href: ../sql-server/what-s-new-in-sql-server-2016.md

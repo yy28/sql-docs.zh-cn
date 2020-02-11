@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: be80af34bc2dc8b5d069406bc13a8f8f9b25c42c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829458"
 ---
 # <a name="update-statistics-task"></a>“更新统计信息”任务
-  “更新统计信息”任务为指定的表或索引视图中的一个或多个统计信息组（集合）更新键值分布信息。 有关更多信息，请参见 [Statistics](../../relational-databases/statistics/statistics.md)。  
+  “更新统计信息”任务为指定的表或索引视图中的一个或多个统计信息组（集合）更新键值分布信息。 有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
   
  通过使用“更新统计信息”任务，包可以为单个数据库或多个数据库更新统计信息。 如果此任务仅更新单个数据库中的统计信息，则可以选择任务要为其更新统计信息的视图或表。 可以配置更新来更新所有统计信息、仅更新列统计信息或仅更新索引统计信息。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62829458"
   
 -   [设置任务或容器的属性](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](integration-services-tasks.md)   
  [控制流](control-flow.md)  
   

@@ -18,15 +18,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7c9d57b73cb2153a43fee4087459bdd005e3fb26
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73788959"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行集和 SQL Server 游标
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用两种方法将结果集返回到使用者：  
   
 -   默认结果集，它可以：  
@@ -59,24 +60,24 @@ ms.locfileid: "73788959"
   
     -   不支持任何返回多个结果集的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
- 通过设置某些行集属性，使用者可以请求行集中的其他游标行为。 如果使用者未设置这些行集属性中的任何一个，或将它们全部设置为其默认值，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用默认结果集实现行集。 如果这些属性中的任何一个设置为默认值以外的值，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将使用服务器游标实现行集。  
+ 通过设置某些行集属性，使用者可以请求行集中的其他游标行为。 如果使用者未设置这些行集属性中的任何一个，或将它们全部设置为其默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]值，则 Native Client OLE DB 提供程序使用默认结果集实现行集。 如果将这些属性中的任何一个设置为默认值以外的值，则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将使用服务器游标实现行集。  
   
  以下行集属性指引 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 游标。 某些属性可以安全地与其他属性组合。 例如，展示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 属性的行集将是展示立即更新行为的书签行集。 其他属性相互排斥。 例如，展示 DBPROP_OTHERINSERT 的行集不能包含书签。  
   
-|属性 ID|“值”|行集行为|  
+|属性 ID|值|行集行为|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集是有顺序的，只支持向前滚动和提取。 支持相对行定位。 命令文本可以包含 ORDER BY 子句。|  
 |DBPROP_CANSCROLLBACKWARDS 或 DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集支持双向滚动和提取。 支持相对行定位。 命令文本可以包含 ORDER BY 子句。|  
 |DBPROP_BOOKMARKS 或 DBPROP_LITERALBOOKMARKS|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集是有顺序的，只支持向前滚动和提取。 支持相对行定位。 命令文本可以包含 ORDER BY 子句。|  
 |DBPROP_OWNUPDATEDELETE 或 DBPROP_OWNINSERT 或 DBPROP_OTHERUPDATEDELETE|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集支持双向滚动和提取。 支持相对行定位。 命令文本可以包含 ORDER BY 子句。|  
 |DBPROP_OTHERINSERT|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集支持双向滚动和提取。 支持相对行定位。 如果针对被引用的列存在索引，则命令文本可以包括 ORDER BY 子句。<br /><br /> 如果行集包含书签，则 DBPROP_OTHERINSERT 不能是 VARIANT_TRUE。 如果试图创建具有该可视性属性和书签的行集，将导致错误。|  
-|DBPROP_IRowsetLocate 或 DBPROP_IRowsetScroll|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集支持双向滚动和提取。 支持在行集中通过 IRowsetLocate 接口执行书签操作和绝对定位。 命令文本可以包含 ORDER BY 子句。<br /><br /> DBPROP_IRowsetLocate 和 DBPROP_IRowsetScroll 需要行集中有书签。 如果试图创建具有书签并将 DBPROP_OTHERINSERT 设置为 VARIANT_TRUE 的行集，将导致错误。|  
+|DBPROP_IRowsetLocate 或 DBPROP_IRowsetScroll|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集支持双向滚动和提取。 支持在行集中通过 IRowsetLocate 接口执行书签操作和绝对定位****。 命令文本可以包含 ORDER BY 子句。<br /><br /> DBPROP_IRowsetLocate 和 DBPROP_IRowsetScroll 需要行集中有书签。 如果试图创建具有书签并将 DBPROP_OTHERINSERT 设置为 VARIANT_TRUE 的行集，将导致错误。|  
 |DBPROP_IRowsetChange 或 DBPROP_IRowsetUpdate|VARIANT_TRUE|可以通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集是有顺序的，只支持向前滚动和提取。 支持相对行定位。 支持可更新游标的所有命令都可以支持这些接口。|  
-|DBPROP_IRowsetLocate 或 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 或 DBPROP_IRowsetUpdate|VARIANT_TRUE|可以通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集支持双向滚动和提取。 支持在行集中通过 IRowsetLocate 执行书签操作和绝对定位。 命令文本可以包含 ORDER BY 子句。|  
+|DBPROP_IRowsetLocate 或 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 或 DBPROP_IRowsetUpdate|VARIANT_TRUE|可以通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集支持双向滚动和提取。 支持在行集中通过 IRowsetLocate 执行书签操作和绝对定位****。 命令文本可以包含 ORDER BY 子句。|  
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集只支持向前滚动。 支持相对行定位。 如果针对被引用的列存在索引，则命令文本可以包括 ORDER BY 子句。<br /><br /> DBPROP_IMMOBILEROWS 仅在可以显示由其他会话的命令或由其他用户插入的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行的行集中可用。 如果试图在其 DBPROP_OTHERINSERT 不能是 VARIANT_TRUE 的任何行集上打开一个该属性设置为 VARIANT_FALSE 的行集，将导致错误。|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集只支持向前滚动。 支持相对行定位。 除非受另一个属性约束，否则命令文本可以包含 ORDER BY 子句。|  
   
- 服务器游标支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序行集可通过使用**IOpenRowset：： OpenRowset**方法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基表或视图上轻松创建。 按名称指定表或视图，同时在 rgPropertySets 参数中传递所需的行集属性集。  
+ 可以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **IOpenRowset：： OpenRowset**方法，在基础表或视图上轻松创建服务器游标支持的 Native Client OLE DB 提供程序行集。 按名称指定表或视图，同时在 rgPropertySets 参数中传递所需的行集属性集**。  
   
  当使用者需要服务器游标支持行集时，创建行集的命令文本将受到限制。 具体来说，命令文本只能是返回单个行集结果的单个 SELECT 语句，或实现返回单个行集结果的单个 SELECT 语句的存储过程。  
   
@@ -88,11 +89,12 @@ ms.locfileid: "73788959"
   
  T = VARIANT_TRUE  
   
- \- = VARIANT_TRUE 或 VARIANT_FALSE  
+ 
+  \- = VARIANT_TRUE 或 VARIANT_FALSE  
   
  若要使用某一类型的游标模型，请找到对应于该游标模型的列，并查找在此列中值为“T”的所有行集属性。 将这些行集属性设置为 VARIANT_TRUE 即可使用特定游标模型。 可以将值为“-”的行集属性设置为 VARIANT_TRUE 或 VARIANT_FALSE。  
   
-|行集属性/游标模型|默认<br /><br /> result<br /><br /> 集<br /><br /> (RO)|Fast<br /><br /> 只<br /><br /> 进<br /><br /> (RO)|静态<br /><br /> (RO)|Keyset<br /><br /> 驱动<br /><br /> (RO)|  
+|行集属性/游标模型|默认<br /><br /> 结果<br /><br /> set<br /><br /> (RO)|Fast<br /><br /> 只<br /><br /> 进<br /><br /> (RO)|静态<br /><br /> (RO)|Keyset<br /><br /> 驱动 <br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -147,9 +149,9 @@ ms.locfileid: "73788959"
  从这组指定的行集属性，获得在以前的表中列出的属性的子集。 根据每个行集属性的必需（T、F）或可选 (-) 标志值，将这些属性划分到两个子组中。 对于每个游标模型，从第一个表开始，并从左向右移动，将两个子组中属性的值与相应列中相应属性的值进行比较。 将选择与必需的属性完全匹配以及与可选的属性有最少不匹配数的游标模型。 如果有多个游标模型，则选择最左侧的游标模型。  
   
 ## <a name="sql-server-cursor-block-size"></a>SQL Server 游标块大小  
- 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 游标支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序行集时， **IRowset：： GetNextRows**或**IRowsetLocate：： GetRowsAt**方法的行句柄数组参数中的元素数目将定义游标块大小。 该数组中的控点指示的行是游标块的成员。  
+ 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]游标支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序行集时， **IRowset：： GetNextRows**或**IRowsetLocate：： GetRowsAt**方法的行句柄数组参数中的元素数目将定义游标块大小。 该数组中的控点指示的行是游标块的成员。  
   
- 对于支持书签的行集，游标块的成员由通过 IRowsetLocate::GetRowsByBookmark 方法检索到的行控点进行定义。  
+ 对于支持书签的行集，游标块的成员由通过 IRowsetLocate::GetRowsByBookmark 方法检索到的行控点进行定义****。  
   
  不管使用什么方法填充行集和形成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 游标块，游标块都会处于活动状态，直至对行集执行下一个行提取方法。  
   

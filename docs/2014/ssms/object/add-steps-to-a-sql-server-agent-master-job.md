@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 18c4af67230726d831c2c192a782135f9afe3743
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188313"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
@@ -39,9 +39,9 @@ ms.locfileid: "68188313"
 ###  <a name="Restrictions"></a> 限制和局限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理主作业不能同时把本地服务器和远程服务器作为目标。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  除非您是 **sysadmin** 固定服务器角色的成员，否则您只能修改自己拥有的作业。 有关详细信息，请参阅[实现 SQL Server 代理安全性](../agent/implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -56,7 +56,7 @@ ms.locfileid: "68188313"
   
 4.  右键单击要向其添加步骤的作业，然后选择“属性”  。  
   
-5.  在“作业属性 - job_name”  对话框中的“选择页”下，选择“步骤”    。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新建作业&#40;步骤页&#41;](../agent/job-properties-new-job-steps-page.md)。  
+5.  在“作业属性 - job_name”  对话框中的“选择页”下，选择“步骤”    。 有关此页上可用选项的详细信息，请参阅[作业属性：新建作业 &#40;步骤页&#41;](../agent/job-properties-new-job-steps-page.md)。  
 
 6.  完成后，单击 **“确定”** 。  
   
@@ -86,6 +86,6 @@ ms.locfileid: "68188313"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_jobstep ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
   

@@ -18,15 +18,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9859db8e22110e228386dfe23f94341ab1f7be15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68062553"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  对于字符数据字段，可选的终止字符允许在数据文件中使用“字段终止符”  标记每个字段的结尾，以及使用“行终止符” 标记每行的结尾。 终止字符是为读取数据文件的程序指明一个字段或行的结束位置和另一个字段或行的开始位置的一种方式。  
+  对于字符数据字段，可选的终止字符允许在数据文件中使用“字段终止符”  标记每个字段的结尾，以及使用“行终止符”  标记每行的结尾。 终止字符是为读取数据文件的程序指明一个字段或行的结束位置和另一个字段或行的开始位置的一种方式。  
   
 > [!IMPORTANT]
 >  使用本机格式或 Unicode 本机格式时，请使用长度前缀而不要使用字段终止符。 本机格式数据可能与终止符冲突，因为本机格式的数据文件是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部二进制数据格式存储的。  
@@ -74,7 +74,7 @@ ms.locfileid: "68062553"
         > [!NOTE]  
         >  如果指定了 **-n** （本机数据）或 **-N** （Unicode 本机）开关，则不会插入终止符。  
   
-    -   如果交互 **bcp** 命令包含 **in** 或 **out** 选项，而不包含格式化文件开关 (**-f**) 或数据格式开关（**-n**、 **-c**、 **-w**或 **-N**），并且选择不指定前缀长度和字段长度，则每个字段的字段终止符的命令提示符默认为无：  
+    -   如果交互 **bcp** 命令包含 **in** 或 **out** 选项，而不包含格式化文件开关 ( **-f**) 或数据格式开关（ **-n**、 **-c**、 **-w**或 **-N**），并且选择不指定前缀长度和字段长度，则每个字段的字段终止符的命令提示符默认为无：  
   
          `Enter field terminator [none]:`  
   
@@ -107,7 +107,7 @@ bcp -r '0x0A'
   
  **bcp** 命令包含以下开关。  
   
-|开关|描述|  
+|开关|说明|  
 |------------|-----------------|  
 |**-c**|指定将数据字段作为字符数据加载。|  
 |**-t** `,`|指定逗号 (,) 作为字段终止符。|  
@@ -135,7 +135,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      使用下表中列出的限定符可以为格式化文件中的各个字段或为整个数据文件指定终止符。  
   
-    |Qualifier|描述|  
+    |Qualifier|说明|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***field_terminator***’**|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
     |ROWTERMINATOR **='***row_terminator***’**|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
@@ -186,8 +186,8 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |选项|Attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='** char **'**|指定将数据字段作为字符数据加载。|  
-|FIELDTERMINATOR **='**`,`**'**|将逗号 (`,`) 指定为字段终止符。|  
-|ROWTERMINATOR **='**`\n`**'**|指定行终止符作为换行符。|  
+|FIELDTERMINATOR **='** `,` **'**|将逗号 (`,`) 指定为字段终止符。|  
+|ROWTERMINATOR **='** `\n` **'**|指定行终止符作为换行符。|  
   
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中，执行以下代码：  
   
@@ -204,7 +204,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [使用 bcp 指定字段长度 (SQL Server)](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: Provider 和 DefaultDatabase 属性示例 (VB) |Microsoft Docs
+title: Provider 和 DefaultDatabase 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +16,17 @@ ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 46486167ab5e8bd1b063928d4ba3f6f73c893784
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931519"
 ---
-# <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 和 DefaultDatabase 属性示例 (VB)
-此示例演示[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)通过打开三个属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象使用不同的提供程序。 它还使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)属性将默认数据库设置为 Microsoft ODBC 提供程序。  
+# <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 和 DefaultDatabase 属性示例（VB）
+此示例通过使用不同的提供程序打开三个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象来演示[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)的属性。 它还使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)属性设置 Microsoft ODBC 提供程序的默认数据库。  
   
 > [!NOTE]
->  如果您要连接到的数据源提供程序支持 Windows 身份验证，则应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码在连接字符串中的信息。  
+>  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。  
   
 ```  
 'BeginProviderVB  
@@ -104,7 +104,7 @@ End Sub
 'EndProviderVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase 属性](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Provider 属性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

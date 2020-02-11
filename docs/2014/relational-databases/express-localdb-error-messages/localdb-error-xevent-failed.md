@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_XEVENT_FAILED | Microsoft Docs
+title: LOCALDB_ERROR_XEVENT_FAILED |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 63230e31a1e15e79d37df3b5c1bc66168b941ec2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714994"
 ---
-# <a name="localdberrorxeventfailed"></a>LOCALDB_ERROR_XEVENT_FAILED
+# <a name="localdb_error_xevent_failed"></a>LOCALDB_ERROR_XEVENT_FAILED
     
 ## <a name="details"></a>详细信息  
   
@@ -29,7 +29,7 @@ ms.locfileid: "62714994"
 |组件|本地数据库运行时 API|  
 |消息正文|无法启动本地数据库实例 API 内的 XEvent 引擎。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  无法启动 XEvent 引擎。  
   
 ## <a name="user-action"></a>用户操作  

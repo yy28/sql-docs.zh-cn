@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 58209d617d7978ff4ed6da486bd5c89c076c05af
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787414"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -31,16 +31,16 @@ ms.locfileid: "73787414"
   
  可以对静态服务器游标执行**SQLColumns** 。 尝试对可更新的（动态或键集）游标执行**SQLColumns**时，将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持链接服务器上的表的报告信息，方法是接受两部分名称的*CatalogName*参数： *Linked_Server_Name。 Catalog_Name*。  
+ Native Client ODBC 驱动程序通过接受由两部分组成的*CatalogName*参数的名称来支持链接服务器上表的报告信息： *Linked_Server_Name。 Catalog_Name。* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  对于 ODBC 2。*x*应用程序未在*TableName*中使用通配符， **SQLColumns**返回有关名称与*TableName*匹配并且由当前用户拥有的所有表的信息。 如果当前用户拥有的表的名称与*tablename*参数的名称匹配，则**SQLColumns**将返回其他用户所拥有的、表名称与*tablename*参数匹配的所有表的相关信息。 对于 ODBC 2。使用通配符的*x*应用程序， **SQLColumns**返回其名称与*TableName*匹配的所有表。 对于 ODBC 3。*x*应用程序**SQLColumns**返回其名称与*TableName*匹配的所有表，而不考虑所有者或是否使用通配符。  
   
  下表列出了结果集返回的列：  
   
-|列名|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |DATA_TYPE|为**VARCHAR （max）** 数据类型返回 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
-|TYPE_NAME|对于**varchar （max）** 、 **varbinary （max）** 和**nvarchar （max）** 数据类型，返回 "varchar"、"varbinary" 或 "nvarchar"。|  
+|TYPE_NAME|对于**varchar （max）**、 **varbinary （max）** 和**nvarchar （max）** 数据类型，返回 "varchar"、"varbinary" 或 "nvarchar"。|  
 |COLUMN_SIZE|对于**varchar （max）** 数据类型返回 SQL_SS_LENGTH_UNLIMITED，指示列的大小不受限制。|  
 |BUFFER_LENGTH|对于**varchar （max）** 数据类型返回 SQL_SS_LENGTH_UNLIMITED，指示缓冲区的大小不受限制。|  
 |SQL_DATA_TYPE|为**VARCHAR （max）** 数据类型返回 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
@@ -56,39 +56,39 @@ ms.locfileid: "73787414"
   
  对于 UDT 参数，您可以使用上面定义的特定于驱动程序的新描述符来获取或设置 UDT 的额外元数据数据，条件是服务器返回或需要此信息。  
   
- 当客户端连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并调用 SQLColumns 时，如果将 NULL 或通配符值用于目录输入参数，则不会返回其他目录中的信息。 而只返回有关当前目录的信息。 客户端可以首先调用 SQLTables 来确定所需的表所在的目录。 然后，客户端可以在其对 SQLColumns 的调用中使用目录输入参数的目录值来检索该表中的列的相关信息。  
+ 当客户端连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并调用 SQLColumns 时，对目录输入参数使用 NULL 或通配符值将不会返回其他目录中的信息。 而只返回有关当前目录的信息。 客户端可以首先调用 SQLTables 来确定所需的表所在的目录。 然后，客户端可以在其对 SQLColumns 的调用中使用目录输入参数的目录值来检索该表中的列的相关信息。  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns 和表值参数  
  SQLColumns 返回的结果集取决于 SQL_SOPT_SS_NAME_SCOPE 的设置。 有关详细信息，请参阅[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。 已针对表值参数添加以下列：  
   
-|列名|数据类型|内容|  
+|列名称|数据类型|目录|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|对于 TABLE_TYPE 中的列，如果该列是一个计算列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
 |SS_IS_IDENTITY|Smallint|如果该列为标识列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
   
- 有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有关表值参数的详细信息，请参阅[ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-enhanced-date-and-time-features"></a>SQLColumns 对日期和时间增强功能的支持  
  有关为日期/时间类型返回的值的信息，请参阅[目录元数据](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
   
- 有关详细信息，请参阅[日期和时间&#40;改进&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关详细信息，请参阅[ODBC&#41;&#40;日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>SQLColumns 对大型 CLR UDT 的支持  
- **SQLColumns**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[大型 CLR 用户定义类型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLColumns**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns 对稀疏列的支持  
- 已将两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定列添加到 SQLColumns 的结果集中：  
+ 已[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将两个特定列添加到 SQLColumns 的结果集中：  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|如果该列为稀疏列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
 |SS_IS_COLUMN_SET|**Smallint**|如果该列是**column_set**列，则 SQL_TRUE;否则，SQL_FALSE。|  
   
- 与 ODBC 规范一致，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 会出现在添加到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的所有特定于驱动程序的列之前以及 ODBC 本身所强制的所有列之后。  
+ 与 ODBC 规范一致，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 会出现在已添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的版本的所有驱动程序特定列之前以及 ODBC 本身所强制的所有列之后。  
   
  SQLColumns 返回的结果集取决于 SQL_SOPT_SS_NAME_SCOPE 的设置。 有关详细信息，请参阅[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
   
- 有关 ODBC 中稀疏列的详细信息，请参阅[稀疏列&#40;支持&#41;ODBC](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
+ 有关 ODBC 中稀疏列的详细信息，请参阅[稀疏列支持 &#40;odbc&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLColumns 函数](https://go.microsoft.com/fwlink/?LinkId=59336)   

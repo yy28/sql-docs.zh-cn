@@ -19,19 +19,19 @@ ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a480ba134a4f3049f7501cb68a0331ac8fdd386b
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095371"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]当前实例中的 SQL Server、全文、SQL Server Launchpad 服务（SQL Server 2017 +）和 SQL Server 代理服务的信息。 使用此动态管理视图可以报告有关这些服务的状态信息。  
+  返回有关当前实例中的 SQL Server、全文 SQL Server Launchpad 服务（SQL Server 2017 +）和 SQL Server 代理服务的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用此动态管理视图可以报告有关这些服务的状态信息。  
   
  
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、全文或 SQL Server 代理服务的名称。 不可为 null。|  
 |startup_type|**int**|指示服务的启动模式。 下面是可能的值及其相应的说明。<br /><br /> 0：其他<br />1：其他<br />2：自动<br />3：手动<br />4：已禁用<br /><br /> 可以为 Null。|  
@@ -42,15 +42,15 @@ ms.locfileid: "74095371"
 |last_startup_time|**datetimeoffset(7)**|上次启动服务的日期和时间。 可以为 Null。|  
 |service_account|**nvarchar(256)**|授权来控制服务的帐户。 此帐户可以启动或停止服务，或修改服务属性。 不可为 null。|  
 |filename|**nvarchar(256)**|服务可执行文件的路径和文件名。 不可为 null。|  
-|is_clustered|**nvarchar(1)**|指示服务是否作为群集服务器的资源安装。 不可为 null。|  
+|is_clustered|**nvarchar （1）**|指示服务是否作为群集服务器的资源安装。 不可为 null。|  
 |cluster_nodename|**nvarchar(256)**|安装此服务的群集节点的名称。 可以为 Null。|
-|instant_file_initialization_enabled|**nvarchar(1)**|指定是否为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务启用即时文件初始化。<br /><br />Y = 为服务启用即时文件初始化。<br /><br />N = 为服务禁用即时文件初始化。<br /><br /> 可以为 Null。<br /><br /> **注意：** 不适用于其他服务，例如 SQL Server 代理。<br /><br /> **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 开始，以及 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本）。|  
+|instant_file_initialization_enabled|**nvarchar （1）**|指定是否为[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务启用即时文件初始化。<br /><br />Y = 为服务启用即时文件初始化。<br /><br />N = 为服务禁用即时文件初始化。<br /><br /> 可以为 Null。<br /><br /> **注意：** 不适用于其他服务，例如 SQL Server 代理。<br /><br /> **适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从[!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 开始，到[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本）。|  
 
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.dm_server_registry &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
+ [sys. dm_server_registry &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
   

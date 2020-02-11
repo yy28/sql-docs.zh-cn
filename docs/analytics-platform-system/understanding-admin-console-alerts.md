@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e33853f4d2e8965030e78cd878a13aef1d559da0
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399779"
 ---
 # <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>了解分析平台系统中的管理控制台警报
@@ -29,7 +29,7 @@ ms.locfileid: "74399779"
 ## <a name="alert-list"></a>警报列表  
 警报按**警报名称**的字母顺序列出。 所有可能的警报都不在列表中。 对于不同的供应商，某些警报的措辞略有不同。  
   
-|**警报名称**|**是否需要执行操作？**|**State**|**严重性**|**说明**|**详细信息**|  
+|**警报名称**|**是否需要执行操作？**|**状态**|**严重性**|**说明**|**更多信息**|  
 |------------------|------------------------|-------------|----------------|-------------------|------------------------|  
 |Ambari 代理的状态为 "严重"。|是|Failed|错误|此 Ambari 代理资源失败（状态：4）或处于脱机状态（状态：3）。 当脱机处于挂起状态时，还包括其他脱机状态（状态：130）。 状态在组件的 "hadoop_service_status" 属性中报告。|查看 Head 和 Data 节点上的群集资源。|  
 |Ambari 代理具有非关键状态。|是|已降级|警告|由于以下原因之一，此 Ambari 代理资源处于非严重状态：-资源处于继承状态（状态：0）-资源处于挂起状态（状态：128）-资源处于联机挂起状态（状态：129）-资源正在执行初始操作本地化（status：1）在组件的 "hadoop_service_status" 属性中报告。|查看 Head 和 Data 节点上的群集资源。|  

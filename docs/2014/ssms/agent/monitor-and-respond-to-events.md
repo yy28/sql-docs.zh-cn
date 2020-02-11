@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720134"
 ---
 # <a name="monitor-and-respond-to-events"></a>监视事件和响应事件
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可监视并自动响应*事件*，例如来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的消息、特定性能条件以及 Windows Management Instrumentation (WMI) 事件。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理可监视并自动响应*事件*，例如来自的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息、特定的性能条件和 Windows Management Instrumentation （WMI）事件。  
   
 ## <a name="in-this-section"></a>本节内容  
  [警报](alerts.md)  
@@ -42,13 +42,14 @@ ms.locfileid: "62720134"
  介绍了为管理员创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可用于在作业失败或成功时用来发送通知的别名。  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>关于监视事件和响应事件  
- 对事件的自动响应称为“警报”  。 您可以针对一个或多个事件定义警报，指定希望 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理如何响应发生的这些事件。 警报可以通过通知管理员和/或运行某项作业来响应事件。 警报还可以将事件转发到其他计算机上的 Microsoft Windows 应用程序日志。 例如，您可以指定在发生严重性为 19 的事件时立即通知操作员。 通过定义警报，数据库管理员可以更有效地监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 对事件的自动响应称为“警报”**。 您可以针对一个或多个事件定义警报，指定希望 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理如何响应发生的这些事件。 警报可以通过通知管理员和/或运行某项作业来响应事件。 警报还可以将事件转发到其他计算机上的 Microsoft Windows 应用程序日志。 例如，您可以指定在发生严重性为 19 的事件时立即通知操作员。 通过定义警报，数据库管理员可以更有效地监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理只响应定义了警报的事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用来监视事件的方法取决于事件的类型。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理只响应定义了警报的事件。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用来监视事件的方法取决于事件的类型。  
   
  当为一个性能计数器定义了一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将直接监视该性能计数器。 对于 WMI 事件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理为 WMI 事件注册一个事件查询。  
   
- 为了响应来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的消息， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会监视 Windows 应用程序日志。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理只能响应此日志中出现的消息。 默认情况下，SQL Server 将下列消息记录在 Windows 应用程序日志中：  
+ 为了响应来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的消息， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会监视 Windows 应用程序日志。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理只能响应此日志中显示的消息。 默认情况下，SQL Server 将下列消息记录在 Windows 应用程序日志中：  
   
 -   严重性为 19 或更高的 sysmessages 错误。  
   
@@ -65,9 +66,10 @@ ms.locfileid: "62720134"
   
  当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 记录消息时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务将该消息与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员定义的警报进行比较。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务通过执行事件警报中指定的任务来响应事件，而不管事件的源是什么。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务通过执行事件警报中指定的任务来响应事件，而不管事件的源是什么。  
   
-## <a name="see-also"></a>请参阅  
- [sp_altermessage &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
+## <a name="see-also"></a>另请参阅  
+ [sp_altermessage &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
   

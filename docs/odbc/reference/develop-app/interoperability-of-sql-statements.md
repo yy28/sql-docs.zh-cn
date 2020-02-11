@@ -15,16 +15,16 @@ ms.assetid: 3b24c499-829c-4e65-90cf-a3a0f6d0a186
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed366acde11778342387d3bcb152a6619a6a3778
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138870"
 ---
 # <a name="interoperability-of-sql-statements"></a>SQL 语句的互操作性
-应用程序的其余部分，如 SQL 语句可以是可互操作或特定于 DBMS 的。 和需要的应用程序的其余部分，如是如何可互操作的 SQL 语句的选择取决于应用程序的类型。 自定义应用程序不太可能使用可互操作的 SQL 语句，因为它们通常设计为利用一个或可能是两个 Dbms 的功能。 通用应用程序使用可互操作的 SQL 语句，因为它们用于处理各种 Dbms。 和垂直应用程序通常在某个位置之间，要求苛刻的特定级别的功能，但以其他方式使用可互操作的 SQL 语句。  
+与应用程序的其余部分一样，SQL 语句可以互操作或 DBMS 特定的。 与应用程序的其余部分一样，可交互的 SQL 语句如何需要取决于应用程序的类型。 自定义应用程序不太可能使用可互操作的 SQL 语句，因为它们通常设计为利用一个或可能两个 Dbms 的功能。 一般应用程序使用可互操作的 SQL 语句，因为它们设计为适用于各种 Dbms。 和垂直应用程序通常在两者之间，要求一定级别的功能，但使用可互操作的 SQL 语句。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [选择 SQL 语法](../../../odbc/reference/develop-app/choosing-an-sql-grammar.md)  
   

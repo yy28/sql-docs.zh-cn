@@ -1,5 +1,5 @@
 ---
-title: 第 2 课：准备快照文件夹 |Microsoft Docs
+title: 第 2 课：准备快照文件夹 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721022"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>第 2 课：准备快照文件夹
@@ -26,19 +26,19 @@ ms.locfileid: "62721022"
   
 1.  在 Windows 资源管理器中，定位到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件夹。 默认位置为 C:\Program Files\Microsoft SQL Server\MSSQL.X\MSSQL\Data。  
   
-2.  创建名为 **repldata** 的新文件夹。  
+2.  创建名为 **repldata**的新文件夹。  
   
-3.  右键单击此文件夹，然后单击“属性”  。  
+3.  右键单击此文件夹，然后单击“属性”****。  
   
-4.  在“repldata 属性”  对话框的“共享”  选项卡上，单击“共享”  。  
+4.  在“repldata 属性”**** 对话框的“共享”**** 选项卡上，单击“共享”****。  
   
-5.  在“文件共享”  对话框中，单击“共享”  ，再单击“完成”  。  
+5.  在“文件共享”**** 对话框中，单击“共享”****，再单击“完成”****。  
   
-6.  在 **“安全性”** 选项卡上，单击 **“编辑”** 。  
+6.  在 **“安全性”** 选项卡上，单击 **“编辑”**。  
   
-7.  在“权限”  对话框中，单击“添加”  。 在“选择用户、计算机、服务帐户或组”  文本框中，键入在第 1 课中创建的快照代理帐户的名称，例如 \<_Machine_Name>_ **\repl_snapshot**，其中 \<*Machine_Name>* 是发布服务器的名称。 单击“检查名称”  ，然后单击“确定”  。  
+7.  在“权限”**** 对话框中，单击“添加”****。 在 "**选择用户、计算机、服务帐户或组**" 文本框中，键入在第1课中创建的快照代理帐户的名称，如\< _Machine_Name>_ **\ repl_snapshot**， \<其中*Machine_Name>* 是发布服务器的名称。 单击“检查名称”****，然后单击“确定”****。  
   
-8.  重复上一步为分发代理和合并代理添加权限，其格式分别为 \<_Machine_Name>_ **\repl_distribution** 和 \<_Machine_Name>_ **\repl_merge**。  
+8.  重复前面的\<步骤，以将分发代理的权限添加到_Machine_Name>_ **\ repl_distribution**，并将合并代理\< _Machine_Name>_ **\**repl_merge。  
   
 9. 验证是否允许以下权限：  
   
@@ -48,12 +48,12 @@ ms.locfileid: "62721022"
   
     -   repl_merge - 读取  
   
-10. 单击“确定”  关闭“repldata 属性”  对话框，并创建 repldata 共享。  
+10. 单击“确定”**** 关闭“repldata 属性”**** 对话框，并创建 repldata 共享。  
   
 ## <a name="next-steps"></a>后续步骤  
- 您已经成功为快照文件夹配置了共享。 接下来，您将配置分发。 请参阅[第 3 课：配置分发](lesson-3-configuring-distribution.md)。  
+ 您已经成功为快照文件夹配置了共享。 接下来，您将配置分发。 请参阅 [第 3 课：配置分发](lesson-3-configuring-distribution.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [保护快照文件夹的安全](security/secure-the-snapshot-folder.md)  
   
   

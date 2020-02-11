@@ -1,5 +1,5 @@
 ---
-title: sp_marksubscriptionvalidation (TRANSACT-SQL) |Microsoft Docs
+title: sp_marksubscriptionvalidation （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bb8c38d24fbf6c96c61a7b2e83874d15218797c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68092676"
 ---
-# <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
+# <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  将当前打开的事务，为指定的订阅服务器的订阅级验证事务的标记。 在发布服务器上对发布数据库执行此存储的过程。  
+  将当前打开的事务标记为指定订阅服务器的订阅级验证事务。 此存储过程在发布服务器上对发布数据库执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,34 +40,34 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
-`[ @subscriber = ] 'subscriber'` 是订阅服务器的名称。 *订阅服务器*数据类型为 sysname，无默认值。  
+`[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的 sysname，无默认值。  
   
-`[ @destination_db = ] 'destination_db'` 是目标数据库的名称。 *destination_db*是**sysname**，无默认值。  
+`[ @destination_db = ] 'destination_db'`目标数据库的名称。 *destination_db* **sysname**，无默认值。  
   
-`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  *发布服务器*不应属于的发布使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
+>  *发布服务器*不应用于属于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器的发布。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_marksubscriptionvalidation**事务复制中使用。  
+ **sp_marksubscriptionvalidation**用于事务复制。  
   
  **sp_marksubscriptionvalidation**不支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。  
   
- 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，无法执行**sp_marksubscriptionvalidation**从显式事务中。 这是因为在用于访问发布服务器的链接服务器连接上，不支持显式事务。  
+ 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，不能在显式事务中执行**sp_marksubscriptionvalidation** 。 这是因为在用于访问发布服务器的链接服务器连接上，不支持显式事务。  
   
- **sp_marksubscriptionvalidation**必须使用与[sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)，将值指定为**1**有关*subscription_level*，并可以在通过其他调用**sp_marksubscriptionvalidation**将标记为其他订阅服务器当前打开的事务。  
+ **sp_marksubscriptionvalidation**必须与[sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)一起使用，并将值**1**指定给*subscription_level*，并可与**sp_marksubscriptionvalidation**的其他调用一起使用，以便为其他订阅服务器标记当前的打开事务。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_marksubscriptionvalidation**。  
+ 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_marksubscriptionvalidation**。  
   
 ## <a name="example"></a>示例  
- 下面的查询可应用到发布数据库，以发布订阅级验证命令。 下列命令将由指定的订阅服务器的分发代理程序挑选。 请注意第一个事务验证项目 '**art1**，同时第二个事务验证**art2**。 另请注意，对调用**sp_marksubscriptionvalidation**并[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)已封装在事务中。 我们建议仅调用一个[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)每个事务。 这是因为[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)事务的持续时间内对源表包含一个共享的表锁。 应尽量缩短事务以使并发最大化。  
+ 下面的查询可应用到发布数据库，以发布订阅级验证命令。 下列命令将由指定的订阅服务器的分发代理程序挑选。 请注意，第一个事务验证项目 "**art1**"，而第二个事务验证 "**art2**"。 另请注意，对**sp_marksubscriptionvalidation**和[sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)的调用已封装在事务中。 建议在每个事务中只调用一次[&#40;transact-sql&#41;sp_article_validation](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) 。 这是因为在事务的持续时间内[sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)包含源表上的一个共享表锁。 应尽量缩短事务以使并发最大化。  
   
 ```  
 begin tran  
@@ -99,7 +99,7 @@ exec sp_article_validation @publication = 'pub1', @article = 'art2',
 commit tran  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [验证已复制的数据](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   

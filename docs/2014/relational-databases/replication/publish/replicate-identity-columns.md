@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479253"
 ---
 # <a name="replicate-identity-columns"></a>复制标识列
@@ -64,7 +64,7 @@ ms.locfileid: "74479253"
 |`smallint`|-2^15 (-32,768) 到 2^15-1 (32,767)|  
 |`int`|-2^31 (-2,147,483,648) 到 2^31-1 (2,147,483,647)|  
 |`bigint`|-2^63 (-9,223,372,036,854,775,808) 到 2^63-1 (9,223,372,036,854,775,807)|  
-|`decimal`与`numeric`|-10^38+1 到 10^38-1|  
+|`decimal` 和 `numeric`|-10^38+1 到 10^38-1|  
   
 > [!NOTE]  
 >  要创建一个可在多个表中使用的自动递增数字或者可以从应用程序中调用而不引用任何表的自动递增数字，请参阅[序列号](../../sequence-numbers/sequence-numbers.md)。  
@@ -123,9 +123,9 @@ ms.locfileid: "74479253"
     >  如果将标识列中的值设置为减小而非增加，则请记录发现的最小值，然后用此值重设种子。  
   
 ## <a name="see-also"></a>另请参阅  
- [BACKUP &#40;Transact-sql&#41;](/sql/t-sql/statements/backup-transact-sql)   
+ [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC CHECKIDENT &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
- [IDENT_CURRENT &#40;Transact-sql&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
+ [IDENT_CURRENT &#40;Transact-SQL&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
  [&#41; &#40;Transact-sql 的标识 &#40;属性&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
  [sp_adjustpublisheridentityrange &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
   

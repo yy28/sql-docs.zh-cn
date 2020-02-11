@@ -12,10 +12,10 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241804"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>将清理项目值导入到域中
@@ -24,7 +24,7 @@ ms.locfileid: "75241804"
 
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以将在清理过程中从数据质量清理项目或包含 DQS 清理组件的集成服务包中收集的数据质量知识，导入到域中。 这样可确保可信知识不丢失，而且可以不断地改进知识库。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
   
@@ -32,9 +32,9 @@ ms.locfileid: "75241804"
   
 -   Data Quality Client 中的清理项目或包含 DQS 清理组件的集成服务包必须已成功完成。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须具有 DQS_MAIN 数据库的 dqs_kb_editor 或 dqs_administrator 角色，才能将在清理过程中收集的数据质量知识导入到域中。  
   
 ##  <a name="Import"></a>导入清理项目值  
@@ -58,7 +58,7 @@ ms.locfileid: "75241804"
   
     -   如果选择 **“从‘新建’选项卡中添加值”** ，则除了 **“正确”** 和 **“已更正”** 选项卡中的值之外，还将导入新建选项卡中的值。  
   
-    -   单击“确定”****。  
+    -   单击“确定”。   
   
 6.  您将返回到 **“域值”** 选项卡；在值成功导入后，将显示一条消息。 
   **“值”** 表中将显示已导入的值，因此也是首次进入域中的值。  
@@ -69,7 +69,7 @@ ms.locfileid: "75241804"
   
 9. 若要搜索特定字符串，在 **“查找”** 文本框中输入该字符串。 单击向上或向下箭头可以逐一查看满足搜索条件的值。 这些值将突出显示为黄色。  
   
-10. 单击 **“完成”**。  
+10. 单击“完成”  。  
   
     > [!NOTE]  
     >  有关使用 **“域值”** 选项卡上的值的详细信息，请参阅 [Change Domain Values](../data-quality-services/change-domain-values.md)。  
@@ -115,6 +115,6 @@ ms.locfileid: "75241804"
   
 ## <a name="see-also"></a>另请参阅  
  [数据清理](../data-quality-services/data-cleansing.md)   
- [DQS 清理转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
+ [DQS 清除转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

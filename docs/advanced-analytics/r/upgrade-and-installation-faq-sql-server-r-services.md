@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6357f98627842ab790b494cf1b4a1f9b2110ec9c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727346"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 机器学习或 R Server 的升级和安装常见问题解答
@@ -24,7 +24,7 @@ ms.locfileid: "73727346"
 + 仅从预发行版本进行升级会出现某些问题。 因此，建议在阅读这些说明之前先确定你的版本。 若要获取版本信息，请从 SQL Server Management Studio 的查询中运行 `@@VERSION`。
 + 请尽快升级到最新版本或服务版本，以解决最新版本中已解决的所有问题。
 
-**适用范围：** SQL Server 2016 R Services、SQL Server 机器学习服务（数据库内）
+**适用于：** SQL Server 2016 R Services、SQL Server 机器学习服务（数据库内）
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>对旧版 SQL Server 2016 的要求和限制 
 
@@ -72,7 +72,7 @@ SQL Server 2016 的早期版本无法在没有 Internet 连接的脱机安装过
 
 以下版本与 SQL Server 2016 的预发布版本一起安装。
 
-| 版本 | 生成         |
+| 版本 | 构建         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |
@@ -132,7 +132,7 @@ SQL Server 2016 的早期版本无法在没有 Internet 连接的脱机安装过
 
 如果安装 Microsoft R Client，并使用它在远程 SQL Server 计算上下文中运行 R，则可能收到类似以下的错误：
 
-计算机上运行的 Microsoft R Client 版本为 9.0.0，与 8.0.3 版的 Microsoft R Server 不兼容  。请下载并安装兼容版本。
+计算机上运行的 Microsoft R Client 版本为 9.0.0，与 8.0.3 版的 Microsoft R Server 不兼容 *。请下载并安装兼容版本。
 
 在 SQL Server 2016 中，要求 SQL Server R Services 中运行的 R 版本与 Microsoft R Client 中的库完全相同。 以后的版本将消除此要求。 但是，建议始终获取机器学习组件的最新版本，并安装所有服务包。 
 

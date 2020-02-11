@@ -13,10 +13,10 @@ ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6519ea515b6552805aa5b97e38579082ddcfe15c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729652"
 ---
 # <a name="change-tracking-master-data-services"></a>更改跟踪 (Master Data Services)
@@ -31,19 +31,19 @@ ms.locfileid: "73729652"
 > [!NOTE]  
 >  更改跟踪业务规则认为临时（导入）数据将发生更改。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|向更改跟踪组添加属性。|[向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|创建业务规则以便基于属性更改启动操作。|[基于属性值更改启动操作 (Master Data Services)](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|向更改跟踪组添加属性。|[将属性添加到更改跟踪组 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|创建业务规则以便基于属性更改启动操作。|[基于属性值更改启动操作 &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [验证 (Master Data Services)](../master-data-services/validation-master-data-services.md)  
+-   [验证 &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
--   [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
+-   [业务规则 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
--   [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)  
+-   [属性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

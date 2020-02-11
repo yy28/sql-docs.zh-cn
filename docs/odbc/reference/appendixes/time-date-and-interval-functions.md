@@ -1,5 +1,5 @@
 ---
-title: 时间、 日期和时间间隔函数 |Microsoft Docs
+title: 时间、日期和时间间隔函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,43 +18,43 @@ ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae10946be501adb16fdda5fa9f053e389eea4bed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070085"
 ---
 # <a name="time-date-and-interval-functions"></a>时间、日期和时间间隔函数
-下表列出了 ODBC 标量函数集中包含的日期和时间函数。 应用程序可以确定由驱动程序通过调用支持的日期和时间的函数**SQLGetInfo**与*信息类型*SQL_TIMEDATE_FUNCTIONS。  
+下表列出了 ODBC 标量函数集中包括的时间和日期函数。 应用程序可以通过使用 SQL_TIMEDATE_FUNCTIONS*信息类型*调用**SQLGetInfo**来确定驱动程序支持的时间和日期函数。  
   
- 参数表示为*timestamp_exp*可以是列，另一个标量函数的结果的名称或*时间的 ODBC 转义*，*日期的 ODBC 转义*，或者*ODBC 时间戳转义*，其中的基础数据类型可以表示为 SQL_CHAR、 SQL_VARCHAR、 SQL_TYPE_TIME、 SQL_TYPE_DATE 或 SQL_TYPE_TIMESTAMP。  
+ 表示为*timestamp_exp*的参数可以是列的名称、其他标量函数的结果 *、odbc-escape、* *odbc-escape*或*odbc 时间戳的转义*，其中，基础数据类型可表示为 SQL_CHAR、SQL_VARCHAR、SQL_TYPE_TIME、SQL_TYPE_DATE 或 SQL_TYPE_TIMESTAMP。  
   
- 参数表示为*date_exp*可以是列，另一个标量函数的结果的名称或*日期的 ODBC 转义*或*ODBC 时间戳转义*，其中基础数据类型可以表示为 SQL_CHAR、 SQL_VARCHAR、 SQL_TYPE_DATE 或 SQL_TYPE_TIMESTAMP。  
+ 表示为*date_exp*的参数可以是列的名称、其他标量函数的结果，也可以是*odbc 日期转义*或*odbc 时间戳转义*，其中，基础数据类型可表示为 SQL_CHAR、SQL_VARCHAR、SQL_TYPE_DATE 或 SQL_TYPE_TIMESTAMP。  
   
- 参数表示为*time_exp*可以是列，另一个标量函数的结果的名称或*时间的 ODBC 转义*或*ODBC 时间戳转义*，其中基础数据类型可以表示为 SQL_CHAR、 SQL_VARCHAR、 SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP。  
+ 表示为*time_exp*的参数可以是列的名称、其他标量函数的结果，也可以是*odbc 时间转义*或*odbc 时间戳转义*，其中，基础数据类型可表示为 SQL_CHAR、SQL_VARCHAR、SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP。  
   
- CURRENT_DATE、 CURRENT_TIME 和 CURRENT_TIMESTAMP timedate 标量函数已在 ODBC 3.0 以符合 SQL-92 中添加。  
+ ODBC 3.0 中添加了 CURRENT_DATE、CURRENT_TIME 和 CURRENT_TIMESTAMP timedate.cpl 标量函数，以使其符合 SQL-92。  
   
-|函数|描述|  
+|函数|说明|  
 |--------------|-----------------|  
-|**CURRENT_DATE （)** (ODBC 3.0)|返回当前日期。|  
-|**CURRENT_TIME [(** *时间精度* **)]** (ODBC 3.0)|返回当前本地时间。 *时间精度*参数确定返回值的秒精度。|  
-|**CURRENT_TIMESTAMP**<br /> **[(** *时间戳精度* **)]** (ODBC 3.0)|作为时间戳值返回当前本地日期和本地时间。 *时间戳精度*参数确定返回的时间戳的秒精度。|  
-|**CURDATE （)** (ODBC 1.0)|返回当前日期。|  
-|**CURTIME （)** (ODBC 1.0)|返回当前本地时间。|  
-|**DAYNAME(** *date_exp* **)** (ODBC 2.0)|返回一个包含数据源特定名称 （例如，Sunday 到 Saturday 或 Sun 一天中的字符串。 返回 Sunday 到 Saturday 或 Sun. 到 Sat.； 数据源使用德语的数据源使用英语，sonntag 到 Samstag） 有关的日部分*date_exp*。|  
-|**DAYOFMONTH(** *date_exp* **)** (ODBC 1.0)|返回日期所处月份字段月份*date_exp*为整数值 1 到 31 范围内。|  
-|**DAYOFWEEK(** *date_exp* **)** (ODBC 1.0)|返回根据周字段星期几*date_exp*范围内的一个整数值 1-7，其中 1 表示星期天。|  
-|**DAYOFYEAR(** *date_exp* **)** (ODBC 1.0)|返回年份字段基于年的某一天*date_exp*为整数值范围内的 1-366。|  
-|**提取 (** *提取字段 FROM* *提取源* **)** (ODBC 3.0)|返回*提取字段*一部分*提取源*。 *提取源*参数是日期时间间隔的表达式。 *提取字段*参数可以是以下关键字之一：<br /><br /> 年月日小时分钟，第二个<br /><br /> 返回的精度是值的实现定义的。 小数位数为 0 指定第二个，则除非这种情况下缩放不小于的秒的小数部分精度*提取源*字段。|  
-|**HOUR(** *time_exp* **)** (ODBC 1.0)|返回小时中的小时字段基于*time_exp* 0 到 23 范围内的一个整数值。|  
-|**MINUTE(** *time_exp* **)** (ODBC 1.0)|返回分钟中的分钟字段基于*time_exp* 0-59 范围内的一个整数值。|  
-|**MONTH(** *date_exp* **)** (ODBC 1.0)|返回所处月份字段月份*date_exp*为整数值 1 到 12 范围内。|  
-|**MONTHNAME(** *date_exp* **)** (ODBC 2.0)|返回的月份部分包含的 （例如，一月到十二月或对于使用英语，数据源，返回 Januar 到 Dezember 对于使用德语的数据源） 个月的数据源特定的名称的字符串*date_exp*。|  
-|**现在 （)** (ODBC 1.0)|返回当前日期和时间作为时间戳值。|  
-|**QUARTER(** *date_exp* **)** (ODBC 1.0)|返回中的每个季度*date_exp*范围内的一个整数值 1-4，其中 1 表示 1 月 1 日到 3 月 31 日结束。|  
-|**SECOND(** *time_exp* **)** (ODBC 1.0)|返回根据第二个字段中的第二个*time_exp* 0-59 范围内的一个整数值。|
-|**TIMESTAMPADD (** *间隔*， *integer_exp*， *timestamp_exp* **)** (ODBC 2.0)|返回通过添加计算的时间戳*integer_exp*类型的时间间隔*间隔*到*timestamp_exp*。 有效值*间隔*是以下关键字：<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> 其中一秒的十亿分之一中表示秒的小数部分。 例如，以下 SQL 语句返回每个雇员和他或她满一周年日期的名称：<br /><br /> `SELECT NAME, {fn  TIMESTAMPADD(SQL_TSI_YEAR, 1, HIRE_DATE)} FROM  EMPLOYEES`<br /><br /> 如果*timestamp_exp*是一个时间值以及*间隔*指定天、 周、 月、 季度或年的日期部分*timestamp_exp*设置为当前日期之前正在计算生成的时间戳。<br /><br /> 如果*timestamp_exp*是日期值和*间隔*指定小数秒、 秒、 分钟或小时为单位的时间部分*timestamp_exp*设置为 0 之前正在计算生成的时间戳。<br /><br /> 应用程序确定哪些数据源支持通过调用的时间间隔**SQLGetInfo** SQL_TIMEDATE_ADD_INTERVALS 选项。|  
-|**TIMESTAMPDIFF (** *间隔*， *timestamp_exp1*， *timestamp_exp2* **)** (ODBC 2.0)|返回整数的类型的间隔数*间隔*依据*timestamp_exp2*大于*timestamp_exp1*。 有效值*间隔*是以下关键字：<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> 其中一秒的十亿分之一中表示秒的小数部分。 例如，以下 SQL 语句返回的名称以及每个雇员的已使用他或她的年数：<br /><br /> `SELECT NAME, {fn  TIMESTAMPDIFF(SQL_TSI_YEAR, {fn CURDATE()}, HIRE_DATE)} FROM EMPLOYEES`<br /><br /> 如果其中任何一个时间戳表达式是一个时间值和*间隔*指定天、 周、 月、 季度或年来，该时间戳的日期部分设置为当前日期之前计算时间戳之间的差异。<br /><br /> 如果其中任何一个时间戳表达式是日期值和*间隔*指定小数秒、 秒、 分钟或小时数，在计算时间戳之间的差异前设置为 0 的该时间戳的时间部分。<br /><br /> 应用程序确定哪些数据源支持通过调用的时间间隔**SQLGetInfo** SQL_TIMEDATE_DIFF_INTERVALS 选项。|  
-|**WEEK(** *date_exp* **)** (ODBC 1.0)|返回所处年度中的周字段的一周*date_exp*为整数值 1-53 范围内。|  
-|**YEAR(** *date_exp* **)** (ODBC 1.0)|返回根据年份字段中的年份*date_exp*为整数值。 范围是由数据源决定。|
+|**CURRENT_DATE （）** （ODBC 3.0）|返回当前日期。|  
+|**CURRENT_TIME [（** *时间-精度* **）]** （ODBC 3.0）|返回当前本地时间。 *时间-精度*参数确定返回值的秒精度。|  
+|**CURRENT_TIMESTAMP**<br /> **[（** *时间戳-精度* **）]** （ODBC 3.0）|以时间戳值的形式返回当前本地日期和本地时间。 *Timestamp-精度*参数确定所返回时间戳的秒精度。|  
+|**CURDATE （）** （ODBC 1.0）|返回当前日期。|  
+|**CURTIME （）** （ODBC 1.0）|返回当前本地时间。|  
+|**DAYNAME （** *date_exp* **）** （ODBC 2.0）|返回一个字符串，该字符串包含日期的特定于数据源的名称（例如，星期日到星期六或 Sun）。 返回 Sunday 到 Saturday 或 Sun. 到 Sat.； 对于使用英语的数据源，或对使用*Date_exp*德语的数据源使用 Sonntag 到 Samstag 的数据源。|  
+|**DAYOFMONTH （** *date_exp* **）** （ODBC 1.0）|返回一个月中的第几天，基于*date_exp*中的 "月" 字段作为1-31 范围内的整数值。|  
+|**DAYOFWEEK （** *date_exp* **）** （ODBC 1.0）|基于*date_exp*中的周字段返回一周中的第几天作为1-7 范围内的整数值，其中1表示星期日。|  
+|**DAYOFYEAR （** *date_exp* **）** （ODBC 1.0）|基于*date_exp*中的年字段返回一年中的第几天作为1-366 范围内的整数值。|  
+|**提取（** *提取-* *源-源* **）** （ODBC 3.0）|返回*提取源*的*提取字段*部分。 *提取-source*参数是 datetime 或 interval 表达式。 *提取字段*参数可以是以下关键字之一：<br /><br /> 每月日小时分钟秒<br /><br /> 返回的值的精度是实现定义的。 除非指定了 SECOND，否则小数位数为0，在这种情况下，小数位数不小于*提取源*字段的秒的小数部分精度。|  
+|**小时（** *time_exp* **）** （ODBC 1.0）|基于*time_exp*中的小时字段返回以0-23 范围内的整数值形式的小时。|  
+|**MINUTE （** *time_exp* **）** （ODBC 1.0）|基于*time_exp*中的分钟字段返回分钟数，该值为0-59 范围内的整数值。|  
+|**MONTH （** *date_exp* **）** （ODBC 1.0）|将*date_exp*中的 "月份" 字段返回月份，该值为1-12 范围内的整数值。|  
+|**MONTHNAME （** *date_exp* **）** （ODBC 2.0）|返回一个字符串，该字符串包含月份的特定于数据源的名称（例如，1月到12月到12月到12月之间。对于使用英语的数据源，或对于使用德语的数据源为 Januar 到 Dezember） *date_exp*的字符串。|  
+|**NOW （）** （ODBC 1.0）|以时间戳值的形式返回当前日期和时间。|  
+|**季度（** *date_exp* **）** （ODBC 1.0）|返回*date_exp*中的季度作为1-4 范围内的整数值，其中1表示1月1日到3月31日。|  
+|**SECOND （** *time_exp* **）** （ODBC 1.0）|基于作为0-59 范围内的整数值*time_exp*中的第二个字段返回第二个。|
+|**TIMESTAMPADD （** *interval*， *integer_exp*， *timestamp_exp* **）** （ODBC 2.0）|返回通过将类型*间隔* *integer_exp*间隔添加到*timestamp_exp*来计算的时间戳。 *Interval*的有效值为以下关键字：<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> 其中，秒的小数部分以十亿分之一表示。 例如，下面的 SQL 语句将返回每个雇员的姓名，并返回一年的周年周年日：<br /><br /> `SELECT NAME, {fn  TIMESTAMPADD(SQL_TSI_YEAR, 1, HIRE_DATE)} FROM  EMPLOYEES`<br /><br /> 如果*timestamp_exp*是时间值，*间隔*指定日、周、月、季度或年，则在计算生成的时间戳之前， *timestamp_exp*的日期部分将设置为当前日期。<br /><br /> 如果*timestamp_exp*是日期值，*间隔*指定秒、秒、分钟或小时，则在计算生成的时间戳之前*timestamp_exp*的时间部分设置为0。<br /><br /> 应用程序通过使用 SQL_TIMEDATE_ADD_INTERVALS 选项调用**SQLGetInfo**来确定数据源支持的时间间隔。|  
+|**TIMESTAMPDIFF （** *interval*， *timestamp_exp1*， *timestamp_exp2* **）** （ODBC 2.0）|返回*timestamp_exp2*大于*timestamp_exp1*的类型*间隔*的整数间隔数。 *Interval*的有效值为以下关键字：<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> 其中，秒的小数部分以十亿分之一表示。 例如，以下 SQL 语句将返回每个雇员的姓名以及他或她采用的年数：<br /><br /> `SELECT NAME, {fn  TIMESTAMPDIFF(SQL_TSI_YEAR, {fn CURDATE()}, HIRE_DATE)} FROM EMPLOYEES`<br /><br /> 如果两个时间戳表达式都是时间值，而*interval*指定了天数、周数、月数、季度数或年数，则在计算时间戳之间的差异之前，该时间戳的日期部分将设置为当前日期。<br /><br /> 如果两个时间戳表达式均为日期值，*间隔*指定小数、秒、分钟或小时，则在计算时间戳之间的差值之前，该时间戳的时间部分设置为0。<br /><br /> 应用程序通过使用 SQL_TIMEDATE_DIFF_INTERVALS 选项调用**SQLGetInfo**来确定数据源支持的时间间隔。|  
+|**WEEK （** *date_exp* **）** （ODBC 1.0）|基于*date_exp*中的周字段返回一年中的第几周作为1-53 范围内的整数值。|  
+|**YEAR （** *date_exp* **）** （ODBC 1.0）|基于*date_exp*中的年份字段返回以整数值形式的年份。 范围依赖于数据源。|

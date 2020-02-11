@@ -1,5 +1,5 @@
 ---
-title: sp_get_query_template (TRANSACT-SQL) |Microsoft Docs
+title: sp_get_query_template （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124083"
 ---
-# <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
+# <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回参数化格式的查询。 返回的结果模拟使用强制参数化得到的参数化格式的查询。 sp_get_query_template 主要在创建 TEMPLATE 计划指南时使用。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,23 +42,23 @@ sp_get_query_template
 ```  
   
 ## <a name="arguments"></a>参数  
- '*query_text*  
- 要生成参数化版本的查询。 '*query_text*' 必须括在单引号内，并且前面带有 Unicode 说明符 N。 N'*query_text*是分配给值@querytext参数。 此项的类型**nvarchar （max)** 。  
+ "*query_text*"  
+ 要生成参数化版本的查询。 "*query_text*" 必须用单引号引起来，并以 N Unicode 说明符开头。 N "*query_text*" 是分配给@querytext参数的值。 此类型的类型为**nvarchar （max）**。  
   
  @templatetext  
- 是输出参数的类型**nvarchar （max)** 按指示要接收的参数化的格式提供*query_text*作为字符串文字。  
+ 提供的类型为**nvarchar （max）** 的输出参数，以字符串文字形式接收*query_text*的参数化形式。  
   
  @parameters  
- 是输出参数的类型**nvarchar （max)** 按指示接收中已参数化的参数名称和数据类型的字符串文字提供@templatetext。  
+ 按指示提供的类型为**nvarchar （max）** 的输出参数，用于接收已参数化的参数名称和数据类型的字符串文字@templatetext。  
   
 ## <a name="remarks"></a>备注  
  如果出现下列情况，sp_get_query_template 会返回错误。  
   
--   它不会不参数化中的任何常量文字值*query_text*。  
+-   它不会在*query_text*中参数化任何常量文本值。  
   
--   *query_text*为 NULL，不是 Unicode 字符串，语法上无效，或无法编译。  
+-   *query_text*为 NULL，而不是 Unicode 字符串、语法无效或无法编译。  
   
- 如果 sp_get_query_template 返回错误，它不会修改的值@templatetext和@parameters输出参数。  
+ 如果 sp_get_query_template 返回错误，则不会修改@templatetext和@parameters输出参数的值。  
   
 ## <a name="permissions"></a>权限  
  要求具有公用数据库角色的成员身份。  
@@ -112,9 +112,9 @@ SELECT @my_parameters;
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各个快速修复工程、Service Pack 和版本升级之间，sp_get_query_template 输出中参数的顺序和命名会发生变化。 另外，升级会导致同一查询的不同的常量文字集被参数化，并且对两种输出参数的结果应用不同的文本间距。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [使用计划指南指定查询参数化行为](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   
   

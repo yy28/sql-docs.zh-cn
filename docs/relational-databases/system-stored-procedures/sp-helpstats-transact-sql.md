@@ -1,5 +1,5 @@
 ---
-title: sp_helpstats (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpstats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fba09255204b796a5134e8b8098e650430b7de63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048403"
 ---
-# <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
+# <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回有关指定表中的列和索引的统计信息。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 若要获取有关统计信息的信息，请查询[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)并[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)目录视图。  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]若要获取有关统计信息的信息，请查询[sys.databases](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)和[sys.databases stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)目录视图。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,9 +44,9 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @objname = ] 'object_name'` 指定用来提供统计信息的表。 *object_name*是**nvarchar(520)** 且不能为 null。 可以指定一个一部分或两部分名称。  
+`[ @objname = ] 'object_name'`指定要为其提供统计信息的表。 *object_name*为**nvarchar （520）** ，且不能为 null。 可以指定一个一部分或两部分名称。  
   
-`[ @results = ] 'value'` 指定要提供的信息的范围。 有效输入包括**所有**并**统计信息**。 **所有**列出的所有索引和也具有其; 上创建的统计信息的列的统计信息**统计信息**只列出未与索引关联的统计信息。 *值*是**nvarchar(5)** 默认值为 STATS。  
+`[ @results = ] 'value'`指定要提供的信息的范围。 有效条目为 "**所有**" 和 "**统计**"。 **所有**索引的统计信息以及创建了统计信息的列的统计信息;**STATS**仅列出与索引不关联的统计信息。 *值*为**nvarchar （5）** ，默认值为 STATS。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -54,19 +54,19 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="result-sets"></a>结果集  
  下表对结果集中的列进行了说明。  
   
-|列名|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
-|**statistics_name**|统计信息的名称。 返回**sysname**且不能为 null。|  
-|**statistics_keys**|统计信息所基于的键。 返回**nvarchar(2078)** 且不能为 null。|  
+|**statistics_name**|统计信息的名称。 返回**sysname** ，且不能为 null。|  
+|**statistics_keys**|统计信息所基于的键。 返回**nvarchar （2078）** ，且不能为 null。|  
   
 ## <a name="remarks"></a>备注  
- 可以使用 DBCC SHOW_STATISTICS 显示特定索引或统计信息的相关详细统计信息。 有关详细信息，请参阅[DBCC SHOW_STATISTICS &#40;TRANSACT-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)并[sp_helpindex &#40;-&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)。  
+ 可以使用 DBCC SHOW_STATISTICS 显示特定索引或统计信息的相关详细统计信息。 有关详细信息，请参阅[DBCC SHOW_STATISTICS &#40;transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)和[sp_helpindex &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
- 以下示例通过执行 `sp_createstats`，为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的所有用户表的所有合格列创建单列统计信息。 然后，运行 `sp_helpstats` 以查找在 `Customer` 表中创建的结果统计信息。  
+ 以下示例通过执行 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]，为 `sp_createstats` 数据库中的所有用户表的所有合格列创建单列统计信息。 然后，运行 `sp_helpstats` 以查找在 `Customer` 表中创建的结果统计信息。  
   
 ```  
 USE AdventureWorks2012;  
@@ -98,8 +98,8 @@ EXEC sp_helpstats
   
  `PK_Customer_CustomerID        CustomerID`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 683806941947a6da888264e4d0e4e3807200ef13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869542"
 ---
-# <a name="mssqlserver17803"></a>MSSQLSERVER_17803
+# <a name="mssqlserver_17803"></a>MSSQLSERVER_17803
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62869542"
 |符号名称|SRV_NOMEMORY|  
 |消息正文|在建立连接过程中出现内存分配错误。 减少不必要的内存负载，或增加系统内存。 该连接已关闭。%.*ls|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  服务器内存不足。  
   
 ## <a name="user-action"></a>用户操作  

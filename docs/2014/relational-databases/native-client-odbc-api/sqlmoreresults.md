@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046722"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
@@ -29,7 +29,7 @@ ms.locfileid: "63046722"
   
  开发人员可以确定由 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的 COMPUTE 子句生成的结果集行列的属性。 有关更多详细信息，请参阅[SQLColAttribute](sqlcolattribute.md)。  
   
- 当**SQLMoreResults**调用的结果集中存在的数据行，这些行都将丢失，并可从下一步的结果行集中的行数据。  
+ 当使用结果集中的 unfetched 数据行调用**SQLMoreResults**时，这些行将丢失，并使下一个结果行集中的行数据可用。  
   
 ## <a name="examples"></a>示例  
   
@@ -160,7 +160,7 @@ EXIT:
     }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLMoreResults 函数](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   

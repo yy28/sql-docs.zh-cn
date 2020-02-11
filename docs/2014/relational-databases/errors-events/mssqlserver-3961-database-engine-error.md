@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f12e70423905a78eddecb93a8b4623c96a6f0322
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914079"
 ---
-# <a name="mssqlserver3961"></a>MSSQLSERVER_3961
+# <a name="mssqlserver_3961"></a>MSSQLSERVER_3961
     
 ## <a name="details"></a>详细信息  
   
@@ -30,10 +30,10 @@ ms.locfileid: "62914079"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|XACT_METADATA_INVALID|  
-|消息正文|数据库 '%.*ls' 中的快照隔离事务失败，因为自此事务启动后，该语句所访问的对象已由其他并发事务中的 DDL 语句修改。  这是不允许的，因为未对元数据进行版本控制。 如果与快照隔离混合，对元数据的并发更新可能导致不一致。|  
+|消息正文|数据库 '%.*ls' 中的快照隔离事务失败，因为自此事务启动后，该语句所访问的对象已由其他并发事务中的 DDL 语句修改。  禁用它是因为元数据未进行版本控制。 在混合了快照隔离操作的情况下，对元数据进行并发更新可能导致不一致。|  
   
-## <a name="explanation"></a>解释  
- 如果在快照隔离下查询元数据并且在快照隔离下存在用于更新正在访问的元数据的并发 DDL 语句，则将发生此错误。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持元数据的版本控制。 因此，对于在快照隔离下运行的显式事务中可以执行哪些 DDL 操作存在限制。 根据定义，隐式事务是单个语句，这使得它即便是使用 DDL 语句也可以强制应用快照隔离的语义。 以下 DDL 语句不允许 BEGIN TRANSACTION 语句之后的快照隔离下：ALTER TABLE、 CREATE INDEX、 CREATE XML INDEX、 ALTER INDEX、 DROP INDEX、 DBCC REINDEX、 ALTER PARTITION FUNCTION、 ALTER PARTITION SCHEME 或任何公共语言运行时 (CLR) DDL 语句。 在隐式事务中使用快照隔离时允许使用这些语句。 根据定义，隐式事务是单个语句，这使得它即便是使用 DDL 语句也可以强制应用快照隔离的语义。  
+## <a name="explanation"></a>说明  
+ 如果在快照隔离情况下查询元数据，同时有一个并发 DDL 语句在更新元数据，而该元数据在快照隔离情况下被访问，则可能发生此错误。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持元数据的版本控制。 因此，对于快照隔离情况下在显式事务中能够执行的具体 DDL 操作会存在限制。 根据定义，隐式事务是单个语句，有了该语句就可以强制实施快照隔离的语义，即使在 DDL 语句存在的情况下也是如此。 在快照隔离下，BEGIN TRANSACTION 语句之后不允许使用任何公共语言运行时 (CLR) DDL 语句或下列 DDL 语句：ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME。 在隐式事务中使用快照隔离时，允许使用这些语句。 根据定义，隐式事务是单个语句，有了该语句就可以强制实施快照隔离的语义，即使在 DDL 语句存在的情况下也是如此。  
   
 ## <a name="user-action"></a>用户操作  
  在查询元数据之前将快照隔离级别更改为诸如“已提交读”之类的非快照隔离级别。  
