@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05e75eb726d67e992a0a9320be8d23bbc547bedb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076862"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>定义维度的排序
@@ -35,7 +35,7 @@ ms.locfileid: "66076862"
 ## <a name="specifying-ordering"></a>指定顺序  
  在向导的第二个 **“指定属性顺序”** 页上，指定维度中的所有属性将如何进行排序。  
   
- 在 **“排序依据属性”** 列中，可以更改用来进行排序的属性。 如果你想要使用对成员排序的属性不在列表中，向下滚动列表，然后选择 **\<新建属性...> >** 以打开**选择一个列**对话框中，您可以在其中选择维度表中的列。 如果使用 **“选择列”** 对话框来选择列，则可以创建可用来对属性的成员进行排序的其他属性。  
+ 在 **“排序依据属性”** 列中，可以更改用来进行排序的属性。 如果要用于对成员排序的属性不在列表中，请向下滚动列表，然后选择** \<"新建属性 ..." >** 打开 "**选择列**" 对话框，在该对话框中，可以选择维度表中的列。 如果使用 **“选择列”** 对话框来选择列，则可以创建可用来对属性的成员进行排序的其他属性。  
   
  然后，可以在 **“条件”** 列中选择按 **“键”** 还是按 **“名称”** 来对属性的成员进行排序。  
   

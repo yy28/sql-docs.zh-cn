@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c0a98aa13b4453244c8ed565a950660a20e5a3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721301"
 ---
 # <a name="distributor"></a>分发服务器
@@ -39,13 +39,13 @@ ms.locfileid: "62721301"
  **使用以下服务器作为分发服务器(注意: 您选择的服务器必须已配置为分发服务器)**  
  选择此选项，再单击下面的服务器名称，可将另外一个服务配置为分发服务器。  
   
- **“添加”**  
+ **添加**  
  如果未列出要用作分发服务器的服务器，请单击 **“添加”** 以标识服务器，并将其添加到列表中。  
   
 > [!NOTE]  
 >  若要使用远程服务器作为分发服务器，则远程服务器必须已配置为分发服务器。 对其运行此向导的服务器必须在该分发服务器上启用为发布服务器。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“配置分发”](configure-distribution.md)   
  [配置发布和分发](configure-publishing-and-distribution.md)  
   

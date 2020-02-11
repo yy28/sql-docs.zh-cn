@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079913"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>在表格模式下安装 Analysis Services
@@ -29,11 +29,11 @@ ms.locfileid: "66079913"
   
 1.  从安装程序的功能树中选择 **“Analysis Services”** 。  
   
-     ![显示 Analsyis Services 的安装程序功能树](../../../sql-server/install/media/ssas-setupas.gif "显示 Analsyis Services 的安装程序功能树")  
+     ![设置显示 Analsyis Services 的功能树](../../../sql-server/install/media/ssas-setupas.gif "设置显示 Analsyis Services 的功能树")  
   
-2.  在 Analysis Services 配置页上，请务必选择**表格模式下**。  
+2.  在 "Analysis Services 配置" 页上，确保选择 "**表格模式**"。  
   
-     ![使用 Analysis Services 配置选项的设置页面](../../../sql-server/install/media/ssas-setupasconfig.gif "与 Analysis Services 配置选项的安装程序页")  
+     ![包含 Analysis Services 配置选项的“设置”页](../../../sql-server/install/media/ssas-setupasconfig.gif "包含 Analysis Services 配置选项的“设置”页")  
   
  表格模式使用 xVelocity 内存中分析引擎 (VertiPaq)，该引擎是部署到 Analysis Services 的表格模型的默认存储器。 将表格模型解决方案部署到服务器之后，可以有选择性地配置表格解决方案，以便将 DirectQuery 磁盘存储作为受内存限制的存储的替代项。  
   
@@ -45,23 +45,25 @@ ms.locfileid: "66079913"
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
- `INSTANCENAME` 必须少于 17 个字符。  
+ 
+  `INSTANCENAME` 必须少于 17 个字符。  
   
  所有占位符帐户的值必须替换为有效的帐户和密码。  
   
  未使用提供的示例命令行语法安装工具（例如 SQL Server Management Studio 或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]）。 有关添加功能的详细信息，请参阅[从命令提示符安装 SQL Server 2014](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
- `ASSERVERMODE` 区分大小写。  所有值必须以大写形式表示。 下表对 `ASSERVERMODE` 的有效值进行了说明。  
+ 
+  `ASSERVERMODE` 区分大小写。  所有值必须以大写形式表示。 下表对 `ASSERVERMODE` 的有效值进行了说明。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |MULTIDIMENSIONAL|这是默认值。 如果不设置 `ASSERVERMODE`，则服务器将在多维服务器模式下安装。|  
-|POWERPIVOT|该值是可选的。 实际上，如果设置 `ROLE` 参数，服务器模式就会自动设置为 1，从而使得 `ASSERVERMODE` 成为 PowerPivot for SharePoint 安装的可选项。 有关详细信息，请参阅[从命令提示符安装 PowerPivot](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)。|  
+|POWERPIVOT|此值是可选的。 实际上，如果设置 `ROLE` 参数，服务器模式就会自动设置为 1，从而使得 `ASSERVERMODE` 成为 PowerPivot for SharePoint 安装的可选项。 有关详细信息，请参阅[从命令提示符安装 PowerPivot](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)。|  
 |TABULAR|如果是在使用命令行安装程序在表格模式下安装 Analysis Services，则此值是必需的。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [确定 Analysis Services 实例的服务器模式](../determine-the-server-mode-of-an-analysis-services-instance.md)   
- [配置内存中或表格模型数据库的 DirectQuery 访问](../../tabular-models/enable-directquery-mode-in-ssms.md)   
- [表格建模&#40;SSAS 表格&#41;](../../tabular-models/tabular-models-ssas.md)  
+ [为表格模型数据库配置内存中或 DirectQuery 访问](../../tabular-models/enable-directquery-mode-in-ssms.md)   
+ [&#40;SSAS 表格&#41;的表格建模](../../tabular-models/tabular-models-ssas.md)  
   
   

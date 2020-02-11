@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661754"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>“属性”窗口的 F1 帮助 (Management Studio)
@@ -51,7 +51,7 @@ ms.locfileid: "62661754"
  **说明窗格**  
  说明窗格显示在“属性”  窗口的底部，用于显示属性类型和属性的简短说明。 可以使用快捷菜单上的“说明”  命令打开或关闭属性的说明。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 Management Studio 中的“属性”窗口](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   
   

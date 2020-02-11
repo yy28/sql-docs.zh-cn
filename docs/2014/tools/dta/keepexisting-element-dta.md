@@ -1,5 +1,5 @@
 ---
-title: KeepExisting 元素 (DTA) |Microsoft Docs
+title: KeepExisting 元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735629"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting 元素 (DTA)
@@ -36,9 +36,10 @@ ms.locfileid: "62735629"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
-|**数据类型和长度**|`string`，服务器强制执行的长度限制。|  
+|**数据类型和长度**|
+  `string`，服务器强制执行的长度限制。|  
 |**允许的值**|**NONE**<br /> 无现有结构。<br /><br /> **ALL**<br /> 所有现有结构。<br /><br /> **ALIGNED**<br /> 所有分区对齐结构。<br /><br /> **CL_IDX**<br /> 表中的所有聚集索引。<br /><br /> **IDX**<br /> 表中的所有聚集索引和非聚集索引。<br /><br /> 只能将这些值中的一个用于此元素。|  
 |**默认值**|无。|  
 |**出现次数**|可选。 对于每个 `TuningOptions` 元素只能使用一次。|  
@@ -53,7 +54,7 @@ ms.locfileid: "62735629"
 ## <a name="example"></a>示例  
  有关此元素的使用示例，请参阅[简单 XML 输入文件示例 (DTA)](simple-xml-input-file-sample-dta.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

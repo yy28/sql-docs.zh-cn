@@ -1,5 +1,5 @@
 ---
-title: 取消命令 (XMLA) |Microsoft Docs
+title: 取消命令（XMLA） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -23,14 +23,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80bddac8f800c1b9394c1ed605007ab0f2137b88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727461"
 ---
 # <a name="canceling-commands-xmla"></a>取消命令 (XMLA)
-  具体取决于发出该命令的用户的管理权限[取消](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)Analysis (XMLA) 可以在一个会话、 会话、 连接、 服务器进程或相关联的会话上取消命令的 XML 中的命令或连接。  
+  根据发出命令的用户的管理权限，XML for Analysis （XMLA）中的[cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)命令可取消会话、会话、连接、服务器进程或关联会话或连接的命令。  
   
 ## <a name="canceling-commands"></a>取消命令  
  用户可以通过发送不带任何指定属性的 `Cancel` 命令，取消当前显式会话上下文中当前正在执行的命令。  
@@ -42,26 +42,26 @@ ms.locfileid: "62727461"
  如果用户取消了一个 `Batch` 命令，则会取消该 `Batch` 命令中尚未执行的所有其余命令。 如果 `Batch` 命令是事务性的，则会回滚在 `Cancel` 命令运行前已执行的所有命令。  
   
 ## <a name="canceling-sessions"></a>取消会话  
- 对于显式会话中指定的会话标识符[SessionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla)属性的`Cancel`命令时，数据库管理员或服务器管理员可以取消会话，包括当前正在执行的命令. 数据库管理员只能取消其拥有管理权限的数据库的会话。  
+ 通过在`Cancel`命令的[SessionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla)属性中指定显式会话的会话标识符，数据库管理员或服务器管理员可以取消会话，包括当前正在执行的命令。 数据库管理员只能取消其拥有管理权限的数据库的会话。  
   
- 数据库管理员可以通过检索 DISCOVER_SESSIONS 架构行集来检索指定数据库的活动会话。 若要检索 DISCOVER_SESSIONS 架构行集，数据库管理员需要使用 XMLA`Discover`方法，并指定 SESSION_CURRENT_DATABASE 限制列中的相应的数据库标识符[限制](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla)属性的`Discover`方法。  
+ 数据库管理员可以通过检索 DISCOVER_SESSIONS 架构行集来检索指定数据库的活动会话。 为了检索 DISCOVER_SESSIONS 架构行集，数据库管理员使用 XMLA `Discover`方法，并为该`Discover`方法的[限制](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla)属性中的 "SESSION_CURRENT_DATABASE 限制" 列指定相应的数据库标识符。  
   
 ## <a name="canceling-connections"></a>取消连接  
- 通过指定中的连接标识符[ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla)属性的`Cancel`命令时，服务器管理员可以取消的所有会话与给定的连接，包括所有正在运行命令、 关联和取消该连接。  
+ 通过在`Cancel`命令的[ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla)属性中指定连接标识符，服务器管理员可以取消与给定连接关联的所有会话，包括所有正在运行的命令，并取消连接。  
   
 > [!NOTE]  
->  如果实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]无法找到和取消与连接关联的会话，如该实例时数据抽取打开了多个会话提供 HTTP 连接时，不能取消该连接。 如果在执行 `Cancel` 命令时遇到了这种情况，则会发生错误。  
+>  如果实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]无法找到和取消与连接关联的会话（例如，当数据抽取在提供 HTTP 连接的同时打开多个会话时），则实例将无法取消该连接。 如果在执行 `Cancel` 命令时遇到了这种情况，则会发生错误。  
   
  服务器管理员可以检索 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的活动连接，方法是使用 XMLA `Discover` 方法检索 DISCOVER_CONNECTIONS 架构行集。  
   
 ## <a name="canceling-server-processes"></a>取消服务器进程  
- 通过指定服务器进程标识符 (SPID) 中[SPID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla)属性的`Cancel`命令时，服务器管理员可以取消与给定 SPID 关联的命令。  
+ 通过在`Cancel`命令的[SPID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla)属性中指定服务器进程标识符（SPID），服务器管理员可以取消与给定 SPID 关联的命令。  
   
 ## <a name="canceling-associated-sessions-and-connections"></a>取消关联的会话和连接  
- 可以设置[CancelAssociated](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cancelassociated-element-xmla)属性设为 true 来取消连接、 会话和连接、 会话或 SPID 中指定与关联的命令`Cancel`命令。  
+ 可以将[CancelAssociated](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cancelassociated-element-xmla)属性设置为 true，以便取消与`Cancel`命令中指定的连接、会话或 SPID 关联的连接、会话和命令。  
   
-## <a name="see-also"></a>请参阅  
- [发现方法&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)   
+## <a name="see-also"></a>另请参阅  
+ [XMLA&#41;&#40;发现方法](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)   
  [在 Analysis Services 中使用 XMLA 开发](developing-with-xmla-in-analysis-services.md)  
   
   

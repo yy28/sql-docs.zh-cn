@@ -21,10 +21,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c78630764a26bb8fe281446c1bb997f18d965db7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091599"
 ---
 # <a name="upgrade-advisor-overview"></a>升级顾问概述
@@ -39,10 +39,10 @@ ms.locfileid: "66091599"
   
 -   升级顾问帮助  
   
- 第一次使用升级顾问时，应运行升级顾问分析向导来分析服务器。 当向导完成分析后时，单击**启动报表**从向导或返回到升级顾问起始页。 从该起始页中，运行升级顾问报表查看器查看报表。 报表提供的链接内容包含有助于解决已知问题的信息。  
+ 第一次使用升级顾问时，应运行升级顾问分析向导来分析服务器。 向导完成分析后，请单击向导中的 "**启动报表**" 或返回到升级顾问起始页。 从该起始页中，运行升级顾问报表查看器查看报表。 报表提供的链接内容包含有助于解决已知问题的信息。  
   
 ## <a name="upgrade-advisor-analysis-wizard"></a>升级顾问分析向导  
- 若要执行分析，请单击**启动升级顾问分析向导**升级顾问起始页上。 升级顾问分析向导收集与计算机、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件以及要分析的跟踪文件有关的信息。 收集并确认所有信息之后，升级顾问分析向导会分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。  
+ 若要执行分析，请单击升级顾问起始页上的 "**启动升级顾问分析向导**"。 升级顾问分析向导收集与计算机、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件以及要分析的跟踪文件有关的信息。 收集并确认所有信息之后，升级顾问分析向导会分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。  
   
 > [!NOTE]  
 >  每次运行升级顾问分析向导时，都会生成一个独立的报表，而不会覆盖选定组件的现有报表。 但是，报表查看器只显示最近的五个报表。  
@@ -71,15 +71,16 @@ ms.locfileid: "66091599"
  升级顾问不分析加密的存储过程、扩展存储过程中的代码以及使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 以外的语言编写的源代码。  
   
 ## <a name="upgrade-advisor-report-viewer"></a>升级顾问报表查看器  
- 若要查看升级顾问报表，请单击**启动升级顾问报表查看**升级顾问起始页上。 升级顾问报表查看器启动时，将加载默认目录中的报表。 如果升级顾问报表查看器在默认目录中未找到任何报表，则不会显示报表。 如果默认目录中没有报表，可以运行升级顾问分析向导来创建报表或从其他服务器或子目录中加载现有报表。  
+ 若要查看升级顾问报表，请单击升级顾问起始页上的 "**启动升级顾问报表查看器**"。 升级顾问报表查看器启动时，将加载默认目录中的报表。 如果升级顾问报表查看器在默认目录中未找到任何报表，则不会显示报表。 如果默认目录中没有报表，可以运行升级顾问分析向导来创建报表或从其他服务器或子目录中加载现有报表。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问不会覆盖现有报表。 但是，报表查看器只显示最近的五个报表。 若要查看较早的报表，请选择从报表**报表**下拉列表框。 时间戳指示生成报表的日期和时间。  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问不会覆盖现有报表。 但是，报表查看器只显示最近的五个报表。 若要查看以前的报表，请从 "**报表**" 下拉列表框中选择该报表。 时间戳指示生成报表的日期和时间。  
   
  将升级顾问分析向导生成的 XML 文件加载到升级顾问报表查看器中后，将为每个组件显示一个报告。 该报表包含需要解决的所有已知问题（包括可检测到的问题和无法检测到的问题）。 每个问题都有指示重要性的图标、通知何时必须解决此问题的标签和一个简要说明。 展开问题时，您将看到更详细的说明、问题详细信息链接和帮助文件链接。 每个问题的信息都旨在为您提供充足的信息以便解决此问题。  
   
- 大多数组件都存在无法检测到的问题。 若要查看这些问题，请展开**其他升级问题**组件项目，然后单击该链接可以查看文档中的问题的其他信息。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向后兼容问题的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。  
+ 大多数组件都存在无法检测到的问题。 若要查看这些问题，请展开组件的 "**其他升级问题**" 项，然后单击链接以查看有关文档中的问题的其他信息。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向后兼容问题的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用升级顾问](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721011"
 ---
 # <a name="rename-a-stored-procedure"></a>重命名存储过程
@@ -45,16 +45,16 @@ ms.locfileid: "62721011"
   
 -   重命名存储过程将不会更改 **sys.sql_modules** 目录视图的定义列中相应对象名的名称。 因此，我们建议不要重命名此对象类型。 而是删除存储过程，然后使用新名称重新创建该存储过程。  
   
--   在未将对象更新为反映已对过程所做的更改时，更改过程的名称或定义可能导致依赖对象失败。 有关详细信息，请参阅 [查看存储过程的依赖关系](view-the-dependencies-of-a-stored-procedure.md)。  
+-   在未将对象更新为反映已对过程所做的更改时，更改过程的名称或定义可能导致依赖对象失败。 有关详细信息，请参阅[查看存储过程的依赖关系](view-the-dependencies-of-a-stored-procedure.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  CREATE PROCEDURE  
- 要求数据库中的 CREATE PROCEDURE 权限以及对要在其中创建过程的架构的 ALTER 权限，或者要求 **db_ddladmin** 固定数据库角色中的成员身份。  
+ 要求数据库中的 CREATE PROCEDURE 权限以及对要在其中创建过程的架构的 ALTER 权限，或者要求 db_ddladmin 固定数据库角色中的成员身份****。  
   
  ALTER PROCEDURE  
- 要求对过程具有 ALTER 权限，或者要求 **db_ddladmin** 固定数据库角色中的成员身份。  
+ 要求对过程具有 ALTER 权限，或者要求 db_ddladmin 固定数据库角色中的成员身份****。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -62,11 +62,11 @@ ms.locfileid: "62721011"
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”**、过程所属的数据库以及 **“可编程性”**。  
+2.  展开 **“数据库”** 、过程所属的数据库以及 **“可编程性”** 。  
   
 3.  [确定存储过程的依赖关系](view-the-dependencies-of-a-stored-procedure.md)。  
   
-4.  展开“存储过程”，右键单击要重命名的过程，再单击“重命名”。  
+4.  展开“存储过程”****，右键单击要重命名的过程，再单击“重命名”****。  
   
 5.  修改过程名称。  
   
@@ -78,9 +78,9 @@ ms.locfileid: "62721011"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何通过删除过程并使用新名称重新创建该过程来重命名过程。 第一个示例将创建 `'HumanResources.uspGetAllEmployeesTest`存储过程。 第二个示例将存储过程重命名为 `HumanResources.uspEveryEmployeeTest`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何通过删除过程并使用新名称重新创建该过程来重命名过程。 第一个示例将创建 `'HumanResources.uspGetAllEmployeesTest`存储过程。 第二个示例将存储过程重命名为 `HumanResources.uspEveryEmployeeTest`。  
   
 ```sql  
 --Create the stored procedure.  
@@ -110,9 +110,9 @@ AS
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [ALTER PROCEDURE (Transact-SQL)](/sql/t-sql/statements/alter-procedure-transact-sql)   
- [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)   
+## <a name="see-also"></a>另请参阅  
+ [ALTER PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
+ [&#40;Transact-sql&#41;创建过程](/sql/t-sql/statements/create-procedure-transact-sql)   
  [创建存储过程](../stored-procedures/create-a-stored-procedure.md)   
  [修改存储过程](../stored-procedures/modify-a-stored-procedure.md)   
  [删除存储过程](../stored-procedures/delete-a-stored-procedure.md)   

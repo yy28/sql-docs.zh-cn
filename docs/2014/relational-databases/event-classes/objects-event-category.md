@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56a76c3675ceb3cf84c7812b4f9d95d61f9f830a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661948"
 ---
 # <a name="objects-event-category"></a>Objects 事件类别
@@ -28,14 +28,14 @@ ms.locfileid: "62661948"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[Auto Stats 事件类](auto-stats-event-class.md)|指示已自动更新索引统计信息和列统计信息。|  
 |[Object:Altered 事件类](object-altered-event-class.md)|指示已更改对象，例如已使用 ALTER DATABASE 语句或 ALTER TABLE 语句更改。|  
 |[Object:Created 事件类](object-created-event-class.md)|指示已创建对象，例如已使用 CREATE INDEX 语句、CREATE TABLE 语句或 CREATE DATABASE 语句创建。|  
 |[Object:Deleted 事件类](object-deleted-event-class.md)|指示已删除对象，例如已使用 DROP INDEX 语句或 DROP TABLE 语句删除。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../extended-events/extended-events.md)  
   
   

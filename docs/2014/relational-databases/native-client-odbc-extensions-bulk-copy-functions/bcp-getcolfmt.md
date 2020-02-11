@@ -1,5 +1,5 @@
 ---
-title: bcp_getcolfmt | Microsoft Docs
+title: bcp_getcolfmt |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689086"
 ---
-# <a name="bcpgetcolfmt"></a>bcp_getcolfmt
+# <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   用于查找列格式属性值。  
   
 ## <a name="syntax"></a>语法  
@@ -55,12 +55,12 @@ pcbLen
   
 ## <a name="arguments"></a>参数  
  *hdbc*  
- 是大容量复制启用 ODBC 连接句柄。  
+ 是启用大容量复制的 ODBC 连接句柄。  
   
- field   
+ *定义域*  
  要检索其属性的列编号。  
   
- property   
+ *知识产权*  
  属性常量之一。  
   
  *pValue*  
@@ -76,16 +76,16 @@ pcbLen
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  
- 列格式属性值中列出[bcp_setcolfmt](bcp-setcolfmt.md)主题。 通过调用设置列格式属性值**bcp_setcolfmt**函数，并**bcp_getcolfmt**函数用于查找列格式属性值。  
+ [Bcp_setcolfmt](bcp-setcolfmt.md)主题中列出了列格式属性值。 列格式属性值是通过调用**bcp_setcolfmt**函数设置的，而**bcp_getcolfmt**函数用于查找列格式属性值。  
   
- 连接到时，可能会看到行为更改[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]（或更高版本） 服务器计算机上，与之前相比[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  
+ 与早期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本相比，连接到（或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]更高版本）服务器计算机时可能会观察到的行为更改。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  
   
-## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt 对日期和时间增强功能的支持  
- 与使用的类型`BCP_FMT_TYPE`日期/时间类型的属性中指定的那样[大容量复制更改的增强的日期和时间类型&#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
+## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt 对日期和时间增强功能的支持  
+ 与日期/时间类型`BCP_FMT_TYPE`的属性一起使用的类型是在[&#40;OLE DB 和 ODBC&#41;的增强日期和时间类型的大容量复制更改](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)中指定的。  
   
- 有关详细信息，请参阅[日期和时间改进&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关详细信息，请参阅[ODBC&#41;&#40;日期和时间改进](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [大容量复制函数](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

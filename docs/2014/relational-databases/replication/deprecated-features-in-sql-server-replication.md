@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42538053b80565005e86e82a32b6c04bae1aa360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721476"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server 复制中不推荐使用的功能
@@ -24,12 +24,12 @@ ms.locfileid: "62721476"
   
 ## <a name="items-deprecated-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的项  
   
-|功能|Description|  
+|Feature|说明|  
 |-------------|-----------------|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|如果每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端点都处于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前版本的两个主版本内，则支持复制。 因此， [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 不支持面向或源自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的复制。|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|如果每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端点都处于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前版本的两个主版本内，则支持复制。 因此， [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 不支持面向或源自 [!INCLUDE[ssEW](../../includes/ssew-md.md)]的复制。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制的向后兼容性](replication-backward-compatibility.md)  
   
   

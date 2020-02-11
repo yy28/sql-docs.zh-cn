@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721836"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; 属性
@@ -31,7 +31,7 @@ ms.locfileid: "62721836"
  **说明**  
  关于配置文件的说明。  
   
- **参数**  
+ **Parameter**  
  配置文件中包含的代理参数。 配置文件无需指定每个参数值。 若要查看对给定代理有效的所有参数，请清除 **“仅显示此配置文件中使用的参数”** 复选框。 有关每个参数的说明，请参阅：  
   
 -   [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "62721836"
   
 -   [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
--   [复制合并代理](agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](agents/replication-merge-agent.md)  
   
 -   [复制队列读取器代理](agents/replication-queue-reader-agent.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62721836"
  **“仅显示此配置文件中使用的参数”**  
  清除此复选框将会显示给定代理的所有有效参数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用复制代理配置文件](agents/work-with-replication-agent-profiles.md)   
  [复制代理概述](agents/replication-agents-overview.md)   
  [复制代理配置文件](agents/replication-agent-profiles.md)  

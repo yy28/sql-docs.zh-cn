@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e18b1786201be9ba671bc08fe7b24ba2207469e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075379"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>使用部署向导部署模型解决方案
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导将从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中生成的 XML 输出文件作为输入文件。 可以轻松地修改这些输入文件，以自定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的部署。 随后，可以立即运行生成的部署脚本，也可以保留此脚本供以后部署。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导使用从[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目生成的 XML 输出文件作为输入文件。 可以轻松地修改这些输入文件，以自定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的部署。 随后，可以立即运行生成的部署脚本，也可以保留此脚本供以后部署。  
   
  您可以使用此处介绍的向导来进行部署。 也可以实现自动部署或使用同步功能。 如果部署的数据库很大，则需要考虑在目标系统上使用分区。 您还可以使用分析管理对象 (AMO)，实现分区创建和填充自动化。  
   
@@ -33,13 +33,13 @@ ms.locfileid: "66075379"
 ## <a name="in-this-section"></a>本节内容  
  以下主题说明了如何使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导、输入文件和部署脚本：  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[运行 Analysis Services 部署向导](running-the-analysis-services-deployment-wizard.md)|说明可用于运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导的各种方式。|  
 |[了解用于创建部署脚本的输入文件](deployment-script-files-input-used-to-create-deployment-script.md)|说明 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导将哪些文件用作输入值以及每个文件包含什么内容，并提供指向说明如何修改每个输入文件中的值的主题链接。|  
 |[了解 Analysis Services 部署脚本](understanding-the-analysis-services-deployment-script.md)|说明部署脚本包含的内容以及脚本的运行方式。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 XMLA 部署模型解决方案](deploy-model-solutions-using-xmla.md)   
  [同步 Analysis Services 数据库](synchronize-analysis-services-databases.md)   
  [了解用于创建部署脚本的输入文件](deployment-script-files-input-used-to-create-deployment-script.md)   

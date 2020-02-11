@@ -1,5 +1,5 @@
 ---
-title: 新建作业计划：作业计划属性 |Microsoft Docs
+title: 新作业计划：作业计划属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704617"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>新建作业计划：作业计划属性
@@ -37,13 +37,13 @@ ms.locfileid: "62704617"
  选中此项可以启用或禁用该计划。  
   
 ## <a name="recurring-schedule-types-options"></a>重复执行计划类型选项  
- **执行**  
+ **时发生**  
  选择重复执行计划的间隔。  
   
- **执行间隔**  
+ **重复间隔**  
  选择重复执行计划的间隔天数或星期数。 此选项对于每月重复执行计划不可用。  
   
- **星期一**  
+ **即**  
  设置作业在特定的星期一发生。 只用于每周重复执行计划。  
   
  **星期二**  
@@ -64,16 +64,16 @@ ms.locfileid: "62704617"
  **星期日**  
  设置作业在特定的星期日发生。 只用于每周重复执行计划。  
   
- **Day**  
+ **那**  
  选择每月中执行此计划的日期。 只用于每月重复执行计划。  
   
  **每**  
  选择两次计划间隔的月数。 只用于每月重复执行计划。  
   
- **“应用程序池:”**  
+ **这些**  
  为某月内特定一周的特定一天指定计划。 只用于每月重复执行计划。  
   
- **执行一次，时间为**  
+ **发生一次，时间为**  
  设置每天执行作业的时间。  
   
  **执行间隔**  
@@ -92,11 +92,11 @@ ms.locfileid: "62704617"
  **Date**  
  选择作业的计划运行日期。  
   
- **Time**  
+ **时间**  
  选择作业的计划运行时间。  
   
-## <a name="see-also"></a>请参阅  
- [创建并将计划附加到作业](create-and-attach-schedules-to-jobs.md)   
- [安排作业计划](schedule-a-job.md)  
+## <a name="see-also"></a>另请参阅  
+ [创建计划并将计划附加到作业](create-and-attach-schedules-to-jobs.md)   
+ [Schedule a Job](schedule-a-job.md)  
   
   

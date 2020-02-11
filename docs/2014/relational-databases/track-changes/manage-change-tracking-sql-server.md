@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670838"
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理更改跟踪 (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "62670838"
 ## <a name="understanding-change-tracking-overhead"></a>了解更改跟踪开销  
  启用表的更改跟踪后，会影响某些管理操作。 下表列出了应当注意的操作和影响。  
   
-|操作|启用更改跟踪后|  
+|Operation|启用更改跟踪后|  
 |---------------|-------------------------------------|  
 |DROP TABLE|会删除已删除表的所有更改跟踪信息。|  
 |ALTER TABLE DROP CONSTRAINT|删除 PRIMARY KEY 约束的尝试将失败。 必须先禁用更改跟踪，然后才能删除 PRIMARY KEY 约束。|  
@@ -101,7 +101,7 @@ sp_spaceused 'sys.change_tracking_309576141'
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [跟踪数据更改 (SQL Server)](track-data-changes-sql-server.md)   
  [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)   
  [数据库属性（“ChangeTracking”页）](../databases/database-properties-changetracking-page.md)   

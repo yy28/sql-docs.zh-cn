@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084728"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>从挖掘模型中删除筛选器
@@ -34,15 +34,15 @@ ms.locfileid: "66084728"
   
      -或-  
   
-     选择该模型。 在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”** 。  
+     选择该模型。 在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”**。  
   
-4.  在“模型筛选器”  对话框中，右键单击网格中包含要删除的条件的行。  
+4.  在“模型筛选器”**** 对话框中，右键单击网格中包含要删除的条件的行。  
   
-5.  选择“删除”  。  
+5.  选择 "**删除**"。  
   
 ### <a name="to-clear-the-filter-on-a-mining-model-in-the-filter-editor-dialog-box"></a>在“筛选器编辑器”对话框中清除挖掘模型筛选器  
   
--   在“筛选器编辑器”  对话框中，右键单击网格中的任意行，然后选择“全部删除”  。  
+-   在“筛选器编辑器”**** 对话框中，右键单击网格中的任意行，然后选择“全部删除”****。  
   
 ## <a name="working-with-model-filters-using-the-properties-window"></a>通过“属性”窗口处理模型筛选器  
  若要删除整个筛选器，无需打开筛选器编辑器对话框。 您所创建的筛选条件可在挖掘模型的 `Filter` 属性中找到。  
@@ -54,13 +54,13 @@ ms.locfileid: "66084728"
   
 1.  在解决方案资源管理器中，单击包含筛选器的挖掘模型。  
   
-2.  在中**属性**窗口中，右键单击中的筛选器文本`Filter`属性，并选择**全**。  
+2.  在 "**属性**" 窗口中，右键单击`Filter`属性中的筛选器文本，然后选择 "全**选**"。  
   
 3.  按 Backspace 或 Delete 键。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [从挖掘模型钻取到事例数据](drill-through-to-case-data-from-a-mining-model.md)   
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)   
- [挖掘模型的筛选器（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)  
+ [挖掘模型的筛选器 &#40;Analysis Services 数据挖掘&#41;](mining-models-analysis-services-data-mining.md)  
   
   

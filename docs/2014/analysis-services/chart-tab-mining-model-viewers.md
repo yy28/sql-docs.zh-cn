@@ -1,5 +1,5 @@
 ---
-title: 图表选项卡 （挖掘模型查看器） |Microsoft Docs
+title: 图表选项卡（挖掘模型查看器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088179"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>“图表”选项卡（挖掘模型查看器）
   可以使用 **“图表”** 窗格，显示定型时序模型时使用的历史数据以及预测值。 图表的垂直轴表示序列的值；水平轴表示时间。 点线表示对未来的预测。  
   
- **有关详细信息：** [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)，[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **有关详细信息**，请查看[microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)、[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -31,7 +31,7 @@ ms.locfileid: "66088179"
  **挖掘模型**  
  从当前挖掘结构的挖掘模型中选择一个挖掘模型。 挖掘模型将在其关联的查看器中打开。  
   
- **Viewer**  
+ **查看器**  
  选择一个查看器以浏览选定挖掘模型。 可以对时序模型使用自定义查看器，也可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器。 还可以使用插件查看器（如果有）。  
   
  **放大**  
@@ -44,7 +44,7 @@ ms.locfileid: "66088179"
  缩小图表以在屏幕中容纳整个图表。  
   
  **Abs**  
- 在两个图表视图之间切换：在默认视图中，将相对于总体分布为数字绘制图形（以百分比形式表示）。 如果您单击 **“Abs”** ，则会将数字作为绝对值绘制图形。  
+ 在两个图表视图之间切换：在默认视图中，将相对于总体分布为数字绘制图形（以百分比形式表示）。 如果您单击 **“Abs”**，则会将数字作为绝对值绘制图形。  
   
  **将图表复制到剪贴板**  
  将整个图表复制到剪贴板。  
@@ -58,9 +58,9 @@ ms.locfileid: "66088179"
  **序列选择**  
  打开一个对话框，您可以从该对话框中选择要包含在查看器中的序列。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器 &#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

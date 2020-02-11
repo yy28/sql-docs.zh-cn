@@ -1,5 +1,5 @@
 ---
-title: Microsoft 聚类分析算法的顺序 |Microsoft Docs
+title: Microsoft 顺序分析和聚类分析算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083828"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 顺序分析和聚类分析算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]序列聚类分析算法是由提供顺序分析算法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 可以使用此算法来研究包含可通过以下路径，链接的事件的数据或*序列*。 该算法通过对相同的顺序进行分组或分类来查找最常见的顺序。 下面是一些数据示例，其中包含可用于数据挖掘的序列，旨在帮助您深入了解常见问题或业务方案：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]顺序分析和聚类分析算法是提供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的一种序列分析算法。 您可以使用此算法浏览包含可通过以下路径或*序列*链接的事件的数据。 该算法通过对相同的顺序进行分组或分类来查找最常见的顺序。 下面是一些数据示例，其中包含可用于数据挖掘的序列，旨在帮助您深入了解常见问题或业务方案：  
   
 -   用户在导航或浏览网站时创建的单击路径。  
   
@@ -36,10 +36,12 @@ ms.locfileid: "66083828"
  该算法在许多方面都类似于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法。 不过， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法不是查找包含类似属性的事例的分类，而是查找顺序中包含类似路径的事例的分类。  
   
 ## <a name="example"></a>示例  
- [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]网站收集有关对哪些页面站点用户访问，以及在其中访问页面的顺序信息。 因为该公司提供在线订购，所以用户必须登录到此站点。 这可以为该公司的各个客户配置文件提供点击信息。 通过对此数据使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法，该公司可以查找具有相同的点击模式或点击顺序的客户组或分类。 然后，该公司可以使用这些分类来分析用户如何在网站中移动，来识别哪些页面与特定商品的销售关系最密切及预测接下来哪些页面最有可能被访问。  
+ 网站[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]将收集有关站点用户所访问的页面以及页面访问顺序的信息。 因为该公司提供在线订购，所以用户必须登录到此站点。 这可以为该公司的各个客户配置文件提供点击信息。 通过对此数据使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法，该公司可以查找具有相同的点击模式或点击顺序的客户组或分类。 然后，该公司可以使用这些分类来分析用户如何在网站中移动，来识别哪些页面与特定商品的销售关系最密切及预测接下来哪些页面最有可能被访问。  
   
 ## <a name="how-the-algorithm-works"></a>算法的原理  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法是一种混合算法，它综合了聚类分析方法和 Markov 链分析，以识别分类及其顺序。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法的特点之一是使用顺序数据。 此数据通常表示数据集中状态之间的一系列事件或转换，例如，特定用户的一系列产品购买或 Web 点击操作。 该算法会检查所有转换概率，并测量数据集中所有可能顺序之间的差异或距离，以确定最好使用哪些顺序作为聚类分析的输入。 在创建候选顺序列表后，该算法将该顺序信息用作聚类分析的 EM 方法的输入。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法是一种混合算法，它综合了聚类分析方法和 Markov 链分析，以识别分类及其顺序。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法的特点之一是使用顺序数据。 此数据通常表示数据集中状态之间的一系列事件或转换，例如，特定用户的一系列产品购买或 Web 点击操作。 该算法会检查所有转换概率，并测量数据集中所有可能顺序之间的差异或距离，以确定最好使用哪些顺序作为聚类分析的输入。 在创建候选顺序列表后，该算法将该顺序信息用作聚类分析的 EM 方法的输入。  
   
  有关实现的详细说明，请参阅 [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)。  
   
@@ -48,11 +50,11 @@ ms.locfileid: "66083828"
   
  顺序分析和聚类分析模型的要求如下：  
   
--   **单个键列** 顺序分析和聚类分析模型需要一个用于标识记录的键。  
+-   **单个键列**顺序分析和聚类分析模型需要一个用于标识记录的键。  
   
--   **顺序列** 对于顺序数据，模型必须具有包含顺序 ID 列的嵌套表。 顺序 ID 可以为任何可排序的数据类型。 例如，可以使用数据类型为网页标识符、整数或文本字符串的列，只要该列可以标识顺序中的事件。 每个顺序只允许有一个顺序标识符，且每个模型中只允许有一种类型的顺序。  
+-   **序列列**对于顺序数据，模型必须具有包含序列 ID 列的嵌套表。 顺序 ID 可以为任何可排序的数据类型。 例如，可以使用数据类型为网页标识符、整数或文本字符串的列，只要该列可以标识顺序中的事件。 每个顺序只允许有一个顺序标识符，且每个模型中只允许有一种类型的顺序。  
   
--   **可选的非顺序属性** 该算法支持添加与顺序无关的其他属性。 这些属性可以包含嵌套列。  
+-   **可选的非序列属性**该算法支持添加与顺序无关的其他属性。 这些属性可以包含嵌套列。  
   
  例如，在前面引用的 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 网站的示例中，顺序分析和聚类分析模型可以包含订单信息（作为事例表）、每个订单的具体客户的人口统计数据（作为非顺序属性）以及包含客户浏览网站和将商品放入购物车的顺序的嵌套表（作为顺序信息）。  
   
@@ -76,9 +78,9 @@ ms.locfileid: "66083828"
   
 -   支持使用 OLAP 挖掘模型和创建数据挖掘维度。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft 顺序分析和聚类分析算法技术参考](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [顺序分析和聚类分析模型查询示例](clustering-model-query-examples.md)   
  [使用 Microsoft 序列分类查看器浏览模型](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   

@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 15f4d85d117b5af09b0f67ef788364be6adad810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745488"
 ---
 # <a name="synchronize-data"></a>同步数据
@@ -57,9 +57,9 @@ ms.locfileid: "62745488"
   
  **查看和解决同步冲突**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[查看和解决合并发布的数据冲突 &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[查看和解决合并发布的数据冲突 (SQL Server Management Studio)](view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[查看事务发布的数据冲突 &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[查看事务发布的数据冲突 (SQL Server Management Studio)](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ## <a name="executing-code-during-synchronization"></a>在同步过程中执行代码  
  复制支持两种在同步过程中执行代码的方法  
@@ -68,7 +68,7 @@ ms.locfileid: "62745488"
   
 -   合并复制支持业务逻辑处理程序。 使用业务逻辑处理程序框架，可以编写一个在合并同步过程中调用的托管代码程序集。 程序集包括可以响应同步过程中的许多状况的业务逻辑：数据更改、冲突和错误。 有关详细信息，请参阅[合并同步期间执行业务逻辑](merge/execute-business-logic-during-merge-synchronization.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [检测并解决合并复制冲突](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

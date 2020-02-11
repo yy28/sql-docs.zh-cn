@@ -1,5 +1,5 @@
 ---
-title: 逻辑回归模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft Docs
+title: 逻辑回归模型（Analysis Services 数据挖掘）的挖掘模型内容 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083614"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
@@ -31,7 +31,7 @@ ms.locfileid: "66083614"
   
  但是，在逻辑回归模型中，表示隐藏层的节点为空，该节点没有任何子级。 因此，该模型包含表示单个输出 (NODE_TYPE = 23) 和单个输入 (NODE_TYPE = 21) 的节点，但不包含任何单个隐藏节点。  
   
- ![logisitc 回归模型的内容的结构](../media/skt-modelcontentstructure-logregc.gif "logisitc 回归模型的内容的结构")  
+ ![Logisitc 回归模型的内容结构](../media/skt-modelcontentstructure-logregc.gif "Logisitc 回归模型的内容结构")  
   
  默认情况下，逻辑回归模型在 **Microsoft 神经网络查看器**中显示。 使用此自定义查看器，您可以筛选输入属性及其值，并以图形方式查看它们如何影响输出。 查看器中的工具提示显示与每对输入和输出值关联的概率和提升。 有关详细信息，请参阅 [使用 Microsoft 神经网络查看器浏览模型](browse-a-model-using-the-microsoft-neural-network-viewer.md)。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66083614"
  NODE_TYPE  
  逻辑回归模型输出以下节点类型：  
   
-|节点类型 ID|Description|  
+|节点类型 ID|说明|  
 |------------------|-----------------|  
 |1|模型。|  
 |17|子网的组织程序节点。|  
@@ -167,7 +167,7 @@ ms.locfileid: "66083614"
  MSOLAP_NODE_SHORT_CAPTION  
  在逻辑回归模型中，始终为空白。  
   
-##  <a name="bkmk_NodeIDs"></a> 使用节点名称和 ID  
+##  <a name="bkmk_NodeIDs"></a>使用节点名称和 Id  
  逻辑回归模型中各节点的命名方式提供该模型中各节点之间的关系的其他相关信息。 下表给出了为每层中的节点分配 ID 的约定。  
   
 |节点类型|节点 ID 约定|  
@@ -183,9 +183,9 @@ ms.locfileid: "66083614"
   
  通过查看输出节点的 NODE_DISTRIBUTION 表，您可以使用这些 ID 确定输出属性如何与特定输入层属性关联。 该表中的每一行都包含一个会指到特定输入属性节点的 ID。 NODE_DISTRIBUTION 表还包含该输入-输出对的系数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft 逻辑回归算法](microsoft-logistic-regression-algorithm.md)   
- [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [&#40;Analysis Services 数据挖掘的神经网络模型的挖掘模型内容&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [逻辑回归模型查询示例](logistic-regression-model-query-examples.md)   
  [Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)  
   

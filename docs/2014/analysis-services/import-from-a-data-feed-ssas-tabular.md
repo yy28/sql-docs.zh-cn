@@ -1,5 +1,5 @@
 ---
-title: 从数据馈送 (SSAS 表格) 导入 |Microsoft Docs
+title: 从数据馈送导入（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080573"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>从数据馈送导入（SSAS 表格）
@@ -32,7 +32,7 @@ ms.locfileid: "66080573"
   
 -   [从 Reporting Services 报表导入数据馈送](#importreport)  
   
-##  <a name="prereq"></a> 了解从数据馈送导入  
+##  <a name="prereq"></a>了解从数据馈送导入  
  可以从以下数据馈送类型中将数据导入“表格模型”：  
   
  **Reporting Services 报表**  
@@ -46,14 +46,14 @@ ms.locfileid: "66080573"
   
  在导入过程中只可一次将数据馈送中的数据添加到模型中。 若要从馈送获取更新的数据，您可以从模型设计器刷新数据，或在将数据部署到 Analysis Services 生产实例后为模型配置数据刷新计划。 有关详细信息，请参阅 [处理数据（SSAS 表格）](process-data-ssas-tabular.md)。  
   
-##  <a name="azure"></a> 从 Azure DataMarket 数据集导入数据  
+##  <a name="azure"></a>从 Azure DataMarket 数据集导入数据  
  在模型中，可以将 Azure DataMarket 中的数据以表的形式导入。  
   
 #### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>从 Azure DataMarket 数据集中导入数据  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”** 。 将打开“表导入向导”。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”**。 将打开“表导入向导”。  
   
-2.  在 **“连接数据源”** 页的 **“数据馈送”** 下，选择 **“Azure DataMarket 数据集”** ，然后单击 **“下一步”** 。  
+2.  在 **“连接数据源”** 页的 **“数据馈送”** 下，选择 **“Azure DataMarket 数据集”**，然后单击 **“下一步”**。  
   
 3.  在 **“连接到 DataMarket 数据集”** 页的 **“友好名称”** 中，为您要访问的馈送键入描述性名称。 如果您正在导入多个馈送或数据源，则将描述性名称用于连接可帮助您记住连接的使用方式。  
   
@@ -65,26 +65,26 @@ ms.locfileid: "66080573"
   
 7.  单击 **“下一步”** 继续导入。  
   
-8.  在 **“模拟信息”** 页中，指定刷新数据时 Analysis Services 将用于连接到数据源的凭据，然后单击 **“下一步”** 。 这些凭据不同于帐户键。  
+8.  在 **“模拟信息”** 页中，指定刷新数据时 Analysis Services 将用于连接到数据源的凭据，然后单击 **“下一步”**。 这些凭据不同于帐户键。  
   
 9. 在向导的 **“选择表和视图”** 页的 **“友好名称”** 字段中，键入标识在导入数据后将包含这些数据的表的描述性名称。  
   
-10. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击“确定”  。  
+10. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击“确定”。   
   
-11. 在 **“选择表和视图”** 页上，单击 **“完成”** 。  
+11. 在 **“选择表和视图”** 页上，单击 **“完成”**。  
   
-##  <a name="importdata"></a> 从公共数据源或公司数据源导入数据馈送  
+##  <a name="importdata"></a>从公共数据源或公司数据源导入数据馈送  
  您可以访问公共馈送，也可以生成自定义数据服务，这些服务从专有或早期数据库系统生成 Atom 馈送。  
   
 #### <a name="to-import-data-from-public-or-corporate-data-feeds"></a>从公共数据馈送或公司数据馈送导入数据  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”** 。 将打开“表导入向导”。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”**。 将打开“表导入向导”。  
   
-2.  在 **“连接数据源”** 页的 **“数据馈送”** 下，选择 **“其他馈送”** ，然后单击 **“下一步”** 。  
+2.  在 **“连接数据源”** 页的 **“数据馈送”** 下，选择 **“其他馈送”**，然后单击 **“下一步”**。  
   
 3.  在 **“连接到数据馈送”** 页中，为您要访问的馈送键入描述性名称。 如果您正在导入多个馈送或数据源，则将描述性名称用于连接可帮助您记住连接的使用方式。  
   
-4.  在 **“数据馈送 URL”** 中，键入数据馈送的地址。 包括以下有效值：  
+4.  在 **“数据馈送 URL”** 中，键入数据馈送的地址。 有效值包括以下值：  
   
     1.  包含 Atom 数据的 XML 文档。 例如，下面的 URL 指向 Open Government Data Initiative 网站上的公共馈送：  
   
@@ -103,26 +103,26 @@ ms.locfileid: "66080573"
   
 6.  单击 **“下一步”** 继续导入。  
   
-7.  在 **“模拟信息”** 页中，指定刷新数据时 Analysis Services 将用于连接到数据源的凭据，然后单击 **“下一步”** 。  
+7.  在 **“模拟信息”** 页中，指定刷新数据时 Analysis Services 将用于连接到数据源的凭据，然后单击 **“下一步”**。  
   
 8.  在向导的 **“选择表和视图”** 页的 **“友好名称”** 字段中，使用标识在导入数据后将包含这些数据的表的描述性名称替换“数据馈送内容”。  
   
-9. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击“确定”  。  
+9. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击“确定”。   
   
-10. 在 **“选择表和视图”** 页上，单击 **“完成”** 。  
+10. 在 **“选择表和视图”** 页上，单击 **“完成”**。  
   
-##  <a name="importlist"></a> 从 SharePoint 列表导入数据馈送  
- 可以导入在 (SharePoint) 功能区上具有“作为数据馈送导出”  按钮的任何 SharePoint 列表。 可以单击此按钮将列表作为馈送导出。  
+##  <a name="importlist"></a>从 SharePoint 列表导入数据馈送  
+ 可以导入在 (SharePoint) 功能区上具有“作为数据馈送导出”**** 按钮的任何 SharePoint 列表。 可以单击此按钮将列表作为馈送导出。  
   
 #### <a name="to-import-data-feeds-from-a-sharepoint-list"></a>从 SharePoint 列表导入数据馈送  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”** 。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”**。  
   
-2.  在 **“连接数据源”** 页的 **“数据馈送”** 下，选择 **“其他数据馈送”** ，然后单击 **“下一步”** 。  
+2.  在 **“连接数据源”** 页的 **“数据馈送”** 下，选择 **“其他数据馈送”**，然后单击 **“下一步”**。  
   
 3.  在 **“连接到数据馈送”** 页中，为您要访问的馈送键入描述性名称。 如果您正在导入多个馈送或数据源，则将描述性名称用于连接可帮助您记住连接的使用方式。  
   
-4.  在数据馈送 URL 中，键入列表数据服务的地址替换\<服务器名称 > 您的 SharePoint 服务器的实际名称：  
+4.  在 "数据馈送 URL" 中，键入列表数据服务的地址， \<并将服务器名称> 替换为您的 SharePoint 服务器的实际名称：  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -132,33 +132,33 @@ ms.locfileid: "66080573"
   
 6.  单击 **“下一步”** 继续导入。  
   
-7.  在 **“模拟信息”** 页中，指定刷新数据时 Analysis Services 将用于连接到数据源的凭据，然后单击 **“下一步”** 。  
+7.  在 **“模拟信息”** 页中，指定刷新数据时 Analysis Services 将用于连接到数据源的凭据，然后单击 **“下一步”**。  
   
 8.  在向导的 **“选择表和视图”** 页中，选择要导入的列表。  
   
     > [!NOTE]  
     >  只能导入包含列的列表。  
   
-9. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击“确定”  。  
+9. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击“确定”。   
   
-10. 在 **“选择表和视图”** 页上，单击 **“完成”** 。  
+10. 在 **“选择表和视图”** 页上，单击 **“完成”**。  
   
-##  <a name="importreport"></a> 从 Reporting Services 报表导入数据馈送  
+##  <a name="importreport"></a>从 Reporting Services 报表导入数据馈送  
  如果已部署 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Reporting Services，则可以使用 Atom 呈现扩展插件从现有报表生成数据馈送。  
   
 #### <a name="to-import-report-data-from-a-published-reporting-services-report"></a>从已发布的 Reporting Services 报表导入报表数据  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”** 。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”**。  
   
-2.  在 **“连接数据源”** 页的 **“数据馈送”** 下，选择 **“报表”** ，然后单击 **“下一步”** 。  
+2.  在 **“连接数据源”** 页的 **“数据馈送”** 下，选择 **“报表”**，然后单击 **“下一步”**。  
   
 3.  在“连接到 Microsoft SQL Server Reporting Services 报表”页的“友好的连接名称”中，键入您要访问的馈送的说明性名称。 如果您正在导入多个数据源，则为连接使用描述性名称可帮助您记住连接的使用方式。  
   
 4.  单击 **“浏览”** 并选择一个报表服务器。  
   
-     如果定期使用报表服务器上的报表，该服务器可能在 **“最近使用的站点和服务器”** 中列出。 否则，在“名称”中键入报表服务器的地址，然后单击 **“打开”** 以浏览报表服务器站点上的文件夹。 例如，地址为报表服务器可能会为 http://\<计算机名 > / reportserver。  
+     如果定期使用报表服务器上的报表，该服务器可能在 **“最近使用的站点和服务器”** 中列出。 否则，在“名称”中键入报表服务器的地址，然后单击 **“打开”** 以浏览报表服务器站点上的文件夹。 Report Server 的示例地址可能是 http://\<computername>/reportserver。  
   
-5.  选择报表，单击 **“打开”** 。 或者，可以在 **“名称”** 文本框中粘贴指向报表的链接，包括完整路径和报表名称。 “表导入向导”将连接到该报表，然后在预览区域中呈现它。  
+5.  选择报表，然后单击 **“打开”**。 或者，可以在 **“名称”** 文本框中粘贴指向报表的链接，包括完整路径和报表名称。 “表导入向导”将连接到该报表，然后在预览区域中呈现它。  
   
      如果报表使用参数，则必须指定参数，否则无法创建报表连接。 执行此操作时，只有与该参数值相关的行才会导入数据馈送。  
   
@@ -169,13 +169,13 @@ ms.locfileid: "66080573"
         > [!NOTE]  
         >  查看报表会将所选参数与数据馈送定义一起保存。  
   
-     可以选择单击“高级”  为报表设置特定于提供程序的属性。  
+     可以选择单击“高级”**** 为报表设置特定于提供程序的属性。  
   
 6.  单击 **“测试连接”** 确保报表可以作为数据馈送。 或者，还可以单击 **“高级”** 以确认 **“嵌入式服务文档”** 属性包含指定数据馈送连接的嵌入的 XML。  
   
 7.  单击 **“下一步”** 继续导入。  
   
-8.  在 **“模拟信息”** 页中，指定刷新数据时 Analysis Services 将用于连接到数据源的凭据，然后单击 **“下一步”** 。  
+8.  在 **“模拟信息”** 页中，指定刷新数据时 Analysis Services 将用于连接到数据源的凭据，然后单击 **“下一步”**。  
   
 9. 在向导的 **“选择表和视图”** 页中，选中要作为数据导入的报表部件旁的复选框。  
   
@@ -185,15 +185,15 @@ ms.locfileid: "66080573"
   
      如果未指定名称，默认情况下，将使用 Reporting Services 控件的名称：例如，Tablix1、Tablix2。 建议您在导入过程中更改此名称，以便可以更容易地识别导入数据馈送的源。  
   
-11. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击“确定”  。  
+11. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击“确定”。   
   
-12. 在 **“选择表和视图”** 页上，单击 **“完成”** 。  
+12. 在 **“选择表和视图”** 页上，单击 **“完成”**。  
   
-## <a name="see-also"></a>请参阅  
- [支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)   
- [支持的数据类型（SSAS 表格）](tabular-models/data-types-supported-ssas-tabular.md)   
- [模拟（SSAS 表格）](tabular-models/impersonation-ssas-tabular.md)   
- [处理数据（SSAS 表格）](process-data-ssas-tabular.md)   
- [导入数据（SSAS 表格）](import-data-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;支持的数据源](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [&#40;SSAS 表格&#41;支持的数据类型](tabular-models/data-types-supported-ssas-tabular.md)   
+ [模拟 &#40;SSAS 表格&#41;](tabular-models/impersonation-ssas-tabular.md)   
+ [&#40;SSAS 表格&#41;处理数据](process-data-ssas-tabular.md)   
+ [&#40;SSAS 表格&#41;导入数据](import-data-ssas-tabular.md)  
   
   

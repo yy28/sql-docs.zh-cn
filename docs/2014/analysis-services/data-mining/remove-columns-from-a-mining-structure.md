@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebc79ed1221b729cfac3fb3d34ed5d9683dc6875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082963"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>从挖掘结构中删除列
@@ -39,11 +39,11 @@ ms.locfileid: "66082963"
   
 2.  展开挖掘结构树，以显示所有列。  
   
-3.  右键单击要删除的列，再选择“删除”  。  
+3.  右键单击要删除的列，再选择“删除”****。  
   
-4.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
+4.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘结构任务和操作指南](mining-structure-tasks-and-how-tos.md)  
   
   

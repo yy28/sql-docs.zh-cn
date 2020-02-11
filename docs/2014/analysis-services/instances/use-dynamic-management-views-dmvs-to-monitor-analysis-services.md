@@ -1,5 +1,5 @@
 ---
-title: 使用动态管理视图 (Dmv) 监视 Analysis Services |Microsoft Docs
+title: 使用动态管理视图（Dmv）监视 Analysis Services |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079575"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用动态管理视图 (DMV) 监视 Analysis Services
@@ -28,11 +28,11 @@ SELECT * FROM $System.<schemaRowset>
   
  DMV 查询将返回查询运行时所处的服务器状态的有关信息。 若要实时监视操作，应改用跟踪。 有关详细信息，请参阅 [Use SQL Server Profiler to Monitor Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md)。  
   
- 本主题包含以下各节：  
+ 本主题包含下列部分：  
   
  [使用 DMV 查询的好处](#bkmk_ben)  
   
- [示例和应用场景](#bkmk_ex)  
+ [示例和方案](#bkmk_ex)  
   
  [查询语法](#bkmk_syn)  
   
@@ -40,23 +40,27 @@ SELECT * FROM $System.<schemaRowset>
   
  [DMV 参考](#bkmk_ref)  
   
-##  <a name="bkmk_ben"></a> 使用 DMV 查询的好处  
+##  <a name="bkmk_ben"></a>使用 DMV 查询的好处  
  DMV 查询返回与无法通过其他方式得到的操作和资源使用有关的信息。  
   
  DMV 查询可用来代替运行 XML/A 发现命令。 对于大多数管理员，编写 DMV 查询很简单，因为查询语法基于 SQL。 此外，结果集以易于读取和复制的表格格式返回。  
   
-##  <a name="bkmk_ex"></a> 示例和应用场景  
+##  <a name="bkmk_ex"></a>示例和方案  
  DMV 查询可帮助您回答与活动会话和连接有关的问题，以及在特定时间点哪些对象最占用 CPU 或内存。 本节提供了最常使用 DMV 查询的应用场景示例。 您也可以查看 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) ，了解使用 DMV 查询监视服务器实例的其他内情。  
   
- `Select * from $System.discover_object_activity` /** 此查询报告自上次启动该服务后的对象活动。 有关基于此 DMV 的查询的示例，请参阅 [新的 System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)。  
+ 
+  `Select * from $System.discover_object_activity` /** 此查询报告自上次启动该服务后的对象活动。 有关基于此 DMV 的查询的示例，请参阅 [新的 System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)。  
   
- `Select * from $System.discover_object_memory_usage` /** 此查询按对象报告内存使用情况。  
+ 
+  `Select * from $System.discover_object_memory_usage` /** 此查询按对象报告内存使用情况。  
   
- `Select * from $System.discover_sessions` /** 此查询报告活动会话，包括会话用户和持续时间。  
+ 
+  `Select * from $System.discover_sessions` /** 此查询报告活动会话，包括会话用户和持续时间。  
   
- `Select * from $System.discover_locks` /** 此查询返回在特定时间点使用的锁的快照。  
+ 
+  `Select * from $System.discover_locks` /** 此查询返回在特定时间点使用的锁的快照。  
   
-##  <a name="bkmk_syn"></a> 查询语法  
+##  <a name="bkmk_syn"></a>查询语法  
  用于 DMV 的查询引擎是数据挖掘分析器。 DMV 查询语法基于 [SELECT (DMX)](/sql/dmx/select-dmx) 语句。  
   
  尽管 DMV 查询语法基于 SQL SELECT 语句，但它并不支持 SELECT 语句的完整语法。 尤其是不支持 JOIN、GROUP BY、LIKE、CAST 和 CONVERT。  
@@ -81,14 +85,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a> 工具和权限  
+##  <a name="bkmk_tools"></a>工具和权限  
  您必须对 Analysis Services 实例具有系统管理员权限，才能查询 DMV。  
   
  您可以使用支持 MDX 或 DMX 查询的任何客户端应用程序，包括 SQL Server Management Studio、Reporting Services 报表和 PerformancePoint 面板。  
   
- 若要从 Management Studio 运行 DMV 查询，请连接到您要查询的实例，然后单击 **“新建查询”** 。 您可以从 MDX 或 DMX 查询窗口运行查询。  
+ 若要从 Management Studio 运行 DMV 查询，请连接到您要查询的实例，然后单击 **“新建查询”**。 您可以从 MDX 或 DMX 查询窗口运行查询。  
   
-##  <a name="bkmk_ref"></a> DMV 参考  
+##  <a name="bkmk_ref"></a>DMV 参考  
  并不是所有的架构行集都具有 DMV 接口。 若要返回可使用 DMV 查询的所有架构行集的列表，请运行以下查询。  
   
 ```  
@@ -98,9 +102,9 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  如果 DMV 不可用于给定行集，则服务器将返回以下错误：" \<Schemarowset > 服务器无法识别请求类型"。 所有其他错误均与语法问题有关。  
+>  如果 DMV 不可用于给定行集，服务器将返回以下错误： "服务器无法识别\<t> 请求类型"。 所有其他错误均与语法问题有关。  
   
-|行集|Description|  
+|行集|说明|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|返回当前连接上 Analysis Services 数据库的列表。|  
 |[DBSCHEMA_COLUMNS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|返回当前数据库中所有列的列表。 您可以使用此列表来构造 DMV 查询。|  
@@ -116,7 +120,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_ENUMERATORS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-enumerators-rowset)|返回与支持特定数据源的枚举器有关的元数据。|  
 |[DISCOVER_INSTANCES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/discover-instances-rowset)|返回有关指定的实例的信息。<br /><br /> 要求添加 SYSTEMRESTRICTSCHEMA 和附加的参数。|  
 |[DISCOVER_JOBS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-jobs-rowset)|返回有关当前作业的信息。|  
-|[DISCOVER_KEYWORDS 行集 (XMLA)](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|返回保留关键字的列表。|  
+|[DISCOVER_KEYWORDS 行集 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|返回保留关键字的列表。|  
 |[DISCOVER_LITERALS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-literals-rowset)|返回 XMLA 支持的文字的列表，包括数据类型和值。|  
 |[DISCOVER_LOCKS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-locks-rowset)|返回在特定时间点使用的锁的快照。|  
 |[DISCOVER_MEMORYGRANT 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memorygrant-rowset)|返回 Analysis Services 在启动时分配的内存的有关信息。|  
@@ -162,9 +166,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_PROPERTIES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|返回每个属性的完全限定名，以及属性类型、数据类型和其他元数据。|  
 |[MDSCHEMA_SETS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|返回当前连接中定义的集合的列表。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [新的 System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
- [新的 SYSTEMRESTRICTEDSCHEMA 函数，适用于受限行集和 DMV](https://go.microsoft.com/fwlink/?LinkId=231885)  
+ [新建 Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
+ [用于受限行集和 Dmv 的 New SYSTEMRESTRICTEDSCHEMA 函数](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

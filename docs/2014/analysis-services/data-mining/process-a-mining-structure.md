@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92793adcf2fd04b1dac0c26933c1d5969a31f1a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083112"
 ---
 # <a name="process-a-mining-structure"></a>处理挖掘结构
@@ -28,7 +28,7 @@ ms.locfileid: "66083112"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
--   XMLA:处理命令  
+-   XMLA：“处理”命令  
   
  有关如何处理单个模型的信息，请参阅 [处理挖掘模型](process-a-mining-model.md)。  
   
@@ -36,17 +36,18 @@ ms.locfileid: "66083112"
   
 1.  从 **中的** “挖掘模型” **菜单项中，选择** “处理挖掘结构和所有模型” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
   
-     如果更改了结构，则在处理模型之前，系统会提示您重新部署该结构。 单击 **“是”**。  
+     如果更改了结构，则在处理模型之前，系统会提示您重新部署该结构。 单击 **“是”** 。  
   
-2.  单击**运行**中**处理挖掘结构-\<结构 >** 对话框。  
+2.  在 "**处理挖掘结构- \<结构>** " 对话框中，单击 "**运行**"。  
   
-     **“处理进度”** 对话框将打开以显示有关模型处理的详细信息。  
+     
+  **“处理进度”** 对话框将打开以显示有关模型处理的详细信息。  
   
 3.  模型处理完成后，在 **“处理进度”** 对话框中单击 **“关闭”** 。  
   
-4.  单击**关闭**中**处理挖掘结构-\<结构 >** 对话框。  
+4.  在 "**处理挖掘结构- \<结构>** " 对话框中单击 "**关闭**"。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘结构任务和操作指南](mining-structure-tasks-and-how-tos.md)  
   
   

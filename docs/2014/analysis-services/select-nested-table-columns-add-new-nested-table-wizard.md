@@ -1,5 +1,5 @@
 ---
-title: 选择嵌套的表列 （添加新的嵌套的表向导） |Microsoft Docs
+title: 选择嵌套表列（添加新的嵌套表向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 911525abdf78472cde7c8467357ce846daafc3a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069359"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>选择嵌套表列（添加新的嵌套表向导）
   可以使用 **“选择嵌套表列”** 页选择要在嵌套表中包含的属性和度量值，以及定义挖掘模型使用属性和度量值的方式。  
   
- **有关详细信息：** [挖掘模型列](data-mining/mining-model-columns.md)，[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：** [挖掘模型列](data-mining/mining-model-columns.md)、[数据挖掘向导 &#40;Analysis Services 数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **“列”**  
@@ -34,9 +34,9 @@ ms.locfileid: "66069359"
  **可预测**  
  选择此选项可以指定是否将度量值或属性用作挖掘模型中的可预测列。 列可以同时标记为输入列和可预测列。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘向导的 F1 帮助&#40;Analysis Services-数据挖掘&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [选择嵌套的表键&#40;添加新的嵌套的表向导&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
- [指定挖掘模型列用法&#40;数据挖掘向导&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘向导 F1 帮助 &#40;Analysis Services 数据挖掘&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [选择 "嵌套表键 &#40;" 添加新的嵌套表向导 "&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
+ [在数据挖掘向导 &#40;指定挖掘模型列用法&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

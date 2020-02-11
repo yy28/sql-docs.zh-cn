@@ -1,5 +1,5 @@
 ---
-title: 第 3 课：处理自行车购买者挖掘结构 |Microsoft Docs
+title: 第3课：处理自行车购买者挖掘结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655793"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>第 3 课：处理自行车购买者挖掘结构
-  在本课程中，您将使用 INSERT INTO 语句和 vTargetMail 视图，从[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]示例数据库来处理挖掘结构和挖掘模型中创建[第 1 课：创建自行车购买者挖掘结构](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)和[第 2 课：向自行车购买者挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)。  
+  在本课中，您将使用[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]示例数据库中的 INSERT INTO 语句和 vTargetMail 视图来处理您在第1课中创建的挖掘结构和挖掘模型[：创建自行车购买者挖掘结构](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)和[第2课：向自行车购买者挖掘结构中添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)。  
   
- 处理挖掘结构时，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将读取源数据并生成支持挖掘模型的结构。 处理挖掘模型时，挖掘结构定义的数据将通过所选择的数据挖掘算法进行传递。 该算法将搜索趋势和模式，然后在挖掘模型中存储此信息。 因此，挖掘模型不包含实际源数据，而是包含由算法发现的信息。 有关处理挖掘模型的详细信息，请参阅[处理要求和注意事项&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
+ 处理挖掘结构时，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将读取源数据并生成支持挖掘模型的结构。 处理挖掘模型时，挖掘结构定义的数据将通过所选择的数据挖掘算法进行传递。 该算法将搜索趋势和模式，然后在挖掘模型中存储此信息。 因此，挖掘模型不包含实际源数据，而是包含由算法发现的信息。 有关处理挖掘模型的详细信息，请参阅[处理 &#40;数据挖掘&#41;的要求和注意事项](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
   
  仅在更改了结构列或源数据的情况下，才需要重新处理挖掘结构。 如果将挖掘模型添加到已处理的挖掘结构中，则可使用 INSERT INTO MINING MODEL 语句定型新的挖掘模型。  
   
 ## <a name="train-structure-template"></a>定型结构模板  
- 为了定型挖掘结构及其关联的挖掘模型，请使用[INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)语句。 可以将语句中的代码分为下列几部分：  
+ 为了定型挖掘结构及其关联的挖掘模型，请使用[INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx)语句。 可以将语句中的代码分为下列几部分：  
   
 -   标识挖掘结构  
   
@@ -63,10 +63,10 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY([<datasource>],'<SELECT statement>')  
 ```  
   
- 在本课中，您将使用 `OPENQUERY` 来定义源数据。 定义源查询的其他方法的信息，请参阅[&#60;源数据查询&#62;](/sql/dmx/source-data-query)。  
+ 在本课中，您将使用 `OPENQUERY` 来定义源数据。 有关定义源查询的其他方法的信息，请参阅[&#60;源数据查询&#62;](/sql/dmx/source-data-query)。  
   
 ## <a name="lesson-tasks"></a>课程任务  
- 在本课程中，将执行以下任务：  
+ 您将在本课中执行以下任务：  
   
 -   处理自行车购买者挖掘结构  
   
@@ -74,7 +74,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>使用 INSERT INTO 处理挖掘结构  
   
-1.  在中**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**。  
+1.  在**对象资源管理器**中，右键单击实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向 "**新建查询**"，然后单击 " **DMX**"。  
   
      将打开查询编辑器，其中包含一个新的空白查询。  
   
@@ -86,7 +86,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     [<mining structure name>]   
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     Bike Buyer  
@@ -98,7 +98,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     <mining structure columns>  
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     [Customer Key],  
@@ -123,7 +123,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     OPENQUERY([<datasource>],'<SELECT statement>')  
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     OPENQUERY([Adventure Works DW],  
@@ -168,11 +168,11 @@ OPENQUERY([<datasource>],'<SELECT statement>')
         FROM dbo.vTargetMail')  
     ```  
   
-6.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
+6.  在 "**文件**" 菜单上，单击 "**将 DMXQuery1 另存为**"。  
   
-7.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`Process Bike Buyer Structure.dmx`。  
+7.  在 "**另存为**" 对话框中，浏览到相应的文件夹，并将`Process Bike Buyer Structure.dmx`该文件命名为。  
   
-8.  在工具栏上，单击**Execute**按钮。  
+8.  在工具栏上，单击 "**执行**" 按钮。  
   
  在下一课中，您将浏览在本课中向挖掘结构添加的挖掘模型中的内容。  
   

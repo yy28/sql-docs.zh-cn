@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721497"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>调试业务逻辑处理程序（复制编程）
@@ -33,9 +33,9 @@ ms.locfileid: "62721497"
   
 1.  配置发布和分发，创建一个发布，然后创建该发布的一个订阅。 有关详细信息，请参阅[配置发布和分发](configure-publishing-and-distribution.md)和[创建发布](publish/create-a-publication.md)。  
   
-2.  创建和注册业务逻辑处理程序。 有关详细信息，请参阅 [实现合并项目的业务逻辑处理程序](implement-a-business-logic-handler-for-a-merge-article.md)。  
+2.  创建和注册业务逻辑处理程序。 有关详细信息，请参阅[实现合并项目的业务逻辑处理程序](implement-a-business-logic-handler-for-a-merge-article.md)。  
   
-3.  在以编程的方式同步启动合并代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 中创建一个复制管理对象 (RMO) 项目。 有关详细信息，请参阅 [创建请求订阅](synchronize-a-pull-subscription.md)。  
+3.  在以编程的方式同步启动合并代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 中创建一个复制管理对象 (RMO) 项目。 有关详细信息，请参阅 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)。  
   
 4.  在业务逻辑处理程序代码中，于正在调试的方法中或类构造函数中设置一个断点。 有关可在业务逻辑处理程序中实现的方法的详细信息，请参阅 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 方法主题。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62721497"
   
 1.  配置发布和分发，创建一个发布，然后创该发布的建一个请求订阅。 该发布必须支持 Web 同步或 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器。  
   
-2.  创建和注册业务逻辑处理程序。 有关详细信息，请参阅 [实现合并项目的业务逻辑处理程序](implement-a-business-logic-handler-for-a-merge-article.md)。  
+2.  创建和注册业务逻辑处理程序。 有关详细信息，请参阅[实现合并项目的业务逻辑处理程序](implement-a-business-logic-handler-for-a-merge-article.md)。  
   
 3.  在业务逻辑处理程序代码中，于正在调试的方法中或类构造函数中设置一个断点。 有关可在业务逻辑处理程序中实现的方法的详细信息，请参阅 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 方法主题。  
   

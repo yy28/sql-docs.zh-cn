@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079224"
 ---
 # <a name="modifying-default-table-names"></a>修改默认表名
@@ -27,29 +27,29 @@ ms.locfileid: "66079224"
   
 ### <a name="to-modify-the-default-name-of-a-table"></a>修改表的默认名称  
   
-1.  在“数据源视图设计器”的“表”窗格中右键单击 **FactInternetSales** 表，再单击“属性”。  
+1.  在“数据源视图设计器”**** 的“表”**** 窗格中右键单击 **FactInternetSales** 表，再单击“属性”****。  
   
-2.  如果在 Microsoft Visual Studio 窗口的右侧未显示“属性”窗口，则单击“属性”窗口的标题栏上的“自动隐藏”按钮，以便该窗口保持可见状态。  
+2.  如果在 Microsoft Visual Studio 窗口的右侧未显示“属性”窗口，则单击“属性”窗口的标题栏上的“自动隐藏”**** 按钮，以便该窗口保持可见状态。  
   
-     在“属性”窗口保持打开状态时，更容易更改数据源视图中各个表的属性。 如果不使用“自动隐藏”按钮使窗口保持打开状态，则在“关系图”窗格中单击其他对象时，该窗口将会关闭。  
+     在“属性”窗口保持打开状态时，更容易更改数据源视图中各个表的属性。 如果不使用“自动隐藏”**** 按钮使窗口保持打开状态，则在“关系图”**** 窗格中单击其他对象时，该窗口将会关闭。  
   
-3.  更改**FriendlyName**属性**FactInternetSales** 对象传递给 *`InternetSales`*。  
+3.  将**FactInternetSales**对象的*`InternetSales`* **FriendlyName**属性更改为。  
   
      如果在 **FriendlyName** 属性单元格外单击，则应用此更改。 在下一课中，将定义一个基于该事实数据表的度量值组。 由于您在本课中进行了更改，因此该事实数据表的名称将为 InternetSales，而不是 FactInternetSales。  
   
-4.  在“表”窗格中单击 **DimProduct**。 在属性窗口中更改**FriendlyName** 属性设置为 *`Product`*。  
+4.  在“表”**** 窗格中单击 **DimProduct**。 在属性窗口中，将**FriendlyName**属性更改为*`Product`*。  
   
 5.  使用同样的方法更改数据源视图中剩余的各个表的 **FriendlyName** 属性，删除“**Dim**”前缀。  
   
-6.  完成更改后，单击“自动隐藏”按钮，重新隐藏“属性”窗口。  
+6.  完成更改后，单击“自动隐藏”**** 按钮，重新隐藏“属性”窗口。  
   
-7.  在“文件”菜单上，或者在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的工具栏上，单击“全部保存”，以保存截至目前已在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目中进行的更改。 您可以根据需要在此处停止教程学习，并在以后继续。  
+7.  在“文件”**** 菜单上，或者在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的工具栏上，单击“全部保存”****，以保存截至目前已在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目中进行的更改。 您可以根据需要在此处停止教程学习，并在以后继续。  
   
 ## <a name="next-lesson"></a>下一课  
  [第 2 课：定义和部署多维数据集](lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [在数据源视图中更改属性 (Analysis Services)](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中更改属性 &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

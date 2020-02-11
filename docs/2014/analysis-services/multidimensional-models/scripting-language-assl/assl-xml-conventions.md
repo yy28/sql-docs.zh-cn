@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736390"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 约定
@@ -36,9 +36,9 @@ ms.locfileid: "62736390"
   
  ASSL 使用以下 XML 约定来表示对象层次结构：  
   
--   所有对象和属性都表示为元素，如 xml: lang 的标准 XML 特性除外。  
+-   所有对象和属性都表示为元素，标准 XML 属性除外，如 "XML： lang"。  
   
--   元素名称和枚举值遵循 Microsoft.NET Framework 命名约定的 Pascal 大小写格式且没有下划线字符。  
+-   元素名称和枚举值都遵循使用 Pascal 大小写格式且无下划线的 Microsoft .NET Framework 命名约定。  
   
 -   保留所有值的大小写。 枚举值也区分大小写。  
   
@@ -121,10 +121,10 @@ ms.locfileid: "62736390"
  Analysis Services 使用以下标准 XML 架构定义语言 (XSD) 数据类型：  
   
  `Int`  
- -231 到 231-1 范围内的一个整数值。  
+ 范围为-231 到 231-1 的整数值。  
   
  `Long`  
- 在-263 到 263-1 的范围内的一个整数值。  
+ 范围为-263 到 263-1 的整数值。  
   
  `String`  
  符合以下全局规则的字符串值：  
@@ -135,10 +135,12 @@ ms.locfileid: "62736390"
   
 -   保留内部空格。  
   
- `Name` 和 `ID` 属性对字符串元素中的有效字符具有特殊限制。 有关其他信息`Name`并`ID`约定，请参阅[ASSL 对象和对象特征](assl-objects-and-object-characteristics.md)。  
+ 
+  `Name` 和 `ID` 属性对字符串元素中的有效字符具有特殊限制。 有关`Name`和`ID`约定的其他信息，请参阅[ASSL 对象和对象特性](assl-objects-and-object-characteristics.md)。  
   
  `DateTime`  
- 一个`DateTime`从.NET Framework 的结构。 `DateTime` 值不能为 NULL。 `DataTime` 数据类型支持的最早日期为 1601 年 1 月 1 日，程序员可将该日期作为 `DateTime.MinValue`。 该最早支持日期指示缺少 `DateTime` 值。  
+ .NET Framework `DateTime`中的结构。 `DateTime`值不能为 NULL。 
+  `DataTime` 数据类型支持的最早日期为 1601 年 1 月 1 日，程序员可将该日期作为 `DateTime.MinValue`。 该最早支持日期指示缺少 `DateTime` 值。  
   
  `Boolean`  
  仅具有两个值的枚举，例如 {true, false} 或 {0, 1}。  
@@ -150,8 +152,8 @@ ms.locfileid: "62736390"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|""（空字符串）|  
-|`Integer` 或 `Long`|0（零）|  
-|`Timestamp`|12:00:00 AM，0001 年 1 月 1 日 (对应于.NET Frameworks`System.DateTime`与 0 刻度)|  
+|`Integer`或`Long`|0（零）|  
+|`Timestamp`|12:00:00 AM、1/1/0001 （对应于具有0刻度的`System.DateTime` .net 框架）|  
   
  存在但为空的元素被解释为具有 Null 字符串值，而非默认值。  
   
@@ -178,6 +180,6 @@ ms.locfileid: "62736390"
   
  `</Dimension>`  
   
- 有关继承的默认值的详细信息，请参阅[ASSL 对象和对象特征](assl-objects-and-object-characteristics.md)。  
+ 有关继承的默认值的详细信息，请参阅[ASSL 对象和对象特性](assl-objects-and-object-characteristics.md)。  
   
   

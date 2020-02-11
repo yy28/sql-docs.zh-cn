@@ -1,5 +1,5 @@
 ---
-title: bcp_setbulkmode | Microsoft Docs
+title: bcp_setbulkmode |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688794"
 ---
-# <a name="bcpsetbulkmode"></a>bcp_setbulkmode
-  bcp_setbulkmode 允许您指定在大容量复制操作中，在单个函数调用中设置列的所有属性的列格式。  
+# <a name="bcp_setbulkmode"></a>bcp_setbulkmode
+  bcp_setbulkmode 允许您在大容量复制操作中指定列格式，并在单个函数调用中设置所有列特性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,14 +52,14 @@ cbRow
  *hdbc*  
  支持大容量复制的 ODBC 连接句柄。  
   
- property   
+ *知识产权*  
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
  *pField*  
  指向字段终止符值的指针。  
   
  *cbField*  
- 字段终止符值的长度 （以字节为单位）。  
+ 字段终止符值的长度（以字节为单位）。  
   
  *pRow*  
  指向行终止符值的指针。  
@@ -71,24 +71,24 @@ cbRow
  SUCCEED 或 FAIL  
   
 ## <a name="remarks"></a>备注  
- 可以使用 bcp_setbulkmode 外的查询或表大容量复制。 当 bcp_setbulkmode 用于大容量复制查询语句时，它必须调用使用 BCP_HINT bcp_control 之前调用它。  
+ bcp_setbulkmode 可用于从查询或表中大容量复制。 当 bcp_setbulkmode 用于大容量复制查询语句时，必须在使用 BCP_HINT 调用 bcp_control 之前调用它。  
   
- bcp_setbulkmode 是使用的替代方法[bcp_setcolfmt](bcp-setcolfmt.md)并[bcp_columns](bcp-columns.md)，其仅可让你可以指定每个函数调用某一列的格式。  
+ bcp_setbulkmode 是使用[bcp_setcolfmt](bcp-setcolfmt.md)和[bcp_columns](bcp-columns.md)的替代方法，只允许指定每个函数调用的一列的格式。  
   
- 下表列出了 property 参数的常量  。  
+ 下表列出了 property 参数的常量**。  
   
-|属性|Description|  
+|properties|说明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。Exe 文件，以及与 bcp_setcolfmt`BCP_FMT_TYPE`属性设置为`SQLCHARACTER`。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和与 bcp_setcolfmt`BCP_FMT_TYPE`属性设置为`SQLNCHAR`。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的-N 选项。EXE 和与 bcp_setcolfmt`BCP_FMT_TYPE`属性设置为`SQLNCHAR`如果列类型为字符串 （默认如果不是 string）。|  
-|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的-n 选项。EXE 和与 bcp_setcolfmt`BCP_FMT_TYPE`属性设置为默认值。|  
+|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。EXE，并将`BCP_FMT_TYPE`属性设置为`SQLCHARACTER`bcp_setcolfmt。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和 bcp_setcolfmt `BCP_FMT_TYPE`属性设置为`SQLNCHAR`的。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的-N 选项。使用`BCP_FMT_TYPE`属性设置为的 EXE 和`SQLNCHAR` bcp_setcolfmt （如果列类型是字符串，则默认值为; 如果不是字符串，则为默认值）。|  
+|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的-n 选项。EXE 和 bcp_setcolfmt， `BCP_FMT_TYPE`其属性设置为默认值。|  
   
- 不应具有一系列函数调用，包括 bcp_setcolfmt、 bcp_control 和 bcp_readfmt 使用 bcp_setbulkmode。 例如，不应调用 bcp_control(BCPTEXTFILE) 和 bcp_setbulkmode。  
+ 不应将 bcp_setbulkmode 与包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函数调用序列一起使用。 例如，不应调用 bcp_control （BCPTEXTFILE）和 bcp_setbulkmode。  
   
- 您可以调用 bcp_control 和 bcp_setbulkmode bcp_control 不与 bcp_setbulkmode 冲突的选项。 例如，可以调用 bcp_control(BCPFIRST) 和 bcp_setbulkmode。  
+ 对于不与 bcp_setbulkmode 冲突的 bcp_control 选项，可以调用 bcp_control 和 bcp_setbulkmode。 例如，可以调用 bcp_control （BCPFIRST）和 bcp_setbulkmode。  
   
- 如果尝试调用 bcp_setbulkmode 用包括 bcp_setcolfmt、 bcp_control 和 bcp_readfmt 函数调用序列，其中一个函数调用将返回序列错误。 如果您选择更正错误，调用 bcp_init 重置所有设置并重新开始。  
+ 如果尝试使用包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函数调用序列 bcp_setbulkmode，其中一个函数调用将返回序列错误失败。 如果选择更正失败，请调用 bcp_init 以重置所有设置并重新开始。  
   
  下表提供了会造成函数序列错误的函数调用的一些示例：  
   
@@ -295,7 +295,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [大容量复制函数](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

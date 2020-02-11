@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d55bd667909721a68d51bcd1db7128b809118843
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755282"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO 和 DMO XP 服务器配置选项
@@ -24,12 +24,12 @@ ms.locfileid: "62755282"
   
  下表中列出了该选项的可能值：  
   
-|ReplTest1|含义|  
+|值|含义|  
 |-----------|-------------|  
 |0|SMO XP 不可用。|  
-|1|SMO XP 可用。 这是默认设置。|  
+|1|SMO XP 可用。 这是默认值。|  
   
- 此设置将立即生效。  
+ 设置立即生效。  
   
 ## <a name="examples"></a>示例  
  以下示例启用了 SMO 扩展存储过程。  
@@ -45,7 +45,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 管理对象 (SMO) 编程指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 服务器 (DTA) 数据库元素 |Microsoft Docs
+title: 服务器的数据库元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661829"
 ---
 # <a name="database-element-for-server-dta"></a>服务器的数据库元素 (DTA)
@@ -35,7 +35,7 @@ ms.locfileid: "62661829"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|无。|  
 |默认值|无。|  
@@ -52,9 +52,9 @@ ms.locfileid: "62661829"
  在数据库引擎优化顾问 XML 架构中，此元素的名称为 **DatabaseDetailsTypecomplexType** 。 请不要将此 `Database` 元素与根级父元素为 `Configuration` 元素的元素相混淆。 有关详细信息，请参阅[用于配置的数据库元素 (DTA)](database-element-for-configuration-dta.md)。  
   
 ## <a name="example"></a>示例  
- 有关用法示例`Database`元素，请参阅[服务器元素&#40;DTA&#41;](server-element-dta.md)。  
+ 有关`Database`元素的用法示例，请参阅[SERVER 元素 &#40;DTA&#41;](server-element-dta.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

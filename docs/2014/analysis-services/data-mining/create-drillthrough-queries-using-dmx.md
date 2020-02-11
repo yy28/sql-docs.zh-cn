@@ -1,5 +1,5 @@
 ---
-title: 创建钻取查询使用 DMX |Microsoft Docs
+title: 使用 DMX 创建钻取查询 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085241"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>使用 DMX 来创建钻取查询
@@ -43,8 +43,8 @@ WHERE [Model Region] = 'M200 Pacific'
   
  请注意，在此示例中，已使用别名对该结构列进行了重命名。 如果您没有为该结构列分配别名，则该列将以“Expression”名称返回。 这是所有未命名列的默认行为。  
   
-## <a name="see-also"></a>请参阅  
- [钻取查询（数据挖掘）](drillthrough-queries-data-mining.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘 &#40;钻取查询&#41;](drillthrough-queries-data-mining.md)   
  [对挖掘结构的钻取功能](drillthrough-on-mining-structures.md)  
   
   

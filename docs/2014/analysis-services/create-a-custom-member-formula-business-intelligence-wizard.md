@@ -1,5 +1,5 @@
 ---
-title: 创建自定义成员公式 （商业智能向导） |Microsoft Docs
+title: 创建自定义成员公式（商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086998"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>创建自定义成员公式（商业智能向导）
-  使用**创建自定义成员公式**页后，可以将指定维度中的属性与自定义成员公式列的列包含定义的成员值的多维表达式 (MDX) 语句相关联该属性。  
+  可以使用 "**创建自定义成员公式**" 页，将指定维度中的属性与自定义成员公式列相关联，列包含定义该属性的成员值的多维表达式（MDX）语句。  
   
 ## <a name="options"></a>选项  
  **Attribute**  
  选择要与自定义成员公式相关联的属性。  
   
  **源列**  
- 单击浏览 ( **...** ) 按钮以打开**选择一个列**对话框并选择要与属性相关联的自定义成员公式列。  
+ 单击浏览（**...**）按钮可打开 "**选择列**" 对话框，并选择要与该属性关联的自定义成员公式列。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [商业智能向导的 F1 帮助](business-intelligence-wizard-f1-help.md)   
- [多维数据集设计器&#40;Analysis Services-多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [维度设计器&#40;Analysis Services-多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [多维数据集设计器 &#40;Analysis Services 多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [维度设计器 &#40;Analysis Services 多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

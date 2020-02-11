@@ -1,5 +1,5 @@
 ---
-title: 更新 OPENXML XPath 表达式以删除不受支持的函数 |Microsoft Docs
+title: 更新 OPENXML XPath 表达式以删除不支持的函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec0edb2e72143fd41709355a3e9cc338544289a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091686"
 ---
 # <a name="update-openxml-xpath-expressions-to-remove-unsupported-functions"></a>更新 OPENXML XPath 表达式以删除不支持的函数
@@ -25,7 +25,7 @@ ms.locfileid: "66091686"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  MSXML 3.0 现为基础引擎，用于处理 OPENXML 查询中使用的 XPath 表达式。 MSXML 3.0 的 XPath 1.0 引擎更为严格，且删除了对以下函数的支持：  
   
 -   format-number()  
@@ -43,8 +43,8 @@ ms.locfileid: "66091686"
 ## <a name="corrective-action"></a>纠正措施  
  对于 format-number() 和 formatNumber()，可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 对于前面列出的其他不支持的函数，没有直接的解决方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 升级顾问 &#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7f6cbc6b4150f2f951befcb70c1b09108de3b51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670480"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>折叠行组 (Visual Database Tools)
@@ -72,8 +72,8 @@ ms.locfileid: "62670480"
   
      有关将选择条件用于多组行的详细信息，请参阅[为组指定条件 (Visual Database Tools)](specify-conditions-for-groups-visual-database-tools.md) 和[在同一查询中使用 HAVING 和 WHERE 子句 (Visual Database Tools)](use-having-and-where-clauses-in-the-same-query-visual-database-tools.md)。  
   
-## <a name="see-also"></a>请参阅  
- [指定搜索条件&#40;可视化数据库工具&#41;](specify-search-criteria-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [指定 Visual Database Tools &#40;搜索条件&#41;](specify-search-criteria-visual-database-tools.md)   
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

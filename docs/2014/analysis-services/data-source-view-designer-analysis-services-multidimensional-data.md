@@ -1,5 +1,5 @@
 ---
-title: 数据源视图设计器 (Analysis Services-多维数据) |Microsoft Docs
+title: 数据源视图设计器（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9153a2d07653872ca6ce1f90e39c90f32da21fba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082515"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>数据源视图设计器（Analysis Services - 多维数据）
@@ -28,11 +28,12 @@ ms.locfileid: "66082515"
   
  打开 **数据源视图设计器** ：  
   
--   双击“解决方案资源管理器”  中的某个数据源视图。  
+-   双击“解决方案资源管理器”**** 中的某个数据源视图。  
   
--   在“解决方案资源管理器”  中右键单击某个数据源视图，选择“打开”或“视图设计器”   。  
+-   在“解决方案资源管理器”**** 中右键单击某个数据源视图，选择“打开”或“视图设计器”********。  
   
- **数据源视图设计器** 包含一个工具栏、一个显示 DSV 中对象及关系的图表、一个按字母顺序列出表和命名查询的表窗格，以及用于创建和查看 DSV 的特定图表的“关系图组织程序”窗格。 您可以通过右键单击某个表或关系来访问上下文相关命令。  
+ 
+  **数据源视图设计器** 包含一个工具栏、一个显示 DSV 中对象及关系的图表、一个按字母顺序列出表和命名查询的表窗格，以及用于创建和查看 DSV 的特定图表的“关系图组织程序”窗格。 您可以通过右键单击某个表或关系来访问上下文相关命令。  
   
  ![数据源视图设计器](media/ssas-dsvdesigner.PNG "数据源视图设计器")  
   
@@ -45,14 +46,14 @@ ms.locfileid: "66082515"
   
 |||  
 |-|-|  
-|重命名列或表，或者创建新的计算列。 例如，可将名字和姓氏连接到新的全名列。|[在数据源视图中定义命名计算 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|  
-|手动添加表关系|[在数据源视图中定义逻辑关系 (Analysis Services)](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
-|创建命名查询以定义基于 T-SQL 查询的新对象。|[在数据源视图中定义命名查询 (Analysis Services)](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|  
-|研究基础数据以查看模型对象表示的实际数据值。<br /><br /> 通过数据浏览，您可以直观地检查和复制从基础维度表或查询返回的数据。 默认情况下，数据浏览使用靠前计数抽样方法，具有 5000 个抽样计数，但您可以修正这些设置。|[在数据源视图中浏览数据 (Analysis Services)](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
-|为 DSV 中的所有或部分表和关系绘制关系图|[使用数据源视图设计器中的关系图 (Analysis Services)](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
+|重命名列或表，或者创建新的计算列。 例如，可将名字和姓氏连接到新的全名列。|[在数据源视图中定义命名计算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|  
+|手动添加表关系|[在数据源视图中定义逻辑关系 &#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
+|创建命名查询以定义基于 T-SQL 查询的新对象。|[在数据源视图中定义命名查询 &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|  
+|研究基础数据以查看模型对象表示的实际数据值。<br /><br /> 通过数据浏览，您可以直观地检查和复制从基础维度表或查询返回的数据。 默认情况下，数据浏览使用靠前计数抽样方法，具有 5000 个抽样计数，但您可以修正这些设置。|[浏览数据源视图中的数据 &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
+|为 DSV 中的所有或部分表和关系绘制关系图|[使用数据源视图设计器中的关系图 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [在数据源视图中添加或删除表或视图 (Analysis Services)](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中添加或删除表或视图 &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
   

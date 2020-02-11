@@ -1,5 +1,5 @@
 ---
-title: 查询和筛选器 （浏览器选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
+title: 查询和筛选器（浏览器选项卡，多维数据集设计器）（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070537"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>查询和筛选（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -28,38 +28,38 @@ ms.locfileid: "66070537"
  默认情况下，在执行查询时，当前用户的凭据（而非在 **“模拟信息”** 页中指定的凭据）用于连接到数据源。 但是，您也可以通过单击 **“工具栏”** 上的 **“更改用户”** 来更改查询或报表的用户上下文。  
   
 ## <a name="options"></a>选项  
- **Dimension**  
+ **维度**  
  选择对子多维数据集进行切片时所在的维度。  
   
- **Hierarchy**  
+ **层次结构**  
  选择对子多维数据集进行切片时所在的层次结构。  
   
  **“运算符”**  
- 选择运算符，以定义“筛选表达式”  中的表达式如何应用于所选层次结构。 下表对可用的运算符进行了说明：  
+ 选择运算符，以定义“筛选表达式”**** 中的表达式如何应用于所选层次结构。 下表对可用的运算符进行了说明：  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
-|**Equal**|结果限制为在 **“筛选表达式”** 中定义的集合。|  
+|**=**|结果限制为在 **“筛选表达式”** 中定义的集合。|  
 |**不等于**|结果限制为排除在 **“筛选表达式”** 中所定义集合之外的成员。|  
-|**In**|结果限制为在 **“筛选表达式”** 中选择的命名集。|  
-|**不在**|结果限制为排除在 **“筛选表达式”** 中所选命名集之外的成员。|  
+|**中**|结果限制为在 **“筛选表达式”** 中选择的命名集。|  
+|**不位于**|结果限制为排除在 **“筛选表达式”** 中所选命名集之外的成员。|  
 |**包含**|结果限制为成员名称包含 **“筛选表达式”** 中的字符串的成员。|  
-|**开始使用**|结果限制为成员名称以 **“筛选表达式”** 中的字符串开头的成员。|  
-|**范围 （包括）**|结果限制为在 **“筛选表达式”** 中选择的范围。|  
-|**范围 （不包括）**|结果限制为排除在 **“筛选表达式”** 中所选范围之外的成员。|  
-|**MDX**|结果限制为在“筛选表达式”  中设置的多维表达式 (MDX) 表达式。|  
+|**开头为**|结果限制为成员名称以 **“筛选表达式”** 中的字符串开头的成员。|  
+|**范围(包括)**|结果限制为在 **“筛选表达式”** 中选择的范围。|  
+|**范围(不包括)**|结果限制为排除在 **“筛选表达式”** 中所选范围之外的成员。|  
+|**MDX**|结果限制为在“筛选表达式”**** 中设置的多维表达式 (MDX) 表达式。|  
   
- **筛选表达式**  
- 键入通过“运算符”  计算的表达式，该表达式可限制要浏览的结果。  
+ **筛选器表达式**  
+ 键入通过“运算符”**** 计算的表达式，该表达式可限制要浏览的结果。  
   
 > [!NOTE]  
 >  此字段是动态数据输入元素，其外观将根据所选运算符的不同而相应改变，以反映该运算符所需的数据类型。  
   
-## <a name="see-also"></a>请参阅  
- [多维数据集设计器&#40;Analysis Services-多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [浏览器&#40;多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [工具栏&#40;浏览器选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [在 Excel 中分析&#40;浏览器选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [元数据&#40;浏览器选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [多维数据集设计器 &#40;Analysis Services 多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [浏览器 &#40;多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [工具栏 &#40;浏览器选项卡，多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [在 Excel &#40;浏览器选项卡、多维数据集设计器&#41; &#40;Analysis Services 多维数据中分析&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [元数据 &#40;浏览器选项卡，多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

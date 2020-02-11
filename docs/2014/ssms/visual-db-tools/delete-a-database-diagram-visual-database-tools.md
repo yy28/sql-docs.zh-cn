@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8e3854d98833354fd859d687bfa7e85e99601de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670440"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>删除数据库对象图 (Visual Database Tools)
@@ -33,11 +33,11 @@ ms.locfileid: "62670440"
   
 3.  从快捷菜单中选择“删除”  。  
   
-4.  此时，将显示一条消息，提示您确认删除。 选择 **“是”** 。  
+4.  此时，将显示一条消息，提示您确认删除。 选择“是”  。  
   
  该数据库关系图随即从数据库中删除。 在删除数据库关系图时，不会删除关系图中的表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用数据库关系图 (Visual Database Tools)](visual-database-tools.md)  
   
   

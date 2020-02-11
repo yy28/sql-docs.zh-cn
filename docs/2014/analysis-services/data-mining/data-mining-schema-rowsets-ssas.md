@@ -1,5 +1,5 @@
 ---
-title: 查询数据挖掘架构行集 (Analysis Services-数据挖掘) |Microsoft Docs
+title: 查询数据挖掘架构行集（Analysis Services 数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084911"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>查询数据挖掘架构行集（Analysis Services - 数据挖掘）
@@ -33,7 +33,7 @@ ms.locfileid: "66084911"
 ## <a name="list-of-data-mining-schema-rowsets"></a>数据挖掘架构行集列表  
  下表列出了可能对查询和监视有用的数据挖掘架构行集。  
   
-|行集名称|Description|  
+|行集名称|说明|  
 |-----------------|-----------------|  
 |DMSCHEMA_MINING_MODELS|列出了当前上下文中的所有挖掘模型。<br /><br /> 包括诸如创建日期、创建模型时所用的参数以及定型集大小等信息。|  
 |DMSCHEMA_MINING_COLUMNS|列出了当前上下文中在挖掘模型中使用的所有列。<br /><br /> 信息包括到挖掘结构源列的映射、数据类型、精度以及可与列一起使用的预测函数。|  
@@ -68,7 +68,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>示例 3:列出所有行集  
+### <a name="example-3-list-all-rowsets"></a>示例 3：列出所有行集  
  下面的示例返回在当前服务器上可用的行集的综合性列表：  
   
 ```  
@@ -76,7 +76,7 @@ SELECT *
 FROM $system.DBSCHEMA_TABLES  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [故障排除概念 (Analysis Services-数据挖掘)](https://msdn.microsoft.com/library/cc645881.aspx)  
+## <a name="see-also"></a>另请参阅  
+ [故障排除概念（Analysis Services - 数据挖掘）](https://msdn.microsoft.com/library/cc645881.aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 聚合转换编辑器 （高级选项卡） |Microsoft Docs
+title: 聚合转换编辑器（"高级" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 419a63f9a98e51b9601d7d38f70528ff4ae05970
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061585"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>聚合转换编辑器（“高级”选项卡）
@@ -35,12 +35,12 @@ ms.locfileid: "66061585"
  **“键范围”**  
  根据需要，可以指定聚合所需的键的大致数目。 转换将使用此信息优化其初始缓存大小。 默认情况下，此选项的值为 **“未指定”** 。 如果同时指定了 **“键范围”** 和 **“键数”** ，则 **“键数”** 优先。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |“未指定”|不使用 **“键范围”** 属性。|  
-|Low|聚合可以写入大约 500,000 个键。|  
-|Medium|聚合可以写入大约 5,000,000 个键。|  
-|High|聚合可以写入 25,000,000 个以上的键。|  
+|低|聚合可以写入大约 500,000 个键。|  
+|中型|聚合可以写入大约 5,000,000 个键。|  
+|高|聚合可以写入 25,000,000 个以上的键。|  
   
  **“键数”**  
  根据需要，可以指定聚合所需的键的精确数目。 转换将使用此信息优化其初始缓存大小。 如果同时指定了 **“键范围”** 和 **“键数”** ，则 **“键数”** 优先。  
@@ -48,12 +48,12 @@ ms.locfileid: "66061585"
  **“非重复键数范围”**  
  根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”** 。 如果同时指定了 **“非重复键数范围”** 和 **“非重复键计数”** ，则 **“非重复键计数”** 优先。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |“未指定”|不使用 CountDistinctScale 属性。|  
-|Low|聚合可以写入大约 500,000 个非重复值。|  
-|Medium|聚合可以写入大约 5,000,000 个非重复值。|  
-|High|聚合可以写入 25,000,000 个以上的非重复值。|  
+|低|聚合可以写入大约 500,000 个非重复值。|  
+|中型|聚合可以写入大约 5,000,000 个非重复值。|  
+|高|聚合可以写入 25,000,000 个以上的非重复值。|  
   
  **“非重复键计数”**  
  根据需要，可以指定聚合能够写入的非重复值的精确数目。 如果同时指定了 **“非重复键数范围”** 和 **“非重复键计数”** ，则 **“非重复键计数”** 优先。  
@@ -61,9 +61,9 @@ ms.locfileid: "66061585"
  **自动扩展系数**  
  使用一个 1 到 100 之间的值指定在聚合过程中内存可扩展的百分比。 默认情况下，此选项的值为 **25%** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [聚合转换编辑器（“聚合”选项卡）](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
+ [聚合转换编辑器 &#40;聚合 "选项卡&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
  [使用聚合转换来聚合数据集中的值](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

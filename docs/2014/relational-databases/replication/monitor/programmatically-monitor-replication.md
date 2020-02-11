@@ -29,10 +29,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667243"
 ---
 # <a name="programmatically-monitor-replication"></a>以编程方式监视复制
@@ -58,47 +58,47 @@ ms.locfileid: "62667243"
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>从分发服务器监视发布服务器、发布和订阅  
   
-1.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql)。 这将返回使用此分发服务器的所有发布服务器的监视信息。 若要将结果集限制在单个发布服务器范围之内，请指定 **@publisher** 。  
+1.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql)。 这将返回使用此分发服务器的所有发布服务器的监视信息。 若要将结果集限制为单个发布服务器， **@publisher**请指定。  
   
-2.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql). 这将返回使用此分发服务器的所有发布的监视信息。 若要将结果集限制在单个发布服务器、发布或已发布数据库的范围之内，请分别指定 **@publisher** 、 **@publication** 或 **@publisher_db** 。  
+2.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql). 这将返回使用此分发服务器的所有发布的监视信息。 若要将结果集限制在单个发布服务器、发布或已发布数据库中**@publisher**， **@publication**请分别**@publisher_db**指定、或。  
   
-3.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql)。 这将返回使用此分发服务器的所有订阅的监视信息。 若要将结果集限制在属于单个发布服务器、发布或已发布数据库的订阅范围之内，请分别指定 **@publisher** 、 **@publication** 或 **@publisher_db** 。  
+3.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql)。 这将返回使用此分发服务器的所有订阅的监视信息。 若要将结果集限制为属于单个发布服务器、发布或已发布数据库的订阅， **@publisher**请**@publication**分别指定**@publisher_db**、或。  
   
 #### <a name="to-monitor-transactional-commands-waiting-to-be-applied-at-the-subscriber"></a>监视等待在订阅服务器上应用的事务处理命令  
   
-1.  在分发服务器上，对分发数据库执行 [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)。 这将返回为使用此分发服务器的所有订阅挂起的所有命令的监视信息。 若要将结果集限制在为属于单个发布服务器、订阅服务器、发布或已发布数据库的订阅挂起的命令范围之内，请分别指定 **@publisher** 、 **@subscriber** 、 **@publication** 或 **@publisher_db** 。  
+1.  在分发服务器上，对分发数据库执行 [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)。 这将返回为使用此分发服务器的所有订阅挂起的所有命令的监视信息。 若要将结果集限制为属于单个发布服务器、订阅服务器、发布或已发布数据库的订阅挂起的命令**@publisher**， **@subscriber**请**@publication**分别指定**@publisher_db**、、或。  
   
 #### <a name="to-monitor-merge-changes-waiting-to-be-uploaded-or-downloaded"></a>监视等待上载或下载的合并更改  
   
-1.  在发布服务器上，对发布数据库执行 [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)。 这将返回一个结果集，其中显示了有关等待复制到订阅服务器的更改的信息。 若要将结果集限制在属于单个发布或项目的更改范围之内，请分别指定 **@publication** 或 **@article** 。  
+1.  在发布服务器上，对发布数据库执行 [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)。 这将返回一个结果集，其中显示了有关等待复制到订阅服务器的更改的信息。 若要将结果集限制为属于单个发布或项目的更改，请分别**@publication**指定**@article**或。  
   
-2.  在订阅服务器上，对订阅数据库执行 [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)。 这将返回一个结果集，其中显示了有关等待复制到发布服务器的更改的信息。 若要将结果集限制在属于单个发布或项目的更改范围之内，请分别指定 **@publication** 或 **@article** 。  
+2.  在订阅服务器上，对订阅数据库执行 [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)。 这将返回一个结果集，其中显示了有关等待复制到发布服务器的更改的信息。 若要将结果集限制为属于单个发布或项目的更改，请分别**@publication**指定**@article**或。  
   
 #### <a name="to-monitor-merge-agent-sessions"></a>监视合并代理会话  
   
 1.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)。 这将为所有使用此分发服务器的订阅返回有关所有合并代理会话的监视信息（包括 **Session_id**）。 还可以提供查询 **MSmerge_sessions** 系统表来获得 [Session_id](/sql/relational-databases/system-tables/msmerge-sessions-transact-sql) 。  
   
-2.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)。 为 **Session_id** 指定步骤 1 中的 **@session_id** 。 这将显示有关该会话的详细监视信息。  
+2.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)。 为 **Session_id** 指定步骤 1 中的 **@session_id**。 这将显示有关该会话的详细监视信息。  
   
 3.  为每个相关会话重复步骤 2。  
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>从订阅服务器监视请求订阅的合并代理会话  
   
-1.  在订阅服务器上，对订阅数据库执行 [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)。 针对给定订阅指定 **@publisher** 、 **@publication** ，并为 **@publisher_db** 。 这将为此订阅的最后五个合并代理会话返回监视信息。 请记下结果集中相关会话的 **Session_id** 值。  
+1.  在订阅服务器上，对订阅数据库执行 [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)。 对于给定的订阅，请**@publisher**指定**@publication**、和发布数据库的名称**@publisher_db**。 这将为此订阅的最后五个合并代理会话返回监视信息。 请记下结果集中相关会话的 **Session_id** 值。  
   
-2.  在订阅服务器上，对订阅数据库执行 [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)。 为 **Session_id** 指定步骤 1 中的 **@session_id** 。 这将显示有关该会话的详细监视信息。  
+2.  在订阅服务器上，对订阅数据库执行 [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)。 为 **Session_id** 指定步骤 1 中的 **@session_id**。 这将显示有关该会话的详细监视信息。  
   
 3.  为每个相关会话重复步骤 2。  
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>查看和修改发布的监视阈值标准  
   
-1.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql)。 这将返回为使用此分发服务器的所有发布设置的监视阈值。 若要将结果集限制在属于单个发布服务器或已发布数据库的发布或者单个发布的监视阈值范围之内，请分别指定 **@publisher** 、 **@publisher_db** 或 **@publication** 。 请记下任何必须更改的阈值的 **Metric_id** 值。 有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)。  
+1.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql)。 这将返回为使用此分发服务器的所有发布设置的监视阈值。 若要将结果集限制为属于单个发布服务器或已发布数据库或单个发布的发布的监视器阈值，请**@publisher**分别**@publisher_db**指定、 **@publication**或。 请记下任何必须更改的阈值的 **Metric_id** 值。 有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)。  
   
 2.  在分发服务器上，对分发数据库执行 [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)。 根据需要指定下列参数：  
   
-    -   为 **Metric_id** 指定在步骤 1 中获得 **@metric_id** 。  
+    -   为 **Metric_id** 指定在步骤 1 中获得 **@metric_id**。  
   
-    -   为 **@value** 。  
+    -   的监视器阈值指标的新值**@value**。  
   
     -   将 **@shouldalert** 的值指定为 **@shouldalert** 以在达到此阈值时记录警报；如果不需要警报，则指定为 **0** 。  
   
@@ -128,15 +128,15 @@ ms.locfileid: "62667243"
   
 5.  使用步骤 3 中获取的会话 ID 调用以下方法之一，以返回有关特定会话的详细信息：  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -返回的数组<xref:Microsoft.SqlServer.Replication.MergeSessionDetail>提供*sessionID*。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A>-为提供的<xref:Microsoft.SqlServer.Replication.MergeSessionDetail> *sessionID*返回对象的数组。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -返回<xref:System.Data.DataSet>包含指定信息的对象*sessionID*。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A>-返回<xref:System.Data.DataSet>对象，其中包含指定*sessionID*的信息。  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>监视分发服务器上所有发布的复制属性  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> 类的实例。  
   
 3.  将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "62667243"
   
 2.  通过下列方法之一获取 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 对象。  
   
-    -   创建 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 类的实例。 为发布服务器设置 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 `false`，则表示发布服务器名称定义不正确或表示该发布不存在。  
+    -   创建的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 类的实例。 为发布服务器设置 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 `false`，则表示发布服务器名称定义不正确或表示该发布不存在。  
   
     -   从通过现有 <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> 对象的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> 属性访问的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> 中获取。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "62667243"
   
 2.  通过下列方法之一获取 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 对象。  
   
-    -   创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。 为发布设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 `false`，则表示发布属性定义不正确，或表示该发布不存在。  
+    -   创建的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。 为发布设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 `false`，则表示发布属性定义不正确，或表示该发布不存在。  
   
     -   从通过现有 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 对象的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 属性访问的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 中获取。  
   
@@ -242,7 +242,7 @@ ms.locfileid: "62667243"
   
 2.  通过下列方法之一获取 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 对象。  
   
-    -   创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。 为发布设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 `false`，则表示发布属性定义不正确，或表示该发布不存在。  
+    -   创建的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。 为发布设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 `false`，则表示发布属性定义不正确，或表示该发布不存在。  
   
     -   从通过现有 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 对象的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 属性访问的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 中获取。  
   
@@ -256,7 +256,7 @@ ms.locfileid: "62667243"
   
 2.  通过下列方法之一获取 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 对象。  
   
-    -   创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。 为发布设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 `false`，则表示发布属性定义不正确，或表示该发布不存在。  
+    -   创建的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。 为发布设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 `false`，则表示发布属性定义不正确，或表示该发布不存在。  
   
     -   从通过现有 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 对象的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 属性访问的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 中获取。  
   
@@ -266,15 +266,21 @@ ms.locfileid: "62667243"
   
     -   *metricID* - <xref:System.Int32> 值，它表示下表中的监视阈值指标：  
   
-        |ReplTest1|Description|  
+        |值|说明|  
         |-----------|-----------------|  
-        |1|`expiration` - 监视对事务发布的订阅是否即将过期。|  
-        |2|`latency` - 监视对事务发布的订阅的性能。|  
-        |4|`mergeexpiration` - 监视对合并发布的订阅是否即将过期。|  
-        |5|`mergeslowrunduration` -监视通过低带宽 （拨号） 连接的合并同步的持续时间。|  
-        |6|`mergefastrunduration` - 监视通过高带宽 (LAN) 连接进行的合并同步的持续时间。|  
-        |7|`mergefastrunspeed` - 监视通过高带宽 (LAN) 连接进行的合并同步的同步速率。|  
-        |8|`mergeslowrunspeed` - 监视通过低带宽（拨号）连接进行的合并同步的同步速率。|  
+        |1|
+  `expiration` - 监视对事务发布的订阅是否即将过期。|  
+        |2|
+  `latency` - 监视对事务发布的订阅的性能。|  
+        |4|
+  `mergeexpiration` - 监视对合并发布的订阅是否即将过期。|  
+        |5|`mergeslowrunduration`-监视通过低带宽（拨号）连接进行的合并同步的持续时间。|  
+        |6|
+  `mergefastrunduration` - 监视通过高带宽 (LAN) 连接进行的合并同步的持续时间。|  
+        |7|
+  `mergefastrunspeed` - 监视通过高带宽 (LAN) 连接进行的合并同步的同步速率。|  
+        |8|
+  `mergeslowrunspeed` - 监视通过低带宽（拨号）连接进行的合并同步的同步速率。|  
   
     -   *enable* - <xref:System.Boolean> 值。  
   

@@ -1,5 +1,5 @@
 ---
-title: 定义半累加行为 （商业智能向导） |Microsoft Docs
+title: 定义半累加行为（商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081995"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>定义半累加行为（商业智能向导）
-  可以使用“定义半累加性行为”  页启用或禁用针对度量值的半累加行为。 半累加行为确定多维数据集所包含的度量值在一定时间维度内如何聚合。  
+  可以使用“定义半累加性行为”**** 页启用或禁用针对度量值的半累加行为。 半累加行为确定多维数据集所包含的度量值在一定时间维度内如何聚合。  
   
 > [!NOTE]  
 >  除了可用于标准版本的 LastChild 之外，其他的半累加行为仅可用于商业智能或企业版本。 此外，由于半累加性行为是只针对度量值而不针对维度定义的，如果从维度设计器或者通过在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中右键单击维度启动了商业智能向导，将不会看到此页。  
@@ -29,7 +29,7 @@ ms.locfileid: "66081995"
  **关闭半累加性行为**  
  在多维数据集所包含的所有度量值中禁用半累加性行为。  
   
- **向导检测到\<维度名称 > 包含半累加性成员的帐户维度。服务器将聚合此维度根据为每个帐户类型指定的半累加性行为的成员。**  
+ **向导检测到包含半\<累加性成员的维度名称> 帐户维度。服务器将根据为每种帐户类型指定的半累加性行为聚合此维度的成员。**  
  对包含半累加性成员的帐户维度启用半累加性行为。 选择此选项将把引用该帐户维度的度量值组中所有度量值的聚合函数设置为 `ByAccount`。  
   
  有关帐户维度的详细信息，请参阅 [创建父子类型维度的财务帐户](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)。  
@@ -37,13 +37,13 @@ ms.locfileid: "66081995"
  **为各个成员定义半累加性行为**  
  为特定度量值启用半累加性行为，并指定半累加性聚合函数。 该聚合函数将应用于包含该度量值的度量值组所引用的所有维度。  
   
- **度量值**  
+ **度量值组**  
  显示多维数据集所包含的度量值的名称。  
   
  **半累加性函数**  
  为所选度量值选择聚合函数。 下表列出了可用的聚合函数：  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**AverageOfChildren**|通过返回度量值子成员的平均值进行聚合。|  
 |`ByAccount`|通过与帐户维度中属性的指定帐户类型关联的聚合函数进行聚合。|  
@@ -59,11 +59,11 @@ ms.locfileid: "66081995"
 |`Sum`|使用 `Sum` 函数聚合。|  
   
 > [!NOTE]  
->  只有在选择了“为各个成员定义半累加性行为”  之后，才会应用对此选项所做的选择。  
+>  只有在选择了“为各个成员定义半累加性行为”**** 之后，才会应用对此选项所做的选择。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [商业智能向导的 F1 帮助](business-intelligence-wizard-f1-help.md)   
- [多维数据集设计器&#40;Analysis Services-多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [维度设计器&#40;Analysis Services-多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [多维数据集设计器 &#40;Analysis Services 多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [维度设计器 &#40;Analysis Services 多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 对挖掘模型启用钻取 |Microsoft Docs
+title: 为挖掘模型启用钻取 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ce3967bf9258e9b8f6cd4a28cb28a29a1e0588
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084534"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>对挖掘模型启用钻取
   如果为挖掘模型启用了钻取，则可以在浏览模型时检索用于创建模型的事例的详细信息。 若要查看这些信息，则您必须拥有必要的权限，且挖掘结构已经过处理。  
   
- **权限** 如果用户要钻取模型数据或结构数据，则该用户必须是具有挖掘模型或挖掘结构的 [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) 权限的角色成员。 挖掘结构和挖掘模型的钻取权限是分开设置的。  
+ **权限**用户必须是具有挖掘模型或挖掘结构的[AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl)权限的角色成员，才能钻取到模型数据或结构数据。 挖掘结构和挖掘模型的钻取权限是分开设置的。  
   
 -   即使不具有结构的钻取权限，模型的钻取权限也允许您从模型进行钻取。  
   
--   如果拥有结构的钻取权限，则可通过使用 [StructureColumn (DMX)](/sql/dmx/structurecolumn-dmx) 函数，将结构列包含到模型钻取查询中。 此外可以使用 SELECT 查询的培训和结构中的测试用例...从\<结构 >。用例的语法。  
+-   如果拥有结构的钻取权限，则可通过使用 [StructureColumn (DMX)](/sql/dmx/structurecolumn-dmx) 函数，将结构列包含到模型钻取查询中。 您还可以使用 "选择 ..." 来查询结构中的定型和测试用例。FROM \<结构>。Case 语法。  
   
- **缓存定型事例** 钻取就是检索挖掘结构中的定型事例的相关信息。 这些信息是在处理结构时缓存的。 因此，如果通过将 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性更改为 `ClearAfterProcessing`，选择清除了缓存的所有数据，则钻取功能将无法正常工作。  
+ **缓存定型事例**钻取通过检索挖掘结构中的定型事例的相关信息来工作。 这些信息是在处理结构时缓存的。 因此，如果通过将 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性更改为 `ClearAfterProcessing`，选择清除了缓存的所有数据，则钻取功能将无法正常工作。  
   
 > [!NOTE]  
 >  如果没有缓存定型事例，则必须将 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性更改为 **KeepTrainingCases** ，并重新处理模型，然后才能查看事例数据。  
@@ -38,15 +38,15 @@ ms.locfileid: "66084534"
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>对挖掘模型启用钻取  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中数据挖掘设计器的“挖掘模型”选项卡上，右键单击要针对其启用钻取的挖掘模型名称，再选择“属性”。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中数据挖掘设计器的“挖掘模型”**** 选项卡上，右键单击要针对其启用钻取的挖掘模型名称，再选择“属性”****。  
   
 2.  在 **“属性”** 窗口中，单击 **AllowDrillthrough**，再选择 **True**。  
   
-3.  在“挖掘模型”选项卡中，右键单击所需的模型，再选择“处理模型”。  
+3.  在“挖掘模型”选项卡中，右键单击所需的模型，再选择“处理模型”********。  
   
 ### <a name="to-enable-caching-for-a-mining-structure"></a>启用挖掘结构的缓存功能  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器的“挖掘结构”选项卡上，右键单击挖掘结构的名称。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器的“挖掘结构”**** 选项卡上，右键单击挖掘结构的名称。  
   
 2.  打开 **“属性”** 窗口。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66084534"
   
 4.  在 **“数据集”** 菜单上，选择 **“处理”**。  
   
-## <a name="see-also"></a>请参阅  
- [钻取查询（数据挖掘）](drillthrough-queries-data-mining.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘 &#40;钻取查询&#41;](drillthrough-queries-data-mining.md)  
   
   

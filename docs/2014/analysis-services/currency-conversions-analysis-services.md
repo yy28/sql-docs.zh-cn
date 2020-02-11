@@ -1,5 +1,5 @@
 ---
-title: 货币换算 (Analysis Services) |Microsoft Docs
+title: 货币换算（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,19 +19,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086550"
 ---
-# <a name="currency-conversions-analysis-services"></a>货币换算 (Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  多维  
+# <a name="currency-conversions-analysis-services"></a>货币换算 （Analysis Services）
+  **[!INCLUDE[applies](../includes/applies-md.md)]** 仅多维  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用一组由多维表达式 (MDX) 脚本引导的功能组合，在支持多种货币的多维数据集中提供货币换算支持。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]结合使用多维表达式（MDX）脚本引导的功能组合，在支持多种货币的多维数据集中提供货币换算支持。  
   
 ## <a name="currency-conversion-terminology"></a>货币换算术语  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中使用下列术语来说明货币换算功能：  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中使用下列术语来说明货币换算功能：  
   
  先导货币  
  在比率度量值组中为其输入汇率的货币。  
@@ -84,7 +85,7 @@ ms.locfileid: "66086550"
 ## <a name="defining-currency-conversions"></a>定义货币换算  
  您可以使用商业智能向导来为多维数据集定义货币换算功能，也可以使用 MDX 脚本来手动定义货币换算。  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
  您必须首先定义至少一个货币维度、至少一个时间维度和至少一个比率度量值组，然后才能使用商业智能向导在多维数据集中定义货币换算。 商业智能向导可以从这些对象中检索相应的数据和元数据，以用于构造提供货币换算功能所需的报表货币维度和 MDX 脚本。  
   
 ### <a name="decisions"></a>决策  
@@ -106,8 +107,8 @@ ms.locfileid: "66086550"
 |||||  
 |-|-|-|-|  
 |汇率方向|**多对一**|**一对多**|**多对多**|  
-|**n 先导货币对 1 示例货币**|为将度量值换算为先导货币，需要将待换算度量值乘以本地货币的汇率度量值。|为将度量值换算为报表货币，需要将待换算度量值除以报表货币的汇率度量值。|将待换算度量值乘以本地货币的汇率度量值来将其换算为先导货币，然后将该换算后的度量值除以报表货币的汇率度量值来将其换算为报表货币。|  
-|**n 示例货币对 1 先导货币**|为将度量值换算为先导货币，需要将待换算度量值除以本地货币的汇率度量值。|为将度量值换算为报表货币，需要将待换算度量值乘以报表货币的汇率度量值。|将待换算度量值除以本地货币的汇率度量值来将其换算为先导货币，然后将该换算后的度量值乘以报表货币的汇率度量值来将其换算为报表货币。|  
+|**n 数据透视货币到1示例货币**|为将度量值换算为先导货币，需要将待换算度量值乘以本地货币的汇率度量值。|为将度量值换算为报表货币，需要将待换算度量值除以报表货币的汇率度量值。|将待换算度量值乘以本地货币的汇率度量值来将其换算为先导货币，然后将该换算后的度量值除以报表货币的汇率度量值来将其换算为报表货币。|  
+|**n 示例货币对1先导货币**|为将度量值换算为先导货币，需要将待换算度量值除以本地货币的汇率度量值。|为将度量值换算为报表货币，需要将待换算度量值乘以报表货币的汇率度量值。|将待换算度量值除以本地货币的汇率度量值来将其换算为先导货币，然后将该换算后的度量值乘以报表货币的汇率度量值来将其换算为报表货币。|  
   
  您可以在商业智能向导的 **“设置货币换算选项”** 页上选择汇率方向。 有关设置换算方向的详细信息，请参阅[设置货币换算选项（商业智能向导）](set-currency-conversion-options-business-intelligence-wizard.md)。  
   
@@ -150,7 +151,7 @@ ms.locfileid: "66086550"
   
 -   度量值组包含一个到货币维度的常规维度关系。 例如，在 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 示例 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中，Internet Sales 度量值组有一个到 Currency 维度的常规维度关系。 该度量值组的事实数据表包含一个外键列，该外键列引用该维度的维度表中的货币标识符。 在这种情况下，您可以从由该度量值组引用的货币维度中选择此属性来为该度量值组标识事实数据表中交易的本地货币。 此种情况在银行应用程序中最常见，这类应用程序使用交易本身确定交易使用的货币。  
   
--   度量值组通过另一个直接引用货币维度的维度包含一个到货币维度的被引用维度关系。 例如，在 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 示例 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中，“财务报表”度量值组与“货币”维度之间通过“单位”维度建立了引用维度关系。 该度量值组的事实数据表包含一个外键列，该列引用了 Organization 维度的维度表中的成员。 反过来，“单位”维度的维度表也包含一个外键列，该外键列引用“货币”维度的维度表中的货币标识符。 这种情况在财务报表应用程序中最常见，此类应用程序使用交易的位置或子公司来确定交易的货币。 在这种情况下，可以从业务实体的维度中选择引用货币维度的属性。  
+-   度量值组通过另一个直接引用货币维度的维度包含一个到货币维度的被引用维度关系。 例如，在 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 示例 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中，“财务报表”度量值组与“货币”维度之间通过“单位”维度建立了引用维度关系。 该度量值组的事实数据表包含一个外键列，该列引用了 Organization 维度的维度表中的成员。 反过来，Organization 维度的维度表也包含一个外键列，该外键列引用 Currency 维度的维度表中的货币标识符。 这种情况在财务报表应用程序中最常见，此类应用程序使用交易的位置或子公司来确定交易的货币。 在这种情况下，可以从业务实体的维度中选择引用货币维度的属性。  
   
 ### <a name="reporting-currencies"></a>报表货币  
  如果您为自己的货币换算选择了多对多或一对多换算类型，则需要指定如何标识商业智能向导生成的 MDX 脚本执行货币换算计算时所使用的报表货币。 您可以指定与比率度量值组相关的货币维度的所有成员，也可以从该维度中选择单独的成员。  
@@ -184,7 +185,7 @@ ms.locfileid: "66086550"
   
  若有必要，您可以更改包含在货币换算中的脚本命令。 如果您覆盖了该货币换算，则您的更改将丢失。  
   
-## <a name="see-also"></a>请参阅  
- [Analysis Services Multiidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)  
+## <a name="see-also"></a>另请参阅  
+ [Analysis Services Multidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
   

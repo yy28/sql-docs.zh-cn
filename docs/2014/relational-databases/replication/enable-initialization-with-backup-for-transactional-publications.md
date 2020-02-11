@@ -1,5 +1,5 @@
 ---
-title: 启用使用备份初始化对事务发布 (SQL Server Management Studio) |Microsoft Docs
+title: 为事务发布启用使用备份进行初始化（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 046eb926391faff26bb3238dfd225619e9fec374
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721340"
 ---
 # <a name="enable-initialization-with-a-backup-for-transactional-publications-sql-server-management-studio"></a>使用备份来初始化事务发布 (SQL Server Management Studio)
   若要使用备份初始化对事务发布的订阅，请启用发布以允许使用备份进行初始化，然后指定创建订阅时的备份信息：  
   
--   在“发布属性 - \<发布>”  对话框的“订阅选项”  页中启用发布。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)。  
+-   在“发布属性 - **发布>”** **对话框的“订阅选项”\<** 页中启用发布。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)。  
   
 -   使用存储过程 [sp_addsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) 指定备份信息。 有关 **sp_addsubscription** 所需的参数的详细信息，请参阅[使用备份初始化事务订阅（复制 Transact-SQL 编程）](initialize-a-transactional-subscription-from-a-backup.md)。  
   
 ### <a name="to-enable-initialization-with-a-backup"></a>启用使用备份来初始化  
   
-1.  在“发布属性 - \<发布>”  对话框的“订阅选项”  页上，为“允许从备份文件初始化”选项选择“True”值   。  
+1.  在“发布属性 - **发布>”** **对话框的“订阅选项”\<** 页上，为“允许从备份文件初始化”选项选择“True”值   。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [初始化事务订阅（不使用快照）](initialize-a-transactional-subscription-without-a-snapshot.md)  
   
   

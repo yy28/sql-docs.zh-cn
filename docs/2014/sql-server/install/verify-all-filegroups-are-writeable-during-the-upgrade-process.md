@@ -1,5 +1,5 @@
 ---
-title: 确保在升级过程中的所有文件组均可写 |Microsoft Docs
+title: 验证升级过程中所有文件组均可写 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 758207977c8ddf92d6696dda71a8943e6a596d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091189"
 ---
 # <a name="verify-all-filegroups-are-writeable-during-the-upgrade-process"></a>确保升级过程中所有文件组均可写
@@ -29,8 +29,8 @@ ms.locfileid: "66091189"
 ## <a name="corrective-action"></a>纠正措施  
  使用 ALTER DATABASE 将文件组设置为 READ_WRITE。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 升级顾问 &#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

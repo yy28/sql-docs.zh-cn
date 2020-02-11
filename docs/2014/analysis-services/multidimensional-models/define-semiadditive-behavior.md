@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075541"
 ---
 # <a name="define-semiadditive-behavior"></a>定义半累加性行为
@@ -48,11 +48,11 @@ ms.locfileid: "66075541"
   
 -   First Nonempty Child  
   
--   None  
+-   无  
   
- 此选项不会更改使用下列常规聚合函数的度量值： `Sum`， `Min`， `Max`， `Count`，或`Distinct``Count`。  
+ 此选项不会更改使用常规聚合函数的度量值`Sum`： `Min`、 `Max`、 `Count`、或`Distinct``Count`。  
   
- **向导检测到帐户"包含半累加性成员的帐户维度。服务器将聚合此维度根据为每个帐户类型指定的半累加性行为的成员。**  
+ **向导检测到包含半累加性成员的 "账户" 帐户维度。服务器将根据为每种帐户类型指定的半累加性行为聚合此维度的成员。**  
  导致系统将按“帐户”类型维度进行维度化的度量值组中的所有度量值设置为“按帐户”聚合函数，并且服务器将根据为每个帐户类型指定的半累加性行为聚合此维度的成员。  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ ms.locfileid: "66075541"
   
  对于每个度量值，可以从下表所描述的半累加性功能类型中进行选择。  
   
-|半累加性函数|Description|  
+|半累加性函数|说明|  
 |---------------------------|-----------------|  
 |Average of Children|成员的聚合是其子级的平均。|  
 |ByAccount|系统读取为帐户类型指定的半累加性行为。|  
@@ -78,7 +78,7 @@ ms.locfileid: "66075541"
 |LastNonEmpty|将成员值认定为其包含数据的沿时间维度的最后一个子级的值。|  
 |Max|应用标准的最大值聚合函数。|  
 |Min|应用标准的最小值聚合函数。|  
-|None|不应用聚合。|  
+|无|不应用聚合。|  
 |SUM|应用标准的求和函数。|  
   
  完成向导时，将覆盖任何现有的半累加性行为。  

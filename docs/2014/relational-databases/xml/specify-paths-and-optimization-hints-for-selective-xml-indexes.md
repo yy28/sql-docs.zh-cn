@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679795"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>为选择性 XML 索引指定路径和优化提示
@@ -29,7 +29,7 @@ ms.locfileid: "62679795"
  有关选择性 XML 索引的详细信息，请参阅 [选择性 XML 索引 (SXI)](../xml/selective-xml-indexes-sxi.md)。  
   
 ##  <a name="untyped"></a> 了解非类型化 XML 中的 XQuery 和 SQL Server 类型  
- 选择性 XML 索引支持两种类型的系统：XQuery 类型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型。 已建立索引的路径可用于匹配 XQuery 表达式，或者用于匹配 XML 数据类型的 value() 方法的返回值。  
+ 选择性 XML 索引支持两种类型系统：XQuery 类型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型。 已建立索引的路径可用于匹配 XQuery 表达式，或者用于匹配 XML 数据类型的 value() 方法的返回值。  
   
 -   在未对要建立索引的路径加批注时，或者使用 XQUERY 关键字进行批注时，该路径匹配 XQuery 表达式。 对于 XQUERY 批注的节点路径有两种变化形式：  
   
@@ -76,7 +76,7 @@ mypath03 = '/a/b/d'
   
  支持非类型化 XML 事例的 XQuery 类型包括：  
   
--   **xs:boolean**  
+-   **xs: boolean**  
   
 -   **xs:double**  
   
@@ -114,7 +114,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  对于返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型的路径，必须指定某一类型。 使用您要在 value() 方法中使用的相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型。  
   
- 请考虑以下查询：  
+ 请考虑下列查询：  
   
 ```sql  
 SELECT T.record,  
@@ -142,7 +142,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
 -   **xs:anyUri**  
   
--   **xs:boolean**  
+-   **xs: boolean**  
   
 -   **xs:date**  
   
@@ -234,7 +234,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   节点 `b`，因为在 XQuery 表达式中一个谓词应用于节点`b` 。  
   
-2.  **原则 2**：为了获得最佳性能，请为针对某一给定 XQuery 表达式进行求值所需的所有节点建立索引。 如果您仅对其中某些节点建立索引，则选择性 XML 索引将改进只包含已建立索引的节点的子表达式的求值。  
+2.  **原则 2**：为了得到最佳性能，为对某一给定 XQuery 表达式进行求值所需的所有节点建立索引。 如果您仅对其中某些节点建立索引，则选择性 XML 索引将改进只包含已建立索引的节点的子表达式的求值。  
   
  为了提高上面所示的 SELECT 语句的性能，您可以创建以下选择性 XML 索引：  
   
@@ -356,7 +356,7 @@ WHERE T.xmldata.exist('
 ### <a name="benefits-of-optimization-hints"></a>优化提示的好处  
  下表标识支持更高效的存储或改进的性能的优化提示。  
   
-|优化提示|更高效的存储|改进的性能|  
+|优化提示|更高效的存储|提高了性能|  
 |-----------------------|----------------------------|--------------------------|  
 |**node()**|是|否|  
 |**SINGLETON**|否|是|  
@@ -374,11 +374,11 @@ WHERE T.xmldata.exist('
 |**MAXLENGTH**|是|否|  
   
 ### <a name="node-optimization-hint"></a>node() 优化提示  
- 适用范围：XQuery 数据类型  
+ 适用于：XQuery 数据类型  
   
  您可以使用 node() 优化指定其值无需用于对典型查询进行求值的节点。 在典型查询仅需要为存在的节点进行求值时，此提示可降低存储要求。 （默认情况下，选择性 XML 查询将存储几乎所有提升的节点的值，只有复杂节点类型除外。）  
   
- 请看下面的示例：  
+ 请考虑以下示例：  
   
 ```sql  
 SELECT T.record FROM myXMLTable T  
@@ -392,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  如果某个查询要求已使用 node() 提示建立索引的节点值，则不能使用选择性 XML 索引。  
   
 ### <a name="singleton-optimization-hint"></a>SINGLETON 优化提示  
- 适用范围：XQuery 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型  
+ 适用于：XQuery 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型  
   
  SINGLETON 优化提示指定节点的基数。 此提示将改进查询性能，因为提前知道节点在其父节点或祖先节点内最多出现一次。  
   
@@ -403,14 +403,14 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  如果已指定 SINGLETON 提示，但某一节点在其父节点或祖先节点内出现多次，则在您创建索引（为现有数据）或运行查询（为新数据）时将引发错误。  
   
 ### <a name="data-type-optimization-hint"></a>DATA TYPE 优化提示  
- 适用范围：XQuery 数据类型  
+ 适用于：XQuery 数据类型  
   
  通过 DATA TYPE 优化提示，您可以为已建立索引的节点指定 XQuery 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 该数据类型用于与选择性 XML 索引的数据表中与已建立索引的节点相对应的列。  
   
  在将现有值转换为指定的数据类型失败时，插入操作（插入到索引中）不会失败；但是，一个 null 值将插入到索引的数据表中。  
   
 ### <a name="maxlength-optimization-hint"></a>MAXLENGTH 优化提示  
- 适用范围：XQuery 数据类型  
+ 适用于：XQuery 数据类型  
   
  通过 MAXLENGTH 优化提示，您可以限制 xs:string 数据的长度。 MAXLENGTH 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不相关，因为您在指定 VARCHAR 或 NVARCHAR 日期类型时指定长度。  
   
@@ -437,7 +437,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
 
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [选择性 XML 索引 (SXI)](../xml/selective-xml-indexes-sxi.md)   
  [创建、更改和删除选择性 XML 索引](../xml/create-alter-and-drop-selective-xml-indexes.md)  
   

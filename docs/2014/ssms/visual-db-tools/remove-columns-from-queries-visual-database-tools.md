@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08230f1937d42247f8eeff09014f7727c6ebfe43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659632"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>从查询中删除列 (Visual Database Tools)
@@ -36,10 +36,10 @@ ms.locfileid: "62659632"
   
 -   在 [“SQL”窗格](sql-pane-visual-database-tools.md)中移除对该列的所有引用。  
   
-## <a name="see-also"></a>请参阅  
- [向查询中添加列&#40;可视化数据库工具&#41;](add-columns-to-queries-visual-database-tools.md)   
- [排序和分组查询结果&#40;可视化数据库工具&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [汇总查询结果&#40;可视化数据库工具&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [在 Visual Database Tools &#40;向查询中添加列&#41;](add-columns-to-queries-visual-database-tools.md)   
+ [对查询结果进行排序和分组 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;汇总查询结果](summarize-query-results-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

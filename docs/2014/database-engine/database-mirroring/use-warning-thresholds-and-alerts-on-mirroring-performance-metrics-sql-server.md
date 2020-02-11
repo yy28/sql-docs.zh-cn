@@ -1,5 +1,5 @@
 ---
-title: 使用警告阈值和警报镜像性能度量值 (SQL Server) |Microsoft Docs
+title: 使用镜像性能指标的警告阈值和警报（SQL Server） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754030"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用镜像性能度量的警告阈值和警报 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "62754030"
   
 -   [设置和管理警告阈值](#SetUpManageWarningThresholds)  
   
--   [将警报用于镜像数据库](#UseAlerts)  
+-   [使用镜像数据库的警报](#UseAlerts)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -66,14 +66,14 @@ ms.locfileid: "62754030"
   
      管理员可以使用下面一组系统存储过程，针对伙伴双方的镜像数据库，分别设置和管理警告阈值。  
   
-    |过程|Description|  
+    |过程|说明|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)|添加或更改指定镜像性能指标的警告阈值。|  
     |[sp_dbmmonitorhelpalert (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)|返回若干个关键数据库镜像监视器性能指标中的一个或所有指标的警告阈值信息。|  
     |[sp_dbmmonitordropalert (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|删除指定性能指标的警告。|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>发送到 Windows 事件日志的性能阈值事件  
- 如果为性能指标定义了警告阈值，则在更新状态表时，将针对阈值计算最新的值。 如果已达到阈值，则更新过程“sp_dbmmonitorupdate”会针对指标生成一个信息性事件（“性能阈值事件”），然后将此事件写入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志   。 下表列出性能阈值事件的 ID。  
+ 如果为性能指标定义了警告阈值，则在更新状态表时，将针对阈值计算最新的值。 如果已达到阈值，则更新过程“sp_dbmmonitorupdate”会针对指标生成一个信息性事件（“性能阈值事件”），然后将此事件写入  **Windows 事件日志**  [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 下表列出性能阈值事件的 ID。  
   
 |性能指标|事件 ID|  
 |------------------------|--------------|  
@@ -139,7 +139,7 @@ ms.locfileid: "62754030"
   
 -   [sp_dbmmonitorupdate (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
  [监视数据库镜像 (SQL Server)](monitoring-database-mirroring-sql-server.md)  
   

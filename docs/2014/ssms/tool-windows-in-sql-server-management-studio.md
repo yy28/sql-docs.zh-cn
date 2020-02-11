@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661849"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具窗口
@@ -31,13 +31,13 @@ ms.locfileid: "62661849"
 |[模板资源管理器](template/template-explorer.md)|基于现有模板创建查询。 还可以创建自定义查询，或改变现有模板以使它适合您自己的需要。 可以从“视图”  菜单访问该工具。|  
 |[动态帮助](sql-server-management-studio-ssms.md)|单击组件或类型代码时，显示相关帮助主题的列表。|  
   
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的工具可以一起工作。 例如，您可以：  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的工具可以一起工作。 例如，你能够：  
   
 -   向对象资源管理器注册服务器。  
   
 -   从对象资源管理器打开与具体数据库连接的“SQL 编辑器”窗口。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 定义数据库维度，|Microsoft Docs
+title: 定义数据库维度 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075605"
 ---
 # <a name="define-database-dimensions"></a>定义数据库维度
-  可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度设计器，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中配置现有数据库维度。 可以使用维度设计器执行下列任务：  
+  使用中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的维度设计器可在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目或数据库中配置现有数据库维度。 可以使用维度设计器执行下列任务：  
   
 -   配置维度级别属性。  
   
@@ -40,19 +40,19 @@ ms.locfileid: "66075605"
   
  维度设计器中有三个不同的选项卡，下表对这些选项卡进行了说明。  
   
-|Tab|描述|  
+|Tab|说明|  
 |---------|-----------------|  
-|**维度结构**|使用此选项卡上，若要使用的维度到结构检查或创建数据源视图架构对于维度，以处理特性，以及组织中用户定义的层次结构的属性。|  
-|**属性关系**|使用此选项卡可以创建、修改或删除维度的属性关系。|  
+|**维度结构**|使用此选项卡可以处理维度的结构，以检查或创建维度的数据源视图架构，使用属性以及组织用户定义层次结构中的属性。|  
+|**的维度设计器中，可以在“维度结构”视图的**|使用此选项卡可以创建、修改或删除维度的属性关系。|  
 |**翻译**|使用此选项卡可以不同的语言添加和编辑维度元数据的翻译。|  
-|**浏览者**|使用此选项卡可检查已处理维度的成员和审查维度元数据的翻译。|  
+|**浏览器**|使用此选项卡可检查已处理维度的成员和审查维度元数据的翻译。|  
   
  以下主题介绍了您可以在维度设计器中执行的任务。  
   
  [维度特性属性参考](dimension-attribute-properties-reference.md)  
  说明如何定义和配置维度属性。  
   
- [创建用户定义层次结构](user-defined-hierarchies-create.md)  
+ [创建用户定义的层次结构](user-defined-hierarchies-create.md)  
  说明如何定义和配置用户定义层次结构。  
   
  [定义属性关系](attribute-relationships-define.md)  

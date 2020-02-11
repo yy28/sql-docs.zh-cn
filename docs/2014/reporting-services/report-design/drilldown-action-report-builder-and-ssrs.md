@@ -41,10 +41,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2fe3d55dc70a606df759c049b7b147820f0e3110
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105991"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>深化操作（报表生成器和 SSRS）
@@ -84,8 +84,8 @@ ms.locfileid: "66105991"
   
  有关详细信息，请参阅[呈现行为（报表生成器和 SSRS）](rendering-behaviors-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>请参阅  
- [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](drillthrough-drilldown-subreports-and-nested-data-regions.md)   
+## <a name="see-also"></a>另请参阅  
+ [钻取、深化、子报表和嵌套数据区域 &#40;报表生成器和 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)   
  [交互式排序、文档结构图和链接（报表生成器和 SSRS）](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)  
   

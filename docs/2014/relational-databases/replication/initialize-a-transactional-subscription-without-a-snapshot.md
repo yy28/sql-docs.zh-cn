@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721150"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialize a Transactional Subscription Without a Snapshot
@@ -44,7 +44,7 @@ ms.locfileid: "62721150"
   
  若要使用备份初始化订阅，首先必须在创建发布时启用此选项，然后在创建订阅时为多个选项指定值。 可以通过新建发布向导或以编程方式启用发布。 但是，订阅选项所需的值只能用编程方式指定。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[使用备份来初始化事务发布 &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[使用备份来初始化事务发布 (SQL Server Management Studio)](enable-initialization-with-backup-for-transactional-publications.md)  
   
 -   复制 Transact-SQL 编程：[从备份初始化事务订阅（复制 Transact-SQL 编程）](initialize-a-transactional-subscription-from-a-backup.md)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62721150"
   
  若要使用其他方法初始化订阅，请参阅 [Initialize a Subscription Manually](initialize-a-subscription-manually.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [初始化订阅](initialize-a-subscription.md)  
   
   

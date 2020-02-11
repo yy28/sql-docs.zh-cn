@@ -1,5 +1,5 @@
 ---
-title: 透视表示形式 （表格） |Microsoft Docs
+title: 透视表示形式（表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4704fc56ae1eacfb8481533c9d743afff80e923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757754"
 ---
 # <a name="perspective-representation-tabular"></a>透视表示形式（表格）
   透视是一种机制，用于针对客户端应用程序简化模型或将模型的侧重点置于其某个较小部分。  
   
- 请参阅[透视表示形式 （表格）](perspective-representation-tabular.md)有关如何创建和操作透视表示形式的详细说明。  
+ 有关如何创建和操作透视表示形式的详细说明，请参阅[透视表示形式（表格）](perspective-representation-tabular.md) 。  
   
 > [!WARNING]  
 >  透视并不是一种安全机制；用户仍可通过其他接口访问透视外部的对象。  
@@ -29,7 +29,7 @@ ms.locfileid: "62757754"
  就 AMO 对象而言，透视表示形式与 <xref:Microsoft.AnalysisServices.Perspective> 之间存在一对一映射关系，并且不需要任何其他主要 AMO 对象。  
   
 ### <a name="perspective-in-amo"></a>AMO 中的透视  
- 下面的代码段演示如何在表格模型中创建透视。 此代码段中的关键元素是 perspectiveElements；此对象是表格模型中向用户公开的所有对象的图形化表示形式。 *perspectiveElements*包含 4 列和对于此方案仅 1、 2 和 3，则列相关。 第 1 列包含显示的元素的类型 - elementTypeValue；第 2 列包含元素的完整名称 --（可能需要进行分析以在透视中输入该元素）；第 3 列包含一个复选框项 - checkedElement，该项说明元素是否为透视的一部分。  
+ 下面的代码段演示如何在表格模型中创建透视。 此代码段中的关键元素是 perspectiveElements；此对象是表格模型中向用户公开的所有对象的图形化表示形式。 *perspectiveElements*包含4列，在此方案中，只有列1、2和3是相关的。 第 1 列包含显示的元素的类型 - elementTypeValue；第 2 列包含元素的完整名称 --（可能需要进行分析以在透视中输入该元素）；第 3 列包含一个复选框项 - checkedElement，该项说明元素是否为透视的一部分。  
   
 ```  
   

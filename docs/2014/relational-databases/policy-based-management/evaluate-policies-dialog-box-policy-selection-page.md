@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705126"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>“评估策略”对话框，“策略选择”页
@@ -24,10 +24,10 @@ ms.locfileid: "62705126"
   
 ## <a name="options"></a>选项  
  **数据源**  
- 指定策略的来源。 若要更改来源，请单击“浏览”按钮 ( **...** ) 以打开“选择源”  对话框。  
+ 指定策略的来源。 若要更改来源，请单击“浏览”按钮 (**...**) 以打开“选择源”**** 对话框。  
   
- **“文件”**  
- 键入包含基于策略的管理策略的文件的路径，或者使用“浏览”按钮 ( **...** ) 选择文件。  
+ **文件**  
+ 键入包含基于策略的管理策略的文件的路径，或者使用“浏览”按钮 (**...**) 选择文件。  
   
  **Server**  
  选择此选项可连接到包含所需策略的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例。  
@@ -38,10 +38,10 @@ ms.locfileid: "62705126"
  **策略：类别**  
  策略的类别。 此框是只读的。  
   
- **策略：Facet**  
+ **策略：方面**  
  策略所实现的方面。 此框是只读的。  
   
- **评估**  
+ **诂**  
  在评估模式下运行策略。 这会为目标集生成符合报告，但不会重新配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或强制要求以后符合策略。  
   
 ## <a name="possible-errors"></a>可能出现的错误  
@@ -50,7 +50,8 @@ ms.locfileid: "62705126"
   
      由于任何以下原因，目标集可能为空：  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上没有策略所指定类型的目标。  
+    -   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上没有策略所指定类型的目标。  
   
     -   服务器限制可能排除包含目标的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "62705126"
   
     -   目标服务器类型不同于在其中评估策略的服务器的类型。 例如，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]中，如果尝试评估一个为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建的策略，则会收到一个空的目标集。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)   
  [“评估策略”对话框，“评估结果”页](evaluate-policies-dialog-box-evaluation-results-page.md)  
   

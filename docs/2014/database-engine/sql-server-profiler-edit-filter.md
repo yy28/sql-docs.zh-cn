@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler-编辑筛选器 |Microsoft Docs
+title: SQL Server Profiler 编辑筛选器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089783"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - 编辑筛选器
@@ -25,10 +25,10 @@ ms.locfileid: "66089783"
 > [!NOTE]  
 >  对于字符串类型数据列，筛选条件将显示为 LIKE 或 NOT LIKE 字符串值。  
   
-## <a name="see-also"></a>请参阅  
- [在跟踪中筛选事件&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
- [基于事件结束时间筛选事件&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
- [基于事件开始时间筛选事件&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
+## <a name="see-also"></a>另请参阅  
+ [筛选跟踪 &#40;SQL Server Profiler 中的事件&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+ [基于事件结束时间筛选事件 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
+ [根据事件开始时间 &#40;SQL Server Profiler 来筛选事件&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
  [筛选跟踪](../relational-databases/sql-trace/filter-a-trace.md)   
  [使用 SQL Server Profiler 筛选跟踪](../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)  
   

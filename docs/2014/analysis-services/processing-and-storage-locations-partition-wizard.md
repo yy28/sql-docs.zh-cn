@@ -1,5 +1,5 @@
 ---
-title: 处理和存储位置 （分区向导） |Microsoft Docs
+title: 处理位置和存储位置（分区向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73340613b14c8f0e90340b589c8b97bad7cd5599
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070650"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>处理位置和存储位置（分区向导）
@@ -45,11 +45,11 @@ ms.locfileid: "66070650"
  指定分区的聚合和索引数据的存储位置。  
   
  **...**  
- 显示“查找远程文件夹”  对话框，在该对话框中可以为“指定的文件夹”  选择文件夹。  
+ 显示“查找远程文件夹”**** 对话框，在该对话框中可以为“指定的文件夹”**** 选择文件夹。  
   
-## <a name="see-also"></a>请参阅  
- [分区向导的 F1 帮助&#40;Analysis Services-多维数据&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [分区（Analysis Services - 多维数据）](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [查找远程文件夹对话框&#40;Analysis Services-多维数据&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [分区向导的 F1 帮助 &#40;Analysis Services 多维数据&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [Analysis Services 多维数据 &#40;分区&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ ["查找远程文件夹" 对话框 &#40;Analysis Services 多维数据&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
   

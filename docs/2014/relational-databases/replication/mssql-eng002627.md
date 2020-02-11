@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a102991d08085f093e08a068a3d3127c9d7f7fc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666693"
 ---
-# <a name="mssqleng002627"></a>MSSQL_ENG002627
+# <a name="mssql_eng002627"></a>MSSQL_ENG002627
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -29,10 +29,10 @@ ms.locfileid: "62666693"
 |事件 ID|2627|  
 |事件源|MSSQLSERVER|  
 |组件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|符号名称|不可用|  
+|符号名称|空值|  
 |消息正文|违反了 %ls 约束 '%.*ls'。 不能在对象 '%.\*ls' 中插入重复键。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  这是可能引发的一般错误，不管是否复制数据库，都会引发该错误。 在已复制的数据库中，通常会引发该错误，因为尚未跨拓扑对主键进行适当的管理。 在分布式环境中，确保没有将同一值插入到多个节点上的主键列或任何其他唯一列，这一点很重要。 可能的原因包括：  
   
 -   在多个节点上对行进行了插入和更新。 合并复制和事务性复制的可更新订阅都提供了冲突检测和解决，但是最好还是只在一个节点上插入或更新给定行。 对等事务性复制没有提供冲突检测和解决，它要求对插入和更新进行分区。  
@@ -56,10 +56,10 @@ ms.locfileid: "62666693"
   
      对于合并复制和具有可更新订阅的事务性复制，标识列应该由复制自动管理。 对于对等事务性复制，必须手动进行管理。 有关详细信息，请参阅[复制标识列](publish/replicate-identity-columns.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)   
  [合并复制](merge/merge-replication.md)   
  [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
- [事务复制的可更新订阅](transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

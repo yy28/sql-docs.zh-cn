@@ -1,5 +1,5 @@
 ---
-title: 例如：指定 ID 和 IDREF 指令 | Microsoft Docs
+title: 示例：指定 ID 和 IDREF 指令 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704833"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>例如：指定 ID 和 IDREF 指令
-  此示例与 [指定 ELEMENTXSINIL 指令](example-specifying-the-elementxsinil-directive.md) 示例几乎相同。 唯一的差别在于查询指定的是 **ID** 和 **IDREF** 指令。 这些指令覆盖 <`OrderHeader`> 和 <`OrderDetail`> 元素中 **SalesPersonID** 属性的类型。 这会形成文档内链接。 您需要使用架构才能查看被覆盖的类型。 因此，该查询在 FOR XML 子句中指定 **XMLDATA** 选项来检索架构。  
+# <a name="example-specifying-the-id-and-idref-directives"></a>示例：指定 ID 和 IDREF 指令
+  此示例与 [指定 ELEMENTXSINIL 指令](example-specifying-the-elementxsinil-directive.md) 示例几乎相同。 唯一的差别在于查询指定的是 **ID** 和 **IDREF** 指令。 这些指令覆盖 < **> 和 <** > 元素中 `OrderHeader`SalesPersonID`OrderDetail` 属性的类型。 这会形成文档内链接。 您需要使用架构才能查看被覆盖的类型。 因此，该查询在 FOR XML 子句中指定 **XMLDATA** 选项来检索架构。  
   
 ```  
 USE AdventureWorks2012;  
@@ -70,7 +70,7 @@ ORDER BY [OrderHeader!1!SalesOrderID!id], [SalesPerson!2!SalesPersonID],
 FOR XML EXPLICIT, XMLDATA  
 ```  
   
- 下面是部分结果： 请注意，在架构中，**ID** 和 **IDREF** 指令已经覆盖了 <`OrderHeader`> 和 <`OrderDetail`> 元素中 **SalesOrderID** 属性的数据类型。 如果删除这些指令，架构将返回这些属性的原始类型。  
+ 下面是部分结果： 请注意，在架构中，**ID** 和 **IDREF** 指令已经覆盖了 < **> 和 <** > 元素中 `OrderHeader`SalesOrderID`OrderDetail` 属性的数据类型。 如果删除这些指令，架构将返回这些属性的原始类型。  
   
 ```  
 <Schema name="Schema1" xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">  
@@ -105,7 +105,7 @@ FOR XML EXPLICIT, XMLDATA
 ...  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 EXPLICIT 模式与 FOR XML 一起使用](use-explicit-mode-with-for-xml.md)  
   
   

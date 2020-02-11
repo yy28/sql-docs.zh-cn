@@ -1,5 +1,5 @@
 ---
-title: 删除关系 (SSAS 表格) |Microsoft Docs
+title: 删除关系（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067325"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>删除关系（SSAS 表格）
@@ -37,7 +37,7 @@ ms.locfileid: "66067325"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后指向 **“模型视图”**，再单击 **“关系图视图”**。  
   
-2.  右键单击两个表之间的关系线，然后单击“删除”。  
+2.  右键单击两个表之间的关系线，然后单击“删除”****。  
   
 #### <a name="to-delete-a-relationship-by-using-the-manage-relationships-dialog-box"></a>使用“管理关系”对话框删除关系  
   
@@ -51,8 +51,8 @@ ms.locfileid: "66067325"
   
 4.  在 **“管理关系”** 对话框中，单击 **“关闭”**。  
   
-## <a name="see-also"></a>请参阅  
- [关系（SSAS 表格）](relationships-ssas-tabular.md)   
- [创建两个表之间的关系（SSAS 表格）](create-a-relationship-between-two-tables-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [SSAS 表格&#41;&#40;关系](relationships-ssas-tabular.md)   
+ [在两个表之间创建关系 &#40;SSAS 表格&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

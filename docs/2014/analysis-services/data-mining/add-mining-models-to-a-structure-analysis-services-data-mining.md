@@ -1,5 +1,5 @@
 ---
-title: 向结构中添加挖掘模型 (Analysis Services-数据挖掘) |Microsoft Docs
+title: 向结构中添加挖掘模型（Analysis Services 数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd25682f12ce0a3ddad5e8f135d82aaf08115762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086252"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>向结构中添加挖掘模型（Analysis Services - 数据挖掘）
@@ -28,7 +28,7 @@ ms.locfileid: "66086252"
  使用数据挖掘向导创建新的挖掘模型时，默认情况下，您必须总是先创建一个挖掘结构。 然后，该向导会为您提供用于向结构中添加初始挖掘模型的选项。 但是，不需要立即创建模型。 如果仅仅创建结构，则不需要决定将哪一列用作可预测的属性，或者如何在特定模型中使用这些数据。 您只需设置要在将来使用的通用数据结构，之后即可使用 [Data Mining Designer](data-mining-designer.md) 来添加基于此结构的新挖掘模型。  
   
 > [!NOTE]  
->  在 DMX 中，CREATE MINING MODEL 语句以挖掘模型开头。 也就是说，您只需定义想要的挖掘模型， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会自动生成基础结构。 之后可以继续向该结构添加新的挖掘模型，通过使用 ALTER STRUCTURE...添加新的挖掘模型。  
+>  在 DMX 中，CREATE MINING MODEL 语句以挖掘模型开头。 也就是说，您只需定义想要的挖掘模型， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会自动生成基础结构。 稍后，您可以使用 ALTER STRUCTURE ...，继续向该结构中添加新的挖掘模型。添加模型语句。  
   
 ## <a name="choosing-an-algorithm"></a>选择算法  
  当您向现有结构中添加新模型时，您首先应选择要在该模型中使用的数据挖掘算法。 选择算法很重要，因为每种算法都执行一种不同类型的分析并具有不同的要求。  
@@ -48,17 +48,18 @@ ms.locfileid: "66086252"
   
 -   输入列提供据以进行预测的信息。 数据挖掘向导提供了 **“建议”** 功能，在选择预测列时将启用该功能。 如果您单击此按钮，则该向导将对可预测值进行采样并确定结构中生成变量的其他列。 它将拒绝键列或具有多个唯一值的其他列，并建议使用似乎与结果相关的列。  
   
-     当数据集包含的列数多于生成挖掘模型所需的实际列数时，此功能特别有用。 **“建议”** 功能可以计算出一个数值分数（介于 0 到 1 之间），用于说明数据集中的每一列与预测列之间的关系。 根据此分数，该功能可以建议可用作挖掘模型的输入的列。 如果使用了 **“建议”** 功能，您就可以使用建议的列，修改选择的列以满足需要，也可以忽略建议。  
+     当数据集包含的列数多于生成挖掘模型所需的实际列数时，此功能特别有用。 
+  **“建议”** 功能可以计算出一个数值分数（介于 0 到 1 之间），用于说明数据集中的每一列与预测列之间的关系。 根据此分数，该功能可以建议可用作挖掘模型的输入的列。 如果使用了 **“建议”** 功能，您就可以使用建议的列，修改选择的列以满足需要，也可以忽略建议。  
   
 -   预测列包含要在挖掘模型中预测的信息。 可选择多个列作为可预测属性。 聚类分析模型属于例外情况，可预测属性在该模型中是可选的。  
   
      根据模型类型，可预测列可能必须为特定的数据类型：例如，线性回归模型需要数字列作为预测值；Naïve Bayes 算法需要离散值（并且所有输入也必须是离散的）。  
   
 ## <a name="specifying-column-content"></a>指定列内容  
- 对于某些列，可能还需要指定“列内容”  。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘中，每个数据列的“内容类型”属性都通知算法应如何处理该列中的数据。 例如，如果数据包括一个“收入”列，则您必须通过将内容类型设置为“连续”来指定该列包含连续数。 但是，您还可以通过将内容类型设置为“离散化”并选择指定存储桶的准确数目，来指定“收入”列中的数分成存储桶。 您可以创建以不同方式处理列的不同模型：例如，您可能尝试使用一种模型将客户分成三个年龄组，而另一个模型则将客户分成 10 个年龄组。  
+ 对于某些列，可能还需要指定“列内容” **。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘中，每个数据列的“内容类型”属性都通知算法应如何处理该列中的数据。 例如，如果数据包括一个“收入”列，则您必须通过将内容类型设置为“连续”来指定该列包含连续数。 但是，您还可以通过将内容类型设置为“离散化”并选择指定存储桶的准确数目，来指定“收入”列中的数分成存储桶。 您可以创建以不同方式处理列的不同模型：例如，您可能尝试使用一种模型将客户分成三个年龄组，而另一个模型则将客户分成 10 个年龄组。  
   
-## <a name="see-also"></a>请参阅  
- [挖掘结构（Analysis Services - 数据挖掘）](mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另请参阅  
+ [挖掘结构 &#40;Analysis Services 数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)   
  [创建关系挖掘结构](create-a-relational-mining-structure.md)   
  [挖掘模型属性](mining-model-properties.md)   
  [挖掘模型列](mining-model-columns.md)  

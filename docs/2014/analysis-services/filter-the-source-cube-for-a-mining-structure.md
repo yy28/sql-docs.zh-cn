@@ -1,5 +1,5 @@
 ---
-title: 为挖掘结构筛选源多维数据集 |Microsoft Docs
+title: 筛选挖掘结构的源多维数据集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,42 +16,42 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081152"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>筛选挖掘结构的源多维数据集
-  创建基于多维模型 （OLAP 多维数据） 中的数据的挖掘结构时，你可以*切片*挖掘结构所基于的多维数据集。 通过切片操作可创建数据子集，作为用于给挖掘模型定型的数据的一种筛选器。  
+  当您创建基于多维模型（OLAP 多维数据集）中的数据的挖掘结构时，您可以对该挖掘结构所基于的多维数据集进行*切片*。 通过切片操作可创建数据子集，作为用于给挖掘模型定型的数据的一种筛选器。  
   
 ### <a name="to-slice-a-cube"></a>对多维数据集进行切片  
   
-1.  数据挖掘设计器中[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]，选择**挖掘结构**选项卡或**挖掘模型**选项卡。  
+1.  在的数据挖掘设计[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]器中，选择 "**挖掘结构**" 选项卡或 "**挖掘模型**" 选项卡。  
   
-2.  上**挖掘模型**菜单中，选择**定义挖掘结构多维数据集切片**。  
+2.  在 "**挖掘模型**" 菜单上，选择 "**定义挖掘结构多维数据集切片**"。  
   
-     **多维数据集切片**对话框随即打开。  
+     此时将打开 "**切片多维数据集**" 对话框。  
   
-3.  在中**维度**的列**多维数据集切片**对话框框中，选择你想要筛选的维度。  
+3.  在 "**切片多维数据集**" 对话框的 "**维度**" 列中，选择要筛选的维度。  
   
-4.  选择层次结构中，使用的列表中的级别**层次结构**列。  
+4.  使用 "**层次结构**" 列中的列表选择层次结构的级别。  
   
-5.  从列表中选择一个运算符**运算符**列中，若要在生成的筛选器条件中使用。  
+5.  从 "**运算符**" 列的列表中选择一个运算符，以便在生成筛选条件时使用。  
   
-6.  单击框中的**筛选器**列。  
+6.  单击 "**筛选器**" 列中的框。  
   
      此时将打开包含层次结构指定级别中的所有成员的对话框。  
   
 7.  选择您要进行筛选的成员。  
   
-8.  单击**确定**成员对话框中。  
+8.  在 "成员" 对话框中单击 **"确定"** 。  
   
-9. 单击**确定**中**多维数据集切片**对话框。  
+9. 在 "**切片多维数据集**" 对话框中单击 **"确定"** 。  
   
      现在根据多维数据集切片的定义对源多维数据集进行筛选。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘结构任务和操作指南](data-mining/mining-structure-tasks-and-how-tos.md)   
  [创建新的 OLAP 挖掘结构](data-mining/create-a-new-olap-mining-structure.md)  
   

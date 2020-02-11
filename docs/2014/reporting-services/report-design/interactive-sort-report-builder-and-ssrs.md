@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 02735bafde927ba110de6465c5380987ddb6b5f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105620"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>交互式排序（报表生成器和 SSRS）
@@ -27,15 +27,15 @@ ms.locfileid: "66105620"
   
  添加交互式排序时，必须指定以下项：  
   
--   **排序对象：** 行或列？  
+-   **排序对象：** 是对行还是对列进行排序？  
   
--   **排序依据：** 依据表列中显示的某一字段？ 还是依据未显示的某一字段？  
+-   **排序依据：** 是依据表列中显示的某一字段？ 还是依据未显示的某一字段？  
   
--   **排序上下文：** 例如，可以在下列上下文中进行排序：与行组关联的行、与列组关联的列、详细信息行、父组内的子组，或同时在父组和子组中。  
+-   **排序上下文：** 例如，可以在与行组关联的行、与列组关联的列、详细信息行、父组内的子组中进行排序，或者同时在父组和子组中进行排序。  
   
--   **将排序按钮添加到哪个文本框：** 在列标题中，还是在组行标题中？  
+-   **要将排序按钮添加到的文本框：** 是添加到列标题中还是添加到组行标题中？  
   
--   **是否同步多个数据区域的排序：** 可以设计下面这样的报表：如果用户切换排序顺序，上级相同的其他数据区域也进行排序。  
+-   **是否对多个数据区域同步排序：** 可以设计一个报表，使得在用户切换排序顺序时具有同一祖先的其他数据区域也进行排序。  
   
  有关分步说明，请参阅 [将交互式排序添加到表或矩阵（报表生成器和 SSRS）](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66105620"
   
  为此，您必须重新设计该表，以按组合了多个字段的表达式进行分组。 例如，对于包含库存计数的数据集，如果原始表先按大小、再按颜色进行分组，则您可以使用由大小和颜色组合而成的组表达式指定单个组。 有关详细信息，请参阅 [将交互式排序添加到表或矩阵（报表生成器和 SSRS）](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对数据区域中的数据进行排序（报表生成器和 SSRS）](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [将交互式排序添加到表或矩阵（报表生成器和 SSRS）](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  

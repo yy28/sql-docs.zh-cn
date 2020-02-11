@@ -1,5 +1,5 @@
 ---
-title: 清除 Analysis Services 缓存 |Microsoft Docs
+title: 清除 "Analysis Services 缓存 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35ee4b59c77c3d1b47db360d11a9b838106c1b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080294"
 ---
 # <a name="clear-the-analysis-services-caches"></a>清除 Analysis Services 缓存
@@ -48,13 +48,13 @@ ms.locfileid: "66080294"
   
 #### <a name="step-1-get-the-object-identifier"></a>第 1 步：获取对象标识符  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击某个对象，选择“属性”，然后复制“属性”窗格中 ID 属性的值   。 这种方法适用于数据库、多维数据集、维度或表。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击某个对象，选择“属性”，然后复制“属性”窗格中 ID 属性的值********。 这种方法适用于数据库、多维数据集、维度或表。  
   
-2.  若要获取度量值组 ID，请右键单击该度量值组并选择“编写度量值组脚本为”  。 选择 **“创建”** 或 **“更改”** ，并将查询发送到一个窗口。 度量值组的 ID 将在对象定义中可见。 复制对象定义的 ID。  
+2.  若要获取度量值组 ID，请右键单击该度量值组并选择“编写度量值组脚本为”****。 选择 **“创建”** 或 **“更改”**，并将查询发送到一个窗口。 度量值组的 ID 将在对象定义中可见。 复制对象定义的 ID。  
   
 #### <a name="step-2-run-the-query"></a>第 2 步：运行查询  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击某个数据库，指向“新建查询”，然后选择 XMLA   。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击某个数据库，指向“新建查询”，然后选择 XMLA********。  
   
 2.  将以下代码示例复制到 XMLA 查询窗口中。 将 `DatabaseID` 更改为当前连接的数据库的 ID。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66080294"
     </return>  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Analysis Services 中编写管理任务脚本](../script-administrative-tasks-in-analysis-services.md)   
  [监视 Analysis Services 实例](monitor-an-analysis-services-instance.md)  
   

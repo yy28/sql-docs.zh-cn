@@ -1,5 +1,5 @@
 ---
-title: 管理作用域和上下文 (MDX) |Microsoft Docs
+title: 管理作用域和上下文（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bec0dc51a4f91ba4ca8f71a0a3caba387d37bf1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074634"
 ---
 # <a name="managing-scope-and-context-mdx"></a>管理作用域和上下文 (MDX)
-  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，多维表达式 (MDX) 脚本可以在脚本执行中的特定点应用于整个多维数据集或多维数据集的特定部分。 MDX 脚本可以通过使用计算传递采取分层方法在多维数据集内进行计算。  
+  在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，多维表达式（MDX）脚本可以在脚本执行中的特定点应用于整个多维数据集或多维数据集的特定部分。 MDX 脚本可以通过使用计算传递采取分层方法在多维数据集内进行计算。  
   
 > [!NOTE]  
 >  有关计算传递如何影响计算的详细信息，请参阅[理解传递次序和求解次序 (MDX)](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)。  
@@ -41,13 +41,14 @@ ms.locfileid: "66074634"
 >  如果脚本包含含有 CALCULATE 语句的 SCOPE 语句，MDX 将在由 SCOPE 语句定义的子多维数据集的上下文内计算 CALCULATE 语句，而不是针对整个多维数据集进行计算。  
   
 ## <a name="using-the-this-function"></a>使用 This 函数  
- `This` 函数使您可以在 MDX 脚本内检索当前的子多维数据集。 您可以使用 `This` 函数快速将当前子多维数据集内的单元的值设置为 MDX 表达式。 在特定计算传递过程中，通常将 `This` 函数和 SCOPE 语句一起使用，以更改特定子多维数据集的内容。  
+ 
+  `This` 函数使您可以在 MDX 脚本内检索当前的子多维数据集。 您可以使用 `This` 函数快速将当前子多维数据集内的单元的值设置为 MDX 表达式。 在特定计算传递过程中，通常将 `This` 函数和 SCOPE 语句一起使用，以更改特定子多维数据集的内容。  
   
 > [!NOTE]  
 >  如果脚本包含含有 `This` 函数的 SCOPE 语句，MDX 将在由 SCOPE 语句定义的子多维数据集的上下文内计算 `This` 函数，而不是针对整个多维数据集进行计算。  
   
 ### <a name="this-function-example"></a>This 函数的示例  
- 在 [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] 示例多维数据集的 Finance 度量值组中，以下 MDX 脚本命令示例使用 `This` 函数将 Customer 维度中 Redmond 成员的子级的 Amount 度量值增加 10%：  
+ 在 `This` 示例多维数据集的 Finance 度量值组中，以下 MDX 脚本命令示例使用 [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] 函数将 Customer 维度中 Redmond 成员的子级的 Amount 度量值增加 10%：  
   
 ```  
 /* This SCOPE statement defines the current subcube */  
@@ -58,7 +59,7 @@ SCOPE([Customer].&[Redmond].MEMBERS,
 END SCOPE;  
 ```  
   
- 有关详细信息的语法`This`函数中，请参阅[此&#40;MDX&#41;](/sql/mdx/this-mdx)。  
+ 有关`This`函数的语法的详细信息，请参阅[此 &#40;MDX&#41;](/sql/mdx/this-mdx)。  
   
 ## <a name="using-the-scope-statement"></a>使用 SCOPE 语句  
  SCOPE 语句定义包含 MDX 脚本内其他 MDX 表达式和语句并指定这些表达式和语句的作用域的当前子多维数据集。 MDX 在该子多维数据集的上下文内计算其他 MDX 表达式和语句，包括 `This` 函数和 CALCULATE 语句。  
@@ -113,9 +114,9 @@ END SCOPE;
   
  有关 SCOPE 语句的语法详细信息，请参阅 [SCOPE 语句 (MDX)](/sql/mdx/mdx-scripting-scope)。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 语言参考 (MDX)](/sql/mdx/mdx-language-reference-mdx)   
- [基本 MDX 脚本 (MDX)](the-basic-mdx-script-mdx.md)   
- [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 语言参考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [基本 MDX 脚本 &#40;MDX&#41;](the-basic-mdx-script-mdx.md)   
+ [MDX 查询基础知识 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

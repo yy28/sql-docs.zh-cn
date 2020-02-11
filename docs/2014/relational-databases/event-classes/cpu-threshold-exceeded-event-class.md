@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663480"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded 事件类
@@ -29,17 +29,17 @@ ms.locfileid: "62663480"
   
 ## <a name="cpu-threshold-exceeded-data-columns"></a>CPU Threshold Exceeded 数据列  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |CPU|`int`|CPU 使用率，以毫秒为单位。|18|是|  
 |EventClass|`int`|214|27|否|  
 |EventSubClass|`int`|CPU 限制冲突。|21|是|  
 |GroupID|`int`|发生冲突的组 ID。|66|是|  
 |OwnerID|`int`|导致冲突的进程的 SPID。|58|是|  
-|SPID|`int`|激发此事件的服务器进程的 ID。<br /><br /> 注意：如果系统线程将验证 CPU 使用率作为后台任务，这可能与实际用户的 SPID 不同。|12|是|  
+|SPID|`int`|激发此事件的服务器进程的 ID。<br /><br /> 注意：如果系统线程将验证 CPU 使用率作为后台任务，则此 ID 可能与实际用户的 SPID 不同。|12|是|  
 |StartTime|`datetime`|此事件的激发时间。|14|是|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

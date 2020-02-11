@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667812"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>为事务复制测量滞后时间和验证连接
@@ -88,7 +88,7 @@ ms.locfileid: "62667812"
   
 3.  单击 **“插入跟踪器”** 。  
   
-4.  以下各列中的跟踪令牌的视图所用时间：“发布服务器到分发服务器”、“分发服务器到订阅服务器”、“总滞后时间”    。 值为 **“挂起”** 表示令牌尚未到达指定点。  
+4.  在以下列中查看跟踪令牌的运行时间： **“发布服务器到分发服务器”** 、 **“分发服务器到订阅服务器”** 、 **“总滞后时间”** 。 值为 **“挂起”** 表示令牌尚未到达指定点。  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>查看有关以前插入的跟踪令牌的信息  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62667812"
   
 3.  从 **“插入时间”** 下拉列表中选择时间。  
   
-4.  以下各列中的跟踪令牌的视图所用时间：“发布服务器到分发服务器”、“分发服务器到订阅服务器”、“总滞后时间”    。 值为 **“挂起”** 表示令牌尚未到达指定点。  
+4.  在以下列中查看跟踪令牌的运行时间： **“发布服务器到分发服务器”** 、 **“分发服务器到订阅服务器”** 、 **“总滞后时间”** 。 值为 **“挂起”** 表示令牌尚未到达指定点。  
   
     > [!NOTE]  
     >  跟踪令牌信息的保留时间与其他历史数据的保留时间一样长，该时间由分发数据库的历史记录保持期来控制。 若要了解如何更改分发数据库属性，请参阅[查看和修改分发服务器和发布服务器属性](../view-and-modify-distributor-and-publisher-properties.md)。  
@@ -111,19 +111,19 @@ ms.locfileid: "62667812"
   
 2.  （可选）在发布服务器上，对发布数据库执行 [sp_helpsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)。 请验证订阅是否存在且状态是否处于活动状态。  
   
-3.  在发布服务器的发布数据库中，执行 [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql)，指定 **@publication** 。 请记录 **@tracer_token_id** 输出参数的值。  
+3.  在发布服务器的发布数据库中，执行 [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql)，指定 **@publication**。 请注意**@tracer_token_id** output 参数的值。  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>确定事务发布的滞后时间并验证连接  
   
 1.  使用前一过程将跟踪令牌发送到发布。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql)，指定 **@publication** 。 这会返回发布到此发布的所有跟踪令牌的列表。 请记录结果集中所需的 **tracer_id** 。  
+2.  在发布服务器上，对发布数据库执行 [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql)，指定 **@publication**。 这会返回发布到此发布的所有跟踪令牌的列表。 请记录结果集中所需的 **tracer_id** 。  
   
 3.  在发布服务器上，对发布数据库执行 [sp_helptracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql)，指定 **@publication** 以及步骤 2 提供的针对 **@tracer_id** 的跟踪令牌 ID。 这会返回所选跟踪令牌的滞后时间信息。  
   
 #### <a name="to-remove-tracer-tokens"></a>删除跟踪令牌  
   
-1.  在发布服务器上，对发布数据库执行 [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql)，指定 **@publication** 。 这会返回发布到此发布的所有跟踪令牌的列表。 请记录结果集中要删除的跟踪令牌的 **tracer_id** 。  
+1.  在发布服务器上，对发布数据库执行 [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql)，指定 **@publication**。 这会返回发布到此发布的所有跟踪令牌的列表。 请记录结果集中要删除的跟踪令牌的 **tracer_id** 。  
   
 2.  在发布服务器上，对发布数据库执行 [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql)，指定 **@publication** 以及步骤 2 中要删除的针对 **@tracer_id** 的跟踪 ID。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62667812"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。  
   
 3.  设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "62667812"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "62667812"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   

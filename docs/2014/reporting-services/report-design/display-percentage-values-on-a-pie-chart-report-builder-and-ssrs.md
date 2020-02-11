@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3beb87611f258d0c028b0a02b5d226864314620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106028"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>在饼图上显示百分比值（报表生成器和 SSRS）
@@ -31,7 +31,7 @@ ms.locfileid: "66106028"
   
 3.  在设计图面上，右键单击标签并选择“ **序列标签属性**”。 此时将显示 **“序列标签属性”** 对话框。  
   
-4.  类型`#PERCENT`有关**标签数据**选项。  
+4.  " `#PERCENT` **标签数据**" 选项的类型。  
   
 5.  （可选）若要指定标签显示的小数位数，请键入“#PERCENT{P*n*}”，其中 *n* 为要显示的小数位数。 例如，若不显示小数位数，请键入“#PERCENT{P0}”。  
   
@@ -39,12 +39,12 @@ ms.locfileid: "66106028"
   
 1.  在设计图面上，右键单击饼图并选择“ **序列属性**”。 此时将显示 **“序列属性”** 对话框。  
   
-2.  在中**图例**，类型`#PERCENT`有关**自定义图例文本**属性。  
+2.  在 "**图例**" `#PERCENT`的 "**自定义图例文本**" 属性中键入。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [饼图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [设置图表上图例的格式（报表生成器和 SSRS）](chart-legend-formatting-report-builder.md)   
- [在饼图外显示数据点标签（报表生成器和 SSRS）](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [在饼图外显示数据点标签 &#40;报表生成器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [收集饼图上的小切片（报表生成器和 SSRS）](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

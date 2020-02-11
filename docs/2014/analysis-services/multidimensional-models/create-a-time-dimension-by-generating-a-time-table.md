@@ -19,18 +19,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076293"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>通过生成时间表来创建时间维度
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，当源数据库中没有可用的时间表时，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导创建时间维度。 在 **“选择创建方法”** 页上选择下列选项之一可执行此操作。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，当源数据库中没有可用[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的时间表时，可以使用中的维度向导创建时间维度。 在 **“选择创建方法”** 页上选择下列选项之一可执行此操作。  
   
--   **在数据源中生成时间表** 如果您具有在基础数据源中创建对象的权限，可选择此选项。 该向导将生成一个时间表并将此表存储在数据源中。 然后，该向导根据此时间表创建时间维度。  
+-   **在数据源中生成时间表**当您具有在基础数据源中创建对象的权限时，请选择此选项。 该向导将生成一个时间表并将此表存储在数据源中。 然后，该向导根据此时间表创建时间维度。  
   
--   **在服务器上生成时间表** 如果您没有在基础数据源中创建对象的权限，则选择此选项。 该向导将生成一个时间表并将此表存储在服务器上而不是数据源中。 （根据服务器上的时间表创建的维度称为“服务器时间维度”  。）然后，该向导根据此表创建服务器时间维度。  
+-   **在服务器上生成时间表**当您没有在基础数据源中创建对象的权限时，请选择此选项。 该向导将生成一个时间表并将此表存储在服务器上而不是数据源中。 （从服务器上的时间表创建的维度称为 "*服务器时间维度*"。）然后，该向导根据此表创建服务器时间维度。  
   
  创建时间维度时，需要指定时间段以及维度的开始日期和结束日期。 向导将使用指定的时间段创建时间属性。 处理维度时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会生成并存储支持指定日期和时间段所需的数据。 向导使用为时间维度创建的属性来建议维度的层次结构。 层次结构反映了不同时间段之间的关系，并且考虑了不同的日历。 例如，在标准日历层次结构中，“周”级别在“年”级别下显示，而不是在“月”级别下显示，因为各个年份中包含的周数非常平均，而各个月中包含的周数并不平均。 相反，在生产日历或报表日历层次结构中，各个月中包含的周数非常平均，因此“周”级别在“月”级别下显示。  
   
@@ -46,14 +46,14 @@ ms.locfileid: "66076293"
 ## <a name="select-calendars"></a>选择日历  
  当您创建时间维度时，所用日历始终包括标准（公历） 12 个月日历（从 1 月 1 日开始，到 12 月 31 日结束）。 在向导的 **“选择日历”** 页中，您可以指定维度中的层次结构所基于的其他日历。 有关日历类型的说明，请参阅 [创建日期类型维度](database-dimensions-create-a-date-type-dimension.md)。  
   
- 根据您在向导的 **“定义时间段”** 页中选定的时间段的不同，日历选择确定在维度中创建的属性。 例如，如果你在向导的“定义时间段”  页中选择“年”  和“季度”  时间段，在“选择日历”  页中选择“会计日历”  ，则会为该会计日历创建 FiscalYear、FiscalQuarter 以及 FiscalQuarterOfYear 属性。  
+ 根据您在向导的 **“定义时间段”** 页中选定的时间段的不同，日历选择确定在维度中创建的属性。 例如，如果你在向导的“定义时间段”**** 页中选择“年”**** 和“季度”**** 时间段，在“选择日历”**** 页中选择“会计日历”****，则会为该会计日历创建 FiscalYear、FiscalQuarter 以及 FiscalQuarterOfYear 属性。  
   
  向导还会创建日历特定的层次结构，其中包含为该日历创建的属性。 对于每个日历，每个层次结构中的每个级别都汇总到其上面的级别中。 例如，在标准 12 个月日历中，向导创建“年 - 周”层次结构或“年 - 月”层次结构。 但是在标准日历中，各个月中包含的周数并不平均，因此，没有“年 - 月 - 周”这类层次结构。 相反，报表日历或生产日历中的各个月中包含的周数非常平均，因此在这些日历中，周级别汇总到月级别中。  
   
 ## <a name="completing-the-dimension-wizard"></a>完成维度向导  
  在 **“完成向导”** 页中，查看由向导创建的属性和层次结构，然后命名时间维度。 单击 **“完成”** 完成向导并创建维度。 创建维度完成后，可以使用维度设计器来更改维度。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)   
  [创建日期类型维度](database-dimensions-create-a-date-type-dimension.md)   
  [数据库维度属性](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   

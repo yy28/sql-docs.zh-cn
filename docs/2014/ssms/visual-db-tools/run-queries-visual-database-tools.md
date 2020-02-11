@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a06f177f541e6bca5eb24da5e8a709673ab7d5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62710802"
 ---
 # <a name="run-queries-visual-database-tools"></a>运行查询 (Visual Database Tools)
@@ -39,8 +39,8 @@ ms.locfileid: "62710802"
   
  如果创建“更新”、“插入源”、“插入到”、“删除”或“生成表”查询，则查询和视图设计器将显示一条消息，指示该查询影响的行数。  
   
-## <a name="see-also"></a>请参阅  
- [使用结果窗格中的数据&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 Visual Database Tools &#40;的 "结果" 窗格中的数据&#41;](visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

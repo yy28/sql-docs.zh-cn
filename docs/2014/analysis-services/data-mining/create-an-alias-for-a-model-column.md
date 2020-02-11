@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1df04621d87aa028a2aea43d758fa613dcedccf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085318"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>为模型列创建别名
@@ -32,11 +32,11 @@ ms.locfileid: "66085318"
   
 ### <a name="to-add-an-alias-to-a-mining-model-column"></a>为挖掘模型列添加别名  
   
-1.  在数据挖掘设计器的“挖掘模型”  选项卡中，右键单击挖掘模型中与要更改的挖掘列对应的单元，然后选择“属性”  。  
+1.  在数据挖掘设计器的“挖掘模型”**** 选项卡中，右键单击挖掘模型中与要更改的挖掘列对应的单元，然后选择“属性”****。  
   
 2.  在屏幕右侧的 **“属性”** 窗口中，单击“名称”属性旁的单元格并删除当前值。 为该列键入一个新名称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)   
  [挖掘模型属性](mining-model-properties.md)  
   

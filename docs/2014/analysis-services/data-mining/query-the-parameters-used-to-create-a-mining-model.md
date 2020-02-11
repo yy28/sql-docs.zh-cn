@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083038"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>查询用于创建挖掘模型的参数
@@ -28,7 +28,7 @@ ms.locfileid: "66083038"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开包含要查询的模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
-2.  右键单击实例名称，选择“新建查询”  ，然后选择“DMX”  。  
+2.  右键单击实例名称，选择“新建查询”****，然后选择“DMX”****。  
   
     > [!NOTE]  
     >  还可以通过使用 **MDX** 模板来针对数据挖掘模型创建查询。  
@@ -47,7 +47,7 @@ ms.locfileid: "66083038"
   
 2.  在对象资源管理器中，选择需要的挖掘模型，然后将它拖到 DMX 查询窗格中的单引号之间。  
   
-3.  按 F5，或单击 **“执行”** 。  
+3.  按 F5，或单击 **“执行”**。  
   
 ## <a name="example"></a>示例  
  下面的代码返回用于创建在 [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)中生成的挖掘模型的参数列表。 这些参数包括服务器上的提供程序中可用的挖掘服务所使用的任何默认参数的显式值。  
@@ -66,7 +66,7 @@ WHERE MODEL_NAME = 'TM Clustering'
   
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘查询任务和操作指南](data-mining-query-tasks-and-how-tos.md)   
  [数据挖掘查询](data-mining-queries.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 筛选项集在关联规则模型 |Microsoft Docs
+title: 在关联规则模型中筛选项集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bef576a32bebc1c80b2ded8ee4831696811ba819
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084360"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>在关联规则模型中筛选项集
@@ -30,11 +30,11 @@ ms.locfileid: "66084360"
   
 2.  在 **“筛选项集”** 框中输入规则条件。 例如，规则条件可以为“Touring-1000 = existing”  
   
-3.  单击 **“输入”** 。  
+3.  单击 **“输入”**。  
   
  现在便对项集进行了筛选以仅显示包含所选项的那些项集。 该框不区分大小写。 筛选器存储在内存中，因此您可以从列表中选择过去使用的筛选器。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘模型查看器任务和操作指南](mining-model-viewer-tasks-and-how-tos.md)  
   
   

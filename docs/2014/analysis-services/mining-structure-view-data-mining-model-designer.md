@@ -1,5 +1,5 @@
 ---
-title: 挖掘结构视图 （数据挖掘模型设计器） |Microsoft Docs
+title: 挖掘结构视图（数据挖掘模型设计器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,27 +13,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077671"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>“挖掘结构”视图（数据挖掘模型设计器）
   可以使用 **“挖掘结构”** 视图修改和处理挖掘结构，以及处理与其关联的所有挖掘模型。  
   
- **“挖掘结构”** 视图具有以下工具和对话框：  
+ 
+  **“挖掘结构”** 视图具有以下工具和对话框：  
   
--   [新建挖掘模型对话框的&#40;挖掘结构视图&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
+-   ["新建挖掘模型" 对话框 &#40;挖掘结构视图&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
   
--   [选择列对话框&#40;挖掘结构视图&#41;](select-a-column-dialog-box-mining-structure-view.md)  
+-   [&#40;挖掘结构视图中选择 "列" 对话框&#41;](select-a-column-dialog-box-mining-structure-view.md)  
   
--   [选择嵌套的表键列对话框&#40;挖掘结构视图&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
+-   [&#40;挖掘结构视图中选择 "嵌套表键列" 对话框&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
   
-## <a name="see-also"></a>请参阅  
- [挖掘模型视图&#40;数据挖掘模型设计器&#41;](mining-models-view-data-mining-model-designer.md)   
- [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
- [挖掘准确性图表设计器&#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [预测查询生成器&#40;数据挖掘&#41;](prediction-query-builder-data-mining.md)  
+## <a name="see-also"></a>另请参阅  
+ [挖掘模型视图 &#40;数据挖掘模型设计器&#41;](mining-models-view-data-mining-model-designer.md)   
+ [挖掘模型查看器 &#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [挖掘准确性图表设计器 &#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [&#40;数据挖掘的预测查询生成器&#41;](prediction-query-builder-data-mining.md)  
   
   

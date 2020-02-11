@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083487"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>挖掘模型任务和操作指南
@@ -35,7 +35,7 @@ ms.locfileid: "66083487"
   
 -   [更改挖掘模型中列的离散化](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [查看或更改建模标志（数据挖掘）](modeling-flags-data-mining.md)  
+-   [查看或更改数据挖掘 &#40;建模标志&#41;](modeling-flags-data-mining.md)  
   
 -   [在模型中指定用作回归量的列](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66083487"
   
 -   [创建数据挖掘维度](create-a-data-mining-dimension.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘结构任务和操作指南](mining-structure-tasks-and-how-tos.md)   
- [挖掘模型（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)   
+ [挖掘模型 &#40;Analysis Services 数据挖掘&#41;](mining-models-analysis-services-data-mining.md)   
  [数据挖掘概念](data-mining-concepts.md)  
   
   

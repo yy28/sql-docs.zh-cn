@@ -1,5 +1,5 @@
 ---
-title: 内容查询 （数据挖掘） |Microsoft Docs
+title: 内容查询（数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085652"
 ---
 # <a name="content-queries-data-mining"></a>内容查询（数据挖掘）
@@ -30,13 +30,13 @@ ms.locfileid: "66085652"
   
  [示例](#bkmk_Examples)  
   
--   [针对关联模型的内容查询](#bkmk_Assoc)  
+-   [关联模型的内容查询](#bkmk_Assoc)  
   
 -   [针对决策树模型的内容查询](#bkmk_DecTree)  
   
  [使用查询结果](#bkmk_Results)  
   
-##  <a name="bkmk_ContentQuery"></a> 基本内容查询  
+##  <a name="bkmk_ContentQuery"></a>基本内容查询  
  您可以通过使用预测查询生成器来创建内容查询，使用在 SQL Server Management Studio 中提供的 DMX 内容查询模板，或者直接在 DMX 中撰写查询。 与预测查询不同，您无需联接外部数据，因此内容查询易于撰写。  
   
  本节概述了您可以创建的内容查询类型。  
@@ -45,7 +45,7 @@ ms.locfileid: "66085652"
   
 -   针对模型的查询可以返回模式、属性列表、公式等等。  
   
-###  <a name="bkmk_Structure"></a> 针对结构和事例数据的查询  
+###  <a name="bkmk_Structure"></a>针对结构和事例数据的查询  
  DMX 支持对用于生成挖掘结构和模型的缓存数据进行查询。 默认情况下，在您定义挖掘结构时将创建此缓存，并且在您处理该结构或模型时填充此缓存。  
   
 > [!WARNING]  
@@ -58,12 +58,12 @@ ms.locfileid: "66085652"
   
  使用此语句可以从用于生成模型的事例数据中检索指定列。 为运行此查询，您必须对模型具有钻取权限。  
   
- **查看在结构中包含的所有数据**  
+ **查看结构中包含的所有数据**  
  `SELECT FROM <structure>.CASES`  
   
  使用此语句可以查看结构中包含的所有数据，包括特定挖掘模型中不包括的列。 您必须对模型以及结构具有钻取权限，才能从挖掘结构中检索数据。  
   
- **获取值范围**  
+ **获取值的范围**  
  `SELECT DISTINCT RangeMin(<column>), RangeMax(<column>) FROM <model>`  
   
  使用此语句可以查找连续列或 DISCRETIZED 列的存储桶的最小值、最大值和平均值。  
@@ -83,12 +83,12 @@ ms.locfileid: "66085652"
   
  使用此语句可获取为测试与特定结构相关的挖掘模型而保留的数据。  
   
- **从特定的模型模式钻取到基础事例数据**  
+ **从特定模型模式钻取到基础事例数据**  
  `SELECT FROM <model>.CASESWHERE IsTrainingCase() AND IsInNode(<node>)`  
   
  使用此语句可从定型模型中检索详细事例数据。 您必须指定特定节点：例如，必须知道群集的节点 ID、决策树的特定分支，等等。此外，您还必须拥有对模型的钻取权限才能运行此查询。  
   
-###  <a name="bkmk_Patterns"></a> 针对模型模式、统计信息和属性的查询  
+###  <a name="bkmk_Patterns"></a>针对模型模式、统计信息和属性的查询  
  数据挖掘模型的内容有多种用途。 利用模型内容查询，您可以：  
   
 -   提取公式或概率以便您自己来进行计算。  
@@ -134,8 +134,9 @@ ms.locfileid: "66085652"
   
  本节提供了几个示例，用来演示选择的算法如何影响存储在模型中的信息类型。 有关挖掘模型内容以及每种模型类型特定的内容的详细信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
-###  <a name="bkmk_Assoc"></a> 示例 1：针对关联模型的内容查询  
- `SELECT FROM <model>.CONTENT`语句返回不同种类的信息，具体取决于您正在查询的模型类型。 对于关联模型，“节点类型”  为一段关键信息。 节点类似于模型内容中的信息的容器。 在关联模型中，表示规则的节点的 NODE_TYPE 值为 8，而表示项集的节点的 NODE_TYPE 值为 7。  
+###  <a name="bkmk_Assoc"></a>示例1：针对关联模型的内容查询  
+ 
+  `SELECT FROM <model>.CONTENT`语句返回不同种类的信息，具体取决于您正在查询的模型类型。 对于关联模型，“节点类型” ** 为一段关键信息。 节点类似于模型内容中的信息的容器。 在关联模型中，表示规则的节点的 NODE_TYPE 值为 8，而表示项集的节点的 NODE_TYPE 值为 7。  
   
  因此，以下查询将返回前 10 个项集，按照 SUPPORT 排序（默认排序）。  
   
@@ -144,7 +145,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- 下面的查询构建于这些信息之上。 该查询返回三列： 节点、 完整规则和项集右侧的产品 ID-即，预测将作为项集的一部分与其他某些产品关联的产品。  
+ 下面的查询构建于这些信息之上。 该查询返回三列：节点的 ID、完整规则以及项集右侧的产品（即，预测将作为项集的一部分与其他某些产品关联的产品）。  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -166,7 +167,7 @@ ORDER BY NODE_SUPPORT DESC
   
  有关更多示例，请参阅 [关联模型查询示例](association-model-query-examples.md)。  
   
-###  <a name="bkmk_DecTree"></a> 示例 2：针对决策树模型的内容查询  
+###  <a name="bkmk_DecTree"></a>示例2：针对决策树模型的内容查询  
  决策树模型可用于预测以及分类。  此示例假定您使用模型是为了预测结果，但同时也希望找出可以使用哪些因子或规则来对结果进行分类。  
   
  在决策树模型中，使用节点表示树和叶节点。 每个节点的标题包含指向结果的路径的说明。 因此，若要跟踪任一特定结果的路径，您需要确定包含该结果的节点，然后获取该节点的详细信息。  
@@ -190,12 +191,12 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  有关更多示例，请参阅 [决策树模型查询示例](decision-trees-model-query-examples.md)。  
   
-##  <a name="bkmk_Results"></a> 使用查询结果  
+##  <a name="bkmk_Results"></a>使用查询结果  
  如示例中所示，内容查询主要返回表格行集，但还可以包含来自嵌套列的信息。 您可以平展返回的行集，但这样做可能会导致对结果的使用更复杂。 特别是 NODE_DISTRIBUTION 节点的内容是嵌套的，但包含了大量有关模型的有用信息。  
   
  有关如何使用分层行集的详细信息，请参阅 MSDN 上的 OLEDB 规范。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解 DMX Select 语句](/sql/dmx/understanding-the-dmx-select-statement)   
  [数据挖掘查询](data-mining-queries.md)  
   

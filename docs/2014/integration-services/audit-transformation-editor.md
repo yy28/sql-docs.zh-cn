@@ -15,25 +15,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d31f297b9544c75e416fe798facd6a1c328ff0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061421"
 ---
 # <a name="audit-transformation-editor"></a>审核转换编辑器
-  通过进行审核转换，包中的数据流可以包含有关运行包的环境的数据。 例如，包、计算机和操作员的名称可添加到数据流中。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中包含了提供这些信息的系统变量。  
+  通过进行审核转换，包中的数据流可以包含有关运行包的环境的数据。 例如，包、计算机和操作员的名称可添加到数据流中。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]包括提供此信息的系统变量。  
   
  若要了解有关审核转换的详细信息，请参阅 [Audit Transformation](data-flow/transformations/audit-transformation.md)。  
   
 ## <a name="options"></a>选项  
- **输出列的名称**  
+ **输出列名称**  
  为包含审核信息的新输出列提供名称。  
   
  **审核类型**  
  选择用于提供审核信息的可用系统变量。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**执行实例 GUID**|插入唯一标识包的执行实例的 GUID。|  
 |**包 ID**|插入唯一标识包的 GUID。|  
@@ -45,7 +45,7 @@ ms.locfileid: "66061421"
 |**任务名称**|插入与审核转换相关联的数据流任务的名称。|  
 |**任务 ID**|插入唯一标识与审核转换相关联的数据流任务的 GUID。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

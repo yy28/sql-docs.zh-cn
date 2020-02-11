@@ -1,5 +1,5 @@
 ---
-title: 命名集窗体编辑器 （计算选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
+title: 命名集窗体编辑器（"计算" 选项卡，多维数据集设计器）（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 861824359ff1cd9700f5acaa64d0b2155c870add
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072344"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>命名集窗体编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -37,15 +37,15 @@ ms.locfileid: "66072344"
 > [!NOTE]  
 >  此选项必须包含有效的集表达式。  
   
-## <a name="see-also"></a>请参阅  
- [计算](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [创建命名的集](multidimensional-models/create-named-sets.md)   
- [多维数据集设计器&#40;Analysis Services-多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [计算&#40;多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [工具栏&#40;计算选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [脚本组织程序&#40;计算选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [计算工具&#40;计算选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [计算成员窗体编辑器&#40;计算选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [脚本编辑器&#40;计算选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [考虑](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [创建命名集](multidimensional-models/create-named-sets.md)   
+ [多维数据集设计器 &#40;Analysis Services 多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [多维数据集设计器&#41; &#40;&#40;计算 Analysis Services 多维数据&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [工具栏 &#40;"计算" 选项卡，多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [脚本组织程序 &#40;计算 "选项卡，多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [计算工具 &#40;计算 "选项卡，多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [计算成员窗体编辑器 &#40;计算 "选项卡、多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [脚本编辑器 &#40;计算 "选项卡，多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

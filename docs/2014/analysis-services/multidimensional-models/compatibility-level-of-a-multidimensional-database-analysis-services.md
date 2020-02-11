@@ -1,5 +1,5 @@
 ---
-title: 设置的兼容级别的多维数据库 (Analysis Services) |Microsoft Docs
+title: 设置多维数据库的兼容级别（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076692"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>设置多维数据库的兼容级别 (Analysis Services)
-  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据库兼容级别属性确定数据库的功能级别。 兼容级别对于每个模型类型都是唯一的。 例如，兼容级别为`1100`具有不同的含义，具体取决于数据库是多维或表格。  
+  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据库兼容级别属性确定数据库的功能级别。 兼容级别对于每个模型类型都是唯一的。 例如，兼容级别`1100`具有不同的含义，具体取决于该数据库是多维数据库还是表格数据库。  
   
- 本主题仅描述多维数据库的兼容级别。 有关表格解决方案的详细信息，请参阅[兼容性级别&#40;SSAS 表格 SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。  
+ 本主题仅描述多维数据库的兼容级别。 有关表格解决方案的详细信息，请参阅[&#40;SSAS 表格 SP1&#41;兼容级别](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。  
   
 > [!NOTE]  
->  表格模型具有其他一些不适用于多维模型的数据库兼容级别。 多维模型不具有兼容级别 `1103`。 请参阅[What's new for SQL Server 2012 SP1 和兼容性级别中表格模型](https://go.microsoft.com/fwlink/?LinkId=301727)有关详细信息`1103`针对表格解决方案。  
+>  表格模型具有其他一些不适用于多维模型的数据库兼容级别。 多维模型不具有兼容级别 `1103`。 有关表格解决方案的详细信息`1103` ，请参阅[SQL Server 2012 SP1 和兼容性级别中表格模型的新增功能](https://go.microsoft.com/fwlink/?LinkId=301727)。  
   
  **多维数据库的兼容级别**  
   
@@ -31,15 +31,15 @@ ms.locfileid: "66076692"
   
  对于多维数据库，`CompatibilityLevel` 属性的有效值包括以下：  
   
-|设置|Description|  
+|设置|说明|  
 |-------------|-----------------|  
 |`1050`|此值在脚本或工具中不可见，但它对应于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]中创建的数据库。 对于任何没有显式设置 `CompatibilityLevel` 的数据库，都将在 `1050` 级别隐式运行。|  
-|`1100`|这是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中创建的新数据库的默认值。 您还可以为在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的早期版本中创建的数据库指定该值，以便使用仅在此兼容级别支持的功能（也就是说，增大了用于包含字符串数据的维度属性或非重复计数度量值的字符串存储空间）。<br /><br /> 数据库具有`CompatibilityLevel`设置为`1100`获取附加属性， `StringStoresCompatibilityLevel`，这样，您选择其他字符串存储为分区和维度。|  
+|`1100`|这是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中创建的新数据库的默认值。 您还可以为在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的早期版本中创建的数据库指定该值，以便使用仅在此兼容级别支持的功能（也就是说，增大了用于包含字符串数据的维度属性或非重复计数度量值的字符串存储空间）。<br /><br /> 如果数据库`CompatibilityLevel`设置为`1100`获取附加属性`StringStoresCompatibilityLevel`，则可以为分区和维度选择其他字符串存储。|  
   
 > [!WARNING]  
->  将数据库兼容级别设置为更高级别是不可逆的。 您将兼容性级别增加到后`1100`，你必须继续在较新的服务器上运行的数据库。 你无法回滚到`1050`。 不能附加或还原`1100`早于的服务器版本上的数据库[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+>  将数据库兼容级别设置为更高级别是不可逆的。 将兼容级别提高到`1100`后，必须继续在更高版本的服务器上运行数据库。 不能回滚到`1050`。 不能在早于`1100` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的服务器版本上附加或还原数据库。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入数据库兼容级别。 你必须具有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或更高版本才能查看或设置数据库兼容级别。  
   
  数据库不能为本地多维数据集。 本地多维数据集不支持 `CompatibilityLevel` 属性。  
@@ -59,7 +59,7 @@ ms.locfileid: "66076692"
   
 2.  使用 SQL Server Management Studio，连接到承载数据库的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。  
   
-3.  右键单击数据库名称，指向“编写数据库脚本为”  ，指向“ALTER to”  ，然后选择“新查询编辑器窗口”  。 数据库的 XMLA 表示形式将在新窗口中打开。  
+3.  右键单击数据库名称，指向“编写数据库脚本为”****，指向“ALTER to”****，然后选择“新查询编辑器窗口”****。 数据库的 XMLA 表示形式将在新窗口中打开。  
   
 4.  复制以下 XML 元素：  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66076692"
     <Language>1033</Language>  
     ```  
   
-6.  保存该文件。  
+6.  保存文件。  
   
 7.  若要运行脚本，请在“查询”菜单上单击 **“执行”** ，或按 F5。  
   
@@ -84,14 +84,14 @@ ms.locfileid: "66076692"
   
 1.  只有在两个不同的数据库共享相同的兼容级别时，才支持从这两个不同的数据库合并分区。  
   
-2.  使用来自其他数据库的链接维度要求相同的兼容级别。 例如，如果你想要使用从链接的维度[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]数据库中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]数据库，则必须移植[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]数据库复制到[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]服务器并设置兼容性级别设置为`1100`。  
+2.  使用来自其他数据库的链接维度要求相同的兼容级别。 例如， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]如果要使用[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]数据库中的数据库的链接维度，则必须将[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]数据库移植到[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]服务器，并将兼容级别设置为。 `1100`  
   
 3.  仅对于共享相同版本和数据库兼容级别的服务器，才支持同步服务器。  
   
 ## <a name="next-steps"></a>后续步骤  
- 在增加了数据库兼容级别之后，可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中设置 `StringStoresCompatibilityLevel` 属性。 这样将增大度量值和维度的字符串存储空间。 有关此功能的详细信息，请参阅 [配置维度和分区的字符串存储](configure-string-storage-for-dimensions-and-partitions.md)。  
+ 在增加了数据库兼容级别之后，可以在 `StringStoresCompatibilityLevel` 中设置 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 属性。 这样将增大度量值和维度的字符串存储空间。 有关此功能的详细信息，请参阅 [配置维度和分区的字符串存储](configure-string-storage-for-dimensions-and-partitions.md)。  
   
-## <a name="see-also"></a>请参阅  
- [备份、还原和同步数据库 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;XMLA&#41;备份、还原和同步数据库](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8d3ab415fbeedd26fa0c560c10eeff809787bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091439"
 ---
 # <a name="upgrade-progress"></a>升级进度
   使用 **安装向导的** “升级进度” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页可以监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的状态。  
   
-## <a name="see-also"></a>请参阅  
- [查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+## <a name="see-also"></a>另请参阅  
+ [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE 和 FORMAT_STRING 的 formated_value |Microsoft Docs
+title: FORMATED_VALUE 上的语言和 FORMAT_STRING |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074401"
 ---
-# <a name="language-and-formatstring-on-formatedvalue"></a>基于 LANGUAGE 和 FORMAT_STRING 的 FORMATED_VALUE
+# <a name="language-and-format_string-on-formated_value"></a>基于 LANGUAGE 和 FORMAT_STRING 的 FORMATED_VALUE
   FORMATTED_VALUE 属性是基于单元的 VALUE、FORMAT_STRING 和 LANGUAGE 属性的交互生成的。 本主题说明这些属性通过何种方式进行交互来生成 FORMATTED_VALUE 属性。  
   
-## <a name="value-formatstring-language-properties"></a>VALUE、FORMAT_STRING、LANGUAGE 属性  
+## <a name="value-format_string-language-properties"></a>VALUE、FORMAT_STRING、LANGUAGE 属性  
  下表说明了这些属性的定义，可为我们将来合并使用这些属性提供帮助。  
   
- VALUE  
+ 值  
  单元的未格式化值。  
   
  FORMAT_STRING  
@@ -32,7 +32,7 @@ ms.locfileid: "66074401"
  LANGUAGE  
  要与 FORMAT_STRING 一起应用以生成本地化版本的 FORMATTED_VALUE 的区域设置规范。  
   
-## <a name="formattedvalue-constructed"></a>FORMATTED_VALUE 的构造  
+## <a name="formatted_value-constructed"></a>FORMATTED_VALUE 的构造  
  FORMATTED_VALUE 属性是通过使用 VALUE 属性中的值并对该值应用 FORMAT_STRING 属性中指定的格式模板构造而成。 另外，每当格式值为 `named formatting literal` 时，LANGUAGE 属性规范便会修改 FORMAT_STRING 的输出结果以遵守命名格式的语言用法。 所有命名格式文字都定义为可本地化。 例如， `"General Date"` 为可以本地化的规范，而下面的模板 `"YYYY-MM-DD hh:nn:ss",` 则相反，该模板指定所显示的日期由模板定义，与语言规范无关。  
   
  如果 FORMAT_STRING 模板和 LANGUAGE 规范之间有冲突，则 FORMAT_STRING 模板将优先于 LANGUAGE 规范。 例如，如果指定 FORMAT_STRING="$ #0" 且 LANGUAGE=1034（西班牙），VALUE=123.456，则 FORMATTED_VALUE="$ 123" 而不是 FORMATTED_VALUE="€ 123"（期望的格式为欧元），因为格式模板的值优先于指定的语言。  
@@ -76,7 +76,7 @@ ms.locfileid: "66074401"
   
  使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在区域设置为 1033 的服务器和客户端上运行上述 MDX 查询时，转置后的结果为如下所示：  
   
-|成员|FORMATTED_VALUE|解释|  
+|成员|FORMATTED_VALUE|说明|  
 |------------|----------------------|-----------------|  
 |A|$5,040.00|FORMAT_STRING 设置为 `Currency` ，LANGUAGE 为从系统区域设置值继承的 `1033`|  
 |B|€5.040,00|FORMAT_STRING 设置为 `Currency` （从 A 继承），并且 LANGUAGE 显式设置为 `1034` （西班牙），因此显示的是欧元符号，所使用的小数分隔符和千分分隔符也与前面的示例不相同。|  
@@ -126,7 +126,7 @@ ms.locfileid: "66074401"
   
  使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在区域设置为 1033 的服务器和客户端上运行上述 MDX 查询时，转置后的结果为如下所示：  
   
-|成员|FORMATTED_VALUE|解释|  
+|成员|FORMATTED_VALUE|说明|  
 |------------|----------------------|-----------------|  
 |A|3/12/1959 6:30:00 AM|FORMAT_STRING 通过 CDate() 表达式隐式设置为 `General Date` ，并且 LANGUAGE 为从系统区域设置值继承的 `1033` （英语）|  
 |B|Thursday, March 12, 1959|FORMAT_STRING 显式设置为 `Long Date` ，并且 LANGUAGE 为从系统区域设置值继承的 `1033` （英语）|  
@@ -141,10 +141,10 @@ ms.locfileid: "66074401"
 |K|6:30:00|FORMAT_STRING 显式设置为 `Long Time` ，并且 LANGUAGE 显式设置为 `1041` （日语）。|  
 |L|06:30|FORMAT_STRING 显式设置为 `Short Time` ，并且 LANGUAGE 显式设置为 `1041` （日语）。|  
   
-## <a name="see-also"></a>请参阅  
- [FORMAT_STRING 内容 (MDX)](mdx-cell-properties-format-string-contents.md)   
- [使用单元属性 (MDX)](mdx-cell-properties-using-cell-properties.md)   
- [创建和使用属性值 (MDX)](../../creating-and-using-property-values-mdx.md)   
- [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [FORMAT_STRING 内容 &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
+ [使用单元属性 &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
+ [&#40;MDX&#41;创建和使用属性值](../../creating-and-using-property-values-mdx.md)   
+ [MDX 查询基础知识 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

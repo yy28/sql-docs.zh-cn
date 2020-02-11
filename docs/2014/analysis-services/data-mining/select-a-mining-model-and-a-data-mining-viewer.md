@@ -13,20 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4da674a33d71655b161820cacbfd7ce2f16232af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082881"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>选择挖掘模型和数据挖掘查看器
   可以使用数据挖掘设计器的 **“挖掘模型查看器”** 选项卡中的一种查看器来浏览挖掘模型。 可以轻松切换模型或更改使用的浏览器。  
   
--   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器的“挖掘模型查看器”  选项卡上，“挖掘模型”  下拉列表框包含当前挖掘结构中的所有挖掘模型的列表。  
+-   在 ** 中的数据挖掘设计器的“挖掘模型查看器”****选项卡上，“挖掘模型”**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]下拉列表框包含当前挖掘结构中的所有挖掘模型的列表。  
   
--   为每种模型类型提供自定义查看器。 有关所有自定义查看器的概述，请参阅[挖掘模型查看器（数据挖掘模型设计器）](../mining-model-viewers-data-mining-model-designer.md)。 有关如何使用自定义查看器来了解模型的演练，请参阅[第 4 课：浏览 Targeted 的 Mailing 模型&#40;数据挖掘基础教程&#41;](../../tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)。  
+-   为每种模型类型提供自定义查看器。 有关所有自定义查看器的概述，请参阅[挖掘模型查看器（数据挖掘模型设计器）](../mining-model-viewers-data-mining-model-designer.md)。 有关如何使用自定义查看器来了解模型的演练，请参阅[第 4 课：浏览 Targeted Mailing 模型（数据挖掘基础教程）](../../tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容查看器以树中节点的标准表示形式显示算法发现的模式。 虽然一般树视图可以非常详细地显示模型的所有内容，但它较难解释。 有关详细信息，请参阅 [使用 Microsoft 一般内容树查看器浏览模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)。  
+-   
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容查看器以树中节点的标准表示形式显示算法发现的模式。 虽然一般树视图可以非常详细地显示模型的所有内容，但它较难解释。 有关详细信息，请参阅 [使用 Microsoft 一般内容树查看器浏览模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)。  
   
 ### <a name="to-select-a-viewer-type"></a>选择查看器类型  
   
@@ -40,7 +41,7 @@ ms.locfileid: "66082881"
   
  所选挖掘模型在为该模型类型提供的查看器中打开。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘模型查看器任务和操作指南](mining-model-viewer-tasks-and-how-tos.md)  
   
   

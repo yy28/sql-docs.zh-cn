@@ -1,5 +1,5 @@
 ---
-title: 复制和粘贴数据 (SSAS 表格) |Microsoft Docs
+title: 复制和粘贴数据（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086971"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>复制并粘贴数据（SSAS 表格）
@@ -34,7 +34,7 @@ ms.locfileid: "66086971"
   
 -   [“粘贴预览”对话框](#bkmk_paste_preview)  
   
-##  <a name="bkmk_prerequisites"></a> 先决条件  
+##  <a name="bkmk_prerequisites"></a>先决条件  
  粘贴数据时存在一些限制：  
   
 -   粘贴的表的行数不能超过 10,000。  
@@ -45,9 +45,9 @@ ms.locfileid: "66086971"
   
 -   仅当使用通过从剪贴板粘贴数据初始创建的表时， **“追加粘贴”** 和 **“替换粘贴”** 选项才可用。 不能使用 **“追加粘贴”** 或 **“替换粘贴”** 向导入的数据来自另一数据源类型的表添加数据。  
   
--   当使用 **“追加粘贴”** 或 **“替换粘贴”** 时，新数据必须与原始数据包含相同列数。 最好是粘贴或追加的数据列还应与目标表中的那些数据列属于相同的数据类型或兼容的数据类型。 在某些情况下，可以使用不同的数据类型，但可能会显示“类型不匹配”  错误。  
+-   当使用 **“追加粘贴”** 或 **“替换粘贴”** 时，新数据必须与原始数据包含相同列数。 最好是粘贴或追加的数据列还应与目标表中的那些数据列属于相同的数据类型或兼容的数据类型。 在某些情况下，可以使用不同的数据类型，但可能会显示“类型不匹配” **** 错误。  
   
-##  <a name="bkmk_paste_data"></a> 粘贴数据  
+##  <a name="bkmk_paste_data"></a>粘贴数据  
   
 #### <a name="to-paste-data-into-the-designer"></a>向设计器粘贴数据  
   
@@ -59,13 +59,14 @@ ms.locfileid: "66086971"
   
     -   单击 **“替换粘贴”** 可以用剪贴板内容取代所选表。 所有现有列标题的名称都将保留在表中，并且将保留关系。  
   
-##  <a name="bkmk_paste_preview"></a> “粘贴预览”对话框  
- **“粘贴预览”** 对话框可用于查看复制到设计器窗口中的数据的预览以及确保数据正确复制。 若要访问此对话框，请将 HTML 格式的基于表的数据复制到剪贴板中，然后在设计器中，单击“编辑”  菜单，然后单击“粘贴”  、“追加粘贴”  或“替换粘贴”  。 仅当通过从剪贴板复制和粘贴来添加或替换所创建的表中的数据时， **“粘贴追加”** 和 **“粘贴替换”** 选项才可用。 不能使用 **“粘贴追加”** 或 **“粘贴替换”** 向包含导入数据的表添加数据。  
+##  <a name="bkmk_paste_preview"></a>"粘贴预览" 对话框  
+ 
+  **“粘贴预览”** 对话框可用于查看复制到设计器窗口中的数据的预览以及确保数据正确复制。 若要访问此对话框，请将 HTML 格式的基于表的数据复制到剪贴板中，然后在设计器中，单击“编辑”**** 菜单，然后单击“粘贴”****、“追加粘贴”**** 或“替换粘贴”****。 仅当通过从剪贴板复制和粘贴来添加或替换所创建的表中的数据时， **“粘贴追加”** 和 **“粘贴替换”** 选项才可用。 不能使用 **“粘贴追加”** 或 **“粘贴替换”** 向包含导入数据的表添加数据。  
   
  根据您是将数据粘贴到全新的表中，将数据粘贴到现有表中并用新数据替换现有数据，还是将数据追加到现有表中，此对话框的选项将有所不同。  
   
 ### <a name="paste-to-new-table"></a>粘贴到新表中  
- **表名**  
+ **表名称**  
  指定将在设计器窗口中创建的表的名称。  
   
  **要粘贴的数据**  
@@ -85,9 +86,9 @@ ms.locfileid: "66086971"
  **要粘贴的数据**  
  显示剪贴板内容的示例。 目标表中的现有数据将被删除，并且将新行插入到表中。  
   
-## <a name="see-also"></a>请参阅  
- [导入数据（SSAS 表格）](import-data-ssas-tabular.md)   
- [支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)   
- [设置列的数据类型（SSAS 表格）](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;导入数据](import-data-ssas-tabular.md)   
+ [&#40;SSAS 表格&#41;支持的数据源](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [设置 &#40;SSAS 表格的列的数据类型&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

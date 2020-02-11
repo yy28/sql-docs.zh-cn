@@ -1,5 +1,5 @@
 ---
-title: 测试和验证任务和操作指南 （数据挖掘） |Microsoft Docs
+title: 测试和验证任务和操作指南（数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082873"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>测试和验证任务和操作指南（数据挖掘）
@@ -39,7 +39,7 @@ ms.locfileid: "66082873"
   
  前三个图表使用 **“输入选择”** 选项卡来定义用于生成该图表的数据。  
   
- 通过使用  “交叉验证”选项卡可用的其他输入，创建交叉验证图表。有关详细信息，请参阅[交叉验证（Analysis Services - 数据挖掘）](cross-validation-analysis-services-data-mining.md)。  
+ 交叉验证图表是通过使用 "**交叉验证**" 选项卡上提供的其他输入创建的。有关详细信息，请参阅[交叉验证 &#40;Analysis Services 数据挖掘&#41;](cross-validation-analysis-services-data-mining.md)。  
   
  有关如何使用挖掘准确性图表的详细信息，请参阅[测试和验证（数据挖掘）](testing-and-validation-data-mining.md)。  
   

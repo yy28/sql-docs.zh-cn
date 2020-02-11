@@ -1,5 +1,5 @@
 ---
-title: 提升图选项卡 （挖掘准确性图表视图） |Microsoft Docs
+title: "\"提升图\" 选项卡（\"挖掘准确性图表\" 视图） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078094"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>“提升图”选项卡（“挖掘准确性图表”视图）
@@ -32,19 +32,19 @@ ms.locfileid: "66078094"
   
 ## <a name="options"></a>选项  
  **图表类型**  
- 设置要在查看器中显示的图表的类型。 您可以选择 **“提升图”** 或 **“利润图”** 。  
+ 设置要在查看器中显示的图表的类型。 您可以选择 **“提升图”** 或 **“利润图”**。  
   
  **设置**  
- 打开“利润图设置”对话框，可以使用该对话框来配置利润图。   
+ 打开“利润图设置”对话框，可以使用该对话框来配置利润图。****  
   
  如果在 **“列映射”** 选项卡中选择了连续的可预测列，则利润图不可用。  
   
- **复制**  
+ **Copy**  
  将图表复制到剪贴板。  
   
-## <a name="see-also"></a>请参阅  
- [挖掘准确性图表设计器&#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [测试和验证任务和操作指南&#40;数据挖掘&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>另请参阅  
+ [挖掘准确性图表设计器 &#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [测试和验证任务以及操作方法 &#40;数据挖掘&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [测试和验证 &#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

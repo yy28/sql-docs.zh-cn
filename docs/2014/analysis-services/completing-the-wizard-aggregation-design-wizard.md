@@ -1,5 +1,5 @@
 ---
-title: 完成向导 （聚合设计向导） |Microsoft Docs
+title: 完成向导（聚合设计向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd8a149582c15cfb9b216bf478d23e7d4de16a0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087729"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>完成向导（聚合设计向导）
@@ -29,11 +29,11 @@ ms.locfileid: "66087729"
  **立即部署并处理聚合**  
  完成该向导，将聚合设计分配到所选分区，然后部署并处理所选分区。  
   
- **保存聚合但不是处理它们**  
+ **保存聚合但不处理它们**  
  完成该向导，并将聚合设计分配到所选分区，但不部署或处理所选分区。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [聚合设计向导的 F1 帮助](aggregation-design-wizard-f1-help.md)   
- [Analysis Services 向导&#40;多维数据&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [&#40;多维数据的 Analysis Services 向导&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

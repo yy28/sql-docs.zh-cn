@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1290e92ecd49a95f250574fb8778a8aa27eb2e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083878"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是一种基于贝叶斯定理，并由提供的分类算法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用于预测性建模。 Naïve Bayes 名称中的 Naïve 一词派生自这样一个事实：该算法使用贝叶斯技术，但未将可能存在的依赖关系考虑在内。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是一种基于 Bayes ' 定理的分类算法，由[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供以便在预测建模中使用。 Naïve Bayes 名称中的 Naïve 一词派生自这样一个事实：该算法使用贝叶斯技术，但未将可能存在的依赖关系考虑在内。  
   
  和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法相比，此算法所需运算量较少，因而有助于快速生成挖掘模型，从而发现输入列与可预测列之间的关系。 可以使用该算法进行初始数据探测，然后根据该算法的结果使用其他运算量较大、更加精确的算法创建其他挖掘模型。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66083878"
   
  若要了解其工作原理，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Naive Bayes 查看器（如下图所示）来直观地查看该算法分布状态的方式。  
   
- ![状态的 naive bayes 分布](../media/naive-bayes.gif "状态的 Naive bayes 分布")  
+ ![状态的 Naive bayes 分布](../media/naive-bayes.gif "状态的 Naive bayes 分布")  
   
  此处， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 查看器可列出数据集中的每个输入列。如果提供了可预测列的每种状态，它还会显示每一列中状态的分布情况。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66083878"
   
  Naive Bayes 模型的要求如下：  
   
--   **单键列** 每个模型都必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。  
+-   **单个键列**每个模型必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。  
   
--   **输入列**在 Naive Bayes 模型的所有列必须都是离散或离散化列。 有关离散化列的信息，请参阅[离散化方法&#40;数据挖掘&#41;](discretization-methods-data-mining.md)。  
+-   **输入列**在 Naive Bayes 模型中，所有列都必须是离散或离散化的列。 有关离散化列的信息，请参阅[数据挖掘&#41;&#40;离散化方法](discretization-methods-data-mining.md)。  
   
      对于 Naive Bayes 模型，确保输入属性相互独立也很重要。 这在使用该模型进行预测时尤为重要。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66083878"
   
      相反，在浏览模型或数据集时，该算法能够识别各个变量之间的相关性对于标识输入之间的关系会很有用。  
   
--   **至少有一个可预测列** 可预测属性必须包含离散或离散化值。  
+-   **至少一个可预测列**可预测属性必须包含离散或离散化值。  
   
      可以将可预测列的值视为输入。 在浏览新数据集时，此操作对于查找列之间的关系会很有用。  
   
@@ -91,11 +91,11 @@ ms.locfileid: "66083878"
   
 -   支持使用 OLAP 挖掘模型。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [功能选择（数据挖掘）](feature-selection-data-mining.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [功能选择 &#40;数据挖掘&#41;](feature-selection-data-mining.md)   
  [Naive Bayes 模型查询示例](naive-bayes-model-query-examples.md)   
- [Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [Naive Bayes 模型的挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Microsoft Naive Bayes 算法技术参考](microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

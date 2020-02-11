@@ -26,10 +26,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088579"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
@@ -37,17 +37,17 @@ ms.locfileid: "66088579"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[SQL Server 的后向兼容性](../../2014/getting-started/sql-server-backward-compatibility.md)|包含介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的更改的一些主题，这些更改可能会要求您更改应用程序。 本主题范围中包含的功能包括数据可编程性、外围应用配置器工具、安装程序、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务，以及其他多种功能更改。|  
+|[SQL Server 的向后兼容性](../../2014/getting-started/sql-server-backward-compatibility.md)|包含介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的更改的一些主题，这些更改可能会要求您更改应用程序。 本主题范围中包含的功能包括数据可编程性、外围应用配置器工具、安装程序、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务，以及其他多种功能更改。|  
 |[SQL Server 数据库引擎的后向兼容性](../database-engine/sql-server-database-engine-backward-compatibility.md)|包含介绍 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 更改的一些主题，这些更改可能会要求您更改应用程序。|  
-|[Analysis Services 后向兼容性](../../2014/analysis-services/analysis-services-backward-compatibility.md)|包含介绍 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 更改的一些主题，这些更改可能会要求您更改应用程序。|  
-|[Integration Services 的后向兼容性](../integration-services/integration-services-backward-compatibility.md)|介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 更改，这些更改可能会要求您更改现有 Data Transformation Services 应用程序。|  
-|[Reporting Services 后向兼容性](../reporting-services/reporting-services-backward-compatibility.md)|包含介绍 [!INCLUDE[ssRS](../includes/ssrs.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 更改的一些主题，这些更改可能会要求您更改现有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 解决方案。|  
-|[向后兼容性&#40;Master Data Services&#41;](../master-data-services/backward-compatibility-master-data-services.md)|包含介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 更改的一些主题，这些更改可能会要求您更改现有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 解决方案。|  
+|[Analysis Services 向后兼容性](../../2014/analysis-services/analysis-services-backward-compatibility.md)|包含介绍 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 更改的一些主题，这些更改可能会要求您更改应用程序。|  
+|[Integration Services 的向后兼容性](../integration-services/integration-services-backward-compatibility.md)|介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 更改，这些更改可能会要求您更改现有 Data Transformation Services 应用程序。|  
+|[Reporting Services 的向后兼容性](../reporting-services/reporting-services-backward-compatibility.md)|包含介绍 [!INCLUDE[ssRS](../includes/ssrs.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 更改的一些主题，这些更改可能会要求您更改现有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 解决方案。|  
+|[向后兼容性 &#40;Master Data Services&#41;](../master-data-services/backward-compatibility-master-data-services.md)|包含介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 更改的一些主题，这些更改可能会要求您更改现有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 解决方案。|  
 |[复制的向后兼容性](../../2014/relational-databases/replication/replication-backward-compatibility.md)|包含介绍 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]更改的一些主题，这些更改可能会要求您更改现有复制解决方案。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安装 SQL Server 2014](../database-engine/install-windows/install-sql-server.md)   
  [升级到 SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md)  
   
