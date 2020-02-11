@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89f02cfd7ab2116528adb82d6e98023c912c6437
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868660"
 ---
-# <a name="mssqlserver33028"></a>MSSQLSERVER_33028
+# <a name="mssqlserver_33028"></a>MSSQLSERVER_33028
     
 ## <a name="details"></a>详细信息  
   
@@ -32,10 +32,10 @@ ms.locfileid: "62868660"
 |符号名称|SEC_CRYPTOPROV_CANTOPENSESSION|  
 |消息正文|无法为 %S_MSG '%.*ls' 打开会话。 提供程序错误代码: %d。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法打开错误消息中列出的加密提供程序。 加密提供程序提供的错误代码如下所示。 您可能需要联系您的加密服务供应商以获得有关错误的详细信息。  
   
-|错误代码|Description|  
+|错误代码|说明|  
 |----------------|-----------------|  
 |0|成功。 没有错误。|  
 |1|失败。 出现了未指定的错误或意外错误。 无法获得其他信息。|  

@@ -1,5 +1,5 @@
 ---
-title: SetFlag 方法 （ServerNetworkProtocolProperty 类） |Microsoft Docs
+title: SetFlag 方法（ServerNetworkProtocolProperty 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 95682cc34f67a0d65f62afdc52ec09c5209e3ba4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642683"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>SetFlag 方法（ServerNetworkProtocolProperty 类）
@@ -40,12 +40,12 @@ BoolValue
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
- [ServerNetworkProtocolProperty 类] servernetworkprotocolproperty-class.md) 表示的实例上的网络协议的属性的对象[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ *对象*  
+ 一个表示实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的网络协议属性的 [ServerNetworkProtocolProperty Class] ServerNetworkProtocolProperty-class.md）对象。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
   
-|参数|Description|  
+|参数|说明|  
 |---------------|-----------------|  
 |*BoolValue*|一个指定标志的新值的布尔值。|  
   
@@ -54,7 +54,7 @@ BoolValue
   
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

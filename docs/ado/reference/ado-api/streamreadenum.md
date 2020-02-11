@@ -16,24 +16,24 @@ ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7700fc1ddc3cc619db224ac46006370898af1d62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928665"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
-指定是否应从读取整个流或下一行[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
+指定是应从[流](../../../ado/reference/ado-api/stream-object-ado.md)对象中读取整个流还是下一行。  
   
-|常量|ReplTest1|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adReadAll**|-1|默认值。 读取所有字节流，从当前的位置及更高版本[EOS](../../../ado/reference/ado-api/eos-property.md)标记。 这是唯一有效**StreamReadEnum**值，该值具有二进制流 ([类型](../../../ado/reference/ado-api/type-property-ado-stream.md)是**adTypeBinary**)。|  
-|**adReadLine**|-2|从流中读取下一行 (由[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)属性)。|  
+|**adReadAll**|-1|默认值。 从当前位置开始，将流中的所有字节读入[eos](../../../ado/reference/ado-api/eos-property.md)标记。 这是具有二进制流的唯一有效**StreamReadEnum**值（[类型](../../../ado/reference/ado-api/type-property-ado-stream.md)为**adTypeBinary**）。|  
+|**adReadLine**|-2|读取流中的下一行（由[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)属性指定）。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 这些常量不具有 ADO/WFC 等效项。  
+ 这些常量没有 ADO/WFC 等效项。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771443"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>创建和编辑 Oracle CDC 服务
@@ -59,7 +59,7 @@ ms.locfileid: "62771443"
  **服务器名称**：选择要连接到的目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（例如 \\\\<computer_name>\\<instance_name>  ）。 默认情况下，显示上次连接到的服务器实例。  
   
  **身份验证**  
- 选择下列选项之一：  
+ 选择以下方案之一：  
   
 -   **Windows 身份验证**：如果选择此选项，Oracle CDC 服务将使用服务帐户标识连接到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例正在不同的计算机上运行，则必须将 Windows 身份验证用于域帐户。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62771443"
   
  在高可用性配置中，如果在群集中的其他节点上配置了相同服务的其他实例，则也必须使用相同的主密码。 如果您丢失或修改了该主密码，则必须使用 CDC 设计器控制台重新输入在 Oracle CDC 实例数据库中存储的所有日志挖掘密码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何创建和编辑 CDC 服务](how-to-create-and-edit-a-cdc-service.md)  
   
   

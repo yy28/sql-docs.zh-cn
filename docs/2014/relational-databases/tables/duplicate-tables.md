@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62760758"
 ---
 # <a name="duplicate-tables"></a>复制表
@@ -42,9 +42,9 @@ ms.locfileid: "62760758"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  在目标数据库中要求 CREATE TABLE 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

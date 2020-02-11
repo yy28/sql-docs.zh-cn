@@ -1,5 +1,5 @@
 ---
-title: 删除数据源 (ODBC) |Microsoft Docs
+title: 删除数据源（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,27 +13,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff882caf0ce5d9ef7d2e9f059daed89ed4b50d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126100"
 ---
 # <a name="delete-a-data-source-odbc"></a>删除数据源 (ODBC)
-  可以通过以编程方式使用 ODBC 管理器删除数据源 (通过使用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md))，或通过删除文件 （如果文件数据源名称）。  
+  您可以使用 ODBC 管理器、以编程方式（通过使用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)）或通过删除文件（如果是文件数据源名称）来删除数据源。  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>通过使用 ODBC 管理器删除数据源  
   
-1.  在中**Control Panel**，打开**管理工具**，然后双击**数据源 (ODBC)** 。 或者，也可以从命令提示符处运行 odbcad32.exe。  
+1.  在 "**控制面板**" 中，打开 "**管理工具**"，然后双击 "**数据源（ODBC）**"。 或者，也可以从命令提示符处运行 odbcad32.exe。  
   
-2.  单击**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡。  
+2.  单击 "**用户 dsn**"、"**系统 dsn**" 或 "**文件 dsn** " 选项卡。  
   
 3.  单击要删除的数据源。  
   
-4.  单击**删除**，然后确认删除。  
+4.  单击 "**删除**"，然后确认删除。  
   
 ## <a name="example"></a>示例  
- 若要以编程方式删除数据源，调用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)使用 ODBC_REMOVE_DSN 或 ODBC_REMOVE_SYS_DSN 作为第二个参数。  
+ 若要以编程方式删除数据源，请使用 ODBC_REMOVE_DSN 或 ODBC_REMOVE_SYS_DSN 作为第二个参数来调用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) 。  
   
  以下示例显示如何以编程方式删除数据源。  
   
@@ -54,7 +54,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [配置 SQL Server ODBC 驱动程序操作说明主题](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
+## <a name="see-also"></a>另请参阅  
+ [配置 SQL Server ODBC 驱动程序操作指南主题](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   
   

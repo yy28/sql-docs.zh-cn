@@ -1,5 +1,5 @@
 ---
-title: XSD 元素和属性到表和列 (SQLXML 4.0) 的默认映射 |Microsoft Docs
+title: XSD 元素和属性到表和列的默认映射（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013879"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和属性到表和列的默认映射 (SQLXML 4.0)
@@ -40,7 +40,7 @@ ms.locfileid: "66013879"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-default-mapping"></a>A. 指定默认映射  
- 在本示例中，不在 XSD 架构中指定任何批注。 **\<Person.Contact >** 元素属于复杂类型，并因此，将默认映射到 AdventureWorks 数据库中的 Person.Contact 表。 所有属性 (ContactID、 FirstName 和 LastName)  **\<Person.Contact >** 元素均属于简单类型，并将映射到 Person.Contact 表中的相同名称的列的默认情况下。  
+ 在本示例中，不在 XSD 架构中指定任何批注。 Person>元素属于复杂类型，因此默认情况下映射到 AdventureWorks 数据库中的 Person 表。 ** \<** ** \<>person**的所有属性（ContactID、FirstName、LastName）都是简单类型，默认情况下，将默认映射到 person 表中具有相同名称的列。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -55,7 +55,7 @@ ms.locfileid: "66013879"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 MySchema.xml。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66013879"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. 将 XML 元素映射到数据库列  
- 在本示例中，由于不使用批注，因此还会发生默认映射。 **\<Person.Contact >** 元素属于复杂类型，映射到具有相同名称在数据库中表。 元素 **\<FirstName >** 并 **\<LastName >** 并**EmployeeID**属性均属于简单类型，并因此，将映射到具有相同名称的列。 本示例与前一示例的唯一差别在于本示例使用元素来映射 FirstName 和 LastName 字段。  
+ 在本示例中，由于不使用批注，因此还会发生默认映射。 Person>元素属于复杂类型，并且映射到数据库中具有相同名称的表。 ** \<** 元素** \<FirstName>** 和** \<LastName>** ，**雇员 id**属性属于简单类型，因此，映射到具有相同名称的列。 本示例与前一示例的唯一差别在于本示例使用元素来映射 FirstName 和 LastName 字段。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -108,7 +108,7 @@ ms.locfileid: "66013879"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 MySchemaElements.xml。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66013879"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. 将 XML 元素映射到 XML 数据类型列  
- 在本示例中，由于不使用批注，因此还会发生默认映射。 **\<Production.ProductModel >** 元素属于复杂类型，映射到具有相同名称在数据库中表。 **ProductModelID**属性属于简单类型，并因此，将映射到具有相同名称的列。 此示例和上一示例的唯一区别在于 **\<说明 >** 元素映射到使用的列`xml`数据类型使用`xsd:anyType`类型。  
+ 在本示例中，由于不使用批注，因此还会发生默认映射。 ProductModel>元素属于复杂类型，并且映射到数据库中具有相同名称的表。 ** \<** **ProductModelID**属性属于简单类型，因此，映射到具有相同名称的列。 此示例与前一个示例的唯一区别在于，>元素的** \<说明**通过使用`xml` `xsd:anyType`类型映射到使用数据类型的列。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -161,9 +161,9 @@ ms.locfileid: "66013879"
 </xsd:schema>  
 ```  
   
- 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中已引入了 `xml` 数据类型。  
+ 在 `xml` 中已引入了 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据类型。  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 MySchemaXmlAnyElements.xml。  
   
@@ -203,8 +203,8 @@ ctions">
 </ROOT>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [带批注的架构的安全注意事项&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;SQLXML 4.0 的批注的架构安全注意事项&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
  [XML 数据 (SQL Server)](../xml/xml-data-sql-server.md)   
  [SQLXML 4.0 中的 xml 数据类型支持](../sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ef6e097721cbe0198cf9f9fb916cd53b1be6840
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245011"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER 属性的协议（“证书”选项卡）
@@ -30,8 +30,8 @@ ms.locfileid: "63245011"
  **视图**  
  通过它可以访问有关证书的其他详细信息。 只有在 **“证书”** 框中选择某个证书后，此选项才可用。 有关证书详细信息的其他信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 文档。  
   
- **Clear**  
- 从“证书”框中删除所选证书。   
+ **清除**  
+ 从“证书”框中删除所选证书。****  
   
  **证书**  
  由安全提供程序确定的证书名称。 选择某个证书可以在属性网格中查看详细信息。  

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 54a5b9a70fee2e85c4057f70f22e1b38a5d39354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761854"
 ---
-# <a name="mssqlserver9004"></a>MSSQLSERVER_9004
+# <a name="mssqlserver_9004"></a>MSSQLSERVER_9004
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62761854"
 |符号名称|LOG_CORRUPT|  
 |消息正文|处理数据库 '%.*ls' 的日志时出错。  如果可能，请从备份还原。 如果没有可用备份，可能需要重新生成日志。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  在回滚、恢复或复制期间处理日志时出错。 这可能表明操作系统检测到错误，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检测到内部一致性错误。  
   
 ## <a name="user-action"></a>用户操作  

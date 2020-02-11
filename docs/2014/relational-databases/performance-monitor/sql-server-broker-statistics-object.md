@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f500429659f7f2960140286e102fbf252e86a448
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206556"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server Broker Statistics 对象
   SQLServer:Broker Statistics 性能对象包含为 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 实例报告常规 [!INCLUDE[ssDE](../../includes/ssde-md.md)]信息的性能计数器。 下表列出了此对象包含的计数器：  
   
-|SQL Server Broker Statistics 计数器|描述|  
+|SQL Server Broker Statistics 计数器|说明|  
 |-------------------------------------------|-----------------|  
 |**Activation Errors Total**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 激活存储过程因出现错误而退出的次数。|  
 |**Broker Transaction Rollbacks**|包含与 [!INCLUDE[ssSB](../../includes/sssb-md.md)]相关的 DML 语句（如 SEND 和 RECEIVE）的已回滚事务数。|  
@@ -63,7 +63,7 @@ ms.locfileid: "68206556"
 |**SQL SEND Total**|已执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SEND 语句的总数。|  
 |**SQL SENDs/sec**|每秒执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SEND 语句数。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)  
   

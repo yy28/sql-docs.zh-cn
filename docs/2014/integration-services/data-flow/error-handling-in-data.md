@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827139"
 ---
 # <a name="error-handling-in-data"></a>数据中的错误处理
@@ -44,9 +44,10 @@ ms.locfileid: "62827139"
   
  下列关系图显示包含错误输出的简单数据流。  
   
- ![具有错误输出的数据流](../media/mw-dts-11.gif "Data flow with error output")  
+ ![具有错误输出的数据流](../media/mw-dts-11.gif "具有错误输出的数据流")  
   
- 除数据列外，错误输出还包含 **ErrorCode** 列和 **ErrorColumn** 列。 **ErrorCode** 列标识错误，而 **ErrorColumn** 列则包含错误列的沿袭标识符。 若要查看这些列的元数据，请单击将错误输出连接到数据流中下一个组件的路径。 在某些环境下， **ErrorColumn** 列的值会设置为零。 当错误条件影响到整行而不是单列时，就会发生该情况。 例如，在查找转换中的查找失败时。  
+ 除数据列外，错误输出还包含 **ErrorCode** 列和 **ErrorColumn** 列。 
+  **ErrorCode** 列标识错误，而 **ErrorColumn** 列则包含错误列的沿袭标识符。 若要查看这些列的元数据，请单击将错误输出连接到数据流中下一个组件的路径。 在某些环境下， **ErrorColumn** 列的值会设置为零。 当错误条件影响到整行而不是单列时，就会发生该情况。 例如，在查找转换中的查找失败时。  
   
  有关详细信息，请参阅 [数据流](data-flow.md) 和 [Integration Services 路径](integration-services-paths.md)。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "62827139"
   
  可以配置源、转换和目标处理错误和截断的方式。 下表对这些选项进行说明：  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
 |组件失败|发生错误或截断时数据流任务失败。 失败是错误或截断的默认选项。|  
 |忽略失败|忽略错误或截断，并且将数据行定向到转换或源的输出。|  
@@ -68,16 +69,16 @@ ms.locfileid: "62827139"
 ## <a name="adding-the-error-description"></a>添加错误说明  
  默认情况下，错误输出提供了数值错误代码，并且通常包含发生错误的列的标识符。 通过使用脚本的单独一行来调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法，可以使用脚本组件来包括其他列中的错误说明。  
   
- 可以将脚本组件添加到数据流的错误段中希望捕获其错误的数据流组件下游的任何位置，但通常在错误行被写入目标之前立即将其放入。 这样，脚本只查找已写入的错误行的说明。 例如，数据流的错误段可能纠正某些错误，并且不将这些行写入错误目标。 有关详细信息，请参阅[增强错误输出使用脚本组件](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
+ 可以将脚本组件添加到数据流的错误段中希望捕获其错误的数据流组件下游的任何位置，但通常在错误行被写入目标之前立即将其放入。 这样，脚本只查找已写入的错误行的说明。 例如，数据流的错误段可能纠正某些错误，并且不将这些行写入错误目标。 有关详细信息，请参阅[使用脚本组件增强错误输出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
 ### <a name="to-configure-an-error-output"></a>配置错误输出  
   
 -   [在数据流组件中配置错误输出](../configure-an-error-output-in-a-data-flow-component.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据流](data-flow.md)   
- [使用转换对数据进行转换](transformations/transform-data-with-transformations.md)   
- [使用路径连接组件](../connect-components-with-paths.md)   
+ [转换带转换的数据](transformations/transform-data-with-transformations.md)   
+ [用路径连接组件](../connect-components-with-paths.md)   
  [数据流任务](../control-flow/data-flow-task.md)   
  [数据流](data-flow.md)  
   

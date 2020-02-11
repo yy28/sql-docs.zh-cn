@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a492aee19d6b09cb7d227b34648f1ea35d1d95d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762086"
 ---
 # <a name="database-identifiers"></a>数据库标识符
-  数据库对象的名称即为其标识符。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的所有内容都可以有标识符。 服务器、数据库和数据库对象（例如表、视图、列、索引、触发器、过程、约束及规则等）都可以有标识符。 大多数对象要求有标识符，但对有些对象（例如约束），标识符是可选的。  
+  数据库对象的名称即为其标识符。 中的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所有内容都可以有标识符。 服务器、数据库和数据库对象（例如表、视图、列、索引、触发器、过程、约束及规则等）都可以有标识符。 大多数对象要求有标识符，但对有些对象（例如约束），标识符是可选的。  
   
  对象标识符是在定义对象时创建的。 标识符随后用于引用该对象。 例如，下列语句创建一个标识符为 `TableX`的表，该表中有两列的标识符分别是 `KeyCol` 和 `Description`：  
   
@@ -37,7 +37,8 @@ CREATE TABLE TableX
 (KeyCol INT PRIMARY KEY, Description nvarchar(80))  
 ```  
   
- 此表还有一个未命名的约束。 `PRIMARY KEY` 约束没有标识符。  
+ 此表还有一个未命名的约束。 
+  `PRIMARY KEY` 约束没有标识符。  
   
  标识符的排序规则取决于定义标识符的级别。 为实例级对象（如登录名和数据库名）的标识符分配实例的默认排序规则。 为数据库对象（如表、视图和列名）的标识符分配数据库的默认排序规则。 例如，对于名称差别仅在于大小写的两个表，可在使用区分大小写排序规则的数据库中创建，但不能在使用不区分大小写排序规则的数据库中创建。  
   
@@ -96,7 +97,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   at 符号、美元符号 ($)、数字符号或下划线。  
   
-3.  标识符必须不能是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留保留字的大写和小写版本。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中使用标识符时，不符合这些规则的标识符必须由双引号或括号分隔。 保留字依赖于数据库兼容级别。 可通过使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 语句设置该级别。  
+3.  标识符必须不能是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]保留保留字的大写和小写版本。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中使用标识符时，不符合这些规则的标识符必须由双引号或括号分隔。 保留字依赖于数据库兼容级别。 可通过使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 语句设置该级别。  
   
 4.  不允许嵌入空格或特殊字符。  
   
@@ -107,19 +108,19 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 > [!NOTE]  
 >  一些常规标识符格式规则取决于数据库兼容级别。 该级别可以使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)设置。  
   
-## <a name="see-also"></a>请参阅  
- [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)   
+## <a name="see-also"></a>另请参阅  
+ [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [CREATE DEFAULT (Transact-SQL)](/sql/t-sql/statements/create-default-transact-sql)   
- [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)   
- [CREATE RULE (Transact-SQL)](/sql/t-sql/statements/create-rule-transact-sql)   
+ [CREATE DEFAULT &#40;Transact-sql&#41;](/sql/t-sql/statements/create-default-transact-sql)   
+ [&#40;Transact-sql&#41;创建过程](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [&#40;Transact-sql&#41;创建规则](/sql/t-sql/statements/create-rule-transact-sql)   
  [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)   
  [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql)   
- [CREATE VIEW (Transact-SQL)](/sql/t-sql/statements/create-view-transact-sql)   
- [DECLARE @local_variable (Transact-SQL)](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [CREATE VIEW &#40;Transact-sql&#41;](/sql/t-sql/statements/create-view-transact-sql)   
+ [DECLARE @local_variable &#40;transact-sql&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [DELETE (Transact-SQL)](/sql/t-sql/statements/delete-transact-sql)   
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   
- [保留关键字 (Transact-SQL)](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
+ [Transact-sql&#41;&#40;保留关键字](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
  [UPDATE (Transact-SQL)](/sql/t-sql/queries/update-transact-sql)  
   

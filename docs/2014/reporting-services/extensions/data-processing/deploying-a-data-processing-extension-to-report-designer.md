@@ -1,5 +1,5 @@
 ---
-title: 如何：将数据处理扩展插件部署到报表设计器 |Microsoft Docs
+title: 如何向报表设计器部署数据处理扩展插件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 947ad59b8ac20862a8ef6da8ea527e2befb1be57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164325"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>如何：向报表设计器部署数据处理扩展插件
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>如何向报表设计器部署数据处理扩展插件
   报表设计器在您设计报表时使用数据处理扩展插件检索和处理数据。 您应将数据处理扩展插件程序集作为专用程序集部署到报表设计器。 还需要在报表设计器配置文件 RSReportDesigner.config 中生成一个条目。  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>部署数据处理扩展插件程序集  
   
 1.  将程序集从临时位置复制到报表设计器目录中。 报表服务器目录的默认位置为 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies。  
   
-2.  在复制程序集文件后，打开 RSReportDesigner.config 文件。 RSReportDesigner.config 文件也位于报表设计器目录中。 还需要在配置文件中为数据处理扩展插件程序集文件生成一个条目。 可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或诸如记事本之类的简单文本编辑器打开该配置文件。  
+2.  在复制程序集文件后，打开 RSReportDesigner.config 文件。 RSReportDesigner.config 文件也位于报表设计器目录中。 还需要在配置文件中为数据处理扩展插件程序集文件生成一个条目。 您可以使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或使用简单的文本编辑器（如记事本）打开配置文件。  
   
 3.  在 RSReportDesigner.config 文件中找到 **Data** 元素。 应当在以下位置为新创建的数据处理扩展插件生成一个条目：  
   
@@ -39,15 +39,17 @@ ms.locfileid: "63164325"
     </Extensions>  
     ```  
   
-4.  为将数据处理扩展插件，其中包括添加一个条目**扩展**元素替换为值`Name`， `Type`，和`Visible`属性。 您的条目可能如下所示：  
+4.  为数据处理扩展插件添加一个条目`Name`，该条目包含具有、 `Type`和`Visible`属性的值的**扩展**元素。 您的条目可能如下所示：  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     `Name` 的值为数据处理扩展插件的唯一名称。 `Type` 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）。 默认情况下，数据处理扩展插件是可见的。 若要隐藏扩展插件从用户界面，如报表设计器中，添加`Visible`归于**扩展**元素，并将其设置为`false`。  
+     
+  `Name` 的值为数据处理扩展插件的唯一名称。 
+  `Type` 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）。 默认情况下，数据处理扩展插件是可见的。 若要从用户界面（如报表设计器）中隐藏扩展插件， `Visible`请将属性添加到**extension**元素，并将`false`其设置为。  
   
-5.  最后，为自定义程序集添加一个代码组，以便为扩展插件授予 FullTrust 权限  。 要完成该操作，将该代码组添加到 rspreviewpolicy.config 文件中即可，该文件在默认情况下位于 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies 中。 代码组可能如下所示：  
+5.  最后，为自定义程序集添加一个代码组，以便为扩展插件授予 FullTrust 权限****。 要完成该操作，将该代码组添加到 rspreviewpolicy.config 文件中即可，该文件在默认情况下位于 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies 中。 代码组可能如下所示：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -69,7 +71,7 @@ ms.locfileid: "63164325"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>为自定义扩展插件启用通用查询设计器  
   
--   将以下条目添加到下的 RSReportDesigner.config 文件**设计器**元素中，替换`Name`属性与在之前条目中提供的名称。  
+-   将以下条目添加到**设计器**元素下的 rsreportdesigner.config 文件中，并将该`Name`属性替换为在以前的条目中提供的名称。  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  
@@ -78,7 +80,7 @@ ms.locfileid: "63164325"
 ## <a name="verifying-the-deployment"></a>验证部署  
  必须先关闭本地计算机上的所有 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 实例，然后才能验证部署。 结束所有当前会话之后，可以在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中创建一个新报表项目，以验证数据处理扩展插件是否已成功部署到报表设计器。 为报表创建新的数据集时，您的扩展插件应当包括在可用数据源类型列表中。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [部署数据处理扩展插件](deploying-a-data-processing-extension.md)   
  [Reporting Services 扩展插件](../reporting-services-extensions.md)   
  [实现数据处理扩展插件](implementing-a-data-processing-extension.md)   

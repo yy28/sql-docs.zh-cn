@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 202fd03beea5ec2fbf4b3fc29978ba9e112010df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900831"
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 目标自定义属性
@@ -22,7 +22,7 @@ ms.locfileid: "62900831"
   
  下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
 |AlwaysUseDefaultCodePage|Boolean|强制使用 DefaultCodePage 属性值。 此属性的默认值为 `False`。|  
 |BulkInsertCheckConstraints|Boolean|一个值，指定大容量插入是否检查约束。 此属性的默认值为 `True`。|  
@@ -43,7 +43,7 @@ ms.locfileid: "62900831"
   
  有关详细信息，请参阅 [SQL Server Destination](sql-server-destination.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Common Properties](../common-properties.md)  
   
   

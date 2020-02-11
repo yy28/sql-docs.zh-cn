@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900219"
 ---
 # <a name="lookup-transformation"></a>查找转换
@@ -74,7 +74,7 @@ ms.locfileid: "62900219"
 -   无匹配输出。 无匹配输出处理输入中在引用数据集内没有任何匹配项的行。 如果将查找转换配置为将无匹配项的行视为错误，则这些行会重定向到错误输出。 否则，转换会将这些行重定向到无匹配输出。  
   
     > [!NOTE]  
-    >  在 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] 中，查找转换只有一个输出。 有关如何运行中创建的查找转换的详细信息[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，请参阅[升级查找转换](../../../sql-server/install/upgrade-lookup-transformations.md)。  
+    >  在 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] 中，查找转换只有一个输出。 有关如何运行在中[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]创建的查找转换的详细信息，请参阅[升级查找转换](../../../sql-server/install/upgrade-lookup-transformations.md)。  
   
 -   错误输出。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "62900219"
   
  下面是将缓存保留到文件中的其他好处：  
   
--   ***在多个包中共享缓存文件。有关详细信息，请参阅***[在完全缓存模式下使用缓存连接管理器来实现查找转换](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)***。***  
+-   ***在多个包之间共享缓存文件。有关详细信息，请参阅***  [在完全缓存模式下使用缓存连接管理器实现查找转换](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***。***  
   
--   使用包部署缓存文件。 ***随后即可在多台计算机上使用该数据。*** 有关详细信息，请参阅 [为查找转换创建和部署缓存](create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
+-   使用包部署缓存文件。 ***然后，你可以在多台计算机上使用该数据。*** 有关详细信息，请参阅 [为查找转换创建和部署缓存](create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
   
 -   使用原始文件源从缓存文件中读取数据。 随后即可使用其他数据流组件来转换或移动数据。 有关详细信息，请参阅 [Raw File Source](../raw-file-source.md)。  
   
@@ -114,7 +114,8 @@ ms.locfileid: "62900219"
   
      此缓存选项与 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]中查找转换的无缓存选项兼容。  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在比较字符串时所用的方式不同。 如果查找转换配置为在查找转换运行之前将引用数据集加载到缓存中，则 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 将在缓存中执行查找比较。 否则，查找操作将使用参数化 SQL 语句并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将执行查找比较。 这意味着，根据缓存类型的不同，查找转换可能会从同一查找表中返回不同数量的匹配项。  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在比较字符串时所用的方式不同。 如果查找转换配置为在查找转换运行之前将引用数据集加载到缓存中，则 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 将在缓存中执行查找比较。 否则，查找操作将使用参数化 SQL 语句并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将执行查找比较。 这意味着，根据缓存类型的不同，查找转换可能会从同一查找表中返回不同数量的匹配项。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关详细信息，请参阅以下主题：  
@@ -129,17 +130,17 @@ ms.locfileid: "62900219"
   
 ## <a name="related-content"></a>相关内容  
   
--   MSDN 库中的视频[操作说明：在完全缓存模式下实现查找转换](https://go.microsoft.com/fwlink/?LinkId=131031)  
+-   msdn.microsoft.com 上的视频 [How to: Implement a Lookup Transformation in Full Cache Mode](https://go.microsoft.com/fwlink/?LinkId=131031)（如何在完全缓存模式下实现查找转换）  
   
 -   blogs.msdn.com 上的博客项 [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)（使用查找转换缓存模式的最佳实践）  
   
--   blogs.msdn.com 上的博客文章：[查找模式：不区分大小写](https://go.microsoft.com/fwlink/?LinkId=157782)  
+-   blogs.msdn.com 上的博客项 [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782)（查找模式：不区分大小写）  
   
 -   msftisprodsamples.codeplex.com 上的示例 [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528)（查找转换）  
   
      有关安装 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 产品示例和示例数据库的信息，请参阅 [SQL Server Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=267527)（SQL Server Integration Services 产品示例）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [模糊查找转换](fuzzy-lookup-transformation.md)   
  [字词查找转换](term-lookup-transformation.md)   
  [数据流](../data-flow.md)   
