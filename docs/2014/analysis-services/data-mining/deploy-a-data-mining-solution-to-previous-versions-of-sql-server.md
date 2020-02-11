@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084679"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>将数据挖掘解决方案部署到以前版本的 SQL Server
@@ -40,7 +40,7 @@ ms.locfileid: "66084679"
   
  [使用数据库同步](#bkmk_Synch)  
   
-##  <a name="bkmk_TimeSeries"></a> 部署时序模型  
+##  <a name="bkmk_TimeSeries"></a>部署时序模型  
  SQL Server 2008 中新增了一个辅助补充算法 ARIMA，从而增强了原有的 Microsoft 时序算法。 有关时序算法方面的更改的详细信息，请参阅 [Microsoft 时序算法](microsoft-time-series-algorithm.md)。  
   
  因此，使用新 ARIMA 算法的时序挖掘模型部署到 SQL Server 2005 Analysis Services 实例时的行为可能与以往不同。  
@@ -55,29 +55,29 @@ ms.locfileid: "66084679"
   
  如果用于该模型数据源的访问接口是 SQL Client Data Provider 10，则还必须修改数据源定义以指定 SQL Server Native Client 的以前版本。 否则， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 将生成一个错误，指出提供程序未注册。  
   
-##  <a name="bkmk_Holdout"></a> 部署具有维持的模型  
+##  <a name="bkmk_Holdout"></a>部署具有维持的模型  
  如果使用 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 创建了包含一个维持部分（用于测试数据挖掘模型）的挖掘结构，则该挖掘结构可以部署到 SQL Server 2005 实例，但此维持部分的信息将丢失。  
   
  使用 SQL Server 2005 Analysis Services 打开该挖掘结构时， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 将引发错误，然后重新生成该结构以删除维持部分。  
   
- 已重新生成该结构后，维持分区的大小不可再在属性窗口中;但是，值\<ddl100_100:HoldoutMaxPercent > 30\</ddl100_100:HoldoutMaxPercent >) 可能仍会出现在 ASSL 脚本文件。  
+ 重新生成结构后，维持分区的大小在属性窗口中将不再可用;但是，值\<Ddl100_100： HoldoutMaxPercent>30\</ddl100_100： HoldoutMaxPercent>）可能仍出现在 ASSL 脚本文件中。  
   
-##  <a name="bkmk_Filter"></a> 部署具有筛选器的模型  
+##  <a name="bkmk_Filter"></a>部署具有筛选器的模型  
  如果使用 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 将某个筛选器应用于挖掘模型，则该模型可以部署到 SQL Server 2005 实例，但不会应用该筛选器。  
   
  打开该挖掘模型时， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 将引发错误，然后重新生成该模型以删除该筛选器。  
   
-##  <a name="bkmk_Backup"></a> 从数据库备份还原  
+##  <a name="bkmk_Backup"></a>从数据库备份还原  
  不能将使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 创建的数据库备份还原到 SQL Server 2005 实例。 否则，SQL Server Management Studio 将生成错误。  
   
  如果创建 SQL Server 2005 Analysis Services 数据库的备份并在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例中还原此备份，则所有时序模型都会进行上一节所述的修改。  
   
-##  <a name="bkmk_Synch"></a> 使用数据库同步  
+##  <a name="bkmk_Synch"></a>使用数据库同步  
  不支持从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 到 SQL Server 2005 的数据库同步。  
   
  如果尝试同步 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库，则服务器将返回错误，且数据库同步失败。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 向后兼容性](../analysis-services-backward-compatibility.md)  
   
   

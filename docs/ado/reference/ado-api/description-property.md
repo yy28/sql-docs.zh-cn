@@ -1,5 +1,5 @@
 ---
-title: 说明属性 |Microsoft Docs
+title: Description 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,29 +18,29 @@ ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 48b3a6987e6c7b6c3754f5041d90d248520345ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933080"
 ---
 # <a name="description-property"></a>Description 属性
-介绍[错误](../../../ado/reference/ado-api/error-object.md)对象。  
+描述[错误](../../../ado/reference/ado-api/error-object.md)对象。  
   
 ## <a name="return-value"></a>返回值  
- 返回**字符串**值，该值包含错误的说明。  
+ 返回一个**字符串**值，该值包含对错误的说明。  
   
 ## <a name="remarks"></a>备注  
- 使用**说明**属性来获取错误的简短说明。 显示此属性不能或不希望处理的错误向用户发出警报。 该字符串将来自 ADO 或提供程序。  
+ 使用**Description**属性可获取错误的简短说明。 显示此属性以提醒用户无法或不想处理的错误。 该字符串来自 ADO 或提供程序。  
   
- 提供商将负责将特定的错误文本传递给 ADO。 添加了 ADO[错误](../../../ado/reference/ado-api/error-object.md)对象传递给**错误**集合每个提供程序错误或警告它收到。 枚举**错误**集合，可以跟踪提供程序将传递的错误。  
+ 提供程序负责向 ADO 传递特定的错误文本。 ADO 将[错误](../../../ado/reference/ado-api/error-object.md)对象添加到每个提供程序错误或它收到的警告的**错误**集合中。 枚举**errors**集合以跟踪提供程序传递的错误。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [错误对象](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>请参阅  
- [Description、 HelpContext、 HelpFile、 NativeError、 数、 源和 SQLState 属性示例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Description、 HelpContext、 HelpFile、 NativeError、 数、 源和 SQLState 属性示例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [HelpContext、 HelpFile 属性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [Number 属性 (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Description、HelpContext、帮助，NativeError、Number、Source 和 SQLState 属性示例（VB）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description、HelpContext、帮助，NativeError、Number、Source 和 SQLState 属性示例（VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [HelpContext，帮助的属性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
+ [Number 属性（ADO）](../../../ado/reference/ado-api/number-property-ado.md)   
  [Source 属性（ADO 错误）](../../../ado/reference/ado-api/source-property-ado-error.md)

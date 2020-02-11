@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2da978efd869a748bb48f6d494d59ae2f4cfb019
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211865"
 ---
 # <a name="modify-statistics"></a>修改统计信息
@@ -37,9 +37,9 @@ ms.locfileid: "68211865"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求：  
   
 -   用户对表或视图具有 ALTER 权限。  
@@ -58,11 +58,11 @@ ms.locfileid: "68211865"
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
-5.  右键单击要修改的统计信息对象，然后选择  “属性”。  
+5.  右键单击要修改的统计信息对象，然后选择****“属性”。  
   
-6.  在  “统计信息属性 -”*statistics_name* 对话框中的  “常规页”上，单击  “添加”  “删除”  “上移”  “下移”或上述任意组合，以更改统计信息的属性。 请记住，某一列在“统计信息列”网格内的位置可能会显著影响统计信息的有用性  。  
+6.  在 **“统计信息属性 -”** *statistics_name* 对话框中的****“常规页”上，单击****“添加”****“删除”****“上移”****“下移”或上述任意组合，以更改统计信息的属性。 请记住，某一列在“统计信息列”网格内的位置可能会显著影响统计信息的有用性****。  
   
-7.  单击 **“确定”** 。  
+7.  单击“确定”。   
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改统计信息**  

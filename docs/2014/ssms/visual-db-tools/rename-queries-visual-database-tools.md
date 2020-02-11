@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316840"
 ---
 # <a name="rename-queries-visual-database-tools"></a>重命名查询 (Visual Database Tools)
@@ -25,14 +25,14 @@ ms.locfileid: "63316840"
   
 ### <a name="to-rename-a-query"></a>重命名查询  
   
-1.  在“视图”菜单中，选择“解决方案资源管理器”。  
+1.  在“视图”  菜单中，选择“解决方案资源管理器”  。  
   
-2.  在解决方案资源管理器中，右键单击要重命名的查询，然后在显示的快捷菜单中单击“重命名”。  
+2.  在解决方案资源管理器中，右键单击要重命名的查询，然后在显示的快捷菜单中单击“重命名”  。  
   
 3.  为该查询键入一个新名称，再按 Enter。  
   
-## <a name="see-also"></a>请参阅  
- [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools 的设计查询和视图操作指南主题&#41;](visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

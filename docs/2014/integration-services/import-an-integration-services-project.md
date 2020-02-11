@@ -11,20 +11,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac28a67051299b0dbdfc7010d9abe20d0d2d2493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058165"
 ---
 # <a name="import-an-integration-services-project"></a>导入 Integration Services 项目
-  使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的“导入项目向导”  可以根据现有的部署文件 (.ispac) 或部署到 Integration Services 目录的项目创建一个项目。 如果您没有项目的原始副本，但又想根据 .ispac 文件或 SSISDB 目录创建一个项目，此时该功能特别有用。  
+  使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的“导入项目向导”**** 可以根据现有的部署文件 (.ispac) 或部署到 Integration Services 目录的项目创建一个项目。 如果您没有项目的原始副本，但又想根据 .ispac 文件或 SSISDB 目录创建一个项目，此时该功能特别有用。  
   
 ### <a name="to-import-a-project"></a>导入项目  
   
-1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的“文件”  菜单上，单击“新建”   > “项目”  。  
+1.  在[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中，单击 "**文件**" 菜单上的 "**新建** > **项目**"。  
   
-2.  在 **“新建项目”** 窗口的 **“已安装的模板”** 区域中，展开 **“商业智能”** ，然后单击 **“Integration Services”** 。  
+2.  在 **“新建项目”** 窗口的 **“已安装的模板”** 区域中，展开 **“商业智能”**，然后单击 **“Integration Services”**。  
   
 3.  从项目类型列表中选择 **“Integration Services 导入项目向导”** 。  
   
@@ -38,11 +38,11 @@ ms.locfileid: "66058165"
   
 8.  单击 **“下一步”** 切换到 **“选择源”** 页。  
   
-9. 如果要从 **.ispac** 文件导入，请在 **“路径”** 文本框中键入包含文件名的路径。 单击 **“浏览”** 导航到要存储解决方案的文件夹，在 **“文件名”** 文本框中键入文件名，然后单击 **“打开”** 。  
+9. 如果要从 **.ispac** 文件导入，请在 **“路径”** 文本框中键入包含文件名的路径。 单击 **“浏览”** 导航到要存储解决方案的文件夹，在 **“文件名”** 文本框中键入文件名，然后单击 **“打开”**。  
   
      如果要从 **“Integration Services 目录”** 导入，请在 **“服务器名称”** 文本框中键入数据库实例名称，或者单击 **“浏览”** 选择包含该目录的数据库实例。  
   
-     单击 **“路径”** 文本框旁边的 **“浏览”** ，展开目录中的文件夹，选择要导入的项目，然后单击 **“确定”** 。  
+     单击 **“路径”** 文本框旁边的 **“浏览”** ，展开目录中的文件夹，选择要导入的项目，然后单击 **“确定”**。  
   
      单击 **“下一步”** 切换到 **“查看”** 页。  
   

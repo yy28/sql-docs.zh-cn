@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211991"
 ---
 # <a name="create-a-resource-pool"></a>创建资源池
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建资源池。  
   
--   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
+-   **开始之前：**  [限制和限制](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **要创建资源池，请使用：** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   **若要创建资源池，请使用：**  [SQL Server Management Studio](#CreRPProp)， [transact-sql](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -34,26 +34,26 @@ ms.locfileid: "68211991"
   
  所有资源池的最小 CPU 百分比和最小内存百分比的总和不得超过 100。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  创建资源池需要 CONTROL SERVER 权限。  
   
-##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 创建资源池  
- **使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="CreRPProp"></a>使用 SQL Server Management Studio 创建资源池  
+ **使用创建资源池[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中并包含 **“资源调控器”** 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中并包含 **“资源调控器”**。  
   
-2.  右键单击“Resource Governor”  ，再单击“属性”  。  
+2.  右键单击“Resource Governor”****，再单击“属性”****。  
   
 3.  在 **“资源池”** 网格中，单击空行中的第一列。 此列标记有星号 (*)。  
   
-4.  双击“名称”  列中的空单元格。 键入要用于该资源池的名称。  
+4.  双击“名称”**** 列中的空单元格。 键入要用于该资源池的名称。  
   
 5.  在行中单击或双击要更改的任何其他单元，然后输入新值。  
   
-6.  若要保存更改，请单击 **“确定”** 。  
+6.  若要保存更改，请单击 **“确定”**。  
   
-##  <a name="CreRPTSQL"></a> 使用 Transact-SQL 创建资源池  
- **使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+##  <a name="CreRPTSQL"></a>使用 Transact-sql 创建资源池  
+ **使用创建资源池[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  运行指定要设置的属性值的 `CREATE RESOURCE POOL` 语句。  
   
@@ -70,16 +70,16 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](resource-governor.md)   
  [启用资源调控器](enable-resource-governor.md)   
- [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
+ [资源调控器资源池](resource-governor-resource-pool.md)   
  [更改资源池设置](change-resource-pool-settings.md)   
  [删除资源池](delete-a-resource-pool.md)   
- [使用模板配置资源调控器](configure-resource-governor-using-a-template.md)   
+ [使用模板配置 Resource Governor](configure-resource-governor-using-a-template.md)   
  [资源调控器工作负荷组](resource-governor-workload-group.md)   
- [资源调控器分类器函数](resource-governor-classifier-function.md)   
- [CREATE RESOURCE POOL (Transact-SQL)](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [Resource Governor 分类器函数](resource-governor-classifier-function.md)   
+ [&#40;Transact-sql 创建资源池&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

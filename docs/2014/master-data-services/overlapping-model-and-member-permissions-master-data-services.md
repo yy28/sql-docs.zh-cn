@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca57d34a3dda2880f3882d1940c6852af0729fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482731"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重叠的模型和成员权限（主数据服务）
@@ -26,9 +26,9 @@ ms.locfileid: "65482731"
   
  如果成员具有不同于其相应模型对象的权限，适用以下规则：  
   
--   **“拒绝”** 覆盖所有其他权限。  
+-   **Deny**替代所有其他权限。  
   
--   **只读**重写**更新**。  
+-   **只读**替代**更新**。  
   
  下图显示在属性权限不同于成员权限时，哪些权限对单个属性值有效。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65482731"
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别节点分配有 **“更新”** 权限。  
   
- 结果：在“资源管理器”中，用户对“山地车”节点中所有成员的所有属性值都具有“更新”权限。 所有其他成员和属性均隐藏。  
+ 结果：在 **“资源管理器”** 中，用户对“山地车”节点中所有成员的所有属性值都具有 **“更新”** 权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -50,25 +50,25 @@ ms.locfileid: "65482731"
   
  在 **“模型”** 选项卡上，Subcategory 属性分配有 **“更新”** 权限。  
   
- 上**层次结构成员**选项卡上，派生层次结构中的山地车子类别节点显式分配**只读**权限。  
+ 在 "**层次结构成员**" 选项卡上，派生层次结构中的 "山地自行车" 子类别节点显式分配有**只读**权限。  
   
- 结果：在**资源管理器**，用户拥有**只读**所有 Subcategory 属性值的山地车节点中的成员的权限。 所有其他成员和属性均隐藏。  
+ 结果：在 "**资源管理器**" 中，用户对 "山地车" 节点中成员的子类别属性值具有**只读**权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="example-3"></a>示例 3  
  ![mds_conc_overlap_model_3](../../2014/master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
- 上**模型**选项卡上，Subcategory 属性具有**只读**分配权限。  
+ 在 "**模型**" 选项卡上，"子类别" 属性分配有**只读**权限。  
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别显式分配有 **“更新”** 权限。  
   
- 结果：在**资源管理器**，用户拥有**只读**对属性值的权限。 所有其他成员和属性均隐藏。  
+ 结果：在 "**资源管理器**" 中，用户对属性值具有**只读**权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## <a name="see-also"></a>请参阅  
- [如何确定权限 (Master Data Services)](how-permissions-are-determined-master-data-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [如何 Master Data Services &#40;确定权限&#41;](how-permissions-are-determined-master-data-services.md)   
  [重叠的用户和组权限 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

@@ -20,18 +20,18 @@ ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 79fc54e65b6e014575b5942a573c4077e8a9c5d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041808"
 ---
-# <a name="set-contextinfo-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
+# <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   将最多 128 字节的二进制信息与当前会话或连接关联。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
  **@** *binary_var*  
  **varbinary** 或 **binary** 变量，保存用于与当前会话或连接关联的上下文值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  检索当前会话的上下文信息的首选方式是使用 CONTEXT_INFO 函数。 会话上下文信息也存储在以下系统视图的 **context_info** 列中：  
   
 -   **sys.dm_exec_requests**  

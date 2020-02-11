@@ -14,15 +14,15 @@ ms.assetid: ec97f949-126f-40a2-b67e-e74520a524cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c94c3718c116b37eb198264887dfb4a319bd1dc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985147"
 ---
 # <a name="trace-file"></a>跟踪文件
-应用程序指定的跟踪文件可以通过设置**TraceFile**关键字在 Odbc.ini 注册表项或通过调用**SQLSetConnectAttr** SQL_ATTR_TRACEFILE 连接属性。 如果启用跟踪时，该文件不存在，驱动程序管理器将创建该文件。 每个应用程序应具有其自己专用的跟踪文件以避免出现争用。 应用程序可以使用多个跟踪文件;应用程序的安装程序可以向用户提供选择的跟踪文件。 如果动态启用跟踪，应用程序还可以显示跟踪结果，而不是日志记录到跟踪文件。  
+应用程序通过以下方式指定跟踪文件：在**TraceFile**注册表项中设置关键字，或通过使用 SQL_ATTR_TRACEFILE 连接属性调用**SQLSetConnectAttr** 。 如果启用跟踪后该文件不存在，则驱动程序管理器将创建该文件。 每个应用程序都应有自己的专用跟踪文件来避免争用。 应用程序可以使用多个跟踪文件;应用程序的安装程序可以为用户提供选择的跟踪文件。 如果动态启用跟踪，应用程序也可以显示跟踪结果，而不是记录到跟踪文件。  
   
- 跟踪文件提供的数据类型与每个 ODBC 函数调用的日志和所有参数的值。 它将记录所有输入的函数，并使用返回代码和错误状态记录返回的所有函数。  
+ 跟踪文件使用所有参数的数据类型和值为每个 ODBC 函数调用提供日志。 它记录所有输入函数并记录返回代码和错误状态的所有返回函数。  
   
- 在 ODBC *3.x*，连接函数的参数未提供跟踪 DLL。
+ 在 ODBC *3.x 中，* 不向跟踪 DLL 提供连接函数的参数。

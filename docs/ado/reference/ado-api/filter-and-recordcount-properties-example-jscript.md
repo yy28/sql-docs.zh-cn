@@ -1,5 +1,5 @@
 ---
-title: Filter 和 RecordCount 属性示例 (JScript) |Microsoft Docs
+title: Filter 和 RecordCount 属性示例（JScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0832ddbbb16c54ee62c8fcec8749aeadb4f98449
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932659"
 ---
-# <a name="filter-and-recordcount-properties-example-jscript"></a>Filter 和 RecordCount 属性示例 (JScript)
-此示例打开**记录集**上的公司的 Northwind 数据库，然后使用[筛选器](../../../ado/reference/ado-api/filter-property.md)以限制可见的记录为其中的公司名称字段以字母开头的属性D.剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**FilterJS.asp**。  
+# <a name="filter-and-recordcount-properties-example-jscript"></a>Filter 和 RecordCount 属性示例（JScript）
+此示例在 Northwind 数据库的 "公司" 表上打开一个**记录集**，然后使用 "[筛选器](../../../ado/reference/ado-api/filter-property.md)" 属性来限制对 "公司名称" 字段以字母 D 开头的记录可见的记录。剪切以下代码并将其粘贴到记事本或其他文本编辑器，并将其保存为**FilterJS**。  
   
 ```  
 <!-- BeginFilterJS -->  
@@ -148,7 +148,7 @@ BODY {
 <!-- EndFilterJS -->  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [筛选器属性](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount 属性 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
+ [RecordCount 属性（ADO）](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

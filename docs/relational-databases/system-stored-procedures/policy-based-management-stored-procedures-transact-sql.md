@@ -1,5 +1,5 @@
 ---
-title: 基于策略的管理存储过程 (TRANSACT-SQL) |Microsoft Docs
+title: 基于策略的管理存储过程（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4304bfb3048c8e72a98e4eb24c51b4c7f19d5cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941949"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>基于策略的管理存储过程 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持下列系统存储过程用于基于策略的管理。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持用于基于策略的管理的下列系统存储过程。  
   
 > [!IMPORTANT]  
 >  只支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中记录的基于策略的管理的存储过程。 未记录的存储过程由内部基于策略的管理组件使用并且不应用于管理基于策略的管理。  
@@ -43,7 +43,7 @@ ms.locfileid: "67941949"
 |[sp_syspolicy_rename_condition](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-condition-transact-sql.md)|[sp_syspolicy_update_policy_category_subscription](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)|  
 |[sp_syspolicy_rename_policy](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-policy-transact-sql.md)||  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

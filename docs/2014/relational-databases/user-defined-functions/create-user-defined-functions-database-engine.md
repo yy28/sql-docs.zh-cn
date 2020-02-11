@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211711"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>创建用户定义函数（数据库引擎）
@@ -34,7 +34,7 @@ ms.locfileid: "68211711"
   
      [安全性](#Security)  
   
--   **若要创建的用户定义函数：**  
+-   **创建用户定义函数：**  
   
      [创建标量函数](#Scalar)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68211711"
   
 -   用户定义函数不能返回多个结果集。 如果您需要返回多个结果集，请使用存储过程。  
   
--   在用户定义函数中，错误处理受限制。 UDF 不支持重试...捕获，@ERROR或 RAISERROR。  
+-   在用户定义函数中，错误处理受限制。 UDF 不支持 TRY .。。CATCH @ERROR或 RAISERROR。  
   
 -   用户定义函数不能调用存储过程，但是可调用扩展存储过程。  
   
@@ -76,12 +76,12 @@ ms.locfileid: "68211711"
   
     -   SEND  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要在数据库中具有 CREATE FUNCTION 权限，并对创建函数时所在的架构具有 ALTER 权限。 如果函数指定用户定义类型，则需要对该类型具有 EXECUTE 权限。  
   
-##  <a name="Scalar"></a> 标量函数  
+##  <a name="Scalar"></a>标量函数  
  下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建一个多语句标量函数。 此函数输入一个值 `ProductID`，而返回一个单个数据值（指定库存产品的聚合量）。  
   
 ```  
@@ -115,7 +115,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 ```  
   
-##  <a name="TVF"></a> 表值函数  
+##  <a name="TVF"></a>表值函数  
  下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建内联表值函数。 此函数的输入参数为客户（商店）ID，而返回 `ProductID`、 `Name`以及 `YTD Total` （销售到商店的每种产品的本年度节截止到现在的销售总额）列。  
   
 ```  
@@ -192,8 +192,8 @@ FROM dbo.ufn_FindReports(1);
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [用户定义的函数](user-defined-functions.md)   
+## <a name="see-also"></a>另请参阅  
+ [用户定义函数](user-defined-functions.md)   
  [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql)  
   
   

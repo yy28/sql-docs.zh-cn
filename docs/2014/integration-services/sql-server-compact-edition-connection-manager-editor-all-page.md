@@ -1,5 +1,5 @@
 ---
-title: SQL Server Compact Edition 连接管理器编辑器 （所有页） |Microsoft Docs
+title: SQL Server Compact Edition 连接管理器编辑器（"全部" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8a26587f9dd426cdf53a3a53a36d0e81e95ebf77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055466"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 连接管理器编辑器（“全部”页）
@@ -49,14 +49,14 @@ ms.locfileid: "66055466"
  指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的最大大小 (MB)。  
   
  **模式**  
- 指定打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的文件模式。 此属性的默认值为 **“读写”** 。  
+ 指定打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的文件模式。 此属性的默认值为 **“读写”**。  
   
  “模式”选项包含四个值，如下表所述：  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**只读**|指定对数据库的只读访问。|  
-|**“读写”**|指定对数据库的读/写权限。|  
+|**读写**|指定对数据库的读/写权限。|  
 |**排他**|指定对数据库的排他访问。|  
 |**共享读取**|指定其他用户可以同时读取该数据库。|  
   
@@ -69,11 +69,11 @@ ms.locfileid: "66055466"
  **数据源**  
  指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的名称。  
   
- **密码**  
+ **权限**  
  输入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的密码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL Server Compact Edition 连接管理器编辑器（“连接”页）](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+ [SQL Server Compact Edition 连接管理器编辑器 &#40;连接页&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: CreateRecordset 方法示例 (VBScript) |Microsoft Docs
+title: CreateRecordset 方法示例（VBScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dde6e14283195ef3b56d545a58a95c307774223
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964520"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此代码示例创建[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)服务器端。 它具有两列中的有四个行。 剪切并粘贴到记事本或其他文本编辑器的以下代码，然后将其保存为**CreateRecordsetVBS.asp**。  
+ 此代码示例将在服务器端创建一个[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它有两个列，每列包含四行。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为**CreateRecordsetVBS**。  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  
@@ -167,8 +167,8 @@ End Sub
 <!-- EndCreateRecordsetVBS -->  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [CreateRecordset 方法 (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
+## <a name="see-also"></a>另请参阅  
+ [CreateRecordset 方法（RDS）](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: ChangePassword 方法 (ADOX) |Microsoft Docs
+title: ChangePassword 方法（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de8baf504a76407037322fd6b799f6d63584eae7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967034"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword 方法 (ADOX)
-更改的密码[用户](../../../ado/reference/adox-api/user-object-adox.md)帐户。  
+更改[用户](../../../ado/reference/adox-api/user-object-adox.md)帐户的密码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,20 +33,20 @@ ms.locfileid: "67967034"
 User.ChangePassword OldPassword, NewPassword  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *OldPassword*  
- 一个**字符串**值，该值指定用户的现有密码。 如果用户当前没有密码，则使用空字符串 ("") 的*OldPassword*。  
+ 一个指定用户的现有密码的**字符串**值。 如果用户当前没有密码，请为*OldPassword*使用空字符串（""）。  
   
  *NewPassword*  
- 一个**字符串**值，该值指定新密码。  
+ 一个指定新密码的**字符串**值。  
   
 ## <a name="remarks"></a>备注  
- 出于安全原因，除了新密码必须指定旧密码。  
+ 出于安全原因，除了新密码之外，还必须指定旧密码。  
   
- 如果提供程序不支持的受信者属性的管理，将会出错。  
+ 如果提供程序不支持管理受信者属性，则会发生错误。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [用户对象 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [组和用户 Append、ChangePassword 方法示例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)

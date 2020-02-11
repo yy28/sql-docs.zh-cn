@@ -16,25 +16,25 @@ ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04c7b1d1cb5d07a300b82d13a7e80158498bbd5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965652"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 指定要为其设置权限或所有权的数据库对象的类型。  
   
-|常量|ReplTest1|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adPermObjColumn**|2|对象为一个列。|  
-|**adPermObjDatabase**|3|该对象是一个数据库。|  
-|**adPermObjProcedure**|4|该对象是一个过程。|  
-|**adPermObjProviderSpecific**|-1|对象是由提供程序定义的类型。 如果将会出错*ObjectType*参数是**adPermObjProviderSpecific**和一个*ObjectTypeId*未提供。|  
-|**adPermObjTable**|1|该对象是一个表。|  
-|**adPermObjView**|5|该对象是视图。|  
+|**adPermObjColumn**|2|对象是一个列。|  
+|**adPermObjDatabase**|3|对象是数据库。|  
+|**adPermObjProcedure**|4|对象是一个过程。|  
+|**adPermObjProviderSpecific**|-1|对象是由提供程序定义的类型。 如果*ObjectType*参数为**adPermObjProviderSpecific**并且未提供*ObjectTypeId* ，则会发生错误。|  
+|**adPermObjTable**|1|对象是一个表。|  
+|**adPermObjView**|5|对象是一个视图。|  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  

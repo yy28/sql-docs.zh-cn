@@ -1,5 +1,5 @@
 ---
-title: 导入数据 (SSAS 表格) |Microsoft Docs
+title: 导入数据（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080619"
 ---
 # <a name="import-data-ssas-tabular"></a>导入数据（SSAS 表格）
@@ -36,12 +36,12 @@ ms.locfileid: "66080619"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[从关系数据源导入&#40;SSAS 表格&#41;](import-from-a-relational-data-source-ssas-tabular.md)|说明如何从关系数据源（如 Microsoft SQL Server、Oracle 或 Teradata 数据库）导入数据。|  
-|[从多维数据源导入&#40;SSAS 表格&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|说明如何从多维 SQL Server Analysis Services 多维数据集导入数据。|  
-|[从数据馈送导入&#40;SSAS 表格&#41;](import-from-a-data-feed-ssas-tabular.md)|说明如何从数据馈送（如 Microsoft Reporting Services 报表或 Azure DataMarket 数据集）导入数据。|  
-|[从文本文件导入&#40;SSAS 表格&#41;](import-from-a-text-file-ssas-tabular.md)|说明如何从 Microsoft Excel 工作簿或文本文件中导入数据。|  
-|[复制并粘贴数据（SSAS 表格）](copy-and-paste-data-ssas-tabular.md)|说明如何使用“粘贴”和“追加粘贴”将数据添加到模型设计器中的现有表。|  
+|[从关系数据源导入 &#40;SSAS 表格&#41;](import-from-a-relational-data-source-ssas-tabular.md)|说明如何从关系数据源（如 Microsoft SQL Server、Oracle 或 Teradata 数据库）导入数据。|  
+|[从多维数据源导入 &#40;SSAS 表格&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|说明如何从多维 SQL Server Analysis Services 多维数据集导入数据。|  
+|[从数据馈送导入 &#40;SSAS 表格&#41;](import-from-a-data-feed-ssas-tabular.md)|说明如何从数据馈送（如 Microsoft Reporting Services 报表或 Azure DataMarket 数据集）导入数据。|  
+|[从文本文件导入 &#40;SSAS 表格&#41;](import-from-a-text-file-ssas-tabular.md)|说明如何从 Microsoft Excel 工作簿或文本文件中导入数据。|  
+|[将数据复制并粘贴 &#40;SSAS 表格&#41;](copy-and-paste-data-ssas-tabular.md)|说明如何使用“粘贴”和“追加粘贴”将数据添加到模型设计器中的现有表。|  
   
   

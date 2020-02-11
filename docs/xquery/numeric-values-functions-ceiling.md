@@ -1,5 +1,5 @@
 ---
-title: ceiling 函数 (XQuery) |Microsoft Docs
+title: 天花板函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946570"
 ---
 # <a name="numeric-values-functions---ceiling"></a>数值函数 - ceiling 
@@ -39,19 +39,19 @@ fn:ceiling ( $arg as numeric?) as numeric?
  将应用该函数的数字。  
   
 ## <a name="remarks"></a>备注  
- 如果类型 *$arg*是三个基本数字类型之一**xs: float**， **xs: double**，或**xs: decimal**，返回类型是与相同 *$arg*类型。  
+ 如果 *$arg*的类型为三个数值基类型之一 **： xs： float**、 **xs： double**或**xs： decimal**，则返回类型与 *$arg*类型相同。  
   
- 如果类型 *$arg*是从其中一个数值类型派生的类型的返回类型为基的数值类型。  
+ 如果 *$arg*的类型是派生自其中一个数值类型的类型，则返回类型为基本数值类型。  
   
- Fn: floor、 fn: ceiling 或 fn: round 函数的输入是否**xdt: untypedatomic**，隐式强制转换为**xs: double**。  
+ 如果 fn： floor、fn：天花板或 fn： round 函数的输入为**xdt： untypedAtomic**，则它将隐式转换为**xs： double**。  
   
  任何其他类型都会生成静态错误。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
+ 本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-ceiling-xquery-function"></a>A. 使用 ceiling() XQuery 函数  
- 对于产品型号 7，此查询返回产品型号生产过程中的生产车间的列表。 查询将返回每个生产车间的位置 ID、工时和批量大小（如果有记录）。 该查询使用**ceiling**函数返回类型的值作为工时**十进制**。  
+ 对于产品型号 7，此查询返回产品型号生产过程中的生产车间的列表。 查询将返回每个生产车间的位置 ID、工时和批量大小（如果有记录）。 查询使用**天花板**函数将人工时间作为**decimal**类型的值返回。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -73,15 +73,15 @@ WHERE ProductModelID=7
   
 -   AWMI 命名空间前缀表示 Adventure Works 的生产说明。 此前缀引用被查询文档中使用的同一命名空间。  
   
--   **说明**是**xml**类型列。 因此， [query （） 方法 （XML 数据类型）](../t-sql/xml/query-method-xml-data-type.md)用于指定 XQuery。 XQuery 语句指定为该查询方法的参数。  
+-   **说明**是一个**xml**类型列。 因此， [query （）方法（XML 数据类型）](../t-sql/xml/query-method-xml-data-type.md)用于指定 XQuery。 XQuery 语句指定为该查询方法的参数。  
   
--   **有关...返回**是循环构造。 在查询中，**有关**循环标识一系列\<位置 > 元素。 对于每个车间**返回**中的语句**为**循环描述要生成的 XML:  
+-   **对于 .。。返回**为循环构造。 在查询中， **for**循环标识\<位置> 元素的列表。 对于每个工作中心位置， **for**循环中的**return**语句描述要生成的 XML：  
   
-    -   一个\<位置 > 具有 LocationID 和 LaborHrs 属性的元素。 大括号 ({ }) 中对应的表达式从文档中检索所需的值。  
+    -   具有\<LocationID 和 LaborHrs 属性的位置> 元素。 大括号 ({ }) 中对应的表达式从文档中检索所需的值。  
   
-    -   {$i/@LotSize } 表达式从文档中，如果存在中检索 LotSize 属性。  
+    -   {$i/@LotSize } 表达式从文档中检索 LotSize 属性（如果存在）。  
   
-    -   下面是结果：  
+    -   结果如下：  
   
 ```  
 ProductModelID Result    
@@ -97,10 +97,10 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   **Ceiling （)** 函数将所有整数值都映射到 xs: decimal。  
+-   **天花板（）** 函数将所有整数值映射到 xs： decimal。  
   
-## <a name="see-also"></a>请参阅  
- [floor 函数&#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
- [round 函数&#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
+## <a name="see-also"></a>另请参阅  
+ [floor 函数 &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
+ [&#40;XQuery&#41;循环函数](../xquery/numeric-values-functions-round.md)  
   
   

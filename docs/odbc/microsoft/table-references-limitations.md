@@ -14,11 +14,11 @@ ms.assetid: de674d5e-a16a-4cf1-b7e7-0222ef19a6f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 838c80fada6dbbff67ea01c38192db4c78d3c45f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939727"
 ---
 # <a name="table-references-limitations"></a>表引用限制
-16 表引用的最多可以包含在任何查询语句。
+任何查询语句中最多可以包含16个表引用。

@@ -1,5 +1,5 @@
 ---
-title: 第 2 课：配置对数据库对象的权限 |Microsoft Docs
+title: 第 2 课：配置数据库对象的权限 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642586"
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>第 2 课：配置数据库对象的权限
@@ -32,7 +32,7 @@ ms.locfileid: "62642586"
   
 -   [授予访问数据库对象的权限](lesson-2-4-granting-access-to-a-database-object.md)  
   
--   [摘要：配置对数据库对象的权限](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
+-   [摘要：配置数据库对象的权限](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [创建登录名](lesson-2-1-creating-a-login.md)  

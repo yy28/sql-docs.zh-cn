@@ -1,5 +1,5 @@
 ---
-title: 教程：使用 hierarchyid 数据类型 |Microsoft Docs
+title: 教程：使用 hierarchyid 数据类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3718b45b69870969dae85b4eb1ad2e9e80adc85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211772"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>教程：使用 hierarchyid 数据类型
@@ -41,11 +41,11 @@ ms.locfileid: "68211772"
   
 -   Internet Explorer 6 或更高版本。  
   
-## <a name="see-also"></a>请参阅  
- [教程：数据库引擎入门](../tutorial-getting-started-with-the-database-engine.md)   
- [教程：编写 TRANSACT-SQL 语句](../../t-sql/tutorial-writing-transact-sql-statements.md)   
+## <a name="see-also"></a>另请参阅  
+ [教程：入门与数据库引擎](../tutorial-getting-started-with-the-database-engine.md)   
+ [教程：编写 Transact-sql 语句](../../t-sql/tutorial-writing-transact-sql-statements.md)   
  [hierarchyid 数据类型方法引用](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [分层数据&#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
+ [分层数据 &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
  [hierarchyid (Transact-SQL)](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

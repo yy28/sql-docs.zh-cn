@@ -1,5 +1,5 @@
 ---
-title: 跟踪属性 （常规选项卡） |Microsoft Docs
+title: 跟踪属性（"常规" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089525"
 ---
 # <a name="trace-properties-general-tab"></a>跟踪属性（“常规”选项卡）
@@ -34,7 +34,7 @@ ms.locfileid: "66089525"
  **跟踪提供程序类型**  
  显示提供跟踪的服务器类型。 跟踪定义文件将自动填充 **“跟踪提供程序类型”** 字段。 您无法修改此字段。  
   
- **version**  
+ **版本**  
  显示提供跟踪的服务器的版本。 跟踪定义文件将自动填充 **“版本”** 字段。 您无法修改此字段。  
   
  **使用模板**  
@@ -43,10 +43,10 @@ ms.locfileid: "66089525"
  **保存到文件**  
  将跟踪数据捕获到 .trc 文件。 保存跟踪数据有助于以后进行查看和分析。  
   
- **设置最大文件大小(MB)**  
+ **设置最大文件大小（MB）**  
  如果选择将跟踪数据保存到文件，则必须指定跟踪文件的最大大小。 默认值为 5 MB。 最大大小仅受保存该文件的文件系统（NTFS、FAT）的限制。  
   
- \<图形 >**另存为**  
+ \<图形>**另存为**  
  在选择进行保存后，可以选择此图标来更改文件名。  
   
  **启用文件滚动更新**  
@@ -58,16 +58,16 @@ ms.locfileid: "66089525"
  **保存到表**  
  将跟踪数据捕获到数据库表。 保存跟踪数据有助于以后进行查看和分析。 但是，将跟踪数据保存到表会导致在保存跟踪的服务器上产生很大的开销。 如果可能，请不要将跟踪表保存到正在跟踪的同一服务器上。  
   
- \<图形 >**目标表**  
+ \<图形>**目标表**  
  在选择将跟踪数据保存到数据库表后，可以选择此图标来更改表名称。  
   
- **设置最大行数(千行)**  
+ **设置最大行数（以千为单位）**  
  指定保存数据的最大行数。 默认值为 1000 行。  
   
  **启用跟踪停止时间**  
  为跟踪设置日期和时间，以便到时候终止并关闭此跟踪。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建跟踪 (SQL Server Profiler)](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
   

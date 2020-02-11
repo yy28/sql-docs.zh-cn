@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084221"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>生成挖掘模型的副本
@@ -39,7 +39,7 @@ ms.locfileid: "66084221"
   
      -或-  
   
-     选择该模型。 在 **“挖掘模型”** 菜单中，选择 **“新建挖掘模型”** 。  
+     选择该模型。 在 **“挖掘模型”** 菜单中，选择 **“新建挖掘模型”**。  
   
 4.  为新的挖掘模型键入名称，并选择一种算法。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -47,18 +47,18 @@ ms.locfileid: "66084221"
   
 1.  选择挖掘模型。  
   
-2.  在中**属性**窗口中，单击文本框**筛选器**属性，然后单击生成 **（...）** 按钮。  
+2.  在 "**属性**" 窗口中，单击 "**筛选器**" 属性文本框，然后单击 "生成" **（...）** 按钮。  
   
 3.  更改筛选条件。  
   
-     有关如何使用筛选器编辑器对话框的详细信息，请参阅 [对挖掘模型应用筛选器](apply-a-filter-to-a-mining-model.md)。  
+     有关如何使用筛选器编辑器对话框的详细信息，请参阅[对挖掘模型应用筛选器](apply-a-filter-to-a-mining-model.md)。  
   
-4.  在中**属性**窗口，请在`AlgorithmParameters`文本框中，单击**设置参数**，并根据需要更改算法参数。  
+4.  在 "**属性**" 窗口的`AlgorithmParameters`文本框中，单击 "**需要参数**"，然后根据需要更改算法参数。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [挖掘模型的筛选器（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另请参阅  
+ [挖掘模型的筛选器 &#40;Analysis Services 数据挖掘&#41;](mining-models-analysis-services-data-mining.md)   
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)   
  [从挖掘模型中删除筛选器](delete-a-filter-from-a-mining-model.md)  
   

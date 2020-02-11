@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43f68015c7488c1fcf07ccff612950038f873855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62518950"
 ---
 # <a name="data-sources-and-connection-methods"></a>数据源和连接方法
@@ -39,7 +39,7 @@ ms.locfileid: "62518950"
 |<xref:ReportService2010.ReportingService2010.TestConnectForDataSourceDefinition%2A>|测试数据源的连接。 此方法支持数据源的直接测试。|  
 |<xref:ReportService2010.ReportingService2010.TestConnectForItemDataSource%2A>|测试数据源的连接。 此方法支持已发布的数据源的测试，这些数据源由报表或模型和共享数据源使用。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 Web 服务和 .NET Framework 生成应用程序](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [报表服务器 Web 服务](../report-server-web-service.md)   
  [报表服务器 Web 服务方法](report-server-web-service-methods.md)   

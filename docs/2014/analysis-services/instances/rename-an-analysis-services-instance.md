@@ -16,32 +16,33 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079622"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重命名 Analysis Services 实例
-  您可以重命名的现有实例[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过使用**重命名实例**对话框。  
+  您可以使用 " [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **重命名实例**" 对话框重命名现有的实例。  
   
 > [!IMPORTANT]  
 >  重命名该实例时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例重命名工具将以提升的权限运行，更新与该实例关联的 Windows 服务名称、安全帐户和注册表项。 为确保执行这些操作，请务必以本地系统管理员身份运行此工具。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例重命名工具不会修改为原始实例创建的程序文件夹。 请不要修改该程序文件夹名称以便与要重命名的实例匹配。 更改程序文件夹名称会妨碍安装程序修复或卸载安装软件。  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例重命名工具不会修改为原始实例创建的程序文件夹。 请不要修改该程序文件夹名称以便与要重命名的实例匹配。 更改程序文件夹名称会妨碍安装程序修复或卸载安装软件。  
   
 > [!NOTE]  
 >  群集环境中不支持 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例重命名工具。  
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>重命名 Analysis Services 的实例  
   
-1.  启动**实例重命名**工具**asinstancerename.exe**，从 C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio。  
+1.  从 C:\Program Files\Microsoft SQL Server\110\tools\binn\managementstudio 启动 "**实例重命名**" 工具**asinstancerename。**  
   
 2.  在 **“重命名实例”** 对话框中，从 **“要重命名的实例”** 列表中选择要重命名的实例。  
   
 3.  在 **“新实例名”** 框中，输入实例的新名称。  
   
-4.  验证用户名和密码是否正确，然后单击 **“重命名”** 。  
+4.  验证用户名和密码是否正确，然后单击 **“重命名”**。  
   
      在名称更改过程中，Analysis Services 实例将会停止并重新启动。  
   
@@ -57,22 +58,22 @@ ms.locfileid: "66079622"
   
      如果您使用虚拟帐户来设置服务，则需要更新数据库登录名或文件权限。 虚拟帐户基于实例名称，所以如果您将该实例重命名，虚拟帐户也会同时更新。 这意味着您为之前实例创建的所有以前的登录名或权限都不再有效。  
   
-     下例对此进行了说明。 假设作为名为"Tabular"使用默认虚拟帐户，从而导致以下配置的实例安装在表格模式服务器：  
+     下例对此进行了说明。 假设你使用默认虚拟帐户将表格模式服务器安装为名为 "表格" 的实例，从而导致以下配置：  
   
-    1.  实例名称 =\<服务器 > \TABULAR  
+    1.  实例名称 = \<服务器> \tabular  
   
     2.  服务名称 = MSOLAP$TABULAR  
   
     3.  虚拟帐户 = NT Service\ MSOLAP$TABULAR  
   
-     现在假设您重命名为"TAB2"的实例。 更改名称后将生成如下配置：  
+     现在假定您将该实例重命名为 "TAB2"。 更改名称后将生成如下配置：  
   
-    1.  Instance name = \<server>\TAB2  
+    1.  实例名称 = \<服务器> \tab2  
   
     2.  服务名称 = MSOLAP$TAB2  
   
     3.  虚拟帐户 = NT Service\ MSOLAP$TAB2  
   
-     正如您所看到的以前授予"NT Service\ MSOLAP$ TABULAR"的数据库和文件权限都不再有效。 若要确保任务和服务执行的操作运行之前，就像现在需要向"NT Service\ MSOLAP$ TAB2"授予新的数据库和文件权限。  
+     正如您所看到的，以前授予 "NT Service \ MSOLAP $ 表格" 的数据库和文件权限不再有效。 若要确保服务执行的任务和操作像以前一样运行，现在需要向 "NT Service \ MSOLAP $ TAB2" 授予新的数据库和文件权限。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_maintenance_plan_job （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c67731907d105c6fb2cc48ecf3232d2c9d89c5b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009204"
 ---
-# <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
+# <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   取消指定作业与指定维护计划的关联。  
@@ -34,7 +34,7 @@ ms.locfileid: "68009204"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,20 +45,20 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @plan_id = ] 'plan\_id'` 指定维护计划的 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效的 id。  
+`[ @plan_id = ] 'plan\_id'`指定维护计划的 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效 id。  
   
-`[ @job_id = ] 'job\_id'` 指定维护计划相关联的作业的 ID。 *job_id*是**uniqueidentifier**，并且必须是有效的 id。  
+`[ @job_id = ] 'job\_id'`指定与维护计划相关联的作业的 ID。 *job_id*是**uniqueidentifier**，并且必须是有效 id。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_delete_maintenance_plan_job**必须从运行**msdb**数据库。  
+ 必须从**msdb**数据库运行**sp_delete_maintenance_plan_job** 。  
   
- 如果已从维护计划中删除所有作业，我们建议用户执行**sp_delete_maintenance_plan_db**若要从计划中删除剩余的数据库。  
+ 当从维护计划中删除所有作业时，建议用户执行**sp_delete_maintenance_plan_db**以从计划中删除剩余数据库。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色可以执行**sp_delete_maintenance_plan_job**。  
+ 只有**sysadmin**固定服务器角色的成员才能**sp_delete_maintenance_plan_job**执行。  
   
 ## <a name="examples"></a>示例  
  以下示例从维护计划中删除作业“B8FCECB1-E22C-11D2-AA64-00C04F688EAE”。  
@@ -67,8 +67,8 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 EXECUTE   sp_delete_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [数据库维护计划存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [数据库维护计划存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepublication (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropmergepublication （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b675b07466464f706b6503f3d017acd34822b2c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933903"
 ---
-# <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
+# <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  删除合并发布及其关联的快照代理。 删除合并发布之前必须删除全部的订阅。 发布中的项目将自动删除。 在发布服务器上对发布数据库执行此存储的过程。  
+  删除合并发布及其关联的快照代理。 删除合并发布之前必须删除全部的订阅。 发布中的项目将自动删除。 此存储过程在发布服务器上对发布数据库执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,35 +40,35 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是要删除的名称。 *发布*是**sysname**，无默认值。 如果**所有**，以及与之关联的快照代理作业会删除所有现有合并发布。 如果指定的特定值*发布*，仅该发布和其关联的快照代理作业将被删除。  
+`[ @publication = ] 'publication'`要删除的发布的名称。 *发布*为**sysname**，无默认值。 如果为**all**，则删除所有现有合并发布以及与它们关联的快照代理作业。 如果为*发布*指定了一个特定值，则只会删除该发布及其关联的快照代理作业。  
   
-`[ @ignore_distributor = ] ignore_distributor` 用于删除发布但不清除分发服务器上的任务。 *ignore_distributor*是**位**，默认值为**0**。 重新安装分发服务器时也将使用此参数。  
+`[ @ignore_distributor = ] ignore_distributor`用于在不清除分发服务器上清理任务的情况下删除发布。 *ignore_distributor*为**bit**，默认值为**0**。 重新安装分发服务器时也将使用此参数。  
   
-`[ @reserved = ] reserved` 已保留供将来使用。 *保留*是**位**，默认值为**0**。  
+`[ @reserved = ] reserved`保留供将来使用。 *reserved*为**bit**，默认值为**0**。  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata` 仅限内部使用。  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata`仅限内部使用。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_dropmergepublication**合并复制中使用。  
+ **sp_dropmergepublication**用于合并复制。  
   
- **sp_dropmergepublication**以递归方式删除与发布相关联的所有项目，然后都删除发布本身。 如果发布包含一个或更多对它的订阅，则不能删除。 有关如何删除订阅的信息，请参阅[Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)并[Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)。  
+ **sp_dropmergepublication**以递归方式删除与发布关联的所有项目，然后删除该发布本身。 如果发布包含一个或更多对它的订阅，则不能删除。 有关如何删除订阅的信息，请参阅[删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)和[删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)。  
   
- 执行**sp_dropmergepublication**将删除发布不会删除已发布的对象从发布数据库或订阅数据库中的相应对象。 使用 DROP\<对象 > 手动删除这些对象，如有必要。  
+ 执行删除发布的**sp_dropmergepublication**不会删除发布数据库中的已发布对象，也不会删除订阅数据库中的相应对象。 如有\<必要，请使用 DROP object> 手动删除这些对象。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_dropmergepublication**。  
+ 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_dropmergepublication**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [删除发布](../../relational-databases/replication/publish/delete-a-publication.md)   
- [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_helpmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

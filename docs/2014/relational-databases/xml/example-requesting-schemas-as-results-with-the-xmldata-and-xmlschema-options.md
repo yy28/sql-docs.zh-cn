@@ -1,5 +1,5 @@
 ---
-title: 例如：使用 XMLDATA 和 XMLSCHEMA 选项请求架构作为结果 | Microsoft Docs
+title: 示例：使用 XMLDATA 和 XMLSCHEMA 选项请求架构作为结果 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637923"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>例如：使用 XMLDATA 和 XMLSCHEMA 选项请求架构作为结果
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>示例：使用 XMLDATA 和 XMLSCHEMA 选项作为结果请求架构
   下面的查询返回描述文档结构的 XML-DATA 架构。  
   
 ## <a name="example"></a>示例  
@@ -35,7 +35,7 @@ FOR XML RAW, XMLDATA
 GO  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <Schema name="Schema1" xmlns="urn:schemas-microsoft-com:xml-data"   
@@ -52,7 +52,7 @@ GO
 ```  
   
 > [!NOTE]
->  <`Schema`> 被声明为命名空间。 在不同的 FOR XML 查询中请求多个 XML-Data 架构时，为了避免命名空间冲突，该示例中的命名空间标识符 `Schema1` 将在每次执行查询时进行更改。 命名空间标识符由组成**Schema_n_** 其中 **_n_** 是一个整数。  
+>  <`Schema`> 被声明为命名空间。 在不同的 FOR XML 查询中请求多个 XML-Data 架构时，为了避免命名空间冲突，该示例中的命名空间标识符 `Schema1` 将在每次执行查询时进行更改。 命名空间标识符由**Schema_n_** 组成，其中**_n_** 为整数。  
   
  通过指定 `XMLSCHEMA` 选项，您可以针对结果请求 XSD 架构。  
   
@@ -66,7 +66,7 @@ FOR XML RAW, XMLSCHEMA
 GO  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -101,7 +101,7 @@ FOR XML RAW, XMLSCHEMA ('urn:example.com')
 GO  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <xsd:schema targetNamespace="urn:example.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -123,7 +123,7 @@ GO
 <row xmlns="urn:example.com" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 RAW 模式与 FOR XML 一起使用](use-raw-mode-with-for-xml.md)  
   
   

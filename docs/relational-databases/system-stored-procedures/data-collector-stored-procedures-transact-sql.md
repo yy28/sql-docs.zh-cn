@@ -1,5 +1,5 @@
 ---
-title: 数据收集器存储过程 (TRANSACT-SQL) |Microsoft Docs
+title: 数据收集器存储过程（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 522efa96e554a7b6eecb6e36c0771cbe95163a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942405"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>数据收集器存储过程 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server 支持以下系统存储过程用来处理数据收集器和以下组件： 收集组、 收集项和集合类型。  
+  SQL Server 支持用于处理数据收集器和以下组件的以下系统存储过程：收集组、收集项和集合类型。  
   
 > [!IMPORTANT]  
 >  与常规存储过程不同的是，数据收集器存储过程的参数已严格类型化，不支持自动的数据类型转换。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
@@ -66,7 +66,7 @@ ms.locfileid: "67942405"
   
 -   sp_syscollector_event_onstatsupdate  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

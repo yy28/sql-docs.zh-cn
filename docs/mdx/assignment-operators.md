@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f0e587e4c87b8d209c86476b1500ca6bbe3d026a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893646"
 ---
 # <a name="assignment-operators"></a>赋值运算符
@@ -22,7 +22,7 @@ ms.locfileid: "68893646"
   
  赋值运算符用于将值赋给 MDX 脚本中的子多维数据集。 有关详细信息，请参阅 [MDX 脚本编写基础知识 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)。  
   
-## <a name="see-also"></a>请参阅  
- [运算符&#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>另请参阅  
+ [运算符 &#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  
   
   

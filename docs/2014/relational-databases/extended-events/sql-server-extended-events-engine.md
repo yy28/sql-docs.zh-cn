@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638229"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 扩展事件引擎
@@ -36,11 +36,11 @@ ms.locfileid: "62638229"
   
  ![详细扩展事件体系结构](../../database-engine/media/xearchitecturedetailed.gif "详细扩展事件体系结构")  
   
- 请注意以下事项：  
+ 注意以下事项：  
   
--   每个 Windows 进程都可以有一个或多个模块（**Win32 进程**、**Win32 模块**）。 这些模块也称为“二进制模块”  或“可执行模块”  。  
+-   每个 Windows 进程都可以有一个或多个模块（**Win32 进程**、 **Win32 模块**）。 这些模块也称为“二进制模块”  或“可执行模块”  。  
   
--   每个 Windows 进程模块都可以包含一个或多个扩展事件包（**包**），而扩展事件包则包含一个或多个扩展事件对象（**类型**、**目标**、**操作Action**、**映射**、**谓词** 和 **事件**）。  
+-   每个 Windows 进程模块都可以包含一个或多个扩展事件包（**包**），而扩展事件包则包含一个或多个扩展事件对象（**类型**、 **目标**、 **操作Action**、 **映射**、 **谓词**和 **事件**）。  
   
 -   在主机进程中只能有一个扩展事件引擎实例（**扩展事件引擎**），该实例具有如下功能：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62638229"
   
     -   缓冲区在填充后将被分派给目标。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](extended-events.md)  
   
   

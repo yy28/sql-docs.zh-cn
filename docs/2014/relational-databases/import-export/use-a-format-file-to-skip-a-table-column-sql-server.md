@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 80c5c5b2f4e6d4f691b7c3977ae2f715f5424e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011691"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式化文件跳过表列 (SQL Server)
@@ -66,7 +66,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
  下图显示了此默认格式化文件示例中的值。 图中还显示了格式化文件各个字段的名称。  
   
- ![适用于 myTestSkipCol 的默认非 XML 格式化文件](../../database-engine/media/mytestskipcol-f-c-default-fmt.gif "适用于 myTestSkipCol 的默认非 XML 格式化文件")  
+ ![适用于 myTestSkipCol 的默认的非 XML 格式文件](../../database-engine/media/mytestskipcol-f-c-default-fmt.gif "适用于 myTestSkipCol 的默认的非 XML 格式文件")  
   
 > [!NOTE]  
 >  有关格式化文件字段的详细信息，请参阅[非 XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  
@@ -204,8 +204,8 @@ WITH (FORMATFILE='C:\myTestSkipCol2.xml');
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>另请参阅  
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
  [使用格式化文件跳过数据字段 (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)   

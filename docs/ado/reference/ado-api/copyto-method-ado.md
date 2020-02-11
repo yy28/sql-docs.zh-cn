@@ -1,5 +1,5 @@
 ---
-title: CopyTo 方法 (ADO) |Microsoft Docs
+title: CopyTo 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25d57116e1fa24658d62a0c9083e00a3e320d2a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933373"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 方法 (ADO)
-复制指定的数目的字符或字节 (具体取决于[类型](../../../ado/reference/ado-api/type-property-ado-stream.md)) 中[Stream](../../../ado/reference/ado-api/stream-object-ado.md)到另一个**Stream**对象。  
+将[流](../../../ado/reference/ado-api/stream-object-ado.md)中指定数量的字符或字节（取决于[类型](../../../ado/reference/ado-api/type-property-ado-stream.md)）复制到另一个**流**对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,22 +33,22 @@ ms.locfileid: "67933373"
 Stream.CopyTo DestStream, NumChars  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *DestStream*  
- 一个包含一种开放的引用的对象变量值**Stream**对象。 当前**Stream**复制到目标**Stream**指定的*DestStream*。 目标**Stream**已被打开。 如果不是，将发生运行时错误。  
+ 一个对象变量值，该值包含对打开的**流**对象的引用。 当前**流**将复制到由*DestStream*指定的目标**流**中。 目标**流**必须已打开。 否则，将发生运行时错误。  
   
 > [!NOTE]
->  *DestStream*参数不能的代理**Stream**对象，因为这需要访问的专用接口上**Stream**不能为远程连接到的对象客户端。  
+>  *DestStream*参数可能不是**stream**对象的代理，因为这需要访问无法远程访问客户端的**流**对象上的专用接口。  
   
  *NumChars*  
- 可选。 **整数**值，该值指定要从当前源中的位置复制的字节或字符数**Stream**到目标**Stream**。 默认值为-1，指定从当前位置到复制所有字符或字节[EOS](../../../ado/reference/ado-api/eos-property.md)。  
+ 可选。 一个**整数**值，指定要从源**流**中的当前位置复制到目标**流**的字节数或字符数。 默认值为-1，指定将所有字符或字节从当前位置复制到[EOS](../../../ado/reference/ado-api/eos-property.md)。  
   
 ## <a name="remarks"></a>备注  
- 此方法将指定的字符数或字节数，从当前指定的位置开始复制[位置](../../../ado/reference/ado-api/position-property-ado.md)属性。 如果指定的数量大于可用的之前的字节数**EOS**，然后仅字符或字节数从当前位置到**EOS**复制。 如果的值*NumChars*为-1，或省略，所有字符或字节从当前的位置开始都复制。  
+ 此方法从[位置](../../../ado/reference/ado-api/position-property-ado.md)属性指定的当前位置开始复制指定数量的字符或字节。 如果指定的数字大于在**eos**之前的可用字节数，则仅复制当前位置到**eos**之间的字符或字节。 如果*NumChars*的值为-1 或省略，则会复制从当前位置开始的所有字符或字节。  
   
- 如果已存在的字符或目标流中的字节，所有内容，而只复制的结束位置的点保留，并且不被截断。 **位置**变得紧跟复制的最后一个字节的字节。 如果你想要这些字节截断，则调用[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  
+ 如果目标流中存在现有字符或字节，则不会保留副本结束点之外的所有内容，并且不会被截断。 **位置**成为紧接最后复制的字节之后的字节。 如果要截断这些字节，请调用[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  
   
- **CopyTo**应该用于将数据复制到目标**Stream**与源相同的类型的**Stream** (其**类型**属性设置将这两个**adTypeText**和 / 或**adTypeBinary**)。 文本**Stream**对象，可以更改[字符集](../../../ado/reference/ado-api/charset-property-ado.md)属性设置的目标**Stream**从设置到另一个字符转换。 此外，文本**Stream**对象可以成功复制到二进制**Stream**对象，但二进制**Stream**对象不能复制到文本**Stream**对象。  
+ **CopyTo**应用于将数据复制到与源**流**具有相同类型的目标**流**（其**type**属性设置同时为**adTypeText**或 both）。 **** 对于文本**流**对象，可以更改目标**流**的[字符集](../../../ado/reference/ado-api/charset-property-ado.md)属性设置，以将其从一个字符集转换到另一个字符集。 此外，文本**流**对象可以成功复制到二进制**流**对象，但不能将二进制**流**对象复制到文本**流**对象中。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

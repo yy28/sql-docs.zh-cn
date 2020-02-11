@@ -1,5 +1,5 @@
 ---
-title: 过程对象 (ADOX) |Microsoft Docs
+title: Procedure 对象（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,33 +16,33 @@ ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1681001dd42026c1a1fce04814b094047a475a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965489"
 ---
 # <a name="procedure-object-adox"></a>过程对象 (ADOX)
-表示存储的过程。 与 ADO 一起使用时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，**过程**对象可以用于添加、 删除或修改存储的过程。  
+表示存储过程。 与 ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)对象结合使用时，可以使用**Procedure**对象添加、删除或修改存储过程。  
   
 ## <a name="remarks"></a>备注  
- **过程**对象使用户可以创建存储的过程，而无需知道，或使用提供程序的"CREATE PROCEDURE"语法。  
+ 使用**Procedure**对象，您可以创建一个存储过程，而无需知道或使用该提供程序的 "create Procedure" 语法。  
   
- 使用的属性**过程**对象，你可以：  
+ 使用**过程**对象的属性，可以：  
   
--   标识与过程[名称](../../../ado/reference/adox-api/name-property-adox.md)属性。  
+-   标识具有[Name](../../../ado/reference/adox-api/name-property-adox.md)属性的过程。  
   
--   指定 ADO**命令**对象，它可用于创建或使用执行过程[命令](../../../ado/reference/adox-api/command-property-adox.md)属性。  
+-   指定可用于使用[Command](../../../ado/reference/adox-api/command-property-adox.md)属性创建或执行该过程的 ADO**命令**对象。  
   
--   返回日期信息与[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)并[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)属性。  
+-   返回具有[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)和[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)属性的日期信息。  
   
  本部分包含以下主题。  
   
 -   [过程对象属性、方法和事件](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>请参阅  
- [Command 和 CommandText 属性示例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [参数集合、 Command 属性示例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [过程 Append 方法示例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [过程 Delete 方法示例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+## <a name="see-also"></a>另请参阅  
+ [Command 和 CommandText 属性示例（VB）](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
+ [Parameters 集合、Command 属性示例（VB）](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
+ [过程 Append 方法示例（VB）](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
+ [过程 Delete 方法示例（VB）](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [过程集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

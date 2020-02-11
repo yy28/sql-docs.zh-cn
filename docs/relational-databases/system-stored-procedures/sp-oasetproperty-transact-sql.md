@@ -1,5 +1,5 @@
 ---
-title: sp_OASetProperty (TRANSACT-SQL) |Microsoft Docs
+title: sp_OASetProperty （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ecbfba038b1954565839a3d931ef96431b77f50b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008933"
 ---
-# <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
+# <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   将 OLE 对象的属性设置为新值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,16 +40,16 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
   
 ## <a name="arguments"></a>参数  
  *objecttoken*  
- 以前创建的 OLE 对象的对象令牌**sp_OACreate**。  
+ 是先前由**sp_OACreate**创建的 OLE 对象的对象标记。  
   
- propertyname   
+ *propertyname*  
  要设置新值的 OLE 对象的属性名。  
   
  *newvalue*  
  属性的新值，并且必须是适当数据类型的值。  
   
- *index*  
- 索引参数。 如果指定，*索引*必须是相应的数据类型的值。  
+ 索引   
+ 索引参数。 如果已指定，则*index*必须为适当数据类型的值。  
   
  有些属性包含参数。 这些属性称为索引化属性，相应的参数被称为索引参数。 一个属性可有多个索引参数。  
   
@@ -62,10 +62,10 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  有关 HRESULT 返回代码的详细信息，请参阅[OLE 自动化返回代码和错误信息](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
   
 ## <a name="permissions"></a>权限  
- 要求的成员身份**sysadmin**固定服务器角色或直接在此存储过程的执行权限。 `Ole Automation Procedures` 必须配置**启用**若要使用相关的 OLE 自动化到任何系统过程。  
+ 要求具有**sysadmin**固定服务器角色的成员身份或直接对此存储过程执行权限。 `Ole Automation Procedures`必须**启用**配置才能使用与 OLE 自动化相关的任何系统过程。  
   
 ## <a name="examples"></a>示例  
- 下面的示例设置`HostName`属性 (先前创建的**SQLServer**对象) 为新值。  
+ 下面的示例将以前`HostName`创建的**SQLServer**对象的属性设置为新值。  
   
 ```  
 EXEC @hr = sp_OASetProperty @object, 'HostName', 'Gizmo';  
@@ -76,8 +76,8 @@ BEGIN
 END'  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [OLE 自动化存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Transact-sql&#41;的 OLE 自动化存储过程](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 自动化脚本示例](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

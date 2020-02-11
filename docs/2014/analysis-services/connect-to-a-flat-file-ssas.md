@@ -1,5 +1,5 @@
 ---
-title: 连接到平面文件 (SSAS) |Microsoft Docs
+title: 连接到平面文件（SSAS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087359"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>连接到平面文件 (SSAS)
-  “表导入向导”  的这一页可用于连接到平面文件 (.txt)、制表符分隔的文件 (.tab) 或逗号分隔的文件 (.csv)。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”** 。  
+  “表导入向导”**** 的这一页可用于连接到平面文件 (.txt)、制表符分隔的文件 (.tab) 或逗号分隔的文件 (.csv)。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
  若要连接到平面文件，必须在计算机上安装 ACE 访问接口。 有关详细信息，请参阅[数据源支持（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)。  
   
@@ -37,17 +37,17 @@ ms.locfileid: "66087359"
  **“浏览”**  
  导航至文件可用的位置。  
   
- **Column Separator**  
+ **列分隔符**  
  从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |制表符 (t)|列由制表符 (t) 分隔。|  
 |逗号 (,)|列由逗号 (,) 分隔。|  
 |分号 (;)|列由分号 (;) 分隔。|  
 |空格 ( )|列由空格 ( ) 分隔。|  
 |冒号 (:)|列由冒号 (:) 分隔。|  
-|竖线 (&#124;)|列由竖线 (&#124;) 分隔。|  
+|竖线 (|)|列由竖线 (|) 分隔。|  
   
  **高级**  
  为平面文件指定编码和区域设置选项。  
@@ -61,10 +61,10 @@ ms.locfileid: "66087359"
 > [!NOTE]  
 >  只有文件中的前 50 行显示在此预览。  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
 |**列标题中的复选框**|选中该复选框可在数据导入中包括列。 取消选中该复选框则从数据导入中删除列。|  
-|**列标题中的向下箭头按钮**|对列中的数据进行排序和筛选。|  
+|**列标题中的下箭头按钮**|对列中的数据进行排序和筛选。|  
   
  **清除行筛选器**  
  删除已应用于列中数据的所有筛选器。  

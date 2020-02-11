@@ -14,16 +14,16 @@ ms.assetid: 892b79c7-9e20-4d1f-bc60-d4b25694ca25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f4d4b3d8d417591bd72dde22240c81a91d80f990
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948975"
 ---
 # <a name="sqltransact-access-driver"></a>SQLTransact（Access 驱动程序）
 > [!NOTE]  
->  本主题提供访问特定于驱动程序信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题提供特定于访问驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
- 使用 Microsoft Access 驱动程序时，为支持 SQL_COMMIT 和 SQL_ROLLBACK *fType*调用中的参数**SQLTransact**。  
+ 使用 Microsoft Access 驱动程序时，对**SQLTransact**的调用中的*fType*参数支持 SQL_COMMIT 和 SQL_ROLLBACK。  
   
- 如果在提交过程中发生故障，可以使用修复数据库选项在 Microsoft Access 驱动程序设置中，或通过使用中的 REPAIR_DB 关键字修复受影响的数据库**SQLConfigDataSource**函数。
+ 如果在提交过程中发生故障，则可以使用 Microsoft Access 驱动程序安装程序中的 "修复数据库" 选项，或在**SQLConfigDataSource**函数中使用 REPAIR_DB 关键字来修复受影响的数据库。

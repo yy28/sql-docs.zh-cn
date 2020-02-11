@@ -1,5 +1,5 @@
 ---
-title: 生成 (MDX) |Microsoft Docs
+title: 生成（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005904"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
@@ -41,17 +41,17 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  通常为指定集中每个元组当前成员名称 (CurrentMember.Name) 的有效字符串表达式。  
   
- *分隔符*  
+ *后面*  
  以字符串表达式表示的有效分隔符。  
   
 ## <a name="remarks"></a>备注  
- 如果指定第二个集，则**生成**函数将返回一组生成的第二个集中的元组应用到第一个集中每个元组，然后对所得到的联合设置。 如果**所有**指定，则该函数将保留在结果集中的重复项。  
+ 如果指定第二个集，则**生成**函数将返回一个集，该集通过将第二个集中的元组应用于第一个集中的每个元组，然后按 union 联接结果集。 如果指定**ALL** ，则函数将在结果集中保留重复项。  
   
- 如果指定的字符串表达式，则**生成**函数返回计算指定的字符串表达式对第一个集中每个元组和再串联得到的结果生成的字符串。 根据需要，可以分隔字符串，从而分隔得到的串联字符串中的每个结果。  
+ 如果指定了字符串表达式，则**生成**函数将返回一个字符串，该字符串通过对第一个集中的每个元组计算指定的字符串表达式，然后连接结果。 根据需要，可以分隔字符串，从而分隔得到的串联字符串中的每个结果。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="set"></a>将  
+### <a name="set"></a>设置  
  在以下示例中，由于 [Date].[Calendar Year].[Calendar Year].MEMBERS 集中有四个成员，因此，查询四次返回包含 Measure Internet Sales Amount 的集：  
   
 ```  
@@ -72,7 +72,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 最常见的实际用法**生成**计算复杂集表达式，如 TopCount，对一组的成员。 以下示例查询显示行上每个日历年的前 10 种产品：  
+ "**生成**" 最常见的实际用法是在一组成员上对复杂集表达式（如 TopCount）进行求值。 以下示例查询显示行上每个日历年的前 10 种产品：  
   
 ```  
 SELECT   
@@ -89,7 +89,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
- 请注意，每年，并且显示不同的前 10 的使用**生成**是得到此结果的唯一方法。 将日历年和前 10 种产品的集进行简单交叉联接将显示所有时间的前 10 种产品（每年都重复），如以下示例所示：  
+ 请注意，每年显示不同的前10个，并且使用 "**生成**" 是获取此结果的唯一方法。 将日历年和前 10 种产品的集进行简单交叉联接将显示所有时间的前 10 种产品（每年都重复），如以下示例所示：  
   
 ```  
 SELECT   
@@ -105,7 +105,7 @@ FROM [Adventure Works]
 ```  
   
 ### <a name="string"></a>String  
- 下面的示例演示如何使用**生成**返回一个字符串：  
+ 下面的示例演示如何使用 "**生成**" 来返回字符串：  
   
 ```  
 WITH   
@@ -124,9 +124,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  这种形式的**生成**函数时非常有用调试计算，因为它让你可以返回集内显示所有成员的名称的字符串。 这可能是一组的严格 MDX 表示形式更便于阅读， [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md)函数返回。  
+>  此形式的**生成**函数在调试计算时非常有用，因为这样可以返回一个字符串，其中显示了集中所有成员的名称。 对于[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)函数返回的集，这可能更易于读取。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

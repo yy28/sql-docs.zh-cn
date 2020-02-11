@@ -1,5 +1,5 @@
 ---
-title: 第 4 课：从完整数据库备份执行还原 |Microsoft Docs
+title: 第4课：从完整数据库备份执行还原 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: de9a356589ac6bceb532ed4cecf509f957e3c337
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153399"
 ---
 # <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>第 4 课：从完整数据库备份执行还原
@@ -27,7 +27,7 @@ ms.locfileid: "70153399"
   
 2.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的实例。  
   
-3.  在标准菜单栏上，单击 **“新建查询”** 。  
+3.  在标准菜单栏上，单击 **“新建查询”**。  
   
 4.  将以下示例复制并粘贴到查询窗口中，并根据需要进行修改。  
   
@@ -40,9 +40,9 @@ ms.locfileid: "70153399"
   
     ```  
   
-5.  验证 T-sql 语句, 然后单击 "**执行**"  
+5.  验证 T-sql 语句，然后单击 "**执行**"  
   
 ### <a name="return-to-tutorials-portal"></a>返回到教程入门  
- [教程：SQL Server 备份和还原到 Azure Blob 存储服务](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。  
+ [教程： SQL Server 备份和还原到 Azure Blob 存储服务](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。  
   
   

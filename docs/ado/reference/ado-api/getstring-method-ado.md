@@ -1,5 +1,5 @@
 ---
-title: GetString 方法 (ADO) |Microsoft Docs
+title: GetString 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932461"
 ---
 # <a name="getstring-method-ado"></a>GetString 方法 (ADO)
-返回[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)作为字符串。  
+以字符串的形式返回[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,31 +34,31 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回**记录集**作为字符串值**变体**(BSTR)。  
+ 以字符串值**变量**（BSTR）的形式返回**记录集**。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *StringFormat*  
- 一个[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)值，该值指定如何**记录集**应转换为字符串。 *RowDelimiter*， *ColumnDelimiter*，并*NullExpr*参数只能与一起使用*StringFormat*的**adClipString**。  
+ 一个[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)值，指定应如何将**记录集**转换为字符串。 *RowDelimiter*、 *ColumnDelimiter*和*NullExpr*参数仅用于**adClipString**的*StringFormat* 。  
   
  *NumRows*  
- 可选。 要在转换的行数**记录集**。 如果*NumRows*未指定，或如果它大于中的行的总数**记录集**，然后中的所有行**记录集**转换。  
+ 可选。 要在**记录集中**转换的行数。 如果未指定*NumRows* ，或大于**记录集中**的总行数，则将转换**记录集中**的所有行。  
   
  *ColumnDelimiter*  
- 可选。 如果指定，否则 TAB 字符的列之间所用的分隔符。  
+ 可选。 如果已指定，则在列之间使用分隔符，否则为制表符。  
   
  *RowDelimiter*  
- 可选。 如果指定，否则回车字符的行之间所用的分隔符。  
+ 可选。 如果已指定，则在行间使用分隔符，否则返回回车符。  
   
  *NullExpr*  
- 可选。 一个表达式，用于代替空值，如果指定，否则为空字符串。  
+ 可选。 如果指定，则使用表达式代替 null 值，否则为空字符串。  
   
 ## <a name="remarks"></a>备注  
- 行数据，但无架构数据，将保存到字符串。 因此，**记录集**不能使用此字符串重新打开。  
+ 行数据（但不是架构数据）保存到字符串中。 因此，不能使用此字符串重新打开**记录集**。  
   
  此方法等效于 RDO **GetClipString**方法。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [GetString 方法示例 (VB)](../../../ado/reference/ado-api/getstring-method-example-vb.md)

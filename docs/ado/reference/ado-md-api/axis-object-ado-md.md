@@ -1,5 +1,5 @@
 ---
-title: 轴对象 (ADO MD) |Microsoft Docs
+title: Axis 对象（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,34 +16,34 @@ ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf2b072acfda34ebdcafc1af82cd90c6be5d2537
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939961"
 ---
 # <a name="axis-object-ado-md"></a>轴对象 (ADO MD)
-表示一个位置或单元，其中包含所选的一个或多个维度成员集的筛选轴。  
+表示单元集的位置或筛选轴，其中包含一个或多个维度的选定成员。  
   
 ## <a name="remarks"></a>备注  
- **轴**对象可以包含[轴](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)集合，或返回[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)属性的[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  
+ Axis 对象可以包含**Axis** [集合，](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)或由[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)的[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)属性返回。  
   
- 使用集合和属性的**轴**对象，您可以执行以下操作：  
+ 使用**Axis**对象的集合和属性，可以执行以下操作：  
   
--   识别**轴**与[名称](../../../ado/reference/ado-md-api/name-property-ado-md.md)属性。  
+-   标识具有[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)属性的**轴**。  
   
--   循环访问每个位置沿**轴**使用[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)集合。  
+-   使用[position](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)集合循环访问**轴**上的每个位置。  
   
--   上获取的维数**轴**与[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)属性。  
+-   通过[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)属性获取**轴**上的维度数。  
   
--   获取提供程序特定的特性**轴**与标准的 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+-   获取具有标准 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合的**轴**特定于提供程序的属性。  
   
  本部分包含以下主题。  
   
--   [属性、 方法和事件](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
+-   [属性、方法和事件](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>请参阅  
- [轴示例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [轴集合 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
- [Positions 集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
+## <a name="see-also"></a>另请参阅  
+ [轴示例（VBScript）](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [轴集合（ADO MD）](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
+ [位置集合（ADO MD）](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

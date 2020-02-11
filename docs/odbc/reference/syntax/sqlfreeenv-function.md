@@ -20,22 +20,22 @@ ms.assetid: 32000150-e120-445e-b269-43200f813b2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5158799441fb0cb8d0ab4f0119b1b1ecdb94dc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002947"
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv 函数
-**符合性**  
- 版本引入了：ODBC 1.0 标准符合性：不推荐使用  
+**度**  
+ 引入的版本： ODBC 1.0 标准符合性：已弃用  
   
- **摘要**  
- 在 ODBC *3.x*，ODBC 2.0 函数**SQLFreeEnv**已由**SQLFreeHandle**。 有关详细信息，请参阅[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
+ **总结**  
+ 在 ODBC 3.x*中，odbc*2.0 函数**SQLFreeEnv**已被**SQLFreeHandle**取代。 有关详细信息，请参阅[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
   
 > [!NOTE]
->  详细了解驱动程序管理器映射的内容到此函数时 ODBC *2.x*应用程序使用 ODBC *3.x*驱动程序，请参阅[映射已弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)附录 g:为了向后兼容的驱动程序指南。  
+>  有关 ODBC *2.x 应用程序**使用 odbc 2.x*驱动程序时，驱动程序管理器将此函数映射到的内容的详细信息，请参阅附录 G：驱动程序准则中的[映射弃用的函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)以实现向后兼容性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 头文件](../../../odbc/reference/install/odbc-header-files.md)

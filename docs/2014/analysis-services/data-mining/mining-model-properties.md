@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083505"
 ---
 # <a name="mining-model-properties"></a>挖掘模型属性
@@ -39,28 +39,28 @@ ms.locfileid: "66083505"
 ## <a name="properties-of-models"></a>模型的属性  
  下表介绍特定于挖掘模型的属性。 此外，您还可以对挖掘模型中的各个列设置属性  
   
-|属性|Description|  
+|properties|说明|  
 |--------------|-----------------|  
 |**算法**|设置挖掘模型的算法类型。|  
 |**AlgorithmParameters**|设置各个算法类型可用的算法参数的值。|  
-|**Filter**|设置筛选器，以筛选用于定型和测试挖掘模型的数据。 筛选器定义与挖掘模型存储在一起，并可在创建预测查询或测试模型的准确性时根据需要使用。<br /><br /> 定型模型时模型筛选器不是可选项。|  
+|**筛选器**|设置筛选器，以筛选用于定型和测试挖掘模型的数据。 筛选器定义与挖掘模型存储在一起，并可在创建预测查询或测试模型的准确性时根据需要使用。<br /><br /> 定型模型时模型筛选器不是可选项。|  
 |**名称**|设置挖掘模型的名称。|  
 |**AllowDrillThrough**|指定是否为挖掘模型启用钻取。|  
   
 ## <a name="properties-of-model-columns"></a>模型列的属性  
  可以为挖掘模型中的各个列设置以下特定于数据挖掘的属性。 针对挖掘模型中的各个列，可以将这些属性设置为不同的值。  
   
-|属性|Description|  
+|properties|说明|  
 |--------------|-----------------|  
 |**说明**|说明挖掘列的目的。|  
 |**名称**|设置挖掘模型列的名称。 可以键入一个新名称，以便为挖掘模型列提供一个别名。|  
 |**ModelingFlags**|设置列的任意特定于算法的标志。|  
-|**SourceColumnID**|指示模型列所基于的挖掘结构列的名称。<br /><br /> 该属性为只读。|  
-|**Usage**|设置挖掘模型如何使用列。|  
+|**SourceColumnID**|指示模型列所基于的挖掘结构列的名称。<br /><br /> 此属性为只读。|  
+|**使用情况**|设置挖掘模型如何使用列。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘模型列](mining-model-columns.md)   
- [挖掘结构 &#40;Analysis Services-数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)   
+ [挖掘结构 &#40;Analysis Services 数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)   
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)   
  [更改挖掘模型的属性](change-the-properties-of-a-mining-model.md)   
  [数据挖掘工具](data-mining-tools.md)   

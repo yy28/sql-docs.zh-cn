@@ -1,5 +1,5 @@
 ---
-title: 64 位整数结构 |Microsoft Docs
+title: 64位整数结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: ac80c798-d9b2-4430-85ed-bd2461db0ac7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93d9e6fd01d6b9ef98ebb10f6728ec4ba205fbb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996254"
 ---
 # <a name="64-bit-integer-structures"></a>64 位整数结构
-在 Microsoft C 编译器 SQL_C_SBIGINT 和 SQL_C_UBIGINT 的数据类型标识符的 C 类型是 _int64。 使用 Microsoft® C 编译器其他编译器时，C 类型可能不同。 如果编译器支持本机 64 位整数，该驱动程序或应用程序应定义 ODBCINT64 是本机 64 位整数类型。 编译器不本机支持 64 位整数，如果应用程序或驱动程序可以定义以下的结构，以确保其有权访问此数据：  
+Microsoft C 编译器上的 SQL_C_SBIGINT 和 SQL_C_UBIGINT 数据类型标识符 _int64 的 C 类型。 使用 Microsoft® C 编译器以外的编译器时，C 类型可能不同。 如果编译器以本机方式支持64位整数，则驱动程序或应用程序应将 ODBCINT64 定义为本机64位整数类型。 如果编译器不以本机方式支持64位整数，则应用程序或驱动程序可以定义以下结构，以确保它有权访问此数据：  
   
 ```  
 typedef struct{  
@@ -36,4 +36,4 @@ SQLINTEGER sdwHighWord;
 } SQLBIGINT  
 ```  
   
- 这些结构应为 8 字节边界对齐，因为 64 位整数对齐到 8 字节边界。
+ 这些结构应与8字节边界对齐，因为64位整数与8字节边界对齐。

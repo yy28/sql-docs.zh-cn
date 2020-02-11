@@ -1,5 +1,5 @@
 ---
-title: CreateParameter 方法 (ADO) |Microsoft Docs
+title: CreateParameter 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933290"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 方法 (ADO)
-创建一个新[参数](../../../ado/reference/ado-api/parameter-object.md)对象使用指定的属性。  
+创建具有指定属性的新[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,39 +34,39 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回**参数**对象。  
+ 返回一个**参数**对象。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *名称*  
- 可选。 一个**字符串**值，该值包含的名称**参数**对象。  
+ 可选。 一个包含**参数**对象名称的**字符串**值。  
   
- *类型*  
- 可选。 一个[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值，该值指定的数据类型**参数**对象。  
+ 类型   
+ 可选。 指定**参数**对象的数据类型的[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值。  
   
- *方向*  
- 可选。 一个[ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md)值，该值指定的类型**参数**对象。  
+ *方向键*  
+ 可选。 指定**参数**对象类型的[ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md)值。  
   
  *大小*  
- 可选。 一个**长**值，该值以字节或字符指定参数值的最大长度。  
+ 可选。 一个**长整型**值，指定参数值的最大长度（以字符或字节为单位）。  
   
- *ReplTest1*  
- 可选。 一个**Variant**指定的值**参数**对象。  
+ *值*  
+ 可选。 一个**变量**，指定**参数**对象的值。  
   
 ## <a name="remarks"></a>备注  
- 使用**CreateParameter**方法来创建一个新**参数**具有指定的名称、 类型、 方向、 大小和值对象。 在参数中传递的任何值写入到的相应**参数**属性。  
+ 使用**CreateParameter**方法创建一个具有指定名称、类型、方向、大小和值的新**参数**对象。 您在参数中传递的任何值都将写入相应的**参数**属性。  
   
- 此方法不会自动追加**参数**对象传递给**参数**的集合[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。 这允许您设置其他属性时将追加将验证其值 ADO**参数**到集合的对象。  
+ 此方法不会将**参数**对象自动追加到[Command](../../../ado/reference/ado-api/command-object-ado.md)对象的**Parameters**集合。 这使你可以设置其他属性，这些属性的值会在你将**参数**对象追加到集合时进行验证。  
   
- 如果指定中的可变长度数据类型*类型*自变量，您必须将传递*大小*参数或一组[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)属性**参数**对象之前将向其追加**参数**集合; 否则，就会出错。  
+ 如果在*类型*参数中指定可变长度的数据类型，则必须在将其追加到**Parameters**集合之前传递*Size*参数或设置**参数**对象的[size](../../../ado/reference/ado-api/size-property-ado-parameter.md)属性;否则，将发生错误。  
   
- 如果指定的数值数据类型 (**adNumeric**或**adDecimal**) 中*类型*参数，则您还必须设置[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[精度](../../../ado/reference/ado-api/precision-property-ado.md)属性。  
+ 如果在*类型*参数中指定数值数据类型（**adNumeric**或**adDecimal**），则还必须设置[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[精度](../../../ado/reference/ado-api/precision-property-ado.md)属性。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [Append 和 CreateParameter 方法示例 (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
- [Append 和 CreateParameter 方法示例 （VC + +）](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
- [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Append 和 CreateParameter 方法示例（VB）](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
+ [Append 和 CreateParameter 方法示例（VC + +）](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
+ [Append 方法（ADO）](../../../ado/reference/ado-api/append-method-ado.md)   
  [参数对象](../../../ado/reference/ado-api/parameter-object.md)   
  [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

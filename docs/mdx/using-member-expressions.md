@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893517"
 ---
 # <a name="using-member-expressions"></a>使用成员表达式
@@ -56,12 +56,12 @@ Dimension_Name
   
 ```  
   
- 存在返回成员的许多 MDX 函数。 有关完整列表, 请参阅[Mdx 函数引用&#40;mdx&#41; ](../mdx/mdx-function-reference-mdx.md)  
+ 存在返回成员的许多 MDX 函数。 有关完整列表，请参阅 mdx[函数引用 &#40;mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  有关成员名称和成员键的详细信息, 请参阅[使用成员、元组和集&#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
+>  有关成员名称和成员键的详细信息，请参阅[使用成员、元组和集 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
   
-## <a name="see-also"></a>请参阅  
- [表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [MDX&#41;&#40;表达式](../mdx/expressions-mdx.md)  
   
   

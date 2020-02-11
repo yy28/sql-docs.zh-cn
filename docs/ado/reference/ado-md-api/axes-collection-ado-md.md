@@ -1,5 +1,5 @@
 ---
-title: 轴集合 (ADO MD) |Microsoft Docs
+title: 轴集合（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,33 +17,33 @@ ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c06faf6327d60be823ce9d99215655b5badf5e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947408"
 ---
 # <a name="axes-collection-ado-md"></a>轴集合 (ADO MD)
-包含[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)定义单元集的对象。  
+包含定义单元集的[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)对象。  
   
 ## <a name="remarks"></a>备注  
- 一个[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象包含**轴**集合。 一次**单元集**是打开，此集合将包含至少一个**轴**。 请参阅[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)有关的更多详细说明如何使用对象**轴**对象。  
+ [单元格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象包含一个**轴**集合。 打开**单元集**后，此集合将至少包含一个**轴**。 有关如何使用**轴**对象的更详细说明，请参阅[axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)对象。  
   
 > [!NOTE]
->  筛选轴**单元集**未包含在**轴**集合。 请参阅[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)属性以获取详细信息。  
+>  **单元集**的筛选轴不包含在**轴**集合中。 有关详细信息，请参阅[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)属性。  
   
- **轴**是一个标准 ADO 集合。 使用的属性和方法的集合，可以执行以下操作：  
+ **轴**是标准 ADO 集合。 通过集合的属性和方法，你可以执行以下操作：  
   
--   获取与集合中的对象数[计数](../../../ado/reference/ado-api/count-property-ado.md)属性。  
+-   获取集合中具有[Count](../../../ado/reference/ado-api/count-property-ado.md)属性的对象的数目。  
   
--   具有默认值的集合中返回的对象[项](../../../ado/reference/ado-api/item-property-ado.md)属性。  
+-   返回集合中具有默认[项](../../../ado/reference/ado-api/item-property-ado.md)属性的对象。  
   
--   更新的提供程序从集合中的对象[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)方法。  
+-   用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法更新集合中的对象。  
   
  本部分包含以下主题。  
   
--   [属性、 方法和事件](../../../ado/reference/ado-md-api/axes-collection-properties-methods-and-events.md)  
+-   [属性、方法和事件](../../../ado/reference/ado-md-api/axes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>请参阅  
- [单元集示例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+## <a name="see-also"></a>另请参阅  
+ [单元集示例（VB）](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [轴对象 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

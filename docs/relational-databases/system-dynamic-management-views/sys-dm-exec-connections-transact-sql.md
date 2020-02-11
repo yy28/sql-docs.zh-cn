@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_connections (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_exec_connections （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2017
 ms.prod: sql
@@ -21,53 +21,53 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a1549a3760ce8576b86b07048aef5a60b25fccbd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68263798"
 ---
-# <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
+# <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回有关与此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例建立的连接的信息以及每个连接的详细信息。 返回 SQL Server 的服务器范围的连接信息。 返回当前 SQL 数据库的数据库连接信息。  
+  返回有关与此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例建立的连接的信息以及每个连接的详细信息。 返回 SQL Server 的服务器范围连接信息。 返回 SQL 数据库的当前数据库连接信息。  
   
 > [!NOTE]
-> 若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用[sys.dm_pdw_exec_connections &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md)。  
+> 若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用[&#40;transact-sql&#41;的 dm_pdw_exec_connections ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md)。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|标识与此连接关联的会话。 可以为 Null。|  
-|most_recent_session_id|**int**|表示与此连接关联的最近请求的会话 ID。 （SOAP 连接可以重复使用由另一个会话。）可以为 Null。|  
+|most_recent_session_id|**int**|表示与此连接关联的最近请求的会话 ID。 （其他会话可以重用 SOAP 连接。）可以为 null。|  
 |connect_time|**datetime**|连接建立时的时间戳。 不可为 null。|  
-|net_transport|**nvarchar(40)**|始终返回**会话**时连接了多个活动结果集 (MARS) 启用。<br /><br /> **注意：** 描述此连接使用的物理传输协议。 不可为 null。|  
-|protocol_type|**nvarchar(40)**|指定负载的协议类型。 此参数当前可区分 TDS (TSQL) 和 SOAP。 可以为 Null。|  
+|net_transport|**nvarchar （40）**|当连接启用了多个活动的结果集（MARS）时，始终返回**Session** 。<br /><br /> **注意：** 描述此连接使用的物理传输协议。 不可为 null。|  
+|protocol_type|**nvarchar （40）**|指定负载的协议类型。 此参数当前可区分 TDS (TSQL) 和 SOAP。 可以为 Null。|  
 |protocol_version|**int**|与此连接关联的数据访问协议的版本。 可以为 Null。|  
 |endpoint_id|**int**|说明其连接类型的标识符。 此 endpoint_id 可用于查询 sys.endpoints 视图。 可以为 Null。|  
-|encrypt_option|**nvarchar(40)**|说明是否为此连接启用了加密的布尔值。 不可为 null。|  
-|auth_scheme|**nvarchar(40)**|指定此连接使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 身份验证方案。 不可为 null。|  
+|encrypt_option|**nvarchar （40）**|说明是否为此连接启用了加密的布尔值。 不可为 null。|  
+|auth_scheme|**nvarchar （40）**|指定此连接使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 身份验证方案。 不可为 null。|  
 |node_affinity|**smallint**|标识与此连接关联的内存节点。 不可为 null。|  
-|num_reads|**int**|通过此连接发生字节读取数。 可以为 Null。|  
-|num_writes|**int**|通过此连接发生的字节写入数。 可以为 Null。|  
+|num_reads|**int**|此连接上发生的字节读取次数。 可以为 Null。|  
+|num_writes|**int**|此连接上发生的字节写入数。 可以为 Null。|  
 |last_read|**datetime**|此连接中上一次发生读操作的时间戳。 可以为 Null。|  
 |last_write|**datetime**|此连接中上一次发生写操作的时间戳。 不可为 Null。|  
 |net_packet_size|**int**|用于信息和数据传输的网络包的大小。 可以为 Null。|  
-|client_net_address|**varchar(48)**|与此服务器连接的客户端的主机地址。 可以为 Null。<br /><br /> 在版本早于 V12 的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此列始终返回 NULL。|  
+|client_net_address|**varchar （48）**|与此服务器连接的客户端的主机地址。 可以为 Null。<br /><br /> 在版本早于 V12 的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此列始终返回 NULL。|  
 |client_tcp_port|**int**|与此连接关联的客户端计算机上的端口号。 可以为 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此列始终返回 NULL。|  
-|local_net_address|**varchar(48)**|表示此连接的目标服务器的 IP 地址。 只对使用 TCP 传输提供程序的连接可用。 可以为 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此列始终返回 NULL。|  
+|local_net_address|**varchar （48）**|表示此连接的目标服务器的 IP 地址。 只对使用 TCP 传输提供程序的连接可用。 可以为 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此列始终返回 NULL。|  
 |local_tcp_port|**int**|如果此连接使用 TCP 传输，则表示此连接的目标服务器的 TCP 端口。 可以为 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此列始终返回 NULL。|  
 |connection_id|**uniqueidentifier**|对每个连接进行唯一标识。 不可为 null。|  
 |parent_connection_id|**uniqueidentifier**|标识 MARS 会话正在使用的主要连接。 可以为 Null。|  
-|most_recent_sql_handle|**varbinary(64)**|此连接上执行的上一个请求的 SQL 句柄。 most_recent_sql_handle 列始终与 most_recent_session_id 列同步。 可以为 Null。|  
-|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
+|most_recent_sql_handle|**varbinary （64）**|此连接上执行的上一个请求的 SQL 句柄。 most_recent_sql_handle 列始终与 most_recent_session_id 列同步。 可以为 Null。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限
 
-上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="physical-joins"></a>物理联接  
- ![Sys.dm_exec_connections 的联接](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "sys.dm_exec_connections 的联接")  
+ ![sys.dm_exec_connections 的联接](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "sys.dm_exec_connections 的联接")  
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
@@ -93,9 +93,9 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 
- [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [与执行相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

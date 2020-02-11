@@ -1,5 +1,5 @@
 ---
-title: 例如：指定 ELEMENT 指令 | Microsoft Docs
+title: 示例：指定 ELEMENT 指令 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5fd255c763ca516bce53832884ae57c6c3dd8b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287155"
 ---
-# <a name="example-specifying-the-element-directive"></a>例如：指定 ELEMENT 指令
+# <a name="example-specifying-the-element-directive"></a>示例：指定 ELEMENT 指令
   此示例检索雇员信息并生成以元素为中心的 XML，如下所示：  
   
 ```  
@@ -31,7 +31,7 @@ ms.locfileid: "63287155"
 </Employee>  
 ```  
   
- 查询依然相同，只是在列名中添加了 `ELEMENT` 指令。 因此，向 <`Name`> 元素添加了 <`FName`> 和 <`LName`> 元素子级，而不是添加属性。 因为 `Employee!1!EmpID` 列没有指定 `ELEMENT` 指令，所以将 `EmpID` 作为 <`Employee`> 元素的属性添加。  
+ 查询依然相同，只是在列名中添加了 `ELEMENT` 指令。 因此，向 <`FName`> 元素添加了 <`LName`> 和 <`Name`> 元素子级，而不是添加属性。 因为 `Employee!1!EmpID` 列没有指定 `ELEMENT` 指令，所以将 `EmpID` 作为 <`Employee`> 元素的属性添加。  
   
 ```  
 SELECT 1    as Tag,  
@@ -83,7 +83,7 @@ FOR XML EXPLICIT;
   
  `...`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 EXPLICIT 模式与 FOR XML 一起使用](use-explicit-mode-with-for-xml.md)  
   
   

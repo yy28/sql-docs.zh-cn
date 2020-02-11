@@ -13,22 +13,22 @@ ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 07cf393fc46ca9cfe96cb116886f37ab8abd1b1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963708"
 ---
 # <a name="rds-code-examples"></a>RDS 代码示例
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 使用下面的代码示例来了解如何使用 RDS 对象、 方法、 属性和事件。  
+ 使用以下代码示例来了解如何使用 RDS 对象、方法、属性和事件。  
   
- **请注意**将完整的代码示例粘贴到代码编辑器。 如果使用完整的示例或段落格式设置都将丢失，该示例可能无法正确运行。  
+ **注意**将整个代码示例粘贴到代码编辑器中。 如果使用了部分示例或段落格式丢失，则示例可能无法正常运行。  
   
 -   [Microsoft Visual Basic 中的 RDS 代码示例](../../../ado/reference/rds-api/rds-code-examples-in-visual-basic.md)  
   
--   [在 Microsoft Visual Basic Scripting Edition 的 RDS 代码示例](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
+-   [Microsoft Visual Basic Scripting Edition 中的 RDS 代码示例](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
   
--   [Microsoft 的视觉对象中的 RDS 代码示例C++](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  
+-   [Microsoft Visual C++ 中的 RDS 代码示例](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  

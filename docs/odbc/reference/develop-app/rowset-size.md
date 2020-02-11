@@ -17,21 +17,21 @@ ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fda38811fa876c9a0fad55e7f2ee7566ad3026d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67943761"
 ---
 # <a name="rowset-size"></a>行集大小
-若要使用的行集大小取决于应用程序。 基于屏幕的应用程序通常遵循以下两个策略之一。 第一种是将行集大小设置为在屏幕上显示的行数如果在用户调整屏幕，该应用程序做相应更改的行集大小。 第二个是行集大小设置为一个更大数字，如 100，从而减少了对数据源的调用数。 应用程序内的行集时可能本地滚动，并仅当外部行集将滚动时提取新行。  
+要使用的行集大小取决于应用程序。 基于屏幕的应用程序通常遵循以下两个策略之一。 第一种是将行集大小设置为屏幕上显示的行数;如果用户调整屏幕的大小，应用程序会相应地更改行集的大小。 第二种方式是将行集大小设置为更大的数字，如100，这会减少对数据源的调用次数。 如果可能，应用程序将在行集内本地滚动，并仅在滚动行集外滚动新行时才提取新行。  
   
- 其他应用程序，如报表，往往会将行集大小设置为最大数量的行可以合理地处理应用程序-具有更大的行集，有时会减少网络开销每行。 完全大行集可以是取决于每个行和可用内存量的大小。  
+ 其他应用程序（如报表）倾向于将行集大小设置为应用程序可合理处理的最大行数-对于更大的行集，每行的网络开销有时会降低。 行集的确切大小取决于每行的大小和可用的内存量。  
   
- 通过调用设置行集大小**SQLSetStmtAttr**与*属性*SQL_ATTR_ROW_ARRAY_SIZE 参数。 该应用程序可以更改的行集大小，将绑定新行集缓冲区 (通过调用**SQLBindCol**或指定绑定偏移量) 甚至已提取的行后，或两者。 更改的行集大小的影响取决于该函数：  
+ 行集大小通过使用 SQL_ATTR_ROW_ARRAY_SIZE 的*属性*参数对**SQLSetStmtAttr**的调用设置。 应用程序可以更改行集的大小、绑定新的行集缓冲区（通过调用**SQLBindCol**或指定绑定偏移量），甚至可以在提取行后，也可以这两者。 更改行集大小的影响取决于函数：  
   
--   **SQLFetch**并**SQLFetchScroll**在调用时使用的行集大小，以确定要提取的行数。 但是， **SQLFetchScroll**与*FetchOrientation* SQL_FETCH_NEXT 递增，增量为基于游标的上一个提取，然后提取行集上基于当前的行集大小的行集。  
+-   **SQLFetch**和**SQLFetchScroll**在调用时使用行集大小来确定要提取的行数。 但是， **SQLFetchScroll**和*FetchOrientation*的 SQL_FETCH_NEXT 会根据上一次提取的行集来递增游标，然后基于当前行集大小获取行集。  
   
--   **SQLSetPos**使用从前面的调用开始实际上是行集大小**SQLFetch**或**SQLFetchScroll**，这是因为**SQLSetPos**对行集已设置的。 **SQLSetPos**还会选取新的行集大小如果**SQLBulkOperations**行集大小已发生更改后调用。  
+-   **SQLSetPos**使用在前面调用**SQLFetch**或**SQLFetchScroll**时生效的行集大小，因为**SQLSetPos**对已设置的行集进行操作。 如果在更改行集大小后调用了**SQLBulkOperations** ， **SQLSetPos**也将选取新的行集大小。  
   
--   **SQLBulkOperations**行集大小实际上在时使用的调用，因为它执行独立于任何提取的行集的表操作。
+-   **SQLBulkOperations**在调用时使用有效的行集大小，因为它对独立于任何提取的行集的表执行操作。

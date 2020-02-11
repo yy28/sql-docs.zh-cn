@@ -1,5 +1,5 @@
 ---
-title: '字段 (VisualC++使用 #import 语法索引) |Microsoft Docs'
+title: 'Field （Visual C++ 语法索引与 #import） |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 587be8f0686cd7b2498080984d40e79c80bde898
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932696"
 ---
-# <a name="field-visual-c-syntax-index-with-import"></a>字段 (VisualC++使用 #import 语法索引)
+# <a name="field-visual-c-syntax-index-with-import"></a>Field （Visual C++ #import 语法索引）
 ## <a name="methods"></a>方法  
   
 ```  
@@ -31,7 +31,7 @@ HRESULT AppendChunk( const _variant_t & Data );
 _variant_t GetChunk( long Length );  
 ```  
   
-## <a name="properties"></a>properties  
+## <a name="properties"></a>属性  
   
 ```  
 long GetActualSize( );  
@@ -79,5 +79,5 @@ void PutValue( const _variant_t & pvar );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [字段对象](../../../ado/reference/ado-api/field-object.md)
