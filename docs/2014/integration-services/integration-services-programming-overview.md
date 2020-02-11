@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf90de7f1ebcadbc65b6f2ee7eaaacb6d52e0e1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683626"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 编程概述
@@ -63,14 +63,14 @@ ms.locfileid: "74683626"
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 应用程序编程接口与基于 COM 的脚本语言（如 VBScript）不兼容。  
   
 ## <a name="locating-assemblies"></a>定位程序集  
- 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 .Net 4 存在单独的全局程序集缓存，位于* \<驱动器>*： \windows\microsoft.net\assembly 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  
+ 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 位于 *drive>:\Windows\Microsoft.NET\assembly 中的 .NET 4 存在单独的全局程序集缓存\<* 。 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  
   
  与的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本一样，核心[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]扩展性 .dll 文件也位于* \<驱动器>*： \Program Files\Microsoft SQL server\100\sdk\assemblies  
   
 ## <a name="commonly-used-assemblies"></a>常用程序集  
  下表列出了使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 进行编程时常用的程序集。  
   
-|汇编|说明|  
+|Assembly|说明|  
 |--------------|-----------------|  
 |Microsoft.SqlServer.ManagedDTS.dll|包含托管运行时引擎。|  
 |Microsoft.SqlServer.RuntimeWrapper.dll|包含用于本机运行时引擎的主互操作程序集 (PIA) 或包装。|  

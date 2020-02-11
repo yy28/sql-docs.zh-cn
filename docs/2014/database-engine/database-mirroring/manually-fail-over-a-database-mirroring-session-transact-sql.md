@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c10702b169537fc547ff46440883879ee9da417c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754890"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-transact-sql"></a>手动故障转移数据库镜像会话 (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "62754890"
   
 3.  在主体服务器上执行下列语句：  
   
-     [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *database_name* SET PARTNER FAILOVER，其中 *database_name* 是镜像数据库。  
+     [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) database_name SET PARTNER FAILOVER，其中 database_name 是镜像数据库   。  
   
      此语句将立即启动从镜像服务器到主体角色的转换。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62754890"
 > [!NOTE]  
 >  当发生故障转移时，使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器准备就绪但尚未提交的事务被认为在数据库故障转移后已中止。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE 数据库镜像 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [手动故障转移数据库镜像会话 (SQL Server Management Studio)](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)   
  [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)  

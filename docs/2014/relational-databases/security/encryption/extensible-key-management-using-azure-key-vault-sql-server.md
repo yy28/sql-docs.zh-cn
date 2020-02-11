@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 9591b483380d8bfcaea8404cccfa0279d3bcc035
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957191"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)
@@ -117,12 +117,12 @@ ms.locfileid: "74957191"
   
 ##  <a name="Step3"></a>步骤3：将 SQL Server 配置为对 Key Vault 使用 EKM 提供程序  
   
-###  <a name="Permissions"></a>访问  
+###  <a name="Permissions"></a> 权限  
  若要完成整个流程，需要具备 CONTROL SERVER 权限或 **sysadmin** 固定服务器角色的成员身份。 特定操作要求具有以下权限：  
   
 -   若要创建加密提供程序，需要具备 CONTROL SERVER 权限或 **sysadmin** 固定服务器角色的成员身份。  
   
--   若要更改配置选项以及运行 RECONFIGURE 语句，你必须具有 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
+-   若要更改配置选项以及运行 RECONFIGURE 语句，您必须具有 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 -   若要创建凭据，则需要 ALTER ANY CREDENTIAL 权限。  
   
@@ -202,17 +202,17 @@ ms.locfileid: "74957191"
   
  有关详细信息，请参阅以下主题：  
   
--   [sp_configure &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [&#40;Transact-sql&#41;创建加密提供程序](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [&#40;Transact-sql&#41;创建凭据](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [创建非对称密钥 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [CREATE LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
--   [ALTER LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
+-   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
 ## <a name="examples"></a>示例  
   
@@ -277,9 +277,9 @@ ms.locfileid: "74957191"
   
      有关详细信息，请参阅以下主题：  
   
-    -   [&#40;Transact-sql&#41;创建数据库加密密钥](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+    -   [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
-    -   [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+    -   [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   
 ###  <a name="ExampleB"></a>示例 B：使用 Key Vault 中的非对称密钥加密备份  
  从 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]开始支持加密备份。 以下示例创建并还原了经过数据加密密钥加密的备份文件，其中该加密密钥受到 key vault 中的非加密密钥保护。  
@@ -344,10 +344,10 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;创建加密提供程序](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [&#40;Transact-sql&#41;创建凭据](/sql/t-sql/statements/create-credential-transact-sql)   
- [创建非对称密钥 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [&#40;Transact-sql&#41;创建对称密钥](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [可扩展的密钥管理 &#40;EKM&#41;](extensible-key-management-ekm.md)   
  [使用 EKM 启用 TDE](enable-tde-on-sql-server-using-ekm.md)   
  [备份加密](../../backup-restore/backup-encryption.md)   

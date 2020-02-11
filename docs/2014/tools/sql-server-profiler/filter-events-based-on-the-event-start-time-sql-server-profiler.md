@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd08ce16341022072c76fc1bf073d1a469d9273
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192901"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>基于事件开始时间筛选事件 (SQL Server Profiler)
@@ -42,9 +42,9 @@ ms.locfileid: "63192901"
   
 5.  在“事件选择”  选项卡上，单击“StartTime”  列标题。 也可以右键单击列标题，然后单击“编辑列筛选器”  打开“编辑筛选器”  对话框。  
   
-6.  展开**大于**或**小于**，然后输入`datetime`比较运算符下显示的字段中的值。  
+6.  展开 "**大于**" 或 "**小于**"，然后在`datetime`比较运算符下显示的字段中输入一个值。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 事件探查器](sql-server-profiler.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

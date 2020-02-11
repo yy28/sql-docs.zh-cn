@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684460"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的用户帮助
@@ -51,7 +51,7 @@ ms.locfileid: "74684460"
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online 和 SQL Server 社区  
  
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“帮助”还允许用户通过访问网站上的 MSDN Online 和专门针对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的社区两种途径来获取信息。 您可以：  
+  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“帮助”还允许用户通过访问网站上的 MSDN Online 和专门针对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的社区两种途径来获取信息。 可以：  
   
 -   从“如何实现”页访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社区。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "74684460"
   
 #### <a name="to-enable-online-search"></a>启用联机搜索  
   
-1.  在“工具” **** 菜单上，单击“选项” ****。 在“选项”**** 对话框中，展开“环境”**** 和“帮助”**** 节点（如有必要），然后单击“联机”****。  
+1.  在“工具”  菜单上，单击“选项”  。 在“选项”**** 对话框中，展开“环境”**** 和“帮助”**** 节点（如有必要），然后单击“联机”****。  
   
 2.  在“当载入帮助内容时”**** 区域中，选择一个联机选项。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74684460"
   
 4.  如果 **Codezone 社区**是你选定的搜索提供程序之一，则可根据需要在“Codezone 社区”**** 列表中选择和清除项。  
   
-5.  单击“确定”****。  
+5.  单击“确定”。   
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>从“搜索”页搜索 MSDN Online 和专门针对于 SQL Server 的社区  
   

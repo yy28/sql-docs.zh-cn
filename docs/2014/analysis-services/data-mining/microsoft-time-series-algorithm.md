@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083771"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 时序算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法提供了用于预测的连续值，如产品销量，随着时间的推移进行了优化的回归算法。 虽然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法（如决策树）也能预测趋势，但是他们需要使用其他新信息列作为输入才能进行预测，而时序模型则不需要。 时序模型仅根据用于创建该模型的原始数据集就可以预测趋势。 进行预测时您还可以向模型添加新数据，随后新数据会自动纳入趋势分析范围内。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法提供了针对连续值（例如产品销售额）预测进行了优化的回归算法。 虽然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法（如决策树）也能预测趋势，但是他们需要使用其他新信息列作为输入才能进行预测，而时序模型则不需要。 时序模型仅根据用于创建该模型的原始数据集就可以预测趋势。 进行预测时您还可以向模型添加新数据，随后新数据会自动纳入趋势分析范围内。  
   
  下面的关系图显示了一个用于预测一段时间内某一产品在四个不同销售区域的销售额的典型模型。 该关系图中的模型以红色、黄色、紫色和蓝色线条分别显示每个区域的销售额。 每个区域的线条都分为两部分：  
   
@@ -35,23 +35,25 @@ ms.locfileid: "66083771"
   
 -   预测信息显示在竖线的右侧，表示模型所做出的预测。  
   
- 源数据和预测数据的组合称为“序列  ”。  
+ 源数据和预测数据的组合称为“序列 **”。  
   
- ![时间序列的示例](../media/time-series.gif "的时间序列示例")  
+ ![时序示例](../media/time-series.gif "时序示例")  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的一个重要功能就是可以执行交叉预测。 如果用两个单独但相关的序列为该算法定型，则可以使用生成的模型来根据一个序列的行为预测另一个序列的结果。 例如，一个产品的实际销售额可能会影响另一个产品的预测销售额。 在创建可应用于多个序列的通用模型时，交叉预测也很有用。 例如，由于序列缺少高质量的数据，造成对某一特定区域的预测不稳定。 您可以根据所有四个区域的平均情况来为通用模型定型，然后将该模型应用到各个序列，以便为每个区域产生更稳定的预测。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的一个重要功能就是可以执行交叉预测。 如果用两个单独但相关的序列为该算法定型，则可以使用生成的模型来根据一个序列的行为预测另一个序列的结果。 例如，一个产品的实际销售额可能会影响另一个产品的预测销售额。 在创建可应用于多个序列的通用模型时，交叉预测也很有用。 例如，由于序列缺少高质量的数据，造成对某一特定区域的预测不稳定。 您可以根据所有四个区域的平均情况来为通用模型定型，然后将该模型应用到各个序列，以便为每个区域产生更稳定的预测。  
   
 ## <a name="example"></a>示例  
- [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的管理团队要预测来年的自行车月销售额。 该公司尤为关注一种自行车型号的销售额是否可用于预测另一种型号的销售额。 通过对过去三年的历史数据使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法，该公司可以建立一个数据挖掘模型，用于预测未来的自行车销售情况。 此外，该公司还可以进行交叉预测，以了解各个自行车型号的销售趋势是否相关。  
+ 
+  [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的管理团队要预测来年的自行车月销售额。 该公司尤为关注一种自行车型号的销售额是否可用于预测另一种型号的销售额。 通过对过去三年的历史数据使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法，该公司可以建立一个数据挖掘模型，用于预测未来的自行车销售情况。 此外，该公司还可以进行交叉预测，以了解各个自行车型号的销售趋势是否相关。  
   
  每个季度，该公司都会计划用最近的销售数据来更新模型，并更新其预测以描绘出最近的趋势。 有些商店不能准确地或始终如一地更新销售数据，为了弥补这一点造成的误差，他们将创建一个通用预测模型，并用该模型对所有区域进行预测。  
   
 ## <a name="how-the-algorithm-works"></a>算法的原理  
- 在中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，则[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法使用单个算法，即 ARTXP。 ARTXP 算法针对短期预测进行了优化，因此，预测序列中的下一个可能的值。 从开始[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，则[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法同时使用 ARTXP 算法和另一种算法 ARIMA。 ARIMA 算法针对长期预测进行了优化。 有关 ARTXP 和 ARIMA 算法的实现的详细说明，请参阅 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)。  
+ 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中， [!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法使用了单个算法 ARTXP。 ARTXP 算法针对短期预测进行了优化，因此预测了序列中的下一个可能值。 从开始[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法同时使用 ARTXP 算法和另一种算法 ARIMA。 ARIMA 算法针对长期预测进行了优化。 有关 ARTXP 和 ARIMA 算法的实现的详细说明，请参阅 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)。  
   
- 默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法在分析模式和进行预测时混合使用这两种算法。 该算法相同的数据的两个单独的模型定型： 一个模型采用 ARTXP 算法，另一个模型采用 ARIMA 算法。 然后，该算法结合这两个模型的结果来产生可变数量时间段的最佳预测。 因为 ARTXP 最适合于短期预测，所以在一系列预测的开始时它十分重要。 但是，随着预测的时间段不断地向将来延伸，ARIMA 就比较重要了。  
+ 默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法在分析模式和进行预测时混合使用这两种算法。 该算法将两个单独的模型定型到相同的数据：一个模型使用 ARTXP 算法，另一个模型使用 ARIMA 算法。 然后，该算法结合这两个模型的结果来产生可变数量时间段的最佳预测。 因为 ARTXP 最适合于短期预测，所以在一系列预测的开始时它十分重要。 但是，随着预测的时间段不断地向将来延伸，ARIMA 就比较重要了。  
   
- 您还可以控制这两种算法的混合方式，以在时序中优先采用短期预测或长期预测。 从开始[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]标准，您可以指定[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法使用以下设置之一：  
+ 您还可以控制这两种算法的混合方式，以在时序中优先采用短期预测或长期预测。 从[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]标准开始，可以指定[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法使用以下设置之一：  
   
 -   对短期预测仅使用 ARTXP。  
   
@@ -59,7 +61,7 @@ ms.locfileid: "66083771"
   
 -   使用这两种算法的默认混合。  
   
- 从开始[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]，你可以自定义如何[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法混合预测模型的。 采用混合模型时， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法按以下方式混合这两种算法：  
+ 从开始[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]，可以自定义时序算法[!INCLUDE[msCoName](../../includes/msconame-md.md)]如何混合用于预测的模型。 采用混合模型时， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法按以下方式混合这两种算法：  
   
 -   在进行前几步预测时始终只使用 ARTXP。  
   
@@ -80,11 +82,11 @@ ms.locfileid: "66083771"
   
  时序模型的要求如下：  
   
--   **单个键时间列** 每个模型都必须包含一个用作事例序列的数值或日期列，该列定义了该模型将使用的时间段。 key time 列的数据类型可以是 datetime 数据类型或 numeric 数据类型。 但是，该列必须包含连续值，并且这些值对各个序列而言必须是唯一的。 时序模型的事例序列不能存储在两列中，例如不能存储在一个 Year 列和一个 Month 列中。  
+-   **单个键时间列**每个模型必须包含一个用作事例序列的数值或日期列，这将定义模型将使用的时间段。 key time 列的数据类型可以是 datetime 数据类型或 numeric 数据类型。 但是，该列必须包含连续值，并且这些值对各个序列而言必须是唯一的。 时序模型的事例序列不能存储在两列中，例如不能存储在一个 Year 列和一个 Month 列中。  
   
--   **可预测列** 每个模型都必须至少包含一个可预测列，算法将根据这个可预测列生成时序模型。 可预测列的数据类型必须具有连续值。 例如，您可以预测在一段时间内数值属性（例如收入、销售额或温度）将如何变化。 但是，您不能使用包含离散值（例如采购状态或教育水平）的列作为可预测列。  
+-   **可预测列**每个模型必须至少包含一个可预测列，算法将在此列中生成时序模型。 可预测列的数据类型必须具有连续值。 例如，您可以预测在一段时间内数值属性（例如收入、销售额或温度）将如何变化。 但是，您不能使用包含离散值（例如采购状态或教育水平）的列作为可预测列。  
   
--   **可选序列键列** 每个模型可包含一个附加的键列，该列包含标识序列的唯一值。 可选序列键列必须包含唯一值。 例如，只要在每个时间段内每个产品名称都只有一条记录，单个模型就可以包含多个产品型号的销售额。  
+-   **可选序列键列**每个模型可包含一个附加的键列，该列包含标识序列的唯一值。 可选序列键列必须包含唯一值。 例如，只要在每个时间段内每个产品名称都只有一条记录，单个模型就可以包含多个产品型号的销售额。  
   
  您可以用若干种不同的方式定义 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序模型的输入数据。 但是，由于输入事例的格式会影响挖掘模型的定义，因此您必须考虑自己的业务需求并相应地准备数据。 下面两个示例说明了输入数据是如何影响模型的。 在这两个示例中，已完成的挖掘模型包含四个不同序列的模式：  
   
@@ -98,10 +100,10 @@ ms.locfileid: "66083771"
   
  在这两个示例中，您可以预测每个产品新的未来销售额和数量。 不能预测产品或时间的新值。  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>示例 1：表示列的值作为序列与时序数据集  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>示例 1：具有表示为列值的序列的时序数据集  
  该示例使用下表中的输入事例：  
   
-|TimeID|产品|Sales|数据量|  
+|TimeID|Products|Sales|数据量(Volume)|  
 |------------|-------------|-----------|------------|  
 |1/2001|A|1000|600|  
 |2/2001|A|1100|500|  
@@ -114,7 +116,7 @@ ms.locfileid: "66083771"
   
  Sales 列说明指定产品一天的毛利润，Volume 列说明仓库中存放的指定产品数量。 这两列包含用于为模型定型的数据。 Sales 和 Volume 都可以为 Product 列中的各个序列的可预测属性。  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>示例 2：在单独的列中每个序列与时序数据集  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>示例 2：各序列位于单独列中的时序数据集  
  尽管该示例使用的输入数据与第一个示例基本相同，但输入数据的结构不同，如下表所示：  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -122,7 +124,7 @@ ms.locfileid: "66083771"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- 在该表中，TimeID 列仍包含时序模型的事例序列，您将该列指定为 key time 列。 但是，先前的 Sales 和 Volume 列现在拆分为两列，并且拆分后的每个列前面都带有产品名称。 因此，TimeID 列中每天只有一个条目。 这会创建将包含四个可预测列的时序模型：A_Sales、 A_Volume、 B_Sales 和 B_Volume。  
+ 在该表中，TimeID 列仍包含时序模型的事例序列，您将该列指定为 key time 列。 但是，先前的 Sales 和 Volume 列现在拆分为两列，并且拆分后的每个列前面都带有产品名称。 因此，TimeID 列中每天只有一个条目。 这将创建一个包含以下四个可预测列的时序模型：A_Sales、A_Volume、B_Sales 和 B_Volume。  
   
  此外，由于您已将产品分成不同的列，因此您不需要指定附加的序列键列。 该模型中的所有列都是事例序列列或可预测列。  
   
@@ -134,7 +136,7 @@ ms.locfileid: "66083771"
  如果希望了解关于如何计算预测的详细信息，可在 [Microsoft 一般内容树查看器](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中浏览该模型。 为该模型存储的内容包括以下方面的详细信息：ARIMA 和 ARTXP 算法检测到的周期性结构、用于混合算法的公式以及其他统计信息。  
   
 ## <a name="creating-time-series-predictions"></a>创建时序预测  
- 默认情况下，在您查看时序模型时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将为您显示该序列的五种预测。 但是，您可以通过创建查询来返回可变数目的预测，并且可以向预测添加额外的列以返回说明性的统计信息。 有关如何创建针对时序模型的查询的信息，请参阅[时序模型查询示例](time-series-model-query-examples.md)。 有关如何使用数据挖掘扩展插件 (DMX) 进行时序预测的示例，请参阅[预测时序 (DMX)](/sql/dmx/predicttimeseries-dmx)。  
+ 默认情况下，在您查看时序模型时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将为您显示该序列的五种预测。 但是，您可以通过创建查询来返回可变数目的预测，并且可以向预测添加额外的列以返回说明性的统计信息。 有关如何创建针对时序模型的查询的信息，请参阅 [时序模型查询示例](time-series-model-query-examples.md)。 有关如何使用数据挖掘扩展插件 (DMX) 进行时序预测的示例，请参阅[预测时序 (DMX)](/sql/dmx/predicttimeseries-dmx)。  
   
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法进行预测时，应注意下面的其他限制和要求：  
   
@@ -152,11 +154,11 @@ ms.locfileid: "66083771"
   
 -   支持钻取。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [使用 Microsoft 时序查看器浏览模型](browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)   
+ [Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)   
  [时序模型查询示例](time-series-model-query-examples.md)   
- [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [时序模型的挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

@@ -16,20 +16,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dc5681577b051ebb26959856a9eb775ae2ae409f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842840"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>SQL Server 数据库引擎的向后兼容性
   向后兼容性部分中的主题说明了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各版本之间的行为更改。  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[SQL Server 2014 中弃用的数据库引擎功能](deprecated-database-engine-features-in-sql-server-2016.md)|此版本中不推荐使用的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 功能。|  
-|[SQL Server 2014 中废止的数据库引擎功能](discontinued-database-engine-functionality-in-sql-server-2016.md)|此版本废止的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 功能。|  
-|[SQL Server 2014 中数据库引擎功能的重大更改](breaking-changes-to-database-engine-features-in-sql-server-2016.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] 功能更改。|  
-|[SQL Server 2014 中数据库引擎功能的行为变更](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)|此版本中对数据库功能的其他更改。|  
+|[SQL Server 2014 中不推荐使用的数据库引擎功能](deprecated-database-engine-features-in-sql-server-2016.md)|此版本中不推荐使用的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 功能。|  
+|[SQL Server 2014 中废止的数据库引擎功能](discontinued-database-engine-functionality-in-sql-server-2016.md)|此版本废止的[!INCLUDE[ssDE](../includes/ssde-md.md)]功能。|  
+|[SQL Server 2014 中数据库引擎功能的重大更改](breaking-changes-to-database-engine-features-in-sql-server-2016.md)|
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] 功能更改。|  
+|[SQL Server 2014 中数据库引擎功能的行为更改](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)|此版本中对数据库功能的其他更改。|  
   
   

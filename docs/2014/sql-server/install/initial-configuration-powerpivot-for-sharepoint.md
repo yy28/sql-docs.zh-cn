@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200438"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>初始安装 (PowerPivot for SharePoint)
@@ -75,7 +75,7 @@ ms.locfileid: "74200438"
   
 5.  在 **"部署到？**" 中，选择要向其添加 PowerPivot 功能支持的 SharePoint web 应用程序。  
   
-6.  单击“确定”****。  
+6.  单击“确定”。   
   
 7.  对也要支持 PowerPivot 数据访问的其他 SharePoint Web 应用程序重复此过程。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "74200438"
   
 7.  保持默认复选框，该复选框将服务应用程序代理添加到默认服务连接列表。  
   
-8.  单击“确定”****。  
+8.  单击“确定”。   
   
 9. 单击您刚创建的 Excel Services 应用程序。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "74200438"
   
 13. 清除 "**数据刷新时警告**" 复选框，以允许在 PowerPivot 库中预览单个工作表。 如果您选择保留该警告并且工作簿设置指定在打开时刷新，则可能得到的是警告的单个预览图像，而非工作簿中的页面。  
   
-14. 单击“确定”****。  
+14. 单击“确定”。   
   
 ##  <a name="SSS"></a>步骤5：启用 Secure Store Service 和配置数据刷新  
  PowerPivot for SharePoint 要求 Secure Store Service 以便存储凭据和无人参与的执行帐户以便用于数据刷新。 您可以通过确认安全存储区服务是否出现在服务应用程序的列表中，确定安全存储区服务是否已启用。  
@@ -190,7 +190,7 @@ ms.locfileid: "74200438"
   
 4.  输入然后确认通行短语。 该通行短语将用于添加其他安全存储区共享服务应用程序。  
   
-5.  单击“确定”****。  
+5.  单击“确定”。   
   
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>第三部分：配置无人参与的 PowerPivot 数据刷新帐户  
  为 PowerPivot 数据访问创建无人参与的数据刷新帐户通常是数据刷新期间外部数据访问所必需的。 例如，如果未启用 Kerberos，则您必须创建 PowerPivot 服务可用于连接到外部数据源的无人参与的帐户。  
@@ -216,7 +216,7 @@ ms.locfileid: "74200438"
   
 4.  向下滚动页面，直至找到 " **PowerPivot 集成网站集功能**"。  
   
-5.  单击 **“激活”**。  
+5.  单击“激活”  。  
   
 6.  通过打开每个站点并单击 "**网站操作**" 对其他网站集重复上述操作。  
   
@@ -258,7 +258,7 @@ ms.locfileid: "74200438"
   
 6.  在 "服务器名称" 中，输入** \<服务器名称> \powerpivot**，其中** \<，服务器名称>** 是安装了 PowerPivot for SharePoint 的计算机的名称。  
   
-7.  单击“连接”****。  
+7.  单击“连接”  。  
   
 8.  在对象资源管理器中，单击 "**数据库**" 查看加载的 PowerPivot 数据文件的列表。  
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679498"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定元属性
@@ -37,23 +37,23 @@ ms.locfileid: "62679498"
 > [!NOTE]  
 >  不能在任何 XPath 导航中引用这些元属性。  
   
-|元属性特性|Description|  
+|元属性特性|说明|  
 |----------------------------|-----------------|  
 |**\@mp:id**|提供由系统生成的、文档范围的 DOM 节点标识符。 只要文档未被重新分析，此 ID 就会引用同一个 XML 节点。<br /><br /> XML ID 为 **0** 表明该元素是根元素。 其父 XML ID 为 NULL。|  
 |**\@mp:localname**|存储节点名的本地部分。 与前缀及命名空间 URI 一起用于命名元素节点或属性节点。|  
 |**\@mp:namespaceuri**|提供当前元素的命名空间 URI。 如果此特性的值为 NULL，则表明不存在命名空间。|  
 |**\@mp:prefix**|存储当前元素名的命名空间前缀。<br /><br /> 如果不存在前缀 (NULL) 且给定了 URI，则表明指定的命名空间为默认命名空间。 如果没有给定 URI，则表明没有附加命名空间。|  
-|**\@mp:prev**|存储相对于节点的前一个同级元素。 此特性将提供有关元素在文档中的排序顺序的信息。<br /><br /> \@mp:prev  包含父元素相同的上一个同级元素的 XML ID。 如果元素是同级列表的首个元素，\@mp:prev  为空。|  
+|**\@mp:prev**|存储相对于节点的前一个同级元素。 此特性将提供有关元素在文档中的排序顺序的信息。<br /><br /> **mp:prev\@** 包含父元素相同的上一个同级元素的 XML ID。 如果元素是同级列表的首个元素，**mp:prev\@** 为空。|  
 |**\@mp:xmltext**|用于处理目的。 它是元素及其属性以及 OPENXML 溢出处理中所使用的子元素的文本序列化。|  
   
  下表显示了使您得以检索关于层次结构的信息的其他父属性。  
   
-|父元属性特性|Description|  
+|父元属性特性|说明|  
 |-----------------------------------|-----------------|  
-|**\@mp:parentid**|对应于 ../\@mp:id |  
-|**\@mp:parentlocalname**|对应于 ../\@mp:localname |  
-|**\@mp:parentnamespacerui**|对应于 ../\@mp:namespaceuri |  
-|**\@mp:parentprefix**|对应于 ../\@mp:prefix |  
+|**\@mp:parentid**|对应于 ../**mp:id\@**|  
+|**\@mp:parentlocalname**|对应于 ../**mp:localname\@**|  
+|**\@mp:parentnamespacerui**|对应于 ../**mp:namespaceuri\@**|  
+|**\@mp:parentprefix**|对应于 ../**mp:prefix\@**|  
   
 ## <a name="examples"></a>示例  
  下列示例说明了如何使用 OPENXML 来创建不同的行集视图。  
@@ -63,11 +63,11 @@ ms.locfileid: "62679498"
   
  OPENXML 语句说明了以下信息：  
   
--   id  列映射到 \@mp:id  元属性，并指明列中包含元素的系统生成唯一 XML ID。  
+-   id  列映射到 **mp:id\@** 元属性，并指明列中包含元素的系统生成唯一 XML ID。  
   
--   parent  列映射到 \@mp:parentid  ，并指明列中包含元素的父元素的 XML ID。  
+-   parent  列映射到 **mp:parentid\@** ，并指明列中包含元素的父元素的 XML ID。  
   
--   parentLocalName  列映射到 \@mp:parentlocalname  ，并指明列中包含父元素的本地名称。  
+-   parentLocalName  列映射到 **mp:parentlocalname\@** ，并指明列中包含父元素的本地名称。  
   
  然后，SELECT 语句将返回由 OPENXML 生成的行集：  
   
@@ -102,7 +102,7 @@ FROM OPENXML (@idoc, '/root/Customer/Order', 9)
 EXEC sp_xml_removedocument @idoc  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 id   oid         date                amount    parentIDNo  parentLocalName    
@@ -160,13 +160,13 @@ EXEC sp_xml_removedocument @idoc
 ### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. 指定 xmltext 元属性来检索列中未使用的数据  
  此示例使用 OPENXML 创建该示例 XML 文档的行集视图。 本例显示了如何通过将 **xmltext** 元属性特性映射到 OPENXML 中的行集列来检索未用完的 XML 数据。  
   
- 通过将 comment  列映射到 \@mp:xmltext  元属性，把它标识为溢出列。 *flags* 参数将设置为 **9** （XML_ATTRIBUTE 和 XML_NOCOPY）。 这指明了 **attribute-centric** 映射，并指明只有未用完的数据才应当被复制到溢出列中。  
+ 通过将 comment  列映射到 **mp:xmltext\@** 元属性，把它标识为溢出列。 *flags* 参数将设置为 **9** （XML_ATTRIBUTE 和 XML_NOCOPY）。 这指明了 **attribute-centric** 映射，并指明只有未用完的数据才应当被复制到溢出列中。  
   
  然后，SELECT 语句返回由 OPENXML 生成的行集。  
   
- 此示例为 OPENXML 所生成行集中的 ParentLocalName  列设置了 \@mp:parentlocalname  元属性。 因此，此列包含父元素的本地名。  
+ 此示例为 OPENXML 所生成行集中的 ParentLocalName **\@ 列设置了** mp:parentlocalname  元属性。 因此，此列包含父元素的本地名。  
   
- 在行集中另外还指定了两列， **parent** 和 **comment**。 parent  列映射到 \@mp:parentid  ，并指明列中包含元素的父元素的 XML ID。 通过将 comment 列映射到 \@mp:xmltext  元属性，把它标识为溢出列。  
+ 在行集中另外还指定了两列， **parent** 和 **comment**。 parent  列映射到 **mp:parentid\@** ，并指明列中包含元素的父元素的 XML ID。 通过将 comment 列映射到 **mp:xmltext\@** 元属性，把它标识为溢出列。  
   
 ```  
 DECLARE @idoc int  
@@ -211,7 +211,7 @@ O3    1999-07-14 00:00:00.000     <Order amount="100" note="Wrap it blue
 O4    1996-01-20 00:00:00.000     <Order amount="10000"/>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML (SQL Server)](../xml/openxml-sql-server.md)  
   

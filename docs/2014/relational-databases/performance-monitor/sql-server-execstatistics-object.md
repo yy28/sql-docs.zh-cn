@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a09c2a57b76974758626a1847d5f0df3f8b7f55c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250603"
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server ExecStatistics 对象
@@ -25,7 +25,7 @@ ms.locfileid: "63250603"
   
  下表介绍了 SQL Server **Exec Statistics** 计数器。  
   
-|SQL Server Exec Statistics 计数器|Description|  
+|SQL Server Exec Statistics 计数器|说明|  
 |-----------------------------------------|-----------------|  
 |**Distributed Query**|与执行分布式查询相关的统计信息。|  
 |**DTC calls**|与执行 DTC 调用相关的统计信息。|  
@@ -34,14 +34,14 @@ ms.locfileid: "63250603"
   
  对象中的每个计数器均包含以下实例：  
   
-|项|Description|  
+|Item|说明|  
 |----------|-----------------|  
 |**平均执行时间 (ms)**|所选执行类型的平均执行时间。|  
 |**每秒的累积执行时间 (ms)**|所选执行类型每秒的累积执行时间。|  
 |**正在进行的执行数**|正在进行的所选执行类型的执行数。|  
 |**每秒启动的执行数**|每秒启动的所选执行类型的执行数。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)  
   
   

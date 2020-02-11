@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0b962db5e005837a2e9d3fe68564fceb5bfc253
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835262"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>为捕获更改选择 Oracle 表
@@ -29,12 +29,12 @@ ms.locfileid: "62835262"
   
 -   **架构**：从列表中选择数据库架构。 只有具有该架构的表才会出现在列表中。  
   
--   **表名称模式**：输入任意字符的字符串。 将仅显示包含输入的字符串的表。  
+-   **表名称模式**：输入任意字符串。 将仅显示包含输入的字符串的表。  
   
 > [!NOTE]  
 >  您可以在其中一个或全部两个字段中输入条件。  
   
--   **显示前 1000 个匹配表**：默认情况下，此复选框处于选中状态。 它将显示限制为前 1000 个匹配表。 如果取消选中该复选框，将显示条件相匹配的所有表。 如果有大量的表，则此方法可能需要较长的时间来显示列表。  
+-   **显示前 1000 个匹配表**：默认情况下选中此复选框。 它将显示限制为前 1000 个匹配表。 如果取消选中该复选框，将显示条件相匹配的所有表。 如果有大量的表，则此方法可能需要较长的时间来显示列表。  
   
  **选择要包括在 CDC 实例中的表**  
  单击要包含的任何表旁边的复选框，然后单击“添加”  。 相应的表将添加到新建实例向导的 **“选择表和列”** 页的列表中。  
@@ -44,7 +44,7 @@ ms.locfileid: "62835262"
 > [!NOTE]  
 >  如果您选择包含不支持的数据类型的表，将会看到一条错误消息，并且将不会包含该表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何创建 SQL Server 更改数据库实例](how-to-create-the-sql-server-change-database-instance.md)   
  [选择 Oracle 表和列](select-oracle-tables-and-columns.md)  
   

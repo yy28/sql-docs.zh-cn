@@ -1,5 +1,5 @@
 ---
-title: 卸载报表生成器 （报表生成器） 的独立版本 |Microsoft Docs
+title: 卸载报表生成器（报表生成器）的独立版本 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108661"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>卸载报表生成器的独立版本（报表生成器）
@@ -30,7 +30,7 @@ ms.locfileid: "66108661"
   
 2.  在“控制面板”中，单击 **“程序和功能”** 。  
   
-3.  在“名称”  列表中找到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表生成器并单击它。  
+3.  在“名称”[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]列表中找到 **** 报表生成器并单击它。  
   
 4.  单击 **“卸载”** 。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66108661"
   
 1.  在 **“开始”** 菜单上，单击 **“运行”** 。  
   
-2.  在中**打开**文本框中，键入 `cmd.`  
+2.  在 "**打开**" 文本框中，键入`cmd.`  
   
 3.  在命令提示符窗口中，导航到包含 ReportBuilder3_x86.msi 的文件夹。  
   
@@ -54,8 +54,8 @@ ms.locfileid: "66108661"
   
 1.  按 **Enter**。  
   
-## <a name="see-also"></a>请参阅  
- [安装、 卸载和报表生成器支持](../install-uninstall-and-report-builder-support.md)   
- [安装报表生成器的独立版本&#40;报表生成器&#41;](install-report-builder.md)  
+## <a name="see-also"></a>另请参阅  
+ [安装、卸载和报表生成器支持](../install-uninstall-and-report-builder-support.md)   
+ [安装报表生成器 &#40;报表生成器的独立版本&#41;](install-report-builder.md)  
   
   

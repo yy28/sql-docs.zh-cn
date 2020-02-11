@@ -1,5 +1,5 @@
 ---
-title: SQLBindParameter | Microsoft Docs
+title: SQLBindParameter |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aec817b4ea5ada840ce7fe843a42f636b7494219
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787768"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  当用于为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序提供数据时， **SQLBindParameter**可以消除数据转换的负担，从而提高应用程序的客户端和服务器组件的性能。 其他好处包括在插入或更新近似数字数据类型时减少精度损失。  
+  **** 当用于为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client ODBC 驱动程序提供数据时，SQLBindParameter 可以消除数据转换的负担，从而提高应用程序的客户端和服务器组件的性能。 其他好处包括在插入或更新近似数字数据类型时减少精度损失。  
   
 > [!NOTE]  
 >  如果将**char**和**wchar**类型数据插入到 image 列中，则使用传入的数据的大小，而不是转换为二进制格式后数据的大小。  
@@ -33,7 +33,7 @@ ms.locfileid: "73787768"
   
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序，则在绑定输入参数时指定 SQL_PARAM_INPUT。 在绑定用 OUTPUT 关键字定义的存储过程参数时，只指定 SQL_PARAM_OUTPUT 或 SQL_PARAM_INPUT_OUTPUT。  
   
- 如果绑定参数数组的数组元素导致语句执行出错，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序的[SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)不可靠。 ODBC 语句属性 SQL_ATTR_PARAMS_PROCESSED_PTR 报告在发生错误前已处理的行数。 然后，如有必要，该应用程序将遍历其参数状态数组，以便发现成功执行的语句数目。  
+ [](../../relational-databases/native-client-odbc-api/sqlrowcount.md)如果绑定参数数组的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数组元素导致语句执行出错，则 Native Client ODBC 驱动程序的 SQLRowCount 不可靠。 ODBC 语句属性 SQL_ATTR_PARAMS_PROCESSED_PTR 报告在发生错误前已处理的行数。 然后，如有必要，该应用程序将遍历其参数状态数组，以便发现成功执行的语句数目。  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 字符类型的绑定参数  
  如果传入的 SQL 数据类型为字符类型，则*ColumnSize*的大小以字符（而非字节）为单位。 如果数据字符串的长度大于8000，则应将*ColumnSize*设置为**SQL_SS_LENGTH_UNLIMITED**，这表示 SQL 类型的大小没有限制。  
@@ -47,15 +47,15 @@ ms.locfileid: "73787768"
   
  有关将参数映射到表值参数的描述符字段的信息，请参阅[表值参数和列值的绑定和数据传输](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)。  
   
- 有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有关表值参数的详细信息，请参阅[ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>SQLBindParameter 对日期和时间增强功能的支持  
- 日期/时间类型的参数值按[从 C 转换到 SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)中所述的方式进行转换。 请注意， **SQL_SS_TIMESTAMPOFFSET_STRUCT** **SQL_SS_TIME2_STRUCT**如果使用了类型为**time**和**Datetimeoffset**的参数，则必须将*ValueType*指定为**SQL_C_DEFAULT**或**SQL_C_BINARY** 。  
+ 日期/时间类型的参数值按[从 C 转换到 SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)中所述的方式进行转换。 请注意， **SQL_SS_TIMESTAMPOFFSET_STRUCT****SQL_SS_TIME2_STRUCT**如果使用了类型为**time**和**Datetimeoffset**的参数，则必须将*ValueType*指定为**SQL_C_DEFAULT**或**SQL_C_BINARY** 。  
   
- 有关详细信息，请参阅[日期和时间&#40;改进&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关详细信息，请参阅[ODBC&#41;&#40;日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>SQLBindParameter 对大型 CLR UDT 的支持  
- **SQLBindParameter**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[大型 CLR 用户定义类型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLBindParameter**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   

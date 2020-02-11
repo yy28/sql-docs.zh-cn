@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01f37190ac96486235cbdd4477a0eed0e9974389
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107279"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>嵌入数据集和共享数据集（报表生成器和 SSRS）
@@ -22,7 +22,7 @@ ms.locfileid: "66107279"
   
 -   **共享数据集。** 共享数据集发布在报表服务器上，可由多个报表使用。 共享数据集必须基于共享数据源。 可以通过创建缓存刷新计划来对共享数据集进行缓存和计划。  
   
--   **嵌入数据集。** 嵌入数据集在单个报表中定义和使用。  
+-   **嵌入的数据集。** 嵌入数据集在单个报表中定义和使用。  
   
  这两种数据源的区别在于其创建、存储和管理的方式不同。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66107279"
   
 3.  下表将可为报表服务器上共享数据集的定义配置的属性与可为报表定义中共享数据集的实例配置的属性进行了比较。  
   
-    |属性|有关定义的配置说明|有关实例的配置说明|  
+    |properties|有关定义的配置说明|有关实例的配置说明|  
     |--------------|--------------------------------------------|------------------------------------------|  
     |查询文本|配置查询，包括将查询定义为表达式。|无法更改查询。|  
     |查询参数|不能引用报表参数<br /><br /> 包含默认值<br /><br /> 包含只读标志|配置定义中未标记为只读的参数|  
@@ -58,12 +58,12 @@ ms.locfileid: "66107279"
   
  若要创建或编辑嵌入数据集，请使用“报表数据”窗格。 在创建数据集后，您可以在 **“数据集属性”** 对话框中配置属性。  
   
-## <a name="see-also"></a>请参阅  
- [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [嵌入和共享的数据连接或数据源 &#40;报表生成器和 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [创建共享数据集或嵌入数据集 &#40;报表生成器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)   
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)   
  [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

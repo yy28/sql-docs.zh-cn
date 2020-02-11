@@ -1,5 +1,5 @@
 ---
-title: 开发人员&#39;指南 （复制） |Microsoft Docs
+title: 开发人员&#39;指南（复制） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce595518fc33903a9438a9a702d19725fa605f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721929"
 ---
-# <a name="developer39s-guide-replication"></a>开发人员&#39;指南 （复制）
+# <a name="developer39s-guide-replication"></a>开发人员&#39;指南（复制）
   如果能够以编程方式配置、维护和监视复制拓扑，则不仅可以简化重复性的复制任务，而且还可以改善基于复制的应用程序的用户体验。 通过复制编程，最终用户可以获得自定义的复制功能，既无须熟悉复制存储过程和复制代理可执行文件，也无须使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 实现的复制用户界面。  
   
  在下面的应用场景中，您的应用程序可从对复制服务的编程访问中获益：  
@@ -46,7 +46,7 @@ ms.locfileid: "62721929"
  [复制管理对象概念](replication-management-objects-concepts.md)  
  解释使用复制管理对象 (RMO) 的相关概念。 复制管理对象是一个封装了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的复制功能的托管代码程序集。  
   
- [复制代理可执行文件概念](replication-agent-executables-concepts.md)  
+ [Replication Agent Executables Concepts](replication-agent-executables-concepts.md)  
  介绍如何使用复制代理可执行文件。  
 
   

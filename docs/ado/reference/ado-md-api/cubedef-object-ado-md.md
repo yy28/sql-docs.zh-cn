@@ -1,5 +1,5 @@
 ---
-title: CubeDef 对象 (ADO MD) |Microsoft Docs
+title: CubeDef 对象（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,48 +16,48 @@ ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61795a8cb10fb0b469f89012d52dfb4723aa0a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949787"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 对象 (ADO MD)
-表示从多维架构，其中包含一组相关的维度的多维数据集。  
+表示多维架构中的一个多维数据集，其中包含一组相关的维度。  
   
 ## <a name="remarks"></a>备注  
- 使用集合和属性的**CubeDef**对象，您可以执行以下操作：  
+ 使用**CubeDef**对象的集合和属性，可以执行以下操作：  
   
--   识别**CubeDef**与[名称](../../../ado/reference/ado-md-api/name-property-ado-md.md)属性。  
+-   标识具有[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)属性的**CubeDef** 。  
   
--   返回一个字符串，描述与多维数据集[说明](../../../ado/reference/ado-md-api/description-property-ado-md.md)属性。  
+-   返回一个字符串，该字符串描述具有[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)属性的多维数据集。  
   
--   返回构成了与多维数据集的维度[维度](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)集合。  
+-   返回与[维度](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)集合构成多维数据集的维度。  
   
--   获取有关其他信息**CubeDef**与标准的 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+-   获取有关具有标准 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合的**CubeDef**的其他信息。  
   
- **属性**集合包含提供程序提供的属性。 下表列出了可能可用的属性。 实际的属性列表可能不同的提供程序实现根据。 请参阅可用属性的更完整的列表为提供程序的文档。  
+ **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |CatalogName|此多维数据集所属的目录的名称。|  
-|CreatedOn|日期和时间的多维数据集创建。|  
-|CubeGUID|多维数据集的 GUID。|  
+|Event.manualintervention.createdon|多维数据集的创建日期和时间。|  
+|CubeGUID|多维数据集 GUID。|  
 |CubeName|多维数据集的名称。|  
 |CubeType|多维数据集的类型。|  
-|DataUpdatedBy|执行的最后一个数据更新的人员的用户 ID。|  
-|描述|多维数据集的贴切描述。|  
-|LastSchemaUpdate|日期和时间的上次架构更新。|  
-|SchemaName|此多维数据集所属的架构的名称。|  
-|SchemaUpdatedBy|执行上次架构更新的人员的用户 ID。|  
+|DataUpdatedBy|执行上次数据更新的人员的用户 ID。|  
+|说明|多维数据集的有意义的说明。|  
+|LastSchemaUpdate|上次架构更新的日期和时间。|  
+|SchemaName|此多维数据集所属架构的名称。|  
+|SchemaUpdatedBy|执行最后一个架构更新的人员的用户 ID。|  
   
  本部分包含以下主题。  
   
--   [属性、 方法和事件](../../../ado/reference/ado-md-api/cubedef-object-properties-methods-and-events.md)  
+-   [属性、方法和事件](../../../ado/reference/ado-md-api/cubedef-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>请参阅  
- [CubeDef 示例 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [目录对象 (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
- [CubeDefs 集合 (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
- [维度集合 (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
+## <a name="see-also"></a>另请参阅  
+ [CubeDef 示例（VBScript）](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
+ [目录对象（ADO MD）](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
+ [CubeDefs 集合（ADO MD）](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
+ [维度集合（ADO MD）](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

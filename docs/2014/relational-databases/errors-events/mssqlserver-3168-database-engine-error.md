@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ea24081f4b3a41211f3bd8d6bba52aaec8b74fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868739"
 ---
-# <a name="mssqlserver3168"></a>MSSQLSERVER_3168
+# <a name="mssqlserver_3168"></a>MSSQLSERVER_3168
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62868739"
 |符号名称|LDDB_SYSTEMWRONGVER|  
 |消息正文|无法还原设备 %ls 上的系统数据库备份，因为创建该数据库的服务器版本 (%ls) 与此服务器 (%ls) 的版本不同。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  不能在与原来执行备份的服务器内部版本不同的内部版本上还原系统数据库（**master**、**model** 或 **msdb**）的备份。  
   
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.locfileid: "62868739"
 ## <a name="user-action"></a>用户操作  
  在此情况下的还原过程相当复杂，应在不得已的情况下才使用。 有关详细信息，请参阅“[无法将系统数据库备份还原到不同内部版本的 SQL Server](https://support.microsoft.com/kb/264474)”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份和还原系统数据库 (SQL Server)](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
   

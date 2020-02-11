@@ -1,5 +1,5 @@
 ---
-title: 常规属性页上，共享数据集 （报表管理器） |Microsoft Docs
+title: "\"常规属性\" 页，共享数据集（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109065"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>共享数据集的“常规”属性页（报表管理器）
@@ -33,7 +33,7 @@ ms.locfileid: "66109065"
   
 2.  悬停在该共享数据集之上，然后单击下拉箭头。  
   
-3.  在下拉列表中，单击 **“管理”** 。 此时，将打开“常规”属性页。  
+3.  在下拉列表中，单击 **“管理”**。 此时，将打开“常规”属性页。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -45,30 +45,30 @@ ms.locfileid: "66109065"
  **在列表视图中隐藏**  
  对正在报表管理器中使用列表视图模式的用户隐藏共享数据集。 列表视图模式是浏览报表服务器文件夹层次结构时的默认视图格式。 在列表视图中，项的名称和说明可跨越页面。 备用格式为详细信息视图。 详细信息视图省略了说明，但包含项的其他信息。 虽然可以在列表视图中隐藏项，但不能在详细信息视图中隐藏项。 如果希望限制访问项，必须创建角色分配。  
   
- **查询执行超时值**  
- 键入查询在多长时间后超时（秒）。如果该值为 0，则查询将不会超时。  
+ **查询执行超时**  
+ 键入查询超时前等待的秒数。如果为0，则查询不会超时。  
   
- **Apply**  
- 保存更改。  
+ **应用**  
+ 保存所做更改。  
   
  **删除**  
  从报表服务器数据库中删除共享数据集。 删除共享数据集将停用所有报表或缓存的版本。 若要重新激活报表，必须在报表创作工具中打开每个报表，用相同的名称和相同的字段集合指定数据集。 或者，可以更新每个数据区域引用以使用另一个具有相同字段集合的数据集。  
   
- **“移动”**  
- 在报表服务器文件夹层次结构中重新定位共享数据集。 单击此按钮将打开“移动项”页，可以在该页浏览文件夹以选择新的文件夹位置。 有关详细信息，请参阅[移动项页&#40;报表管理器&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。  
+ **移动**  
+ 在报表服务器文件夹层次结构中重新定位共享数据集。 单击此按钮将打开“移动项”页，可以在该页浏览文件夹以选择新的文件夹位置。 有关详细信息，请参阅报表管理器&#41;上的 "[移动项" 页 &#40;](../../2014/reporting-services/move-items-page-report-manager.md)。  
   
  **下载**  
  提取共享数据集定义的副本。 根据计算机上所定义的文件关联的不同，文件将在 Visual Studio 或其他应用程序中打开。 大多数情况下，共享数据集将以 XML 文件形式打开。  
   
- **替换**  
+ **全部**  
  将共享数据集定义替换为文件系统上 .rsd 文件中的其他定义。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [“内容”页（报表管理器）](../../2014/reporting-services/contents-page-report-manager.md)   
- [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
- [缓存刷新选项&#40;报表管理器&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
- [缓存页，共享数据集&#40;报表管理器&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
+ ["内容" 页 &#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [报表管理器 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
+ [缓存刷新选项 &#40;报表管理器&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
+ [缓存页，共享数据集 &#40;报表管理器&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
  [管理共享数据集](report-data/manage-shared-datasets.md)   
  [缓存共享数据集 (SSRS)](report-server/cache-shared-datasets-ssrs.md)  
   

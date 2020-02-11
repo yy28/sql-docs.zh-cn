@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244964"
 ---
 # <a name="database-engine-scripting"></a>数据库引擎脚本
@@ -73,13 +73,13 @@ ms.locfileid: "75244964"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|介绍如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的代码和文本编辑器来以交互方式开发、调试和运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本|[查询和文本编辑器 &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
+|介绍如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的代码和文本编辑器来以交互方式开发、调试和运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本|[查询和文本编辑器 (SQL Server Management Studio)](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
 |介绍如何使用 `sqlcmd` 实用工具从命令提示符运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，包括以交互方式开发脚本的能力。|[sqlcmd 操作指南主题](../../database-engine/sqlcmd-how-to-topics.md)|  
 |介绍如何将 SQL Server 组件集成到 Windows PowerShell 2.0 环境中，然后生成 PowerShell 脚本以便管理 SQL Server 实例和对象。|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
-|介绍如何使用 **“生成和发布脚本”** 向导创建从数据库重新创建一个或多个对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。|[&#40;SQL Server Management Studio 生成脚本&#41;](generate-scripts-sql-server-management-studio.md)|  
+|介绍如何使用 **“生成和发布脚本”** 向导创建从数据库重新创建一个或多个对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。|[生成脚本 (SQL Server Management Studio)](generate-scripts-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   
- [教程：编写 Transact-sql 语句](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [教程：编写 Transact-SQL 语句](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

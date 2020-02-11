@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206849"
 ---
 # <a name="maintenance-plans"></a>维护计划
@@ -44,7 +44,7 @@ ms.locfileid: "68206849"
 ## <a name="maintenace-plan-functionality"></a>维护计划功能  
  可以创建维护计划来执行以下任务：  
   
--   用新填充因子重新生成索引来重新组织数据和索引页上的数据。 用新填充因子重新生成索引会确保数据库页中包含的数据量和可用空间的平均分布。 还使得以后能够更快地增长。 有关详细信息，请参阅[为索引指定填充因子](../indexes/specify-fill-factor-for-an-index.md)。  
+-   用新填充因子重新生成索引来重新组织数据和索引页上的数据。 用新填充因子重新生成索引会确保数据库页中包含的数据量和可用空间的平均分布。 还使得以后能够更快地增长。 有关详细信息，请参阅 [为索引指定填充因子](../indexes/specify-fill-factor-for-an-index.md)。  
   
 -   通过删除空数据库页压缩数据文件。  
   

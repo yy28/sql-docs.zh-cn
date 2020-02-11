@@ -1,5 +1,5 @@
 ---
-title: sp_droprole (TRANSACT-SQL) |Microsoft Docs
+title: sp_droprole （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2573019948a326c9171fc83d62428e7e2f888eb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933812"
 ---
-# <a name="spdroprole-transact-sql"></a>sp_droprole (Transact-SQL)
+# <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   从当前数据库中删除数据库角色。  
   
 > [!IMPORTANT]  
->  在中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]， **sp_droprole**由 DROP ROLE 语句取代。 **sp_droprole**只是为了与早期版本的兼容性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在将来的版本中可能不支持。  
+>  在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中， **sp_droprole**已由 DROP ROLE 语句取代。 提供**sp_droprole**仅是为了兼容早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在未来版本中可能不支持。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,21 +42,21 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @rolename = ] 'role'` 是要从当前数据库中删除的数据库角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须已存在于当前数据库。  
+`[ @rolename = ] 'role'`要从当前数据库中删除的数据库角色的名称。 *role*是**sysname**，无默认值。 *角色*必须已存在于当前数据库中。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 只有数据库角色可以通过使用移除**sp_droprole**。  
+ 只能使用**sp_droprole**删除数据库角色。  
   
- 不能删除带有现有成员的数据库角色。 必须删除数据库角色的所有成员，然后才能删除该数据库角色。 若要从角色中删除用户，请使用**sp_droprolemember**。 如果任何用户仍是该角色的成员**sp_droprole**显示这些成员。  
+ 不能删除带有现有成员的数据库角色。 必须删除数据库角色的所有成员，然后才能删除该数据库角色。 若要从角色中删除用户，请使用**sp_droprolemember**。 如果任何用户仍是该角色的成员， **sp_droprole**将显示这些成员。  
   
- 固定角色的成员以及**公共**不能删除角色。  
+ 固定角色和**公共**角色无法删除。  
   
  如果角色拥有任何安全对象，则不能将其删除。 在删除拥有安全对象的应用程序角色之前，必须首先移交安全对象的所有权或将其删除。 使用 ALTER AUTHORIZATION 更改必须删除的对象的所有者。  
   
- **sp_droprole**不能在用户定义的事务内执行。  
+ 不能在用户定义的事务中执行**sp_droprole** 。  
   
 ## <a name="permissions"></a>权限  
  需要对角色具有 CONTROL 权限。  
@@ -69,12 +69,12 @@ EXEC sp_droprole 'Sales';
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [DROP ROLE (Transact-SQL)](../../t-sql/statements/drop-role-transact-sql.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sp_dropapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md)   
+ [sp_dropapprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

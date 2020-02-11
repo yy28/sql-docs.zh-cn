@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871693"
 ---
 # <a name="database-states"></a>数据库状态
@@ -39,7 +39,7 @@ ms.locfileid: "62871693"
 ## <a name="database-state-definitions"></a>数据库状态定义  
  下表定义了数据库的状态。  
   
-|State|定义|  
+|状态|定义|  
 |-----------|----------------|  
 |ONLINE|可以对数据库进行访问。 即使可能尚未完成恢复的撤消阶段，主文件组仍处于在线状态。|  
 |OFFLINE|数据库无法使用。 数据库由于显式的用户操作而处于离线状态，并保持离线状态直至执行了其他的用户操作。 例如，可能会让数据库离线以便将文件移至新的磁盘。 然后，在完成移动操作后，使数据库恢复到在线状态。|  

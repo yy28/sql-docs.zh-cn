@@ -15,13 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109692"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>创建数据驱动订阅（SSRS 教程）
+  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供数据驱动订阅功能，这样您便可根据动态订阅服务器数据自定义报表的分发。 数据驱动订阅专门用于下列情况：  
   
 -   向大型收件人池分发报表，该池的成员身份可能随着分发的不同而有所变化。 例如，向当前的所有客户分发月报表。  
@@ -36,20 +37,20 @@ ms.locfileid: "66109692"
  [第 1 课：创建示例订阅服务器数据库](lesson-1-creating-a-sample-subscriber-database.md)  
  在这一课中，您将学习如何创建包含订阅服务器信息的本地 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库。  
   
- [第 2 课：修改报表数据源属性](lesson-2-modifying-the-report-data-source-properties.md)  
+ [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
  在这一课中，您将学习如何修改报表数据源属性以便能够以无人参与的方式运行报表。 无人参与的处理要求存储凭据。 您还将修改报表数据集以便包括订阅服务器数据提供的参数。  
   
- [第 3 课：定义数据驱动订阅](lesson-3-defining-a-data-driven-subscription.md)  
+ [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
  在这一课中，您将学习如何定义数据驱动订阅。 这一课引导您完成数据驱动订阅向导中的每一页。  
   
 ## <a name="requirements"></a>要求  
  数据驱动订阅通常由报表服务器管理员创建和维护。 要创建数据驱动订阅，必须要具备生成查询的专业技术，了解包含订阅服务器数据的数据源，同时还要拥有对报表服务器的提升权限。  
   
- 本教程将使用在本教程中创建的报表[创建基本表报表&#40;SSRS 教程&#41;](create-a-basic-table-report-ssrs-tutorial.md)和中的数据 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ 本教程将使用教程[创建基本表报表中创建的报表 &#40;SSRS 教程&#41;](create-a-basic-table-report-ssrs-tutorial.md)和数据来自[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  若要使用本教程，您的系统必须安装以下组件：  
   
--   支持数据驱动订阅的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 有关详细信息，请参阅[各版本和 SQL Server 2014 的组件](../sql-server/editions-and-components-of-sql-server-2016.md)。  
+-   支持数据驱动订阅的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 有关详细信息，请参阅[SQL Server 2014 的版本和组件](../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 -   必须在本机模式下运行报表服务器。 本教程中介绍的用户界面基于本机模式报表服务器。 在 SharePoint 模式报表服务器上支持订阅，但用户界面将不同于在本教程中介绍的用户界面。  
   
@@ -65,8 +66,8 @@ ms.locfileid: "66109692"
   
  **学完本教程的估计时间：** 30 分钟。 如果您还没有完成基本报表教程，则还需要 30 分钟。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
- [创建基本表报表（SSRS 教程）](create-a-basic-table-report-ssrs-tutorial.md)  
+ [创建基本表报表 &#40;SSRS 教程&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3308899190aa63ebb9be93c4c9af15d5e0f94600
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830391"
 ---
 # <a name="send-mail-task"></a>发送邮件任务
@@ -58,7 +58,7 @@ ms.locfileid: "62830391"
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>发送邮件任务可用的自定义日志记录消息  
  下表列出了发送邮件任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志项|描述|  
+|日志项|说明|  
 |---------------|-----------------|  
 |`SendMailTaskBegin`|指示任务开始发送电子邮件。|  
 |`SendMailTaskEnd`|指示任务已发送完电子邮件。|  
@@ -69,9 +69,9 @@ ms.locfileid: "62830391"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题之一：  
   
--   [发送邮件任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [&#40;常规页发送邮件任务编辑器&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [发送邮件任务编辑器（“邮件”页）](../send-mail-task-editor-mail-page.md)  
+-   [&#40;邮件页发送邮件任务编辑器&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62830391"
   
 -   shareourideas.com 上的技术文章 [如何在 C# 中发送具有传递通知的电子邮件](https://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](integration-services-tasks.md)   
  [控制流](control-flow.md)  
   
