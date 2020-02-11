@@ -1,5 +1,5 @@
 ---
-title: 数据集属性对话框，参数 （报表生成器） |Microsoft Docs
+title: "\"数据集属性\" 对话框-\"参数（报表生成器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109384"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>“数据集属性”对话框 -&gt;“参数”（报表生成器）
-  选择**参数**上**数据集属性**对话框可以添加、 更改和删除查询参数。  
+  选择 "**数据集属性**" 对话框中的 "**参数**" 可以添加、更改和删除查询参数。  
   
  对于嵌入数据集，选项应用于报表定义中的数据集。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "66109384"
  有关详细信息，请参阅[嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ## <a name="options"></a>选项  
- **“添加”**  
+ **添加**  
  将新的参数添加到列表。  
   
  **删除**  
@@ -65,7 +65,7 @@ ms.locfileid: "66109384"
   
  选择此选项可在共享数据集定义中将此参数标记为只读。 在将共享数据集添加到报表时，该参数不出现在属性中。 在报表服务器上缓存共享数据集时，不能更改该值。  
   
- **可以为 Null**  
+ **Nullable**  
  仅限共享数据集。  
   
  选择此选项可允许 Null 值。  
@@ -75,15 +75,15 @@ ms.locfileid: "66109384"
   
  当对报表参数的引用位于共享数据集筛选器的表达式中而非查询中时，选择此选项。 在您选择此选项后，无需在查询运行时为此参数指定默认值。  
   
-## <a name="see-also"></a>请参阅  
- [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [数据集属性对话框中，查询&#40;报表生成器&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+## <a name="see-also"></a>另请参阅  
+ [报表生成器对话框、窗格和向导的帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ ["数据集属性" 对话框-> "查询 &#40;报表生成器&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)   
  [教程：向报表添加参数（报表生成器）](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [报表参数（报表生成器和报表设计器）](report-design/report-parameters-report-builder-and-report-designer.md)   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [查询设计器（报表生成器）](../../2014/reporting-services/query-designers-report-builder.md)   
+ [查询设计器 &#40;报表生成器&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [创建共享数据集或嵌入数据集 &#40;报表生成器和 SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
   

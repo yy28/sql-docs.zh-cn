@@ -1,5 +1,5 @@
 ---
-title: 第 8 课：创建数据筛选器 |Microsoft Docs
+title: 第 8 课：创建数据筛选器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108390"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 课：创建数据筛选器
@@ -35,17 +35,17 @@ ms.locfileid: "66108390"
   
 1.  打开子报表。  
   
-2.  选择 tablix 中的列标题，右键单击列标题上方显示的灰色单元格，然后单击**Tablix 属性**。  
+2.  选择 tablix 中的列标题，右键单击列标题上方显示的灰色单元，然后单击 " **Tablix 属性**"。  
   
-3.  单击**筛选器**页上，然后依次**添加**。  
+3.  单击 "**筛选器**" 页，然后单击 "**添加**"。  
   
-4.  在中**表达式**字段中，单击`ProductID`从下拉列表。 筛选器即应用于此列。  
+4.  在 "**表达式**" 字段中`ProductID` ，单击下拉列表中的。 筛选器即应用于此列。  
   
-5.  单击等号 ( **=** ) 中的运算符**运算符**下拉列表。  
+5.  在 "运算符"**=** 下拉列表中单击**** 等于（）运算符。  
   
-6.  单击表达式按钮旁边**值**字段中，单击**参数**中**类别**区域中，然后再双击`productid`中**值**区域。 **设置表达式：值**字段现在应包含类似于表达式 **= 参数 ！ 产品 id。值**。  
+6.  单击 "**值**" 字段旁边的 "表达式" 按钮，在 "**类别**" 区域中单击 "**参数**" `productid` ，然后在 "**值**" 区域中双击。 “为以下项设置表达式: 值”字段现在应包含类似于 =Parameters!productid.Value 的表达式   。  
   
-7.  单击**确定，** 并**确定**中再次**Tablix 属性**对话框。  
+7.  单击 **"确定"，** 然后在 " **Tablix 属性**" 对话框中再次单击 **"确定"** 。  
   
 8.  保存 .rdlc 文件。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66108390"
   
 1.  在解决方案资源管理器中，展开 Default.aspx，然后双击 Default.aspx.cs。  
   
-2.  创建新的函数接受的参数`productid`，类型为 Integer，并返回`datatable`对象，并执行以下操作。  
+2.  创建一个新函数，该函数接受类型`productid`为 Integer 的参数，并返回`datatable`一个对象，并执行以下。  
   
-    1.  创建数据集的实例`DataSet2`，其中的第 2 步中创建[第 4 课：定义用于子报表的数据连接和数据表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
+    1.  创建在第`DataSet2` [4 课：定义用于子报表的数据连接和](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)数据表的步骤2中创建的数据集的实例。  
   
-    2.  创建连接到 SqlServer 数据库以执行中定义的查询**第 4 课：定义数据连接和 DataTable 用于子报表**。  
+    2.  创建一个到 SqlServer 数据库的连接，以执行在 **第 4 课：定义用于子报表的数据连接和 DataTable**中定义的查询。  
   
     3.  该查询将返回未筛选的数据。  
   
@@ -105,9 +105,9 @@ ms.locfileid: "66108390"
   
 1.  打开 Default.aspx。  
   
-2.  右键单击 ReportViewer 控件，然后单击**属性。**  
+2.  右键单击 ReportViewer 控件，然后单击 "**属性"。**  
   
-3.  上**属性**页上，单击**事件**图标。  
+3.  在 "**属性**" 页上，单击 "**事件**" 图标。  
   
 4.  双击**钻取**事件。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66108390"
   
     1.  从 *DrillthroughEventArgs* 参数提取子报表对象引用。  
   
-    2.  调用函数， `GetPurchaseOrderDetail`  
+    2.  调用函数，`GetPurchaseOrderDetail`  
   
     3.  将 `PurchaseOrderDetail` DataTable 与报表的相应数据源绑定。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "66108390"
             }  
         ```  
   
-6.  保存该文件。  
+6.  保存文件。  
   
 ## <a name="query-filter"></a>查询筛选器  
  需要完成以下任务才能实现查询筛选器。  
@@ -165,9 +165,9 @@ ms.locfileid: "66108390"
   
 2.  创建一个新函数，该函数接受类型为 Integer 的参数 `productid` 并返回 `datatable` 对象，然后执行以下操作。  
   
-    1.  创建数据集的实例`DataSet2`，其中的第 2 步中创建[第 4 课：定义用于子报表的数据连接和数据表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
+    1.  创建在第`DataSet2` [4 课：定义用于子报表的数据连接和](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)数据表的步骤2中创建的数据集的实例。  
   
-    2.  创建连接到 SqlServer 数据库以执行查询定义**第 4 课：定义数据连接和 DataTable 用于子报表**。  
+    2.  创建一个到 SqlServer 数据库的连接，以执行在 **第 4 课：定义用于子报表的数据连接和 DataTable**中定义的查询。  
   
     3.  该查询将包括参数 `productid` 以确保根据在父报表中选择的 `ProductID` 筛选所返回的数据。  
   
@@ -216,9 +216,9 @@ ms.locfileid: "66108390"
   
 1.  打开 Default.aspx。  
   
-2.  右键单击 ReportViewer 控件，然后依次**属性**。  
+2.  右键单击 ReportViewer 控件，然后单击 "**属性**"。  
   
-3.  上**属性**窗格中，单击**事件**图标。  
+3.  在 "**属性**" 窗格中，单击 "**事件**" 图标。  
   
 4.  双击**钻取**事件。  
   
@@ -240,7 +240,7 @@ ms.locfileid: "66108390"
   
     4.  调用函数 `GetPurchaseOrderDetail` 并传递参数 `ProductID` 的值。  
   
-    5.  将绑定`PurchaseOrderDetail`DataTable 与报表的相应数据源。  
+    5.  将`PurchaseOrderDetail` DataTable 与报表的相应数据源绑定。  
   
          填写完整的事件处理程序代码将类似于以下内容。  
   
@@ -281,7 +281,7 @@ ms.locfileid: "66108390"
             }  
         ```  
   
-6.  保存该文件。  
+6.  保存文件。  
   
 ## <a name="next-task"></a>下一个任务  
  您已成功创建了一个数据筛选器，用于为子报表定义的数据表。 接下来，将生成并运行网站应用程序。  

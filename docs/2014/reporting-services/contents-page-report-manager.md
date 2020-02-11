@@ -1,5 +1,5 @@
 ---
-title: 内容页 （报表管理器） |Microsoft Docs
+title: "\"内容\" 页（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109726"
 ---
 # <a name="contents-page-report-manager"></a>“内容”页（报表管理器）
@@ -26,7 +26,7 @@ ms.locfileid: "66109726"
  **新建文件夹**  
  单击此选项可打开“新建文件夹”页，通过此页可以在当前文件夹下创建新文件夹。  
   
- **新的数据源**  
+ **新数据源**  
  单击此选项可打开“新建数据源”页，通过此页可以创建共享数据源项。  
   
  **报表生成器**  
@@ -38,12 +38,12 @@ ms.locfileid: "66109726"
  **上传文件**  
  单击此选项可打开“上载文件”页，通过此页可以将文件从文件系统复制到报表服务器。 可以通过上载文件添加报表和资源（例如图表、文档或希望与报表一起保存的任何其他附属内容）。 上载的文件存储在报表服务器数据库中并在该数据库中进行管理。 要上载报表，请选择具有 .rdl 扩展名的文件。  
   
- **详细信息视图**  
+ **“详细信息视图”**  
  单击以在列表中显示“内容”页，其中包含有关项目的其他信息。 在 **“详细信息视图”** 中，可以使用 **“删除”** 和 **“移动”** 按钮删除和重新定位文件夹中的项。  
   
  悬停在某个项之上，单击下拉箭头以打开下拉菜单，从中可以访问和配置所选项的属性。  
   
- **平铺视图**  
+ **图块视图**  
  单击以显示“内容”页，但没有 **“详细信息视图”** 中的详细信息。 当您打开一个文件夹或访问报表管理器主页时，列表视图为默认视图。  
   
  悬停在某个项之上，单击下拉箭头以打开下拉菜单，从中可以访问和配置所选项的属性。  
@@ -51,10 +51,10 @@ ms.locfileid: "66109726"
  **删除**  
  单击此选项可删除文件夹或其他项。 单击 **“删除”** 之前，请选中要删除的每个项旁边的复选框。  
   
- **“移动”**  
+ **移动**  
  单击此选项可在文件夹层次结构中重新定位项。 单击 **“移动”** 之前，请选中要移动的每个项旁边的复选框。 这将打开“移动项”页，可以在此页上浏览文件夹以选择新的位置。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [报表服务器内容管理（SSRS 本机模式）](report-server/report-server-content-management-ssrs-native-mode.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  

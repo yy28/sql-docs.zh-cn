@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313764"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>使用“结果”窗格中的数据 (Visual Database Tools)
@@ -115,12 +115,12 @@ ms.locfileid: "63313764"
 ### <a name="what-can-not-be-represented-fully"></a>不能完全呈现的内容  
  从数据库返回“结果”窗格的内容很大程度上受您所使用的数据源的提供程序控制。 “结果”窗格并不总是能转换所有数据库管理系统中的数据。 在以下情况下便是如此。  
   
--   Binary 数据类型对于在“结果”窗格中执行操作的人来说通常没什么用处，并且可能需要很长时间才能下载。 因此它们由 *\<二进制数据 >* 或*Null*。  
+-   Binary 数据类型对于在“结果”窗格中执行操作的人来说通常没什么用处，并且可能需要很长时间才能下载。 因此它们由* \<二进制数据表示>* 或*Null*。  
   
--   并不能始终保留精度和小数位数。 例如，结果窗格支持的精度为 27。 如果数据具有更高的精度的数据类型的数据可能会被截断或可能由 *\<无法读取数据 >* 。  
+-   并不能始终保留精度和小数位数。 例如，结果窗格支持的精度为 27。 如果数据的数据类型精度较高，则数据可能会被截断，或者可能由* \<无法读取数据>来*表示。  
   
-## <a name="see-also"></a>请参阅  
- [执行基本的查询操作&#40;可视化数据库工具&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [在 Visual Database Tools &#40;执行基本的查询操作&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
  [指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

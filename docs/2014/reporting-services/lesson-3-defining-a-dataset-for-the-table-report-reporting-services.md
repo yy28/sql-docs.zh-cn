@@ -1,5 +1,5 @@
 ---
-title: 第 3 课：定义表报表的数据集 (Reporting Services) | Microsoft Docs
+title: 第 3 课：为表报表定义数据集 (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,28 +11,28 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f4c78328e02215520b8d33213e01871f010f62d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108463"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 课：定义表报表的数据集 (Reporting Services)
-  定义数据源后，您需要定义数据集。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，在报表中使用的数据包含在“数据集”中  。 数据集包括一个指向数据源的指针、将由报表使用的查询以及计算字段和变量。  
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 课：为表报表定义数据集 (Reporting Services)
+  定义数据源后，您需要定义数据集。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，在报表中使用的数据包含在“数据集”中**。 数据集包括一个指向数据源的指针、将由报表使用的查询以及计算字段和变量。  
   
- 可以在报表设计器中使用查询设计器来设计查询。 对于本教程，您将创建用于检索从销售订单信息的查询[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008年**数据库。  
+ 可以在报表设计器中使用查询设计器来设计查询。 在本教程中，您将创建一个查询，用于从[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008**数据库检索销售订单信息。  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>为报表数据定义 Transact-SQL 查询  
   
-1.  在“报表数据”窗格中，单击“新建”，然后单击“数据集…”    。此时将打开 **“数据集属性”** 对话框。  
+1.  在 "**报表数据**" 窗格中，单击 "**新建**"，然后单击 "**数据集 ...**"。"**数据集属性**" 对话框将打开。  
   
-2.  在“名称”框中，键入 AdventureWorksDataset   。  
+2.  在“名称”框中，键入 AdventureWorksDataset********。  
   
-3.  单击“使用在我的报表中嵌入的数据集”  。  
+3.  单击 **“使用在我的报表中嵌入的数据集”**。  
   
-4.  确保您的数据源，AdventureWorks2012，名称处于**数据源**文本框中，并确保**查询类型**是**文本**。  
+4.  请确保数据源的名称 AdventureWorks2012 在 "**数据源**" 文本框中，并确保 "**查询类型**" 为 "**文本**"。  
   
-5.  将以下 Transact-SQL 查询键入（或复制并粘贴）到“查询”框中  。  
+5.  将以下 Transact-SQL 查询键入（或复制并粘贴）到“查询”框中****。  
   
     ```  
     SELECT   
@@ -57,22 +57,22 @@ ms.locfileid: "66108463"
     HAVING ppc.Name = 'Clothing'  
     ```  
   
-6.  （可选）单击“查询设计器”按钮  。 查询将在基于文本的查询设计器中显示。 通过单击“编辑为文本”，可以切换到图形查询设计器  。 通过单击运行来查看查询的结果 **（！）** 查询设计器工具栏上的按钮。  
+6.  （可选）单击“查询设计器”按钮****。 查询将在基于文本的查询设计器中显示。 通过单击“编辑为文本”，可以切换到图形查询设计器****。 通过单击查询设计器工具栏上的 "运行" **（！）** 按钮，查看查询的结果。  
   
      将看到来自 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库中四个不同表的六个字段的数据。 查询利用别名等 Transact-SQL 功能。 例如，SalesOrderHeader 表称为 soh。  
   
-     单击“确定”退出查询设计器  。  
+     单击“确定”退出查询设计器****。  
   
-7.  单击“确定”退出“数据集属性”对话框   。  
+7.  单击“确定”退出“数据集属性”对话框********。  
   
      此时将在“报表数据”窗格中显示 **AdventureWorksDataset** 数据集和字段。  
   
 ## <a name="next-task"></a>下一个任务  
- 您已成功指定了一个用于检索报表数据的查询。 接下来将创建报表布局。 请参阅[第 4 课：向报表添加表 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)。  
+ 您已成功指定了一个用于检索报表数据的查询。 接下来将创建报表布局。 请参阅[第 4 课：向报表添加表 (Reporting Services)](lesson-4-adding-a-table-to-the-report-reporting-services.md)。  
   
-## <a name="see-also"></a>请参阅  
- [查询设计工具在报表设计器的 SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
- [SQL Server 连接类型 (SSRS)](report-data/sql-server-connection-type-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [查询设计工具报表设计器 SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [&#40;SSRS&#41;SQL Server 连接类型](report-data/sql-server-connection-type-ssrs.md)   
  [教程：编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

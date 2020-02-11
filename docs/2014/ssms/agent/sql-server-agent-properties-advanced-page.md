@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aeb0c6c47a9203a7124fbe5d9f4739c52ae430d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63246243"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>SQL Server 代理属性（“高级”页）
-  使用此页可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的高级属性。  
+  使用此页可以查看和修改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务的高级属性。  
   
 ## <a name="options"></a>选项  
  **SQL Server 事件转发**  
@@ -33,7 +33,7 @@ ms.locfileid: "63246243"
  选择要将事件转发到的服务器的名称。  
   
  **未处理的事件**  
- 仅将未处理的事件转发到指定的服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理仅转发警报未对其响应的事件。  
+ 仅将未处理的事件转发到指定的服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理仅转发没有警报响应的事件。  
   
  **所有事件**  
  转发所有事件。 当本地实例中的某个警报响应该事件时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将转发该事件并处理此警报。  
@@ -53,8 +53,8 @@ ms.locfileid: "63246243"
  **并且保持低于此级别**  
  CPU 平均占用时间量必须低于指定的级别， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理才可按照“空闲 CPU”计划运行作业。  
   
-## <a name="see-also"></a>请参阅  
- [创建并将计划附加到作业](create-and-attach-schedules-to-jobs.md)   
+## <a name="see-also"></a>另请参阅  
+ [创建计划并将计划附加到作业](create-and-attach-schedules-to-jobs.md)   
  [管理事件](manage-events.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 配置内存中或 DirectQuery 表格模型数据库的访问权限 |Microsoft Docs
+title: 为表格模型数据库配置内存中或 DirectQuery 访问权限 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55a1a296e6a7b2a2155dea590be9321b22e73451
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067187"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>为表格模型数据库配置内存中或 DirectQuery 访问
   本主题介绍如何更改已部署的表格模型的连接属性，以便能在直接查询模式下使用模型。  
   
- 有关这些属性和配置的最常见的方案的详细信息，请参阅[DirectQuery 部署方案&#40;SSAS 表格&#41;](../directquery-deployment-scenarios-ssas-tabular.md)。  
+ 有关这些属性以及最常见方案的配置的详细信息，请参阅[DirectQuery 部署方案 &#40;SSAS 表格&#41;](../directquery-deployment-scenarios-ssas-tabular.md)。  
   
 ## <a name="requirements"></a>要求  
- 允许在表格模型中使用直接查询模式是一个多步骤过程。 您必须：  
+ 允许在表格模型中使用直接查询模式是一个多步骤过程。 必须：  
   
 1.  确保该模型具有的功能不会导致直接查询模式中出现验证错误。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66067187"
   
 1.  在 SQL Server Management Studio 中，打开已将模型部署到的实例。  
   
-2.  在对象资源管理器，右键单击模型数据库的名称，然后选择**属性**。  
+2.  在对象资源管理器中，右键单击 model 数据库的名称，然后选择 "**属性**"。  
   
-3.  找到的属性**DirectQueryMode**。 若要允许使用关系数据源，则必须将此属性设置为下列值之一：  
+3.  找到 " **DirectQueryMode**" 属性。 若要允许使用关系数据源，则必须将此属性设置为下列值之一：  
   
     -   **DirectQuery**  
   

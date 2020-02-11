@@ -1,5 +1,5 @@
 ---
-title: 添加表对话框 (Analysis Services-多维数据) |Microsoft Docs
+title: "\"添加表\" 对话框（Analysis Services 多维数据） |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b429f115eff1692495e1ded58fb6afadc6e5ee8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062805"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>“添加表”对话框（Analysis Services - 多维数据）
@@ -32,13 +32,13 @@ ms.locfileid: "66062805"
 |**视图**|使用 **“视图”** 选项卡可以显示并选择要添加的视图。|  
 |**函数**|使用 **“函数”** 选项卡可以显示并选择要添加的函数或存储过程。|  
 |**同义词**|使用 **“同义词”** 选项卡可以显示并选择要添加的同义词。|  
-|**刷新**|单击此项将重新加载该对话框上的所有选项卡。|  
-|**“添加”**|单击此项将添加当前所选项。 **注意：** 仅当选择某个项时，启用此选项。|  
+|**“刷新”**|单击此项将重新加载该对话框上的所有选项卡。|  
+|**添加**|单击此项将添加当前所选项。 **注意：** 仅当选择了项时，才会启用此选项。|  
   
-## <a name="see-also"></a>请参阅  
- [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [创建或编辑命名的查询对话框中&#40;Analysis Services-多维数据&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
- [创建轮询查询对话框&#40;Analysis Services-多维数据&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   
- [创建处理查询对话框&#40;Analysis Services-多维数据&#41;](create-processing-query-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ ["创建或编辑命名查询" 对话框 &#40;Analysis Services 多维数据&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
+ ["创建轮询查询" 对话框 &#40;Analysis Services 多维数据&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   
+ ["创建处理查询" 对话框 &#40;Analysis Services 多维数据&#41;](create-processing-query-dialog-box-analysis-services-multidimensional-data.md)  
   
   

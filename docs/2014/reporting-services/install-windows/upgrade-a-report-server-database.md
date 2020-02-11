@@ -15,29 +15,30 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108641"
 ---
 # <a name="upgrade-a-report-server-database"></a>升级报表服务器数据库
   报表服务器数据库可为一个或多个报表服务器实例提供存储。 因为报表服务器数据库架构可能会因为推出新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本而有所变化，所以要求数据库版本与使用的报表服务器实例的版本相匹配。 大多数情况下，报表服务器数据库可以自动升级，您不需要执行任何具体操作。  
   
- **本机模式：** 在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]纯模式下，报表服务器数据库实际包含两个数据库，其默认名称分别为"ReportServer 和 ReportServerTempDB"。  
+ **本机模式：** 在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]纯模式下，Report Server 数据库实际包含两个数据库，其默认名称为 "ReportServer and ReportServerTempDB"。  
   
- **SharePoint 模式：** 在中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式报表服务器数据库实际上是集合的数据库的每个实例创建[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务应用程序。  
+ **SharePoint 模式：** 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式中，Report Server 数据库实际上是为[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务应用程序的每个实例创建的数据库的集合。  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>如何升级本机模式报表服务器数据库  
  以下列表指出了升级报表服务器数据库的各种情况：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序升级报表服务器的单个实例。 在服务启动并且报表服务器确定数据库架构版本与服务器版本不匹配之后，将自动升级报表服务器数据库架构。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序将升级 Report Server 的单个实例。 在服务启动并且报表服务器确定数据库架构版本与服务器版本不匹配之后，将自动升级报表服务器数据库架构。  
   
      服务启动时，报表服务器会检查数据库架构版本以验证它是否与服务器版本相匹配。 如果数据库架构版本较低，该架构将自动升级到报表服务器所需的架构版本。 如果还原或附加一个较低的报表服务器数据库，则自动升级功能特别有用。 将在报表服务器跟踪日志文件中输入一条消息，指示已升级数据库架构版本。  
   
 -   当选择旧版本与新报表服务器实例一起使用时， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器将升级本地或远程报表服务器数据库。 在这种情况下，必须在发生此操作之前确认升级操作。  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器不再提供单独的“升级”按钮或升级脚本。 鉴于报表服务器服务的自动升级功能，这些功能从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始已过时。  
+     
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器不再提供单独的“升级”按钮或升级脚本。 鉴于报表服务器服务的自动升级功能，这些功能从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始已过时。  
   
  架构更新后，无法再将升级回滚到以前的版本。 请务必备份报表服务器数据库，以备需要重新创建先前安装。  
   
@@ -64,11 +65,11 @@ ms.locfileid: "66108641"
 #### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>使用脚本升级本机模式数据库  
  您可以生成 WMI 脚本来升级报表服务器数据库。 有关详细信息，请参阅 [GenerateDatabaseUpgradeScript 方法 (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [创建报表服务器数据库（SSRS 配置管理器）](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [更改数据库向导&#40;SSRS 本机模式&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+ [更改数据库向导 &#40;SSRS 本机模式&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [升级和迁移 Reporting Services](upgrade-and-migrate-reporting-services.md)   
- [迁移 Reporting Services 安装（本机模式）](migrate-a-reporting-services-installation-native-mode.md)  
+ [&#40;本机模式下迁移 Reporting Services 安装&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

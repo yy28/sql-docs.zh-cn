@@ -19,24 +19,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068903"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>在 Analysis Services 中配置服务器属性
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的默认服务器配置属性。 每个实例都有自己的配置属性，可以独立于同一服务器上的其他实例进行设置。  
   
  若要设置服务器属性，请使用 SQL Server Management Studio 或编辑特定实例的 msmdsrv.ini 文件。  
   
  本主题包含以下各节：  
   
- [配置服务器 （实例） 属性](#bkmk_config)  
+ [配置服务器（实例）属性](#bkmk_config)  
   
  [服务器属性参考](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a> 配置服务器 （实例） 属性  
+##  <a name="bkmk_config"></a>配置服务器（实例）属性  
  SQL Server Management Studio 中的属性页包含一部分可用的属性，仅显示可能要修改的那些属性。 msmdsrv.ini 文件中提供了一组完整的属性。  
   
 > [!NOTE]  
@@ -46,9 +47,9 @@ ms.locfileid: "66068903"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
-     在对象资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，再单击  “属性”。 随即出现“常规”页，显示更为常用的属性。  
+     在对象资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，再单击****“属性”。 随即出现“常规”页，显示更为常用的属性。  
   
-2.  若要查看更多属性，请选中该页底部的  “显示高级(全部)属性”复选框。  
+2.  若要查看更多属性，请选中该页底部的****“显示高级(全部)属性”复选框。  
   
      只有表格模式服务器和多维模式服务器才支持修改服务器属性。 如果安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，请始终使用默认值，除非 Microsoft 产品支持工程师另有说明。  
   
@@ -72,18 +73,19 @@ ms.locfileid: "66068903"
   
 4.  在保存该文件后，您必须重新启动该服务。  
   
-##  <a name="bkmk_ref"></a> 服务器属性参考  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置属性对于微调系统非常重要。 例如，为了使查询日志行为与您的要求相一致，您可以设置相关的属性。  
+##  <a name="bkmk_ref"></a>服务器属性参考  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置属性对于微调系统非常重要。 例如，为了使查询日志行为与您的要求相一致，您可以设置相关的属性。  
   
  以下主题介绍了各种 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置属性：  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[常规属性](general-properties.md)|常规属性既是基本属性，又是高级属性，包括定义数据目录、备份目录和其他服务器行为的属性。|  
 |[数据挖掘属性](data-mining-properties.md)|数据挖掘属性控制着启用和禁用哪些数据挖掘算法。 默认情况下，启用所有算法。|  
 |DSO|不再支持 DSO。 忽略 DSO 属性。|  
 |[功能属性](feature-properties.md)|功能属性与产品功能有关，大多数是高级属性，包括控制服务器实例之间的链接的属性。|  
-|[Filestore 属性](filestore-properties.md)|文件存储属性仅用于高级用途。 其中包括高级内存管理设置。|  
+|[FileStore 属性](filestore-properties.md)|文件存储属性仅用于高级用途。 其中包括高级内存管理设置。|  
 |[锁管理器属性](lock-manager-properties.md)|锁管理器属性定义与锁定和超时有关的服务器行为。 这些属性多数仅适用于高级用途。|  
 |[日志属性](log-properties.md)|日志属性控制是否在服务器上记录事件以及记录事件的位置和方式。 其中包括错误日志记录、异常日志记录、网络流量记录器、查询日志记录和跟踪。|  
 |[内存属性](memory-properties.md)|内存属性控制服务器如何使用内存。 这些属性主要用于高级用途。|  
@@ -92,7 +94,7 @@ ms.locfileid: "66068903"
 |[安全属性](security-properties.md)|安全部分包含定义访问权限的基本属性和高级属性。 其中包括与管理员和用户有关的设置。|  
 |[线程池属性](thread-pool-properties.md)|线程池属性控制服务器创建多少线程。 这些属性主要是高级属性。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 实例管理](../instances/analysis-services-instance-management.md)   
  [为解决方案部署指定配置设置](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   

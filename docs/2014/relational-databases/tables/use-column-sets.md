@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298636"
 ---
 # <a name="use-column-sets"></a>使用列集
@@ -25,7 +25,7 @@ ms.locfileid: "63298636"
   
  当表中有很多列，且分别对这些列进行操作很烦琐时，应考虑使用列集。 当应用程序通过对具有很多列的表使用列集来选择和插入数据时，可能会在某种程度上改进性能。 但是，当对表中的列定义很多索引时，列集的性能则会下降。 这是因为执行计划所需的内存量增加。  
   
- 若要定义列集，请在 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 或 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 语句中使用 *<column_set_name>* FOR ALL_SPARSE_COLUMNS 关键字。  
+ 若要定义列集，请在 *CREATE TABLE* 或 [ALTER TABLE](/sql/t-sql/statements/create-table-transact-sql) 语句中使用 [<column_set_name>](/sql/t-sql/statements/alter-table-transact-sql) FOR ALL_SPARSE_COLUMNS 关键字。  
   
 ## <a name="guidelines-for-using-column-sets"></a>列集的使用准则  
  使用列集时，请考虑以下准则：  
@@ -106,10 +106,11 @@ GO
   
  在本示例中，没有为 `i`列指定值，但插入了 `0` 值。  
   
-## <a name="using-the-sqlvariant-data-type"></a>使用 sql_variant 数据类型  
- `sql_variant` 日期类型可以存储多种不同的数据类型，如 `int`、`char` 和 `date`。 列集会输出数据类型信息（例如与 `sql_variant` 值关联的小数位数、精度以及区域设置信息）作为生成的 XML 列中的属性。 如果尝试在自定义生成的 XML 语句中将这些属性作为对列集的插入或更新操作的输入提供，则其中一些属性是必需的，并会为一些属性分配默认值。 下表列出数据类型以及在未提供值时服务器所生成的默认值。  
+## <a name="using-the-sql_variant-data-type"></a>使用 sql_variant 数据类型  
+ 
+  `sql_variant` 日期类型可以存储多种不同的数据类型，如 `int`、`char` 和 `date`。 列集会输出数据类型信息（例如与 `sql_variant` 值关联的小数位数、精度以及区域设置信息）作为生成的 XML 列中的属性。 如果尝试在自定义生成的 XML 语句中将这些属性作为对列集的插入或更新操作的输入提供，则其中一些属性是必需的，并会为一些属性分配默认值。 下表列出数据类型以及在未提供值时服务器所生成的默认值。  
   
-|数据类型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大长度|精度|小数位数|  
+|数据类型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大长度|Precision|缩放|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |`char`, `varchar`, `binary`|-1|'Default'|0|0|8000|不适用**|不适用|  
 |`nvarchar`|-1|'Default'|0|0|4000|不适用|不适用|  
@@ -118,10 +119,11 @@ GO
 |`datetime2`|不适用|不适用|不适用|不适用|不适用|不适用|7|  
 |`datetime offset`|不适用|不适用|不适用|不适用|不适用|不适用|7|  
 |`datetime`, `date`, `smalldatetime`|不适用|不适用|不适用|不适用|不适用|不适用|不适用|  
-|`money`， `smallmoney`|不适用|不适用|不适用|不适用|不适用|不适用|不适用|  
+|`money`, `smallmoney`|不适用|不适用|不适用|不适用|不适用|不适用|不适用|  
 |`time`|不适用|不适用|不适用|不适用|不适用|不适用|7|  
   
- \*  localeID -1 表示默认区域设置。 英语的区域设置为 1033。  
+ 
+  \*  localeID -1 表示默认区域设置。 英语的区域设置为 1033。  
   
  ** 不适用 = 在针对列集的选择操作期间不会为这些属性输出值。 当调用方在插入或更新操作期间使用为列集提供的 XML 表达形式为该属性指定值时，会生成错误。  
   
@@ -255,7 +257,7 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用稀疏列](use-sparse-columns.md)  
   
   

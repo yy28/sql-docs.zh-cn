@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 236600f0a4ff2b77daaab2266b7e927e6858447b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106729"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>添加外部图像（报表生成器和 SSRS）
@@ -37,7 +37,7 @@ ms.locfileid: "66106729"
   
      对于在本机模式下的报表服务器上的图像，在“使用此图像”框中键入图像的相对路径，例如 ../images/image1.jpg  。  
   
-     对于 SharePoint 集成模式下或任何其他网站中的报表服务器上，键入完整的 URL 中的图像**使用此映像**框-例如， http://\<SharePointservername > /\<站点 > /Documents/images/image1.jpg。  
+     对于 SharePoint 集成模式下的 Report Server 上的图像，或者任何其他网站，请在 "**使用此图像**" 框中键入图像的完整 URL，例如，http://\<服务器名称>/\<site>/documents/images/image1.jpg。  
   
      有关详细信息，请参阅[指定外部项的路径（报表生成器和 SSRS）](specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66106729"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在报表中嵌入图像（报表生成器和 SSRS）](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [添加背景图像（报表生成器和 SSRS）](add-a-background-image-report-builder-and-ssrs.md)   
  [“图像属性”对话框 ->“常规”（报表生成器和 SSRS）](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  

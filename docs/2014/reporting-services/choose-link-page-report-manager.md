@@ -1,5 +1,5 @@
 ---
-title: 选择链接页 （报表管理器） |Microsoft Docs
+title: "\"选择链接\" 页（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109874"
 ---
 # <a name="choose-link-page-report-manager"></a>“选择链接”页（报表管理器）
@@ -33,18 +33,18 @@ ms.locfileid: "66109874"
   
 3.  在下拉菜单中，单击 **“管理”** 。 这会打开该链接报表的 **“常规”** 属性页。  
   
-4.  在 **“常规”** 选项卡上的属性页中单击 **“更改链接”** 。  
+4.  在 **“常规”** 选项卡上的属性页中单击 **“更改链接”**。  
   
 ## <a name="options"></a>选项  
- **Location**  
+ **位置**  
  指定已发布报表的全名，包括文件夹路径和报表名称。 您可以键入报表的全名，也可以使用树视图导航到要使用的报表。  
   
  **树视图**  
  显示报表服务器文件夹层次结构中的所有文件夹。 若要通过树视图来填写 **“位置”** 字段，请单击相应报表的名称。  
   
-## <a name="see-also"></a>请参阅  
- [报表的“常规”属性页（报表管理器）](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [“新建链接报表”页（报表管理器）](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+## <a name="see-also"></a>另请参阅  
+ [报表 &#40;报表管理器的 "常规属性" 页&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [报表管理器 &#40;的 "新建链接报表" 页&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

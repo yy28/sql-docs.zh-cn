@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268666"
 ---
 # <a name="replication-security-best-practices"></a>复制安全最佳实践
@@ -33,7 +33,7 @@ ms.locfileid: "63268666"
   
     -   [处理复制代理配置文件](../agents/replication-agent-profiles.md)  
   
-    -   [查看和修改复制代理命令提示符参数 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63268666"
   
     -   需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证时，UNC 快照共享通常无法访问（例如，防火墙可能阻止访问）。 在这种情况下，可以通过文件传输协议 (FTP) 将快照传输到订阅服务器。 有关详细信息，请参阅[通过 FTP 传输快照](../transfer-snapshots-through-ftp.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [通过 Internet 复制](../replication-over-the-internet.md)   
  [保护订阅服务器](secure-the-subscriber.md)   

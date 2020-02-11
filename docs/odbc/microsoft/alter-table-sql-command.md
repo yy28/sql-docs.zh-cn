@@ -13,14 +13,14 @@ ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901372"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL 命令
-以编程方式修改的表的结构。  
+以编程方式修改表的结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,57 +61,57 @@ ALTER TABLE TableName1
   
 ## <a name="arguments"></a>参数  
  *TableName1*  
- 指定修改其结构的表的名称。  
+ 指定其结构已修改的表的名称。  
   
  添加 [COLUMN] *FieldName1*  
  指定要添加的字段的名称。  
   
  ALTER [COLUMN] *FieldName1*  
- 指定要修改现有字段的名称。  
+ 指定要修改的现有字段的名称。  
   
- *FieldType* [( *nFieldWidth* [, *nPrecision*]])  
- 为新的或修改字段中指定的字段类型、 字段宽度和字段精度 （数字的小数位数）。  
+ *FieldType* [（ *NFieldWidth* [， *nPrecision*]]）  
+ 为新的或修改的字段指定字段类型、字段宽度和字段精度（小数位数）。  
   
- *FieldType*是指示该字段的一个单一字母[数据类型](../../odbc/microsoft/visual-foxpro-field-data-types.md)。 某些字段数据类型需要您指定*nFieldWidth*或*nPrecision*和 / 或。  
+ *FieldType*是一个表示字段的[数据类型](../../odbc/microsoft/visual-foxpro-field-data-types.md)的单字母。 某些字段数据类型要求指定*nFieldWidth*或*nPrecision* ，或同时指定两者。  
   
- *nFieldWidth*并*nPrecision*忽略 D、 G、 我、 L、 M、 P、 T 和 Y 的类型。 默认情况下*nPrecision*为零 （没有小数位），如果*nPrecision*则不包含 B、 F 或 N 类型。  
+ 对于 D、G、I、L、M、P、T 和 Y 类型，将忽略*nFieldWidth*和*nPrecision* 。 默认情况下，如果 B、F 或 N 类型不包含*nPrecision* ，则*nPrecision*为零（没有小数位数）。  
   
  NULL &#124; NOT NULL  
- 允许或阻止的字段中的 null 值。  
+ 允许或禁止字段中出现 null 值。  
   
- 如果省略 NULL 和 NOT NULL，NULL 设置的当前设置确定字段中是否允许 null 值。 但是，如果你省略 NULL 和 NOT NULL 并且包括在主键或唯一的子句，忽略 SET NULL 的当前设置，该字段不是默认情况下为 NULL。  
+ 如果省略 NULL 而不是 NULL，则设置为 NULL 的当前设置将确定是否允许在字段中使用 null 值。 但是，如果省略 NULL 而不是 NULL，并且包含 PRIMARY KEY 或 UNIQUE 子句，则默认情况下，将忽略 SET NULL 的当前设置，并且该字段不为空。  
   
  检查*lExpression1*  
- 指定字段的验证规则。 *lExpression1*必须计算为逻辑表达式，而且可以是用户定义函数或存储的过程。 只要附加一个空记录，检查验证规则。 如果验证规则不允许空字段值在追加的记录中，将生成错误。  
+ 指定字段的验证规则。 *lExpression1*的计算结果必须为逻辑表达式，可以是用户定义函数或存储过程。 每当追加空白记录时，都会检查验证规则。 如果验证规则不允许在追加的记录中使用空白字段值，则会生成错误。  
   
  错误*cMessageText1*  
- 指定当字段验证规则将生成错误时显示错误消息。  
+ 指定在字段验证规则生成错误时所显示的错误消息。  
   
  默认*eExpression1*  
- 指定字段的默认值。 数据类型*eExpression1*必须为该字段的数据类型相同。  
+ 指定字段的默认值。 *EExpression1*的数据类型必须与字段的数据类型相同。  
   
  PRIMARY KEY  
  创建主索引标记。 索引标记与该字段具有相同的名称。  
   
  UNIQUE  
- 创建具有相同名称的字段的候选索引标记。  
+ 创建与该字段具有相同名称的候选索引标记。  
   
 > [!NOTE]  
->  候选索引 （包括用于 ALTER TABLE 或 CREATE TABLE 中的 ANSI 兼容性的唯一选项创建） 不同于创建索引命令中使用的唯一选项的索引。 创建索引命令中使用 UNIQUE 索引允许重复的索引键;候选索引不允许有重复的索引键。  
+>  候选索引（通过包括 UNIQUE 选项创建，该选项是在 ALTER TABLE 或 CREATE TABLE 中为 ANSI 兼容性提供的）不同于使用索引命令中的 UNIQUE 选项创建的索引。 使用 UNIQUE in INDEX 命令创建的索引允许使用重复的索引键;候选索引不允许有重复的索引键。  
   
- 在主键或候选索引使用的字段中不允许 null 值和重复的记录。  
+ 对于用于主索引或候选索引的字段，不允许使用 Null 值和重复记录。  
   
- 如果使用添加列创建一个新字段，Visual FoxPro 将不会生成错误，如果创建主键或候选索引支持 null 值的字段。 但是，Visual FoxPro 将生成错误，如果你尝试使用主键或候选索引的字段中输入空值或重复值。  
+ 如果要使用 "添加列" 来创建新字段，如果为支持 null 值的字段创建主索引或候选索引，则 Visual FoxPro 不会生成错误。 但是，如果您尝试将 null 值或重复值输入到用于主索引或候选索引的字段中，则 Visual FoxPro 将生成错误。  
   
- 如果您正在修改现有字段，并且或者候选索引表达式组成的表中的字段，Visual FoxPro 会检查以查看它们是否包含 null 值或重复的记录的字段。 如果是这样，Visual FoxPro 生成错误，并不更改表。  
+ 如果要修改现有字段，并且主索引表达式或候选索引表达式包含表中的字段，则 Visual FoxPro 会检查这些字段，以确定它们是否包含 null 值或重复记录。 如果是这样，Visual FoxPro 将生成一个错误，并且表不会更改。  
   
  引用*TableName2*标记*TagName1*  
- 指定与之建立持久关系的父表。 标记*TagName1*指定关系所基于的父表的索引标记。 索引的标记名称可包含最多 10 个字符。  
+ 指定要建立持久关系的父表。 标记*TagName1*指定了关系所基于的父表的索引标记。 索引标记名称最多可包含10个字符。  
   
  NOCPTRANS  
- 可以防止转换到字符和备注字段的不同代码页。 如果表转换为另一个代码页，将不转换为其指定 NOCPTRANS 的字段。 可以仅为字符和备注字段指定 NOCPTRANS。  
+ 阻止为 "字符" 和 "备注" 字段转换为其他代码页。 如果将表转换为另一代码页，则不会转换为其指定了 NOCPTRANS 的字段。 只能为 "字符" 和 "备注" 字段指定 NOCPTRANS。  
   
- 以下示例创建名为 mytable，其中包含两个字符字段和两个备注字段的表。 第二个字符字段、 char2 和第二个备注字段，memo2，包括 NOCPTRANS 以防止转换。  
+ 下面的示例创建一个名为 mytable 的表，该表包含两个字符字段和两个备注字段。 第二个字符字段 "char2" 和第二个 "备注" 字段（memo2）包含用于防止转换的 NOCPTRANS。  
   
 ```  
 CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;  
@@ -119,16 +119,16 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ```  
   
  ALTER [COLUMN] *FieldName2*  
- 指定要修改现有字段的名称。  
+ 指定要修改的现有字段的名称。  
   
- 设置默认值*eExpression2*  
- 指定现有字段的新默认值。 数据类型*eExpression2*必须为该字段的数据类型相同。  
+ 设置默认*eExpression2*  
+ 为现有字段指定新的默认值。 *EExpression2*的数据类型必须与字段的数据类型相同。  
   
- 集检查*lExpression2*  
- 指定的新的验证规则的现有字段。 *lExpression2*计算结果必须为逻辑表达式，可能是用户定义函数或存储的过程。  
+ 设置 CHECK *lExpression2*  
+ 为现有字段指定新的验证规则。 *lExpression2*的计算结果必须是逻辑表达式，可能是用户定义函数或存储过程。  
   
  错误*cMessageText2*  
- 指定当字段验证规则将生成错误时显示错误消息。 仅当浏览或编辑窗口中更改数据时，会显示消息。  
+ 指定在字段验证规则生成错误时所显示的错误消息。 仅当在浏览或编辑窗口中更改数据时，才会显示该消息。  
   
  DROP DEFAULT  
  删除现有字段的默认值。  
@@ -136,61 +136,61 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  删除检查  
  删除现有字段的验证规则。  
   
- 拖放 [COLUMN] *FieldName3*  
- 指定要从表中删除的字段。 从表中删除字段还会删除该字段的默认值设置和字段验证规则。  
+ DROP [COLUMN] *FieldName3*  
+ 指定要从表中删除的字段。 从表中删除字段还会删除字段的默认值设置和字段验证规则。  
   
- 如果索引键或触发器表达式引用该字段，这些表达式无效时将删除的字段。 在这种情况下，将删除的字段但无效索引键或触发器表达式将在运行时生成错误时将不会生成错误。  
+ 如果索引键或触发器表达式引用此字段，则在删除该字段时表达式将变为无效。 在这种情况下，当删除字段时，不会生成错误，但无效的索引键或触发器表达式会在运行时生成错误。  
   
- 集检查*lExpression3*  
- 指定表验证规则。 *lExpression3*计算结果必须为逻辑表达式，可能是用户定义函数或存储的过程。  
+ 设置 CHECK *lExpression3*  
+ 指定表验证规则。 *lExpression3*的计算结果必须是逻辑表达式，可能是用户定义函数或存储过程。  
   
- ERROR *cMessageText3*  
- 指定的错误消息显示时表验证规则将生成错误。 仅当浏览或编辑窗口中更改数据时，会显示消息。  
+ 错误*cMessageText3*  
+ 指定当表验证规则生成错误时所显示的错误消息。 仅当在浏览或编辑窗口中更改数据时，才会显示该消息。  
   
  删除检查  
  删除表的验证规则。  
   
- 添加主键*eExpression3*标记*TagName2*  
- 向表中添加主索引。 *eExpression3*指定主索引键表达式，并*TagName2*指定主索引标记的名称。 索引的标记名称可包含最多 10 个字符。 如果标记*TagName2*省略和*eExpression3*是单个字段中，主索引标记中指定的字段作为具有相同的名称*eExpression3*。  
+ ADD PRIMARY KEY *eExpression3*TAG *TagName2*  
+ 向表中添加主索引。 *eExpression3*指定主索引键表达式， *TagName2*指定主索引标记的名称。 索引标记名称最多可包含10个字符。 如果省略 TAG *TagName2*并且*eExpression3*为单个字段，则主索引标记的名称与*eExpression3*中指定的字段的名称相同。  
   
- 删除主键  
- 删除主索引和相应索引的标记。 因为一个表只能有一个主键，不需要指定为主键的名称。 删除主索引也会删除任何基于主键的永久关系。  
+ 删除主密钥  
+ 删除主索引及其索引标记。 因为一个表只能有一个主键，所以不需要指定主键的名称。 删除主索引时还会根据主键删除任何持久关系。  
   
- 添加 UNIQUE *eExpression4*[标记*TagName3*]  
- 向表中添加一个候选项的索引。 *eExpression4*指定候选索引键的表达式，并*TagName3*指定候选索引标记的名称。 索引的标记名称可包含最多 10 个字符。 如果省略标记*TagName3* ; 如果*eExpression4*是单个字段，候选索引标记中指定的字段作为具有相同的名称*eExpression4*。  
+ ADD UNIQUE *eExpression4*[TAG *TagName3*]  
+ 将候选索引添加到表中。 *eExpression4*指定候选索引键表达式， *TagName3*指定候选索引标记的名称。 索引标记名称最多可包含10个字符。 如果省略标记*TagName3* ，并且*eExpression4*是单个字段，则候选索引标记的名称与*eExpression4*中指定的字段的名称相同。  
   
- 删除唯一标记*TagName4*  
- 删除候选索引和相应索引的标记。 因为一个表可以包含多个候选键，必须指定候选索引标记的名称。  
+ DROP UNIQUE 标记*TagName4*  
+ 删除候选索引及其索引标记。 因为一个表可以有多个候选键，所以必须指定候选索引标记的名称。  
   
  添加外键 [ *eExpression5*] 标记*TagName4*  
- 向表中添加外 （非主键） 索引。 *eExpression5*指定外索引键表达式，并*TagName4*指定外索引标记的名称。 索引的标记名称可包含最多 10 个字符。  
+ 向表中添加外部（非主键）索引。 *eExpression5*指定外部索引键表达式， *TagName4*指定外部索引标记的名称。 索引标记名称最多可包含10个字符。  
   
  引用*TableName2*[标记*TagName5*]  
- 指定与之建立持久关系的父表。 包含标记*TagName5*建立基于现有索引标记为父表的关系。 索引的标记名称可包含最多 10 个字符。 如果省略标记*TagName5*，使用父表的主索引标记建立关系。  
+ 指定要建立持久关系的父表。 包含标记*TagName5* ，以便基于父表的现有索引标记建立关系。 索引标记名称最多可包含10个字符。 如果省略 TAG *TagName5*，则使用父表的主索引标记建立关系。  
   
- 删除外键标记*TagName6*[保存]  
- 删除其索引标记是外键*TagName6*。 如果省略保存，从结构化索引中删除索引标记。 包含保存防止删除从结构化索引的索引标记。  
+ 删除外键标记*TagName6*[SAVE]  
+ 删除其索引标记为*TagName6*的外键。 如果省略 SAVE，则会从结构索引中删除索引标记。 包含 SAVE 禁止从结构索引删除索引标记。  
   
- 重命名列*FieldName4*TO *FieldName5*  
- 可以更改表中字段的名称。 *FieldName4*指定重命名字段的名称。 *FieldName5*指定字段的新名称。  
+ 将*FIELDNAME4*列重命名为*FieldName5*  
+ 允许您更改表中字段的名称。 *FieldName4*指定要重命名的字段的名称。 *FieldName5*指定字段的新名称。  
   
 > [!CAUTION]  
->  重命名表的字段，因为索引表达式、 字段和表验证规则、 命令和函数可能引用原始字段名称时应格外小心。  
+>  在重命名表字段时应小心，因为索引表达式、字段和表验证规则、命令和函数可以引用原始字段名称。  
   
  NOVALIDATE  
- 指定 Visual FoxPro 允许要对表; 的结构进行更改这些更改可能会违反表中的数据的完整性。 默认情况下，Visual FoxPro 阻止进行更改违反的表中的数据完整性的 ALTER TABLE。 包括 NOVALIDATE 重写此默认行为。  
+ 指定 Visual FoxPro 允许对表的结构进行更改;这些更改可能会违反表中数据的完整性。 默认情况下，Visual FoxPro 会阻止 ALTER TABLE 进行更改，这会违反表中数据的完整性。 包含 NOVALIDATE 以重写此默认行为。  
   
 ## <a name="remarks"></a>备注  
- ALTER TABLE 可以用于修改尚未添加到数据库的表的结构。 但是，如果包括默认、 外键、 主键、 引用，或修改可用的表时设置子句 Visual FoxPro 将生成错误。  
+ ALTER TABLE 可用于修改尚未添加到数据库中的表的结构。 但是，如果在修改可用表时包含 DEFAULT、FOREIGN KEY、PRIMARY KEY、引用或 SET 子句，则 Visual FoxPro 会生成错误。  
   
- ALTER TABLE 可能会重新生成表创建一个新的表头和将记录追加到表标头。 例如，更改字段的类型或宽度，这种情况可能会导致要重新生成的表。  
+ ALTER TABLE 可以通过创建新的表头并将记录追加到表头来重建表。 例如，更改字段的类型或宽度可能会导致重新生成表。  
   
- 重新生成表后，字段验证规则执行的任何更改其类型或宽度的字段。 如果更改类型或表中的任何字段的宽度，则执行表规则。  
+ 重新生成表后，将对任何更改了类型或宽度的字段执行字段验证规则。 如果更改表中任何字段的类型或宽度，则会执行表规则。  
   
- 如果修改字段或表的表的已记录的验证规则，Visual FoxPro 测试对现有数据的新字段或表验证规则，并发出上第一个匹配项的字段或表的验证规则或触发器冲突的警告。  
+ 如果修改包含记录的表的字段或表验证规则，则 Visual FoxPro 会根据现有数据测试新的字段或表验证规则，并在第一次出现的字段或表验证规则或触发器冲突时发出警告。  
   
- 如果您修改的表是在数据库中，ALTER TABLE-SQL 需要独占使用的数据库。 若要打开用于独占使用的数据库，请打开数据库中包括排他。  
+ 如果修改的表在数据库中，ALTER TABLE SQL 需要独占使用数据库。 若要打开数据库以供独占使用，请在打开的数据库中包含 EXCLUSIVE。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE TABLE-SQL 命令](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX 命令](../../odbc/microsoft/index-command.md)

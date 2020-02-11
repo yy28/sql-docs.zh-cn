@@ -1,5 +1,5 @@
 ---
-title: 新建挖掘模型对话框 （挖掘结构视图） |Microsoft Docs
+title: "\"新建挖掘模型\" 对话框（\"挖掘结构\" 视图） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62df5e05019b8b00fa5297bc3c7c3291a6c0f918
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072180"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>“新建挖掘模型”对话框（“挖掘结构”视图）
@@ -29,8 +29,8 @@ ms.locfileid: "66072180"
  **算法名称**  
  选择新挖掘模型所基于的算法。  
   
-## <a name="see-also"></a>请参阅  
- [挖掘结构视图&#40;数据挖掘模型设计器&#41;](mining-structure-view-data-mining-model-designer.md)   
+## <a name="see-also"></a>另请参阅  
+ [挖掘结构视图 &#40;数据挖掘模型设计器&#41;](mining-structure-view-data-mining-model-designer.md)   
  [在现有挖掘结构中添加挖掘模型](data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   
   

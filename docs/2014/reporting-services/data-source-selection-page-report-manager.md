@@ -1,5 +1,5 @@
 ---
-title: 数据源选择页 （报表管理器） |Microsoft Docs
+title: "\"数据源选择\" 页（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109437"
 ---
 # <a name="data-source-selection-page-report-manager"></a>“选择数据源”页（报表管理器）
@@ -33,10 +33,10 @@ ms.locfileid: "66109437"
   
 4.  选择 **“数据源”** 选项卡。  
   
-5.  在属性窗格中，选择 **“共享数据源”** ，然后单击 **“浏览”** 。  
+5.  在属性窗格中，选择 **“共享数据源”** ，然后单击 **“浏览”**。  
   
 ## <a name="options"></a>选项  
- **Location**  
+ **位置**  
  指定共享数据源项的完整路径，以根目录名开头。 您可以键入路径名或使用树视图找到所需的共享数据源。  
   
  **树视图**  
@@ -45,11 +45,11 @@ ms.locfileid: "66109437"
  **确定**  
  单击此选项可将所选的数据源复制到“数据源”属性页。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理报表数据源](report-data/manage-report-data-sources.md)   
  [为报表数据源指定凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [“数据源”属性页（报表管理器）](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
- [“新建数据源”页（报表管理器）](../../2014/reporting-services/new-data-source-page-report-manager.md)   
+ ["数据源" 属性页 &#40;报表管理器&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
+ [新数据源页 &#40;报表管理器&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

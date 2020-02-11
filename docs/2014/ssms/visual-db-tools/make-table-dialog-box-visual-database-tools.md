@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9873268608072ed7f2d6cdb4d0026ba62e5d090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63459981"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>“生成表”对话框 (Visual Database Tools)
@@ -32,8 +32,8 @@ ms.locfileid: "63459981"
 > [!NOTE]  
 >  执行查询之前，可以通过在“属性”  窗口进行修改来更改要创建的表属性。 有关详细信息，请参阅[查询属性 (Visual Database Tools)](visual-database-tools.md)。  
   
-## <a name="see-also"></a>请参阅  
- [创建生成表查询&#40;可视化数据库工具&#41;](create-make-table-queries-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools 创建 "生成表" 查询&#41;](create-make-table-queries-visual-database-tools.md)   
  [查询类型 (Visual Database Tools)](types-of-queries-visual-database-tools.md)  
   
   

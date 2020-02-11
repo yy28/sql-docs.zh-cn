@@ -1,5 +1,5 @@
 ---
-title: 大容量插入任务编辑器 （选项页） |Microsoft Docs
+title: 大容量插入任务编辑器（"选项" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061193"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>大容量插入任务编辑器（“选项”页）
-  使用 **“大容量插入任务编辑器”** 对话框的 **“选项”** 页，可以设置大容量插入操作的属性。 大容量插入任务可以将大量的数据复制到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表或视图中。  
+  使用 **“大容量插入任务编辑器”** 对话框的 **“选项”** 页，可以设置大容量插入操作的属性。 大容量插入任务将大量数据复制到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]表或视图中。  
   
  若要了解如何使用大容量插入，请参阅[大容量插入任务](control-flow/bulk-insert-task.md)和 [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66061193"
  **FirstRow**  
  指定要开始复制的第一行。  
   
- **“大容量插入任务编辑器”**  
+ **选项**  
  |术语|定义|  
 |----------|----------------|  
 |**检查约束**|选择此项将检查表约束和列约束。|  
@@ -52,7 +52,7 @@ ms.locfileid: "66061193"
 |**激发触发器**|选择此项将激发对表上的触发器的任意插入、更新或删除操作。|  
   
  **SortedData**  
- 指定大容量插入语句中的 ORDER BY 子句。 所提供的列名必须是目标表中的有效列。 默认值为 `false`。 这意味着 ORDER BY 子句将不对数据进行排序。  
+ 指定大容量插入语句中的 ORDER BY 子句。 所提供的列名必须是目标表中的有效列。 默认为 `false`。 这意味着 ORDER BY 子句将不对数据进行排序。  
   
  **MaxErrors**  
  指定在取消大容量插入操作之前可以发生的最大错误数量。 如果值为 0，则指示对错误的数量没有限制。  
@@ -60,10 +60,10 @@ ms.locfileid: "66061193"
 > [!NOTE]  
 >  大容量加载操作不能导入的每一行都被计为一个错误。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [大容量插入任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
- [大容量插入任务编辑器（“连接”页）](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [大容量插入任务编辑器 &#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
+ [大容量插入任务编辑器 &#40;连接页&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [“表达式”页](expressions/expressions-page.md)   
  [控制流](control-flow/control-flow.md)  
   

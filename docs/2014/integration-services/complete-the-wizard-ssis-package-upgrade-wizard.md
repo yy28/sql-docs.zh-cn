@@ -1,5 +1,5 @@
 ---
-title: 完成向导 （SSIS 包升级向导） |Microsoft Docs
+title: 完成向导（SSIS 包升级向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 57fbbf1702109546037fe91872a7a983bc5713bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060929"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>完成该向导（SSIS 包升级向导）
@@ -30,7 +30,7 @@ ms.locfileid: "66060929"
  **选项摘要**  
  查看您在向导中选择的升级选项。 若要更改任意选项，请单击 **“上一步”** 返回到向导前面的页  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [升级 Integration Services 包](install-windows/upgrade-integration-services-packages.md)  
   
   

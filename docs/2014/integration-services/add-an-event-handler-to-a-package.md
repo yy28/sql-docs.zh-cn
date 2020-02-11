@@ -1,5 +1,5 @@
 ---
-title: 向包中添加一个事件处理程序 |Microsoft Docs
+title: 向包中添加事件处理程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062031"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>在包中添加事件处理程序
@@ -26,9 +26,11 @@ ms.locfileid: "66062031"
   
  您可以使用 **设计器中的** “事件处理程序” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡的设计图面来创建事件处理程序。  
   
- 当 **“事件处理程序”** 选项卡活动时， **设计器中的工具箱的** “控制流项” **和** “维护计划中的任务” [!INCLUDE[ssIS](../includes/ssis-md.md)] 节点包含用于生成事件处理程序中控制流的任务和容器。 **“数据流源”** 、 **“转换”** 和 **“数据流目标”** 节点包含用于生成事件处理程序中数据流的数据源、转换和目标。 有关详细信息，请参阅 [Control Flow](control-flow/control-flow.md) 和 [Data Flow](data-flow/data-flow.md)。  
+ 当 **“事件处理程序”** 选项卡活动时， **设计器中的工具箱的** “控制流项” **和** “维护计划中的任务” [!INCLUDE[ssIS](../includes/ssis-md.md)] 节点包含用于生成事件处理程序中控制流的任务和容器。 
+  **“数据流源”**、 **“转换”** 和 **“数据流目标”** 节点包含用于生成事件处理程序中数据流的数据源、转换和目标。 有关详细信息，请参阅 [Control Flow](control-flow/control-flow.md) 和 [Data Flow](data-flow/data-flow.md)。  
   
- **“事件处理程序”** 选项卡也包含 **“连接管理器”** 区域，在这里可创建并修改事件处理程序用来连接到服务器和数据源的连接管理器。 有关详细信息，请参阅 [创建连接管理器](../../2014/integration-services/create-connection-managers.md)。  
+ 
+  **“事件处理程序”** 选项卡也包含 **“连接管理器”** 区域，在这里可创建并修改事件处理程序用来连接到服务器和数据源的连接管理器。 有关详细信息，请参阅 [创建连接管理器](../../2014/integration-services/create-connection-managers.md)。  
   
 ### <a name="to-create-an-event-handler"></a>创建事件处理程序  
   
@@ -38,7 +40,7 @@ ms.locfileid: "66062031"
   
 3.  单击 **“事件处理程序”** 选项卡。  
   
-     ![带有事件处理程序的设计图面的屏幕截图](media/eventhandlers.gif "Screenshot of design surface with event handler")  
+     ![带有事件处理程序的设计图面的屏幕快照](media/eventhandlers.gif "带有事件处理程序的设计图面的屏幕快照")  
   
      在事件处理程序中创建控制流和数据流类似于在包中创建控制流和数据流。 有关详细信息，请参阅 [Control Flow](control-flow/control-flow.md) 和 [Data Flow](data-flow/data-flow.md)。  
   
@@ -54,7 +56,7 @@ ms.locfileid: "66062031"
   
 9. 在 **“文件”** 菜单上，单击 **“保存选定项”** 以保存包。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
  [Integration Services (SSIS) 日志记录](performance/integration-services-ssis-logging.md)  
   

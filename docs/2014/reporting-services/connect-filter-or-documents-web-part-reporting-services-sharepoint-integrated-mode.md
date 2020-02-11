@@ -1,5 +1,5 @@
 ---
-title: 连接筛选器或文档 Web 部件 (SharePoint 集成模式下的 Reporting Services) |Microsoft Docs
+title: 连接筛选器或文档 Web 部件（在 SharePoint 集成模式下 Reporting Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 062733f1ee68cd90ccc1b9a15d0cadc06b7e6f89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109719"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>连接筛选器或文档 Web 部件（SharePoint 集成模式下的 Reporting Services）
@@ -35,19 +35,19 @@ ms.locfileid: "66109719"
   
 2.  在 **“站点操作”** 菜单上，单击 **“编辑页面”**。  
   
-3.  单击 **“添加 Web 部件”**。  
+3.  单击 "**添加 Web 部件**"。  
   
-4.  在 **“所有 Web 部件”** 的 **“杂项”** 类别中，选择 **“SQL Server Reporting Services 报表查看器”**。  
+4.  在 "**所有 Web 部件**的"**杂项**"类别中，选择**SQL Server Reporting Services 报表查看器**"。  
   
-5.  单击 **“添加”**。 Web 部件将添加到区域的顶部。  
+5.  单击“添加”  。 Web 部件将添加到区域的顶部。  
   
-6.  在同一 Web 部件页或面板中的另一区域上，单击 **“添加 Web 部件”**。  
+6.  在同一 Web 部件页或仪表板中的其他区域上，单击 "**添加 Web 部件**"。  
   
-7.  在 **“所有 Web 部件”** 的 **“筛选器”** 部分，选择一个 Web 部件。  
+7.  在 "**所有 Web 部件**的"**筛选器**"部分中，选择一个 Web 部件。  
   
-8.  单击 **“添加”**。 Web 部件将添加到区域的顶部。  
+8.  单击“添加”  。 Web 部件将添加到区域的顶部。  
   
-9. 在包含 Web 部件的区域，单击 Web 部件**编辑**菜单，依次指向**连接**，指向**发送筛选值到**，然后选择**报表查看器** - *报表名称*。  
+9. 在包含 web 部件的区域中，单击 web 部件的 "**编辑**" 菜单，依次指向 "**连接**"、"**将筛选器值发送到**"，然后选择 "**报表查看器** - *报表名称*"。  
   
 10. 签入更改并保存此页。  
   
@@ -57,27 +57,27 @@ ms.locfileid: "66109719"
   
 2.  在 **“站点操作”** 菜单上，单击 **“编辑页面”**。  
   
-3.  单击 **“添加 Web 部件”**。  
+3.  单击 "**添加 Web 部件**"。  
   
-4.  在 **“所有 Web 部件”** 的 **“列表和库”** 部分中，选择 **“文档”**。  
+4.  在 "**所有 Web 部件**的"**列表和库**"部分中，选择"**文档 "。**  
   
-5.  单击 **“添加”**。 Web 部件将添加到区域的顶部。  
+5.  单击“添加”  。 Web 部件将添加到区域的顶部。  
   
 6.  在工具窗格的底部，单击 **“应用”** ，然后单击 **“确定”** 关闭窗格。  
   
-7.  在同一 Web 部件页或面板中的另一区域上，单击 **“添加 Web 部件”**。  
+7.  在同一 Web 部件页或仪表板中的其他区域上，单击 "**添加 Web 部件**"。  
   
-8.  在 **“所有 Web 部件”** 的 **“杂项”** 类别中，选择 **“SQL Server Reporting Services 报表查看器”.**  
+8.  在 "**所有 Web 部件**的"**杂项**"类别中，选择**SQL Server Reporting Services 报表查看器"。**  
   
-9. 单击 **“添加”**。 Web 部件将添加到区域的顶部。  
+9. 单击“添加”  。 Web 部件将添加到区域的顶部。  
   
-10. 在包含 Web 部件的区域中，单击 Web 部件的 **“编辑”** 菜单，依次指向 **“连接”**、 **“获取报表定义于”**，然后选择 **“文档”**。  
+10. 在包含 Web 部件的区域中，单击 Web 部件的 "**编辑**" 菜单，依次指向 "**连接**"、"**从获取报表定义**"，然后选择 "**文档**"。  
   
 11. 签入更改并保存此页。  
   
-## <a name="see-also"></a>请参阅  
- [将报表查看器 Web 部件添加到网页（SharePoint 集成模式下的 Reporting Services）](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
- [在 SharePoint 站点上的报表查看器 Web 部件](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
+## <a name="see-also"></a>另请参阅  
+ [将报表查看器 Web 部件添加到 Reporting Services SharePoint 集成模式下的网页 &#40;&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [SharePoint 站点上的报表查看器 Web 部件](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [自定义报表查看器 Web 部件](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   
   

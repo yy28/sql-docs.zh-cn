@@ -14,28 +14,28 @@ ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bea124a78e2a180180c59de3577fe1db7637e110
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67897787"
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption（Access 驱动程序）
 > [!NOTE]  
->  本主题提供访问特定于驱动程序信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题提供特定于访问驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
 |fOption|注释|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以设置为 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 但是，该驱动程序不会阻止更新，如果 SQL_ACCESS_MODE 设置为 SQL_MODE_READ_ONLY。|  
-|SQL_AUTOCOMMIT|使用 Microsoft Access 驱动程序时，SQL_AUTOCOMMIT 选项可能设置为 sql_autocommit_on，否则或 SQL_AUTOCOMMIT_OFF，因为 Microsoft Access 驱动程序支持事务 [1]。|  
-|SQL_CURRENT_QUALIFIER|支持。|  
-|SQL_LOGIN_TIMEOUT|不提供支持。|  
-|SQL_OPT_TRACE|支持。|  
-|SQL_OPT_TRACEFILE|支持。|  
-|SQL_PACKET_SIZE|不提供支持。|  
-|SQL_QUIET_MODE|不提供支持。|  
-|SQL_TRANSLATE_DLL|不提供支持。|  
-|SQL_TRANSLATION_OPTION|不提供支持。|  
-|SQL_TXN_ISOLATION|SQL_TXN_ISOLATION 始终是 SQL_TXN_READ_COMMITTED。|  
+|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以设置为 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 但是，如果 SQL_ACCESS_MODE 设置为 SQL_MODE_READ_ONLY，驱动程序不会阻止更新。|  
+|SQL_AUTOCOMMIT|使用 Microsoft Access 驱动程序时，可以将 SQL_AUTOCOMMIT 选项设置为 SQL_AUTOCOMMIT_ON 或 SQL_AUTOCOMMIT_OFF，因为 Microsoft Access 驱动程序支持事务 [1]。|  
+|SQL_CURRENT_QUALIFIER|。|  
+|SQL_LOGIN_TIMEOUT|不支持。|  
+|SQL_OPT_TRACE|。|  
+|SQL_OPT_TRACEFILE|。|  
+|SQL_PACKET_SIZE|不支持。|  
+|SQL_QUIET_MODE|不支持。|  
+|SQL_TRANSLATE_DLL|不支持。|  
+|SQL_TRANSLATION_OPTION|不支持。|  
+|SQL_TXN_ISOLATION|始终 SQL_TXN_READ_COMMITTED SQL_TXN_ISOLATION。|  
   
- [1] 原子事务不受 Microsoft Access 驱动程序。 有限延迟时提交事务使用 Microsoft Access 驱动程序，则在提交事务的时间和写入值的时间之间存在到磁盘。 这种延迟取决于 Microsoft Jet 引擎中固有的延迟。 页超时不会小于最小值，即使 PageTimeout 选项设置为低于该值。 因此，没有提交数据不能保证是稳定的因为可能会在延迟期间进行更改。
+ [1] Microsoft Access 驱动程序不支持原子事务。 使用 Microsoft Access 驱动程序提交事务时，提交事务的时间与将值写入磁盘之间存在一定的延迟。 此延迟取决于 Microsoft Jet 引擎固有的延迟。 即使将 PageTimeout 选项设置为低于该值，页面超时也不会小于最小值。 因此，无法保证提交的数据是稳定的，因为可能会在延迟期间做出更改。

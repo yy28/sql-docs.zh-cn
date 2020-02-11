@@ -1,5 +1,5 @@
 ---
-title: 选择项位置页 （报表管理器） |Microsoft Docs
+title: "\"选择项位置\" 页（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109902"
 ---
 # <a name="choose-item-location-page-report-manager"></a>“选择项位置”页（报表管理器）
@@ -52,7 +52,7 @@ ms.locfileid: "66109902"
 4.  在 **“常规”** 选项卡的属性页中，单击 **“更改位置”** 以打开“选择项位置”页。  
   
 ## <a name="options"></a>选项  
- **Location**  
+ **位置**  
  指定用来包含所创建项的文件夹的名称。 您可以键入全名，也可以使用树视图导航到想要使用的文件夹。  
   
  **树视图**  
@@ -60,9 +60,9 @@ ms.locfileid: "66109902"
   
  单击树视图中的展开 (+) 和折叠 (-) 图标可以打开和关闭文件夹，而不会向 **“位置”** 字段中添加文件夹名称。 若要向 **“位置”** 字段中添加文件夹名称，请单击文件夹名称。  
   
-## <a name="see-also"></a>请参阅  
- [“新建链接报表”页（报表管理器）](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
- [新模型页&#40;报表管理器&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
+## <a name="see-also"></a>另请参阅  
+ [报表管理器 &#40;的 "新建链接报表" 页&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+ [新模型页 &#40;报表管理器&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

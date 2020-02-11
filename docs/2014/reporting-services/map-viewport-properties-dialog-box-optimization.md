@@ -1,5 +1,5 @@
 ---
-title: 地图视区属性对话框，优化 |Microsoft Docs
+title: "\"地图视区属性\" 对话框-\"优化\" |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1adbeccdedb8d80900047790d94ff35568460ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108279"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>“地图视区属性”对话框 -&gt;“优化”
@@ -37,8 +37,8 @@ ms.locfileid: "66108279"
  **地图分辨率**  
  指定地图分辨率。 此值指定您要在呈现的地图中看到的最小明细程度（点数）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [地图（报表生成器和 SSRS）](report-design/maps-report-builder-and-ssrs.md)   
- [报表故障排除：地图报表（报表生成器和 SSRS）](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [报表故障排除：地图报表 &#40;报表生成器和 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

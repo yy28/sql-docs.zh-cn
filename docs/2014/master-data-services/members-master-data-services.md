@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a8523843633675fb9d0d319dac10417172832f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482815"
 ---
 # <a name="members-master-data-services"></a>成员 (Master Data Services)
@@ -32,7 +32,7 @@ ms.locfileid: "65482815"
   
  在此示例中，该表表示实体，表中的行表示成员，表中的列表示属性。 每个单元表示特定成员的属性值。  
   
- ![表示为表的 Master Data Services 实体](../../2014/master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
+ ![表示为表的 Master Data Services 实体](../../2014/master-data-services/media/mds-conc-entity-table.gif "表示为表的 Master Data Services 实体")  
   
 ## <a name="member-types"></a>成员类型  
  存在三种类型的成员：叶成员、合并成员和集合成员。  
@@ -55,35 +55,35 @@ ms.locfileid: "65482815"
 ## <a name="member-example"></a>成员示例  
  在下面的示例中，每个成员均包含 Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto 属性值。  
   
- ![自行车产品实体表](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
+ ![自行车产品实体表](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "自行车产品实体表")  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新的叶成员。|[创建叶成员 (Master Data Services)](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
-|创建新的合并成员。|[创建合并成员 (Master Data Services)](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
-|删除现有成员或集合。|[删除成员或集合 (Master Data Services)](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
-|重新激活已删除的成员或集合。|[重新激活成员或集合 (Master Data Services)](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|更新成员的属性值。|[更改属性类型（用于 Excel 的 MDS 外接程序）](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
-|在层次结构中移动成员。|[层次结构中移动成员&#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
+|创建新的叶成员。|[&#40;Master Data Services 创建叶成员&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
+|创建新的合并成员。|[Master Data Services 创建合并成员 &#40;&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
+|删除现有成员或集合。|[&#40;Master Data Services 中删除成员或集合&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
+|重新激活已删除的成员或集合。|[重新激活成员或集合 &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
+|更新成员的属性值。|[更改属性类型 &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|在层次结构中移动成员。|[在层次结构中移动 &#40;Master Data Services 的成员&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
 -   [Master Data Services 概述](master-data-services-overview-mds.md)  
   
--   [实体 (Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)  
+-   [实体 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [层次结构 (Master Data Services)](hierarchies-master-data-services.md)  
+-   [层次结构 &#40;Master Data Services&#41;](hierarchies-master-data-services.md)  
   
--   [集合 (Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
+-   [集合 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
--   [叶权限 (Master Data Services)](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [叶权限 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
--   [合并的权限&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+-   [&#40;Master Data Services 的合并权限&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
--   [Filter 运算符 (Master Data Services)](../../2014/master-data-services/filter-operators-master-data-services.md)  
+-   [筛选器运算符 &#40;Master Data Services&#41;](../../2014/master-data-services/filter-operators-master-data-services.md)  
   
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3858f73e1b332acfa1a1bbc640007f6f0884abff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260712"
 ---
 # <a name="omitting-values-for-optional-web-service-objects"></a>省略可选 Web 服务对象的值
@@ -28,11 +28,11 @@ ms.locfileid: "63260712"
 > [!IMPORTANT]  
 >  未能使用上述方法指定属性可能会导致不可预知的 Web 服务行为。  
   
- 通常要求您处理附加指定属性的数据类型是`Boolean`， `DateTime`，和`Enumeration`。  
+ 通常要求您处理其他指定属性的数据类型为`Boolean`、 `DateTime`和。 `Enumeration`  
   
  有关示例，请参阅 <xref:ReportService2010.ReportingService2010.CreateDataSource%2A> 方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 Web 服务和 .NET Framework 生成应用程序](building-applications-using-the-web-service-and-the-net-framework.md)   
  [技术参考 (SSRS)](../../technical-reference-ssrs.md)  
   

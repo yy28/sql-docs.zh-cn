@@ -1,5 +1,5 @@
 ---
-title: 将报表链接到作为点击链接型报表模型 |Microsoft Docs
+title: 将报表作为点击链接型报表链接到模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45b7695a9cd259d10155036ce1f9367a71e2fe72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108370"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>将报表作为点击链接型报表链接到模型
@@ -31,7 +31,7 @@ ms.locfileid: "66108370"
   
 1.  打开 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 或更高版本。  
   
-2.  在 Web 浏览器的地址栏中，键入报表管理器 URL。 默认情况下，URL 为 http://\<*ComputerName*> / 报告。  
+2.  在 Web 浏览器的地址栏中，键入报表管理器 URL。 默认情况下，URL 为 http://\<*ComputerName*>/reports。  
   
 ### <a name="to-create-a-customized-clickthrough-report"></a>创建自定义的点击链接型报表  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66108370"
   
 2.  双击此报表模型。  
   
-3.  单击 **“点击链接”** 。  
+3.  单击 **“点击链接”**。  
   
 4.  选择要向其中附加自定义点击链接型报表的实体。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "66108370"
   
      若要在单击选定实体的多个实例时显示此自定义报表，请单击多个实例报表 **“浏览”** 按钮。  
   
-6.  选择该报表，再单击 **“确定”** 。  
+6.  选择该报表，再单击 **“确定”**。  
   
-7.  单击 **“应用”** 。  
+7.  单击“应用”  。  
   
-## <a name="see-also"></a>请参阅  
- [点击链接型报表&#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)  
+## <a name="see-also"></a>另请参阅  
+ [SSRS&#41;的点击链接型 &#40;报表](reports/clickthrough-reports-ssrs.md)  
   
   

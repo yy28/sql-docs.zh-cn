@@ -1,5 +1,5 @@
 ---
-title: 常规属性页上，资源 （报表管理器） |Microsoft Docs
+title: "\"常规属性\" 页，资源（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109115"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>资源的“常规”属性页（报表管理器）
@@ -35,7 +35,7 @@ ms.locfileid: "66109115"
   
 ## <a name="options"></a>选项  
  **名称**  
- 指定资源的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : \@ & = +，$ / * \< > |"或 / 指定名称时。  
+ 指定资源的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? ： \@ & = +，$/* \< > |"或/。  
   
  **说明**  
  键入资源的说明。 有权访问该资源的用户可以在“内容”页中看到此说明。  
@@ -43,25 +43,25 @@ ms.locfileid: "66109115"
  **在列表视图中隐藏**  
  选择此选项可对正在报表管理器中使用列表视图模式的用户隐藏资源。 列表视图模式是浏览报表服务器文件夹层次结构时的默认视图格式。 在列表视图中，项的名称和说明可跨越页面。 备用格式为详细信息视图。 详细信息视图省略了说明，但包含项的其他信息。 虽然可以在列表视图中隐藏项，但不能在详细信息视图中隐藏项。 如果希望限制访问项，必须创建角色分配。  
   
- **类型**  
- 指定资源的 MIME 类型。 该属性为只读。  
+ 类型   
+ 指定资源的 MIME 类型。 此属性为只读。  
   
- **Apply**  
+ **应用**  
  单击此选项可保存所做的更改。  
   
  **删除**  
  单击此选项可从报表服务器数据库中删除资源。  
   
- **“移动”**  
+ **移动**  
  单击此选项可在报表服务器文件夹层次结构中重新定位资源。 单击此按钮将打开“移动项”页，可以在该页浏览文件夹以选择新的文件夹位置。  
   
- **替换**  
+ **全部**  
  单击此选项可打开“导入资源”页，在该页上可以从文件共享中选择资源文件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [查看资源的页&#40;报表管理器&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
- [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
- [项的“安全性”属性页（报表管理器）](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+ ["视图" 页，报表管理器的资源 &#40;&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
+ [报表管理器 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
+ ["安全属性" 页，项 &#40;报表管理器&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
   

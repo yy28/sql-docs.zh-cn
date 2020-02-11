@@ -1,5 +1,5 @@
 ---
-title: 添加表 (SSAS 表格) |Microsoft Docs
+title: 添加表（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81c1d3d2f0a0098fea271a782af10fbd26245a28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067788"
 ---
 # <a name="add-a-table-ssas-tabular"></a>添加表（SSAS 表格）
@@ -22,24 +22,25 @@ ms.locfileid: "66067788"
   
 ### <a name="to-add-a-table-from-an-existing-data-source"></a>从现有数据源添加表  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“现有连接”** 。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“现有连接”**。  
   
-2.  在 **“现有连接”** 页中，选择指向要添加的表所在的数据源的连接，然后单击 **“打开”** 。  
+2.  在 **“现有连接”** 页中，选择指向要添加的表所在的数据源的连接，然后单击 **“打开”**。  
   
 3.  在 **“选择表和视图”** 页上，从数据源中选择要添加到模型中的表。  
   
     > [!NOTE]  
-    >  **“选择表和视图”** 页不会将以前导入的表显示为已选中。  如果使用此连接选择以前曾导入的表，且以前未曾为该表指定不同的友好名称，则将向该友好名称追加一个数字 1。 无需重新选择以前使用此连接导入的任何表。  
+    >  
+  **“选择表和视图”** 页不会将以前导入的表显示为已选中。  如果使用此连接选择以前曾导入的表，且以前未曾为该表指定不同的友好名称，则将向该友好名称追加一个数字 1。 无需重新选择以前使用此连接导入的任何表。  
   
-4.  如有必要，请使用“预览和筛选”以便仅选择特定列或对要导入的数据应用筛选器  。  
+4.  如有必要，请使用“预览和筛选”以便仅选择特定列或对要导入的数据应用筛选器****。  
   
 5.  单击 **“完成”** 导入新表。  
   
 > [!NOTE]  
 >  从单个数据源同时导入多个表时，这些表在数据源中所具备的任何表间关系都将在模型中自动创建。 但如果稍后添加表，则可能需要在模型中手动创建新添加的表和以前导入的表之间的关系。  
   
-## <a name="see-also"></a>请参阅  
- [导入数据（SSAS 表格）](../import-data-ssas-tabular.md)   
- [删除表（SSAS 表格）](delete-a-table-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;导入数据](../import-data-ssas-tabular.md)   
+ [删除 &#40;SSAS 表格&#41;的表](delete-a-table-ssas-tabular.md)  
   
   

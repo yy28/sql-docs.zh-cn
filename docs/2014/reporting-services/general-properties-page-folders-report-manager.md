@@ -1,5 +1,5 @@
 ---
-title: 常规属性页上，文件夹 （报表管理器） |Microsoft Docs
+title: "\"常规属性\" 页，文件夹（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901ed097b1a1f689a854d60e0df9b541403fdc76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109133"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>文件夹的“常规”属性页（报表管理器）
@@ -31,11 +31,11 @@ ms.locfileid: "66109133"
   
 1.  打开报表管理器，并打开您要查看或配置属性的文件夹。  
   
-2.  在文件夹标志下，在工具栏中单击 **“文件夹设置”** 。  
+2.  在文件夹标志下，在工具栏中单击 **“文件夹设置”**。  
   
 ## <a name="options"></a>选项  
  **名称**  
- 指定文件夹的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : \@ & = +，$ * \< > |"或 / 指定名称时。  
+ 指定文件夹的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? ： \@ & = +，$ * \< > |"或/。  
   
  **说明**  
  键入对文件夹内容的说明。 有权访问该文件夹的用户可以在“内容”页中查看此说明。  
@@ -43,16 +43,16 @@ ms.locfileid: "66109133"
  **在列表视图中隐藏**  
  选择此选项可对正在报表管理器中使用列表视图模式的用户隐藏文件夹。 列表视图模式是浏览报表服务器文件夹层次结构时的默认视图格式。 在列表视图中，项的名称和说明可跨越页面。 备用格式为详细信息视图。 详细信息视图省略了说明，但包含项的其他信息。 虽然可以在列表视图中隐藏项，但不能在详细信息视图中隐藏项。 如果希望限制访问项，必须创建角色分配。  
   
- **Apply**  
+ **应用**  
  单击此选项可保存所做的更改。  
   
  **删除**  
  单击此选项可删除文件夹及其内容。  
   
- **“移动”**  
+ **移动**  
  单击此选项可在报表服务器命名空间内重新定位报表或文件夹。 单击此按钮将打开“移动项”页，使用此页可以浏览文件夹以选择新的文件夹位置。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   

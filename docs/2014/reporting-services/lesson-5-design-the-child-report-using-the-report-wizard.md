@@ -1,5 +1,5 @@
 ---
-title: 第 5 课：设计子报表使用报表向导 |Microsoft Docs
+title: 第 5 课：使用报表向导设计子报表 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661b4f3cc63eb0c19fddb53f872e940d1f9976e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108441"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>第 5 课：使用报表向导设计子报表
@@ -26,35 +26,35 @@ ms.locfileid: "66108441"
   
 2.  右键单击该网站，然后选择“添加新项”  。  
   
-3.  在中**添加新项**对话框中，单击**报表向导**，输入报表文件的名称，然后单击**添加**。  
+3.  在 "**添加新项**" 对话框中，单击 "**报表向导**"，输入报表文件的名称，然后单击 "**添加**"。  
   
      随后将启动报表向导。  
   
-4.  在中**数据集属性**页上，在**数据源**框中，单击**DataSet2**。  
+4.  在 "数据**集属性**" 页的 "**数据源**" 框中，单击**DataSet2**。  
   
      随后将自动使用创建的 DataTable 更新“可用数据集”框  。  
   
-5.  单击“下一步”  。  
+5.  单击“下一步”。   
   
 6.  在“排列字段”页中，执行以下操作  ：  
   
     1.  将 ProductID、PurchaseOrderID、PurchaseOrderDetailID、OrderQty、ReceivedQty、RejectedQty 和 StockedQty 从“可用字段”拖到“值”框中          。  
   
-    2.  单击箭头旁边**sum （productid)** ， **sum （purchaseorderid)** ， **sum （purchaseorderdetailid)** ， **sum （orderqty)** ， **Sum （receivedqty)** ， **sum （rejectedqty)** ，和**sum （stockedqty)** 清除**总和**所选内容。  
+    2.  单击**sum （ProductID）**、 **sum （PurchaseOrderID）**、sum （ **PurchaseOrderDetailID）**、 **Sum （OrderQty）**、 **sum （ReceivedQty）**、 **sum （RejectedQty）** 和**sum （StockedQty）** 旁的箭头，然后清除**sum**选项。  
   
-7.  单击**下一步**两次，然后单击**完成**以关闭**报表向导**。  
+7.  单击 "**下一步**" 两次，然后单击 "**完成**" 关闭**报表向导**。  
   
      现已创建 .rdlc 文件。 随后将在报表设计器中打开该文件。 设计图面中现在显示由您设计的 tablix。  
   
 8.  打开 .rdlc 文件后，通过执行以下操作添加参数：  
   
-    1.  单击**参数**中**报表数据**窗格中，，然后单击**添加参数**。  
+    1.  在 "**报表数据**" 窗格中单击 "**参数**"，然后单击 "**添加参数**"。  
   
     2.  在“名称”框中输入“productid”   。  
   
     3.  确认在“数据类型”列表框中选择了“整数”   。  
   
-    4.  单击“确定”  。  
+    4.  单击“确定”。   
   
 9. 保存 .rdlc 文件。  
   

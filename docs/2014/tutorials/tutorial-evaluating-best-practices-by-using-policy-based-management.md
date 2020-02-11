@@ -19,13 +19,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064429"
 ---
-# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>教程：使用基于策略的管理来评估最佳做法
+# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>教程：使用基于策略的管理来评估最佳实践
   欢迎使用“使用基于策略的管理来评估最佳实践”教程。 本教程适用于熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 但不熟悉基于策略的管理的用户。 基于策略的管理是一个系统，用于定义可用于强制执行网站管理标准的策略。 基于策略的管理包括一组最佳实践策略，这些策略可用于分析某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，以便确定该实例是否满足最佳实践指导原则和建议。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
@@ -33,10 +33,10 @@ ms.locfileid: "66064429"
   
  本教程分为两课：  
   
- [第 1 课：评估在按需基础上的最佳做法](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [课程 1：按需评估最佳实践策略](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
  在本课程中，您可以对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个或多个实例执行策略的按需评估。  
   
- [第 2 课：评估按计划定期的最佳实践策略](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [课程 2：定期评估最佳实践策略](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
  在本课程中，您配置要定期运行的最佳实践策略。 本课程演示如何对单个实例配置定期策略，以及如何将定期策略从中央位置部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的多个实例。  
   
 ## <a name="requirements"></a>要求  
@@ -45,9 +45,9 @@ ms.locfileid: "66064429"
  若要使用本教程，服务器中必须已安装 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
 ## <a name="start-the-tutorial"></a>开始教程  
- [第 1 课：评估在按需基础上的最佳做法](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [课程 1：按需评估最佳实践策略](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

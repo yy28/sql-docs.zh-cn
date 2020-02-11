@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74b6e86e6c9e7fd9d293e4c1bdab952468adb4b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106512"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）
@@ -29,14 +29,14 @@ ms.locfileid: "66106512"
   
 ### <a name="align-the-data-in-a-sparkline-or-data-bar"></a>对齐迷你图或数据条中的数据  
   
-1.  单击迷你图或数据条，然后单击 **“水平轴属性”** 或 **“垂直轴属性”** 。  
+1.  单击迷你图或数据条，然后单击 **“水平轴属性”** 或 **“垂直轴属性”**。  
   
 2.  在 **“轴选项”** 选项卡上，选中 **“对齐轴”** 框，然后在下拉框中选择要对齐轴的组。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
- [添加迷你图和数据条（报表生成器和 SSRS）](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [&#40;报表生成器和 SSRS 添加迷你图和数据条&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
   

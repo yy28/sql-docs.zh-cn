@@ -1,5 +1,5 @@
 ---
-title: 定义数据源视图 (Analysis Services) |Microsoft Docs
+title: 定义数据源视图（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075403"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定义数据源视图 (Analysis Services)
-  数据源视图包含使用的架构的逻辑模型[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多维数据库对象即多维数据集、 维度和挖掘结构。 数据源视图是统一维度模型 (UDM) 和挖掘结构所使用的那些架构元素的元数据定义，以 XML 格式进行存储。 数据源视图：  
+  数据源视图包含[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多维数据库对象（即多维数据集、维度和挖掘结构）使用的架构的逻辑模型。 数据源视图是统一维度模型 (UDM) 和挖掘结构所使用的那些架构元素的元数据定义，以 XML 格式进行存储。 数据源视图：  
   
 -   包含表示一个或多个基础数据源中选定对象的元数据，或者包含在您按照自上而下方法生成架构时将用于生成基础关系数据存储的元数据。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "66075403"
   
  DSV 是多维模型的必需组件。 大多数 Analysis Services 开发人员均会在模型设计的初期阶段创建 DSV，以便根据提供基础数据的外部关系数据库生成至少一个 DSV。 但是，您也可以在后面的阶段创建 DSV，以便在创建维度和多维数据集后生成架构和基础数据库结构。 第二种方法有时称为“由上而下设计”，并且通常用于为建模设计原型并进行分析。 在使用此方法时，可使用架构生成向导根据在 Analysis Services 项目或数据库中定义的 OLAP 对象创建基础数据源视图和数据源对象。 不管您如何及何时创建 DSV，每个模型必须具有一个 DSV，然后您才可以处理它。  
   
- 本主题包含以下各节：  
+ 本主题包含下列部分：  
   
- [数据源视图构成](#bkmk_dsvdef)  
+ [数据源视图组合](#bkmk_dsvdef)  
   
  [使用数据源视图向导创建 DSV](#bkmk_startWiz)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66075403"
   
  [添加辅助数据源](#bkmk_secondaryDS)  
   
-##  <a name="bkmk_dsvdef"></a> 数据源视图构成  
+##  <a name="bkmk_dsvdef"></a>数据源视图组合  
  数据源视图包含以下几项：  
   
 -   名称和说明。  
@@ -78,13 +78,13 @@ ms.locfileid: "66075403"
   
     -   表、视图和命名查询之间的逻辑主键-外键关系。  
   
-##  <a name="bkmk_startWiz"></a> 使用数据源视图向导创建 DSV  
+##  <a name="bkmk_startWiz"></a>使用数据源视图向导创建 DSV  
  若要创建 DSV，请从 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的解决方案资源管理器运行数据源视图向导。  
   
 > [!NOTE]  
 >  或者，可以使用架构生成向导首先构造维度和多维数据集，然后为模型生成 DSV。 有关详细信息，请参阅[架构生成向导 (Analysis Services)](schema-generation-wizard-analysis-services.md)。  
   
-1.  在解决方案资源管理器中，右键单击 Data Source Views 文件夹，然后单击“新建数据源视图”。  
+1.  在解决方案资源管理器中，右键单击 Data Source Views 文件夹，然后单击“新建数据源视图”。****  
   
 2.  指定向外部关系数据库提供连接信息的新的或现有数据源对象（只能在向导中选择一个数据源）。  
   
@@ -100,26 +100,27 @@ ms.locfileid: "66075403"
   
 4.  **筛选可用对象**  
   
-     如果可用对象列表包含大量对象，您可以通过应用一个简单的筛选器（指定字符串作为选择条件）减小列表。 例如，如果键入 **dbo** 并单击 **“筛选器”** 按钮，则 **“可用对象”** 列表中只显示以“dbo”开头的那些项。 筛选器可以是部分字符串 （例如，"sal"返回销售额和薪金），但它不能包含多个字符串或运算符。  
+     如果可用对象列表包含大量对象，您可以通过应用一个简单的筛选器（指定字符串作为选择条件）减小列表。 例如，如果键入 **dbo** 并单击 **“筛选器”** 按钮，则 **“可用对象”** 列表中只显示以“dbo”开头的那些项。 该筛选器可以为部分字符串（例如，"sal" 返回销售额和薪金），但它不能包含多个字符串或运算符。  
   
 5.  对于未定义表关系的关系数据源，将显示 **“名称匹配”** 页，以便您可以选择相应的名称匹配方法。 有关详细信息，参阅本主题中的 [指定关系的名称匹配条件](#bkmk_NameMatch) 部分。  
   
-##  <a name="bkmk_secondaryDS"></a> 添加辅助数据源  
+##  <a name="bkmk_secondaryDS"></a>添加辅助数据源  
  定义包含来自多个数据源的表、视图或列的数据源视图时，会将从中将对象添加到数据源视图的第一个数据源指定为主数据源（主数据源在定义之后便不能更改）。 根据来自单个数据源的对象定义数据源视图之后，便可添加来自其他数据源的对象。  
   
  如果 OLAP 处理或数据挖掘查询需要在单个查询中使用来自多个数据源的数据，则主数据源必须支持使用 `OpenRowset` 的远程查询。 通常，此数据源将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源。 例如，如果设计包含绑定到多个数据源列的属性的 OLAP 维度，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将构造 `OpenRowset` 查询以在处理过程中填充此维度。 但是，如果通过单个数据源便可填充 OLAP 对象或解析数据挖掘查询，则不会构造 `OpenRowset` 查询。 在某些情况下，可以定义属性之间的属性关系，从而不再需要 `OpenRowset` 查询。 有关属性关系的详细信息，请参阅 [属性关系](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)、 [在数据源视图中添加或删除表或视图 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) 和 [定义属性关系](attribute-relationships-define.md)中的解决方案资源管理器运行数据源视图向导。  
   
- 若要从第二个数据源添加表和列，请在解决方案资源管理器中双击 DSV，在数据源视图设计器中打开它，然后使用“添加/删除表”对话框以包含来自在项目中定义的其他数据源中的对象。 有关详细信息，请参阅 [在数据源视图中添加或删除表或视图 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)中的解决方案资源管理器运行数据源视图向导。  
+ 若要从第二个数据源添加表和列，请在解决方案资源管理器中双击 DSV，在数据源视图设计器中打开它，然后使用“添加/删除表”对话框以包含来自在项目中定义的其他数据源中的对象。 有关详细信息，请参阅[在数据源视图中添加或删除表或视图 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)。  
   
-##  <a name="bkmk_NameMatch"></a> 指定关系的名称匹配条件  
- 创建 DSV 时，将根据数据源中的外键约束创建表之间的关系。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎需要使用这些关系来构造相应的 OLAP 处理查询和数据挖掘查询。 但是，包含多个表的数据源有时并没有外键约束。 如果数据源没有外键约束，则数据源视图向导会提示您定义希望向导如何尝试匹配不同表中的列名。  
+##  <a name="bkmk_NameMatch"></a>指定关系的名称匹配条件  
+ 创建 DSV 时，将根据数据源中的外键约束创建表之间的关系。 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎需要使用这些关系来构造相应的 OLAP 处理查询和数据挖掘查询。 但是，包含多个表的数据源有时并没有外键约束。 如果数据源没有外键约束，则数据源视图向导会提示您定义希望向导如何尝试匹配不同表中的列名。  
   
 > [!NOTE]  
 >  向导会提示您只有在基础数据源中检测不到外键关系时，才提供名称匹配条件。 如果检测到了外键关系，则使用检测到的关系，您必须手动定义要包括在 DSV 中的任何其他关系（包括逻辑主键）。 有关详细信息，请参阅[在数据源视图中定义逻辑关系 (Analysis Services)](define-logical-relationships-in-a-data-source-view-analysis-services.md) 和[在数据源视图中定义逻辑主键 (Analysis Services)](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)。  
   
  数据源视图向导将使用您的响应来匹配列名，并创建 DSV 中不同表间的关系。 您可以指定下表中列出的任何一个条件。  
   
-|名称匹配条件|Description|  
+|名称匹配条件|说明|  
 |----------------------------|-----------------|  
 |**与主键同名**|源表中的外键列名与目标表中的主键列名相同。 例如，外键列 `Order.CustomerID` 与主键列 `Customer.CustomerID`相同。|  
 |**与目标表同名**|源表中的外键列名与目标表名相同。 例如，外键列 `Order.Customer` 与主键列 `Customer.CustomerID`相同。|  
@@ -130,15 +131,15 @@ ms.locfileid: "66075403"
 > [!NOTE]  
 >  完成数据源视图向导后，可以在数据源视图设计器的架构窗格中添加或删除关系。 有关详细信息，请参阅[在数据源视图中定义逻辑关系 (Analysis Services)](define-logical-relationships-in-a-data-source-view-analysis-services.md)。  
   
-## <a name="see-also"></a>请参阅  
- [在数据源视图中添加或删除表或视图 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [在数据源视图中定义逻辑主键 (Analysis Services)](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [在数据源视图中定义命名计算 (Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [在数据源视图中定义命名查询 (Analysis Services)](define-named-queries-in-a-data-source-view-analysis-services.md)   
- [在数据源视图中替换表或命名查询 (Analysis Services)](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [使用数据源视图设计器中的关系图 (Analysis Services)](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [在数据源视图中浏览数据 (Analysis Services)](explore-data-in-a-data-source-view-analysis-services.md)   
- [删除数据源视图 (Analysis Services)](delete-a-data-source-view-analysis-services.md)   
- [刷新数据源视图中的架构 (Analysis Services)](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [在数据源视图中添加或删除表或视图 &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
+ [在数据源视图中定义逻辑主键 &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [在数据源视图中定义命名计算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [在数据源视图中定义命名查询 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [将数据源视图中的表或命名查询替换 &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [使用数据源视图设计器中的关系图 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [浏览数据源视图中的数据 &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
+ [&#40;Analysis Services 中删除数据源视图&#41;](delete-a-data-source-view-analysis-services.md)   
+ [刷新数据源视图中的架构 &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

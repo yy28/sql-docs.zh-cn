@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107723"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>以 HTML 格式呈现（报表生成器和 SSRS）
@@ -26,15 +26,15 @@ ms.locfileid: "66107723"
   
  在某些情况下，以 HTML 格式呈现报表时，报表参数可用于发起脚本注入攻击。 有关保护报表的详细信息，请参阅 [保护报表和资源](../security/secure-reports-and-resources.md)。  
   
- 有关浏览器的详细信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。  
+ 有关浏览器的详细信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> 以 MHTML 格式呈现  
+##  <a name="RenderingMHTML"></a>以 MHTML 格式呈现  
  HTML 呈现扩展插件还可以将报表呈现为 MHTML 格式（聚合 HTML 文档的 MIME 封装）。 MHTML 扩展了 HTML 以实现在 HTML 文档中嵌入图像等编码对象。 使用 MHTML 呈现扩展插件后，可将图像、文档或其他二进制文件等资源作为报表 HTML 内的 MIME 结构嵌入单个文件中。 MHTML 报表也可用于嵌入到电子邮件中，因为所有资源都包含在报表中。 虽然实际上呈现 MHTML 的是 HTML 呈现扩展插件，但此功能也可称为 MHTML 呈现扩展插件。  
   
-##  <a name="BrowserSupport"></a> 浏览器支持  
+##  <a name="BrowserSupport"></a>浏览器支持  
  此呈现扩展插件支持以下浏览器版本：  
   
 -   Internet Explorer 5.5 和更高版本  
@@ -45,7 +45,7 @@ ms.locfileid: "66107723"
   
  出于跨浏览器的考虑，呈现的报表可能因浏览器的不同而稍有差别。 例如，文本框包含名为 WritingMode 的属性。 Firefox 不支持此属性。  
   
-##  <a name="HTMLSpecificRenderingRules"></a> 特定于 HTML 的呈现规则  
+##  <a name="HTMLSpecificRenderingRules"></a>特定于 HTML 的呈现规则  
  呈现时将应用下列特定于 HTML 的规则：  
   
 -   呈现器生成一个 HTML 表结构，以包含每个 `ReportItems` 集合（如果存在多个集合）中的所有项。  
@@ -88,7 +88,7 @@ ms.locfileid: "66107723"
 ##  <a name="DeviceInfo"></a> 设备信息设置  
  您可以通过更改设备信息设置来更改此呈现器的某些默认设置（包括以哪个模式呈现）。 有关详细信息，请参阅 [HTML Device Information Settings](../html-device-information-settings.md)。  
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   

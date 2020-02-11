@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076423"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>使用现有表创建维度
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导通过现有表创建维度。 在维度向导的 **“选择创建方法”** 页上选择 **“使用现有表”** 选项可执行此操作。 选择此选项后，向导将基于现有数据源视图中的维度表、维度表中的列以及表中各列之间的任何关系构建维度结构。 该向导从源表和相关表中抽取样本数据。 此数据用于定义基于维度表中的列的属性列，以及定义属性的层次结构（称为“用户定义”  的层次结构）。 使用维度向导创建维度后，可以使用维度设计器来添加、删除和配置维度中的属性和层次结构。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的维度向导，通过现有表创建维度。 在维度向导的 **“选择创建方法”** 页上选择 **“使用现有表”** 选项可执行此操作。 选择此选项后，向导将基于现有数据源视图中的维度表、维度表中的列以及表中各列之间的任何关系构建维度结构。 该向导从源表和相关表中抽取样本数据。 此数据用于定义基于维度表中的列的属性列，以及定义属性的层次结构（称为“用户定义”** 的层次结构）。 使用维度向导创建维度后，可以使用维度设计器来添加、删除和配置维度中的属性和层次结构。  
   
  如果您要使用现有表来创建维度，则维度向导将指导您执行以下操作：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66076423"
 ## <a name="selecting-dimension-attributes"></a>选择维度属性  
  选择维度表后，可以使用 **“选择维度属性”** 页来基于这些表选择要包含在维度中的属性。 所有这些表中的全部基础列都可用作潜在维度属性。 必须选择并启用维度键属性才能进行浏览。  
   
- 默认情况下，向导将属性类型设置为 `Regular`。 不过，您可能希望将特定属性映射到另一种可更好地表达数据的属性类型。 例如， [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW 示例数据库中的 dbo.DimAccount 表包含提供帐号的 AccountCodeAlternateKey 列。 而不是将类型设置为`Regular`此特性，你可能想要将映射到此特性`Account Number`类型。  
+ 默认情况下，向导将属性类型设置为 `Regular`。 不过，您可能希望将特定属性映射到另一种可更好地表达数据的属性类型。 例如， [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW 示例数据库中的 dbo.DimAccount 表包含提供帐号的 AccountCodeAlternateKey 列。 你可能希望将此属性`Regular`映射到`Account Number`类型，而不是将此属性的类型设置为。  
   
 > [!NOTE]  
 >  如果创建维度时没有设置维度类型和标准属性类型，则在创建维度后可使用商业智能向导设置这些值。 有关详细信息，请参阅 [向维度中添加维度智能](bi-wizard-add-dimension-intelligence-to-a-dimension.md) 或（对账户类型维度而言） [向维度中添加帐户智能](bi-wizard-add-account-intelligence-to-a-dimension.md)。  
@@ -65,15 +65,16 @@ ms.locfileid: "66076423"
 ## <a name="defining-account-intelligence"></a>定义帐户智能  
   
 > [!NOTE]  
->  仅当在向导的“选择维度属性”  页上定义“帐户类型”  维度属性时，维度向导才显示此步骤。  
+>  仅当在向导的“选择维度属性”**** 页上定义“帐户类型”**** 维度属性时，维度向导才显示此步骤。  
   
  使用 **“定义帐户智能”** 页可创建“帐户”类型的维度。 若要创建“帐户”类型的维度，必须将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持的标准帐户类型映射到维度中帐户类型属性的成员。 服务器使用这些映射为每种类型的帐户数据提供单独的聚合函数和别名。  
   
  向导提供了具有以下列的表来映射这些帐户类型：  
   
--   **“源表帐户类型”** 列，列出来自数据源表的帐户类型。  
+-   
+  **“源表帐户类型”** 列，列出来自数据源表的帐户类型。  
   
--   “内置帐户类型”  列，列出服务器支持的相应标准帐户类型。 如果源数据使用标准名称，则向导会自动将源类型映射为服务器类型，然后使用此信息填充“内置帐户类型”  列。 如果服务器不映射帐户类型或您希望更改映射，可以从“内置帐户类型”  列的列表中选择其他类型。  
+-   “内置帐户类型”**** 列，列出服务器支持的相应标准帐户类型。 如果源数据使用标准名称，则向导会自动将源类型映射为服务器类型，然后使用此信息填充“内置帐户类型”**** 列。 如果服务器不映射帐户类型或您希望更改映射，可以从“内置帐户类型”**** 列的列表中选择其他类型。  
   
 > [!NOTE]  
 >  如果向导创建“帐户”维度时未映射帐户类型，则在创建维度后可使用商用智能向导配置这些映射。 有关详细信息，请参阅 [向维度中添加帐户智能](bi-wizard-add-account-intelligence-to-a-dimension.md)。  
@@ -85,7 +86,7 @@ ms.locfileid: "66076423"
   
  在 **“完成向导”** 页中，输入新维度的名称并查看维度结构即完成该向导。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [通过在数据源中生成非时间表来创建维度](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
  [通过生成时间表来创建时间维度](create-a-time-dimension-by-generating-a-time-table.md)   
  [维度特性属性参考](dimension-attribute-properties-reference.md)   

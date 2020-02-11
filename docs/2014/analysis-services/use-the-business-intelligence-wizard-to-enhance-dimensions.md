@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 331820704691d86ab06c1a46934f7aca6154e1cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065510"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>使用商业智能向导增强维度
@@ -32,12 +32,12 @@ ms.locfileid: "66065510"
   
 -   [定义维度的排序](multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md)  
   
--   [启用维度写回](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+-   [“启用维度写回”](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [定义数据库维度](multidimensional-models/define-database-dimensions.md)   
  [维度特性属性参考](multidimensional-models/dimension-attribute-properties-reference.md)   
- [创建用户定义层次结构](multidimensional-models/user-defined-hierarchies-create.md)   
+ [创建用户定义的层次结构](multidimensional-models/user-defined-hierarchies-create.md)   
  [定义属性关系](multidimensional-models/attribute-relationships-define.md)   
  [多维模型中的维度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

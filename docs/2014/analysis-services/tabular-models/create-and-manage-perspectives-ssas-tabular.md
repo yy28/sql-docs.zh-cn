@@ -1,5 +1,5 @@
 ---
-title: 创建和管理透视 (SSAS 表格) |Microsoft Docs
+title: 创建和管理透视（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b920446018c9199ed0bd436e67a65d43341f7f43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067431"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>创建和管理透视（SSAS 表格）
@@ -34,33 +34,33 @@ ms.locfileid: "66067431"
   
 -   [复制透视](#bkmk_copy)  
   
-## <a name="tasks"></a>“任务”  
+## <a name="tasks"></a>任务  
  为了创建透视，您将使用 **“透视”** 对话框，您可以在此添加、编辑、删除、复制和查看透视。 若要查看 **“透视”** 对话框，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中单击 **“模型”** 菜单，然后单击 **“透视”**。  
   
-###  <a name="bkmk_add"></a> 添加透视  
+###  <a name="bkmk_add"></a>添加透视  
   
 -   若要添加新的透视，请单击 **“新建透视”**。 然后，您可以选中和取消选中要包括的字段对象，并为新的透视提供名称。  
   
      如果您创建具有所有字段对象字段的一个空透视，则使用该透视的用户将看到一个空的字段列表。 透视应包含至少一个表和列。  
   
-###  <a name="bkmk_edit"></a> 编辑透视  
+###  <a name="bkmk_edit"></a>编辑透视  
   
--   若要修改某一透视，选中或取消选中透视的列，这将添加从透视中删除字段对象中的字段。  
+-   若要修改透视，请选中和取消选中透视的列中的字段，这将从透视中添加和删除字段对象。  
   
-###  <a name="bkmk_rename"></a> 重命名透视  
+###  <a name="bkmk_rename"></a>重命名透视  
   
--   当鼠标悬停在透视的列标题 （透视的名称） 上**重命名**按钮将出现。 若要重命名该透视，请单击 **“重命名”**，然后输入新名称或编辑现有名称。  
+-   将鼠标悬停在透视的列标题（透视的名称）上时，将出现 "**重命名**" 按钮。 若要重命名该透视，请单击 **“重命名”**，然后输入新名称或编辑现有名称。  
   
-###  <a name="bkmk_delete"></a> 删除透视  
+###  <a name="bkmk_delete"></a>删除透视  
   
--   当鼠标悬停在透视的列标题 （透视的名称） 上**删除**按钮将出现。 若要删除透视，请单击 **“删除”** 按钮，然后在确认窗口中单击 **“是”** 。  
+-   当您将鼠标悬停在透视的列标题（透视的名称）上时，"**删除**" 按钮将出现。 若要删除透视，请单击 **“删除”** 按钮，然后在确认窗口中单击 **“是”** 。  
   
-###  <a name="bkmk_copy"></a> 复制透视  
+###  <a name="bkmk_copy"></a>复制透视  
   
--   当您将鼠标悬停在透视的列标题**复制**按钮将出现。 若要创建该透视的副本，请单击 **“复制”** 按钮。 所选透视的副本将作为新透视添加到现有透视的右侧。 新的透视将继承复制的透视的名称，并且“复制”批注将追加到名称的末尾。 例如，如果一份*销售*创建角度来看，新的透视将称作*Sales-Copy*。  
+-   当您将鼠标指针悬停在透视的列标题上时，"**复制**" 按钮将出现。 若要创建该透视的副本，请单击 **“复制”** 按钮。 所选透视的副本将作为新透视添加到现有透视的右侧。 新的透视将继承复制的透视的名称，并且“复制”** 批注将追加到名称的末尾。 例如，如果创建了*sales*透视的副本，则新的透视称为*销售-副本*。  
   
-## <a name="see-also"></a>请参阅  
- [透视表（SSAS 表格）](perspectives-ssas-tabular.md)   
- [层次结构（SSAS 表格）](hierarchies-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [SSAS 表格&#41;&#40;透视](perspectives-ssas-tabular.md)   
+ [SSAS 表格&#41;&#40;层次结构](hierarchies-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 选择创建方法 （维度向导） |Microsoft Docs
+title: 选择创建方法（维度向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d44afc5bb4c352a2cb5dfd39030a52db990e3a0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069599"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>选择创建方法（维度向导）
   可以使用 **“选择创建方法”** 页选择如何创建维度。  
   
- **若要打开维度向导**  
+ **打开维度向导**  
   
--   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的**解决方案资源管理器**中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目的“维度”文件夹，然后单击“新建维度”   。  
+-   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的**解决方案资源管理器**中，右键单击 ** 项目的“维度”文件夹，然后单击“新建维度”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]****。  
   
 ## <a name="options"></a>选项  
  **使用现有表**  
@@ -32,7 +32,7 @@ ms.locfileid: "66069599"
   
  有关详细信息，请参阅 [使用现有表创建维度](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)。  
   
- **数据源中生成时间表**  
+ **在数据源中生成时间表**  
  在基础数据源中创建时间表，然后使用该表创建时间维度。 不存在这类表，并且不想使用脚本创建表时，可使用此选项。 新的时间表将包含日期范围数据、属性和在向导中指定的日历。  
   
 > [!NOTE]  
@@ -40,12 +40,12 @@ ms.locfileid: "66069599"
   
  有关详细信息，请参阅 [通过生成时间表来创建时间维度](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)。  
   
- **生成服务器上的时间表**  
+ **“在服务器上生成时间表”**  
  在服务器上直接创建时间表，然后使用该表创建时间维度。 如果没有在基础源数据中创建对象的权限，可以使用此选项。 新的时间维度将包含日期范围数据、属性和在向导中指定的日历。  
   
  有关详细信息，请参阅 [通过生成时间表来创建时间维度](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)。  
   
- **数据源中生成非时间表**  
+ **在数据源中生成非时间表**  
  在没有基础关系数据源的情况下设计维度，然后为数据源生成必要的架构。 这种方法称为自上而下的建模。  
   
 > [!NOTE]  
@@ -55,15 +55,15 @@ ms.locfileid: "66069599"
   
  有关详细信息，请参阅 [通过在数据源中生成非时间表来创建维度](multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)。  
   
- **模板**  
+ **模版**  
  选择要用于创建维度的模板。 模板提供面向特定商业用途的一组完整的属性和层次结构定义。  
   
 > [!NOTE]  
->  仅当选择了“在数据源中生成非时间表”  选项时，此选项才可用。  
+>  仅当选择了“在数据源中生成非时间表”**** 选项时，此选项才可用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [维度向导的 F1 帮助](dimension-wizard-f1-help.md)   
- [维度&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Analysis Services 多维数据 &#40;维度&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多维模型中的维度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

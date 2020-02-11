@@ -1,5 +1,5 @@
 ---
-title: 新建系统角色分配：编辑系统角色分配页 （报表管理器） |Microsoft Docs
+title: "\"新建系统角色分配：编辑系统角色分配\" 页（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108132"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>新建系统角色分配：编辑系统角色分配页 （报表管理器）
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>“新建系统角色分配: 编辑系统角色分配”页（报表管理器）
   使用“新建系统角色分配”页或“编辑系统角色分配”页可以定义报表服务器的安全性。 所有安全性都是通过将特定用户或组映射到这些用户或组可以执行的任务的角色分配来定义的。 任务列表表现为您在进行角色分配时选择的角色定义。  
   
  在系统级，您创建或修改的角色分配应用于整个报表服务器。 例如，创建共享计划的权限是在系统级指定的，因为共享计划在整个系统中使用。  
@@ -35,23 +35,23 @@ ms.locfileid: "66108132"
   
 1.  打开报表管理器。  
   
-2.  在页面顶部的右角，单击 **“站点设置”** 。 这会打开该站点的“常规属性”页。  
+2.  在页面顶部的右角，单击 **“站点设置”**。 这会打开该站点的“常规属性”页。  
   
-3.  选择 **“安全”** 选项卡。必须拥有“内容管理员”和“系统管理员”权限才能访问此页。  
+3.  选择 "**安全**" 选项卡。您必须具有 "内容管理员" 和 "系统管理员" 权限才能访问此页。  
   
 4.  要创建新的角色分配，在工具栏中单击 **“新建角色分配”** 。 要编辑现有角色分配，请在“安全属性”页上单击组或用户旁边的 **“编辑”** 。  
   
 ## <a name="options"></a>选项  
  **组或用户**  
- 键入域中的组或用户帐户的名称。 如果报表服务器在本地帐户下运行，则必须指定本地组或用户。 如果报表服务器在域帐户下运行，则必须指定域组或域用户。 按以下格式输入帐户：\<域 >\\< 帐户\>。  
+ 键入域中的组或用户帐户的名称。 如果报表服务器在本地帐户下运行，则必须指定本地组或用户。 如果报表服务器在域帐户下运行，则必须指定域组或域用户。 按以下格式输入帐户： \<域>\\<帐户。\>  
   
 > [!NOTE]  
 >  此框仅可用于“新建角色分配”页上。  
   
- **Roles**  
+ **角色**  
  提供可以分配给其他用户的系统级角色的列表。 可以为单个角色分配指定多个角色。  
   
- 报表管理器不显示每个角色中的任务，也不提供用来添加或修改任务的方法。 您必须按照角色的定义使用角色。 若要创建、修改或删除角色，请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 有关详细信息，请参阅 [创建、删除或修改角色 (Management Studio)](security/role-definitions-create-delete-or-modify.md)。  
+ 报表管理器不显示每个角色中的任务，也不提供用来添加或修改任务的方法。 您必须按照角色的定义使用角色。 若要创建、修改或删除角色，请[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]使用。 有关详细信息，请参阅 [创建、删除或修改角色 (Management Studio)](security/role-definitions-create-delete-or-modify.md)。  
   
  请注意，如果使用的是具有高级服务的 [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] ，则必须使用所提供的默认角色。  
   
@@ -64,8 +64,8 @@ ms.locfileid: "66108132"
 > [!NOTE]  
 >  此按钮仅可用于“编辑角色分配”页上。  
   
-## <a name="see-also"></a>请参阅  
- [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>另请参阅  
+ [报表管理器 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [角色分配](security/role-assignments.md)   
  [角色定义](security/role-definitions.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107633"
 ---
 # <a name="saving-reports-report-builder"></a>保存报表（报表生成器）
@@ -28,9 +28,9 @@ ms.locfileid: "66107633"
   
 -   使用报表历史记录功能将所呈现报表的各个版本作为历史记录副本保存。  
   
- 若要了解有关直接在报表服务器上查看和管理报表的详细信息，请参阅 msdn.microsoft.com 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=154888)中的[查找、查看和管理报表（报表生成器和 SSRS）](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)和 [Reporting Services 报表服务器（本机模式）](../report-server/reporting-services-report-server-native-mode.md)。  
+ 若要了解有关直接在报表服务器上查看和管理报表的详细信息，请参阅 msdn.microsoft.com 上[](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)联机丛书[中的](../report-server/reporting-services-report-server-native-mode.md)查找、查看和管理报表（报表生成器和 SSRS）和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Reporting Services 报表服务器（本机模式）](https://go.microsoft.com/fwlink/?LinkId=154888)。  
   
-##  <a name="SavingReportDefinitions"></a> 保存报表定义  
+##  <a name="SavingReportDefinitions"></a>保存报表定义  
  尽管可以将报表保存到您的计算机，但是将报表保存到报表服务器更有利。  
   
  将报表保存到报表服务器具有以下优势：  
@@ -52,7 +52,7 @@ ms.locfileid: "66107633"
 
   
 ##  <a name="ExportingAndSavingReports"></a> 导出和保存报表  
- 如果只有少量要存档的报表，可以考虑导出报表并将其另存为文件。 在将报表导出到其他应用程序（如 PDF 或 Excel）后，您可以将其另存为文件，并放在网络上受保护的共享目录中。 或者，如果希望在报表服务器数据库中保留报表的所有副本（不论何种格式），则可以将已保存的 PDF 或 Excel 文件作为资源项上载。 有关导出报表的详细信息，请参阅[导出报表&#40;报表生成器和 SSRS&#41; ](export-reports-report-builder-and-ssrs.md)并[上载文件或报表&#40;报表管理器&#41;](../reports/upload-a-file-or-report-report-manager.md)。  
+ 如果只有少量要存档的报表，可以考虑导出报表并将其另存为文件。 在将报表导出到其他应用程序（如 PDF 或 Excel）后，您可以将其另存为文件，并放在网络上受保护的共享目录中。 或者，如果希望在报表服务器数据库中保留报表的所有副本（不论何种格式），则可以将已保存的 PDF 或 Excel 文件作为资源项上载。 有关导出报表的详细信息，请参阅将[报表导出 &#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)并[将文件或报表 &#40;报表管理器&#41;上传](../reports/upload-a-file-or-report-report-manager.md)。  
   
 
   
@@ -72,15 +72,15 @@ ms.locfileid: "66107633"
   
 -   [将报表保存到 SharePoint 库（报表生成器）](save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [将报表保存到您的计算机&#40;报表生成器&#41;](../save-reports-to-your-computer-report-builder.md)  
+-   [将报表保存到计算机 &#40;报表生成器&#41;](../save-reports-to-your-computer-report-builder.md)  
   
 
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表、报表部件和报表定义（报表生成器和 SSRS）](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [安装、 卸载和报表生成器支持](../install-uninstall-and-report-builder-support.md)   
+ [安装、卸载和报表生成器支持](../install-uninstall-and-report-builder-support.md)   
  [查找、查看和管理报表（报表生成器和 SSRS）](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [导出报表&#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [导出报表 &#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [打印报表（报表生成器和 SSRS）](print-reports-report-builder-and-ssrs.md)  
   
   

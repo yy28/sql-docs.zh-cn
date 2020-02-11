@@ -1,5 +1,5 @@
 ---
-title: 图像属性对话框，大小 （报表生成器和 SSRS） |Microsoft Docs
+title: "\"图像属性\" 对话框-\"大小\" （报表生成器和 SSRS） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108984"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>“图像属性”对话框 -&gt;“大小”（报表生成器和 SSRS）
@@ -30,28 +30,28 @@ ms.locfileid: "66108984"
  **调整为合适大小**  
  选择此选项可调整图像大小，使之适应单元或文本框的高度和宽度。  
   
- **原始大小成比例**  
+ **与原始大小成比例**  
  选择此选项可按比例调整图像大小，使之适应单元或文本框的高度和宽度。  
   
- **Clip**  
+ **画**  
  选择此选项可从图片的左上角开始，在单元或文本框的高度和宽度内显示图像。 图像的边框可以缩小或放大以适合图像。 如果图像大于单元或文本框的大小，则只显示部分图像。  
   
- **Left**  
+ **左中**  
  指定单元或文本框左边缘与单元中显示值之间的填充量或间距。  
   
- **Right**  
+ **然后**  
  指定单元或文本框右边缘与单元中显示值之间的填充量或间距。  
   
- **Top**  
+ **返回页首**  
  指定单元或文本框右边缘与单元中显示值之间的填充量或间距。  
   
- **底部**  
+ **下**  
  指定单元或文本框右边缘与单元中显示值之间的填充量或间距。  
   
-## <a name="see-also"></a>请参阅  
- [图像属性对话框，常规&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ ["图像属性" 对话框-"常规" &#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
  [图像（报表生成器和 SSRS）](report-design/images-report-builder-and-ssrs.md)   
- [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [报表生成器对话框、窗格和向导的帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

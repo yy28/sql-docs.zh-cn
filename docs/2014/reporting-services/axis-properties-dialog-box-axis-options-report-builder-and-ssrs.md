@@ -1,5 +1,5 @@
 ---
-title: 轴属性对话框，轴选项 （报表生成器和 SSRS） |Microsoft Docs
+title: "\"轴属性\" 对话框-> \"轴选项\" （报表生成器和 SSRS） |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109963"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>“轴属性”对话框 ->“轴选项”（报表生成器和 SSRS）
-  选择**轴选项**上**水平**或**垂直轴属性**对话框可以定义图表指定轴的外观。 在以前版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，默认情况下，图表会在 X 轴上显示所有标签。 但在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 中，图表会跳过一些标签，以使生成的图表更加整洁，并避免标签冲突。 有关详细信息，请参阅[设置图表上轴标签的格式（报表生成器和 SSRS）](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
+  在 "**水平**" 或 "**垂直轴属性**" 对话框中选择 "**轴选项**" 可定义图表指定轴的外观。 在以前版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，默认情况下，图表会在 X 轴上显示所有标签。 但在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 中，图表会跳过一些标签，以使生成的图表更加整洁，并避免标签冲突。 有关详细信息，请参阅[设置图表上轴标签的格式（报表生成器和 SSRS）](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="options"></a>选项  
- **启用刻度分隔线**  
+ **启用小数位数分隔符**  
  选择此选项可在必要时启用图表以绘制小数位数分隔符。 启用此选项后，图表将自动计算数据集中高点与低点之间是否存在足够的差异以绘制小数位数分隔符。  
   
- **方向变为相反方向**  
+ **反向**  
  选择此选项可以反转图表的方向。 例如，默认情况下，柱形图在图表的左侧显示 Y 轴，并从左向右显示类别。 选择了此选项后，图表将在其右侧显示 Y 轴并从右向左显示类别。  
   
  **使用交错颜色**  
@@ -44,29 +44,29 @@ ms.locfileid: "66109963"
   
  当轴设置为使用对数刻度时，在框中键入要使用的对数底数。 默认情况下，图表对轴的对数刻度使用底数 10。 当轴是数轴时，此选项仅能用于 Y 轴。  
   
- **最低要求**  
+ **最低**  
  键入一个表示 X 轴最小值的表达式或值。 如果省略此参数，最小值将由数据集返回的数据决定。  
   
- **最大值**  
+  最大值  
  键入一个表示 X 轴最大值的表达式或值。 如果省略此参数，最大值将由数据集返回的数据决定。  
   
- **Interval**  
+ **间隔**  
  键入表示轴标签之间间隔的表达式或值。 例如，键入 1 将在轴上显示每个类别标签。 键入 2 将每隔一个类别标签显示一次。 如果省略，则将基于数据集中的值自动计算标签。  
   
  **间隔类型**  
  键入表示指定间隔的间隔类型的表达式或值。 例如，如果希望间隔为两天，则需指定间隔为 **2** ，间隔类型为 **天** 。  
   
  **侧边距**  
- 键入一个表达式或选择一个值，以添加或去除图表元素与图表边之间的边距。 如果将此选项设置为 **“自动”** ，则会添加侧边距。  
+ 键入一个表达式或选择一个值，以添加或去除图表元素与图表边之间的边距。 如果将此选项设置为 **“自动”**，则会添加侧边距。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置图表上轴标签的格式（报表生成器和 SSRS）](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](report-design/charts-report-builder-and-ssrs.md)   
  [设置图表上序列颜色的格式（报表生成器和 SSRS）](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [指定轴间隔（报表生成器和 SSRS）](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [辅助轴上绘制数据&#40;报表生成器和 SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [迷你图和数据条（报表生成器和 SSRS）](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [在图表中添加或删除边距（报表生成器和 SSRS）](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [&#40;报表生成器和 SSRS 在辅助轴上绘制数据&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [迷你图和数据条 &#40;报表生成器和 SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [添加或删除图表 &#40;报表生成器和 SSRS 的边距&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

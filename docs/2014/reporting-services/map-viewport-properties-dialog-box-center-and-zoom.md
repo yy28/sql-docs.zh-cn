@@ -1,5 +1,5 @@
 ---
-title: 地图视区属性对话框中，中心和缩放 |Microsoft Docs
+title: "\"地图视区属性\" 对话框-\"中心和缩放\" |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a5c71344fe45df4265db72e9fd6dc41ac13bd98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108293"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>“地图视区属性”对话框 -&gt;“中心和缩放”
@@ -43,24 +43,24 @@ ms.locfileid: "66108293"
  **中心和缩放选项**  
  选择一个选项来指定视图中心和缩放级别。  
   
- **视图中心 (X) %**  
+ **视图中心(X) %**  
  水平坐标。 默认值 50% 表示 将视图中心位于最小水平值和最大水平值之间的中点。  
   
- **视图中心 (Y) %**  
+ **视图中心(Y) %**  
  垂直坐标。 默认值 50% 表示将视图中心位于最小垂直值和最大垂直值之间的中点。  
   
- **缩放级别 （%）**  
+ **缩放级别(%)**  
  缩放系数。 默认值 100% 表示不放大。  
   
- **此层上将视图居中**  
+ **将此层上的视图居中**  
  指定层的名称。  
   
- **与此条件匹配的地图元素上将视图居中**  
+ **在地图元素满足此条件时将视图居中**  
  显示的只读字段用于将地图数据与分析数据匹配。 指定要匹配的值。 视图将自动在此地图元素上居中。 例如，NAME = TEXAS。 默认情况下，条件的数据类型是 String 且匹配区分大小写。  
   
  若要匹配具有不同数据类型的字段，必须编写一个计算结果为该数据类型的表达式。 例如，如果匹配字段为存储为整数的 5 个数字的邮政编码，则若要指定邮政编码 98053，必须使用表达式 =98053。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [地图（报表生成器和 SSRS）](report-design/maps-report-builder-and-ssrs.md)  
   
   

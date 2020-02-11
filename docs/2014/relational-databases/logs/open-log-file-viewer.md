@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144480"
 ---
 # <a name="open-log-file-viewer"></a>打开日志文件查看器
@@ -24,7 +24,7 @@ ms.locfileid: "63144480"
   
 -   审核集合  
   
--   “数据收集”  
+-   数据收集  
   
 -   数据库邮件  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63144480"
   
  可以通过多种方法打开日志文件查看器，具体情况取决于您要查看的信息。  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="BeforeYouBegin"></a> 权限  
  若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机实例的日志文件，你需要有 securityadmin 固定服务器角色的成员身份。  
   
  若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脱机实例的日志文件，不仅必须具有 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空间的读取权限，还必须具有存储日志文件的文件夹的读取权限。 有关详细信息，请参阅 [查看脱机日志文件](view-offline-log-files.md)主题的“安全性”部分。  
@@ -98,7 +98,7 @@ ms.locfileid: "63144480"
   
      这些日志包括 **“审核集合”** 和 **“Windows NT”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [日志文件查看器](log-file-viewer.md)   
  [SQL Server Audit（数据库引擎）](../security/auditing/sql-server-audit-database-engine.md)   
  [查看脱机日志文件](view-offline-log-files.md)  

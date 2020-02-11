@@ -1,5 +1,5 @@
 ---
-title: 通过 ODBC 驱动程序管理器所生成的事件 |Microsoft Docs
+title: ODBC 驱动程序管理器生成的事件 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,31 +14,31 @@ ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cd52aa1427e5fa768ab521d3533cbabfa4d6ad0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901354"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>ODBC 驱动程序管理器生成的事件
 > [!IMPORTANT]  
->  在 Windows 8 中 （Visual Studio 分析器仅包含在较旧版本的 Visual Studio。） 开始已不再对 Visual Studio 分析器的支持。 有关故障排除机制的替代方法，使用 BID 跟踪。  
+>  从 Windows 8 开始，已从 Windows 8 中删除对 Visual Studio Analyzer 的支持（Visual Studio Analyzer 只包含在较早版本的 Visual Studio 中。）。 有关备用故障排除机制，请使用投标跟踪。  
   
- 单击启动 Visual Studio 分析器按钮时注册由 ODBC 驱动程序管理器生成的事件。 该工具本身提供了系统定义的事件和创建自定义事件的能力。 有关事件的详细信息，请参阅*Visual Studio 分析器参考指南*Visual Studio 系列产品文档中。  
+ 当单击 "开始 Visual Studio Analyzer" 按钮时，将注册 ODBC 驱动程序管理器生成的事件。 该工具本身提供系统定义的事件以及创建自定义事件的能力。 有关事件的详细信息，请参阅 Visual Studio 文档中的*Visual Studio Analyzer 参考指南*。  
   
-|Visual Studio Analyzer 事件|描述|  
+|Visual Studio Analyzer 事件|说明|  
 |----------------------------------|-----------------|  
-|**调用**|生成 ODBC API 的每个条目。|  
-|**ReturnException**|生成每个 ODBC API 返回 SQL_ERROR 返回代码时。|  
-|**ReturnNormal**|生成每个 ODBC API 返回时，如果返回代码不是 SQL_ERROR。|  
-|**连接开始**|指示连接已开始;ODBC 驱动程序管理器调用驱动程序的连接的 Api 时生成。|  
-|**连接完成**|指示连接已完成;生成时，驱动程序的连接 Api 返回到 ODBC 驱动程序管理器。|  
-|**断开连接启动**|当 ODBC 驱动程序管理器调用的驱动程序时，生成**SQLDisconnect**函数。|  
-|**断开连接完成**|生成时，驱动程序的**SQLDisconnect**函数将返回到 ODBC 驱动程序管理器。|  
-|**QuerySend**|当 ODBC 驱动程序管理器调用的驱动程序时，生成**SQLPrepare**， **SQLExecute**， **SQLExecDirect**函数，以及目录功能，如**SQLTables**并**SQLColumns**。|  
-|**QueryResult**|该驱动程序返回的结果集为 ODBC 驱动程序管理器涉及查询的函数时生成。|  
-|**TransactionStart**|生成时应用程序的 SQL_ATTR_AUTOCOMMIT 将值设置为 SQL_AUTOCOMMIT_OFF，或在应用程序已成功调用之后**SQLEndTran**。|  
-|**TransactionCommit**|当应用程序调用时，生成**SQLEndTran**提交本地事务。|  
-|**TransactionRollback**|当应用程序调用时，生成**SQLEndTran**回滚本地事务。|  
-|**JoinDTC**|生成应用程序加入分布式事务处理协调器 (DTC) 时。|  
-|**LeaveDTC**|当应用程序会使分布式事务处理协调器 (DTC) 时生成。|
+|**调用**|针对每个 ODBC API 条目生成。|  
+|**ReturnException**|如果返回代码为 SQL_ERROR，则在每个 ODBC API 返回时生成。|  
+|**ReturnNormal**|如果未 SQL_ERROR 返回代码，则在每个 ODBC API 返回时生成。|  
+|**连接开始**|指示连接已启动;ODBC 驱动程序管理器调用驱动程序的连接 Api 时生成。|  
+|**连接完成**|指示连接已完成;驱动程序的连接 Api 返回到 ODBC 驱动程序管理器时生成。|  
+|**断开连接开始**|ODBC 驱动程序管理器调用驱动程序的**SQLDisconnect**函数时生成。|  
+|**断开连接完成**|驱动程序的**SQLDisconnect**函数返回到 ODBC 驱动程序管理器时生成。|  
+|**QuerySend**|ODBC 驱动程序管理器调用驱动程序的**SQLPrepare**、 **SQLExecute**、 **SQLExecDirect**函数以及目录函数（如**SQLTables**和**SQLColumns**）时生成。|  
+|**QueryResult**|当驱动程序将结果集返回到 ODBC 驱动程序管理器中涉及查询的函数时生成。|  
+|**TransactionStart**|当应用程序将 SQL_ATTR_AUTOCOMMIT 的值设置为 SQL_AUTOCOMMIT_OFF 时，或在应用程序成功调用**SQLEndTran**后生成。|  
+|**TransactionCommit**|当应用程序调用**SQLEndTran**来提交本地事务时生成。|  
+|**TransactionRollback**|当应用程序调用**SQLEndTran**回滚本地事务时生成。|  
+|**JoinDTC**|当应用程序加入分布式事务处理协调器（DTC）时生成。|  
+|**LeaveDTC**|当应用程序离开分布式事务处理协调器（DTC）时生成。|

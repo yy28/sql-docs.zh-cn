@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68ddc4f6b42dcc53445b8afaae0bc15e666a5711
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667279"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Microsoft Replication Interactive Conflict Resolver
@@ -32,7 +32,7 @@ ms.locfileid: "62667279"
  **建议的解决方法**  
  项目的冲突解决程序所提供的建议解决方法。  
   
- **发布服务器**  
+ **发布者**  
  发布服务器中的数据值。  
   
  **订阅服务器**  
@@ -47,7 +47,7 @@ ms.locfileid: "62667279"
  **记录此冲突的详细信息供今后参考**  
  在系统表中记录冲突的详细内容。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [交互式冲突解决方法](merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [查看和解决合并发布的数据冲突 (SQL Server Management Studio)](view-and-resolve-data-conflicts-for-merge-publications.md)   
  [使用 Windows 同步管理器同步订阅（Windows 同步管理器）](synchronize-a-subscription-using-windows-synchronization-manager.md)   

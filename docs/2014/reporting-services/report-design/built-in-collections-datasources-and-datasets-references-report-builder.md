@@ -11,28 +11,31 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b47503e9a7a2b09ea6e4d9f7f3ce309fd1b99f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106428"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>DataSources 和 DataSets 集合引用（报表生成器和 SSRS）
+  
   `DataSources` 集合表示在报表中使用的所有数据源。 同样，`DataSets` 集合表示报表中所有数据源的所有数据集。 使用 **“报表数据”** 窗格显示报表数据集的层次结构视图，报表数据集按照它们所引用的数据源组织。 如果这些集合中包含引用，则在预览报表时将不会看到值。 这些集合只有在将报表发布到报表服务器之后才可用。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="datasources"></a>DataSources  
- `DataSources` 集合表示在已发布的报表定义中引用的数据源。 您可以选择将此信息包括在报表中，以记录报表数据源。 此集合在 **“预览”** 模式下不可用。 下表对 `DataSources` 集合中的变量进行了说明。  
+ 
+  `DataSources` 集合表示在已发布的报表定义中引用的数据源。 您可以选择将此信息包括在报表中，以记录报表数据源。 此集合在 **“预览”** 模式下不可用。 下表对 `DataSources` 集合中的变量进行了说明。  
   
 |**变量**|`Type`|**说明**|  
 |------------------|--------------|---------------------|  
-|`DataSourceReference`|`String`|报表服务器上数据源定义的完整路径。 例如，可以包括用作部分报表历史记录的报表中的所有数据源列表。 下面的示例显示名为 AdventureWorks2012 的数据源的完整路径：<br /><br /> `/DataSources/AdventureWorks2012` 的用户。|  
-|`Type`|`String`|数据源数据访问接口的类型。 例如， `SQL`。|  
+|`DataSourceReference`|`String`|报表服务器上数据源定义的完整路径。 例如，可以包括用作部分报表历史记录的报表中的所有数据源列表。 下面的示例显示名为 AdventureWorks2012 的数据源的完整路径：<br /><br /> `/DataSources/AdventureWorks2012`.|  
+|`Type`|`String`|数据源数据访问接口的类型。 例如，`SQL` 。|  
   
 ## <a name="datasets"></a>DataSets  
- `DataSets` 集合表示在报表定义中引用的数据集。 您可以在文本框中选择包括报表查询，以便希望知道报表中确切数据的用户可以看到原始命令文本。 此集合在 **“预览”** 模式下不可用。 下表对 `DataSets` 集合的成员进行了说明。  
+ 
+  `DataSets` 集合表示在报表定义中引用的数据集。 您可以在文本框中选择包括报表查询，以便希望知道报表中确切数据的用户可以看到原始命令文本。 此集合在 **“预览”** 模式下不可用。 下表对 `DataSets` 集合的成员进行了说明。  
   
 |**成员**|`Type`|**说明**|  
 |----------------|--------------|---------------------|  
@@ -42,7 +45,7 @@ ms.locfileid: "66106428"
 ### <a name="using-query-expressions"></a>使用查询表达式  
  可使用表达式定义包含在数据集中的查询。 您可以使用此功能来设计报表，报表中的查询可以根据用户的输入、其他数据集中的数据或其他变量进行更改。 有关查询的详细信息，请参阅[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)  
   

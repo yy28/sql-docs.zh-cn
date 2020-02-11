@@ -13,15 +13,15 @@ ms.assetid: 8ef027ec-8512-48fe-8fe2-2ff7cd81e331
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d35a282acf3b672113ec71b534b4087aa3549285
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905465"
 ---
 # <a name="sqlsetpos-desktop-database-drivers"></a>SQLSetPos（桌面数据库驱动程序）
-大容量模型的语义**SQLSetPos**使用调用*irow*支持等于 0 的参数。  
+支持*irow*参数等于0的**SQLSetPos**调用的大容量模型语义。  
   
- 支持 SQL_LOCK_NO_CHANGE*纷纷采用*。 不支持 SQL_LOCK_EXCLUSIVE 和 SQL_LOCK_UNLOCK。  
+ *FLock*支持 SQL_LOCK_NO_CHANGE。 不支持 SQL_LOCK_EXCLUSIVE 和 SQL_LOCK_UNLOCK。  
   
- **SQLSetPos**支持可更新的联接。 (有关详细信息，请参阅*Microsoft Jet 数据库引擎程序员指南*。)
+ **SQLSetPos**支持可更新的联接。 （有关详细信息，请参阅*Microsoft Jet 数据库引擎程序员指南*。）

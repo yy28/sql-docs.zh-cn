@@ -1,5 +1,5 @@
 ---
-title: 级别 (MDX) |Microsoft Docs
+title: 级别（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905645"
 ---
 # <a name="levels-mdx"></a>Levels (MDX)
@@ -42,15 +42,15 @@ Hierarchy_Expression.Levels( Level_Name )
  指定级别名称的有效字符串表达式。  
   
 ## <a name="remarks"></a>备注  
- 如果指定了级别号，则**级别**函数返回与指定的从零开始位置相关联的级别。  
+ 如果指定了级别号， **level 函数将**返回与指定的从零开始的位置关联的级别。  
   
- 如果指定级别名称，则**级别**函数将返回指定的级别。  
+ 如果指定了级别名称， **level 函数将**返回指定的级别。  
   
 > [!NOTE]  
 >  将字符串表达式语法用于用户定义的函数。  
   
 ## <a name="examples"></a>示例  
- 以下示例说明了每个**级别**函数语法。  
+ 下面的示例演示了每个**级别**函数语法。  
   
 ### <a name="numeric"></a>Numeric  
  以下示例返回国家（地区）级别：  
@@ -68,7 +68,7 @@ SELECT [Geography].[Geography].Levels('Country') ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

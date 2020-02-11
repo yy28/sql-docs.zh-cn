@@ -1,5 +1,5 @@
 ---
-title: 报表生成器选项对话框的设置 （报表生成器） |Microsoft Docs
+title: 报表生成器选项 "对话框，" 设置 "（报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107619"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>“报表生成器选项”对话框 -&gt;“设置”（报表生成器）
-  单击**报表生成器**按钮，然后单击**选项**为显示最近使用的文件和连接设置选项。 您也可以更改默认报表服务器，如果没有默认报表服务器则可以添加一个。  
+  单击 "**报表生成器**" 按钮，然后单击 "**选项**" 以设置用于显示最近的文件和连接的选项。 您也可以更改默认报表服务器，如果没有默认报表服务器则可以添加一个。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **默认使用此报表服务器或 SharePoint 站点**  
@@ -45,7 +45,7 @@ ms.locfileid: "66107619"
  **清除所有最近的项列表**  
  清除最近访问的站点、服务器、共享数据集、共享数据源连接和文档的当前列表。  
   
-## <a name="see-also"></a>请参阅  
- [用于对话框、窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+## <a name="see-also"></a>另请参阅  
+ [报表生成器对话框、窗格和向导的帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

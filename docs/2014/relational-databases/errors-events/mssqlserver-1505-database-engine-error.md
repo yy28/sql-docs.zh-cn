@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67727738"
 ---
-# <a name="mssqlserver1505"></a>MSSQLSERVER_1505
+# <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67727738"
 |符号名称|DUP_KEY|  
 |消息正文|因为发现对象名称“%.\*ls”和索引名称“%.\*ls”有重复的键，所以 CREATE UNIQUE INDEX 已终止。  重复的键值为 %ls。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  如果表中有多行包含指定的重复值，那么，当您尝试创建唯一索引时，会发生此错误。 当您创建索引并指定 UNIQUE 关键字时，或者当您创建 UNIQUE 约束时，会创建唯一索引。 对于表内的任何行，索引或约束中所定义的列中都不能有重复值。  
   
  请考虑以下 **Employee** 表中的数据：  
@@ -40,8 +40,8 @@ ms.locfileid: "67727738"
 |LastName|FirstName|JobTitle|HireDate|  
 |--------------|---------------|--------------|--------------|  
 |Walters|Rob|Senior Tool Designer|2004-11-19|  
-|Brown|Kevin|Marketing Assistant|NULL|  
-|Brown|Jo|Design Engineer|NULL|  
+|Brown|Kevin|Marketing Assistant|Null|  
+|Brown|Jo|Design Engineer|Null|  
 |Walters|Rob|Tool Designer|2001-08-09|  
   
  由于行中存在重复值，因此不能针对 **LastName** 列或 **LastName** 列与 **FirstName** 列的组合创建唯一索引。  
@@ -50,7 +50,7 @@ ms.locfileid: "67727738"
   
  错误消息 1505 返回第一个违反唯一性约束的行。 该表中可能存在其他重复行。 若要查找所有的重复行，请查询指定的表，然后使用 GROUP BY 和 HAVING 子句报告重复行。 例如，下面的查询返回 **Employee** 表中具有重复名字和姓氏的行：  
   
- SELECT LastName, FirstName, count(\*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
+ 从 dbo 选择 LastName、FirstName、\*count （）。员工组，LastName，FirstName，其中 count\*（） > 1;  
   
 ## <a name="user-action"></a>用户操作  
  请考虑以下解决方案。  
@@ -59,9 +59,9 @@ ms.locfileid: "67727738"
   
 -   当为唯一索引或唯一约束选择列时，请选择那些定义为 NOT NULL 的列。 这样，当多行的键值包含 NULL 时，就消除了导致唯一性冲突的可能性。  
   
--   如果重复值是因数据输入错误而引起的，则可以先手动更正数据，然后创建索引或约束。 有关删除表中重复行的信息，请参阅知识库文章 139444：[如何从 SQL Server 中的表中删除重复行](https://support.microsoft.com/kb/139444)。  
+-   如果重复值是因数据输入错误而引起的，则可以先手动更正数据，然后创建索引或约束。 有关删除表中重复行的信息，请参阅知识库文章 139444：[How to remove duplicate rows from a table in SQL Server](https://support.microsoft.com/kb/139444)（如何删除 SQL Server 表中的重复行）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
  [创建唯一索引](../indexes/indexes.md)   
  [创建唯一约束](../tables/create-unique-constraints.md)  

@@ -1,5 +1,5 @@
 ---
-title: xp_logininfo (TRANSACT-SQL) |Microsoft Docs
+title: xp_logininfo （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67898410"
 ---
-# <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
+# <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回有关 Windows 用户和 Windows 组的信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,55 +41,57 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @acctname = ] 'account_name'` 是 Windows 用户或组授予访问权限的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *account_name*是**sysname**，默认值为 NULL。 如果*account_name*未指定，则所有 Windows 组和 Windows 用户被显式都授予登录权限的报告。 *account_name*必须是完全限定的。 例如，“ADVWKS4\macraes”或“BUILTIN\Administrators”。  
+`[ @acctname = ] 'account_name'`被授予访问权限的 Windows 用户或组的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *account_name*的默认值为**sysname**，默认值为 NULL。 如果未指定*account_name* ，则会报告所有被显式授予登录权限的 windows 组和 windows 用户。 *account_name*必须是完全限定的。 例如，“ADVWKS4\macraes”或“BUILTIN\Administrators”。  
   
- **'all'**  | **成员**  
- 指定是报告有关帐户的所有权限路径的信息，还是报告有关 Windows 组成员的信息。 **\@选项**是**varchar(10)** ，默认值为 NULL。 除非**所有**指定，则会显示仅第一个权限路径。  
+ **"all"** | **成员**  
+ 指定是报告有关帐户的所有权限路径的信息，还是报告有关 Windows 组成员的信息。 选项为**varchar （10）**，默认值为 NULL。 ** \@** 除非指定**all** ，否则只显示第一个权限路径。  
   
-`[ @privilege = ] variable_name` 是一个输出参数，它返回指定的 Windows 帐户的权限级别。 *variable_name*是**varchar(10)** ，默认值为 Not wanted。 权限级别，则返回**用户**，**管理员**，或**null**。  
+`[ @privilege = ] variable_name`返回指定 Windows 帐户的特权级别的输出参数。 *variable_name*的值为**varchar （10）**，默认值为 "不需要"。 返回的权限级别为 "**用户**"、"**管理员**" 或 " **null**"。  
   
  OUTPUT  
- 如果指定，将放*variable_name*输出参数中。  
+ 指定时，将*variable_name*放入 output 参数中。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**帐户名称**|**sysname**|完全限定的 Windows 帐户名。|  
-|**type**|**char(8)**|Windows 帐户类型。 有效的值为**用户**或**组**。|  
-|**特权**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的访问特权。 有效的值为**管理员**，**用户**，或**null**。|  
-|**映射的登录名**|**sysname**|拥有用户特权的用户帐户**映射登录名**显示了映射的登录名的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]尝试前面添加的映射的规则使用的域名与此帐户登录时使用。|  
-|**权限路径**|**sysname**|使帐户得到访问权限的组成员身份。|  
+|**帐户名**|**sysname**|完全限定的 Windows 帐户名。|  
+|type |**char （8）**|Windows 帐户类型。 有效值为 "**用户**" 或 "**组**"。|  
+|**特权**|**char （9）**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的访问特权。 有效值为**admin**、 **user**或**null**。|  
+|**mapped login name**|**sysname**|对于具有用户权限的用户帐户，**映射的登录名**会显示映射的登录[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名，该名称在使用此帐户登录时，将使用之前添加了域名的映射规则来尝试使用。|  
+|**permission path**|**sysname**|使帐户得到访问权限的组成员身份。|  
   
 ## <a name="remarks"></a>备注  
- 如果*account_name*指定，则**xp_logininfo**报告指定的 Windows 用户或组的最高权限级别。 如果 Windows 用户同时拥有系统管理员和域用户访问权限，则会报告为系统管理员。 如果该用户是多个具有相等特权级别的 Windows 组的成员，则只报告第一个被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限的组。  
+ 如果指定了*account_name* ， **xp_logininfo**会报告指定的 Windows 用户或组的最高权限级别。 如果 Windows 用户同时拥有系统管理员和域用户访问权限，则会报告为系统管理员。 如果该用户是多个具有相等特权级别的 Windows 组的成员，则只报告第一个被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限的组。  
   
- 如果*account_name*是有效的 Windows 用户或组不具有关联的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名，则返回一个空结果集。 如果*account_name*无法识别为有效的 Windows 用户或组，返回一条错误消息。  
+ 如果*account_name*是不与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名关联的有效 Windows 用户或组，则返回一个空结果集。 如果*account_name*不能识别为有效的 Windows 用户或组，则返回一条错误消息。  
   
- 如果*account_name*并**所有**都指定，返回的 Windows 用户或组的所有权限路径。 如果*account_name*是所有这些被授权访问多个组的成员[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，返回多个行。 **管理员**特权行，然后再返回**用户**特权行，并且中特权级别行中的顺序返回相应[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建登录名。  
+ 如果指定*account_name*和**all** ，则返回 Windows 用户或组的所有权限路径。 如果*account_name*是多个组的成员，而这些组已被授予对的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]访问权限，则将返回多个行。 在**用户**特权行之前、在权限级别行内按照创建相应[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名的顺序返回了 "**管理**特权" 行。  
   
- 如果*account_name*并**成员**都指定，则返回组的下一级别成员的列表。 如果*account_name*是本地组列表可包括本地用户、 域用户和组。 如果*account_name*是域帐户，该列表由域用户组成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须连接到域控制器，才能检索组成员身份信息。 如果该服务器无法联系域控制器，则不返回任何信息。  
+ 如果指定*account_name*和**成员**，则返回组中下一级成员的列表。 如果*account_name*是本地组，则该列表可以包含本地用户、域用户和组。 如果*account_name*是域帐户，则该列表由域用户组成。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须连接到域控制器，才能检索组成员身份信息。 如果该服务器无法联系域控制器，则不返回任何信息。  
   
- **xp_logininfo**只从 Active Directory 全局组，而非通用组返回信息。  
+ **xp_logininfo**仅返回 Active Directory 全局组而不是通用组的信息。  
   
 ## <a name="permissions"></a>权限  
- 要求的成员身份**sysadmin**固定服务器角色或成员身份**公共**固定的数据库角色的**主**且拥有 EXECUTE 权限的数据库。  
+ 要求具有**sysadmin**固定服务器角色的成员身份或具有授予 EXECUTE 权限的**master**数据库中的**公共**固定数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
- 下面的示例显示有关信息`BUILTIN\Administrators`Windows 组。  
+ 下面的示例显示有关 Windows 组`BUILTIN\Administrators`的信息。  
   
 ```  
 EXEC xp_logininfo 'BUILTIN\Administrators';  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sp_denylogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sp_denylogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [常规扩展存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的常规扩展存储过程](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

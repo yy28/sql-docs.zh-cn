@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: debf7415a6364a358bb92066d53b840bcecd5930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108334"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>在数据警报管理器中管理 SharePoint 站点上的所有数据警报
@@ -29,11 +29,11 @@ ms.locfileid: "66108334"
   
 1.  转到保存数据警报定义的 SharePoint 站点。  
   
-2.  在主页上，单击 **“网站操作”** 。  
+2.  在主页上，单击 **“网站操作”**。  
   
-3.  滚动到该列表的底部，然后单击 **“站点设置”** 。  
+3.  滚动到该列表的底部，然后单击 **“站点设置”**。  
   
-4.  在 **Reporting Services**下，单击 **“管理数据警报”** 。  
+4.  在 **Reporting Services**下，单击 **“管理数据警报”**。  
   
 5.  单击 **“查看用户警报”** 列表旁的向下箭头并且选择您要查看其警报的用户。  
   
@@ -43,13 +43,13 @@ ms.locfileid: "66108334"
   
 ### <a name="to-delete-an-alert-definition"></a>删除警报定义  
   
--   右键单击要删除的数据警报，然后单击“删除”  。  
+-   右键单击要删除的数据警报，然后单击“删除”****。  
   
     > [!NOTE]  
     >  删除警报定义后，将不会发送进一步的警报消息。 但是，如果您查询警报数据库，可能会发现该警报定义仍存在。 警报服务将按照计划执行清除，因此该警报定义将在下次清除中被永久删除。 默认清除间隔为 20 分钟。 此设置以及其他清除间隔都是可配置的。 有关详细信息，请参阅 [Reporting Services 数据警报](../ssms/agent/alerts.md)。  
   
-## <a name="see-also"></a>请参阅  
- [向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+## <a name="see-also"></a>另请参阅  
+ [用于警报管理员的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services 数据警报](../ssms/agent/alerts.md)  
   
   

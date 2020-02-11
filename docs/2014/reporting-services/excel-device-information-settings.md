@@ -14,22 +14,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d71c83195c8f91984bbbce95bd00402928fdb36e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109208"
 ---
 # <a name="excel-device-information-settings"></a>Excel 设备信息设置
   下表列出以 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 格式呈现时的设备信息设置。  
   
-|设置|ReplTest1|  
+|设置|值|  
 |-------------|-----------|  
 |**OmitDocumentMap**|指示是否对于支持文档结构图的报表忽略文档结构图。 默认值是 `false`。|  
-|**OmitFormulas**|指示是否对所呈现报表忽略公式。 默认值为 `false`。|  
-|`SimplePageHeade`rs|指示是否将报表的页眉呈现到 Excel 页眉。 值为 `false` 指示将页眉呈现到工作表的第一行。 默认值是 `false`。|  
+|**OmitFormulas**|指示是否对所呈现报表忽略公式。 默认值是 `false`。|  
+|`SimplePageHeade`rs-232c|指示是否将报表的页眉呈现到 Excel 页眉。 值为 `false` 指示将页眉呈现到工作表的第一行。 默认值是 `false`。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [将设备信息设置传递给呈现扩展插件](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [在 RSReportServer.Config 中自定义呈现扩展插件参数](customize-rendering-extension-parameters-in-rsreportserver-config.md)   

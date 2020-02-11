@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793286"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>复制已分区表和索引
@@ -37,19 +37,19 @@ ms.locfileid: "67793286"
   
  与分区相关的第一组属性是项目架构选项，用于决定是否应将分区对象复制到订阅服务器。 可以按下列方式设置这些架构选项：  
   
--   在新建发布向导的 **“项目属性”** 页或者“发布属性”对话框中。 若要复制上一个表中列出的对象，指定的值`true`的属性**复制表分区方案**并**复制索引分区方案**。 有关如何访问“项目属性”  页的信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)。  
+-   在新建发布向导的 **“项目属性”** 页或者“发布属性”对话框中。 若要复制上一个表中列出的对象，请`true`为属性 "**复制表分区方案**" 和 "**复制索引分区方案**" 指定值。 有关如何访问“项目属性”  页的信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)。  
   
 -   通过使用以下其中一个存储过程的 *schema_option* 参数：  
   
-    -   用于事务复制的[sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) f或 transactional replication  
+    -   用于事务复制的[sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)  
   
-    -   用于合并复制的[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 或 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) f或 merge replication  
+    -   用于合并复制的[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 或 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)  
   
      若要复制上一个表中列出的对象，请指定相应架构选项值。 有关如何指定架构选项的信息，请参阅 [Specify Schema Options](specify-schema-options.md)。  
   
  在初始同步阶段，复制会将这些对象复制到订阅服务器。 如果分区方案使用的文件组不是 PRIMARY 文件组，则在进行初步同步之前，这些文件组必须位于订阅服务器上。  
   
- 在初始化订阅服务器后，数据更改传播到订阅服务器上，并应用于相应的分区。 不过，不支持对分区方案的更改。 事务复制和合并复制不支持复制以下命令：ALTER PARTITION FUNCTION、 ALTER PARTITION SCHEME 或 ALTER INDEX REBUILD WITH PARTITION 语句。  与之关联的更改将不会自动复制到订阅服务器。 由用户负责在订阅服务器上手动进行类似的更改。  
+ 在初始化订阅服务器后，数据更改传播到订阅服务器上，并应用于相应的分区。 不过，不支持对分区方案的更改。 事务复制和合并复制不支持复制下列命令：ALTER INDEX 的 ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或 REBUILD WITH PARTITION 语句。  与之关联的更改将不会自动复制到订阅服务器。 由用户负责在订阅服务器上手动进行类似的更改。  
   
 ## <a name="replication-support-for-partition-switching"></a>复制支持分区切换  
  表分区的主要优点之一是能快速而有效地在分区之间移动数据的子集。 数据是使用 SWITCH PARTITION 命令移动的。 默认情况下，当某个表启用为进行复制时，由于下列原因而阻止 SWITCH PARTITION 操作：  
@@ -70,13 +70,13 @@ ms.locfileid: "67793286"
 ### <a name="enabling-partition-switching"></a>启用分区切换  
  使用事务发布的下列属性，用户可以控制已复制环境中分区切换的行为。  
   
--   **\@allow_partition_switch**，如果设置为`true`，可以对发布数据库执行 SWITCH PARTITION。  
+-   allow_partition_switch，当设置为`true`时，可以对发布数据库执行切换分区。 ** \@**  
   
--   **\@replicate_partition_switch**确定 SWITCH PARTITION DDL 语句是否应复制到订阅服务器。 此选项是仅当 **\@allow_partition_switch**设置为`true`。  
+-   replicate_partition_switch 确定 switch partition DDL 语句是否应复制到订阅服务器。 ** \@** 仅当** \@allow_partition_switch**设置为`true`时，此选项才有效。  
   
  创建发布时可以使用 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 设置这些属性，或在创建发布后使用 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) 设置这些属性。 如上所述，合并复制不支持分区切换。 若要对已启用合并复制的表执行 SWITCH PARTITION，请从发布中删除该表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [发布数据和数据库对象](publish-data-and-database-objects.md)  
   
   

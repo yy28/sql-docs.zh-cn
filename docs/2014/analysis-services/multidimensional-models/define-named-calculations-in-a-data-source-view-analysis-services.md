@@ -1,5 +1,5 @@
 ---
-title: 数据源视图 (Analysis Services) 中定义命名的计算 |Microsoft Docs
+title: 在数据源视图中定义命名计算（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a69d5194c6eea3bc81676e8c0c3b1cac1d06270c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075569"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名计算 (Analysis Services)
-  命名计算是一个表示为计算列的 SQL 表达式。 该表达式作为表内的列出现并发挥作用。 使用命名计算，您可以扩展数据源视图中现有表或视图的关系架构，而无需修改基础数据源中的表或视图。 请考虑下列示例：  
+  命名计算是一个表示为计算列的 SQL 表达式。 该表达式作为表内的列出现并发挥作用。 使用命名计算，您可以扩展数据源视图中现有表或视图的关系架构，而无需修改基础数据源中的表或视图。 请考虑以下示例：  
   
 -   创建从事实表的多个列派生的单个命名计算（例如，通过将税率与销售价格相乘创建“税额”）。  
   
@@ -59,14 +59,14 @@ FROM
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开项目或连接到数据库，此项目或数据库包含要在其中定义命名计算的数据源视图。  
   
-2.  在解决方案资源管理器中，展开“数据源视图”  文件夹，然后双击数据源视图。  
+2.  在解决方案资源管理器中，展开“数据源视图”**** 文件夹，然后双击数据源视图。  
   
-3.  在“表”或“关系图”窗格中，右键单击要在其中定义命名计算的表，再单击“新建命名计算”    。 请务必右键单击表名称而不是属性。 菜单应该如下所示：  
+3.  在“表”或“关系图”窗格中，右键单击要在其中定义命名计算的表，再单击“新建命名计算”************。 请务必右键单击表名称而不是属性。 菜单应该如下所示：  
   
-     ![屏幕截图的关系图工作区中，右键单击菜单](../media/ssas-olapdsv-diagram.gif "屏幕截图的关系图工作区中，右键单击菜单")  
+     ![“关系图”工作区的右键单击菜单的屏幕快照](../media/ssas-olapdsv-diagram.gif "“关系图”工作区的右键单击菜单的屏幕快照")  
   
     > [!NOTE]  
-    >  若要查找表或视图，可以通过单击“数据源视图”菜单或者右键单击“表”或“关系图”窗格的空白区域以使用“查找表”选项     。  
+    >  若要查找表或视图，可以通过单击 "**数据源视图**" 菜单或右键单击 "**表**" 或 "**关系图**" 窗格的打开区域，使用 "**查找表**" 选项。  
   
 4.  在 **“创建命名计算”** 对话框中，执行下列操作：  
   
@@ -76,14 +76,14 @@ FROM
   
     -   在 **“表达式”** 文本框中，使用适用于数据访问接口的 SQL 方言键入生成新列内容的表达式。  
   
-5.  单击 **“确定”** 。  
+5.  单击“确定”。   
   
      命名计算列显示为数据源视图表的最后一列。 计算器符号指示该列包含命名计算。  
   
 ## <a name="delete-a-named-calculation"></a>删除命名计算  
  尝试删除命名计算时，系统将提示您删除会使在项目或数据库中定义的对象列表失效。 在删除计算之前仔细查看该列表。  
   
-## <a name="see-also"></a>请参阅  
- [在数据源视图中定义命名查询 (Analysis Services)](define-named-queries-in-a-data-source-view-analysis-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [在数据源视图中定义命名查询 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 将枚举添加到控制流 |Microsoft Docs
+title: 向控制流添加枚举 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,15 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061910"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>将枚举添加到控制流
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 Foreach 循环容器，此容器是一个控制流元素，利用它可以轻松地将枚举文件和对象的循环构造包括到包的控制流中。 有关详细信息，请参阅 [Foreach 循环容器](control-flow/foreach-loop-container.md)。  
+  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 Foreach 循环容器，此容器是一个控制流元素，利用它可以轻松地将枚举文件和对象的循环构造包括到包的控制流中。 有关详细信息，请参阅 [Foreach Loop Container](control-flow/foreach-loop-container.md)。  
   
  Foreach 循环容器不提供任何功能，只提供用以生成可重复的控制流、指定枚举器类型以及配置枚举器的结构。 若要提供容器功能，Foreach Loop 循环容器中必须包含至少一个任务。 有关详细信息，请参阅 [Integration Services Tasks](control-flow/integration-services-tasks.md)。  
   
@@ -32,21 +33,21 @@ ms.locfileid: "66061910"
   
 ### <a name="to-implement-a-foreach-loop-container-in-a-control-flow"></a>在控制流中实现 Foreach 循环容器  
   
-1.  将 Foreach 循环容器添加到包。 有关详细信息，请参阅[添加或删除任务或容器中控制流](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+1.  将 Foreach 循环容器添加到包。 有关详细信息，请参阅[在控制流中添加或删除任务或容器](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
-2.  将任务和容器添加到 Foreach 循环容器。 有关详细信息，请参阅[添加或删除任务或容器中控制流](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+2.  将任务和容器添加到 Foreach 循环容器。 有关详细信息，请参阅[在控制流中添加或删除任务或容器](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 3.  使用优先约束连接 Foreach 循环容器中的任务和容器。 有关详细信息，请参阅 [使用默认优先约束来连接任务和容器](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)。  
   
 4.  配置 Foreach 循环容器。 有关详细信息，请参阅 [配置 Foreach 循环容器](../../2014/integration-services/configure-a-foreach-loop-container.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在控制流中添加或删除任务或容器](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [组或取消分组的组件](group-or-ungroup-components.md)   
+ [对组件进行分组或取消分组](group-or-ungroup-components.md)   
  [优先约束](control-flow/precedence-constraints.md)   
- [将迭代添加到控制流](add-iteration-to-a-control-flow.md)   
+ [向控制流添加迭代](add-iteration-to-a-control-flow.md)   
  [控制流](control-flow/control-flow.md)  
   
   

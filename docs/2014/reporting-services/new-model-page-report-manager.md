@@ -1,5 +1,5 @@
 ---
-title: 新模型页 （报表管理器） |Microsoft Docs
+title: "\"新建模型\" 页（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5b9fdcac2499cdf33d98ba636596218c14704f9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108212"
 ---
 # <a name="new-model-page-report-manager"></a>“新建模型”页（报表管理器）
@@ -41,7 +41,7 @@ ms.locfileid: "66108212"
  **名称**  
  指定模型的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时请不要使用以下字符：  
   
- ; ? : \@ & = + , $ / * \< > | " /  
+ ; ? ： \@ & = +，$/* \< > |" /  
   
  **说明**  
  显示模型的说明。 通过报表管理器查看此项的用户在浏览文件夹层次结构时会看到此说明。  

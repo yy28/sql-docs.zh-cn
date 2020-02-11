@@ -1,5 +1,5 @@
 ---
-title: 跟踪 （数据挖掘客户端 Excel） |Microsoft Docs
+title: Trace （Excel 数据挖掘客户端） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 576cb395f7f488eec8ebf28ab5bc7f226cb81809
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065886"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>跟踪（Excel 数据挖掘客户端）
-  ![跟踪按钮](media/misc-trace.gif "跟踪按钮")  
+  ![“跟踪”按钮](media/misc-trace.gif "“跟踪”按钮")  
   
- **追踪**对话框可帮助您监视发送到的实例的语句[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]用于数据挖掘。 创建连接到的实例后[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，客户端和服务器之间的所有交互都登录**跟踪**窗格中，其中包括创建结构、 添加挖掘模型，并使语句预测，以及从服务器返回某些消息。  
+ "**跟踪**器" 对话框可帮助您监视发送到用于数据挖掘的实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的语句。 在您创建了与实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]连接后，客户端和服务器之间的所有交互都记录在 "**跟踪**器" 窗格中，其中包括创建结构、添加挖掘模型和进行预测的语句以及从服务器返回的某些消息。  
   
  根据所请求的操作，该语句可能是数据挖掘扩展插件 (DMX) 数据定义查询或数据操作查询、Analysis Services 脚本语言 (ASSL) 包或者是对 Analysis Services 储存过程的调用。 但不会显示实际的数值结果和数据值。  
   
- **跟踪**监视仅为当前连接和的内容**跟踪**对话框不会存储。  
+ **Trace**仅监视当前连接，并且不存储 "**跟踪**器" 对话框的内容。  
   
 ## <a name="options"></a>选项  
  “跟踪器”窗格  
@@ -43,12 +43,12 @@ ms.locfileid: "66065886"
   
  取消选择此选项会通过将模型或结构存储到 Analysis Services 服务器中进行保存。  
   
- **请注意**是仅当您使用 excel 表分析工具时，才能使用临时对象。 Visio 数据挖掘模板和 Excel 数据挖掘客户端要求将结构和模型存储到服务器中。  
+ **注意**只有在使用 Excel 表分析工具时，才能使用临时对象。 Visio 数据挖掘模板和 Excel 数据挖掘客户端要求将结构和模型存储到服务器中。  
   
 ## <a name="tracing-temporary-structures-and-models"></a>跟踪临时结构和模型  
  如果使用的是表分析工具（默认情况下，该工具创建临时结构和模型），则服务器和客户端之间的活动将受到监视，但不会将您创建的模型或结构永久保存到服务器中。  
   
- 如果你想要使用表分析工具之一时保留您的工作，您可以取消选择选项，**使用会话模型**，以使您的模型永久保存在服务器上。 此外可以复制中的语句**跟踪**窗格中的文件，以便以后可以重新创建你的工作。  
+ 如果要在使用其中一个表分析工具时保留你的工作，则可以取消选择选项 "**使用会话模型**"，以使你的模型永久保存到服务器上。 您还可以将 "**跟踪**器" 窗格中的语句复制到文件中，以便您可以在以后重新创建您的工作。  
   
 ## <a name="understanding-sessions"></a>了解会话  
  连接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例时，数据挖掘外接程序将启动一个会话。 每个会话都会收到一个会话标识符，它用于标识 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例上的现有会话。 但会话标识符并不保证会话保持有效。 如果会话超时或与会话相关联的连接断开，则该会话将过期。 如果会话过期且不再有效，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将结束该会话，回滚正在处理的所有事务。 如果使用不再有效的会话标识符发送消息，则相应消息将失败，并显示一条错误指示无法找到指定的会话。  
@@ -58,12 +58,12 @@ ms.locfileid: "66065886"
 ## <a name="changing-connections"></a>更改连接  
  更改连接不会删除对先前连接的跟踪。 只有关闭工作簿才会清除会话。  
   
- 如果在 Excel 工作簿中工作时更改连接，连接的更改不会记录在**跟踪**窗格。 若要显式显示的名称和当前连接的状态，必须单击**当前连接**。  
+ 如果在 Excel 工作簿中工作时更改连接，则不会在 "**跟踪**器" 窗格中记录连接更改。 若要显式显示当前连接的名称和状态，必须单击 "**当前连接**"。  
   
 ## <a name="understanding-statements-in-the-tracer"></a>了解跟踪器中的语句  
  DMX 是一种可用于在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中创建和使用数据挖掘模型的语言。 您可以使用 DMX 创建新数据挖掘模型的结构，为这些模型定型，并对其进行浏览、管理和预测。 DMX 由数据定义语言 (DDL) 语句、数据操作语言 (DML) 语句以及函数和运算符组成。  
   
- 全面介绍 DMX 语句及其语法超出了本主题的讨论范围。 但是，可以使用中的信息**跟踪**窗格中，查找有关行为的 DMX 语句的详细的信息。 Excel 数据挖掘外接程序还可帮助您生成复杂的 DMX 语句，并与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器进行交互。 有关详细信息，请参阅[查询&#40;SQL Server 数据挖掘外接程序&#41;](query-sql-server-data-mining-add-ins.md)。  
+ 全面介绍 DMX 语句及其语法超出了本主题的讨论范围。 但是，您可以使用 "**跟踪**器" 窗格中的信息来查找有关 DMX 语句行为的详细信息。 Excel 数据挖掘外接程序还可帮助您生成复杂的 DMX 语句，并与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器进行交互。 有关详细信息，请参阅[查询 &#40;SQL Server 数据挖掘外接程序&#41;](query-sql-server-data-mining-add-ins.md)。  
   
 > [!NOTE]  
 >  许多 DMX 语句都已参数化。 对于简单类型，参数的值在语句下列出。 但对于复杂类型，则仅列出参数的类型。  

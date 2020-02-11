@@ -1,5 +1,5 @@
 ---
-title: 保存数据挖掘查询结果对话框 （挖掘模型预测视图） |Microsoft Docs
+title: "\"保存数据挖掘查询结果\" 对话框（\"挖掘模型预测\" 视图） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070022"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>“保存数据挖掘查询结果”对话框（“挖掘模型预测”视图）
@@ -31,12 +31,12 @@ ms.locfileid: "66070022"
  从当前项目中选择数据源。 如果不存在正确的数据源，请单击 **“新建”** 以创建一个新的数据源。  
   
  **新建**  
- 打开“数据源向导”。  
+ 打开“数据源向导”。****  
   
  **表名**  
  键入新表的名称。  
   
- **如果覆盖存在**  
+ **如果已存在，则覆盖**  
  若要覆盖具有相同名称的现有表，则选择此选项。  
   
  如果下列任一条件成立，则需要覆盖现有表：  
@@ -52,11 +52,11 @@ ms.locfileid: "66070022"
  **添加到数据源视图**  
  （可选）如果希望将表添加到现有数据源中，请选择项目中包含的数据源视图。  
   
- 此选项非常有用，如果你想要保留所有相关的表模型，如定型数据、 预测源数据和查询结果的相同数据源中。  
+ 如果您想要在同一数据源中保留模型的所有相关表（如定型数据、预测源数据和查询结果），此选项很有用。  
   
-## <a name="see-also"></a>请参阅  
- [预测查询生成器（数据挖掘）](prediction-query-builder-data-mining.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;数据挖掘的预测查询生成器&#41;](prediction-query-builder-data-mining.md)   
  [数据挖掘查询接口](data-mining/data-mining-query-tools.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

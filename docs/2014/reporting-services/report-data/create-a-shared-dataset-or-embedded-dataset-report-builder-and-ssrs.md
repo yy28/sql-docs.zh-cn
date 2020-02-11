@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208c5608037d99b9dc02f1ab7fefd151cd4bdecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107427"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>创建共享数据集或嵌入数据集（报表生成器和 SSRS）
@@ -43,24 +43,25 @@ ms.locfileid: "66107427"
   
 ### <a name="to-open-report-builder-and-create-a-shared-dataset"></a>打开报表生成器和创建共享数据集  
   
-1.  打开报表生成器。 **“新建报表或数据集”** 窗格将打开，如下图所示：  
+1.  打开报表生成器。 
+  **“新建报表或数据集”** 窗格将打开，如下图所示：  
   
      ![rs_NewSharedDataset](../media/rs-newshareddataset.gif "rs_NewSharedDataset")  
   
     > [!NOTE]  
-    >  如果不显示“新建报表或数据集”窗格，则从“报表生成器”按钮中单击“新建”   。  
+    >  如果不显示“新建报表或数据集”窗格，则从“报表生成器”按钮中单击“新建”********。  
   
-2.  在左窗格的 **“创建数据集”** 下，单击 **“共享数据集”** 。  
+2.  在左窗格的 **“创建数据集”** 下，单击 **“共享数据集”**。  
   
-3.  在右窗格中，单击 **“浏览”** 从报表服务器选择共享数据源，然后单击 **“创建”** 。 将打开与共享数据源关联的查询设计器。  
+3.  在右窗格中，单击 **“浏览”** 从报表服务器选择共享数据源，然后单击 **“创建”**。 将打开与共享数据源关联的查询设计器。  
   
 4.  在查询设计器中，指定要包含在数据集中的字段。  
   
-5.  单击 **“运行”** ( **!** ) 以运行查询。  
+5.  单击 "**运行**" （**！**）以运行查询。  
   
 6.  在 **“报表生成器”** 按钮上，单击 **“保存”** 或 **“另存为”** 将共享数据集保存到报表服务器。  
   
-7.  若要退出报表生成器，请单击 **“报表生成器”** ，然后单击 **“退出报表生成器”** 。 若要处理报表，请单击 **“报表生成器”** ，然后单击 **“新建”** 或 **“打开”** 。  
+7.  若要退出报表生成器，请单击 **“报表生成器”**，然后单击 **“退出报表生成器”**。 若要处理报表，请单击 **“报表生成器”**，然后单击 **“新建”** 或 **“打开”**。  
   
 ### <a name="to-set-query-parameter-options"></a>设置查询参数选项  
   
@@ -72,18 +73,18 @@ ms.locfileid: "66107427"
   
 4.  在 **“项类型”** 的下拉列表中单击“数据集 (*.rsd)”。  
   
-5.  选中共享数据集，然后单击 **“打开”** 。 将打开关联的查询设计器。  
+5.  选中共享数据集，然后单击 **“打开”**。 将打开关联的查询设计器。  
   
-6.  在功能区上，单击 **“数据集属性”** 。  
+6.  在功能区上，单击 **“数据集属性”**。  
   
-7.  单击 **“参数”** 。 在此页上，将默认值设置为一个常量或者一个表达式，将该参数标记为只读、可以为 null 或“从查询中省略”  。 有关详细信息，请参阅[“数据集属性”对话框 ->参数（报表生成器）](../dataset-properties-dialog-box-parameters-report-builder.md)。  
+7.  单击 **“参数”** 。 在此页上，将默认值设置为一个常量或者一个表达式，将该参数标记为只读、可以为 null 或“从查询中省略”****。 有关详细信息，请参阅[“数据集属性”对话框 ->参数（报表生成器）](../dataset-properties-dialog-box-parameters-report-builder.md)。  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
   
 ### <a name="to-create-a-dataset-from-a-sql-server-relational-database"></a>从 SQL Server 关系数据库创建数据集  
   
-1.  在“报表数据”窗格中，右键单击数据源的名称，然后单击 **“添加数据集”** 。 此时将打开 **“数据集属性”** 对话框的 **“查询”** 页。  
+1.  在“报表数据”窗格中，右键单击数据源的名称，然后单击 **“添加数据集”**。 此时将打开 **“数据集属性”** 对话框的 **“查询”** 页。  
   
 2.  在 **“名称”** 中，键入数据集的名称，或接受默认名称。  
   
@@ -110,13 +111,13 @@ ms.locfileid: "66107427"
   
      数据集及其字段集合显示在“报表数据”窗格的数据源节点下。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)   
- [查询设计器（报表生成器）](../query-designers-report-builder.md)   
- [用于对话框、窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)   
+ [查询设计器 &#40;报表生成器&#41;](../query-designers-report-builder.md)   
+ [报表生成器对话框、窗格和向导的帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)   
  [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [嵌入数据集和共享数据集（报表生成器和 SSRS）](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [嵌入数据集和共享数据集 &#40;报表生成器和 SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

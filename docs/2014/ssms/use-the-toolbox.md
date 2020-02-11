@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280673"
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
@@ -27,7 +27,7 @@ ms.locfileid: "63280673"
   
  工具箱中的项被划分到各选项卡。 以下是常用的工具箱任务及其使用方法的参考表：  
   
-|若要|操作|  
+|目标|操作|  
 |--------|-------------|  
 |打开工具箱|在“视图”  菜单上，单击“工具箱”  。|  
 |使工具箱自动关闭|打开工具箱。 在“窗口”  菜单上，选择“自动隐藏”  。|  
@@ -42,7 +42,7 @@ ms.locfileid: "63280673"
 |更改展开的工具箱选项卡上项的位置|将项拖至新位置，再释放鼠标按钮。|  
 |重命名工具箱项|右键单击工具箱项，再单击快捷菜单上的“重命名项”  。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [常规用户界面元素](general-user-interface-elements.md)  
   
   

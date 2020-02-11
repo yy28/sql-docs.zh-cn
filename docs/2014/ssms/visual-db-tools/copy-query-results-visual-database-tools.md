@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c078597954ac6754966a1a485ac03fc19f817618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63269898"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>复制查询结果 (Visual Database Tools)
@@ -50,7 +50,7 @@ ms.locfileid: "63269898"
   
 5.  右键单击并选择“复制”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用“结果”窗格中的数据 (Visual Database Tools)](visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 第 7 课：在父报表上添加钻取操作 |Microsoft Docs
+title: 第 7 课：在父报表上添加钻取操作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 356ad7ed670ee13bbc6b4e2d7a86cb6095e79e10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108399"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>第 7 课：在父报表上添加钻取操作
@@ -24,19 +24,19 @@ ms.locfileid: "66108399"
   
 1.  转到父报表。  
   
-2.  单击保存的值文本框**名称**。  
+2.  单击保存 "**名称**" 值的文本框。  
   
-3.  右键单击该文本框，然后依次**文本框属性**。  
+3.  右键单击文本框，然后单击 "**文本框属性**"。  
   
 4.  转到“操作”选项卡，然后选择“转到报表”选项   。  
   
 5.  在“指定报表”部分中输入子报表的名称  。  
   
-6.  单击**外**下**使用这些参数运行报表**部分。  
+6.  单击 "**使用这些参数运行报表"** 部分下的 "**添加**"。  
   
-7.  类型**productid**中**名称**框中，然后依次**ProductID**中**值**下拉列表。  
+7.  在 "**名称**" 框中键入**productid** ，然后在 "**值**" 下拉列表中单击 " **productid** "。  
   
-8.  单击**确定**来完成。  
+8.  单击 **"确定"** 完成操作。  
   
 ## <a name="next-task"></a>下一个任务  
  您已成功地在父报表上添加了钻取操作。 接下来，将创建一个数据筛选器，用于为子报表定义的数据表。  

@@ -1,5 +1,5 @@
 ---
-title: 检查更新或关闭更新 （报表生成器和 SSRS） |Microsoft Docs
+title: 检查更新或关闭更新（报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109861"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>检查更新或关闭更新（报表生成器和 SSRS）
@@ -24,22 +24,22 @@ ms.locfileid: "66109861"
   
 ### <a name="to-turn-on-and-off-report-part-updates"></a>打开和关闭报表部件更新  
   
-1.  单击报表生成器按钮，然后单击**选项**。  
+1.  单击 "报表生成器" 按钮，然后单击 "**选项**"。  
   
-2.  在中**选项**对话框中，在**资源**选项卡上，选中或清除**我的报表中显示对报表部件的更新**复选框。  
+2.  在 "**选项**" 对话框的 "**资源**" 选项卡中，选中或清除 "在**我的报表中显示报表部件的更新**" 复选框。  
   
 > [!NOTE]  
 >  这是一项用户设置。 它将对您打开的所有报表禁用信息栏。  
   
-### <a name="to-check-for-updates"></a>若要检查更新  
+### <a name="to-check-for-updates"></a>检查  更新的步骤  
   
--   右键单击设计图面上报表外或报表正文中，单击**检查是否有更新**。  
+-   右键单击报表之外或表体中的设计图面，然后单击 "**检查更新**"。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表部件（报表生成器和 SSRS）](report-parts-report-builder-and-ssrs.md)   
- [发布和重新发布报表部件&#40;报表生成器和 SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
- [浏览查找报表部件和设置默认文件夹&#40;报表生成器和 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
- [报表部件故障排除&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [发布和重新发布报表部件 &#40;报表生成器和 SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
+ [浏览查找报表部件和设置默认文件夹 &#40;报表生成器和 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
+ [&#40;报表生成器和 SSRS 的报表部件疑难解答&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [报表生成器中的报表部件和数据集](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

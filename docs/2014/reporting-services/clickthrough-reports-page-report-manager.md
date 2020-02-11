@@ -1,5 +1,5 @@
 ---
-title: 点击链接型报表页 （报表管理器） |Microsoft Docs
+title: "\"点击链接型报表\" 页（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109797"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>“点击链接型报表”页（报表管理器）
@@ -31,7 +31,7 @@ ms.locfileid: "66109797"
  尽管您可以选择任何可访问的报表，但请仅选择专门为您正在配置的模型创建的报表。  
   
 > [!NOTE]  
->  在 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均不提供点击链接型报表。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果不能确定您的单位所运行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本，请与数据库管理员联系。  
+>  在 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均不提供点击链接型报表。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果不能确定您的单位所运行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本，请与数据库管理员联系。  
   
 ## <a name="navigation"></a>导航  
  使用以下过程导航到用户界面 (UI) 中的这一位置。  
@@ -56,7 +56,7 @@ ms.locfileid: "66109797"
  **多个实例报表**  
  指定在用户导航需要多个实例数据的视图时要使用的自定义报表。 单击浏览按钮可以选择要使用的报表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [发布报表](../../2014/reporting-services/publish-reports.md)  
   
   

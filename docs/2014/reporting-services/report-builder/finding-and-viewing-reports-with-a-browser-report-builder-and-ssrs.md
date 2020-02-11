@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1e620bb0fd5cbf5ff6541fd1aa4a3552bd2eb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107859"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>使用浏览器查找和查看报表（报表生成器和 SSRS）
@@ -24,7 +24,7 @@ ms.locfileid: "66107859"
   
  如果不知道某一报表的 Web 地址，则可以打开相应报表服务器的 Web 地址，然后浏览报表服务器文件夹层次结构以选择要查看的报表。 下图显示了在浏览器窗口中显示的文件夹层次结构。  
   
- ![浏览器中的文件夹](../media/rs-browserfolder.GIF "Folders in a browser")  
+ ![浏览器中的文件夹](../media/rs-browserfolder.GIF "浏览器中的文件夹")  
 浏览器中的文件夹  
   
 > [!NOTE]  
@@ -49,7 +49,7 @@ ms.locfileid: "66107859"
 -   一种文件扩展名表示一种资源。 文件扩展名用于标识资源的 MIME 类型。 例如，.jpg 表示 JPEG 格式的图像。  
   
 ## <a name="typing-the-url-address-of-a-report"></a>键入报表的 URL 地址  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持通过 URL 访问报表服务器上的特定项。 相应的 URL 必须包含报表的完全限定路径以及用来呈现报表的命令。 如果相应报表包含参数，您还必须指定打开此报表所需的所有值。 如果您键入的报表 URL 在路径、参数值或呈现扩展插件中包含空格，则必须在该 URL 中加入 URL 编码字符才能获得预期的结果。 下例是一个在路径名称、参数和呈现扩展插件中包含空格编码的报表 URL：  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支持对 Report Server 上的特定项的 URL 访问。 相应的 URL 必须包含报表的完全限定路径以及用来呈现报表的命令。 如果相应报表包含参数，您还必须指定打开此报表所需的所有值。 如果您键入的报表 URL 在路径、参数值或呈现扩展插件中包含空格，则必须在该 URL 中加入 URL 编码字符才能获得预期的结果。 下例是一个在路径名称、参数和呈现扩展插件中包含空格编码的报表 URL：  
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66107859"
   
  有关通过 URL 访问报表的详细信息，包括有关 URL 构造方式的信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“URL 访问”。  
   
-## <a name="see-also"></a>请参阅  
- [查找和查看报表在报表管理器&#40;报表生成器和 SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另请参阅  
+ [在报表管理器 &#40;报表生成器和 SSRS 中查找和查看报表&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

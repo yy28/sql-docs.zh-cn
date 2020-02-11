@@ -1,5 +1,5 @@
 ---
-title: 设置或更改 DirectQuery 的首选的连接方法 |Microsoft Docs
+title: 设置或更改 DirectQuery 的首选连接方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068701"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>设置或更改 DirectQuery 的首选连接方法
-  当您创建在 DirectQuery 模式下使用的模型时，必须首先对设计环境进行配置以便支持使用 DirectQuery。 若要执行此操作，请参阅[启用 DirectQuery 设计模式&#40;SSAS 表格&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)。  
+  当您创建在 DirectQuery 模式下使用的模型时，必须首先对设计环境进行配置以便支持使用 DirectQuery。 若要执行此操作，请参阅[&#40;SSAS 表格&#41;启用 DirectQuery 设计模式](tabular-models/enable-directquery-mode-in-ssdt.md)。  
   
  在您做好部署模型的准备后，必须设置其他一些属性以使用户能够使用某一 DirectQuery 模式访问您的模型：  
   
@@ -38,11 +38,11 @@ ms.locfileid: "66068701"
   
 3.  在 **“属性”** 窗格中，将属性 **DirectQueryMode**更改为支持 DirectQuery 使用的以下值之一：  
   
-    -   **InMemory 以及 DirectQuery**:如果使用此选项，则部署模型，但您必须首先处理缓存，可以针对模型运行查询之前。  
+    -   **带有 DirectQuery 的 InMemory**：如果使用此选项，则部署模型，但必须先处理缓存，然后才能对模型运行查询。  
   
-    -   **DirectQuery 以及 InMemory**:如果使用此选项，如果已处理将可供客户端缓存。 如果您使用此设置部署模型并且未处理缓存，则某些客户端在尝试连接到模型时势必会收到错误消息。  
+    -   **DirectQuery 以及 InMemory**：如果使用此选项，则客户端可以使用缓存（如果已处理）。 如果您使用此设置部署模型并且未处理缓存，则某些客户端在尝试连接到模型时势必会收到错误消息。  
   
-    -   **仅限 DirectQuery**:如果使用此选项，部署元数据，但在模型中包含任何数据。 尝试使用内存中模式进行连接的客户端将会收到错误消息，指示模型不存在或尚未处理。  
+    -   **仅限 DirectQuery**：如果使用此选项，则部署元数据，但模型中没有数据。 尝试使用内存中模式进行连接的客户端将会收到错误消息，指示模型不存在或尚未处理。  
   
 4.  如果存在错误，则在 Visual Studio 中，打开 **“错误列表”** ，并且解决将阻止模型部署在 DirectQuery 模式下的任何问题。  
   
@@ -62,8 +62,8 @@ ms.locfileid: "66068701"
   
  请注意，这些属性与您在 Visual Studio 中部署前对项目设置的属性相同。 您可以随时更改针对 DirectQuery 模式的首选连接模式，只要您已将模型配置为支持使用 DirectQuery。  
   
-## <a name="see-also"></a>请参阅  
- [DirectQuery 模式（SSAS 表格）](tabular-models/directquery-mode-ssas-tabular.md)   
- [启用 DirectQuery 设计模式&#40;SSAS 表格&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
+## <a name="see-also"></a>另请参阅  
+ [DirectQuery 模式 &#40;SSAS 表格&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
+ [&#40;SSAS 表格&#41;启用 DirectQuery 设计模式](tabular-models/enable-directquery-mode-in-ssdt.md)  
   
   

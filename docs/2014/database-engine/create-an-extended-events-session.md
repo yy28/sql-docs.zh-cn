@@ -1,5 +1,5 @@
 ---
-title: 创建扩展的事件会话 |Microsoft Docs
+title: 创建扩展事件会话 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e54caf8ec3e99fe4076ae50cb0b8015c8330ddb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065074"
 ---
 # <a name="create-an-extended-events-session"></a>创建扩展事件会话
-  您可以使用查询编辑器创建扩展事件会话，也可以在对象资源管理器中创建会话。 在对象资源管理器，扩展事件提供了可用于创建、 修改和查看事件会话数据-一个向导，指导您完成事件会话创建过程中，并提供了更多高级的配置选项的新会话 UI 的两个用户界面。 您可以创建扩展事件会话来诊断 SQL Server 跟踪，这样您便能解决如下问题：  
+  您可以使用查询编辑器创建扩展事件会话，也可以在对象资源管理器中创建会话。 在对象资源管理器中，扩展事件提供了两个用户界面，你可以使用它们来创建、修改和查看事件会话数据，向导将引导你完成事件会话创建过程，以及提供更高级配置选项的新会话 UI。 您可以创建扩展事件会话来诊断 SQL Server 跟踪，这样您便能解决如下问题：  
   
 -   查找最消耗资源的查询  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66065074"
 ## <a name="in-this-section"></a>本节内容  
  [使用查询编辑器创建扩展事件会话](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)  
   
- [创建扩展的事件会话使用向导&#40;对象资源管理器&#41;](../ssms/object/object-explorer.md)  
+ [使用向导 &#40;对象资源管理器创建扩展事件会话&#41;](../ssms/object/object-explorer.md)  
   
  [使用“新建会话”对话框创建扩展事件会话](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   

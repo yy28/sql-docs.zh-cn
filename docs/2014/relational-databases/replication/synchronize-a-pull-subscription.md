@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186229"
 ---
 # <a name="synchronize-a-pull-subscription"></a>同步请求订阅
@@ -36,13 +36,13 @@ ms.locfileid: "63186229"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地订阅”** 文件夹。  
   
-3.  右键单击要同步的订阅，然后单击 **“查看同步状态”** 。  
+3.  右键单击要同步的订阅，然后单击 **“查看同步状态”**。  
   
-4.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。   完成同步后，将显示消息 **“同步完成”** 。  
+4.  在“查看同步状态 - **订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。\<****** 完成同步后，将显示消息 **“同步完成”** 。  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
-##  <a name="ReplProg"></a> Replication Agents  
+##  <a name="ReplProg"></a>复制代理  
  可通过在命令提示符下调用相应的复制代理可执行文件，以编程方式按需同步请求订阅。 被调用的复制代理可执行文件将取决于请求订阅所属的发布的类型。 有关详细信息，请参阅 [Replication Agents](agents/replication-agents-overview.md)。  
   
 > [!NOTE]  
@@ -52,15 +52,15 @@ ms.locfileid: "63186229"
   
 1.  在命令提示符下或批处理文件中，通过运行 [distrib.exe](agents/replication-distribution-agent.md) 并指定下列命令行参数来启动 **复制分发代理**：  
   
-    -   **-Publisher**  
+    -   **-发布服务器**  
   
     -   **-PublisherDB**  
   
-    -   **-Distributor**  
+    -   **-分发服务器**  
   
-    -   **-DistributorSecurityMode** = **1**  
+    -   **-Distributorsecuritymode 指定** = **1**  
   
-    -   **-Subscriber**  
+    -   **-订阅服务器**  
   
     -   **-SubscriberDB**  
   
@@ -74,13 +74,13 @@ ms.locfileid: "63186229"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-Distributorsecuritymode 指定** = **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-Publishersecuritymode 指定** = **0**  
   
     -   **-SubscriberLogin**  
   
@@ -92,19 +92,19 @@ ms.locfileid: "63186229"
   
 1.  在命令提示符下或批处理文件中，通过运行 [replmerg.exe](agents/replication-merge-agent.md) 并指定下列命令行参数来启动 **复制合并代理**：  
   
-    -   **-Publisher**  
+    -   **-发布服务器**  
   
     -   **-PublisherDB**  
   
-    -   **-PublisherSecurityMode** = **1**  
+    -   **-Publishersecuritymode 指定** = **1**  
   
-    -   **-Publication**  
+    -   **-发布**  
   
-    -   **-Distributor**  
+    -   **-分发服务器**  
   
-    -   **-DistributorSecurityMode** = **1**  
+    -   **-Distributorsecuritymode 指定** = **1**  
   
-    -   **-Subscriber**  
+    -   **-订阅服务器**  
   
     -   **-SubscriberSecurityMode** = **1**  
   
@@ -118,13 +118,13 @@ ms.locfileid: "63186229"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-Distributorsecuritymode 指定** = **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-Publishersecuritymode 指定** = **0**  
   
     -   **-SubscriberLogin**  
   
@@ -132,7 +132,7 @@ ms.locfileid: "63186229"
   
     -   **-SubscriberSecurityMode** = **0**  
   
-###  <a name="TsqlExample"></a> 示例（复制代理）  
+###  <a name="TsqlExample"></a>示例（复制代理）  
  以下示例启动分发代理以同步请求订阅。 所有连接均使用 Windows 身份验证实现。  
   
  [!code-sql[HowTo#bat_synctranpullsub_10](../../snippets/tsql/SQL15/replication/howto/tsql/synctranpullsub_10.bat)]  
@@ -167,12 +167,12 @@ ms.locfileid: "63186229"
   
 4.  使用下列方法之一在订阅服务器中启动分发代理：  
   
-    -   在步骤 2 中的 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizeWithJob%2A> 实例上调用 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 方法。 该方法异步启动分发代理，并在代理作业运行时立即将控制权返回给您的应用程序。 您不能为 [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] 订阅服务器调用该方法，如果创建的订阅的 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 的值为 `false`（默认值），则也不能调用该方法。  
+    -   在步骤 2 中的 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizeWithJob%2A> 实例上调用 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 方法。 该方法异步启动分发代理，并在代理作业运行时立即将控制权返回给您的应用程序。 您不能为 [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] 订阅服务器调用该方法，如果创建的订阅的 `false` 的值为 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>（默认值），则也不能调用该方法。  
   
     -   获取 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 属性中 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> 类的实例，然后调用 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> 方法。 该方法可以同步启动代理，并且控制权仍属于运行代理作业。 在执行同步期间，您可以在代理仍旧运行的情况下处理 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> 事件。  
   
         > [!NOTE]  
-        >  如果指定的值`false`有关<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>（默认值） 时创建请求订阅，还需要指定<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>， <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>，和 （可选）<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A>和<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A>由于相关的代理作业订阅的元数据中不可用[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)。  
+        >  如果你在创建请求订阅`false`时<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>将的值指定为（默认值），则还需要<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>指定、 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>和（可选<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> ）， <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A>因为订阅的与代理作业相关的元数据在[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)中不可用。  
   
 #### <a name="to-synchronize-a-pull-subscription-to-a-merge-publication"></a>将请求订阅与合并发布进行同步  
   
@@ -194,12 +194,12 @@ ms.locfileid: "63186229"
   
 4.  使用下列方法之一在订阅服务器中启动合并代理：  
   
-    -   在步骤 2 中的 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizeWithJob%2A> 实例上调用 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 方法。 该方法异步启动合并代理，并在代理作业运行时立即将控制权返回给您的应用程序。 您不能为 [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] 订阅服务器调用该方法，如果创建的订阅的 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 的值为 `false`（默认值），则也不能调用该方法。  
+    -   在步骤 2 中的 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizeWithJob%2A> 实例上调用 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 方法。 该方法异步启动合并代理，并在代理作业运行时立即将控制权返回给您的应用程序。 您不能为 [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] 订阅服务器调用该方法，如果创建的订阅的 `false` 的值为 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>（默认值），则也不能调用该方法。  
   
     -   获取 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 属性中 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> 类的实例，然后调用 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> 方法。 该方法可以同步启动合并代理，并且控件仍属于运行代理作业。 在执行同步期间，您可以在代理仍旧运行的情况下处理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> 事件。  
   
         > [!NOTE]  
-        >  如果指定的值`false`有关<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>（默认值） 时创建请求订阅，还需要指定<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>，和可以选择<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>，和<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>因为订阅中不可用与代理作业相关的元数据[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)。  
+        >  如果你在创建请求订阅`false`时<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>将的值指定为（默认值），则还需要指定<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>、、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>和（可选<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>）， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>因为订阅的与代理作业相关的元数据在[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)中不可用。  
   
 ###  <a name="PShellExample"></a> 示例 (RMO)  
  该示例将请求订阅与事务发布进行同步，其中，代理使用代理作业进行异步启动。  
@@ -232,9 +232,9 @@ ms.locfileid: "63186229"
   
  [!code-vb[HowTo#rmo_vb_SyncMergePullSub_NoJobWebSync](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_syncmergepullsub_nojobwebsync)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [同步数据](synchronize-data.md)   
- [创建请求订阅](create-a-pull-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [复制安全最佳做法](security/replication-security-best-practices.md)  
   
   

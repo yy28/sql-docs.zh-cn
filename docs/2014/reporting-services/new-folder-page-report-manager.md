@@ -1,5 +1,5 @@
 ---
-title: 新建文件夹页 （报表管理器） |Microsoft Docs
+title: "\"新建文件夹\" 页（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21d79e84ca30283eab6fe788be940f712b2cd41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108195"
 ---
 # <a name="new-folder-page-report-manager"></a>“新建文件夹”页（报表管理器）
@@ -31,21 +31,21 @@ ms.locfileid: "66108195"
   
 1.  打开报表管理器，导航到要在其中创建新文件夹的文件夹。  
   
-2.  在工具栏中，单击 **“新建文件夹”** 。  
+2.  在工具栏中，单击 **“新建文件夹”**。  
   
 ## <a name="options"></a>选项  
  **名称**  
- 指定文件夹的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : \@ & = +，$ / * \< > |"或 / 指定名称时。  
+ 指定文件夹的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? ： \@ & = +，$/* \< > |"或/。  
   
  **说明**  
  键入文件夹内容的说明。 有权访问该文件夹的用户可以在“内容”页中看到此说明。  
   
-## <a name="see-also"></a>请参阅  
- [创建、 删除或修改文件夹&#40;报表管理器&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
- [常规属性页上，文件夹&#40;报表管理器&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
+## <a name="see-also"></a>另请参阅  
+ [创建、删除或修改文件夹 &#40;报表管理器&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
+ ["常规属性" 页，文件夹 &#40;报表管理器&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [“内容”页（报表管理器）](../../2014/reporting-services/contents-page-report-manager.md)   
- [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
- [常规属性页上，文件夹&#40;报表管理器&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
+ ["内容" 页 &#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [报表管理器 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
+ ["常规属性" 页，文件夹 &#40;报表管理器&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   
   

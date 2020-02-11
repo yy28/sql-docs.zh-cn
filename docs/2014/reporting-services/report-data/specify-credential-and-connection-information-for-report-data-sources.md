@@ -29,10 +29,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107041"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>为报表数据源指定凭据和连接信息
@@ -41,7 +41,7 @@ ms.locfileid: "66107041"
 > [!NOTE]  
 >  凭据也可以用于对访问报表服务器的用户进行身份验证。 有关向报表服务器验证用户身份的信息将在其他主题中介绍。  
   
- 与外部数据源的连接是在创建报表时定义的。 发布报表后可以单独管理该连接。 可以指定静态连接字符串或表达式，这允许用户从动态列表中选择数据源。 有关如何指定数据源类型和连接字符串的详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
+ 与外部数据源的连接是在创建报表时定义的。 发布报表后可以单独管理该连接。 可以指定静态连接字符串或表达式，这允许用户从动态列表中选择数据源。 有关如何指定数据源类型和连接字符串的详细信息，请参阅[Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
 ## <a name="using-remote-data-sources"></a>使用远程数据源  
  如果报表从远程数据库服务器检索数据，请验证以下内容：  
@@ -72,7 +72,7 @@ ms.locfileid: "66107041"
 -   使用已存储凭据或提示的凭据来查询报表数据的外部数据源。 凭据可以是 Windows 域帐户，也可以是数据库登录名。  
   
 ### <a name="prompted-credentials"></a>提示的凭据  
- 将报表数据源连接配置为使用提示的凭据时，访问该报表的每个用户都必须输入用户名和密码才能检索数据。 建议将此方法用于包含机密数据的报表。 只能对按需运行的报表使用提示的凭据。 提示的凭据可以是 Windows 域帐户，也可以是数据库登录名。 若要使用 Windows 身份验证，则必须选择 **“在与数据源建立连接时用作 Windows 凭据”** 。 否则，报表服务器会将凭据传递给数据库服务器进行用户身份验证。 如果数据库服务器无法对您所提供的凭据进行身份验证，则该连接将失败。  
+ 将报表数据源连接配置为使用提示的凭据时，访问该报表的每个用户都必须输入用户名和密码才能检索数据。 建议将此方法用于包含机密数据的报表。 只能对按需运行的报表使用提示的凭据。 提示的凭据可以是 Windows 域帐户，也可以是数据库登录名。 若要使用 Windows 身份验证，则必须选择 **“在与数据源建立连接时用作 Windows 凭据”**。 否则，报表服务器会将凭据传递给数据库服务器进行用户身份验证。 如果数据库服务器无法对您所提供的凭据进行身份验证，则该连接将失败。  
   
 ### <a name="windows-integrated-security"></a>Windows 集成安全性  
  使用 **“Windows 集成安全性”** 选项时，报表服务器会将访问报表的用户的安全令牌传递给外部数据源所在的服务器。 在这种情况下，系统不会提示用户键入用户名或密码。 如果启用了模拟功能和代理功能，建议使用此方法。 如果未启用这些功能，则只能在所有要访问的服务器都位于同一个计算机上时才能使用此方法。  
@@ -89,25 +89,25 @@ ms.locfileid: "66107041"
   
  若要授予此权限，请执行以下操作：  
   
-1.  在报表服务器计算机上的 **“管理工具”** 中，打开 **“本地安全策略”** 。  
+1.  在报表服务器计算机上的 **“管理工具”** 中，打开 **“本地安全策略”**。  
   
-2.  在 **“安全设置”** 下，展开 **“本地策略”** ，然后单击 **“用户权限分配”** 。  
+2.  在 **“安全设置”** 下，展开 **“本地策略”**，然后单击 **“用户权限分配”**。  
   
-3.  在详细信息窗格中，右键单击“允许在本地登录”  ，再右键单击“属性”  。  
+3.  在详细信息窗格中，右键单击“允许在本地登录”****，再右键单击“属性”****。  
   
-4.  单击 **“添加用户或组”** 。  
+4.  单击****“添加用户或组”。  
   
-5.  单击 **“位置”** ，指定要搜索的域或其他位置，然后单击 **“确定”** 。  
+5.  单击 **“位置”**，指定要搜索的域或其他位置，然后单击 **“确定”**。  
   
-6.  输入要允许其进行交互式登录的 Windows 帐户，然后单击 **“确定”** 。  
+6.  输入要允许其进行交互式登录的 Windows 帐户，然后单击 **“确定”**。  
   
-7.  在 **“允许在本地登录属性”** 对话框中，单击 **“确定”** 。  
+7.  在 **“允许在本地登录属性”** 对话框中，单击 **“确定”**。  
   
 8.  确保您选择的帐户也没有拒绝权限：  
   
-    1.  右键单击“拒绝本地登录”  ，再右键单击“属性”  。  
+    1.  右键单击“拒绝本地登录”****，再右键单击“属性”****。  
   
-    2.  如果列出了该帐户，则将其选中，然后单击 **“删除”** 。  
+    2.  如果列出了该帐户，则将其选中，然后单击 **“删除”**。  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>对已存储凭据使用模拟功能  
  您还可以使用凭据来模拟其他用户的身份。 对于 SQL Server 数据库，使用模拟选项可以设置 [SETUSER](/sql/t-sql/statements/setuser-transact-sql) 函数。  
@@ -126,25 +126,25 @@ ms.locfileid: "66107041"
   
  上述情况下，报表服务器使用一个您必须事先定义的无人参与的执行帐户连接到远程数据源。 由于报表服务器不能使用它的服务凭据连接到远程服务器，因此必须指定一个可由报表服务器用于建立连接的帐户。 有关创建此帐户的详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-##  <a name="DataSourceConfigurationConnections"></a> 数据源配置和网络连接  
+##  <a name="DataSourceConfigurationConnections"></a>数据源配置和网络连接  
  下表显示了如何针对特定的凭据类型和数据处理扩展插件组合建立连接。 如果要使用自定义数据处理扩展插件，请参阅 [指定用于自定义数据处理扩展插件的连接](specify-connections-for-custom-data-processing-extensions.md)。  
   
-|**类型**|**网络连接上下文**|**数据源类型**<br /><br /> **（SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase）**|  
+|类型 |**网络连接的上下文**|**数据源类型**<br /><br /> **（SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase）**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |集成安全性|模拟当前用户|对于所有数据源类型，均使用当前的用户帐户进行连接。|  
 |Windows 凭据|模拟指定的用户|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：使用模拟用户帐户进行连接。|  
 |数据库凭据|模拟无人参与的执行帐户或服务帐户。<br /><br /> （Reporting Services 会在使用服务标识发送连接请求时删除管理员权限）。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 将用户名和密码追加到连接字符串中。<br /><br /> 对于 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]：<br /><br /> 如果使用的是 TCP/IP 协议，则连接会成功；否则，连接将失败。<br /><br /> 对于 XML：<br /><br /> 如果使用数据库凭据，则报表服务器上的连接将失败。|  
-|None|模拟无人参与的执行帐户。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用连接字符串中定义的凭据。 如果未定义无人参与的执行帐户，则报表服务器上的连接将失败。<br /><br /> 对于 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]：<br /><br /> 如果未指定任何凭据，则即使定义了无人参与的执行帐户，连接也总会失败。<br /><br /> 对于 XML：<br /><br /> 如果定义了无人参与的执行帐户，则以匿名用户的身份连接；否则，连接将失败。|  
+|无|模拟无人参与的执行帐户。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用连接字符串中定义的凭据。 如果未定义无人参与的执行帐户，则报表服务器上的连接将失败。<br /><br /> 对于 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]：<br /><br /> 如果未指定任何凭据，则即使定义了无人参与的执行帐户，连接也总会失败。<br /><br /> 对于 XML：<br /><br /> 如果定义了无人参与的执行帐户，则以匿名用户的身份连接；否则，连接将失败。|  
   
 ## <a name="setting-credentials-programmatically"></a>通过编程方式设置凭据  
  您可以通过编写代码来设置凭据，以控制对报表和报表服务器的访问。 有关详细信息，请参阅 [Data Sources and Connection Methods](../report-server-web-service/methods/data-sources-and-connection-methods.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [Reporting Services &#40;SSRS 支持的数据源&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [管理报表数据源](../../integration-services/connection-manager/data-sources.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
- [创建、删除或修改共享数据源（报表管理器）](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [配置报表的数据源属性（报表管理器）](configure-data-source-properties-for-a-report-report-manager.md)  
+ [创建、删除或修改共享数据源 &#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [配置报表的数据源属性 &#40;报表管理器&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

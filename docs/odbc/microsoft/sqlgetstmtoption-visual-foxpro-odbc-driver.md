@@ -13,28 +13,28 @@ ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5521fb11cad064cf487d38562f4146fd32587993
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67898787"
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
->  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
  支持：完全  
   
- ODBC API 一致性：第 1 级  
+ ODBC API 一致性：一级  
   
  返回语句选项的当前设置。  
   
-|*fOption*|返回|  
+|*FOption*|返回|  
 |---------------|-------------|  
-|SQL_GET_BOOKMARK|为当前记录数的书签的 32 位整数值|  
-|SQL_ROW_NUMBER|32 位整数，指定在结果中的当前行的位置设置|  
-|SQL_TRANSLATE_DLL|错误："驱动程序不支持"|  
+|SQL_GET_BOOKMARK|32位整数值，它是当前记录号的书签|  
+|SQL_ROW_NUMBER|32位整数，用于指定结果集中当前行的位置|  
+|SQL_TRANSLATE_DLL|错误： "驱动程序不能"|  
   
- Visual FoxPro ODBC 驱动程序具有任何转换 Dll。  
+ Visual FoxPro ODBC 驱动程序没有转换 Dll。  
   
- 有关详细信息，请参阅[SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md)中*ODBC 程序员参考*。
+ 有关详细信息，请参阅*ODBC 程序员参考*中的[SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md) 。

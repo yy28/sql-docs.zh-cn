@@ -19,17 +19,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de8a27801ef89f10bf303cee17d1c2d0e1081c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109701"
 ---
 # <a name="control-report-distribution"></a>控制报表分发
   您可以配置报表服务器，以降低电子邮件和文件共享分发引起的安全风险。  
   
 ## <a name="securing-reports"></a>保护报表  
- 控制报表分发的第一步是保护报表，以防止未经授权的访问。 报表必须使用对所有传递都相同的一组存储凭据，才可以在订阅中使用。 任何可以访问报表服务器上报表的用户都可以运行报表，并且有可能分发报表。 为了防止发生这种情况，您必须限制报表访问，只允许需要报表的用户访问报表。 有关详细信息，请参阅[保护报表和资源](security/secure-reports-and-resources.md)并[保护文件夹](security/secure-folders.md)。  
+ 控制报表分发的第一步是保护报表，以防止未经授权的访问。 报表必须使用对所有传递都相同的一组存储凭据，才可以在订阅中使用。 任何可以访问报表服务器上报表的用户都可以运行报表，并且有可能分发报表。 为了防止发生这种情况，您必须限制报表访问，只允许需要报表的用户访问报表。 有关详细信息，请参阅[保护报表和资源](security/secure-reports-and-resources.md)和[安全文件夹](security/secure-folders.md)。  
   
  不能通过订阅的方式分发使用数据库安全性授予访问权限的高度机密报表。  
   
@@ -46,8 +46,8 @@ ms.locfileid: "66109701"
 ## <a name="controlling-file-share-delivery"></a>控制文件共享传递  
  文件共享传递用于将报表发送到硬盘上的文件。 文件保存到磁盘后，就不再受报表服务器用于控制用户访问权限的基于角色安全模式的限制。 若要保护已传递到磁盘的报表，可以对文件本身或报表所在的文件夹设置访问控制列表 (ACL)。 根据您的操作系统情况，可能还会有其他可用的安全选项。  
   
-## <a name="see-also"></a>请参阅  
- [为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>另请参阅  
+ [配置报表服务器，以便 &#40;SSRS Configuration Manager 发送电子邮件&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [创建和管理本机模式报表服务器的订阅](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   

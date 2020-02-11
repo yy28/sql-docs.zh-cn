@@ -1,5 +1,5 @@
 ---
-title: 模型项安全性页 （报表管理器） |Microsoft Docs
+title: "\"模型项安全性\" 页（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108233"
 ---
 # <a name="model-item-security-page-report-manager"></a>“模型项安全性”页（报表管理器）
@@ -29,7 +29,7 @@ ms.locfileid: "66108233"
   
  可以针对模型内的实体、文件夹和单个字段定义模型项安全性。 由于模型中存在大量可保护的项，因此可以将权限继承内置到模型中，以便可以通过数量相对较少的角色分配来保护大量项。 权限继承基于以下内容：  
   
--   “模型”  
+-   模型  
   
 -   根节点  
   
@@ -61,19 +61,19 @@ ms.locfileid: "66108233"
 4.  选择 **“模型项安全性”** 选项卡。  
   
 ## <a name="options"></a>选项  
- **保护独立地为此模型的各模型项**  
+ **“单独保护此模型的各项”**  
  单击此复选框可以启用模型项安全性。  
   
- **指定模型中各模型项的安全**  
+ **指定模型中各模型项的安全性**  
  显示模型中的所有项。 您可以浏览模型命名空间来选择要保护的项。 一次只能选择一个项。 请确保先针对根节点创建第一个角色分配，然后再针对其他实体和文件夹创建角色分配。  
   
  **从父项继承权限**  
  单击此项可以继承父项的安全设置。  
   
- **为以下用户和组 （用分号分隔） 分配读取权限**  
- 单击此项可以指定要为其定义访问权限的用户帐户或组帐户。 如果使用默认安全性，则用户帐户和组帐户为 Windows 域帐户。 按以下格式指定帐户： *\<域 >\\< 帐户\>* 。  
+ **为以下用户和组(用分号分隔)分配读取权限**  
+ 单击此项可以指定要为其定义访问权限的用户帐户或组帐户。 如果使用默认安全性，则用户帐户和组帐户为 Windows 域帐户。 按以下格式指定帐户： * \<域>\\<帐户\>*。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Management Studio 中报表服务器的 F1 帮助](tools/report-server-in-management-studio-f1-help.md)  
   
   

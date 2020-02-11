@@ -1,5 +1,5 @@
 ---
-title: 订阅-未分发的命令 （事务订阅，SQL Server 2005 和更高版本） |Microsoft Docs
+title: 订阅，未分发的命令（事务订阅，SQL Server 2005 及更高版本） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a1f957c417c5c63766dfbffa923edd6935d1eb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151484"
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription-sql-server-2005-and-later"></a>订阅，未分发的命令（事务订阅，SQL Server 2005 和更高版本）
@@ -29,7 +29,7 @@ ms.locfileid: "63151484"
  **根据过去的性能估计应用这些命令所需的时间为**  
  将命令传递到订阅服务器所需的估计时间。 如果此值大于生成快照并将其应用于订阅服务器所需的时间，请考虑重新初始化订阅服务器。 有关详细信息，请参阅 [重新初始化订阅](reinitialize-subscriptions.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
  [使用复制监视器监视性能](monitor/monitor-performance-with-replication-monitor.md)   
  [监视复制](monitoring-replication.md)  

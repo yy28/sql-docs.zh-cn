@@ -1,5 +1,5 @@
 ---
-title: sp_manage_jobs_by_login (Transact-SQL) | Microsoft Docs
+title: sp_manage_jobs_by_login （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ebc71c304939a977ac34cc2fad819edd463614fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67894995"
 ---
-# <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
+# <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   删除或重新分配属于指定登录名的作业。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,20 +42,20 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @action = ] 'action'` 要为指定的登录名执行的操作。 *操作*是**varchar(10)** ，无默认值。 当*操作*是**删除**， **sp_manage_jobs_by_login**删除拥有的所有作业*current_owner_login_name*。 当*操作*是**重新分配**，所有作业均都分配给*new_owner_login_name*。  
+`[ @action = ] 'action'`要对指定的登录名执行的操作。 *操作*为**varchar （10）**，无默认值。 删除*操作*时****， **sp_manage_jobs_by_login**会删除*current_owner_login_name*拥有的所有作业。 **重新分配***操作*时，会将所有作业分配给*new_owner_login_name*。  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'` 当前作业所有者的登录名。 *current_owner_login_name*是**sysname**，无默认值。  
+`[ @current_owner_login_name = ] 'current_owner_login_name'`当前作业所有者的登录名。 *current_owner_login_name* **sysname**，无默认值。  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'` 新作业所有者的登录名。 使用此参数仅当*操作*是**重新分配**。 *new_owner_login_name*是**sysname**，默认值为 NULL。  
+`[ @new_owner_login_name = ] 'new_owner_login_name'`新作业所有者的登录名。 仅在*操作***重新分配**时使用此参数。 *new_owner_login_name*的默认值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="permissions"></a>权限  
- 若要运行此存储的过程，必须授予用户**sysadmin**固定的服务器角色。  
+ 若要运行此存储过程，用户必须被授予**sysadmin**固定服务器角色。  
   
 ## <a name="examples"></a>示例  
  以下示例将所有作业从 `danw` 重新分配给 `françoisa`。  
@@ -71,8 +71,8 @@ EXEC dbo.sp_manage_jobs_by_login
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sp_delete_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

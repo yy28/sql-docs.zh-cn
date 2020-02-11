@@ -14,24 +14,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07c75779d05d22e09e7823b5d0b3bffc2ca7acc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108308"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>在数据警报管理器中管理我的数据警报
   SharePoint 用户可以查看他们所创建的数据警报列表以及与这些警报有关的信息。 用户还可以删除其警报，打开警报定义以便在数据警报设计器中进行编辑，以及运行其警报。 下图显示数据警报管理器中可用于用户的功能。  
   
- ![适用于 SharePoint 用户的警报管理器功能](media/rs-alertmanageriw.gif "Alert Manager features for SharePoint users")  
+ ![SharePoint 用户的警报管理器功能](media/rs-alertmanageriw.gif "SharePoint 用户的警报管理器功能")  
   
 ### <a name="to-view-a-list-of-your-alerts"></a>查看您的警报列表  
   
 1.  转至您在其中保存了您已创建数据警报的报表的 SharePoint 库。  
   
-2.  单击针对报表展开下拉菜单的图标，然后单击“管理数据警报”  。 下图显示该下拉菜单。  
+2.  单击针对报表展开下拉菜单的图标，然后单击“管理数据警报”****。 下图显示该下拉菜单。  
   
-     ![从报表上下文菜单打开警报管理器](media/rs-openalertmanager.gif "Open Alert Manager from report context menu")  
+     ![从报表上下文菜单打开警报管理器](media/rs-openalertmanager.gif "从报表上下文菜单打开警报管理器")  
   
      数据警报管理器随之打开。 默认情况下，它列出了针对您在库中选择的报表的警报。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66108308"
   
 ### <a name="to-edit-an-alert-definition"></a>编辑警报定义  
   
--   右键单击要编辑其警报定义的数据警报，然后单击“编辑”  。  
+-   右键单击要编辑其警报定义的数据警报，然后单击“编辑”****。  
   
      该警报定义将在数据警报设计器中打开。 有关详细信息，请参阅 [在警报设计器中编辑数据警报](edit-a-data-alert-in-alert-designer.md) 和 [数据警报设计器](../../2014/reporting-services/data-alert-designer.md)。  
   
@@ -56,18 +56,18 @@ ms.locfileid: "66108308"
   
 ### <a name="to-delete-an-alert-definition"></a>删除警报定义  
   
--   右键单击要删除的数据警报，然后单击“删除”  。  
+-   右键单击要删除的数据警报，然后单击“删除”****。  
   
      删除警报后，将不会发送进一步的警报消息。  
   
 ### <a name="to-run-an-alert"></a>运行警报  
   
--   右键单击要运行的数据警报，然后单击“运行”  。  
+-   右键单击要运行的数据警报，然后单击“运行”****。  
   
      创建警报实例，并立即发送数据警报消息，而不考虑数据警报设计器中指定的计划选项。 例如，配置为每周发送的警报，并且仅当结果更改时才发送。  
   
-## <a name="see-also"></a>请参阅  
- [向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+## <a name="see-also"></a>另请参阅  
+ [用于警报管理员的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services 数据警报](../ssms/agent/alerts.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b174f9ad33ee38c2f47ffc8a684cddd7ea4376bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107354"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>“数据集属性”对话框 -&gt;“选项”（报表生成器）
@@ -45,13 +45,13 @@ ms.locfileid: "66107354"
  选择一个用于决定是否区分全半角的值。 此选项指示数据是否区分全半角；可设置为 True、False 或“自动”    。默认值为“自动”，指示报表服务器应在报表运行时尝试从数据提供程序派生该值  。 如果数据访问接口不支持区分全半角的类型，则报表将按该值为 **False**的情况运行。 如果您知道该值并且知道该值受支持，请选择 **True**。  
   
  **将小计解释为详细信息行**  
- 选择一个值，该值指示是否希望将小计行解释为详细信息行而非聚合行。 默认值**自动**，指示是否报表不使用，应将小计行视为为详细信息行`Aggregate`（） 函数来访问数据集中的任何字段。 如果希望将小计行解释为聚合行，请选择 **False**。 如果希望将小计行解释为详细信息行，并且知道它们不使用`Aggregate`（) 函数中，选择**True**。  
+ 选择一个值，该值指示是否希望将小计行解释为详细信息行而非聚合行。 默认值为 "**自动**"，指示如果报表不使用`Aggregate`（）函数访问数据集中的任何字段，则应将小计行视为详细信息行。 如果希望将小计行解释为聚合行，请选择 **False**。 如果希望将小计行解释为详细信息行，并且知道它们不使用（）函数，请`Aggregate`选择 " **True**"。  
   
-## <a name="see-also"></a>请参阅  
- [用于对话框、窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Aggregate 函数（报表生成器和 SSRS）](../report-design/report-builder-functions-aggregate-function.md)   
+## <a name="see-also"></a>另请参阅  
+ [报表生成器对话框、窗格和向导的帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [聚合函数 &#40;报表生成器和 SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [“数据集属性”对话框 ->“查询”（报表生成器）](dataset-properties-dialog-box-query-report-builder.md)  
+ ["数据集属性" 对话框-> "查询 &#40;报表生成器&#41;](dataset-properties-dialog-box-query-report-builder.md)  
   
   

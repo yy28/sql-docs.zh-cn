@@ -1,5 +1,5 @@
 ---
-title: UI 设计器和对话框用于表格 Analysis |Microsoft Docs
+title: 用于表格分析的 UI 设计器和对话框 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c862f61f6fb5caabfb171ca145e351d8a07c76c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065653"
 ---
-# <a name="ui-designers-and-dialogs-for-tabular-analysis"></a>UI 设计器和表格分析对话框
+# <a name="ui-designers-and-dialogs-for-tabular-analysis"></a>用于表格分析的 UI 设计器和对话框
 
-本部分包含有关用户界面 (UI) 设计器和对话框表格分析的文档。
+本部分包含有关用于表格分析的用户界面（UI）设计器和对话框的文档。
 
 ## <a name="next-steps"></a>后续步骤
 

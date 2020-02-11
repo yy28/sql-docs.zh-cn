@@ -11,28 +11,32 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60b081b96ae54885a6f1968706903b13fb7505a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106391"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>ReportItems 集合引用（报表生成器和 SSRS）
-  `ReportItems` 内置集合是来自报表项（如报表设计图面上的数据区域行或文本框）的文本框集合。 `ReportItems` 集合包括位于表头、表尾或表体的当前作用域中的文本框。 此集合在运行时由报表处理器和报表呈现器确定。 用户查看报表页面时，如果报表处理器连续组合报表数据和报表项布局元素，则当前作用域将随之变化。 可以使用 `ReportItems` 内置集合在每个页面中生成显示首项和尾项的字典样式表头。  
+  
+  `ReportItems` 内置集合是来自报表项（如报表设计图面上的数据区域行或文本框）的文本框集合。 
+  `ReportItems` 集合包括位于表头、表尾或表体的当前作用域中的文本框。 此集合在运行时由报表处理器和报表呈现器确定。 用户查看报表页面时，如果报表处理器连续组合报表数据和报表项布局元素，则当前作用域将随之变化。 可以使用 `ReportItems` 内置集合在每个页面中生成显示首项和尾项的字典样式表头。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>使用 ReportItems 值属性  
- 内的项`ReportItems`集合只能有一个属性：Value。 `ReportItems` 项的值可用于显示或计算报表中其他字段的数据。 若要访问当前文本框的值，可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 内置全局 Me.Value 或仅使用 Value。 在报表函数（如 First）和聚合函数中使用完全限定语法。  
+ 
+  `ReportItems` 集合内的项只有一个属性：Value。 
+  `ReportItems` 项的值可用于显示或计算报表中其他字段的数据。 若要访问当前文本框的值，可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 内置全局 Me.Value 或仅使用 Value。 在报表函数（如 First）和聚合函数中使用完全限定语法。  
   
  例如：  
   
--   此表达式放置在文本框中时，显示名为 `Textbox1` 的 `ReportItem` 文本框的值：  
+-   此表达式放置在文本框中时，显示名为 `ReportItem` 的 `Textbox1` 文本框的值：  
   
      `=ReportItems!Textbox1.Value`  
   
--   此表达式放置在`ReportItem`文本框 Color 属性中，以黑色显示文本时的值为 > 0; 否则，以红色显示值：  
+-   此表达式放置在`ReportItem`文本框颜色属性中，当值为 > 0 时，将以黑色显示文本。否则，该值将显示为红色：  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -50,7 +54,7 @@ ms.locfileid: "66106391"
   
  例如，位于父组行的文本框不能包含引用子组行的文本框名称的表达式。 此类表达式不会解析报表中的值，因为子行文本框超出了作用域。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [表达式中的内置集合（报表生成器和 SSRS）](built-in-collections-in-expressions-report-builder.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [Reporting Services 中的分页（报表生成器和 SSRS）](pagination-in-reporting-services-report-builder-and-ssrs.md)   

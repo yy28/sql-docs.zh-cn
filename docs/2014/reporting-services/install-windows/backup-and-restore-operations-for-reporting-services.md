@@ -20,16 +20,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c992148017f6a3ecb383e85ad5bbfcc3a3ec3c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108912"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的备份和还原操作
   本主题概述 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中使用的所有数据文件，并介绍应在何时以及如何备份这些文件。 为报表服务器数据库文件制定备份和还原计划是恢复策略中最重要的一部分。 但是，更全面的恢复策略应包括备份加密密钥、自定义程序集或扩展插件、配置文件，以及报表和模型的源文件。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
  备份和还原操作通常用于移动所有或部分 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装：  
   
@@ -37,11 +37,11 @@ ms.locfileid: "66108912"
   
 -   将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装移到新计算机的过程称为迁移。 在迁移安装时，需要运行安装程序以安装新的报表服务器实例，然后将实例数据复制到新计算机上。 有关迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装的详细信息，请参阅以下主题：  
   
-    -   [升级和迁移 Reporting Services](upgrade-and-migrate-reporting-services.md)  
+    -   [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)  
   
-    -   [迁移 Reporting Services 安装（SharePoint 模式）](migrate-a-reporting-services-installation-sharepoint-mode.md)  
+    -   [在 SharePoint 模式 &#40;迁移 Reporting Services 安装&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)  
   
-    -   [迁移 Reporting Services 安装（本机模式）](migrate-a-reporting-services-installation-native-mode.md)  
+    -   [&#40;本机模式下迁移 Reporting Services 安装&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
 ## <a name="backing-up-the-report-server-databases"></a>备份和还原报表服务器数据库  
  由于报表服务器是无状态服务器，因此所有应用程序数据都存储于在 **实例上运行的** reportserver **和** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 数据库中。 可以使用支持的备份 **数据库的方法之一备份** reportserver **和** reportservertempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 特定于报表服务器数据库的建议包括以下几项：  
@@ -55,13 +55,14 @@ ms.locfileid: "66108912"
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库的备份和恢复的详细信息，请参阅 [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
 > [!IMPORTANT]  
->  如果您的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表服务器处于 SharePoint 模式下，则会有其他一些数据库需要加以注意，包括 SharePoint 配置数据库和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 警报数据库。 在 SharePoint 模式下，对于每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序将创建三个数据库。 **reportserver**、 **reportservertempdb**和 **dataalerting** 数据库。 有关详细信息，请参阅 [备份和还原 Reporting Services SharePoint 服务应用程序](../backup-and-restore-reporting-services-sharepoint-service-applications.md)  
+>  如果您的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表服务器处于 SharePoint 模式下，则会有其他一些数据库需要加以注意，包括 SharePoint 配置数据库和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 警报数据库。 在 SharePoint 模式下，对于每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序将创建三个数据库。 
+  **reportserver**、 **reportservertempdb**和 **dataalerting** 数据库。 有关详细信息，请参阅[备份和还原 Reporting Services SharePoint 服务应用程序](../backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
 ## <a name="backing-up-the-encryption-keys"></a>备份加密密钥  
  首次配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装时，应备份加密密钥。 此外，任何时候更改服务帐户标识或重命名计算机时，都应备份密钥。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。 有关 SharePoint 模式报表服务器的信息，请参阅[管理 Reporting Services SharePoint 服务应用程序](../manage-a-reporting-services-sharepoint-service-application.md)中的“密钥管理”部分。  
   
 ## <a name="backing-up-the-configuration-files"></a>备份配置文件  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用配置文件来存储应用程序设置。 首次配置服务器时和部署任何自定义扩展插件之后，都应备份文件。 要备份的文件包括：  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]使用配置文件来存储应用程序设置。 首次配置服务器时和部署任何自定义扩展插件之后，都应备份文件。 要备份的文件包括：  
   
 -   RSReportServer.config  
   
@@ -82,12 +83,12 @@ ms.locfileid: "66108912"
   
  确认具有所使用的所有自定义扩展插件和自定义程序集的备份副本。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表服务器数据库（SSRS 本机模式）](../report-server/report-server-database-ssrs-native-mode.md)   
  [Reporting Services 配置文件](../report-server/reporting-services-configuration-files.md)   
- [rskeymgmt 实用工具 (SSRS)](../tools/rskeymgmt-utility-ssrs.md)   
- [通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
- [管理报表服务器数据库（SSRS 本机模式）](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+ [rskeymgmt 实用工具 &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
+ [通过备份和还原复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
+ [&#40;SSRS 本机模式下管理报表服务器数据库&#41;](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
  [配置和管理加密密钥（SSRS 配置管理器）](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

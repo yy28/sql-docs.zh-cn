@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9094fcbbede4c9bb6bac283129ed20ea4e3e910b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261756"
 ---
 # <a name="publisher-information-agents"></a>发布服务器信息，代理
@@ -47,11 +47,11 @@ ms.locfileid: "63261756"
 ## <a name="options"></a>选项  
  若要显示有关代理或作业的信息，请从 **“代理和作业类型”** 下拉菜单中选择。 若要查看与代理或作业相关的详细信息和任务，请右键单击该代理或作业所在的行，然后单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
+-   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
   
--   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
+-   **选择要显示的列**：选择要显示哪些列以及要在 **“选择列”** 对话框中以何种顺序显示它们。  
   
--   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
+-   **筛选器**：根据 **“筛选设置”** 对话框中的列值筛选网格中的行。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63261756"
  以下各节说明了此选项卡上为每个代理或作业显示的数据。  
   
 ### <a name="snapshot-agent"></a>快照代理  
- **“状态”**  
+ **Status**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -93,7 +93,7 @@ ms.locfileid: "63261756"
  在此代理最近一次运行期间分发数据库中提交的命令数。 一个命令相当于一次数据更改，如一次更新。  
   
 ### <a name="log-reader-agent"></a>日志读取器代理  
- **“状态”**  
+ **Status**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -132,7 +132,7 @@ ms.locfileid: "63261756"
  在此代理最近一次运行期间平均每个事务的命令数。  
   
 ### <a name="queue-reader-agent"></a>队列读取器代理  
- **“状态”**  
+ **Status**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -171,7 +171,7 @@ ms.locfileid: "63261756"
  在此代理最近一次运行期间平均每个事务的命令数。  
   
 ### <a name="maintenance-jobs"></a>维护作业  
- **“状态”**  
+ **Status**  
  每个作业的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -194,7 +194,7 @@ ms.locfileid: "63261756"
  **上一操作**  
  在此作业最近一次运行的过程中最后执行的操作。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
  [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [监视复制](monitoring-replication.md)  

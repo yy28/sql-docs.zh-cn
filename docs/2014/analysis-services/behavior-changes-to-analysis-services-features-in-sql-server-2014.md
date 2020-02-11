@@ -1,5 +1,5 @@
 ---
-title: 行为更改 Analysis Services SQL Server 2014 中的功能 |Microsoft Docs
+title: SQL Server 2014 中 Analysis Services 功能的行为更改 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a5525984fa4b1f1823f526097d271780a072bd4
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284811"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Analysis Services 功能的行为更改
@@ -31,24 +31,24 @@ ms.locfileid: "67284811"
   
 -   [SQL Server 2012 中的行为更改](#bkmk_sql2012)  
   
-##  <a name="bkmk_sql2014"></a> 中的行为更改 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+##  <a name="bkmk_sql2014"></a>中的行为更改[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  此版本中，没有针对表格、多维、数据挖掘或 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 功能的新的行为更改。  但是，由于  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 非常类似于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 版本，因而如果要从 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]进行升级，为方便起见，此处提供了这两个以前版本的行为更改。  
   
-##  <a name="bkmk_sql2012sp1"></a> 中的行为更改 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
+##  <a name="bkmk_sql2012sp1"></a>中的行为更改[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
  本节介绍针对 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]功能报告的行为更改。 这些更改也适用于 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。  
   
-|问题|Description|  
+|问题|说明|  
 |-----------|-----------------|  
-|在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用时，SQL Server 2008 R2 PowerPivot 工作簿将不会在不进行提示的情况下升级和刷新模型。 因此，计划的数据刷新将不适用于 SQL Server 2008 R2 PowerPivot 工作簿。|2008 R2 工作簿将在 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]中打开，但计划的刷新将不起作用。 如果查看刷新历史记录，您将会看到如下错误消息：<br /> "工作簿包含不受支持的 PowerPivot 模型。 该工作簿中的 PowerPivot 模型采用 SQL Server 2008 R2 PowerPivot for Excel 2010 格式。 支持的 PowerPivot 模型如下： <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013"<br /><br /> **如何升级工作簿：** 工作簿升级到 2012年工作簿之前，计划的刷新将不起作用。 若要升级工作簿以及工作簿中所包含的模型，请完成以下操作之一：<br /><br /> 下载工作簿并在安装有 SQL Server 2012 PowerPivot for Excel 外接程序的 Microsoft Excel 2010 中打开该工作簿。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> 下载该工作簿并在 Microsoft Excel 2013 中打开它。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> <br /><br /> 工作簿升级的详细信息，请参阅[升级工作簿和计划的数据刷新&#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。|  
+|在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用时，SQL Server 2008 R2 PowerPivot 工作簿将不会在不进行提示的情况下升级和刷新模型。 因此，计划的数据刷新将不适用于 SQL Server 2008 R2 PowerPivot 工作簿。|2008 R2 工作簿将在 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]中打开，但计划的刷新将不起作用。 如果查看刷新历史记录，您将会看到如下错误消息：<br /> "该工作簿包含不支持的 PowerPivot 模型。 该工作簿中的 PowerPivot 模型采用 SQL Server 2008 R2 PowerPivot for Excel 2010 格式。 支持的 PowerPivot 模型如下： <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013 "<br /><br /> **如何升级工作簿：** 在将工作簿升级到2012工作簿之前，计划的刷新将不起作用。 若要升级工作簿以及工作簿中所包含的模型，请完成以下操作之一：<br /><br /> 下载工作簿并在安装有 SQL Server 2012 PowerPivot for Excel 外接程序的 Microsoft Excel 2010 中打开该工作簿。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> 下载该工作簿并在 Microsoft Excel 2013 中打开它。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> <br /><br /> 有关工作簿升级的详细信息，请参阅[升级工作簿和计划的数据刷新 &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。|  
 |DAX [ALL Function](/dax/all-function-dax)中的行为更改。|在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]之前，如果您在“标记为日期表”中指定 [Date] 列以在时间智能中使用，且将 [Date] 列作为参数传递到 ALL 函数或作为筛选器传递给 CALCULATE 函数，则无论日期列中的切片器如何，都忽略表中所有列的所有筛选器。<br /><br /> 例如，<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]以前，对于 DateTable 的所有列忽略所有筛选器，无论作为参数传递给 ALL 的 [Date] 列是什么。<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 和 Excel 2013 的 PowerPivot 中，此行为将仅对作为参数传递给 ALL 的指定列忽略筛选器。<br /><br /> 要解决新行为问题，忽略作为整个表的筛选器的所有列，您可以从参数中排除 [Date] 列，例如：<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> 这将产生与 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]以前的行为相同的结果。|  
   
-##  <a name="bkmk_sql2012"></a> 中的行为更改 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+##  <a name="bkmk_sql2012"></a>中的行为更改[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  本节介绍针对 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]功能报告的行为更改。 这些更改也适用于 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。  
   
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services，多维模式  
   
 #### <a name="nullprocessing-option-set-to-preserve-is-no-longer-supported-for-distinct-count-measures"></a>非重复计数度量值不再支持设置为“保留”的 NullProcessing 选项  
- 早于[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，可以设置[NullProcessing 元素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl)到`Preserve`非重复计数度量值。  遗憾的是，这种做法通常生成无效的结果，有时甚至损坏处理作业。 因此，此配置在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中不再有效。 尝试使用它将会导致会发生以下验证错误："元数据管理器中的错误。 保留不是有效的 NullProcessing 值\<measurename > 非重复计数度量值。"  
+ 在之前[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，可以为非重复计数度量值将[NULLPROCESSING 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl)设置为`Preserve` 。  遗憾的是，这种做法通常生成无效的结果，有时甚至损坏处理作业。 因此，此配置在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中不再有效。 尝试使用该配置将导致出现以下验证错误：“元数据管理器发生错误。 对于\<measurename> 非重复计数度量值，Preserve 不是有效的 NullProcessing 值。 "  
   
 #### <a name="cube-browser-in-management-studio-and-cube-designer-has-been-removed"></a>Management Studio 和多维数据集设计器中的多维数据集浏览器已被删除  
  可用于在 Management Studio 或多维数据集设计器中将字段拖放到数据透视表结构中的多维数据集浏览器控件已从产品中删除。 该控件是 Office Web Control (OWC) 组件。 OWC 在 Office 中已不推荐使用，并且不再继续提供。  
@@ -60,7 +60,7 @@ ms.locfileid: "67284811"
   
  在此版本中，对于呈现来自外部文件的 PowerPivot 数据的 Excel 工作簿，其权限要求已更改。 在这一版本中，您必须具有 **“读取”** 权限（或更明确地说，必须具有 **“打开项”** 权限），才能从客户端应用程序连接到外部 PowerPivot 工作簿。 其他权限指定用户具有下载权限，才能查看工作簿中嵌入的源数据。 其他权限反映这一事实，即模型数据完全可用于链接到它的客户端应用程序或工作簿，从而导致在权限要求与实际数据连接行为之间的更好地进行协调。  
   
- 若要继续将 PowerPivot 工作簿用作外部数据源，您必须为连接到外部 PowerPivot 数据的用户提高 SharePoint 权限。 更改的权限，直到用户将收到以下错误，如果用户尝试访问数据源连接中的 PowerPivot 工作簿："PowerPivot Web 服务返回了错误 （拒绝访问。 您请求的文档不存在或您没有权限打开该文件。）"  
+ 若要继续将 PowerPivot 工作簿用作外部数据源，您必须为连接到外部 PowerPivot 数据的用户提高 SharePoint 权限。 在更改权限之前，如果用户试图访问数据源连接中的 PowerPivot 工作簿，则会收到以下错误消息： "PowerPivot Web 服务返回错误（拒绝访问。 您请求的文档不存在或您没有打开此文件的权限。） "  
   
 > [!WARNING]  
 >  以下步骤将指导您断开库级别的权限继承，将用户针对此库中特定文档的权限从 **“仅查看”** 提高到 **“读取”** 。 在继续之前，请仔细查看现有的权限和文档，并确认这些步骤适用于您的网站。  
@@ -72,7 +72,7 @@ ms.locfileid: "67284811"
   
  您必须是网站所有者才能更改权限。  
   
- **如何增加读取各个工作簿的权限级别的权限**  
+ **如何为单独的工作簿将权限提高到读取权限级别**  
   
 1.  单击向下箭头以打开菜单，找到单独文档。  
   
@@ -102,10 +102,10 @@ ms.locfileid: "67284811"
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>负载平衡请求的新默认设置已从“循环”更改为“基于运行状况”  
  PowerPivot 服务应用程序具有一些默认设置，这些设置确定如何在场中的多台 PowerPivot for SharePoint 服务器之间分配对 PowerPivot 数据的请求。 在前一版本中，默认设置是 **“循环”**，其中请求在可用服务器之间按顺序进行分配。 在这一版本中，默认值现在为 **“基于运行状况”**。 PowerPivot 服务应用程序使用服务器运行状况统计数据（如可用内存或 CPU）来确定哪些服务器实例获取 xt 请求。  
   
- 如果您从前一版本升级服务器，PowerPivot 服务应用程序将保留以前的默认设置（**“循环”**）。 若要使用 **“基于运行状况”** 分配方法设置，您必须修改配置设置。 有关详细信息，请参阅[创建和配置 PowerPivot 服务应用程序在管理中心内](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
+ 如果您从前一版本升级服务器，PowerPivot 服务应用程序将保留以前的默认设置（**“循环”**）。 若要使用 **“基于运行状况”** 分配方法设置，您必须修改配置设置。 有关详细信息，请参阅 [Create and Configure a PowerPivot Service Application in Central Administration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [后向兼容性](../../2014/getting-started/backward-compatibility.md)   
- [重大更改 Analysis Services SQL Server 2014 中的功能](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)  
+ [向后兼容性](../../2014/getting-started/backward-compatibility.md)   
+ [SQL Server 2014 中 Analysis Services 功能的重大更改](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)  
   
   

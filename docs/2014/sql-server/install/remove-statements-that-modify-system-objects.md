@@ -1,5 +1,5 @@
 ---
-title: 删除用于修改系统对象的语句 |Microsoft Docs
+title: 删除修改系统对象的语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f65d379076eb213971bba97b970b8aa866ca3a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66428876"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>删除用于修改系统对象的语句
@@ -26,7 +26,7 @@ ms.locfileid: "66428876"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  不允许直接更新系统目录。 尝试这样做将生成以下错误：  
   
  `Server: Msg 259, Level 16, State 1, Line 1`  
@@ -34,10 +34,10 @@ ms.locfileid: "66428876"
  `Ad hoc updates to system catalogs are not allowed.`  
   
 ## <a name="corrective-action"></a>纠正措施  
- 请修改您的 SQL 脚本，使用正式且有记录的 API。 例如，使用 ALTER DATABASE *database_name* SET EMERGENCY，而不是运行 UPDATE 语句**sysdatabases**系统表。  
+ 请修改您的 SQL 脚本，使用正式且有记录的 API。 例如，使用 ALTER DATABASE *database_name*设置紧急情况，而不是对**sysdatabases**系统表运行 UPDATE 语句。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 升级顾问 &#91;新&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

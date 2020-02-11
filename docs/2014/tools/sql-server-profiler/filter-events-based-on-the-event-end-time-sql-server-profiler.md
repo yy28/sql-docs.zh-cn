@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184300"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>基于事件结束时间筛选事件 (SQL Server Profiler)
@@ -42,10 +42,10 @@ ms.locfileid: "63184300"
   
 5.  在“事件选择”  选项卡上，单击“EndTime”  数据列启动“编辑筛选器”  对话框。 也可以右键单击列标题，然后选择“编辑列筛选器”  。  
   
-6.  展开**大于**或**小于**，然后输入`datetime`比较运算符下显示的字段中的值。  
+6.  展开 "**大于**" 或 "**小于**"，然后`datetime`在比较运算符下显示的字段中输入一个值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](sql-server-profiler.md)   
- [SQL Server 事件探查器](sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

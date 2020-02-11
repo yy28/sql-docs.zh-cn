@@ -1,5 +1,5 @@
 ---
-title: 指定查询条件 （基于使用情况的优化向导） |Microsoft Docs
+title: 指定查询条件（基于使用情况的优化向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068215"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>指定查询条件（基于使用情况的优化向导）
@@ -31,31 +31,31 @@ ms.locfileid: "66068215"
   
 |术语|定义|  
 |----------|----------------|  
-|**总查询数**|显示在所选分区的查询日志中所存储查询的总数。|  
-|**不同查询**|显示在所选分区的查询日志中所存储的不同查询数。|  
-|**非重复用户**|显示与在所选分区的查询日志中所存储查询关联的不同用户总数。|  
+|**查询总计**|显示在所选分区的查询日志中所存储查询的总数。|  
+|**不同查询数**|显示在所选分区的查询日志中所存储的不同查询数。|  
+|**不同用户数**|显示与在所选分区的查询日志中所存储查询关联的不同用户总数。|  
 |**平均响应时间**|显示在所选分区的查询日志中所存储查的平均响应时间。|  
   
  **开始日期**  
  基于开始日期和时间对查询日志中的查询进行筛选。 在下拉列表中选择或键入日期。  
   
 > [!NOTE]  
->  如果未选择“结束日期”  ，则将对查询日志中此选项指定日期和时间之后（包括该日期）的所有查询进行筛选。  
+>  如果未选择“结束日期”****，则将对查询日志中此选项指定日期和时间之后（包括该日期）的所有查询进行筛选。  
   
  **结束日期**  
  基于结束日期和时间对查询日志中的查询进行筛选。 在下拉列表中选择或键入日期。  
   
 > [!NOTE]  
->  如果未选择“开始日期”  ，则将对查询日志中此选项指定日期和时间之前（包括该日期）的所有查询进行筛选。  
+>  如果未选择“开始日期”****，则将对查询日志中此选项指定日期和时间之前（包括该日期）的所有查询进行筛选。  
   
- **用户**  
- 基于指定的用户集对查询日志中的查询进行筛选。 单击省略号按钮 ( **...** ) 可以显示“用户选择”  对话框，并选择要对其筛选查询的用户。 有关“用户选择”  对话框的详细信息，请参阅[“用户选择”对话框（Analysis Services - 多维数据）](user-selection-dialog-box-analysis-services-multidimensional-data.md)。  
+ **那些**  
+ 基于指定的用户集对查询日志中的查询进行筛选。 单击省略号按钮 (**...**) 可以显示“用户选择”**** 对话框，并选择要对其筛选查询的用户。 有关“用户选择”**** 对话框的详细信息，请参阅[“用户选择”对话框（Analysis Services - 多维数据）](user-selection-dialog-box-analysis-services-multidimensional-data.md)。  
   
  **最常见的查询**  
  基于对所选分区运行最为频繁的不同查询所占的百分比，对查询日志中的查询进行筛选。 在文本框中选择或键入一个百分比值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [基于使用情况的优化向导的 F1 帮助](usage-based-optimization-wizard-f1-help.md)   
- [Analysis Services 向导&#40;多维数据&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [&#40;多维数据的 Analysis Services 向导&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

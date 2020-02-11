@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8647a1a4529f7c7d4a8258eac5b726da203c7df9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482726"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>临时存储过程 (Master Data Services)
@@ -31,10 +31,10 @@ ms.locfileid: "65482726"
 ## <a name="staging-process-stored-procedure-parameters"></a>临时过程存储过程参数  
  下表列出了这些存储过程的参数。  
   
-|参数|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|**VersionName**<br /><br /> Required|版本的名称。 这可能区分大小写，也可能不区分，具体取决于您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 排序规则设置。|  
-|**LogFlag**<br /><br /> Required|确定在临时过程中是否记录事务。 可能的值有：<br /><br /> **0**：不记录事务。<br />**1**：记录事务。<br /><br /> <br /><br /> 有关事务的详细信息，请参阅[事务 (Master Data Services)](transactions-master-data-services.md)。|  
+|**VersionName**<br /><br /> 必选|版本的名称。 这可能区分大小写，也可能不区分，具体取决于您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 排序规则设置。|  
+|**LogFlag**<br /><br /> 必选|确定在临时过程中是否记录事务。 可能的值为：<br /><br /> **0**：不记录事务。<br />**1**：记录事务。<br /><br /> <br /><br /> 有关事务的详细信息，请参阅[事务 (Master Data Services)](transactions-master-data-services.md)。|  
 |**BatchTag**<br /><br /> 必需，但是 Web 服务除外|在临时表中指定 **BatchTag** 值。|  
 |**Batch_ID**<br /><br /> 仅对 Web 服务为必需的|在临时表中指定的 **Batch_ID** 值。|  
   
@@ -54,9 +54,9 @@ GO
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [验证存储过程 (Master Data Services)](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)   
- [加载或使用临时过程更新 Master Data Services 中的成员](add-update-and-delete-data-master-data-services.md)   
- [查看临时过程中发生的错误&#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [验证存储过程 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)   
+ [通过使用临时过程在 Master Data Services 中加载或更新成员](add-update-and-delete-data-master-data-services.md)   
+ [查看临时过程中发生的错误 &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
   

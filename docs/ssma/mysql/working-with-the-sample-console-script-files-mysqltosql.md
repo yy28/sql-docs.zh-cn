@@ -1,5 +1,5 @@
 ---
-title: 使用示例控制台脚本文件 (MySQLToSQL) |Microsoft Docs
+title: 使用示例控制台脚本文件（MySQLToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,117 +12,117 @@ ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67904888"
 ---
-# <a name="working-with-the-sample-console-script-files-mysqltosql"></a>使用示例控制台脚本文件 (MySQLToSQL)
-几个示例文件与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足最终用户需求。  
+# <a name="working-with-the-sample-console-script-files-mysqltosql"></a>使用示例控制台脚本文件（MySQLToSQL）
+提供了一些示例文件，其中包含有关用户参考和使用情况的产品。 本部分介绍了如何轻松地自定义这些脚本以满足最终用户需求。  
   
 ## <a name="sample-console-script-files"></a>示例控制台脚本文件  
-为用户参考提供了涵盖不同的方案的以下示例控制台脚本文件：  
+以下示例控制台脚本文件涵盖了用于用户引用的不同方案：  
   
--   ServersConnectionFileSample.xml  
+-   ServersConnectionFileSample  
   
--   VariableValueFileSample.xml  
+-   VariableValueFileSample  
   
--   AssessmentReportGenerationSample.xml  
+-   AssessmentReportGenerationSample  
   
--   SqlStatementConversionSample.xml  
+-   SqlStatementConversionSample  
   
--   ConversionAndDataMigrationSample.xml  
+-   ConversionAndDataMigrationSample  
   
--   **ServersConnectionFileSample.xml:**  
+-   **ServersConnectionFileSample：**  
   
-    -   此示例对源和目标数据库都提供了不同的可用连接模式，用户可以选择根据要求任何模式。 此示例包含的服务器定义。  
+    -   此示例为源数据库和目标数据库提供了不同的连接模式，用户可以根据需要选择任何模式。 此示例包含服务器定义。  
   
-    -   只需将值更改为所需的源和目标服务器定义的情况下，用户可以连接到所需的数据库。 在提供的示例中的所有值都提供了为变量值中可用**VariableValueFileSample.xml**。  可以从用户的工作服务器连接文件中删除所有其他连接参数。  
+    -   用户只需将值更改为所需的源和目标服务器定义，就可以连接到所需的数据库。 在本示例中，提供了所有值作为可在**VariableValueFileSample**中使用的变量值。  可以从用户的工作服务器连接文件中删除所有其他连接参数。  
   
-    -   连接到源和目标服务器的详细信息，请参阅[创建服务器连接文件&#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) 。  
+    -   有关连接到源服务器和目标服务器的详细信息，请参阅[创建服务器连接文件 &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) 。  
   
--   **VariableValueFileSample.xml:** 所有变量已使用在示例控制台都脚本文件和`ServersConnectionFileSample.xml`整理后要在此文件中。 若要执行用户必须只需替换为示例变量的示例控制台脚本值与用户定义的并将此文件作为脚本文件以及其他命令行参数传递。  
+-   **VariableValueFileSample：** 已在示例控制台脚本文件中使用的所有变量，并`ServersConnectionFileSample.xml`已在此文件中进行排序。 若要执行示例控制台脚本，用户必须只需将示例变量值替换为用户定义的变量值，并将此文件作为附加命令行参数和脚本文件一起传递。  
   
-    变量值文件的详细信息，请参阅[创建的变量值文件&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)。  
+    有关变量值文件的详细信息，请参阅[创建变量值文件 &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)。  
   
--   **AssessmentReportGenerationSample.xml:** 此示例使用户能够生成一个 xml 评估报告，可由用户进行分析之前他开始转换并迁移数据。  
+-   **AssessmentReportGenerationSample：** 此示例使用户能够生成一个 xml 评估报表，用户可以在开始转换和迁移数据之前，使用该报表进行分析。  
   
-    在`generate-assessment-report`命令，用户必须 mandatorily 更改变量值 (请参阅**VariableValueFileSample.xml**) 中`object-name`属性数据库名称不由用户使用。 根据指定，对象的种类`object-type`值也需要进行更改。  
+    在`generate-assessment-report`命令中，用户必须 mandatorily 将`object-name`属性中的变量值（请参阅**VariableValueFileSample**）更改为用户正在使用的数据库名称。 根据指定的对象类型，还必须更改`object-type`值。  
   
-    如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`generate-assessment-report`命令的示例 4 的示例控制台脚本文件。  
+    如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`generate-assessment-report`控制台脚本文件的命令示例4中所示。  
   
-    生成报告的详细信息，请参阅[生成报表&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)。  
+    有关生成报表的详细信息，请参阅[&#40;MySQLToSQL&#41;中生成报表](../../ssma/mysql/generating-reports-mysqltosql.md)。  
   
-    **说明：**  
+    **本票**  
   
-    -   确保变量值文件命令行参数传递到控制台应用程序，并使用指定的用户更新 VariableValueFileSample.xml 值。  
+    -   确保将变量值 file 命令行参数传递到控制台应用程序，并以用户指定的值更新 VariableValueFileSample。  
   
-    -   请确保服务器连接文件的命令行参数传递到控制台应用程序和 ServersConnectionFileSample.xml 更新使用正确的服务器的参数值。  
+    -   确保将服务器连接文件命令行参数传递到控制台应用程序，并用正确的服务器参数值更新 ServersConnectionFileSample。  
   
--   **SqlStatementConversionSample.xml:**  
-    此示例使用户能够生成相应`t-sql`的源数据库脚本`sql`作为输入提供的命令。  
+-   **SqlStatementConversionSample：**  
+    此示例允许用户为作为输入提供的`t-sql`源数据库`sql`命令生成相应的脚本。  
   
-    在`convert-sql-statement`命令，用户必须 mandatorily 更改变量值 (请参阅**VariableValueFileSample.xml**) 中`context`正在由用户使用的数据库名称的属性。 用户还将需要更改`sql`属性值与源数据库`sql`他/她需要要转换的命令。  
+    在`convert-sql-statement`命令中，用户必须 mandatorily 将`context`属性中的变量值（请参阅**VariableValueFileSample**）更改为用户正在使用的数据库名称。 还需要用户将`sql`属性值更改为其需要转换的源数据库`sql`命令。  
   
-    用户还可以提供要转换的 sql 文件。 具有已说明了这`convert-sql-statement`命令的示例 4 的示例控制台脚本文件。  
+    用户还可以提供要转换的 sql 文件。 此`convert-sql-statement`命令在示例控制台脚本文件的示例4中进行了说明。  
   
     > [!NOTE]  
-    > 确保变量值文件命令行参数传递到控制台应用程序，并使用指定的用户更新 VariableValueFileSample.xml 值。  
+    > 确保将变量值 file 命令行参数传递到控制台应用程序，并以用户指定的值更新 VariableValueFileSample。  
   
--   **ConversionAndDataMigrationSample.xml:**  
-     此示例使用户能够从转换到数据迁移执行端到端迁移。 下面列出了必需的属性值，它们将需要更改的列表：  
+-   **ConversionAndDataMigrationSample：**  
+     使用此示例，用户可以执行端到端迁移，从转换到数据迁移。 下面列出了需要更改的必需属性值的列表：  
   
-    **命令名**  
+    **命令名称**  
   
     `map-schema`  
   
-    源数据库到目标架构的架构映射。  
+    将源数据库映射到目标架构的架构。  
   
     **Attribute**  
   
-    -   `source-schema:` 指定转换所需的源数据库。  
+    -   `source-schema:`指定需要转换的源数据库。  
   
-    -   `sql-server-schema`：指定是要迁移到目标数据库  
+    -   `sql-server-schema`：指定要迁移到的目标数据库  
   
-    **命令名**  
+    **命令名称**  
   
     `convert-schema`  
   
-    1.  执行架构转换从源到目标架构。  
+    1.  执行从源到目标架构的架构转换。  
   
-    2.  如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`convert-schema`命令的示例 4 的示例控制台脚本文件。  
+    2.  如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`convert-schema`控制台脚本文件的命令示例4中所示。  
   
     **Attribute**  
   
-    `object-name`：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
+    `object-name`：指定需要转换的源数据库/对象名称。 确保根据在中`object-type`指定的对象类型更改相应的`object-name`  
   
-    **命令名**  
+    **命令名称**  
   
     `synchronize-target`  
   
     1.  将目标对象与目标数据库同步。  
   
-    2.  如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`synchronize-target`示例控制台脚本文件的命令的示例 3。  
+    2.  如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`synchronize-target`控制台脚本文件的命令示例3中所示。  
   
     **Attribute**  
   
-    `object-name:` 指定 sql server 数据库/对象创建所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
+    `object-name:`指定需要创建的 sql server 数据库/对象名称。 确保根据在中`object-type`指定的对象类型更改相应的`object-name`  
   
-    **命令名**  
+    **命令名称**  
   
     `migrate-data`  
   
     1.  将源数据迁移到目标。  
   
-    2.  如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`migrate-data`命令的示例 2 的示例控制台脚本文件。  
+    2.  如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`migrate-data`控制台脚本文件的命令示例2中所示。  
   
     **Attribute**  
   
-    `object-name:` 指定源数据库/表迁移所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
+    `object-name:`指定需要迁移的源数据库/表名称。 确保根据在中`object-type`指定的对象类型更改相应的`object-name`  
   
-## <a name="see-also"></a>请参阅  
-[创建变量值文件&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
-[创建服务器连接文件&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
-[生成报告&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  
+## <a name="see-also"></a>另请参阅  
+[创建变量值文件 &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+[&#40;MySQLToSQL 创建服务器连接文件&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
+[&#40;MySQLToSQL 生成报告&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  
   

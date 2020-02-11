@@ -1,5 +1,5 @@
 ---
-title: CDC 源编辑器 （列页） |Microsoft Docs
+title: CDC 源编辑器（"列" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 980b9cf22e2c50cd1de3eb90a06e6496c01cc093
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061030"
 ---
 # <a name="cdc-source-editor-columns-page"></a>CDC 源编辑器（“列”页）
-  可以使用“CDC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列   。  
+  可以使用“CDC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列********。  
   
  若要了解有关 CDC 源的详细信息，请参阅 [CDC Source](data-flow/cdc-source.md)。  
   
 ## <a name="task-list"></a>任务列表  
- **打开“CDC 源编辑器”的“列”页**  
+ **打开 "CDC 源编辑器" 的 "列" 页**  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，打开具有 CDC 源的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包。  
   
-2.  在“数据流”  选项卡上，双击 CDC 源。  
+2.  在“数据流”**** 选项卡上，双击 CDC 源。  
   
-3.  在 **“CDC 源编辑器”** 中，单击 **“列”** 。  
+3.  在 **“CDC 源编辑器”** 中，单击 **“列”**。  
   
 ## <a name="options"></a>选项  
  **可用外部列**  
@@ -43,7 +43,7 @@ ms.locfileid: "66061030"
  **输出列**  
  输入每个输出列的唯一名称。 默认值为所选外部（源）列的名称，不过，也可以任选一个唯一的描述性名称。 输入的名称显示在 SSIS 设计器中。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CDC 源编辑器（“连接管理器”页）](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [CDC 源编辑器（“错误输出”页）](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
