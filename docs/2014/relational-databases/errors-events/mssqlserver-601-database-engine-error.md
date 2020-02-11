@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9aebe73ac73ee09ed2ba6de9162877d0e70bc7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867726"
 ---
-# <a name="mssqlserver601"></a>MSSQLSERVER_601
+# <a name="mssqlserver_601"></a>MSSQLSERVER_601
     
 ## <a name="details"></a>详细信息  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62867726"
 |符号名称||  
 |消息正文|由于数据移动，无法继续以 NOLOCK 方式扫描。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]无法继续执行查询，因为正在尝试读取由其他事务更新或删除的数据。 查询使用的是 NOLOCK 锁提示或 READ UNCOMMITTED 事务隔离级别。  
   
  通常，系统拒绝用户访问其他事务正在更改的数据，因为已锁定该数据。 但是，利用 NOLOCK 锁提示和 READ UNCOMMITTED 事务隔离级别，可以允许查询对其他事务锁定的数据进行读取。 这称为脏读，因为您可以读取尚未提交并且随时可能更改的值。  
@@ -42,9 +42,9 @@ ms.locfileid: "62867726"
 ## <a name="user-action"></a>用户操作  
  此错误取消了该查询。 重新提交该查询或删除 NOLOCK 锁提示。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSSQLSERVER_605](mssqlserver-605-database-engine-error.md)   
- [表提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)   
+ [Transact-sql&#41;&#40;表提示](/sql/t-sql/queries/hints-transact-sql-table)   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
  [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)  
   

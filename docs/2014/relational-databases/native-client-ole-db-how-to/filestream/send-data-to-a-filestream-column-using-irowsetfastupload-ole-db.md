@@ -11,21 +11,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f24786c95cde089c159945ecd58075139163e3c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643325"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)
   此示例使用 IRowsetFastUpload 接口向 filestream 列发送大小在 4 MB 与 4 GB 之间的数据。  
   
- 有关 filestream 功能的详细信息，请参阅[FILESTREAM 支持&#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)。  
+ 有关 filestream 功能的详细信息，请参阅[Filestream 支持 &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>示例  
- 编译并运行此示例之前，启用 FILESTREAM 支持 ([启用和配置 FILESTREAM](../../blob/enable-and-configure-filestream.md))。  
+ 在编译并运行此示例之前，启用 FILESTREAM 支持（[启用和配置 filestream](../../blob/enable-and-configure-filestream.md)）。  
   
- 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
+ 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
  该服务器必须具有名为 C:\DBFsa 的目录，示例将在其中创建数据库。 您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例必须对此位置具有写访问权限（例如，采用本地系统帐户登录）。  
   

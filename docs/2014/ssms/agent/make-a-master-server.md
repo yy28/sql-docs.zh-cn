@@ -22,13 +22,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189139"
 ---
-# <a name="make-a-master-server"></a>设置主服务器
+# <a name="make-a-master-server"></a>Make a Master Server
   本主题描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设置主服务器 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
  **本主题内容**  
@@ -45,10 +45,10 @@ ms.locfileid: "68189139"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  如果分布式作业的步骤与某个代理相关联，则该作业将在目标服务器上该代理帐户的上下文下运行。 请确保满足以下条件，否则与代理关联的作业步骤将不会从主服务器下载到目标服务器上：  
   
--   主服务器注册表子项 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) 设置为 1 (true)。 默认情况下，此子项设置为 0 (False)。  
+-   主服务器注册表子项**\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<*instance_name*> \sql 服务器 Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）设置为1（true）。 默认情况下，此子项设置为 0 (False)。  
   
 -   目标服务器上已存在与运行作业步骤的主服务器代理帐户同名的代理帐户。  
   
@@ -62,18 +62,19 @@ ms.locfileid: "68189139"
   
      若要解决此错误，请确保目标服务器上已存在与运行作业步骤的主服务器代理帐户同名的代理帐户。  
   
-####  <a name="Permissions"></a> Permissions  
- `sysadmin`默认情况下授予  固定服务器角色的成员执行此过程的权限。  
+####  <a name="Permissions"></a> 权限  
+ 默认情况下，为`sysadmin`固定服务器角色的成员执行此过程的权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-make-a-master-server"></a>设置主服务器  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
+1.  在**对象资源管理器中，** 连接到的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，再单击“将其设置为主服务器”  。 **主服务器向导** 将引导您完成设置主服务器和添加目标服务器的过程。  
+2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，再单击“将其设置为主服务器”****。 
+  **主服务器向导** 将引导您完成设置主服务器和添加目标服务器的过程。  
   
-3.  从“主服务器操作员”  中，配置主服务器的操作员。若要通过电子邮件或寻呼程序向操作员发送通知，必须配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以发送电子邮件。 若要使用 **net send**向操作员发送通知，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理所在的服务器上运行 Messenger 服务。  
+3.  从“主服务器操作员”**** 中，配置主服务器的操作员。若要通过电子邮件或寻呼程序向操作员发送通知，必须配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以发送电子邮件。 若要使用 **net send** 向操作员发送通知，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理所在的服务器上运行 Messenger 服务。  
   
      **电子邮件地址**  
      设置操作员的电子邮件地址。  
@@ -107,7 +108,7 @@ ms.locfileid: "68189139"
      **添加连接**  
      向目标服务器列表中添加服务器，但不注册该服务器。  
   
-     **“连接”**  
+     **连接**  
      更改所选服务器的连接属性。  
   
 5.  从 **“主服务器登录凭据”** 页中，指定是否要在必要时为目标服务器创建新的登录名，并为其分配针对主服务器的权限。  
@@ -134,9 +135,9 @@ EXEC dbo.sp_msx_enlist N'AdventureWorks1',
 GO;  
 ```  
   
- 有关详细信息，请参阅[sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_msx_enlist ](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建多服务器环境](create-a-multiserver-environment.md)   
  [企业范围的自动化管理](automated-administration-across-an-enterprise.md)  
   
