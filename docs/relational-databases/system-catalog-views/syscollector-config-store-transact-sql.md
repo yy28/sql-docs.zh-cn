@@ -1,5 +1,5 @@
 ---
-title: syscollector_config_store (TRANSACT-SQL) |Microsoft Docs
+title: syscollector_config_store （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 174fa1af651c2e713bdb91ba217e896b833467b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060373"
 ---
-# <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
+# <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回应用于整个数据收集器（而非单个收集组实例）的属性。 此视图中的每一行均描述一个特定数据收集器属性，例如，管理数据仓库的名称和管理数据仓库所在的实例的名称。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |parameter_name|**nvarchar(128)**|属性的名称。 不可为 null。|  
 |parameter_value|**sql_variant**|属性的实际值。 可以为 Null。|  
@@ -41,10 +41,10 @@ ms.locfileid: "68060373"
 ## <a name="remarks"></a>备注  
  可用属性的列表是固定的，这些属性的值只能使用适当的存储过程来更改。 下表描述了通过此视图公开的属性。  
   
-|属性名称|描述|  
+|属性名称|说明|  
 |-------------------|-----------------|  
 |CacheDirectory|文件系统中目录的名称，收集器类型包在该目录中存储临时信息。<br /><br /> NULL = 使用默认的临时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录。|  
-|CacheWindow|指示缓存目录保留上载失败数据的数据保留策略。<br /><br /> -1 = 保留所有上载失败的数据。<br /><br /> 0 = 不保留任何上载失败的数据。<br /><br /> *n* = 保留数据，从*n*以前的上载失败，其中*n* > = 1。<br /><br /> 可使用 sp_syscollector_set_cache_window 存储过程更改此值。|  
+|CacheWindow|指示缓存目录保留上载失败数据的数据保留策略。<br /><br /> -1 = 保留所有上载失败的数据。<br /><br /> 0 = 不保留任何上载失败的数据。<br /><br /> *n* = 保留*n*个以前的上载失败的数据，其中*n* >= 1。<br /><br /> 可使用 sp_syscollector_set_cache_window 存储过程更改此值。|  
 |CollectorEnabled|指示数据收集器的状态。<br /><br /> 0 = 已禁用<br /><br /> 1 = 已启用<br /><br /> 可使用 sp_syscollector_enable_collector 或 sp_syscollector_disable_collector 存储过程更改此值。|  
 |MDWDatabase|管理数据仓库的名称。 可使用 sp_syscollector_set_warehouse_database_name 存储过程更改此值。|  
 |MDWInstance|管理数据仓库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 可使用 sp_syscollector_set_warehouse_instance_name 存储过程更改此值。|  
@@ -57,14 +57,14 @@ SELECT parameter_name, parameter_value
 FROM msdb.dbo.syscollector_config_store;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [数据收集器视图 (Transact-SQL)](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的数据收集器视图](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_enable_collector (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
- [sp_syscollector_disable_collector (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
- [sp_syscollector_set_warehouse_database_name &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
- [sp_syscollector_set_warehouse_instance_name &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
- [sp_syscollector_set_cache_window (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
+ [sp_syscollector_enable_collector &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
+ [sp_syscollector_disable_collector &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
+ [sp_syscollector_set_warehouse_database_name &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
+ [sp_syscollector_set_warehouse_instance_name &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
+ [sp_syscollector_set_cache_window &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

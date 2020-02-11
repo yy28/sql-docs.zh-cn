@@ -11,13 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 508c9b6aa56e55d64e8bf6723081d2e7638ecdf0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096220"
 ---
-# <a name="complete"></a>“完成”
+# <a name="complete"></a>完成
   “完成”页用于确认安装状态。  
   
   

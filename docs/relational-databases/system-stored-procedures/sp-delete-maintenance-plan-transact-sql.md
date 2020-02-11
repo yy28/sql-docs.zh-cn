@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_maintenance_plan （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 457a988f95073c738ab8ef21aa31c125885d35a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946717"
 ---
-# <a name="spdeletemaintenanceplan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
+# <a name="sp_delete_maintenance_plan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   删除指定的维护计划。  
@@ -34,7 +34,7 @@ ms.locfileid: "67946717"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,26 +44,26 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @plan_id = ] 'plan\_id'` 指定要删除的维护计划的 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效的 id。  
+`[ @plan_id = ] 'plan\_id'`指定要删除的维护计划的 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效 id。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_delete_maintenance_plan**必须从运行**msdb**数据库。  
+ 必须从**msdb**数据库运行**sp_delete_maintenance_plan** 。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色可以执行**sp_delete_maintenance_plan**。  
+ 只有**sysadmin**固定服务器角色的成员才能**sp_delete_maintenance_plan**执行。  
   
 ## <a name="examples"></a>示例  
- 通过使用创建的维护计划中删除**sp_add_maintenance_plan**。  
+ 删除使用**sp_add_maintenance_plan**创建的维护计划。  
   
 ```  
 EXECUTE sp_delete_maintenance_plan 'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC';  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [数据库维护计划存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [数据库维护计划存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400967"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>监视负载到并行数据仓库
@@ -47,13 +47,13 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
   
 请参阅以下系统视图，了解有关管理控制台中显示的负载的元数据的信息：  
   
--   [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
+-   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
 -   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
--   [sys. pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
 ### <a name="to-monitor-loads-by-using-system-views"></a>使用系统视图监视负载  
 若要使用 SQL Server PDW 视图监视活动和最近的负载，请按照以下步骤进行操作。 对于使用的每个系统视图，请参阅该视图的文档，以获取有关视图返回的列和可能值的信息。  

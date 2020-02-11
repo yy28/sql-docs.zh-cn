@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788003"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>查看可用性副本属性 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62788003"
   
 4.  右键单击要查看其属性的可用性副本，然后选择“属性”  命令。  
   
-5.  在 **“可用性副本属性”** 对话框中，使用 **“常规”** 页查看该副本的属性。 如果连接到主副本，您可以更改下列属性：可用性模式、故障转移模式、主角色的连接访问权限、辅助角色（可读取的辅助副本）的读取访问权限以及会话超时值。 有关详细信息，请参阅[可用性副本属性&#40;常规页&#41;](availability-replica-properties-general-page.md)。  
+5.  在 **“可用性副本属性”** 对话框中，使用 **“常规”** 页查看该副本的属性。 如果连接到主副本，您可以更改下列属性：可用性模式、故障转移模式、主角色的连接访问权限、辅助角色（可读取的辅助副本）的读取访问权限以及会话超时值。 有关详细信息，请参阅 " [&#40;常规" 页面&#41;的可用性副本属性](availability-replica-properties-general-page.md)。  
   
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -81,9 +81,9 @@ ms.locfileid: "62788003"
   
 -   [查看可用性组侦听程序属性 (SQL Server)](view-availability-group-listener-properties-sql-server.md)  
   
--   [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
+-   [AlwaysOn 可用性组 &#40;SQL Server 的操作问题的 AlwaysOn 策略&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
--   [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [使用 AlwaysOn 仪表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [监视可用性组 (Transact-SQL)](monitor-availability-groups-transact-sql.md)  
   
@@ -118,10 +118,10 @@ ms.locfileid: "62788003"
 -   [将主数据库从可用性组删除 (SQL Server)](remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [监视可用性组 (Transact-SQL)](monitor-availability-groups-transact-sql.md)   
- [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [AlwaysOn 可用性组 &#40;SQL Server 的操作问题的 AlwaysOn 策略&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [管理可用性组 (SQL Server)](administration-of-an-availability-group-sql-server.md)  
   
   

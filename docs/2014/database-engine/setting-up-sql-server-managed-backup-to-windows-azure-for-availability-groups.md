@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75ab1892641fa3bf805d52c649a8526e256d14b7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228197"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>为可用性组设置针对 Azure 的 SQL Server 托管备份
@@ -58,7 +58,7 @@ ms.locfileid: "75228197"
   
 -   指定备份副本。 使用首选备份副本设置[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]来计划备份。 若要确定当前副本是否为首选备份副本，请使用[sys. fn_hadr_backup_is_preferred_replica &#40;transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)函数。  
   
--   如果将辅助副本配置为首选副本，则至少应为它配置只读连接访问权限。 不支持对辅助数据库没有连接访问权限的可用性组。  有关详细信息，请参阅[配置对可用性副本的只读访问 (SQL Server)](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+-   如果将辅助副本配置为首选副本，则至少应为它配置只读连接访问权限。 不支持对辅助数据库没有连接访问权限的可用性组。  有关详细信息，请参阅 [配置对可用性副本的只读访问 (SQL Server)](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
 -   如果您在配置完可用性组后配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 会尝试复制任何现有备份，并将它们复制到存储容器中。  如果 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 找不到或不能访问现有备份，它将安排一次完整数据库备份。 这是为了优化可用性组数据库的备份操作而专门进行的。  
   

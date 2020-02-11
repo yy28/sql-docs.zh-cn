@@ -14,35 +14,35 @@ ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926201"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 连接和记录集事件
-两个 ADO 对象可以引发事件：[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 **ConnectionEvent**上与操作相关系列**连接**对象，并**RecordsetEvent**系列上与操作相关**记录集**对象。
+两个 ADO 对象可以引发事件：[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 **ConnectionEvent**系列适用于**连接**对象上的操作， **RecordsetEvent**系列与**Recordset**对象上的操作相关。
 
--   **连接事件**:在连接上的事务开始、 已提交，或回滚; 时，将发出事件当[命令](../../../ado/reference/ado-api/command-object-ado.md)执行; 期间出现警告时**连接事件**操作; 或者当**连接**开始或结束。
+-   **连接事件**：当连接上的事务开始、提交或回滚时将发出事件;执行[命令](../../../ado/reference/ado-api/command-object-ado.md)时;当**连接事件**操作期间出现警告时;或**连接**的开始或结束时间。
 
--   **记录集事件**:围绕异步读取操作以及的各行之间导航时发出的事件**记录集**对象，请更改的行中的字段**记录集**，更改行中的**记录集**，打开**记录集**与服务器端游标，关闭**记录集**，或进行任何更改都在**记录集**。
+-   **记录集事件**：事件是围绕异步提取操作发出的，以及当您在**recordset**对象的行中导航时，**更改记录集**的行中的字段、更改**记录集中**的行、打开包含服务器端游标的**记录集**、关闭**记录**集或在**记录集中**进行任何更改。
 
  下表汇总了事件及其说明。
 
-|ConnectionEvent|描述|
+|ConnectionEvent|说明|
 |---------------------|-----------------|
-|[BeginTransComplete，CommitTransComplete，RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**事务管理**-启动连接的当前事务后，通知已提交或回滚。|
-|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)， [ConnectComplete，断开连接](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**连接管理**-通知的当前连接将启动，启动后，或已结束。|
-|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**命令执行管理**-通知的连接上的当前命令执行将开始或已结束。|
-|[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**信息性**-通知将有关当前操作的其他信息。|
+|[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**事务管理**-通知：连接上的当前事务已启动、提交或回滚。|
+|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)、 [ConnectComplete、Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**连接管理**-通知当前连接将开始、已启动或已结束。|
+|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)、 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**命令执行管理**-通知：连接上的当前命令执行将启动或已结束。|
+|[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**信息**-有关当前操作的其他信息，请通知。|
 
-|RecordsetEvent|描述|
+|RecordsetEvent|说明|
 |--------------------|-----------------|
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)， [FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**检索状态**-通知进度的数据检索操作，或检索操作完成后。 这些事件才可用如果**记录集**使用客户端游标已打开。|
-|[WillChangeField FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**字段更改管理**-当前字段的值将发生更改，或已更改的通知。|
-|[WillMove、 MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)， [EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|**导航管理**的当前行位置中的通知**记录集**将更改、 已更改，或已达到末尾**记录集**。|
-|[WillChangeRecord RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**行更改管理**-通知的当前行中的内容**记录集**将发生更改，或已更改。|
-|[WillChangeRecordset RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**记录集更改管理**-某些内容在当前通知**记录集**将发生更改，或已更改。|
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)、 [FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**检索状态**-数据检索操作的进度通知，或检索操作已完成。 仅当使用客户端游标打开**记录集**时，这些事件才可用。|
+|[WillChangeField, FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**字段更改管理**-通知当前字段的值将更改或已更改。|
+|[WillMove、MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)、 [EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|**导航管理**-通知：**记录集中**的当前行位置将发生更改、更改或已到达**记录集**的结尾。|
+|[WillChangeRecord, RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**行更改管理**-通知**记录集**的当前行中的某些内容将发生更改或已更改。|
+|[WillChangeRecordset, RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**记录集更改管理**-通知当前**记录集中**的某些内容将发生更改或已更改。|
 
-## <a name="see-also"></a>请参阅
- [ADO 事件实例化的语言](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO 事件](../../../ado/reference/ado-api/ado-events.md)[事件参数](../../../ado/guide/data/event-parameters.md)[事件处理程序如何协同工作](../../../ado/guide/data/how-event-handlers-work-together.md)[的事件类型](../../../ado/guide/data/types-of-events.md)
+## <a name="see-also"></a>另请参阅
+ [按语言 ado 事件实例化的 ado](../../../ado/guide/data/ado-event-instantiation-by-language.md) [](../../../ado/reference/ado-api/ado-events.md)事件[事件参数](../../../ado/guide/data/event-parameters.md)[事件处理程序如何协同工作](../../../ado/guide/data/how-event-handlers-work-together.md)事件[类型](../../../ado/guide/data/types-of-events.md)

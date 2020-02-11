@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1026f4c20042a9aec24256238190dd1a230bda42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833587"
 ---
 # <a name="cache-connection-manager"></a>缓存连接管理器
@@ -51,7 +51,7 @@ ms.locfileid: "62833587"
   
  有关可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 设计器中设置的属性的详细信息，请参阅 [缓存连接管理器编辑器](../cache-connection-manager-editor.md)。  
   
- 有关如何以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关如何以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和[以编程方式添加连接](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [在完全缓存模式下使用缓存连接管理器实现查找转换](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  

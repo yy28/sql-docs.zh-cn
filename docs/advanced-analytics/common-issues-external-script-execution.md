@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 68c731767a83acbd4b7df84843f2c140c5a63d3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727707"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>启动板服务和 SQL Server 中外部脚本执行的常见问题
@@ -131,9 +131,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. 重启服务通常可以解决问题，从而可以运行机器学习脚本。 如果重启不能解决问题，请记下“二进制文件路径”属性中的路径和参数，然后执行以下操作  ：
 
-    A. 检查启动器的 .config 文件，确保工作目录有效。
+    a. 检查启动器的 .config 文件，确保工作目录有效。
 
-    B. 确保 Launchpad 使用的 Windows 组可以连接到 SQL Server 实例。
+    b. 确保 Launchpad 使用的 Windows 组可以连接到 SQL Server 实例。
 
     c. 如果对服务属性做了任何更改，请重启 Launchpad 服务。
 
@@ -141,7 +141,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 在这种情况下，你已经成功安装了机器学习功能，并且 Launchpad 正在运行。 尝试运行一些简单的 R 或 Python 代码，但是 Launchpad 失败，并显示如下错误： 
 
->无法与 R 脚本的运行时通信。请检查 R 运行时的要求  。
+> 无法与 R 脚本的运行时通信。请检查 R 运行时的要求。
 
 同时，外部脚本运行时将以下消息作为 STDERR 消息的一部分写入： 
 

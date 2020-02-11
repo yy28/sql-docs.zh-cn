@@ -1,5 +1,5 @@
 ---
-title: sp_refreshview (TRANSACT-SQL) |Microsoft Docs
+title: sp_refreshview （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b8c1b95d8d04e2b11982af14971e43e83db146f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075774"
 ---
-# <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
+# <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   用于更新指定的未绑定到架构的视图的元数据。 由于视图所依赖的基础对象的更改，视图的持久元数据会过期。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,13 +39,13 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @viewname = ] 'viewname'` 是的名称。 *viewname*是**nvarchar**，无默认值。 *viewname*可以是多部分标识符，但只能引用当前数据库中的视图。  
+`[ @viewname = ] 'viewname'`视图的名称。 *viewname*的值为**nvarchar**，无默认值。 *viewname*可以是多部分标识符，但只能引用当前数据库中的视图。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败）  
   
 ## <a name="remarks"></a>备注  
- 如果不使用 schemabinding 创建视图**sp_refreshview**影响视图定义的对象视图发生更改时，应运行。 否则，当查询视图时，可能会生成意外结果。  
+ 如果视图不是使用 schemabinding 创建的，则在对视图的基础对象进行更改时，会影响视图的定义， **sp_refreshview**应运行。 否则，当查询视图时，可能会生成意外结果。  
   
 ## <a name="permissions"></a>权限  
  要求对视图具有 ALTER 权限，并对视图列引用的公共语言运行时 (CLR) 用户定义类型和 XML 架构集合具有 REFERENCES 权限。  
@@ -74,10 +74,10 @@ INNER JOIN sys.sql_expression_dependencies AS sed
 WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [sp_refreshsqlmodule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
+ [sp_refreshsqlmodule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   
   

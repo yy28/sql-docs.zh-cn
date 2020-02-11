@@ -16,16 +16,16 @@ ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 615625ca396e5f2ae094962457cc9e746730ddcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067416"
 ---
 # <a name="data-buffer-type"></a>数据缓冲区类型
-由应用程序指定的缓冲区的 C 数据类型。 使用一个变量，这发生在应用程序将该变量分配。 与一般内存-即，由类型 void 的指针指向的内存发生这种情况时应用程序将强制转换为特定类型的内存。 该驱动程序将发现两种方法中的使用此类型：  
+缓冲区的 C 数据类型由应用程序指定。 使用单个变量时，应用程序分配变量时会出现这种情况。 对于泛型内存（即，类型为 void 的指针所指向的内存），如果应用程序将内存强制转换为特定类型，则会发生这种情况。 驱动程序通过两种方式发现此类型：  
   
--   **数据缓冲区类型参数。** 用于传输参数值和结果集数据，如通过绑定的缓冲区的缓冲区*TargetValuePtr*中**SQLBindCol**，通常具有关联的类型参数，例如*TargetType*中的参数**SQLBindCol**。 在此参数中，应用程序传递到缓冲区的类型相对应的 C 类型标识符。 例如，在下面的示例调用到**SQLBindCol**，值 SQL_C_TYPE_DATE 指示驱动程序*日期*缓冲区是 SQL_DATE_STRUCT:  
+-   **数据缓冲区类型参数。** 用于传输参数值和结果集数据的缓冲区（如使用**SQLBindCol**中的*TargetValuePtr*绑定的缓冲区）通常具有关联的类型参数，如**SQLBindCol**中的*TargetType*参数。 在此参数中，应用程序传递对应于缓冲区类型的 C 类型标识符。 例如，在以下对**SQLBindCol**的调用中，值 SQL_C_TYPE_DATE 告知驱动程序*日期*缓冲区是 SQL_DATE_STRUCT：  
   
     ```  
     SQL_DATE_STRUCT Date;  
@@ -33,9 +33,9 @@ ms.locfileid: "68067416"
     SQLBindCol(hstmt, 1, SQL_C_TYPE_DATE, &Date, 0, &DateInd);  
     ```  
   
-     有关类型标识符的详细信息，请参阅[ODBC 中的数据类型](../../../odbc/reference/develop-app/data-types-in-odbc.md)部分中的，稍后在本部分中。  
+     有关类型标识符的详细信息，请参阅本部分后面的 " [ODBC 中的数据类型](../../../odbc/reference/develop-app/data-types-in-odbc.md)" 部分。  
   
--   **预定义的类型。** 指向用来发送和检索选项或属性，例如缓冲区的缓冲区*InfoValuePtr*中的参数**SQLGetInfo**，具有固定的类型取决于指定的选项。 该驱动程序假设数据缓冲区的此类型;它是应用程序的责任分配此类型的缓冲区。 例如，在下面的示例调用到**SQLGetInfo**，驱动程序假定缓冲区是 32 位整数，因为这是 SQL_STRING_FUNCTIONS 选项的要求：  
+-   **预定义的类型。** 用于发送和检索选项或属性（例如**SQLGetInfo**中的*InfoValuePtr*参数指向的缓冲区）的缓冲区具有依赖于指定选项的固定类型。 驱动程序假定数据缓冲区为此类型;应用程序负责分配此类型的缓冲区。 例如，在以下对**SQLGetInfo**的调用中，驱动程序假定缓冲区为32位整数，因为这是 SQL_STRING_FUNCTIONS 选项所需的：  
   
     ```  
     SQLUINTEGER StringFuncs;  
@@ -43,4 +43,4 @@ ms.locfileid: "68067416"
                 NULL);  
     ```  
   
- 该驱动程序使用的 C 数据类型来解释缓冲区中的数据。
+ 驱动程序使用 C 数据类型解释缓冲区中的数据。

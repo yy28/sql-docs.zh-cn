@@ -15,15 +15,15 @@ ms.assetid: b80afb0e-ef2f-408f-86f5-a392edd99a56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c47e534f069f810948189f2668d4ecdfbfa4ad79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107544"
 ---
 # <a name="setting-up-the-cursor"></a>设置游标
-执行语句创建一个结果集之前，应用程序可以指定游标类型。 做到这一点与 SQL_ATTR_CURSOR_TYPE 语句属性。 如果应用程序未显式指定类型，将使用只进游标。 若要获取混合的游标，应用程序指定的由键集驱动游标，但不会早于结果集大小声明由键集大小。  
+应用程序可以在执行创建结果集的语句之前指定游标类型。 它通过 SQL_ATTR_CURSOR_TYPE 语句特性来执行此功能。 如果应用程序未显式指定类型，则将使用只进游标。 若要获取混合游标，应用程序需要指定由键集驱动的游标，但声明的键集大小小于结果集的大小。  
   
- 对于由键集驱动和混合游标，该应用程序还可以指定由键集大小。 做到这一点与 SQL_ATTR_KEYSET_SIZE 语句属性。 如果由键集大小设置为 0，这是默认值，由键集大小设置为结果集大小，而使用由键集驱动的游标。 打开游标后，可以更改由键集大小。  
+ 对于键集驱动游标和混合游标，应用程序还可以指定键集大小。 它通过 SQL_ATTR_KEYSET_SIZE 语句特性来执行此功能。 如果键集大小设置为0（默认值），则键集大小设置为结果集大小，并使用由键集驱动的游标。 在打开游标后，可以更改键集大小。  
   
- 应用程序还可以设置行集大小;有关详细信息，请参阅[使用块状游标](../../../odbc/reference/develop-app/using-block-cursors.md)前面在本部分中。
+ 应用程序还可以设置行集大小;有关详细信息，请参阅本部分前面的[使用块游标](../../../odbc/reference/develop-app/using-block-cursors.md)。

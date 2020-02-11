@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cab0f3edc080e6f2f174e3393548620c65f9176
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831522"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>函数依赖关系配置文件请求选项（数据事件探查任务）
@@ -25,7 +25,7 @@ ms.locfileid: "62831522"
 > [!NOTE]  
 >  本主题中介绍的选项显示在 **“数据事件探查任务编辑器”** 的 **“配置文件请求”** 页中。 有关此编辑器页的详细信息，请参阅[数据事件探查任务编辑器（“配置文件请求”页）](data-profiling-task-editor-profile-requests-page.md)。  
   
- 有关如何使用数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](data-profile-viewer.md)。  
+ 有关如何使用数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](data-profile-viewer.md)。  
   
 ## <a name="understanding-the-selection-of-determinant-and-dependent-columns"></a>了解如何选择决定列和依赖列  
  “函数依赖关系配置文件请求”  计算决定端列或列集（在 **DeterminantColumns** 属性中指定）对依赖端列（在 **DependentColumn** 属性中指定）的值的决定程度。 例如，美国的州列在函数关系上应依赖于美国邮政编码列。 也就是说，如果邮政编码（决定列）为 98052，则州（依赖列）应始终为华盛顿。  
@@ -48,7 +48,7 @@ ms.locfileid: "62831522"
   
 -   **常规**  
   
--   **Options**  
+-   **选项**  
   
 ### <a name="data-options"></a>Data 选项  
  **ConnectionManager**  
@@ -73,7 +73,7 @@ ms.locfileid: "62831522"
  有关详细信息，请参阅本主题前面的“了解如何选择决定列和依赖列”部分。  
   
  **IsWildCard**  
- 指定是否已选择通配符 **(\*)** 。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
+ 指定是否已选择通配符 **(\*)** 。 如果已选择 **(** ) **来对所有列进行事件探查，则此选项设置为 \*True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
   
  **ColumnName**  
  显示所选列的名称。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项空白。 此选项是只读的。  
@@ -84,7 +84,7 @@ ms.locfileid: "62831522"
 > [!NOTE]  
 >  如果使用通配符 **(\*)** 作为 **ColumnName**，则 **CompareOptions** 将变为只读并设置为 **Default** 设置。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**Default**|根据源表中列的排序规则对数据进行排序和比较。|  
 |**BinarySort**|根据为每个字符所定义的位模式对数据进行排序和比较。 二进制排序顺序既区分大小写，也区分重音。 二进制排序顺序的速度也最快。|  
@@ -92,7 +92,7 @@ ms.locfileid: "62831522"
   
  如果选择 **DictionarySort**，还可以选择下表中列出的任意选项组合。 默认情况下，不会选择这些附加选项中的任何一个。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比较是否区分大小写字母。 如果设置了此选项，字符串比较会忽略大小写。 例如，"ABC" 和 "abc" 没有区别。|  
 |**IgnoreNonSpace**|指定比较是否区分空格字符和标注字符。 如果设置了此选项，则比较会忽略标注字符。 例如，"å" 与 "a" 相同。|  
@@ -107,9 +107,9 @@ ms.locfileid: "62831522"
  **ThresholdSetting**  
  指定阈值设置。 此属性的默认值为 **Specified**。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
-|**无**|不指定阈值。 不管函数依赖关系强度值如何，都会报告函数依赖关系强度。|  
+|无 |不指定阈值。 不管函数依赖关系强度值如何，都会报告函数依赖关系强度。|  
 |**Specified**|使用 **FDStrengthThreshold**中指定的阈值。 仅当函数依赖关系强度大于阈值时，才会报告函数依赖关系强度。|  
 |**Exact**|不指定阈值。 仅当选定列之间具有完全匹配的函数依赖关系时，才会报告函数依赖关系强度。|  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62831522"
  **MaxNumberOfViolations**  
  指定要在输出中报告的函数依赖关系冲突的最大数量。 此属性的默认值为 100。 只有在选择 **Exact** 作为 **ThresholdSetting**时，才会禁用该选项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据事件探查任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)   
  [单个表快速配置文件窗体（数据事件探查任务）](single-table-quick-profile-form-data-profiling-task.md)  
   

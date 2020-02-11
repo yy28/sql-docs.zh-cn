@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104094"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>配置报表服务器以进行远程管理
@@ -34,7 +34,7 @@ ms.locfileid: "66104094"
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要修改防火墙设置，必须从本地登录，并且您必须是本地 Administrators 组的成员。 不能通过远程连接来修改远程计算机的 Windows 防火墙设置。  
   
  如果要为非管理员用户启用远程管理，则必须为该帐户授予对分布式组件对象模型 (DCOM) 的远程激活权限。 本主题提供了有关配置服务器以供非管理员访问的说明。  
@@ -43,7 +43,7 @@ ms.locfileid: "66104094"
   
  有关详细信息，请参阅 MSDN 上 Platform SDK 文档中的 [Connecting Through Windows Firewall](https://go.microsoft.com/fwlink/?LinkId=63615) （通过 Windows 防火墙连接）。  
   
-## <a name="tasks"></a>“任务”  
+## <a name="tasks"></a>任务  
  启用远程报表服务器配置的任务包括：  
   
 -   在 Windows 防火墙中启用端口以允许报表服务器和 SQL Server 数据库引擎实例所使用的端口的请求。  
@@ -68,7 +68,7 @@ ms.locfileid: "66104094"
   
 1.  单击 **“开始”** ，依次指向 **“程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-2.  在左窗格中，展开“SQL Server 网络配置”，然后针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例单击“协议”   。  
+2.  在左窗格中，展开“SQL Server 网络配置”，然后针对  **实例单击“协议”**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 3.  在详细信息窗格中，启用“TCP/IP”和“命名管道”协议，然后重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
@@ -76,9 +76,9 @@ ms.locfileid: "66104094"
   
 1.  以本地管理员身份登录要启用远程管理功能的计算机。  
   
-2.  如果报表服务器正在运行 Windows Vista 上，右键单击**命令提示符**，然后选择**以管理员身份运行**。 对于其他操作系统，请打开一个命令提示符窗口。  
+2.  如果 Report Server 在 Windows Vista 上运行，请右键单击 "**命令提示符**"，然后选择 "以**管理员身份运行**"。 对于其他操作系统，请打开一个命令提示符窗口。  
   
-3.  运行下面的命令：  
+3.  运行以下命令：  
   
     ```  
     netsh.exe firewall set service type=REMOTEADMIN mode=ENABLE scope=ALL  
@@ -98,7 +98,7 @@ ms.locfileid: "66104094"
   
 1.  在“开始”菜单中，指向 **“管理工具”** ，单击 **“组件服务”** 。  
   
-     对于 Windows Vista 中，在开始菜单中，单击**所有程序**，单击**运行**，然后输入`mmc comexp.msc`。  
+     对于 Windows Vista，在 "开始" 菜单上，依次单击 "**所有程序**"、" `mmc comexp.msc`**运行**"，然后输入。  
   
 2.  打开“组件服务”文件夹。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66104094"
   
 9. 键入您的用户帐户名，然后单击 **“确定”** 。  
   
-10. 在“\<用户或组> 权限”的“允许”列中，选择“远程启动”和“远程激活”，然后单击“确定”      。  
+10. 在“**用户或组> 权限”的“允许”列中，选择“远程启动”和“远程激活”，然后单击“确定”\<**     。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>为非管理员设置报表服务器 WMI 命名空间的权限  
   
@@ -146,7 +146,7 @@ ms.locfileid: "66104094"
   
 13. 在 **“允许”** 列中，选择 **“启用帐户”** 、 **“远程启用”** 和 **“读取安全”** ，然后单击 **“确定”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

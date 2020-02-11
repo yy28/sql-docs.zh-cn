@@ -21,25 +21,25 @@ ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2610383df0f3dde453fe3ba40b10dea85582b9c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915763"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 函数和 Visual FoxPro ODBC 驱动程序
-在本部分中的主题提供的 ODBC API 函数的简短摘要和任何 Visual FoxPro 特定的详细信息。  
+本节中的主题提供了有关 ODBC API 函数的简短摘要，以及任何特定于 Visual FoxPro 的详细信息。  
   
 > [!NOTE]  
->  有关 ODBC 函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)"ODBC Programmer's Guide"中。  
+>  有关 ODBC 函数的常规信息，请参阅 "ODBC 程序员指南" 中的[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- ODBC API 函数分为以下三种主要类别：核心级别 API 函数、 级别 1 API 函数和级别 2 API 函数。  
+ ODBC API 函数分为三个主要类别：核心级 API 函数、1级 API 函数和2级 API 函数。  
   
 > [!NOTE]  
->  一些函数的具体取决于数据源指连接到的目录以不同方式行为[免费表](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbf 文件） 或 Visual FoxPro[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbc 文件）。 数据库连接仅支持某些操作。  
+>  某些函数的行为方式不同，具体取决于数据源是定义为与[自由表](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbf 文件）的目录的连接还是定义为 Visual FoxPro[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)（dbc 文件）。 仅数据库连接支持某些操作。  
   
 ## <a name="core-level-api-support"></a>核心级别 API 支持  
- 下表中列出的 ODBC 核心级别 API 函数。 Visual FoxPro ODBC 驱动程序支持所有这些函数。  
+ 下表列出了 ODBC 核心级 API 函数。 Visual FoxPro ODBC 驱动程序支持所有这些函数。  
   
 |||  
 |-|-|  
@@ -55,8 +55,8 @@ ms.locfileid: "67915763"
 |[SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)|[SQLSetCursorName](../../odbc/microsoft/sqlsetcursorname-visual-foxpro-odbc-driver.md)|  
 |[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)|[SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)|  
   
-## <a name="level-1-api-support"></a>级别 1 API 支持  
- 下表中列出的 ODBC 级别 1 API 函数。 这些函数的完全或部分支持所有 Visual FoxPro ODBC 驱动程序。  
+## <a name="level-1-api-support"></a>1级 API 支持  
+ 下表列出了 ODBC Level 1 API 函数。 Visual FoxPro ODBC 驱动程序完全或部分支持所有这些函数。  
   
 |||  
 |-|-|  
@@ -69,8 +69,8 @@ ms.locfileid: "67915763"
 |[SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md)|[SQLStatistics](../../odbc/microsoft/sqlstatistics-visual-foxpro-odbc-driver.md)|  
 |[SQLGetStmtOption](../../odbc/microsoft/sqlgetstmtoption-visual-foxpro-odbc-driver.md)|[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)|  
   
-## <a name="level-2-api-support"></a>级别 2 API 支持  
- 以下 ODBC 级别 2 API 函数完全或部分支持：  
+## <a name="level-2-api-support"></a>2级 API 支持  
+ 以下 ODBC Level 2 API 函数完全或部分受支持：  
   
 -   [SQLDataSources](../../odbc/microsoft/sqldatasources-visual-foxpro-odbc-driver.md)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "67915763"
   
 -   [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) （部分支持）  
   
- 不支持以下级别 2 API 函数：  
+ 不支持以下第2级 API 函数：  
   
 -   SQLBrowseConnect  
   

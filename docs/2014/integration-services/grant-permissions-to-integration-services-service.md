@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 989db1ed792d960b7a0dca22bd82ec8b2f5aa7df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058224"
 ---
 # <a name="grant-permissions-to-integration-services-service"></a>授予 Integration Services 服务权限
@@ -24,9 +24,9 @@ ms.locfileid: "66058224"
   
 1.  运行 Dcomcnfg.exe。 Dcomcnfg.exe 提供用于修改注册表中的某些设置的用户界面。  
   
-2.  在“组件服务”  对话框中，展开“组件服务 > 计算机 > 我的电脑 > DCOM 配置”节点。  
+2.  在“组件服务”**** 对话框中，展开“组件服务 > 计算机 > 我的电脑 > DCOM 配置”节点。  
   
-3.  右键单击**Microsoft SQL Server Integration Services 12.0**，然后单击**属性**。  
+3.  右键单击**Microsoft SQL Server Integration Services 12.0**"，然后单击"**属性**"。  
   
 4.  在 **“安全性”** 选项卡上，在 **“启动和激活权限”** 区域中单击 **“编辑”** 。  
   

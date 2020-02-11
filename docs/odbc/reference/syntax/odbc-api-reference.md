@@ -12,20 +12,20 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5073d7efcb2cb99e51fe0d9cd0382806501cfd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085458"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 参考
-在本部分中的主题介绍每个 ODBC 函数按字母顺序。 每个函数被定义为 C 编程语言的函数。 说明如下：  
+本节中的主题按字母顺序描述每个 ODBC 函数。 每个函数都定义为 C 编程语言函数。 说明包括：  
   
--   用途  
+-   目的  
   
 -   ODBC 版本  
   
--   标准 CLI 的一致性级别  
+-   标准 CLI 一致性级别  
   
 -   语法  
   
@@ -41,14 +41,14 @@ ms.locfileid: "68085458"
   
 -   对相关函数的引用  
   
- 标准的 CLI 的一致性级别可以是以下值之一：ISO 92 打开组，ODBC，或已弃用。 标记为 ISO 92 符合的也将出现在 Open Group 版本 1，因为 Open Group 是纯超集的 ISO 92 函数。 标记为打开组符合标准的函数也会出现在 ODBC 3。*x*，因为 ODBC 3。*x*是纯 Open Group 版本 1 的超集。 标记为符合 ODBC 函数既不标准中出现。 标记为已弃用的函数已弃用在 ODBC 3。*x*。  
+ 标准 CLI 一致性级别可以是下列其中一项： ISO 92、开放式组、ODBC 或已弃用。 标记为符合 ISO 92 的函数也会显示在打开的组版本1中，因为打开的组是 ISO 92 的纯粹超集。 标记为符合打开组的函数也会显示在 ODBC 3 中。*x*，因为 ODBC 3。*x*是开放组版本1的纯超集。 标记为符合 ODBC 标准的函数会出现在标准中。 ODBC 3 中弃用了标记为已弃用的函数。*x*。  
   
- 诊断信息的处理中所述[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数说明。 SQLSTATE 值与关联的文本是包括在内，以提供条件的说明，但不是应规定特定的文本。  
+ [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数说明中描述了诊断信息的处理。 包含与 SQLSTATE 值相关联的文本用于提供条件说明，但并不用于规定特定文本。  
   
 > [!NOTE]  
->  有关 ODBC 函数特定于驱动程序的信息，请参阅驱动程序部分。  
+>  有关 ODBC 函数的特定于驱动程序的信息，请参阅驱动程序部分。  
   
- 本部分包含主题的以下函数：  
+ 本部分包含以下功能的主题：  
   
 -   [SQLAllocConnect 函数](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   
@@ -110,7 +110,7 @@ ms.locfileid: "68085458"
   
 -   [SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)  
   
--   [SQLFetchScroll 函数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)  
+-   [SQLFetchScroll Function（SQLFetchScroll 函数）](../../../odbc/reference/syntax/sqlfetchscroll-function.md)  
   
 -   [SQLForeignKeys 函数](../../../odbc/reference/syntax/sqlforeignkeys-function.md)  
   
@@ -166,13 +166,13 @@ ms.locfileid: "68085458"
   
 -   [SQLPrimaryKeys 函数](../../../odbc/reference/syntax/sqlprimarykeys-function.md)  
   
--   [SQLProcedureColumns 函数](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
+-   [SQLProcedureColumns Function（SQLProcedureColumns 函数）](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
   
 -   [SQLProcedures 函数](../../../odbc/reference/syntax/sqlprocedures-function.md)  
   
 -   [SQLPutData 函数](../../../odbc/reference/syntax/sqlputdata-function.md)  
   
--   [SQLRowCount 函数](../../../odbc/reference/syntax/sqlrowcount-function.md)  
+-   [SQLRowCount Function（SQLRowCount 函数）](../../../odbc/reference/syntax/sqlrowcount-function.md)  
   
 -   [SQLSetConnectAttr 函数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)  
   
@@ -200,7 +200,7 @@ ms.locfileid: "68085458"
   
 -   [SQLStatistics 函数](../../../odbc/reference/syntax/sqlstatistics-function.md)  
   
--   [SQLTablePrivileges 函数](../../../odbc/reference/syntax/sqltableprivileges-function.md)  
+-   [SQLTablePrivileges Function（SQLTablePrivileges 函数）](../../../odbc/reference/syntax/sqltableprivileges-function.md)  
   
 -   [SQLTables 函数](../../../odbc/reference/syntax/sqltables-function.md)  
   

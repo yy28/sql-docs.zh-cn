@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eac36b2aaaa5cd3b28d5476c760bab3152c460f2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73789610"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -35,18 +35,18 @@ ms.locfileid: "73789610"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 在调用 BCPDone 方法之后，不能对 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 接口调用其他操作。 唯一的可能性是调用 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法以启动新的大容量复制操作。 这类似于调用 [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
+## <a name="remarks"></a>备注  
+ 在调用 BCPDone 方法之后，不能对 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 接口调用其他操作****。 唯一的可能性是调用 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法以启动新的大容量复制操作。 这类似于调用 [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
  方法成功。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法。  
+ 意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法****。  
   
 ## <a name="example"></a>示例  
- 该示例演示如何使用 IBCPSession 接口。  
+ 该示例演示如何使用 IBCPSession 接口****。  
   
  在运行此示例之前，必须执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
   
@@ -64,7 +64,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  可以通过以下命令，使用 BCP 将此数据添加回表中：  
   
- bcp master..fltest in outfile.dat -n -T -S server  
+ **bcp master .。。outfile 中的 fltest-n-T-S** *服务器*  
   
  当编译此示例时，您需要指定 sqlncli11.lib。  
   

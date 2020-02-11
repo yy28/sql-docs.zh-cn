@@ -1,5 +1,5 @@
 ---
-title: Seek 方法和 Index 属性示例 （VC + +） |Microsoft Docs
+title: Seek 方法和 Index 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e19a30e60bb953dd8f521699b23fd00406d2d95d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931078"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek 方法和 Index 属性示例 (VC++)
-此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[Seek](../../../ado/reference/ado-api/seek-method.md)方法和[索引](../../../ado/reference/ado-api/index-property.md)属性结合使用与给定***员工 ID***、 查找中的员工姓名***员工***Nwind.mdb 数据库表。  
+此示例将[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[Seek](../../../ado/reference/ado-api/seek-method.md)方法和[Index](../../../ado/reference/ado-api/index-property.md)属性与给定的***雇员 ID***结合使用，以便在 Nwind 数据库的***Employees***表中查找雇员的姓名。  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -225,7 +225,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [索引属性](../../../ado/reference/ado-api/index-property.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Index 属性](../../../ado/reference/ado-api/index-property.md)   
+ [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek 方法](../../../ado/reference/ado-api/seek-method.md)

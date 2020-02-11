@@ -1,5 +1,5 @@
 ---
-title: 传输登录名任务编辑器 （常规页） |Microsoft Docs
+title: 传输登录名任务编辑器（"常规" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4574053bacafe97a9c6242246a48e2e65599b6a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054954"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>传输登录名任务编辑器（“常规”页）
@@ -34,7 +34,7 @@ ms.locfileid: "66054954"
  **说明**  
  键入传输登录名任务的说明。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](control-flow/integration-services-tasks.md)   
  [传输登录名任务编辑器（“登录名”页）](../../2014/integration-services/transfer-logins-task-editor-logins-page.md)   

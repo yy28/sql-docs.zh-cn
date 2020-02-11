@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 63ec11b8575017ffbb3a1b1468ef3150a20326e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028345"
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>排除重复行 (Visual Database Tools)
@@ -38,8 +38,8 @@ ms.locfileid: "63028345"
     > [!NOTE]  
     >  如果使用 DISTINCT 关键字，则可能无法在结果窗格中修改结果集。  
   
-## <a name="see-also"></a>请参阅  
- [指定搜索条件&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [指定 Visual Database Tools &#40;搜索条件&#41;](visual-database-tools.md)   
  [对查询结果进行排序和分组 (Visual Database Tools)](sort-and-group-query-results-visual-database-tools.md)  
   
   

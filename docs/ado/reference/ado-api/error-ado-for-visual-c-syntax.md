@@ -1,5 +1,5 @@
 ---
-title: 错误 (ADO for VisualC++语法) |Microsoft Docs
+title: 错误（ADO for Visual C++ 语法） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 1c3fafe1-8bcc-4c04-b8d1-f5ffebac00dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f71246fa641f74579f181f93da46333e2ffe3f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933033"
 ---
 # <a name="error-ado-for-visual-c-syntax"></a>错误（ADO for Visual C++ 语法）
-## <a name="properties"></a>properties  
+## <a name="properties"></a>属性  
   
 ```  
 get_Description(BSTR *pbstr)  
@@ -33,5 +33,5 @@ get_Source(BSTR *pbstr)
 get_SQLState(BSTR *pbstr)  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误对象](../../../ado/reference/ado-api/error-object.md)

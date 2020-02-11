@@ -1,5 +1,5 @@
 ---
-title: MSreplmonthresholdmetrics (Transact SQL) |Microsoft Docs
+title: MSreplmonthresholdmetrics （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,30 +18,30 @@ ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b3e8b9c2443a6fa74e113dc1a3f25880ac753dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079944"
 ---
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSreplmonthresholdmetrics**表定义了用于监视复制的度量值。 此表存储中**msdb**数据库。  
+  **MSreplmonthresholdmetrics**表定义用于监视复制的指标。 该表存储在**msdb**数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**metric_id**|**int**|标识复制性能跃点，可以是下列值之一：<br /><br /> **1** = 过期<br /><br /> **2** = 延迟<br /><br /> **4** = mergeexpiration<br /><br /> **5** = mergeslowrunduration<br /><br /> **6** = mergefastrunduration<br /><br /> **7** = mergefastrunspeed<br /><br /> **8** = mergeslowrunspeed|  
-|**title**|**sysname**|复制性能跃点的名称。|  
-|**warningbitstatus**|**int**|用于为下列跃点之一提供阈值冲突警告的位标识符：<br /><br /> **1** = 到期-对事务发布的订阅超出保留期允许的阈值，超过保留期的百分比。<br /><br /> **2** = latency-将数据从事务发布服务器复制到订阅服务器所用的时间超过阈值，以秒为单位。<br /><br /> **4** = mergeexpiration – 对合并发布的订阅超出保留期允许的阈值，超过保留期的百分比。<br /><br /> **8** = mergefastrunduration-完成的合并订阅同步所花费的时间超过阈值，以秒为单位，通过快速网络连接。<br /><br /> **16** = mergeslowrunduration-完成的合并订阅同步所花费的时间超过阈值，以秒为单位，通过慢速或拨号网络连接。<br /><br /> **32** = mergefastrunspeed-传送速率的行合并订阅的同步过程未能保持阈值速率，单位为每秒，行通过快速网络连接。<br /><br /> **64** = mergeslowrunspeed-传送速率的行合并订阅的同步过程未能保持阈值速率，单位为每秒，行通过慢速或拨号网络连接。|  
+|**metric_id**|**int**|标识复制性能跃点，可以是下列值之一：<br /><br /> **1** = 过期<br /><br /> **2** = 滞后时间<br /><br /> **4** = mergeexpiration<br /><br /> **5** = mergeslowrunduration<br /><br /> **6** = mergefastrunduration<br /><br /> **7** = mergefastrunspeed<br /><br /> **8** = mergeslowrunspeed|  
+|**词首**|**sysname**|复制性能跃点的名称。|  
+|**warningbitstatus**|**int**|用于为下列跃点之一提供阈值冲突警告的位标识符：<br /><br /> **1** = 过期-对事务发布的订阅已超出保持期超过允许的阈值（以保持期的百分比形式表示）。<br /><br /> **2** = 滞后时间-将数据从事务发布服务器复制到订阅服务器所用的时间超过了阈值（以秒为单位）。<br /><br /> **4** = mergeexpiration-针对合并发布的订阅已超出保持期超过允许的阈值（以保持期的百分比表示）。<br /><br /> **8** = mergefastrunduration-通过快速网络连接完成合并订阅同步所用的时间超过了阈值（以秒为单位）。<br /><br /> **16** = mergeslowrunduration-完成合并订阅同步所用的时间超过了慢速或拨号网络连接的阈值（以秒为单位）。<br /><br /> **32** = mergefastrunspeed-合并订阅的同步过程中的行传递速率未能维持快速网络连接上的阈值速率（以每秒行数为单位）。<br /><br /> **64** = mergeslowrunspeed-合并订阅的同步过程中的行传递速率未能维持慢速或拨号网络连接的阈值速率（以每秒行数为单位）。|  
 |**alertmessageid**|**int**|出现阈值警告条件时显示的错误消息的 ID。|  
-|**description**|**nvarchar(3000)**|复制性能跃点的说明。|  
+|**2008**|**nvarchar （3000）**|复制性能跃点的说明。|  
 |**default_value**|**sql_variant**|复制性能跃点的默认值。|  
 |**min_value**|**sql_variant**|绑定的复制性能跃点的最小值。|  
 |**max_value**|**sql_variant**|绑定的复制性能跃点的最大值。|  
   
-## <a name="see-also"></a>请参阅  
- [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

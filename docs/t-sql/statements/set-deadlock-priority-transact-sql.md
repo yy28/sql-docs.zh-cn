@@ -25,18 +25,18 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a56192c7aa54d9b5fe215b8f793d90d6e814238e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929055"
 ---
-# <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
+# <a name="set-deadlock_priority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定当前会话与其他会话发生死锁时继续处理的相对重要性。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,7 +66,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  **@** *deadlock_intvar*  
  指定死锁优先级的整数变量。 此变量必须设置为 -10 到 10 范围中的一个整数值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当两个会话同时等待访问由其他会话锁定的资源时，便会发生死锁。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例检测到两个会话发生死锁时，将选择其中一个会话作为死锁牺牲品来解决死锁。 此牺牲品的当前事务将回滚，且死锁错误消息 1205 返回客户端。 这样可释放由该会话所控制的所有锁，从而允许其他会话继续进行。  
   
  将哪个会话选为死锁牺牲品取决于每个会话的死锁优先级：  

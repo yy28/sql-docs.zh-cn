@@ -1,5 +1,5 @@
 ---
-title: sys.registered_search_property_lists (TRANSACT-SQL) |Microsoft Docs
+title: sys. registered_search_property_lists （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,21 +22,21 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 87af4645a052001ddfc2d0540b6b40e75e3dbb20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067855"
 ---
-# <a name="sysregisteredsearchpropertylists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
+# <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   当前数据库中的每个搜索属性列表各占一行。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|属性列表的 ID。|  
-|**名称**|**sysname**|属性列表的名称。|  
+|**路径名**|**sysname**|属性列表的名称。|  
 |**create_date**|**datetime**|属性列表的创建日期。|  
 |**modify_date**|**datetime**|上次使用任意 ALTER 语句修改属性列表的日期。|  
 |**principal_id**|**int**|属性列表的所有者。|  
@@ -60,7 +60,7 @@ SELECT property_list_id, name FROM sys.registered_search_property_lists;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [sys.fulltext_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)  
   

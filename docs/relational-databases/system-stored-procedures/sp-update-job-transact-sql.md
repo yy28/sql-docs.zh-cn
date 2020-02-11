@@ -1,5 +1,5 @@
 ---
-title: sp_update_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_update_job （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084893"
 ---
-# <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
+# <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   更改作业的属性。  
   
 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,59 +56,59 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_id = ] job_id` 要更新的作业标识号。 *job_id*是**uniqueidentifier**。  
+`[ @job_id = ] job_id`要更新的作业的标识号。 *job_id*是**uniqueidentifier**。  
   
-`[ @job_name = ] 'job_name'` 作业的名称。 *job_name*是**nvarchar （128)** 。  
+`[ @job_name = ] 'job_name'`作业的名称。 *job_name*为**nvarchar （128）**。  
   
-> **注意**：任一*job_id*或*job_name*必须指定但不能同时指定两者。  
+> **注意：** 必须指定*job_id*或*job_name* ，但不能同时指定两者。  
   
-`[ @new_name = ] 'new_name'` 作业的新名称。 *new_name*是**nvarchar （128)** 。  
+`[ @new_name = ] 'new_name'`作业的新名称。 *new_name*为**nvarchar （128）**。  
   
-`[ @enabled = ] enabled` 指定是否启用作业 (**1**) 或未启用 (**0**)。 *已启用*是**tinyint**。  
+`[ @enabled = ] enabled`指定是启用（**1**）还是未启用（**0**）作业。 *enabled*为**tinyint**。  
   
-`[ @description = ] 'description'` 作业的说明。 *描述*是**nvarchar(512)** 。  
+`[ @description = ] 'description'`作业的说明。 *说明*为**nvarchar （512）**。  
   
-`[ @start_step_id = ] step_id` 要执行的作业的第一个步骤的标识号。 *step_id*是**int**。  
+`[ @start_step_id = ] step_id`作业要执行的第一个步骤的标识号。 *step_id*是**int**。  
   
-`[ @category_name = ] 'category'` 作业的类别。 *类别*是**nvarchar （128)** 。  
+`[ @category_name = ] 'category'`作业的类别。 *类别*为**nvarchar （128）**。  
   
-`[ @owner_login_name = ] 'login'` 拥有作业的登录名的名称。 *登录名*是**nvarchar （128)** 只有的成员**sysadmin**固定的服务器角色可以更改作业所有权。  
+`[ @owner_login_name = ] 'login'`拥有作业的登录名。 *登录名*为**nvarchar （128）** 只有**sysadmin**固定服务器角色的成员才可以更改作业所有权。  
   
-`[ @notify_level_eventlog = ] eventlog_level` 指定的项放入此作业在 Microsoft Windows 应用程序日志。 *eventlog_level*是**int**，可以是下列值之一。  
+`[ @notify_level_eventlog = ] eventlog_level`指定何时将条目放入此作业的 Microsoft Windows 应用程序日志中。 *eventlog_level*为**int**，可以是下列值之一。  
   
 |值|说明（操作）|  
 |-----------|----------------------------|  
 |**0**|从不|  
 |**1**|成功时|  
-|**2**|在失败|  
-|**3**|Always|  
+|**2**|失败时|  
+|**3**|始终|  
   
-`[ @notify_level_email = ] email_level` 指定何时发送一封电子邮件时完成该作业。 *email_level*是**int**。*email_level*使用相同的值作为*eventlog_level*。  
+`[ @notify_level_email = ] email_level`指定在完成该作业后何时发送电子邮件。 *email_level*是**int**。*email_level*使用与*eventlog_level*相同的值。  
   
-`[ @notify_level_netsend = ] netsend_level` 指定何时发送网络消息的此作业完成后。 *netsend_level*是**int**。*netsend_level*使用相同的值作为*eventlog_level*。  
+`[ @notify_level_netsend = ] netsend_level`指定在此作业完成后发送网络消息的时间。 *netsend_level*是**int**。*netsend_level*使用与*eventlog_level*相同的值。  
   
-`[ @notify_level_page = ] page_level` 指定在完成该作业后发送页。 *page_level*是**int**。*page_level*使用相同的值作为*eventlog_level*。  
+`[ @notify_level_page = ] page_level`指定在此作业完成后发送页面的时间。 *page_level*是**int**。*page_level*使用与*eventlog_level*相同的值。  
   
-`[ @notify_email_operator_name = ] 'operator_name'` 其电子邮件时要发送到操作员的名称*email_level*为止。 *email_name*是**nvarchar （128)** 。  
+`[ @notify_email_operator_name = ] 'operator_name'`*Email_level*达到时向其发送电子邮件的操作员的名称。 *email_name*为**nvarchar （128）**。  
   
-`[ @notify_netsend_operator_name = ] 'netsend_operator'` 向其发送网络消息的操作员的名称。 *netsend_operator*是**nvarchar （128)** 。  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'`向其发送网络消息的操作员的名称。 *netsend_operator*为**nvarchar （128）**。  
   
-`[ @notify_page_operator_name = ] 'page_operator'` 向其发送一个页面的操作员的名称。 *page_operator*是**nvarchar （128)** 。  
+`[ @notify_page_operator_name = ] 'page_operator'`向其发送页的操作员的名称。 *page_operator*为**nvarchar （128）**。  
   
-`[ @delete_level = ] delete_level` 指定何时删除作业。 *delete_value*是**int**。*delete_level*使用相同的值作为*eventlog_level*。  
+`[ @delete_level = ] delete_level`指定删除作业的时间。 *delete_value*是**int**。*delete_level*使用与*eventlog_level*相同的值。  
   
-`[ @automatic_post = ] automatic_post` 保留。  
+`[ @automatic_post = ] automatic_post`保护.  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_update_job**必须从运行**msdb**数据库。  
+ 必须从**msdb**数据库运行**sp_update_job** 。  
   
- **sp_update_job**更改提供了哪些参数值的那些设置。 如果省略某一参数，则保留其当前设置。  
+ **sp_update_job**仅更改为其提供参数值的设置。 如果省略某一参数，则保留其当前设置。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -118,10 +118,10 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有的成员**sysadmin**可以使用此存储的过程来编辑由其他用户拥有的作业的属性。  
+ 只有**sysadmin**的成员才可以使用此存储过程来编辑其他用户拥有的作业的属性。  
   
 ## <a name="examples"></a>示例  
- 下面的示例更改名称、 说明和已启用的作业状态`NightlyBackups`。  
+ 下面的示例更改作业`NightlyBackups`的名称、说明和已启用状态。  
   
 ```  
 USE msdb ;  
@@ -135,10 +135,10 @@ EXEC dbo.sp_update_job
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sp_add_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

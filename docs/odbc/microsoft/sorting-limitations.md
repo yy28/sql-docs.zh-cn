@@ -14,11 +14,11 @@ ms.assetid: 2273e058-f6a3-4fc3-875f-e506cb1015ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91e4851197dd8798641eaf400084694afe667dfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063395"
 ---
 # <a name="sorting-limitations"></a>排序限制
-GROUP BY 子句、 ORDER BY 子句、 SELECT DISTINCT 语句或外部联接中的排序键的最大长度为 255 个字节;排序行中的所有排序键的最大长度为 65,500 个字节。
+在 GROUP BY 子句中，排序键的最大长度，ORDER BY 子句，SELECT DISTINCT 语句，或外部联接为255字节;排序行中所有排序键的最大长度为65500字节。

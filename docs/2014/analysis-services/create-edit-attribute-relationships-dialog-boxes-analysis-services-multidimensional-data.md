@@ -1,5 +1,5 @@
 ---
-title: 创建属性关系和编辑属性 （属性关系设计器选项卡，维度设计器） 的关系对话框 (Analysis Services-多维数据) |Microsoft Docs
+title: "\"创建属性关系\" 和 \"编辑属性关系\" 对话框（\"属性关系\" 设计器选项卡，维度设计器）（Analysis Services 多维数据） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,34 +13,34 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086943"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>“创建属性关系”和“编辑属性关系”对话框（“属性关系设计器”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用 **“创建属性关系”** 对话框定义新的属性关系，以及使用 **“编辑属性关系”** 对话框更改属性关系。 有关详细信息，请参阅 [定义属性关系](multidimensional-models/attribute-relationships-define.md)。  
   
- **若要查看创建属性关系对话框**  
+ **查看“创建属性关系”对话框**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中，双击维度以打开维度设计器，然后单击“属性关系”  选项卡。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中，双击维度以打开维度设计器，然后单击“属性关系”**** 选项卡。  
   
 2.  在工具栏上，单击“新建属性关系”图标。  
   
      -或-  
   
-     在属性关系图或“属性”  列表中，右键单击属性，然后单击“新建属性关系”  。  
+     在属性关系图或“属性”**** 列表中，右键单击属性，然后单击“新建属性关系”****。  
   
- **若要查看编辑属性关系对话框**  
+ **查看“编辑属性关系”对话框**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中，双击维度以打开维度设计器，然后单击“属性关系”  选项卡。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中，双击维度以打开维度设计器，然后单击“属性关系”**** 选项卡。  
   
-2.  在属性关系图或“属性关系”  列表中，右键单击属性关系，然后单击“编辑属性关系”  。  
+2.  在属性关系图或“属性关系”**** 列表中，右键单击属性关系，然后单击“编辑属性关系”****。  
   
 ## <a name="options"></a>选项  
  **名称**  
- 在“源属性”  组中，指定关系源于的属性的名称。  
+ 在“源属性”**** 组中，指定关系源于的属性的名称。  
   
  在 **“相关属性”** 组中，指定关系指向的属性的名称。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "66086943"
  指定为属性定义的键列。  
   
  **关系类型**  
- 指定要创建的关系类型，可以为“柔性(可随时间而变)”  ，也可以为“刚性(不随时间变化)”  。  
+ 指定要创建的关系类型，可以为“柔性(可随时间而变)”****，也可以为“刚性(不随时间变化)”****。  
   
-## <a name="see-also"></a>请参阅  
- [属性关系&#40;维度设计器&#41; &#40;Analysis Services-多维数据&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#41; &#40;Analysis Services 多维数据 &#40;维度设计器的属性关系&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

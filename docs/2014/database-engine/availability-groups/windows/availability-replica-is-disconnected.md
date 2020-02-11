@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ead368dece8a0c1effd8f8ddc7ff5e5793e8350
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791836"
 ---
 # <a name="availability-replica-is-disconnected"></a>断开可用性副本的连接
     
-## <a name="introduction"></a>简介  
+## <a name="introduction"></a>介绍  
   
 |||  
 |-|-|  
@@ -32,7 +32,7 @@ ms.locfileid: "62791836"
 |**类别**|**严重**|  
 |**方面**|可用性副本|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  此策略检查可用性副本之间的连接状态。 当可用性副本的连接状态为 DISCONNECTED 时，此策略处于不正常状态。 否则，该策略处于正常状态。  
   
 > [!NOTE]  
@@ -56,8 +56,8 @@ ms.locfileid: "62791836"
   
 -   检查端口是否冲突，如果冲突，请更改端口号。  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [使用 AlwaysOn 仪表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

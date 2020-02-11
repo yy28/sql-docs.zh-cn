@@ -1,5 +1,5 @@
 ---
-title: 开发&#39;人员指南 (数据库引擎) |Microsoft Docs
+title: 开发人员&#39;指南（数据库引擎） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530946"
 ---
-# <a name="developer39s-guide-database-engine"></a>开发&#39;人员指南 (数据库引擎)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了大量用于开发、管理和控制数据库应用程序的工具。  
+# <a name="developer39s-guide-database-engine"></a>开发人员&#39;指南（数据库引擎）
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]提供了一组丰富的用于开发、管理和控制数据库应用程序的工具。  
   
 ## <a name="in-this-section"></a>本节内容  
- [公共语言运行时 (CLR) 集成编程概念](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
+ [公共语言运行时 &#40;CLR&#41; 集成编程概念](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
  说明 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows .NET Framework 的公共语言运行时 (CLR) 组件如何与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 集成。 这表示您可以使用任何 .NET Framework 语言（包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic .NET 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#）编写存储过程、触发器、用户定义类型、用户定义函数、用户定义聚合和流式表值函数。  
   
  [SQL Server Native Client 编程](native-client/sql-server-native-client-programming.md)  
@@ -34,7 +34,7 @@ ms.locfileid: "69530946"
  说明 SQLXML 的最新版本，该版本提供与 SQLXML 3.0 相同的功能，另外还提供附加的更新以容纳随 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 引入的新功能，如 xml 数据类型。  
   
  [用于配置管理的 WMI 提供程序的概念](wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
- 说明用于 Microsoft 管理控制台 (MMC) 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器管理单元和 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器的已发布层。 它提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器所请求注册表操作的 API 调用进行连接，并可对选定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务提供增强的控制和操作。  
+ 描述与 Microsoft 管理控制台（MMC）和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager 的 Configuration Manager 管理单元一起使用的已发布层。 它提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器所请求注册表操作的 API 调用进行连接，并可对选定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务提供增强的控制和操作。  
   
  [WMI Provider for Server Events 的概念](wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
  说明如何使用 Windows Management Instrumentation (WMI) 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中监视事件。  
@@ -51,11 +51,11 @@ ms.locfileid: "69530946"
  [异常消息框编程](../database-engine/dev-guide/exception-message-box-programming.md)  
  说明如何在应用程序中使用异常消息框编程接口，以提高对消息传送的控制，并使用户可以选择保存错误消息内容以供将来参考和从中获取有关消息的帮助。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘编程](../analysis-services/dev-guide/data-mining-programming.md)   
- [开发人员指南&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
- [开发人员指南&#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
- [开发人员指南&#40;复制&#41;](replication/concepts/replication-developer-documentation.md)   
- [开发人员指南&#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
+ [开发人员指南 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
+ [开发人员指南 &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [开发人员指南 &#40;复制&#41;](replication/concepts/replication-developer-documentation.md)   
+ [开发人员指南 &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

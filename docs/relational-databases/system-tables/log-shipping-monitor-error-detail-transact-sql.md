@@ -1,5 +1,5 @@
 ---
-title: log_shipping_monitor_error_detail (TRANSACT-SQL) |Microsoft Docs
+title: log_shipping_monitor_error_detail （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e441e5165262a4455e34cb9a0adb55b9679578f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990053"
 ---
-# <a name="logshippingmonitorerrordetail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
+# <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  存储日志传送作业的错误详细信息。 此表存储中**msdb**数据库。  
+  存储日志传送作业的错误详细信息。 该表存储在**msdb**数据库中。  
   
  与历史记录和监视相关的表也用于主服务器和辅助服务器。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**uniqueidentifier**|用于备份的主 ID 或者用于复制或还原的辅助 ID。|  
 |**agent_type**|**tinyint**|日志传送作业的类型。<br /><br /> 0 = 备份。<br /><br /> 1 = 复制。<br /><br /> 2 = 还原。|  
@@ -40,24 +40,24 @@ ms.locfileid: "67990053"
 |**sequence_number**|**int**|一个增量数字，指示跨多个记录的错误信息的正确顺序。|  
 |**log_time**|**datetime**|创建记录的日期和时间。|  
 |**log_time_utc**|**datetime**|创建记录的日期和时间，使用通用协调时间表示。|  
-|message |**nvarchar**|消息正文。|  
-|**源 (source)**|**nvarchar**|错误消息或事件的源。|  
+|**消息**|**nvarchar**|消息正文。|  
+|**源程序**|**nvarchar**|错误消息或事件的源。|  
 |**help_url**|**nvarchar**|可从中找到更多错误信息的 URL（如果有）。|  
   
 ## <a name="remarks"></a>备注  
  此表包含日志传送代理的错误详细信息。 每个错误都记录为一个异常序列。 每个代理会话可以有多个错误（序列）。  
   
- 除了存储在远程监视服务器上，与主服务器相关的信息存储在中的主服务器上其**log_shipping_monitor_error_detail**表，并与辅助服务器相关的信息此外在辅助服务器上存储其**log_shipping_monitor_error_detail**表。  
+ 除了存储在远程监视服务器上外，与主服务器有关的信息存储在主服务器上的**log_shipping_monitor_error_detail**表中，与辅助服务器相关的信息也存储在辅助服务器上的**log_shipping_monitor_error_detail**表中。  
   
- 若要标识代理会话，请使用列**agent_id**， **agent_type**，并**session_id**。 作为排序依据**log_time**若要查看在其中记录的顺序错误。  
+ 若要标识代理会话，请使用列**agent_id**、 **agent_type**和**session_id**。 按**log_time**排序以便按记录的顺序查看错误。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [log_shipping_monitor_history_detail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
- [sp_cleanup_log_shipping_history (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
- [sp_delete_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
- [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [log_shipping_monitor_history_detail &#40;Transact-sql&#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
+ [sp_cleanup_log_shipping_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_delete_log_shipping_primary_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
+ [sp_delete_log_shipping_secondary_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
+ [sp_refresh_log_shipping_monitor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [系统表 (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.server_assembly_modules (TRANSACT-SQL) |Microsoft Docs
+title: sys. server_assembly_modules （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,30 +20,30 @@ ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 714d0ca36bc48206ee7431454a61b51d2c31afb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060564"
 ---
-# <a name="sysserverassemblymodules-transact-sql"></a>sys.server_assembly_modules (Transact-SQL)
+# <a name="sysserver_assembly_modules-transact-sql"></a>sys.server_assembly_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  类型为 TA 的服务器级别触发器的每个程序集模块在表中对应一行。 此视图将程序集触发器映射到基础 CLR 实现。 您可以加入到此关系**sys.server_triggers**。 程序集必须加载到**主**数据库。 元组 (object_id) 是该关系的键。  
+  类型为 TA 的服务器级别触发器的每个程序集模块在表中对应一行。 此视图将程序集触发器映射到基础 CLR 实现。 可以将此关系联接到**sys.databases server_triggers**。 该程序集必须加载到**master**数据库中。 元组 (object_id) 是该关系的键。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|这是对定义此程序集模块所依据对象的反向 FOREIGN KEY 引用。|  
 |**assembly_id**|**int**|创建此模块所基于的程序集的 ID。 此程序集必须加载到 master 数据库中。|  
 |**assembly_class**|**sysname**|定义此模块的程序集内的类的名称。|  
 |**assembly_method**|**sysname**|定义此模块的类中的方法的名称。 对于聚合函数 (AF)，该列为 NULL。|  
-|**execute_as_principal_id**|**int**|EXECUTE AS 服务器主体的 ID。<br /><br /> 默认情况下，或者 EXECUTE AS CALLER 时，为 NULL。<br /><br /> 指定主体 if 的 ID 执行 AS SELF EXECUTE AS\<主体 >。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**int**|EXECUTE AS 服务器主体的 ID。<br /><br /> 默认情况下，或者 EXECUTE AS CALLER 时，为 NULL。<br /><br /> 指定主体的 ID （如果 EXECUTE AS SELF EXECUTE AS \<principal>。<br /><br /> -2 = EXECUTE AS OWNER。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [对象目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

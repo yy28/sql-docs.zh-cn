@@ -1,5 +1,5 @@
 ---
-title: 错误对象属性示例 （VC + +） |Microsoft Docs
+title: Error 对象属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -21,14 +21,14 @@ ms.assetid: 5321fc0f-cd0c-4e2a-a5bc-0008fba86b59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac5a73f49650d1f292cee9e0a17b447011845141
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919029"
 ---
-# <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vc"></a>Description、 HelpContext、 HelpFile、 NativeError、 数、 源和 SQLState 属性示例 （VC + +）
-此示例将触发错误、 捕获它，并显示[描述](../../../ado/reference/ado-api/description-property.md)， [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)， [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)， [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)， [数字](../../../ado/reference/ado-api/number-property-ado.md)，[源](../../../ado/reference/ado-api/source-property-ado-error.md)，和[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)的生成属性[错误](../../../ado/reference/ado-api/error-object.md)对象。  
+# <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vc"></a>Description、HelpContext、帮助，NativeError、Number、Source 和 SQLState 属性示例（VC + +）
+此示例将触发错误，对其进行捕获，并显示生成的[error](../../../ado/reference/ado-api/error-object.md)对象的[Description](../../../ado/reference/ado-api/description-property.md)、 [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)、[帮助](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)程序、 [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)、 [Number](../../../ado/reference/ado-api/number-property-ado.md)、 [Source](../../../ado/reference/ado-api/source-property-ado-error.md)和[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)属性。  
   
 ```  
 // BeginDescriptionCpp.cpp  
@@ -123,12 +123,12 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Description 属性](../../../ado/reference/ado-api/description-property.md)   
- [错误对象](../../../ado/reference/ado-api/error-object.md)   
- [HelpContext、 HelpFile 属性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [HelpContext、 HelpFile 属性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [NativeError 属性 (ADO)](../../../ado/reference/ado-api/nativeerror-property-ado.md)   
- [Number 属性 (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [源属性 （ADO 错误）](../../../ado/reference/ado-api/source-property-ado-error.md)   
+ [Error 对象](../../../ado/reference/ado-api/error-object.md)   
+ [HelpContext，帮助的属性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
+ [HelpContext，帮助的属性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
+ [NativeError 属性（ADO）](../../../ado/reference/ado-api/nativeerror-property-ado.md)   
+ [Number 属性（ADO）](../../../ado/reference/ado-api/number-property-ado.md)   
+ [Source 属性（ADO 错误）](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [SQLState 属性](../../../ado/reference/ado-api/sqlstate-property.md)

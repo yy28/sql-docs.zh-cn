@@ -16,19 +16,19 @@ ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da396bd71e64925bcd8fb74f71f8e334bf7f1d7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949401"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
-指定的设置[类型](../../../ado/reference/ado-md-api/type-property-ado-md.md)的属性[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象。  
+指定[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象的[Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)属性的设置。  
   
-|常量|ReplTest1|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adMemberAll**|4|指示**成员**对象都表示级别的所有成员。|  
-|**adMemberFormula**|3|指示**成员**对象使用公式表达式进行计算。|  
-|**adMemberMeasure**|2|指示**成员**对象所属的度量值维度和表示定量属性。|  
-|**adMemberRegular**|1|默认值。 指示**成员**对象表示的业务实体的实例。|  
+|**adMemberAll**|4|指示**成员**对象表示级别的所有成员。|  
+|**adMemberFormula**|3|指示使用公式表达式计算**成员**对象。|  
+|**adMemberMeasure**|2|指示**成员**对象属于度量值维度，并表示定量属性。|  
+|**adMemberRegular**|1|默认值。 指示**成员**对象表示业务实体的实例。|  
 |**adMemberUnknown**|0|无法确定成员的类型。|

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b43cd194a2bfcf93b74b53fa2e9cb3a6a3eaff2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913787"
 ---
-# <a name="mssqlserver4846"></a>MSSQLSERVER_4846
+# <a name="mssqlserver_4846"></a>MSSQLSERVER_4846
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62913787"
 |符号名称|BULKPROV_MEMORY|  
 |消息正文|大容量数据提供程序分配内存失败。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  内存分配失败。  
   
 ## <a name="user-action"></a>用户操作  
@@ -40,7 +40,7 @@ ms.locfileid: "62913787"
   
 1.  验证其他应用程序或服务是否占用此服务器上的内存。 重新配置不太重要的应用程序或服务，使其占用更少的内存。  
   
-2.  开始收集性能监视器计数器**SQL Server:缓冲区管理器**， **SQL Server:内存管理器**。  
+2.  开始收集 **SQL Server: Buffer Manager**、**SQL Server: Memory Manager** 的性能监视器计数器。  
   
 3.  检查以下 SQL Server 内存配置参数：  
   

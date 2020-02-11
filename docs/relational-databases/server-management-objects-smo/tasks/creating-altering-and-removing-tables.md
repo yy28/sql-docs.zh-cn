@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b90e081c86aaee9fda1363185263fd6e53d4378f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095638"
 ---
 # <a name="creating-altering-and-removing-tables"></a>创建、更改和删除表
@@ -25,7 +25,7 @@ ms.locfileid: "74095638"
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中，表通过 <xref:Microsoft.SqlServer.Management.Smo.Table> 对象来表示。 在 SMO 对象层次结构中，<xref:Microsoft.SqlServer.Management.Smo.Table> 对象位于 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象的下方。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、模板和语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、模板和语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除表  
  此代码示例创建了一个包含若干具有不同类型和用途的列的表。 此代码还提供了有关以下内容的示例：如何创建标识字段、如何创建主键以及如何更改表属性。  

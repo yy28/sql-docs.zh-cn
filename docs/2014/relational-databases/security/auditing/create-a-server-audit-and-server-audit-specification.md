@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198415"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
@@ -49,9 +49,9 @@ ms.locfileid: "68198415"
   
 -   CREATE SERVER AUDIT 语句位于事务范围内。 如果对事务进行回滚，也将对该语句进行回滚。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 -   若要创建、更改或删除服务器审核，主体需要拥有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68198415"
      指定在强制处理审核操作之前可以等待的时间（毫秒）。  值 0 指示同步传递。 默认的最小值为 **1000** （1 秒）。 最大值为 2,147,483,647（2,147,483.647 秒或者 24 天 20 小时 31 分钟 23.647 秒）。  
   
      **在审核日志失败时：**  
-     **Continue**  
+     **继续**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 操作将继续。 审核记录将不会保留。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后将恢复。 选择 **“继续”** 选项可以允许未经审核的活动，这可能违反了您的安全策略。 在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的继续操作比维护完整审核更重要时，选择此选项。 这是默认选项。  
   
      **关闭服务器**  
@@ -95,7 +95,7 @@ ms.locfileid: "68198415"
      指定当“审核目标”  是文件时，要将审核数据写入的文件夹所在的位置。  
   
      **省略号 (...)**  
-     此时将打开**定位文件夹-** _server_name_对话框来指定文件路径或创建写入审核文件的文件夹。  
+     打开 "**定位文件夹**_server_name_ " 对话框，以指定文件路径或创建要写入审核文件的文件夹。  
   
      **审核文件最大限制：**  
      **最大滚动更新文件数**  
@@ -152,7 +152,7 @@ ms.locfileid: "68198415"
      **省略号 (...)**  
      打开 **“选择对象”** 对话框以基于指定的 **“对象名称”** 浏览和选择可用对象。  
   
-3.  在完成后，单击 **“确定”** 。  
+3.  完成后，单击“**确定**”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -15,15 +15,15 @@ ms.assetid: f1dfb3e8-a7bd-46c3-92b6-c19531e8409d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e2dd512ab529f1fb5d216f4a2e459cd601d40e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67943759"
 ---
 # <a name="schema-views"></a>架构视图
-应用程序可以在通过调用 ODBC 目录函数或通过使用 INFORMATION_SCHEMA 视图从 DBMS 检索元数据信息。 ANSI SQL-92 标准定义这些视图。  
+应用程序可以通过调用 ODBC 目录函数或使用 INFORMATION_SCHEMA 视图，从 DBMS 检索元数据信息。 视图由 ANSI SQL-92 标准定义。  
   
- 如果支持 DBMS 和驱动程序，INFORMATION_SCHEMA 视图将提供更强大、 最全面比 ODBC 目录函数提供检索元数据的方式。 应用程序可以执行其自己的自定义**选择**根据中的这些视图中，一个语句可以加入视图，或可以在视图上执行联合。 提供更高版本的实用工具和广泛的元数据，同时不通常支持 INFORMATION_SCHEMA 视图由 DBMS。 这可能会更改为多个 Dbms 和驱动程序实现与 SQL-92 符合性。  
+ 如果 DBMS 和驱动程序支持，则 INFORMATION_SCHEMA 视图提供了一种比 ODBC 目录函数提供的功能更强大、更全面的方法来检索元数据。 应用程序可以对其中一个视图执行其自己的自定义**SELECT**语句，可以联接视图，或者可以对视图执行联合。 尽管提供更大的实用工具和更广泛的元数据，但 DBMS 通常不支持 INFORMATION_SCHEMA 视图。 当更多 Dbms 和驱动程序实现与 SQL-92 的符合性时，这可能会发生变化。  
   
- 若要确定支持的视图，应用程序调用**SQLGetInfo** SQL_INFO_SCHEMA_VIEWS 选项。 若要从受支持的视图中检索元数据，应用程序执行**选择**语句，用于指定所需的架构信息。
+ 若要确定支持的视图，应用程序需要使用 SQL_INFO_SCHEMA_VIEWS 选项调用**SQLGetInfo** 。 若要从支持的视图中检索元数据，应用程序将执行一个**SELECT**语句，该语句指定所需的架构信息。

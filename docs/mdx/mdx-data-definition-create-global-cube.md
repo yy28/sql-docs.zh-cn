@@ -1,5 +1,5 @@
 ---
-title: CREATE GLOBAL CUBE 语句 (MDX) |Microsoft Docs
+title: CREATE GLOBAL CUBE 语句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892153"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 数据定义 - CREATE GLOBAL CUBE
 
 
-  基于服务器上某个多维数据集中的子多维数据集，创建并填充一个本地持久化多维数据集。 不需要连接到服务器就可以连接到本地持久化多维数据集。 有关本地多维数据集的详细信息, 请参阅[Analysis Services 多维数据&#41;的本地多维数据集&#40;](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)。  
+  基于服务器上某个多维数据集中的子多维数据集，创建并填充一个本地持久化多维数据集。 不需要连接到服务器就可以连接到本地持久化多维数据集。 有关本地多维数据集的详细信息，请参阅[&#40;Analysis Services 多维数据&#41;的本地多维数据集](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -104,13 +104,13 @@ FROM source_cube_name (<param list>)
  dimension_name  
  本地多维数据集中的维度的名称。  
   
- From \<dim from 子句 >  
+ FROM \<dim from 子句>  
  该规范仅对于派生维度定义有效。  
   
  NOT_RELATED_TO_FACTS  
  该规范仅对于派生维度定义有效。  
   
- \<级别类型 >  
+ \<级别类型>  
  该规范仅对于派生维度定义有效。  
   
 ## <a name="remarks"></a>备注  
@@ -133,7 +133,7 @@ FROM source_cube_name (<param list>)
   
  CREATE GLOBAL CUBE 语句遵循下列规则：  
   
--   CREATE GLOBAL CUBE 语句自动将所有命令（如计算度量值或操作）复制到本地多维数据集中。 如果某个命令包含显式引用父多维数据集的多维表达式 (MDX)，本地多维数据集将无法运行该命令。 若要避免此问题, 请在为命令定义 MDX 表达式时使用**CURRENTCUBE**关键字。 引用 MDX 表达式中的多维数据集时, **CURRENTCUBE**关键字使用当前多维数据集上下文。  
+-   CREATE GLOBAL CUBE 语句自动将所有命令（如计算度量值或操作）复制到本地多维数据集中。 如果某个命令包含显式引用父多维数据集的多维表达式 (MDX)，本地多维数据集将无法运行该命令。 若要避免此问题，请在为命令定义 MDX 表达式时使用**CURRENTCUBE**关键字。 引用 MDX 表达式中的多维数据集时， **CURRENTCUBE**关键字使用当前多维数据集上下文。  
   
 -   对于从本地多维数据集文件中包含的现有全局多维数据集创建的全局多维数据集，不能将其保存到源本地多维数据集文件中。 例如，创建一个名为 SalesLocal1 的全局多维数据集并将其保存到 C:\SalesLocal.cub 文件中。 然后，连接到 C:\SalesLocal.cub 文件并创建第二个名为 SalesLocal2 的全局多维数据集。 现在，如果试图将 SalesLocal2 全局多维数据集保存到 C:\SalesLocal.cub 文件中，将收到一个错误。 但是，可以将 SalesLocal2 全局多维数据集保存到其他本地多维数据集文件中。  
   
@@ -196,8 +196,8 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 数据定义语句&#40;mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [CREATE SESSION CUBE 语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 数据定义语句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [&#40;MDX 创建会话 CUBE 语句&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 参数 (ADO for VisualC++语法) |Microsoft Docs
+title: 参数（ADO for Visual C++ 语法） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,10 +16,10 @@ ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b97aebefa2176d3569b818751cd3b8ff039bfc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931772"
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>参数（ADO for Visual C++ 语法）
@@ -50,5 +50,5 @@ get_Value(VARIANT *pvar)
 put_Value(VARIANT val)  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [参数对象](../../../ado/reference/ado-api/parameter-object.md)
+## <a name="see-also"></a>另请参阅  
+ [Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)

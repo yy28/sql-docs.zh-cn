@@ -1,5 +1,5 @@
 ---
-title: Except (MDX) |Microsoft Docs
+title: Except （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d53a88ce78eb5a1b106cefb0832ca1023f67c000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077252"
 ---
-# <a name="except-mdx-function"></a>Except (MDX) 函数
+# <a name="except-mdx-function"></a>Except （MDX）函数
 
 
   计算两个集并删除第一个集中与第二个集中的元组重复的元组，也可以选择保留重复项。  
@@ -35,7 +35,7 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  返回集的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- 如果**所有**是指定，该函数将保留在第一个集中找到的重复项; 第二个集中找到了重复项仍将被删除。 成员的返回顺序与它们在第一个集中出现的顺序相同。  
+ 如果指定**ALL** ，则函数将保留在第一组中发现的重复项;在第二个集中找到的重复项仍将被删除。 成员的返回顺序与它们在第一个集中出现的顺序相同。  
   
 ## <a name="examples"></a>示例  
  以下示例说明了此函数的用法。  
@@ -56,8 +56,8 @@ WHERE
    ([Measures].[Order Quantity])  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [-&#40;除&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

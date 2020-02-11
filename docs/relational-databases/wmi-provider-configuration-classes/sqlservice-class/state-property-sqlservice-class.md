@@ -18,10 +18,10 @@ ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: fbccc720f30bd98660e48d7c82a132f76dcf1a26
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660848"
 ---
 # <a name="state-property-sqlservice-class"></a>State 属性（SqlService 类）
@@ -36,7 +36,7 @@ object.State [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *对象*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -65,7 +65,7 @@ object.State [= value]
  7  
  已暂停。 服务已暂停。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>另请参阅  
  [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

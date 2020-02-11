@@ -1,5 +1,5 @@
 ---
-title: ExecuteComplete 事件 (ADO) |Microsoft Docs
+title: ExecuteComplete 事件（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62b78b608526ae0d6943a7416a21687fd1e51412
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918785"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 事件 (ADO)
-**ExecuteComplete**命令执行完毕后，将调用事件。  
+执行完命令后，将调用**ExecuteComplete**事件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,30 +33,30 @@ ms.locfileid: "67918785"
 ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnection  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *RecordsAffected*  
- 一个**长**值，该值指示受命令影响的记录数。  
+ 指示受命令影响的记录数的**长整型**值。  
   
  *pError*  
- [错误](../../../ado/reference/ado-api/error-object.md)对象。 它描述了如果发生的错误的值**adStatus**是**adStatusErrorsOccurred**; 不会设置。  
+ 一个[错误](../../../ado/reference/ado-api/error-object.md)对象。 它描述了**adStatus**的值为**adStatusErrorsOccurred**时所发生的错误;否则，不会设置。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。 当调用此事件时，此参数设置为**adStatusOK**引发该事件的操作是否成功，或向**adStatusErrorsOccurred**如果操作失败。  
+ [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。 当调用此事件时，如果导致事件的操作成功，则将此参数设置为**adStatusOK** ; 如果操作失败，则设置为**adStatusErrorsOccurred** 。  
   
- 此事件返回之前，请将此参数设置为**adStatusUnwantedEvent**以防止后续的通知。  
+ 在此事件返回之前，将此参数设置为**adStatusUnwantedEvent**以防止后续通知。  
   
  *pCommand*  
- [命令](../../../ado/reference/ado-api/command-object-ado.md)已执行的对象。 包含**命令**对象调用时甚至**Connection.Execute**或**Recordset.Open**而无需显式创建**命令**在哪些情况下**命令**通过 ADO 在内部创建对象。  
+ 已执行的[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。 包含一个**命令**对象，即使在调用的是**Execute**或 Recordset 时也是如此 **。打开**时无需显式创建**命令**，在这种情况下，将在 ADO 内部创建**命令**对象。  
   
  *pRecordset*  
- 一个[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，它执行的命令的结果。 这**记录集**可能为空。 您应永远不会销毁来自此事件处理程序中的此记录集对象。 ADO 尝试访问的对象不再存在时，执行此操作将导致访问冲突。  
+ 作为执行的命令的结果的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 此**记录集**可能为空。 永远不应销毁此事件处理程序中的记录集对象。 如果 ADO 尝试访问不再存在的对象，则会导致访问冲突。  
   
  *pConnection*  
- 一个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 对其执行该操作的连接。  
+ [连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 执行操作时所用的连接。  
   
 ## <a name="remarks"></a>备注  
- **ExecuteComplete**事件可能是由于**连接。** [执行](../../../ado/reference/ado-api/execute-method-ado-connection.md)，**命令。** [执行](../../../ado/reference/ado-api/execute-method-ado-command.md)，**记录集。** [开放](../../../ado/reference/ado-api/open-method-ado-recordset.md)，**记录集。** [Requery](../../../ado/reference/ado-api/requery-method.md)，或**记录集。** [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法。  
+ 由于连接的原因，可能会发生**ExecuteComplete**事件 **。**[执行](../../../ado/reference/ado-api/execute-method-ado-connection.md)、**命令。**[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)、 **Recordset。**[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)，**记录集。**[Requery](../../../ado/reference/ado-api/requery-method.md)，或**记录集。**[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法。  
   
-## <a name="see-also"></a>请参阅  
- [ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [ADO 事件模型示例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)

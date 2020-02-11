@@ -1,5 +1,5 @@
 ---
-title: 定义查询参数对话框 （报表生成器） |Microsoft Docs
+title: "\"定义查询参数\" 对话框（报表生成器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a66d262efe80c027daf94247482e3bb2826e92a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109359"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>“定义查询参数”对话框（报表生成器）
@@ -29,7 +29,7 @@ ms.locfileid: "66109359"
  **参数值**  
  键入要用于查询参数的值。  
   
-## <a name="see-also"></a>请参阅  
- [查询设计器（报表生成器）](../../2014/reporting-services/query-designers-report-builder.md)  
+## <a name="see-also"></a>另请参阅  
+ [查询设计器 &#40;报表生成器&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
   
   

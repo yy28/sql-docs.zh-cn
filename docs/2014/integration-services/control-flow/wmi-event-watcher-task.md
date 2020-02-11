@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829507"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件观察器任务
@@ -58,7 +58,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## <a name="custom-logging-messages-available-on-the-wmi-event-watcher-task"></a>WMI 事件观察器任务可用的自定义日志记录消息  
  下表列出了 WMI 事件观察器任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志项|Description|  
+|日志项|说明|  
 |---------------|-----------------|  
 |`WMIEventWatcherEventOccurred`|指示发生了任务正在监视的事件。|  
 |`WMIEventWatcherTimedout`|指示任务已超时。|  
@@ -75,9 +75,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   定义任务对事件的响应方式。 可根据事件的不同将任务配置为成功或失败，或只是让任务重新监视事件。  
   
--   指定当 WMI 查询超时的时候任务所执行的操作。可以记录超时和超时后的状态，也可以引发自定义的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 事件，以指示 WMI 事件已超时并记录超时和超时状态。  
+-   指定当 WMI 查询超时时任务所执行的操作。可以记录超时和超时后的状态，也可以引发自定义[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]事件，以指示 WMI 事件已超时并记录超时和超时状态。  
   
--   定义任务对超时的响应方式。可将任务配置为成功或失败，或只是让任务重新监视事件。  
+-   定义任务对超时的响应方式。可以将任务配置为成功或失败，或者任务可以立即监视事件。  
   
 -   指定任务监视事件的次数。  
   
@@ -91,9 +91,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [WMI 事件观察器任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [WMI 事件观察器任务编辑器 &#40;常规 "页面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [WMI 事件观察器任务编辑器（“WMI 选项”页）](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [WMI 事件观察器任务编辑器 &#40;WMI 选项 "页&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

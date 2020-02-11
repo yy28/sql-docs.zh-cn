@@ -1,5 +1,5 @@
 ---
-title: UPDATE MEMBER 语句 (MDX) |Microsoft Docs
+title: UPDATE MEMBER 语句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 73a2bf2973d8c4f8f9bf9ac886728fb45250343f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038144"
 ---
 # <a name="mdx-data-definition---update-member"></a>MDX 数据定义 - UPDATE MEMBER
@@ -60,16 +60,16 @@ UPDATE MEMBER Cube_Name.Member_Name
   
 |属性标识符|含义|  
 |-------------------------|-------------|  
-|FORMAT_STRING|客户端应用程序可用于显示单元格的值一个 Office 样式格式字符串。|  
-|VISIBLE|指示计算成员在架构行集中是否可见的值。 可见的计算成员可以添加到与一组[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函数。 非零值表示计算成员可见。 此属性的默认值是*Visible*。<br /><br /> 不可见的计算成员通常用作更复杂的计算成员过程的中间步骤。 这些计算成员也可以由其他类型的成员（如度量值）引用。|  
+|FORMAT_STRING|一个 Office 样式格式字符串，客户端应用程序可使用该字符串显示单元值。|  
+|VISIBLE|指示计算成员在架构行集中是否可见的值。 可以使用[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函数将可见计算成员添加到集。 非零值表示计算成员可见。 此属性的默认值为*Visible*。<br /><br /> 不可见的计算成员通常用作更复杂的计算成员过程的中间步骤。 这些计算成员也可以由其他类型的成员（如度量值）引用。|  
 |NON_EMPTY_BEHAVIOR|解析空单元时，MDX 用来确定计算成员的行为的度量值或集。|  
 |CAPTION|指定客户端应用程序用来显示成员的标题的字符串值。|  
-|DISPLAY_FOLDER|指定显示文件夹的路径的字符串值，客户端应用程序将在此处显示成员。 文件夹级别的分隔符由客户端应用程序定义。 有关工具和客户端提供的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜杠 (\\) 作为级别分隔符。 若要为已定义的成员提供多个显示文件夹，请使用分号 （;）来分隔文件夹。|  
+|DISPLAY_FOLDER|指定显示文件夹的路径的字符串值，客户端应用程序将在此处显示成员。 文件夹级别的分隔符由客户端应用程序定义。 对于提供的工具和客户端[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，使用反斜杠\\（）作为级别分隔符。 若要为已定义的成员提供多个显示文件夹，请使用分号（;)来分隔文件夹。|  
 |ASSOCIATED_MEASURE_GROUP|与此成员关联的度量值组的名称。|  
   
-## <a name="see-also"></a>请参阅  
- [DROP MEMBER 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
- [CREATE MEMBER 语句 (MDX)](../mdx/mdx-data-definition-create-member.md)   
- [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [DROP MEMBER 语句 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
+ [CREATE MEMBER 语句 &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
+ [Mdx 数据定义语句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

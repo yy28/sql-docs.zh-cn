@@ -1,5 +1,5 @@
 ---
-title: 表达式上下文和查询计算 (XQuery) |Microsoft Docs
+title: 表达式上下文和查询计算（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038919"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>表达式上下文和查询计算 (XQuery)
@@ -37,7 +37,7 @@ ms.locfileid: "68038919"
 ## <a name="static-context"></a>静态上下文  
  静态上下文初始化指的是将有关对表达式进行的静态分析的所有信息放在一起的过程。 在静态上下文初始化中，要完成下列内容：  
   
--   **的边界空格**策略设置为 strip。 因此，由不保留边界空格**任何元素**并**属性**查询中的构造函数。 例如：  
+-   **边界空白**策略设置为 "条带"。 因此，该查询中的**任何元素**和**属性**构造函数都不保留边界空白。 例如：  
   
     ```  
     declare @x xml  
@@ -57,9 +57,9 @@ ms.locfileid: "68038919"
   
     -   一组预定义的命名空间。  
   
-    -   使用 WITH XMLNAMESPACES 定义的所有命名空间。 有关详细信息，请参阅[命名空间添加到查询使用 WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md))。  
+    -   使用 WITH XMLNAMESPACES 定义的所有命名空间。 有关详细信息，请参阅通过 with [XMLNAMESPACES 将命名空间添加到查询](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)中。  
   
-    -   查询 Prolog 中定义的所有命名空间。 请注意，Prolog 中的命名空间声明可覆盖 WITH XMLNAMESPACES 中的命名空间声明。 例如，在以下查询中，WITH XMLNAMESPACES 声明将其绑定到命名空间的前缀 (pd) (`https://someURI`)。 但是，在 WHERE 子句中，查询 Prolog 覆盖该绑定。  
+    -   查询 Prolog 中定义的所有命名空间。 请注意，Prolog 中的命名空间声明可覆盖 WITH XMLNAMESPACES 中的命名空间声明。 例如，在下面的查询中，WITH XMLNAMESPACES 声明了一个将其绑定到命名空间（`https://someURI`）的前缀（pd）。 但是，在 WHERE 子句中，查询 Prolog 覆盖该绑定。  
   
         ```  
         WITH XMLNAMESPACES ('https://someURI' AS pd)  
@@ -77,9 +77,9 @@ ms.locfileid: "68038919"
   
      所有这些命名空间绑定都在静态上下文初始化过程中解析。  
   
--   如果查询类型化**xml**列或变量，将导入到静态上下文与列或变量相关联的 XML 架构集合的组件。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
+-   如果查询类型化的**xml**列或变量，则与列或变量相关联的 xml 架构集合的组件将导入到静态上下文中。 有关详细信息，请参阅[将类型化的 xml 与非类型化的 Xml 比较](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
--   对于导入架构中的每个原子类型，也可在静态上下文中使用转换函数。 下面的示例说明了这一点。 在此示例中，指定一个查询针对类型化**xml**变量。 与此变量关联的 XML 架构集合定义了原子类型 myType。 此类型的转换函数相对应**myType()** ，可在静态分析过程。 查询表达式 (`ns:myType(0)`) 返回 myType 类型的值。  
+-   对于导入架构中的每个原子类型，也可在静态上下文中使用转换函数。 下面的示例说明了这一点。 在此示例中，对类型化的**xml**变量指定了查询。 与此变量关联的 XML 架构集合定义了原子类型 myType。 对于此类型，转换函数**myType （）** 在静态分析过程中可用。 查询表达式 (`ns:myType(0)`) 返回 myType 类型的值。  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -104,7 +104,7 @@ ms.locfileid: "68038919"
     SELECT @var.query('declare namespace ns="myNS"; ns:myType(0)')  
     ```  
   
-     在下面的示例中，为强制转换函数**int**在表达式中指定内置 XML 类型。  
+     在下面的示例中， **int**内置 XML 类型的强制转换函数是在表达式中指定的。  
   
     ```  
     declare @x xml  
@@ -119,7 +119,7 @@ ms.locfileid: "68038919"
   
 2.  解析在表达式中指定的函数和类型名称。  
   
-3.  对查询执行静态类型化。 这可确保查询类型安全。 例如，以下查询返回静态错误，因为 **+** 运算符要求 numeric primitive 类型参数：  
+3.  对查询执行静态类型化。 这可确保查询类型安全。 例如，下面的查询将返回一个静态错误，因为**+** 运算符需要数值基元类型参数：  
   
     ```  
     declare @x xml  
@@ -127,7 +127,7 @@ ms.locfileid: "68038919"
     SELECT @x.query('"x" + 4')  
     ```  
   
-     在以下示例中， **value （)** 运算符要求单一参数。 根据指定的 XML 架构中，可以有多个\<Elem > 元素。 对表达式进行的静态分析确定它是非类型安全，并返回静态错误。 若要解决该错误，必须重写表达式以显式指定单一参数 (`data(/x:Elem)[1]`)。  
+     在下面的示例中， **value （）** 运算符要求单一实例。 根据 XML 架构中的指定，可以有多个\<Elem> 元素。 对表达式进行的静态分析确定它是非类型安全，并返回静态错误。 若要解决该错误，必须重写表达式以显式指定单一参数 (`data(/x:Elem)[1]`)。  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  
@@ -145,14 +145,14 @@ ms.locfileid: "68038919"
     SELECT @x.value('declare namespace x="myNS"; data(/x:Elem)[1]','varchar(20)')  
     ```  
   
-     有关详细信息，请参阅[XQuery 与静态类型化](../xquery/xquery-and-static-typing.md)。  
+     有关详细信息，请参阅[XQuery 和静态类型](../xquery/xquery-and-static-typing.md)化。  
   
 ### <a name="implementation-restrictions"></a>实现限制  
  下面是与静态上下文有关的限制：  
   
 -   不支持 XPath 兼容模式。  
   
--   对于 XML 构造，仅支持 strip 构造模式。 这是默认设置。 因此，构造的元素节点的类型为**xdt： 非类型化**类型，并且属性属于**xdt: untypedatomic**类型。  
+-   对于 XML 构造，仅支持 strip 构造模式。 这是默认设置。 因此，构造元素节点的类型为**xdt：非类型化**类型，属性为**xdt： untypedAtomic**类型。  
   
 -   仅支持 ordered 排序模式。  
   
@@ -160,20 +160,20 @@ ms.locfileid: "68038919"
   
 -   不支持基准 URI 功能。  
   
--   **fn:doc()** 不受支持。  
+-   **fn： doc （）** 不受支持。  
   
--   **fn:collection()** 不受支持。  
+-   **fn： collection （）** 不受支持。  
   
 -   不提供 XQuery 静态标记。  
   
--   与关联的排序规则**xml**使用数据类型。 将此排序规则始终设置为 Unicode 码位排序规则。  
+-   使用与**xml**数据类型关联的排序规则。 将此排序规则始终设置为 Unicode 码位排序规则。  
   
 ## <a name="dynamic-context"></a>动态上下文  
  动态上下文指的是在执行表达式时必须可用的信息。 除了静态上下文以外，在动态上下文初始化中，还要完成下列内容：  
   
--   初始化上下文项、上下文位置和上下文大小等表达式的主要项，如下所示。 请注意，所有这些值可以通过重写[nodes （） 方法](../t-sql/xml/nodes-method-xml-data-type.md)。  
+-   初始化上下文项、上下文位置和上下文大小等表达式的主要项，如下所示。 请注意，所有这些值都可以由[节点（）方法](../t-sql/xml/nodes-method-xml-data-type.md)重写。  
   
-    -   **Xml**数据类型设置的上下文项，为文档节点正在处理的节点。  
+    -   **Xml**数据类型将上下文项（正在处理的节点）设置为文档节点。  
   
     -   上下文位置（即上下文项相对于正在处理的节点的位置）首先设置为 1。  
   
@@ -182,15 +182,15 @@ ms.locfileid: "68038919"
 ### <a name="implementation-restrictions"></a>实现限制  
  下面是与动态上下文有关的限制：  
   
--   **当前日期和时间**上下文函数**fn:current-日期**， **fn:current-时间**，以及**fn:current-dateTime**，不是受支持。  
+-   **当前日期和时间**上下文函数（ **fn： current-date**、 **fn： current**和**fn： current**）不受支持。  
   
--   **隐式时区**固定为 UTC + 0，不能更改。  
+-   **隐式时区**固定为 UTC + 0，并且不能更改。  
   
--   **Fn:doc()** 不支持函数。 所有查询都执行针对**xml**类型列或变量。  
+-   不支持**fn： doc （）** 函数。 对**xml**类型列或变量执行所有查询。  
   
--   **Fn:collection()** 不支持函数。  
+-   不支持**fn： collection （）** 函数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)   
  [类型化的 XML 与非类型化的 XML 的比较](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 架构集合 (SQL Server)](../relational-databases/xml/xml-schema-collections-sql-server.md)  

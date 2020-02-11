@@ -1,5 +1,5 @@
 ---
-title: 处理返回代码和输出参数 (ODBC) |Microsoft Docs
+title: 处理返回代码和输出参数（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205573"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>处理返回代码和输出参数 (ODBC)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数从服务器发送的最后一个数据包和不可用于应用程序，直到[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)返回 sql_no_data 为止。 如果从存储过程返回错误，则调用 SQLMoreResults 可以前进到下一个结果，直到返回 SQL_NO_DATA。  
+  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数在服务器的最后一个数据包中发送，在[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)返回 SQL_NO_DATA 之前，这些参数对应用程序不可用。 如果在存储过程中返回错误，请调用 SQLMoreResults 以转到下一个结果，直到返回 SQL_NO_DATA。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>处理返回代码和输出参数  
   
 1.  构造使用 ODBC CALL 转义序列的 SQL 语句。 该语句应当对每个输入、输入/输出和输出参数以及过程返回值（如果有）使用参数标记。  
   
-2.  调用[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)对每个输入、 输入/输出和输出参数，以及过程返回值 （如果有）。  
+2.  为每个输入、输入/输出和输出参数以及过程返回值（如果有）调用[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 。  
   
 3.  用 `SQLExecDirect` 执行语句。  
   
@@ -39,15 +40,15 @@ ms.locfileid: "68205573"
 ## <a name="example"></a>示例  
  此示例显示如何处理返回代码和输出参数。 IA64 平台不支持此示例。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
- 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （可以从 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384)（Microsoft SQL Server 示例和社区项目）主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（该驱动程序的名称为“SQL Server”）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
+ 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （您可以从 " [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)" 主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（驱动程序名称为 "SQL Server"）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建此示例使用的存储的过程。  
+ 第一个（[!INCLUDE[tsql](../../includes/tsql-md.md)]）代码列表创建此示例使用的存储过程。  
   
  使用 odbc32.lib 编译第二个 (C++) 代码列表。 然后，执行该程序。  
   
- 第三个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表删除此示例使用存储的过程。  
+ 第三个[!INCLUDE[tsql](../../includes/tsql-md.md)]（）代码列表删除此示例使用的存储过程。  
   
 ```  
 use AdventureWorks  
@@ -188,7 +189,7 @@ DROP PROCEDURE TestParm
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [运行存储的过程操作指南主题&#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [运行存储过程操作指南主题 &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
   

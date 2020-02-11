@@ -14,20 +14,20 @@ ms.assetid: 02c9a75c-2103-4f68-a1db-e31f7e0f1f03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f7c90dacc375877b4e449b8d59533ce75ff8a4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076836"
 ---
 # <a name="deferred-buffers"></a>延迟的缓冲区
-一个*延迟的缓冲区*是一个其值用于在某个时间*后*函数调用中指定。 例如， **SQLBindParameter**用于将相关联，或*绑定，* 具有中的 SQL 语句的参数的数据缓冲区。 应用程序指定参数的编号，并通过地址、 字节长度和类型的缓冲区。 驱动程序将保存此信息，但不检查缓冲区的内容。 更高版本，当应用程序执行该语句，该驱动程序检索信息，并使用它来检索参数数据并将其发送到数据源。 因此，将延迟的输入缓冲区中的数据。 因为延迟的缓冲区是在一个函数中指定，在另一个中使用，它是编程错误的应用程序以释放延迟的缓冲区，而该驱动程序仍期望它可存在;有关详细信息，请参阅[Allocating 和释放缓冲区](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)，在本部分中更高版本。  
+*延迟缓冲区*是指在函数调用中指定一个时间*后*在某个时间使用该值的缓冲区。 例如，使用**SQLBindParameter**可将数据缓冲区与 SQL 语句*中的参数*相关联。 应用程序指定参数号，并传递缓冲区的地址、字节长度和类型。 驱动程序将保存此信息，但不检查缓冲区的内容。 稍后，当应用程序执行该语句时，驱动程序会检索信息，并使用它检索参数数据并将其发送到数据源。 因此，缓冲区中的数据输入将延迟。 由于延迟缓冲区是在一个函数中指定并在另一个函数中使用的，因此，当驱动程序仍预期存在延迟缓冲区时，它是一个应用程序编程错误，有关详细信息，请参阅本节后面的[分配和释放缓冲区](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)。  
   
- 可以延迟输入和输出缓冲区。 下表概述了延迟的缓冲区的使用。 请注意，使用指定绑定到结果集列的延迟的缓冲区**SQLBindCol**，并使用指定绑定到 SQL 语句参数的延迟的缓冲区**SQLBindParameter**。  
+ 输入和输出缓冲区都可以推迟。 下表总结了延迟缓冲区的用法。 请注意，绑定到结果集列的延迟缓冲区是通过**SQLBindCol**指定的，并且绑定到 SQL 语句参数的延迟缓冲区是通过**SQLBindParameter**指定的。  
   
-|缓冲区使用|type|使用指定|使用者|  
+|缓冲区使用|类型|指定的|使用者|  
 |----------------|----------|--------------------|-------------|  
-|发送输入参数的数据|延迟的输入|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
-|若要更新或插入行在结果中将数据发送设置|延迟的输入|**SQLBindCol**|**SQLSetPos**|  
-|对于输出参数和输入/输出参数返回数据|延迟的输出|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
+|发送输入参数的数据|延迟输入|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
+|发送数据以更新或在结果集中插入行|延迟输入|**SQLBindCol**|**SQLSetPos**|  
+|返回输出和输入/输出参数的数据|延迟的输出|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
 |返回结果集数据|延迟的输出|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|

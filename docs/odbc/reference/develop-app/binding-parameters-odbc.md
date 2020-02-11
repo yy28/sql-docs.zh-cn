@@ -13,20 +13,20 @@ ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bc40d4800e7cd013b7ac908400c0492286314e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107628"
 ---
 # <a name="binding-parameters-odbc"></a>绑定参数 ODBC
-SQL 语句中的每个参数必须为关联，或*绑定，* 到应用程序之前执行该语句中的变量。 当应用程序将变量绑定到参数时，它描述了该驱动程序到该变量的地址、 C 数据类型等的。 它还介绍了参数本身的 SQL 数据类型、 精度和等等。 驱动程序将此信息存储在它维护适用于该语句，并使用的信息来检索该变量值时执行该语句的结构。  
+在执行语句前，必须将 SQL 语句中的每个参数关联或*绑定*到应用程序中的变量。 当应用程序将变量绑定到参数时，它会对驱动程序描述变量地址、C 数据类型等。 还介绍了参数本身-SQL 数据类型、精度等。 驱动程序将此信息存储在它为该语句维护的结构中，并在执行语句时使用该信息检索变量中的值。  
   
- 可绑定参数，或将其重新绑定的任意时间之前执行的语句。 如果执行语句后会重新绑定参数，直到再次执行该语句不适用于绑定。 若要将参数绑定到一个不同的变量，应用程序只需重新绑定与新的变量; 参数自动释放以前的绑定。  
+ 在执行语句之前，可以随时绑定或重新绑定参数。 如果在执行语句后重新绑定参数，则在再次执行该语句之前，将不会应用绑定。 若要将参数绑定到不同的变量，应用程序只需使用新变量重新绑定参数;上一个绑定会自动释放。  
   
- 变量将不同的变量绑定到参数，直到通过调用所有参数之间的都绑定一直绑定到参数**SQLFreeStmt**使用 SQL_RESET_PARAMS 选项，或直到该语句被释放。 出于此原因，应用程序必须确保该变量，不会释放直到后未绑定。 有关详细信息，请参阅[Allocating 和释放缓冲区](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)。  
+ 在将其他变量绑定到参数之前，变量保持绑定到参数，直到通过使用 SQL_RESET_PARAMS 选项调用**SQLFreeStmt**来解除所有参数的绑定，或直到语句释放。 出于此原因，应用程序必须确保在变量未绑定之前不会将其释放。 有关详细信息，请参阅[分配和释放缓冲区](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)。  
   
- 由于参数绑定只是存储在该语句将驱动程序维护的结构中的信息，可以按任何顺序设置它们。 它们也是独立于执行 SQL 语句。 例如，假设应用程序将绑定三个参数，然后执行以下 SQL 语句：  
+ 由于参数绑定只是存储在由语句的驱动程序所维护的结构中的信息，因此可按任意顺序进行设置。 它们还独立于所执行的 SQL 语句。 例如，假设应用程序绑定三个参数，然后执行以下 SQL 语句：  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)  
@@ -38,9 +38,9 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?  
 ```  
   
- 在同一语句句柄的参数绑定**插入**使用语句，因为这些语句结构中存储的绑定。 在大多数情况下，这是好的编程做法，应避免使用。 相反，应用程序应调用**SQLFreeStmt** SQL_RESET_PARAMS 选项来取消绑定所有旧的参数，然后将新的绑定。  
+ 在同一语句句柄上，使用**INSERT**语句的参数绑定，因为这些是存储在语句结构中的绑定。 在大多数情况下，这是一种不太好的编程做法，应避免这样做。 相反，应用程序应调用带有 SQL_RESET_PARAMS 选项的**SQLFreeStmt** ，以取消所有旧参数的绑定，然后绑定新参数。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [绑定参数标记](../../../odbc/reference/develop-app/binding-parameter-markers.md)  
   

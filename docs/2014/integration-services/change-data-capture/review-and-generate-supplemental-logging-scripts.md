@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68aa51facd21ec09be78e6ad0996131a9ee3cc5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835334"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>查看和生成补充日志记录脚本
@@ -53,8 +53,8 @@ ms.locfileid: "62835334"
   
 2.  为该文件提供一个名称，然后单击 **“保存”** 以便保存该文件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何编辑 CDC 实例属性](how-to-edit-the-cdc-instance-properties.md)   
- [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)  
+ [用于运行脚本的 Oracle 凭据](oracle-credentials-for-running-script.md)  
   
   

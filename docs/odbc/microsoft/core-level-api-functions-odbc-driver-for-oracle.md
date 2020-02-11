@@ -1,5 +1,5 @@
 ---
-title: 核心级别 API 函数 （Oracle ODBC 驱动程序） |Microsoft Docs
+title: 核心级 API 函数（Oracle ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,40 +16,40 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc95ec17dc221cb77bd94fc3378af483aeee92dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081972"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>核心级别 API 函数（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
+>  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 Oracle 提供的 ODBC 驱动程序。  
   
- 在此级别的函数组成的最低级别的 ODBC 驱动程序的接口一致性。  
+ 此级别的功能包含 ODBC 驱动程序的最小接口一致性级别。  
   
 |API 函数|说明|  
 |------------------|-----------|  
-|**SQLAllocConnect**|为连接句柄，分配内存*hdbc*，由标识在环境中*henv*。 驱动程序管理器处理此调用，并调用在驱动程序**SQLAllocConnect**函数每当**SQLConnect**， **SQLBrowseConnect**，或**SQLDriverConnect**调用。|  
-|**SQLAllocEnv**|显示一个对话框，指定的 Oracle 客户端软件的要求，然后返回 SQL_NULL_HANDLE。 如果未安装 Oracle 客户端软件，此函数分配环境句柄，内存*henv*，并初始化应用程序使用的 ODBC 调用级别接口。|  
-|**SQLAllocStmt**|为语句句柄分配内存并将语句句柄与 hdbc 所指定的连接相关联。 驱动程序管理器将传递给驱动程序，后者为 hstmt 结构分配内存的此调用。|  
-|**SQLBindCol**|分配结果列的存储空间，并指定结果的类型。|  
-|**SQLCancel**|取消语句句柄，hstmt 上的处理。 在某些情况下，Oracle 不允许取消的正在运行的语句。 这意味着将继续运行的语句，直到 Oracle 完成的过程时，Oracle ODBC 驱动程序取消这段时间的语句的结果。|  
-|**SQLColAttributes**|在结果集中返回列的描述符信息。 描述符信息返回为字符串、 一个 32 位依赖于描述符的值或一个整数值。|  
-|**SQLConnect**|连接到数据源。 若要使用 Oracle 操作系统身份验证，请指定"/"作为*szUID*参数和""作为*szAuthStr*参数。|  
-|**SQLDescribeCol**|返回名称、 类型、 精度、 小数位数和给定的结果列的为 null 性。 **注意：SQLDescribeCol**报告为 SQL_VARCHAR 的计算的列。|  
-|**SQLDisconnect**|关闭连接。 如果共享环境中启用连接池和应用程序调用**SQLDisconnect**上在该环境中的连接，连接将返回到连接池，并且仍可用于使用其他组件同一个共享的环境中。|  
-|**SQLError**|返回有关最后一个错误的错误或状态信息。 驱动程序保持堆栈或可返回的错误的列表*hstmt*， *hdbc*，并*henv*参数，具体取决于如何在调用**SQLError**进行。 每个语句后刷新错误队列。 通常检索 Oracle 错误消息，否则为空。|  
-|**SQLExecDirect**|执行新的、 尚未准备好的 SQL 语句。 如果在语句中存在任何参数，驱动程序将使用参数标记变量的当前值。 如果表、 视图或字段名称包含空格，将名称括在返回引号标记。 例如，如果您的数据库包含名为的表*My Table*和字段*My Field*，括起来的标识符的每个元素如下所示：<br /><br /> 选择\`我的表\`。 \`我 Field1\`，;\`我的表\`。\`我 Field2\` FROM\`我的表\`|  
-|**SQLExecute**|执行已准备的 SQL 语句 (已准备的语句**SQLPrepare**)。 如果在语句中存在任何参数，驱动程序将使用参数标记变量的当前值。|  
-|**SQLFetch**|从设置到由以前调用的指定的位置的结果中检索一行**SQLBindCol**。 准备驱动程序用于调用**SQLGetData**未绑定列。|  
-|**SQLFreeConnect**|释放连接句柄并释放所有内存分配的句柄。|  
-|**SQLFreeEnv**|关闭 Oracle ODBC 驱动程序并释放与该驱动程序相关联的所有内存。|  
-|**SQLFreeStmt**|与特定 hstmt 关联的处理将停止、 关闭任何打开的游标与 hstmt 关联、 放弃挂起的结果，和 （可选） 释放与语句句柄关联的所有资源。|  
-|**SQLGetCursorName**|返回与给定 hstmt 相关联的游标的名称。|  
-|**SQLNumResultCols**|在结果集游标中返回列的数。|  
-|**SQLPrepare**|通过规划如何优化并执行语句，准备 SQL 语句。 通过执行编译 SQL 语句**SQLExecDirect**。<br /><br /> 如果表、 视图或字段名称包含空格，将名称括在返回引号标记。 例如，如果您的数据库包含名为的表*My Table*和字段*My Field*，括起来的标识符的每个元素，如下所示：<br /><br /> 选择\`我的表\`。\`My Field\` FROM\`我的表\`<br /><br /> 有关使用结果集包含作为正式参数的数组的信息，请参阅[从存储过程返回数组参数](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)。|  
-|**SQLRowCount**|Oracle 不提供任何方法来确定的结果集之前提取的最后一行后，因此会返回-1 中的行数。|  
-|**SQLSetCursorName**|将游标名称与活动语句句柄，相关联*hstmt*。|  
-|**SQLSetParam**|替换为 SQLBindParameter ODBC 2 中的。*x*。|  
-|**SQLTransact**|请求提交或回滚操作上的所有语句句柄 (hstmt) 与连接关联的所有活动操作或与环境句柄，关联的所有连接*henv*。 如果提交失败时在手动模式下，事务将保持活动状态;您可以选择回滚事务，或重试提交操作。 如果提交操作失败时在自动事务模式下，事务将自动回滚;事务不能为非活动状态。|
+|**SQLAllocConnect**|为*henv*标识的环境中的连接句柄*hdbc*分配内存。 每当调用**SQLConnect**、 **SQLBrowseConnect**或**SQLDriverConnect**时，驱动程序管理器就会处理此调用并调用驱动程序的**SQLAllocConnect**函数。|  
+|**SQLAllocEnv**|显示一个对话框，该对话框指定 Oracle 客户端软件的要求，然后返回 SQL_NULL_HANDLE。 如果未安装 Oracle 客户端软件，则此函数将为环境句柄*henv*分配内存，并初始化 ODBC 调用级别接口以供应用程序使用。|  
+|**SQLAllocStmt**|为语句句柄分配内存，并将语句句柄与 hdbc 指定的连接关联。 驱动程序管理器将此调用传递给驱动程序，后者为 hstmt 结构分配内存。|  
+|**SQLBindCol**|为结果列分配存储空间，并指定结果的类型。|  
+|**SQLCancel**|取消对语句句柄 hstmt 的处理。 在某些情况下，Oracle 不允许取消正在运行的语句。 这意味着正在运行的语句将继续执行，直到 Oracle 完成该过程，此时由 ODBC Driver for Oracle 取消语句的结果。|  
+|**SQLColAttributes**|返回结果集中列的描述符信息。 说明符信息以字符串、32位说明符相关值或整数值的形式返回。|  
+|**SQLConnect**|连接到数据源。 若要使用 Oracle 操作系统身份验证，请将 "/" 指定为*szUID*参数，将 "" 指定为*szAuthStr*参数。|  
+|**SQLDescribeCol**|返回给定结果列的名称、类型、精度、小数位数和可为 null 性。 **注意： SQLDescribeCol**报告计算列 SQL_VARCHAR。|  
+|**SQLDisconnect**|关闭连接。 如果为共享环境启用了连接池，并且应用程序对该环境中的连接调用**SQLDisconnect** ，则连接将返回到连接池，并且仍可用于使用相同共享环境的其他组件。|  
+|**SQLError**|返回有关上一个错误的错误或状态信息。 驱动程序将维护一个堆栈或可为*hstmt*、 *hdbc*和*henv*参数返回的错误列表，具体取决于对**SQLError**的调用的方式。 在每个语句后刷新错误队列。 通常检索 Oracle 错误消息，否则为空。|  
+|**SQLExecDirect**|执行不准备的新 SQL 语句。 如果语句中存在任何参数，则驱动程序将使用参数标记变量的当前值。 如果表、视图或字段的名称包含空格，则用引号将名称括起来。 例如，如果您的数据库中包含一个名为 *"我的表*" 和 "*我*的字段" 字段，则将标识符的每个元素括起来，如下所示：<br /><br /> 选择\`"我\`的表"。 \`我的\`Field1，;\`我的\`表。\`我的\`表\`中的 Field2\`|  
+|**SQLExecute**|执行已准备的 SQL 语句（已由**SQLPrepare**准备的语句）。 如果语句中存在任何参数，则驱动程序将使用参数标记变量的当前值。|  
+|**SQLFetch**|从结果集中检索一行，并将其放入之前对**SQLBindCol**的调用指定的位置。 准备驱动程序，以便为未绑定的列调用**SQLGetData** 。|  
+|**SQLFreeConnect**|释放连接句柄，释放分配给该句柄的所有内存。|  
+|**SQLFreeEnv**|关闭 Oracle 的 ODBC 驱动程序并释放与该驱动程序关联的所有内存。|  
+|**SQLFreeStmt**|停止与特定 hstmt 关联的处理，关闭与 hstmt 关联的任何打开的游标，放弃挂起的结果，并选择性地释放与该语句句柄关联的所有资源。|  
+|**SQLGetCursorName**|返回与给定 hstmt 关联的游标的名称。|  
+|**SQLNumResultCols**|返回结果集游标中的列数。|  
+|**SQLPrepare**|通过计划如何优化和执行语句来准备 SQL 语句。 为执行**SQLExecDirect**编译 SQL 语句。<br /><br /> 如果表、视图或字段的名称包含空格，则用引号将名称括起来。 例如，如果您的数据库包含名为 *"我的表*" 和 "*我*的字段" 字段的表，则将标识符的每个元素括起来，如下所示：<br /><br /> 选择\`"我\`的表"。\`我的\`表\`中的字段\`<br /><br /> 有关使用包含数组作为形参的结果集的信息，请参阅[从存储过程返回数组参数](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)。|  
+|**SQLRowCount**|在提取最后一行后，Oracle 不提供确定结果集中的行数的方法，因此返回-1。|  
+|**SQLSetCursorName**|将游标名称与活动语句句柄*hstmt*关联。|  
+|**SQLSetParam**|替换为 ODBC 2 中的 SQLBindParameter。*x*。|  
+|**SQLTransact**|对于与连接关联的所有语句句柄（hstmt）或与环境句柄*henv*关联的所有连接，请求提交或回滚操作。 如果在手动模式下提交失败，则事务将保持活动状态;您可以选择回滚事务或重试提交操作。 如果在自动事务模式下提交操作失败，则将自动回滚事务;该事务不能处于非活动状态。|

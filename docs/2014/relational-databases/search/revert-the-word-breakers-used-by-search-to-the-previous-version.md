@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874723"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>将搜索功能所使用的断字符还原到以前的版本
@@ -22,7 +22,7 @@ ms.locfileid: "70874723"
   
  本主题不讨论以下语言：  
   
--   **英语**。 若要恢复或还原英语组件，请参阅 [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
+-   **英语**。 若要恢复或还原英语组件，请参阅 [更改用于美国英语和英国英语的断字符](change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
   
 -   **丹麦语、波兰语和土耳其语**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的先前版本附带的丹麦语、波兰语和土耳其语的第三方断字符已替换为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 组件。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "70874723"
   
 |当前文件|以前的文件|受影响语言的数目|针对文件的操作|针对注册表项的操作|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
-|NaturalLanguage6.dll|NaturalLanguage6.dll|34|获取并安装早期版本的 NaturalLanguage6.dll，覆盖当前版本的文件。|不需要执行任何操作。<br /><br /> 对于此版本，注册表项和值未更改。|  
+|NaturalLanguage6.dll|NaturalLanguage6.dll|34|获取并安装早期版本的 NaturalLanguage6.dll，覆盖当前版本的文件。|无需采取措施。<br /><br /> 对于此版本，注册表项和值未更改。|  
 |（其他文件名）|NaturalLanguage6.dll|5|获取并安装早期版本的 NaturalLanguage6.dll，覆盖当前版本的文件。|更改一组注册表项以便指定组件的以前版本。|  
-|（其他文件名）|（其他文件名）|6|不需要执行任何操作。<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序将组件的当前版本和以前版本都复制到 Binn 文件夹。|更改一组注册表项以便指定组件的以前版本。|  
+|（其他文件名）|（其他文件名）|6|无需采取措施。<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序将组件的当前版本和以前版本都复制到 Binn 文件夹。|更改一组注册表项以便指定组件的以前版本。|  
   
 > [!WARNING]  
 >  如果您使用其他版本替换文件 NaturalLanguage6.dll 的当前版本，则使用此文件的所有语言的行为都将受到影响。  
@@ -76,9 +76,9 @@ ms.locfileid: "70874723"
 |马拉雅拉姆语|mal|1100|  
 |马拉地语|mar|1102|  
 |马来语|msl|1086|  
-|非特定语言|非特定语言|0000|  
+|中立|中立|0000|  
 |挪威语（博克马尔）|nor|1044|  
-|旁遮普语|pan|1094|  
+|旁遮普语|平底锅|1094|  
 |葡萄牙语|ptg|2070|  
 |葡萄牙语（巴西） |ptb|1046|  
 |罗马尼亚语|rom|1048|  
@@ -152,7 +152,7 @@ ms.locfileid: "70874723"
     > [!WARNING]  
     >  此更改影响在当前版本和以前版本中均使用 NaturalLanguage6.dll 的所有语言。  
   
-5.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+5.  在注册表中，导航到以下节点： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><InstanceRoot \MSSearch\CLSID**。  
   
 6.  使用以下步骤添加 COM ClassID 的新键，用于所选语言的以前的断字符和词干分析器接口：  
   
@@ -164,7 +164,7 @@ ms.locfileid: "70874723"
   
     4.  如果所选语言使用某一词干分析器，则将该键值的（默认）数据更新为来自该表的以前的词干分析器的文件名。  
   
-7.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** 。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
+7.  在注册表中，导航到以下节点： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
   
 8.  将 **WBreakerClass** 键值更新为来自当前断字符的表的值。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "70874723"
     > [!WARNING]  
     >  此更改影响在当前版本和以前版本中均使用 NaturalLanguage6.dll 的所有语言。  
   
-3.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+3.  在注册表中，导航到以下节点： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><InstanceRoot \MSSearch\CLSID**。  
   
 4.  如果以下键不存在，则使用以下步骤为所选语言的当前断字符和词干分析器接口的 COM ClassID 添加新键：  
   
@@ -193,7 +193,7 @@ ms.locfileid: "70874723"
   
     4.  如果所选语言使用某一词干分析器，则将该键值的（默认）数据更新为来自该表的当前词干分析器的文件名。  
   
-5.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** 。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
+5.  在注册表中，导航到以下节点： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
   
 6.  将 **WBreakerClass** 键值更新为来自以前断字符的表的值。  
   
@@ -212,8 +212,8 @@ ms.locfileid: "70874723"
 |---------------|------------------|-------------|  
 |以前的 CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |以前的文件名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|当前的 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|InclusionThresholdSetting|  
-|当前文件名|MSWB7.dll|InclusionThresholdSetting|  
+|当前的 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|无|  
+|当前文件名|MSWB7.dll|无|  
   
  **德语 (deu)，LCID 1031**  
   
@@ -230,8 +230,8 @@ ms.locfileid: "70874723"
 |---------------|------------------|-------------|  
 |以前的 CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |以前的文件名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|当前的 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|InclusionThresholdSetting|  
-|当前文件名|MsWb70011.dll|InclusionThresholdSetting|  
+|当前的 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|无|  
+|当前文件名|MsWb70011.dll|无|  
   
  **荷兰语 (nld)，LCID 1043**  
   
@@ -261,8 +261,8 @@ ms.locfileid: "70874723"
 |简体中文|chs|2052|  
 |繁体中文|cht|1028|  
 |泰语|tha|1054|  
-|繁体中文|zh-hk|3076|  
-|繁体中文|zh-mo|5124|  
+|中文(繁体)|zh-hk|3076|  
+|中文(繁体)|zh-mo|5124|  
 |简体中文|zh-sg|4100|  
   
  前面的表在缩写列上按字母顺序排序。  
@@ -273,7 +273,7 @@ ms.locfileid: "70874723"
   
 1.  不要从 Binn 文件夹中删除组件的当前版本的文件。  
   
-2.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+2.  在注册表中，导航到以下节点： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><InstanceRoot \MSSearch\CLSID**。  
   
 3.  使用以下步骤添加 COM ClassID 的新键，用于所选语言的以前的断字符和词干分析器接口：  
   
@@ -285,7 +285,7 @@ ms.locfileid: "70874723"
   
     4.  如果所选语言使用某一词干分析器，则将该键值的（默认）数据更新为来自该表的以前的词干分析器的文件名。  
   
-4.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** 。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
+4.  在注册表中，导航到以下节点： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
   
 5.  将 **WBreakerClass** 键值更新为来自当前断字符的表的值。  
   
@@ -297,7 +297,7 @@ ms.locfileid: "70874723"
   
 1.  不要从 Binn 文件夹中删除组件的以前版本的文件。  
   
-2.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+2.  在注册表中，导航到以下节点： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><InstanceRoot \MSSearch\CLSID**。  
   
 3.  如果以下键不存在，则使用以下步骤为所选语言的当前断字符和词干分析器接口的 COM ClassID 添加新键：  
   
@@ -309,7 +309,7 @@ ms.locfileid: "70874723"
   
     4.  如果所选语言使用某一词干分析器，则将该键值的（默认）数据更新为来自该表的当前词干分析器的文件名。  
   
-4.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** 。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
+4.  在注册表中，导航到以下节点： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
   
 5.  将 **WBreakerClass** 键值更新为来自以前断字符的表的值。  
   
@@ -346,8 +346,8 @@ ms.locfileid: "70874723"
 |---------------|------------------|-------------|  
 |以前的 CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |以前的文件名|Thawbrkr.dll|Thawbrkr.dll|  
-|当前的 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|InclusionThresholdSetting|  
-|当前文件名|MsWb7001e.dll|InclusionThresholdSetting|  
+|当前的 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|无|  
+|当前文件名|MsWb7001e.dll|无|  
   
  **繁体中文 (zh-hk)，LCID 3076**  
   
@@ -377,7 +377,7 @@ ms.locfileid: "70874723"
 |当前文件名|MsWb70804.dll|  
   
 ## <a name="see-also"></a>另请参阅  
- [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [全文搜索的行为更改](../../database-engine/behavior-changes-to-full-text-search.md)  
+ [更改用于美国英语和英国英语的断字符](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [对全文搜索的行为更改](../../database-engine/behavior-changes-to-full-text-search.md)  
   
   

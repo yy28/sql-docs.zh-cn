@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023907"
 ---
-# <a name="mssqleng024070"></a>MSSQL_ENG024070
+# <a name="mssql_eng024070"></a>MSSQL_ENG024070
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -32,10 +32,10 @@ ms.locfileid: "63023907"
 |符号名称||  
 |消息正文|客户端没有所需的特权。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  这是一个常规错误，不管是否进行复制，都会引发该错误。 对于复制拓扑中的服务器，引发该错误的原因通常是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 服务控制管理器，而不是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 配置管理器来更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户。 当您在更改服务帐户后尝试运行代理作业时，作业可能会失败，并显示类似如下的错误消息：  
   
- "作为用户执行：\<用户帐户 >。 复制-复制快照子系统： 代理\<代理名称 > 失败。 作为用户执行：\<用户帐户 >。 客户端没有所需的特权。 该步骤失败。 `[SQLSTATE 42000] (Error 14151)` 的用户。 该步骤失败。”  
+ "以用户身份执行\<：用户帐户>。 复制-复制快照子系统：代理\<代理名称> 失败。 以用户身份执行\<：用户帐户>。 客户端没有所需的特权。 该步骤失败。 `[SQLSTATE 42000] (Error 14151)`. 该步骤失败。”  
   
  出现此问题的原因是 Windows 服务控制管理器无法向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的新服务帐户授予所需权限。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63023907"
   
  成为此安全组的成员，便可以向新帐户授予运行复制代理作业所需的权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)   
  [管理复制中的登录名和密码](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [SQL Server 配置管理器](../sql-server-configuration-manager.md)  

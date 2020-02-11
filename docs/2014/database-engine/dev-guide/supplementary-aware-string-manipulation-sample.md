@@ -10,22 +10,25 @@ ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbbcb468a4de093b6664c71e20716ea62e2b1fc3
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637719"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76928094"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>能够识别增补字符的字符串操作示例
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这一示例说明能够识别增补字符的字符串处理。 此示例说明五个 Transact-SQL 字符串函数的实现。这些函数提供的字符串操作功能与内置函数的功能相同，但增加了增补字符识别功能，因此既能处理 Unicode 字符串，又能处理增补字符串。 这五个函数是镜头（），`lefts(), rights(), subs()` 和 `replace_s()` 等效于内置函数 `LEN(), LEFT(), RIGHT(), SUBSTRING()` 和 `REPLACE()` 字符串函数。  
   
-## <a name="prerequisites"></a>先决条件  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这一示例说明能够识别增补字符的字符串处理。 此示例说明五个 Transact-SQL 字符串函数的实现。这些函数提供的字符串操作功能与内置函数的功能相同，但增加了增补字符识别功能，因此既能处理 Unicode 字符串，又能处理增补字符串。 这五个函数是镜头（） `lefts(), rights(), subs()` ， `replace_s()`与内置函数`LEN(), LEFT(), RIGHT(), SUBSTRING()`和`REPLACE()`字符串函数等效。  
+  
+## <a name="prerequisites"></a>必备条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -78,7 +81,7 @@ ms.locfileid: "73637719"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 测试命令脚本复制到一个文件中，并将其作为 `test.sql` 保存在示例目录中。  
+7.  将[!INCLUDE[tsql](../../includes/tsql-md.md)]测试命令脚本复制到文件中，并将`test.sql`其另存为示例目录中的。  
   
 8.  使用以下命令执行测试脚本：  
   
@@ -90,7 +93,7 @@ ms.locfileid: "73637719"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>示例代码  
+## <a name="sample-code"></a>代码示例  
  下面是此示例的代码列表。  
   
  C#  
@@ -151,7 +154,7 @@ if (length < 0)
             if ((start + length) <= 1)  
                 return (String.Empty);  
   
-// The 2 if statements below guarentee that the result will match the substring function in   
+// The 2 if statements below guarantee that the result will match the substring function in   
 // Transact-SQL which will initialize start to 1 by subtracting from the length.  
             if (start <= 0 && length > 0)  
                 length--;  
@@ -352,7 +355,7 @@ Public NotInheritable Class SurrogateStringFunction
             Return String.Empty  
         End If  
   
-        ' The 2 if statements below guarentee that the result will match the substring function in   
+        ' The 2 if statements below guarantee that the result will match the substring function in   
         ' Transact-SQL which will initialize start to 1 by subtracting from the length.  
         If start <= 0 AndAlso length > 0 Then  
             length -= 1  
@@ -686,6 +689,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [公共语言运行时 &#40;CLR&#41; 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

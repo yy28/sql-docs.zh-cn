@@ -1,5 +1,5 @@
 ---
-title: IndexNulls 属性示例 （VC + +） |Microsoft Docs
+title: IndexNulls 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6b6a51a16abf767924ee83e93016743693a9f335
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e119dba2a24df76a918e87a6a5a28d66e381400
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965960"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76929434"
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls 属性示例 (VC++)
-此示例演示[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)的属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码将创建一个新的索引并设置的值**IndexNulls**根据用户输入。 然后，将**索引**追加到**员工**[表](../../../ado/reference/adox-api/table-object-adox.md)中*Northwind* [目录](../../../ado/reference/adox-api/catalog-object-adox.md)。 新**索引**应用于[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)基于**员工**表，以及**记录集**打开。 一条新记录添加到**员工**表中，使用**Null**中索引字段的值。 是否显示此新记录的设置决定**IndexNulls**属性。  
+此示例演示[索引](../../../ado/reference/adox-api/index-object-adox.md)的[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)属性。 此代码创建一个新索引，并基于用户输入设置**IndexNulls**的值。 然后，将**索引**追加到*Northwind* [目录](../../../ado/reference/adox-api/catalog-object-adox.md)中的**Employees** [表](../../../ado/reference/adox-api/table-object-adox.md)。 新**索引**将应用于基于**Employees**表的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，并打开该**记录集**。 新记录将添加到**Employees**表中，并在索引字段中包含**Null**值。 是否显示此新记录取决于**IndexNulls**属性的设置。  
   
 ```  
 // BeignIndexNullCpp.cpp  
@@ -169,7 +169,7 @@ void IndexNullsX(_bstr_t strSel) {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
   
    if (m_pRstEmployees)  

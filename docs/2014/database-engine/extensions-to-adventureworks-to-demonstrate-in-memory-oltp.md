@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228467"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>演示内存中 OLTP 的 AdventureWorks 扩展
@@ -96,7 +96,7 @@ ms.locfileid: "75228467"
   
     1.  请确保在路径名称中包含\'反斜杠 "  
   
-    2.  例如：  
+    2.  示例：  
   
         ```  
         :setvar checkpoint_files_location "d:\DBData\"  
@@ -574,11 +574,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**类别**|**路径名**|**pages_MB**|  
-|MEMORYCLERK_XTP|默认值|94|  
+|type |**路径名**|**pages_MB**|  
+|MEMORYCLERK_XTP|默认|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|默认值|0|  
-|MEMORYCLERK_XTP|默认值|0|  
+|MEMORYCLERK_XTP|默认|0|  
+|MEMORYCLERK_XTP|默认|0|  
   
  默认内存分配器包含系统范围内存结构，相对较小。 用户数据库（在此例中是 ID 为 5 的数据库）的内存分配器大约为 900MB。  
   
@@ -598,7 +598,7 @@ WHERE t.type='U'
   
 ||||  
 |-|-|-|  
-|**表名称**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+|**表名**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
 |SpecialOfferProduct_inmem|64|3840|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
 |SalesOrderDetail_inmem|15316|663552|  
@@ -623,11 +623,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**类别**|**路径名**|**pages_MB**|  
-|MEMORYCLERK_XTP|默认值|146|  
+|type |**路径名**|**pages_MB**|  
+|MEMORYCLERK_XTP|默认|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|默认值|0|  
-|MEMORYCLERK_XTP|默认值|0|  
+|MEMORYCLERK_XTP|默认|0|  
+|MEMORYCLERK_XTP|默认|0|  
   
  可以看到， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将稍小于 8GB 的大小用于示例数据库中的内存优化表和索引。  
   
@@ -644,7 +644,7 @@ WHERE t.type='U'
   
 ||||  
 |-|-|-|  
-|**表名称**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+|**表名**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
 |SalesOrderDetail_inmem|5113761|663552|  
 |DemoSalesOrderDetailSeed|64|10368|  
 |SpecialOffer_inmem|2|8192|  
@@ -670,11 +670,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**类别**|**路径名**|**pages_MB**|  
-|MEMORYCLERK_XTP|默认值|2261|  
+|type |**路径名**|**pages_MB**|  
+|MEMORYCLERK_XTP|默认|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|默认值|0|  
-|MEMORYCLERK_XTP|默认值|0|  
+|MEMORYCLERK_XTP|默认|0|  
+|MEMORYCLERK_XTP|默认|0|  
   
  这是预期行为：事务工作负荷运行时将回收内存。  
   
@@ -689,11 +689,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**类别**|**路径名**|**pages_MB**|  
-|MEMORYCLERK_XTP|默认值|1863|  
+|type |**路径名**|**pages_MB**|  
+|MEMORYCLERK_XTP|默认|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|默认值|0|  
-|MEMORYCLERK_XTP|默认值|0|  
+|MEMORYCLERK_XTP|默认|0|  
+|MEMORYCLERK_XTP|默认|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>内存优化表的磁盘利用率  
  可以使用查询获得数据库检查点文件在给定时间的总体磁盘上大小：  
@@ -746,7 +746,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计**|**磁盘大小 MB**|  
+|**state_desc**|**file_type_desc**|**计数**|**磁盘大小 MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
@@ -793,7 +793,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计**|**磁盘大小 MB**|  
+|**state_desc**|**file_type_desc**|**计数**|**磁盘大小 MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
@@ -839,7 +839,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计**|**磁盘大小 MB**|  
+|**state_desc**|**file_type_desc**|**计数**|**磁盘大小 MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
@@ -872,7 +872,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计**|**磁盘大小 MB**|  
+|**state_desc**|**file_type_desc**|**计数**|**磁盘大小 MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  
@@ -883,5 +883,5 @@ ORDER BY state, file_type
  在此例中，有两个检查点文件对处于“尚在构造”状态，这意味着多个文件对已变为“尚在构造”状态（可能是因为工作负荷的并发级别较高）。 多个并发线程同时需要一个新文件对，因而将一对从“预先创建”变为“尚在构造”。  
   
 ## <a name="see-also"></a>另请参阅  
- [内存中 OLTP &#40;内存中优化&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [内存中 OLTP（内存中优化）](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

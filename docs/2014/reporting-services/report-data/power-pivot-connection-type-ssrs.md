@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200418"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 连接类型 (SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "74200418"
 ## <a name="filters"></a>筛选器  
  在“筛选器”窗格中，指定要在查询结果中排除或包含的维度和成员。  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  在“筛选器”窗格中，针对某个筛选器选择 **“参数”** 选项，以便自动使用与所选筛选器对应的可用值创建报表参数。  
   
 ## <a name="remarks"></a>备注  
@@ -64,6 +64,6 @@ ms.locfileid: "74200418"
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services MDX 查询设计器用户界面 &#40;报表生成器&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
- [表达式 &#40;报表生成器和 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
+ [表达式（报表生成器和 SSRS）](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

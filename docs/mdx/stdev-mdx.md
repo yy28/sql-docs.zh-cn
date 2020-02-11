@@ -1,5 +1,5 @@
 ---
-title: Stdev (MDX) |Microsoft Docs
+title: Stdev （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 40af02ce74363fb1df2ae142e7665be8714d181e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036864"
 ---
 # <a name="stdev-mdx"></a>Stdev (MDX)
@@ -35,7 +35,7 @@ Stdev(Set_Expression [ ,Numeric_Expression ] )
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **Stdev**函数使用无偏差的总体公式，而[StdevP](../mdx/stdevp-mdx.md)函数使用有偏差的总体公式。  
+ **Stdev**函数使用无偏差总体公式，而[StdevP](../mdx/stdevp-mdx.md)函数使用有偏差总体公式。  
   
 ## <a name="example"></a>示例  
  下例将使用无偏差总体公式返回对日历年 2003 的前三个月求得的 Internet Order Quantity 的标准偏差。  
@@ -51,7 +51,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

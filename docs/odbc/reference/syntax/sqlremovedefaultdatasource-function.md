@@ -20,18 +20,18 @@ ms.assetid: db803266-57df-4864-a41b-901247549c1f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cfefcd9f2f55e2d78c5c6e5b1bac7ce52e9033e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68024604"
 ---
 # <a name="sqlremovedefaultdatasource-function"></a>SQLRemoveDefaultDataSource 函数
-**符合性**  
- 版本引入了：ODBC 1.0，不推荐使用  
+**度**  
+ 引入的版本： ODBC 1.0，不推荐使用  
   
- **摘要**  
- 在 ODBC 3.0 **SQLRemoveDefaultDataSource**的调用替换为函数[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)与*fRequest* ODBC_REMOVE_DEFAULT_DSN 参数。 如果 ODBC 2 *.x*安装程序会调用此函数，ODBC 安装程序会将其映射到以下**SQLConfigDataSource**调用：  
+ **总结**  
+ 在 ODBC 3.0 中，已使用 ODBC_REMOVE_DEFAULT_DSN 的*fRequest*参数调用[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)的**SQLRemoveDefaultDataSource**函数。 如果 ODBC 2.x 安装程序调用了此函数，则*odbc 安装程序*将映射到以下**SQLConfigDataSource**调用：  
   
 ```cpp  
 SQLConfigDataSource (NULL, ODBC_REMOVE_DEFAULT_DSN, NULL, NULL)  

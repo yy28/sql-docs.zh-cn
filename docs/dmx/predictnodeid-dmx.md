@@ -1,5 +1,5 @@
 ---
-title: PredictNodeId (DMX) |Microsoft Docs
+title: PredictNodeId （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a7c7751f317d4a56fb4aafb7085509d175f32255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074686"
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId (DMX)
@@ -27,11 +27,11 @@ ms.locfileid: "68074686"
 PredictNodeId(<scalar column reference>)  
 ```  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  标量列。  
   
 ## <a name="return-type"></a>返回类型  
- \<标量表达式 >  
+ \<标量表达式>  
   
 ## <a name="examples"></a>示例  
  以下示例返回指定的个人是否可能购买自行车，并且还返回个人最可能属于的节点的 nodeID。  
@@ -60,9 +60,9 @@ FROM
 WHERE NODE_UNIQUE_NAME= '00000000100'   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [&#40;DMX&#41;的常规预测函数](../dmx/general-prediction-functions-dmx.md)  
   
   

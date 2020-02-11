@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69fa6500439e51705e9dfd3ee838c2f7e1b4eddb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104998"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>设置同步作用域（报表生成器和 SSRS）
@@ -29,7 +29,7 @@ ms.locfileid: "66104998"
   
 ### <a name="to-change-the-synchronization-scope-of-an-indicator"></a>更改指示器的同步作用域  
   
-1.  右键单击要更改的指示器，然后单击 **“指示器属性”** 。  
+1.  右键单击要更改的指示器，然后单击 **“指示器属性”**。  
   
 2.  在左窗格中单击 **“值和状态”** 。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66104998"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [指示器（报表生成器和 SSRS）](indicators-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 全局设置 （对话框） (SybaseToSQL) |Microsoft Docs
+title: 全局设置（对话框）（SybaseToSQL） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,33 +10,33 @@ ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 484460c56ae043561f8f19313e6f09743ba2caed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029077"
 ---
-# <a name="global-settings-dialogs--sybasetosql"></a>全局设置 （对话框） (SybaseToSQL)
-使用的对话框页面**全局设置**对话框可以指定的默认用户执行任何操作和 SSMA 的警告设置。  
+# <a name="global-settings-dialogs--sybasetosql"></a>全局设置（对话框）（SybaseToSQL）
+使用 "**全局设置**" 对话框的 "对话框" 页可以指定 SSMA 的默认用户操作和警告设置。  
   
-若要访问该对话框设置在**工具**菜单中，选择**全局设置**，单击**GUI**在左窗格中，并选择底部**对话框**.  
+若要访问 "**工具**" 菜单上的对话框设置，请选择 "**全局设置**"，单击左侧窗格底部的 " **GUI** "，然后选择 "**对话框**"。  
   
 ## <a name="options"></a>选项  
-**覆盖对象之前，则发出警告**  
-当 SSMA 将对象转换为 SQL Server 时，一些对象可能已存在于项目的 SQL Server 元数据。 这些对象可能已经转换，或对象可能只是必须在目标架构中与要转换的对象相同的名称。  
+**覆盖对象之前发出警告**  
+当 SSMA 将对象转换为 SQL Server 时，某些对象可能已经存在于项目的 SQL Server 元数据中。 这些对象可能已被转换，或者对象在目标架构中的名称可能与要转换的对象的名称相同。  
   
-使用此选项以指定是否 SSMA 应提示你覆盖重复的对象定义：  
+使用此选项可指定 SSMA 是否应提示您覆盖重复的对象定义：  
   
--   如果选择 **，则返回 True**，SSMA 遇到一个复制对象时将显示一个警告对话框。 在此对话框中，可以指定覆盖单个对象或所有重复的对象，或跳过单个对象或所有重复的对象。  
+-   如果选择 " **True**"，则在遇到重复对象时，SSMA 将显示一个警告对话框。 在此对话框中，您可以指定覆盖单个对象或所有重复对象，或跳过单个对象或所有重复的对象。  
   
--   如果选择**False**，则**对象覆盖默认操作**选项将显示在其中指定的默认操作。  
+-   如果选择 " **False**"，则会出现 "**对象覆盖默认操作**" 选项，您可以在其中指定默认操作。  
   
 **对象覆盖默认操作**  
-如果您选择，将显示此选项**False**有关**覆盖对象之前给出警告**选项。  
+如果为 "**覆盖对象之前警告**" 选项选择 " **False** "，则会显示此选项。  
   
-使用此选项指定的默认对象覆盖行为：  
+使用此选项指定默认对象覆盖行为：  
   
--   如果选择 **，则返回 True**，SSMA 会自动覆盖具有相同的名称和要转换的对象相同的目标架构中的对象中的 SQL Server 项目元数据。  
+-   如果选择 " **True**"，则 SSMA 会自动覆盖 SQL Server 项目元数据中具有相同名称并且与要转换的对象位于同一目标架构中的对象。  
   
--   如果选择**False**，SSMA 在转换期间不会覆盖对象元数据。  
+-   如果选择**False**，则 SSMA 在转换过程中不会覆盖对象元数据。  
   

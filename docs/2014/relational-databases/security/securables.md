@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745716"
 ---
 # <a name="securables"></a>安全对象
   安全对象是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 授权系统控制对其进行访问的资源。 例如，表是安全对象。 通过创建可以为自己设置安全性的名为“范围”的嵌套层次结构，可以将某些安全对象包含在其他安全对象中。 安全对象范围有 **服务器**、 **数据库**和 **架构**。  
   
-## <a name="securable-scope-server"></a>安全对象范围：“服务器”  
+## <a name="securable-scope-server"></a>安全对象范围：服务器  
  **服务器** 安全对象范围包含以下安全对象：  
   
 -   可用性组 (availability group)  
@@ -39,9 +39,9 @@ ms.locfileid: "62745716"
   
 -   服务器角色  
   
--   “数据库”  
+-   数据库  
   
-## <a name="securable-scope-database"></a>安全对象范围：“数据库”  
+## <a name="securable-scope-database"></a>安全对象范围：数据库  
  **数据库** 安全对象范围包含以下安全对象：  
   
 -   应用程序角色  
@@ -52,7 +52,7 @@ ms.locfileid: "62745716"
   
 -   证书  
   
--   约定  
+-   合约  
   
 -   全文目录  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62745716"
   
 -   对称密钥  
   
--   “用户”  
+-   用户  
   
 ## <a name="securable-scope-schema"></a>安全对象范围：架构  
  **架构** 安全对象范围包含以下安全对象：  
@@ -97,7 +97,7 @@ ms.locfileid: "62745716"
   
     -   表  
   
-    -   “查看”  
+    -   查看  
   
 ## <a name="controlling-access-to-a-securable"></a>控制对安全对象的访问  
  接收对安全对象的权限的实体称为主体。 最常见的主体是登录名和数据库用户。 对安全对象的访问通过授予或拒绝权限进行控制，或者通过将登录名和用户添加到有权访问的角色进行控制。 有关控制权限的信息，请参阅 [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)、[REVOKE (Transact-SQL)](/sql/t-sql/statements/revoke-transact-sql)、[DENY (Transact-SQL)](/sql/t-sql/statements/deny-transact-sql)、[sp_addrolemember (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) 和 [sp_droprolemember (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)。  

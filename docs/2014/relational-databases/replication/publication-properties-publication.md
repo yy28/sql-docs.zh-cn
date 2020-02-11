@@ -21,14 +21,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022455"
 ---
 # <a name="sql-server-replication-publication-properties"></a>SQL Server 复制发布属性 
-  本部分提供的所有页的信息**发布属性**对话框。 
+  本部分提供有关 "**发布属性**" 对话框的所有页面的信息。 
 
 ## <a name="general"></a>常规
   **“发布属性”** 对话框的 **“常规”** 页包含发布的基本信息，包括名称、说明和订阅过期策略。  
@@ -37,17 +37,17 @@ ms.locfileid: "63022455"
  **名称**  
  发布的名称（只读）。  
   
- **“数据库”**  
+ **Database**  
  发布数据库的名称（只读）。  
   
  **说明**  
  发布的说明。  
   
- **类型**  
+ 类型   
  发布的类型（只读）。  
   
  **订阅过期**  
- 选择以下订阅过期选项之一：“订阅永不过期”或带有明确时间段（“间隔”）的“订阅过期”    。  
+ 选择以下订阅过期选项之一： **“订阅永不过期”** 或 **“订阅过期”** ，并明确指定时间段（ **“间隔”** ）。  
   
  对于快照和事务发布， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您接受默认选项 **“订阅永不过期”** 。  
   
@@ -55,8 +55,8 @@ ms.locfileid: "63022455"
   
  有关详细信息，请参阅 [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)。  
   
- **兼容级别**  
- 仅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本；仅限合并发布。 选择与此发布同步的订阅服务器所需的最低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有多个与确定兼容级别有关的规则。  
+ **兼容性级别**  
+ 仅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本；仅限合并发布。 选择与此发布同步的订阅服务器所需的最低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有多个与确定兼容级别有关的规则。  
 
 ## <a name="filter-rows"></a>筛选行
 
@@ -83,8 +83,8 @@ ms.locfileid: "63022455"
  **筛选的表**  
  此窗格使用您向发布中的表项目添加的筛选器进行填充。 带行筛选器的表在窗格中显示为顶级节点。 对于合并发布，筛选操作通过联接筛选器扩展到的表显示为子节点。  
   
- **“添加”**  
- 单击 **“添加”** 可以启动一个用于对表项目进行筛选的对话框。 对于快照发布或事务发布，单击 **“添加”** 将立即启动对话框。 对于合并发布，单击“添加”将会显示三个选项  ：“添加筛选器”、“添加联接以扩展所选筛选器”和“自动生成筛选器”    。  
+ **添加**  
+ 单击 **“添加”** 可以启动一个用于对表项目进行筛选的对话框。 对于快照发布或事务发布，单击 **“添加”** 将立即启动对话框。 对于合并发布，单击 **“添加”** 将会显示三个选项： **“添加筛选器”** 、 **“添加联接以扩展所选筛选器”** 和 **“自动生成筛选器”** 。  
   
 -   选择 **“添加筛选器”** 将启动 **“添加筛选器”** 对话框。 使用此对话框可以将行筛选器应用于表项目。 例如，在 **“添加筛选器”** 对话框中，可以指定在将包含客户数据的表复制到订阅服务器时，该表应只包含法国客户的相关数据。  
   
@@ -107,18 +107,18 @@ ms.locfileid: "63022455"
  **查找表**  
  仅限合并发布。 单击 **“查找表”** 可以在复杂的筛选器树中查找表。 在关系复杂的数据库中，一个表可以联接到多个表，因此可能出现在筛选器树中的多个位置。  
   
- 实际的表只显示在树中的一个位置，该表在其他位置使用快捷方式来表示。 表的快捷方式只是对该表的引用；它不显示该表的子节点。 快捷方式节点标记有快捷方式箭头，展开该节点将会显示文本“单击‘查找表’可查看 \<表名> 表”  。  
+ 实际的表只显示在树中的一个位置，该表在其他位置使用快捷方式来表示。 表的快捷方式只是对该表的引用；它不显示该表的子节点。 快捷方式节点标记有快捷方式箭头，展开该节点将会显示文本“单击‘查找表’可查看 **表名> 表”\<** 。  
   
  在窗格中选择快捷方式节点并单击 **“查找表”** 。窗格将展开并突出显示该表。 如果单击 **“查找表”** 而没有选定快捷方式节点，将会启动 **“查找表”** 对话框。  
   
- **Filter**  
+ **筛选器**  
  包含筛选器窗格中选定筛选器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义。  
 
 ## <a name="ftp-snapshot-and-internet"></a>FTP 快照和 Internet
   
 使用此页，您可以：  
   
--   设置通过文件传输协议 (FTP) 传递快照的属性。 有关详细信息，请参阅[通过 FTP 传输快照](transfer-snapshots-through-ftp.md)的详细信息的 Windows 文档。  
+-   设置通过文件传输协议 (FTP) 传递快照的属性。 有关详细信息，请参阅[通过 FTP Windows 传输快照](transfer-snapshots-through-ftp.md)文档。  
   
     > [!NOTE]  
     >  对任意 FTP 设置的更改都要求生成新的快照。  
@@ -132,7 +132,7 @@ ms.locfileid: "63022455"
  此选项允许订阅服务器使用 FTP 检索快照文件，但不要求订阅服务器进行此操作。 如果选择此选项，新建订阅向导将默认为允许订阅服务器通过 FTP 检索快照文件。 若要更改该设置，请使用 **“订阅属性”** 对话框。 如果允许订阅服务器通过 FTP 访问快照文件，请将 FTP 文件夹指定为 **“发布属性”** 对话框的 **“快照”** 页上快照文件的位置。 这会导致在生成新快照时快照代理将自动更新 FTP 文件夹中的文件。 如果未将快照文件的位置设置为 FTP 文件夹，则在生成新快照时必须手动更新文件。 有关详细信息，请参阅[通过 FTP 传递快照](publish/deliver-a-snapshot-through-ftp.md)。  
   
  **Web 同步**  
- 仅限合并复制。 若要允许合并订阅服务器使用 Web 同步，请选择 **“允许订阅服务器通过连接到 Web 服务器进行同步”** ，并指定 Web 服务器地址。 Web 服务器必须使用安全套接字层 (SSL)，并且 Web 地址必须为完全限定地址，如 https://server.domain.com/synchronize 。 有关详细信息，请参阅 [Configure Web Synchronization](configure-web-synchronization.md)。  
+ 仅限合并复制。 若要允许合并订阅服务器使用 Web 同步，请选择 **“允许订阅服务器通过连接到 Web 服务器进行同步”** ，并指定 Web 服务器地址。 Web 服务器必须使用安全套接字层 (SSL)，并且 Web 地址必须为完全限定地址，如 https://server.domain.com/synchronize。 有关详细信息，请参阅 [Configure Web Synchronization](configure-web-synchronization.md)。  
 
 ## <a name="publication-access-list"></a>发布访问列表
 
@@ -141,7 +141,7 @@ ms.locfileid: "63022455"
  当订阅服务器连接到发布服务器或分发服务器并请求访问发布时，订阅服务器的登录名将与 PAL 中的身份验证信息进行比较。 这样，通过防止客户端工具使用发布服务器和分发服务器登录名在发布服务器上直接进行修改，从而为发布服务器提供额外的安全性。 有关详细信息，请参阅[保护发布服务器](security/secure-the-publisher.md)。  
   
 ### <a name="options"></a>选项  
- **“添加”**  
+ **添加**  
  将新项添加到列表。 只能添加那些在发布服务器和分发服务器上均已定义的登录名、帐户或组名称。 如果使用域帐户或在两个服务器上都已创建本地帐户，则这些信息在两个服务器上均已定义。  
   
  **删除**  
@@ -153,7 +153,7 @@ ms.locfileid: "63022455"
 
   使用此页，您可以：  
   
--   设置通过文件传输协议 (FTP) 传递快照的属性。 有关详细信息，请参阅[通过 FTP 传输快照](transfer-snapshots-through-ftp.md)的详细信息的 Windows 文档。  
+-   设置通过文件传输协议 (FTP) 传递快照的属性。 有关详细信息，请参阅[通过 FTP Windows 传输快照](transfer-snapshots-through-ftp.md)文档。  
   
     > [!NOTE]  
     >  对任意 FTP 设置的更改都要求生成新的快照。  
@@ -167,7 +167,7 @@ ms.locfileid: "63022455"
  此选项允许订阅服务器使用 FTP 检索快照文件，但不要求订阅服务器进行此操作。 如果选择此选项，新建订阅向导将默认为允许订阅服务器通过 FTP 检索快照文件。 若要更改该设置，请使用 **“订阅属性”** 对话框。 如果允许订阅服务器通过 FTP 访问快照文件，请将 FTP 文件夹指定为 **“发布属性”** 对话框的 **“快照”** 页上快照文件的位置。 这会导致在生成新快照时快照代理将自动更新 FTP 文件夹中的文件。 如果未将快照文件的位置设置为 FTP 文件夹，则在生成新快照时必须手动更新文件。 有关详细信息，请参阅[通过 FTP 传递快照](publish/deliver-a-snapshot-through-ftp.md)。  
   
  **Web 同步**  
- 仅限合并复制。 若要允许合并订阅服务器使用 Web 同步，请选择 **“允许订阅服务器通过连接到 Web 服务器进行同步”** ，并指定 Web 服务器地址。 Web 服务器必须使用安全套接字层 (SSL)，并且 Web 地址必须为完全限定地址，如 https://server.domain.com/synchronize 。 有关详细信息，请参阅 [Configure Web Synchronization](configure-web-synchronization.md)。  
+ 仅限合并复制。 若要允许合并订阅服务器使用 Web 同步，请选择 **“允许订阅服务器通过连接到 Web 服务器进行同步”** ，并指定 Web 服务器地址。 Web 服务器必须使用安全套接字层 (SSL)，并且 Web 地址必须为完全限定地址，如 https://server.domain.com/synchronize。 有关详细信息，请参阅 [Configure Web Synchronization](configure-web-synchronization.md)。  
 
 ## <a name="agent-security"></a>代理安全性
   可以使用 **“发布属性”** 对话框的 **“代理安全性”** 页，访问运行以下代理的帐户的设置以及连接到复制拓扑中的计算机：  
@@ -206,7 +206,7 @@ ms.locfileid: "63022455"
 
 ## <a name="snapshot"></a>快照
 
- 可以使用 **“发布属性”** 对话框的 **“快照”** 页设置快照格式、快照文件夹位置以及应用快照前后运行的脚本。 快照文件夹必须指定为共享文件夹，并且对于将文件读/写到快照文件夹的代理有足够的权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹的安全](security/secure-the-snapshot-folder.md)。  
+ 可以使用 **“发布属性”** 对话框的 **“快照”** 页设置快照格式、快照文件夹位置以及应用快照前后运行的脚本。 快照文件夹必须指定为共享文件夹，并且对于将文件读/写到快照文件夹的代理有足够的权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹](security/secure-the-snapshot-folder.md)。  
   
 > [!NOTE]  
 >  若要进行更改，则需要发布的新快照。 有关详细信息，请参阅[更改发布和项目属性](publish/change-publication-and-article-properties.md)。  
@@ -215,7 +215,7 @@ ms.locfileid: "63022455"
  **快照格式**  
  选择快照格式的本机模式或字符模式。  
   
--   如果所有订阅服务器都是  的实例，而不是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，请选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 本机快照格式可以提供最佳性能。    
+-   如果所有订阅服务器都是   的实例，而不是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，请选择“本机 SQL Server - 所有订阅服务器都必须是运行 SQL Server 的服务器”[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssEW](../../includes/ssew-md.md)]。 本机快照格式可以提供最佳性能。    
 -   如果有任何订阅服务器正在运行 **，或者为非** 订阅服务器，请选择 [!INCLUDE[ssEW](../../includes/ssew-md.md)] “字符 - 如果发布服务器或订阅服务器没有运行 SQL Server，则需要此项”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **快照文件的位置**  
@@ -234,7 +234,7 @@ ms.locfileid: "63022455"
 
 
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Create a Publication](publish/create-a-publication.md)   
  [查看和修改发布属性](publish/view-and-modify-publication-properties.md)   
  [发布数据和数据库对象](publish/publish-data-and-database-objects.md)   

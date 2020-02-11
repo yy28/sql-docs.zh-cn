@@ -1,5 +1,5 @@
 ---
-title: 指定目标服务器&#39;s 位置 (SQL Server Management Studio) |Microsoft Docs
+title: 指定目标服务器&#39;s 位置（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1d08c7f660d4deee887f95a06a7848f6d40b2d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211338"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>指定目标服务器的位置 (SQL Server Management Studio)
@@ -42,9 +42,9 @@ ms.locfileid: "68211338"
 ###  <a name="Restrictions"></a> 限制和局限  
  执行此操作将编辑注册表。 建议不要手动编辑注册表，因为不适当或不正确的更改会导致严重的系统配置问题。 因此，只有有经验的用户才可以使用注册表编辑器程序编辑注册表。 有关详细信息，请参阅 Microsoft Windows 文档。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -53,11 +53,11 @@ ms.locfileid: "68211338"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要指定目标服务器的位置的 master 服务器。  
   
-2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，然后选择“管理目标服务器”  。  
+2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，然后选择“管理目标服务器”****。  
   
-3.  右键单击某一目标服务器，再选择“属性”  。  
+3.  右键单击某一目标服务器，再选择“属性”****。  
   
-4.  在 **“位置”** 框中，输入该服务器的位置，然后单击 **“确定”** 。  
+4.  在 **“位置”** 框中，输入该服务器的位置，然后单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -79,6 +79,6 @@ ms.locfileid: "68211338"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_msx_enlist ](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
   
   

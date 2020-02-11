@@ -1,5 +1,5 @@
 ---
-title: 第 9 课：定义透视和翻译 |Microsoft Docs
+title: 第9课：定义透视和翻译 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530828"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>第 9 课：定义透视和翻译
   在本课中，您将了解如何定义透视和翻译。 可以定义透视，以降低多维数据集的明显的复杂性，还可以定义翻译，以便让用户能够以他们选择的语言来查看多维数据集元数据。  
   
 > [!NOTE]  
->  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866) 可以下载本教程随附的示例项目。  
+>  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866)下载本教程中的示例项目。  
   
  本课程包含以下任务：  
   
@@ -32,15 +32,15 @@ ms.locfileid: "69530828"
  在此任务中，您将定义和浏览特定元数据按某种语言进行的翻译。  
   
 ## <a name="next-lesson"></a>下一课  
- [第10课:定义管理角色](lesson-10-defining-administrative-roles.md)  
+ [第 10 课：定义管理角色](lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 教程方案](analysis-services-tutorial-scenario.md)   
- [多维建模&#40;艾德公司教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [&#40;艾德作品的多维建模教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [视角](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives)   
  [多维模型中的透视](multidimensional-models/perspectives-in-multidimensional-models.md)   
  [维度翻译](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [多维数据集翻译](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
- [翻译&#40;Analysis Services&#41;](translations-analysis-services.md)  
+ [翻译 &#40;Analysis Services&#41;](translations-analysis-services.md)  
   
   

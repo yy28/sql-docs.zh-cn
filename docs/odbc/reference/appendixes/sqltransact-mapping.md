@@ -14,14 +14,14 @@ ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2082a97b24284afcc879048bb08e86a7b2bb3ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070113"
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact 映射
-**SQLTransact**现被替代**SQLEndTran**。 两个函数之间的主要区别在于**SQLEndTran**包含的参数*HandleType*，它指定要完成工作的范围。 *HandleType*参数可指定环境的信息或连接句柄。 以下调用到**SQLTransact**:  
+**SQLTransact**现已替换为**SQLEndTran**。 这两个函数之间的主要区别在于， **SQLEndTran**包含一个参数*HandleType*，该参数指定要完成的工作的范围。 *HandleType*参数可指定环境或连接句柄。 对**SQLTransact**的以下调用：  
   
 ```  
 SQLTransact(henv, hdbc, fType)  
@@ -33,7 +33,7 @@ SQLTransact(henv, hdbc, fType)
 SQLEndTran(SQL_HANDLE_DBC, ConnectionHandle, CompletionType);  
 ```  
   
- 如果*ConnectionHandle*不等于 SQL_NULL_HDBC。 *ConnectionHandle*参数设置的值为*hdbc*。  
+ 如果*ConnectionHandle*不等于 SQL_NULL_HDBC。 *ConnectionHandle*参数设置为*hdbc*的值。  
   
  **SQL_Transact**映射到  
   
@@ -41,6 +41,6 @@ SQLEndTran(SQL_HANDLE_DBC, ConnectionHandle, CompletionType);
 SQLEndTran (SQL_HANDLE_ENV, EnvironmentHandle, CompletionType);  
 ```  
   
- 如果*ConnectionHandle*等于 SQL_NULL_HDBC。 *EnvironmentHandle*参数设置的值为*henv*。  
+ 如果*ConnectionHandle*等于 SQL_NULL_HDBC。 *EnvironmentHandle*参数设置为*henv*的值。  
   
- 在这种上述情况下， *CompletionType*参数设置为相同的值*fType*。
+ 在上述两种情况下， *CompletionType*参数将设置为与*fType*相同的值。

@@ -1,5 +1,5 @@
 ---
-title: sys.server_events (TRANSACT-SQL) |Microsoft Docs
+title: sys. server_events （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,31 +20,31 @@ ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3613c3da1138a6ec17394a5b6615d78d0a941e56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133152"
 ---
-# <a name="sysserverevents-transact-sql"></a>sys.server_events (Transact-SQL)
+# <a name="sysserver_events-transact-sql"></a>sys.server_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  包含的每一行都对应于要为其激发服务器级事件通知或服务器级 DDL 触发器的一个事件。 列**object_id**并**类型**唯一地标识服务器事件。  
+  包含的每一行都对应于要为其激发服务器级事件通知或服务器级 DDL 触发器的一个事件。 **Object_id**和**类型**的列唯一标识服务器事件。  
 
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|要激发的服务器级事件通知或服务器级 DDL 触发器的 ID。|  
-|**type**|**int**|导致激发事件通知或 DDL 触发器的事件的类型。|  
-|**type_desc**|**nvarchar(60)**|对导致激发 DDL 触发器或事件通知的事件的说明。|  
+|type |**int**|导致激发事件通知或 DDL 触发器的事件的类型。|  
+|**type_desc**|**nvarchar （60）**|对导致激发 DDL 触发器或事件通知的事件的说明。|  
 |**event_group_type**|**int**|要对其创建触发器或事件通知的事件组，如果未对事件组中创建触发器或事件通知，则为 Null。|  
-|**event_group_type_desc**|**nvarchar(60)**|要对其创建触发器或事件通知的事件组的说明，如果未对事件组创建触发器或事件通知，则为 Null。|  
+|**event_group_type_desc**|**nvarchar （60）**|要对其创建触发器或事件通知的事件组的说明，如果未对事件组创建触发器或事件通知，则为 Null。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>请参阅  
- [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

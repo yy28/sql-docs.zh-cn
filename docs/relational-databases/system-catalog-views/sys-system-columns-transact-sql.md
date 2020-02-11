@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cdb28d10d04c21f0d377777b41c332eb20d1ee9c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73981913"
 ---
 # <a name="syssystem_columns-transact-sql"></a>sys.system_columns (Transact-SQL)
@@ -32,17 +32,17 @@ ms.locfileid: "73981913"
 
   具有列的系统对象的每列都对应一行。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|此列所属对象的 ID。|  
-|**名称**|**sysname**|列的名称。 在对象中是唯一的。|  
-|column_id|**int**|列的 ID。 在对象中是唯一的。<br /><br /> 列 ID 可以不按顺序排列。|  
+|**路径名**|**sysname**|列的名称。 在对象中是唯一的。|  
+|column_id |**int**|列的 ID。 在对象中是唯一的。<br /><br /> 列 ID 可以不按顺序排列。|  
 |**system_type_id**|**tinyint**|列的系统类型的 ID。|  
 |**user_type_id**|**int**|用户定义的列类型的 ID。<br /><br /> 若要返回类型的名称，请在此列上联接到[sys.databases](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目录视图。|  
-|**max_length**|**int**|列的最大长度（以字节为单位）。<br /><br /> -1 = 列数据类型为**varchar （max）** 、 **nvarchar （max）** 、 **varbinary （max）** 或**xml**。<br /><br /> 对于**text**列， **max_length**值将是16，或者是**sp_tableoption** "text in row" 设置的值。|  
-|**精度**|**tinyint**|如果为基于数值的列，则为该列的精度;否则为0。|  
-|**小数位数**|**tinyint**|如果列包含的是数值，则为列的小数位数；否则为 0。|  
-|**collation_name**|**sysname**|如果基于字符，则为该列的排序规则的名称;否则为 NULL。|  
+|**max_length**|**smallint**|列的最大长度（以字节为单位）。<br /><br /> -1 = 列数据类型为**varchar （max）**、 **nvarchar （max）**、 **varbinary （max）** 或**xml**。<br /><br /> 对于**text**列， **max_length**值将是16，或者是**sp_tableoption** "text in row" 设置的值。|  
+|**精度**|**tinyint**|如果基于数值，则为该列的精度；否则为 0。|  
+|**纵向**|**tinyint**|如果列包含的是数值，则为列的小数位数；否则为 0。|  
+|**collation_name**|**sysname**|如果基于字符，则为该列排序规则的名称；否则为 NULL。|  
 |**is_nullable**|**bit**|1 = 列可为空。|  
 |**is_ansi_padded**|**bit**|1 = 如果列为字符、二进制或变量类型，则该列使用 ANSI_PADDING ON 行为。<br /><br /> 0 = 列不是字符、二进制或变量类型。|  
 |**is_rowguidcol**|**bit**|1 = 列为声明的 ROWGUIDCOL。|  
@@ -56,21 +56,21 @@ ms.locfileid: "73981913"
 |**is_xml_document**|**bit**|1 = 内容为完整的 XML 文档。<br /><br /> 0 = 内容是文档片段，或列数据类型不是**xml**。|  
 |**xml_collection_id**|**int**|如果列数据类型为**xml** ，并且已键入 xml，则为非零值。 该值将为包含列的验证 XML 架构命名空间的集合的 ID。<br /><br /> 0 = 没有 XML 架构集合。|  
 |**default_object_id**|**int**|默认对象的 ID，无论该对象是独立的[sp_bindefault sys.databases](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)还是内联的列级默认约束，都是如此。 内联列级默认对象的**parent_object_id**列是返回到表本身的引用。 或者，如果没有默认值，则其值为 0。|  
-|**rule_object_id**|**int**|使用 sys.databases 绑定到列的独立规则的 ID **sp_bindrule。**<br /><br /> 0 = 无独立规则。<br /><br /> 有关列级检查约束，请参阅[sys. check_constraints &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)。|  
+|**rule_object_id**|**int**|使用 sys.databases 绑定到列的独立规则的 ID **sp_bindrule。**<br /><br /> 0 = 无独立规则。<br /><br /> 有关列级检查约束，请参阅[transact-sql&#41;&#40;check_constraints ](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)。|  
 |is_sparse|**bit**|1 = 列为稀疏列。 有关详细信息，请参阅 [使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。|  
 |is_column_set|**bit**|1 = 列为列集。 有关详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。|  
 |generated_always_type|**tinyint**|表示列类型的数值：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
-|generated_always_type_desc|**nvarchar(60)**|列类型的文本说明：<br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
+|generated_always_type_desc|**nvarchar （60）**|列类型的文本说明：<br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查询 SQL Server 系统目录常见问题解答](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys. all_columns &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys. computed_columns &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
+ [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys. all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys. computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
   
   

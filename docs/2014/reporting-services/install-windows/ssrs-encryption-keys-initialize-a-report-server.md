@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108739"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>初始化报表服务器（SSRS 配置管理器）
@@ -29,7 +29,7 @@ ms.locfileid: "66108739"
   
  加密密钥部分基于报表服务器服务的配置文件信息。 如果更改用于运行报表服务器服务的用户标识，则必须相应地更新密钥。 如果使用 Reporting Services 配置工具更改标识，将自动处理此步骤。  
   
- 如果由于某些原因导致初始化失败，则报表服务器在响应用户和服务请求时将返回 `RSReportServerNotActivated` 错误。 这种情况下，可能需要排除系统或服务器配置故障。 有关详细信息，请参阅[SSRS:使用 Reporting Services 中解决的问题和错误](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)(https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) Technet Wiki 中。  
+ 如果由于某些原因导致初始化失败，则报表服务器在响应用户和服务请求时将返回 `RSReportServerNotActivated` 错误。 这种情况下，可能需要排除系统或服务器配置故障。 有关详细信息，请参阅 Technet Wiki 中的 [SSRS：解决 Reporting Services 的问题和错误](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) 。  
   
 ## <a name="overview-of-the-initialization-process"></a>初始化过程概述  
  初始化过程将创建并存储一个用于加密的对称密钥。 对称密钥由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 加密服务创建，随后由报表服务器服务用来加密和解密数据。 对称密钥本身通过非对称密钥进行加密。  
@@ -68,9 +68,9 @@ ms.locfileid: "66108739"
 >  还可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供程序以编程的方式初始化报表服务器。 有关详细信息，请参阅 [联机丛书中的](../tools/access-the-reporting-services-wmi-provider.md) 访问 Reporting Services WMI 提供程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>如何确认报表服务器初始化  
- 要确认报表服务器初始化，请通过在命令窗口中键入 http://\<servername>/reportserver 来对报表服务器 Web 服务运行 ping 命令  。 如果发生 `RSReportServerNotActivated` 错误，则表示初始化失败。  
+ 要确认报表服务器初始化，请通过在命令窗口中键入 http://**servername>/reportserver 来对报表服务器 Web 服务运行 ping 命令\<**。 如果发生 `RSReportServerNotActivated` 错误，则表示初始化失败。  
   
-## <a name="see-also"></a>请参阅  
- [存储加密的 Report Server 数据（SSRS 配置管理器）](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [将加密的报表服务器数据存储 &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

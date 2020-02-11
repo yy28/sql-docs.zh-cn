@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244822"
 ---
 # <a name="add-transact-sql-snippets"></a>添加 Transact-SQL 代码段
@@ -23,7 +23,7 @@ ms.locfileid: "75244822"
 ## <a name="creating-a-transact-sql-snippet-file"></a>创建 Transact-SQL 代码段文件  
  创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的第一步是创建具有您的代码段文本的 XML 文件。 该文件必须具有 .snippet 文件扩展名，并且必须满足 [代码段架构](https://go.microsoft.com/fwlink/?LinkId=207504)的要求。 将代码段语言设置为 SQL。  
   
- 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 随附的预定义代码段作为示例。 若要找到预定义的代码段，请打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，选择“工具”**** 菜单，然后单击“代码段管理器”****。 在 **“语言”** 列表框中选择 **SQL** ，指向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的路径将显示在 **“位置”** 框中。  
+ 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 随附的预定义代码段作为示例。 若要找到预定义的代码段，请打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，选择“工具”  菜单，然后单击“代码段管理器”  。 在 **“语言”** 列表框中选择 **SQL** ，指向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的路径将显示在 **“位置”** 框中。  
   
 ## <a name="registering-the-code-snippet"></a>注册代码段  
  在创建代码段文件后，使用代码段管理器向 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]注册该代码段。 您可以添加包含多个代码段的文件夹，或者将单独的代码段导入到 **“我的代码段”** 文件夹中。  
@@ -34,9 +34,9 @@ ms.locfileid: "75244822"
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”**。  
+2.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”** 。  
   
-3.  单击“添加”**** 按钮。  
+3.  单击 **“添加”** 按钮。  
   
 4.  导航到包含您的代码段的文件夹，然后单击 **“选择文件夹”** 按钮。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "75244822"
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”**。  
+2.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”** 。  
   
-3.  单击“导入”**** 按钮。  
+3.  单击“导入”按钮。   
   
 4.  导航到包含您的代码段的文件夹，单击 .snippet 文件，然后单击 **“打开”** 按钮。  
   
@@ -104,13 +104,13 @@ ms.locfileid: "75244822"
   
 2.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-3.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”**。  
+3.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”** 。  
   
-4.  单击“导入”**** 按钮。  
+4.  单击“导入”按钮。   
   
 5.  导航到包含 TryCatch.snippet 的文件夹，单击该 TryCatch.snippet 文件，然后单击 **“打开”** 按钮。 您不应在 **“我的代码段”** 文件夹中具有 TryCatch 代码段。  
   
 ## <a name="see-also"></a>另请参阅  
- [插入外侧 Transact-sql 代码段](insert-surround-with-transact-sql-snippets.md)  
+ [插入外侧 Transact-SQL 代码片段](insert-surround-with-transact-sql-snippets.md)  
   
   

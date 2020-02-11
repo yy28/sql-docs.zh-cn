@@ -1,5 +1,5 @@
 ---
-title: 数据库快照与 AlwaysOn 可用性组 (SQL Server) |Microsoft Docs
+title: 具有 AlwaysOn 可用性组的数据库快照（SQL Server） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cba02aa87e800391ffba3c791c1ee4341462c3f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814653"
 ---
 # <a name="database-snapshots-with-alwayson-availability-groups-sql-server"></a>含有 AlwaysOn 可用性组的数据库快照 (SQL Server)
@@ -35,8 +35,8 @@ ms.locfileid: "62814653"
   
  如果承载数据库快照的可用性副本故障转移，则该数据库快照将保留在创建了这些快照的服务器实例上。 用户可以在故障转移后继续使用快照。如果性能是您的环境中的关注点，我们建议您仅在配置为手动故障转移模式的辅助副本承载的辅助数据库上创建数据库快照。  如果您曾经将可用性组手动故障转移到此辅助副本，则可以在其他辅助副本上创建一组新的数据库快照，将客户端重定向到这些新的数据库快照，并且从新的主数据库上删除所有数据库快照。  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [数据库快照 (SQL Server)](../../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   

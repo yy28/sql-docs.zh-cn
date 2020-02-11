@@ -18,10 +18,10 @@ ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 53cd38b80b6884e9be5c41042fac34b68ec2cda0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028366"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 用户定义聚合 - 调用函数
@@ -30,13 +30,13 @@ ms.locfileid: "68028366"
   
  应遵循下列附加规则：  
   
--   当前用户必须具有**EXECUTE**针对用户定义聚合的权限。  
+-   当前用户必须对用户定义聚合具有**EXECUTE**权限。  
   
--   必须使用两部分组成的名称的窗体调用用户定义聚合*schema_name.udagg_name*。  
+-   用户定义聚合必须使用由两部分组成的名称来调用，格式为*schema_name. udagg_name*。  
   
--   用户定义聚合的参数类型必须匹配或可隐式转换为*input_type*聚合，如中所定义的**CREATE AGGREGATE**语句。  
+-   用户定义聚合的参数类型必须匹配或可隐式转换为聚合的*input_type* ，如**CREATE aggregate**语句中所定义。  
   
--   用户定义聚合的返回类型必须与匹配*return_type*中**CREATE AGGREGATE**语句。  
+-   用户定义聚合的返回类型必须与**CREATE aggregate**语句中的*return_type*匹配。  
   
 ## <a name="example-1"></a>示例 1  
  以下是一个用户定义聚合函数的示例，该函数从某个表的一列中获取一组字符串值，然后将这些值连接起来：  
@@ -196,7 +196,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 一旦您将代码编译为**MyAgg.dll**，可以注册中的聚合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下所示：  
+ 将代码编译到**MyAgg**中后，可以按如下所示在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]注册聚合：  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -208,7 +208,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  不支持在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行已使用 /clr:pure 编译器选项编译的 Visual C++ 数据库对象，例如标量值函数。  
   
- 因为与大多数聚合，大部分逻辑正在**Accumulate**方法。 此处，作为参数传入的字符串**Accumulate**方法将追加到**StringBuilder**中初始化对象**Init**方法。 假设这不是第一次**Accumulate**调用方法，则还将逗号追加到**StringBuilder**在追加传入字符串之前。 在计算任务结束**Terminate**调用方法时，它将返回**StringBuilder**作为字符串。  
+ 与大多数聚合一样，大部分逻辑都在**累积**方法中。 此处，作为**累积**方法的参数传入的字符串将追加到在**Init**方法中初始化的**StringBuilder**对象。 假定这不是第一次调用**累积**方法，则在追加传入的字符串之前，还会向**StringBuilder**追加一个逗号。 计算任务结束时，将调用**Terminate**方法，该方法将**StringBuilder**作为字符串返回。  
   
  例如，请考虑具有以下架构的表：  
   
@@ -241,7 +241,7 @@ GROUP BY BookID;
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>示例 2  
- 下面的示例演示具有两个参数的聚合**Accumulate**方法。  
+ 下面的示例演示一个聚合，该聚合对**累积**方法具有两个参数。  
   
  [C#]  
   
@@ -441,7 +441,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CLR 用户定义聚合](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
   
   

@@ -16,42 +16,42 @@ ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931663"
 ---
 # <a name="parameter-object"></a>Parameter 对象
-表示参数或参数与相关联[命令](../../../ado/reference/ado-api/command-object-ado.md)对象基于参数化的查询或存储的过程。  
+表示基于参数化查询或存储过程与[命令](../../../ado/reference/ado-api/command-object-ado.md)对象关联的参数或参数。  
   
 ## <a name="remarks"></a>备注  
- 很多提供程序支持参数化的命令。 这些是在其中一次，定义所需的操作的命令，但使用变量 （或参数） 来更改该命令的一些详细信息。 例如，一个 SQL SELECT 语句可以使用一个参数定义的匹配条件的 WHERE 子句，另一个用于定义排序依据子句的列名称。  
+ 许多提供程序都支持参数化命令。 这是一次定义所需操作的命令，但使用变量（或参数）来更改命令的某些详细信息。 例如，SQL SELECT 语句可以使用参数来定义 WHERE 子句的匹配条件，并使用另一个参数定义 SORT BY 子句的列名称。  
   
- **参数**对象表示与参数化查询关联的参数或输入/输出参数和返回值的存储过程。 具体取决于提供程序、 一些集合、 方法或属性的功能**参数**对象可能不可用。  
+ **参数**对象表示与参数化查询关联的参数，或 in/out 参数和存储过程的返回值。 **参数**对象的某些集合、方法或属性可能不可用，具体取决于提供程序的功能。  
   
- 使用集合、 方法和属性的**参数**对象，您可以执行以下操作：  
+ 使用**参数**对象的集合、方法和属性，可以执行以下操作：  
   
--   设置或返回与参数的名称[名称](../../../ado/reference/ado-api/name-property-ado.md)属性。  
+-   设置或返回具有[name](../../../ado/reference/ado-api/name-property-ado.md)属性的参数的名称。  
   
--   设置或返回与参数的值[值](../../../ado/reference/ado-api/value-property-ado.md)属性。 **值**是默认属性**参数**对象。  
+-   设置或返回[值](../../../ado/reference/ado-api/value-property-ado.md)属性为的参数的值。 **值**是**参数**对象的默认属性。  
   
--   设置或返回与参数特征[特性](../../../ado/reference/ado-api/attributes-property-ado.md)，[方向](../../../ado/reference/ado-api/direction-property.md)，[精度](../../../ado/reference/ado-api/precision-property-ado.md)， [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)， [大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)，并[类型](../../../ado/reference/ado-api/type-property-ado.md)属性。  
+-   设置或返回[属性](../../../ado/reference/ado-api/attributes-property-ado.md)、[方向](../../../ado/reference/ado-api/direction-property.md)、[精度](../../../ado/reference/ado-api/precision-property-ado.md)、 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)、[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)和[类型](../../../ado/reference/ado-api/type-property-ado.md)属性的参数特征。  
   
--   将长二进制或字符数据传递给参数[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)方法。  
+-   使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)方法将长二进制或字符数据传递给参数。  
   
--   通过使用访问特定于提供程序的特性[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+-   使用[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合访问特定于提供程序的特性。  
   
- 如果知道名称，并与关联的属性的参数的存储的过程或参数化的查询你想要调用，可以使用[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法来创建**参数**对象使用相应的属性设置和使用[追加](../../../ado/reference/ado-api/append-method-ado.md)方法将其添加到[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。 这样就可以设置和返回参数值，而无需致电[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)方法**参数**集合来检索参数信息从提供程序，可能会占用大量资源的操作。  
+ 如果知道与要调用的存储过程或参数化查询相关联的参数的名称和属性，则可以使用[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法创建具有相应属性设置的**参数**对象，并使用[Append](../../../ado/reference/ado-api/append-method-ado.md)方法将它们添加到[parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。 这使您可以设置和返回参数值，而无需对**Parameters**集合调用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法即可从提供程序中检索参数信息，这可能会占用大量资源。  
   
- **参数**对象不是可安全执行脚本。  
+ **参数**对象对于脚本编写是不安全的。  
   
  本部分包含以下主题。  
   
--   [参数对象属性、 方法和事件](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
+-   [参数对象属性、方法和事件](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>请参阅  
- [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Command 对象（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
+ [CreateParameter 方法（ADO）](../../../ado/reference/ado-api/createparameter-method-ado.md)   
+ [Parameters 集合（ADO）](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

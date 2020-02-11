@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493826"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定义和使用钻取操作
@@ -24,77 +24,78 @@ ms.locfileid: "69493826"
   
 ## <a name="defining-the-drillthrough-action-properties"></a>定义钻取操作属性  
   
-1.  在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器中，单击“操作”选项卡。  
+1.  在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器中，单击“操作”**** 选项卡。  
   
-     “操作”选项卡中包括几个窗格。 在选项卡的左侧是“操作组织程序”窗格和“计算工具”窗格。 这两个窗格的右侧是“显示”窗格，其中可以显示“操作组织程序”窗格中所选操作的详细信息。  
+     “操作”**** 选项卡中包括几个窗格。 在选项卡的左侧是“操作组织程序”**** 窗格和“计算工具”**** 窗格。 这两个窗格的右侧是“显示”**** 窗格，其中可以显示“操作组织程序”**** 窗格中所选操作的详细信息。  
   
-     下图显示了多维数据集设计器的“操作”选项卡。  
+     下图显示了多维数据集设计器的“操作”**** 选项卡。  
   
-     ![多维数据集设计器的 "操作" 选项卡](../../2014/tutorials/media/l8-action1.gif "多维数据集设计器的 \"操作\" 选项卡")  
+     ![多维数据集设计器的“操作”选项卡](../../2014/tutorials/media/l8-action1.gif "多维数据集设计器的“操作”选项卡")  
   
-2.  在“操作”选项卡的工具栏上，单击“新建钻取操作”按钮。  
+2.  在“操作”**** 选项卡的工具栏上，单击“新建钻取操作”**** 按钮。  
   
      “显示”窗格中将出现空白操作模板。  
   
      ![显示窗格中的空白操作模板](../../2014/tutorials/media/l8-action2.gif "显示窗格中的空白操作模板")  
   
-3.  在 "**名称**" 框中, 将此操作的名称`Internet Sales Details Drillthrough Action`更改为。  
+3.  在 "**名称**" 框中，将此操作的名称`Internet Sales Details Drillthrough Action`更改为。  
   
-4.  在“度量值组成员”列表中，选择“Internet 销售”。  
+4.  在“度量值组成员”**** 列表中，选择“Internet 销售”****。  
   
-5.  在“钻取列”框中，选择“维度”列表中的“Internet 销售订单详细信息”。  
+5.  在“钻取列”**** 框中，选择“维度”**** 列表中的“Internet 销售订单详细信息”****。  
   
-6.  在“返回列”列表中，选中“项说明”和“订单编号”复选框，再单击“确定”。 下图显示至此在该操作过程中操作模板的应有外观。  
+6.  在“返回列”**** 列表中，选中“项说明”**** 和“订单编号”**** 复选框，再单击“确定”****。 下图显示至此在该操作过程中操作模板的应有外观。  
   
-     !["钻取列" 框](../../2014/tutorials/media/l8-action3.gif "\"钻取列\" 框")  
+     ![“钻取列”框](../../2014/tutorials/media/l8-action3.gif "“钻取列”框")  
   
-7.  展开“附加属性”框，如下图所示。  
+7.  展开“附加属性”**** 框，如下图所示。  
   
-     ![其他属性框](../../2014/tutorials/media/l8-action4.gif "其他属性框")  
+     ![“附加属性”框](../../2014/tutorials/media/l8-action4.gif "“附加属性”框")  
   
-8.  在 "**最大行数**" `10`框中, 键入。  
+8.  在 "**最大行数**" `10`框中，键入。  
   
-9. 在 "**标题**" 框中`Drillthrough to Order Details...`, 键入。  
+9. 在 "**标题**" 框中`Drillthrough to Order Details...`，键入。  
   
-     这些设置将限制返回的行数，并指定在客户端应用程序菜单中将出现的标题。 下图显示了“附加属性”框中的这些设置。  
+     这些设置将限制返回的行数，并指定在客户端应用程序菜单中将出现的标题。 下图显示了“附加属性”**** 框中的这些设置。  
   
-     ![其他属性框](../../2014/tutorials/media/l8-action5.gif "其他属性框")  
+     ![“附加属性”框](../../2014/tutorials/media/l8-action5.gif "“附加属性”框")  
   
 ## <a name="using-the-drillthrough-action"></a>使用钻取操作  
   
-1.  在“生成”菜单上，单击“部署 Analysis Services 教程”。  
+1.  在“生成”**** 菜单上，单击“部署 Analysis Services 教程”****。  
   
-2.  在部署成功完成后，在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器中单击“浏览器”选项卡，再单击“重新连接”按钮。  
+2.  在部署成功完成后，在 ** 教程多维数据集的多维数据集设计器中单击“浏览器”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，再单击“重新连接”**** 按钮。  
   
 3.  启动 Excel。  
   
-4.  将“Internet 销售 - 销售额”度量值添加到“值”区域。  
+4.  将“Internet 销售 - 销售额”**** 度量值添加到“值”区域。  
   
-5.  将“客户所在地域”用户定义层次结构从“客户”维度的“位置”文件夹添加到“报表筛选器”区域。  
+5.  将“客户所在地域”**** 用户定义层次结构从“客户”**** 维度的“位置”**** 文件夹添加到“报表筛选器”**** 区域。  
   
-6.  在数据透视表上的“客户所在地域”中，添加选择单个客户的筛选器。 依次展开“全部客户”、**Australia**、**Queensland**、**Brisbane**、**4000**，然后选中“Adam Powell”复选框，再单击“确定”。  
+6.  在数据透视表上的“客户所在地域”**** 中，添加选择单个客户的筛选器。 依次展开“全部客户”****、**Australia**、**Queensland**、**Brisbane**、**4000**，然后选中“Adam Powell”**** 复选框，再单击“确定”****。  
   
-     [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 对 Adam Powell 的产品销售总额显示在数据区域中。  
+     
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 对 Adam Powell 的产品销售总额显示在数据区域中。  
   
-7.  右键单击销售额，指向“其他操作”，然后单击“钻取订单详细信息”。  
+7.  右键单击销售额，指向“其他操作”****，然后单击“钻取订单详细信息”****。  
   
-     交付给 Adam Powell 的订单的详细信息将显示在“数据示例查看器”中，如下图所示。 但是，某些其他详细信息也会是有用的，如订单日期、截止日期和发运日期。 在下一个过程中，您将添加这些其他详细信息。  
+     交付给 Adam Powell 的订单的详细信息将显示在“数据示例查看器”**** 中，如下图所示。 但是，某些其他详细信息也会是有用的，如订单日期、截止日期和发运日期。 在下一个过程中，您将添加这些其他详细信息。  
   
-     ![发运给 Adam Powell 的订单](../../2014/tutorials/media/l8-action6.gif "发运给 Adam Powell 的订单")  
+     ![发送给 Adam Powell 的订单](../../2014/tutorials/media/l8-action6.gif "发送给 Adam Powell 的订单")  
   
 8.  关闭 Excel/  
   
 ## <a name="modifying-the-drillthrough-action"></a>修改钻取操作  
   
-1.  打开“Internet 销售订单详细信息”维度的维度设计器。  
+1.  打开“Internet 销售订单详细信息”**** 维度的维度设计器。  
   
      注意，仅为此维度定义了三个属性。  
   
-2.  在“数据源视图”窗格中，右键单击空白的区域，再单击“显示所有表”。  
+2.  在“数据源视图”**** 窗格中，右键单击空白的区域，再单击“显示所有表”****。  
   
-3.  在“格式”菜单上，指向“自动版式”，然后单击“关系图”。  
+3.  在“格式”**** 菜单上，指向“自动版式”****，然后单击“关系图”****。  
   
-4.  通过右键单击“数据源视图”窗格中的空白区域来查找 **InternetSales (dbo.FactInternetSales)** 表。 然后单击“查找表”，并单击“InternetSales”，再单击“确定”。  
+4.  通过右键单击“数据源视图”**** 窗格中的空白区域来查找 **InternetSales (dbo.FactInternetSales)** 表。 然后单击“查找表”****，并单击“InternetSales”****，再单击“确定”****。  
   
 5.  基于以下列创建新属性：  
   
@@ -104,15 +105,15 @@ ms.locfileid: "69493826"
   
     -   ShipDateKey  
   
-6.  将 "**订单日期键**" 特性的 "**名称**" `Order Date`属性更改为, 然后单击 "**名称列**" 属性的 "浏览" 按钮, 然后在 "**名称列**" 对话框中, 选择 "**日期**" 作为源表并选择SimpleDate 作为源列。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  将 "**订单日期键**" 特性的 "**名称**" `Order Date`属性更改为，然后单击 "**名称列**" 属性的 "浏览" 按钮，然后在 "**名称列**" 对话框中，选择 "**日期**" 作为源表，并选择 SimpleDate 作为源列。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  将 "**截止日期键**" 特性的 "**名称**" `Due Date`属性更改为, 然后通过使用与 "**订单日期键**" 特性相同的方法, 将此特性的 "**名称列**" 属性更改为**SimpleDate (WChar)** .  
+7.  将 "**截止日期键**" 特性的 "**名称**" `Due Date`属性更改为，然后通过使用与 "**订单日期键**" 特性相同的方法，将此特性的 "**名称列**" 属性更改为**SimpleDate （WChar）**。  
   
-8.  将 "**发货日期键**" 特性的 "**名称**" `Ship Date`属性更改为, 然后将此属性的 "**名称列**" 属性更改为**SimpleDate (WChar)** 。  
+8.  将 "**发货日期键**" 特性的 "**名称**" `Ship Date`属性更改为，然后将此属性的 "**名称列**" 属性更改为**SimpleDate （WChar）**。  
   
-9. 切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器的“操作”选项卡。  
+9. 切换到 ** 教程多维数据集的多维数据集设计器的“操作”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡。  
   
-10. 在“钻取列”框中，选择各复选框以将以下列添加到“返回列”列表，再单击“确定”：  
+10. 在“钻取列”**** 框中，选择各复选框以将以下列添加到“返回列”**** 列表，再单击“确定”****：  
   
     -   Order Date  
   
@@ -122,31 +123,31 @@ ms.locfileid: "69493826"
   
      下图显示了这些所选列。  
   
-     !["钻取列" 框](../../2014/tutorials/media/l8-action7.gif "\"钻取列\" 框")  
+     ![“钻取列”框](../../2014/tutorials/media/l8-action7.gif "“钻取列”框")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>检查修改后的钻取操作  
   
-1.  在“生成”菜单上，单击“部署 Analysis Services 教程”。  
+1.  在“生成”**** 菜单上，单击“部署 Analysis Services 教程”****。  
   
-2.  在成功完成部署后，切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器中的“浏览器”选项卡，然后单击“重新连接”按钮。  
+2.  在成功完成部署后，切换到 ** 教程多维数据集的多维数据集设计器中的“浏览器”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，然后单击“重新连接”**** 按钮。  
   
 3.  启动 Excel。  
   
-4.  通过在“值”区域中使用“Internet 销售-销售额”以及在报表筛选器中使用“客户所在地域”，重新创建数据透视表。  
+4.  通过在“值”区域中使用“Internet 销售-销售额”**** 以及在报表筛选器中使用“客户所在地域”****，重新创建数据透视表。  
   
-     添加一个从“所有客户”、**Australia**、**Queensland**、**Brisbane**、**4000**、**Adam Powell** 进行选择的筛选器。  
+     添加一个从“所有客户”****、**Australia**、**Queensland**、**Brisbane**、**4000**、**Adam Powell** 进行选择的筛选器。  
   
-5.  单击“Internet 销售-销售额”数据单元，指向“其他操作”，然后单击“钻取订单详细信息”。  
+5.  单击“Internet 销售-销售额”**** 数据单元，指向“其他操作”****，然后单击“钻取订单详细信息”****。  
   
      在临时电子表格中将显示交付给 Adam Powell 的这些订单的详细信息。 这包括项说明、订单号、订单日期、截止日期和发运日期信息，如下图所示。  
   
-     ![发运给 Adam Powell 的订单](../../2014/tutorials/media/l8-action8.gif "发运给 Adam Powell 的订单")  
+     ![发送给 Adam Powell 的订单](../../2014/tutorials/media/l8-action8.gif "发送给 Adam Powell 的订单")  
   
 ## <a name="next-lesson"></a>下一课  
- [第9课:定义透视和翻译](lesson-9-defining-perspectives-and-translations.md)  
+ [第 9 课：定义透视和翻译](lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>请参阅  
- [操作&#40;Analysis Services 多维数据&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>另请参阅  
+ [Analysis Services 多维数据 &#40;操作&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [多维模型中的操作](multidimensional-models/actions-in-multidimensional-models.md)   
  [维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [定义事实关系](lesson-5-2-defining-a-fact-relationship.md)   

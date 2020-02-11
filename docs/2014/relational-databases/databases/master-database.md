@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917040"
 ---
 # <a name="master-database"></a>master 数据库
@@ -76,7 +76,7 @@ ms.locfileid: "62917040"
   
 -   更改排序规则。 默认排序规则为服务器排序规则。  
   
--   更改数据库所有者。 **master** 的所有者是 **sa**。  
+-   更改数据库所有者。 **主节点**归**sa**所有。  
   
 -   创建全文目录或全文索引。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62917040"
   
 -   删除数据库。  
   
--   从数据库中删除 **guest** 用户。  
+-   正在从数据库中删除**guest**用户。  
   
 -   启用变更数据捕获。  
   

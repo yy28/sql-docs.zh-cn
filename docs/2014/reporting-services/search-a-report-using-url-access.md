@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b45f3fabf58a0980d41ee7b4b89a771655477d02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102226"
 ---
 # <a name="search-a-report-using-url-access"></a>使用 URL 访问搜索报表
@@ -31,7 +31,7 @@ ms.locfileid: "66102226"
 http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [URL 访问 (SSRS)](url-access-ssrs.md)   
  [URL 访问参数引用](url-access-parameter-reference.md)  
   

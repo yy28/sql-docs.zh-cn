@@ -20,10 +20,10 @@ ms.assetid: 3094085e-fe9e-423d-bf87-7852352c2d26
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c39074a8d1caf59d47990524a6030242ac33f95c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005478"
 ---
 # <a name="srv_rpcnumber-extended-stored-procedure-api"></a>srv_rpcnumber（扩展存储过程 API）
@@ -44,13 +44,13 @@ srvproc
 ```  
   
 ## <a name="arguments"></a>参数  
- srvproc   
+ *srvproc*  
  指向作为特定客户端连接句柄（在这里为接收远程存储过程的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
 ## <a name="returns"></a>返回  
  当前远程存储过程的编号组件。 如果客户端在运行远程存储过程时未使用编号组件，或者如果当前没有远程存储过程，则返回 - 1。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此函数只返回远程存储过程的编号组件。 不包括所有者、远程存储过程名称和数据库名称的可选说明符。  
   
 > [!IMPORTANT]  

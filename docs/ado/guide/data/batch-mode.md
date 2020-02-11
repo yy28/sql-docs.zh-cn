@@ -15,16 +15,16 @@ ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925957"
 ---
 # <a name="batch-mode"></a>批处理模式
-批处理模式，则当**LockType**属性设置为**adLockBatchOptimistic**和提供程序支持批更新。 某些锁类型设置不可用，具体取决于游标位置。 例如，保守式锁定类型时不可用**CursorLocation**设置为**adUseClient**。 相反，提供程序不能支持批处理乐观锁定时光标所在的位置是在服务器上。 你应使用批处理使用 keyset 或 static 游标仅更新。  
+当**LockType**属性设置为**adLockBatchOptimistic** ，并且提供程序支持批处理更新时，批处理模式有效。 某些锁类型设置不可用，具体取决于游标位置。 例如，当**CursorLocation**设置为**adUseClient**时，悲观锁定类型不可用。 相反，当光标位于服务器上时，提供程序不支持批处理开放式锁定。 只应将批处理更新用于键集或静态游标。  
   
- **UpdateBatch**方法用于发送**记录集**更改保存到服务器以更新数据源在复制缓冲区。 在以下部分中，我们将打开**记录集**在批处理模式下对复制缓冲区中，进行更改，然后将更改发送到数据源通过调用**UpdateBatch**。  
+ **UpdateBatch**方法用于将复制缓冲区中保存的**记录集**更改发送到服务器以更新数据源。 在下一部分中，我们将在批处理模式下打开一个**记录集**，对复制缓冲区进行更改，然后通过调用**UpdateBatch**将更改发送到数据源。  
   
  本节包含下列主题：  
   

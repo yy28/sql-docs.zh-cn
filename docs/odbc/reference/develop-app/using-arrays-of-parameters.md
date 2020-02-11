@@ -1,5 +1,5 @@
 ---
-title: 使用参数的数组 |Microsoft Docs
+title: 使用参数数组 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,42 +14,42 @@ ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf6b5127bac7aedf9e67918d38020c73a4afe186
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079601"
 ---
 # <a name="using-arrays-of-parameters"></a>使用参数的数组
-若要使用的参数，应用程序调用数组**SQLSetStmtAttr**与*属性*参数则 SQL_ATTR_PARAMSET_SIZE 指定数量的参数集。 它将调用**SQLSetStmtAttr**与*属性*SQL_ATTR_PARAMS_PROCESSED_PTR 指定驱动程序可以在其中返回集的处理，参数数量的变量的地址的自变量其中包括错误设置。 它将调用**SQLSetStmtAttr**与*属性*SQL_ATTR_PARAM_STATUS_PTR 为指向数组中要返回其参数值的每一行的状态信息的自变量。 该驱动程序将这些地址存储在它保留为该语句的结构。  
+若要使用参数数组，应用程序将调用**SQLSetStmtAttr** ，并使用 SQL_ATTR_PARAMSET_SIZE 的*属性*参数来指定参数集的数目。 它调用具有 SQL_ATTR_PARAMS_PROCESSED_PTR 的*属性*参数的**SQLSetStmtAttr** ，以指定驱动程序可在其中返回处理的参数集（包括错误集）数目的变量的地址。 它使用 SQL_ATTR_PARAM_STATUS_PTR 的*属性*参数调用**SQLSetStmtAttr** ，以指向一个数组，该数组将返回每行参数值的状态信息。 驱动程序将这些地址存储在它为语句维护的结构中。  
   
 > [!NOTE]  
->  在 ODBC 2。*x*， **SQLParamOptions**调用指定的参数的多个值。 在 ODBC 3。*x*，在调用**SQLParamOptions**已由调用**SQLSetStmtAttr**设置则 SQL_ATTR_PARAMSET_SIZE 和 SQL_ATTR_PARAMS_PROCESSED_ARRAY 属性.  
+>  在 ODBC 2 中。*x*，调用**SQLParamOptions**为参数指定多个值。 ODBC 3 中的。*x*，对**SQLParamOptions**的调用已替换为对**SQLSetStmtAttr**的调用，以设置 SQL_ATTR_PARAMSET_SIZE 和 SQL_ATTR_PARAMS_PROCESSED_ARRAY 特性。  
   
- 然后再执行该语句，该应用程序设置的每个绑定数组的每个元素的值。 驱动程序时执行该语句，使用它来检索参数值并将其发送到数据源; 而存储的信息如果可能，该驱动程序应将这些值发送数组形式。 虽然最好通过执行与数据源的单个调用数组中的所有参数的 SQL 语句实现使用的参数的数组，此功能目前不广泛用于 Dbms。 但是，驱动程序可以模拟它的执行 SQL 语句多次，每个都有一组参数。  
+ 在执行语句之前，应用程序将设置每个绑定数组的每个元素的值。 执行语句时，驱动程序将使用存储的信息来检索参数值并将其发送到数据源;如果可能，驱动程序应以数组形式发送这些值。 尽管通过使用数组中的所有参数执行 SQL 语句来实现使用参数数组的最佳方法，只需要对数据源进行一次调用，此功能目前并不广泛适用于 Dbms。 但是，驱动程序可以通过多次执行 SQL 语句来模拟该语句，每个语句都有一组参数。  
   
- 应用程序使用的参数数组之前，必须确保应用程序使用的驱动程序支持。 完成这项工作的方法有两种：  
+ 在应用程序使用参数数组之前，必须确保应用程序使用的驱动程序支持它们。 可通过两种方式实现此目的：  
   
--   使用驱动程序，已知能够支持参数的数组。 应用程序可以硬编码的这些驱动程序的名称或用户可以指示你使用这些驱动程序。 自定义应用程序和垂直应用程序通常使用一组有限的驱动程序。  
+-   仅使用已知的驱动程序支持参数数组。 应用程序可以对这些驱动程序的名称进行硬编码，也可以指示该用户仅使用这些驱动程序。 自定义应用程序和垂直应用程序通常使用有限的驱动程序集。  
   
--   在运行时检查支持的参数的数组。 如果可以将 SQL_ATTR_PARAMSET_SIZE 语句属性设置为一个值大于 1，驱动程序支持参数的数组。 通用应用程序和垂直应用程序通常检查的参数的数组的支持在运行时。  
+-   在运行时检查是否支持参数数组。 如果可以将 SQL_ATTR_PARAMSET_SIZE 语句特性设置为大于1的值，则驱动程序支持参数的数组。 一般的应用程序和垂直应用程序通常会在运行时检查是否支持参数数组。  
   
- 可通过调用确定的行计数和参数化执行中的结果集的可用性**SQLGetInfo** SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项。 有关**插入**，**更新**，并**删除**语句，SQL_PARAM_ARRAY_ROW_COUNTS 选项指示是否单独的行计数 （一个用于每个参数集）可用 (SQL_PARC_BATCH) 或是否行数将累加起来，为一个 (SQL_PARC_NO_BATCH)。 有关**选择**语句，SQL_PARAM_ARRAY_SELECTS 选项指示结果集是否可用于每组参数 (SQL_PAS_BATCH) 或只有一个结果集是否可用 (SQL_PAS_NO_BATCH)。 如果该驱动程序不允许结果集生成语句，以使用参数数组执行，SQL_PARAM_ARRAY_SELECTS 返回 SQL_PAS_NO_SELECT。 是否可以特别是因为这些语句中的参数使用数据源特定于和不遵循 ODBC SQL 语法与其他类型的语句，使用参数的数组，它是数据源特定于。  
+ 可以通过使用 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项调用**SQLGetInfo**来确定参数化执行中的行计数和结果集的可用性。 对于**INSERT**、 **UPDATE**和**DELETE**语句，SQL_PARAM_ARRAY_ROW_COUNTS 选项指示单个行计数（每个参数集一个）是否可用（SQL_PARC_BATCH）或是否将行计数汇总到一个（SQL_PARC_NO_BATCH）。 对于**SELECT**语句，SQL_PARAM_ARRAY_SELECTS 选项指示结果集是否可用于每个参数集（SQL_PAS_BATCH）或是否只有一个结果集可用（SQL_PAS_NO_BATCH）。 如果驱动程序不允许使用参数数组来执行结果集生成语句，SQL_PARAM_ARRAY_SELECTS 将返回 SQL_PAS_NO_SELECT。 无论参数数组是否可与其他类型的语句一起使用，它都是特定于数据源的，尤其是因为在这些语句中使用参数将是特定于数据源的，不遵循 ODBC SQL 语法。  
   
- 可以使用指向 SQL_ATTR_PARAM_OPERATION_PTR 语句属性数组忽略的参数的行。 如果数组的元素设置为 SQL_PARAM_IGNORE，从排除的与该元素对应的参数集**SQLExecute**或**SQLExecDirect**调用。 指向由 SQL_ATTR_PARAM_OPERATION_PTR 属性数组分配和填充应用程序和驱动程序读取。 如果提取的行用作输入参数，则行状态数组的值可以使用参数操作数组中。  
+ SQL_ATTR_PARAM_OPERATION_PTR 语句特性指向的数组可用于忽略参数行。 如果将数组的元素设置为 SQL_PARAM_IGNORE，则将从**SQLExecute**或**SQLExecDirect**调用中排除与该元素对应的参数集。 SQL_ATTR_PARAM_OPERATION_PTR 特性指向的数组由应用程序分配并由驱动程序读取。 如果提取的行用作输入参数，则可以在参数操作数组中使用行状态数组的值。  
   
-## <a name="error-processing"></a>错误处理  
- 如果执行语句时出错，执行函数将返回错误，并将行号变量设置为包含错误的行数。 它是数据源特定于是否所有行只执行错误集或是否所有行 （但不是晚于） 之前执行的错误集。 由于它处理的参数集，该驱动程序设置到当前正在处理的行数将 SQL_ATTR_PARAMS_PROCESSED_PTR 语句属性指定的缓冲区。 如果所有设置只执行设置出错时，该驱动程序将在此缓冲区处理所有行后设置为 SQL_ATTR_PARAMSET_SIZE。  
+## <a name="error-processing"></a>处理错误  
+ 如果在执行语句时出现错误，则执行函数将返回错误，并将行号变量设置为包含错误的行的行号。 它是特定于数据源的，无论是否执行除错误之外的所有行或是否执行错误集前面的所有行（但不是在之后）。 由于它处理参数集，因此驱动程序将 SQL_ATTR_PARAMS_PROCESSED_PTR 语句特性指定的缓冲区设置为当前正在处理的行号。 如果执行了除错误之外的所有集，则驱动程序将此缓冲区设置为在处理所有行后 SQL_ATTR_PARAMSET_SIZE。  
   
- 如果 SQL_ATTR_PARAM_STATUS_PTR 语句属性尚未设置， **SQLExecute**或**SQLExecDirect**返回*参数状态数组*其中提供的状态每组参数。 参数状态数组是由应用程序分配，并填充驱动程序。 其元素指示是否 SQL 语句成功执行的参数的行或处理的参数集时是否发生错误。 如果遇到错误，该驱动程序 SQL_PARAM_ERROR，参数状态数组中设置相应的值，并返回 SQL_SUCCESS_WITH_INFO。 应用程序可以检查状态数组以确定哪些行已处理。 使用行号，该应用程序可以通常更正错误并继续处理。  
+ 如果已设置 SQL_ATTR_PARAM_STATUS_PTR 语句特性，则**SQLExecute**或**SQLExecDirect**将返回*参数 STATUS 数组，该数组*提供每组参数的状态。 参数状态数组由应用程序分配并由驱动程序填充。 其元素指示是否已成功为参数行执行了 SQL 语句，或者是否在处理参数集时出现错误。 如果发生错误，则驱动程序将参数状态数组中的相应值设置为 SQL_PARAM_ERROR 并返回 SQL_SUCCESS_WITH_INFO。 应用程序可以检查状态数组以确定已处理的行。 使用行号，应用程序通常可以更正错误并继续处理。  
   
- 如何使用参数状态数组由调用返回的 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项**SQLGetInfo**。 有关**插入**，**更新**，并**删除**语句，参数状态数组填充的状态信息，如果为 SQL_PARAM_ARRAY_ 返回 SQL_PARC_BATCHROW_COUNTS，但不返回 SQL_PARC_NO_BATCH 的情况。 有关**选择**语句，参数状态数组填充 SQL_PAS_BATCH 返回为 SQL_PARAM_ARRAY_SELECT，但如果返回 SQL_PAS_NO_BATCH 或 SQL_PAS_NO_SELECT。  
+ 参数状态数组的使用方式由对**SQLGetInfo**的调用返回的 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项决定。 对于**INSERT**、 **UPDATE**和**DELETE**语句，如果为 SQL_PARAM_ARRAY_ROW_COUNTS 返回 SQL_PARC_BATCH，则将填充参数状态数组，如果返回 SQL_PARC_NO_BATCH，则不填充。 对于**SELECT**语句，如果为 SQL_PARAM_ARRAY_SELECT 返回 SQL_PAS_BATCH，则会填写参数状态数组，但不会返回 SQL_PAS_NO_BATCH 或 SQL_PAS_NO_SELECT。  
   
 ## <a name="data-at-execution-parameters"></a>执行时数据参数  
- 如果任一长度/指示器数组中的值为 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 结果 (*长度*) 的宏，这些值不会发送数据**SQLPutData**用通常的方式。 此过程的以下方面请特殊注释，因为它们不是十分明显：  
+ 如果 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC （*长度*）宏的结果中包含长度/指示器数组中的任何值，则这些值的数据将以常规方式随**SQLPutData**一起发送。 此过程的以下方面涉及到特殊的注释，因为这种情况并不明显：  
   
--   当驱动程序将返回 SQL_NEED_DATA 时，它必须设置为它需要数据的行的行数字变量的地址。 如下所示单值的情况下，应用程序不能进行任何假设驱动程序将请求参数的单个集中的参数值的顺序。 如果在执行时数据参数的执行过程中发生错误，将 SQL_ATTR_PARAMS_PROCESSED_PTR 语句属性指定的缓冲区设置为在其发生错误，在指定的行状态数组中的行状态的行数SQL_ATTR_PARAM_STATUS_PTR 语句属性设置为 SQL_PARAM_ERROR，并调用**SQLExecute**， **SQLExecDirect**， **SQLParamData**，或**SQLPutData**返回 SQL_ERROR。 此缓冲区的内容是不确定，如果**SQLExecute**， **SQLExecDirect**，或**SQLParamData**返回 SQL_STILL_EXECUTING。  
+-   当驱动程序返回 SQL_NEED_DATA 时，它必须将行号变量的地址设置为它需要数据的行。 与单值的情况一样，应用程序无法对驱动程序将在一个参数集中请求参数值的顺序作出任何假设。 如果执行执行时数据参数出现错误，则由 SQL_ATTR_PARAMS_PROCESSED_PTR 语句特性指定的缓冲区设置为发生错误的行的行号，由 SQL_ATTR_PARAM_STATUS_PTR 语句特性指定的行状态数组中的行的状态设置为 SQL_PARAM_ERROR，并且调用**SQLExecute**、 **SQLExecDirect**、 **SQLParamData**或**SQLPutData**将返回 SQL_ERROR。 如果**SQLExecute**、 **SQLExecDirect**或**SQLParamData**返回 SQL_STILL_EXECUTING，则不定义此缓冲区的内容。  
   
--   因为该驱动程序不会解释中的值*ParameterValuePtr*的参数**SQLBindParameter**对于执行时数据参数，如果应用程序提供一个指针数组，指向**SQLParamData**不提取并返回到应用程序的此数组的元素。 相反，它将返回标量值在应用程序必须提供。 这意味着返回的值**SQLParamData**不是足够，若要为其指定参数在应用程序需要将数据发送; 应用程序还需要考虑的当前行号。  
+-   由于驱动程序不解释**SQLBindParameter**的*ParameterValuePtr*参数中的值用于执行时数据参数，因此，如果应用程序提供指向数组的指针，则**SQLParamData**不会提取此数组的元素并将其返回给应用程序。 相反，它将返回应用程序提供的标量值。 这意味着**SQLParamData**返回的值不足以指定应用程序需要向其发送数据的参数;应用程序还需要考虑当前行号。  
   
-     当只某些参数的数组的元素执行时数据参数，该应用程序必须通过数组中的地址*ParameterValuePtr* ，其中包含的所有参数的元素。 此数组被解释通常不是执行时数据参数的参数。 对于执行时数据参数，值的**SQLParamData**提供对应用程序，通常可以用于标识该驱动程序正在请求这种情况下的数据时，始终是数组的地址。
+     当仅参数数组的某些元素是执行时数据参数时，应用程序必须传递*ParameterValuePtr*中包含所有参数的元素的数组的地址。 对于不是执行时数据参数的参数，此数组通常被解释为。 对于执行时数据参数， **SQLParamData**提供给应用程序的值（通常可以用来标识此情况下驱动程序所请求的数据）始终为数组的地址。

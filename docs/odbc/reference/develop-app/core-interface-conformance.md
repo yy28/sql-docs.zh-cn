@@ -15,56 +15,56 @@ ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02e8aabf808ebf11f2e241fc7d330f794dbb0112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002117"
 ---
 # <a name="core-interface-conformance"></a>核心接口一致性
-所有 ODBC 驱动程序必须都有至少核心级别接口一致性。 由于核心级别中的功能所需的最通用的可互操作应用程序，该驱动程序可以使用此类应用程序。 核心级别中的功能也对应到 ISO CLI 规范中定义的功能和打开组 CLI 规范中定义的必需功能。 核心级别接口符合的 ODBC 驱动程序允许应用程序执行所有以下操作：  
+所有 ODBC 驱动程序必须至少表现出核心级别的接口一致性。 由于核心级别的功能是大多数一般可互操作应用程序所需的功能，因此该驱动程序可用于此类应用程序。 核心级别的功能还对应于 ISO CLI 规范中定义的功能和开放组 CLI 规范中定义的 nonoptional 功能。 与核心级别接口相容的 ODBC 驱动程序允许应用程序执行以下所有操作：  
   
--   分配和释放所有类型的句柄，通过调用**SQLAllocHandle**并**SQLFreeHandle**。  
+-   通过调用**SQLAllocHandle**和**SQLFreeHandle**，分配和释放所有类型的句柄。  
   
--   使用的所有窗体**SQLFreeStmt**函数。  
+-   使用**SQLFreeStmt**函数的所有窗体。  
   
--   将结果集列绑定通过调用**SQLBindCol**。  
+-   绑定结果集列，方法是调用**SQLBindCol**。  
   
--   处理动态参数，通过调用包括参数，仅，在输入方向的数组**SQLBindParameter**并**SQLNumParams**。 (输出方向中的参数是功能中的 203[级别 2 接口一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)  
+-   通过调用**SQLBindParameter**和**SQLNumParams**，仅在输入方向上处理动态参数（包括参数数组）。 （输出方向的参数是[第2级接口一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能203。）  
   
 -   指定绑定偏移量。  
   
--   使用执行时数据对话框中，涉及对调用**SQLParamData**并**SQLPutData**。  
+-   使用执行时数据对话框，涉及对**SQLParamData**和**SQLPutData**的调用。  
   
--   通过调用管理游标和游标名称**SQLCloseCursor**， **SQLGetCursorName**，并**SQLSetCursorName**。  
+-   通过调用**SQLCloseCursor**、 **SQLGetCursorName**和**SQLSetCursorName**来管理游标和游标名称。  
   
--   获取结果集的访问权限 （元数据） 的说明，通过调用**SQLColAttribute**， **SQLDescribeCol**， **SQLNumResultCols**，和**SQLRowCount**. (使用这些函数在列号 0 以检索书签元数据是功能中的 204[级别 2 接口一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)  
+-   通过调用**SQLColAttribute**、 **SQLDescribeCol**、 **SQLNumResultCols**和**SQLRowCount**，获取对结果集的说明（元数据）的访问权限。 （将这些函数用于列号0时，检索书签元数据是[第2级接口一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能204。）  
   
--   通过调用目录函数来查询数据字典**SQLColumns**， **SQLGetTypeInfo**， **SQLStatistics**，以及**SQLTables**。  
+-   查询数据字典，方法是调用目录函数**SQLColumns**、 **SQLGetTypeInfo**、 **SQLStatistics**和**SQLTables**。  
   
-     该驱动程序不需要支持的数据库表和视图的多部分名称。 (有关详细信息，请参阅中的新功能 101[级别 1 接口一致性](../../../odbc/reference/develop-app/level-1-interface-conformance.md)和功能中的 201[级别 2 接口一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)但是，SQL-92 规范，如限定列和索引名称的某些功能将与多部分命名语法相当。 不应存在 ODBC 功能列表引入到这些方面的 SQL-92 的新选项。  
+     驱动程序无需支持数据库表和视图的多部分名称。 （有关详细信息，请参阅第[1 级接口一致性](../../../odbc/reference/develop-app/level-1-interface-conformance.md)中的功能101和[级别2接口一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能201。）但是，SQL-92 规范的某些功能（如列限定和索引的名称）在语法上与多部分命名类似。 ODBC 功能的现有列表并不用于向 SQL-92 的这些方面引入新的选项。  
   
--   管理数据源和连接，通过调用**SQLConnect**， **SQLDataSources**， **SQLDisconnect**，以及**SQLDriverConnect**。 获取驱动程序，无论哪个 ODBC 级别它们支持，通过调用的信息**SQLDrivers**。  
+-   通过调用**SQLConnect**、 **SQLDataSources**、 **SQLDisconnect**和**SQLDriverConnect**来管理数据源和连接。 通过调用**SQLDrivers**获取有关驱动程序的信息，而不管它们支持哪个 ODBC 级别。  
   
--   准备和执行 SQL 语句，通过调用**SQLExecDirect**， **SQLExecute**，并**SQLPrepare**。  
+-   通过调用**SQLExecDirect**、 **SQLExecute**和**SQLPREPARE**，准备和执行 SQL 语句。  
   
--   通过调用提取结果集的一行或多个行，只是向前**SQLFetch**或通过调用**SQLFetchScroll**与*FetchOrientation*参数将设置为 SQL_FETCH_NEXT。  
+-   只是通过调用**SQLFetch**或调用**SQLFetchScroll** ，并将*FetchOrientation*参数设置为 SQL_FETCH_NEXT 来获取结果集的一行或多行（仅向前方向）。  
   
--   获取未绑定的列在部件中，通过调用**SQLGetData**。  
+-   通过调用**SQLGetData**，在部分中获取未绑定列。  
   
--   通过调用获取的所有属性的当前值**SQLGetConnectAttr**， **SQLGetEnvAttr**，并**SQLGetStmtAttr**，并将所有属性都设置为其默认值和将某些属性设置为非默认值，通过调用**SQLSetConnectAttr**， **SQLSetEnvAttr**，并**SQLSetStmtAttr**。  
+-   通过调用**SQLGetConnectAttr**、 **SQLGetEnvAttr**和**SQLGetStmtAttr**获取所有属性的当前值，并将所有属性设置为其默认值，并通过调用**SQLSetConnectAttr**、 **SQLSetEnvAttr**和**SQLSetStmtAttr**将某些属性设置为非默认值。  
   
--   通过调用操作描述符，某些字段**SQLCopyDesc**， **SQLGetDescField**， **SQLGetDescRec**， **SQLSetDescField**，并**SQLSetDescRec**。  
+-   通过调用**SQLCopyDesc**、 **SQLGetDescField**、 **SQLGetDescRec**、 **SQLSetDescField**和**SQLSetDescRec**来处理描述符的某些字段。  
   
--   获取诊断信息，通过调用**SQLGetDiagField**并**SQLGetDiagRec**。  
+-   通过调用**SQLGetDiagField**和**SQLGetDiagRec**获取诊断信息。  
   
--   检测驱动程序功能，通过调用**SQLGetFunctions**并**SQLGetInfo**。 此外，检测的结果发送到数据源中，通过调用之前对 SQL 语句所做的任何文本替换**SQLNativeSql**。  
+-   通过调用**SQLGetFunctions**和**SQLGetInfo**来检测驱动程序功能。 此外，还可以通过调用**SQLNativeSql**来检测对 SQL 语句进行的任何文本替换的结果，并将其发送到数据源。  
   
--   使用的语法**SQLEndTran**提交的事务。 核心级驱动程序不需要支持事务，则返回 true;因此，应用程序不能指定 SQL_ROLLBACK 也不 SQL_AUTOCOMMIT_OFF SQL_ATTR_AUTOCOMMIT 连接属性。 (有关详细信息，请参阅中的新功能 109[级别 2 接口一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)  
+-   使用**SQLEndTran**的语法来提交事务。 核心级驱动程序无需支持真正的事务;因此，应用程序不能为 SQL_ATTR_AUTOCOMMIT 连接属性指定 SQL_ROLLBACK 和 SQL_AUTOCOMMIT_OFF。 （有关详细信息，请参阅[第2级接口一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能109。）  
   
--   调用**SQLCancel**取消执行时数据对话框并在多线程环境中，若要取消 ODBC 函数中执行另一个线程。 核心级别接口一致性不强制要求对异步执行函数，也不使用的支持**SQLCancel**取消 ODBC 函数以异步方式执行。 平台和 ODBC 驱动程序都不需要是多线程驱动程序在同一时间进行独立的活动。 但是，在多线程环境中，ODBC 驱动程序必须是线程安全。 来自应用程序的请求的序列化是符合的方式来实现此规范，即使它可能造成严重性能问题。  
+-   调用**SQLCancel**可取消执行时数据对话框，在多线程环境中，取消在另一个线程中执行的 ODBC 函数。 核心级接口一致性不会强制支持函数的异步执行，也不会使用**SQLCancel**来取消异步执行的 ODBC 函数。 平台和 ODBC 驱动程序都不需要多线程，因此驱动程序可以同时执行独立的活动。 但在多线程环境中，ODBC 驱动程序必须是线程安全的。 从应用程序进行的请求序列化是实现此规范的一致方法，即使它可能会导致严重的性能问题。  
   
--   通过调用获取表的 SQL_BEST_ROWID 行标识列**SQLSpecialColumns**。 (支持 SQL_ROWVER 是功能中的 208[级别 2 接口一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)  
+-   通过调用**SQLSpecialColumns**获取表的 SQL_BEST_ROWID 行标识列。 （支持 SQL_ROWVER 是[第2级接口一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能208。）  
   
     > [!IMPORTANT]  
-    >  ODBC 驱动程序必须实现的核心接口一致性级别中的函数。
+    >  ODBC 驱动程序必须在核心接口一致性级别实现函数。

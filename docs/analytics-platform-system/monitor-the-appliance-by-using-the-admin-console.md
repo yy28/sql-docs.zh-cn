@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400946"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>用管理控制台分析平台系统监视设备
@@ -31,7 +31,7 @@ ms.locfileid: "74400946"
   
 显示硬件和软件警报。  
   
-性能监视  
+性能监视器  
 显示性能监视器图。  
   
 **并行数据仓库**  
@@ -61,7 +61,7 @@ ms.locfileid: "74400946"
 存储  
 总结了 PDW 的存储利用率。  
   
-性能监视  
+性能监视器  
 显示 PDW 性能监视器图。  
  
 > [!NOTE]  

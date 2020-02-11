@@ -1,5 +1,5 @@
 ---
-title: sp_notify_operator (Transact SQL) |Microsoft Docs
+title: sp_notify_operator （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107981"
 ---
-# <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
+# <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   使用数据库邮件向操作员发送电子邮件。  
   
  
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,24 +47,24 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_name = ] 'profilename'` 要用于发送消息的数据库邮件配置文件的名称。 *profilename*是**nvarchar （128)** 。 如果*profilename*未指定，则使用默认数据库邮件配置文件。  
+`[ @profile_name = ] 'profilename'`用于发送消息的数据库邮件配置文件的名称。 *profilename*为**nvarchar （128）**。 如果未指定*profilename* ，则使用默认数据库邮件配置文件。  
   
-`[ @id = ] id` 将消息发送到操作员的标识符。 *id*是**int**，默认值为 NULL。 之一*id*或*名称*必须指定。  
+`[ @id = ] id`要向其发送消息的操作员的标识符。 *id*为**int**，默认值为 NULL。 必须指定*id*或*名称*之一。  
   
-`[ @name = ] 'name'` 将消息发送到操作员的名称。 *名称*是**nvarchar （128)** ，默认值为 NULL。 之一*id*或*名称*必须指定。  
+`[ @name = ] 'name'`要向其发送消息的操作员的名称。 *名称*为**nvarchar （128）**，默认值为 NULL。 必须指定*id*或*名称*之一。  
   
-> **注意**：在可以接收消息之前，必须为该运算符定义的电子邮件地址。  
+> **注意：** 必须先为操作员定义电子邮件地址，然后才能接收消息。  
   
-`[ @subject = ] 'subject'` 电子邮件主题。 *使用者*是**nvarchar(256)** ，无默认值。  
+`[ @subject = ] 'subject'`电子邮件的主题。 *subject*为**nvarchar （256）** ，无默认值。  
   
-`[ @body = ] 'message'` 电子邮件的正文。 *消息*是**nvarchar （max)** ，无默认值。  
+`[ @body = ] 'message'`电子邮件的正文。 *message*为**nvarchar （max）** ，无默认值。  
   
-`[ @file_attachments = ] 'attachment'` 要将附加到电子邮件的文件的名称。 *附件*是**nvarchar(512)** ，无默认值。  
+`[ @file_attachments = ] 'attachment'`要附加到电子邮件的文件的名称。 *附件*的值为**nvarchar （512）**，无默认值。  
   
-`[ @mail_database = ] 'mail_host_database'` 指定邮件主机数据库的名称。 *mail_host_database*是**nvarchar （128)** 。 如果没有*mail_host_database*指定，则**msdb**默认情况下使用数据库。  
+`[ @mail_database = ] 'mail_host_database'`指定邮件主机数据库的名称。 *mail_host_database*为**nvarchar （128）**。 如果未指定*mail_host_database* ，则默认情况下使用**msdb**数据库。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
  将指定消息发送到指定操作员的电子邮件地址。 如果操作员没有配置电子邮件地址，则返回一个错误。  
@@ -72,7 +72,7 @@ sp_notify_operator
  必须先配置数据库邮件和邮件主机数据库才能将通知发送给操作员。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -97,10 +97,10 @@ EXEC dbo.sp_notify_operator
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server 代理存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
   
   

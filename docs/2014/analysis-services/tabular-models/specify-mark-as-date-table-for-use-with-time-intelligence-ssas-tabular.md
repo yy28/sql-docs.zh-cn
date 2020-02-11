@@ -1,5 +1,5 @@
 ---
-title: 指定标记为日期表，以便用于时间智能 （SSAS 表格） |Microsoft Docs
+title: 指定 "标记为日期表" 以便用于时间智能（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284879"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>指定“标记为日期表”以便用于时间智能（SSAS 表格）
@@ -36,7 +36,7 @@ ms.locfileid: "67284879"
   
 1.  在模型设计器中，单击日期表。  
   
-2.  单击 **“表”** 菜单，然后依次单击 **“日期”** 和 **Mark as “日期” “表”**。  
+2.  单击 "**表**" 菜单，然后单击 "**日期**"，然后单击 "**标记为日期表**"  
   
 3.  在 **“标记日期表”** 对话框的 **“日期”** 列表框中，选择要用作唯一标识符的列。 此列必须包含唯一值，并且数据类型应为 Date。 例如：  
   
@@ -50,8 +50,8 @@ ms.locfileid: "67284879"
   
 4.  根据需要在事实数据表和日期表之间创建任何关系。  
   
-## <a name="see-also"></a>请参阅  
- [计算（SSAS 表格）](calculations-ssas-tabular.md)   
- [时间智能函数&#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;计算](calculations-ssas-tabular.md)   
+ [&#40;DAX 的时间智能函数&#41;](/dax/time-intelligence-functions-dax)  
   
   

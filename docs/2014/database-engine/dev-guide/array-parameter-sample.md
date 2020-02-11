@@ -11,27 +11,32 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74055907"
 ---
 # <a name="array-parameter-sample"></a>数组参数示例
   有时需要创建、更新或删除数据库中的一组行。 实现的方法有多种。 其中一种是使用 CLR 集成用户定义数据类型将客户端上的数组信息传递到服务器上的公共语言运行时 (CLR) 集成存储过程。 这类用户定义数据类型的特性将提供给服务器的数据大小限制在 8000 个字节。 因此，此方法不适于大型数据或复杂数据。 如果操作的数据量小且简单，则此方法比为每行调用存储过程有效得多。 通过传递数组可以保留数据顺序，数据顺序对一些应用程序而言非常重要。此示例包含以下内容：  
   
-1.  `ContactTypeNames` 用户定义数据类型， 其中包含所需的联系类型名称列表。  
+1.  
+  `ContactTypeNames` 用户定义数据类型， 其中包含所需的联系类型名称列表。  
   
-2.  `usp_EnsureContactTypeNames` 存储过程作为 Microsoft Visual C# 或 Microsoft Visual Basic 方法实现。 它接受 `ContactTypeNames` 用户定义数据类型的实例，并在 `Person.ContactType` 表中为联系名称插入新行，这些联系名称包含在用户定义数据类型实例中但在表中还不存在。  
+2.  
+  `usp_EnsureContactTypeNames` 存储过程作为 Microsoft Visual C# 或 Microsoft Visual Basic 方法实现。 它接受 `ContactTypeNames` 用户定义数据类型的实例，并在 `Person.ContactType` 表中为联系名称插入新行，这些联系名称包含在用户定义数据类型实例中但在表中还不存在。  
   
-3.  `TestArrayParameter` 控制台应用程序。 它基于传入的命令行参数创建 `ContactTypeNames` 用户定义数据类型的实例，然后通过将用户定义数据类型实例作为参数进行传递来调用 `usp_EnsureContactTypeNames` 存储过程。  
+3.  
+  `TestArrayParameter` 控制台应用程序。 它基于传入的命令行参数创建 `ContactTypeNames` 用户定义数据类型的实例，然后通过将用户定义数据类型实例作为参数进行传递来调用 `usp_EnsureContactTypeNames` 存储过程。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必备条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/download/details.aspx?id=42299) Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/download/details.aspx?id=42299) Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://archive.codeplex.com/?p=SqlServerSamples)提供的 AdventureWorks 数据库  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://archive.codeplex.com/?p=SqlServerSamples)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -108,7 +113,7 @@ ms.locfileid: "74055907"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>示例代码  
+## <a name="sample-code"></a>代码示例  
  下面是此示例的代码列表。  
   
  此代码用于库 `ContactTypeNames.`  
@@ -715,6 +720,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [公共语言运行时 &#40;CLR&#41; 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

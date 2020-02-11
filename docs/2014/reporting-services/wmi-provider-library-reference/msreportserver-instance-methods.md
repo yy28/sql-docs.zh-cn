@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa6810718b62a93d8d3dfbd8d13f1618f5b2aa3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097233"
 ---
-# <a name="msreportserverinstance-methods"></a>MSReportServer_Instance 方法
+# <a name="msreportserver_instance-methods"></a>MSReportServer_Instance 方法
   MSReportServer_Instance 类为客户端提供连接到已安装的报表服务器所需的基本信息。  
   
 ## <a name="public-methods"></a>公共方法  
@@ -34,7 +34,7 @@ ms.locfileid: "66097233"
 |-|-|  
 |[GetReportServerUrls 方法 (WMI MSReportServer_Instance)](msreportserver-instance-methods-getreportserverurls.md)|列出用户可用于访问报表服务器和报表管理器的 URL。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_Instance 成员](msreportserver-instance-members.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 目录对象属性、 方法和事件 |Microsoft Docs
+title: 目录对象属性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32321406d6de6aad4674bdea6ea9a5c086369259
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967044"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>目录对象属性、方法和事件
@@ -34,14 +34,14 @@ ms.locfileid: "67967044"
  [视图集合](../../../ado/reference/adox-api/views-collection-adox.md)  
   
 ## <a name="methods"></a>方法  
- [创建方法](../../../ado/reference/adox-api/create-method-adox.md)  
+ [Create 方法](../../../ado/reference/adox-api/create-method-adox.md)  
   
  [GetObjectOwner 方法](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
   
  [SetObjectOwner 方法](../../../ado/reference/adox-api/setobjectowner-method.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  无。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)

@@ -20,18 +20,18 @@ ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c27b16d8b72e289f66a051cb2710004f72309599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103787"
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec 函数
-**符合性**  
- 版本引入了：ODBC 3.0 标准符合性：ISO 92  
+**度**  
+ 引入的版本： ODBC 3.0 标准符合性： ISO 92  
   
- **摘要**  
- **SQLGetDescRec**返回当前设置或描述符记录的多个字段的值。 描述返回的字段的名称、 数据类型和列或参数的数据的存储。  
+ **总结**  
+ **SQLGetDescRec**返回描述符记录的多个字段的当前设置或值。 返回的字段描述列或参数数据的名称、数据类型和存储。  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,73 +53,73 @@ SQLRETURN SQLGetDescRec(
   
 ## <a name="arguments"></a>参数  
  *DescriptorHandle*  
- [输入]描述符句柄。  
+ 送描述符句柄。  
   
  *RecNumber*  
- [输入]指示从其应用程序查找信息的描述符记录。 描述符记录编号从 1，与记录号 0 表示的书签记录。 *RecNumber*参数必须是小于或等于 SQL_DESC_COUNT 的值。 如果*RecNumber*小于或等于 SQL_DESC_COUNT 但行不包含数据的列或参数，调用**SQLGetDescRec**将返回的字段的默认值。 (详细信息，请参阅"初始化的描述符字段"中[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
+ 送指示应用程序从中查找信息的描述符记录。 说明符记录的编号为1，记录号0为书签记录。 *RecNumber*参数必须小于或等于 SQL_DESC_COUNT 的值。 如果*RecNumber*小于或等于 SQL_DESC_COUNT 但行不包含列或参数的数据，则对**SQLGetDescRec**的调用将返回字段的默认值。 （有关详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)中的 "描述符字段的初始化"。）  
   
  *名称*  
- [输出]指向用于返回描述符记录 SQL_DESC_NAME 字段的缓冲区的指针。  
+ 输出指向缓冲区的指针，将在该缓冲区中返回描述符记录的 SQL_DESC_NAME 字段。  
   
- 如果*名称*为 NULL， *StringLengthPtr*仍将返回的字符 （不包括字符数据的 null 终止字符） 总数可用于在通过指向的缓冲区中返回*名称*。  
+ 如果*name*为 NULL，则*StringLengthPtr*仍将返回可在按*名称*指向的缓冲区中返回的字符总数（不包括字符数据的 NULL 终止字符）。  
   
  *BufferLength*  
- [输入]长度 **名称*缓冲区，以字符为单位。  
+ 送**名称*缓冲区的长度（以字符为限）。  
   
  *StringLengthPtr*  
- [输出]指向用于返回的数据可用于在返回的字符数的缓冲区\**名称*缓冲区，不包括 null 终止字符。 字符数是否大于或等于*BufferLength*中的数据\**名称*截断为*BufferLength*减去的长度null 终止字符是由驱动程序以 null 结尾。  
+ 输出指向缓冲区的指针，该缓冲区用于返回\**名称*缓冲区中可返回的数据的字符数，不包括 null 终止字符。 如果字符数大于或等于*BufferLength*，则\**名称*中的数据将被截断为*BufferLength*减去 null 终止字符的长度，并以 null 值终止于驱动程序。  
   
  *TypePtr*  
- [输出]指向用于返回描述符记录的 SQL_DESC_TYPE 字段的值的缓冲区的指针。  
+ 输出指向缓冲区的指针，该缓冲区用于返回描述符记录的 SQL_DESC_TYPE 字段的值。  
   
  *SubTypePtr*  
- [输出]对于其类型为 SQL_DATETIME 或 SQL_INTERVAL 的记录，这是指向在其中返回 SQL_DESC_DATETIME_INTERVAL_CODE 字段的值的缓冲区的指针。  
+ 输出对于类型为 SQL_DATETIME 或 SQL_INTERVAL 的记录，这是指向要在其中返回 SQL_DESC_DATETIME_INTERVAL_CODE 字段值的缓冲区的指针。  
   
  *LengthPtr*  
- [输出]指向用于返回描述符记录的 SQL_DESC_OCTET_LENGTH 字段的值的缓冲区的指针。  
+ 输出指向缓冲区的指针，该缓冲区用于返回描述符记录的 SQL_DESC_OCTET_LENGTH 字段的值。  
   
  *PrecisionPtr*  
- [输出]指向用于返回描述符记录 SQL_DESC_PRECISION 字段的值的缓冲区的指针。  
+ 输出指向缓冲区的指针，该缓冲区用于返回描述符记录的 SQL_DESC_PRECISION 字段的值。  
   
  *ScalePtr*  
- [输出]指向用于返回描述符记录 SQL_DESC_SCALE 字段的值的缓冲区的指针。  
+ 输出指向缓冲区的指针，该缓冲区用于返回描述符记录的 SQL_DESC_SCALE 字段的值。  
   
  *NullablePtr*  
- [输出]指向用于返回描述符记录 SQL_DESC_NULLABLE 字段的值的缓冲区的指针。  
+ 输出指向缓冲区的指针，该缓冲区用于返回描述符记录的 SQL_DESC_NULLABLE 字段的值。  
   
 ## <a name="returns"></a>返回  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR、 SQL_NO_DATA 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_NO_DATA 或 SQL_INVALID_HANDLE。  
   
- 如果返回 SQL_NO_DATA *RecNumber*大于当前的描述符记录数。  
+ 如果*RecNumber*大于当前说明符记录数，则返回 SQL_NO_DATA。  
   
- 如果返回 SQL_NO_DATA *DescriptorHandle* IRD 句柄和该语句是在准备或执行状态但没有与之关联的任何打开的游标。  
+ 如果*DescriptorHandle*是 IRD 句柄，并且该语句处于已准备或已执行状态，但没有打开的游标，则返回 SQL_NO_DATA。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLGetDescRec**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_DESC 和一个*处理*的*DescriptorHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLGetDescRec** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
+ 当**SQLGetDescRec**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_DESC 和*DescriptorHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLGetDescRec**返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明："（DM）" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
   
-|SQLSTATE|Error|描述|  
+|SQLSTATE|错误|说明|  
 |--------------|-----------|-----------------|  
-|01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01004|字符串数据，右截断|缓冲区\**名称*是否不足够大以返回整个描述符字段。 因此，该字段已被截断。 在返回未截断的描述符字段的长度 **StringLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|07009|描述符索引无效|*FieldIdentifier*自变量是一个记录字段中， *RecNumber*参数设置为 0，并且*DescriptorHandle*参数为 IPD 句柄。<br /><br /> （数据挖掘） *RecNumber*参数设置为 0，并将 SQL_ATTR_USE_BOOKMARKS 语句属性设置为 SQL_UB_OFF，并*DescriptorHandle*参数为 IRD 句柄。<br /><br /> *RecNumber*参数为小于 0。|  
-|08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其原因。|  
-|HY001|内存分配错误|该驱动程序无法分配支持执行或完成该函数所需的内存。|  
-|HY007|未准备关联的语句|*DescriptorHandle* IRD 的关联和关联的语句句柄当时不处于已准备或执行状态。|  
-|HY010|函数序列错误|（数据挖掘） *DescriptorHandle*与关联*StatementHandle*其中 （而不此是） 的异步执行函数调用和仍在执行时调用此函数。<br /><br /> （数据挖掘） *DescriptorHandle*与关联*StatementHandle*为其**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**调用和返回 SQL_NEED_DATA。 数据已发送的所有执行时数据参数或列之前调用此函数。<br /><br /> (DM) 为与之关联的连接句柄调用以异步方式执行的函数*DescriptorHandle*。 此异步函数仍在执行时**SQLGetDescRec**调用。|  
-|HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYT01|连接超时时间已到|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驱动程序不支持此函数|(DM) 驱动程序与相关联*DescriptorHandle*不支持该函数。|  
+|01000|一般警告|驱动程序特定的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01004|字符串数据，右截断|缓冲区\**名称*不够大，无法返回整个描述符字段。 因此，该字段已被截断。 在 **StringLengthPtr*中返回未截断描述符字段的长度。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|07009|描述符索引无效|*FieldIdentifier*参数是一个记录字段， *RecNumber*参数设置为0， *DescriptorHandle*参数是 IPD 句柄。<br /><br /> （DM） *RecNumber*参数设置为0，并且 SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_OFF，而*DESCRIPTORHANDLE*参数是 IRD 句柄。<br /><br /> *RecNumber*参数小于0。|  
+|08S01|通信链接失败|在函数完成处理之前，驱动程序与连接到的数据源之间的通信链接失败。|  
+|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。 * \**|  
+|HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
+|HY007|未准备关联语句|*DescriptorHandle*与 IRD 相关联，并且关联的语句句柄未处于已准备或已执行状态。|  
+|HY010|函数序列错误|（DM） *DescriptorHandle*与一个 StatementHandle 相关联，该** 的异步执行函数（而不是此函数）已被调用，并在调用此函数时仍在执行。<br /><br /> （DM） *DescriptorHandle*与已调用**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos**的*StatementHandle*相关联，并 SQL_NEED_DATA 返回。 在为所有执行时数据参数或列发送数据之前，将调用此函数。<br /><br /> （DM）为与*DescriptorHandle*关联的连接句柄调用了异步执行的函数。 调用**SQLGetDescRec**时仍在执行此异步函数。|  
+|HY013|内存管理错误|未能处理函数调用，原因可能是由于内存不足而无法访问基础内存对象。|  
+|HY117|由于未知的事务状态，连接被挂起。 仅允许断开连接和只读函数。|（DM）有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|IM001|驱动程序不支持此功能|（DM）与*DescriptorHandle*关联的驱动程序不支持该函数。|  
   
 ## <a name="comments"></a>注释  
- 应用程序可以调用**SQLGetDescRec**检索以下为单个列或参数的描述符字段的值：  
+ 应用程序可以调用**SQLGetDescRec**来检索单个列或参数的下列描述符字段的值：  
   
 -   SQL_DESC_NAME  
   
 -   SQL_DESC_TYPE  
   
--   SQL_DESC_DATETIME_INTERVAL_CODE （对于其类型为 SQL_DATETIME 或 SQL_INTERVAL 记录）  
+-   SQL_DESC_DATETIME_INTERVAL_CODE （对于类型为 SQL_DATETIME 或 SQL_INTERVAL 的记录）  
   
 -   SQL_DESC_OCTET_LENGTH  
   
@@ -129,25 +129,25 @@ SQLRETURN SQLGetDescRec(
   
 -   SQL_DESC_NULLABLE  
   
- **SQLGetDescRec**不检索标头字段的值。  
+ **SQLGetDescRec**不会检索标头字段的值。  
   
- 应用程序可以防止通过将对应的参数设置为 null 指针的字段的返回字段的设置。  
+ 应用程序可以通过将与字段相对应的参数设置为 null 指针，来防止返回字段的设置。  
   
- 当应用程序调用**SQLGetDescRec**若要检索特定的描述符类型未定义的字段的值，该函数将返回 SQL_SUCCESS，但返回的字段的值是未定义。 例如，调用**SQLGetDescRec** APD 或 ARD SQL_DESC_NAME 或 SQL_DESC_NULLABLE 字段将返回 SQL_SUCCESS，但未定义的字段的值。  
+ 当应用程序调用**SQLGetDescRec**来检索为特定描述符类型定义的字段的值时，该函数将返回 SQL_SUCCESS 但为该字段返回的值是不确定的。 例如，对 APD 或 ARD 的 SQL_DESC_NAME 或 SQL_DESC_NULLABLE 字段调用**SQLGetDescRec**将返回 SQL_SUCCESS，但不会返回该字段的未定义值。  
   
- 当应用程序调用**SQLGetDescRec**要检索的字段为特定的描述符类型定义但，没有默认值，并且尚未设置值，该函数将返回 SQL_SUCCESS，但返回值该字段是未定义。 详细信息，请参阅"初始化的描述符字段"中[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。  
+ 当应用程序调用**SQLGetDescRec**来检索为特定描述符类型定义的字段的值，但该字段没有默认值并且尚未设置，则该函数将返回 SQL_SUCCESS 但不定义为该字段返回的值。 有关详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)中的 "描述符字段的初始化"。  
   
- 字段的值也可以检索单独通过调用**SQLGetDescField**。 描述符标头或记录中字段的说明，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。 有关描述符的详细信息，请参阅[描述符](../../../odbc/reference/develop-app/descriptors.md)。  
+ 还可以通过调用**SQLGetDescField**来单独检索字段的值。 有关描述符标头或记录中的字段的说明，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。 有关描述符的详细信息，请参阅[描述符](../../../odbc/reference/develop-app/descriptors.md)。  
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关信息|请参阅|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
-|列绑定|[SQLBindCol 函数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|一个参数绑定|[SQLBindParameter 函数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|绑定列|[SQLBindCol 函数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|绑定参数|[SQLBindParameter 函数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |获取描述符字段|[SQLGetDescField 函数](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
 |设置多个描述符字段|[SQLSetDescRec 函数](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 头文件](../../../odbc/reference/install/odbc-header-files.md)

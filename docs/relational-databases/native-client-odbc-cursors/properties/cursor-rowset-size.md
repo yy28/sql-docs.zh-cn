@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5188b87e91725e2d0e86337261fc1f915189ff19
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784239"
 ---
 # <a name="cursor-rowset-size"></a>游标行集大小
@@ -48,7 +48,7 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
  [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)也可用于从块游标中检索列数据。 由于**SQLGetData**一次只处理一行，因此在调用**SQLGetData**之前，必须调用**SQLSetPos**将行集中的特定行设置为当前行。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过使用行集快速检索整个结果集提供优化。 若要使用此优化，请在调用**SQLExecDirect**或**SQLExecute**时，将游标属性设置为其默认值（只进、只读、行集大小 = 1）。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序设置默认的结果集。 在不需要滚动的情况下将结果传输到客户端时，该优化功能比服务器游标更有效。 执行语句后，请增加行集大小并使用按列绑定或按行绑定。 这允许 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用默认结果集将结果行有效地发送到客户端，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序会持续从客户端上的网络缓冲区中提取行。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序通过使用行集快速检索整个结果集提供优化。 若要使用此优化，请在调用**SQLExecDirect**或**SQLExecute**时，将游标属性设置为其默认值（只进、只读、行集大小 = 1）。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序设置默认的结果集。 在不需要滚动的情况下将结果传输到客户端时，该优化功能比服务器游标更有效。 执行语句后，请增加行集大小并使用按列绑定或按行绑定。 这允许[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用默认结果集将结果行高效地发送到客户端，而[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client ODBC 驱动程序会持续从客户端上的网络缓冲区中提取行。  
   
 ## <a name="see-also"></a>另请参阅  
  [游标属性](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  

@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Basic Scripting Edition 中的 ADO MD 代码示例 |Microsoft Docs
+title: Visual Basic，脚本编写版中的 ADO MD 代码示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: f2fb2d57-6884-42ef-a18c-2673ba9b85c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1248cd86e657b2e038af908ec1023ab8cfa58bd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947411"
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>Visual Basic Scripting Edition 中的 ADO MD 代码示例
-以下示例需要 Microsoft Internet 信息服务器 4.0 Microsoft Active Server Pages (ASP)。  
+以下示例需要 microsoft Internet information Server 4.0 的 Microsoft Active Server Pages （ASP）。  
   
 > [!NOTE]
->  将粘贴整个代码示例中的，从开头到末尾到代码编辑器。 如果使用完整的示例或段落格式设置都将丢失，该示例可能无法正确运行。  
+>  从开头到末尾将整个代码示例粘贴到代码编辑器中。 如果使用了部分示例或段落格式丢失，则示例可能无法正常运行。  
   
 -   [轴示例](../../../ado/reference/ado-md-api/axis-example-vbscript.md)  
   
