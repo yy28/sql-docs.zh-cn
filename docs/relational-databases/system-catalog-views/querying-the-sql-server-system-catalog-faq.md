@@ -19,10 +19,10 @@ ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c16bc1e0c8d8d6b5a62e2823aa011b58520b1d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018366"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>查询 SQL Server 系统目录常见问题
@@ -30,30 +30,30 @@ ms.locfileid: "68018366"
 
   本主题包含一个常见问题列表。 这些问题的答案是基于目录视图的查询。  
   
-##  <a name="_TOP"></a> 方面的常见问题  
+##  <a name="_TOP"></a>常见问题  
  下列部分按类别列出常见问题。  
   
 ### <a name="data-types"></a>数据类型  
   
--   [如何找到指定表的列的数据类型？](#_FAQ7)  
+-   [如何找到指定表中列的数据类型？](#_FAQ7)  
   
--   [如何找到指定表的 LOB 数据类型？](#_FAQ14)  
+-   [如何找到指定表中的 LOB 数据类型？](#_FAQ14)  
   
--   [如何找到依赖于指定的数据类型的列？](#_FAQ22)  
+-   [如何找到依赖于指定数据类型的列？](#_FAQ22)  
   
--   [如何找到依赖于指定的 CLR 用户定义类型或别名数据类型的计算的列？](#_FAQ23)  
+-   [如何找到依赖于指定 CLR 用户定义类型或别名数据类型的计算列？](#_FAQ23)  
   
--   [如何找到依赖于指定的 CLR 用户定义类型或别名类型的参数？](#_FAQ24)  
+-   [如何找到依赖于指定 CLR 用户定义类型或别名类型的参数？](#_FAQ24)  
   
 -   [如何找到依赖于指定 CLR 用户定义类型的 CHECK 约束？](#_FAQ25)  
   
--   [如何找到视图、 TRANSACT-SQL 函数和 TRANSACT-SQL 存储过程依赖于指定的 CLR 用户定义类型或别名类型？](#_FAQ26)  
+-   [如何找到依赖于指定 CLR 用户定义类型或别名类型的视图、Transact-SQL 函数和 Transact-SQL 存储过程？](#_FAQ26)  
   
 ### <a name="tables-indexes-views-and-constraints"></a>表、索引、视图和约束  
   
--   [如何找到指定数据库中的所有用户定义的表](#_FAQ31)  
+-   [如何找到指定数据库中的所有用户定义表？](#_FAQ31)  
   
--   [如何找到指定数据库中没有聚集的索引的所有表？](#_FAQ1)  
+-   [如何找到指定数据库中没有聚集索引的所有表？](#_FAQ1)  
   
 -   [如何找到没有索引的所有表？](#_FAQ4)  
   
@@ -61,41 +61,41 @@ ms.locfileid: "68018366"
   
 -   [如何找到具有标识列的所有表？](#_FAQ5)  
   
--   [如何查找所有表和索引进行分区？](#_FAQ32)  
+-   [如何找到所有进行了分区的表和索引？](#_FAQ32)  
   
--   [如何找到数据库中的所有视图](#_FAQ13)  
+-   [如何找到数据库中的所有视图？](#_FAQ13)  
   
 -   [如何找到视图的定义？](#_FAQ35)  
   
--   [如何找到最近 N 天内修改过的所有实体？](#_FAQ6)  
+-   [如何找到最近 n 天内修改过的所有实体？](#_FAQ6)  
   
 -   [如何找到指定表的主键列？](#_FAQ16)  
   
--   [如何找到指定表的外键的列？](#_FAQ17)  
+-   [如何找到指定表的外键列？](#_FAQ17)  
   
--   [如何确定是否在计算的列表达式中使用列？](#_FAQ20)  
+-   [如何确定某列是否在计算列表达式中使用？](#_FAQ20)  
   
--   [如何在计算的列表达式中找到使用的所有列？](#_FAQ21)  
+-   [如何找到在计算列表达式中使用的所有列？](#_FAQ21)  
   
 -   [如何找到指定表的所有约束？](#_FAQ27)  
   
 -   [如何找到指定表的所有索引？](#_FAQ28)  
   
--   [如何找到具有指定的列名称的所有表？](#_FAQ30)  
+-   [如何找到具有指定列名称的所有表？](#_FAQ30)  
   
--   [如何找到对指定的对象的所有统计信息？](#_FAQ33)  
+-   [如何找到指定对象的所有统计信息？](#_FAQ33)  
   
--   [如何指定对象上找到的所有统计信息和统计信息列？](#_FAQ34)  
+-   [如何找到指定对象的所有统计信息和统计信息列？](#_FAQ34)  
   
 ### <a name="modules-stored-procedures-user-defined-functions-and-triggers"></a>模块（存储过程、用户定义函数和触发器）  
   
--   [如何找到数据库中的所有存储的过程](#_FAQ9)  
+-   [如何找到数据库中的所有存储过程？](#_FAQ9)  
   
--   [如何找到数据库中的所有用户定义函数](#_FAQ12)  
+-   [如何找到数据库中的所有用户定义函数？](#_FAQ12)  
   
--   [如何为指定的存储的过程或函数中找到的参数？](#_FAQ10)  
+-   [如何找到指定存储过程或函数的参数？](#_FAQ10)  
   
--   [如何找到依赖项上指定的函数？](#_FAQ8)  
+-   [如何找到指定函数的依赖项？](#_FAQ8)  
   
 -   [如何查看模块定义？](#_FAQ15)  
   
@@ -103,13 +103,13 @@ ms.locfileid: "68018366"
   
 ### <a name="schemas-users-roles-and-permissions"></a>架构、用户、角色和权限  
   
--   [如何找到指定的架构中包含的实体的全部所有者？](#_FAQ2)  
+-   [如何找到指定架构中包含的实体的全部所有者？](#_FAQ2)  
   
 -   [如何找到对指定主体授予或拒绝的权限？](#_FAQ18)  
   
-## <a name="answers"></a>答案  
+## <a name="answers"></a>响应  
   
-###  <a name="_FAQ1"></a> 如何找到指定数据库中没有聚集的索引的所有表？  
+###  <a name="_FAQ1"></a>如何实现查找在指定数据库中没有聚集索引的所有表？  
  运行下列查询之前，请使用有效数据库名称替换 `<database_name>`。  
   
 ```  
@@ -139,9 +139,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ2"></a> 如何找到指定的架构中包含的实体的全部所有者？  
+###  <a name="_FAQ2"></a>如何实现查找指定架构中包含的实体的所有所有者？  
  运行以下查询之前，请使用有效名称替换 `<database_name>` 和 `<schema_name>`。  
   
 ```  
@@ -167,9 +167,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ3"></a> 如何找到没有主键的所有表？  
+###  <a name="_FAQ3"></a>如何实现查找没有主键的所有表？  
  运行下列查询之前，请使用有效数据库名称替换 `<database_name>`。  
   
 ```  
@@ -202,9 +202,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ4"></a> 如何找到没有索引的所有表？  
+###  <a name="_FAQ4"></a>如何实现查找没有索引的所有表？  
  运行以下查询之前，请使用有效数据库名称替换 `<database_name>`。  
   
 ```  
@@ -219,9 +219,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ5"></a> 如何找到具有标识列的所有表？  
+###  <a name="_FAQ5"></a>如何实现查找包含标识列的所有表？  
  运行以下查询之前，请使用有效数据库名称替换 `<database_name>`。  
   
 ```  
@@ -254,9 +254,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ7"></a> 如何找到指定表的列的数据类型？  
+###  <a name="_FAQ7"></a>如何实现查找指定表的列的数据类型？  
  运行以下查询之前，请使用有效名称替换 `<database_name>` 和 `<schema_name.table_name>`。  
   
 ```  
@@ -279,9 +279,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ8"></a> 如何找到依赖项上指定的函数？  
+###  <a name="_FAQ8"></a>如何实现查找指定函数上的依赖项？  
  运行以下查询之前，请使用有效名称替换 `<database_name>` 和 `<schema_name.function_name>`。  
   
 ```  
@@ -297,9 +297,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ9"></a> 如何找到数据库中的所有存储的过程  
+###  <a name="_FAQ9"></a>如何实现查找数据库中的所有存储过程？  
  运行以下查询之前，请使用有效名称替换 `<database_name>`。  
   
 ```  
@@ -316,9 +316,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ10"></a> 如何为指定的存储的过程或函数中找到的参数？  
+###  <a name="_FAQ10"></a>如何实现查找指定存储过程或函数的参数吗？  
  运行以下查询之前，请使用有效名称替换 `<database_name>` 和 `<schema_name.object_name>`。  
   
 ```  
@@ -342,9 +342,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ12"></a> 如何找到数据库中的所有用户定义函数  
+###  <a name="_FAQ12"></a>如何实现查找数据库中的所有用户定义函数？  
  运行以下查询之前，请使用有效数据库名称替换 `<database_name>`。  
   
 ```  
@@ -361,9 +361,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ13"></a> 如何找到数据库中的所有视图  
+###  <a name="_FAQ13"></a>如何实现查找数据库中的所有视图？  
  运行以下查询之前，请使用有效数据库名称替换 `<database_name>`。  
   
 ```  
@@ -379,9 +379,9 @@ FROM sys.views;
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ6"></a> 如何找到最近 N 天内修改过的所有实体？  
+###  <a name="_FAQ6"></a>如何实现查找在最近 N 天内修改过的所有实体？  
  运行以下查询之前，请使用有效值替换 `<database_name>` 和 `<n_days>`。  
   
 ```  
@@ -399,9 +399,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ14"></a> 如何找到指定表的 LOB 数据类型？  
+###  <a name="_FAQ14"></a>如何实现查找指定表的 LOB 数据类型？  
  运行以下查询之前，请使用有效名称替换 `<database_name>` 和 `<schema_name.table_name>`。  
   
 ```  
@@ -427,9 +427,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ15"></a> 如何查看模块定义？  
+###  <a name="_FAQ15"></a>如何实现查看模块的定义？  
  运行以下查询之前，请使用有效名称替换 `<database_name>` 和 `<schema_name.object_name>`。  
   
 ```  
@@ -452,9 +452,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ19"></a> 如何查看服务器级别触发器的定义？  
+###  <a name="_FAQ19"></a>如何实现查看服务器级别触发器的定义吗？  
   
 ```  
 SELECT definition  
@@ -463,9 +463,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ16"></a> 如何找到指定表的主键列？  
+###  <a name="_FAQ16"></a>如何实现查找指定表的主键的列？  
  运行以下查询之前，请使用有效名称替换 `<database_name>` 和 `<schema_name.table_name>`。  
   
 ```  
@@ -506,9 +506,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ17"></a> 如何找到指定表的外键的列？  
+###  <a name="_FAQ17"></a>如何实现查找指定表的外键的列？  
  运行以下查询之前，请使用有效名称替换 `<database_name>` 和 `<schema_name.table_name>`。  
   
 ```  
@@ -530,9 +530,9 @@ WHERE f.parent_object_id = OBJECT_ID('<schema_name.table_name>');
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ18"></a> 如何找到对指定主体授予或拒绝的权限？  
+###  <a name="_FAQ18"></a>如何实现查找授予或拒绝指定主体的权限？  
  以下示例创建函数以返回检查对其权限的实体的名称。 在下列查询中调用函数。 必须在每个数据库（要在其中检查权限）中创建函数。  
   
 ```  
@@ -613,10 +613,10 @@ WHERE grantee_principal_id = DATABASE_PRINCIPAL_ID('public');
 GO  
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ20"></a> 如何确定是否在计算的列表达式中使用列？  
- 运行以下查询之前，替换`<database_name>`， `<schema_name.table_name>`，和`<column_name`> 使用有效名称。  
+###  <a name="_FAQ20"></a>如何实现确定列是否在计算列表达式中使用？  
+ 运行以下查询之前，请将、 `<database_name>` `<schema_name.table_name>`和`<column_name`> 替换为有效的名称。  
   
 ```  
 USE <database_name>;  
@@ -635,9 +635,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ21"></a> 如何在计算的列表达式中找到使用的所有列？  
+###  <a name="_FAQ21"></a>如何实现查找在计算列表达式中使用的所有列？  
  运行以下查询之前，请使用有效名称替换 `<database_name>`。  
   
 ```  
@@ -657,10 +657,10 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ22"></a> 如何找到依赖于指定的 CLR 用户定义类型或别名类型的列？  
- 运行以下查询之前，替换`<database_name>`带有有效名称和`<schema_name.data_type_name>`具有有效架构限定的 CLR 用户定义类型或架构限定的别名类型名称。 下面的查询要求的成员身份**db_owner**角色或权限以查看所有依赖列和计算的列在数据库中的元数据。  
+###  <a name="_FAQ22"></a>如何实现查找依赖于指定 CLR 用户定义类型或别名类型的列？  
+ 运行以下查询之前，请将替换`<database_name>`为有效的名称`<schema_name.data_type_name>` ，将替换为有效的架构限定的 CLR 用户定义类型或架构限定的别名类型名称。 下面的查询要求**db_owner**角色的成员身份或权限才能查看数据库中的所有依赖列和计算列元数据。  
   
 ```  
 USE <database_name>;  
@@ -681,7 +681,7 @@ GO
   
 ```  
   
- 以下查询返回的列的受限窄视图依赖于 CLR 用户定义类型或别名，但结果集是对可见**公共**角色。 如果您已经将您的用户定义类型的 REFERENCE 权限授予了其他人，并且您没有权限查看其他人使用该类型创建的对象的元数据，则可以使用此查询。  
+ 下面的查询将返回依赖于 CLR 用户定义类型或别名的列的受限、窄视图，但结果集对**public**角色可见。 如果您已经将您的用户定义类型的 REFERENCE 权限授予了其他人，并且您没有权限查看其他人使用该类型创建的对象的元数据，则可以使用此查询。  
   
 ```  
 USE <database_name>;  
@@ -695,9 +695,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ23"></a> 如何找到依赖于指定的 CLR 用户定义类型或别名类型的计算的列？  
+###  <a name="_FAQ23"></a>如何实现查找依赖于指定 CLR 用户定义类型或别名类型的计算列？  
  运行以下查询之前，请使用有效名称替换 `<database_name>`，并使用有效的架构限定的 CLR 用户定义类型和别名类型名称替换 `<schema_name.data_type_name>`。  
   
 ```  
@@ -712,10 +712,10 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ24"></a> 如何找到依赖于指定的 CLR 用户定义类型或别名类型的参数？  
- 运行以下查询之前，请使用有效名称替换 `<database_name>`，并使用有效的架构限定的 CLR 用户定义类型和别名类型名称替换 `<schema_name.data_type_name>`。 下面的查询要求的成员身份**db_owner**角色或权限以查看所有依赖列和计算的列在数据库中的元数据。  
+###  <a name="_FAQ24"></a>如何实现查找依赖于指定 CLR 用户定义类型或别名类型的参数吗？  
+ 运行以下查询之前，请使用有效名称替换 `<database_name>`，并使用有效的架构限定的 CLR 用户定义类型和别名类型名称替换 `<schema_name.data_type_name>`。 下面的查询要求**db_owner**角色的成员身份或权限才能查看数据库中的所有依赖列和计算列元数据。  
   
 ```  
 USE <database_name>;  
@@ -740,7 +740,7 @@ GO
   
 ```  
   
- 以下查询返回依赖于 CLR 用户定义类型或别名的参数的受限窄视图，但结果集对可见**公共**角色。 如果您已经将您的用户定义类型的 REFERENCE 权限授予了其他人，并且您没有权限查看其他人使用该类型创建的对象的元数据，则可以使用此查询。  
+ 下面的查询将返回依赖于 CLR 用户定义类型或别名的参数的受限、窄视图，但结果集对**public**角色可见。 如果您已经将您的用户定义类型的 REFERENCE 权限授予了其他人，并且您没有权限查看其他人使用该类型创建的对象的元数据，则可以使用此查询。  
   
 ```  
 USE <database_name>;  
@@ -754,10 +754,10 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ25"></a> 如何找到依赖于指定 CLR 用户定义类型的 CHECK 约束？  
- 运行以下查询之前，替换`<database_name>`带有有效名称和`<schema_name.data_type_name>`具有有效、 架构限定的 CLR 用户定义的类型名称。  
+###  <a name="_FAQ25"></a>如何实现查找依赖于指定 CLR 用户定义类型的 CHECK 约束？  
+ 运行以下查询之前，请使用有效`<database_name>`名称替换，并`<schema_name.data_type_name>`使用有效的架构限定 CLR 用户定义类型名称替换。  
   
 ```  
 USE <database_name>;  
@@ -774,12 +774,12 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ26"></a> 如何找到视图、 TRANSACT-SQL 函数和 TRANSACT-SQL 存储过程依赖于指定的 CLR 用户定义类型或别名类型？  
+###  <a name="_FAQ26"></a>如何实现查找依赖于指定 CLR 用户定义类型或别名类型的视图、Transact-sql 函数和 Transact-sql 存储过程？  
  运行以下查询之前，请使用有效名称替换 `<database_name>`，并使用有效的架构限定的 CLR 用户定义类型和别名类型名称替换 `<schema_name.data_type_name>`。  
   
- 在函数或过程中定义的参数为隐式架构绑定。 因此，可以通过查看依赖于 CLR 用户定义类型或别名类型的参数[sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)目录视图。 过程和触发器均未绑定到架构。 这意味着不会维护任何在过程或触发器的主体中定义的表达式与 CLR 用户定义类型或别名类型之间的依赖关系。 架构绑定视图和架构绑定用户定义函数具有依赖于 CLR 用户定义类型的表达式或别名类型都保留在**sys.sql_dependencies**目录视图。 不维护类型和 CLR 函数及类型和 CLR 过程之间的依赖关系。  
+ 在函数或过程中定义的参数为隐式架构绑定。 因此，可以使用[sys. sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)目录视图查看依赖于 CLR 用户定义类型或别名类型的参数。 过程和触发器均未绑定到架构。 这意味着不会维护任何在过程或触发器的主体中定义的表达式与 CLR 用户定义类型或别名类型之间的依赖关系。 具有依赖于 CLR 用户定义类型或别名类型的表达式的架构绑定视图和架构绑定的用户定义函数在**sql_dependencies sys.databases**目录视图中进行维护。 不维护类型和 CLR 函数及类型和 CLR 过程之间的依赖关系。  
   
  以下查询返回指定 CLR 用户定义类型或别名类型在视图、[!INCLUDE[tsql](../../includes/tsql-md.md)] 函数和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程中的所有架构绑定依赖关系。  
   
@@ -802,9 +802,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ27"></a> 如何找到指定表的所有约束？  
+###  <a name="_FAQ27"></a>如何实现查找指定表的所有约束？  
  运行以下查询之前，请使用有效名称替换 `<database_name>` 和 `<schema_name.table_name>`。  
   
 ```  
@@ -826,9 +826,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ28"></a> 如何找到指定表的所有索引？  
+###  <a name="_FAQ28"></a>如何实现查找指定表的所有索引？  
  运行以下查询之前，请使用有效名称替换 `<database_name>` 和 `<schema_name.table_name>`。  
   
 ```  
@@ -855,9 +855,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ30"></a> 如何查找具有指定的列名称的所有对象？  
+###  <a name="_FAQ30"></a>如何实现查找具有指定列名称的所有对象？  
  运行以下查询之前，请使用有效名称替换 `<database_name>` 和 `<column_name>`。  
   
 ```  
@@ -885,9 +885,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ31"></a> 如何找到指定数据库中的所有用户定义的表  
+###  <a name="_FAQ31"></a>如何实现查找指定数据库中的所有用户定义表？  
  运行以下查询之前，请使用有效名称替换 `<database_name>`。  
   
 ```  
@@ -899,9 +899,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ32"></a> 如何查找所有表和索引进行分区？  
+###  <a name="_FAQ32"></a>如何实现查找所有已分区的表和索引？  
  运行以下查询之前，请使用有效名称替换 `<database_name>`。  
   
 ```  
@@ -921,9 +921,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ33"></a> 如何找到对指定的对象的所有统计信息？  
+###  <a name="_FAQ33"></a>如何实现查找指定对象上的所有统计信息？  
  运行以下查询之前，请使用有效名称替换 `<database_name>`，并使用有效的表、索引视图或表值函数名称替换 `<schema_name.object_name>`。  
   
 ```  
@@ -940,9 +940,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ34"></a> 如何指定对象上找到的所有统计信息和统计信息列？  
+###  <a name="_FAQ34"></a>如何实现查找指定对象上的所有统计信息和统计信息列吗？  
  运行以下查询之前，请使用有效名称替换 `<database_name>`，并使用有效的表、索引视图或表值函数名称替换 `<schema_name.object_name>`。  
   
 ```  
@@ -961,9 +961,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-###  <a name="_FAQ35"></a> 如何找到视图的定义？  
+###  <a name="_FAQ35"></a>如何实现查找视图的定义？  
  运行以下查询之前，请使用有效名称替换 `<database_name>` 和 `<schema_name.object_name>`。  
   
 ```  
@@ -986,9 +986,9 @@ GO
   
 ```  
   
- [TOP](#_TOP)  
+ [返回页首](#_TOP)  
   
-## <a name="see-also"></a>请参阅  
- [系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [将系统表映射到系统视图 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

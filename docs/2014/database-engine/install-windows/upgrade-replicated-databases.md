@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775312"
 ---
 # <a name="upgrade-replicated-databases"></a>升级复制数据库
@@ -69,7 +69,7 @@ ms.locfileid: "62775312"
   
 -   [创建并应用初始快照](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
--   [复制代理可执行文件概念](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
  有关运行合并代理的详细信息，请参阅下列主题：  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62775312"
  在使用合并复制的拓扑中升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之后，如果要使用新功能，请更改所有发布的发布兼容级别。  
   
 ## <a name="upgrading-to-standard-workgroup-or-express-editions"></a>升级至 Standard Edition、Workgroup Edition 或 Express Edition  
- 在从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的某一版本升级到另一版本之前，请验证要升级到的版本是否支持当前使用的功能。 详细信息，请参阅部分中有关复制[SQL Server 2014 各个版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 在从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的某一版本升级到另一版本之前，请验证要升级到的版本是否支持当前使用的功能。 有关详细信息，请参阅 SQL Server 2014 的各个[版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)中有关复制的部分。  
   
 ## <a name="web-synchronization-for-merge-replication"></a>合并复制的 Web 同步  
  合并复制的 Web 同步选项要求将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (replisapi.dll) 复制到用于同步的 Internet Information Services (IIS) 服务器上的虚拟目录中。 配置 Web 同步时，该文件被配置 Web 同步向导复制到虚拟目录中。 若要升级安装在 IIS 服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，必须将 replisapi.dll 从 COM 目录手动复制到 IIS 服务器上的虚拟目录。 有关配置 Web 同步的详细信息，请参阅 [配置 Web 同步](../../../2014/relational-databases/replication/configure-web-synchronization.md)。  
@@ -88,7 +88,7 @@ ms.locfileid: "62775312"
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>从早期版本还原复制的数据库  
  在从早期版本还原复制数据库的备份时，若要确保保留复制设置：请还原到与创建备份的服务器和数据库同名的服务器和数据库。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制管理常见问题解答](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [副本后向兼容性](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999941"
 ---
 # <a name="object-explorer-details-pane"></a>对象资源管理器详细信息窗格
@@ -42,10 +42,10 @@ ms.locfileid: "62999941"
 |----------|------------|  
 |**返回**|移动到对象资源管理器详细信息中显示的前几个项。 如果以前的显示内容是搜索操作的结果，则重新运行搜索。|  
 |**前进**|选择“后退”  操作后，移动到下一个屏幕。|  
-|**向上**|转到父对象或父文件夹。|  
+|**Up**|转到父对象或父文件夹。|  
 |**同步**|将对象资源管理器的焦点设置为对象资源管理器详细信息中的选定对象。|  
-|**Filter**|如果有，显示对象的可配置子集。|  
-|**刷新**|刷新对象资源管理器详细信息中的显示内容。|  
+|**筛选器**|如果有，显示对象的可配置子集。|  
+|**“刷新”**|刷新对象资源管理器详细信息中的显示内容。|  
 |**搜索**|提供一个区域，用于输入某些数据库对象的搜索词。|  
   
 ### <a name="column-header-selections"></a>列标题选择  
@@ -57,7 +57,7 @@ ms.locfileid: "62999941"
 ### <a name="sorting"></a>排序  
  单击列标题一次，可按该列进行排序。 再次单击同一个列标题，可按该列进行反向排序。 对于对象和文件夹范围内的每个用户将保留排序选择，重新启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时也会保留。  
   
-### <a name="filtering"></a>筛选  
+### <a name="filtering"></a>Filtering  
  可以使用对象资源管理器详细信息工具栏上的“筛选器”  图标，筛选对象资源管理器详细信息中显示的某些对象列表。 在可以进行筛选时，将启用该图标。  
   
 ### <a name="details-pane"></a>“详细信息”窗格  
@@ -87,7 +87,7 @@ ms.locfileid: "62999941"
 ## <a name="sql-server-object-search"></a>SQL Server 对象搜索  
  通配符  
   
--   支持标准通配符字符。 例如，搜索 **dm_os%counters** 会返回 dm_os_memory_cache_counters 和 dm_os_performance_counters。 有关详细信息，请参阅[使用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)。  
+-   支持标准通配符字符。 例如，搜索 **dm_os%counters** 会返回 dm_os_memory_cache_counters 和 dm_os_performance_counters。 有关详细信息，请参阅[用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)。  
   
  搜索范围  
   
@@ -97,7 +97,7 @@ ms.locfileid: "62999941"
   
 -   搜索大型对象集可能需要很长时间，并且会降低服务器性能。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对象资源管理器](object-explorer.md)  
   
   

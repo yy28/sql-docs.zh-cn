@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_config_advanced (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup sp_backup_config_advanced （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cbbbfbf442d36a5f78771e4d097888a86b441065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942146"
 ---
-# <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
+# <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup sp_backup_config_advanced （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  配置高级的设置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
+  为[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置高级设置。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,10 +47,10 @@ EXEC managed_backup.sp_backup_config_advanced
   
 ##  <a name="Arguments"></a> 参数  
  @database_name  
- 启用托管的备份上特定数据库的数据库名称。 如果为 NULL 或 *，则此托管的备份适用于服务器上的所有数据库。  
+ 用于在特定数据库上启用托管备份的数据库名称。 如果为 NULL 或 *，则此托管备份适用于服务器上的所有数据库。  
   
  @encryption_algorithm  
- 备份过程中用于加密备份文件的加密算法的名称。 @encryption_algorithm是 **SYSNAME**。 在首次为数据库配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 时，它是必需的参数。 指定**NO_ENCRYPTION**如果不希望加密备份文件。 更改时[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置设置，此参数是可选的-如果参数未指定，则会保留现有的配置值。 为此参数允许的值为：  
+ 备份过程中用于加密备份文件的加密算法的名称。 @encryption_algorithm为**SYSNAME**。 在首次为数据库配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 时，它是必需的参数。 如果你不希望对备份文件进行加密，请指定**NO_ENCRYPTION** 。 更改[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置设置时，此参数是可选的-如果未指定参数，则保留现有的配置值。 此参数的允许值为：  
   
 -   AES_128  
   
@@ -65,15 +65,15 @@ EXEC managed_backup.sp_backup_config_advanced
  有关加密算法的详细信息，请参阅 [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)。  
   
  @encryptor_type  
- 加密程序，可以是任一证书的类型或 ASYMMETRIC_KEY"。 @encryptor_type是 **nvarchar （32)** 。 此参数是可选的如果指定为 NO_ENCRYPTION@encryption_algorithm参数。  
+ 加密程序的类型，可以是 "证书" 或 "ASYMMETRIC_KEY"。 @encryptor_type为**nvarchar （32）**。 如果为@encryption_algorithm参数指定 NO_ENCRYPTION，则此参数是可选的。  
   
  @encryptor_name  
- 要用于加密备份的现有证书或非对称密钥的名称。 @encryptor_name是 **SYSNAME**。 如果使用非对称密钥，则必须使用扩展密钥管理 (EKM) 进行配置。 此参数是可选的如果指定为 NO_ENCRYPTION@encryption_algorithm参数。  
+ 要用于加密备份的现有证书或非对称密钥的名称。 @encryptor_name为**SYSNAME**。 如果使用非对称密钥，则必须使用扩展密钥管理 (EKM) 进行配置。 如果为@encryption_algorithm参数指定 NO_ENCRYPTION，则此参数是可选的。  
   
- 有关详细信息，请参阅[可扩展的密钥管理 (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
+ 有关详细信息，请参阅[&#40;EKM&#41;的可扩展密钥管理](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
  @local_cache_path  
- 尚不支持此参数。  
+ 此参数尚不受支持。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -81,10 +81,10 @@ EXEC managed_backup.sp_backup_config_advanced
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 要求的成员身份**db_backupoperator**数据库角色的**ALTER ANY CREDENTIAL**权限，并且**EXECUTE**权限**sp_delete_backuphistory**存储过程。  
+ 要求具有**db_backupoperator**数据库角色的成员身份，具有**ALTER ANY CREDENTIAL**权限以及对**sp_delete_backuphistory**存储过程的**EXECUTE**权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例设置的高级的配置选项[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]对于 SQL Server 实例。  
+ 下面的示例[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]为 SQL Server 实例设置的高级配置选项。  
   
 ```  
 Use msdb;  
@@ -96,8 +96,8 @@ Go
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [managed_backup sp_backup_config_basic （Transact-sql）](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
+ [managed_backup sp_backup_config_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

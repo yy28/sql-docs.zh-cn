@@ -34,10 +34,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b1ab8545714e84c8ecf8ee6c9cb89b7b8c0d3831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922222"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>备份历史记录和标头信息 (SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "62922222"
 ##  <a name="BnRHistoryTables"></a> 备份和还原历史记录表  
  本部分介绍 **msdb** 系统数据库中存储备份和还原元数据的历史记录表。  
   
-|历史记录表|Description|  
+|历史记录表|说明|  
 |-------------------|-----------------|  
 |[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)|每个备份的数据或日志文件在表中占一行。|  
 |[backupfilegroup](/sql/relational-databases/system-tables/backupfilegroup-transact-sql)|备份集中的每个文件组在表中占一行。|  
@@ -87,7 +87,7 @@ ms.locfileid: "62922222"
 > [!IMPORTANT]  
 >  RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY 和 RESTORE VERIFYONLY Transact-SQL 语句需要 CREATE DATABASE 权限。 与以前的版本相比，这项新要求为您的备份文件提高了安全性，并更周全地保护了您的备份信息。 有关此权限的信息，请参阅 [GRANT 数据库权限 (Transact-SQL)](/sql/t-sql/statements/grant-database-permissions-transact-sql)。  
   
-|信息语句|备份历史记录表|Description|  
+|信息语句|备份历史记录表|说明|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)|[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)|返回一个结果集，其中包含一个列出了指定备份集中包含的数据库和日志文件的列表。<br /><br /> 有关详细信息，请参阅本主题后面的“列出数据库文件和事务日志文件”部分。|  
 |[RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)|[backupset](/sql/relational-databases/system-tables/backupset-transact-sql)|在特定的备份设备上检索所有备份集的所有备份标头信息。 执行 RESTORE HEADERONLY 的结果是一个结果集。<br /><br /> 有关详细信息，请参阅本主题后面的“查看备份标头信息”部分。|  
@@ -123,7 +123,7 @@ ms.locfileid: "62922222"
 ### <a name="which-backup-set-to-restore"></a>要还原的备份集  
  可以使用备份标头中的信息来标识要还原的备份集。 数据库引擎将对备份介质上的每个备份集进行编号。 这样，您就可以通过备份集在介质中的位置标识要还原的备份集。 例如，下面的介质包含三个备份集。  
   
- ![包含 SQL Server 备份集的备份介质](../../database-engine/media/bnr-media-backup-sets.gif "包含 SQL Server 备份集的备份介质")  
+ ![包含 SQL Server 备份集的备份媒体](../../database-engine/media/bnr-media-backup-sets.gif "包含 SQL Server 备份集的备份媒体")  
   
  若要还原特定的备份集，请指定要还原的备份集的位置编号。 例如，若要还原第二个备份集，请指定 2 作为要还原的备份集。  
   
@@ -217,7 +217,7 @@ ms.locfileid: "62922222"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [媒体集、媒体簇和备份集 (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)   
  [备份设备 (SQL Server)](backup-devices-sql-server.md)   

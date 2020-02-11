@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c3515610a0c833a17c78602ff48ed488b739ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918273"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>对表或索引启用压缩功能
@@ -56,9 +56,9 @@ ms.locfileid: "62918273"
   
 -   如果表具有非对齐索引，则无法更改单个分区的压缩设置。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或索引具有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -142,7 +142,7 @@ ms.locfileid: "62918273"
   
                 -   如果选择 **“天”** ，请输入要运行作业计划的当月日期和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的 15 日运行计划作业，请选择“天”，在第一个框中输入“15”，在第二个框中输入“2”  。 请注意，第二个框中允许的最大数是“99”。  
   
-                -   如果选择 **“特定日期”** ，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的最后一个工作日运行作业计划，请选择“天”，从第一个列表中选择“最后一周”，从第二个列表中选择“工作日”，然后在最后一个框中输入“2”    。 还可以从前两个列表中选择“第一周”  、“第二周”  、“第三周”  或“第四周”  以及特定工作日（例如：星期日或星期三）。 请注意，最后一个框中允许的最大数是“99”。  
+                -   如果选择 **“特定日期”** ，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的最后一个工作日运行作业计划，请选择“天”，从第一个列表中选择“最后一周”，从第二个列表中选择“工作日”，然后在最后一个框中输入“2”    。 还可以从前两个列表中选择“第一周”  、“第二周”  、“第三周”  或“第四周”  以及特定工作日（例如星期日或星期三）。 请注意，最后一个框中允许的最大数是“99”。  
   
         2.  在 **“每天频率”** 下，指定作业计划运行的当天作业计划的重复频率。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "62918273"
   
     6.  在 **“摘要”** 下的 **“说明”** 中，验证所有作业计划设置均正确。  
   
-    7.  单击 **“确定”** 。  
+    7.  单击“确定”。   
   
      完成此页后，单击 **“下一步”** 。  
   
@@ -171,13 +171,13 @@ ms.locfileid: "62918273"
      **详细信息**  
      提供向导执行的操作所返回的操作、状态和所有消息。  
   
-     **操作**  
+     **Action**  
      指定每个操作的类型和名称。  
   
-     **“状态”**  
+     **Status**  
      指示向导操作作为一个整体返回的值是“成功”  还是“失败”  。  
   
-     **Message**  
+     **消息**  
      提供从该进程中返回的任何错误或警告消息。  
   
      **报告**  
@@ -245,7 +245,7 @@ ms.locfileid: "62918273"
   
  有关详细信息，请参阅 [ALTER TABLE (Transact-SQL) ](/sql/t-sql/statements/alter-table-transact-sql) 和 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据压缩](data-compression.md)   
  [sp_estimate_data_compression_savings (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql)  
   

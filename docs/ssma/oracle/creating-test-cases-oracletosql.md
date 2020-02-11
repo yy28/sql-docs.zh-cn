@@ -1,5 +1,5 @@
 ---
-title: 创建测试用例 (OracleToSQL) |Microsoft Docs
+title: 创建测试用例（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,35 +13,35 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 697f7049a60aa7ae2b8c89d1fb6c5ce8e3d29312
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266126"
 ---
 # <a name="creating-test-cases-oracletosql"></a>创建测试用例 (OracleToSQL)
-使用测试用例向导来创建测试。 此向导允许您通过选择测试并验证对象和指定的测试参数创建测试用例。  
+使用测试用例向导创建测试。 通过此向导，您可以通过选择已测试和已验证的对象并指定测试参数来创建测试用例。  
   
 ## <a name="starting-the-test-case-wizard"></a>启动测试用例向导  
-若要启动测试用例向导单击**新建测试用例...** 从**测试人员**菜单。  
+若要启动测试用例向导，请单击 **"测试器" 菜单上**的 "**新建测试用例 ...** "。  
   
-在启动时，该向导查找架构 SSMATESTER_ORACLE 源 Oracle 服务器上。 它是用于存储辅助对象的测试人员扩展架构。 如果测试用例向导找不到 SSMATESTER_ORACLE，它会显示一个对话框窗口提供了创建架构。 （这种情况下通常发生在首次运行 SSMA 测试人员的过程。）  
+启动后，向导将在源 Oracle 服务器上查找架构 SSMATESTER_ORACLE。 它是用于存储辅助对象的测试人员扩展架构。 如果测试用例向导找不到 SSMATESTER_ORACLE，则将显示建议创建架构的对话框窗口。 （这种情况通常发生在首次运行 SSMA 测试器的过程中。）  
   
-如果收到对话框窗口中，单击**是**源服务器上创建 SSMATESTER_ORACLE 架构。 请注意，您必须具有 Oracle 权限以创建新用户并在此用户的架构中创建对象。  
+如果收到对话框窗口，请单击 **"是"** 在源服务器上创建 SSMATESTER_ORACLE 架构。 请注意，你必须拥有 Oracle 权限才能创建新用户并在此用户的架构中创建对象。  
   
-## <a name="overview-of-creating-test-cases-using-the-wizard"></a>创建测试用例使用向导概述  
+## <a name="overview-of-creating-test-cases-using-the-wizard"></a>使用向导创建测试用例概述  
 创建测试用例的过程包括以下五个步骤：  
   
-1.  [初始化测试用例&#40;OracleToSQL&#41;](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
+1.  [&#40;OracleToSQL&#41;初始化测试用例](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
   
-2.  [选择并配置测试的对象&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+2.  [选择并配置要测试 &#40;OracleToSQL&#41;的对象](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-3.  [选择并配置受影响的对象&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+3.  [选择并配置受影响的对象 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-4.  [自定义调用顺序&#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+4.  [自定义调用顺序 &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-5.  [完成测试用例准备&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+5.  [完成测试用例准备 &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-## <a name="see-also"></a>请参阅  
-[测试迁移的数据库对象&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>另请参阅  
+[测试迁移的数据库对象 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

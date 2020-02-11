@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65777f25066cfb42093313b90ac198c6bc1796a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918203"
 ---
 # <a name="page-compression-implementation"></a>页压缩的实现
-  本主题概述了 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是如何实现页压缩的。 此摘要提供了有助于你规划数据所需存储空间的基本信息。  
+  本主题概述了 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是如何实现页压缩的。 此摘要提供了有助于您规划数据所需存储空间的基本信息。  
   
  表、表分区、索引和索引分区的页压缩都是类似的。 以下针对表的页压缩的说明同样适用于所有对象类型的页压缩。 以下示例压缩的是字符串，但对于其他数据类型而言，前缀压缩和字典压缩的原理都是相同的。  
   
@@ -66,8 +66,8 @@ ms.locfileid: "62918203"
   
  当包含数据的现有表转换为页压缩时，将重新生成和计算每一页。 重新生成所有页会导致重新生成表、索引或分区。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据压缩](data-compression.md)   
- [Row Compression Implementation](row-compression-implementation.md)  
+ [行压缩的实现](row-compression-implementation.md)  
   
   

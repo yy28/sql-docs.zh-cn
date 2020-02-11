@@ -1,5 +1,5 @@
 ---
-title: Exists (DMX) |Microsoft Docs
+title: Exists （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889051"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  如果指定的子查询至少返回一行, 则返回**true** 。  
+  如果指定的子查询至少返回一行，则返回**true** 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,11 +28,11 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>参数  
- *subquery*  
- Select 语句, 格式为 select * FROM \<列名 > [WHERE \<谓词 list >]。  
+ subquery   
+ Select 语句，格式为 SELECT * FROM \<列名> [WHERE \<谓词 list>]。  
   
 ## <a name="result-type"></a>结果类型  
- 如果子查询返回的结果集至少包含一行, 则返回**true** ;否则, 返回**false**。  
+ 如果子查询返回的结果集至少包含一行，则返回**true** ;否则，返回**false**。  
   
 ## <a name="remarks"></a>备注  
  可以在 EXISTS 前面使用 NOT 关键字：例如 `WHERE NOT EXISTS (<subquery>)`。  
@@ -42,7 +42,7 @@ EXISTS(<subquery>)
 ## <a name="examples"></a>示例  
  可使用 EXISTS 和 NOT EXISTS 检查嵌套表中的条件。 这在创建控制定型或测试数据挖掘模型所使用的数据的筛选器时，将很有用。 有关详细信息，请参阅[挖掘模型筛选器（Analysis Services - 数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
   
- 下面的示例基于`[Association]`您在[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的挖掘结构和挖掘模型。 该查询仅返回其中客户至少购买一个 patch kit 的那些事例。  
+ 下面的示例基于您在`[Association]` [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的挖掘结构和挖掘模型。 该查询仅返回其中客户至少购买一个 patch kit 的那些事例。  
   
 ```  
 SELECT * FROM [Association].CASES  
@@ -53,10 +53,10 @@ WHERE [[Model] = 'Patch kit'
 )  
 ```  
   
- 查看此查询返回的相同数据的另一种方法是在关联查看器中打开该模型, 右键单击 "项集**修补工具包 = 现有**", 选择 "**钻取**" 选项, 然后选择 "**仅模型事例**"。  
+ 查看此查询返回的相同数据的另一种方法是在关联查看器中打开该模型，右键单击 "项集**修补工具包 = 现有**"，选择 "**钻取**" 选项，然后选择 "**仅模型事例**"。  
   
-## <a name="see-also"></a>请参阅  
- [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [模型筛选器语法和&#40;示例 Analysis Services-数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
+## <a name="see-also"></a>另请参阅  
+ [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [模型筛选器语法和示例 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767871"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>使用 SSIS 包升级向导升级 Integration Services 包
@@ -37,20 +37,20 @@ ms.locfileid: "62767871"
   
 #### <a name="to-run-the-wizard-from-sql-server-data-tools"></a>从 SQL Server Data Tools 运行向导  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，创建或打开一个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，创建或打开一个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在解决方案资源管理器中，右键单击“SSIS 包”节点，然后单击“升级所有包”来升级该节点下的所有包。  
+2.  在解决方案资源管理器中，右键单击“SSIS 包”  节点，然后单击“升级所有包”  来升级该节点下的所有包。  
   
     > [!NOTE]  
     >  打开包含[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 包的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 项目时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将自动打开 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导。  
   
 #### <a name="to-run-the-wizard-from-sql-server-management-studio"></a>从 SQL Server Management Studio 运行向导  
   
--   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，展开“已存储的包”节点，接着右键单击“文件系统”节点或“MSDB”节点，然后单击“升级包”。  
+-   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，展开“已存储的包”  节点，接着右键单击“文件系统”  节点或“MSDB”  节点，然后单击“升级包”  。  
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>在命令提示符下运行向导  
   
--   在命令提示符处，运行中的 SSISUpgrade.exe 文件**C:\Program Files\Microsoft SQL Server\120\DTS\Binn**文件夹。  
+-   在命令提示符处，运行**C:\Program FILES\MICROSOFT SQL Server\120\DTS\Binn**文件夹中的 ssisupgrade.exe 文件。  
   
 ## <a name="backing-up-the-original-packages"></a>备份原始包  
  若要备份原始包，必须将原始包和已升级包存储在文件系统的同一文件夹中。 根据向导的运行方式，可以自动选择该存储位置。  
@@ -70,9 +70,9 @@ ms.locfileid: "62767871"
   
 2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中或在命令提示符下，运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导。  
   
-3.  在向导的 **“选择源位置”** 页上，将 **“包源”** 属性设置为 **“文件系统”**。  
+3.  在向导的 **“选择源位置”** 页上，将 **“包源”** 属性设置为 **“文件系统”** 。  
   
-4.  在向导的“选择目标位置”页上，选择“保存到源位置”，从而将已升级的包保存到与原始包相同的位置。  
+4.  在向导的“选择目标位置”  页上，选择“保存到源位置”  ，从而将已升级的包保存到与原始包相同的位置。  
   
     > [!NOTE]  
     >  仅当将已升级包存储在与原始包相同的文件夹中时，向导中的备份选项才可用。  
@@ -86,7 +86,7 @@ ms.locfileid: "62767871"
 2.  在向导的 **“选择包管理选项”** 页上，选择 **“备份原始包”** 选项。  
   
     > [!WARNING]  
-    >  **备份原始包**打开时不会显示选项[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]或[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]项目中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，因为将自动启动该向导。  
+    >  当你在中[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]打开或项目时，不会显示 "**备份原始包**" 选项，这会自动启动向导。  
   
 3.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导。  
   

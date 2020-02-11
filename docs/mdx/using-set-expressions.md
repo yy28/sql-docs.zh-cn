@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893506"
 ---
 # <a name="using-set-expressions"></a>使用集表达式
@@ -22,7 +22,7 @@ ms.locfileid: "68893506"
   
  一个集的完整表达式由零个或多个显式指定的元组构成，各元组放在大括号中：  
   
- {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }] ...]}  
+ {[{ *Tuple_expression* | *Member_expression* } [，{ *Tuple_expression* | *Member_expression* }] ...]}  
   
  集表达式中指定的成员表达式将被转换为由一个成员构成的元组表达式。  
   
@@ -49,17 +49,17 @@ ms.locfileid: "68893506"
   
  由 Measures 维度的两个成员组成。 在行轴上，集  
   
- {([Product]。[产品类别]。[类别]. & [4], [Date]。[Calendar]。[Calendar Year]. & [2004])、  
+ {（[Product]。[产品类别]。[类别]. & [4]，[Date]。[Calendar]。[Calendar Year]. & [2004]）、  
   
- ([Product]。[产品类别]。[类别]. & [1], [Date]。[Calendar]。[Calendar Year]. & [2003])、  
+ （[Product]。[产品类别]。[类别]. & [1]，[Date]。[Calendar]。[Calendar Year]. & [2003]）、  
   
- ([Product]。[产品类别]。[类别]. & [3], [Date]。[Calendar]。[Calendar Year]。 & [2004])}  
+ （[Product]。[产品类别]。[类别]. & [3]，[Date]。[Calendar]。[Calendar Year]。 & [2004]）}  
   
  由三个元组组成，每个元组包含对 Product 维度的 Product Categories 层次结构和 Date 维度的 Calendar 层次结构上成员的两个显式引用。  
   
- 有关返回集的函数的示例, 请参阅[使用成员、元组和集&#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
+ 有关返回集的函数的示例，请参阅[使用成员、元组和集 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
   
-## <a name="see-also"></a>请参阅  
- [表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [MDX&#41;&#40;表达式](../mdx/expressions-mdx.md)  
   
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136284"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>创建计划并将计划附加到作业
@@ -44,7 +44,7 @@ ms.locfileid: "63136284"
   
 -   在特定日期和时间运行一次。  
   
--   按重复执行的计划运行。  
+-   按重复的计划运行。  
   
  除了创建作业计划之外，还可以创建警报，通过运行作业来响应事件。  
   
@@ -75,11 +75,12 @@ ms.locfileid: "63136284"
  在将计划附加到作业后可更改计划的开始日期。  
   
 ## <a name="cpu-idle-schedules"></a>CPU 空闲计划  
- 若要最大限度地利用 CPU 资源，可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理定义一个 CPU 空闲条件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用 CPU 空闲条件设置来确定运行作业的最佳时间。 例如，可计划作业，使其在 CPU 空闲时间和业务量较低时重新生成索引。  
+ 若要最大限度地利用 CPU 资源，可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理定义一个 CPU 空闲条件。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用 CPU 空闲条件设置来确定运行作业的最佳时间。 例如，可计划作业，使其在 CPU 空闲时间和业务量较低时重新生成索引。  
   
  将作业定义为在 CPU 空闲时间运行之前，应确定正常处理过程中 CPU 的负荷。 若要执行此操作，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或性能监视器来监视服务器流量并收集统计信息。 然后，利用收集到的信息设置 CPU 空闲时间百分比和持续时间。  
   
- 将 CPU 空闲条件定义为一个百分比，在该百分比以下，CPU 使用率必须持续指定的时间。 然后，设置持续时间长度。 如果 CPU 使用率在指定时间内低于指定的百分比，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将启动具有 CPU 空闲时间计划的所有作业。 有关使用的详细信息[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]或性能监视器来监视 CPU 使用率，请参阅[监视 CPU 使用情况](../../relational-databases/performance-monitor/monitor-cpu-usage.md)。  
+ 将 CPU 空闲条件定义为一个百分比，在该百分比以下，CPU 使用率必须持续指定的时间。 然后，设置持续时间长度。 如果 CPU 使用率在指定时间内低于指定的百分比，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将启动具有 CPU 空闲时间计划的所有作业。 有关使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]或性能监视器来监视 cpu 使用率的详细信息，请参阅[监视 cpu 使用情况](../../relational-databases/performance-monitor/monitor-cpu-usage.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -87,11 +88,11 @@ ms.locfileid: "63136284"
 |-|-|  
 |**说明**|**主题**|  
 |介绍如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业创建计划。|[Create a Schedule](create-a-schedule.md)|  
-|介绍如何安排 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划。|[安排作业计划](schedule-a-job.md)|  
-|说明如何定义服务器的 CPU 空闲条件。|[设置 CPU 空闲时间和持续时间 (SQL Server Management Studio)](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
+|介绍如何安排 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划。|[Schedule a Job](schedule-a-job.md)|  
+|说明如何定义服务器的 CPU 空闲条件。|[设置 CPU 空闲时间和持续时间 &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>请参阅  
- [sp_help_jobschedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
- [dbo.sysjobschedules &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
+## <a name="see-also"></a>另请参阅  
+ [sp_help_jobschedule &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
+ [sysjobschedules &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   
   

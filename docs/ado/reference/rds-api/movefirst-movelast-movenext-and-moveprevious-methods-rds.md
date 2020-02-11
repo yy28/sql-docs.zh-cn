@@ -1,5 +1,5 @@
 ---
-title: MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法 (RDS) |Microsoft Docs
+title: MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法（RDS） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,17 +17,17 @@ ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e99ff17cad2bebcfaed509788ea3721ddfeb0ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963886"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS)
-将移动到 first、 last、 下一步，或上一个记录中指定[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
+移动到指定[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象中的第一条、最后一条、下一条记录或上一条记录。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,19 +36,19 @@ ms.locfileid: "67963886"
 DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *DataControl*  
- 表示的对象变量[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
+ 表示 RDS 的对象变量[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
 ## <a name="remarks"></a>备注  
- 可以使用**移动**方法使用**rds。DataControl**对象在网页上的数据绑定控件中的数据记录中导航。 例如，假设您显示**记录集**通过绑定到网格中**rds。DataControl**对象。 然后可以包含用户移动到第一个、 最后、 下一步，可以单击的第一个、 最后、 下一步和上一步按钮或前一条记录中显示**记录集**。 执行此操作通过调用**MoveFirst**， **MoveLast**， **MoveNext**，以及**MovePrevious**方法**rds。DataControl**分别对象中第一个、 最后、 下一步和上一步按钮的 onClick 过程。 [通讯簿示例](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)显示了如何执行此操作。  
+ 可以将**Move**方法用于**RDS。DataControl**对象，用于在网页上浏览数据绑定控件中的数据记录。 例如，假设您通过绑定到 RDS 在网格中显示一个**记录集** **。DataControl**对象。 然后，你可以包括 "第一个"、"最后一个"、"下一个" 和 "上一个" 按钮，用户可以单击这些按钮移动到所显示的**记录集中**的第一个、最后一个、下一个或 为此，可调用**MoveFirst**、 **MoveLast**、 **MoveNext**和**MovePrevious**方法 **。** 第一个、最后一个、下一个和上一个按钮的 onClick 过程中的 DataControl 对象。 [通讯簿示例](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)显示了如何执行此操作。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>请参阅  
- [Move 方法 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法 (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Move 方法（ADO）](../../../ado/reference/ado-api/move-method-ado.md)   
+ [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法（ADO）](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveRecord 方法 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
 
 

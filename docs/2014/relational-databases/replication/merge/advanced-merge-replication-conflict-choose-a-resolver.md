@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62931629"
 ---
 # <a name="choose-a-resolver"></a>选择冲突解决程序
@@ -41,9 +41,9 @@ ms.locfileid: "62931629"
 |将对逻辑记录中任意值的多次更改标记为冲突。|使用具有逻辑记录级跟踪的默认冲突解决程序（逻辑记录功能不支持自定义冲突解决程序或业务逻辑处理程序）。|  
 |冲突解决结果数据应该与原始冲突数据不同。|使用计算新值的项目冲突解决程序。|  
   
-## <a name="see-also"></a>请参阅  
- [检测并解决逻辑记录中的冲突](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [高级合并复制冲突检测和解决](advanced-merge-replication-conflict-detection-and-resolution.md)   
+## <a name="see-also"></a>另请参阅  
+ [Detecting and Resolving Conflicts in Logical Records](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [重新发布数据](../republish-data.md)  
   
   

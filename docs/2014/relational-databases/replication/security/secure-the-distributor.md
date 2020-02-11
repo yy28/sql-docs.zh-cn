@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960271"
 ---
 # <a name="secure-the-distributor"></a>保护分发服务器的安全
@@ -44,7 +44,7 @@ ms.locfileid: "62960271"
 ## <a name="snapshot-folder-security"></a>快照文件夹的安全性  
  确保快照共享将读权限授予合并代理（对于合并发布）或分发代理（对于快照复制或事务复制）运行时所用的帐户，并将写权限授予快照代理运行时所用的帐户。 有关快照文件夹的详细信息，请参阅[保护快照文件夹](secure-the-snapshot-folder.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [查看和修改复制安全设置](view-and-modify-replication-security-settings.md)   
  [启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   

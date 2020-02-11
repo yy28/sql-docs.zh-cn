@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8739a95f0676adfdbc890512aeb5246565bacdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071585"
 ---
 # <a name="cross-database-queries"></a>跨数据库查询
@@ -22,7 +22,7 @@ ms.locfileid: "63071585"
   
  表变量不是事务性的。 因此，内存优化表变量可用于跨数据库查询中，并因此可以简化将数据从一个数据库中移到另一个数据库的内存优化表中的操作。 可以使用两个事务。 在第一个事务中，将数据从远程表插入到变量中。 在第二个事务中，将数据从变量插入到本地内存优化表中。  
   
- 例如，若要复制到的行从数据库 db1 中的表 t1 的表 t2 中 db2，使用变量@v1类型 dbo.tt1，您可以使用类似于：  
+ 例如，若要使用 dbo.tt1 类型的变量@v1 ，从数据库 db1 中的表 t1 将行复制到 db2 中的表 t2，你可以使用类似于下面的内容：  
   
 ```sql  
 USE db2   
@@ -33,7 +33,7 @@ INSERT dbo.t2 SELECT * FROM @v1
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [迁移到内存中 OLTP](migrating-to-in-memory-oltp.md)  
   
   

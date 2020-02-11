@@ -1,5 +1,5 @@
 ---
-title: 从 C 到 SQL：日期 |Microsoft Docs
+title: 从 C 到 SQL： Date |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02ee7c1fb396dc1c9c0708cf6c0e7a52ff1c11ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019412"
 ---
-# <a name="c-to-sql-date"></a>从 C 到 SQL：Date
-日期 ODBC C 数据类型的标识符是：  
+# <a name="c-to-sql-date"></a>从 C 到 SQL：日期
+Date ODBC C 数据类型的标识符是：  
   
  SQL_C_TYPE_DATE  
   
- 下表显示 ODBC SQL 日期 C 数据可能转换到的数据类型。 列和表中的条款的说明，请参阅[转换将数据从 C 到 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表显示了日期 C 数据可转换为的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅[将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
 |SQL 类型标识符|测试|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|列的字节长度 > = 10<br /><br /> 列字节长度 < 10<br /><br /> 数据值不是有效的日期|不适用<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|列的字符长度 > = 10<br /><br /> 列的字符长度 < 10<br /><br /> 数据值不是有效的日期|不适用<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|数据值是有效的日期<br /><br /> 数据值不是有效的日期|不适用<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|数据值是有效的日期 [a]<br /><br /> 数据值不是有效的日期|不适用<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|列字节长度 >= 10<br /><br /> 列字节长度 < 10<br /><br /> 数据值不是有效日期|不适用<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|列字符长度 >= 10<br /><br /> 列字符长度 < 10<br /><br /> 数据值不是有效日期|不适用<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|数据值是有效日期<br /><br /> 数据值不是有效日期|不适用<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|数据值是有效的日期 [a]<br /><br /> 数据值不是有效日期|不适用<br /><br /> 22007|  
   
- [a] 的时间戳的时间部分设置为零。  
+ [a] 时间戳的时间部分设置为零。  
   
- 有关哪些值是有效 SQL_C_TYPE_DATE 结构中的信息，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)本附录前面。  
+ 有关 SQL_C_TYPE_DATE 结构中的有效值的信息，请参阅本附录前面的[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)。  
   
- 当日期 C 数据转换为字符 SQL 数据时，生成的字符数据，在"*yyyy*-*mm*-*dd*"格式。  
+ 当日期 C 数据转换为字符 SQL 数据时，生成的字符数据的格式为 "*yyyy*-*mm*-*dd*"。  
   
- 该驱动程序将数据转换从日期 C 数据类型时，将忽略此长度/指示器值，并假定数据缓冲区的大小是日期 C 数据类型的大小。 中传递的长度/指示器值*StrLen_or_Ind*中的参数**SQLPutData**并使用指定的缓冲区中*StrLen_or_IndPtr*中参数**SQLBindParameter**。 使用指定的数据缓冲区*DataPtr*中的参数**SQLPutData**并*ParameterValuePtr*中的参数**SQLBindParameter**.
+ 驱动程序在从日期 C 数据类型转换数据时忽略长度/指示器值，并假定数据缓冲区的大小为日期 C 数据类型的大小。 长度/指示器值传入**SQLPutData**中的*StrLen_or_Ind*参数和在**SQLBindParameter**中通过*StrLen_or_IndPtr*参数指定的缓冲区中。 数据缓冲区是通过**SQLPutData**中的*DataPtr*参数和**SQLBindParameter**中的*ParameterValuePtr*参数指定的。

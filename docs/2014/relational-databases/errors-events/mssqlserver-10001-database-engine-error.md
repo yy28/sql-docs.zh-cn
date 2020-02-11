@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 022b1ca3c1ab4c0e1921cbac86c3059f10087f21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916358"
 ---
-# <a name="mssqlserver10001"></a>MSSQLSERVER_10001
+# <a name="mssqlserver_10001"></a>MSSQLSERVER_10001
     
 ## <a name="details"></a>详细信息  
   
@@ -32,13 +32,13 @@ ms.locfileid: "62916358"
 |符号名称|HR_E_UNEXPECTED|  
 |消息正文|提供程序报告了意外的灾难性错误。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  分布式查询处理在调用 OLE DB 访问接口期间遇到一个一般性错误。  
   
 ## <a name="user-action"></a>用户操作  
  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 收集 OLE DB 跟踪事件并向 OLE DB 提供程序的产品支持人员提供此数据。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Profiler 模板和权限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211720"
 ---
 # <a name="ddl-event-groups"></a>DDL 事件组
@@ -27,14 +27,14 @@ ms.locfileid: "68211720"
 > [!NOTE]  
 >  执行 DDL 式操作的特定系统存储过程也可以激发 DDL 触发器或事件通知。 请测试您的 DDL 触发器和事件通知以确定它们是否响应运行的系统存储过程。 例如，CREATE TYPE 语句和 **sp_addtype** 存储过程都将激发针对 CREATE_TYPE 事件创建的 DDL 触发器或事件通知。  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  DDL_DATABASE_LEVEL_EVENTS 下列出的事件在服务器（实例）或数据库级别执行。 DDL_SERVER_LEVEL_EVENTS 下列出的事件只在服务器级别执行。  
   
 ||||  
 |-|-|-|  
 |parent_type|type|name|  
-|NULL|296|ALTER_SERVER_CONFIGURATION|  
-|NULL|10001|DDL_EVENTS|  
+|Null|296|ALTER_SERVER_CONFIGURATION|  
+|Null|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  
 |10016|10027|&#124;   &#124;   DDL_ASSEMBLY_EVENTS|  
 |10027|102|&#124;   &#124;   &#124;   ALTER_ASSEMBLY|  
@@ -315,7 +315,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [事件通知](../service-broker/event-notifications.md)   
  [DDL 触发器](ddl-triggers.md)   
  [DDL 事件](ddl-events.md)  

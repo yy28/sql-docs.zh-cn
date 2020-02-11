@@ -1,5 +1,5 @@
 ---
-title: 步骤 3：修改平面文件连接管理器 |Microsoft Docs
+title: 步骤 3：修改平面文件连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767429"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>步骤 3：修改平面文件连接管理器
@@ -26,15 +26,15 @@ ms.locfileid: "62767429"
   
 1.  在 **“连接管理器”** 窗格中，右键单击 **Sample Flat File Source Data**，再选择 **“属性”** 。  
   
-2.  在“属性”窗口中，针对“表达式”，单击空单元，然后单击省略号按钮“(…)”   。  
+2.  在“属性”窗口中，针对“表达式”，单击空单元，然后单击省略号按钮“(…)”********。  
   
-3.  在中**属性表达式编辑器**对话框中**属性**列中，键入或选择`ConnectionString`。  
+3.  在 "**属性表达式编辑器**" 对话框的 "**属性**" 列中，键入或`ConnectionString`选择。  
   
-4.  在“表达式”列中，单击省略号按钮“(…)”以打开“表达式生成器”对话框    。  
+4.  在“表达式”列中，单击省略号按钮“(…)”以打开“表达式生成器”对话框************。  
   
 5.  在 **“表达式生成器”** 对话框中，展开 **“变量”** 节点。  
   
-6.  将变量 **User::varFileName**拖到 **“表达式”** 框中。  
+6.  将变量 " **User：： varFileName**" 拖到 "**表达式**" 框中。  
   
 7.  单击 **“确定”** 关闭 **“表达式生成器”** 对话框。  
   

@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918688"
 ---
 # <a name="cursors"></a>游标
@@ -42,10 +42,11 @@ ms.locfileid: "62918688"
   
 ## <a name="concepts"></a>概念  
  游标实现  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持三种游标实现。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持三种游标实现。  
   
  Transact-SQL 游标  
- 基于 DECLARE CURSOR 语法，主要用于 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本、存储过程和触发器中。 [!INCLUDE[tsql](../includes/tsql-md.md)] 游标在服务器上实现，由从客户端发送到服务器的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句管理。 它们还可能包含在批处理、存储过程或触发器中。  
+ 基于 DECLARE CURSOR 语法，主要用于 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本、存储过程和触发器中。 [!INCLUDE[tsql](../includes/tsql-md.md)]游标在服务器上实现，由[!INCLUDE[tsql](../includes/tsql-md.md)]从客户端发送到服务器的语句管理。 它们还可能包含在批处理、存储过程或触发器中。  
   
  应用程序编程接口 (API) 服务器游标  
  支持 OLE DB 和 ODBC 中的 API 游标函数。 API 服务器游标在服务器上实现。 每次客户端应用程序调用 API 游标函数时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口或 ODBC 驱动程序会把请求传输到服务器，以便对 API 服务器游标进行操作。  
@@ -59,35 +60,40 @@ ms.locfileid: "62918688"
   
  由于游标无法向后滚动，则在提取行后对数据库中的行进行的大多数更改通过游标均不可见。 当值用于确定所修改的结果集（例如更新聚集索引涵盖的列）中行的位置时，修改后的值通过游标可见。  
   
- 尽管数据库 API 游标模型将只进游标视为一种游标类型，但是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不这样。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将只进和滚动视为可应用于静态游标、键集驱动游标和动态游标的选项。 [!INCLUDE[tsql](../includes/tsql-md.md)] 游标支持只进静态游标、键集驱动游标和动态游标。 数据库 API 游标模型则假定静态游标、键集驱动游标和动态游标都是可滚动的。 当数据库 API 游标属性设置为只进时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将此游标作为只进动态游标实现。  
+ 尽管数据库 API 游标模型将只进游标视为一种游标类型，但是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不这样。 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将只进和滚动视为可应用于静态游标、键集驱动游标和动态游标的选项。 
+  [!INCLUDE[tsql](../includes/tsql-md.md)] 游标支持只进静态游标、键集驱动游标和动态游标。 数据库 API 游标模型则假定静态游标、键集驱动游标和动态游标都是可滚动的。 当数据库 API 游标属性设置为只进时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将此游标作为只进动态游标实现。  
   
- Static  
+ 静态  
  静态游标的完整结果集是打开游标时在 **tempdb** 中生成的。 静态游标总是按照打开游标时的原样显示结果集。 静态游标在滚动期间很少或根本检测不到变化，但消耗的资源相对很少。  
   
  游标不反映在数据库中所做的任何影响结果集成员身份的更改，也不反映对组成结果集的行的列值所做的更改。 静态游标不会显示打开游标以后在数据库中新插入的行，即使这些行符合游标 SELECT 语句的搜索条件。 如果组成结果集的行被其他用户更新，则新的数据值不会显示在静态游标中。 静态游标会显示打开游标以后从数据库中删除的行。 静态游标中不反映 UPDATE、INSERT 或者 DELETE 操作（除非关闭游标然后重新打开），甚至不反映使用打开游标的同一连接所做的修改。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 静态游标始终是只读的。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]静态游标始终是只读的。  
   
  由于静态游标的结果集存储在 **tempdb**的工作表中，因此结果集中的行大小不能超过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表的最大行大小。  
   
- [!INCLUDE[tsql](../includes/tsql-md.md)] 称静态游标为不敏感游标。 一些数据库 API 将这类游标识别为快照游标。  
+ [!INCLUDE[tsql](../includes/tsql-md.md)]为静态游标使用不敏感术语。 一些数据库 API 将这类游标识别为快照游标。  
   
  Keyset  
  打开由键集驱动的游标时，该游标中各行的成员身份和顺序是固定的。 由键集驱动的游标由一组唯一标识符（键）控制，这组键称为键集。 键是根据以唯一方式标识结果集中各行的一组列生成的。 键集是打开游标时来自符合 SELECT 语句要求的所有行中的一组键值。 由键集驱动的游标对应的键集是打开该游标时在 **tempdb** 中生成的。  
   
- Dynamic  
+ 动态  
  动态游标与静态游标相对。 当滚动游标时，动态游标反映结果集中所做的所有更改。 结果集中的行数据值、顺序和成员在每次提取时都会改变。 所有用户做的全部 UPDATE、INSERT 和 DELETE 语句均通过游标可见。 如果使用 API 函数（如 **SQLSetPos** ）或 [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE CURRENT OF 子句通过游标进行更新，它们将立即可见。 在游标外部所做的更新直到提交时才可见，除非将游标的事务隔离级别设为未提交读。 动态游标计划从不使用空间索引。  
   
 ## <a name="requesting-a-cursor"></a>请求游标  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种请求游标的方法：  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种请求游标的方法：  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)]  
   
-     [!INCLUDE[tsql](../includes/tsql-md.md)] 语言支持在 ISO 游标语法之后制定的用于使用游标的语法。  
+     
+  [!INCLUDE[tsql](../includes/tsql-md.md)] 语言支持在 ISO 游标语法之后制定的用于使用游标的语法。  
   
 -   数据库应用程序编程接口（API）游标函数  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持以下数据库 API 的游标功能：  
+     
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持以下数据库 API 的游标功能：  
   
     -   ADO（[!INCLUDE[msCoName](../includes/msconame-md.md)] ActiveX 数据对象）  
   
@@ -100,7 +106,8 @@ ms.locfileid: "62918688"
  如果既未请求 [!INCLUDE[tsql](../includes/tsql-md.md)] 游标也未请求 API 游标，则默认情况下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将向应用程序返回一个完整的结果集，这个结果集称为默认结果集。  
   
 ## <a name="cursor-process"></a>游标进程  
- [!INCLUDE[tsql](../includes/tsql-md.md)] 游标和 API 游标有不同的语法，但下列一般进程适用于所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 游标：  
+ 
+  [!INCLUDE[tsql](../includes/tsql-md.md)] 游标和 API 游标有不同的语法，但下列一般进程适用于所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 游标：  
   
 1.  将游标与 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的结果集相关联，并且定义该游标的特性，例如是否能够更新游标中的行。  
   
@@ -115,10 +122,10 @@ ms.locfileid: "62918688"
 ## <a name="related-content"></a>相关内容  
  [游标行为](native-client-odbc-cursors/cursor-behaviors.md)[如何实现游标](native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DECLARE CURSOR (Transact-SQL)](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
  [游标 (Transact-SQL)](/sql/t-sql/language-elements/cursors-transact-sql)   
- [游标函数 (Transact-SQL)](/sql/t-sql/functions/cursor-functions-transact-sql)   
- [游标存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql)  
+ [Cursor 函数 &#40;Transact-sql&#41;](/sql/t-sql/functions/cursor-functions-transact-sql)   
+ [游标存储过程 &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql)  
   
   

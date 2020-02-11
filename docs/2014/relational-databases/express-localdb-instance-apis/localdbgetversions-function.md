@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032285"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 函数
   返回计算机上的所有可用 SQL Server Express LocalDB 版本。  
   
- **标头文件：** sqlncli.h  
+ **头文件：** sqlncli.msi  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,12 +34,12 @@ ms.locfileid: "63032285"
 #define MAX_LOCALDB_VERSION_LENGTH 43typedef WCHAR TLocalDBVersion[MAX_LOCALDB_VERSION_LENGTH + 1];typedef TLocalDBVersion* PTLocalDBVersion;HRESULT LocalDBGetVersions(           PTLocalDBVersion pVersion,           LPDWORD lpdwNumberOfVersions);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *pVersionNames*  
- [输出]包含用户的工作站上的 LocalDB 版本的名称。  
+ 输出包含用户工作站上可用的 LocalDB 版本的名称。  
   
  *lpdwNumberOfVersions*  
- [输入/输出]在输入上持有的槽中的版本数*pVersionNames*缓冲区。   
+ [输入/输出]输入时保存*pVersionNames*缓冲区中版本的槽数。   
 在输出时，将包含现有 LocalDB 版本的数目。  
   
 ## <a name="returns"></a>返回  
@@ -59,9 +59,9 @@ ms.locfileid: "63032285"
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="remarks"></a>备注  
- 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 引用](../sql-server-express-localdb-reference.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](sql-server-express-localdb-header-and-version-information.md)  
   
   

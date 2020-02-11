@@ -1,5 +1,5 @@
 ---
-title: 用于商业智能 (CSDLBI) 的 CSDL 批注 |Microsoft Docs
+title: 用于商业智能的 CSDL 批注（CSDLBI） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757954"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>用于商业智能的 CSDL 批注 (CSDLBI)
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持以 XML 格式（称为带商业智能注释的概念性架构定义语言 (CSDLBI)）来表示表格模型定义。  
   
  本主题概要介绍了 CSDLBI 以及如何将其与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据模型结合使用。  
@@ -27,11 +28,11 @@ ms.locfileid: "62757954"
   
  尽管 CSDL 符合实体数据框架，但您无需理解实体关系模型或具有用于基于模型生成表格模型或报表的任何特殊工具。 您可以使用客户端工具（如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]）或 API（如 AMO）来生成模型，并将模型部署到服务器。 客户端通过使用模型定义文件连接到模型，模型定义文件通常发布到报表设计人员和报表使用者可以使用该文件的 SharePoint 库。 有关详细信息，请参阅以下链接：  
   
--   [表格模型解决方案（SSAS 表格）](../tabular-model-solutions-ssas-tabular.md)  
+-   [&#40;SSAS 表格&#41;的表格模型解决方案](../tabular-model-solutions-ssas-tabular.md)  
   
--   [表格模型解决方案部署（SSAS 表格）](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [&#40;SSAS 表格部署的表格模型解决方案部署&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
--   [PowerPivot BI 语义模型连接&#40;.bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
+-   [PowerPivot BI 语义模型连接 &#40; bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
  CSDLBI 架构是 Analysis Services 服务器为响应来自客户端（如 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]）的模型定义请求而生成的。 客户端应用程序将 XML 查询发送到承载模型数据的 Analysis Services 服务器。 在响应中，该服务器将发送一条 XML 消息，消息中使用 CSDLBI 注释包含该模型中实体的定义。 然后，报表客户端使用这些信息来展现可用于模型中的字段、聚合和度量值。 CSDLBI 注释还提供有关如何对数据进行分组、排序和格式设置的信息。  
   
@@ -71,10 +72,10 @@ ms.locfileid: "62757954"
   
 -   支持透视。  
   
- 有关 CSDLBI 注释中的各个元素的详细信息，请参阅[用于商业智能注释的 CSDL 的技术参考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)。 有关核心 CSDL 规范的信息，请参阅[CSDL v3 规范](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)。  
+ 有关 CSDLBI 批注中单个元素的详细信息，请参阅[针对采用 CSDL 的 BI 批注的技术参考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)。 有关核心 CSDL 规范的信息，请参阅[CSDL V3 规范](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)。  
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解表格对象模型](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [CSDLBI 概念](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
  [了解表格对象模型](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  

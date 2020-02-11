@@ -24,14 +24,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035276"
 ---
 # <a name="choosing-a-network-protocol"></a>选择网络协议
-  若要连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，必须启用网络协议。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在同一时间服务上有多个协议的请求。 客户端用单个协议连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果客户端程序不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在侦听哪个协议，可以配置客户端按顺序尝试多个协议。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器启用、禁用以及配置网络协议。  
+  若要连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，必须启用网络协议。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以同时对多个协议的请求进行服务。 客户端用单个协议连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果客户端程序不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在侦听哪个协议，可以配置客户端按顺序尝试多个协议。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器启用、禁用以及配置网络协议。  
   
 ## <a name="shared-memory"></a>Shared Memory  
  Shared Memory 是可供使用的最简单协议，没有可配置的设置。 由于使用 Shared Memory 协议的客户端仅可以连接到同一台计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，因此它对于大多数数据库活动而言是没用的。 如果怀疑其他协议配置有误，请使用 Shared Memory 协议进行故障排除。  
@@ -61,6 +61,6 @@ ms.locfileid: "63035276"
 ## <a name="enabling-the-protocol"></a>启用协议  
  该协议必须在客户端和服务器上都启用才能正常工作。 服务器可以同时监听所有已启用的协议的请求。 客户端计算机可以选取一个协议，或按照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中列出的顺序尝试这些协议。  
   
- 有关如何配置协议和连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的简短教程，请参阅[教程：数据库引擎入门](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
+ 有关如何配置协议和连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的简短教程，请参阅 [教程：数据库引擎入门](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
   
   

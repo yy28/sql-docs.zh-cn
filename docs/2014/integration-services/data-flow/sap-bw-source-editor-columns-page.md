@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f0031b874b2477bff53f8f0855b557a3188c3719
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770890"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 源编辑器（“列”页）
@@ -46,7 +46,7 @@ ms.locfileid: "62770890"
   
  若要在数据流中包括某列，请选中该列对应的复选框。 您选择这些复选框的顺序决定了列的输出顺序。 也就是说，您选择的第一个复选框将是第一个输出列，而选择的第二个复选框则将是第二个输出列，以此类推。  
   
- **外部列**  
+ **“外部列”**  
  查看选定外部（源）列。 选定列将按照您在配置要使用来自此源的数据的下游组件时将看到的对应输出列的顺序显示。  
   
  要更改这些列的顺序，请在 **“可用外部列”** 列表中清除所有列的复选框。 然后按照您希望列显示的顺序选择列。  
@@ -54,10 +54,10 @@ ms.locfileid: "62770890"
  **输出列**  
  为每个输出列提供唯一的名称。 默认值是所选外部（源）列的名称。 但是，您可以输入任何唯一的描述性名称。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器将显示列的 **输出列** 名称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SAP BW 源编辑器（“连接管理器”页）](sap-bw-source-editor-connection-manager-page.md)   
  [SAP BW 源编辑器（“错误输出”页）](sap-bw-source-editor-error-output-page.md)   
  [SAP BW 源编辑器（“高级”页）](sap-bw-source-editor-advanced-page.md)   
- [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Microsoft Connector 1.1 for SAP BW F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

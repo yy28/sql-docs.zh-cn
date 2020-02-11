@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5e763c930a37e90d1bf23c186fa5db8a16c5e971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067883"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>“CHECK 约束表达式”对话框 (Visual Database Tools)
@@ -56,7 +56,7 @@ NOT (payment_method = 'credit card') OR
   
  SQL 语法由下列参数组成：  
   
-|参数|Description|  
+|参数|说明|  
 |---------------|-----------------|  
 |常量|一个如数值数据或字符数据之类的文本值。 字符数据必须用单引号 (') 括起来。|  
 |column_name|指定列。|  
@@ -66,8 +66,8 @@ NOT (payment_method = 'credit card') OR
 |或|在布尔表达式中使用，用来连接两个或多个条件。 当任何一个条件为 True 时返回结果。<br /><br /> 当在一个语句中同时使用 AND 和 OR 时，在计算 AND 之后再计算 OR。 可以使用括号更改执行顺序。|  
 |NOT|对任何布尔表达式（可包含如 LIKE、NULL、BETWEEN、IN 和 EXISTS 之类的关键字）求反。<br /><br /> 当在一个语句中使用多个逻辑运算符时，首先处理 NOT。 可以使用括号更改执行顺序。|  
   
-## <a name="see-also"></a>请参阅  
- [唯一约束和 Check 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+## <a name="see-also"></a>另请参阅  
+ [Unique 约束和 Check 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [创建唯一约束](../../relational-databases/tables/create-unique-constraints.md)  
   
   

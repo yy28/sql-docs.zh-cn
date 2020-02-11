@@ -1,5 +1,5 @@
 ---
-title: .NET Framework 中的 SQL Server 数据类型 |Microsoft Docs
+title: SQL Server .NET Framework 中的数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 24b5c5d65ce7db8a26265c40185ce72d40df58ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009793"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework 中的 SQL Server 数据类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **SqlTypes**库属于的基类库[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。 它设计为向数据类型提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中相同的语义和精度。 本主题描述针对.NET Framework 程序员的新语义，并介绍中实现的类型**System.Data.SqlTypes**中包含的命名空间**System.Data**库。  
+  **SqlTypes**库是[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 基类库的一部分。 它设计为向数据类型提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中相同的语义和精度。 本主题介绍了 .NET Framework 程序员的新语义，并介绍了在**SqlTypes**命名空间中实现的**类型。**  
   
  下表列出了本节的主题。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68009793"
  [排序规则和 CLR 集成数据类型](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  介绍如何使用 CLR 集成处理排序规则。  
   
- [处理大型对象&#40;LOB&#41;在 CLR 中的参数](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [在 CLR 中处理大型对象 &#40;LOB&#41; 参数](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  介绍如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 之间传递 LOB 类型。  
   
  [映射 CLR 参数数据](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  

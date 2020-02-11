@@ -19,20 +19,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de1226d675859312e1ccaf908141586f865c8946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028384"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>SQL Server Native Client ODBC 数据源
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源名称 (DSN) 标识 ODBC 数据源，此数据源包含 ODBC 应用程序连接到特定服务器上的某个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库所需要的所有信息。 您可以通过两种方法定义 ODBC 数据源名称：  
   
--   在客户端计算机上管理工具中打开控制面板，然后双击**数据源 (ODBC)** 。 此时将打开 ODBC 数据源管理器，您可以用它来创建 DSN。  
+-   在客户端计算机上，打开 "控制面板" 中的 "管理工具"，然后双击 "**数据源（ODBC）**"。 此时将打开 ODBC 数据源管理器，您可以用它来创建 DSN。  
   
--   在 ODBC 应用程序，调用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)。  
+-   在 ODBC 应用程序中，调用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源包含：  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源包含：  
   
 -   数据源的名称。  
   
@@ -44,7 +46,7 @@ ms.locfileid: "63028384"
   
  不要求将 ODBC 应用程序连接到数据源。 然而，应用程序必须向 ODBC 连接函数提供适当的连接信息，否则驱动程序将在 DSN 中查找相同的连接信息。  
   
-## <a name="see-also"></a>请参阅  
- [与 SQL Server 通信&#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [与 SQL Server &#40;ODBC&#41;通信](communicating-with-sql-server-odbc.md)  
   
   

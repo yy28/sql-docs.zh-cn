@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128765"
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
@@ -30,7 +30,7 @@ ms.locfileid: "63128765"
   
 -   [权限命名约定](#_conventions)  
   
--   [与特定安全对象相关的权限](#_securables)  
+-   [与特定的安全对象相关的权限](#_securables)  
   
 -   [SQL Server 权限](#_permissions)  
   
@@ -92,31 +92,31 @@ ms.locfileid: "63128765"
      对象的 REFERENCES 权限是使用引用该对象的 `WITH SCHEMABINDING` 子句创建 FUNCTION 或 VIEW 时所必需的。  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
- 若要获取 pdf 格式的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 权限的海报大小的图表，请参阅 [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)。  
+ 有关 pdf 格式的所有[!INCLUDE[ssDE](../../includes/ssde-md.md)]权限的海报大小的图表，请[https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)参阅。  
   
 ##  <a name="_securables"></a> 适用于特定安全对象的权限  
  下表列出了主要的权限类别以及可应用这些权限的安全对象的种类。  
   
-|权限|适用对象|  
+|权限|适用于|  
 |----------------|----------------|  
 |SELECT|同义词<br /><br /> 表和列<br /><br /> 表值函数（ [!INCLUDE[tsql](../../includes/tsql-md.md)] 和公共语言运行时 (CLR)）和列<br /><br /> 视图和列|  
 |VIEW CHANGE TRACKING|表<br /><br /> 架构|  
 |UPDATE|同义词<br /><br /> 表和列<br /><br /> 视图和列<br /><br /> 序列对象|  
 |REFERENCES|标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 表和列<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）和列<br /><br /> 类型<br /><br /> 视图和列<br /><br /> 序列对象|  
-|Insert|同义词<br /><br /> 表和列<br /><br /> 视图和列|  
+|INSERT|同义词<br /><br /> 表和列<br /><br /> 视图和列|  
 |DELETE|同义词<br /><br /> 表和列<br /><br /> 视图和列|  
 |在运行 CREATE 语句前执行|过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 同义词<br /><br /> CLR 类型|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列|  
-|VIEW DEFINITION|可用性组<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 登录名、用户和角色<br /><br /> 同义词<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> Views<br /><br /> 序列对象|  
-|ALTER|可用性组<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 序列对象<br /><br /> 登录名、用户和角色<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> Views|  
-|TAKE OWNERSHIP|可用性组<br /><br /> 角色<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 服务器角色<br /><br /> 同义词<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> Views<br /><br /> 序列对象|  
-|CONTROL|可用性组<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 登录名、用户和角色<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 同义词<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> Views<br /><br /> 序列对象|  
+|VIEW DEFINITION|可用性组<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 登录名、用户和角色<br /><br /> 同义词<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 视图<br /><br /> 序列对象|  
+|ALTER|可用性组<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 序列对象<br /><br /> 登录名、用户和角色<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 视图|  
+|TAKE OWNERSHIP|可用性组<br /><br /> 角色<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 服务器角色<br /><br /> 同义词<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 视图<br /><br /> 序列对象|  
+|CONTROL|可用性组<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 登录名、用户和角色<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 同义词<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 视图<br /><br /> 序列对象|  
 |IMPERSONATE|登录名和用户|  
   
 > [!CAUTION]  
 >  安装期间授予系统对象的默认权限已针对可能的威胁进行了仔细评估，并且作为强化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分，无需进行更改。 对系统对象权限的任何更改都可能限制或破坏功能，并且可能让你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装处于不受支持的状态。  
   
-##  <a name="_permissions"></a> SQL Server 和 SQL 数据库权限  
+##  <a name="_permissions"></a>SQL Server 和 SQL 数据库权限  
  下表提供了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限的完整列表。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 权限仅适用于受支持的基本安全对象。 不能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中授予服务器级别权限，但是在某些情况下，可改为授予数据库权限。  
   
 |基础安全对象|对基础安全对象的粒度权限|权限类型代码|包含基础安全对象的安全对象|对容器安全对象的权限隐含着对基础安全对象的粒度权限|  
@@ -157,7 +157,7 @@ ms.locfileid: "63128765"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注意：仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注意：仅适用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "63128765"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|更改任何安全策略|ALSP<br /><br /> 注意：仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|更改任何安全策略|ALSP<br /><br /> 注意：仅适用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -203,8 +203,8 @@ ms.locfileid: "63128765"
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|在运行 CREATE 语句前执行|EX|SERVER|CONTROL SERVER|  
-|DATABASE|Insert|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注意：仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注意：仅适用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -228,10 +228,10 @@ ms.locfileid: "63128765"
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|Login|ALTER|AL|SERVER|ALTER ANY LOGIN|  
-|Login|CONTROL|CL|SERVER|CONTROL SERVER|  
-|Login|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|Login|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|LOGIN|ALTER|AL|SERVER|ALTER ANY LOGIN|  
+|LOGIN|CONTROL|CL|SERVER|CONTROL SERVER|  
+|LOGIN|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
+|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -241,7 +241,7 @@ ms.locfileid: "63128765"
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
 |OBJECT|DELETE|DL|SCHEMA|DELETE|  
 |OBJECT|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
-|OBJECT|Insert|IN|SCHEMA|Insert|  
+|OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
 |OBJECT|SELECT|SL|SCHEMA|SELECT|  
@@ -271,7 +271,7 @@ ms.locfileid: "63128765"
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
 |SCHEMA|DELETE|DL|DATABASE|DELETE|  
 |SCHEMA|在运行 CREATE 语句前执行|EX|DATABASE|在运行 CREATE 语句前执行|  
-|SCHEMA|Insert|IN|DATABASE|Insert|  
+|SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
 |SCHEMA|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
@@ -307,7 +307,7 @@ ms.locfileid: "63128765"
 |SERVER|EXTERNAL ACCESS ASSEMBLY|XA|不适用|不适用|  
 |SERVER|IMPERSONATE ANY LOGIN|IAL|不适用|不适用|  
 |SERVER|SELECT ALL USER SECURABLES|SUS|不适用|不适用|  
-|SERVER|SHUTDOWN|SHDN|不适用|不适用|  
+|SERVER|关机|SHDN|不适用|不适用|  
 |SERVER|UNSAFE ASSEMBLY|XU|不适用|不适用|  
 |SERVER|VIEW ANY DATABASE|VWDB|不适用|不适用|  
 |SERVER|VIEW ANY DEFINITION|VWAD|不适用|不适用|  
@@ -326,15 +326,15 @@ ms.locfileid: "63128765"
 |SYMMETRIC KEY|REFERENCES|RF|DATABASE|REFERENCES|  
 |SYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |SYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|TYPE|CONTROL|CL|SCHEMA|CONTROL|  
-|TYPE|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
-|TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
-|TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
-|TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
-|User|ALTER|AL|DATABASE|ALTER ANY USER|  
-|User|CONTROL|CL|DATABASE|CONTROL|  
-|User|IMPERSONATE|IM|DATABASE|CONTROL|  
-|User|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|类型|CONTROL|CL|SCHEMA|CONTROL|  
+|类型|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
+|类型|REFERENCES|RF|SCHEMA|REFERENCES|  
+|类型|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
+|类型|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
+|USER|ALTER|AL|DATABASE|ALTER ANY USER|  
+|USER|CONTROL|CL|DATABASE|CONTROL|  
+|USER|IMPERSONATE|IM|DATABASE|CONTROL|  
+|USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
@@ -432,7 +432,7 @@ SELECT * FROM sys.database_permissions
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [权限层次结构（数据库引擎）](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   

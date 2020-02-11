@@ -1,5 +1,5 @@
 ---
-title: WillConnect 事件 (ADO) |Microsoft Docs
+title: WillConnect 事件（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fc1ac74e7e3d521bae587957f5f95771e5a5268
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945850"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 事件 (ADO)
-**WillConnect**连接开始之前，将调用事件。  
+在连接开始之前调用**WillConnect**事件。  
   
- **适用于：** [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **适用于：** [CONNECTION 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,34 +35,34 @@ ms.locfileid: "67945850"
 WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *ConnectionString*  
- 一个**字符串**，它包含挂起的连接的连接信息。  
+ 一个**字符串**，其中包含挂起连接的连接信息。  
   
- *UserID*  
- 一个**字符串**包含挂起的连接的用户名。  
+ *Id*  
+ 包含挂起连接的用户名的**字符串**。  
   
- *密码*  
- 一个**字符串**包含密码的挂起的连接。  
+ *权限*  
+ 一个**字符串**，其中包含挂起的连接的密码。  
   
  *选项*  
- 一个**长**值，该值指示提供程序应该如何评估*ConnectionString*。 唯一的选项是**adAsyncOpen**。  
+ 一个**长整型**值，该值指示提供程序应如何计算*ConnectionString*。 唯一的选择是**adAsyncOpen**。  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。  
   
- 当调用此事件时，此参数设置为**adStatusOK**默认情况下。 设置为**adStatusCantDeny**如果事件不能请求取消的挂起的操作。  
+ 调用此事件时，默认情况下，此参数设置为**adStatusOK** 。 如果事件无法请求取消挂起操作，则将其设置为**adStatusCantDeny** 。  
   
- 此事件返回之前，请将此参数设置为**adStatusUnwantedEvent**以防止后续的通知。 将此参数设置为**adStatusCancel**请求导致取消此通知的连接操作。  
+ 在此事件返回之前，将此参数设置为**adStatusUnwantedEvent**以防止后续通知。 将此参数设置为**adStatusCancel**可请求导致取消此通知的连接操作。  
   
  *pConnection*  
- [连接](../../../ado/reference/ado-api/connection-object-ado.md)应用此事件通知对象。 将更改为的参数**连接**通过**WillConnect**事件处理程序会产生任何影响**连接**。  
+ 此事件通知适用的[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 **WillConnect**事件处理程序对**连接**参数的更改将不会对**连接**产生任何影响。  
   
 ## <a name="remarks"></a>备注  
- 当**WillConnect**调用时， *ConnectionString*， *UserID*，*密码*，并*选项*参数设置为建立由操作导致此事件 （挂起的连接），并可以进行更改之前该事件返回的值。 **WillConnect**可能会返回请求取消挂起的连接。  
+ 调用**WillConnect**时， *ConnectionString*、 *UserID*、 *Password*和*Options*参数将设置为由导致此事件（挂起连接）的操作所建立的值，并且可以在事件返回之前进行更改。 **WillConnect**可能会返回挂起的连接被取消的请求。  
   
- 取消此事件时， **ConnectComplete**调用时将使用其*adStatus*参数设置为**adStatusErrorsOccurred**。  
+ 当取消此事件时，将调用**ConnectComplete** ，并将其*adStatus*参数设置为**adStatusErrorsOccurred**。  
   
-## <a name="see-also"></a>请参阅  
- [ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [ADO 事件模型示例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)

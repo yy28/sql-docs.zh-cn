@@ -1,5 +1,5 @@
 ---
-title: 构造函数 (XQuery) |Microsoft Docs
+title: 构造函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038989"
 ---
 # <a name="constructor-functions-xquery"></a>构造函数 (XQuery)
@@ -44,7 +44,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  任意内置 XSD 类型。  
   
 ## <a name="remarks"></a>备注  
- 支持用于基本和派生原子 XSD 类型的构造函数。 但是的子**xs: duration**，其中包括**xdt: yearmonthduration 和 xdt: daytimeduration**，并**xs: qname**， **xs: nmtoken**，并**xs: notation**不受支持。 倘若它们是直接或间接从以下类型中派生的，则相关联的架构集合中提供的用户定义原子类型也可用。  
+ 支持用于基本和派生原子 XSD 类型的构造函数。 但是，不支持**xs： duration**的子类型，**包括 xdt： yearMonthDuration 和 xdt： dayTimeDuration**，以及**xs： QName**、 **xs： NMTOKEN**和**xs： NOTATION** 。 倘若它们是直接或间接从以下类型中派生的，则相关联的架构集合中提供的用户定义原子类型也可用。  
   
 #### <a name="supported-base-types"></a>支持的基类型  
  以下是所支持的基类型：  
@@ -135,12 +135,12 @@ TYP($atomicvalue as xdt:anyAtomicType?
 -   如果参数为其他类型的文字，将在编译期间计算表达式。 当该值不满足类型约束时，将返回空序列。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
+ 本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. 使用 dateTime() XQuery 函数检索以前的产品说明  
- 在此示例中，示例 XML 文档首先分配给**xml**类型的变量。 本文档包含三个示例 <`ProductDescription`> 元素，其中包含每个 <`DateCreated`> 子元素。  
+ 在此示例中，首先将示例 XML 文档分配给**xml**类型的变量。 本文档包含三个示例`ProductDescription` <> 元素，其中每个元素都包含`DateCreated`一个 <> 子元素。  
   
- 然后，查询该变量以便仅检索在特定日期之前创建的那些产品说明。 为了进行比较，该查询使用**xs:dateTime()** 构造函数键入日期。  
+ 然后，查询该变量以便仅检索在特定日期之前创建的那些产品说明。 为了进行比较，该查询使用**xs： dateTime （）** 构造函数来键入日期。  
   
 ```  
 declare @x xml  
@@ -173,13 +173,13 @@ select @x.query('
   
  请注意上述查询的以下方面：  
   
--   FOR...WHERE 循环结构用于检索\<ProductDescription > 满足 WHERE 子句中指定的条件元素。  
+-   用于 .。。WHERE 循环结构用于检索满足 WHERE 子句\<中指定的条件的 ProductDescription> 元素。  
   
--   **Datetime （)** 构造函数用于构造**dateTime**类型值，因此可以进行适当比较。  
+-   **Datetime （）** 构造函数用于构造**datetime**类型的值，以便可以对它们进行相应的比较。  
   
 -   然后，该查询将构造得到的 XML。 由于构造一系列属性，因此在 XML 构造中要使用逗号和括号。  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <Product   
@@ -187,8 +187,8 @@ select @x.query('
    DateCreated="2000-01-01T00:00:00Z"/>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [XML 构造&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
+## <a name="see-also"></a>另请参阅  
+ [XML 构造 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

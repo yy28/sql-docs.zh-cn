@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 83ac357d01b616a0010b9c2132f77bbcf89b479b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916998"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>数据库属性（“事务日志传送”页）
@@ -40,7 +40,7 @@ ms.locfileid: "62916998"
  **辅助服务器实例和数据库**  
  列出当前为此主数据库配置的辅助服务器和数据库。 突出显示某个数据库，然后单击 **“...”** 可以修改与该辅助数据库相关联的参数。  
   
- **“添加”**  
+ **添加**  
  单击“添加”  可以向此主数据库的日志传送配置中添加辅助数据库。  
   
  **删除**  
@@ -52,7 +52,7 @@ ms.locfileid: "62916998"
  **监视服务器实例**  
  指示当前为该日志传送配置设置的监视服务器实例。  
   
- **“设置”**  
+ **设置**  
  为日志传送配置设置监视服务器实例。 单击 **“设置”** 可以配置此监视服务器实例。  
   
  **编写配置脚本**  
@@ -61,7 +61,7 @@ ms.locfileid: "62916998"
 > [!IMPORTANT]  
 >  在编写辅助数据库的脚本设置之前，必须调用 **“辅助数据库设置”** 对话框。 通过调用该对话框，用户可以连接到辅助服务器，并且可以检索生成该脚本所需的辅助数据库的当前设置。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [日志传送存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql)   
  [日志传送表 (Transact-SQL)](/sql/relational-databases/system-tables/log-shipping-tables-transact-sql)  
   

@@ -15,18 +15,18 @@ ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd6640c0dc06d9e957176717ef26aa3e444ffa9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022517"
 ---
 # <a name="diagnostics"></a>诊断
-在 ODBC 中的函数返回以下两种方式的诊断信息。 返回代码指示总体成功或失败的函数，而诊断记录提供有关该函数的详细的信息。 即使该函数成功，则返回至少一个诊断记录的标头记录。  
+ODBC 中的函数以两种方式返回诊断信息。 返回代码指示函数的总体成功或失败，而诊断记录则提供有关函数的详细信息。 至少要返回一条诊断记录-标头记录-即使函数成功也是如此。  
   
- 在开发时使用的诊断信息来捕获中硬编码的 SQL 语句的编程错误，如无效句柄和语法错误。 它用于在运行时捕获用户输入的 SQL 语句中的运行时错误和警告，例如数据截断，访问冲突和语法错误。  
+ 在开发时使用诊断信息来捕获编程错误，如硬编码的 SQL 语句中的无效句柄和语法错误。 它用于在运行时捕获用户输入的 SQL 语句中的运行时错误和警告，如数据截断、访问冲突和语法错误。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [返回代码](../../../odbc/reference/develop-app/return-codes-odbc.md)  
   

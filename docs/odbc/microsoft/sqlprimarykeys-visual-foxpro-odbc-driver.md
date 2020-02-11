@@ -13,24 +13,24 @@ ms.assetid: 8dbe2903-efdc-45e0-a079-9e357c5fd81b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e85e60cde86c9483e69a8c43de14ef64eb914119
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030703"
 ---
 # <a name="sqlprimarykeys-visual-foxpro-odbc-driver"></a>SQLPrimaryKeys（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
->  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
  支持：完全  
   
- ODBC API 一致性：级别 2  
+ ODBC API 一致性：级别2  
   
- 返回包含表的主键的列名称。 Visual FoxPro ODBC 驱动程序实现**SQLPrimaryKeys**行为，如下所示：  
+ 返回构成表的主键的列名称。 **SQLPrimaryKeys**的 VISUAL FoxPro ODBC 驱动程序实现的行为如下所示：  
   
--   将忽略*szTableOwner*并*cbTableOwner*参数。  
+-   忽略*szTableOwner*和*cbTableOwner*参数。  
   
--   仅适用于数据源[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)。 该驱动程序将返回错误"驱动程序不支持此函数"的目录数据源是否[免费表](../../odbc/microsoft/visual-foxpro-terminology.md)。  
+-   仅适用于[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)数据源。 如果数据源是[可用表](../../odbc/microsoft/visual-foxpro-terminology.md)的目录，则驱动程序将返回错误 "驱动程序不支持此函数"。  
   
- 有关详细信息，请参阅[SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md)中*ODBC 程序员参考*。
+ 有关详细信息，请参阅*ODBC 程序员参考*中的[SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md) 。

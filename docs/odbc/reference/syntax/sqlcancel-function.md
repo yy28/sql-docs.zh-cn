@@ -20,20 +20,20 @@ ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 94f823cdefe4b3e5a62beb62062356dad3a88a03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036125"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel 函数
-**符合性**  
- 版本引入了：ODBC 1.0 标准符合性：ISO 92  
+**度**  
+ 引入的版本： ODBC 1.0 标准符合性： ISO 92  
   
- **摘要**  
- **SQLCancel**取消上一个语句的处理。  
+ **总结**  
+ **SQLCancel**取消对语句的处理。  
   
- 若要取消连接或语句的处理，请使用[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)。  
+ 若要取消对某个连接或语句的处理，请使用[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,77 +45,77 @@ SQLRETURN SQLCancel(
   
 ## <a name="arguments"></a>参数  
  *StatementHandle*  
- [输入]语句句柄。  
+ 送语句句柄。  
   
 ## <a name="returns"></a>返回  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLCancel**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLCancel** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
+ 当**SQLCancel**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_STMT 和*StatementHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLCancel**返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明："（DM）" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
   
-|SQLSTATE|Error|描述|  
+|SQLSTATE|错误|说明|  
 |--------------|-----------|-----------------|  
-|01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)参数中 *\*MessageText*缓冲区描述错误以及其原因。|  
-|HY001|内存分配错误|该驱动程序无法分配支持执行或完成该函数所需的内存。|  
-|HY010|函数序列错误|(DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLCancel**调用函数。<br /><br /> (DM) 取消操作失败，因为与之关联的连接句柄上正在执行异步操作*StatementHandle*。|  
-|HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
+|01000|一般警告|驱动程序特定的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 *参数\*MessageText*缓冲区中的[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)返回的错误消息描述了错误及其原因。|  
+|HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
+|HY010|函数序列错误|（DM）为与*StatementHandle*关联的连接句柄调用了异步执行的函数。 调用**SQLCancel**函数时，此异步函数仍在执行。<br /><br /> （DM）取消操作失败，因为正在对与*StatementHandle*关联的连接句柄执行异步操作。|  
+|HY013|内存管理错误|未能处理函数调用，原因可能是由于内存不足而无法访问基础内存对象。|  
 |HY018|服务器拒绝取消请求|服务器拒绝了取消请求。|  
-|HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYT01|连接超时时间已到|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驱动程序不支持此函数|(DM) 驱动程序与相关联*StatementHandle*不支持该函数。|  
+|HY117|由于未知的事务状态，连接被挂起。 仅允许断开连接和只读函数。|（DM）有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|IM001|驱动程序不支持此功能|（DM）与*StatementHandle*关联的驱动程序不支持该函数。|  
   
 ## <a name="comments"></a>注释  
- **SQLCancel**可以取消以下类型的一个语句上的处理：  
+ **SQLCancel**可以对语句取消以下类型的处理：  
   
--   在帐单上以异步方式运行的函数。  
+-   在语句上异步运行的函数。  
   
--   需要数据的语句上一个函数。  
+-   语句上需要数据的函数。  
   
--   在另一个线程中的语句上运行的函数。  
+-   在另一线程上的语句上运行的函数。  
   
- 在 ODBC 2。*x*，如果应用程序调用**SQLCancel**语句上不执行任何处理，是当**SQLCancel**具有相同的效果**SQLFreeStmt** SQL_CLOSE 选项;仅出于完整性的考虑定义此行为和应用程序应调用**SQLFreeStmt**或**SQLCloseCursor**关闭游标。  
+ 在 ODBC 2 中。*x*，如果应用程序在对语句进行处理时调用**SQLCancel** ，则**SQLCancel**与 SQL_CLOSE 选项的**SQLFreeStmt**具有相同的效果;此行为仅用于完整性定义，应用程序应调用**SQLFreeStmt**或**SQLCloseCursor**以关闭游标。  
   
- 当**SQLCancel**调用来取消异步运行一个语句或函数中，会清除的数据需求，由函数正在取消发布的诊断记录，对语句的函数和**SQLCancel**将发布其自身的诊断记录; 当**SQLCancel**称为若要取消的语句，另一个线程上运行的函数，但是，它不会清除诊断的记录不取消函数而不会发布其自身的诊断记录。  
+ 如果调用**SQLCancel**来取消在语句中异步运行的函数或需要数据的语句的函数，则会清除该函数所发布的诊断记录，并且**SQLCancel**会发布其自己的诊断记录;但是，当调用**SQLCancel**来取消在另一个线程上的语句上运行的函数时，它不会清除正在取消的函数的诊断记录，也不会发布其自己的诊断记录。  
   
 ## <a name="canceling-asynchronous-processing"></a>取消异步处理  
- 应用程序以异步方式调用一个函数后，它会调用重复用于确定它是否已完成处理的函数。 如果该函数仍在处理，它将返回 SQL_STILL_EXECUTING。 如果该函数已完成处理，则会返回不同的代码。  
+ 在应用程序以异步方式调用函数后，它将重复调用函数以确定其是否已完成处理。 如果该函数仍在处理，则它将返回 SQL_STILL_EXECUTING。 如果函数已完成处理，则将返回不同的代码。  
   
- 任何返回 SQL_STILL_EXECUTING 函数调用后，应用程序可以调用**SQLCancel**取消函数。 如果取消请求成功，驱动程序返回 SQL_SUCCESS。 此消息并不表示，该函数已实际取消;它指示已处理取消请求。 时，或如果实际取消该函数是依赖于驱动程序的代码和数据源决定。 应用程序必须继续调用原始函数，直到返回代码不是 SQL_STILL_EXECUTING。 如果已成功取消该函数，返回代码是 SQL_ERROR 并且 SQLSTATE HY008 （已取消的操作）。 如果该函数完成其正常处理，返回代码是 SQL_SUCCESS 或如果该函数成功，则 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR 并且以外 HY008 SQLSTATE （已取消的操作） 如果失败的函数。  
+ 调用返回 SQL_STILL_EXECUTING 的函数后，应用程序可以调用**SQLCancel**来取消函数。 如果取消请求成功，则驱动程序将返回 SQL_SUCCESS。 此消息不表示该函数实际上已被取消;它指示已处理取消请求。 当或如果实际取消函数，则是依赖于驱动程序和依赖于数据源的。 在不 SQL_STILL_EXECUTING 返回代码之前，应用程序必须继续调用原始函数。 如果该函数已成功取消，则返回代码为 SQL_ERROR 和 SQLSTATE HY008 （操作已取消）。 如果该函数完成了其常规处理，则返回代码为 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 如果函数成功，则为; 如果函数失败，则返回 SQL_ERROR，而不是 HY008 （操作已取消）。  
   
 > [!NOTE]  
->  在 ODBC 3.5 中，调用**SQLCancel**不会进行处理的语句上完成的时不会视为**SQLFreeStmt**使用 SQL_CLOSE 选项，但具有根本不起作用。 若要关闭游标，应用程序应调用**SQLCloseCursor**，而非**SQLCancel**。  
+>  在 ODBC 3.5 中，对语句进行处理时，对**SQLCancel**的调用不会被视为带有 SQL_CLOSE 选项的**SQLFreeStmt** ，但它根本不起作用。 若要关闭游标，应用程序应调用**SQLCloseCursor**，而不是**SQLCancel**。  
   
  有关异步处理的详细信息，请参阅[异步执行](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)。  
   
-## <a name="canceling-functions-that-need-data"></a>正在取消需要数据的函数  
- 之后**SQLExecute**或**SQLExecDirect**返回 SQL_NEED_DATA 和数据已发送的所有执行时数据参数之前，应用程序可以调用**SQLCancel**取消语句执行。 取消该语句后，应用程序可以调用**SQLExecute**或**SQLExecDirect**试。 有关详细信息，请参阅[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)。  
+## <a name="canceling-functions-that-need-data"></a>取消需要数据的函数  
+ 在**SQLExecute**或**SQLExecDirect**返回 SQL_NEED_DATA，并在为所有执行时参数发送数据之前，应用程序可以调用**SQLCancel**来取消语句执行。 在取消语句后，应用程序可以再次调用**SQLExecute**或**SQLExecDirect** 。 有关详细信息，请参阅[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)。  
   
- 之后**SQLBulkOperations**或**SQLSetPos**返回 SQL_NEED_DATA 和数据已发送的所有执行时数据列之前，应用程序可以调用**SQLCancel**若要取消该操作。 已取消该操作后，应用程序可以调用**SQLBulkOperations**或**SQLSetPos**再次取消不会影响游标状态或当前光标位置。 有关详细信息，请参阅[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)或[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
+ 在**SQLBulkOperations**或**SQLSetPos**返回 SQL_NEED_DATA，并在为所有执行时数据列发送数据之前，应用程序可以调用**SQLCancel**来取消操作。 操作取消后，应用程序可以再次调用**SQLBulkOperations**或**SQLSetPos** ;取消不会影响游标状态或当前游标位置。 有关详细信息，请参阅[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)或[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   
-## <a name="canceling-functions-executing-on-another-thread"></a>正在取消其他线程上执行的函数  
- 在多线程应用程序中，应用程序可以取消在另一个线程运行的函数。 若要取消应用程序调用函数**SQLCancel**与由目标函数中，而另一个线程上使用的相同的语句句柄。 如何取消该函数依赖于驱动程序和操作系统。 如取消以异步方式运行的返回代码的函数中所示**SQLCancel**仅指示驱动程序是否已成功处理该请求。 可以返回仅 SQL_SUCCESS 或 SQL_ERROR;未不返回任何诊断信息。 如果原始函数已取消，它将返回 SQL_ERROR 和 SQLSTATE HY008 （已取消的操作）。  
+## <a name="canceling-functions-executing-on-another-thread"></a>取消在另一个线程上执行的函数  
+ 在多线程应用程序中，应用程序可以取消在另一个线程上运行的函数。 若要取消函数，应用程序将调用**SQLCancel** ，该语句句柄与目标函数使用的语句句柄相同，但在另一个线程上调用。 如何取消该函数取决于驱动程序和操作系统。 在取消异步运行的函数时， **SQLCancel**的返回代码仅指示驱动程序是否已成功处理请求。 只能返回 SQL_SUCCESS 或 SQL_ERROR;不返回任何诊断信息。 如果原始函数被取消，它将返回 SQL_ERROR 和 SQLSTATE HY008 （操作已取消）。  
   
- 如果 SQL 语句时执行**SQLCancel**上另一个线程取消语句执行调用，则可能会成功执行和取消时返回 SQL_SUCCESS 也是成功。 在这种情况下，驱动程序管理器假定使应用程序将无法再使用游标通过取消，关闭打开的语句执行游标。  
+ 如果在另一个线程上调用**SQLCancel**来取消语句执行时，将执行 SQL 语句，则执行可能会成功并返回 SQL_SUCCESS 同时取消也成功。 在这种情况下，驱动程序管理器假设语句执行操作打开的游标被取消关闭，因此应用程序将不能使用游标。  
   
- 关于线程处理的详细信息，请参阅[多线程处理](../../../odbc/reference/develop-app/multithreading.md)。  
+ 有关线程处理的详细信息，请参阅[多线程处理](../../../odbc/reference/develop-app/multithreading.md)。  
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关信息|请参阅|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
-|绑定到参数的缓冲区|[SQLBindParameter 函数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|将缓冲区绑定到参数|[SQLBindParameter 函数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |执行大容量插入或更新操作|[SQLBulkOperations 函数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
-|取消异步上运行连接句柄，此外对功能的一个函数**SQLCancel**。|[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
+|除了**SQLCancel**的功能外，还取消在连接句柄上异步运行的函数。|[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
 |执行 SQL 语句|[SQLExecDirect 函数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |执行已准备的 SQL 语句|[SQLExecute 函数](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |释放语句句柄|[SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
-|获取诊断记录的字段或诊断标头的字段|[SQLGetDiagField 函数](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
-|获取多个字段的诊断数据结构|[SQLGetDiagRec 函数](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
-|返回下一个参数将数据发送用于|[SQLParamData 函数](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
+|获取诊断标头的诊断记录或字段的字段|[SQLGetDiagField 函数](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
+|获取诊断数据结构的多个字段|[SQLGetDiagRec 函数](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
+|返回要为其发送数据的下一个参数|[SQLParamData 函数](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
 |在执行时发送参数数据|[SQLPutData 函数](../../../odbc/reference/syntax/sqlputdata-function.md)|  
-|将光标放置在行集中，刷新的行集中的数据或更新或删除结果集中的数据|[SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
+|将光标置于行集中，刷新行集中的数据，或更新或删除结果集中的数据|[SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 头文件](../../../odbc/reference/install/odbc-header-files.md)

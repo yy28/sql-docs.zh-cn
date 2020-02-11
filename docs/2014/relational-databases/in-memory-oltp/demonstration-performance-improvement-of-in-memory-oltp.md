@@ -1,5 +1,5 @@
 ---
-title: 演示：内存中 OLTP 的性能改进 |Microsoft Docs
+title: 演示：内存中 OLTP 的性能改进 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071782"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存 OLTP 的性能改进
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存中 OLTP 的性能改进
   此示例通过比较针对内存优化表和传统的基于磁盘的表运行完全相同的 TRANSACT-SQL 查询时响应时间上的差异，演示了使用内存中 OLTP 时的性能改进。 另外，还将创建本机编译存储过程（基于相同的查询），然后运行以演示你通常可在使用本机编译存储过程查询内存优化表时，获取最佳响应时间。 此示例只显示访问内存优化表数据时一个方面的性能改进；执行插入操作时的数据访问效率。 此示例是单线程的，未能利用内存中 OLTP 的并发利益。 使用并发的工作负荷将带来更高的性能提升。  
   
 > [!NOTE]  
@@ -181,14 +181,14 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
   
  预期结果将提供实际响应时间，显示与针对传统的基于磁盘的表运行相同的工作负载相比，使用内存优化表和本机编译存储过程通常如何持续提供更快的响应时间。  
   
-## <a name="see-also"></a>请参阅  
- [若要演示内存中 OLTP 的 AdventureWorks 扩展](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
- [内存中 OLTP（内存中优化）](in-memory-oltp-in-memory-optimization.md)   
+## <a name="see-also"></a>另请参阅  
+ [用于演示内存中 OLTP 的 AdventureWorks 扩展](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
+ [内存中 OLTP &#40;内存中优化&#41;](in-memory-oltp-in-memory-optimization.md)   
  [内存优化表](memory-optimized-tables.md)   
  [本机编译存储过程](natively-compiled-stored-procedures.md)   
  [使用内存优化表的要求](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
- [CREATE PROCEDURE 和内存优化表](/sql/t-sql/statements/create-procedure-transact-sql)  
+ [创建过程和内存优化表](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

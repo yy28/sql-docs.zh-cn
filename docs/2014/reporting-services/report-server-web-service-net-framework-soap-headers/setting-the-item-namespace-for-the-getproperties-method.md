@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5636ac5193c13b58ec263b8aae3e17466d968fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012270"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>为 GetProperties 方法设置项命名空间
-  可以根据两个不同的项标识符在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中使用 <xref:ReportService2010.ItemNamespaceHeader> SOAP 标头：项的完整路径或项的 ID。  
+  可以根据两个不同的项标识符在 <xref:ReportService2010.ItemNamespaceHeader> 中使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP 标头：项的完整路径或项的 ID。  
   
  当您调用 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 方法时，通常将要检索其属性的项的完整路径作为参数传递。 使用 <xref:ReportService2010.ItemNamespaceHeader>，您可以为方法调用设置 SOAP 标头，以便通过将项的 ID 作为标识符传递来使用 <xref:ReportService2010.ReportingService2010.GetProperties%2A>。  
   
@@ -119,7 +119,7 @@ class Sample
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [技术参考 (SSRS)](../technical-reference-ssrs.md)   
  [使用 Reporting Services SOAP 标头](using-reporting-services-soap-headers.md)  
   

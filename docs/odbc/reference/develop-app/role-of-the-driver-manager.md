@@ -1,5 +1,5 @@
 ---
-title: 角色的驱动程序管理器 |Microsoft Docs
+title: 驱动程序管理器的角色 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7184c8ac9e0ad1813999a276f1579351f98544ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020399"
 ---
 # <a name="role-of-the-driver-manager"></a>驱动程序管理器的角色
-驱动程序管理器确定要返回其生成的状态记录中的最终顺序。 具体而言，它会确定哪些记录具有最高排名，首先返回。 该驱动程序负责排序它生成的状态记录。 如果状态记录所发送的驱动程序管理器和驱动程序，驱动程序管理器负责对数据进行排序。 有关详细信息，请参阅[序列的状态记录](../../../odbc/reference/develop-app/sequence-of-status-records.md)。  
+驱动程序管理器决定返回其生成的状态记录的最终顺序。 具体而言，它将确定哪个记录具有最高的排名，并将首先返回该记录。 驱动程序负责对其生成的状态记录进行排序。 如果状态记录由驱动程序管理器和驱动程序发布，则驱动程序管理器负责对它们进行排序。 有关详细信息，请参阅[状态记录序列](../../../odbc/reference/develop-app/sequence-of-status-records.md)。  
   
- 驱动程序管理器执行太多错误检查，可使用。 这样，每个驱动程序从相同的错误检查。 例如，如果函数参数接受离散数目的值，如*操作*中**SQLSetPos**，驱动程序管理器检查指定的值是否合法。  
+ 驱动程序管理器执行的错误检查会尽可能多。 这会保存每个驱动程序检查是否存在相同的错误。 例如，如果函数自变量接受离散数量的值（如**SQLSetPos**中的*操作*），则驱动程序管理器会检查指定的值是否合法。  
   
- 以下部分介绍类型的检查由驱动程序管理器的条件。 它们并不详尽;有关驱动程序管理器返回的 SQLSTATEs 的完整列表，请参阅"诊断"部分中的每个函数;每个驱动程序管理器做出的检查的说明开头的字母"(DM)。" 另请参阅中的状态转换表[附录 b:ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md); 由驱动程序管理器检测到错误显示在括号中。  
+ 以下部分描述了驱动程序管理器检查的条件类型。 它们不是详尽的;有关驱动程序管理器返回的 SQLSTATEs 的完整列表，请参阅每个函数的 "诊断" 部分;驱动程序管理器所做的每个检查的说明都以字母 "（DM）" 开头。 另请参阅[附录 B： ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)中的状态转换表;括号中显示的错误由驱动程序管理器检测到。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [参数值检查](../../../odbc/reference/develop-app/argument-value-checks.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 Dataadapter 更新 UDT 列 |Microsoft Docs
+title: 用 Dataadapter 更新 UDT 列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,17 +24,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919646"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>使用 DataAdapter 更新 UDT 列
   使用 `System.Data.DataSet` 和 `System.Data.SqlClient.SqlDataAdapter` 支持用户定义类型 (UDT) 以检索和修改数据。  
   
 ## <a name="populating-a-dataset"></a>填充数据集  
- 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定**点**表定义为具有以下结构和一些示例数据。 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句创建**点**表并插入几行。  
+ 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定您有一个使用以下结构定义的**点**表和一些示例数据。 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句将创建**Points**表并插入一些行。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -46,7 +46,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 以下 ADO.NET 代码段检索有效的连接字符串，创建一个新`SqlDataAdapter`，并填充`System.Data.DataTable`中的数据的行与**点**表。  
+ 以下 ADO.NET 代码片段检索有效的连接字符串，创建新`SqlDataAdapter`的，并`System.Data.DataTable`使用**Points**表中的数据行填充。  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -67,7 +67,8 @@ da.Fill(datTable);
   
 -   为 `InsertCommand` 对象提供自定义 `UpdateCommand`、`DeleteCommand` 和 `SqlDataAdapter` 对象。  
   
--   使用命令生成器 (`System.Data.SqlClient.SqlCommandBuilder`) 为您自动创建 INSERT、UPDATE 和 DELETE 命令。 为启用冲突检测功能，请向包含 UDT 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表添加 `timestamp` 列（别名为 `rowversion`）。 `timestamp` 数据类型允许您对表中的行添加版本戳，并确保它在数据库中唯一。 当更改表中的值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为受此更改影响的行自动更新八个字节的二进制编号。  
+-   使用命令生成器 (`System.Data.SqlClient.SqlCommandBuilder`) 为您自动创建 INSERT、UPDATE 和 DELETE 命令。 为启用冲突检测功能，请向包含 UDT 的 `timestamp` 表添加 `rowversion` 列（别名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）。 
+  `timestamp` 数据类型允许您对表中的行添加版本戳，并确保它在数据库中唯一。 当更改表中的值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为受此更改影响的行自动更新八个字节的二进制编号。  
   
  请注意，除非基础表包含 `SqlCommandBuilder` 列，否则 `timestamp` 不会考虑对 UDT 执行冲突检测。 可以比较 UDT，也可以不比较，因此，当使用“比较原始值”选项生成命令时，不会在 WHERE 子句中包含 UDT。  
   
@@ -85,9 +86,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  以下 ADO.NET 示例具有两个方法：  
   
--   `UserProvidedCommands`用于演示如何提供`InsertCommand`， `UpdateCommand`，并`DeleteCommand`对象，以便更新`Point`UDT**点**表 (不包含`timestamp`列)。  
+-   `UserProvidedCommands`，它演示了如何提供`InsertCommand`、 `UpdateCommand`和`DeleteCommand`对象以更新**Points**表`Point`中的 UDT （不包含`timestamp`列）。  
   
--   `CommandBuilder`用于演示如何使用`SqlCommandBuilder`中**Points_ts**表，该表包含`timestamp`列。  
+-   `CommandBuilder`，它演示如何`SqlCommandBuilder`在包含`timestamp`列的**Points_ts**表中使用。  
   
 ```vb  
 Imports System  
@@ -369,7 +370,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 ADO.NET 中访问用户定义类型](accessing-user-defined-types-in-ado-net.md)  
   
   

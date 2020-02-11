@@ -1,5 +1,5 @@
 ---
-title: FetchComplete 事件 (ADO) |Microsoft Docs
+title: FetchComplete 事件（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f3e5f5ae1c886f8d08d522fac19cee563efbb86c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932836"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 事件 (ADO)
-**FetchComplete**耗时较长的异步操作中的所有记录到在都检索后，将调用事件[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+当长时间异步操作中的所有记录都已检索到[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)后，将调用**FetchComplete**事件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,21 +33,21 @@ ms.locfileid: "67932836"
 FetchComplete pError, adStatus, pRecordset  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *pError*  
- [错误](../../../ado/reference/ado-api/error-object.md)对象。 它描述了如果发生的错误的值**adStatus**是**adStatusErrorsOccurred**; 不会设置。  
+ 一个[错误](../../../ado/reference/ado-api/error-object.md)对象。 它描述了**adStatus**的值为**adStatusErrorsOccurred**时所发生的错误;否则，不会设置。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。 当调用此事件时，此参数设置为**adStatusOK**引发该事件的操作是否成功，或向**adStatusErrorsOccurred**如果操作失败。  
+ [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。 当调用此事件时，如果导致事件的操作成功，则将此参数设置为**adStatusOK** ; 如果操作失败，则设置为**adStatusErrorsOccurred** 。  
   
- 此事件返回之前，请将此参数设置为**adStatusUnwantedEvent**以防止后续的通知。  
+ 在此事件返回之前，将此参数设置为**adStatusUnwantedEvent**以防止后续通知。  
   
  *pRecordset*  
- 一个**记录集**对象。 记录已为其检索到的对象。  
+ **记录集**对象。 为其检索记录的对象。  
   
 ## <a name="remarks"></a>备注  
- 若要使用**FetchComplete**使用 Microsoft Visual Basic、 Visual Basic 6.0 或更高版本是所需。  
+ 若要将**FetchComplete**与 Microsoft Visual Basic 一起使用，需要 Visual Basic 6.0 或更高版本。  
   
-## <a name="see-also"></a>请参阅  
- [ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [ADO 事件模型示例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)

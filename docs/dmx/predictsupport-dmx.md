@@ -1,5 +1,5 @@
 ---
-title: PredictSupport (DMX) |Microsoft Docs
+title: PredictSupport （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 701d8fb43b468f6bbd33fbff9ff7cfc8deb386f9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893829"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
@@ -27,19 +27,19 @@ ms.locfileid: "68893829"
 PredictSupport(<scalar column reference>, [<predicted state>])  
 ```  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  标量列。  
   
 ## <a name="return-type"></a>返回类型  
- *\<* 标量列引用 *>* 指定的类型的标量值。  
+ *\<* 标量列引用*>* 指定的类型的标量值。  
   
 ## <a name="remarks"></a>备注  
- 如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包含缺少的状态存储桶, \<请将预测状态 > 设置为**INCLUDE_NULL**。  
+ 如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包含缺少的状态存储桶， \<请将预测状态> 设置为**INCLUDE_NULL**。  
   
- 若要返回对缺少状态的支持, 请将\<预测状态 > 设置为 NULL。  
+ 若要返回对缺少状态的支持，请将\<预测状态> 设置为 NULL。  
   
 > [!NOTE]  
->  支持值都以不同方式计算，或可能有不同的解释，具体取决于所查询的模型类型。 有关如何为任何特定模型类型计算支持的详细信息, 请参阅[挖掘模型内容&#40;&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)中的单个算法类型 Analysis Services 数据挖掘。  
+>  支持值都以不同方式计算，或可能有不同的解释，具体取决于所查询的模型类型。 有关如何为任何特定模型类型计算支持的详细信息，请参阅挖掘模型内容中的单个算法类型[&#40;Analysis Services-数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)。  
   
 ## <a name="examples"></a>示例  
  以下示例根据 TM Decision Tree 挖掘模型，使用单独查询预测某个人是否购买自行车，并且还确定对该预测的支持。  
@@ -58,9 +58,9 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘扩展&#40;插件&#41; DMX 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [&#40;DMX&#41;的常规预测函数](../dmx/general-prediction-functions-dmx.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017083"
 ---
 # <a name="arithmetic-operators"></a>算术运算符
@@ -22,11 +22,11 @@ ms.locfileid: "68017083"
   
  MDX 支持下表中列出的算术运算符。  
   
-|运算符|描述|  
+|操作员|说明|  
 |--------------|-----------------|  
-|[+（加）](../mdx/add-mdx.md)|两个数相加。|  
-|[/ (Divide)](../mdx/divide-mdx-operator-reference.md)|将一个数除以另一个数。|  
-|[*（乘）](../mdx/multiply-mdx.md)|使两个数字相乘。|  
+|[+ （添加）](../mdx/add-mdx.md)|两个数相加。|  
+|[/（除）](../mdx/divide-mdx-operator-reference.md)|将一个数除以另一个数。|  
+|[* （乘）](../mdx/multiply-mdx.md)|使两个数字相乘。|  
 |[-（减）](../mdx/subtract-mdx.md)|两个数相减。|  
 |^（幂）|以一个数为底，另一个数为幂求值。|  
   
@@ -42,8 +42,8 @@ ms.locfileid: "68017083"
   
 -   括号中的表达式优先于所有其他运算。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [运算符&#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 运算符引用 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [运算符 &#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  
   
   

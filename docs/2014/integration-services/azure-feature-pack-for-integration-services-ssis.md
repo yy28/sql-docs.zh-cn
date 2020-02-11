@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772111"
 ---
 # <a name="azure-feature-pack"></a>Azure 功能包
@@ -37,7 +37,7 @@ ms.locfileid: "62772111"
     
     -   [Azure HDInsight 连接管理器](../../2014/integration-services/azure-hdinsight-connection-manager.md)
   
--   “任务”  
+-   任务  
   
     -   [Azure blob 上传任务](control-flow/azure-blob-upload-task.md)  
   
@@ -65,15 +65,15 @@ ms.locfileid: "62772111"
     
     -   [Azure Data Lake Store 目标](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Azure Blob 枚举器和 ADLS 文件枚举器。 请参阅 [Foreach Loop Container](control-flow/foreach-loop-container.md)。  
+-   Azure Blob 枚举器 & ADLS 文件枚举器。 请参阅[Foreach 循环容器](control-flow/foreach-loop-container.md)。  
   
  
 ## <a name="download-the-feature-pack"></a>下载功能包  
 下载用于 Azure 的 SQL Server Integration Services (SSIS) 功能包。  
   
--   [Microsoft SQL Server 2014 Integration Services 功能用于 Azure 的包](https://www.microsoft.com/download/details.aspx?id=47366)  
+-   [用于 Azure 的 Microsoft SQL Server 2014 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=47366)  
 
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
 必须在安装此功能包之前安装以下系统必备组件。  
   
 -   SQL Server Integration Services  

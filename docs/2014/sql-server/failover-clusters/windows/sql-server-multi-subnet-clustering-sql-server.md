@@ -17,39 +17,41 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be4125f417b6333bfcb3002b15f1319f484d22a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049454"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多子网群集 (SQL Server)
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集是一种配置，其中，每个故障转移群集节点都连接到其他子网或其他子网组。 这些子网可位于同一位置或在地理上分散的地点中。 跨地理上分散的站点进行群集有时称为拉伸群集。 因为没有所有节点都可以访问的共享存储，所以在多个子网上的数据存储之间应该复制数据。 对于数据复制，有多个可用数据的副本。 因此，多子网故障转移群集除了具备高可用性之外，还提供了灾难恢复解决方案。  
   
  
   
-##  <a name="VisualElement"></a> SQL Server 多子网故障转移群集（两个节点，两个子网）  
- 下图表示 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的一个两节点、两子网的故障转移群集实例 (FCI)。  
+##  <a name="VisualElement"></a>SQL Server 多子网故障转移群集（两个节点，两个子网）  
+ 下图表示 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的一个两节点、两子网的故障转移群集实例 (FCI)。  
   
  ![具有 MultiSubnetFailover 的多子网体系结构](../../../database-engine/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "具有 MultiSubnetFailover 的多子网体系结构")  
   
 
   
-##  <a name="Configurations"></a> 多子网故障转移群集实例配置  
+##  <a name="Configurations"></a>多子网故障转移群集实例配置  
  以下是使用多个子网的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 的一些示例：  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 包括 Node1 和 Node2。 节点 1 连接到 Subnet1。 Node2 连接到 Subnet2。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将此配置视作一个多子网群集，并且将 IP 地址资源依赖关系设置为 **OR**。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]FCI SQLCLUST1 包括节点1和节点2。 节点 1 连接到 Subnet1。 Node2 连接到 Subnet2。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装程序将此配置视为多子网群集，并将 IP 地址资源依赖关系设置为**OR**。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 包括 Node1、Node2 和 Node3。 Node1 和 Node2 连接到 Subnet1。 Node3 连接到 Subnet2。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将此配置视作一个多子网群集，并且将 IP 地址资源依赖关系设置为 **OR**。 因为 Node1 和 Node2 位于同一子网上，所以此配置还提供本地高可用性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]FCI SQLCLUST1 包括节点1、节点2和 Node3。 Node1 和 Node2 连接到 Subnet1。 Node3 连接到 Subnet2。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装程序将此配置视为多子网群集，并将 IP 地址资源依赖关系设置为**OR**。 因为 Node1 和 Node2 位于同一子网上，所以此配置还提供本地高可用性。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 包括 Node1 和 Node2。 Node1 位于 Subnet1 上。 Node2 位于 Subnet1 和 Subnet2 上。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将此配置视作一个多子网群集，并且将 IP 地址资源依赖关系设置为 **OR**。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]FCI SQLCLUST1 包括节点1和节点2。 Node1 位于 Subnet1 上。 Node2 位于 Subnet1 和 Subnet2 上。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装程序将此配置视为多子网群集，并将 IP 地址资源依赖关系设置为**OR**。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 包括 Node1 和 Node2。 Node1 连接到 Subnet1 和 Subnet2。 Node2 也连接到 Subnet1 和 Subnet2。 **安装程序将 IP 地址资源依赖关系设置为** AND [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]FCI SQLCLUST1 包括节点1和节点2。 Node1 连接到 Subnet1 和 Subnet2。 Node2 也连接到 Subnet1 和 Subnet2。 
+  **安装程序将 IP 地址资源依赖关系设置为** AND [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
     > [!NOTE]  
     >  此配置不视作多子网故障转移群集配置，因为群集的节点位于同一组子网中。  
   
-##  <a name="ComponentsAndConcepts"></a> IP 地址资源注意事项  
+##  <a name="ComponentsAndConcepts"></a>IP 地址资源注意事项  
  在一个多子网故障转移群集配置中，IP 地址不由该故障转移群集中的所有节点所拥有，并且在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启动期间可能不是全都处于联机状态。 从 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]开始，您可以将 IP 地址资源依赖关系设置为 **OR**。 这使得 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以在存在至少一个它可以绑定到的有效 IP 地址时处于联机状态。  
   
 > [!NOTE]  
@@ -64,14 +66,15 @@ ms.locfileid: "63049454"
   
   
   
- 并行安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 与 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的独立实例时，请注意避免 IP 地址上的 TCP 端口号冲突。 当 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的两个实例都配置为使用默认 TCP 端口 (1433) 时，通常会发生冲突。 要避免冲突，请将一个实例配置为使用非默认的固定端口。 在独立实例上配置固定端口通常是最简单的。 若将 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置为使用不同的端口，则在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 未能连接到备用节点时，将防止出现会阻止实例启动的意外 IP 地址/TCP 端口冲突。  
+ 并行安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 与 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 的独立实例时，请注意避免 IP 地址上的 TCP 端口号冲突。 当 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的两个实例都配置为使用默认 TCP 端口 (1433) 时，通常会发生冲突。 要避免冲突，请将一个实例配置为使用非默认的固定端口。 在独立实例上配置固定端口通常是最简单的。 若将 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置为使用不同的端口，则在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 未能连接到备用节点时，将防止出现会阻止实例启动的意外 IP 地址/TCP 端口冲突。  
   
-##  <a name="DNS"></a> 故障转移期间的客户端恢复延迟  
- 默认情况下，多子网 FCI 会针对其网络名称启用 RegisterAllProvidersIP 群集资源。 在多子网配置中，将在 DNS 服务器上注册网络名称的联机和脱机 IP 地址。 之后，客户端应用程序会从 DNS 服务器检索所有已注册的 IP 地址，并尝试按顺序或并行连接到这些地址。 这意味着，多子网故障转移中的客户端恢复时间不再依赖 DNS 更新延迟。 默认情况下，客户端会按顺序尝试 IP 地址。 当客户端在其连接字符串中使用新的可选 `MultiSubnetFailover=True` 参数时，它将改为同时尝试 IP 地址并连接到第一台响应的服务器。 这有助于在发生故障转移时最大程度地减少客户端恢复延迟。 有关详细信息，请参阅[AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)并[创建或配置可用性组侦听器&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
+##  <a name="DNS"></a>故障转移期间的客户端恢复延迟  
+ 默认情况下，多子网 FCI 会针对其网络名称启用 RegisterAllProvidersIP 群集资源。 在多子网配置中，将在 DNS 服务器上注册网络名称的联机和脱机 IP 地址。 之后，客户端应用程序会从 DNS 服务器检索所有已注册的 IP 地址，并尝试按顺序或并行连接到这些地址。 这意味着，多子网故障转移中的客户端恢复时间不再依赖 DNS 更新延迟。 默认情况下，客户端会按顺序尝试 IP 地址。 当客户端在其连接字符串中使用新的可选 `MultiSubnetFailover=True` 参数时，它将改为同时尝试 IP 地址并连接到第一台响应的服务器。 这有助于在发生故障转移时最大程度地减少客户端恢复延迟。 有关详细信息，请参阅[AlwaysOn 客户端连接（SQL Server）](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)和[创建或配置可用性组侦听器 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
  对于旧版客户端库或第三方数据访问接口，您不能在连接字符串中使用 `MultiSubnetFailover` 参数。 为了帮助确保您的客户端应用程序在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中以最佳方式使用多子网 FCI，请尝试按照 21 秒的间隔为其他每个 IP 地址调整客户端连接字符串中的连接超时。 这将确保客户端的重新连接尝试在它能够循环访问多子网 FCI 中的所有 IP 地址之前不会超时。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 和 **sqlcmd** 的默认客户端连接超时期限为 15 秒。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 和 **sqlcmd** 的默认客户端连接超时期限为 15 秒。  
   
  
   
@@ -80,11 +83,11 @@ ms.locfileid: "63049454"
 |内容说明|主题|  
 |-------------------------|-----------|  
 |安装 SQL Server 故障转移群集|[创建新的 SQL Server 故障转移群集（安装程序）](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|您的现有 SQL Server 故障转移群集的就地升级|[升级 SQL Server 故障转移群集实例（安装程序）](upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
+|您的现有 SQL Server 故障转移群集的就地升级|[&#40;安装程序升级 SQL Server 故障转移群集实例&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |维护您的现有 SQL Server 故障转移群集|[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
 |Windows 故障转移群集|[Microsoft Windows 多站点故障转移群集最佳实践](https://secureinfra.blog/2013/11/09/microsoft-windows-multi-site-failover-cluster-best-practices/)|  
 |使用“故障转移群集管理”管理单元来查看 WSFC 事件和日志|[查看故障转移群集的事件和日志](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
-|使用 Windows PowerShell 为 WSFC 故障转移群集中的所有节点（或特定节点）创建日志文件|[Get-ClusterLog 故障转移群集 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)|  
+|使用 Windows PowerShell 为 WSFC 故障转移群集中的所有节点（或特定节点）创建日志文件|[Get-clusterlog 故障转移群集 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)|  
   
  
   

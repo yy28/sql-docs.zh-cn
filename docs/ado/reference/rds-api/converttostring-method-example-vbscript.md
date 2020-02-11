@@ -1,5 +1,5 @@
 ---
-title: ConvertToString 方法示例 (VBScript) |Microsoft Docs
+title: ConvertToString 方法示例（VBScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1feada03927b1c2359babf7d68d6c9a8ffcba2b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964550"
 ---
 # <a name="converttostring-method-example-vbscript"></a>ConvertToString 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下面的示例演示如何将转换**记录集**为 MIME 编码的字符串，并使用**提高 ConvertToString**方法。 它还展示了如何将字符串转换回**记录集**。 剪切并粘贴到记事本或其他文本编辑器的以下代码，然后将其保存为**ConvertToString.htm**。  
+ 下面的示例演示如何使用**RDSServer. DataFactory ConvertToString**方法将**记录集**转换为 MIME 编码的字符串。 然后，它会显示字符串如何转换回**记录集**。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为**ConvertToString**。  
   
 ```  
 <!-- BeginConvertToStringVBS -->  
@@ -93,8 +93,8 @@ MIME Encoded RS: <BR>
 <!-- EndConvertToStringVBS -->  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [ConvertToString 方法 (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
+## <a name="see-also"></a>另请参阅  
+ [ConvertToString 方法（RDS）](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 
 

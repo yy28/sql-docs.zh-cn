@@ -17,20 +17,20 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 14eff405fd4eb1b96f4f5e5b50624d2c1251d546
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148756"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>连接到 SQL Server 实例
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO) 应用程序中的第一个编程步骤是创建<xref:Microsoft.SqlServer.Management.Smo.Server>对象的实例, 并建立与实例的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]连接。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象（SMO）应用程序中的第一个编程步骤是创建<xref:Microsoft.SqlServer.Management.Smo.Server>对象的实例，并建立与实例的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]连接。  
   
  您可以创建 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象的实例并且以三种方式建立与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的连接。 第一种方式是使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象变量提供连接信息。 第二种方式是通过显式设置 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象属性，提供连接信息。 第三种方式是将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称传递到 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象构造函数中。 
   
- **使用 Microsoft.sqlserver.management.common.serverconnection> 对象**  
+ **使用 ServerConnection 对象**  
   
  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象变量的优点在于可以重复使用连接信息。 声明一个 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象变量。 然后，声明一个 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象，并且设置与连接信息（例如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称）和身份验证模式有关的属性。 接下来，将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象变量作为参数传递到 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象构造函数中。 建议不要同时在不同的服务器对象之间共享连接。 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法可以获取现有连接设置的副本。  
   
@@ -38,12 +38,13 @@ ms.locfileid: "70148756"
   
  或者，您可以声明 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象变量并调用默认构造函数。 照原样，<xref:Microsoft.SqlServer.Management.Smo.Server> 对象将尝试通过所有默认连接设置连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的默认实例。  
   
- **在服务器对象构造函数中提供 SQL Server 实例名称**  
+ **在服务器对象构造函数中提供 SQL Server 实例名称**  
   
- 声明 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象变量并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例名称作为字符串参数传递到构造函数中。 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象使用默认的连接设置建立与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的连接。  
+ 声明 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象变量并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例名称作为字符串参数传递到构造函数中。 
+  <xref:Microsoft.SqlServer.Management.Smo.Server> 对象使用默认的连接设置建立与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的连接。  
   
 ## <a name="connection-pooling"></a>连接池  
- 通常不要求调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 对象的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 方法。 在需要时, SMO 会自动建立连接, 并在操作完成后, 将连接发布到连接池。 在调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 方法时，不释放与池的连接。 若要释放与池的连接，需要显式调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 方法。 此外，您可以通过设置 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> 对象的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 属性，请求非池的连接。  
+ 通常不要求调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 对象的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 方法。 在需要时，SMO 会自动建立连接，并在操作完成后，将连接发布到连接池。 在调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 方法时，不释放与池的连接。 若要释放与池的连接，需要显式调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 方法。 此外，您可以通过设置 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> 对象的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 属性，请求非池的连接。  
   
 ## <a name="multithreaded-applications"></a>多线程应用程序  
  对于多线程应用程序，每个线程应使用单独的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
@@ -51,7 +52,7 @@ ms.locfileid: "70148756"
 ## <a name="connecting-to-an-instance-of-sql-server-for-rmo"></a>连接到用于 RMO 的 SQL Server 实例  
  复制管理对象 (RMO) 用于连接到复制服务器的方法与 SMO 稍有不同。  
   
- RMO 编程对象要求通过[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Common.ServerConnection>使用由命名空间实现的对象建立与实例的连接。 与服务器的这一连接独立于 RMO 编程对象建立。 然后，在实例创建期间或通过指派该对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性，将它传递到 RMO 对象。 采用这种方式，RMO 编程对象实例和连接对象实例可以分别创建和管理，而多个 RMO 编程对象可以重用一个连接对象。 连接复制服务器时适用下列规则：  
+ RMO 编程对象要求通过使用由**命名空间**实现[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的<xref:Microsoft.SqlServer.Management.Common.ServerConnection>对象建立与实例的连接。 与服务器的这一连接独立于 RMO 编程对象建立。 然后，在实例创建期间或通过指派该对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性，将它传递到 RMO 对象。 采用这种方式，RMO 编程对象实例和连接对象实例可以分别创建和管理，而多个 RMO 编程对象可以重用一个连接对象。 连接复制服务器时适用下列规则：  
   
 -   为指定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象定义连接的所有属性。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "70148756"
 -   必须在将连接传递到任何 RMO 编程对象前调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 方法。  
   
 ## <a name="examples"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息, 请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>通过在 Visual Basic 中使用 Windows 身份验证连接到 SQL Server 的本地实例  
  连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的本地实例并不要求大量代码。 而是依赖于身份验证方法和服务器的默认设置。 要求检索数据的第一个操作将导致创建连接。  
@@ -131,7 +132,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-basic"></a>通过在 Visual Basic 中使用 SQL Server 身份验证连接到 SQL Server 的实例  
  在您通过使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，必须指定身份验证类型。 此示例演示声明 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象变量的替代方法，从而使连接信息可以重复使用。  
   
- 示例是[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .net 代码, 演示如何连接到远程, 并且*vPassword*包含登录名和密码。  
+ 示例是[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .net 代码，演示如何连接到远程，并且*vPassword*包含登录名和密码。  
   
 ```VBNET  
 ' compile with:   
@@ -179,7 +180,7 @@ End Class
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-c"></a>通过在 Visual C# 中使用 SQL Server 身份验证连接到 SQL Server 的实例  
  在您通过使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，必须指定身份验证类型。 此示例演示声明 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象变量的替代方法，从而使连接信息可以重复使用。  
   
- 该示例C#演示如何连接到远程并且*vPassword*包含登录名和密码。  
+ 该示例是 Visual c # .NET 代码，演示如何连接到远程，并且*vPassword*包含登录名和密码。  
   
 ```csharp  
 // compile with:   
@@ -225,7 +226,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

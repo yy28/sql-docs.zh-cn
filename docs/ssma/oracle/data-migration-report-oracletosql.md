@@ -1,5 +1,5 @@
 ---
-title: 数据迁移报表 (OracleToSQL) |Microsoft Docs
+title: 数据迁移报表（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,37 +11,37 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264254"
 ---
 # <a name="data-migration-report--oracletosql"></a>数据迁移报表 (OracleToSQL)
-**数据迁移报表**迁移到的数据后，会出现对话框[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+在将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之后，将显示 "**数据迁移报表**" 对话框。  
   
 ## <a name="options"></a>选项  
-**“状态”**  
-显示来自源数据迁移到目标数据库的状态。  
+**Status**  
+显示从源数据库到目标数据库的数据迁移状态。  
   
-**From**  
+**从**  
 源表。  
   
-**To**  
-目标表中。  
+**自**  
+目标表。  
   
 **总行数**  
 源表中的数据行数。  
   
-**已成功迁移的行数**  
-数据行数已成功迁移到目标表。  
+**成功迁移的行数**  
+成功迁移到目标表的数据行数。  
   
 **比率**  
-已成功迁移的行的百分比。  
+成功迁移的行的百分比。  
   
 **详细信息**  
-如果任何数据迁移失败，请单击要在报表中显示所选行的迁移详细信息。 SSMA 会显示失败的原因。  
+如果任何数据迁移失败，请单击 "显示报表中所选行的迁移详细信息"。 SSMA 将显示失败的原因。  
   
 **保存报表**  
-保存到报表。CSV （逗号分隔值） 文件，可以使用 Microsoft Excel 进行检查。  
+将报表保存到。CSV，（逗号分隔值）文件，可使用 Microsoft Excel 检查该文件。  
   

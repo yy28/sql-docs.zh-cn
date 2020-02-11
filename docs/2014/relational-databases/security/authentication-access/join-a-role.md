@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011346"
 ---
 # <a name="join-a-role"></a>加入角色
@@ -59,10 +59,10 @@ ms.locfileid: "63011346"
   
 -   在 sys.database_role_members 和 sys.database_principals 目录视图中可以查看数据库角色。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- 需要`ALTER ANY ROLE`上，对数据库的权限`ALTER`权限的角色或中的成员身份**db_securityadmin**。  
+####  <a name="Permissions"></a> 权限  
+ 需要`ALTER ANY ROLE`对数据库的权限、 `ALTER`对角色的权限或**db_securityadmin**的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -76,9 +76,9 @@ ms.locfileid: "63011346"
   
 4.  右键单击要编辑的角色，然后选择“属性”  。  
   
-5.  在中**服务器角色属性-** _server_role_name_对话框中，在**成员**页上，单击**添加**。  
+5.  在 "**服务器角色属性-**_server_role_name_ " 对话框的 "**成员**" 页上，单击 "**添加**"。  
   
-6.  在“选择服务器登录名或角色”  对话框的“输入要选择的对象名称(示例)”  下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象   。 单击**确定**回到**服务器角色属性-** _server_role_name_对话框。  
+6.  在“选择服务器登录名或角色”  对话框的“输入要选择的对象名称(示例)”  下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象   。 单击 **"确定"** 以返回到 "**服务器角色属性-**_server_role_name_ " 对话框。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -98,9 +98,9 @@ ms.locfileid: "63011346"
   
 7.  右键单击要编辑的角色，然后选择“属性”  。  
   
-8.  在中**数据库角色属性-** _database_role_name_对话框中，在**常规**页上，单击**添加**。  
+8.  在 "**数据库角色属性-**_database_role_name_ " 对话框的 "**常规**" 页中，单击 "**添加**"。  
   
-9. 在“选择数据库用户或角色”  对话框的“输入要选择的对象名称(示例)”  下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象   。 单击**确定**回到**数据库角色属性-** _database_role_name_对话框。  
+9. 在“选择数据库用户或角色”  对话框的“输入要选择的对象名称(示例)”  下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象   。 单击 **"确定"** 以返回 "**数据库角色属性-**_database_role_name_ " 对话框。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -136,7 +136,7 @@ ms.locfileid: "63011346"
   
  有关详细信息，请参阅 [sp_addrolemember (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [服务器级别角色](server-level-roles.md)   
  [数据库级别的角色](../authentication-access/database-level-roles.md)   
  [应用程序角色](../authentication-access/application-roles.md)  

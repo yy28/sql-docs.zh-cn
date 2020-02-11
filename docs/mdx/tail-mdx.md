@@ -1,5 +1,5 @@
 ---
-title: Tail (MDX) |Microsoft Docs
+title: Tail （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d48a374d7d84c1137f082eb12dec638557b14e5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036659"
 ---
 # <a name="tail-mdx"></a>Tail (MDX)
@@ -35,10 +35,10 @@ Tail(Set_Expression [ ,Count ] )
  指定要返回的元组数的有效数值表达式。  
   
 ## <a name="remarks"></a>备注  
- **尾部**函数从指定集的结尾返回指定元组数目。 会保留元素的顺序。 默认值*计数*为 1。 如果指定的元组数目小于 1，则该函数返回空集。 如果指定的元组数目超过了集中的元组数目，则此函数返回原始集。  
+ **Tail**函数从指定集的末尾返回指定数目的元组。 会保留元素的顺序。 *Count*的默认值为1。 如果指定的元组数目小于 1，则该函数返回空集。 如果指定的元组数目超过了集中的元组数目，则此函数返回原始集。  
   
 ## <a name="example"></a>示例  
- 下例根据 Reseller Gross Profit（分销商毛利润），返回前五个销售产品子类别的分销商销售额度量值，而不管层次结构如何。 **尾部**函数用于返回结果中仅最后五个集，结果是反向的排序后使用**顺序**函数。  
+ 下例根据 Reseller Gross Profit（分销商毛利润），返回前五个销售产品子类别的分销商销售额度量值，而不管层次结构如何。 当使用**Order**函数对结果进行反序排序后， **Tail**函数用于仅返回结果中的最后五个集。  
   
 ```  
 SELECT Tail  
@@ -52,7 +52,7 @@ SELECT Tail
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

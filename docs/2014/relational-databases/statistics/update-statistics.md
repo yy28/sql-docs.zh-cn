@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033627"
 ---
 # <a name="update-statistics"></a>更新统计信息
@@ -39,9 +39,9 @@ ms.locfileid: "63033627"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  如果使用 UPDATE STATISTICS 或通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]进行更改，则要求对表或视图具有 ALTER 权限。 如果使用 `sp_updatestats`，则要求具有 **sysadmin** 固定服务器角色的成员身份或数据库 (**dbo**) 的所有者身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -58,7 +58,7 @@ ms.locfileid: "63033627"
   
 5.  右键单击要更新的统计信息对象，然后选择  “属性”。  
   
-6.  在中**统计信息属性-** _statistics_name_对话框中，选择**更新这些列的统计信息**复选框，然后单击**确定**.  
+6.  在 "**统计信息属性-**_statistics_name_ " 对话框中，选中 "**更新这些列的统计信息**" 复选框，然后单击 **"确定"**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63033627"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -94,7 +94,7 @@ ms.locfileid: "63033627"
     GO  
     ```  
   
- 有关详细信息，请参阅 [更新统计信息 (Transact-SQL)](/sql/t-sql/statements/update-statistics-transact-sql)。  
+ 有关详细信息，请参阅 [更新统计信息 (Transact-SQL)](/sql/t-sql/statements/update-statistics-transact-sql)创建的数据库维护计划。  
   
 #### <a name="to-update-all-statistics-in-a-database"></a>更新数据库中的所有统计信息  
   

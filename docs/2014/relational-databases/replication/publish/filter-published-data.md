@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989087"
 ---
 # <a name="filter-published-data"></a>筛选已发布数据
@@ -72,7 +72,7 @@ ms.locfileid: "62989087"
     > [!NOTE]  
     >  在事务发布中使用行筛选器会显著增加开销，因为对于为已发布表写入的每个日志行，都需要计算项目筛选器子句以确定是否要复制该行。 如果每个复制节点都能支持全部数据负载，而且总体数据集相当小，则应避免在事务发布中使用行筛选器。  
   
--   对于合并复制，请使用参数化行筛选器，而不要使用静态行筛选器创建多个发布。 有关详细信息，请参阅 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)。  
+-   对于合并复制，请使用参数化行筛选器，而不要使用静态行筛选器创建多个发布。 有关详细信息，请参阅 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)。  
   
  若要定义或修改静态行筛选器，请参阅 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62989087"
   
  还可以同时使用行筛选和列筛选，如下图所示。  
   
- ![行和列筛选](../media/repl-18.gif "行和列筛选")  
+ ![行筛选和列筛选](../media/repl-18.gif "行筛选和列筛选")  
   
  创建发布后，可以使用列筛选从现有发布中删除列，但在发布服务器中的表中保留该列，也可以在发布中包括现有列。 对于其他更改（如向表添加新列，然后再将其添加到已发布项目中），请使用架构更改复制。 有关详细信息，请参阅[对发布数据库进行架构更改](make-schema-changes-on-publication-databases.md)主题中的“添加列”和“删除列”这两部分。  
   
@@ -93,14 +93,16 @@ ms.locfileid: "62989087"
 |-----------------|-------------------------------------|  
 |主键列|主键列对于事务发布中的所有表都是必需的。 主键对于合并发布中的表并不是必需的，但如果存在主键列，则无法筛选该列。|  
 |外键列|使用新建发布向导创建的所有发布。 可以使用 Transact-SQL 存储过程来筛选外键列。 有关详细信息，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。|  
-|**rowguid** 列|合并发布<sup>1</sup>|  
-|**msrepl_tran_version** 列|允许可更新订阅的快照或事务发布|  
+|
+  **rowguid** 列|合并发布<sup>1</sup>|  
+|
+  **msrepl_tran_version** 列|允许可更新订阅的快照或事务发布|  
 |不允许 NULL 且没有默认值或 IDENTITY 属性集的列。|允许可更新订阅的快照或事务发布|  
 |具有唯一约束或索引的列|允许可更新订阅的快照或事务发布|  
 |SQL Server 7.0 合并发布中的所有列|SQL Server 7.0 合并发布中不能筛选的列。|  
 |时间戳|允许可更新订阅的 SQL Server 7.0 快照或事务发布|  
   
- <sup>1</sup>如果在合并发布中发布表且该表已包含数据类型的列`uniqueidentifier`与`ROWGUIDCOL`属性集，复制可以使用此列，而不是创建名为的其他列**rowguid**。 在这种情况下，必须发布现有列。  
+ <sup>1</sup>如果在合并发布中发布表，且该表已包含具有`uniqueidentifier` `ROWGUIDCOL`属性集的数据类型的列，则复制可以使用此列，而不是创建另一个名为**rowguid**的列。 在这种情况下，必须发布现有列。  
   
  若要定义或修改列筛选器，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)中的“使用 HOST_NAME() 进行筛选”部分。  
   
@@ -129,9 +131,12 @@ ms.locfileid: "62989087"
   
 -   事务复制允许您将索引视图按视图或表来复制。 如果将视图按表复制，则无法从表中筛选列。  
   
- 行筛选器未设计为跨数据库工作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将 `sp_replcmds` 的执行（执行筛选器）限制为数据库所有者 (`dbo`)。 `dbo` 不具有跨数据库权限。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中增加 CDC（变更数据捕获）后，`sp_replcmds` 逻辑将使用用户可以返回到和查询的信息填充变更跟踪表。 出于安全原因[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]限制此逻辑的执行，以便恶意`dbo`无法劫持此执行路径。 例如，恶意的 `dbo` 可能在 CDC 表上添加触发器，然后这些触发器会在调用 `sp_replcmds` 的用户（在这种情况下为日志读取器代理）的上下文中执行。  如果运行该代理所用的帐户具有更高权限，则恶意的 `dbo` 可以提升其权限。  
+ 行筛选器未设计为跨数据库工作。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将 `sp_replcmds` 的执行（执行筛选器）限制为数据库所有者 (`dbo`)。 
+  `dbo` 不具有跨数据库权限。 
+  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中增加 CDC（变更数据捕获）后，`sp_replcmds` 逻辑将使用用户可以返回到和查询的信息填充变更跟踪表。 出于安全原因， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]会限制此逻辑的执行，使恶意`dbo`不能劫持此执行路径。 例如，恶意的 `dbo` 可能在 CDC 表上添加触发器，然后这些触发器会在调用 `sp_replcmds` 的用户（在这种情况下为日志读取器代理）的上下文中执行。  如果运行该代理所用的帐户具有更高权限，则恶意的 `dbo` 可以提升其权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [发布数据和数据库对象](publish-data-and-database-objects.md)  
   
   

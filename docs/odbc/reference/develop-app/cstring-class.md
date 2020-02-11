@@ -13,11 +13,11 @@ ms.assetid: 18630642-76fa-43c4-a154-3f0969ec9b50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90c92476337bb1059b7272830e33094edc58dbd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002070"
 ---
 # <a name="cstring-class"></a>CString 类
-因为对象的**CString** Microsoft® Visual C++® 中的类进行签名，并且是无符号整数，ODBC 函数中的字符串参数传递的应用程序**CString**而无需 ODBC 函数的对象将其强制转换将收到编译器警告。
+由于 Microsoft®中**CString**类的对象 Visual C++®具有符号，而 odbc 函数中的字符串参数是无符号的，因此，在不强制转换的情况下，将**CString**对象传递到 odbc 函数的应用程序将收到编译器警告。

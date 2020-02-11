@@ -14,35 +14,35 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046259"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支持
-  FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 有关增强的 FILESTREAM 支持的详细信息，请参阅[FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)。  
+  FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 有关增强的 FILESTREAM 支持的详细信息，请参阅[filestream &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)。  
   
  默认情况下，在打开数据库连接时，`@@TEXTSIZE` 将设置为 -1（“无限制”）。  
   
  还可以使用 Windows 文件系统 API 访问和更新 FILESTREAM 列。  
   
- 有关详细信息，请参阅下列主题：  
+ 有关详情，请参阅以下主题：  
   
--   [FILESTREAM 支持&#40;OLE DB&#41;](../ole-db/filestream-support-ole-db.md)  
+-   [FILESTREAM 支持 &#40;OLE DB&#41;](../ole-db/filestream-support-ole-db.md)  
   
--   [FILESTREAM 支持&#40;ODBC&#41;](../odbc/filestream-support-odbc.md)  
+-   [FILESTREAM 支持 &#40;ODBC&#41;](../odbc/filestream-support-odbc.md)  
   
 -   [使用 OpenSqlFilestream 访问 FILESTREAM 数据](../../blob/access-filestream-data-with-opensqlfilestream.md)  
   
 ## <a name="querying-for-filestream-columns"></a>查询 FILESTREAM 列  
  OLE DB 中的架构行集不会报告某个列是否为 FILESTREAM 列。 OLE DB 中的 ITableDefinition 不能用于创建 FILESTREAM 列。  
   
- 如 SQLColumns 在 ODBC 目录函数不会报告列是否是 FILESTREAM 列。  
+ ODBC 中的目录函数（如 SQLColumns）不会报告某个列是否为 FILESTREAM 列。  
   
- 若要创建 FILESTREAM 列或检测哪些现有列是 FILESTREAM 列，可以使用`is_filestream`的列[sys.columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)目录视图。  
+ 若要创建 FILESTREAM 列或检测哪些现有列是 FILESTREAM 列，可以使用[sys.databases](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)目录`is_filestream`视图的列。  
   
- 以下是一个示例：  
+ 下面是一个示例：  
   
 ```  
 -- Create a table with a FILESTREAM column.  
@@ -56,13 +56,13 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下级兼容性  
- 如果您的客户端在编译时使用的版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]附带的本机客户端[!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)]，`varbinary(max)`行为将与兼容[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。  
+ 如果客户[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]端是使用附带的 Native client 版本编译的[!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)]， `varbinary(max)`则行为将与[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]兼容。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。  
   
  如果将数据类型兼容性设置为 80，则客户端行为将与下级客户端行为一致。  
   
- 使用 SQLOLEDB 或其他提供程序之前发布的客户端[!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]Native Client，`varbinary(max)`将映射到映像。  
+ 对于使用 SQLOLEDB 的客户端或在[!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] Native Client 之前发布的其他提供程序`varbinary(max)` ，将映射到映像。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 功能](sql-server-native-client-features.md)  
   
   
