@@ -1,5 +1,5 @@
 ---
-title: sp_helprotect (TRANSACT-SQL) |Microsoft Docs
+title: sp_helprotect （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,23 +18,23 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997476"
 ---
-# <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
+# <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回一个报表，报表中包含当前数据库中某对象的用户权限或语句权限的信息。  
   
 > [!IMPORTANT]  
->  **sp_helprotect**不返回有关在中引入的安全对象的信息[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 使用[sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)并[fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)相反。  
+>  **sp_helprotect**不返回有关中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引入的安全对象的信息。 改为使用[database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)和[fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 。  
   
  不列出始终分配给固定服务器角色或固定数据库角色的权限。 不包括基于其在角色中的成员身份接收权限的登录名或用户。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,29 +47,29 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'object_statement'` 是当前数据库中或具有报告权限的语句中的名称。 *object_statement*是**nvarchar(776)** ，默认值为 NULL，表示将返回所有对象和语句权限。 如果值为一个对象（表、视图、存储过程或扩展存储过程），则该对象必须是当前数据库中的有效对象。 对象名称中窗体可以包含的所有者限定符_所有者_ **。** _对象_。  
+`[ @name = ] 'object_statement'`当前数据库或语句中具有报告权限的对象的名称。 *object_statement*为**nvarchar （776）**，默认值为 NULL，表示返回所有对象和语句权限。 如果值为一个对象（表、视图、存储过程或扩展存储过程），则该对象必须是当前数据库中的有效对象。 对象名称可以_包含所有者限定符_**。**_对象_。  
   
- 如果*object_statement*是一条语句，它可以是 CREATE 语句。  
+ 如果*object_statement*是语句，则它可以是 CREATE 语句。  
   
-`[ @username = ] 'security_account'` 是为其返回权限的名称。 *security_account*是**sysname**，默认值为 NULL，表示将返回所有主体在当前数据库中。 *security_account*必须存在于当前数据库。  
+`[ @username = ] 'security_account'`为其返回权限的主体的名称。 *security_account*的数据值为**sysname**，默认值为 NULL，表示将返回当前数据库中的所有主体。 当前数据库中必须存在*security_account* 。  
   
-`[ @grantorname = ] 'grantor'` 是授予权限的名称。 *grantor*是**sysname**，默认值为 NULL，表示将返回数据库中任意主体授予权限的所有信息。  
+`[ @grantorname = ] 'grantor'`被授予权限的主体的名称。 *授权*者为**sysname**，默认值为 NULL，它返回数据库中任何主体授予的权限的所有信息。  
   
-`[ @permissionarea = ] 'type'` 是一个字符串，该值指示是否显示对象权限 (字符串**o**)，语句权限 (字符串**s**)，和 / 或 (**os**)。 *类型*是**varchar(10)** ，默认值为**os**。 *类型*可以是任何组合**o**并**s**用或者不用逗号或空格之间**o**并**s**。  
+`[ @permissionarea = ] 'type'`一个字符串，该字符串指示是显示对象权限（字符串**o**）、语句权限 **（字符串）** 还是同时显示两者（**os**）。 *类型*为**varchar （10）**，默认值为 " **os**"。 *类型*可以是**o**和**s**的任意组合，无论在**o**和**s**之间有或不包含逗号或空格。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**“所有者”**|**sysname**|对象所有者的名称。|  
+|**所有者**|**sysname**|对象所有者的名称。|  
 |**Object**|**sysname**|对象的名称。|  
 |**被授权者**|**sysname**|被授予权限的主体的名称。|  
 |**授权者**|**sysname**|向指定的被授权者进行授权的主体的名称。|  
-|**ProtectType**|**nvarchar(10)**|保护类型的名称：<br /><br /> GRANT REVOKE|  
-|**操作**|**nvarchar(60)**|权限名称。 依赖于对象类型的有效的权限语句。|  
+|**ProtectType**|**nvarchar （10）**|保护类型的名称：<br /><br /> GRANT REVOKE|  
+|**Action**|**nvarchar （60）**|权限的名称。 依赖于对象类型的有效的权限语句。|  
 |**列**|**sysname**|权限的类型：<br /><br /> All = 权限适用于对象所有的当前列。<br /><br /> New = 权限适用于任何以后可以在对象上进行更改（使用 ALTER 语句）的新列。<br /><br /> All+New = All 和 New 的组合。<br /><br /> 如果权限类型不适用于列，则返回一个期间。|  
   
 ## <a name="remarks"></a>备注  
@@ -124,18 +124,18 @@ EXEC sp_helprotect NULL, NULL, 'Judy';
 EXEC sp_helprotect NULL, NULL, NULL, 's';   
 ```  
   
-### <a name="e-listing-the-permissions-for-a-create-statement"></a>e. 列出 CREATE 语句的权限  
+### <a name="e-listing-the-permissions-for-a-create-statement"></a>e.在“新建 MySQL 数据库”边栏选项卡中，接受法律条款，然后单击“确定”。 列出 CREATE 语句的权限  
  下面的示例列出授予了 CREATE TABLE 权限的所有用户。  
   
 ```  
 EXEC sp_helprotect @name = 'CREATE TABLE';  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [DENY &#40;Transact-sql&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
+ [REVOKE &#40;Transact-sql&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

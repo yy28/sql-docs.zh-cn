@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055963"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>大容量导入数据时保留标识值 (SQL Server)
@@ -44,7 +44,7 @@ ms.locfileid: "74055963"
  有关详细信息，请参阅 [bcp 实用工具](../../tools/bcp-utility.md)、[BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)、[OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)、[INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)、[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md) 和[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
 
 > [!NOTE]
->  要创建一个可在多个表中使用的自动递增数字或者可以从应用程序中调用而不引用任何表的自动递增数字，请参阅 [序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。
+>  要创建一个可在多个表中使用的自动递增数字或者可以从应用程序中调用而不引用任何表的自动递增数字，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。
  
 ## 示例测试条件<a name="etc"></a>  
 本主题中的示例基于下面定义的表、数据文件和格式化文件。

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9445c7b366a43253da4accabaf98d9c5b7f8d92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630640"
 ---
 # <a name="subscriber-types"></a>订阅服务器类型
@@ -35,7 +35,7 @@ ms.locfileid: "62630640"
   
  如果选择了此选项，将为该发布启用 Web 同步选项。 有关 Web 同步的详细信息，请参阅 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [发布数据和数据库对象](publish/publish-data-and-database-objects.md)   
  [Create a Publication](publish/create-a-publication.md)   
  [查看和修改分发服务器和发布服务器属性](view-and-modify-distributor-and-publisher-properties.md)   

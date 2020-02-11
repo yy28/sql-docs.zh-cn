@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056322"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式化文件跳过数据字段 (SQL Server)
@@ -69,7 +69,7 @@ CREATE TABLE myTestSkipField
 用于创建格式化文件的最简单方法是使用 [bcp 实用工具](../../tools/bcp-utility.md)。  首先，从现有表创建基本格式化文件。  其次，修改基本格式化文件以反映实际数据文件。
   
 ### <a name="nonxml_format_file"></a>创建非 XML 格式化文件 
-有关详细信息，请查看 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。 下面的命令使用 [bcp 实用工具](../../tools/bcp-utility.md) 基于 `myTestSkipField.fmt`的架构生成非 xml 格式化文件 `myTestSkipField`。  此外，限定符 `c` 用于指定字符数据， `t,` 用于将逗号指定为字段终止符，而 `T` 用于指定使用集成安全性的信任连接。  在命令提示符处输入以下命令：
+有关详细信息，请查看 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。 下面的命令基于 [的架构使用](../../tools/bcp-utility.md) bcp 实用工具 `myTestSkipField.fmt`生成非 XML 格式化文件 `myTestSkipField`。  此外，限定符 `c` 用于指定字符数据， `t,` 用于将逗号指定为字段终止符，而 `T` 用于指定使用集成安全性的信任连接。  在命令提示符处输入以下命令：
 
 ```
 bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt -t, -T
@@ -83,7 +83,7 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt
 3) 对于第二个格式化文件行，将服务器列顺序从 `2` 修改为 `0` 。 
 
 比较进行的更改：  
-**早于**
+**之前**
 ```
 13.0
 3
@@ -91,7 +91,7 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt
 2       SQLCHAR 0       25      ","      2     FirstName    SQL_Latin1_General_CP1_CI_AS
 3       SQLCHAR 0       30      "\r\n"   3     LastName     SQL_Latin1_General_CP1_CI_AS
 ```
-**After**
+**之后**
 ```
 13.0
 4
@@ -123,7 +123,7 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -x -f D:\BCP\myTestSkipField.
 3) 对于 `FirstName`和 `LastName` 将“COLUMN SOURCE”值增加 1，以反映修改的映射。
 
 比较进行的更改：  
-**早于**
+**之前**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -140,7 +140,7 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -x -f D:\BCP\myTestSkipField.
 </BCPFORMAT>
 ```
 
-**After**
+**之后**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -252,7 +252,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
   
 ## <a name="see-also"></a>另请参阅  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [使用格式化文件跳过表列 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
