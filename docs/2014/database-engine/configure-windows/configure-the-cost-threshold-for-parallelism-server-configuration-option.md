@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae87ebd3afa2ee49b55471be4d955cbb4d894ca7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811581"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>配置并行的开销阈值服务器配置选项
@@ -38,7 +38,7 @@ ms.locfileid: "62811581"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：** [配置 cost threshold for parallelism 选项之后](#FollowUp)  
+-   **跟进：** [在配置并行的开销阈值选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -68,9 +68,9 @@ FROM sys.dm_os_sys_info
   
 -   在某些情况下，即使查询的开销计划小于当前 **“并行的开销阈值”** 的值，也有可能选择并行计划。 出现这种情况，是因为使用并行还是串行计划是根据完成完全优化之前所提供的开销估计确定的。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -108,13 +108,13 @@ GO
   
  有关详细信息，请参阅 [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
-##  <a name="FollowUp"></a> 跟进：配置 cost threshold for parallelism 选项之后  
+##  <a name="FollowUp"></a>跟进：在配置并行的开销阈值选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)   
- [查询提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)   
- [ALTER WORKLOAD GROUP (Transact-SQL)](/sql/t-sql/statements/alter-workload-group-transact-sql)   
+ [Transact-sql&#41;的查询提示 &#40;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [更改工作负荷组 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-workload-group-transact-sql)   
  [affinity mask 服务器配置选项](affinity-mask-server-configuration-option.md)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)   

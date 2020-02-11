@@ -20,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63074053"
 ---
 # <a name="template-explorer"></a>Template Explorer
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了多种模板。 模板即包含 SQL 脚本的样板文件，可用于在数据库中创建对象。 第一次打开模板资源管理器时，模板的副本放置在 C:\Users 中 AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates 下的用户的文件夹中。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了多种模板。 模板即包含 SQL 脚本的样板文件，可用于在数据库中创建对象。 首次打开模板资源管理器时，会在 C:\Users 的用户文件夹中的 "AppData\Roaming\Microsoft\SQL Server Management Studio\120\templates 下" 下放置模板的副本。  
   
  您可以在模板资源管理器中浏览可用模板，然后打开该模板以便将代码纳入代码编辑器窗口中。 也可以创建自定义模板。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63074053"
 ## <a name="related-tasks"></a>Related Tasks  
  参考以下主题可以开始使用模板。  
   
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |---------------------|---------------|  
 |介绍如何将模板中的代码合并到代码编辑器窗口。|[打开模板](open-a-template.md)|  
 |介绍如何在代码编辑器中打开模板后替换模板参数值。|[替换模板参数](replace-template-parameters.md)|  

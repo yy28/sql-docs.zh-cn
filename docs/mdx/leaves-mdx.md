@@ -1,5 +1,5 @@
 ---
-title: 叶 (MDX) |Microsoft Docs
+title: 叶（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d29c77250c23900d74d1969a6c37bc719c89cdd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905737"
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
 
 
-  返回由所有属性（或者限制为属于特定维度的属性）组成的集。 对于返回集中的每个属性 x，如果 x 是粒度属性或者直接或间接与粒度属性相关，则在属性 x 上设置粒度而不会影响切片。 **离开**函数设计为使用 SCOPE 语句内部或赋值的左侧。  
+  返回由所有属性（或者限制为属于特定维度的属性）组成的集。 对于返回集中的每个属性 x，如果 x 是粒度属性或者直接或间接与粒度属性相关，则在属性 x 上设置粒度而不会影响切片。 **叶子**函数旨在在 SCOPE 语句或赋值的左侧使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ Leaves( [ Dimension_expression ] )
 ## <a name="remarks"></a>备注  
  叶成员是由所有属性层次结构中的最低级别交叉联接构成的元组。 已排除了计算成员。  
   
--   如果指定了维度名称，则**离开**函数返回包含指定维度的键属性的叶成员的集。  
+-   如果指定了维度名称，则**叶子**函数将返回包含指定维度的键属性的叶成员的集。  
   
 -   如果维度与多个度量值组相关联，将使用当前作用域中度量值的维度。  
   
@@ -46,7 +46,7 @@ Leaves( [ Dimension_expression ] )
     > [!IMPORTANT]  
     >  如果并非所有属性在当前范围内的度量值组中均具备相同的粒度，则会产生错误。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

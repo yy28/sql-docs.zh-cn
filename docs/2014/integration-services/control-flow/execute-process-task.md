@@ -15,21 +15,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b21aa5d2834143ab012b90e0fa6f8a1e22a8314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831856"
 ---
 # <a name="execute-process-task"></a>执行进程任务
-  执行进程任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中运行应用程序或批处理文件。 虽然可以使用执行进程任务打开任意标准应用程序（例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]），但通常还是使用它来运行针对数据源执行的业务应用程序或批处理文件。 例如，可以使用执行进程任务来展开一个压缩的文本文件。 然后，包可将该文本文件用作包中数据流的数据源。 再举一个例子，您可以使用执行进程任务运行生成日销售额报表的自定义 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 应用程序。 然后，可以将该报表附加到发送邮件任务，并将其转发给通讯组列表。  
+  执行进程任务将应用程序或批处理文件作为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包工作流的一部分运行。 虽然可以使用执行进程任务打开任意标准应用程序（例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]），但通常还是使用它来运行针对数据源执行的业务应用程序或批处理文件。 例如，可以使用执行进程任务来展开一个压缩的文本文件。 然后，包可将该文本文件用作包中数据流的数据源。 再举一个例子，您可以使用执行进程任务运行生成日销售额报表的自定义 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 应用程序。 然后，可以将该报表附加到发送邮件任务，并将其转发给通讯组列表。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 还包含一些执行工作流操作的其他任务（如执行包）。 有关详细信息，请参阅 [Execute Package Task](execute-package-task.md)  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包含执行工作流操作的其他任务，如执行包。 有关详细信息，请参阅[执行包任务](execute-package-task.md)  
   
 ## <a name="custom-log-entries-available-on-the-execute-process-task"></a>执行进程任务可用的自定义日志项  
  下表列出了执行进程任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志项|Description|  
+|日志项|说明|  
 |---------------|-----------------|  
 |`ExecuteProcessExecutingProcess`|提供所配置任务要运行的进程的信息。<br /><br /> 写入两个日志条目。 一个日志条目包含有关任务所运行可执行文件的名称和位置的信息，另一个条目则记录从可执行文件退出的信息。|  
 |`ExecuteProcessVariableRouting`|提供有关哪些变量被路由到可执行文件的输入和输出的信息。 将为 stdin（输入）、stdout（输出）和 stderr（错误输出）写入日志条目。|  
@@ -39,9 +39,9 @@ ms.locfileid: "62831856"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [执行进程任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [执行进程任务编辑器 &#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [执行进程任务编辑器（“进程”页）](../execute-process-task-editor-process-page.md)  
+-   [执行进程任务编辑器 &#40;进程页&#41;](../execute-process-task-editor-process-page.md)  
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62831856"
   
  可以使用表达式设置执行进程任务的各种属性。  
   
- 当你使用**StandardInputVariable**属性配置执行进程任务以提供输入时，调用`Console.ReadLine`从应用程序来读取输入的方法。 有关详细信息，请参阅 [Console.ReadLine 方法](https://go.microsoft.com/fwlink/?LinkId=129201)类库中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 主题。  
+ 使用**StandardInputVariable**属性配置执行进程任务以提供输入时，请从应用程序中调用`Console.ReadLine`方法以读取输入。 有关详细信息，请参阅 [Console.ReadLine 方法](https://go.microsoft.com/fwlink/?LinkId=129201)类库中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
   
  当使用 **Arguments** 属性配置执行进程任务以提供输入时，请执行下列步骤之一以获得参数：  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62831856"
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](integration-services-tasks.md)   
  [控制流](control-flow.md)  
   

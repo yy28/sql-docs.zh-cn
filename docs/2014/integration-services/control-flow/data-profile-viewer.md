@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f6bcad3636178fb4aebbcdbeee29ba2542f092e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832356"
 ---
 # <a name="data-profile-viewer"></a>数据配置文件查看器 (Data Profile Viewer)
@@ -26,22 +26,22 @@ ms.locfileid: "62832356"
 > [!IMPORTANT]  
 >  输出文件可能包含有关数据库的敏感数据和数据库所包含的数据。 有关如何使此文件更加安全的建议，请参阅 [访问包使用的文件](../access-to-files-used-by-packages.md)。  
   
-## <a name="data-profiles"></a>数据事件探查  
+## <a name="data-profiles"></a>数据配置文件  
  若要查看数据配置文件，请将数据事件探查任务配置为将其输出发送到文件，然后使用独立的数据配置文件查看器。 若要打开数据配置文件查看器，请执行以下操作之一。  
   
--   在“[!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器”中右键单击“数据事件探查”  任务，然后单击“编辑”  。 在 **“数据事件探查任务编辑器”** 的 **“常规”** 页上，单击 **“打开配置文件查看器”** 。  
+-   在“ **设计器”中右键单击“数据事件探查”** [!INCLUDE[ssIS](../../includes/ssis-md.md)]任务，然后单击“编辑”  。 在 **“数据事件探查任务编辑器”** 的 **“常规”** 页上，单击 **“打开配置文件查看器”** 。  
   
--   在文件夹 \<drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中，运行 DataProfileViewer.exe  。  
+-   在文件夹 *drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中，运行 DataProfileViewer.exe\<* 。  
   
  该查看器使用多个窗格来显示请求的配置文件和计算所得的结果，包含可选详细信息和明细功能：  
   
- “配置文件”  窗格  
+ **“配置文件”** 窗格  
  “配置文件”  窗格显示数据配置文件任务中所请求的配置文件。 若要查看配置文件的计算结果，请在 **“配置文件”** 窗格中选择配置文件，结果将显示在查看器的其他窗格中。  
   
  **“结果”** 窗格  
  “结果”  窗格使用单行来汇总配置文件的计算结果。 例如，如果请求 **“列长度分布配置文件”** ，此行将包括最小和最大长度以及行数。 对于大多数配置文件，可以在 **“结果”** 窗格中选择此行，以便在可选的 **“详细信息”** 窗格中查看其他详细信息。  
   
- “详细信息”  窗格  
+ **“详细信息”** 窗格  
  对于大多数配置文件类型，“详细信息”  窗格显示有关在“结果”  窗格中选择的配置文件结果的其他信息。 例如，如果请求 **“列长度分布配置文件”** ， **“详细信息”** 窗格将显示找到的每列长度。 该窗格还显示列值为该列长度的行数和行数百分比。  
   
  对于对多列进行计算的三种配置文件类型（候选键、函数依赖关系和值包含），“详细信息”  窗格显示违反期望关系的信息。 例如，如果请求候选键配置文件，“详细信息”窗格将显示违反候选键唯一性约束的重复值。  

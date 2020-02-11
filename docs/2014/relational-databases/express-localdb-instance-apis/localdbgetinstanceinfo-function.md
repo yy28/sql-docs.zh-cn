@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63130530"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 函数
   返回有关指定的 SQL Server Express LocalDB 实例的信息，如该实例是否存在、实例使用的 LocalDB 版本以及实例是否正在运行等。  
   
- 在返回的信息`struct`名为**LocalDBInstanceInfo**，其中包含以下定义。  
+ 此信息将在`struct`名为**LocalDBInstanceInfo**的中返回，该名称具有以下定义。  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -73,7 +73,7 @@ typedef struct _LocalDBInstanceInfo
   
 ```  
   
- **标头文件：** sqlncli.h  
+ **头文件：** sqlncli.msi  
   
 ## <a name="syntax"></a>语法  
   
@@ -85,7 +85,7 @@ HRESULT LocalDBGetInstanceInfo(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *wszInstanceName*  
  [输入] 实例名称。  
   
@@ -93,7 +93,7 @@ HRESULT LocalDBGetInstanceInfo(
  [输出] 要存储有关 LocalDB 实例信息的缓冲区。  
   
  *dwInstanceInfoSize*  
- [输入]保留的大小*InstanceInfo*缓冲区。  
+ 送保存*InstanceInfo*缓冲区的大小。  
   
 ## <a name="returns"></a>返回  
  S_OK  
@@ -127,11 +127,11 @@ HRESULT LocalDBGetInstanceInfo(
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="details"></a>详细信息  
- 引入的基本原理`struct`大小参数 (*lpInstanceInfoSize*) 是为了使 API 能够返回不同版本**LocalDBInstanceInfostruct**，从而有效地实现向前和向后兼容。  
+ 引入`struct`大小参数（*lpInstanceInfoSize*）背后的基本原理是使 API 能够返回不同版本的**LocalDBInstanceInfostruct**，从而有效地实现向前和向后兼容性。  
   
- 如果`struct`大小参数 (*lpInstanceInfoSize*) 与已知版本的大小匹配**LocalDBInstanceInfostruct**，该版本的`struct`返回。 否则，返回 LOCALDB_ERROR_INVALID_PARAMETER。  
+ 如果`struct`大小参数（*lpInstanceInfoSize*）与已知版本的**LocalDBInstanceInfostruct**的大小匹配，则返回该版本`struct`的。 否则，返回 LOCALDB_ERROR_INVALID_PARAMETER。  
   
- 典型示例**LocalDBGetInstanceInfo** API 使用情况如下所示：  
+ **LocalDBGetInstanceInfo** API 用法的典型示例如下所示：  
   
 ```  
 LocalDBInstanceInfo ii;  
@@ -139,9 +139,9 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
   
 ```  
   
- 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 引用](../sql-server-express-localdb-reference.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](sql-server-express-localdb-header-and-version-information.md)  
   
   

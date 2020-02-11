@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef1a7101a0bd16c3ee2868f47a8dc15f29092621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806709"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>在数据库镜像会话中强制服务 (Transact-SQL)
@@ -40,12 +40,12 @@ ms.locfileid: "62806709"
   
      ALTER DATABASE *<database_name>* SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS  
   
-     其中， *<database_name>* 为镜像数据库。  
+     其中，*<database_name>* 为镜像数据库。  
   
      镜像服务器将立即转换为主体服务器，并且镜像挂起。  
   
-## <a name="see-also"></a>请参阅  
- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
+## <a name="see-also"></a>另请参阅  
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [数据库镜像运行模式](database-mirroring-operating-modes.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47940abbbbf4ebf41c85bb0c8a7ee6f986a570bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831864"
 ---
 # <a name="merge-in-integration-services-packages"></a>在 Integration Services 包中执行 MERGE
@@ -52,12 +52,12 @@ ms.locfileid: "62831864"
  数据仓库中的 FactBuyingHabits 表会跟踪客户购买指定产品的最后日期。 该表由 ProductID、CustomerID 和 PurchaseDate 列组成。 事务性数据库每周都会生成一个包括该周采购情况的 PurchaseRecords 表。 目标是使用一个 MERGE 语句将 PurchaseRecords 表中的信息合并到 FactBuyingHabits 表中。 对于不存在的产品-客户对，MERGE 语句将插入新行。 对于已存在的产品-客户对，MERGE 语句会更新最近的购买日期。  
   
 ###### <a name="track-price-history"></a>跟踪价格历史记录  
- DimBook 表表示某书商库存中的图书列表，并标识每本书的价格历史记录。 此表包含以下列：ISBN、ProductID、Price、Shelf 和 IsCurrent。 此表还将书的每个价格显示为一行。 其中一行显示的是当前价格。 为了指示哪一行包含当前价格，该行的 IsCurrent 列的值设置为 1。  
+ DimBook 表表示某书商库存中的图书列表，并标识每本书的价格历史记录。 此表包括以下列：ISBN、ProductID、Price、Shelf 和 IsCurrent。 此表还将书的每个价格显示为一行。 其中一行显示的是当前价格。 为了指示哪一行包含当前价格，该行的 IsCurrent 列的值设置为 1。  
   
  该数据库每周会生成一个 WeeklyChanges 表，其中包含该周的价格更改以及该周添加的新书。 使用一个 MERGE 语句可以将 WeeklyChanges 表中的更改应用到 DimBook 表中。 MERGE 语句会为新添加的书插入新行，对于价格已更改的现有书的行，MERGE 语句会将这些行的 IsCurrent 列更新为 0。 MERGE 语句还会为价格已更改的书插入新行，并会将这些新行的 IsCurrent 列的值设置为 1。  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>将具有新数据的表与旧表合并  
- 该数据库使用“开放式架构”（即，包含各属性的名称-值对的表）对对象的属性进行建模。 “属性”表包含三列：EntityID、PropertyID 和 Value。 NewProperties 表是 Properties 表的更新版本，应与 Properties 表保持同步。 若要同步这两个表，可以使用一个 MERGE 语句执行以下操作：  
+ 该数据库使用“开放式架构”（即，包含各属性的名称-值对的表）对对象的属性进行建模。 Properties 表具有三列：EntityID、PropertyID 和 Value。 NewProperties 表是 Properties 表的更新版本，应与 Properties 表保持同步。 若要同步这两个表，可以使用一个 MERGE 语句执行以下操作：  
   
 -   从 Properties 表中删除 NewProperties 表中不存在的属性。  
   

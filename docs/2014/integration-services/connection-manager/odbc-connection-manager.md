@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6c7ecd59bcf3a3ece0d61ecbb428bb39a80068f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833739"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 连接管理器
   ODBC 连接管理器使得包能够使用开放式数据库连接规范 (ODBC) 连接到多种数据库管理系统。  
   
- 将 ODBC 连接添加到包并设置连接管理器属性时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建的连接管理器，并将添加到连接管理器`Connections`包的集合。 该连接管理器在运行时决定物理 ODBC 连接。  
+ 将 ODBC 连接添加到包并设置连接管理器属性时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]将创建一个连接管理器，并将该连接管理器`Connections`添加到包的集合。 该连接管理器在运行时决定物理 ODBC 连接。  
   
  该连接管理器的 `ConnectionManagerType` 属性设置为 `ODBC`。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "62833739"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题之一：  
   
--   [ODBC 连接管理器 UI 参考](../odbc-connection-manager-ui-reference.md)  
+-   [ODBC 连接管理器用户界面参考](../odbc-connection-manager-ui-reference.md)  
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../building-packages-programmatically/adding-connections-programmatically.md)项目。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 连接](integration-services-ssis-connections.md)  
   
   

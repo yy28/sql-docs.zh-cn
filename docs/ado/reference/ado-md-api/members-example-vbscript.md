@@ -1,5 +1,5 @@
 ---
-title: 成员示例 (VBScript) |Microsoft Docs
+title: 成员示例（VBScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8f3fc746660b1382d8c06f5ffc343fd52ecf024
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949417"
 ---
 # <a name="members-example-vbscript"></a>成员示例 (VBScript)
-此示例使用 MDX 查询字符串检索 OLAP 数据并将生成的单元集写入到一个 HTML 表结构，用于多个维度单元集的列跨越式功能。  
+此示例使用 MDX 查询字符串来检索 OLAP 数据，并使用多维度单元集的列跨越功能将生成的单元格写入 HTML 表结构。  
   
 ```  
 <%@ Language=VBScript %>  

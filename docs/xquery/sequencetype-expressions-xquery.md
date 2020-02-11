@@ -1,5 +1,5 @@
 ---
-title: SequenceType 表达式 (XQuery) |Microsoft Docs
+title: SequenceType 表达式（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,39 +18,39 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946280"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  在 XQuery 中，值始终是序列。 值类型称为序列类型。 可以在使用序列类型**的实例**XQuery 表达式。 当需要引用 XQuery 表达式中的类型时，将使用 XQuery 规范中说明的 SequenceType 语法。  
+  在 XQuery 中，值始终是序列。 值类型称为序列类型。 序列类型可以在 XQuery 表达式**的实例**中使用。 当需要引用 XQuery 表达式中的类型时，将使用 XQuery 规范中说明的 SequenceType 语法。  
   
- 原子类型名称也可在**强制转换为**XQuery 表达式。 在中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，则**的实例**并**强制转换为**部分支持 sequencetype 中的 XQuery 表达式。  
+ 原子类型名称也可以在**强制转换为**XQuery 表达式中使用。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，和**转换为**sequencetype 上的 XQuery 表达式的**实例**是部分受支持的。  
   
 ## <a name="instance-of-operator"></a>instance of 运算符  
- **的实例**运算符可以用于确定指定的表达式的值的动态的或运行时类型。 例如：  
+ 运算符的**实例**可用于确定指定表达式的值的动态或运行时类型。 例如：  
   
 ```  
   
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- 请注意，`instance of`运算符， `Occurrence indicator`，指定的基数，所产生的序列中的项数。 如果未指定，则假定基数为 1。 在中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，仅问号 ( **？)** 支持出现指示符。 **？** 出现指示符指示`Expression`可以返回零个或一个项。 如果 **？** 指定出现指示符，则`instance of`时，返回 True`Expression`类型与指定`SequenceType`，无论`Expression`返回单独序列还是空序列。  
+ 请注意， `instance of`运算符 "" `Occurrence indicator`指定基数，结果序列中的项数。 如果未指定，则假定基数为 1。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，仅支持问号（**？）** 匹配项指示器。 **？** 出现指示符指示`Expression`可以返回零个或一个项。 如果 **？** 指定发生指示符， `instance of`如果`Expression`类型与指定`SequenceType`的匹配，则返回 True，无论`Expression`是返回单一顺序还是空序列。  
   
- 如果 **？** 未指定出现指示符，则`sequence of`返回 True 时，才`Expression`键入匹配`Type`指定和`Expression`返回单一实例。  
+ 如果 **？** 未指定发生指示符， `sequence of`仅当`Expression`类型与指定的`Type`匹配并`Expression`返回单一实例时才返回 True。  
   
- **请注意**加号 ( **+** ) 和星号 ( **&#42;** ) 中不支持出现指示符[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ **注意**在中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支持**+** 加号（）和星号（**&#42;**）匹配项。  
   
- 下面的示例说明如何使用**的实例**XQuery 运算符。  
+ 下面的示例说明了如何使用 XQuery 运算符的**实例**。  
   
 ### <a name="example-a"></a>示例 A  
- 下面的示例创建**xml**类型的变量，并指定针对它的查询。 查询表达式将指定 `instance of` 运算符以确定第一个操作数返回的值的动态类型是否与第二个操作数中指定的类型相匹配。  
+ 下面的示例创建一个**xml**类型变量并指定对其进行查询。 查询表达式将指定 `instance of` 运算符以确定第一个操作数返回的值的动态类型是否与第二个操作数中指定的类型相匹配。  
   
- 以下查询返回 True，因为值 125 是指定类型的实例**xs: integer**:  
+ 下面的查询返回 True，因为125值是指定类型的一个实例， **xs： integer**：  
   
 ```  
 declare @x xml  
@@ -98,7 +98,7 @@ go
 ### <a name="example-b"></a>示例 B  
  在此示例中，将查询 AdventureWorks 示例数据库中的类型化的 XML 列。 类型化信息由与被查询的列关联的 XML 架构集合提供。  
   
- 在表达式中， **data （)** 返回类型为 xs: string 根据与列关联的架构的 ProductModelID 属性的类型化的值。 因此，`instance of` 返回 True。  
+ 在表达式中， **data （）** 根据与列关联的架构，返回类型为 xs： String 的 ProductModelID 属性的类型化值。 因此，`instance of` 返回 True。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -109,9 +109,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
+ 有关详细信息，请参阅[将类型化的 xml 与非类型化的 Xml 比较](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
- 以下查询 usetheBoolean`instance of`表达式来确定 LocationID 属性是否属于 xs: integer 类型：  
+ 下面的查询 usetheBoolean `instance of`表达式以确定 LocationID 属性是否为 xs： integer 类型：  
   
 ```  
 SELECT Instructions.query('  
@@ -138,13 +138,13 @@ where ProductModelID=19
  该查询返回 True。  
   
 ### <a name="example-c"></a>示例 C  
- 使用联合类型时`instance of`中的表达式[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]有一个限制：具体而言，当元素或属性的类型是联合类型时，`instance of`可能无法确定确切的类型。 因此，查询将返回 False，除非用于 SequenceType 中的原子类型在简单类型层次结构中是表达式的实际类型的最高父级。 即以 SequenceType 指定的原子类型必须是任意简单类型的直接子级。 有关类型层次结构的信息，请参阅[XQuery 中的类型转换规则](../xquery/type-casting-rules-in-xquery.md)。  
+ 使用联合类型时，`instance of` 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表达式有一个限制：具体来说，当某个元素或属性的类型为联合类型时，`instance of` 可能无法确定其准确的类型。 因此，查询将返回 False，除非用于 SequenceType 中的原子类型在简单类型层次结构中是表达式的实际类型的最高父级。 即以 SequenceType 指定的原子类型必须是任意简单类型的直接子级。 有关类型层次结构的信息，请参阅[XQuery 中的类型转换规则](../xquery/type-casting-rules-in-xquery.md)。  
   
  下一个查询示例将执行以下操作：  
   
 -   使用联合类型创建 XML 架构集合，在其中定义诸如整数或字符串等类型。  
   
--   声明类型化**xml**变量使用 XML 架构集合。  
+-   使用 XML 架构集合声明类型化的**xml**变量。  
   
 -   将示例 XML 实例分配给变量。  
   
@@ -163,7 +163,7 @@ CREATE XML SCHEMA COLLECTION MyTestSchema AS '
 Go  
 ```  
   
- 以下查询将返回 False，因为在 `instance of` 表达式中指定的 SequenceType 不是指定表达式的实际类型的最高父级。 值，即 <`TestElement`> 是整数类型。 最高父级为 xs:decimal。 但是，未将它指定为 `instance of` 运算符的第二个操作数。  
+ 以下查询将返回 False，因为在 `instance of` 表达式中指定的 SequenceType 不是指定表达式的实际类型的最高父级。 也就是说，<`TestElement`> 的值是整数类型。 最高父级为 xs:decimal。 但是，未将它指定为 `instance of` 运算符的第二个操作数。  
   
 ```  
 SET QUOTED_IDENTIFIER ON  
@@ -188,9 +188,9 @@ go
 ```  
   
 ### <a name="example-d"></a>示例 D  
- 在此示例中，您首先创建 XML 架构集合并使用它来键入**xml**变量。 类型化**xml**然后，查询变量来说明`instance of`功能。  
+ 在此示例中，首先创建 XML 架构集合，并使用它来键入**xml**变量。 然后，将查询类型化的**xml**变量以`instance of`说明该功能。  
   
- 以下 XML 架构集合定义的简单类型 myType 和一个元素，<`root`>，类型 mytype 类型的：  
+ 下面的 XML 架构集合定义了一个简单类型 myType 和一个 myType 类型的元素`root` <>：  
   
 ```  
 drop xml schema collection SC  
@@ -209,7 +209,7 @@ xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">
 Go  
 ```  
   
- 现在，创建类型化**xml**变量并对其进行查询：  
+ 现在创建一个类型化的**xml**变量并对其进行查询：  
   
 ```  
 DECLARE @var XML(SC)  
@@ -234,11 +234,11 @@ go
 ### <a name="example-e"></a>示例 E  
  在下列示例中，表达式将检索 IDREFS 属性的值之一，并使用 `instance of` 来确定该值是否是 IDREF 类型。 该示例执行以下操作：  
   
--   在其中创建一个 XML 架构集合 <`Customer`> 元素具有**OrderList** IDREFS 类型属性和 <`Order`> 元素具有**OrderID** ID 类型属性。  
+-   创建一个`Customer` XML 架构集合，其中 <> 元素具有**OrderList** IDREFS 类型属性，<`Order`> 元素具有 "**订单**id 类型" 属性。  
   
--   创建类型化**xml**变量，并将分配给它的示例 XML 实例。  
+-   创建一个类型化的**xml**变量并向其分配一个示例 xml 实例。  
   
--   对变量指定查询。 查询表达式从第一个 OrderList IDRERS 类型属性中检索的第一个顺序 ID 值 <`Customer`>。 检索的值是 IDREF 类型。 因此， `instance of` ，则返回 True。  
+-   对变量指定查询。 查询表达式检索第一个 <`Customer`> 的 OrderList IDRERS 类型属性中的第一个订单 ID 值。 检索的值是 IDREF 类型。 因此， `instance of`返回 True。  
   
 ```  
 create xml schema collection SC as  
@@ -308,13 +308,13 @@ select @x.query(' declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   **Schema-element （)** 并**schema-attribute()** 序列类型不支持与比较`instance of`运算符。  
+-   与`instance of`运算符进行比较时不支持**架构元素（）** 和**架构特性（）** 序列类型。  
   
 -   不支持完整序列（如 `(1,2) instance of xs:integer*`）。  
   
--   使用的窗体时**element （)** 序列类型的指定类型名称，例如`element(ElementName, TypeName)`，必须用问号 （？） 限定类型。 例如，`element(Title, xs:string?)` 指示元素可能为空。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持的运行时检测**xsi: nil**属性使用`instance of`。  
+-   当使用指定类型名称（如`element(ElementName, TypeName)` **）的元素（）** 序列类型的形式时，必须使用问号（？）限定类型。 例如，`element(Title, xs:string?)` 指示元素可能为空。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支持通过使用`instance of`对**xsi： nil**属性进行运行时检测。  
   
--   如果 `Expression` 中的值来自类型化为联合类型的元素或属性，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只能识别派生了值类型的非派生的 primitive 类型。 例如，如果 <`e1`> 定义为具有静态类型 (xs: integer | xs: string)，以下将返回 False。  
+-   如果 `Expression` 中的值来自类型化为联合类型的元素或属性，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只能识别派生了值类型的非派生的 primitive 类型。 例如，如果将 <`e1`> 定义为具有静态类型（xs： integer | xs： string），以下内容将返回 False。  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  
@@ -322,17 +322,17 @@ select @x.query(' declare namespace CustOrders="Customers";
   
      而 `data(<e1>123</e1>) instance of xs:decimal` 将返回 True。  
   
--   有关**processing-instruction()** 并**document-node()** 序列类型，允许仅不带参数的窗体。 例如，允许 `processing-instruction()`，但不允许 `processing-instruction('abc')`。  
+-   对于**处理指令（）** 和**文档节点（）** 序列类型，只允许使用不带参数的窗体。 例如，允许 `processing-instruction()`，但不允许 `processing-instruction('abc')`。  
   
 ## <a name="cast-as-operator"></a>cast as 运算符  
- **强制转换为**表达式可用于将值转换为特定的数据类型。 例如：  
+ **转换为**表达式可用于将值转换为特定数据类型。 例如：  
   
 ```  
   
 Expression cast as  AtomicType?  
 ```  
   
- 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，要求问号 (?) 在 `AtomicType` 之后。 例如，如以下查询中所示`"2" cast as xs:integer?`将字符串值转换为整数：  
+ 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，要求问号 (?) 在 `AtomicType` 之后。 例如，如以下查询所示， `"2" cast as xs:integer?`将字符串值转换为整数：  
   
 ```  
 declare @x xml  
@@ -340,7 +340,7 @@ set @x=''
 select @x.query('"2" cast as xs:integer?')  
 ```  
   
- 在下面的查询**data （)** 返回 ProductModelID 属性，字符串类型的类型化的值。 `cast as`运算符将值转换为 xs: integer。  
+ 在下面的查询中， **data （）** 返回 ProductModelID 属性的类型化值，即字符串类型。 `cast as`运算符将值转换为 xs： integer。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -351,10 +351,11 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 显式使用**data （)** 此查询中不需要。 `cast as` 表达式在输入表达式中执行隐式原子化。  
+ 在此查询中不需要显式使用**data （）** 。 
+  `cast as` 表达式在输入表达式中执行隐式原子化。  
   
 ### <a name="constructor-functions"></a>构造函数  
- 您可以使用原子类型来构造函数。 例如，而不是使用`cast as`运算符`"2" cast as xs:integer?`，可以使用**xs:integer()** 构造函数，如以下示例所示：  
+ 您可以使用原子类型来构造函数。 例如，可以使用`cast as` **xs： integer （）** 构造函数，而不是使用运算符`"2" cast as xs:integer?`，如以下示例中所示：  
   
 ```  
 declare @x xml  
@@ -370,17 +371,17 @@ set @x=''
 select @x.query('xs:date("2000-01-01Z")')  
 ```  
   
- 您还可以使用用户定义的原子类型的构造函数。 例如，如果与 XML 架构集合相关联的 XML 数据类型定义简单类型， **myType()** 构造函数可用于返回该类型的值。  
+ 您还可以使用用户定义的原子类型的构造函数。 例如，如果与 XML 数据类型相关联的 XML 架构集合定义了简单类型，则可以使用**myType （）** 构造函数返回该类型的值。  
   
 #### <a name="implementation-limitations"></a>实现限制  
   
--   XQuery 表达式**typeswitch**，**可转换**，并**将视为**不受支持。  
+-   不支持 XQuery 表达式**typeswitch**、**可转换**和**treat** 。  
   
--   **强制转换为**要求问号 （？）之后的原子类型。  
+-   **强制转换为**需要问号（？）原子类型后。  
   
--   **xs: qname**不支持强制转换为的类型。 使用**展开的 QName**相反。  
+-   不支持将**xs： QName**作为转换类型。 改**为使用加宽-QName** 。  
   
--   **xs: date**， **xs: time**，和**xs: datetime**需要由 Z 指示时区。  
+-   **xs： date**、 **xs： time**和**xs： Datetime**需要时区，由 Z 表示。  
   
      以下查询失败，因为未指定时区。  
   
@@ -400,14 +401,14 @@ select @x.query('xs:date("2000-01-01Z")')
     go  
     ```  
   
-     下面是结果：  
+     结果如下：  
   
     ```  
     <a>2002-05-25Z</a>  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XQuery 表达式](../xquery/xquery-expressions.md)   
- [类型系统&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
+ [键入 System &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

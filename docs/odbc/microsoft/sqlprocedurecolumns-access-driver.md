@@ -14,19 +14,19 @@ ms.assetid: 34fee995-5848-4ecb-bda0-fc362a77b2d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a33d449396b5cc80e8d29767708d2f9f16736fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987844"
 ---
 # <a name="sqlprocedurecolumns-access-driver"></a>SQLProcedureColumns（Access 驱动程序）
 > [!NOTE]  
->  本主题提供访问特定于驱动程序信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题提供特定于访问驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
- 应用程序开发人员应查找驱动程序定义的列从结果集的末尾处开始并向后继续。  
+ 应用程序开发人员应从结果集的末尾开始查找驱动程序定义的列，然后再继续。  
   
-|“列”|注释|  
+|列|注释|  
 |------------|--------------|  
 |COLUMN_TYPE|SQL_PARAM_INPUT 或 SQL_RESULT_COL|  
-|序号|这是返回的结果集末尾的驱动程序特定列。 列的 SQL 类型是一个整数。|
+|序号|这是在结果集末尾返回的驱动程序特定的列。 列的 SQL 类型为整数。|

@@ -13,20 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68bd85258bd3fd259386f020394ffb5bc70a9781
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791911"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>“添加 IP 地址”对话框 (SQL Server Management Studio)
-  本 F1 帮助主题介绍 **“添加 IP 地址”** 对话框中的选项。 可通过 **“新的可用性组侦听器”** 对话框和   或 **的** “指定副本” [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 页的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] “侦听器” [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]选项卡访问此对话框。  
+  本 F1 帮助主题介绍 "**添加 IP 地址**" 对话框中的选项。 可通过 **“新的可用性组侦听器”** 对话框和 **** 或 **的** “指定副本” [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 页的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] “侦听器” [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]选项卡访问此对话框。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  开始向可用性组侦听器添加子网之前，确保了解每个子网的 IP 地址以及子网掩码（对于 IPv4 地址）。  
   
-##  <a name="PageOptions"></a> 添加 IP 地址选项  
- **子网**  
+##  <a name="PageOptions"></a>添加 IP 地址选项  
+ **个子**  
  使用下拉列表选择要添加到可用性组侦听器的子网地址。 默认情况下，一个子网同时具有 IPv4 地址和 IPv6 地址。 首次使用 **“添加 IP 地址”** 对话框时， **“子网”** 下拉列表将显示承载可用性组副本的每个子网的这两种子网地址。 若要向侦听器添加给定子网，请选择它的子网地址之一。  
   
  完成 **“添加 IP 地址”** 对话框的操作并单击 **“确定”** 后，可以将所选子网地址添加到该侦听器， **“子网”** 下拉列表会筛选出该子网地址。 所有未选定的子网地址仍保留在下拉列表中。 确保为每个子网向侦听器仅添加一个子网地址，否则侦听器创建将失败。  
@@ -43,14 +43,15 @@ ms.locfileid: "62791911"
  **IPv6 地址**  
  如果您选择了子网的 IPv6 子网地址，请在此输入有效的 IPv6 静态地址。  
   
- **“确定”**  
+ **确定**  
  单击以添加已选定其地址的子网，同时添加您指定的静态 IP 地址。 包含这些值的行将添加到 **“新的可用性组侦听器”** 或 **“指定副本”** 对话框的子网网格中。  
   
 > [!IMPORTANT]  
->  **“添加 IP 地址”** 对话框并不验证该 IP 地址。 该对话框也不会阻止您为已经添加到可用性组侦听器的子网继续添加其他子网地址。  
+>  
+  **“添加 IP 地址”** 对话框并不验证该 IP 地址。 该对话框也不会阻止您为已经添加到可用性组侦听器的子网继续添加其他子网地址。  
   
  **取消**  
- 单击以取消所做选择，并返回“新的可用性组侦听程序”  对话框或“侦听程序”  选项卡，不为任何子网添加静态 IP 地址。  
+ 单击以取消所做选择，并返回“新的可用性组侦听程序”**** 对话框或“侦听程序”**** 选项卡，不为任何子网添加静态 IP 地址。  
   
   
 ##  <a name="RelatedTasks"></a> 相关任务  
@@ -62,8 +63,8 @@ ms.locfileid: "62791911"
 -   [使用“将副本添加到可用性组向导”(SQL Server Management Studio)](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 客户端连接 (SQL Server)](always-on-client-connectivity-sql-server.md)  
   

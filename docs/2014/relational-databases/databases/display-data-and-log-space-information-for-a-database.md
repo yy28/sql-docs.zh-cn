@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4850be4c112f9c0b987d543873cb55af08372455
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917323"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>显示数据库的数据和日志空间信息
@@ -35,7 +35,7 @@ ms.locfileid: "62917323"
   
      [安全性](#Security)  
   
--   **若要显示的数据和日志空间信息对于数据库，使用：**  
+-   **若要显示数据库的数据和日志空间信息，请使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,9 +43,9 @@ ms.locfileid: "62917323"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  执行 **sp_spaceused** 的权限授予 **public** 角色。 只有 **db_owner** 固定数据库角色的成员可以指定 **@updateusage** 参数。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -60,7 +60,7 @@ ms.locfileid: "62917323"
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### <a name="to-display-data-and-log-space-information-for-a-database-by-using-spspaceused"></a>使用 sp_spaceused 显示数据库的数据和日志空间信息  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-using-sp_spaceused"></a>使用 sp_spaceused 显示数据库的数据和日志空间信息  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -75,7 +75,7 @@ EXEC sp_spaceused N'Purchasing.Vendor';
 GO  
 ```  
   
-#### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabasefiles"></a>通过查询 sys.database_files 显示数据库的数据和日志空间信息  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabase_files"></a>通过查询 sys.database_files 显示数据库的数据和日志空间信息  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -92,7 +92,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
  [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [sp_spaceused (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920685"
 ---
 # <a name="transaction-log-backups-sql-server"></a>事务日志备份 (SQL Server)
@@ -37,10 +37,10 @@ ms.locfileid: "62920685"
   
 -   [相关内容](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a> 一系列日志备份的工作原理  
+##  <a name="LogBackupSequence"></a>一系列日志备份的工作原理  
  事务日志备份“日志链”  的序列与数据备份无关。 例如，假设有下列事件顺序。  
   
-|Time|Event|  
+|时间|事件|  
 |----------|-----------|  
 |上午 8:00|备份数据库。|  
 |中午|备份事务日志。|  
@@ -70,7 +70,7 @@ ms.locfileid: "62920685"
 ##  <a name="RelatedContent"></a> 相关内容  
  无。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [事务日志 (SQL Server)](../logs/the-transaction-log-sql-server.md)   
  [SQL Server 数据库的备份和还原](back-up-and-restore-of-sql-server-databases.md)   
  [结尾日志备份 (SQL Server)](tail-log-backups-sql-server.md)   

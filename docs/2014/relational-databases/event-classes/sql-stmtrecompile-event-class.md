@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061232"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile 事件类
@@ -26,7 +26,7 @@ ms.locfileid: "63061232"
   
 ## <a name="sqlstmtrecompile-event-class-data-columns"></a>SQL:StmtRecompile 事件类的数据列  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 该列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|`int`|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了进程 ID，则填充此数据列。|9|是|  
@@ -58,8 +58,8 @@ ms.locfileid: "63061232"
 |TransactionID|`bigint`|系统分配的事务 ID。|4|是|  
 |XactSequence|`bigint`|用于说明当前事务的标记。|50|是|  
   
-## <a name="see-also"></a>请参阅  
- [SP:Recompile 事件类](sp-recompile-event-class.md)   
+## <a name="see-also"></a>另请参阅  
+ [SP：重新编译事件类](sp-recompile-event-class.md)   
  [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

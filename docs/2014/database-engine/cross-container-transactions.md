@@ -1,5 +1,5 @@
 ---
-title: 交叉容器事务 |Microsoft Docs
+title: 跨容器事务 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807421"
 ---
 # <a name="cross-container-transactions"></a>交叉容器事务
@@ -24,8 +24,8 @@ ms.locfileid: "62807421"
   
  引用内存优化表的任何解释型查询都被视为交叉容器事务的一部分，而无论是从显式或隐式事务中执行，还是在自动提交模式下执行。  
   
-##  <a name="isolation"></a> 单个操作的隔离  
- 每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事务都有一个隔离级别。 默认隔离级别为 Read Committed。 若要使用不同的隔离级别，可以设置隔离级别使用[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。  
+##  <a name="isolation"></a>单个操作的隔离  
+ 每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事务都有一个隔离级别。 默认隔离级别为 Read Committed。 若要使用不同的隔离级别，可以使用 "[设置事务隔离级别 &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)设置隔离级别。  
   
  内存优化表和基于磁盘的表上的操作常常需要采用不同的隔离级别执行。 在事务中，可为一组语句或单个读取操作设置不同的隔离级别。  
   
@@ -65,13 +65,13 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>单个操作的隔离语义  
  可序列化事务 T 在完全隔离下执行。 此事务执行时，就好像其他每个事务要么都在 T 启动之前提交，要么都在 T 提交之后启动。 当一个事务中的不同操作具有不同隔离级别时，情况会变得更加复杂。  
   
- 中的事务隔离级别的常规语义[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，以及锁定的含义，详见[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。  
+ 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [&#40;transact-sql&#41;的 "设置事务隔离级别](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)" 中说明了中的事务隔离级别的一般语义以及锁定的含义。  
   
  对于不同操作可能具有不同隔离级别的交叉容器事务，您需要理解各个读取操作的隔离语义。 将始终对写操作进行隔离。 不同事务中的写操作不能相互影响。  
   
  数据读取操作返回很多符合筛选条件的行。  
   
- 读取来执行读取操作的事务 t。 隔离级别的一部分可以理解的  
+ 读取作为事务的一部分执行。可以在中理解读取操作的隔离级别，  
   
  提交状态  
  提交状态指数据读取是否能够提交。  
@@ -82,7 +82,7 @@ commit
  系统提供给事务 T 的有关数据读取的稳定性保证。  
  稳定性是指事务的读取是否可重复。 也就是，重复读取操作是否始终返回相同的行和行版本？  
   
- 特定保证是指事务的逻辑结束时间。 一般情况下，逻辑结束时间是将事务提交到数据库的时间。 如果事务访问内存优化表，则从技术上看，逻辑结束时间就是验证阶段的开始时间。 (有关详细信息，请参阅中的事务生存期讨论[内存优化表中的事务](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 特定保证是指事务的逻辑结束时间。 一般情况下，逻辑结束时间是将事务提交到数据库的时间。 如果事务访问内存优化表，则从技术上看，逻辑结束时间就是验证阶段的开始时间。 （有关详细信息，请参阅[内存优化表](../relational-databases/in-memory-oltp/memory-optimized-tables.md)的事务中的事务生存期讨论。  
   
  无论隔离级别如何，事务 (T) 始终能看到自身的更新：  
   
@@ -99,7 +99,7 @@ commit
  到事务的逻辑结束时间，可以保证数据读取得到提交并保持稳定。  
   
  SERIALIZABLE  
- 可重复读加上避免虚拟及事务一致性保证所有可序列化的读取操作由 t。 虚拟避免意味着扫描操作只能返回由 T，写入的其他行执行的所有保证，但没有已由其他事务写入的行。  
+ 对于所有由 T 执行的可序列化读取操作，都保证了可重复读取的所有保证，以及对所有可序列化读取操作的事务一致性其他事务写入的行。  
   
  请考虑以下事务：  
   
@@ -135,7 +135,7 @@ commit
   
  给定事务 T 的基于磁盘的方面在满足以下条件之一的情况下达到特定隔离级别 X：  
   
--   它在 X 中启动。也就是说，会话的默认级别为 X，或者因为您执行`SET TRANSACTION ISOLATION LEVEL`，或者它是[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]默认值。  
+-   它以 X 开始。也就是说，会话默认值为 X，原因是执行`SET TRANSACTION ISOLATION LEVEL`了，或者它是[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]默认值。  
   
 -   在该事务执行期间，默认隔离级别通过 `SET TRANSACTION ISOLATION LEVEL` 更改为 X。  
   
@@ -179,13 +179,14 @@ commit
 -   REPEATABLE READ 和 SERIALIZABLE 事务可以在 SNAPSHOT 隔离级别下访问内存优化表。  
   
 ## <a name="read-only-cross-container-transactions"></a>只读交叉容器事务  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中大多数只读事务将在提交时回滚。 由于没有要提交到数据库的更改，系统直接释放该事务所使用的资源。 对于基于磁盘的只读事务，此时会释放由该事务持有的所有锁。 对于只占用一个本机编译过程执行的只读内存优化事务，不会执行验证。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中大多数只读事务将在提交时回滚。 由于没有要提交到数据库的更改，系统直接释放该事务所使用的资源。 对于基于磁盘的只读事务，此时会释放由该事务持有的所有锁。 对于只占用一个本机编译过程执行的只读内存优化事务，不会执行验证。  
   
  该事务结束时，自动提交模式下的交叉容器只读事务直接回滚。 不执行任何验证。  
   
- 如果显式或隐式交叉容器只读事务在 REPEATABLE READ 或 SERIALIZABLE 隔离级别下访问内存优化表，则该事务在提交时执行验证。 有关验证的详细信息请参阅部分冲突检测、 验证和提交依赖关系检查[内存优化表中的事务](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 如果显式或隐式交叉容器只读事务在 REPEATABLE READ 或 SERIALIZABLE 隔离级别下访问内存优化表，则该事务在提交时执行验证。 有关验证的详细信息，请参阅[内存优化表的事务](../relational-databases/in-memory-oltp/memory-optimized-tables.md)中的冲突检测、验证和提交依赖项检查部分。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解内存优化表上的事务](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [具有内存优化表的事务隔离级别的准则](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
  [内存优化表事务重试逻辑准则](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823784"
 ---
 # <a name="properties-window-management-studio"></a>属性窗口 (Management Studio)
@@ -29,7 +29,7 @@ ms.locfileid: "62823784"
   
 ## <a name="options"></a>选项  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |**对象名称**|列出当前选择的对象。 只有处于活动状态的编辑器或设计器中的对象是可见的。|  
 |**按分类顺序**|按类别列出所选对象的所有属性和属性值。 可以将类别折叠起来以减少可见属性的数量。 折叠或展开类别时，在类别名称的左侧将显示一个加号 (+) 或减号 (-)。 类别按字母顺序列出。|  
@@ -37,7 +37,7 @@ ms.locfileid: "62823784"
 |**属性**|显示对象的属性。|  
 |**说明窗格**|说明窗格出现在“属性”窗口的底部，可以显示属性的类型和简短说明。 可以使用快捷菜单上的“说明”  命令打开或关闭属性的说明。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [常规用户界面元素](general-user-interface-elements.md)  
   
   

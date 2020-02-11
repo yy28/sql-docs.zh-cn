@@ -1,5 +1,5 @@
 ---
-title: 设置 SQL Server 的实例为自动启动 （SQL Server 配置管理器） |Microsoft Docs
+title: 将 SQL Server 的实例设置为自动启动（SQL Server 配置管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 300b539e132b9bda9bc6540c0aadcac6ab9f11a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809987"
 ---
 # <a name="set-an-instance-of-sql-server-to-start-automatically-sql-server-configuration-manager"></a>将 SQL Server 实例设置为自动启动（SQL Server 配置管理器）
@@ -28,25 +28,25 @@ ms.locfileid: "62809987"
   
 #### <a name="to-set-an-instance-of-sql-server-to-start-automatically"></a>将 SQL Server 实例设置为自动启动  
   
-1.  在“开始”  菜单上，依次指向“所有程序”  、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”  ，然后单击“SQL Server 配置管理器”  。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
     > [!NOTE]  
     >  因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。  
     >   
     >  -   **Windows 10**：  
-    >          若要打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器，然后在**起始页**，键入 SQLServerManager12.msc (对于[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 对于早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请将 12 替换为较小的数字。 单击 SQLServerManager12.msc 会打开配置管理器。 若要固定到起始页或任务栏配置管理器，右键单击 SQLServerManager12.msc，然后依次**打开文件位置**。 在 Windows 文件资源管理器中，右键单击 SQLServerManager12.msc，，然后单击**固定到开始屏幕**或**锁定到任务栏**。  
+    >          若要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]打开 Configuration Manager，请在 "**开始" 页**上键入 sqlservermanager12.msc （ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]对于）。 对于早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请将 12 替换为较小的数字。 单击 SQLServerManager12.msc 可打开“配置管理器”。 若要将 Configuration Manager 固定到 "起始页" 或 "任务栏"，请右键单击 "Sqlservermanager12.msc"，然后单击 "**打开文件位置**"。 在 Windows 文件资源管理器中，右键单击 "Sqlservermanager12.msc"，然后单击 "**固定到****任务栏**"。  
     > -   **Windows 8**：  
-    >          若要打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器，请在**搜索**超级按钮**应用**，类型**SQLServerManager\<版本 >.msc**如`SQLServerManager12.msc`，然后按**Enter**。  
+    >          若要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]打开 Configuration Manager，请在 "**搜索**" 超级按钮中的 "**应用**" 下，键入`SQLServerManager12.msc` **Sqlservermanager version>.msc\<version>** （如），然后按**enter**。  
   
 2.  在 **“SQL Server 配置管理器”** 中，展开 **“服务”** ，再单击 **SQL Server**。  
   
 3.  在详细信息窗格中，右键单击要自动启动的实例的名称，然后单击“属性”  。  
   
-4.  在“SQL Server \<instancename> 属性”对话框中，将“启动模式”设置为“自动”。 ****    
+4.  在 **“SQL Server”\< ***“实例名” ***>“属性”** 对话框中，将 **“启动模式”** 设置为 **“自动”** 。  
   
 5.  单击 **“确定”** ，然后关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [防止 SQL Server 实例自动启动（SQL Server 配置管理器）](scm-services-prevent-automatic-startup-of-an-instance.md)   
  [连接到其他计算机（SQL Server 配置管理器）](scm-services-connect-to-another-computer.md)   
  [在 SQL Server 工具中将 WMI 配置为显示服务器状态](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  

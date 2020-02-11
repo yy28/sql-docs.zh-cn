@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211672"
 ---
 # <a name="modify-data-through-a-view"></a>通过视图修改数据
@@ -32,7 +32,7 @@ ms.locfileid: "68211672"
   
      [安全性](#Security)  
   
--   **若要通过视图修改表数据使用：**  
+-   **通过视图修改表数据，使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,22 +44,22 @@ ms.locfileid: "68211672"
   
 -   请参阅 [CREATE VIEW (Transact-SQL)](/sql/t-sql/statements/create-view-transact-sql) 中的“可更新的视图”一节。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对目标表的 UPDATE、INSERT 或 DELETE 权限（取决于执行的操作）。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-table-data-through-a-view"></a>通过视图修改表数据  
   
-1.  在 **“对象资源管理器”** 中，展开包含视图的数据库，然后展开 **“视图”** 。  
+1.  在 **“对象资源管理器”** 中，展开包含视图的数据库，然后展开 **“视图”**。  
   
-2.  右键单击该视图，然后选择“编辑前 200 行”  。  
+2.  右键单击该视图，然后选择“编辑前 200 行”****。  
   
 3.  可能需要在 **SQL** 窗格中修改 SELECT 语句以返回要修改的行。  
   
-4.  在 **“结果”** 窗格中，找到要更改或删除的行。 若要删除行，请右键单击该行，然后选择“删除”  。 若要更改一个或多个列中的数据，请修改列中的数据。  
+4.  在 **“结果”** 窗格中，找到要更改或删除的行。 若要删除行，请右键单击该行，然后选择“删除”****。 若要更改一个或多个列中的数据，请修改列中的数据。  
   
     > [!IMPORTANT]  
     >  如果视图引用多个基表，则不能删除行。 只能更新属于单个基表的列。  
