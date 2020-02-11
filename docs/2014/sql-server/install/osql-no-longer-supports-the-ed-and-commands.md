@@ -15,22 +15,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ce7bfa0bbeec5c5ca83b7139f0ff28e3994021d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093719"
 ---
 # <a name="osql-no-longer-supports-the-ed-and--commands"></a>osql 不再支持 ED 和 !! 命令
-  **Osql**实用工具不支持**ED**和 **!!** 命令。  
+  **Osql**实用工具不支持**ED**和 **！！** 命令.  
   
 ## <a name="corrective-action"></a>纠正措施  
- 删除对引用**ED**和 **!!** 命令的所有引用。  
+ 删除对**ED**和 **！！** 的引用 命令的所有引用。  
   
- 如果你想要使用**ED**和 **!!** 命令，使用**sqlcmd**而不是实用工具**osql**。  
+ 如果要使用**ED**和 **！！** 命令，请使用**sqlcmd**实用工具而不是**osql**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 升级顾问 &#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

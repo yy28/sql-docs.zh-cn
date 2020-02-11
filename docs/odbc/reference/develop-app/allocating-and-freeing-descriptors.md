@@ -14,14 +14,14 @@ ms.assetid: c615ab7a-f631-4783-a37f-d429873b6047
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5eaf5b7d4dcf335636d8f8b3d5e3ac9b4b5f481f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909929"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>分配和释放描述符
-描述符的隐式或显式分配，如以下各节中所述。  
+描述符将隐式或显式分配，如以下各节所述。  
   
 -   [隐式分配的描述符](../../../odbc/reference/develop-app/implicitly-allocated-descriptors.md)  
   

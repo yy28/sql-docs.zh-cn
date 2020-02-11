@@ -1,5 +1,5 @@
 ---
-title: 与内存优化哈希索引的常见性能问题故障排除 |Microsoft Docs
+title: 排查内存优化哈希索引的常见性能问题 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842532"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>对内存优化哈希索引的常见性能问题进行故障排除
   本主题主要针对解决与哈希索引有关的常见问题。  
   
 ## <a name="search-requires-a-subset-of-hash-index-key-columns"></a>搜索要求哈希索引键列的子集  
- **问题：** 哈希索引需要的所有索引键列的值以计算哈希值，并在哈希表中查找相应的行。 因此，如果某个查询在 WHERE 子句中仅包含针对索引键的某个子集的相等谓词，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将无法使用索引查找在 WHERE 子句中定位与这些谓词相对应的行。  
+ **问题：** 哈希索引需要所有索引键列的值才能计算哈希值，并在哈希表中找到相应的行。 因此，如果某个查询在 WHERE 子句中仅包含针对索引键的某个子集的相等谓词，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将无法使用索引查找在 WHERE 子句中定位与这些谓词相对应的行。  
   
  相反，有序索引（例如基于磁盘的非聚集索引和内存优化的非聚集索引）支持在索引键列的子集上的索引查找，只要它们是索引中的首列。  
   
- **症状：** 这会导致性能下降，作为[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]需要执行全表扫描而不是索引查找，这通常是更快的操作。  
+ **症状：** 这会导致性能下降，因为[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]需要执行全表扫描，而不是索引查找，这通常是更快的操作。  
   
- **如何进行故障排除：** 除了性能下降，检查查询计划将显示扫描，而不是索引查找。 如果查询相对简单，则对查询文本和索引定义的检查还将显示搜索是否要求索引键列的子集。  
+ **如何进行故障排除：** 除了性能下降之外，查询计划的检查将显示扫描而不是索引查找。 如果查询相对简单，则对查询文本和索引定义的检查还将显示搜索是否要求索引键列的子集。  
   
  请参考下面的表和查询：  
   
@@ -70,9 +70,9 @@ WITH (MEMORY_OPTIMIZED = ON)
      ) WITH (MEMORY_OPTIMIZED=ON)  
     ```  
   
- 请注意，如果对于某一给定的索引键值存在许多重复行，则内存优化的哈希索引不会达到最佳性能：在该示例中，如果针对 o_id 列的唯一值的数目远小于该表中的行数，则在 (o_id) 上添加索引并非最佳选择；将索引 index PK_od 的类型从哈希更改为非聚集应该是更好的解决方法。 有关详细信息，请参阅 [哈希索引确定正确的存储桶计数](../relational-databases/indexes/indexes.md)。  
+ 请注意，如果对于某一给定的索引键值存在许多重复行，则内存优化的哈希索引不会达到最佳性能：在该示例中，如果针对 o_id 列的唯一值的数目远小于该表中的行数，则在 (o_id) 上添加索引并非最佳选择；将索引 index PK_od 的类型从哈希更改为非聚集应该是更好的解决方法。 有关详细信息，请参阅 [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)。  
   
-## <a name="see-also"></a>请参阅  
- [内存优化表上的索引](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+## <a name="see-also"></a>另请参阅  
+ [内存优化的表的索引](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

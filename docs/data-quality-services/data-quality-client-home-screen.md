@@ -12,10 +12,10 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251731"
 ---
 # <a name="data-quality-client-home-screen"></a>数据质量客户端主屏幕
@@ -58,12 +58,12 @@ ms.locfileid: "75251731"
  **活动监视**  
  显示与所连接的 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]相关的所有活动（当前和历史活动）的状态的视图。 监视的活动类型包括知识管理、数据质量项目和基于 SSIS 的数据更正。  
   
- **Configuration**  
+ **配置**  
  显示引用数据服务帐户的配置属性（包括通过 Azure Marketplace 和直接到引用数据服务）、常规设置（交互式清理、匹配和分析）和日志严重性设置。  
   
 ## <a name="see-also"></a>另请参阅  
  [DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [&#40;DQS&#41;的数据质量项目](../data-quality-services/data-quality-projects-dqs.md)   
- [DQS 管理](../data-quality-services/dqs-administration.md)  
+ [dqs 管理](../data-quality-services/dqs-administration.md)  
   
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4b328e1e39646f9b47e66bd313940de768ea73c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768643"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>在数据流组件中记录和定义日志条目
@@ -59,15 +59,15 @@ End Sub
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency> 枚举向运行时提示记录事件将采用的频率：  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>设置用户帐户 ：只是有时候记录事件，不是每次执行都记录。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>：只是有时候记录事件，不是每次执行都记录。  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>设置用户帐户 ：每次执行的过程中，记录事件达一定的次数。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>：每次执行的过程中，记录事件一定的次数。  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_PROPORTIONAL>设置用户帐户 ：记录事件的次数与完成的工作量成比例。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_PROPORTIONAL>：记录事件的次数与完成的工作量成比例。  
   
  上面的示例使用 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>，因为组件希望每执行一次记录一条。  
   
- 注册自定义日志项目并将自定义组件的实例添加到数据流设计器图面后，设计器中的“日志记录”对话框在可用日志项目列表中显示名为“我的自定义组件日志项目”的新日志项目。  
+ 注册自定义日志项目并将自定义组件的实例添加到数据流设计器图面后，设计器中的“日志记录”对话框在可用日志项目列表中显示名为“我的自定义组件日志项目”的新日志项目  。  
   
 ### <a name="logging-to-a-custom-log-entry"></a>记录到自定义日志条目  
  注册完自定义日志条目后，组件即可记录自定义消息。 下面的示例在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 方法的执行过程中写入自定义日志条目，其中包含组件所使用的 SQL 语句文本。  
@@ -95,11 +95,11 @@ Public  Overrides Sub PreExecute()
 End Sub  
 ```  
   
- 现在，当用户执行包时，在“日志记录”对话框中选择“我的自定义组件日志项目”后，日志将包含明确标记为“User::My Custom Component Log Entry”的条目。 此新日志条目包含 SQL 语句文本、时间戳和开发人员记录的所有其他数据。  
+ 现在，当用户执行包时，在“日志记录”对话框中选择“我的自定义组件日志项目”后，日志将包含明确标记为“User::My Custom Component Log Entry”的条目  。 此新日志条目包含 SQL 语句文本、时间戳和开发人员记录的所有其他数据。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 日志记录](../../performance/integration-services-ssis-logging.md)  
   
   

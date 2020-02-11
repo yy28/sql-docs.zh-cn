@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 1dd66834788896e6952a0352eb2a19fd1a828513
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245956"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
@@ -33,7 +33,7 @@ ms.locfileid: "75245956"
   
 |列|数据类型|说明|  
 |-------------|---------------|-----------------|  
-|end_time|**型**|UTC 时间用于指示当前报告间隔的结束时间。|  
+|end_time|**datetime**|UTC 时间用于指示当前报告间隔的结束时间。|  
 |avg_cpu_percent|**decimal （5，2）**|平均计算使用率（以服务层限制的百分比表示）。|  
 |avg_data_io_percent|**decimal （5，2）**|平均数据 i/o 利用率（以服务层限制的百分比表示）。 对于超大规模数据库，请参阅[资源利用率统计信息中的数据 IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)。|  
 |avg_log_write_percent|**decimal （5，2）**|平均事务日志写入量（以 MBps 为单位），以服务层限制的百分比表示。|  
@@ -41,12 +41,12 @@ ms.locfileid: "75245956"
 |xtp_storage_percent|**decimal （5，2）**|内存中 OLTP 的存储利用率，以服务层的限制（在报表间隔结束时）的百分比表示。 这包括用于存储以下内存中 OLTP 对象的内存：内存优化表、索引和表变量。 它还包括用于处理 ALTER TABLE 操作的内存。<br /><br /> 如果未在数据库中使用内存中 OLTP，则返回0。|  
 |max_worker_percent|**decimal （5，2）**|以数据库服务层限制的百分比表示的最大并发工作线程数（请求数）。|  
 |max_session_percent|**decimal （5，2）**|以数据库服务层限制的百分比表示的最大并发会话数。|  
-|dtu_limit|**整形**|此数据库在此时间间隔内的当前最大数据库 DTU 设置。 对于使用基于 vCore 的模型的数据库，此列为 NULL。|
+|dtu_limit|**int**|此数据库在此时间间隔内的当前最大数据库 DTU 设置。 对于使用基于 vCore 的模型的数据库，此列为 NULL。|
 |cpu_limit|**decimal （5，2）**|此数据库在此时间间隔内的 Vcore 的数目。 对于使用基于 DTU 的模型的数据库，此列为 NULL。|
 |avg_instance_cpu_percent|**decimal （5，2）**|SQL 数据库进程的平均 CPU 使用率（以百分比表示）。|
 |avg_instance_memory_percent|**decimal （5，2）**|作为 SQL DB 进程百分比的平均数据库内存使用率。|
 |avg_login_rate_percent|**decimal （5，2）**|标识为仅供参考。 不支持。 不保证以后的兼容性。|
-|replica_role|**整形**|表示当前副本的角色，其中0为主，1表示辅助副本，2表示转发器（异地辅助副本）。 与 ReadOnly 意向连接到所有可读辅助副本时，你会看到 "1"。 如果在未指定 ReadOnly 意向的情况下连接到异地辅助数据库，则应看到 "2" （连接到转发器）。|
+|replica_role|**int**|表示当前副本的角色，其中0为主，1表示辅助副本，2表示转发器（异地辅助副本）。 与 ReadOnly 意向连接到所有可读辅助副本时，你会看到 "1"。 如果在未指定 ReadOnly 意向的情况下连接到异地辅助数据库，则应看到 "2" （连接到转发器）。|
 |||
   
 > [!TIP]  

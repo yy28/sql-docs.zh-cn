@@ -1,5 +1,5 @@
 ---
-title: 计划数据刷新 (PowerPivot for SharePoint) |Microsoft Docs
+title: 计划数据刷新（PowerPivot for SharePoint） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070011"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>计划数据刷新 (PowerPivot for SharePoint)
   您可以计划数据刷新，以便自动获取对您发布到 SharePoint 站点的 Excel 工作簿内的 PowerPivot 数据的更新。  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../includes/applies-md.md)]** SharePoint 2010  
   
  **本主题内容：**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66070011"
 > [!NOTE]  
 >  PowerPivot 数据刷新由 SharePoint 场中的 Analysis Services 服务器实例执行。 它与 Excel Services 中提供的数据刷新功能无关。 PowePivot 计划数据刷新功能不会刷新非 PowerPivot 数据。  
   
-##  <a name="prereq"></a> 先决条件  
+##  <a name="prereq"></a>先决条件  
  若要创建数据刷新计划，您必须对工作簿具有“参与讨论”或更高级别的权限。  
   
  在数据刷新过程中访问的外部数据必须可用，并且您在计划中指定的凭据必须具有访问这些数据源的权限。 计划的数据刷新要求可通过网络连接访问的数据源位置（例如，从网络文件共享而非工作站上的本地文件夹）。  
@@ -51,9 +51,9 @@ ms.locfileid: "66070011"
  在刷新操作完成时，必须签入工作簿。 在数据刷新结束（而非刷新开始）时，如果保存文件，针对工作簿的锁定将施加于该文件上。  
   
 > [!NOTE]  
->  正在刷新数据时，服务器不会锁定工作簿。 但是，出于签入更新的文件的目的，在数据刷新结束时服务器将会锁定该文件。 如果在此时，该文件签出到其他用户，则刷新的数据将被抛弃。同样，如果签入该文件，但该文件将明显不同于在数据刷新开始时服务器检索的副本，则刷新的数据将被放弃。  
+>  正在刷新数据时，服务器不会锁定工作簿。 但是，出于签入更新的文件的目的，在数据刷新结束时服务器将会锁定该文件。 此时，如果该文件已签出给其他用户，则会引发刷新后的数据。同样，如果签入该文件，但该文件明显不同于在数据刷新开始时服务器检索的副本，则刷新的数据将被丢弃。  
   
-##  <a name="intro"></a> 数据刷新概述  
+##  <a name="intro"></a>数据刷新概述  
  Excel 工作簿中的 PowerPivot 可源于多种不同的外部数据源，包括您从远程服务器或网络文件共享中访问的外部数据库或数据文件。 对于包含从连接的数据源或外部数据源导入的数据的 PowerPivot 工作簿，您可以配置数据刷新以便计划自动导入这些原始数据源中更新的数据。  
   
  外部数据源是通过您在使用 PowerPivot 客户端应用程序将原始数据导入到工作簿时指定的嵌入连接字符串、URL 或 UNC 路径来访问的。 在后续的数据刷新操作中将重复使用在 PowerPivot 工作簿中存储的原始连接信息。 尽管您可以覆盖用于连接数据源的凭据，但您无法覆盖用于进行数据刷新的连接字符串；而只使用现有连接信息。  
@@ -72,12 +72,12 @@ ms.locfileid: "66070011"
   
  通过为单独数据源创建细粒度的计划，您可以使刷新计划适应外部数据源中的变动。 例如，如果外部数据源包含一整天生成的事务数据，则可以为该数据源创建单独的数据刷新计划，以便在每天夜里获取其更新的信息。  
   
-##  <a name="drenablesched"></a> 启用并计划数据刷新  
+##  <a name="drenablesched"></a>启用并计划数据刷新  
  使用下面的说明可为发布到 SharePoint 库的 Excel 工作簿中的 PowerPivot 数据计划数据刷新。  
   
 1.  在包含该工作簿的库中，选择该工作簿，然后单击向下箭头以显示命令列表。  
   
-2.  单击 **“管理 PowerPivot 数据刷新”** 。 如果已定义数据刷新计划，则您将看到“查看数据刷新历史记录”页。 您可以单击 **“配置数据刷新”** 以打开计划定义页。  
+2.  单击 **“管理 PowerPivot 数据刷新”**。 如果已定义数据刷新计划，则您将看到“查看数据刷新历史记录”页。 您可以单击 **“配置数据刷新”** 以打开计划定义页。  
   
 3.  在计划定义页中，选中 **“启用”** 复选框。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "66070011"
   
 5.  在“最早开始时间”中，选择下列选项之一：  
   
-    1.  **“在工作时间后”** 指定非工作时间的处理期间，在这个期间中，数据库服务器更可能收集到整个工作日所产生的最新数据。  
+    1.  **在工作时间后**，如果数据库服务器更有可能在整个工作日内生成当前数据，则指定一个非工作时间处理周期。  
   
-    2.  **“特定的最早开始时间”** 是您希望将数据刷新请求添加到处理队列的当日最早时分。 您可以按 15 分钟的间隔指定分钟。 这些设置会应用于当前日期和以后的日期 例如，如果您指定值为早上 6:30， 而当前时间为下午 4:30，则刷新请求将会添加到当天的队列中，因为下午 4:30 晚于早上 6:30。  
+    2.  **特定的最早开始时间**是指将数据刷新请求添加到处理队列的最早时间的小时和分钟。 您可以按 15 分钟的间隔指定分钟。 这些设置会应用于当前日期和以后的日期 例如，如果您指定值为早上 6:30， 而当前时间为下午 4:30，则刷新请求将会添加到当天的队列中，因为下午 4:30 晚于早上 6:30。  
   
      最早开始时间定义何时将请求添加到处理队列。 在服务器有足够的资源开始处理数据时将发生实际处理。 处理完成后，实际的处理时间将记录在数据刷新历史记录中。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66070011"
   
 7.  在“电子邮件通知”中，输入应该在发生处理错误时接到通知的人员的电子邮件地址。  
   
-8.  在“凭据”中，指定用于运行数据刷新作业的帐户。 该帐户对于该工作簿必须具有“参与讨论”权限，以便可以打开该工作簿来刷新其数据。 该帐户必须是 Windows 域用户帐户。 在许多情况下，该帐户还必须对在数据刷新过程中使用的外部数据源具有读取权限。 具体来说，如果您最初使用“使用 Windows 身份验证”选项导入了数据，则将生成连接字符串以便使用当前用户的 Windows 凭据。 如果当前用户是数据刷新帐户，则该帐户必须对外部数据源具有读取权限，这样数据刷新才能成功完成。 选择下列选项之一：  
+8.  在“凭据”中，指定用于运行数据刷新作业的帐户。 该帐户对于该工作簿必须具有“参与讨论”权限，以便可以打开该工作簿来刷新其数据。 该帐户必须是 Windows 域用户帐户。 在许多情况下，该帐户还必须对在数据刷新过程中使用的外部数据源具有读取权限。 具体来说，如果您最初使用“使用 Windows 身份验证”选项导入了数据，则将生成连接字符串以便使用当前用户的 Windows 凭据。 如果当前用户是数据刷新帐户，则该帐户必须对外部数据源具有读取权限，这样数据刷新才能成功完成。 选择以下选项之一：  
   
     1.  选择 **“使用管理员配置的数据刷新帐户”** 以使用 PowerPivot 无人参与的数据刷新帐户处理数据刷新操作。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66070011"
   
     3.  如果您知道包含您希望使用的以前存储的凭据的目标应用程序的 ID，则选择 **“使用在 Secure Store Service 中保存的凭据进行连接”** 。  
   
-     有关这些选项的详细信息，请参阅[为 PowerPivot 数据刷新配置存储凭据&#40;PowerPivot for SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)并[配置 PowerPivot 无人参与的数据刷新帐户&#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
+     有关这些选项的详细信息，请参阅为[Powerpivot 数据刷新配置存储的凭据 &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)并[配置 Powerpivot 无人参与的数据刷新帐户 &#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
   
 9. 如果您希望数据刷新重新查询所有原始数据源，则在“数据源”中选中 **“所有数据源”** 复选框。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "66070011"
   
     -   该数据源必须在发生数据刷新时可用，并且还必须在规定的位置上可用。 如果原始数据源处于创作此工作簿的人员的本地磁盘驱动器上，则必须或者从数据刷新操作中排除该数据源，或者确定一种方法来将该数据源发布到可通过网络连接访问的位置。 如果您将某一数据源移到某个网络位置，请确保在 [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 中打开工作簿并更新数据源连接信息。 这是重新建立 PowerPivot 工作簿中存储的连接信息所必需的。  
   
-    -   必须使用嵌入在 PowerPivot 工作簿中或在计划中指定的凭据信息来访问数据源。 当您使用 PowerPivot for Excel 导入数据时，嵌入的凭据信息存储于 PowerPivot 工作簿中。 嵌入的凭据信息通常是 SSPI=IntegratedSecurity 或 SSPI=TrustedConnection，这意味着使用当前用户的凭据来连接到数据源。 如果您想要覆盖数据刷新计划中的凭据信息，则可以指定预定义的存储凭据。 有关详细信息，请参阅[为 PowerPivot 数据刷新配置存储凭据&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
+    -   必须使用嵌入在 PowerPivot 工作簿中或在计划中指定的凭据信息来访问数据源。 当您使用 PowerPivot for Excel 导入数据时，嵌入的凭据信息存储于 PowerPivot 工作簿中。 嵌入的凭据信息通常是 SSPI=IntegratedSecurity 或 SSPI=TrustedConnection，这意味着使用当前用户的凭据来连接到数据源。 如果您想要覆盖数据刷新计划中的凭据信息，则可以指定预定义的存储凭据。 有关详细信息，请参阅为[PowerPivot 数据刷新配置存储的凭据 &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
   
     -   数据刷新必须对您指定的所有数据源均成功。 否则，刷新的数据将被放弃，只会留下上次保存的工作簿版本。 因此，请排除您不确定的任何数据源。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66070011"
   
 11. 单击 **“确定”** 保存您的计划。  
   
-##  <a name="drverify"></a> 验证数据刷新  
+##  <a name="drverify"></a>验证数据刷新  
  验证数据刷新的最佳方式是立即执行数据刷新，然后查看历史记录页以便确定刷新是否成功完成。 对您的计划选中 **“也尽快刷新”** 复选框将提供数据刷新可正常运行的验证。  
   
  您可以在工作簿的“数据刷新历史记录”页中查看数据刷新操作的当前和过去的记录。 仅在已为工作簿计划了数据刷新后此页才出现。 如果没有数据刷新计划，将改为出现计划定义页。  
@@ -143,7 +143,7 @@ ms.locfileid: "66070011"
   
 2.  选择文档，然后单击显示在右侧的向下箭头。  
   
-3.  选择 **“管理 PowerPivot 数据刷新”** 。  
+3.  选择 **“管理 PowerPivot 数据刷新”**。  
   
  此时将出现历史记录页，其中显示当前 Excel 工作簿中 PowerPivot 数据的所有刷新活动的完整记录，包括最近数据刷新操作的状态。  
   
@@ -158,9 +158,9 @@ ms.locfileid: "66070011"
 > [!NOTE]  
 >  SharePoint 管理员可通过在管理中心查看 PowerPivot 管理面板中的合并数据刷新报告来帮助您排除数据刷新问题。 有关详细信息，请参阅 [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
   
-## <a name="see-also"></a>请参阅  
- [使用 SharePoint 2010 的 PowerPivot 数据刷新](powerpivot-data-refresh-with-sharepoint-2010.md)   
- [查看数据刷新历史记录&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
- [为 PowerPivot 数据刷新配置存储的凭据&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
+## <a name="see-also"></a>另请参阅  
+ [通过 SharePoint 2010 进行 PowerPivot 数据刷新](powerpivot-data-refresh-with-sharepoint-2010.md)   
+ [查看数据刷新历史记录 &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
+ [为 PowerPivot 数据刷新配置存储的凭据 &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
   
   

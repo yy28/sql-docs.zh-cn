@@ -1,5 +1,5 @@
 ---
-title: 使用 SQLBulkOperations 更新行的书签 |Microsoft Docs
+title: 使用 SQLBulkOperations 按书签更新行 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e9b10037883ef9cfa4051195270e6477c5cc04ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091624"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>使用 SQLBulkOperations 按书签更新行
-通过书签，更新行时**SQLBulkOperations**使数据源进行更新的表的一个或多个行。 通过绑定的书签列中的书签标识行。 在应用程序缓冲区中的每个绑定列 （除非中列的长度/指示器缓冲区的值是 SQL_COLUMN_IGNORE） 使用数据更新的行。 未绑定的列将不会更新。  
+按书签更新行时， **SQLBulkOperations**使数据源更新表中的一行或多行。 行由绑定书签列中的书签标识。 将使用每个绑定列的应用程序缓冲区中的数据更新该行（在列的长度/指示器缓冲区中的值 SQL_COLUMN_IGNORE 时除外）。 未绑定列将不会更新。  
   
- 若要更新的行具有书签**SQLBulkOperations**，应用程序：  
+ 若要使用**SQLBulkOperations**按书签更新行，应用程序：  
   
-1.  检索并缓存的更新的所有行的书签。 如果存在多个书签，并且使用按列绑定，书签将存储在数组中;如果存在多个书签，并且使用按行绑定，书签存储数组中的行结构。  
+1.  检索并缓存要更新的所有行的书签。 如果使用多个书签和逐列绑定，则书签存储在数组中;如果使用多个书签和按行绑定，书签将存储在行结构的数组中。  
   
-2.  将 SQL_ATTR_ROW_ARRAY_SIZE 语句属性设置为书签数并将绑定包含书签值或书签，到第 0 列的数组的缓冲区。  
+2.  将 SQL_ATTR_ROW_ARRAY_SIZE 语句特性设置为书签的数目，并将包含书签值的缓冲区和书签的数组绑定到列0。  
   
-3.  将新的数据值放在行集缓冲区中。 有关如何将长数据与发送的信息**SQLBulkOperations**，请参阅[长整型数据和 SQLSetPos 及 SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)。  
+3.  将新数据值置于行集缓冲区中。 有关如何通过**SQLBulkOperations**发送长数据的信息，请参阅[Long data And SQLSetPos and SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)。  
   
-4.  根据需要在每个列的长度/指示器缓冲区中设置的值。 这是 sql_nts; 的数据的列绑定到字符串缓冲区绑定到二进制缓冲区和 SQL_NULL_DATA 的任何列设置为 NULL 的列的数据的字节长度的字节长度。  
+4.  根据需要设置每列的长度/指示器缓冲区中的值。 这是绑定到字符串缓冲区的列的数据或 SQL_NTS 的字节长度、绑定到二进制缓冲区的列的数据字节长度，以及要设置为 NULL 的所有列的 SQL_NULL_DATA。  
   
-5.  不会更新为 SQL_COLUMN_IGNORE 这些列的长度/指示器缓冲区中设置的值。 不过应用程序可以跳过此步骤，并重新发送的现有数据，这会导致效率低下，并将值发送到已被截断，在读取时的数据源的风险。  
+5.  设置那些不会更新为 SQL_COLUMN_IGNORE 的列的长度/指示器缓冲区中的值。 尽管应用程序可以跳过此步骤并重新发送现有数据，但这种情况很低效，将值发送到数据源（在读取时被截断）。  
   
-6.  调用**SQLBulkOperations**与*操作*参数设置为 SQL_UPDATE_BY_BOOKMARK。  
+6.  调用**SQLBulkOperations** ，并将*操作*参数设置为 SQL_UPDATE_BY_BOOKMARK。  
   
- 对于发送到数据源作为更新提供，每个行，应用程序缓冲区应具有有效的行数据。 如果应用程序缓冲区被提取，如果保持了行状态数组，并且如果某行的状态值为 SQL_ROW_DELETED、 SQL_ROW_ERROR 或 SQL_ROW_NOROW，无效的数据可能会无意中发送到数据源。
+ 对于作为更新发送到数据源的每一行，应用程序缓冲区应具有有效的行数据。 如果已通过提取填充应用程序缓冲区，并且已维护行状态数组，并且如果行的状态值为 SQL_ROW_DELETED、SQL_ROW_ERROR 或 SQL_ROW_NOROW，则可能会无意中将无效数据发送到数据源。

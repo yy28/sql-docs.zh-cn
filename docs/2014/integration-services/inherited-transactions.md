@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058054"
 ---
 # <a name="inherited-transactions"></a>继承的事务
@@ -37,13 +37,13 @@ ms.locfileid: "66058054"
   
  包和任务具有下列事务属性：  
   
--   对于包 A 和包 C，**TransactionOption** 设置为 **Required** 。  
+-   对于包 A 和 C， **TransactionOption**设置为**Required**  
   
--   对于包 B 和包 D 以及任务执行包 B、执行包 D 和执行包 F，**TransactionOption** 设置为 **Supported** 。  
+-   对于包 B 和 D 以及任务执行包 B、执行包 D 和执行包 F， **TransactionOption**设置为**支持**。  
   
--   对于包 E 以及任务执行包 C 和执行包 E，**TransactionOption** 设置为 **NotSupported** 。  
+-   对于包 E， **TransactionOption**设置为**NotSupported** ，在任务执行包 C 和执行包 e 上设置为。  
   
- ![继承的事务流](media/mw-dts-executepack.gif "Flow of inherited transactions")  
+ ![继承的事务流](media/mw-dts-executepack.gif "继承的事务流")  
   
  只有包 B、包 D 和包 F 可以从它们的父包继承事务。  
   

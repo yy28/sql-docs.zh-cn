@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID | Microsoft Docs
+title: LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bfad881fb77bd17bbf91bfbcb34ec6ee3cea46aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126061"
 ---
-# <a name="localdberrorunknownlanguageid"></a>LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
+# <a name="localdb_error_unknown_language_id"></a>LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
     
 ## <a name="details"></a>详细信息  
   
@@ -29,7 +29,7 @@ ms.locfileid: "63126061"
 |组件|本地数据库运行时 API|  
 |消息正文|获取本地化的错误消息时出错。 “语言 ID”参数指定的语言未知。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  本地数据库运行时错误消息的请求的语言未知或不受支持。  
   
 ## <a name="user-action"></a>用户操作  

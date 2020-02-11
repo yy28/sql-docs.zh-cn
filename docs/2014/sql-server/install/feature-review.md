@@ -1,5 +1,5 @@
 ---
-title: 功能查看 |Microsoft Docs
+title: 功能评审 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095328"
 ---
 # <a name="feature-review"></a>查看功能
@@ -26,10 +26,15 @@ ms.locfileid: "66095328"
   
 |组件组|组件和功能|  
 |---------------------|-----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 是用于存储、处理和保护数据的核心服务。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中包括以下组件：<br /><br /> 复制：（可选）复制是一组技术，用于复制和分发数据和数据库对象从一个数据库与另一个，然后数据库以保持一致性之间进行同步。<br /><br /> 全文搜索：（可选）全文搜索提供了对基于纯字符的数据中的全文非索引查询的功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] （可选）：[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是一种数据清理解决方案，使您能够发现数据源中的不一致和不正确数据并提供自动且交互式方法来清理数据。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括用于创建、管理和部署表格报表、矩阵报表、图形报表以及自由格式报表的服务器和客户端组件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还是一个可用于开发报表应用程序的可扩展平台。|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)]服务器|
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是用于存储、处理和保护数据的核心服务。 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中包括以下组件：<br /><br /> 复制：（可选）复制是一组技术，用于将数据和数据库对象从一个数据库复制和分发到另一个数据库，然后在数据库之间进行同步以维护一致性。<br /><br /> 全文搜索：（可选）全文搜索提供了针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于纯字符的数据发出全文查询的功能。<br /><br /> 
+  [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]（可选）：[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是一种数据清理解决方案，使您能够发现您的数据源中不一致和不正确的数据，并提供自动且交互式方法来清理数据。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括用于创建、管理和部署表格报表、矩阵报表、图形报表以及自由格式报表的服务器和客户端组件。 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还是一个可用于开发报表应用程序的可扩展平台。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 SysPrep 安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
   
   

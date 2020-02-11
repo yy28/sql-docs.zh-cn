@@ -1,5 +1,5 @@
 ---
-title: 更新 SQL Server 代理作业步骤中的标记语法 |Microsoft Docs
+title: SQL Server 代理作业步骤中的更新令牌语法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,24 +14,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b69d3e84938f93828a908141a4a05365bd0f07a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091669"
 ---
 # <a name="update-token-syntax-in-sql-server-agent-job-steps"></a>更新 SQL Server 代理作业步骤中的标记语法
   已更改在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤中使用标记的语法。  
   
 ## <a name="component"></a>组件  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理商  
   
-## <a name="description"></a>Description  
- 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理使用圆括号，如 $(DATE)，而不是方括号，如 [DATE]。  
+## <a name="description"></a>说明  
+ 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，代理使用括号（如 $ （date））而不是括号（如 [date]）。  
   
  有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“在作业步骤中使用标记”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 代理升级问题](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

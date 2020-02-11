@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f0d753c7e56f4ae90a2b156ee8d521518d0029a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010913"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>使用 CommandStream 属性执行模板文件
-  此示例说明了如何通过使用 CommandStream 属性 SqlXmlCommand 对象的指定 SQL 或 XPath 查询组成的模板文件。 在此应用程序，FileStreamobject 打开的命令文件，并指定文件流作为执行 CommandStream。  
+  此示例演示如何使用 SqlXmlCommand 对象的 CommandStream 属性来指定由 SQL 或 XPath 查询组成的模板文件。 在此应用程序中，将为命令文件打开 FileStreamobject，并将文件流指定为执行的 CommandStream。  
   
- 在以下示例中，CommandType 属性指定为 SqlXmlCommandType.Template （而不是作为 TemplateFile)。  
+ 在下面的示例中，CommandType 属性指定为 SqlXmlCommandType （而不是 TemplateFile）。  
   
  下面是示例 XML 模板：  
   
@@ -82,7 +82,7 @@ class Test
   
 1.  将该示例中提供的 XML 模板 (TemplateFile.xml) 保存在某个文件夹中。  
   
-2.  在此示例中在其中存储架构的同一文件夹中保存的 C# 代码 (DocSample.cs) 提供。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
+2.  将此示例中提供的 c # 代码（DocSample.cs）保存到存储架构的相同文件夹中。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
   
 3.  编译代码。 若要在命令提示符下编译此代码，请使用：  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774965"
 ---
 # <a name="upgrade-database-engine"></a>升级数据库引擎
@@ -43,10 +43,11 @@ ms.locfileid: "62774965"
 >  在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某一版本升级到另一版本之前，请验证要升级到的版本是否支持当前使用的功能。  
   
 > [!NOTE]  
->  当你升级到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]从以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition 中，Enterprise Edition 之间进行选择：基于内核授予许可”和 Enterprise Edition 之间进行选择。 这些 Enterprise 版本仅在许可模式方面存在不同。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
+>  在从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise 版的之前版本升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，在“Enterprise Edition：基于内核授予许可”和 Enterprise Edition 之间进行选择。 这些 Enterprise 版本仅在许可模式方面存在不同。 有关详细信息，请参阅[按版本 SQL Server 计算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
 ## <a name="pre-upgrade-checklist"></a>升级准备一览表  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行升级。 也可以迁移早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的数据库。 可以从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移至同一台计算机上的另一个实例，也可以从另一台计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移。 迁移选项包括使用复制数据库向导、备份和还原功能、使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 导入和导出向导，以及批量导出/批量导入方法。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行升级。 也可以迁移早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的数据库。 可以从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移至同一台计算机上的另一个实例，也可以从另一台计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移。 迁移选项包括使用复制数据库向导、备份和还原功能、使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 导入和导出向导，以及批量导出/批量导入方法。  
   
  升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)]之前，请先查看以下主题：  
   
@@ -68,7 +69,7 @@ ms.locfileid: "62774965"
   
  请在升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前检查下列问题并做出更改：  
   
--   当升级在 MSX/TSX 关系中登记了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，应在升级主服务器之前升级目标服务器。 如果您在升级目标服务器之前升级主服务器，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的主实例。  
+-   当升级在 MSX/TSX 关系中登记了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，应在升级主服务器之前升级目标服务器。 如果您在升级目标服务器之前升级主服务器，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的主实例。  
   
 -   从 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级到 64 位版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时，必须先升级 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，再升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -97,12 +98,13 @@ ms.locfileid: "62774965"
 >  运行 SQL Server 2014 安装程序时，作为运行预升级检查的一部分，将停止并重启 SQL Server 实例。  
   
 > [!CAUTION]  
->  在升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后，早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将被覆盖，在计算机中不再存在。 因此在升级前，请备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库以及与早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例相关的其他对象。  
+>  在升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后，早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将被覆盖，在计算机中不再存在。 因此在升级前，请备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库以及与早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例相关的其他对象。  
   
  可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安装向导升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>升级后的数据库兼容级别  
- 兼容性级别`tempdb`， `model`，`msdb`并**资源**升级后的数据库将设置为 120。 `master` 系统数据库保留它在升级之前的兼容级别。  
+ 升级后`tempdb`，、 `model` `msdb`和**资源**数据库的兼容级别将设置为120。 
+  `master` 系统数据库保留它在升级之前的兼容级别。  
   
  如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果升级前兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持的最低兼容级别。  
   
@@ -115,7 +117,7 @@ ms.locfileid: "62774965"
 > [!IMPORTANT]  
 >  数据库在源服务器和目的服务器上的名称相同时，不能进行移动或复制。 在这种情况下，它被标记为“已存在”。  
   
- 有关更多信息，请参见 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
+ 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="after-upgrading-the-database-engine"></a>升级数据库引擎后  
  升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)]后，请完成以下任务：  
@@ -124,7 +126,8 @@ ms.locfileid: "62774965"
   
 -   重新填充全文目录以便确保查询结果中的语义一致性。  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 将安装新的断字符以供全文和语义搜索使用。 在建立索引时和查询时均使用断字符。 如果您没有重新生成全文目录，搜索结果可能不一致。 如果您发出查找某一短语的全文查询和当前断字符，该短语是由以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的断字符以不同方式进行断字的，则可能不会检索包含该短语的文档或行。 其原因在于，建立了索引的短语是使用与正使用的查询不同的逻辑进行断字的。 解决方法是使用新的断字符来重新填充（重新生成）全文目录，以便索引时行为和查询时行为完全相同。  
+     
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 将安装新的断字符以供全文和语义搜索使用。 在建立索引时和查询时均使用断字符。 如果您没有重新生成全文目录，搜索结果可能不一致。 如果您发出查找某一短语的全文查询和当前断字符，该短语是由以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的断字符以不同方式进行断字的，则可能不会检索包含该短语的文档或行。 其原因在于，建立了索引的短语是使用与正使用的查询不同的逻辑进行断字的。 解决方法是使用新的断字符来重新填充（重新生成）全文目录，以便索引时行为和查询时行为完全相同。  
   
      有关详细信息，请参阅 [sp_fulltext_catalog (Transact SQL)](/sql/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql)。  
   
@@ -132,9 +135,10 @@ ms.locfileid: "62774965"
   
 -   验证或删除 USE PLAN 提示，这些提示由 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 生成并应用于对已分区表和索引的查询。  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改了对已分区表和索引的查询方式。 如果已分区对象将 USE PLAN 提示用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 生成的计划，针对这些对象的查询可能会包含不可在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用的计划。 建议升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，执行下列过程。  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改了对已分区表和索引的查询方式。 如果已分区对象将 USE PLAN 提示用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 生成的计划，针对这些对象的查询可能会包含不可在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用的计划。 建议升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，执行下列过程。  
   
-     **如果直接在查询中指定 USE PLAN 提示：**  
+     **如果在查询中直接指定 USE PLAN 提示：**  
   
     1.  从查询删除 USE PLAN 提示。  
   
@@ -142,7 +146,7 @@ ms.locfileid: "62774965"
   
     3.  如果优化器未选择相应的计划并优化查询，请考虑使用所需的查询计划指定 USE PLAN 提示。  
   
-     **如果计划指南中指定 USE PLAN 提示：**  
+     **如果在计划指南中指定 USE PLAN 提示：**  
   
     1.  使用 sys.fn_validate_plan_guide 函数来检查计划指南的有效性。 或者，可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中的 Plan Guide Unsuccessful 事件检查是否存在无效计划。  
   
@@ -162,10 +166,10 @@ EXEC sp_fulltext_service 'pause_indexing', 1;
 EXEC sp_fulltext_service 'pause_indexing', 0;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [支持的版本升级](supported-version-and-edition-upgrades.md)   
- [使用多个版本和 SQL Server 的实例](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
- [后向兼容性](../../getting-started/backward-compatibility.md)   
- [升级复制的数据库](upgrade-replicated-databases.md)  
+ [使用 SQL Server 的多个版本和实例](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
+ [向后兼容性](../../getting-started/backward-compatibility.md)   
+ [升级复制数据库](upgrade-replicated-databases.md)  
   
   

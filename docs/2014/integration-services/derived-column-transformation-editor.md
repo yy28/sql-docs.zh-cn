@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059572"
 ---
 # <a name="derived-column-transformation-editor"></a>派生列转换编辑器
@@ -44,27 +44,27 @@ ms.locfileid: "66059572"
   
  此属性的值可以使用属性表达式来指定。  
   
- **相关主题**：[Integration Services &#40;SSIS&#41; 表达式](expressions/integration-services-ssis-expressions.md)、[运算符（SSIS 表达式）](expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](expressions/functions-ssis-expression.md)  
+ **相关主题**： [Integration Services SSIS 表达式 &#40;ssis&#41; 表达式](expressions/integration-services-ssis-expressions.md)、[运算符 &#40;ssis 表达式&#41;](expressions/operators-ssis-expression.md)和[函数](expressions/functions-ssis-expression.md)&#40;  
   
  **数据类型**  
- 如果向新列中添加数据，“派生列转换编辑器”  对话框将自动计算表达式的值并设置相应的数据类型。 该列的值是只读的。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
+ 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动计算表达式的值并设置相应的数据类型。 该列的值是只读的。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
   
  **长度**  
- 如果向新列中添加数据，“派生列转换编辑器”  对话框将自动计算表达式的值并设置字符串数据的列长度。 该列的值是只读的。  
+ 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动计算表达式的值并设置字符串数据的列长度。 该列的值是只读的。  
   
- **精度**  
- 如果向新列中添加数据，“派生列转换编辑器”  对话框将自动根据数据类型来设置数值数据的精度。 该列的值是只读的。  
+ **Precision**  
+ 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动根据数据类型来设置数值数据的精度。 该列的值是只读的。  
   
- **小数位数**  
- 如果向新列中添加数据，“派生列转换编辑器”  对话框将自动根据数据类型来设置数值数据的小数位数。 该列的值是只读的。  
+ **缩放**  
+ 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动根据数据类型来设置数值数据的小数位数。 该列的值是只读的。  
   
  **代码页**  
- 如果向新列中添加数据，“派生列转换编辑器”  对话框将自动设置 DT_STR 数据类型的代码页。 可以更新 **“代码页”** 。  
+ 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动设置 DT_STR 数据类型的代码页。 可以更新 **“代码页”**。  
   
  **配置错误输出**  
  使用 [配置错误输出](../../2014/integration-services/configure-error-output.md) 对话框指定处理错误的方式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [使用派生列转换派生列值](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   

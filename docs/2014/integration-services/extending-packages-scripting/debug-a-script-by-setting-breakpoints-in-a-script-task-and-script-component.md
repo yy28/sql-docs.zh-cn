@@ -14,19 +14,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97c41b4ca75336f70b049239112132c89b05fba5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768481"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>通过在脚本任务和脚本组件中设置断点来调试脚本
   此过程描述如何在脚本任务和脚本组件所使用的脚本中设置断点。  
   
- 在脚本中设置断点后，“设置断点 - \<对象名称>”  对话框会列出这些断点以及内置断点。  
+ 在脚本中设置断点后，“设置断点 - 对象名称>”对话框会列出这些断点以及内置断点。  
   
 > [!IMPORTANT]  
->  在某些情况下，将忽略脚本任务和脚本组件中的断点。 有关详细信息，请参阅**调试脚本任务**主题中[编码和调试脚本任务](../control-flow/script-task.md)并**调试脚本组件**[代码编写中的部分和调试脚本组件] (../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md。  
+>  在某些情况下，将忽略脚本任务和脚本组件中的断点。 有关详细信息，请参阅[编码和调试脚本任务](../control-flow/script-task.md)中的**调试脚本任务**部分和调试脚本**组件**部分 [编写和调试脚本组件] （.）。/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>在脚本中设置断点  
   
@@ -34,19 +34,19 @@ ms.locfileid: "62768481"
   
 2.  双击包含要在其中设置断点的脚本的包。  
   
-3.  若要打开脚本任务，请单击“控制流”  选项卡，然后双击该脚本任务。  
+3.  若要打开脚本任务，请单击“控制流”**** 选项卡，然后双击该脚本任务。  
   
-4.  若要打开脚本组件，请单击“数据流”  选项卡，然后双击该脚本组件。  
+4.  若要打开脚本组件，请单击“数据流”**** 选项卡，然后双击该脚本组件。  
   
-5.  单击“脚本”  ，然后单击“编辑脚本”  。  
+5.  单击“脚本”****，然后单击“编辑脚本”****。  
   
-6.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中，找到要设置断点的脚本行，右键单击该行，指向“断点”  ，再单击“插入断点”  。  
+6.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中，找到要设置断点的脚本行，右键单击该行，指向“断点”****，再单击“插入断点”****。  
   
      断点图标随即出现在该行代码上。  
   
 7.  在 **“文件”** 菜单中，单击 **“退出”** 。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 9. 若要保存包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

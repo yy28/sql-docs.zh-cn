@@ -21,18 +21,18 @@ ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6141f3efe357bfb3f14c04aa2f6760e9470649a6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68345146"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt 函数
 **度**  
- 引入的版本:ODBC 1.0 标准符合性:ISO 92  
+ 引入的版本： ODBC 1.0 标准符合性： ISO 92  
   
- **摘要**  
- **SQLFreeStmt**停止与特定语句关联的处理、关闭与该语句关联的任何打开的游标、放弃挂起的结果, 或者, 还可以释放与该语句句柄关联的所有资源。  
+ **总结**  
+ **SQLFreeStmt**停止与特定语句关联的处理、关闭与该语句关联的任何打开的游标、放弃挂起的结果，或者，还可以释放与该语句句柄关联的所有资源。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,40 +48,40 @@ SQLRETURN SQLFreeStmt(
  送语句句柄  
   
  *选项*  
- 送以下选项之一:  
+ 送以下选项之一：  
   
- 关闭 SQL_:关闭与*StatementHandle*关联的游标 (如果已定义), 并放弃所有挂起的结果。 稍后, 应用程序可以使用相同或不同的参数值再次执行**SELECT**语句来重新打开此游标。 如果没有打开的游标, 则此选项不会影响应用程序。 还可以调用**SQLCloseCursor**以关闭游标。 有关详细信息, 请参阅[关闭光标](../../../odbc/reference/develop-app/closing-the-cursor.md)。  
+ SQL_ 关闭：关闭与*StatementHandle*关联的游标（如果已定义），并放弃所有挂起的结果。 稍后，应用程序可以使用相同或不同的参数值再次执行**SELECT**语句来重新打开此游标。 如果没有打开的游标，则此选项不会影响应用程序。 还可以调用**SQLCloseCursor**以关闭游标。 有关详细信息，请参阅[关闭光标](../../../odbc/reference/develop-app/closing-the-cursor.md)。  
   
- SQL_DROP:已弃用此选项。 使用 SQL_DROP*选项*的**SQLFreeStmt**调用将在驱动程序管理器中映射到[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
+ SQL_DROP：不推荐使用此选项。 使用 SQL_DROP*选项*的调用**SQLFreeStmt**在驱动程序管理器中映射到[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
   
- SQL_UNBIND:将 ARD 的 SQL_DESC_COUNT 字段设置为 0, 并释放**SQLBindCol**为给定*StatementHandle*绑定的所有列缓冲区。 这不取消绑定书签列;为此, "书签" 列的 "SQL_DESC_DATA_PTR" 字段设置为 NULL。 请注意, 如果在由多个语句共享的显式分配的描述符上执行此操作, 则该操作将影响所有共享描述符的语句的绑定。 有关详细信息, 请参阅[检索结果概述 (基本)](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
+ SQL_UNBIND：将 ARD 的 SQL_DESC_COUNT 字段设置为0，释放由**SQLBindCol**绑定的针对给定*StatementHandle*的所有列缓冲区。 这不取消绑定书签列;为此，"书签" 列 ARD 的 "SQL_DESC_DATA_PTR" 字段设置为 NULL。 请注意，如果在由多个语句共享的显式分配的描述符上执行此操作，则该操作将影响所有共享描述符的语句的绑定。 有关详细信息，请参阅[检索结果概述（基本）](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
   
- SQL_RESET_PARAMS:将 APD 的 SQL_DESC_COUNT 字段设置为 0, 释放**SQLBindParameter**为给定的*StatementHandle*设置的所有参数缓冲区。 如果在由多个语句共享的显式分配的描述符上执行此操作, 此操作将影响共享该描述符的所有语句的绑定。 有关详细信息, 请参阅[绑定参数](../../../odbc/reference/develop-app/binding-parameters-odbc.md)。  
+ SQL_RESET_PARAMS：将 APD 的 SQL_DESC_COUNT 字段设置为0，释放由**SQLBindParameter**为给定的*StatementHandle*设置的所有参数缓冲区。 如果在由多个语句共享的显式分配的描述符上执行此操作，此操作将影响共享该描述符的所有语句的绑定。 有关详细信息，请参阅[绑定参数](../../../odbc/reference/develop-app/binding-parameters-odbc.md)。  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLFreeStmt**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时, 可以通过使用*SQLGetDiagRec 的 HandleType*和*SQL_HANDLE_STMT*的*句柄*调用**StatementHandle**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLFreeStmt**返回的 SQLSTATE 值, 并对该函数的上下文中的每个值进行了说明:"(DM)" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明, 否则与每个 SQLSTATE 值相关联的返回代码为 SQL_ERROR。  
+ 当**SQLFreeStmt**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_STMT 和*StatementHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLFreeStmt**返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明："（DM）" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
   
-|SQLSTATE|Error|描述|  
+|SQLSTATE|错误|说明|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驱动程序特定的信息性消息。 (函数返回 SQL_SUCCESS_WITH_INFO。)|  
-|HY000|一般错误|发生了一个错误, 该错误没有特定的 SQLSTATE, 没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中**的 SQLGetDiagRec**返回的错误消息描述了错误及其原因。  *\**|  
+|01000|一般警告|驱动程序特定的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。 * \**|  
 |HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
-|HY010|函数序列错误|(DM) 为与*StatementHandle*关联的连接句柄调用了异步执行的函数。 调用**SQLFreeStmt**时仍在执行此异步函数。<br /><br /> (DM) 为*StatementHandle*调用了**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** , 并返回了 SQL_PARAM_DATA_AVAILABLE。 在为所有流式处理参数检索数据之前, 通过将*选项*设置为 SQL_RESET_PARAMS 来调用此函数。<br /><br /> (DM) 为*StatementHandle*调用了异步执行的函数, 并且在调用此函数时仍在执行该函数。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSETPOS**调用了*StatementHandle*并返回了 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前, 将调用此函数。|  
-|HY013|内存管理错误|未能处理函数调用, 原因可能是由于内存不足而无法访问基础内存对象。|  
-|HY092|选项类型超出范围|(DM) 为参数*选项*指定的值不是:<br /><br /> SQL_CLOSE SQL_DROP SQL_UNBIND SQL_RESET_PARAMS|  
-|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT 设置。|  
-|IM001|驱动程序不支持此功能|(DM) 与*StatementHandle*关联的驱动程序不支持该函数。|  
+|HY010|函数序列错误|（DM）为与*StatementHandle*关联的连接句柄调用了异步执行的函数。 调用**SQLFreeStmt**时仍在执行此异步函数。<br /><br /> 为*StatementHandle*调用了**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，并返回 SQL_PARAM_DATA_AVAILABLE。 在为所有流式处理参数检索数据之前，调用此函数时，*选项*设置为 SQL_RESET_PARAMS。<br /><br /> （DM）为*StatementHandle*调用了异步执行的函数，并且在调用此函数时仍在执行该函数。<br /><br /> （DM） **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos**调用了*StatementHandle*并返回 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前，将调用此函数。|  
+|HY013|内存管理错误|未能处理函数调用，原因可能是由于内存不足而无法访问基础内存对象。|  
+|HY092|选项类型超出范围|（DM）为参数*选项*指定的值不是：<br /><br /> SQL_CLOSE SQL_DROP SQL_UNBIND SQL_RESET_PARAMS|  
+|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|IM001|驱动程序不支持此功能|（DM）与*StatementHandle*关联的驱动程序不支持该函数。|  
   
 ## <a name="comments"></a>注释  
- 与 SQL_CLOSE 选项一起调用**SQLFreeStmt**等效于调用**SQLCloseCursor**, 只不过带有 SQL_CLOSE 的**SQLFreeStmt**在语句上没有打开的游标时不会影响应用程序。 如果没有打开的游标, 则调用**SQLCloseCursor**将返回 SQLSTATE 24000 (无效的游标状态)。  
+ 与 SQL_CLOSE 选项一起调用**SQLFreeStmt**等效于调用**SQLCloseCursor**，只不过如果语句上没有打开的游标，则具有 SQL_CLOSE 的**SQLFreeStmt**不会影响应用程序。 如果没有打开的游标，则调用**SQLCloseCursor**将返回 SQLSTATE 24000 （无效的游标状态）。  
   
  应用程序在释放后不应使用语句句柄;驱动程序管理器不会检查函数调用中的句柄的有效性。  
   
 ## <a name="example"></a>示例  
- 自由句柄是一种很好的编程做法。 但是, 为简单起见, 下面的示例不包含用于释放已分配的句柄的代码。 有关如何释放句柄的示例, 请参阅[SQLFreeHandle 函数](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
+ 自由句柄是一种很好的编程做法。 但是，为简单起见，下面的示例不包含用于释放已分配的句柄的代码。 有关如何释放句柄的示例，请参阅[SQLFreeHandle 函数](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
   
 ```cpp  
 // SQLFreeStmt.cpp  
@@ -114,7 +114,7 @@ int main() {
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关信息|请参阅|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
 |分配句柄|[SQLAllocHandle 函数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |正在取消语句处理|[SQLCancel 函数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
@@ -122,6 +122,6 @@ int main() {
 |释放句柄|[SQLFreeHandle 函数](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |设置游标名称|[SQLSetCursorName 函数](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 头文件](../../../odbc/reference/install/odbc-header-files.md)

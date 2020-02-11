@@ -1,5 +1,5 @@
 ---
-title: 键列对话框 (Analysis Services-多维数据) |Microsoft Docs
+title: "\"键列\" 对话框（Analysis Services 多维数据） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079467"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>“键列”对话框（Analysis Services - 多维数据）
   可以使用 **“键列”** 对话框更改特性的 **KeyColumns** 属性。 有关详细信息，请参阅 [修改特性的 KeyColumn 属性](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
   
- **若要显示键列对话框**  
+ **显示“键列”对话框**  
   
--   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，选择一个特性，然后在“属性”  窗口中单击与该特性的 **KeyColumns** 属性关联的省略号按钮 ( **...** )。  
+-   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，选择一个特性，然后在“属性”**** 窗口中单击与该特性的 **KeyColumns** 属性关联的省略号按钮 (**...**)。  
   
 ## <a name="options"></a>选项  
  **源表**  
@@ -42,25 +42,25 @@ ms.locfileid: "66079467"
   
  若要从“键列”列表中删除列，请选择列，然后单击 **“键列”** 按钮 **\<** 。  
   
- **向上**  
- 单击此项可在  “键列”中将所选列上移一个位置。  
+ **Up**  
+ 单击此项可在****“键列”中将所选列上移一个位置。  
   
 > [!NOTE]  
 >  仅当列表中包含一个以上列并且选定某列时，才启用此选项。  
   
- **向下**  
- 单击此项可在“键列”  中将所选列下移一个位置。  
+ **分解**  
+ 单击此项可在“键列”**** 中将所选列下移一个位置。  
   
 > [!NOTE]  
 >  仅当列表中包含一个以上列并且选定某列时，才启用此选项。  
   
  **>**  
- 单击此项可将新列添加到“键列”  中列出的列的末尾。  
+ 单击此项可将新列添加到“键列”**** 中列出的列的末尾。  
   
  **<**  
- 单击此项可将所选列从  “键列”中列出的列中删除。  
+ 单击此项可将所选列从****“键列”中列出的列中删除。  
   
-## <a name="see-also"></a>请参阅  
- [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

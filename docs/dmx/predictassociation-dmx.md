@@ -1,5 +1,5 @@
 ---
-title: PredictAssociation (DMX) |Microsoft Docs
+title: PredictAssociation （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3038bd010c5ca76ad26a301bad45ff4e1aa29460
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea0a9915e062d7b6f15b63e18976e88cc339202d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008057"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939499"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   预测关联的成员身份。  
   
-例如，PredictAssociation 函数可用于获取给定客户的购物篮的当前状态的建议的组。 
+例如，你可以使用 PredictAssociation 函数获取客户的购物篮当前状态提供的一组建议。 
   
 ## <a name="syntax"></a>语法  
   
@@ -29,30 +29,30 @@ ms.locfileid: "68008057"
 PredictAssociation(<table column reference>, option1, option2, n ...)  
 ```  
   
-## <a name="applies-to"></a>适用范围  
- 包含可预测嵌套的表，包括关联和某些分类算法的算法。 支持嵌套的表的分类算法包括[!INCLUDE[msCoName](../includes/msconame-md.md)]决策树[!INCLUDE[msCoName](../includes/msconame-md.md)]Naive Bayes 和[!INCLUDE[msCoName](../includes/msconame-md.md)]神经网络算法。  
+## <a name="applies-to"></a>应用于  
+ 包含可预测的嵌套表（包括关联和某些分类算法）的算法。 支持嵌套表的[!INCLUDE[msCoName](../includes/msconame-md.md)]分类算法包括决策树、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 和[!INCLUDE[msCoName](../includes/msconame-md.md)]神经网络算法。  
   
 ## <a name="return-type"></a>返回类型  
- \<表表达式 >  
+ \<表表达式>  
   
 ## <a name="remarks"></a>备注  
- 选项**PredictAssociation**函数包括 EXCLUDE_NULL、 INCLUDE_NULL、 INCLUSIVE、 EXCLUSIVE （默认值）、 INPUT_ONLY、 INCLUDE_STATISTICS 和 INCLUDE_NODE_ID。  
+ **PredictAssociation**函数的选项包括 EXCLUDE_NULL、INCLUDE_NULL、包含、异（默认）、INPUT_ONLY、INCLUDE_STATISTICS 和 INCLUDE_NODE_ID。  
   
 > [!NOTE]  
 >  INCLUSIVE、EXCLUSIVE、INPUT_ONLY 和 INCLUDE_STATISTICS 只适用于表列引用；EXCLUDE_NULL 和 INCLUDE_NULL 只适用于标量列引用。  
   
- INCLUDE_STATISTICS 只返回 **$Probability**并 **$AdjustedProbability**。  
+ INCLUDE_STATISTICS 仅返回 **$Probability**和 **$AdjustedProbability**。  
   
- 如果数值参数*n*指定，则**PredictAssociation**函数将返回基于概率的前 n 个最可能值：  
+ 如果指定了数字参数*n* ，则**PredictAssociation**函数将根据概率返回前 n 个最可能的值：  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
 ```  
   
- 如果包括 **$AdjustedProbability**，该语句返回前*n*值基于 **$AdjustedProbability**。  
+ 如果包括 **$AdjustedProbability**，则该语句将返回基于 **$AdjustedProbability**的前*n*个值。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用**PredictAssociation**函数返回的四个产品在 Adventure Works 数据库的最有可能一起销售。  
+ 下面的示例使用**PredictAssociation**函数返回艾德公司数据库中最有可能一起销售的四个产品。  
   
 ```  
 SELECT  
@@ -60,7 +60,7 @@ SELECT
 From  
   [Association]  
 ```  
-下面的示例演示如何使用嵌套的表作为预测函数中，输入使用 SHAPE 子句。 SHAPE 查询使用 customerId 作为一个列和嵌套的表作为第二列，其中包含的客户都已带来的产品列表创建行集。 
+下面的示例演示如何使用 SHAPE 子句将嵌套表用作预测函数的输入。 SHAPE 查询将 customerId 作为一个列创建，并将嵌套表作为第二列创建，其中包含客户已经提供的产品的列表。 
 
 ~~~~
 SELECT T.[CustomerId], PredictAssociation(MyNestedTable, 5) // returns top 5 associated items
@@ -76,9 +76,9 @@ SHAPE {
 ~~~~  
 
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [&#40;DMX&#41;的常规预测函数](../dmx/general-prediction-functions-dmx.md)  
   
   

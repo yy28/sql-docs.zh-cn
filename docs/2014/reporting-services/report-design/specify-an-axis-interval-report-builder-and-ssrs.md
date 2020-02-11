@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d862ac509af3936a9f09cadd01667cbe81a679c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104851"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定轴间隔（报表生成器和 SSRS）
@@ -27,16 +27,16 @@ ms.locfileid: "66104851"
 > [!NOTE]  
 >  类别轴通常是水平轴（或 x 轴）。 但对于条形图来说，类别轴是指垂直轴（或 y 轴）。  
   
- 指定不同轴间隔的图表的示例可用于示例报表。 有关下载此示例报表和其他内容的详细信息，请参阅[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][报表生成器和报表设计器示例报表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 指定不同轴间隔的图表的示例可用于示例报表。 有关下载此示例报表和其他内容的详细信息， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]请参阅[报表生成器和报表设计器示例报表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-show-all-category-labels-on-the-x-axis"></a>在 X 轴上显示所有类别标签  
   
-1.  右键单击类别轴，然后单击 **“轴属性”** 。 随即会打开 **“轴属性”** 对话框。  
+1.  右键单击类别轴，然后单击 **“轴属性”**。 随即会打开 **“轴属性”** 对话框。  
   
-2.  在中**轴选项**，请设置`Interval`到**1**。 随即显示每个类别组标签。 如果希望在 X 轴上显示所有其他类别组标签，请键入 **2**。  
+2.  在 "**轴选项**" `Interval`中，将设置为**1**。 随即显示每个类别组标签。 如果希望在 X 轴上显示所有其他类别组标签，请键入 **2**。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -45,18 +45,18 @@ ms.locfileid: "66104851"
   
 ### <a name="to-enable-a-variable-interval-calculation-on-an-axis"></a>启用轴上的可变间隔计算  
   
-1.  右键单击要更改的图表轴，然后单击 **“轴属性”** 。 随即会打开 **“轴属性”** 对话框。  
+1.  右键单击要更改的图表轴，然后单击 **“轴属性”**。 随即会打开 **“轴属性”** 对话框。  
   
-2.  在中**轴选项**，请设置`Interval`到**自动**。该图表将显示适合该轴的最佳类别标签数。  
+2.  在 "**轴选项**" `Interval`中，将设置为 "**自动**"。该图表将显示可沿该轴容纳的最佳类别标签数。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
  [设置图表上数据点的格式（报表生成器和 SSRS）](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [对数据区域中的数据进行排序（报表生成器和 SSRS）](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [“轴属性”对话框 ->“轴选项”（报表生成器和 SSRS）](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [指定对数刻度（报表生成器和 SSRS）](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [在辅助轴上绘制数据（报表生成器和 SSRS）](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [&#40;报表生成器和 SSRS 在辅助轴上绘制数据&#41;](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   

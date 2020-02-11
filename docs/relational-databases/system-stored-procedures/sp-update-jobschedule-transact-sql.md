@@ -1,5 +1,5 @@
 ---
-title: sp_update_jobschedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_update_jobschedule （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ebdaa23db8602b608498b4012ffd71367bb99a0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084904"
 ---
-# <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
+# <a name="sp_update_jobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   更改指定作业的计划设置。  
   
- **sp_update_jobschedule**提供只是为了向后兼容。  
+ 提供**sp_update_jobschedule**仅用于向后兼容性。  
   
 > [!IMPORTANT]
->  有关 Microsoft SQL Server 的早期版本中使用的语法的详细信息，请参阅 TRANSACT-SQL Referencefor Microsoft SQL Server 2000 *。*  
+>  有关 Microsoft SQL Server 早期版本中使用的语法的详细信息，请参阅 Transact-sql Referencefor Microsoft SQL Server 2000 *。*  
   
 ## <a name="remarks"></a>备注  
  作业计划现在可以独立于作业进行管理。 若要更新计划，请使用**sp_update_schedule**。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -48,10 +48,10 @@ ms.locfileid: "68084904"
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有的成员**sysadmin**可以使用此存储的过程更新其他用户所拥有的作业计划。  
+ 只有**sysadmin**的成员才可以使用此存储过程更新其他用户所拥有的作业计划。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_update_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server 代理存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_update_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
   
   

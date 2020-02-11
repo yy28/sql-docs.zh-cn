@@ -1,5 +1,5 @@
 ---
-title: 在一个简单的示例 (MDX) 中使用查询轴和切片器轴 |Microsoft Docs
+title: 在简单示例中使用查询轴和切片器轴（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53f48d8f23ef8809f9392b1a2c7ede65239e4985
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074029"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>在简单示例中使用查询轴和切片器轴 (MDX)
@@ -29,7 +29,8 @@ ms.locfileid: "66074029"
 ## <a name="the-query"></a>查询  
  查询要提供一个矩阵，可以在该矩阵内跨路线和时间比较 Packages 度量值。  
   
- 在下面的 MDX 查询示例中，Route 和 Time 层次结构为查询轴，Measures 维度为切片器轴。 [Members](/sql/mdx/members-set-mdx) 函数指明 MDX 将使用层次结构或级别的成员来构造一个集。 使用 `Members` 函数意味着不必在 MDX 查询中显式声明特定层次结构或级别的每个成员。  
+ 在下面的 MDX 查询示例中，Route 和 Time 层次结构为查询轴，Measures 维度为切片器轴。 
+  [Members](/sql/mdx/members-set-mdx) 函数指明 MDX 将使用层次结构或级别的成员来构造一个集。 使用 `Members` 函数意味着不必在 MDX 查询中显式声明特定层次结构或级别的每个成员。  
   
 ```  
 SELECT  
@@ -47,8 +48,8 @@ WHERE ( [Measures].[Packages] )
 |第一季度|60|50|  
 |第二季度|45|45|  
   
-## <a name="see-also"></a>请参阅  
- [指定查询轴的内容 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [指定切片器轴的内容 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;MDX&#41;指定查询轴的内容](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
+ [&#40;MDX&#41;指定切片器轴的内容](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

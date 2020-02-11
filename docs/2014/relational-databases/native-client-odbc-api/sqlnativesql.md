@@ -1,5 +1,5 @@
 ---
-title: SQLNativeSql | Microsoft Docs
+title: SQLNativeSql |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0556d4e3b06c68e70513d68a5c2616bf47fc299c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046732"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序满足**SQLNativeSql**而无需访问服务器的请求。 该函数有效地测试 SQL 语句的语法。 语法检查不会确定标识符或 SQL 语句中的表达式的结果是否有效，并[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回的本机 SQL **SQLNativeSql**可能无法运行。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 驱动程序在不访问服务器的情况下满足**SQLNativeSql**请求。 该函数有效地测试 SQL 语句的语法。 语法检查无法确定 SQL 语句中表达式的标识符或结果是否有效，并且[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLNativeSql**返回的本机 SQL 可能无法运行。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLNativeSql 函数](https://go.microsoft.com/fwlink/?LinkID=59358)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   

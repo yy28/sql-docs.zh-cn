@@ -15,16 +15,16 @@ ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72d9222be541a8d41b5b9935ac7cbbcfde4da19c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039805"
 ---
 # <a name="direct-execution-odbc"></a>直接执行 ODBC
-直接执行是执行语句的最简单方法。 提交要执行该语句后，数据源将它编译成访问计划，然后执行该访问计划。  
+直接执行是执行语句的最简单方法。 提交语句执行时，数据源会将其编译为访问计划，然后执行该访问计划。  
   
- 生成和运行时执行语句的通用应用程序通常使用直接执行。 例如，下面的代码生成的 SQL 语句，并执行它一次：  
+ 直接执行通常由在运行时生成和执行语句的泛型应用程序使用。 例如，下面的代码生成一个 SQL 语句，并一次执行它：  
   
 ```  
 SQLCHAR *SQLStatement;  
@@ -36,20 +36,20 @@ BuildStatement(SQLStatement);
 SQLExecDirect(hstmt, SQLStatement, SQL_NTS);  
 ```  
   
- 直接执行最适合于执行一次的语句。 其主要缺点是每次执行时，分析 SQL 语句。 此外，应用程序无法检索有关创建语句 （如果有） 之前执行该语句; 后的结果集信息如果该语句已准备且在两个单独的步骤中执行，这是可能的。  
+ 直接执行最适用于将执行一次的语句。 它的主要缺点是每次执行 SQL 语句时都将对其进行分析。 此外，应用程序不能检索有关语句创建的结果集的信息（如果有），直到执行语句为止;如果语句以两个单独的步骤准备并执行，则可以执行此操作。  
   
- 执行语句，直接在应用程序执行以下操作：  
+ 若要直接执行语句，应用程序需要执行以下操作：  
   
-1.  设置任何参数的值。 有关详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)，在本部分中更高版本。  
+1.  设置任何参数的值。 有关详细信息，请参阅本部分后面的[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)。  
   
-2.  调用**SQLExecDirect**并将其传递包含 SQL 语句的字符串。  
+2.  调用**SQLExecDirect**并向其传递包含 SQL 语句的字符串。  
   
-3.  当**SQLExecDirect**调用时，该驱动程序：  
+3.  调用**SQLExecDirect**时，驱动程序：  
   
-    -   修改 SQL 语句，而无需分析语句; 使用数据源的 SQL 语法这包括替换中所述的转义序列[ODBC 中的转义序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)。 应用程序可以通过调用检索 SQL 语句的已修改的窗体**SQLNativeSql**。 如果设置 SQL_ATTR_NOSCAN 语句属性不替换转义序列。  
+    -   修改 SQL 语句以使用数据源的 SQL 语法而不分析语句;这包括替换[ODBC 中转义序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)中讨论的转义序列。 应用程序可以通过调用**SQLNativeSql**来检索 SQL 语句的修改形式。 如果设置了 SQL_ATTR_NOSCAN 语句特性，则不会替换转义序列。  
   
-    -   检索当前的参数值，并根据需要将其转换。 有关详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)，在本部分中更高版本。  
+    -   检索当前参数值，并根据需要对其进行转换。 有关详细信息，请参阅本部分后面的[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)。  
   
-    -   将语句和已转换的参数值发送到数据源进行执行。  
+    -   将语句和转换的参数值发送到数据源以便执行。  
   
-    -   返回的任何错误。 其中包括序列化或状态诊断如 SQLSTATE 24000 （无效的游标状态）、 SQLSTATE 42000 （语法错误或访问冲突），如语法错误和语义错误，如 SQLSTATE 42S02 （基数为表或视图找不到）。
+    -   返回任何错误。 其中包括序列化或状态诊断，例如 SQLSTATE 24000 （无效的游标状态）、语法错误（如 SQLSTATE 42000 （语法错误或访问冲突））以及语义错误，如 SQLSTATE 42S02 （未找到基表或视图）。

@@ -15,22 +15,22 @@ ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b9e0a9b8e85967ce46344e824c03e74fe3552e7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130006"
 ---
 # <a name="default-c-data-types"></a>默认 C 数据类型
-如果应用程序指定中的 SQL_C_DEFAULT **SQLBindCol**， **SQLGetData**，或**SQLBindParameter**，驱动程序假定的 C 数据类型的输出或输入的缓冲区对应于 SQL 数据类型的参数缓冲区绑定到的列。  
+如果应用程序在**SQLBindCol**、 **SQLGetData**或**SQLBindParameter**中指定 SQL_C_DEFAULT，则驱动程序会假定输出或输入缓冲区的 C 数据类型对应于缓冲区绑定到的列或参数的 SQL 数据类型。  
   
 > [!IMPORTANT]  
->  可互操作应用程序不应使用 SQL_C_DEFAULT。 相反，它们应始终指定他们所使用的缓冲区的 C 类型。 这是因为驱动程序不能始终正确确定的默认 C 类型，原因如下：  
+>  互操作应用程序不应使用 SQL_C_DEFAULT。 相反，它们应始终指定它们所使用的缓冲区的 C 类型。 这是因为，由于以下原因，驱动程序无法始终正确确定默认 C 类型：  
   
--   如果 DBMS 提升 SQL 数据类型的列或参数时，该驱动程序无法确定列或参数的原始 SQL 数据类型。 因此，它无法确定相应的默认 C 数据类型。  
+-   如果 DBMS 升级列或参数的 SQL 数据类型，则驱动程序无法确定列或参数的原始 SQL 数据类型。 因此，它不能确定相应的默认 C 数据类型。  
   
--   如果驱动程序无法确定是否已签名的特定列或参数，如通常是这种情况，在这种处理 DBMS 的驱动程序无法确定相应的默认 C 数据类型是否应签名或未签名。  
+-   如果驱动程序无法确定特定的列或参数是否经过签名，则在 DBMS 处理此类或参数时通常是如此，驱动程序将无法确定是否应对相应的默认 C 数据类型进行签名或无符号。  
   
-     SQL_C_DEFAULT 提供只是为了编程方便，因为该应用程序不会不会丢失任何功能，它指定实际的 C 数据类型时。  
+     由于 SQL_C_DEFAULT 仅作为编程便利提供，因此当应用程序指定实际 C 数据类型时，不会丢失任何功能。  
   
- 中包含一个显示每个 SQL 数据类型的默认 C 数据类型表[从 SQL 到 C 数据类型的转换的数据](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)、 本附录中更高版本。
+ 在本附录后面的将[数据从 SQL 转换为 c 数据](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)类型时，将包含显示每个 sql 数据类型的默认 C 数据类型的表。

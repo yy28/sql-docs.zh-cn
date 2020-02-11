@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211641"
 ---
 # <a name="get-information-about-a-view"></a>获取有关视图的信息
@@ -48,9 +48,9 @@ ms.locfileid: "68211641"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  使用 `sp_helptext` 返回视图的定义需要 **public** 角色的成员身份。 使用 `sys.sql_expression_dependencies` 查找视图的所有依赖关系需要对该数据库的 VIEW DEFINITION 权限以及对数据库的 `sys.sql_expression_dependencies` 的 SELECT 权限。 系统对象定义（如 SELECT OBJECT_DEFINITION 中返回的对象定义）是公开可见的。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -63,7 +63,7 @@ ms.locfileid: "68211641"
   
      **“视图属性”** 对话框中显示以下属性：  
   
-     **“数据库”**  
+     **Database**  
      包含此视图的数据库的名称。  
   
      **Server**  

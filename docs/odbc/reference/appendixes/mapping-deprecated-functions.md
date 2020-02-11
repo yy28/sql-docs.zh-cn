@@ -1,5 +1,5 @@
 ---
-title: 映射已弃用的函数 |Microsoft Docs
+title: 映射弃用的函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990708"
 ---
 # <a name="mapping-deprecated-functions"></a>映射已弃用的函数
-本部分介绍如何已弃用的函数映射由 ODBC *3.x*驱动程序管理器，以保证向后兼容性的 ODBC *3.x*用于 ODBC 的驱动程序*2.x*应用程序。 驱动程序管理器执行此映射不考虑应用程序的版本。 因为每个 ODBC *2.x*以下列表中的函数映射到相应 ODBC *3.x*函数在 ODBC 中调用时*3.x*驱动程序，ODBC *3.x*驱动程序不需要实现 ODBC *2.x*函数。  
+本部分介绍了如何通过 ODBC 1.x 驱动程序管理器映射不推荐使用的函数，以*保证 odbc* *2.x 驱动程序*的向后兼容性与 odbc *2.x 应用程序*一起使用。 无论应用程序的版本是什么，驱动程序管理器都将执行此映射。 由于以下列表中的每个 ODBC 2.x 函数都映射到相应*的 odbc* *1.x 函数（* 在 odbc 1.x 驱动程序中调用时），因此 *，odbc 2.X* *驱动程序不必**实现 odbc 2.x 函数。*  
   
- ODBC 驱动程序时，会触发在列表中的映射*3.x*驱动程序和驱动程序不支持要映射的函数。  
+ 当*驱动程序为 ODBC 1.x*驱动程序，并且该驱动程序不支持正在映射的函数时，将触发列表中的映射。  
   
- 下表列出了所有重复在 ODBC 中引入的功能*3.x*。  
+ 下表列出*了 ODBC 2.x*中引入的所有复制功能。  
   
-|ODBC *2.x*函数|ODBC *3.x*函数|  
+|ODBC *2.x*函数|ODBC *2.x*函数|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -41,7 +41,7 @@ ms.locfileid: "67990708"
 |**SQLError**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt**与*选项*的 SQL_DROP|**SQLFreeHandle**|  
+|带有 SQL_DROP*选项*的**SQLFreeStmt**|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
 |**SQLParamOptions**|**SQLSetStmtAttr**|  
@@ -51,11 +51,11 @@ ms.locfileid: "67990708"
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] 即使在 ODBC 中不存在此函数*2.x*，它是 Open Group 和 ISO 标准中。  
+ [1]*虽然 ODBC 2.x 中不*存在此函数，但它是开放组和 ISO 标准。  
   
- [2] 这是 ODBC 1.0 函数。  
+ [2] 这是一个 ODBC 1.0 函数。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [SQLAllocConnect 映射](../../../odbc/reference/appendixes/sqlallocconnect-mapping.md)  
   

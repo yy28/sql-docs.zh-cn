@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_table_mappings (TRANSACT-SQL) |Microsoft Docs
+title: sys. pdw_table_mappings （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/01/2018
 ms.prod: sql
@@ -13,25 +13,25 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1e8a4b17ad9f37546697714af9611b7e8dbf20c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068120"
 ---
-# <a name="syspdwtablemappings-transact-sql"></a>sys.pdw_table_mappings (Transact SQL)
+# <a name="syspdw_table_mappings-transact-sql"></a>sys. pdw_table_mappings （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  将绑定到的内部对象名称的用户表**object_id**。  
+  通过**object_id**将用户表与内部对象名称进行绑定。  
   
-|列名|数据类型|描述|范围|  
+|列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|physical_name|**nvarchar(36)**|表的物理名称。<br /><br /> **physical_name**并**object_id**构成此视图的键。||  
-|object_id|**int**|表的对象 ID。 请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。<br /><br /> **physical_name**并**object_id**构成此视图的键。||  
+|physical_name|**nvarchar （36）**|表的物理名称。<br /><br /> **physical_name**和**object_id**构成此视图的键。||  
+|object_id|**int**|表的对象 ID。 请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。<br /><br /> **physical_name**和**object_id**构成此视图的键。||  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.pdw_index_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
- [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [sys. pdw_index_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
+ [sys. pdw_database_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   

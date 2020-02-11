@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_catalogs (TRANSACT-SQL) |Microsoft Docs
+title: sys. fulltext_catalogs （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,25 +20,25 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 114109e0ee7bf7ba8855ad65f4ab7438c9815187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133860"
 ---
-# <a name="sysfulltextcatalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
+# <a name="sysfulltext_catalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   每个全文目录对应一行。  
   
 > [!NOTE]  
->  未来版本中将删除以下列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **data_space_id**， **file_id**，并且**路径**。 请不要在新的开发工作中使用这些列，并尽快修改当前使用上述任意列的应用程序。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]未来版本的中将删除以下列： **data_space_id**、 **file_id**和**path**。 请不要在新的开发工作中使用这些列，并尽快修改当前使用上述任意列的应用程序。  
  
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |fulltext_catalog_id|**int**|全文目录的 ID。 该 ID 在数据库中的所有全文目录中是唯一的。|  
 |name|**sysname**|目录的名称。 在该数据库中是唯一的。|  
-|path|nvarchar(260) |目录所在的文件系统中的目录的名称。|  
+|路径|**nvarchar(260)**|目录所在的文件系统中的目录的名称。|  
 |is_default|**bit**|默认的全文目录。<br /><br /> True = 默认。<br /><br /> False = 非默认。|  
 |is_accent_sensitivity_on|**bit**|目录的区分重音设置。<br /><br /> True = 区分重音。<br /><br /> True = 不区分重音。|  
 |data_space_id|**int**|创建此目录时所在的文件组。|  
@@ -49,9 +49,9 @@ ms.locfileid: "68133860"
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [&#40;Transact-sql&#41;创建全文目录](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [ALTER FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)  
   

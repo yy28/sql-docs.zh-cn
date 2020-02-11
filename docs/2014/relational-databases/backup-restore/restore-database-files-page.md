@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875000"
 ---
 # <a name="restore-database-files-page"></a>还原数据库（“文件”页）
@@ -31,7 +31,7 @@ ms.locfileid: "62875000"
  **将所有文件重新定位到文件夹**  
  重新定位还原的文件。  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
 |**数据文件的文件夹**|输入或搜索应将还原的数据文件重新定位到的数据文件的文件夹名称。|  
 |**日志文件的文件夹**|输入或搜索应将还原的日志文件文件重新定位到的日志文件的文件夹。|  
@@ -48,11 +48,11 @@ ms.locfileid: "62875000"
  **还原为**  
  列出用于另存还原文件的文件名。 输入或搜索适当的文件名。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [还原数据库（“常规”页）](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [还原数据库（“选项”页）](restore-database-options-page.md)   
  [RESTORE 参数 (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [为磁带驱动器定义逻辑备份设备 (SQL Server)](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
- [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)  
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

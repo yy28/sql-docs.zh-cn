@@ -1,5 +1,5 @@
 ---
-title: SubmitChanges 方法 (RDS) |Microsoft Docs
+title: SubmitChanges 方法（RDS） |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +14,17 @@ ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 783ad55a2355759f7625d536272f5243cd1c61c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963282"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
-提交挂起的更改的本地缓存和可更新[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)到中指定的数据源[Connect](../../../ado/reference/rds-api/connect-property-rds.md)属性或[URL](../../../ado/reference/rds-api/url-property-rds.md)属性。  
+将本地缓存的可更新[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的挂起的更改提交到[Connect](../../../ado/reference/rds-api/connect-property-rds.md)属性或[URL](../../../ado/reference/rds-api/url-property-rds.md)属性中指定的数据源。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,40 +33,40 @@ ms.locfileid: "67963282"
 DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *DataControl*  
- 表示的对象变量[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
+ 表示 RDS 的对象变量[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
  *DataFactory*  
- 表示的对象变量[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象。  
+ 表示[RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象的对象变量。  
   
- *“连接”*  
- 一个**字符串**值，该值表示与创建的连接**rds。DataControl**对象的[Connect](../../../ado/reference/rds-api/connect-property-rds.md)属性。  
+ *连接*  
+ 一个**字符串**值，该值表示使用 RDS 创建的连接 **。DataControl**对象的[连接](../../../ado/reference/rds-api/connect-property-rds.md)属性。  
   
- *Recordset*  
- 表示的对象变量**记录集**对象。  
+ *记录集*  
+ 表示**Recordset**对象的对象变量。  
   
 ## <a name="remarks"></a>备注  
- [Connect](../../../ado/reference/rds-api/connect-property-rds.md)，[服务器](../../../ado/reference/rds-api/server-property-rds.md)，并[SQL](../../../ado/reference/rds-api/sql-property.md)必须设置属性，然后才能使用**SubmitChanges**方法替换**RDS。DataControl**对象。  
+ 必须先设置[Connect](../../../ado/reference/rds-api/connect-property-rds.md)、 [Server](../../../ado/reference/rds-api/server-property-rds.md)和[SQL](../../../ado/reference/rds-api/sql-property.md)属性，然后才能将**SubmitChanges**方法与 RDS 一起使用 **。DataControl**对象。  
   
- 如果您调用[CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md)方法后调用**SubmitChanges**同一**记录集**对象， **CancelUpdate**调用失败，因为已提交所做的更改。  
+ 如果在为同一**Recordset**对象调用**SubmitChanges**后调用[CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md)方法，则**CancelUpdate**调用失败，因为这些更改已提交。  
   
- 已更改的记录发送用于修改和所做的更改要么都成功或同时失败的所有更改。  
+ 仅发送已更改的记录进行修改，所有更改都成功，否则所有更改将一起失败。  
   
- 可以使用**SubmitChanges**仅使用默认**提高**对象。 自定义业务对象不能使用此方法。  
+ 只能将**SubmitChanges**与默认的**RDSServer**对象结合使用。 自定义业务对象无法使用此方法。  
   
- 如果**URL**已设置属性， **SubmitChanges**会将更改提交到指定 URL 的位置。  
+ 如果已设置**url**属性， **SubmitChanges**会将更改提交到 url 指定的位置。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  
 |[DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>请参阅  
- [SubmitChanges 方法示例 (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
+## <a name="see-also"></a>另请参阅  
+ [SubmitChanges 方法示例（VBScript）](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [通讯簿命令按钮](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
- [CancelUpdate 方法 (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
+ [CancelUpdate 方法（RDS）](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Refresh 方法 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
 
 

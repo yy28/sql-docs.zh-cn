@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c552ef16cc2f9502a365ba09c7f8868eccd53396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836079"
 ---
 # <a name="access-the-cdc-designer-console"></a>访问 CDC 设计器控制台
@@ -32,7 +32,7 @@ ms.locfileid: "62836079"
  键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的服务器的名称。  
   
 ### <a name="authentication"></a>身份验证  
- 选择下列选项之一：  
+ 选择以下方案之一：  
   
 -   **Windows 身份验证**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62836079"
   
  有关“高级连接属性”对话框的信息，请参阅 [高级连接属性](advanced-connection-properties.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [针对 CDC 设计器的 SQL Server 连接所需权限](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

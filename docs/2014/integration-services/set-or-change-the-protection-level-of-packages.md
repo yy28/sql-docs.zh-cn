@@ -16,25 +16,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055845"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>设置或更改包的保护级别
   若要控制对包内容以及其中包含的敏感值（如密码）的访问，请设置 `ProtectionLevel` 属性的值。 项目中所含的包需要具有与项目相同的保护级别才能生成项目。 如果更改项目的 `ProtectionLevel` 属性设置，需要为包手动更新该属性设置。  
   
- 有关如何确定`ProtectionLevel`设置适用于您的包的不同阶段中的包的生命周期，请参阅[包中敏感数据的访问控制](security/access-control-for-sensitive-data-in-packages.md)。 有关 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中安全功能的概述，请参阅[安全性概述 (Integration Services)](security/security-overview-integration-services.md)。  
+ 有关如何在包生命周期中`ProtectionLevel`的不同阶段确定适用于你的包的设置的信息，请参阅[对包中敏感数据的访问控制](security/access-control-for-sensitive-data-in-packages.md)。 有关 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中安全功能的概述，请参阅[安全性概述 (Integration Services)](security/security-overview-integration-services.md)。  
   
  本主题中的过程介绍如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 或 dtutil 命令提示实用工具来更改 `ProtectionLevel` 属性。  
   
 > [!NOTE]  
->  除了本主题中的过程外，当导入或导出包时，您通常可以设置或更改包的 `ProtectionLevel` 属性。 当使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导保存包时，您也可以更改包的 `ProtectionLevel` 属性。  
+>  除了本主题中的过程外，当导入或导出包时，您通常可以设置或更改包的 `ProtectionLevel` 属性。 当使用 `ProtectionLevel` 导入和导出向导保存包时，您也可以更改包的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 属性。  
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中设置或更改包的保护级别  
   
-1.  查看可用值`ProtectionLevel`主题中的属性[设置包的保护级别](security/access-control-for-sensitive-data-in-packages.md)，并确定您的包的对应值。  
+1.  在主题中查看`ProtectionLevel`属性的可用值，[设置包的保护级别](security/access-control-for-sensitive-data-in-packages.md)，并确定包的适当值。  
   
 2.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开包含该包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66055845"
   
 4.  如果“属性”窗口未显示包的属性，请单击设计图面。  
   
-5.  在属性窗口中**安全**组中，选择适当的值`ProtectionLevel`属性。  
+5.  在属性窗口的 "**安全**" 组中，为`ProtectionLevel`属性选择适当的值。  
   
      如果选择的保护级别需要密码，请输入密码作为 **PackagePassword** 属性的值。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "66055845"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>在命令提示符下设置或更改包的保护级别  
   
-1.  查看可用值`ProtectionLevel`主题中的属性[设置包的保护级别](security/access-control-for-sensitive-data-in-packages.md)，并确定您的包的对应值。  
+1.  在主题中查看`ProtectionLevel`属性的可用值，[设置包的保护级别](security/access-control-for-sensitive-data-in-packages.md)，并确定包的适当值。  
   
-2.  查看有关映射`Encrypt`主题中的选项[dtutil 实用工具](dtutil-utility.md)，并确定要用作值的所选的相应整数`ProtectionLevel`属性。  
+2.  在主题[Dtutil 实用工具](dtutil-utility.md) `ProtectionLevel`中`Encrypt`查看选项的映射，然后确定要用作所选属性的值的相应整数。  
   
 3.  打开命令提示符窗口。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66055845"
   
          如果您在批文件中使用类似的命令，则请输入文件占位符“%f”作为批文件中的“%%f”。  
   
-## <a name="see-also"></a>请参阅  
- [Encrypt](dtutil-utility.md)  
+## <a name="see-also"></a>另请参阅  
+ [dtutil 实用工具](dtutil-utility.md)  
   
   

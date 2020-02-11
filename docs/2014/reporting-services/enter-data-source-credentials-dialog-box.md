@@ -1,5 +1,5 @@
 ---
-title: 输入数据源凭据对话框 |Microsoft Docs
+title: "\"输入数据源凭据\" 对话框 |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,24 +14,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e7fa4658b0a784b854023975234218d1a58f936c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109239"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>“输入数据源凭据”对话框
-  使用**输入数据源凭据**对话框可以提供你[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]凭据，以便可以从数据源检索数据。  
+  使用 "**输入数据源凭据**" 对话框可以提供您[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的凭据，以便您可以从数据源中检索数据。  
   
 ## <a name="options"></a>选项  
  **用户名**  
  键入登录数据源时要使用的用户名。  
   
- **密码**  
+ **权限**  
  键入登录数据源时要使用的密码。  
   
-## <a name="see-also"></a>请参阅  
- [数据连接、 数据源和 Reporting Services 中的连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [Reporting Services 中的数据连接、数据源和连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [报表设计器的 F1 帮助](tools/report-designer-f1-help.md)  
   
   

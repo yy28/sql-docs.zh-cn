@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 991223c373113b465c3182f552e5f5d157efef9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831598"
 ---
 # <a name="for-loop-container"></a>For 循环容器
@@ -36,11 +36,11 @@ ms.locfileid: "62831598"
   
  下图显示了一个具有发送邮件任务的 For 循环容器。 如果初始化表达式为 `@Counter = 0`，求值表达式为 `@Counter < 4`，迭代表达式为 `@Counter = @Counter + 1`，则该循环将重复运行四次并发送四封电子邮件。  
   
- ![For 循环容器重复执行任务四次](../media/ssis-forloop.gif "A For Loop container repeats a task four times")  
+ ![For 循环容器重复执行任务四次](../media/ssis-forloop.gif "For 循环容器重复执行任务四次")  
   
- 表达式必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式。  
+ 表达式必须是有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的表达式。  
   
- 若要创建初始化和赋值表达式，可以使用赋值运算符 (=)。 此运算符在其他方面不为 Integration Services 表达式语法所支持，只能供 For 循环容器中的初始化和赋值表达式类型使用。 使用赋值运算符的任何表达式都必须使用语法 `@Var = <expression>`，其中 Var  是运行时变量，\<expression> 是遵循 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 表达式语法规则的表达式。 表达式可以包含 SSIS 表达式语法支持的变量、文字以及任何运算符和函数。 表达式的计算结果的数据类型必须能够转换为变量的数据类型。  
+ 若要创建初始化和赋值表达式，可以使用赋值运算符 (=)。 此运算符在其他方面不为 Integration Services 表达式语法所支持，只能供 For 循环容器中的初始化和赋值表达式类型使用。 使用赋值运算符的任何表达式都必须使用语法 `@Var = <expression>`，其中 Var**** 是运行时变量，\<expression> 是遵循 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 表达式语法规则的表达式。 表达式可以包含 SSIS 表达式语法支持的变量、文字以及任何运算符和函数。 表达式的计算结果的数据类型必须能够转换为变量的数据类型。  
   
  一个 For 循环容器只能有一个求值表达式。 这意味着 For 循环容器对所有其控制流元素运行相同次数。 因为 For 循环容器可以包含其他 For 循环容器，所以可以在包中构建嵌套循环和实现复杂循环。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62831598"
   
  有关可以在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [For Loop 编辑器](../for-loop-editor.md)  
+-   [For 循环编辑器](../for-loop-editor.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   
@@ -60,11 +60,11 @@ ms.locfileid: "62831598"
 ## <a name="related-tasks"></a>Related Tasks  
  有关如何配置 For 循环容器的信息，请参阅以下主题。  
   
--   [配置 For Loop 容器](for-loop-container.md)  
+-   [配置 For 循环容器](for-loop-container.md)  
   
 -   [设置任务或容器的属性](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [控制流](control-flow.md)   
  [Integration Services (SSIS) 表达式](../expressions/integration-services-ssis-expressions.md)  
   

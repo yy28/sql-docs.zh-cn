@@ -1,5 +1,5 @@
 ---
-title: 第 3 课：使用模板、 解决方案和脚本项目 |Microsoft Docs
+title: 课程 3：使用模板、解决方案和脚本项目 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8a1825f00676618b9bcc98c774e7facd6f0e078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753014"
 ---
 # <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>第 3 课：使用模板、解决方案和脚本项目

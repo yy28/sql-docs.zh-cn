@@ -1,5 +1,5 @@
 ---
-title: sys.dm_cryptographic_provider_sessions (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_cryptographic_provider_sessions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff099e48540b7255e2453bfb9b90c9515196449c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005093"
 ---
-# <a name="sysdmcryptographicprovidersessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
+# <a name="sysdm_cryptographic_provider_sessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回有关加密提供程序的已打开会话的信息。  
@@ -47,19 +47,19 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|加密提供程序的标识号。|  
-|**session_handle**|**varbytes(8)**|加密会话句柄。|  
+|**session_handle**|**varbytes （8）**|加密会话句柄。|  
 |**标识**|**nvarchar(128)**|用于送至加密提供程序进行身份验证的标识。|  
-|**spid**|**short**|连接的会话 ID SPID。 有关详细信息，请参阅 [@@SPID (Transact-SQL)](../../t-sql/functions/spid-transact-sql.md)。|  
+|spid |**short**|连接的会话 ID SPID。 有关详细信息，请参阅 [@@SPID (Transact-SQL)](../../t-sql/functions/spid-transact-sql.md)。|  
   
 ## <a name="remarks"></a>备注  
- **Sys.dm_cryptographic_provider_sessions**视图是当前连接的 public 可见。 若要查看所有加密连接，必须具有**控制**server 权限。  
+ **Sys. dm_cryptographic_provider_sessions**视图对当前连接的 public 可见。 若要查看所有加密连接，必须具有**CONTROL** server 权限。  
   
-## <a name="see-also"></a>请参阅  
- [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [可扩展密钥管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+## <a name="see-also"></a>另请参阅  
+ [Transact-sql&#41;&#40;安全目录视图](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [可扩展的密钥管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

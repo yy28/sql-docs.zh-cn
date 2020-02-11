@@ -1,5 +1,5 @@
 ---
-title: 对于每个项的列对话框 UI 参考 |Microsoft Docs
+title: "\"对于每个项列\" 对话框 UI 参考 |Microsoft Docs"
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f9b5ad88ce49eb13b4aa460e02e295b13135ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058550"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>“For Each Item 列”对话框 UI 参考
@@ -31,14 +31,14 @@ ms.locfileid: "66058550"
  **数据类型**  
  选择数据类型。  
   
- **“添加”**  
+ **添加**  
  添加新列。  
   
  **删除**  
- 选择某列，再单击“删除”  。  
+ 选择某列，再单击“删除”****。  
   
-## <a name="see-also"></a>请参阅  
- [Foreach 循环编辑器&#40;集合页面&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
+## <a name="see-also"></a>另请参阅  
+ [Foreach 循环编辑器 &#40;收集页面&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Foreach 循环容器](control-flow/foreach-loop-container.md)  
   
   

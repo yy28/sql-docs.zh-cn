@@ -14,19 +14,19 @@ ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 76f89af5ea6a7b1ab7a01bda14cce391a1b4b750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122766"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **SqlDataRecord**对象表示一行数据，以及其相关的元数据。  
+  **SqlDataRecord**对象表示一行数据及其相关元数据。  
   
- 托管存储的过程可以发送到客户端结果集不是来自**SqlDataReader**。 **SqlDataRecord**类，以及与**SendResultsStart**， **SendResultsRow**，以及**SendResultsEnd** 方法**SqlPipe**对象，允许存储的过程以向客户端发送自定义结果集。  
+ 托管存储过程可能会发送到并非来自**SqlDataReader**的客户端结果集。 **SqlDataRecord**类与**SqlPipe**对象的**SendResultsStart**、 **SendResultsRow**和**SendResultsEnd**方法一起允许存储过程将自定义结果集发送到客户端。  
   
- 有关详细信息，请参阅**Microsoft.SqlServer.Server.SqlDataRecord**类在.NET Framework SDK 文档中的参考文档。  
+ 有关详细信息，请参阅 .NET Framework SDK 文档中的**SqlDataRecord**类参考文档。  
   
 ## <a name="example"></a>示例  
  下面的示例创建一个新雇员记录并将其返回到调用方。  
@@ -87,7 +87,7 @@ Public Shared Sub  CreateNewRecordVBProc ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SqlPipe 对象](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
   
   

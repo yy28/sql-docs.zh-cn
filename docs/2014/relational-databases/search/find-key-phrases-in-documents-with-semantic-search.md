@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cfb769db0de0e962c52d042e19134b849b3c1c3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011349"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>使用语义搜索查找文档中的关键短语
   介绍如何在为统计语义索引配置的文档或文本列中查找关键短语。  
   
-##  <a name="BasicsQueryKey"></a> 在文档中查找关键短语  
+##  <a name="BasicsQueryKey"></a>在文档中查找关键短语  
   
-###  <a name="howtofind"></a> 如何：使用 SEMANTICKEYPHRASETABLE 在文档中查找关键短语  
+###  <a name="howtofind"></a>如何：通过 SEMANTICKEYPHRASETABLE 在文档中查找关键短语  
  若要确定特定文档中的关键短语或确定包含特定关键短语的文档，可以查询函数 [semantickeyphrasetable (Transact-SQL)](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql)。  
   
  SEMANTICKEYPHRASETABLE 为与指定表中的列关联的那些关键短语返回包含零行、一行或多行的表。 可以在 SELECT 语句的 FROM 子句中像引用常规表名那样引用此行集函数。  
@@ -37,7 +37,7 @@ ms.locfileid: "66011349"
 > [!IMPORTANT]  
 >  针对的列必须启用了全文索引和语义索引。  
   
-###  <a name="HowToTopPhrases"></a> 示例 1：查找特定文档中的最重要关键短语  
+###  <a name="HowToTopPhrases"></a>示例1：查找特定文档中的前几个关键短语  
  以下示例从通过 @DocumentId 变量指定的文档中检索前 10 个关键短语，该变量位于 AdventureWorks 示例数据库的 Production.Document 表的 Document 列中。 @DocumentId 变量表示全文检索的键列的一个值。  
   
 ```sql  
@@ -54,7 +54,7 @@ GO
   
  **SEMANTICKEYPHRASETABLE** 函数使用索引查找替代表扫描高效检索这些结果。  
   
-###  <a name="HowToTopDocuments"></a> 示例 2：查找包含特定关键短语的最相关文档  
+###  <a name="HowToTopDocuments"></a>示例2：查找包含特定关键短语的顶级文档  
  以下示例从 AdventureWorks 示例数据库的 Production.Document 表的 Document 列中检索包含关键短语“Bracket”的前 25 个文档。  
   
 ```sql  

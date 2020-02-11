@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f916e8acf45c822439a116bc5ad1ff40a11d2de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107699"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>打印报表（报表生成器和 SSRS）
@@ -46,10 +46,10 @@ ms.locfileid: "66107699"
  介绍如何打印已导出到其他应用程序的报表。  
   
  [打印报表（报表生成器和 SSRS）](print-a-report-report-builder-and-ssrs.md)  
- 分步介绍了如何打印报表、如何控制页边距，以及如何为硬分页呈现器呈现的报表指定纸张大小：PDF、Image 或 Print。  
+ 提供有关如何打印报表、如何控制页边距以及如何为硬分页呈现器（PDF、图像或打印）将呈现的报表指定纸张大小的分步说明。  
   
-## <a name="see-also"></a>请参阅  
- [导出报表&#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [导出报表 &#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [页眉和页脚（报表生成器和 SSRS）](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [图像（报表生成器和 SSRS）](../report-design/images-report-builder-and-ssrs.md)   
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  

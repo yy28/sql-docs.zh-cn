@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd00b1966351b5205da737a8f04912b015ec81e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023120"
 ---
 # <a name="full-text-event-category"></a>Full Text 事件类别
@@ -28,7 +28,7 @@ ms.locfileid: "63023120"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[FT:Crawl Aborted 事件类](ft-crawl-aborted-event-class.md)|指示在全文爬网过程中遇到了异常。|  
 |[FT:Crawl Started 事件类](ft-crawl-started-event-class.md)|指示全文爬网已开始。|  

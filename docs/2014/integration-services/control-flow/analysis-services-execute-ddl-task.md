@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a74ab896e974410e8357a22546cb63ed7365a149
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833152"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 执行 DDL 任务
@@ -38,7 +38,7 @@ ms.locfileid: "62833152"
 ## <a name="ddl-statements"></a>DDL 语句  
  DDL 语句表示为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 中的语句，并且嵌入 XML for Analysis (XMLA) 命令中。  
   
--   ASSL 用于定义和说明 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例及其包含的数据库和数据库对象。 有关详细信息，请参阅[Analysis Services 脚本语言&#40;ASSL&#41;引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。  
+-   ASSL 用于定义和说明 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例及其包含的数据库和数据库对象。 有关详细信息，请参阅[Analysis Services 脚本语言 &#40;ASSL&#41; 引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。  
   
 -   XMLA 是用于向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例发送操作命令（如 Create、Alter 或 Process）的命令语言。 有关详细信息，请参阅 [XML for Analysis (XMLA) 参考](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)。  
   
@@ -218,9 +218,9 @@ ms.locfileid: "62833152"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [Analysis Services 执行 DDL 任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [Analysis Services 在 "常规" 页上执行 DDL 任务编辑器 &#40;&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Analysis Services 执行 DDL 任务编辑器（DDL 页）](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
+-   [Analysis Services &#40;DDL 页中执行 DDL 任务编辑器&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

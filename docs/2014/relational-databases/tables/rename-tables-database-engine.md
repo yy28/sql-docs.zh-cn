@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196727"
 ---
 # <a name="rename-tables-database-engine"></a>重命名表（数据库引擎）
@@ -47,24 +47,24 @@ ms.locfileid: "68196727"
 ###  <a name="Restrictions"></a> 限制和局限  
  重命名表将不会自动重命名对该表的引用。 您必须手动修改引用已重命名表的任何对象。 例如，如果您重命名某个表，并且触发器中引用了该表，则必须修改触发器以反映新的表名称。 请使用 [sys.sql_expression_dependencies](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql) 在重命名表之前列出该表上的依赖关系。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-rename-a-table"></a>重命名表  
   
-1.  在对象资源管理器中，右键单击要重命名的表，然后从快捷菜单中选择“设计”  。  
+1.  在对象资源管理器中，右键单击要重命名的表，然后从快捷菜单中选择“设计”****。  
   
-2.  从 **“视图”** 菜单上选择 **“属性”** 。  
+2.  从 **“视图”** 菜单上选择 **“属性”**。  
   
 3.  在 **“属性”** 窗口的 **“名称”** 值字段中，为该表键入新名称。  
   
 4.  若要取消此操作，请在离开此字段前按 Esc 键。  
   
-5.  从“文件”  菜单中，选择“保存表名”   。  
+5.  从“文件”**** 菜单中，选择“保存 table name”****__。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

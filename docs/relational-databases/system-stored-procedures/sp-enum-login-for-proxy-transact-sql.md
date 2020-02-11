@@ -1,5 +1,5 @@
 ---
-title: sp_enum_login_for_proxy (TRANSACT-SQL) |Microsoft Docs
+title: sp_enum_login_for_proxy （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124680"
 ---
-# <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
+# <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出安全主体服务器和代理服务器之间的关联。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,36 +42,36 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'` 名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主体、 登录名、 服务器角色或**msdb**列出代理的数据库角色。 名称是**nvarchar(256)** ，默认值为 NULL。  
+`[ @name = ] 'name'`要列出其代理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的主体、登录名、服务器角色或**msdb**数据库角色的名称。 名称为**nvarchar （256）**，默认值为 NULL。  
   
-`[ @proxy_id = ] id` 要列出信息的代理代理标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
+`[ @proxy_id = ] id`要列出其信息的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。 可以指定*id*或*proxy_name* 。  
   
-`[ @proxy_name = ] 'proxy_name'` 要列出信息的代理服务器的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
+`[ @proxy_name = ] 'proxy_name'`要列出其信息的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。 可以指定*id*或*proxy_name* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|代理服务器标识号。|  
 |**proxy_name**|**sysname**|代理服务器的名称。|  
-|**name**|**sysname**|关联的安全主体服务器的名称。|  
-|**flag**|**int**|安全主体服务器的类型。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名<br /><br /> **1** = 固定的系统角色<br /><br /> **2** = 中的数据库角色**msdb**|  
+|**路径名**|**sysname**|关联的安全主体服务器的名称。|  
+|**随意**|**int**|安全主体服务器的类型。<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录<br /><br /> **1** = 固定系统角色<br /><br /> **2** = **msdb**中的数据库角色|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>备注  
- 如果不提供任何参数， **sp_enum_login_for_proxy**列出了每个代理有关的实例中的所有登录名的信息。  
+ 如果未提供任何参数， **sp_enum_login_for_proxy**会列出有关每个代理的实例中所有登录名的信息。  
   
- 如果提供代理 id 或代理名称， **sp_enum_login_for_proxy**列出有权访问代理的登录名。 如果登录名，则**sp_enum_login_for_proxy**代理登录名具有访问权限的列表。  
+ 当提供代理 id 或代理名称时， **sp_enum_login_for_proxy**会列出有权访问代理的登录名。 如果提供了登录名， **sp_enum_login_for_proxy**会列出登录名有权访问的代理。  
   
  当同时提供代理信息和登录名时，如果指定的登录有权访问指定的代理，则结果集将返回一行。  
   
- 此存储的过程位于**msdb**。  
+ 此存储过程位于**msdb**中。  
   
 ## <a name="permissions"></a>权限  
- 执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
+ 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
   
@@ -98,9 +98,9 @@ EXEC dbo.sp_enum_login_for_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
- [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [sp_help_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
+ [sp_grant_login_to_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

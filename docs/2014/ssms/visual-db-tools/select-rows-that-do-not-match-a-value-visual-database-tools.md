@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067533"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>选择与值不匹配的行 (Visual Database Tools)
@@ -27,9 +27,9 @@ ms.locfileid: "63067533"
   
 ### <a name="to-find-rows-that-do-not-match-a-value"></a>查找与某值不匹配的行  
   
-1.  如果尚未指定搜索条件，请将要在搜索条件内使用的列或表达式添加到[“条件”窗格](visual-database-tools.md)中。  
+1.  如果尚未执行此操作，请将要在搜索条件中使用的列或表达式添加到 "[条件" 窗格](visual-database-tools.md)中。  
   
-2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”  网格列中，顺序输入 NOT 运算符和搜索值。  
+2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”**** 网格列中，顺序输入 NOT 运算符和搜索值。  
   
  例如，若要在 `products` 表中查找产品代码列中的值以“A”之外的其他字符开头的所有行，则可以输入如下搜索条件：  
   
@@ -37,8 +37,8 @@ ms.locfileid: "63067533"
 NOT LIKE 'A%'  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [输入规则搜索值&#40;可视化数据库工具&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools&#41;中输入搜索值的规则](rules-for-entering-search-values-visual-database-tools.md)   
  [指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

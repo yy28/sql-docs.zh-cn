@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 085afa47a00875f5311e6996502e9030b6070920
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211225"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包括用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询、表和关系图数据库的可视化设计器。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]包括用于生成[!INCLUDE[tsql](../../includes/tsql-md.md)]查询、表和关系图数据库的可视化设计器。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  通过以下任务以开始使用可视化数据库工具：  

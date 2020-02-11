@@ -1,5 +1,5 @@
 ---
-title: 在本机编译存储过程上受支持的构造 |Microsoft Docs
+title: 本机编译的存储过程支持的构造 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467871"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>本机编译的存储过程支持的构造
@@ -40,11 +40,11 @@ ms.locfileid: "62467871"
 ## <a name="security"></a>安全性  
  支持以下各项：  
   
--   有关过程：EXECUTE AS OWNER、 SELF 和 user。  
+-   用于过程：EXECUTE AS OWNER、SELF 和 USER。  
   
 -   表和过程的 GRANT 和 DENY 权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [本机编译的存储过程](natively-compiled-stored-procedures.md)  
   
   

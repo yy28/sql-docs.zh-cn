@@ -1,5 +1,5 @@
 ---
-title: 升级到另一版本的 SQL Server 2014 （安装程序） |Microsoft Docs
+title: 升级到 SQL Server 2014 的不同版本（安装程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774571"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>升级到 SQL Server 2014 的另一版本（安装）
@@ -26,12 +26,12 @@ ms.locfileid: "62774571"
   
 -   [按 SQL Server 版本划分的计算能力限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
--   [安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在群集环境中：** 运行版本升级的节点之一上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]群集就足够了。 此节点可以是活动节点或被动节点，并且在版本升级过程中引擎不使资源脱机。 版本升级后需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或故障转移到其他节点。  
+>  **在群集环境中： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]群集的一个节点上运行版本升级就足够了。 此节点可以是活动节点或被动节点，并且在版本升级过程中引擎不使资源脱机。 版本升级后需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或故障转移到其他节点。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取权限的域帐户。  
   
 > [!IMPORTANT]  
@@ -49,7 +49,7 @@ ms.locfileid: "62774571"
   
 4.  系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”** 。  
   
-5.  在“产品密钥”页上，选择相应的单选按钮，这些按钮指示您是升级到免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是您拥有该产品生产版本的 PID 密钥。 有关详细信息，请参阅[各版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)并[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)。  
+5.  在“产品密钥”页上，选择相应的单选按钮，这些按钮指示您是升级到免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是您拥有该产品生产版本的 PID 密钥。 有关详细信息，请参阅[SQL Server 2014 的版本和组件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[支持的版本和版本升级](supported-version-and-edition-upgrades.md)。  
   
 6.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 若要继续，请单击 **“下一步”** 。 若要结束安装程序，请单击 **“取消”** 。  
   
@@ -73,13 +73,13 @@ ms.locfileid: "62774571"
   
  如果是从 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]升级，除了执行上面的步骤外，您可能还需要执行下列操作：  
   
--   升级之后，在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中设置的用户将保持其原有的设置。 具体而言，BUILTIN\Users 组将保持其原有的设置。 可以根据需要禁用、删除或重新设置这些帐户。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+-   升级之后，在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中设置的用户将保持其原有的设置。 具体而言，BUILTIN\Users 组将保持其原有的设置。 可以根据需要禁用、删除或重新设置这些帐户。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../configure-windows/configure-windows-service-accounts-and-permissions.md)预览版本升级问题的解答。  
   
 -   升级之后，tempdb 和 model 系统数据库的大小和恢复模式保持不变。 可以根据需要重新配置这些设置。 有关详细信息，请参阅[备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
   
 -   升级之后，模板数据库保留在计算机上。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [升级到 SQL Server 2014](upgrade-sql-server.md)   
  [向后兼容性](../../getting-started/backward-compatibility.md)  
   

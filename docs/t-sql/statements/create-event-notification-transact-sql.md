@@ -24,10 +24,10 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902810"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67902810"
 
   创建可向 Service Broker 服务发送有关数据库或服务器事件的信息的对象。 只能使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句创建事件通知。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -89,7 +89,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  当 CREATE EVENT NOTIFICATION 语句完成时，event_group 通过将其涵盖的事件类型添加到 sys.events 目录视图中，还可作为宏使用   。  
   
- ' broker_service '     
+ **'** *broker_service* **'**  
  指定接收事件实例数据的目标服务。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为事件通知打开一个或多个与目标服务的会话。 该服务必须具有用于发送消息的相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件消息类型和约定。  
   
  在删除事件通知前，会话一直保持打开状态。 某些错误可能导致会话提前关闭。 显式结束部分或全部会话可能导致目标服务无法接收更多消息。  
@@ -100,7 +100,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 包括事件通知专用的消息类型和约定。 所以，无需创建 Service Broker 启动服务，因为已存在指定以下约定名称的启动服务：`https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
   
  接收事件通知的目标服务必须使用此预先存在的约定。  

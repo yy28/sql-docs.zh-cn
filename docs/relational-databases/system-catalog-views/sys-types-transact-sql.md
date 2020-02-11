@@ -1,5 +1,5 @@
 ---
-title: sys.types (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095573"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
@@ -33,32 +33,32 @@ ms.locfileid: "68095573"
 
   每个系统类型和用户定义类型都在表中对应一行。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|类型的名称。 在架构内是唯一的。|  
+|**路径名**|**sysname**|类型的名称。 在架构内是唯一的。|  
 |**system_type_id**|**tinyint**|类型的内部系统类型的 ID。|  
 |**user_type_id**|**int**|类型的 ID。 在该数据库中是唯一的。 对于系统数据类型， **user_type_id** = **system_type_id**。|  
-|schema_id |**int**|类型所属架构的 ID。|  
+|**schema_id**|**int**|类型所属架构的 ID。|  
 |**principal_id**|**int**|如果个体所有者与架构所有者不同，则表示该所有者的 ID。 默认情况下，架构包含的对象由架构所有者拥有。 不过，通过使用 ALTER AUTHORIZATION 语句更改所有权可以指定备用所有者。<br /><br /> 如果没有另外的个体所有者，则值为 NULL。|  
-|**max_length**|**smallint**|类型的最大长度（字节）。<br /><br /> -1 = 的列数据类型为**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或者**xml**。<br /><br /> 有关**文本**列， **max_length**值将为 16。|  
+|**max_length**|**smallint**|类型的最大长度（字节）。<br /><br /> -1 = 列数据类型为**varchar （max）**、 **nvarchar （max）**、 **varbinary （max）** 或**xml**。<br /><br /> 对于**text**列， **max_length**值将为16。|  
 |**精度**|**tinyint**|如果类型基于数值，则表示类型的最大精度；否则，该值为 0。|  
-|**scale**|**tinyint**|如果类型基于数值，则表示类型的最大小数位数；否则，该值为 0。|  
+|**纵向**|**tinyint**|如果类型基于数值，则表示类型的最大小数位数；否则，该值为 0。|  
 |**collation_name**|**sysname**|如果类型基于字符，则表示类型排序规则的名称；否则，该值为 NULL。|  
 |**is_nullable**|**bit**|类型可以为 Null。|  
 |**is_user_defined**|**bit**|1 = 用户定义类型。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型。|  
 |**is_assembly_type**|**bit**|1 = 类型的实现是在 CLR 程序集中定义的。<br /><br /> 0 = 类型基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型。|  
-|**default_object_id**|**int**|通过使用绑定到类型的独立默认值 ID [sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)。<br /><br /> 0 = 不存在默认值。|  
-|**rule_object_id**|**int**|通过使用绑定到类型的独立规则的 ID [sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)。<br /><br /> 0 = 不存在规则。|  
+|**default_object_id**|**int**|使用[sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)绑定到类型的独立默认的 ID。<br /><br /> 0 = 不存在默认值。|  
+|**rule_object_id**|**int**|使用[sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)绑定到类型的独立规则的 ID。<br /><br /> 0 = 不存在规则。|  
 |**is_table_type**|**bit**|指示该类型为表。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [标量类型目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的标量类型目录视图](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
- [查询 SQL Server 系统目录常见问题解答](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

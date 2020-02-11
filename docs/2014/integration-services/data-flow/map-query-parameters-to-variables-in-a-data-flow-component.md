@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92caab2b0631c80403c7367aeb98ae001a5e11eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901557"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>将查询参数映射到数据流组件中的变量
@@ -43,7 +43,7 @@ ms.locfileid: "62901557"
   
 7.  单击 **“参数”** 。  
   
-8.  在“设置查询参数”  对话框中，将“参数”  列表中的每个参数映射到“变量”  列表中的某个变量，或通过单击“\<新建变量>”  创建新的变量。 单击“确定”  。  
+8.  在“设置查询参数”  对话框中，将“参数”  列表中的每个参数映射到“变量”  列表中的某个变量，或通过单击“**新建变量>”\<** 创建新的变量。 单击“确定”。   
   
     > [!NOTE]  
     >  只有在包作用域内的系统变量和用户定义变量，诸如 Foreach 循环容器这样的父容器或者包含数据流组件的数据流任务，才用于映射。 变量的数据类型必须与参数所分配的 WHERE 子句的列兼容。  
@@ -52,7 +52,7 @@ ms.locfileid: "62901557"
   
 10. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 源](ole-db-source.md)   
  [查找转换](transformations/lookup-transformation.md)  
   

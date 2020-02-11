@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210717"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>基于时间的行筛选器的最佳实践
@@ -26,7 +26,7 @@ ms.locfileid: "68210717"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- 使用此类型的筛选器时，通常假定合并代理运行时始终发生两件事情：满足此筛选器的行复制到订阅服务器中；从订阅服务器中清除不再满足此筛选器的行。 (有关使用筛选的详细信息`HOST_NAME()`，请参阅[参数化行筛选器](parameterized-filters-parameterized-row-filters.md)。)但是，合并复制只复制并清除自上次同步以来发生更改的数据，而不考虑如何定义数据的行筛选器。  
+ 使用此类型的筛选器时，通常假定合并代理运行时始终发生两件事情：满足此筛选器的行复制到订阅服务器中；从订阅服务器中清除不再满足此筛选器的行。 （有关筛选的`HOST_NAME()`详细信息，请参阅[参数化行筛选器](parameterized-filters-parameterized-row-filters.md)。）但是，合并复制只复制并清除自上次同步后发生更改的数据，而不管您如何为该数据定义行筛选器。  
   
  要使合并复制处理某一行，该行中的数据必须满足行筛选器，并且该行自上次同步以来必须已发生更改。 对于 **SalesOrderHeader** 表，插入行时将输入 **OrderDate** 。 由于插入是一种数据更改，因此各行将如预期的那样被复制到订阅服务器中。 但是，如果订阅服务器中存在不再满足此筛选器的行（这些行是早于七天前的订单中的行），除非由于某种原因更新这些行，否则不会从订阅服务器中将其删除。  
   
@@ -60,7 +60,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|招待会|112|2006-10-04|1|  
-|2|宴会|112|2006-10-10|0|  
+|2|晚餐|112|2006-10-10|0|  
 |3|聚会|112|2006-10-11|0|  
 |4|婚礼|112|2006-10-12|0|  
   
@@ -84,13 +84,13 @@ GO
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|招待会|112|2006-10-04|0|  
-|2|宴会|112|2006-10-10|1|  
+|2|晚餐|112|2006-10-10|1|  
 |3|聚会|112|2006-10-11|1|  
 |4|婚礼|112|2006-10-12|1|  
   
  现在，下周的事件被标记为正准备进行复制。 当下次为事件协调器 112 使用的订阅运行合并代理时，将把第 2、3 和 4 行下载到订阅服务器中，并从订阅服务器中删除第 1 行。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [GETDATE (Transact-SQL)](/sql/t-sql/functions/getdate-transact-sql)   
  [执行作业](../../../ssms/agent/implement-jobs.md)   
  [参数化行筛选器](parameterized-filters-parameterized-row-filters.md)  

@@ -14,25 +14,25 @@ ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 409b2c14282238766457d349287f65d90fe463b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68114322"
 ---
 # <a name="environment-handles"></a>环境句柄
-*环境*是用来访问数据的全局上下文; 与环境关联是全局的性质，例如任何信息：  
+*环境*是用于访问数据的全局上下文;与环境相关联的任何信息都是全局性的，例如：  
   
--   环境的状态  
+-   环境状态  
   
 -   当前环境级别诊断  
   
--   连接在环境上当前分配的句柄  
+-   当前在环境中分配的连接的句柄  
   
 -   每个环境属性的当前设置  
   
- 在一段代码实现 ODBC （驱动程序管理器或驱动程序），环境句柄标识一种结构来包含此信息。  
+ 在实现 ODBC （驱动程序管理器或驱动程序）的代码段中，环境句柄标识包含此信息的结构。  
   
- 在 ODBC 应用程序中不常用环境句柄。 它们始终使用在调用**SQLDataSources**并**SQLDrivers**和有时用于调用**SQLAllocHandle**， **SQLEndTran**，**SQLFreeHandle**， **SQLGetDiagField**，并**SQLGetDiagRec**。  
+ 在 ODBC 应用程序中不经常使用环境句柄。 它们始终用于对**SQLDataSources**和**SQLDrivers**的调用，有时用于调用**SQLAllocHandle**、 **SQLEndTran**、 **SQLFreeHandle**、 **SQLGetDiagField**和**SQLGetDiagRec**。  
   
- 每个段实现 ODBC （驱动程序管理器或驱动程序） 的代码包含一个或多个环境句柄。 例如，驱动程序管理器维护每个应用程序连接到它的单独的环境句柄。 分配环境句柄**SQLAllocHandle**和与已释放**SQLFreeHandle**。
+ 实现 ODBC 的每个代码段（驱动程序管理器或驱动程序）都包含一个或多个环境句柄。 例如，驱动程序管理器为连接到它的每个应用程序维护单独的环境句柄。 环境句柄通过**SQLAllocHandle**分配，并与**SQLFreeHandle**一起释放。

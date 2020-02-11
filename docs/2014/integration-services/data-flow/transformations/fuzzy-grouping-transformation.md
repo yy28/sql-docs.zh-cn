@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900556"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
@@ -69,7 +69,7 @@ ms.locfileid: "62900556"
  此转换有一个输入和一个输出。 它不支持错误输出。  
   
 ## <a name="row-comparison"></a>行比较  
- 在配置模糊分组转换时，可以指定该转换比较转换输入中的行所用的算法。 如果将 Exhaustive 属性设置为`true`，转换将输入中的所有其他行的输入中的每一行进行比较。 这种比较算法可以生成更准确的结果，但是除非输入中的行数很少，否则很有可能使转换的执行速度变得很慢。 若要避免性能问题，是建议将 Exhaustive 属性设置为`true`仅在包开发过程。  
+ 在配置模糊分组转换时，可以指定该转换比较转换输入中的行所用的算法。 如果将 "穷举" 属性设置`true`为，则转换会将输入中的每一行与输入中的每个其他行进行比较。 这种比较算法可以生成更准确的结果，但是除非输入中的行数很少，否则很有可能使转换的执行速度变得很慢。 若要避免性能问题，最好将详尽的属性设置为仅`true`在包开发期间进行设置。  
   
 ## <a name="temporary-tables-and-indexes"></a>临时表和索引  
  在运行时，模糊分组转换会在该转换所连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中创建临时对象，例如表和索引，这些表和索引可能会非常大。 表和索引的大小与转换输入中的行数和模糊分组转换所创建的标记数成比例。  
@@ -83,15 +83,15 @@ ms.locfileid: "62900556"
   
  有关可以在 **“模糊分组转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [模糊分组转换编辑器（“连接管理器”选项卡）](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [模糊分组转换编辑器 &#40;连接管理器选项卡&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [模糊分组转换编辑器（“列”选项卡）](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [模糊分组转换编辑器 &#40;列 "选项卡&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [模糊分组转换编辑器（“高级”选项卡）](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [&#40;高级 "选项卡的" 模糊分组转换编辑器 "&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [转换自定义属性](transformation-custom-properties.md)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62900556"
   
 -   [设置数据流组件的属性](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [模糊查找转换](lookup-transformation.md)   
  [Integration Services 转换](integration-services-transformations.md)  
   

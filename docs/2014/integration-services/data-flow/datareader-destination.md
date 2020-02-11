@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 694e85a56686379d089f3c2fc11721e4dd6f8642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827552"
 ---
 # <a name="datareader-destination"></a>DataReader 目标
-  DataReader 目标使用 ADO.NET `DataReader` 接口显示数据流中的数据。 此数据然后可由其他应用程序占用。 例如，可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表的数据源配置为使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的运行结果。 若要执行此操作，请创建实现 DataReader 目标的数据流。  
+  DataReader 目标使用 ADO.NET `DataReader` 接口显示数据流中的数据。 此数据然后可由其他应用程序占用。 例如，您可以[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]将报表的数据源配置为使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包的运行结果。 若要执行此操作，请创建实现 DataReader 目标的数据流。  
   
  有关以编程方式访问和读取 DataReader 目标中的值的信息，请参阅 [加载本地包的输出](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)。  
   

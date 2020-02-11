@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811054"
 ---
 # <a name="understanding-the-database-schemas"></a>了解数据库架构
@@ -43,7 +43,7 @@ ms.locfileid: "68811054"
 ## <a name="dimension-tables"></a>维度表  
  对于每个维度，架构生成向导都会生成一个要包含在主题区域数据库中的维度表。 维度表的结构取决于在设计它所基于的维度时所做的选择。  
   
- “列”  
+ 列  
  向导将为与维度表所基于的维度中的每个特性关联的绑定（例如，每个特性的 `KeyColumns`、`NameColumn`、`ValueColumn`、`CustomRollupColumn`、`CustomRollupPropertiesColumn` 和 `UnaryOperatorColumn` 等属性的绑定）生成一列。  
   
  关系  
@@ -63,7 +63,7 @@ ms.locfileid: "68811054"
 ## <a name="fact-tables"></a>事实数据表  
  对于多维数据集中的每个度量值组，架构生成向导都会生成一个要包含在主题区域数据库中的事实数据表。 事实数据表的结构取决于在设计它所基于的度量值组时所做的选择，以及在度量值组和任何包含的维度之间建立的关系。  
   
- “列”  
+ 列  
  除了使用 `Count` 聚合函数的度量值以外，向导为每个度量值生成一列。 此类度量值在事实数据表中不需要对应的列。  
   
  如果适用，向导还会为度量值组中每个常规维度关系的每个粒度属性列生成一列；为与维度（与该表基于的度量值组具有事实维度关系）的每个属性关联的绑定生成一列或多列。  
@@ -71,7 +71,7 @@ ms.locfileid: "68811054"
  关系  
  向导会为每个从事实数据表到维度表的粒度属性的常规维度关系生成一种关系。 如果粒度基于维度表的键属性，则在数据库和数据源视图中创建关系。 如果粒度基于其他属性，则仅在数据源视图中创建关系。  
   
- 如果选择在向导中生成索引, 则会为这些关系列中的每个关系列生成非聚集索引。  
+ 如果选择在向导中生成索引，则会为这些关系列中的每个关系列生成非聚集索引。  
   
  约束  
  主键不会在事实数据表中生成。  
@@ -82,7 +82,8 @@ ms.locfileid: "68811054"
  向导会生成一个单独的表以保存度量值组中需要翻译列的任意属性的翻译值。 向导还会为每种所需的语言创建一个单独的列。  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>数据类型转换和默认长度  
- 架构生成向导会在所有情况下忽略数据类型, 但使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar`数据类型的列除外。 `wchar` 数据大小直接翻译为 `nvarchar` 数据类型。 但是，如果使用 `wchar` 大小的列的指定长度大于 4000 字节，则架构生成向导会生成一个错误。  
+ 架构生成向导会在所有情况下忽略数据类型，但使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar`数据类型的列除外。 
+  `wchar` 数据大小直接翻译为 `nvarchar` 数据类型。 但是，如果使用 `wchar` 大小的列的指定长度大于 4000 字节，则架构生成向导会生成一个错误。  
   
  如果数据项（如属性的绑定）没有指定的长度，则针对该列使用下表中列出的默认长度。  
   
@@ -94,7 +95,7 @@ ms.locfileid: "68811054"
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解增量生成](understanding-incremental-generation.md)   
  [管理对数据源视图和数据源所做的更改](manage-changes-to-data-source-views-and-data-sources.md)  
   

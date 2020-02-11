@@ -1,5 +1,5 @@
 ---
-title: 分区和 DirectQuery 模式 (SSAS 表格) |Microsoft Docs
+title: 分区和 DirectQuery 模式（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067312"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>分区和 DirectQuery 模式（SSAS 表格）
-  本节介绍了如何在 DirectQuery 模型中使用分区。 有关表格模型中分区的更多常规信息，请参阅 [分区（SSAS 表格）](partitions-ssas-tabular.md)。  
+  本节介绍了如何在 DirectQuery 模型中使用分区。 有关表格模型中分区的更多常规信息，请参阅[分区（SSAS 表格）](partitions-ssas-tabular.md)。  
   
- 有关如何更改的分区的使用或查看有关分区的信息的说明，请参阅[更改 DirectQuery 分区&#40;SSAS 表格&#41;](../change-the-directquery-partition-ssas-tabular.md)。  
+ 有关如何更改所使用的分区的说明或查看有关分区的信息，请参阅[将 DirectQuery 分区更改 &#40;SSAS 表格&#41;](../change-the-directquery-partition-ssas-tabular.md)。  
   
 ## <a name="using-partitions-in-directquery-mode"></a>在 DirectQuery 模式下使用分区  
  对于每个表，您必须指定要用作 DirectQuery 数据源的单个分区。  如果存在多个分区，则在您切换模型以便启用 DirectQuery 模式时，默认情况下，在该表中已创建的第一个分区将标记为 DirectQuery 分区。 可以在以后通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的分区管理器来更改此设置。  
@@ -42,12 +42,12 @@ ms.locfileid: "66067312"
   
  DirectQuery 分区有两个处理选项。 若要设置此属性，请使用 **中的** “分区管理器” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，然后选择 **“处理选项”** 属性。 下表列出此属性的值，并说明在与连接字符串中的 DirectQueryUsage 属性结合使用时每个值的用途。  
   
-|**DirectQueryUsage**属性|**“处理选项”** 属性|说明|  
+|**DirectQueryUsage**属性|**处理选项**属性|说明|  
 |-----------------------------------|------------------------------------|-----------|  
 |DirectQuery|绝不要处理此分区|模型使用仅限 DirectQuery 时，没必要进行处理。<br /><br /> 在混合模型中，您可以将 DirectQuery 分区配置为永远不会被处理。 例如，如果您正在对一个非常大的数据集进行操作，并且不想将完整结果添加到缓存中，则可以指定 DirectQuery 分区包含表中所有其他分区结果的并集，然后永远不处理该并集。 转到关系数据源的查询将不会受到影响，并且对缓存数据进行的查询将合并来自其他分区的数据|  
-|InMemory 以及 DirectQuery|允许处理分区|如果模型使用混合模式，则您应将相同的分区用于针对内存中的查询和针对 DirectQuery 数据源的查询。|  
+|带有 DirectQuery 的 InMemory|允许处理分区|如果模型使用混合模式，则您应将相同的分区用于针对内存中的查询和针对 DirectQuery 数据源的查询。|  
   
-## <a name="see-also"></a>请参阅  
- [分区（SSAS 表格）](partitions-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;分区](partitions-ssas-tabular.md)  
   
   

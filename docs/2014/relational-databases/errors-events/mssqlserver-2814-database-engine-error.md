@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4c8def0fad1ae7eddb9de2e7206923b872c41ed2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67046769"
 ---
-# <a name="mssqlserver2814"></a>MSSQLSERVER_2814
+# <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
     
 ## <a name="details"></a>详细信息  
   
@@ -32,12 +32,12 @@ ms.locfileid: "67046769"
 |符号名称|PR_POSSIBLE_INFINITE_RECOMPILE|  
 |消息正文|检测到可能无限的重新编译: SQLHANDLE %hs，PlanHandle %hs，起始偏移量 %d，结束偏移量 %d。 上次重新编译的原因为 %d。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  一个或多个语句导致查询批处理至少重新编译 50 次。 应更正指定语句以免进一步重新编译。  
   
  下表列出了重新编译的原因。  
   
-|原因代码|Description|  
+|原因代码|说明|  
 |-----------------|-----------------|  
 |1|架构已更改|  
 |2|统计信息已更改|  
@@ -53,7 +53,7 @@ ms.locfileid: "67046769"
   
 ## <a name="user-action"></a>用户操作  
   
-1.  通过运行以下查询查看导致重新编译的语句。 将 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 占位符替换为错误消息中指定的值。 请注意，对于临时和预定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，**database_name** 和 **object_name** 列将为 NULL。  
+1.  通过运行以下查询查看导致重新编译的语句。 将 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 占位符替换为错误消息中指定的值。 请注意，对于临时和预定义 ** 语句，** database_name** 和 **object_name[!INCLUDE[tsql](../../includes/tsql-md.md)] 列将为 NULL。  
   
      SELECT DB_NAME(st.dbid) AS database_name  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67046769"
   
 3.  如果问题仍然存在，请与 Microsoft 客户支持服务部门联系。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL:StmtRecompile 事件类](../event-classes/sql-stmtrecompile-event-class.md)  
   
   

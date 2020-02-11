@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138877"
 ---
 # <a name="open-file-dialog-box"></a>“打开文件”对话框
@@ -25,10 +25,10 @@ ms.locfileid: "63138877"
  若要访问此对话框，请在“文件”  菜单中，选择“打开”  ，然后选择“文件”  。 从诸如“外部工具”  对话框等其他元素中打开文件时，也将显示此对话框。 在“文件”  菜单中，选择“打开”  ，然后选择“项目/解决方案”  以打开类似的“打开项目”  对话框。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开项目或组件之前，请确定其代码的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开项目或组件的操作可能会在本地计算机上的可信进程中执行其代码。  
+>  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开项目或组件之前，请确定其代码的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开项目或组件的操作可能会在本地计算机上的可信进程中执行其代码。  
   
-## <a name="option"></a>Option  
- **查找范围**  
+## <a name="option"></a>选项  
+ **Look in**  
  在此下拉菜单中查找现有的项目文件夹。 如果在此列表中选择了一个文件夹，则此文件夹的内容将显示在主窗格中。  
   
 ## <a name="my-places-bar"></a>“我的位置”栏  
@@ -67,7 +67,7 @@ ms.locfileid: "63138877"
  **新建文件夹**  
  显示“新建文件夹”  对话框。 使用此选项可以在“查找范围”  下拉列表框中选定文件夹下创建新的子文件夹。  
   
-## <a name="views"></a>Views  
+## <a name="views"></a>视图  
  提供的选项可用于排列和查看“视图”  下拉列表框中选定的项的内容。  
   
  **缩略图**  

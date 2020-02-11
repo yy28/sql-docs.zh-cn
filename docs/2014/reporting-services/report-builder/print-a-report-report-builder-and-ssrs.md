@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e8ebfd96d98bff9ed144db33189e141dc0cfd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107771"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>打印报表（报表生成器和 SSRS）
   在将报表保存到报表服务器之后，可以通过浏览器、报表管理器或用于查看导出报表的任意应用程序查看和打印报表。 在保存报表之前，可以在预览报表时打印它。  
   
- 打印报表时，可以指定所用纸张的大小。 纸张的大小决定了报表的页数以及适合每一页的报表数据。 纸张大小仅影响通过硬分页呈现器呈现的报表：PDF、Image 和 Print。 设置纸张大小不影响其他呈现器。 有关详细信息，请参阅[呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
+ 打印报表时，可以指定所用纸张的大小。 纸张的大小决定了报表的页数以及适合每一页的报表数据。 纸张的大小仅影响通过硬分页呈现器（PDF、Image 和 Print）呈现的报表。 设置纸张大小不影响其他呈现器。 有关详细信息，请参阅[呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
   
  在报表生成器的“报表查看器”工具栏或报表设计器的“预览”中，可以将报表导出到硬分页呈现器或单击“打印”按钮来打印报表的副本。 您可能需要设置纸张大小或其他页面设置属性。 使用 **“报表属性”** 对话框可以更改页面设置属性，包括纸张大小。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "66107771"
   
 -   在 **“运行”** 选项卡上单击 **“页面设置”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [打印报表（报表生成器和 SSRS）](print-reports-report-builder-and-ssrs.md)   
- [导出报表&#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [导出报表 &#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [“报表属性”对话框，页面设置（报表生成器）](../report-properties-dialog-box-page-setup-report-builder.md)   
  [报表设计视图（报表生成器）](report-design-view-report-builder.md)  
   

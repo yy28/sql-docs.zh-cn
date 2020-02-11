@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e9e19d6d6453acedff16e46dbd2d90d92a3b9587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211827"
 ---
 # <a name="modify-primary-keys"></a>修改主键
@@ -37,9 +37,9 @@ ms.locfileid: "68211827"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -52,7 +52,7 @@ ms.locfileid: "68211827"
   
 3.  完成下表中的相应操作：  
   
-    |若要|需要遵循的步骤|  
+    |目标|需要遵循的步骤|  
     |--------|------------------------|  
     |重命名主键|在 **“名称”** 框中键入新名称。 确保新名称不与“选定的主/唯一键或索引”  列表中的名称重复。|  
     |设置聚集选项|若要为主键创建聚集索引，请选择“创建为聚集的”  ，再从下拉列表框中选择相应的选项。 对于每个表，只允许存在一个聚集索引。 如果此选项对您的索引不可用，则您必须首先对现有的聚集索引清除此设置。<br /><br /> 如果未选择此选项，则创建唯一的非聚集索引。|  

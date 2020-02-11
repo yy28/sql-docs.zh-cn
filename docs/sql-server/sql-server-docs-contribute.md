@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68693189"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何参与编辑 SQL Server 文档
@@ -79,7 +79,7 @@ SQL 内容团队会对所有公开发表的内容进行验证，以确保技术�
 
 [sql-docs](https://github.com/MicrosoftDocs/sql-docs) 存储库使用多个标准文件夹来组织内容。
 
-| 文件夹 | 描述 |
+| Folder | 说明 |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | 包含所有已发布的 SQL Server 内容。 子文件夹有逻辑地组织内容的不同区域。 |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | 包括包含文件。 这些文件是可以包含在一个或多个其他主题中的内容块。 |
