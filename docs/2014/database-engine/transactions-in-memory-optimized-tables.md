@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843092"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>内存优化表中的事务
   基于磁盘的表的行版本控制（使用 SNAPSHOT 隔离或 READ_COMMITTED_SNAPSHOT）提供了一种乐观并发控制形式。 读取器和编写器不会相互阻止。 对于内存优化表，编写器不会阻止编写器。 使用基于磁盘的表的行版本控制时，一个事务会锁定行，而尝试更新行的并发事务会被阻塞。 对于内存优化表则没有锁定。 如果两个事务尝试更新同一行，则会发生写/写冲突（错误 41302）。  
   
- 与基于磁盘的表不同内存优化表允许使用更高隔离级别，REPEATABLE READ 和 SERIALIZABLE 乐观并发控制。 不会使用锁来强制实现隔离级别。 而是在事务验证结束时使用锁，以确保可重复读或可序列化假定。 如果违反了假定，则事务将会终止。 有关详细信息，请参阅 [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md)。  
+ 与基于磁盘的表不同，内存优化表允许具有更高隔离级别、可重复读和可序列化的乐观并发控制。 不会使用锁来强制实现隔离级别。 而是在事务验证结束时使用锁，以确保可重复读或可序列化假定。 如果违反了假定，则事务将会终止。 有关详细信息，请参阅 [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md)。  
   
- 内存优化表的重要事务语义包括：  
+ 内存优化表的重要事务语义如下：  
   
 -   多版本控制  
   
@@ -50,7 +50,8 @@ ms.locfileid: "62843092"
  此外，如果某一事务 (TxA) 读取处于提交过程中的其他事务 (TxB) 已插入或修改的行，则该事务会乐观地假设其他事务将提交而不等待提交发生。 在此情况下，事务 TxA 将对事务 TxB 具有提交依赖关系。  
   
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>冲突检测、验证和提交依赖关系检查  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 检测并发事务之间的冲突以及隔离级别冲突，并终止冲突事务中的一个事务。 此事务将需要重试。 (有关详细信息，请参阅[内存优化表上的事务的重试逻辑准则](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。)  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 检测并发事务之间的冲突以及隔离级别冲突，并终止冲突事务中的一个事务。 此事务将需要重试。 （有关详细信息，请参阅[内存优化表上的事务重试逻辑准则](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。）  
   
  系统乐观地假定不存在冲突并且未违反事务隔离。 如果发生可能在数据库中导致不一致或可能违反事务隔离的任何冲突，则会检测到这些冲突，并且事务终止。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "62843092"
   
 ### <a name="error-conditions-for-transactions-accessing-memory-optimized-tables"></a>访问内存优化表的事务的错误情况。  
   
-|错误|应用场景|  
+|错误|场景|  
 |-----------|--------------|  
 |写冲突。 尝试更新自该事务启动以来已更新的记录。|对由并发事务更新或删除的行执行 UPDATE 或 DELETE 操作。|  
 |可重复读验证失败。|由事务读取的行自该事务启动以来已更改（更新或删除）。 可重复读验证通常在使用 REPEATABLE READ 和 SERIALIZABLE 事务隔离级别时进行。|  
@@ -70,7 +71,7 @@ ms.locfileid: "62843092"
 ### <a name="transaction-lifetime"></a>事务生存期  
  上表中提及的失败可能会在事务的不同时间点发生。 下图说明了访问内存优化表的事务的各个阶段。  
   
- ![事务的生存期。](../../2014/database-engine/media/hekaton-transactions.gif "的事务的生存期。")  
+ ![事务的生存期。](../../2014/database-engine/media/hekaton-transactions.gif "事务的生存期。")  
 访问内存优化表的事务的生存期。  
   
 #### <a name="regular-processing"></a>常规处理  
@@ -82,7 +83,7 @@ ms.locfileid: "62843092"
   
  此错误会终止事务（即使 XACT_ABORT 为 OFF 也是如此），这意味着事务将在用户会话结束时回滚。 失败的事务无法提交，仅支持不写入日志和不访问内存优化表的读取操作。  
   
-#####  <a name="cd"></a> 提交依赖关系  
+#####  <a name="cd"></a>提交依赖关系  
  在常规处理过程中，事务可以读取由其他事务写入并处于验证或提交阶段、但尚未提交的行。 这些行是可见的，因为在验证阶段开始时已分配事务的逻辑结束时间。  
   
  如果事务读取这类未提交的行，则会对该事务形成提交依赖关系。 这具有两种主要含义：  
@@ -99,7 +100,7 @@ ms.locfileid: "62843092"
  在验证阶段开始时，将向事务分配逻辑结束时间。 写入数据库的行版本会在此逻辑结束时对其他事务可见。 有关详细信息，请参阅[提交依赖关系](#cd)。  
   
 ##### <a name="repeatable-read-validation"></a>可重复读验证  
- 如果该事务的隔离级别为 REPEATABLE READ 或 SERIALIZABLE，或者在 REPEATABLE READ 或 SERIALIZABLE 隔离下访问表 (详细信息，请参阅部分中的单个操作的隔离中[事务隔离级别](../../2014/database-engine/transaction-isolation-levels.md))，则系统会验证读取是否可重复。 这意味着它会验证由事务读取的行的版本在事务逻辑结束时是否仍是有效行版本。  
+ 如果事务的隔离级别是可重复读或可序列化的，或者如果在可重复读或可序列化隔离下访问表（有关详细信息，请参阅[事务隔离级别](../../2014/database-engine/transaction-isolation-levels.md)中的单个操作的隔离部分），则系统会验证读取是否可重复。 这意味着它会验证由事务读取的行的版本在事务逻辑结束时是否仍是有效行版本。  
   
  如果任何行已更新或更改，则事务无法提交，并显示错误 41305（“由于可重复读验证失败，当前事务无法提交。”）。  
   
@@ -119,7 +120,7 @@ ms.locfileid: "62843092"
  如果检测到虚拟行，则事务无法提交，并显示错误 41325（“由于可序列化验证失败，当前事务无法提交。”）。  
   
 #### <a name="commit-processing"></a>提交处理  
- 如果验证成功且所有事务依赖关系都已清除，则该事务会进入提交处理阶段。 在此阶段中，对持久表的更改会写入日志，随后日志会写入磁盘以确保持续性。 事务的日志记录写入磁盘，控件后返回到客户端。  
+ 如果验证成功且所有事务依赖关系都已清除，则该事务会进入提交处理阶段。 在此阶段中，对持久表的更改会写入日志，随后日志会写入磁盘以确保持续性。 将事务的日志记录写入磁盘后，控件会返回到客户端。  
   
  将清除此事务的所有提交依赖关系，并且等待此事务提交的所有事务都可以继续。  
   
@@ -131,7 +132,7 @@ ms.locfileid: "62843092"
   
 -   内存优化表不支持锁定。 内存优化表不支持通过锁提示（如 TABLOCK、XLOCK、ROWLOCK）实现的显式锁。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解内存优化表的事务](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
   

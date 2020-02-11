@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 8b3f046017aa54f5db96878f8bfb6c435409d839
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957225"
 ---
 # <a name="enable-tde-using-ekm"></a>使用 EKM 启用 TDE
@@ -27,19 +27,19 @@ ms.locfileid: "74957225"
   
  TDE 使用称为数据库加密密钥的对称密钥来加密整个数据库的存储。 还可以使用受 master 数据库的数据库主密钥保护的证书来保护数据库加密密钥。 有关使用数据库主密钥保护数据库加密密钥的详细信息，请参阅[透明数据加密 (TDE)](transparent-data-encryption.md)。 有关当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 Azure VM 上运行时配置 TDE 的信息，请参阅[使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md)。  
   
- **本主题中的**  
+ **本主题内容**  
   
 -   **开始之前：**  
   
-     [限制和限制](#Restrictions)  
+     [限制和局限](#Restrictions)  
   
-     [安全](#Security)  
+     [安全性](#Security)  
   
 -   [使用 EKM 和 Transact-SQL 启用 TDE](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a>限制和限制  
+###  <a name="Restrictions"></a> 限制和局限  
   
 -   必须是高特权用户（如系统管理员）才能创建数据库加密密钥以及加密数据库。 该用户必须能够通过 EKM 模块进行身份验证。  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74957225"
   
 -   您的 EKM 提供程序所需的选项和参数可能与下面的代码示例中所提供的选项和参数不同。 有关详细信息，请参阅 EKM 提供程序。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  本主题使用了以下权限：  
   
--   若要更改配置选项以及运行 RECONFIGURE 语句，你必须具有 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
+-   若要更改配置选项以及运行 RECONFIGURE 语句，您必须具有 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 -   需要 ALTER ANY CREDENTIAL 权限。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "74957225"
   
 -   需要拥有对数据库的 CONTROL 权限才能加密该数据库。  
   
-##  <a name="TsqlProcedure"></a>使用 Transact-sql  
+##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-enable-tde-using-ekm"></a>使用 EKM 启用 TDE  
   
@@ -73,13 +73,13 @@ ms.locfileid: "74957225"
 2.  根据 EKM 提供程序的要求，将证书安装到计算机上。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不提供 EKM 提供程序。 每个 EKM 提供程序可以有不同的安装、配置和授权用户的过程。  请查阅 EKM 提供程序文档，完成此步骤。  
+    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不提供 EKM 提供程序。 每个 EKM 提供程序可以有不同的安装、配置和授权用户的过程。  请查阅 EKM 提供程序文档，完成此步骤。  
   
 3.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-4.  在“标准”  菜单栏上，单击“新建查询” ****。  
+4.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-5.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” ****。  
+5.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Enable advanced options.  
@@ -149,24 +149,24 @@ ms.locfileid: "74957225"
   
  有关详细信息，请参阅以下主题：  
   
--   [sp_configure &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [&#40;Transact-sql&#41;创建加密提供程序](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [&#40;Transact-sql&#41;创建凭据](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [创建非对称密钥 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [CREATE LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
--   [&#40;Transact-sql&#41;创建数据库加密密钥](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
--   [ALTER LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
+-   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
--   [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+-   [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   
--   [使用 Azure Key Vault &#40;SQL Server 的可扩展密钥管理&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+-   [使用 Azure 密钥保管库的可扩展密钥管理 (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
--   [透明数据加密 Azure SQL 数据库](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
+-   [借助 Azure SQL 数据库实现透明数据加密](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
   
   

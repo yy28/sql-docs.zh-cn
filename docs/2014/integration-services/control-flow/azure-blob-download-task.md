@@ -14,15 +14,15 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af99d5ba79919920b2fb1ff3dde8d0a134a8ef0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832922"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob 下载任务
   Azure Blob 下载任务启用了一个 SSIS 包来从 Azure blob 存储区下载文件。   
-若要添加 **Azure Blob 下载任务**，可将其拖放到 SSIS 设计器，然后双击或右键单击“编辑”，  以查看以下 **Azure Blob 下载任务编辑器** 对话框。  
+若要添加 **Azure Blob 下载任务**，可将其拖放到 SSIS 设计器，然后双击或右键单击“编辑”，以查看以下“Azure Blob 下载任务编辑器”对话框   。  
   
  下表提供了此对话框中的字段说明。  
   
@@ -31,9 +31,9 @@ ms.locfileid: "62832922"
 |**字段**|**说明**|  
 |AzureStorageConnection|选择一个现有的 Azure 存储连接管理器或创建一个新的连接管理器，用于引用指向在其中托管 blob 文件的 Azure 存储帐户。|  
 |BlobContainer|指定包含要下载的 blob 文件的 blob 容器的名称。|  
-|BlobDirectory|指定包含要下载的 blob 文件的 blob 目录。 Blob 目录是虚拟的层次结构。|  
+|BlobDirectory|指定包含要下载的 blob 文件的 blob 目录。 该 blob 目录是一个虚拟层次结构。|  
 |LocalDirectory|指定将在其中存储下载的 blob 文件的本地目录。|  
-|FileName|指定用于选择具有指定名称模式的文件的名称筛选器。 例如 MySheet*.xls\* 包括如 MySheet001.xls 和 MySheetABC.xlsx 等文件。|  
+|FileName|指定名称筛选器以选择具有指定名称模式的文件。 例如 MySheet*.xls\* 包括如 MySheet001.xls 和 MySheetABC.xlsx 等文件。|  
 |TimeRangeFrom/TimeRangeTo|指定时间范围筛选器。 包括介于 **TimeRangeFrom** 和 **TimeRangeTo** 之间修改的文件。|  
   
   

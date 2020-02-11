@@ -1,5 +1,5 @@
 ---
-title: RelatedColumn 属性 (ADOX) |Microsoft Docs
+title: RelatedColumn 属性（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,26 +20,26 @@ ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7bc5440969f662bdbebf885448a1c583a2d10843
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965357"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn 属性 (ADOX)
-指示关联的名称[列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)相关表 （仅限键列） 中。  
+指示相关表中相关[列对象（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)的名称（仅限键列）。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置并返回**字符串**是在相关表中的相关列的名称的值。  
+ 设置并返回一个**字符串**值，该值是相关表中相关列的名称。  
   
 ## <a name="remarks"></a>备注  
  默认值为空字符串 ("")。  
   
- 此属性是只读的[列](../../../ado/reference/adox-api/column-object-adox.md)已追加到集合的对象。  
+ 对于已追加到集合的[列](../../../ado/reference/adox-api/column-object-adox.md)对象，此属性是只读的。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>请参阅  
- [项 Append 方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+## <a name="see-also"></a>另请参阅  
+ [键 Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例（VB）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [项对象 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

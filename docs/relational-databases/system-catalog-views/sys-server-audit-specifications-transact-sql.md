@@ -1,5 +1,5 @@
 ---
-title: sys.server_audit_specifications (TRANSACT-SQL) |Microsoft Docs
+title: sys. server_audit_specifications （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,32 +20,32 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a3c6522218702b52c075ef5ce8088057fc7662b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125009"
 ---
-# <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
+# <a name="sysserver_audit_specifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含有关服务器实例上 SQL Server 审核中的服务器审核规范的信息。 有关 SQL Server Audit 的详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|服务器规范的名称。|  
-|**server_specification_id**|**Int**|ID **server_specification**。|  
-|**create_date**|**日期时间**|审核服务器规范的创建日期。|  
-|**modified_date**|**日期时间**|审核服务器规范的上次修改日期。|  
-|**is_state_enabled**|**tinyint**|审核规范状态：<br /><br /> 0-禁用<br /><br /> 1-启用|  
+|**路径名**|**Sysname**|服务器规范的名称。|  
+|**server_specification_id**|**整形**|**Server_specification**的 ID。|  
+|**create_date**|**型**|审核服务器规范的创建日期。|  
+|**modified_date**|**型**|审核服务器规范的上次修改日期。|  
+|**is_state_enabled**|**tinyint**|审核规范状态：<br /><br /> 0-已禁用<br /><br /> 1-已启用|  
 |**audit_GUID**|**uniqueidentifier**|包含此规范的审核的 GUID。 在服务器启动期间成员服务器审核规范的枚举过程中使用。|  
   
 ## <a name="permissions"></a>权限  
- 具有主体**ALTER ANY SERVER AUDIT**或**VIEW ANY DEFINITION**权限有权访问此目录视图。 此外，不得被拒绝主体**VIEW ANY DEFINITION**权限。  
+ 具有**ALTER ANY SERVER AUDIT**或**VIEW any DEFINITION**权限的主体有权访问此目录视图。 此外，不能拒绝主体**VIEW ANY DEFINITION**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   

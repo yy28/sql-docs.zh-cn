@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072853"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步 Analysis Services 数据库
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括一个数据同步功能，该功能通过将数据和元数据从源服务器上的数据库复制到目标服务器上的数据库，使两个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库等同。 使用“同步数据库”功能可完成以下任务之一：  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]包含一个数据库同步功能，该功能[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过将源服务器上的数据库中的数据和元数据复制到目标服务器上的数据库，使两个数据库等同。 使用“同步数据库”功能可完成以下任务之一：  
   
 -   将数据库从临时服务器部署到生产服务器。  
   
@@ -40,21 +40,21 @@ ms.locfileid: "66072853"
  若要同步数据库，请运行同步数据库向导以立即同步数据库，或使用该向导生成可以在以后运行的同步脚本。 任一方法都可以用于提高 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库和多维数据集的可用性和可伸缩性。  
   
 > [!NOTE]  
->  以下针对以前版本的 Analysis Services 撰写的白皮书仍适用于使用 SQL Server 2012 生成的可缩放多维解决方案。 有关详细信息，请参阅[使用 Analysis Services 缩放查询](https://go.microsoft.com/fwlink/?LinkId=253136)和[使用只读数据库缩放 Analysis Services 查询](https://go.microsoft.com/fwlink/?LinkId=253137.)  
+>  以下针对以前版本的 Analysis Services 撰写的白皮书仍适用于使用 SQL Server 2012 生成的可缩放多维解决方案。 有关详细信息，请参阅 [使用 Analysis Services 缩放查询](https://go.microsoft.com/fwlink/?LinkId=253136) 和 [使用只读数据库缩放 Analysis Services 查询](https://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## <a name="prerequisites"></a>先决条件  
- 在启动数据库同步的目标服务器上，您必须是具有 Analysis Services 服务器管理员角色的成员。 在源服务器上，您的 Windows 用户帐户必须拥有源数据库上的完全控制权限。 如果以交互方式同步数据库，请注意同步在 Windows 用户标识的安全上下文中运行。 如果帐户被拒绝访问特定对象，则操作将排除这些对象。 有关服务器管理员角色和数据库权限的详细信息，请参阅[授予服务器管理员权限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)并[授予数据库权限&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)。  
+## <a name="prerequisites"></a>必备条件  
+ 在启动数据库同步的目标服务器上，您必须是具有 Analysis Services 服务器管理员角色的成员。 在源服务器上，您的 Windows 用户帐户必须拥有源数据库上的完全控制权限。 如果以交互方式同步数据库，请注意同步在 Windows 用户标识的安全上下文中运行。 如果帐户被拒绝访问特定对象，则操作将排除这些对象。 有关服务器管理员角色和数据库权限的详细信息，请参阅[&#40;Analysis Services 授予服务器管理员权限&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)和[&#40;Analysis Services&#41;授予数据库权限](grant-database-permissions-analysis-services.md)。  
   
  两个服务器上的 TCP 端口 2383 必须都打开，默认实例之间才能建立远程连接。 有关在 Windows 防火墙中创建例外的详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
- 源和目标服务器必须是相同的版本和 service pack。 因为模型元数据，还会同步，以确保生成的兼容性这两个服务器的数量应相同。 每个安装的版本都必须支持数据库同步。 对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，Enterprise、Developer 和 Business Intelligence 版本中支持数据库同步。 每个版本中功能的详细信息，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 源服务器和目标服务器必须具有相同的版本，并且 Service Pack。 由于还会同步模型元数据，因此，为确保两个服务器的内部版本号应相同。 每个安装的版本都必须支持数据库同步。 对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，Enterprise、Developer 和 Business Intelligence 版本中支持数据库同步。 有关每个版本中的功能的详细信息，请参阅[SQL Server 2014 的各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  每个服务器上的服务器配置模式都必须相同。 如果同步的数据库是多维数据库，则必须针对多维服务器模式配置源服务器和目标服务器。 有关部署模式的详细信息，请参阅 [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
  如果源服务器上使用迟缓聚合处理，请关闭它。 在后台处理的聚合可能会干扰数据库同步。 有关设置此服务器属性的详细信息，请参阅 [OLAP Properties](../server-properties/olap-properties.md)。  
   
 > [!NOTE]  
->  要确定同步是不是合适的方法，数据库大小是要考虑的因素。 没有硬件要求，但是如果同步太慢，请考虑同步并行情况下，多个服务器中本技术白皮书所述：[Analysis Services 同步最佳实践](https://go.microsoft.com/fwlink/?LinkID=253136)。  
+>  要确定同步是不是合适的方法，数据库大小是要考虑的因素。 没有硬件要求，但是如果同步太慢，请考虑按以下技术文章所述并行同步多个服务器： [Analysis Services 同步最佳做法](https://go.microsoft.com/fwlink/?LinkID=253136)。  
   
 ## <a name="synchronize-database-wizard"></a>同步数据库向导  
  使用同步数据库向导可执行从源数据库到目标数据库的单向同步，或生成用于指定数据库同步操作的脚本。 在同步过程中，可以同步本机和远程分区并选择是否包含角色。  
@@ -69,7 +69,7 @@ ms.locfileid: "66072853"
   
 -   选择安全级别以及要从源实例和数据库复制到目标实例的成员身份信息。  
   
--   选择是立即同步，还是将同步数据库向导生成的 XML for Analysis (XMLA)“同步”命令保存到脚本文件中，以便以后同步。  
+-   选择是立即同步，还是将同步数据库向导生成的 XML for Analysis (XMLA)“同步”**** 命令保存到脚本文件中，以便以后同步。  
   
  默认情况下，向导同步除现有安全组中的成员身份以外的所有数据和元数据。 您还可以在同步数据和元数据时复制所有安全设置或忽略所有安全设置。  
   
@@ -77,11 +77,11 @@ ms.locfileid: "66072853"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到将运行目标数据库的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 例如，如果要将数据库部署到生产服务器，则在生产服务器上运行该向导。  
   
-2.  在对象资源管理器中，右键单击“数据库”文件夹，然后单击“同步”。  
+2.  在对象资源管理器中，右键单击“数据库”**** 文件夹，然后单击“同步”****。  
   
 3.  指定源服务器和源数据库。 在“选择要同步的数据库”页上，在 **“源服务器”** 和 **“源数据库”** 中键入源服务器和源数据库的名称。 例如，如果从测试环境部署到生产服务器，则源是临时服务器上的数据库。  
   
-     **“目标服务器”** 显示同步 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “源数据库” **中所选数据库中的数据和元数据时所使用的** 实例的名称。  
+     **目标服务器**显示在 " [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **源数据库**" 中所选数据库中的数据和元数据进行同步时所用实例的名称。  
   
      同步将在具有相同名称的源数据库和目标数据库上发生。 如果目标服务器已经有与源数据库共享相同名称的数据库，则使用源的元数据和数据更新目标数据库。 如果该数据库不存在，将在目标服务器上创建它。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66072853"
      **目标文件夹**  
      显示要在其中同步本地分区的目标 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的文件夹名称。 如果该列包含值“(Default)”，则目标实例的默认位置应包含本地分区。  
   
-     单击省略号 (**...**) 按钮可显示“查找远程文件夹”对话框，通过该对话框可以指定所选位置中存储的本地分区应同步到其中的目标实例上的文件夹。  
+     单击省略号 (**...**) 按钮可显示“查找远程文件夹”**** 对话框，通过该对话框可以指定所选位置中存储的本地分区应同步到其中的目标实例上的文件夹。  
   
     > [!NOTE]  
     >  对于源实例的默认位置中存储的本地分区，无法更改此列。  
@@ -108,9 +108,10 @@ ms.locfileid: "66072853"
      **大小**  
      显示本地分区的估计大小。  
   
-     **“所选位置中的分区”** 选项显示一个网格，对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “位置” **中所选行的** “源文件夹” **列中指定的源**实例所在位置存储的本地分区进行了说明。  
+     
+  **“所选位置中的分区”** 选项显示一个网格，对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “位置” **中所选行的** “源文件夹” **列中指定的源**实例所在位置存储的本地分区进行了说明。  
   
-     **多维数据集**  
+     **Cube**  
      显示包含该分区的多维数据集的名称。  
   
      **度量值组**  
@@ -129,32 +130,33 @@ ms.locfileid: "66072853"
   
      选择 **“位置”** 选项将显示一个网格，其中列出了源数据库的远程分区所在存储位置的详细信息，包括可以从所选数据库中获取的源信息、目标信息和每个位置所使用的存储大小。 该网格包含以下列：  
   
-     **Sync**  
+     **同步**  
      选择此项将在同步期间包括包含远程分区的位置。  
   
     > [!NOTE]  
     >  对于某个位置，如果未选择此选项，将不会同步该位置中包含的远程分区。  
   
-     **“源服务器”**  
+     **源服务器**  
      显示包含远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。  
   
      **源文件夹**  
-     显示包含远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的文件夹名称。 如果该列包含值“(Default)”，则“源服务器”中显示的实例的默认位置将包含远程分区。  
+     显示包含远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的文件夹名称。 如果该列包含值“(Default)”，则“源服务器”**** 中显示的实例的默认位置将包含远程分区。  
   
-     **“目标服务器”**  
-     显示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称，应在其中同步“源服务器”和“源文件夹”中指定的位置所存储的远程分区。  
+     **目标服务器**  
+     显示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称，应在其中同步“源服务器”**** 和“源文件夹”**** 中指定的位置所存储的远程分区。  
   
-     单击省略号 (**...**) 按钮可显示“连接管理器” 对话框，并指定应在其中同步所选位置中存储的远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
+     单击省略号 (**...**) 按钮可显示“连接管理器” **** 对话框，并指定应在其中同步所选位置中存储的远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
      **目标文件夹**  
      显示要在其中同步远程分区的目标 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的文件夹名称。 如果该列包含值“(Default)”，则目标实例的默认位置应包含远程分区。  
   
-     单击省略号 (**...**) 按钮可显示“查找远程文件夹” 对话框，通过该对话框可以指定所选位置中存储的远程分区应同步到其中的目标实例上的文件夹。  
+     单击省略号 (**...**) 按钮可显示“查找远程文件夹”**** 对话框，通过该对话框可以指定所选位置中存储的远程分区应同步到其中的目标实例上的文件夹。  
   
      **大小**  
      显示该位置中存储的远程分区的估计大小。  
   
-     **“所选位置中的分区”** 显示一个网格，对在源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上指定位置（在 **“位置”** 中所选行的 **“源文件夹”** 列指定）存储的远程分区进行了说明。 该网格包含以下列：  
+     
+  **“所选位置中的分区”** 显示一个网格，对在源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上指定位置（在 **“位置”** 中所选行的 **“源文件夹”** 列指定）存储的远程分区进行了说明。 该网格包含以下列：  
   
      **Cube**  
      显示包含该分区的多维数据集的名称。  
@@ -186,8 +188,8 @@ ms.locfileid: "66072853"
 ## <a name="next-steps"></a>后续步骤  
  如果未同步角色或成员身份，请注意立即指定对目标数据库的用户访问权限。  
   
-## <a name="see-also"></a>请参阅  
- [Synchronize 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;XMLA&#41;同步元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [使用 XMLA 部署模型解决方案](deploy-model-solutions-using-xmla.md)   
  [使用部署向导部署模型解决方案](deploy-model-solutions-using-the-deployment-wizard.md)  
   

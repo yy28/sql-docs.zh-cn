@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_config_schedule (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup sp_backup_config_schedule （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 52df69439cecad5fddf3d38b8852a1ce86cc4dbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942073"
 ---
-# <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (Transact-SQL)
+# <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup sp_backup_config_schedule （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  将配置为自动或自定义计划选项[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
+  为[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置自动或自定义计划选项。  
     
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,28 +49,28 @@ EXEC managed_backup.sp_backup_config_schedule
   
 ##  <a name="Arguments"></a> 参数  
  @database_name  
- 启用托管的备份上特定数据库的数据库名称。 如果为 NULL 或 *，则此托管的备份适用于服务器上的所有数据库。  
+ 用于在特定数据库上启用托管备份的数据库名称。 如果为 NULL 或 *，则此托管备份适用于服务器上的所有数据库。  
   
  @scheduling_option  
- 为系统控制的备份计划中指定系统。 为自定义计划定义的其他参数指定自定义。  
+ 为系统控制的备份计划指定 "系统"。 指定由其他均定义的自定义计划的 "自定义"。  
   
  @full_backup_freq_type  
- 托管备份操作，可以设置为 Daily 或每周频率类型。  
+ 托管备份操作的频率类型，可以设置为 "每日" 或 "每周"。  
   
  @days_of_week  
- 备份每周天数时@full_backup_freq_type设置为每周。 指定完整的字符串名称，如星期一。  此外可以指定多个一天的名称，由竖线分隔。 例如 N'Monday |星期三 |星期五。  
+ 将备份设置为 "每周" 时@full_backup_freq_type的备份日期。 指定完整的字符串名称，如 "Monday"。  还可以指定多个以竖线分隔的星期名称。 例如 N'Monday |星期三 |星期五 "。  
   
  @backup_begin_time  
- 备份窗口开始时间。 备份将不会启动的组合定义的时间窗口之外@backup_begin_time和@backup_duration。  
+ 备份窗口的开始时间。 不会在时间范围之外启动备份，这是由@backup_begin_time和@backup_duration的组合定义的。  
   
  @backup_duration  
- 备份时间窗口的持续时间。 请注意，没有定义的时间窗口期间将已完成的备份不能保证@backup_begin_time和@backup_duration。 在此时间窗口中启动，但超过时段的持续时间的备份操作不会取消。  
+ 备份时间窗口的持续时间。 请注意，不能保证在@backup_begin_time和@backup_duration定义的时间范围内完成备份。 在此时间窗口中启动但超过窗口持续时间的备份操作不会被取消。  
   
  @log_backup_freq  
- 这将确定事务日志备份的频率。 这些备份进行按固定间隔，而不是指定数据库备份的计划。 @log_backup_freq 可以为分钟或几小时，0 是有效的这表示未执行日志备份。 禁用日志备份仅将适用于使用简单恢复模式的数据库。  
+ 这会确定事务日志备份的频率。 这些备份定期发生，而不是按为数据库备份指定的计划进行。 @log_backup_freq可以是分钟或小时，0表示无日志备份。 禁用日志备份仅适用于具有简单恢复模式的数据库。  
   
 > [!NOTE]  
->  如果恢复模式从简单更改为完整，您需要重新配置为非零值从 0 log_backup_freq。  
+>  如果恢复模式从 simple 更改为 full，则需要将 log_backup_freq 从0重新配置为非零值。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -78,10 +78,10 @@ EXEC managed_backup.sp_backup_config_schedule
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 要求的成员身份**db_backupoperator**数据库角色的**ALTER ANY CREDENTIAL**权限，并且**EXECUTE**权限**sp_delete_backuphistory**存储过程。  
+ 要求具有**db_backupoperator**数据库角色的成员身份，具有**ALTER ANY CREDENTIAL**权限以及对**sp_delete_backuphistory**存储过程的**EXECUTE**权限。  
   
-## <a name="see-also"></a>请参阅  
- [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [managed_backup sp_backup_config_basic （Transact-sql）](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
+ [managed_backup sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   
   

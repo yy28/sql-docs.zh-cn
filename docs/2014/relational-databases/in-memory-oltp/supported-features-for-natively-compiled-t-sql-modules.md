@@ -1,5 +1,5 @@
 ---
-title: 在本机编译存储过程中受支持的构造 |Microsoft Docs
+title: 本机编译的存储过程中支持的构造 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155715"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>本机编译的存储过程中支持的构造
-  本主题列出了本机编译存储过程的支持的功能 ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
+  本主题包含对本机编译存储过程支持的功能的列表（[CREATE PROCEDURE &#40;transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql)）：  
   
--   [本机编译存储过程中的可编程性](#pncsp)  
+-   [本机编译的存储过程中的可编程性](#pncsp)  
   
 -   [支持的运算符](#so)  
   
--   [本机编译存储过程中的内置函数](#bfncsp)  
+-   [本机编译的存储过程中的内置函数](#bfncsp)  
   
--   [在本机编译存储过程的查询外围应用](#qsancsp)  
+-   [在本机编译的存储过程中查询外围应用](#qsancsp)  
   
 -   [审核](#auditing)  
   
--   [表、 查询和联接提示](#tqh)  
+-   [表、查询和联接提示](#tqh)  
   
 -   [排序限制](#los)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63155715"
   
  有关不支持的构造的完整信息以及有关如何处理本机编译的存储过程中不支持的某些功能的信息，请参阅 [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)。 有关不支持的功能的详细信息，请参阅 [内存中 OLTP 不支持的 Transact-SQL 构造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
   
-##  <a name="pncsp"></a> 本机编译存储过程中的可编程性  
+##  <a name="pncsp"></a>本机编译的存储过程中的可编程性  
  支持以下各项：  
   
 -   BEGIN ATOMIC（位于存储过程的外层）、LANGUAGE、ISOLATION LEVEL、DATEFORMAT 和 DATEFIRST。  
@@ -66,7 +66,7 @@ ms.locfileid: "63155715"
 ##  <a name="so"></a> 支持的运算符  
  支持下列运算符。  
   
--   [比较运算符&#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (例如，>， \<，> =、 和 < =) 在条件语句中支持 (如果时)。  
+-   [&#40;transact-sql&#41;](/sql/t-sql/language-elements/comparison-operators-transact-sql) （例如，>、 \<、>= 和 <=）的比较运算符在条件（如果）中受支持。  
   
 -   一元运算符（+、-）。  
   
@@ -78,28 +78,28 @@ ms.locfileid: "63155715"
   
 -   按位运算符 ~、&、| 和 ^  
   
-##  <a name="bfncsp"></a> 本机编译存储过程中的内置函数  
+##  <a name="bfncsp"></a>本机编译的存储过程中的内置函数  
  内存优化表的默认约束中以及本机编译的存储过程中支持以下函数。  
   
--   数学函数：ACOS、 ASIN、 ATAN、 ATN2、 COS、 COT、 度、 EXP、 日志、 LOG10、 PI、 POWER、 弧度、 RAND、 SIN、 SQRT、 方块和 TAN  
+-   数学函数：ACOS、ASIN、ATAN、ATN2、COS、COT、DEGREES、EXP、LOG、LOG10、PI、POWER、RADIANS、RAND、SIN、SQRT、SQUARE 和 TAN  
   
--   日期函数：CURRENT_TIMESTAMP、 DATEADD、 DATEDIFF、 DATEFROMPARTS、 DATEPART、 DATETIME2FROMPARTS、 DATETIMEFROMPARTS、 天、 EOMONTH、 GETDATE、 GETUTCDATE、 月、 SMALLDATETIMEFROMPARTS、 SYSDATETIME、 SYSUTCDATETIME 和年。  
+-   日期函数：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
   
--   字符串函数：LEN、 LTRIM、 RTRIM 和 SUBSTRING  
+-   字符串函数：LEN、LTRIM、RTRIM 和 SUBSTRING  
   
 -   恒等函数：SCOPE_IDENTITY  
   
--   NULL 函数说明：ISNULL  
+-   NULL 函数：ISNULL  
   
 -   Uniqueidentifier 函数：NEWID 和 NEWSEQUENTIALID  
   
--   错误函数：ERROR_LINE、 ERROR_MESSAGE、 ERROR_NUMBER、 ERROR_PROCEDURE、 ERROR_SEVERITY 和 ERROR_STATE  
+-   错误函数：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
   
--   转换：CAST 和 CONVERT。 不支持在 Unicode 与非 Unicode 字符串（n(var)char 和 (var)char）之间进行转换。  
+-   转换操作：CAST 和 CONVERT。 不支持在 Unicode 与非 Unicode 字符串（n(var)char 和 (var)char）之间进行转换。  
   
 -   系统函数：@@rowcount。 本机编译存储过程中的语句会更新 @@rowcount，因此，可使用本机编译存储过程中的 @@rowcount 来确定受在该本机编译存储过程中执行的上条语句影响的行数。 但是，@@rowcount 在本机编译存储过程执行开始和结束时会重置为 0。  
   
-##  <a name="qsancsp"></a> 在本机编译存储过程的查询外围应用  
+##  <a name="qsancsp"></a>本机编译的存储过程中的查询外围应用  
  支持以下各项：  
   
 -   BETWEEN  
@@ -108,19 +108,19 @@ ms.locfileid: "63155715"
   
 -   CROSS JOIN 和 INNER JOIN 仅支持与 SELECT 查询连用。  
   
--   选择列表中支持表达式和[其中&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/where-transact-sql)子句，如果他们使用支持的运算符。 有关当前支持的运算符的列表，请参阅 [Supported Operators](#so) 。  
+-   如果表达式使用受支持的运算符，则 SELECT list 和[WHERE &#40;transact-sql&#41;](/sql/t-sql/queries/where-transact-sql)子句均受支持。 有关当前支持的运算符的列表，请参阅 [Supported Operators](#so) 。  
   
 -   筛选器谓词 IS [NOT] NULL  
   
--   从\<内存优化表 >  
+-   从\<内存优化表>  
   
--   [GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)支持，以及聚合函数 AVG、 COUNT、 COUNT_BIG、 最小值、 最大值和之和。 类型 nvarchar、char、varchar、varchar、varbinary 和 Binary 不支持 MIN 和 MAX。 [ORDER BY 子句&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql)支持与[GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)如果 ORDER BY 列表中的表达式逐字出现在 GROUP BY 列表。 例如，支持 GROUP BY a + b ORDER BY a + b，但不支持 GROUP BY a、b ORDER BY a + b。  
+-   支持[GROUP BY &#40;transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql) ，以及聚合函数 AVG、COUNT、COUNT_BIG、MIN、MAX 和 SUM。 类型 nvarchar、char、varchar、varchar、varbinary 和 Binary 不支持 MIN 和 MAX。 如果 ORDER by 列表中的表达式在 "分组依据" 列表中按原义显示，则[order By 子句 &#40;transact-sql&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)受[Group by &#40;transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql) 。 例如，支持 GROUP BY a + b ORDER BY a + b，但不支持 GROUP BY a、b ORDER BY a + b。  
   
 -   HAVING 具有与 WHERE 子句相同的表达式限制。  
   
 -   INSERT VALUES（每条语句一行）和 INSERT SELECT  
   
--   ORDER BY <sup>1</sup>  
+-   按<sup>1</sup>排序  
   
 -   不引用列的谓词。  
   
@@ -130,9 +130,9 @@ ms.locfileid: "63155715"
   
 -   SELECT 列表中的变量赋值。  
   
--   WHERE...和  
+-   WHERE .。。与  
   
- <sup>1</sup> ORDER BY 和 TOP 支持在本机编译存储过程中，有一些限制：  
+ <sup>1</sup>本机编译的存储过程支持 ORDER BY 和 TOP，但有一些限制：  
   
 -   在 `DISTINCT` 或 `SELECT` 子句中不支持 `ORDER BY`。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "63155715"
   
  有关审核的详细信息，请参阅 [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md)。  
   
-##  <a name="tqh"></a> 表、 查询和联接提示  
+##  <a name="tqh"></a>表、查询和联接提示  
  支持以下各项：  
   
 -   INDEX、FORCESCAN 和 FORCESEEK 提示，位于表提示语法或查询的 [OPTION Clause (Transact-SQL)](/sql/t-sql/queries/option-clause-transact-sql) 中。  
@@ -167,18 +167,18 @@ ms.locfileid: "63155715"
   
 -   OPTIMIZE FOR  
   
- 有关详细信息，请参阅[提示&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql)。  
+ 有关详细信息，请参阅[提示 &#40;transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql)。  
   
 ##  <a name="los"></a>排序限制  
  可以在使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) 的查询中对 8,000 多行进行排序。 但是，如果没有 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，[TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 最多可对 8,000 行进行排序（如果存在联接，则更少）。  
   
- 如果查询同时使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 运算符和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，将收到错误消息：**消息 41398、 级别 16，状态 1，过程 *\<过程名称 >* ，行 *\<lineNumber >* ，TOP 运算符可返回最多 8192 行; *\<数 >* 请求。**  
+ 如果查询同时使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 运算符和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，则将收到错误消息：**消息 41398、级别 16、状态 1、程序 *\<procedureName>* 、行 *\<lineNumber>* ，TOP 运算符最多可返回 8192 行；已请求 *\<number>* 。**  
   
  如果您没有 TOP 子句，则可以使用 ORDER BY 对任何数目的行进行排序。  
   
  如果您没有使用 ORDER BY 子句，则可以将任何整数值用于 TOP 运算符。  
   
- 示例使用 TOP N = 8192:编译  
+ 使用 TOP N = 8192 的示例：编译  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- 示例使用 TOP N > 8192:无法编译。  
+ 使用 TOP N > 8192 的示例：无法编译。  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **对返回行的限制：** 有两种情形可减少可由 TOP 运算符返回的行数：  
+ **对返回行数的限制：** 有两种情形可减少可由 TOP 运算符返回的行数：  
   
 -   在查询中使用 JOIN。  JOIN 对该限制的影响依赖于查询计划。  
   
@@ -228,7 +228,7 @@ GO
   
  用于在 TOP N 中计算最差情形下支持的最大 N 的公式为： `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [本机编译存储过程](natively-compiled-stored-procedures.md)   
  [本机编译存储过程的迁移问题](migration-issues-for-natively-compiled-stored-procedures.md)  
   

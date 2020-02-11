@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_decrement_lsn (TRANSACT-SQL) |Microsoft Docs
+title: sys. fn_cdc_decrement_lsn （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 468fa452a5b9015bf5fcc613c040f76160e87210
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046514"
 ---
-# <a name="sysfncdcdecrementlsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
+# <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   根据指定的 LSN 返回序列中的上一个日志序列号 (LSN)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,16 +43,16 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
   
 ## <a name="arguments"></a>参数  
  *lsn_value*  
- LSN 值。 *lsn_value*是**binary(10)** 。  
+ LSN 值。 *lsn_value*为**binary （10）**。  
   
 ## <a name="return-type"></a>返回类型  
- **binary(10)**  
+ **binary （10）**  
   
 ## <a name="remarks"></a>备注  
  此函数返回的 LSN 始终小于指定值，并且两个值之间不能存在 LSN 值。  
   
 ## <a name="permissions"></a>权限  
- 要求的成员身份**公共**数据库角色。  
+ 需要**公共**数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
  下例在一个返回 LSN 值小于最大 LSN 值的更改数据行的查询中，使用 `sys.fn_cdc_decrement_lsn` 来设置 LSN 上限。  
@@ -67,10 +67,10 @@ SELECT * FROM cdc.fn_cdc_get_all_changes_HumanResources_Employee( @from_lsn, @to
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sys.fn_cdc_increment_lsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)   
- [sys.fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sys. fn_cdc_increment_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)   
+ [sys. fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys. fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

@@ -2,7 +2,7 @@
 title: 在命令提示符下运行数据库实验助手
 description: 在命令提示符下运行数据库实验助手
 ms.custom: seo-lt-2019
-ms.date: 11/22/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: f5a0f7441dd17aec2587c772a678a3681fd3b423
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: 8055ae8b66c2f2b59f18b0ee40dcac8753c0eb7c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317723"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831749"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>在命令提示符下运行数据库实验助手
 
@@ -29,7 +29,7 @@ ms.locfileid: "74317723"
 
 `Deacmd.exe -o startcapturetrace -s <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
 
-**实例**
+**示例**
 
 `Deacmd.exe -o startcapturetrace -s localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
 
@@ -42,7 +42,7 @@ ms.locfileid: "74317723"
 
 3. 使用 StartReplayCaptureTrace 在运行 SQL Server 的目标计算机上启动跟踪捕获。
 
-    a.在“解决方案资源管理器”中，右键单击项目文件夹下的“引用”文件夹，然后单击“添加引用”。  在 SQL Server Management Studio （SSMS）中，打开 <\>Dea_InstallPath \Scripts\StartReplayCaptureTrace.sql。
+    a.  在 SQL Server Management Studio （SSMS）中，打开 <\>Dea_InstallPath \Scripts\StartReplayCaptureTrace.sql。
 
     b.  运行`Set @durationInMins=0` ，以便跟踪捕获不会在指定的时间后自动停止。
 
@@ -56,7 +56,7 @@ ms.locfileid: "74317723"
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
 
-    a.在“解决方案资源管理器”中，右键单击项目文件夹下的“引用”文件夹，然后单击“添加引用”。  若要监视状态，请在命令提示符下运行`DReplay status -f 1`。
+    a.  若要监视状态，请在命令提示符下运行`DReplay status -f 1`。
 
     b.  若要停止重播，例如，如果在命令提示符处看到 pass% 低于预期，请运行`DReplay cancel`。
 
@@ -71,7 +71,7 @@ ms.locfileid: "74317723"
 
 `Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -s <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
 
-**实例**
+**示例**
 
 `Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
 

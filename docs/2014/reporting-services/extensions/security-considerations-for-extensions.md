@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 128da8d5bb3b956b5b5661ce47ca6e4b741f0bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282419"
 ---
 # <a name="security-considerations-for-extensions"></a>扩展插件的安全注意事项
@@ -26,7 +26,7 @@ ms.locfileid: "63282419"
   
  在请求权限前，您需要知道扩展插件代码计划使用的资源和保护的操作，并且还需要知道哪些权限保护这些资源和操作。 此外，还需要跟踪扩展插件组件调用的所有类库方法访问的所有资源。 有关详细信息，请参阅 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 开发人员指南中的“请求权限”。  
   
- 部署到报表服务器的扩展插件必须以完全信任方式运行，这意味着扩展插件需要是授予 FullTrust 权限集的代码组的一部分。 这还意味着根据为特定报表对其验证身份的用户，您的扩展插件可能还要具有对通过 CLR 提供的某些服务器资源和操作的访问权限。 有关详细信息，请参阅 [Reporting Services 中的代码访问安全性](secure-development/code-access-security-in-reporting-services.md)。  
+ 部署到报表服务器的扩展插件必须以完全信任方式运行，这意味着扩展插件需要是授予 FullTrust 权限集的代码组的一部分  。 这还意味着根据为特定报表对其验证身份的用户，您的扩展插件可能还要具有对通过 CLR 提供的某些服务器资源和操作的访问权限。 有关详细信息，请参阅 [Reporting Services 中的代码访问安全性](secure-development/code-access-security-in-reporting-services.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为其所有扩展插件强制 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 安全性。  
@@ -46,7 +46,7 @@ ms.locfileid: "63282419"
 ## <a name="initialization-of-extension-assemblies"></a>扩展插件程序集的初始化  
  在扩展插件由报表服务器首次加载到内存中时，它们使用服务帐户凭据，因为某些扩展插件程序集要求特定的权限来访问系统资源、读取配置文件和加载其他相关的程序集。 但在已加载和初始化程序集后，对扩展插件程序集的所有后续调用都将使用当前登录的用户帐户的凭据。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 扩展插件](reporting-services-extensions.md)   
  [Reporting Services 扩展插件库](reporting-services-extension-library.md)  
   

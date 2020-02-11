@@ -1,5 +1,5 @@
 ---
-title: SQL-92 符合性 |Microsoft Docs
+title: SQL-92 相容性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,32 +16,32 @@ ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5d8ed2818b466d16591be8b70478221d7ac84df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063372"
 ---
 # <a name="sql-92-compliance"></a>SQL-92 符合性
-ODBC 桌面数据库驱动程序和基础 Microsoft Jet 引擎不是 SQL-92 兼容。 它们支持已在 SQL-92 中定义的许多功能。 在 SQL-92 中不支持在驱动程序支持某些功能。 有关详细信息，请参阅*Microsoft Jet 数据库引擎程序员指南*。 两者之间的主要差异如下：  
+ODBC 桌面数据库驱动程序和基础 Microsoft Jet 引擎与 SQL-92 兼容。 它们支持 SQL-92 中定义的许多功能。 SQL-92 不支持驱动程序中支持的某些功能。 有关详细信息，请参阅*Microsoft Jet 数据库引擎程序员指南*。 下面是这两者之间的主要区别：  
   
--   桌面数据库驱动程序使用 SQL 支持比指定的 SQL-92 更功能强大的表达式。  
+-   桌面数据库驱动程序使用的 SQL 支持的表达式比 92 SQL 指定的更强大。  
   
 -   不同的规则适用于 BETWEEN 谓词。  
   
--   使用桌面数据库驱动程序与在 ANSI SQL 的 SQL 支持不同的关键字。  
+-   桌面数据库驱动程序和 ANSI SQL 使用的 SQL 支持不同的关键字。  
   
  Microsoft Jet SQL 不支持以下 SQL-92 功能：  
   
--   安全语句，例如授予和锁。  
+-   安全语句，如 GRANT 和 LOCK。  
   
--   DISTINCT 的聚合函数引用。  
+-   与聚合函数引用截然不同。  
   
- 以下功能是使用未指定 SQL-92 的桌面数据库驱动程序的 SQL 中的增强功能：  
+ 以下功能是不由 SQL-92 指定的桌面数据库驱动程序使用的 SQL 中的增强功能：  
   
--   转换语句提供的交叉表查询支持。  
+-   为交叉表查询提供支持的 TRANSFORM 语句。  
   
--   其他聚合函数 (**StDev**并**VarP**)。  
+-   附加聚合函数（**StDev**和**VarP**）。  
   
 > [!NOTE]  
->  桌面数据库驱动程序支持标准的 ANSI 语法不支持 %（%） 和 _ （下划线） * （星号） 和？ （问号）。
+>  桌面数据库驱动程序支持的标准 ANSI 语法为% （%）和 _ （下划线），而不是 * （星号）和？ （问号）。

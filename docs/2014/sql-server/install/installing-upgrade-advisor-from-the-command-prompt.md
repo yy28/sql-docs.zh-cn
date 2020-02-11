@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094338"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>从命令提示符安装升级顾问
@@ -32,11 +32,11 @@ ms.locfileid: "66094338"
   
  下表列出了最常用的选项。  
   
-|参数|Description|  
+|参数|说明|  
 |--------------|-----------------|  
-|/q[n&#124;b&#124;r&#124;f]|设置用户界面 (UI) 级别：<br /><br /> n = 无 UI<br /><br /> b = 基本 UI（仅显示进度，不显示提示）<br /><br /> r = 简化的 UI（在安装结束时显示对话框）<br /><br /> f = 完整的 UI|  
-|/L|指定日志文件选项。 若要所有消息都记录到*log_file_name*，使用 **-L\*v**_log_file_name_。 若要只记录错误消息，请使用`-Le` *log_file_name*。|  
-|ADDLOCAL=ALL&#124; REMOVE=ALL&#124;REINSTALL=ALL|指定安装 (ADDLOCAL)、删除 (REMOVE) 或重新安装 (REINSTALL) 升级顾问。|  
+|/q [n&#124;b&#124;r&#124;f]|设置用户界面 (UI) 级别：<br /><br /> n = 无 UI<br /><br /> b = 基本 UI（仅显示进度，不显示提示）<br /><br /> r = 简化的 UI（在安装结束时显示对话框）<br /><br /> f = 完整的 UI|  
+|/L|指定日志文件选项。 若要将所有消息记录到*log_file_name*，请使用 **-\*L v**_log_file_name_。 若要仅记录错误消息， `-Le`请使用*log_file_name*。|  
+|ADDLOCAL = ALL&#124; REMOVE = ALL&#124;重新安装 = 全部|指定安装 (ADDLOCAL)、删除 (REMOVE) 或重新安装 (REINSTALL) 升级顾问。|  
 |UAINSTALLDIR=路径|将升级顾问安装到路径指定的位置。|  
   
 ## <a name="installation-examples"></a>安装示例  
@@ -67,7 +67,7 @@ SQLUA.msi /qn REMOVE=ALL
 Msiexec.exe /i C:\Downloads\SQLUA.msi /qn REMOVE=ALL  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安装升级顾问](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
  [升级顾问必备组件](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   

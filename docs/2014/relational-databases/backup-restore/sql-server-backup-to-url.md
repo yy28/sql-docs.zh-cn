@@ -11,19 +11,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232316"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
   本主题介绍了使用 Azure Blob 存储服务作为备份目标所需的概念、要求和组件。 备份和还原功能与使用磁盘或磁带时相同，或类似但区别不大。 区别均为显著的例外，并且本主题中包括少量代码示例。  
   
 ## <a name="requirements-components-and-concepts"></a>要求、组件和概念  
- **本部分内容：**  
+ **本节内容：**  
   
--   [安全](#security)  
+-   [安全性](#security)  
   
 -   [关键组件和概念简介](#intorkeyconcepts)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75232316"
   
 -   [使用 SQL Server Management Studio 从 Azure 存储还原](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a>安全  
+###  <a name="security"></a> Security  
  下面是备份到 Azure Blob 存储服务或从中还原时的安全注意事项和要求。  
   
 -   为 Azure Blob 存储服务创建容器时，我们建议你将访问权限设置为 "**专用**"。 将访问权限设置为“私有”后，只允许可提供对 Azure 帐户进行身份验证所需的信息的用户或帐户进行访问。  
@@ -125,7 +125,7 @@ ms.locfileid: "75232316"
   
 |||||  
 |-|-|-|-|  
-|备份/还原语句|支持|例外|说明|  
+|备份/还原语句|支持|例外|注释|  
 |备份|&#x2713;|不支持 BLOCKSIZE 和 MAXTRANSFERSIZE。|要求指定 WITH CREDENTIAL|  
 |RESTORE|&#x2713;||要求指定 WITH CREDENTIAL|  
 |RESTORE FILELISTONLY|&#x2713;||要求指定 WITH CREDENTIAL|  
@@ -142,7 +142,7 @@ ms.locfileid: "75232316"
   
 |||||  
 |-|-|-|-|  
-|参数|支持|Exception|说明|  
+|参数|支持|异常|注释|  
 |DATABASE|&#x2713;|||  
 |日志|&#x2713;|||  
 ||  
@@ -178,7 +178,7 @@ ms.locfileid: "75232316"
   
 |||||  
 |-|-|-|-|  
-|参数|支持|例外|说明|  
+|参数|支持|例外|注释|  
 |DATABASE|&#x2713;|||  
 |日志|&#x2713;|||  
 |FROM (URL)|&#x2713;||FROM URL 参数用于指定备份文件的 URL 路径。|  
@@ -241,7 +241,7 @@ ms.locfileid: "75232316"
   
  [备份数据库 &#40;备份选项 "页&#41;](back-up-database-backup-options-page.md)  
   
- [创建凭据-向 Azure 存储进行身份验证](create-credential-authenticate-to-azure-storage.md)  
+ [创建凭据 - 向 Azure 存储进行身份验证](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a>使用维护计划向导 SQL Server 备份到 URL  
  与前面所述的备份任务类似，SQL Server Management Studio 中的维护计划向导已经过增强，其中包括**URL**作为一个目标选项，以及备份到 Azure 存储所需的其他支持对象，例如 SQL 凭据。 有关详细信息，请参阅 **Using Maintenance Plan Wizard** 中的“定义备份任务”部分 [](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
@@ -255,11 +255,11 @@ ms.locfileid: "75232316"
   
 3.  然后，SQL Server 使用提供的 SQL 凭据信息连接到 Azure 存储，然后打开 "**在 Azure 中定位备份文件**" 对话框。 此页上显示位于存储中的备份文件。 选择要用于还原的文件，然后单击 **“确定”**。 这会使你返回到 "**选择备份设备**" 对话框，然后单击此对话框上的 **"确定"** 将返回主 "**还原**" 对话框，你可以在该对话框中完成还原。  有关详细信息，请参阅以下主题：  
   
-     [还原数据库 &#40;常规页&#41;](restore-database-general-page.md)  
+     [还原数据库（“常规”页）](restore-database-general-page.md)  
   
      ["还原数据库 &#40;文件" 页&#41;](restore-database-files-page.md)  
   
-     [还原数据库 &#40;选项页&#41;](restore-database-options-page.md)  
+     [还原数据库（“选项”页）](restore-database-options-page.md)  
   
 ##  <a name="Examples"></a>代码示例  
  本节包含以下示例。  
@@ -804,4 +804,4 @@ ms.locfileid: "75232316"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 备份到 URL 最佳做法和故障排除](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [&#40;SQL Server&#41;的系统数据库的备份和还原](back-up-and-restore-of-system-databases-sql-server.md)   
+ [备份和还原系统数据库 (SQL Server)](back-up-and-restore-of-system-databases-sql-server.md)   

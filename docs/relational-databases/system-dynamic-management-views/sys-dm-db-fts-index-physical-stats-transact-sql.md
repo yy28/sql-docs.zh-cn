@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_fts_index_physical_stats (Transact SQL) |Microsoft Docs
+title: sys. dm_db_fts_index_physical_stats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4394483cd17510c998126a70c12f4d669c9282aa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264490"
 ---
-# <a name="sysdmdbftsindexphysicalstats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
+# <a name="sysdm_db_fts_index_physical_stats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   为关联有全文或语义索引的每个表中的每个全文或语义索引返回一行。  
   
 ||||  
 |-|-|-|  
-|**列名**|**类型**|**说明**|  
-|**object_id**|INT|包含索引的表的对象 ID。|  
+|**列名**|类型 |**说明**|  
+|**object_id**|int|包含索引的表的对象 ID。|  
 |**fulltext_index_page_count**|**bigint**|提取的逻辑大小（用索引页数表示）。|  
 |**keyphrase_index_page_count**|**bigint**|提取的逻辑大小（用索引页数表示）。|  
 |**similarity_index_page_count**|**bigint**|提取的逻辑大小（用索引页数表示）。|  
@@ -52,8 +52,8 @@ ms.locfileid: "68264490"
   
 ## <a name="permissions"></a>权限
 
-上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="examples"></a>示例  
  下面的示例说明如何查询关联有全文或语义索引的每个表中的每个全文或语义索引的逻辑大小。  
@@ -63,7 +63,7 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理和监视语义搜索](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

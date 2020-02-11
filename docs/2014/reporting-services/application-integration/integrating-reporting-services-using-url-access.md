@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fedf4ce3011d9caae9d673acf354265537115057
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126122"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>使用 URL 访问集成 Reporting Services
@@ -35,7 +35,7 @@ ms.locfileid: "63126122"
  [在 Windows 应用程序中使用 URL 访问](integrating-reporting-services-using-url-access-windows-application.md)  
  介绍如何使用 URL 访问将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 环境中。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 Reporting Services 集成到应用程序中](../application-integration/integrating-reporting-services-into-applications.md)   
  [URL 访问 (SSRS)](../url-access-ssrs.md)  
   

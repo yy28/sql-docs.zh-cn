@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 919bd28a82171068349e4019bb1bd5c190d08cd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63213904"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>从 SQL Server 表中删除列
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口公开**itabledefinition:: Dropcolumn**函数。 这允许使用者从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中删除某一列。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开**ITableDefinition：:D ropcolumn**函数。 这允许使用者从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中删除某一列。  
   
- 在 pTableID 参数的 uName 联合的 pwszName 成员中，使用者将表名指定为 Unicode 字符串    。 pTableID 的 eKind 成员必须是 DBKIND_NAME   。  
+ 在 pTableID 参数的 uName 联合的 pwszName 成员中，使用者将表名指定为 Unicode 字符串******。 pTableID 的 eKind 成员必须是 DBKIND_NAME****。  
   
- 中的列名称，使用者指示*pwszName*的成员*uName*联合*pColumnID*参数。 该列名称为 Unicode 字符串。 pColumnID 的 eKind 成员必须是 DBKIND_NAME   。  
+ 使用者指示*pColumnID*参数的*UName*联合的*pwszName*成员中的列名称。 该列名称为 Unicode 字符串。 pColumnID 的 eKind 成员必须是 DBKIND_NAME****。  
   
 ## <a name="example"></a>示例  
   
@@ -47,7 +47,7 @@ ColumnID.uName.pwszName = L"MyColumnName";
 hr = m_pITableDefinition->DropColumn(&TableID, &ColumnID);  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [表和索引](tables-and-indexes.md)  
   
   

@@ -24,7 +24,7 @@ ms.locfileid: "65570711"
 ##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 迁移工具  
  此工具支持将内容从本机模式部署迁移到 SharePoint 模式部署。 此工具不支持从 SharePoint 模式迁移到 SharePoint 模式或从 SharePoint 模式迁移到本机模式。  
   
- 有关详细信息，请参阅 [Reporting Services 迁移工具](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560) 。  
+ 有关详细信息，请参阅 [Reporting Services 迁移工具](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560)。  
   
 ## <a name="use-script-to-migrate-content"></a>使用脚本迁移内容  
  如果迁移工具不满足您的要求，您可以手动迁移报表服务器数据。 下面概述了要将报表项从一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署迁移到另一个时所需完成的步骤。 此方法支持将本机或 SharePoint 模式作为源或目标服务器。  

@@ -17,23 +17,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663642"
 ---
 # <a name="clr-event-category"></a>CLR 事件类别
-  **CLR** 事件类别包括由于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内执行 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 对象而生成的事件类。  
+  **CLR** 事件类别包括由于在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 内执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共语言运行时 (CLR) 对象而生成的事件类。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[Assembly Load 事件类](../../database-engine/assembly-load-event-class.md)|指示已执行加载程序集的请求。|  
 |[Assembly Load 事件类](../../database-engine/assembly-load-event-class.md)|执行加载程序集的请求时发生。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../extended-events/extended-events.md)  
   
   

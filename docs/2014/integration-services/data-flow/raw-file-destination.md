@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770851"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -53,9 +53,9 @@ ms.locfileid: "62770851"
   
  下表介绍 WriteOption 属性的可用选项。  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
-|追加|将数据追加到现有文件中。 追加数据的元数据必须与文件格式匹配。|  
+|附加|将数据追加到现有文件中。 追加数据的元数据必须与文件格式匹配。|  
 |始终创建|始终创建新文件。|  
 |创建一次|创建新文件。 如果该文件已经存在，该组件将失败。|  
 |截断和追加|截断现有文件，然后将数据写入此文件。 追加数据的元数据必须与文件格式匹配。|  
@@ -113,7 +113,7 @@ ms.locfileid: "62770851"
   
 1.  将 WriteOption 属性设置为 **CreateOnce** 或 **CreateAlways**并运行循环的一次迭代过程。 此时将创建文件。 这可确保追加数据的元数据与文件匹配。  
   
-2.  到 WriteOption 属性重置**追加**并将 ValidateExternalMetadata 属性设置为`False`。  
+2.  将 WriteOption 属性重置为**Append** ，并将 ValidateExternalMetadata 属性`False`设置为。  
   
  如果使用 **TruncateAppend** 选项而不是 **“追加”** 选项，此操作将截断以前的任何迭代过程中所添加的行，然后追加新行。 使用 **TruncateAppend** 选项也要求数据与文件格式相匹配。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62770851"
 ## <a name="related-content"></a>相关内容  
  sqlservercentral.com 上的博客文章： [原始文件令人生畏](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [原始文件源](raw-file-source.md)   
  [数据流](data-flow.md)  
   

@@ -17,20 +17,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b91a2848dda5dff2150d80760c7a43680a8f325
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827012"
 ---
 # <a name="progress-report-event-category"></a>Progress Report 事件类别
-  **Progress Report**事件类别包含**进度报表：** Online Index Operation 事件类。  
+  **Progress Report** 事件类别包含 **Progress Report: Online Index Operation** 事件类。  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[Progress Report：Online Index Operation 事件类](progress-report-online-index-operation-event-class.md)|指示联机索引生成操作的进度。|  
+|[Progress Report: Online Index Operation 事件类](progress-report-online-index-operation-event-class.md)|指示联机索引生成操作的进度。|  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

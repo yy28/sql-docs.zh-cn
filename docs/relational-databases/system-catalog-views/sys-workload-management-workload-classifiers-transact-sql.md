@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 585eb4551fb688f4f6a620729310b0245462cbff
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632964"
 ---
 # <a name="sysworkload_management_workload_classifiers-transact-sql"></a>sys. workload_management_workload_classifiers （Transact-sql）

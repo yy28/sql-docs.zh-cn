@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d2a9f40c2d1566a1f8ca5f054467f61da1920e5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62805933"
 ---
 # <a name="configure-your-utility-control-point-data-warehouse-sql-server-utility"></a>配置您的实用工具控制点数据仓库（SQL Server 实用工具）
@@ -28,12 +28,12 @@ ms.locfileid: "62805933"
   
 -   收集组上载频率：每隔 15 分钟。  
   
- UMDW 目录是可配置：\<系统驱动器 >: \Program Files\Microsoft SQL Server\MSSQL10_50.< UCP_Name > \MSSQL\Data\\，其中\<系统驱动器 > 通常是 C:\驱动器。 日志文件 Sysutility_mdw_\<GUID>_LOG 位于同一目录中。  
+ UMDW 目录是可配置的：\<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\，其中，\<System drive> 通常为 C:\ 驱动器。 日志文件 Sysutility_mdw_\<GUID>_LOG 位于同一目录中。  
   
 > [!NOTE]  
 >  可以使用 detach/attach 或 ALTER DATABASE 更改该 UMDW (sysutility_mdw) 文件位置。 我们建议使用 ALTER DATABASE。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 实用工具的功能和任务](sql-server-utility-features-and-tasks.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server 实用工具功能和任务](sql-server-utility-features-and-tasks.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 移动记录指针的记录集的示例 （VC + +） |Microsoft Docs
+title: 记录记录集示例的移动记录指针（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f544afd1a82a2e42a7fae110f20dc51f865a69f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932079"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法示例 （VC + +）
-此示例使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)，以及[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法移动记录指针[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)基于提供的命令。 若要运行此示例需要 MoveAny 函数。  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法示例（VC + +）
+此示例使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)和[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法基于提供的命令移动记录[集](../../../ado/reference/ado-api/recordset-object-ado.md)的记录指针。 运行此示例需要 MoveAny 函数。  
   
 ## <a name="example"></a>示例  
   
@@ -207,6 +207,6 @@ void PrintComError(_com_error &e) {
 5  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法 (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法（ADO）](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

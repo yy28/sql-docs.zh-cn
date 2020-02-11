@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0767886191923c15f65bde7b9fe4bfb7d270b271
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782751"
 ---
 # <a name="bcp_exec"></a>bcp_exec
@@ -49,14 +49,14 @@ RETCODE bcp_exec (
 ## <a name="returns"></a>返回  
  SUCCEED、SUCCEED_ASYNC 或 FAIL。 如果复制所有行， **bcp_exec**函数将返回成功。 如果异步大容量复制操作仍未完成， **bcp_exec**将返回 SUCCEED_ASYNC。 如果发生了完全失败，或者如果生成错误的行数达到使用[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)为 BCPMAXERRS 指定的值，则**bcp_exec**返回失败。 BCPMAXERRS 默认为 10。 BCPMAXERRS 选项只影响从数据文件读取行（并且不是已发送到服务器的行）时提供程序检测到的语法错误。 服务器在检测到某一行有错误时将中止批处理。 检查*pnRowsProcessed*参数是否已成功复制的行数。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  此函数将数据从用户文件复制到数据库表，或从用户文件复制到数据库表，具体取决于[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)中的*eDirection*参数的值。  
   
  调用**bcp_exec**之前，请使用有效的用户文件名调用**bcp_init** 。 如果没有这样做，会导致错误。  
   
  **bcp_exec**是在任意时间长度中可能未完成的唯一大容量复制函数。 因此，它是支持异步模式的唯一大容量复制函数。 若要设置异步模式，请在调用**bcp_exec**之前，使用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)将 SQL_ATTR_ASYNC_ENABLE 设置为 SQL_ASYNC_ENABLE_ON。 若要测试完成，请调用具有相同参数的**bcp_exec** 。 如果大容量复制尚未完成， **bcp_exec**将返回 SUCCEED_ASYNC。 它还会在*pnRowsProcessed*中返回已发送到服务器的行数的状态计数。 发送到服务器的行直到到达批的末尾时才会提交。  
   
- 有关从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开始大容量复制的重大更改的信息，请参阅[执行大容量复制&#40;操作&#41;ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 有关从开始大容量复制的重大更改的信息[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，请参阅[&#40;ODBC&#41;执行大容量复制操作](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用**bcp_exec**：  
