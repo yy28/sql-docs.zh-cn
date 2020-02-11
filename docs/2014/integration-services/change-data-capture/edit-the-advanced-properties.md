@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 320530eeb7bad37f7fd40bab5df9a9af8e9b1d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835686"
 ---
 # <a name="edit-the-advanced-properties"></a>编辑高级属性
@@ -33,6 +33,6 @@ ms.locfileid: "62835686"
   
  有关可以输入的属性的说明，请参阅 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config)中的可用选项表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [如何编辑 CDC 实例属性](how-to-edit-the-cdc-instance-properties.md)  

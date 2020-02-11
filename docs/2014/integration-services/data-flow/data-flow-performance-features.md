@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637825"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
@@ -75,12 +75,15 @@ ms.locfileid: "73637825"
  并行执行能改善具有多个物理或逻辑处理器的计算机的性能。 为了支持在包中并行执行不同的任务，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用两个属性：`MaxConcurrentExecutables` 和 `EngineThreads`。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 属性  
- `MaxConcurrentExecutables` 属性是包本身的一个属性。 此属性定义可同时运行的任务的数量。 默认值为 -1，表示物理或逻辑处理器的个数加 2。  
+ 
+  `MaxConcurrentExecutables` 属性是包本身的一个属性。 此属性定义可同时运行的任务的数量。 默认值为 -1，表示物理或逻辑处理器的个数加 2。  
   
  若要了解此属性的工作原理，可参考一个包含三个数据流任务的示例包。 如果将 `MaxConcurrentExecutables` 设置为 3，则可以同时运行所有三个数据流任务。 但是，假定每个数据流任务都具有 10 个源到目标执行树。 将 `MaxConcurrentExecutables` 设置为 3 不能确保每个数据流任务内的执行树都能并行运行。  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads 属性  
- `EngineThreads` 属性是每个数据流任务的属性。 此属性定义数据流引擎可以创建和并行运行的线程数。 `EngineThreads` 属性同样适用于数据流引擎为源创建的源线程和该引擎为转换和目标创建的工作线程。 因此，将 `EngineThreads` 设置为 10 表示该引擎可以创建多达 10 个源线程和多达 10 个工作线程。  
+ 
+  `EngineThreads` 属性是每个数据流任务的属性。 此属性定义数据流引擎可以创建和并行运行的线程数。 
+  `EngineThreads` 属性同样适用于数据流引擎为源创建的源线程和该引擎为转换和目标创建的工作线程。 因此，将 `EngineThreads` 设置为 10 表示该引擎可以创建多达 10 个源线程和多达 10 个工作线程。  
   
  若要理解此属性的工作原理，可参考包含三个数据流任务的示例包。 每个数据流任务都包含 10 个源到目标执行树。 如果将每个数据流任务的 EngineThreads 设置为 10，则可以同时运行所有 30 个执行树。  
   
@@ -90,7 +93,7 @@ ms.locfileid: "73637825"
 ## <a name="configuring-individual-data-flow-components"></a>配置单个数据流组件  
  若要配置单个数据流组件以优化性能，可以按照某些通用指导原则进行操作。 同时还存在针对各种类型的数据流组件的特定指导原则：源数据流组件、转换数据流组件和目标数据流组件等。  
   
-### <a name="general-guidelines"></a>通用指导原则  
+### <a name="general-guidelines"></a>一般性指导  
  无论采用何种数据流组件，为了改善性能您应该遵循下面两个通用指导原则：优化查询和避免不必要的字符串。  
   
 #### <a name="optimize-queries"></a>优化查询  
@@ -125,17 +128,17 @@ ms.locfileid: "73637825"
  使用本节中的建议可以改善聚合、模糊查找、模糊分组、查找、合并联接和渐变维度转换的性能。  
   
 #### <a name="aggregate-transformation"></a>聚合转换  
- 聚合转换包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 属性。 通过使用这些属性，使转换能够为转换缓存的数据预先分配转换所需的内存量，从而提高了性能。 如果知道**组按**操作得出的确切或近似组数，请分别设置 "`Keys`" 和 "`KeysScale`" 属性。 如果你知道预期从**distinct count**运算产生的非重复值的准确或近似数量，请分别设置 "`CountDistinctKeys`" 和 "`CountDistinctScale`" 属性。  
+ 聚合转换包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 属性。 通过使用这些属性，使转换能够为转换缓存的数据预先分配转换所需的内存量，从而提高了性能。 如果知道**组按**操作得出的准确或近似组数，请分别设置`Keys`和`KeysScale`属性。 如果知道预期从**非重复计数**运算产生的非重复值的准确或近似数量，请分别设置`CountDistinctKeys`和`CountDistinctScale`属性。  
   
  如果需要在数据流中创建多个聚合，应考虑使用一个聚合转换而不是创建多个转换来创建多个聚合。 如果聚合是其他聚合的子集，这种方法能够提高性能，因为转换可以优化内部存储，并且只需扫描传入的数据一次。 例如，如果聚合使用 GROUP BY 子句和 AVG 聚合，将它们组合成一个转换可以提高性能。 但是，在一个聚合转换内执行多个聚合会序列化聚合操作，因此，当必须独立计算多个聚合时，这种方法可能不会改善性能。  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>模糊查找和模糊分组转换  
  有关如何优化模糊查找和模糊分组转换的性能的信息，请参阅白皮书： [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组转换）。  
   
-#### <a name="lookup-transformation"></a>Lookup Transformation  
+#### <a name="lookup-transformation"></a>查找转换  
  通过输入仅查找所需列的 SELECT 语句，最小化内存中引用数据的大小。 这种方法优于选择整个表或视图，因为后者将返回大量不必要的数据。  
   
-#### <a name="merge-join-transformation"></a>合并联接转换  
+#### <a name="merge-join-transformation"></a>Merge Join Transformation  
  您不再必须配置 `MaxBuffersPerInput` 属性的值，因为 Microsoft 已进行了更改，减少了合并联接转换将占用过多内存的风险。 在合并联接的多个输入以不相等速率生成数据时，有时候可能会发生此问题。  
   
 #### <a name="slowly-changing-dimension-transformation"></a>渐变维度转换  
@@ -145,7 +148,7 @@ ms.locfileid: "73637825"
   
  高级用户可以为渐变维度处理设计自定义数据流，此数据流将针对大型维度进行优化。 有关此方法的讨论和示例，请参阅白皮书 [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)（Project REAL：Business Intelligence ETL 设计实践）中的章节 "Unique dimension scenario"（唯一维度方案）。  
   
-### <a name="destinations"></a>目标  
+### <a name="destinations"></a>Destinations  
  若要改善目标的性能，请考虑使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标并测试目标的性能。  
   
 #### <a name="sql-server-destination"></a>SQL Server 目标  
@@ -198,6 +201,6 @@ ms.locfileid: "73637825"
   
 ## <a name="see-also"></a>另请参阅  
  [包开发的故障排除工具](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [对包执行进行故障排除的工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [包执行的疑难解答工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

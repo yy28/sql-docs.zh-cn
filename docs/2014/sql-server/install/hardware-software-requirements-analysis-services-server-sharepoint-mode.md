@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 8f645ca9bdb6176505a6277af0f0482be5b62f09
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245614"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>SharePoint 模式下的 Analysis Services 服务器的硬件和软件要求 (SQL Server 2014)
@@ -43,7 +43,7 @@ ms.locfileid: "75245614"
 ##  <a name="bkmk_ssas__sharepoint_2013"></a>在 SharePoint 2013 上安装 Analysis Services  
  如果您在单独服务器上在 SharePoint 模式下安装 Analysis Services 服务器，则最低系统要求将基于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，而不是 SharePoint Server 要求。  
   
- [安装 SQL Server 2014 的硬件和软件要求](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
  
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 最好运行在提供更高 RAM 阈值和更强处理能力的新一代商业服务器上。 使用大量 RAM 在内存中存储 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。 该 RAM 支持根据结构变化进行调整的能力。 额外的处理器支持对原始未聚合的数据进行长时间运行的扫描。 数据假定其结构处于动态环境中，以便响应通过 Excel 客户端或前端接口启动的用户驱动的数据分析。  
@@ -62,7 +62,7 @@ ms.locfileid: "75245614"
   
  如果您在 SharePoint 场服务器上在 SharePoint 模式下安装 Analysis Services 服务器，则请查看以下链接中针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SharePoint Server 的最低系统要求：  
   
--   [安装 SQL Server 2014 的硬件和软件要求](hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [SharePoint 2013 的硬件和软件要求](https://technet.microsoft.com/library/cc262485\(office.15\).aspx)。  
   

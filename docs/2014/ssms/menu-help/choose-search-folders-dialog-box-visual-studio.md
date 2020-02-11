@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678929"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>“选择搜索文件夹”对话框 (Visual Studio)
@@ -28,7 +28,7 @@ ms.locfileid: "62678929"
  **文件夹集**  
  列出可用于搜索的目录。 若要创建新的文件夹集，请输入名称，向“选择的文件夹”  列表中添加一组搜索文件夹，再单击“应用”  。  
   
- **Apply**  
+ **应用**  
  将在“选择的文件夹”  列表中列出的搜索文件夹集另存为命名文件夹集。 然后，可以在“查找和替换”  窗口的所有选项卡上的“查找范围”  字段中选择此文件夹集。 使“选择搜索文件夹”对话框保持打开状态。  
   
  **删除**  
@@ -43,14 +43,14 @@ ms.locfileid: "62678929"
  **Parent**  
  在文件夹层次结构中，将“文件夹列表”  中的选择内容向上移动一级。  
   
- **添加(&gt;)**  
+ **添加(>)**  
  将在“文件夹列表”  中所选文件夹添加到“选择的文件夹”  列表中。  
   
- **删除(&lt;)**  
+ **删除(<)**  
  从“选择的文件夹”  列表中删除所选文件夹。  
   
  **选择的文件夹**  
  列出从“文件夹列表”  中添加的文件夹。 这些文件夹将包括在所命名的“文件夹集”  中。  
   
- **Apply**  
+ **应用**  
  将在“选择的文件夹”  列表中列出的搜索文件夹集另存为命名文件夹集。 然后，可以在“查找和替换”  窗口的所有选项卡上的“查找范围”  字段中选择此文件夹集。 关闭“选择搜索文件夹”对话框。  

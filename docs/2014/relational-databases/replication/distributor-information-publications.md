@@ -1,5 +1,5 @@
 ---
-title: SQL Server 复制分发服务器信息对话框 |Microsoft Docs
+title: SQL Server 复制 "分发服务器信息" 对话框 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721358"
 ---
-# <a name="distributor-information-dialog-box"></a>分发服务器信息对话框 
-本主题提供有关的信息**分发服务器**对话框 
+# <a name="distributor-information-dialog-box"></a>"分发服务器信息" 对话框 
+本主题提供有关 "**分发服务器**" 对话框的信息 
 
 ## <a name="publications"></a>发布
 
@@ -55,7 +55,7 @@ ms.locfileid: "62721358"
  以下各节说明了此选项卡上为分发服务器代理和合并代理显示的数据。  
   
 ### <a name="distributor-agent"></a>“分发服务器代理”  
- **“状态”**  
+ **Status**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误    
@@ -64,7 +64,7 @@ ms.locfileid: "62721358"
 -   未运行    
 -   从未启动  
   
- **发布服务器**  
+ **发布者**  
  发布服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
  **发布**  
@@ -73,7 +73,7 @@ ms.locfileid: "62721358"
  **订阅**  
  订阅的名称，格式为：[*SubscriberName*].[*Database*]。  
   
- **类型**  
+ 类型   
  复制的类型：推送、请求或匿名。  
   
  **上次启动时间**  
@@ -101,7 +101,7 @@ ms.locfileid: "62721358"
  在此代理最近一次运行期间平均每个事务的命令数。  
   
 ### <a name="merge-agent"></a>合并代理  
- **“状态”**  
+ **Status**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误    
@@ -110,7 +110,7 @@ ms.locfileid: "62721358"
 -   未运行    
 -   从未启动  
   
- **发布服务器**  
+ **发布者**  
  发布服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
  **发布**  
@@ -119,7 +119,7 @@ ms.locfileid: "62721358"
  **订阅**  
  订阅的名称，格式为：[*SubscriberName*].[*Database*]。  
   
- **类型**  
+ 类型   
  复制的类型：推送、请求或匿名。  
   
  **上次启动时间**  
@@ -159,7 +159,7 @@ ms.locfileid: "62721358"
  合并过程中订阅服务器上发生的冲突数。  
   
  
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
  [监视复制](monitoring-replication.md)  
   

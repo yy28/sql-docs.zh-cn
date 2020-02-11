@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721201"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>实现合并项目的业务逻辑处理程序
@@ -58,7 +58,7 @@ ms.locfileid: "62721201"
   
 2.  将对以下列命名空间的引用添加到该项目。  
   
-    |程序集引用|Location|  
+    |程序集引用|位置|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM（默认安装）|  
     |<xref:System.Data>|GAC（.NET Framework 的组件）|  
@@ -99,10 +99,10 @@ ms.locfileid: "62721201"
   
 1.  在发布服务器中，执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) 以验证该程序集是否尚未注册为业务逻辑处理程序。  
   
-2.  在分发服务器上，执行[sp_registercustomresolver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)，指定的业务逻辑处理程序的友好名称 **@article_resolver** ，值为`true`对于 **@is_dotnet_assembly** 的程序集的名称 **@dotnet_assembly_name** ，以及重写的类的完全限定名称<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>为 **@dotnet_class_name** .  
+2.  在分发服务器上，执行[sp_registercustomresolver &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) **@article_resolver**，为指定业务逻辑处理程序的友好名称，将的值指定`true`为**@is_dotnet_assembly**，为指定程序集**@dotnet_assembly_name**的名称，并为重写<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>的**@dotnet_class_name**类的完全限定名称。  
   
     > [!NOTE]  
-    >  如果未将该程序集部署在与合并代理可执行文件相同的目录下、与同步启动合并代理的应用程序相同的目录下，或者全局程序集缓存 (GAC) 中，则您需要为 **@dotnet_assembly_name** 。 使用 Web 同步时，必须指定程序集在 Web 服务器中的位置。  
+    >  如果该程序集未部署在与合并代理可执行文件相同的目录中、与同步启动合并代理的应用程序相同的目录中，或在全局程序集缓存（GAC）中，则需要指定包含程序集名称的完整路径**@dotnet_assembly_name**。 使用 Web 同步时，必须指定程序集在 Web 服务器中的位置。  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>将业务逻辑处理程序与新的表项目一起使用  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62721201"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>将业务逻辑处理程序用于现有的表项目  
   
-1.  执行 [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 来定义项目，指定 **@publication** 、 **@article** ，为 **@property** 指定值 **article_resolver**，为 **@value** 指定业务逻辑处理程序的友好名称。  
+1.  执行[sp_changemergearticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，指定， **@publication** **@article**，将的值指定为**** **@property**article_resolver，并为**@value**指定业务逻辑处理程序的友好名称。  
   
 ###  <a name="TsqlExample"></a> 示例（复制编程方式）  
  该示例演示了可创建审核日志的业务逻辑处理程序。  
@@ -131,7 +131,7 @@ ms.locfileid: "62721201"
   
 2.  将对以下列命名空间的引用添加到该项目。  
   
-    |程序集引用|Location|  
+    |程序集引用|位置|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM（默认安装）|  
     |<xref:System.Data>|GAC（.NET Framework 的组件）|  
@@ -170,11 +170,11 @@ ms.locfileid: "62721201"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> 并检查返回的 <xref:System.Collections.ArrayList> 对象，以确保还未将该程序集注册为业务逻辑处理程序。  
   
-4.  创建 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> 类的实例。 指定以下属性：  
+4.  创建的 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> 类的实例。 指定以下属性：  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> - .NET 程序集的名称。 如果该程序集未部署到与合并代理可执行文件相同的目录中、与同步启动合并代理的应用程序相同的目录中或 GAC 中，则必须随程序集名称提供完整的路径。 将业务逻辑处理程序与 Web 同步一起使用时，必须随程序集名称提供完整的路径。  
   
@@ -182,7 +182,8 @@ ms.locfileid: "62721201"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - 访问业务逻辑处理程序时使用的友好名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - 值为 `true`。  
+    -   
+  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - 值为 `true`。  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>部署业务逻辑处理程序  
   
@@ -192,7 +193,7 @@ ms.locfileid: "62721201"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。 设置以下属性：  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。 设置以下属性：  
   
     -   将 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>设置为项目的名称。  
   
@@ -208,7 +209,7 @@ ms.locfileid: "62721201"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>和 <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> 属性。  
   
@@ -237,10 +238,10 @@ ms.locfileid: "62721201"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [为合并项目实现自定义冲突解决程序](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [调试业务逻辑处理程序（复制编程）](debug-a-business-logic-handler-replication-programming.md)   
- [复制安全最佳实践](security/replication-security-best-practices.md)   
+ [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [复制管理对象概念](concepts/replication-management-objects-concepts.md)  
   
   

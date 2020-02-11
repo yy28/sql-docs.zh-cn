@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e20e18f2e4395720c4e895d53c9a78a75d38dee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828272"
 ---
 # <a name="azure-blob-destination"></a>Azure blob 目标
-  “Azure blob 目标”  组件允许 SSIS 包将数据写入 Azure blob。 支持的文件格式为：CSV 和 AVRO。 拖**Azure Blob 目标**到数据流设计器中，然后双击它打开编辑器)。  
+  “Azure blob 目标”  组件允许 SSIS 包将数据写入 Azure blob。 支持的文件格式：CSV 和 AVRO。 拖-将 " **Azure Blob 目标**" 拖放到数据流设计器，然后双击它以查看编辑器。  
   
 1.  对于“Azure 存储空间连接管理器”  字段，请指定一个现有的 Azure 存储空间连接管理器，或新建一个引用 Azure 存储空间帐户的连接管理器。  
   

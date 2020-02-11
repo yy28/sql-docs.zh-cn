@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ddca4b59219598ef6685b6d3529f84725a2f075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107342"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>“数据集属性”对话框 -&gt;“筛选器”
   在 **“数据集属性”** 对话框中选择 **“筛选器”** 可创建数据集的筛选器。  
   
 ## <a name="options"></a>选项  
- **“添加”**  
+ **添加**  
  向列表中添加新的筛选子句。  
   
  **删除**  
@@ -37,19 +37,19 @@ ms.locfileid: "66107342"
  在列表中向下移动所选的筛选器。  
   
  **表达式**  
- 键入或选择要对其应用筛选器的表达式。 单击“表达式”(**fx**) 按钮可编辑表达式。  
+ 键入或选择要对其应用筛选器的表达式。 单击 "表达式" （**fx**）按钮可编辑表达式。  
   
- **Data type**  
- 为“值”  选择数据类型。 如果可能，请选择与 **“表达式”** 的数据类型匹配的数据类型。 有关详细信息，请参阅[筛选器公式示例（报表生成器和 SSRS）](../report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
+ **数据类型**  
+ 为“值”**** 选择数据类型。 如果可能，请选择与 **“表达式”** 的数据类型匹配的数据类型。 有关详细信息，请参阅[筛选器公式示例（报表生成器和 SSRS）](../report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
  **“运算符”**  
  选择要用于比较表达式和值的运算符。  
   
- **ReplTest1**  
- 键入在计算“表达式”  框中所指定的表达式时要使用的表达式或值。 单击“表达式”(**fx**) 按钮可编辑表达式。  
+ **值**  
+ 键入在计算“表达式”**** 框中所指定的表达式时要使用的表达式或值。 单击 "表达式" （**fx**）按钮可编辑表达式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)  
+ [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)  
   
   

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efdea595034f91497befdc7f7b12adacef8d73ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109544"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>在 RSReportServer.Config 中自定义呈现扩展插件参数
@@ -40,9 +40,11 @@ ms.locfileid: "66109544"
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>查找并修改 RSReportServer.config  
  报表输出格式的配置设置被指定为 RSReportServer.config 文件中的呈现扩展插件参数。 若要在配置文件中指定呈现扩展插件参数，必须知道如何定义用于设置呈现参数的 XML 结构。 有两种 XML 结构可以修改：  
   
--   `OverrideNames` 元素定义呈现扩展插件的显示名称和语言。  
+-   
+  `OverrideNames` 元素定义呈现扩展插件的显示名称和语言。  
   
--   `DeviceInfo` XML 结构定义呈现扩展插件使用的设备信息设置。 大多数呈现扩展插件参数作为设备信息设置进行指定。  
+-   
+  `DeviceInfo` XML 结构定义呈现扩展插件使用的设备信息设置。 大多数呈现扩展插件参数作为设备信息设置进行指定。  
   
  可以使用文本编辑器修改该文件。 可在 \Reporting Services\Report Server\Bin 文件夹中找到 RSReportServer.config 文件。 有关修改配置文件的详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
@@ -128,8 +130,8 @@ ms.locfileid: "66109544"
 </Render>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [RSReportServer 配置文件](report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a>另请参阅  
+ [Rsreportserver.config 配置文件](report-server/rsreportserver-config-configuration-file.md)   
  [RSReportDesigner 配置文件](report-server/rsreportdesigner-configuration-file.md)   
  [CSV 设备信息设置](csv-device-information-settings.md)   
  [Excel 设备信息设置](excel-device-information-settings.md)   
