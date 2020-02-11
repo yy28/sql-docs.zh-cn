@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809529"
 ---
 # <a name="server-properties-database-settings-page"></a>服务器属性（“数据库设置”页）
@@ -43,7 +43,7 @@ ms.locfileid: "62809529"
  提供一个系统范围默认值，指示在用于数据库备份或事务日志备份后每一个备份介质的保留时间。 此选项可以防止在指定的日期前覆盖备份。  
   
  **压缩备份**  
- 在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]（或更高版本）中，指示“backup compression default”选项的当前设置。 此选项决定了用于压缩备份的服务器级默认设置，具体如下：  
+ 在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]（或更高版本）中，指示“backup compression default”  选项的当前设置。 此选项决定了用于压缩备份的服务器级默认设置，具体如下：  
   
 -   如果未选中 **“压缩备份”** 框，在默认情况下将不压缩新备份。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62809529"
  **恢复间隔(分钟)**  
  设置每个数据库恢复时所需的最大分钟数。 默认值为 0，指示由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自动配置。 实际上，这表示每个数据库的恢复时间不超过 1 分钟，对于活动的数据库大约每 1 分钟有一个检查点。 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](configure-the-recovery-interval-server-configuration-option.md)。  
   
- **Data**  
+ **data**  
  指定数据文件的默认位置。 单击“浏览”按钮导航到新的默认位置。 直到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，更改才会生效。  
   
  **日志**  
@@ -71,7 +71,7 @@ ms.locfileid: "62809529"
  **“运行值”**  
  查看此窗格上选项的当前运行值。 这些值是只读的。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)   
  [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   

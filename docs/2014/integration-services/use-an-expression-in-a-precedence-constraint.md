@@ -1,5 +1,5 @@
 ---
-title: 优先约束中使用表达式 |Microsoft Docs
+title: 在优先约束中使用表达式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 672d9c363f64037f5f40f51fc7c6cb1c4c3bc674
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054750"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>在优先约束中使用表达式
@@ -31,21 +31,22 @@ ms.locfileid: "66054750"
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  在“控制流”选项卡的设计图面上双击优先约束。  **“优先约束编辑器”** 将打开。  
+4.  在“控制流”选项卡的设计图面上双击优先约束。**** 
+  **“优先约束编辑器”** 将打开。  
   
-5.  在 **“求值运算”** 列表中选择 **“表达式”** 、 **“表达式和约束”** 或者 **“表达式或约束”** 。  
+5.  在 **“求值运算”** 列表中选择 **“表达式”**、 **“表达式和约束”** 或者 **“表达式或约束”** 。  
   
 6.  在 **“表达式”** 文本框中键入表达式，或启动表达式生成器来创建表达式。  
   
-7.  若要验证表达式语法，请单击 **“测试”** 。  
+7.  若要验证表达式语法，请单击 **“测试”**。  
   
 8.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [优先约束](control-flow/precedence-constraints.md)   
  [使用默认优先约束来连接任务和容器](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [使用快捷菜单设置优先约束的值](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [设置优先约束的属性](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
- [Integration Services &#40;SSIS&#41; 表达式](expressions/integration-services-ssis-expressions.md)  
+ [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)  
   
   

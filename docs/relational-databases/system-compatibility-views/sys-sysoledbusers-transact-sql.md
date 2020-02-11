@@ -1,5 +1,5 @@
 ---
-title: sys.sysoledbusers (Transact SQL) |Microsoft Docs
+title: sys. sysoledbusers （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d7c8b97a04e8b9898a9d49a412c5c6e5a2aa910c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076527"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
@@ -32,21 +32,22 @@ ms.locfileid: "68076527"
 
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中包括此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统表只为了向后兼容。 我们建议你使用[目录视图](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)相反。  
+>  
+  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中包括此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统表只为了向后兼容。 建议改用[目录视图](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
   
- 指定的链接服务器的每个用户和密码映射在表中对应一行。 **sysoledbusers**存储在**主**数据库。  
+ 指定的链接服务器的每个用户和密码映射在表中对应一行。 **sysoledbusers**存储在**master**数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|服务器的安全标识号 (SID)。|  
-|**rmtloginame**|**nvarchar(** 128 **)**|远程登录名的**loginsid**映射到的链接**rmtservid**。|  
-|**rmtpassword**|**nvarchar(** 128 **)**|返回 NULL。|  
-|**loginsid**|**varbinary(** 85 **)**|要映射的本地登录 SID。|  
-|**status**|**smallint**|如果为 1，则映射应使用用户凭据。|  
+|**rmtloginame**|**nvarchar （** 128 **）**|**Loginsid**映射到的链接**rmtservid**的远程登录名。|  
+|**rmtpassword**|**nvarchar （** 128 **）**|返回 NULL。|  
+|**loginsid**|**varbinary （** 85 **）**|要映射的本地登录 SID。|  
+|**状态值**|**smallint**|如果为 1，则映射应使用用户凭据。|  
 |**changedate**|**datetime**|最近更改映射信息的日期。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Transact-sql&#41;的兼容性视图 &#40;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

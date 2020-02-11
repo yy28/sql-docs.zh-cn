@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c5c4d515ebe6aa9b4b8120ae909f07dccc74de0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101702"
 ---
 # <a name="securable-items"></a>安全对象
@@ -33,7 +33,7 @@ ms.locfileid: "66101702"
   
  您可以通过为各个项定义安全性来覆盖权限继承。 可以单独保护的项包括：  
   
--   文件夹  
+-   Folders  
   
 -   报表  
   
@@ -50,16 +50,16 @@ ms.locfileid: "66101702"
 ## <a name="item-descriptions"></a>项说明  
  下表列出了安全对象并对其特征进行了说明：  
   
-|项|特征|  
+|Item|特征|  
 |----------|---------------------|  
-|文件夹|文件夹的安全性应用于文件夹本身及其包含的项。 主文件夹是文件夹层次结构的根节点。 对这一文件夹设置的安全性为文件夹层次结构中的所有从属文件夹、报表、资源和共享数据源建立了初始安全设置。 有关详细信息，请参阅 [保护文件](secure-folders.md)。<br /><br /> “我的报表”是一种特殊用途的文件夹，通过基于专用角色的隐含角色分配来设置安全性。 有关详细信息，请参阅 [保护我的报表](secure-my-reports.md)。|  
+|Folders|文件夹的安全性应用于文件夹本身及其包含的项。 主文件夹是文件夹层次结构的根节点。 对这一文件夹设置的安全性为文件夹层次结构中的所有从属文件夹、报表、资源和共享数据源建立了初始安全设置。 有关详细信息，请参阅 [保护文件](secure-folders.md)。<br /><br /> “我的报表”是一种特殊用途的文件夹，通过基于专用角色的隐含角色分配来设置安全性。 有关详细信息，请参阅 [保护我的报表](secure-my-reports.md)。|  
 |报表|您可以设置报表和链接报表的安全性，以控制用户可执行的操作的范围，如更改给定报表的属性。<br /><br /> 报表历史记录通过包含相应历史记录的报表来设置安全性。 您不能对报表历史记录中的单个快照设置安全性。<br /><br /> 有关报表安全的详细信息，请参阅 [保护报表和资源](secure-reports-and-resources.md)。|  
 |报表模型|您可为整个或部分报表模型指定角色分配。 因为报表模型可能非常大，您可能会需要为映射到机密数据的模型项设置安全性。|  
 |资源|您可以设置资源的安全性，以控制对资源本身及其属性的访问。<br /><br /> 只有独立的资源才能作为单独的项设置安全性。 嵌入到报表中的资源不能独立于报表之外单独设置安全性。<br /><br /> 有关资源安全的详细信息，请参阅 [保护报表和资源](secure-reports-and-resources.md)。|  
 |共享数据源|您可以设置共享数据源的安全性，以限制对该项及其属性页的访问。 有关详细信息，请参阅 [保护共享数据源项](secure-shared-data-source-items.md)。|  
 |共享数据集|您可以设置共享数据集的安全性，以控制用户可执行的操作的范围，例如查看或更改定义，或者更改给定共享数据集的属性。<br /><br /> 有关详细信息，请参阅 [保护共享数据集项](secure-shared-dataset-items.md)。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)   
  [创建、删除或修改角色 (Management Studio)](role-definitions-create-delete-or-modify.md)   
  [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)   

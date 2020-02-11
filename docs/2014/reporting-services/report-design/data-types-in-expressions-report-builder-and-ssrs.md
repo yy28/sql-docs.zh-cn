@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891867"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>表达式中的数据类型（报表生成器和 SSRS）
@@ -30,12 +30,12 @@ ms.locfileid: "68891867"
   
 |RDL 类型|CLR 类型|  
 |--------------|---------------|  
-|String|默认：String<br /><br /> 图表、GUID、Timespan|  
-|Boolean|默认：Boolean|  
-|Integer|默认：Int64<br /><br /> Int16、Int32、Uint16、Uint64、Byte、Sbyte|  
-|DateTime|默认：DateTime<br /><br /> DateTimeOffset|  
-|float|默认：Double<br /><br /> Single、Decimal|  
-|Binary|默认：Byte[]|  
+|String|默认值：String<br /><br /> 图表、GUID、Timespan|  
+|Boolean|默认值：Boolean|  
+|Integer|默认值：Int64<br /><br /> Int16、Int32、Uint16、Uint64、Byte、Sbyte|  
+|DateTime|默认值：DateTime<br /><br /> DateTimeOffset|  
+|Float|默认值：Double<br /><br /> Single、Decimal|  
+|Binary|默认值：Byte[]|  
 |Variant|除了 Byte[] 之外的上述任何值|  
 |VariantArray|Variant 的数组|  
 |可序列化|标记有“可序列化”或者实现 ISerializable 的变量或类型。|  
@@ -65,10 +65,10 @@ ms.locfileid: "68891867"
   
 -   基于现有报表数据集字段创建计算字段，方法是编写一个表达式，将一个结果集列中的所有数据都转换到具有另一数据类型的新列。 例如，以下表达式将字段 Year 从整数值转换为字符串值： `=CStr(Fields!Year.Value)`。 有关详细信息，请参阅[在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   
--   检查所使用的数据处理扩展插件是否包括用于检索预先设定格式的数据的元数据。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询包括 FORMATTED_VALUE 扩展属性，用于已在处理多维数据集时设置了格式的多维数据集值。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
+-   检查所使用的数据处理扩展插件是否包括用于检索预先设定格式的数据的元数据。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询包括在处理多维数据集时已设置格式的多维数据集值的 FORMATTED_VALUE 扩展属性。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
 ## <a name="understanding-parameter-data-types"></a>了解参数数据类型  
- 报表参数必须是以下五个数据类型之一：Boolean、DateTime、Integer、Float 或 Text（亦称为 String）。 数据集查询包含查询参数时，将会自动创建报表参数，并将其链接到查询参数。 报表参数的默认数据类型是 String。 若要更改报表参数的默认数据类型，请在“报表参数属性”对话框的“常规”页上，从“数据类型”下拉列表中选择正确的值。  
+ 报表参数必须是下列五种数据类型之一：Boolean、DateTime、Integer、Float 或 Text（也称为 String）。 数据集查询包含查询参数时，将会自动创建报表参数，并将其链接到查询参数。 报表参数的默认数据类型是 String。 若要更改报表参数的默认数据类型，请在“报表参数属性”对话框的“常规”页上，从“数据类型”下拉列表中选择正确的值************。  
   
 > [!NOTE]  
 >  DateTime 数据类型的报表参数不支持毫秒。 尽管可以创建基于包含毫秒值的参数，但是不能从包含具有毫秒的 Date 或 Time 值的可用值下拉列表中选择值。  
@@ -104,7 +104,7 @@ ms.locfileid: "68891867"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- 此示例演示的是日期（2008 年 7 月 1 日），后跟 7 位精度的时间（上午 6:05:07.9999999），再跟以小时和分钟表示的 UTC 时区偏移量（加 8 小时、0 分钟）。 对于以下示例，此值已放入名为 `MyDateTime.Value` 的 `String` 字段中。  
+ 此示例演示的是日期（2008 年 7 月 1 日），后跟 7 位精度的时间（上午 6:05:07.9999999），再跟以小时和分钟表示的 UTC 时区偏移量（加 8 小时、0 分钟）。 对于以下示例，此值已放入名为 `String` 的 `MyDateTime.Value` 字段中。  
   
  可以使用下列策略之一将此数据转换为一个或多个 CLR 值：  
   
@@ -116,9 +116,9 @@ ms.locfileid: "68891867"
   
     -   下面的表达式将该字符串转换为日期和时间值： `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         如果 `MyDateTime.Value` 字符串具有 UTC 偏移量，则 `DateTime.Parse` 函数将首先针对 UTC 偏移量进行调整（将上午 7 点 - [`+08:00`] 调整为 UTC 时间的前一天 晚上 11 点）。 随后， `DateTime.Parse` 函数将应用本地报表服务器的 UTC 偏移量，如有必要，将针对夏时制再次调整时间。 例如，在华盛顿州的雷德蒙德（Redmond），针对夏时制调整的本地时间偏移量为 `[-07:00]`，即比晚上 11 点早 7 个小时。 结果为以下`DateTime`值:`2007-07-06 04:07:07 PM`（2007 年 7 月 6 日下午 4:07）。  
+         如果 `MyDateTime.Value` 字符串具有 UTC 偏移量，则 `DateTime.Parse` 函数将首先针对 UTC 偏移量进行调整（将上午 7 点 - [`+08:00`] 调整为 UTC 时间的前一天 晚上 11 点）。 随后， `DateTime.Parse` 函数将应用本地报表服务器的 UTC 偏移量，如有必要，将针对夏时制再次调整时间。 例如，在华盛顿州的雷德蒙德（Redmond），针对夏时制调整的本地时间偏移量为 `[-07:00]`，即比晚上 11 点早 7 个小时。 结果为以下 `DateTime` 值：`2007-07-06 04:07:07 PM`（2007 年 7 月 6 日下午 4:07)。  
   
- 有关将`DateTime`字符串转换为数据类型的详细信息, 请参阅[分析日期和时间字符串](https://go.microsoft.com/fwlink/?LinkId=89703)、[设置特定区域性的日期和时间格式](https://go.microsoft.com/fwlink/?LinkId=89704), 以及在[DateTime、DateTimeOffset 和 TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) on期.  
+ `DateTime`有关将字符串转换为数据类型的详细信息，请参阅[分析日期和时间字符串](https://go.microsoft.com/fwlink/?LinkId=89703)、[设置特定区域性的日期和时间格式](https://go.microsoft.com/fwlink/?LinkId=89704)，以及在 MSDN 上的[DateTime、DateTimeOffset 和 TimeZoneInfo 之间进行选择](https://go.microsoft.com/fwlink/?linkid=110652)。  
   
 -   向报表数据集添加使用表达式提取部分字符串的新计算字段。 有关详细信息，请参阅[在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   
@@ -138,11 +138,11 @@ ms.locfileid: "68891867"
   
      `2008-07-01 06:05:07             2008                   480`  
   
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql) 和 [SQL Server 联机丛书](https://go.microsoft.com/fwlink/?linkid=120955)中的[日期和时间数据类型及函数 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql) 和 [SQL Server 联机丛书](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)中的[日期和时间数据类型及函数 (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=120955)。  
   
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据类型的详细信息，请参阅 [SQL Server 联机丛书](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) 中的 [SQL Server Books Onl中的e](https://go.microsoft.com/fwlink/?linkid=120955)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置报表项的格式（报表生成器和 SSRS）](formatting-report-items-report-builder-and-ssrs.md)  
   
   

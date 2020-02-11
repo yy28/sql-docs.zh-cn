@@ -18,10 +18,10 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252193"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72252193"
 
   调用一个 OLE 对象的方法。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,10 +44,10 @@ sp_OAMethod objecttoken , methodname
  *objecttoken*  
  是先前使用**sp_OACreate**创建的 OLE 对象的对象标记。  
   
- *methodname*  
+ *名称*  
  要调用的 OLE 对象的方法名。  
   
- _returnvalue_ **输出**  
+ _returnvalue_  **输出**  
  OLE 对象的方法的返回值。 如果指定此参数，则必须是相应数据类型的局部变量。  
   
  如果该方法返回单个值，请为*returnvalue*指定一个局部变量，该局部变量返回局部变量中的方法返回值，或不指定*returnvalue*，这会将方法返回值作为单列单行结果集返回给客户端。  
@@ -64,17 +64,17 @@ sp_OAMethod objecttoken , methodname
   
 -   方法返回一个数组作为输出参数。  
   
-`[ _@parametername = ] parameter[ OUTPUT ]` 是方法参数。 如果已指定，则*参数*必须为适当数据类型的值。  
+`[ _@parametername = ] parameter[ OUTPUT ]`为方法参数。 如果已指定，则*参数*必须为适当数据类型的值。  
   
  若要获取 output 参数的返回值，*参数*必须是相应数据类型的局部变量，并且必须指定**output** 。 如果指定了常量参数，或未指定**output** ，则将忽略输出参数的任何返回值。  
   
- 如果指定，则*parametername*必须是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 命名参数的名称。 请注意， **@** _parametername_is 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的局部变量。 删除 at 符号（ **@** ），并将*parametername*作为参数名传递给 OLE 对象。 指定了所有位置参数后，才能指定命名参数。  
+ 如果指定，则*parametername*必须是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]命名参数的名称。 请注意**@**，_parametername_is 不[!INCLUDE[tsql](../../includes/tsql-md.md)]是局部变量。 删除 at 符号（**@**），并将*parametername*作为参数名传递给 OLE 对象。 指定了所有位置参数后，才能指定命名参数。  
   
  *n*  
  指示可以指定多个参数的占位符。  
   
 > [!NOTE]
->  *\@parametername*可以是命名参数，因为它是指定方法的一部分并且传递给对象。 此存储过程的其他参数是按位置（而不是名称）指定的。  
+>  parametername 可以是命名参数，因为它是指定方法的一部分并且传递给对象。 * \@* 此存储过程的其他参数是按位置（而不是名称）指定的。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败），是由 OLE 自动化对象返回的 HRESULT 整数值。  
@@ -92,7 +92,7 @@ sp_OAMethod objecttoken , methodname
   
  如果一列中的所有数据值具有相同的数据类型，此数据类型将用于整个列。 当列中的数据值为其他数据类型时，将基于下表选择整个列的数据类型。  
   
-||smallint|Float|money|DATETIME|varchar|nvarchar|  
+||int|FLOAT|money|datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -101,16 +101,16 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  还可以使用**sp_OAMethod**获取属性值。  
   
-## <a name="permissions"></a>Permissions  
- 要求具有**sysadmin**固定服务器角色的成员身份或直接对此存储过程执行权限。 必须**启用**`Ole Automation Procedures` 配置才能使用与 OLE 自动化相关的任何系统过程。  
+## <a name="permissions"></a>权限  
+ 要求具有**sysadmin**固定服务器角色的成员身份或直接对此存储过程执行权限。 `Ole Automation Procedures`必须**启用**配置才能使用与 OLE 自动化相关的任何系统过程。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-calling-a-method"></a>A. 调用一个方法  
- 下面的示例调用以前创建的**SQLServer**对象的 `Connect` 方法。  
+ 下面的示例调用以前`Connect`创建的**SQLServer**对象的方法。  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -123,7 +123,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. 获取一个属性  
- 下面的示例获取 `HostName` 属性（以前创建的**SQLServer**对象），并将其存储在本地变量中。  
+ 下面的示例获取`HostName`属性（以前创建的**SQLServer**对象的属性），并将其存储在本地变量中。  
   
 ```  
 DECLARE @property varchar(255);  
@@ -137,7 +137,7 @@ PRINT @property;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [OLE 自动化存储过程&#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的 OLE 自动化存储过程](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 自动化脚本示例](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SSMA 控制台 (OracleToSQL) 中的命令行选项 |Microsoft Docs
+title: SSMA 控制台中的命令行选项（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,25 +16,25 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 96d76d301e3f937cb0e3c21a43f1939d0149ec9b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264513"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 控制台中的命令行选项 (OracleToSQL)
-Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动。 接下来的几节详细介绍相同。  
+Microsoft 为你提供了一个强大的 set 命令行选项，用于执行和控制 SSMA 活动。 后续部分将详细介绍相同的内容。  
   
 ## <a name="command-line-options-in-ssma-console"></a>SSMA 控制台中的命令行选项  
-此处所述的控制台命令选项。  
+本文介绍了控制台命令选项。  
   
-对于本部分中，术语 option 也称为转换。  
+出于本部分的目的，术语 "option" 也称为 "switch"。  
   
--   选项不区分大小写，并且可能会启动与 **-** 或 **/** 字符。  
+-   选项不区分大小写，并且可以以 "**-**" 或 "**/**" 字符开头。  
   
 -   如果指定了选项，则必须指定相应的选项参数。  
   
--   由空白，必须从选项字符分隔选项参数。  
+-   选项参数必须与选项字符之间用空格分隔。  
   
     **语法示例：**  
   
@@ -42,23 +42,23 @@ Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动�
   
     `C:\> SSMAforOracleConsole.EXE -s "C Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \AssessmentReportGenerationSample.xml" -v "C Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \VariableValueFileSample.xml" -c "C Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ServersConnectionFileSample.xml"`  
   
--   包含空格的文件夹或文件名称应指定用双引号括起来。  
+-   应将包含空格的文件夹或文件名指定为双引号。  
   
--   在标准输出中或指定文件中存储命令行条目和错误消息的输出。  
+-   命令行输入和错误消息的输出存储在 STDOUT 或指定文件中。  
   
-### <a name="script-file-option--sscript"></a>脚本文件选项:-s/脚本  
-强制性开关，脚本文件路径/名称指定命令序列 SSMA 要执行该脚本。  
+### <a name="script-file-option--sscript"></a>脚本文件选项：-s/脚本  
+脚本文件路径/名称是必需的开关，指定 SSMA 要执行的命令序列的脚本。  
   
 **语法示例：**  
   
 `C:\>SSMAforOracleConsole.EXE -s "C Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"`  
   
-### <a name="variable-value-file-option--vvariable"></a>变量值文件选项:-v/变量  
-此文件包含在脚本文件中使用的变量。 这是一个可选参数。 如果未在可变文件中声明变量和脚本文件中使用，应用程序将生成一个错误并终止控制台执行。  
+### <a name="variable-value-file-option--vvariable"></a>变量值文件选项：-v/variable  
+此文件包含脚本文件中使用的变量。 这是一个可选的开关。 如果变量未在变量文件中声明并在脚本文件中使用，则应用程序将生成错误并终止控制台执行。  
   
 **语法示例：**  
   
--   或许是默认值，另一个与实例特定值时适用的多个变量值文件中定义的变量。 命令行参数中指定的最后一个变量文件采用优先，以防重复的变量：  
+-   在多个变量值文件中定义的变量，可能是具有默认值的变量，也可能是具有特定实例值的变量（如果适用）。 在命令行参数中指定的最后一个变量文件将考虑首选项，以防出现重复的变量：  
   
     `C:\>SSMAforOracleConsole.EXE -s`  
   
@@ -66,14 +66,14 @@ Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动�
   
     `projects\global_variablevaluefile.xml -v "c:\migrationprojects\instance_variablevaluefile.xml"`  
   
-### <a name="server-connection-file-option--cserverconnection"></a>服务器连接文件选项:-c/serverconnection  
-此文件包含服务器的每个服务器的连接信息。 每个服务器定义标识的唯一服务器 id。 在连接的脚本文件中引用服务器 Id 相关命令。  
+### <a name="server-connection-file-option--cserverconnection"></a>服务器连接文件选项：-c/microsoft.sqlserver.management.common.serverconnection>  
+此文件包含每个服务器的服务器连接信息。 每个服务器定义由唯一的服务器 ID 标识。 在脚本文件中引用服务器 Id 以获取与连接相关的命令。  
   
-服务器定义可以是服务器连接文件和/或脚本文件的一部分。 在脚本文件中的服务器 id 将优先于服务器连接文件，以防服务器 id 重复。  
+服务器定义可以是服务器连接文件和/或脚本文件的一部分。 脚本文件中的服务器 id 优先于服务器连接文件，以防出现服务器 id 重复。  
   
 **语法示例：**  
   
--   在脚本文件中使用服务器 Id 和单独的服务器连接文件中的定义、 服务器连接文件使用变量值文件中定义的变量：  
+-   服务器 Id 用于脚本文件中，并且在单独的服务器连接文件中定义，服务器连接文件使用变量值文件中定义的变量：  
   
     `C:\>SSMAforOracleConsole.EXE -s "C:\ Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -v`  
   
@@ -81,16 +81,16 @@ Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动�
   
     `c:\SsmaProjects\myserverconnectionsfile1.xml`  
   
--   服务器定义嵌入的脚本文件：  
+-   服务器定义嵌入到脚本文件中：  
   
     `C:\>SSMAforOracleConsole.EXE -s "C:\ Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"`  
   
-### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 输出选项:-x / xmloutput [xmloutputfile]  
-此命令用于将命令输出消息到控制台或 xml 文件以 xml 格式输出。  
+### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML Output 选项：-x/xmloutput [xmloutputfile]  
+此命令用于将 xml 格式的命令输出消息输出到控制台或 xml 文件。  
   
-有两个选项可用于 xmloutput，viz..,:  
+有两个选项可用于 xmloutput、即：  
   
--   如果文件路径提供 xmloutput 开关后输出重定向到文件。  
+-   如果在 xmloutput 开关之后提供了 filepath，则会将输出重定向到文件。  
   
     **语法示例：**  
   
@@ -98,14 +98,14 @@ Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动�
   
     `"C:\ Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -x d:\xmloutput\project1output.xml`  
   
--   如果没有文件路径提供 xmloutput 开关后本身在控制台上显示 xmlout。  
+-   如果在 xmloutput 开关之后未提供 filepath，则 xmlout 将显示在控制台上。  
   
     **语法示例：**  
   
     `C:\>SSMAforOracleConsole.EXE -s "C:\ Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -xmloutput`  
   
-### <a name="log-file-option--llog"></a>日志文件选项:-l/日志  
-在控制台应用程序中的所有 SSMA 操作都记录在日志文件中。 这是一个可选参数。 如果在命令行指定了日志文件，它的路径，则在指定的位置获取生成日志。 否则，它获取生成在其默认位置。  
+### <a name="log-file-option--llog"></a>日志文件选项：-l/日志  
+控制台应用程序中的所有 SSMA 操作都记录在一个日志文件中。 这是一个可选的开关。 如果在命令行中指定了日志文件及其路径，则会在指定的位置生成日志。 否则，它将在其默认位置生成。  
   
 **语法示例：**  
   
@@ -113,8 +113,8 @@ Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动�
   
 `"C:\ Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -l c:\SsmaProjects\migration1.log`  
   
-### <a name="project-environment-folder-option--eprojectenvironment"></a>项目环境文件夹选项:-e/projectenvironment  
-这表示当前 SSMA 项目项目的环境设置文件夹。 此开关是可选的。  
+### <a name="project-environment-folder-option--eprojectenvironment"></a>项目环境文件夹选项：-e/projectenvironment  
+这表示当前 SSMA 项目的项目环境设置文件夹。 此开关是可选的。  
   
 **语法示例：**  
   
@@ -122,57 +122,57 @@ Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动�
   
 `"C:\ Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
-### <a name="secure-password-option--psecurepassword"></a>安全密码选项:-p/securepassword  
-此选项指示服务器连接的加密的密码。 它不同于所有其它选项： 选项不执行任何脚本或有助于与迁移相关的所有活动中，但可帮助管理迁移项目中使用的服务器连接的密码加密。  
+### <a name="secure-password-option--psecurepassword"></a>安全密码选项：-p/securepassword  
+此选项指示服务器连接的加密密码。 它与所有其他选项不同：该选项既不执行任何脚本，也不会在任何与迁移相关的活动中提供帮助，但有助于管理迁移项目中使用的服务器连接的密码加密。  
   
-不能输入任何其他选项或密码作为命令行参数。 否则，它会导致错误。 有关详细信息，请参阅[管理密码](managing-passwords-oracletosql.md)部分。  
+不能输入任何其他选项或密码作为命令行参数。 否则，会导致错误。 有关详细信息，请参阅[管理密码](managing-passwords-oracletosql.md)部分。  
   
-支持下面的子选项`-p/securepassword`:  
+支持以下子选项`-p/securepassword`：  
   
--   若要添加密码保护存储为指定的服务器 ID 或服务器连接文件中定义的所有服务器 Id。 -如果已经存在，则覆盖选项，下面，更新密码：  
+-   为指定的服务器 ID 或服务器连接文件中定义的所有服务器 Id 添加密码到受保护的存储。 下面的-overwrite 选项将更新密码（如果已存在）：  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}` `-c|-serverconnection <server-connection-file> [-v|variable <variable-value-file>]``[-o|overwrite]`  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}``-s|-script <server-connection-file> [-v|variable <variable-value-file>] [-o|overwrite]`  
   
--   从指定的服务器 ID 的所有服务器 Id; 二是受保护的存储中删除加密的密码：  
+-   若要从指定服务器 ID 或所有服务器 Id 的受保护存储中删除加密密码：  
   
     `-p/securepassword -r/remove {<server_id> [, ...n] | all}`  
   
--   要显示的密码加密的服务器 Id 列表：  
+-   若要显示为其加密密码的服务器 Id 的列表，请执行以下操作：  
   
     `-p/securepassword -l/list`  
   
--   若要导出加密文件的受保护存储中存储的密码。 该文件是使用用户指定的密码加密。  
+-   将存储在受保护的存储中的密码导出到加密文件中。 此文件是用用户指定的密码加密的。  
   
     `-p/securepassword -e/export {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
--   加密文件之前导出导入到本地使用用户指定的密码的保护存储。 一旦该文件进行解密，它存储在一个新文件，又在本地计算机加密。  
+-   使用用户指定的密码短语，先前导出的加密文件将导入到本地受保护的存储中。 文件解密后，它将存储在新文件中，后者将在本地计算机上加密。  
   
     `-p/securepassword -i/import {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
     可以使用逗号分隔符指定多个服务器 Id。  
   
-### <a name="help-option--help"></a>Help 选项:-？ / 帮助  
-显示语法摘要 SSMA 控制台选项：  
+### <a name="help-option--help"></a>帮助选项：-？/Help  
+显示 SSMA 控制台选项的语法摘要：  
   
 `C:\>SSMAforOracleConsole.EXE -?`  
   
-SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)。  
+有关 SSMA 控制台命令行选项的表格显示，请参阅[附录 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)。  
   
-### <a name="securepassword-help-option--securepassword--help"></a>SecurePassword Help 选项:-securepassword-？ / 帮助  
-显示语法摘要 SSMA 控制台选项：  
+### <a name="securepassword-help-option--securepassword--help"></a>SecurePassword 帮助选项：-SecurePassword-？/Help  
+显示 SSMA 控制台选项的语法摘要：  
   
 `C:\>SSMAforOracleConsole.EXE -securepassword -?`  
   
-SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)  
+如要表格显示 SSMA 控制台命令行选项，请参阅[附录-1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)  
   
 ### <a name="next-step"></a>下一步  
-下一步取决于你的项目要求：  
+下一步取决于项目要求：  
   
--   用于指定密码或导出 / 导入密码，请参阅[管理密码&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)。  
+-   若要指定密码或导出/导入密码，请参阅[管理密码 &#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)。  
   
--   用于生成报告，请参阅[生成报表&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)。  
+-   有关生成报表的详细 &#40;，请参阅[&#41;中生成报表](../../ssma/oracle/generating-reports-oracletosql.md)。  
   
--   有关故障排除控制台中的问题，请参阅[故障排除&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)。  
+-   有关控制台中问题的疑难解答，请参阅[排查 &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)。  
   
